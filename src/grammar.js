@@ -118,10 +118,15 @@ function gramItems(topic,k){
   let ids;
   if(topic==="adj") ids=adjIds(k);
   else if(topic==="err") ids=errIds(k);
-  else if(topic==="mix"){ const a=GR().adj?adjIds(2):[]; ids=[...a,...errIds(1),...bankIds(null,k-1-a.length)]; }
+  else if(topic==="mix"){ const a=GR().adj?adjIds(2):[], ch=chapterTopics();
+    // Läser eleven ett bokkapitel kommer hälften av frågorna från kapitlets grammatik
+    const c=ch.length?ch.flatMap(t=>bankIds(t,Math.ceil(k/2/ch.length))).slice(0,Math.ceil(k/2)):[];
+    ids=[...a,...errIds(1),...c,...bankIds(null,k-1-a.length-c.length).filter(i=>!c.includes(i))]; }
   else ids=bankIds(topic,k);
   return shuffle(ids.map(gramQ).filter(Boolean));
 }
+// Grammatikområden som hör till kapitlet eleven läser (secs i lang.js)
+const chapterTopics=()=>S.chapter&&hasGrammar()?GR().topics.filter(t=>(t.secs||[]).some(s=>sameChapter(s,S.chapter))).map(t=>t.id):[];
 const topicName=id=>id==="mix"?"Blandad grammatik":((GR().topics.find(t=>t.id===id)||{}).name||"Grammatik");
 function startGram(topic){
   const items=gramItems(topic,10); if(!items.length) return openGrammar();
@@ -132,7 +137,8 @@ function openGrammar(){
   const status=id=>{const x=gt[id]; return x&&x.n?`${pct(x.r,x.n)} % rätt av ${x.n}`:"";};
   const topics=GR().topics.filter(t=>t.id==="adj"?GR().adj&&adjNouns().length:t.id==="err"?errBase().length:bank.some(x=>x.topic===t.id));
   pickerScreen("Grammatik","Välj ett område. Frågor du missar och regler du ofta missar kommer tillbaka oftare. Blandad grammatik tar lite av allt.",
-    [{id:"mix",title:"Blandad grammatik",status:status("mix")},...topics.map(t=>({id:t.id,title:t.name,status:status(t.id)}))],startGram);
+    [{id:"mix",title:"Blandad grammatik",status:status("mix")},...topics.map(t=>({id:t.id,title:t.name,status:status(t.id),here:chapterTopics().includes(t.id)}))]
+      .sort((a,b)=>(b.here?1:0)-(a.here?1:0)),startGram);
   // Undertexter under ämnena
   app.querySelectorAll("[data-pick]").forEach(b=>{const t=GR().topics.find(x=>x.id===b.dataset.pick); const sm=b.querySelector("small");
     if(t&&t.sub&&sm&&!sm.textContent) sm.textContent=t.sub;});

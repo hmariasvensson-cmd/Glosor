@@ -38,15 +38,19 @@ LANGUAGES.fr = {
   // Grammatikövningar. Frågorna ligger i content/grammar-*.json (se content/GRAMMATIK-SPEC.md).
   grammar: {
     topics: [
-      {id: "pron", name: "Pronomen: le, lui, y, en", sub: "Je le vois. Je lui parle. J'y vais. J'en veux."},
+      // secs: bokkapitel där området tas upp. När eleven läser det kapitlet kommer området först.
+      {id: "pron", name: "Pronomen: le, lui, y, en", sub: "Je le vois. Je lui parle. J'y vais. J'en veux.", secs: ["k4"]},
+      {id: "poss", name: "Possessiva pronomen", sub: "mon, ma, mes, son, sa, ses, notre, leur", secs: ["k4"]},
+      {id: "maj", name: "Stor eller liten bokstav", sub: "les Suédois, un écrivain suédois, le suédois", secs: ["k4"]},
+      {id: "adjf", name: "Adjektivens böjning", sub: "sportif – sportive, heureux – heureuse, beau – belle", secs: ["k3"]},
       {id: "pc", name: "Passé composé: être eller avoir?", sub: "Elle est partie. Nous nous sommes levés."},
-      {id: "art", name: "Du, de la, des och de", sub: "Je mange du pain. Je n'ai pas de frères."},
-      {id: "prep", name: "Prepositioner: en, au, à", sub: "en France, au Portugal, à Paris, au cinéma"},
+      {id: "art", name: "Du, de la, des och de", sub: "Je mange du pain. Je n'ai pas de frères.", secs: ["k3"]},
+      {id: "prep", name: "Prepositioner: en, au, à", sub: "en France, au Portugal, à Paris, au cinéma", secs: ["k4"]},
       {id: "rel", name: "Qui, que, où, dont", sub: "Le garçon qui parle, le film que j'ai vu"},
       {id: "subj", name: "Subjonctif", sub: "Il faut que tu viennes. Je pense que c'est vrai."},
       {id: "si", name: "Si-satser", sub: "Si j'avais le temps, je viendrais."},
       {id: "comp", name: "Jämförelser", sub: "plus grand que, meilleur, mieux, le plus"},
-      {id: "neg", name: "Negation och ordföljd", sub: "Je ne l'ai jamais vu."},
+      {id: "neg", name: "Negation och ordföljd", sub: "Je ne l'ai jamais vu.", secs: ["k3"]},
       {id: "quest", name: "Frågor", sub: "Où habites-tu ? Est-ce que tu viens ?"},
       {id: "err", name: "Hitta felet", sub: "En mening har ett fel. Vilket ord?"}
     ],
@@ -60,7 +64,10 @@ LANGUAGES.fr = {
       "si-pres": "Si + présent → futur", "si-imp": "Si + imparfait → conditionnel",
       "comp-adj": "Komparativ", "comp-meilleur": "meilleur eller mieux", "comp-sup": "Superlativ",
       "neg-ordf": "Negationens plats", "neg-typ": "ne … jamais, rien, personne, plus",
-      "q-inv": "Fråga med inversion", "q-est-ce": "Fråga med est-ce que"
+      "q-inv": "Fråga med inversion", "q-est-ce": "Fråga med est-ce que",
+      "poss-sing": "Possessiva: en ägare", "poss-plur": "Possessiva: flera ägare", "poss-voc": "mon/ton/son framför vokal",
+      "adjf-fem": "Adjektiv i femininum", "adjf-plur": "Adjektiv i plural", "adjf-irr": "Oregelbundna adjektiv",
+      "maj-nom": "Stor bokstav: invånare", "maj-adj": "Liten bokstav: adjektiv", "maj-langue": "Liten bokstav: språk"
     }
   },
 

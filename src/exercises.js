@@ -74,6 +74,9 @@ function curSec(){
    Kapitel märkta #id|Namn|bok i words.txt kommer från elevens lärobok (L.book). Eleven väljer kapitlet
    klassen läser (S.chapter). Nya ord tas då först från det kapitlet, sedan från resten i ordning. */
 const hasBook=()=>SECTIONS.some(s=>s.book);
+// Avsnitt som hör till samma bokkapitel ("Kap 3 · …" och "Kap 3 · Fler ord ur kapitlet") räknas ihop
+const chapterKey=id=>{const s=SECTIONS.find(x=>x.id===id); const m=s&&s.book&&s.name.match(/^Kap\s*\d+/); return m?m[0]:id;};
+const sameChapter=(a,b)=>a===b||chapterKey(a)===chapterKey(b);
 function bookPanel(){
   const secs=SECTIONS.filter(s=>s.book), cur=secs.find(s=>s.id===S.chapter);
   const left=id=>WORDS.filter(w=>w.sec===id&&!isLearned(w)).length;
@@ -233,8 +236,8 @@ function pickerScreen(title,intro,items,onPick){
   stopSpeech(); $("#tabs").hidden=true; sess=null; curView="ova";
   const cur=curSec();
   app.innerHTML=`<section class="panel"><h2>${esc(title)}</h2><p class="plan">${intro}</p>
-    <div class="games">${items.map(it=>`<button class="game${it.sec===cur?" here":""}" data-pick="${esc(it.id)}"><span><b ${lang()}>${esc(it.title)}</b>
-      <small>${esc([it.sec?secName(it.sec):"",it.sec===cur?"ditt kapitel just nu":"",it.status||""].filter(Boolean).join(" · "))}</small></span>
+    <div class="games">${items.map(it=>`<button class="game${it.sec===cur||it.here?" here":""}" data-pick="${esc(it.id)}"><span><b ${lang()}>${esc(it.title)}</b>
+      <small>${esc([it.sec?secName(it.sec):"",it.sec===cur||it.here?"ditt kapitel just nu":"",it.status||""].filter(Boolean).join(" · "))}</small></span>
       <span class="go" aria-hidden="true">${it.status?"✓":"›"}</span></button>`).join("")}</div></section>
     <button class="quit" id="quit">Tillbaka</button>`;
   app.querySelectorAll("[data-pick]").forEach(b=>b.onclick=()=>onPick(b.dataset.pick));

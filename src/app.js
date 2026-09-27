@@ -222,7 +222,7 @@ const lang=()=>`lang="${L.code}"`;
 
 function pickNew(){
   // Egna ord från texterna först, sedan kapitlet klassen läser (om boken finns), sedan resten i ordning
-  const rank=w=>w.sec==="mine"?0:w.sec===S.chapter?1:2;
+  const rank=w=>w.sec==="mine"?0:S.chapter&&sameChapter(w.sec,S.chapter)?1:2;
   const fresh=WORDS.filter(w=>!isLearned(w)).sort((a,b)=>rank(a)-rank(b));
   const pool=S.src==="auto"?fresh:fresh.filter(w=>w.sec===S.src);
   return pool.slice(0,S.newCount);
