@@ -37,14 +37,23 @@ const verbGames=()=>!L.verbs?[]:(L.verbs.games||[{id:"all",name:"Verbträning",s
 const ruleFor=c=>((L.verbs.notes||{})[c.tense+"|"+c.verb])||c.rule;
 
 /* ---------- Sparat läge ---------- */
-const INT=[1,3,7,20];   // pass till nästa repetition, per steg
+/* Pass till nästa repetition, per steg. Steg 0–3 = lär sig, steg 4 och uppåt = kan. Ord som man kan
+   kommer tillbaka med allt längre mellanrum, så att de inte glöms bort. */
+const INT=[1,3,7,20,40,80,160];
+const MASTER=4, MAXDUE=40;   // MAXDUE = högst så många repetitioner per pass, resten väntar till nästa
 let S;
 function loadState(){
   S={pass:1,w:{},newCount:15,src:"auto",mode:"mix",log:[],vt:{},vv:{}};
   try{Object.assign(S,JSON.parse(localStorage.getItem(L.storageKey)||"{}"))}catch(e){}
   normState();
 }
-function normState(){ if(!Array.isArray(S.log))S.log=[]; S.w=S.w||{}; S.vt=S.vt||{}; S.vv=S.vv||{}; }
+function normState(){ if(!Array.isArray(S.log))S.log=[]; S.w=S.w||{}; S.vt=S.vt||{}; S.vv=S.vv||{}; migrateRetired(); }
+/* Förr fick inlärda ord due=1e9 och kom aldrig tillbaka. Ge dem ett riktigt repetitionsdatum,
+   utspritt över kommande pass så att de inte kommer alla på en gång. */
+function migrateRetired(){
+  const old=Object.entries(S.w).filter(([,x])=>x&&x.due>=1e9).sort((a,b)=>(a[1].mp||0)-(b[1].mp||0));
+  old.forEach(([,x],i)=>{ x.s=Math.max(x.s,MASTER); x.due=Math.max((x.mp||S.pass)+INT[MASTER],S.pass+1+Math.floor(i/8)); });
+}
 
 /* ---------- Sparat på claude.ai ----------
    Framstegen sparas i webbläsaren och i ett privat dokument per person och språk på claude.ai
@@ -126,7 +135,14 @@ function save(){
 const ws=id=>S.w[id];
 const isLearned=w=>!!ws(w.id);
 const isMastered=w=>ws(w.id)&&ws(w.id).s>=4;
-const dueWords=()=>WORDS.filter(w=>{const x=ws(w.id);return x&&x.s<4&&x.due<=S.pass});
+const dueWords=()=>WORDS.filter(w=>{const x=ws(w.id);return x&&x.due<=S.pass})
+  .sort((a,b)=>(ws(a.id).s>=MASTER)-(ws(b.id).s>=MASTER)||ws(a.id).due-ws(b.id).due).slice(0,MAXDUE);
+/* Rätt: ett steg upp. Fel: ett steg ned, och ett ord man kunde går tillbaka till steg 2. */
+function schedule(x,ok,p,now){
+  if(ok){ x.s=Math.min(x.s+1,INT.length-1); if(x.s>=MASTER&&!x.mp){x.mp=p;x.md=now;} }
+  else { x.s=x.s>=MASTER?2:Math.max(0,x.s-1); delete x.mp; delete x.md; x.lapses=(x.lapses||0)+1; }
+  x.due=p+INT[x.s];
+}
 
 /* ---------- Uppläsning ---------- */
 let voice=null;
@@ -643,22 +659,22 @@ function finishSession(){
   const ids=[...sess.newW,...sess.due].map(w=>w.id);
   const E={p,d:now,dur:Math.min(3600,Math.round((now-sess.start)/1000)),nNew:sess.newW.length,nRep:sess.due.length,right:0,total:ids.length,mcR:0,mcN:0,tyR:0,tyN:0,extra};
   sess.newW.forEach(w=>{const x={s:0,due:p+INT[0],lp:p,ld:now}; const r=applyAnswer(x,w.id); S.w[w.id]=x; tally(E,r);});
+  let newlyMastered=0;
   sess.due.forEach(w=>{
     const x=S.w[w.id]; const r=applyAnswer(x,w.id); tally(E,r);
     if(extra) return;               // extraövning flyttar inte schemat
-    if(r.ok){x.s++; if(x.s>=4){x.due=1e9;x.mp=p;x.md=now;} else x.due=p+INT[x.s];}
-    else {x.s=0; x.due=p+INT[0];}
+    const was=x.s; schedule(x,r.ok,p,now); if(r.ok&&was<MASTER&&x.s>=MASTER) newlyMastered++;
   });
   S.log.push(E); if(!extra) S.pass++; delete S.run; save();
   const right=ids.filter(id=>sess.firstTry[id]!==false).length;
   const missed=ids.filter(id=>sess.firstTry[id]===false).map(id=>byId[id]);
-  const mastered=extra?0:sess.due.filter(w=>S.w[w.id].s>=4).length;
+  const mastered=extra?0:newlyMastered;
   app.innerHTML=`<section class="panel">
     <span class="label">${extra?"Extraövning klar":`Pass ${p} klart`}</span>
     <div style="display:flex;align-items:baseline;gap:10px"><span class="big">${right}/${ids.length}</span><span class="sub">rätt på första försöket</span></div>
     <p class="plan">${extra?"Extraövningen påverkar inte när orden kommer tillbaka, men den räknas i statistiken.":""}${sess.newW.length?`De ${sess.newW.length} nya orden kommer tillbaka i nästa pass.`:""}
-      ${mastered?` ${mastered} ord är nu inlärda för gott.`:""}
-      ${missed.length&&!extra?" Orden du missade börjar om och kommer tillbaka nästa pass.":""}</p>
+      ${mastered?` ${mastered} ord är nu inlärda. De kommer tillbaka då och då, med allt längre mellanrum.`:""}
+      ${missed.length&&!extra?" Orden du missade flyttas ned ett steg och kommer tillbaka snart.":""}</p>
     ${missed.length?`<div class="field"><span class="label">Öva lite extra på</span><ul class="missed">${missed.map(w=>`<li><span class="t" ${lang()}>${esc(w.t)}</span><span class="sv">${esc(w.sv)}</span></li>`).join("")}</ul></div>`:""}
     ${sess.daily?`<button class="btn" id="mix">Fortsätt dagens pass: blandade övningar</button>`:""}
     <div class="navrow"><button class="btn ghost" id="st">Statistik</button><button class="btn ${sess.daily?"ghost":""}" id="home">Till startsidan</button></div></section>`;
