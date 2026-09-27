@@ -19,7 +19,7 @@ const hasWord=(text,w)=>new RegExp("(^|[^\\p{L}])"+reEsc(w)+"(?![\\p{L}])","iu")
 // Ord som eleven sparar från texterna läggs som ett eget avsnitt och repeteras som vanliga glosor
 function rebuildWords(){
   const mine=(S.mine||[]).map(m=>({id:"mine:"+m.t,sec:"mine",t:m.t,sv:m.sv,g:m.g||"",exT:m.ex.replace(/[\[\]]/g,""),exSv:m.exSv||"",
-    ety:m.src?`Sparat från texten <b>${esc(m.src)}</b>.`:"",gap:findGap(m.t,m.ex)}));
+    ety:m.src?`Sparat från texten <b>${esc(m.src)}</b>.`:m.own?"Ett ord du har lagt till själv.":"",gap:m.ex?findGap(m.t,m.ex):null}));
   WORDS=[...L.base.words,...mine];
   SECTIONS=mine.length?[...L.base.sections,{id:"mine",name:"Mina ord"}]:L.base.sections.slice();
   byId=Object.fromEntries(WORDS.map(w=>[w.id,w]));
@@ -31,6 +31,27 @@ function addMine(g,surface,line,text){
   const ex=i<0?line.fr:line.fr.slice(0,i)+"["+surface+"]"+line.fr.slice(i+surface.length);
   S.mine.push({t:g.t,sv:g.sv,g:g.g||"",ex,exSv:line.sv||"",src:text.title});
   rebuildWords(); save();
+}
+
+function removeMine(id){
+  S.mine=(S.mine||[]).filter(m=>"mine:"+m.t!==id); delete S.w[id]; rebuildWords(); save();
+}
+// Eget ord som eleven skriver in själv. Luckan i meningsövningen blir ordet om det finns i meningen.
+function addOwnWord(t,sv,ex){
+  t=t.trim(); sv=sv.trim(); ex=(ex||"").trim(); if(!t||!sv) return "Skriv både ordet och vad det betyder.";
+  if(isMine(t)||WORDS.some(w=>w.t===t)) return "Ordet finns redan i ordlistan.";
+  let bare=t.replace(L.hintStrip||/^$/,""); (L.articles||[]).forEach(re=>{bare=bare.replace(re,"")});
+  const i=ex?ex.toLowerCase().indexOf(bare.toLowerCase()):-1;
+  const exg=i<0?ex:ex.slice(0,i)+"["+ex.slice(i,i+bare.length)+"]"+ex.slice(i+bare.length);
+  S.mine=S.mine||[]; S.mine.push({t,sv,g:"",ex:exg,exSv:"",src:"",own:true}); rebuildWords(); save();
+  return "";
+}
+function wireOwnWord(){
+  const f=$("#ownf"); if(!f) return;
+  f.onsubmit=e=>{ e.preventDefault();
+    const err=addOwnWord($("#own-t").value,$("#own-sv").value,$("#own-ex").value);
+    $("#own-msg").textContent=err||"Sparat. Ordet kommer med bland de nya orden i nästa pass.";
+    if(!err){ ["#own-t","#own-sv","#own-ex"].forEach(s=>$(s).value=""); renderList(); } };
 }
 
 /* ---------- Hjälpare ---------- */

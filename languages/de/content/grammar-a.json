@@ -1,0 +1,3326 @@
+[
+ {
+  "id": "praep-001",
+  "topic": "praep",
+  "rule": "wechsel-dat",
+  "q": "Mein Handy liegt auf [dem] Schreibtisch.",
+  "alt": [
+   "den",
+   "der",
+   "das"
+  ],
+  "why": "Var ligger mobilen? Befintlighet (liegen) ger dativ efter auf. Der Schreibtisch är maskulinum, så dativ blir dem. Den är ackusativ.",
+  "sv": "Min mobil ligger på skrivbordet.",
+  "meta": {
+   "prep": "auf",
+   "case": "dat",
+   "g": "m",
+   "art": "def"
+  }
+ },
+ {
+  "id": "praep-002",
+  "topic": "praep",
+  "rule": "wechsel-dat",
+  "q": "Wir haben den ganzen Abend [im] Wohnzimmer gesessen.",
+  "alt": [
+   "ins",
+   "in den",
+   "in die"
+  ],
+  "why": "Var satt ni? Sitzen anger plats, så in tar dativ: in dem blir im. Ins (in das) är ackusativ och används vid riktning.",
+  "sv": "Vi satt i vardagsrummet hela kvällen.",
+  "meta": {
+   "prep": "in",
+   "case": "dat",
+   "g": "n",
+   "art": "def"
+  }
+ },
+ {
+  "id": "praep-003",
+  "topic": "praep",
+  "rule": "wechsel-dat",
+  "q": "Das Plakat hängt an [der] Wand neben der Tür.",
+  "alt": [
+   "die",
+   "den",
+   "dem"
+  ],
+  "why": "Hängen utan objekt anger var något hänger, alltså dativ. Die Wand är femininum, så dativ blir der.",
+  "sv": "Affischen hänger på väggen bredvid dörren.",
+  "meta": {
+   "prep": "an",
+   "case": "dat",
+   "g": "f",
+   "art": "def"
+  }
+ },
+ {
+  "id": "praep-004",
+  "topic": "praep",
+  "rule": "wechsel-dat",
+  "q": "Die Kinder spielen hinter [dem] Haus.",
+  "alt": [
+   "das",
+   "den",
+   "der"
+  ],
+  "why": "Barnen leker på en plats, de rör sig inte dit. Befintlighet ger dativ: das Haus blir dem Haus.",
+  "sv": "Barnen leker bakom huset.",
+  "meta": {
+   "prep": "hinter",
+   "case": "dat",
+   "g": "n",
+   "art": "def"
+  }
+ },
+ {
+  "id": "praep-005",
+  "topic": "praep",
+  "rule": "wechsel-dat",
+  "q": "Zwischen [dem] Bahnhof und der Schule gibt es ein kleines Café.",
+  "alt": [
+   "den",
+   "der",
+   "des"
+  ],
+  "why": "Es gibt anger var något finns, så zwischen tar dativ. Der Bahnhof är maskulinum: dem Bahnhof, precis som der Schule efter und.",
+  "sv": "Mellan stationen och skolan finns det ett litet kafé.",
+  "meta": {
+   "prep": "zwischen",
+   "case": "dat",
+   "g": "m",
+   "art": "def"
+  }
+ },
+ {
+  "id": "praep-006",
+  "topic": "praep",
+  "rule": "wechsel-dat",
+  "q": "Meine Tante wohnt in [einer] kleinen Stadt in der Schweiz.",
+  "alt": [
+   "eine",
+   "einem",
+   "einen"
+  ],
+  "why": "Wohnen anger plats, alltså dativ. Die Stadt är femininum, så obestämd artikel i dativ blir einer.",
+  "sv": "Min moster bor i en liten stad i Schweiz.",
+  "meta": {
+   "prep": "in",
+   "case": "dat",
+   "g": "f",
+   "art": "indef"
+  }
+ },
+ {
+  "id": "praep-007",
+  "topic": "praep",
+  "rule": "wechsel-dat",
+  "q": "Die Katze schläft unter [meinem] Bett.",
+  "alt": [
+   "mein",
+   "meinen",
+   "meiner"
+  ],
+  "why": "Katten sover på en plats, så unter tar dativ. Das Bett är neutrum: dativ blir meinem.",
+  "sv": "Katten sover under min säng.",
+  "meta": {
+   "prep": "unter",
+   "case": "dat",
+   "g": "n",
+   "art": "poss",
+   "stem": "mein"
+  }
+ },
+ {
+  "id": "praep-008",
+  "topic": "praep",
+  "rule": "wechsel-dat",
+  "q": "Vor [dem] Rathaus demonstrieren heute viele Schüler für mehr Klimaschutz.",
+  "alt": [
+   "das",
+   "den",
+   "der"
+  ],
+  "why": "Var demonstrerar de? Det är en plats, så vor tar dativ. Das Rathaus är neutrum: dem Rathaus.",
+  "sv": "Utanför stadshuset demonstrerar många elever i dag för mer klimatskydd.",
+  "meta": {
+   "prep": "vor",
+   "case": "dat",
+   "g": "n",
+   "art": "def"
+  }
+ },
+ {
+  "id": "praep-009",
+  "topic": "praep",
+  "rule": "wechsel-dat",
+  "q": "Über [dem] Sofa hängt ein großes Foto von meinen Großeltern.",
+  "alt": [
+   "das",
+   "den",
+   "der"
+  ],
+  "why": "Fotot hänger redan där (hängen utan objekt = befintlighet), så über tar dativ. Das Sofa blir dem Sofa.",
+  "sv": "Ovanför soffan hänger ett stort foto av mina morföräldrar.",
+  "meta": {
+   "prep": "über",
+   "case": "dat",
+   "g": "n",
+   "art": "def"
+  }
+ },
+ {
+  "id": "praep-010",
+  "topic": "praep",
+  "rule": "wechsel-dat",
+  "q": "Die Flaschen stehen schon [im] Kühlschrank.",
+  "alt": [
+   "in den",
+   "ins",
+   "in die"
+  ],
+  "why": "Stehen anger var något står, alltså dativ. Der Kühlschrank är maskulinum: in dem blir im. In den skulle kräva riktning (stellen).",
+  "sv": "Flaskorna står redan i kylskåpet.",
+  "meta": {
+   "prep": "in",
+   "case": "dat",
+   "g": "m",
+   "art": "def"
+  }
+ },
+ {
+  "id": "praep-011",
+  "topic": "praep",
+  "rule": "wechsel-dat",
+  "q": "Sie arbeitet seit einem Jahr in [einem] Krankenhaus in Wien.",
+  "alt": [
+   "ein",
+   "einen",
+   "einer"
+  ],
+  "why": "Arbeiten anger var hon är, inte vart hon går, så in tar dativ. Das Krankenhaus är neutrum: einem.",
+  "sv": "Hon har arbetat på ett sjukhus i Wien i ett år.",
+  "meta": {
+   "prep": "in",
+   "case": "dat",
+   "g": "n",
+   "art": "indef"
+  }
+ },
+ {
+  "id": "praep-012",
+  "topic": "praep",
+  "rule": "wechsel-dat",
+  "q": "Neben [unserer] Schule wird ein neues Sportzentrum gebaut.",
+  "alt": [
+   "unsere",
+   "unseren",
+   "unserem"
+  ],
+  "why": "Platsen där något byggs anges med dativ. Die Schule är femininum, så possessivet blir unserer.",
+  "sv": "Bredvid vår skola byggs ett nytt sportcenter.",
+  "meta": {
+   "prep": "neben",
+   "case": "dat",
+   "g": "f",
+   "art": "poss",
+   "stem": "unser"
+  }
+ },
+ {
+  "id": "praep-013",
+  "topic": "praep",
+  "rule": "wechsel-dat",
+  "q": "Warum steht dein Fahrrad mitten auf [der] Straße?",
+  "alt": [
+   "die",
+   "den",
+   "dem"
+  ],
+  "why": "Stehen anger plats, så auf tar dativ. Die Straße är femininum: der Straße. Die vore ackusativ (riktning).",
+  "sv": "Varför står din cykel mitt på gatan?",
+  "meta": {
+   "prep": "auf",
+   "case": "dat",
+   "g": "f",
+   "art": "def"
+  }
+ },
+ {
+  "id": "praep-014",
+  "topic": "praep",
+  "rule": "wechsel-dat",
+  "q": "Am Wochenende waren wir [am] See und sind geschwommen.",
+  "alt": [
+   "an den",
+   "ans",
+   "an die"
+  ],
+  "why": "Sein anger var man är, alltså dativ. Der See är maskulinum: an dem blir am. An den skulle betyda till sjön (riktning).",
+  "sv": "I helgen var vi vid sjön och simmade.",
+  "meta": {
+   "prep": "an",
+   "case": "dat",
+   "g": "m",
+   "art": "def"
+  }
+ },
+ {
+  "id": "praep-015",
+  "topic": "praep",
+  "rule": "wechsel-dat",
+  "q": "Auf [dem] Land ist das Leben oft ruhiger als in der Stadt.",
+  "alt": [
+   "das",
+   "den",
+   "der"
+  ],
+  "why": "Auf dem Land betyder på landet, en plats, alltså dativ. Das Land blir dem Land. Aufs Land (ackusativ) används vid riktning.",
+  "sv": "På landet är livet ofta lugnare än i staden.",
+  "meta": {
+   "prep": "auf",
+   "case": "dat",
+   "g": "n",
+   "art": "def"
+  }
+ },
+ {
+  "id": "praep-016",
+  "topic": "praep",
+  "rule": "wechsel-dat",
+  "q": "In [keinem] Hotel der Stadt gab es noch ein freies Zimmer.",
+  "alt": [
+   "keinen",
+   "kein",
+   "keiner"
+  ],
+  "why": "Var fanns det inget rum? Platsen står i dativ efter in. Das Hotel är neutrum, så kein blir keinem.",
+  "sv": "Det fanns inte längre något ledigt rum på något hotell i staden.",
+  "meta": {
+   "prep": "in",
+   "case": "dat",
+   "g": "n",
+   "art": "kein",
+   "stem": "kein"
+  }
+ },
+ {
+  "id": "praep-017",
+  "topic": "praep",
+  "rule": "wechsel-dat",
+  "q": "Hinter [unserem] Garten beginnt direkt der Wald.",
+  "alt": [
+   "unseren",
+   "unser",
+   "unserer"
+  ],
+  "why": "Här anges var skogen börjar, en plats, så hinter tar dativ. Der Garten är maskulinum: unserem.",
+  "sv": "Direkt bakom vår trädgård börjar skogen.",
+  "meta": {
+   "prep": "hinter",
+   "case": "dat",
+   "g": "m",
+   "art": "poss",
+   "stem": "unser"
+  }
+ },
+ {
+  "id": "praep-018",
+  "topic": "praep",
+  "rule": "wechsel-dat",
+  "q": "In [der] Schweiz spricht man vier Landessprachen.",
+  "alt": [
+   "die",
+   "den",
+   "dem"
+  ],
+  "why": "Var talar man? Befintlighet ger dativ. Die Schweiz är femininum och har alltid artikel: in der Schweiz.",
+  "sv": "I Schweiz talar man fyra nationella språk.",
+  "meta": {
+   "prep": "in",
+   "case": "dat",
+   "g": "f",
+   "art": "def"
+  }
+ },
+ {
+  "id": "praep-019",
+  "topic": "praep",
+  "rule": "wechsel-akk",
+  "q": "Ich lege das Buch auf [den] Tisch.",
+  "alt": [
+   "dem",
+   "der",
+   "das"
+  ],
+  "why": "Legen anger rörelse mot en plats (vart?), så auf tar ackusativ. Der Tisch blir den Tisch. Dem är dativ och används med liegen.",
+  "sv": "Jag lägger boken på bordet.",
+  "meta": {
+   "prep": "auf",
+   "case": "akk",
+   "g": "m",
+   "art": "def"
+  }
+ },
+ {
+  "id": "praep-020",
+  "topic": "praep",
+  "rule": "wechsel-akk",
+  "q": "Nach dem Unterricht gehen wir [ins] Kino.",
+  "alt": [
+   "im",
+   "in dem",
+   "in den"
+  ],
+  "why": "Gehen anger riktning (vart?), så in tar ackusativ. Das Kino är neutrum: in das blir ins. Im är dativ (i bion).",
+  "sv": "Efter lektionerna går vi på bio.",
+  "meta": {
+   "prep": "in",
+   "case": "akk",
+   "g": "n",
+   "art": "def"
+  }
+ },
+ {
+  "id": "praep-021",
+  "topic": "praep",
+  "rule": "wechsel-akk",
+  "q": "Kannst du die Milch bitte in [den] Kühlschrank stellen?",
+  "alt": [
+   "dem",
+   "der",
+   "das"
+  ],
+  "why": "Stellen anger riktning (vart ska mjölken?), alltså ackusativ. Der Kühlschrank blir den. Dem skulle passa med stehen.",
+  "sv": "Kan du ställa in mjölken i kylskåpet?",
+  "meta": {
+   "prep": "in",
+   "case": "akk",
+   "g": "m",
+   "art": "def"
+  }
+ },
+ {
+  "id": "praep-022",
+  "topic": "praep",
+  "rule": "wechsel-akk",
+  "q": "Sie hängt das neue Poster an [die] Wand.",
+  "alt": [
+   "der",
+   "den",
+   "dem"
+  ],
+  "why": "Hängen med objekt (hon hänger upp något) anger riktning, alltså ackusativ. Die Wand är femininum: die. Der är dativ.",
+  "sv": "Hon hänger upp den nya affischen på väggen.",
+  "meta": {
+   "prep": "an",
+   "case": "akk",
+   "g": "f",
+   "art": "def"
+  }
+ },
+ {
+  "id": "praep-023",
+  "topic": "praep",
+  "rule": "wechsel-akk",
+  "q": "Der Hund ist unter [den] Tisch gekrochen.",
+  "alt": [
+   "dem",
+   "der",
+   "das"
+  ],
+  "why": "Hunden kröp dit, en rörelse mot en ny plats, så unter tar ackusativ. Der Tisch blir den Tisch.",
+  "sv": "Hunden kröp in under bordet.",
+  "meta": {
+   "prep": "unter",
+   "case": "akk",
+   "g": "m",
+   "art": "def"
+  }
+ },
+ {
+  "id": "praep-024",
+  "topic": "praep",
+  "rule": "wechsel-akk",
+  "q": "Setz dich doch neben [deinen] Bruder!",
+  "alt": [
+   "deinem",
+   "dein",
+   "deiner"
+  ],
+  "why": "Sich setzen anger rörelse (vart ska du sätta dig?), alltså ackusativ. Der Bruder är maskulinum: deinen. Deinem är dativ (sitzen).",
+  "sv": "Sätt dig bredvid din bror!",
+  "meta": {
+   "prep": "neben",
+   "case": "akk",
+   "g": "m",
+   "art": "poss",
+   "stem": "dein"
+  }
+ },
+ {
+  "id": "praep-025",
+  "topic": "praep",
+  "rule": "wechsel-akk",
+  "q": "Im Sommer fahren wir [ans] Meer.",
+  "alt": [
+   "am",
+   "an dem",
+   "an die"
+  ],
+  "why": "Fahren anger riktning, så an tar ackusativ. Das Meer är neutrum: an das blir ans. Am Meer betyder vid havet (plats).",
+  "sv": "På sommaren åker vi till havet.",
+  "meta": {
+   "prep": "an",
+   "case": "akk",
+   "g": "n",
+   "art": "def"
+  }
+ },
+ {
+  "id": "praep-026",
+  "topic": "praep",
+  "rule": "wechsel-akk",
+  "q": "Er hat sich zwischen [die] beiden Mädchen gesetzt.",
+  "alt": [
+   "den",
+   "der",
+   "dem"
+  ],
+  "why": "Sich setzen anger rörelse, alltså ackusativ. Die beiden Mädchen är plural: ackusativ die. Den beiden vore dativ plural.",
+  "sv": "Han satte sig mellan de båda flickorna.",
+  "meta": {
+   "prep": "zwischen",
+   "case": "akk",
+   "g": "pl",
+   "art": "def"
+  }
+ },
+ {
+  "id": "praep-027",
+  "topic": "praep",
+  "rule": "wechsel-akk",
+  "q": "Wir haben eine Lampe über [das] Sofa gehängt.",
+  "alt": [
+   "dem",
+   "den",
+   "der"
+  ],
+  "why": "Vi hängde upp lampan (hängen med objekt), en rörelse mot en plats, så über tar ackusativ. Das Sofa förblir das.",
+  "sv": "Vi har hängt upp en lampa ovanför soffan.",
+  "meta": {
+   "prep": "über",
+   "case": "akk",
+   "g": "n",
+   "art": "def"
+  }
+ },
+ {
+  "id": "praep-028",
+  "topic": "praep",
+  "rule": "wechsel-akk",
+  "q": "Der Ball ist hinter [das] Haus gerollt.",
+  "alt": [
+   "dem",
+   "den",
+   "der"
+  ],
+  "why": "Bollen rullade dit, alltså riktning och ackusativ. Das Haus är neutrum: das Haus. Dem Haus skulle betyda att den rullade runt där bakom.",
+  "sv": "Bollen rullade bakom huset.",
+  "meta": {
+   "prep": "hinter",
+   "case": "akk",
+   "g": "n",
+   "art": "def"
+  }
+ },
+ {
+  "id": "praep-029",
+  "topic": "praep",
+  "rule": "wechsel-akk",
+  "q": "Am Freitag gehen wir auf [eine] Party bei Lena.",
+  "alt": [
+   "einer",
+   "einem",
+   "einen"
+  ],
+  "why": "Gehen auf anger vart man går, alltså ackusativ. Die Party är femininum: eine. Einer är dativ (auf einer Party sein).",
+  "sv": "På fredag går vi på en fest hos Lena.",
+  "meta": {
+   "prep": "auf",
+   "case": "akk",
+   "g": "f",
+   "art": "indef"
+  }
+ },
+ {
+  "id": "praep-030",
+  "topic": "praep",
+  "rule": "wechsel-akk",
+  "q": "Nach dem Abitur möchte ich in [die] Schweiz ziehen.",
+  "alt": [
+   "der",
+   "den",
+   "dem"
+  ],
+  "why": "Ziehen (flytta) anger riktning, så in tar ackusativ. Die Schweiz har artikel, så man säger in die Schweiz, inte nach. Der är dativ.",
+  "sv": "Efter studenten vill jag flytta till Schweiz.",
+  "meta": {
+   "prep": "in",
+   "case": "akk",
+   "g": "f",
+   "art": "def"
+  }
+ },
+ {
+  "id": "praep-031",
+  "topic": "praep",
+  "rule": "wechsel-akk",
+  "q": "Sie hat ihr Fahrrad vor [die] Tür gestellt.",
+  "alt": [
+   "der",
+   "den",
+   "dem"
+  ],
+  "why": "Stellen anger vart hon ställde cykeln, alltså ackusativ. Die Tür är femininum: die. Der Tür vore dativ (stehen).",
+  "sv": "Hon ställde sin cykel utanför dörren.",
+  "meta": {
+   "prep": "vor",
+   "case": "akk",
+   "g": "f",
+   "art": "def"
+  }
+ },
+ {
+  "id": "praep-032",
+  "topic": "praep",
+  "rule": "wechsel-akk",
+  "q": "Leg dein Handy bitte in [deine] Tasche, der Unterricht beginnt!",
+  "alt": [
+   "deiner",
+   "deinen",
+   "deinem"
+  ],
+  "why": "Legen anger riktning (vart ska mobilen?), så in tar ackusativ. Die Tasche är femininum: deine. Deiner är dativ.",
+  "sv": "Lägg ner mobilen i väskan, lektionen börjar!",
+  "meta": {
+   "prep": "in",
+   "case": "akk",
+   "g": "f",
+   "art": "poss",
+   "stem": "dein"
+  }
+ },
+ {
+  "id": "praep-033",
+  "topic": "praep",
+  "rule": "wechsel-akk",
+  "q": "Mein kleiner Bruder geht noch in [den] Kindergarten.",
+  "alt": [
+   "dem",
+   "der",
+   "das"
+  ],
+  "why": "In den Kindergarten gehen anger vart han går, alltså ackusativ. Der Kindergarten är maskulinum: den.",
+  "sv": "Min lillebror går fortfarande på förskolan.",
+  "meta": {
+   "prep": "in",
+   "case": "akk",
+   "g": "m",
+   "art": "def"
+  }
+ },
+ {
+  "id": "praep-034",
+  "topic": "praep",
+  "rule": "wechsel-akk",
+  "q": "Viele junge Leute ziehen vom Land in [eine] größere Stadt.",
+  "alt": [
+   "einer",
+   "einem",
+   "einen"
+  ],
+  "why": "Ziehen (flytta) anger riktning, så in tar ackusativ. Die Stadt är femininum: eine. Einer vore dativ (in einer Stadt wohnen).",
+  "sv": "Många unga flyttar från landsbygden till en större stad.",
+  "meta": {
+   "prep": "in",
+   "case": "akk",
+   "g": "f",
+   "art": "indef"
+  }
+ },
+ {
+  "id": "praep-035",
+  "topic": "praep",
+  "rule": "wechsel-akk",
+  "q": "Letzten Sommer sind wir auf [einen] Berg in den Alpen gestiegen.",
+  "alt": [
+   "einem",
+   "einer",
+   "ein"
+  ],
+  "why": "Steigen anger rörelse uppåt mot ett mål, så auf tar ackusativ. Der Berg är maskulinum: einen. Einem är dativ.",
+  "sv": "I somras klättrade vi upp på ett berg i Alperna.",
+  "meta": {
+   "prep": "auf",
+   "case": "akk",
+   "g": "m",
+   "art": "indef"
+  }
+ },
+ {
+  "id": "praep-036",
+  "topic": "praep",
+  "rule": "dat-prep",
+  "q": "Nach der Schule gehe ich direkt [zum] Training.",
+  "alt": [
+   "zur",
+   "zu den",
+   "zu das"
+  ],
+  "why": "Zu styr alltid dativ. Das Training är neutrum: zu dem blir zum. Zur används bara med femininum (zu der).",
+  "sv": "Efter skolan går jag direkt till träningen.",
+  "meta": {
+   "prep": "zu",
+   "case": "dat",
+   "g": "n",
+   "art": "def"
+  }
+ },
+ {
+  "id": "praep-037",
+  "topic": "praep",
+  "rule": "dat-prep",
+  "q": "Kommst du heute Abend mit [zur] Party?",
+  "alt": [
+   "zum",
+   "zu die",
+   "zu den"
+  ],
+  "why": "Zu styr dativ. Die Party är femininum: zu der blir zur. Zum används med maskulinum och neutrum.",
+  "sv": "Följer du med på festen i kväll?",
+  "meta": {
+   "prep": "zu",
+   "case": "dat",
+   "g": "f",
+   "art": "def"
+  }
+ },
+ {
+  "id": "praep-038",
+  "topic": "praep",
+  "rule": "dat-prep",
+  "q": "Ich wohne seit [einem] Jahr bei meiner Tante.",
+  "alt": [
+   "ein",
+   "einen",
+   "einer"
+  ],
+  "why": "Seit styr alltid dativ. Das Jahr är neutrum: seit einem Jahr. Ein och einen är nominativ/ackusativ.",
+  "sv": "Jag har bott hos min moster i ett år.",
+  "meta": {
+   "prep": "seit",
+   "case": "dat",
+   "g": "n",
+   "art": "indef"
+  }
+ },
+ {
+  "id": "praep-039",
+  "topic": "praep",
+  "rule": "dat-prep",
+  "q": "Mein Vater fährt jeden Tag mit [dem] Fahrrad zur Arbeit.",
+  "alt": [
+   "das",
+   "den",
+   "der"
+  ],
+  "why": "Mit styr alltid dativ. Das Fahrrad är neutrum: mit dem Fahrrad. Das vore nominativ/ackusativ.",
+  "sv": "Min pappa cyklar till jobbet varje dag.",
+  "meta": {
+   "prep": "mit",
+   "case": "dat",
+   "g": "n",
+   "art": "def"
+  }
+ },
+ {
+  "id": "praep-040",
+  "topic": "praep",
+  "rule": "dat-prep",
+  "q": "Sie hat im Sommer ein Praktikum [beim] Radio gemacht.",
+  "alt": [
+   "bei das",
+   "bei der",
+   "bei den"
+  ],
+  "why": "Bei styr alltid dativ. Das Radio är neutrum: bei dem blir beim. Bei der vore femininum.",
+  "sv": "Hon gjorde praktik på radion i somras.",
+  "meta": {
+   "prep": "bei",
+   "case": "dat",
+   "g": "n",
+   "art": "def"
+  }
+ },
+ {
+  "id": "praep-041",
+  "topic": "praep",
+  "rule": "dat-prep",
+  "q": "Das Geschenk ist von [meiner] Großmutter.",
+  "alt": [
+   "meine",
+   "meinem",
+   "meinen"
+  ],
+  "why": "Von styr alltid dativ. Die Großmutter är femininum: meiner. Meinem vore maskulinum eller neutrum.",
+  "sv": "Presenten är från min farmor.",
+  "meta": {
+   "prep": "von",
+   "case": "dat",
+   "g": "f",
+   "art": "poss",
+   "stem": "mein"
+  }
+ },
+ {
+  "id": "praep-042",
+  "topic": "praep",
+  "rule": "dat-prep",
+  "q": "Nach [dem] Abitur will sie ein Jahr in Australien arbeiten.",
+  "alt": [
+   "das",
+   "den",
+   "der"
+  ],
+  "why": "Nach styr alltid dativ. Das Abitur är neutrum: nach dem Abitur.",
+  "sv": "Efter studenten vill hon arbeta ett år i Australien.",
+  "meta": {
+   "prep": "nach",
+   "case": "dat",
+   "g": "n",
+   "art": "def"
+  }
+ },
+ {
+  "id": "praep-043",
+  "topic": "praep",
+  "rule": "dat-prep",
+  "q": "Die meisten Touristen hier kommen aus [den] Niederlanden.",
+  "alt": [
+   "die",
+   "der",
+   "dem"
+  ],
+  "why": "Aus styr alltid dativ. Die Niederlande är plural, och dativ plural blir den (+ -n på substantivet). Die är nominativ/ackusativ.",
+  "sv": "De flesta turister här kommer från Nederländerna.",
+  "meta": {
+   "prep": "aus",
+   "case": "dat",
+   "g": "pl",
+   "art": "def"
+  }
+ },
+ {
+  "id": "praep-044",
+  "topic": "praep",
+  "rule": "dat-prep",
+  "q": "Außer [meinem] Bruder waren alle beim Konzert.",
+  "alt": [
+   "meinen",
+   "mein",
+   "meiner"
+  ],
+  "why": "Außer styr dativ. Der Bruder är maskulinum: meinem. Meinen är ackusativ.",
+  "sv": "Alla utom min bror var på konserten.",
+  "meta": {
+   "prep": "außer",
+   "case": "dat",
+   "g": "m",
+   "art": "poss",
+   "stem": "mein"
+  }
+ },
+ {
+  "id": "praep-045",
+  "topic": "praep",
+  "rule": "dat-prep",
+  "q": "Gegenüber [dem] Bahnhof gibt es eine gute Bäckerei.",
+  "alt": [
+   "den",
+   "der",
+   "das"
+  ],
+  "why": "Gegenüber styr dativ. Der Bahnhof är maskulinum: dem Bahnhof. Den är ackusativ.",
+  "sv": "Mittemot stationen finns ett bra bageri.",
+  "meta": {
+   "prep": "gegenüber",
+   "case": "dat",
+   "g": "m",
+   "art": "def"
+  }
+ },
+ {
+  "id": "praep-046",
+  "topic": "praep",
+  "rule": "dat-prep",
+  "q": "Ich habe mit [keinem] Lehrer darüber gesprochen.",
+  "alt": [
+   "keinen",
+   "kein",
+   "keiner"
+  ],
+  "why": "Mit styr alltid dativ. Der Lehrer är maskulinum: keinem. Keinen är ackusativ.",
+  "sv": "Jag har inte pratat med någon lärare om det.",
+  "meta": {
+   "prep": "mit",
+   "case": "dat",
+   "g": "m",
+   "art": "kein",
+   "stem": "kein"
+  }
+ },
+ {
+  "id": "praep-047",
+  "topic": "praep",
+  "rule": "dat-prep",
+  "q": "Seit [dem] Unfall hat er Angst vor dem Autofahren.",
+  "alt": [
+   "den",
+   "der",
+   "das"
+  ],
+  "why": "Seit styr alltid dativ. Der Unfall är maskulinum: seit dem Unfall.",
+  "sv": "Sedan olyckan är han rädd för att köra bil.",
+  "meta": {
+   "prep": "seit",
+   "case": "dat",
+   "g": "m",
+   "art": "def"
+  }
+ },
+ {
+  "id": "praep-048",
+  "topic": "praep",
+  "rule": "dat-prep",
+  "q": "Der Bus fährt [vom] Hauptbahnhof bis zum Flughafen.",
+  "alt": [
+   "von den",
+   "von die",
+   "von der"
+  ],
+  "why": "Von styr alltid dativ. Der Hauptbahnhof är maskulinum: von dem blir vom. Von der vore femininum.",
+  "sv": "Bussen går från centralstationen till flygplatsen.",
+  "meta": {
+   "prep": "von",
+   "case": "dat",
+   "g": "m",
+   "art": "def"
+  }
+ },
+ {
+  "id": "praep-049",
+  "topic": "praep",
+  "rule": "dat-prep",
+  "q": "Am Sonntag essen wir bei [unseren] Großeltern.",
+  "alt": [
+   "unsere",
+   "unserer",
+   "unserem"
+  ],
+  "why": "Bei styr alltid dativ. Die Großeltern är plural: dativ plural blir unseren. Unsere är nominativ/ackusativ.",
+  "sv": "På söndag äter vi hos våra morföräldrar.",
+  "meta": {
+   "prep": "bei",
+   "case": "dat",
+   "g": "pl",
+   "art": "poss",
+   "stem": "unser"
+  }
+ },
+ {
+  "id": "praep-050",
+  "topic": "praep",
+  "rule": "dat-prep",
+  "q": "Ich muss noch schnell [zur] Apotheke.",
+  "alt": [
+   "zum",
+   "zu die",
+   "zu dem"
+  ],
+  "why": "Zu styr dativ. Die Apotheke är femininum: zu der blir zur. Zum och zu dem passar bara maskulinum och neutrum.",
+  "sv": "Jag måste bara snabbt gå till apoteket.",
+  "meta": {
+   "prep": "zu",
+   "case": "dat",
+   "g": "f",
+   "art": "def"
+  }
+ },
+ {
+  "id": "praep-051",
+  "topic": "praep",
+  "rule": "akk-prep",
+  "q": "Das Geschenk ist für [meinen] Vater.",
+  "alt": [
+   "meinem",
+   "mein",
+   "meiner"
+  ],
+  "why": "Für styr alltid ackusativ. Der Vater är maskulinum: meinen. Meinem är dativ.",
+  "sv": "Presenten är till min pappa.",
+  "meta": {
+   "prep": "für",
+   "case": "akk",
+   "g": "m",
+   "art": "poss",
+   "stem": "mein"
+  }
+ },
+ {
+  "id": "praep-052",
+  "topic": "praep",
+  "rule": "akk-prep",
+  "q": "Wir sind durch [den] ganzen Park gelaufen.",
+  "alt": [
+   "dem",
+   "der",
+   "das"
+  ],
+  "why": "Durch styr alltid ackusativ. Der Park är maskulinum: den ganzen Park.",
+  "sv": "Vi gick genom hela parken.",
+  "meta": {
+   "prep": "durch",
+   "case": "akk",
+   "g": "m",
+   "art": "def"
+  }
+ },
+ {
+  "id": "praep-053",
+  "topic": "praep",
+  "rule": "akk-prep",
+  "q": "Ohne [einen] Plan fängt er nie mit einem Projekt an.",
+  "alt": [
+   "einem",
+   "ein",
+   "einer"
+  ],
+  "why": "Ohne styr alltid ackusativ. Der Plan är maskulinum: einen. Einem är dativ.",
+  "sv": "Han börjar aldrig ett projekt utan en plan.",
+  "meta": {
+   "prep": "ohne",
+   "case": "akk",
+   "g": "m",
+   "art": "indef"
+  }
+ },
+ {
+  "id": "praep-054",
+  "topic": "praep",
+  "rule": "akk-prep",
+  "q": "Viele Jugendliche demonstrieren gegen [den] Klimawandel.",
+  "alt": [
+   "dem",
+   "der",
+   "des"
+  ],
+  "why": "Gegen styr alltid ackusativ. Der Klimawandel är maskulinum: den. Dem är dativ och des genitiv.",
+  "sv": "Många ungdomar demonstrerar mot klimatförändringarna.",
+  "meta": {
+   "prep": "gegen",
+   "case": "akk",
+   "g": "m",
+   "art": "def"
+  }
+ },
+ {
+  "id": "praep-055",
+  "topic": "praep",
+  "rule": "akk-prep",
+  "q": "Die ganze Familie sitzt um [den] Tisch herum.",
+  "alt": [
+   "dem",
+   "der",
+   "das"
+  ],
+  "why": "Um styr alltid ackusativ, även när det handlar om en plats. Der Tisch blir den Tisch.",
+  "sv": "Hela familjen sitter runt bordet.",
+  "meta": {
+   "prep": "um",
+   "case": "akk",
+   "g": "m",
+   "art": "def"
+  }
+ },
+ {
+  "id": "praep-056",
+  "topic": "praep",
+  "rule": "akk-prep",
+  "q": "Ich kann ohne [mein] Handy nicht leben.",
+  "alt": [
+   "meinem",
+   "meinen",
+   "meiner"
+  ],
+  "why": "Ohne styr ackusativ. Das Handy är neutrum, och neutrum i ackusativ ser ut som i nominativ: mein.",
+  "sv": "Jag kan inte leva utan min mobil.",
+  "meta": {
+   "prep": "ohne",
+   "case": "akk",
+   "g": "n",
+   "art": "poss",
+   "stem": "mein"
+  }
+ },
+ {
+  "id": "praep-057",
+  "topic": "praep",
+  "rule": "akk-prep",
+  "q": "Das Auto ist gegen [einen] Baum gefahren.",
+  "alt": [
+   "einem",
+   "ein",
+   "einer"
+  ],
+  "why": "Gegen styr ackusativ. Der Baum är maskulinum: einen Baum.",
+  "sv": "Bilen körde in i ett träd.",
+  "meta": {
+   "prep": "gegen",
+   "case": "akk",
+   "g": "m",
+   "art": "indef"
+  }
+ },
+ {
+  "id": "praep-058",
+  "topic": "praep",
+  "rule": "akk-prep",
+  "q": "Hast du schon ein Geschenk für [deine] Schwester?",
+  "alt": [
+   "deiner",
+   "deinen",
+   "deinem"
+  ],
+  "why": "Für styr ackusativ. Die Schwester är femininum: deine. Deiner är dativ.",
+  "sv": "Har du redan en present till din syster?",
+  "meta": {
+   "prep": "für",
+   "case": "akk",
+   "g": "f",
+   "art": "poss",
+   "stem": "dein"
+  }
+ },
+ {
+  "id": "praep-059",
+  "topic": "praep",
+  "rule": "akk-prep",
+  "q": "Am Abend sind wir [den] Fluss entlang spaziert.",
+  "alt": [
+   "des",
+   "der",
+   "die"
+  ],
+  "why": "Entlang efter substantivet styr ackusativ. Der Fluss är maskulinum: den Fluss entlang.",
+  "sv": "På kvällen promenerade vi längs floden.",
+  "meta": {
+   "prep": "entlang",
+   "case": "akk",
+   "g": "m",
+   "art": "def"
+  }
+ },
+ {
+  "id": "praep-060",
+  "topic": "praep",
+  "rule": "akk-prep",
+  "q": "Die Stadt gibt viel Geld für [den] Ausbau der Radwege aus.",
+  "alt": [
+   "dem",
+   "des",
+   "der"
+  ],
+  "why": "Für styr ackusativ. Der Ausbau är maskulinum: den. Der Radwege är genitiv och hör till Ausbau.",
+  "sv": "Staden lägger mycket pengar på att bygga ut cykelvägarna.",
+  "meta": {
+   "prep": "für",
+   "case": "akk",
+   "g": "m",
+   "art": "def"
+  }
+ },
+ {
+  "id": "praep-061",
+  "topic": "praep",
+  "rule": "akk-prep",
+  "q": "Er ist ohne [seine] Freundin zur Party gekommen.",
+  "alt": [
+   "seiner",
+   "seinen",
+   "seinem"
+  ],
+  "why": "Ohne styr ackusativ. Die Freundin är femininum: seine. Seiner är dativ.",
+  "sv": "Han kom till festen utan sin flickvän.",
+  "meta": {
+   "prep": "ohne",
+   "case": "akk",
+   "g": "f",
+   "art": "poss",
+   "stem": "sein"
+  }
+ },
+ {
+  "id": "praep-062",
+  "topic": "praep",
+  "rule": "akk-prep",
+  "q": "Ich habe durch [einen] Freund von dem Job erfahren.",
+  "alt": [
+   "einem",
+   "ein",
+   "eines"
+  ],
+  "why": "Durch styr ackusativ. Der Freund är maskulinum: einen. Einem är dativ.",
+  "sv": "Jag fick höra om jobbet genom en kompis.",
+  "meta": {
+   "prep": "durch",
+   "case": "akk",
+   "g": "m",
+   "art": "indef"
+  }
+ },
+ {
+  "id": "praep-063",
+  "topic": "praep",
+  "rule": "gen-prep",
+  "q": "Wegen [des] Streiks fahren heute keine Züge.",
+  "alt": [
+   "den",
+   "die",
+   "das"
+  ],
+  "why": "Wegen styr genitiv i skriftspråk. Der Streik är maskulinum: des Streiks (med -s på substantivet).",
+  "sv": "På grund av strejken går inga tåg i dag.",
+  "meta": {
+   "prep": "wegen",
+   "case": "gen",
+   "g": "m",
+   "art": "def"
+  }
+ },
+ {
+  "id": "praep-064",
+  "topic": "praep",
+  "rule": "gen-prep",
+  "q": "Trotz [des] Regens sind wir spazieren gegangen.",
+  "alt": [
+   "den",
+   "der",
+   "das"
+  ],
+  "why": "Trotz styr genitiv. Der Regen är maskulinum: des Regens.",
+  "sv": "Trots regnet gick vi ut och promenerade.",
+  "meta": {
+   "prep": "trotz",
+   "case": "gen",
+   "g": "m",
+   "art": "def"
+  }
+ },
+ {
+  "id": "praep-065",
+  "topic": "praep",
+  "rule": "gen-prep",
+  "q": "Während [der] Sommerferien arbeite ich in einem Café.",
+  "alt": [
+   "den",
+   "die",
+   "des"
+  ],
+  "why": "Während styr genitiv. Die Sommerferien är plural, och genitiv plural blir der. Den är dativ plural.",
+  "sv": "Under sommarlovet jobbar jag på ett kafé.",
+  "meta": {
+   "prep": "während",
+   "case": "gen",
+   "g": "pl",
+   "art": "def"
+  }
+ },
+ {
+  "id": "praep-066",
+  "topic": "praep",
+  "rule": "gen-prep",
+  "q": "Statt [eines] Autos hat sie sich ein Lastenrad gekauft.",
+  "alt": [
+   "einem",
+   "ein",
+   "einen"
+  ],
+  "why": "Statt styr genitiv. Das Auto är neutrum: eines Autos.",
+  "sv": "I stället för en bil köpte hon en lastcykel.",
+  "meta": {
+   "prep": "statt",
+   "case": "gen",
+   "g": "n",
+   "art": "indef"
+  }
+ },
+ {
+  "id": "praep-067",
+  "topic": "praep",
+  "rule": "gen-prep",
+  "q": "Innerhalb [einer] Woche musst du dich entscheiden.",
+  "alt": [
+   "eine",
+   "einem",
+   "eines"
+  ],
+  "why": "Innerhalb styr genitiv. Die Woche är femininum: einer Woche. Eines passar bara maskulinum och neutrum.",
+  "sv": "Du måste bestämma dig inom en vecka.",
+  "meta": {
+   "prep": "innerhalb",
+   "case": "gen",
+   "g": "f",
+   "art": "indef"
+  }
+ },
+ {
+  "id": "praep-068",
+  "topic": "praep",
+  "rule": "gen-prep",
+  "q": "Außerhalb [der] Stadt sind die Mieten viel günstiger.",
+  "alt": [
+   "die",
+   "den",
+   "des"
+  ],
+  "why": "Außerhalb styr genitiv. Die Stadt är femininum: der Stadt. Des passar bara maskulinum och neutrum.",
+  "sv": "Utanför staden är hyrorna mycket billigare.",
+  "meta": {
+   "prep": "außerhalb",
+   "case": "gen",
+   "g": "f",
+   "art": "def"
+  }
+ },
+ {
+  "id": "praep-069",
+  "topic": "praep",
+  "rule": "gen-prep",
+  "q": "Wegen [meiner] Erkältung konnte ich nicht zur Schule gehen.",
+  "alt": [
+   "meine",
+   "meinen",
+   "meines"
+  ],
+  "why": "Wegen styr genitiv. Die Erkältung är femininum: meiner. Meines passar bara maskulinum och neutrum.",
+  "sv": "På grund av min förkylning kunde jag inte gå till skolan.",
+  "meta": {
+   "prep": "wegen",
+   "case": "gen",
+   "g": "f",
+   "art": "poss",
+   "stem": "mein"
+  }
+ },
+ {
+  "id": "praep-070",
+  "topic": "praep",
+  "rule": "gen-prep",
+  "q": "Während [des] Unterrichts müssen die Handys ausgeschaltet sein.",
+  "alt": [
+   "dem",
+   "den",
+   "der"
+  ],
+  "why": "Während styr genitiv. Der Unterricht är maskulinum: des Unterrichts.",
+  "sv": "Under lektionerna måste mobilerna vara avstängda.",
+  "meta": {
+   "prep": "während",
+   "case": "gen",
+   "g": "m",
+   "art": "def"
+  }
+ },
+ {
+  "id": "relativ-001",
+  "topic": "relativ",
+  "rule": "rel-nom",
+  "q": "Der Mann, [der] neben mir wohnt, arbeitet als Arzt.",
+  "alt": [
+   "den",
+   "dem",
+   "das"
+  ],
+  "why": "Der Mann är maskulinum och är subjekt i bisatsen (han bor bredvid mig), alltså nominativ: der.",
+  "sv": "Mannen som bor bredvid mig arbetar som läkare.",
+  "meta": {
+   "g": "m",
+   "case": "nom"
+  }
+ },
+ {
+  "id": "relativ-002",
+  "topic": "relativ",
+  "rule": "rel-nom",
+  "q": "Die Lehrerin, [die] uns in Deutsch unterrichtet, kommt aus Österreich.",
+  "alt": [
+   "der",
+   "den",
+   "deren"
+  ],
+  "why": "Die Lehrerin är femininum och subjekt i bisatsen (hon undervisar oss), alltså nominativ: die.",
+  "sv": "Läraren som undervisar oss i tyska kommer från Österrike.",
+  "meta": {
+   "g": "f",
+   "case": "nom"
+  }
+ },
+ {
+  "id": "relativ-003",
+  "topic": "relativ",
+  "rule": "rel-nom",
+  "q": "Das Kind, [das] dort drüben spielt, ist der Sohn meiner Nachbarin.",
+  "alt": [
+   "der",
+   "dem",
+   "dass"
+  ],
+  "why": "Das Kind är neutrum och subjekt i bisatsen, alltså das. Dass är en subjunktion (att), inte ett relativpronomen.",
+  "sv": "Barnet som leker där borta är min grannes son.",
+  "meta": {
+   "g": "n",
+   "case": "nom"
+  }
+ },
+ {
+  "id": "relativ-004",
+  "topic": "relativ",
+  "rule": "rel-nom",
+  "q": "Die Schüler, [die] am Austausch teilnehmen, fahren im Mai nach Hamburg.",
+  "alt": [
+   "der",
+   "den",
+   "denen"
+  ],
+  "why": "Die Schüler är plural och subjekt i bisatsen, alltså nominativ plural: die. Denen är dativ plural.",
+  "sv": "Eleverna som deltar i utbytet åker till Hamburg i maj.",
+  "meta": {
+   "g": "pl",
+   "case": "nom"
+  }
+ },
+ {
+  "id": "relativ-005",
+  "topic": "relativ",
+  "rule": "rel-nom",
+  "q": "Ich suche einen Job, [der] mir Spaß macht.",
+  "alt": [
+   "den",
+   "dem",
+   "das"
+  ],
+  "why": "Der Job är maskulinum. I bisatsen är jobbet subjekt (det är roligt för mig), alltså nominativ der, även om einen Job står i ackusativ i huvudsatsen.",
+  "sv": "Jag söker ett jobb som är roligt.",
+  "meta": {
+   "g": "m",
+   "case": "nom"
+  }
+ },
+ {
+  "id": "relativ-006",
+  "topic": "relativ",
+  "rule": "rel-nom",
+  "q": "Wir brauchen Politiker, [die] den Klimawandel ernst nehmen.",
+  "alt": [
+   "denen",
+   "der",
+   "deren"
+  ],
+  "why": "Politiker är plural och subjekt i bisatsen (de tar klimatet på allvar), alltså die.",
+  "sv": "Vi behöver politiker som tar klimatförändringarna på allvar.",
+  "meta": {
+   "g": "pl",
+   "case": "nom"
+  }
+ },
+ {
+  "id": "relativ-007",
+  "topic": "relativ",
+  "rule": "rel-nom",
+  "q": "Das ist eine App, [die] beim Vokabellernen hilft.",
+  "alt": [
+   "der",
+   "das",
+   "den"
+  ],
+  "why": "Die App är femininum och subjekt i bisatsen (appen hjälper), alltså die.",
+  "sv": "Det är en app som hjälper till med glosinlärningen.",
+  "meta": {
+   "g": "f",
+   "case": "nom"
+  }
+ },
+ {
+  "id": "relativ-008",
+  "topic": "relativ",
+  "rule": "rel-nom",
+  "q": "Ein Freund, [der] immer ehrlich ist, ist viel wert.",
+  "alt": [
+   "den",
+   "dem",
+   "das"
+  ],
+  "why": "Der Freund är maskulinum och subjekt i bisatsen, alltså nominativ: der.",
+  "sv": "En vän som alltid är ärlig är värd mycket.",
+  "meta": {
+   "g": "m",
+   "case": "nom"
+  }
+ },
+ {
+  "id": "relativ-009",
+  "topic": "relativ",
+  "rule": "rel-nom",
+  "q": "Das Buch, [das] gerade auf Platz eins der Bestsellerliste steht, habe ich schon gelesen.",
+  "alt": [
+   "den",
+   "dem",
+   "der"
+  ],
+  "why": "Das Buch är neutrum och subjekt i bisatsen (boken står på plats ett), alltså das.",
+  "sv": "Boken som just nu ligger etta på topplistan har jag redan läst.",
+  "meta": {
+   "g": "n",
+   "case": "nom"
+  }
+ },
+ {
+  "id": "relativ-010",
+  "topic": "relativ",
+  "rule": "rel-akk",
+  "q": "Der Film, [den] wir gestern gesehen haben, war total spannend.",
+  "alt": [
+   "der",
+   "dem",
+   "das"
+  ],
+  "why": "Der Film är maskulinum. I bisatsen är wir subjekt och filmen objekt (vi såg den), alltså ackusativ: den.",
+  "sv": "Filmen som vi såg i går var jättespännande.",
+  "meta": {
+   "g": "m",
+   "case": "akk"
+  }
+ },
+ {
+  "id": "relativ-011",
+  "topic": "relativ",
+  "rule": "rel-akk",
+  "q": "Die Stadt, [die] ich am schönsten finde, ist Salzburg.",
+  "alt": [
+   "der",
+   "den",
+   "das"
+  ],
+  "why": "Die Stadt är femininum och objekt i bisatsen (jag tycker den är vackrast). Femininum ackusativ är die.",
+  "sv": "Den stad som jag tycker är vackrast är Salzburg.",
+  "meta": {
+   "g": "f",
+   "case": "akk"
+  }
+ },
+ {
+  "id": "relativ-012",
+  "topic": "relativ",
+  "rule": "rel-akk",
+  "q": "Das Fahrrad, [das] ich mir gekauft habe, war gebraucht.",
+  "alt": [
+   "den",
+   "dem",
+   "der"
+  ],
+  "why": "Das Fahrrad är neutrum och objekt i bisatsen. Neutrum ackusativ är das.",
+  "sv": "Cykeln som jag köpte var begagnad.",
+  "meta": {
+   "g": "n",
+   "case": "akk"
+  }
+ },
+ {
+  "id": "relativ-013",
+  "topic": "relativ",
+  "rule": "rel-akk",
+  "q": "Kennst du den Jungen, [den] Lisa zur Party eingeladen hat?",
+  "alt": [
+   "der",
+   "dem",
+   "dessen"
+  ],
+  "why": "Der Junge är maskulinum och objekt i bisatsen (Lisa har bjudit honom), alltså ackusativ: den.",
+  "sv": "Känner du killen som Lisa har bjudit till festen?",
+  "meta": {
+   "g": "m",
+   "case": "akk"
+  }
+ },
+ {
+  "id": "relativ-014",
+  "topic": "relativ",
+  "rule": "rel-akk",
+  "q": "Die Bücher, [die] wir im Unterricht lesen, sind ziemlich alt.",
+  "alt": [
+   "denen",
+   "den",
+   "der"
+  ],
+  "why": "Die Bücher är plural och objekt i bisatsen (vi läser dem). Plural ackusativ är die.",
+  "sv": "Böckerna som vi läser på lektionerna är ganska gamla.",
+  "meta": {
+   "g": "pl",
+   "case": "akk"
+  }
+ },
+ {
+  "id": "relativ-015",
+  "topic": "relativ",
+  "rule": "rel-akk",
+  "q": "Das ist der Lehrer, [den] alle Schüler mögen.",
+  "alt": [
+   "der",
+   "dem",
+   "das"
+  ],
+  "why": "Der Lehrer är maskulinum. Verbet mögen står i plural, så subjektet är alle Schüler och läraren är objekt: den.",
+  "sv": "Det är läraren som alla elever tycker om.",
+  "meta": {
+   "g": "m",
+   "case": "akk"
+  }
+ },
+ {
+  "id": "relativ-016",
+  "topic": "relativ",
+  "rule": "rel-akk",
+  "q": "Die Serie, [die] mir meine Schwester empfohlen hat, ist wirklich gut.",
+  "alt": [
+   "der",
+   "den",
+   "deren"
+  ],
+  "why": "Die Serie är femininum och objekt i bisatsen (min syster rekommenderade den). Femininum ackusativ är die.",
+  "sv": "Serien som min syster rekommenderade är riktigt bra.",
+  "meta": {
+   "g": "f",
+   "case": "akk"
+  }
+ },
+ {
+  "id": "relativ-017",
+  "topic": "relativ",
+  "rule": "rel-akk",
+  "q": "Endlich haben wir einen Kompromiss gefunden, [den] alle akzeptieren können.",
+  "alt": [
+   "der",
+   "dem",
+   "das"
+  ],
+  "why": "Der Kompromiss är maskulinum och objekt i bisatsen (alla kan acceptera den), alltså ackusativ: den.",
+  "sv": "Äntligen har vi hittat en kompromiss som alla kan acceptera.",
+  "meta": {
+   "g": "m",
+   "case": "akk"
+  }
+ },
+ {
+  "id": "relativ-018",
+  "topic": "relativ",
+  "rule": "rel-akk",
+  "q": "Das Praktikum, [das] ich im Sommer gemacht habe, war sehr lehrreich.",
+  "alt": [
+   "den",
+   "dem",
+   "dass"
+  ],
+  "why": "Das Praktikum är neutrum och objekt i bisatsen, alltså das. Dass är en subjunktion (att).",
+  "sv": "Praktiken som jag gjorde i somras var mycket lärorik.",
+  "meta": {
+   "g": "n",
+   "case": "akk"
+  }
+ },
+ {
+  "id": "relativ-019",
+  "topic": "relativ",
+  "rule": "rel-dat",
+  "q": "Die Freundin, [der] ich alles erzähle, wohnt jetzt in Berlin.",
+  "alt": [
+   "die",
+   "denen",
+   "deren"
+  ],
+  "why": "Jemandem etwas erzählen: personen man berättar för står i dativ. Die Freundin är femininum, så dativ blir der.",
+  "sv": "Väninnan som jag berättar allt för bor nu i Berlin.",
+  "meta": {
+   "g": "f",
+   "case": "dat"
+  }
+ },
+ {
+  "id": "relativ-020",
+  "topic": "relativ",
+  "rule": "rel-dat",
+  "q": "Der Mann, [dem] das Auto gehört, ist gerade nicht da.",
+  "alt": [
+   "den",
+   "der",
+   "dessen"
+  ],
+  "why": "Gehören styr dativ (bilen tillhör honom). Der Mann är maskulinum: dem. Dessen skulle kräva att bilen stod direkt efter: dessen Auto.",
+  "sv": "Mannen som äger bilen är inte här just nu.",
+  "meta": {
+   "g": "m",
+   "case": "dat"
+  }
+ },
+ {
+  "id": "relativ-021",
+  "topic": "relativ",
+  "rule": "rel-dat",
+  "q": "Die Kinder, [denen] wir Nachhilfe geben, machen große Fortschritte.",
+  "alt": [
+   "die",
+   "den",
+   "deren"
+  ],
+  "why": "Jemandem Nachhilfe geben: personen står i dativ. Plural dativ som relativpronomen är denen, inte den.",
+  "sv": "Barnen som vi ger läxhjälp gör stora framsteg.",
+  "meta": {
+   "g": "pl",
+   "case": "dat"
+  }
+ },
+ {
+  "id": "relativ-022",
+  "topic": "relativ",
+  "rule": "rel-dat",
+  "q": "Das ist der Kollege, [dem] ich am meisten vertraue.",
+  "alt": [
+   "den",
+   "der",
+   "dessen"
+  ],
+  "why": "Vertrauen styr dativ. Der Kollege är maskulinum: dem.",
+  "sv": "Det är den kollega som jag litar mest på.",
+  "meta": {
+   "g": "m",
+   "case": "dat"
+  }
+ },
+ {
+  "id": "relativ-023",
+  "topic": "relativ",
+  "rule": "rel-dat",
+  "q": "Das Mädchen, [dem] ich geholfen habe, hat sich sehr gefreut.",
+  "alt": [
+   "das",
+   "der",
+   "den"
+  ],
+  "why": "Helfen styr dativ. Das Mädchen är neutrum (trots att det är en flicka): dem.",
+  "sv": "Flickan som jag hjälpte blev väldigt glad.",
+  "meta": {
+   "g": "n",
+   "case": "dat"
+  }
+ },
+ {
+  "id": "relativ-024",
+  "topic": "relativ",
+  "rule": "rel-dat",
+  "q": "Meine Eltern, [denen] ich viel zu verdanken habe, feiern bald ihren 25. Hochzeitstag.",
+  "alt": [
+   "die",
+   "den",
+   "deren"
+  ],
+  "why": "Jemandem etwas verdanken: personen står i dativ. Plural dativ är denen.",
+  "sv": "Mina föräldrar, som jag har mycket att tacka för, firar snart sin 25-åriga bröllopsdag.",
+  "meta": {
+   "g": "pl",
+   "case": "dat"
+  }
+ },
+ {
+  "id": "relativ-025",
+  "topic": "relativ",
+  "rule": "rel-dat",
+  "q": "Die Lehrerin, [der] wir zum Abschied Blumen geschenkt haben, geht in Rente.",
+  "alt": [
+   "die",
+   "den",
+   "deren"
+  ],
+  "why": "Jemandem etwas schenken: mottagaren står i dativ. Die Lehrerin är femininum: der.",
+  "sv": "Läraren som vi gav blommor som avskedspresent går i pension.",
+  "meta": {
+   "g": "f",
+   "case": "dat"
+  }
+ },
+ {
+  "id": "relativ-026",
+  "topic": "relativ",
+  "rule": "rel-gen",
+  "q": "Der Schüler, [dessen] Handy geklaut wurde, ist zur Polizei gegangen.",
+  "alt": [
+   "deren",
+   "dem",
+   "der"
+  ],
+  "why": "Mobilen tillhör eleven (vars mobil). Der Schüler är maskulinum, så genitiv blir dessen. Deren används för femininum och plural.",
+  "sv": "Eleven vars mobil blev stulen har gått till polisen.",
+  "meta": {
+   "g": "m",
+   "case": "gen"
+  }
+ },
+ {
+  "id": "relativ-027",
+  "topic": "relativ",
+  "rule": "rel-gen",
+  "q": "Die Autorin, [deren] Roman wir gerade lesen, kommt aus der Schweiz.",
+  "alt": [
+   "dessen",
+   "die",
+   "der"
+  ],
+  "why": "Romanen tillhör författaren (vars roman). Die Autorin är femininum, så genitiv blir deren, även om der Roman är maskulinum.",
+  "sv": "Författaren vars roman vi läser just nu kommer från Schweiz.",
+  "meta": {
+   "g": "f",
+   "case": "gen"
+  }
+ },
+ {
+  "id": "relativ-028",
+  "topic": "relativ",
+  "rule": "rel-gen",
+  "q": "Das ist das Unternehmen, [dessen] Produkte besonders umweltfreundlich sind.",
+  "alt": [
+   "deren",
+   "das",
+   "dem"
+  ],
+  "why": "Produkterna tillhör företaget (vars produkter). Das Unternehmen är neutrum, så genitiv blir dessen. Att Produkte är plural spelar ingen roll.",
+  "sv": "Det är företaget vars produkter är särskilt miljövänliga.",
+  "meta": {
+   "g": "n",
+   "case": "gen"
+  }
+ },
+ {
+  "id": "relativ-029",
+  "topic": "relativ",
+  "rule": "rel-gen",
+  "q": "Familien, [deren] Kinder noch klein sind, bekommen mehr Unterstützung.",
+  "alt": [
+   "dessen",
+   "denen",
+   "die"
+  ],
+  "why": "Barnen tillhör familjerna (vars barn). Familien är plural, så genitiv blir deren.",
+  "sv": "Familjer vars barn fortfarande är små får mer stöd.",
+  "meta": {
+   "g": "pl",
+   "case": "gen"
+  }
+ },
+ {
+  "id": "relativ-030",
+  "topic": "relativ",
+  "rule": "rel-gen",
+  "q": "Mein Freund, [dessen] Eltern aus der Türkei kommen, spricht drei Sprachen.",
+  "alt": [
+   "deren",
+   "dem",
+   "den"
+  ],
+  "why": "Föräldrarna tillhör kompisen (vars föräldrar). Der Freund är maskulinum, så dessen, fast Eltern är plural. Genitivet rättar sig efter ägaren.",
+  "sv": "Min kompis, vars föräldrar kommer från Turkiet, talar tre språk.",
+  "meta": {
+   "g": "m",
+   "case": "gen"
+  }
+ },
+ {
+  "id": "relativ-031",
+  "topic": "relativ",
+  "rule": "rel-gen",
+  "q": "Die Stadt, [deren] Altstadt zum Weltkulturerbe gehört, heißt Bamberg.",
+  "alt": [
+   "dessen",
+   "der",
+   "die"
+  ],
+  "why": "Gamla stan tillhör staden (vars gamla stad). Die Stadt är femininum, så genitiv blir deren.",
+  "sv": "Staden vars gamla stad är ett världsarv heter Bamberg.",
+  "meta": {
+   "g": "f",
+   "case": "gen"
+  }
+ },
+ {
+  "id": "relativ-032",
+  "topic": "relativ",
+  "rule": "rel-prep",
+  "q": "Das ist die Freundin, [mit der] ich nach Italien gefahren bin.",
+  "alt": [
+   "mit die",
+   "mit dem",
+   "mit denen"
+  ],
+  "why": "Mit styr dativ och prepositionen står först i bisatsen. Die Freundin är femininum: mit der.",
+  "sv": "Det är väninnan som jag åkte till Italien med.",
+  "meta": {
+   "g": "f",
+   "case": "dat"
+  }
+ },
+ {
+  "id": "relativ-033",
+  "topic": "relativ",
+  "rule": "rel-prep",
+  "q": "Der Stuhl, [auf dem] du sitzt, ist kaputt.",
+  "alt": [
+   "auf den",
+   "auf der",
+   "auf das"
+  ],
+  "why": "Sitzen anger plats, så auf tar dativ. Der Stuhl är maskulinum: auf dem.",
+  "sv": "Stolen som du sitter på är trasig.",
+  "meta": {
+   "g": "m",
+   "case": "dat"
+  }
+ },
+ {
+  "id": "relativ-034",
+  "topic": "relativ",
+  "rule": "rel-prep",
+  "q": "Das Thema, [für das] ich mich am meisten interessiere, ist Umweltschutz.",
+  "alt": [
+   "für dem",
+   "für den",
+   "für die"
+  ],
+  "why": "Sich interessieren für + ackusativ. Das Thema är neutrum: für das.",
+  "sv": "Det ämne som jag är mest intresserad av är miljöskydd.",
+  "meta": {
+   "g": "n",
+   "case": "akk"
+  }
+ },
+ {
+  "id": "relativ-035",
+  "topic": "relativ",
+  "rule": "rel-prep",
+  "q": "Die Leute, [bei denen] ich in Wien gewohnt habe, waren sehr nett.",
+  "alt": [
+   "bei die",
+   "bei den",
+   "bei deren"
+  ],
+  "why": "Bei styr dativ. Die Leute är plural, och dativ plural som relativpronomen är denen.",
+  "sv": "Folket som jag bodde hos i Wien var mycket trevliga.",
+  "meta": {
+   "g": "pl",
+   "case": "dat"
+  }
+ },
+ {
+  "id": "relativ-036",
+  "topic": "relativ",
+  "rule": "rel-prep",
+  "q": "Der Freund, [auf den] ich warte, kommt immer zu spät.",
+  "alt": [
+   "auf dem",
+   "auf der",
+   "auf das"
+  ],
+  "why": "Warten auf + ackusativ. Der Freund är maskulinum: auf den.",
+  "sv": "Kompisen som jag väntar på kommer alltid för sent.",
+  "meta": {
+   "g": "m",
+   "case": "akk"
+  }
+ },
+ {
+  "id": "relativ-037",
+  "topic": "relativ",
+  "rule": "rel-prep",
+  "q": "Die Stadt, [in der] ich aufgewachsen bin, liegt in Bayern.",
+  "alt": [
+   "in die",
+   "in den",
+   "in dem"
+  ],
+  "acc": [
+   "wo"
+  ],
+  "why": "Aufwachsen anger plats, så in tar dativ. Die Stadt är femininum: in der. Wo går också bra här.",
+  "sv": "Staden som jag växte upp i ligger i Bayern.",
+  "meta": {
+   "g": "f",
+   "case": "dat"
+  }
+ },
+ {
+  "id": "relativ-038",
+  "topic": "relativ",
+  "rule": "rel-prep",
+  "q": "Das Problem, [über das] wir gestern diskutiert haben, ist noch nicht gelöst.",
+  "alt": [
+   "über dem",
+   "über den",
+   "über die"
+  ],
+  "why": "Diskutieren über + ackusativ. Das Problem är neutrum: über das.",
+  "sv": "Problemet som vi diskuterade i går är fortfarande inte löst.",
+  "meta": {
+   "g": "n",
+   "case": "akk"
+  }
+ },
+ {
+  "id": "relativ-039",
+  "topic": "relativ",
+  "rule": "rel-prep",
+  "q": "Mein Opa, [von dem] ich diese Uhr habe, war Uhrmacher.",
+  "alt": [
+   "von den",
+   "von der",
+   "von das"
+  ],
+  "why": "Von styr alltid dativ. Der Opa är maskulinum: von dem.",
+  "sv": "Min morfar, som jag har fått den här klockan av, var urmakare.",
+  "meta": {
+   "g": "m",
+   "case": "dat"
+  }
+ },
+ {
+  "id": "relativ-040",
+  "topic": "relativ",
+  "rule": "rel-was",
+  "q": "Das ist alles, [was] ich darüber weiß.",
+  "alt": [
+   "das",
+   "dass",
+   "wo"
+  ],
+  "why": "Efter alles används was som relativpronomen, inte das. Dass är en subjunktion.",
+  "sv": "Det är allt som jag vet om det."
+ },
+ {
+  "id": "relativ-041",
+  "topic": "relativ",
+  "rule": "rel-was",
+  "q": "Es gibt nichts, [was] mich mehr ärgert als Unpünktlichkeit.",
+  "alt": [
+   "dass",
+   "wo",
+   "der"
+  ],
+  "why": "Efter nichts används was. Der kräver ett maskulint substantiv, och dass är en subjunktion.",
+  "sv": "Det finns inget som irriterar mig mer än att folk kommer för sent."
+ },
+ {
+  "id": "relativ-042",
+  "topic": "relativ",
+  "rule": "rel-was",
+  "q": "Das ist das Beste, [was] mir je passiert ist.",
+  "alt": [
+   "dass",
+   "wo",
+   "der"
+  ],
+  "why": "Efter ett substantiverat superlativ (das Beste, das Schönste) används was.",
+  "sv": "Det är det bästa som någonsin har hänt mig."
+ },
+ {
+  "id": "relativ-043",
+  "topic": "relativ",
+  "rule": "rel-was",
+  "q": "Gibt es etwas, [was] ich für dich tun kann?",
+  "alt": [
+   "dass",
+   "wo",
+   "den"
+  ],
+  "why": "Efter etwas används was (i skrift också das). Dass är en subjunktion och wo syftar på en plats.",
+  "sv": "Finns det något som jag kan göra för dig?"
+ },
+ {
+  "id": "relativ-044",
+  "topic": "relativ",
+  "rule": "rel-was",
+  "q": "Im Sommer fahre ich nach Hamburg, [wo] meine Cousine wohnt.",
+  "alt": [
+   "was",
+   "wohin",
+   "das"
+  ],
+  "why": "Efter ett ortsnamn används wo som relativord. Wohin anger riktning och passar inte med wohnen.",
+  "sv": "I sommar åker jag till Hamburg, där min kusin bor."
+ },
+ {
+  "id": "relativ-045",
+  "topic": "relativ",
+  "rule": "rel-was",
+  "q": "Letztes Jahr waren wir in Zürich, [wo] wir einen alten Freund getroffen haben.",
+  "alt": [
+   "was",
+   "wohin",
+   "woher"
+  ],
+  "why": "Efter ett ortsnamn används wo för plats. Wohin (vart) och woher (varifrån) anger rörelse.",
+  "sv": "Förra året var vi i Zürich, där vi träffade en gammal vän."
+ },
+ {
+  "id": "verbprep-001",
+  "topic": "verbprep",
+  "rule": "vp-prep",
+  "q": "Ich freue mich schon [auf] die Klassenfahrt nächste Woche.",
+  "alt": [
+   "über",
+   "für",
+   "an"
+  ],
+  "why": "Sich freuen auf används om något som ligger i framtiden. Sich freuen über gäller något som redan har hänt.",
+  "sv": "Jag ser redan fram emot klassresan nästa vecka."
+ },
+ {
+  "id": "verbprep-002",
+  "topic": "verbprep",
+  "rule": "vp-prep",
+  "q": "Danke für die Blumen, ich habe mich sehr [über] deine Überraschung gefreut!",
+  "alt": [
+   "auf",
+   "für",
+   "an"
+  ],
+  "why": "Överraskningen har redan hänt, så det heter sich freuen über. Sich freuen auf används om något som ska komma.",
+  "sv": "Tack för blommorna, jag blev väldigt glad över din överraskning!"
+ },
+ {
+  "id": "verbprep-003",
+  "topic": "verbprep",
+  "rule": "vp-prep",
+  "q": "Wir warten schon seit zwanzig Minuten [auf] den Bus.",
+  "alt": [
+   "für",
+   "nach",
+   "an"
+  ],
+  "why": "Warten auf + ackusativ. Svenskans vänta på motsvaras av auf, inte für.",
+  "sv": "Vi har väntat på bussen i tjugo minuter."
+ },
+ {
+  "id": "verbprep-004",
+  "topic": "verbprep",
+  "rule": "vp-prep",
+  "q": "Interessierst du dich [für] Politik?",
+  "alt": [
+   "an",
+   "über",
+   "auf"
+  ],
+  "why": "Sich interessieren für + ackusativ. Jämför svenskans intresserad av.",
+  "sv": "Är du intresserad av politik?"
+ },
+ {
+  "id": "verbprep-005",
+  "topic": "verbprep",
+  "rule": "vp-prep",
+  "q": "Über 300 Schüler haben [an] der Umfrage teilgenommen.",
+  "alt": [
+   "in",
+   "bei",
+   "auf"
+  ],
+  "why": "Teilnehmen an + dativ. Svenskans delta i blir alltså an, inte in.",
+  "sv": "Över 300 elever deltog i enkäten."
+ },
+ {
+  "id": "verbprep-006",
+  "topic": "verbprep",
+  "rule": "vp-prep",
+  "q": "Ich denke oft [an] meine Zeit in Berlin.",
+  "alt": [
+   "von",
+   "auf",
+   "für"
+  ],
+  "why": "Denken an + ackusativ betyder tänka på. Denken von betyder tycka om (ha en åsikt).",
+  "sv": "Jag tänker ofta på min tid i Berlin."
+ },
+ {
+  "id": "verbprep-007",
+  "topic": "verbprep",
+  "rule": "vp-prep",
+  "q": "Viele Jugendliche fürchten sich [vor] der Zukunft.",
+  "alt": [
+   "für",
+   "an",
+   "über"
+  ],
+  "why": "Sich fürchten vor + dativ, precis som Angst haben vor. Svenskans rädd för blir vor, inte für.",
+  "sv": "Många ungdomar är rädda för framtiden."
+ },
+ {
+  "id": "verbprep-008",
+  "topic": "verbprep",
+  "rule": "vp-prep",
+  "q": "Kannst du dich heute Nachmittag [um] deinen kleinen Bruder kümmern?",
+  "alt": [
+   "für",
+   "über",
+   "an"
+  ],
+  "why": "Sich kümmern um + ackusativ betyder ta hand om.",
+  "sv": "Kan du ta hand om din lillebror i eftermiddag?"
+ },
+ {
+  "id": "verbprep-009",
+  "topic": "verbprep",
+  "rule": "vp-prep",
+  "q": "Er hat sich gestern [bei] seiner Freundin entschuldigt.",
+  "alt": [
+   "an",
+   "zu",
+   "für"
+  ],
+  "why": "Sich entschuldigen bei + dativ: den man ber om ursäkt. Själva saken står med für: sich für etwas entschuldigen.",
+  "sv": "Han bad sin flickvän om ursäkt i går."
+ },
+ {
+  "id": "verbprep-010",
+  "topic": "verbprep",
+  "rule": "vp-prep",
+  "q": "Die Schüler beschweren sich [über] die vielen Hausaufgaben.",
+  "alt": [
+   "für",
+   "gegen",
+   "an"
+  ],
+  "why": "Sich beschweren über + ackusativ betyder klaga på något.",
+  "sv": "Eleverna klagar på alla läxor."
+ },
+ {
+  "id": "verbprep-011",
+  "topic": "verbprep",
+  "rule": "vp-prep",
+  "q": "Das Ergebnis hängt [von] vielen Faktoren ab.",
+  "alt": [
+   "an",
+   "auf",
+   "mit"
+  ],
+  "why": "Abhängen von + dativ betyder bero på. Svenskans på blir här von.",
+  "sv": "Resultatet beror på många faktorer."
+ },
+ {
+  "id": "verbprep-012",
+  "topic": "verbprep",
+  "rule": "vp-prep",
+  "q": "In der Großstadt leiden viele Menschen [unter] dem Lärm.",
+  "alt": [
+   "an",
+   "von",
+   "mit"
+  ],
+  "why": "Leiden unter + dativ används om sådant som besvärar en, t.ex. buller eller stress. Leiden an används om sjukdomar.",
+  "sv": "I storstaden lider många människor av bullret."
+ },
+ {
+  "id": "verbprep-013",
+  "topic": "verbprep",
+  "rule": "vp-prep",
+  "q": "Hast du schon jemanden [nach] dem Weg gefragt?",
+  "alt": [
+   "für",
+   "um",
+   "über"
+  ],
+  "why": "Fragen nach + dativ betyder fråga efter något. Um använder man med bitten (be om).",
+  "sv": "Har du redan frågat någon om vägen?"
+ },
+ {
+  "id": "verbprep-014",
+  "topic": "verbprep",
+  "rule": "vp-prep",
+  "q": "Sie hat sich schnell [an] die neue Schule gewöhnt.",
+  "alt": [
+   "auf",
+   "für",
+   "zu"
+  ],
+  "why": "Sich gewöhnen an + ackusativ betyder vänja sig vid.",
+  "sv": "Hon vande sig snabbt vid den nya skolan."
+ },
+ {
+  "id": "verbprep-015",
+  "topic": "verbprep",
+  "rule": "vp-prep",
+  "q": "Wir müssen uns besser [auf] die Prüfung vorbereiten.",
+  "alt": [
+   "an",
+   "zu",
+   "über"
+  ],
+  "why": "Sich vorbereiten auf + ackusativ betyder förbereda sig inför något.",
+  "sv": "Vi måste förbereda oss bättre inför provet."
+ },
+ {
+  "id": "verbprep-016",
+  "topic": "verbprep",
+  "rule": "vp-prep",
+  "q": "Meine Oma erzählt oft [von] ihrer Kindheit in Wien.",
+  "alt": [
+   "über",
+   "an",
+   "mit"
+  ],
+  "why": "Erzählen von + dativ betyder berätta om. Über skulle kräva ackusativ (über ihre Kindheit), och här står ihrer i dativ.",
+  "sv": "Min mormor berättar ofta om sin barndom i Wien."
+ },
+ {
+  "id": "verbprep-017",
+  "topic": "verbprep",
+  "rule": "vp-prep",
+  "q": "Ich habe mich gestern mit meinem besten Freund [über] Politik gestritten.",
+  "alt": [
+   "für",
+   "an",
+   "auf"
+  ],
+  "why": "Sich streiten über + ackusativ betyder bråka om något. Den man bråkar med står med mit.",
+  "sv": "Jag bråkade med min bästa kompis om politik i går."
+ },
+ {
+  "id": "verbprep-018",
+  "topic": "verbprep",
+  "rule": "vp-prep",
+  "q": "Viele junge Menschen engagieren sich [für] den Umweltschutz.",
+  "alt": [
+   "an",
+   "über",
+   "auf"
+  ],
+  "why": "Sich engagieren für + ackusativ betyder engagera sig för något.",
+  "sv": "Många unga människor engagerar sig för miljöskyddet."
+ },
+ {
+  "id": "verbprep-019",
+  "topic": "verbprep",
+  "rule": "vp-prep",
+  "q": "Im Urlaub hat er sich [in] eine Kellnerin verliebt.",
+  "alt": [
+   "an",
+   "auf",
+   "mit"
+  ],
+  "why": "Sich verlieben in + ackusativ betyder bli kär i.",
+  "sv": "På semestern blev han kär i en servitris."
+ },
+ {
+  "id": "verbprep-020",
+  "topic": "verbprep",
+  "rule": "vp-kasus",
+  "q": "Seit einer halben Stunde warten wir auf [den] Bus.",
+  "alt": [
+   "dem",
+   "der",
+   "das"
+  ],
+  "why": "Warten auf tar alltid ackusativ. Der Bus är maskulinum: auf den Bus.",
+  "sv": "Vi har väntat på bussen i en halvtimme."
+ },
+ {
+  "id": "verbprep-021",
+  "topic": "verbprep",
+  "rule": "vp-kasus",
+  "q": "Sie interessiert sich sehr für [die] Geschichte Österreichs.",
+  "alt": [
+   "der",
+   "den",
+   "dem"
+  ],
+  "why": "Sich interessieren für + ackusativ. Die Geschichte är femininum: die.",
+  "sv": "Hon är mycket intresserad av Österrikes historia."
+ },
+ {
+  "id": "verbprep-022",
+  "topic": "verbprep",
+  "rule": "vp-kasus",
+  "q": "Denk bitte an [deinen] Termin beim Zahnarzt!",
+  "alt": [
+   "deinem",
+   "dein",
+   "deiner"
+  ],
+  "why": "Denken an + ackusativ. Der Termin är maskulinum: deinen.",
+  "sv": "Tänk på din tid hos tandläkaren!"
+ },
+ {
+  "id": "verbprep-023",
+  "topic": "verbprep",
+  "rule": "vp-kasus",
+  "q": "Nach dem Kino haben wir lange über [den] Film diskutiert.",
+  "alt": [
+   "dem",
+   "der",
+   "das"
+  ],
+  "why": "Diskutieren über + ackusativ. Der Film är maskulinum: den Film.",
+  "sv": "Efter bion diskuterade vi filmen länge."
+ },
+ {
+  "id": "verbprep-024",
+  "topic": "verbprep",
+  "rule": "vp-kasus",
+  "q": "Unsere Klasse nimmt an [einem] Austausch mit einer Schule in Dresden teil.",
+  "alt": [
+   "einen",
+   "ein",
+   "einer"
+  ],
+  "why": "Teilnehmen an + dativ. Der Austausch är maskulinum: einem.",
+  "sv": "Vår klass deltar i ett utbyte med en skola i Dresden."
+ },
+ {
+  "id": "verbprep-025",
+  "topic": "verbprep",
+  "rule": "vp-kasus",
+  "q": "Ich habe mich sehr über [deinen] Brief gefreut.",
+  "alt": [
+   "deinem",
+   "dein",
+   "deiner"
+  ],
+  "why": "Sich freuen über + ackusativ. Der Brief är maskulinum: deinen.",
+  "sv": "Jag blev väldigt glad över ditt brev."
+ },
+ {
+  "id": "verbprep-026",
+  "topic": "verbprep",
+  "rule": "vp-kasus",
+  "q": "Mein Vater hat sich schnell an [das] Leben in Deutschland gewöhnt.",
+  "alt": [
+   "dem",
+   "den",
+   "der"
+  ],
+  "why": "Sich gewöhnen an + ackusativ. Das Leben är neutrum: das.",
+  "sv": "Min pappa vande sig snabbt vid livet i Tyskland."
+ },
+ {
+  "id": "verbprep-027",
+  "topic": "verbprep",
+  "rule": "vp-kasus",
+  "q": "Er hat große Angst vor [der] mündlichen Prüfung.",
+  "alt": [
+   "die",
+   "den",
+   "dem"
+  ],
+  "why": "Angst haben vor + dativ. Die Prüfung är femininum: der.",
+  "sv": "Han är mycket rädd för det muntliga provet."
+ },
+ {
+  "id": "verbprep-028",
+  "topic": "verbprep",
+  "rule": "vp-kasus",
+  "q": "Ich habe mich gestern mit [meiner] Schwester gestritten.",
+  "alt": [
+   "meine",
+   "meinem",
+   "meinen"
+  ],
+  "why": "Sich streiten mit + dativ. Die Schwester är femininum: meiner.",
+  "sv": "Jag bråkade med min syster i går."
+ },
+ {
+  "id": "verbprep-029",
+  "topic": "verbprep",
+  "rule": "vp-kasus",
+  "q": "Die Umweltorganisation kämpft gegen [die] Abholzung des Regenwaldes.",
+  "alt": [
+   "der",
+   "den",
+   "dem"
+  ],
+  "why": "Kämpfen gegen + ackusativ. Die Abholzung är femininum: die.",
+  "sv": "Miljöorganisationen kämpar mot skövlingen av regnskogen."
+ },
+ {
+  "id": "verbprep-030",
+  "topic": "verbprep",
+  "rule": "vp-kasus",
+  "q": "Kümmerst du dich um [den] Hund, wenn wir im Urlaub sind?",
+  "alt": [
+   "dem",
+   "der",
+   "das"
+  ],
+  "why": "Sich kümmern um + ackusativ. Der Hund är maskulinum: den.",
+  "sv": "Tar du hand om hunden när vi är på semester?"
+ },
+ {
+  "id": "verbprep-031",
+  "topic": "verbprep",
+  "rule": "vp-kasus",
+  "q": "Sie hat sich bei [ihrem] Chef über die langen Arbeitszeiten beschwert.",
+  "alt": [
+   "ihren",
+   "ihr",
+   "ihre"
+  ],
+  "why": "Sich beschweren bei + dativ (den man klagar hos). Der Chef är maskulinum: ihrem.",
+  "sv": "Hon klagade hos sin chef på de långa arbetstiderna."
+ },
+ {
+  "id": "verbprep-032",
+  "topic": "verbprep",
+  "rule": "vp-kasus",
+  "q": "Viele Jugendliche träumen von [einer] Karriere als Influencer.",
+  "alt": [
+   "eine",
+   "einem",
+   "einen"
+  ],
+  "why": "Träumen von + dativ. Die Karriere är femininum: einer.",
+  "sv": "Många ungdomar drömmer om en karriär som influencer."
+ },
+ {
+  "id": "verbprep-033",
+  "topic": "verbprep",
+  "rule": "vp-da",
+  "q": "Freust du dich auf die Ferien? – Ja, ich freue mich sehr [darauf].",
+  "alt": [
+   "davon",
+   "dafür",
+   "daran"
+  ],
+  "why": "Sich freuen auf → darauf. Om det handlar om en sak ersätts preposition + substantiv med da(r) + preposition.",
+  "sv": "Ser du fram emot lovet? – Ja, jag ser verkligen fram emot det."
+ },
+ {
+  "id": "verbprep-034",
+  "topic": "verbprep",
+  "rule": "vp-da",
+  "q": "Interessierst du dich für Fußball? – Nein, ich interessiere mich überhaupt nicht [dafür].",
+  "alt": [
+   "darauf",
+   "daran",
+   "darüber"
+  ],
+  "why": "Sich interessieren für → dafür. Da-ordet måste innehålla samma preposition som verbet kräver.",
+  "sv": "Är du intresserad av fotboll? – Nej, jag är inte alls intresserad av det."
+ },
+ {
+  "id": "verbprep-035",
+  "topic": "verbprep",
+  "rule": "vp-da",
+  "q": "Hast du an den Termin gedacht? – Ja, ich habe [daran] gedacht.",
+  "alt": [
+   "darauf",
+   "darum",
+   "darüber"
+  ],
+  "why": "Denken an → daran. Preposition som börjar på vokal får ett r: da-r-an.",
+  "sv": "Har du kommit ihåg tiden? – Ja, jag har tänkt på det."
+ },
+ {
+  "id": "verbprep-036",
+  "topic": "verbprep",
+  "rule": "vp-da",
+  "q": "Hat er sich über das Geschenk gefreut? – Ja, er hat sich total [darüber] gefreut.",
+  "alt": [
+   "davon",
+   "dafür",
+   "daran"
+  ],
+  "why": "Sich freuen über → darüber (han har redan fått presenten). Darauf skulle gälla något som ska komma.",
+  "sv": "Blev han glad över presenten? – Ja, han blev jätteglad över den."
+ },
+ {
+  "id": "verbprep-037",
+  "topic": "verbprep",
+  "rule": "vp-da",
+  "q": "Wartest du auf deinen Bruder? – Ja, ich warte [auf ihn].",
+  "alt": [
+   "darauf",
+   "auf er",
+   "auf ihm"
+  ],
+  "why": "När det gäller en person används preposition + pronomen, inte da-ord. Warten auf tar ackusativ: auf ihn.",
+  "sv": "Väntar du på din bror? – Ja, jag väntar på honom."
+ },
+ {
+  "id": "verbprep-038",
+  "topic": "verbprep",
+  "rule": "vp-da",
+  "q": "Hast du mit deiner Lehrerin über die Note gesprochen? – Ja, ich habe schon [mit ihr] gesprochen.",
+  "alt": [
+   "damit",
+   "mit sie",
+   "mit ihm"
+  ],
+  "why": "Läraren är en person, så det blir preposition + pronomen. Mit tar dativ, och die Lehrerin blir ihr.",
+  "sv": "Har du pratat med din lärare om betyget? – Ja, jag har redan pratat med henne."
+ },
+ {
+  "id": "verbprep-039",
+  "topic": "verbprep",
+  "rule": "vp-da",
+  "q": "Nimmst du morgen an der Demo teil? – Nein, ich nehme nicht [daran] teil.",
+  "alt": [
+   "darauf",
+   "dabei",
+   "dafür"
+  ],
+  "why": "Teilnehmen an → daran. Demonstrationen är en sak, så da-ord används.",
+  "sv": "Deltar du i demonstrationen i morgon? – Nej, jag deltar inte i den."
+ },
+ {
+  "id": "verbprep-040",
+  "topic": "verbprep",
+  "rule": "vp-da",
+  "q": "Hast du dich schon an die neue Schule gewöhnt? – Ja, ich habe mich schnell [daran] gewöhnt.",
+  "alt": [
+   "darauf",
+   "dafür",
+   "damit"
+  ],
+  "why": "Sich gewöhnen an → daran.",
+  "sv": "Har du vant dig vid den nya skolan? – Ja, jag vande mig snabbt vid den."
+ },
+ {
+  "id": "verbprep-041",
+  "topic": "verbprep",
+  "rule": "vp-da",
+  "q": "Kümmerst du dich um deine Oma? – Ja, ich kümmere mich jeden Sonntag [um sie].",
+  "alt": [
+   "darum",
+   "um ihr",
+   "um ihn"
+  ],
+  "why": "Mormor är en person, så preposition + pronomen. Um tar ackusativ, och die Oma blir sie.",
+  "sv": "Tar du hand om din mormor? – Ja, jag tar hand om henne varje söndag."
+ },
+ {
+  "id": "verbprep-042",
+  "topic": "verbprep",
+  "rule": "vp-da",
+  "q": "Sprecht ihr zu Hause oft über Politik? – Ja, wir sprechen oft [darüber].",
+  "alt": [
+   "darauf",
+   "darum",
+   "dafür"
+  ],
+  "why": "Sprechen über → darüber.",
+  "sv": "Pratar ni ofta om politik hemma? – Ja, vi pratar ofta om det."
+ },
+ {
+  "id": "verbprep-043",
+  "topic": "verbprep",
+  "rule": "vp-wo",
+  "q": "[Worauf] wartest du denn noch? – Auf das Ergebnis der Prüfung.",
+  "alt": [
+   "Wofür",
+   "Woran",
+   "Worüber"
+  ],
+  "why": "Warten auf → worauf. Svaret är en sak, så frågeordet blir wo(r) + preposition.",
+  "sv": "Vad väntar du på? – På provresultatet."
+ },
+ {
+  "id": "verbprep-044",
+  "topic": "verbprep",
+  "rule": "vp-wo",
+  "q": "[Wofür] interessierst du dich am meisten? – Für Musik und Kunst.",
+  "alt": [
+   "Worauf",
+   "Woran",
+   "Wovon"
+  ],
+  "why": "Sich interessieren für → wofür. Svaret är saker, så wo + preposition.",
+  "sv": "Vad är du mest intresserad av? – Av musik och konst."
+ },
+ {
+  "id": "verbprep-045",
+  "topic": "verbprep",
+  "rule": "vp-wo",
+  "q": "[Worüber] habt ihr gestern so lange diskutiert? – Über das Handyverbot an unserer Schule.",
+  "alt": [
+   "Worauf",
+   "Wofür",
+   "Woran"
+  ],
+  "why": "Diskutieren über → worüber.",
+  "sv": "Vad diskuterade ni så länge i går? – Om mobilförbudet på vår skola."
+ },
+ {
+  "id": "verbprep-046",
+  "topic": "verbprep",
+  "rule": "vp-wo",
+  "q": "[Auf wen] wartest du? – Auf meine Freundin.",
+  "alt": [
+   "Worauf",
+   "Auf wem",
+   "Auf was"
+  ],
+  "why": "Svaret är en person, så det blir preposition + wen (ackusativ, eftersom warten auf tar ackusativ). Worauf används bara om saker.",
+  "sv": "Vem väntar du på? – På min flickvän."
+ },
+ {
+  "id": "verbprep-047",
+  "topic": "verbprep",
+  "rule": "vp-wo",
+  "q": "[Mit wem] hast du so lange telefoniert? – Mit meinem Opa.",
+  "alt": [
+   "Womit",
+   "Mit wen",
+   "Mit was"
+  ],
+  "why": "Svaret är en person, så preposition + frågeord. Mit tar dativ: mit wem. Womit frågar efter en sak.",
+  "sv": "Vem pratade du så länge i telefon med? – Med min morfar."
+ },
+ {
+  "id": "verbprep-048",
+  "topic": "verbprep",
+  "rule": "vp-wo",
+  "q": "[Woran] denkst du gerade? – An die Prüfung morgen.",
+  "alt": [
+   "Worauf",
+   "Wovon",
+   "An wen"
+  ],
+  "why": "Denken an → woran. Svaret är en sak, så inte an wen.",
+  "sv": "Vad tänker du på just nu? – På provet i morgon."
+ },
+ {
+  "id": "verbprep-049",
+  "topic": "verbprep",
+  "rule": "vp-wo",
+  "q": "[Wovon] träumst du? – Von einer Reise um die Welt.",
+  "alt": [
+   "Woran",
+   "Worüber",
+   "Von wem"
+  ],
+  "why": "Träumen von → wovon. Svaret är en sak, så inte von wem.",
+  "sv": "Vad drömmer du om? – Om en resa jorden runt."
+ },
+ {
+  "id": "verbprep-050",
+  "topic": "verbprep",
+  "rule": "vp-wo",
+  "q": "[Um wen] kümmerst du dich nach der Schule? – Um meinen kleinen Bruder.",
+  "alt": [
+   "Worum",
+   "Um wem",
+   "Wofür"
+  ],
+  "why": "Svaret är en person, så preposition + frågeord. Sich kümmern um tar ackusativ: um wen.",
+  "sv": "Vem tar du hand om efter skolan? – Om min lillebror."
+ },
+ {
+  "id": "perfekt-001",
+  "topic": "perfekt",
+  "rule": "pf-sein",
+  "q": "Wir [sind] am Wochenende nach Salzburg gefahren.",
+  "alt": [
+   "haben",
+   "seid",
+   "hat"
+  ],
+  "why": "Fahren utan objekt är en förflyttning, så perfekt bildas med sein. Wir → sind.",
+  "sv": "Vi åkte till Salzburg i helgen."
+ },
+ {
+  "id": "perfekt-002",
+  "topic": "perfekt",
+  "rule": "pf-sein",
+  "q": "Ich [bin] gestern den ganzen Tag zu Hause geblieben.",
+  "alt": [
+   "habe",
+   "hat",
+   "ist"
+  ],
+  "why": "Bleiben tar sein i perfekt, fast det inte är en rörelse. Ich → bin.",
+  "sv": "Jag stannade hemma hela dagen i går."
+ },
+ {
+  "id": "perfekt-003",
+  "topic": "perfekt",
+  "rule": "pf-sein",
+  "q": "Was [ist] denn hier passiert?",
+  "alt": [
+   "hat",
+   "sind",
+   "habe"
+  ],
+  "why": "Passieren (hända) tar sein i perfekt. Subjektet är was, alltså tredje person singular: ist.",
+  "sv": "Vad har hänt här?"
+ },
+ {
+  "id": "perfekt-004",
+  "topic": "perfekt",
+  "rule": "pf-sein",
+  "q": "Meine Schwester [ist] letztes Jahr Ärztin geworden.",
+  "alt": [
+   "hat",
+   "sind",
+   "wird"
+  ],
+  "why": "Werden är en förändring och tar sein i perfekt: ist geworden.",
+  "sv": "Min syster blev läkare förra året."
+ },
+ {
+  "id": "perfekt-005",
+  "topic": "perfekt",
+  "rule": "pf-sein",
+  "q": "[Bist] du schon einmal in der Schweiz gewesen?",
+  "alt": [
+   "Hast",
+   "Ist",
+   "Hat"
+  ],
+  "why": "Sein tar själv sein i perfekt: ich bin gewesen, du bist gewesen.",
+  "sv": "Har du någonsin varit i Schweiz?"
+ },
+ {
+  "id": "perfekt-006",
+  "topic": "perfekt",
+  "rule": "pf-sein",
+  "q": "Ich [bin] erst um zwei Uhr nachts eingeschlafen.",
+  "alt": [
+   "habe",
+   "hat",
+   "ist"
+  ],
+  "why": "Einschlafen är en förändring av tillstånd (från vaken till sovande), så det blir sein. Jämför schlafen, som tar haben.",
+  "sv": "Jag somnade inte förrän klockan två på natten."
+ },
+ {
+  "id": "perfekt-007",
+  "topic": "perfekt",
+  "rule": "pf-sein",
+  "q": "Heute Morgen [ist] mein Bruder viel zu spät aufgewacht.",
+  "alt": [
+   "hat",
+   "sind",
+   "habe"
+  ],
+  "why": "Aufwachen är en förändring av tillstånd, så perfekt bildas med sein. Mein Bruder → ist.",
+  "sv": "I morse vaknade min bror alldeles för sent."
+ },
+ {
+  "id": "perfekt-008",
+  "topic": "perfekt",
+  "rule": "pf-sein",
+  "q": "Letzten Sommer [sind] wir von Hamburg nach München umgezogen.",
+  "alt": [
+   "haben",
+   "ist",
+   "hat"
+  ],
+  "why": "Umziehen (flytta) är en förflyttning och tar sein. Sich umziehen (byta kläder) tar däremot haben.",
+  "sv": "I somras flyttade vi från Hamburg till München."
+ },
+ {
+  "id": "perfekt-009",
+  "topic": "perfekt",
+  "rule": "pf-sein",
+  "q": "Er [ist] mit dem Zug nach Wien gefahren.",
+  "alt": [
+   "hat",
+   "sind",
+   "habe"
+  ],
+  "why": "Fahren utan ackusativobjekt anger förflyttning och tar sein. Mit dem Zug är inget objekt.",
+  "sv": "Han åkte tåg till Wien."
+ },
+ {
+  "id": "perfekt-010",
+  "topic": "perfekt",
+  "rule": "pf-sein",
+  "q": "Die Mieten [sind] in den letzten Jahren stark gestiegen.",
+  "alt": [
+   "haben",
+   "ist",
+   "hat"
+  ],
+  "why": "Steigen (stiga, öka) är en förändring och tar sein. Die Mieten är plural: sind.",
+  "sv": "Hyrorna har stigit kraftigt de senaste åren."
+ },
+ {
+  "id": "perfekt-011",
+  "topic": "perfekt",
+  "rule": "pf-sein",
+  "q": "Ich [bin] heute Morgen schon um sechs aufgestanden.",
+  "alt": [
+   "habe",
+   "hat",
+   "ist"
+  ],
+  "why": "Aufstehen är en rörelse och tar sein i perfekt.",
+  "sv": "Jag steg upp redan klockan sex i morse."
+ },
+ {
+  "id": "perfekt-012",
+  "topic": "perfekt",
+  "rule": "pf-sein",
+  "q": "Der Unfall [ist] kurz nach Mitternacht auf der Autobahn passiert.",
+  "alt": [
+   "hat",
+   "sind",
+   "wurde"
+  ],
+  "why": "Passieren tar sein i perfekt: ist passiert.",
+  "sv": "Olyckan hände strax efter midnatt på motorvägen."
+ },
+ {
+  "id": "perfekt-013",
+  "topic": "perfekt",
+  "rule": "pf-sein",
+  "q": "[Seid] ihr gestern noch ins Kino gegangen?",
+  "alt": [
+   "Habt",
+   "Sind",
+   "Ist"
+  ],
+  "why": "Gehen är en förflyttning och tar sein. Ihr → seid.",
+  "sv": "Gick ni på bio i går till slut?"
+ },
+ {
+  "id": "perfekt-014",
+  "topic": "perfekt",
+  "rule": "pf-sein",
+  "q": "Nach dem Abitur [ist] sie für ein Jahr nach Australien geflogen.",
+  "alt": [
+   "hat",
+   "sind",
+   "habe"
+  ],
+  "why": "Fliegen (resa med flyg) är en förflyttning och tar sein.",
+  "sv": "Efter studenten flög hon till Australien i ett år."
+ },
+ {
+  "id": "perfekt-015",
+  "topic": "perfekt",
+  "rule": "pf-sein",
+  "q": "Das Konzert [ist] leider wegen des Sturms ausgefallen.",
+  "alt": [
+   "hat",
+   "sind",
+   "habe"
+  ],
+  "why": "Ausfallen (bli inställd) tar sein i perfekt.",
+  "sv": "Konserten blev tyvärr inställd på grund av stormen."
+ },
+ {
+  "id": "perfekt-016",
+  "topic": "perfekt",
+  "rule": "pf-sein",
+  "q": "Wie lange [seid] ihr in Berlin geblieben?",
+  "alt": [
+   "habt",
+   "sind",
+   "hat"
+  ],
+  "why": "Bleiben tar sein i perfekt. Ihr → seid.",
+  "sv": "Hur länge stannade ni i Berlin?"
+ },
+ {
+  "id": "perfekt-017",
+  "topic": "perfekt",
+  "rule": "pf-sein",
+  "q": "Plötzlich [ist] im ganzen Haus das Licht ausgegangen.",
+  "alt": [
+   "hat",
+   "sind",
+   "wird"
+  ],
+  "why": "Ausgehen (slockna) är en förändring av tillstånd och tar sein.",
+  "sv": "Plötsligt slocknade ljuset i hela huset."
+ },
+ {
+  "id": "perfekt-018",
+  "topic": "perfekt",
+  "rule": "pf-sein",
+  "q": "Mein Urgroßvater [ist] im Alter von 95 Jahren gestorben.",
+  "alt": [
+   "hat",
+   "wurde",
+   "sind"
+  ],
+  "why": "Sterben är en förändring av tillstånd och tar sein: ist gestorben.",
+  "sv": "Min gammelfarfar dog när han var 95 år."
+ },
+ {
+  "id": "perfekt-019",
+  "topic": "perfekt",
+  "rule": "pf-haben",
+  "q": "Mein Vater [hat] mich gestern zum Bahnhof gefahren.",
+  "alt": [
+   "ist",
+   "bin",
+   "habe"
+  ],
+  "why": "Fahren med ackusativobjekt (mich) betyder skjutsa och tar haben. Utan objekt hade det blivit ist gefahren.",
+  "sv": "Min pappa skjutsade mig till stationen i går."
+ },
+ {
+  "id": "perfekt-020",
+  "topic": "perfekt",
+  "rule": "pf-haben",
+  "q": "Ich [habe] mich nach dem Sport schnell umgezogen.",
+  "alt": [
+   "bin",
+   "ist",
+   "hat"
+  ],
+  "why": "Sich umziehen (byta om) är reflexivt och tar haben. Umziehen i betydelsen flytta tar sein.",
+  "sv": "Jag bytte snabbt om efter idrotten."
+ },
+ {
+  "id": "perfekt-021",
+  "topic": "perfekt",
+  "rule": "pf-haben",
+  "q": "Wir [haben] gestern Abend lange über Politik diskutiert.",
+  "alt": [
+   "sind",
+   "hat",
+   "seid"
+  ],
+  "why": "Diskutieren är ingen förflyttning eller tillståndsförändring, så det blir haben. Wir → haben.",
+  "sv": "Vi diskuterade politik länge i går kväll."
+ },
+ {
+  "id": "perfekt-022",
+  "topic": "perfekt",
+  "rule": "pf-haben",
+  "q": "[Hast] du schon deine Hausaufgaben gemacht?",
+  "alt": [
+   "Bist",
+   "Hat",
+   "Ist"
+  ],
+  "why": "Machen tar ett objekt och bildar perfekt med haben. Du → hast.",
+  "sv": "Har du redan gjort dina läxor?"
+ },
+ {
+  "id": "perfekt-023",
+  "topic": "perfekt",
+  "rule": "pf-haben",
+  "q": "Sie [hat] das ganze Wochenende für die Prüfung gelernt.",
+  "alt": [
+   "ist",
+   "haben",
+   "sind"
+  ],
+  "why": "Lernen tar haben i perfekt. Sie (hon) → hat.",
+  "sv": "Hon pluggade hela helgen inför provet."
+ },
+ {
+  "id": "perfekt-024",
+  "topic": "perfekt",
+  "rule": "pf-haben",
+  "q": "Ich [habe] letzte Nacht sehr schlecht geschlafen.",
+  "alt": [
+   "bin",
+   "hat",
+   "ist"
+  ],
+  "why": "Schlafen är ett tillstånd utan förändring och tar haben. Jämför einschlafen, som tar sein.",
+  "sv": "Jag sov väldigt dåligt i natt."
+ },
+ {
+  "id": "perfekt-025",
+  "topic": "perfekt",
+  "rule": "pf-haben",
+  "q": "Die Kinder [haben] den ganzen Nachmittag im Garten gespielt.",
+  "alt": [
+   "sind",
+   "hat",
+   "ist"
+  ],
+  "why": "Spielen tar haben. Die Kinder är plural: haben.",
+  "sv": "Barnen lekte i trädgården hela eftermiddagen."
+ },
+ {
+  "id": "perfekt-026",
+  "topic": "perfekt",
+  "rule": "pf-haben",
+  "q": "Wir [haben] fast eine Stunde auf den Bus gewartet.",
+  "alt": [
+   "sind",
+   "hat",
+   "seid"
+  ],
+  "why": "Warten är ingen förflyttning och tar haben.",
+  "sv": "Vi väntade nästan en timme på bussen."
+ },
+ {
+  "id": "perfekt-027",
+  "topic": "perfekt",
+  "rule": "pf-haben",
+  "q": "Ich [habe] den Film schon dreimal gesehen.",
+  "alt": [
+   "bin",
+   "hat",
+   "ist"
+  ],
+  "why": "Sehen tar ett objekt och bildar perfekt med haben.",
+  "sv": "Jag har redan sett filmen tre gånger."
+ },
+ {
+  "id": "perfekt-028",
+  "topic": "perfekt",
+  "rule": "pf-haben",
+  "q": "Die Regierung [hat] ein neues Klimagesetz beschlossen.",
+  "alt": [
+   "ist",
+   "haben",
+   "sind"
+  ],
+  "why": "Beschließen tar ett objekt och bildar perfekt med haben. Die Regierung är singular: hat.",
+  "sv": "Regeringen har beslutat om en ny klimatlag."
+ },
+ {
+  "id": "perfekt-029",
+  "topic": "perfekt",
+  "rule": "pf-haben",
+  "q": "Wo [habt] ihr euch eigentlich kennengelernt?",
+  "alt": [
+   "seid",
+   "haben",
+   "hat"
+  ],
+  "why": "Sich kennenlernen är reflexivt och tar haben. Ihr → habt.",
+  "sv": "Var träffades ni egentligen?"
+ },
+ {
+  "id": "perfekt-030",
+  "topic": "perfekt",
+  "rule": "pf-haben",
+  "q": "Mein Handy [hat] den ganzen Tag nicht funktioniert.",
+  "alt": [
+   "ist",
+   "haben",
+   "sind"
+  ],
+  "why": "Funktionieren tar haben i perfekt.",
+  "sv": "Min mobil har inte fungerat på hela dagen."
+ },
+ {
+  "id": "perfekt-031",
+  "topic": "perfekt",
+  "rule": "pf-haben",
+  "q": "Die Schülerin [hat] den Preis für den besten Aufsatz gewonnen.",
+  "alt": [
+   "ist",
+   "haben",
+   "sind"
+  ],
+  "why": "Gewinnen tar ett objekt och bildar perfekt med haben.",
+  "sv": "Eleven vann priset för den bästa uppsatsen."
+ },
+ {
+  "id": "perfekt-032",
+  "topic": "perfekt",
+  "rule": "pf-haben",
+  "q": "In den Ferien [haben] wir bei unseren Großeltern gewohnt.",
+  "alt": [
+   "sind",
+   "hat",
+   "seid"
+  ],
+  "why": "Wohnen är ett tillstånd och tar haben. Wir → haben.",
+  "sv": "Under lovet bodde vi hos våra morföräldrar."
+ },
+ {
+  "id": "perfekt-033",
+  "topic": "perfekt",
+  "rule": "pf-haben",
+  "q": "Er [hat] seine Mutter jeden Tag im Krankenhaus besucht.",
+  "alt": [
+   "ist",
+   "haben",
+   "sind"
+  ],
+  "why": "Besuchen tar ett objekt och bildar perfekt med haben.",
+  "sv": "Han hälsade på sin mamma på sjukhuset varje dag."
+ },
+ {
+  "id": "perfekt-034",
+  "topic": "perfekt",
+  "rule": "pf-haben",
+  "q": "[Habt] ihr gestern das Spiel gesehen?",
+  "alt": [
+   "Seid",
+   "Hat",
+   "Sind"
+  ],
+  "why": "Sehen tar haben. Ihr → habt.",
+  "sv": "Såg ni matchen i går?"
+ },
+ {
+  "id": "perfekt-035",
+  "topic": "perfekt",
+  "rule": "pf-haben",
+  "q": "Es [hat] die ganze Nacht geregnet.",
+  "alt": [
+   "ist",
+   "war",
+   "sind"
+  ],
+  "why": "Regnen tar haben i perfekt: es hat geregnet.",
+  "sv": "Det regnade hela natten."
+ },
+ {
+  "id": "perfekt-036",
+  "topic": "perfekt",
+  "rule": "plq",
+  "q": "Nachdem ich gegessen [hatte], ging ich noch eine Runde spazieren.",
+  "alt": [
+   "habe",
+   "war",
+   "hat"
+  ],
+  "why": "Nachdem + pluskvamperfekt när huvudsatsen står i dåtid: det som hände först står i pluskvamperfekt. Essen tar haben: hatte gegessen.",
+  "sv": "Efter att jag hade ätit gick jag en sväng."
+ },
+ {
+  "id": "perfekt-037",
+  "topic": "perfekt",
+  "rule": "plq",
+  "q": "Nachdem wir in Berlin angekommen [waren], fuhren wir direkt zum Hotel.",
+  "alt": [
+   "hatten",
+   "sind",
+   "haben"
+  ],
+  "why": "Pluskvamperfekt efter nachdem. Ankommen tar sein, så det blir waren angekommen.",
+  "sv": "Efter att vi hade kommit fram till Berlin åkte vi direkt till hotellet."
+ },
+ {
+  "id": "perfekt-038",
+  "topic": "perfekt",
+  "rule": "plq",
+  "q": "Nachdem sie das Abitur gemacht [hatte], zog sie nach Hamburg.",
+  "alt": [
+   "war",
+   "hat",
+   "habe"
+  ],
+  "why": "Pluskvamperfekt efter nachdem. Machen tar haben: hatte gemacht.",
+  "sv": "Efter att hon hade tagit studenten flyttade hon till Hamburg."
+ },
+ {
+  "id": "perfekt-039",
+  "topic": "perfekt",
+  "rule": "plq",
+  "q": "Nachdem der Film angefangen [hatte], durfte niemand mehr in den Saal.",
+  "alt": [
+   "war",
+   "hat",
+   "ist"
+  ],
+  "why": "Pluskvamperfekt efter nachdem. Anfangen tar haben: hatte angefangen.",
+  "sv": "Efter att filmen hade börjat fick ingen gå in i salongen längre."
+ },
+ {
+  "id": "perfekt-040",
+  "topic": "perfekt",
+  "rule": "plq",
+  "q": "Er ging erst ins Bett, nachdem er alle Hausaufgaben erledigt [hatte].",
+  "alt": [
+   "war",
+   "hat",
+   "habe"
+  ],
+  "why": "Huvudsatsen står i preteritum, så nachdem-satsen står i pluskvamperfekt. Erledigen tar haben: hatte erledigt.",
+  "sv": "Han gick inte och lade sig förrän han hade gjort alla läxor."
+ },
+ {
+  "id": "perfekt-041",
+  "topic": "perfekt",
+  "rule": "plq",
+  "q": "Nachdem die Kinder eingeschlafen [waren], sahen die Eltern noch einen Film.",
+  "alt": [
+   "hatten",
+   "sind",
+   "haben"
+  ],
+  "why": "Pluskvamperfekt efter nachdem. Einschlafen tar sein: waren eingeschlafen.",
+  "sv": "Efter att barnen hade somnat såg föräldrarna en film."
+ },
+ {
+  "id": "perfekt-042",
+  "topic": "perfekt",
+  "rule": "plq",
+  "q": "Nachdem er drei Jahre in Zürich gewohnt [hatte], sprach er fließend Schweizerdeutsch.",
+  "alt": [
+   "war",
+   "hat",
+   "ist"
+  ],
+  "why": "Pluskvamperfekt efter nachdem. Wohnen tar haben: hatte gewohnt.",
+  "sv": "Efter att han hade bott tre år i Zürich talade han flytande schweizertyska."
+ },
+ {
+  "id": "perfekt-043",
+  "topic": "perfekt",
+  "rule": "plq",
+  "q": "Nachdem sich meine Eltern getrennt [hatten], zog ich mit meiner Mutter nach Graz.",
+  "alt": [
+   "waren",
+   "haben",
+   "sind"
+  ],
+  "why": "Pluskvamperfekt efter nachdem. Sich trennen är reflexivt och tar haben: hatten sich getrennt.",
+  "sv": "Efter att mina föräldrar hade separerat flyttade jag med min mamma till Graz."
+ },
+ {
+  "id": "perfekt-044",
+  "topic": "perfekt",
+  "rule": "plq",
+  "q": "Als wir endlich am Bahnhof ankamen, [war] der Zug schon abgefahren.",
+  "alt": [
+   "hatte",
+   "hat",
+   "wird"
+  ],
+  "why": "Tåget gick innan vi kom, så det står i pluskvamperfekt. Abfahren tar sein: war abgefahren.",
+  "sv": "När vi äntligen kom till stationen hade tåget redan gått."
+ },
+ {
+  "id": "perfekt-045",
+  "topic": "perfekt",
+  "rule": "plq",
+  "q": "Ich konnte nicht mitkommen, weil ich krank geworden [war].",
+  "alt": [
+   "hatte",
+   "bin",
+   "habe"
+  ],
+  "why": "Jag blev sjuk innan det andra hände, så pluskvamperfekt. Werden tar sein: war geworden.",
+  "sv": "Jag kunde inte följa med eftersom jag hade blivit sjuk."
+ }
+]

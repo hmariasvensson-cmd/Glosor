@@ -2,7 +2,8 @@
 LANGUAGES.fr = {
   name: "Franska",            // visas i språkväljaren
   title: "Franska glosor",    // rubrik på sidan
-  course: "Franska 3",          // kursen som ordlistan hör till
+  course: "Franska 3",         // kursen som ordlistan hör till
+  courseGy25: "Moderna språk – fortsättning, nivå 1",   // samma kurs i Gy25 (gymnasiet från juli 2025)
   level: "A2 → B1",           // ungefärlig nivå i europeiska språkskalan (GERS/CEFR)
   inLang: "på franska",       // "Skriv på franska"
   tts: "fr-FR",               // röst för uppläsning

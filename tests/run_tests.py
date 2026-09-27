@@ -130,6 +130,10 @@ setTimeout(()=>{ try{
   ok("ord sparas i Mina ord", (S.mine||[]).length===1 && WORDS.some(w=>w.sec==="mine"), (S.mine||[]).map(m=>m.t).join());
   ok("Mina ord kommer först bland nya ord", pickNew()[0] && pickNew()[0].sec==="mine");
 
+  ok("eget ord sparas", addOwnWord("la randonnée","vandring","Nous avons fait une randonnée en montagne.")==="" && byId["mine:la randonnée"].gap.ans==="randonnée", JSON.stringify(byId["mine:la randonnée"]&&byId["mine:la randonnée"].gap));
+  ok("samma ord två gånger stoppas", addOwnWord("la randonnée","vandring","")!=="");
+  q("#list").open=true; renderList(); const rm=q('[data-rm="mine:la randonnée"]'); rm.click(); q('[data-rm="mine:la randonnée"]').click();
+  ok("eget ord tas bort efter två tryck", !byId["mine:la randonnée"]&&!(S.mine||[]).some(m=>m.t==="la randonnée")); q("#list").open=false;
   openReading(); q("[data-pick]").click(); ok("lästext har ord att trycka på", document.querySelectorAll(".gl").length>10);
   q("#toq").click(); runAll(); ok("läsförståelse sparad", Object.keys(S.tx||{}).length===2);
 
@@ -153,6 +157,10 @@ setTimeout(()=>{ try{
   ok("dagens pass erbjuder blandad runda", !!q("#mix")); q("#mix").click(); runAll();
 
   setView("stats"); ok("statistik visar övningar", q("#app").textContent.includes("Diktamen"));
+  ok("prognos över repetitioner", !!q(".fc"));
+  { const keep=S.log.slice(); for(let i=0;i<1100;i++) S.log.push({d:Date.now()-i*1000,dur:10,right:1,total:1,kind:"dict"}); save();
+    ok("gammal logg sammanfattas", S.log.length===1000&&S.logOld&&S.logOld.dur>0, S.log.length+" "+JSON.stringify(S.logOld)); S.log=keep; delete S.logOld; save(); }
+  renderStart(); q('[data-gy="1"]').click(); ok("Gy25-namn", q("#coursechip").textContent.includes("fortsättning, nivå 1")); q('[data-gy="0"]').click();
   setView("board"); setTimeout(()=>{ ok("topplista", !!q(".brow")); finish(); },400);
  }catch(e){ ok("undantag", false, e.message+" "+(e.stack||"").split("\n")[1]); finish(); }
 },1500);

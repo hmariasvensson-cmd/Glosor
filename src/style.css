@@ -270,3 +270,11 @@ details.more[open] summary{margin-bottom:10px}
 .coursechip{font-size:.8rem;font-weight:700;letter-spacing:.04em;background:var(--ok-soft);color:var(--green);padding:5px 10px;border-radius:999px}
 .coursepick{display:flex;align-items:center;gap:8px}
 .coursepick select{width:auto;padding:7px 10px}
+.lrow .rm{grid-column:1/-1;justify-self:end;background:none;border:1px solid var(--line);border-radius:999px;padding:3px 12px;font:inherit;font-size:.8rem;color:var(--ink-2);cursor:pointer}
+.lrow .rm.sure{border-color:var(--pink);color:var(--pink)}
+.ownf{display:grid;gap:8px;margin-block:10px}
+.fc{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;align-items:end}
+.fc-col{display:flex;flex-direction:column;align-items:center;gap:4px}
+.fc-bar{width:100%;max-width:34px;border-radius:6px 6px 2px 2px;background:var(--c1)}
+.fc-n{font-size:.85rem;font-weight:600;font-variant-numeric:tabular-nums}
+.fc-l{font-size:.72rem;color:var(--ink-2)}

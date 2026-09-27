@@ -3,6 +3,7 @@ LANGUAGES.de = {
   name: "Tyska",
   title: "Tyska glosor",
   course: "Tyska 5",          // kursen som ordlistan hör till
+  courseGy25: "Moderna språk – fördjupning, nivå 1",   // samma kurs i Gy25 (gymnasiet från juli 2025)
   level: "B1 → B2",           // ungefärlig nivå i europeiska språkskalan (GERS/CEFR)
   inLang: "på tyska",
   tts: "de-DE",

@@ -128,9 +128,15 @@ async function cloudFlush(){
    lp/ld = lärt i pass/datum, mp/md = kan sedan pass/datum */
 function save(){
   S.t=Date.now();
-  if(S.log.length>1000) S.log=S.log.slice(-1000);   // håller dokumentet under lagringsgränsen
+  if(S.log.length>1000) foldLog();   // håller dokumentet under lagringsgränsen
   try{localStorage.setItem(L.storageKey,JSON.stringify(S))}catch(e){}
   cloudSave();
+}
+// De äldsta loggposterna sammanfattas i S.logOld, så att total tid och antal dagar finns kvar
+function foldLog(){
+  const cut=S.log.length-1000, o=S.logOld||{dur:0,days:0,lastDay:""};
+  S.log.slice(0,cut).forEach(l=>{o.dur+=l.dur||0; const k=new Date(l.d).toDateString(); if(k!==o.lastDay){o.days++; o.lastDay=k;}});
+  S.logOld=o; S.log=S.log.slice(cut);
 }
 const ws=id=>S.w[id];
 const isLearned=w=>!!ws(w.id);
@@ -252,6 +258,9 @@ function renderStart(){
       <div class="field"><span class="label">Nya ord</span>
         <div class="seg" role="group" aria-label="Nya ord"><button data-lf="0" aria-pressed="${!S.listenFirst}">Visa direkt</button><button data-lf="1" aria-pressed="${!!S.listenFirst}">Lyssna först</button></div></div>
     </div>
+    ${L.courseGy25?`<div class="field"><span class="label">Läroplan</span>
+      <div class="seg" role="group" aria-label="Läroplan"><button data-gy="0" aria-pressed="${!S.gy25}">Gy11 (${esc(L.course)})</button><button data-gy="1" aria-pressed="${!!S.gy25}">Gy25</button></div>
+      <p class="foot">Gy25 gäller den som började gymnasiet efter 1 juli 2025. Där heter kursen ${esc(L.courseGy25)}.</p></div>`:""}
     <p class="plan">${nothing?"Inget att öva just nu. Välj ett annat avsnitt eller fler nya ord."
       :`Du lär dig <b>${newW.length} nya ord</b> och repeterar <b>${due.length}</b>. Quizet får ${newW.length+due.length} frågor.`}
       ${S.mode==="mix"&&!nothing?` ${(()=>{const t=due.filter(w=>ws(w.id).f==="type").length;return `${newW.length+due.length-t} frågor med flerval och ${t} där du skriver ${L.inLang}.`})()} Klarar du flerval blir det skriva nästa gång. Missar du när du skriver blir det flerval igen.`:""}</p>
@@ -265,6 +274,7 @@ function renderStart(){
   app.querySelectorAll("[data-m]").forEach(b=>b.onclick=()=>{S.mode=b.dataset.m;save();renderStart()});
   app.querySelectorAll("[data-slow]").forEach(b=>b.onclick=()=>{S.slow=b.dataset.slow==="1";save();renderStart()});
   app.querySelectorAll("[data-lf]").forEach(b=>b.onclick=()=>{S.listenFirst=b.dataset.lf==="1";save();renderStart()});
+  app.querySelectorAll("[data-gy]").forEach(b=>b.onclick=()=>{S.gy25=b.dataset.gy==="1";save();$("#coursechip").textContent=`${courseName()} · nivå ${L.level||""}`;renderStart()});
   if($("#daily")) $("#daily").onclick=()=>startDaily(newW,due);
   $("#go").onclick=()=>startSession(newW,due);
   if(S.run){ $("#run-go").onclick=resumeRun; $("#run-drop").onclick=quitSession; }
@@ -706,6 +716,17 @@ function startCloze(){
   beginQuiz("cloze",shuffle(q),{againFn:["cloze"],label:"Meningar"});
 }
 /* ---------- Ordlista ---------- */
+/* Prognos: hur många ord som ska repeteras i de kommande passen */
+function statsForecast(){
+  const due=p=>WORDS.filter(w=>{const x=ws(w.id); return x&&(p===S.pass?x.due<=p:x.due===p);}).length;
+  const rows=[0,1,2,3,4,5,6].map(i=>({p:S.pass+i,n:due(S.pass+i)}));
+  if(!rows.some(r=>r.n)) return "";
+  const max=Math.max(...rows.map(r=>r.n),1);
+  return `<section class="panel"><h2>Kommande repetitioner</h2>
+    <div class="fc">${rows.map((r,i)=>`<div class="fc-col"><span class="fc-n">${r.n}</span><span class="fc-bar" style="height:${Math.round(4+56*r.n/max)}px"></span><span class="fc-l">${i?"+"+i:"nästa"}</span></div>`).join("")}</div>
+    <p class="plan">Antal ord att repetera i nästa pass och i passen efter. Högst ${MAXDUE} repetitioner per pass, resten väntar till passet efter.</p></section>`;
+}
+const courseName=()=>S&&S.gy25&&L.courseGy25?L.courseGy25:(L.course||L.name);
 function renderList(){
   const q=($("#search").value||"").toLowerCase().trim();
   $("#list-count").textContent=`${WORDS.length} ord`;
@@ -717,10 +738,14 @@ function renderList(){
     html+=`<div class="sec">${esc(s.name)}</div>`+rows.map(w=>{
       const x=ws(w.id); const st=x?(x.s>=4?4:x.s+1):0;
       const lab=!x?"Inte lärt än":x.s>=4?"Kan":`Steg ${x.s+1} av 4`;
-      return `<div class="lrow"><span class="t" ${lang()}>${esc(w.t)}</span><span class="sv">${esc(w.sv)}</span><span class="dots ${x&&x.s>=4?"done":""}" title="${lab}" aria-label="${lab}">${[1,2,3,4].map(i=>`<i class="${i<=st?"on":""}"></i>`).join("")}</span></div>`;
+      return `<div class="lrow"><span class="t" ${lang()}>${esc(w.t)}</span><span class="sv">${esc(w.sv)}</span><span class="dots ${x&&x.s>=4?"done":""}" title="${lab}" aria-label="${lab}">${[1,2,3,4].map(i=>`<i class="${i<=st?"on":""}"></i>`).join("")}</span>${w.sec==="mine"?`<button type="button" class="rm" data-rm="${esc(w.id)}" aria-label="Ta bort ${esc(w.t)} från Mina ord">Ta bort</button>`:""}</div>`;
     }).join("");
   });
   $("#rows").innerHTML=html||`<p class="foot">Inga ord matchar "${esc(q)}".</p>`;
+  // Två tryck för att ta bort, så att ingen tar bort ett ord av misstag
+  $("#rows").querySelectorAll("[data-rm]").forEach(b=>b.onclick=()=>{
+    if(b.dataset.sure){ removeMine(b.dataset.rm); renderList(); } else { b.dataset.sure="1"; b.textContent="Säker?"; b.classList.add("sure"); }
+  });
 }
 $("#search").addEventListener("input",renderList);
 $("#list").addEventListener("toggle",renderList);
@@ -794,10 +819,11 @@ function renderStats(){
       <button class="btn" id="go1">Kör första passet</button></section>`;
     $("#go1").onclick=()=>setView("ova"); return;
   }
-  const time=logs.reduce((a,l)=>a+(l.dur||0),0);
+  const old=S.logOld||{dur:0,days:0,lastDay:""};
+  const time=logs.reduce((a,l)=>a+(l.dur||0),0)+old.dur;
   const learned=WORDS.filter(isLearned), mastered=WORDS.filter(isMastered);
   const R=wl.reduce((a,l)=>a+l.right,0), N=wl.reduce((a,l)=>a+l.total,0);
-  const days=new Set(logs.map(l=>new Date(l.d).toDateString())).size;
+  const daySet=new Set(logs.map(l=>new Date(l.d).toDateString())), days=daySet.size+old.days-(daySet.has(old.lastDay)?1:0);
   const week=Date.now()-7*864e5;
   const newWeek=learned.filter(w=>(ws(w.id).ld||0)>=week).length;
   const avgNew=passes.length?passes.reduce((a,l)=>a+l.nNew,0)/passes.length:0;
@@ -893,6 +919,7 @@ function renderStats(){
       <div class="track" data-tip="${esc(r.s.name)}: ${r.k} inlärda, ${r.v} på väg, ${r.rest} inte påbörjade">${r.k?`<i style="width:${100*r.k/r.tot}%;background:var(--c2)"></i>`:""}${r.v?`<i style="width:${100*r.v/r.tot}%;background:var(--c1)"></i>`:""}</div></div>`).join("")}
   </section>
 
+  ${statsForecast()}
   ${statsExercises()}
   ${statsGrammar()}
 
@@ -933,7 +960,7 @@ function useLang(code){
   $("#search").value="";
   $("#search").placeholder=`Sök ${L.inLang} eller svenska`;
   $("#course").value=code;
-  $("#coursechip").textContent=`${L.course||L.name} · nivå ${L.level||""}`;
+  $("#coursechip").textContent=`${courseName()} · nivå ${L.level||""}`;
   setView("ova");
   setSaveNote();
   cloudAttach();

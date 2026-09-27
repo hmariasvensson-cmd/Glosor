@@ -76,7 +76,9 @@ function adjIds(k){
 
 /* ---------- Hitta felet ---------- */
 // Bygger på luckfrågor med en lucka: ett felaktigt alternativ sätts in, och eleven ska hitta ordet som är fel
-const errBase=()=>Object.values(gramBank()).filter(x=>x.type==="gap"&&x.p.gaps.length===1&&x.alt.some(a=>!a.includes("…")));
+// Regler där ett fel alternativ kan ge en annan men korrekt mening (den Jungen, der/den Lisa eingeladen hat) tas inte med
+const ERR_SKIP=["rel-nom","rel-akk"];
+const errBase=()=>Object.values(gramBank()).filter(x=>x.type==="gap"&&x.p.gaps.length===1&&!ERR_SKIP.includes(x.rule)&&x.alt.some(a=>!a.includes("…")));
 function errItem(id){
   const [,bid,ai]=id.split("|"), b=gramBank()[bid]; if(!b) return null;
   const bad=b.alt[+ai]; if(!bad) return null;
@@ -137,7 +139,7 @@ function openGrammar(){
 
 /* ---------- Frågorna ---------- */
 const gramHead=x=>{
-  if(x.type==="err") return `<p class="cloze" ${lang()}>${esc(x.wrongText)}</p>`;
+  if(x.type==="err") return `<p class="cloze" ${lang()}>${esc(x.wrongText)}</p><p class="ex-sv">Betyder: ${esc(x.sv)}</p>`;
   const html=x.p.parts.map((t,i)=>esc(t)+(i<x.p.gaps.length?`<span class="gap" data-gi="${i}">${x.type==="adj"?esc(x.stem)+"…":"&nbsp;"}</span>`:"")).join("");
   return `<p class="cloze" ${lang()}>${html}</p><p class="ex-sv">${esc(x.sv)}</p>`;
 };

@@ -24,6 +24,13 @@
     <summary><span>Alla ord <span class="sub" id="list-count" style="font-weight:400;margin-left:6px"></span></span></summary>
     <div class="list-body">
       <input class="search" id="search" type="search" aria-label="Sök ord">
+      <details class="more" id="addown"><summary>Lägg till ett eget ord</summary>
+        <form id="ownf" class="ownf" autocomplete="off">
+          <input class="answer-in" id="own-t" required placeholder="Ordet på målspråket">
+          <input class="answer-in" id="own-sv" required placeholder="Svensk betydelse">
+          <input class="answer-in" id="own-ex" placeholder="Exempelmening (valfri)">
+          <button class="btn" type="submit">Spara i Mina ord</button><p class="foot" id="own-msg"></p>
+        </form></details>
       <div id="rows"></div>
     </div>
   </details>
