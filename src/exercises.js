@@ -536,7 +536,7 @@ function cultureScreen(id){
 /* ---------- Skriv en text till läraren ---------- */
 function openWriting(){
   S.wr=S.wr||{};
-  pickerScreen("Skriv en text","Välj en skrivuppgift. Checklistan visar hur det går medan du skriver. Kopiera texten och skicka den till din lärare för kommentarer.",
+  pickerScreen("Skriv en text",`Välj en skrivuppgift. Checklistan visar hur det går medan du skriver. ${L.selfStudy?"Jämför sedan med exempeltexten, och be gärna någon som kan språket att läsa din text.":"Kopiera texten och skicka den till din lärare för kommentarer."}`,
     (C().prompts||[]).map(p=>({id:p.id,title:p.title,sec:p.sec,status:S.wr[p.id]?`${S.wr[p.id].words} ord`:""})),writeScreen);
 }
 // Finns ordet i texten? Substantiv räknas även utan artikel och i plural, verb även i böjd form (samma stam).
@@ -579,7 +579,7 @@ function writeScreen(id){
   $("#done").onclick=()=>{ const n=tok(ta.value).length; if(!n) return;
     S.drafts[dk]=ta.value; S.wr[id]={words:n,last:Date.now()};
     S.log.push({kind:"write",d:Date.now(),dur:Math.min(3600,Math.round((Date.now()-start)/1000)),right:0,total:0,words:n}); save(); boardPush();
-    $("#wmsg").textContent="Klart! Glöm inte att kopiera texten och skicka den till din lärare."; };
+    $("#wmsg").textContent=L.selfStudy?"Klart! Jämför med exempeltexten nedanför: hittar du konstruktioner du kan låna?":"Klart! Glöm inte att kopiera texten och skicka den till din lärare."; };
   $("#quit").onclick=openWriting;
   window.scrollTo(0,0);
 }
@@ -658,7 +658,7 @@ function gamesPanel(){
     ["Tala och skriva",[
       c.phrases&&g("phr","Samtalsfraser","Vad man säger när man inte förstår, vill säga sin åsikt …"),
       g("shadow","Skugga","Lyssna och säg meningen högt samtidigt, för uttal och rytm."),
-      c.prompts&&g("write","Skriv en text","Skrivuppgift med checklista, att skicka till läraren.")]]
+      c.prompts&&g("write","Skriv en text",L.selfStudy?"Skrivuppgift med checklista och exempeltext.":"Skrivuppgift med checklista, att skicka till läraren.")]]
   ];
   return `<section class="panel"><h2>Fler övningar</h2>${groups.map(([t,items])=>{items=items.filter(Boolean);
     return items.length?`<div class="exgroup"><span class="label">${t}</span><div class="games">${items.join("")}</div></div>`:"";}).join("")}</section>`;

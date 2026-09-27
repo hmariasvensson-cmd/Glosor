@@ -3,7 +3,7 @@
 Varje kurs har två spår:
 
 - **Boken:** kapitel ur elevens lärobok, markerade `#id|Namn|bok` i ordlistan. Franska 3 följer *Escalade* (Waagaard, Rödemark, Jonchère och Sandberg).
-- **Allmänt:** allt som bygger på kursplanen och fungerar för alla: grammatik, vanliga ord, hörtexter, kultur och annat. Tyska 5 har bara det här spåret tills vidare.
+- **Allmänt:** allt som bygger på kursplanen och fungerar för alla: grammatik, vanliga ord, hörtexter, kultur och annat. Tyska 5 har bara det här spåret, eftersom eleven pluggar på egen hand utan lärobok.
 
 I appen väljer eleven under **Boken → Vi läser nu** vilket kapitel klassen läser. Nya ord, texter och övningar tas då först från det kapitlet, och resten kommer i ordning efteråt. När alla ord i kapitlet är påbörjade föreslår appen nästa kapitel. Kurser utan bokkapitel visar ingen bokpanel.
 

@@ -13,10 +13,15 @@ Underlag finns i `docs/ovningsforslag.md` (franska), `docs/ovningsforslag-tyska.
 
 ## Tyska (Tyska 5, mot B2)
 
+Emma pluggar på egen hand, utan kurs, lärare och lärobok. Tyskan bygger därför helt på kursplanen och det allmänna spåret.
+
+- **P2: Studieplan för självstudier:** ett förslag på vilket kapitel och vilka grammatikområden per vecka, så att hela Tyska 5 täcks på en termin.
+- **P2: Återkoppling på skrivna texter utan lärare**, till exempel att Claude kommenterar texten (kräver kapabiliteten `sample`, som den som använder den betalar för) eller en checklista med vanliga fel att leta efter.
+- **P3: Prövning:** om hon vill ha ett betyg kan hon göra en prövning i Tyska 5 på komvux. Kontrollera krav och material och anpassa övningarna efter provets delar.
+
 - **P2: Större ordförråd, steg 3.** 1 629 ord nu. B2 kräver ungefär 3 000–4 000 ord. Fortsätt FrequencyWords från rang 2010 (CC BY-SA 4.0), eller använd kaikki/Wiktionary. Goethes listor är upphovsrättsskyddade och får inte kopieras.
 - **P2: Granskning av grammatikfrågorna** (390 tyska, 322 franska) av en lärare eller modersmålstalare, åtminstone ett stickprov på 10 %. Gå också igenom elevernas rapporter i `reports/` (läs dem med ArtifactData) och rätta i källfilerna.
 - **P3: Verbdata från Wiktionary/kaikki** i stället för handskrivna verbtabeller.
-- **P3: Om flickvännens lärobok fotas:** för in den enligt `docs/BOK.md`.
 
 ## Franska (Franska 3, mot A och B1)
 
