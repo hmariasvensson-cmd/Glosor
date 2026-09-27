@@ -256,6 +256,7 @@ function renderStart(){
         <button data-m="mix" aria-pressed="${S.mode==="mix"}">Anpassat</button>
         <button data-m="mc" aria-pressed="${S.mode==="mc"}">Flerval</button>
         <button data-m="type" aria-pressed="${S.mode==="type"}">Skriva</button></div></div>
+    <details class="more settings" id="setd" ${SET_OPEN?"open":""}><summary>Fler inställningar</summary>
     <div class="row2b">
       <div class="field"><span class="label">Uppläsning</span>
         <div class="seg" role="group" aria-label="Uppläsning"><button data-slow="0" aria-pressed="${!S.slow}">Normal</button><button data-slow="1" aria-pressed="${!!S.slow}">Långsam</button></div></div>
@@ -269,6 +270,7 @@ function renderStart(){
     ${L.courseGy25?`<div class="field"><span class="label">Läroplan</span>
       <div class="seg" role="group" aria-label="Läroplan"><button data-gy="0" aria-pressed="${!S.gy25}">Gy11 (${esc(L.course)})</button><button data-gy="1" aria-pressed="${!!S.gy25}">Gy25</button></div>
       <p class="foot">Gy25 gäller den som började gymnasiet efter 1 juli 2025. Där heter kursen ${esc(L.courseGy25)}.</p></div>`:""}
+    </details>
     <p class="plan">${nothing?"Inget att öva just nu. Välj ett annat avsnitt eller fler nya ord."
       :`Du lär dig <b>${newW.length} nya ord</b> och repeterar <b>${due.length}</b>. Quizet får ${newW.length+due.length} frågor.`}
       ${S.mode==="mix"&&!nothing?` ${(()=>{const t=due.filter(w=>ws(w.id).f==="type").length;return `${newW.length+due.length-t} frågor med flerval och ${t} där du skriver ${L.inLang}.`})()} Klarar du flerval blir det skriva nästa gång. Missar du när du skriver blir det flerval igen.`:""}</p>
@@ -282,6 +284,7 @@ function renderStart(){
   app.querySelectorAll("[data-m]").forEach(b=>b.onclick=()=>{S.mode=b.dataset.m;save();renderStart()});
   app.querySelectorAll("[data-slow]").forEach(b=>b.onclick=()=>{S.slow=b.dataset.slow==="1";save();renderStart()});
   app.querySelectorAll("[data-lf]").forEach(b=>b.onclick=()=>{S.listenFirst=b.dataset.lf==="1";save();renderStart()});
+  $("#setd").ontoggle=()=>{SET_OPEN=$("#setd").open};
   app.querySelectorAll("[data-only]").forEach(b=>b.onclick=()=>{setOnly(b.dataset.only==="1"?L.code:"");renderStart()});
   app.querySelectorAll("[data-goal]").forEach(b=>b.onclick=()=>{S.goal=+b.dataset.goal;save();boardPush();renderStart()});
   app.querySelectorAll("[data-gy]").forEach(b=>b.onclick=()=>{S.gy25=b.dataset.gy==="1";save();$("#coursechip").textContent=`${courseName()} · nivå ${L.level||""}`;renderStart()});
@@ -385,7 +388,7 @@ async function renderBoard(){
 }
 
 /* ---------- Pass: lära ---------- */
-let sess=null, curView="ova";
+let sess=null, curView="ova", SET_OPEN=false;
 
 /* Ett pågående pass sparas efter varje svar, så att det går att fortsätta om appen stängs */
 function snapRun(){
