@@ -26,13 +26,14 @@ SKELETON_HEAD = '<!doctype html><html><head><meta charset=utf8><meta name=viewpo
 
 
 def read_words(code):
-    """Läser words.txt, tar bort kommentarer och kontrollerar varje rad."""
-    path = LANG_DIR / code / "words.txt"
+    """Läser words.txt (och book/words.txt om den finns), tar bort kommentarer och kontrollerar varje rad."""
     errors, warnings = [], []
     lines, seen, section_ids = [], set(), set()
     n_words = 0
     section = None
-    for no, line in enumerate(path.read_text(encoding="utf-8").splitlines(), 1):
+    paths = [LANG_DIR / code / "words.txt", LANG_DIR / code / "book" / "words.txt"]
+    numbered = [(p, no, line) for p in paths if p.exists() for no, line in enumerate(p.read_text(encoding="utf-8").splitlines(), 1)]
+    for path, no, line in numbered:
         s = line.strip()
         if not s or s.startswith("//"):
             continue
@@ -45,8 +46,10 @@ def read_words(code):
                 errors.append(f"{where}: exempelmeningen ska ha högst en lucka, skriven som [ord]")
         if s.startswith("#"):
             parts = s[1:].split("|")
-            if len(parts) != 2 or not parts[0] or not parts[1]:
-                errors.append(f"{where}: avsnittsrader ska se ut så här: #id|Namn")
+            if len(parts) not in (2, 3) or not parts[0] or not parts[1]:
+                errors.append(f"{where}: avsnittsrader ska se ut så här: #id|Namn eller #id|Namn|bok")
+            elif len(parts) == 3 and parts[2] != "bok":
+                errors.append(f"{where}: tredje fältet i en avsnittsrad kan bara vara 'bok'")
             elif parts[0] in section_ids:
                 errors.append(f"{where}: avsnittet #{parts[0]} finns redan")
             section = parts[0]
@@ -148,17 +151,21 @@ def main():
             all_errors.append(f"languages/{code}/lang.js: får inte innehålla </script")
         js = f"{conf.strip()}\nLANGUAGES.{code}.words = {js_string(words)};"
         content = {}
-        for f in sorted((LANG_DIR / code / "content").glob("*.json")) if (LANG_DIR / code / "content").exists() else []:
+        # Innehåll från boken (book/content, privat mapp) läggs till efter det allmänna innehållet
+        content_files = [f for d in (LANG_DIR / code / "content", LANG_DIR / code / "book" / "content") if d.exists() for f in sorted(d.glob("*.json"))]
+        for f in content_files:
             try:
                 data = json.loads(f.read_text(encoding="utf-8"))
             except json.JSONDecodeError as e:
-                all_errors.append(f"languages/{code}/content/{f.name}: {e}")
+                all_errors.append(f"{f.relative_to(ROOT)}: {e}")
                 continue
             if f.stem.startswith("grammar-"):   # grammatikbankerna slås ihop till en lista
                 all_errors += check_grammar(data, f"languages/{code}/content/{f.name}")
                 content.setdefault("grammar", []).extend(data)
-            else:
-                content[f.stem] = data
+            elif isinstance(data, list):
+                content.setdefault(f.stem, []).extend(data)
+            elif isinstance(data, dict):
+                content.setdefault(f.stem, {}).update(data)
         if "grammar" in content:
             ids = [x.get("id") for x in content["grammar"]]
             all_errors += [f"languages/{code}/content/grammar-*.json: id {i} finns flera gånger" for i in sorted({i for i in ids if ids.count(i) > 1})]

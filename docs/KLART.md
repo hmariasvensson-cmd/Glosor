@@ -2,6 +2,12 @@
 
 Punkter som har flyttats från [`BACKLOG.md`](BACKLOG.md) när de byggdes. **Referens** anger backloggens rubrik och prioritet. **Commit** anger var ändringen finns i git. **Publicerat** anger versionen av artefakten på https://claude.ai/artifact/YBQv8j4qXQQLuPwLAWt5mP.
 
+## 2026-09-27, del 3 (publicerat som version 10)
+
+| Referens | Vad som byggdes | Commit |
+|---|---|---|
+| Önskemål från föräldern: *två lägen, bok och utan bok* (ersätter Tyska · P3 *Om flickvännens lärobok fotas* som arbetssätt) | Kapitel kan märkas som bokkapitel (`#id|Namn|bok`). Franska 3 är kopplad till *Escalade*. Startsidan har panelen **Boken → Vi läser nu**, där eleven väljer kapitlet klassen läser. Nya ord, texter och övningar tas då först från det kapitlet, och appen föreslår nästa kapitel när alla ord är påbörjade. "Nya ord från" är uppdelat i Boken och Allmänt. Bokmaterial kan ligga i en privat mapp `languages/<kod>/book/` som byggs in men inte hamnar i det publika repot. Arbetssättet för att fota och föra in kapitel står i `docs/BOK.md`. | se nedan |
+
 ## 2026-09-27, del 2 (publicerat som version 8)
 
 | Referens | Vad som byggdes | Commit |

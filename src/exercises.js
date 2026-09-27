@@ -65,10 +65,32 @@ function wireOwnWord(){
 /* ---------- Hjälpare ---------- */
 function curSec(){
   if(S.src!=="auto") return S.src;
+  if(S.chapter&&SECTIONS.some(s=>s.id===S.chapter)) return S.chapter;
   const n=pickNew()[0]; if(n) return n.sec;
   const l=WORDS.filter(isLearned).pop(); return (l||WORDS[0]||{}).sec;
 }
 // Meningar att öva på: exempelmeningarna för ord man har börjat lära sig, annars kapitlet man är på
+/* ---------- Boken ----------
+   Kapitel märkta #id|Namn|bok i words.txt kommer från elevens lärobok (L.book). Eleven väljer kapitlet
+   klassen läser (S.chapter). Nya ord tas då först från det kapitlet, sedan från resten i ordning. */
+const hasBook=()=>SECTIONS.some(s=>s.book);
+function bookPanel(){
+  const secs=SECTIONS.filter(s=>s.book), cur=secs.find(s=>s.id===S.chapter);
+  const left=id=>WORDS.filter(w=>w.sec===id&&!isLearned(w)).length;
+  const i=cur?secs.indexOf(cur):-1, next=cur&&!left(cur.id)?secs.slice(i+1).find(s=>left(s.id)):null;
+  return `<section class="panel book"><div class="meta"><span class="label">Boken</span><span>${esc(L.book.title)}</span></div>
+    <div class="field"><span class="label">Vi läser nu</span><select id="chapter"><option value="">Inget särskilt kapitel</option>
+      ${secs.map(s=>`<option value="${s.id}" ${s.id===S.chapter?"selected":""}>${esc(s.name)} (${left(s.id)} ord kvar)</option>`).join("")}</select></div>
+    <p class="plan">${cur?(next?`Du har börjat på alla ord i ${esc(cur.name)}. Läser ni <b>${esc(next.name)}</b> nu?`
+      :`Nya ord, texter och övningar tas först från <b>${esc(cur.name)}</b>.`):"Välj kapitlet ni läser i skolan, så kommer de orden först."}</p>
+    ${next?`<button class="btn ghost" id="nextch" data-ch="${next.id}">Byt till ${esc(next.name)}</button>`:""}</section>`;
+}
+function wireBookPanel(){
+  const sel=$("#chapter"); if(!sel) return;
+  sel.onchange=()=>{S.chapter=sel.value||null; if(!S.chapter) delete S.chapter; save(); renderStart();};
+  if($("#nextch")) $("#nextch").onclick=()=>{S.chapter=$("#nextch").dataset.ch; save(); renderStart();};
+}
+
 function sentencePool(min=6){
   let p=WORDS.filter(isLearned);
   if(p.length<min){const s=curSec(); p=[...p,...WORDS.filter(w=>w.sec===s&&!p.includes(w))];}

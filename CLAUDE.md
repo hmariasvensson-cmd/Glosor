@@ -36,6 +36,7 @@ Publicera alltid med de här kapabiliteterna (utelämna `capabilities` vid ompub
 - `languages/<kod>/lang.js`: kursinställningar (course, level, storageKey, accenter, verbspel, bindeord, tempusigenkänning).
 - `languages/<kod>/words.txt`: ordlistan. `content/*.json` innehåller hörtexter, lästexter, berättelser, fraser, skrivuppgifter och kultur. `videos.json` innehåller YouTube-klipp (kontrollerade med oEmbed).
 - `languages/upcoming.json`: kommande kurser som visas men inte går att välja.
+- `languages/<kod>/book/`: material från elevens lärobok (privat, i `.gitignore`, byggs in om mappen finns). Kapitel ur boken markeras `#id|Namn|bok`. Se `docs/BOK.md`.
 - `docs/BACKLOG.md`: allt som inte är byggt. När något byggs flyttas punkten till `docs/KLART.md` med referens till backloggpunkten och commit.
 
 ## Arbetsflöde

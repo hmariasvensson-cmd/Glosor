@@ -35,6 +35,7 @@ const ok=(name,cond,info="")=>out.push((cond?"OK   ":"FEL  ")+name+(info?"  ("+i
 setTimeout(()=>{ try{
   useLang("de"); ok("tyska: kurs byts", q("#coursechip").textContent.includes("Tyska 5"));
   ok("tyska: rubrik för videor", !q("#app").textContent.includes("på franska"));
+  ok("tyska: ingen bokpanel", !q("#chapter"));
   ok("tyska: fler än 800 ord", WORDS.length>800, WORDS.length);
   startDict(); let g=0; while(sess&&g++<80){ const c=sess.cur;
     if(c.t==="mc"){answerMC(sess.d.opts.findIndex(o=>o.ok)); q("#nx").click();} else {q("#ans").value=c.w.exT; q("#submit").click(); q("#submit").click();} }
@@ -117,6 +118,11 @@ setTimeout(()=>{ try{
   ok("kurs och nivå visas", q("#coursechip").textContent.includes("Franska 3"), q("#coursechip").textContent);
   ok("kommande kurs går inte att välja", [...q("#course").options].some(o=>o.disabled&&o.text.includes("Franska 4")));
   ok("dagens pass finns", !!q("#daily"));
+  ok("bokpanel med kapitel", !!q("#chapter")&&q(".book").textContent.includes("Escalade"));
+  q("#chapter").value="k2"; q("#chapter").dispatchEvent(new Event("change"));
+  ok("kapitlet ni läser kommer först", S.chapter==="k2"&&pickNew().filter(w=>w.sec!=="mine")[0].sec==="k2"&&curSec()==="k2", pickNew().slice(0,3).map(w=>w.sec).join());
+  ok("nya ord grupperade efter bok och allmänt", !!q('#src optgroup[label^="Boken"]'));
+  q("#chapter").value=""; q("#chapter").dispatchEvent(new Event("change")); ok("inget kapitel valt", !S.chapter);
   { const bad=(C().prompts||[]).filter(p=>!writeChecks(p,p.model).every(c=>c.ok)).map(p=>p.id+": "+writeChecks(p,p.model).filter(c=>!c.ok).map(c=>c.label).join("; "));
     ok("franska: modelltexterna klarar checklistan", !bad.length, bad.join(" | ")); }
   ok("övningsgrupper", document.querySelectorAll(".exgroup").length===4, document.querySelectorAll(".exgroup").length);

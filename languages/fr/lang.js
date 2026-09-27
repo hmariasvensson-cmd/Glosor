@@ -4,6 +4,8 @@ LANGUAGES.fr = {
   title: "Franska glosor",    // rubrik på sidan
   course: "Franska 3",         // kursen som ordlistan hör till
   courseGy25: "Moderna språk – fortsättning, nivå 1",   // samma kurs i Gy25 (gymnasiet från juli 2025)
+  // Elevens lärobok. Kapitel märkta #id|Namn|bok i words.txt kommer från boken (se docs/BOK.md).
+  book: {title: "Escalade", authors: "Waagaard, Rödemark, Jonchère och Sandberg"},
   level: "A2 → B1",           // ungefärlig nivå i europeiska språkskalan (GERS/CEFR)
   inLang: "på franska",       // "Skriv på franska"
   tts: "fr-FR",               // röst för uppläsning

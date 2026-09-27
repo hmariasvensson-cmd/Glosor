@@ -16,7 +16,7 @@ Underlag finns i `docs/ovningsforslag.md` (franska), `docs/ovningsforslag-tyska.
 - **P2: Större ordförråd, steg 3.** 1 629 ord nu. B2 kräver ungefär 3 000–4 000 ord. Fortsätt FrequencyWords från rang 2010 (CC BY-SA 4.0), eller använd kaikki/Wiktionary. Goethes listor är upphovsrättsskyddade och får inte kopieras.
 - **P2: Granskning av grammatikfrågorna** (390 tyska, 322 franska) av en lärare eller modersmålstalare, åtminstone ett stickprov på 10 %. Gå också igenom elevernas rapporter i `reports/` (läs dem med ArtifactData) och rätta i källfilerna.
 - **P3: Verbdata från Wiktionary/kaikki** i stället för handskrivna verbtabeller.
-- **P3: Om flickvännens lärobok fotas:** lägg in bokens kapitel och ordlistor och markera vilka ord som kommer från boken.
+- **P3: Om flickvännens lärobok fotas:** för in den enligt `docs/BOK.md`.
 
 ## Franska (Franska 3, mot A och B1)
 
@@ -25,6 +25,9 @@ Underlag finns i `docs/ovningsforslag.md` (franska), `docs/ovningsforslag-tyska.
 
 ## Kurser och nivåer
 
+- **P1: Nästa kapitel i Escalade** (efter kap 3): fota sidorna och för in dem enligt `docs/BOK.md`.
+- **P2: Säkerhetskopiera `languages/*/book/`** som ett privat git-repo. Mappen finns bara på den här datorn.
+- **P3: Välja bok per elev**, om flera elever med olika böcker ska använda samma kurs.
 - **P2: Franska 4 och Tyska 6** som egna kurser (egen mapp i `languages/`, egen `storageKey`). De visas redan som "kommer" i kursväljaren (`languages/upcoming.json`).
 
 ## Konton, sparande och topplista

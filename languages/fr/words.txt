@@ -6,10 +6,10 @@
 //   Nous [rions] beaucoup ensemble.
 // Saknas hakparentes letar programmet själv efter ordet i meningen.
 // Genus: m, f, mpl, fpl eller tomt. Ursprung får innehålla <b>fetstil</b>.
-// En rad som börjar med # startar ett nytt avsnitt:  #id|Namn som visas
+// En rad som börjar med # startar ett nytt avsnitt:  #id|Namn som visas, eller #id|Namn|bok för kapitel ur läroboken
 // Avsnittets id och ordets franska form används som nycklar för sparade framsteg,
 // så ändra dem inte i efterhand (ändra gärna svenska, exempel och ursprung).
-#k1|Kap 1 · Vie et loisirs
+#k1|Kap 1 · Vie et loisirs|bok
 bienvenue à tous|välkomna allihop||[Bienvenue à tous] dans notre club !|Välkomna allihop till vår klubb!|<b>bien</b> 'väl' + <b>venu</b> 'kommen', precis som svenskans väl-kommen.
 désigner|peka på||Le prof [désigne] un élève de la main.|Läraren pekar på en elev med handen.|Av latin <b>designare</b> 'märka ut', från <b>signum</b> 'tecken'. Samma rot som design och signal.
 de la main|med handen||Elle me fait signe [de la main].|Hon vinkar åt mig med handen.|<b>main</b> kommer från latin <b>manus</b> 'hand'. Jämför manuell och manikyr.
@@ -56,7 +56,7 @@ fier, fière|stolt||Je suis [fier] de toi.|Jag är stolt över dig.|Latin <b>fer
 réaliser qch|förverkliga något||Il veut [réaliser] son rêve.|Han vill förverkliga sin dröm.|Av <b>réel</b> 'verklig', latin <b>res</b> 'sak'.
 rêve|dröm|m|Mon [rêve], c'est d'aller au Japon.|Min dröm är att åka till Japan.|Av <b>rêver</b>, som på 1100-talet betydde 'ströva omkring, yra'.
 cours d'escalade|klätterkurs|m|J'ai un [cours d'escalade] le mardi.|Jag har klätterkurs på tisdagar.|<b>escalade</b> från italienska <b>scalata</b>, av latin <b>scala</b> 'stege'. Jämför skala.
-#k1e|Kap 1 · Zinédine et Zlatan
+#k1e|Kap 1 · Zinédine et Zlatan|bok
 connaître|känna till||Tu [connais] Zlatan ?|Känner du till Zlatan?|Latin <b>cognoscere</b> 'lära känna'. Jämför kognitiv.
 joueur|spelare|m|C'est un [joueur] de foot célèbre.|Han är en känd fotbollsspelare.|Av <b>jouer</b> 'spela', från latin <b>jocare</b> 'skämta'. Jämför engelskans joke.
 marquer un but|göra mål||Il a [marqué un but] à la dernière minute.|Han gjorde mål i sista minuten.|<b>marquer</b> från germanska <b>marka</b> 'märke', samma rot som svenskans märka.
@@ -84,7 +84,7 @@ autobiographie|självbiografi|f|Zlatan a écrit une [autobiographie].|Zlatan har
 répondre|svara||[Réponds] à la question !|Svara på frågan!|Latin <b>respondere</b>. Jämför respons.
 ils devraient (devoir)|de borde||[Ils devraient] travailler plus.|De borde arbeta mer.|Konditionalis av <b>devoir</b>, latin <b>debere</b> 'vara skyldig'. Jämför debet.
 carrément|absolut||C'est [carrément] génial !|Det är helt fantastiskt!|Av <b>carré</b> 'fyrkantig'. Något fyrkantigt är rakt på sak.
-#k1b|Kap 1 · Ma vie au soleil
+#k1b|Kap 1 · Ma vie au soleil|bok
 décider|bestämma, avgöra||J'ai [décidé] de partir.|Jag har bestämt mig för att åka.|Latin <b>decidere</b> 'skära av'. Ett beslut skär av de andra alternativen.
 résider|bo||Elle [réside] à Nice.|Hon bor i Nice.|Latin <b>residere</b> 'sitta kvar'. Jämför residens.
 plage|strand|f|On va à la [plage] ?|Ska vi gå till stranden?|Latin <b>plaga</b> 'område, sträcka'.
@@ -126,7 +126,7 @@ patron|chef|m|Mon [patron] est sympa.|Min chef är trevlig.|Latin <b>patronus</b
 gens|folk, människor|mpl|Les [gens] sont gentils ici.|Folk är snälla här.|Latin <b>gens</b> 'släkt, folk'.
 souriant, -e|leende||Elle est toujours [souriante].|Hon är alltid glad och leende.|Av <b>sourire</b> 'le', latin <b>subridere</b> 'skratta lite'.
 délice|lycka, fröjd|m|Ce gâteau est un [délice] !|Den här kakan är ljuvlig!|Latin <b>delicium</b>. Jämför delikat och delikatess.
-#k2|Kap 2 · Arrivée à Paris
+#k2|Kap 2 · Arrivée à Paris|bok
 arrivé, -e|framme||Nous sommes [arrivés] !|Vi är framme!|<b>arriver</b> från latin <b>arripare</b> 'komma till stranden' (ripa 'strand'). Man 'anlände' först med båt.
 en provenance de|(som ankommer) från|f|Le vol [en provenance de] Stockholm est arrivé.|Flyget från Stockholm har landat.|Av <b>provenir</b> 'komma från', latin <b>provenire</b>.
 venir de faire qch|just ha gjort något||Je [viens de] manger.|Jag har just ätit.|Passé récent: venir de + infinitiv.
@@ -171,7 +171,7 @@ trouver son chemin|hitta vägen||Avec un plan, on [trouve son chemin].|Med en ka
 on connaît (connaître)|man känner (till)||[On connaît] bien cette ville.|Vi känner den här staden väl.|Presens av connaître: je connais, il connaît. <b>On</b> betyder både 'man' och 'vi'.
 raconter|berätta||[Raconte]-moi ton voyage !|Berätta om din resa!|<b>re</b> + <b>conter</b> 'räkna upp', latin <b>computare</b>. Att berätta var att räkna upp händelser. Jämför konto.
 elle reçoit (recevoir)|hon får||[Elle reçoit] beaucoup de messages.|Hon får många meddelanden.|Presens av recevoir: je reçois, il reçoit.
-#k2b|Kap 2 · Le métro de Paris
+#k2b|Kap 2 · Le métro de Paris|bok
 construction|byggande|f|La [construction] du métro a commencé en 1898.|Bygget av tunnelbanan började 1898.|Latin <b>construere</b> 'bygga ihop'.
 c'est l'approche de …|här: det var när … närmade sig|f|C'était [l'approche de] Noël.|Det var när julen närmade sig.|<b>approcher</b> från latin <b>appropiare</b> (prope 'nära').
 exposition universelle|världsutställning|f|La tour Eiffel a été construite pour l'[Exposition universelle] de 1889.|Eiffeltornet byggdes till världsutställningen 1889.|Pariss första metrolinje öppnade till nästa världsutställning, år 1900.
@@ -203,7 +203,7 @@ pièce|mynt|f|Tu as une [pièce] d'un euro ?|Har du ett euromynt?|Galliska <b>pe
 SDF (sans domicile fixe)|hemlös person|m|Un [SDF] dort dans le métro.|En hemlös person sover i tunnelbanan.|'Utan fast bostad'.
 se loger|få tak över huvudet||C'est difficile de [se loger] à Paris.|Det är svårt att få tak över huvudet i Paris.|<b>loge</b> från frankiska <b>laubja</b> 'lövhydda'. Jämför loge och engelskans lodge.
 bref|kort sagt||[Bref], c'était une belle journée.|Kort sagt, det var en fin dag.|Latin <b>brevis</b> 'kort'. Svenskans brev kommer från samma ord.
-#k2c|Kap 2 · Aux Champs-Élysées
+#k2c|Kap 2 · Aux Champs-Élysées|bok
 se balader|promenera||On [se balade] sur les Champs-Élysées.|Vi promenerar på Champs-Élysées.|Vardagligt ord med osäkert ursprung.
 cœur|hjärta|m|Mon [cœur] bat vite.|Mitt hjärta slår snabbt.|Latin <b>cor</b>. Jämför kordial och courage 'mod'.
 inconnu, -e|okänd||Un [inconnu] me parle.|En okänd person pratar med mig.|<b>in</b> 'inte' + <b>connu</b> 'känd'.
@@ -220,7 +220,7 @@ s'embrasser|kyssas||Ils [s'embrassent] sous la pluie.|De kysser varandra i regne
 corde|sträng; rep|f|Une [corde] de ma guitare est cassée.|En sträng på min gitarr har gått av.|Grekiska <b>chordē</b> 'tarmsträng'. Jämför ackord.
 oiseau|fågel|m|Un [oiseau] chante dans l'arbre.|En fågel sjunger i trädet.|Latin <b>aucellus</b> 'liten fågel' (avis).
 point du jour|gryningen|m|Nous partons au [point du jour].|Vi ger oss av i gryningen.|'Dagens (start)punkt'.
-#k3|Kap 3 · Trouver un travail
+#k3|Kap 3 · Trouver un travail|bok
 se regarder|titta sig||Elle [se regarde] dans la glace.|Hon tittar sig i spegeln.|<b>regarder</b> av <b>garder</b> 'vakta', germanska <b>wardon</b>. Jämför svenskans vårda.
 glace|spegel|f|Il y a une [glace] dans la salle de bains.|Det finns en spegel i badrummet.|Latin <b>glacies</b> 'is'. Glace betyder också 'is', 'glass' och 'glasruta'.
 elle dit (dire)|hon säger||[Elle dit] bonjour.|Hon säger hej.|Latin <b>dicere</b>. Jämför diktera.
@@ -263,7 +263,7 @@ connu, -e|känd||C'est un chanteur très [connu].|Han är en mycket känd sånga
 l'âge de trois ans|tre års ålder|m|Il parle anglais depuis [l'âge de trois ans].|Han har pratat engelska sedan tre års ålder.|<b>âge</b> från latin <b>aetas</b>.
 travailler|arbeta||Je [travaille] le samedi.|Jag jobbar på lördagar.|Av travail.
 saison d'hiver|vintersäsong|f|La [saison d'hiver] commence en décembre.|Vintersäsongen börjar i december.|<b>saison</b> från latin <b>satio</b> 'sådd', såtiden. <b>hiver</b> från latin <b>hibernum</b>. Jämför hibernera.
-#aller|Verb · Aller-gruppen (être)
+#aller|Verb · Aller-gruppen (être)|bok
 aller|gå, åka||Je [vais] à l'école.|Jag går till skolan.|Hopsatt av tre latinska verb: <b>ambulare</b> (aller), <b>vadere</b> (je vais) och <b>ire</b> (j'irai). Därför är det så oregelbundet.
 entrer|komma in||[Entrez], s'il vous plaît !|Kom in, är ni snälla!|Latin <b>intrare</b>. Jämför entré.
 sortir|gå ut||Je [sors] ce soir.|Jag går ut i kväll.|Osäkert ursprung, kanske latin <b>sortiri</b> 'dra lott'.

@@ -23,7 +23,7 @@ function parseWords(raw){
   const sections=[], words=[]; let sec=null; const seen=new Set();
   raw.trim().split("\n").forEach(l=>{
     l=l.trim(); if(!l) return;
-    if(l[0]==="#"){const [id,name]=l.slice(1).split("|"); sec={id,name}; sections.push(sec); return;}
+    if(l[0]==="#"){const [id,name,src]=l.slice(1).split("|"); sec={id,name,book:src==="bok"}; sections.push(sec); return;}
     const [t,sv,g,exRaw,exSv,ety]=l.split("|");
     if(seen.has(t)) return; seen.add(t);
     words.push({id:t,sec:sec.id,t,sv,g:g||"",exT:exRaw.replace(/[\[\]]/g,""),exSv,ety,gap:findGap(t,exRaw)});
@@ -221,7 +221,9 @@ const accentKeys=list=>`<div class="accents">${list.split(" ").map(c=>`<button t
 const lang=()=>`lang="${L.code}"`;
 
 function pickNew(){
-  const fresh=WORDS.filter(w=>!isLearned(w)).sort((a,b)=>(b.sec==="mine")-(a.sec==="mine"));   // egna ord från texterna först
+  // Egna ord från texterna först, sedan kapitlet klassen läser (om boken finns), sedan resten i ordning
+  const rank=w=>w.sec==="mine"?0:w.sec===S.chapter?1:2;
+  const fresh=WORDS.filter(w=>!isLearned(w)).sort((a,b)=>rank(a)-rank(b));
   const pool=S.src==="auto"?fresh:fresh.filter(w=>w.sec===S.src);
   return pool.slice(0,S.newCount);
 }
@@ -234,14 +236,18 @@ function renderStart(){
   $("#tabs").hidden=false; $("#tab-ova").setAttribute("aria-selected",true); $("#tab-stats").setAttribute("aria-selected",false); $("#tab-board").setAttribute("aria-selected",false);
   const newW=pickNew(), due=dueWords();
   const learned=WORDS.filter(isLearned).length, mastered=WORDS.filter(isMastered).length;
-  const opts=[`<option value="auto">${L.nextLabel||"Nästa ord i boken"}</option>`].concat(SECTIONS.map(s=>{
-    const n=WORDS.filter(w=>w.sec===s.id&&!isLearned(w)).length;
-    return `<option value="${s.id}" ${n?"":"disabled"}>${esc(s.name)} (${n} kvar)</option>`;})).join("");
+  const secOpt=s=>{const n=WORDS.filter(w=>w.sec===s.id&&!isLearned(w)).length;
+    return `<option value="${s.id}" ${n?"":"disabled"}>${esc(s.name)} (${n} kvar)</option>`;};
+  const bookSecs=SECTIONS.filter(s=>s.book), otherSecs=SECTIONS.filter(s=>!s.book);
+  const opts=`<option value="auto">${hasBook()?"Kapitlet ni läser, sedan resten":L.nextLabel||"Nästa ord i ordlistan"}</option>`+(bookSecs.length
+    ?`<optgroup label="Boken: ${esc(L.book?L.book.title:"")}">${bookSecs.map(secOpt).join("")}</optgroup><optgroup label="Allmänt">${otherSecs.map(secOpt).join("")}</optgroup>`
+    :SECTIONS.map(secOpt).join(""));
   const nothing=!newW.length&&!due.length;
   app.innerHTML=`
   ${S.run?"":dailyPanel(newW,due)}
   ${S.run?`<section class="panel"><h2>Fortsätt där du slutade</h2><p class="plan">${esc(runLabel(S.run))}</p>
     <div class="navrow"><button class="btn ghost" id="run-drop">Släng</button><button class="btn" id="run-go">Fortsätt</button></div></section>`:""}
+  ${hasBook()?bookPanel():""}
   <section class="panel">
     <div class="meta"><span class="label">Pass ${S.pass}</span></div>
     <div class="stats">
@@ -281,6 +287,7 @@ function renderStart(){
   ${videosPanel(S.src!=="auto"?S.src:(newW[0]||WORDS.filter(isLearned).pop()||WORDS[0]||{}).sec)}`;
   $("#src").value=S.src; if(!$("#src").selectedOptions[0]||$("#src").selectedOptions[0].disabled){S.src="auto";$("#src").value="auto"}
   $("#src").onchange=e=>{S.src=e.target.value;save();renderStart()};
+  wireBookPanel();
   app.querySelectorAll("[data-n]").forEach(b=>b.onclick=()=>{S.newCount=+b.dataset.n;save();renderStart()});
   app.querySelectorAll("[data-m]").forEach(b=>b.onclick=()=>{S.mode=b.dataset.m;save();renderStart()});
   app.querySelectorAll("[data-slow]").forEach(b=>b.onclick=()=>{S.slow=b.dataset.slow==="1";save();renderStart()});
