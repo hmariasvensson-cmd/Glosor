@@ -325,8 +325,57 @@ def run(scenario):
     return m.group(1).replace("&lt;", "<").replace("&amp;", "&") if m else "FEL  hittade inget testresultat i sidan"
 
 
+SCENARIO_HTTP = r"""<script>
+const out=[]; const q=s=>document.querySelector(s);
+const ok=(name,cond,info="")=>out.push((cond?"OK   ":"FEL  ")+name+(info?"  ("+info+")":""));
+const wait=(f,ms=4000)=>new Promise(r=>{const t0=Date.now();(function p(){if(f()||Date.now()-t0>ms)r();else setTimeout(p,50)})()});
+setTimeout(async()=>{ try{
+  ok("publicerad sida: ingen inbakad data", LANGUAGES.de.words==null||L.code==="de");
+  await wait(()=>L&&WORDS&&WORDS.length);
+  ok("kursens data hämtas från data/<kod>.json", L&&WORDS.length>200, L&&L.code+" "+WORDS.length);
+  const other=Object.keys(LANGUAGES).find(c=>c!==L.code&&LANGUAGES[c].words==null);
+  q("#course").value=other; q("#course").dispatchEvent(new Event("change"));
+  ok("byte av kurs visar att den hämtas", q("#app").textContent.includes("Hämtar"));
+  await wait(()=>L.code===other);
+  ok("byte av kurs hämtar nästa kurs", L.code===other&&WORDS.length>200, other);
+ }catch(e){ ok("undantag", false, e.message); }
+ ok("inga JavaScript-fel", !__err.length, __err.join(" ; "));
+ document.body.insertAdjacentHTML("beforeend","<pre id=out>"+out.join("\n").replace(/</g,"&lt;")+"</pre>");
+},300);
+</script>"""
+
+
+def run_http(scenario):
+    """Den publicerade sidan (utan inbakad data) via en lokal webbserver, så att data/<kod>.json hämtas som på riktigt."""
+    import http.server, shutil, threading, functools, time
+    sys.path.insert(0, str(ROOT))
+    from build import SKELETON_HEAD
+    with tempfile.TemporaryDirectory() as tmp:
+        t = pathlib.Path(tmp)
+        shutil.copytree(ROOT / "dist" / "data", t / "data")
+        page = SKELETON_HEAD + (ROOT / "dist" / "index.html").read_text(encoding="utf-8") + "\n</body></html>\n"
+        seed = "<script>window.__err=[];window.onerror=(m,s,l,c)=>{__err.push(m+' @'+l)};localStorage.clear();</script>"
+        (t / "test.html").write_text(page.replace("<title>", seed + "<title>", 1).replace("</body></html>", scenario + "</body></html>"), encoding="utf-8")
+        srv = http.server.ThreadingHTTPServer(("127.0.0.1", 0), functools.partial(http.server.SimpleHTTPRequestHandler, directory=tmp))
+        srv.RequestHandlerClass.log_message = lambda *a: None
+        threading.Thread(target=srv.serve_forever, daemon=True).start()
+        dump = t / "dump.html"
+        with open(dump, "w") as fh:
+            p = subprocess.Popen([CHROME, "--headless=new", "--disable-gpu", f"--user-data-dir={tmp}/c", "--dump-dom",
+                                  "--virtual-time-budget=8000", f"http://127.0.0.1:{srv.server_address[1]}/test.html"], stdout=fh, stderr=subprocess.DEVNULL)
+            for _ in range(120):
+                time.sleep(0.5)
+                if "</html>" in dump.read_text(encoding="utf-8", errors="replace") or p.poll() is not None:
+                    break
+            p.kill()
+        srv.shutdown()
+        out = dump.read_text(encoding="utf-8", errors="replace")
+    m = re.search(r'<pre id="out">(.*?)</pre>', out, re.S)
+    return m.group(1).replace("&lt;", "<").replace("&amp;", "&") if m else "FEL  hittade inget testresultat i sidan (http)"
+
+
 def main():
-    text = run(SCENARIO) + "\n" + run(SCENARIO_DE)
+    text = run(SCENARIO) + "\n" + run(SCENARIO_DE) + "\n" + run_http(SCENARIO_HTTP)
     print(text)
     sys.exit(1 if "FEL  " in text else 0)
 

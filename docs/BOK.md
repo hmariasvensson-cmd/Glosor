@@ -11,12 +11,12 @@ I appen väljer eleven under **Boken → Vi läser nu** vilket kapitel klassen l
 
 | Vad | Var | I det publika repot? |
 |---|---|---|
-| Ordlistor, bokens texter och övningar, foton | `languages/<kod>/book/words.txt`, `book/content/*.json` och `book/foton/` | **Nej.** Mappen `book/` står i `.gitignore`. |
+| Ordlistor, bokens texter och övningar, foton | `languages/<kod>/book/kapNN/` (`words.txt`, `content/*.json`, `foton/`) och `book/sidor.json` | **Nej.** Mappen `book/` står i `.gitignore`. |
 | Egna övningar och texter på bokens tema | `languages/<kod>/words.txt` och `languages/<kod>/content/` | Ja |
 
 Bokens texter, ordlistor och övningar är upphovsrättsskyddade och får inte ligga i det publika repot. `build.py` läser `book/` om mappen finns och bygger in den i appen, som bara de inbjudna ser.
 
-Mappen `book/` finns bara på den här datorn. Säkerhetskopiera den, helst som ett eget **privat** git-repo (till exempel `glosor-bok`) som klonas in i `languages/fr/book/`.
+Mappen `book/` finns bara på den här datorn. Den är ett eget lokalt git-repo (versionshanterad, men inte säkerhetskopierad). Koppla den till ett **privat** repo på GitHub (till exempel `glosor-bok`) för säkerhetskopiering.
 
 De franska kapitlen k1–k3 och aller låg i ordlistan innan det här upplägget fanns, och de ligger kvar i `words.txt`. Varje rad består av ord, översättning och egna exempel och kommentarer. Nya kapitel från boken läggs i `book/`.
 
@@ -25,9 +25,9 @@ De franska kapitlen k1–k3 och aller låg i ordlistan innan det här upplägget
 1. Fota sidorna: glosorna, texten och gärna övningarna. Rakt ovanifrån och i bra ljus räcker.
 2. Dra in bilderna i Claude Code och skriv till exempel "Escalade kapitel 4, sidorna 52–61".
 3. Claude
-   - läser av glosorna och skriver dem till `book/words.txt` under `#k4|Kap 4 · <titel>|bok`, med exempelmeningar och kommentarer i samma format som resten (se `languages/fr/content/SPEC.md`)
-   - sparar fotona i `book/foton/` och för in bokens egna texter och övningar i `book/content/` enligt `book/SPEC-bok.md` (också privat): texterna som lästexter med glosor och frågor, bokens öppna frågor och skrivuppgifter som skrivuppgifter med Claudes kommentarer, och översättnings- och luckövningar under Grammatik → Bokens övningar
-   - skriver *egna* övningar på kapitlets tema: luckmeningar, en hörtext, en lästext med frågor, en berättelse och en skrivuppgift, med kapitlets ord och grammatik. De läggs i `content/` eller `book/content/`.
+   - läser av glosorna och skriver dem till `book/kapNN/words.txt` under `#k4|Kap 4 · <titel>|bok`, med exempelmeningar och kommentarer i samma format som resten (se `languages/fr/content/SPEC.md`)
+   - sparar fotona i `book/kapNN/foton/`, för in sidorna i `book/sidor.json` och bokens egna texter och övningar i `book/kapNN/content/` enligt `book/SPEC-bok.md` och `book/README.md` (också privata): texterna som lästexter med glosor och frågor, bokens öppna frågor och skrivuppgifter som skrivuppgifter med Claudes kommentarer, och översättnings- och luckövningar under Grammatik → Bokens övningar
+   - skriver *egna* övningar på kapitlets tema: luckmeningar, en hörtext, en lästext med frågor, en berättelse och en skrivuppgift, med kapitlets ord och grammatik. Egna övningar läggs i `content/` (publikt).
    - kör `build.py` och testerna och publicerar.
 4. Oscar väljer det nya kapitlet under **Vi läser nu**.
 

@@ -4,10 +4,12 @@
     python3 build.py
 
 Läser src/ och languages/<kod>/ och skriver:
-  dist/index.html    filen som publiceras till artefaktlänken
-  dist/preview.html  samma sida med ett komplett HTML-skal, för att öppna lokalt i webbläsaren
+  dist/index.html        sidan som publiceras till artefaktlänken (appen och kursinställningarna)
+  dist/data/<kod>.json   varje kurs ord och innehåll, publiceras bredvid sidan och hämtas när kursen väljs
+  dist/preview.html      samma sida med datan inbakad och ett komplett HTML-skal, för att öppna lokalt och för testerna
 """
 import datetime
+import hashlib
 import json
 import pathlib
 import re
@@ -25,13 +27,21 @@ GENDERS = {"", "m", "f", "n", "mpl", "fpl", "npl", "pl"}
 SKELETON_HEAD = '<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>\n'
 
 
+def book_files(code, pattern):
+    """Filer i den privata bokmappen, i ordning: book/<pattern> först, sedan book/<kapitel>/<pattern> (t.ex. book/kap05/words.txt)."""
+    book = LANG_DIR / code / "book"
+    if not book.exists():
+        return []
+    return sorted(book.glob(pattern)) + sorted(f for f in book.glob("*/" + pattern))
+
+
 def read_words(code):
     """Läser words.txt (och book/words.txt om den finns), tar bort kommentarer och kontrollerar varje rad."""
     errors, warnings = [], []
     lines, seen, section_ids = [], set(), set()
     n_words = 0
     section = None
-    paths = [LANG_DIR / code / "words.txt", LANG_DIR / code / "book" / "words.txt"]
+    paths = [LANG_DIR / code / "words.txt", *book_files(code, "words.txt")]
     numbered = [(p, no, line) for p in paths if p.exists() for no, line in enumerate(p.read_text(encoding="utf-8").splitlines(), 1)]
     for path, no, line in numbered:
         s = line.strip()
@@ -143,7 +153,7 @@ def main():
     if not codes:
         sys.exit("Hittade inga språk i languages/")
 
-    lang_js, all_errors = [], []
+    lang_js, all_errors, course_data = [], [], {}
     for code in codes:
         words, n_words, n_sections, errors, warnings = read_words(code)
         all_errors += errors
@@ -152,10 +162,11 @@ def main():
         conf = (LANG_DIR / code / "lang.js").read_text(encoding="utf-8")
         if "</script" in conf.lower():
             all_errors.append(f"languages/{code}/lang.js: får inte innehålla </script")
-        js = f"{conf.strip()}\nLANGUAGES.{code}.words = {js_string(words)};"
+        js = conf.strip()
+        cdata = {"words": words}
         content = {}
         # Innehåll från boken (book/content, privat mapp) läggs till efter det allmänna innehållet
-        content_files = [f for d in (LANG_DIR / code / "content", LANG_DIR / code / "book" / "content") if d.exists() for f in sorted(d.glob("*.json"))]
+        content_files = sorted((LANG_DIR / code / "content").glob("*.json")) + book_files(code, "content/*.json")
         for f in content_files:
             try:
                 data = json.loads(f.read_text(encoding="utf-8"))
@@ -169,20 +180,25 @@ def main():
                 content.setdefault(f.stem, []).extend(data)
             elif isinstance(data, dict):
                 content.setdefault(f.stem, {}).update(data)
+        for k, v in content.items():   # id:n måste vara unika inom varje innehållstyp, även mellan boken och det allmänna
+            if isinstance(v, list):
+                ids = [x.get("id") for x in v if isinstance(x, dict) and x.get("id")]
+                all_errors += [f"languages/{code}: {k} har id {i} flera gånger" for i in sorted({i for i in ids if ids.count(i) > 1}) if k != "grammar"]
         if "grammar" in content:
             ids = [x.get("id") for x in content["grammar"]]
             all_errors += [f"languages/{code}/content/grammar-*.json: id {i} finns flera gånger" for i in sorted({i for i in ids if ids.count(i) > 1})]
         if content:
-            js += f"\nLANGUAGES.{code}.content = {js_string(content)};"
+            cdata["content"] = content
             print(f"{code}: innehåll " + ", ".join(f"{k} {len(v)}" for k, v in content.items()))
         videos = LANG_DIR / code / "videos.json"
         if videos.exists():
             try:
-                data = json.loads(videos.read_text(encoding="utf-8"))
-                js += f"\nLANGUAGES.{code}.videos = {js_string(data)};"
+                vids = json.loads(videos.read_text(encoding="utf-8"))
+                cdata["videos"] = vids
             except json.JSONDecodeError as e:
                 all_errors.append(f"languages/{code}/videos.json: {e}")
         lang_js.append(js)
+        course_data[code] = cdata
         print(f"{code}: {n_words} ord i {n_sections} avsnitt")
 
     if all_errors:
@@ -194,6 +210,10 @@ def main():
         m = re.search(r'title:\s*"([^"]+)"', (LANG_DIR / codes[0] / "lang.js").read_text(encoding="utf-8"))
         title = m.group(1) if m else title
 
+    # Kursernas data blir egna filer (dist/data/<kod>.json) som appen hämtar när kursen väljs.
+    # DATAVERSION ändras när datan ändras, så att webbläsaren inte använder en gammal fil.
+    data_json = {c: json.dumps(d, ensure_ascii=False, separators=(",", ":")) for c, d in course_data.items()}
+    dataversion = hashlib.sha1("".join(data_json[c] for c in codes).encode()).hexdigest()[:10]
     page = (ROOT / "src" / "page.html").read_text(encoding="utf-8")
     parts = {
         "TITLE": title,
@@ -201,14 +221,25 @@ def main():
         "LANGUAGES": "\n".join(lang_js),
         "APP": "\n".join((ROOT / "src" / f).read_text(encoding="utf-8").strip() for f in ("app.js", "exercises.js", "grammar.js", "exam.js", "feedback.js", "main.js")),
         "BUILT": datetime.datetime.now().strftime("%Y-%m-%d %H:%M"),
+        "DATAVERSION": dataversion,
         "UPCOMING": js_string(json.loads((LANG_DIR / "upcoming.json").read_text(encoding="utf-8"))) if (LANG_DIR / "upcoming.json").exists() else "[]",
     }
     html = re.sub(r"\{\{(\w+)\}\}", lambda m: parts[m.group(1)], page)
+    # preview.html har datan inbakad, så att den går att öppna direkt från disken och i testerna
+    safe = {c: data_json[c].replace("</", "<\\/") for c in codes}
+    inline = "\n".join(f"Object.assign(LANGUAGES.{c}, {safe[c]});" for c in codes)
+    preview = re.sub(r"\{\{(\w+)\}\}", lambda m: parts[m.group(1)] + ("\n" + inline if m.group(1) == "LANGUAGES" else ""), page)
 
     DIST.mkdir(exist_ok=True)
+    (DIST / "data").mkdir(exist_ok=True)
+    for old in (DIST / "data").glob("*.json"):
+        old.unlink()
+    for c in codes:
+        (DIST / "data" / f"{c}.json").write_text(data_json[c], encoding="utf-8")
     (DIST / "index.html").write_text(html, encoding="utf-8")
-    (DIST / "preview.html").write_text(SKELETON_HEAD + html + "\n</body></html>\n", encoding="utf-8")
-    print(f"Klart: dist/index.html ({len(html.encode()) // 1024} kB)")
+    (DIST / "preview.html").write_text(SKELETON_HEAD + preview + "\n</body></html>\n", encoding="utf-8")
+    print(f"Klart: dist/index.html ({len(html.encode()) // 1024} kB) och dist/data/ ("
+          + ", ".join(f"{c} {len(data_json[c].encode()) // 1024} kB" for c in codes) + ")")
 
 
 if __name__ == "__main__":

@@ -93,7 +93,7 @@ async function cloudInit(){
     boardSubscribe();
     document.addEventListener("visibilitychange",()=>{if(document.visibilityState==="hidden")cloudFlush()});
     window.addEventListener("pagehide",cloudFlush);
-    await cloudAttach();
+    if(L&&L.base) await cloudAttach();   // annars kopplas lagringen när kursens data har hämtats (useLang)
   }catch(e){}
 }
 function adopt(state){
@@ -1062,7 +1062,22 @@ function renderStats(){
 })();
 
 /* ---------- Start ---------- */
+/* Kursens ord och innehåll ligger i en egen fil, data/<kod>.json, som hämtas första gången kursen väljs.
+   I preview.html (och testerna) är datan inbakad, och då startar kursen direkt. */
+const LOADING={};
+function loadCourse(code){
+  return LOADING[code]=LOADING[code]||fetch(`data/${code}.json?v=${DATA_VERSION}`).then(r=>{if(!r.ok) throw new Error(r.status); return r.json();})
+    .then(d=>{Object.assign(LANGUAGES[code],d); return LANGUAGES[code];})
+    .catch(e=>{delete LOADING[code]; throw e;});
+}
 function useLang(code){
+  if(LANGUAGES[code].words==null){
+    app.innerHTML=`<section class="panel"><p class="plan">Hämtar ${esc(LANGUAGES[code].course||LANGUAGES[code].name)} …</p></section>`;
+    loadCourse(code).then(()=>useLang(code)).catch(()=>{
+      app.innerHTML=`<section class="panel"><h2>Kursen kunde inte hämtas</h2><p class="plan">Kontrollera internetanslutningen och försök igen.</p><button class="btn" id="retry">Försök igen</button></section>`;
+      $("#retry").onclick=()=>useLang(code); });
+    return;
+  }
   L=LANGUAGES[code]; L.code=code;
   L.base=L.base||parseWords(L.words);
   CONJ=buildConj(L.verbs);

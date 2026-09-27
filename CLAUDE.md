@@ -32,6 +32,9 @@ Publicera alltid med de här kapabiliteterna (utelämna `capabilities` vid ompub
 
 ## Struktur
 
+Översikt över var data ligger: `docs/ARKITEKTUR.md`.
+
+
 - `src/app.js`: språk, sparande (lokalt och claude.ai), glosquiz, quizmotor, statistik, topplista.
 - `src/exercises.js`: alla övningar utöver glosquizet. Varje typ registrerar `MC`/`TYPE` (frågor), `RESTORE` (återuppta), `EFFECT` (statistik) och `RECAP`. Fråge-id är `<typ>:<ref>`, så typerna kan blandas i Dagens pass.
 - `src/grammar.js`: grammatikövningar (tyska just nu), der/die/das och plural. Frågorna ligger i `languages/<kod>/content/grammar-*.json` (format i `languages/de/content/GRAMMATIK-SPEC.md`). `build.py` slår ihop och kontrollerar dem.
@@ -44,7 +47,7 @@ Publicera alltid med de här kapabiliteterna (utelämna `capabilities` vid ompub
 - `languages/<kod>/lang.js`: kursinställningar (course, level, storageKey, accenter, verbspel, bindeord, tempusigenkänning).
 - `languages/<kod>/words.txt`: ordlistan. `content/*.json` innehåller hörtexter, lästexter, berättelser, fraser, skrivuppgifter och kultur. `videos.json` innehåller YouTube-klipp (kontrollerade med oEmbed).
 - `languages/upcoming.json`: kommande kurser som visas men inte går att välja.
-- `languages/<kod>/book/`: material från elevens lärobok (privat, i `.gitignore`, byggs in om mappen finns). Kapitel ur boken markeras `#id|Namn|bok`. Se `docs/BOK.md`.
+- `languages/<kod>/book/kapNN/`: material från elevens lärobok per kapitel, plus `book/sidor.json` (privat, i `.gitignore`, eget lokalt git-repo, byggs in om mappen finns). Kapitel ur boken markeras `#id|Namn|bok`. Se `docs/BOK.md`.
 - `docs/BACKLOG.md`: allt som inte är byggt. När något byggs flyttas punkten till `docs/KLART.md` med referens till backloggpunkten och commit.
 
 ## Arbetsflöde
@@ -52,6 +55,6 @@ Publicera alltid med de här kapabiliteterna (utelämna `capabilities` vid ompub
 1. Ändra i `languages/<kod>/words.txt`, `lang.js` eller `src/`.
 2. `python3 build.py` (bara Pythons standardbibliotek, Node finns inte på datorn).
 3. `python3 tests/run_tests.py`: spelar igenom alla övningar i Chrome utan fönster, med sparad data och en låtsad claude.ai-lagring. Allt ska vara OK innan du publicerar.
-4. Publicera `dist/index.html` till URL:en ovan. Läs först live-versionen med Artifact `action: "read"`. Om den har ändrats utanför projektet (t.ex. i claude.ai-chatten) ska de ändringarna föras in i källfilerna innan du publicerar, så att inget skrivs över.
+4. Publicera `dist/index.html` till URL:en ovan **med alla filer i `dist/data/` i `files`** (`{"data/fr.json": "dist/data/fr.json", …}`), se `docs/ARKITEKTUR.md`. Läs först live-versionen med Artifact `action: "read"`. Om den har ändrats utanför projektet (t.ex. i claude.ai-chatten) ska de ändringarna föras in i källfilerna innan du publicerar, så att inget skrivs över.
 
 `dist/` genereras och är inte versionshanterad.
