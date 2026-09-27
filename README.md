@@ -36,6 +36,7 @@ src/
   style.css     utseendet
   app.js        glosquiz, sparande, statistik, topplista
   exercises.js  övriga övningar (diktamen, översättning, ordföljd, texter, berättelser …)
+  grammar.js    grammatikövningar, der/die/das och plural
   main.js       start och kursväljare
 tests/
   run_tests.py  spelar igenom alla övningar i Chrome

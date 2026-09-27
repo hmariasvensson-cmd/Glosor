@@ -24,18 +24,19 @@ Publicera alltid med de här kapabiliteterna (utelämna `capabilities` vid ompub
 ## Saker som aldrig får ändras
 
 - `storageKey` i `languages/*/lang.js` (`franska-glosor-v2`, `glosor-de-v1`).
-- Formatet på sparat läge: `{pass, w:{<ord-id>:{s,due}}, newCount, src, mode}`.
+- Formatet på sparat läge: `{pass, w:{<ord-id>:{s,due}}, newCount, src, mode}`. Steg `s` 0–3 = lär sig, 4 och uppåt = kan (se `INT` och `schedule` i app.js).
 - Ord-id är ordets form i målspråket (första fältet i words.txt), och avsnitts-id används i `S.src`. Att ändra dem nollställer framstegen för de orden.
 
 ## Struktur
 
 - `src/app.js`: språk, sparande (lokalt och claude.ai), glosquiz, quizmotor, statistik, topplista.
 - `src/exercises.js`: alla övningar utöver glosquizet. Varje typ registrerar `MC`/`TYPE` (frågor), `RESTORE` (återuppta), `EFFECT` (statistik) och `RECAP`. Fråge-id är `<typ>:<ref>`, så typerna kan blandas i Dagens pass.
+- `src/grammar.js`: grammatikövningar (tyska just nu), der/die/das och plural. Frågorna ligger i `languages/<kod>/content/grammar-*.json` (format i `languages/de/content/GRAMMATIK-SPEC.md`). `build.py` slår ihop och kontrollerar dem.
 - `src/main.js`: start och kursväljare (körs sist).
 - `languages/<kod>/lang.js`: kursinställningar (course, level, storageKey, accenter, verbspel, bindeord, tempusigenkänning).
 - `languages/<kod>/words.txt`: ordlistan. `content/*.json` innehåller hörtexter, lästexter, berättelser, fraser, skrivuppgifter och kultur. `videos.json` innehåller YouTube-klipp (kontrollerade med oEmbed).
 - `languages/upcoming.json`: kommande kurser som visas men inte går att välja.
-- `docs/BACKLOG.md`: allt som inte är byggt. Uppdatera den när något byggs eller föreslås.
+- `docs/BACKLOG.md`: allt som inte är byggt. När något byggs flyttas punkten till `docs/KLART.md` med referens till backloggpunkten och commit.
 
 ## Arbetsflöde
 
