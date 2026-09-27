@@ -24,7 +24,9 @@ window.__remote={"data/users/u_test/franska-glosor-v2":{state:student(),t:now-10
 const snap=p=>({exists:!!__remote[p],data:()=>__remote[p],metadata:{hasPendingWrites:false,fromCache:false}});
 const mockDb={
   doc:p=>({get:async()=>snap(p),set:async b=>{__remote[p]=JSON.parse(JSON.stringify(b))},onSnapshot:n=>{setTimeout(()=>n(snap(p)),0);return()=>{}}}),
-  collection:c=>({onSnapshot:n=>{setTimeout(()=>n({docs:Object.keys(__remote).filter(k=>k.startsWith(c+"/")).map(k=>({id:k.split("/")[1],exists:true,data:()=>__remote[k]}))}),0);return()=>{}}})};
+  collection:c=>{const docs=()=>Object.keys(__remote).filter(k=>k.startsWith(c+"/")).map(k=>({id:k.split("/")[1],exists:true,data:()=>__remote[k]}));
+    return {onSnapshot:n=>{setTimeout(()=>n({docs:docs()}),0);return()=>{}},
+      where:(f,op,v)=>({get:async()=>({docs:docs().filter(d=>d.data()[f]===v)})})};}};
 window.__fbPrompt="";
 const mockSample=Object.assign(async()=>({text:"x"}),{json:async p=>{window.__fbPrompt=p; return {helhet:"Bra jobbat.",bra:["Tydlig start"],fel:[{citat:"je suis allé",rattat:"je suis allée",varfor:"Kongruens"}],nasta:"Fler bindeord",niva:"A2+",prov:"Nästan B1"};}});
 window.claude={use:async n=>n==="sample"?mockSample:n==="db"?mockDb:n==="user"?{id:async()=>"u_test",profiles:async ids=>Object.fromEntries(ids.map(i=>[i,{name:""}]))}:null};
@@ -82,6 +84,25 @@ setTimeout(()=>{ try{
   window.__plurals=genderNouns().filter(n=>n.pl).map(n=>n.w.t+" => "+n.pl).join("\n");
   setView("stats"); ok("statistik: grammatik", q("#app").textContent.includes("Adjektivändelser"));
   ok("rapport om fel facit sparas", Object.keys(__remote).some(k=>k.startsWith("reports/u_test-")), Object.keys(__remote).join());
+  // Tyska 4: egen kurs med egen sparnyckel
+  renderStart(); q('[data-only="1"]').click();
+  ok("bara tyska: båda tyska kurserna i väljaren", !q(".coursepick").hidden&&[...q("#course").options].map(o=>o.value).join()==="de4,de", [...q("#course").options].map(o=>o.value).join());
+  q('[data-only="0"]').click();
+  useLang("de4"); ok("tyska 4: kurs byts", q("#coursechip").textContent.includes("Tyska 4")&&L.storageKey==="glosor-de4-v1");
+  ok("tyska 4: egna framsteg", S.pass===1||!Object.keys(S.w).some(id=>LANGUAGES.de.base&&!byId[id]), S.pass);
+  ok("tyska 4: fler än 400 ord", WORDS.length>400, WORDS.length);
+  ok("tyska 4: grammatik", Object.keys(gramBank()).length>200, Object.keys(gramBank()).length);
+  ok("tyska 4: verbspel utan Konjunktiv I", verbGames().length===3&&!L.verbs.tenses["Konjunktiv I"]&&CONJ.length>100);
+  ok("tyska 4: lang-attribut", lang()==='lang="de"');
+  ok("tyska 4: inget förslag om Tyska 5 än", !q("#nextc"));
+  { const keep=S.w; S.w={}; WORDS.forEach(w=>S.w[w.id]={s:5,due:999}); renderStart();
+    ok("tyska 4: förslag att gå vidare", !!q("#nextc")&&q("#nextc").textContent.includes("Tyska 5")); S.w=keep; }
+  q("#nextc").click(); ok("tyska 4: går vidare till Tyska 5", L.code==="de"); useLang("de4");
+  renderStart(); q('[data-ex="gram"]').click(); ok("tyska 4: grammatikämnen", document.querySelectorAll("[data-pick]").length>=9, document.querySelectorAll("[data-pick]").length);
+  for(const t of ["reflexiv","komp","nebensatz","bisatz"]){ startGram(t); runDe(); }
+  ok("tyska 4: grammatik loggad", ["reflexiv","komp","nebensatz"].every(t=>S.gt[t]&&S.gt[t].n>0), JSON.stringify(S.gt));
+  { const n=S.log.length; startMix(); ok("tyska 4: blandad runda har grammatik", [sess.cur,...sess.queue].some(x=>x.k==="gram")); runDe();
+    ok("tyska 4: blandad runda klar", !sess&&S.log.length>n); }
  }catch(e){ ok("undantag", false, e.message); }
  ok("inga JavaScript-fel", !__err.length, __err.join(" ; "));
  document.body.insertAdjacentHTML("beforeend","<pre id=out>"+out.join("\n").replace(/</g,"&lt;")+"</pre>");
@@ -206,6 +227,15 @@ setTimeout(async()=>{ try{
   renderStart(); q('[data-gy="1"]').click(); ok("Gy25-namn", q("#coursechip").textContent.includes("fortsättning, nivå 1")); q('[data-gy="0"]').click();
   renderStart(); q('[data-only="1"]').click(); ok("bara en kurs döljer kursväljaren", q(".coursepick").hidden&&onlyCourse()==="fr"); q('[data-only="0"]').click();
   ok("visa alla kurser igen", !q(".coursepick").hidden&&!onlyCourse());
+  setView("fb"); ok("tyck till: flik", q("#tab-fb").getAttribute("aria-selected")==="true"&&!!q("#fbtext"));
+  q("#fbsend").click(); ok("tyck till: tomt meddelande skickas inte", !Object.keys(__remote).some(k=>k.startsWith("feedback/")));
+  q('[data-fbk="hard"]').click(); q("#fbtext").value="Jag vill kunna öva på musikord"; q("#fbtext").dispatchEvent(new Event("input")); q("#fbsend").click();
+  await new Promise(r=>setTimeout(r,50));
+  { const k=Object.keys(__remote).find(k=>k.startsWith("feedback/u_test-")), f=k&&__remote[k];
+    ok("tyck till: sparas i db", f&&f.kind==="hard"&&f.text.includes("musikord")&&f.uid==="u_test"&&f.status==="ny"&&f.course==="Franska 3", JSON.stringify(f));
+    f.status="backlogg"; f.reply="Musikord kommer i nästa version."; }
+  setView("fb"); await new Promise(r=>setTimeout(r,50));
+  ok("tyck till: status och svar visas", q("#fblist").textContent.includes("Tillagt i backloggen")&&q("#fblist").textContent.includes("Musikord kommer"), q("#fblist").textContent.slice(0,120));
   renderStart(); q('[data-goal="90"]').click(); ok("veckomål visas i dagens pass", q(".daily").textContent.includes("av 90 min"));
   { const w0=weekStart(Date.now()), w1=weekStart(w0-3*864e5), w2=weekStart(w1-3*864e5);
     BOARD.docs["u_other"]={nick:"Kompis",langs:{fr:{week:w1,min:42,q:100,days:3,streak:0,last:0,hist:{[w1]:42,[w2]:17}}},t:1}; }

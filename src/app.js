@@ -4,8 +4,19 @@ let L, SECTIONS, WORDS, byId, CONJ, CONJBY;
 const LANG_KEY = "glosor-sprak";
 const ONLY_KEY = "glosor-bara";   // om man bara vill se en kurs (sparas bara i den här webbläsaren)
 const onlyCourse=()=>{try{return localStorage.getItem(ONLY_KEY)||""}catch(e){return ""}};
-function setOnly(code){ try{ if(code) localStorage.setItem(ONLY_KEY,code); else localStorage.removeItem(ONLY_KEY); }catch(e){}
-  const p=document.querySelector(".coursepick"); if(p) p.hidden=!!code; }
+// "Bara tyska" visar bara kurserna i samma språk som den sparade kursen (Tyska 4 och Tyska 5), och döljer väljaren om bara en är kvar
+const sameLang=(a,b)=>!!LANGUAGES[a]&&!!LANGUAGES[b]&&LANGUAGES[a].name===LANGUAGES[b].name;
+function setOnly(code){ try{ if(code) localStorage.setItem(ONLY_KEY,code); else localStorage.removeItem(ONLY_KEY); }catch(e){} fillCourses(); }
+// Kursväljaren: byggda kurser går att välja, kommande kurser visas men går inte att välja än
+function fillCourses(){
+  const only=onlyCourse(), sel=document.querySelector("#course"); if(!sel) return;
+  const codes=Object.keys(LANGUAGES).filter(c=>!LANGUAGES[only]||sameLang(c,only))
+    .sort((a,b)=>(LANGUAGES[a].course||a).localeCompare(LANGUAGES[b].course||b,"sv"));
+  sel.innerHTML=codes.map(c=>`<option value="${c}">${esc(LANGUAGES[c].course||LANGUAGES[c].name)} · ${esc(LANGUAGES[c].level||"")}</option>`).join("")
+    +(LANGUAGES[only]?[]:UPCOMING).map(u=>`<option disabled>${esc(u.label)} · ${esc(u.level||"")} (kommer ${esc(u.note||"senare")})</option>`).join("");
+  if(L) sel.value=L.code;
+  const p=document.querySelector(".coursepick"); if(p) p.hidden=!!LANGUAGES[only]&&codes.length<2;
+}
 
 // Luckan i exempelmeningen: [hakparentes] i words.txt, annars ordet självt om det står i meningen
 function findGap(word, ex){
@@ -218,7 +229,7 @@ function shuffle(a){a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor
 const secName=id=>(SECTIONS.find(s=>s.id===id)||{}).name||"";
 const gtag=g=>g?`<span class="tag ${g[0]}">${L.genders[g]||g}</span>`:"";
 const accentKeys=list=>`<div class="accents">${list.split(" ").map(c=>`<button type="button" data-c="${c}">${c}</button>`).join("")}</div>`;
-const lang=()=>`lang="${L.code}"`;
+const lang=()=>`lang="${L.htmlLang||L.code}"`;
 
 function pickNew(){
   // Egna ord från texterna först, sedan kapitlet klassen läser (om boken finns), sedan resten i ordning
@@ -229,11 +240,19 @@ function pickNew(){
 }
 
 /* ---------- Startsida ---------- */
+// Förslag att gå vidare till nästa kurs (Tyska 4 → Tyska 5) när nästan alla ord är påbörjade och hälften sitter
+function nextPanel(learned,mastered){
+  const nx=LANGUAGES[L.nextCourse];
+  if(!nx||!WORDS.length||learned<WORDS.length*0.9||mastered<WORDS.length*0.5) return "";
+  return `<section class="panel"><h2>Redo för ${esc(nx.course)}?</h2>
+    <p class="plan">Du har övat på ${learned} av ${WORDS.length} ord i ${esc(L.course)}, och ${mastered} kan du redan. Du kan fortsätta repetera här och samtidigt börja på ${esc(nx.course)}. Framstegen sparas separat i varje kurs.</p>
+    <button class="btn" id="nextc">Gå till ${esc(nx.course)}</button></section>`;
+}
 function renderStart(){
   document.body.classList.remove("has-tray");
   sess=null;
   curView="ova";
-  $("#tabs").hidden=false; $("#tab-ova").setAttribute("aria-selected",true); $("#tab-stats").setAttribute("aria-selected",false); $("#tab-board").setAttribute("aria-selected",false);
+  $("#tabs").hidden=false; tabSel("ova");
   const newW=pickNew(), due=dueWords();
   const learned=WORDS.filter(isLearned).length, mastered=WORDS.filter(isMastered).length;
   const secOpt=s=>{const n=WORDS.filter(w=>w.sec===s.id&&!isLearned(w)).length;
@@ -248,6 +267,7 @@ function renderStart(){
   ${S.run?`<section class="panel"><h2>Fortsätt där du slutade</h2><p class="plan">${esc(runLabel(S.run))}</p>
     <div class="navrow"><button class="btn ghost" id="run-drop">Släng</button><button class="btn" id="run-go">Fortsätt</button></div></section>`:""}
   ${hasBook()?bookPanel():""}
+  ${nextPanel(learned,mastered)}
   <section class="panel">
     <div class="meta"><span class="label">Pass ${S.pass}</span></div>
     <div class="stats">
@@ -271,7 +291,7 @@ function renderStart(){
         <div class="seg" role="group" aria-label="Nya ord"><button data-lf="0" aria-pressed="${!S.listenFirst}">Visa direkt</button><button data-lf="1" aria-pressed="${!!S.listenFirst}">Lyssna först</button></div></div>
     </div>
     ${Object.keys(LANGUAGES).length>1?`<div class="field"><span class="label">Kurser</span>
-      <div class="seg" role="group" aria-label="Kurser"><button data-only="0" aria-pressed="${!onlyCourse()}">Visa alla</button><button data-only="1" aria-pressed="${onlyCourse()===L.code}">Bara ${esc(L.course||L.name)}</button></div></div>`:""}
+      <div class="seg" role="group" aria-label="Kurser"><button data-only="0" aria-pressed="${!onlyCourse()}">Visa alla</button><button data-only="1" aria-pressed="${sameLang(onlyCourse(),L.code)}">Bara ${esc(L.name.toLowerCase())}</button></div></div>`:""}
     <div class="field"><span class="label">Veckomål</span>
       <div class="seg" role="group" aria-label="Veckomål">${[0,60,90,120,150].map(n=>`<button data-goal="${n}" aria-pressed="${(S.goal||0)===n}">${n?n+" min":"Inget"}</button>`).join("")}</div></div>
     ${L.courseGy25?`<div class="field"><span class="label">Läroplan</span>
@@ -288,6 +308,7 @@ function renderStart(){
   $("#src").value=S.src; if(!$("#src").selectedOptions[0]||$("#src").selectedOptions[0].disabled){S.src="auto";$("#src").value="auto"}
   $("#src").onchange=e=>{S.src=e.target.value;save();renderStart()};
   wireBookPanel();
+  if($("#nextc")) $("#nextc").onclick=()=>useLang(L.nextCourse);
   app.querySelectorAll("[data-n]").forEach(b=>b.onclick=()=>{S.newCount=+b.dataset.n;save();renderStart()});
   app.querySelectorAll("[data-m]").forEach(b=>b.onclick=()=>{S.mode=b.dataset.m;save();renderStart()});
   app.querySelectorAll("[data-slow]").forEach(b=>b.onclick=()=>{S.slow=b.dataset.slow==="1";save();renderStart()});
@@ -378,7 +399,7 @@ async function renderBoard(){
       // Förra veckans minuter: från förra veckans rad om personen inte har övat den här veckan än, annars från prev
       if(x.week===pw) r.prev+=x.min||0; else if(x.prev&&x.prev.week===pw) r.prev+=x.prev.min||0;
       if(x.last&&streakAlive(x.last)) r.streak=Math.max(r.streak,x.streak||0);
-      r.langs.push((LANGUAGES[k]||{}).name||k);
+      r.langs.push((LANGUAGES[k]||{}).course||(LANGUAGES[k]||{}).name||k);
     });
     return r;
   }).sort((a,b)=>b.min-a.min||b.q-a.q||b.streak-a.streak);
@@ -821,18 +842,18 @@ $("#search").addEventListener("input",renderList);
 $("#list").addEventListener("toggle",renderList);
 
 /* ---------- Vyer ---------- */
+const tabSel=v=>["ova","stats","board","fb"].forEach(t=>$("#tab-"+t).setAttribute("aria-selected",t===v));
 function setView(v){
-  curView=["stats","board"].includes(v)?v:"ova";
+  curView=["stats","board","fb"].includes(v)?v:"ova";
   $("#tabs").hidden=false;
-  $("#tab-ova").setAttribute("aria-selected",curView==="ova");
-  $("#tab-stats").setAttribute("aria-selected",curView==="stats");
-  $("#tab-board").setAttribute("aria-selected",curView==="board");
-  if(curView==="stats") renderStats(); else if(curView==="board") renderBoard(); else renderStart();
+  tabSel(curView);
+  if(curView==="stats") renderStats(); else if(curView==="board") renderBoard(); else if(curView==="fb") renderTyckTill(); else renderStart();
   window.scrollTo(0,0);
 }
 $("#tab-ova").onclick=()=>setView("ova");
 $("#tab-stats").onclick=()=>setView("stats");
 $("#tab-board").onclick=()=>setView("board");
+$("#tab-fb").onclick=()=>setView("fb");
 
 /* ---------- Statistik ---------- */
 const pct=(r,n)=>n?Math.round(100*r/n):null;

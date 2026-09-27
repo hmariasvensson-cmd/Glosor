@@ -1,0 +1,2420 @@
+[
+ {
+  "id": "praep-001",
+  "topic": "praep",
+  "rule": "wechsel-dat",
+  "q": "Der Käse liegt [im] Kühlschrank.",
+  "alt": [
+   "in den",
+   "ins",
+   "in die"
+  ],
+  "why": "Var ligger osten? Befintlighet (liegen) ger dativ: in dem blir im. Ins och in den är ackusativ och används vid riktning.",
+  "sv": "Osten ligger i kylskåpet.",
+  "meta": {
+   "prep": "in",
+   "case": "dat",
+   "g": "m",
+   "art": "def"
+  }
+ },
+ {
+  "id": "praep-002",
+  "topic": "praep",
+  "rule": "wechsel-dat",
+  "q": "Wir wohnen in [einer] kleinen Wohnung im Zentrum.",
+  "alt": [
+   "eine",
+   "einem",
+   "einen"
+  ],
+  "why": "Wohnen anger plats, så in tar dativ. Die Wohnung är femininum: dativ blir einer.",
+  "sv": "Vi bor i en liten lägenhet i centrum.",
+  "meta": {
+   "prep": "in",
+   "case": "dat",
+   "g": "f",
+   "art": "indef"
+  }
+ },
+ {
+  "id": "praep-003",
+  "topic": "praep",
+  "rule": "wechsel-dat",
+  "q": "Das Bild hängt über [dem] Sofa.",
+  "alt": [
+   "das",
+   "den",
+   "der"
+  ],
+  "why": "Hängt (utan objekt) anger var något sitter, alltså dativ. Das Sofa är neutrum: dativ blir dem.",
+  "sv": "Tavlan hänger ovanför soffan.",
+  "meta": {
+   "prep": "über",
+   "case": "dat",
+   "g": "n",
+   "art": "def"
+  }
+ },
+ {
+  "id": "praep-004",
+  "topic": "praep",
+  "rule": "wechsel-dat",
+  "q": "Mein Hund schläft am liebsten unter [dem] Tisch.",
+  "alt": [
+   "den",
+   "die",
+   "das"
+  ],
+  "why": "Var sover hunden? Plats ger dativ. Der Tisch är maskulinum: dativ blir dem, inte den (ackusativ).",
+  "sv": "Min hund sover helst under bordet.",
+  "meta": {
+   "prep": "unter",
+   "case": "dat",
+   "g": "m",
+   "art": "def"
+  }
+ },
+ {
+  "id": "praep-005",
+  "topic": "praep",
+  "rule": "wechsel-dat",
+  "q": "Wir treffen uns um acht [am] Bahnhof.",
+  "alt": [
+   "an den",
+   "ans",
+   "an die"
+  ],
+  "why": "Var träffas ni? Plats ger dativ: an dem blir am. Der Bahnhof är maskulinum, och an den skulle betyda riktning.",
+  "sv": "Vi träffas vid stationen klockan åtta.",
+  "meta": {
+   "prep": "an",
+   "case": "dat",
+   "g": "m",
+   "art": "def"
+  }
+ },
+ {
+  "id": "praep-006",
+  "topic": "praep",
+  "rule": "wechsel-dat",
+  "q": "Meine Schuhe stehen neben [der] Tür.",
+  "alt": [
+   "die",
+   "den",
+   "dem"
+  ],
+  "why": "Stehen anger plats, så neben tar dativ. Die Tür är femininum: dativ blir der.",
+  "sv": "Mina skor står bredvid dörren.",
+  "meta": {
+   "prep": "neben",
+   "case": "dat",
+   "g": "f",
+   "art": "def"
+  }
+ },
+ {
+  "id": "praep-007",
+  "topic": "praep",
+  "rule": "wechsel-dat",
+  "q": "Im Sommer liegen wir oft [am] Strand.",
+  "alt": [
+   "an den",
+   "ans",
+   "an die"
+  ],
+  "why": "Liegen anger plats, alltså dativ: an dem blir am. An den (ackusativ) används vid riktning, t.ex. an den Strand fahren.",
+  "sv": "På sommaren ligger vi ofta på stranden.",
+  "meta": {
+   "prep": "an",
+   "case": "dat",
+   "g": "m",
+   "art": "def"
+  }
+ },
+ {
+  "id": "praep-008",
+  "topic": "praep",
+  "rule": "wechsel-dat",
+  "q": "Vor [dem] Kino warten schon meine Freunde.",
+  "alt": [
+   "das",
+   "den",
+   "die"
+  ],
+  "why": "Var väntar kompisarna? Plats ger dativ. Das Kino är neutrum: dativ blir dem.",
+  "sv": "Utanför bion väntar mina kompisar redan.",
+  "meta": {
+   "prep": "vor",
+   "case": "dat",
+   "g": "n",
+   "art": "def"
+  }
+ },
+ {
+  "id": "praep-009",
+  "topic": "praep",
+  "rule": "wechsel-dat",
+  "q": "Zwischen [den] Häusern gibt es einen kleinen Spielplatz.",
+  "alt": [
+   "die",
+   "der",
+   "dem"
+  ],
+  "why": "Var finns lekplatsen? Plats ger dativ. I plural blir dativ den, och substantivet får -n: Häusern.",
+  "sv": "Mellan husen finns en liten lekplats.",
+  "meta": {
+   "prep": "zwischen",
+   "case": "dat",
+   "g": "pl",
+   "art": "def"
+  }
+ },
+ {
+  "id": "praep-010",
+  "topic": "praep",
+  "rule": "wechsel-dat",
+  "q": "Mein Handy liegt noch in [meiner] Tasche.",
+  "alt": [
+   "meine",
+   "meinem",
+   "meinen"
+  ],
+  "why": "Liegen anger plats, så in tar dativ. Die Tasche är femininum: meine blir meiner i dativ.",
+  "sv": "Min mobil ligger fortfarande i min väska.",
+  "meta": {
+   "prep": "in",
+   "case": "dat",
+   "g": "f",
+   "art": "poss",
+   "stem": "mein"
+  }
+ },
+ {
+  "id": "praep-011",
+  "topic": "praep",
+  "rule": "wechsel-dat",
+  "q": "Im Konzert sitzt er hinter [einem] sehr großen Mann.",
+  "alt": [
+   "einen",
+   "einer",
+   "ein"
+  ],
+  "why": "Sitzen anger plats, så hinter tar dativ. Der Mann är maskulinum: ein blir einem. Einen är ackusativ.",
+  "sv": "På konserten sitter han bakom en väldigt lång man.",
+  "meta": {
+   "prep": "hinter",
+   "case": "dat",
+   "g": "m",
+   "art": "indef"
+  }
+ },
+ {
+  "id": "praep-012",
+  "topic": "praep",
+  "rule": "wechsel-akk",
+  "q": "Stell die Butter bitte in [den] Kühlschrank.",
+  "alt": [
+   "dem",
+   "der",
+   "das"
+  ],
+  "why": "Vart ska smöret? Riktning (stellen) ger ackusativ. Der Kühlschrank är maskulinum: ackusativ blir den.",
+  "sv": "Ställ in smöret i kylskåpet, tack.",
+  "meta": {
+   "prep": "in",
+   "case": "akk",
+   "g": "m",
+   "art": "def"
+  }
+ },
+ {
+  "id": "praep-013",
+  "topic": "praep",
+  "rule": "wechsel-akk",
+  "q": "Am Samstag gehen wir [ins] Kino.",
+  "alt": [
+   "im",
+   "in den",
+   "in die"
+  ],
+  "why": "Vart går ni? Riktning ger ackusativ: in das blir ins. Im är dativ och betyder att man redan är där.",
+  "sv": "På lördag går vi på bio.",
+  "meta": {
+   "prep": "in",
+   "case": "akk",
+   "g": "n",
+   "art": "def"
+  }
+ },
+ {
+  "id": "praep-014",
+  "topic": "praep",
+  "rule": "wechsel-akk",
+  "q": "Wir hängen die Fotos an [die] Wand über dem Bett.",
+  "alt": [
+   "der",
+   "den",
+   "dem"
+  ],
+  "why": "Hängen med objekt (die Fotos) är en rörelse, vart?, alltså ackusativ. Die Wand är femininum: ackusativ blir die.",
+  "sv": "Vi hänger upp fotona på väggen ovanför sängen.",
+  "meta": {
+   "prep": "an",
+   "case": "akk",
+   "g": "f",
+   "art": "def"
+  }
+ },
+ {
+  "id": "praep-015",
+  "topic": "praep",
+  "rule": "wechsel-akk",
+  "q": "Leg deine Jacke bitte auf [den] Stuhl.",
+  "alt": [
+   "dem",
+   "der",
+   "das"
+  ],
+  "why": "Legen är en rörelse (vart?), så auf tar ackusativ. Der Stuhl är maskulinum: den.",
+  "sv": "Lägg din jacka på stolen, tack.",
+  "meta": {
+   "prep": "auf",
+   "case": "akk",
+   "g": "m",
+   "art": "def"
+  }
+ },
+ {
+  "id": "praep-016",
+  "topic": "praep",
+  "rule": "wechsel-akk",
+  "q": "Im Sommer fahren wir mit dem Zelt an [den] Bodensee.",
+  "alt": [
+   "dem",
+   "die",
+   "das"
+  ],
+  "why": "Vart åker ni? Riktning ger ackusativ. Der Bodensee är maskulinum: den. Dem är dativ.",
+  "sv": "På sommaren åker vi till Bodensjön med tält.",
+  "meta": {
+   "prep": "an",
+   "case": "akk",
+   "g": "m",
+   "art": "def"
+  }
+ },
+ {
+  "id": "praep-017",
+  "topic": "praep",
+  "rule": "wechsel-akk",
+  "q": "Ich gehe kurz in [die] Küche und hole etwas zu trinken.",
+  "alt": [
+   "der",
+   "den",
+   "dem"
+  ],
+  "why": "Gehen in betyder att man rör sig dit (vart?), alltså ackusativ. Die Küche är femininum: die.",
+  "sv": "Jag går ut i köket en stund och hämtar något att dricka.",
+  "meta": {
+   "prep": "in",
+   "case": "akk",
+   "g": "f",
+   "art": "def"
+  }
+ },
+ {
+  "id": "praep-018",
+  "topic": "praep",
+  "rule": "wechsel-akk",
+  "q": "Setz dich bitte neben [deine] Schwester.",
+  "alt": [
+   "deiner",
+   "deinen",
+   "deinem"
+  ],
+  "why": "Sich setzen är en rörelse (vart?), så neben tar ackusativ. Die Schwester är femininum: deine.",
+  "sv": "Sätt dig bredvid din syster, tack.",
+  "meta": {
+   "prep": "neben",
+   "case": "akk",
+   "g": "f",
+   "art": "poss",
+   "stem": "dein"
+  }
+ },
+ {
+  "id": "praep-019",
+  "topic": "praep",
+  "rule": "wechsel-akk",
+  "q": "Wir stellen den Weihnachtsbaum neben [das] Fenster.",
+  "alt": [
+   "dem",
+   "den",
+   "der"
+  ],
+  "why": "Stellen är en rörelse (vart?), alltså ackusativ. Das Fenster är neutrum: das. Dem är dativ.",
+  "sv": "Vi ställer julgranen bredvid fönstret.",
+  "meta": {
+   "prep": "neben",
+   "case": "akk",
+   "g": "n",
+   "art": "def"
+  }
+ },
+ {
+  "id": "praep-020",
+  "topic": "praep",
+  "rule": "wechsel-akk",
+  "q": "Am Wochenende fahren wir in [die] Berge.",
+  "alt": [
+   "den",
+   "der",
+   "dem"
+  ],
+  "why": "Vart åker ni? Riktning ger ackusativ. I plural är ackusativ die. Den skulle vara dativ plural (in den Bergen).",
+  "sv": "I helgen åker vi till bergen.",
+  "meta": {
+   "prep": "in",
+   "case": "akk",
+   "g": "pl",
+   "art": "def"
+  }
+ },
+ {
+  "id": "praep-021",
+  "topic": "praep",
+  "rule": "wechsel-akk",
+  "q": "Ich lege das Geschenk unter [den] Weihnachtsbaum.",
+  "alt": [
+   "dem",
+   "der",
+   "das"
+  ],
+  "why": "Legen är en rörelse (vart?), så unter tar ackusativ. Der Weihnachtsbaum är maskulinum: den.",
+  "sv": "Jag lägger presenten under julgranen.",
+  "meta": {
+   "prep": "unter",
+   "case": "akk",
+   "g": "m",
+   "art": "def"
+  }
+ },
+ {
+  "id": "praep-022",
+  "topic": "praep",
+  "rule": "wechsel-akk",
+  "q": "Kannst du die Blumen auf [den] Tisch stellen?",
+  "alt": [
+   "dem",
+   "der",
+   "das"
+  ],
+  "why": "Stellen är en rörelse (vart?), alltså ackusativ. Der Tisch är maskulinum: den.",
+  "sv": "Kan du ställa blommorna på bordet?",
+  "meta": {
+   "prep": "auf",
+   "case": "akk",
+   "g": "m",
+   "art": "def"
+  }
+ },
+ {
+  "id": "praep-023",
+  "topic": "praep",
+  "rule": "dat-prep",
+  "q": "Ich fahre jeden Tag mit [dem] Bus zur Schule.",
+  "alt": [
+   "den",
+   "der",
+   "das"
+  ],
+  "why": "Mit tar alltid dativ. Der Bus är maskulinum: dativ blir dem.",
+  "sv": "Jag åker buss till skolan varje dag.",
+  "meta": {
+   "prep": "mit",
+   "case": "dat",
+   "g": "m",
+   "art": "def"
+  }
+ },
+ {
+  "id": "praep-024",
+  "topic": "praep",
+  "rule": "dat-prep",
+  "q": "Nach [der] Schule spiele ich Fußball.",
+  "alt": [
+   "die",
+   "den",
+   "dem"
+  ],
+  "why": "Nach tar alltid dativ. Die Schule är femininum: dativ blir der.",
+  "sv": "Efter skolan spelar jag fotboll.",
+  "meta": {
+   "prep": "nach",
+   "case": "dat",
+   "g": "f",
+   "art": "def"
+  }
+ },
+ {
+  "id": "praep-025",
+  "topic": "praep",
+  "rule": "dat-prep",
+  "q": "Heute Abend essen wir bei [meiner] Oma.",
+  "alt": [
+   "meine",
+   "meinem",
+   "meinen"
+  ],
+  "why": "Bei tar alltid dativ. Die Oma är femininum: meine blir meiner.",
+  "sv": "I kväll äter vi hos min mormor.",
+  "meta": {
+   "prep": "bei",
+   "case": "dat",
+   "g": "f",
+   "art": "poss",
+   "stem": "mein"
+  }
+ },
+ {
+  "id": "praep-026",
+  "topic": "praep",
+  "rule": "dat-prep",
+  "q": "Ich gehe morgen [zum] Arzt.",
+  "alt": [
+   "zur",
+   "zu den",
+   "zu die"
+  ],
+  "why": "Zu tar alltid dativ. Der Arzt är maskulinum: zu dem blir zum. Zur (zu der) är för femininum.",
+  "sv": "Jag går till läkaren i morgon.",
+  "meta": {
+   "prep": "zu",
+   "case": "dat",
+   "g": "m",
+   "art": "def"
+  }
+ },
+ {
+  "id": "praep-027",
+  "topic": "praep",
+  "rule": "dat-prep",
+  "q": "Entschuldigung, wie komme ich [zur] Post?",
+  "alt": [
+   "zum",
+   "zu die",
+   "zu das"
+  ],
+  "why": "Zu tar alltid dativ. Die Post är femininum: zu der blir zur. Zum används för maskulinum och neutrum.",
+  "sv": "Ursäkta, hur kommer jag till posten?",
+  "meta": {
+   "prep": "zu",
+   "case": "dat",
+   "g": "f",
+   "art": "def"
+  }
+ },
+ {
+  "id": "praep-028",
+  "topic": "praep",
+  "rule": "dat-prep",
+  "q": "Seit [einem] Jahr spiele ich Gitarre.",
+  "alt": [
+   "ein",
+   "einen",
+   "einer"
+  ],
+  "why": "Seit tar alltid dativ. Das Jahr är neutrum: ein blir einem.",
+  "sv": "Jag har spelat gitarr i ett år.",
+  "meta": {
+   "prep": "seit",
+   "case": "dat",
+   "g": "n",
+   "art": "indef"
+  }
+ },
+ {
+  "id": "praep-029",
+  "topic": "praep",
+  "rule": "dat-prep",
+  "q": "Ich habe einen Brief von [meinen] Großeltern bekommen.",
+  "alt": [
+   "meine",
+   "meiner",
+   "meinem"
+  ],
+  "why": "Von tar alltid dativ. I plural blir meine till meinen i dativ.",
+  "sv": "Jag har fått ett brev från mina farföräldrar.",
+  "meta": {
+   "prep": "von",
+   "case": "dat",
+   "g": "pl",
+   "art": "poss",
+   "stem": "mein"
+  }
+ },
+ {
+  "id": "praep-030",
+  "topic": "praep",
+  "rule": "dat-prep",
+  "q": "Er kommt gerade aus [dem] Supermarkt.",
+  "alt": [
+   "den",
+   "der",
+   "das"
+  ],
+  "why": "Aus tar alltid dativ. Der Supermarkt är maskulinum: dativ blir dem.",
+  "sv": "Han kommer precis från mataffären.",
+  "meta": {
+   "prep": "aus",
+   "case": "dat",
+   "g": "m",
+   "art": "def"
+  }
+ },
+ {
+  "id": "praep-031",
+  "topic": "praep",
+  "rule": "dat-prep",
+  "q": "Ich habe [beim] Bäcker frische Brötchen gekauft.",
+  "alt": [
+   "bei den",
+   "bei die",
+   "bei der"
+  ],
+  "why": "Bei tar alltid dativ. Der Bäcker är maskulinum: bei dem blir beim. Bei der vore femininum.",
+  "sv": "Jag köpte färska frallor hos bagaren.",
+  "meta": {
+   "prep": "bei",
+   "case": "dat",
+   "g": "m",
+   "art": "def"
+  }
+ },
+ {
+  "id": "praep-032",
+  "topic": "praep",
+  "rule": "dat-prep",
+  "q": "Ich telefoniere jeden Sonntag mit [meiner] Schwester.",
+  "alt": [
+   "meine",
+   "meinem",
+   "meinen"
+  ],
+  "why": "Mit tar alltid dativ. Die Schwester är femininum: meine blir meiner.",
+  "sv": "Jag pratar i telefon med min syster varje söndag.",
+  "meta": {
+   "prep": "mit",
+   "case": "dat",
+   "g": "f",
+   "art": "poss",
+   "stem": "mein"
+  }
+ },
+ {
+  "id": "praep-033",
+  "topic": "praep",
+  "rule": "akk-prep",
+  "q": "Ich suche noch ein Geschenk für [meinen] Opa.",
+  "alt": [
+   "meinem",
+   "mein",
+   "meiner"
+  ],
+  "why": "Für tar alltid ackusativ. Der Opa är maskulinum: mein blir meinen.",
+  "sv": "Jag letar fortfarande efter en present till min morfar.",
+  "meta": {
+   "prep": "für",
+   "case": "akk",
+   "g": "m",
+   "art": "poss",
+   "stem": "mein"
+  }
+ },
+ {
+  "id": "praep-034",
+  "topic": "praep",
+  "rule": "akk-prep",
+  "q": "Wir gehen nie ohne [einen] Regenschirm aus dem Haus.",
+  "alt": [
+   "einem",
+   "ein",
+   "einer"
+  ],
+  "why": "Ohne tar alltid ackusativ. Der Regenschirm är maskulinum: ein blir einen.",
+  "sv": "Vi går aldrig hemifrån utan paraply.",
+  "meta": {
+   "prep": "ohne",
+   "case": "akk",
+   "g": "m",
+   "art": "indef"
+  }
+ },
+ {
+  "id": "praep-035",
+  "topic": "praep",
+  "rule": "akk-prep",
+  "q": "Wir machen einen Spaziergang durch [den] Wald.",
+  "alt": [
+   "dem",
+   "der",
+   "das"
+  ],
+  "why": "Durch tar alltid ackusativ. Der Wald är maskulinum: den. Dem är dativ.",
+  "sv": "Vi tar en promenad genom skogen.",
+  "meta": {
+   "prep": "durch",
+   "case": "akk",
+   "g": "m",
+   "art": "def"
+  }
+ },
+ {
+  "id": "praep-036",
+  "topic": "praep",
+  "rule": "akk-prep",
+  "q": "Morgen spielen wir gegen [eine] Mannschaft aus Hamburg.",
+  "alt": [
+   "einer",
+   "einen",
+   "einem"
+  ],
+  "why": "Gegen tar alltid ackusativ. Die Mannschaft är femininum: eine. Einer är dativ.",
+  "sv": "I morgon spelar vi mot ett lag från Hamburg.",
+  "meta": {
+   "prep": "gegen",
+   "case": "akk",
+   "g": "f",
+   "art": "indef"
+  }
+ },
+ {
+  "id": "praep-037",
+  "topic": "praep",
+  "rule": "akk-prep",
+  "q": "Am Wochenende fahren wir mit dem Rad um [den] See.",
+  "alt": [
+   "dem",
+   "der",
+   "das"
+  ],
+  "why": "Um tar alltid ackusativ. Der See (sjön) är maskulinum: den.",
+  "sv": "I helgen cyklar vi runt sjön.",
+  "meta": {
+   "prep": "um",
+   "case": "akk",
+   "g": "m",
+   "art": "def"
+  }
+ },
+ {
+  "id": "praep-038",
+  "topic": "praep",
+  "rule": "akk-prep",
+  "q": "Danke für [das] Essen, es war sehr lecker!",
+  "alt": [
+   "dem",
+   "den",
+   "die"
+  ],
+  "why": "Für tar alltid ackusativ. Das Essen är neutrum, och das ser likadant ut i nominativ och ackusativ.",
+  "sv": "Tack för maten, den var jättegod!",
+  "meta": {
+   "prep": "für",
+   "case": "akk",
+   "g": "n",
+   "art": "def"
+  }
+ },
+ {
+  "id": "praep-039",
+  "topic": "praep",
+  "rule": "akk-prep",
+  "q": "Ich brauche ein neues Kleid für [die] Hochzeit meiner Cousine.",
+  "alt": [
+   "der",
+   "den",
+   "dem"
+  ],
+  "why": "Für tar alltid ackusativ. Die Hochzeit är femininum: die. Der är dativ.",
+  "sv": "Jag behöver en ny klänning till min kusins bröllop.",
+  "meta": {
+   "prep": "für",
+   "case": "akk",
+   "g": "f",
+   "art": "def"
+  }
+ },
+ {
+  "id": "praep-040",
+  "topic": "praep",
+  "rule": "akk-prep",
+  "q": "Der Bus fährt durch [die] ganze Stadt.",
+  "alt": [
+   "der",
+   "den",
+   "das"
+  ],
+  "why": "Durch tar alltid ackusativ. Die Stadt är femininum: die.",
+  "sv": "Bussen kör genom hela staden.",
+  "meta": {
+   "prep": "durch",
+   "case": "akk",
+   "g": "f",
+   "art": "def"
+  }
+ },
+ {
+  "id": "perfekt-001",
+  "topic": "perfekt",
+  "rule": "pf-sein",
+  "q": "Am Sonntag [bin] ich erst um elf aufgestanden.",
+  "alt": [
+   "habe",
+   "hat",
+   "ist"
+  ],
+  "why": "Aufstehen är en förflyttning (från liggande till stående), så perfekt bildas med sein. Ich → bin.",
+  "sv": "I söndags gick jag inte upp förrän klockan elva."
+ },
+ {
+  "id": "perfekt-002",
+  "topic": "perfekt",
+  "rule": "pf-sein",
+  "q": "Wann [seid] ihr gestern nach Hause gekommen?",
+  "alt": [
+   "habt",
+   "sind",
+   "ist"
+  ],
+  "why": "Kommen är en rörelse från en plats till en annan, alltså sein. Ihr → seid.",
+  "sv": "När kom ni hem i går?"
+ },
+ {
+  "id": "perfekt-003",
+  "topic": "perfekt",
+  "rule": "pf-sein",
+  "q": "Mein Cousin [ist] im Mai nach Berlin gezogen.",
+  "alt": [
+   "hat",
+   "sind",
+   "bist"
+  ],
+  "why": "Ziehen i betydelsen flytta är en förflyttning, så det blir sein. Mein Cousin = er → ist.",
+  "sv": "Min kusin flyttade till Berlin i maj."
+ },
+ {
+  "id": "perfekt-004",
+  "topic": "perfekt",
+  "rule": "pf-sein",
+  "q": "In den Ferien [sind] wir mit dem Zug durch Italien gefahren.",
+  "alt": [
+   "haben",
+   "seid",
+   "hat"
+  ],
+  "why": "Fahren utan objekt är en förflyttning, alltså sein. Wir → sind.",
+  "sv": "På lovet åkte vi tåg genom Italien."
+ },
+ {
+  "id": "perfekt-005",
+  "topic": "perfekt",
+  "rule": "pf-sein",
+  "q": "Der Film war so langweilig, dass ich eingeschlafen [bin].",
+  "alt": [
+   "habe",
+   "hat",
+   "ist"
+  ],
+  "why": "Einschlafen är en förändring (från vaken till sovande), så det tar sein. Ich → bin, sist i bisatsen.",
+  "sv": "Filmen var så tråkig att jag somnade."
+ },
+ {
+  "id": "perfekt-006",
+  "topic": "perfekt",
+  "rule": "pf-sein",
+  "q": "[Bist] du schon einmal mit dem Flugzeug geflogen?",
+  "alt": [
+   "Hast",
+   "Ist",
+   "Seid"
+  ],
+  "why": "Fliegen är en förflyttning, alltså sein. Du → bist.",
+  "sv": "Har du någon gång flugit med flygplan?"
+ },
+ {
+  "id": "perfekt-007",
+  "topic": "perfekt",
+  "rule": "pf-sein",
+  "q": "Wir [sind] am Sonntag fünfzehn Kilometer gewandert.",
+  "alt": [
+   "haben",
+   "seid",
+   "hat"
+  ],
+  "why": "Wandern är en förflyttning, så perfekt bildas med sein. Wir → sind.",
+  "sv": "Vi vandrade femton kilometer i söndags."
+ },
+ {
+  "id": "perfekt-008",
+  "topic": "perfekt",
+  "rule": "pf-sein",
+  "q": "Was [ist] mit deinem Fahrrad passiert?",
+  "alt": [
+   "hat",
+   "sind",
+   "habe"
+  ],
+  "why": "Passieren (hända) tar alltid sein. Subjektet was är tredje person singular: ist.",
+  "sv": "Vad har hänt med din cykel?"
+ },
+ {
+  "id": "perfekt-009",
+  "topic": "perfekt",
+  "rule": "pf-sein",
+  "q": "Leider [ist] unser Zug zu spät angekommen.",
+  "alt": [
+   "hat",
+   "sind",
+   "haben"
+  ],
+  "why": "Ankommen är en förflyttning, alltså sein. Unser Zug = er → ist.",
+  "sv": "Tyvärr kom vårt tåg fram för sent."
+ },
+ {
+  "id": "perfekt-010",
+  "topic": "perfekt",
+  "rule": "pf-sein",
+  "q": "Wegen der Erkältung [bin] ich drei Tage im Bett geblieben.",
+  "alt": [
+   "habe",
+   "hat",
+   "ist"
+  ],
+  "why": "Bleiben tar sein, fast det inte är någon rörelse. Det är ett undantag att lära sig. Ich → bin.",
+  "sv": "På grund av förkylningen stannade jag i sängen i tre dagar."
+ },
+ {
+  "id": "perfekt-011",
+  "topic": "perfekt",
+  "rule": "pf-sein",
+  "q": "Mein kleiner Bruder [ist] im letzten Jahr viel gewachsen.",
+  "alt": [
+   "hat",
+   "sind",
+   "habe"
+  ],
+  "why": "Wachsen (växa) är en förändring, så det tar sein. Mein Bruder = er → ist.",
+  "sv": "Min lillebror har vuxit mycket det senaste året."
+ },
+ {
+  "id": "perfekt-012",
+  "topic": "perfekt",
+  "rule": "pf-sein",
+  "q": "Wann [bist] du heute Morgen aufgewacht?",
+  "alt": [
+   "hast",
+   "ist",
+   "bin"
+  ],
+  "why": "Aufwachen är en förändring (från sovande till vaken), alltså sein. Du → bist.",
+  "sv": "När vaknade du i morse?"
+ },
+ {
+  "id": "perfekt-013",
+  "topic": "perfekt",
+  "rule": "pf-sein",
+  "q": "Beim Fußballspiel [ist] Tom hingefallen.",
+  "alt": [
+   "hat",
+   "sind",
+   "habe"
+  ],
+  "why": "Hinfallen (ramla) är en förflyttning, så det tar sein. Tom = er → ist.",
+  "sv": "Tom ramlade under fotbollsmatchen."
+ },
+ {
+  "id": "perfekt-014",
+  "topic": "perfekt",
+  "rule": "pf-sein",
+  "q": "Lena [ist] krank geworden, deshalb kommt sie heute nicht.",
+  "alt": [
+   "hat",
+   "sind",
+   "habe"
+  ],
+  "why": "Werden (bli) är en förändring och tar sein. Lena = sie → ist.",
+  "sv": "Lena har blivit sjuk, därför kommer hon inte i dag."
+ },
+ {
+  "id": "perfekt-015",
+  "topic": "perfekt",
+  "rule": "pf-sein",
+  "q": "Ihr [seid] aber früh losgegangen!",
+  "alt": [
+   "habt",
+   "sind",
+   "seit"
+  ],
+  "why": "Losgehen (gå iväg) är en förflyttning, alltså sein. Ihr → seid. Seit (sedan) är en preposition.",
+  "sv": "Ni gick ju iväg tidigt!"
+ },
+ {
+  "id": "perfekt-016",
+  "topic": "perfekt",
+  "rule": "pf-haben",
+  "q": "Ich [habe] zum Frühstück zwei Brötchen gegessen.",
+  "alt": [
+   "bin",
+   "hat",
+   "hast"
+  ],
+  "why": "Essen har ett objekt och är ingen förflyttning, så perfekt bildas med haben. Ich → habe.",
+  "sv": "Jag åt två frallor till frukost."
+ },
+ {
+  "id": "perfekt-017",
+  "topic": "perfekt",
+  "rule": "pf-haben",
+  "q": "Wir [haben] gestern Abend einen tollen Film gesehen.",
+  "alt": [
+   "sind",
+   "hat",
+   "habt"
+  ],
+  "why": "Sehen tar haben, som de flesta verb. Wir → haben.",
+  "sv": "Vi såg en jättebra film i går kväll."
+ },
+ {
+  "id": "perfekt-018",
+  "topic": "perfekt",
+  "rule": "pf-haben",
+  "q": "[Hast] du heute schon mit Oma telefoniert?",
+  "alt": [
+   "Bist",
+   "Hat",
+   "Habe"
+  ],
+  "why": "Telefonieren är ingen förflyttning, så det tar haben. Du → hast.",
+  "sv": "Har du pratat i telefon med mormor i dag?"
+ },
+ {
+  "id": "perfekt-019",
+  "topic": "perfekt",
+  "rule": "pf-haben",
+  "q": "Meine Mutter [hat] uns mit dem Auto zum Flughafen gefahren.",
+  "alt": [
+   "ist",
+   "haben",
+   "sind"
+  ],
+  "why": "Fahren med objekt (uns) betyder skjutsa och tar haben. Meine Mutter = sie → hat.",
+  "sv": "Min mamma skjutsade oss till flygplatsen med bilen."
+ },
+ {
+  "id": "perfekt-020",
+  "topic": "perfekt",
+  "rule": "pf-haben",
+  "q": "Die Kinder [haben] im Schnee einen Schneemann gebaut.",
+  "alt": [
+   "sind",
+   "hat",
+   "habt"
+  ],
+  "why": "Bauen har ett objekt och tar haben. Die Kinder = sie (plural) → haben.",
+  "sv": "Barnen byggde en snögubbe i snön."
+ },
+ {
+  "id": "perfekt-021",
+  "topic": "perfekt",
+  "rule": "pf-haben",
+  "q": "Ich [habe] gestern bis zehn Uhr geschlafen.",
+  "alt": [
+   "bin",
+   "hat",
+   "hast"
+  ],
+  "why": "Schlafen är ett tillstånd, ingen förändring, så det tar haben (jämför einschlafen, som tar sein). Ich → habe.",
+  "sv": "Jag sov till klockan tio i går."
+ },
+ {
+  "id": "perfekt-022",
+  "topic": "perfekt",
+  "rule": "pf-haben",
+  "q": "Was [hast] du zum Geburtstag bekommen?",
+  "alt": [
+   "bist",
+   "hat",
+   "habe"
+  ],
+  "why": "Bekommen (få) tar haben. Du → hast.",
+  "sv": "Vad fick du i födelsedagspresent?"
+ },
+ {
+  "id": "perfekt-023",
+  "topic": "perfekt",
+  "rule": "pf-haben",
+  "q": "Wir [haben] für die Party einen Kuchen gebacken.",
+  "alt": [
+   "sind",
+   "hat",
+   "habt"
+  ],
+  "why": "Backen har ett objekt och tar haben. Wir → haben.",
+  "sv": "Vi bakade en tårta till festen."
+ },
+ {
+  "id": "perfekt-024",
+  "topic": "perfekt",
+  "rule": "pf-haben",
+  "q": "Oma [hat] mir zu Weihnachten einen Pullover gestrickt.",
+  "alt": [
+   "ist",
+   "habe",
+   "haben"
+  ],
+  "why": "Stricken har ett objekt och tar haben. Oma = sie → hat.",
+  "sv": "Mormor stickade en tröja till mig i julklapp."
+ },
+ {
+  "id": "perfekt-025",
+  "topic": "perfekt",
+  "rule": "pf-haben",
+  "q": "Ihr [habt] ja die ganze Pizza allein gegessen!",
+  "alt": [
+   "seid",
+   "haben",
+   "hat"
+  ],
+  "why": "Essen tar haben. Ihr → habt.",
+  "sv": "Ni har ju ätit upp hela pizzan själva!"
+ },
+ {
+  "id": "perfekt-026",
+  "topic": "perfekt",
+  "rule": "pf-haben",
+  "q": "Ich [habe] meinen Schlüssel verloren.",
+  "alt": [
+   "bin",
+   "hat",
+   "ist"
+  ],
+  "why": "Verlieren har ett objekt och tar haben. Ich → habe.",
+  "sv": "Jag har tappat bort min nyckel."
+ },
+ {
+  "id": "perfekt-027",
+  "topic": "perfekt",
+  "rule": "pf-haben",
+  "q": "In den Winterferien [hat] es viel geschneit.",
+  "alt": [
+   "ist",
+   "habe",
+   "war"
+  ],
+  "why": "Väderverb som schneien och regnen tar haben. Es → hat.",
+  "sv": "Under vinterlovet snöade det mycket."
+ },
+ {
+  "id": "perfekt-028",
+  "topic": "perfekt",
+  "rule": "pf-haben",
+  "q": "Wir [haben] im Urlaub viele Fotos gemacht.",
+  "alt": [
+   "sind",
+   "hat",
+   "habt"
+  ],
+  "why": "Machen tar haben. Wir → haben.",
+  "sv": "Vi tog många foton på semestern."
+ },
+ {
+  "id": "perfekt-029",
+  "topic": "perfekt",
+  "rule": "prt-hilf",
+  "q": "Gestern [war] ich den ganzen Tag müde.",
+  "alt": [
+   "hatte",
+   "habe",
+   "ist"
+  ],
+  "why": "Man är trött, så verbet är sein. I preteritum blir det war. Gestern visar att det är dåtid.",
+  "sv": "I går var jag trött hela dagen."
+ },
+ {
+  "id": "perfekt-030",
+  "topic": "perfekt",
+  "rule": "prt-hilf",
+  "q": "Als Kind [hatte] ich einen kleinen Hund.",
+  "alt": [
+   "war",
+   "hatten",
+   "hattest"
+  ],
+  "why": "Man har en hund, så verbet är haben, i preteritum hatte. Ich → hatte (utan ändelse).",
+  "sv": "Som barn hade jag en liten hund."
+ },
+ {
+  "id": "perfekt-031",
+  "topic": "perfekt",
+  "rule": "prt-hilf",
+  "q": "Letzte Woche [musste] ich zum Zahnarzt gehen.",
+  "alt": [
+   "muss",
+   "mussten",
+   "musstest"
+  ],
+  "why": "Letzte Woche kräver dåtid: müssen blir musste. Ich → musste, utan omljud och utan extra ändelse.",
+  "sv": "Förra veckan var jag tvungen att gå till tandläkaren."
+ },
+ {
+  "id": "perfekt-032",
+  "topic": "perfekt",
+  "rule": "prt-hilf",
+  "q": "Gestern [konnten] wir wegen des Regens nicht draußen spielen.",
+  "alt": [
+   "können",
+   "konnte",
+   "konntet"
+  ],
+  "why": "Gestern kräver dåtid: können blir konnten. Wir → konnten, utan omljud.",
+  "sv": "I går kunde vi inte leka ute på grund av regnet."
+ },
+ {
+  "id": "perfekt-033",
+  "topic": "perfekt",
+  "rule": "prt-hilf",
+  "q": "Als Kind [wollte] ich Pilot werden.",
+  "alt": [
+   "will",
+   "wollten",
+   "wolltest"
+  ],
+  "why": "Als Kind handlar om dåtid: wollen blir wollte. Ich → wollte.",
+  "sv": "Som barn ville jag bli pilot."
+ },
+ {
+  "id": "perfekt-034",
+  "topic": "perfekt",
+  "rule": "prt-hilf",
+  "q": "Früher [durften] wir abends nicht lange fernsehen.",
+  "alt": [
+   "dürfen",
+   "durfte",
+   "durftet"
+  ],
+  "why": "Früher kräver dåtid: dürfen blir durften, utan omljud. Wir → durften.",
+  "sv": "Förr fick vi inte titta på tv länge på kvällarna."
+ },
+ {
+  "id": "perfekt-035",
+  "topic": "perfekt",
+  "rule": "prt-hilf",
+  "q": "[Warst] du gestern auch auf dem Konzert?",
+  "alt": [
+   "Bist",
+   "Wart",
+   "War"
+  ],
+  "why": "Gestern kräver dåtid av sein. Du → warst. Wart är för ihr.",
+  "sv": "Var du också på konserten i går?"
+ },
+ {
+  "id": "perfekt-036",
+  "topic": "perfekt",
+  "rule": "prt-hilf",
+  "q": "Letztes Wochenende [hatten] wir keine Zeit.",
+  "alt": [
+   "haben",
+   "hattet",
+   "hatte"
+  ],
+  "why": "Letztes Wochenende kräver dåtid: haben blir hatten. Wir → hatten.",
+  "sv": "Förra helgen hade vi ingen tid."
+ },
+ {
+  "id": "perfekt-037",
+  "topic": "perfekt",
+  "rule": "prt-hilf",
+  "q": "Ich [sollte] gestern mein Zimmer aufräumen, aber ich hatte keine Lust.",
+  "alt": [
+   "soll",
+   "sollten",
+   "solltest"
+  ],
+  "why": "Gestern kräver dåtid: sollen blir sollte. Ich → sollte.",
+  "sv": "Jag skulle städa mitt rum i går, men jag hade ingen lust."
+ },
+ {
+  "id": "perfekt-038",
+  "topic": "perfekt",
+  "rule": "prt-hilf",
+  "q": "Das Essen gestern im Restaurant [war] sehr lecker.",
+  "alt": [
+   "ist",
+   "hatte",
+   "waren"
+  ],
+  "why": "Maten var god, alltså sein, och gestern kräver preteritum: war. Das Essen är singular, så inte waren.",
+  "sv": "Maten på restaurangen i går var jättegod."
+ },
+ {
+  "id": "perfekt-039",
+  "topic": "perfekt",
+  "rule": "prt-hilf",
+  "q": "Warum [wart] ihr gestern nicht in der Schule?",
+  "alt": [
+   "seid",
+   "waren",
+   "war"
+  ],
+  "why": "Gestern kräver preteritum av sein. Ihr → wart. Seid är presens.",
+  "sv": "Varför var ni inte i skolan i går?"
+ },
+ {
+  "id": "perfekt-040",
+  "topic": "perfekt",
+  "rule": "prt-hilf",
+  "q": "Meine Eltern [hatten] früher ein kleines Café in Wien.",
+  "alt": [
+   "haben",
+   "hatte",
+   "hattet"
+  ],
+  "why": "Früher kräver dåtid: haben blir hatten. Meine Eltern = sie (plural) → hatten.",
+  "sv": "Mina föräldrar hade förr ett litet kafé i Wien."
+ },
+ {
+  "id": "nebensatz-001",
+  "topic": "nebensatz",
+  "rule": "ns-alswenn",
+  "q": "[Als] ich zehn Jahre alt war, sind wir nach Hamburg gezogen.",
+  "alt": [
+   "Wenn",
+   "Wann",
+   "Ob"
+  ],
+  "why": "En enda händelse i dåtid ger als. Wenn används när något upprepas eller om nutid och framtid, wann i frågor.",
+  "sv": "När jag var tio år flyttade vi till Hamburg."
+ },
+ {
+  "id": "nebensatz-002",
+  "topic": "nebensatz",
+  "rule": "ns-alswenn",
+  "q": "Immer [wenn] es regnet, bleibe ich lieber zu Hause.",
+  "alt": [
+   "als",
+   "wann",
+   "ob"
+  ],
+  "why": "Immer visar att det upprepas, och då blir det wenn. Als gäller en enda gång i dåtid.",
+  "sv": "Varje gång det regnar stannar jag hellre hemma."
+ },
+ {
+  "id": "nebensatz-003",
+  "topic": "nebensatz",
+  "rule": "ns-alswenn",
+  "q": "Ich weiß nicht, [wann] der Zug abfährt.",
+  "alt": [
+   "als",
+   "wenn",
+   "weil"
+  ],
+  "why": "Det är en indirekt fråga om tidpunkt (När går tåget?), och då används wann.",
+  "sv": "Jag vet inte när tåget går."
+ },
+ {
+  "id": "nebensatz-004",
+  "topic": "nebensatz",
+  "rule": "ns-alswenn",
+  "q": "[Wenn] ich morgen Zeit habe, rufe ich dich an.",
+  "alt": [
+   "Als",
+   "Wann",
+   "Ob"
+  ],
+  "why": "Det handlar om framtiden (morgen), så det blir wenn. Als används bara om dåtid.",
+  "sv": "Om jag har tid i morgon ringer jag dig."
+ },
+ {
+  "id": "nebensatz-005",
+  "topic": "nebensatz",
+  "rule": "ns-alswenn",
+  "q": "[Als] wir letzten Sommer in Italien waren, war es sehr heiß.",
+  "alt": [
+   "Wenn",
+   "Wann",
+   "Ob"
+  ],
+  "why": "Resan var en enda gång i dåtid (letzten Sommer), alltså als.",
+  "sv": "När vi var i Italien i somras var det väldigt varmt."
+ },
+ {
+  "id": "nebensatz-006",
+  "topic": "nebensatz",
+  "rule": "ns-alswenn",
+  "q": "Weißt du, [wann] das Konzert beginnt?",
+  "alt": [
+   "als",
+   "wenn",
+   "weil"
+  ],
+  "why": "Man frågar efter en tidpunkt (När börjar konserten?), och i frågor används wann.",
+  "sv": "Vet du när konserten börjar?"
+ },
+ {
+  "id": "nebensatz-007",
+  "topic": "nebensatz",
+  "rule": "ns-alswenn",
+  "q": "Jedes Mal, [wenn] ich meine Oma besuche, backt sie einen Kuchen.",
+  "alt": [
+   "als",
+   "wann",
+   "dass"
+  ],
+  "why": "Jedes Mal visar att det upprepas, så det blir wenn. Als gäller bara en enda gång i dåtid.",
+  "sv": "Varje gång jag hälsar på mormor bakar hon en kaka."
+ },
+ {
+  "id": "nebensatz-008",
+  "topic": "nebensatz",
+  "rule": "ns-alswenn",
+  "q": "[Als] ich gestern nach Hause kam, war niemand da.",
+  "alt": [
+   "Wenn",
+   "Wann",
+   "Ob"
+  ],
+  "why": "Gestern är en enda gång i dåtid, alltså als.",
+  "sv": "När jag kom hem i går var ingen hemma."
+ },
+ {
+  "id": "nebensatz-009",
+  "topic": "nebensatz",
+  "rule": "ns-alswenn",
+  "q": "Früher bin ich immer mit dem Rad gefahren, [wenn] das Wetter schön war.",
+  "alt": [
+   "als",
+   "wann",
+   "ob"
+  ],
+  "why": "Det hände många gånger (immer), så det blir wenn, fast det är dåtid. Als gäller bara en enda gång.",
+  "sv": "Förr cyklade jag alltid när det var fint väder."
+ },
+ {
+  "id": "nebensatz-010",
+  "topic": "nebensatz",
+  "rule": "ns-alswenn",
+  "q": "Kannst du mir sagen, [wann] du nach Hause kommst?",
+  "alt": [
+   "als",
+   "wenn",
+   "weil"
+  ],
+  "why": "Det är en indirekt fråga om tidpunkt (När kommer du hem?), så det blir wann.",
+  "sv": "Kan du säga när du kommer hem?"
+ },
+ {
+  "id": "nebensatz-011",
+  "topic": "nebensatz",
+  "rule": "ns-alswenn",
+  "q": "Meine Mutter hat geweint, [als] sie das Geschenk gesehen hat.",
+  "alt": [
+   "wenn",
+   "wann",
+   "ob"
+  ],
+  "why": "Det hände en gång i dåtid, alltså als.",
+  "sv": "Min mamma grät när hon såg presenten."
+ },
+ {
+  "id": "nebensatz-012",
+  "topic": "nebensatz",
+  "rule": "ns-alswenn",
+  "q": "[Wenn] du Hunger hast, kannst du dir ein Brot machen.",
+  "alt": [
+   "Als",
+   "Wann",
+   "Ob"
+  ],
+  "why": "Det gäller nutid (om du är hungrig nu), alltså wenn. Als används bara om dåtid.",
+  "sv": "Om du är hungrig kan du göra dig en smörgås."
+ },
+ {
+  "id": "nebensatz-013",
+  "topic": "nebensatz",
+  "rule": "ns-dassob",
+  "q": "Ich hoffe, [dass] du bald wieder gesund bist.",
+  "alt": [
+   "ob",
+   "wenn",
+   "weil"
+  ],
+  "why": "Efter hoffen kommer ett påstående (att), alltså dass. Ob betyder om i en ja/nej-fråga.",
+  "sv": "Jag hoppas att du snart blir frisk igen."
+ },
+ {
+  "id": "nebensatz-014",
+  "topic": "nebensatz",
+  "rule": "ns-dassob",
+  "q": "Der Lehrer fragt, [ob] wir die Hausaufgaben gemacht haben.",
+  "alt": [
+   "dass",
+   "wenn",
+   "als"
+  ],
+  "why": "Läraren ställer en ja/nej-fråga (Har ni gjort läxan?), och då blir det ob. Wenn betyder om bara i villkor.",
+  "sv": "Läraren frågar om vi har gjort läxorna."
+ },
+ {
+  "id": "nebensatz-015",
+  "topic": "nebensatz",
+  "rule": "ns-dassob",
+  "q": "Ich frage mich, [ob] ich die Prüfung bestanden habe.",
+  "alt": [
+   "dass",
+   "als",
+   "weil"
+  ],
+  "why": "Sich fragen följs av en ja/nej-fråga, alltså ob (om).",
+  "sv": "Jag undrar om jag har klarat provet."
+ },
+ {
+  "id": "nebensatz-016",
+  "topic": "nebensatz",
+  "rule": "ns-dassob",
+  "q": "Meine Freundin hat mir erzählt, [dass] sie einen neuen Job hat.",
+  "alt": [
+   "ob",
+   "wenn",
+   "als"
+  ],
+  "why": "Hon berättar något, ett påstående, så det blir dass. Ob används bara för ja/nej-frågor.",
+  "sv": "Min kompis berättade att hon har fått ett nytt jobb."
+ },
+ {
+  "id": "nebensatz-017",
+  "topic": "nebensatz",
+  "rule": "ns-dassob",
+  "q": "Kannst du mal nachsehen, [ob] noch Milch im Kühlschrank ist?",
+  "alt": [
+   "dass",
+   "wenn",
+   "als"
+  ],
+  "why": "Man vill veta ja eller nej (Finns det mjölk?), alltså ob. På svenska säger man om, men det är inte wenn.",
+  "sv": "Kan du kolla om det finns mjölk kvar i kylskåpet?"
+ },
+ {
+  "id": "nebensatz-018",
+  "topic": "nebensatz",
+  "rule": "ns-dassob",
+  "q": "Es ist schön, [dass] du heute Zeit hast.",
+  "alt": [
+   "ob",
+   "als",
+   "wann"
+  ],
+  "why": "Det är ett konstaterande (att du har tid), inte en fråga, så det blir dass.",
+  "sv": "Vad kul att du har tid i dag."
+ },
+ {
+  "id": "nebensatz-019",
+  "topic": "nebensatz",
+  "rule": "ns-dassob",
+  "q": "Ich glaube, [dass] der Bus heute Verspätung hat.",
+  "alt": [
+   "ob",
+   "wenn",
+   "als"
+  ],
+  "why": "Efter glauben kommer ett påstående, alltså dass. Ob används för ja/nej-frågor.",
+  "sv": "Jag tror att bussen är försenad i dag."
+ },
+ {
+  "id": "nebensatz-020",
+  "topic": "nebensatz",
+  "rule": "ns-dassob",
+  "q": "Frag doch mal deine Eltern, [ob] du mitkommen darfst.",
+  "alt": [
+   "dass",
+   "wenn",
+   "als"
+  ],
+  "why": "Du ska ställa en ja/nej-fråga (Får jag följa med?), så det blir ob. Wenn betyder om bara i villkor.",
+  "sv": "Fråga dina föräldrar om du får följa med."
+ },
+ {
+  "id": "nebensatz-021",
+  "topic": "nebensatz",
+  "rule": "ns-dassob",
+  "q": "Wir haben gehört, [dass] das Schwimmbad im Sommer geschlossen ist.",
+  "alt": [
+   "ob",
+   "als",
+   "wann"
+  ],
+  "why": "Man har hört något, ett påstående, alltså dass.",
+  "sv": "Vi har hört att badhuset är stängt på sommaren."
+ },
+ {
+  "id": "nebensatz-022",
+  "topic": "nebensatz",
+  "rule": "ns-grund",
+  "q": "Ich trinke viel Wasser, [weil] es heute so heiß ist.",
+  "alt": [
+   "obwohl",
+   "damit",
+   "ob"
+  ],
+  "why": "Värmen är orsaken, alltså weil (eftersom). Obwohl betyder fast och damit betyder så att.",
+  "sv": "Jag dricker mycket vatten eftersom det är så varmt i dag."
+ },
+ {
+  "id": "nebensatz-023",
+  "topic": "nebensatz",
+  "rule": "ns-grund",
+  "q": "Wir gehen heute schwimmen, [obwohl] das Wasser noch sehr kalt ist.",
+  "alt": [
+   "weil",
+   "damit",
+   "dass"
+  ],
+  "why": "Kallt vatten talar emot att bada, så det blir obwohl (fast, trots att).",
+  "sv": "Vi går och badar i dag fast vattnet fortfarande är väldigt kallt."
+ },
+ {
+  "id": "nebensatz-024",
+  "topic": "nebensatz",
+  "rule": "ns-grund",
+  "q": "Ich spare mein Taschengeld, [damit] ich mir ein neues Fahrrad kaufen kann.",
+  "alt": [
+   "weil",
+   "obwohl",
+   "ob"
+  ],
+  "why": "Bisatsen säger vad syftet är (så att jag kan köpa en cykel), alltså damit.",
+  "sv": "Jag sparar min veckopeng så att jag kan köpa en ny cykel."
+ },
+ {
+  "id": "nebensatz-025",
+  "topic": "nebensatz",
+  "rule": "ns-grund",
+  "q": "Mein Bruder ist heute müde, [weil] er zu lange Videospiele gespielt hat.",
+  "alt": [
+   "obwohl",
+   "damit",
+   "dass"
+  ],
+  "why": "Tv-spelandet är orsaken till att han är trött, alltså weil.",
+  "sv": "Min bror är trött i dag eftersom han spelade tv-spel för länge."
+ },
+ {
+  "id": "nebensatz-026",
+  "topic": "nebensatz",
+  "rule": "ns-grund",
+  "q": "[Obwohl] ich krank war, bin ich zur Schule gegangen.",
+  "alt": [
+   "Weil",
+   "Damit",
+   "Ob"
+  ],
+  "why": "Att vara sjuk talar emot att gå till skolan, så det blir obwohl (fast, trots att).",
+  "sv": "Fast jag var sjuk gick jag till skolan."
+ },
+ {
+  "id": "nebensatz-027",
+  "topic": "nebensatz",
+  "rule": "ns-grund",
+  "q": "Ich nehme den früheren Bus, [damit] ich pünktlich zur Schule komme.",
+  "alt": [
+   "weil",
+   "obwohl",
+   "ob"
+  ],
+  "why": "Bisatsen säger syftet (så att jag kommer i tid), alltså damit. Weil anger orsak och obwohl motsats.",
+  "sv": "Jag tar den tidigare bussen så att jag kommer i tid till skolan."
+ },
+ {
+  "id": "nebensatz-028",
+  "topic": "nebensatz",
+  "rule": "ns-grund",
+  "q": "Ich esse noch ein Brot, [weil] ich immer noch Hunger habe.",
+  "alt": [
+   "obwohl",
+   "damit",
+   "ob"
+  ],
+  "why": "Hungern är orsaken, alltså weil. Obwohl skulle betyda fast.",
+  "sv": "Jag äter en smörgås till eftersom jag fortfarande är hungrig."
+ },
+ {
+  "id": "nebensatz-029",
+  "topic": "nebensatz",
+  "rule": "ns-grund",
+  "q": "Sie hat die Prüfung bestanden, [obwohl] sie wenig gelernt hat.",
+  "alt": [
+   "weil",
+   "damit",
+   "dass"
+  ],
+  "why": "Lite plugg talar emot att klara provet, så det blir obwohl.",
+  "sv": "Hon klarade provet fast hon hade pluggat lite."
+ },
+ {
+  "id": "nebensatz-030",
+  "topic": "nebensatz",
+  "rule": "ns-grund",
+  "q": "Ich schreibe mir alles auf, [damit] ich nichts vergesse.",
+  "alt": [
+   "weil",
+   "obwohl",
+   "ob"
+  ],
+  "why": "Bisatsen säger syftet (så att jag inte glömmer), alltså damit.",
+  "sv": "Jag skriver upp allt så att jag inte glömmer något."
+ },
+ {
+  "id": "bisatz-001",
+  "topic": "bisatz",
+  "rule": "bs-sub",
+  "type": "rw",
+  "q": "Ich kann nicht kommen. Ich habe Fieber.",
+  "cue": "weil",
+  "a": "Ich kann nicht kommen, weil ich Fieber habe.",
+  "acc": [
+   "Weil ich Fieber habe, kann ich nicht kommen."
+  ],
+  "alt": [
+   "Ich kann nicht kommen, weil ich habe Fieber.",
+   "Ich kann nicht kommen, weil habe ich Fieber."
+  ],
+  "why": "Weil är en subjunktion: verbet habe ställs sist i bisatsen.",
+  "sv": "Jag kan inte komma eftersom jag har feber."
+ },
+ {
+  "id": "bisatz-002",
+  "topic": "bisatz",
+  "rule": "bs-sub",
+  "type": "rw",
+  "q": "Mein Vater sagt: Das Essen ist gleich fertig.",
+  "cue": "dass",
+  "a": "Mein Vater sagt, dass das Essen gleich fertig ist.",
+  "alt": [
+   "Mein Vater sagt, dass das Essen ist gleich fertig.",
+   "Mein Vater sagt, dass ist das Essen gleich fertig."
+  ],
+  "why": "Dass är en subjunktion: verbet ist hamnar sist, efter fertig.",
+  "sv": "Min pappa säger att maten snart är klar."
+ },
+ {
+  "id": "bisatz-003",
+  "topic": "bisatz",
+  "rule": "bs-sub",
+  "type": "rw",
+  "q": "Ich weiß nicht. Hat der Laden heute offen?",
+  "cue": "ob",
+  "a": "Ich weiß nicht, ob der Laden heute offen hat.",
+  "alt": [
+   "Ich weiß nicht, ob hat der Laden heute offen.",
+   "Ich weiß nicht, ob der Laden hat heute offen."
+  ],
+  "why": "Ob gör frågan till en bisats: subjektet kommer direkt efter ob och verbet hat sist.",
+  "sv": "Jag vet inte om affären har öppet i dag."
+ },
+ {
+  "id": "bisatz-004",
+  "topic": "bisatz",
+  "rule": "bs-sub",
+  "type": "rw",
+  "q": "Wir gehen ins Kino. Das Wetter ist schlecht.",
+  "cue": "wenn",
+  "a": "Wir gehen ins Kino, wenn das Wetter schlecht ist.",
+  "acc": [
+   "Wenn das Wetter schlecht ist, gehen wir ins Kino."
+  ],
+  "alt": [
+   "Wir gehen ins Kino, wenn das Wetter ist schlecht.",
+   "Wir gehen ins Kino, wenn ist das Wetter schlecht."
+  ],
+  "why": "Wenn är en subjunktion: verbet ist ställs sist i bisatsen.",
+  "sv": "Vi går på bio om vädret är dåligt."
+ },
+ {
+  "id": "bisatz-005",
+  "topic": "bisatz",
+  "rule": "bs-sub",
+  "type": "rw",
+  "q": "Ich gehe joggen. Es ist draußen kalt.",
+  "cue": "obwohl",
+  "a": "Ich gehe joggen, obwohl es draußen kalt ist.",
+  "acc": [
+   "Obwohl es draußen kalt ist, gehe ich joggen."
+  ],
+  "alt": [
+   "Ich gehe joggen, obwohl es ist draußen kalt.",
+   "Ich gehe joggen, obwohl ist es draußen kalt."
+  ],
+  "why": "Obwohl är en subjunktion precis som weil: verbet ist hamnar sist.",
+  "sv": "Jag går ut och joggar fast det är kallt ute."
+ },
+ {
+  "id": "bisatz-006",
+  "topic": "bisatz",
+  "rule": "bs-sub",
+  "type": "rw",
+  "q": "Ich habe Gitarre spielen gelernt. Ich war zwölf.",
+  "cue": "als",
+  "a": "Ich habe Gitarre spielen gelernt, als ich zwölf war.",
+  "acc": [
+   "Als ich zwölf war, habe ich Gitarre spielen gelernt."
+  ],
+  "alt": [
+   "Ich habe Gitarre spielen gelernt, als ich war zwölf.",
+   "Ich habe Gitarre spielen gelernt, als war ich zwölf."
+  ],
+  "why": "Als är en subjunktion: verbet war ställs sist i bisatsen.",
+  "sv": "Jag lärde mig spela gitarr när jag var tolv."
+ },
+ {
+  "id": "bisatz-007",
+  "topic": "bisatz",
+  "rule": "bs-sub",
+  "type": "rw",
+  "q": "Ich höre Musik. Ich mache meine Hausaufgaben.",
+  "cue": "während",
+  "a": "Ich höre Musik, während ich meine Hausaufgaben mache.",
+  "acc": [
+   "Während ich meine Hausaufgaben mache, höre ich Musik."
+  ],
+  "alt": [
+   "Ich höre Musik, während ich mache meine Hausaufgaben.",
+   "Ich höre Musik, während mache ich meine Hausaufgaben."
+  ],
+  "why": "Während (medan) är en subjunktion: verbet mache ställs sist.",
+  "sv": "Jag lyssnar på musik medan jag gör mina läxor."
+ },
+ {
+  "id": "bisatz-008",
+  "topic": "bisatz",
+  "rule": "bs-sub",
+  "type": "rw",
+  "q": "Ich schreibe dir die Adresse auf. Du findest das Haus.",
+  "cue": "damit",
+  "a": "Ich schreibe dir die Adresse auf, damit du das Haus findest.",
+  "alt": [
+   "Ich schreibe dir die Adresse auf, damit du findest das Haus.",
+   "Ich schreibe dir die Adresse auf, damit findest du das Haus."
+  ],
+  "why": "Damit (så att) är en subjunktion: verbet findest hamnar sist, efter das Haus.",
+  "sv": "Jag skriver upp adressen åt dig så att du hittar huset."
+ },
+ {
+  "id": "bisatz-009",
+  "topic": "bisatz",
+  "rule": "bs-sub",
+  "type": "rw",
+  "q": "Ich bin oft müde. Ich stehe jeden Tag um sechs Uhr auf.",
+  "cue": "weil",
+  "a": "Ich bin oft müde, weil ich jeden Tag um sechs Uhr aufstehe.",
+  "acc": [
+   "Weil ich jeden Tag um sechs Uhr aufstehe, bin ich oft müde."
+  ],
+  "alt": [
+   "Ich bin oft müde, weil ich aufstehe jeden Tag um sechs Uhr.",
+   "Ich bin oft müde, weil aufstehe ich jeden Tag um sechs Uhr."
+  ],
+  "why": "Weil skickar verbet sist, och ett partikelverb skrivs då ihop igen: stehe … auf blir aufstehe.",
+  "sv": "Jag är ofta trött eftersom jag går upp klockan sex varje dag."
+ },
+ {
+  "id": "bisatz-010",
+  "topic": "bisatz",
+  "rule": "bs-inv",
+  "type": "rw",
+  "q": "Es regnet. Wir bleiben zu Hause.",
+  "cue": "deshalb",
+  "a": "Es regnet, deshalb bleiben wir zu Hause.",
+  "acc": [
+   "Es regnet, wir bleiben deshalb zu Hause."
+  ],
+  "alt": [
+   "Es regnet, deshalb wir bleiben zu Hause.",
+   "Es regnet, deshalb wir zu Hause bleiben."
+  ],
+  "why": "Deshalb är ett adverb på plats 1, så verbet bleiben kommer direkt efter (omvänd ordföljd). Det är ingen subjunktion, så verbet ska inte sist.",
+  "sv": "Det regnar, därför stannar vi hemma."
+ },
+ {
+  "id": "bisatz-011",
+  "topic": "bisatz",
+  "rule": "bs-inv",
+  "type": "rw",
+  "q": "Ich war sehr müde. Ich bin zur Party gegangen.",
+  "cue": "trotzdem",
+  "a": "Ich war sehr müde, trotzdem bin ich zur Party gegangen.",
+  "acc": [
+   "Ich war sehr müde, ich bin trotzdem zur Party gegangen."
+  ],
+  "alt": [
+   "Ich war sehr müde, trotzdem ich bin zur Party gegangen.",
+   "Ich war sehr müde, trotzdem ich zur Party gegangen bin."
+  ],
+  "why": "Trotzdem är ett adverb på plats 1, så verbet bin kommer direkt efter och subjektet ich efter det.",
+  "sv": "Jag var väldigt trött, ändå gick jag på festen."
+ },
+ {
+  "id": "bisatz-012",
+  "topic": "bisatz",
+  "rule": "bs-inv",
+  "type": "rw",
+  "q": "Zuerst frühstücken wir. Wir fahren zum Strand.",
+  "cue": "dann",
+  "a": "Zuerst frühstücken wir, dann fahren wir zum Strand.",
+  "alt": [
+   "Zuerst frühstücken wir, dann wir fahren zum Strand.",
+   "Zuerst frühstücken wir, dann wir zum Strand fahren."
+  ],
+  "why": "Dann står på plats 1, så verbet fahren kommer direkt efter: dann fahren wir.",
+  "sv": "Först äter vi frukost, sedan åker vi till stranden."
+ },
+ {
+  "id": "bisatz-013",
+  "topic": "bisatz",
+  "rule": "bs-inv",
+  "type": "rw",
+  "q": "Zieh eine Jacke an. Du erkältest dich.",
+  "cue": "sonst",
+  "a": "Zieh eine Jacke an, sonst erkältest du dich.",
+  "alt": [
+   "Zieh eine Jacke an, sonst du erkältest dich.",
+   "Zieh eine Jacke an, sonst du dich erkältest."
+  ],
+  "why": "Sonst (annars) är ett adverb på plats 1, så verbet erkältest kommer direkt efter, före du.",
+  "sv": "Ta på dig en jacka, annars blir du förkyld."
+ },
+ {
+  "id": "bisatz-014",
+  "topic": "bisatz",
+  "rule": "bs-inv",
+  "type": "rw",
+  "q": "Die Wohnung ist groß. Sie hat einen schönen Balkon.",
+  "cue": "außerdem",
+  "a": "Die Wohnung ist groß, außerdem hat sie einen schönen Balkon.",
+  "acc": [
+   "Die Wohnung ist groß, sie hat außerdem einen schönen Balkon."
+  ],
+  "alt": [
+   "Die Wohnung ist groß, außerdem sie hat einen schönen Balkon.",
+   "Die Wohnung ist groß, außerdem sie einen schönen Balkon hat."
+  ],
+  "why": "Außerdem (dessutom) är ett adverb på plats 1, så verbet hat kommer direkt efter.",
+  "sv": "Lägenheten är stor, dessutom har den en fin balkong."
+ },
+ {
+  "id": "bisatz-015",
+  "topic": "bisatz",
+  "rule": "bs-inv",
+  "type": "rw",
+  "q": "Mein Fahrrad war kaputt. Ich musste zu Fuß gehen.",
+  "cue": "deswegen",
+  "a": "Mein Fahrrad war kaputt, deswegen musste ich zu Fuß gehen.",
+  "acc": [
+   "Mein Fahrrad war kaputt, ich musste deswegen zu Fuß gehen."
+  ],
+  "alt": [
+   "Mein Fahrrad war kaputt, deswegen ich musste zu Fuß gehen.",
+   "Mein Fahrrad war kaputt, deswegen ich zu Fuß gehen musste."
+  ],
+  "why": "Deswegen betyder samma sak som deshalb och står på plats 1, så verbet musste kommer direkt efter.",
+  "sv": "Min cykel var trasig, därför var jag tvungen att gå."
+ },
+ {
+  "id": "bisatz-016",
+  "topic": "bisatz",
+  "rule": "bs-konj",
+  "type": "rw",
+  "q": "Ich komme heute nicht mit. Ich habe keine Zeit.",
+  "cue": "denn",
+  "a": "Ich komme heute nicht mit, denn ich habe keine Zeit.",
+  "alt": [
+   "Ich komme heute nicht mit, denn habe ich keine Zeit.",
+   "Ich komme heute nicht mit, denn ich keine Zeit habe."
+  ],
+  "why": "Denn står utanför satsen (plats 0) och ändrar inte ordföljden: ich habe som vanligt. Jämför weil, som skickar verbet sist.",
+  "sv": "Jag följer inte med i dag, för jag har inte tid."
+ },
+ {
+  "id": "bisatz-017",
+  "topic": "bisatz",
+  "rule": "bs-konj",
+  "type": "rw",
+  "q": "Ich mag Pizza. Mein Bruder isst lieber Pasta.",
+  "cue": "aber",
+  "a": "Ich mag Pizza, aber mein Bruder isst lieber Pasta.",
+  "alt": [
+   "Ich mag Pizza, aber isst mein Bruder lieber Pasta.",
+   "Ich mag Pizza, aber mein Bruder lieber Pasta isst."
+  ],
+  "why": "Aber står på plats 0 och ändrar inte ordföljden: subjektet mein Bruder och sedan verbet isst.",
+  "sv": "Jag gillar pizza, men min bror äter hellre pasta."
+ },
+ {
+  "id": "bisatz-018",
+  "topic": "bisatz",
+  "rule": "bs-konj",
+  "type": "rw",
+  "q": "Wir können heute Abend kochen. Wir bestellen eine Pizza.",
+  "cue": "oder",
+  "a": "Wir können heute Abend kochen, oder wir bestellen eine Pizza.",
+  "alt": [
+   "Wir können heute Abend kochen, oder bestellen wir eine Pizza.",
+   "Wir können heute Abend kochen, oder wir eine Pizza bestellen."
+  ],
+  "why": "Oder står på plats 0 och ändrar inte ordföljden: wir bestellen som i en vanlig mening.",
+  "sv": "Vi kan laga mat i kväll, eller så beställer vi en pizza."
+ },
+ {
+  "id": "bisatz-019",
+  "topic": "bisatz",
+  "rule": "bs-konj",
+  "type": "rw",
+  "q": "Meine Schwester spielt Klavier. Ich spiele Schlagzeug.",
+  "cue": "und",
+  "a": "Meine Schwester spielt Klavier, und ich spiele Schlagzeug.",
+  "alt": [
+   "Meine Schwester spielt Klavier, und spiele ich Schlagzeug.",
+   "Meine Schwester spielt Klavier, und ich Schlagzeug spiele."
+  ],
+  "why": "Und står på plats 0 och ändrar inte ordföljden: ich spiele som vanligt.",
+  "sv": "Min syster spelar piano och jag spelar trummor."
+ },
+ {
+  "id": "bisatz-020",
+  "topic": "bisatz",
+  "rule": "bs-konj",
+  "type": "rw",
+  "q": "Wir wollten grillen. Es hat den ganzen Tag geregnet.",
+  "cue": "aber",
+  "a": "Wir wollten grillen, aber es hat den ganzen Tag geregnet.",
+  "alt": [
+   "Wir wollten grillen, aber hat es den ganzen Tag geregnet.",
+   "Wir wollten grillen, aber es den ganzen Tag geregnet hat."
+  ],
+  "why": "Aber ändrar inte ordföljden: es hat kommer som i en vanlig huvudsats.",
+  "sv": "Vi ville grilla, men det regnade hela dagen."
+ },
+ {
+  "id": "bisatz-021",
+  "topic": "bisatz",
+  "rule": "bs-first",
+  "type": "rw",
+  "q": "Ich habe Zeit. Ich helfe dir.",
+  "cue": "Wenn …",
+  "a": "Wenn ich Zeit habe, helfe ich dir.",
+  "acc": [
+   "Ich helfe dir, wenn ich Zeit habe."
+  ],
+  "alt": [
+   "Wenn ich Zeit habe, ich helfe dir.",
+   "Wenn ich habe Zeit, helfe ich dir."
+  ],
+  "why": "Bisatsen räknas som plats 1, så huvudsatsen börjar med verbet: helfe ich. I bisatsen står habe sist.",
+  "sv": "Om jag har tid hjälper jag dig."
+ },
+ {
+  "id": "bisatz-022",
+  "topic": "bisatz",
+  "rule": "bs-first",
+  "type": "rw",
+  "q": "Es war sehr heiß. Wir sind zehn Kilometer gewandert.",
+  "cue": "Obwohl …",
+  "a": "Obwohl es sehr heiß war, sind wir zehn Kilometer gewandert.",
+  "acc": [
+   "Wir sind zehn Kilometer gewandert, obwohl es sehr heiß war."
+  ],
+  "alt": [
+   "Obwohl es sehr heiß war, wir sind zehn Kilometer gewandert.",
+   "Obwohl es war sehr heiß, sind wir zehn Kilometer gewandert."
+  ],
+  "why": "Bisatsen står på plats 1, så verbet sind kommer först i huvudsatsen, före wir. I bisatsen står war sist.",
+  "sv": "Fast det var väldigt varmt vandrade vi tio kilometer."
+ },
+ {
+  "id": "bisatz-023",
+  "topic": "bisatz",
+  "rule": "bs-first",
+  "type": "rw",
+  "q": "Ich kam nach Hause. Meine Eltern schliefen schon.",
+  "cue": "Als …",
+  "a": "Als ich nach Hause kam, schliefen meine Eltern schon.",
+  "acc": [
+   "Meine Eltern schliefen schon, als ich nach Hause kam."
+  ],
+  "alt": [
+   "Als ich nach Hause kam, meine Eltern schliefen schon.",
+   "Als ich kam nach Hause, schliefen meine Eltern schon."
+  ],
+  "why": "Bisatsen står på plats 1, så huvudsatsen börjar med verbet schliefen. I bisatsen står kam sist.",
+  "sv": "När jag kom hem sov mina föräldrar redan."
+ },
+ {
+  "id": "bisatz-024",
+  "topic": "bisatz",
+  "rule": "bs-first",
+  "type": "rw",
+  "q": "Du bist krank. Du solltest im Bett bleiben.",
+  "cue": "Wenn …",
+  "a": "Wenn du krank bist, solltest du im Bett bleiben.",
+  "acc": [
+   "Du solltest im Bett bleiben, wenn du krank bist."
+  ],
+  "alt": [
+   "Wenn du krank bist, du solltest im Bett bleiben.",
+   "Wenn du bist krank, solltest du im Bett bleiben."
+  ],
+  "why": "Bisatsen står på plats 1, så huvudsatsen börjar med verbet solltest. I bisatsen står bist sist.",
+  "sv": "Om du är sjuk borde du stanna i sängen."
+ },
+ {
+  "id": "bisatz-025",
+  "topic": "bisatz",
+  "rule": "bs-first",
+  "type": "rw",
+  "q": "Ich hatte keinen Hunger. Ich habe nichts gegessen.",
+  "cue": "Weil …",
+  "a": "Weil ich keinen Hunger hatte, habe ich nichts gegessen.",
+  "acc": [
+   "Ich habe nichts gegessen, weil ich keinen Hunger hatte."
+  ],
+  "alt": [
+   "Weil ich keinen Hunger hatte, ich habe nichts gegessen.",
+   "Weil ich hatte keinen Hunger, habe ich nichts gegessen."
+  ],
+  "why": "Bisatsen står på plats 1, så huvudsatsen börjar med verbet habe. I bisatsen står hatte sist.",
+  "sv": "Eftersom jag inte var hungrig åt jag ingenting."
+ },
+ {
+  "id": "reflexiv-001",
+  "topic": "reflexiv",
+  "rule": "refl-akk",
+  "q": "Ich freue [mich] sehr auf die Sommerferien.",
+  "alt": [
+   "mir",
+   "sich",
+   "mein"
+  ],
+  "why": "Sich freuen har inget annat objekt, så pronomenet står i ackusativ: ich → mich. Sich används bara för er/sie/es och plural sie.",
+  "sv": "Jag ser verkligen fram emot sommarlovet."
+ },
+ {
+  "id": "reflexiv-002",
+  "topic": "reflexiv",
+  "rule": "refl-akk",
+  "q": "Beeil [dich], der Bus kommt gleich!",
+  "alt": [
+   "dir",
+   "sich",
+   "du"
+  ],
+  "why": "Sich beeilen har inget annat objekt, så det blir ackusativ: du → dich.",
+  "sv": "Skynda dig, bussen kommer snart!"
+ },
+ {
+  "id": "reflexiv-003",
+  "topic": "reflexiv",
+  "rule": "refl-akk",
+  "q": "Wir treffen [uns] um sieben vor dem Kino.",
+  "alt": [
+   "sich",
+   "wir",
+   "unser"
+  ],
+  "why": "Reflexivpronomenet för wir är uns (samma i ackusativ och dativ). Sich passar bara till er/sie/es och plural sie.",
+  "sv": "Vi träffas klockan sju utanför bion."
+ },
+ {
+  "id": "reflexiv-004",
+  "topic": "reflexiv",
+  "rule": "refl-akk",
+  "q": "Seit wann interessierst du [dich] für Musik?",
+  "alt": [
+   "dir",
+   "sich",
+   "du"
+  ],
+  "why": "Sich interessieren für har inget annat objekt, så det blir ackusativ: du → dich.",
+  "sv": "Hur länge har du varit intresserad av musik?"
+ },
+ {
+  "id": "reflexiv-005",
+  "topic": "reflexiv",
+  "rule": "refl-akk",
+  "q": "Ich habe [mich] gestern erkältet.",
+  "alt": [
+   "mir",
+   "sich",
+   "ich"
+  ],
+  "why": "Sich erkälten har inget annat objekt, alltså ackusativ: ich → mich.",
+  "sv": "Jag blev förkyld i går."
+ },
+ {
+  "id": "reflexiv-006",
+  "topic": "reflexiv",
+  "rule": "refl-akk",
+  "q": "Nach der Schule ruhe ich [mich] ein bisschen aus.",
+  "alt": [
+   "mir",
+   "sich",
+   "ich"
+  ],
+  "why": "Sich ausruhen har inget annat objekt, alltså ackusativ: mich.",
+  "sv": "Efter skolan vilar jag lite."
+ },
+ {
+  "id": "reflexiv-007",
+  "topic": "reflexiv",
+  "rule": "refl-akk",
+  "q": "Setzt [euch] bitte, das Essen ist fertig!",
+  "alt": [
+   "sich",
+   "dich",
+   "ihr"
+  ],
+  "why": "Imperativ till flera (ihr) ger reflexivpronomenet euch. Dich är för en person (du).",
+  "sv": "Sätt er, maten är klar!"
+ },
+ {
+  "id": "reflexiv-008",
+  "topic": "reflexiv",
+  "rule": "refl-akk",
+  "q": "Mein Bruder ärgert [sich] über das schlechte Wetter.",
+  "alt": [
+   "ihm",
+   "er",
+   "sein"
+  ],
+  "why": "Subjektet är tredje person (mein Bruder = er), och då är reflexivpronomenet alltid sich.",
+  "sv": "Min bror är irriterad över det dåliga vädret."
+ },
+ {
+  "id": "reflexiv-009",
+  "topic": "reflexiv",
+  "rule": "refl-akk",
+  "q": "Fühlst du [dich] heute besser?",
+  "alt": [
+   "dir",
+   "sich",
+   "du"
+  ],
+  "why": "Sich fühlen har inget annat objekt, alltså ackusativ: du → dich.",
+  "sv": "Mår du bättre i dag?"
+ },
+ {
+  "id": "reflexiv-010",
+  "topic": "reflexiv",
+  "rule": "refl-akk",
+  "q": "Im Unterricht langweile ich [mich] oft.",
+  "alt": [
+   "mir",
+   "sich",
+   "ich"
+  ],
+  "why": "Sich langweilen har inget annat objekt, alltså ackusativ: ich → mich.",
+  "sv": "Jag har ofta tråkigt på lektionerna."
+ },
+ {
+  "id": "reflexiv-011",
+  "topic": "reflexiv",
+  "rule": "refl-akk",
+  "q": "Meine Eltern haben [sich] in Wien verliebt.",
+  "alt": [
+   "ihnen",
+   "sie",
+   "uns"
+  ],
+  "why": "Meine Eltern är tredje person plural, och då är reflexivpronomenet sich. Ihnen och sie syftar på andra personer.",
+  "sv": "Mina föräldrar blev kära i varandra i Wien."
+ },
+ {
+  "id": "reflexiv-012",
+  "topic": "reflexiv",
+  "rule": "refl-akk",
+  "q": "Zieh [dich] schnell an, wir müssen los!",
+  "alt": [
+   "dir",
+   "sich",
+   "du"
+  ],
+  "why": "Sich anziehen utan klädesplagg som objekt ger ackusativ: dich. Med ett plagg blir det dativ (Zieh dir eine Jacke an).",
+  "sv": "Klä på dig snabbt, vi måste gå!"
+ },
+ {
+  "id": "reflexiv-013",
+  "topic": "reflexiv",
+  "rule": "refl-akk",
+  "q": "Habt ihr [euch] im Urlaub gut erholt?",
+  "alt": [
+   "sich",
+   "uns",
+   "ihr"
+  ],
+  "why": "Subjektet är ihr, så reflexivpronomenet blir euch.",
+  "sv": "Har ni vilat upp er ordentligt på semestern?"
+ },
+ {
+  "id": "reflexiv-014",
+  "topic": "reflexiv",
+  "rule": "refl-akk",
+  "q": "Ich habe [mich] beim Fußball verletzt.",
+  "alt": [
+   "mir",
+   "sich",
+   "ich"
+  ],
+  "why": "Inget annat objekt i meningen, så sich verletzen tar ackusativ: mich. Jämför Ich habe mir das Knie verletzt.",
+  "sv": "Jag skadade mig när jag spelade fotboll."
+ },
+ {
+  "id": "reflexiv-015",
+  "topic": "reflexiv",
+  "rule": "refl-dat",
+  "q": "Ich wasche [mir] vor dem Essen die Hände.",
+  "alt": [
+   "mich",
+   "sich"
+  ],
+  "why": "Die Hände är redan ackusativobjekt, så reflexivpronomenet hamnar i dativ: ich → mir.",
+  "sv": "Jag tvättar händerna före maten."
+ },
+ {
+  "id": "reflexiv-016",
+  "topic": "reflexiv",
+  "rule": "refl-dat",
+  "q": "Putz [dir] bitte die Zähne, bevor du ins Bett gehst!",
+  "alt": [
+   "dich",
+   "sich",
+   "du"
+  ],
+  "why": "Die Zähne är ackusativobjekt, så reflexivpronomenet står i dativ: du → dir.",
+  "sv": "Borsta tänderna innan du går och lägger dig!"
+ },
+ {
+  "id": "reflexiv-017",
+  "topic": "reflexiv",
+  "rule": "refl-dat",
+  "q": "Zum Geburtstag wünsche ich [mir] ein neues Fahrrad.",
+  "alt": [
+   "mich",
+   "sich"
+  ],
+  "why": "Ein neues Fahrrad är ackusativobjekt, så reflexivpronomenet blir dativ: mir.",
+  "sv": "Jag önskar mig en ny cykel i födelsedagspresent."
+ },
+ {
+  "id": "reflexiv-018",
+  "topic": "reflexiv",
+  "rule": "refl-dat",
+  "q": "Ich habe [mir] beim Fußball das Knie verletzt.",
+  "alt": [
+   "mich",
+   "sich",
+   "ich"
+  ],
+  "why": "Das Knie är ackusativobjekt, så reflexivpronomenet står i dativ: mir. Utan das Knie hade det blivit mich.",
+  "sv": "Jag skadade knät när jag spelade fotboll."
+ },
+ {
+  "id": "reflexiv-019",
+  "topic": "reflexiv",
+  "rule": "refl-dat",
+  "q": "Heute Abend sehen wir [uns] einen Film an.",
+  "alt": [
+   "sich",
+   "euch",
+   "unser"
+  ],
+  "why": "Subjektet är wir, så reflexivpronomenet blir uns (samma form i dativ och ackusativ).",
+  "sv": "I kväll ska vi titta på en film."
+ },
+ {
+  "id": "reflexiv-020",
+  "topic": "reflexiv",
+  "rule": "refl-dat",
+  "q": "Kannst du [dir] meine Handynummer merken?",
+  "alt": [
+   "dich",
+   "sich",
+   "mir"
+  ],
+  "why": "Sich etwas merken tar dativ, och meine Handynummer är ackusativobjekt: du → dir.",
+  "sv": "Kan du komma ihåg mitt mobilnummer?"
+ },
+ {
+  "id": "reflexiv-021",
+  "topic": "reflexiv",
+  "rule": "refl-dat",
+  "q": "Ich mache [mir] Sorgen um meinen Hund.",
+  "alt": [
+   "mich",
+   "sich",
+   "ich"
+  ],
+  "why": "Sorgen är ackusativobjekt, så reflexivpronomenet står i dativ: mir.",
+  "sv": "Jag är orolig för min hund."
+ },
+ {
+  "id": "reflexiv-022",
+  "topic": "reflexiv",
+  "rule": "refl-dat",
+  "q": "Zieh [dir] eine Jacke an, es ist kalt!",
+  "alt": [
+   "dich",
+   "sich",
+   "du"
+  ],
+  "why": "Eine Jacke är ackusativobjekt, så reflexivpronomenet blir dativ: dir.",
+  "sv": "Ta på dig en jacka, det är kallt!"
+ },
+ {
+  "id": "reflexiv-023",
+  "topic": "reflexiv",
+  "rule": "refl-dat",
+  "q": "Ich kaufe [mir] von meinem Taschengeld ein neues Spiel.",
+  "alt": [
+   "mich",
+   "sich"
+  ],
+  "why": "Ein neues Spiel är ackusativobjekt, så reflexivpronomenet står i dativ: mir.",
+  "sv": "Jag köper mig ett nytt spel för min veckopeng."
+ },
+ {
+  "id": "reflexiv-024",
+  "topic": "reflexiv",
+  "rule": "refl-dat",
+  "q": "Hast du [dir] schon die Haare gekämmt?",
+  "alt": [
+   "dich",
+   "sich",
+   "du"
+  ],
+  "why": "Die Haare är ackusativobjekt, så reflexivpronomenet blir dativ: dir.",
+  "sv": "Har du kammat håret än?"
+ },
+ {
+  "id": "reflexiv-025",
+  "topic": "reflexiv",
+  "rule": "refl-dat",
+  "q": "Nimm [dir] noch ein Stück Kuchen!",
+  "alt": [
+   "dich",
+   "sich",
+   "du"
+  ],
+  "why": "Ein Stück Kuchen är ackusativobjekt, så reflexivpronomenet står i dativ: dir.",
+  "sv": "Ta en bit kaka till!"
+ }
+]

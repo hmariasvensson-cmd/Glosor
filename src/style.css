@@ -309,3 +309,12 @@ body.has-tray{padding-bottom:calc(45vh + 30px)}
 .fbk .fbh{font-weight:700;margin-top:4px}
 .fbk del{color:var(--pink)}
 .fbk b{color:var(--ok)}
+/* Tyck till */
+.fbtext{width:100%;min-height:7em;resize:vertical;font:inherit;line-height:1.45}
+.fblist{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.fblist li{border:1px solid var(--line);border-radius:10px;padding:10px 12px}
+.fblist p{margin:6px 0 0;white-space:pre-wrap}
+.fbst{font-size:.8rem;font-weight:600;border-radius:999px;padding:2px 8px;background:var(--amber-soft);color:var(--ink)}
+.fbst.fb-backlogg,.fbst.fb-byggt{background:color-mix(in srgb,var(--green) 18%,transparent);color:var(--ink)}
+.fbreply{color:var(--ink-2)}
+@media (max-width:420px){.tabs button{padding:10px 4px;font-size:.9rem}}
