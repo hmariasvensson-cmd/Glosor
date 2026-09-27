@@ -13,7 +13,7 @@ Underlag finns i `docs/ovningsforslag.md` (franska), `docs/ovningsforslag-tyska.
 
 ## Tyska (Tyska 5, mot B2)
 
-- **P2: Större ordförråd, steg 2.** 1 329 ord nu. B2 kräver ungefär 3 000–4 000 ord. Nästa steg är ett frekvensordnat avsnitt från FrequencyWords (CC BY-SA 4.0) eller kaikki/Wiktionary (CC BY-SA 4.0), med källhänvisning. Goethes listor är upphovsrättsskyddade och får inte kopieras.
+- **P2: Större ordförråd, steg 3.** 1 629 ord nu. B2 kräver ungefär 3 000–4 000 ord. Fortsätt FrequencyWords från rang 2010 (CC BY-SA 4.0), eller använd kaikki/Wiktionary. Goethes listor är upphovsrättsskyddade och får inte kopieras.
 - **P2: Granskning av grammatikfrågorna** (390 tyska, 322 franska) av en lärare eller modersmålstalare, åtminstone ett stickprov på 10 %. Gå också igenom elevernas rapporter i `reports/` (läs dem med ArtifactData) och rätta i källfilerna.
 - **P3: Verbdata från Wiktionary/kaikki** i stället för handskrivna verbtabeller.
 - **P3: Om flickvännens lärobok fotas:** lägg in bokens kapitel och ordlistor och markera vilka ord som kommer från boken.
