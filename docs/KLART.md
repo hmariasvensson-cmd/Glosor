@@ -2,6 +2,12 @@
 
 Punkter som har flyttats från [`BACKLOG.md`](BACKLOG.md) när de byggdes. **Referens** anger backloggens rubrik och prioritet. **Commit** anger var ändringen finns i git. **Publicerat** anger versionen av artefakten på https://claude.ai/artifact/YBQv8j4qXQQLuPwLAWt5mP.
 
+## 2026-09-27, del 5 (publicerat som version 13)
+
+| Referens | Vad som byggdes | Commit |
+|---|---|---|
+| Kurser · P1 *Nästa kapitel i Escalade* (kap 3–4, s. 40–67) | Glosor ur boken i den privata mappen `languages/fr/book/words.txt`: 57 nya ord till kap 3 (`k3x`) och 70 ord till kap 4 "L'Afrique et l'avenir" (`k4`), med sidnummer. Egna övningar till kap 4 (publika, inte avskrivna från boken): lästexten "Aminata Sow", hörtexten "Tu l'as lu ?", kulturtexterna "Le français en Afrique" och "L'île de Gorée", en berättelse, en skrivuppgift och 80 grammatikfrågor (possessiva pronomen, adjektivens böjning, stor/liten bokstav). Grammatikområdena är kopplade till bokens kapitel (`secs` i lang.js). När eleven läser kap 4 kommer pronomen, possessiva, stor bokstav och à + artikel först, och Blandad grammatik tar hälften av frågorna därifrån. | `a6a4ab4`, `6689292` |
+
 ## 2026-09-27, del 4 (publicerat som version 12)
 
 | Referens | Vad som byggdes | Commit |
