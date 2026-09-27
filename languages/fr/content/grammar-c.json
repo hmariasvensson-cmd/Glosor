@@ -1,0 +1,1024 @@
+[
+ {
+  "id": "poss-001",
+  "topic": "poss",
+  "rule": "poss-sing",
+  "q": "Aminata habite à Paris, mais [sa] famille est restée à Dakar.",
+  "alt": [
+   "son",
+   "ses",
+   "leur"
+  ],
+  "why": "Famille är femininum singular, alltså sa. Son/sa/ses rättar sig efter det ägda, inte efter ägaren.",
+  "sv": "Aminata bor i Paris, men hennes familj stannade kvar i Dakar."
+ },
+ {
+  "id": "poss-002",
+  "topic": "poss",
+  "rule": "poss-sing",
+  "q": "Karim a oublié [son] livre au CDI.",
+  "alt": [
+   "sa",
+   "ses",
+   "leur"
+  ],
+  "why": "Livre är maskulinum singular, alltså son. Ses används bara om det ägda står i plural.",
+  "sv": "Karim glömde sin bok i skolbiblioteket."
+ },
+ {
+  "id": "poss-003",
+  "topic": "poss",
+  "rule": "poss-sing",
+  "q": "Léa et Tom, vous avez [votre] billet de train ?",
+  "alt": [
+   "vos",
+   "leur",
+   "notre"
+  ],
+  "why": "Ni (vous) äger, och varje person har ett billet i singular: votre. Vos används när det ägda står i plural.",
+  "sv": "Léa och Tom, har ni er tågbiljett?"
+ },
+ {
+  "id": "poss-004",
+  "topic": "poss",
+  "rule": "poss-sing",
+  "q": "Mes parents adorent [leur] nouvelle maison à Nice.",
+  "alt": [
+   "leurs",
+   "sa",
+   "son"
+  ],
+  "why": "Flera ägare (mes parents) och ett ägt (une maison): leur. Leurs används när det ägda står i plural, sa/son när ägaren är en person.",
+  "sv": "Mina föräldrar älskar sitt nya hus i Nice."
+ },
+ {
+  "id": "poss-005",
+  "topic": "poss",
+  "rule": "poss-sing",
+  "q": "Nous allons présenter [notre] projet sur le Sénégal demain.",
+  "alt": [
+   "nos",
+   "votre",
+   "leur"
+  ],
+  "why": "Vi äger ett projekt i singular: notre. Nos används bara framför plural.",
+  "sv": "Vi ska presentera vårt projekt om Senegal i morgon."
+ },
+ {
+  "id": "poss-006",
+  "topic": "poss",
+  "rule": "poss-sing",
+  "q": "Tu peux me prêter [ta] valise pour le voyage ?",
+  "alt": [
+   "ton",
+   "tes",
+   "sa"
+  ],
+  "why": "Valise är femininum singular och börjar på konsonant, alltså ta. Sa betyder hans/hennes, inte din.",
+  "sv": "Kan du låna mig din resväska till resan?"
+ },
+ {
+  "id": "poss-007",
+  "topic": "poss",
+  "rule": "poss-sing",
+  "q": "Monique a gagné le concours grâce à [son] père.",
+  "alt": [
+   "sa",
+   "ses",
+   "leur"
+  ],
+  "why": "Père är maskulinum, alltså son, fast ägaren (Monique) är en kvinna. Possessivet rättar sig efter det ägda.",
+  "sv": "Monique vann tävlingen tack vare sin pappa."
+ },
+ {
+  "id": "poss-008",
+  "topic": "poss",
+  "rule": "poss-sing",
+  "q": "Le moniteur de ski parle avec [sa] directrice.",
+  "alt": [
+   "son",
+   "ses",
+   "leur"
+  ],
+  "why": "Directrice är femininum singular, alltså sa, fast ägaren är en man.",
+  "sv": "Skidläraren pratar med sin chef."
+ },
+ {
+  "id": "poss-009",
+  "topic": "poss",
+  "rule": "poss-sing",
+  "q": "Les élèves ont rendu [leur] devoir au professeur.",
+  "alt": [
+   "leurs",
+   "son",
+   "ses"
+  ],
+  "why": "Flera ägare (les élèves) och devoir i singular: leur. Med leurs skulle devoir också behöva stå i plural (leurs devoirs).",
+  "sv": "Eleverna lämnade in sin läxa till läraren."
+ },
+ {
+  "id": "poss-010",
+  "topic": "poss",
+  "rule": "poss-sing",
+  "q": "Je cherche [mon] téléphone partout !",
+  "alt": [
+   "ma",
+   "mes",
+   "son"
+  ],
+  "why": "Téléphone är maskulinum singular: mon. Ma används för femininum och mes för plural.",
+  "sv": "Jag letar efter min telefon överallt!"
+ },
+ {
+  "id": "poss-011",
+  "topic": "poss",
+  "rule": "poss-sing",
+  "q": "Senghor a écrit beaucoup de poèmes sur [son] pays, le Sénégal.",
+  "alt": [
+   "sa",
+   "ses",
+   "leur"
+  ],
+  "why": "Pays är maskulinum singular (le pays), alltså son. Pays slutar på -s men är inte plural här.",
+  "sv": "Senghor skrev många dikter om sitt land, Senegal."
+ },
+ {
+  "id": "poss-012",
+  "topic": "poss",
+  "rule": "poss-sing",
+  "q": "Ils vivent en France, mais [leur] cœur est en Afrique.",
+  "alt": [
+   "leurs",
+   "son",
+   "sa"
+  ],
+  "why": "Flera ägare (ils) och cœur i singular: leur. Son/sa används bara när ägaren är en person.",
+  "sv": "De bor i Frankrike, men deras hjärta finns i Afrika."
+ },
+ {
+  "id": "poss-013",
+  "topic": "poss",
+  "rule": "poss-plur",
+  "q": "Youssou N'Dour chante souvent en wolof dans [ses] chansons.",
+  "alt": [
+   "sa",
+   "son",
+   "leurs"
+  ],
+  "why": "Chansons står i plural, alltså ses. Leurs används bara när ägarna är flera.",
+  "sv": "Youssou N'Dour sjunger ofta på wolof i sina låtar."
+ },
+ {
+  "id": "poss-014",
+  "topic": "poss",
+  "rule": "poss-plur",
+  "q": "Nous avons invité [nos] amis sénégalais au restaurant.",
+  "alt": [
+   "notre",
+   "vos",
+   "leurs"
+  ],
+  "why": "Vi äger, och amis står i plural: nos. Notre används bara framför singular.",
+  "sv": "Vi bjöd våra senegalesiska vänner på restaurang."
+ },
+ {
+  "id": "poss-015",
+  "topic": "poss",
+  "rule": "poss-plur",
+  "q": "Les grands-parents de Fatou racontent [leurs] souvenirs de Dakar.",
+  "alt": [
+   "leur",
+   "ses",
+   "sa"
+  ],
+  "why": "Flera ägare (les grands-parents) och flera minnen (souvenirs): leurs. Leur används när det ägda står i singular.",
+  "sv": "Fatous morföräldrar berättar om sina minnen från Dakar."
+ },
+ {
+  "id": "poss-016",
+  "topic": "poss",
+  "rule": "poss-plur",
+  "q": "Tu as mis [tes] chaussures de ski dans le sac ?",
+  "alt": [
+   "ta",
+   "ton",
+   "ses"
+  ],
+  "why": "Chaussures står i plural: tes, oavsett genus. Ses betyder hans/hennes.",
+  "sv": "Har du lagt dina pjäxor i väskan?"
+ },
+ {
+  "id": "poss-017",
+  "topic": "poss",
+  "rule": "poss-plur",
+  "q": "Madame, vous avez [vos] papiers pour l'entretien ?",
+  "alt": [
+   "votre",
+   "nos",
+   "leurs"
+  ],
+  "why": "Man säger vous till kvinnan, och papiers står i plural: vos. Votre används framför singular.",
+  "sv": "Har ni era papper till intervjun?"
+ },
+ {
+  "id": "poss-018",
+  "topic": "poss",
+  "rule": "poss-plur",
+  "q": "J'ai laissé [mes] livres chez ma grand-mère.",
+  "alt": [
+   "ma",
+   "mon",
+   "ses"
+  ],
+  "why": "Livres står i plural: mes. Mon och ma används bara framför singular.",
+  "sv": "Jag lämnade mina böcker hos min mormor."
+ },
+ {
+  "id": "poss-019",
+  "topic": "poss",
+  "rule": "poss-plur",
+  "q": "Aminata envoie des photos à [ses] parents chaque semaine.",
+  "alt": [
+   "son",
+   "sa",
+   "leurs"
+  ],
+  "why": "En ägare (Aminata) och flera föräldrar: ses. Leurs skulle betyda att ägarna är flera.",
+  "sv": "Aminata skickar bilder till sina föräldrar varje vecka."
+ },
+ {
+  "id": "poss-020",
+  "topic": "poss",
+  "rule": "poss-plur",
+  "q": "Les deux sœurs parlent souvent de [leurs] racines africaines.",
+  "alt": [
+   "leur",
+   "ses",
+   "sa"
+  ],
+  "why": "Flera ägare (les deux sœurs) och racines i plural: leurs. Ses används när ägaren är en person.",
+  "sv": "De två systrarna pratar ofta om sina afrikanska rötter."
+ },
+ {
+  "id": "poss-021",
+  "topic": "poss",
+  "rule": "poss-plur",
+  "q": "Nous avons enfin fini [nos] examens !",
+  "alt": [
+   "notre",
+   "vos",
+   "leurs"
+  ],
+  "why": "Vi äger, och examens står i plural: nos. Vos betyder era.",
+  "sv": "Vi är äntligen klara med våra prov!"
+ },
+ {
+  "id": "poss-022",
+  "topic": "poss",
+  "rule": "poss-plur",
+  "q": "Pendant l'entretien, elle a présenté [ses] qualités.",
+  "alt": [
+   "sa",
+   "son",
+   "leurs"
+  ],
+  "why": "Qualités står i plural: ses, oavsett genus. Leurs används när ägarna är flera.",
+  "sv": "Under intervjun presenterade hon sina goda sidor."
+ },
+ {
+  "id": "poss-023",
+  "topic": "poss",
+  "rule": "poss-voc",
+  "q": "Je vais au cinéma avec [mon] amie Sarah.",
+  "alt": [
+   "ma",
+   "m'",
+   "mes"
+  ],
+  "why": "Amie är femininum men börjar på vokal. Då använder man mon för att det ska låta bra: mon amie. Ma amie och m'amie är fel.",
+  "sv": "Jag går på bio med min kompis Sarah."
+ },
+ {
+  "id": "poss-024",
+  "topic": "poss",
+  "rule": "poss-voc",
+  "q": "Aminata parle souvent de [son] enfance à Dakar.",
+  "alt": [
+   "sa",
+   "s'",
+   "ses"
+  ],
+  "why": "Enfance är femininum men börjar på vokal, alltså son enfance. Man skriver aldrig s'enfance.",
+  "sv": "Aminata pratar ofta om sin barndom i Dakar."
+ },
+ {
+  "id": "poss-025",
+  "topic": "poss",
+  "rule": "poss-voc",
+  "q": "Ma grand-mère a écrit [son] histoire dans un petit cahier.",
+  "alt": [
+   "sa",
+   "s'",
+   "ses"
+  ],
+  "why": "Histoire är femininum men börjar på stumt h, som räknas som vokal: son histoire.",
+  "sv": "Min mormor skrev ner sin historia i ett litet häfte."
+ },
+ {
+  "id": "poss-026",
+  "topic": "poss",
+  "rule": "poss-voc",
+  "q": "Tu connais [ton] adresse par cœur ?",
+  "alt": [
+   "ta",
+   "t'",
+   "tes"
+  ],
+  "why": "Adresse är femininum men börjar på vokal: ton adresse. Ta adresse och t'adresse är fel.",
+  "sv": "Kan du din adress utantill?"
+ },
+ {
+  "id": "poss-027",
+  "topic": "poss",
+  "rule": "poss-voc",
+  "q": "Il est très fier de [son] équipe de foot.",
+  "alt": [
+   "sa",
+   "s'",
+   "ses"
+  ],
+  "why": "Équipe är femininum men börjar på vokal: son équipe.",
+  "sv": "Han är väldigt stolt över sitt fotbollslag."
+ },
+ {
+  "id": "poss-028",
+  "topic": "poss",
+  "rule": "poss-voc",
+  "q": "Karim est retourné au Sénégal pour voir [son] ancienne école.",
+  "alt": [
+   "sa",
+   "s'",
+   "ses"
+  ],
+  "why": "Det är ordet direkt efter possessivet som räknas. Ancienne börjar på vokal, alltså son, fast école är femininum.",
+  "sv": "Karim åkte tillbaka till Senegal för att se sin gamla skola."
+ },
+ {
+  "id": "poss-029",
+  "topic": "poss",
+  "rule": "poss-voc",
+  "q": "Donne-moi [ton] opinion sur ce livre !",
+  "alt": [
+   "ta",
+   "t'",
+   "tes"
+  ],
+  "why": "Opinion är femininum men börjar på vokal: ton opinion.",
+  "sv": "Säg vad du tycker om den här boken!"
+ },
+ {
+  "id": "poss-030",
+  "topic": "poss",
+  "rule": "poss-voc",
+  "q": "Elle a quitté son pays avec [sa] petite valise.",
+  "alt": [
+   "son",
+   "s'",
+   "ses"
+  ],
+  "why": "Här står adjektivet petite direkt efter possessivet, och det börjar på konsonant. Då blir det vanliga sa för femininum.",
+  "sv": "Hon lämnade sitt land med sin lilla resväska."
+ },
+ {
+  "id": "adjf-001",
+  "topic": "adjf",
+  "rule": "adjf-fem",
+  "q": "Ma sœur est très [patiente] avec les enfants.",
+  "alt": [
+   "patient",
+   "patients",
+   "patientes"
+  ],
+  "why": "Sœur är femininum singular, så adjektivet får -e: patiente.",
+  "sv": "Min syster är väldigt tålmodig med barnen."
+ },
+ {
+  "id": "adjf-002",
+  "topic": "adjf",
+  "rule": "adjf-fem",
+  "q": "Chamonix est une station de ski très [connue].",
+  "alt": [
+   "connu",
+   "connus",
+   "connues"
+  ],
+  "why": "Station är femininum singular: connu + e = connue.",
+  "sv": "Chamonix är en mycket känd skidort."
+ },
+ {
+  "id": "adjf-003",
+  "topic": "adjf",
+  "rule": "adjf-fem",
+  "q": "La directrice avait l'air [fâchée].",
+  "alt": [
+   "fâchés",
+   "fâchées"
+  ],
+  "why": "Directrice är femininum singular: fâchée med -e. Efter avoir l'air går det också att böja efter air (maskulinum).",
+  "sv": "Chefen såg arg ut.",
+  "acc": [
+   "fâché"
+  ]
+ },
+ {
+  "id": "adjf-004",
+  "topic": "adjf",
+  "rule": "adjf-fem",
+  "q": "C'est une fille [organisée] et [motivée].",
+  "alt": [
+   "organisé … motivé",
+   "organisés … motivés",
+   "organisées … motivées"
+  ],
+  "why": "Fille är femininum singular: båda adjektiven får -e men inget -s.",
+  "sv": "Hon är en organiserad och motiverad tjej."
+ },
+ {
+  "id": "adjf-005",
+  "topic": "adjf",
+  "rule": "adjf-fem",
+  "q": "Aminata est [sénégalaise].",
+  "alt": [
+   "sénégalais",
+   "sénégalaises",
+   "Sénégal"
+  ],
+  "why": "Aminata är en kvinna: sénégalais + e. Efter être är det ett adjektiv, så det skrivs med liten bokstav.",
+  "sv": "Aminata är senegalesisk."
+ },
+ {
+  "id": "adjf-006",
+  "topic": "adjf",
+  "rule": "adjf-irr",
+  "q": "Elle a une voix très [douce].",
+  "alt": [
+   "doux",
+   "douse",
+   "douces"
+  ],
+  "why": "Doux är oregelbundet: femininum blir douce.",
+  "sv": "Hon har en väldigt mjuk röst."
+ },
+ {
+  "id": "adjf-007",
+  "topic": "adjf",
+  "rule": "adjf-fem",
+  "q": "C'est une idée [intéressante] !",
+  "alt": [
+   "intéressant",
+   "intéressants",
+   "intéressantes"
+  ],
+  "why": "Idée är femininum singular: intéressant + e.",
+  "sv": "Det är en intressant idé!"
+ },
+ {
+  "id": "adjf-008",
+  "topic": "adjf",
+  "rule": "adjf-fem",
+  "q": "La piste noire est très [difficile].",
+  "alt": [
+   "difficil",
+   "difficiles",
+   "difficille"
+  ],
+  "why": "Difficile slutar redan på -e, så det ändras inte i femininum. I singular blir det inget -s.",
+  "sv": "Den svarta backen är väldigt svår."
+ },
+ {
+  "id": "adjf-009",
+  "topic": "adjf",
+  "rule": "adjf-fem",
+  "q": "Ma meilleure amie est [espagnole].",
+  "alt": [
+   "espagnol",
+   "espagnols",
+   "Espagne"
+  ],
+  "why": "Amie är femininum: espagnol + e. Som adjektiv skrivs det med liten bokstav.",
+  "sv": "Min bästa kompis är spansk."
+ },
+ {
+  "id": "adjf-010",
+  "topic": "adjf",
+  "rule": "adjf-fem",
+  "q": "Cette montre est trop [chère] pour moi.",
+  "alt": [
+   "cher",
+   "chers",
+   "chères"
+  ],
+  "why": "Adjektiv på -er får -ère i femininum: cher blir chère.",
+  "sv": "Den här klockan är för dyr för mig."
+ },
+ {
+  "id": "adjf-011",
+  "topic": "adjf",
+  "rule": "adjf-plur",
+  "q": "Les pistes de Chamonix sont très [variées].",
+  "alt": [
+   "varié",
+   "variés",
+   "variée"
+  ],
+  "why": "Pistes är femininum plural: varié + e + s.",
+  "sv": "Backarna i Chamonix är väldigt varierade."
+ },
+ {
+  "id": "adjf-012",
+  "topic": "adjf",
+  "rule": "adjf-plur",
+  "q": "Mes cousins sont [grands] et [sportifs].",
+  "alt": [
+   "grand … sportif",
+   "grandes … sportives",
+   "grands … sportives"
+  ],
+  "why": "Cousins är maskulinum plural: båda adjektiven får -s, men inget -e.",
+  "sv": "Mina kusiner är långa och sportiga."
+ },
+ {
+  "id": "adjf-013",
+  "topic": "adjf",
+  "rule": "adjf-plur",
+  "q": "J'ai acheté des chaussures [bleues].",
+  "alt": [
+   "bleu",
+   "bleus",
+   "bleue"
+  ],
+  "why": "Chaussures är femininum plural: bleu + e + s.",
+  "sv": "Jag köpte blå skor."
+ },
+ {
+  "id": "adjf-014",
+  "topic": "adjf",
+  "rule": "adjf-plur",
+  "q": "Les romans d'Aminata sont très [originaux].",
+  "alt": [
+   "originals",
+   "originales",
+   "original"
+  ],
+  "why": "Adjektiv på -al får -aux i maskulinum plural: original blir originaux.",
+  "sv": "Aminatas romaner är väldigt originella."
+ },
+ {
+  "id": "adjf-015",
+  "topic": "adjf",
+  "rule": "adjf-plur",
+  "q": "Les lycéens [français] étudient la philosophie en terminale.",
+  "alt": [
+   "françaiss",
+   "françaises",
+   "France"
+  ],
+  "why": "Français slutar redan på -s och ändras inte i maskulinum plural. Som adjektiv skrivs det med liten bokstav.",
+  "sv": "Franska gymnasieelever läser filosofi sista året."
+ },
+ {
+  "id": "adjf-016",
+  "topic": "adjf",
+  "rule": "adjf-plur",
+  "q": "Mes grands-parents sont très [heureux] ensemble.",
+  "alt": [
+   "heureuxs",
+   "heureuses",
+   "heureuse"
+  ],
+  "why": "Heureux slutar på -x och ändras inte i maskulinum plural.",
+  "sv": "Mina morföräldrar är väldigt lyckliga tillsammans."
+ },
+ {
+  "id": "adjf-017",
+  "topic": "adjf",
+  "rule": "adjf-plur",
+  "q": "Ces contes africains sont vraiment [beaux].",
+  "alt": [
+   "beau",
+   "bels",
+   "belles"
+  ],
+  "why": "Beau får -x i maskulinum plural: beaux. Contes är maskulinum, så belles är fel.",
+  "sv": "De här afrikanska sagorna är verkligen vackra."
+ },
+ {
+  "id": "adjf-018",
+  "topic": "adjf",
+  "rule": "adjf-plur",
+  "q": "Les filles de l'équipe sont très [ambitieuses].",
+  "alt": [
+   "ambitieux",
+   "ambitieuse",
+   "ambitieuxes"
+  ],
+  "why": "Ambitieux blir ambitieuse i femininum och ambitieuses i femininum plural.",
+  "sv": "Tjejerna i laget är väldigt ambitiösa."
+ },
+ {
+  "id": "adjf-019",
+  "topic": "adjf",
+  "rule": "adjf-plur",
+  "q": "Nous avons des voisins très [gentils].",
+  "alt": [
+   "gentil",
+   "gentilles",
+   "gentille"
+  ],
+  "why": "Voisins är maskulinum plural: gentil + s.",
+  "sv": "Vi har väldigt snälla grannar."
+ },
+ {
+  "id": "adjf-020",
+  "topic": "adjf",
+  "rule": "adjf-plur",
+  "q": "Les questions de l'entretien étaient [difficiles].",
+  "alt": [
+   "difficile",
+   "difficils",
+   "difficilles"
+  ],
+  "why": "Questions står i plural: difficile + s. Det slutar redan på -e, så inget extra -e.",
+  "sv": "Frågorna på intervjun var svåra."
+ },
+ {
+  "id": "adjf-021",
+  "topic": "adjf",
+  "rule": "adjf-irr",
+  "q": "Chamonix est un [bel] endroit pour faire du ski.",
+  "alt": [
+   "beau",
+   "belle",
+   "beaux"
+  ],
+  "why": "Framför ett maskulint ord som börjar på vokal blir beau till bel: un bel endroit.",
+  "sv": "Chamonix är ett vackert ställe att åka skidor på."
+ },
+ {
+  "id": "adjf-022",
+  "topic": "adjf",
+  "rule": "adjf-irr",
+  "q": "Mon oncle habite dans un [vieil] appartement à Dakar.",
+  "alt": [
+   "vieux",
+   "vieille",
+   "vieilles"
+  ],
+  "why": "Framför ett maskulint ord som börjar på vokal blir vieux till vieil: un vieil appartement.",
+  "sv": "Min morbror bor i en gammal lägenhet i Dakar."
+ },
+ {
+  "id": "adjf-023",
+  "topic": "adjf",
+  "rule": "adjf-irr",
+  "q": "Aminata vient de publier un [nouveau] roman.",
+  "alt": [
+   "nouvel",
+   "nouvelle",
+   "nouveaux"
+  ],
+  "why": "Roman är maskulinum och börjar på konsonant: nouveau. Nouvel används bara framför vokal.",
+  "sv": "Aminata har just gett ut en ny roman."
+ },
+ {
+  "id": "adjf-024",
+  "topic": "adjf",
+  "rule": "adjf-irr",
+  "q": "Nous avons un [nouvel] ami au club de lecture.",
+  "alt": [
+   "nouveau",
+   "nouvelle",
+   "nouveaux"
+  ],
+  "why": "Ami är maskulinum och börjar på vokal: nouvel ami.",
+  "sv": "Vi har en ny kompis i läsecirkeln."
+ },
+ {
+  "id": "adjf-025",
+  "topic": "adjf",
+  "rule": "adjf-irr",
+  "q": "Ma grand-mère est [heureuse] de revoir le Sénégal.",
+  "alt": [
+   "heureux",
+   "heureuxe",
+   "heureuses"
+  ],
+  "why": "Adjektiv på -eux får -euse i femininum: heureuse.",
+  "sv": "Min mormor är glad att få se Senegal igen."
+ },
+ {
+  "id": "adjf-026",
+  "topic": "adjf",
+  "rule": "adjf-irr",
+  "q": "Monique est une fille très [sportive].",
+  "alt": [
+   "sportif",
+   "sportifve",
+   "sportives"
+  ],
+  "why": "Adjektiv på -if får -ive i femininum: sportive.",
+  "sv": "Monique är en väldigt sportig tjej."
+ },
+ {
+  "id": "adjf-027",
+  "topic": "adjf",
+  "rule": "adjf-irr",
+  "q": "Ta sœur est vraiment [gentille].",
+  "alt": [
+   "gentil",
+   "gentile",
+   "gentils"
+  ],
+  "why": "Gentil dubblar l:et i femininum: gentille.",
+  "sv": "Din syster är verkligen snäll."
+ },
+ {
+  "id": "adjf-028",
+  "topic": "adjf",
+  "rule": "adjf-irr",
+  "q": "La vue sur le mont Blanc est très [belle].",
+  "alt": [
+   "beau",
+   "bel",
+   "beaux"
+  ],
+  "why": "Vue är femininum: belle.",
+  "sv": "Utsikten över Mont Blanc är väldigt vacker."
+ },
+ {
+  "id": "adjf-029",
+  "topic": "adjf",
+  "rule": "adjf-irr",
+  "q": "Sur l'île de Gorée, il y a une [vieille] maison rose.",
+  "alt": [
+   "vieux",
+   "vieil",
+   "vieilles"
+  ],
+  "why": "Maison är femininum singular: vieille.",
+  "sv": "På Gorée finns det ett gammalt rosa hus."
+ },
+ {
+  "id": "adjf-030",
+  "topic": "adjf",
+  "rule": "adjf-irr",
+  "q": "Elle est [fière] de son premier livre.",
+  "alt": [
+   "fier",
+   "fiers",
+   "fièr"
+  ],
+  "why": "Fier får -ère i femininum: fière, med accent grave.",
+  "sv": "Hon är stolt över sin första bok."
+ },
+ {
+  "id": "maj-001",
+  "topic": "maj",
+  "rule": "maj-nom",
+  "q": "Beaucoup de [Sénégalais] vivent à Paris.",
+  "alt": [
+   "sénégalaises",
+   "Sénégal"
+  ],
+  "why": "Här betyder ordet personer (senegaleser), och invånare skrivs med stor bokstav: les Sénégalais.",
+  "sv": "Många senegaleser bor i Paris."
+ },
+ {
+  "id": "maj-002",
+  "topic": "maj",
+  "rule": "maj-nom",
+  "q": "Les [Suédois] adorent la neige.",
+  "alt": [
+   "suédoise",
+   "Suède"
+  ],
+  "why": "Les Suédois = svenskarna, personer. Invånare skrivs med stor bokstav på franska.",
+  "sv": "Svenskarna älskar snö."
+ },
+ {
+  "id": "maj-003",
+  "topic": "maj",
+  "rule": "maj-nom",
+  "q": "Aminata est une [Africaine] qui vit en France.",
+  "alt": [
+   "africain",
+   "Afrique"
+  ],
+  "why": "Une Africaine = en afrikansk kvinna, en person. Därför stor bokstav.",
+  "sv": "Aminata är en afrikanska som bor i Frankrike."
+ },
+ {
+  "id": "maj-004",
+  "topic": "maj",
+  "rule": "maj-nom",
+  "q": "Mon voisin est un [Français] de Lyon.",
+  "alt": [
+   "française",
+   "France"
+  ],
+  "why": "Un Français = en fransman, en person. Substantiv för invånare får stor bokstav.",
+  "sv": "Min granne är en fransman från Lyon."
+ },
+ {
+  "id": "maj-005",
+  "topic": "maj",
+  "rule": "maj-nom",
+  "q": "Les [Ivoiriens] parlent français et beaucoup d'autres langues.",
+  "alt": [
+   "ivoirien",
+   "Côte d'Ivoire"
+  ],
+  "why": "Les Ivoiriens = invånarna i Elfenbenskusten. Personer får stor bokstav.",
+  "sv": "Ivorianerna talar franska och många andra språk."
+ },
+ {
+  "id": "maj-006",
+  "topic": "maj",
+  "rule": "maj-nom",
+  "q": "À Marseille, elle a rencontré une [Algérienne] très sympa.",
+  "alt": [
+   "algérien",
+   "Algérie"
+  ],
+  "why": "Une Algérienne är en person, så stor bokstav. Algérien är maskulinum och passar inte efter une.",
+  "sv": "I Marseille träffade hon en jättetrevlig algeriska."
+ },
+ {
+  "id": "maj-007",
+  "topic": "maj",
+  "rule": "maj-nom",
+  "q": "Les [Parisiens] prennent souvent le métro.",
+  "alt": [
+   "parisien",
+   "Paris"
+  ],
+  "why": "Les Parisiens = parisarna, personer. Invånare i städer skrivs också med stor bokstav.",
+  "sv": "Parisarna åker ofta tunnelbana."
+ },
+ {
+  "id": "maj-008",
+  "topic": "maj",
+  "rule": "maj-adj",
+  "q": "Senghor est un poète [sénégalais] très connu.",
+  "alt": [
+   "Sénégalaise",
+   "Sénégal"
+  ],
+  "why": "Här är ordet ett adjektiv som beskriver poète. Adjektiv skrivs med liten bokstav.",
+  "sv": "Senghor är en mycket känd senegalesisk poet."
+ },
+ {
+  "id": "maj-009",
+  "topic": "maj",
+  "rule": "maj-adj",
+  "q": "J'adore la cuisine [marocaine].",
+  "alt": [
+   "Marocain",
+   "Maroc"
+  ],
+  "why": "Adjektiv som beskriver cuisine: liten bokstav, och -e eftersom cuisine är femininum.",
+  "sv": "Jag älskar marockansk mat."
+ },
+ {
+  "id": "maj-010",
+  "topic": "maj",
+  "rule": "maj-adj",
+  "q": "Oscar est un lycéen [suédois].",
+  "alt": [
+   "Suédoise",
+   "Suède"
+  ],
+  "why": "Suédois beskriver lycéen och är ett adjektiv: liten bokstav.",
+  "sv": "Oscar är en svensk gymnasieelev."
+ },
+ {
+  "id": "maj-011",
+  "topic": "maj",
+  "rule": "maj-adj",
+  "q": "Youssou N'Dour est un chanteur [africain] célèbre.",
+  "alt": [
+   "Africaine",
+   "Afrique"
+  ],
+  "why": "Africain beskriver chanteur: adjektiv, liten bokstav, maskulinum.",
+  "sv": "Youssou N'Dour är en berömd afrikansk sångare."
+ },
+ {
+  "id": "maj-012",
+  "topic": "maj",
+  "rule": "maj-adj",
+  "q": "Elle lit un roman [français] en ce moment.",
+  "alt": [
+   "Française",
+   "France"
+  ],
+  "why": "Français beskriver roman: adjektiv, liten bokstav. Roman är maskulinum.",
+  "sv": "Hon läser en fransk roman just nu."
+ },
+ {
+  "id": "maj-013",
+  "topic": "maj",
+  "rule": "maj-adj",
+  "q": "Mes amis [belges] viennent de Bruxelles.",
+  "alt": [
+   "Belge",
+   "Belgique"
+  ],
+  "why": "Belges beskriver amis: adjektiv med liten bokstav, och -s för plural.",
+  "sv": "Mina belgiska vänner kommer från Bryssel."
+ },
+ {
+  "id": "maj-014",
+  "topic": "maj",
+  "rule": "maj-adj",
+  "q": "Ma grand-mère est [algérienne], mais elle vit à Marseille.",
+  "alt": [
+   "Algérien",
+   "Algérie"
+  ],
+  "why": "Efter être är nationaliteten ett adjektiv: liten bokstav. Grand-mère är femininum, så -ne.",
+  "sv": "Min mormor är algerisk, men hon bor i Marseille."
+ },
+ {
+  "id": "maj-015",
+  "topic": "maj",
+  "rule": "maj-langue",
+  "q": "Au Sénégal, beaucoup de gens parlent le [wolof].",
+  "alt": [
+   "Sénégalais",
+   "Wolofs"
+  ],
+  "why": "Språk skrivs med liten bokstav på franska: le wolof, le français. Les Sénégalais och les Wolofs är personer, inte språk.",
+  "sv": "I Senegal talar många wolof."
+ },
+ {
+  "id": "maj-016",
+  "topic": "maj",
+  "rule": "maj-langue",
+  "q": "J'apprends le [français] depuis trois ans.",
+  "alt": [
+   "Française",
+   "France"
+  ],
+  "why": "Le français = franska språket, med liten bokstav. France är landet, och française är femininum.",
+  "sv": "Jag har lärt mig franska i tre år."
+ },
+ {
+  "id": "maj-017",
+  "topic": "maj",
+  "rule": "maj-langue",
+  "q": "Mon père parle [suédois] et [anglais].",
+  "alt": [
+   "Suédoise … Anglaise",
+   "Suède … Angleterre"
+  ],
+  "why": "Språk skrivs med liten bokstav och är alltid maskulinum: suédois, anglais. Suède och Angleterre är länderna.",
+  "sv": "Min pappa talar svenska och engelska."
+ },
+ {
+  "id": "maj-018",
+  "topic": "maj",
+  "rule": "maj-langue",
+  "q": "Le cours [d'espagnol] commence à dix heures.",
+  "alt": [
+   "d'Espagnole",
+   "d'Espagne"
+  ],
+  "why": "Le cours d'espagnol = spansklektionen. Språket har liten bokstav. D'Espagne betyder från Spanien.",
+  "sv": "Spansklektionen börjar klockan tio."
+ },
+ {
+  "id": "maj-019",
+  "topic": "maj",
+  "rule": "maj-langue",
+  "q": "Est-ce que tu comprends [l'arabe] ?",
+  "alt": [
+   "l'Arabie",
+   "les Arabes"
+  ],
+  "why": "L'arabe = arabiska språket, med liten bokstav. L'Arabie är ett land (Arabien) och les Arabes är personer.",
+  "sv": "Förstår du arabiska?"
+ },
+ {
+  "id": "maj-020",
+  "topic": "maj",
+  "rule": "maj-langue",
+  "q": "En Belgique, on parle [néerlandais], français et allemand.",
+  "alt": [
+   "Néerlandaise",
+   "Pays-Bas"
+  ],
+  "why": "Språk skrivs med liten bokstav och är alltid maskulinum: le néerlandais. Pays-Bas är landet Nederländerna.",
+  "sv": "I Belgien talar man nederländska, franska och tyska."
+ }
+]

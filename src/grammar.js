@@ -175,7 +175,11 @@ TYPE.gram=c=>{const x=gramById(c.ref);
     ask:x.type==="adj"?`Skriv adjektivet <b ${lang()}>${esc(x.stem)}</b> med rätt ändelse.`:multi?"Skriv orden som saknas, i ordning.":"Skriv det som saknas.",
     placeholder:x.type==="adj"?x.stem+"…":"Skriv här",accents:L.accents,
     // Grammatik rättas exakt: dem och den skiljer sig bara på en bokstav, så "nästan rätt" finns inte
-    check:v=>{const n=gnorm(v); if(!n) return {r:"empty"}; return {r:acc.includes(n)||(x.type==="adj"&&n.replace(/^-/,"")===x.end)?"right":"wrong"};},
+    check:v=>{const n=gnorm(v); if(!n) return {r:"empty"};
+      // I "stor eller liten bokstav" räknas versalerna, annars inte
+      if(x.topic==="maj"){ const e=s=>s.replace(/…/g," ").replace(/[.,!?;:]/g," ").replace(/\s+/g," ").trim();
+        return {r:[x.ans,...(x.acc||[])].map(e).includes(e(v))?"right":"wrong"}; }
+      return {r:acc.includes(n)||(x.type==="adj"&&n.replace(/^-/,"")===x.end)?"right":"wrong"};},
     answer:esc(x.ans),explain:gramExplain(x),say:gramSay(x),onAnswer:fillGaps(x),alwaysAnswer:multi};
 };
 RESTORE.gram=ref=>gramById(ref)?{}:null;

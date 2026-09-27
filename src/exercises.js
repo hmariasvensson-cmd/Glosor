@@ -619,7 +619,8 @@ function writeChecks(p,text){
   const n=tok(text).length, need=p.need||{}, out=[];
   out.push({ok:n>=p.min&&n<=p.max,label:`Antal ord: ${n} (mål ${p.min}–${p.max})`});
   if(need.connectors){const f=(L.connectors||[]).filter(c=>hasWord(text,c)); out.push({ok:f.length>=need.connectors,label:`Bindeord: ${f.length} av ${need.connectors}${f.length?` (${f.join(", ")})`:""}`});}
-  if(need.chapterWords&&p.sec){const f=WORDS.filter(w=>w.sec===p.sec&&usesWord(text,w)).map(w=>w.t);
+  // Kapitelorden hoppas över om kapitlet saknas (t.ex. när bokmappen inte finns)
+  if(need.chapterWords&&p.sec&&WORDS.some(w=>w.sec===p.sec)){const f=WORDS.filter(w=>w.sec===p.sec&&usesWord(text,w)).map(w=>w.t);
     out.push({ok:f.length>=need.chapterWords,label:`Ord från kapitlet: ${f.length} av ${need.chapterWords}${f.length?` (${f.slice(0,5).join(", ")})`:""}`});}
   (need.tenses||[]).forEach(t=>{const rx=(L.tenseCheck||{})[t]; if(rx) out.push({ok:rx(text),label:`${t[0].toUpperCase()+t.slice(1)} verkar finnas med`});});
   return out;
