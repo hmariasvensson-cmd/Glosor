@@ -178,7 +178,8 @@ TYPE.gram=c=>{const x=gramById(c.ref);
     // Grammatik rättas exakt: dem och den skiljer sig bara på en bokstav, så "nästan rätt" finns inte
     check:v=>{const n=gnorm(v); if(!n) return {r:"empty"};
       // I "stor eller liten bokstav" räknas versalerna, annars inte
-      if(x.topic==="maj"){ const e=s=>s.replace(/…/g," ").replace(/[.,!?;:]/g," ").replace(/\s+/g," ").trim();
+      // (även i andra frågor där ett felalternativ bara skiljer sig i stor/liten bokstav, t.ex. bokens övningar)
+      if(x.topic==="maj"||(x.alt||[]).some(a=>a.toLowerCase()===x.ans.toLowerCase())){ const e=s=>s.replace(/…/g," ").replace(/[.,!?;:]/g," ").replace(/\s+/g," ").trim();
         return {r:[x.ans,...(x.acc||[])].map(e).includes(e(v))?"right":"wrong"}; }
       return {r:acc.includes(n)||(x.type==="adj"&&n.replace(/^-/,"")===x.end)?"right":"wrong"};},
     answer:esc(x.ans),explain:gramExplain(x),say:gramSay(x),onAnswer:fillGaps(x),alwaysAnswer:multi};

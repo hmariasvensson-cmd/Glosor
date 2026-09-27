@@ -108,7 +108,9 @@ def check_grammar(items, where):
         for a in x.get("alt", []):
             if len(a.split(" … ")) != len(gaps):
                 errors.append(f"{where}: {i} alternativet '{a}' har fel antal delar")
-            same = a == ans if x.get("topic") == "maj" else a.lower() == ans.lower()   # i "maj" räknas versalerna
+            # I "maj", och när felalternativen bara skiljer sig i stor/liten bokstav, räknas versalerna
+            cased = x.get("topic") == "maj" or any(b.lower() == ans.lower() and b != ans for b in x.get("alt", []))
+            same = a == ans if cased else a.lower() == ans.lower()
             if same or a in x.get("acc", []):
                 errors.append(f"{where}: {i} alternativet '{a}' är samma som svaret")
         m = x.get("meta") or {}

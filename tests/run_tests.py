@@ -157,6 +157,10 @@ setTimeout(async()=>{ try{
   q("#chapter").value="k4"; q("#chapter").dispatchEvent(new Event("change"));
   ok("kapitlets grammatik kommer först", chapterTopics().includes("pron")&&!chapterTopics().includes("subj"), chapterTopics().join());
   { const g=gramItems("mix",10).map(x=>gramById(x.ref).topic); ok("blandad grammatik tar hälften från kapitlet", g.filter(t=>chapterTopics().includes(t)).length>=4, g.join()); }
+  { const x=Object.values(gramBank()).find(x=>x.rule==="bok-oversatt");   // bara när den privata bokmappen finns
+    if(x){ sess=null; beginQuiz("gram",[{k:"gram",id:"gram:"+x.id,ref:x.id,t:"type",canType:true}],{label:"t"});
+      ok("bokens översättning: svensk mening och instruktion", q("#app").textContent.includes(x.q)&&q("#app").textContent.includes("Översätt"));
+      ok("bokens övningar kommer först i kapitel 4", chapterTopics().includes("bok")); sess=null; renderStart(); } }
   q("#chapter").value=""; q("#chapter").dispatchEvent(new Event("change")); ok("inget kapitel valt", !S.chapter);
   { const bad=(C().prompts||[]).filter(p=>!writeChecks(p,p.model).every(c=>c.ok)).map(p=>p.id+": "+writeChecks(p,p.model).filter(c=>!c.ok).map(c=>c.label).join("; "));
     ok("franska: modelltexterna klarar checklistan", !bad.length, bad.join(" | ")); }

@@ -2,6 +2,13 @@
 
 Punkter som har flyttats från [`BACKLOG.md`](BACKLOG.md) när de byggdes. **Referens** anger backloggens rubrik och prioritet. **Commit** anger var ändringen finns i git. **Publicerat** anger versionen av artefakten på https://claude.ai/artifact/YBQv8j4qXQQLuPwLAWt5mP.
 
+## 2026-09-27, del 8 (publicerat som version 16)
+
+| Referens | Vad som byggdes | Commit |
+|---|---|---|
+| Tyck till · P1 *Tydligare gruppering av övningarna* (önskemål från eleven i Franska 3) | "Fler övningar" på startsidan visar fem knappar: Ord och meningar, Lyssna och läsa, Grammatik, Språkprov och Tala och skriva. Varje knapp öppnar en egen sida med gruppens övningar. Eleven har fått svar i Tyck till. | `961594f` |
+| Önskemål från föräldern: *bokens egna texter och övningar* (Kurser · P1 *Escalade*) | Fotona av s. 40–67 är sparade i den privata mappen `languages/fr/book/foton/`. Bokens texter och övningar är inskrivna i `book/content/`, som inte finns i det publika repot. Det blev 8 lästexter med svensk översättning, glosor och frågor (bokens Vrai ou faux där det finns), 17 skrivuppgifter av bokens öppna frågor och diskussionsfrågor (med Claudes kommentarer) och 116 frågor under Grammatik → Bokens övningar (översätt, fyll i, stor bokstav, à + le, possessiva). Bokens övningar kommer först när kapitel 3 eller 4 är valt. Hörövningar som kräver bokens ljud och övningar som bara går att göra i par är inte med. Arbetssättet står i `docs/BOK.md`. | se nästa rad |
+
 ## 2026-09-27, del 7 (publicerat som version 15)
 
 | Referens | Vad som byggdes | Commit |
