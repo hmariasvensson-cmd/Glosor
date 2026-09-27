@@ -2,6 +2,17 @@
 
 Punkter som har flyttats från [`BACKLOG.md`](BACKLOG.md) när de byggdes. **Referens** anger backloggens rubrik och prioritet. **Commit** anger var ändringen finns i git. **Publicerat** anger versionen av artefakten på https://claude.ai/artifact/YBQv8j4qXQQLuPwLAWt5mP.
 
+## 2026-09-27, del 2 (publicerat som version 8)
+
+| Referens | Vad som byggdes | Commit |
+|---|---|---|
+| Önskemål från föräldern: *välja alla ord i en text* (hör också till Repetition · P3 *Mina ord*) | I läs-, hör- och kulturtexterna går alla ord att trycka på, inte bara de som har en färdig översättning. Ett tryck till tar bort markeringen. De valda orden samlas i en lista längst ned på skärmen med grundform, betydelse och status ("Finns redan i Mina ord", "Du övar redan på ordet"). För ord utan översättning skriver man betydelsen själv. Sedan läggs alla till i Mina ord på en gång. Listan går att fälla ihop. | `0398a77` |
+| Franska · P2 *Grammatikövningar för franska* | 322 frågor i `languages/fr/content/grammar-*.json` (format i `languages/fr/content/GRAMMATIK-SPEC.md`): objektspronomen, passé composé med être/avoir och kongruens, du/de la/de, prepositioner med länder och städer, qui/que/où/dont, subjonctif, si-satser, jämförelser, negation och frågor (de två sista med ordbrickor). Hitta felet och Blandad grammatik fungerar också. | `0398a77`, `75eea14` |
+| Franska · P2 *Tatoeba-meningar* | `tools/tatoeba.py` hämtar upp till två korta meningar med svensk översättning per ord. Just nu finns 248 meningar till 136 ord. De används i diktamen, översättning och ordföljd, med källhänvisning (Tatoeba-id, användare, CC BY 2.0 FR). | `0398a77`, `a1e0679` |
+| Tyska · P2 *Granskning av grammatikfrågorna* (delvis) | Knappen "Fel i frågan? Rapportera" finns efter varje svar. Rapporterna sparas i `reports/` i artefaktens db, där Claude kan läsa dem med ArtifactData. Själva granskningen av en lärare återstår. | `786f8cc` |
+| Repetition · P3 *Egen minnesregel per svårt ord* | På lärokortet för ett svårt ord kan man skriva en egen minnesregel. Den visas sedan varje gång ordet kommer tillbaka. | `29a04f6` |
+| Konton · P3 *Topplista med längre historik* | Vinnarna de fem senaste veckorna visas under "Tidigare veckor". | `75eea14` |
+
 ## 2026-09-27 (publicerat som version 6 och 7)
 
 ### Repetition och inlärning
