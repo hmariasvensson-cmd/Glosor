@@ -519,7 +519,10 @@ function writeScreen(id){
 /* ---------- Dagens pass och den blandade rundan ---------- */
 function dailyPanel(newW,due){
   const n=newW.length+due.length;
+  const goal=S.goal||0, min=goal?myStats().min:0;
   return `<section class="panel daily"><h2>Dagens pass</h2>
+    ${goal?`<div class="goal"><div class="meta"><span>Veckans mål</span><span>${min} av ${goal} min${min>=goal?" ✓":""}</span></div>
+      <div class="bar"><i style="width:${Math.min(100,Math.round(100*min/goal))}%"></i></div></div>`:""}
     <p class="plan">${n?`Först glosorna (${n} frågor), sedan en blandad runda`:"En blandad runda"} med diktamen, verb, ordföljd, ${hasGrammar()?"grammatik, ":""}samtalsfraser och meningar. Ungefär 15 minuter.</p>
     <button class="btn" id="daily">Starta dagens pass</button></section>`;
 }

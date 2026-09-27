@@ -171,7 +171,10 @@ setTimeout(()=>{ try{
   { const keep=S.log.slice(); for(let i=0;i<1100;i++) S.log.push({d:Date.now()-i*1000,dur:10,right:1,total:1,kind:"dict"}); save();
     ok("gammal logg sammanfattas", S.log.length===1000&&S.logOld&&S.logOld.dur>0, S.log.length+" "+JSON.stringify(S.logOld)); S.log=keep; delete S.logOld; save(); }
   renderStart(); q('[data-gy="1"]').click(); ok("Gy25-namn", q("#coursechip").textContent.includes("fortsättning, nivå 1")); q('[data-gy="0"]').click();
-  setView("board"); setTimeout(()=>{ ok("topplista", !!q(".brow")); finish(); },400);
+  renderStart(); q('[data-goal="90"]').click(); ok("veckomål visas i dagens pass", q(".daily").textContent.includes("av 90 min"));
+  BOARD.docs["u_other"]={nick:"Kompis",langs:{fr:{week:weekStart(weekStart(Date.now())-3*864e5),min:42,q:100,days:3,streak:0,last:0}},t:1};
+  setView("board"); setTimeout(()=>{ ok("topplista", !!q(".brow")); ok("förra veckans vinnare", (q(".winner")||{}).textContent==="Förra veckan vann Kompis med 42 minuter.", (q(".winner")||{}).textContent);
+    ok("veckomål i topplistan", q(".brow.me").textContent.includes("veckomålet")===(myStats().min>=90)); finish(); },600);
  }catch(e){ ok("undantag", false, e.message+" "+(e.stack||"").split("\n")[1]); finish(); }
 },1500);
 function finish(){ ok("inga JavaScript-fel", !__err.length, __err.join(" ; "));

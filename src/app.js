@@ -258,6 +258,8 @@ function renderStart(){
       <div class="field"><span class="label">Nya ord</span>
         <div class="seg" role="group" aria-label="Nya ord"><button data-lf="0" aria-pressed="${!S.listenFirst}">Visa direkt</button><button data-lf="1" aria-pressed="${!!S.listenFirst}">Lyssna först</button></div></div>
     </div>
+    <div class="field"><span class="label">Veckomål</span>
+      <div class="seg" role="group" aria-label="Veckomål">${[0,60,90,120,150].map(n=>`<button data-goal="${n}" aria-pressed="${(S.goal||0)===n}">${n?n+" min":"Inget"}</button>`).join("")}</div></div>
     ${L.courseGy25?`<div class="field"><span class="label">Läroplan</span>
       <div class="seg" role="group" aria-label="Läroplan"><button data-gy="0" aria-pressed="${!S.gy25}">Gy11 (${esc(L.course)})</button><button data-gy="1" aria-pressed="${!!S.gy25}">Gy25</button></div>
       <p class="foot">Gy25 gäller den som började gymnasiet efter 1 juli 2025. Där heter kursen ${esc(L.courseGy25)}.</p></div>`:""}
@@ -274,6 +276,7 @@ function renderStart(){
   app.querySelectorAll("[data-m]").forEach(b=>b.onclick=()=>{S.mode=b.dataset.m;save();renderStart()});
   app.querySelectorAll("[data-slow]").forEach(b=>b.onclick=()=>{S.slow=b.dataset.slow==="1";save();renderStart()});
   app.querySelectorAll("[data-lf]").forEach(b=>b.onclick=()=>{S.listenFirst=b.dataset.lf==="1";save();renderStart()});
+  app.querySelectorAll("[data-goal]").forEach(b=>b.onclick=()=>{S.goal=+b.dataset.goal;save();boardPush();renderStart()});
   app.querySelectorAll("[data-gy]").forEach(b=>b.onclick=()=>{S.gy25=b.dataset.gy==="1";save();$("#coursechip").textContent=`${courseName()} · nivå ${L.level||""}`;renderStart()});
   if($("#daily")) $("#daily").onclick=()=>startDaily(newW,due);
   $("#go").onclick=()=>startSession(newW,due);
@@ -308,7 +311,9 @@ function myStats(){
   const w0=weekStart(Date.now()), wk=S.log.filter(l=>l.d>=w0), days=new Set(S.log.map(l=>dayKey(l.d)));
   let streak=0; const d=new Date(); d.setHours(12,0,0,0); if(!days.has(dayKey(d))) d.setDate(d.getDate()-1);
   while(days.has(dayKey(d))){streak++; d.setDate(d.getDate()-1)}
-  return {week:w0, min:Math.round(wk.reduce((a,l)=>a+(l.dur||0),0)/60), q:wk.reduce((a,l)=>a+(l.total||0),0),
+  const pw=weekStart(w0-3*864e5), pk=S.log.filter(l=>l.d>=pw&&l.d<w0);   // förra veckan
+  return {week:w0, min:Math.round(wk.reduce((a,l)=>a+(l.dur||0),0)/60), q:wk.reduce((a,l)=>a+(l.total||0),0), goal:S.goal||0,
+    prev:{week:pw, min:Math.round(pk.reduce((a,l)=>a+(l.dur||0),0)/60), q:pk.reduce((a,l)=>a+(l.total||0),0)},
     days:new Set(wk.map(l=>dayKey(l.d))).size, streak, last:S.log.length?S.log[S.log.length-1].d:0,
     learned:WORDS.filter(isLearned).length, mastered:WORDS.filter(isMastered).length};
 }
@@ -338,11 +343,13 @@ async function renderBoard(){
     app.innerHTML=`<section class="panel"><h2>Topplista</h2><p class="plan">Topplistan fungerar när du är inloggad på claude.ai och har fått tillgång till glosprogrammet. Då sparas också alla dina framsteg på ditt konto.</p></section>`;
     return;
   }
-  const w0=weekStart(Date.now());
+  const w0=weekStart(Date.now()), pw=weekStart(w0-3*864e5);
   const rows=Object.entries(BOARD.docs).map(([id,d])=>{
-    const r={id,nick:d.nick||"",min:0,q:0,days:0,streak:0,langs:[]};
+    const r={id,nick:d.nick||"",min:0,q:0,days:0,streak:0,langs:[],prev:0,goals:[]};
     Object.entries(d.langs||{}).forEach(([k,x])=>{
-      if(x.week===w0){r.min+=x.min||0; r.q+=x.q||0; r.days=Math.max(r.days,x.days||0);}
+      if(x.week===w0){r.min+=x.min||0; r.q+=x.q||0; r.days=Math.max(r.days,x.days||0); if(x.goal) r.goals.push(x.min>=x.goal);}
+      // Förra veckans minuter: från förra veckans rad om personen inte har övat den här veckan än, annars från prev
+      if(x.week===pw) r.prev+=x.min||0; else if(x.prev&&x.prev.week===pw) r.prev+=x.prev.min||0;
       if(x.last&&streakAlive(x.last)) r.streak=Math.max(r.streak,x.streak||0);
       r.langs.push((LANGUAGES[k]||{}).name||k);
     });
@@ -351,11 +358,14 @@ async function renderBoard(){
   let ps={}; try{ps=await CLOUD.user.profiles(rows.map(r=>r.id))}catch(e){}
   if(curView!=="board"||sess) return;
   const mine=BOARD.docs[CLOUD.uid]||{};
+  const nameOf=r=>r.nick||(ps[r.id]&&ps[r.id].name)||"Någon";
+  const win=rows.filter(r=>r.prev>0).sort((a,b)=>b.prev-a.prev)[0];
   app.innerHTML=`<section class="panel"><h2>Topplista den här veckan</h2>
     <p class="plan">Minuter och frågor sedan måndag, i alla språk. Dagar i rad räknas om man övar varje dag.</p>
+    ${win?`<p class="winner">Förra veckan vann <b>${esc(nameOf(win))}</b> med ${win.prev} minuter.</p>`:""}
     ${rows.length?`<ol class="board">${rows.map((r,i)=>`<li class="brow${r.id===CLOUD.uid?" me":""}">
       <span class="rank">${i+1}</span>
-      <span class="who"><b>${esc(r.nick||(ps[r.id]&&ps[r.id].name)||"Någon")}${r.id===CLOUD.uid?" (du)":""}</b><small>${esc(r.langs.join(", "))}</small></span>
+      <span class="who"><b>${esc(nameOf(r))}${r.id===CLOUD.uid?" (du)":""}</b><small>${esc(r.langs.join(", "))}${r.goals.length&&r.goals.every(Boolean)?" · veckomålet klart ✓":""}</small></span>
       <span class="num"><b>${r.min}</b><small>min</small></span>
       <span class="num"><b>${r.q}</b><small>frågor</small></span>
       <span class="num"><b>${r.streak}</b><small>dagar i rad</small></span></li>`).join("")}</ol>`
