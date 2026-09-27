@@ -1,0 +1,131 @@
+[
+  {
+    "id": "t4-s-t1",
+    "sec": "t1",
+    "title": "Ein chaotischer Montag",
+    "text": "Letzten Montag [habe|bin|hat] ich verschlafen. Mein Wecker hat nicht geklingelt, [weil|denn|deshalb] der Akku von meinem Handy leer war. Erst um halb acht [bin|habe|ist] ich aufgewacht. Ich [musste|muss|müsste] mich sehr beeilen. Ich habe nicht gefrühstückt und [habe|bin|hat] mir nur schnell die Zähne geputzt. [Dann|Weil|Obwohl] bin ich zur Haltestelle gelaufen, aber der Bus war schon weg. [Deshalb|Denn|Weil] habe ich meine Mutter angerufen. Sie [hatte|hat|hätte] an diesem Tag zum Glück frei und hat mich zur Schule gefahren. Trotzdem bin ich eine Viertelstunde zu spät gekommen. Mein Lehrer war nicht böse, [aber|obwohl|deshalb] er hat gesagt: „Nächstes Mal [musst|musste|müsst] du pünktlich sein!“ Am Abend [bin|habe|hat] ich total müde ins Bett gegangen. [Bevor|Denn|Trotzdem] ich eingeschlafen bin, habe ich zwei Wecker gestellt.",
+    "gaps": [
+      {"cat": "tempus", "why": "Perfekt: verschlafen (försova sig) bildar perfekt med haben, och jag-formen är habe."},
+      {"cat": "bindeord", "why": "Verbet (war) står sist i satsen, alltså en bisats. Då passar weil = eftersom. Denn skulle ge rak ordföljd (denn der Akku war …) och deshalb omvänd ordföljd."},
+      {"cat": "tempus", "why": "Perfekt med sein: aufwachen är en förändring (från sovande till vaken), så det heter ich bin aufgewacht."},
+      {"cat": "tempus", "why": "Präteritum av modalverbet müssen: ich musste. Müsste är konjunktiv och betyder skulle behöva."},
+      {"cat": "tempus", "why": "Perfekt med haben: sich die Zähne putzen bildar perfekt med haben, precis som alla reflexiva verb."},
+      {"cat": "bindeord", "why": "Verbet (bin) kommer direkt efter luckan, alltså omvänd ordföljd. Då passar adverbet dann = sedan. Weil och obwohl kräver att verbet står sist."},
+      {"cat": "bindeord", "why": "Verbet (habe) kommer direkt efter luckan, alltså omvänd ordföljd. Deshalb = därför. Denn ger rak ordföljd och weil verbet sist."},
+      {"cat": "tempus", "why": "Präteritum av haben: sie hatte. Berättelsen står i dåtid, så presens (hat) passar inte, och hätte är konjunktiv."},
+      {"cat": "bindeord", "why": "Efter luckan kommer subjekt + verb (er hat), alltså rak ordföljd. Då passar aber = men. Obwohl kräver verbet sist och deshalb omvänd ordföljd."},
+      {"cat": "tempus", "why": "Presens, du-form av müssen: du musst. Läraren pratar om nästa gång, alltså inte dåtid (musste)."},
+      {"cat": "tempus", "why": "Perfekt med sein: gehen är ett rörelseverb, så det heter ich bin … gegangen."},
+      {"cat": "bindeord", "why": "Verbet (bin) står sist, alltså en bisats. Bevor = innan. Denn och trotzdem skulle ge en annan ordföljd."}
+    ],
+    "sv": "I måndags försov jag mig. Min väckarklocka ringde inte, eftersom batteriet i min mobil var slut. Jag vaknade inte förrän halv åtta. Jag var tvungen att skynda mig mycket. Jag åt ingen frukost och borstade bara tänderna snabbt. Sedan sprang jag till hållplatsen, men bussen hade redan gått. Därför ringde jag min mamma. Som tur var var hon ledig den dagen och körde mig till skolan. Ändå kom jag en kvart för sent. Min lärare var inte arg, men han sa: ”Nästa gång måste du komma i tid!” På kvällen gick jag och lade mig jättetrött. Innan jag somnade ställde jag två väckarklockor."
+  },
+  {
+    "id": "t4-s-t3",
+    "sec": "t3",
+    "title": "Papas Geburtstag im Restaurant",
+    "text": "Am Samstag [hatte|hat|hätte] mein Vater Geburtstag, [deshalb|weil|obwohl] sind wir zusammen in ein italienisches Restaurant gegangen. Der Kellner [hat|ist|haben] uns die Speisekarte gebracht, und wir haben lange überlegt. Als Vorspeise [haben|sind|hat] wir Bruschetta bestellt. Mein Bruder [wollte|will|wolle] unbedingt eine Pizza mit Meeresfrüchten, [aber|obwohl|deshalb] die war ziemlich teuer. Er hat sie trotzdem bestellt. Ich habe Nudeln mit Tomatensoße genommen, und sie [waren|sind|war] sehr lecker. Leider [hat|ist|haben] meine kleine Schwester ihr Glas Saft umgeworfen. Der Kellner [war|ist|wäre] aber sehr nett und hat sofort alles sauber gemacht. Zum Nachtisch haben wir Tiramisu gegessen, [denn|weil|deshalb] das ist Papas Lieblingsdessert. Am Ende [hat|ist|hatte] mein Vater die Rechnung bezahlt und dem Kellner zehn Euro Trinkgeld gegeben. [Obwohl|Trotzdem|Denn] das Essen teuer war, waren alle sehr zufrieden. Wir [sind|haben|ist] erst um elf Uhr nach Hause gekommen.",
+    "gaps": [
+      {"cat": "tempus", "why": "Präteritum av haben: er hatte. Berättelsen utspelar sig i dåtid (am Samstag), och hätte är konjunktiv."},
+      {"cat": "bindeord", "why": "Verbet (sind) kommer direkt efter luckan, alltså omvänd ordföljd. Då passar deshalb = därför. Weil och obwohl kräver att verbet står sist."},
+      {"cat": "tempus", "why": "Perfekt med haben: bringen tar ett objekt (die Speisekarte) och bildar perfekt med haben. Der Kellner är singular, alltså hat."},
+      {"cat": "tempus", "why": "Perfekt med haben: bestellen bildar perfekt med haben, och vi-formen är haben."},
+      {"cat": "tempus", "why": "Präteritum av modalverbet wollen: er wollte. Will är presens och wolle en annan form (konjunktiv I)."},
+      {"cat": "bindeord", "why": "Efter luckan kommer subjekt + verb (die war), alltså rak ordföljd. Då passar aber = men. Obwohl kräver verbet sist och deshalb omvänd ordföljd."},
+      {"cat": "tempus", "why": "Präteritum av sein i plural: Nudeln är plural (sie = de), alltså waren."},
+      {"cat": "tempus", "why": "Perfekt med haben: umwerfen (välta) tar ett objekt (ihr Glas) och bildar perfekt med haben."},
+      {"cat": "tempus", "why": "Präteritum av sein: er war. Berättelsen står i dåtid, och wäre är konjunktiv."},
+      {"cat": "bindeord", "why": "Efter luckan kommer subjekt + verb (das ist), alltså rak ordföljd. Då passar denn = för. Weil kräver verbet sist (weil das Papas Lieblingsdessert ist) och deshalb omvänd ordföljd."},
+      {"cat": "tempus", "why": "Perfekt med haben: bezahlen tar ett objekt (die Rechnung) och bildar perfekt med haben. Hatte skulle bli pluskvamperfekt, som inte passar här."},
+      {"cat": "bindeord", "why": "Verbet (war) står sist, alltså en bisats. Obwohl = fast, trots att. Trotzdem skulle kräva omvänd ordföljd (Trotzdem war das Essen …)."},
+      {"cat": "tempus", "why": "Perfekt med sein: kommen är ett rörelseverb, och vi-formen är sind."}
+    ],
+    "sv": "I lördags fyllde min pappa år, därför gick vi tillsammans till en italiensk restaurang. Servitören kom med menyn, och vi funderade länge. Till förrätt beställde vi bruschetta. Min bror ville absolut ha en pizza med skaldjur, men den var ganska dyr. Han beställde den ändå. Jag tog pasta med tomatsås, och den var väldigt god. Tyvärr välte min lillasyster sitt glas juice. Servitören var dock väldigt snäll och torkade genast upp allt. Till efterrätt åt vi tiramisu, för det är pappas favoritdessert. Till slut betalade pappa notan och gav servitören tio euro i dricks. Fast maten var dyr var alla väldigt nöjda. Vi kom inte hem förrän klockan elva."
+  },
+  {
+    "id": "t4-s-t4",
+    "sec": "t4",
+    "title": "Mit dem Zug nach München",
+    "text": "Im Sommer [bin|habe|ist] ich mit meiner Freundin Sara nach München gefahren. Wir [wollten|wollen|wolltet] eine Woche in einer Jugendherberge übernachten. Am Bahnhof in Hamburg [haben|sind|hat] wir lange gewartet, [denn|weil|deshalb] unser Zug hatte vierzig Minuten Verspätung. [Als|Wenn|Wann] der ICE endlich kam, war er total voll. [Deshalb|Denn|Obwohl] mussten wir zwei Stunden im Gang stehen. In Frankfurt [mussten|müssen|musste] wir umsteigen, aber unser Anschluss war schon weg. Zum Glück [ist|hat|wäre] eine Stunde später der nächste Zug gekommen. Wir [sind|haben|ist] erst um elf Uhr abends in München angekommen. Die Jugendherberge war nicht weit vom Bahnhof, [aber|deshalb|obwohl] wir haben uns trotzdem verlaufen. Ein freundlicher Mann [hat|ist|haben] uns den Weg erklärt: „Gehen Sie hier geradeaus und dann an der Ampel links.“ [Obwohl|Trotzdem|Denn] die Reise so anstrengend war, hatten wir eine tolle Woche.",
+    "gaps": [
+      {"cat": "tempus", "why": "Perfekt med sein: fahren är ett rörelseverb utan objekt, så det heter ich bin … gefahren."},
+      {"cat": "tempus", "why": "Präteritum av modalverbet wollen, vi-form: wir wollten. Wolltet är ihr-formen."},
+      {"cat": "tempus", "why": "Perfekt med haben: warten är inget rörelseverb och bildar perfekt med haben, vi-form haben."},
+      {"cat": "bindeord", "why": "Efter luckan kommer subjekt + verb (unser Zug hatte), alltså rak ordföljd. Då passar denn = för. Weil kräver verbet sist och deshalb omvänd ordföljd."},
+      {"cat": "bindeord", "why": "En enstaka händelse i dåtid: då heter när als. Wenn används om upprepade händelser eller i nutid/framtid, och wann är ett frågeord."},
+      {"cat": "bindeord", "why": "Verbet (mussten) kommer direkt efter luckan, alltså omvänd ordföljd. Deshalb = därför. Denn ger rak ordföljd och obwohl verbet sist."},
+      {"cat": "tempus", "why": "Präteritum av modalverbet müssen, vi-form: wir mussten."},
+      {"cat": "tempus", "why": "Perfekt med sein: kommen är ett rörelseverb, och subjektet der nächste Zug är singular: ist … gekommen."},
+      {"cat": "tempus", "why": "Perfekt med sein: ankommen är ett rörelseverb, och vi-formen är sind."},
+      {"cat": "bindeord", "why": "Efter luckan kommer subjekt + verb (wir haben), alltså rak ordföljd. Då passar aber = men. Deshalb kräver omvänd ordföljd och obwohl verbet sist."},
+      {"cat": "tempus", "why": "Perfekt med haben: erklären tar ett objekt (den Weg) och bildar perfekt med haben. Ein Mann är singular, alltså hat."},
+      {"cat": "bindeord", "why": "Verbet (war) står sist, alltså en bisats. Obwohl = fast, trots att. Trotzdem skulle kräva omvänd ordföljd och denn rak ordföljd."}
+    ],
+    "sv": "I somras åkte jag med min kompis Sara till München. Vi skulle övernatta en vecka på ett vandrarhem. På stationen i Hamburg väntade vi länge, för vårt tåg var fyrtio minuter försenat. När ICE-tåget äntligen kom var det helt fullt. Därför fick vi stå i gången i två timmar. I Frankfurt var vi tvungna att byta, men vår anslutning hade redan gått. Som tur var kom nästa tåg en timme senare. Vi kom inte fram till München förrän klockan elva på kvällen. Vandrarhemmet låg inte långt från stationen, men vi gick vilse ändå. En vänlig man förklarade vägen för oss: ”Gå rakt fram här och sedan till vänster vid trafikljuset.” Fast resan var så jobbig hade vi en jättebra vecka."
+  },
+  {
+    "id": "t4-s-t6",
+    "sec": "t6",
+    "title": "Mein erstes Solo",
+    "text": "Seit fünf Jahren spiele ich Cello, und im Dezember [durfte|darf|dürfte] ich zum ersten Mal ein Solo im Schulkonzert spielen. Ich [habe|bin|hat] wochenlang jeden Tag geübt. Meine Lehrerin [war|ist|wäre] sehr streng, [aber|obwohl|deshalb] sie hat mir sehr geholfen. Bei der Generalprobe ist leider alles schiefgegangen: Ich [habe|bin|hat] zweimal den falschen Ton gespielt. [Deshalb|Denn|Weil] war ich am Abend vor dem Konzert sehr nervös und konnte nicht schlafen. [Als|Wenn|Wann] ich auf die Bühne kam, [hatte|habe|hätte] ich schreckliches Lampenfieber. Meine Hände [waren|sind|war] ganz kalt. Dann [habe|bin|hat] ich meine Familie im Publikum gesehen, und plötzlich war ich ruhiger. Ich [konnte|kann|könnte] das Stück fast ohne Fehler spielen. Am Ende haben alle laut geklatscht, und das Publikum [wollte|will|wollten] sogar eine Zugabe. [Obwohl|Trotzdem|Denn] ich so nervös war, war es der schönste Abend des Jahres.",
+    "gaps": [
+      {"cat": "tempus", "why": "Präteritum av modalverbet dürfen: ich durfte. Dürfte är konjunktiv och betyder ungefär torde."},
+      {"cat": "tempus", "why": "Perfekt med haben: üben (öva) bildar perfekt med haben, jag-form habe."},
+      {"cat": "tempus", "why": "Präteritum av sein: sie war. Berättelsen står i dåtid, och wäre är konjunktiv."},
+      {"cat": "bindeord", "why": "Efter luckan kommer subjekt + verb (sie hat), alltså rak ordföljd. Då passar aber = men. Obwohl kräver verbet sist och deshalb omvänd ordföljd."},
+      {"cat": "tempus", "why": "Perfekt med haben: spielen tar ett objekt (den falschen Ton) och bildar perfekt med haben."},
+      {"cat": "bindeord", "why": "Verbet (war) kommer direkt efter luckan, alltså omvänd ordföljd. Deshalb = därför. Denn ger rak ordföljd och weil verbet sist."},
+      {"cat": "bindeord", "why": "En enstaka händelse i dåtid: då heter när als. Wenn används om upprepade händelser eller i nutid/framtid, och wann är ett frågeord."},
+      {"cat": "tempus", "why": "Präteritum av haben: ich hatte. Berättelsen står i dåtid, och hätte är konjunktiv."},
+      {"cat": "tempus", "why": "Präteritum av sein i plural: meine Hände är plural, alltså waren."},
+      {"cat": "tempus", "why": "Perfekt med haben: sehen tar ett objekt (meine Familie) och bildar perfekt med haben."},
+      {"cat": "tempus", "why": "Präteritum av modalverbet können: ich konnte. Könnte är konjunktiv (skulle kunna)."},
+      {"cat": "tempus", "why": "Präteritum av wollen: das Publikum är ett substantiv i singular, alltså wollte och inte wollten."},
+      {"cat": "bindeord", "why": "Verbet (war) står sist, alltså en bisats. Obwohl = fast, trots att. Trotzdem skulle kräva omvänd ordföljd och denn rak ordföljd."}
+    ],
+    "sv": "Jag har spelat cello i fem år, och i december fick jag för första gången spela ett solo på skolkonserten. Jag övade varje dag i flera veckor. Min lärare var väldigt sträng, men hon hjälpte mig mycket. På generalrepetitionen gick tyvärr allt snett: jag spelade fel ton två gånger. Därför var jag väldigt nervös kvällen före konserten och kunde inte sova. När jag kom upp på scenen hade jag fruktansvärd rampfeber. Mina händer var helt kalla. Sedan såg jag min familj i publiken, och plötsligt blev jag lugnare. Jag kunde spela stycket nästan utan fel. I slutet applåderade alla högt, och publiken ville till och med ha ett extranummer. Fast jag var så nervös var det årets finaste kväll."
+  },
+  {
+    "id": "t4-s-t7",
+    "sec": "t7",
+    "title": "Pech beim Fußball",
+    "text": "Letzten Samstag [hatte|habe|hätte] unsere Mannschaft ein wichtiges Spiel. Nach zwanzig Minuten [bin|habe|ist] ich hingefallen und habe mir den Fuß verstaucht. Es [hat|ist|habe] furchtbar wehgetan, [deshalb|denn|obwohl] konnte ich nicht weiterspielen. Mein Trainer [hat|ist|hatte] mich sofort ins Krankenhaus gefahren. Im Wartezimmer [mussten|müssen|musste] wir fast zwei Stunden warten. [Dann|Weil|Obwohl] hat eine Ärztin meinen Fuß geröntgt. „Zum Glück ist nichts gebrochen“, [hat|ist|habe] sie gesagt. [Weil|Denn|Deshalb] der Fuß so dick war, habe ich eine Salbe und Tabletten gegen die Schmerzen bekommen. Ich [durfte|darf|dürfte] zwei Wochen lang keinen Sport machen. Am Montag [habe|bin|hat] ich mich in der Schule krankgemeldet, [denn|weil|deshalb] ich konnte nicht richtig laufen. Meine Freunde haben mir geschrieben: „Gute Besserung!“ Übrigens [haben|sind|hat] wir das Spiel trotzdem 2:1 gewonnen.",
+    "gaps": [
+      {"cat": "tempus", "why": "Präteritum av haben: sie (unsere Mannschaft) hatte. Berättelsen står i dåtid."},
+      {"cat": "tempus", "why": "Perfekt med sein: hinfallen (ramla) är en förändring av läge, så det heter ich bin hingefallen."},
+      {"cat": "tempus", "why": "Perfekt med haben: wehtun bildar perfekt med haben: es hat wehgetan."},
+      {"cat": "bindeord", "why": "Verbet (konnte) kommer direkt efter luckan, alltså omvänd ordföljd. Deshalb = därför. Denn ger rak ordföljd och obwohl verbet sist."},
+      {"cat": "tempus", "why": "Perfekt med haben: fahren tar här ett objekt (mich), och då bildas perfekt med haben: er hat mich gefahren. Utan objekt heter det er ist gefahren."},
+      {"cat": "tempus", "why": "Präteritum av modalverbet müssen, vi-form: wir mussten."},
+      {"cat": "bindeord", "why": "Verbet (hat) kommer direkt efter luckan, alltså omvänd ordföljd. Då passar dann = sedan. Weil och obwohl kräver att verbet står sist."},
+      {"cat": "tempus", "why": "Perfekt med haben: sagen bildar perfekt med haben, och sie (hon) har formen hat."},
+      {"cat": "bindeord", "why": "Verbet (war) står sist, alltså en bisats. Weil = eftersom. Denn ger rak ordföljd, och deshalb står i huvudsatsen med omvänd ordföljd."},
+      {"cat": "tempus", "why": "Präteritum av modalverbet dürfen: ich durfte. Dürfte är konjunktiv."},
+      {"cat": "tempus", "why": "Perfekt med haben: sich krankmelden är reflexivt och bildar perfekt med haben."},
+      {"cat": "bindeord", "why": "Efter luckan kommer subjekt + verb (ich konnte), alltså rak ordföljd. Då passar denn = för. Weil kräver verbet sist och deshalb omvänd ordföljd."},
+      {"cat": "tempus", "why": "Perfekt med haben: gewinnen tar ett objekt (das Spiel) och bildar perfekt med haben, vi-form haben."}
+    ],
+    "sv": "I lördags hade vårt lag en viktig match. Efter tjugo minuter ramlade jag och stukade foten. Det gjorde fruktansvärt ont, därför kunde jag inte spela vidare. Min tränare körde mig direkt till sjukhuset. I väntrummet var vi tvungna att vänta i nästan två timmar. Sedan röntgade en läkare min fot. ”Som tur är är ingenting brutet”, sa hon. Eftersom foten var så svullen fick jag en salva och tabletter mot smärtan. Jag fick inte idrotta på två veckor. På måndagen sjukanmälde jag mig i skolan, för jag kunde inte gå ordentligt. Mina kompisar skrev till mig: ”Krya på dig!” Förresten vann vi matchen ändå med 2–1."
+  },
+  {
+    "id": "t4-s-t8",
+    "sec": "t8",
+    "title": "Die Überraschungsparty",
+    "text": "Im März [hatte|hat|hätte] meine beste Freundin Mia Geburtstag. Sie [wurde|wird|würde] achtzehn, und wir wollten eine Überraschungsparty für sie organisieren. Ihre Eltern [waren|sind|wären] einverstanden, [deshalb|denn|obwohl] konnten wir bei ihr zu Hause feiern. [Während|Trotzdem|Deshalb] Mia mit ihrer Mutter in der Stadt war, haben wir die Wohnung mit Luftballons und Kerzen geschmückt. Jonas [hat|ist|haben] eine riesige Torte gebacken, und ich habe das Geschenk eingepackt. Um sieben Uhr [haben|sind|hat] wir das Licht ausgemacht und gewartet. [Als|Wenn|Wann] Mia die Tür aufgemacht hat, haben alle „Überraschung!“ gerufen. Mia [war|ist|wäre] total überrascht und hat vor Freude gelacht. Dann haben wir auf sie angestoßen und bis Mitternacht getanzt. Um elf Uhr [hat|ist|haben] ein Nachbar geklingelt, [weil|denn|deshalb] die Musik zu laut war. [Trotzdem|Obwohl|Weil] war es die schönste Party des Jahres.",
+    "gaps": [
+      {"cat": "tempus", "why": "Präteritum av haben: sie hatte. Berättelsen utspelar sig i dåtid, och hätte är konjunktiv."},
+      {"cat": "tempus", "why": "Präteritum av werden: sie wurde (hon fyllde, blev). Würde är konjunktiv och betyder skulle."},
+      {"cat": "tempus", "why": "Präteritum av sein i plural: ihre Eltern är plural, alltså waren. Wären är konjunktiv."},
+      {"cat": "bindeord", "why": "Verbet (konnten) kommer direkt efter luckan, alltså omvänd ordföljd. Deshalb = därför. Denn ger rak ordföljd och obwohl verbet sist."},
+      {"cat": "bindeord", "why": "Verbet (war) står sist, alltså en bisats. Während = medan. Trotzdem och deshalb skulle kräva omvänd ordföljd."},
+      {"cat": "tempus", "why": "Perfekt med haben: backen tar ett objekt (eine Torte) och bildar perfekt med haben. Jonas är singular, alltså hat."},
+      {"cat": "tempus", "why": "Perfekt med haben: ausmachen (släcka) tar ett objekt (das Licht) och bildar perfekt med haben, vi-form haben."},
+      {"cat": "bindeord", "why": "En enstaka händelse i dåtid: då heter när als. Wenn används om upprepade händelser eller i nutid/framtid, och wann är ett frågeord."},
+      {"cat": "tempus", "why": "Präteritum av sein: sie war. Berättelsen står i dåtid, och wäre är konjunktiv."},
+      {"cat": "tempus", "why": "Perfekt med haben: klingeln (ringa på) bildar perfekt med haben. Ein Nachbar är singular, alltså hat."},
+      {"cat": "bindeord", "why": "Verbet (war) står sist, alltså en bisats. Weil = eftersom. Denn ger rak ordföljd och deshalb omvänd ordföljd."},
+      {"cat": "bindeord", "why": "Verbet (war) kommer direkt efter luckan, alltså omvänd ordföljd. Trotzdem = ändå. Obwohl och weil kräver att verbet står sist."}
+    ],
+    "sv": "I mars fyllde min bästa kompis Mia år. Hon fyllde arton, och vi ville ordna en överraskningsfest för henne. Hennes föräldrar gick med på det, därför kunde vi festa hemma hos henne. Medan Mia var på stan med sin mamma pyntade vi lägenheten med ballonger och ljus. Jonas bakade en jättestor tårta, och jag slog in presenten. Klockan sju släckte vi ljuset och väntade. När Mia öppnade dörren ropade alla ”Överraskning!”. Mia var helt överraskad och skrattade av glädje. Sedan skålade vi för henne och dansade till midnatt. Klockan elva ringde en granne på, eftersom musiken var för hög. Ändå var det årets bästa fest."
+  }
+]

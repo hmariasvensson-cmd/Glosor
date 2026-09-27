@@ -4,19 +4,9 @@ Allt som har diskuterats men inte är byggt ännu. Prioritet: **P1** = gör snar
 Det som är byggt flyttas till [`KLART.md`](KLART.md), med referens till punkten här och till commit.
 Underlag finns i `docs/ovningsforslag.md` (franska), `docs/ovningsforslag-tyska.md` (tyska) och `docs/ideer-fran-andra-projekt.md`.
 
-## Nästa att bygga (beslutat 2026-09-27)
+## Tyck till från eleverna
 
-- **P1: Kursen Tyska 4** för Emma, som ett steg före Tyska 5 på vägen mot B2. Den ska ha egen mapp `languages/de4/` och en egen `storageKey` som aldrig ändras (till exempel `glosor-de4-v1`), så att framstegen i Tyska 5 inte påverkas. Nivå ungefär B1 (Gy25: Moderna språk – fortsättning, nivå 2). Den behöver:
-  - en ordlista i kapitel efter kursplanen för steg 4, där teman och ord inte överlappar Tyska 5 för mycket
-  - grammatik på B1-nivå: Perfekt/Präteritum, bisatser, relativsatser, adjektivändelser, Konjunktiv II som artighet och passiv i presens (motorn och frågeformatet i `src/grammar.js` kan återanvändas)
-  - texter, fraser och videor som för Tyska 5
-  - `upcoming.json` ska uppdateras
-  - kursväljaren visar redan flera kurser, men här blir det två kurser i samma språk. Kontrollera därför att Topplistan (`board/<uid>.langs`) och `LANG_KEY` hanterar olika kurskoder (`de4` och `de`).
-  - Emma ska kunna gå vidare till Tyska 5 när Tyska 4 är klar
-- **P1: Feedback från eleverna.** En knapp "Tyck till" i appen där Oscar och Emma skriver vad de vill ha, vad som är krångligt eller vad som är fel. Förslag:
-  - Meddelandet sparas i `feedback/<uid>-<tid>` i artefaktens db, på samma sätt som rapporterna om fel facit i `reports/`. Då kan Claude läsa det med ArtifactData och föra in det i den här backloggen, och föräldern kan få en sammanfattning.
-  - Det går inte att skicka mejl direkt från appen, eftersom mailto-länkar inte fungerar för alla som använder artefakter. Om föräldern också vill ha mejl kan Claude skicka en sammanfattning med Gmail-kopplingen när backloggen uppdateras, men bara efter att föräldern har bett om det.
-  - Visa eleven vad som hände med förslaget ("Tillagt i backloggen", "Byggt i version X"), till exempel genom att Claude skriver ett svar i samma dokument.
+- **Löpande:** läs nya meddelanden i `feedback/` (ArtifactData, `status: "ny"`), för in önskemålen här, och sätt `status` och `reply` i dokumentet så att eleven ser vad som hände (se CLAUDE.md).
 
 ## Språkprov (det verkliga målet)
 
@@ -34,6 +24,11 @@ Båda eleverna ska söka musikutbildning utomlands. Oscar behöver visa **B1 i f
 - **P3: Självbedömning i fyra steg** (Igen/Svårt/Bra/Lätt) i skrivfrågor.
 - **P3: Mina ord:** koppla böjda former till grundformen (som Lutes "parent terms"). Ord med glosa sparas redan i grundform, men ord utan glosa sparas som de står i texten.
 - **P3: Tatoeba-meningar även för tyska** (`python3 tools/tatoeba.py de`) och fler franska ord (i dag har 136 av 258 ord minst en mening).
+
+## Tyska 4 (B1)
+
+- **P2: Granskning av innehållet i Tyska 4** (551 ord, 270 grammatikfrågor och alla texter är AI-skrivna). Stickprov av en tysktalande, särskilt siffrorna i kulturtexterna.
+- **P3: Lästext till kapitel 1 och 6 och kulturtext till kapitel 7** saknas. Kapitlen har hörtexter i stället.
 
 ## Tyska (Tyska 5, mot B2)
 

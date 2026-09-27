@@ -2,6 +2,13 @@
 
 Punkter som har flyttats från [`BACKLOG.md`](BACKLOG.md) när de byggdes. **Referens** anger backloggens rubrik och prioritet. **Commit** anger var ändringen finns i git. **Publicerat** anger versionen av artefakten på https://claude.ai/artifact/YBQv8j4qXQQLuPwLAWt5mP.
 
+## 2026-09-27, del 6 (publicerat som version 14)
+
+| Referens | Vad som byggdes | Commit |
+|---|---|---|
+| Nästa att bygga · P1 *Kursen Tyska 4* | Ny kurs `languages/de4/` med egen sparnyckel `glosor-de4-v1`, så att framstegen i Tyska 5 inte påverkas. 551 vanliga ord på nivå A2–B1 i 8 kapitel plus Redemittel, utan ord som redan finns i Tyska 5. Kapitel 6 har många musikord. 270 grammatikfrågor (prepositioner, perfekt och präteritum, als/wenn/dass/ob, ordföljd, relativsatser, reflexiva verb, Konjunktiv II, passiv, jämförelser) och adjektivändelser. 9 hörtexter, 6 lästexter (en om antagning till en Musikhochschule), 7 kulturtexter, 6 berättelser, 40 fraser, 7 skrivuppgifter och 23 videor. Verbspelen delar verb med Tyska 5 men saknar Konjunktiv I. Kursväljaren visar Tyska 4 före Tyska 5, och "Bara tyska" (tidigare "Bara Tyska 5") visar båda de tyska kurserna. Topplistan visar kursnamnet. När nästan alla ord i Tyska 4 är påbörjade och hälften sitter föreslår appen att gå vidare till Tyska 5. | `bc7c24a`, se nästa rad |
+| Nästa att bygga · P1 *Feedback från eleverna* | Fliken **Tyck till**, där eleven väljer Önskemål, Krångligt, Något är fel eller Annat och skriver fritt. Meddelandet sparas i `feedback/<uid>-<tid>` i artefaktens db. Claude läser meddelandena och sätter status (Läst, Tillagt i backloggen, Byggt, Inte just nu) och ett svar, som eleven ser i samma flik. Mejl skickas bara om föräldern ber om det. | `bc7c24a` |
+
 ## 2026-09-27, del 5 (publicerat som version 13)
 
 | Referens | Vad som byggdes | Commit |
