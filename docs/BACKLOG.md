@@ -7,7 +7,6 @@ Underlag finns i `docs/ovningsforslag.md` (franska), `docs/ovningsforslag-tyska.
 ## Tyck till från eleverna
 
 - **Löpande (prioriteras först):** läs nya meddelanden i `feedback/` (ArtifactData, `status: "ny"`), för in önskemålen här, och sätt `status` och `reply` i dokumentet så att eleven ser vad som hände (se CLAUDE.md). Elevernas önskemål går före annat i backloggen.
-- **P1: Ursprung på svenska och ordagranna fraser** (Oscar, 2026-09-27). Varje ord på ett annat språk i ursprungsförklaringen ska ha en svensk översättning, t.ex. "latin *incendium* 'brand'". Fraser och talesätt ska få ett sjunde fält i words.txt med ordagrann översättning ord för ord ("Ordagrant"), som visas när man lär sig ordet och när man svarar fel. Fältet och visningen är byggda. Datat gås igenom per kurs, även bokens ord.
 
 ## Språkprov (det verkliga målet)
 
