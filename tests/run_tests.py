@@ -39,6 +39,8 @@ setTimeout(()=>{ try{
   startDict(); let g=0; while(sess&&g++<80){ const c=sess.cur;
     if(c.t==="mc"){answerMC(sess.d.opts.findIndex(o=>o.ok)); q("#nx").click();} else {q("#ans").value=c.w.exT; q("#submit").click(); q("#submit").click();} }
   ok("tyska: diktamen", S.log[S.log.length-1].kind==="dict");
+  { const bad=(C().prompts||[]).filter(p=>!writeChecks(p,p.model).every(c=>c.ok)).map(p=>p.id+": "+writeChecks(p,p.model).filter(c=>!c.ok).map(c=>c.label).join("; "));
+    ok("tyska: modelltexterna klarar checklistan", (C().prompts||[]).length&&!bad.length, bad.join(" | ")); }
   const ansDe=()=>{ const c=sess.cur, d=sess.d;
     if(c.t==="mc"){answerMC(d.opts.findIndex(o=>o.ok)); q("#nx").click(); return;}
     if(c.k==="shadow"){ q('[data-sh="1"]').click(); return; }
@@ -108,6 +110,8 @@ setTimeout(()=>{ try{
   ok("kurs och nivå visas", q("#coursechip").textContent.includes("Franska 3"), q("#coursechip").textContent);
   ok("kommande kurs går inte att välja", [...q("#course").options].some(o=>o.disabled&&o.text.includes("Franska 4")));
   ok("dagens pass finns", !!q("#daily"));
+  { const bad=(C().prompts||[]).filter(p=>!writeChecks(p,p.model).every(c=>c.ok)).map(p=>p.id+": "+writeChecks(p,p.model).filter(c=>!c.ok).map(c=>c.label).join("; "));
+    ok("franska: modelltexterna klarar checklistan", !bad.length, bad.join(" | ")); }
   ok("övningsgrupper", document.querySelectorAll(".exgroup").length===4, document.querySelectorAll(".exgroup").length);
 
   // Diktamen: fel svar ger jämförelse ord för ord, sedan flerval, sedan skriva igen

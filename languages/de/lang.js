@@ -23,13 +23,14 @@ LANGUAGES.de = {
 
   storyIntro: "Läs berättelsen och välj rätt form i varje lucka: rätt verbform i Präteritum eller Perfekt, och ett bindeord som passar ordföljden.",
   cultureIntro: "Läs en kort text om Tyskland, Österrike eller Schweiz, svara på en fråga och jämför med hur det är i Sverige.",
-  connectors: ["zuerst","dann","danach","schließlich","zum Schluss","aber","jedoch","trotzdem","obwohl","weil","denn","da",
-    "deshalb","deswegen","daher","also","außerdem","zudem","auch","sondern","während","wenn","als","nachdem","bevor","dass","ob",
-    "damit","sodass","einerseits","andererseits","zum Beispiel","meiner Meinung nach","im Gegensatz dazu","nicht nur","sowohl"],
+  // Bindeord som räknas i skrivchecklistan. Ord med andra vanliga betydelser (da, als, damit, auch) är inte med.
+  connectors: ["zuerst","dann","danach","schließlich","zum Schluss","aber","jedoch","trotzdem","dennoch","obwohl","weil","denn",
+    "deshalb","deswegen","daher","außerdem","zudem","darüber hinaus","sondern","während","wenn","falls","nachdem","bevor",
+    "sodass","einerseits","andererseits","zum Beispiel","meiner Meinung nach","im Gegensatz","nicht nur","zusammenfassend"],
   // Enkel igenkänning av tempus i elevens text (för checklistan, inte för rättning)
   tenseCheck: {
     "Präsens": t => t.trim().length > 0,
-    "Perfekt": t => /(^|[^\p{L}])(habe|hast|hat|haben|habt|bin|bist|ist|sind|seid)(?![\p{L}])[^.!?]{0,80}[^\p{L}]ge\p{L}+(t|en)(?![\p{L}])/iu.test(t),
+    "Perfekt": t => /(^|[^\p{L}])(habe|hast|hat|haben|habt|bin|bist|ist|sind|seid)(?![\p{L}])[^.!?]{0,80}[^\p{L}](\p{L}*ge\p{L}+(t|en)|\p{L}+iert|(ver|be|er|ent|zer|über)\p{L}+(t|en))(?![\p{L}])/iu.test(t),
     "Präteritum": t => /(^|[^\p{L}])(war|warst|waren|wart|hatte|hatten|hattest|ging|gingen|kam|kamen|wurde|wurden|machte|machten|sagte|sagten|fuhr|fuhren|sah|sahen|gab|gaben|nahm|nahmen|dachte|dachten|konnte|konnten|musste|mussten|wollte|wollten|durfte|durften|fand|fanden|lebte|lebten|wohnte|wohnten|arbeitete|arbeiteten)(?![\p{L}])/iu.test(t),
     "Konjunktiv II": t => /(^|[^\p{L}])(würde|würdest|würden|würdet|hätte|hättest|hätten|wäre|wärst|wären|könnte|könnten|müsste|müssten|dürfte|sollte|sollten)(?![\p{L}])/iu.test(t),
     "Passiv": t => /(^|[^\p{L}])(wird|werden|wurde|wurden|worden)(?![\p{L}])[^.!?]{0,80}[^\p{L}]ge\p{L}+(t|en)(?![\p{L}])/iu.test(t)

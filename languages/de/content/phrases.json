@@ -1,0 +1,482 @@
+[
+  {
+    "id": "p01",
+    "cat": "förstå",
+    "sit": "En äldre dam på tåget säger något till dig, men du hör inte vad.",
+    "fr": "Entschuldigung, könnten Sie das bitte wiederholen?",
+    "alt": [
+      "Was?",
+      "Kannst du das bitte wiederholen?",
+      "Wiederholen Sie!"
+    ],
+    "why": "Till en okänd vuxen säger man Sie, och könnten (konjunktiv II) låter extra artigt. Was? är för bryskt, du passar inte till en främling, och en ren imperativ låter som en order."
+  },
+  {
+    "id": "p02",
+    "cat": "förstå",
+    "sit": "Din tyska kompis Jonas pratar så fort att du inte hänger med.",
+    "fr": "Kannst du bitte etwas langsamer sprechen?",
+    "alt": [
+      "Können Sie bitte etwas langsamer sprechen?",
+      "Sprich nicht so viel!",
+      "Kannst du bitte etwas schneller sprechen?"
+    ],
+    "why": "Med en jämnårig kompis använder man du. Sie blir konstigt stelt, Sprich nicht so viel! är oartigt, och schneller betyder snabbare."
+  },
+  {
+    "id": "p03",
+    "cat": "förstå",
+    "sit": "Din tyska värdsyster använder ett ord som du aldrig har hört.",
+    "fr": "Tut mir leid, das Wort kenne ich nicht. Was bedeutet das?",
+    "alt": [
+      "Tut mir leid, das Wort kenne ich nicht. Wie spricht man das aus?",
+      "Tut mir leid, das Wort kenne ich nicht. Was kostet das?",
+      "Tut mir leid, das Wort weiß ich nicht. Was bedeutet das?"
+    ],
+    "why": "Was bedeutet das? = vad betyder det? Wie spricht man das aus? frågar om uttalet och Was kostet das? om priset. Ett ord kan man kennen, inte wissen."
+  },
+  {
+    "id": "p04",
+    "cat": "förstå",
+    "sit": "Läraren har förklarat en uppgift, men du förstod inte riktigt vad ni ska göra.",
+    "fr": "Ich habe die Aufgabe leider nicht ganz verstanden.",
+    "alt": [
+      "Ich habe die Aufgabe leider nicht ganz gehört.",
+      "Ich bin die Aufgabe leider nicht ganz verstanden.",
+      "Die Aufgabe ist mir leider egal."
+    ],
+    "why": "Verstehen bildar perfekt med haben. Gehört betyder hört, inte förstått, och Die Aufgabe ist mir egal betyder att du struntar i uppgiften."
+  },
+  {
+    "id": "p05",
+    "cat": "be om förtydligande",
+    "sit": "Du vill kontrollera att du har förstått din kompis rätt.",
+    "fr": "Habe ich dich richtig verstanden?",
+    "alt": [
+      "Hast du mich richtig verstanden?",
+      "Verstehst du mich?",
+      "Habe ich Sie richtig verstanden?"
+    ],
+    "why": "Du frågar om du själv har förstått. De två första frågar i stället om kompisen har förstått dig, och Sie är för formellt med en kompis."
+  },
+  {
+    "id": "p06",
+    "cat": "be om förtydligande",
+    "sit": "Din lärare säger något otydligt och du vill veta exakt vad hon menar.",
+    "fr": "Was meinen Sie damit genau?",
+    "alt": [
+      "Was meinst du damit genau?",
+      "Was denken Sie darüber genau?",
+      "Was meinen Sie damit genau gesagt?"
+    ],
+    "why": "Was meinen Sie damit? = vad menar du med det? Till lärare på gymnasiet säger man Sie i Tyskland. Was denken Sie darüber? frågar vad hon tycker, inte vad hon menar, och den sista meningen är felbyggd."
+  },
+  {
+    "id": "p07",
+    "cat": "be om förtydligande",
+    "sit": "Din kompis förklarar något abstrakt, och du vill ha ett konkret exempel.",
+    "fr": "Kannst du mir ein Beispiel dafür geben?",
+    "alt": [
+      "Kannst du mir ein Beispiel davon geben?",
+      "Gib mir sofort ein Beispiel!",
+      "Können Sie mir ein Beispiel dafür geben?"
+    ],
+    "why": "Ett exempel på något heter ein Beispiel für etwas, alltså dafür. Imperativen med sofort låter otrevlig, och Sie passar inte med en kompis."
+  },
+  {
+    "id": "p08",
+    "cat": "be om förtydligande",
+    "sit": "I en diskussion använder en klasskompis ett begrepp på ett sätt som du inte är säker på.",
+    "fr": "Was verstehst du unter diesem Begriff?",
+    "alt": [
+      "Was hältst du von diesem Begriff?",
+      "Verstehst du diesen Begriff?",
+      "Wie schreibt man diesen Begriff?"
+    ],
+    "why": "Was verstehst du unter …? = vad menar du med …? Halten von frågar vad hon tycker om ordet, och de andra frågar om hon förstår det eller hur det stavas."
+  },
+  {
+    "id": "p09",
+    "cat": "be om förtydligande",
+    "sit": "I en telefonintervju för ett sommarjobb är du osäker på om du hörde femton eller femtio.",
+    "fr": "Entschuldigung, haben Sie fünfzehn oder fünfzig gesagt?",
+    "alt": [
+      "Entschuldigung, hast du fünfzehn oder fünfzig gesagt?",
+      "Entschuldigung, sind Sie fünfzehn oder fünfzig?",
+      "Entschuldigung, sagen Sie fünfzehn oder fünfzig!"
+    ],
+    "why": "I en jobbintervju säger man Sie. Sind Sie fünfzehn betyder är du femton (år), och den sista meningen är en order i stället för en fråga."
+  },
+  {
+    "id": "p10",
+    "cat": "åsikt",
+    "sit": "På tyskalektionen ska du säga vad du tycker om skoluniformer.",
+    "fr": "Meiner Meinung nach sind Schuluniformen keine gute Idee.",
+    "alt": [
+      "Meiner Meinung nach Schuluniformen sind keine gute Idee.",
+      "Nach meiner Meinung, Schuluniformen sind keine gute Idee.",
+      "Ich meine nach, Schuluniformen sind keine gute Idee."
+    ],
+    "why": "Meiner Meinung nach räknas som första satsdel, så verbet (sind) kommer direkt efter. De andra har svensk eller engelsk ordföljd eller är felbyggda."
+  },
+  {
+    "id": "p11",
+    "cat": "åsikt",
+    "sit": "Du vill säga att du är helt övertygad om att vi måste göra mer för klimatet.",
+    "fr": "Ich bin fest davon überzeugt, dass wir mehr für das Klima tun müssen.",
+    "alt": [
+      "Ich bin fest davon überzeugt, dass wir müssen mehr für das Klima tun.",
+      "Ich überzeuge fest, dass wir mehr für das Klima tun müssen.",
+      "Ich bin fest davon überzeugt, weil wir mehr für das Klima tun müssen."
+    ],
+    "why": "Davon überzeugt sein, dass … = vara övertygad om att … I dass-satsen står verbet sist. Ich überzeuge betyder jag övertygar (någon), och weil ändrar betydelsen till eftersom."
+  },
+  {
+    "id": "p12",
+    "cat": "åsikt",
+    "sit": "Du vill säga din åsikt lite försiktigt, eftersom du inte är helt säker.",
+    "fr": "Ich bin mir nicht ganz sicher, aber ich glaube, dass das stimmt.",
+    "alt": [
+      "Das ist hundertprozentig so.",
+      "Ich bin nicht ganz sicher mich, aber ich glaube, dass das stimmt.",
+      "Ich bin mir nicht ganz sicher, aber ich glaube, dass das stimmt nicht."
+    ],
+    "why": "Sich (Dat.) sicher sein = vara säker, och mir står före sicher. Hundertprozentig är motsatsen till försiktigt, och i dass-satsen ska verbet stå sist."
+  },
+  {
+    "id": "p13",
+    "cat": "åsikt",
+    "sit": "Du skriver en insändare och vill säga din åsikt på ett formellt sätt.",
+    "fr": "Meines Erachtens ist das neue Gesetz ungerecht.",
+    "alt": [
+      "Meines Erachtens das neue Gesetz ist ungerecht.",
+      "Ich finde das neue Gesetz voll doof, ey.",
+      "Meines Erachtens ich finde das neue Gesetz ungerecht."
+    ],
+    "why": "Meines Erachtens = enligt min bedömning, ett formellt uttryck. Det räknas som första satsdel, så verbet kommer direkt efter. Voll doof, ey är talspråk och passar inte i en insändare."
+  },
+  {
+    "id": "p14",
+    "cat": "åsikt",
+    "sit": "Någon frågar vad du tycker, men svaret beror på situationen.",
+    "fr": "Das kommt ganz darauf an.",
+    "alt": [
+      "Das kommt ganz daran an.",
+      "Das hängt ganz davon an.",
+      "Das kommt ganz auf."
+    ],
+    "why": "Es kommt darauf an = det beror på. Uttrycket har alltid darauf. Man kan också säga Das hängt davon ab, men då med ab, inte an."
+  },
+  {
+    "id": "p15",
+    "cat": "hålla med",
+    "sit": "Din kompis säger något som du håller med om helt.",
+    "fr": "Da hast du völlig recht.",
+    "alt": [
+      "Da bist du völlig recht.",
+      "Da hast du völlig richtig.",
+      "Da hast du völlig recht, aber ich sehe das anders."
+    ],
+    "why": "Recht haben = ha rätt, med haben precis som på svenska. Richtig kan inte stå med haben här, och den sista meningen säger emot sig själv."
+  },
+  {
+    "id": "p16",
+    "cat": "hålla med",
+    "sit": "En klasskompis säger sin åsikt och du vill visa att du tycker likadant.",
+    "fr": "Das sehe ich genauso.",
+    "alt": [
+      "Das sehe ich anders.",
+      "Ich sehe dich genauso.",
+      "Das schaue ich genauso."
+    ],
+    "why": "Das sehe ich genauso = jag ser det på samma sätt. Anders betyder tvärtom, ich sehe dich betyder jag ser dig, och schauen används inte i det här uttrycket."
+  },
+  {
+    "id": "p17",
+    "cat": "hålla med",
+    "sit": "Din kompis kommer med en bra poäng i diskussionen.",
+    "fr": "Das ist ein guter Punkt.",
+    "alt": [
+      "Das ist ein gutes Punkt.",
+      "Das ist eine gute Punkte.",
+      "Das ist ein guter Ort."
+    ],
+    "why": "Der Punkt är maskulinum, så det blir ein guter Punkt. Ort betyder plats."
+  },
+  {
+    "id": "p18",
+    "cat": "hålla med",
+    "sit": "I en formell diskussion håller du med en vuxen som du säger Sie till.",
+    "fr": "Da stimme ich Ihnen zu.",
+    "alt": [
+      "Da stimme ich dir zu.",
+      "Da stimme ich Sie zu.",
+      "Da stimmt ich Ihnen zu."
+    ],
+    "why": "Zustimmen tar dativ: ich stimme Ihnen zu. Sie är ackusativ och dir passar inte när man säger Sie. Stimmt är fel person."
+  },
+  {
+    "id": "p19",
+    "cat": "inte hålla med",
+    "sit": "Du håller inte med din kompis, men du vill vara vänlig.",
+    "fr": "Da bin ich anderer Meinung.",
+    "alt": [
+      "Da habe ich andere Meinung.",
+      "Da bin ich andere Meinung.",
+      "Du hast total unrecht, das ist Quatsch."
+    ],
+    "why": "Anderer Meinung sein = vara av en annan åsikt, med sein och genitivändelsen -er. Den sista är alldeles för otrevlig."
+  },
+  {
+    "id": "p20",
+    "cat": "inte hålla med",
+    "sit": "Du håller delvis med, men du har en invändning om kostnaderna.",
+    "fr": "Da hast du zwar recht, aber man muss auch an die Kosten denken.",
+    "alt": [
+      "Da bist du zwar recht, aber man muss auch an die Kosten denken.",
+      "Da hast du zwar recht, aber man muss auch über die Kosten denken.",
+      "Da hast du zwar recht, aber man muss auch an die Kosten zu denken."
+    ],
+    "why": "Zwar …, aber … = visserligen …, men … Recht haben tar haben, denken an = tänka på, och efter modalverb (muss) står infinitiv utan zu."
+  },
+  {
+    "id": "p21",
+    "cat": "inte hålla med",
+    "sit": "Du vill artigt säga emot en vuxen i en formell diskussion.",
+    "fr": "Da muss ich Ihnen widersprechen.",
+    "alt": [
+      "Da muss ich dir widersprechen.",
+      "Da muss ich Sie widersprechen.",
+      "Da lügen Sie!"
+    ],
+    "why": "Widersprechen (säga emot) tar dativ: Ihnen. Dir passar inte med en vuxen i ett formellt sammanhang, och Da lügen Sie! (där ljuger du) är en anklagelse."
+  },
+  {
+    "id": "p22",
+    "cat": "inte hålla med",
+    "sit": "Någon påstår att alla ungdomar är beroende av mobilen. Du tycker att det är en överdrift.",
+    "fr": "Das finde ich übertrieben.",
+    "alt": [
+      "Das finde ich überzeugend.",
+      "Das finde ich übergetrieben.",
+      "Das ist mir übertreiben."
+    ],
+    "why": "Übertrieben = överdrivet (particip av übertreiben). Überzeugend betyder övertygande, alltså tvärtom, och de andra formerna finns inte."
+  },
+  {
+    "id": "p23",
+    "cat": "inte hålla med",
+    "sit": "En klasskompis säger något som bara är delvis sant.",
+    "fr": "Das stimmt so nicht ganz.",
+    "alt": [
+      "Das stimmt so ganz.",
+      "Das stimme ich nicht ganz.",
+      "Ich stimme das nicht ganz."
+    ],
+    "why": "Das stimmt = det stämmer, med das som subjekt. Das stimmt so ganz betyder tvärtom att det stämmer, och ich stimme das är fel byggt."
+  },
+  {
+    "id": "p24",
+    "cat": "föra samtalet framåt",
+    "sit": "Du vill artigt komma in i en diskussion där alla pratar.",
+    "fr": "Darf ich kurz etwas dazu sagen?",
+    "alt": [
+      "Sei still, jetzt rede ich!",
+      "Darf ich kurz etwas dazu sprechen?",
+      "Darf ich kurz etwas dazu gesagt?"
+    ],
+    "why": "Etwas dazu sagen = säga något om det. Sprechen kan inte ha etwas som objekt på det här sättet, efter darf står infinitiv, och Sei still! är oartigt."
+  },
+  {
+    "id": "p25",
+    "cat": "föra samtalet framåt",
+    "sit": "Du vill bygga vidare på det som Lisa just sa.",
+    "fr": "Ich möchte an das anknüpfen, was Lisa gesagt hat.",
+    "alt": [
+      "Ich möchte an das anknüpfen, was Lisa hat gesagt.",
+      "Ich möchte das anknüpfen, was Lisa gesagt hat.",
+      "Ich möchte über Lisa anknüpfen."
+    ],
+    "why": "An etwas anknüpfen = knyta an till något. I bisatsen med was står det böjda verbet (hat) sist. Över Lisa betyder om Lisa, inte om det hon sa."
+  },
+  {
+    "id": "p26",
+    "cat": "föra samtalet framåt",
+    "sit": "Ni har pratat länge om samma sak och du vill gå vidare till nästa fråga.",
+    "fr": "Kommen wir zu einem anderen Punkt.",
+    "alt": [
+      "Kommen wir zu einen anderen Punkt.",
+      "Kommen wir nach einem anderen Punkt.",
+      "Gehen wir einen anderen Punkt."
+    ],
+    "why": "Kommen wir zu … = låt oss gå vidare till … Zu tar dativ: einem anderen Punkt. Nach används om platser och riktningar, och gehen saknar preposition."
+  },
+  {
+    "id": "p27",
+    "cat": "föra samtalet framåt",
+    "sit": "Emil har inte sagt något på länge och du vill få med honom i diskussionen.",
+    "fr": "Was meinst du dazu, Emil?",
+    "alt": [
+      "Was meinen Sie dazu, Emil?",
+      "Warum sagst du nie etwas, Emil?",
+      "Emil, sei nicht so schüchtern!"
+    ],
+    "why": "Was meinst du dazu? = vad tycker du om det? Det bjuder in utan att sätta press. Sie är för stelt med en klasskompis, och de andra två låter som kritik."
+  },
+  {
+    "id": "p28",
+    "cat": "föra samtalet framåt",
+    "sit": "Din kompis har en oväntad idé och du vill få henne att berätta mer.",
+    "fr": "Wie bist du denn darauf gekommen?",
+    "alt": [
+      "Wie hast du denn darauf gekommen?",
+      "Wie bist du denn darauf gekommt?",
+      "Wo bist du denn hingekommen?"
+    ],
+    "why": "Auf etwas kommen = komma på något. Kommen bildar perfekt med sein och particip gekommen. Wo bist du hingekommen? frågar vart hon tog vägen."
+  },
+  {
+    "id": "p29",
+    "cat": "föra samtalet framåt",
+    "sit": "Diskussionen har hamnat på ett sidospår och du vill gå tillbaka till huvudfrågan.",
+    "fr": "Aber zurück zu unserer eigentlichen Frage.",
+    "alt": [
+      "Aber zurück zu unsere eigentliche Frage.",
+      "Aber zurück nach unserer eigentlichen Frage.",
+      "Aber wir fragen jetzt zurück."
+    ],
+    "why": "Zurück zu … = tillbaka till … Zu tar dativ: unserer eigentlichen Frage. Nach passar inte här, och wir fragen zurück betyder vi frågar tillbaka."
+  },
+  {
+    "id": "p30",
+    "cat": "argumentera",
+    "sit": "Du vill ge ett exempel som stöder ditt argument om att föräldraledighet fungerar.",
+    "fr": "Ein gutes Beispiel dafür ist Schweden.",
+    "alt": [
+      "Ein gutes Beispiel dafür Schweden ist.",
+      "Ein gutes Beispiel davon ist Schweden.",
+      "Zum Beispiel dafür ist Schweden."
+    ],
+    "why": "Ein Beispiel für etwas = ett exempel på något, alltså dafür. Verbet står på andra plats, och zum Beispiel kan inte kombineras med dafür så."
+  },
+  {
+    "id": "p31",
+    "cat": "argumentera",
+    "sit": "Du vill visa två sidor av frågan om mobiler: de är praktiska men distraherar.",
+    "fr": "Einerseits ist das Handy praktisch, andererseits lenkt es ab.",
+    "alt": [
+      "Einerseits das Handy ist praktisch, andererseits es lenkt ab.",
+      "Einerseits ist das Handy praktisch, andererseits es lenkt ab.",
+      "Auf einer Seite ist das Handy praktisch, auf anderer Seite lenkt es ab."
+    ],
+    "why": "Einerseits … andererseits … = å ena sidan … å andra sidan … Båda räknas som första satsdel, så verbet kommer direkt efter (ist, lenkt). Auf einer Seite är en direktöversättning som inte fungerar."
+  },
+  {
+    "id": "p32",
+    "cat": "argumentera",
+    "sit": "I en uppsats vill du lägga till ännu ett argument för att cykla.",
+    "fr": "Darüber hinaus ist Radfahren gut für die Gesundheit.",
+    "alt": [
+      "Darüber hinaus Radfahren ist gut für die Gesundheit.",
+      "Darüber aus ist Radfahren gut für die Gesundheit.",
+      "Über das hinaus, Radfahren ist gut für die Gesundheit."
+    ],
+    "why": "Darüber hinaus = dessutom, utöver det. Det räknas som första satsdel, så verbet (ist) kommer direkt efter. Uttrycket heter alltid darüber hinaus."
+  },
+  {
+    "id": "p33",
+    "cat": "argumentera",
+    "sit": "Du vill ta upp ett motargument innan du bemöter det.",
+    "fr": "Man könnte einwenden, dass Elektroautos teuer sind.",
+    "alt": [
+      "Man könnte einwenden, dass Elektroautos sind teuer.",
+      "Man könnte einwenden, weil Elektroautos teuer sind.",
+      "Man könnte einwenden, Elektroautos teuer sind."
+    ],
+    "why": "Einwenden, dass … = invända att … I dass-satsen står verbet sist. Weil betyder eftersom, och utan dass kan verbet inte stå sist."
+  },
+  {
+    "id": "p34",
+    "cat": "argumentera",
+    "sit": "Du vill visa att något är en följd av något annat: hyrorna stiger, så många familjer flyttar ut på landet.",
+    "fr": "Die Mieten steigen, folglich ziehen viele Familien aufs Land.",
+    "alt": [
+      "Die Mieten steigen, folglich viele Familien ziehen aufs Land.",
+      "Die Mieten steigen, weil viele Familien aufs Land ziehen.",
+      "Die Mieten steigen, obwohl viele Familien aufs Land ziehen."
+    ],
+    "why": "Folglich = följaktligen, och efter det kommer verbet direkt (omvänd ordföljd). Med weil blir orsak och verkan omvända, och obwohl betyder fast."
+  },
+  {
+    "id": "p35",
+    "cat": "artighet",
+    "sit": "Du börjar ett mejl till Frau Weber på ett företag där du söker praktik.",
+    "fr": "Sehr geehrte Frau Weber,",
+    "alt": [
+      "Hallo Frau Weber,",
+      "Liebe Weber,",
+      "Hej Frau Weber,"
+    ],
+    "why": "I en formell ansökan börjar man med Sehr geehrte Frau … Hallo är för ledigt till en okänd arbetsgivare, Liebe används till personer man känner och kräver Frau, och hej är svenska."
+  },
+  {
+    "id": "p36",
+    "cat": "artighet",
+    "sit": "Du vill tacka din kompis förälder, som du säger Sie till, för att du fick bo hos dem.",
+    "fr": "Vielen Dank für Ihre Gastfreundschaft!",
+    "alt": [
+      "Vielen Dank für deine Gastfreundschaft!",
+      "Vielen Dank um Ihre Gastfreundschaft!",
+      "Vielen Dank auf Ihre Gastfreundschaft!"
+    ],
+    "why": "Danke für … = tack för … Eftersom du säger Sie blir det Ihre med stor bokstav. Um och auf är fel prepositioner."
+  },
+  {
+    "id": "p37",
+    "cat": "artighet",
+    "sit": "Du vill artigt be din lärare om hjälp med en uppgift.",
+    "fr": "Könnten Sie mir bitte dabei helfen?",
+    "alt": [
+      "Könnten Sie mich bitte dabei helfen?",
+      "Hilf mir mal!",
+      "Könnten Sie mir bitte dabei geholfen?"
+    ],
+    "why": "Helfen tar dativ: mir. Könnten (konjunktiv II) låter artigt. Hilf mir mal! är du-form och för bryskt, och efter könnten står infinitiv."
+  },
+  {
+    "id": "p38",
+    "cat": "sammanfatta",
+    "sit": "I slutet av en muntlig presentation vill du sammanfatta diskussionen.",
+    "fr": "Zusammenfassend lässt sich sagen, dass beide Seiten gute Argumente haben.",
+    "alt": [
+      "Zusammenfassend lässt sich sagen, dass beide Seiten haben gute Argumente.",
+      "Zusammenfassend kann man sich sagen, dass beide Seiten gute Argumente haben.",
+      "Zum Zusammenfassen, beide Seiten haben gute Argumente."
+    ],
+    "why": "Zusammenfassend lässt sich sagen = sammanfattningsvis kan man säga. I dass-satsen står verbet sist. Man kann sagen går bra, men utan sich."
+  },
+  {
+    "id": "p39",
+    "cat": "sammanfatta",
+    "sit": "Du vill avsluta diskussionen med en kort slutsats: på det stora hela är du för förslaget.",
+    "fr": "Im Großen und Ganzen bin ich für den Vorschlag.",
+    "alt": [
+      "Im Großen und Ganzen ich bin für den Vorschlag.",
+      "Im Großen und Ganzen bin ich gegen den Vorschlag.",
+      "In groß und ganz bin ich für den Vorschlag."
+    ],
+    "why": "Im Großen und Ganzen = på det stora hela. Det räknas som första satsdel, så verbet (bin) kommer direkt efter. Gegen betyder emot."
+  },
+  {
+    "id": "p40",
+    "cat": "sammanfatta",
+    "sit": "Du är i slutet av din muntliga presentation och vill visa att du avrundar.",
+    "fr": "Damit komme ich zum Schluss.",
+    "alt": [
+      "Damit ich komme zum Schluss.",
+      "Damit komme ich zur Schluss.",
+      "Damit bin ich zum Schluss gekommen gehabt."
+    ],
+    "why": "Damit komme ich zum Schluss = därmed kommer jag till slutet. Damit är första satsdel, så verbet kommer direkt efter. Der Schluss är maskulinum: zum (= zu dem) Schluss."
+  }
+]

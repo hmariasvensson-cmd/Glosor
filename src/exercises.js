@@ -462,11 +462,21 @@ function openWriting(){
   pickerScreen("Skriv en text","Välj en skrivuppgift. Checklistan visar hur det går medan du skriver. Kopiera texten och skicka den till din lärare för kommentarer.",
     (C().prompts||[]).map(p=>({id:p.id,title:p.title,sec:p.sec,status:S.wr[p.id]?`${S.wr[p.id].words} ord`:""})),writeScreen);
 }
+// Finns ordet i texten? Substantiv räknas även utan artikel och i plural, verb även i böjd form (samma stam).
+function usesWord(text,w){
+  if(variants(w.t).some(v=>v.length>2&&hasWord(text,v))) return true;
+  const base=w.t.replace(/\(.*?\)/g,"").trim();
+  if(w.g){ const bare=base.replace(L.hintStrip||/^$/,"").replace(/^(le|la|les|l')\s?/i,"");
+    const pl=L.genderGame&&typeof genderNouns==="function"?(genderNouns().find(n=>n.w.id===w.id)||{}).pl:null;
+    return [bare,pl,pl&&pl+"n"].some(v=>v&&v.length>2&&hasWord(text,v)); }
+  const m=base.replace(/^(sich|se|s')\s*/i,"").match(/^(\p{L}{4,}?)(en|er|ir|re|n)$/u);
+  return !!m&&new RegExp("(^|[^\\p{L}])(ge)?"+reEsc(m[1])+"\\p{L}*","iu").test(text);
+}
 function writeChecks(p,text){
   const n=tok(text).length, need=p.need||{}, out=[];
   out.push({ok:n>=p.min&&n<=p.max,label:`Antal ord: ${n} (mål ${p.min}–${p.max})`});
   if(need.connectors){const f=(L.connectors||[]).filter(c=>hasWord(text,c)); out.push({ok:f.length>=need.connectors,label:`Bindeord: ${f.length} av ${need.connectors}${f.length?` (${f.join(", ")})`:""}`});}
-  if(need.chapterWords&&p.sec){const f=WORDS.filter(w=>w.sec===p.sec&&variants(w.t).some(v=>v.length>2&&hasWord(text,v))).map(w=>w.t);
+  if(need.chapterWords&&p.sec){const f=WORDS.filter(w=>w.sec===p.sec&&usesWord(text,w)).map(w=>w.t);
     out.push({ok:f.length>=need.chapterWords,label:`Ord från kapitlet: ${f.length} av ${need.chapterWords}${f.length?` (${f.slice(0,5).join(", ")})`:""}`});}
   (need.tenses||[]).forEach(t=>{const rx=(L.tenseCheck||{})[t]; if(rx) out.push({ok:rx(text),label:`${t[0].toUpperCase()+t.slice(1)} verkar finnas med`});});
   return out;
