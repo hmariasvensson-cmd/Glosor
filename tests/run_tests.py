@@ -1,0 +1,151 @@
+#!/usr/bin/env python3
+"""Kör programmet i Chrome utan fönster och spelar igenom övningarna.
+
+    python3 build.py && python3 tests/run_tests.py
+
+Testet startar med sparat läge i samma format som en riktig elev har, och med en låtsad
+claude.ai-lagring (window.claude). Varje rad i utskriften är ett påstående; FEL betyder att något gick sönder.
+"""
+import os, pathlib, subprocess, sys, tempfile, re
+
+ROOT = pathlib.Path(__file__).resolve().parent.parent
+CHROME = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+
+SEED = r"""<script>
+const now=Date.now();
+function student(){const st={pass:5,newCount:10,src:"auto",mode:"mix",vt:{},vv:{},w:{},
+  log:[{p:1,d:now-4*864e5,dur:300,nNew:15,nRep:0,right:12,total:15,mcR:12,mcN:15,tyR:0,tyN:0,extra:false}]};
+  ["bienvenue à tous","désigner","de la main","balbutier","ordinateur","c'est tout","entendre","les autres","rire","rougir"].forEach((id,i)=>st.w[id]={s:i%3,due:3,f:"type",lp:1,ld:now-4*864e5});
+  return st}
+window.__err=[];window.onerror=(m,s,l,c)=>{__err.push(m+" @"+l+":"+c)};
+localStorage.clear();
+window.__remote={"data/users/u_test/franska-glosor-v2":{state:student(),t:now-1000}};
+const snap=p=>({exists:!!__remote[p],data:()=>__remote[p],metadata:{hasPendingWrites:false,fromCache:false}});
+const mockDb={
+  doc:p=>({get:async()=>snap(p),set:async b=>{__remote[p]=JSON.parse(JSON.stringify(b))},onSnapshot:n=>{setTimeout(()=>n(snap(p)),0);return()=>{}}}),
+  collection:c=>({onSnapshot:n=>{setTimeout(()=>n({docs:Object.keys(__remote).filter(k=>k.startsWith(c+"/")).map(k=>({id:k.split("/")[1],exists:true,data:()=>__remote[k]}))}),0);return()=>{}}})};
+window.claude={use:async n=>n==="db"?mockDb:n==="user"?{id:async()=>"u_test",profiles:async ids=>Object.fromEntries(ids.map(i=>[i,{name:""}]))}:null};
+try{speechSynthesis.speak=()=>{}}catch(e){}
+</script>"""
+
+SCENARIO_DE = r"""<script>
+const out=[]; const q=s=>document.querySelector(s);
+const ok=(name,cond,info="")=>out.push((cond?"OK   ":"FEL  ")+name+(info?"  ("+info+")":""));
+setTimeout(()=>{ try{
+  useLang("de"); ok("tyska: kurs byts", q("#coursechip").textContent.includes("Tyska 5"));
+  ok("tyska: rubrik för videor", !q("#app").textContent.includes("på franska"));
+  ok("tyska: fler än 800 ord", WORDS.length>800, WORDS.length);
+  startDict(); let g=0; while(sess&&g++<80){ const c=sess.cur;
+    if(c.t==="mc"){answerMC(sess.d.opts.findIndex(o=>o.ok)); q("#nx").click();} else {q("#ans").value=c.w.exT; q("#submit").click(); q("#submit").click();} }
+  ok("tyska: diktamen", S.log[S.log.length-1].kind==="dict");
+ }catch(e){ ok("undantag", false, e.message); }
+ ok("inga JavaScript-fel", !__err.length, __err.join(" ; "));
+ document.body.insertAdjacentHTML("beforeend","<pre id=out>"+out.join("\n").replace(/</g,"&lt;")+"</pre>");
+},1500);
+</script>"""
+
+SCENARIO = r"""<script>
+const out=[]; const q=s=>document.querySelector(s);
+const ok=(name,cond,info="")=>out.push((cond?"OK   ":"FEL  ")+name+(info?"  ("+info+")":""));
+function answerRight(){
+  const c=sess.cur, d=sess.d, k=c.k||sess.kind;
+  if(c.t==="mc"){answerMC(d.opts.findIndex(o=>o.ok)); q("#nx").click(); return;}
+  if(d.render){ d.o.words.forEach(w=>[...document.querySelectorAll("[data-t]")].find(x=>x.textContent===w).click()); q("#submit").click(); q("#submit").click(); return; }
+  let v; if(k==="verbs") v=c.c.full; else if(k==="cloze") v=c.w.gap.ans; else if(k==="dict"||k==="trans") v=c.w.exT;
+  else if(k==="phr") v=phrById(c.ref).fr; else v=c.w.t.replace(/\(.*?\)/g,"").split(/\s*[,=]\s*/)[0];
+  q("#ans").value=v; q("#submit").click(); q("#submit").click();
+}
+const runAll=()=>{let g=0; while(sess&&g++<80) answerRight();};
+const lastLog=()=>S.log[S.log.length-1];
+setTimeout(()=>{ try{
+  ok("molnets framsteg hämtas", S.pass===5);
+  ok("kurs och nivå visas", q("#coursechip").textContent.includes("Franska 3"), q("#coursechip").textContent);
+  ok("kommande kurs går inte att välja", [...q("#course").options].some(o=>o.disabled&&o.text.includes("Franska 4")));
+  ok("dagens pass finns", !!q("#daily"));
+  ok("övningsgrupper", document.querySelectorAll(".exgroup").length===4, document.querySelectorAll(".exgroup").length);
+
+  // Diktamen: fel svar ger jämförelse ord för ord, sedan flerval, sedan skriva igen
+  startDict(); q("#ans").value="n'importe quoi"; q("#submit").click();
+  ok("diktamen visar skillnader", !!q(".diff .miss")); q("#submit").click();
+  runAll(); ok("diktamen klar och loggad", lastLog().kind==="dict", JSON.stringify(lastLog()));
+
+  // Översätt: ej exakt svar ger självbedömning
+  startTrans(); q("#ans").value="je ne sais pas"; q("#submit").click();
+  ok("översätt visar självbedömning", !!q("[data-gr]")); q('[data-gr="near"]').click();
+  ok("nästan räknas som fel och kommer tillbaka", sess.queue.some(x=>x.again&&x.t==="mc")); q("#submit").click();
+  runAll(); ok("översätt loggad", lastLog().kind==="trans");
+
+  startOrder(); ok("ordföljd har brickor", document.querySelectorAll("[data-t]").length>=4); runAll();
+  ok("ordföljd loggad", lastLog().kind==="order");
+
+  startPhrases(); runAll(); ok("fraser loggade", lastLog().kind==="phr");
+
+  openStories(); q("[data-pick]").click(); ok("berättelse visar lucka", !!q(".sg.cur")); runAll();
+  ok("berättelse slutskärm", q("#app").textContent.includes("Fler berättelser")); ok("tempusstatistik", !!(S.st&&S.st.tempus));
+
+  openListening(); q("[data-pick]").click(); q("#toq").click(); runAll();
+  ok("hörförståelse visar texten efteråt", document.querySelectorAll(".tl").length>3);
+  for(const gl of document.querySelectorAll(".gl")){ gl.click(); const add=q("#addw"); if(add){ add.click(); break; } }
+  ok("ord sparas i Mina ord", (S.mine||[]).length===1 && WORDS.some(w=>w.sec==="mine"), (S.mine||[]).map(m=>m.t).join());
+  ok("Mina ord kommer först bland nya ord", pickNew()[0] && pickNew()[0].sec==="mine");
+
+  openReading(); q("[data-pick]").click(); ok("lästext har ord att trycka på", document.querySelectorAll(".gl").length>10);
+  q("#toq").click(); runAll(); ok("läsförståelse sparad", Object.keys(S.tx||{}).length===2);
+
+  openCulture(); q("[data-pick]").click(); q(".opt").click(); q("#ctext").value="En Suède, je prends le bus."; q("#ctext").dispatchEvent(new Event("input")); q("#done").click();
+  ok("kultur loggad", lastLog().kind==="culture");
+
+  openWriting(); q("[data-pick]").click();
+  q("#wtext").value="Hier, je suis allé à Paris avec ma correspondante. D'abord, nous avons pris le RER, puis nous étions fatigués mais contents."; q("#wtext").dispatchEvent(new Event("input"));
+  ok("skrivchecklista", document.querySelectorAll("#checks li.ok").length>=2, [...document.querySelectorAll("#checks li")].map(l=>(l.className?"✓":"○")+l.textContent).join(" | "));
+  q("#done").click(); ok("skrivning loggad", lastLog().kind==="write");
+
+  // Blandad runda, avbruten och fortsatt
+  renderStart(); startMix(); const kinds=[...new Set([sess.cur,...sess.queue].map(x=>x.k))];
+  ok("blandad runda har flera typer", kinds.length>=4, kinds.join());
+  answerRight(); answerRight(); const done=sess.done;
+  sess=null; loadState(); rebuildWords(); renderStart(); q("#run-go").click();
+  ok("blandad runda fortsätter", sess&&sess.done===done, sess&&sess.done+" vs "+done); runAll();
+
+  // Dagens pass: glosor först, sedan knapp till blandad runda
+  renderStart(); q("#daily").click(); while(sess&&!sess.queue) q("#next").click(); runAll();
+  ok("dagens pass erbjuder blandad runda", !!q("#mix")); q("#mix").click(); runAll();
+
+  setView("stats"); ok("statistik visar övningar", q("#app").textContent.includes("Diktamen"));
+  setView("board"); setTimeout(()=>{ ok("topplista", !!q(".brow")); finish(); },400);
+ }catch(e){ ok("undantag", false, e.message+" "+(e.stack||"").split("\n")[1]); finish(); }
+},1500);
+function finish(){ ok("inga JavaScript-fel", !__err.length, __err.join(" ; "));
+  document.body.insertAdjacentHTML("beforeend","<pre id=out>"+out.join("\n").replace(/</g,"&lt;")+"</pre>"); }
+</script>"""
+
+def run(scenario):
+    page = (ROOT / "dist" / "preview.html").read_text(encoding="utf-8")
+    html = page.replace("<title>", SEED + "<title>", 1).replace("</body></html>", scenario + "</body></html>")
+    with tempfile.TemporaryDirectory() as tmp:
+        f = pathlib.Path(tmp) / "test.html"; f.write_text(html, encoding="utf-8")
+        dump = pathlib.Path(tmp) / "dump.html"
+        # Utdata till fil: Chromes hjälpprocesser håller annars en pipe öppen och Python väntar för evigt
+        with open(dump, "w") as fh:
+            p = subprocess.Popen([CHROME, "--headless=new", "--disable-gpu", f"--user-data-dir={tmp}/c", "--dump-dom",
+                                  "--virtual-time-budget=5000", f.as_uri()], stdout=fh, stderr=subprocess.DEVNULL)
+            # Chrome skriver ut sidan men avslutar inte alltid själv, så vi väntar på resultatet och stänger sedan
+            import time
+            for _ in range(180):
+                time.sleep(0.5)
+                if "</html>" in dump.read_text(encoding="utf-8", errors="replace") or p.poll() is not None:
+                    break
+            p.kill()
+        out = dump.read_text(encoding="utf-8", errors="replace")
+    m = re.search(r'<pre id="out">(.*?)</pre>', out, re.S)
+    return m.group(1).replace("&lt;", "<").replace("&amp;", "&") if m else "FEL  hittade inget testresultat i sidan"
+
+
+def main():
+    text = run(SCENARIO) + "\n" + run(SCENARIO_DE)
+    print(text)
+    sys.exit(1 if "FEL  " in text else 0)
+
+
+if __name__ == "__main__":
+    main()

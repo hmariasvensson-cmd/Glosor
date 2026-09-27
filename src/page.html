@@ -1,0 +1,39 @@
+<title>{{TITLE}}</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;1,7..72,400&family=Figtree:wght@400;500;600;700&display=swap">
+<style>
+{{STYLE}}
+</style>
+
+<div class="wrap">
+  <header>
+    <h1 id="title">{{TITLE}}</h1>
+    <p class="sub">Lär dig nya ord, gör quizet, och repetera i rätt takt.</p>
+    <div class="coursebar"><span class="coursechip" id="coursechip"></span>
+      <label class="coursepick"><span class="label">Kurs</span><select id="course" aria-label="Välj kurs"></select></label></div>
+  </header>
+  <nav class="tabs" id="tabs" role="tablist" aria-label="Vy">
+    <button role="tab" id="tab-ova" aria-selected="true">Öva</button>
+    <button role="tab" id="tab-stats" aria-selected="false">Statistik</button>
+    <button role="tab" id="tab-board" aria-selected="false">Topplista</button>
+  </nav>
+  <main id="app"></main>
+  <div id="tip" hidden></div>
+  <details class="list" id="list">
+    <summary><span>Alla ord <span class="sub" id="list-count" style="font-weight:400;margin-left:6px"></span></span></summary>
+    <div class="list-body">
+      <input class="search" id="search" type="search" aria-label="Sök ord">
+      <div id="rows"></div>
+    </div>
+  </details>
+  <p class="foot">Ett ord du lär dig kommer tillbaka i nästa pass, sedan 3, 7 och 20 pass senare. Svarar du fel börjar det om från nästa pass. <span id="savenote">Framstegen sparas i den här webbläsaren efter varje svar.</span></p>
+</div>
+
+<script>
+/* Byggd {{BUILT}} från ~/Glosor. Redigera inte den här filen, ändra i källfilerna och kör build.py. */
+const LANGUAGES = {};
+const UPCOMING = {{UPCOMING}};
+{{LANGUAGES}}
+{{APP}}
+</script>

@@ -1,0 +1,482 @@
+[
+ {
+  "id": "p01",
+  "cat": "förstå",
+  "sit": "Du förstod inte vad kassören i affären sa.",
+  "fr": "Pardon, vous pouvez répéter, s'il vous plaît ?",
+  "alt": [
+   "Répète !",
+   "Je ne sais pas.",
+   "Tu peux répéter ?"
+  ],
+  "why": "Till en kassör som du inte känner säger man vous. Répète ! är för bryskt, och Je ne sais pas betyder att du inte vet svaret, inte att du inte hörde."
+ },
+ {
+  "id": "p02",
+  "cat": "förstå",
+  "sit": "Din brevvän Lucas, som du duar, pratar för snabbt.",
+  "fr": "Tu peux parler plus lentement, s'il te plaît ?",
+  "alt": [
+   "Vous pouvez parler plus lentement, s'il vous plaît ?",
+   "Parle moins !",
+   "Tu peux parler plus vite ?"
+  ],
+  "why": "Med en jämnårig kompis använder man tu och s'il te plaît. Vous blir konstigt stelt, Parle moins ! är oartigt och plus vite betyder snabbare."
+ },
+ {
+  "id": "p03",
+  "cat": "förstå",
+  "sit": "Din kompis säger ordet « boulot » och du vet inte vad det betyder.",
+  "fr": "Ça veut dire quoi, « boulot » ?",
+  "alt": [
+   "Qu'est-ce que c'est dire « boulot » ?",
+   "Comment on dit « boulot » ?",
+   "Je ne veux pas « boulot »."
+  ],
+  "why": "Vouloir dire betyder 'betyda'. Comment on dit frågar hur man säger något, vilket du redan vet. Qu'est-ce que c'est dire är inte grammatiskt."
+ },
+ {
+  "id": "p04",
+  "cat": "förstå",
+  "sit": "Du pekar på en sak i affären och vet inte vad den heter på franska.",
+  "fr": "Comment ça s'appelle en français ?",
+  "alt": [
+   "Qu'est-ce que ça veut dire ?",
+   "Comment tu t'appelles ?",
+   "Comment ça s'appeler en français ?"
+  ],
+  "why": "S'appeler används både om namn på personer och på saker. Qu'est-ce que ça veut dire frågar efter betydelsen av ett ord du redan har hört, och s'appeler måste böjas: ça s'appelle."
+ },
+ {
+  "id": "p05",
+  "cat": "förstå",
+  "sit": "Klätterinstruktören har just förklarat en övning, men du förstod ingenting.",
+  "fr": "Désolé, je n'ai pas compris.",
+  "alt": [
+   "Je ne suis pas compris.",
+   "Désolé, je ne sais pas.",
+   "Je ne comprends rien, parle mieux !"
+  ],
+  "why": "Comprendre har avoir i passé composé: j'ai compris. Je ne sais pas betyder 'jag vet inte', och att be instruktören prata bättre är oartigt."
+ },
+ {
+  "id": "p06",
+  "cat": "förstå",
+  "sit": "Du vill kontrollera med personalen på stationen att du har förstått rätt: tåget går klockan åtta.",
+  "fr": "Si je comprends bien, le train part à huit heures ?",
+  "alt": [
+   "Le train part à huit heures ? Réponds !",
+   "Je comprends bien le train à huit heures.",
+   "Si je comprends bien, le train est arrivé à huit heures ?"
+  ],
+  "why": "Si je comprends bien … ? är ett artigt sätt att dubbelkolla. Réponds ! är både för bryskt och fel tilltal, och est arrivé betyder att tåget redan har kommit."
+ },
+ {
+  "id": "p07",
+  "cat": "förstå",
+  "sit": "Receptionisten på hotellet säger namnet på en gata, och du vill att hon bokstaverar det.",
+  "fr": "Vous pouvez l'épeler, s'il vous plaît ?",
+  "alt": [
+   "Tu peux l'épeler ?",
+   "Épelez !",
+   "Vous pouvez l'écrire plus vite ?"
+  ],
+  "why": "Épeler betyder bokstavera. Till en receptionist säger man vous, och en ensam imperativ som Épelez ! låter som en order."
+ },
+ {
+  "id": "p08",
+  "cat": "hålla igång",
+  "sit": "Din kompis frågar « Tu aimes le foot ? ». Du svarar och vill fråga tillbaka.",
+  "fr": "Oui, j'adore ! Et toi ?",
+  "alt": [
+   "Oui, j'adore ! Et vous ?",
+   "Oui, j'adore ! Et moi ?",
+   "Oui. Au revoir."
+  ],
+  "why": "Et toi ? är det enklaste sättet att hålla samtalet igång med en kompis. Et vous ? är för formellt till en kompis, och Et moi ? betyder 'och jag?'."
+ },
+ {
+  "id": "p09",
+  "cat": "hålla igång",
+  "sit": "Du och din brevvän har sett en film. Du vill veta vad hon tyckte.",
+  "fr": "Qu'est-ce que tu en penses ?",
+  "alt": [
+   "Qu'est-ce que tu penses en ?",
+   "Tu penses à quoi ?",
+   "Qu'est-ce que vous en pensez, madame ?"
+  ],
+  "why": "En (om det) står före verbet. Penser à quoi betyder 'tänka på vad', och madame och vous passar inte till en jämnårig."
+ },
+ {
+  "id": "p10",
+  "cat": "hålla igång",
+  "sit": "Din kompis nämner att han har börjat på en klätterkurs. Du vill höra mer.",
+  "fr": "Ah oui ? Raconte-moi !",
+  "alt": [
+   "Ah oui ? Tais-toi !",
+   "Ah oui ? Raconter-moi !",
+   "Ah oui ? Racontez-moi, monsieur !"
+  ],
+  "why": "Raconte-moi ! (berätta!) visar att du är intresserad. Tais-toi betyder 'håll tyst', imperativen heter raconte och inte raconter, och monsieur passar inte till en kompis."
+ },
+ {
+  "id": "p11",
+  "cat": "hålla igång",
+  "sit": "Din kompis förklarar reglerna i ett spel, men du hängde inte med.",
+  "fr": "Tu peux expliquer encore une fois ?",
+  "alt": [
+   "Explique mieux !",
+   "Tu peux répondre encore une fois ?",
+   "Tu peux expliquer à une fois ?"
+  ],
+  "why": "Encore une fois betyder 'en gång till'. Explique mieux ! låter som kritik, och répondre betyder svara, inte förklara."
+ },
+ {
+  "id": "p12",
+  "cat": "hålla igång",
+  "sit": "Du pratar med din brevvän och letar efter ett ord. Du behöver några sekunder.",
+  "fr": "Attends, je cherche le mot.",
+  "alt": [
+   "Attends, je cherche la mot.",
+   "Attends, je trouve le mot.",
+   "Tais-toi, je pense !"
+  ],
+  "why": "Chercher betyder leta efter, trouver betyder hitta. Mot är maskulint: le mot. Tais-toi är oartigt."
+ },
+ {
+  "id": "p13",
+  "cat": "hålla igång",
+  "sit": "Samtalet med din kompis har tystnat. Du vill byta ämne och fråga om helgen.",
+  "fr": "Au fait, tu as passé un bon week-end ?",
+  "alt": [
+   "Au fait, vous avez passé un bon week-end ?",
+   "Au fait, tu es passé un bon week-end ?",
+   "Change de sujet ! Ton week-end ?"
+  ],
+  "why": "Au fait betyder 'förresten' och är ett mjukt sätt att byta ämne. Passer un week-end har avoir, inte être, och vous passar inte till en kompis."
+ },
+ {
+  "id": "p14",
+  "cat": "hålla igång",
+  "sit": "Din kompis berättar att hon var i Nice förra veckan. Du ställer en följdfråga.",
+  "fr": "C'était comment ?",
+  "alt": [
+   "C'est été comment ?",
+   "Tu vas quand à Nice ?",
+   "Comment c'est, Nice ? Réponds !"
+  ],
+  "why": "C'était comment ? (hur var det?) står i imparfait eftersom resan redan har hänt. Tu vas quand frågar om framtiden, och Réponds ! är bryskt."
+ },
+ {
+  "id": "p15",
+  "cat": "åsikt",
+  "sit": "Du vill säga till din kompis vad du tycker om en film.",
+  "fr": "À mon avis, c'est un film génial.",
+  "alt": [
+   "À mon avis, c'est une film génial.",
+   "Selon toi, c'est un film génial.",
+   "Je suis d'avis génial."
+  ],
+  "why": "À mon avis betyder 'enligt min åsikt'. Film är maskulint (un film), och selon toi betyder 'enligt dig'."
+ },
+ {
+  "id": "p16",
+  "cat": "åsikt",
+  "sit": "Din kompis säger något du tycker är helt rätt.",
+  "fr": "Je suis d'accord avec toi.",
+  "alt": [
+   "J'ai d'accord avec toi.",
+   "Je ne suis pas d'accord avec toi.",
+   "Je suis d'accord avec vous, madame."
+  ],
+  "why": "Man säger être d'accord, aldrig avoir d'accord. Med en kompis säger man toi."
+ },
+ {
+  "id": "p17",
+  "cat": "åsikt",
+  "sit": "I en klassdiskussion håller du inte riktigt med din lärare. Säg det artigt.",
+  "fr": "Je ne suis pas tout à fait d'accord avec vous.",
+  "alt": [
+   "Tu as tort !",
+   "Vous avez raison.",
+   "Je ne suis pas d'accord de vous."
+  ],
+  "why": "Pas tout à fait (inte helt) gör det mjukare, och läraren säger man vous till. Tu as tort ! är både för direkt och fel tilltal, och vous avez raison betyder att du håller med."
+ },
+ {
+  "id": "p18",
+  "cat": "åsikt",
+  "sit": "Du vill fråga din lärare vad hon tycker.",
+  "fr": "Quel est votre avis, madame ?",
+  "alt": [
+   "C'est quoi ton avis ?",
+   "Quelle est votre avis, madame ?",
+   "Quel est votre âge, madame ?"
+  ],
+  "why": "Avis är maskulint, så det blir quel. Läraren säger man vous till, och votre âge betyder hennes ålder."
+ },
+ {
+  "id": "p19",
+  "cat": "åsikt",
+  "sit": "Du vill säga att du gillar fotboll mer än tennis.",
+  "fr": "Je préfère le foot au tennis.",
+  "alt": [
+   "Je préfère le foot que le tennis.",
+   "Je préfère le tennis au foot.",
+   "J'aime le foot plus de le tennis."
+  ],
+  "why": "Man säger préférer A à B (à + le = au). Que är ett vanligt fel efter préférer, och det andra alternativet säger tvärtom."
+ },
+ {
+  "id": "p20",
+  "cat": "åsikt",
+  "sit": "Någon frågar om Zlatan är bättre än Zidane. Du är inte säker.",
+  "fr": "Je ne suis pas sûr. Peut-être.",
+  "alt": [
+   "Carrément, c'est sûr !",
+   "Je ne suis pas sûr de moi.",
+   "Je n'ai pas sûr."
+  ],
+  "why": "Être sûr betyder vara säker. Être sûr de soi betyder ha självförtroende, och carrément betyder att du är helt säker."
+ },
+ {
+  "id": "p21",
+  "cat": "åsikt",
+  "sit": "Din kompis säger att Zlatan är den bästa spelaren i historien. Du tycker att det är lite väl mycket.",
+  "fr": "Je trouve que c'est un peu exagéré.",
+  "alt": [
+   "Je trouve c'est un peu exagéré.",
+   "Je trouve que c'est parfait.",
+   "Tu es exagéré !"
+  ],
+  "why": "Efter je trouve måste det komma que. Exagéré betyder överdrivet, och tu es exagéré är inte något man säger om en person."
+ },
+ {
+  "id": "p22",
+  "cat": "vardag",
+  "sit": "Du beställer en kaffe av servitören på ett café.",
+  "fr": "Je voudrais un café, s'il vous plaît.",
+  "alt": [
+   "Je veux un café.",
+   "Donne-moi un café !",
+   "Je voudrais un café, s'il te plaît."
+  ],
+  "why": "Je voudrais (jag skulle vilja) är artigare än je veux. En servitör du inte känner säger man vous till."
+ },
+ {
+  "id": "p23",
+  "cat": "vardag",
+  "sit": "Du letar efter närmaste metrostation och frågar en främling på gatan.",
+  "fr": "Excusez-moi, où est la station de métro ?",
+  "alt": [
+   "Excuse-moi, où est la station de métro ?",
+   "Où est le métro ? Vite !",
+   "Excusez-moi, où est la station de ski ?"
+  ],
+  "why": "Till en främling säger man excusez-moi. Station de ski är en skidort."
+ },
+ {
+  "id": "p24",
+  "cat": "vardag",
+  "sit": "Du köper en tågbiljett till Versailles i biljettluckan.",
+  "fr": "Un billet pour Versailles, s'il vous plaît.",
+  "alt": [
+   "Une billet pour Versailles, s'il vous plaît.",
+   "Un billet pour Versailles, s'il te plaît.",
+   "Un billet, c'est tout !"
+  ],
+  "why": "Billet är maskulint: un billet. Till personalen säger man s'il vous plaît."
+ },
+ {
+  "id": "p25",
+  "cat": "vardag",
+  "sit": "Du har ätit klart på restaurangen och vill betala.",
+  "fr": "L'addition, s'il vous plaît.",
+  "alt": [
+   "La facture, s'il vous plaît.",
+   "L'addition, s'il te plaît.",
+   "Je veux payer, vite !"
+  ],
+  "why": "Notan på en restaurang heter l'addition. En facture är en räkning, till exempel för el eller telefon."
+ },
+ {
+  "id": "p26",
+  "cat": "vardag",
+  "sit": "Du vill veta vad en tröja kostar och frågar expediten.",
+  "fr": "C'est combien, s'il vous plaît ?",
+  "alt": [
+   "Combien tu coûtes ?",
+   "C'est combien de temps ?",
+   "Combien est-ce que c'est coûte ?"
+  ],
+  "why": "C'est combien ? är det enklaste sättet att fråga om priset. Combien de temps frågar hur lång tid något tar, och combien tu coûtes frågar vad personen kostar."
+ },
+ {
+  "id": "p27",
+  "cat": "vardag",
+  "sit": "Din resväska kom inte fram. Du pratar med personalen vid bagageavdelningen.",
+  "fr": "Bonjour, ma valise n'est pas arrivée.",
+  "alt": [
+   "Bonjour, ma valise n'a pas arrivé.",
+   "Salut, ma valise n'est pas arrivée.",
+   "Bonjour, j'ai perdu mon chemin."
+  ],
+  "why": "Arriver har être i passé composé, och participet böjs efter valise (f): arrivée. Salut är för vardagligt till personal, och perdre son chemin betyder gå vilse."
+ },
+ {
+  "id": "p28",
+  "cat": "vardag",
+  "sit": "Du har gått vilse i Paris och ber en främling om hjälp.",
+  "fr": "Excusez-moi, je me suis perdu. Vous pouvez m'aider ?",
+  "alt": [
+   "Excusez-moi, j'ai perdu. Vous pouvez m'aider ?",
+   "Excusez-moi, je m'ai perdu. Vous pouvez m'aider ?",
+   "Aide-moi, je suis perdu !"
+  ],
+  "why": "Se perdre (gå vilse) är reflexivt och har être: je me suis perdu. J'ai perdu betyder 'jag förlorade'. Aide-moi är fel tilltal och låter som en order."
+ },
+ {
+  "id": "p29",
+  "cat": "artighet",
+  "sit": "Du träffar din brevväns mamma för första gången.",
+  "fr": "Bonjour madame, enchanté.",
+  "alt": [
+   "Salut ! Ça va ?",
+   "Bonjour madame, tu vas bien ?",
+   "Au revoir madame, enchanté."
+  ],
+  "why": "Enchanté betyder 'trevligt att träffas'. Till en vuxen du inte känner säger man bonjour madame och vous, inte salut eller tu."
+ },
+ {
+  "id": "p30",
+  "cat": "artighet",
+  "sit": "Du säger vous till din brevväns mamma men undrar om du får säga tu.",
+  "fr": "Est-ce que je peux vous tutoyer ?",
+  "alt": [
+   "Je te tutoie, d'accord ?",
+   "Est-ce que je peux vous vouvoyer ?",
+   "Est-ce que je peux te tutoyer ?"
+  ],
+  "why": "Tutoyer betyder dua, vouvoyer betyder nia. Du frågar med vous eftersom ni ännu inte duar, och du bestämmer inte själv, så je te tutoie, d'accord ? blir fräckt."
+ },
+ {
+  "id": "p31",
+  "cat": "artighet",
+  "sit": "Din brevväns föräldrar bjuder dig på middag på lördag.",
+  "fr": "Merci beaucoup, c'est très gentil.",
+  "alt": [
+   "Merci, c'est tout.",
+   "Merci beaucoup, c'est très gentille.",
+   "Merci beaucoup, tu es très gentille."
+  ],
+  "why": "C'est gentil (det är snällt) böjs inte, eftersom c'est syftar på inbjudan. Till föräldrarna säger man inte tu."
+ },
+ {
+  "id": "p32",
+  "cat": "artighet",
+  "sit": "Du råkar stöta till en främling i metron.",
+  "fr": "Oh pardon, excusez-moi !",
+  "alt": [
+   "Oh pardon, excuse-moi !",
+   "Attention !",
+   "De rien !"
+  ],
+  "why": "Till en främling säger man excusez-moi. Attention ! skyller på den andra, och de rien svarar man när någon tackar."
+ },
+ {
+  "id": "p33",
+  "cat": "artighet",
+  "sit": "En äldre dam tackar dig för att du hjälpte henne med väskan.",
+  "fr": "Je vous en prie, madame.",
+  "alt": [
+   "Je t'en prie, madame.",
+   "Pas de problème, mec !",
+   "Merci, madame."
+  ],
+  "why": "Je vous en prie är ett artigt 'varsågod' eller 'ingen orsak'. Till en äldre dam säger man vous, och mec (snubbe) är slang."
+ },
+ {
+  "id": "p34",
+  "cat": "artighet",
+  "sit": "Du kommer fem minuter för sent till en anställningsintervju.",
+  "fr": "Excusez-moi pour le retard.",
+  "alt": [
+   "Salut, désolé pour le retard !",
+   "Désolé, je suis tard.",
+   "Excusez-moi pour le rendez-vous."
+  ],
+  "why": "Le retard betyder förseningen, och 'jag är sen' heter je suis en retard. På en intervju säger man inte salut."
+ },
+ {
+  "id": "p35",
+  "cat": "reagera",
+  "sit": "Din kompis berättar att hon ska flytta till Nice.",
+  "fr": "Ah bon ? C'est vrai ?",
+  "alt": [
+   "Ah bon ? Et alors ?",
+   "Ah bien ? C'est vrai ?",
+   "Bon appétit !"
+  ],
+  "why": "Ah bon ? visar att du blir förvånad och intresserad. Et alors ? betyder 'än sen då?' och låter ointresserat."
+ },
+ {
+  "id": "p36",
+  "cat": "reagera",
+  "sit": "Din kompis har fått sommarjobb som skidlärare i Alperna.",
+  "fr": "C'est génial ! Félicitations !",
+  "alt": [
+   "Dommage !",
+   "Bon courage !",
+   "C'est géniale ! Félicitation !"
+  ],
+  "why": "Félicitations (grattis) står alltid i plural, och génial böjs inte efter c'est. Bon courage önskar lycka till med något jobbigt, och dommage betyder synd."
+ },
+ {
+  "id": "p37",
+  "cat": "reagera",
+  "sit": "Din kompis säger att han inte kan komma på din fest.",
+  "fr": "Oh, dommage !",
+  "alt": [
+   "Super !",
+   "Tant mieux !",
+   "Oh, c'est dommager !"
+  ],
+  "why": "Dommage betyder 'synd'. Tant mieux (så mycket bättre) och super låter som att du blir glad över att han inte kommer."
+ },
+ {
+  "id": "p38",
+  "cat": "reagera",
+  "sit": "Din kompis Hugo berättar att han har tappat sin mobil.",
+  "fr": "Oh non, mon pauvre ! Je suis désolé.",
+  "alt": [
+   "Oh non, ma pauvre !",
+   "C'est drôle !",
+   "Oh non, vous êtes pauvre !"
+  ],
+  "why": "Mon pauvre betyder 'stackars dig' till en kille (ma pauvre till en tjej). Être pauvre betyder att man inte har några pengar, och vous passar inte till en kompis."
+ },
+ {
+  "id": "p39",
+  "cat": "reagera",
+  "sit": "Din brevvän berättar att hon har träffat Zlatan på stan.",
+  "fr": "Non ! Sans blague ?",
+  "alt": [
+   "Non merci.",
+   "Ça m'est égal.",
+   "Sans blagues pas ?"
+  ],
+  "why": "Sans blague ? betyder 'skojar du?' och visar att du blir överraskad. Ça m'est égal betyder 'det struntar jag i'."
+ },
+ {
+  "id": "p40",
+  "cat": "reagera",
+  "sit": "Din kompis ska på anställningsintervju i morgon och är nervös.",
+  "fr": "Bon courage ! Tu vas y arriver.",
+  "alt": [
+   "Bon appétit ! Tu vas y arriver.",
+   "Bon courage ! Vous allez y arriver.",
+   "Bonne courage ! Tu vas arriver y."
+  ],
+  "why": "Bon courage (lycka till, kämpa på) passar inför något svårt. Courage är maskulint, y står före infinitiven och till en kompis säger man tu."
+ }
+]
