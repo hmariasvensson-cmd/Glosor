@@ -318,3 +318,11 @@ body.has-tray{padding-bottom:calc(45vh + 30px)}
 .fbst.fb-backlogg,.fbst.fb-byggt{background:color-mix(in srgb,var(--green) 18%,transparent);color:var(--ink)}
 .fbreply{color:var(--ink-2)}
 @media (max-width:420px){.tabs button{padding:10px 4px;font-size:.9rem}}
+/* Provträning */
+.clock{font-variant-numeric:tabular-nums;font-weight:700;color:var(--navy)}
+.clock.over{color:var(--pink)}
+.exqs{display:flex;flex-direction:column;gap:18px}
+.exq{display:flex;flex-direction:column;gap:8px}
+.opt.on{border-color:var(--navy);background:var(--m-soft)}
+.extask{background:var(--surface-2);border-radius:12px;padding:12px 14px;font-family:var(--serif);line-height:1.55}
+b.pass{color:var(--ok)} b.fail{color:var(--pink)}

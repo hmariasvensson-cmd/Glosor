@@ -10,7 +10,7 @@
    ===================================================================== */
 const C=()=>L.content||{};
 const RESTORE={}, EFFECT={}, RECAP={}, AFTER={};
-const KIND_NAMES={dict:"Diktamen",trans:"Översätt meningar",order:"Ordföljd",phr:"Samtalsfraser",story:"Berättelser",
+const KIND_NAMES={exam:"Provträning",dict:"Diktamen",trans:"Översätt meningar",order:"Ordföljd",phr:"Samtalsfraser",story:"Berättelser",
   lq:"Hörförståelse",rq:"Läsförståelse",culture:"Kultur",write:"Skrivna texter"};
 const reEsc=s=>s.replace(/[.*+?^${}()|[\]\\]/g,"\\$&");
 const hasWord=(text,w)=>new RegExp("(^|[^\\p{L}])"+reEsc(w)+"(?![\\p{L}])","iu").test(text);
@@ -642,7 +642,7 @@ function writeScreen(id){
   const ta=$("#wtext"); let tm=null; wireAccents(ta);
   wireFeedback(ta,dk,`${p.title}: ${p.task} (${p.min}–${p.max} ord)`);
   const draw=()=>{$("#checks").innerHTML=writeChecks(p,ta.value).map(c=>`<li class="${c.ok?"ok":""}">${esc(c.label)}</li>`).join("");};
-  ta.oninput=()=>{draw(); clearTimeout(tm); tm=setTimeout(()=>{S.drafts[dk]=ta.value; save(); $("#wmsg").textContent="Sparat.";},800);};
+  ta.oninput=()=>{draw(); clearTimeout(tm); tm=setTimeout(()=>{S.drafts[dk]=ta.value; save(); const m=$("#wmsg"); if(m) m.textContent="Sparat.";},800);};
   draw();
   $("#copy").onclick=()=>copyText(ta,$("#wmsg"));
   $("#done").onclick=()=>{ const n=tok(ta.value).length; if(!n) return;
@@ -724,6 +724,7 @@ function gamesPanel(){
       ...verbGames().map(v=>`<button class="game" data-g="${v.id}"><span><b>Verb: ${esc(v.name)}</b><small>${esc(v.sub||"")}</small></span><span class="go" aria-hidden="true">›</span></button>`),
       hasGrammar()&&g("gram","Grammatikövningar",GR().topics.slice(0,4).map(t=>t.name.toLowerCase()).join(", ")+" …"),
       c.stories&&g("story","Berättelser","Välj rätt tempus och bindeord i en berättelse.")]],
+    ...(hasExam()?[["Språkprov",[g("exam",`Provträning: ${esc(EX().name)}`,"Uppgifter i provets format, med klocka, poäng och provsimulering.")]]]:[]),
     ["Tala och skriva",[
       c.phrases&&g("phr","Samtalsfraser","Vad man säger när man inte förstår, vill säga sin åsikt …"),
       g("shadow","Skugga","Lyssna och säg meningen högt samtidigt, för uttal och rytm."),
@@ -733,7 +734,7 @@ function gamesPanel(){
     return items.length?`<div class="exgroup"><span class="label">${t}</span><div class="games">${items.join("")}</div></div>`:"";}).join("")}</section>`;
 }
 function wireGames(){
-  const F={cloze:startCloze,dict:startDict,trans:startTrans,order:startOrder,lq:openListening,rq:openReading,culture:openCulture,story:openStories,phr:startPhrases,write:openWriting,gram:openGrammar,gen:startGender,shadow:startShadow};
+  const F={exam:openExam,cloze:startCloze,dict:startDict,trans:startTrans,order:startOrder,lq:openListening,rq:openReading,culture:openCulture,story:openStories,phr:startPhrases,write:openWriting,gram:openGrammar,gen:startGender,shadow:startShadow};
   app.querySelectorAll("[data-ex]").forEach(b=>b.onclick=()=>F[b.dataset.ex]());
   app.querySelectorAll("[data-g]").forEach(b=>b.onclick=()=>startVerbs(b.dataset.g));
 }

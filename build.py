@@ -197,7 +197,7 @@ def main():
         "TITLE": title,
         "STYLE": (ROOT / "src" / "style.css").read_text(encoding="utf-8").strip(),
         "LANGUAGES": "\n".join(lang_js),
-        "APP": "\n".join((ROOT / "src" / f).read_text(encoding="utf-8").strip() for f in ("app.js", "exercises.js", "grammar.js", "feedback.js", "main.js")),
+        "APP": "\n".join((ROOT / "src" / f).read_text(encoding="utf-8").strip() for f in ("app.js", "exercises.js", "grammar.js", "exam.js", "feedback.js", "main.js")),
         "BUILT": datetime.datetime.now().strftime("%Y-%m-%d %H:%M"),
         "UPCOMING": js_string(json.loads((LANG_DIR / "upcoming.json").read_text(encoding="utf-8"))) if (LANG_DIR / "upcoming.json").exists() else "[]",
     }
