@@ -85,6 +85,8 @@ setTimeout(()=>{ try{
   window.__plurals=genderNouns().filter(n=>n.pl).map(n=>n.w.t+" => "+n.pl).join("\n");
   setView("stats"); ok("statistik: grammatik", q("#app").textContent.includes("Adjektivändelser"));
   ok("rapport om fel facit sparas", Object.keys(__remote).some(k=>k.startsWith("reports/u_test-")), Object.keys(__remote).join());
+  renderStart(); q('[data-ex="exam"]').click(); ok("tyska: provträning Goethe B2", document.querySelectorAll("[data-xt]").length>=15&&q("#app").textContent.includes("Goethe"));
+  { const t=EX().tasks.find(t=>t.part==="hoeren"); examTask(t.id); ok("tyska: hörprov döljer texten", !!q("#explay")&&q("#lines").hidden); }
   // Tyska 4: egen kurs med egen sparnyckel
   renderStart(); q('[data-only="1"]').click();
   ok("bara tyska: båda tyska kurserna i väljaren", !q(".coursepick").hidden&&[...q("#course").options].map(o=>o.value).join()==="de4,de", [...q("#course").options].map(o=>o.value).join());

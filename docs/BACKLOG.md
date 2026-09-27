@@ -12,9 +12,8 @@ Underlag finns i `docs/ovningsforslag.md` (franska), `docs/ovningsforslag-tyska.
 
 Båda eleverna ska söka musikutbildning utomlands. Oscar behöver visa **B1 i franska** (DELF B1) för Frankrike, och Emma behöver visa **B2 i tyska** för Tyskland. Musikhögskolorna godtar oftast Goethe-Zertifikat B2, telc B2 eller TestDaF, men kontrollera vad just deras skolor kräver. Betyg i kursen spelar mindre roll.
 
-- **P1: Provövningar i provets format.** Tyska B2 (Goethe): Lesen, Hören, Schreiben (Forumsbeitrag och formellt mejl) och Sprechen (presentation och diskussion). DELF B1: compréhension orale, compréhension écrite, production écrite (160 ord, brev eller forum) och production orale (entretien, exercice en interaction, expression d'un point de vue). Skriv uppgifter i samma format, med tidtagning och poäng som i provet.
-- **P1: Provsimulering:** ett helt delprov med klocka, poäng mot provets gräns (60 %) och Claudes bedömning av skrivdelen enligt provets kriterier.
-- **P1: Musikordförråd** för båda språken: Musikhochschule, Aufnahmeprüfung, Vorspiel, Hauptfach, Stimmlage … och conservatoire, audition, concours d'entrée, solfège … Också fraser för intervju och samtal på antagningsprovet.
+- **P2: Kontrollera provformaten** mot provgivarnas egna exempelprov (Goethe Modellsatz B2, DELF B1 sujets démo): antal frågor per Teil/exercice, tider och exakt formulering av uppgifterna. Uppgifterna i appen är skrivna efter minnet av formatet.
+- **P2: Fler provuppgifter**, så att provsimuleringen inte upprepar sig (i dag 16 tyska och 14 franska uppgifter). Tyska 4 har ingen provträning, eftersom Goethe B2 är för svårt där. Ett B1-prov (Goethe B1) kan läggas till.
 - **P2: Muntlig förberedelse:** presentera sig själv och sin musik, med skuggning och Claude som samtalspartner (text).
 - **P2: Nivåmätare:** uppskatta var eleven ligger mot B1/B2 utifrån ordförråd, grammatikresultat och Claudes bedömningar, och visa det i statistiken.
 

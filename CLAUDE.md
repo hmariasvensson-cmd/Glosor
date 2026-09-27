@@ -35,6 +35,7 @@ Publicera alltid med de här kapabiliteterna (utelämna `capabilities` vid ompub
 - `src/app.js`: språk, sparande (lokalt och claude.ai), glosquiz, quizmotor, statistik, topplista.
 - `src/exercises.js`: alla övningar utöver glosquizet. Varje typ registrerar `MC`/`TYPE` (frågor), `RESTORE` (återuppta), `EFFECT` (statistik) och `RECAP`. Fråge-id är `<typ>:<ref>`, så typerna kan blandas i Dagens pass.
 - `src/grammar.js`: grammatikövningar (tyska just nu), der/die/das och plural. Frågorna ligger i `languages/<kod>/content/grammar-*.json` (format i `languages/de/content/GRAMMATIK-SPEC.md`). `build.py` slår ihop och kontrollerar dem.
+- `src/exam.js`: provträning och provsimulering (`content/exam.json`, format i uppgifterna själva; resultat i `S.exam`).
 - `src/feedback.js`: fliken Tyck till.
 - `src/main.js`: start och kursväljare (körs sist).
 - `languages/de4/`: Tyska 4 (B1). Hämtar verb, bindeord och tempusigenkänning från `languages/de/lang.js` (getters), så `de` måste laddas före `de4` (build.py sorterar koderna). `nextCourse` ger förslaget att gå vidare till Tyska 5.
