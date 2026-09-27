@@ -2,6 +2,12 @@
 
 Punkter som har flyttats från [`BACKLOG.md`](BACKLOG.md) när de byggdes. **Referens** anger backloggens rubrik och prioritet. **Commit** anger var ändringen finns i git. **Publicerat** anger versionen av artefakten på https://claude.ai/artifact/YBQv8j4qXQQLuPwLAWt5mP.
 
+## 2026-09-27, del 10 (publicerat som version 18)
+
+| Referens | Vad som byggdes | Commit |
+|---|---|---|
+| Önskemål från föräldern: *arkitektgenomgång, data separat* (ersätter Kurser · P2 *Säkerhetskopiera book/* delvis) | Kursernas data ligger nu i egna filer, `data/<kod>.json`, som publiceras bredvid sidan och hämtas först när kursen väljs. Sidan har krympt från 2,8 MB till 270 kB plus den kurs man använder. Bokmaterialet ligger i en mapp per kapitel (`book/kapNN/` med foton, glosor och övningar) och har en sidförteckning, `book/sidor.json`. Bokmappen är ett eget lokalt git-repo. Bygget kontrollerar att id:n är unika inom varje innehållstyp. Testerna kör också den publicerade sidan via en lokal webbserver. Översikten finns i `docs/ARKITEKTUR.md`. | `4ff611c` |
+
 ## 2026-09-27, del 9 (publicerat som version 17)
 
 | Referens | Vad som byggdes | Commit |
