@@ -550,7 +550,7 @@ function answerMC(i){
   app.querySelectorAll(".opt").forEach((b,k)=>{b.disabled=true; if(d.opts[k].ok)b.classList.add("right"); else if(k===i)b.classList.add("wrong");});
   const back=record(ok); sess.done++; snapRun();
   $("#fb").innerHTML=`<div class="feedback ${ok?"ok":"bad"}"><strong>${ok?"Rätt!":"Inte riktigt."}</strong>
-    ${backMsg(ok,back)}${!ok&&d.wrongCard?d.wrongCard:d.explain}</div>
+    ${backMsg(ok,back)}${!ok&&d.wrongCard?d.wrongCard:d.explain}${reportBtn()}</div>
     <button class="btn" id="nx" style="margin-top:12px">Nästa</button>`;
   if(d.onAnswer) d.onAnswer(ok);
   if(d.sayOnAnswer) speak(d.say);
@@ -607,12 +607,25 @@ function showTypeResult(d,res,inp){
     :{right:"Rätt!",accent:"Rätt, men titta på accenterna.",near:d.nearMsg||"Nästan! Ett stavfel.",wrong:"Inte riktigt."}[r];
   $("#fb").innerHTML=`<div class="feedback ${r==="right"?"ok":r==="wrong"&&res.self!=="near"?"bad":"near"}"><strong>${msg}</strong>
     ${(r==="right"&&!d.alwaysAnswer)||res.self?"":`<p>Rätt svar: <b ${lang()}>${d.answer}</b></p>`}${res.self?"":res.html||""}${backMsg(ok,back)}${!ok&&d.wrongCard?d.wrongCard:d.explain}
-    ${!ok&&d.override&&!res.self?`<button class="override" id="ovr">Jag hade rätt</button>`:""}</div>`;
+    ${!ok&&d.override&&!res.self?`<button class="override" id="ovr">Jag hade rätt</button>`:""}${reportBtn()}</div>`;
   $("#submit").textContent="Nästa"; $("#submit").focus();
   if(d.onAnswer) d.onAnswer(ok);
   if(!res.self) speak(d.say);
   if($("#ovr")) $("#ovr").onclick=()=>{unrecord();snapRun();if($("#back"))$("#back").remove();$("#ovr").outerHTML="<p><b>Okej, räknas som rätt.</b></p>";inp.classList.remove("wrong");inp.classList.add("right")};
 }
+/* "Fel i frågan?": eleven kan rapportera ett felaktigt facit eller en konstig mening.
+   Rapporterna sparas i reports/<id> i artefaktens db (läses av föräldern eller Claude), annars i S.reports. */
+const reportBtn=()=>`<button type="button" class="override" data-report>Fel i frågan? Rapportera</button>`;
+async function sendReport(btn){
+  const c=sess&&sess.cur, d=sess&&sess.d; if(!c||btn.disabled) return;
+  const r={lang:L.code,id:itemId(c),kind:c.k||sess.kind,t:c.t,answer:String((d&&d.answer)||"").replace(/<[^>]+>/g,""),d:Date.now(),pass:S.pass};
+  btn.disabled=true; btn.textContent="Skickar …";
+  let ok=false;
+  if(CLOUD.db&&CLOUD.uid){ try{ await CLOUD.db.doc(`reports/${CLOUD.uid}-${r.d}`).set({...r,uid:CLOUD.uid}); ok=true; }catch(e){} }
+  if(!ok){ S.reports=(S.reports||[]).slice(-49); S.reports.push(r); save(); }
+  btn.textContent="Tack! Frågan är rapporterad och blir kontrollerad.";
+}
+document.addEventListener("click",e=>{const b=e.target.closest&&e.target.closest("[data-report]"); if(b) sendReport(b);});
 document.addEventListener("keydown",e=>{
   if(!sess||!sess.cur||!sess.d||sess.cur.t!=="mc"||e.target.matches("input,textarea"))return;
   const n=+e.key; if(n>=1&&n<=sess.d.opts.length&&!sess.answered) answerMC(n-1);

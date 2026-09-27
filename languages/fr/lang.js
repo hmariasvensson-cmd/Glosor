@@ -32,6 +32,35 @@ LANGUAGES.fr = {
     "présent": t => t.trim().length > 0
   },
 
+  // Grammatikövningar. Frågorna ligger i content/grammar-*.json (se content/GRAMMATIK-SPEC.md).
+  grammar: {
+    topics: [
+      {id: "pron", name: "Pronomen: le, lui, y, en", sub: "Je le vois. Je lui parle. J'y vais. J'en veux."},
+      {id: "pc", name: "Passé composé: être eller avoir?", sub: "Elle est partie. Nous nous sommes levés."},
+      {id: "art", name: "Du, de la, des och de", sub: "Je mange du pain. Je n'ai pas de frères."},
+      {id: "prep", name: "Prepositioner: en, au, à", sub: "en France, au Portugal, à Paris, au cinéma"},
+      {id: "rel", name: "Qui, que, où, dont", sub: "Le garçon qui parle, le film que j'ai vu"},
+      {id: "subj", name: "Subjonctif", sub: "Il faut que tu viennes. Je pense que c'est vrai."},
+      {id: "si", name: "Si-satser", sub: "Si j'avais le temps, je viendrais."},
+      {id: "comp", name: "Jämförelser", sub: "plus grand que, meilleur, mieux, le plus"},
+      {id: "neg", name: "Negation och ordföljd", sub: "Je ne l'ai jamais vu."},
+      {id: "quest", name: "Frågor", sub: "Où habites-tu ? Est-ce que tu viens ?"},
+      {id: "err", name: "Hitta felet", sub: "En mening har ett fel. Vilket ord?"}
+    ],
+    rules: {
+      "pron-cod": "Direkt objekt: le, la, les", "pron-coi": "Indirekt objekt: lui, leur", "pron-y": "y (dit, på det)", "pron-en": "en (av det, några)", "pron-pc": "Pronomen i passé composé",
+      "pc-etre": "Passé composé med être", "pc-avoir": "Passé composé med avoir", "pc-accord": "Kongruens med être", "pc-refl": "Reflexiva verb i passé composé",
+      "art-part": "Delningsartikel", "art-neg": "de efter negation", "art-qte": "de efter mängdord",
+      "prep-pays": "Prepositioner med länder", "prep-ville": "à med städer", "prep-a-de": "au, aux, du, des",
+      "rel-qui": "qui", "rel-que": "que", "rel-ou": "où", "rel-dont": "dont",
+      "subj-faut": "Subjonctif efter il faut que", "subj-vouloir": "Subjonctif efter vouloir que", "subj-sent": "Subjonctif efter känslor", "subj-ind": "Indikativ, inte subjonctif",
+      "si-pres": "Si + présent → futur", "si-imp": "Si + imparfait → conditionnel",
+      "comp-adj": "Komparativ", "comp-meilleur": "meilleur eller mieux", "comp-sup": "Superlativ",
+      "neg-ordf": "Negationens plats", "neg-typ": "ne … jamais, rien, personne, plus",
+      "q-inv": "Fråga med inversion", "q-est-ce": "Fråga med est-ce que"
+    }
+  },
+
   verbs: {
     persons: ["je", "tu", "il/elle", "nous", "vous", "ils/elles"],
     // Pronomen som skrivs framför verbformen (je blir j' framför vokal, subjonctif får que framför)

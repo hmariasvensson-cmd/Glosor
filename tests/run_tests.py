@@ -63,6 +63,8 @@ setTimeout(()=>{ try{
     beginQuiz("gram",[{k:"gram",id:"gram:"+x.id,ref:x.id,t:"type",canType:true}],{label:"t"});
     tok(x.acc[0]).forEach(w=>{const b=[...document.querySelectorAll("[data-t]")].find(t=>tok(t.textContent)[0]===w); if(b) b.click();}); }
   q("#submit").click(); ok("bisats: bisatsen först godkänns", q("#built").classList.contains("right"), q("#built").textContent); q("#submit").click(); runDe();
+  startGram("praep"); answerMC(0); q("[data-report]").click();
+  setTimeout(()=>{},0);
   startGram("err"); ok("hitta felet: fyra val", sess.d.opts.length>=3 && sess.d.opts.filter(o=>o.ok).length===1); runDe();
   startGram("mix"); runDe(); ok("blandad grammatik", S.gt.mix&&S.gt.mix.n>0);
   startMix(); ok("blandad runda har grammatik", [sess.cur,...sess.queue].some(x=>x.k==="gram")); runDe();
@@ -76,6 +78,7 @@ setTimeout(()=>{ try{
   ok("der/die/das: loggad", S.log.some(l=>l.kind==="gen")&&Object.keys(S.ga||{}).length>=5);
   window.__plurals=genderNouns().filter(n=>n.pl).map(n=>n.w.t+" => "+n.pl).join("\n");
   setView("stats"); ok("statistik: grammatik", q("#app").textContent.includes("Adjektivändelser"));
+  ok("rapport om fel facit sparas", Object.keys(__remote).some(k=>k.startsWith("reports/u_test-")), Object.keys(__remote).join());
  }catch(e){ ok("undantag", false, e.message); }
  ok("inga JavaScript-fel", !__err.length, __err.join(" ; "));
  document.body.insertAdjacentHTML("beforeend","<pre id=out>"+out.join("\n").replace(/</g,"&lt;")+"</pre>");

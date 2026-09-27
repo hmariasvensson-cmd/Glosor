@@ -30,7 +30,7 @@ function gramById(id){
   if(id.startsWith("err|")) return errItem(id);
   return gramBank()[id]||null;
 }
-const hasGrammar=()=>!!(GR()&&GR().topics);
+const hasGrammar=()=>!!(GR()&&GR().topics&&((C().grammar||[]).length||GR().adj));
 
 /* ---------- Adjektivändelser ---------- */
 const ADJ_ART={def:{nom:{m:"der",f:"die",n:"das"},akk:{m:"den",f:"die",n:"das"},dat:{m:"dem",f:"der",n:"dem"}},
@@ -118,7 +118,7 @@ function gramItems(topic,k){
   let ids;
   if(topic==="adj") ids=adjIds(k);
   else if(topic==="err") ids=errIds(k);
-  else if(topic==="mix"){ ids=[...adjIds(2),...errIds(1),...bankIds(null,k-3)]; }
+  else if(topic==="mix"){ const a=GR().adj?adjIds(2):[]; ids=[...a,...errIds(1),...bankIds(null,k-1-a.length)]; }
   else ids=bankIds(topic,k);
   return shuffle(ids.map(gramQ).filter(Boolean));
 }
@@ -130,7 +130,7 @@ function startGram(topic){
 function openGrammar(){
   const gt=S.gt||{}, bank=Object.values(gramBank());
   const status=id=>{const x=gt[id]; return x&&x.n?`${pct(x.r,x.n)} % rätt av ${x.n}`:"";};
-  const topics=GR().topics.filter(t=>t.id==="adj"?adjNouns().length:t.id==="err"?errBase().length:bank.some(x=>x.topic===t.id));
+  const topics=GR().topics.filter(t=>t.id==="adj"?GR().adj&&adjNouns().length:t.id==="err"?errBase().length:bank.some(x=>x.topic===t.id));
   pickerScreen("Grammatik","Välj ett område. Frågor du missar och regler du ofta missar kommer tillbaka oftare. Blandad grammatik tar lite av allt.",
     [{id:"mix",title:"Blandad grammatik",status:status("mix")},...topics.map(t=>({id:t.id,title:t.name,status:status(t.id)}))],startGram);
   // Undertexter under ämnena
