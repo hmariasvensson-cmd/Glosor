@@ -344,3 +344,5 @@ details.rule{margin-top:6px}
 .soundbtn[aria-pressed="true"]{background:var(--pink-soft);color:var(--pink);border-color:var(--pink)}
 .fbq{display:flex;flex-direction:column;gap:10px;color:var(--ink)}
 .fbqrow{display:flex;flex-direction:column;gap:6px}.fbqrow p{margin:0}
+.kbd-hint{display:none;margin:10px 0 0;font-size:.8rem;color:var(--ink-2)}
+@media (hover:hover) and (pointer:fine){.kbd-hint{display:block}}

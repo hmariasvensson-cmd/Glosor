@@ -6,7 +6,8 @@ Underlag finns i `docs/ovningsforslag.md` (franska), `docs/ovningsforslag-tyska.
 
 ## Tyck till från eleverna
 
-- **Löpande:** läs nya meddelanden i `feedback/` (ArtifactData, `status: "ny"`), för in önskemålen här, och sätt `status` och `reply` i dokumentet så att eleven ser vad som hände (se CLAUDE.md).
+- **Löpande (prioriteras först):** läs nya meddelanden i `feedback/` (ArtifactData, `status: "ny"`), för in önskemålen här, och sätt `status` och `reply` i dokumentet så att eleven ser vad som hände (se CLAUDE.md). Elevernas önskemål går före annat i backloggen.
+- **P1: Ursprung på svenska och ordagranna fraser** (Oscar, 2026-09-27). Varje ord på ett annat språk i ursprungsförklaringen ska ha en svensk översättning, t.ex. "latin *incendium* 'brand'". Fraser och talesätt ska få ett sjunde fält i words.txt med ordagrann översättning ord för ord ("Ordagrant"), som visas när man lär sig ordet och när man svarar fel. Fältet och visningen är byggda. Datat gås igenom per kurs, även bokens ord.
 
 ## Språkprov (det verkliga målet)
 
@@ -19,7 +20,7 @@ Båda eleverna ska söka musikutbildning utomlands. Oscar behöver visa **B1 i f
 
 ## Repetition och inlärning
 
-- **P2: Byt schemaläggare till FSRS** (ts-fsrs, MIT, finns som UMD på jsDelivr). Räkna i dagar i stället för pass, med retention 0,9. Lägg kortdata i ett nytt fält och behåll `s`/`due` för statistik och topplista. Det enklare stegschemat (se KLART.md) löser det värsta, så detta är mindre brådskande.
+- **P3: Byt schemaläggare till FSRS** (Oscar önskade 2026-09-27 ett fast schema: nästa pass, efter 3 pass, sedan 3, 7 och 20 dagar, vilket är byggt; FSRS bara om han vill) (ts-fsrs, MIT, finns som UMD på jsDelivr). Räkna i dagar i stället för pass, med retention 0,9. Lägg kortdata i ett nytt fält och behåll `s`/`due` för statistik och topplista. Det enklare stegschemat (se KLART.md) löser det värsta, så detta är mindre brådskande.
 - **P3: Självbedömning i fyra steg** (Igen/Svårt/Bra/Lätt) i skrivfrågor.
 - **P3: Mina ord:** koppla böjda former till grundformen (som Lutes "parent terms"). Ord med glosa sparas redan i grundform, men ord utan glosa sparas som de står i texten.
 - **P3: Tatoeba-meningar även för tyska** (`python3 tools/tatoeba.py de`) och fler franska ord (i dag har 136 av 258 ord minst en mening).
@@ -27,8 +28,7 @@ Båda eleverna ska söka musikutbildning utomlands. Oscar behöver visa **B1 i f
 ## Italienska 1 och 2
 
 - **P2: Granskning av italienskan** (1 067 ord, 527 grammatikfrågor, regler och texter, allt AI-skrivet) av en lärare eller italiensktalande, åtminstone ett stickprov.
-- **P3: Kapitelord i skrivchecklistan** känner inte igen italienska böjda former (curiosa, tifosi). Gör `usesWord` språkmedveten.
-- **P3: Italienska 3** (B1) om någon fortsätter.
+- **P3: Kapitelord i skrivchecklistan** känner inte igen italienska böjda former (curiosa, tifosi). Gör `usesWord` språkmedveten. Omvänt matchar franska verb på stammen, så *danser* räknas i varje text med *dans* (i).
 
 ## Tyska 4 (B1)
 
@@ -52,10 +52,18 @@ Emma pluggar på egen hand, utan kurs, lärare och lärobok. Tyskan bygger därf
 
 ## Kurser och nivåer
 
-- **P1: Fler sidor ur Escalade.** Inlagda: s. 8–25, 38–69, 98–113 och 128–131 (se `languages/fr/book/sidor.json`). Saknas: s. 26–37, 70–97, 114–127 och från 132. Fota också om s. 101, där högerkanten saknas. Kapitelnummer och titel för s. 128–131 (antaget kap 8) och titeln på kap 6 behöver bekräftas.
+- **P1: Franska 3 som mall för de andra kurserna.** Gå igenom det som har kommit in från *Escalade* (kapitelteman, texttyper, övningstyper, glosrutor, grammatikmomentet per kapitel, utvärderingar och bokens minigrammatik) och gör en lista över vad en kurs behöver. Jämför sedan varje kurs (Tyska 4, Tyska 5, Italienska 1 och 2) med listan och fyll i det som saknas, anpassat till kursens nivå: A1–A2 för italienskan, B1 för Tyska 4, mot B2 för Tyska 5. Skriv resultatet i `docs/kursmall.md`, utan att återge bokens texter (repot är publikt).
+- **P2: Grammatikområden från bokens minigrammatik som appen saknar** (för DELF B1): futur simple och futur proche, imparfait eller passé composé, betonade pronomen, conditionnel, oregelbundna verb. Därefter imperativ, prepositioner för tid och plats, reflexiva verb, plus-que-parfait, venir de och être en train de, räkneord och klockan. Minigrammatiken s. 200–201 och sidorna före s. 196 saknas.
+
+- **P1: Fler sidor ur Escalade.** Inlagda: s. 8–69, 98–131, 148–153, 182–191 och minigrammatiken s. 196–199 och 202–237 (se `languages/fr/book/sidor.json`). Saknas: s. 70–97, 132–147, 154–181, 192–195 och 200–201. Fota också om s. 101, där högerkanten saknas. Kapitelnumret för s. 148–153 (antaget kap 10) och s. 182–191 och titeln på kap 6 behöver bekräftas.
 - **P2: Säkerhetskopiera bokmappen** till ett privat repo på GitHub (`languages/fr/book/` är redan ett eget lokalt git-repo). Kräver att föräldern godkänner att ett privat repo skapas.
 - **P3: Välja bok per elev**, om flera elever med olika böcker ska använda samma kurs.
-- **P2: Franska 4 och Tyska 6** som egna kurser (egen mapp i `languages/`, egen `storageKey`). De visas redan som "kommer" i kursväljaren (`languages/upcoming.json`).
+- **P2: Alla tre språken från steg 1 till steg 7** (franska, tyska och italienska, Moderna språk 1–7). I dag finns Franska 3, Tyska 4 och 5 och Italienska 1 och 2. Det saknas Franska 1, 2 och 4–7, Tyska 1–3, 6 och 7, och Italienska 3–7, alltså 15 kurser.
+  - Varje kurs får en egen mapp i `languages/` och en egen `storageKey`. Bygg efter kursmallen (punkten ovan) och Skolverkets centrala innehåll för steget. Nivån ungefär enligt Skolverket: steg 1 A1.1, 2 A1.2, 3 A2.1, 4 A2.2, 5 B1.1, 6 B1.2, 7 B2.1. Stäm av nivåerna som redan står i Tyska 4 (B1) och Tyska 5 (mot B2) mot detta.
+  - Varje kurs ska bygga vidare på den förra utan att orden överlappar (som Italienska 2 och 1), och ha `nextCourse` till nästa steg.
+  - Ordning: först kurserna närmast eleverna, alltså Franska 4 (Oscar efter Franska 3) och Tyska 6 (Emma efter Tyska 5). Därefter Italienska 3, sedan de lägre stegen (1–2 i franska, 1–3 i tyska) och sist steg 7.
+  - Lägg de kommande kurserna i `languages/upcoming.json`, så att de syns som "kommer" i kursväljaren.
+  - Innehållet är AI-skrivet och behöver granskas med stickprov, som de andra kurserna.
 
 ## Konton, sparande och topplista
 

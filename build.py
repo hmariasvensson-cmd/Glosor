@@ -69,8 +69,8 @@ def read_words(code):
         fields = s.split("|")
         if section is None:
             errors.append(f"{where}: ordet ligger före första avsnittet (#id|Namn)")
-        if len(fields) != 6:
-            errors.append(f"{where}: {len(fields)} fält, ska vara 6 (ord|svenska|genus|exempel|exempel sv|ursprung)")
+        if len(fields) not in (6, 7):
+            errors.append(f"{where}: {len(fields)} fält, ska vara 6 eller 7 (ord|svenska|genus|exempel|exempel sv|ursprung|ordagrant)")
         else:
             word, sv, g = fields[0], fields[1], fields[2]
             if not word or not sv:

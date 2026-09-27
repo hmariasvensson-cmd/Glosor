@@ -52,7 +52,7 @@ LANGUAGES.fr = {
       {id: "comp", name: "Jämförelser", sub: "plus grand que, meilleur, mieux, le plus"},
       {id: "neg", name: "Negation och ordföljd", sub: "Je ne l'ai jamais vu.", secs: ["k3", "k5"]},
       {id: "quest", name: "Frågor", sub: "Où habites-tu ? Est-ce que tu viens ?"},
-      {id: "bok", name: "Bokens övningar", sub: "Övningarna ur Escalade: översätt, fyll i, rätt eller fel", secs: ["k1", "k2", "k3", "k4", "k5", "k6", "k7", "k8"]},
+      {id: "bok", name: "Bokens övningar", sub: "Övningarna ur Escalade: översätt, fyll i, rätt eller fel", secs: ["k1", "k2", "k3", "k4", "k5", "k6", "k7", "k8", "k10", "k12"]},
       {id: "err", name: "Hitta felet", sub: "En mening har ett fel. Vilket ord?"}
     ],
     rules: {

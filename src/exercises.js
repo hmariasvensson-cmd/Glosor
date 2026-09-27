@@ -11,7 +11,7 @@
 const C=()=>L.content||{};
 const RESTORE={}, EFFECT={}, RECAP={}, AFTER={};
 const KIND_NAMES={exam:"Provträning",dict:"Diktamen",trans:"Översätt meningar",order:"Ordföljd",phr:"Samtalsfraser",story:"Berättelser",
-  lq:"Hörförståelse",rq:"Läsförståelse",culture:"Kultur",write:"Skrivna texter"};
+  lq:"Hörförståelse",rq:"Läsförståelse",culture:"Kultur",write:"Skrivna texter",ktest:"Kapitelprov"};
 const reEsc=s=>s.replace(/[.*+?^${}()|[\]\\]/g,"\\$&");
 const hasWord=(text,w)=>new RegExp("(^|[^\\p{L}])"+reEsc(w)+"(?![\\p{L}])","iu").test(text);
 
@@ -692,10 +692,11 @@ function finishGeneric(){
     S.log.push(e);
   });
   dropRun(sess); delete S.run; if(sess.daily) S.dailyDay=dayKey(Date.now()); save(); boardPush();
+  const missIds=ids.filter(id=>!sess.firstTry[id]).map(id=>id.slice(id.indexOf(":")+1));
   const right=ids.filter(id=>sess.firstTry[id]).length, ctx=sess.ctx, againFn=sess.againFn, label=sess.label||"Övningen";
   const missed=ids.filter(id=>!sess.firstTry[id]).map(id=>{const i=id.indexOf(":"),k=id.slice(0,i);return RECAP[k]?RECAP[k](id.slice(i+1)):""}).filter(Boolean);
   sess=null;
-  if(ctx&&AFTER[ctx.type]) return AFTER[ctx.type](ctx,right,ids.length);
+  if(ctx&&AFTER[ctx.type]) return AFTER[ctx.type](ctx,right,ids.length,missIds);
   app.innerHTML=`<section class="panel">${resultHead(`${label} klar`,right,ids.length)}
     ${missed.length?`<div class="field"><span class="label">Titta på de här en gång till</span><ul class="missed">${missed.map(m=>`<li><span ${lang()}>${esc(m)}</span><button type="button" class="speak xs" data-say="${esc(m)}" aria-label="Läs upp">${SPK}</button></li>`).join("")}</ul></div>`:""}
     <div class="navrow"><button class="btn ghost" id="home">Startsidan</button>${againFn?`<button class="btn" id="again">En runda till</button>`:""}</div>
@@ -704,6 +705,59 @@ function finishGeneric(){
   if(againFn) $("#again").onclick=()=>AGAIN[againFn[0]](againFn[1]);
   renderList();
 }
+
+/* ---------- Kapitelprov ----------
+   Alla glosor i ett kapitel (alla avsnitt k3, k3b, k3x … räknas till kapitel 3), en gång var och utan omtag, som ett prov.
+   Provet flyttar inte repetitionsschemat. Resultatet sparas i S.kt[kapitel] = {r, n, d, miss}, och efteråt kan man öva på
+   de missade orden (då med omtag, som i quizet) tills alla sitter. */
+const ktKey=id=>{const m=/^k(\d+)[a-z]?$/.exec(id); return m?"k"+m[1]:id;};   // k1, k1b, k1e och k1x hör alla till kapitel 1
+function ktChapters(){
+  const out=[];
+  SECTIONS.forEach(s=>{const k=ktKey(s.id); let c=out.find(x=>x.id===k);
+    if(!c){c={id:k,name:s.name.replace(/ · Fler ord ur kapitlet$/,""),words:[]}; out.push(c);}
+    c.words.push(...WORDS.filter(w=>w.sec===s.id));});
+  return out.filter(c=>c.words.length>=4);
+}
+const KT={mode:"type"};
+function openKtest(){
+  $("#tabs").hidden=true; sess=null; S.kt=S.kt||{};
+  const chs=ktChapters();
+  app.innerHTML=`<section class="panel"><h2>Kapitelprov</h2>
+    <p class="plan">Välj ett kapitel. Du får alla glosor en gång, i blandad ordning, och ser resultatet i slutet. Sedan kan du öva på de ord du missade. Provet ändrar inte när orden kommer tillbaka i passen.</p>
+    <div class="field"><span class="label">Svara genom att</span>
+      <div class="seg" role="group" aria-label="Svarssätt"><button data-ktm="type" aria-pressed="${KT.mode==="type"}">Skriva ${esc(L.inLang)}</button><button data-ktm="mc" aria-pressed="${KT.mode==="mc"}">Flerval</button></div></div>
+    <div class="games">${chs.map(c=>{const r=S.kt[c.id];
+      return `<button class="game" data-kt="${esc(c.id)}"><span><b>${esc(c.name)}</b><small>${c.words.length} ord${r?` · senast ${r.r}/${r.n} rätt (${new Date(r.d).toLocaleDateString("sv-SE")})`:""}</small></span><span class="go" aria-hidden="true">›</span></button>`}).join("")}</div></section>
+    <button class="quit" id="quit">Tillbaka</button>`;
+  app.querySelectorAll("[data-ktm]").forEach(b=>b.onclick=()=>{KT.mode=b.dataset.ktm;
+    app.querySelectorAll("[data-ktm]").forEach(x=>x.setAttribute("aria-pressed",x===b));});
+  app.querySelectorAll("[data-kt]").forEach(b=>b.onclick=()=>startKtest(b.dataset.kt));
+  $("#quit").onclick=renderStart; window.scrollTo(0,0);
+}
+function startKtest(cid,only){
+  const c=ktChapters().find(x=>x.id===cid); if(!c) return openKtest();
+  const words=only?c.words.filter(w=>only.includes(w.id)):c.words, drill=!!only;
+  const q=shuffle(words).map(w=>({k:"ktest",id:"ktest:"+w.id,w,t:drill?"mc":KT.mode,canType:true,noRetry:!drill}));
+  sess=null; $("#tabs").hidden=true;
+  beginQuiz(drill?"ktestd":"ktest",q,{label:drill?`Öva: ${c.name}`:`Kapitelprov: ${c.name}`,ctx:{type:"ktest",id:cid,drill}});
+}
+MC.ktest=c=>({...MC.words(c),tab:"Kapitelprov"});
+TYPE.ktest=c=>({...TYPE.words(c),tab:"Kapitelprov"});
+RESTORE.ktest=ref=>byId[ref]?{w:byId[ref]}:null;
+RECAP.ktest=ref=>byId[ref]?byId[ref].t:"";
+AFTER.ktest=(ctx,right,total,miss)=>{
+  const c=ktChapters().find(x=>x.id===ctx.id)||{name:"",words:[]}; S.kt=S.kt||{};
+  if(!ctx.drill){ S.kt[ctx.id]={r:right,n:total,d:Date.now(),miss}; save(); }
+  const pc=total?Math.round(100*right/total):0;
+  app.innerHTML=`<section class="panel">${resultHead(ctx.drill?`Övning klar: ${c.name}`:`Kapitelprov: ${c.name}`,right,total)}
+    ${ctx.drill?"":`<p class="plan">${pc}% rätt. ${pc>=90?"Mycket bra, kapitlet sitter!":pc>=70?"Bra! Öva på de ord du missade, så sitter kapitlet.":"Öva på de ord du missade och gör provet igen om några dagar."}</p>`}
+    ${miss.length?`<div class="field"><span class="label">${ctx.drill?"Missade första gången":"Ord du missade"}</span><ul class="missed">${miss.map(id=>byId[id]).filter(Boolean).map(w=>`<li><span class="t" ${lang()}>${esc(w.t)}</span><span class="sv">${esc(w.sv)}</span></li>`).join("")}</ul></div>
+      <button class="btn" id="ktdrill">Öva på ${miss.length===1?"ordet":`de ${miss.length} orden`}</button>`:`<p class="plan">Inga fel!</p>`}
+    <div class="navrow"><button class="btn ghost" id="kthome">Startsidan</button><button class="btn ghost" id="ktagain">Gör provet igen</button></div></section>`;
+  if($("#ktdrill")) $("#ktdrill").onclick=()=>startKtest(ctx.id,miss);
+  $("#kthome").onclick=renderStart; $("#ktagain").onclick=()=>startKtest(ctx.id);
+  window.scrollTo(0,0); renderList();
+};
 
 /* ---------- Startsidans panel med alla övningar ---------- */
 // Övningarna i grupper. Startsidan visar en knapp per grupp, och varje grupp öppnas på en egen sida.
@@ -716,6 +770,7 @@ function exGroups(){
       g("dict","Diktamen","Lyssna på en mening och skriv den."),
       g("trans","Översätt meningar",`Från svenska till ${lname}, hela meningar.`),
       g("order","Ordföljd","Bygg meningen i rätt ordning."),
+      g("ktest","Kapitelprov","Förhör dig på alla glosor i ett kapitel, och öva sedan på dem du missade."),
       L.genderGame&&g("gen",Object.values(L.genderGame).join(", "),"Rätt artikel och plural för substantiven.")]],
     ["texts","Lyssna och läsa","Hörförståelse, texter och kultur",[
       c.listening&&g("lq","Hörförståelse","Lyssna på en dialog och svara på frågor."),
@@ -745,7 +800,7 @@ function openExGroup(id){
   wireGames(); $("#quit").onclick=renderStart; window.scrollTo(0,0);
 }
 function wireGames(){
-  const F={exam:openExam,cloze:startCloze,dict:startDict,trans:startTrans,order:startOrder,lq:openListening,rq:openReading,culture:openCulture,story:openStories,phr:startPhrases,write:openWriting,gram:openGrammar,gen:startGender,shadow:startShadow};
+  const F={ktest:openKtest,exam:openExam,cloze:startCloze,dict:startDict,trans:startTrans,order:startOrder,lq:openListening,rq:openReading,culture:openCulture,story:openStories,phr:startPhrases,write:openWriting,gram:openGrammar,gen:startGender,shadow:startShadow};
   app.querySelectorAll("[data-ex]").forEach(b=>b.onclick=()=>F[b.dataset.ex]());
   app.querySelectorAll("[data-g]").forEach(b=>b.onclick=()=>startVerbs(b.dataset.g));
   app.querySelectorAll("[data-grp]").forEach(b=>b.onclick=()=>openExGroup(b.dataset.grp));

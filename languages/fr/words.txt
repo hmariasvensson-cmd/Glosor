@@ -1,155 +1,155 @@
 // Ordlista för franska. Rader som börjar med // är kommentarer och tas bort vid bygget.
 //
 // Format, en rad per ord:
-//   franska|svenska|genus|exempel på franska|exempel på svenska|ursprung
+//   franska|svenska|genus|exempel på franska|exempel på svenska|ursprung|ordagrant
 // Hakparentes i den franska exempelmeningen markerar luckan i meningsövningen:
 //   Nous [rions] beaucoup ensemble.
 // Saknas hakparentes letar programmet själv efter ordet i meningen.
-// Genus: m, f, mpl, fpl eller tomt. Ursprung får innehålla <b>fetstil</b>.
+// Genus: m, f, mpl, fpl eller tomt. Ursprung får innehålla <b>fetstil</b>. Ordagrant är valfritt och används för fraser: ordet för ordet på svenska, t.ex. <b>avoir</b> ha · <b>l'air</b> luften → "ha luften".
 // En rad som börjar med # startar ett nytt avsnitt:  #id|Namn som visas, eller #id|Namn|bok för kapitel ur läroboken
 // Avsnittets id och ordets franska form används som nycklar för sparade framsteg,
 // så ändra dem inte i efterhand (ändra gärna svenska, exempel och ursprung).
 #k1|Kap 1 · Vie et loisirs|bok
-bienvenue à tous|välkomna allihop||[Bienvenue à tous] dans notre club !|Välkomna allihop till vår klubb!|<b>bien</b> 'väl' + <b>venu</b> 'kommen', precis som svenskans väl-kommen.
+bienvenue à tous|välkomna allihop||[Bienvenue à tous] dans notre club !|Välkomna allihop till vår klubb!|<b>bien</b> 'väl' + <b>venu</b> 'kommen', precis som svenskans väl-kommen.|<b>bienvenue</b> välkommen · <b>à</b> till · <b>tous</b> alla → "välkommen till alla"
 désigner|peka på||Le prof [désigne] un élève de la main.|Läraren pekar på en elev med handen.|Av latin <b>designare</b> 'märka ut', från <b>signum</b> 'tecken'. Samma rot som design och signal.
-de la main|med handen||Elle me fait signe [de la main].|Hon vinkar åt mig med handen.|<b>main</b> kommer från latin <b>manus</b> 'hand'. Jämför manuell och manikyr.
+de la main|med handen||Elle me fait signe [de la main].|Hon vinkar åt mig med handen.|<b>main</b> 'hand' kommer från latin <b>manus</b> 'hand'. Jämför manuell och manikyr.|<b>de</b> av · <b>la main</b> handen → "av handen"
 balbutier|stamma||Il est timide et il [balbutie] quand il parle.|Han är blyg och stammar när han pratar.|Av latin <b>balbus</b> 'stammande', ett ljudhärmande ord (bal-bal).
 ordinateur|dator|m|J'ai un nouvel [ordinateur].|Jag har en ny dator.|Latin <b>ordinator</b> 'den som ordnar'. Ordet valdes 1955 av latinprofessorn Jacques Perret när IBM behövde ett franskt ord för sin maskin.
-c'est tout|det är allt||Un café, s'il vous plaît. [C'est tout].|En kaffe, tack. Det är allt.|<b>tout</b> från latin <b>totus</b> 'hel'. Jämför total.
+c'est tout|det är allt||Un café, s'il vous plaît. [C'est tout].|En kaffe, tack. Det är allt.|<b>tout</b> 'allt' från latin <b>totus</b> 'hel'. Jämför total.
 entendre|höra||Tu m'[entends] ?|Hör du mig?|Latin <b>intendere</b> 'rikta (uppmärksamheten) mot'. Betydde först 'förstå' och senare 'höra'.
-les autres|de andra||[Les autres] sont déjà partis.|De andra har redan gått.|<b>autre</b> från latin <b>alter</b> 'den andre'. Jämför alternativ.
+les autres|de andra||[Les autres] sont déjà partis.|De andra har redan gått.|<b>autre</b> 'annan' från latin <b>alter</b> 'den andre'. Jämför alternativ.
 rire|skratta||Nous [rions] beaucoup ensemble.|Vi skrattar mycket tillsammans.|Latin <b>ridere</b> 'skratta'. Samma rot som ridikyl ('löjlig').
-rougir|rodna||Elle [rougit] quand il la regarde.|Hon rodnar när han tittar på henne.|Av <b>rouge</b> 'röd', från latin <b>rubeus</b>. Jämför rubin.
+rougir|rodna||Elle [rougit] quand il la regarde.|Hon rodnar när han tittar på henne.|Av <b>rouge</b> 'röd', från latin <b>rubeus</b> 'rödaktig'. Jämför rubin.
 habillé, -e (en)|klädd (i)||Il est [habillé] en noir.|Han är klädd i svart.|<b>habiller</b> betydde först 'göra i ordning en trästock' (bille). Senare blandades det ihop med <b>habit</b> 'dräkt'.
-vêtements de sport|sportkläder|mpl|N'oublie pas tes [vêtements de sport] !|Glöm inte dina sportkläder!|<b>vêtement</b> från latin <b>vestimentum</b> (jämför väst). <b>Sport</b> lånades från engelskan, som i sin tur fått det från fornfranskans <b>desport</b> 'nöje'.
-femme|kvinna|f|Cette [femme] est ma prof de français.|Den där kvinnan är min franskalärare.|Latin <b>femina</b>. Jämför feminin. Betyder också 'fru'.
-environ|ungefär||Il y a [environ] vingt personnes.|Det är ungefär tjugo personer.|<b>en</b> + <b>viron</b> 'runt omkring' (av virer 'vända'). Samma ord som i environnement 'miljö'.
+vêtements de sport|sportkläder|mpl|N'oublie pas tes [vêtements de sport] !|Glöm inte dina sportkläder!|<b>vêtement</b> 'klädesplagg' från latin <b>vestimentum</b> 'klädnad' (jämför väst). <b>Sport</b> 'idrott' lånades från engelskan, som i sin tur fått det från fornfranskans <b>desport</b> 'nöje'.
+femme|kvinna|f|Cette [femme] est ma prof de français.|Den där kvinnan är min franskalärare.|Latin <b>femina</b> 'kvinna'. Jämför feminin. Betyder också 'fru'.
+environ|ungefär||Il y a [environ] vingt personnes.|Det är ungefär tjugo personer.|<b>en</b> 'i' + <b>viron</b> 'runt omkring' (av virer 'vända'). Samma ord som i environnement 'miljö'.
 apprendre à|lära sig||J'[apprends à] nager.|Jag lär mig simma.|Latin <b>apprehendere</b> 'gripa tag i'. Att lära sig är att 'greppa' något.
 oser|våga||Je n'[ose] pas sauter.|Jag vågar inte hoppa.|Från latin <b>audere</b> 'våga'. Jämför audacieux 'djärv'.
 infirmier, infirmière|sjuksköterska|m|Ma mère est [infirmière] à l'hôpital.|Min mamma är sjuksköterska på sjukhuset.|Av <b>infirme</b> 'svag, sjuk', latin <b>in-firmus</b> 'inte stark'. En infirmier tar hand om de svaga.
 exercice|övning|m|Faites l'[exercice] numéro trois.|Gör övning nummer tre.|Latin <b>exercitium</b> 'träning'. Jämför exercis. Obs: ordet är maskulint (un exercice) fast ordlistan skriver f.
 pompe|armhävning|f|Il fait cinquante [pompes] par jour.|Han gör femtio armhävningar om dagen.|<b>pompe</b> betyder 'pump'. Kroppen går upp och ner som en pumpkolv.
-exigeant, -e|sträng, krävande||Notre moniteur est très [exigeant].|Vår tränare är väldigt krävande.|Av <b>exiger</b> 'kräva', latin <b>exigere</b>. Samma rot som exakt.
+exigeant, -e|sträng, krävande||Notre moniteur est très [exigeant].|Vår tränare är väldigt krävande.|Av <b>exiger</b> 'kräva', latin <b>exigere</b> 'driva ut, kräva'. Samma rot som exakt.
 dur, -e|hård||Ce pain est [dur].|Det här brödet är hårt.|Latin <b>durus</b> 'hård'. Jämför durabel ('hållbar') och dur i musik.
 demain|i morgon||On se voit [demain] ?|Ses vi i morgon?|Latin <b>de mane</b> 'från morgonen'.
-plus jeune|yngre||Ma sœur est [plus jeune] que moi.|Min syster är yngre än jag.|<b>jeune</b> från latin <b>juvenis</b> 'ung'. Jämför juvenil.
-avoir l'air|verka, tyckas||Tu [as l'air] fatigué.|Du verkar trött.|<b>air</b> betyder 'luft' men också 'utseende, min'. Man 'har luften av' något.
+plus jeune|yngre||Ma sœur est [plus jeune] que moi.|Min syster är yngre än jag.|<b>jeune</b> 'ung' från latin <b>juvenis</b> 'ung'. Jämför juvenil.|<b>plus</b> mer · <b>jeune</b> ung → "mer ung"
+avoir l'air|verka, tyckas||Tu [as l'air] fatigué.|Du verkar trött.|<b>air</b> betyder 'luft' men också 'utseende, min'. Man 'har luften av' något.|<b>avoir</b> ha · <b>l'air</b> luften → "ha luften"
 sûr, -e|säker, trygg||Tu es [sûr] ?|Är du säker?|Latin <b>securus</b> 'utan bekymmer' (se- 'utan' + cura 'omsorg'). Samma ord som svenskans säker och engelskans secure.
-elle a l'air sûre d'elle|hon verkar ha gott självförtroende||Sur scène, [elle a l'air sûre d'elle].|På scenen verkar hon ha gott självförtroende.|Ordagrant: 'hon har luften av säker på sig själv'.
-depuis|(allt)sedan||J'habite ici [depuis] deux ans.|Jag har bott här i två år.|<b>de</b> + <b>puis</b> 'sedan', från latin <b>post</b> 'efter'.
-paresseux, -euse|lat||Mon chat est très [paresseux].|Min katt är väldigt lat.|Av <b>paresse</b> 'lättja', latin <b>pigritia</b> (piger 'lat').
+elle a l'air sûre d'elle|hon verkar ha gott självförtroende||Sur scène, [elle a l'air sûre d'elle].|På scenen verkar hon ha gott självförtroende.|Ordagrant: 'hon har luften av säker på sig själv'.|<b>elle</b> hon · <b>a</b> har · <b>l'air</b> luften · <b>sûre</b> säker · <b>d'elle</b> på sig själv → "hon har luften säker på sig själv"
+depuis|(allt)sedan||J'habite ici [depuis] deux ans.|Jag har bott här i två år.|<b>de</b> 'från' + <b>puis</b> 'sedan', från latin <b>post</b> 'efter'.
+paresseux, -euse|lat||Mon chat est très [paresseux].|Min katt är väldigt lat.|Av <b>paresse</b> 'lättja', latin <b>pigritia</b> 'lättja' (piger 'lat').
 grimper|klättra||Les enfants [grimpent] dans l'arbre.|Barnen klättrar i trädet.|Troligen besläktat med <b>gripper</b> 'gripa', man klättrar genom att greppa.
-j'ai l'impression|det känns som, jag tycker||[J'ai l'impression] qu'il va pleuvoir.|Det känns som att det kommer att regna.|Latin <b>impressio</b> 'intryck', från premere 'trycka'.
+j'ai l'impression|det känns som, jag tycker||[J'ai l'impression] qu'il va pleuvoir.|Det känns som att det kommer att regna.|Latin <b>impressio</b> 'intryck', från premere 'trycka'.|<b>j'ai</b> jag har · <b>l'impression</b> intrycket → "jag har intrycket"
 ventre|mage|m|J'ai mal au [ventre].|Jag har ont i magen.|Latin <b>venter</b> 'buk'. En buktalare heter ventriloque, 'magtalare'.
-tout le monde|alla||[Tout le monde] est là ?|Är alla här?|Ordagrant 'hela världen'. <b>monde</b> från latin <b>mundus</b>.
+tout le monde|alla||[Tout le monde] est là ?|Är alla här?|Ordagrant 'hela världen'. <b>monde</b> 'värld' från latin <b>mundus</b> 'värld'.|<b>tout</b> hela · <b>le monde</b> världen → "hela världen"
 une vingtaine de|ett tjugotal|f|Une [vingtaine] d'élèves font du ski.|Ett tjugotal elever åker skidor.|<b>vingt</b> 'tjugo' + <b>-aine</b> 'ungefär så många', som i douzaine 'dussin'.
-âge|ålder|m|Quel [âge] as-tu ?|Hur gammal är du?|Fornfranska <b>eage</b>, från latin <b>aetas</b> 'ålder'.
-sexe|kön|m|Le formulaire demande l'âge et le [sexe].|Formuläret frågar efter ålder och kön.|Latin <b>sexus</b>, kanske av secare 'dela'.
+âge|ålder|m|Quel [âge] as-tu ?|Hur gammal är du?|Fornfranska <b>eage</b> 'ålder', från latin <b>aetas</b> 'ålder'.
+sexe|kön|m|Le formulaire demande l'âge et le [sexe].|Formuläret frågar efter ålder och kön.|Latin <b>sexus</b> 'kön', kanske av secare 'dela'.
 différent, -e|olik, olika||Nous sommes très [différents].|Vi är väldigt olika.|Latin <b>differre</b> 'bära isär'.
-il faut|det är nödvändigt att; här: ni måste||[Il faut] partir maintenant.|Vi måste gå nu.|Av <b>falloir</b>, från latin <b>fallere</b> 'fattas, svika'. Ordagrant: 'det fattas'.
-venir|komma||Tu [viens] avec nous ?|Kommer du med oss?|Latin <b>venire</b>. Jämför event och konvent. Passé composé med être: je suis venu(e).
-deux fois par semaine|två gånger i veckan||Je fais du sport [deux fois par semaine].|Jag tränar två gånger i veckan.|<b>fois</b> från latin <b>vices</b> 'omväxlingar' (jämför vice-). <b>semaine</b> från latin <b>septimana</b> 'sjutal'.
-vous allez voir|ni kommer att se||[Vous allez voir], c'est facile !|Ni ska få se, det är lätt!|Futur proche: aller + infinitiv. <b>voir</b> från latin <b>videre</b>, jämför video.
+il faut|det är nödvändigt att; här: ni måste||[Il faut] partir maintenant.|Vi måste gå nu.|Av <b>falloir</b> 'behövas', från latin <b>fallere</b> 'fattas, svika'. Ordagrant: 'det fattas'.|<b>il</b> det · <b>faut</b> fattas → "det fattas"
+venir|komma||Tu [viens] avec nous ?|Kommer du med oss?|Latin <b>venire</b> 'komma'. Jämför event och konvent. Passé composé med être: je suis venu(e).
+deux fois par semaine|två gånger i veckan||Je fais du sport [deux fois par semaine].|Jag tränar två gånger i veckan.|<b>fois</b> 'gång' från latin <b>vices</b> 'omväxlingar' (jämför vice-). <b>semaine</b> 'vecka' från latin <b>septimana</b> 'sjutal'.
+vous allez voir|ni kommer att se||[Vous allez voir], c'est facile !|Ni ska få se, det är lätt!|Futur proche: aller + infinitiv. <b>voir</b> 'se' från latin <b>videre</b> 'se', jämför video.|<b>vous</b> ni · <b>allez</b> går · <b>voir</b> (att) se → "ni går att se"
 ça vient (venir)|det kommer||D'où [ça vient] ?|Var kommer det ifrån?|Presens av venir: je viens, tu viens, il vient.
-moniteur, -trice|instruktör, tränare||La [monitrice] explique l'exercice.|Instruktören förklarar övningen.|Latin <b>monitor</b> 'den som påminner och varnar' (monere). Samma ord som datorskärmen.
+moniteur, -trice|instruktör, tränare||La [monitrice] explique l'exercice.|Instruktören förklarar övningen.|Latin <b>monitor</b> 'den som påminner och varnar' (monere 'påminna, varna'). Samma ord som datorskärmen.
 fier, fière|stolt||Je suis [fier] de toi.|Jag är stolt över dig.|Latin <b>ferus</b> 'vild'. Betydelsen gick från 'vild' via 'modig' till 'stolt'.
 réaliser qch|förverkliga något||Il veut [réaliser] son rêve.|Han vill förverkliga sin dröm.|Av <b>réel</b> 'verklig', latin <b>res</b> 'sak'.
 rêve|dröm|m|Mon [rêve], c'est d'aller au Japon.|Min dröm är att åka till Japan.|Av <b>rêver</b>, som på 1100-talet betydde 'ströva omkring, yra'.
-cours d'escalade|klätterkurs|m|J'ai un [cours d'escalade] le mardi.|Jag har klätterkurs på tisdagar.|<b>escalade</b> från italienska <b>scalata</b>, av latin <b>scala</b> 'stege'. Jämför skala.
+cours d'escalade|klätterkurs|m|J'ai un [cours d'escalade] le mardi.|Jag har klätterkurs på tisdagar.|<b>escalade</b> 'klättring' från italienska <b>scalata</b> 'bestigning', av latin <b>scala</b> 'stege'. Jämför skala.
 #k1e|Kap 1 · Zinédine et Zlatan|bok
 connaître|känna till||Tu [connais] Zlatan ?|Känner du till Zlatan?|Latin <b>cognoscere</b> 'lära känna'. Jämför kognitiv.
-joueur|spelare|m|C'est un [joueur] de foot célèbre.|Han är en känd fotbollsspelare.|Av <b>jouer</b> 'spela', från latin <b>jocare</b> 'skämta'. Jämför engelskans joke.
-marquer un but|göra mål||Il a [marqué un but] à la dernière minute.|Han gjorde mål i sista minuten.|<b>marquer</b> från germanska <b>marka</b> 'märke', samma rot som svenskans märka.
+joueur|spelare|m|C'est un [joueur] de foot célèbre.|Han är en känd fotbollsspelare.|Av <b>jouer</b> 'spela', från latin <b>jocare</b> 'skämta'. Jämför engelskans joke 'skämt'.
+marquer un but|göra mål||Il a [marqué un but] à la dernière minute.|Han gjorde mål i sista minuten.|<b>marquer</b> 'märka' från germanska <b>marka</b> 'märke', samma rot som svenskans märka.|<b>marquer</b> märka · <b>un but</b> ett mål → "märka ett mål"
 recevoir|få, motta||J'ai [reçu] un message.|Jag har fått ett meddelande.|Latin <b>recipere</b> 'ta emot'. Jämför recept och reception.
-nommé, -e|utsedd till||Il a été [nommé] capitaine.|Han utsågs till kapten.|Av <b>nommer</b>, latin <b>nominare</b>, från nomen 'namn'. Jämför nominera.
-les Bleus|franska fotbollslandslaget||[Les Bleus] ont gagné la Coupe du monde en 2018.|Franska landslaget vann VM 2018.|Efter de blå tröjorna. <b>bleu</b> har germanskt ursprung och samma rot som svenskans blå.
-doublé|dubbelseger|m|L'équipe a réalisé le [doublé].|Laget tog en dubbelseger.|Av <b>double</b>, latin <b>duplus</b> 'dubbel'.
-prendre la retraite|gå i pension; här: dra sig tillbaka||Mon grand-père a [pris sa retraite].|Min morfar har gått i pension.|<b>retraite</b> av <b>retirer</b> 'dra tillbaka'.
+nommé, -e|utsedd till||Il a été [nommé] capitaine.|Han utsågs till kapten.|Av <b>nommer</b> 'utnämna, kalla', latin <b>nominare</b> 'benämna', från nomen 'namn'. Jämför nominera.
+les Bleus|franska fotbollslandslaget||[Les Bleus] ont gagné la Coupe du monde en 2018.|Franska landslaget vann VM 2018.|Efter de blå tröjorna. <b>bleu</b> 'blå' har germanskt ursprung och samma rot som svenskans blå.|<b>les</b> de · <b>Bleus</b> blå → "de blå"
+doublé|dubbelseger|m|L'équipe a réalisé le [doublé].|Laget tog en dubbelseger.|Av <b>double</b> 'dubbel', latin <b>duplus</b> 'dubbel'.
+prendre la retraite|gå i pension; här: dra sig tillbaka||Mon grand-père a [pris sa retraite].|Min morfar har gått i pension.|<b>retraite</b> 'pension, reträtt' av <b>retirer</b> 'dra tillbaka'.|<b>prendre</b> ta · <b>la retraite</b> reträtten → "ta reträtten"
 craquer|bryta ihop||Après l'examen, elle a [craqué].|Efter provet bröt hon ihop.|Ljudhärmande ord, som svenskans krasch.
-coup de tête|skallning|m|Zidane a donné un [coup de tête] en finale.|Zidane skallade en spelare i finalen.|<b>tête</b> 'huvud' kommer från latin <b>testa</b> 'lerkruka', ett skämtsamt ord för skallen.
+coup de tête|skallning|m|Zidane a donné un [coup de tête] en finale.|Zidane skallade en spelare i finalen.|<b>tête</b> 'huvud' kommer från latin <b>testa</b> 'lerkruka', ett skämtsamt ord för skallen.|<b>coup</b> slag · <b>de</b> av · <b>tête</b> huvud → "slag av huvud"
 thorax|bröstkorg|m|Le coup a touché le [thorax].|Slaget träffade bröstkorgen.|Grekiska <b>thōrax</b> 'bröstharnesk'.
-exclu, -e|utesluten||Le joueur est [exclu] du match.|Spelaren blir utvisad från matchen.|Av <b>exclure</b>, latin <b>excludere</b> 'stänga ute'. Jämför exkludera.
+exclu, -e|utesluten||Le joueur est [exclu] du match.|Spelaren blir utvisad från matchen.|Av <b>exclure</b> 'utesluta', latin <b>excludere</b> 'stänga ute'. Jämför exkludera.
 perdre|förlora||J'ai [perdu] mes clés.|Jag har tappat mina nycklar.|Latin <b>perdere</b> 'förstöra, förlora'.
 ériger|resa, sätta upp||On a [érigé] une statue en son honneur.|Man har rest en staty till hans ära.|Latin <b>erigere</b> 'resa upp'.
-star|stjärna|f|C'est une [star] du cinéma.|Hon är en filmstjärna.|Lånat från engelskan (film star). Alltid feminint, även om en man: une star.
-se voir|här: märkas||Sa tristesse [se voit].|Hans sorg märks.|Ordagrant 'se sig', det syns.
+star|stjärna|f|C'est une [star] du cinéma.|Hon är en filmstjärna.|Lånat från engelskan (film star 'filmstjärna'). Alltid feminint, även om en man: une star.
+se voir|här: märkas||Sa tristesse [se voit].|Hans sorg märks.|Ordagrant 'se sig', det syns.|<b>se</b> sig · <b>voir</b> se → "se sig"
 même|även, till och med||[Même] mon père aime ce film.|Till och med min pappa gillar den här filmen.|Från latin <b>metipsimus</b> 'själva'.
 néologisme|nybildning|m|« Zlataner » est un [néologisme].|"Zlataner" är en nybildning.|Grekiska <b>neos</b> 'ny' + <b>logos</b> 'ord'.
-tandis que|medan||Il lit [tandis que] je cuisine.|Han läser medan jag lagar mat.|Från latin <b>tamdiu</b> 'så länge'.
+tandis que|medan||Il lit [tandis que] je cuisine.|Han läser medan jag lagar mat.|Från latin <b>tamdiu</b> 'så länge'.|<b>tandis</b> så länge · <b>que</b> som → "så länge som"
 résumer|sammanfatta||[Résume] le texte en trois phrases.|Sammanfatta texten i tre meningar.|Latin <b>resumere</b> 'ta upp igen'. Jämför resumé.
-confiance en soi|självförtroende|f|Le sport donne [confiance en soi].|Idrott ger självförtroende.|<b>confiance</b> av latin <b>confidere</b> 'lita helt på' (fides 'tro').
+confiance en soi|självförtroende|f|Le sport donne [confiance en soi].|Idrott ger självförtroende.|<b>confiance</b> 'förtroende' av latin <b>confidere</b> 'lita helt på' (fides 'tro').|<b>confiance</b> förtroende · <b>en</b> i · <b>soi</b> sig själv → "förtroende i sig själv"
 avis|åsikt|m|À mon [avis], c'est une bonne idée.|Enligt min åsikt är det en bra idé.|Från uttrycket 'ce m'est à vis', 'det förefaller mig', latin <b>visum</b> 'det som setts'.
 attribution|tilldelning, utdelning|f|L'[attribution] des prix a lieu ce soir.|Prisutdelningen äger rum i kväll.|Latin <b>attribuere</b> 'ge åt'.
 autobiographie|självbiografi|f|Zlatan a écrit une [autobiographie].|Zlatan har skrivit en självbiografi.|Grekiska <b>autos</b> 'själv' + <b>bios</b> 'liv' + <b>graphein</b> 'skriva'.
-répondre|svara||[Réponds] à la question !|Svara på frågan!|Latin <b>respondere</b>. Jämför respons.
-ils devraient (devoir)|de borde||[Ils devraient] travailler plus.|De borde arbeta mer.|Konditionalis av <b>devoir</b>, latin <b>debere</b> 'vara skyldig'. Jämför debet.
+répondre|svara||[Réponds] à la question !|Svara på frågan!|Latin <b>respondere</b> 'svara'. Jämför respons.
+ils devraient (devoir)|de borde||[Ils devraient] travailler plus.|De borde arbeta mer.|Konditionalis av <b>devoir</b> 'måste, böra', latin <b>debere</b> 'vara skyldig'. Jämför debet.
 carrément|absolut||C'est [carrément] génial !|Det är helt fantastiskt!|Av <b>carré</b> 'fyrkantig'. Något fyrkantigt är rakt på sak.
 #k1b|Kap 1 · Ma vie au soleil|bok
 décider|bestämma, avgöra||J'ai [décidé] de partir.|Jag har bestämt mig för att åka.|Latin <b>decidere</b> 'skära av'. Ett beslut skär av de andra alternativen.
 résider|bo||Elle [réside] à Nice.|Hon bor i Nice.|Latin <b>residere</b> 'sitta kvar'. Jämför residens.
 plage|strand|f|On va à la [plage] ?|Ska vi gå till stranden?|Latin <b>plaga</b> 'område, sträcka'.
-sable|sand|m|Le [sable] est chaud.|Sanden är varm.|Latin <b>sabulum</b>. En sablé är en småkaka som smular som sand.
-réveil|väckning, väckarklocka|m|Mon [réveil] sonne à six heures.|Min väckarklocka ringer klockan sex.|<b>re</b> + <b>veiller</b> 'vaka', latin <b>vigilare</b>. Jämför vigil.
-son|ljud|m|J'aime le [son] de la mer.|Jag älskar havets ljud.|Latin <b>sonus</b>. Jämför sonat och sonar.
+sable|sand|m|Le [sable] est chaud.|Sanden är varm.|Latin <b>sabulum</b> 'sand'. En sablé är en småkaka som smular som sand.
+réveil|väckning, väckarklocka|m|Mon [réveil] sonne à six heures.|Min väckarklocka ringer klockan sex.|<b>re</b> 'åter' + <b>veiller</b> 'vaka', latin <b>vigilare</b> 'vaka'. Jämför vigil.
+son|ljud|m|J'aime le [son] de la mer.|Jag älskar havets ljud.|Latin <b>sonus</b> 'ljud'. Jämför sonat och sonar.
 oreille|öra|f|J'ai mal à l'[oreille].|Jag har ont i örat.|Latin <b>auricula</b> 'litet öra'.
-en avoir marre|få nog av (något)||J'[en ai marre] de la pluie !|Jag har fått nog av regnet!|Vardagligt uttryck från 1800-talet med osäkert ursprung.
-taf|jobb|m|Il cherche un [taf] pour l'été.|Han letar efter ett sommarjobb.|Vardagligt, kortform för 'travail à faire'.
+en avoir marre|få nog av (något)||J'[en ai marre] de la pluie !|Jag har fått nog av regnet!|Vardagligt uttryck från 1800-talet med osäkert ursprung.|<b>en</b> av det · <b>avoir</b> ha · <b>marre</b> nog (bara i det här uttrycket) → "ha nog av det"
+taf|jobb|m|Il cherche un [taf] pour l'été.|Han letar efter ett sommarjobb.|Vardagligt, kortform för 'travail à faire', 'arbete att göra'.
 boulot|vard. jobb|m|J'ai trop de [boulot].|Jag har för mycket jobb.|Vardagligt ord från 1800-talet med osäkert ursprung.
 dodo|vard. sömn|m|Allez, au [dodo] !|Kom nu, dags att sova!|Barnspråk, av <b>dormir</b> 'sova'.
-métro, boulot, dodo|ung. gå runt i ekorrhjulet; vardagstristess||À Paris, c'était métro, [boulot], dodo.|I Paris gick jag bara runt i ekorrhjulet.|Från en dikt av Pierre Béarn (1951). Uttrycket blev slagord under majrevolten 1968.
+métro, boulot, dodo|ung. gå runt i ekorrhjulet; vardagstristess||À Paris, c'était métro, [boulot], dodo.|I Paris gick jag bara runt i ekorrhjulet.|Från en dikt av Pierre Béarn (1951). Uttrycket blev slagord under majrevolten 1968.|<b>métro</b> tunnelbana · <b>boulot</b> jobb · <b>dodo</b> sova (barnspråk) → "tunnelbana, jobb, sova"
 sentir|känna||Je [sens] le soleil sur ma peau.|Jag känner solen mot huden.|Latin <b>sentire</b> 'känna'. Jämför sentimental. Betyder också 'lukta'.
-être mieux dans sa peau|här: må bra||Depuis le déménagement, elle [est mieux dans sa peau].|Sedan flytten mår hon bättre.|Ordagrant 'vara bättre i sitt skinn'. <b>peau</b> från latin <b>pellis</b> 'skinn'. Jämför päls.
+être mieux dans sa peau|här: må bra||Depuis le déménagement, elle [est mieux dans sa peau].|Sedan flytten mår hon bättre.|Ordagrant 'vara bättre i sitt skinn'. <b>peau</b> 'hud, skinn' från latin <b>pellis</b> 'skinn'. Jämför päls.|<b>être</b> vara · <b>mieux</b> bättre · <b>dans</b> i · <b>sa peau</b> sitt skinn → "vara bättre i sitt skinn"
 quotidien|vardag|m|Le sport fait partie de mon [quotidien].|Idrott är en del av min vardag.|Latin <b>quotidie</b> 'varje dag'.
-se briser|förstöra sig||Le verre [s'est brisé].|Glaset gick sönder.|<b>briser</b> 'krossa' har germanskt ursprung, samma rot som engelskans break och svenskans bräcka.
-se lasser|bli trött på||On [se lasse] vite de ce jeu.|Man tröttnar snabbt på det här spelet.|Av <b>las</b> 'trött', latin <b>lassus</b>.
-se casser|dra iväg||Allez, on [se casse] !|Kom, vi drar!|<b>casser</b> betyder 'slå sönder' (latin quassare). Som slang betyder se casser 'sticka'.
+se briser|förstöra sig||Le verre [s'est brisé].|Glaset gick sönder.|<b>briser</b> 'krossa' har germanskt ursprung, samma rot som engelskans break 'bryta' och svenskans bräcka.
+se lasser|bli trött på||On [se lasse] vite de ce jeu.|Man tröttnar snabbt på det här spelet.|Av <b>las</b> 'trött', latin <b>lassus</b> 'trött'.
+se casser|dra iväg||Allez, on [se casse] !|Kom, vi drar!|<b>casser</b> betyder 'slå sönder' (latin quassare 'skaka sönder'). Som slang betyder se casser 'sticka'.|<b>se</b> sig · <b>casser</b> slå sönder → "slå sönder sig"
 s'évader|fly bort||Je lis pour [m'évader].|Jag läser för att fly bort från vardagen.|Latin <b>evadere</b> 'gå ut'. Jämför evakuera.
-s'envoler|flyga i väg||L'oiseau [s'envole].|Fågeln flyger i väg.|<b>en</b> + <b>voler</b> 'flyga', latin <b>volare</b>.
+s'envoler|flyga i väg||L'oiseau [s'envole].|Fågeln flyger i väg.|<b>en</b> 'i väg' + <b>voler</b> 'flyga', latin <b>volare</b> 'flyga'.
 cocotier|kokospalm|m|Il dort sous un [cocotier].|Han sover under en kokospalm.|<b>coco</b> kommer från portugisiskans <b>coco</b> 'spöke, grimas'. Nötens tre prickar liknar ett ansikte.
 ambiance|atmosfär|f|Il y a une bonne [ambiance] ici.|Det är en bra stämning här.|Av <b>ambiant</b> 'omgivande', latin <b>ambire</b> 'gå runt'.
 farniente|italienska: ung. bekymmersfri||Cet été, c'est [farniente] !|I sommar blir det lata dagar!|Italienska <b>fare niente</b>, 'göra ingenting'.
 caliente|spanska: varm, het||L'ambiance est [caliente] !|Stämningen är het!|Spanska, från latin <b>calens</b> 'varm'. Jämför kalori.
-se reposer|vila sig||Je [me repose] après le travail.|Jag vilar mig efter jobbet.|Latin <b>repausare</b>, samma rot som paus.
-profiter|utnyttja||[Profite] bien de tes vacances !|Passa på att njuta av lovet!|Av <b>profit</b>, latin <b>profectus</b> 'framsteg'.
+se reposer|vila sig||Je [me repose] après le travail.|Jag vilar mig efter jobbet.|Latin <b>repausare</b> 'vila', samma rot som paus.
+profiter|utnyttja||[Profite] bien de tes vacances !|Passa på att njuta av lovet!|Av <b>profit</b> 'vinst, nytta', latin <b>profectus</b> 'framsteg'.
 envoyer|skicka iväg||J'[envoie] une carte postale.|Jag skickar ett vykort.|Latin <b>inviare</b> 'sätta på vägen' (via 'väg').
 balader|promenera||On [balade] le chien.|Vi går ut med hunden.|Vardagligt ord med osäkert ursprung.
-être noyé, -e|drunkna||Il a failli [être noyé].|Han höll på att drunkna.|Av <b>noyer</b>, latin <b>necare</b> 'döda'.
+être noyé, -e|drunkna||Il a failli [être noyé].|Han höll på att drunkna.|Av <b>noyer</b> 'dränka', latin <b>necare</b> 'döda'.|<b>être</b> vara · <b>noyé</b> dränkt → "vara dränkt"
 facture|räkning|f|La [facture] est de cent euros.|Räkningen är på hundra euro.|Latin <b>factura</b> 'tillverkning' (facere 'göra'). Samma ord som svenskans faktura.
 azur|azurblå||La mer est d'un bleu [azur].|Havet är azurblått.|Via arabiska och persiska <b>lāzaward</b>, stenen lapis lazuli.
 assurer|försäkra||Je t'[assure] que c'est vrai.|Jag försäkrar dig att det är sant.|Latin <b>assecurare</b> 'göra säker'. Jämför assurans.
-y être bien|må bra där||J'aime cette ville, j'[y suis bien].|Jag gillar den här staden, jag trivs där.|<b>y</b> betyder 'där'.
-manquer de rien|inte sakna något||Ici, je ne [manque de rien].|Här saknar jag ingenting.|<b>manquer</b> från italienska <b>mancare</b>, latin <b>mancus</b> 'stympad'.
-sois (être) en sûr|var så säker på det||Il viendra, [sois-en sûr].|Han kommer, var säker på det.|<b>sois</b> är imperativ av être.
-là-bas|där borta||Tu vois la maison [là-bas] ?|Ser du huset där borta?|<b>là</b> 'där' + <b>bas</b> 'nere, borta'.
-dire merde|ung. dra åt helvete||Il a [dit merde] à son patron.|Han sa åt chefen att dra åt helvete.|<b>merde</b> från latin <b>merda</b>. Grovt ord.
+y être bien|må bra där||J'aime cette ville, j'[y suis bien].|Jag gillar den här staden, jag trivs där.|<b>y</b> betyder 'där'.|<b>y</b> där · <b>être</b> vara · <b>bien</b> bra → "vara bra där"
+manquer de rien|inte sakna något||Ici, je ne [manque de rien].|Här saknar jag ingenting.|<b>manquer</b> 'sakna, fattas' från italienska <b>mancare</b> 'fattas', latin <b>mancus</b> 'stympad'.|<b>manquer</b> sakna · <b>de</b> av · <b>rien</b> ingenting → "sakna av ingenting"
+sois (être) en sûr|var så säker på det||Il viendra, [sois-en sûr].|Han kommer, var säker på det.|<b>sois</b> 'var' är imperativ av être.|<b>sois</b> var · <b>en</b> av det · <b>sûr</b> säker → "var säker av det"
+là-bas|där borta||Tu vois la maison [là-bas] ?|Ser du huset där borta?|<b>là</b> 'där' + <b>bas</b> 'nere, borta'.|<b>là</b> där · <b>bas</b> nere → "där nere"
+dire merde|ung. dra åt helvete||Il a [dit merde] à son patron.|Han sa åt chefen att dra åt helvete.|<b>merde</b> 'skit' från latin <b>merda</b> 'skit'. Grovt ord.|<b>dire</b> säga · <b>merde</b> skit → "säga skit"
 patron|chef|m|Mon [patron] est sympa.|Min chef är trevlig.|Latin <b>patronus</b> 'beskyddare', av pater 'far'.
 gens|folk, människor|mpl|Les [gens] sont gentils ici.|Folk är snälla här.|Latin <b>gens</b> 'släkt, folk'.
 souriant, -e|leende||Elle est toujours [souriante].|Hon är alltid glad och leende.|Av <b>sourire</b> 'le', latin <b>subridere</b> 'skratta lite'.
-délice|lycka, fröjd|m|Ce gâteau est un [délice] !|Den här kakan är ljuvlig!|Latin <b>delicium</b>. Jämför delikat och delikatess.
+délice|lycka, fröjd|m|Ce gâteau est un [délice] !|Den här kakan är ljuvlig!|Latin <b>delicium</b> 'fröjd, nöje'. Jämför delikat och delikatess.
 #k2|Kap 2 · Arrivée à Paris|bok
-arrivé, -e|framme||Nous sommes [arrivés] !|Vi är framme!|<b>arriver</b> från latin <b>arripare</b> 'komma till stranden' (ripa 'strand'). Man 'anlände' först med båt.
-en provenance de|(som ankommer) från|f|Le vol [en provenance de] Stockholm est arrivé.|Flyget från Stockholm har landat.|Av <b>provenir</b> 'komma från', latin <b>provenire</b>.
-venir de faire qch|just ha gjort något||Je [viens de] manger.|Jag har just ätit.|Passé récent: venir de + infinitiv.
-atterrir|landa||L'avion [atterrit] à midi.|Planet landar klockan tolv.|<b>à</b> + <b>terre</b> 'jord'. Ordagrant 'komma till marken'.
+arrivé, -e|framme||Nous sommes [arrivés] !|Vi är framme!|<b>arriver</b> 'anlända' från latin <b>arripare</b> 'komma till stranden' (ripa 'strand'). Man 'anlände' först med båt.
+en provenance de|(som ankommer) från|f|Le vol [en provenance de] Stockholm est arrivé.|Flyget från Stockholm har landat.|Av <b>provenir</b> 'komma från', latin <b>provenire</b> 'komma fram'.|<b>en</b> i · <b>provenance</b> härkomst · <b>de</b> från → "i härkomst från"
+venir de faire qch|just ha gjort något||Je [viens de] manger.|Jag har just ätit.|Passé récent: venir de + infinitiv.|<b>venir</b> komma · <b>de</b> från · <b>faire qch</b> göra något → "komma från att göra något"
+atterrir|landa||L'avion [atterrit] à midi.|Planet landar klockan tolv.|<b>à</b> 'till' + <b>terre</b> 'jord'. Ordagrant 'komma till marken'.
 fois|gång|f|C'est la première [fois] que je vais à Paris.|Det är första gången jag åker till Paris.|Från latin <b>vices</b> 'växlingar'. Une fois, deux fois.
 correspondant, -e|brevvän||Ma [correspondante] habite à Lyon.|Min brevvän bor i Lyon.|Av <b>correspondre</b> 'svara mot varandra'. Jämför korrespondens.
 passer|passera||On [passe] devant la tour Eiffel.|Vi passerar Eiffeltornet.|Av latin <b>passus</b> 'steg'.
-douane|tull|f|Nous attendons à la [douane].|Vi väntar i tullen.|Arabiska <b>dīwān</b> 'kontor, register', via italienska dogana. Samma ord som divan.
-valise|resväska|f|Ma [valise] est trop lourde.|Min resväska är för tung.|Från italienska <b>valigia</b>. Ursprunget längre bak är okänt.
+douane|tull|f|Nous attendons à la [douane].|Vi väntar i tullen.|Arabiska <b>dīwān</b> 'kontor, register', via italienska dogana 'tull'. Samma ord som divan.
+valise|resväska|f|Ma [valise] est trop lourde.|Min resväska är för tung.|Från italienska <b>valigia</b> 'resväska'. Ursprunget längre bak är okänt.
 tapis|matta; här: rullband|m|Les valises arrivent sur le [tapis].|Väskorna kommer på rullbandet.|Från grekiska <b>tapētion</b> 'liten matta'. Jämför tapet.
 certains, certaines|vissa||[Certains] élèves sont en retard.|Vissa elever är sena.|Latin <b>certus</b> 'säker, bestämd'.
-en colère|arg|f|Le client est [en colère].|Kunden är arg.|Från grekiska <b>cholē</b> 'galla'. Man trodde att ilska kom från gallan.
+en colère|arg|f|Le client est [en colère].|Kunden är arg.|Från grekiska <b>cholē</b> 'galla'. Man trodde att ilska kom från gallan.|<b>en</b> i · <b>colère</b> vrede → "i vrede"
 service de bagages|ung. bagageavdelning|m|Allez au [service de bagages].|Gå till bagageavdelningen.|<b>bagage</b> av fornfranska <b>bague</b> 'packe'.
-être en grève|strejka||Les pilotes [sont en grève].|Piloterna strejkar.|På Place de Grève i Paris (grève = sandstrand vid Seine) samlades arbetslösa för att söka jobb.
-ça fait deux heures|ung. det har gått två timmar||[Ça fait deux heures] que j'attends !|Jag har väntat i två timmar!|Presens med ça fait … que: något som fortfarande pågår.
+être en grève|strejka||Les pilotes [sont en grève].|Piloterna strejkar.|På Place de Grève i Paris (grève = sandstrand vid Seine) samlades arbetslösa för att söka jobb.|<b>être</b> vara · <b>en</b> i · <b>grève</b> strejk → "vara i strejk"
+ça fait deux heures|ung. det har gått två timmar||[Ça fait deux heures] que j'attends !|Jag har väntat i två timmar!|Presens med ça fait … que: något som fortfarande pågår.|<b>ça</b> det · <b>fait</b> gör · <b>deux heures</b> två timmar → "det gör två timmar"
 se présenter|presentera sig||Je [me présente] : je m'appelle Léa.|Jag presenterar mig: jag heter Léa.|Latin <b>praesentare</b> 'ställa fram'.
 (se) tutoyer|dua (varandra)||On peut se [tutoyer] ?|Kan vi dua varandra?|Att säga <b>tu</b> till någon. Motsatsen är vouvoyer, 'nia'.
-inviter|bjuda||Je t'[invite] au cinéma.|Jag bjuder dig på bio.|Latin <b>invitare</b>.
-c'est gentil|det är snällt||Merci, [c'est gentil] !|Tack, vad snällt!|<b>gentil</b> från latin <b>gentilis</b> 'av god släkt'. Jämför gentleman.
-rendez-vous|möte, träff|m|J'ai [rendez-vous] chez le dentiste.|Jag har tid hos tandläkaren.|Ordagrant 'infinn er!', imperativ av se rendre.
+inviter|bjuda||Je t'[invite] au cinéma.|Jag bjuder dig på bio.|Latin <b>invitare</b> 'bjuda in'.
+c'est gentil|det är snällt||Merci, [c'est gentil] !|Tack, vad snällt!|<b>gentil</b> 'snäll' från latin <b>gentilis</b> 'av god släkt'. Jämför gentleman.
+rendez-vous|möte, träff|m|J'ai [rendez-vous] chez le dentiste.|Jag har tid hos tandläkaren.|Ordagrant 'infinn er!', imperativ av se rendre.|<b>rendez</b> infinn · <b>vous</b> er → "infinn er!"
 laisser|lämna, ge||[Laisse]-moi un message.|Lämna ett meddelande till mig.|Latin <b>laxare</b> 'lossa, släppa'.
 portable|mobil(telefon)|m|J'ai oublié mon [portable].|Jag har glömt min mobil.|Av <b>porter</b> 'bära': något bärbart.
-plus de chance|mer tur|f|J'aurai [plus de chance] la prochaine fois.|Jag har mer tur nästa gång.|<b>chance</b> från latin <b>cadentia</b>, 'hur tärningarna faller'.
+plus de chance|mer tur|f|J'aurai [plus de chance] la prochaine fois.|Jag har mer tur nästa gång.|<b>chance</b> 'tur, chans' från latin <b>cadentia</b>, 'hur tärningarna faller'.
 je dois (devoir)|jag måste, jag bör||[Je dois] faire mes devoirs.|Jag måste göra mina läxor.|Presens av devoir: je dois, tu dois, il doit.
 partir|åka iväg, ge sig iväg||Le train [part] à huit heures.|Tåget går klockan åtta.|Latin <b>partire</b> 'dela'. Den som reser skiljer sig från de andra. Passé composé med être.
 Père Lachaise|känd begravningsplats i Paris||Jim Morrison est enterré au [Père Lachaise].|Jim Morrison ligger begravd på Père Lachaise.|Uppkallad efter Ludvig XIV:s biktfar, François de la Chaise.
@@ -158,127 +158,127 @@ RER|pendeltåg i Parisområdet|m|On prend le [RER] pour aller à l'aéroport.|Vi
 circulation|trafik|f|Il y a beaucoup de [circulation].|Det är mycket trafik.|Latin <b>circulus</b> 'cirkel'. Trafiken cirkulerar.
 plus vite|snabbare||Cours [plus vite] !|Spring snabbare!|<b>vite</b> 'snabbt' har osäkert ursprung.
 donc|alltså||Il pleut, [donc] je reste à la maison.|Det regnar, alltså stannar jag hemma.|Latin <b>dunc</b>, 'då'.
-d'abord|först||[D'abord], on mange.|Först äter vi.|Av <b>à bord</b>, 'vid kanten, i början'.
+d'abord|först||[D'abord], on mange.|Först äter vi.|Av <b>à bord</b>, 'vid kanten, i början'.|<b>d'</b> från · <b>abord</b> början → "från början"
 puis|sedan||D'abord le métro, [puis] le bus.|Först tunnelbanan, sedan bussen.|Latin <b>post</b> 'efter'.
 malheureusement|olyckligtvis, tyvärr||[Malheureusement], je ne peux pas venir.|Tyvärr kan jag inte komma.|<b>mal</b> 'dålig' + <b>heur</b> 'lycka', från latin <b>augurium</b> 'järtecken'.
-se perdre|gå vilse||Je [me suis perdu] dans le métro.|Jag gick vilse i tunnelbanan.|Ordagrant 'förlora sig'.
+se perdre|gå vilse||Je [me suis perdu] dans le métro.|Jag gick vilse i tunnelbanan.|Ordagrant 'förlora sig'.|<b>se</b> sig · <b>perdre</b> förlora → "förlora sig"
 sortie|utgång|f|Où est la [sortie] ?|Var är utgången?|Av <b>sortir</b> 'gå ut'.
 elle aperçoit (apercevoir)|hon får syn på||[Elle aperçoit] son amie.|Hon får syn på sin kompis.|Latin <b>percipere</b> 'uppfatta'. Jämför perception.
-être assis, -e|sitta||Il [est assis] sur la terrasse.|Han sitter på uteserveringen.|Av <b>asseoir</b>, latin <b>assidere</b> 'sitta bredvid'.
+être assis, -e|sitta||Il [est assis] sur la terrasse.|Han sitter på uteserveringen.|Av <b>asseoir</b> 'sätta', latin <b>assidere</b> 'sitta bredvid'.|<b>être</b> vara · <b>assis</b> satt → "vara satt"
 terrasse|uteservering|f|On mange en [terrasse] ?|Ska vi äta ute?|Av <b>terre</b> 'jord': en upphöjd jordplatå.
 super|jättebra||Le film était [super] !|Filmen var jättebra!|Latin <b>super</b> 'över, ovanför'.
-trouver son chemin|hitta vägen||Avec un plan, on [trouve son chemin].|Med en karta hittar man vägen.|<b>chemin</b> från latin <b>camminus</b>, ett ord som latinet lånat från galliskan.
+trouver son chemin|hitta vägen||Avec un plan, on [trouve son chemin].|Med en karta hittar man vägen.|<b>chemin</b> 'väg' från latin <b>camminus</b> 'väg', ett ord som latinet lånat från galliskan.
 on connaît (connaître)|man känner (till)||[On connaît] bien cette ville.|Vi känner den här staden väl.|Presens av connaître: je connais, il connaît. <b>On</b> betyder både 'man' och 'vi'.
-raconter|berätta||[Raconte]-moi ton voyage !|Berätta om din resa!|<b>re</b> + <b>conter</b> 'räkna upp', latin <b>computare</b>. Att berätta var att räkna upp händelser. Jämför konto.
+raconter|berätta||[Raconte]-moi ton voyage !|Berätta om din resa!|<b>re</b> 'åter' + <b>conter</b> 'räkna upp', latin <b>computare</b> 'räkna'. Att berätta var att räkna upp händelser. Jämför konto.
 elle reçoit (recevoir)|hon får||[Elle reçoit] beaucoup de messages.|Hon får många meddelanden.|Presens av recevoir: je reçois, il reçoit.
 #k2b|Kap 2 · Le métro de Paris|bok
 construction|byggande|f|La [construction] du métro a commencé en 1898.|Bygget av tunnelbanan började 1898.|Latin <b>construere</b> 'bygga ihop'.
-c'est l'approche de …|här: det var när … närmade sig|f|C'était [l'approche de] Noël.|Det var när julen närmade sig.|<b>approcher</b> från latin <b>appropiare</b> (prope 'nära').
+c'est l'approche de …|här: det var när … närmade sig|f|C'était [l'approche de] Noël.|Det var när julen närmade sig.|<b>approcher</b> 'närma sig' från latin <b>appropiare</b> 'närma sig' (prope 'nära').|<b>c'est</b> det är · <b>l'approche</b> närmandet · <b>de</b> av → "det är närmandet av …"
 exposition universelle|världsutställning|f|La tour Eiffel a été construite pour l'[Exposition universelle] de 1889.|Eiffeltornet byggdes till världsutställningen 1889.|Pariss första metrolinje öppnade till nästa världsutställning, år 1900.
-se rendre compte de|inse||Je [me rends compte de] mon erreur.|Jag inser mitt misstag.|Ordagrant 'ge sig själv räkenskap för'.
+se rendre compte de|inse||Je [me rends compte de] mon erreur.|Jag inser mitt misstag.|Ordagrant 'ge sig själv räkenskap för'.|<b>se</b> sig · <b>rendre</b> ge · <b>compte</b> räkenskap · <b>de</b> för → "ge sig räkenskap för"
 terrestre|mark-||Certaines lignes sont [terrestres], pas souterraines.|Vissa linjer går ovan mark, inte under jord.|Latin <b>terrestris</b>, av terra 'jord'.
-suffire|räcka, vara tillräcklig||Ça [suffit] !|Nu räcker det!|Latin <b>sufficere</b>.
+suffire|räcka, vara tillräcklig||Ça [suffit] !|Nu räcker det!|Latin <b>sufficere</b> 'räcka'.
 besoin|behov|m|J'ai [besoin] d'aide.|Jag behöver hjälp.|Fornfranskt ord, troligen med germanskt ursprung.
-travaux|här: arbete|mpl|Il y a des [travaux] dans la rue.|Det pågår arbeten på gatan.|<b>travail</b> kommer troligen från latin <b>tripalium</b>, ett tortyrredskap av tre pålar. Arbete var alltså slit och plåga.
+travaux|här: arbete|mpl|Il y a des [travaux] dans la rue.|Det pågår arbeten på gatan.|<b>travail</b> 'arbete' kommer troligen från latin <b>tripalium</b>, ett tortyrredskap av tre pålar. Arbete var alltså slit och plåga.
 diriger|styra, leda||Elle [dirige] une entreprise.|Hon leder ett företag.|Latin <b>dirigere</b> 'rikta'. Jämför dirigent.
-voyageur, -euse|resenär||Les [voyageurs] attendent le train.|Resenärerna väntar på tåget.|<b>voyage</b> från latin <b>viaticum</b> 'reskost' (via 'väg').
+voyageur, -euse|resenär||Les [voyageurs] attendent le train.|Resenärerna väntar på tåget.|<b>voyage</b> 'resa' från latin <b>viaticum</b> 'reskost' (via 'väg').
 métropolitain = métro|tunnelbana|m|Je prends le [métro] tous les jours.|Jag åker tunnelbana varje dag.|Grekiska <b>mētēr</b> 'moder' + <b>polis</b> 'stad'. Chemin de fer métropolitain, 'huvudstadens järnväg', blev métro.
-considérablement|till stor del||Paris a [considérablement] changé.|Paris har förändrats mycket.|Latin <b>considerare</b>, troligen av sidus 'stjärna': att noga studera stjärnorna.
-développer|utveckla||La ville [développe] les transports.|Staden utvecklar kollektivtrafiken.|<b>dé</b> + <b>voloper</b> 'svepa in', alltså 'veckla ut'. Precis som svenskans ut-veckla.
-au cours de|under loppet av||[Au cours de] l'année, j'ai beaucoup appris.|Under årets lopp har jag lärt mig mycket.|<b>cours</b> från latin <b>cursus</b> 'lopp'.
-se rendre|bege sig||Je [me rends] à la gare.|Jag beger mig till stationen.|Ordagrant 'lämna sig' någonstans.
+considérablement|till stor del||Paris a [considérablement] changé.|Paris har förändrats mycket.|Latin <b>considerare</b> 'betrakta noga', troligen av sidus 'stjärna': att noga studera stjärnorna.
+développer|utveckla||La ville [développe] les transports.|Staden utvecklar kollektivtrafiken.|<b>dé</b> 'ut, av' + <b>voloper</b> 'svepa in', alltså 'veckla ut'. Precis som svenskans ut-veckla.
+au cours de|under loppet av||[Au cours de] l'année, j'ai beaucoup appris.|Under årets lopp har jag lärt mig mycket.|<b>cours</b> 'lopp, kurs' från latin <b>cursus</b> 'lopp'.|<b>au</b> i · <b>cours</b> loppet · <b>de</b> av → "i loppet av"
+se rendre|bege sig||Je [me rends] à la gare.|Jag beger mig till stationen.|Ordagrant 'lämna sig' någonstans.|<b>se</b> sig · <b>rendre</b> lämna → "lämna sig"
 banlieue|förort|f|Il habite en [banlieue].|Han bor i förorten.|<b>ban</b> 'påbud' + <b>lieue</b> 'mil'. Området en mil runt staden där stadens regler gällde.
 tramway|spårvagn|m|Le [tramway] passe devant chez moi.|Spårvagnen går förbi mitt hus.|Lånat från engelskan: tram 'skena' + way 'väg'.
-dans un rayon|inom ett avstånd||Il y a trois écoles [dans un rayon] d'un kilomètre.|Det finns tre skolor inom en kilometer.|<b>rayon</b> 'stråle, radie', latin <b>radius</b>.
+dans un rayon|inom ett avstånd||Il y a trois écoles [dans un rayon] d'un kilomètre.|Det finns tre skolor inom en kilometer.|<b>rayon</b> 'stråle, radie', latin <b>radius</b>.|<b>dans</b> i · <b>un rayon</b> en radie → "i en radie"
 un thème donné|ett givet tema||Chaque station a [un thème donné].|Varje station har ett givet tema.|Grekiska <b>thema</b> 'det som ställts fram'.
-les droits de l'Homme|de mänskliga rättigheterna|mpl|La station Concorde parle des [droits de l'Homme].|Stationen Concorde handlar om de mänskliga rättigheterna.|<b>droit</b> från latin <b>directus</b> 'rak, rätt'.
-carrelé, -e|kakelsatt||Les stations sont [carrelées] en blanc.|Stationerna är kakelsatta i vitt.|Av <b>carreau</b> 'fyrkant', latin <b>quadrus</b>.
-être dessiné, -e|vara utformad||La station Arts et Métiers [est dessinée] comme un sous-marin.|Stationen Arts et Métiers är utformad som en ubåt.|<b>dessiner</b> från italienska <b>disegnare</b> 'teckna'. Jämför design.
-sous-marin|ubåt|m|Le Nautilus est le [sous-marin] de Jules Verne.|Nautilus är Jules Vernes ubåt.|'Under havet': <b>sous</b> + <b>marin</b>, latin <b>mare</b> 'hav'.
-lieue|åld. fransk mil (ca 4 km)|f|« Vingt mille [lieues] sous les mers » est un roman de Jules Verne.|"En världsomsegling under havet" är en roman av Jules Verne.|Ett galliskt ord som romarna lånade in som <b>leuca</b>.
-en effet|faktiskt||[En effet], tu as raison.|Du har faktiskt rätt.|Ordagrant 'i verkan'.
+les droits de l'Homme|de mänskliga rättigheterna|mpl|La station Concorde parle des [droits de l'Homme].|Stationen Concorde handlar om de mänskliga rättigheterna.|<b>droit</b> 'rätt' från latin <b>directus</b> 'rak, rätt'.
+carrelé, -e|kakelsatt||Les stations sont [carrelées] en blanc.|Stationerna är kakelsatta i vitt.|Av <b>carreau</b> 'fyrkant', latin <b>quadrus</b> 'fyrkantig'.
+être dessiné, -e|vara utformad||La station Arts et Métiers [est dessinée] comme un sous-marin.|Stationen Arts et Métiers är utformad som en ubåt.|<b>dessiner</b> 'teckna' från italienska <b>disegnare</b> 'teckna'. Jämför design.
+sous-marin|ubåt|m|Le Nautilus est le [sous-marin] de Jules Verne.|Nautilus är Jules Vernes ubåt.|'Under havet': <b>sous</b> 'under' + <b>marin</b> 'havs-', latin <b>mare</b> 'hav'.|<b>sous</b> under · <b>marin</b> havs- → "under havet"
+lieue|åld. fransk mil (ca 4 km)|f|« Vingt mille [lieues] sous les mers » est un roman de Jules Verne.|"En världsomsegling under havet" är en roman av Jules Verne.|Ett galliskt ord som romarna lånade in som <b>leuca</b> 'mil'.
+en effet|faktiskt||[En effet], tu as raison.|Du har faktiskt rätt.|Ordagrant 'i verkan'.|<b>en</b> i · <b>effet</b> verkan → "i verkan"
 quotidien, -ne|daglig||C'est un trajet [quotidien].|Det är en daglig resa.|Latin <b>quotidie</b> 'varje dag'.
-en échange de|i utbyte mot||Il chante [en échange de] quelques pièces.|Han sjunger i utbyte mot några mynt.|<b>changer</b> från latin <b>cambiare</b> 'byta'.
+en échange de|i utbyte mot||Il chante [en échange de] quelques pièces.|Han sjunger i utbyte mot några mynt.|<b>changer</b> 'byta' från latin <b>cambiare</b> 'byta'.
 pièce|mynt|f|Tu as une [pièce] d'un euro ?|Har du ett euromynt?|Galliska <b>pettia</b> 'bit'. Betyder också 'rum' och 'teaterpjäs'.
-SDF (sans domicile fixe)|hemlös person|m|Un [SDF] dort dans le métro.|En hemlös person sover i tunnelbanan.|'Utan fast bostad'.
-se loger|få tak över huvudet||C'est difficile de [se loger] à Paris.|Det är svårt att få tak över huvudet i Paris.|<b>loge</b> från frankiska <b>laubja</b> 'lövhydda'. Jämför loge och engelskans lodge.
+SDF (sans domicile fixe)|hemlös person|m|Un [SDF] dort dans le métro.|En hemlös person sover i tunnelbanan.|'Utan fast bostad'.|<b>sans</b> utan · <b>domicile</b> bostad · <b>fixe</b> fast → "utan fast bostad"
+se loger|få tak över huvudet||C'est difficile de [se loger] à Paris.|Det är svårt att få tak över huvudet i Paris.|<b>loge</b> 'hydda, loge' från frankiska <b>laubja</b> 'lövhydda'. Jämför loge och engelskans lodge 'stuga'.|<b>se</b> sig · <b>loger</b> inhysa → "inhysa sig"
 bref|kort sagt||[Bref], c'était une belle journée.|Kort sagt, det var en fin dag.|Latin <b>brevis</b> 'kort'. Svenskans brev kommer från samma ord.
 #k2c|Kap 2 · Aux Champs-Élysées|bok
 se balader|promenera||On [se balade] sur les Champs-Élysées.|Vi promenerar på Champs-Élysées.|Vardagligt ord med osäkert ursprung.
-cœur|hjärta|m|Mon [cœur] bat vite.|Mitt hjärta slår snabbt.|Latin <b>cor</b>. Jämför kordial och courage 'mod'.
+cœur|hjärta|m|Mon [cœur] bat vite.|Mitt hjärta slår snabbt.|Latin <b>cor</b> 'hjärta'. Jämför kordial och courage 'mod'.
 inconnu, -e|okänd||Un [inconnu] me parle.|En okänd person pratar med mig.|<b>in</b> 'inte' + <b>connu</b> 'känd'.
-avoir envie de|ha lust att||J'ai [envie] d'une glace.|Jag är sugen på en glass.|<b>envie</b> från latin <b>invidia</b> 'avund'.
-n'importe qui|vem som helst||[N'importe qui] peut apprendre le français.|Vem som helst kan lära sig franska.|Ordagrant 'det spelar ingen roll vem'.
+avoir envie de|ha lust att||J'ai [envie] d'une glace.|Jag är sugen på en glass.|<b>envie</b> 'lust' från latin <b>invidia</b> 'avund'.
+n'importe qui|vem som helst||[N'importe qui] peut apprendre le français.|Vem som helst kan lära sig franska.|Ordagrant 'det spelar ingen roll vem'.|<b>n'importe</b> spelar ingen roll · <b>qui</b> vem → "det spelar ingen roll vem"
 ce fut (être)|det var (passé simple av être)||[Ce fut] une belle soirée.|Det var en fin kväll.|Passé simple används i skriven berättande text.
-s'apprivoiser|bli tam, mjukna||Le chat [s'apprivoise] lentement.|Katten blir långsamt tam.|Latin <b>privatus</b> 'egen, hemma'. Ordet är känt från Lille prinsen, där räven ber att bli 'apprivoisé'.
-sous-sol|källare|m|Le vélo est au [sous-sol].|Cykeln står i källaren.|'Under marken': <b>sous</b> + <b>sol</b> 'mark'.
+s'apprivoiser|bli tam, mjukna||Le chat [s'apprivoise] lentement.|Katten blir långsamt tam.|Latin <b>privatus</b> 'egen, hemma'. Ordet är känt från Lille prinsen, där räven ber att bli 'apprivoisé', 'tämjd'.
+sous-sol|källare|m|Le vélo est au [sous-sol].|Cykeln står i källaren.|'Under marken': <b>sous</b> 'under' + <b>sol</b> 'mark'.|<b>sous</b> under · <b>sol</b> mark → "under marken"
 fou|galning|m|Il conduit comme un [fou].|Han kör som en galning.|Latin <b>follis</b> 'blåsbälg'. En tom och uppblåst skalle.
-accompagner|följa med||Je t'[accompagne] à la gare.|Jag följer med dig till stationen.|Av <b>compagnon</b>, latin <b>com</b> + <b>panis</b>: 'den man delar bröd med'.
+accompagner|följa med||Je t'[accompagne] à la gare.|Jag följer med dig till stationen.|Av <b>compagnon</b> 'kamrat', latin <b>com</b> 'med' + <b>panis</b> 'bröd': 'den man delar bröd med'.
 penser à|tänka på||Je [pense à] toi.|Jag tänker på dig.|Latin <b>pensare</b> 'väga'. Att tänka är att väga.
-s'embrasser|kyssas||Ils [s'embrassent] sous la pluie.|De kysser varandra i regnet.|<b>en</b> + <b>bras</b> 'armar'. Betydde först 'omfamna'.
+s'embrasser|kyssas||Ils [s'embrassent] sous la pluie.|De kysser varandra i regnet.|<b>en</b> 'i' + <b>bras</b> 'armar'. Betydde först 'omfamna'.
 étourdi, -e|tanklös||Je suis [étourdi], j'oublie tout.|Jag är tanklös, jag glömmer allt.|Troligen från latin <b>turdus</b> 'trast', 'yr som en trast'.
 corde|sträng; rep|f|Une [corde] de ma guitare est cassée.|En sträng på min gitarr har gått av.|Grekiska <b>chordē</b> 'tarmsträng'. Jämför ackord.
 oiseau|fågel|m|Un [oiseau] chante dans l'arbre.|En fågel sjunger i trädet.|Latin <b>aucellus</b> 'liten fågel' (avis).
-point du jour|gryningen|m|Nous partons au [point du jour].|Vi ger oss av i gryningen.|'Dagens (start)punkt'.
+point du jour|gryningen|m|Nous partons au [point du jour].|Vi ger oss av i gryningen.|'Dagens (start)punkt'.|<b>point</b> punkt · <b>du jour</b> dagens → "dagens punkt"
 #k3|Kap 3 · Trouver un travail|bok
-se regarder|titta sig||Elle [se regarde] dans la glace.|Hon tittar sig i spegeln.|<b>regarder</b> av <b>garder</b> 'vakta', germanska <b>wardon</b>. Jämför svenskans vårda.
+se regarder|titta sig||Elle [se regarde] dans la glace.|Hon tittar sig i spegeln.|<b>regarder</b> 'titta' av <b>garder</b> 'vakta', germanska <b>wardon</b> 'vakta'. Jämför svenskans vårda.
 glace|spegel|f|Il y a une [glace] dans la salle de bains.|Det finns en spegel i badrummet.|Latin <b>glacies</b> 'is'. Glace betyder också 'is', 'glass' och 'glasruta'.
-elle dit (dire)|hon säger||[Elle dit] bonjour.|Hon säger hej.|Latin <b>dicere</b>. Jämför diktera.
-à mi-voix|halvhögt||Il parle [à mi-voix].|Han pratar halvhögt.|<b>mi</b> 'halv' (latin medius) + <b>voix</b> 'röst' (latin vox).
+elle dit (dire)|hon säger||[Elle dit] bonjour.|Hon säger hej.|Latin <b>dicere</b> 'säga'. Jämför diktera.
+à mi-voix|halvhögt||Il parle [à mi-voix].|Han pratar halvhögt.|<b>mi</b> 'halv' (latin medius) + <b>voix</b> 'röst' (latin vox).|<b>à</b> med · <b>mi</b> halv · <b>voix</b> röst → "med halv röst"
 responsable|ansvarsfull||Je suis quelqu'un de [responsable].|Jag är en ansvarsfull person.|Latin <b>respondere</b> 'svara'. Den ansvarige får svara för saken.
 je peux (pouvoir)|jag kan||[Je peux] t'aider ?|Kan jag hjälpa dig?|Presens av pouvoir: je peux, tu peux, il peut.
 hésiter|tveka||N'[hésite] pas à demander !|Tveka inte att fråga!|Latin <b>haesitare</b> 'fastna'.
-recommencer|börja om||On [recommence] depuis le début.|Vi börjar om från början.|<b>commencer</b> från latin <b>cum</b> + <b>initiare</b> 'inleda'.
+recommencer|börja om||On [recommence] depuis le début.|Vi börjar om från början.|<b>commencer</b> 'börja' från latin <b>cum</b> 'med' + <b>initiare</b> 'inleda'.
 patience|tålamod|f|Il faut de la [patience].|Det krävs tålamod.|Latin <b>patientia</b> 'uthärdande', av pati 'lida'. Jämför patient.
-elle a l'air (avoir l'air)|hon ser … ut, hon verkar||[Elle a l'air] contente.|Hon ser glad ut.|<b>air</b> 'luft' betyder också 'min, utseende'.
+elle a l'air (avoir l'air)|hon ser … ut, hon verkar||[Elle a l'air] contente.|Hon ser glad ut.|<b>air</b> 'luft' betyder också 'min, utseende'.|<b>elle</b> hon · <b>a</b> har · <b>l'air</b> luften → "hon har luften"
 fâché, -e|arg||Tu es [fâché] contre moi ?|Är du arg på mig?|Latin <b>fastidium</b> 'avsmak'.
 si|så||C'est [si] difficile !|Det är så svårt!|Latin <b>sic</b> 'så'.
-difficile|svår||Le français n'est pas si [difficile].|Franska är inte så svårt.|Latin <b>dis</b> + <b>facilis</b>, 'inte lätt'.
+difficile|svår||Le français n'est pas si [difficile].|Franska är inte så svårt.|Latin <b>dis</b> 'inte' + <b>facilis</b> 'lätt', 'inte lätt'.
 chose|sak|f|J'ai une [chose] à te dire.|Jag har en sak att säga dig.|Latin <b>causa</b> 'sak, orsak'.
-soi|sig själv||Il faut avoir confiance en [soi].|Man måste tro på sig själv.|Latin <b>se</b>.
+soi|sig själv||Il faut avoir confiance en [soi].|Man måste tro på sig själv.|Latin <b>se</b> 'sig'.
 je veux (vouloir)|jag vill||[Je veux] devenir médecin.|Jag vill bli läkare.|Latin <b>velle</b> 'vilja'.
-cet entretien d'embauche|den här anställningsintervjun|m|[Cet entretien d'embauche] est important.|Den här anställningsintervjun är viktig.|<b>entretien</b> av entretenir 'hålla samtal'. <b>embaucher</b> betyder 'anställa'.
+cet entretien d'embauche|den här anställningsintervjun|m|[Cet entretien d'embauche] est important.|Den här anställningsintervjun är viktig.|<b>entretien</b> 'samtal' av entretenir 'hålla samtal'. <b>embaucher</b> betyder 'anställa'.|<b>cet</b> det här · <b>entretien</b> samtalet · <b>d'embauche</b> för anställning → "det här samtalet för anställning"
 parfait, -e|perfekt||Personne n'est [parfait].|Ingen är perfekt.|Latin <b>perfectus</b> 'färdiggjord'.
 travail|arbete|m|Je cherche du [travail].|Jag söker arbete.|Troligen av latin <b>tripalium</b>, ett tortyrredskap. Arbete var slit.
 comme|som||Je travaille [comme] serveur.|Jag jobbar som servitör.|Latin <b>quomodo</b> 'hur'.
-moniteur, monitrice de ski|skidinstruktör, skidlärare|m|Il travaille comme [moniteur] de ski.|Han jobbar som skidlärare.|<b>ski</b> är lånat från norskan.
-parce que|därför att||Je reste [parce qu']il pleut.|Jag stannar för att det regnar.|'För det att'.
+moniteur, monitrice de ski|skidinstruktör, skidlärare|m|Il travaille comme [moniteur] de ski.|Han jobbar som skidlärare.|<b>ski</b> 'skida' är lånat från norskan.
+parce que|därför att||Je reste [parce qu']il pleut.|Jag stannar för att det regnar.|'För det att'.|<b>par</b> genom · <b>ce</b> det · <b>que</b> att → "genom det att"
 penser|tänka, tycka||Je [pense] que tu as raison.|Jag tycker att du har rätt.|Latin <b>pensare</b> 'väga'.
-peut-être|kanske||[Peut-être] demain.|Kanske i morgon.|Ordagrant 'kan vara'.
-un peu trop|lite för (mycket)||C'est [un peu trop] cher.|Det är lite för dyrt.|<b>trop</b> från frankiska <b>thorp</b> 'hop, mängd'. Samma ord som svenskans torp.
-ça semble|det verkar||[Ça semble] facile.|Det verkar lätt.|<b>sembler</b> från latin <b>similare</b> 'likna'.
+peut-être|kanske||[Peut-être] demain.|Kanske i morgon.|Ordagrant 'kan vara'.|<b>peut</b> kan · <b>être</b> vara → "kan vara"
+un peu trop|lite för (mycket)||C'est [un peu trop] cher.|Det är lite för dyrt.|<b>trop</b> 'för mycket' från frankiska <b>thorp</b> 'hop, mängd'. Samma ord som svenskans torp.
+ça semble|det verkar||[Ça semble] facile.|Det verkar lätt.|<b>sembler</b> 'verka' från latin <b>similare</b> 'likna'.
 exagéré, -e|överdrivet||C'est un peu [exagéré] !|Det är lite överdrivet!|Latin <b>exaggerare</b> 'stapla upp'.
 né, -e (naître)|född||Je suis [né] en 2010.|Jag är född 2010.|Latin <b>nasci</b> 'födas'. Jämför nation och natal.
-station de ski|skidort|f|Chamonix est une [station de ski] célèbre.|Chamonix är en känd skidort.|<b>station</b> från latin <b>statio</b> 'uppehållsplats'.
+station de ski|skidort|f|Chamonix est une [station de ski] célèbre.|Chamonix är en känd skidort.|<b>station</b> 'station, ort' från latin <b>statio</b> 'uppehållsplats'.
 les Alpes|Alperna|fpl|Nous allons skier dans [les Alpes].|Vi ska åka skidor i Alperna.|Troligen keltiskt <b>alp</b> 'högt berg'.
-au moins|åtminstone||Il faut [au moins] deux heures.|Det tar åtminstone två timmar.|<b>moins</b> 'mindre', latin <b>minus</b>.
-en été|på sommaren||[En été], il fait chaud.|På sommaren är det varmt.|<b>été</b> från latin <b>aestas</b> 'sommar'.
+au moins|åtminstone||Il faut [au moins] deux heures.|Det tar åtminstone två timmar.|<b>moins</b> 'mindre', latin <b>minus</b> 'mindre'.|<b>au</b> vid det · <b>moins</b> minsta → "vid det minsta"
+en été|på sommaren||[En été], il fait chaud.|På sommaren är det varmt.|<b>été</b> 'sommar' från latin <b>aestas</b> 'sommar'.
 piste|backe|f|Attention, cette [piste] est noire !|Se upp, den här backen är svart!|Italienska <b>pista</b> 'spår'.
 toujours|alltid||Il est [toujours] en retard.|Han är alltid sen.|<b>tous</b> + <b>jours</b>: 'alla dagar'.
-faire du ski|åka skidor||Je [fais du ski] depuis l'âge de trois ans.|Jag har åkt skidor sedan jag var tre.|Faire du + sport: faire du vélo, faire du ski.
+faire du ski|åka skidor||Je [fais du ski] depuis l'âge de trois ans.|Jag har åkt skidor sedan jag var tre.|Faire du + sport: faire du vélo, faire du ski.|<b>faire</b> göra · <b>du ski</b> skidåkning → "göra skidåkning"
 gagner|vinna||Qui a [gagné] le match ?|Vem vann matchen?|Frankiska <b>waidanjan</b> 'jaga, skaffa föda'. Betyder också 'tjäna (pengar)'.
-pas mal de|ganska många||Il y a [pas mal de] monde.|Det är ganska mycket folk.|Ordagrant 'inte illa med'.
+pas mal de|ganska många||Il y a [pas mal de] monde.|Det är ganska mycket folk.|Ordagrant 'inte illa med'.|<b>pas</b> inte · <b>mal</b> illa · <b>de</b> av → "inte illa av"
 concours|tävling|m|Elle a gagné le [concours].|Hon vann tävlingen.|Latin <b>concursus</b> 'sammanlopp'.
 connu, -e|känd||C'est un chanteur très [connu].|Han är en mycket känd sångare.|Particip av connaître.
-l'âge de trois ans|tre års ålder|m|Il parle anglais depuis [l'âge de trois ans].|Han har pratat engelska sedan tre års ålder.|<b>âge</b> från latin <b>aetas</b>.
+l'âge de trois ans|tre års ålder|m|Il parle anglais depuis [l'âge de trois ans].|Han har pratat engelska sedan tre års ålder.|<b>âge</b> 'ålder' från latin <b>aetas</b> 'ålder'.
 travailler|arbeta||Je [travaille] le samedi.|Jag jobbar på lördagar.|Av travail.
-saison d'hiver|vintersäsong|f|La [saison d'hiver] commence en décembre.|Vintersäsongen börjar i december.|<b>saison</b> från latin <b>satio</b> 'sådd', såtiden. <b>hiver</b> från latin <b>hibernum</b>. Jämför hibernera.
+saison d'hiver|vintersäsong|f|La [saison d'hiver] commence en décembre.|Vintersäsongen börjar i december.|<b>saison</b> 'årstid' från latin <b>satio</b> 'sådd', såtiden. <b>hiver</b> 'vinter' från latin <b>hibernum</b> 'vintertid'. Jämför hibernera.
 #aller|Verb · Aller-gruppen (être)|bok
-aller|gå, åka||Je [vais] à l'école.|Jag går till skolan.|Hopsatt av tre latinska verb: <b>ambulare</b> (aller), <b>vadere</b> (je vais) och <b>ire</b> (j'irai). Därför är det så oregelbundet.
-entrer|komma in||[Entrez], s'il vous plaît !|Kom in, är ni snälla!|Latin <b>intrare</b>. Jämför entré.
+aller|gå, åka||Je [vais] à l'école.|Jag går till skolan.|Hopsatt av tre latinska verb: <b>ambulare</b> 'gå omkring' (aller), <b>vadere</b> 'gå' (je vais 'jag går') och <b>ire</b> 'gå' (j'irai 'jag ska gå'). Därför är det så oregelbundet.
+entrer|komma in||[Entrez], s'il vous plaît !|Kom in, är ni snälla!|Latin <b>intrare</b> 'gå in'. Jämför entré.
 sortir|gå ut||Je [sors] ce soir.|Jag går ut i kväll.|Osäkert ursprung, kanske latin <b>sortiri</b> 'dra lott'.
 arriver|anlända, komma||Le train [arrive] à dix heures.|Tåget kommer klockan tio.|Latin <b>arripare</b> 'komma till stranden'.
 rester|stanna kvar||Je [reste] à la maison.|Jag stannar hemma.|Latin <b>restare</b> 'stå kvar'. Jämför rest.
-retourner|återvända||Il [retourne] en France.|Han återvänder till Frankrike.|<b>re</b> + <b>tourner</b> 'vända'.
+retourner|återvända||Il [retourne] en France.|Han återvänder till Frankrike.|<b>re</b> 'åter' + <b>tourner</b> 'vända'.
 monter|stiga upp||Je [monte] au troisième étage.|Jag går upp till tredje våningen.|Av <b>mont</b> 'berg'. Ordagrant 'gå uppför berget'.
 descendre|gå ner||[Descends] vite !|Kom ner fort!|Latin <b>descendere</b>, av scandere 'klättra'.
-mourir|dö||Victor Hugo est [mort] en 1885.|Victor Hugo dog 1885.|Latin <b>mori</b>. Jämför mortalitet.
-naître|födas||Je suis [née] à Stockholm.|Jag är född i Stockholm.|Latin <b>nasci</b>. Passé composé: je suis né(e).
+mourir|dö||Victor Hugo est [mort] en 1885.|Victor Hugo dog 1885.|Latin <b>mori</b> 'dö'. Jämför mortalitet.
+naître|födas||Je suis [née] à Stockholm.|Jag är född i Stockholm.|Latin <b>nasci</b> 'födas'. Passé composé: je suis né(e).
 tomber|falla||Attention, tu vas [tomber] !|Se upp, du kommer att ramla!|Troligen ljudhärmande, samma idé som svenskans tumla.
 #fm|Musique et conservatoire
-jouer du piano|spela piano||Je [joue du piano] depuis l'âge de six ans.|Jag har spelat piano sedan jag var sex år.|Instrument: <b>jouer de</b> (du piano, de la flûte, de l'orgue). Sport och spel: jouer à (au foot, aux cartes).
-instrument à cordes|stråkinstrument|m|Le violon et le violoncelle sont des [instruments à cordes].|Fiol och cello är stråkinstrument.|<b>corde</b> 'sträng, rep' från latin <b>chorda</b>, grekiska khordē 'tarmsträng'.
-instrument à vent|blåsinstrument|m|La flûte et la trompette sont des [instruments à vent].|Flöjt och trumpet är blåsinstrument.|<b>vent</b> 'vind' från latin <b>ventus</b>. Jämför ventilera.
+jouer du piano|spela piano||Je [joue du piano] depuis l'âge de six ans.|Jag har spelat piano sedan jag var sex år.|Instrument: <b>jouer de</b> (du piano, de la flûte, de l'orgue). Sport och spel: jouer à (au foot, aux cartes).|<b>jouer</b> spela · <b>du piano</b> av pianot → "spela av pianot"
+instrument à cordes|stråkinstrument|m|Le violon et le violoncelle sont des [instruments à cordes].|Fiol och cello är stråkinstrument.|<b>corde</b> 'sträng, rep' från latin <b>chorda</b> 'sträng', grekiska khordē 'tarmsträng'.
+instrument à vent|blåsinstrument|m|La flûte et la trompette sont des [instruments à vent].|Flöjt och trumpet är blåsinstrument.|<b>vent</b> 'vind' från latin <b>ventus</b> 'vind'. Jämför ventilera.
 répéter|repetera (inför en konsert); upprepa||L'orchestre [répète] tous les jeudis soir.|Orkestern repeterar varje torsdagskväll.|Latin <b>repetere</b> 'gå tillbaka till, göra om'. Betyder också 'upprepa': Répétez, s'il vous plaît.
 répétition|repetition, rep|f|La [répétition] générale a lieu la veille du concert.|Generalrepetitionen är dagen före konserten.|Samma ord som svenskans <b>repetition</b>. La répétition générale = generalrepetitionen.
 partition|noter, partitur|f|J'ai oublié ma [partition] à la maison !|Jag har glömt mina noter hemma!|Ytterst från latin <b>partitio</b> 'uppdelning'. Obs: noterna till ett stycke heter une partition, inte des notes.
@@ -296,51 +296,51 @@ morceau|stycke, musikstycke|m|Quel [morceau] vas-tu jouer à l'audition ?|Vilket
 œuvre|verk|f|Cette [œuvre] de Ravel est très difficile.|Det här verket av Ravel är mycket svårt.|Latin <b>opera</b> 'arbete'. Jämför opus. Un chef-d'œuvre = ett mästerverk.
 interpréter|tolka, framföra||Elle [interprète] Chopin avec beaucoup de sensibilité.|Hon tolkar Chopin med stor känslighet.|Latin <b>interpretari</b> 'förklara, tolka'. En musiker kallas också un ou une interprète.
 interprétation|tolkning, framförande|f|Le jury a aimé son [interprétation] de la sonate.|Juryn gillade hennes tolkning av sonaten.|Samma ord som svenskans <b>interpretation</b>.
-jouer par cœur|spela utantill||Au concours, les pianistes doivent [jouer par cœur].|Vid antagningsprovet måste pianisterna spela utantill.|<b>par cœur</b> 'med hjärtat', precis som engelskans by heart. Apprendre par cœur = lära sig utantill.
-chœur|kör|m|Elle chante dans le [chœur] de la cathédrale.|Hon sjunger i domkyrkans kör.|Latin <b>chorus</b>, från grekiska <b>khoros</b>. Uttalas precis som cœur 'hjärta'.
-chef d'orchestre|dirigent|m|Le [chef d'orchestre] lève sa baguette.|Dirigenten lyfter taktpinnen.|<b>chef</b> från latin <b>caput</b> 'huvud'. En chef är den som leder.
+jouer par cœur|spela utantill||Au concours, les pianistes doivent [jouer par cœur].|Vid antagningsprovet måste pianisterna spela utantill.|<b>par cœur</b> 'med hjärtat', precis som engelskans by heart 'utantill'. Apprendre par cœur = lära sig utantill.|<b>jouer</b> spela · <b>par</b> med · <b>cœur</b> hjärta → "spela med hjärtat"
+chœur|kör|m|Elle chante dans le [chœur] de la cathédrale.|Hon sjunger i domkyrkans kör.|Latin <b>chorus</b> 'kör', från grekiska <b>khoros</b> 'dans, kör'. Uttalas precis som cœur 'hjärta'.
+chef d'orchestre|dirigent|m|Le [chef d'orchestre] lève sa baguette.|Dirigenten lyfter taktpinnen.|<b>chef</b> 'ledare' från latin <b>caput</b> 'huvud'. En chef är den som leder.|<b>chef</b> ledare · <b>d'orchestre</b> för orkestern → "orkesterns ledare"
 orchestre|orkester|m|Il rêve de jouer dans un grand [orchestre].|Han drömmer om att spela i en stor orkester.|Grekiska <b>orkhēstra</b>, platsen framför scenen där kören dansade i den antika teatern.
-musique de chambre|kammarmusik|f|J'adore jouer de la [musique de chambre] avec mes amis.|Jag älskar att spela kammarmusik med mina vänner.|<b>chambre</b> 'rum, kammare' från latin <b>camera</b>. Musik för få musiker, en på varje stämma.
-chanteur, chanteuse|sångare, sångerska|m|Elle veut devenir [chanteuse] d'opéra.|Hon vill bli operasångerska.|Av <b>chanter</b>, latin <b>cantare</b> 'sjunga'. Jämför kantor och kantat.
-voix|röst|f|Il a une belle [voix] de ténor.|Han har en vacker tenorröst.|Latin <b>vox</b>. Jämför vokal. Samma form i singular och plural.
+musique de chambre|kammarmusik|f|J'adore jouer de la [musique de chambre] avec mes amis.|Jag älskar att spela kammarmusik med mina vänner.|<b>chambre</b> 'rum, kammare' från latin <b>camera</b> 'valv, rum'. Musik för få musiker, en på varje stämma.
+chanteur, chanteuse|sångare, sångerska|m|Elle veut devenir [chanteuse] d'opéra.|Hon vill bli operasångerska.|Av <b>chanter</b> 'sjunga', latin <b>cantare</b> 'sjunga'. Jämför kantor och kantat.
+voix|röst|f|Il a une belle [voix] de ténor.|Han har en vacker tenorröst.|Latin <b>vox</b> 'röst'. Jämför vokal. Samma form i singular och plural.
 compositeur, compositrice|kompositör, tonsättare|m|Lili Boulanger était une [compositrice] française.|Lili Boulanger var en fransk tonsättare.|Latin <b>componere</b> 'sätta ihop'.
 tournée|turné|f|L'orchestre part en [tournée] en Asie.|Orkestern åker på turné i Asien.|Av <b>tourner</b> 'vända, åka runt'. Svenskans turné är lånat härifrån.
 conservatoire|konservatorium, musikhögskola|m|Elle prépare l'entrée au [conservatoire] de Paris.|Hon förbereder sig för att komma in på konservatoriet i Paris.|Från italienska <b>conservatorio</b>: barnhem i Neapel och Venedig som tog hand om föräldralösa barn och lärde dem musik.
-concours d'entrée|antagningsprov|m|Le [concours d'entrée] a lieu en mars.|Antagningsprovet äger rum i mars.|Ett concours har ett begränsat antal platser: bara de bästa kommer in.
+concours d'entrée|antagningsprov|m|Le [concours d'entrée] a lieu en mars.|Antagningsprovet äger rum i mars.|Ett concours har ett begränsat antal platser: bara de bästa kommer in.|<b>concours</b> tävling · <b>d'entrée</b> för inträde → "tävling för inträde"
 audition|provspelning, provsjungning|f|Mon [audition] est prévue à dix heures.|Min provspelning är inplanerad klockan tio.|Latin <b>auditio</b> 'hörande', av audire 'höra'. Jämför auditorium.
 jury|jury, bedömningspanel|m|Le [jury] est composé de cinq professeurs.|Juryn består av fem lärare.|Lånat från engelskan, som i sin tur fått det från fornfranskans <b>juree</b> 'ed'.
-dossier de candidature|ansökningshandlingar|m|Envoyez votre [dossier de candidature] avant le 15 janvier.|Skicka in dina ansökningshandlingar före den 15 januari.|<b>candidat</b> från latin <b>candidatus</b> 'vitklädd': i Rom bar den som sökte ett ämbete en vit toga.
+dossier de candidature|ansökningshandlingar|m|Envoyez votre [dossier de candidature] avant le 15 janvier.|Skicka in dina ansökningshandlingar före den 15 januari.|<b>candidat</b> 'sökande' från latin <b>candidatus</b> 'vitklädd': i Rom bar den som sökte ett ämbete en vit toga.
 enregistrement|inspelning|m|Joignez un [enregistrement] vidéo à votre dossier.|Bifoga en videoinspelning till din ansökan.|Verbet är enregistrer 'spela in'. Många konservatorier gör ett första urval med inspelningar.
-date limite|sista ansökningsdag|f|La [date limite] d'inscription est le 1er février.|Sista dag för anmälan är den 1 februari.|Ordagrant 'gränsdatum'. Plural: des dates limites.
-inscription|anmälan, inskrivning|f|L'[inscription] au concours se fait en ligne.|Anmälan till antagningsprovet görs på nätet.|Latin <b>inscriptio</b>. Jämför inskription.
+date limite|sista ansökningsdag|f|La [date limite] d'inscription est le 1er février.|Sista dag för anmälan är den 1 februari.|Ordagrant 'gränsdatum'. Plural: des dates limites.|<b>date</b> datum · <b>limite</b> gräns → "gränsdatum"
+inscription|anmälan, inskrivning|f|L'[inscription] au concours se fait en ligne.|Anmälan till antagningsprovet görs på nätet.|Latin <b>inscriptio</b> 'inskrift'. Jämför inskription.
 s'inscrire|anmäla sig, skriva in sig||Tu dois [t'inscrire] avant vendredi.|Du måste anmäla dig före fredag.|Böjs som écrire: je m'inscris, je me suis inscrit(e).
-épreuve|prov, delprov|f|La première [épreuve] est un morceau imposé.|Första delprovet är ett obligatoriskt stycke.|Av <b>éprouver</b> 'pröva', från latin <b>probare</b>. Jämför prova.
+épreuve|prov, delprov|f|La première [épreuve] est un morceau imposé.|Första delprovet är ett obligatoriskt stycke.|Av <b>éprouver</b> 'pröva', från latin <b>probare</b> 'pröva'. Jämför prova.
 morceau imposé|obligatoriskt stycke|m|Le [morceau imposé] est une étude de Chopin.|Det obligatoriska stycket är en etyd av Chopin.|<b>imposer</b> 'ålägga'. Motsatsen är un morceau libre, ett fritt valt stycke.
 niveau|nivå|m|Le [niveau] des candidats est très élevé.|De sökandes nivå är mycket hög.|Plural: niveaux. Avoir un bon niveau = vara duktig.
 professeur principal|klassföreståndare; huvudlärare|m|Mon [professeur principal] m'a aidé à préparer le concours.|Min huvudlärare hjälpte mig att förbereda antagningsprovet.|I skolan betyder det klassföreståndare. På konservatoriet säger man oftare mon professeur d'instrument.
 classe de violon|violinklass|f|Elle espère entrer dans la [classe de violon] de Mme Martin.|Hon hoppas komma in i Mme Martins violinklass.|På konservatoriet tillhör man en lärares klass, och man söker ofta till en viss lärare.
-être admis, -e|bli antagen||Elle [a été admise] au conservatoire de Lyon.|Hon har kommit in på konservatoriet i Lyon.|Latin <b>admittere</b> 'släppa in'. Jämför engelskans admission.
+être admis, -e|bli antagen||Elle [a été admise] au conservatoire de Lyon.|Hon har kommit in på konservatoriet i Lyon.|Latin <b>admittere</b> 'släppa in'. Jämför engelskans admission 'antagning'.
 bourse|stipendium|f|Il a obtenu une [bourse] pour étudier à Paris.|Han fick ett stipendium för att studera i Paris.|Latin <b>bursa</b> 'läderpung'. Betyder också 'börs', jämför svenskans <b>börs</b>.
 diplôme|examen, examensbevis|m|Elle a obtenu son [diplôme] avec mention très bien.|Hon tog examen med högsta betyg.|Grekiska <b>diploma</b> 'dubbelvikt papper'. Obs: un examen är ett prov, inte en examen.
 lettre de recommandation|rekommendationsbrev|f|Ma professeure m'a écrit une [lettre de recommandation].|Min lärare skrev ett rekommendationsbrev åt mig.|Av <b>recommander</b> 'rekommendera'.
 entretien|intervju, samtal|m|Après l'audition, il y a un [entretien] avec le jury.|Efter provspelningen blir det ett samtal med juryn.|Av <b>entretenir</b> 'underhålla ett samtal'. Un entretien d'embauche = en anställningsintervju.
 master class|mästarkurs|f|J'ai suivi une [master class] avec une grande violoniste.|Jag gick en mästarkurs för en stor violinist.|Lånat från engelskan. Skrivs också masterclass.
-monter sur scène|gå upp på scenen||Juste avant de [monter sur scène], je respire profondément.|Precis innan jag går upp på scenen andas jag djupt.|<b>scène</b> från grekiska <b>skēnē</b> 'tält, scenbyggnad'.
+monter sur scène|gå upp på scenen||Juste avant de [monter sur scène], je respire profondément.|Precis innan jag går upp på scenen andas jag djupt.|<b>scène</b> 'scen' från grekiska <b>skēnē</b> 'tält, scenbyggnad'.
 trac|rampfeber, nervositet|m|J'ai toujours le [trac] avant un concert.|Jag har alltid rampfeber före en konsert.|Vardagligt men mycket vanligt: avoir le trac = ha rampfeber. Ursprunget är osäkert.
 public|publik|m|Le [public] a adoré le concert.|Publiken älskade konserten.|Latin <b>publicus</b> 'folkets'. Obs: le public är singular fast det handlar om många.
 applaudir|applådera||Le public [applaudit] pendant cinq minutes.|Publiken applåderar i fem minuter.|Latin <b>applaudere</b> 'klappa'. Böjs som finir: nous applaudissons.
 applaudissements|applåder|mpl|Elle salue sous les [applaudissements].|Hon bugar under applåderna.|Används nästan alltid i plural.
 saluer|buga (för publiken); hälsa||À la fin, les musiciens [saluent] le public.|I slutet bugar musikerna för publiken.|Latin <b>salutare</b> 'hälsa'. Jämför salut 'hej'.
 bis|extranummer|m|Le pianiste a joué deux [bis] après le concert.|Pianisten spelade två extranummer efter konserten.|Latin <b>bis</b> 'två gånger'. Publiken ropar « Bis ! » för att få höra mer.
-se produire|uppträda||Le quatuor [se produit] souvent dans des églises.|Kvartetten uppträder ofta i kyrkor.|Betyder också 'hända, inträffa'. Böjs som conduire: il s'est produit.
-j'ai commencé le violon à l'âge de sept ans|jag började spela fiol när jag var sju år||Je viens de Suède et [j'ai commencé le violon à l'âge de sept ans].|Jag kommer från Sverige och började spela fiol när jag var sju år.|Commencer + instrument med bestämd artikel: commencer le piano, commencer la flûte.
-je prends des cours depuis dix ans|jag har tagit lektioner i tio år||[Je prends des cours depuis dix ans] avec la même professeure.|Jag har tagit lektioner för samma lärare i tio år.|Obs: presens med depuis där svenskan har perfekt (jag har tagit).
-ce qui me plaît, c'est|det jag gillar är||Dans ce conservatoire, [ce qui me plaît, c'est] la place de la musique de chambre.|Det jag gillar med det här konservatoriet är kammarmusikens stora plats.|Konstruktionen ce qui ..., c'est ... lyfter fram det som kommer efter c'est.
+se produire|uppträda||Le quatuor [se produit] souvent dans des églises.|Kvartetten uppträder ofta i kyrkor.|Betyder också 'hända, inträffa'. Böjs som conduire: il s'est produit.|<b>se</b> sig · <b>produire</b> visa fram → "visa fram sig"
+j'ai commencé le violon à l'âge de sept ans|jag började spela fiol när jag var sju år||Je viens de Suède et [j'ai commencé le violon à l'âge de sept ans].|Jag kommer från Sverige och började spela fiol när jag var sju år.|Commencer + instrument med bestämd artikel: commencer le piano, commencer la flûte.|<b>j'ai commencé</b> jag har börjat · <b>le violon</b> fiolen · <b>à l'âge de</b> vid åldern av · <b>sept ans</b> sju år → "jag har börjat fiolen vid åldern av sju år"
+je prends des cours depuis dix ans|jag har tagit lektioner i tio år||[Je prends des cours depuis dix ans] avec la même professeure.|Jag har tagit lektioner för samma lärare i tio år.|Obs: presens med depuis där svenskan har perfekt (jag har tagit).|<b>je prends</b> jag tar · <b>des cours</b> lektioner · <b>depuis</b> sedan · <b>dix ans</b> tio år → "jag tar lektioner sedan tio år"
+ce qui me plaît, c'est|det jag gillar är||Dans ce conservatoire, [ce qui me plaît, c'est] la place de la musique de chambre.|Det jag gillar med det här konservatoriet är kammarmusikens stora plats.|Konstruktionen ce qui ..., c'est ... lyfter fram det som kommer efter c'est.|<b>ce qui</b> det som · <b>me plaît</b> behagar mig · <b>c'est</b> det är → "det som behagar mig, det är"
 j'ai choisi ce morceau parce que|jag har valt det här stycket eftersom||[J'ai choisi ce morceau parce que] j'aime ses couleurs.|Jag har valt det här stycket eftersom jag gillar dess klangfärger.|Parce que blir parce qu' framför vokal: parce qu'il est beau.
 mon objectif est de|mitt mål är att||[Mon objectif est de] devenir musicienne d'orchestre.|Mitt mål är att bli orkestermusiker.|Efter de kommer verbet i infinitiv.
-j'aimerais me perfectionner en|jag skulle vilja fördjupa mig i||Ici, [j'aimerais me perfectionner en] musique de chambre.|Här skulle jag vilja fördjupa mig i kammarmusik.|J'aimerais är konditionalis och låter artigare än je veux.
+j'aimerais me perfectionner en|jag skulle vilja fördjupa mig i||Ici, [j'aimerais me perfectionner en] musique de chambre.|Här skulle jag vilja fördjupa mig i kammarmusik.|J'aimerais är konditionalis och låter artigare än je veux.|<b>j'aimerais</b> jag skulle tycka om · <b>me perfectionner</b> att fullända mig · <b>en</b> i → "jag skulle tycka om att fullända mig i"
 pourriez-vous répéter la question|skulle ni kunna upprepa frågan||Pardon, [pourriez-vous répéter la question] ?|Förlåt, skulle ni kunna upprepa frågan?|Här betyder répéter 'upprepa'. Pourriez-vous är konditionalis av pouvoir och låter artigt.
-je travaille mon instrument trois heures par jour|jag övar på mitt instrument tre timmar om dagen||En général, [je travaille mon instrument trois heures par jour].|Oftast övar jag tre timmar om dagen på mitt instrument.|Travailler + instrument betyder 'öva': travailler son piano, travailler un morceau.
-j'ai participé à plusieurs concours|jag har deltagit i flera tävlingar||L'an dernier, [j'ai participé à plusieurs concours] en Suède.|Förra året deltog jag i flera tävlingar i Sverige.|Participer à = delta i. Latin <b>participare</b>, av <b>pars</b> 'del'.
+je travaille mon instrument trois heures par jour|jag övar på mitt instrument tre timmar om dagen||En général, [je travaille mon instrument trois heures par jour].|Oftast övar jag tre timmar om dagen på mitt instrument.|Travailler + instrument betyder 'öva': travailler son piano, travailler un morceau.|<b>je travaille</b> jag arbetar · <b>mon instrument</b> mitt instrument · <b>trois heures</b> tre timmar · <b>par jour</b> per dag → "jag arbetar mitt instrument tre timmar per dag"
+j'ai participé à plusieurs concours|jag har deltagit i flera tävlingar||L'an dernier, [j'ai participé à plusieurs concours] en Suède.|Förra året deltog jag i flera tävlingar i Sverige.|Participer à = delta i. Latin <b>participare</b> 'delta', av <b>pars</b> 'del'.
 mon compositeur préféré est|min favoritkompositör är||[Mon compositeur préféré est] Debussy, pour ses couleurs.|Min favoritkompositör är Debussy, för hans klangfärger.|Préféré står efter substantivet: mon morceau préféré.
 je suis un peu stressé, -e|jag är lite nervös||Excusez-moi, [je suis un peu stressé].|Ursäkta, jag är lite nervös.|Mer formellt: je suis un peu nerveux (nerveuse). Juryn är van vid nervösa sökande.

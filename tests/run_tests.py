@@ -153,6 +153,21 @@ setTimeout(async()=>{ try{
     schedule(x,true,50,now); const k2=x.s===5&&x.due===50+INT[5];
     schedule(x,false,60,now); ok("schema: upp ett steg vid rätt, kan-ord tillbaka till steg 2 vid fel", k&&k2&&x.s===2&&!x.mp&&x.lapses===1, JSON.stringify(x));
     const y={s:1,due:0}; schedule(y,false,5,now); ok("schema: fel på steg 1 ger steg 0", y.s===0&&y.due===6); }
+  { const x={s:0,due:0}; schedule(x,true,7,now); const a=x.s===1&&x.due===10&&!x.dd;
+    schedule(x,true,10,now); const b=x.s===2&&x.dd===dayStart(now)+3*DAY&&!isDue(x);
+    schedule(x,true,11,now); const c=x.s===3&&x.dd===dayStart(now)+7*DAY; schedule(x,true,12,now); const d=x.s===4&&x.dd===dayStart(now)+20*DAY;
+    x.dd=Date.now()-1; ok("schema: nästa pass, 3 pass, sedan 3, 7 och 20 dagar", a&&b&&c&&d&&isDue(x), JSON.stringify(x)); }
+  { const ch=ktChapters(), c0=ch[0]; ok("kapitelprov: kapitlen samlar alla avsnitt", ch.length>=3&&!ch.some(c=>/x$/.test(c.id))&&c0.words.length>=4, ch.map(c=>c.id).join(","));
+    const before=JSON.stringify(S.w[c0.words[0].id]||null);
+    exClick("ktest"); q('[data-ktm="mc"]').click(); q('[data-kt="'+c0.id+'"]').click();
+    ok("kapitelprov: alla ord en gång", sess&&sess.total===c0.words.length&&sess.queue.every(x=>x.noRetry), sess&&sess.total);
+    document.dispatchEvent(new KeyboardEvent("keydown",{key:"1",bubbles:true})); const ans=sess.answered, i0=sess.done;
+    document.dispatchEvent(new KeyboardEvent("keydown",{key:"Enter",bubbles:true}));
+    ok("tangentbord: siffra svarar, Enter går vidare", ans&&!sess.answered&&i0===1);
+    { let g=0; while(sess&&g++<400) answerRight(); } const r=S.kt[c0.id];
+    ok("kapitelprov: resultatet sparas och schemat rörs inte", r&&r.n===c0.words.length&&JSON.stringify(S.w[c0.words[0].id]||null)===before, JSON.stringify(r));
+    ok("kapitelprov: öva på missade", r.miss.length?!!q("#ktdrill"):q("#app").textContent.includes("Inga fel"));
+    startKtest(c0.id,[c0.words[1].id]); ok("kapitelprov: övning på bara de missade, med omtag", sess.total===1&&!sess.cur.noRetry); quitSession(); }
   ok("högst MAXDUE repetitioner per pass", dueWords().length<=MAXDUE);
   { const w=byId["rire"]; S.w["rire"].lapses=3; document.body.insertAdjacentHTML("beforeend","<div id=mt>"+studyCard(w)+"</div>");
     const f=q("#mt [data-memo]"); ok("svårt ord: fält för minnesregel", !!f); f.querySelector("input").value="Rire låter som ridikyl";

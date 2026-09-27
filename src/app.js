@@ -35,9 +35,9 @@ function parseWords(raw){
   raw.trim().split("\n").forEach(l=>{
     l=l.trim(); if(!l) return;
     if(l[0]==="#"){const [id,name,src]=l.slice(1).split("|"); sec={id,name,book:src==="bok"}; sections.push(sec); return;}
-    const [t,sv,g,exRaw,exSv,ety]=l.split("|");
+    const [t,sv,g,exRaw,exSv,ety,lit]=l.split("|");
     if(seen.has(t)) return; seen.add(t);
-    words.push({id:t,sec:sec.id,t,sv,g:g||"",exT:exRaw.replace(/[\[\]]/g,""),exSv,ety,gap:findGap(t,exRaw)});
+    words.push({id:t,sec:sec.id,t,sv,g:g||"",exT:exRaw.replace(/[\[\]]/g,""),exSv,ety,lit:lit||"",gap:findGap(t,exRaw)});
   });
   return {sections,words};
 }
@@ -52,9 +52,14 @@ const verbGames=()=>!L.verbs?[]:(L.verbs.games||[{id:"all",name:"Verbträning",s
 const ruleFor=c=>((L.verbs.notes||{})[c.tense+"|"+c.verb])||c.rule;
 
 /* ---------- Sparat läge ---------- */
-/* Pass till nästa repetition, per steg. Steg 0–3 = lär sig, steg 4 och uppåt = kan. Ord som man kan
-   kommer tillbaka med allt längre mellanrum, så att de inte glöms bort. */
+/* Nästa repetition, per steg. Steg 0–3 = lär sig, steg 4 och uppåt = kan.
+   Steg 0 och 1 räknas i pass (nästa pass, om 3 pass), från steg 2 i dagar (3, 7, 20, 45, 90 dagar) och sparas i x.dd.
+   x.due (pass) räknas fortfarande ut, för ord från före dagschemat och för statistiken. */
 const INT=[1,3,7,20,40,80,160];
+const DAYS=[0,0,3,7,20,45,90];
+const DAY=864e5;
+const dayStart=ts=>{const d=new Date(ts); d.setHours(0,0,0,0); return d.getTime();};
+const isDue=x=>x.dd?x.dd<=Date.now():x.due<=S.pass;
 const MASTER=4, MAXDUE=40;   // MAXDUE = högst så många repetitioner per pass, resten väntar till nästa
 let S;
 function loadState(){
@@ -159,13 +164,14 @@ const isMastered=w=>ws(w.id)&&ws(w.id).s>=4;
 // "Igelord" (leech i Anki): ord som man har glömt många gånger och som behöver extra stöd
 const isLeech=w=>{const x=w&&ws(w.id); if(!x) return false; const err=(x.mcW||0)+(x.tyW||0);
   return (x.lapses||0)>=3||(err>=5&&err/(err+(x.mcR||0)+(x.tyR||0))>.4);};
-const dueWords=()=>WORDS.filter(w=>{const x=ws(w.id);return x&&x.due<=S.pass})
+const dueWords=()=>WORDS.filter(w=>{const x=ws(w.id);return x&&isDue(x)})
   .sort((a,b)=>(ws(a.id).s>=MASTER)-(ws(b.id).s>=MASTER)||ws(a.id).due-ws(b.id).due).slice(0,MAXDUE);
 /* Rätt: ett steg upp. Fel: ett steg ned, och ett ord man kunde går tillbaka till steg 2. */
 function schedule(x,ok,p,now){
   if(ok){ x.s=Math.min(x.s+1,INT.length-1); if(x.s>=MASTER&&!x.mp){x.mp=p;x.md=now;} }
   else { x.s=x.s>=MASTER?2:Math.max(0,x.s-1); delete x.mp; delete x.md; x.lapses=(x.lapses||0)+1; }
   x.due=p+INT[x.s];
+  if(DAYS[x.s]) x.dd=dayStart(now)+DAYS[x.s]*DAY; else delete x.dd;
 }
 
 /* ---------- Uppläsning ---------- */
@@ -519,11 +525,12 @@ function renderLearn(){
       <div><p class="ex-t" ${lang()}>${esc(w.exT)}</p><p class="ex-sv">${esc(w.exSv)}</p></div>
       <button class="speak sm" id="sp-e" aria-label="Läs upp meningen">${SPK}</button>
     </div>
-    <p class="ety"><span class="label">${L.etyLabel||"Ursprung"}</span><br>${w.ety}</p>
+    ${litHtml(w)}<p class="ety"><span class="label">${L.etyLabel||"Ursprung"}</span><br>${w.ety}</p>
     <div class="navrow">
       <button class="btn ghost" id="prev" ${sess.i?"":"disabled"}>Tillbaka</button>
       <button class="btn" id="next">${sess.i===n-1?"Till quizet":"Nästa ord"}</button>
     </div>
+    <p class="kbd-hint">Tangentbord: mellanslag eller Enter = nästa, ← = tillbaka. I quizet: siffrorna väljer svar och Enter går vidare.</p>
   </section>
   <button class="quit" id="quit">Avbryt passet</button>`;
   $("#sp-w").onclick=()=>speak(w.t); $("#sp-e").onclick=()=>speak(w.exT);
@@ -695,9 +702,23 @@ async function sendReport(btn){
   btn.textContent="Tack! Frågan är rapporterad och blir kontrollerad.";
 }
 document.addEventListener("click",e=>{const b=e.target.closest&&e.target.closest("[data-report]"); if(b) sendReport(b);});
+/* Tangentbordet: siffror väljer svar i flerval (och Fel/Nästan/Rätt vid självbedömning), mellanslag eller
+   Enter går till nästa ord när man lär sig nya ord, pilarna bläddrar, och Enter går alltid vidare efter ett svar. */
 document.addEventListener("keydown",e=>{
-  if(!sess||!sess.cur||!sess.d||sess.cur.t!=="mc"||e.target.matches("input,textarea"))return;
-  const n=+e.key; if(n>=1&&n<=sess.d.opts.length&&!sess.answered) answerMC(n-1);
+  const tg=e.target&&e.target.matches?e.target:document.body;
+  if(e.ctrlKey||e.metaKey||e.altKey||tg.matches("input,textarea,select")) return;
+  const click=sel=>{const b=app.querySelector(sel); if(b&&!b.disabled&&!b.hidden&&b.offsetParent!==null){e.preventDefault(); b.click(); return true;} return false;};
+  const n=+e.key;
+  if(n>=1&&n<=9){
+    if(sess&&sess.cur&&sess.d&&sess.cur.t==="mc"&&!sess.answered&&n<=sess.d.opts.length){ e.preventDefault(); answerMC(n-1); return; }
+    const gr=app.querySelectorAll("[data-gr],[data-sh]"); if(gr[n-1]){ e.preventDefault(); gr[n-1].click(); return; }
+    return;
+  }
+  const onBtn=tg.matches("button,a,summary");
+  if(e.key===" "&&!onBtn){ click("#next"); return; }
+  if(e.key==="ArrowRight"){ click("#next"); return; }
+  if(e.key==="ArrowLeft"){ click("#prev"); return; }
+  if(e.key==="Enter"&&!onBtn) click("#next")||click("#nx")||(sess&&sess.answered&&click("#submit"))||click("#exnext");
 });
 
 /* Frågorna för varje övning: MC = flerval, TYPE = skriva */
@@ -715,8 +736,10 @@ const studyCard=w=>`<div class="recap">
     <button type="button" class="speak sm" data-say="${esc(w.t)}" aria-label="Läs upp ordet">${SPK}</button></div>
   <div class="example"><div><p class="ex-t" ${lang()}>${esc(w.exT)}</p><p class="ex-sv">${esc(w.exSv)}</p></div>
     <button type="button" class="speak sm" data-say="${esc(w.exT)}" aria-label="Läs upp meningen">${SPK}</button></div>
-  ${w.ety?`<p class="ety"><span class="label">${L.etyLabel||"Ursprung"}</span><br>${w.ety}</p>`:""}
+  ${litHtml(w)}${w.ety?`<p class="ety"><span class="label">${L.etyLabel||"Ursprung"}</span><br>${w.ety}</p>`:""}
   ${memoBox(w)}</div>`;
+// Fraser och talesätt: vad varje ord betyder ordagrant (sjunde fältet i words.txt), t.ex. "avoir – ha · le cafard – kackerlackan"
+function litHtml(w){ return w.lit?`<p class="ety lit"><span class="label">Ordagrant</span><br>${w.lit}</p>`:""; }
 // Egen minnesregel: visas om den finns, och kan skrivas för ord man ofta glömmer
 function memoBox(w){
   const x=ws(w.id)||{}, m=x.memo||"";
@@ -830,15 +853,17 @@ function startCloze(){
   beginQuiz("cloze",shuffle(q),{againFn:["cloze"],label:"Meningar"});
 }
 /* ---------- Ordlista ---------- */
-/* Prognos: hur många ord som ska repeteras i de kommande passen */
+/* Prognos: hur många ord som ska repeteras i nästa pass och de kommande dagarna */
 function statsForecast(){
-  const due=p=>WORDS.filter(w=>{const x=ws(w.id); return x&&(p===S.pass?x.due<=p:x.due===p);}).length;
-  const rows=[0,1,2,3,4,5,6].map(i=>({p:S.pass+i,n:due(S.pass+i)}));
-  if(!rows.some(r=>r.n)) return "";
+  const t0=dayStart(Date.now()), xs=WORDS.map(w=>ws(w.id)).filter(Boolean);
+  const rows=[{l:"nästa",n:xs.filter(isDue).length}];
+  for(let i=1;i<=6;i++) rows.push({l:i===1?"i morgon":"+"+i+" d",n:xs.filter(x=>x.dd&&x.dd>=t0+i*DAY&&x.dd<t0+(i+1)*DAY).length});
+  const soon=xs.filter(x=>!x.dd&&x.due>S.pass).length;
+  if(!rows.some(r=>r.n)&&!soon) return "";
   const max=Math.max(...rows.map(r=>r.n),1);
   return `<section class="panel"><h2>Kommande repetitioner</h2>
-    <div class="fc">${rows.map((r,i)=>`<div class="fc-col"><span class="fc-n">${r.n}</span><span class="fc-bar" style="height:${Math.round(4+56*r.n/max)}px"></span><span class="fc-l">${i?"+"+i:"nästa"}</span></div>`).join("")}</div>
-    <p class="plan">Antal ord att repetera i nästa pass och i passen efter. Högst ${MAXDUE} repetitioner per pass, resten väntar till passet efter.</p></section>`;
+    <div class="fc">${rows.map(r=>`<div class="fc-col"><span class="fc-n">${r.n}</span><span class="fc-bar" style="height:${Math.round(4+56*r.n/max)}px"></span><span class="fc-l">${r.l}</span></div>`).join("")}</div>
+    <p class="plan">Nya ord kommer tillbaka nästa pass och sedan efter tre pass${soon?` (${soon} ord väntar på det)`:""}. Därefter efter 3, 7 och 20 dagar, och ord du kan efter 45 och 90 dagar. Högst ${MAXDUE} repetitioner per pass, resten väntar till passet efter.</p></section>`;
 }
 const courseName=()=>S&&S.gy25&&L.courseGy25?L.courseGy25:(L.course||L.name);
 function renderList(){
@@ -996,7 +1021,7 @@ function renderStats(){
     </div>
     ${P>=1?`<div class="legend"><span><i class="sw" style="background:var(--c1)"></i>Påbörjade ord</span><span><i class="sw" style="background:var(--c2)"></i>Inlärda ord</span></div>
     ${lineChart(labels,[{name:"Påbörjade",short:"påbörjade",color:"var(--c1)",values:started},{name:"Inlärda",short:"inlärda",color:"var(--c2)",values:done}],Math.max(...started,1))}
-    <p class="foot">Ett ord räknas som inlärt när du har klarat det i fyra repetitioner i rad (efter 1, 3, 7 och 20 pass). Därför dröjer den gröna linjen.</p>`:""}
+    <p class="foot">Ett ord räknas som inlärt när du har klarat det i fyra repetitioner i rad (nästa pass, efter 3 pass, efter 3 dagar och efter 7 dagar). Därför dröjer den gröna linjen.</p>`:""}
   </section>
 
   <section class="panel">
