@@ -4,6 +4,20 @@ Allt som har diskuterats men inte är byggt ännu. Prioritet: **P1** = gör snar
 Det som är byggt flyttas till [`KLART.md`](KLART.md), med referens till punkten här och till commit.
 Underlag finns i `docs/ovningsforslag.md` (franska), `docs/ovningsforslag-tyska.md` (tyska) och `docs/ideer-fran-andra-projekt.md`.
 
+## Nästa att bygga (beslutat 2026-09-27)
+
+- **P1: Kursen Tyska 4** för Emma, som ett steg före Tyska 5 på vägen mot B2. Den ska ha egen mapp `languages/de4/` och en egen `storageKey` som aldrig ändras (till exempel `glosor-de4-v1`), så att framstegen i Tyska 5 inte påverkas. Nivå ungefär B1 (Gy25: Moderna språk – fortsättning, nivå 2). Den behöver:
+  - en ordlista i kapitel efter kursplanen för steg 4, där teman och ord inte överlappar Tyska 5 för mycket
+  - grammatik på B1-nivå: Perfekt/Präteritum, bisatser, relativsatser, adjektivändelser, Konjunktiv II som artighet och passiv i presens (motorn och frågeformatet i `src/grammar.js` kan återanvändas)
+  - texter, fraser och videor som för Tyska 5
+  - `upcoming.json` ska uppdateras
+  - kursväljaren visar redan flera kurser, men här blir det två kurser i samma språk. Kontrollera därför att Topplistan (`board/<uid>.langs`) och `LANG_KEY` hanterar olika kurskoder (`de4` och `de`).
+  - Emma ska kunna gå vidare till Tyska 5 när Tyska 4 är klar
+- **P1: Feedback från eleverna.** En knapp "Tyck till" i appen där Oscar och Emma skriver vad de vill ha, vad som är krångligt eller vad som är fel. Förslag:
+  - Meddelandet sparas i `feedback/<uid>-<tid>` i artefaktens db, på samma sätt som rapporterna om fel facit i `reports/`. Då kan Claude läsa det med ArtifactData och föra in det i den här backloggen, och föräldern kan få en sammanfattning.
+  - Det går inte att skicka mejl direkt från appen, eftersom mailto-länkar inte fungerar för alla som använder artefakter. Om föräldern också vill ha mejl kan Claude skicka en sammanfattning med Gmail-kopplingen när backloggen uppdateras, men bara efter att föräldern har bett om det.
+  - Visa eleven vad som hände med förslaget ("Tillagt i backloggen", "Byggt i version X"), till exempel genom att Claude skriver ett svar i samma dokument.
+
 ## Språkprov (det verkliga målet)
 
 Båda eleverna ska söka musikutbildning utomlands. Oscar behöver visa **B1 i franska** (DELF B1) för Frankrike, och Emma behöver visa **B2 i tyska** för Tyskland. Musikhögskolorna godtar oftast Goethe-Zertifikat B2, telc B2 eller TestDaF, men kontrollera vad just deras skolor kräver. Betyg i kursen spelar mindre roll.
