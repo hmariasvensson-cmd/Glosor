@@ -52,6 +52,7 @@ LANGUAGES.fr = {
       {id: "comp", name: "Jämförelser", sub: "plus grand que, meilleur, mieux, le plus"},
       {id: "neg", name: "Negation och ordföljd", sub: "Je ne l'ai jamais vu.", secs: ["k3"]},
       {id: "quest", name: "Frågor", sub: "Où habites-tu ? Est-ce que tu viens ?"},
+      {id: "bok", name: "Bokens övningar", sub: "Övningarna ur Escalade: översätt, fyll i, rätt eller fel", secs: ["k3", "k4"]},
       {id: "err", name: "Hitta felet", sub: "En mening har ett fel. Vilket ord?"}
     ],
     rules: {
@@ -67,6 +68,7 @@ LANGUAGES.fr = {
       "q-inv": "Fråga med inversion", "q-est-ce": "Fråga med est-ce que",
       "poss-sing": "Possessiva: en ägare", "poss-plur": "Possessiva: flera ägare", "poss-voc": "mon/ton/son framför vokal",
       "adjf-fem": "Adjektiv i femininum", "adjf-plur": "Adjektiv i plural", "adjf-irr": "Oregelbundna adjektiv",
+      "bok-oversatt": "Översätt (boken)", "bok-lucka": "Fyll i (boken)", "bok-vf": "Rätt eller fel (boken)",
       "maj-nom": "Stor bokstav: invånare", "maj-adj": "Liten bokstav: adjektiv", "maj-langue": "Liten bokstav: språk"
     }
   },

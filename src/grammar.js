@@ -157,8 +157,9 @@ const gramSay=x=>x.type==="rw"?x.a:x.type==="err"?x.rightText:gfill(x.p,x.p.gaps
 MC.gram=c=>{const x=gramById(c.ref);
   if(x.type==="err") return{tab:"Hitta felet",head:gramHead(x),ask:"Ett ord i meningen är fel. Vilket?",opts:x.opts,
     explain:gramExplain(x),say:gramSay(x),sayOnAnswer:true};
-  if(x.type==="rw") return{tab:"Grammatik",head:`<p class="q-prompt" style="font-size:1.2rem" ${lang()}>${esc(x.q)}</p>`,
-    ask:`Vilken mening är rätt ihopsatt med <b ${lang()}>${esc(x.cue)}</b>?`,
+  // rw med "ask" (t.ex. bokens översättningsövningar): q är en svensk mening och ask instruktionen
+  if(x.type==="rw") return{tab:"Grammatik",head:`<p class="q-prompt" style="font-size:1.2rem" ${x.ask?"":lang()}>${esc(x.q)}</p>`,
+    ask:x.ask?esc(x.ask):`Vilken mening är rätt ihopsatt med <b ${lang()}>${esc(x.cue)}</b>?`,
     opts:shuffle([{label:x.a,ok:true,lang:true},...x.alt.map(a=>({label:a,ok:false,lang:true}))]),explain:gramExplain(x),say:x.a,sayOnAnswer:true};
   return{tab:"Grammatik",head:gramHead(x),ask:x.type==="adj"?"Vilken form har adjektivet?":"Vad passar i luckan?",
     opts:shuffle([{label:x.ans,ok:true,lang:true},...shuffle(x.alt).slice(0,4).map(a=>({label:a,ok:false,lang:true}))]),
@@ -167,8 +168,8 @@ MC.gram=c=>{const x=gramById(c.ref);
 TYPE.gram=c=>{const x=gramById(c.ref);
   if(x.type==="rw"){ const o=orderTokens(x.a); o.words=o.words.map(w=>w.replace(/,$/,""));
     return{tab:"Grammatik",render:renderTiles,o,w:{exSv:x.sv},
-      prompt:`<p class="q-prompt" style="font-size:1.2rem" ${lang()}>${esc(x.q)}</p><p class="ex-sv">${esc(x.sv)}</p>`,
-      ask:`Sätt ihop meningarna med <b ${lang()}>${esc(x.cue)}</b>.`,
+      prompt:x.ask?`<p class="q-prompt" style="font-size:1.2rem">${esc(x.q)}</p>`:`<p class="q-prompt" style="font-size:1.2rem" ${lang()}>${esc(x.q)}</p><p class="ex-sv">${esc(x.sv)}</p>`,
+      ask:x.ask?esc(x.ask):`Sätt ihop meningarna med <b ${lang()}>${esc(x.cue)}</b>.`,
       accept:[x.a,...(x.acc||[])].map(s=>tok(s).join(" ")),answer:esc(x.a),explain:gramExplain(x),say:x.a}; }
   const acc=[x.ans,...(x.acc||[])].map(gnorm), multi=x.type!=="adj"&&x.p.gaps.length>1;
   return{tab:"Grammatik",head:gramHead(x),

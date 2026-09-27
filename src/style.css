@@ -326,3 +326,9 @@ body.has-tray{padding-bottom:calc(45vh + 30px)}
 .opt.on{border-color:var(--navy);background:var(--m-soft)}
 .extask{background:var(--surface-2);border-radius:12px;padding:12px 14px;font-family:var(--serif);line-height:1.55}
 b.pass{color:var(--ok)} b.fail{color:var(--pink)}
+/* Övningsgrupper på startsidan */
+.grpgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:8px}
+.grp{display:flex;flex-direction:column;gap:4px;text-align:left;border:1.5px solid var(--line);background:var(--surface-2);border-radius:12px;padding:14px}
+.grp:hover{border-color:var(--navy)}
+.grp b{font-weight:600}
+.grp small{color:var(--ink-2);font-size:.84rem;flex:1}

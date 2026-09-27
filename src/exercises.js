@@ -706,37 +706,49 @@ function finishGeneric(){
 }
 
 /* ---------- Startsidans panel med alla övningar ---------- */
-function gamesPanel(){
+// Övningarna i grupper. Startsidan visar en knapp per grupp, och varje grupp öppnas på en egen sida.
+function exGroups(){
   const c=C(), n=clozePool().length, lname=L.name.toLowerCase();
   const g=(id,title,sub,dis)=>`<button class="game" data-ex="${id}" ${dis?"disabled":""}><span><b>${title}</b><small>${sub}</small></span><span class="go" aria-hidden="true">›</span></button>`;
   const groups=[
-    ["Ord och meningar",[
+    ["words","Ord och meningar","Meningar, diktamen, översättning och ordföljd",[
       g("cloze","Meningar",n<4?"Lär dig några ord i quizet först.":"Fyll i luckan i en mening.",n<4),
       g("dict","Diktamen","Lyssna på en mening och skriv den."),
       g("trans","Översätt meningar",`Från svenska till ${lname}, hela meningar.`),
       g("order","Ordföljd","Bygg meningen i rätt ordning."),
       L.genderGame&&g("gen",Object.values(L.genderGame).join(", "),"Rätt artikel och plural för substantiven.")]],
-    ["Lyssna och läsa",[
+    ["texts","Lyssna och läsa","Hörförståelse, texter och kultur",[
       c.listening&&g("lq","Hörförståelse","Lyssna på en dialog och svara på frågor."),
       c.reading&&g("rq","Läsa texter","Tryck på alla ord du inte kan och spara dem i Mina ord."),
       c.culture&&g("culture","Kultur","Kort fakta, en fråga och en jämförelse med Sverige.")]],
-    ["Grammatik",[
+    ["gram","Grammatik","Verb, grammatikövningar och berättelser",[
       ...verbGames().map(v=>`<button class="game" data-g="${v.id}"><span><b>Verb: ${esc(v.name)}</b><small>${esc(v.sub||"")}</small></span><span class="go" aria-hidden="true">›</span></button>`),
       hasGrammar()&&g("gram","Grammatikövningar",GR().topics.slice(0,4).map(t=>t.name.toLowerCase()).join(", ")+" …"),
       c.stories&&g("story","Berättelser","Välj rätt tempus och bindeord i en berättelse.")]],
-    ...(hasExam()?[["Språkprov",[g("exam",`Provträning: ${esc(EX().name)}`,"Uppgifter i provets format, med klocka, poäng och provsimulering.")]]]:[]),
-    ["Tala och skriva",[
+    ...(hasExam()?[["exam","Språkprov",`${esc(EX().name)}: provuppgifter och simulering`,[g("exam",`Provträning: ${esc(EX().name)}`,"Uppgifter i provets format, med klocka, poäng och provsimulering.")]]]:[]),
+    ["speak","Tala och skriva","Samtalsfraser, skugga och skrivuppgifter",[
       c.phrases&&g("phr","Samtalsfraser","Vad man säger när man inte förstår, vill säga sin åsikt …"),
       g("shadow","Skugga","Lyssna och säg meningen högt samtidigt, för uttal och rytm."),
       c.prompts&&g("write","Skriv en text",L.selfStudy?"Skrivuppgift med checklista och exempeltext.":"Skrivuppgift med checklista, att skicka till läraren.")]]
   ];
-  return `<section class="panel"><h2>Fler övningar</h2>${groups.map(([t,items])=>{items=items.filter(Boolean);
-    return items.length?`<div class="exgroup"><span class="label">${t}</span><div class="games">${items.join("")}</div></div>`:"";}).join("")}</section>`;
+  return groups.map(([id,t,sub,items])=>({id,t,sub,items:items.filter(Boolean)})).filter(g=>g.items.length);
+}
+function gamesPanel(){
+  return `<section class="panel"><h2>Fler övningar</h2><div class="grpgrid">${exGroups().map(g=>`<button class="grp" data-grp="${g.id}">
+    <b>${g.t}</b><small>${g.sub}</small><span class="label">${g.items.length} ${g.items.length===1?"övning":"övningar"}</span></button>`).join("")}</div></section>`;
+}
+function openExGroup(id){
+  const g=exGroups().find(x=>x.id===id); if(!g) return renderStart();
+  stopSpeech(); $("#tabs").hidden=true; sess=null;
+  app.innerHTML=`<section class="panel"><h2>${g.t}</h2><div class="games">${g.items.join("")}</div></section>
+    <button class="quit" id="quit">Tillbaka</button>`;
+  wireGames(); $("#quit").onclick=renderStart; window.scrollTo(0,0);
 }
 function wireGames(){
   const F={exam:openExam,cloze:startCloze,dict:startDict,trans:startTrans,order:startOrder,lq:openListening,rq:openReading,culture:openCulture,story:openStories,phr:startPhrases,write:openWriting,gram:openGrammar,gen:startGender,shadow:startShadow};
   app.querySelectorAll("[data-ex]").forEach(b=>b.onclick=()=>F[b.dataset.ex]());
   app.querySelectorAll("[data-g]").forEach(b=>b.onclick=()=>startVerbs(b.dataset.g));
+  app.querySelectorAll("[data-grp]").forEach(b=>b.onclick=()=>openExGroup(b.dataset.grp));
 }
 
 /* ---------- Statistik för övningarna ---------- */

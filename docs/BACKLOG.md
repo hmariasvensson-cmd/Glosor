@@ -6,6 +6,7 @@ Underlag finns i `docs/ovningsforslag.md` (franska), `docs/ovningsforslag-tyska.
 
 ## Tyck till från eleverna
 
+- **P1: Tydligare gruppering av övningarna** (önskemål från eleven i Franska 3, 2026-09-27): "Det finns ju massor med olika övningstyper, kan det gruppas in tydligare så att man inte skrollar så mycket utan att man kan trycka in sig på t.ex. läsrelaterade saker osv." Förslag: startsidan visar bara några stora knappar (Glosor, Läsa och lyssna, Grammatik, Tala och skriva, Språkprov), och varje knapp öppnar en egen sida med övningarna i gruppen.
 - **Löpande:** läs nya meddelanden i `feedback/` (ArtifactData, `status: "ny"`), för in önskemålen här, och sätt `status` och `reply` i dokumentet så att eleven ser vad som hände (se CLAUDE.md).
 
 ## Språkprov (det verkliga målet)
