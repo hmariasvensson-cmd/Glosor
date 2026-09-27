@@ -2,6 +2,17 @@
 
 Punkter som har flyttats från [`BACKLOG.md`](BACKLOG.md) när de byggdes. **Referens** anger backloggens rubrik och prioritet. **Commit** anger var ändringen finns i git. **Publicerat** anger versionen av artefakten på https://claude.ai/artifact/YBQv8j4qXQQLuPwLAWt5mP.
 
+## 2026-09-28 (publicerat som version 21)
+
+| Referens | Vad som byggdes | Commit |
+|---|---|---|
+| Rapport från eleven i tyska: *luckan med Beziehung* | I luckövningen räknas svaret som rätt även när eleven skriver artikeln en gång till ("die Beziehung" när artikeln redan står före luckan). | `df9a802` |
+| Kurser · P2 *Grammatikområden från bokens minigrammatik* (första delen) | Sju nya områden i franskan, med regelsidor som hänvisar till bokens sidor: futur (35 frågor), conditionnel (25), imparfait eller passé composé (40), plus-que-parfait och venir de (25), betonade pronomen (25), imperativ (25) och reflexiva verb (20). Franskan har nu 20 områden och 907 grammatikfrågor. Tempusfrågor där felet kan försvaras i talspråk visas inte i "Hitta felet". | `df9a802` |
+| Kurser · P1 *Franska 3 som mall* | `docs/kursmall.md`: hur ett kapitel i Escalade är uppbyggt (utan bokens text), en checklista för kurser, nivåer steg 1–7 enligt Skolverket och en jämförelse per kurs. Utfyllt enligt mallen: Tyska 4 (17 skrivuppgifter, 2 lästexter, 2 berättelser, 1 kulturtext), Tyska 5 (15 skrivuppgifter i Goethe B2-format, 3 kulturtexter, 4 hörtexter som inte är dialoger, 4 lästexter av nya typer), Italienska 1 (3 lästexter, 4 berättelser, 3 kulturtexter, 10 skrivuppgifter, grammatik för subjektspronomen och questo/quello) och Italienska 2 (2 lästexter, 3 berättelser, 4 kulturtexter, 11 skrivuppgifter). | `df9a802` |
+| Kursmallen · *kapitelmål* | Ny innehållstyp `mal.json`: 3–5 mål per kapitel ("Jag kan …") i alla fem kurser, sammanlagt 220 mål. De visas på startsidan för kapitlet man är på och kan bockas av (`S.mal`). | `df9a802` |
+| Kursmallen · *uttal* | Ny övning "Uttal: lyssna och välj" (`uttal.json`): ord som låter nästan lika, 33 set i fem kurser. Ett ord läses upp och man väljer vilket det var. | `df9a802` |
+| Kursmallen · *nivåer* | Nivåerna följer Skolverkets ungefärliga GERS-nivåer: Franska 3 A2 (provmålet B1 står kvar), Tyska 4 A2 → B1, Italienska 2 A1 → A2, Franska 4 A2 → B1, Tyska 6 B1 → B2. | `df9a802` |
+
 ## 2026-09-27, del 12 (publicerat som version 20)
 
 | Referens | Vad som byggdes | Commit |

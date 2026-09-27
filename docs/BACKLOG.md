@@ -32,7 +32,7 @@ Båda eleverna ska söka musikutbildning utomlands. Eleven i franska behöver vi
 ## Tyska 4 (B1)
 
 - **P2: Granskning av innehållet i Tyska 4** (551 ord, 270 grammatikfrågor och alla texter är AI-skrivna). Stickprov av en tysktalande, särskilt siffrorna i kulturtexterna.
-- **P3: Lästext till kapitel 1 och 6 och kulturtext till kapitel 7** saknas. Kapitlen har hörtexter i stället.
+- **P3: Tyska 4: hörtexter och fler ord** (kursmallen, paket 12): 7 hörtexter och cirka 160 nya ord, eftersom 558 ord är lågt för steg 4. Provträning för Goethe B1 (paket 19).
 
 ## Tyska (Tyska 5, mot B2)
 
@@ -51,8 +51,12 @@ Emma pluggar på egen hand, utan kurs, lärare och lärobok. Tyskan bygger därf
 
 ## Kurser och nivåer
 
-- **P1: Franska 3 som mall för de andra kurserna.** Gå igenom det som har kommit in från *Escalade* (kapitelteman, texttyper, övningstyper, glosrutor, grammatikmomentet per kapitel, utvärderingar och bokens minigrammatik) och gör en lista över vad en kurs behöver. Jämför sedan varje kurs (Tyska 4, Tyska 5, Italienska 1 och 2) med listan och fyll i det som saknas, anpassat till kursens nivå: A1–A2 för italienskan, B1 för Tyska 4, mot B2 för Tyska 5. Skriv resultatet i `docs/kursmall.md`, utan att återge bokens texter (repot är publikt).
-- **P2: Grammatikområden från bokens minigrammatik som appen saknar** (för DELF B1): futur simple och futur proche, imparfait eller passé composé, betonade pronomen, conditionnel, oregelbundna verb. Därefter imperativ, prepositioner för tid och plats, reflexiva verb, plus-que-parfait, venir de och être en train de, räkneord och klockan. Minigrammatiken s. 200–201 och sidorna före s. 196 saknas.
+- **P2: Resten av kursmallen** (`docs/kursmall.md`, avsnitt 4). Byggt: paket 1–8, 10 och 13–16 samt nivåerna. Kvar:
+  - Litteratur, sång eller dikt i varje kurs (paket 11): 2–4 uppgifter per kurs.
+  - Tre grammatikområden mot B2 i Tyska 5 (paket 18): genitiv och n-deklination, particip som adjektiv, tvådelade bindeord.
+  - Paket 9 (grammatiken kopplad till kapitel) gör bara nytta i kurser med lärobok, så det väntar.
+  - Lyssna igenom uttalsövningarna med en riktig röst. Vissa par kan låta lika i vissa webbläsare, till exempel é/è i franska och enkelt/dubbelt s i italienska. Sällsynta ord bör bytas ut.
+- **P3: Fler grammatikområden ur bokens minigrammatik:** prepositioner för tid och plats, räkneord och klockan, oregelbundna verb i presens (verbspelen täcker en del), demonstrativa pronomen, quel/lequel, tout, gérondif och passiv form. Minigrammatiken s. 200–201 och sidorna före s. 194 saknas.
 
 - **P1: Fler sidor ur Escalade.** Inlagda: s. 8–69, 98–131, 148–153, 182–191 och minigrammatiken s. 196–199 och 202–237 (se `languages/fr/book/sidor.json`). Saknas: s. 70–97, 132–147, 154–181, 192–195 och 200–201. Fota också om s. 101, där högerkanten saknas. Kapitelnumret för s. 148–153 (antaget kap 10) och s. 182–191 och titeln på kap 6 behöver bekräftas.
 - **P2: Säkerhetskopiera bokmappen** till ett privat repo på GitHub (`languages/fr/book/` är redan ett eget lokalt git-repo). Kräver att föräldern godkänner att ett privat repo skapas.
