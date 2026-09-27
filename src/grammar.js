@@ -102,7 +102,11 @@ const ruleWeak=r=>{const x=ruleStat(r); return x.n?1-x.r/x.n:.5;};
 // Frågor man inte har sett eller missade senast kommer först, och regler man ofta missar väger tyngre
 function bankIds(topic,k){
   S.gi=S.gi||{};
-  return Object.values(gramBank()).filter(x=>!topic||x.topic===topic)
+  // Bokens övningar: när eleven läser ett kapitel tas bara det kapitlets övningar (fältet kap kommer från mappen book/kapNN)
+  const ch=S.chapter&&+((chapterKey(S.chapter).match(/\d+/)||[])[0]);
+  const hasCh=topic==="bok"&&ch&&Object.values(gramBank()).some(y=>y.topic==="bok"&&y.kap===ch);
+  const inCh=x=>!hasCh||x.kap===ch;
+  return Object.values(gramBank()).filter(x=>(!topic||x.topic===topic)&&inCh(x))
     .map(x=>{const st=S.gi[x.id]||{s:0,last:0}; return {id:x.id,key:st.s-ruleWeak(x.rule)+Math.random()*.8,last:st.last};})
     .sort((a,b)=>a.key-b.key||a.last-b.last).slice(0,k).map(x=>x.id);
 }

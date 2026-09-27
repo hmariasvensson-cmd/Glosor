@@ -14,6 +14,8 @@ I appen väljer eleven under **Boken → Vi läser nu** vilket kapitel klassen l
 | Ordlistor, bokens texter och övningar, foton | `languages/<kod>/book/kapNN/` (`words.txt`, `content/*.json`, `foton/`) och `book/sidor.json` | **Nej.** Mappen `book/` står i `.gitignore`. |
 | Egna övningar och texter på bokens tema | `languages/<kod>/words.txt` och `languages/<kod>/content/` | Ja |
 
+Sångtexter, dikter och längre romanutdrag ur boken skrivs inte av alls. De blir uppgifter med bokens frågor (se `book/SPEC-bok.md`).
+
 Bokens texter, ordlistor och övningar är upphovsrättsskyddade och får inte ligga i det publika repot. `build.py` läser `book/` om mappen finns och bygger in den i appen, som bara de inbjudna ser.
 
 Mappen `book/` finns bara på den här datorn. Den är ett eget lokalt git-repo (versionshanterad, men inte säkerhetskopierad). Koppla den till ett **privat** repo på GitHub (till exempel `glosor-bok`) för säkerhetskopiering.

@@ -52,7 +52,7 @@ Emma pluggar på egen hand, utan kurs, lärare och lärobok. Tyskan bygger därf
 
 ## Kurser och nivåer
 
-- **P1: Nästa kapitel i Escalade** (kap 5, från s. 68): fota sidorna och för in dem enligt `docs/BOK.md`. Sidorna 47, 53 och 59 saknades bland bilderna till kap 3–4 och kan fotas i efterhand.
+- **P1: Fler sidor ur Escalade.** Inlagda: s. 8–25, 38–69, 98–113 och 128–131 (se `languages/fr/book/sidor.json`). Saknas: s. 26–37, 70–97, 114–127 och från 132. Fota också om s. 101, där högerkanten saknas. Kapitelnummer och titel för s. 128–131 (antaget kap 8) och titeln på kap 6 behöver bekräftas.
 - **P2: Säkerhetskopiera bokmappen** till ett privat repo på GitHub (`languages/fr/book/` är redan ett eget lokalt git-repo). Kräver att föräldern godkänner att ett privat repo skapas.
 - **P3: Välja bok per elev**, om flera elever med olika böcker ska använda samma kurs.
 - **P2: Franska 4 och Tyska 6** som egna kurser (egen mapp i `languages/`, egen `storageKey`). De visas redan som "kommer" i kursväljaren (`languages/upcoming.json`).

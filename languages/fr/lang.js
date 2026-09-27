@@ -39,20 +39,20 @@ LANGUAGES.fr = {
   grammar: {
     topics: [
       // secs: bokkapitel där området tas upp. När eleven läser det kapitlet kommer området först.
-      {id: "pron", name: "Pronomen: le, lui, y, en", sub: "Je le vois. Je lui parle. J'y vais. J'en veux.", secs: ["k4"]},
+      {id: "pron", name: "Pronomen: le, lui, y, en", sub: "Je le vois. Je lui parle. J'y vais. J'en veux.", secs: ["k4", "k7"]},
       {id: "poss", name: "Possessiva pronomen", sub: "mon, ma, mes, son, sa, ses, notre, leur", secs: ["k4"]},
       {id: "maj", name: "Stor eller liten bokstav", sub: "les Suédois, un écrivain suédois, le suédois", secs: ["k4"]},
       {id: "adjf", name: "Adjektivens böjning", sub: "sportif – sportive, heureux – heureuse, beau – belle", secs: ["k3"]},
-      {id: "pc", name: "Passé composé: être eller avoir?", sub: "Elle est partie. Nous nous sommes levés."},
+      {id: "pc", name: "Passé composé: être eller avoir?", sub: "Elle est partie. Nous nous sommes levés.", secs: ["k2", "k5"]},
       {id: "art", name: "Du, de la, des och de", sub: "Je mange du pain. Je n'ai pas de frères.", secs: ["k3"]},
-      {id: "prep", name: "Prepositioner: en, au, à", sub: "en France, au Portugal, à Paris, au cinéma", secs: ["k4"]},
+      {id: "prep", name: "Prepositioner: en, au, à", sub: "en France, au Portugal, à Paris, au cinéma", secs: ["k4", "k7"]},
       {id: "rel", name: "Qui, que, où, dont", sub: "Le garçon qui parle, le film que j'ai vu"},
       {id: "subj", name: "Subjonctif", sub: "Il faut que tu viennes. Je pense que c'est vrai."},
       {id: "si", name: "Si-satser", sub: "Si j'avais le temps, je viendrais."},
       {id: "comp", name: "Jämförelser", sub: "plus grand que, meilleur, mieux, le plus"},
-      {id: "neg", name: "Negation och ordföljd", sub: "Je ne l'ai jamais vu.", secs: ["k3"]},
+      {id: "neg", name: "Negation och ordföljd", sub: "Je ne l'ai jamais vu.", secs: ["k3", "k5"]},
       {id: "quest", name: "Frågor", sub: "Où habites-tu ? Est-ce que tu viens ?"},
-      {id: "bok", name: "Bokens övningar", sub: "Övningarna ur Escalade: översätt, fyll i, rätt eller fel", secs: ["k3", "k4"]},
+      {id: "bok", name: "Bokens övningar", sub: "Övningarna ur Escalade: översätt, fyll i, rätt eller fel", secs: ["k1", "k2", "k3", "k4", "k5", "k6", "k7", "k8"]},
       {id: "err", name: "Hitta felet", sub: "En mening har ett fel. Vilket ord?"}
     ],
     rules: {

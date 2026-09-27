@@ -173,6 +173,11 @@ def main():
             except json.JSONDecodeError as e:
                 all_errors.append(f"{f.relative_to(ROOT)}: {e}")
                 continue
+            kap = re.match(r"kap(\d+)$", f.parent.parent.name)   # book/kapNN/content/*.json: kapitlet följer med
+            if kap and isinstance(data, list):
+                for x in data:
+                    if isinstance(x, dict):
+                        x.setdefault("kap", int(kap.group(1)))
             if f.stem.startswith("grammar-"):   # grammatikbankerna slås ihop till en lista
                 all_errors += check_grammar(data, f"languages/{code}/content/{f.name}")
                 content.setdefault("grammar", []).extend(data)
