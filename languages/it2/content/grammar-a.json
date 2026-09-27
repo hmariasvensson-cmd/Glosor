@@ -1,0 +1,3761 @@
+[
+ {
+  "id": "ripasso-001",
+  "topic": "ripasso",
+  "rule": "pres",
+  "q": "Di solito Marco [va] a scuola in autobus.",
+  "alt": [
+   "vado",
+   "andiamo",
+   "vanno"
+  ],
+  "why": "Andare är oregelbundet: lui/lei va. Vado är jag-form, andiamo vi-form och vanno de-form.",
+  "sv": "Marco brukar åka buss till skolan."
+ },
+ {
+  "id": "ripasso-002",
+  "topic": "ripasso",
+  "rule": "pres",
+  "q": "Noi [facciamo] i compiti dopo cena.",
+  "alt": [
+   "fanno",
+   "fate",
+   "fa"
+  ],
+  "why": "Fare är oregelbundet: noi facciamo. Fanno är loro, fate är voi och fa är lui/lei.",
+  "sv": "Vi gör läxorna efter middagen."
+ },
+ {
+  "id": "ripasso-003",
+  "topic": "ripasso",
+  "rule": "pres",
+  "q": "I miei amici [escono] ogni sabato sera.",
+  "alt": [
+   "esce",
+   "usciamo",
+   "uscite"
+  ],
+  "why": "Uscire är oregelbundet: loro escono. Subjektet är plural (mina vänner), så inte esce.",
+  "sv": "Mina vänner går ut varje lördagskväll."
+ },
+ {
+  "id": "ripasso-004",
+  "topic": "ripasso",
+  "rule": "pres",
+  "q": "Tu [capisci] bene l'inglese, Marco?",
+  "alt": [
+   "capisce",
+   "capiamo",
+   "capiscono"
+  ],
+  "why": "Capire får -isc- i presens: tu capisci. Capisce är lui/lei, capiamo noi och capiscono loro.",
+  "sv": "Förstår du engelska bra, Marco?"
+ },
+ {
+  "id": "ripasso-005",
+  "topic": "ripasso",
+  "rule": "pres",
+  "q": "Io [bevo] sempre un caffè a colazione.",
+  "alt": [
+   "beve",
+   "bevi",
+   "beviamo"
+  ],
+  "why": "Bere böjs med stammen bev-: io bevo. De andra formerna hör till andra personer.",
+  "sv": "Jag dricker alltid en kaffe till frukost."
+ },
+ {
+  "id": "ripasso-006",
+  "topic": "ripasso",
+  "rule": "pres",
+  "q": "Voi [venite] alla festa di Giulia stasera?",
+  "alt": [
+   "vengono",
+   "veniamo",
+   "viene"
+  ],
+  "why": "Venire är oregelbundet: voi venite. Vengono är loro, veniamo noi och viene lui/lei.",
+  "sv": "Kommer ni på Giulias fest i kväll?"
+ },
+ {
+  "id": "ripasso-007",
+  "topic": "ripasso",
+  "rule": "pres",
+  "q": "Anna, che cosa [dici]? Non ti sento.",
+  "alt": [
+   "dice",
+   "dite",
+   "dicono"
+  ],
+  "why": "Man pratar med Anna (tu), och dire blir tu dici. Dice är lui/lei, dite voi och dicono loro.",
+  "sv": "Anna, vad säger du? Jag hör dig inte."
+ },
+ {
+  "id": "ripasso-008",
+  "topic": "ripasso",
+  "rule": "art",
+  "q": "Dov'è [lo] zaino di Luca?",
+  "alt": [
+   "il",
+   "la",
+   "gli"
+  ],
+  "why": "Maskulina ord som börjar på z eller s + konsonant får lo i singular. Gli är plural och la femininum.",
+  "sv": "Var är Lucas ryggsäck?"
+ },
+ {
+  "id": "ripasso-009",
+  "topic": "ripasso",
+  "rule": "art",
+  "q": "[Gli] studenti aspettano davanti alla scuola.",
+  "alt": [
+   "I",
+   "Le",
+   "Lo"
+  ],
+  "why": "Studente börjar på s + konsonant, så pluralartikeln är gli (inte i). Lo är singular och le femininum plural.",
+  "sv": "Eleverna väntar framför skolan."
+ },
+ {
+  "id": "ripasso-010",
+  "topic": "ripasso",
+  "rule": "art",
+  "q": "Mia sorella ha [un']amica molto simpatica.",
+  "alt": [
+   "un",
+   "uno",
+   "gli"
+  ],
+  "why": "Amica är femininum och börjar på vokal: una blir un'. Un och uno är maskulinum, gli är plural.",
+  "sv": "Min syster har en väldigt trevlig väninna."
+ },
+ {
+  "id": "ripasso-011",
+  "topic": "ripasso",
+  "rule": "art",
+  "q": "Stasera mangiamo [gli] spaghetti con le vongole.",
+  "alt": [
+   "i",
+   "lo",
+   "le"
+  ],
+  "why": "Spaghetti är maskulinum plural och börjar på s + konsonant, alltså gli. Lo är singular och le femininum.",
+  "sv": "I kväll äter vi spaghetti med musslor."
+ },
+ {
+  "id": "ripasso-012",
+  "topic": "ripasso",
+  "rule": "art",
+  "q": "[L']estate in Sicilia è molto calda.",
+  "alt": [
+   "Il",
+   "Lo",
+   "Gli"
+  ],
+  "why": "Estate är femininum och börjar på vokal, så la blir l'. Il och lo är maskulinum, gli plural.",
+  "sv": "Sommaren på Sicilien är väldigt varm."
+ },
+ {
+  "id": "ripasso-013",
+  "topic": "ripasso",
+  "rule": "art",
+  "q": "Nella mia classe c'è [uno] studente spagnolo.",
+  "alt": [
+   "un",
+   "una",
+   "un'"
+  ],
+  "why": "Studente är maskulinum och börjar på s + konsonant, så obestämd artikel är uno. Una och un' är femininum.",
+  "sv": "I min klass finns en spansk elev."
+ },
+ {
+  "id": "ripasso-014",
+  "topic": "ripasso",
+  "rule": "art",
+  "q": "Mi piacciono molto [le] canzoni di Laura Pausini.",
+  "alt": [
+   "la",
+   "gli",
+   "i"
+  ],
+  "why": "Canzone är femininum, plural le canzoni. La är singular, gli och i är maskulinum plural.",
+  "sv": "Jag gillar Laura Pausinis låtar väldigt mycket."
+ },
+ {
+  "id": "ripasso-015",
+  "topic": "ripasso",
+  "rule": "prep-art",
+  "q": "Stasera andiamo [al] cinema con Paolo.",
+  "alt": [
+   "allo",
+   "alla",
+   "ai"
+  ],
+  "why": "A + il = al. Cinema är maskulinum singular och börjar på konsonant, så inte allo (s + konsonant, z) eller alla (femininum).",
+  "sv": "I kväll går vi på bio med Paolo."
+ },
+ {
+  "id": "ripasso-016",
+  "topic": "ripasso",
+  "rule": "prep-art",
+  "q": "Il libro è [sul] tavolo in cucina.",
+  "alt": [
+   "sullo",
+   "sulla",
+   "sui"
+  ],
+  "why": "Su + il = sul. Tavolo är maskulinum singular. Sullo används före s + konsonant och z, sulla före femininum, sui i plural.",
+  "sv": "Boken ligger på bordet i köket."
+ },
+ {
+  "id": "ripasso-017",
+  "topic": "ripasso",
+  "rule": "prep-art",
+  "q": "Mio padre torna [dal] lavoro alle sei.",
+  "alt": [
+   "dallo",
+   "dalla",
+   "dai"
+  ],
+  "why": "Da + il = dal. Lavoro är maskulinum singular med vanlig konsonant, så inte dallo eller dalla.",
+  "sv": "Min pappa kommer hem från jobbet klockan sex."
+ },
+ {
+  "id": "ripasso-018",
+  "topic": "ripasso",
+  "rule": "prep-art",
+  "q": "Le chiavi sono [nello] zaino di Sara.",
+  "alt": [
+   "nel",
+   "nella",
+   "negli"
+  ],
+  "why": "In + lo = nello. Zaino börjar på z och tar lo, så det blir nello, inte nel.",
+  "sv": "Nycklarna ligger i Saras ryggsäck."
+ },
+ {
+  "id": "ripasso-019",
+  "topic": "ripasso",
+  "rule": "prep-art",
+  "q": "Il nome [della] professoressa è Rossi.",
+  "alt": [
+   "del",
+   "dello",
+   "delle"
+  ],
+  "why": "Di + la = della. Professoressa är femininum singular, så inte del/dello (maskulinum) eller delle (plural).",
+  "sv": "Lärarinnans namn är Rossi."
+ },
+ {
+  "id": "ripasso-020",
+  "topic": "ripasso",
+  "rule": "prep-art",
+  "q": "Le foto [degli] amici sono su Instagram.",
+  "alt": [
+   "dei",
+   "delle",
+   "dello"
+  ],
+  "why": "Di + gli = degli. Amici börjar på vokal och tar gli i plural, så inte dei.",
+  "sv": "Bilderna på vännerna finns på Instagram."
+ },
+ {
+  "id": "ripasso-021",
+  "topic": "ripasso",
+  "rule": "prep-art",
+  "q": "Ci sono tanti turisti [nelle] strade di Roma.",
+  "alt": [
+   "nei",
+   "negli",
+   "nella"
+  ],
+  "why": "In + le = nelle. Strade är femininum plural. Nei och negli är maskulinum, nella singular.",
+  "sv": "Det finns många turister på Roms gator."
+ },
+ {
+  "id": "passato-001",
+  "topic": "passato",
+  "rule": "pp-avere",
+  "q": "Ieri sera [ho] guardato un film con mia sorella.",
+  "alt": [
+   "sono",
+   "hai",
+   "è"
+  ],
+  "why": "Guardare tar avere i passato prossimo: ho guardato. Essere används med rörelse- och tillståndsverb.",
+  "sv": "I går kväll tittade jag på en film med min syster."
+ },
+ {
+  "id": "passato-002",
+  "topic": "passato",
+  "rule": "pp-essere",
+  "q": "Sabato scorso Marco [è] andato al mare.",
+  "alt": [
+   "ha",
+   "sono",
+   "hanno"
+  ],
+  "why": "Andare är ett rörelseverb och tar essere: è andato. Ha andato är fel.",
+  "sv": "I lördags åkte Marco till havet."
+ },
+ {
+  "id": "passato-003",
+  "topic": "passato",
+  "rule": "pp-avere",
+  "q": "Noi [abbiamo] mangiato una pizza buonissima.",
+  "alt": [
+   "siamo",
+   "hanno",
+   "avete"
+  ],
+  "why": "Mangiare tar avere, och subjektet är noi: abbiamo mangiato.",
+  "sv": "Vi åt en jättegod pizza."
+ },
+ {
+  "id": "passato-004",
+  "topic": "passato",
+  "rule": "pp-essere",
+  "q": "Le ragazze [sono] tornate a casa tardi.",
+  "alt": [
+   "hanno",
+   "è",
+   "siamo"
+  ],
+  "why": "Tornare tar essere. Subjektet le ragazze är plural, så det blir sono tornate.",
+  "sv": "Tjejerna kom hem sent."
+ },
+ {
+  "id": "passato-005",
+  "topic": "passato",
+  "rule": "pp-essere",
+  "q": "Il treno [è] partito alle nove in punto.",
+  "alt": [
+   "ha",
+   "sono",
+   "hanno"
+  ],
+  "why": "Partire tar essere: il treno è partito. Subjektet är singular, så inte sono.",
+  "sv": "Tåget avgick prick klockan nio."
+ },
+ {
+  "id": "passato-006",
+  "topic": "passato",
+  "rule": "pp-irr",
+  "q": "Chi ha [fatto] questa torta? È buonissima!",
+  "alt": [
+   "faciuto",
+   "fare",
+   "fato"
+  ],
+  "why": "Fare har oregelbundet particip: fatto (dubbelt t).",
+  "sv": "Vem har gjort den här tårtan? Den är jättegod!"
+ },
+ {
+  "id": "passato-007",
+  "topic": "passato",
+  "rule": "pp-irr",
+  "q": "Ho [letto] un libro molto interessante.",
+  "alt": [
+   "leggiuto",
+   "leggito",
+   "leggere"
+  ],
+  "why": "Leggere har oregelbundet particip: letto.",
+  "sv": "Jag har läst en väldigt intressant bok."
+ },
+ {
+  "id": "passato-008",
+  "topic": "passato",
+  "rule": "pp-irr",
+  "q": "Paolo non mi ha [detto] niente.",
+  "alt": [
+   "diceto",
+   "dicito",
+   "dire"
+  ],
+  "why": "Dire har oregelbundet particip: detto.",
+  "sv": "Paolo har inte sagt något till mig."
+ },
+ {
+  "id": "passato-009",
+  "topic": "passato",
+  "rule": "pp-irr",
+  "q": "Avete [visto] il nuovo film di Sorrentino?",
+  "alt": [
+   "vedito",
+   "visti",
+   "vedere"
+  ],
+  "why": "Vedere har particip visto. Med avere böjs participet inte efter subjektet, så inte visti.",
+  "sv": "Har ni sett Sorrentinos nya film?"
+ },
+ {
+  "id": "passato-010",
+  "topic": "passato",
+  "rule": "pp-irr",
+  "q": "Ieri ho [preso] il treno delle otto.",
+  "alt": [
+   "prenduto",
+   "prendito",
+   "presa"
+  ],
+  "why": "Prendere har oregelbundet particip: preso. Med avere får participet normalt ingen femininändelse.",
+  "sv": "I går tog jag tåget klockan åtta."
+ },
+ {
+  "id": "passato-011",
+  "topic": "passato",
+  "rule": "pp-irr",
+  "q": "Ho [scritto] una lettera a mia nonna.",
+  "alt": [
+   "scrivuto",
+   "scrivito",
+   "scritta"
+  ],
+  "why": "Scrivere har oregelbundet particip: scritto. Med avere böjs det inte efter objektet (una lettera).",
+  "sv": "Jag har skrivit ett brev till min mormor."
+ },
+ {
+  "id": "passato-012",
+  "topic": "passato",
+  "rule": "pp-irr",
+  "q": "Luca ha [messo] le chiavi nello zaino.",
+  "alt": [
+   "mettuto",
+   "mettito",
+   "messe"
+  ],
+  "why": "Mettere har oregelbundet particip: messo. Med avere och ett vanligt substantiv som objekt böjs det inte.",
+  "sv": "Luca har lagt nycklarna i ryggsäcken."
+ },
+ {
+  "id": "passato-013",
+  "topic": "passato",
+  "rule": "pp-accordo",
+  "q": "Giulia è [partita] per Milano stamattina.",
+  "alt": [
+   "partito",
+   "partiti",
+   "partite"
+  ],
+  "why": "Med essere böjs participet efter subjektet. Giulia är femininum singular: partita.",
+  "sv": "Giulia åkte till Milano i morse."
+ },
+ {
+  "id": "passato-014",
+  "topic": "passato",
+  "rule": "pp-accordo",
+  "q": "I miei nonni sono [nati] in Sardegna.",
+  "alt": [
+   "nato",
+   "nata",
+   "nate"
+  ],
+  "why": "Med essere böjs participet efter subjektet. I nonni är maskulinum plural: nati.",
+  "sv": "Mina morföräldrar föddes på Sardinien."
+ },
+ {
+  "id": "passato-015",
+  "topic": "passato",
+  "rule": "pp-accordo",
+  "q": "Mia madre è [stata] a Parigi due volte.",
+  "alt": [
+   "stato",
+   "stati",
+   "state"
+  ],
+  "why": "Essere tar essere som hjälpverb och participet stato böjs: mia madre är femininum singular, alltså stata.",
+  "sv": "Min mamma har varit i Paris två gånger."
+ },
+ {
+  "id": "passato-016",
+  "topic": "passato",
+  "rule": "pp-accordo",
+  "q": "Anna e Chiara sono [arrivate] in ritardo.",
+  "alt": [
+   "arrivato",
+   "arrivati",
+   "arrivata"
+  ],
+  "why": "Arrivare tar essere. Anna och Chiara är två kvinnor, femininum plural: arrivate.",
+  "sv": "Anna och Chiara kom för sent."
+ },
+ {
+  "id": "passato-017",
+  "topic": "passato",
+  "rule": "pp-accordo",
+  "q": "Ieri Lucia è [rimasta] a casa tutto il giorno.",
+  "alt": [
+   "rimasto",
+   "rimanuta",
+   "rimasti"
+  ],
+  "why": "Rimanere tar essere och har det oregelbundna participet rimasto. Lucia är femininum: rimasta.",
+  "sv": "I går stannade Lucia hemma hela dagen."
+ },
+ {
+  "id": "passato-018",
+  "topic": "passato",
+  "rule": "pp-rifl",
+  "q": "Stamattina Giorgio [si è] alzato alle sette.",
+  "alt": [
+   "si ha",
+   "ha",
+   "mi sono"
+  ],
+  "why": "Reflexiva verb tar alltid essere: si è alzato. Si ha och ha är fel hjälpverb, mi sono är jag-form.",
+  "sv": "I morse gick Giorgio upp klockan sju."
+ },
+ {
+  "id": "passato-019",
+  "topic": "passato",
+  "rule": "pp-rifl",
+  "q": "Sara, ti sei [divertita] alla festa?",
+  "alt": [
+   "divertito",
+   "divertiti",
+   "divertite"
+  ],
+  "why": "Reflexiva verb tar essere, och participet böjs efter subjektet. Man frågar Sara, alltså femininum singular.",
+  "sv": "Sara, hade du roligt på festen?"
+ },
+ {
+  "id": "passato-020",
+  "topic": "passato",
+  "rule": "pp-rifl",
+  "q": "Ieri sera noi [ci siamo] addormentati tardi.",
+  "alt": [
+   "ci abbiamo",
+   "si sono",
+   "siamo"
+  ],
+  "why": "Addormentarsi är reflexivt: noi ci siamo addormentati. Reflexiva verb tar essere, och pronomenet ci behövs.",
+  "sv": "I går kväll somnade vi sent."
+ },
+ {
+  "id": "passato-021",
+  "topic": "passato",
+  "rule": "pp-rifl",
+  "q": "Le mie amiche si sono [vestite] in fretta.",
+  "alt": [
+   "vestito",
+   "vestiti",
+   "vestita"
+  ],
+  "why": "Reflexiva verb tar essere, och participet böjs efter subjektet: le amiche är femininum plural, vestite.",
+  "sv": "Mina väninnor klädde på sig i all hast."
+ },
+ {
+  "id": "imperf-001",
+  "topic": "imperf",
+  "rule": "imp-forme",
+  "q": "Quando ero piccolo, io [abitavo] a Napoli.",
+  "alt": [
+   "abitava",
+   "abitavamo",
+   "abitavano"
+  ],
+  "why": "Imperfetto av -are: stam + -avo för io. Abitava är lui/lei, abitavamo noi och abitavano loro.",
+  "sv": "När jag var liten bodde jag i Neapel."
+ },
+ {
+  "id": "imperf-002",
+  "topic": "imperf",
+  "rule": "imp-forme",
+  "q": "Da bambina Giulia [era] molto timida.",
+  "alt": [
+   "eri",
+   "erano",
+   "ero"
+  ],
+  "why": "Essere är oregelbundet i imperfetto: ero, eri, era … Giulia är tredje person singular: era.",
+  "sv": "Som barn var Giulia väldigt blyg."
+ },
+ {
+  "id": "imperf-003",
+  "topic": "imperf",
+  "rule": "imp-forme",
+  "q": "I miei nonni [avevano] una casa in campagna.",
+  "alt": [
+   "aveva",
+   "avevamo",
+   "avevate"
+  ],
+  "why": "Avere i imperfetto: loro avevano. Subjektet i miei nonni är plural.",
+  "sv": "Mina morföräldrar hade ett hus på landet."
+ },
+ {
+  "id": "imperf-004",
+  "topic": "imperf",
+  "rule": "imp-forme",
+  "q": "Tu [andavi] a scuola a piedi da piccolo?",
+  "alt": [
+   "andava",
+   "andavo",
+   "andavate"
+  ],
+  "why": "Andare är regelbundet i imperfetto: tu andavi (-avi).",
+  "sv": "Gick du till fots till skolan när du var liten?"
+ },
+ {
+  "id": "imperf-005",
+  "topic": "imperf",
+  "rule": "imp-forme",
+  "q": "Noi [facevamo] sempre i compiti insieme.",
+  "alt": [
+   "facevano",
+   "facevate",
+   "fecevamo"
+  ],
+  "why": "Fare får stammen fac- i imperfetto: noi facevamo. Facevano är loro och facevate voi.",
+  "sv": "Vi gjorde alltid läxorna tillsammans."
+ },
+ {
+  "id": "imperf-006",
+  "topic": "imperf",
+  "rule": "imp-forme",
+  "q": "Voi [eravate] in classe insieme alle medie?",
+  "alt": [
+   "erano",
+   "eravamo",
+   "era"
+  ],
+  "why": "Essere i imperfetto: voi eravate. Erano är loro, eravamo noi och era lui/lei.",
+  "sv": "Gick ni i samma klass på högstadiet?"
+ },
+ {
+  "id": "imperf-007",
+  "topic": "imperf",
+  "rule": "imp-forme",
+  "q": "Mio padre [beveva] tre caffè al giorno.",
+  "alt": [
+   "bevava",
+   "bevevano",
+   "bevevo"
+  ],
+  "why": "Bere får stammen bev- och -ere-ändelser i imperfetto: beveva. Bevava finns inte.",
+  "sv": "Min pappa drack tre kaffe om dagen."
+ },
+ {
+  "id": "imperf-008",
+  "topic": "imperf",
+  "rule": "imp-forme",
+  "q": "La nonna ci [diceva] sempre di mangiare la verdura.",
+  "alt": [
+   "dicevano",
+   "dicava",
+   "dicevi"
+  ],
+  "why": "Dire får stammen dic- i imperfetto: lei diceva. Dicava finns inte, och nonna är singular.",
+  "sv": "Mormor sa alltid åt oss att äta grönsakerna."
+ },
+ {
+  "id": "imperf-009",
+  "topic": "imperf",
+  "rule": "imp-forme",
+  "q": "Da piccolo io [dormivo] con un orsacchiotto.",
+  "alt": [
+   "dormiva",
+   "dormavo",
+   "dormivamo"
+  ],
+  "why": "Dormire (-ire) får -ivo i imperfetto för io: dormivo. Dormavo finns inte.",
+  "sv": "När jag var liten sov jag med en teddybjörn."
+ },
+ {
+  "id": "imperf-010",
+  "topic": "imperf",
+  "rule": "imp-forme",
+  "q": "Da ragazzi loro [leggevano] molti fumetti.",
+  "alt": [
+   "leggeva",
+   "leggiavano",
+   "leggevamo"
+  ],
+  "why": "Leggere (-ere) får -evano för loro: leggevano.",
+  "sv": "Som tonåringar läste de många serietidningar."
+ },
+ {
+  "id": "imperf-011",
+  "topic": "imperf",
+  "rule": "imp-forme",
+  "q": "Da piccola mia sorella [aveva] i capelli lunghi.",
+  "alt": [
+   "avevi",
+   "avevano",
+   "avevamo"
+  ],
+  "why": "Avere i imperfetto: lei aveva. Mia sorella är tredje person singular.",
+  "sv": "När min syster var liten hade hon långt hår."
+ },
+ {
+  "id": "imperf-012",
+  "topic": "imperf",
+  "rule": "imp-uso",
+  "q": "Da piccolo, ogni estate [andavo] al mare con i nonni.",
+  "alt": [
+   "vado",
+   "andrò",
+   "andrei"
+  ],
+  "why": "Vanor i det förflutna (da piccolo, ogni estate) uttrycks med imperfetto. Presens, futuro och condizionale passar inte.",
+  "sv": "När jag var liten åkte jag till havet med mormor och morfar varje sommar."
+ },
+ {
+  "id": "imperf-013",
+  "topic": "imperf",
+  "rule": "imp-uso",
+  "q": "Quando avevo dieci anni, [giocavo] a tennis ogni sabato.",
+  "alt": [
+   "gioco",
+   "giocherò",
+   "giocherei"
+  ],
+  "why": "En vana i det förflutna (ogni sabato, när jag var tio) står i imperfetto.",
+  "sv": "När jag var tio år spelade jag tennis varje lördag."
+ },
+ {
+  "id": "imperf-014",
+  "topic": "imperf",
+  "rule": "imp-uso",
+  "q": "Ieri [faceva] molto freddo e nevicava.",
+  "alt": [
+   "fa",
+   "farà",
+   "farebbe"
+  ],
+  "why": "Väder och beskrivning i dåtid (ieri) står ofta i imperfetto, som nevicava. Presens och futuro passar inte med ieri.",
+  "sv": "I går var det väldigt kallt och det snöade."
+ },
+ {
+  "id": "imperf-015",
+  "topic": "imperf",
+  "rule": "imp-uso",
+  "q": "Nel 1990 in questa piazza [c'era] un cinema.",
+  "alt": [
+   "c'è",
+   "ci sarà",
+   "ci sarebbe"
+  ],
+  "why": "Beskrivning av hur något var förr: c'era (imperfetto av c'è). Med nel 1990 går inte presens eller futuro.",
+  "sv": "År 1990 fanns det en bio på det här torget."
+ },
+ {
+  "id": "imperf-016",
+  "topic": "imperf",
+  "rule": "imp-uso",
+  "q": "Da ragazza, mia madre [si alzava] sempre alle sei.",
+  "alt": [
+   "si alza",
+   "si alzerà",
+   "si alzerebbe"
+  ],
+  "why": "En vana förr (da ragazza, sempre) uttrycks med imperfetto: si alzava.",
+  "sv": "När min mamma var ung gick hon alltid upp klockan sex."
+ },
+ {
+  "id": "imperf-017",
+  "topic": "imperf",
+  "rule": "imp-uso",
+  "q": "Quando eravamo in vacanza, [mangiavamo] sempre il gelato.",
+  "alt": [
+   "mangiamo",
+   "mangeremo",
+   "mangeremmo"
+  ],
+  "why": "Något man brukade göra (sempre) under en tid i det förflutna står i imperfetto.",
+  "sv": "När vi var på semester åt vi alltid glass."
+ },
+ {
+  "id": "imperf-018",
+  "topic": "imperf",
+  "rule": "imp-uso",
+  "q": "Da piccolo mio fratello [aveva] i capelli biondi.",
+  "alt": [
+   "ha",
+   "avrà",
+   "avrebbe"
+  ],
+  "why": "Beskrivning av utseende förr (da piccolo) står i imperfetto: aveva.",
+  "sv": "När min bror var liten hade han blont hår."
+ },
+ {
+  "id": "imperf-019",
+  "topic": "imperf",
+  "rule": "imp-uso",
+  "q": "Una volta la gente non [aveva] il cellulare.",
+  "alt": [
+   "ha",
+   "avrà",
+   "avrebbe"
+  ],
+  "why": "Una volta betyder 'förr i tiden' här. Hur det var förr beskrivs med imperfetto.",
+  "sv": "Förr i tiden hade folk inga mobiltelefoner."
+ },
+ {
+  "id": "imperf-020",
+  "topic": "imperf",
+  "rule": "imp-uso",
+  "q": "Negli anni Ottanta i miei genitori [ascoltavano] molta musica disco.",
+  "alt": [
+   "ascoltano",
+   "ascolteranno",
+   "ascolterebbero"
+  ],
+  "why": "Vanor under en period förr (negli anni Ottanta) står i imperfetto.",
+  "sv": "På åttiotalet lyssnade mina föräldrar på mycket discomusik."
+ },
+ {
+  "id": "pp-imp-001",
+  "topic": "pp-imp",
+  "rule": "pp-o-imp",
+  "q": "Ieri mattina Sara [è uscita] di casa alle otto in punto.",
+  "alt": [
+   "usciva",
+   "esce",
+   "è uscito"
+  ],
+  "why": "En avslutad händelse vid en exakt tidpunkt (ieri, alle otto in punto) står i passato prossimo. Sara är femininum: è uscita.",
+  "sv": "I går morse gick Sara hemifrån prick klockan åtta."
+ },
+ {
+  "id": "pp-imp-002",
+  "topic": "pp-imp",
+  "rule": "pp-o-imp",
+  "q": "Mentre [leggevo] un libro, è arrivato Marco.",
+  "alt": [
+   "ho letto",
+   "leggo",
+   "leggerò"
+  ],
+  "why": "Mentre + imperfetto beskriver det som pågick när något annat hände (è arrivato).",
+  "sv": "Medan jag läste en bok kom Marco."
+ },
+ {
+  "id": "pp-imp-003",
+  "topic": "pp-imp",
+  "rule": "pp-o-imp",
+  "q": "Mentre guardavamo la TV, all'improvviso [ha squillato] il telefono.",
+  "alt": [
+   "squillava",
+   "squilla",
+   "squillerà"
+  ],
+  "why": "All'improvviso visar att det är en plötslig händelse som avbryter: passato prossimo. Det som pågick (guardavamo) står i imperfetto.",
+  "sv": "Medan vi tittade på tv ringde plötsligt telefonen."
+ },
+ {
+  "id": "pp-imp-004",
+  "topic": "pp-imp",
+  "rule": "pp-o-imp",
+  "q": "Da bambino Luca [andava] in piscina ogni domenica.",
+  "alt": [
+   "è andato",
+   "va",
+   "andrà"
+  ],
+  "why": "En vana i barndomen (da bambino, ogni domenica) står i imperfetto.",
+  "sv": "När Luca var liten gick han till simhallen varje söndag."
+ },
+ {
+  "id": "pp-imp-005",
+  "topic": "pp-imp",
+  "rule": "pp-o-imp",
+  "q": "L'anno scorso [siamo andati] in Grecia per due settimane.",
+  "alt": [
+   "andavamo",
+   "andiamo",
+   "andremo"
+  ],
+  "why": "En avslutad resa med tydlig början och slut (per due settimane) står i passato prossimo.",
+  "sv": "Förra året åkte vi till Grekland i två veckor."
+ },
+ {
+  "id": "pp-imp-006",
+  "topic": "pp-imp",
+  "rule": "pp-o-imp",
+  "q": "Quando [ero] piccola, avevo paura del buio.",
+  "alt": [
+   "sono stata",
+   "sono",
+   "sarò"
+  ],
+  "why": "Hur man var som barn (quando ero piccola) är en beskrivning och står i imperfetto.",
+  "sv": "När jag var liten var jag mörkrädd."
+ },
+ {
+  "id": "pp-imp-007",
+  "topic": "pp-imp",
+  "rule": "pp-o-imp",
+  "q": "Ieri [ho incontrato] Paolo davanti al cinema.",
+  "alt": [
+   "incontravo",
+   "incontro",
+   "incontrerò"
+  ],
+  "why": "En enstaka, avslutad händelse i går står i passato prossimo.",
+  "sv": "I går träffade jag Paolo utanför bion."
+ },
+ {
+  "id": "pp-imp-008",
+  "topic": "pp-imp",
+  "rule": "pp-o-imp",
+  "q": "Mentre Anna [cucinava], i bambini giocavano in giardino.",
+  "alt": [
+   "ha cucinato",
+   "cucina",
+   "cucinerà"
+  ],
+  "why": "Två saker som pågick samtidigt (mentre) i det förflutna står båda i imperfetto.",
+  "sv": "Medan Anna lagade mat lekte barnen i trädgården."
+ },
+ {
+  "id": "pp-imp-009",
+  "topic": "pp-imp",
+  "rule": "pp-o-imp",
+  "q": "Sabato scorso [ho dormito] fino a mezzogiorno.",
+  "alt": [
+   "dormivo",
+   "dormo",
+   "dormirò"
+  ],
+  "why": "En avslutad händelse en viss dag (sabato scorso) står i passato prossimo.",
+  "sv": "I lördags sov jag till tolv."
+ },
+ {
+  "id": "pp-imp-010",
+  "topic": "pp-imp",
+  "rule": "pp-o-imp",
+  "q": "Da piccoli, ogni estate [passavamo] un mese dai nonni.",
+  "alt": [
+   "abbiamo passato",
+   "passiamo",
+   "passeremo"
+  ],
+  "why": "Något man gjorde regelbundet som barn (da piccoli, ogni estate) står i imperfetto.",
+  "sv": "När vi var små tillbringade vi en månad hos mor- och farföräldrarna varje sommar."
+ },
+ {
+  "id": "pp-imp-011",
+  "topic": "pp-imp",
+  "rule": "pp-o-imp",
+  "q": "Faceva freddo, quindi [ho messo] il cappotto pesante.",
+  "alt": [
+   "mettevo",
+   "metto",
+   "metterò"
+  ],
+  "why": "Faceva freddo är bakgrunden (imperfetto). Det man gjorde en gång som följd (quindi) står i passato prossimo.",
+  "sv": "Det var kallt, så jag tog på mig den tjocka rocken."
+ },
+ {
+  "id": "pp-imp-012",
+  "topic": "pp-imp",
+  "rule": "pp-o-imp",
+  "q": "Il sole splendeva e il cielo [era] azzurro.",
+  "alt": [
+   "è stato",
+   "è",
+   "sarà"
+  ],
+  "why": "Beskrivning av vädret och miljön i en berättelse står i imperfetto, precis som splendeva.",
+  "sv": "Solen sken och himlen var blå."
+ },
+ {
+  "id": "pp-imp-013",
+  "topic": "pp-imp",
+  "rule": "pp-o-imp",
+  "q": "Improvvisamente Marco [è caduto] dalla bicicletta.",
+  "alt": [
+   "cadeva",
+   "cade",
+   "ha caduto"
+  ],
+  "why": "Improvvisamente visar en plötslig händelse: passato prossimo. Cadere tar essere, så ha caduto är fel.",
+  "sv": "Plötsligt ramlade Marco av cykeln."
+ },
+ {
+  "id": "pp-imp-014",
+  "topic": "pp-imp",
+  "rule": "pp-o-imp",
+  "q": "Quando mi hai chiamato, [ero] sotto la doccia.",
+  "alt": [
+   "sono stato",
+   "sono",
+   "sarò"
+  ],
+  "why": "Det som pågick när något hände (du ringde) står i imperfetto.",
+  "sv": "När du ringde stod jag i duschen."
+ },
+ {
+  "id": "pp-imp-015",
+  "topic": "pp-imp",
+  "rule": "pp-o-imp",
+  "q": "Tre anni fa [ho cambiato] scuola.",
+  "alt": [
+   "cambiavo",
+   "cambio",
+   "cambierò"
+  ],
+  "why": "En enstaka, avslutad händelse (tre anni fa) står i passato prossimo.",
+  "sv": "För tre år sedan bytte jag skola."
+ },
+ {
+  "id": "pp-imp-016",
+  "topic": "pp-imp",
+  "rule": "pp-o-imp",
+  "q": "Mio nonno [era] alto e aveva la barba bianca.",
+  "alt": [
+   "è stato",
+   "è",
+   "sarà"
+  ],
+  "why": "Beskrivning av en person i det förflutna står i imperfetto, precis som aveva.",
+  "sv": "Min morfar var lång och hade vitt skägg."
+ },
+ {
+  "id": "pp-imp-017",
+  "topic": "pp-imp",
+  "rule": "pp-o-imp",
+  "q": "Ieri alle dieci di sera [ero] ancora in ufficio.",
+  "alt": [
+   "sono stato",
+   "sono",
+   "sarò"
+  ],
+  "why": "Ancora visar ett tillstånd som pågick vid en tidpunkt i går: imperfetto.",
+  "sv": "I går klockan tio på kvällen var jag fortfarande på kontoret."
+ },
+ {
+  "id": "pp-imp-018",
+  "topic": "pp-imp",
+  "rule": "pp-o-imp",
+  "q": "Mentre camminavo per strada, [ho visto] un vecchio amico.",
+  "alt": [
+   "vedevo",
+   "vedo",
+   "vedrò"
+  ],
+  "why": "Det som pågick står i imperfetto (camminavo), händelsen som inträffade står i passato prossimo.",
+  "sv": "Medan jag gick på gatan såg jag en gammal vän."
+ },
+ {
+  "id": "pp-imp-019",
+  "topic": "pp-imp",
+  "rule": "pp-o-imp",
+  "q": "Per il mio compleanno i miei genitori mi [hanno regalato] una bici.",
+  "alt": [
+   "regalavano",
+   "regalano",
+   "regaleranno"
+  ],
+  "why": "En enstaka händelse vid ett tillfälle (min födelsedag) står i passato prossimo.",
+  "sv": "Till min födelsedag gav mina föräldrar mig en cykel."
+ },
+ {
+  "id": "pp-imp-020",
+  "topic": "pp-imp",
+  "rule": "pp-o-imp",
+  "q": "Da ragazza mia madre [suonava] il pianoforte tutti i giorni.",
+  "alt": [
+   "ha suonato",
+   "suona",
+   "suonerà"
+  ],
+  "why": "En vana under en period förr (da ragazza, tutti i giorni) står i imperfetto.",
+  "sv": "När min mamma var ung spelade hon piano varje dag."
+ },
+ {
+  "id": "pron-dir-001",
+  "topic": "pron-dir",
+  "rule": "dir-pres",
+  "q": "Conosci Marco? – Sì, [lo] conosco bene.",
+  "alt": [
+   "la",
+   "gli",
+   "li"
+  ],
+  "why": "Conoscere tar direkt objekt. Marco är maskulinum singular: lo. Gli är indirekt objekt.",
+  "sv": "Känner du Marco? – Ja, jag känner honom väl."
+ },
+ {
+  "id": "pron-dir-002",
+  "topic": "pron-dir",
+  "rule": "dir-pres",
+  "q": "Dov'è la mia giacca? Non [la] trovo.",
+  "alt": [
+   "lo",
+   "le",
+   "gli"
+  ],
+  "why": "Giacca är femininum singular, alltså la. Pronomenet står före verbet.",
+  "sv": "Var är min jacka? Jag hittar den inte."
+ },
+ {
+  "id": "pron-dir-003",
+  "topic": "pron-dir",
+  "rule": "dir-pres",
+  "q": "Compri tu i biscotti? – Sì, [li] compro io.",
+  "alt": [
+   "le",
+   "lo",
+   "gli"
+  ],
+  "why": "Biscotti är maskulinum plural: li. Le är femininum plural och lo singular.",
+  "sv": "Köper du kexen? – Ja, jag köper dem."
+ },
+ {
+  "id": "pron-dir-004",
+  "topic": "pron-dir",
+  "rule": "dir-pres",
+  "q": "Queste scarpe sono bellissime, [le] prendo!",
+  "alt": [
+   "li",
+   "la",
+   "gli"
+  ],
+  "why": "Scarpe är femininum plural: le. Li är maskulinum plural och la singular.",
+  "sv": "De här skorna är jättefina, jag tar dem!"
+ },
+ {
+  "id": "pron-dir-005",
+  "topic": "pron-dir",
+  "rule": "dir-pres",
+  "q": "Marco, [ti] chiamo stasera, va bene?",
+  "alt": [
+   "mi",
+   "ci",
+   "gli"
+  ],
+  "why": "Man pratar direkt till Marco: 'jag ringer dig' = ti chiamo. Chiamare tar direkt objekt, så inte gli.",
+  "sv": "Marco, jag ringer dig i kväll, okej?"
+ },
+ {
+  "id": "pron-dir-006",
+  "topic": "pron-dir",
+  "rule": "dir-pres",
+  "q": "Ragazzi, [vi] aspetto davanti alla scuola.",
+  "alt": [
+   "ci",
+   "ti",
+   "gli"
+  ],
+  "why": "Man talar till flera personer (ragazzi): 'er' = vi. Ti är singular, ci betyder 'oss'.",
+  "sv": "Killar, jag väntar på er utanför skolan."
+ },
+ {
+  "id": "pron-dir-007",
+  "topic": "pron-dir",
+  "rule": "dir-pres",
+  "q": "Mamma, [mi] accompagni alla stazione?",
+  "alt": [
+   "ti",
+   "gli",
+   "si"
+  ],
+  "why": "'Följer du mig?' – direkt objekt för 'mig' är mi. Ti betyder 'dig' och gli är indirekt objekt.",
+  "sv": "Mamma, skjutsar du mig till stationen?"
+ },
+ {
+  "id": "pron-dir-008",
+  "topic": "pron-dir",
+  "rule": "dir-pres",
+  "q": "Quando entriamo, il professore [ci] saluta sempre.",
+  "alt": [
+   "vi",
+   "li",
+   "gli"
+  ],
+  "why": "Det gäller 'oss' (entriamo), så det blir ci. Vi betyder 'er' och li 'dem'.",
+  "sv": "När vi kommer in hälsar läraren alltid på oss."
+ },
+ {
+  "id": "pron-dir-009",
+  "topic": "pron-dir",
+  "rule": "dir-pres",
+  "q": "Signora Rossi, [La] ringrazio per l'aiuto.",
+  "alt": [
+   "Le",
+   "Lo",
+   "Gli"
+  ],
+  "why": "Ringraziare tar direkt objekt. Artigt tilltal (Lei) ger La, oavsett om det är en man eller kvinna. Le är indirekt objekt.",
+  "sv": "Fru Rossi, tack för hjälpen."
+ },
+ {
+  "id": "pron-dir-010",
+  "topic": "pron-dir",
+  "rule": "dir-pres",
+  "q": "Voglio vedere quel film. [Lo] guardiamo insieme?",
+  "alt": [
+   "La",
+   "Li",
+   "Gli"
+  ],
+  "why": "Film är maskulinum singular: lo. Guardare tar direkt objekt, så inte gli.",
+  "sv": "Jag vill se den där filmen. Ska vi titta på den tillsammans?"
+ },
+ {
+  "id": "pron-dir-011",
+  "topic": "pron-dir",
+  "rule": "dir-pp",
+  "q": "Hai visto Giulia? – Sì, [l'ho vista] ieri.",
+  "alt": [
+   "l'ho visto",
+   "le ho viste",
+   "gli ho visto"
+  ],
+  "why": "Med lo/la före avere böjs participet efter objektet. Giulia är femininum singular: l'ho vista.",
+  "sv": "Har du sett Giulia? – Ja, jag såg henne i går."
+ },
+ {
+  "id": "pron-dir-012",
+  "topic": "pron-dir",
+  "rule": "dir-pp",
+  "q": "Dove sono le chiavi? – [Le ho] lasciate sul tavolo.",
+  "alt": [
+   "L'ho",
+   "Li ho",
+   "Gli ho"
+  ],
+  "why": "Chiavi är femininum plural: le ho lasciate. Le och li elideras inte till l'.",
+  "sv": "Var är nycklarna? – Jag lämnade dem på bordet."
+ },
+ {
+  "id": "pron-dir-013",
+  "topic": "pron-dir",
+  "rule": "dir-pp",
+  "q": "Hai comprato il pane? – Sì, [l'ho comprato] stamattina.",
+  "alt": [
+   "l'ho comprata",
+   "li ho comprati",
+   "l'ho comprati"
+  ],
+  "why": "Pane är maskulinum singular: lo blir l' före ho och participet slutar på -o.",
+  "sv": "Har du köpt brödet? – Ja, jag köpte det i morse."
+ },
+ {
+  "id": "pron-dir-014",
+  "topic": "pron-dir",
+  "rule": "dir-pp",
+  "q": "Hai finito i compiti? – Sì, [li] ho finiti un'ora fa.",
+  "alt": [
+   "le",
+   "lo",
+   "gli"
+  ],
+  "why": "Compiti är maskulinum plural: li ho finiti. Participet visar också pluralen.",
+  "sv": "Har du gjort klart läxorna? – Ja, jag blev klar för en timme sedan."
+ },
+ {
+  "id": "pron-dir-015",
+  "topic": "pron-dir",
+  "rule": "dir-pp",
+  "q": "Le foto? Le ho [messe] su Instagram.",
+  "alt": [
+   "messo",
+   "messi",
+   "messa"
+  ],
+  "why": "När le står före avere böjs participet: foto är femininum plural, alltså messe.",
+  "sv": "Bilderna? Jag har lagt ut dem på Instagram."
+ },
+ {
+  "id": "pron-dir-016",
+  "topic": "pron-dir",
+  "rule": "dir-pp",
+  "q": "La pizza era buonissima: l'abbiamo [mangiata] tutta.",
+  "alt": [
+   "mangiato",
+   "mangiati",
+   "mangiate"
+  ],
+  "why": "L' står för la pizza (femininum singular), så participet blir mangiata.",
+  "sv": "Pizzan var jättegod: vi åt upp hela."
+ },
+ {
+  "id": "pron-dir-017",
+  "topic": "pron-dir",
+  "rule": "dir-pp",
+  "q": "Marco e Luca? Non li ho [visti] alla festa.",
+  "alt": [
+   "visto",
+   "vista",
+   "viste"
+  ],
+  "why": "Li (Marco och Luca) är maskulinum plural, så participet blir visti.",
+  "sv": "Marco och Luca? Jag såg dem inte på festen."
+ },
+ {
+  "id": "pron-dir-018",
+  "topic": "pron-dir",
+  "rule": "dir-pp",
+  "q": "Chi ha preso la mia penna? – [L'ha] presa Sara.",
+  "alt": [
+   "Gli ha",
+   "Le ha",
+   "Li ha"
+  ],
+  "why": "Penna är femininum singular: la ha blir l'ha. Participet presa visar att objektet är femininum.",
+  "sv": "Vem har tagit min penna? – Sara tog den."
+ },
+ {
+  "id": "pron-dir-019",
+  "topic": "pron-dir",
+  "rule": "dir-pp",
+  "q": "Ho scritto una cartolina e [l'ho] spedita subito.",
+  "alt": [
+   "gli ho",
+   "le ho",
+   "li ho"
+  ],
+  "why": "Cartolina är femininum singular: la ho blir l'ho, och participet blir spedita.",
+  "sv": "Jag skrev ett vykort och skickade det direkt."
+ },
+ {
+  "id": "pron-dir-020",
+  "topic": "pron-dir",
+  "rule": "dir-pp",
+  "q": "Il libro di storia? Non [l'ho] ancora letto.",
+  "alt": [
+   "gli ho",
+   "le ho",
+   "li ho"
+  ],
+  "why": "Libro är maskulinum singular: lo ho blir l'ho. Letto slutar på -o eftersom objektet är maskulinum singular.",
+  "sv": "Historieboken? Jag har inte läst den än."
+ },
+ {
+  "id": "pron-dir-021",
+  "topic": "pron-dir",
+  "rule": "dir-pres",
+  "type": "rw",
+  "q": "Non vedo Marco da due settimane.",
+  "cue": "lo",
+  "a": "Non lo vedo da due settimane.",
+  "alt": [
+   "Lo non vedo da due settimane.",
+   "Non vedo lo da due settimane."
+  ],
+  "why": "Objektspronomenet står direkt före det böjda verbet, efter non.",
+  "sv": "Jag har inte sett honom på två veckor."
+ },
+ {
+  "id": "pron-dir-022",
+  "topic": "pron-dir",
+  "rule": "dir-pres",
+  "type": "rw",
+  "q": "Mangio sempre le mele a colazione.",
+  "cue": "le",
+  "a": "Le mangio sempre a colazione.",
+  "alt": [
+   "Mangio le sempre a colazione.",
+   "Le sempre mangio a colazione."
+  ],
+  "why": "Le mele är femininum plural, så pronomenet är le. Det står före det böjda verbet.",
+  "sv": "Jag äter dem alltid till frukost."
+ },
+ {
+  "id": "pron-ind-001",
+  "topic": "pron-ind",
+  "rule": "ind",
+  "q": "Domani è il compleanno di Marco: [gli] regalo un libro.",
+  "alt": [
+   "lo",
+   "le",
+   "li"
+  ],
+  "why": "Regalare qualcosa a qualcuno: 'till honom' är indirekt objekt, gli. Lo är direkt objekt.",
+  "sv": "I morgon fyller Marco år: jag ger honom en bok."
+ },
+ {
+  "id": "pron-ind-002",
+  "topic": "pron-ind",
+  "rule": "ind",
+  "q": "Ho visto Anna e [le] ho detto la verità.",
+  "alt": [
+   "la",
+   "gli",
+   "l'"
+  ],
+  "why": "Dire qualcosa a qualcuno: 'till henne' = le (indirekt objekt). La och l' är direkt objekt.",
+  "sv": "Jag träffade Anna och sa sanningen till henne."
+ },
+ {
+  "id": "pron-ind-003",
+  "topic": "pron-ind",
+  "rule": "ind",
+  "q": "Signor Bianchi, [Le] telefono domani mattina.",
+  "alt": [
+   "La",
+   "Gli",
+   "Lo"
+  ],
+  "why": "Telefonare a qualcuno tar indirekt objekt. Artigt tilltal (Lei) ger Le.",
+  "sv": "Herr Bianchi, jag ringer er i morgon förmiddag."
+ },
+ {
+  "id": "pron-ind-004",
+  "topic": "pron-ind",
+  "rule": "ind",
+  "q": "I miei nonni abitano lontano, così [gli] scrivo spesso.",
+  "alt": [
+   "li",
+   "lo",
+   "ti"
+  ],
+  "why": "Scrivere a qualcuno: 'till dem' blir i vardagligt språk gli. Li är direkt objekt.",
+  "sv": "Mina morföräldrar bor långt bort, så jag skriver ofta till dem."
+ },
+ {
+  "id": "pron-ind-005",
+  "topic": "pron-ind",
+  "rule": "ind",
+  "q": "Mamma, [mi] presti la macchina stasera?",
+  "alt": [
+   "ti",
+   "le",
+   "gli"
+  ],
+  "why": "Prestare qualcosa a qualcuno: 'lånar du mig bilen' ger mi.",
+  "sv": "Mamma, lånar du mig bilen i kväll?"
+ },
+ {
+  "id": "pron-ind-006",
+  "topic": "pron-ind",
+  "rule": "ind",
+  "q": "Ciao Luca, [ti] mando le foto più tardi.",
+  "alt": [
+   "mi",
+   "gli",
+   "lo"
+  ],
+  "why": "Man skriver till Luca: 'jag skickar dig' = ti mando. Mi betyder 'mig'.",
+  "sv": "Hej Luca, jag skickar bilderna till dig senare."
+ },
+ {
+  "id": "pron-ind-007",
+  "topic": "pron-ind",
+  "rule": "ind",
+  "q": "Non capivamo, così il professore [ci] ha rispiegato la regola.",
+  "alt": [
+   "vi",
+   "li",
+   "si"
+  ],
+  "why": "Det var vi som inte förstod (capivamo), så läraren förklarade för oss: ci.",
+  "sv": "Vi förstod inte, så läraren förklarade regeln igen för oss."
+ },
+ {
+  "id": "pron-ind-008",
+  "topic": "pron-ind",
+  "rule": "ind",
+  "q": "Ragazzi, [vi] piace la pizza con l'ananas?",
+  "alt": [
+   "ci",
+   "li",
+   "ti"
+  ],
+  "why": "Piacere tar indirekt objekt. Man frågar flera personer: 'tycker ni om' = vi piace.",
+  "sv": "Killar, gillar ni pizza med ananas?"
+ },
+ {
+  "id": "pron-ind-009",
+  "topic": "pron-ind",
+  "rule": "ind",
+  "q": "Giulia adora il cioccolato: [le] porto dei cioccolatini.",
+  "alt": [
+   "la",
+   "gli",
+   "lo"
+  ],
+  "why": "Portare qualcosa a qualcuno: 'till henne' = le. La är direkt objekt.",
+  "sv": "Giulia älskar choklad: jag tar med chokladpraliner till henne."
+ },
+ {
+  "id": "pron-ind-010",
+  "topic": "pron-ind",
+  "rule": "ind",
+  "q": "Paolo è caduto e ora [gli] fa male la gamba.",
+  "alt": [
+   "lo",
+   "le",
+   "li"
+  ],
+  "why": "Fare male a qualcuno: 'han har ont' = gli fa male. Le betyder 'henne'.",
+  "sv": "Paolo har ramlat och nu har han ont i benet."
+ },
+ {
+  "id": "pron-ind-011",
+  "topic": "pron-ind",
+  "rule": "ind",
+  "q": "Hai telefonato alla nonna? – Sì, [le] ho telefonato ieri.",
+  "alt": [
+   "l'",
+   "la",
+   "gli"
+  ],
+  "why": "Telefonare a qualcuno tar indirekt objekt: le ho telefonato. L' och la är direkt objekt.",
+  "sv": "Har du ringt till mormor? – Ja, jag ringde henne i går."
+ },
+ {
+  "id": "pron-ind-012",
+  "topic": "pron-ind",
+  "rule": "ind",
+  "q": "Quando vedi Marco, [gli] puoi dire di chiamarmi?",
+  "alt": [
+   "lo",
+   "le",
+   "ti"
+  ],
+  "why": "Dire a qualcuno: 'säga till honom' = gli. Lo är direkt objekt.",
+  "sv": "När du träffar Marco, kan du säga åt honom att ringa mig?"
+ },
+ {
+  "id": "pron-ind-013",
+  "topic": "pron-ind",
+  "rule": "ind",
+  "q": "Sara, che cosa [ti] ha regalato tua sorella?",
+  "alt": [
+   "tu",
+   "te",
+   "lo"
+  ],
+  "why": "Regalare a qualcuno: 'till dig' före verbet = ti. Te används efter preposition (a te).",
+  "sv": "Sara, vad fick du av din syster?"
+ },
+ {
+  "id": "pron-ind-014",
+  "topic": "pron-ind",
+  "rule": "ind",
+  "q": "Signora, [Le] consiglio il pesce di oggi.",
+  "alt": [
+   "La",
+   "Gli",
+   "Lo"
+  ],
+  "why": "Consigliare qualcosa a qualcuno: artigt tilltal ger Le (indirekt objekt).",
+  "sv": "Frun, jag rekommenderar dagens fisk."
+ },
+ {
+  "id": "pron-ind-015",
+  "topic": "pron-ind",
+  "rule": "ind",
+  "q": "Voglio bene ai miei amici e [gli] racconto tutto.",
+  "alt": [
+   "li",
+   "le",
+   "lo"
+  ],
+  "why": "Raccontare a qualcuno: 'till dem' = gli i vardagligt språk. Li är direkt objekt.",
+  "sv": "Jag älskar mina vänner och berättar allt för dem."
+ },
+ {
+  "id": "pron-ind-016",
+  "topic": "pron-ind",
+  "rule": "ind",
+  "q": "Ho chiesto aiuto a Maria, ma lei non [mi] ha risposto.",
+  "alt": [
+   "me",
+   "ti",
+   "lo"
+  ],
+  "why": "Rispondere a qualcuno: 'svarade mig' = mi. Me används efter preposition.",
+  "sv": "Jag bad Maria om hjälp, men hon svarade mig inte."
+ },
+ {
+  "id": "pron-ind-017",
+  "topic": "pron-ind",
+  "rule": "ind",
+  "q": "Ero malato e il medico [mi] ha detto di restare a letto.",
+  "alt": [
+   "me",
+   "ti",
+   "lo"
+  ],
+  "why": "Dire a qualcuno: det var jag som var sjuk, så läkaren sa till mig: mi.",
+  "sv": "Jag var sjuk och läkaren sa åt mig att stanna i sängen."
+ },
+ {
+  "id": "pron-ind-018",
+  "topic": "pron-ind",
+  "rule": "ind",
+  "q": "Quando Anna e Paolo vengono a cena, [gli] preparo le lasagne.",
+  "alt": [
+   "li",
+   "lo",
+   "le"
+  ],
+  "why": "Preparare qualcosa a qualcuno: 'åt dem' = gli. Li är direkt objekt, men här är lasagnen det direkta objektet.",
+  "sv": "När Anna och Paolo kommer på middag lagar jag lasagne åt dem."
+ },
+ {
+  "id": "pron-ind-019",
+  "topic": "pron-ind",
+  "rule": "ind",
+  "q": "Nonno, [ti] porto un caffè?",
+  "alt": [
+   "mi",
+   "gli",
+   "lo"
+  ],
+  "why": "Man pratar direkt till morfar: 'ska jag ta med en kaffe till dig' = ti.",
+  "sv": "Morfar, ska jag hämta en kaffe åt dig?"
+ },
+ {
+  "id": "pron-ind-020",
+  "topic": "pron-ind",
+  "rule": "ind",
+  "q": "Luca mi ha scritto e io [gli] ho risposto subito.",
+  "alt": [
+   "lo",
+   "le",
+   "l'"
+  ],
+  "why": "Rispondere a qualcuno: 'svarade honom' = gli. Lo och l' är direkt objekt.",
+  "sv": "Luca skrev till mig och jag svarade honom direkt."
+ },
+ {
+  "id": "ne-ci-001",
+  "topic": "ne-ci",
+  "rule": "ne",
+  "q": "Quante mele vuoi? – [Ne] vorrei tre, grazie.",
+  "alt": [
+   "Ci",
+   "Le",
+   "Li"
+  ],
+  "why": "Ne betyder 'av dem' och används med antal: ne vorrei tre. Le kan inte stå ihop med ett antal.",
+  "sv": "Hur många äpplen vill du ha? – Jag skulle vilja ha tre, tack."
+ },
+ {
+  "id": "ne-ci-002",
+  "topic": "ne-ci",
+  "rule": "ne",
+  "q": "Hai fratelli? – Sì, [ne] ho due.",
+  "alt": [
+   "ci",
+   "li",
+   "gli"
+  ],
+  "why": "Med ett antal (due) används ne: ne ho due = 'jag har två (av dem)'.",
+  "sv": "Har du syskon? – Ja, jag har två."
+ },
+ {
+  "id": "ne-ci-003",
+  "topic": "ne-ci",
+  "rule": "ne",
+  "q": "Quanto pane compri? – [Ne] compro mezzo chilo.",
+  "alt": [
+   "Lo",
+   "Ci",
+   "La"
+  ],
+  "why": "Med en mängd (mezzo chilo) används ne. Lo compro mezzo chilo är fel.",
+  "sv": "Hur mycket bröd köper du? – Jag köper ett halvt kilo."
+ },
+ {
+  "id": "ne-ci-004",
+  "topic": "ne-ci",
+  "rule": "ne",
+  "q": "Vuoi dello zucchero? – No grazie, non [ne] voglio.",
+  "alt": [
+   "ci",
+   "gli",
+   "la"
+  ],
+  "why": "Ne ersätter en obestämd mängd (dello zucchero): non ne voglio = 'jag vill inte ha något'.",
+  "sv": "Vill du ha socker? – Nej tack, jag vill inte ha något."
+ },
+ {
+  "id": "ne-ci-005",
+  "topic": "ne-ci",
+  "rule": "ne",
+  "q": "Quanti libri hai letto quest'anno? – [Ne] ho letti cinque.",
+  "alt": [
+   "Li",
+   "Ci",
+   "Gli"
+  ],
+  "why": "Med ett antal (cinque) används ne. Participet letti böjs efter det ne syftar på.",
+  "sv": "Hur många böcker har du läst i år? – Jag har läst fem."
+ },
+ {
+  "id": "ne-ci-006",
+  "topic": "ne-ci",
+  "rule": "ne",
+  "q": "Quante sorelle ha Marta? – [Ne] ha una.",
+  "alt": [
+   "La",
+   "Ci",
+   "Le"
+  ],
+  "why": "Med antal, även una, används ne: ne ha una.",
+  "sv": "Hur många systrar har Marta? – Hon har en."
+ },
+ {
+  "id": "ne-ci-007",
+  "topic": "ne-ci",
+  "rule": "ne",
+  "q": "Ci sono ancora biscotti? – Sì, ce [ne] sono molti.",
+  "alt": [
+   "ci",
+   "li",
+   "le"
+  ],
+  "why": "Ne står för 'av dem' med mängdord som molti. Ci blir ce före ne: ce ne sono.",
+  "sv": "Finns det kex kvar? – Ja, det finns många."
+ },
+ {
+  "id": "ne-ci-008",
+  "topic": "ne-ci",
+  "rule": "ne",
+  "q": "Questo formaggio è buonissimo, [ne] prendo un etto.",
+  "alt": [
+   "lo",
+   "ci",
+   "la"
+  ],
+  "why": "Med en mängd (un etto) används ne, inte lo.",
+  "sv": "Den här osten är jättegod, jag tar hundra gram."
+ },
+ {
+  "id": "ne-ci-009",
+  "topic": "ne-ci",
+  "rule": "ne",
+  "q": "Quante ore dormi di notte? – [Ne] dormo otto.",
+  "alt": [
+   "Le",
+   "Ci",
+   "Li"
+  ],
+  "why": "Med antal (otto) används ne: ne dormo otto.",
+  "sv": "Hur många timmar sover du på natten? – Jag sover åtta."
+ },
+ {
+  "id": "ne-ci-010",
+  "topic": "ne-ci",
+  "rule": "ne",
+  "q": "Hai amici in Italia? – Sì, [ne] ho molti.",
+  "alt": [
+   "li",
+   "ci",
+   "gli"
+  ],
+  "why": "Ne används med mängdord som molti, pochi, tanti.",
+  "sv": "Har du vänner i Italien? – Ja, jag har många."
+ },
+ {
+  "id": "ne-ci-011",
+  "topic": "ne-ci",
+  "rule": "ci",
+  "q": "Vai spesso a Roma? – Sì, [ci] vado ogni anno.",
+  "alt": [
+   "ne",
+   "la",
+   "lo"
+  ],
+  "why": "Ci betyder 'dit' och ersätter en plats (a Roma).",
+  "sv": "Åker du ofta till Rom? – Ja, jag åker dit varje år."
+ },
+ {
+  "id": "ne-ci-012",
+  "topic": "ne-ci",
+  "rule": "ci",
+  "q": "Sei mai stato in Sicilia? – No, non [ci] sono mai stato.",
+  "alt": [
+   "ne",
+   "la",
+   "lo"
+  ],
+  "why": "Ci ersätter platsen (in Sicilia): 'där'. La och lo är objektspronomen.",
+  "sv": "Har du varit på Sicilien? – Nej, jag har aldrig varit där."
+ },
+ {
+  "id": "ne-ci-013",
+  "topic": "ne-ci",
+  "rule": "ci",
+  "q": "Quando vai in palestra? – [Ci] vado il martedì.",
+  "alt": [
+   "Ne",
+   "La",
+   "Lo"
+  ],
+  "why": "Ci betyder 'dit' och ersätter in palestra.",
+  "sv": "När går du till gymmet? – Jag går dit på tisdagar."
+ },
+ {
+  "id": "ne-ci-014",
+  "topic": "ne-ci",
+  "rule": "ci",
+  "q": "Vieni al cinema stasera? – Sì, [ci] vengo volentieri.",
+  "alt": [
+   "ne",
+   "lo",
+   "gli"
+  ],
+  "why": "Ci ersätter platsen al cinema: ci vengo = 'jag kommer dit'.",
+  "sv": "Följer du med på bio i kväll? – Ja, gärna."
+ },
+ {
+  "id": "ne-ci-015",
+  "topic": "ne-ci",
+  "rule": "ci",
+  "q": "Abiti a Milano? – Sì, [ci] abito da tre anni.",
+  "alt": [
+   "ne",
+   "la",
+   "lo"
+  ],
+  "why": "Ci betyder 'där' och ersätter a Milano.",
+  "sv": "Bor du i Milano? – Ja, jag har bott där i tre år."
+ },
+ {
+  "id": "ne-ci-016",
+  "topic": "ne-ci",
+  "rule": "ci",
+  "q": "Andate al mare domenica? – No, [ci] andiamo sabato.",
+  "alt": [
+   "ne",
+   "lo",
+   "gli"
+  ],
+  "why": "Ci ersätter platsen al mare: ci andiamo = 'vi åker dit'.",
+  "sv": "Åker ni till havet på söndag? – Nej, vi åker dit på lördag."
+ },
+ {
+  "id": "ne-ci-017",
+  "topic": "ne-ci",
+  "rule": "ci",
+  "q": "Chi va in biblioteca oggi? – [Ci] vado io.",
+  "alt": [
+   "Ne",
+   "La",
+   "Lo"
+  ],
+  "why": "Ci ersätter in biblioteca: 'jag går dit'.",
+  "sv": "Vem går till biblioteket i dag? – Jag går dit."
+ },
+ {
+  "id": "ne-ci-018",
+  "topic": "ne-ci",
+  "rule": "ci",
+  "q": "Sono stata a Firenze e [ci] torno a maggio.",
+  "alt": [
+   "ne",
+   "la",
+   "lo"
+  ],
+  "why": "Ci ersätter a Firenze: ci torno = 'jag åker tillbaka dit'.",
+  "sv": "Jag har varit i Florens och jag åker tillbaka dit i maj."
+ },
+ {
+  "id": "ne-ci-019",
+  "topic": "ne-ci",
+  "rule": "ci",
+  "q": "Il museo è bellissimo: [ci] sono andato ieri.",
+  "alt": [
+   "ne",
+   "lo",
+   "l'"
+  ],
+  "why": "Ci ersätter platsen (al museo): 'jag var där i går'.",
+  "sv": "Museet är jättefint: jag var där i går."
+ },
+ {
+  "id": "ne-ci-020",
+  "topic": "ne-ci",
+  "rule": "ne",
+  "q": "Quanti biglietti hai? – [Ne] ho due, vieni con me?",
+  "alt": [
+   "Ci",
+   "Li",
+   "Gli"
+  ],
+  "why": "Med antal (due) används ne, inte li.",
+  "sv": "Hur många biljetter har du? – Jag har två, följer du med?"
+ },
+ {
+  "id": "ne-ci-021",
+  "topic": "ne-ci",
+  "rule": "ci",
+  "type": "rw",
+  "q": "Di solito vado a scuola in bicicletta.",
+  "cue": "ci",
+  "a": "Di solito ci vado in bicicletta.",
+  "alt": [
+   "Di solito vado ci in bicicletta.",
+   "Di solito ci in bicicletta vado."
+  ],
+  "why": "Ci (dit) ersätter a scuola och står direkt före det böjda verbet.",
+  "sv": "Jag brukar cykla dit."
+ },
+ {
+  "id": "imperat-001",
+  "topic": "imperat",
+  "rule": "imp-tu",
+  "q": "Marco, [chiudi] la finestra, per favore!",
+  "alt": [
+   "chiude",
+   "chiudete",
+   "chiudo"
+  ],
+  "why": "Imperativ för tu av -ere-verb slutar på -i: chiudi. Chiude är Lei-form och chiudete voi.",
+  "sv": "Marco, stäng fönstret, tack!"
+ },
+ {
+  "id": "imperat-002",
+  "topic": "imperat",
+  "rule": "imp-tu",
+  "q": "Anna, [parla] più piano, il bambino dorme!",
+  "alt": [
+   "parli",
+   "parlare",
+   "parlate"
+  ],
+  "why": "Imperativ för tu av -are-verb slutar på -a: parla. Parli är Lei-form.",
+  "sv": "Anna, prata tystare, bebisen sover!"
+ },
+ {
+  "id": "imperat-003",
+  "topic": "imperat",
+  "rule": "imp-tu",
+  "q": "Luca, [prendi] l'ombrello, sta piovendo!",
+  "alt": [
+   "prende",
+   "prendere",
+   "prendono"
+  ],
+  "why": "Imperativ för tu av prendere: prendi. Prende är Lei-form.",
+  "sv": "Luca, ta paraplyet, det regnar!"
+ },
+ {
+  "id": "imperat-004",
+  "topic": "imperat",
+  "rule": "imp-tu",
+  "q": "Giulia, [finisci] i compiti prima di uscire!",
+  "alt": [
+   "finisce",
+   "finire",
+   "finiate"
+  ],
+  "why": "Finire får -isc- även i imperativ: tu finisci.",
+  "sv": "Giulia, gör klart läxorna innan du går ut!"
+ },
+ {
+  "id": "imperat-005",
+  "topic": "imperat",
+  "rule": "imp-tu",
+  "q": "Paolo, [vieni] qui un momento!",
+  "alt": [
+   "viene",
+   "venire",
+   "venite"
+  ],
+  "why": "Venire i imperativ för tu: vieni. Viene är Lei-form och venite voi.",
+  "sv": "Paolo, kom hit ett ögonblick!"
+ },
+ {
+  "id": "imperat-006",
+  "topic": "imperat",
+  "rule": "imp-tu",
+  "q": "Sara, [fa'] attenzione alla strada!",
+  "alt": [
+   "fare",
+   "faccia",
+   "fate"
+  ],
+  "acc": [
+   "fai"
+  ],
+  "why": "Fare har den korta imperativformen fa' (även fai går). Faccia är Lei-form.",
+  "sv": "Sara, akta dig för trafiken!"
+ },
+ {
+  "id": "imperat-007",
+  "topic": "imperat",
+  "rule": "imp-tu",
+  "q": "Luca, [va'] a comprare il pane!",
+  "alt": [
+   "vada",
+   "andare",
+   "andate"
+  ],
+  "acc": [
+   "vai"
+  ],
+  "why": "Andare har den korta imperativformen va' (även vai går). Vada är Lei-form.",
+  "sv": "Luca, gå och köp bröd!"
+ },
+ {
+  "id": "imperat-008",
+  "topic": "imperat",
+  "rule": "imp-tu",
+  "q": "Chiara, [di'] la verità alla mamma!",
+  "alt": [
+   "dire",
+   "dite",
+   "dica"
+  ],
+  "why": "Dire har den korta imperativformen di' för tu. Dica är Lei-form och dite voi.",
+  "sv": "Chiara, säg sanningen till mamma!"
+ },
+ {
+  "id": "imperat-009",
+  "topic": "imperat",
+  "rule": "imp-voi",
+  "q": "Ragazzi, [aprite] il libro a pagina venti.",
+  "alt": [
+   "apri",
+   "aprono",
+   "aprire"
+  ],
+  "why": "Man talar till flera (ragazzi): voi-imperativ = aprite, samma som presens.",
+  "sv": "Ni, öppna boken på sidan tjugo."
+ },
+ {
+  "id": "imperat-010",
+  "topic": "imperat",
+  "rule": "imp-voi",
+  "q": "Bambini, [state] zitti, per favore!",
+  "alt": [
+   "stai",
+   "stare",
+   "stanno"
+  ],
+  "why": "Stare i imperativ för voi: state. Stai är tu-form.",
+  "sv": "Barn, var tysta, tack!"
+ },
+ {
+  "id": "imperat-011",
+  "topic": "imperat",
+  "rule": "imp-voi",
+  "q": "Io e te siamo stanchi: [prendiamo] un taxi!",
+  "alt": [
+   "prendete",
+   "prendi",
+   "prendono"
+  ],
+  "why": "Noi-imperativ ('låt oss …') har samma form som presens: prendiamo.",
+  "sv": "Du och jag är trötta: vi tar en taxi!"
+ },
+ {
+  "id": "imperat-012",
+  "topic": "imperat",
+  "rule": "imp-voi",
+  "q": "Ragazzi, [scrivete] il vostro nome sul foglio!",
+  "alt": [
+   "scrivi",
+   "scrivono",
+   "scrivere"
+  ],
+  "why": "Voi-imperativ av scrivere: scrivete.",
+  "sv": "Ni, skriv ert namn på pappret!"
+ },
+ {
+  "id": "imperat-013",
+  "topic": "imperat",
+  "rule": "imp-voi",
+  "q": "Amici, [venite] alla mia festa sabato!",
+  "alt": [
+   "vieni",
+   "vengono",
+   "venire"
+  ],
+  "why": "Voi-imperativ av venire: venite.",
+  "sv": "Kompisar, kom på min fest på lördag!"
+ },
+ {
+  "id": "imperat-014",
+  "topic": "imperat",
+  "rule": "imp-voi",
+  "q": "Ragazze, [siate] puntuali domani mattina!",
+  "alt": [
+   "siete",
+   "sii",
+   "essere"
+  ],
+  "why": "Essere har oregelbunden imperativ: voi siate. Siete är presens och sii är tu-form.",
+  "sv": "Tjejer, var i tid i morgon bitti!"
+ },
+ {
+  "id": "imperat-015",
+  "topic": "imperat",
+  "rule": "imp-neg",
+  "q": "Luca, non [mangiare] troppi dolci!",
+  "alt": [
+   "mangi",
+   "mangia",
+   "mangiate"
+  ],
+  "why": "Nekad imperativ för tu = non + infinitiv: non mangiare.",
+  "sv": "Luca, ät inte för mycket godis!"
+ },
+ {
+  "id": "imperat-016",
+  "topic": "imperat",
+  "rule": "imp-neg",
+  "q": "Anna, non [toccare] il forno, è caldo!",
+  "alt": [
+   "tocchi",
+   "tocca",
+   "toccate"
+  ],
+  "why": "Nekad imperativ för tu = non + infinitiv: non toccare.",
+  "sv": "Anna, rör inte ugnen, den är varm!"
+ },
+ {
+  "id": "imperat-017",
+  "topic": "imperat",
+  "rule": "imp-neg",
+  "q": "Ragazzi, non [parlate] durante il compito!",
+  "alt": [
+   "parlare",
+   "parla",
+   "parlano"
+  ],
+  "why": "Nekad imperativ för voi = non + voi-formen: non parlate. Non parlare gäller bara tu.",
+  "sv": "Ni, prata inte under provet!"
+ },
+ {
+  "id": "imperat-018",
+  "topic": "imperat",
+  "rule": "imp-neg",
+  "q": "Non [preoccuparti], Marco, andrà tutto bene!",
+  "alt": [
+   "preoccupati",
+   "ti preoccupi",
+   "preoccupatevi"
+  ],
+  "acc": [
+   "ti preoccupare"
+  ],
+  "why": "Nekad imperativ för tu = non + infinitiv. Pronomenet hängs på (preoccuparti) eller står före (non ti preoccupare).",
+  "sv": "Oroa dig inte, Marco, det kommer att gå bra!"
+ },
+ {
+  "id": "imperat-019",
+  "topic": "imperat",
+  "rule": "imp-lei",
+  "q": "Signora, [prenda] pure un biscotto!",
+  "alt": [
+   "prendi",
+   "prende",
+   "prendete"
+  ],
+  "why": "Artig imperativ (Lei) av -ere-verb slutar på -a: prenda. Prendi är tu-form.",
+  "sv": "Frun, ta gärna ett kex!"
+ },
+ {
+  "id": "imperat-020",
+  "topic": "imperat",
+  "rule": "imp-lei",
+  "q": "Scusi, signore, [venga] con me, per favore.",
+  "alt": [
+   "vieni",
+   "viene",
+   "venite"
+  ],
+  "why": "Artig imperativ (Lei) av venire: venga. Vieni är tu-form och viene presens.",
+  "sv": "Ursäkta, min herre, följ med mig, tack."
+ },
+ {
+  "id": "futuro-001",
+  "topic": "futuro",
+  "rule": "fut-reg",
+  "q": "Domani io [parlerò] con la professoressa.",
+  "alt": [
+   "parlarò",
+   "parlerà",
+   "parlavo"
+  ],
+  "why": "I futuro blir -are till -er-: parlerò. Parlarò finns inte och parlerà är lui/lei.",
+  "sv": "I morgon ska jag prata med läraren."
+ },
+ {
+  "id": "futuro-002",
+  "topic": "futuro",
+  "rule": "fut-reg",
+  "q": "L'anno prossimo mia sorella [studierà] a Bologna.",
+  "alt": [
+   "studiarà",
+   "studierò",
+   "studiava"
+  ],
+  "why": "Futuro av studiare: studierà (-are blir -er-). Studierò är io-form.",
+  "sv": "Nästa år ska min syster plugga i Bologna."
+ },
+ {
+  "id": "futuro-003",
+  "topic": "futuro",
+  "rule": "fut-reg",
+  "q": "Stasera noi [mangeremo] al ristorante.",
+  "alt": [
+   "mangiaremo",
+   "mangieremo",
+   "mangeranno"
+  ],
+  "why": "Mangiare tappar i:et i futuro: mangeremo.",
+  "sv": "I kväll ska vi äta på restaurang."
+ },
+ {
+  "id": "futuro-004",
+  "topic": "futuro",
+  "rule": "fut-reg",
+  "q": "Quando [finirai] la scuola, che cosa farai?",
+  "alt": [
+   "finerai",
+   "finirei",
+   "finivi"
+  ],
+  "why": "-ire-verb behåller i i futuro: finirai. Finirei är condizionale.",
+  "sv": "Vad ska du göra när du går ut skolan?"
+ },
+ {
+  "id": "futuro-005",
+  "topic": "futuro",
+  "rule": "fut-reg",
+  "q": "Domani [pagherò] io il conto.",
+  "alt": [
+   "pagerò",
+   "pagarò",
+   "pagherà"
+  ],
+  "why": "Verb på -gare får h i futuro för att behålla det hårda g-ljudet: pagherò.",
+  "sv": "I morgon betalar jag notan."
+ },
+ {
+  "id": "futuro-006",
+  "topic": "futuro",
+  "rule": "fut-reg",
+  "q": "Domani il treno [partirà] alle otto e mezza.",
+  "alt": [
+   "partirò",
+   "parterà",
+   "partiva"
+  ],
+  "why": "Futuro av partire: partirà. Partirò är io-form.",
+  "sv": "I morgon går tåget halv nio."
+ },
+ {
+  "id": "futuro-007",
+  "topic": "futuro",
+  "rule": "fut-reg",
+  "q": "Tra un mese Luca e Anna [si sposeranno].",
+  "alt": [
+   "si sposaranno",
+   "si sposerà",
+   "si sposavano"
+  ],
+  "why": "Futuro för loro av sposarsi: si sposeranno (-are blir -er-).",
+  "sv": "Om en månad ska Luca och Anna gifta sig."
+ },
+ {
+  "id": "futuro-008",
+  "topic": "futuro",
+  "rule": "fut-reg",
+  "q": "Sabato prossimo voi [giocherete] contro il Milan?",
+  "alt": [
+   "giocarete",
+   "giocerete",
+   "giocheranno"
+  ],
+  "why": "Verb på -care får h i futuro: giocherete.",
+  "sv": "Spelar ni mot Milan nästa lördag?"
+ },
+ {
+  "id": "futuro-009",
+  "topic": "futuro",
+  "rule": "fut-reg",
+  "q": "Domani io [cercherò] un regalo per la mamma.",
+  "alt": [
+   "cercerò",
+   "cercarò",
+   "cercavo"
+  ],
+  "why": "Verb på -care får h i futuro för att behålla k-ljudet: cercherò.",
+  "sv": "I morgon ska jag leta efter en present till mamma."
+ },
+ {
+  "id": "futuro-010",
+  "topic": "futuro",
+  "rule": "fut-reg",
+  "q": "Questo weekend io [leggerò] un libro giallo.",
+  "alt": [
+   "leggerrò",
+   "leggarò",
+   "leggevo"
+  ],
+  "why": "Futuro av leggere: legger- + ò = leggerò.",
+  "sv": "I helgen ska jag läsa en deckare."
+ },
+ {
+  "id": "futuro-011",
+  "topic": "futuro",
+  "rule": "fut-irr",
+  "q": "L'anno prossimo io [avrò] diciotto anni.",
+  "alt": [
+   "averò",
+   "avrà",
+   "avevo"
+  ],
+  "why": "Avere har förkortad stam i futuro: avrò.",
+  "sv": "Nästa år fyller jag arton."
+ },
+ {
+  "id": "futuro-012",
+  "topic": "futuro",
+  "rule": "fut-irr",
+  "q": "Domani [sarà] una bella giornata di sole.",
+  "alt": [
+   "sarò",
+   "essirà",
+   "era"
+  ],
+  "why": "Essere har stammen sar- i futuro: sarà för tredje person.",
+  "sv": "I morgon blir det en fin solig dag."
+ },
+ {
+  "id": "futuro-013",
+  "topic": "futuro",
+  "rule": "fut-irr",
+  "q": "Quest'estate noi [andremo] in Puglia.",
+  "alt": [
+   "anderemo",
+   "andaremo",
+   "andavamo"
+  ],
+  "why": "Andare har förkortad stam i futuro: andremo.",
+  "sv": "I sommar ska vi åka till Apulien."
+ },
+ {
+  "id": "futuro-014",
+  "topic": "futuro",
+  "rule": "fut-irr",
+  "q": "Sabato Marco [farà] una festa a casa sua.",
+  "alt": [
+   "farò",
+   "facerà",
+   "faceva"
+  ],
+  "why": "Fare har stammen far- i futuro: farà. Farò är io-form.",
+  "sv": "På lördag ska Marco ha fest hemma hos sig."
+ },
+ {
+  "id": "futuro-015",
+  "topic": "futuro",
+  "rule": "fut-irr",
+  "q": "Giulia, [verrai] alla mia festa sabato?",
+  "alt": [
+   "venirai",
+   "verrà",
+   "venivi"
+  ],
+  "why": "Venire har stammen verr- i futuro: verrai för tu.",
+  "sv": "Giulia, kommer du på min fest på lördag?"
+ },
+ {
+  "id": "futuro-016",
+  "topic": "futuro",
+  "rule": "fut-irr",
+  "q": "Domani io [vedrò] i miei cugini di Napoli.",
+  "alt": [
+   "vederò",
+   "vedrà",
+   "vedevo"
+  ],
+  "why": "Vedere har förkortad stam i futuro: vedrò.",
+  "sv": "I morgon ska jag träffa mina kusiner från Neapel."
+ },
+ {
+  "id": "futuro-017",
+  "topic": "futuro",
+  "rule": "fut-irr",
+  "q": "Domani ho un esame, quindi non [potrò] uscire.",
+  "alt": [
+   "poterò",
+   "potrà",
+   "potevo"
+  ],
+  "why": "Potere har förkortad stam i futuro: potrò. Det är jag (ho) som inte kan.",
+  "sv": "I morgon har jag ett prov, så jag kommer inte att kunna gå ut."
+ },
+ {
+  "id": "futuro-018",
+  "topic": "futuro",
+  "rule": "fut-irr",
+  "q": "Stasera i ragazzi [dovranno] studiare per l'esame.",
+  "alt": [
+   "doveranno",
+   "dovrà",
+   "dovevano"
+  ],
+  "why": "Dovere har förkortad stam i futuro: dovranno för loro.",
+  "sv": "I kväll måste killarna plugga till provet."
+ },
+ {
+  "id": "futuro-019",
+  "topic": "futuro",
+  "rule": "fut-irr",
+  "q": "Tra due anni io [saprò] parlare bene l'italiano.",
+  "alt": [
+   "saperò",
+   "saprà",
+   "sapevo"
+  ],
+  "why": "Sapere har förkortad stam i futuro: saprò.",
+  "sv": "Om två år kommer jag att kunna prata italienska bra."
+ },
+ {
+  "id": "futuro-020",
+  "topic": "futuro",
+  "rule": "fut-irr",
+  "q": "Domani i nonni [rimarranno] a casa tutto il giorno.",
+  "alt": [
+   "rimaneranno",
+   "rimarrà",
+   "rimanevano"
+  ],
+  "why": "Rimanere har stammen rimarr- i futuro: rimarranno.",
+  "sv": "I morgon ska mor- och farföräldrarna stanna hemma hela dagen."
+ },
+ {
+  "id": "cond-001",
+  "topic": "cond",
+  "rule": "cond",
+  "q": "[Vorrei] un caffè e un cornetto, per favore.",
+  "alt": [
+   "Vorrò",
+   "Volrei",
+   "Vorresti"
+  ],
+  "why": "Vorrei (condizionale av volere) är det artiga sättet att beställa. Stammen är vorr-.",
+  "sv": "Jag skulle vilja ha en kaffe och en croissant, tack."
+ },
+ {
+  "id": "cond-002",
+  "topic": "cond",
+  "rule": "cond",
+  "q": "Scusi, [potrebbe] ripetere, per favore?",
+  "alt": [
+   "potrei",
+   "poterebbe",
+   "potresti"
+  ],
+  "why": "Scusi visar artigt tilltal (Lei), så verbet står i tredje person: potrebbe. Potresti är tu-form.",
+  "sv": "Ursäkta, skulle ni kunna upprepa, tack?"
+ },
+ {
+  "id": "cond-003",
+  "topic": "cond",
+  "rule": "cond",
+  "q": "Mi [piacerebbe] visitare Venezia un giorno.",
+  "alt": [
+   "piacerei",
+   "piacerebbero",
+   "piacere"
+  ],
+  "why": "Mi piacerebbe + infinitiv = 'jag skulle vilja'. Med infinitiv används singular.",
+  "sv": "Jag skulle vilja besöka Venedig en dag."
+ },
+ {
+  "id": "cond-004",
+  "topic": "cond",
+  "rule": "cond",
+  "q": "Sei stanco: [dovresti] andare a letto presto.",
+  "alt": [
+   "dovrei",
+   "doveresti",
+   "dovrebbe"
+  ],
+  "why": "Råd ges med condizionale av dovere. Subjektet är tu (sei): dovresti.",
+  "sv": "Du är trött: du borde gå och lägga dig tidigt."
+ },
+ {
+  "id": "cond-005",
+  "topic": "cond",
+  "rule": "cond",
+  "q": "Mi [piacerebbero] delle scarpe nuove.",
+  "alt": [
+   "piacerebbe",
+   "piacerei",
+   "piacerebbi"
+  ],
+  "why": "Det som man gillar (scarpe) är plural, så piacere står i plural: piacerebbero.",
+  "sv": "Jag skulle vilja ha nya skor."
+ },
+ {
+  "id": "cond-006",
+  "topic": "cond",
+  "rule": "cond",
+  "q": "Al tuo posto io non [comprerei] quel telefono.",
+  "alt": [
+   "comprerò",
+   "comprarei",
+   "comprerebbe"
+  ],
+  "why": "Al tuo posto ('i ditt ställe') kräver condizionale: comprerei. -are blir -er-.",
+  "sv": "I ditt ställe skulle jag inte köpa den där telefonen."
+ },
+ {
+  "id": "cond-007",
+  "topic": "cond",
+  "rule": "cond",
+  "q": "Noi [andremmo] volentieri al mare, ma piove.",
+  "alt": [
+   "andremo",
+   "anderemmo",
+   "andrebbero"
+  ],
+  "why": "Något man skulle vilja men inte kan (ma piove) står i condizionale: andremmo med dubbelt m. Andremo är futuro.",
+  "sv": "Vi skulle gärna åka till havet, men det regnar."
+ },
+ {
+  "id": "cond-008",
+  "topic": "cond",
+  "rule": "cond",
+  "q": "Luca, [potresti] aiutarmi con i compiti?",
+  "alt": [
+   "potrei",
+   "poteresti",
+   "potrebbero"
+  ],
+  "why": "Artig fråga till Luca (tu): potresti.",
+  "sv": "Luca, skulle du kunna hjälpa mig med läxan?"
+ },
+ {
+  "id": "cond-009",
+  "topic": "cond",
+  "rule": "cond",
+  "q": "Che cosa [faresti] con un milione di euro?",
+  "alt": [
+   "farei",
+   "faceresti",
+   "farebbero"
+  ],
+  "why": "Tänkt situation: condizionale. Fare har stammen far-: tu faresti.",
+  "sv": "Vad skulle du göra med en miljon euro?"
+ },
+ {
+  "id": "cond-010",
+  "topic": "cond",
+  "rule": "cond",
+  "q": "Signora, [avrebbe] un momento per me?",
+  "alt": [
+   "avrei",
+   "avresti",
+   "averebbe"
+  ],
+  "why": "Artigt tilltal (Lei) ger tredje person: avrebbe. Stammen är avr-.",
+  "sv": "Frun, skulle ni ha en stund för mig?"
+ },
+ {
+  "id": "cond-011",
+  "topic": "cond",
+  "rule": "cond",
+  "q": "Io [sarei] felice di venire alla tua festa.",
+  "alt": [
+   "sarebbe",
+   "esserei",
+   "saresti"
+  ],
+  "why": "Condizionale av essere: io sarei.",
+  "sv": "Jag skulle bli glad att komma på din fest."
+ },
+ {
+  "id": "cond-012",
+  "topic": "cond",
+  "rule": "cond",
+  "q": "Ragazzi, [vorreste] venire a cena da noi?",
+  "alt": [
+   "vorresti",
+   "volreste",
+   "vorrebbero"
+  ],
+  "why": "Man frågar flera (ragazzi): voi vorreste.",
+  "sv": "Skulle ni vilja komma på middag hos oss?"
+ },
+ {
+  "id": "cond-013",
+  "topic": "cond",
+  "rule": "cond",
+  "q": "Giulia, mi [daresti] il tuo numero di telefono?",
+  "alt": [
+   "darei",
+   "dareresti",
+   "darebbero"
+  ],
+  "why": "Artig fråga till Giulia (tu): daresti. Dare har stammen dar-.",
+  "sv": "Giulia, skulle du kunna ge mig ditt telefonnummer?"
+ },
+ {
+  "id": "cond-014",
+  "topic": "cond",
+  "rule": "cond",
+  "q": "Secondo me, voi [dovreste] studiare di più.",
+  "alt": [
+   "dovremmo",
+   "doveste",
+   "dovrebbe"
+  ],
+  "why": "Råd till voi: dovreste. Dovremmo är noi och dovrebbe lui/lei.",
+  "sv": "Jag tycker att ni borde plugga mer."
+ },
+ {
+  "id": "cond-015",
+  "topic": "cond",
+  "rule": "cond",
+  "q": "I miei genitori [vorrebbero] una casa più grande.",
+  "alt": [
+   "vorrebbe",
+   "vorremmo",
+   "volrebbero"
+  ],
+  "why": "Önskan med condizionale: loro vorrebbero. Stammen är vorr-.",
+  "sv": "Mina föräldrar skulle vilja ha ett större hus."
+ },
+ {
+  "id": "cond-016",
+  "topic": "cond",
+  "rule": "cond",
+  "q": "Con più tempo, io [leggerei] molti più libri.",
+  "alt": [
+   "leggerebbe",
+   "leggerrei",
+   "leggeresti"
+  ],
+  "why": "Tänkt situation (med mer tid): condizionale för io = leggerei.",
+  "sv": "Med mer tid skulle jag läsa många fler böcker."
+ },
+ {
+  "id": "cond-017",
+  "topic": "cond",
+  "rule": "cond",
+  "q": "A Marco [piacerebbe] diventare medico.",
+  "alt": [
+   "piacerei",
+   "piacerebbero",
+   "piaceresti"
+  ],
+  "why": "A Marco piacerebbe + infinitiv: verbet står i tredje person singular.",
+  "sv": "Marco skulle vilja bli läkare."
+ },
+ {
+  "id": "cond-018",
+  "topic": "cond",
+  "rule": "cond",
+  "q": "Scusi, [saprebbe] dov'è la stazione?",
+  "alt": [
+   "saprei",
+   "sapresti",
+   "saperebbe"
+  ],
+  "why": "Scusi visar Lei-form: saprebbe. Sapere har stammen sapr-.",
+  "sv": "Ursäkta, vet ni var stationen ligger?"
+ },
+ {
+  "id": "cond-019",
+  "topic": "cond",
+  "rule": "cond",
+  "q": "Anna, [verresti] al cinema con me stasera?",
+  "alt": [
+   "verrei",
+   "veniresti",
+   "verrebbero"
+  ],
+  "why": "Venire har stammen verr- i condizionale: tu verresti.",
+  "sv": "Anna, skulle du vilja följa med mig på bio i kväll?"
+ },
+ {
+  "id": "cond-020",
+  "topic": "cond",
+  "rule": "cond",
+  "q": "Stasera noi [preferiremmo] mangiare fuori.",
+  "alt": [
+   "preferirei",
+   "preferirebbero",
+   "prefereremmo"
+  ],
+  "why": "Noi i condizionale slutar på -emmo: preferiremmo. -ire-verb behåller i.",
+  "sv": "I kväll skulle vi hellre äta ute."
+ },
+ {
+  "id": "comp-001",
+  "topic": "comp",
+  "rule": "comp-di",
+  "q": "Marco è [più] alto di suo fratello.",
+  "alt": [
+   "molto",
+   "tanto",
+   "il più"
+  ],
+  "why": "Komparativ: più + adjektiv + di. Molto alto di och il più alto di är fel.",
+  "sv": "Marco är längre än sin bror."
+ },
+ {
+  "id": "comp-002",
+  "topic": "comp",
+  "rule": "comp-di",
+  "q": "Roma è più grande [di] Firenze.",
+  "alt": [
+   "che",
+   "come",
+   "da"
+  ],
+  "why": "Jämför man två namn eller substantiv används di: più grande di Firenze.",
+  "sv": "Rom är större än Florens."
+ },
+ {
+  "id": "comp-003",
+  "topic": "comp",
+  "rule": "comp-di",
+  "q": "Il treno è più veloce [del] pullman.",
+  "alt": [
+   "che il",
+   "dello",
+   "della"
+  ],
+  "why": "Di + il = del före ett substantiv med artikel. Pullman är maskulinum.",
+  "sv": "Tåget är snabbare än bussen."
+ },
+ {
+  "id": "comp-004",
+  "topic": "comp",
+  "rule": "comp-di",
+  "q": "La mia camera è meno grande [della] tua.",
+  "alt": [
+   "che la",
+   "del",
+   "di"
+  ],
+  "why": "Meno … di: di + la = della (la tua camera).",
+  "sv": "Mitt rum är mindre än ditt."
+ },
+ {
+  "id": "comp-005",
+  "topic": "comp",
+  "rule": "comp-di",
+  "q": "Questa pizza è [migliore] di quella di ieri.",
+  "alt": [
+   "più migliore",
+   "meglio",
+   "ottimo"
+  ],
+  "acc": [
+   "più buona"
+  ],
+  "why": "Migliore betyder 'bättre' (adjektiv). Più migliore är dubbelt och meglio är adverb. Più buona går också.",
+  "sv": "Den här pizzan är bättre än den i går."
+ },
+ {
+  "id": "comp-006",
+  "topic": "comp",
+  "rule": "comp-di",
+  "q": "Mia sorella è più giovane [di] me.",
+  "alt": [
+   "che",
+   "come",
+   "del"
+  ],
+  "why": "Före ett pronomen används di: più giovane di me.",
+  "sv": "Min syster är yngre än jag."
+ },
+ {
+  "id": "comp-007",
+  "topic": "comp",
+  "rule": "comp-di",
+  "q": "Il gelato italiano è [più] buono di quello svedese.",
+  "alt": [
+   "molto",
+   "tanto",
+   "così"
+  ],
+  "why": "Komparativ: più + adjektiv + di.",
+  "sv": "Italiensk glass är godare än svensk."
+ },
+ {
+  "id": "comp-008",
+  "topic": "comp",
+  "rule": "comp-che",
+  "q": "Mi piace più leggere [che] guardare la TV.",
+  "alt": [
+   "di",
+   "come",
+   "del"
+  ],
+  "why": "När man jämför två verb (infinitiver) används che, inte di.",
+  "sv": "Jag gillar att läsa mer än att titta på tv."
+ },
+ {
+  "id": "comp-009",
+  "topic": "comp",
+  "rule": "comp-che",
+  "q": "Nella mia classe ci sono più ragazze [che] ragazzi.",
+  "alt": [
+   "di",
+   "dei",
+   "come"
+  ],
+  "why": "När man jämför två mängder (hur många av olika saker) används che.",
+  "sv": "I min klass finns det fler tjejer än killar."
+ },
+ {
+  "id": "comp-010",
+  "topic": "comp",
+  "rule": "comp-che",
+  "q": "In italiano è più facile parlare [che] scrivere.",
+  "alt": [
+   "di",
+   "come",
+   "del"
+  ],
+  "why": "Jämförelse mellan två verb: che.",
+  "sv": "På italienska är det lättare att prata än att skriva."
+ },
+ {
+  "id": "comp-011",
+  "topic": "comp",
+  "rule": "comp-che",
+  "q": "Marco è più simpatico [che] intelligente.",
+  "alt": [
+   "di",
+   "come",
+   "del"
+  ],
+  "why": "Två adjektiv om samma person jämförs med che.",
+  "sv": "Marco är mer trevlig än smart."
+ },
+ {
+  "id": "comp-012",
+  "topic": "comp",
+  "rule": "comp-che",
+  "q": "Vado più volentieri in treno [che] in macchina.",
+  "alt": [
+   "di",
+   "del",
+   "come"
+  ],
+  "why": "Före en preposition (in macchina) används che, inte di.",
+  "sv": "Jag åker hellre tåg än bil."
+ },
+ {
+  "id": "comp-013",
+  "topic": "comp",
+  "rule": "comp-che",
+  "q": "D'estate bevo più acqua [che] caffè.",
+  "alt": [
+   "di",
+   "del",
+   "come"
+  ],
+  "why": "Två substantiv utan artikel som mängder jämförs med che.",
+  "sv": "På sommaren dricker jag mer vatten än kaffe."
+ },
+ {
+  "id": "comp-014",
+  "topic": "comp",
+  "rule": "superl",
+  "q": "Giulia è la ragazza [più] simpatica della classe.",
+  "alt": [
+   "molto",
+   "la più",
+   "tanto"
+  ],
+  "why": "Superlativ: artikel + substantiv + più + adjektiv. Artikeln la står redan före ragazza.",
+  "sv": "Giulia är den trevligaste tjejen i klassen."
+ },
+ {
+  "id": "comp-015",
+  "topic": "comp",
+  "rule": "superl",
+  "q": "È il ristorante più caro [della] città.",
+  "alt": [
+   "di",
+   "che",
+   "del"
+  ],
+  "why": "Efter en superlativ används di + artikel: della città.",
+  "sv": "Det är den dyraste restaurangen i staden."
+ },
+ {
+  "id": "comp-016",
+  "topic": "comp",
+  "rule": "superl",
+  "q": "Questo esercizio di grammatica è [facilissimo]!",
+  "alt": [
+   "facilmente",
+   "più facilissimo",
+   "molto facilissimo"
+  ],
+  "why": "-issimo betyder 'jätte-' och kan inte kombineras med più eller molto.",
+  "sv": "Den här grammatikövningen är jättelätt!"
+ },
+ {
+  "id": "comp-017",
+  "topic": "comp",
+  "rule": "superl",
+  "q": "Il tiramisù è il dolce [migliore] del mondo.",
+  "alt": [
+   "meglio",
+   "più migliore",
+   "ottimo"
+  ],
+  "acc": [
+   "più buono"
+  ],
+  "why": "Il dolce migliore = 'den bästa efterrätten'. Meglio är adverb och più migliore dubbelt. Più buono går också.",
+  "sv": "Tiramisu är världens bästa efterrätt."
+ },
+ {
+  "id": "comp-018",
+  "topic": "comp",
+  "rule": "superl",
+  "q": "La lezione di oggi è stata [lunghissima].",
+  "alt": [
+   "lunghisima",
+   "lunghissimo",
+   "lunghissime"
+  ],
+  "why": "-issimo böjs som ett vanligt adjektiv: lezione är femininum singular. Lungo får h: lunghissima.",
+  "sv": "Dagens lektion var jättelång."
+ },
+ {
+  "id": "comp-019",
+  "topic": "comp",
+  "rule": "superl",
+  "q": "Secondo me, l'inverno è la stagione [peggiore] dell'anno.",
+  "alt": [
+   "peggio",
+   "più peggiore",
+   "pessimo"
+  ],
+  "acc": [
+   "più brutta"
+  ],
+  "why": "Peggiore betyder 'sämst/värst' (adjektiv). Peggio är adverb och più peggiore dubbelt.",
+  "sv": "Jag tycker att vintern är årets sämsta årstid."
+ },
+ {
+  "id": "comp-020",
+  "topic": "comp",
+  "rule": "superl",
+  "q": "Questo è il libro [più] interessante che ho letto.",
+  "alt": [
+   "molto",
+   "tanto",
+   "meglio"
+  ],
+  "why": "Superlativ: il + substantiv + più + adjektiv.",
+  "sv": "Det här är den mest intressanta bok jag har läst."
+ },
+ {
+  "id": "stare-ger-001",
+  "topic": "stare-ger",
+  "rule": "ger",
+  "q": "Non posso rispondere, [sto] mangiando.",
+  "alt": [
+   "sono",
+   "ho",
+   "stai"
+  ],
+  "why": "Pågående handling: stare + gerundium. Io sto mangiando.",
+  "sv": "Jag kan inte svara, jag håller på att äta."
+ },
+ {
+  "id": "stare-ger-002",
+  "topic": "stare-ger",
+  "rule": "ger",
+  "q": "Che cosa [stai] facendo, Marco?",
+  "alt": [
+   "sei",
+   "hai",
+   "sta"
+  ],
+  "why": "Stare + gerundium, tu-form: stai facendo.",
+  "sv": "Vad håller du på med, Marco?"
+ },
+ {
+  "id": "stare-ger-003",
+  "topic": "stare-ger",
+  "rule": "ger",
+  "q": "I bambini stanno [dormendo], parlate piano!",
+  "alt": [
+   "dormindo",
+   "dormito",
+   "dormire"
+  ],
+  "why": "Gerundium av -ire-verb slutar på -endo: dormendo.",
+  "sv": "Barnen sover, prata tyst!"
+ },
+ {
+  "id": "stare-ger-004",
+  "topic": "stare-ger",
+  "rule": "ger",
+  "q": "Ascolta! Sara sta [cantando] la nostra canzone.",
+  "alt": [
+   "cantendo",
+   "cantato",
+   "canta"
+  ],
+  "why": "Gerundium av -are-verb slutar på -ando: cantando.",
+  "sv": "Lyssna! Sara sjunger vår låt."
+ },
+ {
+  "id": "stare-ger-005",
+  "topic": "stare-ger",
+  "rule": "ger",
+  "q": "Noi stiamo [leggendo] un libro di Italo Calvino.",
+  "alt": [
+   "leggiendo",
+   "leggindo",
+   "letto"
+  ],
+  "why": "Gerundium av -ere-verb slutar på -endo: leggendo.",
+  "sv": "Vi håller på att läsa en bok av Italo Calvino."
+ },
+ {
+  "id": "stare-ger-006",
+  "topic": "stare-ger",
+  "rule": "ger",
+  "q": "La mamma sta [facendo] la spesa al mercato.",
+  "alt": [
+   "fando",
+   "faciendo",
+   "fatto"
+  ],
+  "why": "Fare har oregelbundet gerundium: facendo.",
+  "sv": "Mamma håller på att handla på marknaden."
+ },
+ {
+  "id": "stare-ger-007",
+  "topic": "stare-ger",
+  "rule": "ger",
+  "q": "Che cosa stai [bevendo]? – Un succo d'arancia.",
+  "alt": [
+   "bevando",
+   "beviendo",
+   "bevuto"
+  ],
+  "why": "Bere har gerundium med stammen bev-: bevendo.",
+  "sv": "Vad dricker du? – Apelsinjuice."
+ },
+ {
+  "id": "stare-ger-008",
+  "topic": "stare-ger",
+  "rule": "ger",
+  "q": "Il professore sta [dicendo] una cosa importante.",
+  "alt": [
+   "dindo",
+   "diciendo",
+   "detto"
+  ],
+  "why": "Dire har gerundium med stammen dic-: dicendo.",
+  "sv": "Läraren säger något viktigt just nu."
+ },
+ {
+  "id": "stare-ger-009",
+  "topic": "stare-ger",
+  "rule": "ger",
+  "q": "Ieri sera alle nove io [stavo] studiando.",
+  "alt": [
+   "sto",
+   "sono",
+   "stavi"
+  ],
+  "why": "Pågående handling i det förflutna: stare i imperfetto + gerundium, io stavo.",
+  "sv": "I går kväll klockan nio höll jag på att plugga."
+ },
+ {
+  "id": "stare-ger-010",
+  "topic": "stare-ger",
+  "rule": "ger",
+  "q": "Quando mi hai chiamato, [stavo] facendo la doccia.",
+  "alt": [
+   "sto",
+   "ho",
+   "stavano"
+  ],
+  "why": "Det som pågick när något hände: stavo + gerundium.",
+  "sv": "När du ringde höll jag på att duscha."
+ },
+ {
+  "id": "stare-ger-011",
+  "topic": "stare-ger",
+  "rule": "ger",
+  "q": "Mentre stavamo [mangiando], è arrivata la nonna.",
+  "alt": [
+   "mangiato",
+   "mangiare",
+   "mangiendo"
+  ],
+  "why": "Efter stare kommer gerundium: mangiando (-are ger -ando).",
+  "sv": "Medan vi höll på att äta kom mormor."
+ },
+ {
+  "id": "stare-ger-012",
+  "topic": "stare-ger",
+  "rule": "ger",
+  "q": "Guarda il cielo: sta [per] piovere.",
+  "alt": [
+   "a",
+   "di",
+   "da"
+  ],
+  "why": "Stare per + infinitiv = 'vara på väg att, ska just'.",
+  "sv": "Titta på himlen: det ska just börja regna."
+ },
+ {
+  "id": "stare-ger-013",
+  "topic": "stare-ger",
+  "rule": "ger",
+  "q": "Sbrigati, il treno sta [per] partire!",
+  "alt": [
+   "da",
+   "a",
+   "di"
+  ],
+  "why": "Stare per + infinitiv betyder att något ska hända alldeles strax.",
+  "sv": "Skynda dig, tåget ska just gå!"
+ },
+ {
+  "id": "stare-ger-014",
+  "topic": "stare-ger",
+  "rule": "ger",
+  "q": "Ragazzi, cosa [state] guardando in TV?",
+  "alt": [
+   "siete",
+   "stai",
+   "stanno"
+  ],
+  "why": "Stare + gerundium, voi-form: state guardando.",
+  "sv": "Vad tittar ni på på tv?"
+ },
+ {
+  "id": "stare-ger-015",
+  "topic": "stare-ger",
+  "rule": "ger",
+  "q": "I miei genitori [stanno] preparando la cena.",
+  "alt": [
+   "sono",
+   "stiamo",
+   "sta"
+  ],
+  "why": "Stare + gerundium, loro-form: stanno preparando.",
+  "sv": "Mina föräldrar håller på att laga middag."
+ },
+ {
+  "id": "stare-ger-016",
+  "topic": "stare-ger",
+  "rule": "ger",
+  "q": "Luca, stai [scrivendo] a Giulia?",
+  "alt": [
+   "scrivando",
+   "scritto",
+   "scriviendo"
+  ],
+  "why": "Gerundium av scrivere (-ere): scrivendo.",
+  "sv": "Luca, skriver du till Giulia?"
+ },
+ {
+  "id": "stare-ger-017",
+  "topic": "stare-ger",
+  "rule": "ger",
+  "q": "Scusa, adesso [sto] parlando al telefono.",
+  "alt": [
+   "stai",
+   "sono",
+   "ho"
+  ],
+  "why": "Pågående handling nu: io sto + gerundium.",
+  "sv": "Förlåt, jag pratar i telefon just nu."
+ },
+ {
+  "id": "stare-ger-018",
+  "topic": "stare-ger",
+  "rule": "ger",
+  "q": "Loro [stavano] giocando a calcio quando ha cominciato a piovere.",
+  "alt": [
+   "stanno",
+   "stavamo",
+   "erano"
+  ],
+  "why": "Pågående handling i det förflutna: stavano + gerundium. Essere kan inte användas med gerundium.",
+  "sv": "De höll på att spela fotboll när det började regna."
+ },
+ {
+  "id": "stare-ger-019",
+  "topic": "stare-ger",
+  "rule": "ger",
+  "q": "Non disturbare il papà, sta [lavorando].",
+  "alt": [
+   "lavorendo",
+   "lavorato",
+   "lavorare"
+  ],
+  "why": "Gerundium av -are-verb: lavorando.",
+  "sv": "Stör inte pappa, han jobbar."
+ },
+ {
+  "id": "stare-ger-020",
+  "topic": "stare-ger",
+  "rule": "ger",
+  "q": "Anna sta [finendo] i compiti di matematica.",
+  "alt": [
+   "finiscendo",
+   "finiendo",
+   "finito"
+  ],
+  "why": "Gerundium av finire: finendo, utan -isc-.",
+  "sv": "Anna håller på att göra klart matteläxan."
+ },
+ {
+  "id": "rel-che-001",
+  "topic": "rel-che",
+  "rule": "che",
+  "q": "Il ragazzo [che] parla con Anna è mio cugino.",
+  "alt": [
+   "chi",
+   "cui",
+   "quale"
+  ],
+  "why": "Che är relativpronomen för subjekt och objekt. Chi betyder 'vem' och cui används efter preposition.",
+  "sv": "Killen som pratar med Anna är min kusin."
+ },
+ {
+  "id": "rel-che-002",
+  "topic": "rel-che",
+  "rule": "che",
+  "q": "Ho letto il libro [che] mi hai regalato.",
+  "alt": [
+   "chi",
+   "cui",
+   "quale"
+  ],
+  "why": "Che används även som objekt: il libro che mi hai regalato. Cui kräver en preposition.",
+  "sv": "Jag har läst boken som du gav mig."
+ },
+ {
+  "id": "rel-che-003",
+  "topic": "rel-che",
+  "rule": "che",
+  "q": "Come si chiama la ragazza [che] abita di fronte?",
+  "alt": [
+   "chi",
+   "cui",
+   "dove"
+  ],
+  "why": "Relativt che syftar på la ragazza och är subjekt i bisatsen.",
+  "sv": "Vad heter tjejen som bor mittemot?"
+ },
+ {
+  "id": "rel-che-004",
+  "topic": "rel-che",
+  "rule": "che",
+  "q": "Questa è la casa [che] vogliamo comprare.",
+  "alt": [
+   "dove",
+   "cui",
+   "chi"
+  ],
+  "why": "La casa är objekt till comprare, så det blir che. Dove betyder 'där'.",
+  "sv": "Det här är huset som vi vill köpa."
+ },
+ {
+  "id": "rel-che-005",
+  "topic": "rel-che",
+  "rule": "che",
+  "q": "Le scarpe [che] ho comprato sono troppo strette.",
+  "alt": [
+   "chi",
+   "cui",
+   "quali"
+  ],
+  "why": "Che är oböjligt och används för både singular och plural.",
+  "sv": "Skorna som jag köpte är för trånga."
+ },
+ {
+  "id": "rel-che-006",
+  "topic": "rel-che",
+  "rule": "che",
+  "q": "Conosci il signore [che] lavora in farmacia?",
+  "alt": [
+   "chi",
+   "cui",
+   "quale"
+  ],
+  "why": "Che som subjekt i bisatsen: il signore che lavora.",
+  "sv": "Känner du mannen som jobbar på apoteket?"
+ },
+ {
+  "id": "rel-che-007",
+  "topic": "rel-che",
+  "rule": "che",
+  "q": "Il film [che] abbiamo visto ieri era noioso.",
+  "alt": [
+   "chi",
+   "cui",
+   "quale"
+  ],
+  "why": "Che som objekt: il film che abbiamo visto.",
+  "sv": "Filmen som vi såg i går var tråkig."
+ },
+ {
+  "id": "rel-che-008",
+  "topic": "rel-che",
+  "rule": "che",
+  "q": "Ho un amico [che] parla cinque lingue.",
+  "alt": [
+   "chi",
+   "cui",
+   "quale"
+  ],
+  "why": "Che som subjekt: un amico che parla. Chi används bara som frågeord eller 'den som'.",
+  "sv": "Jag har en kompis som pratar fem språk."
+ },
+ {
+  "id": "rel-che-009",
+  "topic": "rel-che",
+  "rule": "che",
+  "q": "La pizza [che] fanno qui è la migliore della città.",
+  "alt": [
+   "chi",
+   "cui",
+   "dove"
+  ],
+  "why": "La pizza är objekt till fanno, så relativpronomenet är che.",
+  "sv": "Pizzan som de gör här är den bästa i stan."
+ },
+ {
+  "id": "rel-che-010",
+  "topic": "rel-che",
+  "rule": "che",
+  "q": "I ragazzi [che] giocano in cortile sono i miei vicini.",
+  "alt": [
+   "chi",
+   "cui",
+   "quali"
+  ],
+  "why": "Che är oböjligt och fungerar även i plural.",
+  "sv": "Killarna som leker på gården är mina grannar."
+ },
+ {
+  "id": "rel-che-011",
+  "topic": "rel-che",
+  "rule": "che",
+  "q": "Dov'è la penna [che] ti ho prestato?",
+  "alt": [
+   "chi",
+   "cui",
+   "quale"
+  ],
+  "why": "Che som objekt: la penna che ti ho prestato.",
+  "sv": "Var är pennan som jag lånade dig?"
+ },
+ {
+  "id": "rel-che-012",
+  "topic": "rel-che",
+  "rule": "che",
+  "q": "Mi piace molto la musica [che] ascolti tu.",
+  "alt": [
+   "chi",
+   "cui",
+   "quale"
+  ],
+  "why": "Che som objekt till ascolti.",
+  "sv": "Jag gillar musiken som du lyssnar på väldigt mycket."
+ },
+ {
+  "id": "rel-che-013",
+  "topic": "rel-che",
+  "rule": "che",
+  "q": "Il treno [che] prendo ogni mattina è sempre in ritardo.",
+  "alt": [
+   "chi",
+   "cui",
+   "dove"
+  ],
+  "why": "Il treno är objekt till prendo, så det blir che.",
+  "sv": "Tåget som jag tar varje morgon är alltid försenat."
+ },
+ {
+  "id": "rel-che-014",
+  "topic": "rel-che",
+  "rule": "che",
+  "q": "Ecco il professore [che] ci insegna storia.",
+  "alt": [
+   "chi",
+   "cui",
+   "quale"
+  ],
+  "why": "Che som subjekt: il professore che ci insegna.",
+  "sv": "Där är läraren som undervisar oss i historia."
+ },
+ {
+  "id": "rel-che-015",
+  "topic": "rel-che",
+  "rule": "che",
+  "type": "rw",
+  "q": "Ho un'amica. L'amica abita a Roma.",
+  "cue": "che",
+  "a": "Ho un'amica che abita a Roma.",
+  "alt": [
+   "Ho un'amica abita che a Roma.",
+   "Che ho un'amica abita a Roma."
+  ],
+  "why": "Che står direkt efter ordet det syftar på (un'amica) och ersätter l'amica i andra meningen.",
+  "sv": "Jag har en väninna som bor i Rom."
+ },
+ {
+  "id": "rel-che-016",
+  "topic": "rel-che",
+  "rule": "che",
+  "type": "rw",
+  "q": "Ho visto un film. Il film era bellissimo.",
+  "cue": "che",
+  "a": "Il film che ho visto era bellissimo.",
+  "alt": [
+   "Il film ho visto che era bellissimo.",
+   "Che il film ho visto era bellissimo."
+  ],
+  "why": "Relativsatsen che ho visto står direkt efter il film, och huvudsatsen fortsätter sedan med era bellissimo.",
+  "sv": "Filmen som jag såg var jättebra."
+ },
+ {
+  "id": "rel-che-017",
+  "topic": "rel-che",
+  "rule": "che",
+  "type": "rw",
+  "q": "Marco ha una sorella. La sorella studia medicina.",
+  "cue": "che",
+  "a": "Marco ha una sorella che studia medicina.",
+  "alt": [
+   "Marco ha una sorella studia che medicina.",
+   "Marco ha che una sorella studia medicina."
+  ],
+  "why": "Che står direkt efter una sorella och är subjekt i bisatsen.",
+  "sv": "Marco har en syster som pluggar medicin."
+ },
+ {
+  "id": "rel-che-018",
+  "topic": "rel-che",
+  "rule": "che",
+  "type": "rw",
+  "q": "Ho comprato una giacca. La giacca è rossa.",
+  "cue": "che",
+  "a": "La giacca che ho comprato è rossa.",
+  "alt": [
+   "La giacca ho comprato che è rossa.",
+   "Che la giacca ho comprato è rossa."
+  ],
+  "why": "Relativsatsen che ho comprato står direkt efter la giacca.",
+  "sv": "Jackan som jag köpte är röd."
+ },
+ {
+  "id": "rel-che-019",
+  "topic": "rel-che",
+  "rule": "che",
+  "type": "rw",
+  "q": "Conosco una ragazza. La ragazza suona il violino.",
+  "cue": "che",
+  "a": "Conosco una ragazza che suona il violino.",
+  "alt": [
+   "Conosco una ragazza suona che il violino.",
+   "Conosco che una ragazza suona il violino."
+  ],
+  "why": "Che står direkt efter una ragazza och är subjekt i bisatsen.",
+  "sv": "Jag känner en tjej som spelar fiol."
+ },
+ {
+  "id": "rel-che-020",
+  "topic": "rel-che",
+  "rule": "che",
+  "type": "rw",
+  "q": "Aspetto l'autobus. L'autobus va in centro.",
+  "cue": "che",
+  "a": "Aspetto l'autobus che va in centro.",
+  "alt": [
+   "Aspetto l'autobus va che in centro.",
+   "Che aspetto l'autobus va in centro."
+  ],
+  "why": "Che står direkt efter l'autobus och ersätter l'autobus i andra meningen.",
+  "sv": "Jag väntar på bussen som går till centrum."
+ },
+ {
+  "id": "tempo-001",
+  "topic": "tempo",
+  "rule": "fa",
+  "q": "Sono arrivato in Italia due anni [fa].",
+  "alt": [
+   "da",
+   "tra",
+   "per"
+  ],
+  "why": "Fa = 'för … sedan' och står efter tidsuttrycket, med passato prossimo.",
+  "sv": "Jag kom till Italien för två år sedan."
+ },
+ {
+  "id": "tempo-002",
+  "topic": "tempo",
+  "rule": "fa",
+  "q": "Ho visto Marco un'ora [fa] al bar.",
+  "alt": [
+   "da",
+   "tra",
+   "per"
+  ],
+  "why": "En händelse som är avslutad: un'ora fa = 'för en timme sedan'.",
+  "sv": "Jag såg Marco på baren för en timme sedan."
+ },
+ {
+  "id": "tempo-003",
+  "topic": "tempo",
+  "rule": "fa",
+  "q": "Tre giorni [fa] abbiamo fatto una gita a Siena.",
+  "alt": [
+   "da",
+   "tra",
+   "per"
+  ],
+  "why": "Fa står efter tidsuttrycket och betyder 'för … sedan'.",
+  "sv": "För tre dagar sedan gjorde vi en utflykt till Siena."
+ },
+ {
+  "id": "tempo-004",
+  "topic": "tempo",
+  "rule": "fa",
+  "q": "Mia nonna è nata settant'anni [fa].",
+  "alt": [
+   "da",
+   "tra",
+   "per"
+  ],
+  "why": "Fa används om en avslutad händelse i det förflutna: 'för sjuttio år sedan'.",
+  "sv": "Min mormor föddes för sjuttio år sedan."
+ },
+ {
+  "id": "tempo-005",
+  "topic": "tempo",
+  "rule": "fa",
+  "q": "Poco tempo [fa] ho cambiato casa.",
+  "alt": [
+   "da",
+   "tra",
+   "per"
+  ],
+  "why": "Poco tempo fa = 'för inte så länge sedan'.",
+  "sv": "För inte så länge sedan flyttade jag."
+ },
+ {
+  "id": "tempo-006",
+  "topic": "tempo",
+  "rule": "fa",
+  "q": "Quanto tempo [fa] hai cominciato a studiare l'italiano?",
+  "alt": [
+   "da",
+   "tra",
+   "per"
+  ],
+  "why": "Frågan gäller när något började (passato prossimo): quanto tempo fa = 'hur länge sedan'.",
+  "sv": "Hur länge sedan började du läsa italienska?"
+ },
+ {
+  "id": "tempo-007",
+  "topic": "tempo",
+  "rule": "fa",
+  "q": "Una settimana [fa] Giulia era in Sicilia.",
+  "alt": [
+   "da",
+   "tra",
+   "per"
+  ],
+  "why": "Una settimana fa = 'för en vecka sedan'.",
+  "sv": "För en vecka sedan var Giulia på Sicilien."
+ },
+ {
+  "id": "tempo-008",
+  "topic": "tempo",
+  "rule": "fa",
+  "q": "Ho finito i compiti mezz'ora [fa].",
+  "alt": [
+   "da",
+   "tra",
+   "per"
+  ],
+  "why": "Avslutad handling: mezz'ora fa = 'för en halvtimme sedan'.",
+  "sv": "Jag blev klar med läxan för en halvtimme sedan."
+ },
+ {
+  "id": "tempo-009",
+  "topic": "tempo",
+  "rule": "da",
+  "q": "Aspetto l'autobus [da] venti minuti!",
+  "alt": [
+   "fa",
+   "tra",
+   "per"
+  ],
+  "why": "Något som började förr och fortfarande pågår: presens + da. På svenska: 'jag har väntat i tjugo minuter'.",
+  "sv": "Jag har väntat på bussen i tjugo minuter!"
+ },
+ {
+  "id": "tempo-010",
+  "topic": "tempo",
+  "rule": "da",
+  "q": "Studio l'italiano [da] settembre dell'anno scorso.",
+  "alt": [
+   "fa",
+   "tra",
+   "di"
+  ],
+  "why": "Da + tidpunkt = 'sedan': det började i september och pågår fortfarande.",
+  "sv": "Jag har läst italienska sedan september förra året."
+ },
+ {
+  "id": "tempo-011",
+  "topic": "tempo",
+  "rule": "da",
+  "q": "Conosco Giulia [da] quando eravamo piccole.",
+  "alt": [
+   "fa",
+   "tra",
+   "per"
+  ],
+  "why": "Da quando = 'sedan (den tiden) då'. Presens på italienska, perfekt på svenska.",
+  "sv": "Jag har känt Giulia sedan vi var små."
+ },
+ {
+  "id": "tempo-012",
+  "topic": "tempo",
+  "rule": "da",
+  "q": "Non vedo mio cugino [da] molto tempo.",
+  "alt": [
+   "fa",
+   "tra",
+   "di"
+  ],
+  "why": "Något som fortfarande gäller: presens + da. Svenska: 'jag har inte sett … på länge'.",
+  "sv": "Jag har inte sett min kusin på länge."
+ },
+ {
+  "id": "tempo-013",
+  "topic": "tempo",
+  "rule": "da",
+  "q": "[Da] quanto tempo abiti a Roma?",
+  "alt": [
+   "Fa",
+   "Tra",
+   "Di"
+  ],
+  "why": "Da quanto tempo + presens frågar hur länge något har pågått.",
+  "sv": "Hur länge har du bott i Rom?"
+ },
+ {
+  "id": "tempo-014",
+  "topic": "tempo",
+  "rule": "da",
+  "q": "Marco lavora già [da] due mesi in quel negozio.",
+  "alt": [
+   "fa",
+   "tra",
+   "per"
+  ],
+  "why": "Något som började förr och pågår nu: presens + da.",
+  "sv": "Marco har redan jobbat i två månader i den där affären."
+ },
+ {
+  "id": "tempo-015",
+  "topic": "tempo",
+  "rule": "tra",
+  "q": "Il film comincia [tra] dieci minuti.",
+  "alt": [
+   "da",
+   "fa",
+   "per"
+  ],
+  "acc": [
+   "fra"
+  ],
+  "why": "Tra (eller fra) + tid = 'om' i framtiden. Fa betyder 'sedan'.",
+  "sv": "Filmen börjar om tio minuter."
+ },
+ {
+  "id": "tempo-016",
+  "topic": "tempo",
+  "rule": "tra",
+  "q": "[Tra] un mese andrò in vacanza in Sardegna.",
+  "alt": [
+   "Da",
+   "Fa",
+   "Di"
+  ],
+  "acc": [
+   "Fra"
+  ],
+  "why": "Tra/fra + tid = 'om' (framtid), här med futuro.",
+  "sv": "Om en månad åker jag på semester till Sardinien."
+ },
+ {
+  "id": "tempo-017",
+  "topic": "tempo",
+  "rule": "tra",
+  "q": "Ci vediamo [tra] un'ora davanti al bar.",
+  "alt": [
+   "da",
+   "fa",
+   "di"
+  ],
+  "acc": [
+   "fra"
+  ],
+  "why": "Tra/fra un'ora = 'om en timme'.",
+  "sv": "Vi ses om en timme utanför baren."
+ },
+ {
+  "id": "tempo-018",
+  "topic": "tempo",
+  "rule": "tra",
+  "q": "L'esame di matematica è [tra] due settimane.",
+  "alt": [
+   "da",
+   "fa",
+   "per"
+  ],
+  "acc": [
+   "fra"
+  ],
+  "why": "Tra/fra + tid = 'om', när något ligger i framtiden.",
+  "sv": "Matteprovet är om två veckor."
+ },
+ {
+  "id": "tempo-019",
+  "topic": "tempo",
+  "rule": "tra",
+  "q": "Finirò la scuola [tra] due anni.",
+  "alt": [
+   "da",
+   "fa",
+   "per"
+  ],
+  "acc": [
+   "fra"
+  ],
+  "why": "Framtid (finirò): tra/fra due anni = 'om två år'.",
+  "sv": "Jag går ut skolan om två år."
+ },
+ {
+  "id": "tempo-020",
+  "topic": "tempo",
+  "rule": "tra",
+  "q": "Il treno parte [tra] cinque minuti, corri!",
+  "alt": [
+   "da",
+   "fa",
+   "per"
+  ],
+  "acc": [
+   "fra"
+  ],
+  "why": "Tra/fra cinque minuti = 'om fem minuter'.",
+  "sv": "Tåget går om fem minuter, spring!"
+ }
+]

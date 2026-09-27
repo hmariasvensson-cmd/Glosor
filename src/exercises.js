@@ -125,7 +125,7 @@ function compareTokens(input,target){
 let seqId=0;
 function stopSpeech(){seqId++; try{speechSynthesis.cancel()}catch(e){}}
 function speakSeq(lines,rate,onLine){
-  stopSpeech(); const id=seqId;
+  stopSpeech(); if(!SOUND) return; const id=seqId;
   let vs=[]; try{vs=speechSynthesis.getVoices().filter(v=>(v.lang||"").toLowerCase().startsWith(L.tts.slice(0,2)))}catch(e){}
   const a=voice||vs[0]||null, b=vs.find(v=>v!==a)||a;
   let k=0;
@@ -247,7 +247,7 @@ const resultHead=(label,right,total)=>`<span class="label">${esc(label)}</span>
   <div style="display:flex;align-items:baseline;gap:10px"><span class="big">${right}/${total}</span><span class="sub">rätt på första försöket</span></div>`;
 
 /* ---------- Frågetyper som redan fanns: verb och meningar ---------- */
-const verbItems=(g,n)=>shuffle(CONJ.filter(c=>g.tenses.includes(c.tense))).slice(0,n).map(c=>{
+const verbItems=(g,n)=>shuffle(CONJ.filter(c=>g.tenses.includes(c.tense)&&(!g.verbs||g.verbs.includes(c.verb)))).slice(0,n).map(c=>{
   const ref=c.verb+"|"+c.tense+"|"+c.person; return {k:"verbs",id:"verbs:"+ref,ref,c,w:{id:ref},t:"type",canType:true,tenses:g.tenses};});
 RESTORE.verbs=ref=>CONJBY[ref]?{c:CONJBY[ref],w:{id:ref}}:null;
 EFFECT.verbs=(ref,ok)=>{const c=CONJBY[ref]; if(!c) return;
@@ -665,7 +665,7 @@ function dailyPanel(newW,due){
 }
 function startDaily(newW,due){
   if(newW.length||due.length){ startSession(newW,due); sess.daily=true; snapRun(); }
-  else startMix();
+  else { startMix(); if(sess) sess.daily=true; }
 }
 function startMix(){
   const items=[], add=(arr,n)=>items.push(...shuffle(arr).slice(0,n));
@@ -691,7 +691,7 @@ function finishGeneric(){
     if(k==="verbs"){e.verb=true; e.game=sess.game?sess.game.id:"mix";} else if(k==="cloze") e.cloze=true; else e.kind=k;
     S.log.push(e);
   });
-  delete S.run; save(); boardPush();
+  dropRun(sess); delete S.run; if(sess.daily) S.dailyDay=dayKey(Date.now()); save(); boardPush();
   const right=ids.filter(id=>sess.firstTry[id]).length, ctx=sess.ctx, againFn=sess.againFn, label=sess.label||"Övningen";
   const missed=ids.filter(id=>!sess.firstTry[id]).map(id=>{const i=id.indexOf(":"),k=id.slice(0,i);return RECAP[k]?RECAP[k](id.slice(i+1)):""}).filter(Boolean);
   sess=null;

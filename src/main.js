@@ -5,6 +5,7 @@
   fillCourses();
   sel.onchange=()=>useLang(sel.value);
   wireOwnWord();
+  $("#sound").onclick=()=>setSound(!SOUND); setSound(SOUND);
   let saved=null; try{saved=localStorage.getItem(LANG_KEY)}catch(e){}
   const only=onlyCourse();
   if(codes.includes(only)){ if(!sameLang(saved,only)) saved=only; setOnly(only); }

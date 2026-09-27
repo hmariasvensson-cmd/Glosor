@@ -1,0 +1,557 @@
+// Ordlista för Italienska 1 (A1, nybörjare). Rader som börjar med // är kommentarer och tas bort vid bygget.
+//
+// Format, en rad per ord:
+//   italienska|svenska|genus|exempel på italienska|exempel på svenska|kommentar
+// Substantiv skrivs med bestämd artikel (il libro, lo zaino, l'amica, la casa), pluralen står först i kommentaren.
+// Hakparentes i den italienska exempelmeningen markerar luckan i meningsövningen:
+//   Mi [chiamo] Luca.
+// Genus: m, f, mpl, fpl eller tomt. Kommentaren får innehålla <b>fetstil</b>.
+// En rad som börjar med # startar ett nytt avsnitt:  #id|Namn som visas
+// Avsnittets id och ordets italienska form används som nycklar för sparade framsteg,
+// så ändra inte ord-id eller avsnitts-id i efterhand (ändra gärna svenska, exempel och kommentar).
+// Kapitel och teman: se docs/italienska-plan.md och languages/it1/SPEC-ordlista.md.
+#i1|Kap 1 · Ciao, piacere!
+ciao|hej, hej då||[Ciao], come stai?|Hej, hur mår du?|Används både när man kommer och går, till kompisar. Från venetianska <b>s'ciavo</b> 'slav', alltså 'er tjänare'.
+buongiorno|god morgon, god dag||[Buongiorno], signora!|God dag, frun!|<b>buon</b> 'god' + <b>giorno</b> 'dag'. Säg det fram till eftermiddagen.
+buonasera|god kväll, god eftermiddag||[Buonasera] a tutti!|God kväll allihop!|<b>buona</b> 'god' + <b>sera</b> 'kväll'. Används redan från eftermiddagen.
+buonanotte|god natt||[Buonanotte], mamma!|God natt, mamma!|Säg det bara när någon ska gå och lägga sig.
+arrivederci|hej då, adjö||[Arrivederci] e grazie!|Hej då och tack!|Ordagrant 'tills vi ses igen'. Artigare än ciao.
+a presto|vi ses snart||Ciao, [a presto]!|Hej då, vi ses snart!|<b>presto</b> betyder 'snart' eller 'tidigt'. Jämför musikens presto 'snabbt'.
+piacere|trevligt att träffas||Mi chiamo Luca. [Piacere]!|Jag heter Luca. Trevligt att träffas!|Ordagrant 'nöje'. Samma verb som i mi piace 'jag tycker om'.
+chiamarsi|heta||Come ti [chiami]?|Vad heter du?|Reflexivt: mi chiamo, ti chiami, si chiama. Grundbetydelsen är 'kalla, ropa', från latin <b>clamare</b>.
+come stai?|hur mår du?||Ciao Marco, [come stai]?|Hej Marco, hur mår du?|Du-form. Svara: Sto bene, grazie!
+come sta?|hur mår ni? (artigt)||Buongiorno, signora, [come sta]?|God dag, hur mår ni?|Lei-form till vuxna man inte känner. Verbet står i tredje person.
+bene|bra||Sto [bene], grazie.|Jag mår bra, tack.|Latin <b>bene</b> 'väl', adverb till bonus 'god'.
+male|dåligt||Oggi sto [male].|I dag mår jag dåligt.|Motsats till bene. Latin <b>male</b> 'illa'.
+così così|sådär||Come stai? [Così così].|Hur mår du? Sådär.|Ordagrant 'så så'. Glöm inte accenten: così.
+grazie|tack||[Grazie], signora!|Tack, frun!|Från latin <b>gratia</b> 'tack, ynnest'. Jämför gratis, 'för tack'.
+prego|varsågod, ingen orsak||Grazie! – [Prego]!|Tack! – Ingen orsak!|Svar på grazie. Säger man också när man ger något eller släpper fram någon.
+per favore|snälla, tack (när man ber om något)||Un caffè, [per favore].|En kaffe, tack.|Ordagrant 'för en tjänst'. Jämför engelska favour.
+scusa|förlåt, ursäkta (du-form)||[Scusa], sono in ritardo!|Förlåt, jag är sen!|Till vuxna man inte känner: scusi.
+salve|hej (lite artigare)||[Salve], signor Rossi!|Hej, herr Rossi!|Latin <b>salve</b> 'var hälsad'. Passar när man är osäker på du eller ni.
+il signore|herren; herr|m|Buongiorno, [signore]!|God dag, min herre!|Plural: i signori. Framför namn: signor Rossi.
+la signora|damen; fru|f|La [signora] Bianchi è la mia vicina.|Fru Bianchi är min granne.|Plural: le signore. Också artigt tilltal: Buongiorno, signora!
+il nome|namnet, förnamnet|m|Il mio [nome] è Giulia.|Mitt namn är Giulia.|Plural: i nomi. Latin <b>nomen</b>. Jämför nominera.
+il cognome|efternamnet|m|Qual è il tuo [cognome]?|Vad är ditt efternamn?|Plural: i cognomi. Vanliga italienska efternamn är Rossi, Russo och Ferrari.
+essere|vara||Io [sono] svedese.|Jag är svensk.|Oregelbundet: sono, sei, è, siamo, siete, sono. Latin <b>esse</b>. Jämför essens.
+avere|ha||[Ho] un fratello e una sorella.|Jag har en bror och en syster.|Oregelbundet: ho, hai, ha, abbiamo, avete, hanno. H uttalas inte.
+venire|komma||[Vengo] da Milano.|Jag kommer från Milano.|Oregelbundet: vengo, vieni, viene, veniamo, venite, vengono. Latin <b>venire</b>.
+di dove sei?|var kommer du ifrån?||Ciao, Anna! [Di dove sei]?|Hej Anna! Var kommer du ifrån?|Svara med stad: Sono di Roma. Eller med nationalitet: Sono svedese.
+abitare|bo||[Abito] a Stoccolma.|Jag bor i Stockholm.|Latin <b>habitare</b>. Jämför habitat. A + stad, in + land: abito in Italia.
+parlare|tala, prata||[Parli] italiano?|Pratar du italienska?|Regelbundet -are-verb: parlo, parli, parla. Jämför parlament.
+la lingua|språket; tungan|f|Parlo tre [lingue].|Jag talar tre språk.|Plural: le lingue. Latin <b>lingua</b> 'tunga'. Jämför lingvistik.
+l'Italia|Italien|f|Abito in [Italia].|Jag bor i Italien.|Länder har artikel (l'Italia è bella), men efter in försvinner den: in Italia.
+italiano|italiensk; italienska (språket)||Studio l'[italiano] a scuola.|Jag läser italienska i skolan.|Femininum italiana. Nationaliteter och språk skrivs med liten bokstav.
+la Svezia|Sverige|f|Vengo dalla [Svezia].|Jag kommer från Sverige.|Da + la blir dalla. Stockholm heter Stoccolma på italienska.
+svedese|svensk; svenska (språket)||Sono [svedese] e abito a Uppsala.|Jag är svensk och bor i Uppsala.|Samma form i maskulinum och femininum. Plural: svedesi.
+inglese|engelsk; engelska (språket)||Parlo [inglese] e svedese.|Jag talar engelska och svenska.|Samma form i maskulinum och femininum. L'Inghilterra = England.
+tedesco|tysk; tyska (språket)||Mia madre parla [tedesco].|Min mamma talar tyska.|Femininum tedesca. Plural: tedeschi, tedesche. La Germania = Tyskland.
+francese|fransk; franska (språket)||Il mio amico è [francese].|Min kompis är fransk.|Samma form i maskulinum och femininum. La Francia = Frankrike.
+spagnolo|spansk; spanska (språket)||Studio lo [spagnolo] e l'italiano.|Jag läser spanska och italienska.|Femininum spagnola. Lo framför sp-: lo spagnolo. La Spagna = Spanien.
+il paese|landet; byn|m|L'Italia è un [paese] bellissimo.|Italien är ett jättevackert land.|Plural: i paesi. Betyder också 'liten ort, by'.
+il numero|numret|m|Qual è il tuo [numero] di telefono?|Vilket är ditt telefonnummer?|Plural: i numeri. Latin <b>numerus</b>. Jämför numerisk.
+come si scrive?|hur stavas det?||Rossi? [Come si scrive]?|Rossi? Hur stavas det?|Ordagrant 'hur skrivs det?'. Bra när man stavar namn.
+dove|var||[Dove] abiti?|Var bor du?|Dove + è blir dov'è: Dov'è il bar?
+chi|vem||[Chi] è quel ragazzo?|Vem är den där killen?|Uttalas 'ki': ch före i och e uttalas k.
+come|hur; som||[Come] ti chiami?|Vad heter du?|Ordagrant 'hur kallar du dig?'. Come betyder också 'som': alto come me.
+lo studente|studenten|m|Marco è uno [studente] di Roma.|Marco är en student från Rom.|Plural: gli studenti. Lo och uno framför s + konsonant. Femininum: la studentessa.
+il ragazzo|pojken, killen|m|Il [ragazzo] si chiama Paolo.|Killen heter Paolo.|Plural: i ragazzi. Används om tonåringar och unga vuxna. Il mio ragazzo = min pojkvän.
+la ragazza|flickan, tjejen|f|La [ragazza] con la borsa rossa è Anna.|Tjejen med den röda väskan är Anna.|Plural: le ragazze. La mia ragazza = min flickvän.
+l'amico|kompisen, vännen|m|Marco è il mio [amico].|Marco är min kompis.|Plural: gli amici. Latin <b>amicus</b>, av amare 'älska'. Jämför amatör.
+l'amica|kompisen, väninnan|f|Questa è la mia [amica] Sara.|Det här är min kompis Sara.|Plural: le amiche. H behövs för att behålla k-ljudet.
+anche|också||Parlo [anche] inglese.|Jag talar också engelska.|Anch'io = jag också.
+sì|ja||[Sì], sono italiana.|Ja, jag är italienska.|Med accent! Si utan accent är ett pronomen (si chiama).
+no|nej||[No], non sono inglese.|Nej, jag är inte engelsk.|Inte heter non och står före verbet: non parlo tedesco.
+uno|ett||Contiamo: [uno], due, tre!|Vi räknar: ett, två, tre!|Framför substantiv: un libro, uno zaino, una casa.
+due|två||Ho [due] gatti.|Jag har två katter.|Latin <b>duo</b>. Jämför duett.
+tre|tre||Abbiamo [tre] ore di italiano.|Vi har tre timmar italienska.|Latin <b>tres</b>, samma ord som svenskans tre.
+quattro|fyra||Siamo in [quattro] in famiglia.|Vi är fyra i familjen.|Latin <b>quattuor</b>. Tt uttalas längre än ett t.
+cinque|fem||In classe ci sono [cinque] ragazze.|I klassen finns det fem tjejer.|Latin <b>quinque</b>. Jämför kvintett.
+sei|sex||Mia sorella ha [sei] anni.|Min syster är sex år.|Samma form som 'du är': tu sei.
+sette|sju||La settimana ha [sette] giorni.|Veckan har sju dagar.|Settimana 'vecka' kommer av sette.
+otto|åtta||Mi alzo alle [otto].|Jag går upp klockan åtta.|Ottobre var den åttonde månaden i den romerska kalendern.
+nove|nio||Il film comincia alle [nove].|Filmen börjar klockan nio.|Latin <b>novem</b>. Jämför november, den nionde romerska månaden.
+dieci|tio||Ho [dieci] euro.|Jag har tio euro.|Latin <b>decem</b>. Jämför december och decimal.
+venti|tjugo||Ho [venti] anni.|Jag är tjugo år.|Venti betyder också 'vindar' (il vento – i venti).
+#i2|Kap 2 · La mia famiglia
+la famiglia|familjen|f|La mia [famiglia] è grande.|Min familj är stor.|Plural: le famiglie. Latin <b>familia</b>. Gl uttalas ungefär som lj.
+il padre|pappan, fadern|m|Mio [padre] è molto alto.|Min pappa är väldigt lång.|Plural: i padri. Mio padre utan artikel (släktord i singular). Latin <b>pater</b>.
+la madre|mamman, modern|f|Mia [madre] si chiama Elena.|Min mamma heter Elena.|Plural: le madri. Obs: femininum trots -e.
+il papà|pappa|m|Il mio [papà] è simpatico.|Min pappa är trevlig.|Plural: i papà (oförändrad). Vardagligt ord, därför il mio papà med artikel.
+la mamma|mamma|f|La mia [mamma] fa la dottoressa.|Min mamma är läkare.|Plural: le mamme. Vardagligt ord, därför la mia mamma med artikel.
+i genitori|föräldrarna|mpl|I miei [genitori] sono gentili.|Mina föräldrar är snälla.|Singular: il genitore. Obs: släktingar heter i parenti.
+il fratello|brodern|m|Ho un [fratello] più grande.|Jag har en storebror.|Plural: i fratelli, som också kan betyda 'syskonen'. Latin <b>frater</b>.
+la sorella|systern|f|Mia [sorella] ha dodici anni.|Min syster är tolv år.|Plural: le sorelle. Latin <b>soror</b>.
+il figlio|sonen|m|Hanno un [figlio] e una figlia.|De har en son och en dotter.|Plural: i figli, som också kan betyda 'barnen'.
+la figlia|dottern|f|La loro [figlia] studia a Bologna.|Deras dotter studerar i Bologna.|Plural: le figlie. Obs: la loro figlia med artikel.
+il nonno|farfar, morfar|m|Mio [nonno] ha ottant'anni.|Min farfar är åttio år.|Plural: i nonni, som också betyder 'farföräldrarna, morföräldrarna'.
+la nonna|farmor, mormor|f|La [nonna] cucina benissimo.|Farmor lagar jättegod mat.|Plural: le nonne.
+lo zio|farbrodern, morbrodern|m|Mio [zio] abita a Napoli.|Min farbror bor i Neapel.|Plural: gli zii. Lo framför z: lo zio, lo zaino.
+la zia|fastern, mostern|f|Mia [zia] ha due gatti.|Min moster har två katter.|Plural: le zie.
+il cugino|kusinen|m|Mio [cugino] gioca a calcio.|Min kusin spelar fotboll.|Plural: i cugini. En kvinnlig kusin: la cugina.
+la cugina|kusinen (flicka)|f|Mia [cugina] vive in Sicilia.|Min kusin bor på Sicilien.|Plural: le cugine.
+il marito|mannen, maken|m|Il [marito] di Anna è italiano.|Annas man är italienare.|Plural: i mariti. Latin <b>maritus</b> 'gift man'.
+la moglie|frun, hustrun|f|Sua [moglie] è molto gentile.|Hans fru är väldigt snäll.|Oregelbunden plural: le mogli. Gli uttalas ungefär som lj.
+l'uomo|mannen|m|Quell'[uomo] è mio zio.|Den där mannen är min morbror.|Oregelbunden plural: gli uomini. Latin <b>homo</b> 'människa'.
+la donna|kvinnan|f|Quella [donna] è la mia professoressa.|Den där kvinnan är min lärare.|Plural: le donne. Latin <b>domina</b> 'härskarinna'. Jämför madonna 'min fru'.
+il bambino|barnet, den lille pojken|m|Il [bambino] ha tre anni.|Barnet är tre år.|Plural: i bambini. En liten flicka: la bambina.
+il cane|hunden|m|Abbiamo un [cane] nero.|Vi har en svart hund.|Plural: i cani. Latin <b>canis</b>.
+il gatto|katten|m|Il mio [gatto] dorme sempre.|Min katt sover hela tiden.|Plural: i gatti. En honkatt: la gatta.
+l'anno|året|m|Ho quindici [anni].|Jag är femton år.|Plural: gli anni. Ålder säger man med avere: ho quindici anni. Latin <b>annus</b>.
+quanti anni hai?|hur gammal är du?||Ciao Luca, [quanti anni hai]?|Hej Luca, hur gammal är du?|Ordagrant 'hur många år har du?'. Svar: Ho sedici anni.
+alto|lång, hög||Mio fratello è molto [alto].|Min bror är väldigt lång.|Femininum alta. Latin <b>altus</b> 'hög'. Jämför altitud.
+basso|kort, låg||Sono [basso] come mio padre.|Jag är kort som min pappa.|Femininum bassa. Jämför bas, den låga stämman.
+grande|stor||Abito in una casa [grande].|Jag bor i ett stort hus.|Samma form i maskulinum och femininum. Plural: grandi.
+piccolo|liten||Abitiamo in un paese [piccolo].|Vi bor i en liten by.|Femininum piccola. Jämför piccolaflöjt, den minsta flöjten.
+giovane|ung||La mia professoressa è [giovane].|Min lärare är ung.|Samma form i maskulinum och femininum. Plural: giovani. Latin <b>iuvenis</b>. Jämför juvenil.
+vecchio|gammal||Il mio cane è [vecchio].|Min hund är gammal.|Femininum vecchia. Plural: vecchi, vecchie.
+bello|vacker, snygg, fin||Firenze è una città [bella].|Florens är en vacker stad.|Femininum bella. Före substantiv: un bel ragazzo, una bella casa.
+simpatico|trevlig||Il nuovo compagno è [simpatico].|Den nya klasskompisen är trevlig.|Plural: simpatici, simpatiche. Betyder oftast 'trevlig', inte bara 'sympatisk'.
+gentile|snäll, vänlig||La nonna è sempre [gentile].|Farmor är alltid snäll.|Samma form i maskulinum och femininum. Plural: gentili. Jämför engelska gentle.
+timido|blyg||Sono un po' [timido].|Jag är lite blyg.|Femininum timida. Latin <b>timidus</b>, av timere 'frukta'.
+divertente|rolig||Mio zio è molto [divertente].|Min morbror är väldigt rolig.|Samma form i maskulinum och femininum. Plural: divertenti.
+intelligente|intelligent, smart||Mia sorella è [intelligente].|Min syster är smart.|Samma form i maskulinum och femininum. Plural: intelligenti.
+magro|smal||Il mio gatto è [magro].|Min katt är smal.|Femininum magra. Latin <b>macer</b>. Jämför mager.
+i capelli|håret|mpl|Anna ha i [capelli] lunghi.|Anna har långt hår.|Singular il capello = ett hårstrå. Håret på huvudet står i plural.
+gli occhi|ögonen|mpl|Ho gli [occhi] azzurri.|Jag har blå ögon.|Singular: l'occhio. Latin <b>oculus</b>. Jämför okular.
+biondo|blond, ljushårig||Mia madre è [bionda].|Min mamma är blond.|Femininum bionda. Capelli biondi = ljust hår.
+castano|brun (om hår och ögon)||Ho i capelli [castani].|Jag har brunt hår.|Femininum castana. Används om hår och ögon, annars heter brun marrone.
+lungo|lång (om saker)||Il film è molto [lungo].|Filmen är väldigt lång.|Plural: lunghi, lunghe. Om personer säger man alto.
+corto|kort (om saker)||Porto i capelli [corti].|Jag har kort hår.|Femininum corta. Om personer säger man basso.
+gli occhiali|glasögonen|mpl|Mio padre porta gli [occhiali].|Min pappa har glasögon.|Används nästan bara i plural. Av occhio 'öga'.
+trenta|trettio||Mia zia ha [trenta] anni.|Min moster är trettio år.|Vokalen faller bort före uno och otto: trentuno, trentotto.
+quaranta|fyrtio||Mio padre ha [quaranta] anni.|Min pappa är fyrtio år.|Jämför karantän, som från början var fyrtio dagar (quaranta giorni).
+cinquanta|femtio||Nella scuola ci sono [cinquanta] professori.|På skolan finns det femtio lärare.|Femtiofem: cinquantacinque.
+cento|hundra||La mia bisnonna ha quasi [cento] anni.|Min gammelmormor är nästan hundra år.|Oförändrad: duecento, trecento. Latin <b>centum</b>. Jämför procent.
+lavorare|arbeta, jobba||Mio padre [lavora] in un negozio.|Min pappa jobbar i en affär.|Regelbundet: lavoro, lavori, lavora. Latin <b>laborare</b>. Jämför laborera.
+sposato|gift||I miei nonni sono [sposati] da cinquant'anni.|Mina morföräldrar har varit gifta i femtio år.|Femininum sposata. Av sposarsi 'gifta sig'.
+figlio unico|enda barn||Sono [figlio unico].|Jag är enda barnet.|Om en flicka: figlia unica.
+maggiore|äldre (om syskon)||Mia sorella [maggiore] ha diciotto anni.|Min storasyster är arton år.|Samma form i maskulinum och femininum. Latin <b>maior</b> 'större'.
+minore|yngre (om syskon)||Ho un fratello [minore].|Jag har en lillebror.|Samma form i maskulinum och femininum. Latin <b>minor</b> 'mindre'.
+i gemelli|tvillingarna|mpl|Marco e Luca sono [gemelli].|Marco och Luca är tvillingar.|Singular: il gemello, la gemella. Jämför stjärntecknet Tvillingarna, på latin Gemini.
+sportivo|sportig||Mio fratello è molto [sportivo].|Min bror är väldigt sportig.|Femininum sportiva.
+pigro|lat||La domenica sono [pigro].|På söndagarna är jag lat.|Femininum pigra. Latin <b>piger</b> 'lat'.
+allegro|glad||Mia cugina è sempre [allegra].|Min kusin är alltid glad.|Femininum allegra. Jämför musikens allegro 'glatt, livligt'.
+serio|allvarlig||Il professore è molto [serio].|Läraren är väldigt allvarlig.|Plural: seri, serie. Jämför seriös.
+carino|söt, gullig||Il tuo cane è [carino]!|Din hund är söt!|Femininum carina. Av caro 'kär'.
+#i3|Kap 3 · Scuola e tempo libero
+la scuola|skolan|f|La mia [scuola] è grande.|Min skola är stor.|Plural: le scuole. Sc före o uttalas sk. Latin <b>schola</b>.
+la classe|klassen|f|Nella mia [classe] siamo in venti.|Vi är tjugo i min klass.|Plural: le classi. Obs: femininum trots -e.
+il professore|läraren|m|Il [professore] di storia è simpatico.|Historieläraren är trevlig.|Plural: i professori. En kvinnlig lärare: la professoressa. Vardagligt: il prof, la prof.
+il compagno di classe|klasskompisen|m|Il mio [compagno di classe] si chiama Luca.|Min klasskompis heter Luca.|Plural: i compagni di classe. En flicka: la compagna di classe.
+la materia|ämnet|f|Qual è la tua [materia] preferita?|Vilket är ditt favoritämne?|Plural: le materie.
+la matematica|matematiken|f|La [matematica] è difficile.|Matte är svårt.|Vardagligt: la mate.
+la storia|historien; berättelsen|f|Oggi abbiamo [storia] alle nove.|I dag har vi historia klockan nio.|Plural: le storie. Betyder både 'historia' och 'berättelse'.
+la geografia|geografin|f|Mi piace la [geografia].|Jag gillar geografi.|Betoning: geografìa. Grekiska <b>geo</b> 'jord' + <b>grafia</b> 'skrivande'.
+la musica|musiken|f|Ascolto [musica] con le cuffie.|Jag lyssnar på musik i hörlurar.|Plural: le musiche. Betoning på första stavelsen: mùsica.
+la biologia|biologin|f|La [biologia] è interessante.|Biologi är intressant.|Betoning: biologìa. Grekiska <b>bios</b> 'liv'.
+l'educazione fisica|idrotten (skolämnet)|f|Il martedì abbiamo [educazione fisica].|På tisdagarna har vi idrott.|Ordagrant 'fysisk fostran'. Vardagligt: ginnastica.
+la lezione|lektionen|f|La [lezione] comincia alle otto.|Lektionen börjar klockan åtta.|Plural: le lezioni. Latin <b>lectio</b> 'läsning'. Jämför lektion.
+i compiti|läxorna|mpl|Ho molti [compiti] per domani.|Jag har mycket läxor till i morgon.|Singular il compito = uppgiften. Fare i compiti = göra läxorna.
+il libro|boken|m|Leggo un [libro] interessante.|Jag läser en intressant bok.|Plural: i libri. Latin <b>liber</b>. Obs: la libreria = bokhandeln.
+il quaderno|skrivboken|m|Scrivo le parole nel [quaderno].|Jag skriver orden i skrivboken.|Plural: i quaderni.
+la penna|pennan (bläck)|f|Hai una [penna] rossa?|Har du en röd penna?|Plural: le penne. Betyder också 'fjäder', och pastan penne har fått namnet därifrån.
+la matita|blyertspennan|f|Scrivo con la [matita].|Jag skriver med blyertspenna.|Plural: le matite.
+lo zaino|ryggsäcken|m|Il mio [zaino] è pesante.|Min ryggsäck är tung.|Plural: gli zaini. Lo framför z.
+studiare|plugga, studera||[Studio] italiano da un mese.|Jag har pluggat italienska i en månad.|Presens: studio, studi, studia (bara ett i i tu-formen).
+imparare|lära sig||Voglio [imparare] l'italiano.|Jag vill lära mig italienska.|Regelbundet: imparo, impari, impara.
+leggere|läsa||[Leggo] un libro ogni settimana.|Jag läser en bok varje vecka.|Presens: leggo, leggi, legge. Gg är hårt före o, mjukt före i och e. Latin <b>legere</b>.
+scrivere|skriva||[Scrivo] un messaggio a Sara.|Jag skriver ett meddelande till Sara.|Presens: scrivo, scrivi, scrive. Latin <b>scribere</b>, samma ord som svenskans skriva.
+difficile|svår||L'esercizio è [difficile].|Övningen är svår.|Samma form i maskulinum och femininum. Plural: difficili.
+facile|lätt||L'italiano è [facile]!|Italienska är lätt!|Samma form i maskulinum och femininum. Plural: facili.
+noioso|tråkig||La lezione di oggi è [noiosa].|Dagens lektion är tråkig.|Femininum noiosa. Jämför engelska annoying.
+interessante|intressant||Il museo è molto [interessante].|Museet är väldigt intressant.|Samma form i maskulinum och femininum. Plural: interessanti.
+lunedì|måndag|m|[Lunedì] ho matematica.|På måndag har jag matte.|Veckodagar skrivs med liten bokstav. Il lunedì = på måndagarna. Av luna 'månen'.
+martedì|tisdag|m|[Martedì] abbiamo storia.|På tisdag har vi historia.|Av Marte, krigsguden Mars.
+mercoledì|onsdag|m|Il [mercoledì] ho chitarra.|På onsdagarna har jag gitarr.|Av Mercurio, guden Merkurius.
+giovedì|torsdag|m|[Giovedì] c'è la partita.|På torsdag är det match.|Av Giove, guden Jupiter.
+venerdì|fredag|m|Il [venerdì] mangiamo la pizza.|På fredagarna äter vi pizza.|Av Venere, gudinnan Venus.
+sabato|lördag|m|[Sabato] dormo fino alle dieci.|På lördag sover jag till tio.|Från hebreiska sabbat 'vilodag'.
+domenica|söndag|f|La [domenica] pranziamo dai nonni.|På söndagarna äter vi lunch hos farmor och farfar.|Den enda veckodagen som är femininum. Latin <b>dies dominica</b> 'Herrens dag'.
+la settimana|veckan|f|Ho italiano due volte alla [settimana].|Jag har italienska två gånger i veckan.|Plural: le settimane. Av sette 'sju'.
+il fine settimana|helgen|m|Cosa fai il [fine settimana]?|Vad gör du i helgen?|Plural: i fine settimana (oförändrad). Man säger också il weekend.
+il tempo libero|fritiden|m|Nel [tempo libero] suono la chitarra.|På fritiden spelar jag gitarr.|Il tempo betyder både 'tid' och 'väder'.
+lo sport|sporten|m|Qual è il tuo [sport] preferito?|Vilken är din favoritsport?|Plural: gli sport (oförändrad). Fare sport = idrotta.
+il calcio|fotbollen|m|Gioco a [calcio] con i miei amici.|Jag spelar fotboll med mina kompisar.|Ordagrant 'sparken'. Giocare a calcio = spela fotboll.
+giocare|spela (sport), leka||[Gioco] a tennis il sabato.|Jag spelar tennis på lördagarna.|Presens: gioco, giochi, gioca (h för att behålla k-ljudet). Giocare a + sport, men suonare + instrument.
+nuotare|simma||D'estate [nuoto] nel mare.|På sommaren simmar jag i havet.|Regelbundet: nuoto, nuoti, nuota.
+ballare|dansa||Ti piace [ballare]?|Tycker du om att dansa?|Regelbundet: ballo, balli, balla. Jämför bal och balett.
+cantare|sjunga||Mia sorella [canta] in un coro.|Min syster sjunger i en kör.|Latin <b>cantare</b>. Jämför kantor.
+suonare|spela (instrument)||[Suono] il pianoforte da sei anni.|Jag har spelat piano i sex år.|Suonare + artikel + instrument. Sport heter giocare. Av suono 'ljud'.
+la chitarra|gitarren|f|Mio fratello suona la [chitarra].|Min bror spelar gitarr.|Plural: le chitarre. Ch uttalas k.
+il pianoforte|pianot|m|Il [pianoforte] è in soggiorno.|Pianot står i vardagsrummet.|Plural: i pianoforti. Ordagrant 'svagt-starkt'. Kortform: il piano.
+la batteria|trummorna|f|Suono la [batteria] in una band.|Jag spelar trummor i ett band.|Plural: le batterie. Betyder också 'batteri'.
+il violino|fiolen|m|Anna suona il [violino] nell'orchestra.|Anna spelar fiol i orkestern.|Plural: i violini. Ordagrant 'liten viola'.
+lo strumento|instrumentet|m|Suoni uno [strumento]?|Spelar du något instrument?|Plural: gli strumenti. Lo och uno framför s + konsonant.
+la canzone|sången, låten|f|Questa [canzone] è bellissima.|Den här låten är jättefin.|Plural: le canzoni. Samma rot som cantare 'sjunga'.
+il concerto|konserten|m|Stasera andiamo al [concerto].|I kväll går vi på konsert.|Plural: i concerti.
+ascoltare|lyssna på||[Ascolto] la radio in cucina.|Jag lyssnar på radio i köket.|Ingen preposition: ascolto la musica = jag lyssnar på musik.
+guardare|titta på||[Guardo] la televisione la sera.|Jag tittar på tv på kvällen.|Ingen preposition: guardo un film = jag tittar på en film.
+il film|filmen|m|Stasera guardiamo un [film].|I kväll tittar vi på en film.|Plural: i film (oförändrad, lånord).
+il videogioco|tv-spelet|m|Mio fratello gioca ai [videogiochi].|Min bror spelar tv-spel.|Plural: i videogiochi (med h).
+uscire|gå ut||Il sabato [esco] con gli amici.|På lördagarna går jag ut med kompisarna.|Oregelbundet: esco, esci, esce, usciamo, uscite, escono.
+la palestra|gymmet, gymnastiksalen|f|Vado in [palestra] tre volte alla settimana.|Jag går till gymmet tre gånger i veckan.|Plural: le palestre.
+mi piace|jag tycker om, jag gillar||[Mi piace] la pizza.|Jag gillar pizza.|Ordagrant 'det behagar mig'. Med verb: mi piace ballare.
+mi piacciono|jag tycker om (flera saker)||[Mi piacciono] i film italiani.|Jag gillar italienska filmer.|Piacciono när det man gillar står i plural.
+non mi piace|jag tycker inte om||[Non mi piace] il calcio.|Jag gillar inte fotboll.|Non står först.
+preferire|föredra, tycka mer om||[Preferisco] la musica rock.|Jag föredrar rockmusik.|Med -isc-: preferisco, preferisci, preferisce, preferiamo, preferite, preferiscono.
+fare|göra||Che cosa [fai] nel tempo libero?|Vad gör du på fritiden?|Oregelbundet: faccio, fai, fa, facciamo, fate, fanno. Fare sport = idrotta.
+disegnare|rita||Mi piace [disegnare] fumetti.|Jag gillar att rita serier.|Regelbundet: disegno, disegni, disegna. Jämför design.
+la partita|matchen|f|Guardiamo la [partita] alla TV.|Vi tittar på matchen på tv.|Plural: le partite.
+#i4|Kap 4 · La mia giornata
+la giornata|dagen (hela dagen)|f|Com'è la tua [giornata]?|Hur ser din dag ut?|Plural: le giornate. Giornata = dagen som den går, giorno = dagen i kalendern.
+il giorno|dagen|m|Che [giorno] è oggi?|Vilken dag är det i dag?|Plural: i giorni. Jämför journal, som från början var en dagbok.
+la mattina|morgonen, förmiddagen|f|La [mattina] bevo un caffè.|På morgonen dricker jag en kaffe.|Plural: le mattine. La mattina = på morgonen. Jämför matiné.
+il pomeriggio|eftermiddagen|m|Il [pomeriggio] faccio i compiti.|På eftermiddagen gör jag läxorna.|Plural: i pomeriggi. Av latin <b>post meridiem</b> 'efter middagstid'.
+la sera|kvällen|f|La [sera] guardo la TV.|På kvällen tittar jag på tv.|Plural: le sere. Buonasera = god kväll.
+la notte|natten|f|Di [notte] dormo otto ore.|På natten sover jag åtta timmar.|Plural: le notti. Latin <b>nox, noctis</b>.
+oggi|i dag||[Oggi] non ho lezione.|I dag har jag ingen lektion.|Av latin <b>hodie</b> 'denna dag'.
+domani|i morgon||[Domani] non c'è scuola.|I morgon är det ingen skola.|A domani = vi ses i morgon. Från latin <b>de mane</b> 'från morgonen'.
+stasera|i kväll||[Stasera] esco con Marco.|I kväll går jag ut med Marco.|Sammandraget av questa sera 'den här kvällen'.
+l'ora|timmen; tiden|f|La lezione dura un'[ora].|Lektionen varar en timme.|Plural: le ore. Che ore sono? = vad är klockan?
+il minuto|minuten|m|Aspetta un [minuto]!|Vänta en minut!|Plural: i minuti.
+che ore sono?|vad är klockan?||Scusa, [che ore sono]?|Ursäkta, vad är klockan?|Man kan också säga che ora è? Svar: sono le tre.
+sono le otto|klockan är åtta||[Sono le otto], andiamo!|Klockan är åtta, vi går!|Plural eftersom det är flera timmar: sono le due, sono le tre. Men: è l'una.
+è l'una|klockan är ett||Ho fame, [è l'una]!|Jag är hungrig, klockan är ett!|Singular eftersom det är en timme. Också è mezzogiorno, è mezzanotte.
+mezzogiorno|klockan tolv på dagen|m|Pranzo a [mezzogiorno].|Jag äter lunch klockan tolv.|Ordagrant 'mitt på dagen'. Utan artikel: è mezzogiorno.
+mezzanotte|midnatt|f|Il film finisce a [mezzanotte].|Filmen slutar vid midnatt.|Ordagrant 'mitt i natten'. Utan artikel: è mezzanotte.
+e mezza|och en halv (halv …)||Sono le sette [e mezza].|Klockan är halv åtta.|Obs: le sette e mezza = halv åtta (sju och en halv).
+e un quarto|kvart över||Sono le tre [e un quarto].|Klockan är kvart över tre.|Kvart i: meno un quarto (le quattro meno un quarto).
+a che ora?|(vid) vilken tid?||[A che ora] comincia il film?|Vilken tid börjar filmen?|Svar: alle nove (klockan nio), all'una (klockan ett).
+presto|tidigt; snart||Mi alzo [presto].|Jag går upp tidigt.|Motsats: tardi. A presto = vi ses snart.
+tardi|sent||Il sabato mi alzo [tardi].|På lördagarna går jag upp sent.|Sono in ritardo = jag är sen.
+sempre|alltid||Faccio [sempre] colazione.|Jag äter alltid frukost.|Latin <b>semper</b>.
+spesso|ofta||Vado [spesso] in piscina.|Jag går ofta till simhallen.|Står oftast efter verbet.
+mai|aldrig||Non bevo [mai] il caffè.|Jag dricker aldrig kaffe.|Med non före verbet: non … mai.
+qualche volta|ibland||[Qualche volta] mangio al ristorante.|Ibland äter jag på restaurang.|Ordagrant 'någon gång'. Qualche följs alltid av singular.
+di solito|brukar, oftast||[Di solito] ceno alle otto.|Jag brukar äta middag klockan åtta.|Svenskans 'brukar' blir ofta di solito + presens.
+prima|först, innan||[Prima] faccio la doccia, poi faccio colazione.|Först duschar jag, sedan äter jag frukost.|Prima di + substantiv: prima di cena 'före middagen'.
+poi|sedan, sen||Faccio i compiti e [poi] guardo la TV.|Jag gör läxorna och sedan tittar jag på tv.|Bra bindeord när man berättar i ordning.
+dopo|efter, efteråt||[Dopo] la scuola vado in palestra.|Efter skolan går jag till gymmet.|A dopo = vi ses sen.
+svegliarsi|vakna||[Mi sveglio] alle sette.|Jag vaknar klockan sju.|Reflexivt: mi sveglio, ti svegli, si sveglia.
+alzarsi|gå upp, stiga upp||[Mi alzo] alle sette e un quarto.|Jag går upp kvart över sju.|Reflexivt: mi alzo, ti alzi, si alza.
+lavarsi|tvätta sig||[Mi lavo] la faccia con l'acqua fredda.|Jag tvättar ansiktet med kallt vatten.|Reflexivt: mi lavo, ti lavi, si lava.
+vestirsi|klä på sig||[Mi vesto] in cinque minuti.|Jag klär på mig på fem minuter.|Reflexivt: mi vesto, ti vesti, si veste. Jämför i vestiti 'kläderna'.
+farsi la doccia|duscha||[Mi faccio la doccia] la sera.|Jag duschar på kvällen.|Fare är oregelbundet: mi faccio, ti fai, si fa la doccia.
+lavarsi i denti|borsta tänderna||[Mi lavo i denti] dopo colazione.|Jag borstar tänderna efter frukost.|Ordagrant 'tvätta tänderna'. Il dente – i denti. Jämför dental.
+fare colazione|äta frukost||[Faccio colazione] alle sette e mezza.|Jag äter frukost halv åtta.|Den italienska frukosten är ofta liten: en kaffe och en cornetto.
+pranzare|äta lunch||[Pranzo] a scuola.|Jag äter lunch i skolan.|Regelbundet. Il pranzo = lunchen.
+cenare|äta middag (på kvällen)||[Ceniamo] alle otto.|Vi äter middag klockan åtta.|La cena = middagen. I Italien äter man ofta sent.
+la colazione|frukosten|f|La [colazione] è pronta!|Frukosten är klar!|Plural: le colazioni.
+il pranzo|lunchen|m|Il [pranzo] è all'una.|Lunchen är klockan ett.|Plural: i pranzi.
+la cena|middagen (på kvällen)|f|Cosa c'è per [cena]?|Vad blir det till middag?|Plural: le cene.
+andare|gå, åka||[Vado] a scuola in autobus.|Jag åker buss till skolan.|Oregelbundet: vado, vai, va, andiamo, andate, vanno.
+tornare|komma tillbaka, komma hem||[Torno] a casa alle quattro.|Jag kommer hem klockan fyra.|Regelbundet: torno, torni, torna.
+dormire|sova||[Dormo] otto ore ogni notte.|Jag sover åtta timmar varje natt.|Regelbundet -ire: dormo, dormi, dorme. Latin <b>dormire</b>.
+andare a letto|gå och lägga sig||[Vado a letto] alle dieci e mezza.|Jag går och lägger mig halv elva.|Ordagrant 'gå till sängen'.
+riposarsi|vila sig||La domenica [mi riposo].|På söndagarna vilar jag.|Reflexivt: mi riposo, ti riposi, si riposa.
+divertirsi|ha roligt||[Ci divertiamo] molto insieme.|Vi har väldigt roligt tillsammans.|Reflexivt: mi diverto, ti diverti, si diverte. Jämför divertente 'rolig'.
+cominciare|börja||La scuola [comincia] a settembre.|Skolan börjar i september.|Presens: comincio, cominci, comincia (bara ett i i tu-formen).
+finire|sluta, bli klar||La lezione [finisce] alle due.|Lektionen slutar klockan två.|Med -isc-: finisco, finisci, finisce, finiamo, finite, finiscono. Jämför final.
+la sveglia|väckarklockan|f|La [sveglia] suona alle sei e mezza.|Väckarklockan ringer halv sju.|Plural: le sveglie. Av svegliarsi 'vakna'.
+stanco|trött||La sera sono [stanco].|På kvällen är jag trött.|Femininum stanca. Plural: stanchi, stanche.
+il cellulare|mobilen|m|Guardo il [cellulare] a letto.|Jag tittar på mobilen i sängen.|Plural: i cellulari. Vardagligt: il telefonino.
+stare|vara, må, stanna||Oggi [sto] a casa.|I dag stannar jag hemma.|Oregelbundet: sto, stai, sta, stiamo, state, stanno. Come stai? = hur mår du?
+dovere|måste||[Devo] fare i compiti.|Jag måste göra läxorna.|Oregelbundet: devo, devi, deve, dobbiamo, dovete, devono.
+aspettare|vänta (på)||[Aspetto] l'autobus alla fermata.|Jag väntar på bussen vid hållplatsen.|Ingen preposition: aspetto Sara = jag väntar på Sara.
+tutti i giorni|varje dag||Vado a scuola [tutti i giorni].|Jag går till skolan varje dag.|Ordagrant 'alla dagarna'. Samma som ogni giorno.
+prepararsi|göra sig i ordning||[Mi preparo] per la scuola.|Jag gör mig i ordning för skolan.|Reflexivt: mi preparo, ti prepari, si prepara.
+#i5|Kap 5 · Al bar e al ristorante
+il bar|kaféet, baren|m|Facciamo colazione al [bar].|Vi äter frukost på kaféet.|Plural: i bar (oförändrad). En italiensk bar är ett kafé där man ofta dricker kaffet stående vid disken.
+il ristorante|restaurangen|m|Stasera andiamo al [ristorante].|I kväll går vi på restaurang.|Plural: i ristoranti.
+il cameriere|servitören|m|Il [cameriere] porta il menù.|Servitören kommer med menyn.|Plural: i camerieri. En servitris: la cameriera.
+il menù|menyn|m|Posso vedere il [menù]?|Kan jag få se menyn?|Plural: i menù (oförändrad). Stavas också menu.
+il conto|notan|m|Il [conto], per favore!|Notan, tack!|Plural: i conti. Av contare 'räkna'. Jämför konto.
+il prezzo|priset|m|Il [prezzo] è sul menù.|Priset står på menyn.|Plural: i prezzi. Latin <b>pretium</b>, samma ord som svenskans pris.
+l'euro|euron|m|Il cappuccino costa due [euro].|Cappuccinon kostar två euro.|Plural: gli euro (oförändrad). En euro = cento centesimi.
+quanto costa?|vad kostar det?||Scusi, [quanto costa] il gelato?|Ursäkta, vad kostar glassen?|Om flera saker: quanto costano?
+vorrei|jag skulle vilja ha||[Vorrei] un'acqua naturale.|Jag skulle vilja ha ett vatten utan kolsyra.|Artig form av volere. Artigare än voglio.
+volere|vilja||[Vogliamo] mangiare fuori stasera.|Vi vill äta ute i kväll.|Oregelbundet: voglio, vuoi, vuole, vogliamo, volete, vogliono. Artigt: vorrei.
+prendere|ta (beställa, äta, dricka)||Io [prendo] un tè, e tu?|Jag tar ett te, och du?|Regelbundet -ere: prendo, prendi, prende.
+bere|dricka||Che cosa [bevi]?|Vad dricker du?|Oregelbundet: bevo, bevi, beve, beviamo, bevete, bevono.
+mangiare|äta||[Mangiamo] una pizza stasera?|Ska vi äta en pizza i kväll?|Presens: mangio, mangi, mangia. Gi före a och o uttalas dj.
+pagare|betala||[Pago] io!|Jag betalar!|Presens: pago, paghi, paga (h för att behålla g-ljudet).
+ordinare|beställa||Siete pronti per [ordinare]?|Är ni redo att beställa?|Regelbundet: ordino, ordini, ordina. Betyder också 'ordna'.
+il caffè|kaffet|m|Un [caffè] e un cornetto, per favore.|En kaffe och en croissant, tack.|Plural: i caffè (oförändrad). Un caffè är en espresso.
+il cappuccino|cappuccinon|m|La mattina prendo un [cappuccino].|På morgonen tar jag en cappuccino.|Plural: i cappuccini. Namnet brukar förklaras med färgen på kapucinermunkarnas kåpor.
+il cornetto|croissanten|m|Vorrei un [cornetto] alla crema.|Jag skulle vilja ha en croissant med vaniljkräm.|Plural: i cornetti. Ordagrant 'litet horn'.
+il tè|teet|m|Prendo un [tè] al limone.|Jag tar ett te med citron.|Plural: i tè (oförändrad). Skrivs med accent.
+l'acqua|vattnet|f|Posso avere un po' d'[acqua]?|Kan jag få lite vatten?|Plural: le acque. Acqua naturale = utan kolsyra, acqua frizzante = med. Latin <b>aqua</b>. Jämför akvarium.
+il succo di frutta|juicen|m|Per me un [succo di frutta].|Till mig en juice.|Plural: i succhi di frutta. Il succo = saften.
+il latte|mjölken|m|Prendi il caffè con il [latte]?|Tar du kaffet med mjölk?|Latin <b>lac, lactis</b>. Jämför laktos.
+lo zucchero|sockret|m|Il caffè senza [zucchero], per favore.|Kaffet utan socker, tack.|Plural: gli zuccheri. Lo framför z. Från arabiska <b>sukkar</b>.
+il panino|smörgåsen, frallan|m|Per pranzo mangio un [panino].|Till lunch äter jag en smörgås.|Plural: i panini. Ordagrant 'litet bröd', av pane.
+la pizza|pizzan|f|Una [pizza] margherita, per favore.|En pizza margherita, tack.|Plural: le pizze. Zz uttalas ungefär ts.
+la pasta|pastan; bakelsen|f|Mi piace la [pasta] al pomodoro.|Jag gillar pasta med tomatsås.|Plural: le paste. Una pasta kan också vara en bakelse.
+il pane|brödet|m|Compro il [pane] ogni mattina.|Jag köper bröd varje morgon.|Plural: i pani. Latin <b>panis</b>. Jämför kompanjon, 'den man delar bröd med'.
+il formaggio|osten|m|Mi piace il [formaggio] italiano.|Jag gillar italiensk ost.|Plural: i formaggi. Parmigiano och mozzarella är italienska ostar.
+il prosciutto|skinkan|m|Un panino con [prosciutto] e formaggio.|En smörgås med skinka och ost.|Plural: i prosciutti. Prosciutto crudo = lufttorkad skinka, prosciutto cotto = kokt skinka.
+la carne|köttet|f|La [carne] è buonissima.|Köttet är jättegott.|Plural: le carni. Femininum trots -e. Latin <b>caro, carnis</b>.
+il pesce|fisken|m|Il venerdì mangiamo [pesce].|På fredagarna äter vi fisk.|Plural: i pesci. Sc före e uttalas sj.
+il pollo|kycklingen|m|Di secondo prendo il [pollo].|Som varmrätt tar jag kyckling.|Plural: i polli.
+l'insalata|salladen|f|Vorrei un'[insalata] mista.|Jag skulle vilja ha en blandad sallad.|Plural: le insalate. Ordagrant 'något saltat'.
+la verdura|grönsakerna|f|Mangio molta [verdura].|Jag äter mycket grönsaker.|Singular på italienska men plural på svenska. Av verde 'grön'.
+la frutta|frukten|f|Dopo pranzo mangio la [frutta].|Efter lunch äter jag frukt.|Singular med kollektiv betydelse. En enskild frukt: un frutto.
+la mela|äpplet|f|Ogni giorno mangio una [mela].|Varje dag äter jag ett äpple.|Plural: le mele.
+l'arancia|apelsinen|f|Vorrei una spremuta d'[arancia].|Jag skulle vilja ha en färskpressad apelsinjuice.|Plural: le arance (utan i). Arancione = orange (färgen).
+il gelato|glassen|m|Un [gelato] al cioccolato, per favore.|En chokladglass, tack.|Plural: i gelati. Av gelare 'frysa'.
+il dolce|efterrätten|m|Per [dolce] prendo il tiramisù.|Till efterrätt tar jag tiramisu.|Plural: i dolci. Dolce betyder också 'söt'.
+la torta|tårtan, kakan|f|La nonna fa una [torta] buonissima.|Farmor gör en jättegod kaka.|Plural: le torte.
+l'uovo|ägget|m|A colazione mangio un [uovo].|Till frukost äter jag ett ägg.|Oregelbunden plural: le uova (femininum!).
+il pomodoro|tomaten|m|Un'insalata di [pomodori], per favore.|En tomatsallad, tack.|Plural: i pomodori. Ordagrant 'guldäpple' (pomo d'oro).
+il vino|vinet|m|Mio padre beve un bicchiere di [vino].|Min pappa dricker ett glas vin.|Plural: i vini. Vino rosso = rödvin, vino bianco = vitt vin.
+l'antipasto|förrätten|m|Come [antipasto] prendiamo il prosciutto.|Som förrätt tar vi skinka.|Plural: gli antipasti. Ordagrant 'före måltiden' (il pasto = måltiden).
+il primo|första rätten (oftast pasta)|m|Come [primo] prendo gli spaghetti.|Som första rätt tar jag spagetti.|Plural: i primi. Pasta, risotto eller soppa, före il secondo.
+il secondo|huvudrätten|m|Come [secondo] c'è il pesce.|Som huvudrätt finns det fisk.|Plural: i secondi. Kött eller fisk, efter il primo.
+il contorno|tillbehöret|m|Come [contorno] prendo le patate.|Som tillbehör tar jag potatis.|Plural: i contorni. Grönsaker eller sallad som beställs till il secondo.
+il bicchiere|glaset|m|Un [bicchiere] d'acqua, per favore.|Ett glas vatten, tack.|Plural: i bicchieri.
+la bottiglia|flaskan|f|Una [bottiglia] d'acqua frizzante.|En flaska vatten med kolsyra.|Plural: le bottiglie.
+il piatto|tallriken; maträtten|m|Il [piatto] è caldo.|Tallriken är varm.|Plural: i piatti. Il piatto del giorno = dagens rätt.
+la forchetta|gaffeln|f|Mi porta una [forchetta]?|Kan ni ta hit en gaffel?|Plural: le forchette.
+il coltello|kniven|m|Il [coltello] non taglia.|Kniven skär inte.|Plural: i coltelli.
+il cucchiaio|skeden|m|Mangio il gelato con il [cucchiaio].|Jag äter glassen med sked.|Plural: i cucchiai. Il cucchiaino = teskeden.
+il tavolo|bordet|m|Un [tavolo] per due, per favore.|Ett bord för två, tack.|Plural: i tavoli.
+buono|god, bra||Questa pizza è molto [buona].|Den här pizzan är väldigt god.|Femininum buona. Buonissimo = jättegod.
+avere fame|vara hungrig||[Ho fame], mangiamo?|Jag är hungrig, ska vi äta?|Ordagrant 'ha hunger'. La fame = hungern.
+avere sete|vara törstig||[Hai sete]? Vuoi un'acqua?|Är du törstig? Vill du ha ett vatten?|Ordagrant 'ha törst'. La sete = törsten.
+il sale|saltet|m|Mi passi il [sale], per favore?|Kan du skicka saltet?|Plural: i sali. Latin <b>sal</b>.
+vegetariano|vegetarian, vegetarisk||Sono [vegetariana], non mangio carne.|Jag är vegetarian, jag äter inte kött.|Femininum vegetariana.
+mille|tusen||La bici costa [mille] euro.|Cykeln kostar tusen euro.|Plural: mila (duemila = tvåtusen). Latin <b>mille</b>. Jämför millennium.
+duecento|tvåhundra||Il ristorante ha [duecento] posti.|Restaurangen har tvåhundra platser.|Skrivs ihop: trecento, quattrocento, cinquecento.
+#i6|Kap 6 · In città
+la città|staden|f|Roma è una [città] antica.|Rom är en gammal stad.|Oregelbunden plural: le città (oförändrad eftersom ordet slutar på betonad vokal).
+il centro|centrum|m|Abito in [centro].|Jag bor i centrum.|Plural: i centri. In centro = i centrum eller till centrum.
+la piazza|torget|f|La [piazza] è piena di gente.|Torget är fullt av folk.|Plural: le piazze. Latin <b>platea</b> 'bred gata'. Jämför plats.
+la strada|gatan, vägen|f|La mia [strada] è molto tranquilla.|Min gata är väldigt lugn.|Plural: le strade. Latin <b>strata</b> 'stenlagd väg'. Jämför engelska street.
+la via|gatan (i adresser)|f|Abito in [via] Garibaldi.|Jag bor på Via Garibaldi.|Plural: le vie. Latin <b>via</b> 'väg'.
+il negozio|affären, butiken|m|Il [negozio] apre alle nove.|Affären öppnar klockan nio.|Plural: i negozi.
+il supermercato|mataffären|m|Vado al [supermercato] a comprare il latte.|Jag går till mataffären och köper mjölk.|Plural: i supermercati.
+la farmacia|apoteket|f|Mia zia lavora in [farmacia].|Min moster jobbar på apotek.|Plural: le farmacie. Betoning: farmacìa.
+la banca|banken|f|La [banca] è chiusa il sabato.|Banken är stängd på lördagar.|Plural: le banche. Ursprungligen växlarnas bänk (banco).
+l'ufficio postale|postkontoret|m|L'[ufficio postale] è in piazza.|Postkontoret ligger på torget.|Plural: gli uffici postali. Man säger också la posta.
+la stazione|stationen|f|Come arrivo alla [stazione]?|Hur kommer jag till stationen?|Plural: le stazioni.
+l'ospedale|sjukhuset|m|Mia madre lavora in [ospedale].|Min mamma jobbar på sjukhus.|Plural: gli ospedali. Jämför hospital.
+la chiesa|kyrkan|f|La [chiesa] è molto antica.|Kyrkan är väldigt gammal.|Plural: le chiese. Ch uttalas k.
+il duomo|domkyrkan|m|Il [duomo] di Firenze è bellissimo.|Domkyrkan i Florens är jättevacker.|Plural: i duomi. Latin <b>domus</b> 'hus', alltså Guds hus.
+il museo|museet|m|Visitiamo il [museo] di storia.|Vi besöker historiska museet.|Plural: i musei. Betoning: musèo.
+il cinema|bion|m|Andiamo al [cinema] stasera?|Ska vi gå på bio i kväll?|Plural: i cinema (oförändrad, kortform av cinematografo).
+il teatro|teatern|m|Il [teatro] è molto bello.|Teatern är väldigt vacker.|Plural: i teatri.
+il parco|parken|m|Corro nel [parco] la mattina.|Jag springer i parken på morgonen.|Plural: i parchi (med h).
+la biblioteca|biblioteket|f|Studio in [biblioteca].|Jag pluggar på biblioteket.|Plural: le biblioteche. Obs: bokhandeln heter la libreria.
+la libreria|bokhandeln|f|Compro i libri in [libreria].|Jag köper böckerna i bokhandeln.|Plural: le librerie. Falsk vän: betyder inte bibliotek. Kan också betyda bokhylla.
+il mercato|marknaden, torghandeln|m|Il sabato c'è il [mercato] in piazza.|På lördagarna är det marknad på torget.|Plural: i mercati.
+l'albergo|hotellet|m|L'[albergo] è vicino alla stazione.|Hotellet ligger nära stationen.|Plural: gli alberghi (med h). Man säger också l'hotel.
+il ponte|bron|m|Il [ponte] è molto vecchio.|Bron är väldigt gammal.|Plural: i ponti. Ponte Vecchio i Florens betyder 'den gamla bron'.
+la fontana|fontänen|f|In piazza c'è una [fontana].|På torget finns det en fontän.|Plural: le fontane. Den mest kända är Fontana di Trevi i Rom.
+la fermata|hållplatsen|f|Dov'è la [fermata] dell'autobus?|Var är busshållplatsen?|Plural: le fermate. Av fermare 'stanna'.
+l'autobus|bussen|m|Prendo l'[autobus] per andare a scuola.|Jag tar bussen till skolan.|Plural: gli autobus (oförändrad).
+il treno|tåget|m|Il [treno] per Roma parte alle dieci.|Tåget till Rom går klockan tio.|Plural: i treni.
+la metropolitana|tunnelbanan|f|Prendiamo la [metropolitana].|Vi tar tunnelbanan.|Plural: le metropolitane. Kortform: la metro.
+la macchina|bilen|f|Mio padre va al lavoro in [macchina].|Min pappa åker bil till jobbet.|Plural: le macchine. Betyder också 'maskin'.
+la bicicletta|cykeln|f|Vado a scuola in [bicicletta].|Jag cyklar till skolan.|Plural: le biciclette. Kortform: la bici (le bici).
+a piedi|till fots||Vado a scuola [a piedi].|Jag går till skolan.|Il piede = foten. Men: in autobus, in treno, in bicicletta.
+il biglietto|biljetten|m|Un [biglietto] per Firenze, per favore.|En biljett till Florens, tack.|Plural: i biglietti. Betyder också 'lapp' eller 'kort'.
+c'è|det finns (en)||[C'è] una farmacia qui vicino?|Finns det ett apotek här i närheten?|C'è + singular, ci sono + plural.
+ci sono|det finns (flera)||In centro [ci sono] molti negozi.|I centrum finns det många affärer.|Ci sono + plural, c'è + singular.
+dov'è?|var är?, var ligger?||Scusi, [dov'è] il museo?|Ursäkta, var ligger museet?|Dove + è. Om flera saker: dove sono?
+a destra|till höger||Il museo è [a destra].|Museet ligger till höger.|La destra = högra handen, högersidan.
+a sinistra|till vänster||Prendi la prima strada [a sinistra].|Ta första gatan till vänster.|La sinistra = vänstra handen, vänstersidan (även i politiken).
+dritto|rakt fram||Vada sempre [dritto].|Gå rakt fram hela tiden.|Stavas också diritto. Sempre dritto = rakt fram.
+girare|svänga||Al secondo incrocio [gira] a sinistra.|Sväng vänster i andra korsningen.|Regelbundet -are. Betyder också 'snurra' och 'åka runt'.
+attraversare|korsa, gå över||[Attraversa] la piazza e poi gira a destra.|Gå över torget och sväng sedan höger.|Regelbundet: attraverso, attraversi, attraversa.
+vicino|nära||La scuola è [vicino] a casa mia.|Skolan ligger nära mitt hem.|Vicino a = nära. Il vicino = grannen.
+lontano|långt bort||L'ospedale è [lontano] da qui?|Ligger sjukhuset långt härifrån?|Lontano da = långt från.
+l'angolo|hörnet|m|Il bar è all'[angolo].|Kaféet ligger på hörnet.|Plural: gli angoli. Betyder också 'vinkel'.
+il semaforo|trafikljuset|m|Al [semaforo] gira a destra.|Sväng höger vid trafikljuset.|Plural: i semafori.
+l'incrocio|korsningen|m|All'[incrocio] vai a sinistra.|I korsningen går du till vänster.|Plural: gli incroci. Av croce 'kors'.
+potere|kunna, få||[Posso] pagare con la carta?|Kan jag betala med kort?|Oregelbundet: posso, puoi, può, possiamo, potete, possono.
+cercare|leta efter, söka||[Cerco] una farmacia.|Jag letar efter ett apotek.|Presens: cerco, cerchi, cerca. Ingen preposition: cerco Marco.
+comprare|köpa||[Compro] un biglietto per l'autobus.|Jag köper en bussbiljett.|Regelbundet: compro, compri, compra.
+aperto|öppen||Il negozio è [aperto] fino alle otto.|Affären har öppet till åtta.|Femininum aperta. Av aprire 'öppna'.
+chiuso|stängd||Il museo è [chiuso] il lunedì.|Museet är stängt på måndagar.|Femininum chiusa. Av chiudere 'stänga'.
+la pasticceria|konditoriet|f|Compriamo le paste in [pasticceria].|Vi köper bakelser på konditoriet.|Plural: le pasticcerie. Betoning: pasticcerìa.
+la gelateria|glassbaren|f|Andiamo in [gelateria]!|Vi går till glassbaren!|Plural: le gelaterie.
+l'edicola|tidningskiosken|f|Compro il giornale all'[edicola].|Jag köper tidningen i kiosken.|Plural: le edicole. Där säljs tidningar och ofta också bussbiljetter.
+la gente|folk, människor|f|C'è tanta [gente] in centro.|Det är mycket folk i centrum.|Singular på italienska: la gente è simpatica.
+il quartiere|stadsdelen, kvarteret|m|Abito in un [quartiere] tranquillo.|Jag bor i en lugn stadsdel.|Plural: i quartieri. Av quarto 'fjärdedel'.
+il posto|platsen, stället|m|È un [posto] molto bello.|Det är ett väldigt fint ställe.|Plural: i posti. Också 'sittplats': questo posto è libero?
+la torre|tornet|f|La [torre] di Pisa è famosa.|Tornet i Pisa är berömt.|Plural: le torri. Femininum trots -e. Latin <b>turris</b>.
+scendere|kliva av, gå ner||[Scendo] alla prossima fermata.|Jag kliver av vid nästa hållplats.|Regelbundet i presens: scendo, scendi, scende.
+salire|kliva på, gå upp||[Salgo] sull'autobus.|Jag kliver på bussen.|Oregelbundet: salgo, sali, sale, saliamo, salite, salgono.
+#i7|Kap 7 · A casa mia
+la casa|huset, hemmet|f|La nostra [casa] ha un giardino.|Vårt hus har en trädgård.|Plural: le case. A casa = hemma.
+l'appartamento|lägenheten|m|Abitiamo in un [appartamento] al terzo piano.|Vi bor i en lägenhet på tredje våningen.|Plural: gli appartamenti.
+la camera|rummet, sovrummet|f|La mia [camera] è piccola ma bella.|Mitt rum är litet men fint.|Plural: le camere. Jämför kammare.
+la camera da letto|sovrummet|f|La [camera da letto] dei miei genitori è grande.|Mina föräldrars sovrum är stort.|Plural: le camere da letto.
+il soggiorno|vardagsrummet|m|Guardiamo la TV in [soggiorno].|Vi tittar på tv i vardagsrummet.|Plural: i soggiorni. Betyder också 'vistelse'. Man säger också il salotto.
+la cucina|köket; matlagningen|f|La mamma è in [cucina].|Mamma är i köket.|Plural: le cucine. La cucina italiana = det italienska köket.
+il bagno|badrummet, toaletten|m|Nel [bagno] c'è la doccia.|I badrummet finns duschen.|Plural: i bagni. Fare il bagno = bada.
+il balcone|balkongen|m|Faccio colazione sul [balcone].|Jag äter frukost på balkongen.|Plural: i balconi.
+il giardino|trädgården|m|Abbiamo un [giardino] con molti fiori.|Vi har en trädgård med många blommor.|Plural: i giardini.
+la finestra|fönstret|f|Apri la [finestra], per favore.|Öppna fönstret, snälla.|Plural: le finestre. Latin <b>fenestra</b>. Jämför tyska Fenster.
+la porta|dörren|f|Chiudi la [porta]!|Stäng dörren!|Plural: le porte. Jämför port.
+il piano|våningen|m|Abito al secondo [piano].|Jag bor på andra våningen.|Plural: i piani. Il piano terra = bottenvåningen. Piano betyder också 'långsamt, tyst'.
+le scale|trappan|fpl|Salgo le [scale] a piedi.|Jag går uppför trappan.|Singular la scala = stegen. Latin <b>scala</b>. Jämför skala.
+il letto|sängen|m|Il mio [letto] è troppo piccolo.|Min säng är för liten.|Plural: i letti.
+l'armadio|garderoben|m|Nella mia camera c'è un [armadio] grande.|I mitt rum finns det en stor garderob.|Plural: gli armadi.
+la sedia|stolen|f|Ci sono quattro [sedie] in cucina.|Det finns fyra stolar i köket.|Plural: le sedie.
+la scrivania|skrivbordet|f|Il computer è sulla [scrivania].|Datorn står på skrivbordet.|Plural: le scrivanie. Av scrivere 'skriva'.
+il divano|soffan|m|Il gatto dorme sul [divano].|Katten sover i soffan.|Plural: i divani. Jämför divan.
+la lampada|lampan|f|La [lampada] è accanto al letto.|Lampan står bredvid sängen.|Plural: le lampade. Betoning på första stavelsen.
+lo specchio|spegeln|m|Mi guardo allo [specchio].|Jag tittar mig i spegeln.|Plural: gli specchi. Lo framför s + konsonant.
+il tappeto|mattan|m|Sotto il tavolo c'è un [tappeto].|Under bordet ligger en matta.|Plural: i tappeti. Samma latinska ord (tapetum) som svenskans tapet.
+lo scaffale|hyllan|m|Lo [scaffale] è pieno di libri.|Hyllan är full av böcker.|Plural: gli scaffali.
+il frigorifero|kylskåpet|m|Il latte è nel [frigorifero].|Mjölken står i kylskåpet.|Plural: i frigoriferi. Kortform: il frigo.
+la doccia|duschen|f|La [doccia] non funziona.|Duschen fungerar inte.|Plural: le docce. Farsi la doccia = duscha.
+il quadro|tavlan|m|Sulla parete c'è un [quadro].|På väggen hänger en tavla.|Plural: i quadri. Ordagrant 'fyrkant'.
+il televisore|tv-apparaten|m|Il [televisore] è in soggiorno.|Tv:n står i vardagsrummet.|Plural: i televisori. Programmen: la televisione, la TV.
+il mobile|möbeln|m|Nella mia camera ci sono pochi [mobili].|I mitt rum finns det få möbler.|Plural: i mobili. Ordagrant 'det flyttbara'.
+la parete|väggen (inomhus)|f|La [parete] è bianca.|Väggen är vit.|Plural: le pareti. Femininum trots -e. Il muro = muren.
+la chiave|nyckeln|f|Dove sono le [chiavi]?|Var är nycklarna?|Plural: le chiavi. Latin <b>clavis</b>. Jämför klaviatur.
+il pavimento|golvet|m|Lo zaino è sul [pavimento].|Ryggsäcken ligger på golvet.|Plural: i pavimenti.
+l'ascensore|hissen|m|Prendiamo l'[ascensore]?|Ska vi ta hissen?|Plural: gli ascensori. Maskulinum trots -e.
+il tetto|taket|m|La casa ha un [tetto] rosso.|Huset har ett rött tak.|Plural: i tetti.
+a casa|hemma; hem||Stasera resto [a casa].|I kväll stannar jag hemma.|Utan artikel: sono a casa, vado a casa.
+dentro|inne, inuti||Fa freddo, restiamo [dentro].|Det är kallt, vi stannar inne.|Motsats: fuori.
+fuori|ute, utanför||I bambini giocano [fuori].|Barnen leker ute.|Mangiare fuori = äta ute.
+il colore|färgen|m|Qual è il tuo [colore] preferito?|Vilken är din favoritfärg?|Plural: i colori. Maskulinum trots -e.
+rosso|röd||Ho una bicicletta [rossa].|Jag har en röd cykel.|Femininum rossa. Plural: rossi, rosse.
+blu|blå, mörkblå||Porto una giacca [blu].|Jag har en blå jacka.|Oböjligt: samma form i alla former. Ljusblått heter azzurro.
+giallo|gul||Le pareti sono [gialle].|Väggarna är gula.|Femininum gialla. Plural: gialli, gialle.
+verde|grön||La porta è [verde].|Dörren är grön.|Samma form i maskulinum och femininum. Plural: verdi. Jämför verdura 'grönsaker'.
+bianco|vit||Il divano è [bianco].|Soffan är vit.|Plural: bianchi, bianche (med h). Samma germanska ord som svenskans blank.
+nero|svart||Ho un gatto [nero].|Jag har en svart katt.|Femininum nera. Latin <b>niger</b>.
+azzurro|ljusblå||Il cielo è [azzurro].|Himlen är ljusblå.|Femininum azzurra. Gli Azzurri = det italienska landslaget, som spelar i blått.
+grigio|grå||Mio nonno ha i capelli [grigi].|Min morfar har grått hår.|Femininum grigia. Plural: grigi, grigie.
+rosa|rosa||Mia sorella ha una camera [rosa].|Min syster har ett rosa rum.|Oböjligt: samma form i alla former. La rosa = rosen.
+marrone|brun||Il tavolo è [marrone].|Bordet är brunt.|Samma form i maskulinum och femininum. Plural: marroni. Om hår och ögon: castano.
+arancione|orange||Ho uno zaino [arancione].|Jag har en orange ryggsäck.|Samma form i maskulinum och femininum. Plural: arancioni. Av arancia 'apelsin'.
+viola|lila||La lampada è [viola].|Lampan är lila.|Oböjligt. La viola = violen (både blomman och instrumentet).
+sopra|ovanpå, över||Il gatto dorme [sopra] l'armadio.|Katten sover ovanpå garderoben.|Motsats: sotto.
+sotto|under||Le scarpe sono [sotto] il letto.|Skorna ligger under sängen.|Motsats: sopra.
+davanti a|framför||Ti aspetto [davanti a] scuola.|Jag väntar på dig framför skolan.|A + artikel dras ihop: davanti al cinema, davanti alla porta.
+dietro|bakom||Il giardino è [dietro] la casa.|Trädgården ligger bakom huset.|Också dietro a: dietro alla casa.
+accanto a|bredvid||La mia camera è [accanto a] quella di mio fratello.|Mitt rum ligger bredvid min brors.|A + artikel dras ihop: accanto al letto, accanto alla finestra.
+tra|mellan||La cucina è [tra] il bagno e il soggiorno.|Köket ligger mellan badrummet och vardagsrummet.|Också fra, med samma betydelse.
+nuovo|ny||Abitiamo in una casa [nuova].|Vi bor i ett nytt hus.|Femininum nuova. Latin <b>novus</b>. Jämför novis.
+moderno|modern||La cucina è molto [moderna].|Köket är väldigt modernt.|Femininum moderna.
+comodo|bekväm||Il divano è [comodo].|Soffan är bekväm.|Femininum comoda. Latin <b>commodus</b> 'lämplig'. Jämför kommod.
+luminoso|ljus (om rum)||Il soggiorno è grande e [luminoso].|Vardagsrummet är stort och ljust.|Femininum luminosa. Av luce 'ljus'.
+pulire|städa||Il sabato [pulisco] la mia camera.|På lördagarna städar jag mitt rum.|Med -isc-: pulisco, pulisci, pulisce. Pulito = ren.
+mettere|lägga, ställa, sätta||[Metto] i libri sullo scaffale.|Jag ställer böckerna på hyllan.|Regelbundet i presens: metto, metti, mette.
+#i8|Kap 8 · Vestiti, stagioni e tempo
+i vestiti|kläderna|mpl|Metto i [vestiti] nell'armadio.|Jag lägger kläderna i garderoben.|Singular il vestito = klänningen eller kostymen.
+il vestito|klänningen; kostymen|m|Anna porta un [vestito] rosso.|Anna har en röd klänning.|Plural: i vestiti. För män betyder det kostym.
+la maglietta|t-tröjan|f|Porto una [maglietta] bianca.|Jag har en vit t-tröja.|Plural: le magliette. Ordagrant 'liten tröja'.
+la camicia|skjortan|f|Mio padre porta sempre la [camicia].|Min pappa har alltid skjorta.|Plural: le camicie.
+il maglione|tröjan (tjock)|m|Questo [maglione] è molto caldo.|Den här tröjan är väldigt varm.|Plural: i maglioni. Maglia + -one 'stor'.
+i pantaloni|byxorna|mpl|Questi [pantaloni] sono troppo lunghi.|De här byxorna är för långa.|Plural som på svenska. Av Pantalone, en figur i commedia dell'arte.
+i jeans|jeansen|mpl|Questi [jeans] sono nuovi.|De här jeansen är nya.|Oböjligt lånord, uttalas som på engelska.
+la gonna|kjolen|f|Mia sorella porta una [gonna] lunga.|Min syster har en lång kjol.|Plural: le gonne.
+le scarpe|skorna|fpl|Queste [scarpe] sono comode.|De här skorna är bekväma.|Singular: la scarpa.
+le scarpe da ginnastica|gympaskorna|fpl|Metto le [scarpe da ginnastica] per la palestra.|Jag tar på mig gympaskorna till gymmet.|Singular: la scarpa da ginnastica.
+la giacca|jackan; kavajen|f|Questa [giacca] costa troppo.|Den här jackan kostar för mycket.|Plural: le giacche (med h).
+il cappotto|kappan, rocken|m|D'inverno porto il [cappotto].|På vintern har jag kappa.|Plural: i cappotti.
+il cappello|hatten, mössan|m|Con il sole porto un [cappello].|När det är sol har jag hatt.|Plural: i cappelli. Obs: capelli (ett p) = hår.
+la sciarpa|halsduken|f|Metti la [sciarpa], fa freddo.|Ta på dig halsduken, det är kallt.|Plural: le sciarpe.
+i guanti|vantarna, handskarna|mpl|Dove sono i miei [guanti]?|Var är mina vantar?|Singular: il guanto.
+i calzini|strumporna|mpl|Ho i [calzini] di colori diversi.|Jag har strumpor i olika färger.|Singular: il calzino.
+la borsa|väskan|f|La mia [borsa] è nera.|Min väska är svart.|Plural: le borse. Betyder också 'börsen'.
+l'ombrello|paraplyet|m|Piove! Hai un [ombrello]?|Det regnar! Har du ett paraply?|Plural: gli ombrelli. Av ombra 'skugga'.
+gli occhiali da sole|solglasögonen|mpl|D'estate porto gli [occhiali da sole].|På sommaren har jag solglasögon.|Ordagrant 'glasögon för sol'.
+la taglia|storleken (kläder)|f|Che [taglia] porta?|Vilken storlek har ni?|Plural: le taglie. Skostorlek heter il numero.
+provare|prova; försöka||Posso [provare] questa gonna?|Får jag prova den här kjolen?|Regelbundet: provo, provi, prova.
+il camerino|provrummet|m|Il [camerino] è in fondo a destra.|Provrummet ligger längst in till höger.|Plural: i camerini.
+portare|ha på sig; bära, ta med||Oggi [porto] i jeans.|I dag har jag jeans.|Regelbundet: porto, porti, porta.
+ti sta bene|den klär dig, den passar dig||Questo colore [ti sta bene]!|Den här färgen klär dig!|Om flera plagg: ti stanno bene.
+caro|dyr; kär||Questo vestito è troppo [caro].|Den här klänningen är för dyr.|Femininum cara. Betyder också 'kär': cara Anna.
+economico|billig||Questa maglietta è [economica].|Den här t-tröjan är billig.|Plural: economici, economiche.
+i saldi|rean|mpl|A gennaio ci sono i [saldi].|I januari är det rea.|Används nästan bara i plural.
+il tempo|vädret; tiden|m|Com'è il [tempo] oggi?|Hur är vädret i dag?|Plural: i tempi. Betyder både 'väder' och 'tid'.
+che tempo fa?|hur är vädret?||[Che tempo fa] a Roma?|Hur är vädret i Rom?|Svaret börjar ofta med fa: fa caldo, fa freddo.
+fa caldo|det är varmt||D'estate [fa caldo].|På sommaren är det varmt.|Om personer: ho caldo = jag är varm.
+fa freddo|det är kallt||Chiudi la finestra, [fa freddo]!|Stäng fönstret, det är kallt!|Om personer: ho freddo = jag fryser.
+fa bel tempo|det är fint väder||Oggi [fa bel tempo], andiamo al mare!|I dag är det fint väder, vi åker till havet!|Motsats: fa brutto tempo.
+piovere|regna||A Londra [piove] spesso.|I London regnar det ofta.|Opersonligt: piove = det regnar. La pioggia = regnet.
+nevicare|snöa||In Svezia [nevica] molto.|I Sverige snöar det mycket.|Opersonligt: nevica = det snöar. La neve = snön.
+c'è il sole|solen skiner||Oggi [c'è il sole].|I dag skiner solen.|Ordagrant 'det finns solen'.
+c'è vento|det blåser||Al mare [c'è vento].|Vid havet blåser det.|Il vento = vinden.
+il sole|solen|m|Mi piace stare al [sole].|Jag gillar att vara i solen.|Plural: i soli. Latin <b>sol</b>. Jämför solarium.
+la pioggia|regnet|f|Non mi piace la [pioggia].|Jag gillar inte regn.|Plural: le piogge. Av piovere 'regna'.
+la neve|snön|f|I bambini giocano nella [neve].|Barnen leker i snön.|Plural: le nevi. Femininum trots -e.
+nuvoloso|molnigt||Oggi il cielo è [nuvoloso].|I dag är det molnigt.|Femininum nuvolosa. La nuvola = molnet.
+il grado|graden|m|Oggi ci sono trenta [gradi].|I dag är det trettio grader.|Plural: i gradi.
+la stagione|årstiden|f|Qual è la tua [stagione] preferita?|Vilken är din favoritårstid?|Plural: le stagioni.
+la primavera|våren|f|In [primavera] ci sono tanti fiori.|På våren finns det många blommor.|Plural: le primavere. Av latin <b>primo vere</b> 'i början av våren'.
+l'estate|sommaren|f|D'[estate] vado al mare.|På sommaren åker jag till havet.|Plural: le estati. Femininum trots -e. D'estate eller in estate = på sommaren.
+l'autunno|hösten|m|In [autunno] ricomincia la scuola.|På hösten börjar skolan igen.|Plural: gli autunni.
+l'inverno|vintern|m|L'[inverno] in Svezia è lungo.|Vintern i Sverige är lång.|Plural: gli inverni. D'inverno = på vintern.
+il mese|månaden|m|Dicembre è il mio [mese] preferito.|December är min favoritmånad.|Plural: i mesi. Maskulinum trots -e.
+gennaio|januari|m|A [gennaio] fa molto freddo.|I januari är det väldigt kallt.|Månader skrivs med liten bokstav och utan artikel: a gennaio, in gennaio.
+febbraio|februari|m|[Febbraio] è il mese più corto.|Februari är den kortaste månaden.|Carnevale firas ofta i februari.
+marzo|mars|m|A [marzo] comincia la primavera.|I mars börjar våren.|Uppkallad efter guden Mars (Marte).
+aprile|april|m|Il mio compleanno è ad [aprile].|Jag fyller år i april.|Framför vokal blir a ofta ad: ad aprile, ad agosto.
+maggio|maj|m|Il primo [maggio] è festa.|Första maj är en helgdag.|Datum: il primo maggio, men il due maggio, il tre maggio (bara 'första' är ordningstal).
+giugno|juni|m|A [giugno] finisce la scuola.|I juni slutar skolan.|Gn uttalas ungefär nj.
+luglio|juli|m|A [luglio] andiamo in Italia.|I juli åker vi till Italien.|Uppkallad efter Julius Caesar.
+agosto|augusti|m|Ad [agosto] fa molto caldo.|I augusti är det väldigt varmt.|Uppkallad efter kejsar Augustus. Ferragosto den 15 augusti är en stor helgdag i Italien.
+settembre|september|m|Il 15 [settembre] è il compleanno di mia madre.|Den 15 september fyller min mamma år.|Latin <b>septem</b> 'sju': den sjunde månaden i den äldsta romerska kalendern, som började i mars.
+ottobre|oktober|m|A [ottobre] le foglie diventano gialle.|I oktober blir löven gula.|Latin <b>octo</b> 'åtta'.
+novembre|november|m|A [novembre] piove molto.|I november regnar det mycket.|Latin <b>novem</b> 'nio'.
+dicembre|december|m|A [dicembre] festeggiamo il Natale.|I december firar vi jul.|Latin <b>decem</b> 'tio'.
+il compleanno|födelsedagen|m|Quando è il tuo [compleanno]?|När fyller du år?|Plural: i compleanni. Buon compleanno! = grattis på födelsedagen!
+#ir|Espressioni · Frasi utili
+scusi|ursäkta (artigt)||[Scusi], è libero questo posto?|Ursäkta, är den här platsen ledig?|Lei-form till vuxna man inte känner. Till kompisar: scusa.
+non capisco|jag förstår inte||Scusi, [non capisco].|Ursäkta, jag förstår inte.|Capire har -isc-: capisco, capisci, capisce.
+non ho capito|jag förstod inte||Mi dispiace, [non ho capito].|Förlåt, jag förstod inte.|Passato prossimo av capire. Mycket vanligt när man inte hängt med.
+può ripetere?|kan ni säga det igen?||[Può ripetere], per favore?|Kan ni säga det igen, tack?|Lei-form till läraren eller andra vuxna. Till en kompis: puoi ripetere?
+puoi ripetere?|kan du säga det igen?||Scusa, [puoi ripetere]?|Förlåt, kan du säga det igen?|Du-form. Artigt: può ripetere?
+più lentamente|långsammare||Può parlare [più lentamente]?|Kan ni prata långsammare?|Più = mer. Lento = långsam.
+come si dice?|hur säger man?||[Come si dice] "hund" in italiano?|Hur säger man "hund" på italienska?|Ordagrant 'hur sägs det?'.
+che cosa significa?|vad betyder det?||Scusi, [che cosa significa] questa parola?|Ursäkta, vad betyder det här ordet?|Också: che cosa vuol dire?
+non lo so|jag vet inte||Dov'è Marco? [Non lo so].|Var är Marco? Jag vet inte.|Sapere: so, sai, sa, sappiamo, sapete, sanno.
+ho una domanda|jag har en fråga||Scusi, [ho una domanda].|Ursäkta, jag har en fråga.|La domanda = frågan. Svaret heter la risposta.
+posso entrare?|får jag komma in?||Buongiorno, [posso entrare]?|God dag, får jag komma in?|Posso = jag kan, jag får (av potere).
+come va?|hur är läget?||Ciao Sara, [come va]?|Hej Sara, hur är läget?|Svar: bene, benone, così così.
+tutto bene?|är allt bra?||Sei triste? [Tutto bene]?|Är du ledsen? Är allt bra?|Svar: sì, tutto bene, grazie.
+va bene|okej, det går bra||Ci vediamo alle otto? [Va bene]!|Ses vi klockan åtta? Okej!|Ordagrant 'det går bra'. Mycket vanligt i vardagen.
+d'accordo|okej, överens||Andiamo al cinema? [D'accordo]!|Ska vi gå på bio? Okej!|Sono d'accordo = jag håller med.
+sono d'accordo|jag håller med||[Sono d'accordo] con te.|Jag håller med dig.|Nekande: non sono d'accordo.
+certo|visst, självklart||Posso? [Certo]!|Får jag? Självklart!|Också certamente. Latin <b>certus</b> 'säker'.
+perfetto|perfekt, toppen||Alle otto al bar? [Perfetto]!|Klockan åtta på kaféet? Toppen!|Används ofta för att bekräfta en plan.
+davvero?|verkligen?||Hai un cavallo? [Davvero]?|Har du en häst? Verkligen?|Da + vero 'sant'.
+che bello!|vad fint!, vad kul!||Andiamo in Italia? [Che bello]!|Ska vi åka till Italien? Vad kul!|Che + adjektiv: che buono!, che strano!
+che peccato!|vad synd!||Non puoi venire? [Che peccato]!|Kan du inte komma? Vad synd!|Il peccato betyder ordagrant 'synden'.
+mamma mia!|oj!, herregud!||[Mamma mia], che caldo!|Herregud, vad varmt!|Uttrycker förvåning eller chock.
+dai!|kom igen!; äsch!||[Dai], andiamo!|Kom igen, vi går!|Av dare 'ge'. Också: dai, non è vero! = äsch, det är inte sant!
+basta!|nu räcker det!||[Basta], ragazzi!|Nu räcker det, allihop!|Av bastare 'räcka'. Basta così = det räcker så.
+aiuto!|hjälp!||[Aiuto]! Il mio gatto è sul tetto!|Hjälp! Min katt sitter på taket!|L'aiuto = hjälpen. Aiutare = hjälpa.
+attenzione!|se upp!, obs!||[Attenzione], c'è una macchina!|Se upp, det kommer en bil!|Syns ofta på skyltar.
+figurati|det var så lite, ingen orsak||Grazie mille! – [Figurati]!|Tack så mycket! – Det var så lite!|Du-form. Till vuxna: si figuri.
+di niente|ingen orsak||Grazie per l'aiuto! – [Di niente]!|Tack för hjälpen! – Ingen orsak!|Också: di nulla, prego.
+grazie mille|tack så mycket||[Grazie mille] per il regalo!|Tack så mycket för presenten!|Ordagrant 'tusen tack'.
+buona giornata|ha en bra dag||Ciao, [buona giornata]!|Hej då, ha en bra dag!|Buona serata = ha en trevlig kväll.
+buon appetito|smaklig måltid||La cena è pronta. [Buon appetito]!|Middagen är klar. Smaklig måltid!|Säger man innan man börjar äta.
+salute!|prosit!; skål!||Etciù! – [Salute]!|Atjo! – Prosit!|Betyder 'hälsa'. Säger man när någon nyser och när man skålar.
+auguri!|grattis!, lycka till!||Oggi compi sedici anni? [Auguri]!|Fyller du sexton i dag? Grattis!|Används vid födelsedagar och högtider. Tanti auguri! = stort grattis!
+buon compleanno!|grattis på födelsedagen!||[Buon compleanno], Giulia!|Grattis på födelsedagen, Giulia!|Il compleanno = födelsedagen.
+benvenuto|välkommen||[Benvenuto] a Roma!|Välkommen till Rom!|Till en flicka: benvenuta. Till flera: benvenuti.
+permesso?|ursäkta, får jag komma förbi (in)?||[Permesso]? Posso passare?|Ursäkta? Får jag komma förbi?|Säger man när man tränger sig förbi eller går in i någons hem.
+avanti!|kom in!||Toc toc! – [Avanti]!|Knack knack! – Kom in!|Betyder också 'framåt'.
+ecco|här är, varsågod||[Ecco] il tuo caffè.|Här är ditt kaffe.|Används när man visar eller ger något. Eccomi! = här är jag!
+allora|nå, alltså, då||[Allora], che cosa facciamo?|Nå, vad gör vi?|Mycket vanligt utfyllnadsord när man tänker.
+forse|kanske||[Forse] domani piove.|Kanske regnar det i morgon.|Står oftast först i satsen.
+non importa|det gör inget||Non hai la penna? [Non importa].|Har du inte pennan? Det gör inget.|Ordagrant 'det spelar ingen roll'.
+mi dispiace|jag är ledsen, tyvärr||[Mi dispiace], non posso venire.|Tyvärr, jag kan inte komma.|Används för att be om ursäkt eller beklaga något.
+ci vediamo|vi ses||[Ci vediamo] alle otto al bar.|Vi ses klockan åtta på kaféet.|Ci vediamo dopo = vi ses sen.
+a domani|vi ses i morgon||Ciao, [a domani]!|Hej då, vi ses i morgon!|Samma mönster: a dopo, a presto, a lunedì.
+buon fine settimana|trevlig helg||Ciao prof, [buon fine settimana]!|Hej då, trevlig helg!|Man säger också buon weekend.
+sono contento|jag är glad||[Sono contento] di vederti.|Jag är glad att se dig.|En flicka säger sono contenta.
+sono triste|jag är ledsen||Oggi [sono triste].|I dag är jag ledsen.|Samma form i maskulinum och femininum.
+ho paura|jag är rädd||[Ho paura] dei ragni.|Jag är rädd för spindlar.|Ordagrant 'jag har rädsla'. La paura = rädslan.
+anch'io|jag också||Mi piace il gelato. – [Anch'io]!|Jag gillar glass. – Jag också!|Anche + io.
+neanch'io|inte jag heller||Non mi piace il calcio. – [Neanch'io].|Jag gillar inte fotboll. – Inte jag heller.|Används efter en nekande mening.
+in bocca al lupo!|lycka till!||Domani hai l'esame? [In bocca al lupo]!|Har du provet i morgon? Lycka till!|Ordagrant 'i vargens mun'. Man svarar crepi! ('må den dö').
+a che pagina?|på vilken sida?||Scusi, [a che pagina] siamo?|Ursäkta, på vilken sida är vi?|La pagina = sidan. Siamo a pagina dieci.
+ho finito|jag är klar||[Ho finito] l'esercizio!|Jag är klar med övningen!|Passato prossimo av finire.
+aprite il libro|öppna boken (till flera)||[Aprite il libro] a pagina venti.|Öppna boken på sidan tjugo.|Imperativ i voi-form, vanligt i klassrummet.

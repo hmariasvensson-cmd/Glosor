@@ -1,0 +1,81 @@
+[
+  {
+    "id": "it1-s-i2",
+    "sec": "i2",
+    "title": "La nuova compagna di classe",
+    "text": "Oggi in classe c'è una ragazza nuova. [Si chiama|Mi chiamo|Ti chiami] Lina e [viene|vengo|vieni] dalla Svezia. Lina [è|ha|sono] alta e bionda, e [ha|è|hanno] gli occhi azzurri. È un po' timida, [perché|anche|poi] non parla bene l'italiano. Io [sono|è|siamo] curiosa e parlo con lei. Lina ha un fratello e una sorella, [ma|perché|poi] non ha animali. [Quando|Ma|Anche] torna a casa, lei e sua sorella [giocano|gioca|giochiamo] con il gatto dei vicini. Anche noi [abbiamo|hanno|avete] un gatto! [Così|Mentre|Ma] adesso siamo amiche.",
+    "gaps": [
+      {"cat": "tempus", "why": "Chiamarsi är reflexivt. Det handlar om Lina (lei), så det blir si chiama. Mi chiamo = jag heter, ti chiami = du heter."},
+      {"cat": "tempus", "why": "Venire är oregelbundet. Lei-formen är viene: Lina viene dalla Svezia."},
+      {"cat": "tempus", "why": "Utseende beskrivs med essere: Lina è alta. Lei-formen av essere är è."},
+      {"cat": "tempus", "why": "Man har ögon, alltså avere: ha gli occhi azzurri. Lei-formen av avere är ha."},
+      {"cat": "bindeord", "why": "Perché = därför att: förklarar varför hon är blyg."},
+      {"cat": "tempus", "why": "Io-formen av essere är sono: io sono curiosa."},
+      {"cat": "bindeord", "why": "Ma = men: hon har syskon, men inga djur. Det är en motsats."},
+      {"cat": "bindeord", "why": "Quando = när: säger vid vilken tid något händer (när hon kommer hem)."},
+      {"cat": "tempus", "why": "Subjektet är lei e sua sorella, alltså två personer (loro). Giocare får -ano i loro-formen: giocano."},
+      {"cat": "tempus", "why": "Noi-formen av avere är abbiamo, med dubbel-b."},
+      {"cat": "bindeord", "why": "Così = så, därför: att de blir vänner är en följd av det de har gemensamt."}
+    ],
+    "sv": "I dag finns det en ny tjej i klassen. Hon heter Lina och kommer från Sverige. Lina är lång och blond, och hon har ljusblå ögon. Hon är lite blyg, för hon pratar inte så bra italienska. Jag är nyfiken och pratar med henne. Lina har en bror och en syster, men hon har inga djur. När hon kommer hem leker hon och hennes syster med grannarnas katt. Vi har också en katt! Så nu är vi kompisar."
+  },
+  {
+    "id": "it1-s-i4",
+    "sec": "i4",
+    "title": "Un lunedì difficile",
+    "text": "È lunedì. La sveglia suona alle sette, [ma|perché|quindi] Marco non [si alza|mi alzo|si alzano]. Dorme ancora dieci minuti. [Poi|Perché|Anche] guarda l'ora: sono le sette e mezza! Marco [si lava|ti lavi|si lavano] in due minuti e [si veste|mi vesto|vi vestite] in fretta. Non [fa|faccio|fanno] colazione, [perché|ma|poi] non ha tempo. [Corre|Corro|Corrono] alla fermata, ma l'autobus non c'è. [Allora|Perché|Anche] Marco [va|vado|vanno] a scuola a piedi. Arriva alle otto e un quarto. Il professore [dice|dico|dicono]: «Marco, sei in ritardo!» Che giornata!",
+    "gaps": [
+      {"cat": "bindeord", "why": "Ma = men: väckarklockan ringer, men Marco går inte upp. Det är en motsats."},
+      {"cat": "tempus", "why": "Alzarsi är reflexivt, och det handlar om Marco (lui): si alza. Mi alzo = jag går upp."},
+      {"cat": "bindeord", "why": "Poi = sedan: nästa sak som händer efter de tio minuterna."},
+      {"cat": "tempus", "why": "Lavarsi är reflexivt. Lui-formen är si lava."},
+      {"cat": "tempus", "why": "Vestirsi är reflexivt och slutar på -ire. Lui-formen är si veste."},
+      {"cat": "tempus", "why": "Fare är oregelbundet. Lui-formen är fa: non fa colazione."},
+      {"cat": "bindeord", "why": "Perché = därför att: förklarar varför han inte äter frukost."},
+      {"cat": "tempus", "why": "Correre är ett -ere-verb. Lui-formen slutar på -e: corre."},
+      {"cat": "bindeord", "why": "Allora = så, då: att han går är en följd av att bussen inte kommer."},
+      {"cat": "tempus", "why": "Andare är oregelbundet: vado, vai, va. Lui-formen är va."},
+      {"cat": "tempus", "why": "Dire är oregelbundet: dico, dici, dice. Läraren (lui) dice."}
+    ],
+    "sv": "Det är måndag. Väckarklockan ringer klockan sju, men Marco går inte upp. Han sover tio minuter till. Sedan tittar han på klockan: den är halv åtta! Marco tvättar sig på två minuter och klär på sig i all hast. Han äter inte frukost, för han har inte tid. Han springer till hållplatsen, men bussen är inte där. Så Marco går till skolan. Han kommer fram kvart över åtta. Läraren säger: ”Marco, du är sen!” Vilken dag!"
+  },
+  {
+    "id": "it1-s-i5",
+    "sec": "i5",
+    "title": "Una pizza per tutti",
+    "text": "Stasera Giulia e i suoi amici [vanno|va|andiamo] in pizzeria. Il cameriere [porta|porto|portano] il menù. Giulia [vuole|voglio|vogliono] una pizza margherita, [ma|perché|quando] Paolo preferisce la pizza con il prosciutto. «Io [sono|è|siamo] vegetariano», dice Tommaso, «[quindi|ma|mentre] prendo una pizza con le verdure.» «E che cosa [bevete|beviamo|bevono]?» chiede il cameriere. «Tre bottiglie d'acqua, per favore!» [Dopo|Perché|Ma] la pizza, i ragazzi [prendono|prende|prendiamo] un gelato. Alla fine Paolo [chiede|chiedo|chiedono] il conto: sono trenta euro. [Allora|Perché|Mentre] ognuno paga dieci euro.",
+    "gaps": [
+      {"cat": "tempus", "why": "Subjektet är Giulia e i suoi amici, alltså flera personer (loro). Andare är oregelbundet: loro vanno."},
+      {"cat": "tempus", "why": "Il cameriere är en person (lui). Portare är ett -are-verb: lui porta."},
+      {"cat": "tempus", "why": "Volere är oregelbundet: voglio, vuoi, vuole. Giulia (lei) vuole."},
+      {"cat": "bindeord", "why": "Ma = men: Giulia vill ha en sak, Paolo en annan. Det är en motsats."},
+      {"cat": "tempus", "why": "Io-formen av essere är sono."},
+      {"cat": "bindeord", "why": "Quindi = alltså, därför: han tar en pizza med grönsaker eftersom han är vegetarian."},
+      {"cat": "tempus", "why": "Servitören talar till alla (voi). Bere är oregelbundet med stammen bev-: voi bevete."},
+      {"cat": "bindeord", "why": "Dopo = efter: glassen kommer efter pizzan."},
+      {"cat": "tempus", "why": "I ragazzi är flera personer (loro). Prendere är ett -ere-verb: loro prendono."},
+      {"cat": "tempus", "why": "Paolo (lui) chiede. Chiedere är ett -ere-verb: lui-formen slutar på -e."},
+      {"cat": "bindeord", "why": "Allora = så, då: att var och en betalar tio euro är en följd av att notan är trettio euro för tre personer."}
+    ],
+    "sv": "I kväll går Giulia och hennes kompisar till en pizzeria. Servitören kommer med menyn. Giulia vill ha en pizza margherita, men Paolo föredrar pizza med skinka. ”Jag är vegetarian”, säger Tommaso, ”så jag tar en pizza med grönsaker.” ”Och vad dricker ni?” frågar servitören. ”Tre flaskor vatten, tack!” Efter pizzan tar ungdomarna en glass. Till sist ber Paolo om notan: det blir trettio euro. Så var och en betalar tio euro."
+  },
+  {
+    "id": "it1-s-i8",
+    "sec": "i8",
+    "title": "Il compleanno di Sofia",
+    "text": "Oggi è il dieci marzo ed è il compleanno di Sofia. Fuori [piove|piovo|piovono] e [fa|fanno|faccio] freddo, [ma|perché|quindi] Sofia è contenta: stasera c'è una festa a casa sua. Prima [va|vai|vanno] in centro con sua madre, perché [vuole|vuoi|vogliono] un vestito nuovo. Nel negozio Sofia [prova|provo|provano] un vestito rosso e un vestito verde. «Il rosso ti sta bene!» [dice|dici|dicono] la madre. [Poi|Perché|Ma] comprano anche delle scarpe nere. La sera arrivano gli amici. «Buon compleanno!» [gridano|grida|gridiamo] tutti. Sofia apre i regali: un libro, una sciarpa e un ombrello. «Un ombrello?» chiede Sofia. «Sì, [perché|ma|quindi] a marzo piove spesso!» risponde la nonna.",
+    "gaps": [
+      {"cat": "tempus", "why": "Piovere (regna) används bara i tredje person singular: piove = det regnar."},
+      {"cat": "tempus", "why": "Om vädret säger man fa freddo, fa caldo. Fare står i tredje person singular: fa."},
+      {"cat": "bindeord", "why": "Ma = men: vädret är dåligt, men Sofia är ändå glad. Det är en motsats."},
+      {"cat": "tempus", "why": "Andare är oregelbundet: vado, vai, va. Sofia (lei) va."},
+      {"cat": "tempus", "why": "Volere är oregelbundet. Lei-formen är vuole."},
+      {"cat": "tempus", "why": "Provare är ett -are-verb. Sofia (lei) prova."},
+      {"cat": "tempus", "why": "Dire är oregelbundet: dico, dici, dice. La madre (lei) dice."},
+      {"cat": "bindeord", "why": "Poi = sedan: nästa sak de gör i affären."},
+      {"cat": "tempus", "why": "Tutti = alla, alltså flera personer (loro). Gridare är ett -are-verb: loro gridano."},
+      {"cat": "bindeord", "why": "Perché = därför att: mormor förklarar varför hon ger ett paraply."}
+    ],
+    "sv": "I dag är det den tionde mars och det är Sofias födelsedag. Ute regnar det och det är kallt, men Sofia är glad: i kväll är det fest hemma hos henne. Först åker hon in till centrum med sin mamma, eftersom hon vill ha en ny klänning. I affären provar Sofia en röd klänning och en grön klänning. ”Den röda klär dig!” säger mamman. Sedan köper de också ett par svarta skor. På kvällen kommer kompisarna. ”Grattis på födelsedagen!” ropar alla. Sofia öppnar presenterna: en bok, en halsduk och ett paraply. ”Ett paraply?” frågar Sofia. ”Ja, för i mars regnar det ofta!” svarar mormor."
+  }
+]

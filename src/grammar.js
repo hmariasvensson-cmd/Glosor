@@ -132,13 +132,33 @@ function startGram(topic){
   const items=gramItems(topic,10); if(!items.length) return openGrammar();
   $("#tabs").hidden=true; sess=null; beginQuiz("gram",items,{againFn:["gram",topic],label:topicName(topic)});
 }
+/* Regelsidor: content/regler.json = {<topic>: {title, intro, parts: [{h, t, ex: [{fr, sv}], table: {head, rows}, tip}]}}.
+   Visas innan övningarna och går att öppna efter varje svar. **fetstil** i texterna blir <b>. */
+const RULES=()=>C().regler||{};
+const rmark=s=>esc(s||"").replace(/\*\*(.+?)\*\*/g,"<b>$1</b>").replace(/\n/g,"<br>");
+function ruleHtml(r){
+  return `${r.intro?`<p class="plan">${rmark(r.intro)}</p>`:""}${(r.parts||[]).map(p=>`<div class="rpart">
+    ${p.h?`<h3>${esc(p.h)}</h3>`:""}${p.t?`<p>${rmark(p.t)}</p>`:""}
+    ${p.table?`<div class="tblwrap"><table class="tbl rtbl" ${lang()}>${p.table.head?`<tr>${p.table.head.map(h=>`<th>${esc(h)}</th>`).join("")}</tr>`:""}${(p.table.rows||[]).map(r=>`<tr>${r.map(c=>`<td>${rmark(c)}</td>`).join("")}</tr>`).join("")}</table></div>`:""}
+    ${(p.ex||[]).length?`<ul class="rex">${p.ex.map(e=>`<li><span class="ex-t" ${lang()}>${rmark(e.fr)}</span>${e.sv?`<br><span class="ex-sv">${esc(e.sv)}</span>`:""}</li>`).join("")}</ul>`:""}
+    ${p.tip?`<p class="rtip">${rmark(p.tip)}</p>`:""}</div>`).join("")}`;
+}
+function gramRules(id){
+  const r=RULES()[id]; if(!r) return startGram(id);
+  stopSpeech(); $("#tabs").hidden=true; sess=null;
+  app.innerHTML=`<section class="panel"><span class="tab">Regel</span><h2>${esc(r.title||topicName(id))}</h2>
+    <button class="btn" id="rgo">Öva: ${esc(topicName(id))}</button>${ruleHtml(r)}
+    <button class="btn" id="rgo2">Starta övningarna</button></section><button class="quit" id="quit">Tillbaka</button>`;
+  $("#rgo").onclick=$("#rgo2").onclick=()=>startGram(id); $("#quit").onclick=openGrammar;
+  window.scrollTo(0,0);
+}
 function openGrammar(){
   const gt=S.gt||{}, bank=Object.values(gramBank());
   const status=id=>{const x=gt[id]; return x&&x.n?`${pct(x.r,x.n)} % rätt av ${x.n}`:"";};
   const topics=GR().topics.filter(t=>t.id==="adj"?GR().adj&&adjNouns().length:t.id==="err"?errBase().length:bank.some(x=>x.topic===t.id));
   pickerScreen("Grammatik","Välj ett område. Frågor du missar och regler du ofta missar kommer tillbaka oftare. Blandad grammatik tar lite av allt.",
     [{id:"mix",title:"Blandad grammatik",status:status("mix")},...topics.map(t=>({id:t.id,title:t.name,status:status(t.id),here:chapterTopics().includes(t.id)}))]
-      .sort((a,b)=>(b.here?1:0)-(a.here?1:0)),startGram);
+      .sort((a,b)=>(b.here?1:0)-(a.here?1:0)),id=>RULES()[id]?gramRules(id):startGram(id));
   // Undertexter under ämnena
   app.querySelectorAll("[data-pick]").forEach(b=>{const t=GR().topics.find(x=>x.id===b.dataset.pick); const sm=b.querySelector("small");
     if(t&&t.sub&&sm&&!sm.textContent) sm.textContent=t.sub;});
@@ -152,7 +172,8 @@ const gramHead=x=>{
 };
 const fillGaps=x=>()=>app.querySelectorAll("[data-gi]").forEach(g=>{g.textContent=x.p.gaps[+g.dataset.gi]; g.classList.add("filled");});
 const gramExplain=x=>`${x.rightText?`<p class="ex-t" ${lang()}>${esc(x.rightText)}</p>`:""}<p>${x.type==="adj"?x.why:esc(x.why)}</p>
-  <p class="foot">${esc((GR().rules||{})[x.rule]||"")}</p>`;
+  <p class="foot">${esc((GR().rules||{})[x.rule]||"")}</p>
+  ${RULES()[x.topic]?`<details class="more rule"><summary>Läs regeln: ${esc(RULES()[x.topic].title||topicName(x.topic))}</summary>${ruleHtml(RULES()[x.topic])}</details>`:""}`;
 const gramSay=x=>x.type==="rw"?x.a:x.type==="err"?x.rightText:gfill(x.p,x.p.gaps);
 MC.gram=c=>{const x=gramById(c.ref);
   if(x.type==="err") return{tab:"Hitta felet",head:gramHead(x),ask:"Ett ord i meningen är fel. Vilket?",opts:x.opts,

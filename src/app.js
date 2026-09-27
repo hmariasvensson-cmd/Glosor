@@ -177,7 +177,13 @@ function pickVoice(){try{
 try{speechSynthesis.onvoiceschanged=pickVoice}catch(e){}
 const cleanSay=t=>t.replace(/\(.*?\)/g,"").replace(/,\s*-\w+/g,"").replace(/[…«»\[\]]/g,"").replace(/\//g,", ");
 const baseRate=()=>S&&S.slow?.7:.9;
-function speak(t,rate){try{
+// Ljud av/på (knappen i sidhuvudet). Gäller alla kurser och sparas i webbläsaren.
+const SOUND_KEY="glosor-ljud";
+let SOUND=(()=>{try{return localStorage.getItem(SOUND_KEY)!=="av"}catch(e){return true}})();
+function setSound(on){ SOUND=on; try{localStorage.setItem(SOUND_KEY,on?"på":"av")}catch(e){}
+  if(!on) try{speechSynthesis.cancel()}catch(e){}
+  const b=document.querySelector("#sound"); if(b){ b.setAttribute("aria-pressed",String(!on)); b.textContent=on?"Ljud på":"Ljud av"; } }
+function speak(t,rate){if(!SOUND)return;try{
   speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(cleanSay(t));u.lang=L.tts;if(voice)u.voice=voice;u.rate=rate||baseRate();speechSynthesis.speak(u);
 }catch(e){}}
 
@@ -263,7 +269,7 @@ function renderStart(){
     :SECTIONS.map(secOpt).join(""));
   const nothing=!newW.length&&!due.length;
   app.innerHTML=`
-  ${S.run?"":dailyPanel(newW,due)}
+  ${S.run||S.dailyDay===dayKey(Date.now())?"":dailyPanel(newW,due)}
   ${S.run?`<section class="panel"><h2>Fortsätt där du slutade</h2><p class="plan">${esc(runLabel(S.run))}</p>
     <div class="navrow"><button class="btn ghost" id="run-drop">Släng</button><button class="btn" id="run-go">Fortsätt</button></div></section>`:""}
   ${hasBook()?bookPanel():""}
@@ -446,9 +452,15 @@ function snapRun(){
     queue:sess.queue?[...pending,...sess.queue].map(it):null,total:sess.total||0,done:sess.done||0,
     firstTry:sess.firstTry||{},firstType:sess.firstType||{},tries:sess.tries||{},start:sess.start,
     ctx:sess.ctx||null,againFn:sess.againFn||null,label:sess.label||"",daily:!!sess.daily};
+  const k=runKey(sess); if(k){ S.runs=S.runs||{}; S.runs[k]=S.run; }
   save();
 }
-function quitSession(){ sess=null; delete S.run; save(); renderStart(); }
+// Varje övning har sin egen påbörjade runda, så man kan välja att fortsätta eller börja om när man öppnar den igen
+const runKey=r=>r&&r.kind!=="words"?(r.againFn?r.againFn.join("|"):r.kind+"|"+((r.ctx&&r.ctx.id)||"")):null;
+function dropRun(r){ const k=runKey(r); if(k&&S.runs) delete S.runs[k]; }
+function quitSession(){ dropRun(S.run); sess=null; delete S.run; save(); renderStart(); }
+// Avbryt mitt i en övning: rundan sparas och kan fortsättas senare
+function pauseSession(){ stopSpeech(); sess=null; renderStart(); }
 function runLabel(r){
   if(r.label) return `${r.label}, ${r.done} av ${r.total} frågor klara.`;
   if(r.kind==="verbs"){const g=verbGames().find(x=>x.id===r.game);return `Verb: ${g?g.name:""}, ${r.done} av ${r.total} frågor klara.`}
@@ -489,7 +501,7 @@ function renderLearn(){
       <button class="quit" id="quit">Avbryt passet</button>`;
     $("#lw").onclick=()=>speak(w.t); $("#le").onclick=()=>speak(w.exT); $("#ls").onclick=()=>speak(w.exT,.6);
     $("#show").onclick=()=>{sess.shown[sess.i]=true;renderLearn()};
-    $("#quit").onclick=quitSession; snapRun(); speak(w.t); return;
+    $("#quit").onclick=pauseSession; snapRun(); speak(w.t); return;
   }
   app.innerHTML=`
   <section class="panel">
@@ -517,7 +529,7 @@ function renderLearn(){
   $("#sp-w").onclick=()=>speak(w.t); $("#sp-e").onclick=()=>speak(w.exT);
   $("#prev").onclick=()=>{sess.i--;renderLearn()};
   $("#next").onclick=()=>{if(sess.i<n-1){sess.i++;renderLearn()}else startQuiz()};
-  $("#quit").onclick=quitSession;
+  $("#quit").onclick=pauseSession;
   snapRun();
   if(!S.listenFirst) speak(w.t);
 }
@@ -529,6 +541,17 @@ function renderLearn(){
    Bara första svaret per ord räknas för repetitionsschemat och statistiken. */
 const MAX_AGAIN=4;   // max antal extra frågor per ord och övning
 function beginQuiz(kind,items,extra){
+  const k=runKey({kind,...(extra||{})}), old=k&&S.runs&&S.runs[k];
+  if(old&&!(extra&&extra.fresh)&&old.done<old.total){
+    sess=null; $("#tabs").hidden=true;
+    app.innerHTML=`<section class="panel"><h2>${esc(old.label||"Övningen")}</h2>
+      <p class="plan">Du har en påbörjad runda: ${old.done} av ${old.total} frågor klara.</p>
+      <button class="btn" id="rcont">Fortsätt där du slutade</button><button class="btn ghost" id="rnew">Börja om från början</button></section>
+      <button class="quit" id="quit">Tillbaka</button>`;
+    $("#rcont").onclick=()=>{S.run=old; resumeRun();};
+    $("#rnew").onclick=()=>{delete S.runs[k]; beginQuiz(kind,items,{...extra,fresh:true});};
+    $("#quit").onclick=renderStart; return;
+  }
   sess=Object.assign(sess||{},{kind,queue:items,total:items.length,done:0,firstTry:{},firstType:{},tries:{}},extra||{});
   sess.start=sess.start||Date.now();
   nextQ();
@@ -587,7 +610,7 @@ function renderMC(d){
   if($("#sp")) $("#sp").onclick=()=>speak(d.say);
   if(d.wire) d.wire(d);
   app.querySelectorAll(".opt").forEach(b=>b.onclick=()=>answerMC(+b.dataset.i));
-  $("#quit").onclick=quitSession;
+  $("#quit").onclick=pauseSession;
   if(d.sayOnShow) speak(d.say);
 }
 function answerMC(i){
@@ -611,7 +634,7 @@ function renderType(d){
     <div id="fb"></div>
     <button class="btn" id="submit">Svara</button></section>
     ${quitBtn()}`;
-  $("#quit").onclick=quitSession;
+  $("#quit").onclick=pauseSession;
   wireTyping(answerType);
   if(d.wire) d.wire(d);
   if(d.autoplay) speak(d.say);
@@ -784,7 +807,7 @@ function finishSession(){
     ${missed.length?`<div class="field"><span class="label">Öva lite extra på</span><ul class="missed">${missed.map(w=>`<li><span class="t" ${lang()}>${esc(w.t)}</span><span class="sv">${esc(w.sv)}</span></li>`).join("")}</ul></div>`:""}
     ${sess.daily?`<button class="btn" id="mix">Fortsätt dagens pass: blandade övningar</button>`:""}
     <div class="navrow"><button class="btn ghost" id="st">Statistik</button><button class="btn ${sess.daily?"ghost":""}" id="home">Till startsidan</button></div></section>`;
-  const daily=sess.daily;
+  const daily=sess.daily; if(daily){ S.dailyDay=dayKey(Date.now()); save(); }
   sess=null; boardPush(); $("#home").onclick=renderStart; $("#st").onclick=()=>setView("stats"); renderList();
   if(daily) $("#mix").onclick=startMix;
 }

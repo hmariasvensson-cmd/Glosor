@@ -332,3 +332,15 @@ b.pass{color:var(--ok)} b.fail{color:var(--pink)}
 .grp:hover{border-color:var(--navy)}
 .grp b{font-weight:600}
 .grp small{color:var(--ink-2);font-size:.84rem;flex:1}
+/* Grammatikregler */
+.rpart{display:flex;flex-direction:column;gap:8px;padding-top:6px}
+.rpart h3{font-family:var(--serif);font-size:1.1rem;margin:0}
+.rpart p{margin:0;line-height:1.55}
+.rex{margin:0;padding-left:1.1em;display:flex;flex-direction:column;gap:6px}
+.rtip{background:var(--amber-soft);border-radius:10px;padding:10px 12px}
+.rtbl td,.rtbl th{text-align:left!important}
+details.rule{margin-top:6px}
+.soundbtn{border:1.5px solid var(--line);background:var(--surface);border-radius:999px;padding:5px 12px;font-size:.8rem;font-weight:600;color:var(--ink)}
+.soundbtn[aria-pressed="true"]{background:var(--pink-soft);color:var(--pink);border-color:var(--pink)}
+.fbq{display:flex;flex-direction:column;gap:10px;color:var(--ink)}
+.fbqrow{display:flex;flex-direction:column;gap:6px}.fbqrow p{margin:0}
