@@ -29,7 +29,7 @@ function parseWords(raw){
 function buildConj(vb){
   const out=[]; if(!vb) return out;
   Object.entries(vb.tenses).forEach(([tense,o])=>Object.keys(o).filter(k=>k!=="rule").forEach(verb=>o[verb].forEach((f,i)=>{
-    out.push({verb,tense,person:vb.persons[i],form:f,full:vb.prefix(i,f,vb.persons)+f,rule:o.rule});
+    out.push({verb,tense,person:vb.persons[i],form:f,full:vb.prefix(i,f,vb.persons,tense)+f,rule:o.rule});
   })));
   return out;
 }
