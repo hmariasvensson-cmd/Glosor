@@ -208,9 +208,9 @@ function renderTiles(d){
   const words=d.o.words; let order=shuffle(words.map((x,i)=>i));
   if(order.every((v,i)=>words[v]===words[i])) order=order.reverse();
   const built=[];
-  app.innerHTML=`<section class="panel"><span class="tab">Ordföljd</span>${progressHead()}
-    <p class="q-prompt" style="font-size:1.25rem">${esc(d.w.exSv)}</p>
-    <p class="q-ask">Tryck på orden i rätt ordning. Tryck på ett ord i meningen för att ta bort det.</p>
+  app.innerHTML=`<section class="panel"><span class="tab">${d.tab||"Ordföljd"}</span>${progressHead()}
+    ${d.prompt||`<p class="q-prompt" style="font-size:1.25rem">${esc(d.w.exSv)}</p>`}
+    <p class="q-ask">${d.ask||""} Tryck på orden i rätt ordning. Tryck på ett ord i meningen för att ta bort det.</p>
     <div class="built" id="built" ${lang()}></div><div class="tiles" id="tiles" ${lang()}></div>
     <div id="fb"></div>
     <div class="navrow"><button type="button" class="btn ghost" id="clr">Börja om</button><button class="btn" id="submit" disabled>Svara</button></div></section>
@@ -226,7 +226,8 @@ function renderTiles(d){
   $("#clr").onclick=()=>{if(!sess.answered){built.length=0;draw()}};
   $("#submit").onclick=()=>{
     if(sess.answered) return nextQ();
-    const ok=built.map(i=>words[i]).join(" ")===words.join(" ");
+    const b=built.map(i=>words[i]).join(" ");   // d.accept: godkända meningar, jämförs utan versaler och skiljetecken
+    const ok=d.accept?d.accept.includes(tok(b).join(" ")):b===words.join(" ");
     sess.answered=true; $("#clr").hidden=true; $("#built").classList.add(ok?"right":"wrong");
     showTypeResult(d,{r:ok?"right":"wrong"},null); $("#submit").disabled=false;
   };
@@ -267,7 +268,7 @@ function parseStory(s){
 }
 function openStories(){
   S.stb=S.stb||{};
-  pickerScreen("Berättelser","Läs berättelsen och välj rätt form i varje lucka: imparfait eller passé composé, och rätt bindeord.",
+  pickerScreen("Berättelser",L.storyIntro||"Läs berättelsen och välj rätt form i varje lucka.",
     (C().stories||[]).map(s=>({id:s.id,title:s.title,sec:s.sec,status:S.stb[s.id]!==undefined?`bäst ${S.stb[s.id]}/${parseStory(s).gaps.length}`:""})),startStory);
 }
 function startStory(id){
@@ -374,7 +375,7 @@ AFTER.lq=AFTER.rq=(ctx,right,total)=>{
 /* ---------- Kultur ---------- */
 function openCulture(){
   S.cu=S.cu||{};
-  pickerScreen("Kultur","Läs en kort text om Frankrike, svara på en fråga och jämför med hur det är i Sverige.",
+  pickerScreen("Kultur",L.cultureIntro||"Läs en kort text, svara på en fråga och jämför med hur det är i Sverige.",
     (C().culture||[]).map(c=>({id:c.id,title:c.title,sec:c.sec,status:S.cu[c.id]?"klar":""})),cultureScreen);
 }
 function cultureScreen(id){
@@ -454,7 +455,7 @@ function writeScreen(id){
 function dailyPanel(newW,due){
   const n=newW.length+due.length;
   return `<section class="panel daily"><h2>Dagens pass</h2>
-    <p class="plan">${n?`Först glosorna (${n} frågor), sedan en blandad runda`:"En blandad runda"} med diktamen, verb, ordföljd, samtalsfraser och meningar. Ungefär 15 minuter.</p>
+    <p class="plan">${n?`Först glosorna (${n} frågor), sedan en blandad runda`:"En blandad runda"} med diktamen, verb, ordföljd, ${hasGrammar()?"grammatik, ":""}samtalsfraser och meningar. Ungefär 15 minuter.</p>
     <button class="btn" id="daily">Starta dagens pass</button></section>`;
 }
 function startDaily(newW,due){
@@ -469,6 +470,7 @@ function startMix(){
   add(sp.filter(orderable).map(orderItem),2);
   if((C().phrases||[]).length) add(phraseItems(6),3);
   add(clozePool().map(clozeItem),3);
+  if(hasGrammar()) add(gramItems("mix",6),3);
   if(!items.length) return renderStart();
   $("#tabs").hidden=true; sess=null; beginQuiz("mix",shuffle(items),{againFn:["mix"],label:"Blandad runda"});
 }
@@ -507,13 +509,15 @@ function gamesPanel(){
       g("cloze","Meningar",n<4?"Lär dig några ord i quizet först.":"Fyll i luckan i en mening.",n<4),
       g("dict","Diktamen","Lyssna på en mening och skriv den."),
       g("trans","Översätt meningar",`Från svenska till ${lname}, hela meningar.`),
-      g("order","Ordföljd","Bygg meningen i rätt ordning.")]],
+      g("order","Ordföljd","Bygg meningen i rätt ordning."),
+      L.genderGame&&g("gen",Object.values(L.genderGame).join(", "),"Rätt artikel och plural för substantiven.")]],
     ["Lyssna och läsa",[
       c.listening&&g("lq","Hörförståelse","Lyssna på en dialog och svara på frågor."),
       c.reading&&g("rq","Läsa texter","Tryck på okända ord och spara dem i Mina ord."),
       c.culture&&g("culture","Kultur","Kort fakta, en fråga och en jämförelse med Sverige.")]],
     ["Grammatik",[
       ...verbGames().map(v=>`<button class="game" data-g="${v.id}"><span><b>Verb: ${esc(v.name)}</b><small>${esc(v.sub||"")}</small></span><span class="go" aria-hidden="true">›</span></button>`),
+      hasGrammar()&&g("gram","Grammatikövningar",GR().topics.slice(0,4).map(t=>t.name.toLowerCase()).join(", ")+" …"),
       c.stories&&g("story","Berättelser","Välj rätt tempus och bindeord i en berättelse.")]],
     ["Tala och skriva",[
       c.phrases&&g("phr","Samtalsfraser","Vad man säger när man inte förstår, vill säga sin åsikt …"),
@@ -523,7 +527,7 @@ function gamesPanel(){
     return items.length?`<div class="exgroup"><span class="label">${t}</span><div class="games">${items.join("")}</div></div>`:"";}).join("")}</section>`;
 }
 function wireGames(){
-  const F={cloze:startCloze,dict:startDict,trans:startTrans,order:startOrder,lq:openListening,rq:openReading,culture:openCulture,story:openStories,phr:startPhrases,write:openWriting};
+  const F={cloze:startCloze,dict:startDict,trans:startTrans,order:startOrder,lq:openListening,rq:openReading,culture:openCulture,story:openStories,phr:startPhrases,write:openWriting,gram:openGrammar,gen:startGender};
   app.querySelectorAll("[data-ex]").forEach(b=>b.onclick=()=>F[b.dataset.ex]());
   app.querySelectorAll("[data-g]").forEach(b=>b.onclick=()=>startVerbs(b.dataset.g));
 }

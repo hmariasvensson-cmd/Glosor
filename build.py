@@ -72,6 +72,60 @@ def read_words(code):
     return "\n".join(lines), n_words, len(section_ids), errors, warnings
 
 
+# Artiklar och relativpronomen för att kontrollera de tyska grammatikfrågorna (se GRAMMATIK-SPEC.md)
+DEF = {"nom": {"m": "der", "f": "die", "n": "das", "pl": "die"}, "akk": {"m": "den", "f": "die", "n": "das", "pl": "die"},
+       "dat": {"m": "dem", "f": "der", "n": "dem", "pl": "den"}, "gen": {"m": "des", "f": "der", "n": "des", "pl": "der"}}
+EIN = {"nom": {"m": "", "f": "e", "n": "", "pl": "e"}, "akk": {"m": "en", "f": "e", "n": "", "pl": "e"},
+       "dat": {"m": "em", "f": "er", "n": "em", "pl": "en"}, "gen": {"m": "es", "f": "er", "n": "es", "pl": "er"}}
+REL = {"nom": {"m": "der", "f": "die", "n": "das", "pl": "die"}, "akk": {"m": "den", "f": "die", "n": "das", "pl": "die"},
+       "dat": {"m": "dem", "f": "der", "n": "dem", "pl": "denen"}, "gen": {"m": "dessen", "f": "deren", "n": "dessen", "pl": "deren"}}
+CONTR = {"im": "in dem", "ins": "in das", "am": "an dem", "ans": "an das", "zum": "zu dem", "zur": "zu der",
+         "vom": "von dem", "beim": "bei dem", "aufs": "auf das", "übers": "über das", "durchs": "durch das", "fürs": "für das", "ums": "um das"}
+GAP = re.compile(r"\[([^\]]+)\]")
+
+
+def check_grammar(items, where):
+    errors = []
+    for x in items:
+        i = x.get("id", "?")
+        for k in ("id", "topic", "rule", "q", "why", "sv", "alt"):
+            if not x.get(k):
+                errors.append(f"{where}: {i} saknar {k}")
+        if x.get("type") == "rw":
+            words = lambda s: sorted(re.sub(r"[,.!?;:]", " ", s).lower().split())
+            for s in [*x.get("acc", []), *x.get("alt", [])]:
+                if words(s) != words(x.get("a", "")):
+                    errors.append(f"{where}: {i} har andra ord än facit: {s}")
+            continue
+        gaps = GAP.findall(x.get("q", ""))
+        if not gaps:
+            errors.append(f"{where}: {i} saknar [lucka]")
+            continue
+        ans = " … ".join(gaps)
+        for a in x.get("alt", []):
+            if len(a.split(" … ")) != len(gaps):
+                errors.append(f"{where}: {i} alternativet '{a}' har fel antal delar")
+            if a.lower() == ans.lower() or a in x.get("acc", []):
+                errors.append(f"{where}: {i} alternativet '{a}' är samma som svaret")
+        m = x.get("meta") or {}
+        if x.get("topic") == "praep" and m:
+            got = gaps[0].split()
+            got = CONTR.get(got[0].lower(), gaps[0]).split() if len(got) == 1 else got
+            if got and got[0].lower() == m.get("prep", "").lower():
+                got = got[1:]
+            case, g, art = m.get("case"), m.get("g"), m.get("art")
+            want = DEF[case][g] if art == "def" else (("ein" if art == "indef" else m.get("stem", "k" + "ein")) + EIN[case][g]) if case in EIN else None
+            if art == "indef" and g == "pl":
+                want = None   # obestämd artikel finns inte i plural
+            if want and " ".join(got).lower() != want.lower():
+                errors.append(f"{where}: {i} har '{gaps[0]}', men {m} ger '{want}'")
+        if x.get("topic") == "relativ" and m.get("case") in REL:
+            want = REL[m["case"]].get(m.get("g"))
+            if want and gaps[0].split()[-1].lower() != want:
+                errors.append(f"{where}: {i} har '{gaps[0]}', men {m} ger '{want}'")
+    return errors
+
+
 def js_string(value):
     # JSON är giltig JavaScript; "</" skrivs om så att texten inte kan avsluta <script>-taggen
     return json.dumps(value, ensure_ascii=False).replace("</", "<\\/")
@@ -96,9 +150,18 @@ def main():
         content = {}
         for f in sorted((LANG_DIR / code / "content").glob("*.json")) if (LANG_DIR / code / "content").exists() else []:
             try:
-                content[f.stem] = json.loads(f.read_text(encoding="utf-8"))
+                data = json.loads(f.read_text(encoding="utf-8"))
             except json.JSONDecodeError as e:
                 all_errors.append(f"languages/{code}/content/{f.name}: {e}")
+                continue
+            if f.stem.startswith("grammar-"):   # grammatikbankerna slås ihop till en lista
+                all_errors += check_grammar(data, f"languages/{code}/content/{f.name}")
+                content.setdefault("grammar", []).extend(data)
+            else:
+                content[f.stem] = data
+        if "grammar" in content:
+            ids = [x.get("id") for x in content["grammar"]]
+            all_errors += [f"languages/{code}/content/grammar-*.json: id {i} finns flera gånger" for i in sorted({i for i in ids if ids.count(i) > 1})]
         if content:
             js += f"\nLANGUAGES.{code}.content = {js_string(content)};"
             print(f"{code}: innehåll " + ", ".join(f"{k} {len(v)}" for k, v in content.items()))
@@ -126,7 +189,7 @@ def main():
         "TITLE": title,
         "STYLE": (ROOT / "src" / "style.css").read_text(encoding="utf-8").strip(),
         "LANGUAGES": "\n".join(lang_js),
-        "APP": "\n".join((ROOT / "src" / f).read_text(encoding="utf-8").strip() for f in ("app.js", "exercises.js", "main.js")),
+        "APP": "\n".join((ROOT / "src" / f).read_text(encoding="utf-8").strip() for f in ("app.js", "exercises.js", "grammar.js", "main.js")),
         "BUILT": datetime.datetime.now().strftime("%Y-%m-%d %H:%M"),
         "UPCOMING": js_string(json.loads((LANG_DIR / "upcoming.json").read_text(encoding="utf-8"))) if (LANG_DIR / "upcoming.json").exists() else "[]",
     }

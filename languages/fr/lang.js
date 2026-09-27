@@ -18,6 +18,8 @@ LANGUAGES.fr = {
   // l', d', j' … tas bort när ett ord i en text slås upp i ordlistan
   elision: /^(l|d|j|qu|n|s|c|m|t|jusqu|lorsqu|puisqu)'/i,
   // Bindeord som räknas i skrivuppgifternas checklista
+  storyIntro: "Läs berättelsen och välj rätt form i varje lucka: imparfait eller passé composé, och rätt bindeord.",
+  cultureIntro: "Läs en kort text om Frankrike, svara på en fråga och jämför med hur det är i Sverige.",
   connectors: ["d'abord","ensuite","puis","enfin","finalement","mais","pourtant","cependant","par contre","parce que","car","donc","alors",
     "quand","pendant que","après","avant de","comme","aussi","en plus","d'un côté","de l'autre côté","par exemple","à mon avis","bref","même si","si"],
   // Enkel igenkänning av tempus i elevens text (för checklistan, inte för rättning)

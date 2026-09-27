@@ -135,6 +135,9 @@ function save(){
 const ws=id=>S.w[id];
 const isLearned=w=>!!ws(w.id);
 const isMastered=w=>ws(w.id)&&ws(w.id).s>=4;
+// "Igelord" (leech i Anki): ord som man har glömt många gånger och som behöver extra stöd
+const isLeech=w=>{const x=w&&ws(w.id); if(!x) return false; const err=(x.mcW||0)+(x.tyW||0);
+  return (x.lapses||0)>=3||(err>=5&&err/(err+(x.mcR||0)+(x.tyR||0))>.4);};
 const dueWords=()=>WORDS.filter(w=>{const x=ws(w.id);return x&&x.due<=S.pass})
   .sort((a,b)=>(ws(a.id).s>=MASTER)-(ws(b.id).s>=MASTER)||ws(a.id).due-ws(b.id).due).slice(0,MAXDUE);
 /* Rätt: ett steg upp. Fel: ett steg ned, och ett ord man kunde går tillbaka till steg 2. */
@@ -471,7 +474,8 @@ function nextQ(){
 }
 function progressHead(){
   const c=sess.cur;
-  const pill=c.again?'<span class="pill again">igen</span>':c.isNew===undefined?"":c.isNew?'<span class="pill new">nytt ord</span>':'<span class="pill rep">repetition</span>';
+  const pill=(c.again?'<span class="pill again">igen</span>':c.isNew===undefined?"":c.isNew?'<span class="pill new">nytt ord</span>':'<span class="pill rep">repetition</span>')
+    +(c.isNew===false&&isLeech(c.w)?' <span class="pill again">svårt ord</span>':"");
   return `<div class="meta"><span>Quiz ${pill}</span><span>${Math.min(sess.done+1,sess.total)} / ${sess.total}</span></div>
     <div class="bar"><i style="width:${(sess.done/sess.total)*100}%"></i></div>`;
 }
@@ -599,7 +603,8 @@ const studyCard=w=>`<div class="recap">
     <button type="button" class="speak sm" data-say="${esc(w.t)}" aria-label="Läs upp ordet">${SPK}</button></div>
   <div class="example"><div><p class="ex-t" ${lang()}>${esc(w.exT)}</p><p class="ex-sv">${esc(w.exSv)}</p></div>
     <button type="button" class="speak sm" data-say="${esc(w.exT)}" aria-label="Läs upp meningen">${SPK}</button></div>
-  ${w.ety?`<p class="ety"><span class="label">${L.etyLabel||"Ursprung"}</span><br>${w.ety}</p>`:""}</div>`;
+  ${w.ety?`<p class="ety"><span class="label">${L.etyLabel||"Ursprung"}</span><br>${w.ety}</p>`:""}
+  ${isLeech(w)?`<p class="ety"><span class="label">Svårt ord</span><br>Det här ordet har du glömt flera gånger. Säg exempelmeningen högt tre gånger och hitta på en egen mening med ordet, gärna om något du själv har varit med om.</p>`:""}</div>`;
 document.addEventListener("click",e=>{const b=e.target.closest&&e.target.closest("[data-say]"); if(b) speak(b.dataset.say);});
 const verbHead=c=>`<p class="q-prompt" ${lang()}>${esc(c.verb)} <span class="sub" style="font-family:var(--sans);font-weight:400">(${esc(L.verbs.sv[c.verb]||"")})</span></p>`;
 const clozeHead=w=>`<p class="cloze" ${lang()}>${esc(w.gap.pre)}<span class="gap" id="gap">&nbsp;</span>${esc(w.gap.post)}</p><p class="ex-sv">${esc(w.exSv)}</p>`;
@@ -889,6 +894,7 @@ function renderStats(){
   </section>
 
   ${statsExercises()}
+  ${statsGrammar()}
 
   ${L.verbs?`<section class="panel">
     <h2>Verbböjning</h2>

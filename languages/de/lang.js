@@ -18,6 +18,61 @@ LANGUAGES.de = {
   hintStrip: /^(der|die|das|den|dem|des) /,
   pronouns: /^(er\/sie\/es|sie\/sie|ich|du|er|sie|es|wir|ihr) ?/,
   genders: {m: "maskulinum", f: "femininum", n: "neutrum", pl: "plural"},
+  genderGame: {m: "der", f: "die", n: "das"},   // spelet der, die, das och plural
+
+  storyIntro: "Läs berättelsen och välj rätt form i varje lucka: rätt verbform i Präteritum eller Perfekt, och ett bindeord som passar ordföljden.",
+  cultureIntro: "Läs en kort text om Tyskland, Österrike eller Schweiz, svara på en fråga och jämför med hur det är i Sverige.",
+  connectors: ["zuerst","dann","danach","schließlich","zum Schluss","aber","jedoch","trotzdem","obwohl","weil","denn","da",
+    "deshalb","deswegen","daher","also","außerdem","zudem","auch","sondern","während","wenn","als","nachdem","bevor","dass","ob",
+    "damit","sodass","einerseits","andererseits","zum Beispiel","meiner Meinung nach","im Gegensatz dazu","nicht nur","sowohl"],
+  // Enkel igenkänning av tempus i elevens text (för checklistan, inte för rättning)
+  tenseCheck: {
+    "Präsens": t => t.trim().length > 0,
+    "Perfekt": t => /(^|[^\p{L}])(habe|hast|hat|haben|habt|bin|bist|ist|sind|seid)(?![\p{L}])[^.!?]{0,80}[^\p{L}]ge\p{L}+(t|en)(?![\p{L}])/iu.test(t),
+    "Präteritum": t => /(^|[^\p{L}])(war|warst|waren|wart|hatte|hatten|hattest|ging|gingen|kam|kamen|wurde|wurden|machte|machten|sagte|sagten|fuhr|fuhren|sah|sahen|gab|gaben|nahm|nahmen|dachte|dachten|konnte|konnten|musste|mussten|wollte|wollten|durfte|durften|fand|fanden|lebte|lebten|wohnte|wohnten|arbeitete|arbeiteten)(?![\p{L}])/iu.test(t),
+    "Konjunktiv II": t => /(^|[^\p{L}])(würde|würdest|würden|würdet|hätte|hättest|hätten|wäre|wärst|wären|könnte|könnten|müsste|müssten|dürfte|sollte|sollten)(?![\p{L}])/iu.test(t),
+    "Passiv": t => /(^|[^\p{L}])(wird|werden|wurde|wurden|worden)(?![\p{L}])[^.!?]{0,80}[^\p{L}]ge\p{L}+(t|en)(?![\p{L}])/iu.test(t)
+  },
+
+  // Grammatikövningar. Frågorna ligger i content/grammar-*.json (se content/GRAMMATIK-SPEC.md).
+  // Adjektivändelser skapas i programmet av ordlistans substantiv och tabellen i src/grammar.js.
+  grammar: {
+    topics: [
+      {id: "adj", name: "Adjektivändelser", sub: "einen neuen Plan, mit dem neuen Plan …"},
+      {id: "praep", name: "Kasus efter preposition", sub: "Wo? eller wohin? Dativ eller ackusativ."},
+      {id: "bisatz", name: "Bisatsordföljd", sub: "Sätt ihop meningar med weil, deshalb och denn."},
+      {id: "relativ", name: "Relativsatser", sub: "der Mann, mit dem ich spreche"},
+      {id: "verbprep", name: "Verb med preposition", sub: "warten auf, sich freuen über – darauf, worauf"},
+      {id: "konj", name: "Konjunktiv", sub: "Wenn ich Zeit hätte … och indirekt tal: Er sagt, er sei müde."},
+      {id: "passiv", name: "Passiv", sub: "wird gebaut, wurde gebaut, muss gebaut werden"},
+      {id: "zuinf", name: "zu-infinitiv", sub: "um … zu, damit, ohne … zu"},
+      {id: "perfekt", name: "Perfekt: haben eller sein?", sub: "Ich bin eingeschlafen. Nachdem ich gegessen hatte …"},
+      {id: "bindeord", name: "Bindeord och ordföljd", sub: "obwohl, trotzdem, deshalb, denn"},
+      {id: "err", name: "Hitta felet", sub: "En mening har ett fel. Vilket ord?"}
+    ],
+    rules: {
+      "adj-def": "Adjektiv efter der/die/das", "adj-indef": "Adjektiv efter ein/kein",
+      "wechsel-dat": "Wechselpräposition: var? → dativ", "wechsel-akk": "Wechselpräposition: vart? → ackusativ",
+      "dat-prep": "Prepositioner med dativ", "akk-prep": "Prepositioner med ackusativ", "gen-prep": "Prepositioner med genitiv",
+      "rel-nom": "Relativpronomen i nominativ", "rel-akk": "Relativpronomen i ackusativ", "rel-dat": "Relativpronomen i dativ",
+      "rel-gen": "dessen och deren", "rel-prep": "Preposition + relativpronomen", "rel-was": "was och wo",
+      "vp-prep": "Vilken preposition hör till verbet?", "vp-kasus": "Kasus efter verbets preposition", "vp-da": "da-ord", "vp-wo": "wo-ord",
+      "pf-sein": "Perfekt med sein", "pf-haben": "Perfekt med haben", "plq": "Pluskvamperfekt",
+      "bs-sub": "Subjunktion: verbet sist", "bs-inv": "Adverb: verbet direkt efter", "bs-konj": "Konjunktion: ingen ändring", "bs-first": "Bisatsen först",
+      "k2-wenn": "Konjunktiv II i villkor", "k2-wunsch": "Konjunktiv II: önskan och artighet", "k2-verg": "Konjunktiv II i dåtid", "k1-rede": "Indirekt tal (Konjunktiv I)",
+      "pa-praes": "Passiv i presens", "pa-praet": "Passiv i preteritum", "pa-perf": "Passiv i perfekt", "pa-modal": "Passiv med modalverb", "pa-zustand": "Tillståndspassiv",
+      "zu-inf": "Infinitiv med zu", "umzu": "um … zu", "damit": "damit", "ohne-statt": "ohne … zu, statt … zu",
+      "bi-grund": "Orsak: weil, denn, deshalb", "bi-kontrast": "Motsats: obwohl, trotzdem, aber", "bi-folge": "Följd: deshalb, sodass", "bi-tillagg": "Tillägg: außerdem, zudem"
+    },
+    adj: {
+      adjectives: ["neu", "wichtig", "bekannt", "typisch", "groß", "aktuell", "gut"],
+      frames: {
+        nom: ["{A} {ADJ} {N} ist wichtig.", "Das ist {A} {ADJ} {N}."],
+        akk: ["Wir sprechen über {A} {ADJ} {N}.", "Es geht um {A} {ADJ} {N}."],
+        dat: ["Das hat mit {A} {ADJ} {N} zu tun.", "Wir beginnen mit {A} {ADJ} {N}."]
+      }
+    }
+  },
 
   verbs: {
     persons: ["ich", "du", "er/sie/es", "wir", "ihr", "sie/Sie"],
