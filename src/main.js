@@ -8,6 +8,8 @@
   sel.onchange=()=>useLang(sel.value);
   wireOwnWord();
   let saved=null; try{saved=localStorage.getItem(LANG_KEY)}catch(e){}
+  const only=onlyCourse();
+  if(codes.includes(only)){ saved=only; setOnly(only); }
   useLang(codes.includes(saved)?saved:codes[0]);
   cloudInit();
 })();

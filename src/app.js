@@ -2,6 +2,10 @@
 // L är det valda språket (från languages/<kod>/lang.js). Allt nedan läser därifrån.
 let L, SECTIONS, WORDS, byId, CONJ, CONJBY;
 const LANG_KEY = "glosor-sprak";
+const ONLY_KEY = "glosor-bara";   // om man bara vill se en kurs (sparas bara i den här webbläsaren)
+const onlyCourse=()=>{try{return localStorage.getItem(ONLY_KEY)||""}catch(e){return ""}};
+function setOnly(code){ try{ if(code) localStorage.setItem(ONLY_KEY,code); else localStorage.removeItem(ONLY_KEY); }catch(e){}
+  const p=document.querySelector(".coursepick"); if(p) p.hidden=!!code; }
 
 // Luckan i exempelmeningen: [hakparentes] i words.txt, annars ordet självt om det står i meningen
 function findGap(word, ex){
@@ -258,6 +262,8 @@ function renderStart(){
       <div class="field"><span class="label">Nya ord</span>
         <div class="seg" role="group" aria-label="Nya ord"><button data-lf="0" aria-pressed="${!S.listenFirst}">Visa direkt</button><button data-lf="1" aria-pressed="${!!S.listenFirst}">Lyssna först</button></div></div>
     </div>
+    ${Object.keys(LANGUAGES).length>1?`<div class="field"><span class="label">Kurser</span>
+      <div class="seg" role="group" aria-label="Kurser"><button data-only="0" aria-pressed="${!onlyCourse()}">Visa alla</button><button data-only="1" aria-pressed="${onlyCourse()===L.code}">Bara ${esc(L.course||L.name)}</button></div></div>`:""}
     <div class="field"><span class="label">Veckomål</span>
       <div class="seg" role="group" aria-label="Veckomål">${[0,60,90,120,150].map(n=>`<button data-goal="${n}" aria-pressed="${(S.goal||0)===n}">${n?n+" min":"Inget"}</button>`).join("")}</div></div>
     ${L.courseGy25?`<div class="field"><span class="label">Läroplan</span>
@@ -276,6 +282,7 @@ function renderStart(){
   app.querySelectorAll("[data-m]").forEach(b=>b.onclick=()=>{S.mode=b.dataset.m;save();renderStart()});
   app.querySelectorAll("[data-slow]").forEach(b=>b.onclick=()=>{S.slow=b.dataset.slow==="1";save();renderStart()});
   app.querySelectorAll("[data-lf]").forEach(b=>b.onclick=()=>{S.listenFirst=b.dataset.lf==="1";save();renderStart()});
+  app.querySelectorAll("[data-only]").forEach(b=>b.onclick=()=>{setOnly(b.dataset.only==="1"?L.code:"");renderStart()});
   app.querySelectorAll("[data-goal]").forEach(b=>b.onclick=()=>{S.goal=+b.dataset.goal;save();boardPush();renderStart()});
   app.querySelectorAll("[data-gy]").forEach(b=>b.onclick=()=>{S.gy25=b.dataset.gy==="1";save();$("#coursechip").textContent=`${courseName()} · nivå ${L.level||""}`;renderStart()});
   if($("#daily")) $("#daily").onclick=()=>startDaily(newW,due);
