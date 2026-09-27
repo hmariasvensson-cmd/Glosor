@@ -316,6 +316,8 @@ const BOARD={docs:{},mine:null,unsub:null,timer:null};
 function boardKeepMine(){ const u=CLOUD.uid, m=BOARD.mine; if(m&&(!BOARD.docs[u]||(BOARD.docs[u].t||0)<m.t)) BOARD.docs[u]=m; }
 function weekStart(ts){const d=new Date(ts);d.setHours(0,0,0,0);d.setDate(d.getDate()-((d.getDay()+6)%7));return d.getTime()}
 const dayKey=ts=>new Date(ts).toDateString();
+function isoWeek(d){ const t=new Date(Date.UTC(d.getFullYear(),d.getMonth(),d.getDate())); const day=t.getUTCDay()||7;
+  t.setUTCDate(t.getUTCDate()+4-day); const y0=new Date(Date.UTC(t.getUTCFullYear(),0,1)); return Math.ceil(((t-y0)/864e5+1)/7); }
 function streakAlive(last){const d=new Date();if(dayKey(last)===dayKey(d))return true;d.setDate(d.getDate()-1);return dayKey(last)===dayKey(d)}
 function myStats(){
   const w0=weekStart(Date.now()), wk=S.log.filter(l=>l.d>=w0), days=new Set(S.log.map(l=>dayKey(l.d)));
@@ -324,8 +326,15 @@ function myStats(){
   const pw=weekStart(w0-3*864e5), pk=S.log.filter(l=>l.d>=pw&&l.d<w0);   // förra veckan
   return {week:w0, min:Math.round(wk.reduce((a,l)=>a+(l.dur||0),0)/60), q:wk.reduce((a,l)=>a+(l.total||0),0), goal:S.goal||0,
     prev:{week:pw, min:Math.round(pk.reduce((a,l)=>a+(l.dur||0),0)/60), q:pk.reduce((a,l)=>a+(l.total||0),0)},
+    hist:weekHistory(w0),
     days:new Set(wk.map(l=>dayKey(l.d))).size, streak, last:S.log.length?S.log[S.log.length-1].d:0,
     learned:WORDS.filter(isLearned).length, mastered:WORDS.filter(isMastered).length};
+}
+// Minuter per vecka de sex senaste hela veckorna: {veckostart: minuter}
+function weekHistory(w0){
+  const out={}; let w=w0;
+  for(let i=0;i<6;i++){ const p=weekStart(w-3*864e5), m=Math.round(S.log.filter(l=>l.d>=p&&l.d<w).reduce((a,l)=>a+(l.dur||0),0)/60); if(m) out[p]=m; w=p; }
+  return out;
 }
 function boardSubscribe(){
   if(!CLOUD.db||BOARD.unsub) return;
@@ -370,6 +379,13 @@ async function renderBoard(){
   const mine=BOARD.docs[CLOUD.uid]||{};
   const nameOf=r=>r.nick||(ps[r.id]&&ps[r.id].name)||"Någon";
   const win=rows.filter(r=>r.prev>0).sort((a,b)=>b.prev-a.prev)[0];
+  // Tidigare veckors vinnare, från varje persons veckohistorik (alla språk ihop)
+  const byWeek={};
+  Object.entries(BOARD.docs).forEach(([id,d])=>Object.values(d.langs||{}).forEach(x=>Object.entries(x.hist||{}).forEach(([wk,m])=>{
+    if(+wk>=pw) return; const o=byWeek[wk]=byWeek[wk]||{}; o[id]=(o[id]||0)+m;})));
+  const hist=Object.keys(byWeek).map(Number).sort((a,b)=>b-a).slice(0,5).map(wk=>{
+    const [id,m]=Object.entries(byWeek[wk]).sort((a,b)=>b[1]-a[1])[0]; return {wk,id,m};});
+  const wkLabel=wk=>{const d=new Date(wk); return `v. ${isoWeek(d)}`;};
   app.innerHTML=`<section class="panel"><h2>Topplista den här veckan</h2>
     <p class="plan">Minuter och frågor sedan måndag, i alla språk. Dagar i rad räknas om man övar varje dag.</p>
     ${win?`<p class="winner">Förra veckan vann <b>${esc(nameOf(win))}</b> med ${win.prev} minuter.</p>`:""}
@@ -381,6 +397,7 @@ async function renderBoard(){
       <span class="num"><b>${r.streak}</b><small>dagar i rad</small></span></li>`).join("")}</ol>`
       :`<p class="plan">Ingen har övat än den här veckan.</p>`}
   </section>
+  ${hist.length?`<section class="panel"><h2>Tidigare veckor</h2><ul class="missed">${hist.map(h=>`<li><span>${wkLabel(h.wk)}</span><span><b>${esc(nameOf({id:h.id,nick:(BOARD.docs[h.id]||{}).nick}))}</b> · ${h.m} min</span></li>`).join("")}</ul></section>`:""}
   <section class="panel"><h2>Ditt namn i topplistan</h2>
     <form id="nickf" class="nick" autocomplete="off"><input class="search" id="nick" maxlength="24" placeholder="Till exempel Oscar" value="${esc(mine.nick||"")}"><button class="btn" style="width:auto">Spara</button></form>
     <p class="foot" id="nickmsg">Namnet syns för alla som har tillgång till glosprogrammet.</p></section>`;
