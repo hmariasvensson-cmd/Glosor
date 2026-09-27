@@ -23,7 +23,15 @@ function rebuildWords(){
   WORDS=[...L.base.words,...mine];
   SECTIONS=mine.length?[...L.base.sections,{id:"mine",name:"Mina ord"}]:L.base.sections.slice();
   byId=Object.fromEntries(WORDS.map(w=>[w.id,w]));
+  // Extra exempelmeningar från Tatoeba (content/tatoeba.json): egna "ord" med id "<ord-id>#<n>" som bara
+  // används i meningsövningarna (diktamen, översätt, ordföljd). Glosquizet påverkas inte.
+  XS={}; const tb=C().tatoeba||{};
+  WORDS.forEach(w=>{ w.extra=(tb[w.id]||[]).map((x,i)=>{const o={...w,id:w.id+"#"+i,base:w.id,exT:x.t,exSv:x.sv,gap:null,
+    tatoeba:{id:x.id,by:x.by}}; XS[o.id]=o; return o;}); });
 }
+let XS={};
+const sentById=ref=>byId[ref]||XS[ref];
+const tatoebaNote=w=>w.tatoeba?`<p class="foot">Meningen kommer från <a href="https://tatoeba.org/sv/sentences/show/${w.tatoeba.id}" target="_blank" rel="noopener">Tatoeba #${w.tatoeba.id}</a>${w.tatoeba.by?` (${esc(w.tatoeba.by)})`:""}, CC BY 2.0 FR.</p>`:"";
 const isMine=t=>(S.mine||[]).some(m=>m.t===t);
 function addMine(g,surface,line,text){
   S.mine=S.mine||[]; if(isMine(g.t)) return;
@@ -64,7 +72,7 @@ function curSec(){
 function sentencePool(min=6){
   let p=WORDS.filter(isLearned);
   if(p.length<min){const s=curSec(); p=[...p,...WORDS.filter(w=>w.sec===s&&!p.includes(w))];}
-  return p;
+  return p.flatMap(w=>[w,...(w.extra||[])]);
 }
 const clozePool=()=>WORDS.filter(w=>w.gap&&isLearned(w));
 const tok=s=>s.toLowerCase().replace(/[’`´]/g,"'").replace(/[«»"“”!?.,;:…()\-–—]/g," ").replace(/\s+/g," ").trim().split(" ").filter(Boolean);
@@ -123,24 +131,62 @@ function glossState(g){
 }
 const GLW=new Map();   // uppslag från glosa till ord i ordlistan, sparas eftersom det är långsamt
 const glossKey=w=>{let k=w.toLowerCase().replace(/’/g,"'"); if(L.elision) k=k.replace(L.elision,""); return k;};
+/* Med ordlista (gloss) går alla ord att trycka på. Ord med glosa är understrukna och visar sin betydelse.
+   Utan ordlista (t.ex. i frågorna) är texten vanlig text. */
 function tapText(lines,gloss,o={}){
   return lines.map((ln,i)=>`<p class="tl${ln.who&&ln.who!=="N"?" said":""}" data-line="${i}" ${lang()}>${ln.fr.split(/([\p{L}'’\-]+)/u).map(part=>{
-      if(!/^[\p{L}'’\-]+$/u.test(part)) return esc(part);
-      const k=glossKey(part); return gloss&&gloss[k]?`<span class="gl ${glossState(gloss[k])}" data-k="${esc(k)}" data-i="${i}">${esc(part)}</span>`:esc(part);
+      if(!gloss||!/^[\p{L}'’\-]+$/u.test(part)||!/\p{L}/u.test(part)) return esc(part);
+      const k=glossKey(part), g=gloss[k];
+      return `<span class="tw${g?" gl "+glossState(g):""}" data-k="${esc(k)}" data-i="${i}">${esc(part)}</span>`;
     }).join("")}${o.lineSpeak?` <button type="button" class="speak xs" data-say="${esc(ln.fr)}" aria-label="Läs upp meningen">${SPK}</button>`:""}</p>
     ${o.sv?`<p class="tl-sv" hidden>${esc(ln.sv||"")}</p>`:""}`).join("");
 }
+// Ordet i ordlistan som en glosa eller ett uppslag motsvarar (om det finns)
+const listWord=t=>WORDS.find(w=>w.sec!=="mine"&&(w.t===t||variants(w.t).includes(norm(t))));
+/* Tryck på ord för att välja dem, tryck igen för att ta bort markeringen. De valda orden samlas i en
+   lista under texten, där man kan se dem, skriva betydelsen för ord utan glosa och lägga till alla i Mina ord. */
 function wireGloss(text){
-  app.querySelectorAll(".gl").forEach(el=>el.onclick=()=>{
-    const g=text.gloss[el.dataset.k], box=$("#gbox"), line=text.lines[+el.dataset.i]; if(!g||!box) return;
-    const known=WORDS.find(w=>w.sec!=="mine"&&(w.t===g.t||variants(w.t).includes(norm(g.t))));
+  const box=$("#gbox"); if(!box) return;
+  const sel=new Map(), gloss=text.gloss||{};
+  // Ord utan glosa sparas som de står, med liten bokstav om språket inte skriver substantiv med stor (tyskan gör det)
+  const base=e=>{ if(e.g) return e.g.t; const t=L.elision?e.surface.replace(L.elision,""):e.surface; return L.nounCaps?t:t.toLowerCase(); };
+  const status=e=>{ const t=base(e); if(isMine(t)) return "Finns redan i Mina ord"; const w=listWord(t);
+    return w?(isLearned(w)?"Du övar redan på ordet":"Finns i ordlistan och kommer i quizet"):""; };
+  const addable=()=>[...sel.values()].filter(e=>!status(e)&&e.sv.trim());
+  const mark=k=>app.querySelectorAll(".tw").forEach(x=>{if(x.dataset.k===k) x.classList.toggle("sel",sel.has(k));});
+  const btnLabel=()=>{const n=addable().length, b=$("#addsel"); if(b){ b.disabled=!n; b.textContent=n?`Lägg till ${n} ${n===1?"ord":"ord"} i Mina ord`:"Inga ord att lägga till"; }};
+  const draw=()=>{
+    document.body.classList.toggle("has-tray",!!sel.size);
+    if(!sel.size){ box.hidden=true; box.innerHTML=""; return; }
     box.hidden=false;
-    box.innerHTML=`<p><b ${lang()}>${esc(g.t)}</b> ${gtag(g.g)} ${esc(g.sv)} <button type="button" class="speak xs" data-say="${esc(g.t)}" aria-label="Läs upp">${SPK}</button></p>
-      ${known?`<p class="foot">${isLearned(known)?"Du övar redan på det här ordet.":"Ordet finns i ordlistan och kommer i quizet."}</p>`
-        :isMine(g.t)?`<p class="foot">Sparat i Mina ord.</p>`:`<button type="button" class="btn ghost" id="addw">Spara i Mina ord</button>`}`;
-    app.querySelectorAll(".gl.sel").forEach(x=>x.classList.remove("sel")); el.classList.add("sel");
-    if($("#addw")) $("#addw").onclick=()=>{ addMine(g,el.textContent,line,text); el.classList.add("saved");
-      $("#addw").outerHTML=`<p class="foot">Sparat i Mina ord. Det kommer med bland de nya orden i nästa pass.</p>`; };
+    box.classList.add("tray"); box.classList.toggle("mini",!!box.dataset.mini);
+    box.innerHTML=`<div class="meta"><span class="label">Valda ord (${sel.size})</span><span><button type="button" class="override" id="minsel">${box.dataset.mini?"Visa listan":"Fäll ihop"}</button> · <button type="button" class="override" id="clrsel">Rensa</button></span></div>
+      <ul class="picked">${[...sel.values()].map(e=>{const st=status(e);
+        return `<li data-pk="${esc(e.k)}"><span class="pw"><b ${lang()}>${esc(base(e))}</b> ${e.g?gtag(e.g.g):""}</span>
+        ${e.g?`<span class="psv">${esc(e.g.sv)}</span>`:`<input class="psv-in" data-sv="${esc(e.k)}" value="${esc(e.sv)}" placeholder="Skriv vad det betyder" ${st?"disabled":""}>`}
+        <button type="button" class="speak xs" data-say="${esc(base(e))}" aria-label="Läs upp">${SPK}</button>
+        <button type="button" class="unpick" data-unpick="${esc(e.k)}" aria-label="Ta bort ${esc(base(e))} från listan">×</button>
+        ${st?`<small class="pst">${st}</small>`:""}</li>`;}).join("")}</ul>
+      <button type="button" class="btn" id="addsel"></button>`;
+    box.querySelectorAll("[data-sv]").forEach(inp=>inp.oninput=()=>{sel.get(inp.dataset.sv).sv=inp.value; btnLabel();});
+    box.querySelectorAll("[data-unpick]").forEach(b=>b.onclick=()=>{const k=b.dataset.unpick; sel.delete(k); mark(k); draw();});
+    $("#clrsel").onclick=()=>{const ks=[...sel.keys()]; sel.clear(); ks.forEach(mark); draw();};
+    $("#minsel").onclick=()=>{ if(box.dataset.mini) delete box.dataset.mini; else box.dataset.mini="1"; draw(); };
+    $("#addsel").onclick=()=>{
+      const list=addable(); if(!list.length) return;
+      list.forEach(e=>{ addMine({t:base(e),sv:e.sv.trim(),g:e.g?e.g.g:""},e.surface,text.lines[e.i],text); sel.delete(e.k); mark(e.k);
+        app.querySelectorAll(".tw").forEach(x=>{if(x.dataset.k===e.k) x.classList.add("saved");}); });
+      draw();
+      box.hidden=false; box.insertAdjacentHTML("afterbegin",`<p class="foot" id="addmsg">${list.length} ${list.length===1?"ord sparat":"ord sparade"} i Mina ord. De kommer med bland de nya orden i nästa pass.</p>`);
+    };
+    btnLabel();
+  };
+  app.querySelectorAll(".tw").forEach(el=>el.onclick=()=>{
+    const k=el.dataset.k;
+    if(sel.has(k)) sel.delete(k);
+    else { const g=gloss[k]||null; sel.set(k,{k,surface:el.textContent,i:+el.dataset.i,g,sv:g?g.sv:""}); }
+    mark(k); draw();
+    const inp=box.querySelector(`[data-sv="${CSS.escape(k)}"]`); if(inp&&!inp.disabled) inp.focus({preventScroll:true});
   });
 }
 function wireSvToggle(){
@@ -189,7 +235,7 @@ RECAP.cloze=ref=>byId[ref]?byId[ref].exT:"";
 
 /* ---------- Diktamen ---------- */
 const dictItem=w=>({k:"dict",id:"dict:"+w.id,ref:w.id,w,t:"type",canType:true});
-RESTORE.dict=RESTORE.trans=RESTORE.order=ref=>byId[ref]?{w:byId[ref]}:null;
+RESTORE.dict=RESTORE.trans=RESTORE.order=ref=>sentById(ref)?{w:sentById(ref)}:null;
 function startDict(){
   const p=shuffle(sentencePool()).filter(w=>tok(w.exT).length>=3).slice(0,8);
   $("#tabs").hidden=true; sess=null; beginQuiz("dict",p.map(dictItem),{againFn:["dict"],label:"Diktamen"});
@@ -197,14 +243,14 @@ function startDict(){
 TYPE.dict=c=>{const w=c.w;return{tab:"Diktamen",
   head:`<p class="q-prompt" style="font-size:1.3rem">Lyssna och skriv</p>${playBar()}`,
   ask:"Skriv hela meningen du hör. Du kan lyssna så många gånger du vill.",placeholder:"Skriv meningen här",accents:L.accents,
-  check:v=>compareTokens(v,w.exT),answer:esc(w.exT),explain:`<p class="ex-sv">${esc(w.exSv)}</p>`,wrongCard:studyCard(w),
+  check:v=>compareTokens(v,w.exT),answer:esc(w.exT),explain:`<p class="ex-sv">${esc(w.exSv)}</p>${tatoebaNote(w)}`,wrongCard:studyCard(w)+tatoebaNote(w),
   say:w.exT,wire:()=>wirePlay(r=>speak(w.exT,r)),autoplay:true}};
 MC.dict=c=>{const w=c.w, others=shuffle(WORDS.filter(x=>x!==w&&x.exT!==w.exT&&x.sec===w.sec)).slice(0,3);
   return{tab:"Diktamen",head:playBar(),ask:"Vilken mening hörde du?",
     opts:shuffle([w,...others].map(x=>({label:x.exT,ok:x===w,lang:true}))),
     explain:`<p class="ex-sv">${esc(w.exSv)}</p>`,wrongCard:studyCard(w),say:w.exT,sayOnShow:true,wire:()=>wirePlay(r=>speak(w.exT,r))}};
 EFFECT.dict=(ref,ok)=>{const x=S.w[ref]; if(x){x.dcR=(x.dcR||0)+(ok?1:0); x.dcW=(x.dcW||0)+(ok?0:1);}};
-RECAP.dict=ref=>byId[ref]?byId[ref].exT:"";
+RECAP.dict=ref=>sentById(ref)?sentById(ref).exT:"";
 
 /* ---------- Översätt hela meningar ---------- */
 function startTrans(){
@@ -216,12 +262,12 @@ function startTrans(){
 TYPE.trans=c=>{const w=c.w;return{tab:"Översätt",
   head:`<p class="q-prompt" style="font-size:1.35rem">${esc(w.exSv)}</p>`,
   ask:`Skriv meningen ${L.inLang}. Den innehåller <b ${lang()}>${esc(w.t)}</b>.`,placeholder:"Skriv meningen här",accents:L.accents,
-  check:v=>compareTokens(v,w.exT),selfGrade:true,answer:esc(w.exT),explain:"",wrongCard:studyCard(w),say:w.exT}};
+  check:v=>compareTokens(v,w.exT),selfGrade:true,answer:esc(w.exT),explain:tatoebaNote(w),wrongCard:studyCard(w)+tatoebaNote(w),say:w.exT}};
 MC.trans=c=>{const w=c.w, others=shuffle(WORDS.filter(x=>x!==w&&x.exT!==w.exT&&x.sec===w.sec)).slice(0,3);
   return{tab:"Översätt",head:`<p class="q-prompt" style="font-size:1.35rem">${esc(w.exSv)}</p>`,ask:"Vilken är rätt översättning?",
     opts:shuffle([w,...others].map(x=>({label:x.exT,ok:x===w,lang:true}))),explain:"",wrongCard:studyCard(w),say:w.exT,sayOnAnswer:true}};
 EFFECT.trans=(ref,ok)=>{S.tr=S.tr||{}; const x=S.tr[ref]||{s:0}; S.tr[ref]={s:ok?x.s+1:0,last:Date.now()};};
-RECAP.trans=ref=>byId[ref]?byId[ref].exT:"";
+RECAP.trans=ref=>sentById(ref)?sentById(ref).exT:"";
 
 /* ---------- Ordföljd med brickor ---------- */
 const orderTokens=s=>{const t=s.replace(/[«»"“”]/g,"").replace(/\s+/g," ").trim(), m=t.match(/^(.*?)\s*([.!?…]+)?$/);
@@ -233,7 +279,7 @@ function startOrder(){
   $("#tabs").hidden=true; sess=null; beginQuiz("order",p.map(orderItem),{againFn:["order"],label:"Ordföljd"});
 }
 TYPE.order=c=>{const w=c.w;return{tab:"Ordföljd",render:renderTiles,o:orderTokens(w.exT),w,answer:esc(w.exT),
-  explain:`<p class="ex-sv">${esc(w.exSv)}</p>`,wrongCard:studyCard(w),say:w.exT}};
+  explain:`<p class="ex-sv">${esc(w.exSv)}</p>${tatoebaNote(w)}`,wrongCard:studyCard(w)+tatoebaNote(w),say:w.exT}};
 function renderTiles(d){
   const words=d.o.words; let order=shuffle(words.map((x,i)=>i));
   if(order.every((v,i)=>words[v]===words[i])) order=order.reverse();
@@ -267,7 +313,7 @@ MC.order=c=>{const w=c.w, o=orderTokens(w.exT), right=o.words.join(" "), alts=ne
   for(let i=0;i<30&&alts.size<2;i++){const s=shuffle(o.words).join(" "); if(s!==right) alts.add(s);}
   return{tab:"Ordföljd",head:`<p class="q-prompt" style="font-size:1.25rem">${esc(w.exSv)}</p>`,ask:"Vilken mening har rätt ordföljd?",
     opts:shuffle([right,...alts].map(s=>({label:s+o.end,ok:s===right,lang:true}))),explain:"",wrongCard:studyCard(w),say:w.exT,sayOnAnswer:true}};
-RECAP.order=ref=>byId[ref]?byId[ref].exT:"";
+RECAP.order=ref=>sentById(ref)?sentById(ref).exT:"";
 
 /* ---------- Skugga: tala utan mikrofon ----------
    Artefakter får inte använda mikrofonen. I stället lyssnar eleven, säger meningen högt samtidigt
@@ -383,7 +429,7 @@ function readIntro(id){
   const t=textById("rq",id); stopSpeech(); $("#tabs").hidden=true; sess=null;
   app.innerHTML=`<section class="panel"><span class="tab">Läsa</span><span class="label">${esc(secName(t.sec))}</span>
     <h2 ${lang()}>${esc(t.title)}</h2>
-    <p class="plan">Tryck på ett understruket ord för att se vad det betyder. <span class="gl known">Gröna ord</span> övar du redan på.</p>
+    <p class="plan">Tryck på ord du inte kan, och tryck igen för att ta bort markeringen. De valda orden samlas under texten, där du kan lägga till dem i Mina ord. Understrukna ord har en färdig översättning. <span class="gl known">Gröna ord</span> övar du redan på.</p>
     ${playBar(`<button type="button" class="btn ghost" id="stop">Stoppa</button>`)}
     <div class="reading">${tapText(t.lines,t.gloss,{sv:true})}</div>
     <div class="glossbox" id="gbox" hidden></div>
@@ -415,7 +461,7 @@ AFTER.lq=AFTER.rq=(ctx,right,total)=>{
   const k=ctx.type, t=textById(k,ctx.id); S.tx=S.tx||{}; const o=S.tx[ctx.id]||{};
   S.tx[ctx.id]={r:right,n:total,best:Math.max(o.best||0,right),last:Date.now()}; save();
   app.innerHTML=`<section class="panel">${resultHead(k==="lq"?"Hörförståelse klar":"Läsförståelse klar",right,total)}
-    <p class="plan">${k==="lq"?"Här är texten. Lyssna en gång till medan du läser. Tryck på understrukna ord för att se vad de betyder."
+    <p class="plan">${k==="lq"?"Här är texten. Lyssna en gång till medan du läser. Tryck på ord du vill spara, så samlas de under texten."
       :"Bra jobbat! Ord du sparade finns under Mina ord och kommer med i nästa pass."}</p>
     ${playBar(`<button type="button" class="btn ghost" id="stop">Stoppa</button>`)}
     <div class="reading">${tapText(t.lines,t.gloss,{sv:true,lineSpeak:true})}</div>
@@ -581,7 +627,7 @@ function gamesPanel(){
       L.genderGame&&g("gen",Object.values(L.genderGame).join(", "),"Rätt artikel och plural för substantiven.")]],
     ["Lyssna och läsa",[
       c.listening&&g("lq","Hörförståelse","Lyssna på en dialog och svara på frågor."),
-      c.reading&&g("rq","Läsa texter","Tryck på okända ord och spara dem i Mina ord."),
+      c.reading&&g("rq","Läsa texter","Tryck på alla ord du inte kan och spara dem i Mina ord."),
       c.culture&&g("culture","Kultur","Kort fakta, en fråga och en jämförelse med Sverige.")]],
     ["Grammatik",[
       ...verbGames().map(v=>`<button class="game" data-g="${v.id}"><span><b>Verb: ${esc(v.name)}</b><small>${esc(v.sub||"")}</small></span><span class="go" aria-hidden="true">›</span></button>`),

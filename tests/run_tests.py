@@ -121,6 +121,8 @@ setTimeout(()=>{ try{
     ok("franska: modelltexterna klarar checklistan", !bad.length, bad.join(" | ")); }
   ok("övningsgrupper", document.querySelectorAll(".exgroup").length===4, document.querySelectorAll(".exgroup").length);
 
+  { const ex=Object.values(XS)[0]; ok("Tatoeba-meningar finns", !!ex&&ex.tatoeba&&sentencePool().length>0, Object.keys(XS).length);
+    if(ex){ ok("Tatoeba-mening återställs", RESTORE.dict(ex.id).w===ex); ok("Tatoeba har källhänvisning", tatoebaNote(ex).includes("CC BY 2.0 FR")); } }
   // Diktamen: fel svar ger jämförelse ord för ord, sedan flerval, sedan skriva igen
   startDict(); q("#ans").value="n'importe quoi"; q("#submit").click();
   ok("diktamen visar skillnader", !!q(".diff .miss")); q("#submit").click();
@@ -143,8 +145,17 @@ setTimeout(()=>{ try{
 
   openListening(); q("[data-pick]").click(); q("#toq").click(); runAll();
   ok("hörförståelse visar texten efteråt", document.querySelectorAll(".tl").length>3);
-  for(const gl of document.querySelectorAll(".gl")){ gl.click(); const add=q("#addw"); if(add){ add.click(); break; } }
-  ok("ord sparas i Mina ord", (S.mine||[]).length===1 && WORDS.some(w=>w.sec==="mine"), (S.mine||[]).map(m=>m.t).join());
+  { const tw=q(".tw"); tw.click(); ok("ord markeras när man trycker", tw.classList.contains("sel")&&!q("#gbox").hidden);
+    tw.click(); ok("ett tryck till tar bort markeringen", !tw.classList.contains("sel")&&q("#gbox").hidden);
+    // ett ord med glosa som inte redan finns
+    for(const gl of document.querySelectorAll(".tw.gl")){ gl.click(); if(!q("#addsel").disabled) break; gl.click(); }
+    // ett ord utan glosa: betydelsen skrivs själv
+    const plain=[...document.querySelectorAll(".tw:not(.gl)")].find(x=>x.textContent.length>4&&!listWord(x.textContent)); plain.click();
+    ok("valda ord listas under texten", document.querySelectorAll(".picked li").length===2);
+    const inp=q(".psv-in:not([disabled])"); inp.value="testbetydelse"; inp.dispatchEvent(new Event("input"));
+    ok("knappen räknar orden", q("#addsel").textContent.includes("2 ord"), q("#addsel").textContent);
+    q("#addsel").click(); }
+  ok("ord sparas i Mina ord", (S.mine||[]).length===2 && WORDS.filter(w=>w.sec==="mine").length===2 && S.mine.some(m=>m.sv==="testbetydelse"), (S.mine||[]).map(m=>m.t+"="+m.sv).join());
   ok("Mina ord kommer först bland nya ord", pickNew()[0] && pickNew()[0].sec==="mine");
 
   ok("eget ord sparas", addOwnWord("la randonnée","vandring","Nous avons fait une randonnée en montagne.")==="" && byId["mine:la randonnée"].gap.ans==="randonnée", JSON.stringify(byId["mine:la randonnée"]&&byId["mine:la randonnée"].gap));

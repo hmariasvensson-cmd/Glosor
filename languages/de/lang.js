@@ -19,6 +19,7 @@ LANGUAGES.de = {
   hintStrip: /^(der|die|das|den|dem|des) /,
   pronouns: /^(er\/sie\/es|sie\/sie|ich|du|er|sie|es|wir|ihr) ?/,
   genders: {m: "maskulinum", f: "femininum", n: "neutrum", pl: "plural"},
+  nounCaps: true,             // substantiv skrivs med stor bokstav (ord man sparar från texter behåller sin stavning)
   genderGame: {m: "der", f: "die", n: "das"},   // spelet der, die, das och plural
 
   storyIntro: "Läs berättelsen och välj rätt form i varje lucka: rätt verbform i Präteritum eller Perfekt, och ett bindeord som passar ordföljden.",

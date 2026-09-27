@@ -228,6 +228,7 @@ function pickNew(){
 
 /* ---------- Startsida ---------- */
 function renderStart(){
+  document.body.classList.remove("has-tray");
   sess=null;
   curView="ova";
   $("#tabs").hidden=false; $("#tab-ova").setAttribute("aria-selected",true); $("#tab-stats").setAttribute("aria-selected",false); $("#tab-board").setAttribute("aria-selected",false);

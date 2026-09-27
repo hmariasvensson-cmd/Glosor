@@ -1,0 +1,2509 @@
+[
+ {
+  "id": "pron-001",
+  "topic": "pron",
+  "rule": "pron-cod",
+  "q": "Tu connais Marc ? – Oui, je [le] connais depuis le collège.",
+  "alt": [
+   "lui",
+   "la",
+   "leur"
+  ],
+  "why": "Connaître någon tar direkt objekt (utan à). Marc är maskulinum singular, alltså le. Lui och leur används för indirekt objekt.",
+  "sv": "Känner du Marc? – Ja, jag har känt honom sedan högstadiet."
+ },
+ {
+  "id": "pron-002",
+  "topic": "pron",
+  "rule": "pron-cod",
+  "q": "Ma valise est très lourde. Tu peux [la] porter ?",
+  "alt": [
+   "lui",
+   "le",
+   "les"
+  ],
+  "why": "Porter något tar direkt objekt. La valise är femininum singular, alltså la, och pronomenet står före infinitiven.",
+  "sv": "Min resväska är jättetung. Kan du bära den?"
+ },
+ {
+  "id": "pron-003",
+  "topic": "pron",
+  "rule": "pron-cod",
+  "q": "Où sont mes clés ? Je ne [les] trouve pas.",
+  "alt": [
+   "leur",
+   "la",
+   "lui"
+  ],
+  "why": "Trouver något tar direkt objekt. Les clés är plural, alltså les. Leur är indirekt objekt (till dem).",
+  "sv": "Var är mina nycklar? Jag hittar dem inte."
+ },
+ {
+  "id": "pron-004",
+  "topic": "pron",
+  "rule": "pron-cod",
+  "q": "Ce film a l'air génial. Je vais [le] regarder ce soir.",
+  "alt": [
+   "lui",
+   "la",
+   "les"
+  ],
+  "why": "Regarder något tar direkt objekt. Le film är maskulinum singular, alltså le, före infinitiven regarder.",
+  "sv": "Den här filmen verkar jättebra. Jag ska titta på den i kväll."
+ },
+ {
+  "id": "pron-005",
+  "topic": "pron",
+  "rule": "pron-cod",
+  "q": "Mes grands-parents habitent à Nice. Je [les] vois chaque été.",
+  "alt": [
+   "leur",
+   "lui",
+   "la"
+  ],
+  "why": "Voir någon tar direkt objekt. Mes grands-parents är plural, alltså les. Leur passar bara efter verb med à (parler à, téléphoner à).",
+  "sv": "Mina morföräldrar bor i Nice. Jag träffar dem varje sommar."
+ },
+ {
+  "id": "pron-006",
+  "topic": "pron",
+  "rule": "pron-cod",
+  "q": "La nouvelle prof de français ? Je [la] trouve très sympa.",
+  "alt": [
+   "lui",
+   "le",
+   "leur"
+  ],
+  "why": "Trouver någon + adjektiv (tycka att någon är …) tar direkt objekt. Prof syftar på en kvinna (la nouvelle prof), alltså la.",
+  "sv": "Den nya franskläraren? Jag tycker att hon är jättetrevlig."
+ },
+ {
+  "id": "pron-007",
+  "topic": "pron",
+  "rule": "pron-cod",
+  "q": "Cette chanson de Stromae, tu [l'écoutes] souvent ?",
+  "alt": [
+   "lui écoutes",
+   "la écoutes",
+   "écoutes la"
+  ],
+  "why": "Écouter något tar direkt objekt (utan à). La chanson ger la, som elideras till l' före vokal. Pronomenet står före verbet.",
+  "sv": "Den här låten med Stromae, lyssnar du ofta på den?"
+ },
+ {
+  "id": "pron-008",
+  "topic": "pron",
+  "rule": "pron-cod",
+  "q": "Les devoirs ? Je vais [les faire] après le dîner.",
+  "alt": [
+   "faire les",
+   "leur faire",
+   "lui faire"
+  ],
+  "why": "Med aller + infinitiv står pronomenet före infinitiven: je vais les faire. Faire tar direkt objekt, så inte leur eller lui.",
+  "sv": "Läxorna? Jag ska göra dem efter middagen."
+ },
+ {
+  "id": "pron-009",
+  "topic": "pron",
+  "rule": "pron-cod",
+  "q": "Mon petit frère ? Je dois [l'accompagner] à l'école.",
+  "alt": [
+   "lui accompagner",
+   "accompagner le",
+   "le accompagner"
+  ],
+  "why": "Accompagner någon tar direkt objekt. Le elideras till l' före vokal och står före infinitiven.",
+  "sv": "Min lillebror? Jag måste följa med honom till skolan."
+ },
+ {
+  "id": "pron-010",
+  "topic": "pron",
+  "rule": "pron-cod",
+  "q": "Ces baskets sont trop chères. Je ne [les] achète pas.",
+  "alt": [
+   "leur",
+   "lui",
+   "la"
+  ],
+  "why": "Acheter något tar direkt objekt. Ces baskets är plural, alltså les. Pronomenet står mellan ne och verbet.",
+  "sv": "De här gympaskorna är för dyra. Jag köper dem inte."
+ },
+ {
+  "id": "pron-011",
+  "topic": "pron",
+  "rule": "pron-coi",
+  "q": "C'est l'anniversaire de ma sœur. Je [lui] offre un livre.",
+  "alt": [
+   "la",
+   "le",
+   "leur"
+  ],
+  "why": "Offrir något à någon: personen är indirekt objekt. À ma sœur blir lui, som används för både han och hon.",
+  "sv": "Det är min systers födelsedag. Jag ger henne en bok."
+ },
+ {
+  "id": "pron-012",
+  "topic": "pron",
+  "rule": "pron-coi",
+  "q": "Mes parents s'inquiètent. Je vais [leur] envoyer un message.",
+  "alt": [
+   "les",
+   "lui",
+   "leurs"
+  ],
+  "why": "Envoyer något à någon: à mes parents blir leur (till dem). Les är direkt objekt, och leurs med s är possessivt (deras) och står före ett substantiv.",
+  "sv": "Mina föräldrar är oroliga. Jag ska skicka ett meddelande till dem."
+ },
+ {
+  "id": "pron-013",
+  "topic": "pron",
+  "rule": "pron-coi",
+  "q": "Tu as parlé au prof ? – Oui, je [lui] ai parlé ce matin.",
+  "alt": [
+   "le",
+   "la",
+   "leur"
+  ],
+  "why": "Parler à någon tar indirekt objekt: au prof blir lui. Le och la är direkt objekt, och leur är plural.",
+  "sv": "Har du pratat med läraren? – Ja, jag pratade med honom i morse."
+ },
+ {
+  "id": "pron-014",
+  "topic": "pron",
+  "rule": "pron-coi",
+  "q": "Mon correspondant à Paris ? Je [lui] écris chaque semaine.",
+  "alt": [
+   "le",
+   "la",
+   "leur"
+  ],
+  "why": "Écrire à någon tar indirekt objekt: à mon correspondant blir lui. Le och la är direkt objekt.",
+  "sv": "Min brevvän i Paris? Jag skriver till honom varje vecka."
+ },
+ {
+  "id": "pron-015",
+  "topic": "pron",
+  "rule": "pron-coi",
+  "q": "Mes copains ne comprennent pas l'exercice, alors je [leur] explique la règle.",
+  "alt": [
+   "les",
+   "lui",
+   "leurs"
+  ],
+  "why": "Expliquer något à någon: à mes copains blir leur. La règle är redan direkt objekt, så les passar inte. Leurs är possessivt.",
+  "sv": "Mina kompisar förstår inte övningen, så jag förklarar regeln för dem."
+ },
+ {
+  "id": "pron-016",
+  "topic": "pron",
+  "rule": "pron-coi",
+  "q": "Tu téléphones à ta grand-mère ? – Oui, je [lui] téléphone tous les dimanches.",
+  "alt": [
+   "la",
+   "le",
+   "leur"
+  ],
+  "why": "Téléphoner à någon tar indirekt objekt, till skillnad från svenskans ringa någon. À ta grand-mère blir lui.",
+  "sv": "Ringer du din mormor? – Ja, jag ringer henne varje söndag."
+ },
+ {
+  "id": "pron-017",
+  "topic": "pron",
+  "rule": "pron-coi",
+  "q": "Les enfants ont faim. Tu peux [leur] donner un goûter ?",
+  "alt": [
+   "les",
+   "lui",
+   "leurs"
+  ],
+  "why": "Donner något à någon: à les enfants blir leur (åt dem), före infinitiven. Un goûter är det direkta objektet.",
+  "sv": "Barnen är hungriga. Kan du ge dem ett mellanmål?"
+ },
+ {
+  "id": "pron-018",
+  "topic": "pron",
+  "rule": "pron-coi",
+  "q": "Julie adore les fleurs. Je vais [lui] acheter des roses.",
+  "alt": [
+   "la",
+   "le",
+   "leur"
+  ],
+  "why": "Acheter något à någon (köpa åt någon): Julie är indirekt objekt, alltså lui. Des roses är det direkta objektet.",
+  "sv": "Julie älskar blommor. Jag ska köpa rosor åt henne."
+ },
+ {
+  "id": "pron-019",
+  "topic": "pron",
+  "rule": "pron-coi",
+  "q": "Tu as répondu à tes grands-parents ? – Non, je ne [leur] ai pas encore répondu.",
+  "alt": [
+   "les",
+   "lui",
+   "leurs"
+  ],
+  "why": "Répondre à någon tar indirekt objekt: à tes grands-parents blir leur. Les är direkt objekt och lui är singular.",
+  "sv": "Har du svarat dina morföräldrar? – Nej, jag har inte svarat dem än."
+ },
+ {
+  "id": "pron-020",
+  "topic": "pron",
+  "rule": "pron-coi",
+  "q": "Le moniteur de ski est sympa. Les élèves [lui] disent toujours bonjour.",
+  "alt": [
+   "le",
+   "la",
+   "leur"
+  ],
+  "why": "Dire bonjour à någon: moniteur är indirekt objekt, alltså lui. Le och la är direkt objekt, leur är plural.",
+  "sv": "Skidläraren är trevlig. Eleverna säger alltid hej till honom."
+ },
+ {
+  "id": "pron-021",
+  "topic": "pron",
+  "rule": "pron-y",
+  "q": "Tu vas à la plage ? – Oui, [j'y] vais cet après-midi.",
+  "alt": [
+   "j'en",
+   "je la",
+   "je lui"
+  ],
+  "why": "Y ersätter en plats med à (à la plage = dit). En används med de, la är direkt objekt och lui gäller personer.",
+  "sv": "Ska du till stranden? – Ja, jag går dit i eftermiddag."
+ },
+ {
+  "id": "pron-022",
+  "topic": "pron",
+  "rule": "pron-y",
+  "q": "Tu es déjà allé à Paris ? – Oui, [j'y suis] allé deux fois.",
+  "alt": [
+   "j'en suis",
+   "je suis y",
+   "j'y ai"
+  ],
+  "why": "À Paris blir y, som står före hjälpverbet: j'y suis allé. Aller tar être, så j'y ai är fel.",
+  "sv": "Har du varit i Paris? – Ja, jag har varit där två gånger."
+ },
+ {
+  "id": "pron-023",
+  "topic": "pron",
+  "rule": "pron-y",
+  "q": "Tu penses à ton examen ? – Oui, [j'y] pense tout le temps.",
+  "alt": [
+   "je lui",
+   "j'en",
+   "je le"
+  ],
+  "why": "Penser à något (en sak) blir y. Lui används bara för personer (je pense à lui). En hör ihop med de.",
+  "sv": "Tänker du på ditt prov? – Ja, jag tänker på det hela tiden."
+ },
+ {
+  "id": "pron-024",
+  "topic": "pron",
+  "rule": "pron-y",
+  "q": "Le club de foot ? Nous [y] allons deux fois par semaine.",
+  "alt": [
+   "en",
+   "le",
+   "lui"
+  ],
+  "why": "Aller au club: en plats med à blir y (dit). Le är direkt objekt, och aller kan inte ha något direkt objekt.",
+  "sv": "Fotbollsklubben? Vi går dit två gånger i veckan."
+ },
+ {
+  "id": "pron-025",
+  "topic": "pron",
+  "rule": "pron-y",
+  "q": "Nice, c'est magnifique. Je voudrais [y] habiter plus tard.",
+  "alt": [
+   "en",
+   "la",
+   "lui"
+  ],
+  "why": "Habiter à Nice blir y habiter (bo där). Y står före infinitiven. La skulle vara direkt objekt, men man bor inte 'något'.",
+  "sv": "Nice är fantastiskt. Jag skulle vilja bo där senare."
+ },
+ {
+  "id": "pron-026",
+  "topic": "pron",
+  "rule": "pron-y",
+  "q": "Tu restes au club ce soir ? – Non, je [n'y] reste pas.",
+  "alt": [
+   "n'en",
+   "ne le",
+   "ne lui"
+  ],
+  "why": "Rester au club: platsen blir y. Ne elideras till n' före y, och y står mellan ne och verbet.",
+  "sv": "Stannar du kvar på klubben i kväll? – Nej, jag stannar inte där."
+ },
+ {
+  "id": "pron-027",
+  "topic": "pron",
+  "rule": "pron-y",
+  "q": "Le Louvre ? On [y] va demain avec la classe.",
+  "alt": [
+   "en",
+   "le",
+   "lui"
+  ],
+  "why": "Aller au Louvre: en plats med à blir y. Le vore direkt objekt, och en används för de + något.",
+  "sv": "Louvren? Vi går dit i morgon med klassen."
+ },
+ {
+  "id": "pron-028",
+  "topic": "pron",
+  "rule": "pron-y",
+  "q": "Tu as réfléchi à ma proposition ? – Oui, [j'y ai] réfléchi.",
+  "alt": [
+   "je lui ai",
+   "j'en ai",
+   "je l'ai"
+  ],
+  "why": "Réfléchir à något: à + sak blir y. Lui gäller personer, och l' är direkt objekt, men réfléchir tar à.",
+  "sv": "Har du funderat på mitt förslag? – Ja, jag har funderat på det."
+ },
+ {
+  "id": "pron-029",
+  "topic": "pron",
+  "rule": "pron-y",
+  "q": "Le Portugal ? Mes cousins [y] passent leurs vacances chaque été.",
+  "alt": [
+   "en",
+   "le",
+   "lui"
+  ],
+  "why": "Passer ses vacances au Portugal: platsen blir y (där). Leurs vacances är redan det direkta objektet.",
+  "sv": "Portugal? Mina kusiner tillbringar sina lov där varje sommar."
+ },
+ {
+  "id": "pron-030",
+  "topic": "pron",
+  "rule": "pron-y",
+  "q": "Je ne suis jamais allé au Stade de France, mais je vais [y] aller samedi.",
+  "alt": [
+   "en",
+   "le",
+   "lui"
+  ],
+  "why": "Aller au Stade de France: platsen blir y, som står före infinitiven: je vais y aller.",
+  "sv": "Jag har aldrig varit på Stade de France, men jag ska gå dit på lördag."
+ },
+ {
+  "id": "pron-031",
+  "topic": "pron",
+  "rule": "pron-en",
+  "q": "Tu veux du gâteau ? – Oui, [j'en] prends un morceau.",
+  "alt": [
+   "je le",
+   "j'y",
+   "je la"
+  ],
+  "why": "En ersätter du/de la/des + substantiv (av det). Le och la ersätter bestämda saker (le gâteau), och y gäller platser med à.",
+  "sv": "Vill du ha tårta? – Ja, jag tar en bit."
+ },
+ {
+  "id": "pron-032",
+  "topic": "pron",
+  "rule": "pron-en",
+  "q": "Tu as des frères et sœurs ? – Oui, [j'en] ai deux.",
+  "alt": [
+   "je les",
+   "j'y",
+   "je leur"
+  ],
+  "why": "Med ett antal (deux) används en: j'en ai deux. Les kan inte stå med ett räkneord efter verbet.",
+  "sv": "Har du syskon? – Ja, jag har två."
+ },
+ {
+  "id": "pron-033",
+  "topic": "pron",
+  "rule": "pron-en",
+  "q": "Il y a combien d'élèves dans ta classe ? – Il y [en] a vingt-huit.",
+  "alt": [
+   "les",
+   "leur",
+   "lui"
+  ],
+  "why": "Med ett antal används en: il y en a vingt-huit (det finns tjugoåtta av dem). En står efter y.",
+  "sv": "Hur många elever finns det i din klass? – Det finns tjugoåtta."
+ },
+ {
+  "id": "pron-034",
+  "topic": "pron",
+  "rule": "pron-en",
+  "q": "Tu fais du sport ? – Oui, [j'en] fais trois fois par semaine.",
+  "alt": [
+   "j'y",
+   "je lui",
+   "je les"
+  ],
+  "why": "Faire du sport: du + substantiv ersätts med en. Y gäller platser, lui personer och les är plural.",
+  "sv": "Tränar du? – Ja, jag tränar tre gånger i veckan."
+ },
+ {
+  "id": "pron-035",
+  "topic": "pron",
+  "rule": "pron-en",
+  "q": "Son voyage au Japon ? Il [en] parle tout le temps.",
+  "alt": [
+   "y",
+   "le",
+   "lui"
+  ],
+  "why": "Parler de något: de + sak blir en. Y hör ihop med à, och lui betyder till honom/henne.",
+  "sv": "Hans resa till Japan? Han pratar om den hela tiden."
+ },
+ {
+  "id": "pron-036",
+  "topic": "pron",
+  "rule": "pron-en",
+  "q": "Des pommes ? [J'en ai] acheté un kilo.",
+  "alt": [
+   "Je les ai",
+   "J'y ai",
+   "Je leur ai"
+  ],
+  "why": "Med en mängd (un kilo) ersätter en substantivet: j'en ai acheté un kilo. Les går inte ihop med un kilo.",
+  "sv": "Äpplen? Jag har köpt ett kilo."
+ },
+ {
+  "id": "pron-037",
+  "topic": "pron",
+  "rule": "pron-en",
+  "q": "Tu as besoin de ton ordinateur ? – Oui, [j'en] ai besoin pour mes devoirs.",
+  "alt": [
+   "je l'",
+   "j'y",
+   "je lui"
+  ],
+  "why": "Avoir besoin de något: de + sak blir en. Besoin är redan objekt till avoir, så l' passar inte.",
+  "sv": "Behöver du din dator? – Ja, jag behöver den till läxorna."
+ },
+ {
+  "id": "pron-038",
+  "topic": "pron",
+  "rule": "pron-en",
+  "q": "Elle revient de la plage ? – Oui, elle [en] revient à l'instant.",
+  "alt": [
+   "y",
+   "la",
+   "lui"
+  ],
+  "why": "Revenir de la plage: en ersätter de + plats (därifrån). Y betyder dit/där, alltså fel riktning.",
+  "sv": "Kommer hon tillbaka från stranden? – Ja, hon kommer därifrån just nu."
+ },
+ {
+  "id": "pron-039",
+  "topic": "pron",
+  "rule": "pron-en",
+  "q": "Du pain ? Il n'y [en] a plus.",
+  "alt": [
+   "le",
+   "la",
+   "les"
+  ],
+  "why": "Du pain ersätts med en: il n'y en a plus (det finns inget kvar). Le, la och les ersätter bestämda saker.",
+  "sv": "Bröd? Det finns inget kvar."
+ },
+ {
+  "id": "pron-040",
+  "topic": "pron",
+  "rule": "pron-en",
+  "q": "Tu as peur des chiens ? – Non, je [n'en] ai pas peur.",
+  "alt": [
+   "ne les",
+   "n'y",
+   "ne leur"
+  ],
+  "why": "Avoir peur de något: de + sak blir en. Ne elideras till n' före en.",
+  "sv": "Är du rädd för hundar? – Nej, jag är inte rädd för dem."
+ },
+ {
+  "id": "pron-041",
+  "topic": "pron",
+  "rule": "pron-pc",
+  "q": "Tes photos de Nice ? Je [les ai vues] sur Instagram.",
+  "alt": [
+   "les ai vu",
+   "ai les vues",
+   "leur ai vues"
+  ],
+  "why": "Pronomenet står före hjälpverbet. När ett direkt objekt (les = les photos, fpl) står före avoir böjs participet: vues.",
+  "sv": "Dina bilder från Nice? Jag har sett dem på Instagram."
+ },
+ {
+  "id": "pron-042",
+  "topic": "pron",
+  "rule": "pron-pc",
+  "q": "Ta valise ? Je [l'ai mise] dans le coffre.",
+  "alt": [
+   "l'ai mis",
+   "ai la mise",
+   "lui ai mise"
+  ],
+  "why": "L' (la valise, f) står före hjälpverbet, så participet böjs: mise. Här hörs skillnaden också: mis/mise.",
+  "sv": "Din resväska? Jag har lagt den i bagageluckan."
+ },
+ {
+  "id": "pron-043",
+  "topic": "pron",
+  "rule": "pron-pc",
+  "q": "Marc ? Je [l'ai vu] au cinéma hier soir.",
+  "alt": [
+   "lui ai vu",
+   "ai le vu",
+   "l'ai vue"
+  ],
+  "why": "Voir någon tar direkt objekt: l' (Marc). Marc är maskulinum, så participet får ingen ändelse: vu.",
+  "sv": "Marc? Jag såg honom på bio i går kväll."
+ },
+ {
+  "id": "pron-044",
+  "topic": "pron",
+  "rule": "pron-pc",
+  "q": "Ta sœur ? Je [lui ai parlé] ce matin.",
+  "alt": [
+   "l'ai parlé",
+   "lui ai parlée",
+   "ai lui parlé"
+  ],
+  "why": "Parler à någon: indirekt objekt lui, före hjälpverbet. Participet böjs bara efter direkt objekt, så parlé utan -e.",
+  "sv": "Din syster? Jag pratade med henne i morse."
+ },
+ {
+  "id": "pron-045",
+  "topic": "pron",
+  "rule": "pron-pc",
+  "q": "Les clés ? Je [les ai perdues] dans le métro.",
+  "alt": [
+   "les ai perdu",
+   "ai perdu les",
+   "leur ai perdues"
+  ],
+  "why": "Les (les clés, fpl) står före avoir, så participet böjs i femininum plural: perdues.",
+  "sv": "Nycklarna? Jag tappade dem i tunnelbanan."
+ },
+ {
+  "id": "pron-046",
+  "topic": "pron",
+  "rule": "pron-pc",
+  "q": "Mes parents ? Je [leur ai envoyé] une carte postale.",
+  "alt": [
+   "les ai envoyés",
+   "leur ai envoyés",
+   "ai leur envoyé"
+  ],
+  "why": "Envoyer något à någon: leur är indirekt objekt, och participet böjs inte efter indirekt objekt.",
+  "sv": "Mina föräldrar? Jag har skickat ett vykort till dem."
+ },
+ {
+  "id": "pron-047",
+  "topic": "pron",
+  "rule": "pron-pc",
+  "q": "La tour Eiffel ? Nous [l'avons visitée] mardi.",
+  "alt": [
+   "l'avons visité",
+   "avons la visitée",
+   "lui avons visitée"
+  ],
+  "why": "L' (la tour Eiffel, f) är direkt objekt före avoir, så participet får -e: visitée.",
+  "sv": "Eiffeltornet? Vi besökte det i tisdags."
+ },
+ {
+  "id": "pron-048",
+  "topic": "pron",
+  "rule": "pron-pc",
+  "q": "Le musée d'Orsay ? Mon frère et moi, nous [y sommes allés] l'année dernière.",
+  "alt": [
+   "sommes y allés",
+   "y avons allé",
+   "en sommes allés"
+  ],
+  "why": "Y står före hjälpverbet. Aller tar être, och participet böjs efter subjektet (nous, två pojkar): allés.",
+  "sv": "Musée d'Orsay? Min bror och jag var där förra året."
+ },
+ {
+  "id": "pron-049",
+  "topic": "pron",
+  "rule": "pron-pc",
+  "q": "Des croissants ? [J'en ai mangé] trois ce matin.",
+  "alt": [
+   "Je les ai mangé",
+   "J'ai en mangé",
+   "J'y ai mangé"
+  ],
+  "why": "Med ett antal (trois) används en, och en står före hjälpverbet: j'en ai mangé.",
+  "sv": "Croissanter? Jag har ätit tre i morse."
+ },
+ {
+  "id": "pron-050",
+  "topic": "pron",
+  "rule": "pron-pc",
+  "q": "Ces chaussures, où est-ce que tu [les as achetées] ?",
+  "alt": [
+   "les as acheté",
+   "as les achetées",
+   "leur as achetées"
+  ],
+  "why": "Les (ces chaussures, fpl) står före avoir, så participet böjs: achetées.",
+  "sv": "De här skorna, var har du köpt dem?"
+ },
+ {
+  "id": "pc-001",
+  "topic": "pc",
+  "rule": "pc-etre",
+  "q": "Hier, je [suis] allé au cinéma avec Hugo.",
+  "alt": [
+   "ai",
+   "es",
+   "est"
+  ],
+  "why": "Aller är ett rörelseverb som tar être: je suis allé. Es och est hör till tu och il.",
+  "sv": "I går gick jag på bio med Hugo."
+ },
+ {
+  "id": "pc-002",
+  "topic": "pc",
+  "rule": "pc-etre",
+  "q": "Mes cousins [sont] arrivés à Paris ce matin.",
+  "alt": [
+   "ont",
+   "est",
+   "avons"
+  ],
+  "why": "Arriver tar être. Subjektet är plural (mes cousins), alltså sont.",
+  "sv": "Mina kusiner kom till Paris i morse."
+ },
+ {
+  "id": "pc-003",
+  "topic": "pc",
+  "rule": "pc-etre",
+  "q": "Elle [est] née à Marseille en 2008.",
+  "alt": [
+   "a",
+   "es",
+   "ai"
+  ],
+  "why": "Naître tar être: elle est née. Den som är född 'är' född, precis som på svenska.",
+  "sv": "Hon föddes i Marseille 2008."
+ },
+ {
+  "id": "pc-004",
+  "topic": "pc",
+  "rule": "pc-etre",
+  "q": "Nous [sommes] restés à la maison tout le week-end.",
+  "alt": [
+   "avons",
+   "sont",
+   "êtes"
+  ],
+  "why": "Rester tar être, trots att det inte är någon rörelse. Nous ger sommes.",
+  "sv": "Vi stannade hemma hela helgen."
+ },
+ {
+  "id": "pc-005",
+  "topic": "pc",
+  "rule": "pc-etre",
+  "q": "Tu [es] tombé de ton vélo ?",
+  "alt": [
+   "as",
+   "est",
+   "ai"
+  ],
+  "why": "Tomber tar être: tu es tombé. Est hör till il/elle.",
+  "sv": "Har du ramlat av cykeln?"
+ },
+ {
+  "id": "pc-006",
+  "topic": "pc",
+  "rule": "pc-etre",
+  "q": "Le train [est] parti à l'heure pour une fois.",
+  "alt": [
+   "a",
+   "sont",
+   "es"
+  ],
+  "why": "Partir tar être. Le train är singular, alltså est.",
+  "sv": "Tåget gick i tid för en gångs skull."
+ },
+ {
+  "id": "pc-007",
+  "topic": "pc",
+  "rule": "pc-etre",
+  "q": "Vous [êtes] descendus à quelle station ?",
+  "alt": [
+   "avez",
+   "sont",
+   "sommes"
+  ],
+  "why": "Descendre utan objekt (gå av, gå ner) tar être. Vous ger êtes.",
+  "sv": "Vid vilken station gick ni av?"
+ },
+ {
+  "id": "pc-008",
+  "topic": "pc",
+  "rule": "pc-etre",
+  "q": "Les Bleus [sont] devenus champions du monde en 2018.",
+  "alt": [
+   "ont",
+   "est",
+   "sommes"
+  ],
+  "why": "Devenir tar être, precis som venir. Les Bleus är plural, alltså sont.",
+  "sv": "Franska landslaget blev världsmästare 2018."
+ },
+ {
+  "id": "pc-009",
+  "topic": "pc",
+  "rule": "pc-etre",
+  "q": "Je [suis] rentrée tard hier soir.",
+  "alt": [
+   "ai",
+   "est",
+   "as"
+  ],
+  "why": "Rentrer (komma hem) tar être. Rentrée med -e visar att det är en tjej som talar.",
+  "sv": "Jag kom hem sent i går kväll."
+ },
+ {
+  "id": "pc-010",
+  "topic": "pc",
+  "rule": "pc-etre",
+  "q": "Quand est-ce que tu [es] revenu de Nice ?",
+  "alt": [
+   "as",
+   "est",
+   "ai"
+  ],
+  "why": "Revenir tar être, som alla verb bildade av venir. Tu ger es.",
+  "sv": "När kom du tillbaka från Nice?"
+ },
+ {
+  "id": "pc-011",
+  "topic": "pc",
+  "rule": "pc-etre",
+  "q": "Ils [sont] sortis du métro à Châtelet.",
+  "alt": [
+   "ont",
+   "est",
+   "sommes"
+  ],
+  "why": "Sortir utan objekt (gå ut) tar être. Participet sortis böjs efter ils.",
+  "sv": "De gick upp ur tunnelbanan vid Châtelet."
+ },
+ {
+  "id": "pc-012",
+  "topic": "pc",
+  "rule": "pc-etre",
+  "q": "Hier, nous [sommes] entrés dans le musée sans payer.",
+  "alt": [
+   "avons",
+   "sont",
+   "êtes"
+  ],
+  "why": "Entrer tar être: nous sommes entrés. Avons vore avoir, som inte används med entrer.",
+  "sv": "I går gick vi in på museet utan att betala."
+ },
+ {
+  "id": "pc-013",
+  "topic": "pc",
+  "rule": "pc-avoir",
+  "q": "[J'ai] monté ma valise au troisième étage.",
+  "alt": [
+   "Je suis",
+   "Je me suis",
+   "J'étais"
+  ],
+  "why": "Monter tar avoir när det har ett direkt objekt (ma valise): man bär upp något. Utan objekt blir det je suis monté.",
+  "sv": "Jag bar upp min resväska till fjärde våningen."
+ },
+ {
+  "id": "pc-014",
+  "topic": "pc",
+  "rule": "pc-avoir",
+  "q": "Elle [a] sorti son portable pour prendre une photo.",
+  "alt": [
+   "est",
+   "s'est",
+   "ont"
+  ],
+  "why": "Sortir med direkt objekt (son portable) betyder ta fram och tar avoir. Utan objekt: elle est sortie.",
+  "sv": "Hon tog fram mobilen för att ta ett foto."
+ },
+ {
+  "id": "pc-015",
+  "topic": "pc",
+  "rule": "pc-avoir",
+  "q": "Nous [avons] descendu les poubelles avant de partir.",
+  "alt": [
+   "sommes",
+   "sont",
+   "ont"
+  ],
+  "why": "Descendre med direkt objekt (les poubelles) tar avoir. Utan objekt: nous sommes descendus.",
+  "sv": "Vi bar ner soporna innan vi åkte."
+ },
+ {
+  "id": "pc-016",
+  "topic": "pc",
+  "rule": "pc-avoir",
+  "q": "Il [a] beaucoup plu pendant le week-end.",
+  "alt": [
+   "est",
+   "ai",
+   "ont"
+  ],
+  "why": "Pleuvoir tar avoir: il a plu. Est används inte, eftersom det inte är ett rörelseverb.",
+  "sv": "Det regnade mycket under helgen."
+ },
+ {
+  "id": "pc-017",
+  "topic": "pc",
+  "rule": "pc-avoir",
+  "q": "Tu [as] vu le match hier soir ?",
+  "alt": [
+   "es",
+   "a",
+   "est"
+  ],
+  "why": "Voir tar avoir, som de flesta verb. Tu ger as.",
+  "sv": "Såg du matchen i går kväll?"
+ },
+ {
+  "id": "pc-018",
+  "topic": "pc",
+  "rule": "pc-avoir",
+  "q": "Les élèves [ont] fini leurs examens.",
+  "alt": [
+   "sont",
+   "a",
+   "avons"
+  ],
+  "why": "Finir tar avoir. Les élèves är plural, alltså ont.",
+  "sv": "Eleverna har gjort klart sina prov."
+ },
+ {
+  "id": "pc-019",
+  "topic": "pc",
+  "rule": "pc-avoir",
+  "q": "Nous [avons] passé deux semaines au Portugal.",
+  "alt": [
+   "sommes",
+   "sont",
+   "ont"
+  ],
+  "why": "Passer med ett tidsuttryck som objekt (deux semaines) tar avoir: tillbringa tid.",
+  "sv": "Vi tillbringade två veckor i Portugal."
+ },
+ {
+  "id": "pc-020",
+  "topic": "pc",
+  "rule": "pc-avoir",
+  "q": "Mon père [a] été malade toute la semaine.",
+  "alt": [
+   "est",
+   "ai",
+   "ont"
+  ],
+  "why": "Être tar själv avoir i passé composé: il a été. Il est été finns inte.",
+  "sv": "Min pappa var sjuk hela veckan."
+ },
+ {
+  "id": "pc-021",
+  "topic": "pc",
+  "rule": "pc-avoir",
+  "q": "Qu'est-ce que vous [avez] mangé à midi ?",
+  "alt": [
+   "êtes",
+   "ont",
+   "avons"
+  ],
+  "why": "Manger tar avoir. Vous ger avez.",
+  "sv": "Vad åt ni till lunch?"
+ },
+ {
+  "id": "pc-022",
+  "topic": "pc",
+  "rule": "pc-avoir",
+  "q": "Elle [a] retourné la crêpe sans problème.",
+  "alt": [
+   "est",
+   "s'est",
+   "as"
+  ],
+  "why": "Retourner med direkt objekt (la crêpe) betyder vända på och tar avoir. Elle est retournée betyder att hon åkte tillbaka.",
+  "sv": "Hon vände pannkakan utan problem."
+ },
+ {
+  "id": "pc-023",
+  "topic": "pc",
+  "rule": "pc-avoir",
+  "q": "Ils [ont] eu de la chance avec le temps.",
+  "alt": [
+   "sont",
+   "a",
+   "avons"
+  ],
+  "why": "Avoir tar avoir: ils ont eu. Participet av avoir är eu.",
+  "sv": "De hade tur med vädret."
+ },
+ {
+  "id": "pc-024",
+  "topic": "pc",
+  "rule": "pc-accord",
+  "q": "Elle est [partie] sans dire au revoir.",
+  "alt": [
+   "parti",
+   "partis",
+   "parties"
+  ],
+  "why": "Med être böjs participet efter subjektet. Elle är femininum singular, alltså -e: partie.",
+  "sv": "Hon gick utan att säga hej då."
+ },
+ {
+  "id": "pc-025",
+  "topic": "pc",
+  "rule": "pc-accord",
+  "q": "Mes sœurs sont [allées] à la plage.",
+  "alt": [
+   "allé",
+   "allés",
+   "allée"
+  ],
+  "why": "Med être böjs participet efter subjektet: mes sœurs är femininum plural, alltså -es.",
+  "sv": "Mina systrar gick till stranden."
+ },
+ {
+  "id": "pc-026",
+  "topic": "pc",
+  "rule": "pc-accord",
+  "q": "Mon frère et moi, nous sommes [arrivés] en retard à cause de la grève.",
+  "alt": [
+   "arrivé",
+   "arrivée",
+   "arrivées"
+  ],
+  "why": "Nous är här två killar (mon frère et moi), alltså maskulinum plural: -s.",
+  "sv": "Min bror och jag kom för sent på grund av strejken."
+ },
+ {
+  "id": "pc-027",
+  "topic": "pc",
+  "rule": "pc-accord",
+  "q": "Marie, tu es [rentrée] à quelle heure hier ?",
+  "alt": [
+   "rentré",
+   "rentrés",
+   "rentrées"
+  ],
+  "why": "Tu syftar på Marie, en tjej, så participet får -e.",
+  "sv": "Marie, när kom du hem i går?"
+ },
+ {
+  "id": "pc-028",
+  "topic": "pc",
+  "rule": "pc-accord",
+  "q": "Les filles sont [venues] me voir à l'hôpital.",
+  "alt": [
+   "venus",
+   "venu",
+   "venue"
+  ],
+  "why": "Les filles är femininum plural, alltså venues med -es.",
+  "sv": "Tjejerna kom och hälsade på mig på sjukhuset."
+ },
+ {
+  "id": "pc-029",
+  "topic": "pc",
+  "rule": "pc-accord",
+  "q": "Ma grand-mère est [née] en Algérie.",
+  "alt": [
+   "né",
+   "nés",
+   "nées"
+  ],
+  "why": "Naître tar être, och ma grand-mère är femininum singular: née.",
+  "sv": "Min mormor föddes i Algeriet."
+ },
+ {
+  "id": "pc-030",
+  "topic": "pc",
+  "rule": "pc-accord",
+  "q": "Paul et Léa sont [montés] en haut de la tour Eiffel.",
+  "alt": [
+   "montées",
+   "monté",
+   "montée"
+  ],
+  "why": "När en grupp har både killar och tjejer används maskulinum plural: montés.",
+  "sv": "Paul och Léa åkte upp i Eiffeltornet."
+ },
+ {
+  "id": "pc-031",
+  "topic": "pc",
+  "rule": "pc-accord",
+  "q": "Madame Dupont, vous êtes [restée] combien de temps à Nice ?",
+  "alt": [
+   "resté",
+   "restés",
+   "restées"
+  ],
+  "why": "Vous är här artigt tilltal till en enda kvinna, så participet får -e men inte -s.",
+  "sv": "Fru Dupont, hur länge stannade ni i Nice?"
+ },
+ {
+  "id": "pc-032",
+  "topic": "pc",
+  "rule": "pc-accord",
+  "q": "Elle est [tombée] dans l'escalier.",
+  "alt": [
+   "tombé",
+   "tombés",
+   "tombées"
+  ],
+  "why": "Tomber tar être, och elle kräver femininum singular: tombée.",
+  "sv": "Hon ramlade i trappan."
+ },
+ {
+  "id": "pc-033",
+  "topic": "pc",
+  "rule": "pc-accord",
+  "q": "Samedi soir, les garçons sont [sortis] ensemble.",
+  "alt": [
+   "sorti",
+   "sortie",
+   "sorties"
+  ],
+  "why": "Les garçons är maskulinum plural, så participet får -s.",
+  "sv": "I lördags kväll gick killarna ut tillsammans."
+ },
+ {
+  "id": "pc-034",
+  "topic": "pc",
+  "rule": "pc-accord",
+  "q": "Mes amies sont [devenues] très fortes en escalade.",
+  "alt": [
+   "devenu",
+   "devenus",
+   "devenue"
+  ],
+  "why": "Mes amies (med -es) är tjejer, femininum plural: devenues.",
+  "sv": "Mina kompisar har blivit jätteduktiga på klättring."
+ },
+ {
+  "id": "pc-035",
+  "topic": "pc",
+  "rule": "pc-refl",
+  "q": "Ce matin, nous nous [sommes] levés à six heures.",
+  "alt": [
+   "avons",
+   "sont",
+   "êtes"
+  ],
+  "why": "Reflexiva verb (se lever) tar alltid être i passé composé. Nous ger sommes.",
+  "sv": "I morse gick vi upp klockan sex."
+ },
+ {
+  "id": "pc-036",
+  "topic": "pc",
+  "rule": "pc-refl",
+  "q": "Elle [s'est] perdue dans le métro.",
+  "alt": [
+   "s'a",
+   "a",
+   "se sont"
+  ],
+  "why": "Se perdre är reflexivt och tar être: elle s'est perdue. Se sont är plural.",
+  "sv": "Hon gick vilse i tunnelbanan."
+ },
+ {
+  "id": "pc-037",
+  "topic": "pc",
+  "rule": "pc-refl",
+  "q": "Je me [suis] réveillé trop tard.",
+  "alt": [
+   "ai",
+   "est",
+   "es"
+  ],
+  "why": "Se réveiller är reflexivt och tar être. Je ger suis.",
+  "sv": "Jag vaknade för sent."
+ },
+ {
+  "id": "pc-038",
+  "topic": "pc",
+  "rule": "pc-refl",
+  "q": "Tu [t'es] bien amusé à la fête ?",
+  "alt": [
+   "t'as",
+   "as",
+   "t'est"
+  ],
+  "why": "S'amuser är reflexivt och tar être: tu t'es amusé. T'est är fel form för tu.",
+  "sv": "Hade du roligt på festen?"
+ },
+ {
+  "id": "pc-039",
+  "topic": "pc",
+  "rule": "pc-refl",
+  "q": "Ils se [sont] rencontrés à Nice il y a trois ans.",
+  "alt": [
+   "ont",
+   "est",
+   "sommes"
+  ],
+  "why": "Se rencontrer är reflexivt och tar être. Ils ger sont.",
+  "sv": "De träffades i Nice för tre år sedan."
+ },
+ {
+  "id": "pc-040",
+  "topic": "pc",
+  "rule": "pc-refl",
+  "q": "Vous vous [êtes] baignés dans la mer ?",
+  "alt": [
+   "avez",
+   "sont",
+   "est"
+  ],
+  "why": "Se baigner är reflexivt och tar être. Vous ger êtes.",
+  "sv": "Badade ni i havet?"
+ },
+ {
+  "id": "pc-041",
+  "topic": "pc",
+  "rule": "pc-refl",
+  "q": "Les enfants se [sont] couchés tôt hier soir.",
+  "alt": [
+   "ont",
+   "est",
+   "sommes"
+  ],
+  "why": "Se coucher är reflexivt och tar être. Les enfants är plural, alltså sont.",
+  "sv": "Barnen gick och lade sig tidigt i går kväll."
+ },
+ {
+  "id": "pc-042",
+  "topic": "pc",
+  "rule": "pc-refl",
+  "q": "Je me [suis] reposée tout l'après-midi.",
+  "alt": [
+   "ai",
+   "est",
+   "es"
+  ],
+  "why": "Se reposer är reflexivt och tar être. Reposée med -e visar att en tjej talar.",
+  "sv": "Jag vilade hela eftermiddagen."
+ },
+ {
+  "id": "pc-043",
+  "topic": "pc",
+  "rule": "pc-refl",
+  "q": "Mes parents se [sont] disputés hier soir.",
+  "alt": [
+   "ont",
+   "est",
+   "avons"
+  ],
+  "why": "Se disputer (bråka) är reflexivt och tar être. Mes parents ger sont.",
+  "sv": "Mina föräldrar bråkade i går kväll."
+ },
+ {
+  "id": "pc-044",
+  "topic": "pc",
+  "rule": "pc-refl",
+  "q": "Mon frère [s'est] cassé la jambe au ski.",
+  "alt": [
+   "s'a",
+   "se sont",
+   "s'es"
+  ],
+  "why": "Se casser la jambe är reflexivt och tar être: il s'est cassé. Participet böjs inte, eftersom la jambe står efter verbet.",
+  "sv": "Min bror bröt benet i skidbacken."
+ },
+ {
+  "id": "pc-045",
+  "topic": "pc",
+  "rule": "pc-refl",
+  "q": "Ma sœur s'est [habillée] en noir pour la fête.",
+  "alt": [
+   "habillé",
+   "habillés",
+   "habillées"
+  ],
+  "why": "S'habiller: se syftar på ma sœur, som är direkt objekt, så participet får -e.",
+  "sv": "Min syster klädde sig i svart till festen."
+ },
+ {
+  "id": "art-001",
+  "topic": "art",
+  "rule": "art-part",
+  "q": "Le matin, je bois [du] café.",
+  "alt": [
+   "de la",
+   "des",
+   "de"
+  ],
+  "why": "Delningsartikel före en obestämd mängd: le café (m) ger du café. De la är för femininum.",
+  "sv": "På morgonen dricker jag kaffe."
+ },
+ {
+  "id": "art-002",
+  "topic": "art",
+  "rule": "art-part",
+  "q": "Ce soir, on mange [de la] soupe.",
+  "alt": [
+   "du",
+   "des",
+   "de"
+  ],
+  "why": "La soupe är femininum, så delningsartikeln blir de la.",
+  "sv": "I kväll äter vi soppa."
+ },
+ {
+  "id": "art-003",
+  "topic": "art",
+  "rule": "art-part",
+  "q": "Pendant le match, il faut boire [de l'eau].",
+  "alt": [
+   "du eau",
+   "de la eau",
+   "des eau"
+  ],
+  "why": "Före vokal blir både du och de la till de l': de l'eau.",
+  "sv": "Under matchen måste man dricka vatten."
+ },
+ {
+  "id": "art-004",
+  "topic": "art",
+  "rule": "art-part",
+  "q": "Tu veux [des] frites avec ton steak ?",
+  "alt": [
+   "du",
+   "de la",
+   "de"
+  ],
+  "why": "Frites är plural, så obestämd mängd blir des.",
+  "sv": "Vill du ha pommes frites till din biff?"
+ },
+ {
+  "id": "art-005",
+  "topic": "art",
+  "rule": "art-part",
+  "q": "Pour faire des crêpes, il faut [de la] farine.",
+  "alt": [
+   "du",
+   "des",
+   "de"
+  ],
+  "why": "La farine är femininum, alltså de la. De ensamt används efter negation och mängdord.",
+  "sv": "För att göra crêpes behövs det mjöl."
+ },
+ {
+  "id": "art-006",
+  "topic": "art",
+  "rule": "art-part",
+  "q": "Mon frère fait [du] ski tous les hivers.",
+  "alt": [
+   "de la",
+   "le",
+   "de"
+  ],
+  "why": "Faire + sport tar delningsartikel: faire du ski (le ski, m).",
+  "sv": "Min bror åker skidor varje vinter."
+ },
+ {
+  "id": "art-007",
+  "topic": "art",
+  "rule": "art-part",
+  "q": "Elle fait [de la] natation deux fois par semaine.",
+  "alt": [
+   "du",
+   "des",
+   "de"
+  ],
+  "why": "Faire + sport tar delningsartikel. La natation är femininum, alltså de la.",
+  "sv": "Hon simmar två gånger i veckan."
+ },
+ {
+  "id": "art-008",
+  "topic": "art",
+  "rule": "art-part",
+  "q": "Au petit-déjeuner, je mange [du] pain avec [de la] confiture.",
+  "alt": [
+   "de la … du",
+   "du … du",
+   "de … de"
+  ],
+  "why": "Le pain är maskulinum (du) och la confiture femininum (de la). De ensamt används bara efter negation och mängdord.",
+  "sv": "Till frukost äter jag bröd med sylt."
+ },
+ {
+  "id": "art-009",
+  "topic": "art",
+  "rule": "art-part",
+  "q": "J'ai [de la] chance, il fait beau aujourd'hui !",
+  "alt": [
+   "du",
+   "de",
+   "des"
+  ],
+  "why": "Avoir de la chance (ha tur): la chance är femininum, alltså de la.",
+  "sv": "Jag har tur, det är fint väder i dag!"
+ },
+ {
+  "id": "art-010",
+  "topic": "art",
+  "rule": "art-part",
+  "q": "Ce musicien a [du] talent.",
+  "alt": [
+   "de la",
+   "des",
+   "de"
+  ],
+  "why": "Le talent är maskulinum, så delningsartikeln blir du.",
+  "sv": "Den här musikern har talang."
+ },
+ {
+  "id": "art-011",
+  "topic": "art",
+  "rule": "art-part",
+  "q": "Il y a [du] monde dans le métro ce matin.",
+  "alt": [
+   "de la",
+   "des",
+   "de"
+  ],
+  "why": "Du monde betyder mycket folk. Le monde är maskulinum singular, alltså du.",
+  "sv": "Det är mycket folk i tunnelbanan i morse."
+ },
+ {
+  "id": "art-012",
+  "topic": "art",
+  "rule": "art-part",
+  "q": "Il fait [de l'escalade] depuis deux ans.",
+  "alt": [
+   "du escalade",
+   "de la escalade",
+   "des escalade"
+  ],
+  "why": "Faire + sport tar delningsartikel. Före vokal blir den de l': de l'escalade.",
+  "sv": "Han har klättrat i två år."
+ },
+ {
+  "id": "art-013",
+  "topic": "art",
+  "rule": "art-neg",
+  "q": "Je n'ai pas [de] voiture.",
+  "alt": [
+   "une",
+   "de la",
+   "des"
+  ],
+  "why": "Efter negation blir un, une, du, de la och des till de: pas de voiture.",
+  "sv": "Jag har ingen bil."
+ },
+ {
+  "id": "art-014",
+  "topic": "art",
+  "rule": "art-neg",
+  "q": "Elle ne mange pas [de] viande.",
+  "alt": [
+   "de la",
+   "du",
+   "des"
+  ],
+  "why": "Efter ne … pas blir de la till de: pas de viande.",
+  "sv": "Hon äter inte kött."
+ },
+ {
+  "id": "art-015",
+  "topic": "art",
+  "rule": "art-neg",
+  "q": "Il n'y a plus [de] lait dans le frigo.",
+  "alt": [
+   "du",
+   "de la",
+   "des"
+  ],
+  "why": "Ne … plus är en negation, så du blir de: plus de lait.",
+  "sv": "Det finns ingen mjölk kvar i kylen."
+ },
+ {
+  "id": "art-016",
+  "topic": "art",
+  "rule": "art-neg",
+  "q": "Nous n'avons pas [d'argent] pour partir en vacances.",
+  "alt": [
+   "de l'argent",
+   "du argent",
+   "des argent"
+  ],
+  "why": "Efter negation blir de l' till de, och de elideras till d' före vokal: pas d'argent.",
+  "sv": "Vi har inga pengar att åka på semester för."
+ },
+ {
+  "id": "art-017",
+  "topic": "art",
+  "rule": "art-neg",
+  "q": "Je ne bois jamais [de] café le soir.",
+  "alt": [
+   "du",
+   "de la",
+   "des"
+  ],
+  "why": "Ne … jamais är en negation, så du blir de.",
+  "sv": "Jag dricker aldrig kaffe på kvällen."
+ },
+ {
+  "id": "art-018",
+  "topic": "art",
+  "rule": "art-neg",
+  "q": "Tu n'as vraiment pas [de] chance !",
+  "alt": [
+   "de la",
+   "du",
+   "des"
+  ],
+  "why": "Efter ne … pas blir de la till de: pas de chance.",
+  "sv": "Du har verkligen ingen tur!"
+ },
+ {
+  "id": "art-019",
+  "topic": "art",
+  "rule": "art-neg",
+  "q": "Ma sœur ne fait pas [de] sport le week-end.",
+  "alt": [
+   "du",
+   "de la",
+   "des"
+  ],
+  "why": "Faire du sport blir ne pas faire de sport efter negation.",
+  "sv": "Min syster tränar inte på helgerna."
+ },
+ {
+  "id": "art-020",
+  "topic": "art",
+  "rule": "art-neg",
+  "q": "Désolé, je n'ai pas [de] temps libre aujourd'hui.",
+  "alt": [
+   "du",
+   "de la",
+   "des"
+  ],
+  "why": "Efter negation blir du till de: pas de temps libre.",
+  "sv": "Förlåt, jag har ingen fritid i dag."
+ },
+ {
+  "id": "art-021",
+  "topic": "art",
+  "rule": "art-neg",
+  "q": "Ce n'est pas [du] sucre, c'est du sel !",
+  "alt": [
+   "de",
+   "de la",
+   "des"
+  ],
+  "why": "Undantag: efter ce n'est pas behålls artikeln, för meningen säger vad något är, inte att något saknas.",
+  "sv": "Det är inte socker, det är salt!"
+ },
+ {
+  "id": "art-022",
+  "topic": "art",
+  "rule": "art-neg",
+  "q": "Il n'y a pas [de] métro dans cette ville.",
+  "alt": [
+   "du",
+   "de la",
+   "des"
+  ],
+  "why": "Il n'y a pas + obestämd mängd: artikeln blir de.",
+  "sv": "Det finns ingen tunnelbana i den här staden."
+ },
+ {
+  "id": "art-023",
+  "topic": "art",
+  "rule": "art-neg",
+  "q": "Ma correspondante n'a pas [d'animaux].",
+  "alt": [
+   "des animaux",
+   "de les animaux",
+   "d'animal"
+  ],
+  "why": "Efter negation blir des till de, som elideras före vokal: pas d'animaux. Animaux är plural, så inte animal.",
+  "sv": "Min brevvän har inga husdjur."
+ },
+ {
+  "id": "art-024",
+  "topic": "art",
+  "rule": "art-neg",
+  "q": "On n'a pas acheté [de] billets pour le concert.",
+  "alt": [
+   "des",
+   "du"
+  ],
+  "why": "Efter negation i passé composé blir des till de: pas de billets.",
+  "sv": "Vi köpte inga biljetter till konserten."
+ },
+ {
+  "id": "art-025",
+  "topic": "art",
+  "rule": "art-qte",
+  "q": "Il y a beaucoup [de] touristes sur la plage.",
+  "alt": [
+   "des",
+   "du",
+   "les"
+  ],
+  "why": "Efter mängdord som beaucoup används bara de, utan artikel.",
+  "sv": "Det är mycket turister på stranden."
+ },
+ {
+  "id": "art-026",
+  "topic": "art",
+  "rule": "art-qte",
+  "q": "J'ai acheté un kilo [de] tomates.",
+  "alt": [
+   "des",
+   "du",
+   "les"
+  ],
+  "why": "Efter måttord som un kilo används bara de.",
+  "sv": "Jag köpte ett kilo tomater."
+ },
+ {
+  "id": "art-027",
+  "topic": "art",
+  "rule": "art-qte",
+  "q": "Elle a trop [de] devoirs ce week-end.",
+  "alt": [
+   "des",
+   "du",
+   "les"
+  ],
+  "why": "Efter trop (för mycket) används bara de.",
+  "sv": "Hon har för mycket läxor den här helgen."
+ },
+ {
+  "id": "art-028",
+  "topic": "art",
+  "rule": "art-qte",
+  "q": "Tu veux un peu [de] sucre dans ton café ?",
+  "alt": [
+   "du",
+   "le",
+   "des"
+  ],
+  "why": "Efter un peu används bara de: un peu de sucre.",
+  "sv": "Vill du ha lite socker i kaffet?"
+ },
+ {
+  "id": "art-029",
+  "topic": "art",
+  "rule": "art-qte",
+  "q": "Il reste assez [de] place dans la voiture ?",
+  "alt": [
+   "de la",
+   "du",
+   "la"
+  ],
+  "why": "Efter assez (tillräckligt) används bara de.",
+  "sv": "Finns det tillräckligt med plats kvar i bilen?"
+ },
+ {
+  "id": "art-030",
+  "topic": "art",
+  "rule": "art-qte",
+  "q": "Achète une bouteille [d'eau], s'il te plaît.",
+  "alt": [
+   "de l'eau",
+   "du eau",
+   "des eaux"
+  ],
+  "why": "Efter måttord som une bouteille används bara de, som blir d' före vokal: une bouteille d'eau.",
+  "sv": "Köp en flaska vatten, är du snäll."
+ },
+ {
+  "id": "art-031",
+  "topic": "art",
+  "rule": "art-qte",
+  "q": "Nous avons mangé une boîte [de] chocolats.",
+  "alt": [
+   "des",
+   "du",
+   "les"
+  ],
+  "why": "Efter une boîte används bara de: une boîte de chocolats.",
+  "sv": "Vi åt upp en ask choklad."
+ },
+ {
+  "id": "art-032",
+  "topic": "art",
+  "rule": "art-qte",
+  "q": "Combien [de] frères et sœurs as-tu ?",
+  "alt": [
+   "des",
+   "du",
+   "les"
+  ],
+  "why": "Efter combien används bara de: combien de frères.",
+  "sv": "Hur många syskon har du?"
+ },
+ {
+  "id": "art-033",
+  "topic": "art",
+  "rule": "art-qte",
+  "q": "Mon père boit une tasse [de] thé chaque matin.",
+  "alt": [
+   "du",
+   "le",
+   "des"
+  ],
+  "why": "Efter une tasse används bara de: une tasse de thé.",
+  "sv": "Min pappa dricker en kopp te varje morgon."
+ },
+ {
+  "id": "art-034",
+  "topic": "art",
+  "rule": "art-qte",
+  "q": "Pas mal [de] jeunes font du ski dans les Alpes.",
+  "alt": [
+   "des",
+   "du",
+   "les"
+  ],
+  "why": "Pas mal de (ganska många) är ett mängduttryck och följs av bara de.",
+  "sv": "Ganska många unga åker skidor i Alperna."
+ },
+ {
+  "id": "art-035",
+  "topic": "art",
+  "rule": "art-qte",
+  "q": "J'ai moins [de] temps libre cette année.",
+  "alt": [
+   "du",
+   "le",
+   "des"
+  ],
+  "why": "Efter moins (mindre) används bara de: moins de temps.",
+  "sv": "Jag har mindre fritid i år."
+ },
+ {
+  "id": "art-036",
+  "topic": "art",
+  "rule": "art-qte",
+  "q": "La plupart [des] élèves prennent le métro pour aller au lycée.",
+  "alt": [
+   "de",
+   "du",
+   "les"
+  ],
+  "why": "Undantag: la plupart följs av des (de + les). La plupart de élèves går inte.",
+  "sv": "De flesta elever tar tunnelbanan till gymnasiet."
+ },
+ {
+  "id": "prep-001",
+  "topic": "prep",
+  "rule": "prep-pays",
+  "q": "Ma correspondante habite [en] Allemagne.",
+  "alt": [
+   "au",
+   "à la",
+   "à"
+  ],
+  "why": "Länder som slutar på -e är oftast femininum och tar en: en Allemagne.",
+  "sv": "Min brevvän bor i Tyskland."
+ },
+ {
+  "id": "prep-002",
+  "topic": "prep",
+  "rule": "prep-pays",
+  "q": "Cet été, nous partons [au] Portugal.",
+  "alt": [
+   "en",
+   "à",
+   "aux"
+  ],
+  "why": "Le Portugal är maskulinum, så det blir au (à + le).",
+  "sv": "I sommar åker vi till Portugal."
+ },
+ {
+  "id": "prep-003",
+  "topic": "prep",
+  "rule": "prep-pays",
+  "q": "Mon oncle travaille [aux] États-Unis.",
+  "alt": [
+   "en",
+   "au",
+   "à"
+  ],
+  "why": "Les États-Unis är plural, så det blir aux (à + les).",
+  "sv": "Min farbror jobbar i USA."
+ },
+ {
+  "id": "prep-004",
+  "topic": "prep",
+  "rule": "prep-pays",
+  "q": "Il revient [du] Japon demain.",
+  "alt": [
+   "de",
+   "des",
+   "de la"
+  ],
+  "why": "Från ett maskulint land: de + le = du. Le Japon är maskulinum.",
+  "sv": "Han kommer tillbaka från Japan i morgon."
+ },
+ {
+  "id": "prep-005",
+  "topic": "prep",
+  "rule": "prep-pays",
+  "q": "Elle est [en] Italie pour ses études.",
+  "alt": [
+   "au",
+   "à",
+   "à l'"
+  ],
+  "why": "L'Italie är femininum, så det blir en Italie.",
+  "sv": "Hon är i Italien för sina studier."
+ },
+ {
+  "id": "prep-006",
+  "topic": "prep",
+  "rule": "prep-pays",
+  "q": "Mes grands-parents viennent [d'Espagne].",
+  "alt": [
+   "de l'Espagne",
+   "du Espagne",
+   "de Espagne"
+  ],
+  "why": "Från ett feminint land används bara de, utan artikel, och de elideras före vokal: d'Espagne.",
+  "sv": "Mina morföräldrar kommer från Spanien."
+ },
+ {
+  "id": "prep-007",
+  "topic": "prep",
+  "rule": "prep-pays",
+  "q": "On va faire du ski [en] Suisse.",
+  "alt": [
+   "au",
+   "à",
+   "à la"
+  ],
+  "why": "La Suisse är femininum, så det blir en Suisse.",
+  "sv": "Vi ska åka skidor i Schweiz."
+ },
+ {
+  "id": "prep-008",
+  "topic": "prep",
+  "rule": "prep-pays",
+  "q": "Tu es déjà allé [au] Canada ?",
+  "alt": [
+   "en",
+   "à",
+   "dans"
+  ],
+  "why": "Le Canada är maskulinum, så det blir au Canada.",
+  "sv": "Har du varit i Kanada?"
+ },
+ {
+  "id": "prep-009",
+  "topic": "prep",
+  "rule": "prep-pays",
+  "q": "Mon cousin est rentré [des] Pays-Bas hier.",
+  "alt": [
+   "du",
+   "de",
+   "de la"
+  ],
+  "why": "Les Pays-Bas är plural. Från ett land i plural: de + les = des.",
+  "sv": "Min kusin kom hem från Nederländerna i går."
+ },
+ {
+  "id": "prep-010",
+  "topic": "prep",
+  "rule": "prep-pays",
+  "q": "Ils ont passé leurs vacances [au] Maroc.",
+  "alt": [
+   "en",
+   "à",
+   "aux"
+  ],
+  "why": "Le Maroc är maskulinum, så det blir au Maroc.",
+  "sv": "De tillbringade semestern i Marocko."
+ },
+ {
+  "id": "prep-011",
+  "topic": "prep",
+  "rule": "prep-pays",
+  "q": "Nous allons [au] Mexique cet hiver.",
+  "alt": [
+   "en",
+   "à",
+   "aux"
+  ],
+  "why": "Le Mexique slutar på -e men är maskulinum (ett undantag), så det blir au Mexique.",
+  "sv": "Vi åker till Mexiko i vinter."
+ },
+ {
+  "id": "prep-012",
+  "topic": "prep",
+  "rule": "prep-ville",
+  "q": "Je suis né [à] Stockholm.",
+  "alt": [
+   "en",
+   "au",
+   "dans"
+  ],
+  "why": "Med städer används à, både för var man är och vart man åker.",
+  "sv": "Jag är född i Stockholm."
+ },
+ {
+  "id": "prep-013",
+  "topic": "prep",
+  "rule": "prep-ville",
+  "q": "Elle a déménagé [à] Nice l'année dernière.",
+  "alt": [
+   "en",
+   "au",
+   "de"
+  ],
+  "why": "Med städer används à: déménager à Nice (flytta till Nice).",
+  "sv": "Hon flyttade till Nice förra året."
+ },
+ {
+  "id": "prep-014",
+  "topic": "prep",
+  "rule": "prep-ville",
+  "q": "Le train arrive [de] Lyon à quinze heures.",
+  "alt": [
+   "du",
+   "des",
+   "en"
+  ],
+  "why": "Från en stad används de utan artikel: de Lyon.",
+  "sv": "Tåget från Lyon kommer klockan femton."
+ },
+ {
+  "id": "prep-015",
+  "topic": "prep",
+  "rule": "prep-ville",
+  "q": "Nous allons [à] Paris pour le week-end.",
+  "alt": [
+   "en",
+   "au",
+   "dans"
+  ],
+  "why": "Med städer används à, även när man åker dit.",
+  "sv": "Vi åker till Paris över helgen."
+ },
+ {
+  "id": "prep-016",
+  "topic": "prep",
+  "rule": "prep-ville",
+  "q": "Mon père revient [de] Marseille ce soir.",
+  "alt": [
+   "du",
+   "en",
+   "des"
+  ],
+  "why": "Från en stad används de utan artikel: de Marseille.",
+  "sv": "Min pappa kommer tillbaka från Marseille i kväll."
+ },
+ {
+  "id": "prep-017",
+  "topic": "prep",
+  "rule": "prep-ville",
+  "q": "Ma tante habite [au] Havre.",
+  "alt": [
+   "à",
+   "en",
+   "à le"
+  ],
+  "why": "Le Havre har artikel i namnet, så à + le blir au: au Havre.",
+  "sv": "Min moster bor i Le Havre."
+ },
+ {
+  "id": "prep-018",
+  "topic": "prep",
+  "rule": "prep-ville",
+  "q": "Il y a beaucoup de monuments célèbres [à] Rome.",
+  "alt": [
+   "en",
+   "au",
+   "de"
+  ],
+  "why": "Med städer används à: à Rome.",
+  "sv": "Det finns många kända monument i Rom."
+ },
+ {
+  "id": "prep-019",
+  "topic": "prep",
+  "rule": "prep-ville",
+  "q": "Ma tante vient [d'Oslo] pour les vacances.",
+  "alt": [
+   "de l'Oslo",
+   "du Oslo",
+   "de Oslo"
+  ],
+  "why": "Från en stad används de utan artikel, och de elideras före vokal: d'Oslo.",
+  "sv": "Min moster kommer från Oslo över lovet."
+ },
+ {
+  "id": "prep-020",
+  "topic": "prep",
+  "rule": "prep-ville",
+  "q": "Mes cousins habitent [à] Londres.",
+  "alt": [
+   "en",
+   "au",
+   "de"
+  ],
+  "why": "Med städer används à: à Londres.",
+  "sv": "Mina kusiner bor i London."
+ },
+ {
+  "id": "prep-021",
+  "topic": "prep",
+  "rule": "prep-ville",
+  "q": "[À] Nice, il fait beau presque toute l'année.",
+  "alt": [
+   "En",
+   "Au",
+   "De"
+  ],
+  "why": "Med städer används à: à Nice.",
+  "sv": "I Nice är det fint väder nästan hela året."
+ },
+ {
+  "id": "prep-022",
+  "topic": "prep",
+  "rule": "prep-a-de",
+  "q": "Samedi, on va [au] cinéma avec Léa.",
+  "alt": [
+   "à le",
+   "à la",
+   "en"
+  ],
+  "why": "À + le dras alltid ihop till au: au cinéma. Le cinéma är maskulinum.",
+  "sv": "På lördag går vi på bio med Léa."
+ },
+ {
+  "id": "prep-023",
+  "topic": "prep",
+  "rule": "prep-a-de",
+  "q": "Il revient [du] travail vers dix-neuf heures.",
+  "alt": [
+   "de le",
+   "de la",
+   "des"
+  ],
+  "why": "De + le dras ihop till du: du travail.",
+  "sv": "Han kommer hem från jobbet runt sju."
+ },
+ {
+  "id": "prep-024",
+  "topic": "prep",
+  "rule": "prep-a-de",
+  "q": "Les enfants jouent [au] foot dans le parc.",
+  "alt": [
+   "du",
+   "à le",
+   "de"
+  ],
+  "why": "Jouer à + sport eller spel: à + le foot blir au foot. Jouer de används för instrument.",
+  "sv": "Barnen spelar fotboll i parken."
+ },
+ {
+  "id": "prep-025",
+  "topic": "prep",
+  "rule": "prep-a-de",
+  "q": "Elle joue [du] piano depuis dix ans.",
+  "alt": [
+   "au",
+   "de le",
+   "le"
+  ],
+  "why": "Jouer de + instrument: de + le piano blir du piano. Jouer à används för sporter och spel.",
+  "sv": "Hon har spelat piano i tio år."
+ },
+ {
+  "id": "prep-026",
+  "topic": "prep",
+  "rule": "prep-a-de",
+  "q": "Le prof explique la règle [aux] élèves.",
+  "alt": [
+   "à les",
+   "des",
+   "au"
+  ],
+  "why": "À + les dras ihop till aux: aux élèves.",
+  "sv": "Läraren förklarar regeln för eleverna."
+ },
+ {
+  "id": "prep-027",
+  "topic": "prep",
+  "rule": "prep-a-de",
+  "q": "C'est le portable [du] professeur.",
+  "alt": [
+   "de le",
+   "de",
+   "au"
+  ],
+  "why": "Ägande uttrycks med de. De + le blir du: le portable du professeur.",
+  "sv": "Det är lärarens mobil."
+ },
+ {
+  "id": "prep-028",
+  "topic": "prep",
+  "rule": "prep-a-de",
+  "q": "Nous allons [à la] plage cet après-midi.",
+  "alt": [
+   "au",
+   "à le",
+   "en"
+  ],
+  "why": "La plage är femininum. À + la dras inte ihop: à la plage.",
+  "sv": "Vi går till stranden i eftermiddag."
+ },
+ {
+  "id": "prep-029",
+  "topic": "prep",
+  "rule": "prep-a-de",
+  "q": "Elle sort [de l'hôpital] demain.",
+  "alt": [
+   "du hôpital",
+   "de le hôpital",
+   "de la hôpital"
+  ],
+  "why": "Före vokal eller stumt h blir både de le och de la till de l': de l'hôpital.",
+  "sv": "Hon kommer ut från sjukhuset i morgon."
+ },
+ {
+  "id": "prep-030",
+  "topic": "prep",
+  "rule": "prep-a-de",
+  "q": "J'ai mal [aux] pieds après la randonnée.",
+  "alt": [
+   "au",
+   "à les",
+   "des"
+  ],
+  "why": "Avoir mal à: à + les pieds blir aux pieds.",
+  "sv": "Jag har ont i fötterna efter vandringen."
+ },
+ {
+  "id": "prep-031",
+  "topic": "prep",
+  "rule": "prep-a-de",
+  "q": "Je regarde les horaires [des] trains sur mon portable.",
+  "alt": [
+   "de les",
+   "du",
+   "aux"
+  ],
+  "why": "De + les dras ihop till des: les horaires des trains.",
+  "sv": "Jag kollar tågtiderna på mobilen."
+ },
+ {
+  "id": "prep-032",
+  "topic": "prep",
+  "rule": "prep-a-de",
+  "q": "On se retrouve [à l'entrée] du musée.",
+  "alt": [
+   "au entrée",
+   "à la entrée",
+   "en entrée"
+  ],
+  "why": "À + la blir à l' före vokal: à l'entrée.",
+  "sv": "Vi ses vid ingången till museet."
+ },
+ {
+  "id": "rel-001",
+  "topic": "rel",
+  "rule": "rel-qui",
+  "q": "J'ai un ami [qui] habite à Nice.",
+  "alt": [
+   "que",
+   "où",
+   "dont"
+  ],
+  "why": "Qui är subjekt i bisatsen: det är vännen som bor i Nice. Direkt efter qui kommer verbet.",
+  "sv": "Jag har en kompis som bor i Nice."
+ },
+ {
+  "id": "rel-002",
+  "topic": "rel",
+  "rule": "rel-qui",
+  "q": "C'est la fille [qui] m'a aidé dans le métro.",
+  "alt": [
+   "que",
+   "qu'",
+   "dont"
+  ],
+  "why": "Qui är subjekt för a aidé. Qui elideras aldrig, men que blir qu' före vokal.",
+  "sv": "Det är tjejen som hjälpte mig i tunnelbanan."
+ },
+ {
+  "id": "rel-003",
+  "topic": "rel",
+  "rule": "rel-qui",
+  "q": "Le train [qui] part à huit heures est toujours plein.",
+  "alt": [
+   "que",
+   "où",
+   "dont"
+  ],
+  "why": "Qui är subjekt: tåget är det som går. Efter qui kommer verbet direkt.",
+  "sv": "Tåget som går klockan åtta är alltid fullt."
+ },
+ {
+  "id": "rel-004",
+  "topic": "rel",
+  "rule": "rel-qui",
+  "q": "Je connais un moniteur [qui] travaille dans une station de ski.",
+  "alt": [
+   "que",
+   "où",
+   "dont"
+  ],
+  "why": "Qui är subjekt för travaille. Que kräver ett eget subjekt i bisatsen.",
+  "sv": "Jag känner en instruktör som jobbar på en skidort."
+ },
+ {
+  "id": "rel-005",
+  "topic": "rel",
+  "rule": "rel-qui",
+  "q": "Les élèves [qui] font du sport dorment souvent mieux.",
+  "alt": [
+   "que",
+   "dont",
+   "où"
+  ],
+  "why": "Qui är subjekt för font. Eleverna är de som tränar.",
+  "sv": "Elever som tränar sover ofta bättre."
+ },
+ {
+  "id": "rel-006",
+  "topic": "rel",
+  "rule": "rel-qui",
+  "q": "C'est Zidane [qui] a marqué ce but.",
+  "alt": [
+   "que",
+   "qu'",
+   "dont"
+  ],
+  "why": "Qui är subjekt för a marqué. Qu'a är talspråk och räknas som fel.",
+  "sv": "Det är Zidane som gjorde det målet."
+ },
+ {
+  "id": "rel-007",
+  "topic": "rel",
+  "rule": "rel-qui",
+  "q": "Tu as vu le chien [qui] court sur la plage ?",
+  "alt": [
+   "que",
+   "où",
+   "dont"
+  ],
+  "why": "Qui är subjekt: hunden är den som springer.",
+  "sv": "Har du sett hunden som springer på stranden?"
+ },
+ {
+  "id": "rel-008",
+  "topic": "rel",
+  "rule": "rel-qui",
+  "q": "Voilà une chanson [qui] me rend heureux.",
+  "alt": [
+   "que",
+   "dont",
+   "où"
+  ],
+  "why": "Qui är subjekt för rend. Me är objekt, inte subjekt, så que passar inte.",
+  "sv": "Det här är en låt som gör mig glad."
+ },
+ {
+  "id": "rel-009",
+  "topic": "rel",
+  "rule": "rel-que",
+  "q": "Le film [que] j'ai vu hier était génial.",
+  "alt": [
+   "qui",
+   "dont",
+   "où"
+  ],
+  "why": "Que är objekt i bisatsen: jag såg filmen. Bisatsen har redan ett subjekt (j').",
+  "sv": "Filmen som jag såg i går var jättebra."
+ },
+ {
+  "id": "rel-010",
+  "topic": "rel",
+  "rule": "rel-que",
+  "q": "C'est la valise [que] j'ai achetée à Paris.",
+  "alt": [
+   "qui",
+   "dont",
+   "où"
+  ],
+  "why": "Que är objekt för ai achetée, och je är subjekt.",
+  "sv": "Det är resväskan som jag köpte i Paris."
+ },
+ {
+  "id": "rel-011",
+  "topic": "rel",
+  "rule": "rel-que",
+  "q": "Les amis [qu'elle] a invités sont arrivés.",
+  "alt": [
+   "qui elle",
+   "que elle",
+   "dont elle"
+  ],
+  "why": "Que är objekt (hon bjöd in vännerna) och elideras till qu' före elle.",
+  "sv": "Vännerna som hon bjöd in har kommit."
+ },
+ {
+  "id": "rel-012",
+  "topic": "rel",
+  "rule": "rel-que",
+  "q": "Voici le livre [que] le prof nous a conseillé.",
+  "alt": [
+   "qui",
+   "dont",
+   "où"
+  ],
+  "why": "Que är objekt för a conseillé, och le prof är subjekt i bisatsen.",
+  "sv": "Här är boken som läraren rekommenderade oss."
+ },
+ {
+  "id": "rel-013",
+  "topic": "rel",
+  "rule": "rel-que",
+  "q": "Le métier [que] je voudrais faire, c'est infirmier.",
+  "alt": [
+   "qui",
+   "dont",
+   "où"
+  ],
+  "why": "Que är objekt för faire, och je är subjekt.",
+  "sv": "Yrket som jag skulle vilja ha är sjuksköterska."
+ },
+ {
+  "id": "rel-014",
+  "topic": "rel",
+  "rule": "rel-que",
+  "q": "La ville [que] je préfère, c'est Nice.",
+  "alt": [
+   "qui",
+   "dont",
+   "où"
+  ],
+  "why": "Que är objekt för préfère: jag föredrar staden.",
+  "sv": "Staden som jag gillar mest är Nice."
+ },
+ {
+  "id": "rel-015",
+  "topic": "rel",
+  "rule": "rel-que",
+  "q": "Les photos [qu'on] a prises à la plage sont magnifiques.",
+  "alt": [
+   "qui on",
+   "que on",
+   "dont on"
+  ],
+  "why": "Que är objekt för a prises, och elideras till qu' före on.",
+  "sv": "Bilderna som vi tog på stranden är jättefina."
+ },
+ {
+  "id": "rel-016",
+  "topic": "rel",
+  "rule": "rel-que",
+  "q": "C'est un rêve [que] j'ai depuis longtemps.",
+  "alt": [
+   "qui",
+   "dont",
+   "où"
+  ],
+  "why": "Que är objekt för ai: jag har drömmen.",
+  "sv": "Det är en dröm som jag har haft länge."
+ },
+ {
+  "id": "rel-017",
+  "topic": "rel",
+  "rule": "rel-ou",
+  "q": "C'est la ville [où] je suis né.",
+  "alt": [
+   "que",
+   "qui",
+   "dont"
+  ],
+  "why": "Où används efter en plats: staden där jag föddes.",
+  "sv": "Det är staden där jag föddes."
+ },
+ {
+  "id": "rel-018",
+  "topic": "rel",
+  "rule": "rel-ou",
+  "q": "Je me souviens du jour [où] on s'est rencontrés.",
+  "alt": [
+   "que",
+   "qui",
+   "dont"
+  ],
+  "why": "Où används också efter tidsuttryck: le jour où (dagen då). Svenskans 'då' blir où.",
+  "sv": "Jag minns dagen då vi träffades."
+ },
+ {
+  "id": "rel-019",
+  "topic": "rel",
+  "rule": "rel-ou",
+  "q": "Le café [où] nous allons souvent est fermé aujourd'hui.",
+  "alt": [
+   "que",
+   "qui",
+   "dont"
+  ],
+  "why": "Où ersätter en plats: vi går ofta till kaféet (dit).",
+  "sv": "Kaféet dit vi ofta går är stängt i dag."
+ },
+ {
+  "id": "rel-020",
+  "topic": "rel",
+  "rule": "rel-ou",
+  "q": "La plage [où] j'ai passé l'été était magnifique.",
+  "alt": [
+   "que",
+   "qui",
+   "dont"
+  ],
+  "why": "Où ersätter en plats: jag tillbringade sommaren där. L'été är redan objekt, så que passar inte.",
+  "sv": "Stranden där jag tillbringade sommaren var fantastisk."
+ },
+ {
+  "id": "rel-021",
+  "topic": "rel",
+  "rule": "rel-ou",
+  "q": "Tu connais un restaurant [où] on mange bien ?",
+  "alt": [
+   "que",
+   "qui",
+   "dont"
+  ],
+  "why": "Où ersätter en plats: man äter bra där.",
+  "sv": "Känner du till en restaurang där man äter gott?"
+ },
+ {
+  "id": "rel-022",
+  "topic": "rel",
+  "rule": "rel-ou",
+  "q": "Le quartier [où] habite mon correspondant est très animé.",
+  "alt": [
+   "que",
+   "qui",
+   "dont"
+  ],
+  "why": "Où ersätter en plats. Efter où kan verbet komma före ett långt subjekt: où habite mon correspondant.",
+  "sv": "Kvarteret där min brevvän bor är väldigt livligt."
+ },
+ {
+  "id": "rel-023",
+  "topic": "rel",
+  "rule": "rel-ou",
+  "q": "C'était l'année [où] les Bleus ont gagné la Coupe du monde.",
+  "alt": [
+   "que",
+   "qui",
+   "dont"
+  ],
+  "why": "Efter tidsuttryck som l'année används où (året då).",
+  "sv": "Det var året då Frankrike vann VM."
+ },
+ {
+  "id": "rel-024",
+  "topic": "rel",
+  "rule": "rel-dont",
+  "q": "C'est le livre [dont] je t'ai parlé.",
+  "alt": [
+   "que",
+   "qui",
+   "où"
+  ],
+  "why": "Parler de något: dont ersätter de + substantiv (boken som jag berättade om).",
+  "sv": "Det är boken som jag berättade om för dig."
+ },
+ {
+  "id": "rel-025",
+  "topic": "rel",
+  "rule": "rel-dont",
+  "q": "Voilà l'ordinateur [dont] j'ai besoin.",
+  "alt": [
+   "que",
+   "qui",
+   "où"
+  ],
+  "why": "Avoir besoin de: dont ersätter de + substantiv.",
+  "sv": "Här är datorn som jag behöver."
+ },
+ {
+  "id": "rel-026",
+  "topic": "rel",
+  "rule": "rel-dont",
+  "q": "Le garçon [dont] le père est prof s'appelle Hugo.",
+  "alt": [
+   "que",
+   "qui",
+   "où"
+  ],
+  "why": "Dont uttrycker ägande här: le père du garçon (killens pappa). På svenska: vars.",
+  "sv": "Killen vars pappa är lärare heter Hugo."
+ },
+ {
+  "id": "rel-027",
+  "topic": "rel",
+  "rule": "rel-dont",
+  "q": "Paris, c'est une ville [dont] je rêve depuis longtemps.",
+  "alt": [
+   "que",
+   "qui"
+  ],
+  "why": "Rêver de något: dont ersätter de + substantiv.",
+  "sv": "Paris är en stad som jag har drömt om länge."
+ },
+ {
+  "id": "rel-028",
+  "topic": "rel",
+  "rule": "rel-dont",
+  "q": "Le match [dont] tout le monde parle a lieu samedi.",
+  "alt": [
+   "que",
+   "qui",
+   "où"
+  ],
+  "why": "Parler de: dont ersätter de + substantiv (matchen alla pratar om).",
+  "sv": "Matchen som alla pratar om spelas på lördag."
+ },
+ {
+  "id": "rel-029",
+  "topic": "rel",
+  "rule": "rel-dont",
+  "q": "C'est un souvenir [dont] je suis très fier.",
+  "alt": [
+   "que",
+   "qui",
+   "où"
+  ],
+  "why": "Être fier de: dont ersätter de + substantiv.",
+  "sv": "Det är ett minne som jag är väldigt stolt över."
+ },
+ {
+  "id": "rel-030",
+  "topic": "rel",
+  "rule": "rel-dont",
+  "q": "J'ai une amie [dont] la sœur habite à Nice.",
+  "alt": [
+   "que",
+   "qui",
+   "où"
+  ],
+  "why": "Dont uttrycker ägande: la sœur de mon amie (min kompis syster). På svenska: vars.",
+  "sv": "Jag har en kompis vars syster bor i Nice."
+ }
+]

@@ -285,3 +285,21 @@ details.more[open] summary{margin-bottom:10px}
 .memo{display:flex;flex-direction:column;gap:6px}
 .memof{display:flex;gap:8px}
 .memof .search{flex:1;min-width:0}
+.tw{cursor:pointer;border-radius:3px}
+.tw.sel{background:var(--m-soft);box-shadow:0 0 0 2px var(--m-soft)}
+.glossbox{max-height:55vh;overflow:auto}
+.picked{list-style:none;margin:0;padding:0;display:flex;flex-direction:column}
+.picked li{display:grid;grid-template-columns:1fr auto auto;gap:4px 8px;align-items:center;padding:8px 0;border-bottom:1px solid var(--line)}
+.picked .pw{font-family:var(--serif);font-size:1.05rem}
+.picked .psv,.picked .psv-in{grid-column:1/2;grid-row:2}
+.picked .psv{color:var(--ink-2);font-size:.92rem}
+.picked .psv-in{width:100%;padding:7px 10px;border:1.5px solid var(--line);border-radius:8px;background:var(--surface);font-size:.95rem}
+.picked .pst{grid-column:1/-1;color:var(--amber);font-size:.78rem}
+.unpick{border:1px solid var(--line);background:var(--surface);border-radius:50%;width:28px;height:28px;line-height:1;color:var(--ink-2)}
+/* Valda ord från en text: fast längst ned så att listan syns medan man läser */
+.glossbox.tray{position:fixed;left:16px;right:16px;bottom:calc(10px + env(safe-area-inset-bottom,0px));max-width:588px;margin:0 auto;z-index:5;max-height:45vh;border:1.5px solid var(--line);background:var(--surface)}
+.glossbox.tray.mini .picked{display:none}
+body.has-tray{padding-bottom:calc(45vh + 30px)}
+.glossbox.tray{overflow:hidden}
+.glossbox.tray .picked{overflow:auto;min-height:0;flex:1 1 auto}
+.glossbox.tray #addsel{flex:none}
