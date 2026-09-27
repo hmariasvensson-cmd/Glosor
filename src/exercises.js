@@ -112,12 +112,21 @@ function speakSeq(lines,rate,onLine){
 const playBar=(extra="")=>`<div class="listen"><button type="button" class="btn ghost" data-pl="1">${PLAY} Spela upp</button><button type="button" class="btn ghost" data-pl="slow">Långsamt</button>${extra}</div>`;
 function wirePlay(fn){ app.querySelectorAll("[data-pl]").forEach(b=>b.onclick=()=>fn(b.dataset.pl==="slow"?.6:undefined)); }
 
-/* Text där man kan trycka på ord för att se betydelsen (och spara dem i Mina ord) */
+/* Text där man kan trycka på ord för att se betydelsen (och spara dem i Mina ord).
+   Ord man redan övar på eller har sparat markeras i grönt, som i LWT och Lute. */
+function glossState(g){
+  if(!g) return "";
+  if(isMine(g.t)) return "saved";
+  const key=L.code+"|"+g.t;
+  if(!GLW.has(key)) GLW.set(key,WORDS.find(w=>w.sec!=="mine"&&(w.t===g.t||variants(w.t).includes(norm(g.t))))||null);
+  const w=GLW.get(key); return w&&isLearned(w)?"known":"";
+}
+const GLW=new Map();   // uppslag från glosa till ord i ordlistan, sparas eftersom det är långsamt
 const glossKey=w=>{let k=w.toLowerCase().replace(/’/g,"'"); if(L.elision) k=k.replace(L.elision,""); return k;};
 function tapText(lines,gloss,o={}){
   return lines.map((ln,i)=>`<p class="tl${ln.who&&ln.who!=="N"?" said":""}" data-line="${i}" ${lang()}>${ln.fr.split(/([\p{L}'’\-]+)/u).map(part=>{
       if(!/^[\p{L}'’\-]+$/u.test(part)) return esc(part);
-      const k=glossKey(part); return gloss&&gloss[k]?`<span class="gl" data-k="${esc(k)}" data-i="${i}">${esc(part)}</span>`:esc(part);
+      const k=glossKey(part); return gloss&&gloss[k]?`<span class="gl ${glossState(gloss[k])}" data-k="${esc(k)}" data-i="${i}">${esc(part)}</span>`:esc(part);
     }).join("")}${o.lineSpeak?` <button type="button" class="speak xs" data-say="${esc(ln.fr)}" aria-label="Läs upp meningen">${SPK}</button>`:""}</p>
     ${o.sv?`<p class="tl-sv" hidden>${esc(ln.sv||"")}</p>`:""}`).join("");
 }
@@ -374,7 +383,7 @@ function readIntro(id){
   const t=textById("rq",id); stopSpeech(); $("#tabs").hidden=true; sess=null;
   app.innerHTML=`<section class="panel"><span class="tab">Läsa</span><span class="label">${esc(secName(t.sec))}</span>
     <h2 ${lang()}>${esc(t.title)}</h2>
-    <p class="plan">Tryck på ett understruket ord för att se vad det betyder.</p>
+    <p class="plan">Tryck på ett understruket ord för att se vad det betyder. <span class="gl known">Gröna ord</span> övar du redan på.</p>
     ${playBar(`<button type="button" class="btn ghost" id="stop">Stoppa</button>`)}
     <div class="reading">${tapText(t.lines,t.gloss,{sv:true})}</div>
     <div class="glossbox" id="gbox" hidden></div>
