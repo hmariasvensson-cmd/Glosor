@@ -6,7 +6,7 @@ Punkter som har flyttats från [`BACKLOG.md`](BACKLOG.md) när de byggdes. **Ref
 
 | Referens | Vad som byggdes | Commit |
 |---|---|---|
-| Kurser · P1 *Escalade*: fler kapitel (foton från föräldern) | 21 nya uppslag inlagda i den privata bokmappen: kap 1 (s. 8–21), kap 2 (s. 22–25, 38–39), kap 5 (s. 68–69), kap 6 (s. 98–99), kap 7 (s. 100–113) och kap 8 (s. 128–131; kapitelnumret är antaget). Franska 3 har nu 687 ord, 22 lästexter, 58 skrivuppgifter och 173 av bokens övningar. Sångtexter, dikter och längre romanutdrag skrivs inte av (upphovsrätt). De blir skrivuppgifter med bokens frågor och en uppmaning att lyssna på sången eller läsa i boken, och sångtexten i kap 4 är ersatt på samma sätt. Grammatikområdena är kopplade till kapitlen, och Bokens övningar visar bara övningarna i kapitlet eleven läser (fältet `kap` kommer från mappen). | se nästa rad |
+| Kurser · P1 *Escalade*: fler kapitel (foton från föräldern) | 21 nya uppslag inlagda i den privata bokmappen: kap 1 (s. 8–21), kap 2 (s. 22–25, 38–39), kap 5 (s. 68–69), kap 6 (s. 98–99), kap 7 (s. 100–113) och kap 8 (s. 128–131; kapitelnumret är antaget). Franska 3 har nu 687 ord, 22 lästexter, 58 skrivuppgifter och 173 av bokens övningar. Sångtexter, dikter och längre romanutdrag skrivs inte av (upphovsrätt). De blir skrivuppgifter med bokens frågor och en uppmaning att lyssna på sången eller läsa i boken, och sångtexten i kap 4 är ersatt på samma sätt. Grammatikområdena är kopplade till kapitlen, och Bokens övningar visar bara övningarna i kapitlet eleven läser (fältet `kap` kommer från mappen). | `a878194` (och det privata bokrepot) |
 
 ## 2026-09-27, del 10 (publicerat som version 18)
 
