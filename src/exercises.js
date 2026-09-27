@@ -260,6 +260,31 @@ MC.order=c=>{const w=c.w, o=orderTokens(w.exT), right=o.words.join(" "), alts=ne
     opts:shuffle([right,...alts].map(s=>({label:s+o.end,ok:s===right,lang:true}))),explain:"",wrongCard:studyCard(w),say:w.exT,sayOnAnswer:true}};
 RECAP.order=ref=>byId[ref]?byId[ref].exT:"";
 
+/* ---------- Skugga: tala utan mikrofon ----------
+   Artefakter får inte använda mikrofonen. I stället lyssnar eleven, säger meningen högt samtidigt
+   som uppläsningen och bedömer själv hur det gick. */
+function startShadow(){
+  const p=shuffle(sentencePool()).filter(w=>tok(w.exT).length>=4).slice(0,6)
+    .map(w=>({k:"shadow",id:"shadow:"+w.id,ref:w.id,w,t:"type",noRetry:true}));
+  $("#tabs").hidden=true; sess=null; beginQuiz("shadow",p,{againFn:["shadow"],label:"Skugga"});
+}
+RESTORE.shadow=ref=>byId[ref]?{w:byId[ref]}:null;
+TYPE.shadow=c=>({tab:"Skugga",render:renderShadow,w:c.w,answer:esc(c.w.exT),explain:"",say:c.w.exT});
+function renderShadow(d){
+  const w=d.w;
+  app.innerHTML=`<section class="panel"><span class="tab">Skugga</span>${progressHead()}
+    <p class="q-prompt" style="font-size:1.3rem" ${lang()}>${esc(w.exT)}</p><p class="ex-sv">${esc(w.exSv)}</p>
+    ${playBar()}
+    <p class="q-ask">Lyssna först. Spela sedan upp igen och säg meningen högt samtidigt som rösten, med samma rytm och melodi. Gör det två eller tre gånger, gärna långsamt först.</p>
+    <div class="grade"><button type="button" class="btn ghost" data-sh="0">Svårt</button><button type="button" class="btn ghost" data-sh="half">Nästan</button><button type="button" class="btn" data-sh="1">Det gick bra</button></div></section>
+    ${quitBtn()}`;
+  wirePlay(r=>speak(w.exT,r)); $("#quit").onclick=quitSession; speak(w.exT);
+  app.querySelectorAll("[data-sh]").forEach(b=>b.onclick=()=>{ if(sess.answered) return; sess.answered=true;
+    record(b.dataset.sh==="1"); sess.done++; snapRun(); nextQ(); });
+}
+RECAP.shadow=ref=>byId[ref]?byId[ref].exT:"";
+KIND_NAMES.shadow="Skugga";
+
 /* ---------- Samtalsfraser ---------- */
 const phrById=id=>(C().phrases||[]).find(p=>p.id===id);
 function phraseItems(n){
@@ -497,7 +522,7 @@ function startMix(){
 }
 
 /* ---------- Gemensam slutskärm för alla övningar utom glosquizet ---------- */
-const AGAIN={verbs:startVerbs,cloze:startCloze,dict:startDict,trans:startTrans,order:startOrder,phr:startPhrases,mix:startMix,story:startStory};
+const AGAIN={shadow:startShadow,verbs:startVerbs,cloze:startCloze,dict:startDict,trans:startTrans,order:startOrder,phr:startPhrases,mix:startMix,story:startStory};
 function finishGeneric(){
   const now=Date.now(), ids=Object.keys(sess.firstTry), dur=Math.min(3600,Math.round((now-sess.start)/1000)), by={};
   ids.forEach(id=>{const i=id.indexOf(":"), k=id.slice(0,i), ref=id.slice(i+1), ok=!!sess.firstTry[id];
@@ -542,13 +567,14 @@ function gamesPanel(){
       c.stories&&g("story","Berättelser","Välj rätt tempus och bindeord i en berättelse.")]],
     ["Tala och skriva",[
       c.phrases&&g("phr","Samtalsfraser","Vad man säger när man inte förstår, vill säga sin åsikt …"),
+      g("shadow","Skugga","Lyssna och säg meningen högt samtidigt, för uttal och rytm."),
       c.prompts&&g("write","Skriv en text","Skrivuppgift med checklista, att skicka till läraren.")]]
   ];
   return `<section class="panel"><h2>Fler övningar</h2>${groups.map(([t,items])=>{items=items.filter(Boolean);
     return items.length?`<div class="exgroup"><span class="label">${t}</span><div class="games">${items.join("")}</div></div>`:"";}).join("")}</section>`;
 }
 function wireGames(){
-  const F={cloze:startCloze,dict:startDict,trans:startTrans,order:startOrder,lq:openListening,rq:openReading,culture:openCulture,story:openStories,phr:startPhrases,write:openWriting,gram:openGrammar,gen:startGender};
+  const F={cloze:startCloze,dict:startDict,trans:startTrans,order:startOrder,lq:openListening,rq:openReading,culture:openCulture,story:openStories,phr:startPhrases,write:openWriting,gram:openGrammar,gen:startGender,shadow:startShadow};
   app.querySelectorAll("[data-ex]").forEach(b=>b.onclick=()=>F[b.dataset.ex]());
   app.querySelectorAll("[data-g]").forEach(b=>b.onclick=()=>startVerbs(b.dataset.g));
 }

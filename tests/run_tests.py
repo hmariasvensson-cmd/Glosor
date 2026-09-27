@@ -41,7 +41,8 @@ setTimeout(()=>{ try{
   ok("tyska: diktamen", S.log[S.log.length-1].kind==="dict");
   const ansDe=()=>{ const c=sess.cur, d=sess.d;
     if(c.t==="mc"){answerMC(d.opts.findIndex(o=>o.ok)); q("#nx").click(); return;}
-    if(d.render){ d.o.words.forEach(w=>[...document.querySelectorAll("[data-t]")].find(x=>x.textContent===w).click()); q("#submit").click(); q("#submit").click(); return; }
+    if(c.k==="shadow"){ q('[data-sh="1"]').click(); return; }
+  if(d.render){ d.o.words.forEach(w=>[...document.querySelectorAll("[data-t]")].find(x=>x.textContent===w).click()); q("#submit").click(); q("#submit").click(); return; }
     q("#ans").value=c.k==="gram"?gramById(c.ref).ans.replace(" … "," "):c.w.exT; q("#submit").click(); q("#submit").click(); };
   const runDe=()=>{let g=0; while(sess&&g++<80) ansDe();};
   // Grammatik
@@ -52,10 +53,13 @@ setTimeout(()=>{ try{
   startGram("adj"); const first=sess.cur; sess.cur.t="type"; sess.d=TYPE.gram(sess.cur); renderType(sess.d);
   q("#ans").value="xyz"; q("#submit").click(); ok("grammatik: fel svar kommer tillbaka som flerval", sess.queue.some(x=>x.again&&x.t==="mc")); q("#submit").click();
   runDe(); ok("grammatik: runda loggad", S.log[S.log.length-1].kind==="gram" && S.gt.adj.n>=10, JSON.stringify(S.gt));
-  startGram("passiv"); sess.cur.t="type"; sess.d=TYPE.gram(sess.cur); renderType(sess.d); q("#ans").value="wird renoviert"; q("#submit").click();
+  { const x=Object.values(gramBank()).find(x=>x.topic==="passiv"&&x.p&&x.p.gaps.length>1); sess=null;
+    beginQuiz("gram",[{k:"gram",id:"gram:"+x.id,ref:x.id,t:"type",canType:true}],{label:"t"}); q("#ans").value=x.p.gaps.join(" "); q("#submit").click(); }
   ok("grammatik: två luckor skrivs i ordning", q("#ans").classList.contains("right")); q("#submit").click(); runDe();
-  startGram("bisatz"); ok("bisats: brickor", document.querySelectorAll("[data-t]").length>=6);
-  ["Weil","ich","krank","bin","bleibe","ich","heute","zu","Hause"].forEach(w=>{const b=[...document.querySelectorAll("[data-t]")].find(x=>x.textContent.toLowerCase()===w.toLowerCase()); if(b) b.click();});
+  startGram("bisatz"); ok("bisats: brickor", document.querySelectorAll("[data-t]").length>=5);
+  { const x=Object.values(gramBank()).find(x=>x.type==="rw"&&(x.acc||[]).length&&tok(x.a).length===x.a.split(" ").length); sess=null;
+    beginQuiz("gram",[{k:"gram",id:"gram:"+x.id,ref:x.id,t:"type",canType:true}],{label:"t"});
+    tok(x.acc[0]).forEach(w=>{const b=[...document.querySelectorAll("[data-t]")].find(t=>tok(t.textContent)[0]===w); if(b) b.click();}); }
   q("#submit").click(); ok("bisats: bisatsen först godkänns", q("#built").classList.contains("right"), q("#built").textContent); q("#submit").click(); runDe();
   startGram("err"); ok("hitta felet: fyra val", sess.d.opts.length>=3 && sess.d.opts.filter(o=>o.ok).length===1); runDe();
   startGram("mix"); runDe(); ok("blandad grammatik", S.gt.mix&&S.gt.mix.n>0);
@@ -82,6 +86,7 @@ const ok=(name,cond,info="")=>out.push((cond?"OK   ":"FEL  ")+name+(info?"  ("+i
 function answerRight(){
   const c=sess.cur, d=sess.d, k=c.k||sess.kind;
   if(c.t==="mc"){answerMC(d.opts.findIndex(o=>o.ok)); q("#nx").click(); return;}
+  if(c.k==="shadow"){ q('[data-sh="1"]').click(); return; }
   if(d.render){ d.o.words.forEach(w=>[...document.querySelectorAll("[data-t]")].find(x=>x.textContent===w).click()); q("#submit").click(); q("#submit").click(); return; }
   let v; if(k==="verbs") v=c.c.full; else if(k==="cloze") v=c.w.gap.ans; else if(k==="dict"||k==="trans") v=c.w.exT;
   else if(k==="phr") v=phrById(c.ref).fr; else v=c.w.t.replace(/\(.*?\)/g,"").split(/\s*[,=]\s*/)[0];
@@ -120,6 +125,7 @@ setTimeout(()=>{ try{
   ok("ordföljd loggad", lastLog().kind==="order");
 
   startPhrases(); runAll(); ok("fraser loggade", lastLog().kind==="phr");
+  startShadow(); ok("skugga visar mening och knappar", !!q("[data-sh]")&&!!q("[data-pl]")); runAll(); ok("skugga loggad", lastLog().kind==="shadow");
 
   openStories(); q("[data-pick]").click(); ok("berättelse visar lucka", !!q(".sg.cur")); runAll();
   ok("berättelse slutskärm", q("#app").textContent.includes("Fler berättelser")); ok("tempusstatistik", !!(S.st&&S.st.tempus));

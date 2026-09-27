@@ -1,0 +1,2547 @@
+[
+ {
+  "id": "bisatz-001",
+  "topic": "bisatz",
+  "rule": "bs-sub",
+  "type": "rw",
+  "q": "Viele Jugendliche schlafen zu wenig. Sie sitzen abends lange am Handy.",
+  "cue": "weil",
+  "a": "Viele Jugendliche schlafen zu wenig, weil sie abends lange am Handy sitzen.",
+  "acc": [
+   "Weil viele Jugendliche abends lange am Handy sitzen, schlafen sie zu wenig.",
+   "Weil sie abends lange am Handy sitzen, schlafen viele Jugendliche zu wenig."
+  ],
+  "alt": [
+   "Viele Jugendliche schlafen zu wenig, weil sie sitzen abends lange am Handy.",
+   "Viele Jugendliche schlafen zu wenig, weil sitzen sie abends lange am Handy."
+  ],
+  "why": "Weil är en subjunktion: det böjda verbet (sitzen) hamnar sist i bisatsen.",
+  "sv": "Många ungdomar sover för lite eftersom de sitter länge med mobilen på kvällarna."
+ },
+ {
+  "id": "bisatz-002",
+  "topic": "bisatz",
+  "rule": "bs-sub",
+  "type": "rw",
+  "q": "Meine Eltern hoffen: Ich studiere später Medizin.",
+  "cue": "dass",
+  "a": "Meine Eltern hoffen, dass ich später Medizin studiere.",
+  "alt": [
+   "Meine Eltern hoffen, dass ich studiere später Medizin.",
+   "Meine Eltern hoffen, dass studiere ich später Medizin."
+  ],
+  "why": "Dass är en subjunktion: verbet studiere ställs sist i bisatsen, efter Medizin.",
+  "sv": "Mina föräldrar hoppas att jag ska läsa medicin senare."
+ },
+ {
+  "id": "bisatz-003",
+  "topic": "bisatz",
+  "rule": "bs-sub",
+  "type": "rw",
+  "q": "Mein Bruder geht heute zur Schule. Er hat hohes Fieber.",
+  "cue": "obwohl",
+  "a": "Mein Bruder geht heute zur Schule, obwohl er hohes Fieber hat.",
+  "acc": [
+   "Obwohl er hohes Fieber hat, geht mein Bruder heute zur Schule."
+  ],
+  "alt": [
+   "Mein Bruder geht heute zur Schule, obwohl er hat hohes Fieber.",
+   "Mein Bruder geht heute zur Schule, obwohl hat er hohes Fieber."
+  ],
+  "why": "Obwohl är en subjunktion: hat ställs sist i bisatsen, precis som efter weil och dass.",
+  "sv": "Min bror går till skolan i dag fast han har hög feber."
+ },
+ {
+  "id": "bisatz-004",
+  "topic": "bisatz",
+  "rule": "bs-sub",
+  "type": "rw",
+  "q": "Man spart viel Energie. Man fährt mit dem Fahrrad zur Arbeit.",
+  "cue": "wenn",
+  "a": "Man spart viel Energie, wenn man mit dem Fahrrad zur Arbeit fährt.",
+  "acc": [
+   "Wenn man mit dem Fahrrad zur Arbeit fährt, spart man viel Energie."
+  ],
+  "alt": [
+   "Man spart viel Energie, wenn man fährt mit dem Fahrrad zur Arbeit.",
+   "Man spart viel Energie, wenn fährt man mit dem Fahrrad zur Arbeit."
+  ],
+  "why": "Wenn inleder en bisats, så fährt ska stå allra sist, efter zur Arbeit.",
+  "sv": "Man sparar mycket energi om man cyklar till jobbet."
+ },
+ {
+  "id": "bisatz-005",
+  "topic": "bisatz",
+  "rule": "bs-sub",
+  "type": "rw",
+  "q": "Ich weiß nicht: Bekomme ich den Praktikumsplatz?",
+  "cue": "ob",
+  "a": "Ich weiß nicht, ob ich den Praktikumsplatz bekomme.",
+  "alt": [
+   "Ich weiß nicht, ob ich bekomme den Praktikumsplatz.",
+   "Ich weiß nicht, ob bekomme ich den Praktikumsplatz."
+  ],
+  "why": "Ob (om, huruvida) är en subjunktion som inleder en indirekt fråga: verbet bekomme hamnar sist.",
+  "sv": "Jag vet inte om jag får praktikplatsen."
+ },
+ {
+  "id": "bisatz-006",
+  "topic": "bisatz",
+  "rule": "bs-sub",
+  "type": "rw",
+  "q": "Du solltest die Quelle prüfen. Du teilst einen Artikel.",
+  "cue": "bevor",
+  "a": "Du solltest die Quelle prüfen, bevor du einen Artikel teilst.",
+  "acc": [
+   "Bevor du einen Artikel teilst, solltest du die Quelle prüfen."
+  ],
+  "alt": [
+   "Du solltest die Quelle prüfen, bevor du teilst einen Artikel.",
+   "Du solltest die Quelle prüfen, bevor teilst du einen Artikel."
+  ],
+  "why": "Bevor är en subjunktion: teilst ska stå sist i bisatsen.",
+  "sv": "Du borde kontrollera källan innan du delar en artikel."
+ },
+ {
+  "id": "bisatz-007",
+  "topic": "bisatz",
+  "rule": "bs-sub",
+  "type": "rw",
+  "q": "Mein Vater hört Podcasts. Er kocht das Abendessen.",
+  "cue": "während",
+  "a": "Mein Vater hört Podcasts, während er das Abendessen kocht.",
+  "acc": [
+   "Während er das Abendessen kocht, hört mein Vater Podcasts."
+  ],
+  "alt": [
+   "Mein Vater hört Podcasts, während er kocht das Abendessen.",
+   "Mein Vater hört Podcasts, während kocht er das Abendessen."
+  ],
+  "why": "Während (medan) är en subjunktion: kocht ställs sist i bisatsen.",
+  "sv": "Min pappa lyssnar på poddar medan han lagar middag."
+ },
+ {
+  "id": "bisatz-008",
+  "topic": "bisatz",
+  "rule": "bs-sub",
+  "type": "rw",
+  "q": "Die Stadt baut neue Radwege. Weniger Menschen fahren mit dem Auto.",
+  "cue": "damit",
+  "a": "Die Stadt baut neue Radwege, damit weniger Menschen mit dem Auto fahren.",
+  "acc": [
+   "Damit weniger Menschen mit dem Auto fahren, baut die Stadt neue Radwege."
+  ],
+  "alt": [
+   "Die Stadt baut neue Radwege, damit weniger Menschen fahren mit dem Auto.",
+   "Die Stadt baut neue Radwege, damit fahren weniger Menschen mit dem Auto."
+  ],
+  "why": "Damit (för att, så att) är en subjunktion: fahren ska stå sist i bisatsen.",
+  "sv": "Staden bygger nya cykelbanor för att färre ska åka bil."
+ },
+ {
+  "id": "bisatz-009",
+  "topic": "bisatz",
+  "rule": "bs-sub",
+  "type": "rw",
+  "q": "Wir wohnten in Zürich. Ich war klein.",
+  "cue": "als",
+  "a": "Wir wohnten in Zürich, als ich klein war.",
+  "acc": [
+   "Als ich klein war, wohnten wir in Zürich."
+  ],
+  "alt": [
+   "Wir wohnten in Zürich, als ich war klein.",
+   "Wir wohnten in Zürich, als war ich klein."
+  ],
+  "why": "Als (när, om något som hände en gång i dåtid) är en subjunktion: war ställs sist.",
+  "sv": "Vi bodde i Zürich när jag var liten."
+ },
+ {
+  "id": "bisatz-010",
+  "topic": "bisatz",
+  "rule": "bs-sub",
+  "type": "rw",
+  "q": "Es ist wichtig: Man kann über seine Gefühle sprechen.",
+  "cue": "dass",
+  "a": "Es ist wichtig, dass man über seine Gefühle sprechen kann.",
+  "alt": [
+   "Es ist wichtig, dass man kann über seine Gefühle sprechen.",
+   "Es ist wichtig, dass man über seine Gefühle kann sprechen."
+  ],
+  "why": "I en dass-sats står det böjda verbet sist, alltså efter infinitiven: sprechen kann.",
+  "sv": "Det är viktigt att man kan prata om sina känslor."
+ },
+ {
+  "id": "bisatz-011",
+  "topic": "bisatz",
+  "rule": "bs-first",
+  "type": "rw",
+  "q": "Sie hatte das Abitur gemacht. Sie reiste ein Jahr durch Australien.",
+  "cue": "Nachdem …",
+  "a": "Nachdem sie das Abitur gemacht hatte, reiste sie ein Jahr durch Australien.",
+  "acc": [
+   "Sie reiste ein Jahr durch Australien, nachdem sie das Abitur gemacht hatte."
+  ],
+  "alt": [
+   "Nachdem sie das Abitur gemacht hatte, sie reiste ein Jahr durch Australien.",
+   "Nachdem sie hatte das Abitur gemacht, reiste sie ein Jahr durch Australien."
+  ],
+  "why": "Bisatsen räknas som första satsdel, så huvudsatsen börjar med verbet: reiste sie. I bisatsen står hatte sist.",
+  "sv": "Efter att hon hade tagit studenten reste hon runt i Australien i ett år."
+ },
+ {
+  "id": "bisatz-012",
+  "topic": "bisatz",
+  "rule": "bs-first",
+  "type": "rw",
+  "q": "Ich habe mehr Zeit. Ich engagiere mich im Umweltschutz.",
+  "cue": "Wenn …",
+  "a": "Wenn ich mehr Zeit habe, engagiere ich mich im Umweltschutz.",
+  "acc": [
+   "Ich engagiere mich im Umweltschutz, wenn ich mehr Zeit habe."
+  ],
+  "alt": [
+   "Wenn ich mehr Zeit habe, ich engagiere mich im Umweltschutz.",
+   "Wenn ich habe mehr Zeit, engagiere ich mich im Umweltschutz."
+  ],
+  "why": "När bisatsen står först kommer verbet direkt efter kommatecknet: engagiere ich. I bisatsen står habe sist.",
+  "sv": "När jag har mer tid engagerar jag mig i miljöskydd."
+ },
+ {
+  "id": "bisatz-013",
+  "topic": "bisatz",
+  "rule": "bs-first",
+  "type": "rw",
+  "q": "Das Wetter war schlecht. Das Konzert fand draußen statt.",
+  "cue": "Obwohl …",
+  "a": "Obwohl das Wetter schlecht war, fand das Konzert draußen statt.",
+  "acc": [
+   "Das Konzert fand draußen statt, obwohl das Wetter schlecht war."
+  ],
+  "alt": [
+   "Obwohl das Wetter schlecht war, das Konzert fand draußen statt.",
+   "Obwohl das Wetter war schlecht, fand das Konzert draußen statt."
+  ],
+  "why": "Bisatsen med obwohl är första satsdel, så verbet fand kommer direkt efter kommatecknet och före subjektet.",
+  "sv": "Fast vädret var dåligt hölls konserten utomhus."
+ },
+ {
+  "id": "bisatz-014",
+  "topic": "bisatz",
+  "rule": "bs-first",
+  "type": "rw",
+  "q": "Meine Oma war jung. Es gab noch kein Internet.",
+  "cue": "Als …",
+  "a": "Als meine Oma jung war, gab es noch kein Internet.",
+  "acc": [
+   "Es gab noch kein Internet, als meine Oma jung war."
+  ],
+  "alt": [
+   "Als meine Oma jung war, es gab noch kein Internet.",
+   "Als meine Oma war jung, gab es noch kein Internet."
+  ],
+  "why": "Efter en inledande bisats kommer huvudsatsens verb först: gab es. I bisatsen står war sist.",
+  "sv": "När min mormor var ung fanns det inget internet än."
+ },
+ {
+  "id": "bisatz-015",
+  "topic": "bisatz",
+  "rule": "bs-first",
+  "type": "rw",
+  "q": "Die Mieten sind so hoch. Viele Studenten wohnen in einer WG.",
+  "cue": "Weil …",
+  "a": "Weil die Mieten so hoch sind, wohnen viele Studenten in einer WG.",
+  "acc": [
+   "Viele Studenten wohnen in einer WG, weil die Mieten so hoch sind."
+  ],
+  "alt": [
+   "Weil die Mieten so hoch sind, viele Studenten wohnen in einer WG.",
+   "Weil die Mieten sind so hoch, wohnen viele Studenten in einer WG."
+  ],
+  "why": "Bisatsen står först och räknas som plats 1, så wohnen måste komma direkt efter kommatecknet.",
+  "sv": "Eftersom hyrorna är så höga bor många studenter i kollektiv."
+ },
+ {
+  "id": "bisatz-016",
+  "topic": "bisatz",
+  "rule": "bs-first",
+  "type": "rw",
+  "q": "Ich war in Wien. Ich habe viele Museen besucht.",
+  "cue": "Während …",
+  "a": "Während ich in Wien war, habe ich viele Museen besucht.",
+  "acc": [
+   "Ich habe viele Museen besucht, während ich in Wien war."
+  ],
+  "alt": [
+   "Während ich in Wien war, ich habe viele Museen besucht.",
+   "Während ich war in Wien, habe ich viele Museen besucht."
+  ],
+  "why": "Efter bisatsen kommer hjälpverbet habe direkt, sedan subjektet ich. I bisatsen står war sist.",
+  "sv": "Medan jag var i Wien besökte jag många museer."
+ },
+ {
+  "id": "bisatz-017",
+  "topic": "bisatz",
+  "rule": "bs-first",
+  "type": "rw",
+  "q": "Er zog nach Berlin. Er hatte nie allein gewohnt.",
+  "cue": "Bevor …",
+  "a": "Bevor er nach Berlin zog, hatte er nie allein gewohnt.",
+  "acc": [
+   "Er hatte nie allein gewohnt, bevor er nach Berlin zog."
+  ],
+  "alt": [
+   "Bevor er nach Berlin zog, er hatte nie allein gewohnt.",
+   "Bevor er zog nach Berlin, hatte er nie allein gewohnt."
+  ],
+  "why": "Bisatsen står först, så huvudsatsen börjar med verbet hatte. I bisatsen står zog sist.",
+  "sv": "Innan han flyttade till Berlin hade han aldrig bott ensam."
+ },
+ {
+  "id": "bisatz-018",
+  "topic": "bisatz",
+  "rule": "bs-inv",
+  "type": "rw",
+  "q": "Ich interessiere mich für Technik. Ich möchte Informatik studieren.",
+  "cue": "deshalb",
+  "a": "Ich interessiere mich für Technik, deshalb möchte ich Informatik studieren.",
+  "acc": [
+   "Ich interessiere mich für Technik, ich möchte deshalb Informatik studieren."
+  ],
+  "alt": [
+   "Ich interessiere mich für Technik, deshalb ich möchte Informatik studieren.",
+   "Ich interessiere mich für Technik, deshalb ich Informatik studieren möchte."
+  ],
+  "why": "Deshalb är ett adverb och tar plats 1 i satsen, så verbet möchte kommer direkt efter (omvänd ordföljd). Det är ingen subjunktion, så verbet ska inte sist.",
+  "sv": "Jag är intresserad av teknik, därför vill jag läsa datavetenskap."
+ },
+ {
+  "id": "bisatz-019",
+  "topic": "bisatz",
+  "rule": "bs-inv",
+  "type": "rw",
+  "q": "Der Film hat schlechte Kritiken bekommen. Wir wollen ihn sehen.",
+  "cue": "trotzdem",
+  "a": "Der Film hat schlechte Kritiken bekommen, trotzdem wollen wir ihn sehen.",
+  "acc": [
+   "Der Film hat schlechte Kritiken bekommen, wir wollen ihn trotzdem sehen."
+  ],
+  "alt": [
+   "Der Film hat schlechte Kritiken bekommen, trotzdem wir wollen ihn sehen.",
+   "Der Film hat schlechte Kritiken bekommen, trotzdem wir ihn sehen wollen."
+  ],
+  "why": "Trotzdem är ett adverb: står det först kommer verbet wollen direkt efter. Jämför obwohl, som skickar verbet sist.",
+  "sv": "Filmen har fått dåliga recensioner, ändå vill vi se den."
+ },
+ {
+  "id": "bisatz-020",
+  "topic": "bisatz",
+  "rule": "bs-inv",
+  "type": "rw",
+  "q": "Zuerst mache ich meine Hausaufgaben. Ich treffe meine Freunde.",
+  "cue": "dann",
+  "a": "Zuerst mache ich meine Hausaufgaben, dann treffe ich meine Freunde.",
+  "alt": [
+   "Zuerst mache ich meine Hausaufgaben, dann ich treffe meine Freunde.",
+   "Zuerst mache ich meine Hausaufgaben, dann ich meine Freunde treffe."
+  ],
+  "why": "Dann står på plats 1, så verbet treffe kommer direkt efter och subjektet ich efter verbet.",
+  "sv": "Först gör jag mina läxor, sedan träffar jag mina kompisar."
+ },
+ {
+  "id": "bisatz-021",
+  "topic": "bisatz",
+  "rule": "bs-inv",
+  "type": "rw",
+  "q": "Das Fahrrad ist billig. Es ist gut für die Umwelt.",
+  "cue": "außerdem",
+  "a": "Das Fahrrad ist billig, außerdem ist es gut für die Umwelt.",
+  "acc": [
+   "Das Fahrrad ist billig, es ist außerdem gut für die Umwelt."
+  ],
+  "alt": [
+   "Das Fahrrad ist billig, außerdem es ist gut für die Umwelt.",
+   "Das Fahrrad ist billig, außerdem es gut für die Umwelt ist."
+  ],
+  "why": "Außerdem är ett adverb, inte ett bindeord som und. På plats 1 ger det omvänd ordföljd: außerdem ist es.",
+  "sv": "Cykeln är billig, dessutom är den bra för miljön."
+ },
+ {
+  "id": "bisatz-022",
+  "topic": "bisatz",
+  "rule": "bs-inv",
+  "type": "rw",
+  "q": "Der Zug hatte Verspätung. Ich bin zu spät zur Prüfung gekommen.",
+  "cue": "deswegen",
+  "a": "Der Zug hatte Verspätung, deswegen bin ich zu spät zur Prüfung gekommen.",
+  "acc": [
+   "Der Zug hatte Verspätung, ich bin deswegen zu spät zur Prüfung gekommen."
+  ],
+  "alt": [
+   "Der Zug hatte Verspätung, deswegen ich bin zu spät zur Prüfung gekommen.",
+   "Der Zug hatte Verspätung, deswegen ich zu spät zur Prüfung gekommen bin."
+  ],
+  "why": "Deswegen betyder samma sak som deshalb och ger omvänd ordföljd: hjälpverbet bin direkt efter, participet gekommen sist.",
+  "sv": "Tåget var försenat, därför kom jag för sent till provet."
+ },
+ {
+  "id": "bisatz-023",
+  "topic": "bisatz",
+  "rule": "bs-inv",
+  "type": "rw",
+  "q": "Du musst dich beeilen. Du verpasst den letzten Bus.",
+  "cue": "sonst",
+  "a": "Du musst dich beeilen, sonst verpasst du den letzten Bus.",
+  "acc": [
+   "Du musst dich beeilen, du verpasst sonst den letzten Bus."
+  ],
+  "alt": [
+   "Du musst dich beeilen, sonst du verpasst den letzten Bus.",
+   "Du musst dich beeilen, sonst du den letzten Bus verpasst."
+  ],
+  "why": "Sonst (annars) är ett adverb: verbet verpasst kommer direkt efter, före subjektet du.",
+  "sv": "Du måste skynda dig, annars missar du sista bussen."
+ },
+ {
+  "id": "bisatz-024",
+  "topic": "bisatz",
+  "rule": "bs-inv",
+  "type": "rw",
+  "q": "Fast Fashion ist schlecht für die Umwelt. Viele Jugendliche kaufen billige Kleidung.",
+  "cue": "trotzdem",
+  "a": "Fast Fashion ist schlecht für die Umwelt, trotzdem kaufen viele Jugendliche billige Kleidung.",
+  "acc": [
+   "Fast Fashion ist schlecht für die Umwelt, viele Jugendliche kaufen trotzdem billige Kleidung."
+  ],
+  "alt": [
+   "Fast Fashion ist schlecht für die Umwelt, trotzdem viele Jugendliche kaufen billige Kleidung.",
+   "Fast Fashion ist schlecht für die Umwelt, trotzdem viele Jugendliche billige Kleidung kaufen."
+  ],
+  "why": "Trotzdem på plats 1 ger omvänd ordföljd: kaufen kommer före subjektet viele Jugendliche.",
+  "sv": "Snabbmode är dåligt för miljön, ändå köper många ungdomar billiga kläder."
+ },
+ {
+  "id": "bisatz-025",
+  "topic": "bisatz",
+  "rule": "bs-inv",
+  "type": "rw",
+  "q": "In der Schweiz spricht man vier Sprachen. Viele Schweizer sind mehrsprachig.",
+  "cue": "deshalb",
+  "a": "In der Schweiz spricht man vier Sprachen, deshalb sind viele Schweizer mehrsprachig.",
+  "acc": [
+   "In der Schweiz spricht man vier Sprachen, viele Schweizer sind deshalb mehrsprachig."
+  ],
+  "alt": [
+   "In der Schweiz spricht man vier Sprachen, deshalb viele Schweizer sind mehrsprachig.",
+   "In der Schweiz spricht man vier Sprachen, deshalb viele Schweizer mehrsprachig sind."
+  ],
+  "why": "Deshalb på plats 1 ger omvänd ordföljd: sind kommer direkt efter, före viele Schweizer.",
+  "sv": "I Schweiz talar man fyra språk, därför är många schweizare flerspråkiga."
+ },
+ {
+  "id": "bisatz-026",
+  "topic": "bisatz",
+  "rule": "bs-konj",
+  "type": "rw",
+  "q": "Ich nehme das Fahrrad. Die Busfahrer streiken heute.",
+  "cue": "denn",
+  "a": "Ich nehme das Fahrrad, denn die Busfahrer streiken heute.",
+  "alt": [
+   "Ich nehme das Fahrrad, denn streiken die Busfahrer heute.",
+   "Ich nehme das Fahrrad, denn die Busfahrer heute streiken."
+  ],
+  "why": "Denn står utanför satsen (plats 0) och ändrar inte ordföljden: subjekt och verb kommer som vanligt. Jämför weil, som skickar verbet sist.",
+  "sv": "Jag tar cykeln, för busschaufförerna strejkar i dag."
+ },
+ {
+  "id": "bisatz-027",
+  "topic": "bisatz",
+  "rule": "bs-konj",
+  "type": "rw",
+  "q": "Ich wollte zur Party gehen. Ich musste für die Prüfung lernen.",
+  "cue": "aber",
+  "a": "Ich wollte zur Party gehen, aber ich musste für die Prüfung lernen.",
+  "acc": [
+   "Ich wollte zur Party gehen, ich musste aber für die Prüfung lernen."
+  ],
+  "alt": [
+   "Ich wollte zur Party gehen, aber musste ich für die Prüfung lernen.",
+   "Ich wollte zur Party gehen, aber ich für die Prüfung lernen musste."
+  ],
+  "why": "Aber är ett samordnande bindeord (plats 0): efter det kommer rak ordföljd, ich musste.",
+  "sv": "Jag ville gå på festen, men jag var tvungen att plugga till provet."
+ },
+ {
+  "id": "bisatz-028",
+  "topic": "bisatz",
+  "rule": "bs-konj",
+  "type": "rw",
+  "q": "Sie will nicht studieren. Sie möchte eine Ausbildung als Tischlerin machen.",
+  "cue": "sondern",
+  "a": "Sie will nicht studieren, sondern sie möchte eine Ausbildung als Tischlerin machen.",
+  "alt": [
+   "Sie will nicht studieren, sondern möchte sie eine Ausbildung als Tischlerin machen.",
+   "Sie will nicht studieren, sondern sie eine Ausbildung als Tischlerin machen möchte."
+  ],
+  "why": "Sondern (utan) kommer efter en nekning och ändrar inte ordföljden: sie möchte, som i en vanlig huvudsats.",
+  "sv": "Hon vill inte plugga på universitetet, utan hon vill gå en yrkesutbildning till snickare."
+ },
+ {
+  "id": "bisatz-029",
+  "topic": "bisatz",
+  "rule": "bs-konj",
+  "type": "rw",
+  "q": "Mein Bruder lebt in Graz. Meine Schwester studiert in Innsbruck.",
+  "cue": "und",
+  "a": "Mein Bruder lebt in Graz, und meine Schwester studiert in Innsbruck.",
+  "alt": [
+   "Mein Bruder lebt in Graz, und studiert meine Schwester in Innsbruck.",
+   "Mein Bruder lebt in Graz, und meine Schwester in Innsbruck studiert."
+  ],
+  "why": "Und står på plats 0 och påverkar inte ordföljden: meine Schwester studiert, rak ordföljd.",
+  "sv": "Min bror bor i Graz, och min syster pluggar i Innsbruck."
+ },
+ {
+  "id": "bisatz-030",
+  "topic": "bisatz",
+  "rule": "bs-konj",
+  "type": "rw",
+  "q": "Wir gehen heute ins Kino. Wir schauen zu Hause eine Serie.",
+  "cue": "oder",
+  "a": "Wir gehen heute ins Kino, oder wir schauen zu Hause eine Serie.",
+  "alt": [
+   "Wir gehen heute ins Kino, oder zu Hause wir schauen eine Serie.",
+   "Wir gehen heute ins Kino, oder wir zu Hause eine Serie schauen."
+  ],
+  "why": "Oder står på plats 0 och ändrar ingenting: efter oder kommer en vanlig huvudsats med verbet på plats 2.",
+  "sv": "Vi går på bio i dag, eller så tittar vi på en serie hemma."
+ },
+ {
+  "id": "konj-001",
+  "topic": "konj",
+  "rule": "k2-wenn",
+  "q": "Wenn ich mehr Zeit [hätte], [würde] ich öfter Sport machen.",
+  "alt": [
+   "habe … werde",
+   "hatte … wurde",
+   "hätte … werde"
+  ],
+  "why": "Ett tänkt villkor kräver konjunktiv II i båda satserna: hätte och würde + infinitiv. Habe/werde är presens, hatte/wurde preteritum.",
+  "sv": "Om jag hade mer tid skulle jag träna oftare."
+ },
+ {
+  "id": "konj-002",
+  "topic": "konj",
+  "rule": "k2-wenn",
+  "q": "Wenn ich reich [wäre], würde ich eine Weltreise machen.",
+  "alt": [
+   "bin",
+   "war",
+   "werde"
+  ],
+  "why": "Overkligt villkor: konjunktiv II av sein är wäre. Bin är presens och war preteritum (verklighet).",
+  "sv": "Om jag vore rik skulle jag göra en jordenruntresa."
+ },
+ {
+  "id": "konj-003",
+  "topic": "konj",
+  "rule": "k2-wenn",
+  "q": "Wenn es weniger Autos [gäbe], wäre die Luft in den Städten sauberer.",
+  "acc": [
+   "geben würde"
+  ],
+  "alt": [
+   "gibt",
+   "gab",
+   "gebe"
+  ],
+  "why": "Es gibt blir es gäbe i konjunktiv II (tänkt situation). Gibt och gab är indikativ, gebe är konjunktiv I som används i indirekt tal.",
+  "sv": "Om det fanns färre bilar skulle luften i städerna vara renare."
+ },
+ {
+  "id": "konj-004",
+  "topic": "konj",
+  "rule": "k2-wenn",
+  "q": "Wenn du früher ins Bett [gehen würdest], wärst du morgens nicht so müde.",
+  "alt": [
+   "gehst",
+   "ginge",
+   "würdest gehen"
+  ],
+  "why": "Vid de flesta verb använder man würde + infinitiv, och i en bisats står würdest sist: gehen würdest. Gehst och gingst är indikativ.",
+  "sv": "Om du gick och lade dig tidigare skulle du inte vara så trött på morgnarna."
+ },
+ {
+  "id": "konj-005",
+  "topic": "konj",
+  "rule": "k2-wenn",
+  "q": "Wenn ich du [wäre], würde ich mit deinen Eltern reden.",
+  "alt": [
+   "bin",
+   "wärst",
+   "war"
+  ],
+  "why": "Om jag vore du: konjunktiv II wäre, och verbet böjs efter ich, inte efter du. Därför är wärst fel.",
+  "sv": "Om jag var du skulle jag prata med dina föräldrar."
+ },
+ {
+  "id": "konj-006",
+  "topic": "konj",
+  "rule": "k2-wenn",
+  "q": "Wenn die Busse öfter [fahren würden], würden mehr Leute das Auto stehen lassen.",
+  "acc": [
+   "führen"
+  ],
+  "alt": [
+   "fahren",
+   "fuhren",
+   "würden fahren"
+  ],
+  "why": "Tänkt villkor med würde + infinitiv, och würden står sist i bisatsen. Fahren och fuhren är indikativ.",
+  "sv": "Om bussarna gick oftare skulle fler låta bilen stå."
+ },
+ {
+  "id": "konj-007",
+  "topic": "konj",
+  "rule": "k2-wenn",
+  "q": "Wenn wir mehr Geld [hätten], [könnten] wir im Sommer nach Österreich fahren.",
+  "alt": [
+   "haben … können",
+   "hatten … konnten",
+   "hätten … können"
+  ],
+  "why": "Båda satserna behöver konjunktiv II: hätten och könnten (med omljud). Können är presens och konnten preteritum.",
+  "sv": "Om vi hade mer pengar skulle vi kunna åka till Österrike i sommar."
+ },
+ {
+  "id": "konj-008",
+  "topic": "konj",
+  "rule": "k2-wenn",
+  "q": "Was [würdest] du machen, wenn du Bundeskanzlerin [wärst]?",
+  "alt": [
+   "wirst … bist",
+   "würdest … bist",
+   "wirst … wärst"
+  ],
+  "why": "En tänkt situation ger konjunktiv II i båda satserna: würdest … machen och wärst. Wirst och bist är indikativ.",
+  "sv": "Vad skulle du göra om du var förbundskansler?"
+ },
+ {
+  "id": "konj-009",
+  "topic": "konj",
+  "rule": "k2-wenn",
+  "q": "Wenn ich nicht so schüchtern [wäre], würde ich öfter im Unterricht etwas sagen.",
+  "alt": [
+   "bin",
+   "war",
+   "sei"
+  ],
+  "why": "Overkligt villkor: wäre (konjunktiv II). Sei är konjunktiv I och används i indirekt tal, inte i villkorssatser.",
+  "sv": "Om jag inte var så blyg skulle jag säga något oftare på lektionerna."
+ },
+ {
+  "id": "konj-010",
+  "topic": "konj",
+  "rule": "k2-wenn",
+  "q": "Es [wäre] besser für das Klima, wenn wir weniger Fleisch essen [würden].",
+  "alt": [
+   "ist … werden",
+   "war … wurden",
+   "wäre … werden"
+  ],
+  "why": "Tänkt situation: wäre i huvudsatsen och würden + infinitiv i bisatsen. Werden skulle betyda framtid, wurden är preteritum.",
+  "sv": "Det skulle vara bättre för klimatet om vi åt mindre kött."
+ },
+ {
+  "id": "konj-011",
+  "topic": "konj",
+  "rule": "k2-wenn",
+  "q": "Wenn ich in Berlin [wohnte], würde ich jedes Wochenende ins Museum gehen.",
+  "acc": [
+   "wohnen würde"
+  ],
+  "alt": [
+   "wohne",
+   "wohnen werde",
+   "wohnt"
+  ],
+  "why": "Svaga verb har samma form i konjunktiv II som i preteritum (wohnte). Wohne och wohnt är presens, wohnen werde är futurum.",
+  "sv": "Om jag bodde i Berlin skulle jag gå på museum varje helg."
+ },
+ {
+  "id": "konj-012",
+  "topic": "konj",
+  "rule": "k2-wenn",
+  "q": "Wenn er sich mehr [anstrengen würde], [könnte] er bessere Noten bekommen.",
+  "acc": [
+   "anstrengte … könnte"
+  ],
+  "alt": [
+   "anstrengt … kann",
+   "anstrengen wird … kann",
+   "anstrengen würde … kann"
+  ],
+  "why": "Tänkt villkor: konjunktiv II i båda satserna, anstrengen würde och könnte. Kann är indikativ och passar inte ihop med ett overkligt villkor.",
+  "sv": "Om han ansträngde sig mer skulle han kunna få bättre betyg."
+ },
+ {
+  "id": "konj-013",
+  "topic": "konj",
+  "rule": "k2-wenn",
+  "q": "Wenn ich nicht arbeiten [müsste], [würde] ich heute Abend mitkommen.",
+  "alt": [
+   "muss … werde",
+   "musste … wurde",
+   "müsse … werde"
+  ],
+  "why": "Overkligt villkor: müsste och würde (konjunktiv II). Müsse är konjunktiv I, muss/musste indikativ.",
+  "sv": "Om jag inte behövde jobba skulle jag följa med i kväll."
+ },
+ {
+  "id": "konj-014",
+  "topic": "konj",
+  "rule": "k2-wunsch",
+  "q": "[Könnten] Sie mir bitte sagen, wo der Bahnhof ist?",
+  "alt": [
+   "Konnten",
+   "Könntest",
+   "Kannst"
+  ],
+  "why": "Artig fråga med konjunktiv II: könnten. Konnten är preteritum, och könntest/kannst hör till du, inte till Sie.",
+  "sv": "Skulle ni kunna säga var järnvägsstationen ligger?"
+ },
+ {
+  "id": "konj-015",
+  "topic": "konj",
+  "rule": "k2-wunsch",
+  "q": "Ich [hätte] gern ein Glas Wasser, bitte.",
+  "alt": [
+   "habe",
+   "hatte",
+   "hätten"
+  ],
+  "why": "Ich hätte gern … är det artiga sättet att beställa (konjunktiv II). Ich habe gern betyder att man tycker om att ha något, och hätten hör till wir/sie.",
+  "sv": "Jag skulle vilja ha ett glas vatten, tack."
+ },
+ {
+  "id": "konj-016",
+  "topic": "konj",
+  "rule": "k2-wunsch",
+  "q": "Ich wünschte, ich [könnte] besser Deutsch sprechen.",
+  "alt": [
+   "kann",
+   "konnte",
+   "könne"
+  ],
+  "why": "Efter ich wünschte uttrycker man en overklig önskan med konjunktiv II: könnte. Könne är konjunktiv I.",
+  "sv": "Jag önskar att jag kunde prata tyska bättre."
+ },
+ {
+  "id": "konj-017",
+  "topic": "konj",
+  "rule": "k2-wunsch",
+  "q": "Wenn ich doch nur mehr Zeit für meine Freunde [hätte]!",
+  "alt": [
+   "habe",
+   "hatte",
+   "hättest"
+  ],
+  "why": "Önskan med wenn … doch nur kräver konjunktiv II: hätte. Hättest hör till du.",
+  "sv": "Om jag ändå bara hade mer tid för mina kompisar!"
+ },
+ {
+  "id": "konj-018",
+  "topic": "konj",
+  "rule": "k2-wunsch",
+  "q": "[Würden] Sie bitte das Fenster schließen? Es ist kalt hier.",
+  "alt": [
+   "Werden",
+   "Wurden",
+   "Würdest"
+  ],
+  "why": "Artig uppmaning: Würden Sie bitte …? Werden är futurum, wurden preteritum och würdest hör till du.",
+  "sv": "Skulle ni kunna stänga fönstret? Det är kallt här."
+ },
+ {
+  "id": "konj-019",
+  "topic": "konj",
+  "rule": "k2-wunsch",
+  "q": "An deiner Stelle [würde] ich mich bei ihr entschuldigen.",
+  "alt": [
+   "werde",
+   "wurde",
+   "wäre"
+  ],
+  "why": "An deiner Stelle (i ditt ställe) inleder ett råd i konjunktiv II: würde + infinitiv. Wäre passar inte med entschuldigen.",
+  "sv": "I ditt ställe skulle jag be henne om ursäkt."
+ },
+ {
+  "id": "konj-020",
+  "topic": "konj",
+  "rule": "k2-wunsch",
+  "q": "Du [solltest] mehr Wasser trinken, wenn du Kopfschmerzen hast.",
+  "alt": [
+   "sollte",
+   "solltet",
+   "sollten"
+  ],
+  "why": "Ett råd ges med konjunktiv II av sollen, och till du blir formen solltest. De andra formerna hör till ich/er, ihr och wir/Sie.",
+  "sv": "Du borde dricka mer vatten när du har huvudvärk."
+ },
+ {
+  "id": "konj-021",
+  "topic": "konj",
+  "rule": "k2-wunsch",
+  "q": "Es [wäre] schön, wenn du am Wochenende vorbeikommen [könntest].",
+  "alt": [
+   "war … konntest",
+   "wird … könntest",
+   "wurde … konntest"
+  ],
+  "why": "En artig önskan: konjunktiv II i båda satserna, wäre och könntest. War/konntest är preteritum.",
+  "sv": "Det vore trevligt om du kunde komma förbi i helgen."
+ },
+ {
+  "id": "konj-022",
+  "topic": "konj",
+  "rule": "k2-wunsch",
+  "q": "[Hättest] du morgen Zeit, mir beim Umzug zu helfen?",
+  "alt": [
+   "Hattest",
+   "Hätte",
+   "Habest"
+  ],
+  "why": "Artig fråga med konjunktiv II: hättest (du). Hattest är preteritum och handlar om det förflutna, hätte hör till ich/er.",
+  "sv": "Skulle du ha tid att hjälpa mig med flytten i morgon?"
+ },
+ {
+  "id": "konj-023",
+  "topic": "konj",
+  "rule": "k2-wunsch",
+  "q": "Nach dem Abitur [möchte] ich gern ein Jahr im Ausland verbringen.",
+  "alt": [
+   "mochte",
+   "mag",
+   "möchten"
+  ],
+  "why": "Möchte är konjunktiv II av mögen och betyder skulle vilja. Mochte är preteritum, och mag används om att tycka om något, inte om planer.",
+  "sv": "Efter studenten skulle jag vilja tillbringa ett år utomlands."
+ },
+ {
+  "id": "konj-024",
+  "topic": "konj",
+  "rule": "k2-wunsch",
+  "q": "Wir [müssten] eigentlich mehr für den Klimaschutz tun, aber es ist oft unbequem.",
+  "alt": [
+   "mussten",
+   "müsste",
+   "müsstet"
+  ],
+  "why": "Müssten (konjunktiv II) betyder borde egentligen. Mussten är preteritum och passar inte med ist i nutid, müsste/müsstet hör till fel person.",
+  "sv": "Vi borde egentligen göra mer för klimatet, men det är ofta obekvämt."
+ },
+ {
+  "id": "konj-025",
+  "topic": "konj",
+  "rule": "k2-wunsch",
+  "q": "Ich [wäre] jetzt lieber am Strand als in der Schule.",
+  "alt": [
+   "war",
+   "sei",
+   "würde"
+  ],
+  "why": "En önskan om något som inte är sant just nu: konjunktiv II wäre. Sei är konjunktiv I, och würde behöver en infinitiv.",
+  "sv": "Jag skulle hellre vara på stranden än i skolan just nu."
+ },
+ {
+  "id": "konj-026",
+  "topic": "konj",
+  "rule": "k2-verg",
+  "q": "Wenn ich das früher gewusst [hätte], [wäre] ich zu deiner Party gekommen.",
+  "alt": [
+   "habe … bin",
+   "hatte … war",
+   "wäre … hätte"
+  ],
+  "why": "Overkligt i dåtid: hätte/wäre + particip. Wissen tar haben (hätte gewusst) och kommen tar sein (wäre gekommen).",
+  "sv": "Om jag hade vetat det tidigare hade jag kommit till din fest."
+ },
+ {
+  "id": "konj-027",
+  "topic": "konj",
+  "rule": "k2-verg",
+  "q": "Wenn wir den Zug nicht verpasst [hätten], wären wir pünktlich in Salzburg angekommen.",
+  "alt": [
+   "haben",
+   "hatten",
+   "wären"
+  ],
+  "why": "Dåtid i konjunktiv II: hätten + particip. Verpassen tar haben, så wären är fel. Haben/hatten är indikativ.",
+  "sv": "Om vi inte hade missat tåget hade vi kommit fram i tid till Salzburg."
+ },
+ {
+  "id": "konj-028",
+  "topic": "konj",
+  "rule": "k2-verg",
+  "q": "Wenn sie mehr gelernt hätte, [hätte] sie die Prüfung bestanden.",
+  "alt": [
+   "wäre",
+   "hatte",
+   "würde"
+  ],
+  "why": "Bestehen tar haben, så det blir hätte … bestanden. Würde kan inte kombineras med ett particip här, och hatte är indikativ.",
+  "sv": "Om hon hade pluggat mer hade hon klarat provet."
+ },
+ {
+  "id": "konj-029",
+  "topic": "konj",
+  "rule": "k2-verg",
+  "q": "Ich [hätte] dich angerufen, aber mein Akku war leer.",
+  "alt": [
+   "wäre",
+   "würde",
+   "hättest"
+  ],
+  "why": "Något som inte hände: hätte + particip (anrufen tar haben). Würde passar inte med particip, hättest hör till du.",
+  "sv": "Jag skulle ha ringt dig, men mitt batteri var slut."
+ },
+ {
+  "id": "konj-030",
+  "topic": "konj",
+  "rule": "k2-verg",
+  "q": "Wenn es gestern nicht geregnet [hätte], [wären] wir wandern gegangen.",
+  "alt": [
+   "hat … sind",
+   "wäre … hätten",
+   "hatte … waren"
+  ],
+  "why": "Overkligt i dåtid: regnen tar haben (hätte geregnet), gehen tar sein (wären gegangen). Hat/sind och hatte/waren är indikativ.",
+  "sv": "Om det inte hade regnat i går hade vi gått på vandring."
+ },
+ {
+  "id": "konj-031",
+  "topic": "konj",
+  "rule": "k2-verg",
+  "q": "Du [hättest] mir die Wahrheit sagen sollen.",
+  "alt": [
+   "wärst",
+   "würdest",
+   "hätte"
+  ],
+  "why": "Du borde ha …: hättest + två infinitiver (sagen sollen). Modalverb tar haben, och hätte hör till ich/er.",
+  "sv": "Du borde ha sagt sanningen till mig."
+ },
+ {
+  "id": "konj-032",
+  "topic": "konj",
+  "rule": "k2-verg",
+  "q": "Ohne die Hilfe meiner Lehrerin [hätte] ich das Abitur nie geschafft.",
+  "alt": [
+   "wäre",
+   "würde",
+   "hättest"
+  ],
+  "why": "Ohne … betyder här om inte …, alltså overkligt i dåtid: hätte + geschafft. Schaffen tar haben.",
+  "sv": "Utan min lärares hjälp hade jag aldrig klarat studenten."
+ },
+ {
+  "id": "konj-033",
+  "topic": "konj",
+  "rule": "k2-verg",
+  "q": "Wenn ich in der Schweiz aufgewachsen [wäre], [würde] ich heute Französisch sprechen.",
+  "alt": [
+   "hätte … würde",
+   "bin … werde",
+   "wäre … wurde"
+  ],
+  "why": "Aufwachsen tar sein, så det blir wäre aufgewachsen. Följden gäller nu, så huvudsatsen har würde + infinitiv.",
+  "sv": "Om jag hade vuxit upp i Schweiz skulle jag prata franska i dag."
+ },
+ {
+  "id": "konj-034",
+  "topic": "konj",
+  "rule": "k2-verg",
+  "q": "Wenn die Regierung früher gehandelt [hätte], [wäre] der Schaden kleiner gewesen.",
+  "alt": [
+   "hat … ist",
+   "wäre … hätte",
+   "hatte … war"
+  ],
+  "why": "Overkligt i dåtid: handeln tar haben (hätte gehandelt), sein tar sein (wäre gewesen).",
+  "sv": "Om regeringen hade agerat tidigare hade skadan varit mindre."
+ },
+ {
+  "id": "konj-035",
+  "topic": "konj",
+  "rule": "k2-verg",
+  "q": "Er [wäre] fast zu spät gekommen, weil sein Wecker nicht geklingelt hat.",
+  "alt": [
+   "hätte",
+   "würde",
+   "wärst"
+  ],
+  "why": "Fast + konjunktiv II i dåtid betyder höll på att (men hände inte). Kommen tar sein: wäre gekommen.",
+  "sv": "Han kom nästan för sent eftersom hans väckarklocka inte ringde."
+ },
+ {
+  "id": "konj-036",
+  "topic": "konj",
+  "rule": "k1-rede",
+  "q": "Der Minister erklärte, die Lage [sei] unter Kontrolle.",
+  "alt": [
+   "seien",
+   "sein",
+   "seist"
+  ],
+  "why": "I indirekt tal i nyheter används konjunktiv I: er/sie/es sei. Seien är plural, och ist är indikativ, som man undviker i nyhetsspråk.",
+  "sv": "Ministern förklarade att läget var under kontroll."
+ },
+ {
+  "id": "konj-037",
+  "topic": "konj",
+  "rule": "k1-rede",
+  "q": "Laut Polizei [sei] der Fahrer viel zu schnell gefahren.",
+  "alt": [
+   "habe",
+   "hätte",
+   "seien"
+  ],
+  "why": "Indirekt tal i dåtid: konjunktiv I av hjälpverbet + particip. Fahren (förflyttning) tar sein, alltså sei gefahren.",
+  "sv": "Enligt polisen hade föraren kört alldeles för fort."
+ },
+ {
+  "id": "konj-038",
+  "topic": "konj",
+  "rule": "k1-rede",
+  "q": "Die Sprecherin betonte, die Regierung [werde] die Steuern nicht erhöhen.",
+  "alt": [
+   "werden",
+   "wurde",
+   "werdet"
+  ],
+  "why": "Konjunktiv I av werden i tredje person singular är werde. Wird är indikativ och werden plural.",
+  "sv": "Talespersonen betonade att regeringen inte skulle höja skatterna."
+ },
+ {
+  "id": "konj-039",
+  "topic": "konj",
+  "rule": "k1-rede",
+  "q": "Der Trainer sagte, die Mannschaft [habe] in dieser Woche hart trainiert.",
+  "alt": [
+   "hätten",
+   "sei",
+   "haben"
+  ],
+  "why": "Indirekt tal: konjunktiv I habe + particip. Trainieren tar haben, så sei är fel, och hätten är plural.",
+  "sv": "Tränaren sa att laget hade tränat hårt den här veckan."
+ },
+ {
+  "id": "konj-040",
+  "topic": "konj",
+  "rule": "k1-rede",
+  "q": "Die Forscher erklären, der Meeresspiegel [könne] bis 2100 um einen Meter steigen.",
+  "alt": [
+   "können",
+   "könnten",
+   "könnt"
+  ],
+  "why": "Subjektet i det återgivna påståendet är der Meeresspiegel (singular), så konjunktiv I blir könne. Kann är indikativ.",
+  "sv": "Forskarna förklarar att havsnivån kan stiga med en meter till år 2100."
+ },
+ {
+  "id": "konj-041",
+  "topic": "konj",
+  "rule": "k1-rede",
+  "q": "Die Schulleiterin teilte mit, alle Schüler [müssten] am Freitag früher nach Hause gehen.",
+  "alt": [
+   "müsse",
+   "musste",
+   "mussten"
+  ],
+  "why": "I plural ser konjunktiv I (müssen) ut som indikativ, så man använder konjunktiv II: müssten. Müsse är singular.",
+  "sv": "Rektorn meddelade att alla elever måste gå hem tidigare på fredag."
+ },
+ {
+  "id": "konj-042",
+  "topic": "konj",
+  "rule": "k1-rede",
+  "q": "Der Bürgermeister sagte, er [wolle] mehr Radwege bauen lassen.",
+  "alt": [
+   "wollten",
+   "wollen",
+   "wollest"
+  ],
+  "why": "Konjunktiv I av wollen för er är wolle. Will är indikativ, wollen plural och wollest hör till du.",
+  "sv": "Borgmästaren sa att han ville låta bygga fler cykelbanor."
+ },
+ {
+  "id": "konj-043",
+  "topic": "konj",
+  "rule": "k1-rede",
+  "q": "Die Zeitung berichtet, in Wien [gebe] es zu wenige günstige Wohnungen.",
+  "alt": [
+   "geben",
+   "gäben",
+   "gebt"
+  ],
+  "why": "Es gibt blir es gebe i konjunktiv I. Gibt och gab är indikativ, geben är plural.",
+  "sv": "Tidningen rapporterar att det finns för få billiga bostäder i Wien."
+ },
+ {
+  "id": "konj-044",
+  "topic": "konj",
+  "rule": "k1-rede",
+  "q": "Laut der Studie [hätten] viele Jugendliche Angst vor dem Klimawandel.",
+  "alt": [
+   "hätte",
+   "habe",
+   "hatten"
+  ],
+  "why": "I plural är konjunktiv I (haben) samma som indikativ, så man tar konjunktiv II: hätten. Habe är singular.",
+  "sv": "Enligt studien är många ungdomar rädda för klimatförändringarna."
+ },
+ {
+  "id": "konj-045",
+  "topic": "konj",
+  "rule": "k1-rede",
+  "q": "Die Kanzlerin sagte, man [dürfe] die Probleme nicht unterschätzen.",
+  "alt": [
+   "dürfen",
+   "dürften",
+   "durften"
+  ],
+  "why": "Konjunktiv I av dürfen för man (tredje person singular) är dürfe. Darf är indikativ och durfte preteritum.",
+  "sv": "Förbundskanslern sa att man inte fick underskatta problemen."
+ },
+ {
+  "id": "passiv-001",
+  "topic": "passiv",
+  "rule": "pa-praes",
+  "q": "In vielen Haushalten [wird] der Müll heute sorgfältig [getrennt].",
+  "alt": [
+   "wird … trennen",
+   "hat … getrennt",
+   "werden … getrennt"
+  ],
+  "why": "Passiv presens = werden + perfekt particip. Subjektet der Müll är singular, alltså wird … getrennt.",
+  "sv": "I många hushåll sorteras soporna noggrant i dag."
+ },
+ {
+  "id": "passiv-002",
+  "topic": "passiv",
+  "rule": "pa-praes",
+  "q": "Jedes Jahr [werden] in Deutschland Millionen Tonnen Lebensmittel [weggeworfen].",
+  "alt": [
+   "wird … weggeworfen",
+   "werden … wegwerfen",
+   "haben … weggeworfen"
+  ],
+  "why": "Subjektet Millionen Tonnen Lebensmittel är plural, så det blir werden + particip (weggeworfen). Haben bildar perfekt, inte passiv.",
+  "sv": "Varje år slängs miljontals ton mat i Tyskland."
+ },
+ {
+  "id": "passiv-003",
+  "topic": "passiv",
+  "rule": "pa-praes",
+  "q": "Die Nachrichten [werden] heute meistens auf dem Handy [gelesen].",
+  "alt": [
+   "wird … gelesen",
+   "werden … lesen",
+   "werden … gelest"
+  ],
+  "why": "Die Nachrichten är plural: werden + particip. Particip av lesen är gelesen (starkt verb).",
+  "sv": "Nyheterna läses i dag oftast i mobilen."
+ },
+ {
+  "id": "passiv-004",
+  "topic": "passiv",
+  "rule": "pa-praes",
+  "q": "Das Rathaus [wird] zurzeit [renoviert], deshalb ist der Eingang geschlossen.",
+  "alt": [
+   "werden … renoviert",
+   "wird … renovieren",
+   "hat … renoviert"
+  ],
+  "why": "Något pågår (zurzeit), alltså Vorgangspassiv: wird + particip. Das Rathaus är singular.",
+  "sv": "Rådhuset renoveras just nu, därför är ingången stängd."
+ },
+ {
+  "id": "passiv-005",
+  "topic": "passiv",
+  "rule": "pa-praes",
+  "q": "In der Schweiz [wird] mehrmals im Jahr über wichtige Fragen [abgestimmt].",
+  "alt": [
+   "werden … abgestimmt",
+   "wird … abstimmen",
+   "ist … abgestimmt"
+  ],
+  "why": "Opersonlig passiv utan subjekt: verbet står alltid i singular, wird + abgestimmt. Ist … abgestimmt skulle beskriva ett tillstånd.",
+  "sv": "I Schweiz röstar man flera gånger om året om viktiga frågor."
+ },
+ {
+  "id": "passiv-006",
+  "topic": "passiv",
+  "rule": "pa-praes",
+  "q": "Der Friedensnobelpreis [wird] jedes Jahr in Oslo [verliehen].",
+  "alt": [
+   "werden … verliehen",
+   "wird … verleihen",
+   "wird … geleiht"
+  ],
+  "why": "Passiv presens: wird + particip. Verleihen är starkt: verlieh, verliehen, och prefixet ver- ger inget ge-.",
+  "sv": "Nobels fredspris delas ut i Oslo varje år."
+ },
+ {
+  "id": "passiv-007",
+  "topic": "passiv",
+  "rule": "pa-praes",
+  "q": "Neue Gesetze [werden] in Deutschland vom Bundestag [beschlossen].",
+  "alt": [
+   "wird … beschlossen",
+   "werden … beschließen",
+   "sind … beschlossen"
+  ],
+  "why": "Neue Gesetze är plural: werden + particip. Den som utför handlingen anges med von (vom Bundestag).",
+  "sv": "Nya lagar beslutas i Tyskland av förbundsdagen."
+ },
+ {
+  "id": "passiv-008",
+  "topic": "passiv",
+  "rule": "pa-praes",
+  "q": "Auf dem Oktoberfest [wird] jedes Jahr sehr viel Bier [getrunken].",
+  "alt": [
+   "werden … getrunken",
+   "wird … getrinkt",
+   "wird … trinken"
+  ],
+  "why": "Passiv presens: wird + particip. Trinken är starkt: trank, getrunken. Bier är singular, så wird.",
+  "sv": "På Oktoberfest dricks det väldigt mycket öl varje år."
+ },
+ {
+  "id": "passiv-009",
+  "topic": "passiv",
+  "rule": "pa-praes",
+  "q": "Bei uns zu Hause [wird] am Sonntag immer zusammen [gekocht].",
+  "alt": [
+   "werden … gekocht",
+   "wird … kochen",
+   "ist … gekocht"
+  ],
+  "why": "Opersonlig passiv (man lagar mat): alltid wird + particip i singular.",
+  "sv": "Hemma hos oss lagar vi alltid mat tillsammans på söndagar."
+ },
+ {
+  "id": "passiv-010",
+  "topic": "passiv",
+  "rule": "pa-praet",
+  "q": "Die Berliner Mauer [wurde] im August 1961 [gebaut].",
+  "alt": [
+   "wurden … gebaut",
+   "wurde … bauen",
+   "hat … gebaut"
+  ],
+  "why": "Passiv preteritum: wurde + particip. Die Mauer är singular, så wurde, inte wurden.",
+  "sv": "Berlinmuren byggdes i augusti 1961."
+ },
+ {
+  "id": "passiv-011",
+  "topic": "passiv",
+  "rule": "pa-praet",
+  "q": "Das erste Auto mit Benzinmotor [wurde] 1886 von Carl Benz [gebaut].",
+  "alt": [
+   "wurden … gebaut",
+   "wurde … gebaucht",
+   "ist … gebaut"
+  ],
+  "why": "Passiv preteritum: wurde + particip (gebaut). Ist … gebaut skulle vara ett tillstånd och passar inte med årtalet.",
+  "sv": "Den första bilen med bensinmotor byggdes 1886 av Carl Benz."
+ },
+ {
+  "id": "passiv-012",
+  "topic": "passiv",
+  "rule": "pa-praet",
+  "q": "Die Mauer [wurde] am 9. November 1989 [geöffnet].",
+  "alt": [
+   "wurde … öffnen",
+   "würde … geöffnet",
+   "hat … geöffnet"
+  ],
+  "why": "Passiv preteritum: wurde + particip. Würde (utan omljud) är konjunktiv II och betyder skulle.",
+  "sv": "Muren öppnades den 9 november 1989."
+ },
+ {
+  "id": "passiv-013",
+  "topic": "passiv",
+  "rule": "pa-praet",
+  "q": "Die Bibel [wurde] um 1455 von Johannes Gutenberg [gedruckt].",
+  "alt": [
+   "wurden … gedruckt",
+   "wurde … drucken",
+   "hat … gedruckt"
+  ],
+  "why": "Passiv preteritum: wurde + particip. Den som gjorde det anges med von.",
+  "sv": "Bibeln trycktes omkring 1455 av Johannes Gutenberg."
+ },
+ {
+  "id": "passiv-014",
+  "topic": "passiv",
+  "rule": "pa-praet",
+  "q": "Nach dem Streit [wurden] alle Beteiligten ins Büro der Direktorin [geschickt].",
+  "alt": [
+   "wurde … geschickt",
+   "wurden … schicken",
+   "haben … geschickt"
+  ],
+  "why": "Alle Beteiligten är plural: wurden + particip. Haben … geschickt är aktiv perfekt och passar inte.",
+  "sv": "Efter bråket skickades alla inblandade till rektorns kontor."
+ },
+ {
+  "id": "passiv-015",
+  "topic": "passiv",
+  "rule": "pa-praet",
+  "q": "Früher [wurden] Kinder oft sehr streng [erzogen].",
+  "alt": [
+   "wurde … erzogen",
+   "wurden … erziehen",
+   "wurden … geerzieht"
+  ],
+  "why": "Kinder är plural: wurden + particip. Erziehen är starkt: erzog, erzogen (inget ge- efter er-).",
+  "sv": "Förr uppfostrades barn ofta mycket strängt."
+ },
+ {
+  "id": "passiv-016",
+  "topic": "passiv",
+  "rule": "pa-praet",
+  "q": "Das Konzert [wurde] gestern wegen des Sturms [abgesagt].",
+  "alt": [
+   "werden … abgesagt",
+   "wurde … absagen",
+   "hat … abgesagt"
+  ],
+  "why": "Gestern visar dåtid: passiv preteritum wurde + particip. Das Konzert kan inte själv ställa in något, därför är hat … abgesagt fel.",
+  "sv": "Konserten ställdes in i går på grund av stormen."
+ },
+ {
+  "id": "passiv-017",
+  "topic": "passiv",
+  "rule": "pa-praet",
+  "q": "Im Jahr 1949 [wurde] die Bundesrepublik Deutschland [gegründet].",
+  "alt": [
+   "wurden … gegründet",
+   "wurde … gründen",
+   "hat … gegründet"
+  ],
+  "why": "Passiv preteritum: wurde + particip. Die Bundesrepublik är singular.",
+  "sv": "År 1949 grundades Förbundsrepubliken Tyskland."
+ },
+ {
+  "id": "passiv-018",
+  "topic": "passiv",
+  "rule": "pa-perf",
+  "q": "Die neue Brücke [ist] im letzten Jahr [gebaut worden].",
+  "alt": [
+   "hat … gebaut worden",
+   "ist … gebaut geworden",
+   "ist … geworden gebaut"
+  ],
+  "why": "Passiv perfekt: ist + particip + worden. I passiv blir geworden kortat till worden, och hjälpverbet är alltid sein.",
+  "sv": "Den nya bron byggdes förra året."
+ },
+ {
+  "id": "passiv-019",
+  "topic": "passiv",
+  "rule": "pa-perf",
+  "q": "Der Täter [ist] gestern Abend in Hamburg [festgenommen worden].",
+  "alt": [
+   "hat … festgenommen worden",
+   "ist … festgenommen geworden",
+   "wird … festgenommen worden"
+  ],
+  "why": "Passiv perfekt: ist + particip + worden. Hat är fel hjälpverb, och geworden används bara när werden betyder bli.",
+  "sv": "Gärningsmannen greps i går kväll i Hamburg."
+ },
+ {
+  "id": "passiv-020",
+  "topic": "passiv",
+  "rule": "pa-perf",
+  "q": "Die Wahl [ist] wegen der Pandemie um eine Woche [verschoben worden].",
+  "alt": [
+   "hat … verschoben worden",
+   "ist … verschoben geworden",
+   "ist … verschiebt worden"
+  ],
+  "why": "Passiv perfekt: ist + particip + worden. Particip av verschieben är verschoben.",
+  "sv": "Valet har skjutits upp en vecka på grund av pandemin."
+ },
+ {
+  "id": "passiv-021",
+  "topic": "passiv",
+  "rule": "pa-perf",
+  "q": "[Sind] die Klassenarbeiten schon [korrigiert worden]?",
+  "alt": [
+   "Haben … korrigiert worden",
+   "Ist … korrigiert worden",
+   "Sind … korrigiert geworden"
+  ],
+  "why": "Passiv perfekt med sein. Die Klassenarbeiten är plural, så sind. I passiv heter det worden, inte geworden.",
+  "sv": "Har proven redan rättats?"
+ },
+ {
+  "id": "passiv-022",
+  "topic": "passiv",
+  "rule": "pa-perf",
+  "q": "In unserer Straße [sind] mehrere alte Bäume [gefällt worden].",
+  "alt": [
+   "haben … gefällt worden",
+   "ist … gefällt worden",
+   "sind … gefällt geworden"
+  ],
+  "why": "Mehrere alte Bäume är plural: sind + particip + worden.",
+  "sv": "På vår gata har flera gamla träd fällts."
+ },
+ {
+  "id": "passiv-023",
+  "topic": "passiv",
+  "rule": "pa-perf",
+  "q": "Mir [ist] am Bahnhof mein Fahrrad [gestohlen worden].",
+  "alt": [
+   "hat … gestohlen worden",
+   "bin … gestohlen worden",
+   "ist … gestohlen geworden"
+  ],
+  "why": "Subjektet är mein Fahrrad (mir är dativ), så ist, inte bin. Passiv perfekt: ist + gestohlen + worden.",
+  "sv": "Min cykel har blivit stulen vid stationen."
+ },
+ {
+  "id": "passiv-024",
+  "topic": "passiv",
+  "rule": "pa-perf",
+  "q": "Die Frauenkirche in Dresden [ist] nach der Wende neu [aufgebaut worden].",
+  "alt": [
+   "hat … aufgebaut worden",
+   "ist … aufgebaut geworden",
+   "ist … aufgebaut wurden"
+  ],
+  "why": "Passiv perfekt: ist + particip + worden. Wurden är preteritum och kan inte stå här.",
+  "sv": "Frauenkirche i Dresden byggdes upp igen efter återföreningen."
+ },
+ {
+  "id": "passiv-025",
+  "topic": "passiv",
+  "rule": "pa-perf",
+  "q": "Seit 1990 [sind] in Ostdeutschland viele alte Innenstädte [saniert worden].",
+  "alt": [
+   "haben … saniert worden",
+   "ist … saniert worden",
+   "sind … saniert geworden"
+  ],
+  "why": "Viele Innenstädte är plural: sind + saniert + worden. Passiv bildar alltid perfekt med sein.",
+  "sv": "Sedan 1990 har många gamla stadskärnor i Östtyskland rustats upp."
+ },
+ {
+  "id": "passiv-026",
+  "topic": "passiv",
+  "rule": "pa-modal",
+  "q": "Unsere Schule [muss] dringend [renoviert werden].",
+  "alt": [
+   "muss … renovieren werden",
+   "muss … renoviert worden",
+   "wird … renoviert müssen"
+  ],
+  "why": "Passiv med modalverb: modalverb + particip + werden (passivinfinitiv). Worden hör till perfekt.",
+  "sv": "Vår skola måste renoveras snarast."
+ },
+ {
+  "id": "passiv-027",
+  "topic": "passiv",
+  "rule": "pa-modal",
+  "q": "Plastikmüll [sollte] so weit wie möglich [vermieden werden].",
+  "alt": [
+   "sollte … vermeiden werden",
+   "sollte … vermieden worden",
+   "sollte … vermieden wird"
+  ],
+  "why": "Modalverb + particip + werden. Efter ett modalverb står werden i infinitiv, inte wird.",
+  "sv": "Plastavfall borde undvikas så långt det går."
+ },
+ {
+  "id": "passiv-028",
+  "topic": "passiv",
+  "rule": "pa-modal",
+  "q": "Die Hausaufgaben [können] auch online [abgegeben werden].",
+  "alt": [
+   "kann … abgegeben werden",
+   "können … abgeben werden",
+   "können … abgegeben worden"
+  ],
+  "why": "Die Hausaufgaben är plural: können + particip + werden. Particip av abgeben är abgegeben.",
+  "sv": "Läxorna kan också lämnas in digitalt."
+ },
+ {
+  "id": "passiv-029",
+  "topic": "passiv",
+  "rule": "pa-modal",
+  "q": "In der Bibliothek [darf] nicht laut [gesprochen werden].",
+  "alt": [
+   "dürfen … gesprochen werden",
+   "darf … sprechen werden",
+   "darf … gesprochen worden"
+  ],
+  "why": "Opersonlig passiv med modalverb: alltid singular (darf) + particip + werden.",
+  "sv": "I biblioteket får man inte prata högt."
+ },
+ {
+  "id": "passiv-030",
+  "topic": "passiv",
+  "rule": "pa-modal",
+  "q": "Der Klimawandel [kann] nur gemeinsam [gebremst werden].",
+  "alt": [
+   "kann … bremsen werden",
+   "kann … gebremst worden",
+   "können … gebremst werden"
+  ],
+  "why": "Der Klimawandel är singular: kann + particip + werden.",
+  "sv": "Klimatförändringarna kan bara bromsas gemensamt."
+ },
+ {
+  "id": "passiv-031",
+  "topic": "passiv",
+  "rule": "pa-modal",
+  "q": "Alle Bewerbungen [müssen] bis Freitag [eingereicht werden].",
+  "alt": [
+   "muss … eingereicht werden",
+   "müssen … einreichen werden",
+   "müssen … eingereicht worden"
+  ],
+  "why": "Alle Bewerbungen är plural: müssen + particip + werden. Vid separabla verb står ge- efter prefixet: eingereicht.",
+  "sv": "Alla ansökningar måste lämnas in senast fredag."
+ },
+ {
+  "id": "passiv-032",
+  "topic": "passiv",
+  "rule": "pa-modal",
+  "q": "Die Daten der Nutzer [dürfen] nicht ohne Erlaubnis [weitergegeben werden].",
+  "alt": [
+   "darf … weitergegeben werden",
+   "dürfen … weitergeben werden",
+   "dürfen … weitergegeben worden"
+  ],
+  "why": "Subjektet die Daten är plural: dürfen + particip + werden.",
+  "sv": "Användarnas uppgifter får inte lämnas vidare utan tillstånd."
+ },
+ {
+  "id": "passiv-033",
+  "topic": "passiv",
+  "rule": "pa-modal",
+  "q": "Meiner Meinung nach [sollte] mehr Geld in die Bildung [investiert werden].",
+  "alt": [
+   "sollten … investiert werden",
+   "sollte … investieren werden",
+   "sollte … investiert worden"
+  ],
+  "why": "Subjektet mehr Geld är singular: sollte + particip + werden.",
+  "sv": "Enligt min åsikt borde mer pengar investeras i utbildning."
+ },
+ {
+  "id": "passiv-034",
+  "topic": "passiv",
+  "rule": "pa-zustand",
+  "q": "Wir kommen nicht rein, die Tür [ist] abgeschlossen.",
+  "alt": [
+   "wird",
+   "hat",
+   "werden"
+  ],
+  "why": "Här beskrivs ett tillstånd (dörren är låst), alltså Zustandspassiv: sein + particip. Wird skulle betyda att någon låser just nu.",
+  "sv": "Vi kommer inte in, dörren är låst."
+ },
+ {
+  "id": "passiv-035",
+  "topic": "passiv",
+  "rule": "pa-zustand",
+  "q": "Die Tür [wird] jeden Abend um 22 Uhr vom Hausmeister abgeschlossen.",
+  "alt": [
+   "ist",
+   "hat",
+   "werden"
+  ],
+  "why": "Här beskrivs en handling (vaktmästaren låser), alltså Vorgangspassiv med werden. Ist skulle beskriva ett tillstånd och passar inte med vom Hausmeister.",
+  "sv": "Dörren låses varje kväll klockan 22 av vaktmästaren."
+ },
+ {
+  "id": "passiv-036",
+  "topic": "passiv",
+  "rule": "pa-zustand",
+  "q": "Keine Sorge, der Tisch [ist] schon seit einer Woche reserviert.",
+  "alt": [
+   "wird",
+   "hat",
+   "wurde"
+  ],
+  "why": "Seit einer Woche visar ett tillstånd som fortfarande gäller: ist + particip (Zustandspassiv).",
+  "sv": "Oroa dig inte, bordet är bokat sedan en vecka."
+ },
+ {
+  "id": "passiv-037",
+  "topic": "passiv",
+  "rule": "pa-zustand",
+  "q": "Seit dem Unfall [ist] die Straße gesperrt.",
+  "alt": [
+   "wird",
+   "hat",
+   "wurde"
+  ],
+  "why": "Tillstånd som varar sedan olyckan: ist + gesperrt. Seit passar inte med en enstaka handling (wurde/wird).",
+  "sv": "Sedan olyckan är vägen avstängd."
+ },
+ {
+  "id": "passiv-038",
+  "topic": "passiv",
+  "rule": "pa-zustand",
+  "q": "Die Straße [wurde] nach dem Unfall sofort von der Polizei gesperrt.",
+  "alt": [
+   "ist",
+   "hat",
+   "war"
+  ],
+  "why": "En handling i dåtid (polisen stängde av vägen): Vorgangspassiv wurde + particip. Ist/war skulle beskriva ett tillstånd och passar inte med sofort och von der Polizei.",
+  "sv": "Vägen stängdes genast av polisen efter olyckan."
+ },
+ {
+  "id": "passiv-039",
+  "topic": "passiv",
+  "rule": "pa-zustand",
+  "q": "Das Museum [ist] montags den ganzen Tag geschlossen.",
+  "alt": [
+   "wird",
+   "hat",
+   "werden"
+  ],
+  "why": "Den ganzen Tag visar ett tillstånd: museet är stängt, alltså sein + particip.",
+  "sv": "Museet är stängt hela dagen på måndagar."
+ },
+ {
+  "id": "passiv-040",
+  "topic": "passiv",
+  "rule": "pa-zustand",
+  "q": "Die Bank [wird] zurzeit umgebaut, deshalb ist der Eingang auf der Rückseite.",
+  "alt": [
+   "ist",
+   "hat",
+   "wurde"
+  ],
+  "why": "Zurzeit visar något som pågår: Vorgangspassiv wird + particip. Ist umgebaut skulle betyda att ombyggnaden redan är klar.",
+  "sv": "Banken byggs om just nu, därför är ingången på baksidan."
+ },
+ {
+  "id": "zuinf-001",
+  "topic": "zuinf",
+  "rule": "zu-inf",
+  "q": "Ich habe vor, im Sommer in einem Café [zu arbeiten].",
+  "alt": [
+   "arbeiten",
+   "zu arbeite",
+   "arbeiten zu"
+  ],
+  "why": "Efter vorhaben (planera) kommer zu + infinitiv, och zu står direkt före infinitiven sist i satsen.",
+  "sv": "Jag planerar att jobba på ett kafé i sommar."
+ },
+ {
+  "id": "zuinf-002",
+  "topic": "zuinf",
+  "rule": "zu-inf",
+  "q": "Es ist gar nicht so leicht, jeden Morgen um sechs [aufzustehen].",
+  "alt": [
+   "zu aufstehen",
+   "aufstehen",
+   "auf zu stehen"
+  ],
+  "why": "Efter es ist leicht kommer zu + infinitiv. Vid separabla verb skrivs zu mellan prefixet och verbet i ett ord: aufzustehen.",
+  "sv": "Det är inte alls så lätt att gå upp klockan sex varje morgon."
+ },
+ {
+  "id": "zuinf-003",
+  "topic": "zuinf",
+  "rule": "zu-inf",
+  "q": "Vergiss nicht, heute Abend deine Oma [anzurufen]!",
+  "alt": [
+   "zu anrufen",
+   "anrufen",
+   "anruft"
+  ],
+  "why": "Vergessen följs av zu + infinitiv. Anrufen är separabelt, så zu hamnar inuti ordet: anzurufen.",
+  "sv": "Glöm inte att ringa din mormor i kväll!"
+ },
+ {
+  "id": "zuinf-004",
+  "topic": "zuinf",
+  "rule": "zu-inf",
+  "q": "Ich habe überhaupt keine Lust, heute Abend für die Prüfung [zu lernen].",
+  "alt": [
+   "lernen",
+   "zu lerne",
+   "zum lernen"
+  ],
+  "why": "Efter uttrycket Lust haben kommer zu + infinitiv (grundform): zu lernen.",
+  "sv": "Jag har ingen som helst lust att plugga till provet i kväll."
+ },
+ {
+  "id": "zuinf-005",
+  "topic": "zuinf",
+  "rule": "zu-inf",
+  "q": "Meine Eltern haben mir erlaubt, allein nach Wien [zu fahren].",
+  "alt": [
+   "fahren",
+   "zu fährt",
+   "gefahren"
+  ],
+  "why": "Erlauben följs av zu + infinitiv. Infinitiven böjs aldrig, så zu fährt är fel.",
+  "sv": "Mina föräldrar har låtit mig åka ensam till Wien."
+ },
+ {
+  "id": "zuinf-006",
+  "topic": "zuinf",
+  "rule": "zu-inf",
+  "q": "Hast du morgen Zeit, mir beim Aufräumen [zu helfen]?",
+  "alt": [
+   "helfen",
+   "zu hilfst",
+   "um helfen"
+  ],
+  "why": "Efter Zeit haben kommer zu + infinitiv: zu helfen.",
+  "sv": "Har du tid att hjälpa mig att städa i morgon?"
+ },
+ {
+  "id": "zuinf-007",
+  "topic": "zuinf",
+  "rule": "zu-inf",
+  "q": "Es macht mir Spaß, auf Reisen neue Leute [kennenzulernen].",
+  "alt": [
+   "zu kennenlernen",
+   "kennenlernen",
+   "kennenlernt"
+  ],
+  "why": "Efter es macht Spaß kommer zu + infinitiv. Kennenlernen fungerar som ett separabelt verb: zu hamnar före lernen, kennenzulernen.",
+  "sv": "Det är roligt att lära känna nya människor när man reser."
+ },
+ {
+  "id": "zuinf-008",
+  "topic": "zuinf",
+  "rule": "zu-inf",
+  "q": "Wir haben beschlossen, weniger Fleisch [zu essen].",
+  "alt": [
+   "essen",
+   "zu isst",
+   "zu gegessen"
+  ],
+  "why": "Beschließen (besluta) följs av zu + infinitiv i grundform: zu essen.",
+  "sv": "Vi har bestämt oss för att äta mindre kött."
+ },
+ {
+  "id": "zuinf-009",
+  "topic": "zuinf",
+  "rule": "zu-inf",
+  "q": "Morgen muss ich schon um fünf Uhr [aufstehen].",
+  "alt": [
+   "aufzustehen",
+   "zu aufstehen",
+   "aufstehe"
+  ],
+  "why": "Efter modalverb (müssen, können, wollen …) står infinitiven utan zu.",
+  "sv": "I morgon måste jag gå upp redan klockan fem."
+ },
+ {
+  "id": "zuinf-010",
+  "topic": "zuinf",
+  "rule": "zu-inf",
+  "q": "Sie versucht, jeden Tag einen Artikel auf Deutsch [zu lesen].",
+  "alt": [
+   "lesen",
+   "zu liest",
+   "gelesen"
+  ],
+  "why": "Versuchen (försöka) följs av zu + infinitiv: zu lesen.",
+  "sv": "Hon försöker läsa en artikel på tyska varje dag."
+ },
+ {
+  "id": "zuinf-011",
+  "topic": "zuinf",
+  "rule": "zu-inf",
+  "q": "Ärzte empfehlen, sich jeden Tag mindestens eine halbe Stunde [zu bewegen].",
+  "alt": [
+   "bewegen",
+   "zu bewegt",
+   "zum bewegen"
+  ],
+  "why": "Empfehlen (rekommendera) följs av zu + infinitiv. Reflexiva verb behåller sich: sich zu bewegen.",
+  "sv": "Läkare rekommenderar att man rör på sig minst en halvtimme varje dag."
+ },
+ {
+  "id": "zuinf-012",
+  "topic": "zuinf",
+  "rule": "zu-inf",
+  "q": "Ich freue mich darauf, dich in den Ferien [wiederzusehen].",
+  "alt": [
+   "zu wiedersehen",
+   "wiedersehen",
+   "wieder sehen zu"
+  ],
+  "why": "Sich freuen darauf följs av zu + infinitiv. Wiedersehen är separabelt, så det blir wiederzusehen i ett ord.",
+  "sv": "Jag ser fram emot att träffa dig igen på lovet."
+ },
+ {
+  "id": "zuinf-013",
+  "topic": "zuinf",
+  "rule": "umzu",
+  "q": "Ich spare Geld, [um] im Sommer nach Berlin [zu fahren].",
+  "alt": [
+   "damit … zu fahren",
+   "um … fahren",
+   "für … zu fahren"
+  ],
+  "why": "Syfte med samma subjekt (ich spare, ich fahre): um … zu + infinitiv. Damit kräver ett eget subjekt och ett böjt verb, och på tyska kan man inte säga für … zu.",
+  "sv": "Jag sparar pengar för att åka till Berlin i sommar."
+ },
+ {
+  "id": "zuinf-014",
+  "topic": "zuinf",
+  "rule": "umzu",
+  "q": "Viele Jugendliche jobben am Wochenende, um mehr Geld [zu verdienen].",
+  "alt": [
+   "verdienen",
+   "zu verdient",
+   "verdient zu"
+  ],
+  "why": "Um … zu + infinitiv: zu står direkt före infinitiven sist i satsen.",
+  "sv": "Många ungdomar extrajobbar på helgerna för att tjäna mer pengar."
+ },
+ {
+  "id": "zuinf-015",
+  "topic": "zuinf",
+  "rule": "umzu",
+  "q": "Sie ist nach Wien gezogen, [um] Medizin [zu studieren].",
+  "alt": [
+   "damit … studiert",
+   "für … zu studieren",
+   "um … studieren"
+  ],
+  "why": "Samma person flyttar och studerar, alltså um … zu. Damit skulle behöva ett subjekt (damit sie … studiert).",
+  "sv": "Hon flyttade till Wien för att läsa medicin."
+ },
+ {
+  "id": "zuinf-016",
+  "topic": "zuinf",
+  "rule": "umzu",
+  "q": "Ich stehe früher auf, um den Bus nicht [zu verpassen].",
+  "alt": [
+   "verpassen",
+   "zu verpasst",
+   "verpasst zu"
+  ],
+  "why": "I um … zu-konstruktionen står nicht före zu + infinitiv, som hamnar sist: nicht zu verpassen.",
+  "sv": "Jag går upp tidigare för att inte missa bussen."
+ },
+ {
+  "id": "zuinf-017",
+  "topic": "zuinf",
+  "rule": "umzu",
+  "q": "Ich bin extra früh gekommen, um beim Aufbau der Bühne [mitzuhelfen].",
+  "alt": [
+   "zu mithelfen",
+   "mithelfen",
+   "mit helfen zu"
+  ],
+  "why": "Um … zu med separabelt verb: zu hamnar mellan prefixet och verbet, mitzuhelfen.",
+  "sv": "Jag kom extra tidigt för att hjälpa till att bygga scenen."
+ },
+ {
+  "id": "zuinf-018",
+  "topic": "zuinf",
+  "rule": "umzu",
+  "q": "Wir fahren mit dem Zug, [um] die Umwelt [zu schonen].",
+  "alt": [
+   "damit … zu schonen",
+   "um … schonen",
+   "für … zu schonen"
+  ],
+  "why": "Syfte med samma subjekt: um … zu + infinitiv. Damit tar aldrig zu, och für … zu finns inte på tyska (jämför svenskans för att).",
+  "sv": "Vi åker tåg för att skona miljön."
+ },
+ {
+  "id": "zuinf-019",
+  "topic": "zuinf",
+  "rule": "umzu",
+  "q": "Um gute Noten [zu bekommen], muss man regelmäßig lernen.",
+  "alt": [
+   "bekommen",
+   "zu bekommt",
+   "bekommen zu"
+  ],
+  "why": "Um … zu + infinitiv, även när konstruktionen står först i meningen. Sedan kommer verbet muss direkt.",
+  "sv": "För att få bra betyg måste man plugga regelbundet."
+ },
+ {
+  "id": "zuinf-020",
+  "topic": "zuinf",
+  "rule": "umzu",
+  "q": "Ich lese jeden Tag deutsche Nachrichten, [um] meinen Wortschatz [zu verbessern].",
+  "alt": [
+   "damit … zu verbessern",
+   "um … verbessere",
+   "für … zu verbessern"
+  ],
+  "why": "Samma subjekt (ich) i båda delarna: um … zu + infinitiv.",
+  "sv": "Jag läser tyska nyheter varje dag för att förbättra mitt ordförråd."
+ },
+ {
+  "id": "zuinf-021",
+  "topic": "zuinf",
+  "rule": "damit",
+  "q": "Ich erkläre es dir noch einmal, [damit] du es besser [verstehst].",
+  "alt": [
+   "um … zu verstehen",
+   "um … verstehst",
+   "damit … zu verstehen"
+  ],
+  "why": "Olika subjekt (ich förklarar, du förstår): då används damit + bisats med böjt verb sist. Um … zu fungerar bara när subjektet är detsamma.",
+  "sv": "Jag förklarar det en gång till för dig så att du förstår det bättre."
+ },
+ {
+  "id": "zuinf-022",
+  "topic": "zuinf",
+  "rule": "damit",
+  "q": "Die Eltern arbeiten viel, [damit] ihre Kinder später studieren [können].",
+  "alt": [
+   "um … können",
+   "um … zu können",
+   "damit … zu können"
+  ],
+  "why": "Föräldrarna arbetar, barnen studerar: olika subjekt ger damit och böjt verb sist (können).",
+  "sv": "Föräldrarna jobbar mycket så att deras barn ska kunna plugga senare."
+ },
+ {
+  "id": "zuinf-023",
+  "topic": "zuinf",
+  "rule": "damit",
+  "q": "Ich schreibe dir die Adresse auf, [damit] du sie nicht [vergisst].",
+  "alt": [
+   "um … zu vergessen",
+   "damit … zu vergessen",
+   "um … vergisst"
+  ],
+  "why": "Ich skriver, du glömmer: olika subjekt kräver damit + böjt verb sist. Damit tar aldrig zu.",
+  "sv": "Jag skriver upp adressen åt dig så att du inte glömmer den."
+ },
+ {
+  "id": "zuinf-024",
+  "topic": "zuinf",
+  "rule": "damit",
+  "q": "Die Stadt senkt die Preise für Busse, [damit] mehr Menschen das Auto stehen [lassen].",
+  "alt": [
+   "um … zu lassen",
+   "damit … zu lassen",
+   "um … lassen"
+  ],
+  "why": "Staden sänker priserna, människorna låter bilen stå: olika subjekt, alltså damit + böjt verb sist.",
+  "sv": "Staden sänker priserna på bussar så att fler låter bilen stå."
+ },
+ {
+  "id": "zuinf-025",
+  "topic": "zuinf",
+  "rule": "damit",
+  "q": "Sprich bitte lauter, [damit] dich alle [hören können].",
+  "alt": [
+   "um … hören zu können",
+   "damit … zu hören können",
+   "damit … können hören"
+  ],
+  "why": "Du talar, alla hör: olika subjekt ger damit. I bisatsen står det böjda verbet können sist, efter infinitiven.",
+  "sv": "Prata högre, så att alla kan höra dig."
+ },
+ {
+  "id": "zuinf-026",
+  "topic": "zuinf",
+  "rule": "ohne-statt",
+  "q": "Er ist einfach gegangen, [ohne] sich [zu verabschieden].",
+  "alt": [
+   "ohne … verabschieden",
+   "ohne … zu verabschiedet",
+   "damit … zu verabschieden"
+  ],
+  "why": "Ohne … zu + infinitiv betyder utan att. Infinitiven ska ha zu och får inte böjas.",
+  "sv": "Han gick bara utan att säga hej då."
+ },
+ {
+  "id": "zuinf-027",
+  "topic": "zuinf",
+  "rule": "ohne-statt",
+  "q": "[Statt] für die Prüfung [zu lernen], hat er den ganzen Abend Videospiele gespielt.",
+  "alt": [
+   "Statt … lernen",
+   "Damit … zu lernen",
+   "Statt … zu lernt"
+  ],
+  "why": "Statt … zu + infinitiv betyder i stället för att. Zu behövs, och damit kan inte kombineras med zu.",
+  "sv": "I stället för att plugga till provet spelade han tv-spel hela kvällen."
+ },
+ {
+  "id": "zuinf-028",
+  "topic": "zuinf",
+  "rule": "ohne-statt",
+  "q": "Viele Leute kaufen neue Kleidung, [statt] die alte [zu reparieren].",
+  "alt": [
+   "statt … reparieren",
+   "ohne … reparieren",
+   "damit … zu reparieren"
+  ],
+  "why": "I stället för att laga de gamla: statt … zu + infinitiv. Utan zu blir det fel efter både statt och ohne.",
+  "sv": "Många köper nya kläder i stället för att laga de gamla."
+ },
+ {
+  "id": "zuinf-029",
+  "topic": "zuinf",
+  "rule": "ohne-statt",
+  "q": "Sie hat den ganzen Text übersetzt, ohne ein Wörterbuch [zu benutzen].",
+  "alt": [
+   "benutzen",
+   "zu benutzt",
+   "benutzt zu"
+  ],
+  "why": "Ohne … zu + infinitiv: zu står direkt före infinitiven sist.",
+  "sv": "Hon översatte hela texten utan att använda ordbok."
+ },
+ {
+  "id": "zuinf-030",
+  "topic": "zuinf",
+  "rule": "ohne-statt",
+  "q": "Man sollte keine Artikel teilen, ohne vorher die Quelle [zu prüfen].",
+  "alt": [
+   "prüfen",
+   "zu prüft",
+   "geprüft"
+  ],
+  "why": "Ohne … zu + infinitiv (utan att först kontrollera). Infinitiven står sist med zu framför.",
+  "sv": "Man borde inte dela artiklar utan att först kontrollera källan."
+ },
+ {
+  "id": "bindeord-001",
+  "topic": "bindeord",
+  "rule": "bi-grund",
+  "q": "Ich kann heute nicht kommen, [denn] ich muss arbeiten.",
+  "alt": [
+   "weil",
+   "deshalb",
+   "obwohl"
+  ],
+  "why": "Betydelse: ett skäl (för). Ordföljd: efter kommat står ich muss, rak ordföljd, och det passar bara denn. Weil och obwohl kräver verbet sist, deshalb kräver verbet direkt efter och anger dessutom följd.",
+  "sv": "Jag kan inte komma i dag, för jag måste jobba."
+ },
+ {
+  "id": "bindeord-002",
+  "topic": "bindeord",
+  "rule": "bi-grund",
+  "q": "Viele Menschen fahren Fahrrad, [weil] es gesund und billig ist.",
+  "acc": [
+   "da"
+  ],
+  "alt": [
+   "denn",
+   "deshalb",
+   "trotzdem"
+  ],
+  "why": "Betydelse: ett skäl. Ordföljd: verbet ist står sist, alltså krävs en subjunktion som weil (eller da). Denn skulle kräva es ist, och deshalb/trotzdem kräver verbet direkt efter.",
+  "sv": "Många cyklar eftersom det är nyttigt och billigt."
+ },
+ {
+  "id": "bindeord-003",
+  "topic": "bindeord",
+  "rule": "bi-grund",
+  "q": "Wir sollten weniger fliegen, [denn] Flugzeuge verursachen sehr viel CO2.",
+  "alt": [
+   "weil",
+   "obwohl",
+   "deshalb"
+  ],
+  "why": "Betydelse: ett skäl. Ordföljd: subjekt + verb (Flugzeuge verursachen) är rak ordföljd, som bara passar denn. Weil/obwohl kräver verbet sist, deshalb kräver verbet först.",
+  "sv": "Vi borde flyga mindre, för flygplan orsakar väldigt mycket koldioxid."
+ },
+ {
+  "id": "bindeord-004",
+  "topic": "bindeord",
+  "rule": "bi-grund",
+  "q": "[Weil] die Mieten so hoch sind, wohnen viele Studenten bei ihren Eltern.",
+  "acc": [
+   "Da"
+  ],
+  "alt": [
+   "Denn",
+   "Deshalb",
+   "Obwohl"
+  ],
+  "why": "Betydelse: orsaken till att studenterna bor hemma. Ordföljd: sind står sist och huvudsatsen börjar med verbet, alltså en bisats med weil eller da. Denn kan inte inleda en mening före huvudsatsen, deshalb ger fel ordföljd och obwohl fel betydelse.",
+  "sv": "Eftersom hyrorna är så höga bor många studenter hos sina föräldrar."
+ },
+ {
+  "id": "bindeord-005",
+  "topic": "bindeord",
+  "rule": "bi-grund",
+  "q": "Er hat die Stelle nicht bekommen. Er hatte [nämlich] keine Berufserfahrung.",
+  "alt": [
+   "denn",
+   "weil",
+   "deshalb"
+  ],
+  "why": "Betydelse: andra meningen förklarar den första (nämligen, ju). Ordföljd: nämlich står inne i satsen efter verbet. Denn och weil kan inte stå där, och deshalb skulle betyda att han saknade erfarenhet på grund av jobbet.",
+  "sv": "Han fick inte jobbet. Han hade nämligen ingen arbetslivserfarenhet."
+ },
+ {
+  "id": "bindeord-006",
+  "topic": "bindeord",
+  "rule": "bi-grund",
+  "q": "Die Stadt hat das Fest abgesagt, [weil] das Wetter zu schlecht war.",
+  "acc": [
+   "da"
+  ],
+  "alt": [
+   "denn",
+   "sonst",
+   "deswegen"
+  ],
+  "why": "Betydelse: orsaken. Ordföljd: war står sist, så det måste vara en subjunktion (weil eller da). Denn kräver rak ordföljd, sonst och deswegen kräver verbet direkt efter och har fel betydelse.",
+  "sv": "Staden ställde in festen eftersom vädret var för dåligt."
+ },
+ {
+  "id": "bindeord-007",
+  "topic": "bindeord",
+  "rule": "bi-grund",
+  "q": "Ich lerne Deutsch, [denn] ich möchte später in der Schweiz arbeiten.",
+  "alt": [
+   "weil",
+   "damit",
+   "deshalb"
+  ],
+  "why": "Betydelse: ett skäl. Ordföljd: ich möchte är rak ordföljd, som bara passar denn. Weil och damit kräver att möchte står sist, deshalb kräver möchte ich och anger följd.",
+  "sv": "Jag lär mig tyska, för jag vill jobba i Schweiz senare."
+ },
+ {
+  "id": "bindeord-008",
+  "topic": "bindeord",
+  "rule": "bi-grund",
+  "q": "Viele Jugendliche kaufen keine Zeitung, [weil] sie die Nachrichten lieber auf dem Handy lesen.",
+  "acc": [
+   "da"
+  ],
+  "alt": [
+   "denn",
+   "obwohl",
+   "deshalb"
+  ],
+  "why": "Betydelse: skälet. Ordföljd: lesen står sist, så det krävs en subjunktion som weil (eller da). Denn och deshalb ger fel ordföljd, och obwohl har fel betydelse (fast).",
+  "sv": "Många ungdomar köper ingen tidning eftersom de hellre läser nyheterna i mobilen."
+ },
+ {
+  "id": "bindeord-009",
+  "topic": "bindeord",
+  "rule": "bi-grund",
+  "q": "Wir müssen die Wälder besser schützen, [denn] viele Tierarten sind vom Aussterben bedroht.",
+  "alt": [
+   "weil",
+   "trotzdem",
+   "sodass"
+  ],
+  "why": "Betydelse: ett skäl. Ordföljd: viele Tierarten sind är rak ordföljd, som passar denn. Weil och sodass kräver verbet sist, trotzdem kräver verbet först och betyder ändå.",
+  "sv": "Vi måste skydda skogarna bättre, för många djurarter är utrotningshotade."
+ },
+ {
+  "id": "bindeord-010",
+  "topic": "bindeord",
+  "rule": "bi-kontrast",
+  "q": "Es war eiskalt. [Trotzdem] sind wir im See geschwommen.",
+  "acc": [
+   "Dennoch"
+  ],
+  "alt": [
+   "Obwohl",
+   "Aber",
+   "Deshalb"
+  ],
+  "why": "Betydelse: motsats (ändå). Ordföljd: verbet sind kommer direkt efter luckan, vilket kräver ett adverb som trotzdem. Obwohl skulle skicka verbet sist, efter aber kommer rak ordföljd, och deshalb har fel betydelse.",
+  "sv": "Det var iskallt. Ändå badade vi i sjön."
+ },
+ {
+  "id": "bindeord-011",
+  "topic": "bindeord",
+  "rule": "bi-kontrast",
+  "q": "[Obwohl] er viel gelernt hat, ist er durch die Prüfung gefallen.",
+  "acc": [
+   "Obgleich"
+  ],
+  "alt": [
+   "Trotzdem",
+   "Weil",
+   "Aber"
+  ],
+  "why": "Betydelse: motsats (fast). Ordföljd: hat står sist, så det är en bisats, och huvudsatsen börjar med ist. Trotzdem och aber kan inte inleda en bisats, och weil har fel betydelse.",
+  "sv": "Fast han pluggade mycket blev han underkänd på provet."
+ },
+ {
+  "id": "bindeord-012",
+  "topic": "bindeord",
+  "rule": "bi-kontrast",
+  "q": "Ich esse kein Fleisch, [aber] mein Bruder isst jeden Tag Wurst.",
+  "acc": [
+   "doch"
+  ],
+  "alt": [
+   "trotzdem",
+   "obwohl",
+   "sondern"
+  ],
+  "why": "Betydelse: motsats mellan två personer. Ordföljd: mein Bruder isst är rak ordföljd, som passar aber. Trotzdem kräver verbet först, obwohl verbet sist, och sondern används bara för att rätta något som nekats i samma led.",
+  "sv": "Jag äter inte kött, men min bror äter korv varje dag."
+ },
+ {
+  "id": "bindeord-013",
+  "topic": "bindeord",
+  "rule": "bi-kontrast",
+  "q": "Das ist kein Problem der Jugend, [sondern] ein Problem der ganzen Gesellschaft.",
+  "alt": [
+   "aber",
+   "obwohl",
+   "trotzdem"
+  ],
+  "why": "Betydelse: efter en nekning (kein) rättar man med sondern (utan). Aber betyder men och passar inte, obwohl och trotzdem kräver en hel sats med verb.",
+  "sv": "Det är inte ett ungdomsproblem utan ett problem för hela samhället."
+ },
+ {
+  "id": "bindeord-014",
+  "topic": "bindeord",
+  "rule": "bi-kontrast",
+  "q": "In der Stadt gibt es viele Radwege, [während] man auf dem Land oft ein Auto braucht.",
+  "alt": [
+   "trotzdem",
+   "obwohl",
+   "aber"
+  ],
+  "why": "Betydelse: jämförelse mellan stad och land (medan). Ordföljd: braucht står sist, så en subjunktion krävs. Aber och trotzdem ger fel ordföljd, obwohl har fel betydelse.",
+  "sv": "I staden finns det många cykelbanor, medan man på landet ofta behöver bil."
+ },
+ {
+  "id": "bindeord-015",
+  "topic": "bindeord",
+  "rule": "bi-kontrast",
+  "q": "Die Wohnung ist sehr klein. [Trotzdem] kostet sie 1500 Euro im Monat.",
+  "acc": [
+   "Dennoch"
+  ],
+  "alt": [
+   "Obwohl",
+   "Aber",
+   "Deshalb"
+  ],
+  "why": "Betydelse: motsats (ändå). Ordföljd: kostet kommer direkt efter luckan, alltså ett adverb. Obwohl kräver verbet sist, aber rak ordföljd, och deshalb säger att den är dyr för att den är liten.",
+  "sv": "Lägenheten är väldigt liten. Ändå kostar den 1500 euro i månaden."
+ },
+ {
+  "id": "bindeord-016",
+  "topic": "bindeord",
+  "rule": "bi-kontrast",
+  "q": "Er hat zwar das Abitur, [aber] er findet keinen Ausbildungsplatz.",
+  "alt": [
+   "sondern",
+   "trotzdem",
+   "obwohl"
+  ],
+  "why": "Betydelse: zwar … aber (visserligen … men). Ordföljd: er findet är rak ordföljd, som passar aber. Trotzdem kräver verbet först, obwohl verbet sist, och sondern kräver en nekning före.",
+  "sv": "Han har visserligen studentexamen, men han hittar ingen lärlingsplats."
+ },
+ {
+  "id": "bindeord-017",
+  "topic": "bindeord",
+  "rule": "bi-kontrast",
+  "q": "Sie ging zur Arbeit, [obwohl] sie starke Kopfschmerzen hatte.",
+  "acc": [
+   "obgleich"
+  ],
+  "alt": [
+   "trotzdem",
+   "weil",
+   "aber"
+  ],
+  "why": "Betydelse: motsats (fast). Ordföljd: hatte står sist, så det krävs en subjunktion. Trotzdem och aber ger fel ordföljd, och weil har fel betydelse.",
+  "sv": "Hon gick till jobbet fast hon hade svår huvudvärk."
+ },
+ {
+  "id": "bindeord-018",
+  "topic": "bindeord",
+  "rule": "bi-kontrast",
+  "q": "Einerseits verbindet das Internet Menschen, [andererseits] kann es auch einsam machen.",
+  "alt": [
+   "obwohl",
+   "sondern",
+   "weil"
+  ],
+  "why": "Betydelse: einerseits … andererseits (å ena sidan … å andra sidan). Ordföljd: kann kommer direkt efter luckan, som efter ett adverb. Obwohl och weil kräver verbet sist, och sondern kräver en nekning.",
+  "sv": "Å ena sidan förbinder internet människor, å andra sidan kan det också göra en ensam."
+ },
+ {
+  "id": "bindeord-019",
+  "topic": "bindeord",
+  "rule": "bi-folge",
+  "q": "Ich habe heute Morgen verschlafen, [deshalb] bin ich zu spät gekommen.",
+  "acc": [
+   "deswegen",
+   "daher",
+   "darum",
+   "also"
+  ],
+  "alt": [
+   "weil",
+   "denn",
+   "obwohl"
+  ],
+  "why": "Betydelse: följd (därför). Ordföljd: bin kommer direkt efter luckan, vilket kräver ett adverb som deshalb. Weil och obwohl skulle skicka verbet sist, efter denn kommer rak ordföljd, och weil/denn anger dessutom orsak.",
+  "sv": "Jag försov mig i morse, därför kom jag för sent."
+ },
+ {
+  "id": "bindeord-020",
+  "topic": "bindeord",
+  "rule": "bi-folge",
+  "q": "Die Preise für Bus und Bahn sind gesunken, [sodass] mehr Menschen öffentliche Verkehrsmittel nutzen.",
+  "alt": [
+   "deshalb",
+   "denn",
+   "obwohl"
+  ],
+  "why": "Betydelse: följd (så att). Ordföljd: nutzen står sist, så det krävs en subjunktion som sodass. Deshalb kräver verbet först, denn anger orsak, obwohl motsats.",
+  "sv": "Priserna på bussar och tåg har sjunkit, så att fler åker kollektivt."
+ },
+ {
+  "id": "bindeord-021",
+  "topic": "bindeord",
+  "rule": "bi-folge",
+  "q": "Er war [so] müde, dass er im Kino eingeschlafen ist.",
+  "alt": [
+   "sehr",
+   "zu",
+   "deshalb"
+  ],
+  "why": "Betydelse: så … att visar följden. Ordföljd: so står framför adjektivet och hör ihop med dass-satsen. Sehr och zu kan inte kombineras med dass, och deshalb kan inte stå framför ett adjektiv.",
+  "sv": "Han var så trött att han somnade på bion."
+ },
+ {
+  "id": "bindeord-022",
+  "topic": "bindeord",
+  "rule": "bi-folge",
+  "q": "Immer mehr Menschen kaufen online ein. [Deshalb] schließen viele Geschäfte in der Innenstadt.",
+  "acc": [
+   "Deswegen",
+   "Daher",
+   "Darum"
+  ],
+  "alt": [
+   "Weil",
+   "Denn",
+   "Trotzdem"
+  ],
+  "why": "Betydelse: följd. Ordföljd: schließen kommer direkt efter luckan, som efter ett adverb. Weil kräver verbet sist, denn rak ordföljd, och trotzdem betyder ändå.",
+  "sv": "Allt fler handlar på nätet. Därför stänger många butiker i stadskärnan."
+ },
+ {
+  "id": "bindeord-023",
+  "topic": "bindeord",
+  "rule": "bi-folge",
+  "q": "Es hat drei Tage lang geregnet, [sodass] der Fluss über die Ufer getreten ist.",
+  "alt": [
+   "deshalb",
+   "damit",
+   "denn"
+  ],
+  "why": "Betydelse: följd (så att). Ordföljd: ist står sist, så det krävs en subjunktion. Deshalb kräver verbet först, damit betyder avsikt (för att), och denn anger orsak med rak ordföljd.",
+  "sv": "Det regnade i tre dagar, så att floden svämmade över."
+ },
+ {
+  "id": "bindeord-024",
+  "topic": "bindeord",
+  "rule": "bi-folge",
+  "q": "Mein Handy war kaputt. [Deshalb] konnte ich dich nicht anrufen.",
+  "acc": [
+   "Deswegen",
+   "Daher",
+   "Darum"
+  ],
+  "alt": [
+   "Denn",
+   "Obwohl",
+   "Weil"
+  ],
+  "why": "Betydelse: följd. Ordföljd: konnte kommer direkt efter luckan, alltså ett adverb. Denn kräver rak ordföljd, weil och obwohl verbet sist, och båda har fel betydelse.",
+  "sv": "Min mobil var trasig. Därför kunde jag inte ringa dig."
+ },
+ {
+  "id": "bindeord-025",
+  "topic": "bindeord",
+  "rule": "bi-folge",
+  "q": "Das neue Gesetz ist sehr kompliziert, [daher] verstehen es viele Bürger nicht.",
+  "acc": [
+   "deshalb",
+   "deswegen",
+   "darum"
+  ],
+  "alt": [
+   "denn",
+   "weil",
+   "trotzdem"
+  ],
+  "why": "Betydelse: följd. Ordföljd: verstehen kommer direkt efter luckan, som efter ett adverb. Denn och weil anger orsak och ger fel ordföljd, trotzdem betyder ändå.",
+  "sv": "Den nya lagen är mycket komplicerad, därför förstår många medborgare den inte."
+ },
+ {
+  "id": "bindeord-026",
+  "topic": "bindeord",
+  "rule": "bi-folge",
+  "q": "Der Film war so spannend, [dass] niemand während der Vorstellung auf sein Handy geschaut hat.",
+  "alt": [
+   "damit",
+   "ob",
+   "deshalb"
+  ],
+  "why": "Betydelse: so … dass (så … att). Ordföljd: hat står sist, en bisats. Damit betyder avsikt, ob är om/huruvida, och deshalb skulle kräva verbet först.",
+  "sv": "Filmen var så spännande att ingen tittade på mobilen under föreställningen."
+ },
+ {
+  "id": "bindeord-027",
+  "topic": "bindeord",
+  "rule": "bi-folge",
+  "q": "Ich habe den letzten Bus verpasst, [also] muss ich zu Fuß nach Hause gehen.",
+  "acc": [
+   "deshalb",
+   "deswegen",
+   "daher",
+   "darum"
+  ],
+  "alt": [
+   "denn",
+   "weil",
+   "obwohl"
+  ],
+  "why": "Betydelse: slutsats/följd (alltså, så). Ordföljd: also är ett adverb och följs direkt av verbet muss. Denn kräver rak ordföljd, weil och obwohl verbet sist.",
+  "sv": "Jag har missat sista bussen, så jag måste gå hem."
+ },
+ {
+  "id": "bindeord-028",
+  "topic": "bindeord",
+  "rule": "bi-tillagg",
+  "q": "Radfahren ist gesund. [Außerdem] schont es die Umwelt.",
+  "acc": [
+   "Zudem"
+  ],
+  "alt": [
+   "Und",
+   "Denn",
+   "Weil"
+  ],
+  "why": "Betydelse: ett argument till (dessutom). Ordföljd: schont kommer direkt efter luckan, alltså ett adverb. Efter und och denn kommer rak ordföljd, weil kräver verbet sist och anger orsak.",
+  "sv": "Att cykla är nyttigt. Dessutom skonar det miljön."
+ },
+ {
+  "id": "bindeord-029",
+  "topic": "bindeord",
+  "rule": "bi-tillagg",
+  "q": "Meine Cousine spricht [sowohl] Deutsch als auch Englisch.",
+  "alt": [
+   "weder",
+   "entweder",
+   "nicht nur"
+  ],
+  "why": "Betydelse: både … och heter sowohl … als auch. Weder hör ihop med noch, entweder med oder och nicht nur med sondern auch, så de passar inte med als auch.",
+  "sv": "Min kusin talar både tyska och engelska."
+ },
+ {
+  "id": "bindeord-030",
+  "topic": "bindeord",
+  "rule": "bi-tillagg",
+  "q": "Mein Mitbewohner kann [weder] kochen noch putzen.",
+  "alt": [
+   "sowohl",
+   "entweder",
+   "nicht"
+  ],
+  "why": "Betydelse: varken … eller heter weder … noch. Sowohl hör ihop med als auch, entweder med oder, och nicht kan inte kombineras med noch.",
+  "sv": "Min rumskompis kan varken laga mat eller städa."
+ },
+ {
+  "id": "bindeord-031",
+  "topic": "bindeord",
+  "rule": "bi-tillagg",
+  "q": "Das Projekt ist [nicht nur] teuer, sondern auch schlecht für die Umwelt.",
+  "alt": [
+   "sowohl",
+   "weder",
+   "entweder"
+  ],
+  "why": "Betydelse: inte bara … utan också heter nicht nur … sondern auch. Sowohl kräver als auch, weder kräver noch och entweder kräver oder.",
+  "sv": "Projektet är inte bara dyrt utan också dåligt för miljön."
+ },
+ {
+  "id": "bindeord-032",
+  "topic": "bindeord",
+  "rule": "bi-tillagg",
+  "q": "Die Wohnung ist hell und groß, [außerdem] liegt sie direkt am Park.",
+  "acc": [
+   "zudem"
+  ],
+  "alt": [
+   "und",
+   "weil",
+   "denn"
+  ],
+  "why": "Betydelse: ytterligare ett plus (dessutom). Ordföljd: liegt kommer direkt efter luckan, alltså ett adverb. Efter und och denn kommer rak ordföljd, weil kräver verbet sist.",
+  "sv": "Lägenheten är ljus och stor, dessutom ligger den precis vid parken."
+ },
+ {
+  "id": "bindeord-033",
+  "topic": "bindeord",
+  "rule": "bi-tillagg",
+  "q": "Ich habe keine Zeit, und [außerdem] habe ich keine Lust.",
+  "acc": [
+   "zudem"
+  ],
+  "alt": [
+   "denn",
+   "weil",
+   "sondern"
+  ],
+  "why": "Betydelse: ett skäl till (dessutom). Ordföljd: habe kommer direkt efter luckan, som efter ett adverb. Denn och sondern kräver rak ordföljd, weil kräver verbet sist, och inget av dem kan stå efter und.",
+  "sv": "Jag har inte tid, och dessutom har jag ingen lust."
+ },
+ {
+  "id": "bindeord-034",
+  "topic": "bindeord",
+  "rule": "bi-tillagg",
+  "q": "Sie lernt nicht nur Deutsch, [sondern] auch Spanisch.",
+  "alt": [
+   "aber",
+   "und",
+   "oder"
+  ],
+  "why": "Betydelse: nicht nur … sondern auch är ett fast par (inte bara … utan också). Aber, und och oder kan inte kombineras med nicht nur.",
+  "sv": "Hon lär sig inte bara tyska utan också spanska."
+ },
+ {
+  "id": "bindeord-035",
+  "topic": "bindeord",
+  "rule": "bi-tillagg",
+  "q": "Die Stadt hat einen neuen Park gebaut. [Zudem] gibt es jetzt mehr Radwege.",
+  "acc": [
+   "Außerdem"
+  ],
+  "alt": [
+   "Und",
+   "Obwohl",
+   "Denn"
+  ],
+  "why": "Betydelse: tillägg (dessutom). Ordföljd: gibt kommer direkt efter luckan, alltså ett adverb. Efter und och denn kommer rak ordföljd (es gibt), och obwohl kräver verbet sist och betyder fast.",
+  "sv": "Staden har byggt en ny park. Dessutom finns det nu fler cykelbanor."
+ }
+]
