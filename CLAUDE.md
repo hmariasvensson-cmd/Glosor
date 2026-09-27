@@ -27,7 +27,7 @@ Publicera alltid med de här kapabiliteterna (utelämna `capabilities` vid ompub
 ## Saker som aldrig får ändras
 
 - `storageKey` i `languages/*/lang.js` (`franska-glosor-v2`, `glosor-de-v1`, `glosor-de4-v1`, `glosor-it1-v1`, `glosor-it2-v1`).
-- Formatet på sparat läge: `{pass, w:{<ord-id>:{s,due}}, newCount, src, mode}`. Steg `s` 0–3 = lär sig, 4 och uppåt = kan (se `INT` och `schedule` i app.js).
+- Formatet på sparat läge: `{pass, w:{<ord-id>:{s,due}}, newCount, src, mode}`. Steg `s` 0–3 = lär sig, 4 och uppåt = kan. Steg 0–1 repeteras efter pass (`due`), från steg 2 efter dagar (`dd`, tidsstämpel): nästa pass, 3 pass, 3, 7, 20, 45, 90 dagar (se `INT`, `DAYS` och `schedule` i app.js). Kapitelprovets resultat ligger i `S.kt`.
 - Ord-id är ordets form i målspråket (första fältet i words.txt), och avsnitts-id används i `S.src`. Att ändra dem nollställer framstegen för de orden.
 
 ## Struktur
@@ -45,7 +45,7 @@ Publicera alltid med de här kapabiliteterna (utelämna `capabilities` vid ompub
 - `languages/it1/`, `languages/it2/`: Italienska 1 (A1) och 2 (A2), plan i `docs/italienska-plan.md`. it2 hämtar bindeord m.m. från it1 (getters).
 - `content/regler.json`: grammatikregler per område (format i `docs/REGLER-SPEC.md`).
 - `languages/<kod>/lang.js`: kursinställningar (course, level, storageKey, accenter, verbspel, bindeord, tempusigenkänning).
-- `languages/<kod>/words.txt`: ordlistan. `content/*.json` innehåller hörtexter, lästexter, berättelser, fraser, skrivuppgifter och kultur. `videos.json` innehåller YouTube-klipp (kontrollerade med oEmbed).
+- `languages/<kod>/words.txt`: ordlistan, `ord|svenska|genus|exempel|exempel sv|ursprung|ordagrant`. Främmande ord i ursprunget ska ha svensk betydelse, och fraser får gärna det sjunde fältet med ordagrann översättning. `content/*.json` innehåller hörtexter, lästexter, berättelser, fraser, skrivuppgifter och kultur. `videos.json` innehåller YouTube-klipp (kontrollerade med oEmbed).
 - `languages/upcoming.json`: kommande kurser som visas men inte går att välja.
 - `languages/<kod>/book/kapNN/`: material från elevens lärobok per kapitel, plus `book/sidor.json` (privat, i `.gitignore`, eget lokalt git-repo, byggs in om mappen finns). Kapitel ur boken markeras `#id|Namn|bok`. Se `docs/BOK.md`.
 - `docs/BACKLOG.md`: allt som inte är byggt. När något byggs flyttas punkten till `docs/KLART.md` med referens till backloggpunkten och commit.

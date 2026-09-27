@@ -2,6 +2,17 @@
 
 Punkter som har flyttats från [`BACKLOG.md`](BACKLOG.md) när de byggdes. **Referens** anger backloggens rubrik och prioritet. **Commit** anger var ändringen finns i git. **Publicerat** anger versionen av artefakten på https://claude.ai/artifact/YBQv8j4qXQQLuPwLAWt5mP.
 
+## 2026-09-27, del 12 (publicerat som version 20)
+
+| Referens | Vad som byggdes | Commit |
+|---|---|---|
+| Tyck till (Oscar): *tangentbordet* | Mellanslag eller Enter går till nästa ord när man lär sig nya ord, ← går tillbaka. Siffrorna väljer svar i flerval och Fel/Nästan/Rätt vid självbedömning. Enter går alltid vidare efter ett svar. En rad om tangentbordet visas på datorer. | `0310185` |
+| Tyck till (Oscar): *repetition i dagar* (ersätter P2 *FSRS*, som nu är P3) | Nytt schema: nästa pass, efter 3 pass, sedan efter 3, 7 och 20 dagar, och ord man kan efter 45 och 90 dagar (`x.dd`). Ord i det gamla schemat går över när de repeteras nästa gång. Prognosen i statistiken visar dagar. | `0310185` |
+| Tyck till (Oscar): *kapitelprov* | Fler övningar → Kapitelprov: alla glosor i ett kapitel (alla avsnitt k3, k3b, k3x …) en gång, skriva eller flerval, utan omtag. Resultatet sparas i `S.kt` och påverkar inte schemat. Efteråt kan man öva på de missade orden (med omtag) eller göra om provet. | `0310185` |
+| Tyck till (Oscar): *ursprung på svenska och ordagranna fraser* (Ord · P1) | Alla främmande ord i ursprungsfältet har fått svensk betydelse (ca 1 100 tillägg i alla kurser). Nytt sjunde fält i words.txt, "Ordagrant", för 535 fraser och talesätt (ordet för ordet med svensk betydelse), som visas på lärokortet och när man svarar fel. | `0310185` (och bokrepot) |
+| Kurser · P1 *Escalade*: fler sidor | s. 26–37 (kap 2), s. 114–127 (kap 8, "Voyager dans le monde"), s. 148–153 (antaget kap 10) och s. 182–191 (kap 12). Franska 3 har nu 976 ord, 29 lästexter, 88 skrivuppgifter och 310 av bokens övningar. "Chanson simple" och "Être aimé" är skrivuppgifter, inte avskrivna. | `0310185` (och bokrepot) |
+| Kurser · *bokens minigrammatik* | s. 194–199 och 202–237 fotade och sammanfattade (privat). Reglerna i `fr/content/regler.json` hänvisar till bokens sidor, använder bokens termer och har rättats på några punkter (mon/ma framför adjektiv, kongruens i reflexiva verb, betonade tips som inte syntes). Saknade grammatikområden ligger i backloggen. | `0310185` |
+
 ## 2026-09-27, del 11 (publicerat som version 19)
 
 | Referens | Vad som byggdes | Commit |
