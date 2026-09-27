@@ -41,8 +41,8 @@ Publicera alltid med de här kapabiliteterna (utelämna `capabilities` vid ompub
 - `src/exam.js`: provträning och provsimulering (`content/exam.json`, format i uppgifterna själva; resultat i `S.exam`).
 - `src/feedback.js`: fliken Tyck till.
 - `src/main.js`: start och kursväljare (körs sist).
-- `languages/de4/`: Tyska 4 (B1). Hämtar verb, bindeord och tempusigenkänning från `languages/de/lang.js` (getters), så `de` måste laddas före `de4` (build.py sorterar koderna). `nextCourse` ger förslaget att gå vidare till Tyska 5.
-- `languages/it1/`, `languages/it2/`: Italienska 1 (A1) och 2 (A2), plan i `docs/italienska-plan.md`. it2 hämtar bindeord m.m. från it1 (getters).
+- `languages/de4/`: Tyska 4 (A2 → B1). Hämtar verb, bindeord och tempusigenkänning från `languages/de/lang.js` (getters), så `de` måste laddas före `de4` (build.py sorterar koderna). `nextCourse` ger förslaget att gå vidare till Tyska 5.
+- `languages/it1/`, `languages/it2/`: Italienska 1 (A1) och 2 (A1 → A2), plan i `docs/italienska-plan.md`. it2 hämtar bindeord m.m. från it1 (getters).
 - `content/regler.json`: grammatikregler per område (format i `docs/REGLER-SPEC.md`).
 - `languages/<kod>/lang.js`: kursinställningar (course, level, storageKey, accenter, verbspel, bindeord, tempusigenkänning).
 - `languages/<kod>/words.txt`: ordlistan, `ord|svenska|genus|exempel|exempel sv|ursprung|ordagrant`. Främmande ord i ursprunget ska ha svensk betydelse, och fraser får gärna det sjunde fältet med ordagrann översättning. `content/*.json` innehåller hörtexter, lästexter, berättelser, fraser, skrivuppgifter och kultur. `videos.json` innehåller YouTube-klipp (kontrollerade med oEmbed).

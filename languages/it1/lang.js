@@ -50,6 +50,8 @@ LANGUAGES.it1 = {
       {id: "poss", name: "Possessiva", sub: "il mio libro, la mia casa, mia madre"},
       {id: "prep", name: "Prepositioner", sub: "a Roma, in Italia, al bar, nella borsa, dal medico"},
       {id: "domande", name: "Frågeord och negation", sub: "dove, quando, perché … non … mai"},
+      {id: "pron-sogg", name: "Subjektspronomen", sub: "io, tu, lui, lei … och tu eller Lei"},
+      {id: "quest-quel", name: "Questo och quello", sub: "questo libro, quel ragazzo, quegli zaini"},
       {id: "err", name: "Hitta felet", sub: "En mening har ett fel. Vilket ord?"}
     ],
     rules: {
@@ -63,7 +65,9 @@ LANGUAGES.it1 = {
       "volere": "volere", "potere": "potere", "dovere": "dovere", "vorrei": "vorrei (artigt)",
       "poss-art": "Possessiv med artikel", "poss-fam": "Possessiv utan artikel (familj)",
       "prep-luogo": "Prepositioner för plats", "prep-art": "Preposition + artikel (al, nel, dalla)",
-      "interr": "Frågeord", "neg": "Negation"
+      "interr": "Frågeord", "neg": "Negation",
+      "sogg": "Subjektspronomen", "tu-lei": "Tu eller Lei",
+      "questo": "questo (den här)", "quello": "quello (den där)"
     }
   },
 

@@ -279,6 +279,7 @@ function renderStart(){
   ${S.run?`<section class="panel"><h2>Fortsätt där du slutade</h2><p class="plan">${esc(runLabel(S.run))}</p>
     <div class="navrow"><button class="btn ghost" id="run-drop">Släng</button><button class="btn" id="run-go">Fortsätt</button></div></section>`:""}
   ${hasBook()?bookPanel():""}
+  ${goalsPanel()}
   ${nextPanel(learned,mastered)}
   <section class="panel">
     <div class="meta"><span class="label">Pass ${S.pass}</span></div>
@@ -440,7 +441,7 @@ async function renderBoard(){
   </section>
   ${hist.length?`<section class="panel"><h2>Tidigare veckor</h2><ul class="missed">${hist.map(h=>`<li><span>${wkLabel(h.wk)}</span><span><b>${esc(nameOf({id:h.id,nick:(BOARD.docs[h.id]||{}).nick}))}</b> · ${h.m} min</span></li>`).join("")}</ul></section>`:""}
   <section class="panel"><h2>Ditt namn i topplistan</h2>
-    <form id="nickf" class="nick" autocomplete="off"><input class="search" id="nick" maxlength="24" placeholder="Till exempel Oscar" value="${esc(mine.nick||"")}"><button class="btn" style="width:auto">Spara</button></form>
+    <form id="nickf" class="nick" autocomplete="off"><input class="search" id="nick" maxlength="24" placeholder="Till exempel Kalle" value="${esc(mine.nick||"")}"><button class="btn" style="width:auto">Spara</button></form>
     <p class="foot" id="nickmsg">Namnet syns för alla som har tillgång till glosprogrammet.</p></section>`;
   $("#nickf").onsubmit=e=>{e.preventDefault(); boardPush($("#nick").value.trim().slice(0,24)); $("#nickmsg").textContent="Sparat.";};
 }
@@ -793,7 +794,9 @@ const TYPE={
     explain:`<p>${esc(ruleFor(x))}</p>`, say:x.full}},
   cloze:c=>{const w=c.w;return{tab:"Mening", head:clozeHead(w),
     ask:`${clozeHint(w)}. Skriv ordet som saknas.`, placeholder:"Skriv det som saknas", accents:L.accents,
-    accepted:[norm(w.gap.ans)], answer:esc(w.gap.ans), explain:"", wrongCard:studyCard(w), say:w.exT, override:true, onAnswer:fillGap(w)}}
+    // Står artikeln redan före luckan (Die [Beziehung]) räknas svaret också rätt om eleven skriver den igen (die Beziehung)
+    check:v=>({r:check(L.hintStrip&&!L.hintStrip.test(w.gap.ans)?v.trim().replace(new RegExp(L.hintStrip.source,"i"),""):v,[norm(w.gap.ans)])}),
+    answer:esc(w.gap.ans), explain:"", wrongCard:studyCard(w), say:w.exT, override:true, onAnswer:fillGap(w)}}
 };
 
 /* ---------- Pass klart: schemaläggning ---------- */

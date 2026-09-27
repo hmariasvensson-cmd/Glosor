@@ -44,6 +44,8 @@ setTimeout(()=>{ try{
   useLang("de"); ok("tyska: kurs byts", q("#coursechip").textContent.includes("Tyska 5"));
   ok("tyska: rubrik för videor", !q("#app").textContent.includes("på franska"));
   ok("tyska: ingen bokpanel", !q("#chapter"));
+  { const w=byId["die Beziehung (-en)"], d=TYPE.cloze({w});
+    ok("tyska: luckan godtar artikeln en gång till", d.check("die Beziehung").r==="right"&&d.check("Beziehung").r==="right"&&d.check("Verhältnis").r==="wrong"); }
   ok("tyska: fler än 800 ord", WORDS.length>800, WORDS.length);
   startDict(); let g=0; while(sess&&g++<80){ const c=sess.cur;
     if(c.t==="mc"){answerMC(sess.d.opts.findIndex(o=>o.ok)); q("#nx").click();} else {q("#ans").value=c.w.exT; q("#submit").click(); q("#submit").click();} }
@@ -168,6 +170,15 @@ setTimeout(async()=>{ try{
     ok("kapitelprov: resultatet sparas och schemat rörs inte", r&&r.n===c0.words.length&&JSON.stringify(S.w[c0.words[0].id]||null)===before, JSON.stringify(r));
     ok("kapitelprov: öva på missade", r.miss.length?!!q("#ktdrill"):q("#app").textContent.includes("Inga fel"));
     startKtest(c0.id,[c0.words[1].id]); ok("kapitelprov: övning på bara de missade, med omtag", sess.total===1&&!sess.cur.noRetry); quitSession(); }
+  { L.content.mal=[{id:"mal-t",sec:curSec(),goals:["Jag kan A","Jag kan B"]}]; renderStart();
+    ok("mål: visas på startsidan", !!q(".goals")&&q(".goals").textContent.includes("0 av 2"));
+    q('[data-mal="mal-t|1"]').click(); ok("mål: bocka av sparas", S.mal["mal-t|1"]&&q(".goals").textContent.includes("1 av 2"));
+    delete L.content.mal; delete S.mal;
+    L.content.uttal=[{id:"utt-t",title:"é eller è?",tip:"**é** är slutet",pairs:[["été","était"],["les","lait"]]}];
+    exClick("utt"); q('[data-pick="utt-t"]').click();
+    ok("uttal: två frågor med orden som alternativ", sess&&sess.total===2&&sess.d.opts.length===2);
+    { let g=0; while(sess&&g++<20) answerRight(); } ok("uttal: resultat sparas", S.ut["utt-t"]===100, JSON.stringify(S.ut));
+    delete L.content.uttal; renderStart(); }
   ok("högst MAXDUE repetitioner per pass", dueWords().length<=MAXDUE);
   { const w=byId["rire"]; S.w["rire"].lapses=3; document.body.insertAdjacentHTML("beforeend","<div id=mt>"+studyCard(w)+"</div>");
     const f=q("#mt [data-memo]"); ok("svårt ord: fält för minnesregel", !!f); f.querySelector("input").value="Rire låter som ridikyl";
@@ -257,7 +268,7 @@ setTimeout(async()=>{ try{
   { const t=EX().tasks.find(t=>t.qs); examTask(t.id); ok("provträning: klocka", /\d:\d\d/.test(q("#exclock").textContent));
     t.qs.forEach((x,i)=>q(`.exq[data-q="${i}"] [data-o="${x.a}"]`).click()); q("#exdone").click();
     ok("provträning: läsuppgift rättas", S.exam.t[t.id].pct===100&&q("#exres").textContent.includes("100 %"), JSON.stringify(S.exam.t[t.id])); }
-  { const t=EX().tasks.find(t=>t.minWords); examTask(t.id); q("#xtext").value="Bonjour, je m'appelle Oscar et je joue du piano depuis dix ans. J'aimerais beaucoup étudier au conservatoire de Lyon l'année prochaine."; q("#xtext").dispatchEvent(new Event("input"));
+  { const t=EX().tasks.find(t=>t.minWords); examTask(t.id); q("#xtext").value="Bonjour, je m'appelle Hugo et je joue du piano depuis dix ans. J'aimerais beaucoup étudier au conservatoire de Lyon l'année prochaine."; q("#xtext").dispatchEvent(new Event("input"));
     q("#exdone").click(); await new Promise(r=>setTimeout(r,50));
     ok("provträning: skrivuppgift bedöms", S.exam.t[t.id].pct===70&&q("#exres").textContent.includes("70 %"), JSON.stringify(S.exam.t[t.id])); }
   { const t=EX().tasks.find(t=>!t.qs&&!t.minWords); examTask(t.id); ok("provträning: taluppgift", !!q("#talk")&&!!q("#xtext")); }

@@ -759,6 +759,59 @@ AFTER.ktest=(ctx,right,total,miss)=>{
   window.scrollTo(0,0); renderList();
 };
 
+/* ---------- Kapitlets mål ----------
+   content/mal.json = [{id, sec, goals: ["Jag kan …"]}]: vad eleven ska kunna efter avsnittet, som bokens "I det här kapitlet …".
+   Visas på startsidan för avsnittet man är på. Eleven bockar av det hon eller han kan (S.mal["<id>|<nr>"] = tid). */
+const malFor=sec=>(C().mal||[]).find(m=>m.sec===sec)||(C().mal||[]).find(m=>typeof sameChapter==="function"&&SECTIONS.some(s=>s.id===m.sec)&&sameChapter(m.sec,sec));
+function goalsPanel(){
+  const sec=curSec(), m=sec&&malFor(sec); if(!m) return "";
+  S.mal=S.mal||{}; const done=m.goals.filter((g,i)=>S.mal[m.id+"|"+i]).length;
+  return `<section class="panel goals"><div class="meta"><span class="label">Mål · ${esc(secName(m.sec))}</span><span>${done} av ${m.goals.length}</span></div>
+    <p class="plan">När du är klar med avsnittet ska du kunna det här. Bocka av det du tycker att du kan.</p>
+    <ul class="goallist">${m.goals.map((g,i)=>{const on=!!S.mal[m.id+"|"+i];
+      return `<li><button type="button" class="goal-ck" data-mal="${esc(m.id)}|${i}" aria-pressed="${on}"><span class="box" aria-hidden="true">${on?"✓":""}</span><span>${esc(g)}</span></button></li>`;}).join("")}</ul></section>`;
+}
+document.addEventListener("click",e=>{const b=e.target.closest&&e.target.closest("[data-mal]"); if(!b) return;
+  S.mal=S.mal||{}; const k=b.dataset.mal; if(S.mal[k]) delete S.mal[k]; else S.mal[k]=Date.now(); save();
+  const on=!!S.mal[k]; b.setAttribute("aria-pressed",on); b.querySelector(".box").textContent=on?"✓":"";
+  const p=b.closest(".goals"); if(p){ const n=p.querySelectorAll('[aria-pressed="true"]').length, t=p.querySelectorAll("[data-mal]").length; p.querySelector(".meta span:last-child").textContent=`${n} av ${t}`; }});
+
+/* ---------- Uttal: lyssna och välj ----------
+   content/uttal.json = [{id, sec, title, tip, pairs: [["été","était"], …]}]: ord som låter nästan lika.
+   Ett av orden läses upp och eleven väljer vilket det var. Fråge-id "utt:<id>|<par>|<ord>". */
+const uttById=id=>(C().uttal||[]).find(u=>u.id===id);
+function uttItems(set,n){
+  const sets=set?[uttById(set)]:(C().uttal||[]), all=[];
+  sets.forEach(u=>u.pairs.forEach((p,pi)=>{const wi=Math.floor(Math.random()*p.length); all.push({k:"utt",id:`utt:${u.id}|${pi}|${wi}`,ref:`${u.id}|${pi}|${wi}`,t:"mc"});}));
+  return shuffle(all).slice(0,n);
+}
+function openUttal(){
+  S.ut=S.ut||{};
+  pickerScreen("Uttal: lyssna och välj",`Du hör ett ord och väljer vilket av orden det var. Orden låter nästan lika, så lyssna noga. Slå på ljudet${SOUND?"":" (det är avstängt nu)"}.`,
+    [{id:"*",title:"Blandat",status:""},...(C().uttal||[]).map(u=>({id:u.id,title:u.title,sec:u.sec,status:S.ut[u.id]?`bäst ${S.ut[u.id]} %`:""}))],
+    id=>startUttal(id==="*"?null:id));
+}
+function startUttal(set){
+  const items=uttItems(set,10); if(!items.length) return openUttal();
+  if(!SOUND) setSound(true);
+  $("#tabs").hidden=true; sess=null; beginQuiz("utt",items,{againFn:["utt",set],label:set?`Uttal: ${uttById(set).title}`:"Uttal: blandat",ctx:{type:"utt",id:set||"*"}});
+}
+RESTORE.utt=ref=>{const [id,pi,wi]=ref.split("|"), u=uttById(id); return u&&u.pairs[+pi]&&u.pairs[+pi][+wi]?{}:null;};
+MC.utt=c=>{const [id,pi,wi]=c.ref.split("|"), u=uttById(id), p=u.pairs[+pi], w=p[+wi];
+  return{tab:"Uttal",head:`<p class="q-prompt" style="font-size:1.3rem">Vilket ord hör du?</p>${playBar()}`,ask:esc(u.title),
+    opts:p.map((x,j)=>({label:x,ok:j===+wi,lang:true})),
+    explain:`<p>${p.map(x=>`<span ${lang()}><b>${esc(x)}</b></span> <button type="button" class="speak xs" data-say="${esc(x)}" aria-label="Läs upp ${esc(x)}">${SPK}</button>`).join(" · ")}</p>${u.tip?`<p>${rmark(u.tip)}</p>`:""}`,
+    say:w,sayOnShow:true,wire:()=>wirePlay(r=>speak(w,r))};};
+RECAP.utt=ref=>{const [id,pi,wi]=ref.split("|"), u=uttById(id); return u?u.pairs[+pi][+wi]:"";};
+AFTER.utt=(ctx,right,total,miss)=>{
+  S.ut=S.ut||{}; const pc=total?Math.round(100*right/total):0; if(ctx.id!=="*") S.ut[ctx.id]=Math.max(S.ut[ctx.id]||0,pc); save();
+  app.innerHTML=`<section class="panel">${resultHead("Uttal klart",right,total)}
+    ${miss.length?`<div class="field"><span class="label">Lyssna igen på</span><ul class="missed">${miss.map(RECAP.utt).filter(Boolean).map(m=>`<li><span ${lang()}>${esc(m)}</span><button type="button" class="speak xs" data-say="${esc(m)}" aria-label="Läs upp">${SPK}</button></li>`).join("")}</ul></div>`:""}
+    <div class="navrow"><button class="btn ghost" id="home">Startsidan</button><button class="btn" id="again">En runda till</button></div></section>`;
+  $("#home").onclick=renderStart; $("#again").onclick=()=>startUttal(ctx.id==="*"?null:ctx.id); renderList();
+};
+KIND_NAMES.utt="Uttal";
+
 /* ---------- Startsidans panel med alla övningar ---------- */
 // Övningarna i grupper. Startsidan visar en knapp per grupp, och varje grupp öppnas på en egen sida.
 function exGroups(){
@@ -783,6 +836,7 @@ function exGroups(){
     ...(hasExam()?[["exam","Språkprov",`${esc(EX().name)}: provuppgifter och simulering`,[g("exam",`Provträning: ${esc(EX().name)}`,"Uppgifter i provets format, med klocka, poäng och provsimulering.")]]]:[]),
     ["speak","Tala och skriva","Samtalsfraser, skugga och skrivuppgifter",[
       c.phrases&&g("phr","Samtalsfraser","Vad man säger när man inte förstår, vill säga sin åsikt …"),
+      (c.uttal||[]).length&&g("utt","Uttal: lyssna och välj","Ord som låter nästan lika. Vilket hör du?"),
       g("shadow","Skugga","Lyssna och säg meningen högt samtidigt, för uttal och rytm."),
       c.prompts&&g("write","Skriv en text",L.selfStudy?"Skrivuppgift med checklista och exempeltext.":"Skrivuppgift med checklista, att skicka till läraren.")]]
   ];
@@ -800,7 +854,7 @@ function openExGroup(id){
   wireGames(); $("#quit").onclick=renderStart; window.scrollTo(0,0);
 }
 function wireGames(){
-  const F={ktest:openKtest,exam:openExam,cloze:startCloze,dict:startDict,trans:startTrans,order:startOrder,lq:openListening,rq:openReading,culture:openCulture,story:openStories,phr:startPhrases,write:openWriting,gram:openGrammar,gen:startGender,shadow:startShadow};
+  const F={ktest:openKtest,utt:openUttal,exam:openExam,cloze:startCloze,dict:startDict,trans:startTrans,order:startOrder,lq:openListening,rq:openReading,culture:openCulture,story:openStories,phr:startPhrases,write:openWriting,gram:openGrammar,gen:startGender,shadow:startShadow};
   app.querySelectorAll("[data-ex]").forEach(b=>b.onclick=()=>F[b.dataset.ex]());
   app.querySelectorAll("[data-g]").forEach(b=>b.onclick=()=>startVerbs(b.dataset.g));
   app.querySelectorAll("[data-grp]").forEach(b=>b.onclick=()=>openExGroup(b.dataset.grp));

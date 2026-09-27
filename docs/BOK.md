@@ -31,7 +31,7 @@ De franska kapitlen k1–k3 och aller låg i ordlistan innan det här upplägget
    - sparar fotona i `book/kapNN/foton/`, för in sidorna i `book/sidor.json` och bokens egna texter och övningar i `book/kapNN/content/` enligt `book/SPEC-bok.md` och `book/README.md` (också privata): texterna som lästexter med glosor och frågor, bokens öppna frågor och skrivuppgifter som skrivuppgifter med Claudes kommentarer, och översättnings- och luckövningar under Grammatik → Bokens övningar
    - skriver *egna* övningar på kapitlets tema: luckmeningar, en hörtext, en lästext med frågor, en berättelse och en skrivuppgift, med kapitlets ord och grammatik. Egna övningar läggs i `content/` (publikt).
    - kör `build.py` och testerna och publicerar.
-4. Oscar väljer det nya kapitlet under **Vi läser nu**.
+4. Eleven väljer det nya kapitlet under **Vi läser nu**.
 
 ## Om en annan elev har en annan bok
 

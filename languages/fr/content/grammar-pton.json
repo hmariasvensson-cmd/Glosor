@@ -1,0 +1,327 @@
+[
+ {
+  "id": "pton-001",
+  "topic": "pton",
+  "rule": "pton-prep",
+  "q": "Tu viens au concert avec [moi] ce soir ?",
+  "alt": [
+   "me",
+   "je",
+   "mon"
+  ],
+  "why": "Efter en preposition (avec) används den betonade formen moi. Me och je kan bara stå intill verbet.",
+  "sv": "Följer du med mig på konserten i kväll?"
+ },
+ {
+  "id": "pton-002",
+  "topic": "pton",
+  "rule": "pton-prep",
+  "q": "Ce soir, on dîne chez [eux] : leur appartement est près du Louvre.",
+  "alt": [
+   "leur",
+   "ils",
+   "les"
+  ],
+  "why": "Efter chez används betonad form. Eux = dem (män eller blandad grupp). Leur och les är objektsformer som står före verbet.",
+  "sv": "I kväll äter vi middag hemma hos dem: deras lägenhet ligger nära Louvren."
+ },
+ {
+  "id": "pton-003",
+  "topic": "pton",
+  "rule": "pton-prep",
+  "q": "J'ai acheté ce billet pour [elle] : elle adore ce chanteur.",
+  "alt": [
+   "la",
+   "lui",
+   "sa"
+  ],
+  "why": "Efter pour används betonad form. Elle är både subjekt och betonad form för hon. Lui efter preposition betyder honom.",
+  "sv": "Jag köpte den här biljetten till henne: hon älskar den här sångaren."
+ },
+ {
+  "id": "pton-004",
+  "topic": "pton",
+  "rule": "pton-prep",
+  "q": "Mes cousines habitent à Québec. Cet été, je vais passer deux semaines chez [elles].",
+  "alt": [
+   "eux",
+   "leur",
+   "les"
+  ],
+  "why": "Efter chez används betonad form. Kusinerna är bara tjejer, så det blir elles. Eux gäller män eller en blandad grupp.",
+  "sv": "Mina kusiner bor i Québec. I sommar ska jag tillbringa två veckor hos dem."
+ },
+ {
+  "id": "pton-005",
+  "topic": "pton",
+  "rule": "pton-prep",
+  "q": "Nous partons sans [toi] si tu n'es pas prêt dans cinq minutes.",
+  "alt": [
+   "te",
+   "tu",
+   "ton"
+  ],
+  "why": "Efter sans används betonad form: sans toi = utan dig. Te står bara före verbet.",
+  "sv": "Vi åker utan dig om du inte är klar om fem minuter."
+ },
+ {
+  "id": "pton-006",
+  "topic": "pton",
+  "rule": "pton-prep",
+  "q": "Paul est vraiment sympa. J'aime bien travailler avec [lui].",
+  "alt": [
+   "le",
+   "il",
+   "leur"
+  ],
+  "why": "Efter avec används betonad form. Lui = honom efter preposition. Le är direkt objekt och står före verbet.",
+  "sv": "Paul är verkligen trevlig. Jag tycker om att jobba med honom."
+ },
+ {
+  "id": "pton-007",
+  "topic": "pton",
+  "rule": "pton-prep",
+  "q": "Ta grand-mère ? Je pense souvent à [elle].",
+  "alt": [
+   "lui",
+   "la",
+   "sa"
+  ],
+  "why": "Penser à quelqu'un (tänka på någon) tar à + betonad form: je pense à elle. Här går det inte att säga je lui pense. Lui efter à betyder honom.",
+  "sv": "Din mormor? Jag tänker ofta på henne."
+ },
+ {
+  "id": "pton-008",
+  "topic": "pton",
+  "rule": "pton-prep",
+  "q": "Mes petits frères ont faim. Je prépare des crêpes pour [eux].",
+  "alt": [
+   "leur",
+   "ils",
+   "les"
+  ],
+  "why": "Efter pour används betonad form. Eux = dem (pojkar). Leur är indirekt objekt och står före verbet, aldrig efter en preposition.",
+  "sv": "Mina lillebröder är hungriga. Jag gör pannkakor till dem."
+ },
+ {
+  "id": "pton-009",
+  "topic": "pton",
+  "rule": "pton-comp",
+  "q": "Mon frère a dix-huit ans, il est plus âgé que [moi].",
+  "alt": [
+   "je",
+   "me",
+   "mon"
+  ],
+  "why": "Efter que i en jämförelse används betonad form: plus âgé que moi. Svenskan säger än jag, men franskan kan inte ha je där.",
+  "sv": "Min bror är arton år, han är äldre än jag."
+ },
+ {
+  "id": "pton-010",
+  "topic": "pton",
+  "rule": "pton-comp",
+  "q": "Tu cours plus vite que [lui], mais il nage mieux que toi.",
+  "alt": [
+   "il",
+   "le",
+   "son"
+  ],
+  "why": "Efter que i en jämförelse används betonad form: que lui = än han. Il kan bara stå som subjekt före ett verb.",
+  "sv": "Du springer snabbare än han, men han simmar bättre än du."
+ },
+ {
+  "id": "pton-011",
+  "topic": "pton",
+  "rule": "pton-comp",
+  "q": "Mes sœurs parlent très bien anglais. Moi, je le parle moins bien [qu'elles].",
+  "alt": [
+   "qu'eux",
+   "que elles",
+   "que les"
+  ],
+  "why": "Efter que i jämförelser står betonad form, och que blir qu' före vokal: qu'elles. Systrarna är tjejer, så inte eux.",
+  "sv": "Mina systrar pratar engelska väldigt bra. Jag pratar det sämre än de."
+ },
+ {
+  "id": "pton-012",
+  "topic": "pton",
+  "rule": "pton-comp",
+  "q": "Vous avez plus de chance que [nous] : vous partez en vacances demain !",
+  "alt": [
+   "notre",
+   "on",
+   "nos"
+  ],
+  "why": "Efter que i en jämförelse används betonad form. För vi är den samma som subjektsformen: nous. On används inte efter en preposition eller que.",
+  "sv": "Ni har mer tur än vi: ni åker på semester i morgon!"
+ },
+ {
+  "id": "pton-013",
+  "topic": "pton",
+  "rule": "pton-cest",
+  "q": "Qui a mangé le dernier croissant ? – C'est [moi], désolé !",
+  "alt": [
+   "je",
+   "me",
+   "mon"
+  ],
+  "why": "Efter c'est används betonad form: c'est moi = det är jag. Je kan inte stå ensamt utan verb efter.",
+  "sv": "Vem åt den sista croissanten? – Det var jag, förlåt!"
+ },
+ {
+  "id": "pton-014",
+  "topic": "pton",
+  "rule": "pton-cest",
+  "q": "Tu vois la fille avec la guitare ? C'est [elle] qui chante ce soir.",
+  "alt": [
+   "la",
+   "lui",
+   "elles"
+  ],
+  "why": "Efter c'est används betonad form. En tjej = elle. Lui är han, och elles är plural.",
+  "sv": "Ser du tjejen med gitarren? Det är hon som sjunger i kväll."
+ },
+ {
+  "id": "pton-015",
+  "topic": "pton",
+  "rule": "pton-cest",
+  "q": "Allô, Léa ? C'est [toi] ? Je t'entends très mal.",
+  "alt": [
+   "tu",
+   "te",
+   "ton"
+  ],
+  "why": "Efter c'est används betonad form: c'est toi = är det du. Tu och te står bara intill ett verb.",
+  "sv": "Hallå, Léa? Är det du? Jag hör dig jättedåligt."
+ },
+ {
+  "id": "pton-016",
+  "topic": "pton",
+  "rule": "pton-cest",
+  "q": "Ce sont Hugo et Karim qui organisent la fête ? – Oui, ce sont [eux].",
+  "alt": [
+   "ils",
+   "leur",
+   "les"
+  ],
+  "why": "Efter c'est/ce sont används betonad form. Två killar = eux. I talspråk säger många också c'est eux.",
+  "sv": "Är det Hugo och Karim som ordnar festen? – Ja, det är de."
+ },
+ {
+  "id": "pton-017",
+  "topic": "pton",
+  "rule": "pton-bet",
+  "q": "[Moi], je préfère le métro, c'est plus rapide que le bus.",
+  "alt": [
+   "Me",
+   "Je",
+   "Mon"
+  ],
+  "why": "För att betona vem man talar om sätter man den betonade formen först och upprepar subjektet: Moi, je … (Jag för min del …).",
+  "sv": "Jag för min del föredrar tunnelbanan, den är snabbare än bussen."
+ },
+ {
+  "id": "pton-018",
+  "topic": "pton",
+  "rule": "pton-bet",
+  "q": "Ma sœur adore la plage. Mes parents, [eux], préfèrent la montagne.",
+  "alt": [
+   "ils",
+   "leur",
+   "les"
+  ],
+  "why": "Betonad form används för att lyfta fram en person i kontrast till någon annan: mes parents, eux, … (mina föräldrar däremot). Ils kan inte stå inskjutet så.",
+  "sv": "Min syster älskar stranden. Mina föräldrar däremot föredrar bergen."
+ },
+ {
+  "id": "pton-019",
+  "topic": "pton",
+  "rule": "pton-bet",
+  "q": "J'adore ce groupe ! – [Moi] aussi, je les ai vus en concert l'année dernière.",
+  "alt": [
+   "Je",
+   "Me",
+   "Mon"
+  ],
+  "why": "I korta svar utan verb används betonad form: moi aussi = jag också. Je måste alltid ha ett verb efter sig.",
+  "sv": "Jag älskar det här bandet! – Jag också, jag såg dem på konsert förra året."
+ },
+ {
+  "id": "pton-020",
+  "topic": "pton",
+  "rule": "pton-bet",
+  "q": "Je n'ai pas fini mes devoirs, et [toi] ? – Moi non plus.",
+  "alt": [
+   "tu",
+   "te",
+   "ton"
+  ],
+  "why": "I korta frågor och svar utan verb används betonad form: et toi ? = och du? Tu måste ha ett verb efter sig.",
+  "sv": "Jag har inte gjort klart mina läxor, och du? – Inte jag heller."
+ },
+ {
+  "id": "pton-021",
+  "topic": "pton",
+  "rule": "pton-bet",
+  "q": "Tu connais Samir ? [Lui], il connaît tout le monde à Paris.",
+  "alt": [
+   "Il",
+   "Le",
+   "Son"
+  ],
+  "why": "För att betona en person sätter man den betonade formen först och upprepar subjektet: Lui, il … (Han, han känner …).",
+  "sv": "Känner du Samir? Han känner alla i Paris."
+ },
+ {
+  "id": "pton-022",
+  "topic": "pton",
+  "rule": "pton-bet",
+  "q": "Qui veut aller à la piscine ? – Pas [moi], il fait trop froid !",
+  "alt": [
+   "je",
+   "me",
+   "mon"
+  ],
+  "why": "I korta svar utan verb används betonad form: pas moi = inte jag.",
+  "sv": "Vem vill gå till simhallen? – Inte jag, det är för kallt!"
+ },
+ {
+  "id": "pton-023",
+  "topic": "pton",
+  "rule": "pton-a",
+  "q": "Ce vélo est à [toi] ? – Non, il est à mon frère.",
+  "alt": [
+   "ton",
+   "te",
+   "tu"
+  ],
+  "why": "Être à + betonad form visar vem något tillhör: c'est à toi = det är ditt. Ton måste stå före ett substantiv.",
+  "sv": "Är den här cykeln din? – Nej, den är min brors."
+ },
+ {
+  "id": "pton-024",
+  "topic": "pton",
+  "rule": "pton-a",
+  "q": "À qui sont ces écouteurs ? – Ils sont à [moi].",
+  "alt": [
+   "mon",
+   "mes",
+   "me"
+  ],
+  "why": "Être à + betonad form = tillhöra: ils sont à moi = de är mina. Mon och mes måste följas av ett substantiv.",
+  "sv": "Vems är de här hörlurarna? – De är mina."
+ },
+ {
+  "id": "pton-025",
+  "topic": "pton",
+  "rule": "pton-a",
+  "q": "Ce n'est pas mon sac, c'est le sac de Julie. Il est à [elle].",
+  "alt": [
+   "la",
+   "lui",
+   "sa"
+  ],
+  "why": "Être à + betonad form = tillhöra. Julie är en tjej, så à elle. À lui betyder hans.",
+  "sv": "Det är inte min väska, det är Julies väska. Den är hennes."
+ }
+]

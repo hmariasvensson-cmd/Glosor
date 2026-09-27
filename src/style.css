@@ -346,3 +346,8 @@ details.rule{margin-top:6px}
 .fbqrow{display:flex;flex-direction:column;gap:6px}.fbqrow p{margin:0}
 .kbd-hint{display:none;margin:10px 0 0;font-size:.8rem;color:var(--ink-2)}
 @media (hover:hover) and (pointer:fine){.kbd-hint{display:block}}
+.goallist{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:6px}
+.goal-ck{display:flex;gap:10px;align-items:flex-start;width:100%;text-align:left;border:1.5px solid var(--line);background:var(--surface);border-radius:10px;padding:9px 12px;font-size:.93rem}
+.goal-ck .box{flex:none;width:20px;height:20px;border-radius:6px;border:1.5px solid var(--line);display:grid;place-items:center;font-weight:700;color:var(--ok);line-height:1}
+.goal-ck[aria-pressed="true"]{border-color:var(--ok);background:var(--ok-soft)}
+.goal-ck[aria-pressed="true"] .box{border-color:var(--ok)}

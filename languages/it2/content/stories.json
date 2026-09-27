@@ -1,5 +1,27 @@
 [
  {
+  "id": "it2-s-j1",
+  "sec": "j1",
+  "title": "Una nuova amica",
+  "text": "Il primo giorno di scuola [sono arrivata|arrivavo|ho arrivato] in classe molto presto. [Ero|Sono stata] un po' nervosa, [perché|ma|quindi] non conoscevo nessuno: la mia famiglia [si è trasferita|si trasferiva|ha trasferito] a Torino a luglio. [Mentre|Poi|Perché] cercavo un posto libero, una ragazza [mi ha chiesto|mi chiedeva]: «Vuoi sederti qui?» [Si chiamava|Si è chiamata] Giada e [aveva|ha avuto] un sorriso simpatico. [Poi|Mentre|Perché] abbiamo scoperto che seguivamo gli stessi disegnatori sui social! Quel pomeriggio [abbiamo chattato|chattavamo] per due ore. Una settimana dopo [abbiamo litigato|litigavamo] per una stupidaggine, [ma|quindi|perché] il giorno dopo abbiamo fatto pace davanti a un gelato. [Adesso|Prima|Perché] siamo inseparabili.",
+  "gaps": [
+   {"cat": "tempus", "why": "Passato prossimo: en avslutad händelse. Arrivare är ett rörelseverb och tar essere: sono arrivata (berättaren är en tjej)."},
+   {"cat": "tempus", "why": "Imperfetto: ett tillstånd, hur hon kände sig."},
+   {"cat": "bindeord", "why": "Perché = eftersom: förklarar varför hon var nervös."},
+   {"cat": "tempus", "why": "Passato prossimo: flytten är en avslutad händelse. Trasferirsi är reflexivt och tar essere: si è trasferita."},
+   {"cat": "bindeord", "why": "Mentre = medan: något pågick (cercavo) när något annat hände."},
+   {"cat": "tempus", "why": "Passato prossimo: en enskild händelse som avbryter det som pågick (mentre + imperfetto)."},
+   {"cat": "tempus", "why": "Imperfetto: beskrivning av en person (namn och utseende)."},
+   {"cat": "tempus", "why": "Imperfetto: beskrivning av hur hon såg ut."},
+   {"cat": "bindeord", "why": "Poi = sedan: nästa sak som händer."},
+   {"cat": "tempus", "why": "Passato prossimo: en avgränsad händelse (quel pomeriggio, per due ore)."},
+   {"cat": "tempus", "why": "Passato prossimo: en enskild händelse en bestämd tid (una settimana dopo)."},
+   {"cat": "bindeord", "why": "Ma = men: det vänder från bråk till försoning."},
+   {"cat": "bindeord", "why": "Adesso = nu: berättelsen slutar i nutid (siamo)."}
+  ],
+  "sv": "Första skoldagen kom jag till klassrummet väldigt tidigt. Jag var lite nervös, eftersom jag inte kände någon: min familj hade flyttat till Turin i juli. Medan jag letade efter en ledig plats frågade en tjej mig: « Vill du sitta här? » Hon hette Giada och hade ett trevligt leende. Sedan upptäckte vi att vi följde samma serietecknare på sociala medier! Den eftermiddagen chattade vi i två timmar. En vecka senare bråkade vi om en dumhet, men dagen efter blev vi sams över en glass. Nu är vi oskiljaktiga."
+ },
+ {
   "id": "it2-s-j2",
   "sec": "j2",
   "title": "Un sabato sfortunato",
@@ -66,6 +88,28 @@
   "sv": "När jag var liten tillbringade jag varje sommar hos mormor och morfar på landet. Deras hus hade en stor gård med en gunga. Varje morgon väckte morfar mig tidigt, eftersom vi skulle mata hönsen. Sedan gjorde mormor mellanmål: bröd, smör och socker. Jag var ett livligt och lite busigt barn. En dag, medan morfar sov, gömde jag hans glasögon. Morfar letade efter dem i två timmar! Till slut hittade mormor dem i mitt rum. Morfar blev arg, men på kvällen skrattade han också. Nu är jag vuxen, men jag har aldrig glömt de somrarna."
  },
  {
+  "id": "it2-s-j5",
+  "sec": "j5",
+  "title": "La lezione di cucina",
+  "text": "Domenica scorsa [sono andato|andavo|ho andato] dalla nonna per imparare a fare il sugo. [Quando|Mentre|Perché] sono arrivato, la nonna [era|è stata] già in cucina. «[Taglia|Tagli|Tagliavi] la cipolla e l'aglio», mi ha detto. [Mentre|Poi|Quindi] tagliavo la cipolla, [piangevo|ho pianto] come un bambino! [Poi|Perché|Mentre] la nonna ha versato l'olio nella padella. «Adesso [aggiungi|aggiungevi|hai aggiunto] i pomodori e [mescola|mescoli|mescolavi] piano», ha detto. Dopo mezz'ora io [ho assaggiato|assaggiavo] il sugo: [era|è stato] un po' salato! «Non è un problema», ha detto la nonna, «[aggiungi|aggiungevi|hai aggiunto] un pizzico di zucchero.» [Alla fine|Prima|Perché] il sugo era perfetto e abbiamo mangiato insieme.",
+  "gaps": [
+   {"cat": "tempus", "why": "Passato prossimo: en avslutad händelse en bestämd dag. Andare tar essere: sono andato."},
+   {"cat": "bindeord", "why": "Quando = när: en tidpunkt (när jag kom fram)."},
+   {"cat": "tempus", "why": "Imperfetto: beskriver läget när han kom (bakgrund)."},
+   {"cat": "tempus", "why": "Imperativ för tu av ett -are-verb slutar på -a: taglia! Tagli är presens (du skär)."},
+   {"cat": "bindeord", "why": "Mentre = medan: två saker pågår samtidigt."},
+   {"cat": "tempus", "why": "Imperfetto: något som pågick samtidigt med något annat (mentre tagliavo)."},
+   {"cat": "bindeord", "why": "Poi = sedan: nästa steg i ordningen."},
+   {"cat": "tempus", "why": "Imperativ för tu av ett -ere-verb ser ut som presens: aggiungi!"},
+   {"cat": "tempus", "why": "Imperativ för tu av ett -are-verb: mescola! Mescoli är presens."},
+   {"cat": "tempus", "why": "Passato prossimo: en enskild, avslutad handling."},
+   {"cat": "tempus", "why": "Imperfetto: beskriver hur såsen var (ett tillstånd)."},
+   {"cat": "tempus", "why": "Imperativ: mormodern ger ett råd till honom (tu): aggiungi!"},
+   {"cat": "bindeord", "why": "Alla fine = till slut: det sista som händer."}
+  ],
+  "sv": "I söndags gick jag till mormor för att lära mig göra tomatsås. När jag kom fram var mormor redan i köket. « Skär löken och vitlöken », sa hon. Medan jag skar löken grät jag som ett litet barn! Sedan hällde mormor oljan i stekpannan. « Lägg nu i tomaterna och rör försiktigt », sa hon. Efter en halvtimme smakade jag på såsen: den var lite för salt! « Det är inget problem », sa mormor, « lägg i en nypa socker. » Till slut var såsen perfekt och vi åt tillsammans."
+ },
+ {
   "id": "it2-s-j6",
   "sec": "j6",
   "title": "Una settimana a letto",
@@ -108,5 +152,27 @@
    {"cat": "bindeord", "why": "Infine = till sist: det sista som händer."}
   ],
   "sv": "Förra månaden gifte sig min moster Laura. Ceremonin började klockan elva i en liten kyrka uppe på en kulle. När brudparet kom ut ur kyrkan kastade alla ris. Vädret var jättefint och solen sken. Efter ceremonin åkte vi till restaurangen. Lunchen varade i fem timmar! Medan vi åt spelade ett band traditionell musik. På kvällen skar brudparet tårtan och alla skålade. Jag var dödstrött, men jag dansade ända till slutet. Till sist önskade vi brudparet mycket lycka."
+ },
+ {
+  "id": "it2-s-j8",
+  "sec": "j8",
+  "title": "Un progetto per il futuro",
+  "text": "L'estate scorsa [ho fatto|facevo|sono fatto] un tirocinio in uno studio di architettura. Era un lavoro faticoso, [ma|perché|quindi] ho imparato tantissimo. [Siccome|Invece|Però] lavoravo con impegno, alla fine il capo mi [ha offerto|offriva] un lavoro estivo per quest'anno. [Quindi|Perché|Mentre] quest'estate [lavorerò|lavoravo|ho lavorato] di nuovo lì e [guadagnerò|guadagnavo|ho guadagnato] un po' di soldi. Dopo la maturità [mi iscriverò|mi iscrivevo|mi sono iscritto] all'università a Milano. [Prima|Perché|Invece] però [farò|facevo|ho fatto] un viaggio in Sud America con il mio migliore amico. Il mio sogno nel cassetto? Tra dieci anni [avrò|avevo|ho avuto] uno studio tutto mio. Non [sarà|era|è stato] facile, [ma|perché|così] ci riuscirò!",
+  "gaps": [
+   {"cat": "tempus", "why": "Passato prossimo: en avslutad period i det förflutna (l'estate scorsa). Fare tar avere: ho fatto."},
+   {"cat": "bindeord", "why": "Ma = men: jobbet var jobbigt, men han lärde sig mycket."},
+   {"cat": "bindeord", "why": "Siccome = eftersom: orsaken står först i meningen."},
+   {"cat": "tempus", "why": "Passato prossimo: chefen erbjöd jobbet en gång – en händelse."},
+   {"cat": "bindeord", "why": "Quindi = alltså, så: en följd av erbjudandet."},
+   {"cat": "tempus", "why": "Futuro: något som ska hända i framtiden (quest'estate)."},
+   {"cat": "tempus", "why": "Futuro: fortsätter planen för i sommar."},
+   {"cat": "tempus", "why": "Futuro av det reflexiva verbet iscriversi: mi iscriverò."},
+   {"cat": "bindeord", "why": "Prima = först, innan: resan kommer före universitetet."},
+   {"cat": "tempus", "why": "Futuro av fare: farò."},
+   {"cat": "tempus", "why": "Futuro av avere: avrò (tra dieci anni = om tio år)."},
+   {"cat": "tempus", "why": "Futuro av essere: sarà."},
+   {"cat": "bindeord", "why": "Ma = men: det blir svårt, men han kommer att lyckas."}
+  ],
+  "sv": "Förra sommaren gjorde jag praktik på ett arkitektkontor. Det var ett ansträngande jobb, men jag lärde mig jättemycket. Eftersom jag jobbade hårt erbjöd chefen mig till slut ett sommarjobb i år. Så i sommar ska jag jobba där igen och tjäna lite pengar. Efter studenten ska jag skriva in mig på universitetet i Milano. Men först ska jag resa till Sydamerika med min bästa vän. Min hemliga dröm? Om tio år har jag ett eget kontor. Det blir inte lätt, men jag kommer att lyckas!"
  }
 ]

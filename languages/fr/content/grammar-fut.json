@@ -1,0 +1,479 @@
+[
+ {
+  "id": "fut-001",
+  "topic": "fut",
+  "rule": "fut-proche",
+  "q": "Ce soir, je [vais] regarder le match de foot à la télé.",
+  "alt": [
+   "vas",
+   "va",
+   "suis"
+  ],
+  "why": "Futur proche = aller i presens + infinitiv. Je → je vais. Être kan inte bilda futur.",
+  "sv": "I kväll ska jag titta på fotbollsmatchen på tv."
+ },
+ {
+  "id": "fut-002",
+  "topic": "fut",
+  "rule": "fut-proche",
+  "q": "Attention, le train [va] partir !",
+  "alt": [
+   "vas",
+   "vont",
+   "est"
+  ],
+  "why": "Futur proche: aller i presens + infinitiv. Le train är tredje person singular: il va.",
+  "sv": "Se upp, tåget går snart!"
+ },
+ {
+  "id": "fut-003",
+  "topic": "fut",
+  "rule": "fut-proche",
+  "q": "Nous [allons] visiter le musée d'Orsay demain matin.",
+  "alt": [
+   "allez",
+   "vont",
+   "avons"
+  ],
+  "why": "Futur proche med nous: nous allons + infinitiv. Avoir används inte för framtid.",
+  "sv": "Vi ska besöka Musée d'Orsay i morgon förmiddag."
+ },
+ {
+  "id": "fut-004",
+  "topic": "fut",
+  "rule": "fut-proche",
+  "q": "Mes parents vont [acheter] un appartement à Nice.",
+  "alt": [
+   "achètent",
+   "acheté",
+   "achèteront"
+  ],
+  "why": "Efter aller står verbet alltid i infinitiv: vont acheter. Man böjer bara aller.",
+  "sv": "Mina föräldrar ska köpa en lägenhet i Nice."
+ },
+ {
+  "id": "fut-005",
+  "topic": "fut",
+  "rule": "fut-proche",
+  "q": "Tu vas [prendre] le métro ou le bus pour aller au concert ?",
+  "alt": [
+   "prends",
+   "pris",
+   "prendras"
+  ],
+  "why": "I futur proche böjs bara aller. Verbet efter står i infinitiv: tu vas prendre.",
+  "sv": "Ska du ta tunnelbanan eller bussen till konserten?"
+ },
+ {
+  "id": "fut-006",
+  "topic": "fut",
+  "rule": "fut-proche",
+  "q": "Vous [allez] adorer ce concert, le groupe est génial !",
+  "alt": [
+   "avez",
+   "allons",
+   "vont"
+  ],
+  "why": "Futur proche med vous: vous allez + infinitiv.",
+  "sv": "Ni kommer att älska den här konserten, bandet är grymt!"
+ },
+ {
+  "id": "fut-007",
+  "topic": "fut",
+  "rule": "fut-reg",
+  "q": "L'été prochain, je [travaillerai] dans un café à Paris.",
+  "alt": [
+   "travaillera",
+   "travaillerez",
+   "travailler"
+  ],
+  "why": "Futur simple = infinitiv + ändelse. Je får -ai: travailler + ai = travaillerai.",
+  "sv": "Nästa sommar ska jag jobba på ett kafé i Paris."
+ },
+ {
+  "id": "fut-008",
+  "topic": "fut",
+  "rule": "fut-reg",
+  "q": "Tu [finiras] tes devoirs après le dîner.",
+  "alt": [
+   "finira",
+   "finirai",
+   "finirez"
+  ],
+  "why": "Futur simple: finir + -as för tu. Finira är il-formen och finirai je-formen.",
+  "sv": "Du gör klart dina läxor efter middagen."
+ },
+ {
+  "id": "fut-009",
+  "topic": "fut",
+  "rule": "fut-reg",
+  "q": "Nous [prendrons] le train de huit heures pour Lyon.",
+  "alt": [
+   "prenderons",
+   "prendrerons",
+   "prendront"
+  ],
+  "why": "Verb på -re tappar sitt e: prendre → prendr- + ons. Prendront är ils-formen.",
+  "sv": "Vi tar tåget klockan åtta till Lyon."
+ },
+ {
+  "id": "fut-010",
+  "topic": "fut",
+  "rule": "fut-reg",
+  "q": "Les élèves [vendront] des crêpes à la fête de l'école.",
+  "alt": [
+   "vendreront",
+   "vendrons",
+   "vendra"
+  ],
+  "why": "Vendre tappar e: vendr- + ont för ils. Vendrons är nous-formen.",
+  "sv": "Eleverna ska sälja crêpes på skolfesten."
+ },
+ {
+  "id": "fut-011",
+  "topic": "fut",
+  "rule": "fut-reg",
+  "q": "Vous [parlerez] avec le directeur demain matin.",
+  "alt": [
+   "parlerai",
+   "parleront",
+   "parlerons"
+  ],
+  "why": "Futur simple med vous: parler + ez = parlerez.",
+  "sv": "Ni får prata med rektorn i morgon förmiddag."
+ },
+ {
+  "id": "fut-012",
+  "topic": "fut",
+  "rule": "fut-reg",
+  "q": "Je [t'écrirai] une carte postale de Québec.",
+  "alt": [
+   "t'écrira",
+   "te écrirai",
+   "t'écrireai"
+  ],
+  "why": "Écrire tappar e: écrir- + ai. Te blir t' framför vokal.",
+  "sv": "Jag skickar ett vykort till dig från Québec."
+ },
+ {
+  "id": "fut-013",
+  "topic": "fut",
+  "rule": "fut-reg",
+  "q": "On [mangera] au restaurant pour l'anniversaire de papa.",
+  "alt": [
+   "mangerons",
+   "mangeront",
+   "manger"
+  ],
+  "why": "On böjs som il, även när det betyder vi: on mangera, inte on mangerons.",
+  "sv": "Vi ska äta på restaurang på pappas födelsedag."
+ },
+ {
+  "id": "fut-014",
+  "topic": "fut",
+  "rule": "fut-reg",
+  "q": "Le film [commencera] à vingt heures trente.",
+  "alt": [
+   "commencerai",
+   "commenceront",
+   "commenceras"
+  ],
+  "why": "Le film = il, alltså ändelsen -a: commencera.",
+  "sv": "Filmen börjar klockan halv nio."
+ },
+ {
+  "id": "fut-015",
+  "topic": "fut",
+  "rule": "fut-irr",
+  "q": "Demain, il [fera] beau dans le sud de la France.",
+  "alt": [
+   "faira",
+   "fairera",
+   "feras"
+  ],
+  "why": "Faire har den oregelbundna futurstammen fer-: il fera.",
+  "sv": "I morgon blir det fint väder i södra Frankrike."
+ },
+ {
+  "id": "fut-016",
+  "topic": "fut",
+  "rule": "fut-irr",
+  "q": "L'année prochaine, nous [irons] au Québec avec la classe.",
+  "alt": [
+   "allerons",
+   "irez",
+   "iront"
+  ],
+  "why": "Aller har stammen ir- i futur: j'irai, nous irons. Allerons finns inte.",
+  "sv": "Nästa år åker vi till Québec med klassen."
+ },
+ {
+  "id": "fut-017",
+  "topic": "fut",
+  "rule": "fut-irr",
+  "q": "Tu [auras] dix-sept ans en mars ?",
+  "alt": [
+   "seras",
+   "avras",
+   "aura"
+  ],
+  "why": "Ålder uttrycks med avoir, inte être. Avoir har futurstammen aur-: tu auras.",
+  "sv": "Fyller du sjutton i mars?"
+ },
+ {
+  "id": "fut-018",
+  "topic": "fut",
+  "rule": "fut-irr",
+  "q": "Je [serai] à la maison vers six heures.",
+  "alt": [
+   "étrai",
+   "sera",
+   "aurai"
+  ],
+  "why": "Être har futurstammen ser-: je serai. Sera är il-formen.",
+  "sv": "Jag är hemma runt sex."
+ },
+ {
+  "id": "fut-019",
+  "topic": "fut",
+  "rule": "fut-irr",
+  "q": "Mes cousins [viendront] nous voir à Noël.",
+  "alt": [
+   "veniront",
+   "viendrons",
+   "viendra"
+  ],
+  "why": "Venir har futurstammen viendr-: ils viendront.",
+  "sv": "Mina kusiner kommer och hälsar på oss i jul."
+ },
+ {
+  "id": "fut-020",
+  "topic": "fut",
+  "rule": "fut-irr",
+  "q": "Tu [pourras] m'aider à déménager samedi ?",
+  "alt": [
+   "pouvras",
+   "pouvoiras",
+   "pourra"
+  ],
+  "why": "Pouvoir har futurstammen pourr- (med två r): tu pourras.",
+  "sv": "Kan du hjälpa mig att flytta på lördag?"
+ },
+ {
+  "id": "fut-021",
+  "topic": "fut",
+  "rule": "fut-irr",
+  "q": "Du haut de la tour Eiffel, vous [verrez] tout Paris.",
+  "alt": [
+   "voirez",
+   "verrai",
+   "voirrez"
+  ],
+  "why": "Voir har futurstammen verr-: vous verrez. Voirez finns inte.",
+  "sv": "Från toppen av Eiffeltornet kommer ni att se hela Paris."
+ },
+ {
+  "id": "fut-022",
+  "topic": "fut",
+  "rule": "fut-irr",
+  "q": "Il [faudra] se lever tôt pour prendre l'avion.",
+  "alt": [
+   "fallra",
+   "falloira",
+   "faudront"
+  ],
+  "why": "Il faut blir il faudra i futur (stammen faudr-). Det finns bara i il-form.",
+  "sv": "Man kommer att behöva gå upp tidigt för att hinna med flyget."
+ },
+ {
+  "id": "fut-023",
+  "topic": "fut",
+  "rule": "fut-irr",
+  "q": "Nous [devrons] payer plein tarif, nous n'avons pas de réduction.",
+  "alt": [
+   "devoirons",
+   "doivrons",
+   "devront"
+  ],
+  "why": "Devoir har futurstammen devr-: nous devrons.",
+  "sv": "Vi kommer att behöva betala fullt pris, vi har ingen rabatt."
+ },
+ {
+  "id": "fut-024",
+  "topic": "fut",
+  "rule": "fut-irr",
+  "q": "Elle ne [saura] pas les résultats avant lundi.",
+  "alt": [
+   "savra",
+   "savoira",
+   "sera"
+  ],
+  "why": "Savoir har futurstammen saur-: elle saura. Sera kommer från être.",
+  "sv": "Hon får inte veta resultaten förrän på måndag."
+ },
+ {
+  "id": "fut-025",
+  "topic": "fut",
+  "rule": "fut-irr",
+  "q": "Après ce documentaire, mes enfants ne [voudront] plus manger de veau.",
+  "alt": [
+   "vouloiront",
+   "voudrons",
+   "vouleront"
+  ],
+  "why": "Vouloir har futurstammen voudr-: ils voudront.",
+  "sv": "Efter den här dokumentären kommer mina barn inte att vilja äta kalvkött längre."
+ },
+ {
+  "id": "fut-026",
+  "topic": "fut",
+  "rule": "fut-quand",
+  "q": "Quand je [serai] grand, je serai pilote.",
+  "alt": [
+   "suis",
+   "serais",
+   "sera"
+  ],
+  "why": "Efter quand står futur när det gäller framtiden. Svenskan har presens (när jag blir stor), men franskan kräver futur.",
+  "sv": "När jag blir stor ska jag bli pilot."
+ },
+ {
+  "id": "fut-027",
+  "topic": "fut",
+  "rule": "fut-quand",
+  "q": "Quand tu [arriveras] à la gare, appelle-moi.",
+  "alt": [
+   "arrives",
+   "arriverais",
+   "arrivais"
+  ],
+  "why": "Quand om något i framtiden tar futur: quand tu arriveras. Svenskan säger när du kommer.",
+  "sv": "När du kommer till stationen, ring mig."
+ },
+ {
+  "id": "fut-028",
+  "topic": "fut",
+  "rule": "fut-quand",
+  "q": "Je t'enverrai les photos quand je [rentrerai] à la maison.",
+  "alt": [
+   "rentre",
+   "rentrerais",
+   "rentrais"
+  ],
+  "why": "Huvudsatsen är i futur (enverrai), och bisatsen med quand ska också ha futur: quand je rentrerai.",
+  "sv": "Jag skickar bilderna till dig när jag kommer hem."
+ },
+ {
+  "id": "fut-029",
+  "topic": "fut",
+  "rule": "fut-quand",
+  "q": "Quand nous [aurons] le bac, nous ferons un grand voyage.",
+  "alt": [
+   "avons",
+   "aurions",
+   "serons"
+  ],
+  "why": "Quand + framtid ger futur: nous aurons (stammen aur-). Svenskan har presens: när vi har tagit studenten.",
+  "sv": "När vi har tagit studenten ska vi göra en stor resa."
+ },
+ {
+  "id": "fut-030",
+  "topic": "fut",
+  "rule": "fut-quand",
+  "q": "Quand il [fera] beau, on ira pique-niquer au bord du lac.",
+  "alt": [
+   "fait",
+   "ferait",
+   "faisait"
+  ],
+  "why": "Huvudsatsen har futur (ira), så quand-satsen får också futur: quand il fera beau.",
+  "sv": "När det blir fint väder ska vi åka och ha picknick vid sjön."
+ },
+ {
+  "id": "fut-031",
+  "topic": "fut",
+  "rule": "fut-byt",
+  "type": "rw",
+  "q": "Je vais lui téléphoner demain matin.",
+  "cue": "futur simple",
+  "a": "Je lui téléphonerai demain matin.",
+  "acc": [
+   "Demain matin, je lui téléphonerai."
+  ],
+  "alt": [
+   "Je téléphonerai lui demain matin.",
+   "Lui je téléphonerai demain matin."
+  ],
+  "why": "I futur simple finns bara ett verb, och pronomenet lui står direkt före det: je lui téléphonerai.",
+  "sv": "Jag ringer henne i morgon bitti."
+ },
+ {
+  "id": "fut-032",
+  "topic": "fut",
+  "rule": "fut-byt",
+  "type": "rw",
+  "q": "Nous n'allons pas partir en vacances cet été.",
+  "cue": "futur simple",
+  "a": "Nous ne partirons pas en vacances cet été.",
+  "acc": [
+   "Cet été, nous ne partirons pas en vacances."
+  ],
+  "alt": [
+   "Nous ne pas partirons en vacances cet été.",
+   "Nous partirons ne pas en vacances cet été."
+  ],
+  "why": "Ne … pas omger det böjda verbet. I futur simple är det partirons.",
+  "sv": "Vi ska inte åka på semester i sommar."
+ },
+ {
+  "id": "fut-033",
+  "topic": "fut",
+  "rule": "fut-byt",
+  "type": "rw",
+  "q": "Ils ne diront rien à leurs parents.",
+  "cue": "futur proche",
+  "a": "Ils ne vont rien dire à leurs parents.",
+  "alt": [
+   "Ils ne rien vont dire à leurs parents.",
+   "Ils ne vont dire rien à leurs parents."
+  ],
+  "why": "I futur proche omger ne … rien verbet aller, och infinitiven dire kommer sist.",
+  "sv": "De kommer inte att säga något till sina föräldrar."
+ },
+ {
+  "id": "fut-034",
+  "topic": "fut",
+  "rule": "fut-byt",
+  "type": "rw",
+  "q": "Après l'été, tu ne la verras plus.",
+  "cue": "futur proche",
+  "a": "Après l'été, tu ne vas plus la voir.",
+  "acc": [
+   "Tu ne vas plus la voir après l'été."
+  ],
+  "alt": [
+   "Après l'été, tu ne la vas plus voir.",
+   "Après l'été, tu ne vas la voir plus."
+  ],
+  "why": "Ne … plus omger aller. Pronomenet la hör till infinitiven och står direkt före voir.",
+  "sv": "Efter sommaren kommer du inte att träffa henne mer."
+ },
+ {
+  "id": "fut-035",
+  "topic": "fut",
+  "rule": "fut-byt",
+  "type": "rw",
+  "q": "Elle ira au Canada l'année prochaine.",
+  "cue": "futur proche",
+  "a": "Elle va aller au Canada l'année prochaine.",
+  "acc": [
+   "L'année prochaine, elle va aller au Canada."
+  ],
+  "alt": [
+   "Elle aller va au Canada l'année prochaine.",
+   "Elle va au Canada aller l'année prochaine."
+  ],
+  "why": "Futur proche: böjt aller + infinitiv direkt efter. Även aller själv kan stå i infinitiv: elle va aller.",
+  "sv": "Hon ska åka till Kanada nästa år."
+ }
+]

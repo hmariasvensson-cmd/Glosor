@@ -1,0 +1,337 @@
+[
+ {
+  "id": "imper-001",
+  "topic": "imper",
+  "rule": "imp-form",
+  "q": "Tu ne comprends pas ? [Écoute] bien le prof !",
+  "alt": [
+   "Écoutes",
+   "Écouter",
+   "Tu écoutes"
+  ],
+  "why": "Imperativ bildas av presens utan subjekt. Verb på -er tappar -s i du-formen: tu écoutes → écoute !",
+  "sv": "Förstår du inte? Lyssna noga på läraren!"
+ },
+ {
+  "id": "imper-002",
+  "topic": "imper",
+  "rule": "imp-form",
+  "q": "Les enfants, [finissez] vos assiettes avant le dessert !",
+  "alt": [
+   "finissent",
+   "finir",
+   "finis"
+  ],
+  "why": "Man talar till flera barn, alltså ni-formen: vous finissez → finissez ! Finis är du-formen.",
+  "sv": "Barn, ät upp maten innan efterrätten!"
+ },
+ {
+  "id": "imper-003",
+  "topic": "imper",
+  "rule": "imp-form",
+  "q": "Nous avons faim. [Mangeons] une pizza avant le film !",
+  "alt": [
+   "Mangez",
+   "Mange",
+   "Manger"
+  ],
+  "why": "Vi-formen av imperativ betyder låt oss: nous mangeons → mangeons ! Mangez och mange riktar sig till andra.",
+  "sv": "Vi är hungriga. Nu äter vi en pizza före filmen!"
+ },
+ {
+  "id": "imper-004",
+  "topic": "imper",
+  "rule": "imp-form",
+  "q": "Tu vas à la boulangerie ? [Achète] une baguette, s'il te plaît !",
+  "alt": [
+   "Achètes",
+   "Achete",
+   "Acheter"
+  ],
+  "why": "Du-formen av ett -er-verb tappar -s i imperativ: tu achètes → achète ! Accenten è finns kvar.",
+  "sv": "Ska du till bageriet? Köp en baguette, snälla!"
+ },
+ {
+  "id": "imper-005",
+  "topic": "imper",
+  "rule": "imp-form",
+  "q": "Tu as peur de parler français ? [Vas-y], essaie !",
+  "alt": [
+   "Va-y",
+   "Allez-y",
+   "Vas"
+  ],
+  "why": "Va (gå) tappar -s som andra -er-verb, men före y får det tillbaka -s för uttalets skull: vas-y ! Allez-y är ni-formen.",
+  "sv": "Är du rädd för att prata franska? Kör, försök!"
+ },
+ {
+  "id": "imper-006",
+  "topic": "imper",
+  "rule": "imp-form",
+  "q": "Emma, [va] chercher ton frère à la gare, il arrive à six heures !",
+  "alt": [
+   "vas",
+   "aller",
+   "vais"
+  ],
+  "why": "Aller i du-form imperativ är va, utan -s (bara vas-y har -s).",
+  "sv": "Emma, gå och hämta din bror på stationen, han kommer klockan sex!"
+ },
+ {
+  "id": "imper-007",
+  "topic": "imper",
+  "rule": "imp-irr",
+  "q": "[Sois] sage chez ta grand-mère, Léo !",
+  "alt": [
+   "Es",
+   "Sais",
+   "Soit"
+  ],
+  "why": "Être har oregelbunden imperativ: sois, soyons, soyez. Es är presens, sais kommer från savoir.",
+  "sv": "Var snäll hos mormor, Léo!"
+ },
+ {
+  "id": "imper-008",
+  "topic": "imper",
+  "rule": "imp-irr",
+  "q": "Les enfants, [n'ayez] pas peur, ce chien est très gentil !",
+  "alt": [
+   "n'avez",
+   "ne ayez",
+   "n'aie"
+  ],
+  "why": "Avoir har oregelbunden imperativ: aie, ayons, ayez. Till flera barn blir det ayez, och ne elideras före vokal: n'ayez.",
+  "sv": "Barn, var inte rädda, den här hunden är jättesnäll!"
+ },
+ {
+  "id": "imper-009",
+  "topic": "imper",
+  "rule": "imp-irr",
+  "q": "[Sachez] que la bibliothèque ferme à 18 heures aujourd'hui.",
+  "alt": [
+   "Savez",
+   "Saches",
+   "Savoir"
+  ],
+  "why": "Savoir har oregelbunden imperativ: sache, sachons, sachez. Sachez que … = observera att …, ett artigt sätt att informera.",
+  "sv": "Observera att biblioteket stänger klockan 18 i dag."
+ },
+ {
+  "id": "imper-010",
+  "topic": "imper",
+  "rule": "imp-irr",
+  "q": "[Veuillez] fermer la porte en sortant, merci.",
+  "alt": [
+   "Voulez",
+   "Veux",
+   "Vouloir"
+  ],
+  "why": "Vouloir har den oregelbundna imperativen veuillez, som betyder var vänlig och … Den står ofta på skyltar och i brev.",
+  "sv": "Var vänlig stäng dörren när du går ut, tack."
+ },
+ {
+  "id": "imper-011",
+  "topic": "imper",
+  "rule": "imp-irr",
+  "q": "Tu as un examen demain ? [Aie] confiance en toi, tu vas réussir !",
+  "alt": [
+   "As",
+   "Aies",
+   "Avoir"
+  ],
+  "why": "Avoir har oregelbunden imperativ: aie i du-form. As är presens.",
+  "sv": "Har du prov i morgon? Lita på dig själv, du kommer att klara det!"
+ },
+ {
+  "id": "imper-012",
+  "topic": "imper",
+  "rule": "imp-neg",
+  "q": "[Ne parle pas] si fort, le bébé dort !",
+  "alt": [
+   "Parle ne pas",
+   "Ne parles pas",
+   "Ne pas parle"
+  ],
+  "why": "Nekad imperativ: ne före verbet och pas efter, precis som i ett påstående. Du-formen tappar -s även nekad.",
+  "sv": "Prata inte så högt, bebisen sover!"
+ },
+ {
+  "id": "imper-013",
+  "topic": "imper",
+  "rule": "imp-neg",
+  "q": "[N'oubliez pas] vos passeports, nous partons au Québec demain !",
+  "alt": [
+   "Ne oubliez pas",
+   "Oubliez ne pas",
+   "Pas oubliez"
+  ],
+  "why": "Ne elideras till n' före vokal, och verbet står mellan n' och pas: n'oubliez pas.",
+  "sv": "Glöm inte era pass, vi åker till Québec i morgon!"
+ },
+ {
+  "id": "imper-014",
+  "topic": "imper",
+  "rule": "imp-neg",
+  "q": "Nous avons un examen demain. Ne [sortons] pas ce soir, restons à la maison !",
+  "alt": [
+   "sortez",
+   "sortir",
+   "sortions"
+  ],
+  "why": "Vi-formen (låt oss) syns av restons. Nekad: ne sortons pas = låt oss inte gå ut.",
+  "sv": "Vi har prov i morgon. Vi går inte ut i kväll, vi stannar hemma!"
+ },
+ {
+  "id": "imper-015",
+  "topic": "imper",
+  "rule": "imp-pron",
+  "q": "Tu as vu mes clés ? – Oui, elles sont sur la table. [Prends-les] !",
+  "alt": [
+   "Les prends",
+   "Prends-leur",
+   "Prend-les"
+  ],
+  "why": "I jakad imperativ står objektspronomenet efter verbet med bindestreck: prends-les. Leur är indirekt objekt och passar inte här.",
+  "sv": "Har du sett mina nycklar? – Ja, de ligger på bordet. Ta dem!"
+ },
+ {
+  "id": "imper-016",
+  "topic": "imper",
+  "rule": "imp-pron",
+  "q": "Il est déjà sept heures ! [Lève-toi] !",
+  "alt": [
+   "Te lève",
+   "Lève-te",
+   "Lèves-toi"
+  ],
+  "why": "Reflexiva verb i jakad imperativ: pronomenet efter verbet, och te blir toi: lève-toi !",
+  "sv": "Klockan är redan sju! Gå upp!"
+ },
+ {
+  "id": "imper-017",
+  "topic": "imper",
+  "rule": "imp-pron",
+  "q": "C'est ton anniversaire ? [Montre-moi] tes cadeaux !",
+  "alt": [
+   "Me montre",
+   "Montre-me",
+   "Montres-moi"
+  ],
+  "why": "I jakad imperativ står pronomenet efter verbet, och me blir moi: montre-moi.",
+  "sv": "Fyller du år? Visa mig dina presenter!"
+ },
+ {
+  "id": "imper-018",
+  "topic": "imper",
+  "rule": "imp-pron",
+  "q": "Cette photo est superbe ! [Envoie-la-moi] ce soir !",
+  "alt": [
+   "Envoie-moi-la",
+   "Me la envoie",
+   "Envoie-la-me"
+  ],
+  "why": "Med två pronomen i jakad imperativ kommer direkt objekt (la) först och moi sist: envoie-la-moi.",
+  "sv": "Det här fotot är jättefint! Skicka det till mig i kväll!"
+ },
+ {
+  "id": "imper-019",
+  "topic": "imper",
+  "rule": "imp-pron",
+  "q": "Tu es fatigué ? Ne [te couche] pas trop tard ce soir !",
+  "alt": [
+   "couche-toi",
+   "toi couche",
+   "couches-toi"
+  ],
+  "why": "I nekad imperativ gäller samma ordföljd som i ett påstående: ne te couche pas. Toi används bara i jakad imperativ.",
+  "sv": "Är du trött? Lägg dig inte för sent i kväll!"
+ },
+ {
+  "id": "imper-020",
+  "topic": "imper",
+  "rule": "imp-pron",
+  "q": "Tes grands-parents t'attendent. [Téléphone-leur] ce soir !",
+  "alt": [
+   "Leur téléphone",
+   "Téléphone-les",
+   "Téléphones-leur"
+  ],
+  "why": "Téléphoner à quelqu'un tar indirekt objekt, alltså leur. I jakad imperativ står det efter verbet: téléphone-leur.",
+  "sv": "Dina morföräldrar väntar på dig. Ring dem i kväll!"
+ },
+ {
+  "id": "imper-021",
+  "topic": "imper",
+  "rule": "imp-negpron",
+  "type": "rw",
+  "q": "Donne-le-moi maintenant !",
+  "cue": "ne … pas",
+  "a": "Ne me le donne pas maintenant !",
+  "alt": [
+   "Ne le me donne pas maintenant !",
+   "Me le ne donne pas maintenant !"
+  ],
+  "why": "I nekad imperativ står pronomenen före verbet som i ett påstående, och moi blir me. Me kommer före le.",
+  "sv": "Ge mig den inte nu!"
+ },
+ {
+  "id": "imper-022",
+  "topic": "imper",
+  "rule": "imp-negpron",
+  "type": "rw",
+  "q": "Lève-toi avant sept heures !",
+  "cue": "ne … pas",
+  "a": "Ne te lève pas avant sept heures !",
+  "alt": [
+   "Ne lève te pas avant sept heures !",
+   "Te ne lève pas avant sept heures !"
+  ],
+  "why": "Nekad imperativ av ett reflexivt verb: toi blir te och står före verbet, ne före te.",
+  "sv": "Gå inte upp före klockan sju!"
+ },
+ {
+  "id": "imper-023",
+  "topic": "imper",
+  "rule": "imp-negpron",
+  "type": "rw",
+  "q": "Parlez-lui de vos vacances !",
+  "cue": "ne … pas",
+  "a": "Ne lui parlez pas de vos vacances !",
+  "alt": [
+   "Ne parlez lui pas de vos vacances !",
+   "Lui ne parlez pas de vos vacances !"
+  ],
+  "why": "I nekad imperativ flyttar lui före verbet: ne lui parlez pas.",
+  "sv": "Prata inte med honom om er semester!"
+ },
+ {
+  "id": "imper-024",
+  "topic": "imper",
+  "rule": "imp-negpron",
+  "type": "rw",
+  "q": "Asseyez-vous ici !",
+  "cue": "ne … pas",
+  "a": "Ne vous asseyez pas ici !",
+  "alt": [
+   "Ne asseyez vous pas ici !",
+   "Vous ne asseyez pas ici !"
+  ],
+  "why": "S'asseoir är reflexivt. I nekad imperativ står vous före verbet och ne före vous.",
+  "sv": "Sätt er inte här!"
+ },
+ {
+  "id": "imper-025",
+  "topic": "imper",
+  "rule": "imp-negpron",
+  "type": "rw",
+  "q": "Dis-leur la vérité !",
+  "cue": "ne … pas",
+  "a": "Ne leur dis pas la vérité !",
+  "alt": [
+   "Ne dis leur pas la vérité !",
+   "Leur ne dis pas la vérité !"
+  ],
+  "why": "I nekad imperativ står leur före verbet, mellan ne och verbet: ne leur dis pas.",
+  "sv": "Säg inte sanningen till dem!"
+ }
+]

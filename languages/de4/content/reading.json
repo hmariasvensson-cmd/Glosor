@@ -1861,5 +1861,614 @@
         "g": ""
       }
     }
+  },
+  {
+    "id": "t4-r-t1",
+    "sec": "t1",
+    "title": "Was machst du in deiner Freizeit?",
+    "lines": [
+      {
+        "fr": "Unsere Schülerzeitung hat vier Jugendliche gefragt: Wie sieht euer Alltag aus, und was macht ihr in eurer Freizeit?",
+        "sv": "Vår skoltidning har frågat fyra ungdomar: Hur ser er vardag ut, och vad gör ni på fritiden?"
+      },
+      {
+        "fr": "Jonas (17): Unter der Woche habe ich leider wenig Freizeit.",
+        "sv": "Jonas (17): På vardagarna har jag tyvärr lite fritid."
+      },
+      {
+        "fr": "Mein Wecker klingelt schon um sechs, denn ich fahre jeden Morgen eine Stunde mit dem Bus zur Schule.",
+        "sv": "Min väckarklocka ringer redan klockan sex, för jag åker buss en timme till skolan varje morgon."
+      },
+      {
+        "fr": "Montags und donnerstags habe ich nach der Schule Handballtraining, und abends muss ich noch Hausaufgaben machen.",
+        "sv": "På måndagar och torsdagar har jag handbollsträning efter skolan, och på kvällarna måste jag göra läxor också."
+      },
+      {
+        "fr": "Deshalb freue ich mich immer auf das Wochenende. Samstags schlafe ich lange, und abends treffe ich mich mit meinem Freundeskreis.",
+        "sv": "Därför ser jag alltid fram emot helgen. På lördagar sover jag länge, och på kvällen träffar jag mitt kompisgäng."
+      },
+      {
+        "fr": "Meistens gehen wir ins Kino, oder wir sitzen einfach gemütlich bei jemandem zu Hause.",
+        "sv": "Oftast går vi på bio, eller så sitter vi bara och myser hemma hos någon."
+      },
+      {
+        "fr": "Mira (16): Ich bin eher ein ruhiger Mensch. In meiner Freizeit lese ich viel und zeichne gern.",
+        "sv": "Mira (16): Jag är snarare en lugn person. På fritiden läser jag mycket och tecknar gärna."
+      },
+      {
+        "fr": "Am liebsten sitze ich sonntags am Vormittag allein in einem Café und schreibe in mein Tagebuch.",
+        "sv": "Allra helst sitter jag ensam på ett kafé på söndagsförmiddagarna och skriver i min dagbok."
+      },
+      {
+        "fr": "Viele finden das langweilig, aber für mich ist es die perfekte Pause vom Alltag.",
+        "sv": "Många tycker att det är tråkigt, men för mig är det den perfekta pausen från vardagen."
+      },
+      {
+        "fr": "Letzten Monat habe ich sogar eine ganze Woche ohne Handy gelebt.",
+        "sv": "Förra månaden levde jag till och med en hel vecka utan mobil."
+      },
+      {
+        "fr": "Am Anfang war das schwer, aber danach habe ich mich viel ruhiger gefühlt.",
+        "sv": "I början var det svårt, men efteråt kände jag mig mycket lugnare."
+      },
+      {
+        "fr": "Leon (18): Seit dem Sommer arbeite ich samstags in einem Supermarkt. Deshalb habe ich nur den Sonntag frei.",
+        "sv": "Leon (18): Sedan i somras jobbar jag på lördagarna i en mataffär. Därför är jag bara ledig på söndagen."
+      },
+      {
+        "fr": "Früher habe ich am Wochenende viel unternommen. Jetzt faulenze ich sonntags oft einfach auf dem Sofa.",
+        "sv": "Förr hittade jag på mycket på helgerna. Nu slappar jag ofta bara på soffan på söndagarna."
+      },
+      {
+        "fr": "Das klingt vielleicht langweilig, aber ich verdiene mein eigenes Geld, und das ist mir wichtig.",
+        "sv": "Det låter kanske tråkigt, men jag tjänar mina egna pengar, och det är viktigt för mig."
+      },
+      {
+        "fr": "In den Osterferien habe ich etwas Großes vor: Ich will mit zwei Freunden mit dem Fahrrad an die Ostsee fahren.",
+        "sv": "Under påsklovet har jag något stort på gång: jag ska cykla till Östersjön med två kompisar."
+      },
+      {
+        "fr": "Aylin (17): Mein Kalender ist immer voll: Montags singe ich im Chor, mittwochs habe ich Gitarrenunterricht, und freitags gehe ich schwimmen.",
+        "sv": "Aylin (17): Min kalender är alltid full: på måndagar sjunger jag i kör, på onsdagar har jag gitarrlektion, och på fredagar går jag och simmar."
+      },
+      {
+        "fr": "Meine Mutter sagt, dass ich mich auch mal ausruhen muss, und vielleicht hat sie recht.",
+        "sv": "Min mamma säger att jag måste vila ibland också, och hon har kanske rätt."
+      },
+      {
+        "fr": "Manchmal vergesse ich sogar Verabredungen mit Freundinnen, weil ich so viel vorhabe.",
+        "sv": "Ibland glömmer jag till och med träffar med kompisar, eftersom jag har så mycket för mig."
+      },
+      {
+        "fr": "Trotzdem möchte ich mit keinem Hobby aufhören, denn alles macht mir großen Spaß.",
+        "sv": "Ändå vill jag inte sluta med någon hobby, för allt är jätteroligt."
+      },
+      {
+        "fr": "Und du? Wie verbringst du deine Freizeit? Schreib uns eine E-Mail!",
+        "sv": "Och du? Hur tillbringar du din fritid? Skicka ett mejl till oss!"
+      }
+    ],
+    "questions": [
+      {
+        "type": "helhet",
+        "q": "Vad är det för text?",
+        "opts": [
+          "Fyra kompisar planerar en cykeltur till Östersjön",
+          "En lärare ger tips om hur man ska använda sin fritid",
+          "En enkät i en skoltidning där fyra ungdomar berättar om sin vardag och fritid",
+          "Fyra ungdomar diskuterar hur mycket läxor man borde ha"
+        ],
+        "a": 2,
+        "why": "Texten börjar med „Unsere Schülerzeitung hat vier Jugendliche gefragt“, och sedan svarar Jonas, Mira, Leon och Aylin på frågan om vardag och fritid."
+      },
+      {
+        "type": "detalj",
+        "q": "Varför ringer Jonas väckarklocka redan klockan sex?",
+        "opts": [
+          "Han åker buss en timme till skolan",
+          "Han har handbollsträning på morgonen",
+          "Han måste göra läxor innan skolan",
+          "Han jobbar i en mataffär"
+        ],
+        "a": 0,
+        "why": "Han säger „denn ich fahre jeden Morgen eine Stunde mit dem Bus zur Schule“."
+      },
+      {
+        "type": "detalj",
+        "q": "Vad gjorde Mira förra månaden?",
+        "opts": [
+          "Hon började jobba på ett kafé",
+          "Hon levde en hel vecka utan mobil",
+          "Hon skrev klart sin dagbok",
+          "Hon gick en tecknarkurs"
+        ],
+        "a": 1,
+        "why": "Hon säger „Letzten Monat habe ich sogar eine ganze Woche ohne Handy gelebt“."
+      },
+      {
+        "type": "detalj",
+        "q": "Varför är Leon bara ledig på söndagen?",
+        "opts": [
+          "Han har träning på lördagarna",
+          "Han hälsar på sina morföräldrar på lördagarna",
+          "Han cyklar till Östersjön varje lördag",
+          "Han jobbar i en mataffär på lördagarna"
+        ],
+        "a": 3,
+        "why": "Han säger „Seit dem Sommer arbeite ich samstags in einem Supermarkt. Deshalb habe ich nur den Sonntag frei“."
+      },
+      {
+        "type": "detalj",
+        "q": "Vad säger Aylins mamma?",
+        "opts": [
+          "Att Aylin också måste vila ibland",
+          "Att Aylin ska sluta sjunga i kören",
+          "Att Aylin borde träffa sina kompisar oftare",
+          "Att Aylin ska börja simma"
+        ],
+        "a": 0,
+        "why": "Aylin berättar: „Meine Mutter sagt, dass ich mich auch mal ausruhen muss“."
+      },
+      {
+        "type": "tolkning",
+        "q": "Vem av de fyra verkar ha svårast att hinna med allt?",
+        "opts": [
+          "Mira, eftersom hon sitter ensam på kafé",
+          "Aylin, eftersom hon ibland glömmer träffar när hon har så mycket för sig",
+          "Leon, eftersom han slappar på soffan",
+          "Jonas, eftersom han sover länge på lördagarna"
+        ],
+        "a": 1,
+        "why": "Aylins kalender är „immer voll“, och hon säger „Manchmal vergesse ich sogar Verabredungen …, weil ich so viel vorhabe“."
+      }
+    ],
+    "gloss": {
+      "schülerzeitung": {
+        "t": "die Schülerzeitung (-en)",
+        "sv": "skoltidning",
+        "g": "f"
+      },
+      "jugendliche": {
+        "t": "der/die Jugendliche (-n)",
+        "sv": "ungdom, tonåring",
+        "g": "pl"
+      },
+      "alltag": {
+        "t": "der Alltag",
+        "sv": "vardag",
+        "g": "m"
+      },
+      "freizeit": {
+        "t": "die Freizeit",
+        "sv": "fritid",
+        "g": "f"
+      },
+      "wecker": {
+        "t": "der Wecker",
+        "sv": "väckarklocka",
+        "g": "m"
+      },
+      "klingelt": {
+        "t": "klingeln",
+        "sv": "ringa",
+        "g": ""
+      },
+      "handballtraining": {
+        "t": "das Handballtraining",
+        "sv": "handbollsträning",
+        "g": "n"
+      },
+      "freundeskreis": {
+        "t": "der Freundeskreis",
+        "sv": "vänkrets, kompisgäng",
+        "g": "m"
+      },
+      "meistens": {
+        "t": "meistens",
+        "sv": "oftast",
+        "g": ""
+      },
+      "gemütlich": {
+        "t": "gemütlich",
+        "sv": "mysig, i lugn och ro",
+        "g": ""
+      },
+      "ruhiger": {
+        "t": "ruhig",
+        "sv": "lugn",
+        "g": ""
+      },
+      "zeichne": {
+        "t": "zeichnen",
+        "sv": "teckna",
+        "g": ""
+      },
+      "tagebuch": {
+        "t": "das Tagebuch (-bücher)",
+        "sv": "dagbok",
+        "g": "n"
+      },
+      "langweilig": {
+        "t": "langweilig",
+        "sv": "tråkig",
+        "g": ""
+      },
+      "handy": {
+        "t": "das Handy (-s)",
+        "sv": "mobiltelefon",
+        "g": "n"
+      },
+      "unternommen": {
+        "t": "unternehmen",
+        "sv": "hitta på, göra (något)",
+        "g": ""
+      },
+      "faulenze": {
+        "t": "faulenzen",
+        "sv": "slappa, lata sig",
+        "g": ""
+      },
+      "verdiene": {
+        "t": "verdienen",
+        "sv": "tjäna (pengar)",
+        "g": ""
+      },
+      "osterferien": {
+        "t": "die Osterferien",
+        "sv": "påsklov",
+        "g": "pl"
+      },
+      "ostsee": {
+        "t": "die Ostsee",
+        "sv": "Östersjön",
+        "g": "f"
+      },
+      "kalender": {
+        "t": "der Kalender (-)",
+        "sv": "kalender",
+        "g": "m"
+      },
+      "gitarrenunterricht": {
+        "t": "der Gitarrenunterricht",
+        "sv": "gitarrlektioner",
+        "g": "m"
+      },
+      "ausruhen": {
+        "t": "sich ausruhen",
+        "sv": "vila sig",
+        "g": ""
+      },
+      "recht": {
+        "t": "recht haben",
+        "sv": "ha rätt",
+        "g": ""
+      },
+      "verabredungen": {
+        "t": "die Verabredung (-en)",
+        "sv": "avtalad träff",
+        "g": "f"
+      },
+      "vorhabe": {
+        "t": "vorhaben",
+        "sv": "ha för sig, planera",
+        "g": ""
+      },
+      "aufhören": {
+        "t": "aufhören (mit + Dat.)",
+        "sv": "sluta (med)",
+        "g": ""
+      },
+      "verbringst": {
+        "t": "verbringen",
+        "sv": "tillbringa",
+        "g": ""
+      }
+    }
+  },
+  {
+    "id": "t4-r-t6",
+    "sec": "t6",
+    "title": "Ein Tag bei „Jugend musiziert“",
+    "lines": [
+      {
+        "fr": "Samstagmorgen, halb neun, in einer Musikschule in Kassel. Im Flur ist es schon voll.",
+        "sv": "Lördag morgon, halv nio, på en musikskola i Kassel. I korridoren är det redan fullt."
+      },
+      {
+        "fr": "Überall stimmen Jugendliche ihre Instrumente, Eltern tragen Notenständer, und aus einem Übungsraum hört man eine Trompete.",
+        "sv": "Överallt stämmer ungdomar sina instrument, föräldrar bär notställ, och från ett övningsrum hör man en trumpet."
+      },
+      {
+        "fr": "Heute findet hier der Regionalwettbewerb von „Jugend musiziert“ statt.",
+        "sv": "I dag hålls regionaltävlingen i ”Jugend musiziert” här."
+      },
+      {
+        "fr": "Diesen Wettbewerb gibt es schon seit 1964, und jedes Jahr machen Tausende Kinder und Jugendliche in ganz Deutschland mit.",
+        "sv": "Den här tävlingen har funnits sedan 1964, och varje år deltar tusentals barn och ungdomar i hela Tyskland."
+      },
+      {
+        "fr": "Wer in der ersten Runde sehr gut spielt, darf weiter zum Landeswettbewerb und vielleicht sogar zum Bundeswettbewerb.",
+        "sv": "Den som spelar mycket bra i första omgången får gå vidare till delstatstävlingen och kanske till och med till den nationella tävlingen."
+      },
+      {
+        "fr": "Die fünfzehnjährige Hanna sitzt mit ihrem Cello vor dem Saal und wartet. „Ich habe schreckliches Lampenfieber“, sagt sie und lacht nervös.",
+        "sv": "Femtonåriga Hanna sitter med sin cello utanför salen och väntar. ”Jag har hemsk rampfeber”, säger hon och skrattar nervöst."
+      },
+      {
+        "fr": "„Seit Oktober übe ich jeden Tag zwei Stunden. Meine Lehrerin ist ziemlich streng, aber sie hat mir sehr geholfen.“",
+        "sv": "”Sedan oktober övar jag två timmar varje dag. Min lärare är ganska sträng, men hon har hjälpt mig mycket.”"
+      },
+      {
+        "fr": "Hanna spielt drei Stücke: eins von Bach, eins von Schumann und ein modernes Stück. Ihre Mutter begleitet sie am Klavier.",
+        "sv": "Hanna spelar tre stycken: ett av Bach, ett av Schumann och ett modernt stycke. Hennes mamma ackompanjerar henne på piano."
+      },
+      {
+        "fr": "Um zehn Uhr ist Hanna dran. Vorne im Saal sitzt die Jury, drei Musiker an einem langen Tisch, und dahinter etwa dreißig Zuhörer.",
+        "sv": "Klockan tio är det Hannas tur. Längst fram i salen sitter juryn, tre musiker vid ett långt bord, och bakom dem ungefär trettio åhörare."
+      },
+      {
+        "fr": "Hanna stimmt ihr Cello, atmet tief ein und beginnt. Nach zwanzig Minuten ist alles vorbei, und das Publikum klatscht laut.",
+        "sv": "Hanna stämmer sin cello, andas in djupt och börjar. Efter tjugo minuter är allt över, och publiken applåderar högt."
+      },
+      {
+        "fr": "Nicht alle Teilnehmer spielen klassische Musik. In manchen Jahren gibt es auch Kategorien für Popmusik, zum Beispiel für Gesang, E-Gitarre oder Schlagzeug.",
+        "sv": "Alla deltagare spelar inte klassisk musik. Vissa år finns det också kategorier för popmusik, till exempel för sång, elgitarr eller trummor."
+      },
+      {
+        "fr": "Der siebzehnjährige Leo spielt heute Schlagzeug. „Für mich ist der Wettbewerb kein Stress“, sagt er.",
+        "sv": "Sjuttonårige Leo spelar trummor i dag. ”För mig är tävlingen ingen stress”, säger han."
+      },
+      {
+        "fr": "„Ich muss nicht gewinnen. Ich will einfach auf der Bühne stehen und zeigen, was ich kann.“",
+        "sv": "”Jag måste inte vinna. Jag vill bara stå på scenen och visa vad jag kan.”"
+      },
+      {
+        "fr": "Am Nachmittag kommen die Ergebnisse. Die Jury kann bis zu 25 Punkte geben.",
+        "sv": "På eftermiddagen kommer resultaten. Juryn kan ge upp till 25 poäng."
+      },
+      {
+        "fr": "Hanna bekommt 23 Punkte und einen ersten Preis. Damit darf sie im März zum Landeswettbewerb fahren.",
+        "sv": "Hanna får 23 poäng och ett förstapris. Därmed får hon åka till delstatstävlingen i mars."
+      },
+      {
+        "fr": "Leo bekommt 20 Punkte und einen zweiten Preis. Er ist trotzdem zufrieden: „Nächstes Jahr komme ich wieder!“",
+        "sv": "Leo får 20 poäng och ett andrapris. Han är ändå nöjd: ”Nästa år kommer jag tillbaka!”"
+      },
+      {
+        "fr": "Und Hanna? „Ich kann es noch gar nicht glauben“, sagt sie. „Aber jetzt gehe ich erst mal Eis essen, und morgen übe ich weiter!“",
+        "sv": "Och Hanna? ”Jag kan fortfarande inte tro det”, säger hon. ”Men nu ska jag först gå och äta glass, och i morgon övar jag vidare!”"
+      }
+    ],
+    "questions": [
+      {
+        "type": "helhet",
+        "q": "Vad handlar reportaget om?",
+        "opts": [
+          "Hur man blir antagen till en musikhögskola",
+          "En dag på en regional musiktävling för barn och ungdomar",
+          "En konsert med en berömd cellist",
+          "Ett band som spelar popmusik i Kassel"
+        ],
+        "a": 1,
+        "why": "Reportaget följer en dag på „Regionalwettbewerb von Jugend musiziert“ och berättar om Hanna och Leo, som tävlar där."
+      },
+      {
+        "type": "detalj",
+        "q": "Vad händer med den som spelar mycket bra i första omgången?",
+        "opts": [
+          "Man får ett stipendium",
+          "Man får spela på en stor konsert i Kassel",
+          "Man får gå vidare till delstatstävlingen",
+          "Man får börja på en musikskola"
+        ],
+        "a": 2,
+        "why": "Det står „Wer in der ersten Runde sehr gut spielt, darf weiter zum Landeswettbewerb“."
+      },
+      {
+        "type": "detalj",
+        "q": "Hur har Hanna förberett sig?",
+        "opts": [
+          "Hon har övat två timmar varje dag sedan oktober",
+          "Hon har tagit extra lektioner hos juryn",
+          "Hon har spelat på många konserter",
+          "Hon har övat med ett band"
+        ],
+        "a": 0,
+        "why": "Hon säger „Seit Oktober übe ich jeden Tag zwei Stunden“."
+      },
+      {
+        "type": "detalj",
+        "q": "Vem ackompanjerar Hanna?",
+        "opts": [
+          "Hennes lärare",
+          "Leo på trummor",
+          "En pianist från musikskolan",
+          "Hennes mamma, på piano"
+        ],
+        "a": 3,
+        "why": "Det står „Ihre Mutter begleitet sie am Klavier“."
+      },
+      {
+        "type": "detalj",
+        "q": "Hur går det för Hanna?",
+        "opts": [
+          "Hon får 20 poäng och ett andrapris",
+          "Hon får 23 poäng och får åka till delstatstävlingen i mars",
+          "Hon får 25 poäng och vinner hela tävlingen",
+          "Hon får vänta till nästa år på resultatet"
+        ],
+        "a": 1,
+        "why": "Det står „Hanna bekommt 23 Punkte und einen ersten Preis. Damit darf sie im März zum Landeswettbewerb fahren“."
+      },
+      {
+        "type": "tolkning",
+        "q": "Hur skiljer sig Leo från Hanna?",
+        "opts": [
+          "Leo är lugn och vill mest stå på scenen, medan Hanna är mycket nervös",
+          "Leo är besviken på sitt resultat, medan Hanna är nöjd",
+          "Leo har övat mer än Hanna",
+          "Leo vill vinna till varje pris, medan Hanna inte bryr sig"
+        ],
+        "a": 0,
+        "why": "Leo säger „Für mich ist der Wettbewerb kein Stress … Ich will einfach auf der Bühne stehen“, medan Hanna har „schreckliches Lampenfieber“."
+      }
+    ],
+    "gloss": {
+      "flur": {
+        "t": "der Flur (-e)",
+        "sv": "korridor, hall",
+        "g": "m"
+      },
+      "stimmen": {
+        "t": "stimmen",
+        "sv": "stämma (ett instrument)",
+        "g": ""
+      },
+      "notenständer": {
+        "t": "der Notenständer (-)",
+        "sv": "notställ",
+        "g": "m"
+      },
+      "übungsraum": {
+        "t": "der Übungsraum (-räume)",
+        "sv": "övningsrum",
+        "g": "m"
+      },
+      "trompete": {
+        "t": "die Trompete (-n)",
+        "sv": "trumpet",
+        "g": "f"
+      },
+      "findet": {
+        "t": "stattfinden",
+        "sv": "äga rum, hållas",
+        "g": ""
+      },
+      "wettbewerb": {
+        "t": "der Wettbewerb (-e)",
+        "sv": "tävling",
+        "g": "m"
+      },
+      "runde": {
+        "t": "die Runde (-n)",
+        "sv": "omgång",
+        "g": "f"
+      },
+      "saal": {
+        "t": "der Saal (Säle)",
+        "sv": "sal",
+        "g": "m"
+      },
+      "lampenfieber": {
+        "t": "das Lampenfieber",
+        "sv": "rampfeber",
+        "g": "n"
+      },
+      "nervös": {
+        "t": "nervös",
+        "sv": "nervös",
+        "g": ""
+      },
+      "übe": {
+        "t": "üben",
+        "sv": "öva",
+        "g": ""
+      },
+      "streng": {
+        "t": "streng",
+        "sv": "sträng",
+        "g": ""
+      },
+      "stücke": {
+        "t": "das Stück (-e)",
+        "sv": "(musik)stycke",
+        "g": "n"
+      },
+      "begleitet": {
+        "t": "begleiten",
+        "sv": "ackompanjera, följa med",
+        "g": ""
+      },
+      "dran": {
+        "t": "dran sein",
+        "sv": "stå på tur",
+        "g": ""
+      },
+      "jury": {
+        "t": "die Jury (-s)",
+        "sv": "jury",
+        "g": "f"
+      },
+      "zuhörer": {
+        "t": "der Zuhörer (-)",
+        "sv": "åhörare",
+        "g": "m"
+      },
+      "atmet": {
+        "t": "einatmen",
+        "sv": "andas in",
+        "g": ""
+      },
+      "publikum": {
+        "t": "das Publikum",
+        "sv": "publik",
+        "g": "n"
+      },
+      "klatscht": {
+        "t": "klatschen",
+        "sv": "applådera, klappa händerna",
+        "g": ""
+      },
+      "teilnehmer": {
+        "t": "der Teilnehmer (-)",
+        "sv": "deltagare",
+        "g": "m"
+      },
+      "kategorien": {
+        "t": "die Kategorie (-n)",
+        "sv": "kategori",
+        "g": "f"
+      },
+      "gesang": {
+        "t": "der Gesang",
+        "sv": "sång",
+        "g": "m"
+      },
+      "schlagzeug": {
+        "t": "das Schlagzeug (-e)",
+        "sv": "trummor, trumset",
+        "g": "n"
+      },
+      "gewinnen": {
+        "t": "gewinnen",
+        "sv": "vinna",
+        "g": ""
+      },
+      "bühne": {
+        "t": "die Bühne (-n)",
+        "sv": "scen",
+        "g": "f"
+      },
+      "ergebnisse": {
+        "t": "das Ergebnis (-se)",
+        "sv": "resultat",
+        "g": "n"
+      },
+      "punkte": {
+        "t": "der Punkt (-e)",
+        "sv": "poäng",
+        "g": "m"
+      },
+      "preis": {
+        "t": "der Preis (-e)",
+        "sv": "pris (utmärkelse)",
+        "g": "m"
+      },
+      "zufrieden": {
+        "t": "zufrieden",
+        "sv": "nöjd",
+        "g": ""
+      }
+    }
   }
 ]

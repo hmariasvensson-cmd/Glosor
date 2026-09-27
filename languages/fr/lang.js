@@ -7,7 +7,7 @@ LANGUAGES.fr = {
   courseGy25: "Moderna språk – fortsättning, nivå 1",   // samma kurs i Gy25 (gymnasiet från juli 2025)
   // Elevens lärobok. Kapitel märkta #id|Namn|bok i words.txt kommer från boken (se docs/BOK.md).
   book: {title: "Escalade", authors: "Waagaard, Rödemark, Jonchère och Sandberg"},
-  level: "A2 → B1",           // ungefärlig nivå i europeiska språkskalan (GERS/CEFR)
+  level: "A2",                // ungefärlig GERS-nivå: steg 3 ≈ A2.1 enligt Skolverket (provmålet B1 står i exam)
   inLang: "på franska",       // "Skriv på franska"
   tts: "fr-FR",               // röst för uppläsning
   storageKey: "franska-glosor-v2", // ÄNDRA ALDRIG: sparade framsteg ligger under den här nyckeln
@@ -52,6 +52,13 @@ LANGUAGES.fr = {
       {id: "comp", name: "Jämförelser", sub: "plus grand que, meilleur, mieux, le plus"},
       {id: "neg", name: "Negation och ordföljd", sub: "Je ne l'ai jamais vu.", secs: ["k3", "k5"]},
       {id: "quest", name: "Frågor", sub: "Où habites-tu ? Est-ce que tu viens ?"},
+      {id: "fut", name: "Futur: futur simple och futur proche", sub: "Je vais partir. Je partirai. Quand je serai grand …", secs: ["k8"]},
+      {id: "cond", name: "Conditionnel", sub: "Je voudrais un café. Tu devrais dormir. J'aimerais partir."},
+      {id: "tps", name: "Imparfait eller passé composé?", sub: "Je lisais quand il a sonné.", secs: ["k4", "k7", "k12"]},
+      {id: "pqp", name: "Plus-que-parfait och venir de", sub: "Le film avait déjà commencé. Je viens de manger.", secs: ["k2", "k12"]},
+      {id: "pton", name: "Betonade pronomen: moi, toi, lui, eux", sub: "avec moi, chez eux, plus grand que toi, c'est lui", secs: ["k2"]},
+      {id: "imper", name: "Imperativ", sub: "Parle ! Allons-y ! Sois sage ! Donne-le-moi !"},
+      {id: "refl", name: "Reflexiva verb i presens", sub: "Je me lève. Je vais me coucher. Je ne me lève pas.", secs: ["k1", "k7"]},
       {id: "bok", name: "Bokens övningar", sub: "Övningarna ur Escalade: översätt, fyll i, rätt eller fel", secs: ["k1", "k2", "k3", "k4", "k5", "k6", "k7", "k8", "k10", "k12"]},
       {id: "err", name: "Hitta felet", sub: "En mening har ett fel. Vilket ord?"}
     ],
@@ -68,6 +75,7 @@ LANGUAGES.fr = {
       "q-inv": "Fråga med inversion", "q-est-ce": "Fråga med est-ce que",
       "poss-sing": "Possessiva: en ägare", "poss-plur": "Possessiva: flera ägare", "poss-voc": "mon/ton/son framför vokal",
       "adjf-fem": "Adjektiv i femininum", "adjf-plur": "Adjektiv i plural", "adjf-irr": "Oregelbundna adjektiv",
+      "fut-proche": "Futur proche: aller + infinitiv", "fut-reg": "Futur simple: regelbundna verb", "fut-irr": "Futur simple: oregelbundna stammar", "fut-quand": "Quand + futur", "fut-byt": "Byt mellan futur proche och futur simple", "cond-form": "Conditionnel: bildning", "cond-poli": "Artighet: je voudrais, pourriez-vous", "cond-conseil": "Råd: tu devrais, à ta place", "cond-souhait": "Önskningar: j'aimerais", "cond-si": "Si + imparfait → conditionnel", "cond-rai": "Futur (-rai) eller conditionnel (-rais)", "tps-bakgrund": "Bakgrund och beskrivning", "tps-vana": "Vanor och upprepning", "tps-handelse": "Händelser", "tps-avbrott": "Pågående och avbrott", "tps-signal": "Signalord", "pqp-avoir": "Plus-que-parfait med avoir", "pqp-etre": "Plus-que-parfait med être", "venir-de": "Venir de: just ha gjort", "en-train": "Être en train de", "pton-prep": "Efter preposition", "pton-comp": "Efter que i jämförelser", "pton-cest": "c'est moi, c'est lui", "pton-bet": "Moi, je … och korta svar", "pton-a": "à moi (tillhöra)", "imp-form": "Imperativens former", "imp-irr": "Oregelbunden imperativ", "imp-neg": "Nekad imperativ", "imp-pron": "Pronomen i imperativ", "imp-negpron": "Nekad imperativ med pronomen", "refl-pres": "Reflexivpronomen i presens", "refl-inf": "Reflexiva verb med infinitiv", "refl-neg": "Reflexiva verb med negation", "refl-sens": "Reflexivt på franska, inte på svenska",
       "bok-oversatt": "Översätt (boken)", "bok-lucka": "Fyll i (boken)", "bok-vf": "Rätt eller fel (boken)",
       "maj-nom": "Stor bokstav: invånare", "maj-adj": "Liten bokstav: adjektiv", "maj-langue": "Liten bokstav: språk"
     }

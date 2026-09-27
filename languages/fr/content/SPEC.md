@@ -1,6 +1,6 @@
 # Innehåll till nya övningar i Glosor (franska)
 
-Eleven: Oscar, svensk gymnasieelev i Franska 3 (Moderna språk 3), mål betyget A (nära B1). Texterna ska vara på nivå A2 till låg B1: korta meningar, vanliga ord, men med passé composé, imparfait, futur proche och bindeord. De ska vara naturlig, korrekt franska (stavning, accenter, kongruens, genus). Läs först `/Users/maria/Glosor/languages/fr/words.txt`. Där finns kapitlen (rader som börjar med #, t.ex. `#k2|Kap 2 · Arrivée à Paris`) och glosorna. Använd kapitlets glosor i texterna.
+Eleven: svensk gymnasieelev i Franska 3 (Moderna språk 3), mål betyget A (nära B1). Texterna ska vara på nivå A2 till låg B1: korta meningar, vanliga ord, men med passé composé, imparfait, futur proche och bindeord. De ska vara naturlig, korrekt franska (stavning, accenter, kongruens, genus). Läs först `/Users/maria/Glosor/languages/fr/words.txt`. Där finns kapitlen (rader som börjar med #, t.ex. `#k2|Kap 2 · Arrivée à Paris`) och glosorna. Använd kapitlets glosor i texterna.
 
 Kapitel-id och teman:
 - k1: Vie et loisirs (fritid, sport, klättring, träning, beskriva personer)

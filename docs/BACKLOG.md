@@ -10,7 +10,7 @@ Underlag finns i `docs/ovningsforslag.md` (franska), `docs/ovningsforslag-tyska.
 
 ## Språkprov (det verkliga målet)
 
-Båda eleverna ska söka musikutbildning utomlands. Oscar behöver visa **B1 i franska** (DELF B1) för Frankrike, och Emma behöver visa **B2 i tyska** för Tyskland. Musikhögskolorna godtar oftast Goethe-Zertifikat B2, telc B2 eller TestDaF, men kontrollera vad just deras skolor kräver. Betyg i kursen spelar mindre roll.
+Båda eleverna ska söka musikutbildning utomlands. Eleven i franska behöver visa **B1 i franska** (DELF B1) för Frankrike, och eleven i tyska behöver visa **B2 i tyska** för Tyskland. Musikhögskolorna godtar oftast Goethe-Zertifikat B2, telc B2 eller TestDaF, men kontrollera vad just deras skolor kräver. Betyg i kursen spelar mindre roll.
 
 - **P2: Kontrollera provformaten** mot provgivarnas egna exempelprov (Goethe Modellsatz B2, DELF B1 sujets démo): antal frågor per Teil/exercice, tider och exakt formulering av uppgifterna. Uppgifterna i appen är skrivna efter minnet av formatet.
 - **P2: Fler provuppgifter**, så att provsimuleringen inte upprepar sig (i dag 16 tyska och 14 franska uppgifter). Tyska 4 har ingen provträning, eftersom Goethe B2 är för svårt där. Ett B1-prov (Goethe B1) kan läggas till.
@@ -19,7 +19,7 @@ Båda eleverna ska söka musikutbildning utomlands. Oscar behöver visa **B1 i f
 
 ## Repetition och inlärning
 
-- **P3: Byt schemaläggare till FSRS** (Oscar önskade 2026-09-27 ett fast schema: nästa pass, efter 3 pass, sedan 3, 7 och 20 dagar, vilket är byggt; FSRS bara om han vill) (ts-fsrs, MIT, finns som UMD på jsDelivr). Räkna i dagar i stället för pass, med retention 0,9. Lägg kortdata i ett nytt fält och behåll `s`/`due` för statistik och topplista. Det enklare stegschemat (se KLART.md) löser det värsta, så detta är mindre brådskande.
+- **P3: Byt schemaläggare till FSRS** (eleven önskade 2026-09-27 ett fast schema: nästa pass, efter 3 pass, sedan 3, 7 och 20 dagar, vilket är byggt; FSRS bara om han vill) (ts-fsrs, MIT, finns som UMD på jsDelivr). Räkna i dagar i stället för pass, med retention 0,9. Lägg kortdata i ett nytt fält och behåll `s`/`due` för statistik och topplista. Det enklare stegschemat (se KLART.md) löser det värsta, så detta är mindre brådskande.
 - **P3: Självbedömning i fyra steg** (Igen/Svårt/Bra/Lätt) i skrivfrågor.
 - **P3: Mina ord:** koppla böjda former till grundformen (som Lutes "parent terms"). Ord med glosa sparas redan i grundform, men ord utan glosa sparas som de står i texten.
 - **P3: Tatoeba-meningar även för tyska** (`python3 tools/tatoeba.py de`) och fler franska ord (i dag har 136 av 258 ord minst en mening).
@@ -60,7 +60,7 @@ Emma pluggar på egen hand, utan kurs, lärare och lärobok. Tyskan bygger därf
 - **P2: Alla tre språken från steg 1 till steg 7** (franska, tyska och italienska, Moderna språk 1–7). I dag finns Franska 3, Tyska 4 och 5 och Italienska 1 och 2. Det saknas Franska 1, 2 och 4–7, Tyska 1–3, 6 och 7, och Italienska 3–7, alltså 15 kurser.
   - Varje kurs får en egen mapp i `languages/` och en egen `storageKey`. Bygg efter kursmallen (punkten ovan) och Skolverkets centrala innehåll för steget. Nivån ungefär enligt Skolverket: steg 1 A1.1, 2 A1.2, 3 A2.1, 4 A2.2, 5 B1.1, 6 B1.2, 7 B2.1. Stäm av nivåerna som redan står i Tyska 4 (B1) och Tyska 5 (mot B2) mot detta.
   - Varje kurs ska bygga vidare på den förra utan att orden överlappar (som Italienska 2 och 1), och ha `nextCourse` till nästa steg.
-  - Ordning: först kurserna närmast eleverna, alltså Franska 4 (Oscar efter Franska 3) och Tyska 6 (Emma efter Tyska 5). Därefter Italienska 3, sedan de lägre stegen (1–2 i franska, 1–3 i tyska) och sist steg 7.
+  - Ordning: först kurserna närmast eleverna, alltså Franska 4 (efter Franska 3) och Tyska 6 (efter Tyska 5). Därefter Italienska 3, sedan de lägre stegen (1–2 i franska, 1–3 i tyska) och sist steg 7.
   - Lägg de kommande kurserna i `languages/upcoming.json`, så att de syns som "kommer" i kursväljaren.
   - Innehållet är AI-skrivet och behöver granskas med stickprov, som de andra kurserna.
 

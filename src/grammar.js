@@ -78,7 +78,9 @@ function adjIds(k){
 // Bygger på luckfrågor med en lucka: ett felaktigt alternativ sätts in, och eleven ska hitta ordet som är fel
 // Regler där ett fel alternativ kan ge en annan men korrekt mening (den Jungen, der/den Lisa eingeladen hat),
 // eller där vardagsspråket godtar alternativet (indikativ i indirekt tal), tas inte med
-const ERR_SKIP=["rel-nom","rel-akk","k1-rede"];
+// Franskans tempusval (imparfait/passé composé, plus-que-parfait, futur/presens) och artighetsformer går ofta att försvara
+// i talspråk, så de passar inte heller som "Hitta felet"
+const ERR_SKIP=["rel-nom","rel-akk","k1-rede","tps-bakgrund","tps-vana","tps-handelse","tps-avbrott","tps-signal","pqp-avoir","pqp-etre","cond-poli","cond-rai","fut-reg"];
 const errBase=()=>Object.values(gramBank()).filter(x=>x.type==="gap"&&x.p.gaps.length===1&&!ERR_SKIP.includes(x.rule)&&x.alt.some(a=>!a.includes("…")));
 function errItem(id){
   const [,bid,ai]=id.split("|"), b=gramBank()[bid]; if(!b) return null;

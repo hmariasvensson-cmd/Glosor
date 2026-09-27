@@ -5,7 +5,7 @@ LANGUAGES.de4 = {
   title: "Tyska glosor",
   course: "Tyska 4",
   courseGy25: "Moderna språk – fortsättning, nivå 2",
-  level: "B1",
+  level: "A2 → B1",           // steg 4 ≈ A2.2 enligt Skolverket
   inLang: "på tyska",
   tts: "de-DE",
   htmlLang: "de",

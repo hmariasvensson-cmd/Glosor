@@ -1,0 +1,327 @@
+[
+ {
+  "id": "cond-001",
+  "topic": "cond",
+  "rule": "cond-poli",
+  "q": "Bonjour, je [voudrais] un croissant et un café, s'il vous plaît.",
+  "alt": [
+   "voudrait",
+   "vouloirais",
+   "voudrai"
+  ],
+  "why": "Je voudrais (jag skulle vilja ha) är det artiga sättet att beställa. Voudrai utan s är futur (jag kommer att vilja).",
+  "sv": "Hej, jag skulle vilja ha en croissant och en kaffe, tack."
+ },
+ {
+  "id": "cond-002",
+  "topic": "cond",
+  "rule": "cond-poli",
+  "q": "[Pourriez-vous] m'indiquer la station de métro la plus proche ?",
+  "alt": [
+   "Pourrais-vous",
+   "Pouvriez-vous",
+   "Pourrions-vous"
+  ],
+  "why": "Artig fråga med conditionnel: pourriez-vous (skulle ni kunna). Vous får ändelsen -iez, och stammen är pourr-.",
+  "sv": "Skulle ni kunna visa mig till närmaste tunnelbanestation?"
+ },
+ {
+  "id": "cond-003",
+  "topic": "cond",
+  "rule": "cond-poli",
+  "q": "Est-ce que tu [pourrais] fermer la fenêtre ? J'ai froid.",
+  "alt": [
+   "pourrait",
+   "pouvrais",
+   "pourrai"
+  ],
+  "why": "Tu pourrais = skulle du kunna. Tu får -ais; -ait är il-formen och pourrai (utan s) är futur i je-form.",
+  "sv": "Skulle du kunna stänga fönstret? Jag fryser."
+ },
+ {
+  "id": "cond-004",
+  "topic": "cond",
+  "rule": "cond-poli",
+  "q": "Nous [aimerions] réserver une table pour quatre personnes.",
+  "alt": [
+   "aimerons",
+   "aimions",
+   "aimeriez"
+  ],
+  "why": "Conditionnel av aimer med nous: aimer + -ions. Aimerons är futur och aimions imparfait.",
+  "sv": "Vi skulle vilja boka ett bord för fyra personer."
+ },
+ {
+  "id": "cond-005",
+  "topic": "cond",
+  "rule": "cond-poli",
+  "q": "Excusez-moi, vous [auriez] l'heure, s'il vous plaît ?",
+  "alt": [
+   "aurez",
+   "aviez",
+   "auraient"
+  ],
+  "why": "Vous auriez l'heure ? är ett artigt sätt att fråga vad klockan är. Avoir har stammen aur-, och vous får -iez.",
+  "sv": "Ursäkta, vet ni vad klockan är?"
+ },
+ {
+  "id": "cond-006",
+  "topic": "cond",
+  "rule": "cond-poli",
+  "q": "Vous [pourriez] parler plus fort ? On ne vous entend pas au fond.",
+  "alt": [
+   "pourrais",
+   "pourraient",
+   "pouvriez"
+  ],
+  "why": "Artig uppmaning: vous pourriez (skulle ni kunna). Stammen är pourr- med två r.",
+  "sv": "Skulle ni kunna prata högre? Vi hör er inte längst bak."
+ },
+ {
+  "id": "cond-007",
+  "topic": "cond",
+  "rule": "cond-conseil",
+  "q": "Tu as de la fièvre : tu [devrais] aller chez le médecin.",
+  "alt": [
+   "devrait",
+   "doivrais",
+   "devoirais"
+  ],
+  "why": "Råd ges med devoir i conditionnel: tu devrais = du borde. Stammen är devr-.",
+  "sv": "Du har feber, du borde gå till läkaren."
+ },
+ {
+  "id": "cond-008",
+  "topic": "cond",
+  "rule": "cond-conseil",
+  "q": "Vous [devriez] prendre le métro, c'est plus rapide que le bus.",
+  "alt": [
+   "devrait",
+   "doivriez",
+   "devoiriez"
+  ],
+  "why": "Vous devriez = ni borde. Vous får ändelsen -iez.",
+  "sv": "Ni borde ta tunnelbanan, det går snabbare än bussen."
+ },
+ {
+  "id": "cond-009",
+  "topic": "cond",
+  "rule": "cond-conseil",
+  "q": "À ta place, je [ferais] attention.",
+  "alt": [
+   "ferai",
+   "faisais",
+   "fairais"
+  ],
+  "why": "À ta place (om jag var du) följs av conditionnel: je ferais. Ferai utan s är futur, och faire har stammen fer-.",
+  "sv": "Om jag var du skulle jag se upp."
+ },
+ {
+  "id": "cond-010",
+  "topic": "cond",
+  "rule": "cond-conseil",
+  "q": "Il [vaudrait] mieux réserver les billets à l'avance.",
+  "alt": [
+   "valoirait",
+   "vaudrais",
+   "voudrait"
+  ],
+  "why": "Il vaudrait mieux = det vore bättre (valoir, stam vaudr-). Voudrait kommer från vouloir.",
+  "sv": "Det vore bättre att boka biljetterna i förväg."
+ },
+ {
+  "id": "cond-011",
+  "topic": "cond",
+  "rule": "cond-conseil",
+  "q": "On [devrait] manger moins de viande pour protéger les animaux.",
+  "alt": [
+   "devrions",
+   "devraient",
+   "doivrait"
+  ],
+  "why": "On böjs som il: on devrait (man borde). Devrions är nous-formen.",
+  "sv": "Man borde äta mindre kött för att skydda djuren."
+ },
+ {
+  "id": "cond-012",
+  "topic": "cond",
+  "rule": "cond-souhait",
+  "q": "[J'aimerais] bien visiter le Québec un jour.",
+  "alt": [
+   "J'aimerai",
+   "Je aimerais",
+   "J'aimais"
+  ],
+  "why": "Önskningar uttrycks med j'aimerais (jag skulle vilja). J'aimerai utan s är futur. Je blir j' framför vokal.",
+  "sv": "Jag skulle gärna vilja besöka Québec en dag."
+ },
+ {
+  "id": "cond-013",
+  "topic": "cond",
+  "rule": "cond-souhait",
+  "q": "Mon frère [aimerait] jouer dans un groupe de rock.",
+  "alt": [
+   "aimerais",
+   "aimera",
+   "aimeraient"
+  ],
+  "why": "Mon frère = il, som får -ait: il aimerait. Aimera är futur.",
+  "sv": "Min bror skulle vilja spela i ett rockband."
+ },
+ {
+  "id": "cond-014",
+  "topic": "cond",
+  "rule": "cond-souhait",
+  "q": "Ce [serait] génial de partir ensemble en vacances !",
+  "alt": [
+   "serais",
+   "étrait",
+   "serions"
+  ],
+  "why": "Ce serait = det skulle vara. Être har stammen ser-, och ce får -ait.",
+  "sv": "Det skulle vara grymt att åka på semester tillsammans!"
+ },
+ {
+  "id": "cond-015",
+  "topic": "cond",
+  "rule": "cond-souhait",
+  "q": "Qu'est-ce que tu [aimerais] faire plus tard ?",
+  "alt": [
+   "aimerai",
+   "aimerait",
+   "aimeriez"
+  ],
+  "why": "Tu aimerais = du skulle vilja. Tu får -ais, il -ait och je i futur -ai.",
+  "sv": "Vad skulle du vilja göra när du blir äldre?"
+ },
+ {
+  "id": "cond-016",
+  "topic": "cond",
+  "rule": "cond-souhait",
+  "q": "Mes parents [voudraient] habiter au bord de la mer.",
+  "alt": [
+   "voudrait",
+   "voudrions",
+   "vouloiraient"
+  ],
+  "why": "Mes parents = ils, som får -aient: ils voudraient. Stammen är voudr-.",
+  "sv": "Mina föräldrar skulle vilja bo vid havet."
+ },
+ {
+  "id": "cond-017",
+  "topic": "cond",
+  "rule": "cond-form",
+  "q": "Dans un monde idéal, les animaux [vivraient] en liberté.",
+  "alt": [
+   "vivront",
+   "vivreraient",
+   "vivaient"
+  ],
+  "why": "Något tänkt (i en idealisk värld) kräver conditionnel. Vivre tappar e: vivr- + aient.",
+  "sv": "I en idealisk värld skulle djuren leva fritt."
+ },
+ {
+  "id": "cond-018",
+  "topic": "cond",
+  "rule": "cond-form",
+  "q": "À ta place, je [n'irais] pas à cette fête.",
+  "alt": [
+   "n'irai",
+   "n'allerais",
+   "ne irais"
+  ],
+  "why": "Aller har stammen ir- även i conditionnel: je n'irais. N'irai utan s är futur. Ne blir n' framför vokal.",
+  "sv": "Om jag var du skulle jag inte gå på den festen."
+ },
+ {
+  "id": "cond-019",
+  "topic": "cond",
+  "rule": "cond-form",
+  "q": "Sans téléphone portable, tu ne [pourrais] pas vivre !",
+  "alt": [
+   "pouvrais",
+   "pourrait",
+   "pouvoirais"
+  ],
+  "why": "Något tänkt (utan mobil) ger conditionnel. Pouvoir har stammen pourr-, och tu får -ais.",
+  "sv": "Utan mobiltelefon skulle du inte kunna leva!"
+ },
+ {
+  "id": "cond-020",
+  "topic": "cond",
+  "rule": "cond-si",
+  "q": "Nous [finirions] plus tôt si le prof était d'accord.",
+  "alt": [
+   "finirons",
+   "finissions",
+   "finissons"
+  ],
+  "why": "Si + imparfait (était) ger conditionnel i huvudsatsen: nous finirions (finir + -ions).",
+  "sv": "Vi skulle sluta tidigare om läraren gick med på det."
+ },
+ {
+  "id": "cond-021",
+  "topic": "cond",
+  "rule": "cond-si",
+  "q": "Si tu parlais français, tu [pourrais] travailler à Montréal cet été.",
+  "alt": [
+   "pourras",
+   "pouvais",
+   "pourrait"
+  ],
+  "why": "Si + imparfait (parlais) ger conditionnel: tu pourrais. Pourras är futur och hör ihop med si + présent.",
+  "sv": "Om du pratade franska skulle du kunna jobba i Montréal i sommar."
+ },
+ {
+  "id": "cond-022",
+  "topic": "cond",
+  "rule": "cond-rai",
+  "q": "Demain, je [serai] à Paris, mais j'aimerais mieux être à Nice.",
+  "alt": [
+   "serais",
+   "sera",
+   "serait"
+  ],
+  "why": "Något som faktiskt ska hända i morgon står i futur: je serai. Serais med s betyder skulle vara.",
+  "sv": "I morgon är jag i Paris, men jag skulle hellre vara i Nice."
+ },
+ {
+  "id": "cond-023",
+  "topic": "cond",
+  "rule": "cond-rai",
+  "q": "Je te [téléphonerai] dès que j'arriverai à la gare.",
+  "alt": [
+   "téléphonerais",
+   "téléphonais",
+   "téléphonerait"
+  ],
+  "why": "Ett löfte om framtiden, och dès que har futur: alltså futur je téléphonerai, utan s.",
+  "sv": "Jag ringer dig så fort jag kommer fram till stationen."
+ },
+ {
+  "id": "cond-024",
+  "topic": "cond",
+  "rule": "cond-rai",
+  "q": "[J'aimerais] bien venir, mais je n'ai pas le temps.",
+  "alt": [
+   "J'aimerai",
+   "J'aimerait",
+   "Je aimerais"
+  ],
+  "why": "Något man gärna skulle vilja men inte kan: conditionnel j'aimerais, med s. J'aimerai är futur.",
+  "sv": "Jag skulle gärna vilja komma, men jag har inte tid."
+ },
+ {
+  "id": "cond-025",
+  "topic": "cond",
+  "rule": "cond-rai",
+  "q": "L'année prochaine, [j'aurai] dix-huit ans.",
+  "alt": [
+   "j'aurais",
+   "j'aura",
+   "je serai"
+  ],
+  "why": "Något säkert i framtiden: futur j'aurai (utan s). Ålder uttrycks med avoir. J'aurais betyder jag skulle ha.",
+  "sv": "Nästa år fyller jag arton."
+ }
+]

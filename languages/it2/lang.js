@@ -5,7 +5,7 @@ LANGUAGES.it2 = {
   title: "Italienska glosor",
   course: "Italienska 2",
   courseGy25: "Moderna språk – grund, nivå 1",
-  level: "A2",
+  level: "A1 → A2",           // steg 2 ≈ A1.2 enligt Skolverket
   inLang: "på italienska",
   tts: "it-IT",
   htmlLang: "it",
@@ -21,7 +21,7 @@ LANGUAGES.it2 = {
   genders: {m: "maskulinum", f: "femininum", mpl: "mask. plural", fpl: "fem. plural"},
   get elision() { return LANGUAGES.it1.elision; },
 
-  storyIntro: "Läs berättelsen och välj rätt form i varje lucka: passato prossimo eller imperfetto, och rätt bindeord.",
+  storyIntro: "Läs berättelsen och välj rätt form i varje lucka: passato prossimo eller imperfetto, imperativ eller futuro, och rätt bindeord.",
   cultureIntro: "Läs en kort text om Italien, svara på en fråga och jämför med hur det är i Sverige.",
   get connectors() { return LANGUAGES.it1.connectors; },
   get tenseCheck() { return LANGUAGES.it1.tenseCheck; },

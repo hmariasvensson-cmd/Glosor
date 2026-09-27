@@ -11,8 +11,8 @@
       "chapterWords": 2,
       "tenses": ["presente"]
     },
-    "model": "Ciao! Mi chiamo Emma e ho sedici anni. Sono svedese e abito a Malmö, nel sud della Svezia. Parlo svedese e inglese, e adesso studio anche l'italiano. Mi piace molto, ma è un po' difficile. La mia amica Sara parla anche un po' di francese. Nel tempo libero leggo e ascolto musica. E tu? Come ti chiami e di dove sei? A presto!",
-    "modelSv": "Hej! Jag heter Emma och är sexton år. Jag är svensk och bor i Malmö, i södra Sverige. Jag pratar svenska och engelska, och nu läser jag också italienska. Jag tycker mycket om det, men det är lite svårt. Min kompis Sara pratar också lite franska. På fritiden läser jag och lyssnar på musik. Och du? Vad heter du och var kommer du ifrån? Hörs snart!"
+    "model": "Ciao! Mi chiamo Sara e ho sedici anni. Sono svedese e abito a Malmö, nel sud della Svezia. Parlo svedese e inglese, e adesso studio anche l'italiano. Mi piace molto, ma è un po' difficile. La mia amica Sara parla anche un po' di francese. Nel tempo libero leggo e ascolto musica. E tu? Come ti chiami e di dove sei? A presto!",
+    "modelSv": "Hej! Jag heter Sara och är sexton år. Jag är svensk och bor i Malmö, i södra Sverige. Jag pratar svenska och engelska, och nu läser jag också italienska. Jag tycker mycket om det, men det är lite svårt. Min kompis Sara pratar också lite franska. På fritiden läser jag och lyssnar på musik. Och du? Vad heter du och var kommer du ifrån? Hörs snart!"
   },
   {
     "id": "it1-w-i2",
@@ -88,5 +88,175 @@
     },
     "model": "La mia stagione preferita è l'estate, perché fa caldo e c'è il sole. In estate porto una maglietta, i pantaloncini e le scarpe da ginnastica. In Svezia l'inverno è lungo e fa molto freddo. A gennaio nevica spesso. Allora porto il cappotto, la sciarpa, il cappello e i guanti. Il mio compleanno è a luglio, quindi faccio sempre una festa in giardino.",
     "modelSv": "Min favoritårstid är sommaren, för då är det varmt och solen skiner. På sommaren har jag t-tröja, shorts och gympaskor. I Sverige är vintern lång och det är väldigt kallt. I januari snöar det ofta. Då har jag kappa, halsduk, mössa och vantar. Jag fyller år i juli, så jag har alltid fest i trädgården."
-  }
+  },
+{
+  "id": "it1-w-i5",
+  "sec": "i5",
+  "title": "Al bar – en dialog",
+  "task": "Skriv en kort dialog (30–60 ord) på ett kafé i Italien. Du beställer något att äta och dricka, frågar vad det kostar och betalar. Använd vorrei.",
+  "min": 30,
+  "max": 60,
+  "need": {
+    "connectors": 1,
+    "chapterWords": 4,
+    "tenses": [
+      "presente"
+    ]
+  },
+  "model": "– Buongiorno! Cosa prende? – Vorrei un cappuccino e un cornetto, per favore. – Il cornetto con la crema o con la marmellata? – Con la crema. E anche un bicchiere d'acqua, perché ho sete. – Ecco. Altro? – No, grazie. Quanto costa? – Quattro euro e cinquanta. – Ecco cinque euro. Grazie, buona giornata!",
+  "modelSv": "– God morgon! Vad får det vara? – Jag skulle vilja ha en cappuccino och en croissant, tack. – Croissanten med kräm eller med marmelad? – Med kräm. Och ett glas vatten också, för jag är törstig. – Varsågod. Något mer? – Nej tack. Vad kostar det? – Fyra euro och femtio. – Här är fem euro. Tack, ha en bra dag!"
+},
+{
+  "id": "it1-w-i5b",
+  "sec": "i5",
+  "title": "På restaurang",
+  "task": "Skriv 5–6 meningar (30–60 ord): du är på restaurang med din familj. Vad beställer ni som förrätt, första rätt, huvudrätt och efterrätt, och vad dricker ni?",
+  "min": 30,
+  "max": 60,
+  "need": {
+    "connectors": 1,
+    "chapterWords": 4,
+    "tenses": [
+      "presente"
+    ]
+  },
+  "model": "Oggi siamo al ristorante per il compleanno di mia madre. Come antipasto prendiamo prosciutto e formaggio. Poi io mangio la pasta al pomodoro e mio padre prende il pesce. Mia sorella è vegetariana, quindi ordina un'insalata. Da bere prendiamo acqua e succo di frutta. Alla fine arriva la torta!",
+  "modelSv": "I dag är vi på restaurang för att fira mammas födelsedag. Som förrätt tar vi skinka och ost. Sedan äter jag pasta med tomatsås och pappa tar fisk. Min syster är vegetarian, så hon beställer en sallad. Att dricka tar vi vatten och juice. Till sist kommer tårtan!"
+},
+{
+  "id": "it1-w-i6",
+  "sec": "i6",
+  "title": "Vägen hem från stationen",
+  "task": "Beskriv vägen från stationen till ditt hem (30–60 ord). Använd a destra, a sinistra och dritto, och nämn minst två platser som man går förbi.",
+  "min": 30,
+  "max": 60,
+  "need": {
+    "connectors": 1,
+    "chapterWords": 4,
+    "tenses": [
+      "presente"
+    ]
+  },
+  "model": "Dalla stazione è facile! Esci e vai dritto fino alla piazza. Lì c'è una chiesa grande. Poi giri a destra in Via Verdi. Passi davanti al supermercato e alla farmacia. Al semaforo giri a sinistra. La mia casa è all'angolo, accanto a una piccola gelateria. A piedi sono dieci minuti.",
+  "modelSv": "Från stationen är det lätt! Gå ut och gå rakt fram till torget. Där finns en stor kyrka. Sedan svänger du till höger in på Via Verdi. Du går förbi mataffären och apoteket. Vid trafikljuset svänger du till vänster. Mitt hus ligger i hörnet, bredvid en liten glassbar. Till fots tar det tio minuter."
+},
+{
+  "id": "it1-w-i6b",
+  "sec": "i6",
+  "title": "Sms: jag väntar i stan",
+  "task": "Du ska träffa en kompis i stan. Skriv ett sms (30–60 ord): var är du, vad finns i närheten, och vad ska ni göra? Använd c'è och ci sono.",
+  "min": 30,
+  "max": 60,
+  "need": {
+    "connectors": 1,
+    "chapterWords": 4,
+    "tenses": [
+      "presente"
+    ]
+  },
+  "model": "Ciao Giorgio! Sono già in centro, davanti alla biblioteca. Qui vicino c'è un bar molto carino e ci sono tanti negozi. Prima andiamo in libreria, perché devo comprare un libro per la scuola. Poi possiamo mangiare un gelato in piazza. Prendi l'autobus? La fermata è proprio qui. A presto!",
+  "modelSv": "Hej Giorgio! Jag är redan i centrum, framför biblioteket. Här i närheten finns ett jättemysigt kafé och många affärer. Först går vi till bokhandeln, för jag måste köpa en bok till skolan. Sedan kan vi äta glass på torget. Tar du bussen? Hållplatsen är precis här. Vi ses snart!"
+},
+{
+  "id": "it1-w-i1b",
+  "sec": "i1",
+  "title": "Hej, ny klasskompis!",
+  "task": "En ny elev från Italien börjar i din klass. Skriv 5–6 korta meningar (30–60 ord): hälsa, säg vad du heter, var du kommer ifrån och vilka språk du pratar, och ställ två frågor.",
+  "min": 30,
+  "max": 60,
+  "need": {
+    "connectors": 1,
+    "chapterWords": 3,
+    "tenses": [
+      "presente"
+    ]
+  },
+  "model": "Ciao! Piacere, mi chiamo Leo. Sono svedese, di Göteborg, ma adesso abito a Uppsala. Ho sedici anni. Parlo svedese, inglese e un po' di tedesco. E tu, come ti chiami? Di dove sei? Parli anche inglese? A presto!",
+  "modelSv": "Hej! Trevligt att träffas, jag heter Leo. Jag är svensk, från Göteborg, men nu bor jag i Uppsala. Jag är sexton år. Jag pratar svenska, engelska och lite tyska. Och du, vad heter du? Var kommer du ifrån? Pratar du också engelska? Vi ses!"
+},
+{
+  "id": "it1-w-i2b",
+  "sec": "i2",
+  "title": "Beskriv en person i familjen",
+  "task": "Välj en person i din familj och beskriv hen med 5 meningar (30–60 ord): namn, ålder, utseende och hur hen är som person.",
+  "min": 30,
+  "max": 60,
+  "need": {
+    "connectors": 1,
+    "chapterWords": 3,
+    "tenses": [
+      "presente"
+    ]
+  },
+  "model": "Mia sorella si chiama Lisa e ha tredici anni. È alta e magra, con i capelli biondi e lunghi. Ha gli occhi azzurri e porta gli occhiali. È molto divertente, ma la mattina è un po' pigra. Ama gli animali e gioca sempre con il nostro gatto.",
+  "modelSv": "Min syster heter Lisa och är tretton år. Hon är lång och smal, med långt ljust hår. Hon har ljusblå ögon och har glasögon. Hon är väldigt rolig, men på morgonen är hon lite lat. Hon älskar djur och leker alltid med vår katt."
+},
+{
+  "id": "it1-w-i3b",
+  "sec": "i3",
+  "title": "Min skolvecka",
+  "task": "Skriv 5 meningar (30–60 ord) om din skolvecka: vilka ämnen har du vilka dagar, och vilket ämne tycker du bäst om? Varför?",
+  "min": 30,
+  "max": 60,
+  "need": {
+    "connectors": 1,
+    "chapterWords": 4,
+    "tenses": [
+      "presente"
+    ]
+  },
+  "model": "Il lunedì ho matematica e storia. Il martedì c'è educazione fisica: mi piace molto! Il mercoledì abbiamo biologia, ma è un po' noiosa. Il giovedì ho due lezioni di musica, perché suono la chitarra. La mia materia preferita è la musica, perché è facile e interessante.",
+  "modelSv": "På måndagar har jag matte och historia. På tisdagar är det idrott: det gillar jag jättemycket! På onsdagar har vi biologi, men det är lite tråkigt. På torsdagar har jag två lektioner musik, eftersom jag spelar gitarr. Mitt favoritämne är musik, för det är lätt och intressant."
+},
+{
+  "id": "it1-w-i4b",
+  "sec": "i4",
+  "title": "Sms: när kan vi ses?",
+  "task": "Skriv ett sms till en kompis (30–60 ord): vad gör du i morgon på förmiddagen och eftermiddagen, och när kan ni ses? Ange klockslag.",
+  "min": 30,
+  "max": 60,
+  "need": {
+    "connectors": 1,
+    "chapterWords": 4,
+    "tenses": [
+      "presente"
+    ]
+  },
+  "model": "Ciao Marta! Domani mattina ho scuola fino a mezzogiorno. Poi pranzo a casa e il pomeriggio faccio i compiti. Di solito finisco alle quattro e mezza. Ci vediamo alle cinque davanti al cinema? Stasera vado a letto presto, perché sono molto stanca. A domani!",
+  "modelSv": "Hej Marta! I morgon förmiddag har jag skola till tolv. Sedan äter jag lunch hemma och på eftermiddagen gör jag läxorna. Oftast blir jag klar halv fem. Ses vi klockan fem utanför bion? I kväll går jag och lägger mig tidigt, för jag är jättetrött. Vi ses i morgon!"
+},
+{
+  "id": "it1-w-i7b",
+  "sec": "i7",
+  "title": "Var står sakerna?",
+  "task": "Beskriv ert vardagsrum eller kök med 5 meningar (30–60 ord). Säg var sakerna står med sopra, sotto, accanto a, davanti a eller dietro.",
+  "min": 30,
+  "max": 60,
+  "need": {
+    "connectors": 1,
+    "chapterWords": 4,
+    "tenses": [
+      "presente"
+    ]
+  },
+  "model": "Il nostro soggiorno è grande e luminoso, perché ha due finestre. Il divano è davanti a una finestra, e accanto al divano c'è una lampada gialla. Sopra il divano c'è un quadro con il mare. Il televisore è sulla parete, sopra un piccolo mobile bianco. Sotto il tavolo c'è un tappeto rosso, e lì dorme sempre il nostro gatto.",
+  "modelSv": "Vårt vardagsrum är stort och ljust, eftersom det har två fönster. Soffan står framför ett av fönstren, och bredvid soffan står en gul lampa. Ovanför soffan hänger en tavla med havet. Tv:n sitter på väggen, ovanför en liten vit möbel. Under bordet ligger en röd matta, och där sover alltid vår katt."
+},
+{
+  "id": "it1-w-i8b",
+  "sec": "i8",
+  "title": "Ett vykort från semestern",
+  "task": "Skriv ett vykort (30–60 ord) från en semester. Var är du, hur är vädret och vad har du på dig?",
+  "min": 30,
+  "max": 60,
+  "need": {
+    "connectors": 1,
+    "chapterWords": 4,
+    "tenses": [
+      "presente"
+    ]
+  },
+  "model": "Cara nonna, ciao da Napoli! Qui fa bel tempo: c'è il sole e ci sono trenta gradi. Porto sempre una maglietta, una gonna e gli occhiali da sole. Oggi però c'è vento, quindi porto anche una giacca. Domani andiamo al mare. Un abbraccio!",
+  "modelSv": "Kära mormor, hej från Neapel! Här är det fint väder: solen skiner och det är trettio grader. Jag har alltid en t-tröja, en kjol och solglasögon på mig. Men i dag blåser det, så jag har en jacka också. I morgon åker vi till havet. En kram!"
+}
 ]

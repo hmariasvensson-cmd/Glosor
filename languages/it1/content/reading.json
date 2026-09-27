@@ -260,5 +260,806 @@
    "neve": {"t": "la neve", "sv": "snön", "g": "f"},
    "abbraccio": {"t": "l'abbraccio", "sv": "kramen", "g": "m"}
   }
+ },
+{
+ "id": "it1-r-i2",
+ "sec": "i2",
+ "title": "Ecco la mia famiglia!",
+ "lines": [
+  {
+   "fr": "Ciao a tutti! Ecco la mia famiglia in una foto al mare.",
+   "sv": "Hej allihop! Här är min familj på ett foto vid havet."
+  },
+  {
+   "fr": "Io sono la ragazza con gli occhiali, a sinistra. Mi chiamo Giulia e ho quindici anni.",
+   "sv": "Jag är tjejen med glasögon, till vänster. Jag heter Giulia och är femton år."
+  },
+  {
+   "fr": "L'uomo alto con i capelli corti è mio padre, Paolo: lavora in banca.",
+   "sv": "Den långa mannen med kort hår är min pappa, Paolo: han jobbar på en bank."
+  },
+  {
+   "fr": "Mia madre, Silvia, è piccola, bionda e molto simpatica.",
+   "sv": "Min mamma, Silvia, är kort, blond och väldigt trevlig."
+  },
+  {
+   "fr": "Il ragazzo con il pallone è mio fratello maggiore, Luca. Ha diciotto anni ed è molto sportivo.",
+   "sv": "Killen med bollen är min storebror, Luca. Han är arton år och väldigt sportig."
+  },
+  {
+   "fr": "Poi ci sono i gemelli, Marco e Matteo. Hanno sei anni: sono un po' pigri, ma molto carini.",
+   "sv": "Sedan har vi tvillingarna, Marco och Matteo. De är sex år: de är lite lata, men väldigt söta."
+  },
+  {
+   "fr": "La donna con il cappello è mia nonna Rosa. Ha settantadue anni, ma è ancora molto giovane!",
+   "sv": "Kvinnan med hatten är min mormor Rosa. Hon är sjuttiotvå år, men hon är fortfarande väldigt ung!"
+  },
+  {
+   "fr": "E il cane? Si chiama Bobo.",
+   "sv": "Och hunden? Han heter Bobo."
+  },
+  {
+   "fr": "E voi? Com'è la vostra famiglia? Scrivete nei commenti!",
+   "sv": "Och ni? Hur är er familj? Skriv i kommentarerna!"
+  }
+ ],
+ "questions": [
+  {
+   "type": "helhet",
+   "q": "Vad för slags text är det här?",
+   "opts": [
+    "Ett brev till en ny brevvän",
+    "Ett inlägg på sociala medier med ett familjefoto",
+    "En annons för en semesterresa",
+    "En berättelse om en hund"
+   ],
+   "a": 1,
+   "why": "Giulia visar « una foto » av familjen och ber läsarna skriva « nei commenti »."
+  },
+  {
+   "type": "detalj",
+   "q": "Var jobbar Giulias pappa?",
+   "opts": [
+    "På en skola",
+    "På en restaurang",
+    "På en bank",
+    "Han jobbar inte"
+   ],
+   "a": 2,
+   "why": "« mio padre, Paolo: lavora in banca. »"
+  },
+  {
+   "type": "detalj",
+   "q": "Hur gamla är tvillingarna?",
+   "opts": [
+    "Sex år",
+    "Femton år",
+    "Arton år",
+    "Sjutton år"
+   ],
+   "a": 0,
+   "why": "« Poi ci sono i gemelli, Marco e Matteo. Hanno sei anni. » Femton är Giulia och arton är Luca."
+  },
+  {
+   "type": "tolkning",
+   "q": "Vad menar Giulia när hon skriver att mormor är « ancora molto giovane »?",
+   "opts": [
+    "Att mormor egentligen är yngre än 72 år",
+    "Att mormor ser gammal ut på fotot",
+    "Att mormor är den yngsta i familjen",
+    "Att mormor är pigg och känns ung, fast hon är 72"
+   ],
+   "a": 3,
+   "why": "Hon skriver « ha settantadue anni, ma è ancora molto giovane ». Ma (men) visar att hon känns ung trots åldern."
+  }
+ ],
+ "gloss": {
+  "ecco": {
+   "t": "ecco",
+   "sv": "här är",
+   "g": ""
+  },
+  "famiglia": {
+   "t": "la famiglia",
+   "sv": "familjen",
+   "g": "f"
+  },
+  "foto": {
+   "t": "la foto",
+   "sv": "fotot",
+   "g": "f"
+  },
+  "mare": {
+   "t": "il mare",
+   "sv": "havet",
+   "g": "m"
+  },
+  "occhiali": {
+   "t": "gli occhiali",
+   "sv": "glasögonen",
+   "g": "m"
+  },
+  "sinistra": {
+   "t": "a sinistra",
+   "sv": "till vänster",
+   "g": ""
+  },
+  "quindici": {
+   "t": "quindici",
+   "sv": "femton",
+   "g": ""
+  },
+  "uomo": {
+   "t": "l'uomo",
+   "sv": "mannen",
+   "g": "m"
+  },
+  "alto": {
+   "t": "alto",
+   "sv": "lång, hög",
+   "g": ""
+  },
+  "capelli": {
+   "t": "i capelli",
+   "sv": "håret",
+   "g": "m"
+  },
+  "corti": {
+   "t": "corto",
+   "sv": "kort (om saker)",
+   "g": ""
+  },
+  "padre": {
+   "t": "il padre",
+   "sv": "pappan, fadern",
+   "g": "m"
+  },
+  "lavora": {
+   "t": "lavorare",
+   "sv": "arbeta, jobba",
+   "g": ""
+  },
+  "banca": {
+   "t": "la banca",
+   "sv": "banken",
+   "g": "f"
+  },
+  "madre": {
+   "t": "la madre",
+   "sv": "mamman, modern",
+   "g": "f"
+  },
+  "piccola": {
+   "t": "piccolo",
+   "sv": "liten, kort",
+   "g": ""
+  },
+  "bionda": {
+   "t": "biondo",
+   "sv": "blond, ljushårig",
+   "g": ""
+  },
+  "simpatica": {
+   "t": "simpatico",
+   "sv": "trevlig",
+   "g": ""
+  },
+  "pallone": {
+   "t": "il pallone",
+   "sv": "bollen",
+   "g": "m"
+  },
+  "fratello": {
+   "t": "il fratello",
+   "sv": "brodern",
+   "g": "m"
+  },
+  "maggiore": {
+   "t": "maggiore",
+   "sv": "äldre (om syskon)",
+   "g": ""
+  },
+  "diciotto": {
+   "t": "diciotto",
+   "sv": "arton",
+   "g": ""
+  },
+  "sportivo": {
+   "t": "sportivo",
+   "sv": "sportig",
+   "g": ""
+  },
+  "gemelli": {
+   "t": "i gemelli",
+   "sv": "tvillingarna",
+   "g": "m"
+  },
+  "pigri": {
+   "t": "pigro",
+   "sv": "lat",
+   "g": ""
+  },
+  "carini": {
+   "t": "carino",
+   "sv": "söt, gullig",
+   "g": ""
+  },
+  "donna": {
+   "t": "la donna",
+   "sv": "kvinnan",
+   "g": "f"
+  },
+  "cappello": {
+   "t": "il cappello",
+   "sv": "hatten, mössan",
+   "g": "m"
+  },
+  "nonna": {
+   "t": "la nonna",
+   "sv": "farmor, mormor",
+   "g": "f"
+  },
+  "settantadue": {
+   "t": "settantadue",
+   "sv": "sjuttiotvå",
+   "g": ""
+  },
+  "ancora": {
+   "t": "ancora",
+   "sv": "fortfarande, ännu",
+   "g": ""
+  },
+  "giovane": {
+   "t": "giovane",
+   "sv": "ung",
+   "g": ""
+  },
+  "cane": {
+   "t": "il cane",
+   "sv": "hunden",
+   "g": "m"
+  },
+  "commenti": {
+   "t": "il commento",
+   "sv": "kommentaren",
+   "g": "m"
+  }
  }
+},
+{
+ "id": "it1-r-i4",
+ "sec": "i4",
+ "title": "Il mio martedì",
+ "lines": [
+  {
+   "fr": "Il mio martedì, ora per ora:",
+   "sv": "Min tisdag, timme för timme:"
+  },
+  {
+   "fr": "7.00 – La sveglia suona. Mi alzo, ma sono sempre stanco!",
+   "sv": "7.00 – Väckarklockan ringer. Jag går upp, men jag är alltid trött!"
+  },
+  {
+   "fr": "7.15 – Mi faccio la doccia, mi vesto e faccio colazione con latte e biscotti.",
+   "sv": "7.15 – Jag duschar, klär på mig och äter frukost med mjölk och kex."
+  },
+  {
+   "fr": "7.45 – Vado a scuola in autobus.",
+   "sv": "7.45 – Jag åker buss till skolan."
+  },
+  {
+   "fr": "8.00–13.00 – Lezioni. Il martedì abbiamo due ore di matematica. Che noia!",
+   "sv": "8.00–13.00 – Lektioner. På tisdagar har vi två timmar matte. Så tråkigt!"
+  },
+  {
+   "fr": "13.30 – Torno a casa e pranzo con mia nonna.",
+   "sv": "13.30 – Jag kommer hem och äter lunch med min farmor."
+  },
+  {
+   "fr": "15.00 – Faccio i compiti, poi mi riposo un po' con il cellulare.",
+   "sv": "15.00 – Jag gör läxorna, sedan vilar jag lite med mobilen."
+  },
+  {
+   "fr": "17.00 – Vado in palestra con il mio amico Andrea.",
+   "sv": "17.00 – Jag går till gymmet med min kompis Andrea."
+  },
+  {
+   "fr": "20.00 – Ceniamo tutti insieme e parliamo della giornata.",
+   "sv": "20.00 – Vi äter middag allihop och pratar om dagen."
+  },
+  {
+   "fr": "22.30 – Mi lavo i denti e vado a letto.",
+   "sv": "22.30 – Jag borstar tänderna och går och lägger mig."
+  },
+  {
+   "fr": "Il martedì è una giornata lunga, ma di solito mi diverto, soprattutto in palestra.",
+   "sv": "Tisdagen är en lång dag, men oftast har jag roligt, framför allt på gymmet."
+  },
+  {
+   "fr": "Il mio giorno preferito? Il sabato, perché dormo fino a tardi!",
+   "sv": "Min favoritdag? Lördagen, för då sover jag länge!"
+  }
+ ],
+ "questions": [
+  {
+   "type": "helhet",
+   "q": "Vad visar texten?",
+   "opts": [
+    "Ett schema för en vanlig tisdag",
+    "Ett program för en klassresa",
+    "En lista med läxor",
+    "Öppettider för ett gym"
+   ],
+   "a": 0,
+   "why": "Texten heter « Il mio martedì » och går igenom dagen « ora per ora », från 7.00 till 22.30."
+  },
+  {
+   "type": "detalj",
+   "q": "Hur tar han sig till skolan?",
+   "opts": [
+    "Till fots",
+    "Med cykel",
+    "Hans mamma kör honom",
+    "Med buss"
+   ],
+   "a": 3,
+   "why": "« 7.45 – Vado a scuola in autobus. »"
+  },
+  {
+   "type": "detalj",
+   "q": "Vem äter han lunch med?",
+   "opts": [
+    "Med sin kompis Andrea",
+    "Med sin farmor",
+    "Med hela familjen",
+    "Ensam"
+   ],
+   "a": 1,
+   "why": "« Torno a casa e pranzo con mia nonna. » Med hela familjen äter han middag klockan 20."
+  },
+  {
+   "type": "tolkning",
+   "q": "Varför gillar han lördagar bäst?",
+   "opts": [
+    "Han har ingen matte då",
+    "Han går till gymmet då",
+    "Han kan sova länge",
+    "Han träffar sin farmor"
+   ],
+   "a": 2,
+   "why": "« Il sabato, perché dormo fino a tardi! » Fino a tardi = till sent."
+  }
+ ],
+ "gloss": {
+  "martedì": {
+   "t": "martedì",
+   "sv": "tisdag",
+   "g": "m"
+  },
+  "ora": {
+   "t": "l'ora",
+   "sv": "timmen",
+   "g": "f"
+  },
+  "sveglia": {
+   "t": "la sveglia",
+   "sv": "väckarklockan",
+   "g": "f"
+  },
+  "suona": {
+   "t": "suonare",
+   "sv": "ringa; spela (instrument)",
+   "g": ""
+  },
+  "alzo": {
+   "t": "alzarsi",
+   "sv": "gå upp, stiga upp",
+   "g": ""
+  },
+  "stanco": {
+   "t": "stanco",
+   "sv": "trött",
+   "g": ""
+  },
+  "doccia": {
+   "t": "farsi la doccia",
+   "sv": "duscha",
+   "g": ""
+  },
+  "vesto": {
+   "t": "vestirsi",
+   "sv": "klä på sig",
+   "g": ""
+  },
+  "colazione": {
+   "t": "fare colazione",
+   "sv": "äta frukost",
+   "g": ""
+  },
+  "latte": {
+   "t": "il latte",
+   "sv": "mjölken",
+   "g": "m"
+  },
+  "biscotti": {
+   "t": "il biscotto",
+   "sv": "kexet",
+   "g": "m"
+  },
+  "autobus": {
+   "t": "l'autobus",
+   "sv": "bussen",
+   "g": "m"
+  },
+  "lezioni": {
+   "t": "la lezione",
+   "sv": "lektionen",
+   "g": "f"
+  },
+  "noia": {
+   "t": "che noia!",
+   "sv": "så tråkigt!",
+   "g": ""
+  },
+  "torno": {
+   "t": "tornare",
+   "sv": "komma tillbaka, komma hem",
+   "g": ""
+  },
+  "pranzo": {
+   "t": "pranzare",
+   "sv": "äta lunch",
+   "g": ""
+  },
+  "compiti": {
+   "t": "i compiti",
+   "sv": "läxorna",
+   "g": "m"
+  },
+  "riposo": {
+   "t": "riposarsi",
+   "sv": "vila sig",
+   "g": ""
+  },
+  "cellulare": {
+   "t": "il cellulare",
+   "sv": "mobilen",
+   "g": "m"
+  },
+  "palestra": {
+   "t": "la palestra",
+   "sv": "gymmet",
+   "g": "f"
+  },
+  "ceniamo": {
+   "t": "cenare",
+   "sv": "äta middag (på kvällen)",
+   "g": ""
+  },
+  "insieme": {
+   "t": "insieme",
+   "sv": "tillsammans",
+   "g": ""
+  },
+  "giornata": {
+   "t": "la giornata",
+   "sv": "dagen (hela dagen)",
+   "g": "f"
+  },
+  "lavo": {
+   "t": "lavarsi i denti",
+   "sv": "borsta tänderna",
+   "g": ""
+  },
+  "denti": {
+   "t": "il dente",
+   "sv": "tanden",
+   "g": "m"
+  },
+  "letto": {
+   "t": "andare a letto",
+   "sv": "gå och lägga sig",
+   "g": ""
+  },
+  "lunga": {
+   "t": "lungo",
+   "sv": "lång",
+   "g": ""
+  },
+  "solito": {
+   "t": "di solito",
+   "sv": "brukar, oftast",
+   "g": ""
+  },
+  "diverto": {
+   "t": "divertirsi",
+   "sv": "ha roligt",
+   "g": ""
+  },
+  "soprattutto": {
+   "t": "soprattutto",
+   "sv": "framför allt",
+   "g": ""
+  },
+  "preferito": {
+   "t": "preferito",
+   "sv": "favorit-, älsklings-",
+   "g": ""
+  },
+  "sabato": {
+   "t": "sabato",
+   "sv": "lördag",
+   "g": "m"
+  },
+  "tardi": {
+   "t": "fino a tardi",
+   "sv": "till sent, länge",
+   "g": ""
+  }
+ }
+},
+{
+ "id": "it1-r-i6",
+ "sec": "i6",
+ "title": "Benvenuti a Montebello!",
+ "lines": [
+  {
+   "fr": "UFFICIO TURISTICO – Benvenuti a Montebello!",
+   "sv": "TURISTBYRÅN – Välkomna till Montebello!"
+  },
+  {
+   "fr": "Cosa c'è in città?",
+   "sv": "Vad finns det i staden?"
+  },
+  {
+   "fr": "In Piazza Garibaldi c'è il duomo, una chiesa molto antica.",
+   "sv": "På Piazza Garibaldi ligger domkyrkan, en väldigt gammal kyrka."
+  },
+  {
+   "fr": "Accanto al duomo c'è il Museo della Città: è aperto dal martedì alla domenica, dalle 9 alle 18. Il lunedì è chiuso.",
+   "sv": "Bredvid domkyrkan ligger stadsmuseet: det är öppet från tisdag till söndag, klockan 9–18. På måndagar är det stängt."
+  },
+  {
+   "fr": "In Via Roma ci sono molti negozi, due gelaterie e una pasticceria famosa per i suoi dolci.",
+   "sv": "På Via Roma finns det många affärer, två glassbarer och ett konditori som är känt för sina bakverk."
+  },
+  {
+   "fr": "Il mercato è in Piazza Verdi, il mercoledì e il sabato mattina.",
+   "sv": "Torghandeln är på Piazza Verdi, på onsdagar och lördagar på förmiddagen."
+  },
+  {
+   "fr": "Il parco è vicino alla stazione. Nel parco ci sono una fontana e un piccolo lago.",
+   "sv": "Parken ligger nära stationen. I parken finns det en fontän och en liten sjö."
+  },
+  {
+   "fr": "Dalla stazione al centro a piedi sono dieci minuti: andate dritto in Via Roma e poi girate a destra.",
+   "sv": "Från stationen till centrum tar det tio minuter till fots: gå rakt fram på Via Roma och sväng sedan till höger."
+  },
+  {
+   "fr": "L'autobus numero 3 va dalla stazione al centro. Potete comprare il biglietto all'edicola.",
+   "sv": "Buss nummer 3 går från stationen till centrum. Ni kan köpa biljetten i tidningskiosken."
+  },
+  {
+   "fr": "Buona visita!",
+   "sv": "Trevligt besök!"
+  }
+ ],
+ "questions": [
+  {
+   "type": "helhet",
+   "q": "Vad för slags text är det här?",
+   "opts": [
+    "Ett vykort från en semester",
+    "En affisch med information för turister",
+    "En meny från ett konditori",
+    "En tidtabell för tåg"
+   ],
+   "a": 1,
+   "why": "Texten kommer från « Ufficio turistico » (turistbyrån) och berättar vad som finns i staden."
+  },
+  {
+   "type": "detalj",
+   "q": "Var kan man köpa bussbiljetten?",
+   "opts": [
+    "På bussen",
+    "På stationen",
+    "I tidningskiosken",
+    "På museet"
+   ],
+   "a": 2,
+   "why": "« Potete comprare il biglietto all'edicola. » L'edicola = tidningskiosken."
+  },
+  {
+   "type": "detalj",
+   "q": "När är det torghandel?",
+   "opts": [
+    "På onsdagar och lördagar på förmiddagen",
+    "Varje dag",
+    "Bara på söndagar",
+    "Från tisdag till söndag, klockan 9–18"
+   ],
+   "a": 0,
+   "why": "« Il mercato è in Piazza Verdi, il mercoledì e il sabato mattina. » Tisdag till söndag gäller museet."
+  },
+  {
+   "type": "tolkning",
+   "q": "Du kommer till Montebello med tåget en måndag och vill gå på museet. Vad händer?",
+   "opts": [
+    "Du måste ta buss nummer 3",
+    "Museet är stängt",
+    "Museet öppnar klockan 18",
+    "Du måste köpa biljett på stationen"
+   ],
+   "a": 1,
+   "why": "« Il lunedì è chiuso. » Museet har öppet från tisdag till söndag."
+  }
+ ],
+ "gloss": {
+  "ufficio": {
+   "t": "l'ufficio turistico",
+   "sv": "turistbyrån",
+   "g": "m"
+  },
+  "benvenuti": {
+   "t": "benvenuto",
+   "sv": "välkommen",
+   "g": ""
+  },
+  "città": {
+   "t": "la città",
+   "sv": "staden",
+   "g": "f"
+  },
+  "piazza": {
+   "t": "la piazza",
+   "sv": "torget",
+   "g": "f"
+  },
+  "duomo": {
+   "t": "il duomo",
+   "sv": "domkyrkan",
+   "g": "m"
+  },
+  "chiesa": {
+   "t": "la chiesa",
+   "sv": "kyrkan",
+   "g": "f"
+  },
+  "antica": {
+   "t": "antico",
+   "sv": "gammal (om saker)",
+   "g": ""
+  },
+  "accanto": {
+   "t": "accanto a",
+   "sv": "bredvid",
+   "g": ""
+  },
+  "museo": {
+   "t": "il museo",
+   "sv": "museet",
+   "g": "m"
+  },
+  "aperto": {
+   "t": "aperto",
+   "sv": "öppen",
+   "g": ""
+  },
+  "chiuso": {
+   "t": "chiuso",
+   "sv": "stängd",
+   "g": ""
+  },
+  "via": {
+   "t": "la via",
+   "sv": "gatan (i adresser)",
+   "g": "f"
+  },
+  "negozi": {
+   "t": "il negozio",
+   "sv": "affären, butiken",
+   "g": "m"
+  },
+  "gelaterie": {
+   "t": "la gelateria",
+   "sv": "glassbaren",
+   "g": "f"
+  },
+  "pasticceria": {
+   "t": "la pasticceria",
+   "sv": "konditoriet",
+   "g": "f"
+  },
+  "famosa": {
+   "t": "famoso",
+   "sv": "berömd, känd",
+   "g": ""
+  },
+  "dolci": {
+   "t": "il dolce",
+   "sv": "bakverket, efterrätten",
+   "g": "m"
+  },
+  "mercato": {
+   "t": "il mercato",
+   "sv": "marknaden, torghandeln",
+   "g": "m"
+  },
+  "parco": {
+   "t": "il parco",
+   "sv": "parken",
+   "g": "m"
+  },
+  "vicino": {
+   "t": "vicino a",
+   "sv": "nära",
+   "g": ""
+  },
+  "stazione": {
+   "t": "la stazione",
+   "sv": "stationen",
+   "g": "f"
+  },
+  "fontana": {
+   "t": "la fontana",
+   "sv": "fontänen",
+   "g": "f"
+  },
+  "lago": {
+   "t": "il lago",
+   "sv": "sjön",
+   "g": "m"
+  },
+  "centro": {
+   "t": "il centro",
+   "sv": "centrum",
+   "g": "m"
+  },
+  "piedi": {
+   "t": "a piedi",
+   "sv": "till fots",
+   "g": ""
+  },
+  "dritto": {
+   "t": "dritto",
+   "sv": "rakt fram",
+   "g": ""
+  },
+  "girate": {
+   "t": "girare",
+   "sv": "svänga",
+   "g": ""
+  },
+  "destra": {
+   "t": "a destra",
+   "sv": "till höger",
+   "g": ""
+  },
+  "autobus": {
+   "t": "l'autobus",
+   "sv": "bussen",
+   "g": "m"
+  },
+  "comprare": {
+   "t": "comprare",
+   "sv": "köpa",
+   "g": ""
+  },
+  "biglietto": {
+   "t": "il biglietto",
+   "sv": "biljetten",
+   "g": "m"
+  },
+  "edicola": {
+   "t": "l'edicola",
+   "sv": "tidningskiosken",
+   "g": "f"
+  },
+  "visita": {
+   "t": "la visita",
+   "sv": "besöket",
+   "g": "f"
+  }
+ }
+}
 ]

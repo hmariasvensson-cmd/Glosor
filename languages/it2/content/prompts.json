@@ -11,6 +11,17 @@
   "modelSv": "Hej! Jag heter Elsa, är sexton år och bor i Uppsala i Sverige. Jag föddes i Göteborg men växte upp här. Till sättet är jag sällskaplig och nyfiken, men också lite envis. Jag går första året på gymnasiet och har läst italienska i ett år. Min passion är musik: jag spelar gitarr i ett band med mina kompisar. Min bästa vän heter Maja. Vi träffades i lågstadiet och kommer alltid överens. Jag tycker att vänskap är väldigt viktigt. Och du? Berätta något om dig själv!"
  },
  {
+  "id": "it2-w-j1b",
+  "sec": "j1",
+  "title": "Un commento",
+  "task": "Skriv 40–60 ord: en kommentar till ett inlägg där en italiensk ungdom presenterar sig (som Aurora i lästexten). Berätta vad ni har gemensamt och ställ en fråga.",
+  "min": 40,
+  "max": 60,
+  "need": {"connectors": 1, "chapterWords": 2, "tenses": ["presente"]},
+  "model": "Ciao Aurora! Ho letto il tuo post e anch'io sono appassionata di fumetti. Il mio fumetto preferito è Topolino! Come te sono socievole e curiosa, ma a volte un po' permalosa. Anche io faccio volontariato: il sabato aiuto in una biblioteca. Quali fumetti mi consigli? Ti seguo sui social. Un saluto dalla Svezia!",
+  "modelSv": "Hej Aurora! Jag läste ditt inlägg och jag är också jätteintresserad av serier. Min favoritserie är Kalle Anka! Precis som du är jag sällskaplig och nyfiken, men ibland lite lättstött. Jag jobbar också ideellt: på lördagarna hjälper jag till på ett bibliotek. Vilka serier tipsar du om? Jag följer dig på sociala medier. Hälsningar från Sverige!"
+ },
+ {
   "id": "it2-w-j2",
   "sec": "j2",
   "title": "Il fine settimana scorso",
@@ -20,6 +31,17 @@
   "need": {"connectors": 2, "chapterWords": 2, "tenses": ["passato prossimo", "imperfetto"]},
   "model": "Sabato scorso mi sono svegliato tardi, perché venerdì sera ho fatto le ore piccole. Il pomeriggio sono andato allo stadio con mio padre. C'erano tanti tifosi e l'atmosfera era fantastica. La nostra squadra ha giocato bene, ma alla fine abbiamo pareggiato uno a uno. La sera ero stanco morto, quindi sono restato a casa e ho guardato una serie. Domenica ho fatto un giro in bici con la mia sorellina e poi abbiamo mangiato dai nonni. È stato un fine settimana tranquillo ma bello!",
   "modelSv": "I lördags vaknade jag sent, eftersom jag var uppe jättesent på fredagskvällen. På eftermiddagen gick jag på stadion med min pappa. Det var massor av supportrar och stämningen var fantastisk. Vårt lag spelade bra, men till slut blev det oavgjort, ett–ett. På kvällen var jag dödstrött, så jag stannade hemma och tittade på en serie. På söndagen tog jag en cykeltur med min lillasyster och sedan åt vi hos mormor och morfar. Det var en lugn men fin helg!"
+ },
+ {
+  "id": "it2-w-j2b",
+  "sec": "j2",
+  "title": "Caro diario",
+  "task": "Skriv 60–100 ord i din dagbok om en kväll då något oväntat hände (på bio, på en konsert eller på en match). Använd uttryck som all'inizio, a un certo punto, improvvisamente och per fortuna.",
+  "min": 60,
+  "max": 100,
+  "need": {"connectors": 2, "chapterWords": 3, "tenses": ["passato prossimo", "imperfetto"]},
+  "model": "Caro diario, ieri sera sono andato a un concerto con mio fratello. C'era tantissima gente e abbiamo fatto la fila per un'ora. All'inizio la musica era fantastica e tutti ballavano. A un certo punto, improvvisamente, è andata via la luce! Per dieci minuti non si vedeva niente e alcune persone gridavano. Per fortuna i musicisti hanno continuato a suonare senza microfono. Alla fine la luce è tornata e il concerto è stato ancora più bello. Siamo tornati a casa a mezzanotte, stanchi ma felici.",
+  "modelSv": "Kära dagbok, i går kväll gick jag på konsert med min bror. Det var massor av folk och vi köade i en timme. I början var musiken fantastisk och alla dansade. Plötsligt gick strömmen! I tio minuter såg man ingenting och en del människor skrek. Som tur var fortsatte musikerna att spela utan mikrofon. Till slut kom ljuset tillbaka och konserten blev ännu bättre. Vi kom hem vid midnatt, trötta men glada."
  },
  {
   "id": "it2-w-j3",
@@ -33,6 +55,17 @@
   "modelSv": "Förra sommaren åkte jag till Italien med min familj. Vi flög från Stockholm, men flyget var två timmar försenat. När vi hade landat i Pisa hyrde vi en bil. Vi bodde på en bondgård i Toscana, mitt bland kullarna. Varje dag besökte vi en ny liten by. En dag gick jag vilse i Siena, men som tur var hittade jag vägen. Jag köpte massor av vykort till mina kompisar. Jag tycker att Toscana är Italiens vackraste region. Jag vill åka tillbaka snart!"
  },
  {
+  "id": "it2-w-j3b",
+  "sec": "j3",
+  "title": "Una prenotazione",
+  "task": "Skriv 40–80 ord: ett mejl till ett vandrarhem i Florens. Boka ett rum, säg när och hur du kommer och fråga om något (frukost, bagage, hur man hittar dit).",
+  "min": 40,
+  "max": 80,
+  "need": {"connectors": 1, "chapterWords": 3, "tenses": ["presente", "futuro"]},
+  "model": "Gentile signora, vorrei prenotare una camera doppia per tre notti, dal 12 al 15 luglio, per me e mia sorella. Arriveremo in treno alla stazione di Santa Maria Novella verso le sei di sera. È possibile lasciare il bagaglio in ostello l'ultimo giorno? Inoltre vorrei sapere se la colazione è compresa. La camera è disponibile? Grazie mille e cordiali saluti, Lisa Berg",
+  "modelSv": "Hej! Jag skulle vilja boka ett dubbelrum i tre nätter, från den 12 till den 15 juli, för mig och min syster. Vi kommer med tåg till stationen Santa Maria Novella runt sex på kvällen. Går det att lämna bagaget på vandrarhemmet den sista dagen? Jag skulle också vilja veta om frukosten ingår. Är rummet ledigt? Tack så mycket och vänliga hälsningar, Lisa Berg"
+ },
+ {
   "id": "it2-w-j4",
   "sec": "j4",
   "title": "Quando ero piccolo",
@@ -42,6 +75,61 @@
   "need": {"connectors": 2, "chapterWords": 2, "tenses": ["imperfetto", "presente"]},
   "model": "Da piccola abitavo in un paesino vicino al mare. Ero una bambina vivace e un po' dispettosa. Ogni estate andavo dai nonni e giocavo a nascondino con i miei cugini nel cortile. Avevo paura del buio, quindi dormivo sempre con la luce accesa. Il mio giocattolo preferito era un vecchio orsacchiotto. Adesso abito in città e sono molto diversa: sono più tranquilla e non ho più paura del buio. Però ogni estate torno ancora dai nonni, perché mi piace ricordare la mia infanzia.",
   "modelSv": "När jag var liten bodde jag i en liten by nära havet. Jag var ett livligt och lite busigt barn. Varje sommar åkte jag till mormor och morfar och lekte kurragömma med mina kusiner på gården. Jag var mörkrädd, så jag sov alltid med lampan tänd. Min favoritleksak var en gammal nalle. Nu bor jag i stan och är väldigt annorlunda: jag är lugnare och är inte mörkrädd längre. Men varje sommar åker jag fortfarande till mormor och morfar, eftersom jag tycker om att minnas min barndom."
+ },
+ {
+  "id": "it2-w-j4b",
+  "sec": "j4",
+  "title": "Il mio giocattolo preferito",
+  "task": "Skriv 40–70 ord om din favoritleksak när du var liten. Hur såg den ut, vem gav dig den och vad brukade du göra med den?",
+  "min": 40,
+  "max": 70,
+  "need": {"connectors": 1, "chapterWords": 3, "tenses": ["imperfetto"]},
+  "model": "Da piccolo il mio giocattolo preferito era un pallone rosso. Me l'ha regalato mio nonno per il mio quinto compleanno. Ogni pomeriggio giocavo nel cortile con i miei amici. Quando pioveva, giocavo in cameretta e rompevo sempre qualcosa! Una volta l'ho perso al parco giochi e ho pianto tutto il giorno. Per fortuna la maestra l'ha trovato.",
+  "modelSv": "Som liten var min favoritleksak en röd boll. Jag fick den av min morfar när jag fyllde fem. Varje eftermiddag spelade jag på gården med mina kompisar. När det regnade spelade jag i mitt rum och hade alltid sönder något! En gång tappade jag bort den på lekplatsen och grät hela dagen. Som tur var hittade fröken den."
+ },
+ {
+  "id": "it2-w-j5",
+  "sec": "j5",
+  "title": "La mia ricetta",
+  "task": "Skriv 60–100 ord: ett recept på en rätt som du tycker om. Skriv ingredienserna med mängder (un etto, mezzo chilo, un pizzico …) och förklara stegen med imperativ (taglia, aggiungi, mescola …).",
+  "min": 60,
+  "max": 100,
+  "need": {"connectors": 2, "chapterWords": 4, "tenses": ["presente"]},
+  "model": "Pasta al pomodoro per due persone. Ingredienti: due etti di pasta, mezzo chilo di pomodori maturi, uno spicchio d'aglio, olio d'oliva, sale, basilico e parmigiano. Prima taglia l'aglio e mettilo in una padella con un po' d'olio. Poi aggiungi i pomodori tagliati a pezzi e un pizzico di sale. Lascia cuocere il sugo per quindici minuti. Intanto fai bollire l'acqua in una pentola e cuoci la pasta. Quando è pronta, scolala e versala nella padella. Mescola bene, aggiungi il basilico e grattugia un po' di parmigiano sopra. Buon appetito!",
+  "modelSv": "Pasta med tomatsås för två personer. Ingredienser: 200 gram pasta, ett halvt kilo mogna tomater, en vitlöksklyfta, olivolja, salt, basilika och parmesan. Skär först vitlöken och lägg den i en stekpanna med lite olja. Lägg sedan i tomaterna i bitar och en nypa salt. Låt såsen koka i femton minuter. Under tiden kokar du upp vatten i en kastrull och kokar pastan. När den är klar häller du av den och häller den i stekpannan. Rör om ordentligt, lägg i basilikan och riv lite parmesan över. Smaklig måltid!"
+ },
+ {
+  "id": "it2-w-j5b",
+  "sec": "j5",
+  "title": "La lista della spesa",
+  "task": "Skriv 40–60 ord: du ska laga middag till dina kompisar. Skriv ett meddelande till din bror eller syster som ska handla åt dig: vad ska han eller hon köpa, hur mycket och i vilken affär?",
+  "min": 40,
+  "max": 60,
+  "need": {"connectors": 1, "chapterWords": 3, "tenses": ["presente"]},
+  "model": "Ciao! Stasera cucino per i miei amici. Puoi fare la spesa per me, per favore? Al panificio compra un pane grande. Dal fruttivendolo prendi mezzo chilo di pomodori, due peperoni e un limone. Poi al supermercato prendi un pacco di pasta e un etto di parmigiano. Metti lo scontrino sul tavolo, così ti do i soldi. Grazie!",
+  "modelSv": "Hej! I kväll lagar jag mat till mina kompisar. Kan du handla åt mig, snälla? Köp ett stort bröd på bageriet. Hos grönsakshandlaren tar du ett halvt kilo tomater, två paprikor och en citron. Sedan tar du ett paket pasta och ett hekto parmesan i mataffären. Lägg kvittot på bordet, så ger jag dig pengarna. Tack!"
+ },
+ {
+  "id": "it2-w-j6",
+  "sec": "j6",
+  "title": "Sto male",
+  "task": "Skriv 60–100 ord till en kompis. Berätta att du är sjuk och inte kan komma på träningen: vad har hänt och hur mår du? Din kompis är också förkyld – ge honom eller henne två råd (dovresti …, bevi …).",
+  "min": 60,
+  "max": 100,
+  "need": {"connectors": 2, "chapterWords": 3, "tenses": ["presente", "passato prossimo"]},
+  "model": "Ciao Sara, purtroppo domani non vengo all'allenamento. Ieri sera sono stata male: avevo mal di testa, mal di gola e un po' di febbre. Stamattina sono andata dal medico e mi ha detto che è l'influenza. Devo stare a letto per tre giorni e prendere uno sciroppo per la tosse. Che noia! E tu come stai? Anche tu hai il raffreddore, vero? Dovresti riposare di più e bere tanto tè caldo. E non andare in palestra finché non sei guarita! Un abbraccio e buona guarigione anche a te!",
+  "modelSv": "Hej Sara, tyvärr kommer jag inte på träningen i morgon. I går kväll mådde jag dåligt: jag hade huvudvärk, ont i halsen och lite feber. I morse gick jag till läkaren och hon sa att det är influensa. Jag måste ligga i sängen i tre dagar och ta hostmedicin. Så tråkigt! Och hur mår du? Du är också förkyld, eller hur? Du borde vila mer och dricka mycket varmt te. Och gå inte till gymmet förrän du är frisk! Kram, och krya på dig du också!"
+ },
+ {
+  "id": "it2-w-j6b",
+  "sec": "j6",
+  "title": "Dal medico",
+  "task": "Skriv 40–70 ord: en kort dialog hos läkaren. Patienten berättar var det gör ont och vad som hände. Läkaren undersöker och ger ett råd.",
+  "min": 40,
+  "max": 70,
+  "need": {"connectors": 1, "chapterWords": 3, "tenses": ["presente", "passato prossimo"]},
+  "model": "– Buongiorno, dottore. – Buongiorno. Cosa succede? – Mi fa male il ginocchio. Sabato sono caduto durante una partita di calcio. – Vediamo... È un po' gonfio. Riesci a camminare? – Sì, ma mi fa male quando salgo le scale. – Per fortuna non è rotto. Metti il ghiaccio tre volte al giorno e stai a riposo per una settimana. – Grazie, dottore!",
+  "modelSv": "– God dag, doktorn. – God dag. Vad har hänt? – Jag har ont i knät. I lördags ramlade jag under en fotbollsmatch. – Då ska vi se … Det är lite svullet. Kan du gå? – Ja, men det gör ont när jag går i trappor. – Som tur är är det inte brutet. Lägg på is tre gånger om dagen och vila i en vecka. – Tack, doktorn!"
  },
  {
   "id": "it2-w-j7",
@@ -55,6 +143,28 @@
   "modelSv": "Förra året firade jag min födelsedag med en maskerad. Jag bjöd in femton kompisar och alla kom utklädda. Jag var utklädd till häxa och min bästa vän till pirat! Min mamma bakade en jättestor tårta med sexton ljus. När jag blåste ut ljusen sjöng alla ”Ja må hon leva”. Sedan dansade vi till midnatt. Jag fick många presenter, men den finaste överraskningen var ett brev från min mormor. Det var en fantastisk kväll!"
  },
  {
+  "id": "it2-w-j7b",
+  "sec": "j7",
+  "title": "Un invito",
+  "task": "Skriv 60–100 ord: en inbjudan till en fest (födelsedag, nyår eller midsommar). Säg när och var festen blir, vad ni ska göra och vad gästerna ska ta med. Be om svar.",
+  "min": 60,
+  "max": 100,
+  "need": {"connectors": 2, "chapterWords": 3, "tenses": ["presente", "futuro"]},
+  "model": "Ciao a tutti! Il 21 giugno festeggiamo Midsommar a casa mia, in campagna, e vorrei invitarvi! È la festa più importante dell'estate svedese. Ci vediamo verso le due: prima balleremo intorno a un grande palo con i fiori, poi mangeremo aringhe, patate e fragole. Di solito è una festa all'aperto, quindi portate una giacca, perché la sera fa fresco. Resteremo fuori fino a mezzanotte, quando c'è ancora luce! Rispondete entro venerdì: accettate l'invito? Vi aspetto! Nora",
+  "modelSv": "Hej allihop! Den 21 juni firar vi midsommar hemma hos mig på landet, och jag vill bjuda in er! Det är den viktigaste festen på den svenska sommaren. Vi ses runt två: först dansar vi runt en stor stång med blommor, sedan äter vi sill, potatis och jordgubbar. Oftast är festen utomhus, så ta med en jacka, för det blir svalt på kvällen. Vi stannar ute till midnatt, då det fortfarande är ljust! Svara senast på fredag: tackar ni ja? Jag väntar på er! Nora"
+ },
+ {
+  "id": "it2-w-j7c",
+  "sec": "j7",
+  "title": "Rispondi all'invito",
+  "task": "Skriv 40–60 ord: svara på en inbjudan till en födelsedagsfest. Tacka, säg att du tyvärr inte kan komma och förklara varför. Gratulera och föreslå något annat.",
+  "min": 40,
+  "max": 60,
+  "need": {"connectors": 1, "chapterWords": 2, "tenses": ["presente", "futuro"]},
+  "model": "Cara Chiara, grazie mille per l'invito alla tua festa di compleanno! Purtroppo non posso venire, perché quel fine settimana sarò in montagna con la mia famiglia. Mi dispiace tantissimo! Tanti auguri per i tuoi diciotto anni! Quando tornerò, ti porterò il mio regalo e andremo a mangiare una pizza insieme. Divertiti! Un abbraccio, Elin",
+  "modelSv": "Kära Chiara, tack så mycket för inbjudan till din födelsedagsfest! Tyvärr kan jag inte komma, eftersom jag är i fjällen med min familj den helgen. Jag är jätteledsen! Grattis på 18-årsdagen! När jag kommer tillbaka ger jag dig min present och så går vi och äter pizza tillsammans. Ha jättekul! Kram, Elin"
+ },
+ {
   "id": "it2-w-j8",
   "sec": "j8",
   "title": "Il mio futuro",
@@ -64,5 +174,16 @@
   "need": {"connectors": 2, "chapterWords": 2, "tenses": ["presente", "futuro"]},
   "model": "Adesso faccio il secondo anno di liceo, ma penso già al futuro. Quest'estate farò un lavoro estivo in un bar, perché voglio risparmiare un po' di soldi. Dopo la maturità, andrò a vivere da solo e mi iscriverò all'università. Il mio sogno nel cassetto è diventare veterinario, perché amo gli animali. Non sarà facile, però sono sicuro che ci riuscirò. Tra dieci anni avrò forse una piccola clinica in campagna. E mi piacerebbe viaggiare molto!",
   "modelSv": "Nu går jag andra året på gymnasiet, men jag tänker redan på framtiden. I sommar ska jag sommarjobba på ett kafé, eftersom jag vill spara lite pengar. Efter studenten ska jag flytta hemifrån och skriva in mig på universitetet. Min hemliga dröm är att bli veterinär, eftersom jag älskar djur. Det blir inte lätt, men jag är säker på att jag kommer att lyckas. Om tio år har jag kanske en liten klinik på landet. Och jag skulle vilja resa mycket!"
+ },
+ {
+  "id": "it2-w-j8b",
+  "sec": "j8",
+  "title": "Candidatura",
+  "task": "Skriv 60–100 ord: ett mejl där du söker ett sommarjobb som du har sett i en annons (på en glassbar, ett hotell eller ett sommarläger). Berätta vem du är, vilken erfarenhet du har och varför du vill ha jobbet.",
+  "min": 60,
+  "max": 100,
+  "need": {"connectors": 2, "chapterWords": 4, "tenses": ["presente", "passato prossimo"]},
+  "model": "Gentile signor Rossi, ho letto il suo annuncio per un lavoro estivo nella sua gelateria e vorrei candidarmi. Mi chiamo Leo, ho diciassette anni e studio in un liceo di Stoccolma. Parlo svedese, inglese e un po' di italiano. L'estate scorsa ho lavorato come commesso in un negozio di vestiti, quindi ho già un po' di esperienza con i clienti. Sono una persona gentile, puntuale e indipendente. Mi piacerebbe lavorare in Italia per migliorare il mio italiano. Posso lavorare anche a tempo pieno. Allego il mio curriculum. Cordiali saluti, Leo Nilsson",
+  "modelSv": "Bäste herr Rossi, jag har läst er annons om ett sommarjobb i er glassbar och vill söka jobbet. Jag heter Leo, är sjutton år och går på gymnasiet i Stockholm. Jag talar svenska, engelska och lite italienska. Förra sommaren jobbade jag som butiksbiträde i en klädaffär, så jag har redan lite erfarenhet av kunder. Jag är trevlig, punktlig och självständig. Jag skulle vilja jobba i Italien för att bli bättre på italienska. Jag kan också jobba heltid. Jag bifogar mitt cv. Vänliga hälsningar, Leo Nilsson"
  }
 ]

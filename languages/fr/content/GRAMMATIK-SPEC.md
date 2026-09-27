@@ -20,8 +20,17 @@ Använd vanlig apostrof `'`, aldrig `’`. Om luckan kommer efter en elision, sk
 | `comp` | 25 | `comp-adj`, `comp-meilleur`, `comp-sup` | Komparativ och superlativ: plus … que, aussi … que, meilleur/mieux, le plus/la plus. |
 | `neg` | 25 | `neg-ordf`, `neg-typ` | Alla av typen `"rw"`: gör meningen negerad med ne … pas / jamais / rien / personne / plus, även i passé composé och med pronomen (`Je ne l'ai jamais vu.`). `cue` är negationen, till exempel `"ne … jamais"`. `q` är den jakande meningen. |
 | `quest` | 20 | `q-inv`, `q-est-ce` | Alla av typen `"rw"`: gör en fråga med inversion eller est-ce que av ett påstående. `cue` anger typen, till exempel `"inversion"` eller `"est-ce que"`, och ett frågeord om det behövs (`"où + inversion"`). |
+| `fut` | 35 | `fut-proche`, `fut-reg`, `fut-irr`, `fut-quand`, `fut-byt` | Futur proche och futur simple, oregelbundna stammar, quand + futur (svenskan har presens). `fut-byt` är rw: byt mellan futur proche och futur simple. |
+| `cond` | 25 | `cond-form`, `cond-poli`, `cond-conseil`, `cond-souhait`, `cond-si`, `cond-rai` | Conditionnel: bildning, artighet (je voudrais), råd (tu devrais), önskningar (j'aimerais) och skillnaden -rai/-rais. |
+| `tps` | 40 | `tps-bakgrund`, `tps-vana`, `tps-handelse`, `tps-avbrott`, `tps-signal` | Imparfait eller passé composé i en berättelse. Luckan är verbformen. |
+| `pqp` | 25 | `pqp-avoir`, `pqp-etre`, `venir-de`, `en-train` | Plus-que-parfait, venir de + infinitiv och être en train de. |
+| `pton` | 25 | `pton-prep`, `pton-comp`, `pton-cest`, `pton-bet`, `pton-a` | Betonade pronomen: moi, toi, lui, elle, nous, vous, eux, elles. |
+| `imper` | 25 | `imp-form`, `imp-irr`, `imp-neg`, `imp-pron`, `imp-negpron` | Imperativ, även nekad och med pronomen. `imp-negpron` är rw. |
+| `refl` | 20 | `refl-pres`, `refl-inf`, `refl-neg`, `refl-sens` | Reflexiva verb i presens, med infinitiv och negation, och verb som är reflexiva på franska men inte på svenska. |
 
 För `rw` gäller samma regel som i tyskan: `a`, `acc` och `alt` ska bestå av exakt samma ord. Vid inversion skrivs bindestrecket som i vanlig franska (`Où habites-tu ?`). Programmet delar orden vid mellanslag, så `habites-tu` blir en bricka.
+
+Tempusreglerna och `cond-poli`, `cond-rai` och `fut-reg` är undantagna från "Hitta felet" (`ERR_SKIP` i src/grammar.js), eftersom felalternativen där ofta går att försvara i talspråk.
 
 ## Kvalitet
 
