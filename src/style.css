@@ -282,3 +282,6 @@ details.more[open] summary{margin-bottom:10px}
 .winner{margin:0;padding:10px 12px;border-radius:10px;background:var(--amber-soft);color:var(--ink)}
 .goal{display:flex;flex-direction:column;gap:6px}
 .settings[open]{display:flex;flex-direction:column;gap:14px}
+.memo{display:flex;flex-direction:column;gap:6px}
+.memof{display:flex;gap:8px}
+.memof .search{flex:1;min-width:0}

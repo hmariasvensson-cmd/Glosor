@@ -639,7 +639,7 @@ function mcOptions(w){
   for(const x of same.concat(other)){ if(picks.length>=4)break; if(!picks.some(p=>p.sv===x.sv)) picks.push(x); }
   return shuffle([w,...picks]);
 }
-const explain=w=>`<p class="ex-t" ${lang()}>${esc(w.exT)}</p><p class="ex-sv">${esc(w.exSv)}</p>`;
+const explain=w=>`<p class="ex-t" ${lang()}>${esc(w.exT)}</p><p class="ex-sv">${esc(w.exSv)}</p>${(ws(w.id)||{}).memo?`<p class="foot">Din minnesregel: ${esc(ws(w.id).memo)}</p>`:""}`;
 // Lärokortet igen efter ett fel svar: ord, översättning, genus, exempel med uppläsning och ursprung
 const studyCard=w=>`<div class="recap">
   <div class="word" style="padding-top:0"><div><p class="recap-t" ${lang()}>${esc(w.t)}</p><p class="recap-sv">${esc(w.sv)}</p><div class="tags">${gtag(w.g)}</div></div>
@@ -647,7 +647,19 @@ const studyCard=w=>`<div class="recap">
   <div class="example"><div><p class="ex-t" ${lang()}>${esc(w.exT)}</p><p class="ex-sv">${esc(w.exSv)}</p></div>
     <button type="button" class="speak sm" data-say="${esc(w.exT)}" aria-label="Läs upp meningen">${SPK}</button></div>
   ${w.ety?`<p class="ety"><span class="label">${L.etyLabel||"Ursprung"}</span><br>${w.ety}</p>`:""}
-  ${isLeech(w)?`<p class="ety"><span class="label">Svårt ord</span><br>Det här ordet har du glömt flera gånger. Säg exempelmeningen högt tre gånger och hitta på en egen mening med ordet, gärna om något du själv har varit med om.</p>`:""}</div>`;
+  ${memoBox(w)}</div>`;
+// Egen minnesregel: visas om den finns, och kan skrivas för ord man ofta glömmer
+function memoBox(w){
+  const x=ws(w.id)||{}, m=x.memo||"";
+  if(!m&&!isLeech(w)) return "";
+  return `<div class="memo"><span class="label">${m?"Din minnesregel":"Svårt ord"}</span>
+    ${m?`<p class="ety">${esc(m)}</p>`:`<p class="ety">Det här ordet har du glömt flera gånger. Hitta på en egen minnesregel, till exempel en bild, ett ord det låter som eller en mening om något du själv har varit med om.</p>`}
+    ${ws(w.id)?`<form class="memof" data-memo="${esc(w.id)}" autocomplete="off"><input class="search" maxlength="160" placeholder="${m?"Ändra din minnesregel":"Skriv din minnesregel"}" value="${esc(m)}"><button class="btn ghost" style="width:auto">Spara</button></form>`:""}</div>`;
+}
+document.addEventListener("submit",e=>{const f=e.target.closest&&e.target.closest("[data-memo]"); if(!f) return; e.preventDefault();
+  const x=ws(f.dataset.memo); if(!x) return; const v=f.querySelector("input").value.trim();
+  if(v) x.memo=v.slice(0,160); else delete x.memo; save();
+  f.outerHTML=`<p class="foot">Sparat. Minnesregeln visas nästa gång ordet kommer.</p>`;});
 document.addEventListener("click",e=>{const b=e.target.closest&&e.target.closest("[data-say]"); if(b) speak(b.dataset.say);});
 const verbHead=c=>`<p class="q-prompt" ${lang()}>${esc(c.verb)} <span class="sub" style="font-family:var(--sans);font-weight:400">(${esc(L.verbs.sv[c.verb]||"")})</span></p>`;
 const clozeHead=w=>`<p class="cloze" ${lang()}>${esc(w.gap.pre)}<span class="gap" id="gap">&nbsp;</span>${esc(w.gap.post)}</p><p class="ex-sv">${esc(w.exSv)}</p>`;
