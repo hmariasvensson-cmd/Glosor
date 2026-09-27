@@ -4,6 +4,16 @@ Allt som har diskuterats men inte är byggt ännu. Prioritet: **P1** = gör snar
 Det som är byggt flyttas till [`KLART.md`](KLART.md), med referens till punkten här och till commit.
 Underlag finns i `docs/ovningsforslag.md` (franska), `docs/ovningsforslag-tyska.md` (tyska) och `docs/ideer-fran-andra-projekt.md`.
 
+## Språkprov (det verkliga målet)
+
+Båda eleverna ska söka musikutbildning utomlands. Oscar behöver visa **B1 i franska** (DELF B1) för Frankrike, och Emma behöver visa **B2 i tyska** för Tyskland. Musikhögskolorna godtar oftast Goethe-Zertifikat B2, telc B2 eller TestDaF, men kontrollera vad just deras skolor kräver. Betyg i kursen spelar mindre roll.
+
+- **P1: Provövningar i provets format.** Tyska B2 (Goethe): Lesen, Hören, Schreiben (Forumsbeitrag och formellt mejl) och Sprechen (presentation och diskussion). DELF B1: compréhension orale, compréhension écrite, production écrite (160 ord, brev eller forum) och production orale (entretien, exercice en interaction, expression d'un point de vue). Skriv uppgifter i samma format, med tidtagning och poäng som i provet.
+- **P1: Provsimulering:** ett helt delprov med klocka, poäng mot provets gräns (60 %) och Claudes bedömning av skrivdelen enligt provets kriterier.
+- **P1: Musikordförråd** för båda språken: Musikhochschule, Aufnahmeprüfung, Vorspiel, Hauptfach, Stimmlage … och conservatoire, audition, concours d'entrée, solfège … Också fraser för intervju och samtal på antagningsprovet.
+- **P2: Muntlig förberedelse:** presentera sig själv och sin musik, med skuggning och Claude som samtalspartner (text).
+- **P2: Nivåmätare:** uppskatta var eleven ligger mot B1/B2 utifrån ordförråd, grammatikresultat och Claudes bedömningar, och visa det i statistiken.
+
 ## Repetition och inlärning
 
 - **P2: Byt schemaläggare till FSRS** (ts-fsrs, MIT, finns som UMD på jsDelivr). Räkna i dagar i stället för pass, med retention 0,9. Lägg kortdata i ett nytt fält och behåll `s`/`due` för statistik och topplista. Det enklare stegschemat (se KLART.md) löser det värsta, så detta är mindre brådskande.
@@ -16,8 +26,6 @@ Underlag finns i `docs/ovningsforslag.md` (franska), `docs/ovningsforslag-tyska.
 Emma pluggar på egen hand, utan kurs, lärare och lärobok. Tyskan bygger därför helt på kursplanen och det allmänna spåret.
 
 - **P2: Studieplan för självstudier:** ett förslag på vilket kapitel och vilka grammatikområden per vecka, så att hela Tyska 5 täcks på en termin.
-- **P2: Återkoppling på skrivna texter utan lärare**, till exempel att Claude kommenterar texten (kräver kapabiliteten `sample`, som den som använder den betalar för) eller en checklista med vanliga fel att leta efter.
-- **P3: Prövning:** om hon vill ha ett betyg kan hon göra en prövning i Tyska 5 på komvux. Kontrollera krav och material och anpassa övningarna efter provets delar.
 
 - **P2: Större ordförråd, steg 3.** 1 629 ord nu. B2 kräver ungefär 3 000–4 000 ord. Fortsätt FrequencyWords från rang 2010 (CC BY-SA 4.0), eller använd kaikki/Wiktionary. Goethes listor är upphovsrättsskyddade och får inte kopieras.
 - **P2: Granskning av grammatikfrågorna** (390 tyska, 322 franska) av en lärare eller modersmålstalare, åtminstone ett stickprov på 10 %. Gå också igenom elevernas rapporter i `reports/` (läs dem med ArtifactData) och rätta i källfilerna.

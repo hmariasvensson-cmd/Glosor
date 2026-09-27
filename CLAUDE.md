@@ -1,6 +1,6 @@
 # Glosor
 
-Glosprogram för en elev i Franska 3 (mål A och B1) och en elev i Tyska 5 (mål B2). Används dagligen på iPad och telefon. Allt användargränssnitt och all dokumentation är på svenska.
+Glosprogram för en elev i Franska 3 och en elev som pluggar tyska på egen hand. Det verkliga målet är språkprov för att studera musik utomlands: **DELF B1** (Frankrike) och **B2 i tyska** (Goethe-Zertifikat B2, telc B2 eller TestDaF, för Tyskland). Provet anges i `exam` i `lang.js`. Används dagligen på iPad och telefon. Allt användargränssnitt och all dokumentation är på svenska.
 
 ## Den publicerade länken
 
@@ -14,11 +14,13 @@ Publicera alltid med de här kapabiliteterna (utelämna `capabilities` vid ompub
 
     {"db": {"rules": [{"path": "board", "read": "view", "write": "admin"},
                       {"path": "board/{self}", "write": "interact"}]},
-     "user": {"scopes": ["profile"]}}
+     "user": {"scopes": ["profile"]},
+     "sample": {}}
 
 - Framsteg: localStorage (cache) + `data/users/<uid>/<storageKey>` i db, `{state, t}`. Vid start vinner den version som kommit längst (pass, antal loggposter, antal ord), inte den senaste tidsstämpeln.
 - Pågående pass sparas i `S.run` efter varje svar, så att det går att fortsätta.
 - Topplista: `board/<uid>` = `{nick, langs: {<kod>: {week, min, q, days, streak, last, learned, mastered}}, t}`.
+- `sample`: "Få kommentarer av Claude" på skrivuppgifter och kultursvar. Den som använder funktionen betalar med sin egen Claude-användning och godkänner det första gången. Kommentarerna sparas i `S.fb`.
 - Den som ska spara måste vara inloggad på claude.ai och ha skrivrätt (Contributor inom organisationen, eller Editor inbjuden via e-post när artefakten inte delas via länk).
 
 ## Saker som aldrig får ändras

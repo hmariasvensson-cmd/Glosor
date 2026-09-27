@@ -2,6 +2,12 @@
 
 Punkter som har flyttats från [`BACKLOG.md`](BACKLOG.md) när de byggdes. **Referens** anger backloggens rubrik och prioritet. **Commit** anger var ändringen finns i git. **Publicerat** anger versionen av artefakten på https://claude.ai/artifact/YBQv8j4qXQQLuPwLAWt5mP.
 
+## 2026-09-27, del 4 (publicerat som version 12)
+
+| Referens | Vad som byggdes | Commit |
+|---|---|---|
+| Önskemål från föräldern: *Claude kommenterar texterna* (ersätter Tyska · P2 *Återkoppling på skrivna texter utan lärare*) | Knappen "Få kommentarer av Claude" i skrivuppgifterna och i kultursvaren. Claude svarar på svenska med helhetsintryck, styrkor, de viktigaste felen (citat → rättning + regel), nästa steg, ungefärlig GERS-nivå och en bedömning mot språkprovet (DELF B1 respektive Goethe B2). Kommentaren sparas. Kapabiliteten `sample` är tillagd, och den som använder funktionen betalar med sin egen Claude-användning. | `485d3ff` |
+
 ## 2026-09-27, del 3 (publicerat som version 10)
 
 | Referens | Vad som byggdes | Commit |
