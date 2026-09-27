@@ -25,7 +25,9 @@ const snap=p=>({exists:!!__remote[p],data:()=>__remote[p],metadata:{hasPendingWr
 const mockDb={
   doc:p=>({get:async()=>snap(p),set:async b=>{__remote[p]=JSON.parse(JSON.stringify(b))},onSnapshot:n=>{setTimeout(()=>n(snap(p)),0);return()=>{}}}),
   collection:c=>({onSnapshot:n=>{setTimeout(()=>n({docs:Object.keys(__remote).filter(k=>k.startsWith(c+"/")).map(k=>({id:k.split("/")[1],exists:true,data:()=>__remote[k]}))}),0);return()=>{}}})};
-window.claude={use:async n=>n==="db"?mockDb:n==="user"?{id:async()=>"u_test",profiles:async ids=>Object.fromEntries(ids.map(i=>[i,{name:""}]))}:null};
+window.__fbPrompt="";
+const mockSample=Object.assign(async()=>({text:"x"}),{json:async p=>{window.__fbPrompt=p; return {helhet:"Bra jobbat.",bra:["Tydlig start"],fel:[{citat:"je suis allé",rattat:"je suis allée",varfor:"Kongruens"}],nasta:"Fler bindeord",niva:"A2+",prov:"Nästan B1"};}});
+window.claude={use:async n=>n==="sample"?mockSample:n==="db"?mockDb:n==="user"?{id:async()=>"u_test",profiles:async ids=>Object.fromEntries(ids.map(i=>[i,{name:""}]))}:null};
 try{speechSynthesis.speak=()=>{}}catch(e){}
 </script>"""
 
@@ -100,7 +102,7 @@ function answerRight(){
 }
 const runAll=()=>{let g=0; while(sess&&g++<80) answerRight();};
 const lastLog=()=>S.log[S.log.length-1];
-setTimeout(()=>{ try{
+setTimeout(async()=>{ try{
   ok("molnets framsteg hämtas", S.pass===5);
   ok("pensionerat ord får ett repetitionsdatum", S.w["ancien mot"].due<1e9 && S.w["ancien mot"].s===4, JSON.stringify(S.w["ancien mot"]));
   { const x={s:3,due:0}; schedule(x,true,10,now); const k=x.s===4&&x.due===10+INT[4]&&x.mp===10;
@@ -177,6 +179,10 @@ setTimeout(()=>{ try{
   openWriting(); q("[data-pick]").click();
   q("#wtext").value="Hier, je suis allé à Paris avec ma correspondante. D'abord, nous avons pris le RER, puis nous étions fatigués mais contents."; q("#wtext").dispatchEvent(new Event("input"));
   ok("skrivchecklista", document.querySelectorAll("#checks li.ok").length>=2, [...document.querySelectorAll("#checks li")].map(l=>(l.className?"✓":"○")+l.textContent).join(" | "));
+  q("#fbbtn").click();
+  await new Promise(r=>setTimeout(r,50));
+  ok("Claude kommenterar texten", q("#fbout").textContent.includes("Att rätta")&&q("#fbout").textContent.includes("je suis allée")&&S.fb&&Object.keys(S.fb).length===1, q("#fbout").textContent.slice(0,80));
+  ok("kommentaren bedöms mot provet", __fbPrompt.includes("DELF B1")&&__fbPrompt.includes("<<<"));
   q("#done").click(); ok("skrivning loggad", lastLog().kind==="write");
 
   // Blandad runda, avbruten och fortsatt

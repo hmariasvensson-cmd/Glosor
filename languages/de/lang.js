@@ -19,7 +19,8 @@ LANGUAGES.de = {
   hintStrip: /^(der|die|das|den|dem|des) /,
   pronouns: /^(er\/sie\/es|sie\/sie|ich|du|er|sie|es|wir|ihr) ?/,
   genders: {m: "maskulinum", f: "femininum", n: "neutrum", pl: "plural"},
-  selfStudy: true,            // eleven pluggar på egen hand, utan lärare och lärobok (påverkar texterna i appen)
+  selfStudy: true,
+  exam: {name: "Goethe-Zertifikat B2 (eller telc B2/TestDaF)", level: "B2"},   // språkprovet eleven siktar på            // eleven pluggar på egen hand, utan lärare och lärobok (påverkar texterna i appen)
   nounCaps: true,             // substantiv skrivs med stor bokstav (ord man sparar från texter behåller sin stavning)
   genderGame: {m: "der", f: "die", n: "das"},   // spelet der, die, das och plural
 

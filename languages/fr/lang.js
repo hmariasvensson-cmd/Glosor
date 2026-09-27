@@ -3,6 +3,7 @@ LANGUAGES.fr = {
   name: "Franska",            // visas i språkväljaren
   title: "Franska glosor",    // rubrik på sidan
   course: "Franska 3",         // kursen som ordlistan hör till
+  exam: {name: "DELF B1", level: "B1"},   // språkprovet eleven siktar på
   courseGy25: "Moderna språk – fortsättning, nivå 1",   // samma kurs i Gy25 (gymnasiet från juli 2025)
   // Elevens lärobok. Kapitel märkta #id|Namn|bok i words.txt kommer från boken (se docs/BOK.md).
   book: {title: "Escalade", authors: "Waagaard, Rödemark, Jonchère och Sandberg"},

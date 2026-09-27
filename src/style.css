@@ -303,3 +303,9 @@ body.has-tray{padding-bottom:calc(45vh + 30px)}
 .glossbox.tray{overflow:hidden}
 .glossbox.tray .picked{overflow:auto;min-height:0;flex:1 1 auto}
 .glossbox.tray #addsel{flex:none}
+.fbk{display:flex;flex-direction:column;gap:6px;background:var(--surface-2);border-radius:12px;padding:12px 14px}
+.fbk p{margin:0}
+.fbk ul{margin:0;padding-left:1.2em;display:flex;flex-direction:column;gap:6px}
+.fbk .fbh{font-weight:700;margin-top:4px}
+.fbk del{color:var(--pink)}
+.fbk b{color:var(--ok)}
