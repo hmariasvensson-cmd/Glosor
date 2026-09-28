@@ -186,6 +186,14 @@ def check_content(content, section_ids, where):
             errors += check_question(t["q"], f"{where}/content/culture.json: {t.get('id')}")
     for x in content.get("teori", []):
         errors += check_question(x, f"{where}/content/teori.json: {x.get('id')}")
+    for x in content.get("satsanalys", []):   # a inom opts och exakt en markerad del [[…]]
+        errors += check_question(x, f"{where}/content/satsanalys.json: {x.get('id')}")
+        if str(x.get("fr", "")).count("[[") != 1 or "]]" not in str(x.get("fr", "")):
+            errors.append(f"{where}/content/satsanalys.json: {x.get('id')} ska ha exakt en markerad del [[…]] i fr")
+    for x in content.get("transkription", []):   # facit ipa och tre felalternativ som skiljer sig från facit
+        alt = x.get("alt")
+        if not x.get("fr") or not x.get("ipa") or not isinstance(alt, list) or len(alt) < 3 or x.get("ipa") in alt or len(set(alt)) != len(alt):
+            errors.append(f"{where}/content/transkription.json: {x.get('id')} behöver fr, ipa och minst tre olika alt som inte är facit")
     exam = content.get("exam")
     if isinstance(exam, dict):
         for t in exam.get("tasks", []):

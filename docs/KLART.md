@@ -2,6 +2,15 @@
 
 Punkter som har flyttats från [`BACKLOG.md`](BACKLOG.md) när de byggdes. **Referens** anger backloggens rubrik och prioritet. **Commit** anger var ändringen finns i git. **Publicerat** anger versionen av artefakten på https://claude.ai/artifact/YBQv8j4qXQQLuPwLAWt5mP.
 
+## 2026-09-28, del 7 (publicerat som version 27)
+
+| Referens | Vad som byggdes | Commit |
+|---|---|---|
+| Önskemål från föräldern: *Franska 1 på universitetsnivå* | Ny kurs `fru`, **Franska I (universitet, 1–30 hp)**, byggd efter kursplanerna vid SU, UU, LU, GU, LNU och UmU (underlag i `docs/franska-universitet.md`). 1 245 ord: åtta kapitel (geografi och regioner, historia 1789–1968, institutioner och politik, dagens samhälle, frankofonin, roman och novell, poesi/teater/chanson, medier/film/serier/språket) och tre avsnitt med grammatisk terminologi på franska (109), fonetisk terminologi med IPA (68) och akademiska fraser (69). Inga ord från Franska 3, Escalade eller Franska 4. 12 grammatikområden (360 frågor, bl.a. passé simple, participets kongruens, tempusföljd, satsfunktioner, inversion) med regelsidor, 16 hörtexter, 16 lästexter, 8 berättelser i passé simple, 10 kulturtexter, 24 skrivuppgifter (résumé, textkommentar, formellt mejl), 45 fraser, kapitelmål, uttal, 14 DELF B2-uppgifter och 3 verbspel (passé simple är tillagt i franskans verbdata). Egen sparnyckel `glosor-fru-v1`. Franska 3 föreslår Franska 4, och Franska 4 föreslår Franska I. | se git log |
+| Franska I: nya övningstyper | **Transkription** (148 uppgifter): ord → IPA, IPA → ord och att skriva IPA med en knapprad; rättningen tål mellanslag, syllabering och länkning. **Satsanalys** (148 uppgifter): välj satsdelens funktion (sujet, COD, COI, attribut …) eller satsens typ (relative, complétive, circonstancielle …). Knapparna visas bara i kurser som har innehållet. | se git log |
+
+Testerna har 600 kontroller.
+
 ## 2026-09-28, del 6 (publicerat som version 26)
 
 Arkitekturpunkterna från granskningen 2026-09-28 (BACKLOG, *Arkitektur (granskning 2026-09-28)*).

@@ -1,0 +1,395 @@
+[
+ {
+  "id": "utt-ouvert",
+  "sec": "u1",
+  "title": "Öppen eller sluten vokal?",
+  "tip": "Franskan skiljer mellan slutna och öppna vokaler. Det **slutna o** [o] låter som svenskt o i *ros* (fausse [fos], haute [ot]), det **öppna o** [ɔ] nästan som å i *boll* (fosse [fɔs], hotte [ɔt]). Stavningen **au**, **eau** och **ô** ger nästan alltid [o]. Tumregeln (*la loi de position*): i **öppen stavelse** (som slutar på vokal) står gärna den slutna vokalen, i **sluten stavelse** (som slutar på konsonant) den öppna. Därför pot [po] men pote [pɔt], premier [pʁəmje] men première [pʁəmjɛʁ].",
+  "pairs": [
+   [
+    "fausse",
+    "fosse"
+   ],
+   [
+    "haute",
+    "hotte"
+   ],
+   [
+    "saule",
+    "sole"
+   ],
+   [
+    "pot",
+    "pote"
+   ],
+   [
+    "idiot",
+    "idiote"
+   ],
+   [
+    "l'os",
+    "les os"
+   ],
+   [
+    "premier",
+    "première"
+   ],
+   [
+    "léger",
+    "légère"
+   ],
+   [
+    "dernier",
+    "dernière"
+   ]
+  ]
+ },
+ {
+  "id": "utt-denasal",
+  "sec": "u2",
+  "title": "Nasal eller inte?",
+  "tip": "Franskan har tre nasalvokaler som alla hör: [ɛ̃] (plein), [ɑ̃] (plan) och [ɔ̃] (plomb). Luften går genom näsan, och **n:et uttalas inte**. Följer en vokal efter n eller m, blir vokalen oral och n:et hörs: **denasalisering**. Så hör man femininum: certain [sɛʁtɛ̃] – certaine [sɛʁtɛn], paysan [peizɑ̃] – paysanne [peizan], och plural av verb: il tient [tjɛ̃] – ils tiennent [tjɛn].",
+  "pairs": [
+   [
+    "plein",
+    "plan",
+    "plomb"
+   ],
+   [
+    "frein",
+    "franc",
+    "front"
+   ],
+   [
+    "certain",
+    "certaine"
+   ],
+   [
+    "ancien",
+    "ancienne"
+   ],
+   [
+    "républicain",
+    "républicaine"
+   ],
+   [
+    "voisin",
+    "voisine"
+   ],
+   [
+    "aucun",
+    "aucune"
+   ],
+   [
+    "paysan",
+    "paysanne"
+   ],
+   [
+    "il tient",
+    "ils tiennent"
+   ]
+  ]
+ },
+ {
+  "id": "utt-caduc",
+  "sec": "u3",
+  "title": "e caduc eller é?",
+  "tip": "Det stumma e:et, **e caduc** [ə], är ett kort, slappt ljud nära ö. Det faller ofta bort i talspråk (samedi [samdi]), men det hörs när det behövs för att undvika tre konsonanter i rad. Blanda inte ihop det med **é** [e] eller **a** [a]: **re**partir [ʁəpaʁtiʁ] (gå igen) – **ré**partir [ʁepaʁtiʁ] (fördela), **re**ssembler [ʁəsɑ̃ble] (likna) – **ra**ssembler [ʁasɑ̃ble] (samla). Ibland avgör bara e:et tempus: je le dis [ʒəldi] – je l'ai dit [ʒəledi].",
+  "pairs": [
+   [
+    "repartir",
+    "répartir"
+   ],
+   [
+    "reformer",
+    "réformer"
+   ],
+   [
+    "ressembler",
+    "rassembler"
+   ],
+   [
+    "relier",
+    "rallier"
+   ],
+   [
+    "je le dis",
+    "je l'ai dit"
+   ],
+   [
+    "je me lève",
+    "je m'élève"
+   ],
+   [
+    "il le fait",
+    "il l'a fait"
+   ],
+   [
+    "il me l'a dit",
+    "il m'a dit"
+   ]
+  ]
+ },
+ {
+  "id": "utt-haspire",
+  "sec": "u4",
+  "title": "Liaison eller inte?",
+  "tip": "**Liaison** betyder att en tyst slutkonsonant uttalas framför vokal i nästa ord: les‿auteurs [lezotœʁ]. Efter les, des, deux, trois och pronomen som ils och vous är den obligatorisk. Ett **h aspiré** (i ordboken ofta markerat med en asterisk) hindrar liaison fast h:et inte uttalas: les héros [le eʁo] – les zéros [le zeʁo]. Lyssna också efter om bindningen är [z] eller [s]: deux‿heures [døzœʁ] – deux sœurs [døsœʁ].",
+  "pairs": [
+   [
+    "les héros",
+    "les zéros"
+   ],
+   [
+    "les hauteurs",
+    "les auteurs"
+   ],
+   [
+    "les hêtres",
+    "les êtres"
+   ],
+   [
+    "les hauts",
+    "les eaux"
+   ],
+   [
+    "deux heures",
+    "deux sœurs"
+   ],
+   [
+    "trois ans",
+    "trois cents"
+   ],
+   [
+    "ils aiment",
+    "ils sèment"
+   ],
+   [
+    "vous avez",
+    "vous savez"
+   ]
+  ]
+ },
+ {
+  "id": "utt-enchain",
+  "sec": "u5",
+  "title": "Enchaînement och élision",
+  "tip": "Franskan talas i **rytmgrupper** utan pauser mellan orden. Vid **enchaînement** flyttas ett ords uttalade slutkonsonant över till nästa ords vokal: elle a dit [ɛ.la.di], neuf ans [nœ.vɑ̃] (f blir v). Vid **élision** faller vokalen i le, la, de, je … bort framför vokal: l'être [lɛtʁ]. Ett **h aspiré** hindrar élision, så le hêtre [lə ɛtʁ] behåller le och får en tydlig gräns mellan orden.",
+  "pairs": [
+   [
+    "elle a dit",
+    "elle dit"
+   ],
+   [
+    "il écrit",
+    "il crie"
+   ],
+   [
+    "neuf ans",
+    "neuf cents"
+   ],
+   [
+    "cinq ans",
+    "cinq cents"
+   ],
+   [
+    "quel âge",
+    "quelle cage"
+   ],
+   [
+    "le hêtre",
+    "l'être"
+   ],
+   [
+    "la hotte",
+    "l'hôte"
+   ],
+   [
+    "le haut",
+    "l'eau"
+   ]
+  ]
+ },
+ {
+  "id": "utt-yuo",
+  "sec": "u6",
+  "title": "[y], [u], [ø] eller [œ]?",
+  "tip": "Fyra rundade vokaler som svenskar lätt blandar ihop. **u** [y] som svenskt y (du), **ou** [u] som svenskt o i *sol* (doux), **eu** i öppen stavelse [ø] som svenskt ö i *söt* (deux), **eu/œu** i sluten stavelse [œ] som ö i *höst* (sœur). Samma ord kan växla: un bœuf [bœf] – des bœufs [bø], där f:et försvinner och vokalen blir sluten.",
+  "pairs": [
+   [
+    "du",
+    "doux",
+    "deux"
+   ],
+   [
+    "jus",
+    "joue",
+    "jeu"
+   ],
+   [
+    "fut",
+    "fou",
+    "feu"
+   ],
+   [
+    "cure",
+    "cour",
+    "cœur"
+   ],
+   [
+    "sûr",
+    "sourd",
+    "sœur"
+   ],
+   [
+    "cru",
+    "creux"
+   ],
+   [
+    "bulle",
+    "boule"
+   ],
+   [
+    "pur",
+    "peur"
+   ],
+   [
+    "un bœuf",
+    "des bœufs"
+   ]
+  ]
+ },
+ {
+  "id": "utt-intonation",
+  "sec": "u7",
+  "title": "Påstående, fråga eller utrop?",
+  "tip": "I talad franska är frågan ofta bara ett påstående med **stigande intonation** (*intonation montante*): Il vient ? [il vjɛ̃ ↗]. Ett påstående har **fallande intonation** (*intonation descendante*): Il vient. [il vjɛ̃ ↘]. Ett utrop har en hög start och ett kraftigt fall. Lyssna på slutet av meningen, det är där skillnaden hörs.",
+  "pairs": [
+   [
+    "Il pleut.",
+    "Il pleut ?"
+   ],
+   [
+    "Tu viens.",
+    "Tu viens ?"
+   ],
+   [
+    "C'est fini.",
+    "C'est fini ?",
+    "C'est fini !"
+   ],
+   [
+    "Elle chante.",
+    "Elle chante ?"
+   ],
+   [
+    "Vous partez demain.",
+    "Vous partez demain ?"
+   ],
+   [
+    "Il est parti.",
+    "Il est parti ?",
+    "Il est parti !"
+   ],
+   [
+    "On commence.",
+    "On commence ?"
+   ],
+   [
+    "Tu l'aimes.",
+    "Tu l'aimes ?"
+   ]
+  ]
+ },
+ {
+  "id": "utt-anon",
+  "sec": "u8",
+  "title": "an eller on?",
+  "tip": "[ɑ̃] (an, en, am, em) uttalas med öppen mun och orundade läppar, ungefär som ett nasalt svenskt å. [ɔ̃] (on, om) har mer rundade och framskjutna läppar, nästan som ett nasalt svenskt o. Jämför tendre [tɑ̃dʁ] – tondre [tɔ̃dʁ]. Nasalvokalerna varierar mellan regioner: i Sydfrankrike hörs ofta ett svagt nasalt konsonantljud efter vokalen, och i Québec låter [ɑ̃] ofta ljusare än i Paris.",
+  "pairs": [
+   [
+    "an",
+    "on"
+   ],
+   [
+    "quand",
+    "qu'on"
+   ],
+   [
+    "gant",
+    "gond"
+   ],
+   [
+    "tendre",
+    "tondre"
+   ],
+   [
+    "pendre",
+    "pondre"
+   ],
+   [
+    "fendre",
+    "fondre"
+   ],
+   [
+    "tante",
+    "tonte"
+   ],
+   [
+    "grande",
+    "gronde"
+   ],
+   [
+    "ils mentent",
+    "ils montent"
+   ],
+   [
+    "il prend",
+    "il pond"
+   ]
+  ]
+ },
+ {
+  "id": "utt-semi",
+  "sec": "uf",
+  "title": "Halvvokaler: [j], [w] eller [ɥ]?",
+  "tip": "Franskan har tre **halvvokaler** (*semi-voyelles*) som uttalas snabbt före en vokal i samma stavelse: [j] som svenskt j (bien [bjɛ̃]), [w] som engelskt w (Louis [lwi]) och [ɥ], ett snabbt [y] (lui [lɥi]). Håll läpparna rundade och tungan framme för [ɥ]: huit [ɥit], juin [ʒɥɛ̃]. Utan halvvokal blir det ett annat ord: bien [bjɛ̃] – bain [bɛ̃].",
+  "pairs": [
+   [
+    "lui",
+    "Louis"
+   ],
+   [
+    "enfui",
+    "enfoui"
+   ],
+   [
+    "muette",
+    "mouette"
+   ],
+   [
+    "juin",
+    "joint"
+   ],
+   [
+    "nuée",
+    "nouer"
+   ],
+   [
+    "yeux",
+    "eux"
+   ],
+   [
+    "hier",
+    "air"
+   ],
+   [
+    "bien",
+    "bain"
+   ],
+   [
+    "mien",
+    "main"
+   ]
+  ]
+ }
+]

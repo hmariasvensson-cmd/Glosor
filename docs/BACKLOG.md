@@ -81,6 +81,7 @@ Emma pluggar på egen hand, utan kurs, lärare och lärobok. Tyskan bygger därf
   - Ordning: Italienska 3 (står som kommande i `languages/upcoming.json`), sedan de lägre stegen (1–2 i franska, 1–3 i tyska) och sist steg 7 och Franska 5.
   - Arbetssätt som fungerade för Franska 4 och Tyska 6: glosorna i två halvor av två agenter (med dubblettkontroll mot tidigare kurser och mot varandra), allt övrigt innehåll av en tredje. Modelltexterna i skrivuppgifterna ska skrivas **efter** ordlistan, annars saknar de kapitelord.
   - Innehållet är AI-skrivet och behöver granskas med stickprov, som de andra kurserna.
+- **P2: Franska I (universitet): granskning.** Allt AI-skrivet. Kontrollera särskilt IPA i transkriptionen (148) och satsanalysen, DELF B2-formatet (antal uppspelningar, antal övningar), siffror som åldras i exemplen (statsskuld, asylsökande, fattigdom, valresultat 2024–2026), citaten (Zola, Maupassant, Verlaine, Boileau, Baudelaire) mot originalen, och uttalsparen saule/sole, nuée/nouer, enfui/enfoui med en riktig röst. Kursen har inga videor.
 - **P2: Franska 4 och Tyska 6: granskning och videor.** Båda kurserna (2026-09-28) är AI-skrivna och har inga videor (`videos.json` är tom). Kontrollera särskilt uttalsparen cote/côte och Paul/pôle (fr4) och wanke/zanke, Suhle/Kuhle (de6) med en riktig röst, modalpartiklarna i Hitta felet (de6) och faktauppgifterna i kultur- och historietexterna. Franska 4 har musikteori bara i Franska 3; Tyska 6 har den bara i Tyska 5.
 
 ## Arkitektur (granskning 2026-09-28)

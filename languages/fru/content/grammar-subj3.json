@@ -1,0 +1,391 @@
+[
+ {
+  "id": "subj3-001",
+  "topic": "subj3",
+  "rule": "subj3-conj",
+  "q": "La piscine municipale fermera en janvier, à moins que la région ne [prenne] en charge les travaux de rénovation.",
+  "alt": [
+   "prend",
+   "prendra",
+   "prennent"
+  ],
+  "why": "À moins que (såvida inte) kräver subjonctif: qu'elle prenne. I formell franska står ofta ett ne explétif efter à moins que, men det är ingen negation. Prend är indikativ, prendra futur och prennent plural.",
+  "sv": "Kommunens simhall stänger i januari, såvida inte regionen står för renoveringen."
+ },
+ {
+  "id": "subj3-002",
+  "topic": "subj3",
+  "rule": "subj3-conj",
+  "q": "Beaucoup de salariées hésitent à demander une augmentation, de peur que leur direction ne les [voie] comme trop exigeantes.",
+  "alt": [
+   "voit",
+   "verra",
+   "voient"
+  ],
+  "why": "De peur que (av rädsla för att) följs av subjonctif, ofta med ne explétif: de peur qu'elle ne les voie. Voit och voie uttalas likadant, men i skrift syns modus. Voient är plural.",
+  "sv": "Många anställda kvinnor tvekar att be om löneförhöjning, av rädsla för att ledningen ska uppfatta dem som alltför krävande."
+ },
+ {
+  "id": "subj3-003",
+  "topic": "subj3",
+  "rule": "subj3-conj",
+  "q": "Les habitants accepteront le parc éolien pourvu qu'il [soit] installé loin des maisons.",
+  "alt": [
+   "est",
+   "sera",
+   "soient"
+  ],
+  "why": "Pourvu que (förutsatt att, bara) uttrycker ett villkor och tar subjonctif: pourvu qu'il soit. Est är indikativ, sera futur och soient plural.",
+  "sv": "Invånarna godtar vindkraftsparken förutsatt att den placeras långt från husen."
+ },
+ {
+  "id": "subj3-004",
+  "topic": "subj3",
+  "rule": "subj3-conj",
+  "q": "La grève des cheminots continuera jusqu'à ce que la direction [fasse] une proposition sérieuse.",
+  "alt": [
+   "fait",
+   "fera",
+   "faire"
+  ],
+  "why": "Jusqu'à ce que (tills) syftar på något som ännu inte har hänt och kräver subjonctif: jusqu'à ce qu'elle fasse. På svenska räcker presens: tills ledningen lägger fram.",
+  "sv": "Järnvägsstrejken fortsätter tills ledningen lägger fram ett seriöst förslag."
+ },
+ {
+  "id": "subj3-005",
+  "topic": "subj3",
+  "rule": "subj3-conj",
+  "q": "En attendant que le logement social qu'on leur a promis [soit] prêt, les Morel vivent chez des amis.",
+  "alt": [
+   "est",
+   "sera",
+   "soient"
+  ],
+  "why": "En attendant que (i väntan på att, tills) följs av subjonctif: en attendant qu'il soit prêt. Subjektet är le logement (singular), så soient blir fel.",
+  "sv": "I väntan på att den sociala bostad de har blivit lovade ska bli klar bor familjen Morel hos vänner."
+ },
+ {
+  "id": "subj3-006",
+  "topic": "subj3",
+  "rule": "subj3-rel",
+  "q": "Y a-t-il quelqu'un dans ce bureau qui [sache] remplir une déclaration d'impôts ?",
+  "alt": [
+   "sait",
+   "saura",
+   "sachent"
+  ],
+  "why": "Relativsatsen beskriver en person som man inte vet om den finns. Då står verbet i subjonctif: quelqu'un qui sache. Med indikativ (qui sait) skulle man syfta på en bestämd person. Sachent är plural.",
+  "sv": "Finns det någon på det här kontoret som kan fylla i en deklaration?"
+ },
+ {
+  "id": "subj3-007",
+  "topic": "subj3",
+  "rule": "subj3-rel",
+  "q": "Dans ce quartier, il n'y a aucune crèche qui [puisse] accueillir les enfants avant sept heures.",
+  "alt": [
+   "peut",
+   "pourra",
+   "puissent"
+  ],
+  "why": "När huvudsatsen förnekar att något finns (il n'y a aucune … qui, je ne connais personne qui) står relativsatsen i subjonctif: qui puisse. Aucune crèche är singular, så puissent blir fel.",
+  "sv": "I det här området finns det ingen förskola som kan ta emot barnen före klockan sju."
+ },
+ {
+  "id": "subj3-008",
+  "topic": "subj3",
+  "rule": "subj3-rel",
+  "q": "Je ne connais personne dans ma promo qui [ait] trouvé un stage rémunéré.",
+  "alt": [
+   "a",
+   "avait",
+   "aie"
+  ],
+  "why": "Je ne connais personne qui … förnekar att en sådan person finns, och då står relativsatsen i subjonctif. Här är det subjonctif passé: qui ait trouvé. Aie hör till je.",
+  "sv": "Jag känner ingen i min årskurs som har fått en betald praktikplats."
+ },
+ {
+  "id": "subj3-009",
+  "topic": "subj3",
+  "rule": "subj3-rel",
+  "q": "Existe-t-il un seul emploi à temps partiel qui [permette] de payer un loyer parisien ?",
+  "alt": [
+   "permet",
+   "permettra",
+   "permettent"
+  ],
+  "why": "Frågan ifrågasätter att ett sådant jobb finns, så relativsatsen får subjonctif: qui permette. Permettent är plural.",
+  "sv": "Finns det ett enda deltidsjobb som räcker till en hyra i Paris?"
+ },
+ {
+  "id": "subj3-010",
+  "topic": "subj3",
+  "rule": "subj3-rel",
+  "q": "Je cherche un studio qui [soit] proche du conservatoire, mais je n'en ai pas encore trouvé.",
+  "alt": [
+   "est",
+   "était",
+   "être"
+  ],
+  "why": "Studion är önskad men ännu inte hittad, så egenskapen är hypotetisk: un studio qui soit proche. Med indikativ (qui est) skulle man mena en bestämd studio som man redan vet finns.",
+  "sv": "Jag letar efter en etta som ligger nära konservatoriet, men jag har inte hittat någon än."
+ },
+ {
+  "id": "subj3-011",
+  "topic": "subj3",
+  "rule": "subj3-sup",
+  "q": "Selon ce sondage, la santé est le seul sujet qui [fasse] consensus chez les jeunes.",
+  "alt": [
+   "fassent",
+   "faire",
+   "fais"
+  ],
+  "why": "Efter le seul, l'unique, le premier, le dernier och superlativer står relativsatsen normalt i subjonctif i skriftlig franska: le seul sujet qui fasse. Subjektet är sujet (singular), så fassent och fais blir fel.",
+  "sv": "Enligt den här undersökningen är hälsa den enda fråga som de unga är eniga om."
+ },
+ {
+  "id": "subj3-012",
+  "topic": "subj3",
+  "rule": "subj3-sup",
+  "q": "Paris est la ville la plus chère que je [connaisse].",
+  "alt": [
+   "connaisses",
+   "connaître",
+   "connaissent"
+  ],
+  "why": "Efter en superlativ (la plus chère) begränsar subjonctif påståendet till talarens erfarenhet: que je connaisse, ungefär ”som jag vet om”. Connaisses hör till tu och connaissent till ils.",
+  "sv": "Paris är den dyraste stad jag känner till."
+ },
+ {
+  "id": "subj3-013",
+  "topic": "subj3",
+  "rule": "subj3-sup",
+  "q": "Selon la presse, c'est le premier gouvernement qui [ait] autant de femmes ministres.",
+  "alt": [
+   "aient",
+   "avoir",
+   "aies"
+  ],
+  "why": "Le premier … qui fungerar som en superlativ och tar subjonctif: le premier gouvernement qui ait. Aient är plural och aies hör till tu.",
+  "sv": "Enligt pressen är det den första regering som har så många kvinnliga ministrar."
+ },
+ {
+  "id": "subj3-014",
+  "topic": "subj3",
+  "rule": "subj3-sup",
+  "q": "Le vélo est le moyen de transport le plus écologique qu'on [puisse] utiliser en ville.",
+  "alt": [
+   "puissent",
+   "pouvoir",
+   "puisses"
+  ],
+  "why": "Superlativ (le plus écologique) + que följs av subjonctif: qu'on puisse. On böjs som il, så puissent och puisses blir fel.",
+  "sv": "Cykeln är det mest miljövänliga transportmedel man kan använda i staden."
+ },
+ {
+  "id": "subj3-015",
+  "topic": "subj3",
+  "rule": "subj3-sup",
+  "q": "Pour Karim, le télétravail est la seule solution qui lui [permette] de vivre loin de Paris.",
+  "alt": [
+   "permettent",
+   "permettre",
+   "permets"
+  ],
+  "why": "La seule solution qui … tar subjonctif: qui lui permette. Subjektet i relativsatsen är qui = la solution (singular), så permettent blir fel, och permets hör till je/tu.",
+  "sv": "För Karim är distansarbete den enda lösning som gör att han kan bo långt från Paris."
+ },
+ {
+  "id": "subj3-016",
+  "topic": "subj3",
+  "rule": "subj3-doute",
+  "q": "Les syndicats doutent que la réforme [fasse] baisser le chômage des jeunes.",
+  "alt": [
+   "fait",
+   "fera",
+   "faire"
+  ],
+  "why": "Douter que (tvivla på att) kräver subjonctif: qu'elle fasse. Observera skillnaden mot se douter que (misstänka, ana), som tar indikativ.",
+  "sv": "Facken tvivlar på att reformen kommer att minska ungdomsarbetslösheten."
+ },
+ {
+  "id": "subj3-017",
+  "topic": "subj3",
+  "rule": "subj3-doute",
+  "q": "Je ne pense pas que les inégalités entre les banlieues et les centres-villes [soient] une fatalité.",
+  "alt": [
+   "sont",
+   "seront",
+   "soit"
+  ],
+  "why": "Je pense que tar indikativ, men nekat (je ne pense pas que) uttrycker tvivel och följs av subjonctif: qu'elles soient. Subjektet les inégalités är plural, så soit blir fel.",
+  "sv": "Jag tror inte att ojämlikheten mellan förorterna och stadskärnorna är ofrånkomlig."
+ },
+ {
+  "id": "subj3-018",
+  "topic": "subj3",
+  "rule": "subj3-doute",
+  "q": "Il est peu probable que le gouvernement [revienne] sur cette décision.",
+  "alt": [
+   "revient",
+   "reviendra",
+   "reviennent"
+  ],
+  "why": "Il est probable que tar indikativ, men il est peu probable que (det är föga troligt att) uttrycker tvivel och kräver subjonctif: qu'il revienne.",
+  "sv": "Det är föga troligt att regeringen ändrar sig i den frågan."
+ },
+ {
+  "id": "subj3-019",
+  "topic": "subj3",
+  "rule": "subj3-doute",
+  "q": "Il semble que les jeunes [aient] moins confiance dans les institutions que leurs parents.",
+  "alt": [
+   "ait",
+   "avoir"
+  ],
+  "why": "Opersonligt il semble que (det verkar som om) följs normalt av subjonctif: qu'ils aient. Jämför il me semble que (jag tycker att), som tar indikativ. Ait är singular, och efter que krävs en böjd verbform.",
+  "sv": "Det verkar som om unga har mindre förtroende för institutionerna än sina föräldrar."
+ },
+ {
+  "id": "subj3-020",
+  "topic": "subj3",
+  "rule": "subj3-doute",
+  "q": "Il n'est pas certain que la ville [puisse] tenir ses objectifs de réduction des émissions.",
+  "alt": [
+   "peut",
+   "pourra",
+   "puissent"
+  ],
+  "why": "Il est certain que tar indikativ, men nekat (il n'est pas certain que) uttrycker osäkerhet och kräver subjonctif: qu'elle puisse. La ville är singular.",
+  "sv": "Det är inte säkert att staden kan nå sina mål för utsläppsminskningar."
+ },
+ {
+  "id": "subj3-021",
+  "topic": "subj3",
+  "rule": "subj3-passe",
+  "q": "Quoique la loi sur la parité [ait fait] progresser la place des femmes en politique, l'égalité reste loin d'être atteinte.",
+  "alt": [
+   "a fait",
+   "avait fait",
+   "aie fait"
+  ],
+  "why": "Quoique (fast, trots att) betyder samma sak som bien que och kräver subjonctif. Lagen har redan haft effekt, så det blir subjonctif passé: qu'elle ait fait. Aie hör till je.",
+  "sv": "Fast paritetslagen har stärkt kvinnors ställning i politiken är jämställdhet fortfarande långt borta."
+ },
+ {
+  "id": "subj3-022",
+  "topic": "subj3",
+  "rule": "subj3-passe",
+  "q": "Je suis soulagée que ma sœur [ait fini] ses études avant la crise.",
+  "alt": [
+   "a fini",
+   "avait fini",
+   "aie fini"
+  ],
+  "why": "Être soulagé que (vara lättad över att) kräver subjonctif. Studierna är redan avslutade, så det blir subjonctif passé: avoir i subjonctif + participe passé, qu'elle ait fini.",
+  "sv": "Jag är lättad över att min syster hann avsluta sina studier före krisen."
+ },
+ {
+  "id": "subj3-023",
+  "topic": "subj3",
+  "rule": "subj3-passe",
+  "q": "Il est dommage que tant de jeunes diplômés [soient partis] à l'étranger faute de postes en France.",
+  "alt": [
+   "sont partis",
+   "aient partis",
+   "soient parti"
+  ],
+  "why": "Il est dommage que kräver subjonctif. Partir tar être, så subjonctif passé blir qu'ils soient partis, med kongruens i plural. Avoir fungerar inte med partir.",
+  "sv": "Det är synd att så många nyutexaminerade har flyttat utomlands i brist på tjänster i Frankrike."
+ },
+ {
+  "id": "subj3-024",
+  "topic": "subj3",
+  "rule": "subj3-passe",
+  "q": "Le professeur attendra que tous les candidats [aient rendu] leur copie avant de commenter le sujet.",
+  "alt": [
+   "ont rendu",
+   "auront rendu",
+   "aient rendus"
+  ],
+  "why": "Attendre que (vänta tills) kräver subjonctif. Inlämningen ska vara avslutad först, så det blir subjonctif passé: qu'ils aient rendu. Med avoir böjs participet inte efter subjektet.",
+  "sv": "Läraren väntar tills alla kandidater har lämnat in sina skrivningar innan han kommenterar uppgiften."
+ },
+ {
+  "id": "subj3-025",
+  "topic": "subj3",
+  "rule": "subj3-passe",
+  "q": "Il est possible que la mairie [se soit trompée] dans ses calculs.",
+  "alt": [
+   "s'est trompée",
+   "s'ait trompée",
+   "se soit trompé"
+  ],
+  "why": "Il est possible que kräver subjonctif. Se tromper är reflexivt och tar être, och participet kongruerar med la mairie (femininum): qu'elle se soit trompée.",
+  "sv": "Det är möjligt att kommunen har räknat fel."
+ },
+ {
+  "id": "subj3-026",
+  "topic": "subj3",
+  "rule": "subj3-ind",
+  "q": "Les résultats sont publiés en ligne après que le jury [a terminé] ses délibérations.",
+  "alt": [
+   "ait terminé",
+   "aie terminé",
+   "soit terminé"
+  ],
+  "why": "Après que (efter att) står för något som faktiskt har hänt och tar enligt normen indikativ: après qu'il a terminé. Subjonctif hörs ofta i talad franska, men räknas som fel i skrift. Jämför avant que, som alltid tar subjonctif.",
+  "sv": "Resultaten publiceras på nätet efter att juryn har avslutat sina överläggningar."
+ },
+ {
+  "id": "subj3-027",
+  "topic": "subj3",
+  "rule": "subj3-ind",
+  "q": "Il est probable que la ministre [sera] candidate aux prochaines élections.",
+  "alt": [
+   "soit",
+   "soient",
+   "être"
+  ],
+  "why": "Il est probable que (det är troligt att) uttrycker hög sannolikhet och tar indikativ: elle sera. Det är il est possible que och il est peu probable que som tar subjonctif.",
+  "sv": "Det är troligt att ministern kandiderar i nästa val."
+ },
+ {
+  "id": "subj3-028",
+  "topic": "subj3",
+  "rule": "subj3-ind",
+  "q": "J'espère que tu [pourras] trouver un logement près du campus.",
+  "alt": [
+   "puisses",
+   "puisse",
+   "pouvoir"
+  ],
+  "why": "Espérer que tar indikativ, oftast futur: j'espère que tu pourras. Det skiljer sig från souhaiter que (önska att), som kräver subjonctif.",
+  "sv": "Jag hoppas att du kan hitta en bostad nära campus."
+ },
+ {
+  "id": "subj3-029",
+  "topic": "subj3",
+  "rule": "subj3-ind",
+  "q": "Il me semble que les transports en commun [sont] plus fiables qu'avant.",
+  "alt": [
+   "soient",
+   "soit",
+   "être"
+  ],
+  "why": "Il me semble que (jag tycker att, jag har intrycket att) uttrycker en personlig åsikt, som je pense que, och tar indikativ. Utan me (il semble que) blir det i stället subjonctif.",
+  "sv": "Jag tycker att kollektivtrafiken är pålitligare än förut."
+ },
+ {
+  "id": "subj3-030",
+  "topic": "subj3",
+  "rule": "subj3-ind",
+  "q": "Les étudiants manifestent parce que les frais d'inscription [ont] augmenté.",
+  "alt": [
+   "aient",
+   "avoir",
+   "aie"
+  ],
+  "why": "Parce que anger en verklig orsak och tar indikativ: ils ont augmenté. Samma gäller pendant que, puisque och depuis que.",
+  "sv": "Studenterna demonstrerar för att studieavgifterna har höjts."
+ }
+]

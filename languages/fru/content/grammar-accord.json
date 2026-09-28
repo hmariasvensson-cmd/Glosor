@@ -1,0 +1,391 @@
+[
+ {
+  "id": "accord-001",
+  "topic": "accord",
+  "rule": "acc-etre",
+  "q": "Les comédiennes sont [arrivées] au théâtre deux heures avant le lever du rideau.",
+  "alt": [
+   "arrivé",
+   "arrivés",
+   "arrivée"
+  ],
+  "why": "Arriver bildar passé composé med être, och då kongruerar participet med subjektet (accord avec le sujet): les comédiennes är femininum plural, alltså -ées.",
+  "sv": "Skådespelerskorna kom till teatern två timmar innan ridån gick upp."
+ },
+ {
+  "id": "accord-002",
+  "topic": "accord",
+  "rule": "acc-etre",
+  "q": "Mes grands-parents sont [nés] à Lyon, mais ils ont grandi en Provence.",
+  "alt": [
+   "né",
+   "nées",
+   "née"
+  ],
+  "why": "Naître tar être, så participet följer subjektet. Grands-parents är maskulinum plural (en blandad grupp räknas som maskulin): nés.",
+  "sv": "Mina morföräldrar föddes i Lyon, men de växte upp i Provence."
+ },
+ {
+  "id": "accord-003",
+  "topic": "accord",
+  "rule": "acc-etre",
+  "q": "Après la première, la metteuse en scène est [restée] seule dans la salle vide.",
+  "alt": [
+   "resté",
+   "restés",
+   "restées"
+  ],
+  "why": "Rester är ett av de intransitiva rörelse- och tillståndsverben som tar être. Subjektet la metteuse en scène är femininum singular: restée.",
+  "sv": "Efter premiären stannade regissören ensam kvar i den tomma salongen."
+ },
+ {
+  "id": "accord-004",
+  "topic": "accord",
+  "rule": "acc-etre",
+  "q": "Après avoir abandonné la poésie, Rimbaud est [devenu] commerçant en Afrique.",
+  "alt": [
+   "devenue",
+   "devenus",
+   "devenues"
+  ],
+  "why": "Devenir tar être och kongruerar med subjektet Rimbaud (maskulinum singular): devenu, utan ändelse.",
+  "sv": "Sedan Rimbaud hade övergett poesin blev han köpman i Afrika."
+ },
+ {
+  "id": "accord-005",
+  "topic": "accord",
+  "rule": "acc-etre",
+  "q": "Les deux violonistes, Inès et Clara, sont [montées] sur scène sous les applaudissements.",
+  "alt": [
+   "monté",
+   "montés",
+   "montée"
+  ],
+  "why": "Monter utan objekt tar être, och participet kongruerar med subjektet: två kvinnor, femininum plural, alltså montées.",
+  "sv": "De två violinisterna, Inès och Clara, gick upp på scenen under applåder."
+ },
+ {
+  "id": "accord-006",
+  "topic": "accord",
+  "rule": "acc-cod",
+  "q": "Ces poèmes de Baudelaire, je les ai [lus] trois fois avant l'examen.",
+  "alt": [
+   "lu",
+   "lues",
+   "lue"
+  ],
+  "why": "Med avoir kongruerar participet med det direkta objektet (COD) om det står före verbet. Les syftar på ces poèmes (maskulinum plural): lus.",
+  "sv": "De här dikterna av Baudelaire läste jag tre gånger före tentan."
+ },
+ {
+  "id": "accord-007",
+  "topic": "accord",
+  "rule": "acc-cod",
+  "q": "La Marseillaise, les élèves l'ont [chantée] a cappella pendant la cérémonie.",
+  "alt": [
+   "chanté",
+   "chantés",
+   "chantées"
+  ],
+  "why": "L' är ett direkt objekt (COD) före avoir och syftar på la Marseillaise, som är femininum singular: chantée.",
+  "sv": "Marseljäsen sjöng eleverna a cappella under ceremonin."
+ },
+ {
+  "id": "accord-008",
+  "topic": "accord",
+  "rule": "acc-cod",
+  "q": "Tes partitions ? Je les ai [mises] sur le piano à queue.",
+  "alt": [
+   "mis",
+   "mise",
+   "mit"
+  ],
+  "why": "Les står före avoir och syftar på tes partitions (femininum plural), så participet kongruerar: mises. Här hörs kongruensen, eftersom s:et uttalas [z].",
+  "sv": "Dina noter? Jag lade dem på flygeln."
+ },
+ {
+  "id": "accord-009",
+  "topic": "accord",
+  "rule": "acc-cod",
+  "q": "Où est Léa ? Je ne l'ai pas [vue] depuis la répétition générale.",
+  "alt": [
+   "vu",
+   "vus",
+   "vues"
+  ],
+  "why": "L' är ett direkt objekt (COD) före avoir och syftar på Léa, femininum singular: vue.",
+  "sv": "Var är Léa? Jag har inte sett henne sedan generalrepetitionen."
+ },
+ {
+  "id": "accord-010",
+  "topic": "accord",
+  "rule": "acc-cod",
+  "q": "Les comédiens étaient nerveux, mais le public les a [applaudis] longuement.",
+  "alt": [
+   "applaudi",
+   "applaudies",
+   "applaudit"
+  ],
+  "why": "Les (= les comédiens, maskulinum plural) är direkt objekt (COD) och står före avoir, så participet kongruerar: applaudis. Applaudit är presens.",
+  "sv": "Skådespelarna var nervösa, men publiken applåderade dem länge."
+ },
+ {
+  "id": "accord-011",
+  "topic": "accord",
+  "rule": "acc-rel",
+  "q": "Les chansons qu'elle a [écrites] pour ce spectacle parlent de l'exil.",
+  "alt": [
+   "écrit",
+   "écrits",
+   "écrite"
+  ],
+  "why": "Relativpronomenet que är direkt objekt (COD) och står före avoir. Det syftar på les chansons (femininum plural): écrites.",
+  "sv": "Sångerna som hon har skrivit till den här föreställningen handlar om exil."
+ },
+ {
+  "id": "accord-012",
+  "topic": "accord",
+  "rule": "acc-rel",
+  "q": "Quelle pièce as-tu [vue] au festival d'Avignon cet été ?",
+  "alt": [
+   "vu",
+   "vus",
+   "vues"
+  ],
+  "why": "Quelle pièce är ett direkt objekt (COD) som står före verbet i frågan, så participet kongruerar: vue (femininum singular).",
+  "sv": "Vilken pjäs såg du på festivalen i Avignon i somras?"
+ },
+ {
+  "id": "accord-013",
+  "topic": "accord",
+  "rule": "acc-rel",
+  "q": "La lettre que Rimbaud a [envoyée] à Paul Demeny en mai 1871 est restée célèbre.",
+  "alt": [
+   "envoyé",
+   "envoyés",
+   "envoyées"
+  ],
+  "why": "Que är COD och syftar på la lettre (femininum singular), och det står före avoir: envoyée.",
+  "sv": "Brevet som Rimbaud skickade till Paul Demeny i maj 1871 har blivit berömt."
+ },
+ {
+  "id": "accord-014",
+  "topic": "accord",
+  "rule": "acc-rel",
+  "q": "Combien de fautes as-tu [faites] dans ta dissertation ?",
+  "alt": [
+   "fait",
+   "faits",
+   "faite"
+  ],
+  "why": "Combien de fautes är ett direkt objekt (COD) som står före verbet, så participet kongruerar med fautes (femininum plural): faites.",
+  "sv": "Hur många fel gjorde du i din uppsats?"
+ },
+ {
+  "id": "accord-015",
+  "topic": "accord",
+  "rule": "acc-rel",
+  "q": "Les difficultés que nous avons [rencontrées] pendant les répétitions ont soudé la troupe.",
+  "alt": [
+   "rencontré",
+   "rencontrés",
+   "rencontrée"
+  ],
+  "why": "Que (= les difficultés, femininum plural) är COD och står före avoir: rencontrées.",
+  "sv": "Svårigheterna som vi stötte på under repetitionerna svetsade samman ensemblen."
+ },
+ {
+  "id": "accord-016",
+  "topic": "accord",
+  "rule": "acc-sans",
+  "q": "Des poèmes, j'en ai [écrit] une dizaine quand j'étais au lycée.",
+  "alt": [
+   "écrite",
+   "écrites"
+  ],
+  "why": "En är inte ett direkt objekt som participet kan kongruera med, så enligt normen böjs participet inte efter en: j'en ai écrit. (Vissa grammatiker godtar écrits efter en, men normen är oböjt particip. Femininformerna är fel i alla fall, eftersom poèmes är maskulinum.)",
+  "sv": "Dikter skrev jag ett tiotal av när jag gick på gymnasiet."
+ },
+ {
+  "id": "accord-017",
+  "topic": "accord",
+  "rule": "acc-sans",
+  "q": "Hier soir, la soprano a [chanté] trois airs de Mozart avec l'orchestre du conservatoire.",
+  "alt": [
+   "chantée",
+   "chantés",
+   "chantées"
+  ],
+  "why": "Med avoir kongruerar participet aldrig med subjektet. Det direkta objektet (trois airs) står efter verbet, så participet står i grundformen: chanté.",
+  "sv": "I går kväll sjöng sopranen tre arior av Mozart med konservatoriets orkester."
+ },
+ {
+  "id": "accord-018",
+  "topic": "accord",
+  "rule": "acc-sans",
+  "q": "Les actrices ? Le metteur en scène leur a [parlé] juste après la représentation.",
+  "alt": [
+   "parlées",
+   "parlée",
+   "parlés"
+  ],
+  "why": "Leur är ett indirekt objekt (COI: parler à quelqu'un). Participet kongruerar bara med ett föregående direkt objekt, så det blir parlé.",
+  "sv": "Skådespelerskorna? Regissören pratade med dem direkt efter föreställningen."
+ },
+ {
+  "id": "accord-019",
+  "topic": "accord",
+  "rule": "acc-sans",
+  "q": "Les musiciens qu'on a [fait] venir de Dakar jouent ce soir à la Philharmonie.",
+  "alt": [
+   "faits",
+   "faite",
+   "faites"
+  ],
+  "why": "Fait följt av infinitiv (faire venir) är alltid oböjt, även när ett objekt står före.",
+  "sv": "Musikerna som man har låtit komma från Dakar spelar i kväll på Philharmonie."
+ },
+ {
+  "id": "accord-020",
+  "topic": "accord",
+  "rule": "acc-sans",
+  "q": "Pendant l'été, ma sœur a [lu] toutes les pièces de Molière.",
+  "alt": [
+   "lue",
+   "lus",
+   "lues"
+  ],
+  "why": "Med avoir kongruerar participet inte med subjektet ma sœur. Objektet toutes les pièces står efter verbet, så participet är oböjt: lu.",
+  "sv": "Under sommaren läste min syster alla Molières pjäser."
+ },
+ {
+  "id": "accord-021",
+  "topic": "accord",
+  "rule": "acc-pron",
+  "q": "Ce matin-là, elle s'est [levée] avant l'aube pour répéter.",
+  "alt": [
+   "levé",
+   "levés",
+   "levées"
+  ],
+  "why": "Se lever: se är direkt objekt (hon lyfter sig själv), och det står före verbet. Participet kongruerar därför med se = elle: levée.",
+  "sv": "Den morgonen gick hon upp före gryningen för att öva."
+ },
+ {
+  "id": "accord-022",
+  "topic": "accord",
+  "rule": "acc-pron",
+  "q": "Ils se sont [rencontrés] au conservatoire de Lyon pendant leur première année.",
+  "alt": [
+   "rencontré",
+   "rencontrées",
+   "rencontrée"
+  ],
+  "why": "Rencontrer quelqu'un: se är direkt objekt (de mötte varandra), så participet kongruerar med ils: rencontrés.",
+  "sv": "De träffades på konservatoriet i Lyon under sitt första år."
+ },
+ {
+  "id": "accord-023",
+  "topic": "accord",
+  "rule": "acc-pron",
+  "q": "Au moment des adieux, les deux sœurs se sont [regardées] sans rien dire.",
+  "alt": [
+   "regardé",
+   "regardés",
+   "regardée"
+  ],
+  "why": "Regarder quelqu'un: se är direkt objekt och syftar på les deux sœurs (femininum plural): regardées.",
+  "sv": "I avskedsögonblicket såg de två systrarna på varandra utan att säga något."
+ },
+ {
+  "id": "accord-024",
+  "topic": "accord",
+  "rule": "acc-pron",
+  "q": "Hugo et moi, nous nous sommes [promenés] le long de la Seine après le concert.",
+  "alt": [
+   "promené",
+   "promenées",
+   "promenée"
+  ],
+  "why": "Se promener: se är direkt objekt, så participet kongruerar med subjektet. Hugo et moi innehåller en man, alltså maskulinum plural: promenés.",
+  "sv": "Hugo och jag promenerade längs Seine efter konserten."
+ },
+ {
+  "id": "accord-025",
+  "topic": "accord",
+  "rule": "acc-pron",
+  "q": "Elles se sont [inscrites] au cours de théâtre de l'université.",
+  "alt": [
+   "inscrit",
+   "inscrits",
+   "inscrite"
+  ],
+  "why": "S'inscrire: se är direkt objekt (man skriver in sig själv), så participet kongruerar med elles: inscrites.",
+  "sv": "De anmälde sig till universitetets teaterkurs."
+ },
+ {
+  "id": "accord-026",
+  "topic": "accord",
+  "rule": "acc-coi",
+  "q": "Après leur dispute, les deux chanteuses ne se sont plus [parlé] pendant des mois.",
+  "alt": [
+   "parlées",
+   "parlés",
+   "parlée"
+  ],
+  "why": "Parler à quelqu'un: se är indirekt objekt (COI), och då kongruerar participet inte, trots être: parlé.",
+  "sv": "Efter grälet pratade de två sångerskorna inte med varandra på flera månader."
+ },
+ {
+  "id": "accord-027",
+  "topic": "accord",
+  "rule": "acc-coi",
+  "q": "Pendant la tournée, les deux amoureux se sont [écrit] presque tous les jours.",
+  "alt": [
+   "écrits",
+   "écrites",
+   "écrite"
+  ],
+  "why": "Écrire à quelqu'un: se är indirekt objekt (COI), så participet är oböjt: ils se sont écrit.",
+  "sv": "Under turnén skrev de två förälskade till varandra nästan varje dag."
+ },
+ {
+  "id": "accord-028",
+  "topic": "accord",
+  "rule": "acc-coi",
+  "q": "Avant d'entrer en scène, la pianiste s'est [lavé] les mains.",
+  "alt": [
+   "lavée",
+   "lavées",
+   "lavés"
+  ],
+  "why": "Det direkta objektet (COD) är les mains och det står efter verbet. Se är här indirekt objekt (hon tvättade händerna åt sig), så participet böjs inte: lavé.",
+  "sv": "Innan pianisten gick in på scenen tvättade hon händerna."
+ },
+ {
+  "id": "accord-029",
+  "topic": "accord",
+  "rule": "acc-coi",
+  "q": "Hier soir, Camille et Nora se sont [téléphoné] pendant plus d'une heure.",
+  "alt": [
+   "téléphonées",
+   "téléphonés",
+   "téléphonée"
+  ],
+  "why": "Téléphoner à quelqu'un: se är indirekt objekt (COI), så participet är oböjt: elles se sont téléphoné.",
+  "sv": "I går kväll pratade Camille och Nora i telefon med varandra i över en timme."
+ },
+ {
+  "id": "accord-030",
+  "topic": "accord",
+  "rule": "acc-coi",
+  "q": "Depuis 1990, quatre metteurs en scène se sont [succédé] à la tête de ce théâtre.",
+  "alt": [
+   "succédés",
+   "succédées",
+   "succédée"
+  ],
+  "why": "Succéder à quelqu'un: se är indirekt objekt (COI), så participet är alltid oböjt: ils se sont succédé.",
+  "sv": "Sedan 1990 har fyra regissörer efterträtt varandra som chef för den här teatern."
+ }
+]

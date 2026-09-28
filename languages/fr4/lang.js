@@ -12,6 +12,7 @@ LANGUAGES.fr4 = {
   tts: "fr-FR",
   htmlLang: "fr",
   storageKey: "glosor-fr4-v1", // ÄNDRA ALDRIG: sparade framsteg ligger under den här nyckeln
+  nextCourse: "fru",           // kursen man går vidare till när den här är klar (Franska I på universitetet)
   extends: "fr",               // fälten i inherit hämtas från Franska 3 och slås ihop med fälten här (egna fält vinner)
   inherit: ["connectors", "tenseCheck", "verbs"],
 

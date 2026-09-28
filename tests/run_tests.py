@@ -128,7 +128,7 @@ appReady().then(()=>{ try{
     startMix(); runDe(); ok(c+": blandad runda", !sess); }
   // Franska 4 och Tyska 6 (steg 6)
   ok("tyska 5 föreslår tyska 6", LANGUAGES.de.nextCourse==="de6");
-  for(const [c,key] of [["fr4","glosor-fr4-v1"],["de6","glosor-de6-v1"]]){ useLang(c);
+  for(const [c,key] of [["fr4","glosor-fr4-v1"],["de6","glosor-de6-v1"],["fru","glosor-fru-v1"]]){ useLang(c);
     ok(c+": egen sparnyckel och ord", L.storageKey===key&&q("#coursechip").textContent.includes(L.course)&&WORDS.length>900, WORDS.length);
     ok(c+": grammatik", Object.keys(gramBank()).length>200&&verbGames().length>=2, Object.keys(gramBank()).length+" / "+verbGames().length);
     ok(c+": artikeln behövs inte i svaret", (()=>{const w=WORDS.find(w=>/^(le|la|der|die|das) /.test(w.t)&&!w.t.includes(",")); return !w||check(w.t.replace(/^\S+ /,""),variants(w.t))==="right"||L.code==="de6";})());
@@ -331,7 +331,7 @@ appReady().then(async()=>{ try{
   { const keep=S.log.slice(); for(let i=0;i<1100;i++) S.log.push({d:Date.now()-i*1000,dur:10,right:1,total:1,kind:"dict"}); save();
     ok("gammal logg sammanfattas", S.log.length===1000&&S.logOld&&S.logOld.dur>0, S.log.length+" "+JSON.stringify(S.logOld)); S.log=keep; delete S.logOld; save(); }
   renderStart(); q('[data-gy="1"]').click(); ok("Gy25-namn", q("#coursechip").textContent.includes("fortsättning, nivå 1")); q('[data-gy="0"]').click();
-  renderStart(); q('[data-only="1"]').click(); ok("bara franska: bara de franska kurserna i väljaren", onlyCourse()==="fr"&&!q(".coursepick").hidden&&[...q("#course").options].map(o=>o.value).join()==="fr,fr4", [...q("#course").options].map(o=>o.value).join()); q('[data-only="0"]').click();
+  renderStart(); q('[data-only="1"]').click(); ok("bara franska: bara de franska kurserna i väljaren", onlyCourse()==="fr"&&!q(".coursepick").hidden&&[...q("#course").options].map(o=>o.value).join()==="fr,fr4,fru", [...q("#course").options].map(o=>o.value).join()); q('[data-only="0"]').click();
   ok("visa alla kurser igen", !q(".coursepick").hidden&&!onlyCourse());
   setView("fb"); ok("tyck till: flik", q("#tab-fb").getAttribute("aria-selected")==="true"&&!!q("#fbtext"));
   q("#fbsend").click(); ok("tyck till: tomt meddelande skickas inte", !Object.keys(__remote).some(k=>k.startsWith("feedback/")));
@@ -1008,7 +1008,7 @@ const allRight=n0=>{const l=logsSince(n0); return l.length>0&&l.every(e=>e.right
     // Varje övning i menyn
     const menu=exGroups().flatMap(g=>g.items.map(h=>(h.match(/data-ex="(\w+)"/)||[])[1]).filter(Boolean));
     ok(c+": varje knapp i menyn har en typ med open", menu.every(id=>KINDS[id]&&KINDS[id].open), menu.join());
-    const need=["lq","rq","story","phr","ktest","dict","trans","order","shadow","write"].concat(hasGrammar()?["gram"]:[],(C().uttal||[]).length?["utt"]:[],hasExam()?["exam"]:[],(C().culture||[]).length?["culture"]:[]);
+    const need=["lq","rq","story","phr","ktest","dict","trans","order","shadow"].concat((C().prompts||[]).length?["write"]:[],hasGrammar()?["gram"]:[],(C().uttal||[]).length?["utt"]:[],hasExam()?["exam"]:[],(C().culture||[]).length?["culture"]:[]);
     ok(c+": alla övningar som kursen har innehåll för finns i menyn", need.every(k=>menu.includes(k)), need.filter(k=>!menu.includes(k)).join()+" · "+menu.length+" övningar");
     for(const id of menu){ const n0=S.log.length; let res=null, info="";
       try{
@@ -1062,10 +1062,109 @@ const allRight=n0=>{const l=logsSince(n0); return l.length>0&&l.every(e=>e.right
 </script>"""
 
 
+# ---------------------------------------------------------------------------------------------------------
+# Transkription (ipa) och satsanalys (sats) för Franska I på universitetet (fru): spelas igenom, pausas och
+# återupptas, statistiken sparas (S.ipa, S.sa), IPA-rättningen tål mellanslag, syllabering och länkning, och
+# kurser utan innehållsfilen visar inga knappar. Testas med tillfälligt innehåll i fr och, om fru finns, med kursens eget.
+# ---------------------------------------------------------------------------------------------------------
+SCENARIO_IPA = r"""<script>
+const out=[]; const q=s=>document.querySelector(s);
+const ok=(name,cond,info="")=>out.push((cond?"OK   ":"FEL  ")+name+(info?"  ("+info+")":""));
+const wait=(cond,ms=3000)=>new Promise(r=>{const t0=Date.now();(function p(){let v=false;try{v=cond()}catch(e){} if(v||Date.now()-t0>ms) r(!!v); else setTimeout(p,20);})();});
+const menuIds=()=>exGroups().flatMap(g=>g.items.map(h=>(h.match(/data-ex="(\w+)"/)||[])[1]).filter(Boolean));
+const grpOf=id=>(exGroups().find(g=>g.items.some(h=>h.includes('data-ex="'+id+'"')))||{}).id;
+const exClick=id=>{renderStart(); openExGroup(grpOf(id)); q('[data-ex="'+id+'"]').click();};
+function right(){ const c=sess.cur, d=sess.d;
+  if(c.t==="mc"){ answerMC(d.opts.findIndex(o=>o.ok)); q("#nx").click(); return; }
+  q("#ans").value=d.accepted[0]; q("#submit").click(); q("#submit").click(); }
+const runAll=()=>{let g=0; while(sess&&sess.cur&&g++<100) right();};
+const T=[
+  {id:"t1",sec:"s1",topic:"liaison",fr:"les amis",ipa:"/lez‿ami/",alt:["/le ami/","/les ami/","/lez‿amis/"],why:"Obligatorisk **liaison**."},
+  {id:"t2",sec:"s1",topic:"nasal",fr:"vin",ipa:"/vɛ̃/",alt:["/vin/","/vɑ̃/","/vɛn/"],why:"-in"},
+  {id:"t3",sec:"s1",topic:"nasal",fr:"brun",ipa:"/bʁœ̃/",ok:["/bʁɛ̃/"],alt:["/bʁyn/","/bʁɔ̃/","/bʁœn/"],why:"-un"},
+  {id:"t4",sec:"s1",topic:"ecaduc",fr:"mercredi",ipa:"/mɛʁkʁədi/",alt:["/mɛʁkʁdi/","/mɛʁkʁedi/","/meʁkʁədi/"],why:"tre konsonanter"}];
+const SA=[
+  {id:"s1",sec:"s1",lvl:1,t:"fn",fr:"Marie lit [[un roman]].",opts:["COI","COD","sujet","épithète"],a:1,why:"**COD**"},
+  {id:"s2",sec:"s1",lvl:2,t:"prop",fr:"Je sais [[qu'il viendra]].",opts:["subordonnée relative","subordonnée complétive"],a:1,why:"complétive"},
+  {id:"s3",sec:"s1",lvl:1,t:"fn",fr:"[[Le train]] part.",opts:["sujet","COD"],a:0,why:"sujet"}];
+
+(async()=>{ await wait(()=>typeof L!=="undefined"&&L&&L.base&&typeof CLOUD!=="undefined"&&CLOUD.ready,5000); try{
+  useLang("fr"); await wait(()=>L.code==="fr"&&WORDS&&WORDS.length&&!sess,5000);
+  ok("ipa/sats: typerna finns i registret", KINDS.ipa&&KINDS.ipa.mc&&KINDS.ipa.type&&KINDS.ipa.restore&&KINDS.ipa.effect&&KINDS.sats&&KINDS.sats.mc&&KINDS.sats.restore&&KINDS.sats.effect&&!KIND_ERRORS.length, KIND_ERRORS.join());
+  ok("ipa/sats: inga knappar utan innehållsfil (fr)", !menuIds().includes("ipa")&&!menuIds().includes("sats"), menuIds().join());
+  // Rättningen
+  { const x=T[0], y=T[2];
+    const good=["/lez‿ami/","lezami","le zami","lez ami","[le.za.mi]","/le.z‿a.mi/","le·za·mi","  lez_ami ","ˈlezaˈmi","lezaːmi"].filter(v=>ipaCheck(v,x)!=="right");
+    const bad=["le ami","/lesami/","lezamis","lɛzami"].filter(v=>ipaCheck(v,x)!=="wrong");
+    ok("ipa: rättningen godkänner varianter med och utan mellanslag, syllabering och länkning", !good.length, good.join(" | "));
+    ok("ipa: fel transkription godkänns inte", !bad.length, bad.join(" | "));
+    ok("ipa: r och ʀ räknas som ʁ, godkända varianter (ok) och tomt svar", ipaCheck("bʀœ̃",y)==="right"&&ipaCheck("/brœ̃/",y)==="right"&&ipaCheck("bʁɛ̃",y)==="right"&&ipaCheck("bʁyn",y)==="wrong"&&ipaCheck(" / ",y)==="empty"&&ipaCheck("mɛrkrədi",T[3])==="right"); }
+  // Transkription: menyn, flerval åt båda hållen och skriva
+  L.content.transkription=T; L.content.satsanalys=SA; S.runs={}; delete S.run; delete S.ipa; delete S.sa;
+  renderStart(); ok("ipa: knapp i gruppen med uttal", grpOf("ipa")==="speak"&&grpOf("utt")!==undefined?grpOf("ipa")===grpOf("utt"):grpOf("ipa")==="speak", grpOf("ipa"));
+  ok("sats: knapp i grammatikgruppen", grpOf("sats")==="gram", grpOf("sats"));
+  S.ipa={t2:{s:1,last:1},t3:{s:2,last:1}};
+  exClick("ipa"); ok("ipa: väljare med moment", !!q('[data-pick="*"]')&&!!q('[data-pick="nasal"]')&&!!q('[data-pick="liaison"]'));
+  q('[data-pick="*"]').click();
+  const forms=[sess.cur,...sess.queue].map(c=>c.ref.split("|")[1]).sort().join("");
+  ok("ipa: formen följer hur väl man kan ordet (f, r, w)", forms==="ffrw", forms);
+  { const it=[sess.cur,...sess.queue].find(c=>c.ref==="t3|w"); sess.queue=[...sess.queue,sess.cur].filter(c=>c!==it); sess.cur=it; sess.d=TYPE.ipa(it); renderType(sess.d); }
+  ok("ipa: skrivfråga med IPA-knapprad", document.querySelectorAll(".accents [data-c]").length===21&&!!q('[data-c="ɑ̃"]'), document.querySelectorAll(".accents [data-c]").length);
+  q("#ans").value="b"; q("#ans").setSelectionRange(1,1); q('[data-c="ʁ"]').click(); q('[data-c="œ̃"]').click();
+  ok("ipa: knapparna skriver in tecknet och flyttar markören förbi hela tecknet", q("#ans").value==="bʁœ̃"&&q("#ans").selectionStart===q("#ans").value.length, q("#ans").value);
+  q("#ans").value="[b.ʁœ̃]"; q("#submit").click(); ok("ipa: syllaberat svar godkänns i appen", q("#ans").classList.contains("right")); q("#submit").click();
+  { const c=sess.cur; right(); }
+  pauseSession();
+  ok("ipa: rundan sparas när man avbryter", S.runs["ipa|*"]&&S.runs["ipa|*"].done===2, JSON.stringify(Object.keys(S.runs)));
+  exClick("ipa"); q('[data-pick="*"]').click(); ok("ipa: fråga om att fortsätta", !!q("#rcont")); q("#rcont").click();
+  ok("ipa: återupptas där man slutade", sess&&sess.done===2&&sess.kind==="ipa", sess&&sess.done);
+  runAll(); const e=S.log[S.log.length-1];
+  ok("ipa: runda klar och loggad", !sess&&e.kind==="ipa"&&e.right===4&&e.total===4&&q("#app").textContent.includes("Transkription klar"), e&&JSON.stringify(e));
+  ok("ipa: statistiken per ord (S.ipa)", S.ipa.t1&&S.ipa.t1.s===1&&S.ipa.t1.n===1&&S.ipa.t3.s===3, JSON.stringify(S.ipa));
+  ok("ipa: fel svar ger tillbaka frågan och s nollställs", (()=>{ sess=null; beginQuiz("ipa",[{k:"ipa",id:"ipa:t4|w",ref:"t4|w",t:"type",canType:true}],{label:"t",againFn:["ipa","x"],ctx:{type:"ipa",id:"x"}});
+    q("#ans").value="mɛʁkʁdi"; q("#submit").click(); const back=sess.queue.some(c=>c.again&&c.t==="mc"); q("#submit").click(); runAll(); return back&&S.ipa.t4.s===0&&q("#app").textContent.includes("mercredi"); })());
+  // Satsanalys
+  exClick("sats"); ok("sats: väljare", !!q('[data-pick="*"]')&&!!q('[data-pick="fn"]')&&!!q('[data-pick="prop"]'));
+  q('[data-pick="*"]').click();
+  ok("sats: lätt före svårt och markerad del", sess.cur.ref!=="s2"&&[sess.cur,...sess.queue].map(c=>c.ref).pop()==="s2"&&!!q(".q-prompt u")&&!q(".q-prompt").textContent.includes("[["), q(".q-prompt")&&q(".q-prompt").innerHTML);
+  right(); pauseSession();
+  ok("sats: rundan sparas när man avbryter", S.runs["sats|*"]&&S.runs["sats|*"].done===1);
+  renderStart(); exClick("sats"); q('[data-pick="*"]').click(); q("#rcont").click();
+  ok("sats: återupptas", sess&&sess.done===1&&sess.kind==="sats"); runAll();
+  { const e=S.log[S.log.length-1]; ok("sats: runda klar och loggad", !sess&&e.kind==="sats"&&e.right===3&&e.total===3, JSON.stringify(e)); }
+  ok("sats: statistiken (S.sa)", S.sa.s1&&S.sa.s1.s===1&&S.sa.s2.n===1, JSON.stringify(S.sa));
+  ok("ipa/sats: restore och recap", RESTORE.ipa("t1|w")&&RESTORE.ipa("finns-inte|f")===null&&RESTORE.ipa("t1|x")===null&&RESTORE.sats("s1")&&RESTORE.sats("nej")===null&&RECAP.sats("s1")==="un roman: COD");
+  setView("stats"); ok("ipa/sats: i statistiken", q("#app").textContent.includes("Transkription per moment")&&q("#app").textContent.includes("Satsanalys")&&q("#app").textContent.includes("Transkription ·"), "");
+  await wait(()=>false,300);
+  { const st=JSON.parse(localStorage.getItem(L.storageKey)||"{}"); ok("ipa/sats: statistiken sparas", st.ipa&&st.ipa.t1&&st.sa&&st.sa.s1); }
+  delete L.content.transkription; delete L.content.satsanalys; renderStart();
+  ok("ipa/sats: knapparna försvinner utan innehåll", !menuIds().includes("ipa")&&!menuIds().includes("sats"));
+  // Andra kurser än fru har inga knappar
+  for(const c of Object.keys(LANGUAGES).filter(c=>c!=="fru"&&c!=="fr")){ useLang(c); await wait(()=>L.code===c&&WORDS&&!sess,5000);
+    ok(c+": inga knappar för transkription och satsanalys", !menuIds().includes("ipa")&&!menuIds().includes("sats")); }
+  // Kursens eget innehåll
+  if(LANGUAGES.fru){ useLang("fru"); await wait(()=>L.code==="fru"&&L.base&&!sess,5000);
+    const tr=C().transkription||[], sa=C().satsanalys||[];
+    ok("fru: 120–150 poster i vardera", tr.length>=120&&tr.length<=150&&sa.length>=120&&sa.length<=150, tr.length+" / "+sa.length);
+    ok("fru: knapparna finns", menuIds().includes("ipa")&&menuIds().includes("sats"));
+    const bad=tr.filter(x=>ipaCheck(x.ipa,x)!=="right"||(x.ok||[]).some(v=>ipaCheck(v,x)!=="right")||x.alt.some(a=>ipaCheck(a,x)!=="wrong")).map(x=>x.id);
+    ok("fru: facit rättas som rätt och felalternativen som fel", !bad.length, bad.join());
+    const topics=[...new Set(tr.map(x=>x.topic))].filter(t=>!IPA_TOPICS[t]); ok("fru: alla moment har namn", !topics.length, topics.join());
+    exClick("ipa"); q('[data-pick="*"]').click(); if(q("#rnew")) q("#rnew").click(); runAll(); ok("fru: transkription genomspelad", !sess&&S.log[S.log.length-1].kind==="ipa");
+    exClick("sats"); q('[data-pick="*"]').click(); if(q("#rnew")) q("#rnew").click(); runAll(); ok("fru: satsanalys genomspelad", !sess&&S.log[S.log.length-1].kind==="sats");
+    useLang("fr"); }
+ }catch(e){ ok("undantag", false, e.message+" "+(e.stack||"").split("\n")[1]); }
+ ok("inga JavaScript-fel", !__err.length, __err.join(" ; "));
+ document.body.insertAdjacentHTML("beforeend","<pre id=out>"+out.join("\n").replace(/</g,"&lt;")+"</pre>");
+})();
+</script>"""
+
+
 def main():
     text = run(SCENARIO) + "\n" + run(SCENARIO_DE) + "\n" + run(SCENARIO_FIXES) + "\n" + run(SCENARIO_SYNC, 30000) + "\n" + run_http(SCENARIO_HTTP)
     text += "\n" + run(SCENARIO_ARCH, 30000) + "\n" + test_build_locks()   # arkitektur, del 6
     text += "\n" + run(SCENARIO_KINDS, 60000)   # övningstyperna (src/kinds), alla kurser, två enheter, del 6
+    text += "\n" + run(SCENARIO_IPA, 30000)   # transkription och satsanalys (fru)
     print(text)
     sys.exit(1 if "FEL  " in text else 0)
 

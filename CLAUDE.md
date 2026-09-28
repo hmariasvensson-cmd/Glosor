@@ -30,7 +30,7 @@ Publicera alltid med de här kapabiliteterna (utelämna `capabilities` vid ompub
 
 ## Saker som aldrig får ändras
 
-- `storageKey` i `languages/*/lang.js` (`franska-glosor-v2`, `glosor-fr4-v1`, `glosor-de-v1`, `glosor-de4-v1`, `glosor-de6-v1`, `glosor-it1-v1`, `glosor-it2-v1`).
+- `storageKey` i `languages/*/lang.js` (`franska-glosor-v2`, `glosor-fr4-v1`, `glosor-fru-v1`, `glosor-de-v1`, `glosor-de4-v1`, `glosor-de6-v1`, `glosor-it1-v1`, `glosor-it2-v1`).
 - Formatet på sparat läge: `{v, pass, w:{<ord-id>:{s,due}}, newCount, src, mode, log, nLog, t}` (`v` = schemaversion, `nLog` = antal loggposter någonsin, räknas fram för gamla lägen; `log` kapas vid 1 000 och resten sammanfattas i `logOld`). Formatet i localStorage är oförändrat; bara molnkopian delas upp. Steg `s` 0–3 = lär sig, 4 och uppåt = kan. Steg 0–1 repeteras efter pass (`due`), från steg 2 efter dagar (`dd`, tidsstämpel): nästa pass, 3 pass, 3, 7, 20, 45, 90 dagar (se `INT`, `DAYS` och `schedule` i app.js). Kapitelprovets resultat ligger i `S.kt`.
 - Ord-id är ordets form i målspråket (första fältet i words.txt), och avsnitts-id används i `S.src`. Att ändra dem nollställer framstegen för de orden.
 - `S` har en schemaversion `S.v`. Ändras formen på ett fält läggs en ny migrering **sist** i `MIGRATIONS` i app.js (index = version); ändra aldrig en gammal. Alla fält i `S` står i kommentaren ovanför `loadState` och i `docs/ARKITEKTUR.md`.
@@ -57,6 +57,7 @@ eller en rad `<typ>|<id>` i `languages/<kod>/ids.removed` (`book/ids.removed` f�
 - Arv mellan kurser: `extends: "<kod>"` och `inherit: ["connectors", "tenseCheck", "verbs", …]` i `lang.js`. De fälten slås ihop djupt med kursens egna när sidan startar (`inheritCourses` i app.js); kursens egna fält vinner, `{$append: [...]}` lägger till i förälderns lista och `{$remove: [nycklar]}` tar bort nycklar ur förälderns objekt. Bara fälten i `inherit` ärvs. Ordningen mellan kurserna spelar ingen roll, och build.py kontrollerar att föräldern finns.
 - `languages/de4/`: Tyska 4 (A2 → B1). Ärver verb (utan Konjunktiv I), bindeord och tempusigenkänning från `de`. `nextCourse` ger förslaget att gå vidare till Tyska 5.
 - `languages/fr4/` och `languages/de6/`: Franska 4 och Tyska 6 (steg 6, B1.2), utan lärobok. Ärver bindeord, tempusigenkänning och verb från `fr` respektive `de` (fr4 lägger till egna bindeord och conditionnel/subjonctif). Tyska 5 har `nextCourse: "de6"`.
+- `languages/fru/`: Franska I på universitetet (1–30 hp, B1 → B2, provmål DELF B2), underlag i `docs/franska-universitet.md`. Ärver accenter, artiklar, pronomen, bindeord, tempusigenkänning och verb från `fr` och lägger till passé simple. Kedjan fr → fr4 → fru går via `nextCourse`.
 - `languages/it1/`, `languages/it2/`: Italienska 1 (A1) och 2 (A1 → A2), plan i `docs/italienska-plan.md`. it2 ärver artiklar, pronomen, bindeord m.m. från it1.
 - `content/regler.json`: grammatikregler per område (format i `docs/REGLER-SPEC.md`).
 - `languages/<kod>/lang.js`: kursinställningar (course, level, storageKey, accenter, verbspel, bindeord, tempusigenkänning).

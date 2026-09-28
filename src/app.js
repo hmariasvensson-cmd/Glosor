@@ -106,6 +106,7 @@ const MASTER=4, MAXDUE=40;   // MAXDUE = högst så många repetitioner per pass
      gi, gr, gt grammatik: per fråga {s, last}, per regel och per område {r, n}
      ga         der/die/das och plural per ord-id {g, p, last}
      tr, ph, te översätta meningar, fraser, musikteori: per id {s, last}
+     ipa, sa    transkription och satsanalys (universitetskursen): per id {s, last, r, n}
      tx         läs- och hörtexter per id {r, n, best, last}    stb  berättelser: bästa antal rätt per id
      st         berättelsernas luckor {tempus, bindeord: {r, n}}
      cu, wr     kulturuppgifter och skrivuppgifter som är klara, per id

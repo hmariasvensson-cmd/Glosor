@@ -18,6 +18,7 @@ function exGroups(){
     ["gram","Grammatik","Verb, grammatikövningar och berättelser",[
       ...verbGames().map(v=>`<button class="game" data-g="${v.id}"><span><b>Verb: ${esc(v.name)}</b><small>${esc(v.sub||"")}</small></span><span class="go" aria-hidden="true">›</span></button>`),
       hasGrammar()&&g("gram","Grammatikövningar",GR().topics.slice(0,4).map(t=>t.name.toLowerCase()).join(", ")+" …"),
+      (c.satsanalys||[]).length&&g("sats","Satsanalys","Vilken funktion har den understrukna delen? Sujet, COD, COI, subordonnée relative …"),
       c.stories&&g("story","Berättelser","Välj rätt tempus och bindeord i en berättelse.")]],
     ...(hasExam()||(c.teori||[]).length?[["exam","Språkprov och teoriprov",hasExam()?`${esc(EX().name)}: provuppgifter och simulering`:"Musikteori på målspråket",[
       hasExam()&&g("exam",`Provträning: ${esc(EX().name)}`,"Uppgifter i provets format, med klocka, poäng och provsimulering."),
@@ -25,6 +26,7 @@ function exGroups(){
     ["speak","Tala och skriva","Samtalsfraser, skugga och skrivuppgifter",[
       c.phrases&&g("phr","Samtalsfraser","Vad man säger när man inte förstår, vill säga sin åsikt …"),
       (c.uttal||[]).length&&g("utt","Uttal: lyssna och välj","Ord som låter nästan lika. Vilket hör du?"),
+      (c.transkription||[]).length&&g("ipa","Transkription (IPA)","Från franska till IPA och tillbaka: nasalvokaler, e caduc, liaison …"),
       g("shadow","Skugga","Lyssna och säg meningen högt samtidigt, för uttal och rytm."),
       c.prompts&&g("write","Skriv en text",L.selfStudy?"Skrivuppgift med checklista och exempeltext.":"Skrivuppgift med checklista, att skicka till läraren.")]]
   ];
@@ -54,7 +56,7 @@ function statsExercises(){
   const agg={}; logs.forEach(l=>{const a=agg[l.kind]=agg[l.kind]||{r:0,n:0,c:0,w:0}; a.r+=l.right||0; a.n+=l.total||0; a.c++; a.w+=l.words||0;});
   const rows=Object.entries(agg).filter(([k])=>k!=="write").map(([k,a])=>meter(`${(KINDS[k]||{}).name||k} · ${a.c} ${a.c===1?"gång":"gånger"}`,a.r,a.n)).join("");
   const st=S.st||{}, t=st.tempus||{}, b=st.bindeord||{};
-  return `<section class="panel"><h2>Övningar</h2>${rows}
+  return `<section class="panel"><h2>Övningar</h2>${rows}${ipaStats()}${satsStats()}
     ${t.n||b.n?`<p class="plan">I berättelserna: tempus ${pct(t.r,t.n)??"–"}% rätt, bindeord ${pct(b.r,b.n)??"–"}% rätt.</p>`:""}
     ${agg.write?`<p class="plan">Du har skrivit ${agg.write.c} ${agg.write.c===1?"text":"texter"}, sammanlagt ${agg.write.w} ord.</p>`:""}
     ${(S.mine||[]).length?`<p class="plan">${S.mine.length} ord sparade från texterna i Mina ord.</p>`:""}</section>`;

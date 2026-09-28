@@ -36,6 +36,7 @@ En kurs kan ärva fält från en annan: `extends: "de"` och `inherit: ["connecto
 | de4 | de | `connectors`, `tenseCheck`, `verbs` (utan Konjunktiv I, egna spel) |
 | de6 | de | `connectors`, `tenseCheck`, `verbs` (egna spel) |
 | fr4 | fr | `connectors` (+22 egna), `tenseCheck` (+conditionnel, subjonctif), `verbs` (egna spel) |
+| fru | fr | `accents`, `verbAccents`, `articles`, `pronouns`, `genders`, `elision`, `connectors` (+37 egna), `tenseCheck` (+conditionnel, subjonctif, passé simple), `verbs` (+passé simple, egna spel) |
 | it2 | it1 | `articles`, `hintStrip`, `pronouns`, `elision`, `connectors`, `tenseCheck` |
 
 ### Kursdata i minnet
@@ -74,7 +75,9 @@ Appens kod är `src/app.js` (språk, sparande, glosquiz och quizmotor), sedan fi
 | `50-ktest.js` | Kapitelprov | `ktest` |
 | `51-goals.js` | Kapitlets mål på startsidan | – |
 | `52-uttal.js`, `53-teori.js` | Uttal och teoriprovet | `utt`, `teori` |
+| `54-transkription.js` | Transkription till och från IPA (`content/transkription.json`, bara i kurser som har filen, t.ex. `fru`): välj IPA, välj ord och skriv med IPA-knapprad; rättningen bortser från mellanslag, syllabering och länkning. Format i `languages/fru/content/SPEC.md` | `ipa` |
 | `60-grammar.js`, `61-gender.js` | Grammatikövningar, der/die/das och plural | `gram`, `gen`, `plu` |
+| `62-satsanalys.js` | Satsanalys med fransk terminologi (`content/satsanalys.json`, bara i kurser som har filen): funktionen eller satstypen för en markerad del `[[…]]` | `sats` |
 | `70-exam.js` | Provträning och provsimulering | `exam` |
 | `90-mix.js` | Dagens pass och den blandade rundan | `mix` |
 | `99-menu.js` | Menyn med alla övningar och statistiken för dem | – |
@@ -134,6 +137,7 @@ Ett dokument i artefaktens db får vara **högst 256 KiB** (plattformens gräns,
 | `gi`, `gr`, `gt` | Grammatik per fråga `{s, last}`, per regel och per område `{r, n}`. |
 | `ga` | der/die/das och plural per ord-id `{g, p, last}`. |
 | `tr`, `ph`, `te` | Översätta meningar, fraser, musikteori: per id `{s, last}`. |
+| `ipa`, `sa` | Transkription och satsanalys (universitetskursen): per id `{s, last, r, n}`. |
 | `tx`, `stb`, `st` | Läs- och hörtexter `{r, n, best, last}`, berättelsernas bästa resultat, berättelsernas luckor `{tempus, bindeord}`. |
 | `cu`, `wr`, `ut`, `mal`, `kt` | Klara kulturuppgifter och skrivuppgifter, bästa uttalsresultat, avbockade lärandemål (`"<id>\|<nr>"`), kapitelprov `{r, n, d, miss}`. |
 | `exam` | Provträning `{t: {<uppgift>: {pct, best, n, last}}, sims: [{d, parts}]}`. |

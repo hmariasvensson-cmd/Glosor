@@ -1,0 +1,1152 @@
+{
+ "name": "DELF B2",
+ "pass": 50,
+ "note": "Övningar i provets stil, skrivna för appen. Det är inte officiellt provmaterial. DELF B2 har fyra delar på 25 poäng var: hörförståelse (cirka 30 minuter), läsförståelse (1 timme), skriftlig produktion (1 timme, en argumenterande text på minst 250 ord) och muntlig produktion (ett anförande där du försvarar en ståndpunkt utifrån ett kort dokument, följt av en diskussion med examinatorn, cirka 20 minuter efter förberedelsetid). För att klara provet krävs 50 av 100 poäng totalt och minst 5 av 25 poäng i varje del.",
+ "parts": [
+  {
+   "id": "co",
+   "name": "Compréhension de l'oral",
+   "sv": "Hörförståelse",
+   "time": 30
+  },
+  {
+   "id": "ce",
+   "name": "Compréhension des écrits",
+   "sv": "Läsförståelse",
+   "time": 60
+  },
+  {
+   "id": "pe",
+   "name": "Production écrite",
+   "sv": "Skriva",
+   "time": 60
+  },
+  {
+   "id": "po",
+   "name": "Production orale",
+   "sv": "Tala",
+   "time": 20
+  }
+ ],
+ "tasks": [
+  {
+   "id": "fru-co-1",
+   "part": "co",
+   "teil": "Exercice 1",
+   "title": "Streaming : qui paie les musiciens ?",
+   "time": 9,
+   "plays": 1,
+   "instr": "Du hör en radiointervju med Hélène Marchal, cellist och medgrundare till ett kollektiv som försvarar musikers rättigheter gentemot streamingtjänsterna. Läs frågorna först. Här hör du intervjun en gång, så var koncentrerad från början. Välj rätt svar på varje fråga.",
+   "lines": [
+    {
+     "fr": "— Hélène Marchal, vous êtes violoncelliste et vous venez de cofonder un collectif qui défend les droits des musiciens face aux plateformes de streaming. Pourquoi ce combat ?",
+     "sv": "– Hélène Marchal, du är cellist och har nyss varit med och grundat ett kollektiv som försvarar musikernas rättigheter gentemot streamingtjänsterna. Varför den här kampen?"
+    },
+    {
+     "fr": "— Parce que la situation est paradoxale. Jamais on n'a écouté autant de musique, et pourtant la plupart des musiciens n'en vivent pas mieux, bien au contraire. Quand un de mes morceaux est écouté mille fois, je touche à peine de quoi m'offrir un café.",
+     "sv": "– Därför att situationen är paradoxal. Aldrig har man lyssnat så mycket på musik, och ändå lever de flesta musiker inte bättre på den, snarare tvärtom. När ett av mina stycken spelas tusen gånger får jag knappt ihop till en kopp kaffe."
+    },
+    {
+     "fr": "— Les plateformes répondent pourtant qu'elles reversent l'essentiel de leurs revenus aux ayants droit.",
+     "sv": "– Tjänsterna svarar ändå att de betalar ut större delen av sina intäkter till rättighetshavarna."
+    },
+    {
+     "fr": "— C'est vrai, mais il faut regarder comment cet argent est partagé. Aujourd'hui, la plupart des plateformes additionnent tous les abonnements, puis répartissent la somme selon la part de chaque artiste dans le nombre total d'écoutes. Résultat : si vous n'écoutez que du jazz, une partie de votre abonnement finit quand même dans la poche des vedettes les plus écoutées.",
+     "sv": "– Det stämmer, men man måste titta på hur pengarna fördelas. I dag lägger de flesta tjänster ihop alla abonnemang och fördelar sedan summan efter varje artists andel av det totala antalet lyssningar. Resultatet: även om du bara lyssnar på jazz hamnar en del av din abonnemangsavgift ändå i fickan på de mest spelade stjärnorna."
+    },
+    {
+     "fr": "— Et que proposez-vous ?",
+     "sv": "– Och vad föreslår ni?"
+    },
+    {
+     "fr": "— Un système dit « centré sur l'utilisateur » : l'argent de chaque abonné irait uniquement aux artistes qu'il écoute réellement. Certaines plateformes l'ont testé, mais les études ne sont pas unanimes : pour plusieurs économistes, le gain pour les petits artistes serait modeste. Je ne prétends donc pas que ce soit une solution miracle.",
+     "sv": "– Ett så kallat ”användarcentrerat” system: varje abonnents pengar skulle gå enbart till de artister som han eller hon faktiskt lyssnar på. Vissa tjänster har provat det, men studierna är inte eniga: enligt flera ekonomer skulle vinsten för små artister bli blygsam. Jag påstår alltså inte att det är en mirakellösning."
+    },
+    {
+     "fr": "— Vous dénoncez aussi le poids des contrats signés avec les maisons de disques.",
+     "sv": "– Ni kritiserar också vilken tyngd kontrakten med skivbolagen har."
+    },
+    {
+     "fr": "— Oui, et on en parle trop peu. Beaucoup de jeunes musiciens signent leur premier contrat sans vraiment le lire, trop heureux d'être enfin produits. Or certains contrats anciens prévoient des pourcentages très faibles sur les ventes numériques, parce qu'ils ont été rédigés à une époque où le streaming n'existait pas.",
+     "sv": "– Ja, och det talas för lite om det. Många unga musiker skriver på sitt första kontrakt utan att riktigt läsa det, alltför glada över att äntligen bli utgivna. Men vissa äldre kontrakt ger mycket låga procentsatser på den digitala försäljningen, eftersom de skrevs på en tid då streaming inte fanns."
+    },
+    {
+     "fr": "— Les musiciens classiques sont-ils concernés de la même manière ?",
+     "sv": "– Drabbas klassiska musiker på samma sätt?"
+    },
+    {
+     "fr": "— Ils le sont même davantage. Un mouvement de symphonie peut durer quinze minutes, alors qu'une chanson pop en dure trois. Or les plateformes paient à l'écoute, quelle que soit sa durée. Sans compter que les métadonnées, c'est-à-dire les informations sur le compositeur, l'interprète ou l'orchestre, sont souvent mal renseignées, si bien que certains interprètes ne sont tout simplement pas identifiés.",
+     "sv": "– De drabbas till och med mer. En symfonisats kan vara femton minuter lång, medan en poplåt är tre minuter. Men tjänsterna betalar per lyssning, oavsett hur lång den är. Till det kommer att metadata, alltså uppgifterna om tonsättaren, den som spelar eller orkestern, ofta är bristfälligt ifyllda, så att vissa musiker helt enkelt inte går att identifiera."
+    },
+    {
+     "fr": "— Faut-il alors que l'État intervienne ?",
+     "sv": "– Måste staten ingripa, då?"
+    },
+    {
+     "fr": "— Il intervient déjà en partie : une taxe sur le streaming a été créée pour financer le Centre national de la musique. Mais à mon avis, l'essentiel est ailleurs. Il faudrait que les musiciens apprennent, dès le conservatoire, à lire un contrat et à connaître leurs droits. On forme d'excellents instrumentistes, mais on les laisse souvent démunis dès qu'il s'agit de gérer leur carrière.",
+     "sv": "– Den ingriper redan delvis: en skatt på streaming har införts för att finansiera Centre national de la musique. Men enligt mig ligger det viktigaste någon annanstans. Musiker borde redan på konservatoriet lära sig att läsa ett kontrakt och känna till sina rättigheter. Man utbildar utmärkta instrumentalister, men lämnar dem ofta handfallna så fort det gäller att sköta sin karriär."
+    },
+    {
+     "fr": "— Hélène Marchal, merci.",
+     "sv": "– Hélène Marchal, tack."
+    }
+   ],
+   "qs": [
+    {
+     "q": "Quel paradoxe Hélène Marchal souligne-t-elle ?",
+     "opts": [
+      "On écoute moins de musique, mais les musiciens gagnent davantage.",
+      "On n'a jamais autant écouté de musique, sans que les musiciens en vivent mieux.",
+      "Les plateformes perdent de l'argent malgré leur succès."
+     ],
+     "a": 1,
+     "why": "« Jamais on n'a écouté autant de musique, et pourtant la plupart des musiciens n'en vivent pas mieux »."
+    },
+    {
+     "q": "D'après elle, le mode de répartition actuel de l'argent des abonnements…",
+     "opts": [
+      "favorise les artistes les plus écoutés.",
+      "profite surtout aux amateurs de jazz.",
+      "tient compte des goûts de chaque abonné."
+     ],
+     "a": 0,
+     "why": "Pengarna fördelas efter andelen av alla lyssningar, så att en del av jazzlyssnarens avgift hamnar « dans la poche des vedettes les plus écoutées »."
+    },
+    {
+     "q": "Vrai ou faux ? Hélène Marchal présente le système « centré sur l'utilisateur » comme une solution qui réglera tous les problèmes.",
+     "opts": [
+      "Vrai",
+      "Faux"
+     ],
+     "a": 1,
+     "why": "Faux. Hon säger att studierna inte är eniga och att vinsten kan bli « modeste »: « Je ne prétends donc pas que ce soit une solution miracle »."
+    },
+    {
+     "q": "Pourquoi certains contrats sont-ils particulièrement désavantageux ?",
+     "opts": [
+      "Ils interdisent aux musiciens de publier sur les plateformes.",
+      "Ils obligent les musiciens à rembourser les frais d'enregistrement.",
+      "Ils ont été rédigés avant l'arrivée du streaming."
+     ],
+     "a": 2,
+     "why": "« certains contrats anciens prévoient des pourcentages très faibles sur les ventes numériques, parce qu'ils ont été rédigés à une époque où le streaming n'existait pas »."
+    },
+    {
+     "q": "Pourquoi les musiciens classiques sont-ils encore plus pénalisés ?",
+     "opts": [
+      "Leur public écoute moins souvent de la musique en ligne.",
+      "Leurs morceaux sont longs, alors que le paiement se fait à l'écoute.",
+      "Leurs maisons de disques gardent une part plus importante."
+     ],
+     "a": 1,
+     "why": "« Un mouvement de symphonie peut durer quinze minutes […] Or les plateformes paient à l'écoute, quelle que soit sa durée »."
+    },
+    {
+     "q": "Quelle est la conséquence de métadonnées mal renseignées ?",
+     "opts": [
+      "Certains interprètes ne sont pas identifiés.",
+      "Les morceaux sont retirés des plateformes.",
+      "Les compositeurs sont payés deux fois."
+     ],
+     "a": 0,
+     "why": "Metadata är « mal renseignées, si bien que certains interprètes ne sont tout simplement pas identifiés »."
+    },
+    {
+     "q": "Vrai ou faux ? Selon Hélène Marchal, l'État n'a encore rien fait.",
+     "opts": [
+      "Vrai",
+      "Faux"
+     ],
+     "a": 1,
+     "why": "Faux. « Il intervient déjà en partie : une taxe sur le streaming a été créée pour financer le Centre national de la musique »."
+    },
+    {
+     "q": "Quelle mesure lui paraît la plus importante ?",
+     "opts": [
+      "Augmenter la taxe sur le streaming.",
+      "Interdire les contrats signés avant l'ère numérique.",
+      "Apprendre aux musiciens leurs droits dès leur formation."
+     ],
+     "a": 2,
+     "why": "« l'essentiel est ailleurs. Il faudrait que les musiciens apprennent, dès le conservatoire, à lire un contrat et à connaître leurs droits »."
+    }
+   ]
+  },
+  {
+   "id": "fru-co-2",
+   "part": "co",
+   "teil": "Exercice 2",
+   "title": "Des quotas de chansons françaises à la radio ?",
+   "time": 10,
+   "plays": 2,
+   "instr": "Du hör en radiodebatt om kvoter för franskspråkiga låtar i radio. Deltagare: programledaren, Margaux Lefèvre, som väljer musiken på en radiokanal för unga, och Antoine Rivière, låtskrivare. Läs frågorna först. Här hör du debatten två gånger. Välj rätt svar på varje fråga.",
+   "lines": [
+    {
+     "fr": "— Bonsoir. Depuis 1996, les radios musicales françaises doivent diffuser au moins 40 % de chansons d'expression française, dont la moitié issue de nouveaux talents ou de nouvelles productions. Trente ans plus tard, faut-il encore des quotas ? Margaux Lefèvre, vous programmez la musique d'une radio destinée aux jeunes.",
+     "sv": "– God kväll. Sedan 1996 måste de franska musikradiokanalerna spela minst 40 procent franskspråkiga låtar, varav hälften av nya artister eller nyproduktioner. Trettio år senare: behövs kvoterna fortfarande? Margaux Lefèvre, du väljer musiken på en radiokanal för unga."
+    },
+    {
+     "fr": "— Je vais être franche : les quotas nous compliquent la vie. Nos auditeurs de vingt ans écoutent du rap américain, de la K-pop, de l'afrobeat. Si nous ne leur proposons pas ce qu'ils aiment, ils partent sur les plateformes, où il n'y a aucune règle. Au fond, les quotas pèsent sur les radios, alors que nos concurrents, eux, n'y sont pas soumis.",
+     "sv": "– Jag ska vara ärlig: kvoterna gör livet svårt för oss. Våra tjugoåriga lyssnare lyssnar på amerikansk rap, K-pop och afrobeat. Om vi inte erbjuder dem det de gillar, går de över till streamingtjänsterna, där det inte finns några regler alls. I grunden belastar kvoterna radion, medan våra konkurrenter inte omfattas av dem."
+    },
+    {
+     "fr": "— Antoine Rivière, vous êtes auteur-compositeur. Que répondez-vous ?",
+     "sv": "– Antoine Rivière, du är låtskrivare. Vad svarar du?"
+    },
+    {
+     "fr": "— Que sans les quotas, je n'aurais sans doute jamais été diffusé. Au début des années 1990, la chanson francophone avait de moins en moins de place sur les ondes. Les quotas ont obligé les radios à chercher de nouveaux artistes, et toute une génération en a profité. On dit d'ailleurs souvent que c'est grâce à cette obligation que le rap français a trouvé sa place à la radio.",
+     "sv": "– Att jag utan kvoterna förmodligen aldrig hade blivit spelad. I början av 1990-talet fick den franskspråkiga visan allt mindre utrymme i etern. Kvoterna tvingade radiokanalerna att leta efter nya artister, och en hel generation drog nytta av det. Man säger för övrigt ofta att det var tack vare det kravet som fransk rap fick sin plats i radion."
+    },
+    {
+     "fr": "— Je ne le nie pas. Mais le contexte a complètement changé. Aujourd'hui, le rap en français fait partie des genres les plus écoutés par les jeunes, sans aucune obligation. C'est bien la preuve que la qualité suffit.",
+     "sv": "– Det förnekar jag inte. Men sammanhanget har förändrats helt. I dag hör rap på franska till de genrer som unga lyssnar mest på, utan något tvång alls. Det bevisar ju att kvaliteten räcker."
+    },
+    {
+     "fr": "— Pour le rap, peut-être. Mais pensez aux autres : la chanson à texte, les musiques traditionnelles, les artistes qui chantent en breton ou en créole. Et puis, certaines radios remplissaient leur quota en passant toujours les dix mêmes titres. Il a fallu modifier la loi pour limiter ces abus.",
+     "sv": "– För rapen, kanske. Men tänk på de andra: den textdrivna visan, folkmusiken, artisterna som sjunger på bretonska eller kreol. Dessutom fyllde vissa radiokanaler sin kvot genom att hela tiden spela samma tio låtar. Lagen fick ändras för att begränsa det missbruket."
+    },
+    {
+     "fr": "— Justement : si l'on veut de la diversité, la contrainte ne suffit pas. Je préférerais qu'on aide les radios qui prennent des risques, par exemple avec des aides financières, plutôt que de sanctionner les autres.",
+     "sv": "– Just det: om man vill ha mångfald räcker det inte med tvång. Jag skulle hellre se att man hjälpte de radiokanaler som tar risker, till exempel med ekonomiskt stöd, i stället för att straffa de andra."
+    },
+    {
+     "fr": "— Et les plateformes de streaming ? Faudrait-il leur imposer des quotas, à elles aussi ?",
+     "sv": "– Och streamingtjänsterna? Borde man införa kvoter för dem också?"
+    },
+    {
+     "fr": "— Ce serait logique. Il ne s'agit pas d'obliger les gens à écouter quoi que ce soit, mais de rendre visibles les artistes francophones dans les listes de lecture mises en avant.",
+     "sv": "– Det vore logiskt. Det handlar inte om att tvinga folk att lyssna på något särskilt, utan om att göra franskspråkiga artister synliga i de spellistor som lyfts fram."
+    },
+    {
+     "fr": "— Techniquement, ce serait très difficile : chaque utilisateur reçoit des recommandations personnalisées. Et puis, on ne peut pas imposer ses goûts aux auditeurs.",
+     "sv": "– Tekniskt sett vore det mycket svårt: varje användare får personliga rekommendationer. Och man kan inte tvinga på lyssnarna sin egen smak."
+    },
+    {
+     "fr": "— Un point d'accord, pour finir ?",
+     "sv": "– Någon punkt där ni är överens, till sist?"
+    },
+    {
+     "fr": "— Oui : la chanson francophone ne se défend pas seulement par la loi, mais aussi par l'école, les salles de concert et les médias.",
+     "sv": "– Ja: den franskspråkiga visan försvaras inte bara med lagar, utan också i skolan, på konsertscenerna och i medierna."
+    },
+    {
+     "fr": "— Là-dessus, je suis entièrement d'accord.",
+     "sv": "– Där håller jag helt med."
+    }
+   ],
+   "qs": [
+    {
+     "q": "Que doivent faire les radios musicales françaises depuis 1996 ?",
+     "opts": [
+      "Diffuser uniquement des nouveaux talents en soirée.",
+      "Diffuser au moins 40 % de chansons d'expression française.",
+      "Diffuser autant de chansons françaises qu'étrangères."
+     ],
+     "a": 1,
+     "why": "« les radios musicales françaises doivent diffuser au moins 40 % de chansons d'expression française »."
+    },
+    {
+     "q": "Pourquoi Margaux Lefèvre trouve-t-elle les quotas injustes ?",
+     "opts": [
+      "Parce que les plateformes concurrentes n'ont pas les mêmes obligations.",
+      "Parce que les chansons françaises coûtent plus cher à diffuser.",
+      "Parce que les jeunes n'aiment pas la musique francophone."
+     ],
+     "a": 0,
+     "why": "Lyssnarna går till streamingtjänsterna, « où il n'y a aucune règle », och « les quotas pèsent sur les radios, alors que nos concurrents, eux, n'y sont pas soumis »."
+    },
+    {
+     "q": "D'après Antoine Rivière, qu'ont d'abord permis les quotas ?",
+     "opts": [
+      "D'augmenter le salaire des chanteurs connus.",
+      "De réduire la place du rap à la radio.",
+      "De faire découvrir une nouvelle génération d'artistes."
+     ],
+     "a": 2,
+     "why": "« Les quotas ont obligé les radios à chercher de nouveaux artistes, et toute une génération en a profité »."
+    },
+    {
+     "q": "Vrai ou faux ? Margaux Lefèvre conteste que les quotas aient aidé le rap français.",
+     "opts": [
+      "Vrai",
+      "Faux"
+     ],
+     "a": 1,
+     "why": "Faux. Hon svarar « Je ne le nie pas », men menar att sammanhanget har förändrats."
+    },
+    {
+     "q": "Quel abus Antoine Rivière évoque-t-il ?",
+     "opts": [
+      "Certaines radios diffusaient toujours les mêmes titres.",
+      "Certaines radios ne déclaraient pas les chansons diffusées.",
+      "Certaines radios diffusaient les chansons françaises la nuit."
+     ],
+     "a": 0,
+     "why": "« certaines radios remplissaient leur quota en passant toujours les dix mêmes titres »."
+    },
+    {
+     "q": "Que propose Margaux Lefèvre à la place des sanctions ?",
+     "opts": [
+      "Supprimer toute règle pour les radios.",
+      "Aider financièrement les radios qui prennent des risques.",
+      "Créer une radio publique consacrée à la chanson."
+     ],
+     "a": 1,
+     "why": "« Je préférerais qu'on aide les radios qui prennent des risques, par exemple avec des aides financières, plutôt que de sanctionner les autres »."
+    },
+    {
+     "q": "Selon Margaux Lefèvre, pourquoi des quotas sur les plateformes seraient-ils difficiles à appliquer ?",
+     "opts": [
+      "Parce que les plateformes ne sont pas françaises.",
+      "Parce que les listes de lecture changent chaque jour.",
+      "Parce que chaque utilisateur reçoit des recommandations personnalisées."
+     ],
+     "a": 2,
+     "why": "« Techniquement, ce serait très difficile : chaque utilisateur reçoit des recommandations personnalisées »."
+    },
+    {
+     "q": "Sur quel point les deux invités tombent-ils d'accord ?",
+     "opts": [
+      "La chanson francophone doit aussi être défendue par l'école, les salles et les médias.",
+      "Les quotas devraient être supprimés d'ici quelques années.",
+      "Il faut imposer des quotas aux plateformes."
+     ],
+     "a": 0,
+     "why": "Antoine: « la chanson francophone ne se défend pas seulement par la loi, mais aussi par l'école, les salles de concert et les médias ». Margaux: « je suis entièrement d'accord »."
+    }
+   ]
+  },
+  {
+   "id": "fru-co-3",
+   "part": "co",
+   "teil": "Exercice 1",
+   "title": "Bienvenue en licence",
+   "time": 9,
+   "plays": 1,
+   "instr": "Du hör ett utdrag ur ett välkomstföredrag för nya studenter i musikvetenskap (licence de musicologie) vid ett franskt universitet. Läs frågorna först. Här hör du föredraget en gång. Välj rätt svar på varje fråga.",
+   "lines": [
+    {
+     "fr": "— Bonjour à toutes et à tous, et bienvenue à l'université. Je suis Nadia Berthier, responsable de la première année de licence de musicologie. Avant que vous ne commenciez vos cours lundi, je voudrais vous expliquer comment fonctionne une licence, car beaucoup d'étudiants découvrent le système en cours de route, et parfois trop tard.",
+     "sv": "– God morgon allesammans, och välkomna till universitetet. Jag heter Nadia Berthier och är ansvarig för första året på kandidatprogrammet i musikvetenskap. Innan ni börjar med kurserna på måndag vill jag förklara hur en licence fungerar, eftersom många studenter upptäcker systemet under resans gång, och ibland för sent."
+    },
+    {
+     "fr": "— La licence se prépare en trois ans, soit six semestres. Chaque semestre vous permet d'obtenir trente crédits européens, les fameux ECTS, et il vous en faudra cent quatre-vingts pour décrocher le diplôme. Ces crédits sont regroupés dans des unités d'enseignement, que l'on appelle des UE.",
+     "sv": "– En licence tar tre år, alltså sex terminer. Varje termin ger er trettio europeiska poäng, de välkända ECTS-poängen, och ni behöver hundraåttio för att ta examen. Poängen är samlade i kursenheter, som kallas UE."
+    },
+    {
+     "fr": "— Vous aurez deux grands types de cours. Les cours magistraux, ou CM, ont lieu en amphithéâtre : l'enseignant expose, vous prenez des notes, et personne ne vérifiera si vous êtes présents. Ne vous y trompez pas : c'est pourtant là que se joue une grande partie de la réussite. Les travaux dirigés, ou TD, se déroulent en petits groupes ; on y applique ce qui a été vu en cours, qu'il s'agisse d'analyse, d'harmonie ou de commentaire d'écoute, et la présence y est obligatoire.",
+     "sv": "– Ni kommer att ha två huvudtyper av undervisning. Föreläsningarna, CM, hålls i en hörsal: läraren föreläser, ni antecknar, och ingen kontrollerar om ni är där. Låt er inte luras: det är ändå där en stor del av framgången avgörs. Seminarierna, TD, hålls i små grupper; där tillämpar man det man har gått igenom på föreläsningarna, vare sig det gäller analys, harmonilära eller lyssningsanalys, och där är närvaro obligatorisk."
+    },
+    {
+     "fr": "— Quant à l'évaluation, elle combine le contrôle continu, c'est-à-dire des devoirs et des exposés tout au long du semestre, et des examens terminaux en fin de semestre. En général, les notes se compensent : une moyenne de dix sur vingt suffit pour valider le semestre, même si vous avez échoué dans une matière. Et si ce n'est pas le cas, une session de rattrapage est organisée.",
+     "sv": "– När det gäller examinationen kombinerar den löpande examination, alltså inlämningsuppgifter och muntliga redovisningar under hela terminen, och slutexamina i slutet av terminen. I allmänhet kan betygen väga upp varandra: ett medelvärde på tio av tjugo räcker för att bli godkänd på terminen, även om ni har misslyckats i ett ämne. Och om det inte räcker ordnas ett omprov."
+    },
+    {
+     "fr": "— Maintenant, un conseil que je donne chaque année. Ce qui fait échouer les étudiants de première année, ce n'est presque jamais le manque de capacités. C'est l'organisation. Au lycée, on vous disait quoi faire et quand ; ici, vous aurez parfois une quinzaine d'heures de cours par semaine seulement, et tout le reste du temps, c'est à vous de le structurer. Ceux qui considèrent ces heures libres comme des vacances le regrettent en janvier.",
+     "sv": "– Nu ett råd som jag ger varje år. Det som får förstaårsstudenter att misslyckas är nästan aldrig bristande förmåga. Det är planeringen. På gymnasiet fick ni höra vad ni skulle göra och när; här har ni ibland bara ett femtontal timmar lektioner i veckan, och all övrig tid måste ni strukturera själva. De som ser de fria timmarna som semester ångrar sig i januari."
+    },
+    {
+     "fr": "— Excusez-moi, est-ce qu'on peut suivre la licence en même temps que le conservatoire ?",
+     "sv": "– Ursäkta, kan man läsa en licence samtidigt som man går på konservatoriet?"
+    },
+    {
+     "fr": "— Oui, et c'est même fréquent dans notre filière. Beaucoup d'universités proposent un aménagement d'études pour les étudiants qui suivent en parallèle une formation artistique : vous pouvez par exemple être dispensé d'assiduité dans certains TD. Mais renseignez-vous dès maintenant auprès du secrétariat pédagogique, car les demandes se font en début de semestre.",
+     "sv": "– Ja, och det är till och med vanligt på vår utbildning. Många universitet erbjuder anpassad studiegång för studenter som samtidigt går en konstnärlig utbildning: ni kan till exempel slippa närvarokravet i vissa seminarier. Men hör efter redan nu med studieadministrationen, för ansökningarna görs i början av terminen."
+    },
+    {
+     "fr": "— Enfin, n'hésitez pas à vous inscrire au tutorat : des étudiants de troisième année vous aident à préparer les examens. C'est gratuit, et ceux qui y participent le trouvent en général très utile.",
+     "sv": "– Till sist: tveka inte att anmäla er till mentorsprogrammet, där studenter i tredje året hjälper er att förbereda er inför tentorna. Det är gratis, och de som deltar tycker i allmänhet att det är mycket givande."
+    }
+   ],
+   "qs": [
+    {
+     "q": "Pourquoi Nadia Berthier explique-t-elle le fonctionnement de la licence ?",
+     "opts": [
+      "Parce que le système a changé cette année.",
+      "Parce que beaucoup d'étudiants le comprennent trop tard.",
+      "Parce que les étudiants le lui ont demandé par courriel."
+     ],
+     "a": 1,
+     "why": "« beaucoup d'étudiants découvrent le système en cours de route, et parfois trop tard »."
+    },
+    {
+     "q": "Combien de crédits faut-il pour obtenir la licence ?",
+     "opts": [
+      "Trente.",
+      "Soixante.",
+      "Cent quatre-vingts."
+     ],
+     "a": 2,
+     "why": "« il vous en faudra cent quatre-vingts pour décrocher le diplôme ». Trettio är poängen för en termin."
+    },
+    {
+     "q": "Que dit-elle des cours magistraux ?",
+     "opts": [
+      "La présence n'est pas contrôlée, mais ils sont essentiels.",
+      "Ils sont facultatifs et peu utiles pour les examens.",
+      "Ils ont lieu en petits groupes."
+     ],
+     "a": 0,
+     "why": "« personne ne vérifiera si vous êtes présents. Ne vous y trompez pas : c'est pourtant là que se joue une grande partie de la réussite »."
+    },
+    {
+     "q": "Vrai ou faux ? La présence est obligatoire en travaux dirigés.",
+     "opts": [
+      "Vrai",
+      "Faux"
+     ],
+     "a": 0,
+     "why": "Vrai. Om TD säger hon: « la présence y est obligatoire »."
+    },
+    {
+     "q": "Que signifie ici le fait que « les notes se compensent » ?",
+     "opts": [
+      "Chaque matière doit être réussie séparément.",
+      "Une moyenne de 10/20 peut suffire malgré un échec dans une matière.",
+      "Les notes du contrôle continu remplacent les examens."
+     ],
+     "a": 1,
+     "why": "« une moyenne de dix sur vingt suffit pour valider le semestre, même si vous avez échoué dans une matière »."
+    },
+    {
+     "q": "Selon elle, quelle est la principale cause d'échec en première année ?",
+     "opts": [
+      "Le manque d'organisation.",
+      "Le niveau trop élevé des cours.",
+      "Le nombre d'heures de cours."
+     ],
+     "a": 0,
+     "why": "« ce n'est presque jamais le manque de capacités. C'est l'organisation »."
+    },
+    {
+     "q": "Que doit faire un étudiant qui suit aussi le conservatoire ?",
+     "opts": [
+      "Choisir entre les deux formations dès la première année.",
+      "Attendre la fin du premier semestre pour faire une demande.",
+      "Demander rapidement un aménagement au secrétariat pédagogique."
+     ],
+     "a": 2,
+     "why": "« renseignez-vous dès maintenant auprès du secrétariat pédagogique, car les demandes se font en début de semestre »."
+    },
+    {
+     "q": "Qui s'occupe du tutorat ?",
+     "opts": [
+      "Les enseignants du conservatoire.",
+      "Des étudiants de troisième année.",
+      "Des professeurs à la retraite."
+     ],
+     "a": 1,
+     "why": "« des étudiants de troisième année vous aident à préparer les examens »."
+    }
+   ]
+  },
+  {
+   "id": "fru-co-4",
+   "part": "co",
+   "teil": "Exercice 3",
+   "title": "Trois courts documents",
+   "time": 8,
+   "plays": 1,
+   "instr": "Du hör tre korta radioinslag: en nyhet om skolgårdar och värmeböljor, en krönika om unga och arbetet, och ett vittnesmål från en ung musiker. Läs frågorna först. Här hör du varje inslag en gång. Välj rätt svar på varje fråga.",
+   "lines": [
+    {
+     "fr": "Document 1. — Dans plusieurs grandes villes françaises, dont Paris, les cours de récréation changent de visage. Le bitume disparaît peu à peu au profit de la terre, des arbres et des fontaines. À Paris, ce programme a été baptisé « cours Oasis ».",
+     "sv": "Inslag 1. – I flera franska storstäder, bland annat Paris, förändras skolgårdarna. Asfalten försvinner steg för steg och ersätts av jord, träd och fontäner. I Paris har programmet fått namnet ”cours Oasis”."
+    },
+    {
+     "fr": "L'objectif est de créer des « îlots de fraîcheur » pour mieux supporter les vagues de chaleur, de plus en plus fréquentes avec le réchauffement climatique. Dans certains quartiers, ces cours sont même ouvertes aux habitants le week-end. Les parents saluent l'initiative, même si quelques enseignants regrettent déjà la boue des jours de pluie.",
+     "sv": "Målet är att skapa ”svala öar” för att bättre stå ut med värmeböljorna, som blir allt vanligare med den globala uppvärmningen. I vissa stadsdelar är skolgårdarna till och med öppna för de boende på helgerna. Föräldrarna välkomnar initiativet, även om några lärare redan beklagar sig över leran när det regnar."
+    },
+    {
+     "fr": "Document 2. — Chronique « Le monde du travail ». On l'entend partout : les jeunes diplômés ne se contenteraient plus d'un bon salaire, ils voudraient un travail qui ait du sens. Attention toutefois aux caricatures, prévient une sociologue que nous avons interrogée.",
+     "sv": "Inslag 2. – Krönikan ”Arbetslivet”. Man hör det överallt: unga med examen skulle inte längre nöja sig med en bra lön, de vill ha ett arbete som känns meningsfullt. Men se upp för karikatyrer, varnar en sociolog som vi har intervjuat."
+    },
+    {
+     "fr": "Selon elle, cette quête de sens n'a rien de nouveau, et elle concerne surtout les diplômés qui ont le luxe de choisir. Pour beaucoup de jeunes sans diplôme, la priorité reste de trouver un emploi stable. Autrement dit, parler d'une génération qui refuserait de travailler, c'est confondre une partie de la jeunesse avec l'ensemble.",
+     "sv": "Enligt henne är sökandet efter mening inget nytt, och det gäller framför allt dem med examen som har lyxen att kunna välja. För många unga utan utbildning är det viktigaste fortfarande att få ett fast jobb. Med andra ord: att tala om en generation som vägrar arbeta är att förväxla en del av ungdomen med hela."
+    },
+    {
+     "fr": "Document 3. — Témoignage. Je m'appelle Jade, j'ai vingt-deux ans et je suis altiste. Il y a deux ans, j'ai commencé à publier de courtes vidéos où je joue des musiques de jeux vidéo. Aujourd'hui, j'ai plus de cent mille abonnés, et c'est grâce à eux que j'ai pu financer mon premier disque.",
+     "sv": "Inslag 3. – Vittnesmål. Jag heter Jade, är tjugotvå år och spelar altfiol. För två år sedan började jag lägga upp korta videor där jag spelar musik från datorspel. I dag har jag över hundratusen följare, och det är tack vare dem som jag kunde finansiera min första skiva."
+    },
+    {
+     "fr": "Mais je ne vais pas mentir : c'est épuisant. Il faut publier sans arrêt, sinon l'algorithme vous oublie. Depuis quelques mois, je m'impose une règle : pas plus d'une vidéo par semaine, et jamais le jour d'un concert. Mes chiffres ont un peu baissé, mais je travaille enfin mon instrument sereinement. Mon conseil aux jeunes musiciens : ne laissez pas les réseaux décider de votre emploi du temps.",
+     "sv": "Men jag tänker inte ljuga: det är utmattande. Man måste lägga upp saker hela tiden, annars glömmer algoritmen bort en. Sedan några månader har jag en regel: högst en video i veckan, och aldrig samma dag som en konsert. Mina siffror har sjunkit lite, men äntligen kan jag öva på mitt instrument i lugn och ro. Mitt råd till unga musiker: låt inte sociala medier bestämma över ert schema."
+    }
+   ],
+   "qs": [
+    {
+     "q": "Document 1. Pourquoi transforme-t-on les cours d'école ?",
+     "opts": [
+      "Pour réduire la chaleur pendant les canicules.",
+      "Pour créer des terrains de sport.",
+      "Pour diminuer le coût de leur entretien."
+     ],
+     "a": 0,
+     "why": "« L'objectif est de créer des « îlots de fraîcheur » pour mieux supporter les vagues de chaleur »."
+    },
+    {
+     "q": "Document 1. Vrai ou faux ? Tout le monde est satisfait de ce changement.",
+     "opts": [
+      "Vrai",
+      "Faux"
+     ],
+     "a": 1,
+     "why": "Faux. « quelques enseignants regrettent déjà la boue des jours de pluie »."
+    },
+    {
+     "q": "Document 2. Selon la sociologue, la recherche d'un travail qui a du sens…",
+     "opts": [
+      "est un phénomène apparu très récemment.",
+      "concerne surtout les diplômés qui peuvent choisir.",
+      "touche tous les jeunes de la même manière."
+     ],
+     "a": 1,
+     "why": "« elle concerne surtout les diplômés qui ont le luxe de choisir »."
+    },
+    {
+     "q": "Document 2. Vrai ou faux ? D'après la sociologue, la quête de sens au travail est un phénomène nouveau.",
+     "opts": [
+      "Vrai",
+      "Faux"
+     ],
+     "a": 1,
+     "why": "Faux. « cette quête de sens n'a rien de nouveau »."
+    },
+    {
+     "q": "Document 2. Quelle idée la chronique critique-t-elle ?",
+     "opts": [
+      "L'idée que les salaires des jeunes sont trop bas.",
+      "L'idée que les jeunes sans diplôme cherchent un emploi stable.",
+      "L'idée d'une génération entière qui refuserait de travailler."
+     ],
+     "a": 2,
+     "why": "« parler d'une génération qui refuserait de travailler, c'est confondre une partie de la jeunesse avec l'ensemble »."
+    },
+    {
+     "q": "Document 3. Qu'est-ce que ses abonnés ont permis à Jade de faire ?",
+     "opts": [
+      "Financer son premier disque.",
+      "Entrer au conservatoire.",
+      "Créer un jeu vidéo."
+     ],
+     "a": 0,
+     "why": "« c'est grâce à eux que j'ai pu financer mon premier disque »."
+    },
+    {
+     "q": "Document 3. Pourquoi Jade trouve-t-elle les réseaux sociaux épuisants ?",
+     "opts": [
+      "Parce qu'elle reçoit beaucoup de critiques.",
+      "Parce qu'il faut publier sans cesse pour rester visible.",
+      "Parce que ses vidéos sont longues à préparer."
+     ],
+     "a": 1,
+     "why": "« Il faut publier sans arrêt, sinon l'algorithme vous oublie »."
+    },
+    {
+     "q": "Document 3. Quelle est la conséquence de sa nouvelle règle ?",
+     "opts": [
+      "Elle a perdu la moitié de ses abonnés.",
+      "Elle ne donne plus de concerts.",
+      "Ses chiffres ont un peu baissé, mais elle travaille plus sereinement."
+     ],
+     "a": 2,
+     "why": "« Mes chiffres ont un peu baissé, mais je travaille enfin mon instrument sereinement »."
+    }
+   ]
+  },
+  {
+   "id": "fru-ce-1",
+   "part": "ce",
+   "teil": "Exercice 1",
+   "title": "Étudier la musique en France : plusieurs portes d'entrée",
+   "time": 20,
+   "instr": "Läs artikeln, en informerande text ur en studentguide, och svara på frågorna.",
+   "lines": [
+    {
+     "fr": "Vous rêvez de faire de la musique votre métier et d'étudier en France ? Encore faut-il s'y retrouver. Car le système français, héritier d'une longue histoire, sépare deux mondes qui se sont longtemps ignorés : celui des conservatoires, qui forment avant tout des interprètes, et celui de l'université, qui forme des chercheurs et des enseignants. Depuis une quinzaine d'années, les passerelles se multiplient, mais le choix de la porte d'entrée reste décisif.",
+     "sv": "Drömmer du om att göra musiken till ditt yrke och att studera i Frankrike? Då gäller det att hitta rätt. Det franska systemet, som bär på en lång historia, skiljer nämligen mellan två världar som länge har levt åtskilda: konservatoriernas, som framför allt utbildar musiker, och universitetets, som utbildar forskare och lärare. Sedan ungefär femton år tillbaka blir broarna mellan dem allt fler, men valet av ingång är fortfarande avgörande."
+    },
+    {
+     "fr": "Le premier réseau est celui des conservatoires classés par le ministère de la Culture. Selon leur taille et leurs missions, ils sont dits à rayonnement communal ou intercommunal, départemental ou régional. On y entre souvent enfant, et l'on y progresse par cycles. Ces établissements, financés pour l'essentiel par les collectivités locales, ne délivrent pas de diplômes d'enseignement supérieur. En revanche, de nombreux conservatoires à rayonnement régional ou départemental proposent désormais des classes préparatoires à l'enseignement supérieur, les CPES, qui préparent aux concours des établissements supérieurs.",
+     "sv": "Det första nätverket består av de konservatorier som har klassificerats av kulturministeriet. Beroende på storlek och uppdrag kallas de kommunala eller mellankommunala, departementala eller regionala. Man börjar ofta där som barn och går vidare genom olika nivåer (cycles). Skolorna, som till största delen finansieras av kommuner och regioner, utfärdar inga examina på högskolenivå. Däremot erbjuder många regionala och departementala konservatorier numera förberedande högskoleklasser, CPES, som förbereder för antagningsproven till de högre utbildningarna."
+    },
+    {
+     "fr": "Au sommet de la pyramide se trouvent les deux conservatoires nationaux supérieurs de musique et de danse, à Paris et à Lyon. Leurs concours d'entrée comptent parmi les plus sélectifs d'Europe : dans certaines disciplines, une ou deux places seulement sont parfois ouvertes dans l'année. Les étudiants y suivent un cursus de très haut niveau, jusqu'au master, et bénéficient d'un réseau professionnel précieux.",
+     "sv": "Högst upp i pyramiden finns de två nationella musik- och danshögskolorna, i Paris och i Lyon. Deras antagningsprov hör till de mest selektiva i Europa: i vissa ämnen finns ibland bara en eller två platser per år. Studenterna följer där en utbildning på mycket hög nivå, ända upp till master, och får tillgång till ett värdefullt yrkesnätverk."
+    },
+    {
+     "fr": "Entre les deux, les pôles d'enseignement supérieur, apparus dans plusieurs régions, délivrent le diplôme national supérieur professionnel de musicien, le DNSPM. Leur particularité : ils travaillent en partenariat avec une université, si bien que les étudiants peuvent obtenir en trois ans à la fois leur diplôme d'interprète et une licence, le plus souvent en musicologie. Quant à ceux qui souhaitent enseigner dans un conservatoire, d'autres cursus les mènent au diplôme d'État de professeur de musique.",
+     "sv": "Mellan dessa två nivåer finns de regionala högskolorna för musik (pôles d'enseignement supérieur), som har vuxit fram i flera regioner och utfärdar den nationella yrkesexamen för musiker, DNSPM. Det speciella med dem är att de samarbetar med ett universitet, så att studenterna på tre år kan ta både sin musikerexamen och en licence, oftast i musikvetenskap. För den som vill undervisa på ett konservatorium finns andra utbildningar som leder till den statliga examen som musiklärare (diplôme d'État)."
+    },
+    {
+     "fr": "L'université, enfin, accueille les étudiants en licence de musicologie. L'admission se fait sur dossier, par la plateforme nationale Parcoursup, et le niveau instrumental exigé y est en général bien moins élevé que dans les conservatoires. On y étudie en revanche l'histoire de la musique, l'analyse, l'harmonie, l'ethnomusicologie ou encore la sociologie de la musique. C'est la voie la plus naturelle vers la recherche, le journalisme culturel, la médiation ou l'enseignement de l'éducation musicale au collège et au lycée, qui passe par un concours de l'Éducation nationale.",
+     "sv": "Universitetet, slutligen, tar emot studenter på kandidatprogrammet i musikvetenskap. Antagningen sker på meritunderlag via den nationella plattformen Parcoursup, och kraven på instrumentspel är i allmänhet mycket lägre än på konservatorierna. Här studerar man i stället musikhistoria, analys, harmonilära, etnomusikologi och musiksociologi. Det är den naturligaste vägen till forskning, kulturjournalistik, kulturförmedling eller till att undervisa i musik på högstadiet och gymnasiet, vilket kräver att man klarar ett nationellt lärarprov (concours)."
+    },
+    {
+     "fr": "Ces voies ne s'excluent pas. Nombre d'étudiants mènent de front une licence et un cursus au conservatoire, au prix d'emplois du temps acrobatiques. D'autres commencent par l'université avant de tenter un concours. « Le plus important, résume une professeure de piano d'un conservatoire régional, c'est de savoir ce que l'on veut faire de la musique : la jouer sur scène, la transmettre ou la comprendre. Chaque porte mène à un métier différent. »",
+     "sv": "Vägarna utesluter inte varandra. Många studenter läser en licence och går på konservatoriet samtidigt, till priset av akrobatiska scheman. Andra börjar på universitetet innan de söker till ett antagningsprov. ”Det viktigaste”, sammanfattar en pianolärare på ett regionalt konservatorium, ”är att veta vad man vill göra med musiken: spela den på scen, föra den vidare eller förstå den. Varje dörr leder till ett annat yrke.”"
+    },
+    {
+     "fr": "Pour les étudiants étrangers, les démarches varient selon le pays d'origine : les ressortissants de l'Union européenne postulent en général selon les mêmes procédures que les Français, tandis que beaucoup d'autres passent par Campus France. Dans tous les cas, une bonne maîtrise du français est un atout, sinon une condition : les concours comportent souvent un entretien, et les cours théoriques sont dispensés en français.",
+     "sv": "För utländska studenter varierar tillvägagångssättet beroende på ursprungsland: medborgare i EU söker i allmänhet på samma sätt som fransmän, medan många andra går via Campus France. I alla händelser är goda kunskaper i franska en fördel, om inte ett krav: antagningsproven innehåller ofta en intervju, och de teoretiska kurserna ges på franska."
+    }
+   ],
+   "qs": [
+    {
+     "q": "Selon l'article, qu'est-ce qui caractérise traditionnellement le système français ?",
+     "opts": [
+      "La formation des interprètes et celle des chercheurs sont séparées.",
+      "Toutes les formations musicales dépendent de l'université.",
+      "Les conservatoires forment surtout des chercheurs."
+     ],
+     "a": 0,
+     "why": "Systemet « sépare deux mondes qui se sont longtemps ignorés : celui des conservatoires, qui forment avant tout des interprètes, et celui de l'université, qui forme des chercheurs et des enseignants »."
+    },
+    {
+     "q": "Que dit l'article des conservatoires classés par le ministère de la Culture ?",
+     "opts": [
+      "Ils sont financés surtout par l'État.",
+      "Ils ne délivrent pas de diplômes d'enseignement supérieur.",
+      "Ils n'accueillent que des adultes."
+     ],
+     "a": 1,
+     "why": "« Ces établissements, financés pour l'essentiel par les collectivités locales, ne délivrent pas de diplômes d'enseignement supérieur »."
+    },
+    {
+     "q": "À quoi servent les CPES ?",
+     "opts": [
+      "À obtenir une licence de musicologie.",
+      "À former des professeurs de collège.",
+      "À préparer les concours des établissements supérieurs."
+     ],
+     "a": 2,
+     "why": "CPES är klasser « qui préparent aux concours des établissements supérieurs »."
+    },
+    {
+     "q": "Les deux conservatoires nationaux supérieurs…",
+     "opts": [
+      "sont très sélectifs et forment jusqu'au master.",
+      "sont ouverts à tous les bacheliers.",
+      "ne proposent que des cours de danse."
+     ],
+     "a": 0,
+     "why": "Proven hör « parmi les plus sélectifs d'Europe », och studenterna följer « un cursus de très haut niveau, jusqu'au master »."
+    },
+    {
+     "q": "Quel est l'intérêt principal des pôles d'enseignement supérieur ?",
+     "opts": [
+      "Ils permettent d'enseigner dès la première année.",
+      "Ils permettent d'obtenir à la fois un diplôme d'interprète et une licence.",
+      "Ils remplacent les conservatoires nationaux supérieurs."
+     ],
+     "a": 1,
+     "why": "« les étudiants peuvent obtenir en trois ans à la fois leur diplôme d'interprète et une licence »."
+    },
+    {
+     "q": "Vrai ou faux ? Pour entrer en licence de musicologie, on exige en général le même niveau instrumental qu'au conservatoire.",
+     "opts": [
+      "Vrai",
+      "Faux"
+     ],
+     "a": 1,
+     "why": "Faux. « le niveau instrumental exigé y est en général bien moins élevé que dans les conservatoires »."
+    },
+    {
+     "q": "Selon la professeure de piano, le choix d'une formation dépend avant tout…",
+     "opts": [
+      "du prix des études.",
+      "de la ville où l'on souhaite vivre.",
+      "de ce que l'on veut faire de la musique."
+     ],
+     "a": 2,
+     "why": "« c'est de savoir ce que l'on veut faire de la musique : la jouer sur scène, la transmettre ou la comprendre »."
+    },
+    {
+     "q": "Que dit l'article de la langue française pour les étudiants étrangers ?",
+     "opts": [
+      "Elle est utile, voire indispensable.",
+      "Elle n'est nécessaire que pour la licence.",
+      "Elle n'est jamais évaluée."
+     ],
+     "a": 0,
+     "why": "« une bonne maîtrise du français est un atout, sinon une condition » – alltså en fördel, kanske till och med ett krav."
+    }
+   ]
+  },
+  {
+   "id": "fru-ce-2",
+   "part": "ce",
+   "teil": "Exercice 2",
+   "title": "La laïcité, une liberté avant d'être une interdiction",
+   "time": 20,
+   "instr": "Läs debattartikeln (tribune) av en filosofilärare och svara på frågorna. Tänk på skillnaden mellan det skribenten påstår, det skribenten medger och det skribenten avvisar.",
+   "lines": [
+    {
+     "fr": "Il est peu de mots aussi souvent prononcés, et aussi rarement définis, que celui de laïcité. Invoquée à chaque polémique, brandie tantôt comme un rempart, tantôt comme une menace, elle semble être devenue un synonyme d'interdiction. Il faut pourtant rappeler ce qu'elle est d'abord : un principe de liberté.",
+     "sv": "Det finns få ord som uttalas så ofta, och definieras så sällan, som ordet laïcité (sekularism). Det åberopas i varje kontrovers och viftas med än som ett skyddsvärn, än som ett hot, och det verkar ha blivit en synonym till förbud. Man måste ändå påminna om vad det i första hand är: en frihetsprincip."
+    },
+    {
+     "fr": "La loi du 9 décembre 1905, qui sépare les Églises et l'État, s'ouvre sur une phrase trop souvent oubliée : « La République assure la liberté de conscience. » Ce n'est qu'à l'article suivant qu'elle précise : « La République ne reconnaît, ne salarie ni ne subventionne aucun culte. » L'ordre des articles n'a rien d'anodin. Avant de limiter, la loi protège : chacun est libre de croire ou de ne pas croire, de pratiquer une religion ou d'en changer. La neutralité est exigée de l'État et de ceux qui le représentent, non des citoyens.",
+     "sv": "Lagen av den 9 december 1905, som skiljer kyrkorna från staten, inleds med en mening som alltför ofta glöms bort: ”Republiken garanterar samvetsfriheten.” Först i nästa artikel preciserar den: ”Republiken erkänner, avlönar och subventionerar inget trossamfund.” Artiklarnas ordning är inte betydelselös. Innan lagen begränsar, skyddar den: var och en är fri att tro eller inte tro, att utöva en religion eller byta religion. Neutralitet krävs av staten och av dem som företräder den, inte av medborgarna."
+    },
+    {
+     "fr": "Cette distinction est au cœur de nombreux malentendus. Un fonctionnaire, un enseignant ou un agent de mairie doit s'abstenir de manifester ses convictions religieuses dans l'exercice de ses fonctions, car il incarne un service public qui doit traiter tout le monde de la même manière. L'usager, lui, n'a pas cette obligation. La loi de 2004, qui interdit aux élèves des écoles, collèges et lycées publics le port de signes religieux ostensibles, constitue une exception, justifiée par l'âge des élèves et par la mission particulière de l'école. Elle ne s'applique pas à l'université, où les étudiants sont des adultes libres de leurs choix.",
+     "sv": "Den distinktionen ligger bakom många missförstånd. En tjänsteman, en lärare eller en kommunanställd måste avstå från att visa sin religiösa övertygelse i tjänsten, eftersom hen förkroppsligar en offentlig verksamhet som ska behandla alla lika. Användaren av tjänsten har däremot ingen sådan skyldighet. Lagen från 2004, som förbjuder elever i offentliga grundskolor och gymnasier att bära iögonfallande religiösa symboler, är ett undantag som motiveras av elevernas ålder och skolans särskilda uppdrag. Den gäller inte på universitetet, där studenterna är vuxna som fritt får göra sina val."
+    },
+    {
+     "fr": "Or, depuis une trentaine d'années, la tentation est grande d'étendre sans cesse le champ de la neutralité : aux parents qui accompagnent les sorties scolaires, aux plages, aux entreprises, voire à la rue. Chaque fois, on invoque la laïcité ; chaque fois, on oublie qu'elle n'a jamais eu pour but d'effacer les religions de l'espace public. Lorsqu'elle devient un moyen de désigner une partie de la population comme suspecte, elle se retourne contre elle-même.",
+     "sv": "Men under de senaste cirka trettio åren har frestelsen varit stor att hela tiden utvidga neutralitetens område: till föräldrar som följer med på skolutflykter, till stränderna, till företagen, ja till och med till gatan. Varje gång åberopar man laïcité; varje gång glömmer man att den aldrig har haft som mål att sudda ut religionerna ur det offentliga rummet. När den blir ett sätt att peka ut en del av befolkningen som misstänkt, vänds den mot sig själv."
+    },
+    {
+     "fr": "Faut-il pour autant renoncer à toute exigence ? Certainement pas. La laïcité protège aussi l'individu contre les pressions de son propre groupe : l'élève qui ne veut pas porter de signe religieux, la jeune femme qui refuse un mariage imposé, le professeur de sciences à qui l'on voudrait interdire d'enseigner la théorie de l'évolution. Céder sur ce point, au nom d'un respect mal compris des traditions, reviendrait à abandonner ceux qui comptent sur la République pour être libres.",
+     "sv": "Ska man därmed avstå från alla krav? Absolut inte. Laïcité skyddar också individen mot påtryckningar från den egna gruppen: eleven som inte vill bära någon religiös symbol, den unga kvinnan som vägrar ett påtvingat äktenskap, naturkunskapsläraren som någon vill förbjuda att undervisa om evolutionsteorin. Att ge efter på den punkten, i namn av en missförstådd respekt för traditioner, vore att överge dem som räknar med republiken för att kunna vara fria."
+    },
+    {
+     "fr": "Ce qui manque le plus, ce ne sont donc pas de nouvelles lois, mais une meilleure connaissance de celles qui existent. Combien de Français savent que l'Alsace et la Moselle, pour des raisons historiques, ne sont pas soumises à la loi de 1905 ? Combien d'élèves pourraient expliquer la différence entre la neutralité de l'État et la liberté du citoyen ? Plutôt que de faire de la laïcité un slogan, il est temps d'en refaire une culture partagée : une culture qui s'apprend, se discute et se transmet.",
+     "sv": "Det som saknas mest är alltså inte nya lagar, utan bättre kunskap om dem som redan finns. Hur många fransmän vet att Alsace och Moselle av historiska skäl inte omfattas av 1905 års lag? Hur många elever skulle kunna förklara skillnaden mellan statens neutralitet och medborgarens frihet? I stället för att göra laïcité till en slogan är det dags att åter göra den till en gemensam kultur: en kultur som man lär sig, diskuterar och för vidare."
+    }
+   ],
+   "qs": [
+    {
+     "q": "Quel constat l'auteur fait-il dans le premier paragraphe ?",
+     "opts": [
+      "La laïcité est un mot souvent employé, mais mal défini, et associé à l'interdiction.",
+      "La laïcité n'intéresse plus personne en France.",
+      "La laïcité est un principe récent, apparu avec les polémiques."
+     ],
+     "a": 0,
+     "why": "« Il est peu de mots aussi souvent prononcés, et aussi rarement définis » och « elle semble être devenue un synonyme d'interdiction »."
+    },
+    {
+     "q": "Pourquoi l'auteur insiste-t-il sur l'ordre des articles de la loi de 1905 ?",
+     "opts": [
+      "Pour montrer que la loi a été mal rédigée.",
+      "Pour montrer que la loi protège la liberté avant de poser des limites.",
+      "Pour montrer que la loi concerne surtout le financement des cultes."
+     ],
+     "a": 1,
+     "why": "« L'ordre des articles n'a rien d'anodin. Avant de limiter, la loi protège »."
+    },
+    {
+     "q": "Selon l'auteur, à qui l'obligation de neutralité s'impose-t-elle ?",
+     "opts": [
+      "À tous les citoyens dans l'espace public.",
+      "Uniquement aux responsables religieux.",
+      "À l'État et à ceux qui le représentent."
+     ],
+     "a": 2,
+     "why": "« La neutralité est exigée de l'État et de ceux qui le représentent, non des citoyens »."
+    },
+    {
+     "q": "Vrai ou faux ? D'après le texte, la loi de 2004 s'applique aussi aux étudiants des universités.",
+     "opts": [
+      "Vrai",
+      "Faux"
+     ],
+     "a": 1,
+     "why": "Faux. « Elle ne s'applique pas à l'université, où les étudiants sont des adultes libres de leurs choix »."
+    },
+    {
+     "q": "Que reproche l'auteur à l'extension continue de la neutralité ?",
+     "opts": [
+      "Elle risque de servir à désigner une partie de la population comme suspecte.",
+      "Elle coûte trop cher aux collectivités.",
+      "Elle a été décidée sans loi."
+     ],
+     "a": 0,
+     "why": "« Lorsqu'elle devient un moyen de désigner une partie de la population comme suspecte, elle se retourne contre elle-même »."
+    },
+    {
+     "q": "Dans le cinquième paragraphe, l'auteur…",
+     "opts": [
+      "change d'avis et défend de nouvelles interdictions.",
+      "reconnaît que la laïcité protège aussi l'individu contre les pressions de son groupe.",
+      "affirme que les traditions doivent toujours être respectées."
+     ],
+     "a": 1,
+     "why": "« Faut-il pour autant renoncer à toute exigence ? Certainement pas. La laïcité protège aussi l'individu contre les pressions de son propre groupe »."
+    },
+    {
+     "q": "Pourquoi l'auteur mentionne-t-il l'Alsace et la Moselle ?",
+     "opts": [
+      "Pour citer un exemple de laïcité réussie.",
+      "Pour proposer d'y appliquer enfin la loi de 1905.",
+      "Pour montrer que les lois existantes sont mal connues."
+     ],
+     "a": 2,
+     "why": "Exemplet visar att det som saknas är « une meilleure connaissance de celles qui existent »: « Combien de Français savent que l'Alsace et la Moselle […] ne sont pas soumises à la loi de 1905 ? »"
+    },
+    {
+     "q": "Quelle est la thèse générale de l'auteur ?",
+     "opts": [
+      "Il faut de nouvelles lois pour faire respecter la laïcité.",
+      "La laïcité est d'abord une liberté, qu'il faut mieux enseigner.",
+      "La laïcité est dépassée et devrait être abandonnée."
+     ],
+     "a": 1,
+     "why": "Han kallar den « un principe de liberté » och avslutar: « Plutôt que de faire de la laïcité un slogan, il est temps d'en refaire une culture partagée »."
+    }
+   ]
+  },
+  {
+   "id": "fru-ce-3",
+   "part": "ce",
+   "teil": "Exercice 1",
+   "title": "Le grand retour à la campagne n'a pas (vraiment) eu lieu",
+   "time": 20,
+   "instr": "Läs artikeln, en informerande text ur ett nyhetsmagasin, och svara på frågorna.",
+   "lines": [
+    {
+     "fr": "Au printemps 2020, pendant le premier confinement, les images ont fait le tour des médias : des familles citadines chargeant leur voiture pour rejoindre une maison de campagne, des agences immobilières rurales submergées d'appels. On annonçait alors un « exode urbain » : lassés des petits appartements et des transports bondés, les citadins allaient repeupler les villages.",
+     "sv": "Våren 2020, under den första nedstängningen, spreds bilderna i alla medier: stadsfamiljer som packade bilen för att åka till ett hus på landet, mäklarbyråer på landsbygden som översköljdes av samtal. Man förutspådde då en ”urban utvandring”: storstadsborna, trötta på små lägenheter och överfull kollektivtrafik, skulle befolka byarna på nytt."
+    },
+    {
+     "fr": "Quelques années plus tard, les chercheurs qui ont étudié la question dressent un bilan plus nuancé. Les déménagements vers les campagnes ont bien augmenté, mais dans des proportions modestes, et ils prolongent une tendance ancienne plutôt qu'ils ne marquent une rupture. Surtout, les nouveaux arrivants ne s'installent pas n'importe où. Ils privilégient les communes situées à une ou deux heures d'une grande ville, les villes moyennes bien desservies par le train ou les régions littorales, déjà très prisées. Les campagnes les plus isolées, elles, continuent souvent de perdre des habitants. Plutôt que d'un exode, les chercheurs parlent d'ailleurs d'un « desserrement » des grandes villes vers leurs périphéries.",
+     "sv": "Några år senare ger forskarna som har studerat frågan en mer nyanserad bild. Flyttarna till landsbygden har visserligen ökat, men i blygsam omfattning, och de förlänger snarare en gammal trend än markerar ett brott. Framför allt bosätter sig inflyttarna inte var som helst. De föredrar kommuner som ligger en eller två timmar från en storstad, medelstora städer med bra tågförbindelser eller kustregionerna, som redan är mycket eftertraktade. De mest avlägsna landsbygdsområdena fortsätter däremot ofta att förlora invånare. Snarare än om en utvandring talar forskarna för övrigt om att storstäderna ”glesas ut” mot sina omgivningar."
+    },
+    {
+     "fr": "Le télétravail a joué un rôle, mais moins décisif qu'on ne l'imaginait. Rares sont les salariés qui peuvent travailler entièrement à distance ; la plupart doivent se rendre au bureau deux ou trois jours par semaine, ce qui limite l'éloignement possible. Quant à ceux qui ont franchi le pas, ils découvrent parfois des réalités qu'ils avaient sous-estimées : une connexion Internet instable, la voiture indispensable pour le moindre achat et, surtout, des difficultés d'accès aux soins. Certains finissent même par revenir en ville au bout de quelques années.",
+     "sv": "Distansarbetet har spelat en roll, men en mindre avgörande roll än man trodde. Det är få anställda som kan arbeta helt på distans; de flesta måste till kontoret två eller tre dagar i veckan, vilket begränsar hur långt bort de kan bo. Och de som har tagit steget upptäcker ibland saker som de hade underskattat: en instabil internetuppkoppling, att bilen behövs för minsta inköp och framför allt svårigheter att få vård. Vissa flyttar till och med tillbaka till staden efter några år."
+    },
+    {
+     "fr": "Car la question des services publics reste centrale. Dans de nombreux territoires ruraux, trouver un médecin généraliste qui accepte de nouveaux patients relève du parcours du combattant. Ces « déserts médicaux », comme on les appelle, s'ajoutent à la fermeture progressive de bureaux de poste, de classes ou de maternités. Pour y répondre, l'État a notamment développé des guichets baptisés France services, où les habitants peuvent être accompagnés dans leurs démarches administratives. Mais aucun guichet ne remplace un médecin.",
+     "sv": "Frågan om offentlig service är nämligen fortfarande central. I många landsbygdsområden är det rena hinderbanan att hitta en allmänläkare som tar emot nya patienter. Dessa ”medicinska öknar”, som de kallas, kommer utöver att postkontor, skolklasser och förlossningsavdelningar gradvis läggs ned. Som svar har staten bland annat byggt ut servicekontor som kallas France services, där invånarna kan få hjälp med myndighetsärenden. Men inget servicekontor kan ersätta en läkare."
+    },
+    {
+     "fr": "L'arrivée de nouveaux habitants ne se fait d'ailleurs pas toujours sans tensions. Dans certains villages, les habitants de longue date reprochent aux nouveaux venus de faire monter les prix de l'immobilier, ou de se plaindre du chant du coq et du bruit des tracteurs. Plusieurs conflits de ce type ont fini devant les tribunaux, au point qu'une loi adoptée en 2021 a reconnu la protection du « patrimoine sensoriel » des campagnes, c'est-à-dire de leurs sons et de leurs odeurs.",
+     "sv": "Inflyttningen sker för övrigt inte alltid utan spänningar. I vissa byar anklagar de som har bott där länge nykomlingarna för att driva upp bostadspriserna, eller för att klaga på tuppens galande och traktorernas buller. Flera sådana konflikter har hamnat i domstol, så till den grad att en lag som antogs 2021 erkände skyddet av landsbygdens ”sinnliga kulturarv”, alltså dess ljud och dofter."
+    },
+    {
+     "fr": "Pourtant, là où l'accueil est préparé, l'installation de nouveaux habitants peut redonner vie à un territoire : réouverture d'une classe, création d'un tiers-lieu, d'un café associatif ou d'un festival. Pour les géographes, la clé n'est pas tant d'attirer des citadins que de maintenir les conditions d'une vie ordinaire : des services, des transports et du travail. Sans eux, le rêve de campagne risque de rester ce qu'il était au printemps 2020 : une image.",
+     "sv": "Men där man har förberett mottagandet kan nya invånare blåsa nytt liv i ett område: en skolklass öppnas igen, det skapas en mötesplats, ett föreningsdrivet kafé eller en festival. För geograferna handlar det inte så mycket om att locka storstadsbor som om att bevara förutsättningarna för ett vanligt liv: service, kommunikationer och arbete. Utan dem riskerar drömmen om landet att förbli vad den var våren 2020: en bild."
+    }
+   ],
+   "qs": [
+    {
+     "q": "Qu'annonçait-on au printemps 2020 ?",
+     "opts": [
+      "Un départ massif des citadins vers les campagnes.",
+      "Une forte hausse des loyers dans les grandes villes.",
+      "La fermeture des agences immobilières rurales."
+     ],
+     "a": 0,
+     "why": "« On annonçait alors un « exode urbain » : […] les citadins allaient repeupler les villages »."
+    },
+    {
+     "q": "Selon les chercheurs, les déménagements vers les campagnes…",
+     "opts": [
+      "ont diminué depuis 2020.",
+      "ont augmenté modestement, dans la continuité d'une tendance ancienne.",
+      "ont provoqué une rupture historique."
+     ],
+     "a": 1,
+     "why": "« Les déménagements vers les campagnes ont bien augmenté, mais dans des proportions modestes, et ils prolongent une tendance ancienne plutôt qu'ils ne marquent une rupture »."
+    },
+    {
+     "q": "Où les nouveaux habitants s'installent-ils le moins ?",
+     "opts": [
+      "Dans les villes moyennes bien desservies.",
+      "Sur le littoral.",
+      "Dans les campagnes les plus isolées."
+     ],
+     "a": 2,
+     "why": "« Les campagnes les plus isolées, elles, continuent souvent de perdre des habitants »."
+    },
+    {
+     "q": "Pourquoi le télétravail a-t-il eu un effet limité ?",
+     "opts": [
+      "Parce que la plupart des salariés doivent encore aller au bureau une partie de la semaine.",
+      "Parce que les entreprises l'ont interdit après 2020.",
+      "Parce que les salariés préfèrent travailler en ville."
+     ],
+     "a": 0,
+     "why": "« la plupart doivent se rendre au bureau deux ou trois jours par semaine, ce qui limite l'éloignement possible »."
+    },
+    {
+     "q": "Vrai ou faux ? Selon l'article, les guichets France services règlent le problème des déserts médicaux.",
+     "opts": [
+      "Vrai",
+      "Faux"
+     ],
+     "a": 1,
+     "why": "Faux. De hjälper till med « démarches administratives », men « aucun guichet ne remplace un médecin »."
+    },
+    {
+     "q": "Que reprochent certains habitants de longue date aux nouveaux venus ?",
+     "opts": [
+      "De ne pas participer à la vie associative.",
+      "De faire monter les prix et de se plaindre des bruits de la campagne.",
+      "De refuser d'envoyer leurs enfants à l'école du village."
+     ],
+     "a": 1,
+     "why": "De anklagar nykomlingarna « de faire monter les prix de l'immobilier, ou de se plaindre du chant du coq et du bruit des tracteurs »."
+    },
+    {
+     "q": "Que protège la loi adoptée en 2021 ?",
+     "opts": [
+      "Les terres agricoles contre la construction.",
+      "Les commerces de proximité.",
+      "Les sons et les odeurs caractéristiques des campagnes."
+     ],
+     "a": 2,
+     "why": "Lagen skyddar landsbygdens « patrimoine sensoriel », « c'est-à-dire de leurs sons et de leurs odeurs »."
+    },
+    {
+     "q": "Selon les géographes, qu'est-ce qui est essentiel pour l'avenir des campagnes ?",
+     "opts": [
+      "Maintenir des services, des transports et des emplois.",
+      "Organiser davantage de festivals.",
+      "Attirer le plus possible de citadins."
+     ],
+     "a": 0,
+     "why": "« la clé n'est pas tant d'attirer des citadins que de maintenir les conditions d'une vie ordinaire : des services, des transports et du travail »."
+    }
+   ]
+  },
+  {
+   "id": "fru-ce-4",
+   "part": "ce",
+   "teil": "Exercice 2",
+   "title": "Étudier à l'étranger : et si l'on descendait de l'avion ?",
+   "time": 20,
+   "instr": "Läs debattartikeln (tribune), skriven av en student som är engagerad i en klimatförening, och svara på frågorna. Var uppmärksam på skribentens argument, de invändningar hon bemöter och de förslag hon lägger fram.",
+   "lines": [
+    {
+     "fr": "Chaque année, des centaines de milliers d'étudiants européens partent étudier dans un autre pays grâce au programme Erasmus+. Personne ne songerait à remettre en cause cette formidable ouverture sur le monde. Dans beaucoup de formations, le séjour à l'étranger est même devenu une étape presque incontournable du parcours. Mais une question mérite d'être posée : comment y va-t-on ? Pour la majorité d'entre nous, la réponse est simple : en avion, souvent à bas prix, parfois plusieurs fois par semestre.",
+     "sv": "Varje år åker hundratusentals europeiska studenter för att studera i ett annat land tack vare Erasmus+-programmet. Ingen skulle komma på tanken att ifrågasätta denna fantastiska öppning mot världen. På många utbildningar har utlandsvistelsen till och med blivit ett nästan självklart steg. Men en fråga förtjänar att ställas: hur tar man sig dit? För de flesta av oss är svaret enkelt: med flyg, ofta med lågprisbolag, ibland flera gånger per termin."
+    },
+    {
+     "fr": "Le paradoxe est cruel. Notre génération est l'une de celles qui s'inquiètent le plus du réchauffement climatique ; nous manifestons, nous trions nos déchets, nous réduisons notre consommation de viande. Et pourtant, un seul aller-retour en avion entre Paris et Stockholm peut peser davantage dans notre bilan carbone que plusieurs mois d'efforts quotidiens. Ce n'est pas une accusation, c'est un constat : l'avion reste l'un des modes de transport les plus émetteurs par passager et par kilomètre.",
+     "sv": "Paradoxen är grym. Vår generation hör till dem som oroar sig mest för den globala uppvärmningen; vi demonstrerar, sorterar vårt avfall och äter mindre kött. Och ändå kan en enda flygresa tur och retur mellan Paris och Stockholm väga tyngre i vårt koldioxidavtryck än flera månaders vardagliga ansträngningar. Det är ingen anklagelse, det är ett konstaterande: flyget är fortfarande ett av de transportsätt som släpper ut mest per passagerare och kilometer."
+    },
+    {
+     "fr": "Des alternatives existent. Le réseau ferroviaire européen permet de rejoindre de nombreuses villes universitaires en une journée ou une nuit de train. Le programme Erasmus+ lui-même encourage désormais les voyages dits « verts » : les étudiants qui choisissent le train ou le car peuvent recevoir un complément financier et quelques jours de voyage supplémentaires. Quant à la France, elle a montré que les pouvoirs publics pouvaient agir, en supprimant certaines liaisons aériennes intérieures lorsque le même trajet peut se faire en train en moins de deux heures et demie.",
+     "sv": "Det finns alternativ. Det europeiska järnvägsnätet gör det möjligt att nå många universitetsstäder på en dag eller en natt med tåg. Erasmus+-programmet uppmuntrar numera själv så kallade ”gröna” resor: studenter som väljer tåg eller buss kan få ett extra bidrag och några extra resdagar. Och Frankrike har visat att staten kan agera, genom att avskaffa vissa inrikesflyglinjer när samma sträcka kan göras med tåg på mindre än två och en halv timme."
+    },
+    {
+     "fr": "On m'objectera que le train coûte souvent plus cher et prend plus de temps. C'est vrai, et c'est précisément là que les pouvoirs publics et les universités doivent intervenir. Il est absurde qu'un billet d'avion entre Paris et Barcelone puisse coûter moins cher qu'un billet de train pour le même trajet, alors que le kérosène des vols internationaux échappe aux taxes qui frappent les autres carburants. Quant au temps, il n'est pas forcément perdu : un voyage en train, c'est aussi l'occasion de lire, de réviser, de regarder défiler les paysages et de mesurer concrètement la distance qui nous sépare de notre destination.",
+     "sv": "Man kommer att invända att tåget ofta är dyrare och tar längre tid. Det stämmer, och det är just där staten och universiteten måste gripa in. Det är orimligt att en flygbiljett mellan Paris och Barcelona kan kosta mindre än en tågbiljett för samma sträcka, samtidigt som flygbränslet för internationella flygningar slipper de skatter som läggs på andra drivmedel. Och tiden är inte nödvändigtvis förlorad: en tågresa är också ett tillfälle att läsa, plugga, se landskapet glida förbi och på ett konkret sätt förstå avståndet till resmålet."
+    },
+    {
+     "fr": "Je ne plaide pas pour une interdiction. Certains étudiants partent au Canada, au Sénégal ou au Japon, et je ne vois pas comment ils pourraient s'y rendre autrement. D'autres ont des obligations familiales ou des moyens limités. Culpabiliser les individus ne mène nulle part. Mais pour un séjour d'un semestre dans une ville européenne, le train devrait devenir la norme plutôt que l'exception.",
+     "sv": "Jag förespråkar inte ett förbud. Vissa studenter åker till Kanada, Senegal eller Japan, och jag ser inte hur de skulle kunna ta sig dit på annat sätt. Andra har familjeförpliktelser eller små ekonomiska resurser. Att skuldbelägga enskilda leder ingenstans. Men för en termins vistelse i en europeisk stad borde tåget bli normen snarare än undantaget."
+    },
+    {
+     "fr": "Les universités ont un rôle à jouer : informer les étudiants, tenir compte des jours de voyage dans le calendrier universitaire et montrer l'exemple en limitant les déplacements en avion de leurs propres enseignants. Partir étudier ailleurs, c'est apprendre à voir le monde autrement. Apprendre à s'y déplacer autrement pourrait bien faire partie de la leçon.",
+     "sv": "Universiteten har en roll att spela: att informera studenterna, att ta hänsyn till resdagarna i läsårsplaneringen och att föregå med gott exempel genom att begränsa sina egna lärares flygresor. Att åka iväg och studera någon annanstans är att lära sig se världen på ett nytt sätt. Att lära sig att resa i den på ett nytt sätt kan mycket väl vara en del av lärdomen."
+    }
+   ],
+   "qs": [
+    {
+     "q": "Quelle question l'autrice pose-t-elle au début du texte ?",
+     "opts": [
+      "Faut-il supprimer le programme Erasmus+ ?",
+      "Comment les étudiants se rendent-ils dans leur pays d'accueil ?",
+      "Pourquoi les étudiants partent-ils moins à l'étranger ?"
+     ],
+     "a": 1,
+     "why": "Hon ifrågasätter inte programmet (« Personne ne songerait à remettre en cause ») utan frågar: « comment y va-t-on ? »"
+    },
+    {
+     "q": "Quel paradoxe l'autrice souligne-t-elle ?",
+     "opts": [
+      "Les jeunes s'inquiètent du climat, mais prennent souvent l'avion.",
+      "Le train est plus polluant que l'avion sur les longues distances.",
+      "Les étudiants voyagent moins que leurs parents."
+     ],
+     "a": 0,
+     "why": "Generationen oroar sig för klimatet, « Et pourtant, un seul aller-retour en avion […] peut peser davantage dans notre bilan carbone que plusieurs mois d'efforts quotidiens »."
+    },
+    {
+     "q": "Que propose aujourd'hui le programme Erasmus+ ?",
+     "opts": [
+      "Des billets d'avion à prix réduit.",
+      "L'interdiction de l'avion pour les séjours en Europe.",
+      "Une aide pour les étudiants qui voyagent en train ou en car."
+     ],
+     "a": 2,
+     "why": "« les étudiants qui choisissent le train ou le car peuvent recevoir un complément financier et quelques jours de voyage supplémentaires »."
+    },
+    {
+     "q": "Quelle objection l'autrice reconnaît-elle comme fondée ?",
+     "opts": [
+      "Le train est souvent plus cher et plus lent.",
+      "Le train ne dessert pas les villes universitaires.",
+      "Les étudiants n'ont pas conscience du problème."
+     ],
+     "a": 0,
+     "why": "« On m'objectera que le train coûte souvent plus cher et prend plus de temps. C'est vrai »."
+    },
+    {
+     "q": "Pourquoi l'autrice juge-t-elle les prix actuels « absurdes » ?",
+     "opts": [
+      "Parce que les compagnies ferroviaires font trop de bénéfices.",
+      "Parce que le kérosène des vols internationaux n'est pas taxé comme les autres carburants.",
+      "Parce que les étudiants ne bénéficient d'aucune réduction."
+     ],
+     "a": 1,
+     "why": "Flygbiljetten kan vara billigare « alors que le kérosène des vols internationaux échappe aux taxes qui frappent les autres carburants »."
+    },
+    {
+     "q": "Vrai ou faux ? L'autrice souhaite interdire l'avion à tous les étudiants en échange.",
+     "opts": [
+      "Vrai",
+      "Faux"
+     ],
+     "a": 1,
+     "why": "Faux. « Je ne plaide pas pour une interdiction » – hon vill att tåget blir normen för vistelser i Europa."
+    },
+    {
+     "q": "Selon l'autrice, que devraient faire les universités ?",
+     "opts": [
+      "Réduire la durée des séjours à l'étranger.",
+      "Rembourser tous les billets de train.",
+      "Informer les étudiants, adapter le calendrier et montrer l'exemple."
+     ],
+     "a": 2,
+     "why": "« informer les étudiants, tenir compte des jours de voyage dans le calendrier universitaire et montrer l'exemple »."
+    },
+    {
+     "q": "Quel est le ton de ce texte ?",
+     "opts": [
+      "Argumenté et nuancé, sans chercher à culpabiliser.",
+      "Violent et accusateur.",
+      "Neutre et purement informatif."
+     ],
+     "a": 0,
+     "why": "Hon medger invändningar, godtar undantag och skriver « Ce n'est pas une accusation » och « Culpabiliser les individus ne mène nulle part »."
+    }
+   ]
+  },
+  {
+   "id": "fru-pe-1",
+   "part": "pe",
+   "teil": "Production écrite",
+   "title": "L'école de musique va-t-elle fermer ?",
+   "time": 60,
+   "minWords": 250,
+   "instr": "Skriv ett formellt brev till borgmästaren där du tar ställning mot ett beslut. Presentera fakta, argumentera med konkreta exempel, bemöt motpartens argument (je comprends que… cependant…) och föreslå lösningar. Använd formell hälsning och avslutning (Madame la Maire / Monsieur le Maire, je vous prie d'agréer…), vous och varierade bindeord (d'une part… d'autre part, en outre, plutôt que, c'est pourquoi).",
+   "task": "La mairie de votre ville a annoncé la fermeture de l'école municipale de musique à la rentrée prochaine, pour des raisons budgétaires. Les cours seraient remplacés par des tutoriels en ligne et quelques ateliers au centre culturel. Ancien(ne) élève de cette école, vous écrivez au maire pour exprimer votre désaccord. Vous présentez des arguments précis et vous proposez d'autres solutions. (250 mots minimum)",
+   "criteria": [
+    "Respect de la consigne",
+    "Correction sociolinguistique",
+    "Capacité à présenter des faits",
+    "Capacité à argumenter une prise de position",
+    "Cohérence et cohésion",
+    "Compétence lexicale",
+    "Compétence grammaticale"
+   ],
+   "model": "Objet : Projet de fermeture de l'école municipale de musique\n\nMadame la Maire,\n\nC'est avec une profonde inquiétude que j'ai appris, par la presse locale, votre projet de fermer l'école municipale de musique à la rentrée prochaine. Ancienne élève de cette école, où j'ai étudié le violoncelle pendant dix ans, je me permets de vous faire part de mon désaccord.\n\nJe comprends, bien entendu, que la commune doive faire des économies. Cependant, supprimer l'école de musique serait, à mes yeux, une erreur à la fois éducative et sociale. D'une part, un instrument ne s'apprend pas devant un écran. Un tutoriel peut montrer un geste, mais il ne corrige ni une mauvaise posture ni une erreur de rythme : seul un professeur peut le faire. D'autre part, l'école accueille aujourd'hui plus de trois cents enfants, dont beaucoup n'auraient pas les moyens de payer des cours particuliers. La fermer reviendrait donc à réserver la musique aux familles aisées.\n\nEn outre, l'école joue un rôle essentiel dans la vie de la commune : ses élèves animent la fête de la musique, les cérémonies officielles et les concerts de fin d'année, qui rassemblent chaque mois de juin plusieurs centaines d'habitants.\n\nPlutôt qu'une fermeture, je vous propose d'étudier d'autres pistes. Il serait possible, par exemple, d'adapter les tarifs aux revenus des familles, de mutualiser certains cours avec les communes voisines ou encore de solliciter le soutien du département. Les parents d'élèves, j'en suis certaine, seraient prêts à participer à une réflexion commune.\n\nDans l'espoir que vous voudrez bien reconsidérer ce projet, je vous prie d'agréer, Madame la Maire, l'expression de ma haute considération.\n\nElin Berg",
+   "modelSv": "Ärende: Planerna på att lägga ned den kommunala musikskolan\n\nBästa borgmästare,\n\nDet var med stor oro som jag i lokalpressen läste om era planer på att lägga ned den kommunala musikskolan till nästa läsår. Som tidigare elev på skolan, där jag spelade cello i tio år, vill jag framföra att jag inte håller med.\n\nJag förstår naturligtvis att kommunen måste spara. Men att lägga ned musikskolan vore enligt min mening ett misstag, både pedagogiskt och socialt. För det första lär man sig inte ett instrument framför en skärm. En instruktionsvideo kan visa en rörelse, men den rättar varken en dålig hållning eller ett rytmfel: det kan bara en lärare göra. För det andra tar skolan i dag emot över trehundra barn, och många av deras familjer skulle inte ha råd med privatlektioner. Att stänga skolan vore alltså att göra musiken till något för de välbärgade.\n\nDessutom spelar skolan en viktig roll i kommunens liv: eleverna medverkar på musikens dag, vid officiella ceremonier och på avslutningskonserterna, som varje juni samlar flera hundra invånare.\n\nI stället för en nedläggning föreslår jag att ni undersöker andra möjligheter. Man skulle till exempel kunna anpassa avgifterna efter familjernas inkomster, samordna vissa kurser med grannkommunerna eller söka stöd från departementet. Föräldrarna är, det är jag säker på, beredda att delta i ett gemensamt arbete.\n\nI förhoppningen att ni vill ompröva planerna,\n\nmed vänlig hälsning\n\nElin Berg"
+  },
+  {
+   "id": "fru-pe-2",
+   "part": "pe",
+   "teil": "Production écrite",
+   "title": "La semaine de quatre jours : progrès ou illusion ?",
+   "time": 60,
+   "minWords": 250,
+   "instr": "Skriv ett argumenterande inlägg i ett forum. Ge texten en rubrik, definiera frågan, väg för- och motargument mot varandra med exempel och avsluta med en tydlig och nyanserad slutsats. Tonen får vara personlig, men resonemanget ska vara strukturerat (dans le premier cas… en revanche, de plus, à condition que + subjonctif, au fond).",
+   "task": "Sur le forum d'un magazine consacré à l'économie et à la société, la question du mois est : « La semaine de quatre jours : progrès social ou fausse bonne idée ? » Vous rédigez une contribution dans laquelle vous prenez position de façon argumentée, en vous appuyant sur des exemples précis. (250 mots minimum)",
+   "criteria": [
+    "Respect de la consigne",
+    "Correction sociolinguistique",
+    "Capacité à présenter des faits",
+    "Capacité à argumenter une prise de position",
+    "Cohérence et cohésion",
+    "Compétence lexicale",
+    "Compétence grammaticale"
+   ],
+   "model": "La semaine de quatre jours : oui, mais pas n'importe comment\n\nBonjour à tous,\n\nLa question du mois me semble plus complexe qu'il n'y paraît, car tout dépend de ce que l'on entend par « semaine de quatre jours ». S'agit-il de travailler moins, ou de travailler autant en moins de jours ?\n\nDans le premier cas, les avantages sont réels. Plusieurs entreprises qui ont tenté l'expérience affirment que leurs salariés sont moins stressés, moins souvent malades et plus motivés. Un jour libre supplémentaire permet de s'occuper de ses enfants, de faire du sport, de s'engager dans une association ou, dans mon cas, de consacrer plus de temps à la musique. De plus, moins de trajets, c'est aussi moins de pollution.\n\nEn revanche, si l'on concentre trente-cinq heures sur quatre jours, les journées deviennent épuisantes, et le bénéfice risque de disparaître. Par ailleurs, ce modèle ne convient pas à tous les métiers. Comment l'appliquer à l'hôpital, dans les écoles ou dans les commerces, où une présence continue est indispensable ? On risquerait alors de créer une nouvelle inégalité entre les salariés de bureau et les autres.\n\nÀ mon avis, la semaine de quatre jours peut constituer un véritable progrès, à condition qu'elle ne soit pas imposée de façon uniforme. Il faudrait laisser chaque secteur négocier la formule qui lui convient, et en évaluer honnêtement les résultats au bout de quelques années. Car au fond, la vraie question n'est pas le nombre de jours, mais la manière dont on organise le travail pour qu'il reste à la fois supportable et efficace.\n\nEt vous, seriez-vous prêts à faire des journées plus longues pour gagner un jour de liberté ?\n\nElin",
+   "modelSv": "Fyradagarsvecka: ja, men inte hur som helst\n\nHej allihop,\n\nMånadens fråga verkar mer komplicerad än den ser ut, eftersom allt beror på vad man menar med ”fyradagarsvecka”. Handlar det om att arbeta mindre, eller om att arbeta lika mycket på färre dagar?\n\nI det första fallet är fördelarna verkliga. Flera företag som har provat säger att deras anställda är mindre stressade, mer sällan sjuka och mer motiverade. En extra ledig dag gör det möjligt att ta hand om sina barn, träna, engagera sig i en förening eller, i mitt fall, ägna mer tid åt musiken. Dessutom innebär färre resor till jobbet också mindre föroreningar.\n\nOm man däremot pressar in trettiofem timmar på fyra dagar blir arbetsdagarna utmattande, och vinsten riskerar att försvinna. Dessutom passar modellen inte alla yrken. Hur ska man tillämpa den på sjukhus, i skolor eller i butiker, där det måste finnas personal hela tiden? Då riskerar man att skapa en ny ojämlikhet mellan kontorsanställda och alla andra.\n\nEnligt mig kan fyradagarsveckan vara ett verkligt framsteg, förutsatt att den inte införs likadant överallt. Man borde låta varje bransch förhandla fram den lösning som passar den, och utvärdera resultaten ärligt efter några år. För i grunden är den verkliga frågan inte antalet dagar, utan hur man organiserar arbetet så att det blir både uthärdligt och effektivt.\n\nOch ni, skulle ni vara beredda att arbeta längre dagar för att vinna en dag av frihet?\n\nElin"
+  },
+  {
+   "id": "fru-pe-3",
+   "part": "pe",
+   "teil": "Production écrite",
+   "title": "Tout en anglais à l'université ?",
+   "time": 60,
+   "minWords": 250,
+   "instr": "Skriv en insändare (lettre au courrier des lecteurs) där du reagerar på en debattartikel. Hänvisa till artikeln, sammanfatta kort skribentens tes, medge det som är rimligt (certes… mais), motbevisa resten med argument och egna erfarenheter och avsluta med ett konstruktivt förslag. Formell ton.",
+   "task": "Dans un quotidien national, un universitaire a publié une tribune intitulée « À l'université, passons à l'anglais ! ». Selon lui, les universités françaises devraient donner la plupart de leurs cours en anglais pour attirer les étudiants étrangers et rester compétitives. Étudiant(e) étranger(ère) en France, vous écrivez au courrier des lecteurs de ce journal pour réagir à cette tribune et défendre votre point de vue. (250 mots minimum)",
+   "criteria": [
+    "Respect de la consigne",
+    "Correction sociolinguistique",
+    "Capacité à présenter des faits",
+    "Capacité à argumenter une prise de position",
+    "Cohérence et cohésion",
+    "Compétence lexicale",
+    "Compétence grammaticale"
+   ],
+   "model": "Madame, Monsieur,\n\nJ'ai lu avec beaucoup d'intérêt la tribune « À l'université, passons à l'anglais ! », publiée dans vos colonnes la semaine dernière. Étudiante suédoise inscrite en licence de musicologie, je fais précisément partie de ces étrangers que l'auteur souhaite attirer. Pourtant, je ne partage pas son analyse.\n\nCertes, l'anglais est aujourd'hui la principale langue internationale de la recherche, et il est normal que certains masters soient proposés dans cette langue. Je reconnais également que la barrière linguistique peut décourager des étudiants brillants. Mais faut-il pour autant renoncer au français ?\n\nJe ne le crois pas. Si j'ai choisi la France plutôt que les Pays-Bas, où de nombreuses formations sont en anglais, c'est justement pour apprendre le français et découvrir une culture de l'intérieur. Étudier la musique française sans pouvoir lire les écrits de Berlioz ou de Debussy dans leur langue n'aurait guère de sens. De plus, un étudiant étranger ne vit pas seulement à l'université : il loue un logement, travaille, se fait des amis. Sans le français, il resterait enfermé dans une bulle internationale, sans jamais vraiment rencontrer le pays qui l'accueille.\n\nPar ailleurs, le français n'est pas une langue locale : il est parlé sur les cinq continents et ouvre les portes de toute la francophonie. Le sacrifier au nom de la compétitivité serait, selon moi, un bien mauvais calcul.\n\nPlutôt que de généraliser l'anglais, il me semblerait préférable de proposer des cours de français intensifs aux étudiants étrangers dès leur arrivée, et d'ouvrir des cursus bilingues dans les disciplines qui le justifient. On attirerait ainsi des étudiants qui viennent pour la France, et pas seulement pour un diplôme.\n\nJe vous prie d'agréer, Madame, Monsieur, l'expression de mes salutations distinguées.\n\nElin Berg, Lyon",
+   "modelSv": "Till redaktionen,\n\nJag läste med stort intresse debattartikeln ”Låt oss gå över till engelska på universitetet!”, som publicerades i er tidning förra veckan. Som svensk student på kandidatprogrammet i musikvetenskap tillhör jag just de utländska studenter som skribenten vill locka hit. Ändå delar jag inte hans analys.\n\nVisst är engelska i dag forskningens främsta internationella språk, och det är naturligt att vissa masterutbildningar ges på det språket. Jag medger också att språkbarriären kan avskräcka begåvade studenter. Men ska man därför ge upp franskan?\n\nDet tror jag inte. Om jag valde Frankrike framför Nederländerna, där många utbildningar ges på engelska, så var det just för att lära mig franska och uppleva en kultur inifrån. Att studera fransk musik utan att kunna läsa Berlioz eller Debussys texter på originalspråket vore ganska meningslöst. Dessutom lever en utländsk student inte bara på universitetet: man hyr en bostad, arbetar och skaffar vänner. Utan franska skulle man bli kvar i en internationell bubbla, utan att någonsin riktigt möta landet man bor i.\n\nFranskan är för övrigt inget lokalt språk: det talas på alla kontinenter och öppnar dörren till hela den fransktalande världen. Att offra det i konkurrenskraftens namn vore enligt min mening en mycket dålig kalkyl.\n\nI stället för att låta engelskan ta över vore det bättre att erbjuda utländska studenter intensivkurser i franska när de kommer hit, och att starta tvåspråkiga utbildningar i de ämnen där det är motiverat. Då skulle man locka studenter som kommer för Frankrikes skull, och inte bara för en examen.\n\nMed vänlig hälsning\n\nElin Berg, Lyon"
+  },
+  {
+   "id": "fru-po-1",
+   "part": "po",
+   "teil": "Production orale",
+   "title": "Monologue suivi d'un débat : les réseaux sociaux interdits aux moins de 15 ans ?",
+   "prep": 30,
+   "time": 20,
+   "instr": "Du får ett kort dokument och har tid att förbereda dig (på provet 30 minuter). Presentera först frågan som dokumentet väcker med egna ord och försvara sedan din ståndpunkt i ett strukturerat anförande med inledning, 2–3 argument med exempel och slutsats (ungefär 5–7 minuter). Därefter följer en diskussion där examinatorn ifrågasätter dina argument. Hela den muntliga delen tar ungefär 20 minuter.",
+   "task": "Vous dégagerez le problème soulevé par le document ci-dessous. Vous présenterez ensuite votre opinion sous la forme d'un exposé argumenté de 5 à 7 minutes, puis vous la défendrez au cours d'un débat avec l'examinateur.\n\nRéseaux sociaux : une majorité numérique ?\nFaut-il interdire les réseaux sociaux aux plus jeunes ? La question divise l'Europe. En France, une loi adoptée en 2023 prévoit qu'un mineur de moins de quinze ans ne puisse s'inscrire sur un réseau social qu'avec l'accord de ses parents, mais son application se heurte encore à des obstacles techniques et juridiques. D'autres pays vont plus loin : l'Australie a ainsi décidé d'interdire les principaux réseaux sociaux aux moins de seize ans. Les partisans de ces mesures invoquent les effets du harcèlement en ligne, des contenus violents et de l'usage excessif des écrans sur la santé mentale des adolescents. Leurs adversaires dénoncent une mesure difficile à appliquer et facile à contourner. Selon eux, il vaudrait mieux éduquer les jeunes aux usages du numérique et obliger les plateformes à mieux protéger tous leurs utilisateurs, quel que soit leur âge.",
+   "phrases": [
+    "Le document que j'ai tiré traite de …",
+    "La question que soulève ce texte est la suivante : …",
+    "J'articulerai mon exposé en deux parties : d'abord …, ensuite …",
+    "Premièrement, … Deuxièmement, …",
+    "Certes, …, mais il n'en reste pas moins que …",
+    "Je reconnais que … ; cependant, …",
+    "Je comprends votre objection, mais permettez-moi de nuancer : …",
+    "En conclusion, il me semble que …"
+   ],
+   "model": "Le document que j'ai tiré traite d'une question qui divise aujourd'hui l'Europe : faut-il interdire les réseaux sociaux aux plus jeunes ? Il rappelle qu'en France, une loi de 2023 exige l'accord des parents avant quinze ans, et que l'Australie a choisi d'interdire les principales plateformes aux moins de seize ans. La problématique pourrait se formuler ainsi : une interdiction est-elle le meilleur moyen de protéger les adolescents ?\n\nPour ma part, je pense qu'une limite d'âge est nécessaire, mais qu'elle ne suffira pas à elle seule. Je développerai deux arguments, avant d'évoquer les limites de cette mesure.\n\nPremièrement, les risques sont bien réels. Le harcèlement en ligne ne s'arrête pas à la sortie de l'école : il poursuit la victime jusque dans sa chambre, la nuit. À douze ou treize ans, on n'a pas toujours la maturité nécessaire pour y faire face, ni pour prendre de la distance avec les images de corps parfaits que l'on voit défiler.\n\nDeuxièmement, une règle commune soulage les familles. Aujourd'hui, un parent qui refuse un smartphone à son enfant de onze ans se heurte à un argument imparable : « Tous mes amis y sont. » Si la loi fixe un âge minimum, ce n'est plus une décision isolée, mais une norme partagée, comme pour l'alcool ou la conduite.\n\nCela dit, je reconnais que l'interdiction a ses faiblesses. Elle est facile à contourner, et vérifier l'âge de chacun pose des problèmes de protection des données. Surtout, elle risque de faire oublier la responsabilité des plateformes, dont les algorithmes sont conçus pour capter notre attention le plus longtemps possible, quel que soit notre âge.\n\nC'est pourquoi je défendrais une solution en trois volets : un âge minimum clair, une véritable éducation aux médias dès l'école primaire, et des obligations strictes pour les plateformes, par exemple la désactivation par défaut des notifications nocturnes pour les mineurs.\n\nEn conclusion, protéger les adolescents ne signifie pas les tenir à l'écart du numérique, mais leur permettre d'y entrer au bon moment, et en connaissance de cause.",
+   "modelSv": "Dokumentet jag drog handlar om en fråga som i dag delar Europa: ska man förbjuda sociala medier för de yngsta? Det påminner om att en fransk lag från 2023 kräver föräldrarnas samtycke före femton års ålder, och att Australien har valt att förbjuda de stora plattformarna för dem under sexton. Frågeställningen skulle kunna formuleras så här: är ett förbud det bästa sättet att skydda tonåringar?\n\nJag tycker för min del att en åldersgräns behövs, men att den inte räcker ensam. Jag ska utveckla två argument innan jag tar upp åtgärdens begränsningar.\n\nFör det första är riskerna verkliga. Nätmobbning slutar inte när skoldagen är slut: den följer offret ända in i sovrummet, på natten. När man är tolv eller tretton har man inte alltid mognaden att hantera det, eller att förhålla sig kritiskt till alla bilder av perfekta kroppar som flimrar förbi.\n\nFör det andra avlastar en gemensam regel familjerna. I dag möts en förälder som säger nej till en smartphone för sitt elvaåriga barn av ett oemotståndligt argument: ”Alla mina kompisar är där.” Om lagen sätter en lägsta ålder är det inte längre ett enskilt beslut, utan en gemensam norm, som för alkohol eller bilkörning.\n\nMed det sagt medger jag att förbudet har sina svagheter. Det är lätt att kringgå, och att kontrollera allas ålder skapar problem med dataskyddet. Framför allt riskerar det att få oss att glömma plattformarnas ansvar, vars algoritmer är utformade för att fånga vår uppmärksamhet så länge som möjligt, oavsett hur gamla vi är.\n\nDärför skulle jag förespråka en lösning i tre delar: en tydlig åldersgräns, riktig medie- och informationskunskap redan i lågstadiet, och stränga krav på plattformarna, till exempel att notiser nattetid är avstängda som standard för minderåriga.\n\nSammanfattningsvis innebär det att skydda tonåringar inte att hålla dem borta från den digitala världen, utan att låta dem komma in i den vid rätt tidpunkt och med kunskap om vad den innebär."
+  },
+  {
+   "id": "fru-po-2",
+   "part": "po",
+   "teil": "Production orale",
+   "title": "Monologue suivi d'un débat : quand l'intelligence artificielle compose",
+   "prep": 30,
+   "time": 20,
+   "instr": "Du får ett kort dokument och har tid att förbereda dig (på provet 30 minuter). Presentera frågan som dokumentet väcker med egna ord och försvara din ståndpunkt i ett strukturerat anförande (ungefär 5–7 minuter). Därefter diskuterar du med examinatorn, som kan ta motsatt ståndpunkt för att pröva dina argument. Förbered dig på motargument och på att nyansera.",
+   "task": "Vous dégagerez le problème soulevé par le document ci-dessous. Vous présenterez ensuite votre opinion sous la forme d'un exposé argumenté de 5 à 7 minutes, puis vous la défendrez au cours d'un débat avec l'examinateur.\n\nQuand l'intelligence artificielle compose\nIl suffit aujourd'hui de taper quelques mots, par exemple « chanson mélancolique, style années 1980, voix féminine », pour qu'un logiciel produise en quelques secondes un morceau complet. Sur les plateformes de streaming, des milliers de titres générés par l'intelligence artificielle sont mis en ligne chaque jour. Pour certains, c'est une révolution comparable à l'invention du disque : chacun peut désormais créer de la musique, sans formation ni studio. Pour d'autres, c'est une menace directe pour les compositeurs, les interprètes et les musiciens de studio, d'autant que ces logiciels ont souvent été entraînés sur des œuvres protégées sans que leurs auteurs aient donné leur accord ni reçu la moindre rémunération. Plusieurs sociétés d'auteurs et maisons de disques ont d'ailleurs engagé des actions en justice. Faut-il encadrer strictement ces outils, ou y voir un nouvel instrument au service des artistes ?",
+   "phrases": [
+    "Ce document pose la question de savoir si …",
+    "Il convient d'abord de distinguer … et …",
+    "D'un côté, on ne peut nier que … ; de l'autre, …",
+    "Ce qui me paraît le plus préoccupant, c'est que …",
+    "Prenons un exemple concret : …",
+    "Il serait souhaitable que + subjonctif …",
+    "Vous avez raison sur ce point, néanmoins …",
+    "En somme, …"
+   ],
+   "model": "Le document soulève une question qui concerne directement les musiciens : l'intelligence artificielle, désormais capable de composer un morceau complet en quelques secondes, est-elle une menace pour la création ou un nouvel outil ? Le texte souligne aussi un problème juridique : ces logiciels ont souvent été entraînés sur des œuvres protégées, sans l'accord de leurs auteurs. Je me demanderai donc à quelles conditions l'IA peut trouver sa place dans la musique.\n\nJe commencerai par reconnaître ce que l'IA peut apporter. Un jeune compositeur peut s'en servir pour tester une orchestration, un professeur pour créer des accompagnements adaptés au niveau de ses élèves. Et l'histoire de la musique montre que de nombreuses innovations techniques, de l'enregistrement au synthétiseur, ont d'abord fait peur avant d'être adoptées par les artistes.\n\nToutefois, je suis convaincue que la situation actuelle pose un vrai problème de justice. Si un logiciel produit des chansons « à la manière » d'un artiste après avoir analysé toute son œuvre, il est normal que cet artiste soit consulté et rémunéré. Sinon, on permet à quelques entreprises de s'enrichir grâce au travail de milliers de musiciens. De plus, lorsque des milliers de titres artificiels sont mis en ligne chaque jour, ils risquent de noyer les véritables créateurs dans la masse et de faire encore baisser leurs revenus.\n\nIl y a enfin une question plus profonde. Pour moi, la musique n'est pas seulement une suite de notes bien agencées : c'est une expérience humaine, une manière de partager une émotion. Quand j'écoute un violoncelliste, j'entends aussi sa respiration, ses hésitations, son histoire. Une machine peut imiter tout cela, mais elle ne le vit pas.\n\nJe défends donc un encadrement en trois points : l'obligation d'indiquer clairement qu'un morceau a été généré par une IA, l'accord et la rémunération des artistes dont les œuvres servent à entraîner les logiciels, et une réflexion dans les conservatoires sur la manière d'utiliser ces outils de façon créative.\n\nEn somme, l'IA peut devenir un instrument parmi d'autres, à condition qu'elle reste au service des musiciens, et non l'inverse.",
+   "modelSv": "Dokumentet tar upp en fråga som direkt berör musiker: är artificiell intelligens, som numera kan komponera ett helt stycke på några sekunder, ett hot mot skapandet eller ett nytt verktyg? Texten lyfter också fram ett juridiskt problem: programmen har ofta tränats på upphovsrättsskyddade verk utan upphovspersonernas samtycke. Jag ska därför fråga mig på vilka villkor AI kan få en plats i musiken.\n\nJag börjar med att erkänna vad AI kan tillföra. En ung tonsättare kan använda den för att pröva en orkestrering, en lärare för att skapa ackompanjemang anpassade till elevernas nivå. Och musikhistorien visar att många tekniska innovationer, från inspelningen till synthesizern, först väckte rädsla innan artisterna tog dem till sig.\n\nMen jag är övertygad om att dagens situation innebär ett verkligt rättviseproblem. Om ett program gör låtar ”i stil med” en artist efter att ha analyserat hela hans eller hennes verk, är det rimligt att artisten tillfrågas och får betalt. Annars låter man några få företag tjäna pengar på tusentals musikers arbete. Dessutom, när tusentals artificiella låtar läggs upp varje dag, riskerar de att dränka de verkliga upphovspersonerna i mängden och pressa ned deras inkomster ytterligare.\n\nTill sist finns det en djupare fråga. För mig är musik inte bara en följd av välordnade toner: den är en mänsklig upplevelse, ett sätt att dela en känsla. När jag lyssnar på en cellist hör jag också andningen, tvekan, livshistorien. En maskin kan härma allt det, men den upplever det inte.\n\nJag förespråkar därför en reglering i tre punkter: krav på att tydligt ange att ett stycke har skapats av AI, samtycke och ersättning till de artister vars verk används för att träna programmen, och en diskussion på konservatorierna om hur verktygen kan användas kreativt.\n\nKort sagt kan AI bli ett instrument bland andra, förutsatt att den tjänar musikerna, och inte tvärtom."
+  },
+  {
+   "id": "fru-po-3",
+   "part": "po",
+   "teil": "Production orale",
+   "title": "Monologue suivi d'un débat : l'université doit-elle choisir ses étudiants ?",
+   "prep": 30,
+   "time": 20,
+   "instr": "Du får ett kort dokument och har tid att förbereda dig (på provet 30 minuter). Presentera frågan som dokumentet väcker med egna ord och försvara din ståndpunkt i ett strukturerat anförande (ungefär 5–7 minuter). Därefter diskuterar du med examinatorn. Jämför gärna med förhållandena i Sverige, men håll dig till frågan.",
+   "task": "Vous dégagerez le problème soulevé par le document ci-dessous. Vous présenterez ensuite votre opinion sous la forme d'un exposé argumenté de 5 à 7 minutes, puis vous la défendrez au cours d'un débat avec l'examinateur.\n\nL'université doit-elle choisir ses étudiants ?\nEn France, l'université a longtemps été ouverte à tout titulaire du baccalauréat. Depuis la création de la plateforme Parcoursup, en 2018, les formations classent les candidatures, et les filières les plus demandées ne peuvent pas accepter tout le monde. Pour les uns, cette évolution est une nécessité : l'échec en première année reste élevé, et mieux orienter les étudiants permettrait d'éviter des années perdues. Pour les autres, c'est la remise en cause d'un principe républicain : l'accès au savoir ne devrait pas dépendre d'un dossier scolaire établi à dix-sept ans, qui reflète souvent davantage l'origine sociale que le potentiel réel. Beaucoup de lycéens, quant à eux, vivent la procédure comme une source de stress. Faut-il sélectionner à l'entrée de l'université, ou préserver un accès aussi large que possible ?",
+   "phrases": [
+    "Le texte aborde un débat récurrent en France : …",
+    "Deux positions s'opposent : pour les uns, … ; pour les autres, …",
+    "La question est donc de savoir comment concilier … et …",
+    "À mon sens, …",
+    "Cet argument me paraît recevable, à condition que + subjonctif …",
+    "Dans mon pays, par exemple, …",
+    "Si je peux me permettre de revenir sur ce que vous avez dit, …",
+    "Pour conclure, je dirais que la question n'est pas tant … que …"
+   ],
+   "model": "Le texte aborde un débat récurrent en France : l'université doit-elle sélectionner ses étudiants ? Il explique que depuis la création de Parcoursup, en 2018, les formations classent les candidatures, et il oppose deux positions : pour les uns, mieux orienter les étudiants éviterait des échecs en première année ; pour les autres, la sélection remettrait en cause l'égal accès au savoir. La question est donc de savoir comment concilier la réussite des étudiants et l'égalité des chances.\n\nÀ mon sens, une certaine forme d'orientation est nécessaire, mais une sélection stricte à l'entrée de l'université serait une erreur.\n\nD'abord, je comprends l'argument de la réussite. Laisser un étudiant s'inscrire dans une filière pour laquelle il n'a aucune base, puis le voir échouer au bout d'un an, ce n'est pas lui rendre service. C'est du temps perdu, et souvent une perte de confiance en soi. En ce sens, conseiller les lycéens et leur proposer des remises à niveau me paraît indispensable.\n\nCependant, un dossier établi à dix-sept ans dit peu de choses de ce qu'une personne est capable de devenir. Certains élèves s'épanouissent tard ; d'autres n'ont pas eu les mêmes conditions de travail que leurs camarades, faute de calme à la maison ou d'aide pour les devoirs. Une sélection fondée uniquement sur les notes risque donc de reproduire les inégalités sociales au lieu de les corriger.\n\nEnsuite, l'université a une mission particulière : elle doit permettre à chacun de se former, y compris en reprenant ses études à trente ou quarante ans. En Suède, par exemple, beaucoup d'adultes retournent à l'université au cours de leur vie, et cette seconde chance me semble précieuse.\n\nJe défendrais donc un système intermédiaire : un accès large, accompagné d'un véritable travail d'orientation au lycée, et une première année conçue pour aider les étudiants à trouver leur voie, avec des passerelles entre les filières plutôt que des portes fermées.\n\nPour conclure, je dirais que la question n'est pas tant de savoir qui mérite d'entrer à l'université que de savoir comment l'université peut aider chacun à réussir.",
+   "modelSv": "Texten tar upp en återkommande debatt i Frankrike: ska universitetet välja ut sina studenter? Den förklarar att sedan Parcoursup infördes 2018 rangordnar utbildningarna de sökande, och den ställer två ståndpunkter mot varandra: enligt somliga skulle bättre studievägledning förhindra misslyckanden under första året; enligt andra skulle urval undergräva den lika tillgången till kunskap. Frågan är alltså hur man kan förena studenternas framgång med lika möjligheter.\n\nEnligt mig behövs en viss form av vägledning, men ett strikt urval vid antagningen till universitetet vore ett misstag.\n\nFör det första förstår jag argumentet om studieresultat. Att låta en student börja på en utbildning som hon eller han saknar grund för, och sedan se henne eller honom misslyckas efter ett år, är ingen tjänst. Det är bortkastad tid och ofta ett slag mot självförtroendet. I det avseendet tycker jag att det är nödvändigt att ge gymnasieelever råd och erbjuda dem kompletterande kurser.\n\nMen ett betygsunderlag från när man är sjutton säger inte mycket om vad en människa kan utvecklas till. Vissa elever blommar ut sent; andra har inte haft samma förutsättningar att plugga som sina klasskamrater, på grund av att det saknats lugn hemma eller hjälp med läxorna. Ett urval som bara bygger på betyg riskerar alltså att återskapa de sociala orättvisorna i stället för att rätta till dem.\n\nFör det andra har universitetet ett särskilt uppdrag: det ska göra det möjligt för alla att utbilda sig, även för den som börjar studera igen vid trettio eller fyrtio. I Sverige, till exempel, återvänder många vuxna till universitetet under livet, och den andra chansen tycker jag är värdefull.\n\nJag skulle därför förespråka ett mellanting: bred tillgång, i kombination med verklig studievägledning på gymnasiet, och ett första år som är utformat för att hjälpa studenterna att hitta sin väg, med övergångar mellan utbildningarna i stället för stängda dörrar.\n\nSammanfattningsvis skulle jag säga att frågan inte så mycket är vem som förtjänar att komma in på universitetet, som hur universitetet kan hjälpa alla att lyckas."
+  }
+ ]
+}
