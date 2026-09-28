@@ -10,8 +10,8 @@ Underlag finns i `docs/ovningsforslag.md` (franska), `docs/ovningsforslag-tyska.
 
 ## Språkprov (det verkliga målet)
 
-- **P1: Musikteori på målspråket** (föräldern, 2026-09-28): alla ord och instruktioner som kan komma på det skriftliga teoriprovet vid antagningen (formation musicale och écriture vid konservatorium, Musiktheorie och Gehörbildung vid Musikhochschule). Ordförrådet byggs som egna avsnitt (mt1–mt7) i franska och Tyska 5.
-- **P2: Övning i teoriprovets form:** korta uppgifter som på provet, på målspråket ("Bestimmen Sie das Intervall c–as", "Indiquez la cadence"), där eleven svarar med termen. Kan byggas av musikteoriorden som en egen frågetyp.
+- **P2: Musikteori i fler kurser och granskning:** musikteoriord och teoriprov finns i Franska 3 och Tyska 5. Termer att kontrollera med en musiklärare: franska omvändningsnamn (sixte sensible, accord de triton), cadence parfaite/imparfaite, tyska Gegenklang och verkürzter Dominantseptakkord. Tyska 4 kan få en lättare variant. Fler uppgifter finns i generatorn (57 tyska till).
+
 
 Båda eleverna ska söka musikutbildning utomlands. Eleven i franska behöver visa **B1 i franska** (DELF B1) för Frankrike, och eleven i tyska behöver visa **B2 i tyska** för Tyskland. Musikhögskolorna godtar oftast Goethe-Zertifikat B2, telc B2 eller TestDaF, men kontrollera vad just deras skolor kräver. Betyg i kursen spelar mindre roll.
 
@@ -35,7 +35,6 @@ Båda eleverna ska söka musikutbildning utomlands. Eleven i franska behöver vi
 ## Tyska 4 (B1)
 
 - **P2: Granskning av innehållet i Tyska 4** (551 ord, 270 grammatikfrågor och alla texter är AI-skrivna). Stickprov av en tysktalande, särskilt siffrorna i kulturtexterna.
-- **P3: Tyska 4: hörtexter och fler ord** (kursmallen, paket 12): 7 hörtexter och cirka 160 nya ord, eftersom 558 ord är lågt för steg 4. Provträning för Goethe B1 (paket 19).
 
 ## Tyska (Tyska 5, mot B2)
 
@@ -55,8 +54,6 @@ Emma pluggar på egen hand, utan kurs, lärare och lärobok. Tyskan bygger därf
 ## Kurser och nivåer
 
 - **P2: Resten av kursmallen** (`docs/kursmall.md`, avsnitt 4). Byggt: paket 1–8, 10 och 13–16 samt nivåerna. Kvar:
-  - Litteratur, sång eller dikt i varje kurs (paket 11): 2–4 uppgifter per kurs.
-  - Tre grammatikområden mot B2 i Tyska 5 (paket 18): genitiv och n-deklination, particip som adjektiv, tvådelade bindeord.
   - Paket 9 (grammatiken kopplad till kapitel) gör bara nytta i kurser med lärobok, så det väntar.
   - Lyssna igenom uttalsövningarna med en riktig röst. Vissa par kan låta lika i vissa webbläsare, till exempel é/è i franska och enkelt/dubbelt s i italienska. Sällsynta ord bör bytas ut.
 - **P3: Fler grammatikområden ur bokens minigrammatik:** prepositioner för tid och plats, räkneord och klockan, oregelbundna verb i presens (verbspelen täcker en del), demonstrativa pronomen, quel/lequel, tout, gérondif och passiv form. Minigrammatiken s. 200–201 och sidorna före s. 194 saknas.

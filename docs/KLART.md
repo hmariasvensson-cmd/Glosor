@@ -2,6 +2,17 @@
 
 Punkter som har flyttats från [`BACKLOG.md`](BACKLOG.md) när de byggdes. **Referens** anger backloggens rubrik och prioritet. **Commit** anger var ändringen finns i git. **Publicerat** anger versionen av artefakten på https://claude.ai/artifact/YBQv8j4qXQQLuPwLAWt5mP.
 
+## 2026-09-28, del 2 (publicerat som version 22)
+
+| Referens | Vad som byggdes | Commit |
+|---|---|---|
+| Önskemål från föräldern: *statistik per dag* | Statistiken har en ny panel, "Dag för dag": minuter, frågor, rätt och nya ord i dag, dagar i rad, ett stapeldiagram över minuter per dag de senaste 28 dagarna (med detaljer vid hovring) och en tabell. | `0c239ea` |
+| Önskemål från föräldern: *hur långt man kommit i kapitlen* | Rullistorna "Nya ord från" och "Vi läser nu" visar hur långt man har kommit i varje kapitel (▰▰▱▱▱ 40 %, ord kvar, ✓ klart). Under listan finns "Hur långt har jag kommit?", en kapitelkarta med en stapel per kapitel (kan, på väg, kvar). Kapitlet man läser är markerat, och man väljer ett kapitel genom att trycka på det. | `0c239ea` |
+| Önskemål från föräldern: *musikteori till det skriftliga teoriprovet* (Språkprov · P1) | Sju nya avsnitt (mt1–mt7) med musikteori på målspråket: 396 ord i franskan och 392 i Tyska 5. Orden bygger på riktiga antagningsprov (CNSMD Paris och Lyon; HfM Weimar, Karlsruhe, Folkwang och UdK Berlin) och omfattar noter, rytm, intervall, skalor, ackord, harmonik, form, föredragsbeteckningar och provinstruktioner. Ny övning, "Teoriprovet": 100 uppgifter per språk i provets form ("Bestimmen Sie das Intervall e–b", "Quelle est la sensible en ré mineur ?"). | `002027c` |
+| Kurser · kursmallen paket 18 | Tyska 5: genitiv och n-deklination, particip som adjektiv och tvådelade bindeord, sammanlagt 80 frågor med regelsidor. | `002027c` |
+| Kurser · kursmallen paket 12 och 19 | Tyska 4: 7 nya hörtexter (telefonsamtal, utrop, radioinslag, intervju), 160 nya ord (711 totalt) och provträning för Goethe-Zertifikat B1 (15 uppgifter i provets format). | `002027c` |
+| Kurser · kursmallen paket 11 | Litteratur i alla kurser (16 inslag). Fria dikter och sagor återges i sin helhet, bland andra Apollinaire, La Fontaine, Verlaine, Goethe, Rilke, Kafka, Busch, Grimm och Collodi, och är kontrollerade mot Wikisource. Nutida sånger blir skrivuppgifter utan sångtext. | `002027c` |
+
 ## 2026-09-28 (publicerat som version 21)
 
 | Referens | Vad som byggdes | Commit |
