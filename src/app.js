@@ -1,6 +1,30 @@
 /* ---------- Språk ---------- */
 // L är det valda språket (från languages/<kod>/lang.js). Allt nedan läser därifrån.
 let L, SECTIONS, WORDS, byId, CONJ, CONJBY;
+/* Arv mellan kurser. En kurs med extends: "<kod>" och inherit: [fält] får de fälten från den kursen, djupt
+   sammanslagna med sina egna: vanliga objekt slås ihop nyckel för nyckel och kursens egna värden vinner; listor,
+   regex och funktioner tas hela från kursen själv om den har dem. Två uttryckliga ändringar av förälderns värde:
+   {$append: [...]} lägger till i förälderns lista, och {$remove: [nycklar]} i ett objekt tar bort nycklar.
+   Körs en gång när sidan startar, så att varje kurs är ett vanligt objekt (inga getters) och ordningen mellan
+   kurserna i index.html inte spelar någon roll. build.py kontrollerar att föräldern finns och att det inte blir en cirkel. */
+const isPlainObj=v=>!!v&&typeof v==="object"&&Object.getPrototypeOf(v)===Object.prototype;
+function mergeInherited(base,own){
+  if(own===undefined) return base;
+  if(isPlainObj(own)&&Array.isArray(own.$append)) return [...(Array.isArray(base)?base:[]),...own.$append];
+  if(!isPlainObj(own)||!isPlainObj(base)) return own;
+  const drop=new Set(own.$remove||[]), out={};
+  Object.keys(base).forEach(k=>{ if(!drop.has(k)) out[k]=k in own?mergeInherited(base[k],own[k]):base[k]; });
+  Object.keys(own).forEach(k=>{ if(k!=="$remove"&&!(k in out)) out[k]=own[k]; });
+  return out;
+}
+function inheritCourses(langs){
+  const done=new Set(), busy=new Set();
+  const resolve=c=>{ if(done.has(c)) return; const x=langs[c], p=x.extends;
+    if(p&&langs[p]&&!busy.has(c)){ busy.add(c); resolve(p); (x.inherit||[]).forEach(k=>{ x[k]=mergeInherited(langs[p][k],x[k]); }); }
+    done.add(c); };
+  Object.keys(langs).forEach(resolve);
+}
+inheritCourses(LANGUAGES);
 const LANG_KEY = "glosor-sprak";
 const ONLY_KEY = "glosor-bara";   // om man bara vill se en kurs (sparas bara i den här webbläsaren)
 const onlyCourse=()=>{try{return localStorage.getItem(ONLY_KEY)||""}catch(e){return ""}};
@@ -63,16 +87,55 @@ const dayStart=ts=>{const d=new Date(ts); d.setHours(0,0,0,0); return d.getTime(
 const addDays=(ts,n)=>{const d=new Date(ts); d.setHours(0,0,0,0); d.setDate(d.getDate()+n); return d.getTime();};
 const isDue=x=>x.dd?x.dd<=Date.now():x.due<=S.pass;
 const MASTER=4, MAXDUE=40;   // MAXDUE = högst så många repetitioner per pass, resten väntar till nästa
+/* S: det sparade läget för den valda kursen. Hela S ligger i localStorage under L.storageKey, och i molnet uppdelat
+   (se "Sparat på claude.ai" nedan och docs/ARKITEKTUR.md, där samma lista finns som tabell). Fält:
+     v          schemaversion = index i MIGRATIONS. Lägen utan v (från före 2026-09-28) räknas som version 0.
+     pass       numret på nästa glospass (börjar på 1, ökar efter varje glospass som inte är extra)
+     t          tid för senaste sparningen (ms), ökar alltid, även om en annan enhets klocka går före
+     w          {<ord-id>: {s, due, dd, f, lp, ld, mp, md, lapses, mcR, mcW, tyR, tyW, clR, clW}}, se save() och schedule()
+     newCount   antal nya ord per pass (0, 10, 15, 20)          mode  "mix" | "mc" | "type"
+     src        "auto" eller avsnitts-id att lära nya ord från  chapter  bokkapitlet man läser (avsnitts-id)
+     slow, listenFirst, goal   uppläsning långsam, lyssna först på nya ord, veckomål i minuter
+     log        [{p, d, dur, nNew, nRep, right, total, mcR, mcN, tyR, tyN, extra, kind, game, words}], högst 1 000 poster
+     logOld     {dur, days, lastDay, n}: sammanfattning av poster som kapats bort ur log (foldLog)
+     nLog       antal loggposter någonsin (poängen i molnet jämför den)
+     run        pågående pass (snapRun), runs {<övning>: pass} ett påbörjat pass per övning (runKey)
+     dailyDay   dag då Dagens pass senast gjordes klart
+     vt, vv     verbträning per tempus och per verb {r, n}
+     mine       egna ord [{t, sv, g, ex, exSv, …}]
+     gi, gr, gt grammatik: per fråga {s, last}, per regel och per område {r, n}
+     ga         der/die/das och plural per ord-id {g, p, last}
+     tr, ph, te översätta meningar, fraser, musikteori: per id {s, last}
+     tx         läs- och hörtexter per id {r, n, best, last}    stb  berättelser: bästa antal rätt per id
+     st         berättelsernas luckor {tempus, bindeord: {r, n}}
+     cu, wr     kulturuppgifter och skrivuppgifter som är klara, per id
+     ut         uttal: bästa procent per id                     mal  lärandemål som bockats av {"<id>|<nr>": tid}
+     kt         kapitelprov per avsnitt {r, n, d, miss}         exam provträning {t: {<uppgift>: {pct, best, n, last}}, sims: [...]}
+     drafts     utkast till texter per uppgift                  fb   Claudes kommentarer per uppgift
+     feedback, reports   Tyck till-meddelanden och felrapporter som inte kunde skickas (högst 50)
+   Nya fält läggs till här och i docs/ARKITEKTUR.md. Ett fält som byter form får en ny migrering i MIGRATIONS. */
 let S;
 function loadState(){
   S={pass:1,w:{},newCount:15,src:"auto",mode:"mix",log:[],vt:{},vv:{}};
   try{Object.assign(S,JSON.parse(localStorage.getItem(L.storageKey)||"{}"))}catch(e){}
   normState();
 }
-function normState(){ if(!Array.isArray(S.log))S.log=[]; S.w=S.w||{}; S.vt=S.vt||{}; S.vv=S.vv||{}; S.nLog=nLogOf(S); migrateRetired(); }
-/* Förr fick inlärda ord due=1e9 och kom aldrig tillbaka. Ge dem ett riktigt repetitionsdatum,
+/* Numrerade migreringar: MIGRATIONS[n] gör om ett läge från version n-1 till version n och körs en gång per läge.
+   Lägg alltid till nya sist, ändra aldrig ordningen, och låt dem tåla fält som saknas. */
+const MIGRATIONS=[
+  null,             // 0: lägen från före S.v
+  migrateRetired    // 1: ord med det gamla "kan för alltid" (due=1e9) får ett riktigt repetitionsdatum
+];
+const S_VERSION=MIGRATIONS.length-1;
+function normState(){
+  if(!Array.isArray(S.log))S.log=[]; S.w=S.w||{}; S.vt=S.vt||{}; S.vv=S.vv||{}; S.nLog=nLogOf(S);
+  const v=Number.isInteger(S.v)&&S.v>0?S.v:0;
+  for(let i=v+1;i<MIGRATIONS.length;i++) MIGRATIONS[i](S);
+  S.v=Math.max(v,S_VERSION);   // ett läge från en nyare version av appen behåller sitt nummer
+}
+/* Migrering 1. Förr fick inlärda ord due=1e9 och kom aldrig tillbaka. Ge dem ett riktigt repetitionsdatum,
    utspritt över kommande pass så att de inte kommer alla på en gång. */
-function migrateRetired(){
+function migrateRetired(S){
   const old=Object.entries(S.w).filter(([,x])=>x&&x.due>=1e9).sort((a,b)=>(a[1].mp||0)-(b[1].mp||0));
   old.forEach(([,x],i)=>{ x.s=Math.max(x.s,MASTER); x.due=Math.max((x.mp||S.pass)+INT[MASTER],S.pass+1+Math.floor(i/8)); });
 }
@@ -86,10 +149,11 @@ function migrateRetired(){
      data/users/<id>/<storageKey>~f.<fält> {rev, data}                                 stora fält, bara om huvuddokumentet blir för stort
    rev är ett hash av bitens innehåll. Bitarna skrivs först och huvuddokumentet sist, och en läsare använder bara bitar
    vars rev stämmer med huvuddokumentet, så att bitar från olika sparningar aldrig blandas. Oförändrade bitar skrivs inte om.
+   Bitar som inte längre finns i huvuddokumentets parts raderas efter sparningen (cloudPrune).
    Gamla dokument i formatet {state, t} läses som förut, och första sparningen skriver det nya formatet.
    Vid start vinner den version som kommit längst (pass, antal loggposter någonsin, antal ord; vid lika den senaste),
    så att en enhet med tomt minne aldrig skriver över framsteg som gjorts på en annan. */
-const CLOUD={db:null,uid:null,user:null,ready:false,busy:false,pending:{},timer:null,unsub:null,known:{},deferred:null,
+const CLOUD={db:null,uid:null,user:null,ready:false,busy:false,pending:{},timer:null,unsub:null,known:{},stale:{},deferred:null,
   dead:false,noWrite:false,initing:false,attaching:false,seq:0,warn:""};
 const DOC_MAX=256*1024-256, PART_MAX=200*1024, HEAD_MAX=160*1024, W_PER_PART=700;
 // Antal loggposter någonsin. Loggen kapas vid 1 000 (foldLog), så räknaren S.nLog behövs för att jämföra.
@@ -143,7 +207,24 @@ async function cloudWrite(key,st){
   for(const [n,x] of Object.entries(docs)) if(!known||known[n]!==x.rev) await docFor(key+"~"+n).set({rev:x.rev,data:x.data});
   await docFor(key).set(main);
   CLOUD.known[key]=main.parts;
+  await cloudPrune(key,main.parts,[d&&d.parts,known,CLOUD.stale[key]]);
   return {written:true};
+}
+/* Gamla bitar (t.ex. ~log1 när loggen krympt, ~w5 när orden fått plats i färre bitar) tas bort efter en lyckad
+   sparning av huvuddokumentet. Bara bitar som fanns i ett tidigare huvuddokument och inte finns i det nya raderas,
+   och bara om huvuddokumentet fortfarande är vårt (har en annan enhet hunnit spara kan den använda bitarna).
+   Misslyckas en radering gör det inget: biten ligger kvar oanvänd, och vi försöker igen vid nästa sparning (CLOUD.stale). */
+async function cloudPrune(key,parts,olds){
+  const gone=[...new Set(olds.filter(Boolean).flatMap(o=>Object.keys(o)))].filter(n=>!(n in parts));
+  const done=[];
+  if(gone.length) try{
+    const cur=await docFor(key).get(), d=cur&&cur.exists?(cur.data()||{}):null;
+    if(d&&sameParts(d.parts,parts))
+      for(const n of gone){ const ref=docFor(key+"~"+n); if(typeof ref.delete!=="function") break; await ref.delete(); done.push(n); }
+  }catch(e){}
+  const left=gone.filter(n=>!done.includes(n));
+  if(left.length) CLOUD.stale[key]=Object.fromEntries(left.map(n=>[n,1])); else delete CLOUD.stale[key];
+  return done;
 }
 function cloudJoin(d,names,datas){
   const st=JSON.parse(JSON.stringify(d.head||{})), logs=[]; st.w={};
@@ -359,12 +440,29 @@ function variants(word){
   const add=s=>{s=norm(s);if(s)out.add(s)};
   add(base); add(word.replace(/[()]/g,""));
   base.split(/\s*=\s*/).forEach(add);
-  // "fier, fière", "le mélomane, la mélomane", "le metteur en scène, la metteuse en scène", "correspondant, -e": två former
-  // av samma ord (lika många ord i båda delarna). Men "ich habe dieses Thema gewählt, weil" är en fras med kommatecken,
-  // och då godkänns inte bara "weil".
-  const parts=base.split(/\s*,\s*/), nw=p=>norm(p).split(" ").filter(Boolean).length;
-  if(parts.length===2&&(parts[1].startsWith("-")||nw(parts[0])===nw(parts[1]))) parts.forEach(p=>{if(!p.startsWith("-")) add(p)});
+  // Två former av samma ord med komma emellan godkänns också var för sig:
+  //   "correspondant, -e" (ändelse): den första formen
+  //   "fier, fière", "le mélomane, la mélomane", "l'envoyé spécial, l'envoyée spéciale": lika många ord
+  //   "moniteur, monitrice de ski": färre ord i den första delen, och resten av den andra delen ("de ski") hör till
+  //     båda formerna, så "moniteur de ski" och "monitrice de ski" godkänns
+  // Villkoret är att de ord som står mot varandra är två former av samma ord (samma början, sameForm). Därför delas
+  // en fras med komma aldrig: "ich habe dieses Thema gewählt, weil" godkänner inte "weil", och "Madame, Monsieur"
+  // inte bara "Monsieur". Testet i tests/run_tests.py (SCENARIO_KINDS) går igenom alla ord med komma i alla kurser.
+  const parts=base.split(/\s*,\s*/);
+  if(parts.length===2&&parts[0]&&parts[1]){
+    const [a,b]=parts;
+    if(b.startsWith("-")) add(a);
+    else { const A=a.split(/\s+/), B=b.split(/\s+/), n=A.length;
+      if(n<=B.length&&sameForm(A[n-1],B[n-1])){ add(b); add([...A,...B.slice(n)].join(" ")); } }
+  }
   return [...out];
+}
+// Två former av samma ord: minst hälften av det kortare ordet (och minst två bokstäver) är lika från början,
+// utan accenter och versaler (moniteur/monitrice, vif/vive, cher/chère, l'abonné/l'abonnée, men inte Madame/Monsieur)
+function sameForm(a,b){
+  a=deacc(a.toLowerCase()); b=deacc(b.toLowerCase());
+  let k=0; while(k<a.length&&k<b.length&&a[k]===b[k]) k++;
+  return k>=Math.max(2,Math.ceil(Math.min(a.length,b.length)/2));
 }
 function conjVariants(c){
   const out=new Set();
@@ -744,7 +842,7 @@ function resumeRun(){
   const r=S.run; if(!r) return;
   const item=q=>{
     const k=q.k||r.kind;
-    if(RESTORE[k]){const x=RESTORE[k](q.ref); return x?{...q,...x,k}:null}
+    const K=KINDS[k]; if(K&&K.restore){const x=K.restore(q.ref); return x?{...q,...x,k}:null}
     const w=byId[q.w]; return w?{...q,w}:null;
   };
   $("#tabs").hidden=true;
@@ -839,7 +937,7 @@ function nextQ(){
   sess.cur=sess.queue.shift();
   if(!sess.cur) return sess.kind==="words"?finishSession():finishGeneric();
   sess.answered=false;
-  const d=(sess.cur.t==="mc"?MC:TYPE)[sess.cur.k||sess.kind](sess.cur);
+  const K=KINDS[sess.cur.k||sess.kind], d=(sess.cur.t==="mc"?K.mc:K.type)(sess.cur);
   sess.d=d;
   if(sess.cur.t==="mc") renderMC(d); else if(d.render) d.render(d); else renderType(d);
   snapRun();
@@ -987,7 +1085,7 @@ document.addEventListener("keydown",e=>{
   if(e.key==="Enter"&&!onBtn) click("#next")||click("#nx")||(sess&&sess.answered&&click("#submit"))||click("#exnext");
 });
 
-/* Frågorna för varje övning: MC = flerval, TYPE = skriva */
+/* Glosquizets frågor (flerval och skriva) och kortet som visas efter ett fel svar */
 function mcOptions(w){
   const same=shuffle(WORDS.filter(x=>x.sec===w.sec&&x.sv!==w.sv));
   const other=shuffle(WORDS.filter(x=>x.sec!==w.sec&&x.sv!==w.sv));
@@ -1019,50 +1117,54 @@ document.addEventListener("submit",e=>{const f=e.target.closest&&e.target.closes
   if(v) x.memo=v.slice(0,160); else delete x.memo; save();
   f.outerHTML=`<p class="foot">Sparat. Minnesregeln visas nästa gång ordet kommer.</p>`;});
 document.addEventListener("click",e=>{const b=e.target.closest&&e.target.closest("[data-say]"); if(b) speak(b.dataset.say);});
-const verbHead=c=>`<p class="q-prompt" ${lang()}>${esc(c.verb)} <span class="sub" style="font-family:var(--sans);font-weight:400">(${esc(L.verbs.sv[c.verb]||"")})</span></p>`;
-const clozeHead=w=>`<p class="cloze" ${lang()}>${esc(w.gap.pre)}<span class="gap" id="gap">&nbsp;</span>${esc(w.gap.post)}</p><p class="ex-sv">${esc(w.exSv)}</p>`;
-const fillGap=w=>()=>{const g=$("#gap");if(g){g.textContent=w.gap.ans;g.classList.add("filled")}};
-function clozeHint(w){
-  const bare=s=>L.hintStrip?s.replace(L.hintStrip,""):s;
-  const same=variants(w.t).map(bare).includes(bare(norm(w.gap.ans)));
-  return `Ordet betyder <b>${esc(w.sv)}</b>${same?"":`. Grundform: <b ${lang()}>${esc(w.t)}</b>`}`;
+/* ---------- Övningstyperna: ett register ----------
+   Varje typ av fråga eller övning registrerar sig med defineKind(namn, {...}): glosquizet här nedanför, alla andra
+   i src/kinds/*.js. Quizmotorn slår upp typen i KINDS med frågans k (eller passets kind). Fälten (alla valfria utom name):
+     name     namnet i statistiken
+     mc       c => flervalsfrågan {head, ask, opts, explain, …} (se renderMC)
+     type     c => skrivfrågan {head, ask, accepted | check, answer, …}, eller {render} för en egen vy (se renderType)
+     restore  ref => fälten som frågan behöver när ett avbrutet pass fortsätts, eller null om frågan inte finns längre
+              (glosquizet återskapas direkt ur ordlistan i resumeRun)
+     effect   (ref, ok) => vad första svaret gör med sparad statistik
+     recap    ref => texten i listan "Titta på de här en gång till"
+     after    (ctx, right, total, miss) => egen slutskärm, när passets ctx.type är typens namn
+     again    (arg) => "En runda till" (passets againFn = [namn, arg])
+     open     () => öppnar övningen från menyn (knappen data-ex="<namn>")
+     log      (e, sess) => egna fält i loggposten; utan log får posten kind: namn
+   Fråge-id är "<typ>:<ref>", så att typerna kan blandas i Dagens pass. Namnen är nycklar i sparade pass (S.run,
+   S.runs) och i loggen, så de får inte bytas. */
+const KINDS={}, KIND_FIELDS=["name","mc","type","restore","effect","recap","after","again","open","log"], KIND_ERRORS=[];
+function defineKind(name,def){
+  // Fel här stoppar inte appen (eleverna ska kunna öva ändå), men testerna kräver att KIND_ERRORS är tom
+  const k=KINDS[name]||(KINDS[name]={});
+  Object.keys(def).forEach(f=>{
+    if(!KIND_FIELDS.includes(f)) KIND_ERRORS.push(`${name}: okänt fält ${f}`);
+    else if(f in k) KIND_ERRORS.push(`${name}: ${f} finns redan`);
+    else if(f==="name"?typeof def[f]!=="string":typeof def[f]!=="function") KIND_ERRORS.push(`${name}: ${f} har fel typ`);
+    else k[f]=def[f];
+  });
+  return k;
 }
-const MC={
-  words:c=>{const w=c.w;return{
+// MC, TYPE, RESTORE … som före registret: vyer över KINDS, bara för läsning (MC.dict är KINDS.dict.mc)
+const kindView=f=>new Proxy({},{get:(_,n)=>KINDS[n]?KINDS[n][f]:undefined,has:(_,n)=>!!(KINDS[n]&&KINDS[n][f]),
+  ownKeys:()=>Object.keys(KINDS).filter(n=>KINDS[n][f]),
+  getOwnPropertyDescriptor:(_,n)=>KINDS[n]&&KINDS[n][f]?{value:KINDS[n][f],enumerable:true,configurable:true}:undefined,
+  set:(_,n)=>{KIND_ERRORS.push(`${f}.${String(n)} sattes direkt, använd defineKind`); return true;}});
+const MC=kindView("mc"), TYPE=kindView("type"), RESTORE=kindView("restore"), EFFECT=kindView("effect"), RECAP=kindView("recap"),
+  AFTER=kindView("after"), AGAIN=kindView("again"), KIND_NAMES=kindView("name");
+
+/* Glosquizet: ord → betydelse (flerval) och betydelse → ord (skriva) */
+defineKind("words",{name:"Glosor",
+  mc:c=>{const w=c.w;return{
     head:`<div class="word"><p class="q-prompt" ${lang()}>${esc(w.t)}</p><button class="speak" id="sp" aria-label="Läs upp">${SPK}</button></div>`,
     ask:"Vad betyder det?",
     opts:mcOptions(w).map(o=>({label:o.sv,ok:o.id===w.id})),
     wrongCard:studyCard(w),
     explain:explain(w), say:w.t, sayOnShow:true}},
-  verbs:c=>{const x=c.c;
-    const tn=c.tenses||sess.tenses||[x.tense];
-    const pool=[...new Set(CONJ.filter(y=>y.verb===x.verb&&tn.includes(y.tense)&&(y.tense===x.tense||y.person===x.person)).map(y=>y.form))].filter(f=>f!==x.form);
-    return{tab:"Verb", head:verbHead(x),
-      ask:`Välj rätt form: <b>${esc(x.person)}</b> · ${esc(x.tense)}`,
-      opts:shuffle([{label:x.form,ok:true,lang:true},...shuffle(pool).slice(0,4).map(f=>({label:f,ok:false,lang:true}))]),
-      explain:`<p>Rätt svar: <b ${lang()}>${esc(x.full)}</b></p><p>${esc(ruleFor(x))}</p>`, say:x.full, sayOnAnswer:true}},
-  cloze:c=>{const w=c.w, a=norm(w.gap.ans), seen=new Set([a]), picks=[];
-    const others=[...shuffle(WORDS.filter(x=>x.gap&&x.sec===w.sec)),...shuffle(WORDS.filter(x=>x.gap&&x.sec!==w.sec))];
-    for(const x of others){ if(picks.length>=4)break; const k=norm(x.gap.ans); if(!seen.has(k)){seen.add(k);picks.push(x.gap.ans)} }
-    return{tab:"Mening", head:clozeHead(w), ask:`Vilket ord passar i luckan? ${clozeHint(w)}.`,
-      opts:shuffle([{label:w.gap.ans,ok:true,lang:true},...picks.map(p=>({label:p,ok:false,lang:true}))]),
-      explain:"", wrongCard:studyCard(w), say:w.exT, sayOnAnswer:true, onAnswer:fillGap(w)}}
-};
-const TYPE={
-  words:c=>{const w=c.w;return{
+  type:c=>{const w=c.w;return{
     head:`<p class="q-prompt">${esc(w.sv)}</p>`,
     ask:`Skriv ${L.inLang} ${w.g?`(${L.genders[w.g]||w.g})`:""}`, placeholder:"Skriv här", accents:L.accents,
-    accepted:variants(w.t), answer:esc(w.t), explain:explain(w), wrongCard:studyCard(w), say:w.t, override:true}},
-  verbs:c=>{const x=c.c;return{tab:"Verb", head:verbHead(x),
-    ask:`<b>${esc(x.person)}</b> · ${esc(x.tense)}`, placeholder:"Skriv verbformen", accents:L.verbAccents||L.accents,
-    accepted:conjVariants(x), strip:true, answer:esc(x.full), alwaysAnswer:true, nearMsg:"Nästan!",
-    explain:`<p>${esc(ruleFor(x))}</p>`, say:x.full}},
-  cloze:c=>{const w=c.w;return{tab:"Mening", head:clozeHead(w),
-    ask:`${clozeHint(w)}. Skriv ordet som saknas.`, placeholder:"Skriv det som saknas", accents:L.accents,
-    // Står artikeln redan före luckan (Die [Beziehung]) räknas svaret också rätt om eleven skriver den igen (die Beziehung)
-    check:v=>({r:check(L.hintStrip&&!L.hintStrip.test(w.gap.ans)?v.trim().replace(new RegExp(L.hintStrip.source,"i"),""):v,[norm(w.gap.ans)])}),
-    answer:esc(w.gap.ans), explain:"", wrongCard:studyCard(w), say:w.exT, override:true, onAnswer:fillGap(w)}}
-};
+    accepted:variants(w.t), answer:esc(w.t), explain:explain(w), wrongCard:studyCard(w), say:w.t, override:true}}});
 
 /* ---------- Pass klart: schemaläggning ---------- */
 function applyAnswer(x,id){
@@ -1103,23 +1205,7 @@ function finishSession(){
   if(daily) $("#mix").onclick=startMix;
 }
 
-/* ---------- Verbträning ---------- */
-function startVerbs(gid){
-  const g=verbGames().find(x=>x.id===gid)||verbGames()[0];
-  $("#tabs").hidden=true;
-  const q=verbItems(g,12);
-  sess=null;
-  beginQuiz("verbs",q,{game:g,tenses:g.tenses,againFn:["verbs",g.id],label:`Verb: ${g.name}`});
-}
-/* ---------- Meningar ---------- */
-function startCloze(){
-  $("#tabs").hidden=true;
-  // Ord som inte sitter än först, sedan resten, blandat inom varje grupp
-  const pool=clozePool(), rest=pool.filter(w=>!isMastered(w)), done=pool.filter(isMastered);
-  const q=[...shuffle(rest),...shuffle(done)].slice(0,10).map(clozeItem);
-  sess=null;
-  beginQuiz("cloze",shuffle(q),{againFn:["cloze"],label:"Meningar"});
-}
+/* Verbträning (startVerbs) och meningar (startCloze) finns i src/kinds/10-verbs.js och 11-sentences.js */
 /* ---------- Ordlista ---------- */
 /* Prognos: hur många ord som ska repeteras i nästa pass och de kommande dagarna */
 function statsForecast(){
@@ -1361,14 +1447,41 @@ function renderStats(){
 /* Kursens ord och innehåll ligger i en egen fil, data/<kod>.json, som hämtas första gången kursen väljs.
    I preview.html (och testerna) är datan inbakad, och då startar kursen direkt. */
 const LOADING={};
+// Datafilen innehåller words, content, videos och grammar (områden och regler). DATA_VERSION har ett hash per kurs,
+// så att en ny version av en kurs inte tvingar fram en ny hämtning av de andra kursernas filer.
+const DATA_KEYS={};
+function addCourseData(code,d){ DATA_KEYS[code]=Object.keys(d); Object.assign(LANGUAGES[code],d); return LANGUAGES[code]; }
 function loadCourse(code){
-  return LOADING[code]=LOADING[code]||fetch(`data/${code}.json?v=${DATA_VERSION}`).then(r=>{if(!r.ok) throw new Error(r.status); return r.json();})
-    .then(d=>{Object.assign(LANGUAGES[code],d); return LANGUAGES[code];})
+  if(INLINE_DATA[code]) return Promise.resolve(addCourseData(code,INLINE_DATA[code]));
+  const v=(DATA_VERSION&&typeof DATA_VERSION==="object"?DATA_VERSION[code]:DATA_VERSION)||"";
+  return LOADING[code]=LOADING[code]||fetch(`data/${code}.json?v=${v}`).then(r=>{if(!r.ok) throw new Error(r.status); return r.json();})
+    .then(d=>addCourseData(code,d))
     .catch(e=>{delete LOADING[code]; throw e;});
+}
+/* Minne: hämtade kurser ligger kvar så att det går snabbt att byta tillbaka, men högst KEEP_COURSES stycken.
+   Den kurs som varit oanvänd längst släpps (ord, innehåll, grammatik och det som räknats fram ur dem) och hämtas
+   igen om eleven väljer den. Framstegen påverkas inte: de ligger i localStorage och i molnet, inte i LANGUAGES. */
+const KEEP_COURSES=3, USED_COURSES=[];
+function releaseCourse(code){
+  const x=LANGUAGES[code]; if(!x||x===L) return;
+  (DATA_KEYS[code]||["words","content","videos","grammar"]).forEach(k=>{ delete x[k]; });
+  delete x.base; Object.keys(x).filter(k=>k[0]==="_").forEach(k=>{ delete x[k]; });
+  delete LOADING[code]; delete DATA_KEYS[code];
+}
+function trimCourses(code){
+  const i=USED_COURSES.indexOf(code); if(i>=0) USED_COURSES.splice(i,1); USED_COURSES.push(code);
+  let loaded=Object.keys(LANGUAGES).filter(c=>LANGUAGES[c].words!=null);
+  while(loaded.length>KEEP_COURSES){
+    // den som använts längst sedan (eller aldrig, t.ex. inbakad i preview.html) släpps först
+    const old=loaded.filter(c=>c!==code).sort((a,b)=>USED_COURSES.indexOf(a)-USED_COURSES.indexOf(b))[0];
+    if(!old) break;
+    releaseCourse(old); loaded=loaded.filter(c=>c!==old);
+  }
 }
 let WANT_LANG=null;   // den kurs eleven senast valde; en kurs som blir klar senare aktiveras bara om den fortfarande är vald
 function useLang(code){
   WANT_LANG=code;
+  if(LANGUAGES[code].words==null&&INLINE_DATA[code]&&!LOADING[code]) addCourseData(code,INLINE_DATA[code]);   // preview.html: datan är inbakad
   if(LANGUAGES[code].words==null){
     try{ $("#course").value=code; }catch(e){}
     app.innerHTML=`<section class="panel"><p class="plan">Hämtar ${esc(LANGUAGES[code].course||LANGUAGES[code].name)} …</p></section>`;
@@ -1393,4 +1506,5 @@ function useLang(code){
   setView("ova");
   setSaveNote();
   cloudAttach();
+  trimCourses(code);
 }

@@ -32,63 +32,21 @@ LANGUAGES.fr = {
   // Enkel igenkänning av tempus i elevens text (för checklistan, inte för rättning)
   tenseCheck: {
     "passé composé": t => /(^|[^\p{L}])(ai|as|a|avons|avez|ont|suis|es|est|sommes|êtes|sont)\s+(\p{L}+(é|ée|és|ées|i|ie|is|ies|u|ue|us|ues|it|ert|ort))(?![\p{L}])/iu.test(t),
-    // -ais/-ait/-aient: alla ord utom vanliga ord som inte är imparfait (mais, français, je connais, il fait …).
+    // -ais/-ait/-aient: alla ord utom vanliga ord som inte är imparfait (mais, français, je connais, il fait …),
+    // conditionnel (je parlerais, je voudrais) och presens av verb på -ayer/-oyer/-uyer (ils essaient, ils paient).
     // -ions/-iez räknas bara efter nous/vous ("nous parlions"), och inte presens av verb på -ier (nous étudions).
     "imparfait": t => (t.match(/(^|[^\p{L}])(\p{L}{2,}(ais|ait|aient))(?![\p{L}])/giu)||[])
-      .some(m => !/^(mais|jamais|désormais|vrais|frais|épais|mauvais|niais|biais|palais|balais|relais|délais|essais|rabais|marais|dais|laquais|anglais|français|irlandais|écossais|japonais|polonais|portugais|néerlandais|sénégalais|congolais|libanais|maltais|marseillais|lyonnais|bordelais|lait|souhait|trait|extrait|portrait|retrait|abstrait|distrait|attrait|vais|nais|tais)$|fai[st]$|^(re)?connai[st]$|^(ap|dis|com|re)?parai[st]$|^(dé|com)?plai[st]$/i
+      .some(m => !/^(mais|jamais|désormais|vrais|frais|épais|mauvais|niais|biais|palais|balais|relais|délais|essais|rabais|marais|dais|laquais|anglais|français|irlandais|écossais|japonais|polonais|portugais|néerlandais|sénégalais|congolais|libanais|maltais|marseillais|lyonnais|bordelais|lait|souhait|trait|extrait|portrait|retrait|abstrait|distrait|attrait|vais|nais|tais)$|fai[st]$|^(re)?connai[st]$|^(ap|dis|com|re)?parai[st]$|^(dé|com)?plai[st]$|erai(s|t|ent)$|^(voudr|pourr|devr|aur|ir|viendr|reviendr|deviendr|tiendr|saur|faudr|verr|enverr|courr|mourr|recevr|vaudr)ai(s|t|ent)$|^(pa|essa|bala|effra|pa|appu|ennu|envo|nett)ient$/i
         .test(m.replace(/^[^\p{L}]+/u, "")))
       || (t.match(/(^|[^\p{L}])(nous|vous)\s+(\p{L}{2,}(ions|iez))(?![\p{L}])/giu)||[])
-        .some(m => !/^(étud|oubl|remerc|appréc|vérif|cop|cr|sk|conf|mar|pr|env|sour|r|pl|publ|expéd|modif|identif|justif|simplif|qualif|assoc|négoc|var|sacrif|certif|rel|photograph)i(ons|ez)$/i
+        .some(m => !/^(étud|oubl|remerc|appréc|vérif|cop|cr|sk|conf|mar|pr|env|sour|r|pl|publ|expéd|modif|identif|justif|simplif|qualif|assoc|négoc|var|sacrif|certif|rel|photograph|l|n|suppl|all|inject)i(ons|ez)$/i
           .test(m.replace(/^[^\p{L}]*(nous|vous)\s+/iu, ""))),
     "futur proche": t => /(^|[^\p{L}])(vais|vas|va|allons|allez|vont)\s+\p{L}+(er|ir|re)(?![\p{L}])/iu.test(t),
     "présent": t => t.trim().length > 0
   },
 
   // Grammatikövningar. Frågorna ligger i content/grammar-*.json (se content/GRAMMATIK-SPEC.md).
-  grammar: {
-    topics: [
-      // secs: bokkapitel där området tas upp. När eleven läser det kapitlet kommer området först.
-      {id: "pron", name: "Pronomen: le, lui, y, en", sub: "Je le vois. Je lui parle. J'y vais. J'en veux.", secs: ["k4", "k7"]},
-      {id: "poss", name: "Possessiva pronomen", sub: "mon, ma, mes, son, sa, ses, notre, leur", secs: ["k4"]},
-      {id: "maj", name: "Stor eller liten bokstav", sub: "les Suédois, un écrivain suédois, le suédois", secs: ["k4"]},
-      {id: "adjf", name: "Adjektivens böjning", sub: "sportif – sportive, heureux – heureuse, beau – belle", secs: ["k3"]},
-      {id: "pc", name: "Passé composé: être eller avoir?", sub: "Elle est partie. Nous nous sommes levés.", secs: ["k2", "k5"]},
-      {id: "art", name: "Du, de la, des och de", sub: "Je mange du pain. Je n'ai pas de frères.", secs: ["k3"]},
-      {id: "prep", name: "Prepositioner: en, au, à", sub: "en France, au Portugal, à Paris, au cinéma", secs: ["k4", "k7"]},
-      {id: "rel", name: "Qui, que, où, dont", sub: "Le garçon qui parle, le film que j'ai vu"},
-      {id: "subj", name: "Subjonctif", sub: "Il faut que tu viennes. Je pense que c'est vrai."},
-      {id: "si", name: "Si-satser", sub: "Si j'avais le temps, je viendrais."},
-      {id: "comp", name: "Jämförelser", sub: "plus grand que, meilleur, mieux, le plus"},
-      {id: "neg", name: "Negation och ordföljd", sub: "Je ne l'ai jamais vu.", secs: ["k3", "k5"]},
-      {id: "quest", name: "Frågor", sub: "Où habites-tu ? Est-ce que tu viens ?"},
-      {id: "fut", name: "Futur: futur simple och futur proche", sub: "Je vais partir. Je partirai. Quand je serai grand …", secs: ["k8"]},
-      {id: "cond", name: "Conditionnel", sub: "Je voudrais un café. Tu devrais dormir. J'aimerais partir."},
-      {id: "tps", name: "Imparfait eller passé composé?", sub: "Je lisais quand il a sonné.", secs: ["k4", "k7", "k12"]},
-      {id: "pqp", name: "Plus-que-parfait och venir de", sub: "Le film avait déjà commencé. Je viens de manger.", secs: ["k2", "k12"]},
-      {id: "pton", name: "Betonade pronomen: moi, toi, lui, eux", sub: "avec moi, chez eux, plus grand que toi, c'est lui", secs: ["k2"]},
-      {id: "imper", name: "Imperativ", sub: "Parle ! Allons-y ! Sois sage ! Donne-le-moi !"},
-      {id: "refl", name: "Reflexiva verb i presens", sub: "Je me lève. Je vais me coucher. Je ne me lève pas.", secs: ["k1", "k7"]},
-      {id: "bok", name: "Bokens övningar", sub: "Övningarna ur Escalade: översätt, fyll i, rätt eller fel", secs: ["k1", "k2", "k3", "k4", "k5", "k6", "k7", "k8", "k10", "k12"]},
-      {id: "err", name: "Hitta felet", sub: "En mening har ett fel. Vilket ord?"}
-    ],
-    rules: {
-      "pron-cod": "Direkt objekt: le, la, les", "pron-coi": "Indirekt objekt: lui, leur", "pron-y": "y (dit, på det)", "pron-en": "en (av det, några)", "pron-pc": "Pronomen i passé composé",
-      "pc-etre": "Passé composé med être", "pc-avoir": "Passé composé med avoir", "pc-accord": "Kongruens med être", "pc-refl": "Reflexiva verb i passé composé",
-      "art-part": "Delningsartikel", "art-neg": "de efter negation", "art-qte": "de efter mängdord",
-      "prep-pays": "Prepositioner med länder", "prep-ville": "à med städer", "prep-a-de": "au, aux, du, des",
-      "rel-qui": "qui", "rel-que": "que", "rel-ou": "où", "rel-dont": "dont",
-      "subj-faut": "Subjonctif efter il faut que", "subj-vouloir": "Subjonctif efter vouloir que", "subj-sent": "Subjonctif efter känslor", "subj-ind": "Indikativ, inte subjonctif",
-      "si-pres": "Si + présent → futur", "si-imp": "Si + imparfait → conditionnel",
-      "comp-adj": "Komparativ", "comp-meilleur": "meilleur eller mieux", "comp-sup": "Superlativ",
-      "neg-ordf": "Negationens plats", "neg-typ": "ne … jamais, rien, personne, plus",
-      "q-inv": "Fråga med inversion", "q-est-ce": "Fråga med est-ce que",
-      "poss-sing": "Possessiva: en ägare", "poss-plur": "Possessiva: flera ägare", "poss-voc": "mon/ton/son framför vokal",
-      "adjf-fem": "Adjektiv i femininum", "adjf-plur": "Adjektiv i plural", "adjf-irr": "Oregelbundna adjektiv",
-      "fut-proche": "Futur proche: aller + infinitiv", "fut-reg": "Futur simple: regelbundna verb", "fut-irr": "Futur simple: oregelbundna stammar", "fut-quand": "Quand + futur", "fut-byt": "Byt mellan futur proche och futur simple", "cond-form": "Conditionnel: bildning", "cond-poli": "Artighet: je voudrais, pourriez-vous", "cond-conseil": "Råd: tu devrais, à ta place", "cond-souhait": "Önskningar: j'aimerais", "cond-si": "Si + imparfait → conditionnel", "cond-rai": "Futur (-rai) eller conditionnel (-rais)", "tps-bakgrund": "Bakgrund och beskrivning", "tps-vana": "Vanor och upprepning", "tps-handelse": "Händelser", "tps-avbrott": "Pågående och avbrott", "tps-signal": "Signalord", "pqp-avoir": "Plus-que-parfait med avoir", "pqp-etre": "Plus-que-parfait med être", "venir-de": "Venir de: just ha gjort", "en-train": "Être en train de", "pton-prep": "Efter preposition", "pton-comp": "Efter que i jämförelser", "pton-cest": "c'est moi, c'est lui", "pton-bet": "Moi, je … och korta svar", "pton-a": "à moi (tillhöra)", "imp-form": "Imperativens former", "imp-irr": "Oregelbunden imperativ", "imp-neg": "Nekad imperativ", "imp-pron": "Pronomen i imperativ", "imp-negpron": "Nekad imperativ med pronomen", "refl-pres": "Reflexivpronomen i presens", "refl-inf": "Reflexiva verb med infinitiv", "refl-neg": "Reflexiva verb med negation", "refl-sens": "Reflexivt på franska, inte på svenska",
-      "bok-oversatt": "Översätt (boken)", "bok-lucka": "Fyll i (boken)", "bok-vf": "Rätt eller fel (boken)",
-      "maj-nom": "Stor bokstav: invånare", "maj-adj": "Liten bokstav: adjektiv", "maj-langue": "Liten bokstav: språk"
-    }
-  },
+  // Områden (topics; secs = kapitel där området kommer först) och regelnamn ligger i grammar.json, som build.py lägger i kursens datafil (L.grammar).
 
   verbs: {
     persons: ["je", "tu", "il/elle", "nous", "vous", "ils/elles"],

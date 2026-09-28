@@ -87,14 +87,7 @@ Emma pluggar på egen hand, utan kurs, lärare och lärobok. Tyskan bygger därf
 
 Det som inte rättades direkt efter granskningen. Buggarna och molnsparandet är rättade (se KLART.md, version 25).
 
-- **P2: Id-lås i build.py:** en incheckad `languages/<kod>/ids.lock` med alla ord-, avsnitts- och innehålls-id. Bygget stoppar om ett id försvinner eller byter namn, eller om en `storageKey` ändras eller finns två gånger. Skyddar framstegen mot misstag i ordlistorna.
-- **P2: Ett register per övningstyp:** i dag är varje typ utspridd på MC, TYPE, RESTORE, EFFECT, RECAP, AFTER, AGAIN och KIND_NAMES. Ersätt med `defineKind(namn, {...})` och ett test att varje typ har allt den behöver. Dela sedan `exercises.js` i en fil per typ (`src/kinds/`), som build.py läser med glob.
-- **P2: Arv mellan kurser vid bygget** i stället för getters (`extends: "de"` som build.py slår ihop, eller `languages/<språk>/common.js`). Behövs innan det blir 21 kurser. Flytta också `grammar.topics/rules` till datafilen, så att index.html inte växer med varje kurs.
-- **P3: `DATA_VERSION` per kurs**, så att en ändring i en kurs inte tvingar eleverna att hämta alla kursers data igen.
-- **P3: Schemaversion `S.v` och numrerade migreringar**, och alla fält i `S` dokumenterade på ett ställe.
-- **P3: Tester:** spela igenom alla kurser i en loop över `Object.keys(LANGUAGES)` (i dag får fr4, de6 och it röktest), synk mellan två enheter, fasta väntetider ersatta med `wait(cond)`.
-- **P3: Fältet `.fr`** används för målspråket i alla språk. Byt namn eller läs det via en hjälpfunktion.
-- **P3: Minne:** hämtade kurser ligger kvar tills sidan laddas om. Släpp kurser man inte använder när det blir många.
+- (Alla punkter är byggda, se KLART.md, 2026-09-28 del 6.)
 
 ## Konton, sparande och topplista
 

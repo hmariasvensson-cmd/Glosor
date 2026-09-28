@@ -21,7 +21,7 @@ Publicera alltid med de här kapabiliteterna (utelämna `capabilities` vid ompub
      "user": {"scopes": ["profile"]},
      "sample": {}}
 
-- Framsteg: localStorage (hela `S`) + db under `data/users/<uid>/<storageKey>`. Ett db-dokument får vara högst 256 KiB, så molnkopian är uppdelad: huvuddokumentet `<storageKey>` = `{v:2, head, score, parts, t}` (allt utom `w` och `log`) plus `<storageKey>~w0`, `~w1`, … (orden), `~log` (loggen) och vid behov `~f.<fält>`, se `docs/ARKITEKTUR.md`. Gamla dokument `{state, t}` läses fortfarande. Den version som kommit längst vinner (pass, antal loggposter någonsin `S.nLog`, antal ord; vid lika den senaste `t`). Ett molnläge som kommer mitt i ett pass tas emot först när passet är slut.
+- Framsteg: localStorage (hela `S`) + db under `data/users/<uid>/<storageKey>`. Ett db-dokument får vara högst 256 KiB, så molnkopian är uppdelad: huvuddokumentet `<storageKey>` = `{v:2, head, score, parts, t}` (allt utom `w` och `log`) plus `<storageKey>~w0`, `~w1`, … (orden), `~log` (loggen) och vid behov `~f.<fält>`, se `docs/ARKITEKTUR.md`. Bitar som inte längre används raderas efter en lyckad sparning. Gamla dokument `{state, t}` läses fortfarande. Den version som kommit längst vinner (pass, antal loggposter någonsin `S.nLog`, antal ord; vid lika den senaste `t`). Ett molnläge som kommer mitt i ett pass tas emot först när passet är slut.
 - Pågående pass sparas i `S.run` efter varje svar, så att det går att fortsätta. Varje övning har också en egen plats i `S.runs` (glospasset `words`, extraövningen `words|extra`).
 - Topplista: `board/<uid>` = `{nick, langs: {<kod>: {week, min, q, days, streak, last, learned, mastered}}, t}`.
 - `sample`: "Få kommentarer av Claude" på skrivuppgifter och kultursvar. Den som använder funktionen betalar med sin egen Claude-användning och godkänner det första gången. Kommentarerna sparas i `S.fb`.
@@ -31,25 +31,37 @@ Publicera alltid med de här kapabiliteterna (utelämna `capabilities` vid ompub
 ## Saker som aldrig får ändras
 
 - `storageKey` i `languages/*/lang.js` (`franska-glosor-v2`, `glosor-fr4-v1`, `glosor-de-v1`, `glosor-de4-v1`, `glosor-de6-v1`, `glosor-it1-v1`, `glosor-it2-v1`).
-- Formatet på sparat läge: `{pass, w:{<ord-id>:{s,due}}, newCount, src, mode, log, nLog, t}` (`nLog` = antal loggposter någonsin, räknas fram för gamla lägen; `log` kapas vid 1 000 och resten sammanfattas i `logOld`). Formatet i localStorage är oförändrat; bara molnkopian delas upp. Steg `s` 0–3 = lär sig, 4 och uppåt = kan. Steg 0–1 repeteras efter pass (`due`), från steg 2 efter dagar (`dd`, tidsstämpel): nästa pass, 3 pass, 3, 7, 20, 45, 90 dagar (se `INT`, `DAYS` och `schedule` i app.js). Kapitelprovets resultat ligger i `S.kt`.
+- Formatet på sparat läge: `{v, pass, w:{<ord-id>:{s,due}}, newCount, src, mode, log, nLog, t}` (`v` = schemaversion, `nLog` = antal loggposter någonsin, räknas fram för gamla lägen; `log` kapas vid 1 000 och resten sammanfattas i `logOld`). Formatet i localStorage är oförändrat; bara molnkopian delas upp. Steg `s` 0–3 = lär sig, 4 och uppåt = kan. Steg 0–1 repeteras efter pass (`due`), från steg 2 efter dagar (`dd`, tidsstämpel): nästa pass, 3 pass, 3, 7, 20, 45, 90 dagar (se `INT`, `DAYS` och `schedule` i app.js). Kapitelprovets resultat ligger i `S.kt`.
 - Ord-id är ordets form i målspråket (första fältet i words.txt), och avsnitts-id används i `S.src`. Att ändra dem nollställer framstegen för de orden.
+- `S` har en schemaversion `S.v`. Ändras formen på ett fält läggs en ny migrering **sist** i `MIGRATIONS` i app.js (index = version); ändra aldrig en gammal. Alla fält i `S` står i kommentaren ovanför `loadState` och i `docs/ARKITEKTUR.md`.
+
+### Id-låsen
+
+`build.py` kontrollerar `languages/<kod>/ids.lock` (incheckad): alla ord-id, avsnitts-id, id i varje innehållstyp (även grammatikfrågorna), provuppgifter, grammatikområden och regelnamn, samt `storageKey`. Bygget **stoppar** om ett id i låset har försvunnit (t.ex. ett ord som bytt stavning), om `storageKey` ändrats eller om två kurser har samma `storageKey`. Nya id läggs till i låset automatiskt; checka in låset tillsammans med ändringen. Bokens id låses i `languages/<kod>/book/ids.lock` (i bokens privata repo), så att det publika låset inte avslöjar bokinnehåll.
+
+Ta aldrig bort rader ur låset för hand. Är en borttagning verkligen meningen (eleverna förlorar framstegen för just det id:t), godkänn den med
+
+    python3 build.py --allow-removed <kod>:<typ>|<id>      (t.ex. de:ord|die Persönlichkeit (-en), eller <kod>:<id> för alla typer)
+
+eller en rad `<typ>|<id>` i `languages/<kod>/ids.removed` (`book/ids.removed` för bokens id). Id:t tas då bort ur låset.
 
 ## Struktur
 
 Översikt över var data ligger: `docs/ARKITEKTUR.md`.
 
 
-- `src/app.js`: språk, sparande (lokalt och claude.ai), glosquiz, quizmotor, statistik, topplista.
-- `src/exercises.js`: alla övningar utöver glosquizet. Varje typ registrerar `MC`/`TYPE` (frågor), `RESTORE` (återuppta), `EFFECT` (statistik) och `RECAP`. Fråge-id är `<typ>:<ref>`, så typerna kan blandas i Dagens pass.
-- `src/grammar.js`: grammatikövningar (tyska just nu), der/die/das och plural. Frågorna ligger i `languages/<kod>/content/grammar-*.json` (format i `languages/de/content/GRAMMATIK-SPEC.md`). `build.py` slår ihop och kontrollerar dem.
-- `src/exam.js`: provträning och provsimulering (`content/exam.json`, format i uppgifterna själva; resultat i `S.exam`).
+- `src/app.js`: språk, sparande (lokalt och claude.ai), glosquiz, quizmotor, registret över övningstyper (`defineKind`, `KINDS`), statistik, topplista.
+- `src/kinds/*.js`: en fil per övningstyp eller grupp, som build.py läser i namnordning mellan `app.js` och `feedback.js` (numret i filnamnet bestämmer ordningen). Varje typ registrerar sig med `defineKind(namn, {name, mc, type, restore, effect, recap, after, again, open, log})`, se kommentaren i app.js. `MC`, `TYPE`, `RESTORE` … finns kvar som vyer över registret. Fråge-id är `<typ>:<ref>`, så typerna kan blandas i Dagens pass; typnamnen är nycklar i `S.run`, `S.runs` och loggen och får inte bytas. `00-common.js` har det som delas (bl.a. `tl(x)`, texten på målspråket: fältet heter `fr` i alla datafiler, även tyska och italienska, och läses bara via `tl`). Grammatiken (`60-grammar.js`, frågorna i `content/grammar-*.json`, format i `languages/de/content/GRAMMATIK-SPEC.md`), der/die/das och plural (`61-gender.js`) och provträningen (`70-exam.js`, `content/exam.json`, resultat i `S.exam`) ligger också här. En ny övningstyp = en ny fil i `src/kinds/` och en knapp i `99-menu.js`; testet i `tests/run_tests.py` (`SCENARIO_KINDS`) kontrollerar att typen har det den behöver.
 - `src/feedback.js`: fliken Tyck till.
 - `src/main.js`: start och kursväljare (körs sist).
-- `languages/de4/`: Tyska 4 (A2 → B1). Hämtar verb, bindeord och tempusigenkänning från `languages/de/lang.js` (getters), så `de` måste laddas före `de4` (build.py sorterar koderna). `nextCourse` ger förslaget att gå vidare till Tyska 5.
-- `languages/fr4/` och `languages/de6/`: Franska 4 och Tyska 6 (steg 6, B1.2), utan lärobok. Hämtar bindeord, tempusigenkänning och verb från `fr` respektive `de` via getters. Tyska 5 har `nextCourse: "de6"`.
-- `languages/it1/`, `languages/it2/`: Italienska 1 (A1) och 2 (A1 → A2), plan i `docs/italienska-plan.md`. it2 hämtar bindeord m.m. från it1 (getters).
+- Arv mellan kurser: `extends: "<kod>"` och `inherit: ["connectors", "tenseCheck", "verbs", …]` i `lang.js`. De fälten slås ihop djupt med kursens egna när sidan startar (`inheritCourses` i app.js); kursens egna fält vinner, `{$append: [...]}` lägger till i förälderns lista och `{$remove: [nycklar]}` tar bort nycklar ur förälderns objekt. Bara fälten i `inherit` ärvs. Ordningen mellan kurserna spelar ingen roll, och build.py kontrollerar att föräldern finns.
+- `languages/de4/`: Tyska 4 (A2 → B1). Ärver verb (utan Konjunktiv I), bindeord och tempusigenkänning från `de`. `nextCourse` ger förslaget att gå vidare till Tyska 5.
+- `languages/fr4/` och `languages/de6/`: Franska 4 och Tyska 6 (steg 6, B1.2), utan lärobok. Ärver bindeord, tempusigenkänning och verb från `fr` respektive `de` (fr4 lägger till egna bindeord och conditionnel/subjonctif). Tyska 5 har `nextCourse: "de6"`.
+- `languages/it1/`, `languages/it2/`: Italienska 1 (A1) och 2 (A1 → A2), plan i `docs/italienska-plan.md`. it2 ärver artiklar, pronomen, bindeord m.m. från it1.
 - `content/regler.json`: grammatikregler per område (format i `docs/REGLER-SPEC.md`).
 - `languages/<kod>/lang.js`: kursinställningar (course, level, storageKey, accenter, verbspel, bindeord, tempusigenkänning).
+- `languages/<kod>/grammar.json`: grammatikens områden (`topics`, där `secs` = kapitel där området kommer först), regelnamn (`rules`) och för tyskan `adj`. Följer med kursens datafil (`L.grammar` finns först när kursen är hämtad), inte index.html.
+- `languages/<kod>/ids.lock`: id-låset, skrivs av build.py (se ovan).
 - `languages/<kod>/words.txt`: ordlistan, `ord|svenska|genus|exempel|exempel sv|ursprung|ordagrant`. Främmande ord i ursprunget ska ha svensk betydelse, och fraser får gärna det sjunde fältet med ordagrann översättning. `content/*.json` innehåller hörtexter, lästexter, berättelser, fraser, skrivuppgifter och kultur. `videos.json` innehåller YouTube-klipp (kontrollerade med oEmbed).
 - `languages/upcoming.json`: kommande kurser som visas men inte går att välja.
 - `languages/<kod>/book/kapNN/`: material från elevens lärobok per kapitel, plus `book/sidor.json` (privat, i `.gitignore`, eget lokalt git-repo, byggs in om mappen finns). Kapitel ur boken markeras `#id|Namn|bok`. Se `docs/BOK.md`.
@@ -58,7 +70,7 @@ Publicera alltid med de här kapabiliteterna (utelämna `capabilities` vid ompub
 ## Arbetsflöde
 
 1. Ändra i `languages/<kod>/words.txt`, `lang.js` eller `src/`.
-2. `python3 build.py` (bara Pythons standardbibliotek, Node finns inte på datorn).
+2. `python3 build.py` (bara Pythons standardbibliotek, Node finns inte på datorn). Stoppar om ett låst id har försvunnit (se Id-låsen); checka in ändrade `ids.lock`.
 3. `python3 tests/run_tests.py`: spelar igenom alla övningar i Chrome utan fönster, med sparad data och en låtsad claude.ai-lagring. Allt ska vara OK innan du publicerar.
 4. Publicera `dist/index.html` till URL:en ovan **med alla filer i `dist/data/` i `files`** (`{"data/fr.json": "dist/data/fr.json", …}`), se `docs/ARKITEKTUR.md`. Läs först live-versionen med Artifact `action: "read"`. Om den har ändrats utanför projektet (t.ex. i claude.ai-chatten) ska de ändringarna föras in i källfilerna innan du publicerar, så att inget skrivs över.
 

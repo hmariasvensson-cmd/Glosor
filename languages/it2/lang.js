@@ -1,5 +1,5 @@
 /* Inställningar för Italienska 2 (A2). Bindeord, tempusigenkänning och uttalsinställningar hämtas från
-   Italienska 1 (languages/it1/lang.js), som laddas före den här filen. Se docs/italienska-plan.md. */
+   Italienska 1 (languages/it1/lang.js), se extends och inherit nedan. Se docs/italienska-plan.md. */
 LANGUAGES.it2 = {
   name: "Italienska",
   title: "Italienska glosor",
@@ -12,51 +12,17 @@ LANGUAGES.it2 = {
   etyLabel: "Kommentar",
   nextLabel: "Nästa ord i ordlistan",
   storageKey: "glosor-it2-v1",   // ÄNDRA ALDRIG: sparade framsteg ligger under den här nyckeln
+  extends: "it1",                // fälten i inherit hämtas från Italienska 1 (egna fält vinner)
+  inherit: ["articles", "hintStrip", "pronouns", "elision", "connectors", "tenseCheck"],
 
   accents: "à è é ì ò ù",
   verbAccents: "à è é ì ò ù",
-  get articles() { return LANGUAGES.it1.articles; },
-  get hintStrip() { return LANGUAGES.it1.hintStrip; },
-  get pronouns() { return LANGUAGES.it1.pronouns; },
   genders: {m: "maskulinum", f: "femininum", mpl: "mask. plural", fpl: "fem. plural"},
-  get elision() { return LANGUAGES.it1.elision; },
 
   storyIntro: "Läs berättelsen och välj rätt form i varje lucka: passato prossimo eller imperfetto, imperativ eller futuro, och rätt bindeord.",
   cultureIntro: "Läs en kort text om Italien, svara på en fråga och jämför med hur det är i Sverige.",
-  get connectors() { return LANGUAGES.it1.connectors; },
-  get tenseCheck() { return LANGUAGES.it1.tenseCheck; },
 
-  grammar: {
-    topics: [
-      {id: "ripasso", name: "Repetition", sub: "presens, artiklar och prepositioner"},
-      {id: "passato", name: "Passato prossimo", sub: "ho mangiato, sono andata, mi sono alzato"},
-      {id: "imperf", name: "Imperfetto", sub: "ero, avevo, giocavo"},
-      {id: "pp-imp", name: "Passato eller imperfetto?", sub: "Mentre leggevo, è arrivato Marco."},
-      {id: "pron-dir", name: "Direkta objektspronomen", sub: "lo, la, li, le – l'ho visto"},
-      {id: "pron-ind", name: "Indirekta objektspronomen", sub: "gli, le, mi, ti"},
-      {id: "ne-ci", name: "Ne och ci", sub: "Ne vorrei due. Ci vado domani."},
-      {id: "imperat", name: "Imperativ", sub: "Parla! Prendete! Non mangiare!"},
-      {id: "futuro", name: "Futuro", sub: "parlerò, sarò, andrò"},
-      {id: "cond", name: "Condizionale", sub: "vorrei, potresti, mi piacerebbe"},
-      {id: "comp", name: "Jämförelser", sub: "più alto di, meno … che, il più bello, migliore"},
-      {id: "stare-ger", name: "Stare + gerundium", sub: "sto mangiando, stavo dormendo"},
-      {id: "rel-che", name: "Relativt che", sub: "il ragazzo che conosco"},
-      {id: "tempo", name: "Tidsuttryck", sub: "fa, da, per, tra"},
-      {id: "err", name: "Hitta felet", sub: "En mening har ett fel. Vilket ord?"}
-    ],
-    rules: {
-      "pres": "Presens", "art": "Artiklar", "prep-art": "Preposition + artikel",
-      "pp-avere": "Passato prossimo med avere", "pp-essere": "Passato prossimo med essere", "pp-irr": "Oregelbundna particip",
-      "pp-accordo": "Participets böjning med essere", "pp-rifl": "Reflexiva verb i passato prossimo",
-      "imp-forme": "Imperfettots former", "imp-uso": "Imperfetto: beskrivning och vanor", "pp-o-imp": "Passato prossimo eller imperfetto",
-      "dir-pres": "Direkt objekt i presens", "dir-pp": "Direkt objekt i passato prossimo",
-      "ind": "Indirekt objekt", "ne": "ne (av det)", "ci": "ci (dit, där)",
-      "imp-tu": "Imperativ: tu", "imp-voi": "Imperativ: voi och noi", "imp-neg": "Nekad imperativ", "imp-lei": "Imperativ: Lei",
-      "fut-reg": "Futuro, regelbundet", "fut-irr": "Futuro, oregelbundet", "cond": "Condizionale",
-      "comp-di": "più … di", "comp-che": "più … che", "superl": "Superlativ",
-      "ger": "stare + gerundium", "che": "Relativt che", "fa": "fa (för … sedan)", "da": "da (sedan)", "tra": "tra/fra (om)"
-    }
-  },
+  // Områden (topics; secs = kapitel där området kommer först) och regelnamn ligger i grammar.json, som build.py lägger i kursens datafil (L.grammar).
 
   // VERB-BÖRJAN (tabellerna skrivs mellan markeringarna)
   verbs: {

@@ -1,6 +1,6 @@
 # Grammatikregler: content/regler.json
 
-Varje grammatikområde i kursen (`grammar.topics` i `languages/<kod>/lang.js`, utom `err`, `mix` och `bok`) får en regelsida. Den visas innan eleven övar och går att öppna efter varje svar. Filen är ett JSON-objekt med områdets id som nyckel:
+Varje grammatikområde i kursen (`topics` i `languages/<kod>/grammar.json`, utom `err`, `mix` och `bok`) får en regelsida. Den visas innan eleven övar och går att öppna efter varje svar. Filen är ett JSON-objekt med områdets id som nyckel:
 
 ```json
 {"praep": {

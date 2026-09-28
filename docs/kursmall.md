@@ -56,7 +56,7 @@ Glosor är bokens glosrutor som de har förts in i appen (`words.txt` i kursen p
 - **Uttal:** 1 moment.
 - **Kapitelmål och utvärdering:** 1 av varje.
 
-**Grammatik per kapitel** (enligt kapitelmålen, bokens övningar och `secs` i `languages/fr/lang.js`):
+**Grammatik per kapitel** (enligt kapitelmålen, bokens övningar och `secs` i `languages/fr/grammar.json`):
 
 | Kap | Tema (egna ord) | Grammatik |
 |---|---|---|
@@ -106,7 +106,7 @@ En kurs i appen har **8 tematiska kapitel och 1 fraskapitel**, som Tyska 4 och I
 | 7 | **Litteratur, sång eller dikt**: länk och sammanfattning, eller egen text om upphovsrätten tillåter | – | 3–4 | `prompts.json` / `reading.json` |
 | 8 | **Skrivuppgifter**: en kort (meningar med givna ord), en mellan (berätta, beskriva), en friare (brev, intervju, slutet på en text, åsikt) | 3 | 24 | `prompts.json` |
 | 9 | **Muntligt**: samtalsfraser (situation → replik), skugga, rollspel som skrivuppgift | – | 40–50 fraser | `phrases.json` |
-| 10 | **Grammatikområden** med luckor och översätt, kopplade till kapitel (`secs`) | 1–2 nya | 10–14 områden à 20–30 frågor (250–400) | `grammar-*.json`, `lang.js` |
+| 10 | **Grammatikområden** med luckor och översätt, kopplade till kapitel (`secs`) | 1–2 nya | 10–14 områden à 20–30 frågor (250–400) | `grammar-*.json`, `grammar.json` |
 | 11 | **Regelsida** per grammatikområde | – | lika många som områdena | `regler.json` |
 | 12 | **Verbspel** i 2–3 nivåer (tempus för steget) | – | 2–3 | `lang.js` |
 | 13 | **Uttal**: ett ljud eller mönster per kapitel, med ordpar och Skugga | 1 | 8 | ny typ (kräver kod) |
@@ -257,7 +257,7 @@ Texternas längd är ord på målspråket, i snitt (min–max). Kapitel = temati
 1. **Skrivuppgifter:** 6–9 per kurs mot mallens 16–24. Det är den största skillnaden mot boken, som har cirka 10 per kapitel. Det saknas särskilt korta uppgifter (meningar med givna ord), uppgifter på en text (sammanfatta, skriv slutet, svara på frågor) och kreativa uppgifter (dikt, dialog, dagbok).
 2. **Kapitelmål och utvärdering** finns inte i någon kurs. Det kräver en ny innehållstyp: `goals` per avsnitt, som visas när kapitlet väljs och som en självbedömning ("Det här kan jag nu") efter kapitelprovet.
 3. **Uttal** saknas. Förslag: `pron.json` med ett moment per kapitel (ljud, regel på svenska, 6–10 ord eller ordpar, en mening att skugga), och en övning "Lyssna och välj" (minimala par) plus Skugga.
-4. **Grammatik kopplad till kapitel** (`secs` i `lang.js`) finns bara i franskan. Lägg in den i de4, de, it1 och it2 enligt planerna, så att kapitlets grammatik kommer först.
+4. **Grammatik kopplad till kapitel** (`secs` i `grammar.json`) finns bara i franskan. Lägg in den i de4, de, it1 och it2 enligt planerna, så att kapitlets grammatik kommer först.
 5. **Litteratur, sång och dikt** saknas nästan helt, trots att Skolverket har det i alla steg (sånger från steg 1, dikter från steg 2, skönlitteratur från steg 4). Använd upphovsrättsfria texter (upphovspersonen död för mer än 70 år sedan) och citera dem, eller skriv en uppgift med länk och sammanfattning för moderna verk (se `SPEC-bok.md`).
 6. **Texttypernas variation:** alla lästexter är prosa i jagform eller mejl, och alla hörtexter är dialoger. Det saknas intervju, notis eller nyhet, annons eller tidtabell, insändare och reportage (de har några).
 
@@ -341,7 +341,7 @@ En rad per paket, i den ordning de bör göras. Varje innehållspaket följer fo
 6. **it2-skriv:** 10–12 skrivuppgifter (j5 och j6 först), 40–100 ord.
 7. **de-skriv:** 15 skrivuppgifter för Tyska 5 (formellt mejl, insändare, sammanfattning, recension), 120–250 ord.
 8. **de-texter:** kulturtexter d1, d3, d7; hörtexter d4, d5, d6, d8 (föredrag eller radio); 4 lästexter av nya typer (populärvetenskap, reportage, intervju, instruktion).
-9. **secs:** koppla grammatikområdena till kapitel i `lang.js` för de4, de, it1 och it2 (bara `secs`-fält, inga nya id).
+9. **secs:** koppla grammatikområdena till kapitel i `grammar.json` för de4, de, it1 och it2 (bara `secs`-fält, inga nya id).
 10. **it1-grammatik:** områdena `pron-sogg` och `quest-quel` (20 frågor var) med regelsidor.
 11. **litteratur:** 2–4 uppgifter per kurs med sång, dikt eller kort text (allmän egendom citeras, moderna verk som länk och sammanfattning) i `prompts.json` eller `reading.json`.
 12. **de4-hör och ord:** 7 hörtexter av annan typ än dialog, och cirka 160 nya ord (20 per kapitel) utan överlapp med `de`.

@@ -43,7 +43,8 @@
 /* Byggd {{BUILT}} från ~/Glosor. Redigera inte den här filen, ändra i källfilerna och kör build.py. */
 const LANGUAGES = {};
 const UPCOMING = {{UPCOMING}};
-const DATA_VERSION = "{{DATAVERSION}}";
+const DATA_VERSION = {{DATAVERSION}};   // {<kod>: hash av kursens datafil}
+const INLINE_DATA = {};                 // kursdata inbakad i preview.html (tom i index.html)
 {{LANGUAGES}}
 {{APP}}
 </script>

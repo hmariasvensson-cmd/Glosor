@@ -87,7 +87,7 @@ function examTask(id){
 const exHead=(t,tab)=>`<span class="tab">${tab}</span><div class="meta"><span class="label">${esc(exPart(t.part).name)}${t.teil?" · "+esc(t.teil):""}${EXSIM?` · del ${EXSIM.i+1} av ${EXSIM.ids.length}`:""}</span><span class="clock" id="exclock"></span></div>
   <h2 ${lang()}>${esc(t.title)}</h2>${t.instr?`<p class="plan">${esc(t.instr)}</p>`:""}`;
 const exQuit=()=>`<button class="quit" id="quit">${EXSIM?"Avbryt simuleringen":"Tillbaka"}</button>`;
-const exLines=t=>`<div class="reading">${t.lines.map(l=>`<p class="tl" ${lang()}>${esc(l.fr)}</p><p class="tl-sv" hidden>${esc(l.sv||"")}</p>`).join("")}</div>`;
+const exLines=t=>`<div class="reading">${t.lines.map(l=>`<p class="tl" ${lang()}>${esc(tl(l))}</p><p class="tl-sv" hidden>${esc(l.sv||"")}</p>`).join("")}</div>`;
 
 /* Läsa och lyssna: alla frågor på en gång, som på provet */
 function examMC(t){
@@ -173,7 +173,7 @@ function examText(t,speak){
   const ta=$("#xtext"); let tm=null; wireAccents(ta);
   const count=()=>{const n=tok(ta.value).length; $("#xcount").textContent=speak?"":`${n} ord${t.minWords?` av minst ${t.minWords}`:""}`;};
   ta.oninput=()=>{count(); clearTimeout(tm); tm=setTimeout(()=>{S.drafts[dk]=ta.value; save();},800);}; count();
-  if($("#mplay")) $("#mplay").onclick=()=>speakSeq([{fr:t.model}]);
+  if($("#mplay")) $("#mplay").onclick=()=>speakSeq([tlLine(t.model)]);
   $("#exdone").onclick=async()=>{
     const out=$("#exres"), btn=$("#exdone");
     if(ctl){ ctl.abort(); return; }
@@ -196,3 +196,5 @@ function examText(t,speak){
   if($("#exnext")) $("#exnext").onclick=()=>{stopSpeech(); simNext(graded);};
   $("#quit").onclick=()=>{stopSpeech(); openExam();};
 }
+// Ingen quiz: egna sidor för läsa/lyssna, skriva och tala. Loggposterna har kind "exam".
+defineKind("exam",{name:"Provträning",open:openExam});

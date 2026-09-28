@@ -28,15 +28,18 @@ Förslag på fler övningar finns i `docs/ovningsforslag.md`.
 languages/
   fr/           franska (Franska 3)
     words.txt   ordlistan (en rad per ord)
-    lang.js     inställningar: röst, accenttangenter, artiklar, genus, verbspel
+    lang.js     inställningar: röst, accenttangenter, artiklar, genus, verbspel (extends/inherit för arv mellan kurser)
+    grammar.json grammatikområden och regelnamn (följer med kursens datafil)
+    ids.lock    id-låset: alla id som framstegen hänger på, skrivs och kontrolleras av build.py
     videos.json klipp per kapitel
   de/           tyska (Tyska 5, byggd på kursplanen, inte på en specifik bok)
 src/
   page.html     sidans stomme
   style.css     utseendet
-  app.js        glosquiz, sparande, statistik, topplista
-  exercises.js  övriga övningar (diktamen, översättning, ordföljd, texter, berättelser …)
-  grammar.js    grammatikövningar, der/die/das och plural
+  app.js        glosquiz, quizmotor, registret över övningstyper (defineKind), sparande, statistik, topplista
+  kinds/        en fil per övningstyp eller grupp (00-common.js, 11-sentences.js, 60-grammar.js, 70-exam.js …),
+                läses i namnordning
+  feedback.js   fliken Tyck till
   main.js       start och kursväljare
 tests/
   run_tests.py  spelar igenom alla övningar i Chrome

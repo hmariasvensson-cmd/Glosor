@@ -20,10 +20,13 @@ function student(){const st={pass:5,newCount:10,src:"auto",mode:"mix",vt:{},vv:{
   return st}
 window.__err=[];window.onerror=(m,s,l,c)=>{__err.push(m+" @"+l+":"+c)};
 localStorage.clear();
+// Väntar tills cond() gäller (högst ms) i stället för en fast väntetid. appReady: kursen är vald och molnet anslutet och klart.
+window.until=(cond,ms=5000)=>new Promise(r=>{const t0=Date.now();(function p(){let v=false;try{v=cond()}catch(e){} if(v||Date.now()-t0>ms) r(!!v); else setTimeout(p,20);})();});
+window.appReady=()=>until(()=>typeof CLOUD!=="undefined"&&CLOUD.ready&&!CLOUD.busy&&!Object.keys(CLOUD.pending).length&&typeof L!=="undefined"&&!!L&&!!L.base);
 window.__remote={"data/users/u_test/franska-glosor-v2":{state:student(),t:now-1000}};
 const snap=p=>({exists:!!__remote[p],data:()=>__remote[p],metadata:{hasPendingWrites:false,fromCache:false}});
 const mockDb={
-  doc:p=>({get:async()=>snap(p),set:async b=>{const j=JSON.stringify(b); if(new TextEncoder().encode(j).length>262144) throw {code:"invalid_argument",message:"document over 256 KiB"}; __remote[p]=JSON.parse(j)},onSnapshot:n=>{setTimeout(()=>n(snap(p)),0);return()=>{}}}),
+  doc:p=>({get:async()=>snap(p),delete:async()=>{delete __remote[p]},set:async b=>{const j=JSON.stringify(b); if(new TextEncoder().encode(j).length>262144) throw {code:"invalid_argument",message:"document over 256 KiB"}; __remote[p]=JSON.parse(j)},onSnapshot:n=>{setTimeout(()=>n(snap(p)),0);return()=>{}}}),
   collection:c=>{const docs=()=>Object.keys(__remote).filter(k=>k.startsWith(c+"/")&&!k.slice(c.length+1).includes("/")).map(k=>({id:k.slice(c.length+1),exists:true,data:()=>__remote[k]}));
     return {get:async()=>({docs:docs()}),onSnapshot:n=>{setTimeout(()=>n({docs:docs()}),0);return()=>{}},
       where:(f,op,v)=>({get:async()=>({docs:docs().filter(d=>d.data()[f]===v)})})};}};
@@ -40,7 +43,7 @@ const out=[]; const q=s=>document.querySelector(s);
 const ok=(name,cond,info="")=>out.push((cond?"OK   ":"FEL  ")+name+(info?"  ("+info+")":""));
 const exClick=id=>{renderStart(); const g=exGroups().find(g=>g.items.some(h=>h.includes('data-ex="'+id+'"'))); openExGroup(g.id); q('[data-ex="'+id+'"]').click();};
 
-setTimeout(()=>{ try{
+appReady().then(()=>{ try{
   useLang("de"); ok("tyska: kurs byts", q("#coursechip").textContent.includes("Tyska 5"));
   ok("tyska: rubrik för videor", !q("#app").textContent.includes("på franska"));
   ok("tyska: ingen bokpanel", !q("#chapter"));
@@ -138,7 +141,7 @@ setTimeout(()=>{ try{
  }catch(e){ ok("undantag", false, e.message); }
  ok("inga JavaScript-fel", !__err.length, __err.join(" ; "));
  document.body.insertAdjacentHTML("beforeend","<pre id=out>"+out.join("\n").replace(/</g,"&lt;")+"</pre>");
-},1500);
+});
 </script>"""
 
 SCENARIO = r"""<script>
@@ -157,7 +160,7 @@ function answerRight(){
 }
 const runAll=()=>{let g=0; while(sess&&g++<80) answerRight();};
 const lastLog=()=>S.log[S.log.length-1];
-setTimeout(async()=>{ try{
+appReady().then(async()=>{ try{
   ok("molnets framsteg hämtas", S.pass===5);
   ok("pensionerat ord får ett repetitionsdatum", S.w["ancien mot"].due<1e9 && S.w["ancien mot"].s===4, JSON.stringify(S.w["ancien mot"]));
   { const x={s:3,due:0}; schedule(x,true,10,now); const k=x.s===4&&x.due===10+INT[4]&&x.mp===10;
@@ -284,7 +287,7 @@ setTimeout(async()=>{ try{
   q("#wtext").value="Hier, je suis allé à Paris avec ma correspondante. D'abord, nous avons pris le RER, puis nous étions fatigués mais contents."; q("#wtext").dispatchEvent(new Event("input"));
   ok("skrivchecklista", document.querySelectorAll("#checks li.ok").length>=2, [...document.querySelectorAll("#checks li")].map(l=>(l.className?"✓":"○")+l.textContent).join(" | "));
   q("#fbbtn").click();
-  await new Promise(r=>setTimeout(r,50));
+  await until(()=>q("#fbout").textContent.includes("Att rätta"));
   ok("Claude kommenterar texten", q("#fbout").textContent.includes("Att rätta")&&q("#fbout").textContent.includes("je suis allée")&&S.fb&&Object.keys(S.fb).length===1, q("#fbout").textContent.slice(0,80));
   ok("kommentaren bedöms mot provet", __fbPrompt.includes("DELF B1")&&__fbPrompt.includes("<<<"));
   q("#done").click(); ok("skrivning loggad", lastLog().kind==="write");
@@ -295,13 +298,13 @@ setTimeout(async()=>{ try{
     t.qs.forEach((x,i)=>q(`.exq[data-q="${i}"] [data-o="${x.a}"]`).click()); q("#exdone").click();
     ok("provträning: läsuppgift rättas", S.exam.t[t.id].pct===100&&q("#exres").textContent.includes("100 %"), JSON.stringify(S.exam.t[t.id])); }
   { const t=EX().tasks.find(t=>t.minWords); examTask(t.id); q("#xtext").value="Bonjour, je m'appelle Hugo et je joue du piano depuis dix ans. J'aimerais beaucoup étudier au conservatoire de Lyon l'année prochaine."; q("#xtext").dispatchEvent(new Event("input"));
-    q("#exdone").click(); await new Promise(r=>setTimeout(r,50));
+    q("#exdone").click(); await until(()=>(S.exam.t[t.id]||{}).pct!=null);
     ok("provträning: skrivuppgift bedöms", S.exam.t[t.id].pct===70&&q("#exres").textContent.includes("70 %"), JSON.stringify(S.exam.t[t.id])); }
   { const t=EX().tasks.find(t=>!t.qs&&!t.minWords); examTask(t.id); ok("provträning: taluppgift", !!q("#talk")&&!!q("#xtext")); }
   openExam(); q("#sim").click(); let guard=0;
   while(EXSIM&&guard++<6){ const t=exTask(EXSIM.ids[EXSIM.i]);
     if(t.qs){ t.qs.forEach((x,i)=>q(`.exq[data-q="${i}"] [data-o="${x.a}"]`).click()); q("#exdone").click(); q("#exnext").click(); }
-    else { q("#xtext").value="Bonjour, je vous écris parce que je voudrais participer au festival de musique cet été avec mon groupe."; q("#exdone").click(); await new Promise(r=>setTimeout(r,50)); q("#exnext").click(); } }
+    else { q("#xtext").value="Bonjour, je vous écris parce que je voudrais participer au festival de musique cet été avec mon groupe."; const n=S.log.length; q("#exdone").click(); await until(()=>S.log.length>n); q("#exnext").click(); } }
   ok("provsimulering sparas", S.exam.sims.length===1&&Object.values(S.exam.sims[0].parts).every(v=>v>=50), JSON.stringify(S.exam.sims));
   ok("provsimulering: resultat", q("#app").textContent.includes("Resultat av simuleringen"));
   openExam(); ok("provträning: tidigare simuleringar", q("#app").textContent.includes("Tidigare simuleringar"));
@@ -333,39 +336,38 @@ setTimeout(async()=>{ try{
   setView("fb"); ok("tyck till: flik", q("#tab-fb").getAttribute("aria-selected")==="true"&&!!q("#fbtext"));
   q("#fbsend").click(); ok("tyck till: tomt meddelande skickas inte", !Object.keys(__remote).some(k=>k.startsWith("feedback/")));
   q('[data-fbk="hard"]').click(); q("#fbtext").value="Jag vill kunna öva på musikord"; q("#fbtext").dispatchEvent(new Event("input")); q("#fbsend").click();
-  await new Promise(r=>setTimeout(r,50));
+  await until(()=>Object.keys(__remote).some(k=>k.startsWith("feedback/u_test/msgs/")));
   { const k=Object.keys(__remote).find(k=>k.startsWith("feedback/u_test/msgs/")), f=k&&__remote[k];
     ok("tyck till: sparas i db", f&&f.kind==="hard"&&f.text.includes("musikord")&&f.uid==="u_test"&&f.status==="ny"&&f.course==="Franska 3", JSON.stringify(f));
     f.status="backlogg"; f.reply="Musikord kommer i nästa version."; }
-  q("#fbtext").value="Det är otydligt"; q("#fbtext").dispatchEvent(new Event("input")); q("#fbsend").click(); await new Promise(r=>setTimeout(r,50));
+  q("#fbtext").value="Det är otydligt"; q("#fbtext").dispatchEvent(new Event("input")); q("#fbsend").click(); await until(()=>document.querySelectorAll("[data-qa]").length>0);
   ok("tyck till: ja/nej-frågor när det är otydligt", document.querySelectorAll("[data-qa]").length===4);
-  q('[data-qa="0"][data-v="Ja"]').click(); q("#fbqsend").click(); await new Promise(r=>setTimeout(r,50));
+  q('[data-qa="0"][data-v="Ja"]').click(); q("#fbqsend").click(); await until(()=>Object.values(__remote).some(f=>f&&f.text==="Det är otydligt"&&f.qa));
   { const f=Object.values(__remote).find(f=>f.text==="Det är otydligt"); ok("tyck till: svaren sparas", f&&f.qa.length===2&&f.qa[0].a==="Ja", JSON.stringify(f&&f.qa)); }
-  setView("fb"); await new Promise(r=>setTimeout(r,50));
+  setView("fb"); await until(()=>q("#fblist")&&q("#fblist").textContent.includes("Musikord kommer"));
   ok("tyck till: status och svar visas", q("#fblist").textContent.includes("Tillagt i backloggen")&&q("#fblist").textContent.includes("Musikord kommer"), q("#fblist").textContent.slice(0,120));
   delete S.dailyDay; renderStart(); q('[data-goal="90"]').click(); ok("veckomål visas i dagens pass", q(".daily").textContent.includes("av 90 min"));
   { const w0=weekStart(Date.now()), w1=weekStart(w0-3*864e5), w2=weekStart(w1-3*864e5);
     BOARD.docs["u_other"]={nick:"Kompis",langs:{fr:{week:w1,min:42,q:100,days:3,streak:0,last:0,hist:{[w1]:42,[w2]:17}}},t:1}; }
-  setView("board"); setTimeout(()=>{ ok("topplista", !!q(".brow")); ok("förra veckans vinnare", (q(".winner")||{}).textContent==="Förra veckan vann Kompis med 42 minuter.", (q(".winner")||{}).textContent);
+  setView("board"); await until(()=>!!q(".brow.me")&&!!q(".winner")); { ok("topplista", !!q(".brow")); ok("förra veckans vinnare", (q(".winner")||{}).textContent==="Förra veckan vann Kompis med 42 minuter.", (q(".winner")||{}).textContent);
     ok("tidigare veckor", q("#app").textContent.includes("Tidigare veckor")&&q("#app").textContent.includes("17 min"));
-    ok("veckomål i topplistan", q(".brow.me").textContent.includes("veckomålet")===(myStats().min>=90)); finish(); },600);
+    ok("veckomål i topplistan", q(".brow.me").textContent.includes("veckomålet")===(myStats().min>=90)); finish(); }
  }catch(e){ ok("undantag", false, e.message+" "+(e.stack||"").split("\n")[1]); finish(); }
-},1500);
+});
 function finish(){ ok("inga JavaScript-fel", !__err.length, __err.join(" ; "));
   document.body.insertAdjacentHTML("beforeend","<pre id=out>"+out.join("\n").replace(/</g,"&lt;")+"</pre>"); }
 </script>"""
 
 # ---------------------------------------------------------------------------------------------------------
-# Rättelser i övningskoden (exercises.js, grammar.js, exam.js, build.py): apostrof, Hitta felet, återuppta
+# Rättelser i övningskoden (nu src/kinds/*.js, förut exercises.js, grammar.js, exam.js; build.py): apostrof, Hitta felet, återuppta
 # efter ändrat innehåll, Dagens pass, bindeord och tempus, glosor, provet. Körs på en egen sida.
 # ---------------------------------------------------------------------------------------------------------
 SCENARIO_FIXES = r"""<script>
 const out=[]; const q=s=>document.querySelector(s);
 const ok=(name,cond,info="")=>out.push((cond?"OK   ":"FEL  ")+name+(info?"  ("+info+")":""));
-const tick=()=>new Promise(r=>setTimeout(r,50));
 const mcRight=()=>{ answerMC(sess.d.opts.findIndex(o=>o.ok)); q("#nx").click(); };
 const runMC=()=>{ let g=0; while(sess&&g++<80){ if(sess.cur.t==="mc") mcRight(); else { q("#ans").value="x"; q("#submit").click(); q("#submit").click(); } } };
-setTimeout(async()=>{ try{
+appReady().then(async()=>{ try{
   // 1. Typografisk apostrof
   ok("rättelser: ’ räknas som ' i grammatiken", gnorm("aujourd’hui")==="aujourd'hui"&&gnorm("l`ami")==="l'ami");
   { const x=Object.values(gramBank()).find(x=>x.type==="gap"&&x.ans.includes("'")&&x.topic!=="maj");
@@ -426,7 +428,7 @@ setTimeout(async()=>{ try{
   ok("rättelser: exScore utan kriterier ger null", exScore({})===null&&exScore({kriterier:[{poang:5}]})===100);
   { const t=EX().tasks.find(t=>t.minWords), keep=SAMPLE, before=JSON.stringify(exState().t[t.id]||null);
     SAMPLE={json:async()=>({helhet:"Bra."})}; examTask(t.id);
-    q("#xtext").value="Bonjour, je m'appelle Hugo et je joue du piano depuis dix ans. J'aimerais beaucoup étudier au conservatoire."; q("#exdone").click(); await tick();
+    q("#xtext").value="Bonjour, je m'appelle Hugo et je joue du piano depuis dix ans. J'aimerais beaucoup étudier au conservatoire."; q("#exdone").click(); await until(()=>q("#exres").textContent.includes("saknade poäng"));
     ok("rättelser: bedömning utan poäng sparas inte som null %", JSON.stringify(exState().t[t.id]||null)===before&&!q("#app").textContent.includes("null"), JSON.stringify(exState().t[t.id]));
     SAMPLE=keep; openExam(); ok("rättelser: provlistan visar inte null", !q("#app").textContent.includes("null")); }
   { openExam(); q("#sim").click(); let g=0;
@@ -462,7 +464,7 @@ setTimeout(async()=>{ try{
  }catch(e){ ok("rättelser: undantag", false, e.message+" "+(e.stack||"").split("\n")[1]); }
  ok("rättelser: inga JavaScript-fel", !__err.length, __err.join(" ; "));
  document.body.insertAdjacentHTML("beforeend","<pre id=out>"+out.join("\n").replace(/</g,"&lt;")+"</pre>");
-},1500);
+});
 </script>"""
 
 # ---------------------------------------------------------------------------------------------------------
@@ -473,7 +475,7 @@ setTimeout(async()=>{ try{
 SCENARIO_SYNC = r"""<script>
 const out=[]; const q=s=>document.querySelector(s);
 const ok=(name,cond,info="")=>out.push((cond?"OK   ":"FEL  ")+name+(info?"  ("+info+")":""));
-const wait=ms=>new Promise(r=>setTimeout(r,ms));
+const wait=(c,ms=3000)=>typeof c==="number"?new Promise(r=>setTimeout(r,c)):until(c,ms);   // ett villkor, eller ms där det inte finns något att vänta på
 const canon=v=>JSON.stringify(v,(k,x)=>x&&typeof x==="object"&&!Array.isArray(x)?Object.keys(x).sort().reduce((o,k)=>(o[k]=x[k],o),{}):x);
 const size=v=>new TextEncoder().encode(JSON.stringify(v)).length;
 const P="data/users/u_test/";
@@ -486,7 +488,7 @@ function bigState(n){ const t0=Date.now()-90*864e5, st={pass:400,newCount:15,src
   for(let i=0;i<n;i++) st.w["das Wort "+i+" (-e) · ein längerer Eintrag"]={s:i%7,due:300+i%50,f:i%2?"type":"mc",mcR:i%9,mcW:i%4,tyR:i%5,tyW:i%3,clR:1,clW:0,lp:i%300+1,ld:t0+i*1e5,mp:i%400,md:t0+i*2e5,dd:t0+i*3e5,lapses:i%3};
   for(let i=0;i<1000;i++) st.log.push({p:i,d:t0+i*6e6,dur:600+i%300,nNew:10,nRep:25,right:30,total:35,mcR:20,mcN:25,tyR:10,tyN:10,extra:false,kind:i%3?"gram":undefined,game:"tempus"});
   st.nLog=3500; return JSON.parse(JSON.stringify(st)); }
-setTimeout(async()=>{ try{
+appReady().then(async()=>{ try{
   const K=P+"franska-glosor-v2";
   // 1. Molnformatet
   ok("moln: gammalt dokument med hela state läses", S.pass===5&&!!S.w["désigner"], S.pass);
@@ -539,7 +541,7 @@ setTimeout(async()=>{ try{
     await flush(); }
 
   // 3. Molnläge mitt i ett pass
-  { setView("board"); await wait(50); const st=clone(S); st.pass=S.pass+1; st.t=Date.now()+100;
+  { setView("board"); await wait(()=>!!q("#nickf")); const st=clone(S); st.pass=S.pass+1; st.t=Date.now()+100;
     await onRemote(L.storageKey,fake(st));
     ok("molnläge när topplistan visas: eleven stannar kvar", curView==="board"&&S.pass===st.pass&&!q("#src")&&!!q("#nickf"));
     setView("ova"); S.runs={}; delete S.run; startDict(); const p0=S.pass, st2=clone(S); st2.pass=p0+1; st2.t=Date.now()+200;
@@ -550,16 +552,16 @@ setTimeout(async()=>{ try{
 
   // 4. Kö per kurs och ny anslutning
   { await flush(); CLOUD.busy=true; const k1=L.storageKey; S.newCount=11; save();
-    useLang("de"); await wait(400); S.newCount=12; save(); CLOUD.busy=false; await flush();
+    useLang("de"); await wait(()=>L.code==="de"&&CLOUD.ready&&!CLOUD.attaching); S.newCount=12; save(); CLOUD.busy=false; await flush();
     const a=__remote[P+k1], b=__remote[P+"glosor-de-v1"];
     ok("moln: kursbyte slänger inte föregående kurs sparning", a&&a.head&&a.head.newCount===11&&b&&b.head&&b.head.newCount===12, JSON.stringify([a&&a.head&&a.head.newCount,b&&b.head&&b.head.newCount])); }
   { const use=window.claude.use; CLOUD.db=null; CLOUD.ready=false; window.claude.use=async()=>{throw new Error("nät")};
     await cloudInit(); const down=!CLOUD.db; window.claude.use=use;
-    window.dispatchEvent(new Event("online")); await wait(400);
+    window.dispatchEvent(new Event("online")); await wait(()=>!!CLOUD.db&&CLOUD.ready);
     ok("moln: ansluter igen när nätet kommer tillbaka", down&&!!CLOUD.db&&CLOUD.ready); }
 
   // 5. Topplistan: väntande uppdateringar per kurs
-  { delete __remote["board/u_test"]; BOARD.mine=null; useLang("de"); boardPush(); useLang("de4"); await wait(1600);
+  { delete __remote["board/u_test"]; BOARD.mine=null; useLang("de"); boardPush(); useLang("de4"); await wait(()=>{const l=(__remote["board/u_test"]||{}).langs||{}; return !!l.de&&!!l.de4;});
     const langs=(__remote["board/u_test"]||{}).langs||{};
     ok("topplista: kursbyte tappar inte den förra kursens uppdatering", !!langs.de&&!!langs.de4, Object.keys(langs).join()); }
 
@@ -568,21 +570,21 @@ setTimeout(async()=>{ try{
     BOARD.docs["u_evil"]={nick:"<img src=x onerror=window.__xss=1>",langs:{fr:{week:w0,min:"<b id=xss1>1</b>",q:"<i id=xss2>",days:1,streak:"<u id=xss3>",last:Date.now(),goal:"<a id=xss6>",
       prev:{week:pw,min:"<s id=xss4>"},hist:{[w2]:"<em id=xss5>","<p id=xss7>":5}},x:null,y:"text"}};
     BOARD.docs["u_evil2"]={nick:{toString:null},langs:null};
-    setView("board"); await wait(150);
+    setView("board"); await wait(()=>q("#app").textContent.includes("<img src=x"));
     ok("topplista: inget från db tolkas som HTML", !q("#xss1,#xss2,#xss3,#xss4,#xss5,#xss6,#xss7,.board img")&&!window.__xss&&q("#app").textContent.includes("<img src=x"), q("#app").textContent.slice(0,60));
     delete BOARD.docs["u_evil"]; delete BOARD.docs["u_evil2"]; }
 
   // 13c. "Sparat." bara när namnet sparades
   { const orig=CLOUD.db.doc; CLOUD.db.doc=p=>{const d=orig(p); if(p.startsWith("board/")) d.set=async()=>{throw {code:"unavailable"}}; return d;};
-    q("#nick").value="Kalle"; q("#nickf").dispatchEvent(new Event("submit",{cancelable:true})); await wait(150);
+    q("#nick").value="Kalle"; q("#nickf").dispatchEvent(new Event("submit",{cancelable:true})); await wait(()=>((q("#nickmsg")||{}).textContent||"").includes("kunde inte"));
     const t1=(q("#nickmsg")||{}).textContent||""; CLOUD.db.doc=orig;
-    q("#nick").value="Kalle"; q("#nickf").dispatchEvent(new Event("submit",{cancelable:true})); await wait(250);
+    q("#nick").value="Kalle"; q("#nickf").dispatchEvent(new Event("submit",{cancelable:true})); await wait(()=>((q("#nickmsg")||{}).textContent||"")==="Sparat.");
     ok("topplista: \"Sparat.\" bara när sparningen lyckades", t1!=="Sparat."&&t1.includes("kunde inte")&&(q("#nickmsg")||{}).textContent==="Sparat."&&__remote["board/u_test"].nick==="Kalle", t1+" | "+((q("#nickmsg")||{}).textContent)); }
 
   // 7. Kursbyte i fel ordning
   { const w=LANGUAGES.it2.words; LANGUAGES.it2.words=null;
     LOADING.it2=new Promise(r=>setTimeout(()=>{LANGUAGES.it2.words=w; r(LANGUAGES.it2);},60));
-    useLang("it2"); const loading=q("#app").textContent.includes("Hämtar"); useLang("it1"); await wait(200);
+    useLang("it2"); const loading=q("#app").textContent.includes("Hämtar"); useLang("it1"); await LOADING.it2; await wait(20);
     ok("kursbyte: en kurs som blir klar senare tar inte över", loading&&L.code==="it1"&&q("#course").value==="it1", L.code); delete LOADING.it2; }
 
   // 8. Pronomen i verbträningen
@@ -617,19 +619,19 @@ setTimeout(async()=>{ try{
 
   // 13. Tyck till
   { setView("fb"); q("#fbtext").value="Det här är otydligt A"; q("#fbtext").dispatchEvent(new Event("input")); q("#fbsend").click(); setView("ova");
-    await wait(100); q("#fbtext")||setView("fb");
+    await wait(()=>Object.values(__remote).some(f=>f&&f.text==="Det här är otydligt A")); q("#fbtext")||setView("fb");
     setView("fb"); q("#fbtext").value="Något tydligt B"; q("#fbtext").dispatchEvent(new Event("input")); q("#fbsend").click(); setView("stats");
-    await wait(100);
+    await wait(()=>Object.values(__remote).some(f=>f&&f.text==="Något tydligt B"));
     const n=t=>Object.values(__remote).filter(f=>f&&f.text===t).length;
     ok("tyck till: byta flik medan Claude läser kraschar inte och meddelandet sparas", !__err.length&&n("Det här är otydligt A")===1&&n("Något tydligt B")===1, __err.join(" ; "));
     const sets=[], orig=CLOUD.db.doc; CLOUD.db.doc=p=>{const d=orig(p), s=d.set; d.set=async b=>{if(p.startsWith("feedback/")) sets.push(p); return s(b);}; return d;};
-    setView("fb"); q("#fbtext").value="Det är otydligt C"; q("#fbtext").dispatchEvent(new Event("input")); q("#fbsend").click(); await wait(100);
+    setView("fb"); q("#fbtext").value="Det är otydligt C"; q("#fbtext").dispatchEvent(new Event("input")); q("#fbsend").click(); await wait(()=>!!q("#fbqsend"));
     q("#fbqsend").click(); q("#fbqsend").click(); q("#fbsend").click(); await wait(100); CLOUD.db.doc=orig;
     ok("tyck till: skicka med svaren bara en gång", sets.length===1, sets.join()); }
  }catch(e){ ok("undantag", false, e.message+" "+(e.stack||"").split("\n")[1]); }
  ok("inga JavaScript-fel", !__err.length, __err.join(" ; "));
  document.body.insertAdjacentHTML("beforeend","<pre id=out>"+out.join("\n").replace(/</g,"&lt;")+"</pre>");
-},1500);
+});
 </script>"""
 
 
@@ -704,8 +706,366 @@ def run_http(scenario):
     return m.group(1).replace("&lt;", "<").replace("&amp;", "&") if m else "FEL  hittade inget testresultat i sidan (http)"
 
 
+# ---------------------------------------------------------------------------------------------------------
+# Arkitektur (2026-09-28, del 6): arv mellan kurser (extends), grammatikens områden i datafilen, DATA_VERSION
+# per kurs, schemaversion S.v och MIGRATIONS, minne (högst KEEP_COURSES hämtade kurser), gamla molnbitar
+# raderas. Körs på en egen sida. Id-låsen i build.py testas i test_build_locks() nedan.
+# ---------------------------------------------------------------------------------------------------------
+SCENARIO_ARCH = r"""<script>
+const out=[]; const q=s=>document.querySelector(s);
+const ok=(name,cond,info="")=>out.push((cond?"OK   ":"FEL  ")+name+(info?"  ("+info+")":""));
+const wait=ms=>new Promise(r=>setTimeout(r,ms));
+const canon=v=>JSON.stringify(v,(k,x)=>typeof x==="function"||x instanceof RegExp?String(x):x);
+const P="data/users/u_test/";
+// Förväntat per kurs, taget från versionen med getters (före extends)
+const TEXTS=["Ich habe gestern gearbeitet. Er war müde und hätte gern geschlafen.","Das Haus wird gebaut. Sie sagte, sie sei krank.",
+  "Hier j'ai mangé une pomme. Il faisait beau. Je voudrais que tu sois là. Si j'avais su, je serais venu.","Je parlerais si je pouvais. Il faut qu'il finisse.",
+  "Ieri ho mangiato la pizza. Da bambino giocavo sempre. Domani andrò a Roma. Vorrei un caffè.",""];
+const EXP={"de": {"games": ["pres", "tempus", "b2"], "tenses": ["Konjunktiv I", "Konjunktiv II", "Perfekt", "Präsens", "Präteritum"], "conj": 498, "nconn": 32, "conn0": "zuerst", "connLast": "zusammenfassend", "tc": {"Konjunktiv II": [true, false, false, false, false, false], "Passiv": [false, true, false, false, false, false], "Perfekt": [true, false, false, false, false, false], "Präsens": [true, true, true, true, true, false], "Präteritum": [true, true, false, false, false, false]}}, "de4": {"games": ["pres", "tempus", "k2"], "tenses": ["Konjunktiv II", "Perfekt", "Präsens", "Präteritum"], "conj": 450, "nconn": 32, "conn0": "zuerst", "connLast": "zusammenfassend", "tc": {"Konjunktiv II": [true, false, false, false, false, false], "Passiv": [false, true, false, false, false, false], "Perfekt": [true, false, false, false, false, false], "Präsens": [true, true, true, true, true, false], "Präteritum": [true, true, false, false, false, false]}}, "de6": {"games": ["k1", "k2", "alla"], "tenses": ["Konjunktiv I", "Konjunktiv II", "Perfekt", "Präsens", "Präteritum"], "conj": 498, "nconn": 32, "conn0": "zuerst", "connLast": "zusammenfassend", "tc": {"Konjunktiv II": [true, false, false, false, false, false], "Passiv": [false, true, false, false, false, false], "Perfekt": [true, false, false, false, false, false], "Präsens": [true, true, true, true, true, false], "Präteritum": [true, true, false, false, false, false]}}, "fr": {"games": ["pres", "tempus", "b1"], "tenses": ["conditionnel", "futur simple", "imparfait", "passé composé", "plus-que-parfait", "présent", "subjonctif"], "conj": 438, "nconn": 27, "conn0": "d'abord", "connLast": "si", "tc": {"futur proche": [false, false, false, false, false, false], "imparfait": [false, false, true, true, false, false], "passé composé": [false, false, true, false, false, false], "présent": [true, true, true, true, true, false]}}, "fr4": {"games": ["subj", "hyp", "recit"], "tenses": ["conditionnel", "futur simple", "imparfait", "passé composé", "plus-que-parfait", "présent", "subjonctif"], "conj": 438, "nconn": 49, "conn0": "d'abord", "connLast": "pour conclure", "tc": {"conditionnel": [false, false, true, true, false, false], "futur proche": [false, false, false, false, false, false], "imparfait": [false, false, true, true, false, false], "passé composé": [false, false, true, false, false, false], "présent": [true, true, true, true, true, false], "subjonctif": [false, false, true, true, false, false]}}, "it1": {"games": ["pres-reg", "pres-irr", "pres-mod-rifl"], "tenses": ["presente"], "conj": 240, "nconn": 22, "conn0": "ma", "connLast": "alla fine", "tc": {"futuro": [false, false, false, false, true, false], "imperfetto": [false, false, false, false, true, false], "passato prossimo": [false, false, false, false, true, false], "presente": [true, true, true, true, true, false]}}, "it2": {"games": ["pres", "pp", "imp", "fut", "cond"], "tenses": ["condizionale", "futuro semplice", "imperfetto", "passato prossimo", "presente"], "conj": 732, "nconn": 22, "conn0": "ma", "connLast": "alla fine", "tc": {"futuro": [false, false, false, false, true, false], "imperfetto": [false, false, false, false, true, false], "passato prossimo": [false, false, false, false, true, false], "presente": [true, true, true, true, true, false]}}};
+setTimeout(async()=>{ try{
+  // 1. Arv mellan kurser
+  { const bad=[];
+    for(const [c,e] of Object.entries(EXP)){ const x=LANGUAGES[c], v=x.verbs;
+      const conj=Object.values(v.tenses).reduce((a,t)=>a+Object.keys(t).filter(k=>k!=="rule").length*v.persons.length,0);
+      if(canon((v.games||[]).map(g=>g.id))!==canon(e.games)) bad.push(c+" verbspel "+(v.games||[]).map(g=>g.id));
+      if(canon(Object.keys(v.tenses).sort())!==canon(e.tenses)) bad.push(c+" tempus "+Object.keys(v.tenses));
+      if(conj!==e.conj||buildConj(v).length!==e.conj) bad.push(c+" verbformer "+conj);
+      if(x.connectors.length!==e.nconn||x.connectors[0]!==e.conn0||x.connectors[x.connectors.length-1]!==e.connLast) bad.push(c+" bindeord");
+      const tc=Object.fromEntries(Object.keys(x.tenseCheck).map(t=>[t,TEXTS.map(s=>!!x.tenseCheck[t](s))]));
+      if(canon(Object.keys(tc).sort().reduce((o,k)=>(o[k]=tc[k],o),{}))!==canon(e.tc)) bad.push(c+" tempusigenkänning "+canon(tc));
+      if(Object.values(Object.getOwnPropertyDescriptors(x)).some(d=>d.get)) bad.push(c+" har getters");
+      if(x.verbs!==x.verbs) bad.push(c+" verbs är ett nytt objekt vid varje åtkomst"); }
+    ok("arv: bindeord, tempusigenkänning, verbspel och verbtabeller som förut i alla kurser", !bad.length, bad.join(" | ")); }
+  { const de=LANGUAGES.de, d4=LANGUAGES.de4, d6=LANGUAGES.de6, fr=LANGUAGES.fr, f4=LANGUAGES.fr4, i1=LANGUAGES.it1, i2=LANGUAGES.it2;
+    ok("arv: de4 och de6 delar bindeord och tempusigenkänning med de", d4.connectors===de.connectors&&d6.connectors===de.connectors&&d4.tenseCheck===de.tenseCheck&&d6.tenseCheck===de.tenseCheck);
+    ok("arv: de4 har samma verbtabeller som de, utan Konjunktiv I och i samma ordning",
+      canon(Object.keys(d4.verbs.tenses))===canon(Object.keys(de.verbs.tenses).filter(t=>t!=="Konjunktiv I"))
+      &&Object.keys(d4.verbs.tenses).every(t=>d4.verbs.tenses[t]===de.verbs.tenses[t])&&d4.verbs.persons===de.verbs.persons&&d4.verbs.prefix===de.verbs.prefix&&d4.verbs.sv===de.verbs.sv
+      &&!!de.verbs.tenses["Konjunktiv I"], Object.keys(d4.verbs.tenses).join());
+    ok("arv: de6 har alla verbtabeller från de men egna verbspel", d6.verbs.tenses===de.verbs.tenses&&d6.verbs.games!==de.verbs.games&&d6.verbs.sv===de.verbs.sv);
+    ok("arv: fr4 = bindeorden från fr plus egna, tempusigenkänning från fr plus conditionnel och subjonctif",
+      canon(f4.connectors.slice(0,fr.connectors.length))===canon(fr.connectors)&&f4.connectors.length===fr.connectors.length+22
+      &&canon(Object.keys(f4.tenseCheck))===canon([...Object.keys(fr.tenseCheck),"conditionnel","subjonctif"])
+      &&Object.keys(fr.tenseCheck).every(k=>f4.tenseCheck[k]===fr.tenseCheck[k])
+      &&f4.tenseCheck.conditionnel("Je parlerais volontiers.")&&!f4.tenseCheck.conditionnel("Il tirait la corde.")&&f4.tenseCheck.subjonctif("Il faut qu'il finisse.")
+      &&f4.verbs.tenses===fr.verbs.tenses, Object.keys(f4.tenseCheck).join());
+    ok("arv: it2 hämtar artiklar, pronomen, elision, bindeord och tempusigenkänning från it1",
+      ["articles","hintStrip","pronouns","elision","connectors","tenseCheck"].every(k=>i2[k]===i1[k])&&i2.verbs!==i1.verbs);
+    ok("arv: fält som inte står i inherit ärvs inte", d6.nextCourse===undefined&&d4.nextCourse==="de"&&d4.elective===undefined&&f4.book===undefined&&i2.nextCourse===undefined&&f4.storageKey==="glosor-fr4-v1");
+    const m=mergeInherited({a:[1],b:{x:1,y:2,z:3},c:1},{a:{$append:[2]},b:{$remove:["y"],z:9,w:4}});
+    ok("arv: sammanslagningen ($append, $remove, egna fält vinner, förälderns ordning)", canon(m)===canon({a:[1,2],b:{x:1,z:9,w:4},c:1})&&canon(Object.keys(m.b))==='["x","z","w"]', canon(m)); }
+
+  // 2. Grammatikens områden och regler kommer med kursens datafil
+  { const fresh=Object.keys(LANGUAGES).filter(c=>c!==L.code&&LANGUAGES[c].words==null);
+    ok("grammatik: finns inte i en kurs som inte är hämtad", fresh.length&&fresh.every(c=>LANGUAGES[c].grammar===undefined), fresh.join());
+    fillCourses(); ok("grammatik: kursväljaren fungerar innan kurserna är hämtade", q("#course").options.length>=Object.keys(LANGUAGES).length);
+    useLang("de4");
+    ok("grammatik: finns när kursen är hämtad", L.code==="de4"&&L.grammar&&L.grammar.topics.length>=9&&L.grammar.rules["pf-sein"]&&L.grammar.adj&&hasGrammar());
+    { const keep=S.gt, t=L.grammar.topics.find(t=>t.id!=="adj"); S.gt={[t.id]:{r:1,n:2}};
+      ok("grammatik: statistiken visar områdena", statsGrammar().includes(t.name), t.name); S.gt=keep; }
+    ok("grammatik: Dagens pass nämner grammatik", dailyPanel([],[]).includes("grammatik"));
+    if(S.runs) delete S.runs.mix; startMix(true);
+    ok("grammatik: Dagens pass har grammatikfrågor", !!sess&&[sess.cur,...sess.queue].some(x=>x.k==="gram")); quitSession(); }
+
+  // 3. DATA_VERSION per kurs
+  ok("DATA_VERSION: ett hash per kurs", DATA_VERSION&&typeof DATA_VERSION==="object"&&Object.keys(LANGUAGES).every(c=>/^[0-9a-f]{10}$/.test(DATA_VERSION[c]))
+    &&new Set(Object.values(DATA_VERSION)).size===Object.keys(LANGUAGES).length, canon(DATA_VERSION));
+
+  // 4. Schemaversion och migreringar
+  { ok("migreringar: MIGRATIONS[1] är migrateRetired och S.v är senaste versionen", MIGRATIONS[1]===migrateRetired&&S_VERSION===MIGRATIONS.length-1&&S.v===S_VERSION, S.v);
+    const key=L.storageKey, keep=localStorage.getItem(key);
+    localStorage.setItem(key,JSON.stringify({pass:7,w:{a:{s:4,due:1e9,mp:3},b:{s:1,due:8}},log:[]}));
+    loadState(); const old=S;
+    localStorage.setItem(key,JSON.stringify({v:1,pass:7,w:{a:{s:4,due:1e9,mp:3}},log:[]}));
+    loadState(); const cur=S;
+    localStorage.setItem(key,JSON.stringify({v:99,pass:7,w:{},log:[]}));
+    loadState(); const newer=S;
+    if(keep===null) localStorage.removeItem(key); else localStorage.setItem(key,keep); loadState();
+    ok("migreringar: ett gammalt läge utan v migreras och får v=1", old.v===1&&old.w.a.due<1e9&&old.w.a.due>=8&&old.w.b.due===8, canon(old.w));
+    ok("migreringar: ett läge med v=1 migreras inte igen", cur.v===1&&cur.w.a.due===1e9);
+    ok("migreringar: ett läge från en nyare version behåller sitt nummer", newer.v===99); }
+
+  // 5. Minne: högst KEEP_COURSES hämtade kurser, framstegen påverkas inte
+  { useLang("fr"); const passFr=S.pass, wFr=Object.keys(S.w).length;
+    for(const c of ["de","de4","de6","it1","it2"]) useLang(c);
+    const loaded=Object.keys(LANGUAGES).filter(c=>LANGUAGES[c].words!=null);
+    ok("minne: högst "+KEEP_COURSES+" kurser hämtade", loaded.length<=KEEP_COURSES&&loaded.includes("it2")&&LANGUAGES.fr.words==null&&LANGUAGES.fr.base===undefined&&LANGUAGES.fr.content===undefined&&LANGUAGES.fr.grammar===undefined, loaded.join());
+    ok("minne: kursinställningarna finns kvar för en släppt kurs", LANGUAGES.fr.storageKey==="franska-glosor-v2"&&LANGUAGES.fr.verbs&&LANGUAGES.fr.course);
+    useLang("fr");
+    ok("minne: en släppt kurs hämtas igen med samma framsteg", L.code==="fr"&&WORDS.length>400&&L.grammar&&L.grammar.topics.length&&S.pass===passFr&&Object.keys(S.w).length===wFr, S.pass+" "+passFr);
+    ok("minne: fortfarande högst "+KEEP_COURSES, Object.keys(LANGUAGES).filter(c=>LANGUAGES[c].words!=null).length<=KEEP_COURSES); }
+
+  // 6. Molnet: gamla bitar raderas efter en lyckad sparning
+  { for(let i=0;i<40&&!CLOUD.ready;i++) await wait(50);
+    const K="glosor-prune-v1", t0=Date.now()-50*864e5, keys=()=>Object.keys(__remote).filter(k=>k.startsWith(P+K+"~")).map(k=>k.slice((P+K+"~").length)).sort();
+    const st=(nw,nl)=>{const s={pass:10,w:{},log:[],t:Date.now()}; for(let i=0;i<nw;i++) s.w["Wort "+i]={s:i%6,due:20,lp:1,ld:t0,mcR:3,mcW:1,tyR:2,tyW:0};
+      for(let i=0;i<nl;i++) s.log.push({p:i,d:t0+i*6e6,dur:600,nNew:10,nRep:25,right:30,total:35,mcR:20,mcN:25,tyR:10,tyN:10,extra:false,kind:"gram",game:"tempus-lang"}); return s;};
+    const big=st(2100,1500); big.pass=10; await cloudWrite(K,big); const k1=keys();
+    const small=st(300,50); small.pass=11; small.nLog=1600; await cloudWrite(K,small); const k2=keys();
+    ok("moln: först flera ord- och loggbitar", k1.includes("w2")&&k1.includes("log1"), k1.join());
+    ok("moln: bitar som inte längre används raderas", canon(k2)===canon(Object.keys(__remote[P+K].parts).sort())&&!k2.includes("log1")&&!k2.includes("w2"), k2.join());
+    { const r=await cloudRead(K); ok("moln: läget går att läsa efter raderingen", r&&r.state&&Object.keys(r.state.w).length===300&&r.state.log.length===50); }
+    // En annan enhet har sparat efter oss: då raderas ingenting
+    const other={...__remote[P+K], parts:{...__remote[P+K].parts, log1:"x"}}; __remote[P+K]=other; __remote[P+K+"~log7"]={rev:"y",data:[]};
+    const done=await cloudPrune(K,{w0:"a"},[{log7:"y"}]);
+    ok("moln: raderar inget när huvuddokumentet är en annan enhets", !done.length&&!!__remote[P+K+"~log7"]);
+    ok("moln: en bit som inte kunde raderas försöks igen vid nästa sparning", !!(CLOUD.stale[K]||{}).log7); }
+ }catch(e){ ok("undantag", false, e.message+" "+(e.stack||"").split("\n")[1]); }
+ ok("inga JavaScript-fel", !__err.length, __err.join(" ; "));
+ document.body.insertAdjacentHTML("beforeend","<pre id=out>"+out.join("\n").replace(/</g,"&lt;")+"</pre>");
+},1500);
+</script>"""
+
+
+def test_build_locks():
+    """Id-låsen i build.py, i en kopia av projektet: ett borttaget id stoppar bygget, godkänd borttagning,
+    ändrad eller dubblerad storageKey, nya id läggs till, bokens id hamnar inte i det publika låset."""
+    import json, shutil, time
+    out = []
+    ok = lambda name, cond, info="": out.append(("OK   " if cond else "FEL  ") + name + (f"  ({info})" if info else ""))
+    with tempfile.TemporaryDirectory() as tmp:
+        t = pathlib.Path(tmp) / "g"
+        shutil.copytree(ROOT, t, ignore=shutil.ignore_patterns(".git", "dist", "*.jpg", "*.jpeg", "*.png", "*.heic", "*.pdf"))
+        build = lambda *a: subprocess.run([sys.executable, str(t / "build.py"), *a], capture_output=True, text=True)
+        lock = lambda c: json.loads((t / "languages" / c / "ids.lock").read_text(encoding="utf-8"))
+        r = build()
+        ok("id-lås: bygget går igenom med låsen som de är", r.returncode == 0, "" if r.returncode == 0 else r.stdout[-300:])
+        for c in [p.name for p in (t / "languages").iterdir() if (p / "lang.js").exists()]:
+            d = lock(c)
+            ok(f"id-lås: {c} har ett lås med storageKey och ord", d.get("storageKey") and len(d.get("ord", [])) > 100 and "innehåll/grammar" in d)
+        # Bokens id ligger bara i book/ids.lock
+        book = t / "languages" / "fr" / "book"
+        if book.exists():
+            b = json.loads((book / "ids.lock").read_text(encoding="utf-8"))
+            pub = lock("fr")
+            leak = [i for k, v in b.items() if isinstance(v, list) for i in v if i in set(pub.get(k, []))]
+            ok("id-lås: bokens id finns inte i det publika låset", b.get("ord") and not leak, ", ".join(leak[:5]))
+        words = t / "languages" / "de" / "words.txt"
+        orig = words.read_text(encoding="utf-8")
+        wid = next(ln.split("|")[0] for ln in orig.splitlines() if ln and not ln.startswith(("#", "//")) and "|" in ln)
+        words.write_text("\n".join(ln for ln in orig.splitlines() if not ln.startswith(wid + "|")) + "\n", encoding="utf-8")
+        r = build()
+        ok("id-lås: ett borttaget ord stoppar bygget", r.returncode != 0 and wid in r.stdout and "--allow-removed" in r.stdout)
+        r = build("--allow-removed", f"de:ord|{wid}")
+        ok("id-lås: --allow-removed godkänner borttagningen", r.returncode == 0 and wid not in lock("de")["ord"])
+        words.write_text(orig, encoding="utf-8")
+        r = build()
+        ok("id-lås: ett nytt id läggs till automatiskt", r.returncode == 0 and wid in lock("de")["ord"])
+        # ids.removed
+        rd = t / "languages" / "de" / "content" / "reading.json"
+        rorig = rd.read_text(encoding="utf-8")
+        items = json.loads(rorig)
+        rid = items[-1]["id"]
+        rd.write_text(json.dumps(items[:-1], ensure_ascii=False), encoding="utf-8")
+        r1 = build()
+        (t / "languages" / "de" / "ids.removed").write_text(f"// test\ninnehåll/reading|{rid}\n", encoding="utf-8")
+        r2 = build()
+        ok("id-lås: ett borttaget innehålls-id stoppar bygget, en rad i ids.removed godkänner det", r1.returncode != 0 and rid in r1.stdout and r2.returncode == 0 and rid not in lock("de")["innehåll/reading"])
+        rd.write_text(rorig, encoding="utf-8"); (t / "languages" / "de" / "ids.removed").unlink(); build()
+        # storageKey
+        lj = t / "languages" / "de4" / "lang.js"
+        lorig = lj.read_text(encoding="utf-8")
+        lj.write_text(lorig.replace('"glosor-de4-v1"', '"glosor-de4-v2"'), encoding="utf-8")
+        r = build()
+        ok("id-lås: en ändrad storageKey stoppar bygget", r.returncode != 0 and "storageKey" in r.stdout and "glosor-de4-v1" in r.stdout)
+        lj.write_text(lorig.replace('"glosor-de4-v1"', '"glosor-de-v1"'), encoding="utf-8")
+        r = build()
+        ok("id-lås: två kurser med samma storageKey stoppar bygget", r.returncode != 0 and "flera kurser" in r.stdout)
+        lj.write_text(lorig.replace('extends: "de"', 'extends: "xx"'), encoding="utf-8")
+        r = build()
+        ok("arv: extends till en kurs som inte finns stoppar bygget", r.returncode != 0 and "extends 'xx'" in r.stdout)
+        lj.write_text(lorig, encoding="utf-8")
+        ok("id-lås: bygget går igenom igen", build().returncode == 0)
+    # Grammatiken och DATA_VERSION i den riktiga dist/
+    import hashlib
+    html = (ROOT / "dist" / "index.html").read_text(encoding="utf-8")
+    ok("grammatik: områdena ligger inte i index.html", "Wo? eller wohin?" not in html and "Relativpronomen i dativ" not in html and "Subjonctif efter känslor" not in html)
+    de = json.loads((ROOT / "dist" / "data" / "de.json").read_text(encoding="utf-8"))
+    ok("grammatik: områden och regler ligger i data/de.json", de.get("grammar", {}).get("topics") and de["grammar"].get("rules") and de["grammar"].get("adj"))
+    m = re.search(r"const DATA_VERSION = (\{[^}]*\})", html)
+    dv = json.loads(m.group(1)) if m else {}
+    wrong = [c for c in dv if dv[c] != hashlib.sha1((ROOT / "dist" / "data" / f"{c}.json").read_bytes()).hexdigest()[:10]]
+    ok("DATA_VERSION: varje kurs har sitt eget hash av sin datafil", dv and not wrong and set(dv) == {p.stem for p in (ROOT / "dist" / "data").glob("*.json")}, ", ".join(wrong))
+    return "\n".join(out)
+
+
+# ---------------------------------------------------------------------------------------------------------
+# Övningstyperna (src/kinds/, 2026-09-28 del 6): registret (defineKind), att fråge-id och S.runs-nycklar är
+# oförändrade, tl() för fältet .fr, komma i facit i alla kurser, synk mellan två enheter mot samma låtsaslagring,
+# och alla kurser (Object.keys(LANGUAGES)) genomspelade: glosquiz, blandad runda, verb, alla övningar i menyn
+# (grammatik, hörtext, lästext, berättelse, fraser, uttal, kapitelprov, provträning …). Körs på en egen sida.
+# ---------------------------------------------------------------------------------------------------------
+SCENARIO_KINDS = r"""<script>
+const out=[]; const q=s=>document.querySelector(s);
+const ok=(name,cond,info="")=>out.push((cond?"OK   ":"FEL  ")+name+(info?"  ("+info+")":""));
+// Väntar tills villkoret gäller (eller tiden gått ut) i stället för en fast väntetid
+const wait=(cond,ms=3000)=>new Promise(r=>{const t0=Date.now();(function p(){let v=false;try{v=cond()}catch(e){} if(v||Date.now()-t0>ms) r(!!v); else setTimeout(p,20);})();});
+const idle=()=>typeof CLOUD!=="undefined"&&CLOUD.ready&&!CLOUD.busy&&!CLOUD.attaching&&!Object.keys(CLOUD.pending).length;
+const flush=async()=>{ for(let i=0;i<40&&(CLOUD.busy||Object.keys(CLOUD.pending).length);i++){ await cloudFlush(); await wait(()=>!CLOUD.busy,500); } };
+const P_=k=>"data/users/u_test/"+k;
+const canon=v=>JSON.stringify(v,(k,x)=>x&&typeof x==="object"&&!Array.isArray(x)?Object.keys(x).sort().reduce((o,k)=>(o[k]=x[k],o),{}):x);
+const unesc=s=>{const t=document.createElement("textarea"); t.innerHTML=String(s==null?"":s); return t.value;};
+const exClick=id=>{renderStart(); const g=exGroups().find(g=>g.items.some(h=>h.includes('data-ex="'+id+'"'))); openExGroup(g.id); const b=q('[data-ex="'+id+'"]'); b.click(); return b;};
+// Rätt svar på vilken fråga som helst, hämtat ur frågan själv (sess.d)
+function answerRight(){
+  const c=sess.cur, d=sess.d;
+  if(c.t==="mc"){ answerMC(d.opts.findIndex(o=>o.ok)); q("#nx").click(); return; }
+  if(q("[data-sh]")){ q('[data-sh="1"]').click(); return; }
+  if(d.render){ d.o.words.forEach(w=>{const b=[...document.querySelectorAll("[data-t]")].find(x=>x.textContent===w); if(b) b.click();}); q("#submit").click(); q("#submit").click(); return; }
+  q("#ans").value=d.accepted?d.accepted[0]:unesc(d.answer).replace(/ … /g," "); q("#submit").click();
+  if(q("[data-gr]")) q('[data-gr="right"]').click();
+  q("#submit").click();
+}
+const runAll=(n=400)=>{let g=0; while(sess&&sess.cur&&g++<n) answerRight();};
+const logsSince=n0=>S.log.slice(n0);
+const firstRight=n0=>{const l=logsSince(n0); return l.reduce((a,e)=>a+(e.right||0),0)+"/"+l.reduce((a,e)=>a+(e.total||0),0);};
+const allRight=n0=>{const l=logsSince(n0); return l.length>0&&l.every(e=>e.right===e.total);};
+
+(async()=>{ await wait(()=>typeof L!=="undefined"&&L&&L.base&&idle()&&S.pass===5,5000); try{
+  // 1. Registret
+  ok("register: inga fel när typerna registreras", !KIND_ERRORS.length, KIND_ERRORS.join("; "));
+  { const probs=[];
+    Object.entries(KINDS).forEach(([k,K])=>{
+      if(typeof K.name!=="string"||!K.name) probs.push(k+": name saknas");
+      const qs=K.mc||K.type;
+      if(!qs&&!K.open&&!K.again) probs.push(k+": varken frågor, open eller again");
+      if(qs&&k!=="words"&&!K.restore) probs.push(k+": restore saknas (frågorna kan pausas)");   // glosorna återskapas direkt ur ordlistan
+      if(qs&&k!=="words"&&!K.recap&&!K.after) probs.push(k+": recap eller after saknas");
+      if(!qs&&(K.restore||K.effect||K.recap)) probs.push(k+": restore/effect/recap utan frågor");
+      Object.keys(K).forEach(f=>{ if(!KIND_FIELDS.includes(f)) probs.push(k+": okänt fält "+f); });
+    });
+    const want=["words","verbs","cloze","dict","trans","order","shadow","phr","story","lq","rq","culture","write","ktest","utt","teori","gram","gen","plu","exam","mix"];
+    const miss=want.filter(k=>!KINDS[k]);
+    ok("register: varje typ har det den behöver", !probs.length&&!miss.length, probs.concat(miss.map(k=>k+" saknas")).join("; ")+" · "+Object.keys(KINDS).length+" typer"); }
+  ok("register: MC, TYPE, RESTORE … är vyer över registret", MC.dict===KINDS.dict.mc&&TYPE.gram===KINDS.gram.type&&RESTORE.story===KINDS.story.restore&&AFTER.lq===KINDS.lq.after
+    &&AGAIN.mix===KINDS.mix.again&&KIND_NAMES.gen==="der, die, das"&&("utt" in RECAP)&&!("culture" in MC)&&Object.keys(TYPE).includes("plu"));
+  { MC.nyTyp=()=>{}; const e=KIND_ERRORS.length===1&&!KINDS.nyTyp; KIND_ERRORS.length=0;
+    defineKind("dict",{recap:()=>""}); defineKind("xx",{foo:1}); const e2=KIND_ERRORS.length===2&&!("foo" in KINDS.xx); KIND_ERRORS.length=0; delete KINDS.xx;
+    ok("register: fel vid registrering stoppar inte appen men syns i KIND_ERRORS", e&&e2); }
+
+  // 2. Fråge-id och S.runs-nycklar som förut (de finns i elevernas sparade pass)
+  { S.runs={}; delete S.run; const g=verbGames()[0], st=(C().stories||[])[0], lt=(C().listening||[])[0], rt=(C().reading||[])[0], kc=ktChapters()[0];
+    const ids=[];
+    const take=fn=>{ fn(); if(q("#rnew")) q("#rnew").click(); ids.push(sess.cur.id||("words:"+sess.cur.w.id)); answerRight(); pauseSession(); };
+    take(startDict); take(startTrans); take(startOrder); take(startShadow); take(startPhrases); take(startCloze); take(()=>startVerbs(g.id));
+    take(()=>startStory(st.id)); take(()=>startTextQs("lq",lt.id)); take(()=>startTextQs("rq",rt.id)); take(()=>startGram("mix")); take(startMix);
+    take(()=>{KT.mode="mc"; startKtest(kc.id);});
+    const hasUtt=(C().uttal||[]).length>0, hasTe=(C().teori||[]).length>0; if(hasUtt) take(()=>startUttal(null)); if(hasTe) take(startTeori);
+    const keys=Object.keys(S.runs).sort().join(","), exp=["dict","trans","order","shadow","phr","cloze","verbs|"+g.id,"story|"+st.id,"lq|"+lt.id,"rq|"+rt.id,"gram|mix","mix","ktest|"+kc.id]
+      .concat(hasUtt?["utt|"]:[],hasTe?["teori"]:[]).sort().join(",");
+    ok("fråge-id och S.runs: nycklarna är som förut", keys===exp, keys+" / "+exp);
+    const badId=ids.filter(id=>!/^[a-z]+:./.test(id)||!KINDS[id.slice(0,id.indexOf(":"))]);
+    ok("fråge-id: <typ>:<ref> och typen finns i registret", !badId.length, badId.join());
+    const r=S.runs["story|"+st.id]; ok("S.runs: posterna har samma fält som förut", r&&["kind","learn","i","newW","due","extra","game","queue","total","done","firstTry","firstType","tries","start","ctx","againFn","label","daily"].every(k=>k in r)&&r.queue.every(x=>x.k==="story"&&x.id.startsWith("story:")), JSON.stringify(r&&r.queue[0]));
+    renderStart(); q("#run-go").click(); ok("S.runs: senaste övningen går att fortsätta", !!sess&&!!sess.cur); runAll(); S.runs={}; delete S.run; renderStart(); }
+
+  // 3. tl(): målspråkets text läses via en hjälpfunktion, datafilerna har kvar fältet fr
+  ok("tl: läser fältet fr", tl({fr:"bonjour",sv:"hej"})==="bonjour"&&tlLine("x").fr==="x"&&tl(null)===undefined);
+  ok("tl: datafilerna har kvar fr", (C().phrases||[]).every(p=>typeof p.fr==="string")&&(C().listening||[]).every(t=>t.lines.every(l=>typeof l.fr==="string")));
+
+  // 4. Synk mellan två enheter mot samma låtsaslagring (__remote). Varje enhet har eget S, egen localStorage
+  //    och egna kända bitar (CLOUD.known); db är gemensam. Den som kommit längst vinner, och bitar blandas aldrig.
+  { const key=L.storageKey;
+    await flush();
+    const A={S, known:CLOUD.known[key], ls:localStorage.getItem(key)}, B={S:null, known:null, ls:null};
+    const on=async(d,fn)=>{ S=d.S; CLOUD.known[key]=d.known; if(d.ls==null) localStorage.removeItem(key); else localStorage.setItem(key,d.ls); if(S) rebuildWords();
+      await fn(); await flush(); await wait(idle,1000);
+      d.S=S; d.known=CLOUD.known[key]; d.ls=localStorage.getItem(key); };
+    const pass=()=>{ startSession(pickNew().slice(0,3),dueWords().slice(0,3)); while(sess&&!sess.queue) q("#next").click(); runAll(); };
+    const p0=A.S.pass;
+    await on(B,async()=>{ loadState(); rebuildWords(); await cloudAttach(); });
+    ok("två enheter: ny enhet får framstegen från molnet", B.S.pass===p0&&canon(B.S.w)===canon(A.S.w), B.S.pass+" / "+p0);
+    await on(B,async()=>{ pass(); });
+    const bPass=B.S.pass, bWords=Object.keys(B.S.w);
+    await on(A,async()=>{ await onRemote(key,await docFor(key).get()); });
+    ok("två enheter: A tar emot passet från B", A.S.pass===bPass&&bPass===p0+1&&bWords.every(id=>A.S.w[id]), A.S.pass+" / "+bPass);
+    await on(A,async()=>{ pass(); });               // A: ett pass till sparas
+    await on(B,async()=>{ pass(); pass(); });       // B har inte sett A:s pass, gör två pass och sparar
+    const head=__remote[P_(key)];
+    ok("två enheter: den som kommit längst skriver (B, 2 pass)", head&&head.score[0]===bPass+2&&B.S.pass===bPass+2, head&&JSON.stringify(head.score));
+    // A sparar igen: skriver inte över, utan tar emot B:s läge (onRemote efter den överhoppade sparningen)
+    await on(A,async()=>{ S.newCount=S.newCount+1; save(); await flush(); await wait(()=>S.pass===bPass+2,2000); });
+    const r=await cloudRead(key);
+    ok("två enheter: A skriver inte över B utan tar emot B:s läge", A.S.pass===bPass+2&&r&&!r.bad&&r.state.pass===bPass+2&&canon(r.state.w)===canon(B.S.w)&&canon(A.S.w)===canon(B.S.w)&&canon(r.state.log)===canon(B.S.log),
+      A.S.pass+" "+(r&&r.state.pass));
+    S=A.S; CLOUD.known[key]=A.known; localStorage.setItem(key,A.ls); rebuildWords(); renderStart(); }
+
+  // 5. Alla kurser
+  const t0=Date.now(), commaInfo=[]; let commaN=0, commaSplit=0;
+  const conj=new Set(["weil","dass","aber","ob","und","oder","denn","wenn","mais","que","et","ou","car","donc","ma","e","o","che","perché","però"]);
+  for(const c of Object.keys(LANGUAGES)){
+    useLang(c); await wait(()=>L.code===c&&WORDS&&WORDS.length>0&&!sess,5000);
+    const e0=__err.length; S.runs={}; delete S.run;
+    Object.values(LANGUAGES).forEach(x=>(Array.isArray(x.connectors)?x.connectors:[]).forEach(s=>conj.add(norm(s))));
+    // Glosquiz
+    { const n0=S.log.length, nw=pickNew().slice(0,8), du=dueWords().slice(0,4); startSession(nw,du); while(sess&&!sess.queue) q("#next").click(); runAll();
+      const e=S.log[S.log.length-1]; ok(c+": glosquiz", !sess&&S.log.length===n0+1&&e.nNew===nw.length&&e.right===e.total&&e.total===nw.length+du.length, e&&(e.right+"/"+e.total)); }
+    // Blandad runda och verb
+    { const n0=S.log.length; startMix(); const ks=[...new Set([sess.cur,...sess.queue].map(x=>x.k))];
+      const reg=[sess.cur,...sess.queue].every(x=>KINDS[x.k]&&(x.t==="mc"?KINDS[x.k].mc:KINDS[x.k].type)); runAll();
+      ok(c+": blandad runda", !sess&&reg&&ks.length>=3&&allRight(n0), ks.join()+" · "+firstRight(n0)); }
+    for(const g of verbGames().slice(0,1)){ const n0=S.log.length; startVerbs(g.id); runAll(); ok(c+": verb ("+g.name+")", !sess&&S.log[S.log.length-1].verb&&allRight(n0), firstRight(n0)); }
+    // Varje övning i menyn
+    const menu=exGroups().flatMap(g=>g.items.map(h=>(h.match(/data-ex="(\w+)"/)||[])[1]).filter(Boolean));
+    ok(c+": varje knapp i menyn har en typ med open", menu.every(id=>KINDS[id]&&KINDS[id].open), menu.join());
+    const need=["lq","rq","story","phr","ktest","dict","trans","order","shadow","write"].concat(hasGrammar()?["gram"]:[],(C().uttal||[]).length?["utt"]:[],hasExam()?["exam"]:[],(C().culture||[]).length?["culture"]:[]);
+    ok(c+": alla övningar som kursen har innehåll för finns i menyn", need.every(k=>menu.includes(k)), need.filter(k=>!menu.includes(k)).join()+" · "+menu.length+" övningar");
+    for(const id of menu){ const n0=S.log.length; let res=null, info="";
+      try{
+        const btn=exClick(id); if(btn.disabled){ ok(c+": "+KINDS[id].name+" (avstängd, för få inlärda ord)", true); continue; }
+        if(id==="lq"||id==="rq"){ const tid=q("[data-pick]").dataset.pick; q("[data-pick]").click(); q("#toq").click(); runAll();
+          res=!sess&&S.tx&&S.tx[tid]&&S.tx[tid].best===S.tx[tid].n&&!!q("#more"); info=tid; }
+        else if(id==="story"){ const sid=q("[data-pick]").dataset.pick; q("[data-pick]").click(); runAll(); res=!sess&&S.stb[sid]===parseStory(storyById(sid)).gaps.length&&!!q("#more"); info=sid; }
+        else if(id==="utt"){ q('[data-pick="*"]').click(); runAll(); res=!sess&&q("#app").textContent.includes("Uttal klart")&&allRight(n0); }
+        else if(id==="ktest"){ q('[data-ktm="mc"]').click(); const kid=q("[data-kt]").dataset.kt; q("[data-kt]").click(); runAll(); res=!sess&&S.kt[kid]&&S.kt[kid].r===S.kt[kid].n; info=kid+" "+(S.kt[kid]&&S.kt[kid].n)+" ord"; }
+        else if(id==="gram"){ q('[data-pick="mix"]').click(); runAll(); res=!sess&&S.gt.mix&&S.gt.mix.n>0&&allRight(n0); info=firstRight(n0); }
+        else if(id==="culture"){ const cid=q("[data-pick]").dataset.pick; q("[data-pick]").click(); q(".opt").click(); q("#ctext").value="Test."; q("#done").click(); res=S.cu[cid]&&S.log[S.log.length-1].kind==="culture"; }
+        else if(id==="write"){ const p=(C().prompts||[]).find(x=>x.id===q("[data-pick]").dataset.pick); q("[data-pick]").click(); q("#wtext").value=p.model||"Test test."; q("#wtext").dispatchEvent(new Event("input"));
+          res=[...document.querySelectorAll("#checks li")].every(li=>li.classList.contains("ok")); q("#done").click(); res=res&&S.log[S.log.length-1].kind==="write"; }
+        else if(id==="exam"){ const tm=EX().tasks.find(t=>t.qs), tw=EX().tasks.find(t=>t.minWords);
+          examTask(tm.id); tm.qs.forEach((x,i)=>q(`.exq[data-q="${i}"] [data-o="${x.a}"]`).click()); q("#exdone").click();
+          res=exState().t[tm.id].pct===100;
+          if(tw){ examTask(tw.id); q("#xtext").value=tw.model||"Ein zwei drei vier fünf sechs sieben acht neun zehn elf zwölf dreizehn vierzehn fünfzehn sechzehn."; q("#xtext").dispatchEvent(new Event("input")); q("#exdone").click();
+            res=res&&await wait(()=>exState().t[tw.id]&&exState().t[tw.id].pct===70); }
+          info=EX().name+" · "+tm.id+(tw?" · "+tw.id:""); openExam(); }
+        else { if(q("[data-pick]")) q("[data-pick]").click(); if(q("#rgo")) q("#rgo").click(); runAll();
+          const e=S.log[S.log.length-1]; res=!sess&&S.log.length>n0&&(e.kind===id||(id==="cloze"&&e.cloze)||(id==="gen"&&e.kind==="plu"))&&allRight(n0); info=firstRight(n0); }
+      }catch(err){ res=false; info=err.message+" "+(err.stack||"").split("\n")[1]; }
+      ok(c+": "+KINDS[id].name, !!res&&!sess, info); sess=null; }
+    ok(c+": loggen har namn för alla typer", S.log.filter(l=>l.kind).every(l=>KINDS[l.kind]&&KINDS[l.kind].name));
+    // Komma i facit: två former av samma ord godkänns var för sig, men en fras med komma delas aldrig
+    { const bad=[];
+      WORDS.filter(w=>w.t.includes(",")&&w.sec!=="mine").forEach(w=>{ commaN++;
+        const whole=[norm(w.t.replace(/\(.*?\)/g,"").replace(/…/g,"").trim()),norm(w.t.replace(/[()]/g,""))], v=variants(w.t).filter(x=>!whole.includes(x));
+        if(v.length) commaSplit++;
+        v.forEach(x=>{ if(!x.includes(" ")&&conj.has(x)) bad.push(w.t+" → "+x); });
+        const [a,b]=w.t.replace(/\(.*?\)/g,"").split(/\s*,\s*/);
+        if(b!==undefined&&!b.startsWith("-")&&a.split(/\s+/).length>b.trim().split(/\s+/).length&&v.length) bad.push(w.t+" delas: "+v.join(" / "));
+        if(v.length) commaInfo.push(c+": "+w.t+" → "+v.join(" / ")); });
+      ok(c+": facit med komma blir aldrig ett enstaka bindeord eller en bit av en fras", !bad.length, bad.slice(0,6).join(" | ")); }
+    ok(c+": inga JavaScript-fel", __err.length===e0, __err.slice(e0).join(" ; "));
+  }
+  ok("alla kurser genomspelade", true, Object.keys(LANGUAGES).join(", "));
+  { const ck=(code,i,w)=>{const k=L; L=LANGUAGES[code]; try{return check(i,variants(w))}finally{L=k}};
+    const va=(code,w)=>{const k=L; L=LANGUAGES[code]; try{return variants(w)}finally{L=k}};
+    ok("facit: moniteur de ski och monitrice de ski godkänns", ck("fr","moniteur de ski","moniteur, monitrice de ski")==="right"&&ck("fr","monitrice de ski","moniteur, monitrice de ski")==="right"
+      &&ck("fr","moniteur, monitrice de ski","moniteur, monitrice de ski")==="right"&&ck("fr","moniteur","moniteur, monitrice de ski")!=="right", va("fr","moniteur, monitrice de ski").join(" / "));
+    ok("facit: weil godkänns inte för en fras med komma", ck("de6","weil","ich habe dieses Thema gewählt, weil")==="wrong"&&ck("de6","aber","das mag sein, aber")==="wrong"&&ck("fr","c'est","ce qui me plaît, c'est")==="wrong");
+    ok("facit: former av samma ord godkänns fortfarande", ["vif","vive"].every(x=>ck("fr",x,"vif, vive")==="right")&&ck("fr","petite amie","petit ami, petite amie")==="right"
+      &&ck("fr4","l'envoyée spéciale","l'envoyé spécial, l'envoyée spéciale")==="right"&&ck("fr4","monsieur","Madame, Monsieur")!=="right");
+    ok("facit: ord med komma i alla kurser", commaN>200, commaN+" ord med komma, "+commaSplit+" delas i former, t.ex. "+commaInfo.filter(s=>/moniteur|petit ami|envoyé/.test(s)).join(" | ")); }
+  useLang("fr");
+ }catch(e){ ok("undantag", false, e.message+" "+(e.stack||"").split("\n")[1]); }
+ ok("inga JavaScript-fel", !__err.length, __err.join(" ; "));
+ document.body.insertAdjacentHTML("beforeend","<pre id=out>"+out.join("\n").replace(/</g,"&lt;")+"</pre>");
+})();
+</script>"""
+
+
 def main():
     text = run(SCENARIO) + "\n" + run(SCENARIO_DE) + "\n" + run(SCENARIO_FIXES) + "\n" + run(SCENARIO_SYNC, 30000) + "\n" + run_http(SCENARIO_HTTP)
+    text += "\n" + run(SCENARIO_ARCH, 30000) + "\n" + test_build_locks()   # arkitektur, del 6
+    text += "\n" + run(SCENARIO_KINDS, 60000)   # övningstyperna (src/kinds), alla kurser, två enheter, del 6
     print(text)
     sys.exit(1 if "FEL  " in text else 0)
 

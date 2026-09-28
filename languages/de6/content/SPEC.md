@@ -17,7 +17,7 @@ Enligt kursmallen (`docs/kursmall.md`, steg 6): hörtexter 250–350 ord, läste
 
 Formatet och reglerna är desamma som för Tyska 5: se `languages/de/content/SPEC.md`, `languages/de/content/GRAMMATIK-SPEC.md` och exemplen i `languages/de/content/*.json`. Fältet med tysk text heter `fr`. I `prompts.json` räknas bindeord mot listan i `languages/de/lang.js`, och `need.tenses` får bara innehålla `Präsens`, `Perfekt`, `Präteritum`, `Konjunktiv II` och `Passiv`.
 
-Grammatikområdena i Tyska 6 (topic och rule står i `grammar` i `languages/de6/lang.js`):
+Grammatikområdena i Tyska 6 (topic och rule står i `languages/de6/grammar.json`):
 
 | topic | fil | innehåll |
 |---|---|---|

@@ -30,7 +30,7 @@ Använd vanlig apostrof `'`, aldrig `’`. Om luckan kommer efter en elision, sk
 
 För `rw` gäller samma regel som i tyskan: `a`, `acc` och `alt` ska bestå av exakt samma ord. Vid inversion skrivs bindestrecket som i vanlig franska (`Où habites-tu ?`). Programmet delar orden vid mellanslag, så `habites-tu` blir en bricka.
 
-Tempusreglerna och `cond-poli`, `cond-rai` och `fut-reg` är undantagna från "Hitta felet" (`ERR_SKIP` i src/grammar.js), eftersom felalternativen där ofta går att försvara i talspråk.
+Tempusreglerna och `cond-poli`, `cond-rai` och `fut-reg` är undantagna från "Hitta felet" (`ERR_SKIP` i src/kinds/60-grammar.js), eftersom felalternativen där ofta går att försvara i talspråk.
 
 ## Kvalitet
 
