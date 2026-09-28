@@ -179,6 +179,14 @@ setTimeout(async()=>{ try{
     ok("uttal: två frågor med orden som alternativ", sess&&sess.total===2&&sess.d.opts.length===2);
     { let g=0; while(sess&&g++<20) answerRight(); } ok("uttal: resultat sparas", S.ut["utt-t"]===100, JSON.stringify(S.ut));
     delete L.content.uttal; renderStart(); }
+  { renderStart(); const m=q("#chmap"); ok("kapitelkarta: finns med staplar", !!m&&m.querySelectorAll(".chrow").length>=3&&!!m.querySelector(".track"));
+    ok("rullistan visar hur långt man kommit", /%|klart/.test(q("#src").options[1].textContent), q("#src").options[1].textContent);
+    const b=m.querySelectorAll("[data-chmap]")[2], id=b.dataset.chmap; b.click();
+    ok("kapitelkarta: tryck väljer kapitlet", (S.chapter&&ktKey(S.chapter)===id)||(S.src!=="auto"&&ktKey(S.src)===id), S.chapter+" "+S.src);
+    delete S.chapter; S.src="auto";
+    setView("stats"); { const wide=[...document.querySelectorAll("#app *")].filter(e=>e.getBoundingClientRect().right>document.documentElement.clientWidth+1).slice(0,3).map(e=>e.tagName+"."+e.className);
+    ok("statistik: inget sticker ut åt sidan", !wide.length, wide.join(", ")+" bredd "+document.documentElement.clientWidth); }
+  ok("statistik: dag för dag", q("#app").textContent.includes("Dag för dag")&&!!q('[aria-label="Minuter per dag de senaste 28 dagarna"]')); setView("ova"); }
   ok("högst MAXDUE repetitioner per pass", dueWords().length<=MAXDUE);
   { const w=byId["rire"]; S.w["rire"].lapses=3; document.body.insertAdjacentHTML("beforeend","<div id=mt>"+studyCard(w)+"</div>");
     const f=q("#mt [data-memo]"); ok("svårt ord: fält för minnesregel", !!f); f.querySelector("input").value="Rire låter som ridikyl";
@@ -337,7 +345,7 @@ def run(scenario):
         dump = pathlib.Path(tmp) / "dump.html"
         # Utdata till fil: Chromes hjälpprocesser håller annars en pipe öppen och Python väntar för evigt
         with open(dump, "w") as fh:
-            p = subprocess.Popen([CHROME, "--headless=new", "--disable-gpu", f"--user-data-dir={tmp}/c", "--dump-dom",
+            p = subprocess.Popen([CHROME, "--headless=new", "--disable-gpu", f"--user-data-dir={tmp}/c", "--window-size=400,900", "--dump-dom",
                                   "--virtual-time-budget=5000", f.as_uri()], stdout=fh, stderr=subprocess.DEVNULL)
             # Chrome skriver ut sidan men avslutar inte alltid själv, så vi väntar på resultatet och stänger sedan
             import time
@@ -387,7 +395,7 @@ def run_http(scenario):
         threading.Thread(target=srv.serve_forever, daemon=True).start()
         dump = t / "dump.html"
         with open(dump, "w") as fh:
-            p = subprocess.Popen([CHROME, "--headless=new", "--disable-gpu", f"--user-data-dir={tmp}/c", "--dump-dom",
+            p = subprocess.Popen([CHROME, "--headless=new", "--disable-gpu", f"--user-data-dir={tmp}/c", "--window-size=400,900", "--dump-dom",
                                   "--virtual-time-budget=8000", f"http://127.0.0.1:{srv.server_address[1]}/test.html"], stdout=fh, stderr=subprocess.DEVNULL)
             for _ in range(120):
                 time.sleep(0.5)

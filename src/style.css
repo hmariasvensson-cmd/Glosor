@@ -351,3 +351,10 @@ details.rule{margin-top:6px}
 .goal-ck .box{flex:none;width:20px;height:20px;border-radius:6px;border:1.5px solid var(--line);display:grid;place-items:center;font-weight:700;color:var(--ok);line-height:1}
 .goal-ck[aria-pressed="true"]{border-color:var(--ok);background:var(--ok-soft)}
 .goal-ck[aria-pressed="true"] .box{border-color:var(--ok)}
+.chmap[open]{display:flex;flex-direction:column;gap:10px}
+.chlist{display:flex;flex-direction:column;gap:6px}
+.chrow{display:flex;flex-direction:column;gap:6px;text-align:left;border:1.5px solid var(--line);background:var(--surface);border-radius:10px;padding:9px 12px}
+.chrow:hover{border-color:var(--navy)}
+.chrow.here{border-color:var(--green)}
+.chtop{display:flex;justify-content:space-between;gap:10px;font-size:.9rem}
+.chnum{font-variant-numeric:tabular-nums;color:var(--ink-2);flex:none}

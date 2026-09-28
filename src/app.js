@@ -268,7 +268,7 @@ function renderStart(){
   const newW=pickNew(), due=dueWords();
   const learned=WORDS.filter(isLearned).length, mastered=WORDS.filter(isMastered).length;
   const secOpt=s=>{const n=WORDS.filter(w=>w.sec===s.id&&!isLearned(w)).length;
-    return `<option value="${s.id}" ${n?"":"disabled"}>${esc(s.name)} (${n} kvar)</option>`;};
+    return `<option value="${s.id}" ${n?"":"disabled"}>${esc(s.name)} · ${progLabel([s.id])}</option>`;};
   const bookSecs=SECTIONS.filter(s=>s.book), otherSecs=SECTIONS.filter(s=>!s.book);
   const opts=`<option value="auto">${hasBook()?"Kapitlet ni läser, sedan resten":L.nextLabel||"Nästa ord i ordlistan"}</option>`+(bookSecs.length
     ?`<optgroup label="Boken: ${esc(L.book?L.book.title:"")}">${bookSecs.map(secOpt).join("")}</optgroup><optgroup label="Allmänt">${otherSecs.map(secOpt).join("")}</optgroup>`
@@ -289,6 +289,7 @@ function renderStart(){
       <div class="stat"><b>${mastered}</b><span>kan</span></div>
     </div>
     <div class="field"><span class="label">Nya ord från</span><select id="src">${opts}</select></div>
+    ${chapterMap()}
     <div class="field"><span class="label">Antal nya ord</span>
       <div class="seg" role="group" aria-label="Antal nya ord">${[0,10,15,20].map(n=>`<button data-n="${n}" aria-pressed="${S.newCount===n}">${n||"Inga"}</button>`).join("")}</div></div>
     <div class="field"><span class="label">Quizet</span>
@@ -320,7 +321,7 @@ function renderStart(){
   ${videosPanel(S.src!=="auto"?S.src:(newW[0]||WORDS.filter(isLearned).pop()||WORDS[0]||{}).sec)}`;
   $("#src").value=S.src; if(!$("#src").selectedOptions[0]||$("#src").selectedOptions[0].disabled){S.src="auto";$("#src").value="auto"}
   $("#src").onchange=e=>{S.src=e.target.value;save();renderStart()};
-  wireBookPanel();
+  wireBookPanel(); wireChapterMap();
   if($("#nextc")) $("#nextc").onclick=()=>useLang(L.nextCourse);
   app.querySelectorAll("[data-n]").forEach(b=>b.onclick=()=>{S.newCount=+b.dataset.n;save();renderStart()});
   app.querySelectorAll("[data-m]").forEach(b=>b.onclick=()=>{S.mode=b.dataset.m;save();renderStart()});
@@ -349,6 +350,86 @@ function videosPanel(secId){
     <details class="more" ${cur?"":"open"}><summary>${cur?"Klipp till alla kapitel":"Visa klippen"}</summary>
       ${secs.filter(s=>s.id!==cur).map(s=>`<div class="vsec">${esc(s.name)}</div><ul class="vids">${V[s.id].map(vidItem).join("")}</ul>`).join("")}
     </details></section>`;
+}
+
+/* ---------- Hur långt man har kommit i varje kapitel ----------
+   Används i rullistorna (text) och i kapitelkartan under "Nya ord från" (staplar). "Kan" = steg 4 eller mer,
+   "på väg" = påbörjat, "kvar" = inte påbörjat. */
+function secProg(ids){
+  const ws_=WORDS.filter(w=>ids.includes(w.sec)), k=ws_.filter(isMastered).length, l=ws_.filter(isLearned).length;
+  return {tot:ws_.length,k,v:l-k,rest:ws_.length-l,pct:ws_.length?Math.round(100*l/ws_.length):0};
+}
+const bar5=p=>"▰".repeat(Math.round(p/20))+"▱".repeat(5-Math.round(p/20));
+function progLabel(ids){ const p=secProg(ids);
+  return p.rest?`${bar5(p.pct)} ${p.pct} % (${p.rest} ord kvar)`:`✓ klart${p.k<p.tot?` (${p.tot-p.k} ord på väg)`:""}`; }
+// Kapitlen i ordning, med avsnitten som hör ihop (k3, k3b, k3x) samlade
+function chapterGroups(){
+  const out=[];
+  SECTIONS.filter(s=>s.id!=="mine").forEach(s=>{const k=(typeof ktKey==="function"?ktKey(s.id):s.id);
+    let c=out.find(x=>x.id===k); if(!c){c={id:k,name:s.name.replace(/ · Fler ord ur kapitlet$/,""),ids:[],book:!!s.book}; out.push(c);} c.ids.push(s.id);});
+  return out.filter(c=>WORDS.some(w=>c.ids.includes(w.sec)));
+}
+let CHMAP_OPEN=false;
+function chapterMap(){
+  const gs=chapterGroups(); if(gs.length<2) return "";
+  const cur=hasBook()&&S.chapter?S.chapter:(S.src!=="auto"?S.src:curSec());
+  const done=gs.filter(g=>!secProg(g.ids).rest).length;
+  return `<details class="more chmap" id="chmap" ${CHMAP_OPEN?"open":""}><summary>Hur långt har jag kommit? ${done} av ${gs.length} kapitel klara</summary>
+    <div class="legend"><span><i class="sw" style="background:var(--c2)"></i>Kan</span><span><i class="sw" style="background:var(--c1)"></i>På väg</span><span><i class="sw" style="background:var(--grid)"></i>Kvar</span></div>
+    <div class="chlist">${gs.map(g=>{const p=secProg(g.ids), here=g.ids.includes(cur);
+      return `<button type="button" class="chrow${here?" here":""}" data-chmap="${esc(g.id)}" aria-label="${esc(g.name)}: ${p.k} kan, ${p.v} på väg, ${p.rest} kvar. Välj kapitlet.">
+        <span class="chtop"><span class="chname">${esc(g.name)}${here?' <span class="pill new">nu</span>':""}</span><span class="chnum">${p.rest?p.pct+" %":"✓"}</span></span>
+        <span class="track" data-tip="${esc(g.name)}: ${p.k} kan, ${p.v} på väg, ${p.rest} kvar av ${p.tot}">${p.k?`<i style="width:${100*p.k/p.tot}%;background:var(--c2)"></i>`:""}${p.v?`<i style="width:${100*p.v/p.tot}%;background:var(--c1)"></i>`:""}</span></button>`;}).join("")}</div>
+    <p class="foot">Tryck på ett kapitel för att ta nya ord därifrån.</p></details>`;
+}
+function wireChapterMap(){
+  const d=$("#chmap"); if(!d) return; d.ontoggle=()=>{CHMAP_OPEN=d.open};
+  d.querySelectorAll("[data-chmap]").forEach(b=>b.onclick=()=>{
+    const g=chapterGroups().find(x=>x.id===b.dataset.chmap); if(!g) return;
+    const first=g.ids.find(id=>WORDS.some(w=>w.sec===id&&!isLearned(w)))||g.ids[0];
+    if(g.book){ S.chapter=g.ids[0]; S.src="auto"; } else S.src=first;
+    save(); renderStart(); const m=$("#chmap"); if(m) m.scrollIntoView({block:"nearest"}); });
+}
+
+/* ---------- Statistik per dag ---------- */
+const dayIso=ts=>{const d=new Date(ts); return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,"0")}-${String(d.getDate()).padStart(2,"0")}`;};
+function dayStats(){
+  const by={};
+  S.log.forEach(l=>{const k=dayIso(l.d), o=by[k]=by[k]||{sec:0,q:0,r:0,nw:0,ex:0,wr:0};
+    o.sec+=l.dur||0; o.q+=l.total||0; o.r+=l.right||0; o.nw+=l.nNew||0; if(l.kind||l.verb||l.cloze) o.ex++; if(l.kind==="write") o.wr+=l.words||0;});
+  return by;
+}
+function statsDaily(){
+  const by=dayStats(); if(!Object.keys(by).length) return "";
+  const today=new Date(); today.setHours(12,0,0,0);
+  const days=[]; for(let i=27;i>=0;i--){const d=new Date(today); d.setDate(d.getDate()-i); const k=dayIso(d); days.push({d,k,o:by[k]||{sec:0,q:0,r:0,nw:0,ex:0,wr:0}});}
+  const t=days[days.length-1].o, min=o=>Math.round(o.sec/60), active=days.filter(x=>x.o.sec>0||x.o.q>0);
+  const wd=d=>d.toLocaleDateString("sv-SE",{weekday:"short"}), dm=d=>`${d.getDate()}/${d.getMonth()+1}`;
+  const W=600,H=220,ml=40,mr=8,mt=14,mb=34,iw=W-ml-mr,ih=H-mt-mb,n=days.length, ymax=niceMax(Math.max(10,...days.map(x=>min(x.o))));
+  const y=v=>mt+ih-(v/ymax)*ih, bw=iw/n-2;
+  let g=""; [0,ymax/2,ymax].forEach(v=>g+=`<line class="gl" x1="${ml}" x2="${W-mr}" y1="${y(v)}" y2="${y(v)}"/><text x="${ml-8}" y="${y(v)+6}" text-anchor="end">${Math.round(v)}</text>`);
+  days.forEach((x,i)=>{const cx=ml+i*iw/n+1, m=min(x.o), h=m?Math.max(3,ih*m/ymax):0, top=mt+ih-h, r=Math.min(4,bw/2,h);
+    if(h) g+=`<path d="M${cx},${mt+ih} V${top+r} Q${cx},${top} ${cx+r},${top} H${cx+bw-r} Q${cx+bw},${top} ${cx+bw},${top+r} V${mt+ih} Z" fill="var(--c2)"/>`;
+    const tip=`${wd(x.d)} ${dm(x.d)}: ${m} min${x.o.q?`, ${x.o.q} frågor (${pct(x.o.r,x.o.q)} % rätt)`:""}${x.o.nw?`, ${x.o.nw} nya ord`:""}${x.o.ex?`, ${x.o.ex} övningar`:""}${!m&&!x.o.q?" (ingen övning)":""}`;
+    g+=`<rect x="${ml+i*iw/n}" y="${mt}" width="${iw/n}" height="${ih}" fill="transparent" data-tip="${esc(tip)}"/>`;
+    if(i===n-1) g+=`<text x="${cx+bw/2}" y="${H-8}" text-anchor="end">i dag</text>`;
+    else if((n-1-i)%7===0) g+=`<text x="${cx+bw/2}" y="${H-8}" text-anchor="middle">${dm(x.d)}</text>`;});
+  const avg=active.length?Math.round(active.reduce((a,x)=>a+x.o.sec,0)/60/active.length):0;
+  const st=myStats();
+  return `<section class="panel"><h2>Dag för dag</h2>
+    <div class="stats4">
+      <div class="stat"><b>${min(t)}</b><span>minuter i dag</span></div>
+      <div class="stat"><b>${t.q}</b><span>frågor i dag${t.q?` · ${pct(t.r,t.q)} % rätt`:""}</span></div>
+      <div class="stat"><b>${t.nw}</b><span>nya ord i dag</span></div>
+      <div class="stat"><b>${st.streak}</b><span>dagar i rad</span></div>
+    </div>
+    <span class="label">Minuter per dag, de senaste fyra veckorna</span>
+    <svg class="chart" viewBox="0 0 ${W} ${H}" role="img" aria-label="Minuter per dag de senaste 28 dagarna">${g}</svg>
+    <p class="plan">Du har övat ${active.length} av de senaste 28 dagarna${active.length?`, i snitt ${avg} minuter de dagar du övade`:""}.</p>
+    <details class="tv"><summary>Visa som tabell</summary><div class="tblwrap"><table class="tbl">
+      <tr><th>Dag</th><th>Minuter</th><th>Frågor</th><th>Rätt</th><th>Nya ord</th><th>Övningar</th></tr>
+      ${days.slice().reverse().filter(x=>x.o.sec||x.o.q).map(x=>`<tr><td>${wd(x.d)} ${dm(x.d)}</td><td>${min(x.o)}</td><td>${x.o.q}</td><td>${x.o.q?pct(x.o.r,x.o.q)+" %":"–"}</td><td>${x.o.nw}</td><td>${x.o.ex}</td></tr>`).join("")}
+    </table></div></details></section>`;
 }
 
 /* ---------- Topplista ----------
@@ -1013,6 +1094,8 @@ function renderStats(){
     </div>
     <p class="plan">Du har övat ${days} ${days===1?"dag":"dagar"}${extraRuns?` och ${extraRuns}`:""}${logs.some(l=>l.kind)?` och gjort ${logs.filter(l=>l.kind).length} andra övningar`:""}. <b>${mastered.length}</b> ord räknas som inlärda.</p>
   </section>
+
+  ${statsDaily()}
 
   <section class="panel">
     <h2>Hur fort det går</h2>

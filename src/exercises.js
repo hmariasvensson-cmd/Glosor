@@ -83,7 +83,7 @@ function bookPanel(){
   const i=cur?secs.indexOf(cur):-1, next=cur&&!left(cur.id)?secs.slice(i+1).find(s=>left(s.id)):null;
   return `<section class="panel book"><div class="meta"><span class="label">Boken</span><span>${esc(L.book.title)}</span></div>
     <div class="field"><span class="label">Vi läser nu</span><select id="chapter"><option value="">Inget särskilt kapitel</option>
-      ${secs.map(s=>`<option value="${s.id}" ${s.id===S.chapter?"selected":""}>${esc(s.name)} (${left(s.id)} ord kvar)</option>`).join("")}</select></div>
+      ${secs.map(s=>`<option value="${s.id}" ${s.id===S.chapter?"selected":""}>${esc(s.name)} · ${progLabel([s.id])}</option>`).join("")}</select></div>
     <p class="plan">${cur?(next?`Du har börjat på alla ord i ${esc(cur.name)}. Läser ni <b>${esc(next.name)}</b> nu?`
       :`Nya ord, texter och övningar tas först från <b>${esc(cur.name)}</b>.`):"Välj kapitlet ni läser i skolan, så kommer de orden först."}</p>
     ${next?`<button class="btn ghost" id="nextch" data-ch="${next.id}">Byt till ${esc(next.name)}</button>`:""}</section>`;
