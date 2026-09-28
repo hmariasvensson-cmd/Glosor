@@ -16,7 +16,8 @@ LANGUAGES.fr4 = {
   accents: "é è ê à â ç ô î û ù ë ï œ",
   verbAccents: "é è ê à â ç ô î û",
   articles: [/^(le|la|les|un|une|des) /, /^l'/],
-  pronouns: /^(que |qu')?(il\/elle|ils\/elles|je|j'|tu|il|elle|on|nous|vous|ils|elles) ?/,
+  // Längre former först, och mellanslag efter pronomenet (utom j' och qu'), så att "ont", "tues" och "ils sont" inte klipps fel
+  pronouns: /^(?:(?:que |qu')?(?:il\/elle|ils\/elles|elles|elle|ils|il|nous|vous|on|tu|je) |(?:que )?j')/,
   genders: {m: "maskulinum", f: "femininum", mpl: "mask. plural", fpl: "fem. plural"},
   elision: /^(l|d|j|qu|n|s|c|m|t|jusqu|lorsqu|puisqu)'/i,
 
@@ -32,7 +33,8 @@ LANGUAGES.fr4 = {
   get tenseCheck() {
     const w = "(?![\\p{L}])", b = "(^|[^\\p{L}])";
     const cond = new RegExp(b + "(\\p{L}*(er|ir|dr|vr|rr|ur|ttr|oir)(ais|ait|ions|iez|aient))" + w, "giu");
-    const notCond = /^(vrais|(tir|attir|retir|admir|respir|inspir|désir|dur|assur|jur|mesur|pleur|cour|parcour|secour|mour|ouvr|couvr|découvr|offr|souffr)(ais|ait|ions|iez|aient))$/i;
+    // Imparfait av verb vars stam slutar som ett conditionnel (tirer → tirait, éclairer → éclairait, espérer → espérait)
+    const notCond = /^(vrais|(tir|attir|retir|admir|respir|inspir|expir|soupir|transpir|conspir|vir|chavir|délir|désir|éclair|dur|assur|rassur|jur|mesur|figur|murmur|demeur|satur|tortur|captur|pleur|cour|parcour|secour|mour|ouvr|couvr|découvr|offr|souffr)(ais|ait|ions|iez|aient))$|ér(ais|ait|ions|iez|aient)$/i;
     return {...LANGUAGES.fr.tenseCheck,
       "conditionnel": t => (t.match(cond) || []).some(m => !notCond.test(m.replace(/^[^\p{L}]+/u, ""))),
       "subjonctif": t => new RegExp(b + "(sois|soit|soient|soyons|soyez|aie|aies|ait|ayons|ayez|aient|fass\\p{L}*|puiss\\p{L}*|aill(e|es|ent)|sach(e|es|ions|iez|ent)|veuill\\p{L}*|vienn(e|es|ent)|prenn(e|es|ent)|doiv(e|es|ent))" + w, "iu").test(t)

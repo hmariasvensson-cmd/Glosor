@@ -13,7 +13,9 @@ const RESTORE={}, EFFECT={}, RECAP={}, AFTER={};
 const KIND_NAMES={exam:"Provträning",dict:"Diktamen",trans:"Översätt meningar",order:"Ordföljd",phr:"Samtalsfraser",story:"Berättelser",
   lq:"Hörförståelse",rq:"Läsförståelse",culture:"Kultur",write:"Skrivna texter",ktest:"Kapitelprov"};
 const reEsc=s=>s.replace(/[.*+?^${}()|[\]\\]/g,"\\$&");
-const hasWord=(text,w)=>new RegExp("(^|[^\\p{L}])"+reEsc(w)+"(?![\\p{L}])","iu").test(text);
+// Typografisk apostrof (’ från iPadens smarta skiljetecken), ` och ´ räknas som ', som i norm()
+const apos=s=>String(s||"").replace(/[’`´]/g,"'");
+const hasWord=(text,w)=>new RegExp("(^|[^\\p{L}])"+reEsc(apos(w))+"(?![\\p{L}])","iu").test(apos(text));
 
 /* ---------- Ordlistan med Mina ord ---------- */
 // Ord som eleven sparar från texterna läggs som ett eget avsnitt och repeteras som vanliga glosor
@@ -155,13 +157,17 @@ function glossState(g){
   const w=GLW.get(key); return w&&isLearned(w)?"known":"";
 }
 const GLW=new Map();   // uppslag från glosa till ord i ordlistan, sparas eftersom det är långsamt
-const glossKey=w=>{let k=w.toLowerCase().replace(/’/g,"'"); if(L.elision) k=k.replace(L.elision,""); return k;};
+// Nyckeln i gloss: ordet med små bokstäver och utan elision (l'amica → amica). Finns hela ordet som nyckel
+// (jusqu'à, jusqu'au) används det i stället.
+const glossKey=(w,gloss)=>{let k=apos(w.toLowerCase()); if(gloss&&gloss[k]) return k; if(L.elision) k=k.replace(L.elision,""); return k;};
+// Ord i texten: börjar med en bokstav och slutar med bokstav eller apostrof ("B2-Nachweis" → B, 2, -, Nachweis)
+const TAPWORD=/(\p{L}(?:[\p{L}'’\-]*[\p{L}'’])?)/u;
 /* Med ordlista (gloss) går alla ord att trycka på. Ord med glosa är understrukna och visar sin betydelse.
    Utan ordlista (t.ex. i frågorna) är texten vanlig text. */
 function tapText(lines,gloss,o={}){
-  return lines.map((ln,i)=>`<p class="tl${ln.who&&ln.who!=="N"?" said":""}" data-line="${i}" ${lang()}>${ln.fr.split(/([\p{L}'’\-]+)/u).map(part=>{
+  return lines.map((ln,i)=>`<p class="tl${ln.who&&ln.who!=="N"?" said":""}" data-line="${i}" ${lang()}>${ln.fr.split(TAPWORD).map(part=>{
       if(!gloss||!/^[\p{L}'’\-]+$/u.test(part)||!/\p{L}/u.test(part)) return esc(part);
-      const k=glossKey(part), g=gloss[k];
+      const k=glossKey(part,gloss), g=gloss[k];
       return `<span class="tw${g?" gl "+glossState(g):""}" data-k="${esc(k)}" data-i="${i}">${esc(part)}</span>`;
     }).join("")}${o.lineSpeak?` <button type="button" class="speak xs" data-say="${esc(ln.fr)}" aria-label="Läs upp meningen">${SPK}</button>`:""}</p>
     ${o.sv?`<p class="tl-sv" hidden>${esc(ln.sv||"")}</p>`:""}`).join("");
@@ -270,7 +276,17 @@ TYPE.dict=c=>{const w=c.w;return{tab:"Diktamen",
   ask:"Skriv hela meningen du hör. Du kan lyssna så många gånger du vill.",placeholder:"Skriv meningen här",accents:L.accents,
   check:v=>compareTokens(v,w.exT),answer:esc(w.exT),explain:`<p class="ex-sv">${esc(w.exSv)}</p>${tatoebaNote(w)}`,wrongCard:studyCard(w)+tatoebaNote(w),
   say:w.exT,wire:()=>wirePlay(r=>speak(w.exT,r)),autoplay:true}};
-MC.dict=c=>{const w=c.w, others=shuffle(WORDS.filter(x=>x!==w&&x.exT!==w.exT&&x.sec===w.sec)).slice(0,3);
+// Andra meningar ur samma avsnitt som felalternativ, utan dubbletter (två ord kan ha samma exempelmening)
+const sameText=(a,b)=>tok(a).join(" ")===tok(b).join(" ");
+function otherSentences(w,n){
+  const out=[];
+  for(const x of shuffle(WORDS.filter(x=>x!==w&&x.sec===w.sec&&x.exT))){
+    if(out.length>=n) break;
+    if(!sameText(x.exT,w.exT)&&!out.some(o=>sameText(o.exT,x.exT))) out.push(x);
+  }
+  return out;
+}
+MC.dict=c=>{const w=c.w, others=otherSentences(w,3);
   return{tab:"Diktamen",head:playBar(),ask:"Vilken mening hörde du?",
     opts:shuffle([w,...others].map(x=>({label:x.exT,ok:x===w,lang:true}))),
     explain:`<p class="ex-sv">${esc(w.exSv)}</p>`,wrongCard:studyCard(w),say:w.exT,sayOnShow:true,wire:()=>wirePlay(r=>speak(w.exT,r))}};
@@ -288,7 +304,7 @@ TYPE.trans=c=>{const w=c.w;return{tab:"Översätt",
   head:`<p class="q-prompt" style="font-size:1.35rem">${esc(w.exSv)}</p>`,
   ask:`Skriv meningen ${L.inLang}. Den innehåller <b ${lang()}>${esc(w.t)}</b>.`,placeholder:"Skriv meningen här",accents:L.accents,
   check:v=>compareTokens(v,w.exT),selfGrade:true,answer:esc(w.exT),explain:tatoebaNote(w),wrongCard:studyCard(w)+tatoebaNote(w),say:w.exT}};
-MC.trans=c=>{const w=c.w, others=shuffle(WORDS.filter(x=>x!==w&&x.exT!==w.exT&&x.sec===w.sec)).slice(0,3);
+MC.trans=c=>{const w=c.w, others=otherSentences(w,3);
   return{tab:"Översätt",head:`<p class="q-prompt" style="font-size:1.35rem">${esc(w.exSv)}</p>`,ask:"Vilken är rätt översättning?",
     opts:shuffle([w,...others].map(x=>({label:x.exT,ok:x===w,lang:true}))),explain:"",wrongCard:studyCard(w),say:w.exT,sayOnAnswer:true}};
 EFFECT.trans=(ref,ok)=>{S.tr=S.tr||{}; const x=S.tr[ref]||{s:0}; S.tr[ref]={s:ok?x.s+1:0,last:Date.now()};};
@@ -348,7 +364,7 @@ function startShadow(){
     .map(w=>({k:"shadow",id:"shadow:"+w.id,ref:w.id,w,t:"type",noRetry:true}));
   $("#tabs").hidden=true; sess=null; beginQuiz("shadow",p,{againFn:["shadow"],label:"Skugga"});
 }
-RESTORE.shadow=ref=>byId[ref]?{w:byId[ref]}:null;
+RESTORE.shadow=ref=>sentById(ref)?{w:sentById(ref)}:null;
 TYPE.shadow=c=>({tab:"Skugga",render:renderShadow,w:c.w,answer:esc(c.w.exT),explain:"",say:c.w.exT});
 function renderShadow(d){
   const w=d.w;
@@ -362,7 +378,7 @@ function renderShadow(d){
   app.querySelectorAll("[data-sh]").forEach(b=>b.onclick=()=>{ if(sess.answered) return; sess.answered=true;
     record(b.dataset.sh==="1"); sess.done++; snapRun(); nextQ(); });
 }
-RECAP.shadow=ref=>byId[ref]?byId[ref].exT:"";
+RECAP.shadow=ref=>sentById(ref)?sentById(ref).exT:"";
 KIND_NAMES.shadow="Skugga";
 
 /* ---------- Samtalsfraser ---------- */
@@ -402,7 +418,9 @@ function startStory(id){
   const items=parseStory(s).gaps.map((g,i)=>({k:"story",id:`story:${id}:${i}`,ref:`${id}:${i}`,t:"mc",canType:false}));
   $("#tabs").hidden=true; sess=null; beginQuiz("story",items,{ctx:{type:"story",id},againFn:["story",id],label:`Berättelse: ${s.title}`});
 }
-RESTORE.story=ref=>storyById(ref.split(":")[0])?{}:null;
+// Innehållet kan ha ändrats sedan passet pausades: frågor vars lucka, fråga eller par inte finns längre hoppas över
+const storyGap=ref=>{const [id,i]=ref.split(":"), s=storyById(id); return s?parseStory(s).gaps[+i]||null:null;};
+RESTORE.story=ref=>storyGap(ref)?{}:null;
 MC.story=c=>{
   const [id,gi]=c.ref.split(":"), s=storyById(id), p=parseStory(s), g=p.gaps[+gi];
   const html=p.parts.map((t,i)=>esc(t)+(i<p.gaps.length?(i<+gi?`<b class="sg done">${esc(p.gaps[i].ans)}</b>`
@@ -417,7 +435,8 @@ EFFECT.story=(ref,ok)=>{const [id,i]=ref.split(":"), s=storyById(id); if(!s) ret
   const k=((s.gaps||[])[+i]||{}).cat==="bindeord"?"bindeord":"tempus"; S.st=S.st||{}; const o=S.st[k]||{r:0,n:0}; o.n++; if(ok)o.r++; S.st[k]=o;};
 RECAP.story=ref=>{const [id,i]=ref.split(":"), s=storyById(id); if(!s) return ""; const g=parseStory(s).gaps[+i]; return g?g.ans:"";};
 AFTER.story=(ctx,right,total)=>{
-  const s=storyById(ctx.id), p=parseStory(s); S.stb=S.stb||{}; S.stb[ctx.id]=Math.max(S.stb[ctx.id]||0,right); save();
+  const s=storyById(ctx.id); if(!s) return renderStart();
+  const p=parseStory(s); S.stb=S.stb||{}; S.stb[ctx.id]=Math.max(S.stb[ctx.id]||0,right); save();
   const full=p.parts.map((t,i)=>t+(i<p.gaps.length?p.gaps[i].ans:"")).join("");
   app.innerHTML=`<section class="panel">${resultHead(`Berättelse: ${s.title}`,right,total)}
     <p class="story" ${lang()}>${p.parts.map((t,i)=>esc(t)+(i<p.gaps.length?`<b class="sg done">${esc(p.gaps[i].ans)}</b>`:"")).join("")}</p>
@@ -469,8 +488,9 @@ function startTextQs(k,id){
   const items=t.questions.map((q,i)=>({k,id:`${k}:${id}:${i}`,ref:`${id}:${i}`,t:"mc",noRetry:true}));
   sess=null; beginQuiz(k,items,{ctx:{type:k,id},label:(k==="lq"?"Hörförståelse: ":"Läsförståelse: ")+t.title});
 }
-RESTORE.lq=ref=>textById("lq",ref.split(":")[0])?{}:null;
-RESTORE.rq=ref=>textById("rq",ref.split(":")[0])?{}:null;
+const textQById=(k,ref)=>{const [id,i]=ref.split(":"), t=textById(k,id), q=t&&(t.questions||[])[+i]; return q&&Array.isArray(q.opts)?q:null;};
+RESTORE.lq=ref=>textQById("lq",ref)?{}:null;
+RESTORE.rq=ref=>textQById("rq",ref)?{}:null;
 function textQ(c){
   const k=c.k, [id,i]=c.ref.split(":"), t=textById(k,id), q=t.questions[+i];
   const kind={helhet:"Helheten",detalj:"Detaljer",tolkning:"Tolka"}[q.type]||"";
@@ -483,7 +503,7 @@ function textQ(c){
 }
 MC.lq=MC.rq=textQ;
 AFTER.lq=AFTER.rq=(ctx,right,total)=>{
-  const k=ctx.type, t=textById(k,ctx.id); S.tx=S.tx||{}; const o=S.tx[ctx.id]||{};
+  const k=ctx.type, t=textById(k,ctx.id); if(!t) return renderStart(); S.tx=S.tx||{}; const o=S.tx[ctx.id]||{};
   S.tx[ctx.id]={r:right,n:total,best:Math.max(o.best||0,right),last:Date.now()}; save();
   app.innerHTML=`<section class="panel">${resultHead(k==="lq"?"Hörförståelse klar":"Läsförståelse klar",right,total)}
     <p class="plan">${k==="lq"?"Här är texten. Lyssna en gång till medan du läser. Tryck på ord du vill spara, så samlas de under texten."
@@ -606,25 +626,42 @@ function openWriting(){
     (C().prompts||[]).map(p=>({id:p.id,title:p.title,sec:p.sec,status:S.wr[p.id]?`${S.wr[p.id].words} ord`:""})),writeScreen);
 }
 // Finns ordet i texten? Substantiv räknas även utan artikel och i plural, verb även i böjd form (samma stam).
+// Artikeln tas bara bort när den står som ett eget ord (följd av mellanslag eller apostrof), så att
+// "der Lehrer" blir "Lehrer" och inte "hrer", och "insalata" inte blir "nsalata".
+const stripArt=(s,re)=>{const m=re&&s.match(re); return m&&/[\s']$/.test(m[0])?s.slice(m[0].length):s;};
 function usesWord(text,w){
+  text=apos(text);
   if(variants(w.t).some(v=>v.length>2&&hasWord(text,v))) return true;
-  const base=w.t.replace(/\(.*?\)/g,"").trim();
-  if(w.g){ const bare=base.replace(L.hintStrip||/^$/,"").replace(/^(le|la|les|l')\s?/i,"");
+  const base=apos(w.t.replace(/\(.*?\)/g,"").trim());
+  if(w.g){ let bare=stripArt(base,L.hintStrip); (L.articles||[]).forEach(re=>{bare=stripArt(bare,re);});
     const pl=L.genderGame&&typeof genderNouns==="function"?(genderNouns().find(n=>n.w.id===w.id)||{}).pl:null;
     return [bare,pl,pl&&pl+"n"].some(v=>v&&v.length>2&&hasWord(text,v)); }
   const m=base.replace(/^(sich|se|s')\s*/i,"").match(/^(\p{L}{4,}?)(en|er|ir|re|n)$/u);
   return !!m&&new RegExp("(^|[^\\p{L}])(ge)?"+reEsc(m[1])+"\\p{L}*","iu").test(text);
 }
+// Bindeorden i texten. På varje ställe räknas bara det längsta bindeordet som passar:
+// "même si" räknas inte också som "si", och "alors que" inte också som "alors".
+function foundConnectors(text,list){
+  text=apos(text); const hits=[];
+  (list||[]).forEach(c=>{const re=new RegExp("(^|[^\\p{L}])("+reEsc(apos(c))+")(?![\\p{L}])","giu"); let m;
+    while((m=re.exec(text))){ const i=m.index+m[1].length; hits.push({c,i,j:i+m[2].length}); re.lastIndex=i+1; }});
+  hits.sort((a,b)=>(b.j-b.i)-(a.j-a.i)||a.i-b.i);
+  const taken=[], found=[];
+  hits.forEach(h=>{ if(taken.some(t=>h.i<t.j&&t.i<h.j)) return; taken.push(h); if(!found.includes(h.c)) found.push(h.c); });
+  return (list||[]).filter(c=>found.includes(c));
+}
 function writeChecks(p,text){
+  text=apos(text);
   const n=tok(text).length, need=p.need||{}, out=[];
   out.push({ok:n>=p.min&&n<=p.max,label:`Antal ord: ${n} (mål ${p.min}–${p.max})`});
-  if(need.connectors){const f=(L.connectors||[]).filter(c=>hasWord(text,c)); out.push({ok:f.length>=need.connectors,label:`Bindeord: ${f.length} av ${need.connectors}${f.length?` (${f.join(", ")})`:""}`});}
+  if(need.connectors){const f=foundConnectors(text,L.connectors); out.push({ok:f.length>=need.connectors,label:`Bindeord: ${f.length} av ${need.connectors}${f.length?` (${f.join(", ")})`:""}`});}
   // Kapitelorden hoppas över om kapitlet saknas (t.ex. när bokmappen inte finns)
   if(need.chapterWords&&p.sec&&WORDS.some(w=>w.sec===p.sec)){const f=WORDS.filter(w=>w.sec===p.sec&&usesWord(text,w)).map(w=>w.t);
     out.push({ok:f.length>=need.chapterWords,label:`Ord från kapitlet: ${f.length} av ${need.chapterWords}${f.length?` (${f.slice(0,5).join(", ")})`:""}`});}
   (need.tenses||[]).forEach(t=>{const rx=(L.tenseCheck||{})[t]; if(rx) out.push({ok:rx(text),label:`${t[0].toUpperCase()+t.slice(1)} verkar finnas med`});});
   return out;
 }
+const textHash=s=>{let h=0; for(const c of String(s).trim()) h=(h*31+c.codePointAt(0))|0; return h;};
 function writeScreen(id){
   const p=(C().prompts||[]).find(x=>x.id===id); S.drafts=S.drafts||{}; S.wr=S.wr||{};
   const dk="w:"+id, start=Date.now();
@@ -645,9 +682,16 @@ function writeScreen(id){
   ta.oninput=()=>{draw(); clearTimeout(tm); tm=setTimeout(()=>{S.drafts[dk]=ta.value; save(); const m=$("#wmsg"); if(m) m.textContent="Sparat.";},800);};
   draw();
   $("#copy").onclick=()=>copyText(ta,$("#wmsg"));
+  // Flera tryck på Klar ger en enda loggpost: samma text räknas inte igen, och en ändrad text uppdaterar
+  // loggposten från det här besöket i stället för att lägga till en ny
+  let entry=null;
   $("#done").onclick=()=>{ const n=tok(ta.value).length; if(!n) return;
-    S.drafts[dk]=ta.value; S.wr[id]={words:n,last:Date.now()};
-    S.log.push({kind:"write",d:Date.now(),dur:Math.min(3600,Math.round((Date.now()-start)/1000)),right:0,total:0,words:n}); save(); boardPush();
+    const h=textHash(ta.value), same=S.wr[id]&&S.wr[id].h===h;
+    S.drafts[dk]=ta.value; S.wr[id]={words:n,last:Date.now(),h};
+    const dur=Math.min(3600,Math.round((Date.now()-start)/1000));
+    if(entry&&S.log.includes(entry)) Object.assign(entry,{dur,words:n});
+    else if(!same){ entry={kind:"write",d:Date.now(),dur,right:0,total:0,words:n}; S.log.push(entry); }
+    save(); boardPush();
     $("#wmsg").textContent=L.selfStudy?"Klart! Jämför med exempeltexten nedanför: hittar du konstruktioner du kan låna?":"Klart! Glöm inte att kopiera texten och skicka den till din lärare."; };
   $("#quit").onclick=openWriting;
   window.scrollTo(0,0);
@@ -665,9 +709,13 @@ function dailyPanel(newW,due){
 }
 function startDaily(newW,due){
   if(newW.length||due.length){ startSession(newW,due); sess.daily=true; snapRun(); }
-  else { startMix(); if(sess) sess.daily=true; }
+  else startMix(true);
 }
-function startMix(){
+// daily===true: rundan hör till Dagens pass. Det skickas med till beginQuiz, så att det gäller även när eleven
+// först får frågan om den påbörjade rundan och väljer "Börja om" (eller "Fortsätt").
+// (Knappen efter glosorna anropar startMix med klickhändelsen, därför jämförs med true.)
+function startMix(daily){
+  daily=daily===true;
   const items=[], add=(arr,n)=>items.push(...shuffle(arr).slice(0,n));
   const sp=sentencePool().filter(w=>tok(w.exT).length>=3);
   add(sp.map(dictItem),3);
@@ -677,7 +725,8 @@ function startMix(){
   add(clozePool().map(clozeItem),3);
   if(hasGrammar()) add(gramItems("mix",6),3);
   if(!items.length) return renderStart();
-  $("#tabs").hidden=true; sess=null; beginQuiz("mix",shuffle(items),{againFn:["mix"],label:"Blandad runda"});
+  if(daily&&S.runs&&S.runs.mix) S.runs.mix.daily=true;
+  $("#tabs").hidden=true; sess=null; beginQuiz("mix",shuffle(items),{againFn:["mix"],label:"Blandad runda",...(daily?{daily:true}:{})});
 }
 
 /* ---------- Gemensam slutskärm för alla övningar utom glosquizet ---------- */
@@ -761,7 +810,9 @@ AFTER.ktest=(ctx,right,total,miss)=>{
 
 /* ---------- Kapitlets mål ----------
    content/mal.json = [{id, sec, goals: ["Jag kan …"]}]: vad eleven ska kunna efter avsnittet, som bokens "I det här kapitlet …".
-   Visas på startsidan för avsnittet man är på. Eleven bockar av det hon eller han kan (S.mal["<id>|<nr>"] = tid). */
+   Visas på startsidan för avsnittet man är på. Eleven bockar av det hon eller han kan (S.mal["<id>|<nr>"] = tid).
+   VIKTIGT: nyckeln är målets plats i listan. Nya mål ska läggas SIST i goals, och mål får inte flyttas eller tas bort
+   ur mitten (skriv hellre om texten på samma plats), annars hamnar elevens bockar på fel mål. Ändra inte id. */
 const malFor=sec=>(C().mal||[]).find(m=>m.sec===sec)||(C().mal||[]).find(m=>typeof sameChapter==="function"&&SECTIONS.some(s=>s.id===m.sec)&&sameChapter(m.sec,sec));
 function goalsPanel(){
   const sec=curSec(), m=sec&&malFor(sec); if(!m) return "";
@@ -796,13 +847,13 @@ function startUttal(set){
   if(!SOUND) setSound(true);
   $("#tabs").hidden=true; sess=null; beginQuiz("utt",items,{againFn:["utt",set],label:set?`Uttal: ${uttById(set).title}`:"Uttal: blandat",ctx:{type:"utt",id:set||"*"}});
 }
-RESTORE.utt=ref=>{const [id,pi,wi]=ref.split("|"), u=uttById(id); return u&&u.pairs[+pi]&&u.pairs[+pi][+wi]?{}:null;};
+RESTORE.utt=ref=>RECAP.utt(ref)?{}:null;
 MC.utt=c=>{const [id,pi,wi]=c.ref.split("|"), u=uttById(id), p=u.pairs[+pi], w=p[+wi];
   return{tab:"Uttal",head:`<p class="q-prompt" style="font-size:1.3rem">Vilket ord hör du?</p>${playBar()}`,ask:esc(u.title),
     opts:p.map((x,j)=>({label:x,ok:j===+wi,lang:true})),
     explain:`<p>${p.map(x=>`<span ${lang()}><b>${esc(x)}</b></span> <button type="button" class="speak xs" data-say="${esc(x)}" aria-label="Läs upp ${esc(x)}">${SPK}</button>`).join(" · ")}</p>${u.tip?`<p>${rmark(u.tip)}</p>`:""}`,
     say:w,sayOnShow:true,wire:()=>wirePlay(r=>speak(w,r))};};
-RECAP.utt=ref=>{const [id,pi,wi]=ref.split("|"), u=uttById(id); return u?u.pairs[+pi][+wi]:"";};
+RECAP.utt=ref=>{const [id,pi,wi]=ref.split("|"), u=uttById(id), p=u&&u.pairs[+pi]; return p&&p[+wi]||"";};
 AFTER.utt=(ctx,right,total,miss)=>{
   S.ut=S.ut||{}; const pc=total?Math.round(100*right/total):0; if(ctx.id!=="*") S.ut[ctx.id]=Math.max(S.ut[ctx.id]||0,pc); save();
   app.innerHTML=`<section class="panel">${resultHead("Uttal klart",right,total)}
@@ -824,7 +875,7 @@ function startTeori(){
   if(!items.length) return renderStart();
   $("#tabs").hidden=true; sess=null; beginQuiz("teori",shuffle(items),{againFn:["teori"],label:"Teoriprovet"});
 }
-RESTORE.teori=ref=>teoriById(ref)?{}:null;
+RESTORE.teori=ref=>{const x=teoriById(ref); return x&&Array.isArray(x.opts)&&x.opts[x.a]!==undefined?{}:null;};
 MC.teori=c=>{const x=teoriById(c.ref);
   return{tab:"Teori",head:`<p class="q-prompt" style="font-size:1.25rem" ${lang()}>${rmark(x.q)}</p><details class="more"><summary>Visa på svenska</summary><p class="ex-sv">${esc(x.sv||"")}</p></details>`,
     ask:"Välj rätt svar.",opts:x.opts.map((o,j)=>({label:o,ok:j===x.a,lang:true})),

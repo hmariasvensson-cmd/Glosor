@@ -2,6 +2,19 @@
 
 Punkter som har flyttats från [`BACKLOG.md`](BACKLOG.md) när de byggdes. **Referens** anger backloggens rubrik och prioritet. **Commit** anger var ändringen finns i git. **Publicerat** anger versionen av artefakten på https://claude.ai/artifact/YBQv8j4qXQQLuPwLAWt5mP.
 
+## 2026-09-28, del 5 (publicerat som version 25)
+
+Önskemål från föräldern: *gå igenom och hitta buggar, kolla arkitekturen*. Tre granskningar (sparande och rättning, övningarna, arkitekturen) och rättelser. Testerna har 291 kontroller.
+
+| Referens | Vad som byggdes | Commit |
+|---|---|---|
+| Sparande | Molnkopian delas upp i flera dokument (`<storageKey>`, `~w0…`, `~log`), eftersom ett dokument får vara högst 256 KiB och en elev med alla ord i Tyska 5 annars skulle slå i taket (synken slutade då tyst). Gamla dokument läses som förut. Bara ändrade delar skrivs. En tydlig varning visas om något ändå inte går att spara. | se git log |
+| Sparande | Den som kommit längst vinner även när loggen är full (ny räknare `nLog`), vid lika vinner den senaste. Ett läge från en annan enhet tas inte emot mitt i ett pass. Sparningar köas per kurs, och appen ansluter igen efter nätverksfel. Sen kursfil byter inte kurs mitt i ett pass. Topplistans uppdateringar tappas inte vid kursbyte. | se git log |
+| Rättning | Verbträningen godkänner "ils sont", "ont", "sieht", "wird" m.fl. (pronomen kräver mellanslag). Facit med komma delas bara när det är två former av samma ord. "ss" godkänns för "ß". Typografisk apostrof (’ från iPad) godkänns i grammatiken och i skrivchecklistan. Italienska artiklar tas bara bort när de står som eget ord. | se git log |
+| Övningar | Ett avbrutet glospass går att fortsätta efter en annan övning. Pass som återupptas efter att innehållet ändrats kraschar inte. Dagens pass syns efter "Avbryt". Hitta felet visar inga ihopklistrade ord och har alltid minst tre alternativ. Skrivuppgifter loggas en gång per text. Provsimuleringen visar aldrig "null %". Hörprov med ljudet av slår på ljudet. Bindeord räknas inte dubbelt ("même si" ≠ "si"). Repetitionsdatum räknas i kalenderdagar (sommartid). | se git log |
+| Säkerhet | Topplistan tvingar fram tal och escapar allt från databasen (XSS). Tyck till och felrapporter ligger under `feedback/<uid>/msgs` och `reports/<uid>/items` och kan bara läsas av eleven själv och föräldern (nya åtkomstregler). De 6 befintliga meddelandena och 1 rapporten är flyttade. | se git log |
+| build.py | Stoppar vid facit utanför alternativen, okänt kapitel, glosor som inte finns i texten och dubblettord i words.txt. | se git log |
+
 ## 2026-09-28, del 4 (publicerat som version 24)
 
 | Referens | Vad som byggdes | Commit |

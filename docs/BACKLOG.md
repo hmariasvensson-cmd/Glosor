@@ -6,7 +6,7 @@ Underlag finns i `docs/ovningsforslag.md` (franska), `docs/ovningsforslag-tyska.
 
 ## Tyck till från eleverna
 
-- **Löpande (prioriteras först):** läs nya meddelanden i `feedback/` (ArtifactData, `status: "ny"`), för in önskemålen här, och sätt `status` och `reply` i dokumentet så att eleven ser vad som hände (se CLAUDE.md). Elevernas önskemål går före annat i backloggen.
+- **Löpande (prioriteras först):** läs nya meddelanden i `feedback/<uid>/msgs` för varje uid i `board` (ArtifactData, `status: "ny"`), för in önskemålen här, och sätt `status` och `reply` i dokumentet så att eleven ser vad som hände (se CLAUDE.md). Elevernas önskemål går före annat i backloggen.
 
 ## Färre men mer värdefulla övningar (granskning 2026-09-28)
 
@@ -57,7 +57,7 @@ Emma pluggar på egen hand, utan kurs, lärare och lärobok. Tyskan bygger därf
 - **P2: Studieplan för självstudier:** ett förslag på vilket kapitel och vilka grammatikområden per vecka, så att hela Tyska 5 täcks på en termin.
 
 - **P2: Större ordförråd, steg 3.** 1 629 ord nu. B2 kräver ungefär 3 000–4 000 ord. Fortsätt FrequencyWords från rang 2010 (CC BY-SA 4.0), eller använd kaikki/Wiktionary. Goethes listor är upphovsrättsskyddade och får inte kopieras.
-- **P2: Granskning av grammatikfrågorna** (390 tyska, 322 franska) av en lärare eller modersmålstalare, åtminstone ett stickprov på 10 %. Gå också igenom elevernas rapporter i `reports/` (läs dem med ArtifactData) och rätta i källfilerna.
+- **P2: Granskning av grammatikfrågorna** (390 tyska, 322 franska) av en lärare eller modersmålstalare, åtminstone ett stickprov på 10 %. Gå också igenom elevernas rapporter i `reports/<uid>/items` (läs dem med ArtifactData) och rätta i källfilerna.
 - **P3: Verbdata från Wiktionary/kaikki** i stället för handskrivna verbtabeller.
 
 ## Franska (Franska 3, mot A och B1)
@@ -82,6 +82,19 @@ Emma pluggar på egen hand, utan kurs, lärare och lärobok. Tyskan bygger därf
   - Arbetssätt som fungerade för Franska 4 och Tyska 6: glosorna i två halvor av två agenter (med dubblettkontroll mot tidigare kurser och mot varandra), allt övrigt innehåll av en tredje. Modelltexterna i skrivuppgifterna ska skrivas **efter** ordlistan, annars saknar de kapitelord.
   - Innehållet är AI-skrivet och behöver granskas med stickprov, som de andra kurserna.
 - **P2: Franska 4 och Tyska 6: granskning och videor.** Båda kurserna (2026-09-28) är AI-skrivna och har inga videor (`videos.json` är tom). Kontrollera särskilt uttalsparen cote/côte och Paul/pôle (fr4) och wanke/zanke, Suhle/Kuhle (de6) med en riktig röst, modalpartiklarna i Hitta felet (de6) och faktauppgifterna i kultur- och historietexterna. Franska 4 har musikteori bara i Franska 3; Tyska 6 har den bara i Tyska 5.
+
+## Arkitektur (granskning 2026-09-28)
+
+Det som inte rättades direkt efter granskningen. Buggarna och molnsparandet är rättade (se KLART.md, version 25).
+
+- **P2: Id-lås i build.py:** en incheckad `languages/<kod>/ids.lock` med alla ord-, avsnitts- och innehålls-id. Bygget stoppar om ett id försvinner eller byter namn, eller om en `storageKey` ändras eller finns två gånger. Skyddar framstegen mot misstag i ordlistorna.
+- **P2: Ett register per övningstyp:** i dag är varje typ utspridd på MC, TYPE, RESTORE, EFFECT, RECAP, AFTER, AGAIN och KIND_NAMES. Ersätt med `defineKind(namn, {...})` och ett test att varje typ har allt den behöver. Dela sedan `exercises.js` i en fil per typ (`src/kinds/`), som build.py läser med glob.
+- **P2: Arv mellan kurser vid bygget** i stället för getters (`extends: "de"` som build.py slår ihop, eller `languages/<språk>/common.js`). Behövs innan det blir 21 kurser. Flytta också `grammar.topics/rules` till datafilen, så att index.html inte växer med varje kurs.
+- **P3: `DATA_VERSION` per kurs**, så att en ändring i en kurs inte tvingar eleverna att hämta alla kursers data igen.
+- **P3: Schemaversion `S.v` och numrerade migreringar**, och alla fält i `S` dokumenterade på ett ställe.
+- **P3: Tester:** spela igenom alla kurser i en loop över `Object.keys(LANGUAGES)` (i dag får fr4, de6 och it röktest), synk mellan två enheter, fasta väntetider ersatta med `wait(cond)`.
+- **P3: Fältet `.fr`** används för målspråket i alla språk. Byt namn eller läs det via en hjälpfunktion.
+- **P3: Minne:** hämtade kurser ligger kvar tills sidan laddas om. Släpp kurser man inte använder när det blir många.
 
 ## Konton, sparande och topplista
 

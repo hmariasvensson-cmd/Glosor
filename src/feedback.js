@@ -1,5 +1,5 @@
 /* ---------- Tyck till: eleven skriver önskemål, vad som är krångligt eller vad som är fel ----------
-   Meddelandena sparas i feedback/<uid>-<tid> i artefaktens db. Claude läser dem med ArtifactData, för in dem i
+   Meddelandena sparas i feedback/<uid>/msgs/<tid> i artefaktens db (bara eleven själv och föräldern kan läsa dem, se reglerna i CLAUDE.md). Claude läser dem med ArtifactData, för in dem i
    docs/BACKLOG.md och skriver status och svar (fälten status och reply) i samma dokument. Eleven ser dem här.
    Utan inloggning sparas meddelandet bara i den här webbläsaren (S.feedback). */
 const FB_KINDS={wish:"Önskemål",hard:"Krångligt",bug:"Något är fel",other:"Annat"};
@@ -9,7 +9,7 @@ const TT={kind:"wish",text:"",mine:null};
 async function loadTyckTill(){
   if(!CLOUD.db||!CLOUD.uid) return (S.feedback||[]).slice();
   try{
-    const s=await CLOUD.db.collection("feedback").where("uid","==",CLOUD.uid).get();
+    const s=await CLOUD.db.collection(`feedback/${CLOUD.uid}/msgs`).get();
     return s.docs.map(d=>({id:d.id,...d.data()}));
   }catch(e){ return (S.feedback||[]).slice(); }
 }
@@ -54,6 +54,7 @@ ${text.slice(0,2000)}
 }
 async function sendTyckTill(){
   const text=TT.text.trim(), btn=$("#fbsend"), msg=$("#fbmsg");
+  if(!btn||btn.disabled) return;
   if(!text){ msg.textContent="Skriv något först."; $("#fbtext").focus(); return; }
   btn.disabled=true;
   let qs=[];
@@ -62,7 +63,8 @@ async function sendTyckTill(){
     try{ const r=await SAMPLE.json(clarifyPrompt(TT.kind,text),{cache:false});
       if(r&&r.tydligt===false&&Array.isArray(r.fragor)) qs=r.fragor.filter(q=>typeof q==="string"&&q.trim()).slice(0,3); }catch(e){}
   }
-  if(!qs.length) return saveTyckTill(text,[]);
+  // Har eleven bytt flik medan Claude läste skickas meddelandet utan frågor, så att det inte går förlorat
+  if(!qs.length||curView!=="fb"||!document.body.contains(btn)||!document.body.contains(msg)) return saveTyckTill(text,[]);
   const ans={};
   btn.textContent="Skicka"; btn.disabled=false;
   msg.innerHTML=`<div class="fbq"><p><b>Några snabba frågor, så att det blir rätt:</b></p>${qs.map((q,i)=>`<div class="fbqrow"><p>${esc(q)}</p>
@@ -70,18 +72,20 @@ async function sendTyckTill(){
     <button class="btn" id="fbqsend">Skicka med svaren</button></div>`;
   msg.querySelectorAll("[data-qa]").forEach(b=>b.onclick=()=>{ans[b.dataset.qa]=b.dataset.v;
     msg.querySelectorAll(`[data-qa="${b.dataset.qa}"]`).forEach(x=>x.setAttribute("aria-pressed",x===b));});
-  const send=()=>saveTyckTill(text,qs.map((q,i)=>({q,a:ans[i]||"–"})));
+  let sent=false;   // bara en gång, även om eleven trycker två gånger
+  const send=()=>{ if(sent) return; sent=true; const b=$("#fbqsend"); if(b) b.disabled=true; saveTyckTill(text,qs.map((q,i)=>({q,a:ans[i]||"–"}))); };
   $("#fbqsend").onclick=send; btn.onclick=send;
 }
 async function saveTyckTill(text,qa){
-  const btn=$("#fbsend"), msg=$("#fbmsg");
-  btn.disabled=true; btn.textContent="Skickar …";
+  const btn=$("#fbsend"), msg=$("#fbmsg");   // kan saknas om eleven har bytt flik
+  if(btn){ btn.disabled=true; btn.textContent="Skickar …"; }
   const f={kind:TT.kind,text:text.slice(0,2000),qa,lang:L.code,course:L.course||L.name,t:Date.now(),status:"ny",reply:""};
   let ok=false;
-  if(CLOUD.db&&CLOUD.uid){ try{ await CLOUD.db.doc(`feedback/${CLOUD.uid}-${f.t}`).set({...f,uid:CLOUD.uid}); ok=true; }catch(e){} }
+  if(CLOUD.db&&CLOUD.uid){ try{ await CLOUD.db.doc(`feedback/${CLOUD.uid}/msgs/${f.t}`).set({...f,uid:CLOUD.uid}); ok=true; }catch(e){} }
   if(!ok){ S.feedback=(S.feedback||[]).slice(-49); S.feedback.push(f); save(); }
-  TT.text=""; $("#fbtext").value="";
-  btn.disabled=false; btn.textContent="Skicka"; btn.onclick=sendTyckTill;
-  msg.textContent=ok?"Tack! Meddelandet är skickat.":"Meddelandet är sparat i den här webbläsaren, men kunde inte skickas. Öppna appen inloggad på claude.ai och skicka igen.";
+  TT.text=""; const ta=$("#fbtext"); if(ta) ta.value="";
+  const b2=$("#fbsend"), m2=$("#fbmsg");
+  if(b2){ b2.disabled=false; b2.textContent="Skicka"; b2.onclick=sendTyckTill; }
+  if(m2) m2.textContent=ok?"Tack! Meddelandet är skickat.":"Meddelandet är sparat i den här webbläsaren, men kunde inte skickas. Öppna appen inloggad på claude.ai och skicka igen.";
   showTyckTill();
 }

@@ -34,7 +34,7 @@ function openExam(){
   stopSpeech(); clearInterval(EXCLOCK); EXSIM=null; $("#tabs").hidden=true; sess=null;
   const e=EX(), st=exState();
   const row=t=>{const o=st.t[t.id]; return `<button class="game" data-xt="${t.id}"><span><b>${esc(t.teil?t.teil+": ":"")}${esc(t.title)}</b>
-    <small>${(t.prep||0)+(t.time||0)} min${t.minWords?` · minst ${t.minWords} ord`:""}${o?` · senast ${o.pct} %, bäst ${o.best} %`:""}</small></span><span class="go" aria-hidden="true">›</span></button>`;};
+    <small>${(t.prep||0)+(t.time||0)} min${t.minWords?` · minst ${t.minWords} ord`:""}${o&&o.pct!=null?` · senast ${o.pct} %, bäst ${o.best} %`:""}</small></span><span class="go" aria-hidden="true">›</span></button>`;};
   const sims=(st.sims||[]).slice(-5).reverse();
   app.innerHTML=`<section class="panel"><span class="tab">Prov</span><h2>Provträning: ${esc(e.name)}</h2>
     <p class="plan">Uppgifter i samma format och med samma tider som på provet. Läsa och lyssna rättas direkt. Skriva och tala bedöms av Claude efter provets kriterier. Gränsen för godkänt är <b>${e.pass} %</b>.</p>
@@ -65,11 +65,15 @@ function simNext(pct){
   const t=exTask(EXSIM.ids[EXSIM.i]); EXSIM.res[t.part]=pct; EXSIM.i++;
   if(EXSIM.i<EXSIM.ids.length) return examTask(EXSIM.ids[EXSIM.i]);
   const st=exState(), e=EX(); st.sims=(st.sims||[]).slice(-19); st.sims.push({d:Date.now(),parts:EXSIM.res}); save();
+  // Delar utan resultat (skrivdelen utan bedömning från Claude) räknas inte som godkända eller underkända
   const vals=Object.values(EXSIM.res).filter(v=>v!=null), ok=vals.length&&vals.every(v=>v>=e.pass);
+  const skipped=Object.entries(EXSIM.res).filter(([,v])=>v==null).map(([p])=>exPart(p).name);
+  const msg=!skipped.length?(ok?`Alla delar över ${e.pass} %. Det hade räckt för godkänt på de här delarna.`:`Gränsen är ${e.pass} % i varje del. Öva mer på delarna under gränsen.`)
+    :`${skipped.join(" och ")} blev inte ${skipped.length===1?"bedömd":"bedömda"}, så simuleringen visar inte om du hade klarat provet. `
+      +(!vals.length?"":ok?`De bedömda delarna är över ${e.pass} %.`:`Gränsen är ${e.pass} % i varje del. Öva mer på delarna under gränsen.`);
   app.innerHTML=`<section class="panel"><span class="tab">Prov</span><h2>Resultat av simuleringen</h2>
     <table class="tbl"><tr><th>Del</th><th>Resultat</th></tr>${Object.entries(EXSIM.res).map(([p,v])=>`<tr><td>${esc(exPart(p).name)}</td><td>${passTag(v)}</td></tr>`).join("")}</table>
-    <p class="plan">${ok?`Alla delar över ${e.pass} %. Det hade räckt för godkänt på de här delarna.`
-      :`Gränsen är ${e.pass} % i varje del. Öva mer på delarna under gränsen.`}${Object.values(EXSIM.res).some(v=>v==null)?" Skrivdelen blev inte bedömd, eftersom Claude inte var tillgänglig.":""}</p>
+    <p class="plan">${msg}</p>
     <p class="foot">Den muntliga delen ingår inte. Öva den under Tala i provträningen.</p>
     <button class="btn" id="back">Till provträningen</button></section>`;
   EXSIM=null; $("#back").onclick=openExam; window.scrollTo(0,0);
@@ -91,14 +95,15 @@ function examMC(t){
   let plays=0, ans={};
   app.innerHTML=`<section class="panel">${exHead(t,listen?"Lyssna":"Läsa")}
     ${listen?`<div class="listen"><button type="button" class="btn ghost" id="explay">${PLAY} Spela upp</button><button type="button" class="btn ghost" id="stop">Stoppa</button></div>
-      <p class="foot" id="plays">${t.plays?`På provet hör du texten ${t.plays===1?"en gång":t.plays+" gånger"}.`:""}</p><div id="lines" hidden>${exLines(t)}</div>`:exLines(t)}
+      <p class="foot" id="plays">${SOUND?"":"Ljudet är avstängt. Det slås på när du trycker på Spela upp. "}${t.plays?`På provet hör du texten ${t.plays===1?"en gång":t.plays+" gånger"}.`:""}</p><div id="lines" hidden>${exLines(t)}</div>`:exLines(t)}
   </section>
   <section class="panel"><div class="exqs">${t.qs.map((q,i)=>`<div class="exq" data-q="${i}"><p class="q-ask"><b>${i+1}.</b> <span ${lang()}>${esc(q.q)}</span></p>
     <div class="opts">${q.opts.map((o,j)=>`<button class="opt" data-o="${j}"><span class="k">${String.fromCharCode(97+j)}</span><span ${lang()}>${esc(o)}</span></button>`).join("")}</div><div class="exwhy"></div></div>`).join("")}</div>
     <button class="btn" id="exdone">Lämna in</button><div id="exres"></div></section>${exQuit()}`;
   exClock(t.time||10,"Tid kvar");
-  if(listen){ $("#explay").onclick=()=>{ plays++; speakSeq(t.lines,undefined);
-      if(t.plays) $("#plays").textContent=`Uppspelad ${plays} ${plays===1?"gång":"gånger"}. På provet hör du texten ${t.plays===1?"en gång":t.plays+" gånger"}.`; };
+  // Hörtexten går inte att höra med ljudet av: då slås ljudet på (som i uttalsövningen), så att uppspelningen räknas rätt
+  if(listen){ $("#explay").onclick=()=>{ if(!SOUND) setSound(true); plays++; speakSeq(t.lines,undefined);
+      $("#plays").textContent=t.plays?`Uppspelad ${plays} ${plays===1?"gång":"gånger"}. På provet hör du texten ${t.plays===1?"en gång":t.plays+" gånger"}.`:""; };
     $("#stop").onclick=stopSpeech; }
   app.querySelectorAll(".exq").forEach(qe=>qe.querySelectorAll(".opt").forEach(b=>b.onclick=()=>{
     if($("#exdone").disabled) return; ans[qe.dataset.q]=+b.dataset.o;
@@ -142,6 +147,7 @@ Bedöm som på provet och svara på svenska med bara ett JSON-objekt:
  "niva": "ungefärlig nivå enligt GERS"}
 5 poäng = helt på ${e.name.includes("B2")?"B2":"B1"}-nivå, 3 = precis godkänt, 0 = saknas. Var ärlig: en för kort text, eller en text som missar punkter i uppgiften, får låga poäng på uppgiften. Högst 8 fel, de viktigaste först.`;
 }
+// Procent av kriteriernas poäng, eller null när svaret saknar kriterier (då sparas inget resultat)
 const exScore=f=>{const k=(f&&f.kriterier)||[]; const n=k.length*5, r=k.reduce((a,x)=>a+Math.max(0,Math.min(5,+x.poang||0)),0); return n?exPct(r,n):null;};
 const renderExamFb=f=>f?`${(f.kriterier||[]).length?`<table class="tbl"><tr><th>Kriterium</th><th>Poäng</th></tr>${f.kriterier.map(k=>`<tr><td>${esc(String(k.namn||""))}<br><small>${esc(String(k.kommentar||""))}</small></td><td>${Math.max(0,Math.min(5,+k.poang||0))}/5</td></tr>`).join("")}</table>
   <p class="plan">Sammanlagt ${passTag(exScore(f))} (gränsen är ${EX().pass} %).</p>`:""}${renderFeedback(f)}`:"";
@@ -179,7 +185,10 @@ function examText(t,speak){
     try{
       const f=await SAMPLE.json(examPrompt(t,text,speak),{signal:ctl.signal,cache:false});
       if(!f||typeof f!=="object") throw {code:"invalid_json"};
-      f.d=Date.now(); S.fb[dk]=f; graded=exScore(f); exSave(t,graded,start); out.innerHTML=renderExamFb(f);
+      f.d=Date.now(); S.fb[dk]=f; graded=exScore(f);
+      // Utan poäng (inga kriterier i svaret) sparas inget resultat, så att det inte blir "null %"
+      if(graded==null){ save(); out.innerHTML=renderExamFb(f)+`<p class="foot">Bedömningen saknade poäng. Försök igen.</p>`; return; }
+      exSave(t,graded,start); out.innerHTML=renderExamFb(f);
       clearInterval(EXCLOCK);
     }catch(e){ out.innerHTML=renderExamFb(S.fb[dk])+(e&&e.code==="cancelled"?"":`<p class="foot">Bedömningen misslyckades. Försök igen om en stund.</p>`); }
     finally{ ctl=null; btn.textContent=speak?"Få kommentarer av Claude":"Lämna in och få bedömning av Claude"; }

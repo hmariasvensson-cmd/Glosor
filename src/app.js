@@ -59,6 +59,8 @@ const INT=[1,3,7,20,40,80,160];
 const DAYS=[0,0,3,7,20,45,90];
 const DAY=864e5;
 const dayStart=ts=>{const d=new Date(ts); d.setHours(0,0,0,0); return d.getTime();};
+// Midnatt n kalenderdagar efter ts. Inte dayStart+n*DAY, som blir en timme fel över sommartidsskiftet.
+const addDays=(ts,n)=>{const d=new Date(ts); d.setHours(0,0,0,0); d.setDate(d.getDate()+n); return d.getTime();};
 const isDue=x=>x.dd?x.dd<=Date.now():x.due<=S.pass;
 const MASTER=4, MAXDUE=40;   // MAXDUE = högst så många repetitioner per pass, resten väntar till nästa
 let S;
@@ -67,7 +69,7 @@ function loadState(){
   try{Object.assign(S,JSON.parse(localStorage.getItem(L.storageKey)||"{}"))}catch(e){}
   normState();
 }
-function normState(){ if(!Array.isArray(S.log))S.log=[]; S.w=S.w||{}; S.vt=S.vt||{}; S.vv=S.vv||{}; migrateRetired(); }
+function normState(){ if(!Array.isArray(S.log))S.log=[]; S.w=S.w||{}; S.vt=S.vt||{}; S.vv=S.vv||{}; S.nLog=nLogOf(S); migrateRetired(); }
 /* Förr fick inlärda ord due=1e9 och kom aldrig tillbaka. Ge dem ett riktigt repetitionsdatum,
    utspritt över kommande pass så att de inte kommer alla på en gång. */
 function migrateRetired(){
@@ -76,19 +78,118 @@ function migrateRetired(){
 }
 
 /* ---------- Sparat på claude.ai ----------
-   Framstegen sparas i webbläsaren och i ett privat dokument per person och språk på claude.ai
-   (data/users/<id>/<storageKey>). Vid start vinner den version som kommit längst, så att en
-   enhet med tomt minne aldrig skriver över framsteg som gjorts på en annan. */
-const CLOUD={db:null,uid:null,user:null,ready:false,busy:false,pending:null,timer:null,unsub:null};
-const score=s=>[(s&&s.pass)||0,((s&&s.log)||[]).length,Object.keys((s&&s.w)||{}).length];
-function cmpScore(a,b){const x=score(a),y=score(b);for(let i=0;i<3;i++)if(x[i]!==y[i])return x[i]-y[i];return 0}
+   Framstegen sparas i webbläsaren (hela S i localStorage) och i privata dokument per person och kurs på claude.ai.
+   Ett dokument får vara högst 256 KiB, så molnkopian delas upp (se docs/ARKITEKTUR.md):
+     data/users/<id>/<storageKey>        {v:2, head, score, parts:{<namn>: <rev>}, t}   huvuddokumentet (allt utom w och log)
+     data/users/<id>/<storageKey>~w0 …   {rev, data:{<ord-id>: …}}                     orden, uppdelade efter ett hash av ord-id
+     data/users/<id>/<storageKey>~log …  {rev, data:[…]}                               loggen (log, log1, … om den inte får plats)
+     data/users/<id>/<storageKey>~f.<fält> {rev, data}                                 stora fält, bara om huvuddokumentet blir för stort
+   rev är ett hash av bitens innehåll. Bitarna skrivs först och huvuddokumentet sist, och en läsare använder bara bitar
+   vars rev stämmer med huvuddokumentet, så att bitar från olika sparningar aldrig blandas. Oförändrade bitar skrivs inte om.
+   Gamla dokument i formatet {state, t} läses som förut, och första sparningen skriver det nya formatet.
+   Vid start vinner den version som kommit längst (pass, antal loggposter någonsin, antal ord; vid lika den senaste),
+   så att en enhet med tomt minne aldrig skriver över framsteg som gjorts på en annan. */
+const CLOUD={db:null,uid:null,user:null,ready:false,busy:false,pending:{},timer:null,unsub:null,known:{},deferred:null,
+  dead:false,noWrite:false,initing:false,attaching:false,seq:0,warn:""};
+const DOC_MAX=256*1024-256, PART_MAX=200*1024, HEAD_MAX=160*1024, W_PER_PART=700;
+// Antal loggposter någonsin. Loggen kapas vid 1 000 (foldLog), så räknaren S.nLog behövs för att jämföra.
+const nLogOf=s=>Math.max(+(s&&s.nLog)||0,(+((s&&s.logOld)||{}).n||0)+(((s&&s.log)||[]).length));
+const score=s=>[(s&&s.pass)||0,nLogOf(s),Object.keys((s&&s.w)||{}).length];
+function cmpArr(x,y){x=Array.isArray(x)?x:[];y=Array.isArray(y)?y:[];for(let i=0;i<3;i++){const d=(+x[i]||0)-(+y[i]||0);if(d)return d}return 0}
+function cmpScore(a,b){return cmpArr(score(a),score(b))}
+// Vinner molnets version över den lokala? Längst kommen vinner, vid lika poäng den som sparades senast.
+const remoteWins=(rs,rt,s)=>{const c=cmpArr(rs,score(s));return c>0||(c===0&&(+rt||0)>((s&&s.t)||0))};
 const docFor=key=>CLOUD.db.doc(`data/users/${CLOUD.uid}/${key}`);
+const bytes=s=>{try{return new TextEncoder().encode(s).length}catch(e){return unescape(encodeURIComponent(s)).length}};
+function hash(s){let a=0x811c9dc5,b=0x9747b28c;for(let i=0;i<s.length;i++){const c=s.charCodeAt(i);a=Math.imul(a^c,16777619);b=Math.imul(b^c,0x5bd1e995);b^=b>>>13}
+  return (a>>>0).toString(36)+"-"+(b>>>0).toString(36)+"-"+s.length.toString(36)}
+const bucketOf=id=>{let h=0x811c9dc5;for(let i=0;i<id.length;i++)h=Math.imul(h^id.charCodeAt(i),16777619);return h>>>0};
+const sleep=ms=>new Promise(r=>setTimeout(r,ms));
+// Delar upp ett läge i huvuddel och bitar
+function cloudSplit(st){
+  const head={...st}, parts={}; delete head.w; delete head.log;
+  const w=st.w||{}, ids=Object.keys(w).sort();
+  let n=Math.max(1,Math.ceil(ids.length/W_PER_PART)), b;
+  for(;;n++){ b=Array.from({length:n},()=>({})); ids.forEach(id=>{b[bucketOf(id)%n][id]=w[id]});
+    if(n>=200||b.every(x=>bytes(JSON.stringify(x))<=PART_MAX)) break; }
+  b.forEach((x,i)=>{parts["w"+i]=x});
+  let cur=[], sz=2, k=0; const next=()=>{parts[k?"log"+k:"log"]=cur; k++; cur=[]; sz=2;};
+  (st.log||[]).forEach(e=>{const s=bytes(JSON.stringify(e))+1; if(cur.length&&sz+s>PART_MAX) next(); cur.push(e); sz+=s;});
+  if(cur.length||!k) next();
+  let hs=bytes(JSON.stringify(head));
+  if(hs>HEAD_MAX){
+    const ks=Object.keys(head).filter(k=>/^[A-Za-z0-9_]+$/.test(k)&&head[k]!==undefined).map(k=>[k,bytes(JSON.stringify(head[k]))]).sort((x,y)=>y[1]-x[1]);
+    for(const [k,s] of ks){ if(hs<=HEAD_MAX) break; parts["f."+k]=head[k]; delete head[k]; hs-=s; }
+  }
+  return {head,parts};
+}
+function cloudDocs(st){
+  const {head,parts}=cloudSplit(st), docs={}, revs={};
+  Object.entries(parts).forEach(([n,data])=>{const j=JSON.stringify(data), rev=hash(j); revs[n]=rev; docs[n]={rev,data,size:bytes(j)+rev.length+24};});
+  const main={v:2,head,score:score(st),parts:revs,t:st.t||Date.now()};
+  return {main,docs,size:bytes(JSON.stringify(main))};
+}
+const sameParts=(a,b)=>!!a&&!!b&&Object.keys(a).length===Object.keys(b).length&&Object.keys(a).every(k=>a[k]===b[k]);
+async function cloudWrite(key,st){
+  const {main,docs,size}=cloudDocs(st);
+  const big=Object.keys(docs).filter(n=>docs[n].size>DOC_MAX); if(size>DOC_MAX) big.push("huvud");
+  if(big.length){ const e=new Error("för stort: "+big.join(", ")); e.code="too_big"; throw e; }
+  // Har någon annan enhet sparat sedan sist? Är den längre kommen skriver vi inte över, och vi litar bara på
+  // bitarna vi redan har skrivit om huvuddokumentet fortfarande är vårt.
+  const cur=await docFor(key).get(), d=cur&&cur.exists?(cur.data()||{}):null;
+  if(d&&(d.parts||d.state)&&remoteWins(d.parts?d.score:score(d.state),d.parts?d.t:d.t,st)) return {skipped:true,snap:cur};
+  const known=d&&d.parts&&sameParts(d.parts,CLOUD.known[key])?CLOUD.known[key]:null;
+  CLOUD.known[key]=null;
+  for(const [n,x] of Object.entries(docs)) if(!known||known[n]!==x.rev) await docFor(key+"~"+n).set({rev:x.rev,data:x.data});
+  await docFor(key).set(main);
+  CLOUD.known[key]=main.parts;
+  return {written:true};
+}
+function cloudJoin(d,names,datas){
+  const st=JSON.parse(JSON.stringify(d.head||{})), logs=[]; st.w={};
+  names.forEach((n,i)=>{const x=datas[i];
+    if(/^w\d+$/.test(n)) Object.assign(st.w,x||{});
+    else if(/^log\d*$/.test(n)) logs.push([+(n.slice(3)||0),Array.isArray(x)?x:[]]);
+    else if(n.startsWith("f.")) st[n.slice(2)]=x;});
+  st.log=logs.sort((a,b)=>a[0]-b[0]).flatMap(x=>x[1]);
+  return st;
+}
+/* Läser molnets läge: null om det inte finns, {state,t,parts} om det gick att läsa helt, {bad,score,t} om bitarna
+   inte stämmer med huvuddokumentet (någon sparar just nu). Kastar vid nätverksfel. */
+async function cloudRead(key,snap0){
+  let last=null;
+  for(let a=0;a<4;a++){
+    const snap=a===0&&snap0?snap0:await docFor(key).get();
+    if(!snap||!snap.exists) return null;
+    const d=snap.data()||{};
+    if(!d.parts||typeof d.parts!=="object") return d.state&&typeof d.state==="object"?{state:d.state,t:d.t||d.state.t||0,old:true}:null;
+    const names=Object.keys(d.parts), got=await Promise.all(names.map(n=>docFor(key+"~"+n).get()));
+    if(got.every((g,i)=>g&&g.exists&&(g.data()||{}).rev===d.parts[names[i]]))
+      return {state:cloudJoin(d,names,got.map(g=>g.data().data)),t:d.t||0,parts:d.parts};
+    last={bad:true,score:d.score,t:d.t||0};
+    await sleep(300+Math.random()*500);
+  }
+  return last;
+}
 function setSaveNote(){
   const n=$("#savenote"); if(!n) return;
-  n.textContent=CLOUD.ready?"Framstegen sparas på ditt claude.ai-konto efter varje svar och följer med mellan iPad, telefon och dator."
+  n.textContent=CLOUD.warn?"Framstegen sparas i den här webbläsaren, men kunde inte sparas på claude.ai (se varningen överst)."
+    :CLOUD.ready?"Framstegen sparas på ditt claude.ai-konto efter varje svar och följer med mellan iPad, telefon och dator."
     :"Framstegen sparas i den här webbläsaren efter varje svar.";
 }
+// Tydlig varning överst på sidan när molnsparningen inte går (framstegen sparas ändå i webbläsaren)
+function cloudWarn(msg){
+  if(CLOUD.warn===msg) return; CLOUD.warn=msg;
+  let b=document.getElementById("cloudwarn");
+  if(!msg){ if(b) b.remove(); setSaveNote(); return; }
+  if(!b){ b=document.createElement("div"); b.id="cloudwarn"; b.setAttribute("role","alert");
+    b.style.cssText="margin:12px auto;max-width:720px;padding:12px 14px;border-radius:10px;background:#fff4e5;color:#6b3500;border:1px solid #e9a14b;font-size:15px;line-height:1.4";
+    app.parentNode.insertBefore(b,app); }
+  b.textContent=msg; setSaveNote();
+}
 async function cloudInit(){
+  if(CLOUD.db||CLOUD.initing) return;
+  CLOUD.initing=true;
   try{
     if(!window.claude||!window.claude.use) return;
     const [db,user]=await Promise.all([window.claude.use("db"),window.claude.use("user")]);
@@ -96,58 +197,108 @@ async function cloudInit(){
     const uid=await user.id(); if(!uid) return;
     CLOUD.db=db; CLOUD.uid=uid; CLOUD.user=user;
     boardSubscribe();
-    document.addEventListener("visibilitychange",()=>{if(document.visibilityState==="hidden")cloudFlush()});
-    window.addEventListener("pagehide",cloudFlush);
     if(L&&L.base) await cloudAttach();   // annars kopplas lagringen när kursens data har hämtats (useLang)
   }catch(e){}
+  finally{ CLOUD.initing=false; }
 }
-function adopt(state){
-  S=JSON.parse(JSON.stringify(state)); normState(); rebuildWords();
+// Gick starten eller hämtningen inte (dåligt nät, appen i bakgrunden)? Försök igen när appen syns eller nätet är tillbaka.
+function cloudRetry(){
+  if(document.visibilityState==="hidden") return;
+  if(!CLOUD.db) cloudInit();
+  else if(!CLOUD.ready&&!CLOUD.attaching&&!CLOUD.dead&&!CLOUD.noWrite&&L&&L.base) cloudAttach();
+}
+document.addEventListener("visibilitychange",()=>{ if(document.visibilityState==="hidden") cloudFlush(); else cloudRetry(); });
+window.addEventListener("online",cloudRetry);
+window.addEventListener("pagehide",()=>cloudFlush());
+// Byter till molnets läge. Mitt i ett pass väntar vi tills passet är slut (applyDeferred), och startsidan ritas
+// bara om när den visas, så att eleven inte kastas ut från topplistan, Tyck till eller en resultatskärm.
+function takeState(state,t){
+  S=JSON.parse(JSON.stringify(state)); if(!(S.t>=t)) S.t=+t||S.t; normState(); rebuildWords();
   try{localStorage.setItem(L.storageKey,JSON.stringify(S))}catch(e){}
-  if(!sess){ if(curView==="stats") renderStats(); else renderStart(); }
 }
-async function cloudAttach(){   // vid start och vid byte av språk
-  if(!CLOUD.db) return;
-  CLOUD.ready=false; setSaveNote();
+function adopt(state,key,old,t){
+  if(!L||(key&&key!==L.storageKey)) return false;
+  key=L.storageKey;
+  if(sess){ CLOUD.deferred={key,state,old,t}; return "later"; }
+  CLOUD.deferred=null; takeState(state,t);
+  if(curView==="ova"&&app.querySelector("#src")) renderStart(); else if(curView==="stats") renderStats();
+  if(old) cloudSave(true);   // skriv om i det nya formatet
+  return true;
+}
+function applyDeferred(render){
+  const d=CLOUD.deferred; if(!d||sess) return;
+  CLOUD.deferred=null;
+  if(!L||d.key!==L.storageKey) return;
+  if(remoteWins(score(d.state),Math.max(+d.t||0,d.state.t||0),S)){ if(render===false){ takeState(d.state,d.t); if(d.old) cloudSave(true); } else adopt(d.state,d.key,d.old,d.t); }
+  else cloudSave(true);   // passet som just blev klart gjorde det lokala läget längre kommet
+}
+setInterval(()=>applyDeferred(),2000);
+async function onRemote(key,s){   // ett nytt läge från en annan enhet
+  if(!s||!s.exists||(s.metadata&&s.metadata.hasPendingWrites)||!L||key!==L.storageKey) return;
+  const d=s.data()||{};
+  if(!d.parts&&!d.state) return;
+  if(!remoteWins(d.parts?d.score:score(d.state),d.t,S)) return;
+  let r; try{ r=d.parts?await cloudRead(key,s):{state:d.state,t:d.t||0,old:true}; }catch(e){ return; }
+  if(!r||r.bad||key!==L.storageKey) return;
+  if(r.parts) CLOUD.known[key]=r.parts;
+  if(remoteWins(score(r.state),r.t,S)) adopt(r.state,key,r.old,r.t);
+}
+async function cloudAttach(){   // vid start och vid byte av kurs
+  if(!CLOUD.db||!L) return;
+  const seq=++CLOUD.seq, key=L.storageKey;
+  CLOUD.ready=false; CLOUD.attaching=true; setSaveNote();
   if(CLOUD.unsub){CLOUD.unsub();CLOUD.unsub=null}
-  const key=L.storageKey;
-  let snap=null;
-  for(let i=0;i<2&&!snap;i++){ try{snap=await docFor(key).get()}catch(e){ await new Promise(r=>setTimeout(r,800+Math.random()*800)); } }
-  if(!snap||key!==L.storageKey) return;
-  const d=snap.exists?snap.data():null, remote=d&&d.state;
-  const c=remote?cmpScore(remote,S):-1;
-  if(remote&&(c>0||(c===0&&(d.t||0)>(S.t||0)))) adopt(remote);
+  let r=null, got=false;
+  for(let i=0;i<2&&!got;i++){ try{ r=await cloudRead(key); got=true; }catch(e){ await sleep(800+Math.random()*800); } }
+  if(seq!==CLOUD.seq||key!==L.storageKey) return;
+  CLOUD.attaching=false;
+  if(!got){ setTimeout(cloudRetry,20000); return; }   // försöker också igen vid visibilitychange/online
+  let push=!r;
+  if(r&&r.bad){
+    if(cmpArr(r.score,score(S))>0){ setTimeout(cloudRetry,15000); return; }   // går inte att läsa helt just nu, och är längre kommet: vänta
+    CLOUD.known[key]=null; push=true;         // vårt läge är minst lika långt: skriv alla bitar på nytt
+  } else if(r){
+    CLOUD.known[key]=r.parts||null;
+    if(remoteWins(score(r.state),r.t,S)){ if(adopt(r.state,key,false,r.t)===true) push=!!r.old; }
+    else push=cmpScore(r.state,S)<0||(S.t||0)>(r.t||0)||!!r.old;
+  }
   CLOUD.ready=true; setSaveNote();
-  if(!remote||c<0||(c===0&&(S.t||0)>(d.t||0))) cloudSave(true);
+  if(push) cloudSave(true);
   boardPush();
-  CLOUD.unsub=docFor(key).onSnapshot(s=>{
-    if(!s.exists||s.metadata.hasPendingWrites||key!==L.storageKey) return;
-    const r=(s.data()||{}).state;
-    if(r&&cmpScore(r,S)>0) adopt(r);   // framsteg från en annan enhet
-  },()=>{});
+  CLOUD.unsub=docFor(key).onSnapshot(s=>{onRemote(key,s)},()=>{});
 }
+// En kö per kurs: byter eleven kurs medan något väntar sparas båda
 function cloudSave(now){
-  if(!CLOUD.db||!CLOUD.ready) return;
-  CLOUD.pending={key:L.storageKey,body:{state:JSON.parse(JSON.stringify(S)),t:S.t||Date.now()}};
+  if(!CLOUD.db||!CLOUD.ready||!L) return;
+  const key=L.storageKey;
+  if(CLOUD.deferred&&CLOUD.deferred.key===key) return;   // ett längre kommet läge väntar på att passet ska bli klart
+  CLOUD.pending[key]=S;
   clearTimeout(CLOUD.timer); CLOUD.timer=setTimeout(cloudFlush,now?0:1500);
 }
 async function cloudFlush(){
   clearTimeout(CLOUD.timer);
-  if(CLOUD.busy||!CLOUD.pending) return;
-  const p=CLOUD.pending; CLOUD.pending=null; CLOUD.busy=true;
-  try{ await docFor(p.key).set(p.body); }
-  catch(e){
-    if(e&&(e.code==="invalid_argument"||e.code==="revoked"||e.code==="not_granted")){ CLOUD.ready=false; setSaveNote(); }
-    else { if(!CLOUD.pending) CLOUD.pending=p; CLOUD.timer=setTimeout(cloudFlush,3000); }
+  if(CLOUD.busy||!CLOUD.db) return;
+  const key=Object.keys(CLOUD.pending)[0]; if(!key) return;
+  const st=JSON.parse(JSON.stringify(CLOUD.pending[key])); delete CLOUD.pending[key];
+  CLOUD.busy=true; let wait=300;
+  try{
+    const r=await cloudWrite(key,st);
+    if(r.skipped) onRemote(key,r.snap); else cloudWarn("");
+  }catch(e){
+    const c=e&&e.code;
+    if(c==="too_big") cloudWarn("Framstegen är för stora för att sparas på claude.ai just nu. De sparas fortfarande i den här webbläsaren, så inget försvinner här, men de följer inte med till andra enheter. Säg till den som bygger appen.");
+    else if(c==="revoked"||c==="not_granted"||c==="capability_disabled"||c==="capability_removed"){ CLOUD.ready=false; CLOUD.dead=true; setSaveNote(); }
+    else if(c==="invalid_argument"||c==="transform_error"){ CLOUD.ready=false; CLOUD.noWrite=true; setSaveNote(); }
+    else { if(!CLOUD.pending[key]) CLOUD.pending[key]=st; wait=3000; }
   }
   CLOUD.busy=false;
-  if(CLOUD.pending) CLOUD.timer=setTimeout(cloudFlush,300);
+  if(Object.keys(CLOUD.pending).length) CLOUD.timer=setTimeout(cloudFlush,wait);
 }
 /* Per ord: s = steg (0–3, 4 = kan), due = pass då ordet ska repeteras, f = frågeform (mc/type),
    mcR/mcW = rätt/fel på flerval, tyR/tyW = rätt/fel på skriva, clR/clW = rätt/fel i meningar,
    lp/ld = lärt i pass/datum, mp/md = kan sedan pass/datum */
 function save(){
-  S.t=Date.now();
+  S.t=Math.max(Date.now(),(S.t||0)+1); S.nLog=nLogOf(S);   // alltid senare än läget vi utgick från, även om en annan enhets klocka går före
   if(S.log.length>1000) foldLog();   // håller dokumentet under lagringsgränsen
   try{localStorage.setItem(L.storageKey,JSON.stringify(S))}catch(e){}
   cloudSave();
@@ -155,6 +306,7 @@ function save(){
 // De äldsta loggposterna sammanfattas i S.logOld, så att total tid och antal dagar finns kvar
 function foldLog(){
   const cut=S.log.length-1000, o=S.logOld||{dur:0,days:0,lastDay:""};
+  o.n=(+o.n||0)+cut;   // antal sammanfattade poster (för S.nLog)
   S.log.slice(0,cut).forEach(l=>{o.dur+=l.dur||0; const k=new Date(l.d).toDateString(); if(k!==o.lastDay){o.days++; o.lastDay=k;}});
   S.logOld=o; S.log=S.log.slice(cut);
 }
@@ -171,7 +323,7 @@ function schedule(x,ok,p,now){
   if(ok){ x.s=Math.min(x.s+1,INT.length-1); if(x.s>=MASTER&&!x.mp){x.mp=p;x.md=now;} }
   else { x.s=x.s>=MASTER?2:Math.max(0,x.s-1); delete x.mp; delete x.md; x.lapses=(x.lapses||0)+1; }
   x.due=p+INT[x.s];
-  if(DAYS[x.s]) x.dd=dayStart(now)+DAYS[x.s]*DAY; else delete x.dd;
+  if(DAYS[x.s]) x.dd=addDays(now,DAYS[x.s]); else delete x.dd;
 }
 
 /* ---------- Uppläsning ---------- */
@@ -194,7 +346,8 @@ function speak(t,rate){if(!SOUND)return;try{
 }catch(e){}}
 
 /* ---------- Rättning ---------- */
-const deacc=s=>s.normalize("NFD").replace(/[̀-ͯ]/g,"").replace(/œ/g,"oe").replace(/æ/g,"ae");
+const deacc=s=>s.normalize("NFD").replace(/[̀-ͯ]/g,"").replace(/œ/g,"oe").replace(/æ/g,"ae").replace(/ß/g,"ss");
+const noSz=s=>s.replace(/ß/g,"ss");   // "Strasse" räknas som rätt stavat "Straße" (så skriver man i Schweiz)
 function norm(s){
   s=s.toLowerCase().replace(/[’`´]/g,"'").replace(/[«»"!?.;:…]/g," ").replace(/\s+/g," ").trim();
   (L.articles||[]).forEach(re=>{s=s.replace(re,"")});
@@ -206,9 +359,11 @@ function variants(word){
   const add=s=>{s=norm(s);if(s)out.add(s)};
   add(base); add(word.replace(/[()]/g,""));
   base.split(/\s*=\s*/).forEach(add);
-  const parts=base.split(/\s*,\s*/);
-  if(parts.length===2) parts.forEach(p=>{if(!p.startsWith("-")) add(p)});
-  if(parts.length===2&&parts[1].startsWith("-")) add(parts[0]);
+  // "fier, fière", "le mélomane, la mélomane", "le metteur en scène, la metteuse en scène", "correspondant, -e": två former
+  // av samma ord (lika många ord i båda delarna). Men "ich habe dieses Thema gewählt, weil" är en fras med kommatecken,
+  // och då godkänns inte bara "weil".
+  const parts=base.split(/\s*,\s*/), nw=p=>norm(p).split(" ").filter(Boolean).length;
+  if(parts.length===2&&(parts[1].startsWith("-")||nw(parts[0])===nw(parts[1]))) parts.forEach(p=>{if(!p.startsWith("-")) add(p)});
   return [...out];
 }
 function conjVariants(c){
@@ -225,7 +380,7 @@ function lev(a,b){const m=a.length,n=b.length;const d=Array.from({length:m+1},(_
 function check(input,accepted,stripPron){
   let a=norm(input); if(stripPron&&L.pronouns) a=a.replace(L.pronouns,"");
   if(!a) return "empty";
-  if(accepted.includes(a)) return "right";
+  if(accepted.includes(a)||accepted.some(x=>noSz(x)===noSz(a))) return "right";
   if(accepted.some(x=>deacc(x)===deacc(a))) return "accent";
   if(accepted.some(x=>x.length>4&&lev(deacc(x),deacc(a))<=1)) return "near";
   return "wrong";
@@ -266,6 +421,7 @@ function nextPanel(){
 function renderStart(){
   document.body.classList.remove("has-tray");
   sess=null;
+  applyDeferred(false);   // ett molnläge som kom mitt i ett pass
   curView="ova";
   $("#tabs").hidden=false; tabSel("ova");
   const newW=pickNew(), due=dueWords();
@@ -278,9 +434,11 @@ function renderStart(){
     :otherSecs.map(secOpt).join(""))+(elSecs.length?`<optgroup label="${esc(L.elective.label)}">${elSecs.map(secOpt).join("")}</optgroup>`:"");
   const nothing=!newW.length&&!due.length;
   app.innerHTML=`
-  ${S.run||S.dailyDay===dayKey(Date.now())?"":dailyPanel(newW,due)}
+  ${(S.run&&S.run.daily)||S.dailyDay===dayKey(Date.now())?"":dailyPanel(newW,due)}
   ${S.run?`<section class="panel"><h2>Fortsätt där du slutade</h2><p class="plan">${esc(runLabel(S.run))}</p>
     <div class="navrow"><button class="btn ghost" id="run-drop">Släng</button><button class="btn" id="run-go">Fortsätt</button></div></section>`:""}
+  ${Object.entries(S.runs||{}).filter(([k,r])=>k.startsWith("words")&&r&&k!==runKey(S.run)).map(([k,r])=>`<section class="panel"><h2>Fortsätt glospasset</h2><p class="plan">${esc(runLabel(r))}</p>
+    <div class="navrow"><button class="btn ghost" data-wdrop="${esc(k)}">Släng</button><button class="btn" data-wgo="${esc(k)}">Fortsätt</button></div></section>`).join("")}
   ${hasBook()?bookPanel():""}
   ${goalsPanel()}
   ${nextPanel()}
@@ -337,6 +495,8 @@ function renderStart(){
   if($("#daily")) $("#daily").onclick=()=>startDaily(newW,due);
   $("#go").onclick=()=>startSession(newW,due);
   if(S.run){ $("#run-go").onclick=resumeRun; $("#run-drop").onclick=quitSession; }
+  app.querySelectorAll("[data-wgo]").forEach(b=>b.onclick=()=>{S.run=S.runs[b.dataset.wgo]; resumeRun();});
+  app.querySelectorAll("[data-wdrop]").forEach(b=>b.onclick=()=>{delete S.runs[b.dataset.wdrop]; save(); renderStart();});
   wireGames();
   renderList();
 }
@@ -440,7 +600,7 @@ function statsDaily(){
 /* ---------- Topplista ----------
    Varje person skriver en sammanfattning per språk i board/<sitt id> (bara den egna går att ändra).
    Alla som har tillgång till programmet ser allas sammanfattningar. */
-const BOARD={docs:{},mine:null,unsub:null,timer:null};
+const BOARD={docs:{},mine:null,unsub:null,timer:null,pend:{},nick:undefined,wait:[],busy:false,msg:""};
 function boardKeepMine(){ const u=CLOUD.uid, m=BOARD.mine; if(m&&(!BOARD.docs[u]||(BOARD.docs[u].t||0)<m.t)) BOARD.docs[u]=m; }
 function weekStart(ts){const d=new Date(ts);d.setHours(0,0,0,0);d.setDate(d.getDate()-((d.getDay()+6)%7));return d.getTime()}
 const dayKey=ts=>new Date(ts).toDateString();
@@ -471,19 +631,29 @@ function boardSubscribe(){
     if(curView==="board"&&!sess) renderBoard();
   },()=>{});
 }
+/* Väntande uppdateringar samlas per kurs, så att ett kursbyte inte tappar den förra kursens siffror.
+   Ger ett löfte om true när det är sparat, false om det inte gick. */
 function boardPush(nick){
-  if(!CLOUD.db||!CLOUD.uid) return;
-  const code=L.code, stats=myStats();
+  if(!CLOUD.db||!CLOUD.uid||!L) return Promise.resolve(false);
+  BOARD.pend[L.code]=myStats(); if(nick!==undefined) BOARD.nick=nick;
+  return new Promise(res=>{ BOARD.wait.push(res); clearTimeout(BOARD.timer); BOARD.timer=setTimeout(boardFlush,nick!==undefined?0:1000); });
+}
+async function boardFlush(){
   clearTimeout(BOARD.timer);
-  BOARD.timer=setTimeout(async()=>{
-    const ref=CLOUD.db.doc("board/"+CLOUD.uid);
-    try{
-      const cur=await ref.get(), old=(cur.exists&&cur.data())||{};
-      const body={nick:nick!==undefined?nick:(old.nick||""), langs:{...(old.langs||{}),[code]:stats}, t:Date.now()};
-      await ref.set(body); BOARD.mine=body; boardKeepMine();
-      if(curView==="board"&&!sess) renderBoard();
-    }catch(e){}
-  },nick!==undefined?0:1000);
+  if(BOARD.busy) return;   // körs igen när den pågående är klar
+  const pend=BOARD.pend, nick=BOARD.nick, wait=BOARD.wait;
+  BOARD.pend={}; BOARD.nick=undefined; BOARD.wait=[];
+  if(!Object.keys(pend).length&&nick===undefined){ wait.forEach(f=>f(true)); return; }
+  BOARD.busy=true; let ok=false;
+  try{
+    const ref=CLOUD.db.doc("board/"+CLOUD.uid), cur=await ref.get(), old=(cur.exists&&cur.data())||{};
+    const langs=old.langs&&typeof old.langs==="object"?old.langs:{};
+    const body={nick:nick!==undefined?nick:(typeof old.nick==="string"?old.nick:""), langs:{...langs,...pend}, t:Date.now()};
+    await ref.set(body); BOARD.mine=body; boardKeepMine(); ok=true;
+  }catch(e){ BOARD.pend={...pend,...BOARD.pend}; }   // försöker igen vid nästa uppdatering
+  BOARD.busy=false; wait.forEach(f=>f(ok));
+  if(ok&&curView==="board"&&!sess) renderBoard();
+  if(BOARD.wait.length) BOARD.timer=setTimeout(boardFlush,300);
 }
 async function renderBoard(){
   if(!CLOUD.db||!CLOUD.uid){
@@ -491,45 +661,53 @@ async function renderBoard(){
     return;
   }
   const w0=weekStart(Date.now()), pw=weekStart(w0-3*864e5);
+  // Allt här kommer från andras dokument: bara tal (num) och text genom esc()
+  const num=v=>{const x=+v; return Number.isFinite(x)?x:0;}, obj=v=>v&&typeof v==="object"?v:{};
+  const nickOf=d=>typeof d.nick==="string"?d.nick.trim().slice(0,24):"";
   const rows=Object.entries(BOARD.docs).map(([id,d])=>{
-    const r={id,nick:d.nick||"",min:0,q:0,days:0,streak:0,langs:[],prev:0,goals:[]};
-    Object.entries(d.langs||{}).forEach(([k,x])=>{
-      if(x.week===w0){r.min+=x.min||0; r.q+=x.q||0; r.days=Math.max(r.days,x.days||0); if(x.goal) r.goals.push(x.min>=x.goal);}
+    d=obj(d); const r={id,nick:nickOf(d),min:0,q:0,days:0,streak:0,langs:[],prev:0,goals:[]};
+    Object.entries(obj(d.langs)).forEach(([k,x])=>{
+      if(!x||typeof x!=="object") return;
+      const wk=num(x.week);
+      if(wk===w0){r.min+=num(x.min); r.q+=num(x.q); r.days=Math.max(r.days,num(x.days)); if(num(x.goal)) r.goals.push(num(x.min)>=num(x.goal));}
       // Förra veckans minuter: från förra veckans rad om personen inte har övat den här veckan än, annars från prev
-      if(x.week===pw) r.prev+=x.min||0; else if(x.prev&&x.prev.week===pw) r.prev+=x.prev.min||0;
-      if(x.last&&streakAlive(x.last)) r.streak=Math.max(r.streak,x.streak||0);
-      r.langs.push((LANGUAGES[k]||{}).course||(LANGUAGES[k]||{}).name||k);
+      if(wk===pw) r.prev+=num(x.min); else if(x.prev&&num(x.prev.week)===pw) r.prev+=num(x.prev.min);
+      if(x.last&&streakAlive(num(x.last))) r.streak=Math.max(r.streak,num(x.streak));
+      r.langs.push(String((LANGUAGES[k]||{}).course||(LANGUAGES[k]||{}).name||k));
     });
     return r;
   }).sort((a,b)=>b.min-a.min||b.q-a.q||b.streak-a.streak);
   let ps={}; try{ps=await CLOUD.user.profiles(rows.map(r=>r.id))}catch(e){}
   if(curView!=="board"||sess) return;
-  const mine=BOARD.docs[CLOUD.uid]||{};
+  const mine=obj(BOARD.docs[CLOUD.uid]);
   const nameOf=r=>r.nick||(ps[r.id]&&ps[r.id].name)||"Någon";
   const win=rows.filter(r=>r.prev>0).sort((a,b)=>b.prev-a.prev)[0];
   // Tidigare veckors vinnare, från varje persons veckohistorik (alla språk ihop)
   const byWeek={};
-  Object.entries(BOARD.docs).forEach(([id,d])=>Object.values(d.langs||{}).forEach(x=>Object.entries(x.hist||{}).forEach(([wk,m])=>{
-    if(+wk>=pw) return; const o=byWeek[wk]=byWeek[wk]||{}; o[id]=(o[id]||0)+m;})));
+  Object.entries(BOARD.docs).forEach(([id,d])=>Object.values(obj(obj(d).langs)).forEach(x=>Object.entries(obj(obj(x).hist)).forEach(([wk,m])=>{
+    if(!Number.isFinite(+wk)||+wk>=pw||!num(m)) return; const o=byWeek[+wk]=byWeek[+wk]||{}; o[id]=(o[id]||0)+num(m);})));
   const hist=Object.keys(byWeek).map(Number).sort((a,b)=>b-a).slice(0,5).map(wk=>{
     const [id,m]=Object.entries(byWeek[wk]).sort((a,b)=>b[1]-a[1])[0]; return {wk,id,m};});
   const wkLabel=wk=>{const d=new Date(wk); return `v. ${isoWeek(d)}`;};
   app.innerHTML=`<section class="panel"><h2>Topplista den här veckan</h2>
     <p class="plan">Minuter och frågor sedan måndag, i alla språk. Dagar i rad räknas om man övar varje dag.</p>
-    ${win?`<p class="winner">Förra veckan vann <b>${esc(nameOf(win))}</b> med ${win.prev} minuter.</p>`:""}
+    ${win?`<p class="winner">Förra veckan vann <b>${esc(nameOf(win))}</b> med ${esc(win.prev)} minuter.</p>`:""}
     ${rows.length?`<ol class="board">${rows.map((r,i)=>`<li class="brow${r.id===CLOUD.uid?" me":""}">
       <span class="rank">${i+1}</span>
       <span class="who"><b>${esc(nameOf(r))}${r.id===CLOUD.uid?" (du)":""}</b><small>${esc(r.langs.join(", "))}${r.goals.length&&r.goals.every(Boolean)?" · veckomålet klart ✓":""}</small></span>
-      <span class="num"><b>${r.min}</b><small>min</small></span>
-      <span class="num"><b>${r.q}</b><small>frågor</small></span>
-      <span class="num"><b>${r.streak}</b><small>dagar i rad</small></span></li>`).join("")}</ol>`
+      <span class="num"><b>${esc(r.min)}</b><small>min</small></span>
+      <span class="num"><b>${esc(r.q)}</b><small>frågor</small></span>
+      <span class="num"><b>${esc(r.streak)}</b><small>dagar i rad</small></span></li>`).join("")}</ol>`
       :`<p class="plan">Ingen har övat än den här veckan.</p>`}
   </section>
-  ${hist.length?`<section class="panel"><h2>Tidigare veckor</h2><ul class="missed">${hist.map(h=>`<li><span>${wkLabel(h.wk)}</span><span><b>${esc(nameOf({id:h.id,nick:(BOARD.docs[h.id]||{}).nick}))}</b> · ${h.m} min</span></li>`).join("")}</ul></section>`:""}
+  ${hist.length?`<section class="panel"><h2>Tidigare veckor</h2><ul class="missed">${hist.map(h=>`<li><span>${esc(wkLabel(h.wk))}</span><span><b>${esc(nameOf({id:h.id,nick:nickOf(obj(BOARD.docs[h.id]))}))}</b> · ${esc(h.m)} min</span></li>`).join("")}</ul></section>`:""}
   <section class="panel"><h2>Ditt namn i topplistan</h2>
-    <form id="nickf" class="nick" autocomplete="off"><input class="search" id="nick" maxlength="24" placeholder="Till exempel Kalle" value="${esc(mine.nick||"")}"><button class="btn" style="width:auto">Spara</button></form>
-    <p class="foot" id="nickmsg">Namnet syns för alla som har tillgång till glosprogrammet.</p></section>`;
-  $("#nickf").onsubmit=e=>{e.preventDefault(); boardPush($("#nick").value.trim().slice(0,24)); $("#nickmsg").textContent="Sparat.";};
+    <form id="nickf" class="nick" autocomplete="off"><input class="search" id="nick" maxlength="24" placeholder="Till exempel Kalle" value="${esc(nickOf(mine))}"><button class="btn" style="width:auto">Spara</button></form>
+    <p class="foot" id="nickmsg">${esc(BOARD.msg||"Namnet syns för alla som har tillgång till glosprogrammet.")}</p></section>`;
+  // "Sparat." bara när sparningen faktiskt gick
+  $("#nickf").onsubmit=e=>{e.preventDefault(); $("#nickmsg").textContent="Sparar …";
+    boardPush($("#nick").value.trim().slice(0,24)).then(ok=>{ BOARD.msg=ok?"Sparat.":"Namnet kunde inte sparas. Kontrollera att du är inloggad och försök igen.";
+      const m=$("#nickmsg"); if(m) m.textContent=BOARD.msg; });};
 }
 
 /* ---------- Pass: lära ---------- */
@@ -548,8 +726,9 @@ function snapRun(){
   const k=runKey(sess); if(k){ S.runs=S.runs||{}; S.runs[k]=S.run; }
   save();
 }
-// Varje övning har sin egen påbörjade runda, så man kan välja att fortsätta eller börja om när man öppnar den igen
-const runKey=r=>r&&r.kind!=="words"?(r.againFn?r.againFn.join("|"):r.kind+"|"+((r.ctx&&r.ctx.id)||"")):null;
+// Varje övning har sin egen påbörjade runda, så man kan välja att fortsätta eller börja om när man öppnar den igen.
+// Glospasset har också en egen plats ("words", extraövningen "words|extra"), så att det finns kvar efter en annan övning.
+const runKey=r=>!r?null:r.kind==="words"?(r.extra?"words|extra":"words"):(r.againFn?r.againFn.join("|"):r.kind+"|"+((r.ctx&&r.ctx.id)||""));
 function dropRun(r){ const k=runKey(r); if(k&&S.runs) delete S.runs[k]; }
 function quitSession(){ dropRun(S.run); sess=null; delete S.run; save(); renderStart(); }
 // Avbryt mitt i en övning: rundan sparas och kan fortsättas senare
@@ -635,7 +814,7 @@ function renderLearn(){
    Bara första svaret per ord räknas för repetitionsschemat och statistiken. */
 const MAX_AGAIN=4;   // max antal extra frågor per ord och övning
 function beginQuiz(kind,items,extra){
-  const k=runKey({kind,...(extra||{})}), old=k&&S.runs&&S.runs[k];
+  const k=runKey({kind,...(extra||{})}), old=kind!=="words"&&k&&S.runs&&S.runs[k];
   if(old&&!(extra&&extra.fresh)&&old.done<old.total){
     sess=null; $("#tabs").hidden=true;
     app.innerHTML=`<section class="panel"><h2>${esc(old.label||"Övningen")}</h2>
@@ -777,14 +956,14 @@ function showTypeResult(d,res,inp){
   if($("#ovr")) $("#ovr").onclick=()=>{unrecord();snapRun();if($("#back"))$("#back").remove();$("#ovr").outerHTML="<p><b>Okej, räknas som rätt.</b></p>";inp.classList.remove("wrong");inp.classList.add("right")};
 }
 /* "Fel i frågan?": eleven kan rapportera ett felaktigt facit eller en konstig mening.
-   Rapporterna sparas i reports/<id> i artefaktens db (läses av föräldern eller Claude), annars i S.reports. */
+   Rapporterna sparas i reports/<uid>/items/<tid> i artefaktens db (privat för eleven, läses av föräldern) (läses av föräldern eller Claude), annars i S.reports. */
 const reportBtn=()=>`<button type="button" class="override" data-report>Fel i frågan? Rapportera</button>`;
 async function sendReport(btn){
   const c=sess&&sess.cur, d=sess&&sess.d; if(!c||btn.disabled) return;
   const r={lang:L.code,id:itemId(c),kind:c.k||sess.kind,t:c.t,answer:String((d&&d.answer)||"").replace(/<[^>]+>/g,""),d:Date.now(),pass:S.pass};
   btn.disabled=true; btn.textContent="Skickar …";
   let ok=false;
-  if(CLOUD.db&&CLOUD.uid){ try{ await CLOUD.db.doc(`reports/${CLOUD.uid}-${r.d}`).set({...r,uid:CLOUD.uid}); ok=true; }catch(e){} }
+  if(CLOUD.db&&CLOUD.uid){ try{ await CLOUD.db.doc(`reports/${CLOUD.uid}/items/${r.d}`).set({...r,uid:CLOUD.uid}); ok=true; }catch(e){} }
   if(!ok){ S.reports=(S.reports||[]).slice(-49); S.reports.push(r); save(); }
   btn.textContent="Tack! Frågan är rapporterad och blir kontrollerad.";
 }
@@ -906,7 +1085,7 @@ function finishSession(){
     if(extra) return;               // extraövning flyttar inte schemat
     const was=x.s; schedule(x,r.ok,p,now); if(r.ok&&was<MASTER&&x.s>=MASTER) newlyMastered++;
   });
-  S.log.push(E); if(!extra) S.pass++; delete S.run; save();
+  S.log.push(E); if(!extra) S.pass++; dropRun(sess); delete S.run; save();
   const right=ids.filter(id=>sess.firstTry[id]!==false).length;
   const missed=ids.filter(id=>sess.firstTry[id]===false).map(id=>byId[id]);
   const mastered=extra?0:newlyMastered;
@@ -944,9 +1123,9 @@ function startCloze(){
 /* ---------- Ordlista ---------- */
 /* Prognos: hur många ord som ska repeteras i nästa pass och de kommande dagarna */
 function statsForecast(){
-  const t0=dayStart(Date.now()), xs=WORDS.map(w=>ws(w.id)).filter(Boolean);
+  const t0=Date.now(), xs=WORDS.map(w=>ws(w.id)).filter(Boolean);
   const rows=[{l:"nästa",n:xs.filter(isDue).length}];
-  for(let i=1;i<=6;i++) rows.push({l:i===1?"i morgon":"+"+i+" d",n:xs.filter(x=>x.dd&&x.dd>=t0+i*DAY&&x.dd<t0+(i+1)*DAY).length});
+  for(let i=1;i<=6;i++) rows.push({l:i===1?"i morgon":"+"+i+" d",n:xs.filter(x=>x.dd&&x.dd>=addDays(t0,i)&&x.dd<addDays(t0,i+1)).length});
   const soon=xs.filter(x=>!x.dd&&x.due>S.pass).length;
   if(!rows.some(r=>r.n)&&!soon) return "";
   const max=Math.max(...rows.map(r=>r.n),1);
@@ -984,6 +1163,7 @@ function setView(v){
   curView=["stats","board","fb"].includes(v)?v:"ova";
   $("#tabs").hidden=false;
   tabSel(curView);
+  if(curView==="board") BOARD.msg="";
   if(curView==="stats") renderStats(); else if(curView==="board") renderBoard(); else if(curView==="fb") renderTyckTill(); else renderStart();
   window.scrollTo(0,0);
 }
@@ -1186,10 +1366,14 @@ function loadCourse(code){
     .then(d=>{Object.assign(LANGUAGES[code],d); return LANGUAGES[code];})
     .catch(e=>{delete LOADING[code]; throw e;});
 }
+let WANT_LANG=null;   // den kurs eleven senast valde; en kurs som blir klar senare aktiveras bara om den fortfarande är vald
 function useLang(code){
+  WANT_LANG=code;
   if(LANGUAGES[code].words==null){
+    try{ $("#course").value=code; }catch(e){}
     app.innerHTML=`<section class="panel"><p class="plan">Hämtar ${esc(LANGUAGES[code].course||LANGUAGES[code].name)} …</p></section>`;
-    loadCourse(code).then(()=>useLang(code)).catch(()=>{
+    loadCourse(code).then(()=>{ if(WANT_LANG===code) useLang(code); }).catch(()=>{
+      if(WANT_LANG!==code) return;
       app.innerHTML=`<section class="panel"><h2>Kursen kunde inte hämtas</h2><p class="plan">Kontrollera internetanslutningen och försök igen.</p><button class="btn" id="retry">Försök igen</button></section>`;
       $("#retry").onclick=()=>useLang(code); });
     return;

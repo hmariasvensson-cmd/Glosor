@@ -19,7 +19,8 @@ LANGUAGES.fr = {
   // Tas bort från början av svaret innan det rättas (i den här ordningen)
   articles: [/^(le|la|les|un|une|des) /, /^l'/],
   // Tas bort från början av svaret i verbträningen
-  pronouns: /^(que |qu')?(il\/elle|ils\/elles|je|j'|tu|il|elle|on|nous|vous|ils|elles) ?/,
+  // Längre former först, och mellanslag efter pronomenet (utom j' och qu'), så att "ont", "tues" och "ils sont" inte klipps fel
+  pronouns: /^(?:(?:que |qu')?(?:il\/elle|ils\/elles|elles|elle|ils|il|nous|vous|on|tu|je) |(?:que )?j')/,
   genders: {m: "maskulinum", f: "femininum", mpl: "mask. plural", fpl: "fem. plural"},
   // l', d', j' … tas bort när ett ord i en text slås upp i ordlistan
   elision: /^(l|d|j|qu|n|s|c|m|t|jusqu|lorsqu|puisqu)'/i,
@@ -31,8 +32,14 @@ LANGUAGES.fr = {
   // Enkel igenkänning av tempus i elevens text (för checklistan, inte för rättning)
   tenseCheck: {
     "passé composé": t => /(^|[^\p{L}])(ai|as|a|avons|avez|ont|suis|es|est|sommes|êtes|sont)\s+(\p{L}+(é|ée|és|ées|i|ie|is|ies|u|ue|us|ues|it|ert|ort))(?![\p{L}])/iu.test(t),
-    "imparfait": t => (t.match(/(^|[^\p{L}])(\p{L}{2,}(ais|ait|aient|ions|iez))(?![\p{L}])/giu)||[])
-      .some(m => !/(mais|jamais|vais|fais|sais|frais|anglais|français|palais|mauvais|épais|lait|fait|avions|attentions|questions|émissions|stations|ions)$/i.test(m.trim())),
+    // -ais/-ait/-aient: alla ord utom vanliga ord som inte är imparfait (mais, français, je connais, il fait …).
+    // -ions/-iez räknas bara efter nous/vous ("nous parlions"), och inte presens av verb på -ier (nous étudions).
+    "imparfait": t => (t.match(/(^|[^\p{L}])(\p{L}{2,}(ais|ait|aient))(?![\p{L}])/giu)||[])
+      .some(m => !/^(mais|jamais|désormais|vrais|frais|épais|mauvais|niais|biais|palais|balais|relais|délais|essais|rabais|marais|dais|laquais|anglais|français|irlandais|écossais|japonais|polonais|portugais|néerlandais|sénégalais|congolais|libanais|maltais|marseillais|lyonnais|bordelais|lait|souhait|trait|extrait|portrait|retrait|abstrait|distrait|attrait|vais|nais|tais)$|fai[st]$|^(re)?connai[st]$|^(ap|dis|com|re)?parai[st]$|^(dé|com)?plai[st]$/i
+        .test(m.replace(/^[^\p{L}]+/u, "")))
+      || (t.match(/(^|[^\p{L}])(nous|vous)\s+(\p{L}{2,}(ions|iez))(?![\p{L}])/giu)||[])
+        .some(m => !/^(étud|oubl|remerc|appréc|vérif|cop|cr|sk|conf|mar|pr|env|sour|r|pl|publ|expéd|modif|identif|justif|simplif|qualif|assoc|négoc|var|sacrif|certif|rel|photograph)i(ons|ez)$/i
+          .test(m.replace(/^[^\p{L}]*(nous|vous)\s+/iu, ""))),
     "futur proche": t => /(^|[^\p{L}])(vais|vas|va|allons|allez|vont)\s+\p{L}+(er|ir|re)(?![\p{L}])/iu.test(t),
     "présent": t => t.trim().length > 0
   },

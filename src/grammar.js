@@ -12,7 +12,9 @@ const GR=()=>L.grammar;
 const GAPRX=/\[([^\]]+)\]/g;
 const gparse=q=>{const parts=[],gaps=[]; let last=0;
   q.replace(GAPRX,(m,a,i)=>{parts.push(q.slice(last,i)); gaps.push(a); last=i+m.length; return m;}); parts.push(q.slice(last)); return {parts,gaps};};
-const gnorm=s=>s.toLowerCase().replace(/…/g," ").replace(/[.,!?;:«»"“”()]/g," ").replace(/\s+/g," ").trim();
+// Typografisk apostrof (’ från iPadens smarta skiljetecken), ` och ´ räknas som '
+const gapos=s=>s.replace(/[’`´]/g,"'");
+const gnorm=s=>gapos(s).toLowerCase().replace(/…/g," ").replace(/[.,!?;:«»"“”()]/g," ").replace(/\s+/g," ").trim();
 const gfill=(p,fill)=>p.parts.map((t,i)=>t+(i<fill.length?fill[i]:"")).join("");
 const gcap=s=>s.charAt(0).toUpperCase()+s.slice(1);
 
@@ -81,20 +83,34 @@ function adjIds(k){
 // Franskans tempusval (imparfait/passé composé, plus-que-parfait, futur/presens) och artighetsformer går ofta att försvara
 // i talspråk, så de passar inte heller som "Hitta felet"
 const ERR_SKIP=["rel-nom","rel-akk","k1-rede","tps-bakgrund","tps-vana","tps-handelse","tps-avbrott","tps-signal","pqp-avoir","pqp-etre","cond-poli","cond-rai","fut-reg","disc-imp","disc-pqp","disc-cond","disc-tps"];
-const errBase=()=>Object.values(gramBank()).filter(x=>x.type==="gap"&&x.p.gaps.length===1&&!ERR_SKIP.includes(x.rule)&&x.alt.some(a=>!a.includes("…")));
+// Felalternativ som går att sätta in i luckan: inga med flera delar, och när luckan sitter ihop med ett ord
+// ("[parce qu']il", "Je [t']aime", "[L']estate") bara alternativ som slutar med apostrof, så att orden inte klistras ihop
+// ("malgréil", "Je teaime", "Ilestate"). Meningen måste också ha minst 3 andra ord att välja mellan.
+const ERR_MIN_OTHERS=3;
+const errOthers=(b,bad)=>[...new Set(tok(b.p.parts.join(" ")).filter(t=>t.length>2&&!tok(bad).includes(t)&&!tok(b.p.gaps[0]).includes(t)))];
+function errFits(b,bad){
+  if(bad.includes("…")) return false;
+  const pre=b.p.parts[0], post=b.p.parts[1], a=gapos(bad);
+  if(/\p{L}$/u.test(pre)&&/^\p{L}/u.test(a)) return false;
+  if(/^\p{L}/u.test(post)&&!/'$/.test(a)) return false;
+  if(/'$/.test(a)&&!/^\p{L}/u.test(post)) return false;   // "qu' il"
+  return errOthers(b,bad).length>=ERR_MIN_OTHERS;
+}
+const errAlts=b=>b.alt.map((a,i)=>i).filter(i=>errFits(b,b.alt[i]));
+const errBase=()=>Object.values(gramBank()).filter(x=>x.type==="gap"&&x.p&&x.p.gaps.length===1&&!ERR_SKIP.includes(x.rule)&&errAlts(x).length);
 function errItem(id){
-  const [,bid,ai]=id.split("|"), b=gramBank()[bid]; if(!b) return null;
+  const [,bid,ai]=id.split("|"), b=gramBank()[bid]; if(!b||!b.p||b.p.gaps.length!==1) return null;
   const bad=b.alt[+ai]; if(!bad) return null;
   const wrongText=gfill(b.p,[bad]), rightText=gfill(b.p,b.p.gaps);
   // Distraktorerna är andra ord ur meningen, skrivna som de står i den
-  const others=[...new Set(tok(b.p.parts.join(" ")).filter(t=>t.length>2&&!tok(bad).includes(t)&&!tok(b.p.gaps[0]).includes(t)))];
+  const others=errOthers(b,bad);
   const surface=w=>{const m=wrongText.match(new RegExp("(^|[^\\p{L}])("+reEsc(w)+")(?![\\p{L}])","iu")); return m?m[2]:w;};
   return {id,topic:"err",rule:b.rule,type:"err",bad,wrongText,rightText,
     opts:shuffle([{label:bad,ok:true,lang:true},...shuffle(others).slice(0,3).map(w=>({label:surface(w),ok:false,lang:true}))]),
     why:b.why,sv:b.sv};
 }
 function errIds(k){
-  return shuffle(errBase()).slice(0,k).map(b=>{const ok=b.alt.map((a,i)=>i).filter(i=>!b.alt[i].includes("…"));
+  return shuffle(errBase()).slice(0,k).map(b=>{const ok=errAlts(b);
     return `err|${b.id}|${ok[Math.floor(Math.random()*ok.length)]}`;});
 }
 
@@ -206,7 +222,7 @@ TYPE.gram=c=>{const x=gramById(c.ref);
     check:v=>{const n=gnorm(v); if(!n) return {r:"empty"};
       // I "stor eller liten bokstav" räknas versalerna, annars inte
       // (även i andra frågor där ett felalternativ bara skiljer sig i stor/liten bokstav, t.ex. bokens övningar)
-      if(x.topic==="maj"||(x.alt||[]).some(a=>a.toLowerCase()===x.ans.toLowerCase())){ const e=s=>s.replace(/…/g," ").replace(/[.,!?;:]/g," ").replace(/\s+/g," ").trim();
+      if(x.topic==="maj"||(x.alt||[]).some(a=>a.toLowerCase()===x.ans.toLowerCase())){ const e=s=>gapos(s).replace(/…/g," ").replace(/[.,!?;:]/g," ").replace(/\s+/g," ").trim();
         return {r:[x.ans,...(x.acc||[])].map(e).includes(e(v))?"right":"wrong"}; }
       return {r:acc.includes(n)||(x.type==="adj"&&n.replace(/^-/,"")===x.end)?"right":"wrong"};},
     answer:esc(x.ans),explain:gramExplain(x),say:gramSay(x),onAnswer:fillGaps(x),alwaysAnswer:multi};
@@ -271,7 +287,8 @@ function startGender(){
   });
   $("#tabs").hidden=true; sess=null; beginQuiz("gen",shuffle(items),{againFn:["gen"],label:"der, die, das"});
 }
-RESTORE.gen=RESTORE.plu=ref=>gnById(ref)?{}:null;
+RESTORE.gen=ref=>gnById(ref)?{}:null;
+RESTORE.plu=ref=>{const n=gnById(ref); return n&&n.pl?{}:null;};
 MC.gen=c=>{const n=gnById(c.ref), arts=L.genderGame;
   return{tab:"der, die, das",head:`<div class="word"><p class="q-prompt" ${lang()}>… ${esc(n.noun)}</p><button class="speak" id="sp" aria-label="Läs upp">${SPK}</button></div><p class="ex-sv">${esc(n.w.sv)}</p>`,
     ask:"Vilken artikel?",opts:["m","f","n"].map(g=>({label:arts[g],ok:g===n.w.g,lang:true})),

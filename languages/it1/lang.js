@@ -18,8 +18,9 @@ LANGUAGES.it1 = {
   verbAccents: "à è é ì ò ù",
   // Artikeln visas i ordlistan men behövs inte i svaret
   articles: [/^(il|lo|la|i|gli|le|un|uno|una) /, /^(l'|un')/],
-  hintStrip: /^(il|lo|la|i|gli|le|l') ?/,
-  pronouns: /^(lui\/lei|io|tu|lui|lei|noi|voi|loro) ?/,
+  hintStrip: /^(?:(?:il|lo|la|i|gli|le) |l')/,
+  // Mellanslag krävs efter pronomenet, så att verbformer som börjar som ett pronomen ("ioni", "tuffo") inte klipps
+  pronouns: /^(?:lui\/lei|loro|lui|lei|noi|voi|io|tu) /,
   genders: {m: "maskulinum", f: "femininum", mpl: "mask. plural", fpl: "fem. plural"},
   elision: /^(l|dell|all|dall|nell|sull|un|quell|c|d)'/i,
 

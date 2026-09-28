@@ -13,21 +13,25 @@ Glosprogram för en elev i Franska 3 och en elev som pluggar tyska på egen hand
 Publicera alltid med de här kapabiliteterna (utelämna `capabilities` vid ompublicering för att behålla dem):
 
     {"db": {"rules": [{"path": "board", "read": "view", "write": "admin"},
-                      {"path": "board/{self}", "write": "interact"}]},
+                      {"path": "board/{self}", "write": "interact"},
+                      {"path": "feedback", "read": "admin", "write": "admin"},
+                      {"path": "feedback/{self}", "read": "interact", "write": "interact"},
+                      {"path": "reports", "read": "admin", "write": "admin"},
+                      {"path": "reports/{self}", "read": "interact", "write": "interact"}]},
      "user": {"scopes": ["profile"]},
      "sample": {}}
 
-- Framsteg: localStorage (cache) + `data/users/<uid>/<storageKey>` i db, `{state, t}`. Vid start vinner den version som kommit längst (pass, antal loggposter, antal ord), inte den senaste tidsstämpeln.
-- Pågående pass sparas i `S.run` efter varje svar, så att det går att fortsätta.
+- Framsteg: localStorage (hela `S`) + db under `data/users/<uid>/<storageKey>`. Ett db-dokument får vara högst 256 KiB, så molnkopian är uppdelad: huvuddokumentet `<storageKey>` = `{v:2, head, score, parts, t}` (allt utom `w` och `log`) plus `<storageKey>~w0`, `~w1`, … (orden), `~log` (loggen) och vid behov `~f.<fält>`, se `docs/ARKITEKTUR.md`. Gamla dokument `{state, t}` läses fortfarande. Den version som kommit längst vinner (pass, antal loggposter någonsin `S.nLog`, antal ord; vid lika den senaste `t`). Ett molnläge som kommer mitt i ett pass tas emot först när passet är slut.
+- Pågående pass sparas i `S.run` efter varje svar, så att det går att fortsätta. Varje övning har också en egen plats i `S.runs` (glospasset `words`, extraövningen `words|extra`).
 - Topplista: `board/<uid>` = `{nick, langs: {<kod>: {week, min, q, days, streak, last, learned, mastered}}, t}`.
 - `sample`: "Få kommentarer av Claude" på skrivuppgifter och kultursvar. Den som använder funktionen betalar med sin egen Claude-användning och godkänner det första gången. Kommentarerna sparas i `S.fb`.
-- Tyck till: `feedback/<uid>-<tid>` = `{uid, kind, text, lang, course, t, status, reply}`. Claude läser dem med ArtifactData, för in önskemålen i `docs/BACKLOG.md` och sätter `status` (`ny`, `last`, `backlogg`, `byggt`, `nej`) och `reply`, som eleven ser under fliken Tyck till. Mejla bara en sammanfattning (Gmail) om föräldern ber om det.
+- Tyck till: `feedback/<uid>/msgs/<tid>` = `{uid, kind, text, lang, course, t, status, reply}`. Bara eleven själv och ägaren (admin) kan läsa dem. Claude läser dem med ArtifactData: lista `board` för att få elevernas uid, sedan `feedback/<uid>/msgs` (och felrapporterna i `reports/<uid>/items`), för in önskemålen i `docs/BACKLOG.md` och sätter `status` (`ny`, `last`, `backlogg`, `byggt`, `nej`) och `reply`, som eleven ser under fliken Tyck till. Mejla bara en sammanfattning (Gmail) om föräldern ber om det.
 - Den som ska spara måste vara inloggad på claude.ai och ha skrivrätt (Contributor inom organisationen, eller Editor inbjuden via e-post när artefakten inte delas via länk).
 
 ## Saker som aldrig får ändras
 
 - `storageKey` i `languages/*/lang.js` (`franska-glosor-v2`, `glosor-fr4-v1`, `glosor-de-v1`, `glosor-de4-v1`, `glosor-de6-v1`, `glosor-it1-v1`, `glosor-it2-v1`).
-- Formatet på sparat läge: `{pass, w:{<ord-id>:{s,due}}, newCount, src, mode}`. Steg `s` 0–3 = lär sig, 4 och uppåt = kan. Steg 0–1 repeteras efter pass (`due`), från steg 2 efter dagar (`dd`, tidsstämpel): nästa pass, 3 pass, 3, 7, 20, 45, 90 dagar (se `INT`, `DAYS` och `schedule` i app.js). Kapitelprovets resultat ligger i `S.kt`.
+- Formatet på sparat läge: `{pass, w:{<ord-id>:{s,due}}, newCount, src, mode, log, nLog, t}` (`nLog` = antal loggposter någonsin, räknas fram för gamla lägen; `log` kapas vid 1 000 och resten sammanfattas i `logOld`). Formatet i localStorage är oförändrat; bara molnkopian delas upp. Steg `s` 0–3 = lär sig, 4 och uppåt = kan. Steg 0–1 repeteras efter pass (`due`), från steg 2 efter dagar (`dd`, tidsstämpel): nästa pass, 3 pass, 3, 7, 20, 45, 90 dagar (se `INT`, `DAYS` och `schedule` i app.js). Kapitelprovets resultat ligger i `S.kt`.
 - Ord-id är ordets form i målspråket (första fältet i words.txt), och avsnitts-id används i `S.src`. Att ändra dem nollställer framstegen för de orden.
 
 ## Struktur

@@ -17,7 +17,8 @@ LANGUAGES.de6 = {
   verbAccents: "ä ö ü ß",
   articles: [],
   hintStrip: /^(der|die|das|den|dem|des) /,
-  pronouns: /^(er\/sie\/es|sie\/sie|ich|du|er|sie|es|wir|ihr) ?/,
+  // Mellanslag krävs efter pronomenet, så att "sieht", "wird" och "esse" inte klipps till "ht", "d" och "se"
+  pronouns: /^(?:er\/sie\/es|sie\/sie|ich|du|er|sie|es|wir|ihr) /,
   genders: {m: "maskulinum", f: "femininum", n: "neutrum", pl: "plural"},
   selfStudy: true,             // eleven pluggar på egen hand, utan lärare och lärobok
   exam: {name: "Goethe-Zertifikat B2 (eller telc B2/TestDaF)", level: "B2"},   // språkprovet eleven siktar på

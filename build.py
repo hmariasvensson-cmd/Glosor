@@ -77,12 +77,13 @@ def read_words(code):
                 errors.append(f"{where}: ordet eller den svenska översättningen saknas")
             if g not in GENDERS:
                 errors.append(f"{where}: okänt genus '{g}' (tillåtna: {', '.join(sorted(x for x in GENDERS if x))})")
+            # Ord-id är ordet självt, så en dubblett skulle dela framsteg med det första ordet: bygget stoppas
             if word in seen:
-                warnings.append(f"{where}: '{word}' finns redan och hoppas över i programmet")
+                errors.append(f"{where}: '{word}' finns redan i ordlistan (ord-id måste vara unika; ändra inte det gamla ordet, eftersom framstegen hänger på det)")
             seen.add(word)
             n_words += 1
         lines.append(s)
-    return "\n".join(lines), n_words, len(section_ids), errors, warnings
+    return "\n".join(lines), n_words, section_ids, errors, warnings
 
 
 # Artiklar och relativpronomen för att kontrollera de tyska grammatikfrågorna (se GRAMMATIK-SPEC.md)
@@ -142,6 +143,64 @@ def check_grammar(items, where):
     return errors
 
 
+# Ord i en text så som appen delar upp den (tapText i exercises.js): börjar med en bokstav och slutar med
+# bokstav eller apostrof. Glosnyckeln är ordet med små bokstäver, antingen helt eller utan elision (l'amica → amica).
+TEXT_WORD = re.compile(r"[^\W\d_](?:[^\W\d_'’\-]|['’\-])*")
+
+
+def text_keys(lines):
+    keys = set()
+    for ln in lines:
+        for w in TEXT_WORD.findall(str(ln.get("fr", "")) if isinstance(ln, dict) else ""):
+            w = w.rstrip("-").lower().replace("’", "'")
+            keys.add(w)
+            keys.add(re.sub(r"^[^\W\d_]{1,6}'", "", w))
+    return keys
+
+
+def check_question(q, where):
+    """En flervalsfråga {q, opts, a}: a ska vara ett index i opts."""
+    opts, a = q.get("opts"), q.get("a")
+    if not isinstance(opts, list) or len(opts) < 2:
+        return [f"{where}: frågan saknar alternativ (opts)"]
+    if not isinstance(a, int) or isinstance(a, bool) or not 0 <= a < len(opts):
+        return [f"{where}: facit a={a!r} finns inte bland de {len(opts)} alternativen"]
+    return []
+
+
+def check_content(content, section_ids, where):
+    """Kontrollerar innehållet: facit inom alternativen, att avsnitten (sec) finns i words.txt och att glosorna finns i texten."""
+    errors, warnings = [], []
+    for kind in ("reading", "listening"):
+        for t in content.get(kind, []):
+            for i, q in enumerate(t.get("questions", [])):
+                errors += check_question(q, f"{where}/content/{kind}.json: {t.get('id')} fråga {i + 1}")
+    for t in content.get("culture", []):
+        if isinstance(t.get("q"), dict):
+            errors += check_question(t["q"], f"{where}/content/culture.json: {t.get('id')}")
+    for x in content.get("teori", []):
+        errors += check_question(x, f"{where}/content/teori.json: {x.get('id')}")
+    exam = content.get("exam")
+    if isinstance(exam, dict):
+        for t in exam.get("tasks", []):
+            for i, q in enumerate(t.get("qs") or []):
+                errors += check_question(q, f"{where}/content/exam.json: {t.get('id')} fråga {i + 1}")
+    for kind, items in content.items():
+        if kind == "grammar" or not isinstance(items, list):
+            continue
+        for x in items:
+            if isinstance(x, dict) and x.get("sec") and x["sec"] not in section_ids:
+                errors.append(f"{where}/content/{kind}.json: {x.get('id')} har sec '{x['sec']}', som inte finns i words.txt")
+    # Glosor som inte går att trycka på eftersom ordet inte finns i texten
+    for kind in ("reading", "listening", "culture"):
+        for t in content.get(kind, []):
+            keys = text_keys(t.get("lines", []))
+            for k in (t.get("gloss") or {}):
+                if k not in keys:
+                    errors.append(f"{where}/content/{kind}.json: {t.get('id')} har glosan '{k}', men ordet finns inte i texten (nyckeln ska vara ordet med små bokstäver, utan l'/d' …)")
+    return errors, warnings
+
+
 def js_string(value):
     # JSON är giltig JavaScript; "</" skrivs om så att texten inte kan avsluta <script>-taggen
     return json.dumps(value, ensure_ascii=False).replace("</", "<\\/")
@@ -155,7 +214,8 @@ def main():
 
     lang_js, all_errors, course_data = [], [], {}
     for code in codes:
-        words, n_words, n_sections, errors, warnings = read_words(code)
+        words, n_words, section_ids, errors, warnings = read_words(code)
+        n_sections = len(section_ids)
         all_errors += errors
         for w in warnings:
             print("Varning:", w)
@@ -189,6 +249,10 @@ def main():
             if isinstance(v, list):
                 ids = [x.get("id") for x in v if isinstance(x, dict) and x.get("id")]
                 all_errors += [f"languages/{code}: {k} har id {i} flera gånger" for i in sorted({i for i in ids if ids.count(i) > 1}) if k != "grammar"]
+        errs, warns = check_content(content, section_ids, f"languages/{code}")
+        all_errors += errs
+        for w in warns:
+            print("Varning:", w)
         if "grammar" in content:
             ids = [x.get("id") for x in content["grammar"]]
             all_errors += [f"languages/{code}/content/grammar-*.json: id {i} finns flera gånger" for i in sorted({i for i in ids if ids.count(i) > 1})]
