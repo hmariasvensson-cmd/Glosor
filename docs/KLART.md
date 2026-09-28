@@ -2,6 +2,12 @@
 
 Punkter som har flyttats från [`BACKLOG.md`](BACKLOG.md) när de byggdes. **Referens** anger backloggens rubrik och prioritet. **Commit** anger var ändringen finns i git. **Publicerat** anger versionen av artefakten på https://claude.ai/artifact/YBQv8j4qXQQLuPwLAWt5mP.
 
+## 2026-09-28, del 4 (publicerat som version 24)
+
+| Referens | Vad som byggdes | Commit |
+|---|---|---|
+| Färre men mer värdefulla övningar · *Ordning på nya ord* (delvis), förälderns beslut: "eleven ska välja musikteorin som område" | Musikteorins avsnitt (mt1–mt7) i Franska 3 och Tyska 5 är valfria (`elective` i `lang.js`). "Nästa ord i ordlistan" och Dagens pass tar inga nya ord därifrån. I "Nya ord från" ligger de i en egen grupp, "Musikteori · bara när du väljer det", och i kapitelkartan visas de sist och räknas inte in i "x av y kapitel klara" eller i förslaget att gå vidare till nästa kurs. Ord som redan är påbörjade repeteras som vanligt, och teoriprovet finns kvar. | se git log |
+
 ## 2026-09-28, del 3 (publicerat som version 23)
 
 | Referens | Vad som byggdes | Commit |

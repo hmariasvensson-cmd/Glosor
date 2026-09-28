@@ -10,6 +10,8 @@ LANGUAGES.de = {
   etyLabel: "Kommentar",               // rubrik för sjätte fältet i words.txt
   nextLabel: "Nästa ord i ordlistan",
   storageKey: "glosor-de-v1", // ÄNDRA ALDRIG: sparade framsteg ligger under den här nyckeln
+  // Valfria avsnitt: ord härifrån kommer bara när eleven själv väljer avsnittet under "Nya ord från"
+  elective: {test: /^mt\d$/, label: "Musikteori · bara när du väljer det"},
   nextCourse: "de6",          // kursen man går vidare till när den här är klar
 
   accents: "ä ö ü ß",

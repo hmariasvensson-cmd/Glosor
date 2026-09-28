@@ -11,6 +11,8 @@ LANGUAGES.fr = {
   inLang: "på franska",       // "Skriv på franska"
   tts: "fr-FR",               // röst för uppläsning
   storageKey: "franska-glosor-v2", // ÄNDRA ALDRIG: sparade framsteg ligger under den här nyckeln
+  // Valfria avsnitt: ord härifrån kommer bara när eleven själv väljer avsnittet under "Nya ord från"
+  elective: {test: /^mt\d$/, label: "Musikteori · bara när du väljer det"},
 
   accents: "é è ê à â ç ô î û ù ë ï œ",
   verbAccents: "é è ê à â ç ô î û",

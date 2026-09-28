@@ -243,21 +243,24 @@ const gtag=g=>g?`<span class="tag ${g[0]}">${L.genders[g]||g}</span>`:"";
 const accentKeys=list=>`<div class="accents">${list.split(" ").map(c=>`<button type="button" data-c="${c}">${c}</button>`).join("")}</div>`;
 const lang=()=>`lang="${L.htmlLang||L.code}"`;
 
+// Valfria avsnitt (L.elective, t.ex. musikteorin) tas bara med när eleven väljer dem själv
+const isElective=id=>!!(L.elective&&L.elective.test.test(id||""));
+const coreWords=()=>WORDS.filter(w=>!isElective(w.sec));
 function pickNew(){
   // Egna ord från texterna först, sedan kapitlet klassen läser (om boken finns), sedan resten i ordning
   const rank=w=>w.sec==="mine"?0:S.chapter&&sameChapter(w.sec,S.chapter)?1:2;
   const fresh=WORDS.filter(w=>!isLearned(w)).sort((a,b)=>rank(a)-rank(b));
-  const pool=S.src==="auto"?fresh:fresh.filter(w=>w.sec===S.src);
+  const pool=S.src==="auto"?fresh.filter(w=>!isElective(w.sec)):fresh.filter(w=>w.sec===S.src);
   return pool.slice(0,S.newCount);
 }
 
 /* ---------- Startsida ---------- */
 // Förslag att gå vidare till nästa kurs (Tyska 4 → Tyska 5) när nästan alla ord är påbörjade och hälften sitter
-function nextPanel(learned,mastered){
-  const nx=LANGUAGES[L.nextCourse];
-  if(!nx||!WORDS.length||learned<WORDS.length*0.9||mastered<WORDS.length*0.5) return "";
+function nextPanel(){
+  const nx=LANGUAGES[L.nextCourse], core=coreWords(), learned=core.filter(isLearned).length, mastered=core.filter(isMastered).length;
+  if(!nx||!core.length||learned<core.length*0.9||mastered<core.length*0.5) return "";
   return `<section class="panel"><h2>Redo för ${esc(nx.course)}?</h2>
-    <p class="plan">Du har övat på ${learned} av ${WORDS.length} ord i ${esc(L.course)}, och ${mastered} kan du redan. Du kan fortsätta repetera här och samtidigt börja på ${esc(nx.course)}. Framstegen sparas separat i varje kurs.</p>
+    <p class="plan">Du har övat på ${learned} av ${core.length} ord i ${esc(L.course)}, och ${mastered} kan du redan. Du kan fortsätta repetera här och samtidigt börja på ${esc(nx.course)}. Framstegen sparas separat i varje kurs.</p>
     <button class="btn" id="nextc">Gå till ${esc(nx.course)}</button></section>`;
 }
 function renderStart(){
@@ -269,10 +272,10 @@ function renderStart(){
   const learned=WORDS.filter(isLearned).length, mastered=WORDS.filter(isMastered).length;
   const secOpt=s=>{const n=WORDS.filter(w=>w.sec===s.id&&!isLearned(w)).length;
     return `<option value="${s.id}" ${n?"":"disabled"}>${esc(s.name)} · ${progLabel([s.id])}</option>`;};
-  const bookSecs=SECTIONS.filter(s=>s.book), otherSecs=SECTIONS.filter(s=>!s.book);
+  const elSecs=SECTIONS.filter(s=>isElective(s.id)), bookSecs=SECTIONS.filter(s=>s.book&&!isElective(s.id)), otherSecs=SECTIONS.filter(s=>!s.book&&!isElective(s.id));
   const opts=`<option value="auto">${hasBook()?"Kapitlet ni läser, sedan resten":L.nextLabel||"Nästa ord i ordlistan"}</option>`+(bookSecs.length
     ?`<optgroup label="Boken: ${esc(L.book?L.book.title:"")}">${bookSecs.map(secOpt).join("")}</optgroup><optgroup label="Allmänt">${otherSecs.map(secOpt).join("")}</optgroup>`
-    :SECTIONS.map(secOpt).join(""));
+    :otherSecs.map(secOpt).join(""))+(elSecs.length?`<optgroup label="${esc(L.elective.label)}">${elSecs.map(secOpt).join("")}</optgroup>`:"");
   const nothing=!newW.length&&!due.length;
   app.innerHTML=`
   ${S.run||S.dailyDay===dayKey(Date.now())?"":dailyPanel(newW,due)}
@@ -280,7 +283,7 @@ function renderStart(){
     <div class="navrow"><button class="btn ghost" id="run-drop">Släng</button><button class="btn" id="run-go">Fortsätt</button></div></section>`:""}
   ${hasBook()?bookPanel():""}
   ${goalsPanel()}
-  ${nextPanel(learned,mastered)}
+  ${nextPanel()}
   <section class="panel">
     <div class="meta"><span class="label">Pass ${S.pass}</span></div>
     <div class="stats">
@@ -371,13 +374,15 @@ function chapterGroups(){
 }
 let CHMAP_OPEN=false;
 function chapterMap(){
-  const gs=chapterGroups(); if(gs.length<2) return "";
+  const all=chapterGroups(); if(all.length<2) return "";
   const cur=hasBook()&&S.chapter?S.chapter:(S.src!=="auto"?S.src:curSec());
+  // Valfria avsnitt visas sist och räknas inte in i "x av y kapitel klara"
+  const gs=all.filter(g=>!isElective(g.ids[0])), el=all.filter(g=>isElective(g.ids[0]));
   const done=gs.filter(g=>!secProg(g.ids).rest).length;
   return `<details class="more chmap" id="chmap" ${CHMAP_OPEN?"open":""}><summary>Hur långt har jag kommit? ${done} av ${gs.length} kapitel klara</summary>
     <div class="legend"><span><i class="sw" style="background:var(--c2)"></i>Kan</span><span><i class="sw" style="background:var(--c1)"></i>På väg</span><span><i class="sw" style="background:var(--grid)"></i>Kvar</span></div>
-    <div class="chlist">${gs.map(g=>{const p=secProg(g.ids), here=g.ids.includes(cur);
-      return `<button type="button" class="chrow${here?" here":""}" data-chmap="${esc(g.id)}" aria-label="${esc(g.name)}: ${p.k} kan, ${p.v} på väg, ${p.rest} kvar. Välj kapitlet.">
+    <div class="chlist">${[...gs,...el].map((g,i)=>{const p=secProg(g.ids), here=g.ids.includes(cur);
+      return (el.length&&i===gs.length?`<div class="vsec">${esc(L.elective.label)}</div>`:"")+`<button type="button" class="chrow${here?" here":""}" data-chmap="${esc(g.id)}" aria-label="${esc(g.name)}: ${p.k} kan, ${p.v} på väg, ${p.rest} kvar. Välj kapitlet.">
         <span class="chtop"><span class="chname">${esc(g.name)}${here?' <span class="pill new">nu</span>':""}</span><span class="chnum">${p.rest?p.pct+" %":"✓"}</span></span>
         <span class="track" data-tip="${esc(g.name)}: ${p.k} kan, ${p.v} på väg, ${p.rest} kvar av ${p.tot}">${p.k?`<i style="width:${100*p.k/p.tot}%;background:var(--c2)"></i>`:""}${p.v?`<i style="width:${100*p.v/p.tot}%;background:var(--c1)"></i>`:""}</span></button>`;}).join("")}</div>
     <p class="foot">Tryck på ett kapitel för att ta nya ord därifrån.</p></details>`;

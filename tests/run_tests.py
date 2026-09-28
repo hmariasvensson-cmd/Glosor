@@ -197,6 +197,11 @@ setTimeout(async()=>{ try{
     const b=m.querySelectorAll("[data-chmap]")[2], id=b.dataset.chmap; b.click();
     ok("kapitelkarta: tryck väljer kapitlet", (S.chapter&&ktKey(S.chapter)===id)||(S.src!=="auto"&&ktKey(S.src)===id), S.chapter+" "+S.src);
     delete S.chapter; S.src="auto";
+    { const n0=S.newCount; S.newCount=5000; renderStart();
+      ok("musikteori: kommer inte som nästa ord", pickNew().length>0&&!pickNew().some(w=>/^mt\d$/.test(w.sec)));
+      ok("musikteori: eget val i rullistan", [...q("#src").querySelectorAll("optgroup")].some(g=>g.label.includes("Musikteori")&&g.querySelector('option[value="mt1"]')));
+      S.src="mt1"; ok("musikteori: kommer när man väljer den", pickNew().length>0&&pickNew().every(w=>w.sec==="mt1"));
+      S.src="auto"; S.newCount=n0; renderStart(); }
     setView("stats"); { const wide=[...document.querySelectorAll("#app *")].filter(e=>e.getBoundingClientRect().right>document.documentElement.clientWidth+1).slice(0,3).map(e=>e.tagName+"."+e.className);
     ok("statistik: inget sticker ut åt sidan", !wide.length, wide.join(", ")+" bredd "+document.documentElement.clientWidth); }
   ok("statistik: dag för dag", q("#app").textContent.includes("Dag för dag")&&!!q('[aria-label="Minuter per dag de senaste 28 dagarna"]')); setView("ova"); }
