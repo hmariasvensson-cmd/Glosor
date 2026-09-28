@@ -2,7 +2,7 @@
 
 Punkter som har flyttats från [`BACKLOG.md`](BACKLOG.md) när de byggdes. **Referens** anger backloggens rubrik och prioritet. **Commit** anger var ändringen finns i git. **Publicerat** anger versionen av artefakten på https://claude.ai/artifact/YBQv8j4qXQQLuPwLAWt5mP.
 
-## 2026-09-28, del 6
+## 2026-09-28, del 6 (publicerat som version 26)
 
 Arkitekturpunkterna från granskningen 2026-09-28 (BACKLOG, *Arkitektur (granskning 2026-09-28)*).
 
