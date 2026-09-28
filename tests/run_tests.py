@@ -97,7 +97,7 @@ setTimeout(()=>{ try{
   { const t=EX().tasks.find(t=>t.part==="hoeren"); examTask(t.id); ok("tyska: hörprov döljer texten", !!q("#explay")&&q("#lines").hidden); }
   // Tyska 4: egen kurs med egen sparnyckel
   renderStart(); q('[data-only="1"]').click();
-  ok("bara tyska: båda tyska kurserna i väljaren", !q(".coursepick").hidden&&[...q("#course").options].map(o=>o.value).join()==="de4,de", [...q("#course").options].map(o=>o.value).join());
+  ok("bara tyska: båda tyska kurserna i väljaren", !q(".coursepick").hidden&&[...q("#course").options].map(o=>o.value).join()==="de4,de,de6", [...q("#course").options].map(o=>o.value).join());
   q('[data-only="0"]').click();
   useLang("de4"); ok("tyska 4: kurs byts", q("#coursechip").textContent.includes("Tyska 4")&&L.storageKey==="glosor-de4-v1");
   ok("tyska 4: egna framsteg", S.pass===1||!Object.keys(S.w).some(id=>LANGUAGES.de.base&&!byId[id]), S.pass);
@@ -122,6 +122,15 @@ setTimeout(()=>{ try{
     startGram("mix"); runDe(); ok(c+": blandad grammatik", S.gt.mix&&S.gt.mix.n>0);
     { const bad=(C().prompts||[]).filter(p=>!writeChecks(p,p.model).every(c=>c.ok)).map(p=>p.id);
       ok(c+": texter och modelltexter", (C().listening||[]).length>=5&&(C().reading||[]).length>=4&&!bad.length, bad.join()); }
+    startMix(); runDe(); ok(c+": blandad runda", !sess); }
+  // Franska 4 och Tyska 6 (steg 6)
+  ok("tyska 5 föreslår tyska 6", LANGUAGES.de.nextCourse==="de6");
+  for(const [c,key] of [["fr4","glosor-fr4-v1"],["de6","glosor-de6-v1"]]){ useLang(c);
+    ok(c+": egen sparnyckel och ord", L.storageKey===key&&q("#coursechip").textContent.includes(L.course)&&WORDS.length>900, WORDS.length);
+    ok(c+": grammatik", Object.keys(gramBank()).length>200&&verbGames().length>=2, Object.keys(gramBank()).length+" / "+verbGames().length);
+    ok(c+": artikeln behövs inte i svaret", (()=>{const w=WORDS.find(w=>/^(le|la|der|die|das) /.test(w.t)&&!w.t.includes(",")); return !w||check(w.t.replace(/^\S+ /,""),variants(w.t))==="right"||L.code==="de6";})());
+    { const bad=(C().prompts||[]).map(p=>[p.id,writeChecks(p,p.model).filter(c=>!c.ok).map(c=>c.label).join(" / ")]).filter(x=>x[1]).map(x=>x.join(": "));
+      ok(c+": texter och modelltexter", (C().listening||[]).length>=12&&(C().reading||[]).length>=10&&(C().prompts||[]).length>=20&&!bad.length, bad.join(" | ")); }
     startMix(); runDe(); ok(c+": blandad runda", !sess); }
   useLang("de4");
   { const n=S.log.length; startMix(); ok("tyska 4: blandad runda har grammatik", [sess.cur,...sess.queue].some(x=>x.k==="gram")); runDe();
@@ -200,7 +209,7 @@ setTimeout(async()=>{ try{
     ok("verb: subjonctif med que", f("avoir","subjonctif",0)==="que j'aie"&&f("avoir","subjonctif",2)==="qu'il/elle ait"&&f("parler","futur simple",3)==="nous parlerons", f("avoir","subjonctif",0)+" | "+f("avoir","subjonctif",2));
     ok("verb: que je tas bort vid rättning", check("que je fasse",["fasse"],true)==="right"); }
   ok("kurs och nivå visas", q("#coursechip").textContent.includes("Franska 3"), q("#coursechip").textContent);
-  ok("kommande kurs går inte att välja", [...q("#course").options].some(o=>o.disabled&&o.text.includes("Franska 4")));
+  ok("kommande kurs går inte att välja", [...q("#course").options].some(o=>o.disabled&&o.text.includes("Italienska 3")));
   ok("dagens pass finns", !!q("#daily"));
   ok("bokpanel med kapitel", !!q("#chapter")&&q(".book").textContent.includes("Escalade"));
   q("#chapter").value="k2"; q("#chapter").dispatchEvent(new Event("change"));
@@ -314,7 +323,7 @@ setTimeout(async()=>{ try{
   { const keep=S.log.slice(); for(let i=0;i<1100;i++) S.log.push({d:Date.now()-i*1000,dur:10,right:1,total:1,kind:"dict"}); save();
     ok("gammal logg sammanfattas", S.log.length===1000&&S.logOld&&S.logOld.dur>0, S.log.length+" "+JSON.stringify(S.logOld)); S.log=keep; delete S.logOld; save(); }
   renderStart(); q('[data-gy="1"]').click(); ok("Gy25-namn", q("#coursechip").textContent.includes("fortsättning, nivå 1")); q('[data-gy="0"]').click();
-  renderStart(); q('[data-only="1"]').click(); ok("bara en kurs döljer kursväljaren", q(".coursepick").hidden&&onlyCourse()==="fr"); q('[data-only="0"]').click();
+  renderStart(); q('[data-only="1"]').click(); ok("bara franska: bara de franska kurserna i väljaren", onlyCourse()==="fr"&&!q(".coursepick").hidden&&[...q("#course").options].map(o=>o.value).join()==="fr,fr4", [...q("#course").options].map(o=>o.value).join()); q('[data-only="0"]').click();
   ok("visa alla kurser igen", !q(".coursepick").hidden&&!onlyCourse());
   setView("fb"); ok("tyck till: flik", q("#tab-fb").getAttribute("aria-selected")==="true"&&!!q("#fbtext"));
   q("#fbsend").click(); ok("tyck till: tomt meddelande skickas inte", !Object.keys(__remote).some(k=>k.startsWith("feedback/")));

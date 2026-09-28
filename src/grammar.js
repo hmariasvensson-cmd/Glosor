@@ -80,7 +80,7 @@ function adjIds(k){
 // eller där vardagsspråket godtar alternativet (indikativ i indirekt tal), tas inte med
 // Franskans tempusval (imparfait/passé composé, plus-que-parfait, futur/presens) och artighetsformer går ofta att försvara
 // i talspråk, så de passar inte heller som "Hitta felet"
-const ERR_SKIP=["rel-nom","rel-akk","k1-rede","tps-bakgrund","tps-vana","tps-handelse","tps-avbrott","tps-signal","pqp-avoir","pqp-etre","cond-poli","cond-rai","fut-reg"];
+const ERR_SKIP=["rel-nom","rel-akk","k1-rede","tps-bakgrund","tps-vana","tps-handelse","tps-avbrott","tps-signal","pqp-avoir","pqp-etre","cond-poli","cond-rai","fut-reg","disc-imp","disc-pqp","disc-cond","disc-tps"];
 const errBase=()=>Object.values(gramBank()).filter(x=>x.type==="gap"&&x.p.gaps.length===1&&!ERR_SKIP.includes(x.rule)&&x.alt.some(a=>!a.includes("…")));
 function errItem(id){
   const [,bid,ai]=id.split("|"), b=gramBank()[bid]; if(!b) return null;

@@ -1,0 +1,392 @@
+[
+ {
+  "id": "ger-001",
+  "topic": "ger",
+  "rule": "ger-form",
+  "q": "Chloé s'est fait mal au poignet en [jouant] du piano pendant quatre heures sans pause.",
+  "alt": [
+   "jouer",
+   "joué",
+   "jouait"
+  ],
+  "why": "Gérondif = en + participe présent. Ta nous-formen (nous jouons), stryk -ons och lägg till -ant: jouant. Efter en kommer aldrig infinitiv, particip eller en böjd verbform.",
+  "sv": "Chloé gjorde illa handleden när hon spelade piano i fyra timmar utan paus."
+ },
+ {
+  "id": "ger-002",
+  "topic": "ger",
+  "rule": "ger-form",
+  "q": "En [mangeant] mieux et en dormant plus, Théo a retrouvé de l'énergie avant le bac.",
+  "alt": [
+   "mangant",
+   "manger",
+   "mangent"
+  ],
+  "why": "Nous mangeons behåller e för att g ska uttalas mjukt före a och o, därför mangeant. Mangant stavas fel, och efter en ska det vara participe présent, inte infinitiv eller presens.",
+  "sv": "Genom att äta bättre och sova mer fick Théo tillbaka energin inför studenten."
+ },
+ {
+  "id": "ger-003",
+  "topic": "ger",
+  "rule": "ger-form",
+  "q": "En [commençant] tôt le matin, tu auras le temps de répéter avant les cours.",
+  "alt": [
+   "commencant",
+   "commencer",
+   "commencent"
+  ],
+  "why": "Nous commençons har ç för att c ska uttalas som s före a och o, därför commençant. Utan cedilj skulle det uttalas med k-ljud.",
+  "sv": "Om du börjar tidigt på morgonen hinner du öva innan lektionerna."
+ },
+ {
+  "id": "ger-004",
+  "topic": "ger",
+  "rule": "ger-form",
+  "q": "Tu peux réussir ce concours en [ayant] davantage confiance en toi.",
+  "alt": [
+   "aillant",
+   "avoir",
+   "ayons"
+  ],
+  "why": "Avoir har en oregelbunden participe présent: ayant. Efter en kommer aldrig infinitiv (avoir) eller en böjd form (ayons), och aillant finns inte.",
+  "sv": "Du kan klara det här antagningsprovet om du har mer självförtroende."
+ },
+ {
+  "id": "ger-005",
+  "topic": "ger",
+  "rule": "ger-form",
+  "q": "En [étant] bien préparé, on a beaucoup moins le trac avant un concert.",
+  "alt": [
+   "soyant",
+   "été",
+   "êtant"
+  ],
+  "why": "Être har en oregelbunden participe présent: étant, med é. Den bildas inte från subjonctif (soyons) och été är participe passé.",
+  "sv": "Om man är väl förberedd har man mycket mindre scenskräck före en konsert."
+ },
+ {
+  "id": "ger-006",
+  "topic": "ger",
+  "rule": "ger-form",
+  "q": "[Sachant] que les places sont limitées, Inès s'est inscrite à trois concours d'entrée.",
+  "alt": [
+   "Savant",
+   "Sachante",
+   "Savoir"
+  ],
+  "why": "Savoir har en oregelbunden participe présent: sachant. Savant är ett adjektiv (lärd), participe présent böjs aldrig (inte sachante) och en infinitiv kan inte inleda satsen så här.",
+  "sv": "Eftersom Inès visste att platserna var begränsade anmälde hon sig till tre antagningsprov."
+ },
+ {
+  "id": "ger-007",
+  "topic": "ger",
+  "rule": "ger-form",
+  "q": "En [choisissant] l'alternance, Lucas gagne un salaire tout en continuant ses études.",
+  "alt": [
+   "choisant",
+   "choisir",
+   "choisi"
+  ],
+  "why": "Verb på -ir som finir har -iss- i nous-formen: nous choisissons → choisissant. Choisant saknar -iss-, och efter en kommer varken infinitiv eller participe passé.",
+  "sv": "Genom att välja lärlingsutbildning tjänar Lucas en lön samtidigt som han fortsätter att studera."
+ },
+ {
+  "id": "ger-008",
+  "topic": "ger",
+  "rule": "ger-sens",
+  "q": "Beaucoup de jeunes s'informent [en regardant] des vidéos courtes sur leur téléphone.",
+  "alt": [
+   "en regarder",
+   "par regardant",
+   "regardé"
+  ],
+  "why": "Gérondif visar sättet eller medlet: hur de håller sig informerade. Det bildas alltid med en (aldrig par) + participe présent på -ant.",
+  "sv": "Många unga håller sig informerade genom att titta på korta videor i mobilen."
+ },
+ {
+  "id": "ger-009",
+  "topic": "ger",
+  "rule": "ger-sens",
+  "q": "C'est en [forgeant] qu'on devient forgeron : il faut pratiquer tous les jours.",
+  "alt": [
+   "forger",
+   "forgé",
+   "forgant"
+  ],
+  "why": "Ordspråket använder gérondif för medlet: genom att smida. Nous forgeons behåller e före a, därför forgeant och inte forgant. Efter en kommer aldrig infinitiv eller participe passé.",
+  "sv": "Övning ger färdighet (ordagrant: det är genom att smida som man blir smed): man måste öva varje dag."
+ },
+ {
+  "id": "ger-010",
+  "topic": "ger",
+  "rule": "ger-sens",
+  "q": "[En travaillant] le soir dans un café, Yasmine paie une partie de son loyer.",
+  "alt": [
+   "En travailler",
+   "Par travaillant",
+   "Travailler"
+  ],
+  "why": "Gérondif anger medlet: genom att jobba. Det heter alltid en + -ant. En infinitiv kan inte stå ensam först i meningen med den här betydelsen, och par används inte före participe présent.",
+  "sv": "Genom att jobba på kvällarna på ett kafé betalar Yasmine en del av sin hyra."
+ },
+ {
+  "id": "ger-011",
+  "topic": "ger",
+  "rule": "ger-sens",
+  "q": "[En prenant] le vélo plutôt que la voiture, on pollue beaucoup moins en ville.",
+  "alt": [
+   "En prendre",
+   "Par prenant",
+   "Pris"
+  ],
+  "why": "Gérondif kan uttrycka ett villkor: om man tar cykeln. Nous prenons → prenant. Efter en kommer aldrig infinitiv, och pris är participe passé (tagen).",
+  "sv": "Om man tar cykeln i stället för bilen förorenar man mycket mindre i stan."
+ },
+ {
+  "id": "ger-012",
+  "topic": "ger",
+  "rule": "ger-sens",
+  "q": "Mon père écoute toujours la radio [en préparant] le dîner.",
+  "alt": [
+   "en préparer",
+   "en préparé",
+   "pour préparant"
+  ],
+  "why": "Två saker sker samtidigt och med samma subjekt (mon père): en + participe présent. Efter en kommer aldrig infinitiv eller participe passé, och pour går inte före -ant.",
+  "sv": "Min pappa lyssnar alltid på radio när han lagar middag."
+ },
+ {
+  "id": "ger-013",
+  "topic": "ger",
+  "rule": "ger-sens",
+  "q": "Vous protégerez vos oreilles [en portant] des bouchons pendant les répétitions d'orchestre.",
+  "alt": [
+   "en porter",
+   "par portant",
+   "en porté"
+  ],
+  "why": "Gérondif anger medlet: genom att använda öronproppar. En + portant. Par används inte före participe présent, och efter en kommer varken infinitiv eller participe passé.",
+  "sv": "Ni skyddar era öron genom att använda öronproppar under orkesterrepetitionerna."
+ },
+ {
+  "id": "ger-014",
+  "topic": "ger",
+  "rule": "ger-sens",
+  "q": "Des années après la guerre, le témoin a raconté son histoire [en pleurant].",
+  "alt": [
+   "en pleurer",
+   "en pleuré",
+   "par pleurant"
+  ],
+  "why": "Gérondif beskriver sättet: hur vittnet berättade. En + participe présent (nous pleurons → pleurant). Efter en kommer aldrig infinitiv eller participe passé.",
+  "sv": "Många år efter kriget berättade vittnet sin historia under tårar."
+ },
+ {
+  "id": "ger-015",
+  "topic": "ger",
+  "rule": "ger-sens",
+  "q": "[En arrivant] à Montréal en janvier, Sara a été surprise par le froid.",
+  "alt": [
+   "En arriver",
+   "En arrivée",
+   "Par arrivant"
+  ],
+  "why": "Gérondif för tid: när hon kom fram. Subjektet i gérondif är alltid detsamma som i huvudsatsen, här Sara. Efter en kommer aldrig infinitiv eller particip på -é/-ée, och par går inte före -ant.",
+  "sv": "När Sara kom till Montréal i januari blev hon överraskad av kylan."
+ },
+ {
+  "id": "ger-016",
+  "topic": "ger",
+  "rule": "ger-tout",
+  "q": "Lucas continue à jouer dans un groupe [tout en] préparant le concours du conservatoire.",
+  "alt": [
+   "tous en",
+   "toute en",
+   "tout à"
+  ],
+  "why": "Tout en + gérondif betonar att två saker sker samtidigt. Tout är här ett adverb och böjs inte, och prepositionen är alltid en.",
+  "sv": "Lucas fortsätter att spela i ett band samtidigt som han förbereder sig för antagningsprovet till konservatoriet."
+ },
+ {
+  "id": "ger-017",
+  "topic": "ger",
+  "rule": "ger-tout",
+  "q": "[Tout en] reconnaissant l'utilité des réseaux sociaux, les experts veulent mieux protéger les mineurs.",
+  "alt": [
+   "Tous en",
+   "Tout de",
+   "Toute en"
+  ],
+  "why": "Tout en + gérondif kan uttrycka motsats: trots att de erkänner. Tout böjs inte efter subjektet (les experts), och det heter alltid en före participe présent.",
+  "sv": "Samtidigt som experterna erkänner att sociala medier är nyttiga vill de skydda minderåriga bättre."
+ },
+ {
+  "id": "ger-018",
+  "topic": "ger",
+  "rule": "ger-tout",
+  "q": "Elle a accepté le poste à Bruxelles tout en [sachant] qu'elle aurait le mal du pays.",
+  "alt": [
+   "savant",
+   "sachante",
+   "sachait"
+  ],
+  "why": "Tout en sachant = trots att hon visste. Savoir har den oregelbundna formen sachant, som aldrig böjs (inte sachante). Savant är ett adjektiv och sachait en böjd verbform.",
+  "sv": "Hon tackade ja till jobbet i Bryssel fast hon visste att hon skulle få hemlängtan."
+ },
+ {
+  "id": "ger-019",
+  "topic": "ger",
+  "rule": "ger-tout",
+  "q": "On peut consommer moins [tout en] vivant très bien : c'est le message de cette association.",
+  "alt": [
+   "tous en",
+   "tout à",
+   "toute en"
+  ],
+  "why": "Tout en + gérondif: man kan konsumera mindre och ändå leva bra. Tout är oböjligt här, och prepositionen före participe présent är alltid en.",
+  "sv": "Man kan konsumera mindre och ändå leva väldigt bra: det är den här föreningens budskap."
+ },
+ {
+  "id": "ger-020",
+  "topic": "ger",
+  "rule": "ger-pp",
+  "q": "Les candidats [souhaitant] s'inscrire au concours doivent envoyer leur dossier avant le 15 mars.",
+  "alt": [
+   "souhaitants",
+   "souhaitent",
+   "souhaité"
+  ],
+  "why": "Participe présent ersätter en relativsats (qui souhaitent) i formell text. Den böjs aldrig, alltså inget -s. Souhaitent skulle ge två böjda verb utan qui, och souhaité betyder önskad.",
+  "sv": "De sökande som vill anmäla sig till antagningsprovet måste skicka in sina handlingar före den 15 mars."
+ },
+ {
+  "id": "ger-021",
+  "topic": "ger",
+  "rule": "ger-pp",
+  "q": "Dans notre ville, les personnes [venant] de l'étranger peuvent suivre des cours de français gratuits.",
+  "alt": [
+   "venantes",
+   "viennent",
+   "venir"
+  ],
+  "why": "Venant = qui viennent. Participe présent är oböjligt, även efter ett feminint pluralord som les personnes. Viennent skulle kräva qui framför, och infinitiven venir passar inte.",
+  "sv": "I vår stad kan personer som kommer från utlandet gå gratiskurser i franska."
+ },
+ {
+  "id": "ger-022",
+  "topic": "ger",
+  "rule": "ger-pp",
+  "q": "L'orchestre du lycée cherche des musiciens [sachant] lire une partition.",
+  "alt": [
+   "savant",
+   "sachants",
+   "savent"
+  ],
+  "why": "Sachant = qui savent. Savoir har den oregelbundna formen sachant, som aldrig får -s. Savant är ett adjektiv (lärd), och savent kräver qui framför.",
+  "sv": "Gymnasiets orkester söker musiker som kan läsa noter."
+ },
+ {
+  "id": "ger-023",
+  "topic": "ger",
+  "rule": "ger-pp",
+  "q": "Les voyageurs [ayant] plus de soixante-cinq ans bénéficient d'une réduction sur le billet.",
+  "alt": [
+   "ayants",
+   "ont",
+   "aillant"
+  ],
+  "why": "Ayant = qui ont. Participe présent av avoir är ayant och böjs inte. Ont skulle kräva qui, och aillant finns inte.",
+  "sv": "Resenärer som är över sextiofem år får rabatt på biljetten."
+ },
+ {
+  "id": "ger-024",
+  "topic": "ger",
+  "rule": "ger-pp",
+  "q": "Un article [expliquant] comment reconnaître les fausses informations a été publié hier.",
+  "alt": [
+   "expliquante",
+   "explique",
+   "expliqué"
+  ],
+  "why": "Expliquant = qui explique. Participe présent är oböjligt. Explique kräver qui framför, och expliqué (förklarad) ger fel betydelse eftersom artikeln själv förklarar.",
+  "sv": "En artikel som förklarar hur man känner igen falska nyheter publicerades i går."
+ },
+ {
+  "id": "ger-025",
+  "topic": "ger",
+  "rule": "ger-pp",
+  "q": "Les bénévoles [travaillant] pour l'association distribuent des repas tous les soirs.",
+  "alt": [
+   "travaillants",
+   "travaillent",
+   "travaillé"
+  ],
+  "why": "Travaillant = qui travaillent. Participe présent böjs aldrig. Travaillent skulle ge två böjda verb utan qui, och travaillé är participe passé.",
+  "sv": "De volontärer som arbetar för föreningen delar ut mat varje kväll."
+ },
+ {
+  "id": "ger-026",
+  "topic": "ger",
+  "rule": "ger-passe",
+  "q": "[Ayant] terminé ses études à Lyon, Élise est partie travailler à Genève.",
+  "alt": [
+   "Étant",
+   "Avoir",
+   "Avant"
+  ],
+  "why": "Ayant + participe passé betyder efter att ha: terminer har avoir i passé composé, alltså ayant terminé. Étant används bara med être-verb, en infinitiv kräver après avoir, och avant saknar mening här.",
+  "sv": "Efter att ha avslutat sina studier i Lyon flyttade Élise till Genève för att jobba."
+ },
+ {
+  "id": "ger-027",
+  "topic": "ger",
+  "rule": "ger-passe",
+  "q": "[Étant] arrivés en retard, nous n'avons pas pu entrer dans la salle de concert.",
+  "alt": [
+   "Ayant",
+   "Été",
+   "Étants"
+  ],
+  "why": "Arriver har être i passé composé, så det blir étant arrivés. Participet arrivés böjs efter subjektet nous. Étant själv böjs aldrig, och été är participe passé.",
+  "sv": "Eftersom vi kom för sent kunde vi inte gå in i konsertsalen."
+ },
+ {
+  "id": "ger-028",
+  "topic": "ger",
+  "rule": "ger-passe",
+  "q": "[Ayant] perdu sa famille pendant la guerre, ce témoin a consacré sa vie au devoir de mémoire.",
+  "alt": [
+   "Étant",
+   "Eu",
+   "Avant"
+  ],
+  "why": "Perdre har avoir i passé composé: ayant perdu (efter att ha förlorat / eftersom han hade förlorat). Étant passar bara med être-verb, eu är participe passé och avant saknar mening här.",
+  "sv": "Eftersom vittnet hade förlorat sin familj under kriget ägnade han sitt liv åt att hålla minnet vid liv."
+ },
+ {
+  "id": "ger-029",
+  "topic": "ger",
+  "rule": "ger-passe",
+  "q": "Étant [partie] seule en Erasmus, Léa a dû apprendre à tout organiser.",
+  "alt": [
+   "parti",
+   "partis",
+   "partant"
+  ],
+  "why": "Med étant + participe passé böjs participet efter subjektet, som med être i passé composé. Léa är en kvinna, alltså partie. Partant betyder medan hon reste och passar inte efter étant.",
+  "sv": "Eftersom Léa hade åkt ensam på Erasmus var hon tvungen att lära sig att ordna allt själv."
+ },
+ {
+  "id": "ger-030",
+  "topic": "ger",
+  "rule": "ger-passe",
+  "q": "[N'ayant] pas reçu de réponse, le candidat a rappelé le secrétariat du conservatoire.",
+  "alt": [
+   "Ne ayant",
+   "N'étant",
+   "N'avant"
+  ],
+  "why": "Recevoir har avoir: ayant reçu. Med negation blir ne till n' före vokal: n'ayant pas reçu. N'étant passar inte eftersom recevoir inte har être, och avant är ett annat ord.",
+  "sv": "Eftersom den sökande inte hade fått något svar ringde han konservatoriets kansli igen."
+ }
+]

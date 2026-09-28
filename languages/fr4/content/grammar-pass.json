@@ -1,0 +1,400 @@
+[
+ {
+  "id": "pass-001",
+  "topic": "pass",
+  "rule": "pass-pres",
+  "q": "Dans les collèges français, les téléphones portables [sont interdits] depuis 2018.",
+  "alt": [
+   "sont interdit",
+   "ont interdits",
+   "interdisent"
+  ],
+  "why": "Passiv presens = être i presens + participe passé. Participet böjs efter subjektet les téléphones (maskulinum plural): interdits. Avoir bildar inte passiv, och interdisent är aktiv form utan objekt.",
+  "sv": "På franska högstadieskolor är mobiltelefoner förbjudna sedan 2018."
+ },
+ {
+  "id": "pass-002",
+  "topic": "pass",
+  "rule": "pass-pres",
+  "q": "Le français [est parlé] par plus de 300 millions de personnes dans le monde.",
+  "alt": [
+   "est parlée",
+   "a parlé",
+   "parle"
+  ],
+  "why": "Passiv presens: est + participe passé. Le français är maskulinum singular, alltså parlé utan -e. A parlé och parle är aktiva former och betyder att franskan själv talar.",
+  "sv": "Franska talas av över 300 miljoner människor i världen."
+ },
+ {
+  "id": "pass-003",
+  "topic": "pass",
+  "rule": "pass-pres",
+  "q": "Dans notre journal, chaque article [est] [relu] par deux journalistes avant d'être publié.",
+  "alt": [
+   "a … relu",
+   "est … relue",
+   "est … relire"
+  ],
+  "why": "Passiv presens: être + participe passé. Chaque article är maskulinum singular: est relu. Avoir bildar inte passiv, relue är feminint och relire är infinitiv.",
+  "sv": "På vår tidning korrekturläses varje artikel av två journalister innan den publiceras."
+ },
+ {
+  "id": "pass-004",
+  "topic": "pass",
+  "rule": "pass-pres",
+  "q": "Dans notre quartier, les déchets alimentaires [sont collectés] une fois par semaine.",
+  "alt": [
+   "sont collecté",
+   "ont collectés",
+   "collectent"
+  ],
+  "why": "Passiv presens: sont + participe passé, som böjs efter les déchets (maskulinum plural): collectés. Avoir bildar inte passiv, och collectent är aktivt och saknar objekt.",
+  "sv": "I vårt kvarter hämtas matavfallet en gång i veckan."
+ },
+ {
+  "id": "pass-005",
+  "topic": "pass",
+  "rule": "pass-pc",
+  "q": "La Déclaration des droits de l'homme et du citoyen [a été adoptée] en 1789.",
+  "alt": [
+   "a été adopté",
+   "est été adoptée",
+   "a adoptée"
+  ],
+  "why": "Passiv i passé composé: a été + participe passé. Participet böjs efter subjektet la Déclaration (femininum): adoptée. Est été finns inte, och utan été blir det aktivt.",
+  "sv": "Deklarationen om människans och medborgarens rättigheter antogs 1789."
+ },
+ {
+  "id": "pass-006",
+  "topic": "pass",
+  "rule": "pass-pc",
+  "q": "La peine de mort [a été] [abolie] en France en 1981.",
+  "alt": [
+   "a … abolie",
+   "a été … aboli",
+   "est été … abolie"
+  ],
+  "why": "Passiv i passé composé: a été + participe passé. La peine de mort är femininum: abolie. Utan été blir formen aktiv, och est été finns inte.",
+  "sv": "Dödsstraffet avskaffades i Frankrike 1981."
+ },
+ {
+  "id": "pass-007",
+  "topic": "pass",
+  "rule": "pass-pc",
+  "q": "La tour Eiffel [a été construite] pour l'Exposition universelle de 1889.",
+  "alt": [
+   "a été construit",
+   "a construite",
+   "a été construire"
+  ],
+  "why": "Passiv i passé composé: a été + participe passé. La tour är femininum, alltså construite. Utan été blir det aktivt, och efter été står aldrig infinitiv.",
+  "sv": "Eiffeltornet byggdes till världsutställningen 1889."
+ },
+ {
+  "id": "pass-008",
+  "topic": "pass",
+  "rule": "pass-pc",
+  "type": "rw",
+  "q": "Les journalistes ont révélé le scandale.",
+  "cue": "passiv",
+  "a": "Le scandale a été révélé par les journalistes.",
+  "alt": [
+   "Le scandale a révélé été par les journalistes.",
+   "Les journalistes a été révélé par le scandale."
+  ],
+  "why": "Objektet (le scandale) blir subjekt. Ont révélé blir a été révélé, eftersom det nya subjektet är singular, och den som utför handlingen kommer efter par.",
+  "sv": "Skandalen avslöjades av journalisterna."
+ },
+ {
+  "id": "pass-009",
+  "topic": "pass",
+  "rule": "pass-pc",
+  "type": "rw",
+  "q": "Le maire a inauguré la nouvelle piste cyclable.",
+  "cue": "passiv",
+  "a": "La nouvelle piste cyclable a été inaugurée par le maire.",
+  "alt": [
+   "La nouvelle piste cyclable a inaugurée été par le maire.",
+   "Le maire a été inaugurée par la nouvelle piste cyclable."
+  ],
+  "why": "La nouvelle piste cyclable blir subjekt, och participet böjs efter det (femininum): a été inaugurée. Den som gör handlingen, le maire, kommer efter par.",
+  "sv": "Den nya cykelbanan invigdes av borgmästaren."
+ },
+ {
+  "id": "pass-010",
+  "topic": "pass",
+  "rule": "pass-temps",
+  "q": "Grâce aux dons des habitants, le vieux château [sera restauré] l'année prochaine.",
+  "alt": [
+   "sera restaurée",
+   "va restauré",
+   "est restaurer"
+  ],
+  "why": "Passiv i futur: sera + participe passé. Le château är maskulinum: restauré. Va restauré saknar être, och efter est står aldrig infinitiv.",
+  "sv": "Tack vare invånarnas gåvor kommer det gamla slottet att restaureras nästa år."
+ },
+ {
+  "id": "pass-011",
+  "topic": "pass",
+  "rule": "pass-temps",
+  "q": "La salle de concert doit [être rénovée] avant la saison prochaine.",
+  "alt": [
+   "être rénové",
+   "avoir rénovée",
+   "rénovée"
+  ],
+  "why": "Efter doit står passiv infinitiv: être + participe passé. La salle är femininum: rénovée. Avoir bildar inte passiv, och ett particip kan inte stå direkt efter doit.",
+  "sv": "Konsertsalen måste renoveras före nästa säsong."
+ },
+ {
+  "id": "pass-012",
+  "topic": "pass",
+  "rule": "pass-temps",
+  "q": "Au Moyen Âge, les livres [étaient copiés] à la main par des moines.",
+  "alt": [
+   "étaient copié",
+   "avaient copiés",
+   "copiaient"
+  ],
+  "why": "Passiv i imparfait för något som skedde regelbundet: étaient + participe passé, böjt efter les livres (maskulinum plural). Avoir bildar inte passiv, och copiaient skulle betyda att böckerna själva kopierade.",
+  "sv": "Under medeltiden skrevs böckerna av för hand av munkar."
+ },
+ {
+  "id": "pass-013",
+  "topic": "pass",
+  "rule": "pass-temps",
+  "q": "Quand nous sommes arrivés au festival, toutes les places [avaient été vendues].",
+  "alt": [
+   "avaient été vendus",
+   "étaient été vendues",
+   "avaient vendues"
+  ],
+  "why": "Passiv i plus-que-parfait (något hade redan hänt): avaient été + participe passé. Les places är femininum plural: vendues. Étaient été finns inte, och utan été blir det aktivt.",
+  "sv": "När vi kom till festivalen hade alla biljetter redan sålts."
+ },
+ {
+  "id": "pass-014",
+  "topic": "pass",
+  "rule": "pass-temps",
+  "q": "Selon le rapport, la pollution [serait réduite] si on développait les transports en commun.",
+  "alt": [
+   "serait réduit",
+   "aurait réduite",
+   "sera réduite"
+  ],
+  "why": "Si + imparfait kräver conditionnel i huvudsatsen, och passiv conditionnel är serait + participe passé. La pollution är femininum: réduite. Sera är futur och passar inte med si + imparfait.",
+  "sv": "Enligt rapporten skulle föroreningarna minska om man byggde ut kollektivtrafiken."
+ },
+ {
+  "id": "pass-015",
+  "topic": "pass",
+  "rule": "pass-temps",
+  "q": "Les résultats du concours [seront] [publiés] sur le site du conservatoire le 20 juin.",
+  "alt": [
+   "auront … publiés",
+   "seront … publié",
+   "seront … publier"
+  ],
+  "why": "Passiv i futur: seront + participe passé, som böjs efter les résultats (maskulinum plural): publiés. Avoir bildar inte passiv, och efter seront står aldrig infinitiv.",
+  "sv": "Resultaten från antagningsprovet publiceras på konservatoriets webbplats den 20 juni."
+ },
+ {
+  "id": "pass-016",
+  "topic": "pass",
+  "rule": "pass-temps",
+  "type": "rw",
+  "q": "Un jury international choisira les lauréats.",
+  "cue": "passiv",
+  "a": "Les lauréats seront choisis par un jury international.",
+  "alt": [
+   "Un jury international seront choisis par les lauréats.",
+   "Les lauréats choisis seront par un jury international."
+  ],
+  "why": "Futur i aktiv (choisira) blir futur i passiv: seront + participe passé. Participet böjs efter det nya subjektet les lauréats: choisis.",
+  "sv": "Pristagarna kommer att väljas ut av en internationell jury."
+ },
+ {
+  "id": "pass-017",
+  "topic": "pass",
+  "rule": "pass-accord",
+  "q": "Après un long débat à l'Assemblée, les deux lois [ont été votées] à une large majorité.",
+  "alt": [
+   "ont été voté",
+   "ont été votés",
+   "sont été votées"
+  ],
+  "why": "I passiv böjs participet alltid efter subjektet. Les lois är femininum plural: votées. Sont été finns inte.",
+  "sv": "Efter en lång debatt i nationalförsamlingen röstades de två lagarna igenom med stor majoritet."
+ },
+ {
+  "id": "pass-018",
+  "topic": "pass",
+  "rule": "pass-accord",
+  "q": "Après deux jours d'épreuves, ma sœur [a été acceptée] au conservatoire de Lyon.",
+  "alt": [
+   "a été accepté",
+   "est été acceptée",
+   "a acceptée"
+  ],
+  "why": "Participet i passiv böjs efter subjektet: ma sœur är femininum singular, alltså acceptée. Est été finns inte, och utan été blir det aktivt.",
+  "sv": "Efter två dagars prov blev min syster antagen till konservatoriet i Lyon."
+ },
+ {
+  "id": "pass-019",
+  "topic": "pass",
+  "rule": "pass-accord",
+  "q": "Les chansons du spectacle [ont été écrites] par des élèves de terminale.",
+  "alt": [
+   "ont été écrits",
+   "ont été écrit",
+   "ont écrites"
+  ],
+  "why": "Participet böjs efter subjektet les chansons, som är femininum plural: écrites. Utan été blir det aktivt: sångerna skulle själva ha skrivit något.",
+  "sv": "Sångerna i föreställningen skrevs av elever i sista året på gymnasiet."
+ },
+ {
+  "id": "pass-020",
+  "topic": "pass",
+  "rule": "pass-accord",
+  "q": "À la fin de la journée, les manifestantes [ont été reçues] par le maire.",
+  "alt": [
+   "ont été reçus",
+   "ont été reçu",
+   "ont reçues"
+  ],
+  "why": "Les manifestantes är kvinnor i plural, så participet blir reçues. Utan été blir det aktivt (de skulle ha tagit emot något).",
+  "sv": "I slutet av dagen blev de kvinnliga demonstranterna mottagna av borgmästaren."
+ },
+ {
+  "id": "pass-021",
+  "topic": "pass",
+  "rule": "pass-accord",
+  "q": "Nous [avons été] très bien [accueillis] par nos colocataires à Montréal.",
+  "alt": [
+   "avons … accueillis",
+   "avons été … accueilli",
+   "sommes été … accueillis"
+  ],
+  "why": "Passiv i passé composé: avons été + participe passé, som böjs efter nous (här en blandad grupp, maskulinum plural): accueillis. Utan été blir det aktivt, och sommes été finns inte.",
+  "sv": "Vi blev väldigt väl mottagna av våra rumskamrater i Montréal."
+ },
+ {
+  "id": "pass-022",
+  "topic": "pass",
+  "rule": "pass-par",
+  "q": "Ce professeur de violon est aimé [de] tous ses élèves.",
+  "alt": [
+   "à",
+   "avec",
+   "en"
+  ],
+  "why": "Efter verb som beskriver känslor (aimer, respecter, détester) används ofta de i stället för par. À, avec och en kan aldrig ange vem som gör handlingen i passiv.",
+  "sv": "Den här fiolläraren är omtyckt av alla sina elever."
+ },
+ {
+  "id": "pass-023",
+  "topic": "pass",
+  "rule": "pass-par",
+  "q": "Ce matin, les toits du village étaient couverts [de] neige.",
+  "alt": [
+   "par",
+   "avec",
+   "à"
+  ],
+  "why": "Couvert de, rempli de och entouré de beskriver ett tillstånd och tar de, utan artikel: couverts de neige. Par kräver en artikel (par la neige), och avec eller à passar inte efter couvert.",
+  "sv": "I morse var byns tak täckta av snö."
+ },
+ {
+  "id": "pass-024",
+  "topic": "pass",
+  "rule": "pass-par",
+  "q": "Le vélo de Hugo a été volé [par] deux jeunes devant la gare.",
+  "alt": [
+   "de",
+   "avec",
+   "à"
+  ],
+  "why": "Vid en konkret handling (voler) anges den som utför den med par. De används vid känslor och tillstånd, och avec och à anger aldrig den handlande.",
+  "sv": "Hugos cykel stals av två ungdomar utanför stationen."
+ },
+ {
+  "id": "pass-025",
+  "topic": "pass",
+  "rule": "pass-par",
+  "q": "Ce roman a été traduit en quarante langues et il est lu [par] des millions de lecteurs.",
+  "alt": [
+   "avec",
+   "en",
+   "chez"
+  ],
+  "why": "Den som utför handlingen (läser) anges med par i passiv. Avec, en och chez kan inte ange vem som gör något i en passiv mening.",
+  "sv": "Den här romanen har översatts till fyrtio språk och läses av miljontals läsare."
+ },
+ {
+  "id": "pass-026",
+  "topic": "pass",
+  "rule": "pass-par",
+  "type": "rw",
+  "q": "Des bénévoles ont nettoyé la plage.",
+  "cue": "passiv",
+  "a": "La plage a été nettoyée par des bénévoles.",
+  "alt": [
+   "Des bénévoles a été nettoyée par la plage.",
+   "La plage a nettoyée été par des bénévoles."
+  ],
+  "why": "La plage blir subjekt, så participet blir nettoyée (femininum). Été står direkt efter a, och de som gör handlingen kommer efter par.",
+  "sv": "Stranden städades av volontärer."
+ },
+ {
+  "id": "pass-027",
+  "topic": "pass",
+  "rule": "pass-on",
+  "q": "Le français [se parle] au Québec, en Belgique, en Suisse et dans une grande partie de l'Afrique.",
+  "alt": [
+   "parle",
+   "se parlent",
+   "se parler"
+  ],
+  "why": "Pronominell form (se + verb) används ofta på franska där svenskan har s-passiv: talas = se parle. Utan se betyder det att franskan själv talar, och verbet ska stå i singular efter le français.",
+  "sv": "Franska talas i Québec, Belgien, Schweiz och i en stor del av Afrika."
+ },
+ {
+  "id": "pass-028",
+  "topic": "pass",
+  "rule": "pass-on",
+  "q": "[On m'a volé] mon vélo pendant que j'étais au concert.",
+  "alt": [
+   "J'ai été volé",
+   "Je suis volé",
+   "On m'ai volé"
+  ],
+  "why": "På franska kan man inte göra en person till subjekt i passiv när det är en sak som stjäls. Man använder on: on m'a volé mon vélo. On tar verbet i tredje person: a, inte ai.",
+  "sv": "Min cykel blev stulen medan jag var på konserten."
+ },
+ {
+  "id": "pass-029",
+  "topic": "pass",
+  "rule": "pass-on",
+  "q": "Ça [ne se dit pas] en classe, c'est beaucoup trop familier.",
+  "alt": [
+   "ne se dit",
+   "ne dit pas",
+   "ne se dis pas"
+  ],
+  "why": "Ça se dit = det säger man. Negationen ne … pas omsluter se dit. Utan se betyder det att ça säger något, och ça tar tredje person: dit.",
+  "sv": "Så säger man inte i klassrummet, det är alldeles för vardagligt."
+ },
+ {
+  "id": "pass-030",
+  "topic": "pass",
+  "rule": "pass-on",
+  "q": "Ce plat traditionnel [se mange] froid, avec un peu de pain.",
+  "alt": [
+   "se mangent",
+   "mange",
+   "se manger"
+  ],
+  "why": "Se mange = äts: pronominell form i stället för passiv. Verbet böjs efter ce plat (singular). Utan se skulle rätten själv äta, och infinitiv passar inte.",
+  "sv": "Den här traditionella rätten äts kall, med lite bröd."
+ }
+]

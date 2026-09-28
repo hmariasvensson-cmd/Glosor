@@ -10,6 +10,7 @@ LANGUAGES.de = {
   etyLabel: "Kommentar",               // rubrik för sjätte fältet i words.txt
   nextLabel: "Nästa ord i ordlistan",
   storageKey: "glosor-de-v1", // ÄNDRA ALDRIG: sparade framsteg ligger under den här nyckeln
+  nextCourse: "de6",          // kursen man går vidare till när den här är klar
 
   accents: "ä ö ü ß",
   verbAccents: "ä ö ü ß",

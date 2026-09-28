@@ -1,0 +1,469 @@
+[
+ {
+  "id": "conn-001",
+  "topic": "conn",
+  "rule": "conn-cause",
+  "q": "[Comme] les cheminots étaient en grève, Chloé est arrivée en retard à son concours.",
+  "acc": [
+   "Parce que",
+   "Puisque"
+  ],
+  "alt": [
+   "Car",
+   "Donc",
+   "Bien que"
+  ],
+  "why": "Betydelse: orsaken kommer först. Comme är det vanligaste sättet att börja en mening med en orsak. Car kan aldrig inleda en mening före huvudsatsen, donc anger följd, och bien que betyder fast och kräver subjonctif (soient).",
+  "sv": "Eftersom järnvägsarbetarna strejkade kom Chloé för sent till sitt antagningsprov."
+ },
+ {
+  "id": "conn-002",
+  "topic": "conn",
+  "rule": "conn-cause",
+  "q": "Les jeunes lisent de moins en moins la presse papier. [En effet], ils s'informent surtout en ligne.",
+  "alt": [
+   "Malgré",
+   "Bien que",
+   "Afin de"
+  ],
+  "why": "Betydelse: andra meningen förklarar den första (det är nämligen så att). En effet kan inleda en ny huvudsats. Malgré och afin de följs aldrig av en sats med subjekt och verb, och bien que kräver subjonctif och en huvudsats efteråt.",
+  "sv": "Unga läser allt mindre papperstidningar. De tar nämligen mest del av nyheter på nätet."
+ },
+ {
+  "id": "conn-003",
+  "topic": "conn",
+  "rule": "conn-cause",
+  "q": "[Puisque] tu connais si bien la ville, c'est toi qui nous serviras de guide !",
+  "acc": [
+   "Comme"
+  ],
+  "alt": [
+   "Car",
+   "Malgré",
+   "Pourtant"
+  ],
+  "why": "Betydelse: en orsak som båda redan känner till (eftersom ju). Puisque kan stå först i meningen. Car kan inte inleda meningen före huvudsatsen, malgré följs av ett substantiv, och pourtant (ändå) anger motsats.",
+  "sv": "Eftersom du ju känner staden så bra är det du som får vara vår guide!"
+ },
+ {
+  "id": "conn-004",
+  "topic": "conn",
+  "rule": "conn-cause",
+  "q": "À Paris, beaucoup d'étudiants vivent en colocation, [car] les loyers sont très chers.",
+  "acc": [
+   "parce que",
+   "puisque"
+  ],
+  "alt": [
+   "donc",
+   "bien que",
+   "malgré"
+  ],
+  "why": "Betydelse: andra delen förklarar orsaken. Car står mitt i meningen efter komma. Donc vänder på orsak och följd, bien que (fast) kräver subjonctif (soient), och malgré följs av ett substantiv, inte en sats.",
+  "sv": "I Paris bor många studenter i kollektiv, för hyrorna är väldigt dyra."
+ },
+ {
+  "id": "conn-005",
+  "topic": "conn",
+  "rule": "conn-cause",
+  "q": "On ne peut pas faire confiance à cette vidéo : [en effet], sa source n'est pas indiquée.",
+  "alt": [
+   "pourtant",
+   "donc",
+   "malgré"
+  ],
+  "why": "Betydelse: efter kolonet kommer förklaringen till varför man inte kan lita på videon (det är nämligen så att). Pourtant anger motsats, donc vänder på orsak och följd, och malgré kräver ett substantiv, inte en sats.",
+  "sv": "Man kan inte lita på den här videon: källan anges nämligen inte."
+ },
+ {
+  "id": "conn-006",
+  "topic": "conn",
+  "rule": "conn-cause",
+  "q": "Le festival de ce week-end a été annulé [parce qu']il y avait un risque d'orage.",
+  "acc": [
+   "car",
+   "puisqu'"
+  ],
+  "alt": [
+   "bien qu'",
+   "pour qu'",
+   "à cause d'"
+  ],
+  "why": "Betydelse: orsaken till att festivalen ställdes in. Parce que följs av en sats. Bien que (fast) och pour que (för att) kräver subjonctif (il y ait) och ger fel betydelse, och à cause de följs av ett substantiv, inte en sats.",
+  "sv": "Helgens festival ställdes in eftersom det fanns risk för åska."
+ },
+ {
+  "id": "conn-007",
+  "topic": "conn",
+  "rule": "conn-cons",
+  "q": "Le prix des billets a beaucoup augmenté ; [par conséquent], moins de gens prennent le train.",
+  "acc": [
+   "c'est pourquoi",
+   "donc"
+  ],
+  "alt": [
+   "pourtant",
+   "car",
+   "bien que"
+  ],
+  "why": "Betydelse: andra delen är en följd av den första (därför). Pourtant anger motsats, car vänder på orsak och följd, och bien que kräver subjonctif och kan inte stå så här efter semikolon.",
+  "sv": "Biljettpriserna har ökat mycket; därför tar färre människor tåget."
+ },
+ {
+  "id": "conn-008",
+  "topic": "conn",
+  "rule": "conn-cons",
+  "q": "Léa a raté son bus, [si bien qu']elle est arrivée en retard au cours de solfège.",
+  "acc": [
+   "c'est pourquoi",
+   "donc",
+   "alors"
+  ],
+  "alt": [
+   "bien qu'",
+   "parce qu'",
+   "afin qu'"
+  ],
+  "why": "Betydelse: följden av att hon missade bussen (så att). Si bien que följs av indikativ. Parce que vänder på orsak och följd, och bien que och afin que kräver subjonctif (soit arrivée) och har fel betydelse.",
+  "sv": "Léa missade bussen, så hon kom för sent till musikteorilektionen."
+ },
+ {
+  "id": "conn-009",
+  "topic": "conn",
+  "rule": "conn-cons",
+  "q": "Il n'y a plus de place dans la résidence du CROUS, [alors] je vais chercher une colocation.",
+  "acc": [
+   "donc",
+   "c'est pourquoi"
+  ],
+  "alt": [
+   "car",
+   "pourtant",
+   "malgré"
+  ],
+  "why": "Betydelse: följd (så). Car vänder på orsak och följd, pourtant anger motsats, och malgré kräver ett substantiv, inte en sats.",
+  "sv": "Det finns inga platser kvar på CROUS studentboende, så jag ska leta efter ett kollektiv."
+ },
+ {
+  "id": "conn-010",
+  "topic": "conn",
+  "rule": "conn-cons",
+  "q": "Nous avons besoin de nouveaux musiciens ; [c'est pourquoi] nous organisons des auditions samedi.",
+  "acc": [
+   "par conséquent"
+  ],
+  "alt": [
+   "parce que",
+   "bien que",
+   "malgré"
+  ],
+  "why": "Betydelse: följd (det är därför). Parce que vänder på orsak och följd, bien que kräver subjonctif och betyder fast, och malgré kräver ett substantiv.",
+  "sv": "Vi behöver nya musiker; därför håller vi provspelningar på lördag."
+ },
+ {
+  "id": "conn-011",
+  "topic": "conn",
+  "rule": "conn-cons",
+  "q": "Cet article ne cite aucune source ; je ne vais [donc] pas le partager.",
+  "acc": [
+   "par conséquent"
+  ],
+  "alt": [
+   "car",
+   "pourtant",
+   "alors que"
+  ],
+  "why": "Betydelse: följd (alltså). Donc kan stå efter det böjda verbet, mitt i satsen. Car och alors que måste inleda en sats och kan inte stå mellan verben, och pourtant (ändå) ger ologisk betydelse.",
+  "sv": "Den här artikeln anger inga källor; jag tänker alltså inte dela den."
+ },
+ {
+  "id": "conn-012",
+  "topic": "conn",
+  "rule": "conn-cons",
+  "q": "Les températures augmentent, [donc] les glaciers des Alpes fondent de plus en plus vite.",
+  "acc": [
+   "si bien que",
+   "alors"
+  ],
+  "alt": [
+   "car",
+   "bien que",
+   "malgré"
+  ],
+  "why": "Betydelse: glaciärernas smältning är en följd av värmen. Car vänder på orsak och följd, bien que kräver subjonctif och betyder fast, och malgré följs av ett substantiv.",
+  "sv": "Temperaturerna stiger, så glaciärerna i Alperna smälter allt snabbare."
+ },
+ {
+  "id": "conn-013",
+  "topic": "conn",
+  "rule": "conn-opp",
+  "q": "[Bien que] Karim soit très fatigué, il continue à répéter pour le concours.",
+  "alt": [
+   "Même si",
+   "Parce que",
+   "Malgré"
+  ],
+  "why": "Betydelse: motsats (fast). Verbet soit står i subjonctif, och det kräver bien que. Même si och parce que följs av indikativ (est), och malgré kan inte följas av en sats.",
+  "sv": "Fast Karim är väldigt trött fortsätter han att öva inför antagningsprovet."
+ },
+ {
+  "id": "conn-014",
+  "topic": "conn",
+  "rule": "conn-opp",
+  "q": "[Même si] le concert est gratuit, il faut réserver sa place en ligne.",
+  "alt": [
+   "Bien que",
+   "Malgré",
+   "Donc"
+  ],
+  "why": "Betydelse: motsats (även om). Verbet est står i indikativ, som alltid efter même si. Bien que skulle kräva subjonctif (soit), malgré följs av ett substantiv, och donc anger följd och kan inte inleda en bisats.",
+  "sv": "Även om konserten är gratis måste man boka plats på nätet."
+ },
+ {
+  "id": "conn-015",
+  "topic": "conn",
+  "rule": "conn-opp",
+  "q": "Les jeunes parlent beaucoup du climat ; [pourtant], peu d'entre eux votent aux élections.",
+  "acc": [
+   "cependant",
+   "néanmoins"
+  ],
+  "alt": [
+   "car",
+   "donc",
+   "bien que"
+  ],
+  "why": "Betydelse: motsats (ändå): man väntar sig att de röstar, men de gör det inte. Car och donc anger orsak och följd, och bien que kräver subjonctif och kan inte stå så här efter semikolon.",
+  "sv": "Unga pratar mycket om klimatet; ändå är det få av dem som röstar i valen."
+ },
+ {
+  "id": "conn-016",
+  "topic": "conn",
+  "rule": "conn-opp",
+  "q": "À Paris, les loyers sont très élevés, [alors qu']à Limoges, on trouve un studio bien moins cher.",
+  "acc": [
+   "tandis qu'"
+  ],
+  "alt": [
+   "parce qu'",
+   "malgré",
+   "afin d'"
+  ],
+  "why": "Betydelse: två saker ställs mot varandra (medan däremot). Alors que följs av en sats i indikativ. Parce que anger orsak, vilket blir ologiskt, och malgré och afin de kan inte följas av en sats med subjekt och verb.",
+  "sv": "I Paris är hyrorna väldigt höga, medan man i Limoges hittar en etta som är mycket billigare."
+ },
+ {
+  "id": "conn-017",
+  "topic": "conn",
+  "rule": "conn-opp",
+  "q": "Mon frère adore le rap ; moi, [en revanche], je préfère la musique classique.",
+  "acc": [
+   "par contre"
+  ],
+  "alt": [
+   "en effet",
+   "donc",
+   "car"
+  ],
+  "why": "Betydelse: två personer jämförs, och det andra är motsatsen (däremot). En effet och car anger orsak, donc följd, och car kan dessutom inte stå mellan moi och je.",
+  "sv": "Min bror älskar rap; jag däremot föredrar klassisk musik."
+ },
+ {
+  "id": "conn-018",
+  "topic": "conn",
+  "rule": "conn-opp",
+  "q": "[Malgré] la pluie, des milliers de personnes ont manifesté pour le climat.",
+  "alt": [
+   "Bien que",
+   "Même si",
+   "Parce que"
+  ],
+  "why": "Betydelse: motsats (trots). Efter luckan kommer bara ett substantiv (la pluie), och då behövs prepositionen malgré. Bien que, même si och parce que måste följas av en sats med verb.",
+  "sv": "Trots regnet demonstrerade tusentals människor för klimatet."
+ },
+ {
+  "id": "conn-019",
+  "topic": "conn",
+  "rule": "conn-opp",
+  "q": "Le gouvernement a promis de réduire les émissions ; [cependant], les résultats restent insuffisants.",
+  "acc": [
+   "pourtant",
+   "néanmoins",
+   "toutefois"
+  ],
+  "alt": [
+   "car",
+   "c'est pourquoi",
+   "bien que"
+  ],
+  "why": "Betydelse: motsats (men, dock): löftet har inte gett tillräckliga resultat. Car anger orsak och c'est pourquoi följd, vilket blir ologiskt. Bien que kräver subjonctif och kan inte stå så här efter semikolon.",
+  "sv": "Regeringen har lovat att minska utsläppen; resultaten är dock fortfarande otillräckliga."
+ },
+ {
+  "id": "conn-020",
+  "topic": "conn",
+  "rule": "conn-opp",
+  "q": "Certains élèves prennent des cours de musique privés, [tandis que] d'autres n'en ont pas les moyens.",
+  "acc": [
+   "alors que"
+  ],
+  "alt": [
+   "bien que",
+   "puisque",
+   "malgré"
+  ],
+  "why": "Betydelse: två grupper ställs mot varandra (medan). Tandis que följs av indikativ (ont). Bien que kräver subjonctif (aient), puisque anger orsak, vilket blir ologiskt, och malgré kan inte följas av en sats.",
+  "sv": "Vissa elever tar privatlektioner i musik, medan andra inte har råd med det."
+ },
+ {
+  "id": "conn-021",
+  "topic": "conn",
+  "rule": "conn-but",
+  "q": "Élise s'entraîne tous les jours [pour] réussir le concours d'entrée.",
+  "acc": [
+   "afin de"
+  ],
+  "alt": [
+   "pour que",
+   "afin que",
+   "parce que"
+  ],
+  "why": "Betydelse: syfte (för att). Samma subjekt (Élise tränar, Élise ska klara provet) och en infinitiv efter luckan ger pour eller afin de. Pour que och afin que kräver en sats med nytt subjekt och subjonctif, och parce que följs aldrig av infinitiv.",
+  "sv": "Élise tränar varje dag för att klara antagningsprovet."
+ },
+ {
+  "id": "conn-022",
+  "topic": "conn",
+  "rule": "conn-but",
+  "q": "Le professeur parle lentement [pour que] les élèves étrangers puissent le suivre.",
+  "acc": [
+   "afin que"
+  ],
+  "alt": [
+   "pour",
+   "parce que",
+   "afin de"
+  ],
+  "why": "Betydelse: syfte, och subjektet byts (läraren talar, eleverna ska hänga med). Då blir det pour que eller afin que + subjonctif (puissent). Pour och afin de följs av infinitiv, och parce que kräver indikativ och anger orsak.",
+  "sv": "Läraren pratar långsamt för att de utländska eleverna ska kunna hänga med."
+ },
+ {
+  "id": "conn-023",
+  "topic": "conn",
+  "rule": "conn-but",
+  "q": "Nous avons créé une cagnotte [afin d']aider les familles touchées par les inondations.",
+  "acc": [
+   "pour"
+  ],
+  "alt": [
+   "afin qu'",
+   "pour qu'",
+   "à cause d'"
+  ],
+  "why": "Betydelse: syfte, med samma subjekt (vi skapar, vi hjälper) och infinitiv efteråt: afin de eller pour. Afin que och pour que kräver en sats med subjonctif, och à cause de anger orsak och följs av ett substantiv.",
+  "sv": "Vi har startat en insamling för att hjälpa familjerna som drabbats av översvämningarna."
+ },
+ {
+  "id": "conn-024",
+  "topic": "conn",
+  "rule": "conn-but",
+  "q": "J'ai éteint mon téléphone [pour] me concentrer sur mes révisions.",
+  "acc": [
+   "afin de"
+  ],
+  "alt": [
+   "pour que",
+   "afin que",
+   "car"
+  ],
+  "why": "Betydelse: syfte, och samma subjekt (jag stänger av, jag koncentrerar mig) ger pour + infinitiv. Pour que och afin que kräver ett nytt subjekt och subjonctif, och car följs aldrig av infinitiv.",
+  "sv": "Jag stängde av mobilen för att kunna koncentrera mig på pluggandet."
+ },
+ {
+  "id": "conn-025",
+  "topic": "conn",
+  "rule": "conn-but",
+  "q": "Il faut vérifier les sources [afin que] les fausses informations ne soient pas partagées.",
+  "acc": [
+   "pour que"
+  ],
+  "alt": [
+   "afin de",
+   "pour",
+   "parce que"
+  ],
+  "why": "Betydelse: syfte, med ett nytt subjekt (les fausses informations) och subjonctif (soient). Då krävs afin que eller pour que. Afin de och pour följs av infinitiv, och parce que anger orsak och kräver indikativ.",
+  "sv": "Man måste kontrollera källorna så att falska nyheter inte sprids."
+ },
+ {
+  "id": "conn-026",
+  "topic": "conn",
+  "rule": "conn-prep",
+  "q": "Le match de samedi a été reporté [à cause de] la tempête.",
+  "acc": [
+   "en raison de"
+  ],
+  "alt": [
+   "parce que",
+   "car",
+   "bien que"
+  ],
+  "why": "Betydelse: orsak. Efter luckan kommer bara ett substantiv (la tempête), och då krävs prepositionen à cause de. Parce que, car och bien que måste följas av en sats med verb.",
+  "sv": "Lördagens match sköts upp på grund av stormen."
+ },
+ {
+  "id": "conn-027",
+  "topic": "conn",
+  "rule": "conn-prep",
+  "q": "[Grâce à] une bourse Erasmus, Théo a pu passer un semestre à Bologne.",
+  "alt": [
+   "Parce qu'",
+   "Comme",
+   "Bien qu'"
+  ],
+  "why": "Betydelse: en positiv orsak (tack vare). Efter luckan kommer ett substantiv (une bourse), och då behövs prepositionen grâce à. Parce que, comme och bien que måste följas av en sats med verb.",
+  "sv": "Tack vare ett Erasmusstipendium kunde Théo tillbringa en termin i Bologna."
+ },
+ {
+  "id": "conn-028",
+  "topic": "conn",
+  "rule": "conn-prep",
+  "q": "Hugo a réussi l'examen [bien qu']il n'ait pas beaucoup révisé.",
+  "alt": [
+   "malgré",
+   "parce qu'",
+   "même s'"
+  ],
+  "why": "Betydelse: motsats (fast). Efter luckan kommer en sats med ait i subjonctif, och det kräver bien que. Malgré följs av ett substantiv, och parce que och même si kräver indikativ (il n'a pas).",
+  "sv": "Hugo klarade provet fast han inte hade pluggat särskilt mycket."
+ },
+ {
+  "id": "conn-029",
+  "topic": "conn",
+  "rule": "conn-prep",
+  "q": "Beaucoup de jeunes restent chez leurs parents [à cause du] prix des loyers.",
+  "acc": [
+   "en raison du"
+  ],
+  "alt": [
+   "parce que le",
+   "car le",
+   "bien que le"
+  ],
+  "why": "Betydelse: orsak. Efter luckan kommer bara ett substantiv (le prix), och då krävs à cause de (de + le = du). Parce que, car och bien que måste följas av en sats med verb.",
+  "sv": "Många unga bor kvar hos sina föräldrar på grund av de höga hyrorna."
+ },
+ {
+  "id": "conn-030",
+  "topic": "conn",
+  "rule": "conn-prep",
+  "q": "[Malgré] son accent, tout le monde comprend très bien Amina.",
+  "alt": [
+   "Bien que",
+   "Même si",
+   "Parce que"
+  ],
+  "why": "Betydelse: motsats (trots). Efter luckan kommer ett substantiv (son accent), inte en sats, och då behövs prepositionen malgré. Bien que, même si och parce que måste följas av subjekt och verb.",
+  "sv": "Trots sin brytning förstår alla Amina mycket bra."
+ }
+]

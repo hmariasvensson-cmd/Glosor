@@ -1,0 +1,1098 @@
+{
+ "name": "DELF B1",
+ "pass": 50,
+ "note": "Övningar i provets stil, skrivna för appen. Det är inte officiellt provmaterial. För att klara DELF B1 krävs 50 av 100 poäng totalt och minst 5 av 25 poäng i varje del.",
+ "parts": [
+  {
+   "id": "co",
+   "name": "Compréhension de l'oral",
+   "sv": "Hörförståelse",
+   "time": 25
+  },
+  {
+   "id": "ce",
+   "name": "Compréhension des écrits",
+   "sv": "Läsförståelse",
+   "time": 45
+  },
+  {
+   "id": "pe",
+   "name": "Production écrite",
+   "sv": "Skriva",
+   "time": 45
+  },
+  {
+   "id": "po",
+   "name": "Production orale",
+   "sv": "Tala",
+   "time": 15
+  }
+ ],
+ "tasks": [
+  {
+   "id": "fr4-co-1",
+   "part": "co",
+   "teil": "Exercice 1",
+   "title": "Une chambre en colocation",
+   "time": 8,
+   "plays": 2,
+   "instr": "Du hör ett telefonsamtal mellan Inès, som ska börja studera i Bordeaux, och Théo, som har ett ledigt rum i sin lägenhet. Läs frågorna först. Du hör samtalet två gånger. Välj rätt svar på varje fråga.",
+   "lines": [
+    {
+     "fr": "— Allô, Théo ? C'est Inès, l'amie de Camille. Elle m'a dit qu'une chambre allait se libérer dans ta colocation.",
+     "sv": "– Hallå, Théo? Det är Inès, Camilles kompis. Hon sa att ett rum skulle bli ledigt i ert kollektiv."
+    },
+    {
+     "fr": "— Oui, c'est ça. Notre colocataire part en Erasmus en Espagne, donc la chambre est libre à partir du premier septembre. Tu cherches pour combien de temps ?",
+     "sv": "– Ja, precis. Vår rumskompis ska åka till Spanien med Erasmus, så rummet är ledigt från den första september. Hur länge behöver du boende?"
+    },
+    {
+     "fr": "— Pour toute l'année, au moins. Je viens d'être admise au conservatoire en flûte traversière. C'est loin de chez vous ?",
+     "sv": "– Minst ett helt år. Jag har precis kommit in på konservatoriet på tvärflöjt. Är det långt från er?"
+    },
+    {
+     "fr": "— Pas du tout : il y a un tram juste en bas de l'immeuble, et tu es au conservatoire en un quart d'heure. À vélo, c'est encore plus rapide.",
+     "sv": "– Inte alls: spårvagnen stannar precis utanför huset, och du är vid konservatoriet på en kvart. Med cykel går det ännu snabbare."
+    },
+    {
+     "fr": "— Parfait. Et le loyer, c'est combien ?",
+     "sv": "– Perfekt. Och hur mycket är hyran?"
+    },
+    {
+     "fr": "— Quatre cent vingt euros par mois, charges comprises, sauf Internet : on partage l'abonnement, ça fait dix euros de plus chacun. Et tu peux sûrement demander une aide au logement à la CAF.",
+     "sv": "– Fyrahundratjugo euro i månaden, allt inräknat utom internet: vi delar på abonnemanget, och det blir tio euro extra per person. Och du kan säkert söka bostadsbidrag från CAF."
+    },
+    {
+     "fr": "— D'accord. Mais je dois m'entraîner au moins deux heures par jour. Ça ne va pas déranger les autres ?",
+     "sv": "– Okej. Men jag måste öva minst två timmar om dagen. Kommer inte det att störa de andra?"
+    },
+    {
+     "fr": "— Moi, je suis en licence de musicologie, alors la musique, j'ai l'habitude ! Par contre, Julien est en médecine et il révise beaucoup le soir. On a fixé une règle simple : pas d'instrument après vingt heures.",
+     "sv": "– Själv läser jag musikvetenskap på universitetet, så musik är jag van vid! Men Julien läser medicin och pluggar mycket på kvällarna. Vi har bestämt en enkel regel: inga instrument efter klockan åtta på kvällen."
+    },
+    {
+     "fr": "— Ça me va, je préfère travailler le matin de toute façon. Est-ce que je pourrais visiter la chambre avant de me décider ?",
+     "sv": "– Det passar mig, jag övar hellre på morgonen ändå. Skulle jag kunna titta på rummet innan jag bestämmer mig?"
+    },
+    {
+     "fr": "— Bien sûr. Samedi, je travaille jusqu'à midi, mais tu peux passer vers quinze heures. Pense à apporter une copie de ta carte d'identité et le nom de ton garant : le propriétaire nous les demandera.",
+     "sv": "– Självklart. På lördag jobbar jag till tolv, men du kan komma förbi runt tre. Kom ihåg att ta med en kopia av ditt id-kort och namnet på den som går i borgen för dig: hyresvärden kommer att be om dem."
+    },
+    {
+     "fr": "— Super, merci Théo ! À samedi, alors.",
+     "sv": "– Toppen, tack Théo! Vi ses på lördag, då."
+    }
+   ],
+   "qs": [
+    {
+     "q": "Comment Inès a-t-elle appris qu'une chambre était libre ?",
+     "opts": [
+      "Par une petite annonce sur Internet.",
+      "Par son amie Camille.",
+      "Par le secrétariat du conservatoire."
+     ],
+     "a": 1,
+     "why": "Inès presenterar sig som « l'amie de Camille » och säger: « Elle m'a dit qu'une chambre allait se libérer »."
+    },
+    {
+     "q": "Pourquoi la chambre se libère-t-elle ?",
+     "opts": [
+      "Le colocataire a trouvé un appartement plus grand.",
+      "Le colocataire a fini ses études.",
+      "Le colocataire part étudier à l'étranger."
+     ],
+     "a": 2,
+     "why": "« Notre colocataire part en Erasmus en Espagne »."
+    },
+    {
+     "q": "D'après Théo, quel est le moyen le plus rapide pour aller au conservatoire ?",
+     "opts": [
+      "Le tram.",
+      "Le vélo.",
+      "La marche à pied."
+     ],
+     "a": 1,
+     "why": "Med spårvagn tar det en kvart, men « À vélo, c'est encore plus rapide »."
+    },
+    {
+     "q": "Combien Inès paiera-t-elle en tout chaque mois, Internet compris ?",
+     "opts": [
+      "420 euros.",
+      "430 euros.",
+      "410 euros."
+     ],
+     "a": 1,
+     "why": "Hyran är « quatre cent vingt euros par mois, charges comprises, sauf Internet », och internet kostar « dix euros de plus chacun ». 420 + 10 = 430 euro."
+    },
+    {
+     "q": "Vrai ou faux ? Tous les colocataires étudient la musique.",
+     "opts": [
+      "Vrai",
+      "Faux"
+     ],
+     "a": 1,
+     "why": "Faux. Motivering: « Julien est en médecine et il révise beaucoup le soir »."
+    },
+    {
+     "q": "Quelle règle les colocataires ont-ils fixée ?",
+     "opts": [
+      "Pas d'instrument après 20 heures.",
+      "Pas d'instrument le week-end.",
+      "Pas plus de deux heures de musique par jour."
+     ],
+     "a": 0,
+     "why": "« On a fixé une règle simple : pas d'instrument après vingt heures ». Två timmar om dagen är hur mycket Inès själv måste öva, ingen regel."
+    },
+    {
+     "q": "À quelle heure Inès peut-elle visiter la chambre samedi ?",
+     "opts": [
+      "Vers midi.",
+      "Vers 15 heures.",
+      "Vers 20 heures."
+     ],
+     "a": 1,
+     "why": "« tu peux passer vers quinze heures ». Théo jobbar till tolv."
+    },
+    {
+     "q": "Qu'est-ce qu'Inès doit apporter ?",
+     "opts": [
+      "Le premier mois de loyer.",
+      "Une copie de sa carte d'identité et le nom de son garant.",
+      "Une lettre du conservatoire."
+     ],
+     "a": 1,
+     "why": "« Pense à apporter une copie de ta carte d'identité et le nom de ton garant »."
+    }
+   ]
+  },
+  {
+   "id": "fr4-co-2",
+   "part": "co",
+   "teil": "Exercice 2",
+   "title": "Un festival qui produit son énergie",
+   "time": 8,
+   "plays": 2,
+   "instr": "Du hör ett radioinslag om en musikfestival som satsar på miljön. Läs frågorna först. Du hör inslaget två gånger. Välj rätt svar på varje fråga.",
+   "lines": [
+    {
+     "fr": "Bonjour, vous écoutez « Planète locale » sur Radio Plein Air. Ce week-end, le petit village de Lanvéran, en Bretagne, accueille la troisième édition du festival Sons et Soleil. Sa particularité : toute l'électricité utilisée sur les scènes est produite sur place.",
+     "sv": "Hej, du lyssnar på « Planète locale » i Radio Plein Air. I helgen tar den lilla byn Lanvéran i Bretagne emot festivalen Sons et Soleil för tredje gången. Det speciella med den: all el som används på scenerna produceras på plats."
+    },
+    {
+     "fr": "Comment ? Grâce à des panneaux solaires installés sur le toit d'une ancienne grange, mais aussi grâce au public. Devant la petite scène, vingt vélos sont reliés à des batteries. Quand les spectateurs pédalent, ils produisent l'énergie nécessaire pour les concerts acoustiques de l'après-midi.",
+     "sv": "Hur då? Med hjälp av solpaneler på taket till en gammal lada, men också med hjälp av publiken. Framför den lilla scenen är tjugo cyklar kopplade till batterier. När åskådarna trampar producerar de den energi som behövs till eftermiddagens akustiska konserter."
+    },
+    {
+     "fr": "« Au début, on nous prenait pour des rêveurs, raconte Yasmine Morel, l'une des organisatrices. Aujourd'hui, les gens font la queue pour pédaler ! Un quart d'heure sur le vélo, et on reçoit un jus de pomme offert. »",
+     "sv": "”I början tyckte folk att vi var drömmare”, berättar Yasmine Morel, en av arrangörerna. ”I dag står folk i kö för att få trampa! En kvart på cykeln, och man får en äppeljuice gratis.”"
+    },
+    {
+     "fr": "Le festival a aussi supprimé les bouteilles en plastique : chaque festivalier reçoit une gourde à l'entrée, et des fontaines d'eau potable sont installées partout sur le site. Quant aux déchets alimentaires, ils sont compostés, puis donnés aux agriculteurs de la commune.",
+     "sv": "Festivalen har också slutat med plastflaskor: varje besökare får en vattenflaska vid entrén, och det finns dricksvattenfontäner överallt på området. Matavfallet komposteras och ges sedan till bönderna i kommunen."
+    },
+    {
+     "fr": "Le transport reste le principal problème : l'an dernier, la plupart des spectateurs étaient venus en voiture. Cette année, les organisateurs ont donc mis en place un système de covoiturage sur leur site Internet, et ceux qui arrivent à vélo ou en covoiturage paient leur billet deux euros de moins.",
+     "sv": "Transporterna är fortfarande det största problemet: förra året hade de flesta åskådarna kommit med bil. I år har arrangörerna därför ordnat samåkning via sin webbplats, och de som kommer på cykel eller samåker betalar två euro mindre för biljetten."
+    },
+    {
+     "fr": "Il y a quand même une limite : en cas de mauvais temps, les panneaux solaires ne suffisent pas. Un petit groupe électrogène est donc prévu, « mais seulement en dernier recours », précise Yasmine Morel.",
+     "sv": "Det finns ändå en gräns: vid dåligt väder räcker inte solpanelerna. Därför finns ett litet elverk i reserv, ”men bara som en sista utväg”, förtydligar Yasmine Morel."
+    },
+    {
+     "fr": "Le festival commence vendredi à dix-huit heures. Le billet coûte douze euros par jour, et l'entrée est gratuite pour les moins de douze ans.",
+     "sv": "Festivalen börjar på fredag klockan sex på kvällen. Biljetten kostar tolv euro per dag, och det är gratis inträde för barn under tolv år."
+    }
+   ],
+   "qs": [
+    {
+     "q": "Qu'est-ce qui rend ce festival particulier ?",
+     "opts": [
+      "Il a lieu dans une ancienne grange.",
+      "Il produit lui-même son électricité.",
+      "Il invite seulement des groupes bretons."
+     ],
+     "a": 1,
+     "why": "« toute l'électricité utilisée sur les scènes est produite sur place ». Ladan nämns bara för att solpanelerna sitter på dess tak."
+    },
+    {
+     "q": "À quoi servent les vélos installés devant la petite scène ?",
+     "opts": [
+      "À produire de l'énergie pour certains concerts.",
+      "À transporter le public depuis la gare.",
+      "À organiser une course entre les spectateurs."
+     ],
+     "a": 0,
+     "why": "« Quand les spectateurs pédalent, ils produisent l'énergie nécessaire pour les concerts acoustiques de l'après-midi »."
+    },
+    {
+     "q": "Que reçoit un spectateur qui pédale pendant un quart d'heure ?",
+     "opts": [
+      "Un billet gratuit.",
+      "Une gourde.",
+      "Un jus de pomme."
+     ],
+     "a": 2,
+     "why": "« Un quart d'heure sur le vélo, et on reçoit un jus de pomme offert ». Vattenflaskan får alla vid entrén."
+    },
+    {
+     "q": "Que deviennent les déchets alimentaires ?",
+     "opts": [
+      "Ils sont jetés dans des poubelles de tri.",
+      "Ils sont compostés et donnés aux agriculteurs.",
+      "Ils sont vendus à une entreprise."
+     ],
+     "a": 1,
+     "why": "« ils sont compostés, puis donnés aux agriculteurs de la commune »."
+    },
+    {
+     "q": "Vrai ou faux ? L'an dernier, la plupart des spectateurs sont venus à vélo.",
+     "opts": [
+      "Vrai",
+      "Faux"
+     ],
+     "a": 1,
+     "why": "Faux. Motivering: « l'an dernier, la plupart des spectateurs étaient venus en voiture »."
+    },
+    {
+     "q": "Pour payer son billet moins cher, il faut…",
+     "opts": [
+      "arriver à vélo ou en covoiturage.",
+      "acheter son billet sur Internet.",
+      "venir avant dix-huit heures."
+     ],
+     "a": 0,
+     "why": "« ceux qui arrivent à vélo ou en covoiturage paient leur billet deux euros de moins »."
+    },
+    {
+     "q": "Que se passe-t-il en cas de mauvais temps ?",
+     "opts": [
+      "Les concerts sont annulés.",
+      "On utilise un petit groupe électrogène.",
+      "Les concerts ont lieu dans la grange."
+     ],
+     "a": 1,
+     "why": "« en cas de mauvais temps, les panneaux solaires ne suffisent pas. Un petit groupe électrogène est donc prévu »."
+    }
+   ]
+  },
+  {
+   "id": "fr4-co-3",
+   "part": "co",
+   "teil": "Exercice 3",
+   "title": "Soigner les musiciens",
+   "time": 9,
+   "plays": 2,
+   "instr": "Du hör en radiointervju med Camille Rousseau, en fysioterapeut (kinésithérapeute) som har många musiker som patienter. Läs frågorna först. Du hör intervjun två gånger. Välj rätt svar på varje fråga.",
+   "lines": [
+    {
+     "fr": "— Camille Rousseau, vous êtes kinésithérapeute, et la moitié de vos patients sont des musiciens. Comment en êtes-vous arrivée là ?",
+     "sv": "– Camille Rousseau, du är fysioterapeut och hälften av dina patienter är musiker. Hur kom det sig?"
+    },
+    {
+     "fr": "— J'ai joué du violon pendant quinze ans. À dix-neuf ans, j'ai eu une tendinite au poignet qui m'a obligée à arrêter pendant six mois, et personne ne comprenait vraiment mon problème. C'est là que j'ai décidé de devenir kiné, pour aider les musiciens.",
+     "sv": "– Jag spelade fiol i femton år. När jag var nitton fick jag en senskadeinflammation i handleden som tvingade mig att sluta i sex månader, och ingen förstod riktigt mitt problem. Det var då jag bestämde mig för att bli fysioterapeut, för att hjälpa musiker."
+    },
+    {
+     "fr": "— Quels sont les problèmes les plus fréquents ?",
+     "sv": "– Vilka är de vanligaste problemen?"
+    },
+    {
+     "fr": "— Surtout des douleurs au dos, aux épaules et aux poignets. Un musicien répète les mêmes gestes des milliers de fois. Si sa position n'est pas bonne, le corps finit par protester. Chez les jeunes, le problème vient souvent d'une augmentation brutale du travail, par exemple juste avant un concours.",
+     "sv": "– Framför allt smärtor i ryggen, axlarna och handlederna. En musiker upprepar samma rörelser tusentals gånger. Om hållningen inte är bra säger kroppen till slut ifrån. Hos unga beror problemet ofta på att de plötsligt övar mycket mer, till exempel precis före ett antagningsprov."
+    },
+    {
+     "fr": "— Que conseillez-vous aux élèves de conservatoire ?",
+     "sv": "– Vad ger du för råd till elever på konservatoriet?"
+    },
+    {
+     "fr": "— D'abord, de s'échauffer, comme les sportifs : cinq minutes d'exercices simples avant de prendre l'instrument. Ensuite, de faire une pause de cinq minutes toutes les vingt-cinq minutes environ. Beaucoup d'élèves pensent qu'ils perdent du temps, alors qu'en réalité, ils travaillent mieux.",
+     "sv": "– För det första att värma upp, som idrottare: fem minuter enkla övningar innan man tar fram instrumentet. För det andra att ta en paus på fem minuter ungefär var tjugofemte minut. Många elever tror att de slösar tid, men i själva verket övar de bättre."
+    },
+    {
+     "fr": "— Et si on a mal ?",
+     "sv": "– Och om det gör ont?"
+    },
+    {
+     "fr": "— Il ne faut surtout pas continuer en se disant que ça va passer. La douleur est un signal. Plus on attend, plus la guérison est longue. Il vaut mieux consulter tout de suite, même pour une petite douleur.",
+     "sv": "– Man ska absolut inte fortsätta och tänka att det går över. Smärtan är en signal. Ju längre man väntar, desto längre tid tar det att bli frisk. Det är bättre att söka vård direkt, även för en liten smärta."
+    },
+    {
+     "fr": "— On parle aussi de plus en plus de l'audition…",
+     "sv": "– Man pratar också allt mer om hörseln …"
+    },
+    {
+     "fr": "— Oui, c'est un sujet important. Dans un orchestre, certains musiciens sont assis juste devant les trompettes ou les percussions. Je recommande des bouchons d'oreille spéciaux pour musiciens : ils baissent le volume sans déformer le son.",
+     "sv": "– Ja, det är en viktig fråga. I en orkester sitter vissa musiker precis framför trumpeterna eller slagverket. Jag rekommenderar särskilda öronproppar för musiker: de sänker ljudvolymen utan att förvränga ljudet."
+    },
+    {
+     "fr": "— Un dernier mot pour nos jeunes auditeurs ?",
+     "sv": "– Några sista ord till våra unga lyssnare?"
+    },
+    {
+     "fr": "— Votre corps est votre premier instrument. Prenez-en soin autant que de votre violon ou de votre piano !",
+     "sv": "– Er kropp är ert första instrument. Ta hand om den lika väl som om er fiol eller ert piano!"
+    }
+   ],
+   "qs": [
+    {
+     "q": "Pourquoi Camille Rousseau est-elle devenue kinésithérapeute ?",
+     "opts": [
+      "Parce qu'elle avait eu elle-même un problème en jouant.",
+      "Parce que ses parents étaient kinés.",
+      "Parce qu'elle n'avait pas réussi le concours du conservatoire."
+     ],
+     "a": 0,
+     "why": "Hon fick « une tendinite au poignet » av fiolspelandet, och « C'est là que j'ai décidé de devenir kiné, pour aider les musiciens »."
+    },
+    {
+     "q": "Vrai ou faux ? Camille Rousseau n'a jamais joué d'un instrument.",
+     "opts": [
+      "Vrai",
+      "Faux"
+     ],
+     "a": 1,
+     "why": "Faux. Motivering: « J'ai joué du violon pendant quinze ans »."
+    },
+    {
+     "q": "Chez les jeunes musiciens, les douleurs viennent souvent…",
+     "opts": [
+      "d'un instrument de mauvaise qualité.",
+      "d'une augmentation soudaine du travail.",
+      "d'un manque de sommeil."
+     ],
+     "a": 1,
+     "why": "« Chez les jeunes, le problème vient souvent d'une augmentation brutale du travail, par exemple juste avant un concours »."
+    },
+    {
+     "q": "Que faut-il faire avant de prendre son instrument ?",
+     "opts": [
+      "Boire beaucoup d'eau.",
+      "S'échauffer pendant cinq minutes.",
+      "Jouer lentement pendant vingt-cinq minutes."
+     ],
+     "a": 1,
+     "why": "« de s'échauffer, comme les sportifs : cinq minutes d'exercices simples avant de prendre l'instrument »."
+    },
+    {
+     "q": "D'après Camille Rousseau, les pauses régulières…",
+     "opts": [
+      "font perdre du temps.",
+      "permettent de mieux travailler.",
+      "sont utiles seulement pour les débutants."
+     ],
+     "a": 1,
+     "why": "« Beaucoup d'élèves pensent qu'ils perdent du temps, alors qu'en réalité, ils travaillent mieux »."
+    },
+    {
+     "q": "Que faut-il faire quand on a mal ?",
+     "opts": [
+      "Continuer à jouer, parce que la douleur va passer.",
+      "Arrêter la musique pendant six mois.",
+      "Consulter tout de suite."
+     ],
+     "a": 2,
+     "why": "« Il vaut mieux consulter tout de suite, même pour une petite douleur ». Sex månader var hur länge hon själv fick sluta."
+    },
+    {
+     "q": "Pourquoi recommande-t-elle des bouchons d'oreille spéciaux ?",
+     "opts": [
+      "Ils baissent le volume sans déformer le son.",
+      "Ils sont moins chers que les autres.",
+      "Ils permettent de mieux entendre le chef d'orchestre."
+     ],
+     "a": 0,
+     "why": "« ils baissent le volume sans déformer le son »."
+    }
+   ]
+  },
+  {
+   "id": "fr4-co-4",
+   "part": "co",
+   "teil": "Exercice 1",
+   "title": "Un message du conservatoire",
+   "time": 8,
+   "plays": 2,
+   "instr": "Du har sökt till pianoklassen på ett franskt konservatorium och får ett röstmeddelande från sekretariatet. Läs frågorna först. Du hör meddelandet två gånger. Välj rätt svar på varje fråga.",
+   "lines": [
+    {
+     "fr": "Bonjour, ici Élise Martin, du secrétariat du conservatoire de Saint-Aurèle. Ce message s'adresse aux candidats au concours d'entrée en classe de piano.",
+     "sv": "Hej, det här är Élise Martin på konservatoriets sekretariat i Saint-Aurèle. Det här meddelandet går till alla som söker till pianoklassen."
+    },
+    {
+     "fr": "Tout d'abord, attention : la date a changé. En raison de travaux dans l'auditorium, les épreuves n'auront pas lieu le 12 mars, comme prévu, mais le 19 mars. L'horaire, lui, ne change pas : votre convocation reste valable.",
+     "sv": "Först och främst, observera: datumet har ändrats. På grund av renoveringsarbeten i konsertsalen blir proven inte den 12 mars, som planerat, utan den 19 mars. Tiden ändras däremot inte: din kallelse gäller fortfarande."
+    },
+    {
+     "fr": "Je vous rappelle le déroulement de la journée. Le matin, vous passerez l'épreuve d'instrument devant un jury de trois professeurs. Vous jouerez une pièce imposée et une pièce libre de votre choix, qui ne doit pas dépasser huit minutes.",
+     "sv": "Jag påminner om hur dagen går till. På förmiddagen gör du instrumentprovet inför en jury med tre lärare. Du spelar ett obligatoriskt stycke och ett valfritt stycke, som inte får vara längre än åtta minuter."
+    },
+    {
+     "fr": "L'après-midi, il y aura un test écrit de formation musicale, puis un court entretien avec le directeur. Pour les candidats étrangers, l'entretien se fera en français, mais le jury sait que ce n'est pas votre langue maternelle : on vous demandera surtout de présenter votre parcours et votre projet.",
+     "sv": "På eftermiddagen blir det ett skriftligt prov i musikteori och gehör, och sedan en kort intervju med rektorn. För sökande från andra länder sker intervjun på franska, men juryn vet att det inte är ert modersmål: ni ska framför allt berätta om er bakgrund och era planer."
+    },
+    {
+     "fr": "Merci d'arriver au moins trente minutes avant votre heure de passage. Une salle d'échauffement sera à votre disposition au deuxième étage.",
+     "sv": "Kom minst trettio minuter före din provtid. En sal för uppvärmning finns för er på andra våningen."
+    },
+    {
+     "fr": "N'oubliez pas d'apporter votre pièce d'identité et trois copies de la partition de votre pièce libre, une pour chaque membre du jury.",
+     "sv": "Glöm inte att ta med id-handling och tre kopior av noterna till ditt valfria stycke, en till varje jurymedlem."
+    },
+    {
+     "fr": "Si vous ne pouvez pas venir à la nouvelle date, envoyez-nous un courriel avant le 5 mars. Nous essaierons de vous proposer un passage en visioconférence, mais seulement si vous habitez à l'étranger.",
+     "sv": "Om du inte kan komma på det nya datumet, skicka ett mejl till oss före den 5 mars. Vi ska försöka erbjuda dig att göra provet via videolänk, men bara om du bor utomlands."
+    },
+    {
+     "fr": "Pour toute question, vous pouvez nous joindre du lundi au vendredi, de neuf heures à midi. Bonne préparation à tous, et à bientôt !",
+     "sv": "Om du har frågor kan du nå oss måndag till fredag, klockan nio till tolv. Lycka till med förberedelserna, och vi ses snart!"
+    }
+   ],
+   "qs": [
+    {
+     "q": "Pourquoi la date du concours a-t-elle changé ?",
+     "opts": [
+      "À cause d'une grève.",
+      "À cause de travaux dans l'auditorium.",
+      "Parce qu'un membre du jury est malade."
+     ],
+     "a": 1,
+     "why": "« En raison de travaux dans l'auditorium, les épreuves n'auront pas lieu le 12 mars »."
+    },
+    {
+     "q": "Quand le concours aura-t-il lieu ?",
+     "opts": [
+      "Le 5 mars.",
+      "Le 12 mars.",
+      "Le 19 mars."
+     ],
+     "a": 2,
+     "why": "« pas le 12 mars, comme prévu, mais le 19 mars ». Den 5 mars är sista dagen för att mejla om man inte kan komma."
+    },
+    {
+     "q": "Vrai ou faux ? Les candidats vont recevoir une nouvelle heure de passage.",
+     "opts": [
+      "Vrai",
+      "Faux"
+     ],
+     "a": 1,
+     "why": "Faux. Motivering: « L'horaire, lui, ne change pas : votre convocation reste valable »."
+    },
+    {
+     "q": "Combien de temps la pièce libre peut-elle durer au maximum ?",
+     "opts": [
+      "Cinq minutes.",
+      "Huit minutes.",
+      "Trente minutes."
+     ],
+     "a": 1,
+     "why": "« une pièce libre de votre choix, qui ne doit pas dépasser huit minutes »."
+    },
+    {
+     "q": "Pendant l'entretien, les candidats étrangers doivent surtout…",
+     "opts": [
+      "parler sans faire aucune faute.",
+      "présenter leur parcours et leur projet.",
+      "jouer une deuxième pièce."
+     ],
+     "a": 1,
+     "why": "« le jury sait que ce n'est pas votre langue maternelle : on vous demandera surtout de présenter votre parcours et votre projet »."
+    },
+    {
+     "q": "Qu'est-ce qu'il faut apporter ?",
+     "opts": [
+      "Une pièce d'identité et trois copies de la partition.",
+      "Une photo et une lettre de motivation.",
+      "Un enregistrement de la pièce libre."
+     ],
+     "a": 0,
+     "why": "« votre pièce d'identité et trois copies de la partition de votre pièce libre »."
+    },
+    {
+     "q": "Qui peut passer le concours en visioconférence ?",
+     "opts": [
+      "Tous les candidats.",
+      "Seulement les candidats qui habitent à l'étranger.",
+      "Seulement les candidats qui sont malades."
+     ],
+     "a": 1,
+     "why": "« Nous essaierons de vous proposer un passage en visioconférence, mais seulement si vous habitez à l'étranger »."
+    },
+    {
+     "q": "Quand peut-on téléphoner au secrétariat ?",
+     "opts": [
+      "Le matin, du lundi au vendredi.",
+      "L'après-midi, du lundi au samedi.",
+      "Tous les jours, jusqu'à midi."
+     ],
+     "a": 0,
+     "why": "« du lundi au vendredi, de neuf heures à midi »."
+    }
+   ]
+  },
+  {
+   "id": "fr4-ce-1",
+   "part": "ce",
+   "teil": "Exercice 1",
+   "title": "Une mission de bénévolat pour l'été",
+   "time": 15,
+   "instr": "Elin, 18 år, vill göra volontärarbete i sommar. Hon vill arbeta med natur och miljö, på en plats där man talar franska, stanna minst tre veckor, ha boendet ordnat på plats och inte betala mer än 300 euro (resan oräknad). Läs de fyra annonserna och svara på frågorna.",
+   "lines": [
+    {
+     "fr": "A – Chantier Pierres vivantes, en Bourgogne. Du 5 au 26 juillet. Aidez-nous à restaurer les murs d'un château du XIIe siècle et découvrez les techniques des artisans du Moyen Âge. Hébergement sous tente et repas compris. Participation : 190 €. À partir de 17 ans.",
+     "sv": "A – Arbetsläger Pierres vivantes, i Bourgogne. 5–26 juli. Hjälp oss att restaurera murarna till ett slott från 1100-talet och upptäck medeltida hantverkares tekniker. Boende i tält och måltider ingår. Avgift: 190 €. Från 17 år."
+    },
+    {
+     "fr": "B – Forêts d'avenir, au Québec. Du 1er au 28 juillet. Plantation d'arbres et entretien des sentiers dans un parc naturel. Logement en chalet et repas compris. Participation : 980 €, assurance comprise. Niveau de français intermédiaire demandé.",
+     "sv": "B – Forêts d'avenir, i Québec. 1–28 juli. Trädplantering och underhåll av vandringsleder i en naturpark. Boende i stuga och måltider ingår. Avgift: 980 €, försäkring ingår. Franska på mellannivå krävs."
+    },
+    {
+     "fr": "C – Rivières propres, dans les Pyrénées. Du 2 au 23 août. Nettoyage des berges, comptage des oiseaux et animations sur la protection de l'eau pour les enfants des villages. Hébergement en gîte, repas préparés ensemble. Participation : 260 €. Réservé aux plus de 18 ans. Envoyez une courte lettre de motivation en français.",
+     "sv": "C – Rivières propres, i Pyrenéerna. 2–23 augusti. Städning av åstränder, fågelräkning och aktiviteter om vattenskydd för barnen i byarna. Boende i ett gîte (hyrhus på landet), vi lagar maten tillsammans. Avgift: 260 €. Endast för dig som är 18 år eller äldre. Skicka ett kort personligt brev på franska."
+    },
+    {
+     "fr": "D – Jardins solidaires, à Bruxelles. Du 14 au 21 juillet. Une semaine pour créer un potager partagé avec les habitants d'un quartier populaire. Participation gratuite. Logement non fourni : nous vous aidons à trouver une auberge de jeunesse.",
+     "sv": "D – Jardins solidaires, i Bryssel. 14–21 juli. En vecka för att anlägga en gemensam köksträdgård tillsammans med invånarna i ett arbetarkvarter. Gratis att delta. Boende ingår inte: vi hjälper dig att hitta ett vandrarhem."
+    }
+   ],
+   "qs": [
+    {
+     "q": "Quelle mission ne concerne pas la nature ou l'environnement ?",
+     "opts": [
+      "Mission A",
+      "Mission B",
+      "Mission C",
+      "Mission D"
+     ],
+     "a": 0,
+     "why": "A handlar om att « restaurer les murs d'un château du XIIe siècle », alltså historia och byggnader. B, C och D handlar om träd, vatten och odling."
+    },
+    {
+     "q": "Quelle mission est trop chère pour Elin ?",
+     "opts": [
+      "Mission A",
+      "Mission B",
+      "Mission C",
+      "Mission D"
+     ],
+     "a": 1,
+     "why": "B kostar « 980 € », mycket mer än 300 euro. A kostar 190 €, C 260 € och D är gratis."
+    },
+    {
+     "q": "Quelle mission est trop courte pour Elin ?",
+     "opts": [
+      "Mission A",
+      "Mission B",
+      "Mission C",
+      "Mission D"
+     ],
+     "a": 3,
+     "why": "D varar bara « Du 14 au 21 juillet », alltså « Une semaine ». Elin vill stanna minst tre veckor."
+    },
+    {
+     "q": "Dans quelle mission le logement n'est-il pas compris ?",
+     "opts": [
+      "Mission A",
+      "Mission B",
+      "Mission C",
+      "Mission D"
+     ],
+     "a": 3,
+     "why": "D: « Logement non fourni : nous vous aidons à trouver une auberge de jeunesse »."
+    },
+    {
+     "q": "Pour quelle mission faut-il écrire une lettre ?",
+     "opts": [
+      "Mission A",
+      "Mission B",
+      "Mission C",
+      "Mission D"
+     ],
+     "a": 2,
+     "why": "C: « Envoyez une courte lettre de motivation en français »."
+    },
+    {
+     "q": "Pour quelle mission faut-il avoir un certain niveau de français ?",
+     "opts": [
+      "Mission A",
+      "Mission B",
+      "Mission C",
+      "Mission D"
+     ],
+     "a": 1,
+     "why": "B: « Niveau de français intermédiaire demandé »."
+    },
+    {
+     "q": "Quelle mission correspond à tous les critères d'Elin ?",
+     "opts": [
+      "Mission A",
+      "Mission B",
+      "Mission C",
+      "Mission D"
+     ],
+     "a": 2,
+     "why": "C: miljö (« Nettoyage des berges », « protection de l'eau »), fransktalande, tre veckor (2–23 augusti), « Hébergement en gîte » och 260 €. Elin är 18, så « Réservé aux plus de 18 ans » går bra. A är inte miljö, B är för dyr och D är för kort och utan boende."
+    }
+   ]
+  },
+  {
+   "id": "fr4-ce-2",
+   "part": "ce",
+   "teil": "Exercice 2",
+   "title": "Un violon, un écran et deux cents kilomètres",
+   "time": 15,
+   "instr": "Läs artikeln och svara på frågorna. Vrai/Faux-frågorna ska på provet också motiveras med ett citat ur texten. Citatet står i förklaringen.",
+   "lines": [
+    {
+     "fr": "Chaque mardi à dix-sept heures, Lucas, 16 ans, installe son ordinateur dans sa chambre, règle son micro et accorde son violon. À deux cents kilomètres de là, dans une salle de conservatoire, sa professeure l'attend devant son écran. Lucas habite dans un petit village de montagne, et le conservatoire le plus proche est à trois heures de route.",
+     "sv": "Varje tisdag klockan fem ställer Lucas, 16 år, i ordning datorn i sitt rum, justerar mikrofonen och stämmer fiolen. Tjugo mil därifrån, i en sal på ett konservatorium, väntar hans lärare framför sin skärm. Lucas bor i en liten by i bergen, och det närmaste konservatoriet ligger tre timmar bort med bil."
+    },
+    {
+     "fr": "Il y a deux ans, Lucas a failli abandonner le violon. « Mon ancien professeur est parti à la retraite, et il n'y avait plus personne pour me faire progresser », se souvient-il. C'est alors que le conservatoire a lancé un programme de cours à distance pour les élèves qui vivent loin des grandes villes. Aujourd'hui, une trentaine d'élèves en profitent.",
+     "sv": "För två år sedan höll Lucas på att sluta spela fiol. ”Min gamla lärare gick i pension, och det fanns ingen kvar som kunde få mig att utvecklas”, minns han. Det var då konservatoriet startade ett program med distanslektioner för elever som bor långt från storstäderna. I dag deltar ett trettiotal elever."
+    },
+    {
+     "fr": "Le système a ses avantages. Lucas ne perd plus de temps dans les transports, et il peut enregistrer chaque cours pour le réécouter ensuite. « Je remarque des détails que je n'avais pas entendus pendant la leçon », explique-t-il. Sa professeure, Mme Diallo, a dû changer sa façon d'enseigner : « En vrai, je corrige souvent la position de la main en la touchant. À distance, je dois tout expliquer avec des mots, et je filme mes propres mains pour montrer les gestes. »",
+     "sv": "Systemet har sina fördelar. Lucas slösar inte längre tid på resor, och han kan spela in varje lektion och lyssna på den igen efteråt. ”Jag lägger märke till detaljer som jag inte hade hört under lektionen”, förklarar han. Hans lärare, Mme Diallo, har fått ändra sitt sätt att undervisa: ”På riktigt rättar jag ofta handens position genom att röra vid den. På distans måste jag förklara allt med ord, och jag filmar mina egna händer för att visa rörelserna.”"
+    },
+    {
+     "fr": "Mais la technique a aussi ses limites. Le son passe mal quand la connexion est faible, et le micro de l'ordinateur ne transmet pas toutes les nuances. Surtout, il est presque impossible de jouer à deux en même temps : à cause du petit décalage de la connexion, le professeur et l'élève ne sont jamais parfaitement ensemble. Lucas ne peut donc pas travailler la musique de chambre en ligne.",
+     "sv": "Men tekniken har också sina begränsningar. Ljudet blir dåligt när uppkopplingen är svag, och datorns mikrofon återger inte alla nyanser. Framför allt är det nästan omöjligt att spela två samtidigt: på grund av den lilla fördröjningen i uppkopplingen är läraren och eleven aldrig helt i takt. Lucas kan alltså inte öva kammarmusik på nätet."
+    },
+    {
+     "fr": "C'est pourquoi le programme impose aussi un samedi par mois au conservatoire. Ce jour-là, Lucas prend le car à six heures du matin, suit un cours en face à face et répète avec l'orchestre des jeunes. « C'est fatigant, mais c'est mon moment préféré du mois. Enfin, je joue avec d'autres ! »",
+     "sv": "Därför ingår det också en lördag i månaden på konservatoriet. Den dagen tar Lucas bussen klockan sex på morgonen, har en lektion på plats och repeterar med ungdomsorkestern. ”Det är tröttsamt, men det är månadens bästa stund. Äntligen får jag spela med andra!”"
+    },
+    {
+     "fr": "L'an prochain, Lucas espère être admis dans une classe préparatoire aux études supérieures de musique. Il devra alors déménager en ville. Ses parents hésitent encore : à seize ans, vivre seul dans un internat, ce n'est pas rien. Mais pour Lucas, la décision est déjà prise.",
+     "sv": "Nästa år hoppas Lucas komma in på en förberedande klass inför högre musikstudier. Då måste han flytta till stan. Hans föräldrar tvekar fortfarande: att bo ensam på internat när man är sexton är ingen småsak. Men för Lucas är beslutet redan fattat."
+    }
+   ],
+   "qs": [
+    {
+     "q": "Pourquoi Lucas suit-il ses cours à distance ?",
+     "opts": [
+      "Il préfère travailler seul.",
+      "Il habite loin du conservatoire.",
+      "Il est trop jeune pour aller au conservatoire."
+     ],
+     "a": 1,
+     "why": "« Lucas habite dans un petit village de montagne, et le conservatoire le plus proche est à trois heures de route »."
+    },
+    {
+     "q": "Il y a deux ans, Lucas…",
+     "opts": [
+      "a presque arrêté le violon.",
+      "a changé d'instrument.",
+      "a déménagé à la montagne."
+     ],
+     "a": 0,
+     "why": "« Il y a deux ans, Lucas a failli abandonner le violon » (failli = höll på att)."
+    },
+    {
+     "q": "Vrai ou faux ? Lucas peut réécouter ses cours.",
+     "opts": [
+      "Vrai",
+      "Faux"
+     ],
+     "a": 0,
+     "why": "Vrai. Motivering: « il peut enregistrer chaque cours pour le réécouter ensuite »."
+    },
+    {
+     "q": "Qu'est-ce que Mme Diallo a dû changer dans son enseignement ?",
+     "opts": [
+      "Elle donne des cours plus longs.",
+      "Elle explique davantage avec des mots et filme ses mains.",
+      "Elle envoie des exercices écrits chaque semaine."
+     ],
+     "a": 1,
+     "why": "« À distance, je dois tout expliquer avec des mots, et je filme mes propres mains pour montrer les gestes »."
+    },
+    {
+     "q": "Pourquoi est-il presque impossible de jouer à deux en ligne ?",
+     "opts": [
+      "À cause du petit décalage de la connexion.",
+      "Parce que le conservatoire l'interdit.",
+      "Parce que Mme Diallo n'a pas le temps."
+     ],
+     "a": 0,
+     "why": "« à cause du petit décalage de la connexion, le professeur et l'élève ne sont jamais parfaitement ensemble »."
+    },
+    {
+     "q": "Vrai ou faux ? Lucas ne va jamais au conservatoire.",
+     "opts": [
+      "Vrai",
+      "Faux"
+     ],
+     "a": 1,
+     "why": "Faux. Motivering: « le programme impose aussi un samedi par mois au conservatoire »."
+    },
+    {
+     "q": "Que pensent les parents de Lucas de son projet de déménager ?",
+     "opts": [
+      "Ils sont très enthousiastes.",
+      "Ils ne sont pas encore sûrs.",
+      "Ils refusent complètement."
+     ],
+     "a": 1,
+     "why": "« Ses parents hésitent encore : à seize ans, vivre seul dans un internat, ce n'est pas rien »."
+    }
+   ]
+  },
+  {
+   "id": "fr4-ce-3",
+   "part": "ce",
+   "teil": "Exercice 2",
+   "title": "Les voix de la mémoire",
+   "time": 15,
+   "instr": "Läs artikeln och svara på frågorna. Vrai/Faux-frågorna ska på provet också motiveras med ett citat ur texten. Citatet står i förklaringen.",
+   "lines": [
+    {
+     "fr": "Dans une petite salle du musée de la Résistance de Montaurel, il y a un micro, deux chaises et une tasse de café. En face de Sara, élève de terminale, Paulette, 94 ans, raconte l'hiver 1943. Elle avait alors douze ans, et son père cachait des tracts clandestins sous le plancher de la boulangerie familiale.",
+     "sv": "I ett litet rum på motståndsrörelsens museum i Montaurel finns en mikrofon, två stolar och en kopp kaffe. Mitt emot Sara, som går sista året på gymnasiet, berättar 94-åriga Paulette om vintern 1943. Hon var då tolv år, och hennes pappa gömde hemliga flygblad under golvet i familjens bageri."
+    },
+    {
+     "fr": "Depuis deux ans, le musée mène un projet original : enregistrer les derniers témoins de la Seconde Guerre mondiale avant qu'il ne soit trop tard. « Les personnes qui ont vécu la guerre ont aujourd'hui plus de quatre-vingt-cinq ans, explique Hugo Lefèvre, le directeur du musée. Dans quelques années, il n'y aura plus personne pour raconter. Nous voulons garder leur voix, pas seulement leurs souvenirs écrits. »",
+     "sv": "I två år har museet drivit ett ovanligt projekt: att spela in de sista vittnena från andra världskriget innan det är för sent. ”De som upplevde kriget är i dag över åttiofem år”, förklarar Hugo Lefèvre, museets chef. ”Om några år finns det ingen kvar som kan berätta. Vi vill bevara deras röster, inte bara deras nedskrivna minnen.”"
+    },
+    {
+     "fr": "Pour réaliser les entretiens, le musée a fait appel aux élèves du lycée voisin. Avant de rencontrer les témoins, les jeunes ont suivi une formation de trois jours avec une historienne : ils ont appris à préparer leurs questions, à écouter sans interrompre et à vérifier les dates et les lieux dans les archives. « On ne peut pas tout croire sans vérifier, dit Sara. La mémoire change avec le temps. Mais un témoignage montre ce qu'on ressentait à l'époque, et ça, les livres d'histoire ne le disent pas. »",
+     "sv": "För att göra intervjuerna har museet vänt sig till eleverna på gymnasiet i närheten. Innan de träffade vittnena gick ungdomarna en tre dagar lång utbildning med en historiker: de lärde sig att förbereda sina frågor, att lyssna utan att avbryta och att kontrollera datum och platser i arkiven. ”Man kan inte tro på allt utan att kontrollera”, säger Sara. ”Minnet förändras med tiden. Men ett vittnesmål visar vad man kände på den tiden, och det står inte i historieböckerna.”"
+    },
+    {
+     "fr": "Au total, quarante-deux témoignages ont déjà été enregistrés. Ils seront disponibles gratuitement sur le site du musée à partir de l'automne, et des extraits seront diffusés dans les salles d'exposition. Tous les témoins ont donné leur accord, mais certains ont demandé que leur nom ne soit pas publié.",
+     "sv": "Totalt har fyrtiotvå vittnesmål redan spelats in. De kommer att finnas gratis på museets webbplats från och med hösten, och utdrag kommer att spelas upp i utställningssalarna. Alla vittnen har gett sitt godkännande, men vissa har bett att deras namn inte ska publiceras."
+    },
+    {
+     "fr": "Le projet a aussi changé le regard des lycéens. Karim, 17 ans, avoue qu'au début, il s'était inscrit surtout parce que son meilleur ami l'avait fait. « Et puis j'ai rencontré un monsieur qui avait été arrêté à quinze ans. Il m'a parlé pendant deux heures. En rentrant chez moi, je n'arrivais pas à penser à autre chose. »",
+     "sv": "Projektet har också förändrat gymnasieelevernas syn på saken. Karim, 17 år, erkänner att han i början anmälde sig mest för att hans bästa kompis hade gjort det. ”Men sedan träffade jag en man som hade gripits när han var femton. Han pratade med mig i två timmar. När jag gick hem kunde jag inte tänka på något annat.”"
+    },
+    {
+     "fr": "Pour Paulette, raconter n'a pas toujours été facile. « Pendant cinquante ans, je n'en ai parlé à personne, même pas à mes enfants. » Aujourd'hui, elle pense que c'est un devoir : « Si les jeunes savent ce qui s'est passé, ils le reconnaîtront peut-être si ça recommence. »",
+     "sv": "För Paulette har det inte alltid varit lätt att berätta. ”I femtio år pratade jag inte med någon om det, inte ens med mina barn.” I dag tycker hon att det är en plikt: ”Om unga vet vad som hände kanske de känner igen det om det börjar om.”"
+    }
+   ],
+   "qs": [
+    {
+     "q": "Quel est l'objectif principal du projet ?",
+     "opts": [
+      "Enregistrer la voix des derniers témoins de la guerre.",
+      "Écrire un livre d'histoire pour les lycées.",
+      "Rénover les salles du musée."
+     ],
+     "a": 0,
+     "why": "« enregistrer les derniers témoins de la Seconde Guerre mondiale avant qu'il ne soit trop tard » och « Nous voulons garder leur voix »."
+    },
+    {
+     "q": "Qui fait les entretiens avec les témoins ?",
+     "opts": [
+      "Le directeur du musée.",
+      "Des lycéens.",
+      "Une historienne."
+     ],
+     "a": 1,
+     "why": "« le musée a fait appel aux élèves du lycée voisin ». Historikern utbildade eleverna men gör inte intervjuerna."
+    },
+    {
+     "q": "Vrai ou faux ? Les élèves ont été formés avant de rencontrer les témoins.",
+     "opts": [
+      "Vrai",
+      "Faux"
+     ],
+     "a": 0,
+     "why": "Vrai. Motivering: « Avant de rencontrer les témoins, les jeunes ont suivi une formation de trois jours avec une historienne »."
+    },
+    {
+     "q": "Selon Sara, un témoignage…",
+     "opts": [
+      "est toujours plus exact qu'un livre.",
+      "montre ce que les gens ressentaient à l'époque.",
+      "est moins intéressant qu'un livre d'histoire."
+     ],
+     "a": 1,
+     "why": "« un témoignage montre ce qu'on ressentait à l'époque, et ça, les livres d'histoire ne le disent pas ». Hon säger också « On ne peut pas tout croire sans vérifier », alltså är vittnesmål inte alltid mer exakta."
+    },
+    {
+     "q": "Vrai ou faux ? Tous les témoins ont accepté que leur nom soit publié.",
+     "opts": [
+      "Vrai",
+      "Faux"
+     ],
+     "a": 1,
+     "why": "Faux. Motivering: « certains ont demandé que leur nom ne soit pas publié »."
+    },
+    {
+     "q": "Pourquoi Karim s'est-il inscrit au projet au début ?",
+     "opts": [
+      "Parce qu'il adorait l'histoire.",
+      "Parce que son grand-père avait été résistant.",
+      "Parce que son meilleur ami s'était inscrit."
+     ],
+     "a": 2,
+     "why": "« il s'était inscrit surtout parce que son meilleur ami l'avait fait »."
+    },
+    {
+     "q": "Pourquoi Paulette accepte-t-elle aujourd'hui de raconter son histoire ?",
+     "opts": [
+      "Elle pense que c'est un devoir envers les jeunes.",
+      "Ses enfants le lui ont demandé.",
+      "Elle veut que son nom soit connu."
+     ],
+     "a": 0,
+     "why": "Hon tycker att det är « un devoir »: « Si les jeunes savent ce qui s'est passé, ils le reconnaîtront peut-être si ça recommence »."
+    }
+   ]
+  },
+  {
+   "id": "fr4-ce-4",
+   "part": "ce",
+   "teil": "Exercice 2",
+   "title": "Les vérificateurs du lycée",
+   "time": 15,
+   "instr": "Läs artikeln och svara på frågorna. Vrai/Faux-frågorna ska på provet också motiveras med ett citat ur texten. Citatet står i förklaringen.",
+   "lines": [
+    {
+     "fr": "« Attention, cette information est fausse ! » Chaque vendredi, à la pause de midi, la voix de Chloé résonne dans les couloirs du lycée des Ormeaux. Depuis la rentrée, avec cinq camarades, elle anime « Vrai ou fake ? », une émission de radio de vingt minutes dans laquelle les élèves vérifient les rumeurs qui circulent sur les réseaux sociaux.",
+     "sv": "”Se upp, den här uppgiften är falsk!” Varje fredag på lunchrasten hörs Chloés röst i korridorerna på gymnasiet Les Ormeaux. Sedan terminsstarten gör hon tillsammans med fem klasskamrater « Vrai ou fake ? », ett tjugo minuter långt radioprogram där eleverna granskar rykten som sprids på sociala medier."
+    },
+    {
+     "fr": "L'idée est venue de leur professeure documentaliste, Mme Rousseau. L'an dernier, une fausse information avait semé la panique dans tout le lycée : une vidéo affirmait que le bac serait annulé à cause d'une grève nationale. « Des dizaines d'élèves avaient arrêté de réviser, se souvient-elle. J'ai compris qu'il fallait leur apprendre à se méfier. »",
+     "sv": "Idén kom från deras skolbibliotekarie, Mme Rousseau. Förra året hade en falsk nyhet skapat panik på hela skolan: en video påstod att studentexamen skulle ställas in på grund av en landsomfattande strejk. ”Tiotals elever hade slutat plugga”, minns hon. ”Jag förstod att vi måste lära dem att vara misstänksamma.”"
+    },
+    {
+     "fr": "Chaque semaine, l'équipe choisit trois rumeurs, souvent proposées par les élèves eux-mêmes grâce à une boîte aux lettres installée au CDI. Ensuite, le travail ressemble à celui des journalistes : chercher l'origine d'une image, comparer plusieurs sources, contacter des spécialistes. « Une fois, on a appelé un météorologue pour savoir si une photo de tempête était vraie, raconte Théo. En fait, elle avait été prise dix ans plus tôt, dans un autre pays ! »",
+     "sv": "Varje vecka väljer gruppen tre rykten, som ofta föreslås av eleverna själva via en brevlåda i skolbiblioteket. Sedan liknar arbetet journalisters: att leta reda på var en bild kommer ifrån, jämföra flera källor och kontakta experter. ”En gång ringde vi en meteorolog för att ta reda på om ett foto av en storm var äkta”, berättar Théo. ”Det visade sig att det hade tagits tio år tidigare, i ett annat land!”"
+    },
+    {
+     "fr": "Les animateurs ne se contentent pas de dire si c'est vrai ou faux. Ils expliquent aussi comment ils ont vérifié, pour que les auditeurs puissent le faire seuls la prochaine fois. « Notre but, ce n'est pas qu'on nous croie, c'est que les gens se posent des questions », résume Chloé.",
+     "sv": "Programledarna nöjer sig inte med att säga om något är sant eller falskt. De förklarar också hur de har kontrollerat det, så att lyssnarna ska kunna göra det själva nästa gång. ”Vårt mål är inte att folk ska tro på oss, utan att de ska börja ställa frågor”, sammanfattar Chloé."
+    },
+    {
+     "fr": "L'émission a du succès : elle est maintenant diffusée sur la webradio de la ville, et deux autres lycées ont demandé des conseils pour créer la leur. Mais tout n'est pas simple. Certains élèves ont reproché à l'équipe de se moquer de ceux qui avaient cru une rumeur. Depuis, les animateurs ont décidé de ne jamais citer le nom de la personne qui a partagé une fausse information.",
+     "sv": "Programmet är populärt: nu sänds det i stadens webbradio, och två andra gymnasier har bett om råd för att starta ett eget. Men allt är inte enkelt. Vissa elever har kritiserat gruppen för att göra sig lustig över dem som hade trott på ett rykte. Sedan dess har programledarna bestämt att aldrig nämna namnet på den som har delat en falsk uppgift."
+    },
+    {
+     "fr": "Et l'intelligence artificielle ? Elle rend le travail plus difficile, reconnaît Théo : « Aujourd'hui, on peut fabriquer une fausse photo en quelques secondes. Il faut être encore plus prudent. » L'équipe prépare d'ailleurs une émission spéciale sur ce sujet pour la fin de l'année.",
+     "sv": "Och artificiell intelligens? Den gör arbetet svårare, medger Théo: ”I dag kan man skapa ett falskt foto på några sekunder. Man måste vara ännu mer försiktig.” Gruppen förbereder för övrigt ett specialprogram om det här ämnet till slutet av läsåret."
+    }
+   ],
+   "qs": [
+    {
+     "q": "Qu'est-ce que « Vrai ou fake ? » ?",
+     "opts": [
+      "Un jeu sur les réseaux sociaux.",
+      "Une émission de radio qui vérifie des rumeurs.",
+      "Le journal papier du lycée."
+     ],
+     "a": 1,
+     "why": "« une émission de radio de vingt minutes dans laquelle les élèves vérifient les rumeurs qui circulent sur les réseaux sociaux »."
+    },
+    {
+     "q": "Pourquoi Mme Rousseau a-t-elle eu l'idée de ce projet ?",
+     "opts": [
+      "Parce qu'une fausse information avait inquiété les élèves.",
+      "Parce que le lycée voulait une radio musicale.",
+      "Parce qu'une grève avait fait annuler le bac."
+     ],
+     "a": 0,
+     "why": "« une fausse information avait semé la panique dans tout le lycée ». Strejken var just det falska ryktet: studentexamen ställdes aldrig in."
+    },
+    {
+     "q": "Comment l'équipe choisit-elle les rumeurs ?",
+     "opts": [
+      "Elle suit les conseils d'un journaliste.",
+      "Elle reprend souvent des propositions des élèves.",
+      "Elle choisit les vidéos les plus vues."
+     ],
+     "a": 1,
+     "why": "« souvent proposées par les élèves eux-mêmes grâce à une boîte aux lettres installée au CDI »."
+    },
+    {
+     "q": "Vrai ou faux ? La photo de tempête avait été prise récemment, près du lycée.",
+     "opts": [
+      "Vrai",
+      "Faux"
+     ],
+     "a": 1,
+     "why": "Faux. Motivering: « elle avait été prise dix ans plus tôt, dans un autre pays »."
+    },
+    {
+     "q": "Selon Chloé, le but de l'émission est…",
+     "opts": [
+      "que les auditeurs apprennent à se poser des questions.",
+      "que les élèves croient tout ce que dit la radio.",
+      "de devenir la radio la plus écoutée de la ville."
+     ],
+     "a": 0,
+     "why": "« Notre but, ce n'est pas qu'on nous croie, c'est que les gens se posent des questions »."
+    },
+    {
+     "q": "Quelle critique certains élèves ont-ils faite ?",
+     "opts": [
+      "L'émission est trop longue.",
+      "Les animateurs se moquent de ceux qui ont cru une rumeur.",
+      "Les sujets ne sont pas intéressants."
+     ],
+     "a": 1,
+     "why": "« Certains élèves ont reproché à l'équipe de se moquer de ceux qui avaient cru une rumeur »."
+    },
+    {
+     "q": "Vrai ou faux ? Selon Théo, l'intelligence artificielle facilite la vérification.",
+     "opts": [
+      "Vrai",
+      "Faux"
+     ],
+     "a": 1,
+     "why": "Faux. Motivering: « Elle rend le travail plus difficile » och « on peut fabriquer une fausse photo en quelques secondes »."
+    }
+   ]
+  },
+  {
+   "id": "fr4-pe-1",
+   "part": "pe",
+   "teil": "Production écrite",
+   "title": "Une réclamation après un stage",
+   "time": 45,
+   "minWords": 160,
+   "instr": "Skriv ett formellt klagomålsmejl till en arrangör. Beskriv vad som inte stämde med utlovat, säg vad du tycker och föreslå en lösning (t.ex. delvis återbetalning). Använd formell hälsning och avslutning, vous och bindeord som tout d'abord, ensuite, enfin, or, c'est pourquoi.",
+   "task": "Cet été, vous avez participé à un stage de musique de deux semaines organisé par l'association Les Estivales du Pic-Vert. Plusieurs choses ne correspondaient pas à ce qui était promis dans la brochure (hébergement, nombre d'heures de cours, activités). Vous écrivez un courriel au responsable de l'association : vous décrivez les problèmes, vous exprimez votre mécontentement et vous demandez une solution. (160 mots minimum)",
+   "criteria": [
+    "Respect de la consigne",
+    "Capacité à présenter des faits",
+    "Capacité à exprimer sa pensée",
+    "Cohérence et cohésion",
+    "Lexique",
+    "Morphosyntaxe"
+   ],
+   "model": "Objet : Réclamation – stage de musique de chambre du 7 au 20 juillet\n\nMadame, Monsieur,\n\nDu 7 au 20 juillet, j'ai participé au stage de musique de chambre organisé par votre association. Je vous écris aujourd'hui, car plusieurs points ne correspondaient pas du tout à ce qui était annoncé dans votre brochure.\n\nTout d'abord, la brochure promettait des chambres de deux personnes dans une résidence moderne. Or, nous étions six dans un dortoir, et les douches n'ont pas fonctionné pendant les trois premiers jours. Ensuite, nous devions avoir quatre heures de cours par jour avec des professeurs de conservatoire. En réalité, deux professeurs étaient absents la première semaine, si bien que nous n'avons eu que deux heures de cours par jour. Enfin, le concert final, qui devait avoir lieu dans l'église du village, a été annulé sans aucune explication.\n\nJe comprends que des problèmes puissent arriver. Cependant, j'ai payé 650 euros pour ce stage, et j'estime que le service n'a pas été à la hauteur. C'est pourquoi je vous demande de me rembourser une partie de cette somme, par exemple 200 euros, ou de m'accorder une réduction importante sur le stage de l'année prochaine.\n\nDans l'attente de votre réponse, je vous prie d'agréer, Madame, Monsieur, l'expression de mes salutations distinguées.\n\nElin Berg",
+   "modelSv": "Ämne: Klagomål – kammarmusikkursen 7–20 juli\n\nTill den det berör,\n\nDen 7–20 juli deltog jag i kammarmusikkursen som er förening anordnade. Jag skriver till er i dag eftersom flera saker inte alls stämde med det som stod i er broschyr.\n\nFör det första utlovade broschyren tvåbäddsrum i ett modernt studentboende. Men vi var sex personer i en sovsal, och duscharna fungerade inte de tre första dagarna. För det andra skulle vi ha fyra timmars lektioner om dagen med lärare från konservatoriet. I själva verket var två lärare borta den första veckan, så vi fick bara två timmars lektioner om dagen. Till sist ställdes avslutningskonserten, som skulle ha hållits i byns kyrka, in helt utan förklaring.\n\nJag förstår att problem kan uppstå. Men jag betalade 650 euro för kursen, och jag anser att ni inte levde upp till det ni lovade. Därför ber jag er att betala tillbaka en del av summan, till exempel 200 euro, eller att ge mig en ordentlig rabatt på nästa års kurs.\n\nJag ser fram emot ert svar.\n\nMed vänliga hälsningar\n\nElin Berg"
+  },
+  {
+   "id": "fr4-pe-2",
+   "part": "pe",
+   "teil": "Production écrite",
+   "title": "L'IA pour faire ses devoirs ?",
+   "time": 45,
+   "minWords": 160,
+   "instr": "Skriv ett inlägg på ett forum. Ta ställning i frågan, ge argument för och emot med konkreta exempel och avsluta med din egen slutsats. Tonen får vara personlig men texten ska vara välordnad (d'un côté … d'un autre côté, par exemple, en plus, à mon avis, donc).",
+   "task": "Sur un forum francophone pour lycéens, quelqu'un demande : « Utiliser l'intelligence artificielle pour faire ses devoirs, c'est tricher ou c'est apprendre autrement ? » Vous répondez en donnant votre opinion, avec des arguments et des exemples. (160 mots minimum)",
+   "criteria": [
+    "Respect de la consigne",
+    "Capacité à présenter des faits",
+    "Capacité à exprimer sa pensée",
+    "Cohérence et cohésion",
+    "Lexique",
+    "Morphosyntaxe"
+   ],
+   "model": "Bonjour à tous,\n\nLa question est intéressante, et je pense que la réponse dépend surtout de la manière dont on utilise l'IA.\n\nD'un côté, c'est clairement de la triche si on demande à un chatbot d'écrire toute sa rédaction et qu'on la rend telle quelle. Dans ce cas, on n'apprend rien, et le professeur ne peut pas savoir ce qu'on sait vraiment faire. En plus, l'IA se trompe parfois : l'an dernier, un ami a rendu un exposé d'histoire avec deux dates fausses, et il a eu une mauvaise note !\n\nD'un autre côté, l'IA peut être un très bon outil pour apprendre. Par exemple, quand je fais mes exercices de français, je lui demande de m'expliquer pourquoi j'ai choisi le mauvais temps, puis je corrige moi-même mes phrases. C'est un peu comme avoir un professeur particulier disponible à toute heure, et gratuit en plus.\n\nÀ mon avis, il ne faudrait donc pas interdire l'IA, mais apprendre aux élèves à l'utiliser de façon honnête et critique. Les professeurs pourraient aussi donner plus de travaux à faire en classe ou à l'oral, pour vérifier ce que chacun a vraiment compris.\n\nEt vous, comment est-ce que vous l'utilisez ?\n\nElin",
+   "modelSv": "Hej allihop,\n\nFrågan är intressant, och jag tror att svaret framför allt beror på hur man använder AI.\n\nÅ ena sidan är det helt klart fusk om man ber en chattbot skriva hela uppsatsen och lämnar in den som den är. Då lär man sig ingenting, och läraren kan inte veta vad man verkligen kan. Dessutom har AI ibland fel: förra året lämnade en kompis in en historieredovisning med två felaktiga årtal, och han fick dåligt betyg!\n\nÅ andra sidan kan AI vara ett väldigt bra verktyg för att lära sig. När jag gör mina franskövningar ber jag den till exempel förklara varför jag valde fel tempus, och sedan rättar jag mina meningar själv. Det är lite som att ha en privatlärare som finns till hands dygnet runt, och gratis dessutom.\n\nEnligt mig borde man alltså inte förbjuda AI, utan lära eleverna att använda den på ett ärligt och kritiskt sätt. Lärarna skulle också kunna ge fler uppgifter som görs i klassrummet eller muntligt, för att kontrollera vad var och en verkligen har förstått.\n\nOch ni, hur använder ni den?\n\nElin"
+  },
+  {
+   "id": "fr4-pe-3",
+   "part": "pe",
+   "teil": "Production écrite",
+   "title": "Mon lycée agit pour la planète",
+   "time": 45,
+   "minWords": 160,
+   "instr": "Skriv en artikel till en fransk skoltidning. Ge den en rubrik. Presentera en miljösatsning på din skola eller i din stad (vad, hur, resultat) och ge din åsikt om vad unga kan göra för miljön. Blanda passé composé och imparfait när du berättar och avsluta med en fråga eller uppmaning till läsarna.",
+   "task": "Le journal de votre lycée partenaire en France prépare un numéro spécial sur l'environnement. Vous écrivez un article dans lequel vous présentez une action écologique menée dans votre lycée ou dans votre ville, vous expliquez ses résultats et vous donnez votre avis sur ce que les jeunes peuvent faire pour protéger l'environnement. (160 mots minimum)",
+   "criteria": [
+    "Respect de la consigne",
+    "Capacité à présenter des faits",
+    "Capacité à exprimer sa pensée",
+    "Cohérence et cohésion",
+    "Lexique",
+    "Morphosyntaxe"
+   ],
+   "model": "Une friperie dans notre lycée\n\nBeaucoup de jeunes achètent des vêtements qu'ils ne portent presque jamais. Dans mon lycée, en Suède, un groupe d'élèves a décidé d'agir contre ce gaspillage.\n\nL'automne dernier, nous avons ouvert une petite friperie dans une ancienne salle de classe. Le principe est simple : chacun peut apporter des vêtements en bon état et en prendre d'autres gratuitement. Le mercredi, des élèves bénévoles trient et rangent les vêtements. Au début, peu de gens venaient, parce que certains avaient honte de porter des habits d'occasion. Mais après un défilé de mode organisé pendant la fête du lycée, la friperie est devenue à la mode !\n\nEn six mois, plus de huit cents vêtements ont changé de propriétaire. C'est peu à l'échelle de la planète, bien sûr, mais cette action a surtout changé notre façon de consommer : beaucoup d'élèves réfléchissent maintenant avant d'acheter.\n\nÀ mon avis, les jeunes ne peuvent pas sauver le climat tout seuls : les gouvernements et les entreprises doivent aussi faire leur part. Cependant, nous pouvons donner l'exemple, en achetant moins et en réparant plus. Et si chaque lycée ouvrait sa propre friperie ?",
+   "modelSv": "En secondhandbutik på vår skola\n\nMånga unga köper kläder som de nästan aldrig använder. På min skola i Sverige bestämde sig en grupp elever för att göra något åt det slöseriet.\n\nI höstas öppnade vi en liten secondhandbutik i ett gammalt klassrum. Idén är enkel: alla kan lämna kläder i gott skick och ta andra gratis. På onsdagarna sorterar elever som ställer upp frivilligt kläderna och hänger in dem. I början kom inte så många, eftersom en del skämdes över att ha begagnade kläder. Men efter en modevisning på skolans fest blev butiken inne!\n\nPå sex månader har över åttahundra plagg bytt ägare. Det är förstås lite i ett globalt perspektiv, men framför allt har det förändrat vårt sätt att konsumera: många elever tänker sig nu för innan de köper något.\n\nEnligt mig kan unga inte rädda klimatet ensamma: regeringar och företag måste också göra sin del. Men vi kan föregå med gott exempel genom att köpa mindre och laga mer. Tänk om varje gymnasium öppnade en egen secondhandbutik?"
+  },
+  {
+   "id": "fr4-po-1",
+   "part": "po",
+   "teil": "Exercice 1",
+   "title": "Entretien dirigé : études, musique et avenir",
+   "prep": 0,
+   "time": 3,
+   "instr": "Första delen av den muntliga delen är ett samtal om dig själv, utan förberedelsetid (2–3 minuter). Den här gången handlar frågorna om dina studier, vad musiken betyder för dig och ditt drömyrke. Svara med hela meningar och utveckla svaren med exempel, och använd gärna olika tempus (passé composé, imparfait, futur, conditionnel).",
+   "task": "L'examinateur vous pose des questions, par exemple :\n– Parlez-moi de vos études. Quelles matières préférez-vous, et pourquoi ?\n– Comment la musique est-elle entrée dans votre vie ?\n– Racontez-moi un moment important de votre parcours musical.\n– Quel serait votre métier de rêve ?\n– Comment imaginez-vous votre vie dans dix ans ?",
+   "phrases": [
+    "Je suis en dernière année de lycée, en filière …",
+    "Ma matière préférée, c'est … parce que …",
+    "La musique est entrée dans ma vie quand …",
+    "Je me souviens très bien de … : c'était …",
+    "J'avais le trac, mais …",
+    "Mon métier de rêve serait …",
+    "Pour y arriver, il faudra que je …",
+    "Dans dix ans, j'espère que …"
+   ],
+   "model": "Je suis en dernière année de lycée, dans une filière musique, à Uppsala, en Suède. Ma matière préférée, à part la musique bien sûr, c'est l'histoire, parce que j'aime comprendre pourquoi le monde est comme il est aujourd'hui. La musique est entrée dans ma vie très tôt : ma grand-mère jouait du violon, et quand j'avais six ans, elle m'a emmenée à un concert. J'ai été fascinée par le violoncelle, et j'ai commencé les cours l'année suivante. Un moment important, c'était il y a deux ans : j'ai joué en soliste avec l'orchestre des jeunes de ma ville. J'avais un trac terrible, mais après le concert, j'étais si heureuse que j'ai décidé d'en faire mon métier. Mon métier de rêve serait de jouer dans un orchestre symphonique, et peut-être aussi d'enseigner. Pour y arriver, il faudra que je réussisse le concours d'un conservatoire, en France si possible. Dans dix ans, j'espère que je vivrai de la musique, même si je sais que ce sera difficile.",
+   "modelSv": "Jag går sista året på gymnasiet, på musikprogrammet, i Uppsala i Sverige. Mitt favoritämne, förutom musik förstås, är historia, eftersom jag gillar att förstå varför världen ser ut som den gör i dag. Musiken kom in i mitt liv väldigt tidigt: min mormor spelade fiol, och när jag var sex tog hon med mig på en konsert. Jag blev helt fascinerad av cellon och började ta lektioner året därpå. Ett viktigt ögonblick var för två år sedan: jag spelade som solist med ungdomsorkestern i min stad. Jag hade fruktansvärd scenskräck, men efter konserten var jag så glad att jag bestämde mig för att bli musiker på riktigt. Mitt drömyrke vore att spela i en symfoniorkester, och kanske också att undervisa. För att nå dit måste jag klara antagningsprovet till ett konservatorium, helst i Frankrike. Om tio år hoppas jag att jag kan leva på musiken, även om jag vet att det kommer att bli svårt."
+  },
+  {
+   "id": "fr4-po-2",
+   "part": "po",
+   "teil": "Exercice 2",
+   "title": "Exercice en interaction : un examen le même jour",
+   "prep": 0,
+   "time": 4,
+   "instr": "Rollspel utan förberedelsetid (3–4 minuter). Examinatorn spelar din franska historielärare, som först inte vill flytta provet. Förklara problemet, argumentera, föreslå alternativ och var artig men envis. Skriv stödord eller hela repliker och låt Claude bedöma dem.",
+   "task": "Vous passez une année d'échange dans un lycée français. Votre examen d'histoire de fin de semestre est prévu le même jour que l'audition d'entrée d'un conservatoire à Lyon, qui est très importante pour votre avenir. Vous allez voir votre professeur pour lui expliquer la situation et lui demander de passer l'examen à une autre date. Au début, il n'est pas d'accord. L'examinateur joue le rôle du professeur.",
+   "phrases": [
+    "Excusez-moi, est-ce que je pourrais vous parler un instant ?",
+    "J'ai un problème de date : …",
+    "C'est très important pour moi, parce que …",
+    "Je sais que ce n'est pas simple pour vous, mais …",
+    "Est-ce qu'il serait possible de … ?",
+    "Sinon, je pourrais …",
+    "Je vous apporterai la convocation.",
+    "Je vous remercie de votre compréhension."
+   ],
+   "model": "— Excusez-moi, monsieur Morel, est-ce que je pourrais vous parler un instant ?\n— Oui, bien sûr. Qu'est-ce qui se passe ?\n— J'ai un problème de date. L'examen d'histoire est prévu le jeudi 12, mais ce jour-là, je passe l'audition d'entrée du conservatoire de Lyon.\n— Ah… Mais l'examen est le même pour toute la classe. Je ne peux pas faire d'exception.\n— Je comprends, et je sais que ce n'est pas simple pour vous. Mais cette audition n'a lieu qu'une fois par an. Si je la rate, je devrai attendre un an de plus pour commencer mes études de musique.\n— Vous ne pouvez pas demander une autre date au conservatoire ?\n— Je leur ai déjà écrit, mais toutes les auditions de violoncelle ont lieu le même jour. Est-ce qu'il serait possible de passer l'examen plus tôt, par exemple mardi après-midi, quand je n'ai pas cours ?\n— Hum… Mais vous aurez eu moins de temps que les autres pour réviser.\n— Ce n'est pas grave, j'ai déjà commencé à réviser. Sinon, je pourrais aussi le passer le lundi suivant, avec un autre sujet, si vous préférez.\n— Et comment est-ce que je sais que cette audition existe vraiment ?\n— Je vous apporterai la convocation du conservatoire demain matin.\n— Bon, d'accord. Apportez-moi la convocation, et vous passerez l'examen mardi à quatorze heures, en salle 14.\n— Merci beaucoup, monsieur. Je vous remercie vraiment de votre compréhension.",
+   "modelSv": "– Ursäkta, monsieur Morel, kan jag prata med er en stund?\n– Ja, visst. Vad gäller det?\n– Jag har ett problem med ett datum. Historieprovet är på torsdag den 12:e, men samma dag har jag antagningsprov på konservatoriet i Lyon.\n– Jaså … Men provet är detsamma för hela klassen. Jag kan inte göra något undantag.\n– Jag förstår, och jag vet att det inte är enkelt för er. Men det här antagningsprovet hålls bara en gång om året. Om jag missar det måste jag vänta ett år till innan jag kan börja studera musik.\n– Kan du inte be konservatoriet om ett annat datum?\n– Jag har redan skrivit till dem, men alla antagningsprov för cello hålls samma dag. Skulle det gå att skriva provet tidigare, till exempel på tisdag eftermiddag, när jag inte har lektion?\n– Hmm … Men då har du haft mindre tid att plugga än de andra.\n– Det gör inget, jag har redan börjat plugga. Annars kan jag skriva det måndagen efter, med andra frågor, om ni hellre vill det.\n– Och hur vet jag att det här antagningsprovet verkligen finns?\n– Jag tar med kallelsen från konservatoriet i morgon bitti.\n– Nåja, okej. Ta med kallelsen, så skriver du provet på tisdag klockan två, i sal 14.\n– Tack så mycket. Jag är verkligen tacksam för att ni förstår."
+  },
+  {
+   "id": "fr4-po-3",
+   "part": "po",
+   "teil": "Exercice 3",
+   "title": "Expression d'un point de vue : moins d'écrans à l'école ?",
+   "prep": 10,
+   "time": 6,
+   "instr": "Du har 10 minuter att förbereda dig. Läs texten, ta reda på vilket ämne den tar upp och ge din egen åsikt i ett kort, välordnat anförande (ungefär 3 minuter). Sedan ställer examinatorn några frågor. Presentera ämnet med egna ord, ge 2–3 argument med exempel och avsluta.",
+   "task": "Dégagez le thème soulevé par le document ci-dessous et présentez votre opinion sous la forme d'un petit exposé de 3 minutes environ. L'examinateur pourra vous poser quelques questions.\n\nMoins d'écrans à l'école ?\nIl y a quelques années, beaucoup d'écoles distribuaient des tablettes à tous les élèves. Aujourd'hui, certaines font marche arrière. Dans plusieurs pays européens, des établissements reviennent aux manuels papier et aux cahiers, et limitent l'usage des ordinateurs en classe. Selon leurs directeurs, les élèves se concentrent mieux et lisent plus attentivement sur papier. Mais d'autres enseignants ne sont pas d'accord : pour eux, l'école doit préparer les jeunes au monde numérique, et les outils informatiques permettent d'adapter les exercices au niveau de chaque élève. Les élèves eux-mêmes sont souvent partagés entre les deux positions. Faut-il vraiment éloigner les écrans de la salle de classe ?",
+   "phrases": [
+    "Ce document traite de …",
+    "Le texte oppose deux points de vue : …",
+    "La question qui se pose est de savoir si …",
+    "Je suis plutôt d'accord avec … parce que …",
+    "Prenons l'exemple de …",
+    "Il ne faut pas oublier que …",
+    "La meilleure solution serait de …",
+    "Pour conclure, je dirais que …"
+   ],
+   "model": "Ce document traite de la place des écrans à l'école. Il explique qu'après une période où l'on donnait des tablettes à tous les élèves, certaines écoles reviennent aux livres papier, parce qu'elles pensent que les élèves s'y concentrent mieux. Mais d'autres professeurs estiment que l'école doit préparer au monde numérique. La question qui se pose est donc de savoir s'il faut réduire les écrans en classe.\n\nPersonnellement, je pense qu'il faut les limiter, mais pas les supprimer. D'abord, j'ai l'impression de mieux retenir quand je lis sur papier. Sur une tablette, on reçoit des notifications, on ouvre un autre onglet, et on perd vite sa concentration. En Suède, on a beaucoup débattu de ce sujet ces dernières années, et beaucoup d'écoles ont racheté des manuels papier. Dans mon lycée, la plupart des élèves sont plutôt contents de ce changement.\n\nD'un autre côté, il ne faut pas oublier que les écrans ont de vrais avantages. Prenons l'exemple de la musique : j'utilise un logiciel pour écrire des partitions et un métronome sur mon téléphone. Et pour le français, les exercices en ligne me donnent la correction tout de suite. En plus, dans la vie professionnelle, on travaille presque toujours avec un ordinateur.\n\nÀ mon avis, la meilleure solution serait un équilibre : lire et écrire à la main pour apprendre les bases, et utiliser les écrans pour des tâches précises, avec des règles claires.\n\nPour conclure, je dirais que ce n'est pas l'écran qui pose problème, mais la manière dont on l'utilise.",
+   "modelSv": "Texten handlar om skärmarnas plats i skolan. Den förklarar att efter en period då man gav alla elever surfplattor går vissa skolor nu tillbaka till tryckta böcker, eftersom de tror att eleverna koncentrerar sig bättre då. Men andra lärare anser att skolan måste förbereda för den digitala världen. Frågan är alltså om man ska minska skärmarna i klassrummet.\n\nPersonligen tycker jag att man ska begränsa dem, men inte ta bort dem. För det första har jag intrycket att jag minns bättre när jag läser på papper. På en surfplatta får man notiser, man öppnar en annan flik och tappar snabbt koncentrationen. I Sverige har man diskuterat det här mycket de senaste åren, och många skolor har köpt in tryckta läroböcker igen. På min skola är de flesta elever ganska nöjda med förändringen.\n\nÅ andra sidan får man inte glömma att skärmar har verkliga fördelar. Ta musiken som exempel: jag använder ett program för att skriva noter och en metronom i mobilen. Och i franska ger övningarna på nätet mig rättningen direkt. Dessutom arbetar man nästan alltid med dator i yrkeslivet.\n\nEnligt mig vore den bästa lösningen en balans: att läsa och skriva för hand när man lär sig grunderna, och att använda skärmar för bestämda uppgifter, med tydliga regler.\n\nSammanfattningsvis skulle jag säga att det inte är skärmen som är problemet, utan hur man använder den."
+  },
+  {
+   "id": "fr4-po-4",
+   "part": "po",
+   "teil": "Exercice 3",
+   "title": "Expression d'un point de vue : de l'argent public pour la culture ?",
+   "prep": 10,
+   "time": 6,
+   "instr": "Du har 10 minuter att förbereda dig. Läs texten, ta reda på vilket ämne den tar upp och ge din egen åsikt i ett kort, välordnat anförande (ungefär 3 minuter). Sedan ställer examinatorn några frågor. Presentera ämnet med egna ord, ge 2–3 argument med exempel och avsluta.",
+   "task": "Dégagez le thème soulevé par le document ci-dessous et présentez votre opinion sous la forme d'un petit exposé de 3 minutes environ. L'examinateur pourra vous poser quelques questions.\n\nLa culture, une priorité ?\nDans une ville moyenne de France, le conseil municipal doit faire des économies. Une partie des élus propose de réduire l'aide au théâtre municipal et à l'école de musique, pour financer la rénovation des routes et des terrains de sport. « La culture, c'est important, mais ce n'est pas une priorité quand le budget est serré », explique un conseiller. Les artistes de la ville, eux, protestent : sans aide publique, les billets de spectacle et les cours deviendraient trop chers, et seules les familles aisées pourraient encore en profiter. Une pétition a déjà réuni plusieurs milliers de signatures, et le maire doit prendre sa décision avant la fin du mois.",
+   "phrases": [
+    "Ce document présente un débat sur …",
+    "D'après le document, …",
+    "Pour moi, la réponse est claire : …",
+    "Premièrement, … Deuxièmement, …",
+    "Dans mon pays, …",
+    "Je comprends ceux qui pensent que …, mais …",
+    "On pourrait trouver un compromis : …",
+    "En conclusion, …"
+   ],
+   "model": "Ce document présente un débat dans une ville française qui doit faire des économies. Certains élus veulent réduire l'argent donné au théâtre et à l'école de musique pour rénover les routes et les terrains de sport. Les artistes, eux, ont peur que la culture devienne réservée aux familles riches. Le thème est donc le suivant : est-ce que l'argent public doit financer la culture, même quand le budget est difficile ?\n\nPour moi, la réponse est oui. Premièrement, la culture n'est pas un luxe : un théâtre ou une école de musique crée des liens entre les habitants et donne aux jeunes l'occasion de découvrir leurs talents. Moi, par exemple, je n'aurais jamais commencé le violoncelle sans l'école de musique municipale de ma ville, qui coûtait très peu cher. Dans mon pays, beaucoup de musiciens professionnels ont commencé de cette façon.\n\nDeuxièmement, si les aides disparaissent, les prix vont augmenter, et ce sont les familles modestes qui arrêteront de venir. Ce serait injuste, puisque tout le monde paie des impôts.\n\nBien sûr, je comprends ceux qui pensent que les routes et le sport sont prioritaires. Des routes en mauvais état peuvent être dangereuses, et le sport est bon pour la santé. Mais on pourrait trouver un compromis : réduire un peu toutes les dépenses au lieu de supprimer une grande partie de l'aide à la culture, ou chercher des entreprises prêtes à soutenir le théâtre.\n\nEn conclusion, je pense qu'une ville sans culture serait une ville plus pauvre, même si ses routes étaient parfaites.",
+   "modelSv": "Texten presenterar en debatt i en fransk stad som måste spara pengar. Vissa politiker vill minska bidraget till teatern och musikskolan för att rusta upp vägar och idrottsplatser. Konstnärerna är å sin sida rädda för att kulturen ska bli något bara för rika familjer. Frågan är alltså: ska offentliga pengar finansiera kultur, även när budgeten är ansträngd?\n\nFör mig är svaret ja. För det första är kultur ingen lyx: en teater eller en musikskola skapar band mellan invånarna och ger unga en chans att upptäcka sina talanger. Jag själv hade till exempel aldrig börjat spela cello utan den kommunala musikskolan i min stad, som kostade väldigt lite. I mitt land har många professionella musiker börjat på det sättet.\n\nFör det andra: om bidragen försvinner kommer priserna att gå upp, och då är det familjer med små inkomster som slutar komma. Det vore orättvist, eftersom alla betalar skatt.\n\nJag förstår förstås dem som tycker att vägar och idrott ska gå först. Vägar i dåligt skick kan vara farliga, och idrott är bra för hälsan. Men man skulle kunna hitta en kompromiss: dra ner lite på alla utgifter i stället för att ta bort en stor del av kulturstödet, eller leta efter företag som vill stötta teatern.\n\nSammanfattningsvis tror jag att en stad utan kultur vore en fattigare stad, även om vägarna var perfekta."
+  }
+ ]
+}

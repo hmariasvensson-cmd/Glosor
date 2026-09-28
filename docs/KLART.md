@@ -2,6 +2,16 @@
 
 Punkter som har flyttats från [`BACKLOG.md`](BACKLOG.md) när de byggdes. **Referens** anger backloggens rubrik och prioritet. **Commit** anger var ändringen finns i git. **Publicerat** anger versionen av artefakten på https://claude.ai/artifact/YBQv8j4qXQQLuPwLAWt5mP.
 
+## 2026-09-28, del 3 (publicerat som version 23)
+
+| Referens | Vad som byggdes | Commit |
+|---|---|---|
+| Kurser · P2 *Alla tre språken från steg 1 till steg 7*: **Franska 4** | Ny kurs `fr4` (steg 6, B1, DELF B1), utan lärobok, efter kursmallen: 1 045 ord i 8 kapitel (Études et avenir, Médias, Environnement, Arts et musique, Vivre ailleurs, Histoire et mémoire, Santé et sport, Éthique et francophonie) och 69 fraser för att argumentera, utan ord från Franska 3 eller Escalade. 9 grammatikområden med 268 frågor och regelsidor (subjonctif, si-satser, futur antérieur, lequel/auquel/duquel, indirekt tal, mise en relief, gérondif, passiv, bindeord), 16 hörtexter, 16 lästexter, 8 berättelser, 10 kulturtexter, 24 skrivuppgifter, 45 samtalsfraser, kapitelmål, uttal, 3 verbspel och 15 DELF B1-uppgifter. Egen sparnyckel `glosor-fr4-v1`. | se nedan |
+| Kurser · P2 *Alla tre språken från steg 1 till steg 7*: **Tyska 6** | Ny kurs `de6` (steg 6, B1 → B2, Goethe B2), med samma delar: 1 109 ord (Studium und Bewerbung, Wissenschaft, Politik und Geschichte, Literatur und Epochen, Arbeit, Musik und Bühne, Ethik, Stadt/Land/Migration) och 70 Redemittel, utan ord från Tyska 4 och 5. 10 grammatikområden med 309 frågor (Konjunktiv I och indirekt tal, Konjunktiv II i dåtid, passivomskrivningar, particip som attribut, nominalstil, Nomen-Verb-Verbindungen, genitivprepositioner, modalpartiklar, subjektiva modalverb, textbindning), 16 hörtexter, 14 lästexter, 8 berättelser, 9 kulturtexter, 24 skrivuppgifter (8 i Goethe B2-format), 45 fraser, kapitelmål, uttal, 3 verbspel och 15 Goethe B2-uppgifter. Tyska 5 föreslår Tyska 6 när den är klar. Egen sparnyckel `glosor-de6-v1`. | se nedan |
+| Önskemål från föräldern: *granska övningarna* | En genomgång av alla cirka 20 övningar mot forskningen om inlärning. Förslagen står i BACKLOG.md under "Färre men mer värdefulla övningar" och väntar på förälderns svar. | – |
+
+Italienska 3 står nu som kommande kurs. "Hitta felet" hoppar över tempusbyten i franskt indirekt tal, eftersom de går att försvara i talspråk. Testerna har 185 kontroller.
+
 ## 2026-09-28, del 2 (publicerat som version 22)
 
 | Referens | Vad som byggdes | Commit |

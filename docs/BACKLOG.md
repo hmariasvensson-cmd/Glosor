@@ -8,6 +8,20 @@ Underlag finns i `docs/ovningsforslag.md` (franska), `docs/ovningsforslag-tyska.
 
 - **Löpande (prioriteras först):** läs nya meddelanden i `feedback/` (ArtifactData, `status: "ny"`), för in önskemålen här, och sätt `status` och `reply` i dokumentet så att eleven ser vad som hände (se CLAUDE.md). Elevernas önskemål går före annat i backloggen.
 
+## Färre men mer värdefulla övningar (granskning 2026-09-28)
+
+Föräldern: "Vi vill inte ha för många övningar men vi vill ha övningar som är så värdefulla som möjligt." Granskningen jämförde alla cirka 20 övningar med forskningen om inlärning (testeffekt, utspridd repetition, egen produktion, begriplig input, återkoppling). Slutsats: Dagens pass är nästan bara drill, lyssning, läsning, tal och skrivande ingår inte, och flera övningar gör samma sak med samma meningar.
+
+- **P1: Dagens pass som ett enda flöde:** glosor 6–7 min, fraser och meningar 3, grammatik 3 (tyska även der/die/das), hör- eller lästext varannan dag 4–5, tal 1–2. Klart först när allt är gjort. Provdatum i inställningarna ändrar viktningen (fler provuppgifter och färre nya ord närmare provet, inga nya ord de sista två veckorna). `dailyPanel`, `startDaily`, `startMix`, `finishSession`.
+- **P1: Tyska: dölj genus i skrivfrågan** (`TYPE.words` visar "(maskulinum)"), så att eleven själv måste minnas der/die/das. Visa genus efter svaret.
+- **P2: Ny övning Tala:** diktering med tangentbordets mikrofon i ett textfält, Claude kommenterar, timer för 4/3/2 med ämnen från proven. Skugga flyttas hit. Återanvänd `examText`/`examPrompt`.
+- **P2: Färre menyval (cirka 20 → 11):** Meningar, Diktamen och Översätt blir en övning som går från lucka till översättning till diktamen. Ordföljd tas bort som egen övning (behövs kvar för grammatikens `rw`-frågor). Verbspelen blir ett. Kultur in i Läsa, Berättelser in i Grammatik, Uttal göms under Tala. **Fråga föräldern innan något tas bort.**
+- **P2: Ordning på nya ord:** vanligaste orden först, musikteoriorden bara när eleven väljer dem (i dag i samma kö som vardagsorden), franskan får ett avsnitt med vanliga ord. `pickNew`.
+- **P2: Bara skrivna svar gör att ett ord räknas som "kan"**; flerval räcker till steg 2. `applyAnswer`, `schedule`.
+- **P2: Slå ihop Skriv en text och provets skrivuppgifter** med samma bedömning av Claude, med påminnelse en gång i veckan.
+- **P3: Äkta ljud:** veckans tips med nyheter i långsam takt (RFI Journal en français facile, DW Langsam gesprochene Nachrichten) att läsa medan man lyssnar.
+- **P3: Tidsbaserad repetition även i fraser, meningar och grammatik** (i dag bara "svagast först").
+
 ## Språkprov (det verkliga målet)
 
 - **P2: Musikteori i fler kurser och granskning:** musikteoriord och teoriprov finns i Franska 3 och Tyska 5. Termer att kontrollera med en musiklärare: franska omvändningsnamn (sixte sensible, accord de triton), cadence parfaite/imparfaite, tyska Gegenklang och verkürzter Dominantseptakkord. Tyska 4 kan få en lättare variant. Fler uppgifter finns i generatorn (57 tyska till).
@@ -61,12 +75,13 @@ Emma pluggar på egen hand, utan kurs, lärare och lärobok. Tyskan bygger därf
 - **P1: Fler sidor ur Escalade.** Inlagda: s. 8–69, 98–131, 148–153, 182–191 och minigrammatiken s. 196–199 och 202–237 (se `languages/fr/book/sidor.json`). Saknas: s. 70–97, 132–147, 154–181, 192–195 och 200–201. Fota också om s. 101, där högerkanten saknas. Kapitelnumret för s. 148–153 (antaget kap 10) och s. 182–191 och titeln på kap 6 behöver bekräftas.
 - **P2: Säkerhetskopiera bokmappen** till ett privat repo på GitHub (`languages/fr/book/` är redan ett eget lokalt git-repo). Kräver att föräldern godkänner att ett privat repo skapas.
 - **P3: Välja bok per elev**, om flera elever med olika böcker ska använda samma kurs.
-- **P2: Alla tre språken från steg 1 till steg 7** (franska, tyska och italienska, Moderna språk 1–7). I dag finns Franska 3, Tyska 4 och 5 och Italienska 1 och 2. Det saknas Franska 1, 2 och 4–7, Tyska 1–3, 6 och 7, och Italienska 3–7, alltså 15 kurser.
-  - Varje kurs får en egen mapp i `languages/` och en egen `storageKey`. Bygg efter kursmallen (punkten ovan) och Skolverkets centrala innehåll för steget. Nivån ungefär enligt Skolverket: steg 1 A1.1, 2 A1.2, 3 A2.1, 4 A2.2, 5 B1.1, 6 B1.2, 7 B2.1. Stäm av nivåerna som redan står i Tyska 4 (B1) och Tyska 5 (mot B2) mot detta.
-  - Varje kurs ska bygga vidare på den förra utan att orden överlappar (som Italienska 2 och 1), och ha `nextCourse` till nästa steg.
-  - Ordning: först kurserna närmast eleverna, alltså Franska 4 (efter Franska 3) och Tyska 6 (efter Tyska 5). Därefter Italienska 3, sedan de lägre stegen (1–2 i franska, 1–3 i tyska) och sist steg 7.
-  - Lägg de kommande kurserna i `languages/upcoming.json`, så att de syns som "kommer" i kursväljaren.
+- **P2: Alla tre språken från steg 1 till steg 7** (franska, tyska och italienska, Moderna språk 1–7). I dag finns Franska 3 och 4, Tyska 4, 5 och 6 och Italienska 1 och 2. Det saknas Franska 1, 2 och 5–7, Tyska 1–3 och 7, och Italienska 3–7, alltså 13 kurser.
+  - Varje kurs får en egen mapp i `languages/` och en egen `storageKey`. Bygg efter kursmallen (`docs/kursmall.md`) och Skolverkets centrala innehåll för steget. Nivån ungefär enligt Skolverket: steg 1 A1.1, 2 A1.2, 3 A2.1, 4 A2.2, 5 B1.1, 6 B1.2, 7 B2.1.
+  - Varje kurs ska bygga vidare på den förra utan att orden överlappar, och ha `nextCourse` till nästa steg.
+  - Ordning: Italienska 3 (står som kommande i `languages/upcoming.json`), sedan de lägre stegen (1–2 i franska, 1–3 i tyska) och sist steg 7 och Franska 5.
+  - Arbetssätt som fungerade för Franska 4 och Tyska 6: glosorna i två halvor av två agenter (med dubblettkontroll mot tidigare kurser och mot varandra), allt övrigt innehåll av en tredje. Modelltexterna i skrivuppgifterna ska skrivas **efter** ordlistan, annars saknar de kapitelord.
   - Innehållet är AI-skrivet och behöver granskas med stickprov, som de andra kurserna.
+- **P2: Franska 4 och Tyska 6: granskning och videor.** Båda kurserna (2026-09-28) är AI-skrivna och har inga videor (`videos.json` är tom). Kontrollera särskilt uttalsparen cote/côte och Paul/pôle (fr4) och wanke/zanke, Suhle/Kuhle (de6) med en riktig röst, modalpartiklarna i Hitta felet (de6) och faktauppgifterna i kultur- och historietexterna. Franska 4 har musikteori bara i Franska 3; Tyska 6 har den bara i Tyska 5.
 
 ## Konton, sparande och topplista
 

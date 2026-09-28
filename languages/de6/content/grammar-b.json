@@ -1,0 +1,2240 @@
+[
+ {
+  "id": "nvv-001",
+  "topic": "nvv",
+  "rule": "nvv-verb",
+  "q": "Nach langem Überlegen hat Lena endlich eine Entscheidung [getroffen]: Sie bewirbt sich in Leipzig.",
+  "alt": [
+   "genommen",
+   "gestellt",
+   "gegeben"
+  ],
+  "why": "Det fasta uttrycket är eine Entscheidung treffen (fatta ett beslut). Svenskans \"ta ett beslut\" lockar till nehmen, men det går inte på tyska.",
+  "sv": "Efter lång betänketid har Lena äntligen fattat ett beslut: hon söker till Leipzig."
+ },
+ {
+  "id": "nvv-002",
+  "topic": "nvv",
+  "rule": "nvv-verb",
+  "q": "Die Opposition hat im Bundestag scharfe Kritik am neuen Gesetz [geübt].",
+  "alt": [
+   "getroffen",
+   "gestellt",
+   "genommen"
+  ],
+  "why": "Kritik üben an + dativ = kritisera, ett formellt uttryck. Kritik kan inte treffen, stellen eller nehmen.",
+  "sv": "Oppositionen riktade skarp kritik mot den nya lagen i förbundsdagen."
+ },
+ {
+  "id": "nvv-003",
+  "topic": "nvv",
+  "rule": "nvv-verb",
+  "q": "Mit ihrer Forschung hat die Ärztin einen wichtigen Beitrag zur Krebstherapie [geleistet].",
+  "alt": [
+   "getroffen",
+   "gehalten",
+   "gestellt"
+  ],
+  "why": "Einen Beitrag leisten = bidra, lämna ett bidrag. De andra verben passar inte ihop med Beitrag.",
+  "sv": "Med sin forskning har läkaren gjort ett viktigt bidrag till cancerbehandlingen."
+ },
+ {
+  "id": "nvv-004",
+  "topic": "nvv",
+  "rule": "nvv-verb",
+  "q": "In einem Orchester muss man immer Rücksicht auf die anderen Musiker [nehmen].",
+  "alt": [
+   "geben",
+   "machen",
+   "halten"
+  ],
+  "why": "Rücksicht nehmen auf + ackusativ = ta hänsyn till. Här stämmer svenskans \"ta\" för en gångs skull.",
+  "sv": "I en orkester måste man alltid ta hänsyn till de andra musikerna."
+ },
+ {
+  "id": "nvv-005",
+  "topic": "nvv",
+  "rule": "nvv-verb",
+  "q": "Viele Studierende [nehmen] die kostenlose Studienberatung der Hochschule in Anspruch.",
+  "alt": [
+   "bringen",
+   "stellen",
+   "setzen"
+  ],
+  "why": "Etwas in Anspruch nehmen = utnyttja, använda sig av (en tjänst). Uttrycket fungerar bara med nehmen.",
+  "sv": "Många studenter utnyttjar högskolans kostnadsfria studievägledning."
+ },
+ {
+  "id": "nvv-006",
+  "topic": "nvv",
+  "rule": "nvv-verb",
+  "q": "In der Teambesprechung hat Tobias endlich das Problem mit den Überstunden zur Sprache [gebracht].",
+  "alt": [
+   "gestellt",
+   "genommen",
+   "gesetzt"
+  ],
+  "why": "Etwas zur Sprache bringen = ta upp något till diskussion. Bringen hör ihop med zur Sprache; stellen och setzen gör det inte.",
+  "sv": "På teammötet tog Tobias äntligen upp problemet med övertiden."
+ },
+ {
+  "id": "nvv-007",
+  "topic": "nvv",
+  "rule": "nvv-verb",
+  "q": "Darf ich Ihnen noch eine Frage zu den Aufnahmebedingungen [stellen]?",
+  "alt": [
+   "fragen",
+   "machen",
+   "geben"
+  ],
+  "why": "Eine Frage stellen = ställa en fråga. Fragen kan inte ha Frage som objekt (dubbelt), och machen/geben är fel verb.",
+  "sv": "Får jag ställa en fråga till om antagningsvillkoren?"
+ },
+ {
+  "id": "nvv-008",
+  "topic": "nvv",
+  "rule": "nvv-verb",
+  "q": "Die Regierung will noch in diesem Jahr Maßnahmen gegen die Wohnungsnot [ergreifen].",
+  "acc": [
+   "treffen"
+  ],
+  "alt": [
+   "nehmen",
+   "stellen",
+   "greifen"
+  ],
+  "why": "Maßnahmen ergreifen (eller treffen) = vidta åtgärder. Greifen utan er- är fel verb, och nehmen/stellen passar inte.",
+  "sv": "Regeringen vill redan i år vidta åtgärder mot bostadsbristen."
+ },
+ {
+  "id": "nvv-009",
+  "topic": "nvv",
+  "rule": "nvv-verb",
+  "q": "Nach dem Konzert in Wien hat die Geigerin den Entschluss [gefasst], nach Österreich zu ziehen.",
+  "alt": [
+   "gemacht",
+   "gestellt",
+   "genommen"
+  ],
+  "why": "Einen Entschluss fassen = bestämma sig, fatta ett beslut. Entschluss går ihop med fassen, Entscheidung med treffen.",
+  "sv": "Efter konserten i Wien bestämde sig violinisten för att flytta till Österrike."
+ },
+ {
+  "id": "nvv-010",
+  "topic": "nvv",
+  "rule": "nvv-verb",
+  "q": "Die Musikhochschule [stellt] sehr hohe Anforderungen an ihre Bewerberinnen und Bewerber.",
+  "alt": [
+   "macht",
+   "nimmt",
+   "trifft"
+  ],
+  "why": "Anforderungen stellen an + ackusativ = ställa krav på. Samma verb som i eine Frage stellen.",
+  "sv": "Musikhögskolan ställer mycket höga krav på sina sökande."
+ },
+ {
+  "id": "nvv-011",
+  "topic": "nvv",
+  "rule": "nvv-verb",
+  "q": "Wer ein Stipendium möchte, muss bis Ende März einen Antrag [stellen].",
+  "alt": [
+   "geben",
+   "treffen",
+   "nehmen"
+  ],
+  "why": "Einen Antrag stellen = lämna in en ansökan. Det är standarduttrycket i formella texter.",
+  "sv": "Den som vill ha ett stipendium måste lämna in en ansökan före slutet av mars."
+ },
+ {
+  "id": "nvv-012",
+  "topic": "nvv",
+  "rule": "nvv-verb",
+  "q": "In einem Interview hat die Ministerin zu den Vorwürfen Stellung [genommen].",
+  "alt": [
+   "gegeben",
+   "gemacht",
+   "gestellt"
+  ],
+  "why": "Stellung nehmen zu = uttala sig om, kommentera. Trots att ordet är Stellung heter verbet nehmen, inte stellen.",
+  "sv": "I en intervju kommenterade ministern anklagelserna."
+ },
+ {
+  "id": "nvv-013",
+  "topic": "nvv",
+  "rule": "nvv-prep",
+  "q": "Für die Rolle der Carmen kommen nur noch zwei Sängerinnen [in] Frage.",
+  "alt": [
+   "zur",
+   "auf",
+   "unter"
+  ],
+  "why": "In Frage kommen (även infrage kommen) = komma i fråga, vara aktuell. Uttrycket har in utan artikel.",
+  "sv": "För rollen som Carmen är bara två sångerskor fortfarande aktuella."
+ },
+ {
+  "id": "nvv-014",
+  "topic": "nvv",
+  "rule": "nvv-prep",
+  "q": "Den Studierenden stehen im neuen Gebäude zwanzig Übungsräume [zur] Verfügung.",
+  "alt": [
+   "in der",
+   "zu",
+   "unter"
+  ],
+  "why": "Zur Verfügung stehen = finnas tillgänglig. Uttrycket har alltid zur (zu + der), aldrig in.",
+  "sv": "I den nya byggnaden finns tjugo övningsrum tillgängliga för studenterna."
+ },
+ {
+  "id": "nvv-015",
+  "topic": "nvv",
+  "rule": "nvv-prep",
+  "q": "Für den Traumjob in Hamburg nimmt Mehmet auch einen langen Arbeitsweg [in] Kauf.",
+  "alt": [
+   "zum",
+   "auf",
+   "im"
+  ],
+  "why": "Etwas in Kauf nehmen = acceptera en nackdel, ta med i beräkningen. In utan artikel.",
+  "sv": "För drömjobbet i Hamburg accepterar Mehmet även en lång väg till jobbet."
+ },
+ {
+  "id": "nvv-016",
+  "topic": "nvv",
+  "rule": "nvv-prep",
+  "q": "Mit einem Warnstreik will die Gewerkschaft die Arbeitgeber [unter] Druck setzen.",
+  "alt": [
+   "in",
+   "auf",
+   "zum"
+  ],
+  "why": "Jemanden unter Druck setzen = sätta press på någon. Precis som svenskan \"under press\" används unter.",
+  "sv": "Med en varningsstrejk vill facket sätta press på arbetsgivarna."
+ },
+ {
+  "id": "nvv-017",
+  "topic": "nvv",
+  "rule": "nvv-prep",
+  "q": "In ihren Gedichten bringt die Autorin ihre Sehnsucht nach der Heimat [zum] Ausdruck.",
+  "alt": [
+   "in",
+   "zur",
+   "im"
+  ],
+  "why": "Etwas zum Ausdruck bringen = uttrycka något. Ausdruck är maskulinum, därför zum (zu + dem), inte zur.",
+  "sv": "I sina dikter uttrycker författaren sin längtan efter hemlandet."
+ },
+ {
+  "id": "nvv-018",
+  "topic": "nvv",
+  "rule": "nvv-prep",
+  "q": "Bei der Auswahl ziehen wir auch Bewerber ohne Abitur [in] Betracht.",
+  "alt": [
+   "zur",
+   "auf",
+   "im"
+  ],
+  "why": "Etwas in Betracht ziehen = ta i beaktande, överväga. In utan artikel.",
+  "sv": "Vid urvalet tar vi även hänsyn till sökande utan studentexamen."
+ },
+ {
+  "id": "nvv-019",
+  "topic": "nvv",
+  "rule": "nvv-prep",
+  "q": "Der Vorschlag der Ministerin ist bei vielen Lehrkräften [auf] heftige Kritik gestoßen.",
+  "alt": [
+   "in",
+   "zu",
+   "unter"
+  ],
+  "why": "Auf Kritik (Widerstand, Ablehnung) stoßen = möta kritik. Stoßen auf styr ackusativ.",
+  "sv": "Ministerns förslag har mött hård kritik från många lärare."
+ },
+ {
+  "id": "nvv-020",
+  "topic": "nvv",
+  "rule": "nvv-prep",
+  "q": "Die Hochschule hat alle Bewerber davon [in] Kenntnis gesetzt, dass sich die Frist verschiebt.",
+  "alt": [
+   "zur",
+   "auf",
+   "unter"
+  ],
+  "why": "Jemanden von etwas in Kenntnis setzen = underrätta någon om något, mycket formellt. In utan artikel.",
+  "sv": "Högskolan har underrättat alla sökande om att tidsfristen skjuts upp."
+ },
+ {
+  "id": "nvv-021",
+  "topic": "nvv",
+  "rule": "nvv-prep",
+  "q": "Die Ergebnisse der neuen Studie stehen [im] Widerspruch zu früheren Untersuchungen.",
+  "acc": [
+   "in"
+  ],
+  "alt": [
+   "zum",
+   "unter",
+   "auf"
+  ],
+  "why": "Im Widerspruch (eller in Widerspruch) stehen zu = stå i strid med. Zum och unter passar inte i uttrycket.",
+  "sv": "Resultaten från den nya studien strider mot tidigare undersökningar."
+ },
+ {
+  "id": "nvv-022",
+  "topic": "nvv",
+  "rule": "nvv-prep",
+  "q": "Im Januar 1933 kamen die Nationalsozialisten in Deutschland [an] die Macht.",
+  "alt": [
+   "in",
+   "auf",
+   "unter"
+  ],
+  "why": "An die Macht kommen = komma till makten. Tyskan använder an + ackusativ, inte in.",
+  "sv": "I januari 1933 kom nazisterna till makten i Tyskland."
+ },
+ {
+  "id": "nvv-023",
+  "topic": "nvv",
+  "rule": "nvv-passiv",
+  "q": "Der neue Lehrplan für den Musikunterricht [steht] zurzeit zur Diskussion.",
+  "alt": [
+   "stellt",
+   "bringt",
+   "setzt"
+  ],
+  "why": "Zur Diskussion stehen = diskuteras (passiv betydelse, inget objekt). Zur Diskussion stellen betyder att någon tar upp något och kräver ett objekt.",
+  "sv": "Den nya läroplanen för musikundervisningen diskuteras just nu."
+ },
+ {
+  "id": "nvv-024",
+  "topic": "nvv",
+  "rule": "nvv-passiv",
+  "q": "Der Bürgermeister hat die Pläne für das neue Stadion zur Diskussion [gestellt].",
+  "alt": [
+   "gestanden",
+   "gefunden",
+   "getreten"
+  ],
+  "why": "Här finns ett subjekt som gör något med ett objekt (die Pläne): etwas zur Diskussion stellen. Zur Diskussion stehen är passivt och har inget objekt.",
+  "sv": "Borgmästaren har lagt fram planerna för den nya arenan för diskussion."
+ },
+ {
+  "id": "nvv-025",
+  "topic": "nvv",
+  "rule": "nvv-passiv",
+  "q": "Diese Methode [findet] heute auch in der Musiktherapie Anwendung.",
+  "alt": [
+   "nimmt",
+   "kommt",
+   "steht"
+  ],
+  "why": "Anwendung finden = användas (passiv betydelse). Det är mer formellt än wird angewendet.",
+  "sv": "Den här metoden används i dag även inom musikterapin."
+ },
+ {
+  "id": "nvv-026",
+  "topic": "nvv",
+  "rule": "nvv-passiv",
+  "q": "Der Vorschlag der Studierenden hat bei der Hochschulleitung breite Zustimmung [gefunden].",
+  "alt": [
+   "gegeben",
+   "getroffen",
+   "gestellt"
+  ],
+  "why": "Zustimmung finden = få stöd, godkännas. Finden i dessa uttryck ger passiv betydelse.",
+  "sv": "Studenternas förslag fick brett stöd hos högskoleledningen."
+ },
+ {
+  "id": "nvv-027",
+  "topic": "nvv",
+  "rule": "nvv-passiv",
+  "q": "Das Grundgesetz der Bundesrepublik [trat] am 24. Mai 1949 in Kraft.",
+  "alt": [
+   "kam",
+   "ging",
+   "stand"
+  ],
+  "why": "In Kraft treten = träda i kraft. Här stämmer svenskan: treten = träda.",
+  "sv": "Förbundsrepublikens grundlag trädde i kraft den 24 maj 1949."
+ },
+ {
+  "id": "nvv-028",
+  "topic": "nvv",
+  "rule": "nvv-passiv",
+  "q": "Die neue Oper des jungen Komponisten [kommt] im Herbst zum ersten Mal zur Aufführung.",
+  "alt": [
+   "steht",
+   "bringt",
+   "findet"
+  ],
+  "why": "Zur Aufführung kommen = uppföras (passiv betydelse). Zur Aufführung bringen betyder att någon sätter upp verket och kräver ett objekt.",
+  "sv": "Den unge tonsättarens nya opera uppförs för första gången i höst."
+ },
+ {
+  "id": "nvv-029",
+  "topic": "nvv",
+  "rule": "nvv-passiv",
+  "q": "Die Arbeit des Jugendorchesters [fand] in der Presse große Beachtung.",
+  "alt": [
+   "nahm",
+   "stand",
+   "kam"
+  ],
+  "why": "Beachtung finden = uppmärksammas. Precis som Anwendung finden och Zustimmung finden.",
+  "sv": "Ungdomsorkesterns arbete uppmärksammades stort i pressen."
+ },
+ {
+  "id": "nvv-030",
+  "topic": "nvv",
+  "rule": "nvv-passiv",
+  "q": "Nach dem Skandal [geriet] der Minister immer stärker unter Druck.",
+  "alt": [
+   "setzte",
+   "stellte",
+   "legte"
+  ],
+  "why": "Unter Druck geraten = hamna under press (passiv betydelse). Unter Druck setzen kräver ett objekt: jemanden unter Druck setzen.",
+  "sv": "Efter skandalen hamnade ministern under allt större press."
+ },
+ {
+  "id": "genprep-001",
+  "topic": "genprep",
+  "rule": "gp-grund",
+  "q": "[Aufgrund] der hohen Mieten ziehen immer mehr junge Familien aufs Land.",
+  "acc": [
+   "Wegen",
+   "Infolge"
+  ],
+  "alt": [
+   "Anstelle",
+   "Außerhalb",
+   "Zugunsten"
+  ],
+  "why": "Aufgrund (på grund av) anger orsaken och styr genitiv. Wegen och infolge betyder samma sak här. De andra prepositionerna ger ingen mening.",
+  "sv": "På grund av de höga hyrorna flyttar allt fler unga familjer ut på landet."
+ },
+ {
+  "id": "genprep-002",
+  "topic": "genprep",
+  "rule": "gp-grund",
+  "q": "Angesichts [der Klimakrise] fordern viele Jugendliche eine mutigere Politik.",
+  "alt": [
+   "die Klimakrise",
+   "des Klimakrise",
+   "der Klimakrises"
+  ],
+  "why": "Angesichts (med tanke på, inför) styr genitiv. Die Klimakrise är femininum: der, och feminina ord får aldrig -s.",
+  "sv": "Med tanke på klimatkrisen kräver många ungdomar en modigare politik."
+ },
+ {
+  "id": "genprep-003",
+  "topic": "genprep",
+  "rule": "gp-grund",
+  "q": "Infolge [des Krieges] mussten Millionen Menschen ihre Heimat verlassen.",
+  "acc": [
+   "des Kriegs"
+  ],
+  "alt": [
+   "der Krieg",
+   "des Krieg",
+   "den Krieges"
+  ],
+  "why": "Infolge (till följd av) styr genitiv. Der Krieg är maskulinum: des och -es eller -s på substantivet.",
+  "sv": "Till följd av kriget var miljontals människor tvungna att lämna sitt hemland."
+ },
+ {
+  "id": "genprep-004",
+  "topic": "genprep",
+  "rule": "gp-grund",
+  "q": "Das Forschungsprojekt wurde [mangels] finanzieller Mittel eingestellt.",
+  "alt": [
+   "anhand",
+   "zugunsten",
+   "innerhalb"
+  ],
+  "why": "Mangels (i brist på) styr genitiv och står ofta utan artikel. De andra prepositionerna ger fel betydelse.",
+  "sv": "Forskningsprojektet lades ned i brist på pengar."
+ },
+ {
+  "id": "genprep-005",
+  "topic": "genprep",
+  "rule": "gp-grund",
+  "q": "[Angesichts] der vielen Bewerbungen braucht die Jury mehr Zeit für die Auswahl.",
+  "acc": [
+   "Aufgrund",
+   "Wegen"
+  ],
+  "alt": [
+   "Anstatt",
+   "Außerhalb",
+   "Mangels"
+  ],
+  "why": "Angesichts = med tanke på, anger skälet. Aufgrund och wegen går också. Mangels betyder \"i brist på\" och blir motsatsen.",
+  "sv": "Med tanke på alla ansökningar behöver juryn mer tid för urvalet."
+ },
+ {
+  "id": "genprep-006",
+  "topic": "genprep",
+  "rule": "gp-grund",
+  "q": "Wegen [eines Streiks] bei der Bahn kam der Geiger zu spät zur Probe.",
+  "alt": [
+   "ein Streik",
+   "eines Streik",
+   "einen Streiks"
+  ],
+  "why": "Wegen styr genitiv i skrift. Der Streik är maskulinum: eines + -s på substantivet.",
+  "sv": "På grund av en tågstrejk kom violinisten för sent till repetitionen."
+ },
+ {
+  "id": "genprep-007",
+  "topic": "genprep",
+  "rule": "gp-grund",
+  "q": "Infolge [der Digitalisierung] verändern sich viele Berufe grundlegend.",
+  "alt": [
+   "die Digitalisierung",
+   "des Digitalisierung",
+   "der Digitalisierungs"
+  ],
+  "why": "Infolge styr genitiv. Die Digitalisierung är femininum (alla ord på -ung): der, utan -s.",
+  "sv": "Till följd av digitaliseringen förändras många yrken i grunden."
+ },
+ {
+  "id": "genprep-008",
+  "topic": "genprep",
+  "rule": "gp-grund",
+  "q": "Der Pianist musste die Tournee [infolge] einer Verletzung an der Hand absagen.",
+  "acc": [
+   "aufgrund",
+   "wegen"
+  ],
+  "alt": [
+   "trotz",
+   "anstelle",
+   "zugunsten"
+  ],
+  "why": "Skadan är orsaken: infolge, aufgrund och wegen går. Trotz ger motsatt betydelse (trots en skada ställa in?).",
+  "sv": "Pianisten var tvungen att ställa in turnén på grund av en handskada."
+ },
+ {
+  "id": "genprep-009",
+  "topic": "genprep",
+  "rule": "gp-gegen",
+  "q": "Trotz [des Lärms] auf der Baustelle konnte Hanna in ihrem Zimmer ungestört üben.",
+  "acc": [
+   "des Lärmes"
+  ],
+  "alt": [
+   "der Lärm",
+   "des Lärm",
+   "den Lärms"
+  ],
+  "why": "Trotz styr genitiv i skrift. Der Lärm är maskulinum: des + -s (eller -es).",
+  "sv": "Trots bullret från bygget kunde Hanna öva ostört på sitt rum."
+ },
+ {
+  "id": "genprep-010",
+  "topic": "genprep",
+  "rule": "gp-gegen",
+  "q": "[Ungeachtet] der Proteste hat die Regierung das umstrittene Gesetz beschlossen.",
+  "acc": [
+   "Trotz"
+  ],
+  "alt": [
+   "Mangels",
+   "Innerhalb",
+   "Mithilfe"
+  ],
+  "why": "Ungeachtet = utan hänsyn till, trots. Det är formellare än trotz, som också går här. Mangels och mithilfe ger ingen mening.",
+  "sv": "Trots protesterna har regeringen antagit den omstridda lagen."
+ },
+ {
+  "id": "genprep-011",
+  "topic": "genprep",
+  "rule": "gp-gegen",
+  "q": "Statt [eines Vorstellungsgesprächs] gibt es an der Musikhochschule eine praktische Aufnahmeprüfung.",
+  "alt": [
+   "ein Vorstellungsgespräch",
+   "eines Vorstellungsgespräch",
+   "einer Vorstellungsgesprächs"
+  ],
+  "why": "Statt (i stället för) styr genitiv. Das Gespräch är neutrum: eines + -s.",
+  "sv": "I stället för en anställningsintervju har musikhögskolan ett praktiskt antagningsprov."
+ },
+ {
+  "id": "genprep-012",
+  "topic": "genprep",
+  "rule": "gp-gegen",
+  "q": "Ungeachtet [ihres Alters] ist die Sängerin noch einmal auf große Tournee gegangen.",
+  "alt": [
+   "ihr Alter",
+   "ihres Alter",
+   "ihrer Alters"
+  ],
+  "why": "Ungeachtet styr genitiv. Das Alter är neutrum: ihres + -s.",
+  "sv": "Trots sin ålder har sångerskan gett sig ut på en stor turné en gång till."
+ },
+ {
+  "id": "genprep-013",
+  "topic": "genprep",
+  "rule": "gp-gegen",
+  "q": "[Anstelle] des erkrankten Dirigenten leitete seine Assistentin das Konzert.",
+  "acc": [
+   "Statt",
+   "Anstatt"
+  ],
+  "alt": [
+   "Trotz",
+   "Innerhalb",
+   "Hinsichtlich"
+  ],
+  "why": "Anstelle = i stället för; statt och anstatt betyder samma sak. Trotz och hinsichtlich ger fel betydelse.",
+  "sv": "I stället för den sjuke dirigenten ledde hans assistent konserten."
+ },
+ {
+  "id": "genprep-014",
+  "topic": "genprep",
+  "rule": "gp-gegen",
+  "q": "Trotz [aller Bemühungen] fand Mehmet in München keine bezahlbare Wohnung.",
+  "alt": [
+   "alle Bemühungen",
+   "alles Bemühungen",
+   "alle Bemühung"
+  ],
+  "why": "Trotz styr genitiv. I plural är genitiv aller (som der), och Bemühungen står i plural.",
+  "sv": "Trots alla ansträngningar hittade Mehmet ingen lägenhet han hade råd med i München."
+ },
+ {
+  "id": "genprep-015",
+  "topic": "genprep",
+  "rule": "gp-gegen",
+  "q": "[Trotz] seiner großen Erfolge blieb der Komponist sein Leben lang bescheiden.",
+  "acc": [
+   "Ungeachtet"
+  ],
+  "alt": [
+   "Mangels",
+   "Anhand",
+   "Infolge"
+  ],
+  "why": "Framgångarna borde göra honom stöddig, men han förblev blygsam: trotz (eller ungeachtet). Infolge skulle betyda att framgångarna var orsaken.",
+  "sv": "Trots sina stora framgångar förblev tonsättaren anspråkslös hela livet."
+ },
+ {
+  "id": "genprep-016",
+  "topic": "genprep",
+  "rule": "gp-raum",
+  "q": "Das Ergebnis der Aufnahmeprüfung erhalten Sie innerhalb [einer Woche].",
+  "alt": [
+   "eine Woche",
+   "eines Woche",
+   "einen Woche"
+  ],
+  "why": "Innerhalb (inom) styr genitiv. Die Woche är femininum: einer.",
+  "sv": "Resultatet av antagningsprovet får ni inom en vecka."
+ },
+ {
+  "id": "genprep-017",
+  "topic": "genprep",
+  "rule": "gp-raum",
+  "q": "Auf dem Land braucht man ein Auto: [Außerhalb] der Stadt fährt abends kaum noch ein Bus.",
+  "alt": [
+   "Anlässlich",
+   "Hinsichtlich",
+   "Seitens"
+  ],
+  "why": "Außerhalb = utanför, plats. Anlässlich, hinsichtlich och seitens handlar inte om plats.",
+  "sv": "På landet behöver man bil: utanför stan går det knappt några bussar på kvällen."
+ },
+ {
+  "id": "genprep-018",
+  "topic": "genprep",
+  "rule": "gp-raum",
+  "q": "Die alte Burg liegt [oberhalb] des Dorfes auf einem Hügel.",
+  "alt": [
+   "während",
+   "angesichts",
+   "anhand"
+  ],
+  "why": "Oberhalb = ovanför, plats. Während gäller tid, och angesichts och anhand ger ingen mening här.",
+  "sv": "Den gamla borgen ligger ovanför byn på en kulle."
+ },
+ {
+  "id": "genprep-019",
+  "topic": "genprep",
+  "rule": "gp-raum",
+  "q": "Das Musikfestival findet jedes Jahr [unweit] der polnischen Grenze statt.",
+  "acc": [
+   "nahe"
+  ],
+  "alt": [
+   "während",
+   "trotz",
+   "mangels"
+  ],
+  "why": "Unweit = inte långt från, nära. Nahe går också. Während, trotz och mangels handlar inte om plats.",
+  "sv": "Musikfestivalen äger rum varje år inte långt från den polska gränsen."
+ },
+ {
+  "id": "genprep-020",
+  "topic": "genprep",
+  "rule": "gp-raum",
+  "q": "Während [des Studiums] hat Jonas abends in einer Bar Klavier gespielt.",
+  "alt": [
+   "das Studium",
+   "des Studium",
+   "der Studiums"
+  ],
+  "why": "Während (under) styr genitiv. Das Studium är neutrum: des + -s.",
+  "sv": "Under studietiden spelade Jonas piano på en bar på kvällarna."
+ },
+ {
+  "id": "genprep-021",
+  "topic": "genprep",
+  "rule": "gp-raum",
+  "q": "Innerhalb [der Europäischen Union] können Studierende ohne Visum an einer anderen Hochschule studieren.",
+  "alt": [
+   "die Europäische Union",
+   "des Europäischen Union",
+   "der Europäische Union"
+  ],
+  "why": "Innerhalb styr genitiv. Die Union är femininum: der, och adjektivet får -en efter artikeln i genitiv.",
+  "sv": "Inom EU kan studenter studera vid en annan högskola utan visum."
+ },
+ {
+  "id": "genprep-022",
+  "topic": "genprep",
+  "rule": "gp-raum",
+  "q": "Außerhalb [der Probenzeiten] ist das Gebäude für Besucher geschlossen.",
+  "alt": [
+   "die Probenzeiten",
+   "des Probenzeiten",
+   "das Probenzeiten"
+  ],
+  "why": "Außerhalb styr genitiv. I plural är genitivartikeln der.",
+  "sv": "Utanför repetitionstiderna är byggnaden stängd för besökare."
+ },
+ {
+  "id": "genprep-023",
+  "topic": "genprep",
+  "rule": "gp-raum",
+  "q": "[Während] der Weimarer Republik erlebte Berlin eine kulturelle Blütezeit.",
+  "alt": [
+   "Anstatt",
+   "Mangels",
+   "Unweit"
+  ],
+  "why": "Während = under (en tidsperiod). Anstatt, mangels och unweit ger ingen mening med en epok.",
+  "sv": "Under Weimarrepubliken upplevde Berlin en kulturell blomstringstid."
+ },
+ {
+  "id": "genprep-024",
+  "topic": "genprep",
+  "rule": "gp-raum",
+  "q": "Die Musikhochschule liegt unweit [des Hauptbahnhofs].",
+  "acc": [
+   "des Hauptbahnhofes"
+  ],
+  "alt": [
+   "der Hauptbahnhof",
+   "des Hauptbahnhof",
+   "den Hauptbahnhofs"
+  ],
+  "why": "Unweit styr genitiv. Der Bahnhof är maskulinum: des + -s (eller -es).",
+  "sv": "Musikhögskolan ligger inte långt från centralstationen."
+ },
+ {
+  "id": "genprep-025",
+  "topic": "genprep",
+  "rule": "gp-bezug",
+  "q": "[Anlässlich] des 250. Geburtstags von Beethoven fanden 2020 weltweit Konzerte statt.",
+  "alt": [
+   "Anhand",
+   "Mangels",
+   "Außerhalb"
+  ],
+  "why": "Anlässlich = med anledning av, i samband med (ett jubileum, ett besök). Anhand, mangels och außerhalb ger ingen mening.",
+  "sv": "Med anledning av Beethovens 250-årsdag hölls konserter över hela världen 2020."
+ },
+ {
+  "id": "genprep-026",
+  "topic": "genprep",
+  "rule": "gp-bezug",
+  "q": "Hinsichtlich [der Studiengebühren] gibt es Unterschiede zwischen den Bundesländern.",
+  "alt": [
+   "die Studiengebühren",
+   "den Studiengebühren",
+   "des Studiengebühren"
+  ],
+  "why": "Hinsichtlich (när det gäller) styr genitiv. I plural är genitivartikeln der.",
+  "sv": "När det gäller studieavgifter finns det skillnader mellan förbundsländerna."
+ },
+ {
+  "id": "genprep-027",
+  "topic": "genprep",
+  "rule": "gp-bezug",
+  "q": "Bezüglich [Ihrer Anfrage] vom 3. März teilen wir Ihnen mit, dass noch Plätze frei sind.",
+  "alt": [
+   "Ihre Anfrage",
+   "Ihres Anfrage",
+   "Ihren Anfrage"
+  ],
+  "why": "Bezüglich (angående) styr genitiv och är typiskt för formella brev. Die Anfrage är femininum: Ihrer.",
+  "sv": "Angående er förfrågan den 3 mars meddelar vi att det fortfarande finns lediga platser."
+ },
+ {
+  "id": "genprep-028",
+  "topic": "genprep",
+  "rule": "gp-bezug",
+  "q": "Das Benefizkonzert am Samstag findet [zugunsten] der Flutopfer statt.",
+  "acc": [
+   "zu Gunsten"
+  ],
+  "alt": [
+   "anhand",
+   "mangels",
+   "unweit"
+  ],
+  "why": "Zugunsten = till förmån för. Anhand, mangels och unweit ger fel betydelse.",
+  "sv": "Välgörenhetskonserten på lördag hålls till förmån för offren för översvämningen."
+ },
+ {
+  "id": "genprep-029",
+  "topic": "genprep",
+  "rule": "gp-bezug",
+  "q": "[Mithilfe] einer App können Musiker ihre Intonation trainieren.",
+  "acc": [
+   "Mit Hilfe"
+  ],
+  "alt": [
+   "Mangels",
+   "Ungeachtet",
+   "Oberhalb"
+  ],
+  "why": "Mithilfe (med hjälp av) styr genitiv. Man kan också skriva mit Hilfe. De andra ger ingen mening.",
+  "sv": "Med hjälp av en app kan musiker träna sin intonation."
+ },
+ {
+  "id": "genprep-030",
+  "topic": "genprep",
+  "rule": "gp-bezug",
+  "q": "Die Forscherin erklärt [anhand] eines Beispiels, wie das Gehirn auf Musik reagiert.",
+  "acc": [
+   "mithilfe",
+   "mit Hilfe"
+  ],
+  "alt": [
+   "zugunsten",
+   "außerhalb",
+   "mangels"
+  ],
+  "why": "Anhand = med utgångspunkt i, med hjälp av (ett exempel, en bild, data). Mithilfe går också.",
+  "sv": "Forskaren förklarar med hjälp av ett exempel hur hjärnan reagerar på musik."
+ },
+ {
+  "id": "genprep-031",
+  "topic": "genprep",
+  "rule": "gp-bezug",
+  "q": "Seitens [der Hochschulleitung] gab es bisher keine Stellungnahme.",
+  "alt": [
+   "die Hochschulleitung",
+   "des Hochschulleitung",
+   "der Hochschulleitungs"
+  ],
+  "why": "Seitens (från … sida) styr genitiv. Die Leitung är femininum: der, utan -s.",
+  "sv": "Från högskoleledningens sida har det hittills inte kommit någon kommentar."
+ },
+ {
+  "id": "genprep-032",
+  "topic": "genprep",
+  "rule": "gp-bezug",
+  "q": "Zugunsten [des Klimaschutzes] verzichtet Nora seit zwei Jahren auf Flugreisen.",
+  "alt": [
+   "der Klimaschutz",
+   "des Klimaschutz",
+   "den Klimaschutzes"
+  ],
+  "why": "Zugunsten styr genitiv. Der Schutz är maskulinum och slutar på -z: des + -es.",
+  "sv": "För klimatets skull har Nora avstått från att flyga i två år."
+ },
+ {
+  "id": "partikel-001",
+  "topic": "partikel",
+  "rule": "mp-doch",
+  "q": "– Ich weiß nicht, was ich bei der Aufnahmeprüfung spielen soll. – Spiel [doch] die Chopin-Etüde, die kannst du am besten!",
+  "alt": [
+   "denn",
+   "wohl",
+   "etwa"
+  ],
+  "why": "Doch i en uppmaning gör den till ett vänligt råd (\"spela väl …!\"). Denn och etwa hör bara hemma i frågor, och wohl uttrycker ett antagande.",
+  "sv": "– Jag vet inte vad jag ska spela på antagningsprovet. – Spela väl Chopin-etyden, den kan du bäst!"
+ },
+ {
+  "id": "partikel-002",
+  "topic": "partikel",
+  "rule": "mp-doch",
+  "q": "Nun sei [doch] nicht so nervös, du hast das Stück schon hundertmal gespielt!",
+  "alt": [
+   "denn",
+   "wohl",
+   "etwa"
+  ],
+  "why": "Doch i en uppmaning lugnar eller uppmuntrar: \"var nu inte så nervös\". Denn och etwa används i frågor, wohl i antaganden.",
+  "sv": "Var nu inte så nervös, du har ju spelat stycket hundra gånger!"
+ },
+ {
+  "id": "partikel-003",
+  "topic": "partikel",
+  "rule": "mp-doch",
+  "q": "– Warum kommst du nicht mit ins Konzert? – Ich habe dir [doch] gestern gesagt, dass ich arbeiten muss!",
+  "acc": [
+   "ja"
+  ],
+  "alt": [
+   "denn",
+   "etwa"
+  ],
+  "why": "Doch påminner om något den andra borde veta, ofta med lite irritation. Ja går också. Denn och etwa hör hemma i frågor.",
+  "sv": "– Varför följer du inte med på konserten? – Jag sa ju till dig i går att jag måste jobba!"
+ },
+ {
+  "id": "partikel-004",
+  "topic": "partikel",
+  "rule": "mp-doch",
+  "q": "Wenn du Fragen zur Bewerbung hast, ruf mich [doch] einfach an.",
+  "alt": [
+   "denn",
+   "wohl",
+   "etwa"
+  ],
+  "why": "Doch mjukar upp uppmaningen till ett vänligt förslag. Denn och etwa används bara i frågor, wohl i antaganden.",
+  "sv": "Om du har frågor om ansökan är det bara att ringa mig."
+ },
+ {
+  "id": "partikel-005",
+  "topic": "partikel",
+  "rule": "mp-doch",
+  "q": "Nehmen Sie [doch] Platz, Frau Weber, der Professor kommt gleich.",
+  "alt": [
+   "denn",
+   "wohl",
+   "etwa"
+  ],
+  "why": "Doch gör en artig uppmaning vänligare och mer inbjudande. Denn och etwa används i frågor, wohl i antaganden.",
+  "sv": "Varsågod och sitt, fru Weber, professorn kommer strax."
+ },
+ {
+  "id": "partikel-006",
+  "topic": "partikel",
+  "rule": "mp-doch",
+  "q": "– Die Probe fällt schon wieder aus? Das kann [doch] nicht wahr sein!",
+  "acc": [
+   "ja"
+  ],
+  "alt": [
+   "denn",
+   "mal",
+   "etwa"
+  ],
+  "why": "Doch uttrycker här upprördhet: det borde inte vara så. Ja går också. Denn och etwa hör hemma i frågor, mal i uppmaningar.",
+  "sv": "– Är repetitionen inställd igen? Det är inte sant!"
+ },
+ {
+  "id": "partikel-007",
+  "topic": "partikel",
+  "rule": "mp-ja",
+  "q": "Du hast die Aufnahmeprüfung bestanden? Das ist [ja] fantastisch!",
+  "alt": [
+   "denn",
+   "etwa"
+  ],
+  "why": "Ja uttrycker förvåning eller glädje i ett påstående. Denn och etwa används i frågor.",
+  "sv": "Har du klarat antagningsprovet? Vad fantastiskt!"
+ },
+ {
+  "id": "partikel-008",
+  "topic": "partikel",
+  "rule": "mp-ja",
+  "q": "Oh, in diesem Übungsraum gibt es [ja] sogar einen Flügel!",
+  "alt": [
+   "denn",
+   "etwa"
+  ],
+  "why": "Ja visar att man blir överraskad av något man ser. Denn och etwa hör hemma i frågor.",
+  "sv": "Oj, i det här övningsrummet finns det till och med en flygel!"
+ },
+ {
+  "id": "partikel-009",
+  "topic": "partikel",
+  "rule": "mp-ja",
+  "q": "Wie Sie [ja] wissen, beginnt das Wintersemester im Oktober.",
+  "alt": [
+   "denn",
+   "mal",
+   "etwa"
+  ],
+  "why": "Ja markerar något som båda redan vet (\"som ni ju vet\"). Denn och etwa är frågepartiklar, och mal passar inte i ett påstående.",
+  "sv": "Som ni vet börjar vinterterminen i oktober."
+ },
+ {
+  "id": "partikel-010",
+  "topic": "partikel",
+  "rule": "mp-ja",
+  "q": "Du bist [ja] ganz nass! Hast du keinen Regenschirm dabei?",
+  "alt": [
+   "denn",
+   "etwa"
+  ],
+  "why": "Ja uttrycker förvåning över det man ser. Denn och etwa används i frågor.",
+  "sv": "Du är ju alldeles blöt! Har du inget paraply med dig?"
+ },
+ {
+  "id": "partikel-011",
+  "topic": "partikel",
+  "rule": "mp-ja",
+  "q": "Da bist du [ja] endlich! Wir warten schon seit einer halben Stunde auf dich.",
+  "alt": [
+   "denn",
+   "etwa"
+  ],
+  "why": "Ja uttrycker förvåning eller lättnad: äntligen är du här. Denn och etwa används i frågor.",
+  "sv": "Där är du ju äntligen! Vi har väntat på dig i en halvtimme."
+ },
+ {
+  "id": "partikel-012",
+  "topic": "partikel",
+  "rule": "mp-ja",
+  "q": "Ich kann dir heute beim Umzug helfen, ich habe [ja] frei.",
+  "acc": [
+   "doch"
+  ],
+  "alt": [
+   "denn",
+   "etwa"
+  ],
+  "why": "Ja markerar något som den andra redan vet: jag är ju ledig. Doch går också. Denn och etwa är frågepartiklar.",
+  "sv": "Jag kan hjälpa dig med flytten i dag, jag är ju ledig."
+ },
+ {
+  "id": "partikel-013",
+  "topic": "partikel",
+  "rule": "mp-eben",
+  "q": "– Warum musst du am Wochenende schon wieder arbeiten? – Das ist [eben] so, wenn man als freie Musikerin lebt.",
+  "acc": [
+   "halt"
+  ],
+  "alt": [
+   "denn",
+   "etwa"
+  ],
+  "why": "Eben (eller halt) betyder att något bara är så och inte går att ändra. Denn och etwa används i frågor.",
+  "sv": "– Varför måste du jobba i helgen igen? – Det är helt enkelt så när man lever som frilansande musiker."
+ },
+ {
+  "id": "partikel-014",
+  "topic": "partikel",
+  "rule": "mp-eben",
+  "q": "Wenn heute kein Bus mehr fährt, müssen wir [eben] zu Fuß nach Hause gehen.",
+  "acc": [
+   "halt"
+  ],
+  "alt": [
+   "denn",
+   "etwa"
+  ],
+  "why": "Eben/halt: det finns inget annat att göra, vi får helt enkelt gå. Denn och etwa hör hemma i frågor.",
+  "sv": "Om det inte går någon mer buss i dag får vi helt enkelt gå hem."
+ },
+ {
+  "id": "partikel-015",
+  "topic": "partikel",
+  "rule": "mp-eben",
+  "q": "Ich bin [halt] kein Morgenmensch, deshalb übe ich lieber abends.",
+  "acc": [
+   "eben"
+  ],
+  "alt": [
+   "denn",
+   "etwa"
+  ],
+  "why": "Halt/eben: så är jag helt enkelt, det går inte att ändra. Denn och etwa används i frågor.",
+  "sv": "Jag är helt enkelt ingen morgonmänniska, därför övar jag hellre på kvällen."
+ },
+ {
+  "id": "partikel-016",
+  "topic": "partikel",
+  "rule": "mp-eben",
+  "q": "– Die Karten sind leider ausverkauft. – Tja, dann hören wir uns das Konzert [eben] im Radio an.",
+  "acc": [
+   "halt"
+  ],
+  "alt": [
+   "denn",
+   "etwa"
+  ],
+  "why": "Eben/halt efter tja visar att man accepterar läget: då får vi väl lyssna på radio. Denn och etwa hör hemma i frågor.",
+  "sv": "– Biljetterna är tyvärr slutsålda. – Tja, då får vi lyssna på konserten på radio i stället."
+ },
+ {
+  "id": "partikel-017",
+  "topic": "partikel",
+  "rule": "mp-eben",
+  "q": "Man kann nicht jeden Wettbewerb gewinnen, so ist das [eben].",
+  "acc": [
+   "halt"
+  ],
+  "alt": [
+   "denn",
+   "etwa"
+  ],
+  "why": "So ist das eben/halt = så är det bara. Denn och etwa används i frågor.",
+  "sv": "Man kan inte vinna alla tävlingar, så är det bara."
+ },
+ {
+  "id": "partikel-018",
+  "topic": "partikel",
+  "rule": "mp-eben",
+  "q": "Die Wohnungen in München sind [halt] teuer, da kann man nichts machen.",
+  "acc": [
+   "eben"
+  ],
+  "alt": [
+   "denn",
+   "etwa"
+  ],
+  "why": "Halt/eben: ett faktum man inte kan ändra (\"da kann man nichts machen\"). Denn och etwa används i frågor.",
+  "sv": "Lägenheterna i München är helt enkelt dyra, det kan man inte göra något åt."
+ },
+ {
+  "id": "partikel-019",
+  "topic": "partikel",
+  "rule": "mp-wohl",
+  "q": "– Wo ist Felix? – Er ist [wohl] noch in der Probe, sein Handy ist jedenfalls aus.",
+  "alt": [
+   "denn",
+   "mal",
+   "etwa"
+  ],
+  "why": "Wohl uttrycker ett antagande: han är nog kvar på repetitionen. Denn och etwa används i frågor, mal i uppmaningar.",
+  "sv": "– Var är Felix? – Han är nog kvar på repetitionen, hans mobil är i alla fall avstängd."
+ },
+ {
+  "id": "partikel-020",
+  "topic": "partikel",
+  "rule": "mp-wohl",
+  "q": "Mach dir keine Sorgen wegen der Prüfung, du schaffst das [schon]!",
+  "alt": [
+   "denn",
+   "etwa"
+  ],
+  "why": "Schon lugnar: det kommer att gå bra. Denn och etwa hör hemma i frågor.",
+  "sv": "Oroa dig inte för provet, du kommer att klara det!"
+ },
+ {
+  "id": "partikel-021",
+  "topic": "partikel",
+  "rule": "mp-wohl",
+  "q": "Das Paket ist immer noch nicht angekommen. Es ist [wohl] verloren gegangen.",
+  "alt": [
+   "denn",
+   "etwa"
+  ],
+  "why": "Wohl = troligen, nog. Det är ett antagande, inte ett faktum. Denn och etwa används i frågor.",
+  "sv": "Paketet har fortfarande inte kommit. Det har nog kommit bort."
+ },
+ {
+  "id": "partikel-022",
+  "topic": "partikel",
+  "rule": "mp-wohl",
+  "q": "Sara hat heute acht Stunden geübt, sie ist jetzt [wohl] ziemlich müde.",
+  "alt": [
+   "denn",
+   "etwa"
+  ],
+  "why": "Wohl uttrycker ett antagande: hon är nog trött. Denn och etwa används i frågor.",
+  "sv": "Sara har övat åtta timmar i dag, hon är nog ganska trött nu."
+ },
+ {
+  "id": "partikel-023",
+  "topic": "partikel",
+  "rule": "mp-wohl",
+  "q": "– Ob wir noch Karten bekommen? – Keine Sorge, es gibt [schon] noch welche.",
+  "acc": [
+   "wohl"
+  ],
+  "alt": [
+   "denn",
+   "mal",
+   "etwa"
+  ],
+  "why": "Schon lugnar: det finns nog biljetter kvar. Wohl går också (antagande). Denn och etwa används i frågor, mal i uppmaningar.",
+  "sv": "– Undrar om vi får tag på biljetter? – Oroa dig inte, det finns nog några kvar."
+ },
+ {
+  "id": "partikel-024",
+  "topic": "partikel",
+  "rule": "mp-wohl",
+  "q": "Emil hat sich seit Tagen nicht gemeldet. Er hat [wohl] viel zu tun.",
+  "alt": [
+   "denn",
+   "etwa"
+  ],
+  "why": "Wohl uttrycker en gissning om orsaken. Denn och etwa används i frågor.",
+  "sv": "Emil har inte hört av sig på flera dagar. Han har nog mycket att göra."
+ },
+ {
+  "id": "partikel-025",
+  "topic": "partikel",
+  "rule": "mp-mal",
+  "q": "Hör [mal], ich muss dir unbedingt etwas erzählen!",
+  "alt": [
+   "denn",
+   "ja",
+   "etwa"
+  ],
+  "why": "Mal i en uppmaning gör den mer vardaglig och vänlig (\"hör här\"). Denn och etwa hör hemma i frågor, och ja passar inte i en vanlig uppmaning.",
+  "sv": "Hör här, jag måste berätta en sak för dig!"
+ },
+ {
+  "id": "partikel-026",
+  "topic": "partikel",
+  "rule": "mp-mal",
+  "q": "Schau dir [mal] dieses Video von unserer Probe an!",
+  "alt": [
+   "denn",
+   "wohl",
+   "etwa"
+  ],
+  "why": "Mal mjukar upp uppmaningen (\"kolla på den här videon\"). Denn och etwa används i frågor, wohl i antaganden.",
+  "sv": "Kolla på den här videon från vår repetition!"
+ },
+ {
+  "id": "partikel-027",
+  "topic": "partikel",
+  "rule": "mp-mal",
+  "q": "Was ist [denn] hier los? Warum ist es so laut?",
+  "alt": [
+   "ja",
+   "halt",
+   "mal"
+  ],
+  "why": "Denn gör en fråga mer naturlig och visar intresse eller förvåning. Ja och halt hör hemma i påståenden, mal i uppmaningar.",
+  "sv": "Vad är det som händer här? Varför är det så högljutt?"
+ },
+ {
+  "id": "partikel-028",
+  "topic": "partikel",
+  "rule": "mp-mal",
+  "q": "Und, wie hat dir das Konzert [denn] gefallen?",
+  "alt": [
+   "ja",
+   "halt",
+   "mal"
+  ],
+  "why": "Denn i en fråga visar att man är intresserad. Ja och halt hör hemma i påståenden, mal i uppmaningar.",
+  "sv": "Nå, hur tyckte du om konserten?"
+ },
+ {
+  "id": "partikel-029",
+  "topic": "partikel",
+  "rule": "mp-mal",
+  "q": "Wo bleibt [denn] Aylin? Das Konzert fängt gleich an.",
+  "acc": [
+   "bloß",
+   "nur"
+  ],
+  "alt": [
+   "ja",
+   "mal",
+   "eben"
+  ],
+  "why": "Denn i en fråga visar otålighet eller oro. Ja och eben passar inte i frågor, och mal hör hemma i uppmaningar.",
+  "sv": "Var håller Aylin hus? Konserten börjar alldeles strax."
+ },
+ {
+  "id": "partikel-030",
+  "topic": "partikel",
+  "rule": "mp-mal",
+  "q": "Vergiss [bloß] nicht, die Anmeldung bis Freitag abzuschicken!",
+  "acc": [
+   "nur",
+   "ja"
+  ],
+  "alt": [
+   "denn",
+   "wohl",
+   "etwa"
+  ],
+  "why": "Bloß (eller nur, betonat ja) gör en uppmaning till en varning: glöm för allt i världen inte. Denn och etwa används i frågor, wohl i antaganden.",
+  "sv": "Glöm för allt i världen inte att skicka in anmälan före fredag!"
+ },
+ {
+  "id": "partikel-031",
+  "topic": "partikel",
+  "rule": "mp-mal",
+  "q": "Hätte ich [bloß] früher mit dem Üben angefangen!",
+  "acc": [
+   "nur",
+   "doch"
+  ],
+  "alt": [
+   "denn",
+   "etwa",
+   "ja"
+  ],
+  "why": "Bloß (eller nur, doch) förstärker en önskan eller ånger i Konjunktiv II. Denn och etwa hör hemma i frågor, och ja passar inte i en önskan.",
+  "sv": "Om jag bara hade börjat öva tidigare!"
+ },
+ {
+  "id": "modsubj-001",
+  "topic": "modsubj",
+  "rule": "ms-sollen",
+  "q": "Laut einem Zeitungsbericht [soll] die neue Konzerthalle doppelt so viel kosten wie geplant.",
+  "alt": [
+   "will",
+   "möchte"
+  ],
+  "why": "Sollen = det sägs, enligt uppgift. Laut einem Bericht visar att det är någon annans uppgift. En konserthall kan inte vilja något.",
+  "sv": "Enligt en tidningsartikel ska den nya konserthallen kosta dubbelt så mycket som planerat."
+ },
+ {
+  "id": "modsubj-002",
+  "topic": "modsubj",
+  "rule": "ms-sollen",
+  "q": "Im Radio haben sie gesagt, auf der A7 [soll] es einen langen Stau geben.",
+  "alt": [
+   "will",
+   "möchte",
+   "darf"
+  ],
+  "why": "Sollen återger vad andra (radion) säger. Wollen och möchte kräver någon som vill, och darf betyder \"får\".",
+  "sv": "På radion sa de att det ska vara en lång kö på A7:an."
+ },
+ {
+  "id": "modsubj-003",
+  "topic": "modsubj",
+  "rule": "ms-sollen",
+  "q": "Der Wetterbericht sagt, es [soll] am Wochenende bis zu 30 Grad warm werden.",
+  "alt": [
+   "will",
+   "möchte"
+  ],
+  "why": "Sollen = enligt uppgift, här väderprognosen. Es (vädret) kan inte vilja något.",
+  "sv": "Väderprognosen säger att det ska bli upp till 30 grader varmt i helgen."
+ },
+ {
+  "id": "modsubj-004",
+  "topic": "modsubj",
+  "rule": "ms-sollen",
+  "q": "Dieses Restaurant [soll] das beste der ganzen Stadt sein – das sagen jedenfalls alle meine Freunde.",
+  "alt": [
+   "will",
+   "möchte",
+   "darf"
+  ],
+  "why": "Sollen: det är vännerna som säger det, inte restaurangen själv. Wollen och möchte kräver ett subjekt som kan vilja, darf betyder \"får\".",
+  "sv": "Den här restaurangen ska vara den bästa i hela stan, det säger i alla fall alla mina kompisar."
+ },
+ {
+  "id": "modsubj-005",
+  "topic": "modsubj",
+  "rule": "ms-sollen",
+  "q": "Laut der Legende [soll] der Rattenfänger von Hameln 130 Kinder aus der Stadt geführt haben.",
+  "alt": [
+   "will",
+   "muss",
+   "darf"
+  ],
+  "why": "Sollen = det berättas. En legend är en uppgift man inte kan kontrollera. Muss skulle betyda att man är säker, will att råttfångaren själv påstår det.",
+  "sv": "Enligt legenden ska råttfångaren från Hameln ha lockat med sig 130 barn ut ur staden."
+ },
+ {
+  "id": "modsubj-006",
+  "topic": "modsubj",
+  "rule": "ms-sollen",
+  "q": "Die Sängerin [soll] früher in einer Punkband gespielt haben, habe ich in einem Interview gelesen.",
+  "alt": [
+   "darf",
+   "möchte"
+  ],
+  "why": "Sollen: uppgiften kommer från en annan källa (en intervju). Darf och möchte ger ingen mening med perfekt infinitiv här.",
+  "sv": "Sångerskan ska tidigare ha spelat i ett punkband, har jag läst i en intervju."
+ },
+ {
+  "id": "modsubj-007",
+  "topic": "modsubj",
+  "rule": "ms-wollen",
+  "q": "Der Politiker [will] von der Affäre nichts gewusst haben – das behauptet er zumindest.",
+  "alt": [
+   "soll",
+   "darf",
+   "muss"
+  ],
+  "why": "Wollen = påstår sig själv. Das behauptet er visar att det är han själv som säger det. Soll skulle betyda att andra säger det.",
+  "sv": "Politikern påstår sig inte ha vetat något om affären, det hävdar han i alla fall."
+ },
+ {
+  "id": "modsubj-008",
+  "topic": "modsubj",
+  "rule": "ms-wollen",
+  "q": "Mein Bruder [will] schon mit vier Jahren Noten gelesen haben, aber das glaube ich ihm nicht.",
+  "alt": [
+   "soll",
+   "darf",
+   "muss"
+  ],
+  "why": "Wollen: brodern påstår det själv (\"das glaube ich ihm nicht\"). Soll skulle betyda att andra säger det om honom.",
+  "sv": "Min bror påstår att han kunde läsa noter redan när han var fyra, men det tror jag inte på."
+ },
+ {
+  "id": "modsubj-009",
+  "topic": "modsubj",
+  "rule": "ms-wollen",
+  "q": "Sie [will] die Anmeldefrist nicht gekannt haben, sagt sie, doch die stand groß auf der Website.",
+  "alt": [
+   "soll",
+   "darf",
+   "möchte"
+  ],
+  "why": "Wollen = hon påstår själv (sagt sie). Soll skulle betyda att andra säger det, och möchte uttrycker en önskan.",
+  "sv": "Hon påstår att hon inte kände till sista anmälningsdagen, men den stod med stora bokstäver på webbplatsen."
+ },
+ {
+  "id": "modsubj-010",
+  "topic": "modsubj",
+  "rule": "ms-wollen",
+  "q": "Niemand [will] den Fehler gemacht haben, aber irgendjemand muss es ja gewesen sein.",
+  "alt": [
+   "soll",
+   "darf",
+   "muss"
+  ],
+  "why": "Wollen: ingen påstår sig ha gjort felet, alla nekar. Soll och darf ger fel betydelse, muss skulle betyda att det är säkert.",
+  "sv": "Ingen vill kännas vid att ha gjort felet, men någon måste ju ha gjort det."
+ },
+ {
+  "id": "modsubj-011",
+  "topic": "modsubj",
+  "rule": "ms-wollen",
+  "q": "Das Unternehmen [will] von den Umweltschäden nichts gewusst haben, erklärte seine Sprecherin.",
+  "alt": [
+   "soll",
+   "darf",
+   "muss"
+  ],
+  "why": "Wollen: företaget påstår det själv genom sin talesperson. Soll skulle betyda att andra säger det.",
+  "sv": "Företaget påstår sig inte ha känt till miljöskadorna, förklarade dess talesperson."
+ },
+ {
+  "id": "modsubj-012",
+  "topic": "modsubj",
+  "rule": "ms-wollen",
+  "q": "Tobias [will] ein Experte für Barockmusik sein, wie er jedem erzählt, aber er kennt nicht einmal Händel.",
+  "alt": [
+   "soll",
+   "darf",
+   "muss"
+  ],
+  "why": "Wollen + infinitiv = påstå sig vara. Wie er jedem erzählt visar att påståendet kommer från honom själv.",
+  "sv": "Tobias påstår sig vara expert på barockmusik, som han berättar för alla, men han känner inte ens till Händel."
+ },
+ {
+  "id": "modsubj-013",
+  "topic": "modsubj",
+  "rule": "ms-vermutung",
+  "q": "Das [muss] Lena sein, ich erkenne ihre Stimme sofort.",
+  "alt": [
+   "will",
+   "darf",
+   "soll"
+  ],
+  "why": "Muss = nästan säker (jag känner igen rösten). Will, darf och soll passar inte: det handlar om min egen slutsats.",
+  "sv": "Det måste vara Lena, jag känner genast igen hennes röst."
+ },
+ {
+  "id": "modsubj-014",
+  "topic": "modsubj",
+  "rule": "ms-vermutung",
+  "q": "Die Renovierung des Opernhauses [dürfte] etwa zwei Jahre dauern, schätzen die Experten.",
+  "alt": [
+   "darf",
+   "durfte",
+   "will"
+  ],
+  "why": "Dürfte (Konjunktiv II) = troligen. Formen måste vara dürfte; darf och durfte betyder \"får/fick\", och en renovering kan inte vilja.",
+  "sv": "Renoveringen av operahuset kommer troligen att ta ungefär två år, uppskattar experterna."
+ },
+ {
+  "id": "modsubj-015",
+  "topic": "modsubj",
+  "rule": "ms-vermutung",
+  "q": "Es ist schon nach Mitternacht, Hanna [dürfte] inzwischen zu Hause sein.",
+  "acc": [
+   "müsste",
+   "muss",
+   "sollte"
+  ],
+  "alt": [
+   "darf",
+   "durfte",
+   "will"
+  ],
+  "why": "Dürfte = troligen. Muss och müsste går också (nästan säker). Darf/durfte betyder \"får/fick\", inte \"troligen\".",
+  "sv": "Klockan är över tolv, Hanna är troligen hemma nu."
+ },
+ {
+  "id": "modsubj-016",
+  "topic": "modsubj",
+  "rule": "ms-vermutung",
+  "q": "Das [kann] nicht die richtige Adresse sein, hier steht doch gar kein Haus!",
+  "alt": [
+   "will",
+   "möchte",
+   "soll"
+  ],
+  "why": "Kann nicht = omöjligt, det är en slutsats av det man ser. Will, möchte och soll ger ingen mening här (en adress kan inte vilja, och ingen annan har sagt något).",
+  "sv": "Det kan inte vara rätt adress, här står ju inget hus alls!"
+ },
+ {
+  "id": "modsubj-017",
+  "topic": "modsubj",
+  "rule": "ms-vermutung",
+  "q": "Nimm lieber einen Regenschirm mit, es [könnte] später noch regnen.",
+  "acc": [
+   "kann"
+  ],
+  "alt": [
+   "will",
+   "darf",
+   "möchte"
+  ],
+  "why": "Könnte (eller kann) = möjligen. Will, darf och möchte kräver någon som vill eller får något, och det gör inte vädret.",
+  "sv": "Ta hellre med ett paraply, det kan börja regna senare."
+ },
+ {
+  "id": "modsubj-018",
+  "topic": "modsubj",
+  "rule": "ms-vermutung",
+  "q": "Das Paket [dürfte] morgen ankommen, normalerweise braucht die Post zwei Tage.",
+  "acc": [
+   "müsste",
+   "sollte"
+  ],
+  "alt": [
+   "darf",
+   "durfte",
+   "will"
+  ],
+  "why": "Dürfte = troligen (Konjunktiv II). Darf/durfte betyder \"får/fick\", och ett paket kan inte vilja.",
+  "sv": "Paketet kommer troligen i morgon, posten brukar ta två dagar."
+ },
+ {
+  "id": "modsubj-019",
+  "topic": "modsubj",
+  "rule": "ms-vermutung",
+  "q": "Ich bin mir ziemlich sicher: Der Schlüssel [muss] noch im Proberaum liegen.",
+  "acc": [
+   "müsste"
+  ],
+  "alt": [
+   "will",
+   "darf",
+   "soll"
+  ],
+  "why": "Muss = nästan säker (ich bin mir ziemlich sicher). Müsste går också. Will, darf och soll ger fel betydelse.",
+  "sv": "Jag är ganska säker: nyckeln måste fortfarande ligga i replokalen."
+ },
+ {
+  "id": "modsubj-020",
+  "topic": "modsubj",
+  "rule": "ms-vermutung",
+  "q": "Die Ergebnisse [könnten] für die Musiktherapie wichtig sein, das muss aber noch genauer untersucht werden.",
+  "acc": [
+   "können",
+   "dürften"
+  ],
+  "alt": [
+   "wollen",
+   "dürfen",
+   "durften"
+  ],
+  "why": "Könnten = möjligen. Det är osäkert eftersom det ska undersökas mer. Können och dürften går också. Wollen och dürfen/durften betyder vilja och få.",
+  "sv": "Resultaten kan vara viktiga för musikterapin, men det måste undersökas närmare."
+ },
+ {
+  "id": "modsubj-021",
+  "topic": "modsubj",
+  "rule": "ms-vermutung",
+  "q": "Bei diesem Verkehr [dürfte] es schwierig werden, pünktlich zum Konzert zu kommen.",
+  "acc": [
+   "könnte"
+  ],
+  "alt": [
+   "darf",
+   "durfte",
+   "will"
+  ],
+  "why": "Dürfte = troligen. Könnte går också. Darf och durfte betyder \"får/fick\", och es kan inte vilja något.",
+  "sv": "Med den här trafiken blir det nog svårt att hinna till konserten i tid."
+ },
+ {
+  "id": "modsubj-022",
+  "topic": "modsubj",
+  "rule": "ms-verg",
+  "q": "Der Schlüssel ist weg. Ich muss ihn im Bus [verloren haben].",
+  "alt": [
+   "verloren sein",
+   "verlieren haben",
+   "verloren hat"
+  ],
+  "why": "Bedömning av något som har hänt: modalverb + perfekt infinitiv (particip + haben). Verlieren tar haben i perfekt, och efter modalverbet står haben i infinitiv.",
+  "sv": "Nyckeln är borta. Jag måste ha tappat den på bussen."
+ },
+ {
+  "id": "modsubj-023",
+  "topic": "modsubj",
+  "rule": "ms-verg",
+  "q": "Die Musiker sehen erschöpft aus. Die Probe muss sehr lang [gewesen sein].",
+  "alt": [
+   "gewesen haben",
+   "sein gewesen",
+   "gewesen ist"
+  ],
+  "why": "Perfekt infinitiv av sein är gewesen sein, eftersom sein bildar perfekt med sein (ist gewesen). Ordningen är alltid particip + hjälpverb.",
+  "sv": "Musikerna ser utmattade ut. Repetitionen måste ha varit väldigt lång."
+ },
+ {
+  "id": "modsubj-024",
+  "topic": "modsubj",
+  "rule": "ms-verg",
+  "q": "Der Zug aus Berlin dürfte inzwischen in Hamburg [angekommen sein].",
+  "alt": [
+   "angekommen haben",
+   "ankommen sein",
+   "angekommen ist"
+  ],
+  "why": "Ankommen bildar perfekt med sein (ist angekommen), så perfekt infinitiv blir angekommen sein.",
+  "sv": "Tåget från Berlin har troligen kommit fram till Hamburg nu."
+ },
+ {
+  "id": "modsubj-025",
+  "topic": "modsubj",
+  "rule": "ms-verg",
+  "q": "Die Autorin soll ihren ersten Roman schon mit neunzehn Jahren [geschrieben haben].",
+  "alt": [
+   "geschrieben sein",
+   "schreiben haben",
+   "geschrieben hat"
+  ],
+  "why": "Soll + perfekt infinitiv = det sägs att hon har skrivit. Schreiben tar haben: geschrieben haben.",
+  "sv": "Författaren ska ha skrivit sin första roman redan när hon var nitton."
+ },
+ {
+  "id": "modsubj-026",
+  "topic": "modsubj",
+  "rule": "ms-verg",
+  "q": "Mehmet ist nicht zur Probe gekommen. Er [könnte] den Termin vergessen haben.",
+  "acc": [
+   "kann",
+   "dürfte",
+   "muss",
+   "müsste"
+  ],
+  "alt": [
+   "konnte",
+   "darf",
+   "durfte"
+  ],
+  "why": "Könnte + perfekt infinitiv = han kan ha glömt (möjligen). Konnte är preteritum och betyder \"kunde\" (förmåga), inte en gissning.",
+  "sv": "Mehmet kom inte till repetitionen. Han kan ha glömt tiden."
+ },
+ {
+  "id": "modsubj-027",
+  "topic": "modsubj",
+  "rule": "ms-verg",
+  "q": "Mozart [kann] Brahms nicht getroffen haben, denn Brahms wurde erst 1833 geboren.",
+  "alt": [
+   "muss",
+   "darf",
+   "will"
+  ],
+  "why": "Kann nicht + perfekt infinitiv = det är omöjligt att det har hänt. Mozart dog 1791. Muss nicht skulle betyda \"behöver inte ha\".",
+  "sv": "Mozart kan inte ha träffat Brahms, för Brahms föddes först 1833."
+ },
+ {
+  "id": "modsubj-028",
+  "topic": "modsubj",
+  "rule": "ms-verg",
+  "q": "Die Einbrecher [müssen] durch das Kellerfenster ins Haus gekommen sein, es war als einziges offen.",
+  "acc": [
+   "müssten",
+   "dürften"
+  ],
+  "alt": [
+   "wollen",
+   "dürfen",
+   "durften"
+  ],
+  "why": "Müssen + perfekt infinitiv = nästan säker slutsats om vad som har hänt. Wollen och dürfen/durften betyder vilja och få.",
+  "sv": "Inbrottstjuvarna måste ha kommit in genom källarfönstret, det var det enda som stod öppet."
+ },
+ {
+  "id": "modsubj-029",
+  "topic": "modsubj",
+  "rule": "ms-verg",
+  "q": "Ich habe keine Antwort bekommen. Meine Mail kann nicht [angekommen sein].",
+  "alt": [
+   "angekommen haben",
+   "ankommen sein",
+   "angekommen worden"
+  ],
+  "why": "Ankommen bildar perfekt med sein, alltså angekommen sein.",
+  "sv": "Jag har inte fått något svar. Mitt mejl kan inte ha kommit fram."
+ },
+ {
+  "id": "modsubj-030",
+  "topic": "modsubj",
+  "rule": "ms-verg",
+  "q": "Der Schlagzeuger will seine Noten zu Hause [vergessen haben], aber ich glaube, er hat einfach nicht geübt.",
+  "alt": [
+   "vergessen sein",
+   "vergessen hat",
+   "vergessen werden"
+  ],
+  "why": "Will + perfekt infinitiv = han påstår att han har glömt. Vergessen tar haben: vergessen haben.",
+  "sv": "Trumslagaren påstår att han har glömt noterna hemma, men jag tror att han helt enkelt inte har övat."
+ },
+ {
+  "id": "textbind-001",
+  "topic": "textbind",
+  "rule": "tb-kontrast",
+  "q": "In den Großstädten sind die Mieten gestiegen, [während] sie auf dem Land eher gesunken sind.",
+  "acc": [
+   "wohingegen"
+  ],
+  "alt": [
+   "dagegen",
+   "hingegen",
+   "denn"
+  ],
+  "why": "Betydelse: två saker ställs mot varandra (medan). Ordföljd: sind står sist, så det måste vara en subjunktion: während eller wohingegen. Dagegen och hingegen är adverb och kräver verbet direkt efter, och denn kräver rak ordföljd.",
+  "sv": "I storstäderna har hyrorna stigit, medan de snarare har sjunkit på landsbygden."
+ },
+ {
+  "id": "textbind-002",
+  "topic": "textbind",
+  "rule": "tb-kontrast",
+  "q": "Früher arbeiteten viele Menschen ihr ganzes Leben bei derselben Firma. Heute [dagegen] wechseln die meisten mehrmals den Job.",
+  "acc": [
+   "hingegen"
+  ],
+  "alt": [
+   "während",
+   "wohingegen",
+   "obwohl"
+  ],
+  "why": "Betydelse: kontrast mellan förr och nu. Ordföljd: wechseln kommer direkt efter Heute dagegen, alltså ett adverb (dagegen eller hingegen). Während, wohingegen och obwohl är subjunktioner och kräver verbet sist.",
+  "sv": "Förr arbetade många människor hela livet på samma företag. I dag byter däremot de flesta jobb flera gånger."
+ },
+ {
+  "id": "textbind-003",
+  "topic": "textbind",
+  "rule": "tb-kontrast",
+  "q": "Die Opernpremiere war sofort ausverkauft. [Im Gegensatz dazu] blieben beim Jazzkonzert viele Plätze leer.",
+  "acc": [
+   "Dagegen",
+   "Hingegen"
+  ],
+  "alt": [
+   "Während",
+   "Wohingegen",
+   "Obwohl"
+  ],
+  "why": "Betydelse: kontrast. Ordföljd: blieben står direkt efter, så det måste vara ett adverbial: Im Gegensatz dazu, Dagegen eller Hingegen. Subjunktionerna kräver verbet sist.",
+  "sv": "Operapremiären blev slutsåld direkt. Vid jazzkonserten däremot var många platser tomma."
+ },
+ {
+  "id": "textbind-004",
+  "topic": "textbind",
+  "rule": "tb-kontrast",
+  "q": "Lena übt jeden Tag fünf Stunden, [wohingegen] ihr Bruder kaum Zeit für sein Instrument hat.",
+  "acc": [
+   "während"
+  ],
+  "alt": [
+   "dagegen",
+   "hingegen",
+   "deshalb"
+  ],
+  "why": "Betydelse: kontrast mellan syskonen. Ordföljd: hat står sist, alltså subjunktion: wohingegen eller während. Dagegen, hingegen och deshalb är adverb och kräver verbet direkt efter.",
+  "sv": "Lena övar fem timmar varje dag, medan hennes bror knappt har tid för sitt instrument."
+ },
+ {
+  "id": "textbind-005",
+  "topic": "textbind",
+  "rule": "tb-kontrast",
+  "q": "Jonas liebt Barockmusik. Seine Schwester [hingegen] hört am liebsten Jazz.",
+  "acc": [
+   "dagegen"
+  ],
+  "alt": [
+   "während",
+   "wohingegen",
+   "obwohl"
+  ],
+  "why": "Betydelse: kontrast. Ordföljd: hingegen (eller dagegen) kan stå direkt efter subjektet, och verbet hört kommer sedan på andra plats. Subjunktionerna kräver verbet sist.",
+  "sv": "Jonas älskar barockmusik. Hans syster däremot lyssnar helst på jazz."
+ },
+ {
+  "id": "textbind-006",
+  "topic": "textbind",
+  "rule": "tb-folge",
+  "q": "Die Bewerbungsfrist ist abgelaufen; [folglich] kann Ihre Bewerbung nicht mehr berücksichtigt werden.",
+  "acc": [
+   "somit",
+   "infolgedessen",
+   "demzufolge",
+   "daher",
+   "deshalb",
+   "deswegen"
+  ],
+  "alt": [
+   "sodass",
+   "weil",
+   "obwohl"
+  ],
+  "why": "Betydelse: följd (alltså, därför). Ordföljd: kann kommer direkt efter, så det krävs ett adverb: folglich, somit, infolgedessen, demzufolge, daher eller deshalb. Sodass, weil och obwohl kräver verbet sist.",
+  "sv": "Ansökningstiden har gått ut; följaktligen kan er ansökan inte längre tas i beaktande."
+ },
+ {
+  "id": "textbind-007",
+  "topic": "textbind",
+  "rule": "tb-folge",
+  "q": "Die Fabrik wurde geschlossen, [sodass] viele junge Menschen die Region verlassen haben.",
+  "acc": [
+   "so dass"
+  ],
+  "alt": [
+   "folglich",
+   "somit",
+   "deshalb"
+  ],
+  "why": "Betydelse: följd. Ordföljd: haben står sist, så det måste vara subjunktionen sodass. Folglich, somit och deshalb är adverb och kräver verbet direkt efter (folglich haben viele …).",
+  "sv": "Fabriken lades ned, så att många unga människor har lämnat regionen."
+ },
+ {
+  "id": "textbind-008",
+  "topic": "textbind",
+  "rule": "tb-folge",
+  "q": "Das Experiment wurde mehrmals wiederholt; die Ergebnisse sind [somit] zuverlässig.",
+  "acc": [
+   "folglich",
+   "daher",
+   "demnach",
+   "also"
+  ],
+  "alt": [
+   "sodass",
+   "weil",
+   "während"
+  ],
+  "why": "Betydelse: slutsats (alltså). Ordföljd: adverbet somit (eller folglich) kan stå inne i satsen efter verbet. Subjunktionerna sodass, weil och während kan inte stå där.",
+  "sv": "Experimentet upprepades flera gånger; resultaten är alltså tillförlitliga."
+ },
+ {
+  "id": "textbind-009",
+  "topic": "textbind",
+  "rule": "tb-folge",
+  "q": "Die Zahl der Studierenden ist stark gestiegen. [Infolgedessen] fehlt es an bezahlbaren Wohnungen.",
+  "acc": [
+   "Folglich",
+   "Demzufolge",
+   "Deshalb",
+   "Deswegen",
+   "Daher"
+  ],
+  "alt": [
+   "Sodass",
+   "Obwohl",
+   "Weil"
+  ],
+  "why": "Betydelse: följd. Ordföljd: fehlt står direkt efter, alltså ett adverb (infolgedessen, folglich, deshalb …). Sodass, obwohl och weil kräver verbet sist.",
+  "sv": "Antalet studenter har ökat kraftigt. Till följd av det saknas det bostäder som man har råd med."
+ },
+ {
+  "id": "textbind-010",
+  "topic": "textbind",
+  "rule": "tb-folge",
+  "q": "Laut einer neuen Umfrage fühlen sich viele Landbewohner abgehängt. [Demzufolge] wünschen sie sich mehr Unterstützung vom Staat.",
+  "acc": [
+   "Folglich",
+   "Infolgedessen",
+   "Deshalb",
+   "Daher",
+   "Deswegen"
+  ],
+  "alt": [
+   "Sodass",
+   "Obgleich",
+   "Während"
+  ],
+  "why": "Betydelse: följd av undersökningens resultat. Ordföljd: wünschen står direkt efter, så det är ett adverb (demzufolge, folglich). Subjunktionerna kräver verbet sist.",
+  "sv": "Enligt en ny undersökning känner sig många på landsbygden bortglömda. Därför önskar de sig mer stöd från staten."
+ },
+ {
+  "id": "textbind-011",
+  "topic": "textbind",
+  "rule": "tb-konzess",
+  "q": "Die Aufnahmeprüfung war extrem schwer. [Dennoch] haben fast alle Bewerber bestanden.",
+  "acc": [
+   "Trotzdem",
+   "Gleichwohl"
+  ],
+  "alt": [
+   "Obwohl",
+   "Obgleich",
+   "Wenngleich"
+  ],
+  "why": "Betydelse: medgivande (ändå). Ordföljd: haben står direkt efter, så det krävs ett adverb: dennoch, trotzdem eller gleichwohl. Obwohl, obgleich och wenngleich kräver verbet sist.",
+  "sv": "Antagningsprovet var extremt svårt. Ändå klarade nästan alla sökande det."
+ },
+ {
+  "id": "textbind-012",
+  "topic": "textbind",
+  "rule": "tb-konzess",
+  "q": "[Obgleich] die Partei die Wahl gewonnen hatte, konnte sie keine Regierung bilden.",
+  "acc": [
+   "Obwohl",
+   "Wenngleich",
+   "Obschon"
+  ],
+  "alt": [
+   "Dennoch",
+   "Deshalb",
+   "Andernfalls"
+  ],
+  "why": "Betydelse: medgivande (fastän). Ordföljd: hatte står sist och huvudsatsen börjar med verbet, alltså en bisats med obgleich, obwohl eller wenngleich. Dennoch, deshalb och andernfalls är adverb och kräver verbet direkt efter.",
+  "sv": "Fastän partiet hade vunnit valet kunde det inte bilda någon regering."
+ },
+ {
+  "id": "textbind-013",
+  "topic": "textbind",
+  "rule": "tb-konzess",
+  "q": "Der Roman ist [zwar] nicht leicht zu lesen, [aber] die Mühe lohnt sich.",
+  "acc": [
+   "zwar … doch"
+  ],
+  "alt": [
+   "obwohl … aber",
+   "zwar … sondern",
+   "weder … noch"
+  ],
+  "why": "Zwar … aber = visserligen … men. Sondern används bara efter en nekande sats när man ersätter något, och obwohl skulle kräva verbet sist.",
+  "sv": "Romanen är visserligen inte lätt att läsa, men mödan är värd det."
+ },
+ {
+  "id": "textbind-014",
+  "topic": "textbind",
+  "rule": "tb-konzess",
+  "q": "Die Pianistin ist erst neunzehn, [gleichwohl] gehört sie schon zu den besten ihres Fachs.",
+  "acc": [
+   "dennoch",
+   "trotzdem"
+  ],
+  "alt": [
+   "obwohl",
+   "wenngleich",
+   "obgleich"
+  ],
+  "why": "Betydelse: ändå. Ordföljd: gehört kommer direkt efter, alltså ett adverb (gleichwohl, dennoch, trotzdem). Obwohl, wenngleich och obgleich kräver verbet sist.",
+  "sv": "Pianisten är bara nitton, ändå hör hon redan till de bästa inom sitt område."
+ },
+ {
+  "id": "textbind-015",
+  "topic": "textbind",
+  "rule": "tb-konzess",
+  "q": "Der Film ist sehenswert, [wenngleich] er etwas zu lang ist.",
+  "acc": [
+   "obwohl",
+   "obgleich"
+  ],
+  "alt": [
+   "dennoch",
+   "deshalb",
+   "folglich"
+  ],
+  "why": "Betydelse: medgivande (även om). Ordföljd: ist står sist, alltså en subjunktion: wenngleich, obwohl eller obgleich. Dennoch, deshalb och folglich är adverb och kräver verbet direkt efter.",
+  "sv": "Filmen är sevärd, även om den är lite för lång."
+ },
+ {
+  "id": "textbind-016",
+  "topic": "textbind",
+  "rule": "tb-bedingung",
+  "q": "[Sofern] Sie alle Voraussetzungen erfüllen, laden wir Sie zur Aufnahmeprüfung ein.",
+  "acc": [
+   "Falls",
+   "Wenn"
+  ],
+  "alt": [
+   "Andernfalls",
+   "Dennoch",
+   "Dadurch"
+  ],
+  "why": "Betydelse: villkor (förutsatt att, om). Ordföljd: erfüllen står sist och huvudsatsen börjar med verbet, alltså en subjunktion: sofern, falls eller wenn. Andernfalls, dennoch och dadurch är adverb och ger dessutom fel betydelse.",
+  "sv": "Om ni uppfyller alla förutsättningar bjuder vi in er till antagningsprovet."
+ },
+ {
+  "id": "textbind-017",
+  "topic": "textbind",
+  "rule": "tb-bedingung",
+  "q": "Wir spielen das Konzert im Park, [es sei denn], es regnet.",
+  "alt": [
+   "sofern",
+   "falls",
+   "andernfalls"
+  ],
+  "why": "Betydelse: undantag (om inte). Ordföljd: efter es sei denn kommer en huvudsats med rak ordföljd (es regnet). Sofern och falls skulle betyda motsatsen, andernfalls ger fel ordföljd och betydelse.",
+  "sv": "Vi spelar konserten i parken, om det inte regnar."
+ },
+ {
+  "id": "textbind-018",
+  "topic": "textbind",
+  "rule": "tb-bedingung",
+  "q": "Sie müssen sich bis zum 15. Juli einschreiben, [andernfalls] verlieren Sie Ihren Studienplatz.",
+  "acc": [
+   "sonst"
+  ],
+  "alt": [
+   "sofern",
+   "falls",
+   "wenn"
+  ],
+  "why": "Betydelse: annars. Ordföljd: verlieren kommer direkt efter, alltså ett adverb: andernfalls eller sonst. Sofern, falls och wenn kräver verbet sist och ger fel betydelse.",
+  "sv": "Ni måste skriva in er senast den 15 juli, annars förlorar ni er studieplats."
+ },
+ {
+  "id": "textbind-019",
+  "topic": "textbind",
+  "rule": "tb-bedingung",
+  "q": "[Falls] du noch Fragen zur Bewerbung hast, kannst du mich jederzeit anrufen.",
+  "acc": [
+   "Wenn",
+   "Sofern"
+  ],
+  "alt": [
+   "Andernfalls",
+   "Sonst",
+   "Dennoch"
+  ],
+  "why": "Betydelse: villkor (om). Ordföljd: hast står sist, alltså en subjunktion: falls, wenn eller sofern. Andernfalls, sonst och dennoch är adverb.",
+  "sv": "Om du har fler frågor om ansökan kan du ringa mig när som helst."
+ },
+ {
+  "id": "textbind-020",
+  "topic": "textbind",
+  "rule": "tb-bedingung",
+  "q": "Das Stipendium wird um ein Jahr verlängert, [vorausgesetzt], dass die Studienleistungen stimmen.",
+  "alt": [
+   "andernfalls",
+   "sofern",
+   "obwohl"
+  ],
+  "why": "Vorausgesetzt, dass = förutsatt att (villkor). Sofern och obwohl kan inte följas av dass, och andernfalls betyder \"annars\".",
+  "sv": "Stipendiet förlängs med ett år, förutsatt att studieresultaten är bra."
+ },
+ {
+  "id": "textbind-021",
+  "topic": "textbind",
+  "rule": "tb-mittel",
+  "q": "Man kann sein Hörverstehen verbessern, [indem] man täglich deutsche Nachrichten hört.",
+  "alt": [
+   "wodurch",
+   "dadurch",
+   "folglich"
+  ],
+  "why": "Betydelse: sätt, hur man gör (genom att). Ordföljd: hört står sist, alltså subjunktionen indem. Wodurch anger en följd, dadurch behöver dass efter sig, och folglich är ett adverb.",
+  "sv": "Man kan förbättra sin hörförståelse genom att lyssna på tyska nyheter varje dag."
+ },
+ {
+  "id": "textbind-022",
+  "topic": "textbind",
+  "rule": "tb-mittel",
+  "q": "Die Stadt hat die Innenstadt für Autos gesperrt, [wodurch] die Luft deutlich besser geworden ist.",
+  "acc": [
+   "sodass"
+  ],
+  "alt": [
+   "indem",
+   "dadurch",
+   "damit"
+  ],
+  "why": "Betydelse: följd av åtgärden (varigenom). Ordföljd: ist står sist, så det måste vara wodurch (eller sodass). Indem anger sättet, dadurch är ett adverb, och damit betyder syfte.",
+  "sv": "Staden har stängt innerstaden för bilar, vilket har gjort luften mycket bättre."
+ },
+ {
+  "id": "textbind-023",
+  "topic": "textbind",
+  "rule": "tb-mittel",
+  "q": "Die Band wurde bekannt, [indem] sie ihre Konzerte live im Internet übertrug.",
+  "alt": [
+   "dadurch",
+   "dagegen",
+   "folglich"
+  ],
+  "why": "Betydelse: hur bandet blev känt (genom att). Ordföljd: übertrug står sist, alltså subjunktionen indem. Dadurch, dagegen och folglich är adverb och kräver verbet direkt efter.",
+  "sv": "Bandet blev känt genom att sända sina konserter live på nätet."
+ },
+ {
+  "id": "textbind-024",
+  "topic": "textbind",
+  "rule": "tb-mittel",
+  "q": "Integration gelingt vor allem [dadurch], dass Neuankömmlinge schnell Deutsch lernen können.",
+  "alt": [
+   "indem",
+   "wodurch",
+   "sodass"
+  ],
+  "why": "Dadurch, dass = genom att. Dadurch står i huvudsatsen och dass inleder bisatsen. Indem, wodurch och sodass kan inte stå framför dass.",
+  "sv": "Integration lyckas framför allt genom att nyanlända snabbt kan lära sig tyska."
+ },
+ {
+  "id": "textbind-025",
+  "topic": "textbind",
+  "rule": "tb-kontrast",
+  "type": "rw",
+  "q": "Mein Bruder studiert Medizin. Ich studiere Musik.",
+  "cue": "während",
+  "a": "Mein Bruder studiert Medizin, während ich Musik studiere.",
+  "acc": [
+   "Während mein Bruder Medizin studiert, studiere ich Musik.",
+   "Während ich Musik studiere, studiert mein Bruder Medizin."
+  ],
+  "alt": [
+   "Mein Bruder studiert Medizin, während studiere ich Musik.",
+   "Mein Bruder studiert Medizin, während ich studiere Musik."
+  ],
+  "why": "Während (medan) är en subjunktion: verbet studiere ställs sist i bisatsen. Står bisatsen först börjar huvudsatsen med verbet.",
+  "sv": "Min bror läser medicin, medan jag läser musik."
+ },
+ {
+  "id": "textbind-026",
+  "topic": "textbind",
+  "rule": "tb-folge",
+  "type": "rw",
+  "q": "Der Bus hatte Verspätung. Wir haben den Anfang der Oper verpasst.",
+  "cue": "folglich",
+  "a": "Der Bus hatte Verspätung, folglich haben wir den Anfang der Oper verpasst.",
+  "acc": [
+   "Der Bus hatte Verspätung, wir haben folglich den Anfang der Oper verpasst.",
+   "Der Bus hatte Verspätung, wir haben den Anfang der Oper folglich verpasst."
+  ],
+  "alt": [
+   "Der Bus hatte Verspätung, folglich wir haben den Anfang der Oper verpasst.",
+   "Der Bus hatte Verspätung, folglich wir den Anfang der Oper verpasst haben."
+  ],
+  "why": "Folglich är ett adverb, inte en subjunktion: står det först kommer verbet haben direkt efter. Det kan också stå inne i satsen efter verbet.",
+  "sv": "Bussen var försenad, följaktligen missade vi början av operan."
+ },
+ {
+  "id": "textbind-027",
+  "topic": "textbind",
+  "rule": "tb-konzess",
+  "type": "rw",
+  "q": "Die Karten waren sehr teuer. Das Konzert war ausverkauft.",
+  "cue": "obgleich",
+  "a": "Obgleich die Karten sehr teuer waren, war das Konzert ausverkauft.",
+  "acc": [
+   "Das Konzert war ausverkauft, obgleich die Karten sehr teuer waren.",
+   "Das Konzert war, obgleich die Karten sehr teuer waren, ausverkauft."
+  ],
+  "alt": [
+   "Obgleich die Karten waren sehr teuer, war das Konzert ausverkauft.",
+   "Obgleich die Karten sehr teuer waren, das Konzert war ausverkauft."
+  ],
+  "why": "Obgleich (fastän) är en subjunktion: waren står sist i bisatsen. När bisatsen står först börjar huvudsatsen med verbet (war das Konzert).",
+  "sv": "Fastän biljetterna var mycket dyra var konserten slutsåld."
+ },
+ {
+  "id": "textbind-028",
+  "topic": "textbind",
+  "rule": "tb-konzess",
+  "type": "rw",
+  "q": "Die Probe war anstrengend. Die Musiker waren gut gelaunt.",
+  "cue": "dennoch",
+  "a": "Die Probe war anstrengend, dennoch waren die Musiker gut gelaunt.",
+  "acc": [
+   "Die Probe war anstrengend, die Musiker waren dennoch gut gelaunt."
+  ],
+  "alt": [
+   "Die Probe war anstrengend, dennoch die Musiker waren gut gelaunt.",
+   "Die Probe war anstrengend, dennoch die Musiker gut gelaunt waren."
+  ],
+  "why": "Dennoch (ändå) är ett adverb: står det först kommer verbet waren direkt efter. Det kan också stå efter verbet inne i satsen.",
+  "sv": "Repetitionen var ansträngande, ändå var musikerna på gott humör."
+ },
+ {
+  "id": "textbind-029",
+  "topic": "textbind",
+  "rule": "tb-bedingung",
+  "type": "rw",
+  "q": "Du kannst den Masterkurs belegen. Voraussetzung: Du hast die Prüfung bestanden.",
+  "cue": "sofern",
+  "a": "Du kannst den Masterkurs belegen, sofern du die Prüfung bestanden hast.",
+  "acc": [
+   "Sofern du die Prüfung bestanden hast, kannst du den Masterkurs belegen."
+  ],
+  "alt": [
+   "Du kannst den Masterkurs belegen, sofern du hast die Prüfung bestanden.",
+   "Sofern du die Prüfung bestanden hast, du kannst den Masterkurs belegen."
+  ],
+  "why": "Sofern (förutsatt att) är en subjunktion: hast står sist. Står bisatsen först börjar huvudsatsen med verbet (kannst du).",
+  "sv": "Du kan läsa masterkursen, förutsatt att du har klarat provet."
+ },
+ {
+  "id": "textbind-030",
+  "topic": "textbind",
+  "rule": "tb-bedingung",
+  "type": "rw",
+  "q": "Wir fahren morgen nach Weimar. Nur ein Bahnstreik kann das verhindern.",
+  "cue": "es sei denn",
+  "a": "Wir fahren morgen nach Weimar, es sei denn, die Bahn streikt.",
+  "alt": [
+   "Wir fahren morgen nach Weimar, es sei denn, streikt die Bahn.",
+   "Wir fahren morgen nach Weimar, es sei denn, die streikt Bahn."
+  ],
+  "why": "Es sei denn (om inte) står efter huvudsatsen och följs av en sats med rak ordföljd: die Bahn streikt. Verbet ska inte stå först eller sist.",
+  "sv": "Vi åker till Weimar i morgon, om inte tågen strejkar."
+ },
+ {
+  "id": "textbind-031",
+  "topic": "textbind",
+  "rule": "tb-mittel",
+  "type": "rw",
+  "q": "Nora hat ihr Studium finanziert. Sie hat abends in einer Bar gearbeitet.",
+  "cue": "indem",
+  "a": "Nora hat ihr Studium finanziert, indem sie abends in einer Bar gearbeitet hat.",
+  "acc": [
+   "Indem sie abends in einer Bar gearbeitet hat, hat Nora ihr Studium finanziert."
+  ],
+  "alt": [
+   "Nora hat ihr Studium finanziert, indem sie hat abends in einer Bar gearbeitet.",
+   "Nora hat ihr Studium finanziert, indem sie abends in einer Bar hat gearbeitet."
+  ],
+  "why": "Indem (genom att) är en subjunktion: det böjda verbet hat står sist, efter participet gearbeitet.",
+  "sv": "Nora finansierade sina studier genom att jobba på en bar på kvällarna."
+ },
+ {
+  "id": "textbind-032",
+  "topic": "textbind",
+  "rule": "tb-folge",
+  "type": "rw",
+  "q": "Es hat die ganze Nacht geschneit. Die Straßen waren am Morgen gesperrt.",
+  "cue": "sodass",
+  "a": "Es hat die ganze Nacht geschneit, sodass die Straßen am Morgen gesperrt waren.",
+  "alt": [
+   "Es hat die ganze Nacht geschneit, sodass waren die Straßen am Morgen gesperrt.",
+   "Es hat die ganze Nacht geschneit, sodass die Straßen waren am Morgen gesperrt."
+  ],
+  "why": "Sodass (så att) är en subjunktion: waren står sist. Sodass-satsen kan inte stå först, eftersom följden kommer efter orsaken.",
+  "sv": "Det snöade hela natten, så att vägarna var avstängda på morgonen."
+ }
+]
