@@ -283,6 +283,247 @@
     }
   },
   {
+    "id": "t4-l-t1-2",
+    "sec": "t1",
+    "title": "Umfrage: Wie beginnt dein Tag?",
+    "lines": [
+      {
+        "who": "N",
+        "fr": "Guten Morgen, hier ist Radio Spree mit unserer Umfrage der Woche. Heute wollten wir wissen: Wie beginnt euer Tag? Wir haben Jugendliche in Berlin gefragt.",
+        "sv": "God morgon, det här är Radio Spree med veckans enkät. I dag ville vi veta: Hur börjar er dag? Vi har frågat ungdomar i Berlin."
+      },
+      {
+        "who": "A",
+        "fr": "Ich heiße Lukas. Morgens bin ich total langsam. Mein Wecker klingelt um sechs, aber ich stehe erst um halb sieben auf. Dann muss ich mich beeilen: zuerst duschen, dann schnell anziehen. Frühstück? Keine Zeit. Ich esse ein Brötchen im Bus.",
+        "sv": "Jag heter Lukas. På morgonen är jag jättelångsam. Min väckarklocka ringer klockan sex, men jag går inte upp förrän halv sju. Sedan måste jag skynda mig: först duscha, sedan snabbt klä på mig. Frukost? Ingen tid. Jag äter en fralla på bussen."
+      },
+      {
+        "who": "N",
+        "fr": "Und wie lange fährst du zur Schule?",
+        "sv": "Och hur länge åker du till skolan?"
+      },
+      {
+        "who": "A",
+        "fr": "Fast eine Stunde. Ich pendle jeden Tag von Potsdam nach Berlin. Das ist ziemlich stressig.",
+        "sv": "Nästan en timme. Jag pendlar varje dag från Potsdam till Berlin. Det är ganska stressigt."
+      },
+      {
+        "who": "B",
+        "fr": "Ich bin Mia. Bei mir ist es ganz anders. Ich stehe gern früh auf und gehe zuerst joggen. Das brauche ich für gute Laune. Danach frühstücke ich in Ruhe mit meinem Vater. Schminken? Nur am Wochenende. Unter der Woche ist mir der Schlaf wichtiger.",
+        "sv": "Jag heter Mia. För mig är det helt annorlunda. Jag går gärna upp tidigt och går först ut och joggar. Det behöver jag för att bli på gott humör. Efteråt äter jag frukost i lugn och ro med min pappa. Sminka mig? Bara på helgen. På vardagarna är sömnen viktigare för mig."
+      },
+      {
+        "who": "N",
+        "fr": "Und wann gehst du abends ins Bett?",
+        "sv": "Och när går du och lägger dig på kvällen?"
+      },
+      {
+        "who": "B",
+        "fr": "Meistens um zehn. Meine Freunde finden das langweilig, aber ich brauche acht Stunden Schlaf. Sonst bin ich in der Schule sofort müde.",
+        "sv": "Oftast klockan tio. Mina kompisar tycker att det är tråkigt, men jag behöver åtta timmars sömn. Annars blir jag genast trött i skolan."
+      },
+      {
+        "who": "N",
+        "fr": "Vielen Dank! Und ihr? Schickt uns eine Sprachnachricht und erzählt von eurem Morgen. Die besten Nachrichten spielen wir morgen um acht.",
+        "sv": "Tack så mycket! Och ni? Skicka ett röstmeddelande till oss och berätta om er morgon. De bästa meddelandena spelar vi i morgon klockan åtta."
+      }
+    ],
+    "questions": [
+      {
+        "type": "helhet",
+        "q": "Vad handlar radioinslaget om?",
+        "opts": [
+          "Hur ungdomar i Berlin börjar sin dag",
+          "Varför ungdomar sover för lite",
+          "Hur man pendlar billigt till skolan",
+          "Vad ungdomar äter till frukost i olika länder"
+        ],
+        "a": 0,
+        "why": "Programledaren säger „Heute wollten wir wissen: Wie beginnt euer Tag?“ och frågar två ungdomar i Berlin."
+      },
+      {
+        "type": "detalj",
+        "q": "Var äter Lukas frukost?",
+        "opts": [
+          "Hemma med sin pappa",
+          "I skolans matsal",
+          "På bussen",
+          "Han äter aldrig"
+        ],
+        "a": 2,
+        "why": "Han säger „Ich esse ein Brötchen im Bus“."
+      },
+      {
+        "type": "detalj",
+        "q": "Varför är Lukas morgnar stressiga?",
+        "opts": [
+          "Han måste gå upp klockan fem",
+          "Han pendlar nästan en timme från Potsdam",
+          "Han måste väcka sina syskon",
+          "Bussen är ofta försenad"
+        ],
+        "a": 1,
+        "why": "Han säger „Fast eine Stunde. Ich pendle jeden Tag von Potsdam nach Berlin. Das ist ziemlich stressig.“"
+      },
+      {
+        "type": "detalj",
+        "q": "Vad gör Mia först på morgonen?",
+        "opts": [
+          "Hon sminkar sig",
+          "Hon duschar",
+          "Hon äter frukost",
+          "Hon går ut och joggar"
+        ],
+        "a": 3,
+        "why": "Hon säger „Ich stehe gern früh auf und gehe zuerst joggen“."
+      },
+      {
+        "type": "tolkning",
+        "q": "Varför går Mia och lägger sig redan klockan tio?",
+        "opts": [
+          "Hennes föräldrar bestämmer det",
+          "Hon vill orka i skolan och behöver mycket sömn",
+          "Hon tycker att kvällarna är tråkiga",
+          "Hon måste gå upp och jobba tidigt"
+        ],
+        "a": 1,
+        "why": "Hon säger „ich brauche acht Stunden Schlaf. Sonst bin ich in der Schule sofort müde“. Det är viktigare för henne än vad kompisarna tycker."
+      }
+    ],
+    "gloss": {
+      "umfrage": {
+        "t": "die Umfrage",
+        "sv": "enkät",
+        "g": "f"
+      },
+      "jugendliche": {
+        "t": "der Jugendliche (-n)",
+        "sv": "ungdom",
+        "g": "m"
+      },
+      "morgens": {
+        "t": "morgens",
+        "sv": "på morgonen",
+        "g": ""
+      },
+      "wecker": {
+        "t": "der Wecker",
+        "sv": "väckarklocka",
+        "g": "m"
+      },
+      "klingelt": {
+        "t": "klingeln",
+        "sv": "ringa",
+        "g": ""
+      },
+      "beeilen": {
+        "t": "sich beeilen",
+        "sv": "skynda sig",
+        "g": ""
+      },
+      "zuerst": {
+        "t": "zuerst",
+        "sv": "först",
+        "g": ""
+      },
+      "brötchen": {
+        "t": "das Brötchen",
+        "sv": "fralla, småfranska",
+        "g": "n"
+      },
+      "pendle": {
+        "t": "pendeln",
+        "sv": "pendla",
+        "g": ""
+      },
+      "ziemlich": {
+        "t": "ziemlich",
+        "sv": "ganska",
+        "g": ""
+      },
+      "stressig": {
+        "t": "stressig",
+        "sv": "stressig",
+        "g": ""
+      },
+      "früh": {
+        "t": "früh",
+        "sv": "tidig, tidigt",
+        "g": ""
+      },
+      "laune": {
+        "t": "die Laune",
+        "sv": "humör",
+        "g": "f"
+      },
+      "danach": {
+        "t": "danach",
+        "sv": "efteråt",
+        "g": ""
+      },
+      "ruhe": {
+        "t": "die Ruhe",
+        "sv": "lugn, ro",
+        "g": "f"
+      },
+      "schminken": {
+        "t": "sich schminken",
+        "sv": "sminka sig",
+        "g": ""
+      },
+      "unter": {
+        "t": "unter der Woche",
+        "sv": "på vardagarna",
+        "g": ""
+      },
+      "wichtiger": {
+        "t": "wichtig",
+        "sv": "viktig",
+        "g": ""
+      },
+      "schlaf": {
+        "t": "der Schlaf",
+        "sv": "sömn",
+        "g": "m"
+      },
+      "bett": {
+        "t": "ins Bett gehen",
+        "sv": "gå och lägga sig",
+        "g": ""
+      },
+      "meistens": {
+        "t": "meistens",
+        "sv": "oftast",
+        "g": ""
+      },
+      "sonst": {
+        "t": "sonst",
+        "sv": "annars",
+        "g": ""
+      },
+      "sofort": {
+        "t": "sofort",
+        "sv": "genast, direkt",
+        "g": ""
+      },
+      "müde": {
+        "t": "müde",
+        "sv": "trött",
+        "g": ""
+      },
+      "sprachnachricht": {
+        "t": "die Sprachnachricht",
+        "sv": "röstmeddelande",
+        "g": "f"
+      },
+      "nachrichten": {
+        "t": "die Nachricht (-en)",
+        "sv": "meddelande",
+        "g": "f"
+      }
+    }
+  },
+  {
     "id": "t4-l-t2",
     "sec": "t2",
     "title": "Ein Zimmer in der WG",
@@ -571,6 +812,257 @@
       "melde": {
         "t": "sich melden (bei + Dat.)",
         "sv": "höra av sig (till)",
+        "g": ""
+      }
+    }
+  },
+  {
+    "id": "t4-l-t2-2",
+    "sec": "t2",
+    "title": "Anruf bei der Hausverwaltung",
+    "lines": [
+      {
+        "who": "A",
+        "fr": "Hausverwaltung Krüger, guten Tag.",
+        "sv": "Fastighetsförvaltningen Krüger, god dag."
+      },
+      {
+        "who": "B",
+        "fr": "Guten Tag, hier ist Paul Weber aus der Lindenstraße zwölf, dritter Stock. Ich habe ein Problem in meiner Wohnung.",
+        "sv": "God dag, det här är Paul Weber på Lindenstraße tolv, tredje våningen. Jag har ett problem i min lägenhet."
+      },
+      {
+        "who": "A",
+        "fr": "Was ist denn los, Herr Weber?",
+        "sv": "Vad är det som har hänt, herr Weber?"
+      },
+      {
+        "who": "B",
+        "fr": "Seit gestern funktioniert die Heizung im Wohnzimmer nicht mehr. Es ist total kalt. Und in der Küche tropft der Wasserhahn, die ganze Nacht.",
+        "sv": "Sedan i går fungerar elementet i vardagsrummet inte längre. Det är jättekallt. Och i köket droppar kranen, hela natten."
+      },
+      {
+        "who": "A",
+        "fr": "Oh, das tut mir leid. Haben Sie schon mit dem Hausmeister gesprochen?",
+        "sv": "Oj, vad tråkigt. Har du redan pratat med fastighetsskötaren?"
+      },
+      {
+        "who": "B",
+        "fr": "Ich habe bei ihm geklingelt, aber er war nicht da. Ich habe ihm auch einen Zettel in den Briefkasten gesteckt.",
+        "sv": "Jag ringde på hos honom, men han var inte hemma. Jag lade också en lapp i hans brevlåda."
+      },
+      {
+        "who": "A",
+        "fr": "Herr Schulz ist diese Woche leider im Urlaub. Ich schicke Ihnen morgen einen Handwerker. Passt es Ihnen um neun Uhr?",
+        "sv": "Herr Schulz har tyvärr semester den här veckan. Jag skickar en hantverkare till dig i morgon. Passar det klockan nio?"
+      },
+      {
+        "who": "B",
+        "fr": "Um neun habe ich Unterricht. Geht es auch am Nachmittag?",
+        "sv": "Klockan nio har jag lektion. Går det också på eftermiddagen?"
+      },
+      {
+        "who": "A",
+        "fr": "Ja, um halb drei. Ist dann jemand zu Hause?",
+        "sv": "Ja, halv tre. Är det någon hemma då?"
+      },
+      {
+        "who": "B",
+        "fr": "Ja, mein Mitbewohner ist da. Und noch eine Frage: Muss ich die Reparatur selbst bezahlen?",
+        "sv": "Ja, min rumskamrat är hemma. Och en fråga till: Måste jag betala reparationen själv?"
+      },
+      {
+        "who": "A",
+        "fr": "Nein, keine Sorge. Das steht in Ihrem Mietvertrag: Reparaturen an der Heizung bezahlt der Vermieter.",
+        "sv": "Nej, oroa dig inte. Det står i ditt hyresavtal: Reparationer av värmen betalar hyresvärden."
+      },
+      {
+        "who": "B",
+        "fr": "Gut, danke. Haben Sie noch einen Tipp für heute Abend?",
+        "sv": "Bra, tack. Har du något tips för i kväll?"
+      },
+      {
+        "who": "A",
+        "fr": "Ziehen Sie sich warm an! Und lüften Sie nur kurz, dann bleibt die Wärme in der Wohnung.",
+        "sv": "Klä dig varmt! Och vädra bara en kort stund, så stannar värmen i lägenheten."
+      },
+      {
+        "who": "B",
+        "fr": "Mache ich. Vielen Dank, Frau Krüger. Auf Wiederhören!",
+        "sv": "Det ska jag göra. Tack så mycket, fru Krüger. Hej då!"
+      }
+    ],
+    "questions": [
+      {
+        "type": "helhet",
+        "q": "Varför ringer Paul?",
+        "opts": [
+          "Han vill säga upp sin lägenhet",
+          "Han vill anmäla fel i lägenheten",
+          "Han klagar på en granne som låter",
+          "Han har tappat bort sin nyckel"
+        ],
+        "a": 1,
+        "why": "Han säger „Ich habe ein Problem in meiner Wohnung“ och berättar om värmen och kranen."
+      },
+      {
+        "type": "detalj",
+        "q": "Vad är det för fel i lägenheten?",
+        "opts": [
+          "Duschen och spisen fungerar inte",
+          "Fönstret i köket går inte att stänga",
+          "Elementet i vardagsrummet är kallt och kranen i köket droppar",
+          "Det är fukt i badrummet"
+        ],
+        "a": 2,
+        "why": "„Seit gestern funktioniert die Heizung im Wohnzimmer nicht mehr“ och „in der Küche tropft der Wasserhahn“."
+      },
+      {
+        "type": "detalj",
+        "q": "Varför kan fastighetsskötaren inte hjälpa till?",
+        "opts": [
+          "Han är sjuk",
+          "Han har semester",
+          "Han har för mycket att göra",
+          "Han har slutat"
+        ],
+        "a": 1,
+        "why": "Fru Krüger säger „Herr Schulz ist diese Woche leider im Urlaub“."
+      },
+      {
+        "type": "detalj",
+        "q": "När kommer hantverkaren?",
+        "opts": [
+          "I dag klockan nio",
+          "I morgon klockan nio",
+          "I morgon halv tre",
+          "På fredag eftermiddag"
+        ],
+        "a": 2,
+        "why": "Paul har lektion klockan nio, så de bestämmer „um halb drei“ i morgon."
+      },
+      {
+        "type": "tolkning",
+        "q": "Varför behöver Paul inte betala reparationen?",
+        "opts": [
+          "Hantverkaren är en vän till honom",
+          "Det står i hyresavtalet att hyresvärden betalar",
+          "Paul har redan betalat i hyran för nästa månad",
+          "Rumskamraten har lovat att betala"
+        ],
+        "a": 1,
+        "why": "„Das steht in Ihrem Mietvertrag: Reparaturen an der Heizung bezahlt der Vermieter.“"
+      }
+    ],
+    "gloss": {
+      "hausverwaltung": {
+        "t": "die Hausverwaltung",
+        "sv": "fastighetsförvaltning",
+        "g": "f"
+      },
+      "stock": {
+        "t": "der Stock",
+        "sv": "våning",
+        "g": "m"
+      },
+      "wohnung": {
+        "t": "die Wohnung",
+        "sv": "lägenhet",
+        "g": "f"
+      },
+      "funktioniert": {
+        "t": "funktionieren",
+        "sv": "fungera",
+        "g": ""
+      },
+      "heizung": {
+        "t": "die Heizung",
+        "sv": "värme, element",
+        "g": "f"
+      },
+      "tropft": {
+        "t": "tropfen",
+        "sv": "droppa",
+        "g": ""
+      },
+      "wasserhahn": {
+        "t": "der Wasserhahn",
+        "sv": "kran",
+        "g": "m"
+      },
+      "hausmeister": {
+        "t": "der Hausmeister",
+        "sv": "fastighetsskötare, vaktmästare",
+        "g": "m"
+      },
+      "geklingelt": {
+        "t": "klingeln",
+        "sv": "ringa på",
+        "g": ""
+      },
+      "zettel": {
+        "t": "der Zettel",
+        "sv": "lapp",
+        "g": "m"
+      },
+      "briefkasten": {
+        "t": "der Briefkasten",
+        "sv": "brevlåda",
+        "g": "m"
+      },
+      "gesteckt": {
+        "t": "stecken",
+        "sv": "stoppa, sticka in",
+        "g": ""
+      },
+      "urlaub": {
+        "t": "der Urlaub",
+        "sv": "semester",
+        "g": "m"
+      },
+      "handwerker": {
+        "t": "der Handwerker",
+        "sv": "hantverkare",
+        "g": "m"
+      },
+      "passt": {
+        "t": "passen",
+        "sv": "passa",
+        "g": ""
+      },
+      "mitbewohner": {
+        "t": "der Mitbewohner",
+        "sv": "rumskamrat",
+        "g": "m"
+      },
+      "reparatur": {
+        "t": "die Reparatur",
+        "sv": "reparation",
+        "g": "f"
+      },
+      "mietvertrag": {
+        "t": "der Mietvertrag",
+        "sv": "hyresavtal",
+        "g": "m"
+      },
+      "vermieter": {
+        "t": "der Vermieter",
+        "sv": "hyresvärd",
+        "g": "m"
+      },
+      "lüften": {
+        "t": "lüften",
+        "sv": "vädra",
+        "g": ""
+      },
+      "wärme": {
+        "t": "die Wärme",
+        "sv": "värme",
+        "g": "f"
+      },
+      "wiederhören": {
+        "t": "auf Wiederhören",
+        "sv": "hej då (i telefon)",
         "g": ""
       }
     }
@@ -869,6 +1361,262 @@
     }
   },
   {
+    "id": "t4-l-t3-2",
+    "sec": "t3",
+    "title": "Auf dem Flohmarkt",
+    "lines": [
+      {
+        "who": "B",
+        "fr": "Entschuldigung, was kostet der Mantel hier?",
+        "sv": "Ursäkta, vad kostar den här kappan?"
+      },
+      {
+        "who": "A",
+        "fr": "Der graue? Fünfunddreißig Euro. Der ist fast neu, ich habe ihn nur zweimal getragen.",
+        "sv": "Den grå? Trettiofem euro. Den är nästan ny, jag har bara haft på mig den två gånger."
+      },
+      {
+        "who": "B",
+        "fr": "Hm, fünfunddreißig ist viel für einen gebrauchten Mantel. Darf ich ihn anprobieren?",
+        "sv": "Hm, trettiofem är mycket för en begagnad kappa. Får jag prova den?"
+      },
+      {
+        "who": "A",
+        "fr": "Natürlich. Da hinten am Stand ist ein Spiegel.",
+        "sv": "Självklart. Där bak vid ståndet finns en spegel."
+      },
+      {
+        "who": "B",
+        "fr": "Er passt gut, aber hier am Ärmel fehlt ein Knopf.",
+        "sv": "Den sitter bra, men här på ärmen saknas en knapp."
+      },
+      {
+        "who": "A",
+        "fr": "Stimmt, das habe ich gar nicht gesehen. Na gut, dann dreißig.",
+        "sv": "Det stämmer, det hade jag inte alls sett. Okej, trettio då."
+      },
+      {
+        "who": "B",
+        "fr": "Ich bin noch Schüler und habe nicht so viel Geld. Wie wäre es mit zwanzig?",
+        "sv": "Jag går fortfarande i skolan och har inte så mycket pengar. Vad sägs om tjugo?"
+      },
+      {
+        "who": "A",
+        "fr": "Zwanzig? Nein, das ist zu wenig. Fünfundzwanzig, das ist mein letztes Angebot.",
+        "sv": "Tjugo? Nej, det är för lite. Tjugofem, det är mitt sista bud."
+      },
+      {
+        "who": "B",
+        "fr": "Okay, fünfundzwanzig. Und die Schallplatten hier, verkaufen Sie die auch?",
+        "sv": "Okej, tjugofem. Och de här skivorna, säljer du dem också?"
+      },
+      {
+        "who": "A",
+        "fr": "Ja, jede Platte kostet zwei Euro. Wenn Sie drei nehmen, bekommen Sie Rabatt: fünf Euro für alle drei.",
+        "sv": "Ja, varje skiva kostar två euro. Om du tar tre får du rabatt: fem euro för alla tre."
+      },
+      {
+        "who": "B",
+        "fr": "Super, dann nehme ich diese drei mit klassischer Musik. Kann ich mit Karte zahlen?",
+        "sv": "Toppen, då tar jag de här tre med klassisk musik. Kan jag betala med kort?"
+      },
+      {
+        "who": "A",
+        "fr": "Nein, tut mir leid. Auf dem Flohmarkt zahlt man bar.",
+        "sv": "Nej, tyvärr. På loppmarknaden betalar man kontant."
+      },
+      {
+        "who": "B",
+        "fr": "Kein Problem. Hier sind zwanzig Euro, fünf Euro und … Moment, ich habe noch Münzen. So, dreißig Euro genau.",
+        "sv": "Inga problem. Här är tjugo euro, fem euro och … ett ögonblick, jag har mynt också. Så, trettio euro jämnt."
+      },
+      {
+        "who": "A",
+        "fr": "Danke schön. Möchten Sie eine Tüte?",
+        "sv": "Tack så mycket. Vill du ha en påse?"
+      },
+      {
+        "who": "B",
+        "fr": "Nein danke, ich habe meinen Rucksack dabei. Schönen Sonntag noch!",
+        "sv": "Nej tack, jag har min ryggsäck med mig. Ha en fin söndag!"
+      }
+    ],
+    "questions": [
+      {
+        "type": "helhet",
+        "q": "Vad händer i samtalet?",
+        "opts": [
+          "En kund prutar och köper en kappa och skivor på en loppmarknad",
+          "En kund lämnar tillbaka en trasig kappa i en affär",
+          "Två kompisar säljer sina gamla kläder",
+          "En säljare försöker sälja en ny mobil"
+        ],
+        "a": 0,
+        "why": "Kunden frågar „was kostet der Mantel hier?“, prutar och köper till slut kappan och tre skivor på „Flohmarkt“."
+      },
+      {
+        "type": "detalj",
+        "q": "Varför sänker säljaren priset första gången?",
+        "opts": [
+          "Kunden hittar en fläck på kappan",
+          "Det saknas en knapp på ärmen",
+          "Kappan är för stor",
+          "Marknaden stänger snart"
+        ],
+        "a": 1,
+        "why": "Kunden säger „hier am Ärmel fehlt ein Knopf“, och säljaren svarar „Na gut, dann dreißig“."
+      },
+      {
+        "type": "detalj",
+        "q": "Vad kostar kappan till slut?",
+        "opts": [
+          "Trettiofem euro",
+          "Trettio euro",
+          "Tjugofem euro",
+          "Tjugo euro"
+        ],
+        "a": 2,
+        "why": "Säljaren säger „Fünfundzwanzig, das ist mein letztes Angebot“, och kunden säger okej."
+      },
+      {
+        "type": "detalj",
+        "q": "Hur betalar kunden?",
+        "opts": [
+          "Kontant, med sedlar och mynt",
+          "Med kort",
+          "Med mobilen",
+          "Han betalar en del nu och resten senare"
+        ],
+        "a": 0,
+        "why": "Man kan inte betala med kort: „Auf dem Flohmarkt zahlt man bar.“ Han betalar med sedlar och „Münzen“."
+      },
+      {
+        "type": "tolkning",
+        "q": "Varför säger kunden att han fortfarande går i skolan?",
+        "opts": [
+          "Han vill få studentrabatt i en affär",
+          "Han vill förklara varför han måste gå snart",
+          "Han vill få ett lägre pris",
+          "Han vill visa att han är för ung för att handla"
+        ],
+        "a": 2,
+        "why": "Han säger att han inte har så mycket pengar och föreslår direkt efteråt „Wie wäre es mit zwanzig?“. Det är ett sätt att pruta."
+      }
+    ],
+    "gloss": {
+      "mantel": {
+        "t": "der Mantel",
+        "sv": "kappa, rock",
+        "g": "m"
+      },
+      "getragen": {
+        "t": "tragen",
+        "sv": "ha på sig, bära",
+        "g": ""
+      },
+      "gebrauchten": {
+        "t": "gebraucht",
+        "sv": "begagnad",
+        "g": ""
+      },
+      "anprobieren": {
+        "t": "anprobieren",
+        "sv": "prova (kläder)",
+        "g": ""
+      },
+      "stand": {
+        "t": "der Stand",
+        "sv": "stånd",
+        "g": "m"
+      },
+      "spiegel": {
+        "t": "der Spiegel",
+        "sv": "spegel",
+        "g": "m"
+      },
+      "passt": {
+        "t": "passen",
+        "sv": "passa, sitta bra",
+        "g": ""
+      },
+      "ärmel": {
+        "t": "der Ärmel",
+        "sv": "ärm",
+        "g": "m"
+      },
+      "fehlt": {
+        "t": "fehlen",
+        "sv": "saknas",
+        "g": ""
+      },
+      "knopf": {
+        "t": "der Knopf",
+        "sv": "knapp",
+        "g": "m"
+      },
+      "angebot": {
+        "t": "das Angebot",
+        "sv": "erbjudande, bud",
+        "g": "n"
+      },
+      "schallplatten": {
+        "t": "die Schallplatte (-n)",
+        "sv": "skiva, LP",
+        "g": "f"
+      },
+      "verkaufen": {
+        "t": "verkaufen",
+        "sv": "sälja",
+        "g": ""
+      },
+      "platte": {
+        "t": "die Platte",
+        "sv": "skiva",
+        "g": "f"
+      },
+      "rabatt": {
+        "t": "der Rabatt",
+        "sv": "rabatt",
+        "g": "m"
+      },
+      "klassischer": {
+        "t": "klassisch",
+        "sv": "klassisk",
+        "g": ""
+      },
+      "flohmarkt": {
+        "t": "der Flohmarkt",
+        "sv": "loppmarknad",
+        "g": "m"
+      },
+      "bar": {
+        "t": "bar zahlen",
+        "sv": "betala kontant",
+        "g": ""
+      },
+      "münzen": {
+        "t": "die Münze (-n)",
+        "sv": "mynt",
+        "g": "f"
+      },
+      "genau": {
+        "t": "genau",
+        "sv": "exakt, jämnt",
+        "g": ""
+      },
+      "tüte": {
+        "t": "die Tüte",
+        "sv": "påse",
+        "g": "f"
+      },
+      "rucksack": {
+        "t": "der Rucksack",
+        "sv": "ryggsäck",
+        "g": "m"
+      }
+    }
+  },
+  {
     "id": "t4-l-t4",
     "sec": "t4",
     "title": "Verspätung am Bahnhof",
@@ -1152,6 +1900,232 @@
       "ändert": {
         "t": "sich ändern",
         "sv": "ändras",
+        "g": ""
+      }
+    }
+  },
+  {
+    "id": "t4-l-t4-2",
+    "sec": "t4",
+    "title": "Durchsagen am Hauptbahnhof",
+    "lines": [
+      {
+        "who": "N",
+        "fr": "Meine Damen und Herren, willkommen am Hauptbahnhof Hannover. Bitte lassen Sie Ihr Gepäck nicht allein stehen.",
+        "sv": "Mina damer och herrar, välkomna till Hannover centralstation. Lämna inte ert bagage utan uppsikt."
+      },
+      {
+        "who": "N",
+        "fr": "Achtung an Gleis drei: Es fährt ein der ICE aus Frankfurt nach Hamburg, planmäßige Abfahrt zehn Uhr zwölf. Bitte beachten Sie: Heute halten die Wagen der ersten Klasse nicht vorne, sondern am Ende des Zuges.",
+        "sv": "Observera på spår tre: ICE-tåget från Frankfurt till Hamburg, ordinarie avgång tio och tolv, kör in. Observera: I dag står första klass-vagnarna inte längst fram utan i slutet av tåget."
+      },
+      {
+        "who": "N",
+        "fr": "Eine Information zum Regionalexpress nach Bremen, Abfahrt zehn Uhr zwanzig: Dieser Zug fährt heute nicht von Gleis vier, sondern von Gleis neun. Ich wiederhole: Der Regionalexpress nach Bremen fährt heute von Gleis neun.",
+        "sv": "Information om regionaltåget till Bremen, avgång tio och tjugo: Det här tåget går i dag inte från spår fyra utan från spår nio. Jag upprepar: Regionaltåget till Bremen går i dag från spår nio."
+      },
+      {
+        "who": "N",
+        "fr": "Eine Durchsage für die Fahrgäste nach Hildesheim: Wegen Bauarbeiten fällt die S-Bahn um zehn Uhr fünfundzwanzig aus. Bitte nutzen Sie den Schienenersatzverkehr. Die Busse fahren vor dem Haupteingang ab.",
+        "sv": "Ett meddelande till resenärerna till Hildesheim: På grund av banarbeten är pendeltåget klockan tio och tjugofem inställt. Använd ersättningsbussarna. Bussarna avgår utanför huvudingången."
+      },
+      {
+        "who": "N",
+        "fr": "Der Intercity nach Berlin, planmäßige Abfahrt zehn Uhr achtunddreißig, hat heute etwa fünfzehn Minuten Verspätung. Grund dafür ist eine technische Störung. Reisende mit Anschluss in Berlin wenden sich bitte an das Zugpersonal. Wir bitten um Ihr Verständnis.",
+        "sv": "Intercitytåget till Berlin, ordinarie avgång tio och trettioåtta, är i dag cirka femton minuter försenat. Orsaken är ett tekniskt fel. Resenärer med anslutning i Berlin ombeds vända sig till tågpersonalen. Vi ber om er förståelse."
+      },
+      {
+        "who": "N",
+        "fr": "Und noch ein Hinweis: Das Reisezentrum mit dem Fahrkartenschalter ist heute bis zwanzig Uhr geöffnet. Fahrkarten bekommen Sie auch am Automaten und in der App. Wir wünschen Ihnen eine gute Reise.",
+        "sv": "Och ytterligare en upplysning: Resecentret med biljettkassan har i dag öppet till klockan tjugo. Biljetter kan ni också köpa i automaten och i appen. Vi önskar er en trevlig resa."
+      }
+    ],
+    "questions": [
+      {
+        "type": "helhet",
+        "q": "Vad är det man hör?",
+        "opts": [
+          "Ett samtal mellan en resenär och en konduktör",
+          "Utrop på en stor järnvägsstation",
+          "En reklam för billiga tågbiljetter",
+          "Ett radioprogram om tåg i Tyskland"
+        ],
+        "a": 1,
+        "why": "Man hör flera „Durchsagen“ (utrop) på „Hauptbahnhof Hannover“ om spår, förseningar och inställda tåg."
+      },
+      {
+        "type": "detalj",
+        "q": "Vad är annorlunda med ICE-tåget till Hamburg i dag?",
+        "opts": [
+          "Det går från ett annat spår",
+          "Det är inställt",
+          "Första klass-vagnarna står i slutet av tåget",
+          "Det är trettio minuter försenat"
+        ],
+        "a": 2,
+        "why": "„Heute halten die Wagen der ersten Klasse nicht vorne, sondern am Ende des Zuges.“"
+      },
+      {
+        "type": "detalj",
+        "q": "Från vilket spår går regionaltåget till Bremen i dag?",
+        "opts": [
+          "Spår tre",
+          "Spår fyra",
+          "Spår nio",
+          "Spår tolv"
+        ],
+        "a": 2,
+        "why": "„Der Regionalexpress nach Bremen fährt heute von Gleis neun.“ Spår fyra är det vanliga spåret."
+      },
+      {
+        "type": "detalj",
+        "q": "Hur kommer man till Hildesheim?",
+        "opts": [
+          "Med ersättningsbuss från huvudingången",
+          "Med ICE-tåget till Hamburg",
+          "Med nästa pendeltåg en timme senare",
+          "Man måste ta taxi"
+        ],
+        "a": 0,
+        "why": "Pendeltåget är inställt, och man ska ta „Schienenersatzverkehr“: „Die Busse fahren vor dem Haupteingang ab.“"
+      },
+      {
+        "type": "tolkning",
+        "q": "Varför ska resenärer med anslutning i Berlin prata med tågpersonalen?",
+        "opts": [
+          "De har fel biljett",
+          "Tåget är försenat, så de kan missa sitt nästa tåg",
+          "Tåget går inte ända till Berlin i dag",
+          "De måste byta vagn"
+        ],
+        "a": 1,
+        "why": "Intercitytåget är femton minuter försenat. Den som ska byta tåg i Berlin kanske inte hinner, och personalen kan hjälpa till."
+      }
+    ],
+    "gloss": {
+      "gepäck": {
+        "t": "das Gepäck",
+        "sv": "bagage",
+        "g": "n"
+      },
+      "gleis": {
+        "t": "das Gleis",
+        "sv": "spår",
+        "g": "n"
+      },
+      "fährt": {
+        "t": "fahren",
+        "sv": "åka, gå (om tåg); es fährt ein = det kör in",
+        "g": ""
+      },
+      "planmäßige": {
+        "t": "planmäßig",
+        "sv": "enligt tidtabellen, ordinarie",
+        "g": ""
+      },
+      "abfahrt": {
+        "t": "die Abfahrt",
+        "sv": "avgång",
+        "g": "f"
+      },
+      "beachten": {
+        "t": "beachten",
+        "sv": "observera, lägga märke till",
+        "g": ""
+      },
+      "halten": {
+        "t": "halten",
+        "sv": "stanna",
+        "g": ""
+      },
+      "wagen": {
+        "t": "der Wagen",
+        "sv": "vagn",
+        "g": "m"
+      },
+      "wiederhole": {
+        "t": "wiederholen",
+        "sv": "upprepa",
+        "g": ""
+      },
+      "durchsage": {
+        "t": "die Durchsage",
+        "sv": "utrop, meddelande i högtalare",
+        "g": "f"
+      },
+      "fahrgäste": {
+        "t": "der Fahrgast (-gäste)",
+        "sv": "resenär, passagerare",
+        "g": "m"
+      },
+      "bauarbeiten": {
+        "t": "die Bauarbeiten",
+        "sv": "byggarbeten",
+        "g": "pl"
+      },
+      "fällt": {
+        "t": "ausfallen",
+        "sv": "ställas in",
+        "g": ""
+      },
+      "nutzen": {
+        "t": "nutzen",
+        "sv": "använda",
+        "g": ""
+      },
+      "schienenersatzverkehr": {
+        "t": "der Schienenersatzverkehr",
+        "sv": "ersättningstrafik (buss i stället för tåg)",
+        "g": "m"
+      },
+      "haupteingang": {
+        "t": "der Haupteingang",
+        "sv": "huvudingång",
+        "g": "m"
+      },
+      "verspätung": {
+        "t": "die Verspätung",
+        "sv": "försening",
+        "g": "f"
+      },
+      "störung": {
+        "t": "die Störung",
+        "sv": "störning, fel",
+        "g": "f"
+      },
+      "anschluss": {
+        "t": "der Anschluss",
+        "sv": "anslutning",
+        "g": "m"
+      },
+      "wenden": {
+        "t": "sich wenden an",
+        "sv": "vända sig till",
+        "g": ""
+      },
+      "zugpersonal": {
+        "t": "das Zugpersonal",
+        "sv": "tågpersonal",
+        "g": "n"
+      },
+      "verständnis": {
+        "t": "das Verständnis",
+        "sv": "förståelse",
+        "g": "n"
+      },
+      "hinweis": {
+        "t": "der Hinweis",
+        "sv": "upplysning, tips",
+        "g": "m"
+      },
+      "fahrkartenschalter": {
+        "t": "der Fahrkartenschalter",
+        "sv": "biljettlucka",
+        "g": "m"
+      },
+      "geöffnet": {
+        "t": "geöffnet",
+        "sv": "öppen",
         "g": ""
       }
     }
@@ -1446,6 +2420,277 @@
         "t": "die Geschichte",
         "sv": "historia",
         "g": "f"
+      }
+    }
+  },
+  {
+    "id": "t4-l-t5-2",
+    "sec": "t5",
+    "title": "Interview: Ein Jahr in Freiburg",
+    "lines": [
+      {
+        "who": "A",
+        "fr": "Willkommen zurück bei Radio Schulhof! Heute ist Linnea bei uns. Sie kommt aus Schweden und macht bei uns ein Auslandsjahr. Hallo, Linnea!",
+        "sv": "Välkomna tillbaka till Radio Schulhof! I dag har vi Linnea här. Hon kommer från Sverige och gör ett utlandsår hos oss. Hej, Linnea!"
+      },
+      {
+        "who": "B",
+        "fr": "Hallo! Danke für die Einladung.",
+        "sv": "Hej! Tack för inbjudan."
+      },
+      {
+        "who": "A",
+        "fr": "Du bist jetzt seit sechs Monaten in Freiburg. Wie gefällt es dir?",
+        "sv": "Nu har du varit i Freiburg i sex månader. Hur trivs du?"
+      },
+      {
+        "who": "B",
+        "fr": "Sehr gut! Am Anfang war es aber schwer. Ich hatte Heimweh, vor allem im Winter, und ich habe meine Familie sehr vermisst.",
+        "sv": "Jättebra! Men i början var det svårt. Jag hade hemlängtan, framför allt på vintern, och jag saknade min familj mycket."
+      },
+      {
+        "who": "A",
+        "fr": "Und wie ist deine Gastfamilie?",
+        "sv": "Och hur är din värdfamilj?"
+      },
+      {
+        "who": "B",
+        "fr": "Total nett. Ich habe zwei Gastbrüder, und wir kochen oft zusammen. Meine Gastmutter hilft mir auch mit den Vokabeln.",
+        "sv": "Jättesnäll. Jag har två värdbröder, och vi lagar ofta mat tillsammans. Min värdmamma hjälper mig också med glosorna."
+      },
+      {
+        "who": "A",
+        "fr": "Was ist in der Schule anders als in Schweden?",
+        "sv": "Vad är annorlunda i skolan jämfört med Sverige?"
+      },
+      {
+        "who": "B",
+        "fr": "Vieles! In Schweden nennen wir die Lehrer beim Vornamen. Hier sage ich „Frau Becker“ und „Sie“. Und die Noten gehen von eins bis sechs. Eins ist die beste Note! Das war am Anfang total verwirrend.",
+        "sv": "Mycket! I Sverige kallar vi lärarna vid förnamn. Här säger jag ”Frau Becker” och ”Sie”. Och betygen går från ett till sex. Ett är det bästa betyget! Det var jätteförvirrande i början."
+      },
+      {
+        "who": "A",
+        "fr": "Welche Fächer sind für dich am schwierigsten?",
+        "sv": "Vilka ämnen är svårast för dig?"
+      },
+      {
+        "who": "B",
+        "fr": "Chemie und Physik, weil es so viele neue Wörter gibt. Aber meine Klassenkameraden helfen mir sehr. Manchmal leihen sie mir ihre Hefte.",
+        "sv": "Kemi och fysik, eftersom det finns så många nya ord. Men mina klasskompisar hjälper mig mycket. Ibland lånar de ut sina häften till mig."
+      },
+      {
+        "who": "A",
+        "fr": "Und dein Deutsch? Man hört fast keinen Akzent!",
+        "sv": "Och din tyska? Man hör nästan ingen brytning!"
+      },
+      {
+        "who": "B",
+        "fr": "Danke! Aber den Dialekt hier in Baden verstehe ich noch nicht immer.",
+        "sv": "Tack! Men dialekten här i Baden förstår jag inte alltid än."
+      },
+      {
+        "who": "A",
+        "fr": "Was möchtest du nach dem Jahr machen?",
+        "sv": "Vad vill du göra efter året?"
+      },
+      {
+        "who": "B",
+        "fr": "Ich möchte in Deutschland Musik studieren, vielleicht an der Musikhochschule hier in Freiburg. Deshalb ist das Auslandsjahr perfekt für mich.",
+        "sv": "Jag vill studera musik i Tyskland, kanske på musikhögskolan här i Freiburg. Därför är utlandsåret perfekt för mig."
+      },
+      {
+        "who": "A",
+        "fr": "Viel Glück, Linnea, und danke für das Gespräch!",
+        "sv": "Lycka till, Linnea, och tack för samtalet!"
+      }
+    ],
+    "questions": [
+      {
+        "type": "helhet",
+        "q": "Vad handlar intervjun om?",
+        "opts": [
+          "En svensk elevs utlandsår i Tyskland",
+          "En tysk lärare som har jobbat i Sverige",
+          "En skolresa till Freiburg",
+          "Hur man söker till en musikhögskola"
+        ],
+        "a": 0,
+        "why": "Programledaren säger att Linnea „kommt aus Schweden und macht bei uns ein Auslandsjahr“."
+      },
+      {
+        "type": "detalj",
+        "q": "När hade Linnea mest hemlängtan?",
+        "opts": [
+          "Den första veckan",
+          "På sommaren",
+          "Framför allt på vintern",
+          "Kring hennes födelsedag"
+        ],
+        "a": 2,
+        "why": "Hon säger „Ich hatte Heimweh, vor allem im Winter“."
+      },
+      {
+        "type": "detalj",
+        "q": "Vad var förvirrande med betygen i Tyskland?",
+        "opts": [
+          "Det finns inga betyg i musik",
+          "Ett är det bästa betyget",
+          "Man får betyg varje vecka",
+          "Betygen är bokstäver i stället för siffror"
+        ],
+        "a": 1,
+        "why": "„Die Noten gehen von eins bis sechs. Eins ist die beste Note!“"
+      },
+      {
+        "type": "detalj",
+        "q": "Varför är kemi och fysik svårast för Linnea?",
+        "opts": [
+          "Lärarna pratar dialekt",
+          "Hon har aldrig läst ämnena förut",
+          "Det finns så många nya ord",
+          "Klasskompisarna hjälper inte till"
+        ],
+        "a": 2,
+        "why": "Hon säger „weil es so viele neue Wörter gibt“."
+      },
+      {
+        "type": "tolkning",
+        "q": "Varför är utlandsåret „perfekt“ för Linnea?",
+        "opts": [
+          "Hon vill bo med sin värdfamilj för alltid",
+          "Hon vill studera musik i Tyskland och behöver kunna tyska och känna landet",
+          "Hon slipper skolan i Sverige",
+          "Hon vill bli lärare i Freiburg"
+        ],
+        "a": 1,
+        "why": "Hon vill „in Deutschland Musik studieren“, kanske i Freiburg. Året ger henne språket och erfarenhet av landet inför det."
+      }
+    ],
+    "gloss": {
+      "auslandsjahr": {
+        "t": "das Auslandsjahr",
+        "sv": "utlandsår",
+        "g": "n"
+      },
+      "einladung": {
+        "t": "die Einladung",
+        "sv": "inbjudan",
+        "g": "f"
+      },
+      "gefällt": {
+        "t": "gefallen",
+        "sv": "tycka om, gilla",
+        "g": ""
+      },
+      "anfang": {
+        "t": "der Anfang",
+        "sv": "början",
+        "g": "m"
+      },
+      "heimweh": {
+        "t": "das Heimweh",
+        "sv": "hemlängtan",
+        "g": "n"
+      },
+      "vermisst": {
+        "t": "vermissen",
+        "sv": "sakna",
+        "g": ""
+      },
+      "gastfamilie": {
+        "t": "die Gastfamilie",
+        "sv": "värdfamilj",
+        "g": "f"
+      },
+      "gastbrüder": {
+        "t": "der Gastbruder (-brüder)",
+        "sv": "värdbror",
+        "g": "m"
+      },
+      "gastmutter": {
+        "t": "die Gastmutter",
+        "sv": "värdmamma",
+        "g": "f"
+      },
+      "vokabeln": {
+        "t": "die Vokabel (-n)",
+        "sv": "glosa",
+        "g": "f"
+      },
+      "vornamen": {
+        "t": "der Vorname",
+        "sv": "förnamn",
+        "g": "m"
+      },
+      "noten": {
+        "t": "die Note (-n)",
+        "sv": "betyg",
+        "g": "f"
+      },
+      "verwirrend": {
+        "t": "verwirrend",
+        "sv": "förvirrande",
+        "g": ""
+      },
+      "fächer": {
+        "t": "das Fach (Fächer)",
+        "sv": "ämne",
+        "g": "n"
+      },
+      "chemie": {
+        "t": "die Chemie",
+        "sv": "kemi",
+        "g": "f"
+      },
+      "physik": {
+        "t": "die Physik",
+        "sv": "fysik",
+        "g": "f"
+      },
+      "klassenkameraden": {
+        "t": "der Klassenkamerad (-en)",
+        "sv": "klasskompis",
+        "g": "m"
+      },
+      "leihen": {
+        "t": "leihen",
+        "sv": "låna ut",
+        "g": ""
+      },
+      "hefte": {
+        "t": "das Heft (-e)",
+        "sv": "häfte, skrivbok",
+        "g": "n"
+      },
+      "akzent": {
+        "t": "der Akzent",
+        "sv": "brytning, accent",
+        "g": "m"
+      },
+      "dialekt": {
+        "t": "der Dialekt",
+        "sv": "dialekt",
+        "g": "m"
+      },
+      "studieren": {
+        "t": "studieren",
+        "sv": "studera, plugga på universitet",
+        "g": ""
+      },
+      "musikhochschule": {
+        "t": "die Musikhochschule",
+        "sv": "musikhögskola",
+        "g": "f"
+      },
+      "deshalb": {
+        "t": "deshalb",
+        "sv": "därför",
+        "g": ""
+      },
+      "gespräch": {
+        "t": "das Gespräch",
+        "sv": "samtal",
+        "g": "n"
       }
     }
   },
@@ -2319,6 +3564,227 @@
     }
   },
   {
+    "id": "t4-l-t7-2",
+    "sec": "t7",
+    "title": "Nachricht an die Arztpraxis",
+    "lines": [
+      {
+        "who": "A",
+        "fr": "Guten Tag, Sie sind verbunden mit der Praxis Dr. Albers, Hals-Nasen-Ohren-Heilkunde. Leider rufen Sie außerhalb unserer Sprechzeiten an.",
+        "sv": "God dag, du har kommit till doktor Albers mottagning, öron-näsa-hals. Tyvärr ringer du utanför våra mottagningstider."
+      },
+      {
+        "who": "A",
+        "fr": "Unsere Sprechzeiten sind Montag bis Freitag von acht bis zwölf Uhr, und am Montag, Dienstag und Donnerstag auch von fünfzehn bis achtzehn Uhr.",
+        "sv": "Våra mottagningstider är måndag till fredag klockan åtta till tolv, och måndag, tisdag och torsdag även klockan femton till arton."
+      },
+      {
+        "who": "A",
+        "fr": "In dringenden Notfällen rufen Sie bitte den ärztlichen Bereitschaftsdienst unter eins eins sechs eins eins sieben an. Bitte denken Sie bei Ihrem Besuch an Ihre Versichertenkarte. Wenn Sie einen Termin möchten, sprechen Sie nach dem Signalton Ihren Namen und Ihre Telefonnummer. Wir rufen Sie zurück.",
+        "sv": "I brådskande fall ringer du jourläkaren på 116 117. Kom ihåg att ta med ditt försäkringskort när du kommer. Om du vill ha en tid, säg ditt namn och telefonnummer efter tonen. Vi ringer upp dig."
+      },
+      {
+        "who": "B",
+        "fr": "Hallo, hier ist Sophie Lang. Meine Nummer ist null eins sieben sechs, vier fünf acht, zwei drei neun eins. Ich bin seit Samstag stark erkältet, und seit gestern bin ich total heiser. Ich kann kaum sprechen, und beim Schlucken tut mir der Hals weh.",
+        "sv": "Hej, det här är Sophie Lang. Mitt nummer är 0176 458 2391. Jag har varit ordentligt förkyld sedan lördag, och sedan i går är jag helt hes. Jag kan knappt prata, och det gör ont i halsen när jag sväljer."
+      },
+      {
+        "who": "B",
+        "fr": "Das Problem ist: Ich singe im Chor und habe am Freitag ein Vorsingen an der Musikhochschule. Ich habe schon Hustensaft aus der Apotheke genommen und mich geschont, aber es wird nicht besser.",
+        "sv": "Problemet är: Jag sjunger i kör och har provsjungning på musikhögskolan på fredag. Jag har redan tagit hostmedicin från apoteket och tagit det lugnt, men det blir inte bättre."
+      },
+      {
+        "who": "B",
+        "fr": "Könnte ich bitte morgen Vormittag einen Termin bekommen? Eine Überweisung von meiner Hausärztin habe ich schon. Vielen Dank und auf Wiederhören!",
+        "sv": "Skulle jag kunna få en tid i morgon förmiddag? En remiss från min husläkare har jag redan. Tack så mycket och hej då!"
+      }
+    ],
+    "questions": [
+      {
+        "type": "helhet",
+        "q": "Vad är det man hör?",
+        "opts": [
+          "Ett samtal mellan en läkare och en patient",
+          "En läkarmottagnings telefonsvarare och ett meddelande från en patient",
+          "Ett radioprogram om förkylningar",
+          "Ett utrop på ett sjukhus"
+        ],
+        "a": 1,
+        "why": "Först hör man mottagningens inspelade meddelande („Sie sind verbunden mit der Praxis Dr. Albers“), sedan lämnar Sophie ett meddelande."
+      },
+      {
+        "type": "detalj",
+        "q": "Vilka eftermiddagar har mottagningen öppet?",
+        "opts": [
+          "Varje vardag",
+          "Måndag, tisdag och torsdag",
+          "Bara på fredag",
+          "Onsdag och fredag"
+        ],
+        "a": 1,
+        "why": "„am Montag, Dienstag und Donnerstag auch von fünfzehn bis achtzehn Uhr“."
+      },
+      {
+        "type": "detalj",
+        "q": "Vad ska man komma ihåg att ta med?",
+        "opts": [
+          "Sitt försäkringskort",
+          "Sin medicin",
+          "En remiss från skolan",
+          "Sitt pass"
+        ],
+        "a": 0,
+        "why": "„Bitte denken Sie bei Ihrem Besuch an Ihre Versichertenkarte.“"
+      },
+      {
+        "type": "detalj",
+        "q": "Vilka besvär har Sophie?",
+        "opts": [
+          "Hon har ont i ryggen och feber",
+          "Hon har ont i öronen och hör dåligt",
+          "Hon är förkyld, hes och har ont när hon sväljer",
+          "Hon har ont i magen"
+        ],
+        "a": 2,
+        "why": "„stark erkältet“, „total heiser“ och „beim Schlucken tut mir der Hals weh“."
+      },
+      {
+        "type": "tolkning",
+        "q": "Varför vill Sophie ha en tid redan i morgon?",
+        "opts": [
+          "Hon ska resa bort på fredag",
+          "Hon behöver bli frisk till provsjungningen på fredag",
+          "Mottagningen har stängt resten av veckan",
+          "Hennes husläkare har sagt att det är akut"
+        ],
+        "a": 1,
+        "why": "Hon har „am Freitag ein Vorsingen an der Musikhochschule“ och kan knappt prata. Hon behöver rösten snabbt."
+      }
+    ],
+    "gloss": {
+      "verbunden": {
+        "t": "verbunden sein mit",
+        "sv": "ha kommit till (i telefon)",
+        "g": ""
+      },
+      "praxis": {
+        "t": "die Praxis",
+        "sv": "mottagning",
+        "g": "f"
+      },
+      "hals-nasen-ohren-heilkunde": {
+        "t": "die Hals-Nasen-Ohren-Heilkunde",
+        "sv": "öron-näsa-hals (medicinsk specialitet)",
+        "g": "f"
+      },
+      "außerhalb": {
+        "t": "außerhalb",
+        "sv": "utanför",
+        "g": ""
+      },
+      "sprechzeiten": {
+        "t": "die Sprechzeiten",
+        "sv": "mottagningstider",
+        "g": "pl"
+      },
+      "dringenden": {
+        "t": "dringend",
+        "sv": "brådskande",
+        "g": ""
+      },
+      "notfällen": {
+        "t": "der Notfall (-fälle)",
+        "sv": "nödfall",
+        "g": "m"
+      },
+      "bereitschaftsdienst": {
+        "t": "der Bereitschaftsdienst",
+        "sv": "jour",
+        "g": "m"
+      },
+      "versichertenkarte": {
+        "t": "die Versichertenkarte",
+        "sv": "försäkringskort",
+        "g": "f"
+      },
+      "termin": {
+        "t": "der Termin",
+        "sv": "tid, möte",
+        "g": "m"
+      },
+      "signalton": {
+        "t": "der Signalton",
+        "sv": "ton, pip",
+        "g": "m"
+      },
+      "erkältet": {
+        "t": "erkältet",
+        "sv": "förkyld",
+        "g": ""
+      },
+      "heiser": {
+        "t": "heiser",
+        "sv": "hes",
+        "g": ""
+      },
+      "kaum": {
+        "t": "kaum",
+        "sv": "knappt",
+        "g": ""
+      },
+      "schlucken": {
+        "t": "schlucken",
+        "sv": "svälja",
+        "g": ""
+      },
+      "hals": {
+        "t": "der Hals",
+        "sv": "hals",
+        "g": "m"
+      },
+      "weh": {
+        "t": "wehtun",
+        "sv": "göra ont",
+        "g": ""
+      },
+      "chor": {
+        "t": "der Chor",
+        "sv": "kör",
+        "g": "m"
+      },
+      "vorsingen": {
+        "t": "das Vorsingen",
+        "sv": "provsjungning",
+        "g": "n"
+      },
+      "hustensaft": {
+        "t": "der Hustensaft",
+        "sv": "hostmedicin",
+        "g": "m"
+      },
+      "apotheke": {
+        "t": "die Apotheke",
+        "sv": "apotek",
+        "g": "f"
+      },
+      "geschont": {
+        "t": "sich schonen",
+        "sv": "ta det lugnt, vila",
+        "g": ""
+      },
+      "überweisung": {
+        "t": "die Überweisung",
+        "sv": "remiss",
+        "g": "f"
+      },
+      "hausärztin": {
+        "t": "die Hausärztin",
+        "sv": "husläkare",
+        "g": "f"
+      }
+    }
+  },
+  {
     "id": "t4-l-t8",
     "sec": "t8",
     "title": "Die Überraschungsparty",
@@ -2613,6 +4079,227 @@
         "t": "sich freuen",
         "sv": "glädja sig, se fram emot",
         "g": ""
+      }
+    }
+  },
+  {
+    "id": "t4-l-t8-2",
+    "sec": "t8",
+    "title": "Radio: Der Christkindlesmarkt öffnet",
+    "lines": [
+      {
+        "who": "N",
+        "fr": "Und jetzt nach Nürnberg. Dort hat gestern Abend der berühmte Christkindlesmarkt begonnen. Wie jedes Jahr hat das Christkind den Markt vom Balkon der Frauenkirche eröffnet. Tausende Menschen standen auf dem Hauptmarkt und haben zugehört. Der Markt ist jetzt bis Heiligabend jeden Tag geöffnet. Unsere Reporterin hat mit Besuchern gesprochen.",
+        "sv": "Och nu till Nürnberg. Där började den berömda julmarknaden Christkindlesmarkt i går kväll. Som varje år öppnade Kristusbarnet marknaden från Frauenkirches balkong. Tusentals människor stod på torget Hauptmarkt och lyssnade. Marknaden har nu öppet varje dag fram till julafton. Vår reporter har pratat med besökare."
+      },
+      {
+        "who": "A",
+        "fr": "Wir kommen jedes Jahr hierher, schon seit meiner Kindheit. Am liebsten trinke ich einen Kinderpunsch und esse Lebkuchen. Für mich beginnt die Adventszeit erst hier.",
+        "sv": "Vi kommer hit varje år, ända sedan jag var liten. Helst dricker jag en alkoholfri glögg och äter pepparkaka. För mig börjar adventstiden först här."
+      },
+      {
+        "who": "N",
+        "fr": "Auch viele Touristen sind gekommen, zum Beispiel aus Italien und den USA. An den Ständen gibt es Kerzen, Weihnachtsschmuck und Spielzeug aus Holz. Andreas Huber verkauft seit zwanzig Jahren Nürnberger Lebkuchen.",
+        "sv": "Många turister har också kommit, till exempel från Italien och USA. I stånden finns det ljus, julpynt och leksaker i trä. Andreas Huber har sålt Nürnbergpepparkakor i tjugo år."
+      },
+      {
+        "who": "B",
+        "fr": "Viele Leute kaufen Lebkuchen als Geschenk für Weihnachten. Am meisten ist am Wochenende los. Wer Ruhe möchte, kommt besser am Vormittag unter der Woche.",
+        "sv": "Många köper pepparkakor som julklapp. Mest folk är det på helgen. Den som vill ha lugn och ro kommer hellre på förmiddagen en vardag."
+      },
+      {
+        "who": "N",
+        "fr": "Noch ein Tipp: Den Glühwein bekommen Sie in einer besonderen Tasse. Die Tasse können Sie als Andenken mitnehmen oder zurückgeben. Dann bekommen Sie Ihr Pfand zurück. Und am Abend vor dem sechsten Dezember nicht vergessen: Stiefel putzen und vor die Tür stellen, denn dann kommt der Nikolaus!",
+        "sv": "Ett tips till: Glöggen får du i en speciell mugg. Muggen kan du ta med som minne eller lämna tillbaka. Då får du tillbaka din pant. Och glöm inte kvällen före den sjätte december: putsa stövlarna och ställ dem utanför dörren, för då kommer Nikolaus!"
+      }
+    ],
+    "questions": [
+      {
+        "type": "helhet",
+        "q": "Vad handlar radioinslaget om?",
+        "opts": [
+          "Att julmarknaden i Nürnberg har öppnat",
+          "Att en julmarknad har ställts in",
+          "Hur man bakar pepparkakor",
+          "En konsert i en kyrka i Nürnberg"
+        ],
+        "a": 0,
+        "why": "„Dort hat gestern Abend der berühmte Christkindlesmarkt begonnen.“"
+      },
+      {
+        "type": "detalj",
+        "q": "Hur öppnas marknaden?",
+        "opts": [
+          "Borgmästaren klipper ett band",
+          "Kristusbarnet öppnar den från en kyrkbalkong",
+          "En kör sjunger på torget",
+          "Nikolaus delar ut godis"
+        ],
+        "a": 1,
+        "why": "„das Christkind [hat] den Markt vom Balkon der Frauenkirche eröffnet“."
+      },
+      {
+        "type": "detalj",
+        "q": "När är det lugnast på marknaden enligt Andreas Huber?",
+        "opts": [
+          "På helgen",
+          "På kvällen",
+          "På förmiddagen en vardag",
+          "Julafton"
+        ],
+        "a": 2,
+        "why": "„Wer Ruhe möchte, kommt besser am Vormittag unter der Woche.“"
+      },
+      {
+        "type": "detalj",
+        "q": "Vad kan man göra med glöggmuggen?",
+        "opts": [
+          "Man måste lämna tillbaka den",
+          "Ta den som minne eller lämna tillbaka den och få panten",
+          "Byta den mot en pepparkaka",
+          "Få den gratis om man köper två glögg"
+        ],
+        "a": 1,
+        "why": "„Die Tasse können Sie als Andenken mitnehmen oder zurückgeben. Dann bekommen Sie Ihr Pfand zurück.“"
+      },
+      {
+        "type": "tolkning",
+        "q": "Vad betyder julmarknaden för den första besökaren?",
+        "opts": [
+          "Den är en tradition som visar att adventstiden har börjat",
+          "Hon tycker att den har blivit för dyr",
+          "Hon är där för att jobba",
+          "Hon är turist och är där för första gången"
+        ],
+        "a": 0,
+        "why": "Hon har kommit „jedes Jahr … seit meiner Kindheit“ och säger „Für mich beginnt die Adventszeit erst hier“."
+      }
+    ],
+    "gloss": {
+      "berühmte": {
+        "t": "berühmt",
+        "sv": "berömd",
+        "g": ""
+      },
+      "christkindlesmarkt": {
+        "t": "der Christkindlesmarkt",
+        "sv": "julmarknaden i Nürnberg",
+        "g": "m"
+      },
+      "begonnen": {
+        "t": "beginnen",
+        "sv": "börja",
+        "g": ""
+      },
+      "christkind": {
+        "t": "das Christkind",
+        "sv": "Kristusbarnet (kommer med julklappar i södra Tyskland)",
+        "g": "n"
+      },
+      "balkon": {
+        "t": "der Balkon",
+        "sv": "balkong",
+        "g": "m"
+      },
+      "eröffnet": {
+        "t": "eröffnen",
+        "sv": "öppna, inviga",
+        "g": ""
+      },
+      "zugehört": {
+        "t": "zuhören",
+        "sv": "lyssna",
+        "g": ""
+      },
+      "heiligabend": {
+        "t": "der Heiligabend",
+        "sv": "julafton",
+        "g": "m"
+      },
+      "kindheit": {
+        "t": "die Kindheit",
+        "sv": "barndom",
+        "g": "f"
+      },
+      "kinderpunsch": {
+        "t": "der Kinderpunsch",
+        "sv": "alkoholfri glögg",
+        "g": "m"
+      },
+      "lebkuchen": {
+        "t": "der Lebkuchen",
+        "sv": "tysk pepparkaka",
+        "g": "m"
+      },
+      "adventszeit": {
+        "t": "die Adventszeit",
+        "sv": "adventstid",
+        "g": "f"
+      },
+      "ständen": {
+        "t": "der Stand (Stände)",
+        "sv": "stånd",
+        "g": "m"
+      },
+      "kerzen": {
+        "t": "die Kerze (-n)",
+        "sv": "ljus",
+        "g": "f"
+      },
+      "weihnachtsschmuck": {
+        "t": "der Weihnachtsschmuck",
+        "sv": "julpynt",
+        "g": "m"
+      },
+      "spielzeug": {
+        "t": "das Spielzeug",
+        "sv": "leksaker",
+        "g": "n"
+      },
+      "holz": {
+        "t": "das Holz",
+        "sv": "trä",
+        "g": "n"
+      },
+      "geschenk": {
+        "t": "das Geschenk",
+        "sv": "present",
+        "g": "n"
+      },
+      "los": {
+        "t": "los sein",
+        "sv": "hända, vara mycket folk",
+        "g": ""
+      },
+      "glühwein": {
+        "t": "der Glühwein",
+        "sv": "glögg",
+        "g": "m"
+      },
+      "tasse": {
+        "t": "die Tasse",
+        "sv": "kopp, mugg",
+        "g": "f"
+      },
+      "andenken": {
+        "t": "das Andenken",
+        "sv": "minne, souvenir",
+        "g": "n"
+      },
+      "pfand": {
+        "t": "das Pfand",
+        "sv": "pant",
+        "g": "n"
+      },
+      "stiefel": {
+        "t": "der Stiefel (-)",
+        "sv": "stövel",
+        "g": "m"
+      },
+      "nikolaus": {
+        "t": "der Nikolaus",
+        "sv": "S:t Nikolaus",
+        "g": "m"
       }
     }
   }

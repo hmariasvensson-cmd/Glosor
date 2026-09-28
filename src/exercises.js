@@ -812,6 +812,28 @@ AFTER.utt=(ctx,right,total,miss)=>{
 };
 KIND_NAMES.utt="Uttal";
 
+/* ---------- Teoriprovet: musikteori på målspråket ----------
+   content/teori.json = [{id, sec, q (uppgiften på målspråket, som på provet), sv (svensk översättning), opts: [...], a (index), why}].
+   Frågor man missat eller inte sett kommer först (S.te[id] = {s, last}). */
+const teoriById=id=>(C().teori||[]).find(x=>x.id===id);
+function startTeori(){
+  S.te=S.te||{};
+  const items=(C().teori||[]).map(x=>({x,st:S.te[x.id]||{s:0,last:0},r:Math.random()}))
+    .sort((a,b)=>a.st.s-b.st.s||a.st.last-b.st.last||a.r-b.r).slice(0,10)
+    .map(({x})=>({k:"teori",id:"teori:"+x.id,ref:x.id,t:"mc"}));
+  if(!items.length) return renderStart();
+  $("#tabs").hidden=true; sess=null; beginQuiz("teori",shuffle(items),{againFn:["teori"],label:"Teoriprovet"});
+}
+RESTORE.teori=ref=>teoriById(ref)?{}:null;
+MC.teori=c=>{const x=teoriById(c.ref);
+  return{tab:"Teori",head:`<p class="q-prompt" style="font-size:1.25rem" ${lang()}>${rmark(x.q)}</p><details class="more"><summary>Visa på svenska</summary><p class="ex-sv">${esc(x.sv||"")}</p></details>`,
+    ask:"Välj rätt svar.",opts:x.opts.map((o,j)=>({label:o,ok:j===x.a,lang:true})),
+    explain:x.why?`<p>${rmark(x.why)}</p>`:"",say:x.opts[x.a],sayOnAnswer:true};};
+EFFECT.teori=(ref,ok)=>{S.te=S.te||{}; const o=S.te[ref]||{s:0}; S.te[ref]={s:ok?o.s+1:0,last:Date.now()};};
+RECAP.teori=ref=>{const x=teoriById(ref); return x?x.opts[x.a]:"";};
+KIND_NAMES.teori="Teoriprovet";
+AGAIN.teori=startTeori;
+
 /* ---------- Startsidans panel med alla övningar ---------- */
 // Övningarna i grupper. Startsidan visar en knapp per grupp, och varje grupp öppnas på en egen sida.
 function exGroups(){
@@ -833,7 +855,9 @@ function exGroups(){
       ...verbGames().map(v=>`<button class="game" data-g="${v.id}"><span><b>Verb: ${esc(v.name)}</b><small>${esc(v.sub||"")}</small></span><span class="go" aria-hidden="true">›</span></button>`),
       hasGrammar()&&g("gram","Grammatikövningar",GR().topics.slice(0,4).map(t=>t.name.toLowerCase()).join(", ")+" …"),
       c.stories&&g("story","Berättelser","Välj rätt tempus och bindeord i en berättelse.")]],
-    ...(hasExam()?[["exam","Språkprov",`${esc(EX().name)}: provuppgifter och simulering`,[g("exam",`Provträning: ${esc(EX().name)}`,"Uppgifter i provets format, med klocka, poäng och provsimulering.")]]]:[]),
+    ...(hasExam()||(c.teori||[]).length?[["exam","Språkprov och teoriprov",hasExam()?`${esc(EX().name)}: provuppgifter och simulering`:"Musikteori på målspråket",[
+      hasExam()&&g("exam",`Provträning: ${esc(EX().name)}`,"Uppgifter i provets format, med klocka, poäng och provsimulering."),
+      (c.teori||[]).length&&g("teori","Teoriprovet: musikteori","Uppgifter som på det skriftliga teoriprovet vid antagningen, på "+lname+".")]]]:[]),
     ["speak","Tala och skriva","Samtalsfraser, skugga och skrivuppgifter",[
       c.phrases&&g("phr","Samtalsfraser","Vad man säger när man inte förstår, vill säga sin åsikt …"),
       (c.uttal||[]).length&&g("utt","Uttal: lyssna och välj","Ord som låter nästan lika. Vilket hör du?"),
@@ -854,7 +878,7 @@ function openExGroup(id){
   wireGames(); $("#quit").onclick=renderStart; window.scrollTo(0,0);
 }
 function wireGames(){
-  const F={ktest:openKtest,utt:openUttal,exam:openExam,cloze:startCloze,dict:startDict,trans:startTrans,order:startOrder,lq:openListening,rq:openReading,culture:openCulture,story:openStories,phr:startPhrases,write:openWriting,gram:openGrammar,gen:startGender,shadow:startShadow};
+  const F={teori:startTeori,ktest:openKtest,utt:openUttal,exam:openExam,cloze:startCloze,dict:startDict,trans:startTrans,order:startOrder,lq:openListening,rq:openReading,culture:openCulture,story:openStories,phr:startPhrases,write:openWriting,gram:openGrammar,gen:startGender,shadow:startShadow};
   app.querySelectorAll("[data-ex]").forEach(b=>b.onclick=()=>F[b.dataset.ex]());
   app.querySelectorAll("[data-g]").forEach(b=>b.onclick=()=>startVerbs(b.dataset.g));
   app.querySelectorAll("[data-grp]").forEach(b=>b.onclick=()=>openExGroup(b.dataset.grp));

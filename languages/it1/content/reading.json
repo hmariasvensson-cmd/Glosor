@@ -1061,5 +1061,321 @@
    "g": "f"
   }
  }
-}
+},
+ {
+  "id": "it1-r-lit-pinocchio",
+  "sec": "i2",
+  "title": "Geppetto e Pinocchio (fritt efter Carlo Collodi, 1883)",
+  "lines": [
+   {
+    "fr": "Geppetto è un vecchio falegname.",
+    "sv": "Geppetto är en gammal snickare."
+   },
+   {
+    "fr": "Abita in una piccola casa e non ha figli.",
+    "sv": "Han bor i ett litet hus och har inga barn."
+   },
+   {
+    "fr": "Un giorno prende un pezzo di legno e fa un burattino.",
+    "sv": "En dag tar han en träbit och gör en marionettdocka."
+   },
+   {
+    "fr": "Il burattino si chiama Pinocchio.",
+    "sv": "Dockan heter Pinocchio."
+   },
+   {
+    "fr": "Pinocchio parla, ride e corre: è un bambino di legno!",
+    "sv": "Pinocchio pratar, skrattar och springer: han är ett barn av trä!"
+   },
+   {
+    "fr": "Geppetto è molto contento: «Adesso ho un figlio!»",
+    "sv": "Geppetto är jätteglad: ”Nu har jag en son!”"
+   },
+   {
+    "fr": "Ma Pinocchio non è sempre un bravo bambino.",
+    "sv": "Men Pinocchio är inte alltid ett snällt barn."
+   },
+   {
+    "fr": "Non vuole andare a scuola e dice tante bugie.",
+    "sv": "Han vill inte gå till skolan och säger många lögner."
+   },
+   {
+    "fr": "Quando dice una bugia, il naso diventa lungo, lungo, lungo!",
+    "sv": "När han ljuger blir näsan lång, lång, lång!"
+   },
+   {
+    "fr": "Geppetto è povero, ma vende la sua giacca e compra un libro per Pinocchio.",
+    "sv": "Geppetto är fattig, men han säljer sin jacka och köper en bok till Pinocchio."
+   },
+   {
+    "fr": "Pinocchio dice: «Grazie, babbo! Domani vado a scuola!»",
+    "sv": "Pinocchio säger: ”Tack, pappa! I morgon går jag till skolan!”"
+   }
+  ],
+  "questions": [
+   {
+    "type": "helhet",
+    "q": "Vem är Pinocchio?",
+    "opts": [
+     "Geppettos riktiga son",
+     "En docka av trä som Geppetto gör och som blir levande",
+     "En lärare i skolan",
+     "Geppettos granne"
+    ],
+    "a": 1,
+    "why": "« Un giorno prende un pezzo di legno e fa un burattino. » Dockan pratar, skrattar och springer: « è un bambino di legno! »"
+   },
+   {
+    "type": "detalj",
+    "q": "Vad arbetar Geppetto med?",
+    "opts": [
+     "Han är snickare",
+     "Han är lärare",
+     "Han är bokhandlare",
+     "Han är kock"
+    ],
+    "a": 0,
+    "why": "« Geppetto è un vecchio falegname. » Un falegname arbetar med trä."
+   },
+   {
+    "type": "detalj",
+    "q": "Vad händer när Pinocchio ljuger?",
+    "opts": [
+     "Han blir röd i ansiktet",
+     "Han börjar gråta",
+     "Näsan blir lång",
+     "Han somnar"
+    ],
+    "a": 2,
+    "why": "« Quando dice una bugia, il naso diventa lungo, lungo, lungo! »"
+   },
+   {
+    "type": "tolkning",
+    "q": "Vad visar det att Geppetto säljer sin jacka?",
+    "opts": [
+     "Att han inte fryser",
+     "Att han inte gillar jackan",
+     "Att han vill ha en ny jacka",
+     "Att han älskar Pinocchio och vill att han ska gå i skolan, fast han själv är fattig"
+    ],
+    "a": 3,
+    "why": "Geppetto är fattig (« è povero ») men ger bort det han har för att hans son ska få en skolbok. Pinocchio (1883) är en av världens mest översatta böcker."
+   }
+  ],
+  "gloss": {
+   "vecchio": {
+    "t": "vecchio",
+    "sv": "gammal",
+    "g": ""
+   },
+   "falegname": {
+    "t": "il falegname",
+    "sv": "snickare",
+    "g": "m"
+   },
+   "abita": {
+    "t": "abitare",
+    "sv": "bo",
+    "g": ""
+   },
+   "piccola": {
+    "t": "piccolo",
+    "sv": "liten",
+    "g": ""
+   },
+   "figli": {
+    "t": "il figlio",
+    "sv": "son, barn (plural)",
+    "g": "m"
+   },
+   "pezzo": {
+    "t": "il pezzo",
+    "sv": "bit",
+    "g": "m"
+   },
+   "legno": {
+    "t": "il legno",
+    "sv": "trä",
+    "g": "m"
+   },
+   "burattino": {
+    "t": "il burattino",
+    "sv": "marionettdocka",
+    "g": "m"
+   },
+   "ride": {
+    "t": "ridere",
+    "sv": "skratta",
+    "g": ""
+   },
+   "corre": {
+    "t": "correre",
+    "sv": "springa",
+    "g": ""
+   },
+   "contento": {
+    "t": "contento",
+    "sv": "glad, nöjd",
+    "g": ""
+   },
+   "adesso": {
+    "t": "adesso",
+    "sv": "nu",
+    "g": ""
+   },
+   "figlio": {
+    "t": "il figlio",
+    "sv": "son",
+    "g": "m"
+   },
+   "bravo": {
+    "t": "bravo",
+    "sv": "duktig, snäll",
+    "g": ""
+   },
+   "bugie": {
+    "t": "la bugia",
+    "sv": "lögn",
+    "g": "f"
+   },
+   "bugia": {
+    "t": "la bugia",
+    "sv": "lögn",
+    "g": "f"
+   },
+   "naso": {
+    "t": "il naso",
+    "sv": "näsa",
+    "g": "m"
+   },
+   "diventa": {
+    "t": "diventare",
+    "sv": "bli",
+    "g": ""
+   },
+   "lungo": {
+    "t": "lungo",
+    "sv": "lång",
+    "g": ""
+   },
+   "povero": {
+    "t": "povero",
+    "sv": "fattig",
+    "g": ""
+   },
+   "vende": {
+    "t": "vendere",
+    "sv": "sälja",
+    "g": ""
+   },
+   "giacca": {
+    "t": "la giacca",
+    "sv": "jacka, kavaj",
+    "g": "f"
+   },
+   "compra": {
+    "t": "comprare",
+    "sv": "köpa",
+    "g": ""
+   },
+   "babbo": {
+    "t": "il babbo",
+    "sv": "pappa (i Toscana)",
+    "g": "m"
+   },
+   "domani": {
+    "t": "domani",
+    "sv": "i morgon",
+    "g": ""
+   }
+  }
+ },
+ {
+  "id": "it1-r-lit-framartino",
+  "sec": "i4",
+  "title": "Fra Martino (folkvisa)",
+  "lines": [
+   {
+    "fr": "Fra Martino, campanaro,",
+    "sv": "Broder Martin, klockaren,"
+   },
+   {
+    "fr": "dormi tu? Dormi tu?",
+    "sv": "sover du? Sover du?"
+   },
+   {
+    "fr": "Suona le campane! Suona le campane!",
+    "sv": "Ring i klockorna! Ring i klockorna!"
+   },
+   {
+    "fr": "Din don dan, din don dan.",
+    "sv": "Ding dang dong, ding dang dong."
+   }
+  ],
+  "questions": [
+   {
+    "type": "helhet",
+    "q": "Vad handlar visan om?",
+    "opts": [
+     "En munk som har försovit sig och måste väckas",
+     "En munk som lagar mat",
+     "En klocka som har gått sönder",
+     "Ett barn som inte vill gå till skolan"
+    ],
+    "a": 0,
+    "why": "Någon frågar « dormi tu? » – sover du? – och säger åt Fra Martino att ringa i klockorna. Det är morgon och han sover fortfarande."
+   },
+   {
+    "type": "detalj",
+    "q": "Vad ska Fra Martino göra?",
+    "opts": [
+     "Äta frukost",
+     "Ringa i kyrkklockorna",
+     "Gå till skolan",
+     "Sjunga i kören"
+    ],
+    "a": 1,
+    "why": "« Suona le campane! » Han är campanaro, alltså den som ringer i klockorna."
+   },
+   {
+    "type": "tolkning",
+    "q": "Varför känner du kanske igen melodin?",
+    "opts": [
+     "Det är samma melodi som Broder Jakob, som finns på många språk",
+     "Det är Italiens nationalsång",
+     "Den spelas på varje fotbollsmatch",
+     "Den är från en känd film"
+    ],
+    "a": 0,
+    "why": "Visan är samma som svenska Broder Jakob och franska Frère Jacques. Den sjungs ofta i kanon: en grupp börjar, och nästa grupp börjar när den första kommer till andra raden."
+   }
+  ],
+  "gloss": {
+   "fra": {
+    "t": "fra (= frate)",
+    "sv": "broder (munk)",
+    "g": "m"
+   },
+   "campanaro": {
+    "t": "il campanaro",
+    "sv": "klockare, den som ringer i kyrkklockorna",
+    "g": "m"
+   },
+   "dormi": {
+    "t": "dormire",
+    "sv": "sova",
+    "g": ""
+   },
+   "suona": {
+    "t": "suonare",
+    "sv": "ringa, spela (här imperativ)",
+    "g": ""
+   },
+   "campane": {
+    "t": "la campana",
+    "sv": "kyrkklocka",
+    "g": "f"
+   }
+  }
+ }
 ]

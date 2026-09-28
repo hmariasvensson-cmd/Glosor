@@ -21,7 +21,7 @@ LANGUAGES.de4 = {
   pronouns: /^(er\/sie\/es|sie\/sie|ich|du|er|sie|es|wir|ihr) ?/,
   genders: {m: "maskulinum", f: "femininum", n: "neutrum", pl: "plural"},
   selfStudy: true,             // eleven pluggar på egen hand, utan lärare och lärobok
-  exam: {name: "Goethe-Zertifikat B2 (eller telc B2/TestDaF)", level: "B2"},   // språkprovet eleven siktar på
+  exam: {name: "Goethe-Zertifikat B1 (delmål mot B2)", level: "B1"},   // språkprovet eleven tränar på i Tyska 4 (B2 i Tyska 5)
   nounCaps: true,
   genderGame: {m: "der", f: "die", n: "das"},
 

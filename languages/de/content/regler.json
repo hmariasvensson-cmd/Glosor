@@ -359,5 +359,345 @@
             {"fr": "Meine Cousine spricht **sowohl** Deutsch **als auch** Englisch.", "sv": "Min kusin talar både tyska och engelska."},
             {"fr": "Mein Mitbewohner kann **weder** kochen **noch** putzen.", "sv": "Min rumskompis kan varken laga mat eller städa."},
             {"fr": "Das Projekt ist **nicht nur** teuer, **sondern auch** schlecht für die Umwelt.", "sv": "Projektet är inte bara dyrt utan också dåligt för miljön."}]}
-  ]}
+  ]},
+"gen": {
+ "title": "Genitiv och n-deklination",
+ "intro": "Genitiv visar att något hör till något annat, ungefär som svenskans -s: die Qualität des Unterrichts (undervisningens kvalitet). I vardagligt tal byts genitiv ofta mot von + dativ, men i skrift och på B2-provet förväntas genitiv, särskilt efter prepositioner som wegen och trotz. Hit hör också n-deklinationen: en grupp maskulina substantiv som får -n eller -en i alla former utom nominativ singular.",
+ "parts": [
+  {
+   "h": "Genitivets artiklar och ändelser",
+   "t": "Maskulinum och neutrum: **des / eines / meines** och **-s** eller **-es** på substantivet. Femininum och plural: **der / einer / meiner**, och ingen ändelse på substantivet.\n**-es** måste användas efter s, ß, x och z (des Kurses) och är vanligt efter korta ord (des Tages). Annars räcker -s (des Orchesters, des Problems). Adjektiv får alltid **-en** i genitiv efter en artikel: des schlechten Wetters.\nOrdföljden är den omvända mot svenskan: först det som ägs, sedan ägaren. Namn får bara -s, utan apostrof: Beethovens Sinfonie.",
+   "table": {
+    "head": [
+     "",
+     "maskulinum",
+     "femininum",
+     "neutrum",
+     "plural"
+    ],
+    "rows": [
+     [
+      "bestämd",
+      "des Kurses",
+      "der Probe",
+      "des Orchesters",
+      "der Lieder"
+     ],
+     [
+      "ein / mein",
+      "eines / meines Kurses",
+      "einer / meiner Probe",
+      "eines / meines Orchesters",
+      "meiner Lieder"
+     ]
+    ]
+   },
+   "ex": [
+    {
+     "fr": "Die Qualität **des Unterrichts** ist sehr hoch.",
+     "sv": "Kvaliteten på undervisningen är mycket hög."
+    },
+    {
+     "fr": "Am Ende **der Probe** waren alle müde.",
+     "sv": "I slutet av repetitionen var alla trötta."
+    },
+    {
+     "fr": "Die Geige **meiner Großmutter** ist hundert Jahre alt.",
+     "sv": "Min mormors fiol är hundra år gammal."
+    },
+    {
+     "fr": "**Beethovens** neunte Sinfonie kennt fast jeder.",
+     "sv": "Beethovens nionde symfoni känner nästan alla till."
+    }
+   ]
+  },
+  {
+   "h": "Prepositioner med genitiv",
+   "t": "**wegen** (på grund av), **aufgrund** (på grund av), **trotz** (trots), **während** (under), **statt / anstatt** (i stället för), **innerhalb** (inom) och **außerhalb** (utanför) styr genitiv. I talspråk hör du ofta dativ (wegen dem Wetter), men i skrift och på provet ska det vara genitiv.",
+   "ex": [
+    {
+     "fr": "**Wegen des Streiks** fahren heute keine Züge.",
+     "sv": "På grund av strejken går inga tåg i dag."
+    },
+    {
+     "fr": "**Trotz des schlechten Wetters** fand das Konzert statt.",
+     "sv": "Trots det dåliga vädret blev konserten av."
+    },
+    {
+     "fr": "**Innerhalb eines Monats** müssen Sie sich einschreiben.",
+     "sv": "Inom en månad måste ni skriva in er."
+    },
+    {
+     "fr": "**Während der Semesterferien** arbeiten viele Studierende.",
+     "sv": "Under terminsuppehållet jobbar många studenter."
+    }
+   ]
+  },
+  {
+   "h": "n-deklinationen",
+   "t": "Vissa maskulina substantiv får **-n** eller **-en** i ackusativ, dativ och genitiv singular och i hela pluralen. Det gäller främst:\n– ord på **-e** om människor och djur: der Kollege, der Junge, der Kunde\n– ord på **-ent, -ant, -ist, -at, -oge**: der Student, der Dirigent, der Pianist, der Journalist, der Soldat, der Biologe\n– några korta ord: der Mensch, der Nachbar, der Herr (Herrn, men plural Herren)\nNågra få får dessutom -s i genitiv: der Name → des Namens, der Gedanke → des Gedankens.",
+   "table": {
+    "head": [
+     "",
+     "singular",
+     "plural"
+    ],
+    "rows": [
+     [
+      "nominativ",
+      "der Kollege",
+      "die Kollegen"
+     ],
+     [
+      "ackusativ",
+      "den Kollegen",
+      "die Kollegen"
+     ],
+     [
+      "dativ",
+      "dem Kollegen",
+      "den Kollegen"
+     ],
+     [
+      "genitiv",
+      "des Kollegen",
+      "der Kollegen"
+     ]
+    ]
+   },
+   "ex": [
+    {
+     "fr": "Kennst du schon den neuen **Kollegen**?",
+     "sv": "Känner du redan den nya kollegan?"
+    },
+    {
+     "fr": "Der Professor hat dem **Studenten** geholfen.",
+     "sv": "Professorn hjälpte studenten."
+    },
+    {
+     "fr": "Können Sie bitte **Herrn** Weber anrufen?",
+     "sv": "Kan ni ringa herr Weber?"
+    },
+    {
+     "fr": "Die Karriere des jungen **Pianisten** begann früh.",
+     "sv": "Den unge pianistens karriär började tidigt."
+    }
+   ],
+   "tip": "Vanliga maskulina ord som der Lehrer, der Musiker och der Tisch hör inte till n-deklinationen: dem Lehrer, des Lehrers. I ordboken känns n-deklinationen igen på -en, -en: der Student, -en, -en."
+  }
+ ]
+},
+"partizip": {
+ "title": "Particip som adjektiv",
+ "intro": "På tyska kan ett particip stå framför ett substantiv och böjas som ett vanligt adjektiv: die steigenden Preise, das gelesene Buch. Det är mycket vanligt i tidningar och i B2-provets lästexter, ofta som långa utbyggda attribut som motsvarar en hel relativsats.",
+ "parts": [
+  {
+   "h": "Partizip I: något pågår",
+   "t": "Partizip I bildas av infinitiv + **-d**: steigen → steigend, schlafen → schlafend. Det betyder att något pågår **samtidigt** och att substantivet själv gör det, som svenskans -ande/-ende: stigande, sovande. Framför ett substantiv får det vanliga adjektivändelser.",
+   "ex": [
+    {
+     "fr": "Die **steigenden** Mieten sind ein Problem.",
+     "sv": "De stigande hyrorna är ett problem."
+    },
+    {
+     "fr": "Mit **zitternden** Händen begann sie zu spielen.",
+     "sv": "Med darrande händer började hon spela."
+    },
+    {
+     "fr": "Das ist ein **überzeugendes** Argument.",
+     "sv": "Det är ett övertygande argument."
+    }
+   ]
+  },
+  {
+   "h": "Partizip II: något är gjort",
+   "t": "Partizip II (gelesen, renoviert, gestohlen) betyder att något **redan är gjort** eller har gjorts **med** substantivet: das gelesene Buch = boken som har lästs. Det motsvarar svenskans lästa, renoverade, stulna. Ändelsen följer adjektivreglerna.",
+   "table": {
+    "head": [
+     "",
+     "betyder",
+     "exempel"
+    ],
+    "rows": [
+     [
+      "Partizip I",
+      "pågår, gör själv",
+      "die spielenden Kinder (barnen som leker)"
+     ],
+     [
+      "Partizip II",
+      "avslutat, passivt",
+      "die gestohlenen Instrumente (instrumenten som har stulits)"
+     ]
+    ]
+   },
+   "ex": [
+    {
+     "fr": "Wir haben über das **gelesene** Buch diskutiert.",
+     "sv": "Vi diskuterade boken som vi hade läst."
+    },
+    {
+     "fr": "Die **renovierte** Stadthalle wird im Mai eröffnet.",
+     "sv": "Den renoverade stadshallen öppnar i maj."
+    },
+    {
+     "fr": "Er hat eine **gebrauchte** Gitarre gekauft.",
+     "sv": "Han köpte en begagnad gitarr."
+    }
+   ]
+  },
+  {
+   "h": "Utbyggda attribut",
+   "t": "Participet kan ha egna tillägg, till exempel tid, plats eller vem som gjort något (von …). Allt placeras **mellan artikeln och participet**, och participet står sist, direkt före substantivet: der **seit Jahren geplante** Umbau.\nArtikeln hör till substantivet längst bort: **Die** von der Stadt finanzierten **Kurse** (die hör till Kurse, inte till Stadt). Läs sådana fraser genom att först hitta artikeln och substantivet, och sedan läsa det som står emellan.",
+   "ex": [
+    {
+     "fr": "Der **seit Jahren geplante** Umbau beginnt endlich.",
+     "sv": "Ombyggnaden som har planerats i flera år börjar äntligen."
+    },
+    {
+     "fr": "Die **im letzten Jahr gegründete** Band ist schon bekannt.",
+     "sv": "Bandet som grundades förra året är redan känt."
+    },
+    {
+     "fr": "Das **von vielen Kritikern gelobte** Album ist jetzt erhältlich.",
+     "sv": "Albumet som många kritiker har hyllat finns nu att köpa."
+    }
+   ]
+  },
+  {
+   "h": "Från relativsats till particip",
+   "t": "En relativsats kan göras om till ett attribut:\n1. Stryk relativpronomenet och hjälpverbet (ist, wurde).\n2. Flytta resten framför substantivet, med participet sist.\n3. Ge participet adjektivändelse.\nAktiv handling som pågår (lebt, arbeiten) blir Partizip I. Passiv eller avslutad handling (wurde abgesagt, ist erschienen) blir Partizip II.",
+   "ex": [
+    {
+     "fr": "die Musikerin, die in Wien lebt → die **in Wien lebende** Musikerin",
+     "sv": "musikern som bor i Wien"
+    },
+    {
+     "fr": "die Konzerte, die abgesagt wurden → die **abgesagten** Konzerte",
+     "sv": "konserterna som ställdes in"
+    },
+    {
+     "fr": "das Album, das letztes Jahr erschienen ist → das **letztes Jahr erschienene** Album",
+     "sv": "albumet som kom ut förra året"
+    }
+   ],
+   "tip": "Glöm inte ändelsen: participet fungerar som ett adjektiv, så det heter die steigenden Preise, aldrig die steigend Preise."
+  }
+ ]
+},
+"zweiteilig": {
+ "title": "Tvådelade bindeord",
+ "intro": "Tvådelade bindeord binder ihop två led som hör ihop: både … och, varken … eller, ju … desto. De är vanliga när man argumenterar och gör texten mer varierad, både i skrivuppgiften och den muntliga delen av B2-provet. Svårigheterna är att hålla ihop rätt par och att få ordföljden rätt.",
+ "parts": [
+  {
+   "h": "Par som binder ihop satsdelar",
+   "t": "Paren står oftast framför de två led som jämförs och ändrar inte ordföljden: Ich spiele **sowohl** Klavier **als auch** Geige.\nVanliga fel: det heter **weder … noch** (inte oder), **sowohl … als auch** (inte und) och **nicht nur … sondern auch** (inte aber auch).",
+   "table": {
+    "head": [
+     "tyska",
+     "svenska"
+    ],
+    "rows": [
+     [
+      "sowohl … als auch",
+      "både … och"
+     ],
+     [
+      "nicht nur … sondern auch",
+      "inte bara … utan också"
+     ],
+     [
+      "weder … noch",
+      "varken … eller"
+     ],
+     [
+      "entweder … oder",
+      "antingen … eller"
+     ]
+    ]
+   },
+   "ex": [
+    {
+     "fr": "Das Stipendium deckt **sowohl** die Miete **als auch** den Semesterbeitrag.",
+     "sv": "Stipendiet täcker både hyran och terminsavgiften."
+    },
+    {
+     "fr": "Er hat **weder** Zeit **noch** Geld.",
+     "sv": "Han har varken tid eller pengar."
+    },
+    {
+     "fr": "Die Wohnung ist **nicht nur** zu teuer, **sondern auch** zu klein.",
+     "sv": "Lägenheten är inte bara för dyr utan också för liten."
+    }
+   ]
+  },
+  {
+   "h": "entweder … oder med hela satser",
+   "t": "När två satser binds ihop kan **entweder** stå före subjektet (du meldest …) eller på plats ett med verbet direkt efter (meldest du …). **oder** är en vanlig konjunktion: efter oder kommer subjektet först och sedan verbet.",
+   "ex": [
+    {
+     "fr": "**Entweder** du meldest dich heute an, **oder** du verlierst deinen Platz.",
+     "sv": "Antingen anmäler du dig i dag, eller så förlorar du din plats."
+    },
+    {
+     "fr": "**Entweder** fahren wir mit dem Zug, **oder** wir nehmen den Bus.",
+     "sv": "Antingen tar vi tåget, eller så tar vi bussen."
+    }
+   ]
+  },
+  {
+   "h": "zwar … aber, einerseits … andererseits",
+   "t": "**zwar … aber** (visserligen … men) medger något och kommer sedan med en invändning. zwar står efter verbet, eller först med verbet direkt efter (Zwar ist …). aber är en konjunktion och ändrar inte ordföljden.\n**einerseits … andererseits** (å ena sidan … å andra sidan) är adverb: står de först i satsen kommer verbet direkt efter. Samma sak kan sägas med auf der einen Seite … auf der anderen Seite, aldrig med \"Hand\".",
+   "ex": [
+    {
+     "fr": "Die Stadt ist **zwar** schön, **aber** die Mieten sind sehr hoch.",
+     "sv": "Staden är visserligen vacker, men hyrorna är mycket höga."
+    },
+    {
+     "fr": "**Zwar** war die Prüfung schwer, **aber** ich habe sie bestanden.",
+     "sv": "Provet var visserligen svårt, men jag klarade det."
+    },
+    {
+     "fr": "**Einerseits** ist Social Media praktisch, **andererseits** macht es süchtig.",
+     "sv": "Å ena sidan är sociala medier praktiska, å andra sidan gör de en beroende."
+    }
+   ]
+  },
+  {
+   "h": "je … desto (umso)",
+   "t": "**je** + komparativ inleder en bisats, så verbet står sist. **desto** (eller **umso**) + komparativ inleder huvudsatsen och räknas som ett enda led på plats ett, så verbet kommer direkt efter. Båda delarna behöver en komparativ: mehr, länger, besser, früher.",
+   "table": {
+    "head": [
+     "je-delen (verbet sist)",
+     "desto-delen (verbet direkt efter)"
+    ],
+    "rows": [
+     [
+      "Je mehr man übt,",
+      "desto sicherer spielt man."
+     ],
+     [
+      "Je länger das Konzert dauert,",
+      "desto unruhiger wird das Publikum."
+     ],
+     [
+      "Je früher du anfängst,",
+      "umso besser bist du vorbereitet."
+     ]
+    ]
+   },
+   "ex": [
+    {
+     "fr": "**Je** älter ich werde, **desto** mehr interessiere ich mich für Jazz.",
+     "sv": "Ju äldre jag blir, desto mer intresserar jag mig för jazz."
+    },
+    {
+     "fr": "**Je** mehr man liest, **umso** größer wird der Wortschatz.",
+     "sv": "Ju mer man läser, desto större blir ordförrådet."
+    }
+   ],
+   "tip": "Tänk på je-delen som en bisats med weil (verbet sist) och på desto + komparativ som ett led på plats ett, så att verbet måste komma direkt efter."
+  }
+ ]
+}
 }

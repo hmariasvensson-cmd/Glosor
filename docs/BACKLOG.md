@@ -10,6 +10,9 @@ Underlag finns i `docs/ovningsforslag.md` (franska), `docs/ovningsforslag-tyska.
 
 ## Språkprov (det verkliga målet)
 
+- **P1: Musikteori på målspråket** (föräldern, 2026-09-28): alla ord och instruktioner som kan komma på det skriftliga teoriprovet vid antagningen (formation musicale och écriture vid konservatorium, Musiktheorie och Gehörbildung vid Musikhochschule). Ordförrådet byggs som egna avsnitt (mt1–mt7) i franska och Tyska 5.
+- **P2: Övning i teoriprovets form:** korta uppgifter som på provet, på målspråket ("Bestimmen Sie das Intervall c–as", "Indiquez la cadence"), där eleven svarar med termen. Kan byggas av musikteoriorden som en egen frågetyp.
+
 Båda eleverna ska söka musikutbildning utomlands. Eleven i franska behöver visa **B1 i franska** (DELF B1) för Frankrike, och eleven i tyska behöver visa **B2 i tyska** för Tyskland. Musikhögskolorna godtar oftast Goethe-Zertifikat B2, telc B2 eller TestDaF, men kontrollera vad just deras skolor kräver. Betyg i kursen spelar mindre roll.
 
 - **P2: Kontrollera provformaten** mot provgivarnas egna exempelprov (Goethe Modellsatz B2, DELF B1 sujets démo): antal frågor per Teil/exercice, tider och exakt formulering av uppgifterna. Uppgifterna i appen är skrivna efter minnet av formatet.

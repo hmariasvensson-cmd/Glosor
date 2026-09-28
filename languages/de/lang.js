@@ -53,6 +53,9 @@ LANGUAGES.de = {
       {id: "zuinf", name: "zu-infinitiv", sub: "um … zu, damit, ohne … zu"},
       {id: "perfekt", name: "Perfekt: haben eller sein?", sub: "Ich bin eingeschlafen. Nachdem ich gegessen hatte …"},
       {id: "bindeord", name: "Bindeord och ordföljd", sub: "obwohl, trotzdem, deshalb, denn"},
+      {id: "gen", name: "Genitiv och n-deklination", sub: "wegen des Streiks, trotz des Wetters, den Kollegen, Herrn Weber"},
+      {id: "partizip", name: "Particip som adjektiv", sub: "die steigenden Preise, der seit Jahren geplante Umbau"},
+      {id: "zweiteilig", name: "Tvådelade bindeord", sub: "sowohl … als auch, weder … noch, je … desto"},
       {id: "err", name: "Hitta felet", sub: "En mening har ett fel. Vilket ord?"}
     ],
     rules: {
@@ -67,7 +70,10 @@ LANGUAGES.de = {
       "k2-wenn": "Konjunktiv II i villkor", "k2-wunsch": "Konjunktiv II: önskan och artighet", "k2-verg": "Konjunktiv II i dåtid", "k1-rede": "Indirekt tal (Konjunktiv I)",
       "pa-praes": "Passiv i presens", "pa-praet": "Passiv i preteritum", "pa-perf": "Passiv i perfekt", "pa-modal": "Passiv med modalverb", "pa-zustand": "Tillståndspassiv",
       "zu-inf": "Infinitiv med zu", "umzu": "um … zu", "damit": "damit", "ohne-statt": "ohne … zu, statt … zu",
-      "bi-grund": "Orsak: weil, denn, deshalb", "bi-kontrast": "Motsats: obwohl, trotzdem, aber", "bi-folge": "Följd: deshalb, sodass", "bi-tillagg": "Tillägg: außerdem, zudem"
+      "bi-grund": "Orsak: weil, denn, deshalb", "bi-kontrast": "Motsats: obwohl, trotzdem, aber", "bi-folge": "Följd: deshalb, sodass", "bi-tillagg": "Tillägg: außerdem, zudem",
+      "gn-art": "Genitiv: des …-s, der", "gn-prep": "wegen, trotz, während + genitiv", "gn-ndekl": "n-deklination: den Kollegen, Herrn",
+      "pz-1": "Partizip I som adjektiv", "pz-2": "Partizip II som adjektiv", "pz-erw": "Utbyggt particip-attribut", "pz-rel": "Relativsats → particip",
+      "zt-par": "sowohl, weder, entweder, nicht nur", "zt-kontrast": "zwar … aber, einerseits … andererseits", "zt-je": "je … desto"
     },
     adj: {
       adjectives: ["neu", "wichtig", "bekannt", "typisch", "groß", "aktuell", "gut"],

@@ -1,0 +1,1135 @@
+[
+ {
+  "id": "gen-001",
+  "topic": "gen",
+  "rule": "gn-art",
+  "q": "Die Qualität [des Unterrichts] an dieser Musikhochschule ist sehr hoch.",
+  "alt": [
+   "der Unterricht",
+   "dem Unterricht",
+   "des Unterricht"
+  ],
+  "why": "Der Unterricht är maskulinum: genitiv blir des och substantivet får -s. Utan -s eller med dem blir det fel.",
+  "sv": "Kvaliteten på undervisningen vid den här musikhögskolan är mycket hög."
+ },
+ {
+  "id": "gen-002",
+  "topic": "gen",
+  "rule": "gn-art",
+  "q": "Der Klang [des Orchesters] hat mich tief beeindruckt.",
+  "alt": [
+   "der Orchester",
+   "des Orchester",
+   "dem Orchester"
+  ],
+  "why": "Das Orchester är neutrum: des + -s på substantivet. Der Orchester är fel genus.",
+  "sv": "Orkesterns klang gjorde ett djupt intryck på mig."
+ },
+ {
+  "id": "gen-003",
+  "topic": "gen",
+  "rule": "gn-art",
+  "q": "Am Ende [der Probe] waren alle Musiker völlig erschöpft.",
+  "alt": [
+   "des Probes",
+   "die Probe",
+   "dem Probe"
+  ],
+  "why": "Die Probe är femininum: genitiv blir der, och feminina ord får aldrig -s i genitiv.",
+  "sv": "I slutet av repetitionen var alla musiker helt slut."
+ },
+ {
+  "id": "gen-004",
+  "topic": "gen",
+  "rule": "gn-art",
+  "q": "Die Meinung [der Jugendlichen] wird in der Politik oft ignoriert.",
+  "alt": [
+   "den Jugendlichen",
+   "die Jugendlichen",
+   "dem Jugendlichen"
+  ],
+  "why": "Genitiv plural är der, oavsett genus. Den och dem är dativ, die är nominativ/ackusativ.",
+  "sv": "Ungdomarnas åsikt ignoreras ofta i politiken."
+ },
+ {
+  "id": "gen-005",
+  "topic": "gen",
+  "rule": "gn-art",
+  "q": "Die Geige [meiner Großmutter] ist über hundert Jahre alt.",
+  "alt": [
+   "meine Großmutter",
+   "meines Großmutter",
+   "meiner Großmutters"
+  ],
+  "why": "Femininum i genitiv: meiner, och inget -s på substantivet. Meines hör till maskulinum och neutrum.",
+  "sv": "Min mormors fiol är över hundra år gammal."
+ },
+ {
+  "id": "gen-006",
+  "topic": "gen",
+  "rule": "gn-art",
+  "q": "Die Gebühren [des Kurses] sind leider schon wieder gestiegen.",
+  "alt": [
+   "des Kurs",
+   "der Kurses",
+   "dem Kurs"
+  ],
+  "why": "Der Kurs är maskulinum och slutar på -s, så genitiv måste få -es: des Kurses.",
+  "sv": "Kursavgifterna har tyvärr stigit igen."
+ },
+ {
+  "id": "gen-007",
+  "topic": "gen",
+  "rule": "gn-art",
+  "q": "Die Lösung [des Problems] ist leider nicht so einfach.",
+  "alt": [
+   "der Problem",
+   "des Problem",
+   "dem Problem"
+  ],
+  "why": "Das Problem är neutrum: des + -s. Ord på flera stavelser får oftast bara -s, inte -es.",
+  "sv": "Lösningen på problemet är tyvärr inte så enkel."
+ },
+ {
+  "id": "gen-008",
+  "topic": "gen",
+  "rule": "gn-art",
+  "q": "Die Folgen [des Klimawandels] sind schon heute deutlich spürbar.",
+  "alt": [
+   "des Klimawandel",
+   "der Klimawandel",
+   "dem Klimawandel"
+  ],
+  "why": "Der Klimawandel är maskulinum: des + -s. Glöm inte ändelsen på substantivet.",
+  "sv": "Klimatförändringarnas följder märks tydligt redan i dag."
+ },
+ {
+  "id": "gen-009",
+  "topic": "gen",
+  "rule": "gn-art",
+  "q": "Die Mitglieder [unseres Chors] kommen aus zwölf verschiedenen Ländern.",
+  "alt": [
+   "unser Chor",
+   "unserem Chor",
+   "unseres Chor"
+  ],
+  "acc": [
+   "unseres Chores"
+  ],
+  "why": "Der Chor är maskulinum: possessivet får -es (unseres) och substantivet -s. Unserem är dativ.",
+  "sv": "Medlemmarna i vår kör kommer från tolv olika länder."
+ },
+ {
+  "id": "gen-010",
+  "topic": "gen",
+  "rule": "gn-art",
+  "q": "[Beethovens] neunte Sinfonie wird in Deutschland oft an Silvester gespielt.",
+  "alt": [
+   "Beethoven's",
+   "Beethoven",
+   "Des Beethovens"
+  ],
+  "why": "Namn får genitiv-s direkt, utan apostrof och utan artikel: Beethovens. Apostrofen är engelska.",
+  "sv": "Beethovens nionde symfoni spelas ofta på nyårsafton i Tyskland."
+ },
+ {
+  "id": "gen-011",
+  "topic": "gen",
+  "rule": "gn-prep",
+  "q": "Wegen [des Streiks] fahren heute in ganz Bayern keine Züge.",
+  "alt": [
+   "den Streik",
+   "der Streik",
+   "des Streik"
+  ],
+  "why": "Wegen styr genitiv: der Streik → des Streiks, med -s på substantivet.",
+  "sv": "På grund av strejken går inga tåg i hela Bayern i dag."
+ },
+ {
+  "id": "gen-012",
+  "topic": "gen",
+  "rule": "gn-prep",
+  "q": "Trotz [des schlechten Wetters] fand das Open-Air-Konzert statt.",
+  "alt": [
+   "das schlechte Wetter",
+   "des schlechten Wetter",
+   "des schlechte Wetters"
+  ],
+  "why": "Trotz styr genitiv: des + adjektiv på -en + substantiv på -s.",
+  "sv": "Trots det dåliga vädret blev det av med utomhuskonserten."
+ },
+ {
+  "id": "gen-013",
+  "topic": "gen",
+  "rule": "gn-prep",
+  "q": "Während [des Konzerts] müssen alle Handys ausgeschaltet sein.",
+  "alt": [
+   "das Konzert",
+   "der Konzert",
+   "des Konzert"
+  ],
+  "acc": [
+   "des Konzertes"
+  ],
+  "why": "Während som preposition (under) styr genitiv: das Konzert → des Konzerts eller des Konzertes.",
+  "sv": "Under konserten måste alla mobiler vara avstängda."
+ },
+ {
+  "id": "gen-014",
+  "topic": "gen",
+  "rule": "gn-prep",
+  "q": "Statt [eines neuen Konzertsaals] wird in der Stadt jetzt ein Parkhaus gebaut.",
+  "alt": [
+   "einen neuen Konzertsaal",
+   "eines neuen Konzertsaal",
+   "eines neues Konzertsaals"
+  ],
+  "acc": [
+   "eines neuen Konzertsaales"
+  ],
+  "why": "Statt styr genitiv: eines + adjektiv på -en + substantiv på -s. Einen är ackusativ.",
+  "sv": "I stället för en ny konsertsal byggs nu ett parkeringshus i staden."
+ },
+ {
+  "id": "gen-015",
+  "topic": "gen",
+  "rule": "gn-prep",
+  "q": "Innerhalb [eines Monats] müssen Sie sich an der Hochschule einschreiben.",
+  "alt": [
+   "einen Monat",
+   "eines Monat",
+   "ein Monat"
+  ],
+  "why": "Innerhalb (inom) styr genitiv: der Monat → eines Monats.",
+  "sv": "Inom en månad måste ni skriva in er vid högskolan."
+ },
+ {
+  "id": "gen-016",
+  "topic": "gen",
+  "rule": "gn-prep",
+  "q": "Wegen [meiner Erkältung] konnte ich gestern nicht zur Probe kommen.",
+  "alt": [
+   "meine Erkältung",
+   "meines Erkältung",
+   "meiner Erkältungs"
+  ],
+  "why": "Die Erkältung är femininum: genitiv meiner, utan -s på substantivet.",
+  "sv": "På grund av min förkylning kunde jag inte komma på repetitionen i går."
+ },
+ {
+  "id": "gen-017",
+  "topic": "gen",
+  "rule": "gn-prep",
+  "q": "Während [der Semesterferien] arbeiten viele Studierende in Cafés oder Fabriken.",
+  "alt": [
+   "die Semesterferien",
+   "des Semesterferien",
+   "dem Semesterferien"
+  ],
+  "why": "Die Semesterferien är plural: genitiv plural är der.",
+  "sv": "Under terminsuppehållet jobbar många studenter på kaféer eller fabriker."
+ },
+ {
+  "id": "gen-018",
+  "topic": "gen",
+  "rule": "gn-prep",
+  "q": "Trotz [ihres Talents] wurde sie an der Musikhochschule nicht angenommen.",
+  "alt": [
+   "ihr Talent",
+   "ihren Talent",
+   "ihres Talent"
+  ],
+  "acc": [
+   "ihres Talentes"
+  ],
+  "why": "Trotz + genitiv: das Talent → ihres Talents (eller Talentes).",
+  "sv": "Trots sin talang kom hon inte in på musikhögskolan."
+ },
+ {
+  "id": "gen-019",
+  "topic": "gen",
+  "rule": "gn-prep",
+  "q": "[Wegen] der hohen Mieten wohnen viele Studierende in einer WG.",
+  "alt": [
+   "Trotz",
+   "Während",
+   "Statt"
+  ],
+  "acc": [
+   "Aufgrund"
+  ],
+  "why": "De höga hyrorna är orsaken till att man bor i kollektiv: wegen (på grund av). Aufgrund betyder samma sak.",
+  "sv": "På grund av de höga hyrorna bor många studenter i kollektiv."
+ },
+ {
+  "id": "gen-020",
+  "topic": "gen",
+  "rule": "gn-prep",
+  "q": "[Trotz] des Lärms auf der Straße konnte ich mich gut konzentrieren.",
+  "alt": [
+   "Wegen",
+   "Statt",
+   "Innerhalb"
+  ],
+  "why": "Man kunde koncentrera sig fast det var bullrigt, alltså en motsättning: trotz (trots).",
+  "sv": "Trots bullret från gatan kunde jag koncentrera mig bra."
+ },
+ {
+  "id": "gen-021",
+  "topic": "gen",
+  "rule": "gn-ndekl",
+  "q": "Kennst du schon den neuen [Kollegen] aus der Marketingabteilung?",
+  "alt": [
+   "Kollege",
+   "Kolleges",
+   "Kollegs"
+  ],
+  "why": "Der Kollege hör till n-deklinationen: i ackusativ blir det den Kollegen.",
+  "sv": "Känner du redan den nya kollegan från marknadsavdelningen?"
+ },
+ {
+  "id": "gen-022",
+  "topic": "gen",
+  "rule": "gn-ndekl",
+  "q": "Der Professor hat dem [Studenten] eine sehr gute Note gegeben.",
+  "alt": [
+   "Student",
+   "Studente",
+   "Studentes"
+  ],
+  "why": "Ord på -ent (der Student) böjs efter n-deklinationen: dem Studenten i dativ.",
+  "sv": "Professorn gav studenten ett mycket bra betyg."
+ },
+ {
+  "id": "gen-023",
+  "topic": "gen",
+  "rule": "gn-ndekl",
+  "q": "Die Karriere des jungen [Pianisten] begann mit einem Wettbewerb in Leipzig.",
+  "alt": [
+   "Pianists",
+   "Pianistes",
+   "Pianist"
+  ],
+  "why": "Ord på -ist är n-deklination: genitiv blir des Pianisten, inte -s.",
+  "sv": "Den unge pianistens karriär började med en tävling i Leipzig."
+ },
+ {
+  "id": "gen-024",
+  "topic": "gen",
+  "rule": "gn-ndekl",
+  "q": "Können Sie bitte [Herrn] Weber ausrichten, dass ich später komme?",
+  "alt": [
+   "Herr",
+   "Herren",
+   "Herrns"
+  ],
+  "why": "Der Herr får -n i ackusativ, dativ och genitiv singular: Herrn Weber. Herren är plural.",
+  "sv": "Kan ni hälsa herr Weber att jag kommer senare?"
+ },
+ {
+  "id": "gen-025",
+  "topic": "gen",
+  "rule": "gn-ndekl",
+  "q": "Wir suchen noch den [Dirigenten] des Jugendorchesters.",
+  "alt": [
+   "Dirigent",
+   "Dirigents",
+   "Dirigente"
+  ],
+  "why": "Der Dirigent (-ent) är n-deklination: den Dirigenten i ackusativ.",
+  "sv": "Vi letar fortfarande efter dirigenten för ungdomsorkestern."
+ },
+ {
+  "id": "gen-026",
+  "topic": "gen",
+  "rule": "gn-ndekl",
+  "q": "Die Bedeutung des [Namens] war mir lange nicht klar.",
+  "alt": [
+   "Namen",
+   "Name",
+   "Names"
+  ],
+  "why": "Der Name är ett specialfall: -n som n-deklinationen, men i genitiv också -s: des Namens.",
+  "sv": "Jag förstod länge inte vad namnet betydde."
+ },
+ {
+  "id": "gen-027",
+  "topic": "gen",
+  "rule": "gn-ndekl",
+  "q": "Wir haben lange mit dem [Nachbarn] über den Lärm gesprochen.",
+  "alt": [
+   "Nachbar",
+   "Nachbars",
+   "Nachbarer"
+  ],
+  "why": "Der Nachbar hör till n-deklinationen, fast det inte syns på ändelsen: dem Nachbarn.",
+  "sv": "Vi pratade länge med grannen om oljudet."
+ },
+ {
+  "id": "gen-028",
+  "topic": "gen",
+  "rule": "gn-ndekl",
+  "q": "Der Minister wollte dem [Journalisten] kein Interview geben.",
+  "alt": [
+   "Journalist",
+   "Journalists",
+   "Journaliste"
+  ],
+  "why": "Ord på -ist är n-deklination: dativ dem Journalisten.",
+  "sv": "Ministern ville inte ge journalisten någon intervju."
+ },
+ {
+  "id": "gen-029",
+  "topic": "gen",
+  "rule": "gn-ndekl",
+  "q": "Für einen [Menschen] ohne Deutschkenntnisse ist die deutsche Bürokratie sehr schwierig.",
+  "alt": [
+   "Mensch",
+   "Menschs",
+   "Menschens"
+  ],
+  "why": "Der Mensch är n-deklination: efter für (ackusativ) blir det einen Menschen.",
+  "sv": "För en människa utan tyskkunskaper är den tyska byråkratin mycket svår."
+ },
+ {
+  "id": "gen-030",
+  "topic": "gen",
+  "rule": "gn-ndekl",
+  "q": "Hast du den neuen [Lehrer] schon kennengelernt?",
+  "alt": [
+   "Lehrern",
+   "Lehrers",
+   "Lehreren"
+  ],
+  "why": "Der Lehrer hör inte till n-deklinationen (slutar inte på -e, -ent, -ist …), så ackusativ är bara den Lehrer.",
+  "sv": "Har du redan träffat den nya läraren?"
+ },
+ {
+  "id": "partizip-001",
+  "topic": "partizip",
+  "rule": "pz-1",
+  "q": "Die [steigenden] Mieten sind für viele Studierende ein großes Problem.",
+  "alt": [
+   "steigende",
+   "steigendes",
+   "steigend"
+  ],
+  "why": "Partizip I (steigend) böjs som ett adjektiv: efter die i plural blir ändelsen -en.",
+  "sv": "De stigande hyrorna är ett stort problem för många studenter."
+ },
+ {
+  "id": "partizip-002",
+  "topic": "partizip",
+  "rule": "pz-1",
+  "q": "Wir brauchen dringend Lösungen für den [wachsenden] Verkehr in den Städten.",
+  "alt": [
+   "wachsende",
+   "wachsender",
+   "wachsend"
+  ],
+  "why": "Für + ackusativ, maskulinum: den + adjektiv på -en. Participet får samma ändelse som ett adjektiv.",
+  "sv": "Vi behöver snabbt lösningar på den växande trafiken i städerna."
+ },
+ {
+  "id": "partizip-003",
+  "topic": "partizip",
+  "rule": "pz-1",
+  "q": "Die [kommende] Woche wird anstrengend, weil wir drei Konzerte haben.",
+  "alt": [
+   "kommenden",
+   "gekommene",
+   "kommender"
+  ],
+  "why": "Nästa vecka = die kommende Woche (Partizip I, pågående/framtida). Femininum nominativ efter die ger -e.",
+  "sv": "Nästa vecka blir ansträngande eftersom vi har tre konserter."
+ },
+ {
+  "id": "partizip-004",
+  "topic": "partizip",
+  "rule": "pz-1",
+  "q": "Wir suchen noch einen [passenden] Termin für die nächste Probe.",
+  "alt": [
+   "passende",
+   "gepassten",
+   "passender"
+  ],
+  "why": "Einen + maskulinum i ackusativ ger -en: einen passenden Termin.",
+  "sv": "Vi letar fortfarande efter en passande tid för nästa repetition."
+ },
+ {
+  "id": "partizip-005",
+  "topic": "partizip",
+  "rule": "pz-1",
+  "q": "Mit [zitternden] Händen begann sie ihr Vorspiel.",
+  "alt": [
+   "zitternde",
+   "gezitterten",
+   "zitternd"
+  ],
+  "why": "Händerna darrar medan hon spelar: Partizip I. Mit + dativ plural utan artikel ger -en.",
+  "sv": "Med darrande händer började hon sin provspelning."
+ },
+ {
+  "id": "partizip-006",
+  "topic": "partizip",
+  "rule": "pz-1",
+  "q": "Das ist ein wirklich [überzeugendes] Argument.",
+  "alt": [
+   "überzeugende",
+   "überzeugtes",
+   "überzeugender"
+  ],
+  "why": "Argumentet övertygar (aktivt): Partizip I. Ein + neutrum ger -es. Überzeugt betyder övertygad.",
+  "sv": "Det är ett verkligt övertygande argument."
+ },
+ {
+  "id": "partizip-007",
+  "topic": "partizip",
+  "rule": "pz-1",
+  "q": "Das [schlafende] Baby darf auf keinen Fall geweckt werden.",
+  "alt": [
+   "schlafenden",
+   "geschlafene",
+   "schlafend"
+  ],
+  "why": "Babyt sover just nu: Partizip I. Das + neutrum nominativ ger -e.",
+  "sv": "Den sovande bebisen får absolut inte väckas."
+ },
+ {
+  "id": "partizip-008",
+  "topic": "partizip",
+  "rule": "pz-2",
+  "q": "Hast du das [ausgeliehene] Buch schon in die Bibliothek zurückgebracht?",
+  "alt": [
+   "ausleihende",
+   "ausgeliehenes",
+   "ausgeliehen"
+  ],
+  "why": "Boken har lånats (avslutat, passivt): Partizip II. Efter das får det -e, inte -es.",
+  "sv": "Har du redan lämnat tillbaka den lånade boken till biblioteket?"
+ },
+ {
+  "id": "partizip-009",
+  "topic": "partizip",
+  "rule": "pz-2",
+  "q": "Die [renovierte] Stadthalle wird im Mai wieder eröffnet.",
+  "alt": [
+   "renovierende",
+   "renovierten",
+   "renoviert"
+  ],
+  "why": "Hallen har renoverats: Partizip II. Die + femininum nominativ ger -e.",
+  "sv": "Den renoverade stadshallen öppnar igen i maj."
+ },
+ {
+  "id": "partizip-010",
+  "topic": "partizip",
+  "rule": "pz-2",
+  "q": "Er hat mir eine [gebrauchte] Gitarre für 80 Euro verkauft.",
+  "alt": [
+   "brauchende",
+   "gebrauchten",
+   "gebraucht"
+  ],
+  "why": "Gitarren har använts: Partizip II (gebraucht). Eine + femininum ackusativ ger -e.",
+  "sv": "Han sålde en begagnad gitarr till mig för 80 euro."
+ },
+ {
+  "id": "partizip-011",
+  "topic": "partizip",
+  "rule": "pz-2",
+  "q": "Die Studierenden bekommen alle [benötigten] Unterlagen per E-Mail.",
+  "alt": [
+   "benötigte",
+   "benötigende",
+   "benötigter"
+  ],
+  "why": "Efter alle böjs adjektiv och particip som efter die: -en i plural.",
+  "sv": "Studenterna får alla nödvändiga dokument via mejl."
+ },
+ {
+  "id": "partizip-012",
+  "topic": "partizip",
+  "rule": "pz-2",
+  "q": "Trotz des [verspäteten] Beginns war das Konzert ein großer Erfolg.",
+  "alt": [
+   "verspätete",
+   "verspätenden",
+   "verspätetes"
+  ],
+  "why": "Trotz + genitiv: des + particip på -en. Starten har blivit försenad: Partizip II.",
+  "sv": "Trots den försenade starten blev konserten en stor succé."
+ },
+ {
+  "id": "partizip-013",
+  "topic": "partizip",
+  "rule": "pz-2",
+  "q": "Die [gestohlenen] Instrumente wurden inzwischen von der Polizei gefunden.",
+  "alt": [
+   "stehlenden",
+   "gestohlene",
+   "stehlende"
+  ],
+  "why": "Instrumenten har blivit stulna (passivt): Partizip II. Stehlend skulle betyda att instrumenten själva stjäl.",
+  "sv": "De stulna instrumenten har nu hittats av polisen."
+ },
+ {
+  "id": "partizip-014",
+  "topic": "partizip",
+  "rule": "pz-2",
+  "q": "In der Zeitung stand ein Artikel über die [geplante] Schließung des Jugendzentrums.",
+  "alt": [
+   "planende",
+   "geplanten",
+   "geplant"
+  ],
+  "why": "Stängningen är planerad: Partizip II. Über die + femininum ackusativ ger -e.",
+  "sv": "I tidningen stod en artikel om den planerade stängningen av ungdomsgården."
+ },
+ {
+  "id": "partizip-015",
+  "topic": "partizip",
+  "rule": "pz-erw",
+  "q": "Der seit Jahren [geplante] Umbau des Konzerthauses beginnt endlich.",
+  "alt": [
+   "planende",
+   "geplanten",
+   "geplant"
+  ],
+  "why": "Utbyggt attribut: allt mellan der och Umbau beskriver ombyggnaden. Der + maskulinum nominativ ger -e.",
+  "sv": "Den sedan flera år planerade ombyggnaden av konserthuset börjar äntligen."
+ },
+ {
+  "id": "partizip-016",
+  "topic": "partizip",
+  "rule": "pz-erw",
+  "q": "Die im letzten Jahr [gegründete] Band hat schon drei Konzerte gegeben.",
+  "alt": [
+   "gründende",
+   "gegründeten",
+   "gegründet"
+  ],
+  "why": "Bandet grundades förra året: Partizip II. Die + femininum nominativ (die Band) ger -e.",
+  "sv": "Bandet som grundades förra året har redan gett tre konserter."
+ },
+ {
+  "id": "partizip-017",
+  "topic": "partizip",
+  "rule": "pz-erw",
+  "q": "Das von vielen Kritikern [gelobte] Album ist jetzt auch auf Vinyl erhältlich.",
+  "alt": [
+   "lobende",
+   "gelobten",
+   "gelobt"
+  ],
+  "why": "Albumet har blivit hyllat av kritiker (von = av): Partizip II. Das + neutrum nominativ ger -e.",
+  "sv": "Albumet som många kritiker har hyllat finns nu också på vinyl."
+ },
+ {
+  "id": "partizip-018",
+  "topic": "partizip",
+  "rule": "pz-erw",
+  "q": "Die immer weiter [steigenden] Energiepreise belasten viele Familien.",
+  "alt": [
+   "steigende",
+   "steigender",
+   "steigend"
+  ],
+  "why": "Priserna stiger fortfarande: Partizip I. Die i plural ger -en.",
+  "sv": "De ständigt stigande energipriserna belastar många familjer."
+ },
+ {
+  "id": "partizip-019",
+  "topic": "partizip",
+  "rule": "pz-erw",
+  "q": "[Die] von der Stadt finanzierten Kurse sind für alle Jugendlichen kostenlos.",
+  "alt": [
+   "Der",
+   "Das",
+   "Den"
+  ],
+  "why": "Artikeln hör till Kurse (plural), inte till Stadt: die … Kurse. Der Stadt står redan efter von.",
+  "sv": "Kurserna som staden finansierar är gratis för alla ungdomar."
+ },
+ {
+  "id": "partizip-020",
+  "topic": "partizip",
+  "rule": "pz-erw",
+  "q": "Ich habe mir gestern die von dir [empfohlene] Serie angesehen.",
+  "alt": [
+   "empfehlende",
+   "empfohlenen",
+   "empfohlen"
+  ],
+  "why": "Serien har rekommenderats av dig: Partizip II. Die + femininum ackusativ ger -e.",
+  "sv": "I går tittade jag på serien som du rekommenderade."
+ },
+ {
+  "id": "partizip-021",
+  "topic": "partizip",
+  "rule": "pz-rel",
+  "type": "rw",
+  "q": "Der Umbau, der seit Jahren geplant ist, beginnt im Herbst.",
+  "cue": "Partizip II",
+  "a": "Der seit Jahren geplante Umbau beginnt im Herbst.",
+  "acc": [
+   "Im Herbst beginnt der seit Jahren geplante Umbau."
+  ],
+  "alt": [
+   "Der geplante seit Jahren Umbau beginnt im Herbst.",
+   "Seit Jahren der geplante Umbau beginnt im Herbst."
+  ],
+  "why": "Stryk der och ist, och ställ seit Jahren geplante mellan artikeln och substantivet. Participet står sist, närmast substantivet.",
+  "sv": "Den sedan flera år planerade ombyggnaden börjar i höst."
+ },
+ {
+  "id": "partizip-022",
+  "topic": "partizip",
+  "rule": "pz-rel",
+  "type": "rw",
+  "q": "Die Musikerin, die in Wien lebt, gibt morgen ein Konzert.",
+  "cue": "Partizip I",
+  "a": "Die in Wien lebende Musikerin gibt morgen ein Konzert.",
+  "acc": [
+   "Morgen gibt die in Wien lebende Musikerin ein Konzert."
+  ],
+  "alt": [
+   "Die lebende in Wien Musikerin gibt morgen ein Konzert.",
+   "Die in Wien Musikerin lebende gibt morgen ein Konzert."
+  ],
+  "why": "Aktiv presens (lebt) blir Partizip I: die in Wien lebende Musikerin. Tillägget (in Wien) står före participet.",
+  "sv": "Musikern som bor i Wien ger en konsert i morgon."
+ },
+ {
+  "id": "partizip-023",
+  "topic": "partizip",
+  "rule": "pz-rel",
+  "type": "rw",
+  "q": "Das Album, das letztes Jahr erschienen ist, war ein großer Erfolg.",
+  "cue": "Partizip II",
+  "a": "Das letztes Jahr erschienene Album war ein großer Erfolg.",
+  "acc": [
+   "Ein großer Erfolg war das letztes Jahr erschienene Album."
+  ],
+  "alt": [
+   "Das erschienene letztes Jahr Album war ein großer Erfolg.",
+   "Das letztes Jahr Album erschienene war ein großer Erfolg."
+  ],
+  "why": "Avslutad handling (ist erschienen) blir Partizip II: das letztes Jahr erschienene Album. Participet står sist, direkt före substantivet.",
+  "sv": "Albumet som kom ut förra året blev en stor framgång."
+ },
+ {
+  "id": "partizip-024",
+  "topic": "partizip",
+  "rule": "pz-rel",
+  "type": "rw",
+  "q": "Die Studierenden, die neben dem Studium arbeiten, haben wenig Freizeit.",
+  "cue": "Partizip I",
+  "a": "Die neben dem Studium arbeitenden Studierenden haben wenig Freizeit.",
+  "acc": [
+   "Wenig Freizeit haben die neben dem Studium arbeitenden Studierenden."
+  ],
+  "alt": [
+   "Die arbeitenden neben dem Studium Studierenden haben wenig Freizeit.",
+   "Die neben dem Studium Studierenden arbeitenden haben wenig Freizeit."
+  ],
+  "why": "Aktiv presens (arbeiten) blir Partizip I med ändelsen -en: die neben dem Studium arbeitenden Studierenden.",
+  "sv": "Studenterna som jobbar vid sidan av studierna har lite fritid."
+ },
+ {
+  "id": "partizip-025",
+  "topic": "partizip",
+  "rule": "pz-rel",
+  "type": "rw",
+  "q": "Die Konzerte, die wegen des Streiks abgesagt wurden, werden im Juni nachgeholt.",
+  "cue": "Partizip II",
+  "a": "Die wegen des Streiks abgesagten Konzerte werden im Juni nachgeholt.",
+  "acc": [
+   "Im Juni werden die wegen des Streiks abgesagten Konzerte nachgeholt."
+  ],
+  "alt": [
+   "Die abgesagten wegen des Streiks Konzerte werden im Juni nachgeholt.",
+   "Die wegen des Streiks Konzerte abgesagten werden im Juni nachgeholt."
+  ],
+  "why": "Passiv (wurden abgesagt) blir Partizip II: die wegen des Streiks abgesagten Konzerte. Allt som beskriver konserterna står mellan die och Konzerte.",
+  "sv": "Konserterna som ställdes in på grund av strejken tas igen i juni."
+ },
+ {
+  "id": "zweiteilig-001",
+  "topic": "zweiteilig",
+  "rule": "zt-par",
+  "q": "Ich spiele sowohl Klavier [als auch] Geige.",
+  "alt": [
+   "und auch",
+   "als",
+   "sondern auch"
+  ],
+  "why": "Både … och = sowohl … als auch. Und och sondern hör till andra par.",
+  "sv": "Jag spelar både piano och fiol."
+ },
+ {
+  "id": "zweiteilig-002",
+  "topic": "zweiteilig",
+  "rule": "zt-par",
+  "q": "Er hat weder Zeit [noch] Geld für einen Urlaub.",
+  "alt": [
+   "oder",
+   "und",
+   "nicht"
+  ],
+  "why": "Varken … eller = weder … noch. Weder … oder är ett vanligt fel.",
+  "sv": "Han har varken tid eller pengar till en semester."
+ },
+ {
+  "id": "zweiteilig-003",
+  "topic": "zweiteilig",
+  "rule": "zt-par",
+  "q": "Die neue Musikschule ist nicht nur modern, [sondern auch] günstig.",
+  "alt": [
+   "aber auch",
+   "und auch",
+   "oder auch"
+  ],
+  "why": "Inte bara … utan också = nicht nur … sondern auch. Efter en nekande första del blir svenskans \"utan\" sondern, aldrig aber.",
+  "sv": "Den nya musikskolan är inte bara modern utan också billig."
+ },
+ {
+  "id": "zweiteilig-004",
+  "topic": "zweiteilig",
+  "rule": "zt-par",
+  "q": "[Entweder] du übst jeden Tag, oder du bestehst die Aufnahmeprüfung nicht.",
+  "alt": [
+   "Weder",
+   "Sowohl",
+   "Ob"
+  ],
+  "why": "Antingen … eller = entweder … oder. Weder hör ihop med noch, sowohl med als auch.",
+  "sv": "Antingen övar du varje dag, eller så klarar du inte antagningsprovet."
+ },
+ {
+  "id": "zweiteilig-005",
+  "topic": "zweiteilig",
+  "rule": "zt-par",
+  "q": "Wir können [entweder] mit dem Zug [oder] mit dem Bus nach Leipzig fahren.",
+  "alt": [
+   "weder … oder",
+   "sowohl … oder",
+   "entweder … noch"
+  ],
+  "why": "Två möjligheter där man väljer en: entweder … oder. Paren kan inte blandas.",
+  "sv": "Vi kan åka antingen tåg eller buss till Leipzig."
+ },
+ {
+  "id": "zweiteilig-006",
+  "topic": "zweiteilig",
+  "rule": "zt-par",
+  "q": "[Weder] meine Eltern [noch] meine Lehrerin wussten von meiner Bewerbung.",
+  "alt": [
+   "Weder … oder",
+   "Nicht … noch",
+   "Entweder … noch"
+  ],
+  "why": "Varken … eller = weder … noch. Weder har redan nekandet i sig, så det behövs inget nicht.",
+  "sv": "Varken mina föräldrar eller min lärare visste om min ansökan."
+ },
+ {
+  "id": "zweiteilig-007",
+  "topic": "zweiteilig",
+  "rule": "zt-par",
+  "q": "Das Stipendium deckt [sowohl] den Semesterbeitrag [als auch] die Miete.",
+  "alt": [
+   "beide … und",
+   "sowohl … und",
+   "entweder … als auch"
+  ],
+  "why": "Både … och = sowohl … als auch. Beide … und är en direktöversättning av svenskans \"både … och\".",
+  "sv": "Stipendiet täcker både terminsavgiften och hyran."
+ },
+ {
+  "id": "zweiteilig-008",
+  "topic": "zweiteilig",
+  "rule": "zt-par",
+  "q": "Sie singt [nicht nur] im Chor, sondern spielt auch Cello.",
+  "alt": [
+   "nicht einmal",
+   "weder",
+   "sowohl"
+  ],
+  "why": "Sondern auch kräver nicht nur i första delen: inte bara … utan också.",
+  "sv": "Hon sjunger inte bara i kör utan spelar också cello."
+ },
+ {
+  "id": "zweiteilig-009",
+  "topic": "zweiteilig",
+  "rule": "zt-par",
+  "type": "rw",
+  "q": "Mein Bruder spielt Gitarre. Er spielt auch Schlagzeug.",
+  "cue": "sowohl … als auch",
+  "a": "Mein Bruder spielt sowohl Gitarre als auch Schlagzeug.",
+  "acc": [
+   "Sowohl Gitarre als auch Schlagzeug spielt mein Bruder."
+  ],
+  "alt": [
+   "Mein Bruder sowohl spielt Gitarre als auch Schlagzeug.",
+   "Sowohl mein Bruder spielt Gitarre als auch Schlagzeug.",
+   "Mein Bruder spielt Gitarre sowohl als auch Schlagzeug."
+  ],
+  "why": "Sowohl … als auch står direkt framför de två leden som jämförs och ändrar inte ordföljden: verbet står kvar på plats två.",
+  "sv": "Min bror spelar både gitarr och trummor."
+ },
+ {
+  "id": "zweiteilig-010",
+  "topic": "zweiteilig",
+  "rule": "zt-par",
+  "type": "rw",
+  "q": "Ich habe am Wochenende keine Zeit. Ich habe auch keine Lust.",
+  "cue": "weder … noch",
+  "a": "Ich habe am Wochenende weder Zeit noch Lust.",
+  "acc": [
+   "Am Wochenende habe ich weder Zeit noch Lust."
+  ],
+  "alt": [
+   "Am Wochenende ich habe weder Zeit noch Lust.",
+   "Ich weder habe am Wochenende Zeit noch Lust.",
+   "Weder ich habe am Wochenende Zeit noch Lust."
+  ],
+  "why": "Weder … noch ersätter kein … kein och står framför de två leden. Verbet står kvar på plats två.",
+  "sv": "Jag har varken tid eller lust i helgen."
+ },
+ {
+  "id": "zweiteilig-011",
+  "topic": "zweiteilig",
+  "rule": "zt-par",
+  "type": "rw",
+  "q": "Du meldest dich heute an. Sonst verlierst du deinen Platz.",
+  "cue": "entweder … oder",
+  "a": "Entweder du meldest dich heute an, oder du verlierst deinen Platz.",
+  "acc": [
+   "Entweder meldest du dich heute an, oder du verlierst deinen Platz."
+  ],
+  "alt": [
+   "Entweder du meldest dich heute an, oder verlierst du deinen Platz.",
+   "Entweder du dich meldest heute an, oder du verlierst deinen Platz."
+  ],
+  "why": "Entweder kan stå före subjektet (du meldest) eller ta plats ett (meldest du). Oder är en konjunktion: efter oder kommer subjektet och sedan verbet.",
+  "sv": "Antingen anmäler du dig i dag, eller så förlorar du din plats."
+ },
+ {
+  "id": "zweiteilig-012",
+  "topic": "zweiteilig",
+  "rule": "zt-par",
+  "type": "rw",
+  "q": "Die Wohnung ist zu teuer. Sie ist auch zu klein.",
+  "cue": "nicht nur … sondern auch",
+  "a": "Die Wohnung ist nicht nur zu teuer, sondern auch zu klein.",
+  "alt": [
+   "Die Wohnung nicht nur ist zu teuer, sondern auch zu klein.",
+   "Die Wohnung ist nicht nur zu teuer, sondern zu klein auch.",
+   "Nicht nur die Wohnung ist zu teuer, sondern auch zu klein."
+  ],
+  "why": "Nicht nur står efter verbet, direkt före det första ledet, och sondern auch direkt före det andra.",
+  "sv": "Lägenheten är inte bara för dyr utan också för liten."
+ },
+ {
+  "id": "zweiteilig-013",
+  "topic": "zweiteilig",
+  "rule": "zt-kontrast",
+  "q": "Das Studium in Deutschland ist [zwar] kostenlos, aber das Leben in München ist teuer.",
+  "alt": [
+   "obwohl",
+   "sondern",
+   "sowohl"
+  ],
+  "why": "Visserligen … men = zwar … aber. Zwar står efter verbet, och aber inleder invändningen.",
+  "sv": "Studierna i Tyskland är visserligen gratis, men livet i München är dyrt."
+ },
+ {
+  "id": "zweiteilig-014",
+  "topic": "zweiteilig",
+  "rule": "zt-kontrast",
+  "q": "Einerseits möchte ich in Berlin studieren, [andererseits] würde ich dann meine Familie vermissen.",
+  "alt": [
+   "auf der anderen Hand",
+   "zweitens",
+   "aber"
+  ],
+  "why": "Å ena sidan … å andra sidan = einerseits … andererseits. Efter andererseits kommer verbet direkt (würde ich), vilket inte går efter aber.",
+  "sv": "Å ena sidan vill jag studera i Berlin, å andra sidan skulle jag då sakna min familj."
+ },
+ {
+  "id": "zweiteilig-015",
+  "topic": "zweiteilig",
+  "rule": "zt-kontrast",
+  "q": "Die Aufnahmeprüfung war zwar schwer, [aber] ich habe sie bestanden.",
+  "alt": [
+   "sondern",
+   "denn",
+   "obwohl"
+  ],
+  "why": "Zwar följs av aber (men). Sondern kräver en nekad första del, och efter obwohl skulle verbet stå sist.",
+  "sv": "Antagningsprovet var visserligen svårt, men jag klarade det."
+ },
+ {
+  "id": "zweiteilig-016",
+  "topic": "zweiteilig",
+  "rule": "zt-kontrast",
+  "q": "[Einerseits] ist Social Media praktisch, andererseits macht es viele Jugendliche süchtig.",
+  "alt": [
+   "Auf der einen Hand",
+   "Obwohl",
+   "Sowohl"
+  ],
+  "why": "Einerseits är ett adverb på plats ett, så verbet (ist) kommer direkt efter. På tyska säger man auf der einen Seite, aldrig \"Hand\".",
+  "sv": "Å ena sidan är sociala medier praktiska, å andra sidan gör de många ungdomar beroende."
+ },
+ {
+  "id": "zweiteilig-017",
+  "topic": "zweiteilig",
+  "rule": "zt-kontrast",
+  "type": "rw",
+  "q": "Die Stadt ist schön. Aber die Mieten sind sehr hoch.",
+  "cue": "zwar … aber",
+  "a": "Die Stadt ist zwar schön, aber die Mieten sind sehr hoch.",
+  "acc": [
+   "Zwar ist die Stadt schön, aber die Mieten sind sehr hoch.",
+   "Die Stadt ist zwar schön, die Mieten sind aber sehr hoch.",
+   "Zwar ist die Stadt schön, die Mieten sind aber sehr hoch."
+  ],
+  "alt": [
+   "Die Stadt zwar ist schön, aber die Mieten sind sehr hoch.",
+   "Die Stadt ist zwar schön, aber sind die Mieten sehr hoch.",
+   "Zwar die Stadt ist schön, aber die Mieten sind sehr hoch."
+  ],
+  "why": "Zwar står efter verbet (ist zwar schön) eller först med verbet direkt efter (Zwar ist …). Aber ändrar inte ordföljden: aber die Mieten sind.",
+  "sv": "Staden är visserligen vacker, men hyrorna är mycket höga."
+ },
+ {
+  "id": "zweiteilig-018",
+  "topic": "zweiteilig",
+  "rule": "zt-kontrast",
+  "type": "rw",
+  "q": "Ein Auslandsstudium ist spannend. Es ist auch anstrengend.",
+  "cue": "einerseits … andererseits",
+  "a": "Ein Auslandsstudium ist einerseits spannend, andererseits ist es anstrengend.",
+  "acc": [
+   "Einerseits ist ein Auslandsstudium spannend, andererseits ist es anstrengend.",
+   "Ein Auslandsstudium ist einerseits spannend, es ist andererseits anstrengend.",
+   "Einerseits ist ein Auslandsstudium spannend, es ist andererseits anstrengend."
+  ],
+  "alt": [
+   "Einerseits ein Auslandsstudium ist spannend, andererseits ist es anstrengend.",
+   "Ein Auslandsstudium ist einerseits spannend, andererseits es ist anstrengend."
+  ],
+  "why": "Einerseits och andererseits är adverb. Står de på plats ett kommer verbet direkt efter: andererseits ist es.",
+  "sv": "Att studera utomlands är å ena sidan spännande, å andra sidan är det ansträngande."
+ },
+ {
+  "id": "zweiteilig-019",
+  "topic": "zweiteilig",
+  "rule": "zt-je",
+  "q": "Je länger ich übe, [desto] sicherer werde ich.",
+  "alt": [
+   "dann",
+   "als",
+   "wie"
+  ],
+  "acc": [
+   "umso"
+  ],
+  "why": "Ju … desto = je … desto (eller umso). Efter desto + komparativ kommer verbet direkt.",
+  "sv": "Ju längre jag övar, desto säkrare blir jag."
+ },
+ {
+  "id": "zweiteilig-020",
+  "topic": "zweiteilig",
+  "rule": "zt-je",
+  "q": "Je [älter] ich werde, desto mehr interessiere ich mich für klassische Musik.",
+  "alt": [
+   "alt",
+   "am ältesten",
+   "ältere"
+  ],
+  "why": "Je … desto kräver komparativ utan ändelse: älter.",
+  "sv": "Ju äldre jag blir, desto mer intresserar jag mig för klassisk musik."
+ },
+ {
+  "id": "zweiteilig-021",
+  "topic": "zweiteilig",
+  "rule": "zt-je",
+  "q": "[Je] mehr man liest, desto größer wird der Wortschatz.",
+  "alt": [
+   "Desto",
+   "Wenn",
+   "So"
+  ],
+  "why": "Den första delen inleds med je, och den är en bisats (liest står sist). Desto hör till andra delen.",
+  "sv": "Ju mer man läser, desto större blir ordförrådet."
+ },
+ {
+  "id": "zweiteilig-022",
+  "topic": "zweiteilig",
+  "rule": "zt-je",
+  "q": "Je besser die Noten sind, [umso] größer ist die Auswahl an Studienplätzen.",
+  "alt": [
+   "dann",
+   "als",
+   "wie"
+  ],
+  "acc": [
+   "desto"
+  ],
+  "why": "Umso och desto betyder samma sak och står med komparativ i den andra delen: umso größer ist …",
+  "sv": "Ju bättre betygen är, desto större är utbudet av studieplatser."
+ },
+ {
+  "id": "zweiteilig-023",
+  "topic": "zweiteilig",
+  "rule": "zt-je",
+  "type": "rw",
+  "q": "Du fängst früh an. Du bist gut vorbereitet.",
+  "cue": "je … desto",
+  "a": "Je früher du anfängst, desto besser bist du vorbereitet.",
+  "acc": [
+   "Je früher du anfängst, desto besser vorbereitet bist du."
+  ],
+  "alt": [
+   "Je früher anfängst du, desto besser bist du vorbereitet.",
+   "Je früher du anfängst, desto besser du bist vorbereitet.",
+   "Je früher du anfängst, desto bist du besser vorbereitet."
+  ],
+  "why": "Je-delen är en bisats: verbet (anfängst) sist. Desto + komparativ tar plats ett i huvudsatsen, så verbet (bist) kommer direkt efter.",
+  "sv": "Ju tidigare du börjar, desto bättre förberedd är du."
+ },
+ {
+  "id": "zweiteilig-024",
+  "topic": "zweiteilig",
+  "rule": "zt-je",
+  "type": "rw",
+  "q": "Man übt viel. Man spielt sicher.",
+  "cue": "je … desto",
+  "a": "Je mehr man übt, desto sicherer spielt man.",
+  "alt": [
+   "Je mehr übt man, desto sicherer spielt man.",
+   "Je mehr man übt, desto sicherer man spielt.",
+   "Je man mehr übt, desto sicherer spielt man."
+  ],
+  "why": "Je mehr man übt: bisats med verbet sist. Desto sicherer spielt man: omvänd ordföljd, verbet direkt efter komparativet.",
+  "sv": "Ju mer man övar, desto säkrare spelar man."
+ },
+ {
+  "id": "zweiteilig-025",
+  "topic": "zweiteilig",
+  "rule": "zt-je",
+  "type": "rw",
+  "q": "Das Konzert dauert lange. Das Publikum wird unruhig.",
+  "cue": "je … desto",
+  "a": "Je länger das Konzert dauert, desto unruhiger wird das Publikum.",
+  "alt": [
+   "Je länger dauert das Konzert, desto unruhiger wird das Publikum.",
+   "Je länger das Konzert dauert, desto unruhiger das Publikum wird.",
+   "Je länger das Konzert dauert, desto wird das Publikum unruhiger."
+  ],
+  "why": "Lang blir länger och unruhig blir unruhiger. Je-delen har verbet sist (dauert), desto-delen har verbet direkt efter komparativet (wird).",
+  "sv": "Ju längre konserten håller på, desto oroligare blir publiken."
+ }
+]

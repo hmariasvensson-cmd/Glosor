@@ -179,6 +179,10 @@ setTimeout(async()=>{ try{
     ok("uttal: två frågor med orden som alternativ", sess&&sess.total===2&&sess.d.opts.length===2);
     { let g=0; while(sess&&g++<20) answerRight(); } ok("uttal: resultat sparas", S.ut["utt-t"]===100, JSON.stringify(S.ut));
     delete L.content.uttal; renderStart(); }
+  { L.content.teori=[{id:"te-1",q:"Quel est l'intervalle entre do et mi bémol ?",sv:"Vilket intervall?",opts:["tierce mineure","tierce majeure"],a:0,why:"**3** halvtoner"}];
+    exClick("teori"); ok("teoriprovet: frågan visas", sess&&sess.total===1&&q("#app").textContent.includes("mi bémol"));
+    answerRight(); ok("teoriprovet: resultat sparas", S.te["te-1"]&&S.te["te-1"].s===1, JSON.stringify(S.te));
+    delete L.content.teori; delete S.te; renderStart(); }
   { renderStart(); const m=q("#chmap"); ok("kapitelkarta: finns med staplar", !!m&&m.querySelectorAll(".chrow").length>=3&&!!m.querySelector(".track"));
     ok("rullistan visar hur långt man kommit", /%|klart/.test(q("#src").options[1].textContent), q("#src").options[1].textContent);
     const b=m.querySelectorAll("[data-chmap]")[2], id=b.dataset.chmap; b.click();

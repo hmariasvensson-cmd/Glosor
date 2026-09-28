@@ -1,0 +1,1223 @@
+{
+ "name": "Goethe-Zertifikat B1",
+ "pass": 60,
+ "note": "Övningar i provets stil, skrivna för appen. Inte officiellt material. B1 är ett delmål på vägen mot B2: här tränar du provformatet på en nivå som passar Tyska 4. Många musikhögskolor i Tyskland kräver B2 (en del godtar B1 vid antagningen), så när du klarar de här uppgifterna går du vidare till Tyska 5 och provträningen för Goethe-Zertifikat B2.",
+ "parts": [
+  {
+   "id": "lesen",
+   "name": "Lesen",
+   "sv": "Läsa",
+   "time": 65
+  },
+  {
+   "id": "hoeren",
+   "name": "Hören",
+   "sv": "Hörförståelse",
+   "time": 40
+  },
+  {
+   "id": "schreiben",
+   "name": "Schreiben",
+   "sv": "Skriva",
+   "time": 60
+  },
+  {
+   "id": "sprechen",
+   "name": "Sprechen",
+   "sv": "Tala",
+   "time": 15
+  }
+ ],
+ "tasks": [
+  {
+   "id": "de4-le-1",
+   "part": "lesen",
+   "teil": "Teil 1",
+   "title": "Leas Blog: Der Wettbewerb in Dresden",
+   "time": 10,
+   "instr": "Du läser ett blogginlägg. Är påståendena rätt (Richtig) eller fel (Falsch)?",
+   "lines": [
+    {
+     "fr": "Hallo zusammen! Letztes Wochenende war ich mit unserem Jugendorchester beim Landeswettbewerb in Dresden. Wir hatten monatelang für diesen Tag geprobt, und ich war schon Tage vorher total nervös.",
+     "sv": "Hej allihop! I helgen var jag med vår ungdomsorkester på delstatstävlingen i Dresden. Vi hade repeterat i flera månader inför den dagen, och jag var jättenervös redan flera dagar innan."
+    },
+    {
+     "fr": "Am Samstagmorgen haben wir uns um sieben Uhr am Bahnhof getroffen. Weil unser Dirigent, Herr Brandt, Angst hatte, dass jemand zu spät kommt, hat er jedem am Abend vorher noch eine Nachricht geschickt. Trotzdem hat unser Schlagzeuger Paul den Zug fast verpasst – er ist erst eine Minute vor der Abfahrt auf den Bahnsteig gerannt.",
+     "sv": "På lördagsmorgonen träffades vi klockan sju på stationen. Eftersom vår dirigent, herr Brandt, var rädd att någon skulle komma för sent, skickade han ett meddelande till alla kvällen innan. Ändå missade vår trumslagare Paul nästan tåget – han kom springande till perrongen bara en minut före avgång."
+    },
+    {
+     "fr": "In Dresden hatten wir dann eine böse Überraschung: Als ich meinen Cellokasten geöffnet habe, war der Bogen nicht drin! Ich hatte ihn am Abend vorher zu Hause auf den Schreibtisch gelegt, weil ich ihn noch putzen wollte. Ich war total verzweifelt. Zum Glück hat mir ein Mädchen aus einem anderen Orchester ihren zweiten Bogen geliehen. Sie heißt Johanna und kommt aus Chemnitz. Ohne sie hätte ich nicht mitspielen können.",
+     "sv": "I Dresden fick vi sedan en otrevlig överraskning: när jag öppnade celloväskan låg inte stråken där! Jag hade lagt den på skrivbordet hemma kvällen innan, eftersom jag ville göra ren den. Jag var helt förtvivlad. Som tur var lånade en tjej från en annan orkester ut sin extrastråke till mig. Hon heter Johanna och kommer från Chemnitz. Utan henne hade jag inte kunnat spela."
+    },
+    {
+     "fr": "Unser Auftritt war um 15 Uhr. Am Anfang haben meine Hände gezittert, aber nach ein paar Takten war die Nervosität weg. Wir haben den zweiten Platz gewonnen! Den ersten Platz hat übrigens Johannas Orchester bekommen, aber das fanden wir fair, sie waren wirklich super.",
+     "sv": "Vårt framträdande var klockan 15. I början darrade mina händer, men efter några takter var nervositeten borta. Vi kom på andra plats! Första plats fick förresten Johannas orkester, men det tyckte vi var rättvist, de var verkligen superbra."
+    },
+    {
+     "fr": "Am Abend haben alle Orchester zusammen gegessen, und ich habe mich lange mit Johanna unterhalten. Wir schreiben uns jetzt fast jeden Tag, und in den Sommerferien will sie mich in Leipzig besuchen. Ach ja: Den Bogen habe ich ihr natürlich schon mit der Post zurückgeschickt – mit einer großen Tafel Schokolade. Eure Lea",
+     "sv": "På kvällen åt alla orkestrar tillsammans, och jag pratade länge med Johanna. Nu skriver vi till varandra nästan varje dag, och på sommarlovet ska hon hälsa på mig i Leipzig. Just det: stråken har jag förstås redan skickat tillbaka till henne med posten – tillsammans med en stor chokladkaka. Er Lea"
+    }
+   ],
+   "qs": [
+    {
+     "q": "Lea war schon einige Tage vor dem Wettbewerb nervös.",
+     "opts": [
+      "Richtig",
+      "Falsch"
+     ],
+     "a": 0,
+     "why": "Richtig: ”ich war schon Tage vorher total nervös.”"
+    },
+    {
+     "q": "Der Dirigent hat alle am Abend vor der Reise an den Termin erinnert.",
+     "opts": [
+      "Richtig",
+      "Falsch"
+     ],
+     "a": 0,
+     "why": "Richtig: ”hat er jedem am Abend vorher noch eine Nachricht geschickt.”"
+    },
+    {
+     "q": "Paul hat den Zug verpasst und ist später nach Dresden gekommen.",
+     "opts": [
+      "Richtig",
+      "Falsch"
+     ],
+     "a": 1,
+     "why": "Falsch: Paul missade tåget nästan (fast), men han hann med en minut före avgång."
+    },
+    {
+     "q": "Lea hat ihren Bogen im Zug vergessen.",
+     "opts": [
+      "Richtig",
+      "Falsch"
+     ],
+     "a": 1,
+     "why": "Falsch: stråken låg kvar hemma på skrivbordet (”zu Hause auf den Schreibtisch gelegt”)."
+    },
+    {
+     "q": "Leas Orchester hat den ersten Platz gewonnen.",
+     "opts": [
+      "Richtig",
+      "Falsch"
+     ],
+     "a": 1,
+     "why": "Falsch: Leas orkester kom tvåa. Första plats gick till Johannas orkester."
+    },
+    {
+     "q": "Lea hat Johanna den Bogen mit der Post zurückgeschickt.",
+     "opts": [
+      "Richtig",
+      "Falsch"
+     ],
+     "a": 0,
+     "why": "Richtig: ”Den Bogen habe ich ihr … mit der Post zurückgeschickt.”"
+    }
+   ]
+  },
+  {
+   "id": "de4-le-2",
+   "part": "lesen",
+   "teil": "Teil 2",
+   "title": "Zwei Zeitungsartikel: Musikschulen und Instrumente aus Müll",
+   "time": 20,
+   "instr": "Du läser två tidningsartiklar. Välj rätt svar (a, b eller c). Frågorna 1–3 gäller text A och frågorna 4–6 text B.",
+   "lines": [
+    {
+     "fr": "Text A: Musikschulen – warten auf einen Platz",
+     "sv": "Text A: Musikskolor – att vänta på en plats"
+    },
+    {
+     "fr": "In vielen deutschen Städten müssen Kinder und Jugendliche monatelang warten, bis sie an einer öffentlichen Musikschule einen Platz bekommen. Nach Angaben des Verbands der Musikschulen stehen zurzeit über 100 000 Namen auf den Wartelisten. Besonders gefragt sind Klavier, Gitarre und Schlagzeug. Für Instrumente wie Fagott, Bratsche oder Tuba gibt es dagegen oft sofort einen Platz.",
+     "sv": "I många tyska städer måste barn och unga vänta i månader innan de får en plats på en kommunal musikskola. Enligt musikskolornas förbund står just nu över 100 000 namn på väntelistorna. Mest efterfrågade är piano, gitarr och trummor. För instrument som fagott, altfiol eller tuba finns det däremot ofta en plats direkt."
+    },
+    {
+     "fr": "Der Hauptgrund für die langen Wartezeiten ist nicht, dass Geld fehlt, sondern dass es zu wenige Lehrkräfte gibt. Viele Musiklehrerinnen und Musiklehrer arbeiten nur stundenweise und verdienen wenig. Deshalb entscheiden sich junge Musiker nach dem Studium oft für einen anderen Beruf.",
+     "sv": "Huvudorsaken till de långa väntetiderna är inte att pengar saknas, utan att det finns för få lärare. Många musiklärare arbetar bara timvis och tjänar lite. Därför väljer unga musiker ofta ett annat yrke efter studierna."
+    },
+    {
+     "fr": "Einige Städte versuchen nun, das Problem zu lösen. In Münster zum Beispiel bekommen Lehrkräfte seit diesem Jahr feste Verträge. Die Leiterin der Musikschule, Anna Keller, ist optimistisch: „Wir haben schon jetzt mehr Bewerbungen als im letzten Jahr.“ Eltern rät sie, offen für ein weniger bekanntes Instrument zu sein: „Wer Horn oder Kontrabass lernt, wird später in jedem Orchester gebraucht.“",
+     "sv": "Några städer försöker nu lösa problemet. I Münster till exempel får lärarna fasta anställningar sedan i år. Musikskolans rektor, Anna Keller, är optimistisk: ”Vi har redan nu fler sökande än förra året.” Föräldrar råder hon att vara öppna för ett mindre känt instrument: ”Den som lär sig valthorn eller kontrabas behövs senare i varje orkester.”"
+    },
+    {
+     "fr": "Text B: Schüler bauen Instrumente aus Müll",
+     "sv": "Text B: Elever bygger instrument av skräp"
+    },
+    {
+     "fr": "Aus alten Plastikflaschen, Dosen und Rohren kann man Musik machen – das zeigen Schülerinnen und Schüler einer Gesamtschule in Bremen. Seit zwei Jahren gibt es dort die AG „Klangschrott“. Die Idee hatte der Musiklehrer Tobias Wendt, nachdem er im Urlaub in Paraguay ein Orchester gesehen hatte, dessen Instrumente aus Abfall gebaut waren.",
+     "sv": "Av gamla plastflaskor, burkar och rör kan man göra musik – det visar elever på en skola i Bremen. Där finns sedan två år tillbaka arbetsgruppen ”Klangschrott” (ungefär ”ljudskrot”). Idén fick musikläraren Tobias Wendt efter att han på semester i Paraguay hade sett en orkester vars instrument var byggda av avfall."
+    },
+    {
+     "fr": "Einmal pro Woche treffen sich zwölf Jugendliche nach dem Unterricht in der Werkstatt der Schule. Zuerst sammeln sie Material, dann bauen sie daraus Trommeln, Gitarren oder Flöten. „Am schwierigsten ist es, eine Gitarre so zu bauen, dass sie richtig klingt“, erzählt die fünfzehnjährige Nele. „Unsere erste hat nach drei Tagen nur noch gebrummt.“",
+     "sv": "En gång i veckan träffas tolv ungdomar efter lektionerna i skolans verkstad. Först samlar de material, sedan bygger de trummor, gitarrer eller flöjter av det. ”Det svåraste är att bygga en gitarr så att den låter rätt”, berättar femtonåriga Nele. ”Vår första brummade bara efter tre dagar.”"
+    },
+    {
+     "fr": "Inzwischen tritt die Gruppe regelmäßig auf, zum Beispiel beim Stadtfest oder in Kindergärten. Im Frühling hat sie sogar einen Umweltpreis der Stadt gewonnen. Mit dem Preisgeld will die AG einen Workshop organisieren, in dem sie anderen Schulen zeigt, wie man Instrumente aus Müll baut. Denn Wendt findet: „Jede Schule hat Müll. Und jede Schule kann ein Orchester haben.“",
+     "sv": "Numera uppträder gruppen regelbundet, till exempel på stadsfesten eller på förskolor. I våras vann den till och med stadens miljöpris. För prispengarna vill gruppen ordna en workshop där den visar andra skolor hur man bygger instrument av skräp. Wendt tycker nämligen: ”Varje skola har skräp. Och varje skola kan ha en orkester.”"
+    }
+   ],
+   "qs": [
+    {
+     "q": "Text A: In dem Text geht es darum, dass …",
+     "opts": [
+      "Musikschulen zu wenig Geld bekommen.",
+      "viele Kinder lange auf einen Platz an einer Musikschule warten.",
+      "immer weniger Kinder ein Instrument lernen wollen."
+     ],
+     "a": 1,
+     "why": "Texten handlar om väntelistorna: ”monatelang warten, bis sie … einen Platz bekommen.” Pengar är uttryckligen inte huvudorsaken."
+    },
+    {
+     "q": "Text A: Warum gibt es zu wenige Lehrkräfte?",
+     "opts": [
+      "Weil viele Musiklehrer wenig verdienen.",
+      "Weil es zu wenige Musikhochschulen gibt.",
+      "Weil viele Kinder lieber online lernen."
+     ],
+     "a": 0,
+     "why": "”Viele Musiklehrerinnen und Musiklehrer arbeiten nur stundenweise und verdienen wenig. Deshalb …”"
+    },
+    {
+     "q": "Text A: Anna Keller empfiehlt Eltern, …",
+     "opts": [
+      "ihr Kind an mehreren Musikschulen anzumelden.",
+      "ein Instrument zu wählen, das nicht so viele lernen wollen.",
+      "privaten Unterricht zu bezahlen."
+     ],
+     "a": 1,
+     "why": "Hon råder föräldrar att vara öppna för ”ein weniger bekanntes Instrument”, till exempel valthorn eller kontrabas."
+    },
+    {
+     "q": "Text B: Wie ist die Idee für die AG entstanden?",
+     "opts": [
+      "Die Schüler wollten Geld für Instrumente sparen.",
+      "Der Lehrer hat auf einer Reise ein ähnliches Orchester gesehen.",
+      "Die Stadt hat ein Umweltprojekt für Schulen gestartet."
+     ],
+     "a": 1,
+     "why": "Wendt fick idén ”nachdem er im Urlaub in Paraguay ein Orchester gesehen hatte”."
+    },
+    {
+     "q": "Text B: Was erzählt Nele über die erste Gitarre?",
+     "opts": [
+      "Sie hat nur kurze Zeit gut geklungen.",
+      "Sie war das einfachste Instrument.",
+      "Sie ist bei einem Konzert kaputtgegangen."
+     ],
+     "a": 0,
+     "why": "”Unsere erste hat nach drei Tagen nur noch gebrummt.” Nele säger tvärtom att gitarren är svårast att bygga."
+    },
+    {
+     "q": "Text B: Was will die Gruppe mit dem Preisgeld machen?",
+     "opts": [
+      "Neue Instrumente kaufen.",
+      "Anderen Schulen in einem Workshop zeigen, wie man Instrumente baut.",
+      "Eine Reise nach Paraguay machen."
+     ],
+     "a": 1,
+     "why": "”Mit dem Preisgeld will die AG einen Workshop organisieren, in dem sie anderen Schulen zeigt, wie man Instrumente aus Müll baut.”"
+    }
+   ]
+  },
+  {
+   "id": "de4-le-3",
+   "part": "lesen",
+   "teil": "Teil 3",
+   "title": "Anzeigen: Musik in der Freizeit",
+   "time": 10,
+   "instr": "Sju personer söker något. Läs annonserna a–j. Vilken annons passar till vilken person? Varje annons kan bara användas en gång. För en person finns det ingen passande annons: välj då ”Keine Anzeige passt”.",
+   "lines": [
+    {
+     "fr": "Anzeige a – Gitarre für Einsteiger: Gruppenkurs für Jugendliche von 13 bis 17 Jahren im Jugendzentrum Nord, dienstags 17–18.30 Uhr. Leihgitarren sind vorhanden. 8 Termine für 40 Euro.",
+     "sv": "Annons a – Gitarre für Einsteiger: Gruppkurs för ungdomar 13–17 år på fritidsgården Nord, tisdagar 17–18.30. Det finns gitarrer att låna. 8 tillfällen för 40 euro."
+    },
+    {
+     "fr": "Anzeige b – Bandcoaching: Ihr habt eine Band und wollt besser werden? Wir kommen in euren Proberaum und helfen bei Arrangement, Zusammenspiel und Bühnenshow. Ab 60 Euro pro Termin.",
+     "sv": "Annons b – Bandcoaching: Har ni ett band och vill bli bättre? Vi kommer till er replokal och hjälper till med arrangemang, samspel och scenshow. Från 60 euro per tillfälle."
+    },
+    {
+     "fr": "Anzeige c – Proberaum zu vermieten: 20 m², schallisoliert, mit Schlagzeug und Verstärkern. Stundenweise ab 8 Euro, auch samstags und sonntags. Musikhaus Weber.",
+     "sv": "Annons c – Proberaum zu vermieten: 20 m², ljudisolerad, med trumset och förstärkare. Per timme från 8 euro, även lördagar och söndagar. Musikaffären Weber."
+    },
+    {
+     "fr": "Anzeige d – Chor „Junge Stimmen“: Wir suchen Sängerinnen und Sänger zwischen 14 und 25! Du musst keine Noten lesen können. Proben donnerstags um 19 Uhr. Im Sommer fahren wir nach Italien.",
+     "sv": "Annons d – Chor „Junge Stimmen“: Vi söker sångare mellan 14 och 25! Du behöver inte kunna läsa noter. Repetitioner torsdagar kl. 19. På sommaren åker vi till Italien."
+    },
+    {
+     "fr": "Anzeige e – E-Piano zu verkaufen: Gebrauchtes E-Piano, 88 Tasten, mit Ständer und Kopfhörern, sehr guter Zustand, 250 Euro. Nur Abholung.",
+     "sv": "Annons e – E-Piano zu verkaufen: Begagnat digitalpiano, 88 tangenter, med stativ och hörlurar, mycket gott skick, 250 euro. Hämtas av köparen."
+    },
+    {
+     "fr": "Anzeige f – Sommercamp Musik & Natur: Eine Woche am See für 12- bis 16-Jährige: tagsüber Instrumentalunterricht, Wandern und Schwimmen, abends Lagerfeuer und Konzerte. Vollpension, 390 Euro.",
+     "sv": "Annons f – Sommercamp Musik & Natur: En vecka vid en sjö för 12–16-åringar: instrumentlektioner, vandring och bad på dagarna, lägereld och konserter på kvällarna. Helpension, 390 euro."
+    },
+    {
+     "fr": "Anzeige g – Tonstudio Klangwerk: Nimm deinen eigenen Song professionell auf! Aufnahme, Mischung und Mastering. 20 % Rabatt für Schüler. Termine online buchen.",
+     "sv": "Annons g – Tonstudio Klangwerk: Spela in din egen låt professionellt! Inspelning, mixning och mastering. 20 % rabatt för elever. Boka tid på nätet."
+    },
+    {
+     "fr": "Anzeige h – Musiktheorie online: Harmonielehre und Gehörbildung zur Vorbereitung auf die Aufnahmeprüfung an Musikhochschulen. Einzelunterricht per Video, auch abends und am Wochenende.",
+     "sv": "Annons h – Musiktheorie online: Harmonilära och gehörsträning inför antagningsprovet till musikhögskolor. Enskild undervisning via video, även kvällar och helger."
+    },
+    {
+     "fr": "Anzeige i – Klavierstimmer Hoffmann: Stimmung und Reparatur von Klavieren und Flügeln. Schnelle Termine, faire Preise.",
+     "sv": "Annons i – Klavierstimmer Hoffmann: Stämning och reparation av pianon och flyglar. Snabba tider, rimliga priser."
+    },
+    {
+     "fr": "Anzeige j – Konzertkarten zu verschenken: Zwei Karten für das Open-Air-Festival am 12. Juli, ich kann leider nicht. Abholen in der Südstadt.",
+     "sv": "Annons j – Konzertkarten zu verschenken: Två biljetter till utomhusfestivalen den 12 juli, jag kan tyvärr inte. Hämtas i Südstadt."
+    }
+   ],
+   "qs": [
+    {
+     "q": "Moritz (16) möchte seinen ersten eigenen Song aufnehmen.",
+     "opts": [
+      "Gitarre für Einsteiger",
+      "Bandcoaching",
+      "Proberaum zu vermieten",
+      "Chor „Junge Stimmen“",
+      "E-Piano zu verkaufen",
+      "Sommercamp Musik & Natur",
+      "Tonstudio Klangwerk",
+      "Musiktheorie online",
+      "Klavierstimmer Hoffmann",
+      "Konzertkarten zu verschenken",
+      "Keine Anzeige passt"
+     ],
+     "a": 6,
+     "why": "g: Tonstudio Klangwerk – ”Nimm deinen eigenen Song professionell auf!”, och elever får rabatt."
+    },
+    {
+     "q": "Emilia will nächstes Jahr Musik studieren und muss sich auf die Theorieprüfung vorbereiten. Sie hat nur abends Zeit.",
+     "opts": [
+      "Gitarre für Einsteiger",
+      "Bandcoaching",
+      "Proberaum zu vermieten",
+      "Chor „Junge Stimmen“",
+      "E-Piano zu verkaufen",
+      "Sommercamp Musik & Natur",
+      "Tonstudio Klangwerk",
+      "Musiktheorie online",
+      "Klavierstimmer Hoffmann",
+      "Konzertkarten zu verschenken",
+      "Keine Anzeige passt"
+     ],
+     "a": 7,
+     "why": "h: Musiktheorie online förbereder för antagningsprovet och har tider ”auch abends”."
+    },
+    {
+     "q": "Die Band von Jonas braucht am Samstag einen Raum, in dem sie laut proben kann.",
+     "opts": [
+      "Gitarre für Einsteiger",
+      "Bandcoaching",
+      "Proberaum zu vermieten",
+      "Chor „Junge Stimmen“",
+      "E-Piano zu verkaufen",
+      "Sommercamp Musik & Natur",
+      "Tonstudio Klangwerk",
+      "Musiktheorie online",
+      "Klavierstimmer Hoffmann",
+      "Konzertkarten zu verschenken",
+      "Keine Anzeige passt"
+     ],
+     "a": 2,
+     "why": "c: replokalen är ljudisolerad och går att hyra ”auch samstags”. b (Bandcoaching) ger ingen lokal, de kommer till bandets egen replokal."
+    },
+    {
+     "q": "Sara (15) singt gern, kann aber keine Noten lesen. Sie möchte mit anderen zusammen singen.",
+     "opts": [
+      "Gitarre für Einsteiger",
+      "Bandcoaching",
+      "Proberaum zu vermieten",
+      "Chor „Junge Stimmen“",
+      "E-Piano zu verkaufen",
+      "Sommercamp Musik & Natur",
+      "Tonstudio Klangwerk",
+      "Musiktheorie online",
+      "Klavierstimmer Hoffmann",
+      "Konzertkarten zu verschenken",
+      "Keine Anzeige passt"
+     ],
+     "a": 3,
+     "why": "d: kören söker 14–25-åringar, och ”Du musst keine Noten lesen können”."
+    },
+    {
+     "q": "Luca (14) möchte Gitarre lernen, hat aber noch kein eigenes Instrument.",
+     "opts": [
+      "Gitarre für Einsteiger",
+      "Bandcoaching",
+      "Proberaum zu vermieten",
+      "Chor „Junge Stimmen“",
+      "E-Piano zu verkaufen",
+      "Sommercamp Musik & Natur",
+      "Tonstudio Klangwerk",
+      "Musiktheorie online",
+      "Klavierstimmer Hoffmann",
+      "Konzertkarten zu verschenken",
+      "Keine Anzeige passt"
+     ],
+     "a": 0,
+     "why": "a: gitarrkursen är för 13–17-åringar och ”Leihgitarren sind vorhanden”."
+    },
+    {
+     "q": "Familie Nowak möchte ihr altes Klavier verkaufen.",
+     "opts": [
+      "Gitarre für Einsteiger",
+      "Bandcoaching",
+      "Proberaum zu vermieten",
+      "Chor „Junge Stimmen“",
+      "E-Piano zu verkaufen",
+      "Sommercamp Musik & Natur",
+      "Tonstudio Klangwerk",
+      "Musiktheorie online",
+      "Klavierstimmer Hoffmann",
+      "Konzertkarten zu verschenken",
+      "Keine Anzeige passt"
+     ],
+     "a": 10,
+     "why": "Ingen annons passar: e säljer ett digitalpiano (köper inte), och i stämmer och reparerar bara pianon."
+    },
+    {
+     "q": "Mia (13) sucht für die Sommerferien eine Reise, bei der sie Musik macht und viel draußen ist.",
+     "opts": [
+      "Gitarre für Einsteiger",
+      "Bandcoaching",
+      "Proberaum zu vermieten",
+      "Chor „Junge Stimmen“",
+      "E-Piano zu verkaufen",
+      "Sommercamp Musik & Natur",
+      "Tonstudio Klangwerk",
+      "Musiktheorie online",
+      "Klavierstimmer Hoffmann",
+      "Konzertkarten zu verschenken",
+      "Keine Anzeige passt"
+     ],
+     "a": 5,
+     "why": "f: sommarlägret vid sjön för 12–16-åringar med instrumentlektioner, vandring och bad."
+    }
+   ]
+  },
+  {
+   "id": "de4-le-4",
+   "part": "lesen",
+   "teil": "Teil 4",
+   "title": "Leserbriefe: Ein Instrument für jedes Kind?",
+   "time": 15,
+   "instr": "En tidning har skrivit om förslaget att alla barn i grundskolan ska lära sig ett instrument som obligatoriskt ämne. Läs läsarnas kommentarer. Är personen för en sådan plikt? Svara Ja eller Nein.",
+   "lines": [
+    {
+     "fr": "Artikel: Soll jedes Kind in der Grundschule verpflichtend ein Instrument lernen? Ein Politiker hat vorgeschlagen, dass alle Kinder ab der ersten Klasse zwei Jahre lang ein Instrument lernen müssen. Wir haben unsere Leserinnen und Leser gefragt.",
+     "sv": "Artikel: Ska alla barn i grundskolan måsta lära sig ett instrument? En politiker har föreslagit att alla barn från första klass ska lära sig ett instrument i två år. Vi har frågat våra läsare."
+    },
+    {
+     "fr": "1. Karin, 45, Hamm: Mein Sohn wollte am Anfang überhaupt nicht Geige spielen. Heute ist er zwölf und übt jeden Tag, ohne dass ich etwas sagen muss. Er hat gelernt, dass man für ein Ziel Geduld braucht. Genau das sollten alle Kinder erleben können.",
+     "sv": "1. Karin, 45, Hamm: Min son ville inte alls spela fiol i början. I dag är han tolv och övar varje dag utan att jag behöver säga något. Han har lärt sig att man behöver tålamod för att nå ett mål. Just det borde alla barn få uppleva."
+    },
+    {
+     "fr": "2. Felix, 19, Kassel: Ich musste in der Grundschule zwei Jahre Blockflöte spielen, weil meine Eltern das wollten. Ich habe es gehasst. Danach habe ich jahrelang keine Musik mehr gemacht. Musik macht nur Spaß, wenn man sie freiwillig macht.",
+     "sv": "2. Felix, 19, Kassel: Jag var tvungen att spela blockflöjt i två år i lågstadiet, eftersom mina föräldrar ville det. Jag hatade det. Efteråt spelade jag ingen musik alls på flera år. Musik är bara roligt när man gör det frivilligt."
+    },
+    {
+     "fr": "3. Sabine, 38, Rostock: Die Idee klingt schön, aber wer soll das unterrichten? Schon heute fällt an vielen Schulen der Musikunterricht aus, weil Lehrer fehlen. Man sollte zuerst den normalen Musikunterricht verbessern, bevor man neue Pflichten erfindet.",
+     "sv": "3. Sabine, 38, Rostock: Idén låter fin, men vem ska undervisa? Redan i dag blir musiklektionerna inställda på många skolor, eftersom det saknas lärare. Man borde först förbättra den vanliga musikundervisningen innan man hittar på nya krav."
+    },
+    {
+     "fr": "4. Ahmet, 16, Duisburg: Meine Eltern hätten nie Geld für Musikunterricht gehabt. In der vierten Klasse konnte ich in der Schule Trompete lernen, und heute spiele ich in einer Big Band. Ohne die Schule hätte ich das nie entdeckt. Deshalb: Ein Instrument für alle Kinder, auf jeden Fall!",
+     "sv": "4. Ahmet, 16, Duisburg: Mina föräldrar hade aldrig haft råd med musiklektioner. I fyran fick jag lära mig trumpet i skolan, och i dag spelar jag i ett storband. Utan skolan hade jag aldrig upptäckt det. Därför: ett instrument för alla barn, absolut!"
+    },
+    {
+     "fr": "5. Heike, 61, Freiburg: Ich war vierzig Jahre Grundschullehrerin. Kinder, die gemeinsam Musik machen, können sich besser konzentrieren und hören einander besser zu. Das hilft auch in Mathe und Deutsch. Ich finde, das sollte für alle gelten.",
+     "sv": "5. Heike, 61, Freiburg: Jag var lågstadielärare i fyrtio år. Barn som spelar musik tillsammans kan koncentrera sig bättre och lyssnar bättre på varandra. Det hjälper också i matte och tyska. Jag tycker att det borde gälla alla."
+    },
+    {
+     "fr": "6. Jan, 29, Bonn: Kinder haben heute schon genug Termine: Sport, Nachhilfe, Hausaufgaben. Wer ein Instrument lernen möchte, soll das tun. Aber alle zwingen? Das halte ich für falsch.",
+     "sv": "6. Jan, 29, Bonn: Barn har redan tillräckligt många aktiviteter i dag: idrott, läxhjälp, läxor. Den som vill lära sig ett instrument ska göra det. Men att tvinga alla? Det tycker jag är fel."
+    },
+    {
+     "fr": "7. Lina, 17, Graz: Ich bin dafür, aber nur, wenn die Kinder selbst wählen dürfen, welches Instrument sie spielen. Wer E-Gitarre oder Schlagzeug lernen will, sollte nicht Blockflöte spielen müssen. Dann macht die Pflicht auch Spaß.",
+     "sv": "7. Lina, 17, Graz: Jag är för, men bara om barnen själva får välja vilket instrument de spelar. Den som vill lära sig elgitarr eller trummor ska inte behöva spela blockflöjt. Då blir plikten också rolig."
+    }
+   ],
+   "qs": [
+    {
+     "q": "1. Karin",
+     "opts": [
+      "Ja",
+      "Nein"
+     ],
+     "a": 0,
+     "why": "Ja: hennes son har lärt sig tålamod, och ”genau das sollten alle Kinder erleben können”."
+    },
+    {
+     "q": "2. Felix",
+     "opts": [
+      "Ja",
+      "Nein"
+     ],
+     "a": 1,
+     "why": "Nein: han hatade den påtvingade blockflöjten. ”Musik macht nur Spaß, wenn man sie freiwillig macht.”"
+    },
+    {
+     "q": "3. Sabine",
+     "opts": [
+      "Ja",
+      "Nein"
+     ],
+     "a": 1,
+     "why": "Nein: det saknas lärare, och man borde först förbättra den vanliga undervisningen ”bevor man neue Pflichten erfindet”."
+    },
+    {
+     "q": "4. Ahmet",
+     "opts": [
+      "Ja",
+      "Nein"
+     ],
+     "a": 0,
+     "why": "Ja: ”Ein Instrument für alle Kinder, auf jeden Fall!”"
+    },
+    {
+     "q": "5. Heike",
+     "opts": [
+      "Ja",
+      "Nein"
+     ],
+     "a": 0,
+     "why": "Ja: musik hjälper koncentrationen, och ”das sollte für alle gelten”."
+    },
+    {
+     "q": "6. Jan",
+     "opts": [
+      "Ja",
+      "Nein"
+     ],
+     "a": 1,
+     "why": "Nein: ”Aber alle zwingen? Das halte ich für falsch.”"
+    },
+    {
+     "q": "7. Lina",
+     "opts": [
+      "Ja",
+      "Nein"
+     ],
+     "a": 0,
+     "why": "Ja: ”Ich bin dafür”, med villkoret att barnen själva får välja instrument."
+    }
+   ]
+  },
+  {
+   "id": "de4-le-5",
+   "part": "lesen",
+   "teil": "Teil 5",
+   "title": "Teilnahmebedingungen: Sommercamp des Jugendorchesters",
+   "time": 10,
+   "instr": "Du vill åka på ett sommarläger med en ungdomsorkester och läser villkoren. Välj rätt svar (a, b eller c).",
+   "lines": [
+    {
+     "fr": "Teilnahmebedingungen – Sommercamp des Landesjugendorchesters",
+     "sv": "Villkor för deltagande – delstatens ungdomsorkesters sommarläger"
+    },
+    {
+     "fr": "Anmeldung: Die Anmeldung erfolgt online bis zum 31. März. Nach der Anmeldung erhalten Sie innerhalb von zwei Wochen eine Bestätigung per E-Mail. Ihr Platz ist aber erst sicher, wenn die Teilnahmegebühr von 280 Euro bezahlt ist.",
+     "sv": "Anmälan: Anmälan görs på nätet senast den 31 mars. Efter anmälan får du en bekräftelse via mejl inom två veckor. Din plats är dock säker först när deltagaravgiften på 280 euro är betald."
+    },
+    {
+     "fr": "Absage: Wer bis zum 1. Juni absagt, bekommt die Gebühr vollständig zurück. Bei einer späteren Absage erstatten wir 50 Prozent der Gebühr, außer wenn ein ärztliches Attest vorliegt.",
+     "sv": "Avbokning: Den som avbokar senast den 1 juni får hela avgiften tillbaka. Vid en senare avbokning betalar vi tillbaka 50 procent av avgiften, utom om det finns ett läkarintyg."
+    },
+    {
+     "fr": "Instrumente: Alle Teilnehmenden bringen ihr eigenes Instrument mit. Pauken, Kontrabässe und Harfen stellt das Camp zur Verfügung. Für Schäden an eigenen Instrumenten übernimmt der Veranstalter keine Haftung; wir empfehlen eine Instrumentenversicherung.",
+     "sv": "Instrument: Alla deltagare tar med sitt eget instrument. Pukor, kontrabasar och harpor tillhandahåller lägret. Arrangören ansvarar inte för skador på egna instrument; vi rekommenderar en instrumentförsäkring."
+    },
+    {
+     "fr": "Handys: Während der Proben müssen Handys ausgeschaltet sein. In der Freizeit dürfen sie benutzt werden, nach 22 Uhr jedoch nur in den Zimmern.",
+     "sv": "Mobiler: Under repetitionerna måste mobilerna vara avstängda. På fritiden får de användas, men efter kl. 22 bara på rummen."
+    },
+    {
+     "fr": "Abschlusskonzert und Abreise: Das Abschlusskonzert findet am Samstag um 16 Uhr statt. Eltern und Freunde sind herzlich eingeladen, der Eintritt ist frei. Teilnehmende unter 16 Jahren dürfen das Camp nur zusammen mit einem Elternteil verlassen.",
+     "sv": "Avslutningskonsert och hemresa: Avslutningskonserten äger rum på lördagen kl. 16. Föräldrar och vänner är varmt välkomna, entrén är gratis. Deltagare under 16 år får bara lämna lägret tillsammans med en förälder."
+    }
+   ],
+   "qs": [
+    {
+     "q": "Wann ist der Platz im Camp sicher?",
+     "opts": [
+      "Direkt nach der Online-Anmeldung.",
+      "Wenn man die Bestätigung per E-Mail bekommen hat.",
+      "Wenn man die Gebühr bezahlt hat."
+     ],
+     "a": 2,
+     "why": "”Ihr Platz ist aber erst sicher, wenn die Teilnahmegebühr … bezahlt ist.”"
+    },
+    {
+     "q": "Wer am 15. Juni absagt und nicht krank ist, …",
+     "opts": [
+      "bekommt kein Geld zurück.",
+      "bekommt die Hälfte der Gebühr zurück.",
+      "bekommt die ganze Gebühr zurück."
+     ],
+     "a": 1,
+     "why": "Efter den 1 juni får man tillbaka 50 procent. Hela summan får man bara med läkarintyg."
+    },
+    {
+     "q": "Welches Instrument muss man nicht selbst mitbringen?",
+     "opts": [
+      "Geige",
+      "Kontrabass",
+      "Querflöte"
+     ],
+     "a": 1,
+     "why": "”Pauken, Kontrabässe und Harfen stellt das Camp zur Verfügung.”"
+    },
+    {
+     "q": "Was gilt für Handys?",
+     "opts": [
+      "Man darf sie während der Proben leise benutzen.",
+      "Nach 22 Uhr darf man sie nur im Zimmer benutzen.",
+      "Man muss sie am ersten Tag abgeben."
+     ],
+     "a": 1,
+     "why": "”… nach 22 Uhr jedoch nur in den Zimmern.” Under repetitionerna ska de vara avstängda."
+    }
+   ]
+  },
+  {
+   "id": "de4-hoe-1",
+   "part": "hoeren",
+   "teil": "Teil 1",
+   "title": "Fünf kurze Texte",
+   "time": 10,
+   "plays": 2,
+   "instr": "Du hör fem korta texter: telefonmeddelanden, utrop och radio. Du hör varje text två gånger. Till varje text finns två uppgifter: är påståendet rätt eller fel (Richtig/Falsch), och vilket svar stämmer (a, b eller c)?",
+   "lines": [
+    {
+     "fr": "Text 1. Hallo, hier ist Frau Berger von der Musikschule am Park. Das ist eine Nachricht für Elias. Deine Gitarrenstunde am Mittwoch muss leider ausfallen, weil ich krank bin. Wir können die Stunde am Freitag um 16 Uhr nachholen. Wenn das für dich nicht geht, schreib mir bitte eine SMS. Und denk daran, die neuen Noten mitzubringen, die ich dir letzte Woche gegeben habe. Tschüss!",
+     "sv": "Text 1. Hej, det här är Frau Berger från musikskolan vid parken. Det här är ett meddelande till Elias. Din gitarrlektion på onsdag blir tyvärr inställd, eftersom jag är sjuk. Vi kan ta igen lektionen på fredag kl. 16. Om det inte passar dig, skicka ett sms till mig. Och kom ihåg att ta med de nya noterna som jag gav dig förra veckan. Hej då!"
+    },
+    {
+     "fr": "Text 2. Liebe Fahrgäste, wegen Bauarbeiten fährt die S-Bahn-Linie 3 heute ab 20 Uhr nicht zwischen Hauptbahnhof und Messe. Bitte benutzen Sie die Ersatzbusse. Die Busse fahren alle zehn Minuten vor dem Hauptausgang ab. Für Besucherinnen und Besucher des Konzerts in der Messehalle gilt: Ihre Konzertkarte ist auch Ihre Fahrkarte für Bus und Bahn.",
+     "sv": "Text 2. Kära resenärer, på grund av byggarbeten går pendeltågslinje 3 inte mellan centralstationen och mässan från kl. 20 i dag. Använd ersättningsbussarna. Bussarna går var tionde minut utanför huvudingången. För besökare till konserten i mässhallen gäller: er konsertbiljett är också er biljett för buss och tåg."
+    },
+    {
+     "fr": "Text 3. Und jetzt das Wetter fürs Wochenende: Am Samstag bleibt es trocken und sonnig bei bis zu 26 Grad – perfekt für das Stadtfest. Am Sonntag kommen von Westen Wolken, und ab Mittag kann es Gewitter geben. Deshalb haben die Veranstalter das Open-Air-Konzert im Stadtpark von Sonntagabend auf Samstagabend verschoben. Beginn ist um 20 Uhr, die Karten bleiben gültig.",
+     "sv": "Text 3. Och nu vädret inför helgen: på lördag blir det torrt och soligt med upp till 26 grader – perfekt för stadsfesten. På söndag kommer moln västerifrån, och från lunch kan det bli åska. Därför har arrangörerna flyttat utomhuskonserten i stadsparken från söndagskvällen till lördagskvällen. Den börjar kl. 20, biljetterna gäller fortfarande."
+    },
+    {
+     "fr": "Text 4. Hi Maja, hier ist Tim. Du, die Bandprobe heute ist nicht um sieben, sondern schon um halb sechs, weil Leo später noch arbeiten muss. Wir proben auch nicht bei mir, sondern im Keller von Leos Eltern, Gartenstraße 12. Kannst du bitte dein Mikrofon mitbringen? Meins ist kaputt. Bis dann!",
+     "sv": "Text 4. Hej Maja, det är Tim. Du, bandrepet i dag är inte klockan sju utan redan halv sex, eftersom Leo ska jobba senare. Vi repar inte heller hos mig, utan i källaren hos Leos föräldrar, Gartenstraße 12. Kan du ta med din mikrofon? Min är trasig. Vi ses!"
+    },
+    {
+     "fr": "Text 5. Liebe Kundinnen und Kunden, nur heute im Musikhaus Klangwelt: 30 Prozent Rabatt auf alle Kopfhörer und Mikrofone. Außerdem können Sie im ersten Stock von 14 bis 17 Uhr kostenlos E-Gitarren testen – unser Gitarrenlehrer Marco zeigt Ihnen gern die ersten Griffe. Bitte beachten Sie: Unser Geschäft schließt heute schon um 18 Uhr.",
+     "sv": "Text 5. Kära kunder, bara i dag på musikaffären Klangwelt: 30 procents rabatt på alla hörlurar och mikrofoner. Dessutom kan ni gratis testa elgitarrer på första våningen kl. 14–17 – vår gitarrlärare Marco visar gärna de första greppen. Observera: vår butik stänger redan kl. 18 i dag."
+    }
+   ],
+   "qs": [
+    {
+     "q": "Text 1: Elias soll zurückrufen, wenn er am Freitag Zeit hat.",
+     "opts": [
+      "Richtig",
+      "Falsch"
+     ],
+     "a": 1,
+     "why": "Falsch: han ska bara höra av sig (med sms) om fredag inte passar."
+    },
+    {
+     "q": "Text 1: Was soll Elias mitbringen?",
+     "opts": [
+      "Seine eigene Gitarre.",
+      "Die neuen Noten.",
+      "Geld für die Stunde."
+     ],
+     "a": 1,
+     "why": "”Denk daran, die neuen Noten mitzubringen.”"
+    },
+    {
+     "q": "Text 2: Die S-Bahn fährt heute Abend nicht bis zur Messe.",
+     "opts": [
+      "Richtig",
+      "Falsch"
+     ],
+     "a": 0,
+     "why": "Richtig: linje 3 går inte mellan centralstationen och mässan från kl. 20."
+    },
+    {
+     "q": "Text 2: Was gilt für die Konzertbesucher?",
+     "opts": [
+      "Sie können mit der Konzertkarte Bus und Bahn fahren.",
+      "Für sie fährt ein besonderer Bus.",
+      "Das Konzert fängt später an."
+     ],
+     "a": 0,
+     "why": "”Ihre Konzertkarte ist auch Ihre Fahrkarte für Bus und Bahn.”"
+    },
+    {
+     "q": "Text 3: Am Sonntagnachmittag kann das Wetter schlecht werden.",
+     "opts": [
+      "Richtig",
+      "Falsch"
+     ],
+     "a": 0,
+     "why": "Richtig: ”ab Mittag kann es Gewitter geben”."
+    },
+    {
+     "q": "Text 3: Wann ist das Open-Air-Konzert?",
+     "opts": [
+      "Am Samstagabend.",
+      "Am Sonntagabend.",
+      "Am Sonntagmittag."
+     ],
+     "a": 0,
+     "why": "Konserten har flyttats ”von Sonntagabend auf Samstagabend”."
+    },
+    {
+     "q": "Text 4: Die Bandprobe beginnt heute später als geplant.",
+     "opts": [
+      "Richtig",
+      "Falsch"
+     ],
+     "a": 1,
+     "why": "Falsch: den börjar tidigare, halv sex i stället för sju."
+    },
+    {
+     "q": "Text 4: Wo probt die Band heute?",
+     "opts": [
+      "Bei Tim.",
+      "Bei Leos Eltern.",
+      "Im Jugendzentrum."
+     ],
+     "a": 1,
+     "why": "”… im Keller von Leos Eltern, Gartenstraße 12.”"
+    },
+    {
+     "q": "Text 5: Heute sind alle Instrumente im Musikhaus billiger.",
+     "opts": [
+      "Richtig",
+      "Falsch"
+     ],
+     "a": 1,
+     "why": "Falsch: rabatten gäller bara hörlurar och mikrofoner."
+    },
+    {
+     "q": "Text 5: Was kann man im ersten Stock machen?",
+     "opts": [
+      "Ein Mikrofon reparieren lassen.",
+      "E-Gitarren ausprobieren.",
+      "Konzertkarten kaufen."
+     ],
+     "a": 1,
+     "why": "”… im ersten Stock von 14 bis 17 Uhr kostenlos E-Gitarren testen.”"
+    }
+   ]
+  },
+  {
+   "id": "de4-hoe-2",
+   "part": "hoeren",
+   "teil": "Teil 2",
+   "title": "Führung: Tag der offenen Tür an der Musikhochschule",
+   "time": 8,
+   "plays": 1,
+   "instr": "Du är på öppet hus på en musikhögskola och går på en guidad visning. Du hör texten en gång. Välj rätt svar (a, b eller c).",
+   "lines": [
+    {
+     "fr": "Herzlich willkommen an der Hochschule für Musik! Mein Name ist Katrin Vogel. Ich studiere hier im vierten Semester Querflöte und zeige Ihnen heute unser Haus. Die Führung dauert ungefähr eine Stunde. Wenn Sie Fragen haben, fragen Sie einfach zwischendurch.",
+     "sv": "Varmt välkomna till musikhögskolan! Jag heter Katrin Vogel. Jag läser fjärde terminen tvärflöjt här och visar er vårt hus i dag. Visningen tar ungefär en timme. Om ni har frågor, fråga bara under tiden."
+    },
+    {
+     "fr": "Wir stehen jetzt in der Eingangshalle. Das Gebäude ist über hundert Jahre alt, früher war es eine Schule für Mädchen. Seit 1950 ist hier die Musikhochschule. Rechts sehen Sie das Studierendensekretariat. Dort bekommen Sie alle Informationen zur Bewerbung. Die Frist für das Wintersemester endet übrigens am 15. März.",
+     "sv": "Vi står nu i entréhallen. Byggnaden är över hundra år gammal, tidigare var den en flickskola. Sedan 1950 finns musikhögskolan här. Till höger ser ni studentexpeditionen. Där får ni all information om ansökan. Sista ansökningsdag för vinterterminen är förresten den 15 mars."
+    },
+    {
+     "fr": "Jetzt gehen wir in den ersten Stock. Hier sind die Übungsräume. Wir haben insgesamt sechzig Räume, fast alle mit Klavier. Studierende können sie von sieben Uhr morgens bis zehn Uhr abends benutzen. Man muss sie aber online reservieren – vor den Prüfungen ist das manchmal ganz schön schwierig!",
+     "sv": "Nu går vi upp till första våningen. Här är övningsrummen. Vi har sammanlagt sextio rum, nästan alla med piano. Studenterna kan använda dem från sju på morgonen till tio på kvällen. Men man måste boka dem på nätet – före proven är det ibland riktigt svårt!"
+    },
+    {
+     "fr": "Am Ende des Flurs ist die Bibliothek. Sie hat über 80 000 Noten und Bücher. Normalerweise dürfen sie nur Studierende und Lehrende benutzen, aber heute ist sie ausnahmsweise für alle Besucher geöffnet.",
+     "sv": "I slutet av korridoren ligger biblioteket. Det har över 80 000 noter och böcker. Vanligtvis får bara studenter och lärare använda det, men i dag är det undantagsvis öppet för alla besökare."
+    },
+    {
+     "fr": "Zum Schluss kommen wir in den großen Konzertsaal. Hier finden jedes Jahr mehr als 200 Konzerte statt, die meisten sind kostenlos. Heute um 15 Uhr spielt hier unser Hochschulorchester. Danach können Sie in kleinen Gruppen mit Professorinnen und Professoren sprechen und Fragen zur Aufnahmeprüfung stellen. Treffpunkt ist dann hier vor der Bühne.",
+     "sv": "Till sist kommer vi till den stora konsertsalen. Här hålls mer än 200 konserter varje år, de flesta är gratis. I dag kl. 15 spelar vår högskoleorkester här. Efteråt kan ni prata med professorer i små grupper och ställa frågor om antagningsprovet. Vi samlas då här framför scenen."
+    }
+   ],
+   "qs": [
+    {
+     "q": "Katrin Vogel ist …",
+     "opts": [
+      "Professorin für Querflöte.",
+      "Studentin an der Hochschule.",
+      "Mitarbeiterin im Sekretariat."
+     ],
+     "a": 1,
+     "why": "”Ich studiere hier im vierten Semester Querflöte.”"
+    },
+    {
+     "q": "Was war das Gebäude früher?",
+     "opts": [
+      "Ein Konzerthaus.",
+      "Eine Schule.",
+      "Ein Krankenhaus."
+     ],
+     "a": 1,
+     "why": "”… früher war es eine Schule für Mädchen.”"
+    },
+    {
+     "q": "Was sagt Katrin über die Übungsräume?",
+     "opts": [
+      "Man muss sie vorher buchen.",
+      "Sie sind Tag und Nacht offen.",
+      "Nur wenige haben ein Klavier."
+     ],
+     "a": 0,
+     "why": "”Man muss sie aber online reservieren.” De är öppna 7–22, och nästan alla har piano."
+    },
+    {
+     "q": "Die Bibliothek …",
+     "opts": [
+      "ist immer für alle geöffnet.",
+      "können Besucher heute benutzen.",
+      "ist im Erdgeschoss."
+     ],
+     "a": 1,
+     "why": "”… heute ist sie ausnahmsweise für alle Besucher geöffnet.” Den ligger på första våningen."
+    },
+    {
+     "q": "Was können die Besucher nach dem Konzert machen?",
+     "opts": [
+      "Mit Professoren sprechen.",
+      "An einer zweiten Führung teilnehmen.",
+      "Eine Probeprüfung machen."
+     ],
+     "a": 0,
+     "why": "”Danach können Sie … mit Professorinnen und Professoren sprechen und Fragen zur Aufnahmeprüfung stellen.”"
+    }
+   ]
+  },
+  {
+   "id": "de4-hoe-3",
+   "part": "hoeren",
+   "teil": "Teil 3",
+   "title": "Gespräch: Pläne für den Sommer",
+   "time": 8,
+   "plays": 1,
+   "instr": "Du sitter på bussen och hör ett samtal mellan Alva, en svensk utbytesstudent, och hennes tyske kompis Ben. Du hör samtalet en gång. Är påståendena rätt (Richtig) eller fel (Falsch)?",
+   "lines": [
+    {
+     "fr": "Ben: Hey Alva! Schön, dich zu sehen. Wie war dein Wochenende?",
+     "sv": "Ben: Hej Alva! Kul att se dig. Hur var din helg?"
+    },
+    {
+     "fr": "Alva: Anstrengend, aber toll. Ich war mit meiner Gastfamilie in Hamburg. Wir waren sogar in der Elbphilharmonie!",
+     "sv": "Alva: Ansträngande, men toppen. Jag var i Hamburg med min värdfamilj. Vi var till och med på Elbphilharmonie!"
+    },
+    {
+     "fr": "Ben: Echt? Wie seid ihr an Karten gekommen? Die sind doch immer sofort ausverkauft.",
+     "sv": "Ben: Seriöst? Hur fick ni tag på biljetter? De är ju alltid slutsålda direkt."
+    },
+    {
+     "fr": "Alva: Meine Gastmutter hat sie schon vor einem halben Jahr gekauft. Es war ein Konzert mit Filmmusik. Die Akustik ist wirklich unglaublich. Aber den Blick von der Plaza über den Hafen fand ich fast noch schöner.",
+     "sv": "Alva: Min värdmamma köpte dem redan för ett halvår sedan. Det var en konsert med filmmusik. Akustiken är verkligen otrolig. Men utsikten från Plaza över hamnen tyckte jag var nästan ännu finare."
+    },
+    {
+     "fr": "Ben: Ich war noch nie drin, nur einmal davor. Sag mal, was machst du eigentlich in den Sommerferien? Fährst du zurück nach Schweden?",
+     "sv": "Ben: Jag har aldrig varit där inne, bara utanför en gång. Säg, vad gör du egentligen på sommarlovet? Åker du tillbaka till Sverige?"
+    },
+    {
+     "fr": "Alva: Ja, aber erst Ende Juli. Vorher möchte ich noch zu einem Musikfestival. Hast du Lust mitzukommen? Es gibt ein kleines Festival an einem See in Brandenburg, nur mit jungen Bands.",
+     "sv": "Alva: Ja, men inte förrän i slutet av juli. Innan dess vill jag gå på en musikfestival. Vill du följa med? Det finns en liten festival vid en sjö i Brandenburg, bara med unga band."
+    },
+    {
+     "fr": "Ben: Klingt gut. Was kostet das denn?",
+     "sv": "Ben: Låter bra. Vad kostar det?"
+    },
+    {
+     "fr": "Alva: Das Ticket für drei Tage kostet 89 Euro, Camping inklusive. Wir müssten nur ein Zelt mitnehmen.",
+     "sv": "Alva: Biljetten för tre dagar kostar 89 euro, camping ingår. Vi behöver bara ta med ett tält."
+    },
+    {
+     "fr": "Ben: Ein Zelt habe ich. Mein Problem ist eher die Zeit. Ich arbeite im Juli in einem Café, weil ich Geld für eine neue Gitarre sparen will.",
+     "sv": "Ben: Ett tält har jag. Mitt problem är snarare tiden. Jag jobbar på ett kafé i juli, eftersom jag vill spara pengar till en ny gitarr."
+    },
+    {
+     "fr": "Alva: Das Festival ist am ersten Juliwochenende. Kannst du da nicht freinehmen?",
+     "sv": "Alva: Festivalen är första helgen i juli. Kan du inte ta ledigt då?"
+    },
+    {
+     "fr": "Ben: Vielleicht. Ich frage meine Chefin. Am Wochenende ist aber immer viel los. Und wie kommen wir dahin?",
+     "sv": "Ben: Kanske. Jag frågar min chef. Men på helgerna är det alltid mycket att göra. Och hur tar vi oss dit?"
+    },
+    {
+     "fr": "Alva: Mit dem Zug bis Berlin und dann mit dem Bus. Oder – Moment, spielt deine Schwester nicht in einer Band? Vielleicht treten die da auf und nehmen uns im Auto mit?",
+     "sv": "Alva: Med tåg till Berlin och sedan med buss. Eller – vänta, spelar inte din syster i ett band? De kanske uppträder där och kan ta med oss i bilen?"
+    },
+    {
+     "fr": "Ben: Nein, Lisa spielt nur Jazz, das passt nicht zu dem Festival. Wir fahren lieber mit dem Zug. Ich schreibe dir heute Abend, was meine Chefin gesagt hat.",
+     "sv": "Ben: Nej, Lisa spelar bara jazz, det passar inte på den festivalen. Vi tar hellre tåget. Jag skriver till dig i kväll vad min chef har sagt."
+    },
+    {
+     "fr": "Alva: Super. Und wenn es nicht klappt, frage ich Emma aus meiner Klasse.",
+     "sv": "Alva: Toppen. Och om det inte funkar frågar jag Emma i min klass."
+    }
+   ],
+   "qs": [
+    {
+     "q": "Alva war am Wochenende mit ihrer Gastfamilie in Hamburg.",
+     "opts": [
+      "Richtig",
+      "Falsch"
+     ],
+     "a": 0,
+     "why": "Richtig: ”Ich war mit meiner Gastfamilie in Hamburg.”"
+    },
+    {
+     "q": "Alva hat die Konzertkarten gekauft.",
+     "opts": [
+      "Richtig",
+      "Falsch"
+     ],
+     "a": 1,
+     "why": "Falsch: det var värdmamman som köpte dem för ett halvår sedan."
+    },
+    {
+     "q": "Ben hat die Elbphilharmonie schon von innen gesehen.",
+     "opts": [
+      "Richtig",
+      "Falsch"
+     ],
+     "a": 1,
+     "why": "Falsch: ”Ich war noch nie drin, nur einmal davor.”"
+    },
+    {
+     "q": "Alva fährt Anfang Juli zurück nach Schweden.",
+     "opts": [
+      "Richtig",
+      "Falsch"
+     ],
+     "a": 1,
+     "why": "Falsch: hon åker ”erst Ende Juli”. I början av juli är festivalen."
+    },
+    {
+     "q": "Auf dem Festival kann man übernachten, ohne extra zu bezahlen.",
+     "opts": [
+      "Richtig",
+      "Falsch"
+     ],
+     "a": 0,
+     "why": "Richtig: biljetten kostar 89 euro, ”Camping inklusive”."
+    },
+    {
+     "q": "Ben arbeitet im Sommer, weil er ein Instrument kaufen möchte.",
+     "opts": [
+      "Richtig",
+      "Falsch"
+     ],
+     "a": 0,
+     "why": "Richtig: han sparar ”Geld für eine neue Gitarre”."
+    },
+    {
+     "q": "Alva und Ben fahren mit Bens Schwester zum Festival.",
+     "opts": [
+      "Richtig",
+      "Falsch"
+     ],
+     "a": 1,
+     "why": "Falsch: systern spelar jazz och uppträder inte där. ”Wir fahren lieber mit dem Zug.”"
+    }
+   ]
+  },
+  {
+   "id": "de4-hoe-4",
+   "part": "hoeren",
+   "teil": "Teil 4",
+   "title": "Radiodiskussion: Instrument lernen mit Videos?",
+   "time": 10,
+   "plays": 2,
+   "instr": "Du hör en diskussion i radio om att lära sig ett instrument med videor på nätet. Du hör diskussionen två gånger. Vem säger vad: programledaren, pianoläraren Claudia Martens eller Paul Nguyen, 18 år?",
+   "lines": [
+    {
+     "fr": "Moderator: Willkommen bei „Jugend fragt“. Heute geht es um die Frage: Kann man ein Instrument mit Videos aus dem Internet genauso gut lernen wie mit einer Lehrerin? Bei mir sind Claudia Martens, Klavierlehrerin an einer Musikschule, und Paul Nguyen. Paul ist achtzehn und hat sich das Klavierspielen selbst beigebracht. Paul, wie hast du angefangen?",
+     "sv": "Moderator: Välkomna till ”Jugend fragt”. I dag handlar det om frågan: kan man lära sig ett instrument lika bra med videor från internet som med en lärare? Här hos mig är Claudia Martens, pianolärare på en musikskola, och Paul Nguyen. Paul är arton och har lärt sig spela piano på egen hand. Paul, hur började du?"
+    },
+    {
+     "fr": "Paul Nguyen: Mit zwölf habe ich ein altes Keyboard von meinem Onkel bekommen. Unterricht war für meine Familie zu teuer, deshalb habe ich einfach Videos geschaut. Am Anfang habe ich nur Popsongs nachgespielt, heute spiele ich auch Chopin.",
+     "sv": "Paul Nguyen: När jag var tolv fick jag ett gammalt keyboard av min morbror. Lektioner var för dyra för min familj, så jag tittade helt enkelt på videor. I början spelade jag bara poplåtar, i dag spelar jag också Chopin."
+    },
+    {
+     "fr": "Moderator: Frau Martens, was denken Sie, wenn Sie so etwas hören?",
+     "sv": "Moderator: Claudia Martens, vad tänker du när du hör något sådant?"
+    },
+    {
+     "fr": "Claudia Martens: Erst mal finde ich das toll. Aber ich sehe auch oft Probleme. Viele, die allein lernen, haben eine falsche Handhaltung. Das merkt man am Anfang nicht, aber nach ein paar Jahren tun die Hände weh.",
+     "sv": "Claudia Martens: Först och främst tycker jag att det är toppen. Men jag ser också ofta problem. Många som lär sig själva har fel handställning. Det märker man inte i början, men efter några år gör händerna ont."
+    },
+    {
+     "fr": "Paul Nguyen: Das stimmt, das hatte ich auch. Mit fünfzehn hatte ich Schmerzen im Handgelenk. Da habe ich dann doch ein paar Stunden bei einem Lehrer genommen. Aber ich glaube, man braucht nicht jede Woche Unterricht. Es reicht, wenn ab und zu ein Profi draufschaut.",
+     "sv": "Paul Nguyen: Det stämmer, det hade jag också. När jag var femton hade jag ont i handleden. Då tog jag faktiskt några lektioner för en lärare. Men jag tror inte att man behöver lektion varje vecka. Det räcker om ett proffs tittar på det då och då."
+    },
+    {
+     "fr": "Moderator: Ich möchte auch über die Motivation sprechen. Viele Kinder hören ja schon nach einem Jahr wieder auf.",
+     "sv": "Moderator: Jag vill också prata om motivationen. Många barn slutar ju redan efter ett år."
+    },
+    {
+     "fr": "Claudia Martens: Ja, und da hat der Unterricht einen großen Vorteil: Man hat einen festen Termin und jemanden, der sich freut, wenn man geübt hat. Allein vor dem Bildschirm gibt man leichter auf.",
+     "sv": "Claudia Martens: Ja, och där har lektionerna en stor fördel: man har en fast tid och någon som blir glad när man har övat. Ensam framför skärmen ger man lättare upp."
+    },
+    {
+     "fr": "Paul Nguyen: Bei mir war es anders. Ich hatte nie Druck, deshalb hatte ich immer Spaß. Ich glaube, viele hören auf, weil sie Stücke spielen müssen, die sie langweilig finden.",
+     "sv": "Paul Nguyen: För mig var det annorlunda. Jag hade aldrig någon press, därför tyckte jag alltid att det var roligt. Jag tror att många slutar för att de måste spela stycken som de tycker är tråkiga."
+    },
+    {
+     "fr": "Moderator: Aber Paul, man muss doch auch Dinge üben, die keinen Spaß machen – Tonleitern zum Beispiel. Das gehört einfach dazu.",
+     "sv": "Moderator: Men Paul, man måste väl också öva på saker som inte är roliga – skalor till exempel. Det hör helt enkelt till."
+    },
+    {
+     "fr": "Paul Nguyen: Klar, aber dann weiß ich wenigstens, wofür ich das mache.",
+     "sv": "Paul Nguyen: Visst, men då vet jag åtminstone varför jag gör det."
+    },
+    {
+     "fr": "Claudia Martens: In einem Punkt gebe ich Paul recht: Wir Lehrer müssen mehr auf die Wünsche der Schüler hören. Ich lasse meine Schüler heute oft selbst Stücke aussuchen, auch Musik aus Filmen oder Videospielen.",
+     "sv": "Claudia Martens: På en punkt håller jag med Paul: vi lärare måste lyssna mer på elevernas önskemål. I dag låter jag ofta mina elever välja stycken själva, också musik från filmer eller datorspel."
+    },
+    {
+     "fr": "Moderator: Zum Schluss: Was raten Sie jemandem, der jetzt anfangen möchte?",
+     "sv": "Moderator: Till sist: vad råder ni den som vill börja nu?"
+    },
+    {
+     "fr": "Claudia Martens: Einfach ausprobieren – und nach ein paar Monaten eine Probestunde nehmen. Viele Musikschulen bieten die kostenlos an.",
+     "sv": "Claudia Martens: Pröva bara – och ta en provlektion efter några månader. Många musikskolor erbjuder det gratis."
+    },
+    {
+     "fr": "Paul Nguyen: Und nicht nur Videos schauen, sondern auch mit anderen zusammen spielen. Am meisten habe ich in meiner Schulband gelernt.",
+     "sv": "Paul Nguyen: Och inte bara titta på videor, utan också spela tillsammans med andra. Mest har jag lärt mig i mitt skolband."
+    },
+    {
+     "fr": "Moderator: Vielen Dank euch beiden!",
+     "sv": "Moderator: Tack så mycket, båda två!"
+    }
+   ],
+   "qs": [
+    {
+     "q": "Für Unterricht hatte die Familie nicht genug Geld.",
+     "opts": [
+      "Moderator",
+      "Claudia Martens",
+      "Paul Nguyen"
+     ],
+     "a": 2,
+     "why": "Paul: ”Unterricht war für meine Familie zu teuer.”"
+    },
+    {
+     "q": "Wer allein lernt, bekommt manchmal Probleme mit den Händen.",
+     "opts": [
+      "Moderator",
+      "Claudia Martens",
+      "Paul Nguyen"
+     ],
+     "a": 1,
+     "why": "Claudia Martens: ”… nach ein paar Jahren tun die Hände weh.”"
+    },
+    {
+     "q": "Man braucht nicht regelmäßig Unterricht, nur manchmal.",
+     "opts": [
+      "Moderator",
+      "Claudia Martens",
+      "Paul Nguyen"
+     ],
+     "a": 2,
+     "why": "Paul: ”Es reicht, wenn ab und zu ein Profi draufschaut.”"
+    },
+    {
+     "q": "Viele Kinder machen nach kurzer Zeit nicht mehr weiter.",
+     "opts": [
+      "Moderator",
+      "Claudia Martens",
+      "Paul Nguyen"
+     ],
+     "a": 0,
+     "why": "Programledaren: ”Viele Kinder hören ja schon nach einem Jahr wieder auf.”"
+    },
+    {
+     "q": "Mit einem festen Termin bleibt man leichter motiviert.",
+     "opts": [
+      "Moderator",
+      "Claudia Martens",
+      "Paul Nguyen"
+     ],
+     "a": 1,
+     "why": "Claudia Martens: ”Man hat einen festen Termin … Allein vor dem Bildschirm gibt man leichter auf.”"
+    },
+    {
+     "q": "Man muss auch Übungen machen, die keinen Spaß machen.",
+     "opts": [
+      "Moderator",
+      "Claudia Martens",
+      "Paul Nguyen"
+     ],
+     "a": 0,
+     "why": "Programledaren: ”… man muss doch auch Dinge üben, die keinen Spaß machen – Tonleitern zum Beispiel.”"
+    },
+    {
+     "q": "Schüler sollten ihre Stücke manchmal selbst aussuchen dürfen.",
+     "opts": [
+      "Moderator",
+      "Claudia Martens",
+      "Paul Nguyen"
+     ],
+     "a": 1,
+     "why": "Claudia Martens: ”Ich lasse meine Schüler heute oft selbst Stücke aussuchen.”"
+    },
+    {
+     "q": "Zusammen mit anderen zu spielen, hilft beim Lernen am meisten.",
+     "opts": [
+      "Moderator",
+      "Claudia Martens",
+      "Paul Nguyen"
+     ],
+     "a": 2,
+     "why": "Paul: ”Am meisten habe ich in meiner Schulband gelernt.”"
+    }
+   ]
+  },
+  {
+   "id": "de4-sc-1",
+   "part": "schreiben",
+   "teil": "Aufgabe 1",
+   "title": "E-Mail an eine Freundin: Das erste Konzert",
+   "time": 20,
+   "minWords": 80,
+   "instr": "Skriv ett personligt mejl till en kompis (du). Skriv något om alla tre punkterna och tänk på hälsning, inledning, ordning och avslutning. Ungefär 80 ord.",
+   "task": "Sie haben letztes Wochenende mit Ihrer Band zum ersten Mal ein Konzert gegeben. Ihre Freundin Jana konnte leider nicht kommen.\n\nSchreiben Sie Jana eine E-Mail.\n\n– Beschreiben Sie: Wie war das Konzert?\n– Begründen Sie: Warum waren Sie vor dem Konzert nervös?\n– Machen Sie einen Vorschlag, wie Jana Ihre Band bald hören kann.\n\nSchreiben Sie eine E-Mail (circa 80 Wörter). Schreiben Sie etwas zu allen drei Punkten. Achten Sie auf den Textaufbau (Anrede, Einleitung, Reihenfolge der Inhaltspunkte, Schluss).",
+   "criteria": [
+    "Erfüllung der Aufgabe",
+    "Kohärenz",
+    "Wortschatz",
+    "Strukturen"
+   ],
+   "model": "Liebe Jana,\n\nschade, dass du am Samstag nicht da warst! Unser erstes Konzert im Jugendzentrum war super. Es waren fast hundert Leute da, und am Ende haben alle mitgesungen.\n\nVorher war ich total nervös, weil ich zum ersten Mal einen eigenen Song gesungen habe. Außerdem war meine Gitarrenlehrerin im Publikum.\n\nNächsten Freitag proben wir um 18 Uhr im Keller von Ole. Hast du Lust vorbeizukommen? Danach könnten wir zusammen eine Pizza essen.\n\nÜbrigens hat der Leiter vom Jugendzentrum gefragt, ob wir im Sommer beim Stadtfest spielen möchten!\n\nSchreib mir bald!\nLiebe Grüße\nElin",
+   "modelSv": "Kära Jana,\n\nsynd att du inte var där i lördags! Vår första konsert på fritidsgården var toppen. Det var nästan hundra personer där, och i slutet sjöng alla med.\n\nInnan var jag jättenervös, eftersom jag sjöng en egen låt för första gången. Dessutom satt min gitarrlärare i publiken.\n\nNästa fredag repar vi kl. 18 i Oles källare. Vill du komma förbi? Efteråt kan vi äta pizza tillsammans.\n\nFörresten frågade ledaren på fritidsgården om vi vill spela på stadsfesten i sommar!\n\nSkriv snart!\nKramar\nElin"
+  },
+  {
+   "id": "de4-sc-2",
+   "part": "schreiben",
+   "teil": "Aufgabe 2",
+   "title": "Forumsbeitrag: Casting-Shows im Fernsehen",
+   "time": 25,
+   "minWords": 80,
+   "instr": "Skriv ett inlägg i ett gästforum och säg vad du tycker. Reagera på kommentaren, ge skäl och gärna ett exempel. Ungefär 80 ord.",
+   "task": "Sie haben im Fernsehen eine Diskussionssendung zum Thema „Casting-Shows – eine gute Chance für junge Musiker?“ gesehen. Im Online-Gästebuch der Sendung finden Sie folgende Meinung:\n\nMusikfan_08: „Ich finde Casting-Shows super. Wer gut singen kann, wird dort in wenigen Wochen berühmt. Ohne das Fernsehen hätten viele Talente nie eine Chance bekommen.“\n\nSchreiben Sie nun Ihre Meinung (circa 80 Wörter).",
+   "criteria": [
+    "Erfüllung der Aufgabe",
+    "Kohärenz",
+    "Wortschatz",
+    "Strukturen"
+   ],
+   "model": "Ich sehe das ein bisschen anders als Musikfan_08. Natürlich können Casting-Shows jungen Sängerinnen und Sängern helfen, bekannt zu werden. Aber oft geht es in den Sendungen mehr um Streit und Tränen als um Musik. Viele Gewinner sind nach einem Jahr schon wieder vergessen. Außerdem machen die Shows jungen Leuten oft sehr viel Druck. Ich spiele selbst in einer Band, und ich glaube, dass man besser langsam wächst: mit kleinen Konzerten, eigenen Songs und Videos im Internet. Das dauert länger, aber man bleibt sich selbst treu.",
+   "modelSv": "Jag ser lite annorlunda på det än Musikfan_08. Visst kan talangtävlingar hjälpa unga sångare att bli kända. Men ofta handlar programmen mer om bråk och tårar än om musik. Många vinnare är redan bortglömda efter ett år. Dessutom sätter programmen ofta väldigt mycket press på unga. Jag spelar själv i ett band, och jag tror att det är bättre att växa långsamt: med små konserter, egna låtar och videor på nätet. Det tar längre tid, men man förblir trogen sig själv."
+  },
+  {
+   "id": "de4-sc-3",
+   "part": "schreiben",
+   "teil": "Aufgabe 3",
+   "title": "E-Mail an die Gesangslehrerin: Termin absagen",
+   "time": 15,
+   "minWords": 40,
+   "instr": "Skriv ett kort, artigt mejl (Sie) till en lärare. Be om ursäkt och förklara varför du inte kan komma. Glöm inte hälsningsfras och avslutning. Ungefär 40 ord.",
+   "task": "Sie haben nächste Woche am Dienstag eine Gesangsstunde bei Ihrer Lehrerin, Frau Lorenz, an der Musikschule. Sie können aber nicht kommen.\n\nSchreiben Sie an Frau Lorenz. Entschuldigen Sie sich höflich und berichten Sie, warum Sie nicht kommen können.\n\nSchreiben Sie eine E-Mail (circa 40 Wörter). Vergessen Sie nicht die Anrede und den Gruß am Schluss.",
+   "criteria": [
+    "Erfüllung der Aufgabe",
+    "Kohärenz",
+    "Wortschatz",
+    "Strukturen"
+   ],
+   "model": "Sehr geehrte Frau Lorenz,\n\nleider kann ich am Dienstag nicht zur Gesangsstunde kommen. Unser Schulchor fährt an diesem Tag zu einem Wettbewerb nach Hamburg. Es tut mir sehr leid. Wäre es möglich, die Stunde am Donnerstag nachzuholen?\n\nMit freundlichen Grüßen\nElin Berg",
+   "modelSv": "Bästa Frau Lorenz,\n\ntyvärr kan jag inte komma till sånglektionen på tisdag. Vår skolkör åker till en tävling i Hamburg den dagen. Jag är verkligen ledsen. Skulle det vara möjligt att ta igen lektionen på torsdag?\n\nMed vänliga hälsningar\nElin Berg"
+  },
+  {
+   "id": "de4-sp-1",
+   "part": "sprechen",
+   "teil": "Teil 1",
+   "title": "Gemeinsam planen: Abschied für die Musiklehrerin",
+   "prep": 15,
+   "time": 3,
+   "instr": "Planera något tillsammans med en samtalspartner (eller föreställ dig partnerns svar). Ge förslag, reagera på partnerns förslag och kom överens. På provet förbereder du Teil 1 och Teil 2 under sammanlagt 15 minuter och får göra anteckningar.",
+   "task": "Ihre Musiklehrerin, Frau Schubert, geht nach 25 Jahren an Ihrer Schule in Rente. Sie möchten zusammen mit Ihrem Gesprächspartner oder Ihrer Gesprächspartnerin eine kleine Abschiedsfeier für sie organisieren.\n\nSprechen Sie über die Punkte unten, machen Sie Vorschläge und reagieren Sie auf die Vorschläge Ihres Gesprächspartners oder Ihrer Gesprächspartnerin. Planen und entscheiden Sie gemeinsam, was Sie tun möchten.\n\nAbschiedsfeier für Frau Schubert planen:\n– Wann und wo?\n– Wer wird eingeladen?\n– Musikprogramm?\n– Geschenk?\n– Wer macht was?",
+   "criteria": [
+    "Erfüllung der Aufgabe",
+    "Kohärenz",
+    "Wortschatz",
+    "Strukturen"
+   ],
+   "phrases": [
+    "Was hältst du davon, wenn wir …?",
+    "Wie wäre es mit …?",
+    "Ich schlage vor, dass …",
+    "Das ist eine gute Idee.",
+    "Das finde ich nicht so gut, weil …",
+    "Lieber …, denn …",
+    "Einverstanden!",
+    "Dann machen wir es so: …",
+    "Kannst du … übernehmen?",
+    "Ich kümmere mich um …"
+   ],
+   "model": "A: Frau Schubert hört ja bald auf. Wollen wir eine kleine Feier für sie organisieren?\nB: Ja, gern! Wann passt es denn am besten?\nA: Wie wäre es mit dem letzten Freitag vor den Ferien, nach der sechsten Stunde? Dann haben alle Zeit.\nB: Gute Idee. Und wo? Im Musiksaal?\nA: Der ist ein bisschen klein. Was hältst du von der Aula?\nB: Einverstanden. Wen laden wir ein? Nur den Chor und das Schulorchester?\nA: Ich würde auch die anderen Lehrer und ehemalige Schüler einladen. Frau Schubert hat ja so viele unterrichtet.\nB: Stimmt. Und das Programm? Ich schlage vor, dass der Chor ihr Lieblingslied singt.\nA: Super, und das Orchester könnte ein kurzes Stück spielen. Vielleicht spiele ich auch etwas auf dem Klavier.\nB: Und als Geschenk? Blumen finde ich ein bisschen langweilig.\nA: Wir könnten ein Fotobuch machen, mit Bildern von allen Konzerten.\nB: Das ist schön! Dann sammle ich die Fotos, und du fragst den Schulleiter wegen der Aula.\nA: Gut, so machen wir es. Ich schreibe auch die Einladung.",
+   "modelSv": "A: Frau Schubert slutar ju snart. Ska vi ordna en liten fest för henne?\nB: Ja, gärna! När passar det bäst?\nA: Vad sägs om sista fredagen före lovet, efter sjätte lektionen? Då har alla tid.\nB: Bra idé. Och var? I musiksalen?\nA: Den är lite liten. Vad tycker du om aulan?\nB: Okej. Vilka bjuder vi in? Bara kören och skolorkestern?\nA: Jag skulle också bjuda in de andra lärarna och tidigare elever. Frau Schubert har ju undervisat så många.\nB: Det stämmer. Och programmet? Jag föreslår att kören sjunger hennes favoritlåt.\nA: Toppen, och orkestern kunde spela ett kort stycke. Jag kanske också spelar något på piano.\nB: Och som present? Blommor tycker jag är lite tråkigt.\nA: Vi kunde göra en fotobok med bilder från alla konserter.\nB: Vad fint! Då samlar jag in fotona, och du frågar rektorn om aulan.\nA: Bra, då gör vi så. Jag skriver också inbjudan."
+  },
+  {
+   "id": "de4-sp-2",
+   "part": "sprechen",
+   "teil": "Teil 2",
+   "title": "Präsentation: Musik beim Lernen oder ein Schuljahr im Ausland",
+   "prep": 15,
+   "time": 3,
+   "instr": "Välj ett av de två ämnena och håll en kort presentation på ungefär tre minuter. Följ de fem ”bilderna” (Folien) i ordning. På provet förbereder du Teil 1 och Teil 2 under sammanlagt 15 minuter.",
+   "task": "Sie sollen Ihren Zuhörern ein aktuelles Thema präsentieren. Wählen Sie ein Thema (A oder B).\n\nThema A: Musik hören beim Lernen – ja oder nein?\nThema B: Ein Schuljahr im Ausland – ja oder nein?\n\nIhre Präsentation soll diese fünf Folien haben:\n– Folie 1: Stellen Sie Ihr Thema vor. Erklären Sie den Inhalt und die Struktur Ihrer Präsentation.\n– Folie 2: Berichten Sie von Ihrer Situation oder einem Erlebnis im Zusammenhang mit dem Thema.\n– Folie 3: Berichten Sie von der Situation in Ihrem Heimatland und geben Sie Beispiele.\n– Folie 4: Nennen Sie die Vor- und Nachteile und sagen Sie dazu Ihre Meinung. Geben Sie auch Beispiele.\n– Folie 5: Beenden Sie Ihre Präsentation und bedanken Sie sich bei den Zuhörern.\n\nSprechen Sie etwa 3 Minuten.",
+   "criteria": [
+    "Erfüllung der Aufgabe",
+    "Kohärenz",
+    "Wortschatz",
+    "Strukturen"
+   ],
+   "phrases": [
+    "Ich möchte euch heute das Thema … vorstellen.",
+    "Zuerst erzähle ich …, dann …, und zum Schluss …",
+    "Ich persönlich habe die Erfahrung gemacht, dass …",
+    "In Schweden ist es so, dass …",
+    "Bei uns ist es üblich, …",
+    "Ein Vorteil ist, dass …",
+    "Ein Nachteil ist aber, dass …",
+    "Meiner Meinung nach …",
+    "Damit komme ich zum Schluss.",
+    "Vielen Dank fürs Zuhören! Habt ihr Fragen?"
+   ],
+   "model": "Ich möchte euch heute das Thema „Musik hören beim Lernen – ja oder nein?“ vorstellen. Zuerst erzähle ich von meinen eigenen Erfahrungen, dann berichte ich über die Situation in Schweden. Danach spreche ich über Vor- und Nachteile, und zum Schluss sage ich meine Meinung.\n\nIch selbst höre fast immer Musik, wenn ich Hausaufgaben mache. Bei Mathe hilft mir ruhige Klaviermusik, aber wenn ich Vokabeln lerne, ist Musik mit Text zu viel für mich. Dann höre ich nichts.\n\nIn Schweden haben viele Jugendliche beim Lernen Kopfhörer auf, auch in der Schule. In manchen Klassen dürfen die Schüler bei Einzelarbeit Musik hören, in anderen ist das verboten.\n\nEin Vorteil ist, dass Musik gute Laune macht und man den Lärm um sich herum nicht hört. Ein Nachteil ist, dass man sich schlechter konzentriert, besonders bei Musik mit deutschen oder englischen Texten. Meiner Meinung nach kommt es auf die Aufgabe an: Bei einfachen Aufgaben finde ich Musik gut, bei schwierigen Texten lieber nicht.\n\nDamit komme ich zum Schluss. Vielen Dank fürs Zuhören! Habt ihr Fragen?",
+   "modelSv": "Jag vill i dag presentera ämnet ”Lyssna på musik när man pluggar – ja eller nej?”. Först berättar jag om mina egna erfarenheter, sedan om situationen i Sverige. Därefter pratar jag om för- och nackdelar, och till sist säger jag vad jag tycker.\n\nSjälv lyssnar jag nästan alltid på musik när jag gör läxor. I matte hjälper lugn pianomusik mig, men när jag lär mig glosor blir musik med text för mycket för mig. Då lyssnar jag inte på något.\n\nI Sverige har många unga hörlurar på sig när de pluggar, också i skolan. I vissa klasser får eleverna lyssna på musik vid enskilt arbete, i andra är det förbjudet.\n\nEn fördel är att musik gör en på gott humör och att man inte hör oljudet runt omkring sig. En nackdel är att man koncentrerar sig sämre, särskilt vid musik med tysk eller engelsk text. Jag tycker att det beror på uppgiften: vid enkla uppgifter tycker jag att musik är bra, vid svåra texter hellre inte.\n\nDärmed kommer jag till slutet. Tack för att ni lyssnade! Har ni några frågor?"
+  },
+  {
+   "id": "de4-sp-3",
+   "part": "sprechen",
+   "teil": "Teil 3",
+   "title": "Über die Präsentationen sprechen: Rückmeldung und Fragen",
+   "time": 2,
+   "instr": "Direkt efter presentationerna: ge en kort respons på din partners presentation och ställ en fråga. Svara sedan på en fråga om din egen presentation. Här finns ingen förberedelsetid.",
+   "task": "Ihr Gesprächspartner oder Ihre Gesprächspartnerin hat eine Präsentation zum Thema „Ein Schuljahr im Ausland – ja oder nein?“ gehalten. Er oder sie hat gesagt:\n– Mein Bruder war ein Jahr in Kanada und spricht jetzt fließend Englisch.\n– Ein Jahr im Ausland ist teuer, und man verpasst Freunde und Familie.\n– Ich möchte später auf jeden Fall ein Jahr in Deutschland verbringen.\n\n1. Geben Sie eine Rückmeldung zur Präsentation: Was hat Ihnen gefallen? Was war neu oder interessant für Sie?\n2. Stellen Sie eine Frage zur Präsentation.\n3. Beantworten Sie danach eine Frage zu Ihrer eigenen Präsentation, zum Beispiel: „Hören Sie auch Musik, wenn Sie für eine Prüfung lernen?“",
+   "criteria": [
+    "Erfüllung der Aufgabe",
+    "Kohärenz",
+    "Wortschatz",
+    "Strukturen"
+   ],
+   "phrases": [
+    "Deine Präsentation hat mir gut gefallen, weil …",
+    "Besonders interessant fand ich, dass …",
+    "Das wusste ich noch nicht.",
+    "Ich habe eine Frage: …",
+    "Warum möchtest du …?",
+    "Wie hat dein Bruder …?",
+    "Das ist eine gute Frage.",
+    "Bei mir ist das so: …",
+    "Ich habe ja gesagt, dass …",
+    "Da bin ich mir nicht ganz sicher, aber …"
+   ],
+   "model": "Deine Präsentation hat mir sehr gut gefallen, weil du viele Beispiele aus deiner Familie genannt hast. Besonders interessant fand ich, dass dein Bruder nach einem Jahr fließend Englisch spricht. Ich habe eine Frage: Hatte dein Bruder am Anfang Heimweh, und wie hat er neue Freunde gefunden?\n\n(Frage an mich: „Hören Sie auch Musik, wenn Sie für eine Prüfung lernen?“)\nDas ist eine gute Frage. Vor einer Prüfung höre ich meistens keine Musik, weil ich mich dann sehr gut konzentrieren muss. Aber in den Pausen spiele ich oft ein bisschen Gitarre. Das hilft mir, ruhig zu werden.",
+   "modelSv": "Din presentation var jättebra, eftersom du gav många exempel från din familj. Särskilt intressant tyckte jag att det var att din bror talar flytande engelska efter ett år. Jag har en fråga: längtade din bror hem i början, och hur hittade han nya vänner?\n\n(Fråga till mig: ”Lyssnar du också på musik när du pluggar inför ett prov?”)\nDet är en bra fråga. Före ett prov lyssnar jag oftast inte på musik, eftersom jag måste koncentrera mig väldigt bra då. Men på rasterna spelar jag ofta lite gitarr. Det hjälper mig att bli lugn."
+  }
+ ]
+}
