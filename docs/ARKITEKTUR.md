@@ -80,6 +80,7 @@ Appens kod är `src/app.js` (språk, sparande, glosquiz och quizmotor), sedan fi
 | `62-satsanalys.js` | Satsanalys med fransk terminologi (`content/satsanalys.json`, bara i kurser som har filen): funktionen eller satstypen för en markerad del `[[…]]` | `sats` |
 | `70-exam.js` | Provträning och provsimulering | `exam` |
 | `80-level.js` | Nivåmätaren "Var ligger jag?" i statistiken (`statsLevel`, `levelEstimate`): ordförråd över alla kurser i samma språk, grammatik och prov/Claudes bedömningar på GERS-skalan. Räknas ur befintliga fält, sparar inget | – |
+| `82-plan.js` | Studieplan vecka för vecka (`languages/<kod>/plan.json` → `L.plan`, kontrolleras av `check_plan` i build.py): kort på startsidan med aktuell vecka och hur många av veckans ord eleven kan, en sida med alla veckor (ord, grammatik, texter, provuppgifter) och startdatum i `S.plan` | `plan` |
 | `90-mix.js` | Dagens pass och den blandade rundan | `mix` |
 | `99-menu.js` | Menyn med alla övningar och statistiken för dem | – |
 
@@ -141,8 +142,9 @@ Ett dokument i artefaktens db får vara **högst 256 KiB** (plattformens gräns,
 | `ipa`, `sa` | Transkription och satsanalys (universitetskursen): per id `{s, last, r, n}`. |
 | `tx`, `stb`, `st` | Läs- och hörtexter `{r, n, best, last}`, berättelsernas bästa resultat, berättelsernas luckor `{tempus, bindeord}`. |
 | `cu`, `wr`, `ut`, `mal`, `kt` | Klara kulturuppgifter och skrivuppgifter, bästa uttalsresultat, avbockade lärandemål (`"<id>\|<nr>"`), kapitelprov `{r, n, d, miss}`. |
-| `exam` | Provträning `{t: {<uppgift>: {pct, best, n, last}}, sims: [{d, parts}]}`. |
+| `exam` | Provträning `{t: {<uppgift>: {pct, best, n, last}}, sims: [{d, parts, tasks, min}]}` (`tasks` = resultat per uppgift och `min` = minuter, i simuleringar från september 2026). |
 | `drafts`, `fb` | Utkast och Claudes kommentarer per uppgift. |
+| `plan` | Studieplanen: `{start: "ÅÅÅÅ-MM-DD"}`, första dagen i vecka 1 (aktuell vecka räknas fram). Saknas i gamla lägen. |
 | `feedback`, `reports` | Tyck till-meddelanden och felrapporter som inte kunde skickas (högst 50). |
 
 **Migreringar.** `normState` kör `MIGRATIONS[n]` för varje version n som är högre än lägets `v` och sätter sedan `v` till senaste versionen. Nya migreringar läggs alltid sist; en gammal ändras aldrig. Ett läge från en nyare version av appen behåller sitt nummer.

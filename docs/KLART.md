@@ -2,6 +2,18 @@
 
 Punkter som har flyttats från [`BACKLOG.md`](BACKLOG.md) när de byggdes. **Referens** anger backloggens rubrik och prioritet. **Commit** anger var ändringen finns i git. **Publicerat** anger versionen av artefakten på https://claude.ai/artifact/YBQv8j4qXQQLuPwLAWt5mP.
 
+## 2026-09-29, del 2 (publicerat som version 29)
+
+| Referens | Vad som byggdes | Commit |
+|---|---|---|
+| Språkprov · P2 *Provsimuleringen som hela provet* | Simuleringen tar en uppgift per övning/Teil (DELF 7 uppgifter, Goethe B2 11, Goethe B1 12) med provets tider per del (klockan fortsätter mellan övningarna i samma del). Resultat per del med en rad per övning och minuter; knapp för hela provet och en per del. `simTeile`, `simPlan`, `simPartRes`, `simNextLabel` i 70-exam.js; `S.exam.sims[]` får valfria `tasks` och `min`. Textlängder rättade (fr-co-1–3, fru-co-1–4, fru-ce-1–4, fr-ce-1, fr4-co-1–3, fr4-ce-1), fr4-co-4 är en telefondialog, Venedig och valdeltagande uppdaterade, alla citat i förklaringarna automatkontrollerade. | se git log |
+| Tyska 5 · P2 *Studieplan för självstudier* | 20 veckor i `languages/de/plan.json` (kapitel 1–8 två veckor var, övriga ordlistor utspridda, grammatik i ordning, texter och en provuppgift per vecka, repetition och helt prov på slutet). Täcker alla 1 695 ord utom musikteorin, alla 14 grammatikområden och alla 43 provuppgifter. Kort på startsidan och egen sida (`82-plan.js`) med startdatum eller vald vecka, framsteg per vecka och direktlänkar. Nytt fält `S.plan`. Generellt: en kurs får en plan genom en `plan.json`. `check_plan` i build.py. | se git log |
+| Buggar | Enter under självbedömningen (Översätt meningar) hoppade över frågan; Avbryt i Ordföljd och Skugga kastade rundan; molnet kunde fastna när en bit hade annan rev än huvuddokumentet (lagas nu efter tre försök genom sammanslagning per ord och omskrivning av alla bitar, `cloudSalvage`); tid i gamla `{state,t}`-dokument (`docT`); tomma rundor visar ett meddelande i stället för "0/0 klar"; Lyssna först reagerar på mellanslag och Enter; der/die/das tar med nya Mina ord utan omladdning. | se git log |
+| Arkitektur | Nya byggkontroller: grammatikfrågornas `topic`/`rule` mot grammar.json, `inherit`-fält och `nextCourse`, bokfilernas typ, storleksvarningar, bygget går utan bokmappen. Ny prioriterad lista i BACKLOG.md. | se git log |
+| Granskning av språket | Tyska 4/5/6: ca 50 rättelser (felalternativ som också var rätt, sakfel som arians längd och Jugend musiziert-poängen, översättningar), inget facit eller genus var fel. Franska 4 och Franska I: ca 40 rättelser (sakfel om Code civil, Vél d'Hiv, Simenon, Hernani, tvetydiga grammatikfrågor, svenska termer, heterodiegetisk ≠ allvetande). Italienska: stickprov 10 %, inga fel. | se git log |
+
+Testerna har 734 kontroller.
+
 ## 2026-09-29 (publicerat som version 28)
 
 | Referens | Vad som byggdes | Commit |

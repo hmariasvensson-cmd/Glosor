@@ -61,7 +61,8 @@ Läs- och hörförståelse samt skriva tar tillsammans 1 h 55 min (läsförståe
 - Hör- och läsuppgifterna har `teil` = `Exercice 1/2/3`. Varje uppgift motsvarar en övning, och antalet frågor följer provet (B1 hör: 6/7/7, B1 läs: 16/7/7, B2: 7/7/6 både hör och läs, utom B2 läs Exercice 3 som har 6). `plays` är 2 utom i B2 hör Exercice 3 (1).
 - Skrivuppgifterna har `minWords` 160 (B1) eller 250 (B2) och `time` 45 respektive 60. Taluppgifterna har `prep` och `time` enligt tabellerna.
 - Poängen per fråga varierar på provet (0,5–2,5 p); appen räknar procent rätt av frågorna.
-- **Avvikelser som finns kvar:** provsimuleringen tar en uppgift (en övning) per del, inte alla tre övningarna, så den är kortare än provet. Några äldre texter är kortare eller längre än intervallen ovan (t.ex. `fr-co-1`, 160 ord mot 250–300, och B2-läsartiklarna `fru-ce-1`–`4`, ca 470–520 ord mot 425–450). `fr4-co-4` (Exercice 1) är ett röstmeddelande, inte en dialog.
+- Provsimuleringen tar en uppgift per övning (Exercice 1–3) i hör- och läsförståelse plus skrivuppgiften, och klockan går för hela delen med provets tid (25/45/45 respektive 30/60/60 min). Delens resultat är andelen rätt av alla frågor i delen. Man kan också simulera en enda del.
+- **Textlängder (rättade 2026-09-29):** `fr-co-1`–`3`, `fru-co-1`–`4` och `fr-ce-1` är förlängda och `fru-ce-1`–`4` kortade till intervallen ovan; `fr4-co-4` är nu en telefondialog.
 
 ### Ändringar vid kontrollen (september 2026)
 

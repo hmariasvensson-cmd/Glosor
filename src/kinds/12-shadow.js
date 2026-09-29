@@ -14,7 +14,7 @@ function renderShadow(d){
     <p class="q-ask">Lyssna först. Spela sedan upp igen och säg meningen högt samtidigt som rösten, med samma rytm och melodi. Gör det två eller tre gånger, gärna långsamt först.</p>
     <div class="grade"><button type="button" class="btn ghost" data-sh="0">Svårt</button><button type="button" class="btn ghost" data-sh="half">Nästan</button><button type="button" class="btn" data-sh="1">Det gick bra</button></div></section>
     ${quitBtn()}`;
-  wirePlay(r=>speak(w.exT,r)); $("#quit").onclick=quitSession; speak(w.exT);
+  wirePlay(r=>speak(w.exT,r)); $("#quit").onclick=pauseSession; speak(w.exT);
   app.querySelectorAll("[data-sh]").forEach(b=>b.onclick=()=>{ if(sess.answered) return; sess.answered=true;
     record(b.dataset.sh==="1"); sess.done++; snapRun(); nextQ(); });
 }

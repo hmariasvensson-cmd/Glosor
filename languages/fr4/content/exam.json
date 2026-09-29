@@ -75,6 +75,14 @@
      "sv": "– Det passar mig, jag övar hellre på morgonen ändå. Skulle jag kunna titta på rummet innan jag bestämmer mig?"
     },
     {
+     "fr": "— Ah, et la chambre, elle est meublée ?",
+     "sv": "– Ja just det, är rummet möblerat?"
+    },
+    {
+     "fr": "— Oui, il y a un lit, un bureau et une grande armoire. La cuisine et la salle de bains sont partagées, mais on a aussi un petit balcon où on mange quand il fait beau.",
+     "sv": "– Ja, det finns en säng, ett skrivbord och en stor garderob. Köket och badrummet delar vi på, men vi har också en liten balkong där vi äter när det är fint väder."
+    },
+    {
      "fr": "— Bien sûr. Samedi, je travaille jusqu'à midi, mais tu peux passer vers quinze heures. Pense à apporter une copie de ta carte d'identité et le nom de ton garant : le propriétaire nous les demandera.",
      "sv": "– Självklart. På lördag jobbar jag till tolv, men du kan komma förbi runt tre. Kom ihåg att ta med en kopia av ditt id-kort och namnet på den som går i borgen för dig: hyresvärden kommer att be om dem."
     },
@@ -112,7 +120,7 @@
       "410 euros."
      ],
      "a": 1,
-     "why": "Hyran är « quatre cent vingt euros par mois, charges comprises, sauf Internet », och internet kostar « dix euros de plus chacun ». 420 + 10 = 430 euro."
+     "why": "Hyran är « Quatre cent vingt euros par mois, charges comprises, sauf Internet », och internet kostar « dix euros de plus chacun ». 420 + 10 = 430 euro."
     },
     {
      "q": "Quelle règle les colocataires ont-ils fixée ?",
@@ -150,42 +158,62 @@
    "id": "fr4-co-4",
    "part": "co",
    "teil": "Exercice 1",
-   "title": "Un message du conservatoire",
+   "title": "Un appel du conservatoire",
    "time": 8,
    "plays": 2,
-   "instr": "Du har sökt till pianoklassen på ett franskt konservatorium och får ett röstmeddelande från sekretariatet. Läs frågorna först. Du hör meddelandet två gånger. Välj rätt svar på varje fråga.",
+   "instr": "Camille har sökt till pianoklassen på ett konservatorium och blir uppringd av Élise Martin på sekretariatet. Läs frågorna först. Du hör samtalet två gånger. Välj rätt svar på varje fråga.",
    "lines": [
     {
-     "fr": "Bonjour, ici Élise Martin, du secrétariat du conservatoire de Saint-Aurèle. Ce message s'adresse aux candidats au concours d'entrée en classe de piano.",
-     "sv": "Hej, det här är Élise Martin på konservatoriets sekretariat i Saint-Aurèle. Det här meddelandet går till alla som söker till pianoklassen."
+     "fr": "— Allô, bonjour. Je suis bien chez Camille Roux ? Ici Élise Martin, du secrétariat du conservatoire de Saint-Aurèle.",
+     "sv": "– Hallå, god dag. Är det Camille Roux? Det här är Élise Martin på konservatoriets sekretariat i Saint-Aurèle."
     },
     {
-     "fr": "Tout d'abord, attention : la date a changé. En raison de travaux dans l'auditorium, les épreuves n'auront pas lieu le 12 mars, comme prévu, mais le 19 mars. L'horaire, lui, ne change pas : votre convocation reste valable.",
-     "sv": "Först och främst, observera: datumet har ändrats. På grund av renoveringsarbeten i konsertsalen blir proven inte den 12 mars, som planerat, utan den 19 mars. Tiden ändras däremot inte: din kallelse gäller fortfarande."
+     "fr": "— Oui, c'est moi. Bonjour, madame. C'est au sujet du concours d'entrée en classe de piano ?",
+     "sv": "– Ja, det är jag. God dag. Gäller det inträdesprovet till pianoklassen?"
     },
     {
-     "fr": "Je vous rappelle le déroulement de la journée. Le matin, vous passerez l'épreuve d'instrument devant un jury de trois professeurs. Vous jouerez une pièce imposée et une pièce libre de votre choix, qui ne doit pas dépasser huit minutes.",
-     "sv": "Jag påminner om hur dagen går till. På förmiddagen gör du instrumentprovet inför en jury med tre lärare. Du spelar ett obligatoriskt stycke och ett valfritt stycke, som inte får vara längre än åtta minuter."
+     "fr": "— Exactement. Attention, la date a changé : en raison de travaux dans l'auditorium, les épreuves n'auront pas lieu le 12 mars, comme prévu, mais le 19 mars. L'horaire, lui, ne change pas.",
+     "sv": "– Precis. Observera att datumet har ändrats: på grund av renoveringsarbeten i konsertsalen blir proven inte den 12 mars, som planerat, utan den 19 mars. Tiden ändras däremot inte."
     },
     {
-     "fr": "L'après-midi, il y aura un test écrit de formation musicale, puis un court entretien avec le directeur. Pour les candidats étrangers, l'entretien se fera en français, mais le jury sait que ce n'est pas votre langue maternelle : on vous demandera surtout de présenter votre parcours et votre projet.",
-     "sv": "På eftermiddagen blir det ett skriftligt prov i musikteori och gehör, och sedan en kort intervju med rektorn. För sökande från andra länder sker intervjun på franska, men juryn vet att det inte är ert modersmål: ni ska framför allt berätta om er bakgrund och era planer."
+     "fr": "— D'accord, le 19. Et comment se passe la journée, exactement ?",
+     "sv": "– Okej, den 19:e. Och hur går dagen till, exakt?"
     },
     {
-     "fr": "Merci d'arriver au moins trente minutes avant votre heure de passage. Une salle d'échauffement sera à votre disposition au deuxième étage.",
-     "sv": "Kom minst trettio minuter före din provtid. En sal för uppvärmning finns för er på andra våningen."
+     "fr": "— Le matin, vous passerez l'épreuve d'instrument devant un jury de trois professeurs. Vous jouerez une pièce imposée et une pièce libre de votre choix, qui ne doit pas dépasser huit minutes.",
+     "sv": "– På förmiddagen gör du instrumentprovet inför en jury med tre lärare. Du spelar ett obligatoriskt stycke och ett valfritt stycke, som inte får vara längre än åtta minuter."
     },
     {
-     "fr": "N'oubliez pas d'apporter votre pièce d'identité et trois copies de la partition de votre pièce libre, une pour chaque membre du jury.",
-     "sv": "Glöm inte att ta med id-handling och tre kopior av noterna till ditt valfria stycke, en till varje jurymedlem."
+     "fr": "— Huit minutes… Ma sonate en dure presque dix. Je vais devoir choisir autre chose. Et l'après-midi ?",
+     "sv": "– Åtta minuter … Min sonat är nästan tio. Jag får välja något annat. Och på eftermiddagen?"
     },
     {
-     "fr": "Si vous ne pouvez pas venir à la nouvelle date, envoyez-nous un courriel avant le 5 mars. Nous essaierons de vous proposer un passage en visioconférence, mais seulement si vous habitez à l'étranger.",
-     "sv": "Om du inte kan komma på det nya datumet, skicka ett mejl till oss före den 5 mars. Vi ska försöka erbjuda dig att göra provet via videolänk, men bara om du bor utomlands."
+     "fr": "— Un test écrit de formation musicale, puis un court entretien avec le directeur. Ne vous inquiétez pas : on vous demandera surtout de présenter votre parcours et votre projet.",
+     "sv": "– Ett skriftligt prov i musikteori och gehör, och sedan en kort intervju med rektorn. Oroa dig inte: du ska framför allt berätta om din bakgrund och dina planer."
     },
     {
-     "fr": "Pour toute question, vous pouvez nous joindre du lundi au vendredi, de neuf heures à midi. Bonne préparation à tous, et à bientôt !",
-     "sv": "Om du har frågor kan du nå oss måndag till fredag, klockan nio till tolv. Lycka till med förberedelserna, och vi ses snart!"
+     "fr": "— Très bien. Qu'est-ce que je dois apporter ?",
+     "sv": "– Bra. Vad ska jag ta med mig?"
+    },
+    {
+     "fr": "— Votre pièce d'identité et trois copies de la partition de votre pièce libre, une pour chaque membre du jury. Et arrivez au moins trente minutes avant votre heure de passage : une salle d'échauffement sera à votre disposition au deuxième étage.",
+     "sv": "– Din id-handling och tre kopior av noterna till ditt valfria stycke, en till varje jurymedlem. Och kom minst trettio minuter före din provtid: det finns en sal för uppvärmning på andra våningen."
+    },
+    {
+     "fr": "— Parfait. Une dernière question : une amie qui habite à Montréal voudrait savoir si on peut passer le concours à distance.",
+     "sv": "– Perfekt. En sista fråga: en kompis som bor i Montréal undrar om man kan göra provet på distans."
+    },
+    {
+     "fr": "— Nous essayons de proposer un passage en visioconférence, mais seulement aux candidats qui habitent à l'étranger. Elle doit nous envoyer un courriel avant le 5 mars.",
+     "sv": "– Vi försöker erbjuda prov via videolänk, men bara till sökande som bor utomlands. Hon ska skicka ett mejl till oss före den 5 mars."
+    },
+    {
+     "fr": "— Merci beaucoup, madame. Bonne journée !",
+     "sv": "– Tack så mycket. Ha en bra dag!"
+    },
+    {
+     "fr": "— Bonne préparation, et à bientôt !",
+     "sv": "– Lycka till med förberedelserna, och vi ses snart!"
     }
    ],
    "qs": [
@@ -197,7 +225,7 @@
       "Parce qu'un membre du jury est malade."
      ],
      "a": 1,
-     "why": "« En raison de travaux dans l'auditorium, les épreuves n'auront pas lieu le 12 mars »."
+     "why": "« en raison de travaux dans l'auditorium, les épreuves n'auront pas lieu le 12 mars »."
     },
     {
      "q": "Quand le concours aura-t-il lieu ?",
@@ -207,7 +235,7 @@
       "Le 19 mars."
      ],
      "a": 2,
-     "why": "« pas le 12 mars, comme prévu, mais le 19 mars ». Den 5 mars är sista dagen för att mejla om man inte kan komma."
+     "why": "« n'auront pas lieu le 12 mars, comme prévu, mais le 19 mars ». Den 5 mars är sista dagen för att mejla om provet via videolänk."
     },
     {
      "q": "Combien de temps la pièce libre peut-elle durer au maximum ?",
@@ -220,14 +248,14 @@
      "why": "« une pièce libre de votre choix, qui ne doit pas dépasser huit minutes »."
     },
     {
-     "q": "Pendant l'entretien, les candidats étrangers doivent surtout…",
+     "q": "Pendant l'entretien, Camille devra surtout…",
      "opts": [
       "parler sans faire aucune faute.",
-      "présenter leur parcours et leur projet.",
+      "présenter son parcours et son projet.",
       "jouer une deuxième pièce."
      ],
      "a": 1,
-     "why": "« le jury sait que ce n'est pas votre langue maternelle : on vous demandera surtout de présenter votre parcours et votre projet »."
+     "why": "« on vous demandera surtout de présenter votre parcours et votre projet »."
     },
     {
      "q": "Qu'est-ce qu'il faut apporter ?",
@@ -237,7 +265,7 @@
       "Un enregistrement de la pièce libre."
      ],
      "a": 0,
-     "why": "« votre pièce d'identité et trois copies de la partition de votre pièce libre »."
+     "why": "« Votre pièce d'identité et trois copies de la partition de votre pièce libre »."
     },
     {
      "q": "Qui peut passer le concours en visioconférence ?",
@@ -247,7 +275,7 @@
       "Seulement les candidats qui sont malades."
      ],
      "a": 1,
-     "why": "« Nous essaierons de vous proposer un passage en visioconférence, mais seulement si vous habitez à l'étranger »."
+     "why": "« Nous essayons de proposer un passage en visioconférence, mais seulement aux candidats qui habitent à l'étranger »."
     }
    ]
   },
@@ -278,7 +306,7 @@
     },
     {
      "fr": "— Au début, oui, mais après la pluie, le sol sera trempé. J'ai trouvé un refuge à deux heures de marche de la gare. La nuit coûte dix-huit euros, et le dîner est préparé par le gardien.",
-     "sv": "– Från början, ja, men efter regnet blir marken genomblöt. Jag har hittat en fjällstuga två timmars promenad från stationen. En natt kostar arton euro, och stugvärden lagar middagen."
+     "sv": "– Från början, ja, men efter regnet blir marken genomblöt. Jag har hittat en fjällstuga två timmars vandring från stationen. En natt kostar arton euro, och stugvärden lagar middagen."
     },
     {
      "fr": "— Dix-huit euros, c'est raisonnable. Il faut réserver ?",
@@ -398,6 +426,10 @@
      "sv": "”I början tyckte folk att vi var drömmare”, berättar Yasmine Morel, en av arrangörerna. ”I dag står folk i kö för att få trampa! En kvart på cykeln, och man får en äppeljuice gratis.”"
     },
     {
+     "fr": "Pour faire fonctionner tout cela, près de cent bénévoles se relaient pendant les trois jours. Beaucoup sont des habitants de Lanvéran, qui prêtent aussi leurs champs pour le camping. Côté musique, le programme mélange rock, chanson et musique traditionnelle, avec des groupes de la région mais aussi des artistes venus d'Irlande et d'Espagne.",
+     "sv": "För att allt detta ska fungera turas nästan hundra volontärer om under de tre dagarna. Många av dem bor i Lanvéran och lånar också ut sina åkrar till campingen. När det gäller musiken blandar programmet rock, visor och folkmusik, med band från trakten men också artister från Irland och Spanien."
+    },
+    {
      "fr": "Le festival a aussi supprimé les bouteilles en plastique : chaque festivalier reçoit une gourde à l'entrée, et des fontaines d'eau potable sont installées partout sur le site. Quant aux déchets alimentaires, ils sont compostés, puis donnés aux agriculteurs de la commune.",
      "sv": "Festivalen har också slutat med plastflaskor: varje besökare får en vattenflaska vid entrén, och det finns dricksvattenfontäner överallt på området. Matavfallet komposteras och ges sedan till bönderna i kommunen."
     },
@@ -410,8 +442,8 @@
      "sv": "Det finns ändå en gräns: vid dåligt väder räcker inte solpanelerna. Därför finns ett litet elverk i reserv, ”men bara som en sista utväg”, förtydligar Yasmine Morel."
     },
     {
-     "fr": "Le festival commence vendredi à dix-huit heures. Le billet coûte douze euros par jour, et l'entrée est gratuite pour les moins de douze ans.",
-     "sv": "Festivalen börjar på fredag klockan sex på kvällen. Biljetten kostar tolv euro per dag, och det är gratis inträde för barn under tolv år."
+     "fr": "Le festival commence vendredi à dix-huit heures. Le billet coûte douze euros par jour, et l'entrée est gratuite pour les moins de douze ans. Toutes les informations pratiques sont à retrouver sur le site du festival.",
+     "sv": "Festivalen börjar på fredag klockan sex på kvällen. Biljetten kostar tolv euro per dag, och det är gratis inträde för barn under tolv år. All praktisk information finns på festivalens webbplats."
     }
    ],
    "qs": [
@@ -661,7 +693,7 @@
     },
     {
      "fr": "— Beaucoup viennent d'abord pour faire des économies. Mais ils reviennent pour l'ambiance : on boit un café, on discute en attendant son tour. Une dame m'a dit récemment que c'était sa seule sortie du mois.",
-     "sv": "– Många kommer först för att spara pengar. Men de kommer tillbaka för stämningens skull: man dricker kaffe och pratar medan man väntar på sin tur. En kvinna sa nyligen till mig att det var hennes enda utflykt på hela månaden."
+     "sv": "– Många kommer först för att spara pengar. Men de kommer tillbaka för stämningens skull: man dricker kaffe och pratar medan man väntar på sin tur. En kvinna sa nyligen till mig att det var den enda gången hon kom ut hemifrån på hela månaden."
     },
     {
      "fr": "— Et vos projets ?",
@@ -795,6 +827,14 @@
      "sv": "– Ja, det är en viktig fråga. I en orkester sitter vissa musiker precis framför trumpeterna eller slagverket. Jag rekommenderar särskilda öronproppar för musiker: de sänker ljudvolymen utan att förvränga ljudet."
     },
     {
+     "fr": "— Et le trac avant un concert, c'est aussi votre domaine ?",
+     "sv": "– Och nervositeten före en konsert, är det också ditt område?"
+    },
+    {
+     "fr": "— En partie. Le stress provoque des tensions dans les épaules et dans la nuque. J'apprends aux musiciens des exercices de respiration très simples, qu'ils peuvent faire dans les coulisses juste avant d'entrer en scène. Mais quand l'angoisse devient trop forte, je les oriente vers un médecin ou un psychologue.",
+     "sv": "– Delvis. Stress ger spänningar i axlarna och nacken. Jag lär musikerna mycket enkla andningsövningar som de kan göra bakom scenen precis innan de går in. Men när ångesten blir för stark skickar jag dem vidare till en läkare eller psykolog."
+    },
+    {
      "fr": "— Un dernier mot pour nos jeunes auditeurs ?",
      "sv": "– Några sista ord till våra unga lyssnare?"
     },
@@ -919,7 +959,7 @@
     },
     {
      "fr": "— La patience ! Pour fabriquer un violon, il faut des semaines de travail. Si on se trompe d'un millimètre en creusant le bois, il faut parfois tout recommencer. Et puis, il faut accepter de ne pas gagner beaucoup au début.",
-     "sv": "– Tålamodet! Att tillverka en fiol tar veckor. Om man gör fel med en millimeter när man hyvlar ur träet måste man ibland börja om från början. Och så måste man acceptera att man inte tjänar så mycket i början."
+     "sv": "– Tålamodet! Att tillverka en fiol tar veckor. Om man gör fel med en millimeter när man gröper ur träet måste man ibland börja om från början. Och så måste man acceptera att man inte tjänar så mycket i början."
     },
     {
      "fr": "— Est-ce qu'on trouve facilement du travail ensuite ?",
@@ -987,7 +1027,7 @@
       "Le dessin technique."
      ],
      "a": 1,
-     "why": "« Qu'est-ce qui est le plus difficile ? — La patience ! » Akustik och teknisk ritning är ämnen i skolan."
+     "why": "På frågan om vad som är svårast svarar hon « La patience ! » Akustik och teknisk ritning är ämnen i skolan."
     },
     {
      "q": "Pourquoi Nora pense-t-elle pouvoir trouver du travail ?",
@@ -1151,20 +1191,20 @@
    "instr": "Elin, 18 år, vill göra volontärarbete i sommar. Hon har fyra krav: arbetet ska handla om natur eller miljö, det ska vara i minst tre veckor, boendet ska vara ordnat och det får kosta högst 300 euro (resan oräknad). Läs de fyra annonserna. Svara Oui om annonsen uppfyller kravet och Non om den inte gör det.",
    "lines": [
     {
-     "fr": "A – Chantier Pierres vivantes, en Bourgogne. Du 5 au 26 juillet. Aidez-nous à restaurer les murs d'un château du XIIe siècle et découvrez les techniques des artisans du Moyen Âge. Hébergement sous tente et repas compris. Participation : 190 €. À partir de 17 ans.",
-     "sv": "A – Arbetsläger Pierres vivantes, i Bourgogne. 5–26 juli. Hjälp oss att restaurera murarna till ett slott från 1100-talet och upptäck medeltida hantverkares tekniker. Boende i tält och måltider ingår. Avgift: 190 €. Från 17 år."
+     "fr": "A – Chantier Pierres vivantes, en Bourgogne. Du 5 au 26 juillet. Aidez-nous à restaurer les murs d'un château du XIIe siècle et découvrez les techniques des artisans du Moyen Âge. Encadrés par des tailleurs de pierre et des maçons professionnels, vous apprendrez à préparer le mortier à la chaux et à reconstruire une tour comme autrefois. Aucune expérience n'est nécessaire, mais il faut aimer le travail physique. Le week-end, visites de villages et d'abbayes de la région. Hébergement sous tente et repas compris. Participation : 190 €. À partir de 17 ans.",
+     "sv": "A – Arbetsläger Pierres vivantes, i Bourgogne. 5–26 juli. Hjälp oss att restaurera murarna till ett slott från 1100-talet och upptäck medeltida hantverkares tekniker. Under ledning av yrkesverksamma stenhuggare och murare lär du dig att blanda kalkbruk och att bygga upp ett torn på gammalt sätt. Ingen erfarenhet behövs, men du måste tycka om fysiskt arbete. På helgerna besöker vi byar och kloster i trakten. Boende i tält och måltider ingår. Avgift: 190 €. Från 17 år."
     },
     {
-     "fr": "B – Forêts d'avenir, au Québec. Du 1er au 28 juillet. Plantation d'arbres et entretien des sentiers dans un parc naturel. Logement en chalet et repas compris. Participation : 980 €, assurance comprise. Niveau de français intermédiaire demandé.",
-     "sv": "B – Forêts d'avenir, i Québec. 1–28 juli. Trädplantering och underhåll av vandringsleder i en naturpark. Boende i stuga och måltider ingår. Avgift: 980 €, försäkring ingår. Franska på mellannivå krävs."
+     "fr": "B – Forêts d'avenir, au Québec. Du 1er au 28 juillet. Plantation d'arbres et entretien des sentiers dans un parc naturel. Après plusieurs grands incendies, une partie de la forêt doit être replantée. Vous travaillerez dans une équipe internationale de douze bénévoles, avec des gardes du parc qui vous feront découvrir la faune et la flore locales. Journées de six heures, du lundi au vendredi ; sorties en canot le week-end. Logement en chalet et repas compris. Participation : 980 €, assurance comprise. Niveau de français intermédiaire demandé.",
+     "sv": "B – Forêts d'avenir, i Québec. 1–28 juli. Trädplantering och underhåll av vandringsleder i en naturpark. Efter flera stora skogsbränder måste en del av skogen planteras om. Du arbetar i en internationell grupp på tolv volontärer, tillsammans med parkvakter som visar dig de djur och växter som finns där. Sextimmarsdagar, måndag till fredag; kanotturer på helgerna. Boende i stuga och måltider ingår. Avgift: 980 €, försäkring ingår. Franska på mellannivå krävs."
     },
     {
-     "fr": "C – Rivières propres, dans les Pyrénées. Du 2 au 23 août. Nettoyage des berges, comptage des oiseaux et animations sur la protection de l'eau pour les enfants des villages. Hébergement en gîte, repas préparés ensemble. Participation : 260 €. Réservé aux plus de 18 ans. Envoyez une courte lettre de motivation en français.",
-     "sv": "C – Rivières propres, i Pyrenéerna. 2–23 augusti. Städning av åstränder, fågelräkning och aktiviteter om vattenskydd för barnen i byarna. Boende i ett gîte (hyrhus på landet), vi lagar maten tillsammans. Avgift: 260 €. Endast för dig som är 18 år eller äldre. Skicka ett kort personligt brev på franska."
+     "fr": "C – Rivières propres, dans les Pyrénées. Du 2 au 23 août. Nettoyage des berges, comptage des oiseaux et animations sur la protection de l'eau pour les enfants des villages. Le matin, on ramasse les déchets laissés au bord des rivières ; l'après-midi, on observe les oiseaux avec une ornithologue ou on prépare des jeux pour les enfants. Prévoyez de bonnes chaussures de marche et un sac de couchage. Hébergement en gîte, repas préparés ensemble. Participation : 260 €. Réservé aux plus de 18 ans. Envoyez une courte lettre de motivation en français.",
+     "sv": "C – Rivières propres, i Pyrenéerna. 2–23 augusti. Städning av åstränder, fågelräkning och aktiviteter om vattenskydd för barnen i byarna. På förmiddagen plockar vi skräp som lämnats längs åarna; på eftermiddagen skådar vi fåglar med en ornitolog eller förbereder lekar för barnen. Ta med bra vandringsskor och en sovsäck. Boende i ett gîte (hyrhus på landet), vi lagar maten tillsammans. Avgift: 260 €. Endast för dig som är 18 år eller äldre. Skicka ett kort personligt brev på franska."
     },
     {
-     "fr": "D – Jardins solidaires, à Bruxelles. Du 14 au 21 juillet. Une semaine pour créer un potager partagé avec les habitants d'un quartier populaire. Participation gratuite. Logement non fourni : nous vous aidons à trouver une auberge de jeunesse.",
-     "sv": "D – Jardins solidaires, i Bryssel. 14–21 juli. En vecka för att anlägga en gemensam köksträdgård tillsammans med invånarna i ett arbetarkvarter. Gratis att delta. Boende ingår inte: vi hjälper dig att hitta ett vandrarhem."
+     "fr": "D – Jardins solidaires, à Bruxelles. Du 14 au 21 juillet. Une semaine pour créer un potager partagé avec les habitants d'un quartier populaire. Vous construirez des bacs en bois, vous planterez des légumes et des herbes aromatiques et vous installerez un composteur collectif. Le soir, repas de quartier et ateliers de cuisine avec les familles. Vous pouvez vous inscrire seul ou avec des amis. Participation gratuite. Logement non fourni : nous vous aidons à trouver une auberge de jeunesse. Inscriptions ouvertes jusqu'à la fin juin.",
+     "sv": "D – Jardins solidaires, i Bryssel. 14–21 juli. En vecka för att anlägga en gemensam köksträdgård tillsammans med invånarna i ett arbetarkvarter. Du bygger odlingslådor av trä, planterar grönsaker och kryddväxter och sätter upp en gemensam kompost. På kvällarna blir det grannmiddagar och matlagningskurser med familjerna. Du kan anmäla dig ensam eller med kompisar. Gratis att delta. Boende ingår inte: vi hjälper dig att hitta ett vandrarhem. Anmälan är öppen till slutet av juni."
     }
    ],
    "qs": [
@@ -1675,8 +1715,8 @@
      "sv": "För två år sedan höll Lucas på att sluta spela fiol. ”Min gamla lärare gick i pension, och det fanns ingen kvar som kunde få mig att utvecklas”, minns han. Det var då konservatoriet startade ett program med distanslektioner för elever som bor långt från storstäderna. I dag deltar ett trettiotal elever."
     },
     {
-     "fr": "Le système a ses avantages. Lucas ne perd plus de temps dans les transports, et il peut enregistrer chaque cours pour le réécouter ensuite. « Je remarque des détails que je n'avais pas entendus pendant la leçon », explique-t-il. Sa professeure, Mme Diallo, a dû changer sa façon d'enseigner : « En vrai, je corrige souvent la position de la main en la touchant. À distance, je dois tout expliquer avec des mots, et je filme mes propres mains pour montrer les gestes. »",
-     "sv": "Systemet har sina fördelar. Lucas slösar inte längre tid på resor, och han kan spela in varje lektion och lyssna på den igen efteråt. ”Jag lägger märke till detaljer som jag inte hade hört under lektionen”, förklarar han. Hans lärare, Mme Diallo, har fått ändra sitt sätt att undervisa: ”På riktigt rättar jag ofta handens position genom att röra vid den. På distans måste jag förklara allt med ord, och jag filmar mina egna händer för att visa rörelserna.”"
+     "fr": "Le système a ses avantages. Lucas ne perd plus de temps dans les transports, et il peut enregistrer chaque cours pour le réécouter ensuite. « Je remarque des détails que je n'avais pas entendus pendant la leçon », explique-t-il. Sa professeure, Mme Diallo, a dû changer sa façon d'enseigner : « En présentiel, je corrige souvent la position de la main en la touchant. À distance, je dois tout expliquer avec des mots, et je filme mes propres mains pour montrer les gestes. »",
+     "sv": "Systemet har sina fördelar. Lucas slösar inte längre tid på resor, och han kan spela in varje lektion och lyssna på den igen efteråt. ”Jag lägger märke till detaljer som jag inte hade hört under lektionen”, förklarar han. Hans lärare, Mme Diallo, har fått ändra sitt sätt att undervisa: ”När vi ses på riktigt rättar jag ofta handens position genom att röra vid den. På distans måste jag förklara allt med ord, och jag filmar mina egna händer för att visa rörelserna.”"
     },
     {
      "fr": "Mais la technique a aussi ses limites. Le son passe mal quand la connexion est faible, et le micro de l'ordinateur ne transmet pas toutes les nuances. Surtout, il est presque impossible de jouer à deux en même temps : à cause du petit décalage de la connexion, le professeur et l'élève ne sont jamais parfaitement ensemble. Lucas ne peut donc pas travailler la musique de chambre en ligne.",
@@ -1687,8 +1727,8 @@
      "sv": "Därför ingår det också en lördag i månaden på konservatoriet. Den dagen tar Lucas bussen klockan sex på morgonen, har en lektion på plats och repeterar med ungdomsorkestern. ”Det är tröttsamt, men det är månadens bästa stund. Äntligen får jag spela med andra!”"
     },
     {
-     "fr": "L'an prochain, Lucas espère être admis dans une classe préparatoire aux études supérieures de musique. Il devra alors déménager en ville. Ses parents hésitent encore : à seize ans, vivre seul dans un internat, ce n'est pas rien. Mais pour Lucas, la décision est déjà prise.",
-     "sv": "Nästa år hoppas Lucas komma in på en förberedande klass inför högre musikstudier. Då måste han flytta till stan. Hans föräldrar tvekar fortfarande: att bo ensam på internat när man är sexton är ingen småsak. Men för Lucas är beslutet redan fattat."
+     "fr": "L'an prochain, Lucas espère être admis dans une classe préparatoire aux études supérieures de musique. Il devra alors déménager en ville. Ses parents hésitent encore : vivre seul dans un internat si jeune, ce n'est pas rien. Mais pour Lucas, la décision est déjà prise.",
+     "sv": "Nästa år hoppas Lucas komma in på en förberedande klass inför högre musikstudier. Då måste han flytta till stan. Hans föräldrar tvekar fortfarande: att bo ensam på internat så ung är ingen småsak. Men för Lucas är beslutet redan fattat."
     }
    ],
    "qs": [
@@ -1757,7 +1797,7 @@
       "Ils refusent complètement."
      ],
      "a": 1,
-     "why": "« Ses parents hésitent encore : à seize ans, vivre seul dans un internat, ce n'est pas rien »."
+     "why": "« Ses parents hésitent encore : vivre seul dans un internat si jeune, ce n'est pas rien »."
     }
    ]
   },
@@ -1770,12 +1810,12 @@
    "instr": "Läs artikeln och svara på frågorna. Vrai/Faux-frågorna besvaras utan motivering (provets nya format). Citatet som ger svaret står i förklaringen.",
    "lines": [
     {
-     "fr": "Dans une petite salle du musée de la Résistance de Montaurel, il y a un micro, deux chaises et une tasse de café. En face de Sara, élève de terminale, Paulette, 94 ans, raconte l'hiver 1943. Elle avait alors douze ans, et son père cachait des tracts clandestins sous le plancher de la boulangerie familiale.",
-     "sv": "I ett litet rum på motståndsrörelsens museum i Montaurel finns en mikrofon, två stolar och en kopp kaffe. Mitt emot Sara, som går sista året på gymnasiet, berättar 94-åriga Paulette om vintern 1943. Hon var då tolv år, och hennes pappa gömde hemliga flygblad under golvet i familjens bageri."
+     "fr": "Dans une petite salle du musée de la Résistance de Montaurel, il y a un micro, deux chaises et une tasse de café. En face de Sara, élève de terminale, Paulette, qui a plus de quatre-vingt-dix ans, raconte l'hiver 1943. Elle avait alors douze ans, et son père cachait des tracts clandestins sous le plancher de la boulangerie familiale.",
+     "sv": "I ett litet rum på motståndsrörelsens museum i Montaurel finns en mikrofon, två stolar och en kopp kaffe. Mitt emot Sara, som går sista året på gymnasiet, berättar Paulette, som är över nittio, om vintern 1943. Hon var då tolv år, och hennes pappa gömde hemliga flygblad under golvet i familjens bageri."
     },
     {
-     "fr": "Depuis deux ans, le musée mène un projet original : enregistrer les derniers témoins de la Seconde Guerre mondiale avant qu'il ne soit trop tard. « Les personnes qui ont vécu la guerre ont aujourd'hui plus de quatre-vingt-cinq ans, explique Hugo Lefèvre, le directeur du musée. Dans quelques années, il n'y aura plus personne pour raconter. Nous voulons garder leur voix, pas seulement leurs souvenirs écrits. »",
-     "sv": "I två år har museet drivit ett ovanligt projekt: att spela in de sista vittnena från andra världskriget innan det är för sent. ”De som upplevde kriget är i dag över åttiofem år”, förklarar Hugo Lefèvre, museets chef. ”Om några år finns det ingen kvar som kan berätta. Vi vill bevara deras röster, inte bara deras nedskrivna minnen.”"
+     "fr": "Depuis deux ans, le musée mène un projet original : enregistrer les derniers témoins de la Seconde Guerre mondiale avant qu'il ne soit trop tard. « Les personnes qui ont vécu la guerre ont aujourd'hui plus de quatre-vingts ans, explique Hugo Lefèvre, le directeur du musée. Dans quelques années, il n'y aura plus personne pour raconter. Nous voulons garder leur voix, pas seulement leurs souvenirs écrits. »",
+     "sv": "I två år har museet drivit ett ovanligt projekt: att spela in de sista vittnena från andra världskriget innan det är för sent. ”De som upplevde kriget är i dag över åttio år”, förklarar Hugo Lefèvre, museets chef. ”Om några år finns det ingen kvar som kan berätta. Vi vill bevara deras röster, inte bara deras nedskrivna minnen.”"
     },
     {
      "fr": "Pour réaliser les entretiens, le musée a fait appel aux élèves du lycée voisin. Avant de rencontrer les témoins, les jeunes ont suivi une formation de trois jours avec une historienne : ils ont appris à préparer leurs questions, à écouter sans interrompre et à vérifier les dates et les lieux dans les archives. « On ne peut pas tout croire sans vérifier, dit Sara. La mémoire change avec le temps. Mais un témoignage montre ce qu'on ressentait à l'époque, et ça, les livres d'histoire ne le disent pas. »",
@@ -2096,7 +2136,7 @@
     },
     {
      "fr": "Car les inconvénients existent. Les élèves qui font du sport ou de la musique le soir ont moins de temps pour leurs activités. Théo, élève au conservatoire, a dû abandonner son cours de solfège : « Il commençait à 17 h 30, je ne pouvais plus y arriver à l'heure. » Certains parents, qui déposaient leurs enfants en allant au travail, ont aussi dû changer leurs habitudes.",
-     "sv": "För nackdelar finns det. Elever som idrottar eller spelar musik på kvällen har mindre tid för sina aktiviteter. Théo, som går på musikkonservatoriet, har varit tvungen att sluta med sin musikteorikurs: ”Den började 17.30, jag kunde inte längre komma dit i tid.” Vissa föräldrar, som brukade skjutsa sina barn på väg till jobbet, har också fått ändra sina vanor."
+     "sv": "Nackdelar finns nämligen. Elever som idrottar eller spelar musik på kvällen har mindre tid för sina aktiviteter. Théo, som går på musikkonservatoriet, har varit tvungen att sluta med sin musikteorikurs: ”Den började 17.30, jag kunde inte längre komma dit i tid.” Vissa föräldrar, som brukade skjutsa sina barn på väg till jobbet, har också fått ändra sina vanor."
     },
     {
      "fr": "Malgré ces difficultés, le conseil d'administration du lycée a voté pour continuer l'expérience pendant au moins deux ans. Et plusieurs établissements de la région ont déjà demandé à venir voir comment le lycée s'est organisé.",
@@ -2203,7 +2243,7 @@
     },
     {
      "fr": "Les élus rêvent maintenant de relier le réseau aux villages de la vallée voisine. Mais pour cela, il faudra convaincre beaucoup plus de conducteurs de s'arrêter.",
-     "sv": "Politikerna drömmer nu om att koppla ihop nätverket med byarna i grannalen. Men för att det ska gå måste många fler förare övertygas om att stanna."
+     "sv": "Politikerna drömmer nu om att koppla ihop nätverket med byarna i granndalen. Men för att det ska gå måste många fler förare övertygas om att stanna."
     }
    ],
    "qs": [

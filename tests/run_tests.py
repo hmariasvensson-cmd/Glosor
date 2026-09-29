@@ -302,7 +302,7 @@ appReady().then(async()=>{ try{
     ok("provträning: skrivuppgift bedöms", S.exam.t[t.id].pct===70&&q("#exres").textContent.includes("70 %"), JSON.stringify(S.exam.t[t.id])); }
   { const t=EX().tasks.find(t=>!t.qs&&!t.minWords); examTask(t.id); ok("provträning: taluppgift", !!q("#talk")&&!!q("#xtext")); }
   openExam(); q("#sim").click(); let guard=0;
-  while(EXSIM&&guard++<6){ const t=exTask(EXSIM.ids[EXSIM.i]);
+  while(EXSIM&&guard++<20){ const t=exTask(EXSIM.ids[EXSIM.i]);
     if(t.qs){ t.qs.forEach((x,i)=>q(`.exq[data-q="${i}"] [data-o="${x.a}"]`).click()); q("#exdone").click(); q("#exnext").click(); }
     else { q("#xtext").value="Bonjour, je vous écris parce que je voudrais participer au festival de musique cet été avec mon groupe."; const n=S.log.length; q("#exdone").click(); await until(()=>S.log.length>n); q("#exnext").click(); } }
   ok("provsimulering sparas", S.exam.sims.length===1&&Object.values(S.exam.sims[0].parts).every(v=>v>=50), JSON.stringify(S.exam.sims));
@@ -432,7 +432,7 @@ appReady().then(async()=>{ try{
     ok("rättelser: bedömning utan poäng sparas inte som null %", JSON.stringify(exState().t[t.id]||null)===before&&!q("#app").textContent.includes("null"), JSON.stringify(exState().t[t.id]));
     SAMPLE=keep; openExam(); ok("rättelser: provlistan visar inte null", !q("#app").textContent.includes("null")); }
   { openExam(); q("#sim").click(); let g=0;
-    while(EXSIM&&g++<6){ const t=exTask(EXSIM.ids[EXSIM.i]);
+    while(EXSIM&&g++<20){ const t=exTask(EXSIM.ids[EXSIM.i]);
       if(t.qs){ t.qs.forEach((x,i)=>q(`.exq[data-q="${i}"] [data-o="${x.a}"]`).click()); q("#exdone").click(); q("#exnext").click(); } else q("#exnext").click(); }
     const txt=q("#app").textContent;
     ok("rättelser: simulering utan skrivdel säger inte att alla delar är godkända", txt.includes("blev inte bedömd")&&!txt.includes("Alla delar över")&&!txt.includes("null"), txt.slice(0,300)); }
@@ -1230,12 +1230,231 @@ appReady().then(async()=>{ try{
 </script>"""
 
 
+# ---------------------------------------------------------------------------------------------------------
+# Provsimuleringen som hela provet (src/kinds/70-exam.js, backlogg P2): en uppgift per övning/Teil i läsa, lyssna
+# och skriva, klockan går för hela delen med provets tid, delresultat av alla frågor i delen, simulering av en
+# enda del, och gamla simuleringar (utan tasks) visas som förut. Alla kurser med provträning. Körs på en egen sida.
+# ---------------------------------------------------------------------------------------------------------
+SCENARIO_EXAMSIM = r"""<script>
+const out=[]; const q=s=>document.querySelector(s);
+const ok=(name,cond,info="")=>out.push((cond?"OK   ":"FEL  ")+name+(info?"  ("+info+")":""));
+const crit={kriterier:[{namn:"A",poang:4},{namn:"B",poang:4},{namn:"C",poang:4},{namn:"D",poang:4}],helhet:"Bra."};
+appReady().then(async()=>{ try{
+  const keep=SAMPLE; SAMPLE={json:async()=>JSON.parse(JSON.stringify(crit))};
+  for(const c of Object.keys(LANGUAGES)){ useLang(c); await until(()=>L.code===c&&L.base&&!sess,5000);
+    if(!hasExam()) continue;
+    const e=EX(), want=[]; e.tasks.forEach(t=>{ if(exKind(t)!=="speak"&&!want.includes(t.part+"|"+t.teil)) want.push(t.part+"|"+t.teil); });
+    S.exam={t:{},sims:[{d:Date.now()-86400000,parts:{[e.parts[0].id]:40}}]}; delete S.drafts; delete S.fb;
+    openExam(); ok(c+": gammal simulering visas", q("#app").textContent.includes("Tidigare simuleringar")&&!/undefined|null|NaN/.test(q("#app").textContent));
+    ok(c+": knappen säger hela provet", q("#sim").textContent.includes("hela provet")&&document.querySelectorAll("[data-simp]").length===e.parts.filter(p=>simPart(p.id)).length);
+    q("#sim").click();
+    const got=EXSIM.ids.map(id=>{const t=exTask(id); return t.part+"|"+t.teil;});
+    ok(c+": en uppgift per övning/Teil", JSON.stringify(got)===JSON.stringify(want), got.join(", "));
+    ok(c+": ingen taluppgift", EXSIM.ids.every(id=>exKind(exTask(id))!=="speak"));
+    let g=0, sameEnd=true, labels=true;
+    while(EXSIM&&g++<30){ const t=exTask(EXSIM.ids[EXSIM.i]), p=exPart(t.part), end=EXSIM.ends[t.part];
+      labels=labels&&q("#exclock").textContent.includes(p.sv)&&q("#app").textContent.includes("uppgift "+(EXSIM.i+1)+" av "+EXSIM.ids.length);
+      if(EXSIM.i>0&&exTask(EXSIM.ids[EXSIM.i-1]).part===t.part) sameEnd=sameEnd&&end!=null;
+      else sameEnd=sameEnd&&Math.abs(end-Date.now()-p.time*60000)<5000;
+      if(t.qs){ t.qs.forEach((x,i)=>q(`.exq[data-q="${i}"] [data-o="${i===0?(x.a+1)%x.opts.length:x.a}"]`).click()); q("#exdone").click(); q("#exnext").click(); }
+      else { q("#xtext").value="Ein zwei drei vier fünf sechs sieben acht neun zehn elf zwölf dreizehn vierzehn fünfzehn sechzehn."; q("#exdone").click(); await until(()=>(S.exam.t[t.id]||{}).pct!=null); q("#exnext").click(); } }
+    ok(c+": klockan gäller hela delen med provets tid", sameEnd&&labels);
+    const s=S.exam.sims[S.exam.sims.length-1], parts=[...new Set(want.map(x=>x.split("|")[0]))];
+    ok(c+": simuleringen sparas med alla delar och uppgifter", S.exam.sims.length===2&&JSON.stringify(Object.keys(s.parts))===JSON.stringify(parts)&&Object.keys(s.tasks).length===want.length, JSON.stringify(s));
+    // Läsa/lyssna: ett fel per uppgift, delens resultat = rätt av alla frågor i delen
+    const mc=parts.filter(p=>e.tasks.some(t=>t.part===p&&t.qs)).every(p=>{ const ts=Object.keys(s.tasks).map(exTask).filter(t=>t.part===p);
+      const n=ts.reduce((a,t)=>a+t.qs.length,0); return s.parts[p]===exPct(n-ts.length,n); });
+    ok(c+": delresultat av alla frågor i delen", mc, JSON.stringify(s.parts));
+    ok(c+": skrivdelen bedömd", parts.filter(p=>e.tasks.some(t=>t.part===p&&t.minWords)).every(p=>s.parts[p]===80), JSON.stringify(s.parts));
+    ok(c+": resultatsidan", q("#app").textContent.includes("Resultat av simuleringen")&&!/undefined|null|NaN/.test(q("#app").textContent));
+    // En enda del
+    openExam(); const p0=e.parts.find(p=>simPart(p.id)); q(`[data-simp="${p0.id}"]`).click();
+    ok(c+": simulering av en del", EXSIM&&EXSIM.ids.every(id=>exTask(id).part===p0.id)&&EXSIM.ids.length===want.filter(x=>x.startsWith(p0.id+"|")).length);
+    q("#quit").click(); ok(c+": avbruten simulering sparas inte", !EXSIM&&S.exam.sims.length===2);
+  }
+  SAMPLE=keep;
+ }catch(e){ ok("undantag", false, e.message+" "+(e.stack||"").split("\n")[1]); }
+ ok("inga JavaScript-fel", !__err.length, __err.join(" ; "));
+ document.body.insertAdjacentHTML("beforeend","<pre id=out>"+out.join("\n").replace(/</g,"&lt;")+"</pre>");
+});
+</script>"""
+
+
+# ---------------------------------------------------------------------------------------------------------
+# Buggjakt 2026-09-29 (app.js och src/kinds): ett regressionstest per rättad bugg.
+# ---------------------------------------------------------------------------------------------------------
+SCENARIO_BUGHUNT = r"""<script>
+const out=[]; const q=s=>document.querySelector(s);
+const ok=(name,cond,info="")=>out.push((cond?"OK   ":"FEL  ")+name+(info?"  ("+info+")":""));
+const key=k=>document.body.dispatchEvent(new KeyboardEvent("keydown",{key:k,bubbles:true,cancelable:true}));
+appReady().then(async()=>{ try{
+  // 1. Översätt meningar (självbedömning): Enter i den låsta textrutan hoppade över frågan utan att den räknades
+  startTrans(); const c0=sess.cur, d0=sess.done;
+  q("#ans").value="xyz qqq zzz"; q("#submit").click();
+  ok("självbedömning: Fel/Nästan/Rätt visas", !!q("[data-gr]"));
+  q("#f").dispatchEvent(new Event("submit",{cancelable:true}));
+  ok("självbedömning: Enter hoppar inte över frågan", sess&&sess.cur===c0&&sess.done===d0&&!!q("[data-gr]"));
+  ok("självbedömning: textrutan släpper fokus så att siffrorna fungerar", document.activeElement!==q("#ans"));
+  key("3");
+  ok("självbedömning: 3 = Rätt räknas", sess&&sess.firstTry[c0.id]===true&&sess.done===d0+1, JSON.stringify(sess&&sess.firstTry));
+  q("#submit").click(); ok("självbedömning: Nästa går vidare efteråt", sess&&sess.cur!==c0);
+  pauseSession();
+  // 2. Avbryt i ordföljd och skugga sparade inte rundan (quitSession i stället för pauseSession)
+  startOrder(); ok("ordföljd: rundan startar", !!q("#tiles")); q("#quit").click();
+  ok("ordföljd: Avbryt sparar rundan", !!(S.runs&&S.runs.order), JSON.stringify(Object.keys(S.runs||{})));
+  startShadow(); ok("skugga: rundan startar", !!q("[data-sh]")); q("#quit").click();
+  ok("skugga: Avbryt sparar rundan", !!(S.runs&&S.runs.shadow), JSON.stringify(Object.keys(S.runs||{})));
+  // 3. Lyssna först: mellanslag och Enter visar ordet
+  S.listenFirst=true; startSession([WORDS[0]],[]); ok("lyssna först: ordet är dolt", !!q("#show")&&!q("#next"));
+  key(" "); ok("lyssna först: mellanslag visar ordet", !!q("#next"));
+  sess.i=0; sess.shown={}; renderLearn(); key("Enter"); ok("lyssna först: Enter visar ordet", !!q("#next"));
+  S.listenFirst=false; pauseSession();
+  // 4. Tom runda (t.ex. diktamen utan meningar): vänligt meddelande i stället för "0/0 klar"
+  const n0=S.log.length; beginQuiz("dict",[],{againFn:["dict"],label:"Diktamen"});
+  ok("tom runda: meddelande, ingen 0/0", !!q("#empty")&&!q("#app").textContent.includes("0/0")&&!sess&&S.log.length===n0);
+  q("#quit").click(); ok("tom runda: Tillbaka till startsidan", !!q("#src"));
+  // 5. Gamla molndokument {state, t} utan t: lägets egen t används
+  ok("molnet: t för gamla dokument", docT({state:{t:5}})===5&&docT({t:7,state:{t:5}})===7&&docT({parts:{},t:9,state:{t:1}})===9);
+  // 6. Molnet i trasigt läge: en bit har en annan rev än huvuddokumentet (en enhet skrev biten men inte huvuddokumentet)
+  { const K="data/users/u_test/"+L.storageKey; await appReady();
+    const h=JSON.parse(JSON.stringify(__remote[K])), wn=Object.keys(h.parts).find(n=>/^w\d+$/.test(n));
+    const localWords=Object.keys(S.w).length, lp=S.pass;
+    h.head.pass=lp+10; h.score[0]=lp+10; h.t=Date.now()+1000; h.parts[wn]="annan-rev"; __remote[K]=h;
+    for(let i=0;i<3;i++) await cloudAttach();
+    await until(()=>{const d=__remote[K]; return d&&d.parts&&__remote[K+"~"+wn]&&__remote[K+"~"+wn].rev===d.parts[wn];},8000);
+    const d=__remote[K];
+    ok("trasigt moln: läget lagas och tas emot efter tre försök", S.pass===lp+10&&CLOUD.ready, S.pass+" "+lp);
+    ok("trasigt moln: inga ord försvinner", Object.keys(S.w).length>=localWords, Object.keys(S.w).length+" "+localWords);
+    ok("trasigt moln: alla bitar skrivs om och stämmer igen", !!d&&d.parts[wn]!=="annan-rev"&&Object.keys(d.parts).every(n=>__remote[K+"~"+n]&&__remote[K+"~"+n].rev===d.parts[n])&&d.head.pass===lp+10); }
+ }catch(e){ ok("undantag", false, e.message+" "+(e.stack||"").split("\n")[1]); }
+ ok("inga JavaScript-fel", !__err.length, __err.join(" ; "));
+ document.body.insertAdjacentHTML("beforeend","<pre id=out>"+out.join("\n").replace(/</g,"&lt;")+"</pre>");
+});
+</script>"""
+
+
+# ---------------------------------------------------------------------------------------------------------
+# Byggkontroller (arkitekturgranskning 2026-09-29): bygget går igenom utan den privata bokmappen, och stoppar när en
+# grammatikfråga pekar på ett område eller en regel som inte finns i grammar.json, när en regel i regler.json saknar
+# område, när inherit nämner ett fält som föräldern inte har och när nextCourse pekar på en kurs som inte finns.
+# ---------------------------------------------------------------------------------------------------------
+def test_build_checks():
+    import json, shutil
+    out = []
+    ok = lambda name, cond, info="": out.append(("OK   " if cond else "FEL  ") + name + (f"  ({info})" if info else ""))
+    with tempfile.TemporaryDirectory() as tmp:
+        t = pathlib.Path(tmp) / "g"
+        shutil.copytree(ROOT, t, ignore=shutil.ignore_patterns(".git", "dist", "book", "*.jpg", "*.jpeg", "*.png", "*.heic", "*.pdf"))
+        build = lambda: subprocess.run([sys.executable, str(t / "build.py")], capture_output=True, text=True)
+        r = build()
+        ok("bygge: går igenom utan bokmappen", r.returncode == 0, r.stdout[-300:] if r.returncode else "")
+
+        def broken(path, change, name, want):
+            orig = path.read_text(encoding="utf-8")
+            path.write_text(change(orig), encoding="utf-8")
+            r = build()
+            path.write_text(orig, encoding="utf-8")
+            good = r.returncode != 0 and want in r.stdout
+            ok(name, good, "" if good else r.stdout[-200:])
+
+        ga = t / "languages" / "de" / "content" / "grammar-a.json"
+        def topic(s):
+            d = json.loads(s); d[0]["topic"] = "finnsinte"; return json.dumps(d, ensure_ascii=False)
+        def rule(s):
+            d = json.loads(s); d[0]["rule"] = "finnsinte"; return json.dumps(d, ensure_ascii=False)
+        broken(ga, topic, "bygge: grammatikfråga med okänt område stoppar", "topic 'finnsinte'")
+        broken(ga, rule, "bygge: grammatikfråga med okänd regel stoppar", "rule 'finnsinte'")
+        rg = t / "languages" / "de" / "content" / "regler.json"
+        def regel(s):
+            d = json.loads(s); d["finnsinte"] = next(iter(d.values())); return json.dumps(d, ensure_ascii=False)
+        broken(rg, regel, "bygge: regel utan område i grammar.json stoppar", "'finnsinte' är inget område")
+        lj = t / "languages" / "de4" / "lang.js"
+        broken(lj, lambda s: s.replace('inherit: ["connectors"', 'inherit: ["conectors"', 1), "arv: inherit med ett fält som föräldern saknar stoppar", "inherit 'conectors'")
+        broken(lj, lambda s: s.replace('nextCourse: "de"', 'nextCourse: "xx"', 1), "bygge: nextCourse till en kurs som inte finns stoppar", "nextCourse 'xx'")
+        ok("bygge: går igenom igen", build().returncode == 0)
+    return "\n".join(out)
+
+
+# ---------------------------------------------------------------------------------------------------------
+# Studieplanen (src/kinds/82-plan.js, languages/<kod>/plan.json, backlogg P2: Studieplan för självstudier): Tyska 5 har
+# en plan med veckor, varje uppgift i planen finns och går att öppna, aktuell vecka räknas från startdatumet (S.plan.start,
+# nytt fält), framsteg per vecka räknas ur S.w, gamla fält i S rörs inte, och kurser utan plan visar inget. Egen sida.
+# ---------------------------------------------------------------------------------------------------------
+SCENARIO_PLAN = r"""<script>
+const out=[]; const q=s=>document.querySelector(s);
+const ok=(name,cond,info="")=>out.push((cond?"OK   ":"FEL  ")+name+(info?"  ("+info+")":""));
+const noScroll=()=>[400,320].every(w=>{ document.body.style.width=w+"px"; const p=q("#planp");
+  const r=p.getBoundingClientRect(), bad=[...p.querySelectorAll("*")].filter(e=>{const b=e.getBoundingClientRect(); return b.width&&(b.right>r.right+.5||b.left<r.left-.5);});
+  const okw=document.documentElement.scrollWidth<=window.innerWidth&&!bad.length; document.body.style.width=""; return okw; });
+appReady().then(async()=>{ try{
+  useLang("de"); await until(()=>L.code==="de"&&L.base&&!sess,5000);
+  delete S.plan; renderStart();
+  const P=L.plan;
+  ok("plan: Tyska 5 har en plan på 18–20 veckor", !!P&&P.weeks.length>=18&&P.weeks.length<=20, P&&P.weeks.length);
+  ok("plan: typen finns i registret", !!KINDS.plan&&KINDS.plan.name==="Studieplan"&&typeof KINDS.plan.open==="function");
+  ok("plan: kort på startsidan utan startdatum", !!q("#plancard")&&q("#plancard").textContent.includes("Studieplan")&&!/vecka \d+ av/.test(q("#plancard").textContent));
+  { const bad=[]; P.weeks.forEach((w,i)=>(w.do||[]).forEach(x=>{ const it=planItem(x); if(!it||typeof it.go!=="function"||!it.title) bad.push(w.id+":"+x.k+":"+(x.id||"")); }));
+    ok("plan: varje uppgift i planen finns i kursen", !bad.length, bad.join(", ")); }
+  { const secs=new Set(P.weeks.flatMap(w=>(w.words||[]).map(r=>r.sec))), main=L.base.sections.filter(s=>/^d/.test(s.id)).map(s=>s.id);
+    const all=P.weeks.flatMap(w=>planWords(w).map(x=>x.id)), uniq=new Set(all);
+    const inMain=L.base.words.filter(w=>main.includes(w.sec)).length;
+    ok("plan: alla ord i kursens avsnitt (utom musikteorin) finns i någon vecka, en gång", main.every(s=>secs.has(s))&&all.length===uniq.size&&uniq.size===inMain, uniq.size+" / "+inMain+" / "+all.length);
+    const topics=new Set(P.weeks.flatMap(w=>w.grammar||[]));
+    ok("plan: alla grammatikområden finns i planen", GR().topics.every(t=>topics.has(t.id)), GR().topics.filter(t=>!topics.has(t.id)).map(t=>t.id).join()); }
+  // Vecka 3 i dag
+  const before=JSON.stringify(Object.assign({},S,{plan:undefined,t:undefined})), keyBefore=L.storageKey;
+  q("#plancard").click();
+  ok("plan: sidan öppnas från kortet", !!q("#planp")&&q("#planp").querySelectorAll(".planwk").length===P.weeks.length);
+  const sel=q("#plan-wk"); sel.value="2"; sel.onchange({target:sel});
+  ok("plan: vecka 3 vald ger startdatum och aktuell vecka", planWeekIdx()===2&&/^\d{4}-\d\d-\d\d$/.test(S.plan.start)&&planStart().getDay()===1, JSON.stringify(S.plan));
+  ok("plan: aktuell vecka är öppen och markerad", q(".planwk[open]")&&q(".planwk[open]").dataset.wk==="2"&&q(".planwk[open]").textContent.includes("denna vecka"));
+  ok("plan: sparat i localStorage", JSON.parse(localStorage.getItem(L.storageKey)).plan.start===S.plan.start);
+  ok("plan: inget annat i S ändras", JSON.stringify(Object.assign({},S,{plan:undefined,t:undefined}))===before&&L.storageKey===keyBefore);
+  // Framsteg: veckans ord
+  const w3=planWords(P.weeks[2]); const saved=w3.slice(0,5).map(w=>[w.id,S.w[w.id]]);
+  w3.slice(0,4).forEach(w=>S.w[w.id]={s:5,due:9e9}); S.w[w3[4].id]={s:1,due:1};
+  const pr=planProgress(P.weeks[2]);
+  ok("plan: framsteg per vecka räknas ur S.w", pr.known>=4&&pr.started>=5&&pr.n===w3.length, JSON.stringify(pr));
+  renderStart(); ok("plan: kortet visar vecka och ord", q("#plancard").textContent.includes("vecka 3 av "+P.weeks.length)&&q("#plancard").textContent.includes(pr.known+" av "+pr.n+" ord"), q("#plancard").textContent.trim().slice(0,120));
+  saved.forEach(([id,x])=>{ if(x) S.w[id]=x; else delete S.w[id]; });
+  // Knapparna
+  q("#plancard").click();
+  const src=S.src; q('.planwk[open] [data-plansrc]').click();
+  ok("plan: Ta nya ord från veckans avsnitt sätter S.src", S.src===P.weeks[2].words[0].sec, S.src); S.src=src; save();
+  q("#plancard").click(); q('.planwk[open] [data-planitem]').click();
+  ok("plan: en uppgift öppnas från planen", !q("#planp"));
+  renderStart(); q("#plancard").click(); q('.planwk[open] [data-plangram]').click();
+  ok("plan: grammatiken öppnas från planen", !!sess&&!!sess.cur); pauseSession&&pauseSession(); S.runs={}; delete S.run;
+  // Startdatum i framtiden och efter sista veckan
+  renderStart(); q("#plancard").click(); const d=q("#plan-start"), f=new Date(Date.now()+10*864e5);
+  d.value=planIso(f); d.onchange({target:d});
+  ok("plan: startdatum i framtiden", planWeekIdx()===-1&&q("#plan-status").textContent.includes("börjar"), q("#plan-status").textContent);
+  d.value="2020-01-06"; q("#plan-start").onchange({target:{value:"2020-01-06"}});
+  ok("plan: efter sista veckan", planWeekIdx()===P.weeks.length&&q("#plan-status").textContent.includes("Alla veckor"));
+  ok("plan: ingen horisontell scroll (400 och 320 px)", noScroll());
+  q("#plan-start").onchange({target:{value:""}}); ok("plan: startdatumet kan tas bort", planWeekIdx()===null&&S.plan&&!S.plan.start);
+  // Gammalt läge utan plan, och kurs utan plan
+  delete S.plan; renderStart(); ok("plan: läge utan S.plan fungerar", !!q("#plancard")&&planWeekIdx()===null);
+  useLang("fr"); await until(()=>L.code==="fr"&&L.base&&!sess,5000); renderStart();
+  ok("plan: kurs utan plan visar inget kort", !q("#plancard")&&!hasPlan());
+  KINDS.plan.open(); ok("plan: öppna utan plan går till startsidan", !q("#planp"));
+ }catch(e){ ok("undantag", false, e.message+" "+(e.stack||"").split("\n")[1]); }
+ ok("inga JavaScript-fel", !__err.length, __err.join(" ; "));
+ document.body.insertAdjacentHTML("beforeend","<pre id=out>"+out.join("\n").replace(/</g,"&lt;")+"</pre>");
+});
+</script>"""
+
+
 def main():
     text = run(SCENARIO) + "\n" + run(SCENARIO_DE) + "\n" + run(SCENARIO_FIXES) + "\n" + run(SCENARIO_SYNC, 30000) + "\n" + run_http(SCENARIO_HTTP)
     text += "\n" + run(SCENARIO_ARCH, 30000) + "\n" + test_build_locks()   # arkitektur, del 6
+    text += "\n" + test_build_checks()   # byggkontroller, arkitekturgranskning 2026-09-29
     text += "\n" + run(SCENARIO_KINDS, 60000)   # övningstyperna (src/kinds), alla kurser, två enheter, del 6
     text += "\n" + run(SCENARIO_IPA, 30000)   # transkription och satsanalys (fru)
     text += "\n" + run(SCENARIO_LEVEL, 30000)   # nivåmätaren "Var ligger jag?" (P2: Nivåmätare)
+    text += "\n" + run(SCENARIO_PLAN, 30000)   # studieplanen (P2: Studieplan för självstudier)
+    text += "\n" + run(SCENARIO_EXAMSIM, 60000)   # provsimuleringen som hela provet (P2)
+    text += "\n" + run(SCENARIO_BUGHUNT, 30000)   # buggjakten 2026-09-29
     print(text)
     sys.exit(1 if "FEL  " in text else 0)
 

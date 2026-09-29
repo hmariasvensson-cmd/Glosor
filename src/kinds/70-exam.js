@@ -1,7 +1,10 @@
 /* ---------- Provträning: uppgifter i språkprovets format (Goethe B2, DELF B1) ----------
    Uppgifterna ligger i languages/<kod>/content/exam.json. Läs- och höruppgifter rättas direkt, skriv- och
    taluppgifter bedöms av Claude (sample) efter provets kriterier. Resultaten sparas i S.exam:
-   {t: {<uppgift>: {pct, best, n, last}}, sims: [{d, parts: {<del>: pct}}]}. */
+   {t: {<uppgift>: {pct, best, n, last}}, sims: [{d, parts: {<del>: pct}, tasks: {<uppgift>: pct}, min}]}
+   (tasks och min finns i simuleringar från och med hela-provet-simuleringen, september 2026).
+   Provsimuleringen tar en uppgift per övning/Teil (fältet teil) i läsa, lyssna och skriva, och klockan går
+   för hela delen med provets tid (parts[].time), som på provet. */
 const EX=()=>C().exam;
 const hasExam=()=>!!(EX()&&(EX().tasks||[]).length);
 const exTask=id=>(EX().tasks||[]).find(t=>t.id===id);
@@ -10,12 +13,15 @@ const exKind=t=>t.qs?"mc":t.minWords?"write":"speak";
 // Ordgränsen: "minst" (DELF) eller "cirka" när provet anger ungefärligt antal ord (Goethe: approxWords i exam.json)
 const exWords=()=>EX().approxWords?"cirka":"minst";
 const exState=()=>(S.exam=S.exam||{t:{},sims:[]});
-let EXSIM=null;      // pågående provsimulering: {ids, i, res: {<del>: pct}, start}
+let EXSIM=null;      // pågående provsimulering: {ids, i, res: {<uppgift>: {pct, r, n}}, ends: {<del>: tid}, start}
 let EXCLOCK=null;
 
 function exClock(min,label){
   clearInterval(EXCLOCK);
-  const end=Date.now()+min*60000;
+  let end=Date.now()+min*60000;
+  // I simuleringen gäller delens tid för alla övningar i delen: klockan fortsätter från förra övningen
+  if(EXSIM){ const p=exPart(exTask(EXSIM.ids[EXSIM.i]).part);
+    end=EXSIM.ends[p.id]=EXSIM.ends[p.id]||Date.now()+(+p.time||min)*60000; label=`${p.sv}, tid kvar`; }
   const tick=()=>{ const el=$("#exclock"); if(!el){ clearInterval(EXCLOCK); return; }
     const s=Math.round((end-Date.now())/1000), a=Math.abs(s);
     el.textContent=`${label} ${s<0?"−":""}${Math.floor(a/60)}:${String(a%60).padStart(2,"0")}`;
@@ -41,7 +47,9 @@ function openExam(){
   app.innerHTML=`<section class="panel"><span class="tab">Prov</span><h2>Provträning: ${esc(e.name)}</h2>
     <p class="plan">Uppgifter i samma format och med samma tider som på provet. Läsa och lyssna rättas direkt. Skriva och tala bedöms av Claude efter provets kriterier. Gränsen för godkänt är <b>${e.pass} %</b>.</p>
     ${e.note?`<p class="foot">${esc(e.note)}</p>`:""}
-    <button class="btn" id="sim">Provsimulering: en uppgift i varje del, med klocka</button>
+    <button class="btn" id="sim">Provsimulering: hela provet (${simMinutes()} minuter)</button>
+    <p class="foot">En uppgift för varje övning i ${e.parts.filter(p=>simPart(p.id)).map(p=>esc(p.sv.toLowerCase())).join(", ").replace(/, ([^,]*)$/," och $1")}, med provets tid för varje del. Den muntliga delen ingår inte. Vill du bara göra en del:</p>
+    <div class="games">${e.parts.filter(p=>simPart(p.id)).map(p=>`<button class="btn ghost" data-simp="${esc(p.id)}">${esc(p.sv)} (${p.time} min)</button>`).join("")}</div>
     ${sims.length?`<div class="exgroup"><span class="label">Tidigare simuleringar</span><table class="tbl"><tr><th>Datum</th>${e.parts.filter(p=>simPart(p.id)).map(p=>`<th>${esc(p.sv)}</th>`).join("")}</tr>
       ${sims.map(s=>`<tr><td>${new Date(s.d).toLocaleDateString("sv-SE")}</td>${e.parts.filter(p=>simPart(p.id)).map(p=>`<td>${passTag(s.parts[p.id])}</td>`).join("")}</tr>`).join("")}</table></div>`:""}
   </section>
@@ -49,34 +57,64 @@ function openExam(){
     <p class="plan">${esc(p.sv)} · ${p.time} minuter på provet</p><div class="games">${ts.map(row).join("")}</div></section>`:"";}).join("")}
   <button class="quit" id="quit">Tillbaka</button>`;
   app.querySelectorAll("[data-xt]").forEach(b=>b.onclick=()=>examTask(b.dataset.xt));
-  $("#sim").onclick=startExamSim; $("#quit").onclick=renderStart;
+  $("#sim").onclick=()=>startExamSim(); $("#quit").onclick=renderStart;
+  app.querySelectorAll("[data-simp]").forEach(b=>b.onclick=()=>startExamSim([b.dataset.simp]));
   window.scrollTo(0,0);
 }
 
 // Delar som ingår i simuleringen: läsa, lyssna och skriva (tala kräver en samtalspartner)
 const simPart=pid=>EX().tasks.some(t=>t.part===pid&&exKind(t)!=="speak");
-function startExamSim(){
+// Övningarna (teil: Exercice 1–3, Teil 1–5, Aufgabe 1–3) i en del, i samma ordning som i exam.json
+const simTeile=pid=>[...new Set(EX().tasks.filter(t=>t.part===pid&&exKind(t)!=="speak").map(t=>t.teil||""))];
+// Hela provet (parts utelämnat) eller bara vissa delar: en uppgift per övning/Teil, helst en som eleven inte har gjort
+function simPlan(parts){
   const st=exState();
-  const ids=EX().parts.filter(p=>simPart(p.id)).map(p=>{
-    const ts=shuffle(EX().tasks.filter(t=>t.part===p.id&&exKind(t)!=="speak"));
-    return (ts.find(t=>!st.t[t.id])||ts[0]).id; });
-  EXSIM={ids,i:0,res:{},start:Date.now()};
+  return EX().parts.filter(p=>simPart(p.id)&&(!parts||parts.includes(p.id))).flatMap(p=>simTeile(p.id).map(te=>{
+    const ts=shuffle(EX().tasks.filter(t=>t.part===p.id&&(t.teil||"")===te&&exKind(t)!=="speak"));
+    return (ts.find(t=>!st.t[t.id])||ts[0]).id; }));
+}
+const simMinutes=parts=>EX().parts.filter(p=>simPart(p.id)&&(!parts||parts.includes(p.id))).reduce((a,p)=>a+(+p.time||0),0);
+function startExamSim(parts){
+  const ids=simPlan(parts);
+  if(!ids.length) return;
+  // res: {<uppgift>: {pct, r, n}}; ends: {<del>: tidpunkt då delens tid tar slut}
+  EXSIM={ids,i:0,res:{},ends:{},start:Date.now()};
   examTask(ids[0]);
 }
-function simNext(pct){
-  const t=exTask(EXSIM.ids[EXSIM.i]); EXSIM.res[t.part]=pct; EXSIM.i++;
+// Delens resultat: läsa och lyssna = andel rätt av alla frågor i delen (som poängen på provet), skriva = medel av
+// uppgifterna. En uppgift utan bedömning gör att delen saknar resultat (null).
+function simPartRes(pid){
+  const rs=EXSIM.ids.map(exTask).filter(t=>t.part===pid).map(t=>EXSIM.res[t.id]||{pct:null});
+  if(!rs.length||rs.some(x=>x.pct==null)) return null;
+  if(rs.every(x=>x.n)) return exPct(rs.reduce((a,x)=>a+x.r,0),rs.reduce((a,x)=>a+x.n,0));
+  return Math.round(rs.reduce((a,x)=>a+x.pct,0)/rs.length);
+}
+// Knappen efter en uppgift: nästa övning i samma del, nästa del eller resultatet
+function simNextLabel(){
+  const a=exTask(EXSIM.ids[EXSIM.i]), b=EXSIM.ids[EXSIM.i+1]&&exTask(EXSIM.ids[EXSIM.i+1]);
+  return !b?"Se resultatet":b.part===a.part?"Nästa övning":`Nästa del: ${exPart(b.part).sv}`;
+}
+function simNext(pct,r,n){
+  const t=exTask(EXSIM.ids[EXSIM.i]); EXSIM.res[t.id]={pct:pct==null?null:pct,r:r||0,n:n||0}; EXSIM.i++;
   if(EXSIM.i<EXSIM.ids.length) return examTask(EXSIM.ids[EXSIM.i]);
-  const st=exState(), e=EX(); st.sims=(st.sims||[]).slice(-19); st.sims.push({d:Date.now(),parts:EXSIM.res}); save();
+  clearInterval(EXCLOCK);
+  const e=EX(), pids=[...new Set(EXSIM.ids.map(id=>exTask(id).part))], res={}, tasks={};
+  pids.forEach(p=>res[p]=simPartRes(p));
+  EXSIM.ids.forEach(id=>tasks[id]=EXSIM.res[id]?EXSIM.res[id].pct:null);
+  const st=exState(); st.sims=(st.sims||[]).slice(-19);
+  st.sims.push({d:Date.now(),parts:res,tasks,min:Math.round((Date.now()-EXSIM.start)/60000)}); save();
   // Delar utan resultat (skrivdelen utan bedömning från Claude) räknas inte som godkända eller underkända
-  const vals=Object.values(EXSIM.res).filter(v=>v!=null), ok=vals.length&&vals.every(v=>v>=e.pass);
-  const skipped=Object.entries(EXSIM.res).filter(([,v])=>v==null).map(([p])=>exPart(p).name);
+  const vals=Object.values(res).filter(v=>v!=null), ok=vals.length&&vals.every(v=>v>=e.pass);
+  const skipped=Object.entries(res).filter(([,v])=>v==null).map(([p])=>exPart(p).name);
   const msg=!skipped.length?(ok?`Alla delar över ${e.pass} %. Det hade räckt för godkänt på de här delarna.`:`Gränsen är ${e.pass} % i varje del. Öva mer på delarna under gränsen.`)
     :`${skipped.join(" och ")} blev inte ${skipped.length===1?"bedömd":"bedömda"}, så simuleringen visar inte om du hade klarat provet. `
       +(!vals.length?"":ok?`De bedömda delarna är över ${e.pass} %.`:`Gränsen är ${e.pass} % i varje del. Öva mer på delarna under gränsen.`);
+  const rows=pids.map(p=>`<tr><td><b>${esc(exPart(p).name)}</b></td><td>${passTag(res[p])}</td></tr>`
+    +EXSIM.ids.map(exTask).filter(t=>t.part===p&&t.teil&&simTeile(p).length>1).map(t=>`<tr><td style="padding-left:1.5em">${esc(t.teil)}</td><td>${tasks[t.id]==null?"–":tasks[t.id]+" %"}</td></tr>`).join("")).join("");
   app.innerHTML=`<section class="panel"><span class="tab">Prov</span><h2>Resultat av simuleringen</h2>
-    <table class="tbl"><tr><th>Del</th><th>Resultat</th></tr>${Object.entries(EXSIM.res).map(([p,v])=>`<tr><td>${esc(exPart(p).name)}</td><td>${passTag(v)}</td></tr>`).join("")}</table>
+    <table class="tbl"><tr><th>Del</th><th>Resultat</th></tr>${rows}</table>
     <p class="plan">${msg}</p>
-    <p class="foot">Den muntliga delen ingår inte. Öva den under Tala i provträningen.</p>
+    <p class="foot">Det tog ${Math.max(1,Math.round((Date.now()-EXSIM.start)/60000))} minuter. Den muntliga delen ingår inte. Öva den under Tala i provträningen.</p>
     <button class="btn" id="back">Till provträningen</button></section>`;
   EXSIM=null; $("#back").onclick=openExam; window.scrollTo(0,0);
 }
@@ -86,7 +124,7 @@ function examTask(id){
   ({mc:examMC,write:examWrite,speak:examSpeak})[exKind(t)](t);
   window.scrollTo(0,0);
 }
-const exHead=(t,tab)=>`<span class="tab">${tab}</span><div class="meta"><span class="label">${esc(exPart(t.part).name)}${t.teil?" · "+esc(t.teil):""}${EXSIM?` · del ${EXSIM.i+1} av ${EXSIM.ids.length}`:""}</span><span class="clock" id="exclock"></span></div>
+const exHead=(t,tab)=>`<span class="tab">${tab}</span><div class="meta"><span class="label">${esc(exPart(t.part).name)}${t.teil?" · "+esc(t.teil):""}${EXSIM?` · uppgift ${EXSIM.i+1} av ${EXSIM.ids.length}`:""}</span><span class="clock" id="exclock"></span></div>
   <h2 ${lang()}>${esc(t.title)}</h2>${t.instr?`<p class="plan">${esc(t.instr)}</p>`:""}`;
 const exQuit=()=>`<button class="quit" id="quit">${EXSIM?"Avbryt simuleringen":"Tillbaka"}</button>`;
 const exLines=t=>`<div class="reading">${t.lines.map(l=>`<p class="tl" ${lang()}>${esc(tl(l))}</p><p class="tl-sv" hidden>${esc(l.sv||"")}</p>`).join("")}</div>`;
@@ -120,9 +158,9 @@ function examMC(t){
     $("#exres").innerHTML=`<div class="feedback ${pct>=EX().pass?"ok":"bad"}"><strong>${r} av ${t.qs.length} rätt · ${pct} %</strong>
       <p>${pct>=EX().pass?`Över gränsen för godkänt (${EX().pass} %).`:`Gränsen för godkänt är ${EX().pass} %.`}${listen?" Texten visas nu ovanför. Lyssna igen medan du läser.":""}</p></div>
       <button type="button" class="btn ghost" id="svt">Visa svensk översättning</button>
-      <button class="btn" id="exnext">${EXSIM?"Nästa del":"Till provträningen"}</button>`;
+      <button class="btn" id="exnext">${EXSIM?simNextLabel():"Till provträningen"}</button>`;
     $("#svt").onclick=()=>app.querySelectorAll(".tl-sv").forEach(p=>p.hidden=!p.hidden);
-    $("#exnext").onclick=()=>EXSIM?simNext(pct):openExam();
+    $("#exnext").onclick=()=>EXSIM?simNext(pct,r,t.qs.length):openExam();
   };
   $("#quit").onclick=openExam;
 }
@@ -169,7 +207,7 @@ function examText(t,speak){
     <p class="foot" id="xcount"></p>
     <button class="btn" id="exdone">${speak?"Få kommentarer av Claude":"Lämna in och få bedömning av Claude"}</button><div id="exres">${renderExamFb(S.fb[dk])}</div>
     <details class="more"><summary>Visa ett exempelsvar</summary>${t.model?`<button type="button" class="btn ghost" id="mplay">${PLAY} Lyssna</button>`:""}<p class="ex-t" ${lang()}>${esc(t.model||"")}</p><p class="ex-sv">${esc(t.modelSv||"")}</p></details>
-    ${EXSIM?`<button class="btn ghost" id="exnext">Nästa del</button>`:""}</section>${exQuit()}`;
+    ${EXSIM?`<button class="btn ghost" id="exnext">${simNextLabel()}</button>`:""}</section>${exQuit()}`;
   exClock(speak?(t.prep||t.time):t.time,speak?(t.prep?"Förberedelse":"Taltid"):"Tid kvar");
   if(speak) $("#talk").onclick=()=>exClock(t.time,"Taltid");
   const ta=$("#xtext"); let tm=null; wireAccents(ta);

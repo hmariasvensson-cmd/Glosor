@@ -14,7 +14,9 @@ function pluralOf(noun,mark){
   return mark.startsWith("-")?noun+f:null;
 }
 function genderNouns(){
-  if(L._gNouns) return L._gNouns;
+  // Cachen gäller för den ordlista den byggdes från; rebuildWords (Mina ord) skapar en ny WORDS
+  if(L._gNouns&&L._gWords===WORDS) return L._gNouns;
+  L._gWords=WORDS;
   const arts=L.genderGame||{};
   L._gNouns=WORDS.filter(w=>arts[w.g]).map(w=>{
     const m=w.t.match(/^(\S+) (\p{Lu}\p{L}*)(?: \(([^)]*)\))?$/u); if(!m||m[1]!==arts[w.g]) return null;

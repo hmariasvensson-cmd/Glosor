@@ -155,7 +155,7 @@ function migrateRetired(S){
    Vid start vinner den version som kommit längst (pass, antal loggposter någonsin, antal ord; vid lika den senaste),
    så att en enhet med tomt minne aldrig skriver över framsteg som gjorts på en annan. */
 const CLOUD={db:null,uid:null,user:null,ready:false,busy:false,pending:{},timer:null,unsub:null,known:{},stale:{},deferred:null,
-  dead:false,noWrite:false,initing:false,attaching:false,seq:0,warn:""};
+  dead:false,noWrite:false,initing:false,attaching:false,seq:0,warn:"",bad:{},force:{}};
 const DOC_MAX=256*1024-256, PART_MAX=200*1024, HEAD_MAX=160*1024, W_PER_PART=700;
 // Antal loggposter någonsin. Loggen kapas vid 1 000 (foldLog), så räknaren S.nLog behövs för att jämföra.
 const nLogOf=s=>Math.max(+(s&&s.nLog)||0,(+((s&&s.logOld)||{}).n||0)+(((s&&s.log)||[]).length));
@@ -202,12 +202,13 @@ async function cloudWrite(key,st){
   // Har någon annan enhet sparat sedan sist? Är den längre kommen skriver vi inte över, och vi litar bara på
   // bitarna vi redan har skrivit om huvuddokumentet fortfarande är vårt.
   const cur=await docFor(key).get(), d=cur&&cur.exists?(cur.data()||{}):null;
-  if(d&&(d.parts||d.state)&&remoteWins(d.parts?d.score:score(d.state),d.parts?d.t:d.t,st)) return {skipped:true,snap:cur};
+  // force: vi har just lagat ett molnläge vars bitar inte stämde (cloudBad), då skrivs allt om även om poängen är lika
+  if(!CLOUD.force[key]&&d&&(d.parts||d.state)&&remoteWins(d.parts?d.score:score(d.state),docT(d),st)) return {skipped:true,snap:cur};
   const known=d&&d.parts&&sameParts(d.parts,CLOUD.known[key])?CLOUD.known[key]:null;
   CLOUD.known[key]=null;
   for(const [n,x] of Object.entries(docs)) if(!known||known[n]!==x.rev) await docFor(key+"~"+n).set({rev:x.rev,data:x.data});
   await docFor(key).set(main);
-  CLOUD.known[key]=main.parts;
+  CLOUD.known[key]=main.parts; delete CLOUD.force[key];
   await cloudPrune(key,main.parts,[d&&d.parts,known,CLOUD.stale[key]]);
   return {written:true};
 }
@@ -248,10 +249,38 @@ async function cloudRead(key,snap0){
     const names=Object.keys(d.parts), got=await Promise.all(names.map(n=>docFor(key+"~"+n).get()));
     if(got.every((g,i)=>g&&g.exists&&(g.data()||{}).rev===d.parts[names[i]]))
       return {state:cloudJoin(d,names,got.map(g=>g.data().data)),t:d.t||0,parts:d.parts};
-    last={bad:true,score:d.score,t:d.t||0};
+    last={bad:true,score:d.score,t:d.t||0,d,names,got};
     await sleep(300+Math.random()*500);
   }
   return last;
+}
+// Tid för ett molndokument; gamla {state, t} utan t använder lägets egen t (som cloudRead)
+const docT=d=>d.parts?(d.t||0):(d.t||(d.state&&d.state.t)||0);
+/* Molnläget går inte att läsa helt (en bit har en annan rev än huvuddokumentet). Oftast sparar någon just nu, men
+   har en enhet skrivit en bit utan att hinna skriva huvuddokumentet stämmer det aldrig. Efter tre försök lagas läget:
+   bitarna som stämmer används som de är, och i de andra slås molnets data ihop med det lokala (per ord den version som
+   har flest svar, den längsta loggen, lokala fält som saknas), så att ingen statistik går förlorad. Sedan skrivs allt om. */
+const BAD_TRIES=3;
+function cloudSalvage(r,local){
+  const nW=r.names.filter(n=>/^w\d+$/.test(n)).length||1, answers=x=>x?["mcR","mcW","tyR","tyW","clR","clW"].reduce((a,k)=>a+(+x[k]||0),0):-1;
+  const datas=r.names.map((n,i)=>{ const g=r.got[i], gd=g&&g.exists?(g.data()||{}):{}, x=gd.data;
+    if(gd.rev===r.d.parts[n]) return x;
+    if(/^w\d+$/.test(n)){ const out={...(x&&typeof x==="object"?x:{})}, b=+n.slice(1);
+      Object.entries((local&&local.w)||{}).forEach(([id,y])=>{ if(bucketOf(id)%nW===b&&answers(y)>answers(out[id])) out[id]=y; });
+      return out; }
+    if(/^log\d*$/.test(n)) return n==="log"&&local&&Array.isArray(local.log)&&local.log.length>(Array.isArray(x)?x.length:0)?local.log:x;
+    if(n.startsWith("f.")) return x!==undefined?x:local&&local[n.slice(2)];
+    return x; });
+  return cloudJoin(r.d,r.names,datas);
+}
+// Efter tre försök: adopt:s svar (true, eller "later" mitt i ett pass). Annars false (försök igen senare).
+function cloudBad(key,r){
+  CLOUD.bad[key]=(CLOUD.bad[key]||0)+1;
+  if(CLOUD.bad[key]<BAD_TRIES||!r.d||!r.names) return false;
+  delete CLOUD.bad[key];
+  const st=cloudSalvage(r,S);
+  CLOUD.known[key]=null; CLOUD.force[key]=true;
+  return adopt(st,key,true,r.t);   // old=true: skriver alla bitar på nytt när läget har tagits emot
 }
 function setSaveNote(){
   const n=$("#savenote"); if(!n) return;
@@ -319,10 +348,11 @@ async function onRemote(key,s){   // ett nytt läge från en annan enhet
   if(!s||!s.exists||(s.metadata&&s.metadata.hasPendingWrites)||!L||key!==L.storageKey) return;
   const d=s.data()||{};
   if(!d.parts&&!d.state) return;
-  if(!remoteWins(d.parts?d.score:score(d.state),d.t,S)) return;
+  if(!remoteWins(d.parts?d.score:score(d.state),docT(d),S)) return;
   let r; try{ r=d.parts?await cloudRead(key,s):{state:d.state,t:d.t||0,old:true}; }catch(e){ return; }
+  if(r&&r.bad&&key===L.storageKey){ cloudBad(key,r); return; }
   if(!r||r.bad||key!==L.storageKey) return;
-  if(r.parts) CLOUD.known[key]=r.parts;
+  if(r.parts) CLOUD.known[key]=r.parts; delete CLOUD.bad[key];
   if(remoteWins(score(r.state),r.t,S)) adopt(r.state,key,r.old,r.t);
 }
 async function cloudAttach(){   // vid start och vid byte av kurs
@@ -337,10 +367,12 @@ async function cloudAttach(){   // vid start och vid byte av kurs
   if(!got){ setTimeout(cloudRetry,20000); return; }   // försöker också igen vid visibilitychange/online
   let push=!r;
   if(r&&r.bad){
-    if(cmpArr(r.score,score(S))>0){ setTimeout(cloudRetry,15000); return; }   // går inte att läsa helt just nu, och är längre kommet: vänta
-    CLOUD.known[key]=null; push=true;         // vårt läge är minst lika långt: skriv alla bitar på nytt
+    if(cmpArr(r.score,score(S))>0){   // går inte att läsa helt just nu, och är längre kommet: vänta, efter tre försök laga
+      const a=cloudBad(key,r); if(!a){ setTimeout(cloudRetry,15000); return; }
+      push=a===true;   // mitt i ett pass skrivs det lagade läget när passet är slut (applyDeferred)
+    } else { CLOUD.known[key]=null; push=true; }   // vårt läge är minst lika långt: skriv alla bitar på nytt
   } else if(r){
-    CLOUD.known[key]=r.parts||null;
+    CLOUD.known[key]=r.parts||null; delete CLOUD.bad[key];
     if(remoteWins(score(r.state),r.t,S)){ if(adopt(r.state,key,false,r.t)===true) push=!!r.old; }
     else push=cmpScore(r.state,S)<0||(S.t||0)>(r.t||0)||!!r.old;
   }
@@ -924,6 +956,13 @@ function beginQuiz(kind,items,extra){
     $("#rnew").onclick=()=>{delete S.runs[k]; beginQuiz(kind,items,{...extra,fresh:true});};
     $("#quit").onclick=renderStart; return;
   }
+  if(!items.length){   // t.ex. diktamen eller ordföljd innan eleven har lärt sig några ord: ingen tom "0/0 klar"
+    sess=null; $("#tabs").hidden=true;
+    app.innerHTML=`<section class="panel"><h2>${esc((extra&&extra.label)||"Övningen")}</h2>
+      <p class="plan" id="empty">Det finns inga frågor här än. Lär dig några ord i glosquizet först, så kommer det meningar och frågor att öva på.</p></section>
+      <button class="quit" id="quit">Tillbaka</button>`;
+    $("#quit").onclick=renderStart; return;
+  }
   sess=Object.assign(sess||{},{kind,queue:items,total:items.length,done:0,firstTry:{},firstType:{},tries:{}},extra||{});
   sess.start=sess.start||Date.now();
   nextQ();
@@ -1013,10 +1052,11 @@ function renderType(d){
 }
 function wireTyping(onSubmit){
   const inp=$("#ans"); setTimeout(()=>{try{inp.focus()}catch(e){}},50);
-  $("#f").onsubmit=e=>{e.preventDefault(); if(!sess.answered) onSubmit(); else nextQ();};
+  // Medan eleven bedömer sig själv (selfGrade) går Enter inte vidare, annars hoppas frågan över utan att räknas
+  $("#f").onsubmit=e=>{e.preventDefault(); if(sess.grading) return; if(!sess.answered) onSubmit(); else nextQ();};
   const hideAcc=()=>{if(sess&&sess.answered){const a=app.querySelector(".accents");if(a)a.hidden=true}};
   $("#f").addEventListener("submit",hideAcc); $("#submit").addEventListener("click",hideAcc);
-  $("#submit").onclick=()=>{ if(!sess.answered) onSubmit(); else nextQ(); };
+  $("#submit").onclick=()=>{ if(sess.grading) return; if(!sess.answered) onSubmit(); else nextQ(); };
   app.querySelectorAll("[data-c]").forEach(b=>b.onclick=()=>{
     const s=inp.selectionStart??inp.value.length, e2=inp.selectionEnd??inp.value.length;
     inp.value=inp.value.slice(0,s)+b.dataset.c+inp.value.slice(e2); inp.focus(); inp.setSelectionRange(s+1,s+1);
@@ -1031,6 +1071,7 @@ function answerType(){
 }
 // Svar som inte kan rättas automatiskt: eleven jämför med facit och bedömer själv
 function selfGrade(d,res,inp){
+  sess.grading=true; try{inp.blur()}catch(e){}   // siffrorna 1–3 väljer Fel/Nästan/Rätt (tangenterna gäller inte i textrutan)
   $("#submit").hidden=true; const a=app.querySelector(".accents"); if(a) a.hidden=true;
   $("#fb").innerHTML=`<div class="feedback near"><strong>Jämför med facit</strong>
     <p>Facit: <b ${lang()}>${d.answer}</b></p>${res.html||""}
@@ -1042,6 +1083,7 @@ function selfGrade(d,res,inp){
 }
 function showTypeResult(d,res,inp){
   const r=res.r, ok=r==="right"||r==="accent";
+  sess.grading=false;
   if(inp) inp.classList.add(ok?"right":"wrong");
   const back=record(ok); sess.done++; snapRun();
   const msg=res.self?{right:"Bra!",near:"Nästan. Den kommer tillbaka så att du får öva mer.",wrong:"Den kommer tillbaka så att du får öva mer."}[res.self]
@@ -1080,10 +1122,10 @@ document.addEventListener("keydown",e=>{
     return;
   }
   const onBtn=tg.matches("button,a,summary");
-  if(e.key===" "&&!onBtn){ click("#next"); return; }
+  if(e.key===" "&&!onBtn){ click("#next")||click("#show"); return; }   // #show: "Lyssna först" visar ordet
   if(e.key==="ArrowRight"){ click("#next"); return; }
   if(e.key==="ArrowLeft"){ click("#prev"); return; }
-  if(e.key==="Enter"&&!onBtn) click("#next")||click("#nx")||(sess&&sess.answered&&click("#submit"))||click("#exnext");
+  if(e.key==="Enter"&&!onBtn) click("#next")||click("#show")||click("#nx")||(sess&&sess.answered&&click("#submit"))||click("#exnext");
 });
 
 /* Glosquizets frågor (flerval och skriva) och kortet som visas efter ett fel svar */

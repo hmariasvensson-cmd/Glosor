@@ -25,6 +25,7 @@ DIST = ROOT / "dist"
 # Språk som ska ligga först i väljaren. Det första är standard för den som öppnar sidan första gången.
 ORDER = ["fr"]
 GENDERS = {"", "m", "f", "n", "mpl", "fpl", "npl", "pl"}
+MAX_PAGE_KB, MAX_DATA_KB = 450, 1600   # varningsgränser för storleken (okomprimerat), se slutet av main
 
 # Samma skal som artefakttjänsten lägger runt sidan vid publicering (används bara för preview.html)
 SKELETON_HEAD = '<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>\n'
@@ -104,6 +105,56 @@ CONTR = {"im": "in dem", "ins": "in das", "am": "an dem", "ans": "an das", "zum"
 GAP = re.compile(r"\[([^\]]+)\]")
 
 
+# Studieplanens hänvisningar: typ i planen -> innehållstyp i content (examsim och ktest har egna kontroller)
+PLAN_KINDS = {"lq": "listening", "rq": "reading", "write": "prompts", "culture": "culture", "story": "stories", "exam": "exam"}
+
+
+def check_plan(plan, section_ids, content, grammar, where):
+    """Kontrollerar plan.json: {title, intro, weeks: [{id, title, words: [{sec, part, of}], grammar: [område], do: [{k, id}], tip}]}.
+    Fel om formen är fel; varning om ett avsnitt, område eller en uppgift inte finns (appen hoppar över det, så att
+    id kan tas bort med ids.removed) och för innehåll som inte är med i planen."""
+    errors, warnings, used = [], [], set()
+    weeks = plan.get("weeks") if isinstance(plan, dict) else None
+    if not isinstance(weeks, list) or not weeks:
+        return [f"{where}: weeks saknas"], []
+    topics = {t.get("id") for t in (grammar or {}).get("topics", [])}
+    have = {k: {x.get("id") for x in (content.get(c, {}).get("tasks", []) if c == "exam" else content.get(c, [])) if isinstance(x, dict)}
+            for k, c in PLAN_KINDS.items()}
+    ids = [w.get("id") for w in weeks]
+    errors += [f"{where}: veckan {i} finns flera gånger" for i in sorted({i for i in ids if ids.count(i) > 1})]
+    for w in weeks:
+        i = w.get("id") or "?"
+        if not w.get("id") or not w.get("title"):
+            errors.append(f"{where}: vecka {i} saknar id eller title")
+        for r in w.get("words", []):
+            if r.get("sec") not in section_ids:
+                warnings.append(f"{where}: {i} har okänt avsnitt {r.get('sec')}")
+            if not (1 <= r.get("part", 1) <= r.get("of", 1)):
+                errors.append(f"{where}: {i} har part/of fel för {r.get('sec')}")
+        for t in w.get("grammar", []):
+            if t not in topics:
+                warnings.append(f"{where}: {i} har okänt grammatikområde {t}")
+        for x in w.get("do", []):
+            k, ref = x.get("k"), x.get("id")
+            if k == "examsim":
+                continue
+            if k == "ktest":
+                ok = ref in section_ids
+            elif k in PLAN_KINDS:
+                ok = ref in have[k]
+            else:
+                errors.append(f"{where}: {i} har okänd typ {k}")
+                continue
+            if not ok:   # bara en varning: appen hoppar över det som saknas, så att innehåll kan tas bort (ids.removed)
+                warnings.append(f"{where}: {i} pekar på {k} {ref}, som inte finns (visas inte)")
+            used.add((k, ref))
+    for k, s in have.items():
+        miss = sorted(r for r in s if r and (k, r) not in used)
+        if miss:
+            warnings.append(f"{where}: {PLAN_KINDS[k]} som inte är med i planen: {', '.join(miss)}")
+    return errors, warnings
+
+
 def check_grammar(items, where):
     errors = []
     for x in items:
@@ -174,7 +225,7 @@ def check_question(q, where):
     return []
 
 
-def check_content(content, section_ids, where):
+def check_content(content, section_ids, where, has_book=True):
     """Kontrollerar innehållet: facit inom alternativen, att avsnitten (sec) finns i words.txt och att glosorna finns i texten."""
     errors, warnings = [], []
     for kind in ("reading", "listening"):
@@ -199,12 +250,19 @@ def check_content(content, section_ids, where):
         for t in exam.get("tasks", []):
             for i, q in enumerate(t.get("qs") or []):
                 errors += check_question(q, f"{where}/content/exam.json: {t.get('id')} fråga {i + 1}")
+    missing_book = set()
     for kind, items in content.items():
         if kind == "grammar" or not isinstance(items, list):
             continue
         for x in items:
             if isinstance(x, dict) and x.get("sec") and x["sec"] not in section_ids:
+                # Utan den privata bokmappen saknas bokens kapitel (k4 …): då räknas de bara, bygget ska gå igenom ändå
+                if not has_book:
+                    missing_book.add(x["sec"])
+                    continue
                 errors.append(f"{where}/content/{kind}.json: {x.get('id')} har sec '{x['sec']}', som inte finns i words.txt")
+    if missing_book:
+        warnings.append(f"{where}: innehåll för avsnitt som bara finns i bokmappen ({', '.join(sorted(missing_book))}), som saknas i den här kopian")
     # Glosor som inte går att trycka på eftersom ordet inte finns i texten
     for kind in ("reading", "listening", "culture"):
         for t in content.get(kind, []):
@@ -329,6 +387,14 @@ def check_extends(confs):
             errors.append(f"languages/{code}/lang.js: inherit utan extends")
         if inh and re.search(r'"(storageKey|code|words|content|videos|grammar)"', inh.group(1)):
             errors.append(f"languages/{code}/lang.js: storageKey, words, content, videos och grammar kan inte ärvas")
+        # Ett fält i inherit som föräldern inte har (t.ex. ett stavfel) skulle annars tyst bli tomt i webbläsaren
+        if m and inh and m.group(1) in confs:
+            for f in re.findall(r'"([^"]+)"', inh.group(1)):
+                if not re.search(rf'^\s*{re.escape(f)}\s*:', confs[m.group(1)], re.M):
+                    errors.append(f"languages/{code}/lang.js: inherit '{f}' finns inte i languages/{m.group(1)}/lang.js")
+        nxt = re.search(r'^\s*nextCourse:\s*"([^"]+)"', conf, re.M)
+        if nxt and nxt.group(1) not in confs:
+            errors.append(f"languages/{code}/lang.js: nextCourse '{nxt.group(1)}' finns inte")
     for code in parent:
         seen, c = set(), code
         while c in parent:
@@ -337,6 +403,29 @@ def check_extends(confs):
                 break
             seen.add(c)
             c = parent[c]
+    return errors
+
+
+def check_grammar_refs(content, grammar, section_ids, where, has_book):
+    """Grammatikfrågornas topic och rule ska finnas i grammar.json, områdenas secs i words.txt och
+    reglerna (content/regler.json) ska höra till ett område. Annars syns frågan eller regeln aldrig i appen."""
+    errors = []
+    if not isinstance(grammar, dict):
+        return [f"{where}/grammar.json saknas, men kursen har grammatikfrågor"] if content.get("grammar") else []
+    topics = {t.get("id") for t in grammar.get("topics", []) if isinstance(t, dict)}
+    rules = set(grammar.get("rules", {}))
+    for x in content.get("grammar", []):
+        if x.get("topic") and x["topic"] not in topics:
+            errors.append(f"{where}/content/grammar-*.json: {x.get('id')} har topic '{x['topic']}', som inte finns i grammar.json")
+        if x.get("rule") and x["rule"] not in rules:
+            errors.append(f"{where}/content/grammar-*.json: {x.get('id')} har rule '{x['rule']}', som inte finns i grammar.json")
+    for t in grammar.get("topics", []):
+        for s in (t.get("secs") or []) if isinstance(t, dict) else []:
+            if s not in section_ids and has_book:   # utan den privata bokmappen saknas bokens kapitel (k4 …)
+                errors.append(f"{where}/grammar.json: området {t.get('id')} har secs '{s}', som inte finns i words.txt")
+    regler = content.get("regler")
+    if isinstance(regler, dict):
+        errors += [f"{where}/content/regler.json: '{k}' är inget område i grammar.json" for k in regler if k not in topics]
     return errors
 
 
@@ -388,6 +477,8 @@ def main():
             if f.stem.startswith("grammar-"):   # grammatikbankerna slås ihop till en lista
                 all_errors += check_grammar(data, f"languages/{code}/content/{f.name}")
                 content.setdefault("grammar", []).extend(data)
+            elif f.stem in content and type(content[f.stem]) is not type(data):   # t.ex. bokens lista mot kursens objekt
+                all_errors.append(f"{f.relative_to(ROOT)}: ska vara {'en lista' if isinstance(content[f.stem], list) else 'ett objekt'}, som {f.name} i kursen")
             elif isinstance(data, list):
                 content.setdefault(f.stem, []).extend(data)
             elif isinstance(data, dict):
@@ -396,7 +487,7 @@ def main():
             if isinstance(v, list):
                 ids = [x.get("id") for x in v if isinstance(x, dict) and x.get("id")]
                 all_errors += [f"languages/{code}: {k} har id {i} flera gånger" for i in sorted({i for i in ids if ids.count(i) > 1}) if k != "grammar"]
-        errs, warns = check_content(content, section_ids, f"languages/{code}")
+        errs, warns = check_content(content, section_ids, f"languages/{code}", (LANG_DIR / code / "book").exists())
         all_errors += errs
         for w in warns:
             print("Varning:", w)
@@ -425,6 +516,19 @@ def main():
                 all_errors.append(f"languages/{code}/videos.json: {e}")
         if grammar is not None:
             cdata["grammar"] = grammar
+        # Studieplan per vecka (valfri): languages/<kod>/plan.json följer med kursens datafil (L.plan), se src/kinds/82-plan.js
+        pfile = LANG_DIR / code / "plan.json"
+        if pfile.exists():
+            try:
+                plan = json.loads(pfile.read_text(encoding="utf-8"))
+                errs, warns = check_plan(plan, section_ids, content, grammar, f"languages/{code}/plan.json")
+                all_errors += errs
+                for w in warns:
+                    print("Varning:", w)
+                cdata["plan"] = plan
+            except json.JSONDecodeError as e:
+                all_errors.append(f"languages/{code}/plan.json: {e}")
+        all_errors += check_grammar_refs(content, grammar, section_ids, f"languages/{code}", (LANG_DIR / code / "book").exists())
         m = re.search(r'^\s*storageKey:\s*"([^"]+)"', conf, re.M)
         if not m:
             all_errors.append(f"languages/{code}/lang.js: storageKey saknas")
@@ -485,6 +589,12 @@ def main():
     (DIST / "preview.html").write_text(SKELETON_HEAD + preview + "\n</body></html>\n", encoding="utf-8")
     print(f"Klart: dist/index.html ({len(html.encode()) // 1024} kB) och dist/data/ ("
           + ", ".join(f"{c} {len(data_json[c].encode()) // 1024} kB" for c in codes) + ")")
+    # Sidan laddas på telefon: varna innan index.html eller en datafil växer förbi gränserna (2026-09-29: 356 kB, som mest 1 409 kB)
+    if len(html.encode()) > MAX_PAGE_KB * 1024:
+        print(f"Varning: dist/index.html är större än {MAX_PAGE_KB} kB; flytta data från lang.js till datafilen eller dela upp koden")
+    for c in codes:
+        if len(data_json[c].encode()) > MAX_DATA_KB * 1024:
+            print(f"Varning: dist/data/{c}.json är större än {MAX_DATA_KB} kB; överväg att hämta prov- eller textdelen separat")
 
 
 if __name__ == "__main__":

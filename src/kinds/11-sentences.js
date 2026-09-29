@@ -124,7 +124,7 @@ function renderTiles(d){
     sess.answered=true; $("#clr").hidden=true; $("#built").classList.add(ok?"right":"wrong");
     showTypeResult(d,{r:ok?"right":"wrong"},null); $("#submit").disabled=false;
   };
-  $("#quit").onclick=quitSession; draw();
+  $("#quit").onclick=pauseSession; draw();   // Avbryt sparar rundan (även Dagens pass), som i de andra frågorna
 }
 const orderMC=c=>{const w=c.w, o=orderTokens(w.exT), right=o.words.join(" "), alts=new Set();
   for(let i=0;i<30&&alts.size<2;i++){const s=shuffle(o.words).join(" "); if(s!==right) alts.add(s);}
