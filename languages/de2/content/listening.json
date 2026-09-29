@@ -1,0 +1,2270 @@
+[
+ {
+  "id": "de2-l-b1",
+  "sec": "b1",
+  "title": "Wie war dein Wochenende?",
+  "lines": [
+   {
+    "who": "A",
+    "fr": "Hallo Jonas! Wie war dein Wochenende?",
+    "sv": "Hej Jonas! Hur var din helg?"
+   },
+   {
+    "who": "B",
+    "fr": "Super, danke! Am Freitag war ich mit Lisa im Kino.",
+    "sv": "Toppen, tack! På fredagen var jag på bio med Lisa."
+   },
+   {
+    "who": "A",
+    "fr": "Welchen Film habt ihr gesehen?",
+    "sv": "Vilken film såg ni?"
+   },
+   {
+    "who": "B",
+    "fr": "Eine Komödie. Wir haben viel gelacht. Danach haben wir noch einen Döner gegessen.",
+    "sv": "En komedi. Vi skrattade mycket. Efter det åt vi en kebab."
+   },
+   {
+    "who": "A",
+    "fr": "Und am Samstag?",
+    "sv": "Och på lördagen?"
+   },
+   {
+    "who": "B",
+    "fr": "Am Samstag habe ich lange geschlafen. Am Nachmittag habe ich Handball gespielt. Wir haben leider verloren.",
+    "sv": "På lördagen sov jag länge. På eftermiddagen spelade jag handboll. Vi förlorade tyvärr."
+   },
+   {
+    "who": "A",
+    "fr": "Oh, schade! Und was hast du am Sonntag gemacht?",
+    "sv": "Åh, synd! Och vad gjorde du på söndagen?"
+   },
+   {
+    "who": "B",
+    "fr": "Nichts Besonderes. Ich bin zu Hause geblieben und habe eine Serie angeschaut. Und du?",
+    "sv": "Inget speciellt. Jag stannade hemma och tittade på en serie. Och du?"
+   },
+   {
+    "who": "A",
+    "fr": "Ich war bei meiner Oma. Sie hat einen Kuchen gebacken, und wir haben Karten gespielt.",
+    "sv": "Jag var hos min mormor. Hon bakade en kaka, och vi spelade kort."
+   },
+   {
+    "who": "B",
+    "fr": "Das klingt gemütlich!",
+    "sv": "Det låter mysigt!"
+   }
+  ],
+  "questions": [
+   {
+    "type": "detalj",
+    "q": "Vad gjorde Jonas på fredagen?",
+    "opts": [
+     "Han var på bio med Lisa",
+     "Han spelade handboll",
+     "Han var hos sin mormor",
+     "Han stannade hemma"
+    ],
+    "a": 0,
+    "why": "Han säger „Am Freitag war ich mit Lisa im Kino“."
+   },
+   {
+    "type": "detalj",
+    "q": "Hur gick handbollsmatchen?",
+    "opts": [
+     "De vann",
+     "De förlorade",
+     "Det blev oavgjort",
+     "Matchen blev inställd"
+    ],
+    "a": 1,
+    "why": "„Wir haben leider verloren.“"
+   },
+   {
+    "type": "detalj",
+    "q": "Vad gjorde Jonas på söndagen?",
+    "opts": [
+     "Han åkte till Berlin",
+     "Han bakade en kaka",
+     "Han tittade på en serie hemma",
+     "Han spelade kort"
+    ],
+    "a": 2,
+    "why": "„Ich bin zu Hause geblieben und habe eine Serie angeschaut.“"
+   },
+   {
+    "type": "helhet",
+    "q": "Vad gjorde flickan i helgen?",
+    "opts": [
+     "Hon var på bio",
+     "Hon hälsade på sin mormor",
+     "Hon spelade handboll",
+     "Hon sov hela dagen"
+    ],
+    "a": 1,
+    "why": "„Ich war bei meiner Oma.“"
+   }
+  ],
+  "gloss": {
+   "komödie": {
+    "t": "die Komödie",
+    "sv": "komedi",
+    "g": "f"
+   },
+   "verloren": {
+    "t": "verlieren",
+    "sv": "förlora",
+    "g": ""
+   },
+   "gemütlich": {
+    "t": "gemütlich",
+    "sv": "mysig",
+    "g": ""
+   },
+   "gebacken": {
+    "t": "backen",
+    "sv": "baka",
+    "g": ""
+   },
+   "schade": {
+    "t": "schade",
+    "sv": "synd",
+    "g": ""
+   },
+   "bei": {
+    "t": "bei",
+    "sv": "hos",
+    "g": ""
+   },
+   "danach": {
+    "t": "danach",
+    "sv": "efter det, sedan",
+    "g": ""
+   },
+   "dein": {
+    "t": "dein",
+    "sv": "din, ditt",
+    "g": ""
+   },
+   "döner": {
+    "t": "der Döner (-)",
+    "sv": "kebab (i bröd)",
+    "g": "m"
+   },
+   "ihr": {
+    "t": "ihr",
+    "sv": "henne (dativ)",
+    "g": ""
+   },
+   "lange": {
+    "t": "lange",
+    "sv": "länge",
+    "g": ""
+   },
+   "serie": {
+    "t": "die Serie (-n)",
+    "sv": "serie, tv-serie",
+    "g": "f"
+   },
+   "zu": {
+    "t": "zu",
+    "sv": "till (personer och platser)",
+    "g": ""
+   }
+  }
+ },
+ {
+  "id": "de2-l-b1b",
+  "sec": "b1",
+  "title": "Eine Nachricht auf der Mailbox",
+  "lines": [
+   {
+    "fr": "Hallo Mia, hier ist Paul. Es ist Freitag, halb fünf.",
+    "sv": "Hej Mia, det är Paul. Det är fredag, halv fem."
+   },
+   {
+    "fr": "Ich habe dich schon zweimal angerufen, aber du bist nicht ans Telefon gegangen.",
+    "sv": "Jag har redan ringt dig två gånger, men du svarade inte."
+   },
+   {
+    "fr": "Wir machen morgen Abend einen Spieleabend bei mir. Tim und Sara kommen auch.",
+    "sv": "Vi har spelkväll hos mig i morgon kväll. Tim och Sara kommer också."
+   },
+   {
+    "fr": "Wir fangen um sieben Uhr an. Kommst du mit?",
+    "sv": "Vi börjar klockan sju. Följer du med?"
+   },
+   {
+    "fr": "Meine Mutter macht Pizza, du musst also nichts mitbringen.",
+    "sv": "Min mamma gör pizza, så du behöver inte ta med något."
+   },
+   {
+    "fr": "Vielleicht kannst du dein neues Brettspiel mitnehmen? Das finde ich super.",
+    "sv": "Kanske kan du ta med ditt nya brädspel? Det tycker jag är toppen."
+   },
+   {
+    "fr": "Mein Vater kann dich um halb sieben abholen, denn es ist spät und dunkel, wenn wir fertig sind.",
+    "sv": "Min pappa kan hämta dig halv sju, för det är sent och mörkt när vi är klara."
+   },
+   {
+    "fr": "Ruf mich bitte heute noch zurück oder schick mir eine Nachricht. Tschüss!",
+    "sv": "Ring mig tillbaka i dag eller skicka ett meddelande. Hej då!"
+   }
+  ],
+  "questions": [
+   {
+    "type": "helhet",
+    "q": "Varför lämnar Paul ett meddelande?",
+    "opts": [
+     "Mia svarade inte i telefon",
+     "Han har tappat sin mobil",
+     "Mia har bett honom ringa",
+     "Han är sjuk"
+    ],
+    "a": 0,
+    "why": "„Ich habe dich schon zweimal angerufen, aber du bist nicht ans Telefon gegangen.“"
+   },
+   {
+    "type": "detalj",
+    "q": "När börjar spelkvällen?",
+    "opts": [
+     "Halv fem",
+     "Klockan sju",
+     "Halv sju",
+     "Klockan åtta"
+    ],
+    "a": 1,
+    "why": "„Wir fangen um sieben Uhr an.“"
+   },
+   {
+    "type": "detalj",
+    "q": "Vad ska Mia ta med sig?",
+    "opts": [
+     "Pizza",
+     "Chips",
+     "Sitt nya brädspel, om hon vill",
+     "Ingenting alls"
+    ],
+    "a": 2,
+    "why": "„Vielleicht kannst du dein neues Brettspiel mitnehmen?“"
+   },
+   {
+    "type": "detalj",
+    "q": "Vem kan hämta Mia?",
+    "opts": [
+     "Pauls mamma",
+     "Tim",
+     "Pauls pappa",
+     "Sara"
+    ],
+    "a": 2,
+    "why": "„Mein Vater kann dich um halb sieben abholen.“"
+   }
+  ],
+  "gloss": {
+   "telefon": {
+    "t": "das Telefon",
+    "sv": "telefon",
+    "g": "n"
+   },
+   "fertig": {
+    "t": "fertig",
+    "sv": "klar",
+    "g": ""
+   },
+   "vielleicht": {
+    "t": "vielleicht",
+    "sv": "kanske",
+    "g": ""
+   },
+   "abholen": {
+    "t": "abholen",
+    "sv": "hämta",
+    "g": ""
+   },
+   "an": {
+    "t": "an",
+    "sv": "vid, till (vatten)",
+    "g": ""
+   },
+   "bei": {
+    "t": "bei",
+    "sv": "hos",
+    "g": ""
+   },
+   "dein": {
+    "t": "dein",
+    "sv": "din, ditt",
+    "g": ""
+   },
+   "mir": {
+    "t": "mir",
+    "sv": "mig (dativ)",
+    "g": ""
+   },
+   "mitbringen": {
+    "t": "mitbringen",
+    "sv": "ta med sig",
+    "g": ""
+   },
+   "schick": {
+    "t": "schick",
+    "sv": "snygg, elegant",
+    "g": ""
+   },
+   "spieleabend": {
+    "t": "der Spieleabend (-e)",
+    "sv": "spelkväll",
+    "g": "m"
+   },
+   "zweimal": {
+    "t": "zweimal",
+    "sv": "två gånger",
+    "g": ""
+   }
+  }
+ },
+ {
+  "id": "de2-l-b2",
+  "sec": "b2",
+  "title": "Im Kleidergeschäft",
+  "lines": [
+   {
+    "who": "A",
+    "fr": "Guten Tag! Kann ich Ihnen helfen?",
+    "sv": "God dag! Kan jag hjälpa er?"
+   },
+   {
+    "who": "B",
+    "fr": "Ja, gern. Ich suche eine Jacke für den Winter.",
+    "sv": "Ja, gärna. Jag letar efter en jacka till vintern."
+   },
+   {
+    "who": "A",
+    "fr": "Welche Größe haben Sie?",
+    "sv": "Vilken storlek har ni?"
+   },
+   {
+    "who": "B",
+    "fr": "Größe M, glaube ich. Haben Sie die Jacke hier auch in Blau?",
+    "sv": "Storlek M, tror jag. Har ni den här jackan i blått också?"
+   },
+   {
+    "who": "A",
+    "fr": "Nein, leider nur in Schwarz und Grau. Aber die graue Jacke ist im Angebot.",
+    "sv": "Nej, tyvärr bara i svart och grått. Men den grå jackan är på rea."
+   },
+   {
+    "who": "B",
+    "fr": "Wie viel kostet sie?",
+    "sv": "Hur mycket kostar den?"
+   },
+   {
+    "who": "A",
+    "fr": "Nur 59 Euro statt 89 Euro.",
+    "sv": "Bara 59 euro i stället för 89 euro."
+   },
+   {
+    "who": "B",
+    "fr": "Das ist gut. Kann ich sie anprobieren?",
+    "sv": "Det är bra. Kan jag prova den?"
+   },
+   {
+    "who": "A",
+    "fr": "Natürlich. Die Umkleide ist dort hinten.",
+    "sv": "Självklart. Provrummet är där bak."
+   },
+   {
+    "who": "B",
+    "fr": "Hm, sie ist ein bisschen eng. Haben Sie sie auch in L?",
+    "sv": "Hm, den är lite trång. Har ni den i L också?"
+   },
+   {
+    "who": "A",
+    "fr": "Ja, hier bitte. Die passt Ihnen bestimmt besser.",
+    "sv": "Ja, varsågod. Den passar er säkert bättre."
+   },
+   {
+    "who": "B",
+    "fr": "Ja, perfekt! Die Farbe gefällt mir auch. Ich nehme sie. Kann ich mit Karte bezahlen?",
+    "sv": "Ja, perfekt! Jag gillar färgen också. Jag tar den. Kan jag betala med kort?"
+   },
+   {
+    "who": "A",
+    "fr": "Ja, natürlich. Die Kasse ist vorne.",
+    "sv": "Ja, självklart. Kassan är där framme."
+   }
+  ],
+  "questions": [
+   {
+    "type": "helhet",
+    "q": "Vad letar kunden efter?",
+    "opts": [
+     "En vinterjacka",
+     "Ett par skor",
+     "En tröja",
+     "En mössa"
+    ],
+    "a": 0,
+    "why": "„Ich suche eine Jacke für den Winter.“"
+   },
+   {
+    "type": "detalj",
+    "q": "Vilka färger finns jackan i?",
+    "opts": [
+     "Blått och svart",
+     "Svart och grått",
+     "Bara blått",
+     "Grått och brunt"
+    ],
+    "a": 1,
+    "why": "„leider nur in Schwarz und Grau“."
+   },
+   {
+    "type": "detalj",
+    "q": "Vad kostar jackan nu?",
+    "opts": [
+     "89 euro",
+     "49 euro",
+     "59 euro",
+     "69 euro"
+    ],
+    "a": 2,
+    "why": "„Nur 59 Euro statt 89 Euro.“"
+   },
+   {
+    "type": "detalj",
+    "q": "Varför byter kunden storlek?",
+    "opts": [
+     "Jackan i M är för stor",
+     "Jackan i M är lite trång",
+     "Hon ogillar färgen",
+     "Jackan är trasig"
+    ],
+    "a": 1,
+    "why": "„sie ist ein bisschen eng. Haben Sie sie auch in L?“"
+   }
+  ],
+  "gloss": {
+   "angebot": {
+    "t": "das Angebot",
+    "sv": "erbjudande; im Angebot = på rea",
+    "g": "n"
+   },
+   "statt": {
+    "t": "statt",
+    "sv": "i stället för",
+    "g": ""
+   },
+   "natürlich": {
+    "t": "natürlich",
+    "sv": "självklart",
+    "g": ""
+   },
+   "kasse": {
+    "t": "die Kasse",
+    "sv": "kassa",
+    "g": "f"
+   },
+   "bestimmt": {
+    "t": "bestimmt",
+    "sv": "säkert",
+    "g": ""
+   },
+   "hinten": {
+    "t": "hinten",
+    "sv": "där bak",
+    "g": ""
+   },
+   "vorne": {
+    "t": "vorne",
+    "sv": "där fram",
+    "g": ""
+   },
+   "jacke": {
+    "t": "die Jacke",
+    "sv": "jacka",
+    "g": "f"
+   },
+   "ihnen": {
+    "t": "ihnen",
+    "sv": "dem (dativ)",
+    "g": ""
+   },
+   "in": {
+    "t": "in",
+    "sv": "i, till (länder med artikel)",
+    "g": ""
+   },
+   "mir": {
+    "t": "mir",
+    "sv": "mig (dativ)",
+    "g": ""
+   },
+   "perfekt": {
+    "t": "perfekt",
+    "sv": "perfekt",
+    "g": ""
+   },
+   "umkleide": {
+    "t": "die Umkleide (-n)",
+    "sv": "provrum, omklädningsrum",
+    "g": "f"
+   }
+  }
+ },
+ {
+  "id": "de2-l-b2b",
+  "sec": "b2",
+  "title": "Interview: Wo kaufst du deine Kleidung?",
+  "lines": [
+   {
+    "who": "A",
+    "fr": "Hallo! Wir machen eine Umfrage für das Schulradio. Wie heißt du?",
+    "sv": "Hej! Vi gör en enkät för skolradion. Vad heter du?"
+   },
+   {
+    "who": "B",
+    "fr": "Ich heiße Leonie und bin sechzehn.",
+    "sv": "Jag heter Leonie och är sexton."
+   },
+   {
+    "who": "A",
+    "fr": "Leonie, wo kaufst du deine Kleidung?",
+    "sv": "Leonie, var köper du dina kläder?"
+   },
+   {
+    "who": "B",
+    "fr": "Meistens online. Das ist einfach und oft billiger. Aber Schuhe kaufe ich im Laden, denn ich muss sie anprobieren.",
+    "sv": "Oftast på nätet. Det är enkelt och ofta billigare. Men skor köper jag i affären, för jag måste prova dem."
+   },
+   {
+    "who": "A",
+    "fr": "Was trägst du am liebsten?",
+    "sv": "Vad har du helst på dig?"
+   },
+   {
+    "who": "B",
+    "fr": "Jeans, Turnschuhe und bunte T-Shirts. Ich mag keine Kleider, sie sind nicht bequem.",
+    "sv": "Jeans, gympaskor och färgglada t-shirtar. Jag gillar inte klänningar, de är inte bekväma."
+   },
+   {
+    "who": "A",
+    "fr": "Wie viel Geld gibst du im Monat für Kleidung aus?",
+    "sv": "Hur mycket pengar lägger du på kläder i månaden?"
+   },
+   {
+    "who": "B",
+    "fr": "Ungefähr 30 Euro. Manchmal kaufe ich auch Sachen im Secondhand-Laden. Das ist gut für die Umwelt.",
+    "sv": "Ungefär 30 euro. Ibland köper jag också saker i en secondhandbutik. Det är bra för miljön."
+   },
+   {
+    "who": "A",
+    "fr": "Und was hast du zuletzt gekauft?",
+    "sv": "Och vad köpte du senast?"
+   },
+   {
+    "who": "B",
+    "fr": "Eine gestreifte Mütze. Sie war total günstig, nur fünf Euro!",
+    "sv": "En randig mössa. Den var jättebillig, bara fem euro!"
+   }
+  ],
+  "questions": [
+   {
+    "type": "detalj",
+    "q": "Var köper Leonie oftast sina kläder?",
+    "opts": [
+     "På marknaden",
+     "På nätet",
+     "På varuhuset",
+     "Hos sin mamma"
+    ],
+    "a": 1,
+    "why": "„Meistens online.“"
+   },
+   {
+    "type": "detalj",
+    "q": "Varför köper hon skor i affären?",
+    "opts": [
+     "De är billigare där",
+     "Hon måste prova dem",
+     "Hon gillar expediterna",
+     "Det finns inga skor på nätet"
+    ],
+    "a": 1,
+    "why": "„denn ich muss sie anprobieren“."
+   },
+   {
+    "type": "detalj",
+    "q": "Vad tycker Leonie om klänningar?",
+    "opts": [
+     "De är snygga",
+     "De är för dyra",
+     "De är inte bekväma",
+     "Hon har många"
+    ],
+    "a": 2,
+    "why": "„Ich mag keine Kleider, sie sind nicht bequem.“"
+   },
+   {
+    "type": "detalj",
+    "q": "Vad köpte hon senast?",
+    "opts": [
+     "En randig mössa",
+     "Ett par jeans",
+     "En t-shirt",
+     "Gympaskor"
+    ],
+    "a": 0,
+    "why": "„Eine gestreifte Mütze.“"
+   }
+  ],
+  "gloss": {
+   "umfrage": {
+    "t": "die Umfrage",
+    "sv": "enkät",
+    "g": "f"
+   },
+   "schulradio": {
+    "t": "das Schulradio",
+    "sv": "skolradio",
+    "g": "n"
+   },
+   "billiger": {
+    "t": "billig",
+    "sv": "billig",
+    "g": ""
+   },
+   "gibst": {
+    "t": "ausgeben",
+    "sv": "lägga ut (pengar)",
+    "g": ""
+   },
+   "umwelt": {
+    "t": "die Umwelt",
+    "sv": "miljö",
+    "g": "f"
+   },
+   "zuletzt": {
+    "t": "zuletzt",
+    "sv": "senast",
+    "g": ""
+   },
+   "günstig": {
+    "t": "günstig",
+    "sv": "billig, förmånlig",
+    "g": ""
+   },
+   "ungefähr": {
+    "t": "ungefähr",
+    "sv": "ungefär",
+    "g": ""
+   },
+   "kleider": {
+    "t": "das Kleid (-er)",
+    "sv": "klänning",
+    "g": "n"
+   },
+   "meistens": {
+    "t": "meistens",
+    "sv": "oftast",
+    "g": ""
+   },
+   "aus": {
+    "t": "aus",
+    "sv": "från, ur",
+    "g": ""
+   },
+   "bequem": {
+    "t": "bequem",
+    "sv": "bekväm",
+    "g": ""
+   },
+   "jeans": {
+    "t": "die Jeans (-)",
+    "sv": "jeans",
+    "g": "f"
+   },
+   "mütze": {
+    "t": "die Mütze (-n)",
+    "sv": "mössa",
+    "g": "f"
+   },
+   "total": {
+    "t": "total",
+    "sv": "helt, jätte-",
+    "g": ""
+   }
+  }
+ },
+ {
+  "id": "de2-l-b3",
+  "sec": "b3",
+  "title": "Der Wetterbericht",
+  "lines": [
+   {
+    "fr": "Und jetzt das Wetter für morgen, Dienstag, den 14. März.",
+    "sv": "Och nu vädret för i morgon, tisdagen den 14 mars."
+   },
+   {
+    "fr": "Im Norden ist es wolkig und windig. An der Nordsee gibt es am Vormittag Regen.",
+    "sv": "I norr är det molnigt och blåsigt. Vid Nordsjön blir det regn på förmiddagen."
+   },
+   {
+    "fr": "Die Temperaturen liegen bei acht bis zehn Grad.",
+    "sv": "Temperaturerna ligger på åtta till tio grader."
+   },
+   {
+    "fr": "Im Osten bleibt es trocken, aber kühl, mit sechs Grad.",
+    "sv": "I öster förblir det torrt men svalt, med sex grader."
+   },
+   {
+    "fr": "Im Süden scheint den ganzen Tag die Sonne. In München wird es bis zu fünfzehn Grad warm. Endlich Frühling!",
+    "sv": "I söder skiner solen hela dagen. I München blir det upp till femton grader varmt. Äntligen vår!"
+   },
+   {
+    "fr": "In den Alpen gibt es in der Nacht noch Schnee, und es ist minus drei Grad.",
+    "sv": "I Alperna blir det fortfarande snö i natt, och det är minus tre grader."
+   },
+   {
+    "fr": "Vorsicht auf den Straßen: Am Morgen gibt es dort Glatteis!",
+    "sv": "Se upp på vägarna: på morgonen är det halt där!"
+   },
+   {
+    "fr": "Am Mittwoch wird es überall wärmer. Aber am Donnerstag kommt von Westen ein Sturm mit Gewitter.",
+    "sv": "På onsdag blir det varmare överallt. Men på torsdag kommer en storm med åska västerifrån."
+   },
+   {
+    "fr": "Nehmen Sie also einen Schirm mit!",
+    "sv": "Ta alltså med ett paraply!"
+   }
+  ],
+  "questions": [
+   {
+    "type": "detalj",
+    "q": "Hur blir vädret i norr?",
+    "opts": [
+     "Soligt och varmt",
+     "Molnigt och blåsigt, med regn",
+     "Snö och kallt",
+     "Dimmigt"
+    ],
+    "a": 1,
+    "why": "„Im Norden ist es wolkig und windig.“"
+   },
+   {
+    "type": "detalj",
+    "q": "Hur varmt blir det i München?",
+    "opts": [
+     "Sex grader",
+     "Tio grader",
+     "Upp till femton grader",
+     "Minus tre grader"
+    ],
+    "a": 2,
+    "why": "„In München wird es bis zu fünfzehn Grad warm.“"
+   },
+   {
+    "type": "detalj",
+    "q": "Varför ska man se upp i Alperna på morgonen?",
+    "opts": [
+     "Det är dimma",
+     "Det är halt på vägarna",
+     "Det kommer en storm",
+     "Det är mycket varmt"
+    ],
+    "a": 1,
+    "why": "„Am Morgen gibt es dort Glatteis!“"
+   },
+   {
+    "type": "detalj",
+    "q": "Vad händer på torsdag?",
+    "opts": [
+     "Det blir snö i hela landet",
+     "Det kommer en storm med åska",
+     "Det blir soligt överallt",
+     "Det blir minusgrader"
+    ],
+    "a": 1,
+    "why": "„am Donnerstag kommt von Westen ein Sturm mit Gewitter“."
+   }
+  ],
+  "gloss": {
+   "temperaturen": {
+    "t": "die Temperatur",
+    "sv": "temperatur",
+    "g": "f"
+   },
+   "vorsicht": {
+    "t": "die Vorsicht",
+    "sv": "försiktighet; Vorsicht! = se upp!",
+    "g": "f"
+   },
+   "straßen": {
+    "t": "die Straße",
+    "sv": "gata, väg",
+    "g": "f"
+   },
+   "gewitter": {
+    "t": "das Gewitter",
+    "sv": "åskväder",
+    "g": "n"
+   },
+   "überall": {
+    "t": "überall",
+    "sv": "överallt",
+    "g": ""
+   },
+   "endlich": {
+    "t": "endlich",
+    "sv": "äntligen",
+    "g": ""
+   },
+   "vormittag": {
+    "t": "der Vormittag",
+    "sv": "förmiddag",
+    "g": "m"
+   },
+   "frühling": {
+    "t": "der Frühling",
+    "sv": "vår",
+    "g": "m"
+   },
+   "alpen": {
+    "t": "die Alpen",
+    "sv": "Alperna",
+    "g": "pl"
+   },
+   "an": {
+    "t": "an",
+    "sv": "vid, till (vatten)",
+    "g": ""
+   },
+   "auf": {
+    "t": "auf",
+    "sv": "på, upp på",
+    "g": ""
+   },
+   "bei": {
+    "t": "bei",
+    "sv": "hos",
+    "g": ""
+   },
+   "glatteis": {
+    "t": "das Glatteis",
+    "sv": "halka, is på vägen",
+    "g": "n"
+   },
+   "grad": {
+    "t": "der Grad (-)",
+    "sv": "grad",
+    "g": "m"
+   },
+   "in": {
+    "t": "in",
+    "sv": "i, till (länder med artikel)",
+    "g": ""
+   },
+   "kühl": {
+    "t": "kühl",
+    "sv": "sval",
+    "g": ""
+   },
+   "minus": {
+    "t": "minus",
+    "sv": "minus",
+    "g": ""
+   },
+   "norden": {
+    "t": "der Norden",
+    "sv": "norr",
+    "g": "m"
+   },
+   "nordsee": {
+    "t": "die Nordsee",
+    "sv": "Nordsjön",
+    "g": "f"
+   },
+   "osten": {
+    "t": "der Osten",
+    "sv": "öster",
+    "g": "m"
+   },
+   "schirm": {
+    "t": "der Schirm (-e)",
+    "sv": "paraply",
+    "g": "m"
+   },
+   "sturm": {
+    "t": "der Sturm (Stürme)",
+    "sv": "storm",
+    "g": "m"
+   },
+   "süden": {
+    "t": "der Süden",
+    "sv": "söder",
+    "g": "m"
+   },
+   "trocken": {
+    "t": "trocken",
+    "sv": "torr",
+    "g": ""
+   },
+   "westen": {
+    "t": "der Westen",
+    "sv": "väster",
+    "g": "m"
+   },
+   "windig": {
+    "t": "windig",
+    "sv": "blåsigt",
+    "g": ""
+   },
+   "wolkig": {
+    "t": "wolkig",
+    "sv": "molnigt",
+    "g": ""
+   },
+   "zu": {
+    "t": "zu",
+    "sv": "till (personer och platser)",
+    "g": ""
+   }
+  }
+ },
+ {
+  "id": "de2-l-b4",
+  "sec": "b4",
+  "title": "Beim Arzt",
+  "lines": [
+   {
+    "who": "A",
+    "fr": "Guten Morgen, Frau Berg. Setzen Sie sich bitte. Was fehlt Ihnen?",
+    "sv": "God morgon, fru Berg. Var så god och sitt. Vad har ni för besvär?"
+   },
+   {
+    "who": "B",
+    "fr": "Ich fühle mich seit drei Tagen schlecht. Ich habe Kopfweh und Halsschmerzen.",
+    "sv": "Jag har mått dåligt i tre dagar. Jag har huvudvärk och ont i halsen."
+   },
+   {
+    "who": "A",
+    "fr": "Haben Sie auch Fieber?",
+    "sv": "Har ni feber också?"
+   },
+   {
+    "who": "B",
+    "fr": "Ja, gestern Abend hatte ich 38,5 Grad.",
+    "sv": "Ja, i går kväll hade jag 38,5 grader."
+   },
+   {
+    "who": "A",
+    "fr": "Machen Sie bitte den Mund auf. Hm, der Hals ist sehr rot. Sie sind stark erkältet.",
+    "sv": "Öppna munnen, tack. Hm, halsen är mycket röd. Ni är ordentligt förkyld."
+   },
+   {
+    "who": "B",
+    "fr": "Muss ich Tabletten nehmen?",
+    "sv": "Måste jag ta tabletter?"
+   },
+   {
+    "who": "A",
+    "fr": "Nein, das ist nicht nötig. Trinken Sie viel Tee und bleiben Sie zwei Tage im Bett. Für den Hals nehmen Sie Halstabletten aus der Apotheke.",
+    "sv": "Nej, det behövs inte. Drick mycket te och stanna i sängen i två dagar. För halsen tar ni halstabletter från apoteket."
+   },
+   {
+    "who": "B",
+    "fr": "Kann ich am Donnerstag wieder zur Schule gehen?",
+    "sv": "Kan jag gå till skolan igen på torsdag?"
+   },
+   {
+    "who": "A",
+    "fr": "Ja, wenn Sie kein Fieber mehr haben. Ich schreibe Ihnen eine Krankmeldung für die Schule.",
+    "sv": "Ja, om ni inte har feber längre. Jag skriver en sjukanmälan åt er till skolan."
+   },
+   {
+    "who": "B",
+    "fr": "Danke schön!",
+    "sv": "Tack så mycket!"
+   },
+   {
+    "who": "A",
+    "fr": "Gute Besserung!",
+    "sv": "Krya på er!"
+   }
+  ],
+  "questions": [
+   {
+    "type": "helhet",
+    "q": "Vilka besvär har Frau Berg?",
+    "opts": [
+     "Ont i magen och diarré",
+     "Huvudvärk, ont i halsen och feber",
+     "Ont i foten",
+     "Hösnuva"
+    ],
+    "a": 1,
+    "why": "„Ich habe Kopfweh und Halsschmerzen“ och hon hade 38,5 grader."
+   },
+   {
+    "type": "detalj",
+    "q": "Vad säger läkaren om tabletter?",
+    "opts": [
+     "Hon måste ta tabletter tre gånger om dagen",
+     "Hon behöver inga tabletter, bara halstabletter",
+     "Hon får recept på antibiotika",
+     "Hon ska ta nässpray"
+    ],
+    "a": 1,
+    "why": "„Nein, das ist nicht nötig … nehmen Sie Halstabletten aus der Apotheke.“"
+   },
+   {
+    "type": "detalj",
+    "q": "Hur länge ska hon stanna i sängen?",
+    "opts": [
+     "En dag",
+     "Två dagar",
+     "En vecka",
+     "Tills på måndag"
+    ],
+    "a": 1,
+    "why": "„bleiben Sie zwei Tage im Bett“."
+   },
+   {
+    "type": "detalj",
+    "q": "Vad skriver läkaren?",
+    "opts": [
+     "Ett recept",
+     "En sjukanmälan till skolan",
+     "Ett brev till föräldrarna",
+     "En remiss till sjukhuset"
+    ],
+    "a": 1,
+    "why": "„Ich schreibe Ihnen eine Krankmeldung für die Schule.“"
+   }
+  ],
+  "gloss": {
+   "halsschmerzen": {
+    "t": "die Halsschmerzen",
+    "sv": "ont i halsen",
+    "g": "pl"
+   },
+   "fieber": {
+    "t": "das Fieber",
+    "sv": "feber",
+    "g": "n"
+   },
+   "nötig": {
+    "t": "nötig",
+    "sv": "nödvändig",
+    "g": ""
+   },
+   "apotheke": {
+    "t": "die Apotheke",
+    "sv": "apotek",
+    "g": "f"
+   },
+   "tabletten": {
+    "t": "die Tablette",
+    "sv": "tablett",
+    "g": "f"
+   },
+   "hals": {
+    "t": "der Hals",
+    "sv": "hals",
+    "g": "m"
+   },
+   "mund": {
+    "t": "der Mund",
+    "sv": "mun",
+    "g": "m"
+   },
+   "auf": {
+    "t": "auf",
+    "sv": "på, upp på",
+    "g": ""
+   },
+   "aus": {
+    "t": "aus",
+    "sv": "från, ur",
+    "g": ""
+   },
+   "erkältet": {
+    "t": "erkältet",
+    "sv": "förkyld",
+    "g": ""
+   },
+   "grad": {
+    "t": "der Grad (-)",
+    "sv": "grad",
+    "g": "m"
+   },
+   "ihnen": {
+    "t": "ihnen",
+    "sv": "dem (dativ)",
+    "g": ""
+   },
+   "kopfweh": {
+    "t": "das Kopfweh",
+    "sv": "huvudvärk",
+    "g": "n"
+   },
+   "krankmeldung": {
+    "t": "die Krankmeldung (-en)",
+    "sv": "sjukanmälan",
+    "g": "f"
+   },
+   "seit": {
+    "t": "seit",
+    "sv": "sedan, i (om tid)",
+    "g": ""
+   }
+  }
+ },
+ {
+  "id": "de2-l-b5",
+  "sec": "b5",
+  "title": "Streit mit der besten Freundin",
+  "lines": [
+   {
+    "who": "A",
+    "fr": "Hey Emma, was ist los? Du siehst traurig aus.",
+    "sv": "Hej Emma, vad är det? Du ser ledsen ut."
+   },
+   {
+    "who": "B",
+    "fr": "Ich habe mit Sofie gestritten. Sie spricht nicht mehr mit mir.",
+    "sv": "Jag har bråkat med Sofie. Hon pratar inte med mig längre."
+   },
+   {
+    "who": "A",
+    "fr": "Oh nein! Was ist passiert?",
+    "sv": "Å nej! Vad hände?"
+   },
+   {
+    "who": "B",
+    "fr": "Sie hat mir ein Geheimnis erzählt, und ich habe es Lukas gesagt. Das war dumm von mir.",
+    "sv": "Hon berättade en hemlighet för mig, och jag sa det till Lukas. Det var dumt av mig."
+   },
+   {
+    "who": "A",
+    "fr": "Hm, das verstehe ich. Sie ist bestimmt sauer.",
+    "sv": "Hm, det förstår jag. Hon är säkert sur."
+   },
+   {
+    "who": "B",
+    "fr": "Ja. Ich habe ihr eine Nachricht geschickt, aber sie hat mir nicht geantwortet.",
+    "sv": "Ja. Jag skickade ett meddelande till henne, men hon har inte svarat mig."
+   },
+   {
+    "who": "A",
+    "fr": "Schreib ihr nicht nur. Sprich mit ihr! Sag ihr, dass es dir leid tut.",
+    "sv": "Skriv inte bara till henne. Prata med henne! Säg att du är ledsen."
+   },
+   {
+    "who": "B",
+    "fr": "Meinst du, das hilft?",
+    "sv": "Tror du att det hjälper?"
+   },
+   {
+    "who": "A",
+    "fr": "Ja. Ihr seid seit der Grundschule Freundinnen. Sie mag dich sehr.",
+    "sv": "Ja. Ni har varit vänner sedan lågstadiet. Hon tycker mycket om dig."
+   },
+   {
+    "who": "B",
+    "fr": "Okay. Ich rufe sie heute Abend an. Danke, du bist echt lieb!",
+    "sv": "Okej. Jag ringer henne i kväll. Tack, du är verkligen snäll!"
+   }
+  ],
+  "questions": [
+   {
+    "type": "helhet",
+    "q": "Varför är Emma ledsen?",
+    "opts": [
+     "Hon har blivit sjuk",
+     "Hon har bråkat med sin bästa vän",
+     "Hon har tappat sin mobil",
+     "Hon har fått dåligt betyg"
+    ],
+    "a": 1,
+    "why": "„Ich habe mit Sofie gestritten.“"
+   },
+   {
+    "type": "detalj",
+    "q": "Vad gjorde Emma fel?",
+    "opts": [
+     "Hon glömde Sofies födelsedag",
+     "Hon berättade Sofies hemlighet för Lukas",
+     "Hon kom för sent",
+     "Hon lånade Sofies tröja"
+    ],
+    "a": 1,
+    "why": "„Sie hat mir ein Geheimnis erzählt, und ich habe es Lukas gesagt.“"
+   },
+   {
+    "type": "detalj",
+    "q": "Vilket råd får Emma?",
+    "opts": [
+     "Att vänta en vecka",
+     "Att skriva ett långt meddelande",
+     "Att prata med Sofie och be om förlåtelse",
+     "Att fråga Lukas"
+    ],
+    "a": 2,
+    "why": "„Sprich mit ihr! Sag ihr, dass es dir leid tut.“"
+   },
+   {
+    "type": "detalj",
+    "q": "Hur länge har Emma och Sofie varit vänner?",
+    "opts": [
+     "Sedan förra året",
+     "Sedan lågstadiet",
+     "I två månader",
+     "Sedan de var bebisar"
+    ],
+    "a": 1,
+    "why": "„seit der Grundschule“."
+   }
+  ],
+  "gloss": {
+   "geheimnis": {
+    "t": "das Geheimnis",
+    "sv": "hemlighet",
+    "g": "n"
+   },
+   "dumm": {
+    "t": "dumm",
+    "sv": "dum",
+    "g": ""
+   },
+   "sauer": {
+    "t": "sauer",
+    "sv": "sur, arg",
+    "g": ""
+   },
+   "meinst": {
+    "t": "meinen",
+    "sv": "tro, mena",
+    "g": ""
+   },
+   "grundschule": {
+    "t": "die Grundschule",
+    "sv": "lågstadium",
+    "g": "f"
+   },
+   "echt": {
+    "t": "echt",
+    "sv": "verkligen",
+    "g": ""
+   },
+   "gestritten": {
+    "t": "streiten",
+    "sv": "bråka",
+    "g": ""
+   },
+   "geantwortet": {
+    "t": "antworten",
+    "sv": "svara",
+    "g": ""
+   },
+   "an": {
+    "t": "an",
+    "sv": "vid, till (vatten)",
+    "g": ""
+   },
+   "aus": {
+    "t": "aus",
+    "sv": "från, ur",
+    "g": ""
+   },
+   "dir": {
+    "t": "dir",
+    "sv": "dig (dativ)",
+    "g": ""
+   },
+   "ihr": {
+    "t": "ihr",
+    "sv": "henne (dativ)",
+    "g": ""
+   },
+   "lieb": {
+    "t": "lieb",
+    "sv": "snäll, kär",
+    "g": ""
+   },
+   "mir": {
+    "t": "mir",
+    "sv": "mig (dativ)",
+    "g": ""
+   },
+   "seit": {
+    "t": "seit",
+    "sv": "sedan, i (om tid)",
+    "g": ""
+   },
+   "traurig": {
+    "t": "traurig",
+    "sv": "ledsen",
+    "g": ""
+   }
+  }
+ },
+ {
+  "id": "de2-l-b5b",
+  "sec": "b5",
+  "title": "Interview: Wie hast du deinen besten Freund kennengelernt?",
+  "lines": [
+   {
+    "who": "A",
+    "fr": "Willkommen bei „Jugend heute“! Heute sprechen wir über Freundschaft. Neben mir sitzt Ali. Ali, wer ist dein bester Freund?",
+    "sv": "Välkommen till ”Ungdom i dag”! I dag pratar vi om vänskap. Bredvid mig sitter Ali. Ali, vem är din bästa vän?"
+   },
+   {
+    "who": "B",
+    "fr": "Das ist Ben. Wir kennen uns seit fünf Jahren.",
+    "sv": "Det är Ben. Vi har känt varandra i fem år."
+   },
+   {
+    "who": "A",
+    "fr": "Wie habt ihr euch kennengelernt?",
+    "sv": "Hur lärde ni känna varandra?"
+   },
+   {
+    "who": "B",
+    "fr": "Im Fußballverein. Ich war neu in der Stadt und kannte niemanden. Ben hat mir geholfen und mir alles gezeigt.",
+    "sv": "I fotbollsklubben. Jag var ny i stan och kände ingen. Ben hjälpte mig och visade mig allt."
+   },
+   {
+    "who": "A",
+    "fr": "Was macht ihr zusammen?",
+    "sv": "Vad gör ni tillsammans?"
+   },
+   {
+    "who": "B",
+    "fr": "Wir spielen Fußball, wir zocken, und am Wochenende gehen wir oft ins Schwimmbad.",
+    "sv": "Vi spelar fotboll, vi spelar dataspel, och på helgen går vi ofta till simhallen."
+   },
+   {
+    "who": "A",
+    "fr": "Was ist für dich ein guter Freund?",
+    "sv": "Vad är en bra vän för dig?"
+   },
+   {
+    "who": "B",
+    "fr": "Ein guter Freund ist ehrlich und treu. Er hört mir zu, wenn ich Probleme habe. Und wir lachen viel zusammen.",
+    "sv": "En bra vän är ärlig och lojal. Han lyssnar på mig när jag har problem. Och vi skrattar mycket tillsammans."
+   },
+   {
+    "who": "A",
+    "fr": "Habt ihr auch manchmal Streit?",
+    "sv": "Bråkar ni också ibland?"
+   },
+   {
+    "who": "B",
+    "fr": "Ja, klar. Aber wir vertragen uns immer schnell wieder.",
+    "sv": "Ja, klart. Men vi blir alltid sams snabbt igen."
+   }
+  ],
+  "questions": [
+   {
+    "type": "detalj",
+    "q": "Var träffades Ali och Ben?",
+    "opts": [
+     "I skolan",
+     "I fotbollsklubben",
+     "I simhallen",
+     "På en fest"
+    ],
+    "a": 1,
+    "why": "„Im Fußballverein.“"
+   },
+   {
+    "type": "detalj",
+    "q": "Varför behövde Ali hjälp?",
+    "opts": [
+     "Han var ny i stan och kände ingen",
+     "Han var skadad",
+     "Han kunde inte tyska",
+     "Han hade tappat bort sig"
+    ],
+    "a": 0,
+    "why": "„Ich war neu in der Stadt und kannte niemanden.“"
+   },
+   {
+    "type": "detalj",
+    "q": "Vad är en bra vän enligt Ali?",
+    "opts": [
+     "Någon som är rolig och rik",
+     "Någon som är ärlig och lojal och lyssnar",
+     "Någon som spelar fotboll",
+     "Någon som bor nära"
+    ],
+    "a": 1,
+    "why": "„ehrlich und treu. Er hört mir zu“."
+   },
+   {
+    "type": "detalj",
+    "q": "Vad händer när de bråkar?",
+    "opts": [
+     "De pratar inte på veckor",
+     "De blir snabbt sams igen",
+     "Ben blir alltid arg",
+     "De bråkar aldrig"
+    ],
+    "a": 1,
+    "why": "„wir vertragen uns immer schnell wieder“."
+   }
+  ],
+  "gloss": {
+   "freundschaft": {
+    "t": "die Freundschaft",
+    "sv": "vänskap",
+    "g": "f"
+   },
+   "kennengelernt": {
+    "t": "kennenlernen",
+    "sv": "lära känna",
+    "g": ""
+   },
+   "fußballverein": {
+    "t": "der Fußballverein",
+    "sv": "fotbollsklubb",
+    "g": "m"
+   },
+   "zocken": {
+    "t": "zocken",
+    "sv": "spela dataspel (vardagligt)",
+    "g": ""
+   },
+   "ehrlich": {
+    "t": "ehrlich",
+    "sv": "ärlig",
+    "g": ""
+   },
+   "jugend": {
+    "t": "die Jugend",
+    "sv": "ungdom",
+    "g": "f"
+   },
+   "willkommen": {
+    "t": "willkommen",
+    "sv": "välkommen",
+    "g": ""
+   },
+   "kannte": {
+    "t": "kennen",
+    "sv": "känna",
+    "g": ""
+   },
+   "streit": {
+    "t": "der Streit",
+    "sv": "bråk",
+    "g": "m"
+   },
+   "bei": {
+    "t": "bei",
+    "sv": "hos",
+    "g": ""
+   },
+   "dein": {
+    "t": "dein",
+    "sv": "din, ditt",
+    "g": ""
+   },
+   "euch": {
+    "t": "euch",
+    "sv": "er (du-form plural)",
+    "g": ""
+   },
+   "ihr": {
+    "t": "ihr",
+    "sv": "henne (dativ)",
+    "g": ""
+   },
+   "in": {
+    "t": "in",
+    "sv": "i, till (länder med artikel)",
+    "g": ""
+   },
+   "mir": {
+    "t": "mir",
+    "sv": "mig (dativ)",
+    "g": ""
+   },
+   "seit": {
+    "t": "seit",
+    "sv": "sedan, i (om tid)",
+    "g": ""
+   },
+   "treu": {
+    "t": "treu",
+    "sv": "trogen, lojal",
+    "g": ""
+   },
+   "uns": {
+    "t": "uns",
+    "sv": "oss",
+    "g": ""
+   },
+   "zu": {
+    "t": "zu",
+    "sv": "till (personer och platser)",
+    "g": ""
+   }
+  }
+ },
+ {
+  "id": "de2-l-b6",
+  "sec": "b6",
+  "title": "Einladung zur Geburtstagsparty",
+  "lines": [
+   {
+    "who": "A",
+    "fr": "Hallo Lara! Hast du am Samstag Zeit?",
+    "sv": "Hej Lara! Har du tid på lördag?"
+   },
+   {
+    "who": "B",
+    "fr": "Ich glaube ja. Warum?",
+    "sv": "Jag tror det. Varför?"
+   },
+   {
+    "who": "A",
+    "fr": "Ich habe am Samstag Geburtstag. Ich werde sechzehn! Ich möchte dich zu meiner Party einladen.",
+    "sv": "Jag fyller år på lördag. Jag fyller sexton! Jag vill bjuda dig på min fest."
+   },
+   {
+    "who": "B",
+    "fr": "Oh, toll! Herzlichen Glückwunsch schon mal! Wann und wo ist die Party?",
+    "sv": "Åh, kul! Grattis i förväg! När och var är festen?"
+   },
+   {
+    "who": "A",
+    "fr": "Um sieben Uhr bei mir zu Hause. Wir grillen im Garten, wenn das Wetter gut ist.",
+    "sv": "Klockan sju hemma hos mig. Vi grillar i trädgården om vädret är bra."
+   },
+   {
+    "who": "B",
+    "fr": "Und wenn es regnet?",
+    "sv": "Och om det regnar?"
+   },
+   {
+    "who": "A",
+    "fr": "Dann feiern wir im Keller. Wir haben dort Musik und eine Lichterkette.",
+    "sv": "Då firar vi i källaren. Vi har musik och en ljusslinga där."
+   },
+   {
+    "who": "B",
+    "fr": "Super. Soll ich etwas mitbringen?",
+    "sv": "Toppen. Ska jag ta med något?"
+   },
+   {
+    "who": "A",
+    "fr": "Vielleicht einen Salat? Und bring gute Laune mit!",
+    "sv": "Kanske en sallad? Och ta med dig gott humör!"
+   },
+   {
+    "who": "B",
+    "fr": "Klar! Was wünschst du dir zum Geburtstag?",
+    "sv": "Klart! Vad önskar du dig i födelsedagspresent?"
+   },
+   {
+    "who": "A",
+    "fr": "Ich weiß nicht … vielleicht ein Buch oder Kinokarten.",
+    "sv": "Jag vet inte … kanske en bok eller biobiljetter."
+   }
+  ],
+  "questions": [
+   {
+    "type": "helhet",
+    "q": "Varför ringer flickan till Lara?",
+    "opts": [
+     "För att bjuda henne på sin födelsedagsfest",
+     "För att fråga om läxan",
+     "För att låna en bok",
+     "För att gå på bio"
+    ],
+    "a": 0,
+    "why": "„Ich möchte dich zu meiner Party einladen.“"
+   },
+   {
+    "type": "detalj",
+    "q": "Hur gammal blir flickan?",
+    "opts": [
+     "Femton",
+     "Sexton",
+     "Sjutton",
+     "Arton"
+    ],
+    "a": 1,
+    "why": "„Ich werde sechzehn!“"
+   },
+   {
+    "type": "detalj",
+    "q": "Var firar de om det regnar?",
+    "opts": [
+     "I köket",
+     "I källaren",
+     "På ett kafé",
+     "Hos Lara"
+    ],
+    "a": 1,
+    "why": "„Dann feiern wir im Keller.“"
+   },
+   {
+    "type": "detalj",
+    "q": "Vad ska Lara ta med?",
+    "opts": [
+     "En tårta",
+     "Kanske en sallad",
+     "Dricka",
+     "Ingenting"
+    ],
+    "a": 1,
+    "why": "„Vielleicht einen Salat?“"
+   }
+  ],
+  "gloss": {
+   "einladen": {
+    "t": "einladen",
+    "sv": "bjuda in",
+    "g": ""
+   },
+   "keller": {
+    "t": "der Keller",
+    "sv": "källare",
+    "g": "m"
+   },
+   "grillen": {
+    "t": "grillen",
+    "sv": "grilla",
+    "g": ""
+   },
+   "garten": {
+    "t": "der Garten",
+    "sv": "trädgård",
+    "g": "m"
+   },
+   "wünschst": {
+    "t": "sich wünschen",
+    "sv": "önska sig",
+    "g": ""
+   },
+   "salat": {
+    "t": "der Salat",
+    "sv": "sallad",
+    "g": "m"
+   },
+   "geburtstag": {
+    "t": "der Geburtstag",
+    "sv": "födelsedag",
+    "g": "m"
+   },
+   "feiern": {
+    "t": "feiern",
+    "sv": "fira",
+    "g": ""
+   },
+   "werde": {
+    "t": "werden",
+    "sv": "bli; fylla (år)",
+    "g": ""
+   },
+   "bei": {
+    "t": "bei",
+    "sv": "hos",
+    "g": ""
+   },
+   "dir": {
+    "t": "dir",
+    "sv": "dig (dativ)",
+    "g": ""
+   },
+   "glückwunsch": {
+    "t": "der Glückwunsch (-wünsche)",
+    "sv": "gratulation, lyckönskning",
+    "g": "m"
+   },
+   "lichterkette": {
+    "t": "die Lichterkette (-n)",
+    "sv": "ljusslinga",
+    "g": "f"
+   },
+   "mir": {
+    "t": "mir",
+    "sv": "mig (dativ)",
+    "g": ""
+   },
+   "mitbringen": {
+    "t": "mitbringen",
+    "sv": "ta med sig",
+    "g": ""
+   },
+   "zu": {
+    "t": "zu",
+    "sv": "till (personer och platser)",
+    "g": ""
+   }
+  }
+ },
+ {
+  "id": "de2-l-b7",
+  "sec": "b7",
+  "title": "Durchsage am Bahnhof",
+  "lines": [
+   {
+    "fr": "Achtung am Gleis 5! Der ICE 578 von Hamburg nach München hat heute zwanzig Minuten Verspätung.",
+    "sv": "Observera vid spår 5! ICE 578 från Hamburg till München är tjugo minuter försenat i dag."
+   },
+   {
+    "fr": "Die neue Abfahrtszeit ist 14 Uhr 32.",
+    "sv": "Den nya avgångstiden är 14.32."
+   },
+   {
+    "fr": "Reisende nach Nürnberg: Bitte steigen Sie in Würzburg um. Ihr Anschlusszug wartet.",
+    "sv": "Resenärer till Nürnberg: Byt tåg i Würzburg. Ert anslutningståg väntar."
+   },
+   {
+    "fr": "Achtung, bitte! Der Regionalexpress nach Kassel fährt heute nicht von Gleis 3, sondern von Gleis 7.",
+    "sv": "Var god observera! Regionaltåget till Kassel går i dag inte från spår 3 utan från spår 7."
+   },
+   {
+    "fr": "Bitte beachten Sie die Änderung.",
+    "sv": "Var god notera ändringen."
+   },
+   {
+    "fr": "Und noch eine Information: Wegen Bauarbeiten fährt am Wochenende zwischen Frankfurt und Mannheim kein Zug.",
+    "sv": "Och ytterligare en information: på grund av byggarbeten går inget tåg mellan Frankfurt och Mannheim i helgen."
+   },
+   {
+    "fr": "Bitte nehmen Sie den Bus. Die Busse fahren vor dem Bahnhof ab, jede halbe Stunde.",
+    "sv": "Var god ta bussen. Bussarna avgår framför stationen, varje halvtimme."
+   },
+   {
+    "fr": "Wir wünschen Ihnen eine gute Reise.",
+    "sv": "Vi önskar er en trevlig resa."
+   }
+  ],
+  "questions": [
+   {
+    "type": "detalj",
+    "q": "Hur mycket är tåget till München försenat?",
+    "opts": [
+     "Fem minuter",
+     "Tjugo minuter",
+     "En halvtimme",
+     "En timme"
+    ],
+    "a": 1,
+    "why": "„hat heute zwanzig Minuten Verspätung“."
+   },
+   {
+    "type": "detalj",
+    "q": "Var ska resenärer till Nürnberg byta tåg?",
+    "opts": [
+     "I Hamburg",
+     "I Kassel",
+     "I Würzburg",
+     "I Frankfurt"
+    ],
+    "a": 2,
+    "why": "„Bitte steigen Sie in Würzburg um.“"
+   },
+   {
+    "type": "detalj",
+    "q": "Från vilket spår går tåget till Kassel i dag?",
+    "opts": [
+     "Spår 3",
+     "Spår 5",
+     "Spår 7",
+     "Spår 1"
+    ],
+    "a": 2,
+    "why": "„nicht von Gleis 3, sondern von Gleis 7“."
+   },
+   {
+    "type": "detalj",
+    "q": "Vad ska man göra mellan Frankfurt och Mannheim i helgen?",
+    "opts": [
+     "Ta bussen",
+     "Ta taxi",
+     "Vänta på nästa tåg",
+     "Byta i Kassel"
+    ],
+    "a": 0,
+    "why": "„Bitte nehmen Sie den Bus.“"
+   }
+  ],
+  "gloss": {
+   "gleis": {
+    "t": "das Gleis",
+    "sv": "spår",
+    "g": "n"
+   },
+   "verspätung": {
+    "t": "die Verspätung",
+    "sv": "försening",
+    "g": "f"
+   },
+   "abfahrtszeit": {
+    "t": "die Abfahrtszeit",
+    "sv": "avgångstid",
+    "g": "f"
+   },
+   "reisende": {
+    "t": "der/die Reisende",
+    "sv": "resenär",
+    "g": "m"
+   },
+   "anschlusszug": {
+    "t": "der Anschlusszug",
+    "sv": "anslutningståg",
+    "g": "m"
+   },
+   "beachten": {
+    "t": "beachten",
+    "sv": "lägga märke till",
+    "g": ""
+   },
+   "änderung": {
+    "t": "die Änderung",
+    "sv": "ändring",
+    "g": "f"
+   },
+   "bauarbeiten": {
+    "t": "die Bauarbeiten",
+    "sv": "byggarbeten",
+    "g": "pl"
+   },
+   "wegen": {
+    "t": "wegen",
+    "sv": "på grund av",
+    "g": ""
+   },
+   "achtung": {
+    "t": "die Achtung",
+    "sv": "observera!",
+    "g": "f"
+   },
+   "steigen": {
+    "t": "umsteigen",
+    "sv": "byta (tåg)",
+    "g": ""
+   },
+   "ihnen": {
+    "t": "ihnen",
+    "sv": "dem (dativ)",
+    "g": ""
+   },
+   "ihr": {
+    "t": "ihr",
+    "sv": "henne (dativ)",
+    "g": ""
+   },
+   "in": {
+    "t": "in",
+    "sv": "i, till (länder med artikel)",
+    "g": ""
+   },
+   "nach": {
+    "t": "nach",
+    "sv": "till (länder och städer)",
+    "g": ""
+   }
+  }
+ },
+ {
+  "id": "de2-l-b7b",
+  "sec": "b7",
+  "title": "Urlaub an der Ostsee",
+  "lines": [
+   {
+    "who": "A",
+    "fr": "Hi Max! Du bist ja ganz braun! Wo warst du im Urlaub?",
+    "sv": "Hej Max! Du är ju alldeles brun! Var var du på semestern?"
+   },
+   {
+    "who": "B",
+    "fr": "Wir waren zwei Wochen an der Ostsee, auf der Insel Usedom.",
+    "sv": "Vi var två veckor vid Östersjön, på ön Usedom."
+   },
+   {
+    "who": "A",
+    "fr": "Cool! Seid ihr mit dem Auto gefahren?",
+    "sv": "Häftigt! Åkte ni bil?"
+   },
+   {
+    "who": "B",
+    "fr": "Nein, mit dem Zug. Die Fahrt war lang, wir mussten zweimal umsteigen.",
+    "sv": "Nej, tåg. Resan var lång, vi var tvungna att byta två gånger."
+   },
+   {
+    "who": "A",
+    "fr": "Und wo habt ihr gewohnt?",
+    "sv": "Och var bodde ni?"
+   },
+   {
+    "who": "B",
+    "fr": "In einer Ferienwohnung, direkt am Strand. Das Wetter war fantastisch, fast jeden Tag Sonne.",
+    "sv": "I en semesterlägenhet, precis vid stranden. Vädret var fantastiskt, sol nästan varje dag."
+   },
+   {
+    "who": "A",
+    "fr": "Was habt ihr gemacht?",
+    "sv": "Vad gjorde ni?"
+   },
+   {
+    "who": "B",
+    "fr": "Wir haben viel gebadet und sind Rad gefahren. Einmal sind wir mit dem Boot nach Polen gefahren. Das war toll!",
+    "sv": "Vi badade mycket och cyklade. En gång åkte vi båt till Polen. Det var jättekul!"
+   },
+   {
+    "who": "A",
+    "fr": "Und das Essen?",
+    "sv": "Och maten?"
+   },
+   {
+    "who": "B",
+    "fr": "Fisch, Fisch, Fisch! Und jeden Abend ein Eis. Aber am letzten Tag hatte ich einen Sonnenbrand.",
+    "sv": "Fisk, fisk, fisk! Och en glass varje kväll. Men den sista dagen blev jag solbränd."
+   }
+  ],
+  "questions": [
+   {
+    "type": "helhet",
+    "q": "Var var Max på semester?",
+    "opts": [
+     "I Alperna",
+     "På en ö i Östersjön",
+     "I Polen hela tiden",
+     "Vid Nordsjön"
+    ],
+    "a": 1,
+    "why": "„an der Ostsee, auf der Insel Usedom“."
+   },
+   {
+    "type": "detalj",
+    "q": "Hur reste familjen?",
+    "opts": [
+     "Med bil",
+     "Med flyg",
+     "Med tåg",
+     "Med båt"
+    ],
+    "a": 2,
+    "why": "„Nein, mit dem Zug.“"
+   },
+   {
+    "type": "detalj",
+    "q": "Var bodde de?",
+    "opts": [
+     "På ett hotell",
+     "På en camping",
+     "I en semesterlägenhet vid stranden",
+     "Hos släktingar"
+    ],
+    "a": 2,
+    "why": "„In einer Ferienwohnung, direkt am Strand.“"
+   },
+   {
+    "type": "detalj",
+    "q": "Vad gjorde de en gång?",
+    "opts": [
+     "Åkte båt till Polen",
+     "Åkte tåg till Berlin",
+     "Gick på bio",
+     "Vandrade i bergen"
+    ],
+    "a": 0,
+    "why": "„Einmal sind wir mit dem Boot nach Polen gefahren.“"
+   }
+  ],
+  "gloss": {
+   "braun": {
+    "t": "braun",
+    "sv": "brun",
+    "g": ""
+   },
+   "fahrt": {
+    "t": "die Fahrt",
+    "sv": "resa, färd",
+    "g": "f"
+   },
+   "umsteigen": {
+    "t": "umsteigen",
+    "sv": "byta (tåg)",
+    "g": ""
+   },
+   "strand": {
+    "t": "der Strand",
+    "sv": "strand",
+    "g": "m"
+   },
+   "fantastisch": {
+    "t": "fantastisch",
+    "sv": "fantastisk",
+    "g": ""
+   },
+   "sonnenbrand": {
+    "t": "der Sonnenbrand",
+    "sv": "solbränna (som gör ont)",
+    "g": "m"
+   },
+   "fisch": {
+    "t": "der Fisch",
+    "sv": "fisk",
+    "g": "m"
+   },
+   "ostsee": {
+    "t": "die Ostsee",
+    "sv": "Östersjön",
+    "g": "f"
+   },
+   "gewohnt": {
+    "t": "wohnen",
+    "sv": "bo",
+    "g": ""
+   },
+   "an": {
+    "t": "an",
+    "sv": "vid, till (vatten)",
+    "g": ""
+   },
+   "auf": {
+    "t": "auf",
+    "sv": "på, upp på",
+    "g": ""
+   },
+   "cool": {
+    "t": "cool",
+    "sv": "cool, häftig",
+    "g": ""
+   },
+   "ferienwohnung": {
+    "t": "die Ferienwohnung (-en)",
+    "sv": "semesterlägenhet",
+    "g": "f"
+   },
+   "ihr": {
+    "t": "ihr",
+    "sv": "henne (dativ)",
+    "g": ""
+   },
+   "in": {
+    "t": "in",
+    "sv": "i, till (länder med artikel)",
+    "g": ""
+   },
+   "nach": {
+    "t": "nach",
+    "sv": "till (länder och städer)",
+    "g": ""
+   },
+   "polen": {
+    "t": "Polen",
+    "sv": "Polen",
+    "g": ""
+   },
+   "zweimal": {
+    "t": "zweimal",
+    "sv": "två gånger",
+    "g": ""
+   }
+  }
+ },
+ {
+  "id": "de2-l-b8",
+  "sec": "b8",
+  "title": "Interview: Deutsch in der Schweiz",
+  "lines": [
+   {
+    "who": "A",
+    "fr": "Grüezi! Du kommst aus der Schweiz, oder?",
+    "sv": "Grüezi! Du kommer från Schweiz, eller hur?"
+   },
+   {
+    "who": "B",
+    "fr": "Ja, genau. Ich heiße Nina und wohne in Luzern.",
+    "sv": "Ja, precis. Jag heter Nina och bor i Luzern."
+   },
+   {
+    "who": "A",
+    "fr": "Welche Sprachen sprichst du?",
+    "sv": "Vilka språk talar du?"
+   },
+   {
+    "who": "B",
+    "fr": "Zu Hause spreche ich Schweizerdeutsch. In der Schule lernen wir Hochdeutsch, Französisch und Englisch.",
+    "sv": "Hemma talar jag schweizertyska. I skolan lär vi oss standardtyska, franska och engelska."
+   },
+   {
+    "who": "A",
+    "fr": "Ist Schweizerdeutsch anders als Hochdeutsch?",
+    "sv": "Är schweizertyska annorlunda än standardtyska?"
+   },
+   {
+    "who": "B",
+    "fr": "Ja, sehr! Viele Deutsche verstehen uns nicht. Wir sagen zum Beispiel „Velo“ für Fahrrad und „Grüezi“ für Guten Tag.",
+    "sv": "Ja, väldigt! Många tyskar förstår oss inte. Vi säger till exempel ”Velo” för cykel och ”Grüezi” för god dag."
+   },
+   {
+    "who": "A",
+    "fr": "Wie viele Sprachen gibt es in der Schweiz?",
+    "sv": "Hur många språk finns det i Schweiz?"
+   },
+   {
+    "who": "B",
+    "fr": "Vier: Deutsch, Französisch, Italienisch und Rätoromanisch. Die meisten Leute sprechen Deutsch, etwa sechzig Prozent.",
+    "sv": "Fyra: tyska, franska, italienska och rätoromanska. De flesta talar tyska, ungefär sextio procent."
+   },
+   {
+    "who": "A",
+    "fr": "Warst du schon einmal in Schweden?",
+    "sv": "Har du varit i Sverige någon gång?"
+   },
+   {
+    "who": "B",
+    "fr": "Ja, letzten Sommer in Stockholm. Die Stadt hat mir sehr gut gefallen!",
+    "sv": "Ja, förra sommaren i Stockholm. Jag tyckte mycket om staden!"
+   }
+  ],
+  "questions": [
+   {
+    "type": "detalj",
+    "q": "Vilket språk talar Nina hemma?",
+    "opts": [
+     "Franska",
+     "Standardtyska",
+     "Schweizertyska",
+     "Italienska"
+    ],
+    "a": 2,
+    "why": "„Zu Hause spreche ich Schweizerdeutsch.“"
+   },
+   {
+    "type": "detalj",
+    "q": "Vad betyder ”Velo”?",
+    "opts": [
+     "Bil",
+     "Cykel",
+     "Buss",
+     "Hej"
+    ],
+    "a": 1,
+    "why": "„Velo“ für Fahrrad."
+   },
+   {
+    "type": "detalj",
+    "q": "Hur många nationella språk har Schweiz?",
+    "opts": [
+     "Två",
+     "Tre",
+     "Fyra",
+     "Fem"
+    ],
+    "a": 2,
+    "why": "„Vier: Deutsch, Französisch, Italienisch und Rätoromanisch.“"
+   },
+   {
+    "type": "detalj",
+    "q": "Hur stor del av schweizarna talar tyska?",
+    "opts": [
+     "Ungefär 20 procent",
+     "Ungefär 40 procent",
+     "Ungefär 60 procent",
+     "Alla"
+    ],
+    "a": 2,
+    "why": "„etwa sechzig Prozent“."
+   }
+  ],
+  "gloss": {
+   "hochdeutsch": {
+    "t": "das Hochdeutsch",
+    "sv": "standardtyska",
+    "g": "n"
+   },
+   "schweizerdeutsch": {
+    "t": "das Schweizerdeutsch",
+    "sv": "schweizertyska",
+    "g": "n"
+   },
+   "anders": {
+    "t": "anders",
+    "sv": "annorlunda",
+    "g": ""
+   },
+   "rätoromanisch": {
+    "t": "das Rätoromanisch",
+    "sv": "rätoromanska",
+    "g": "n"
+   },
+   "velo": {
+    "t": "das Velo",
+    "sv": "cykel (Schweiz)",
+    "g": "n"
+   },
+   "genau": {
+    "t": "genau",
+    "sv": "precis",
+    "g": ""
+   },
+   "etwa": {
+    "t": "etwa",
+    "sv": "ungefär",
+    "g": ""
+   },
+   "meisten": {
+    "t": "meiste",
+    "sv": "de flesta",
+    "g": ""
+   },
+   "aus": {
+    "t": "aus",
+    "sv": "från, ur",
+    "g": ""
+   },
+   "deutsche": {
+    "t": "der/die Deutsche (-n)",
+    "sv": "tysk (person)",
+    "g": "m"
+   },
+   "gefallen": {
+    "t": "gefallen",
+    "sv": "tycka om, gilla",
+    "g": ""
+   },
+   "in": {
+    "t": "in",
+    "sv": "i, till (länder med artikel)",
+    "g": ""
+   },
+   "italienisch": {
+    "t": "Italienisch",
+    "sv": "italienska",
+    "g": ""
+   },
+   "mir": {
+    "t": "mir",
+    "sv": "mig (dativ)",
+    "g": ""
+   },
+   "prozent": {
+    "t": "das Prozent (-e)",
+    "sv": "procent",
+    "g": "n"
+   },
+   "uns": {
+    "t": "uns",
+    "sv": "oss",
+    "g": ""
+   },
+   "zu": {
+    "t": "zu",
+    "sv": "till (personer och platser)",
+    "g": ""
+   }
+  }
+ }
+]

@@ -5,6 +5,7 @@ LANGUAGES.it1 = {
   title: "Italienska glosor",
   course: "Italienska 1",
   courseGy25: "Moderna språk – nybörjare, nivå 1",
+  step: 1,                       // steg 1–7 (Moderna språk 1–7), "U" = universitet; sorterar kursväljaren
   level: "A1",
   inLang: "på italienska",
   tts: "it-IT",

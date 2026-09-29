@@ -128,10 +128,10 @@ Skolverkets kommentarmaterial jämför stegen med GERS för betyget E: steg 1 = 
 | 1 | Moderna språk 1 | nybörjare, nivå 1 | A1.1 | Italienska 1 |
 | 2 | Moderna språk 2 | grund, nivå 1 | A1.2 | Italienska 2 |
 | 3 | Moderna språk 3 | fortsättning, nivå 1 | A2.1 | Franska 3 |
-| 4 | Moderna språk 4 | fortsättning, nivå 2 | A2.2 | Tyska 4 |
+| 4 | Moderna språk 4 | fortsättning, nivå 2 | A2.2 | Tyska 4, Franska 4 (`frs4`) |
 | 5 | Moderna språk 5 | fördjupning, nivå 1 | B1.1 | Tyska 5 |
-| 6 | Moderna språk 6 | fördjupning, nivå 2 | B1.2 | (Franska 4 och Tyska 6, planerade) |
-| 7 | Moderna språk 7 | fördjupning, nivå 3 | B2.1 | – |
+| 6 | Moderna språk 6 | fördjupning, nivå 2 | B1.2 | Tyska 6, Franska 6 (koden `fr4`) |
+| 7 | Moderna språk 7 | fördjupning, nivå 3 | B2.1 | Franska I (universitet, `fru`, `stepAs: 7`) |
 
 ### 2.2 Centralt innehåll per steg, kort (Gy11)
 
@@ -322,10 +322,10 @@ Förslag: `level` anger **kursens nivå enligt Skolverket (betyget E) och vart d
 | Franska 3 | A2 → B1 | `A2` | steg 3 = A2.1. B1 är provmålet (DELF B1), som redan står i `exam` |
 | Tyska 4 | B1 | `A2 → B1` | steg 4 = A2.2, kursen repeterar och för mot B1 |
 | Tyska 5 | B1 → B2 | `B1 → B2` | steg 5 = B1.1, provmålet B2 står i `exam`. Behåll |
-| Franska 4 (planerad) | B1 (upcoming.json) | `B1` | steg 4 = A2.2 enligt Skolverket, men eleven siktar på DELF B1. Skriv `A2 → B1` |
+| Franska 4 (`frs4`) | – | `A2 → B1` | steg 4 = A2.2. (Den tidigare "Franska 4", koden `fr4`, heter nu Franska 6: `B1`, steg 6) |
 | Tyska 6 (planerad) | B2 (upcoming.json) | `B1 → B2` | steg 6 = B1.2 |
 
-Om kursväljaren ska visa båda: lägg till ett fält `step` (1–7) och visa "Steg 4 · A2 → B1 · mål Goethe B2". Texten "B1" för Tyska 4 i `CLAUDE.md` och `italienska-plan.md` (Italienska 1 = A1.2, Italienska 2 = A2.1 i planens tabell) bör rättas samtidigt. Planens tabell förskjuter nivån ett halvsteg jämfört med kommentarmaterialet.
+**Genomfört 2026-09-29:** `step` (1–7, eller `"U"` för universitetet) finns i varje `lang.js` och i `languages/upcoming.json`, och kursväljaren visar "Tyska 4 · steg 4 · A2 → B1 · mål Goethe B1", grupperat per språk och sorterat efter steg. Kursen `fr4` heter sedan 2026-09-29 **Franska 6** (`step: 6`, `level: "B1"`), eftersom innehållet ligger på steg 6; det nya steg 4 och 5 är `frs4` och `frs5`, och Franska I (`fru`) har `level: "B2"` och visas som "motsvarar steg 7" (se `docs/nivaer-franska.md`). build.py varnar om `level` inte börjar med stegets nivå (1–2 A1, 3–4 A2, 5–6 B1, 7 B2). Texten "B1" för Tyska 4 i `CLAUDE.md` och `italienska-plan.md` (Italienska 1 = A1.2, Italienska 2 = A2.1 i planens tabell) bör rättas samtidigt. Planens tabell förskjuter nivån ett halvsteg jämfört med kommentarmaterialet.
 
 ---
 

@@ -1,0 +1,778 @@
+// Ordlista för Italienska 3 (A2.1). Rader som börjar med // är kommentarer och tas bort vid bygget.
+//
+// Format, en rad per ord:
+//   italienska|svenska|genus|exempel på italienska|exempel på svenska|kommentar
+// Hakparentes i den italienska exempelmeningen markerar luckan i meningsövningen:
+//   Ho [preso] il treno delle otto.
+// Genus: m, f, mpl, fpl eller tomt. Kommentaren får innehålla <b>fetstil</b>.
+// Substantiv skrivs med bestämd artikel, plural först i kommentaren. Verb har particip och hjälpverb i kommentaren.
+// En rad som börjar med # startar ett nytt avsnitt:  #id|Namn som visas
+// Avsnittets id och ordets italienska form används som nycklar för sparade framsteg,
+// så ändra inte ord-id eller avsnitts-id i efterhand (ändra gärna svenska, exempel och kommentar).
+// Orden i Italienska 1 och 2 (languages/it1/words.txt, languages/it2/words.txt) upprepas inte här.
+#k1|Kap 1 · Ricordi di viaggio
+la vacanza|semester, ledighet|f|L'anno scorso siamo andati in [vacanza] in Puglia.|Förra året åkte vi på semester till Apulien.|Plural: le vacanze. Man säger andare in vacanza och essere in vacanza. Latin <b>vacare</b> 'vara tom, ledig'.
+le ferie|semester (ledighet från jobbet)|fpl|Quest'anno mio padre prenderà le [ferie] ad agosto.|I år tar pappa semester i augusti.|Plural: finns bara i plural. Latin <b>feriae</b> 'helgdagar'. Ferie är ledigheten från jobbet, vacanza är semestern eller resan.
+il mare|hav|m|Da bambino passavo ogni estate al [mare].|Som liten tillbringade jag varje sommar vid havet.|Plural: i mari. andare al mare = åka till havet, till stranden. Latin <b>mare</b>.
+la montagna|berg, fjäll|f|D'inverno andavamo sempre in [montagna] a sciare.|På vintern åkte vi alltid till fjällen för att åka skidor.|Plural: le montagne. in montagna = i bergen, till bergen. Latin <b>mons</b> 'berg'.
+la spiaggia|strand|f|Siamo rimasti in [spiaggia] fino a sera.|Vi stannade på stranden till kvällen.|Plural: le spiagge. in spiaggia = på stranden.
+la collina|kulle|f|La casa dei nonni era su una [collina] vicino a Siena.|Mormor och morfars hus låg på en kulle nära Siena.|Plural: le colline. Latin <b>collis</b> 'kulle'. Toscana är känt för sina colline.
+la valle|dal|f|Dalla finestra si vedeva tutta la [valle].|Från fönstret såg man hela dalen.|Plural: le valli. Latin <b>vallis</b>. Valle d'Aosta är en region i nordvästra Italien.
+il porto|hamn|m|Il traghetto partiva dal [porto] di Genova alle nove.|Färjan gick från Genuas hamn klockan nio.|Plural: i porti. Latin <b>portus</b>.
+l'aeroporto|flygplats|m|Siamo arrivati all'[aeroporto] con due ore di anticipo.|Vi kom till flygplatsen två timmar i förväg.|Plural: gli aeroporti. Av <b>aereo</b> 'flygplan' + <b>porto</b> 'hamn'.
+il confine|gräns|m|Abbiamo attraversato il [confine] con la Svizzera in treno.|Vi åkte över gränsen till Schweiz med tåg.|Plural: i confini. Latin <b>confinis</b> 'gränsande'.
+la dogana|tull|f|Alla [dogana] hanno controllato tutte le valigie.|I tullen kontrollerade de alla resväskor.|Plural: le dogane. Från arabiska <b>dīwān</b> 'kontor'.
+la penisola|halvö|f|L'Italia è una [penisola] a forma di stivale.|Italien är en halvö formad som en stövel.|Plural: le penisole. Latin <b>paene</b> 'nästan' + <b>insula</b> 'ö'.
+il dialetto|dialekt|m|Il nonno parlava solo il [dialetto] napoletano.|Farfar pratade bara napolitansk dialekt.|Plural: i dialetti. I Italien har nästan varje region sin egen dialekt.
+il capoluogo|huvudort (i en region eller provins)|m|Palermo è il [capoluogo] della Sicilia.|Palermo är Siciliens huvudort.|Plural: i capoluoghi. Av <b>capo</b> 'huvud' + <b>luogo</b> 'plats'.
+la provincia|provins, landsort|f|Siamo stati in un paesino in [provincia] di Lecce.|Vi var i en liten by i provinsen Lecce.|Plural: le province. Italien är indelat i regioner, och regionerna i provinser.
+l'abitante|invånare|m|Roma ha quasi tre milioni di [abitanti].|Rom har nästan tre miljoner invånare.|Plural: gli abitanti. Samma form för kvinnor: l'abitante. Av <b>abitare</b> 'bo'.
+il viaggiatore|resenär|m|Mio zio era un grande [viaggiatore] e aveva visto mezzo mondo.|Min morbror var en stor resenär och hade sett halva världen.|Plural: i viaggiatori. Femininum: la viaggiatrice. Av <b>viaggiare</b>.
+il passeggero|passagerare|m|Tutti i [passeggeri] sono scesi dal treno a Bologna.|Alla passagerare steg av tåget i Bologna.|Plural: i passeggeri. Femininum: la passeggera.
+l'itinerario|resplan, färdväg|m|Prima di partire abbiamo preparato l'[itinerario] giorno per giorno.|Innan vi åkte gjorde vi upp resplanen dag för dag.|Plural: gli itinerari. Latin <b>iter</b> 'väg, resa'.
+la tappa|etapp, anhalt|f|La prima [tappa] del viaggio è stata Firenze.|Resans första anhalt var Florens.|Plural: le tappe. fare tappa a = göra uppehåll i.
+il ritorno|återresa, hemkomst|m|Il viaggio di [ritorno] è stato lunghissimo.|Hemresan var jättelång.|Plural: i ritorni. Av <b>tornare</b>. andata e ritorno = tur och retur.
+la tenda|tält; gardin|f|Abbiamo dormito in [tenda] per una settimana.|Vi sov i tält i en vecka.|Plural: le tende. Betyder också 'gardin'.
+il sacco a pelo|sovsäck|m|Mi sono dimenticato il [sacco a pelo] a casa!|Jag glömde sovsäcken hemma!|Plural: i sacchi a pelo. <b>sacco</b> 'säck' + <b>pelo</b> 'päls, hår'.
+la pensione|pensionat; pension|f|Stavamo sempre in una piccola [pensione] vicino al mare.|Vi bodde alltid på ett litet pensionat nära havet.|Plural: le pensioni. Betyder också 'pension': andare in pensione = gå i pension.
+il finestrino|fönster (i tåg, bil, flygplan)|m|Guardavo il paesaggio dal [finestrino] del treno.|Jag tittade på landskapet genom tågfönstret.|Plural: i finestrini. Diminutiv av <b>finestra</b> 'fönster'.
+la cintura|bälte|f|In macchina bisogna sempre mettere la [cintura].|I bilen måste man alltid ta på sig bältet.|Plural: le cinture. la cintura di sicurezza = säkerhetsbälte.
+la benzina|bensin|f|Ci siamo fermati perché non avevamo più [benzina].|Vi stannade för att vi inte hade mer bensin.|Plural: le benzine (ovanligt). fare benzina = tanka.
+la macchina fotografica|kamera|f|Ho portato in viaggio la vecchia [macchina fotografica] del nonno.|Jag tog med morfars gamla kamera på resan.|Plural: le macchine fotografiche. <b>macchina</b> 'maskin' + <b>fotografica</b> 'fotografisk'.
+la fotografia|fotografi, foto|f|In questa [fotografia] avevo solo sei anni.|På det här fotot var jag bara sex år.|Plural: le fotografie. Oftast förkortat la foto (plural le foto). Grekiska <b>phōs</b> 'ljus' + <b>graphein</b> 'skriva'.
+il diario|dagbok|m|Durante il viaggio scrivevo tutto nel mio [diario].|Under resan skrev jag allt i min dagbok.|Plural: i diari. Latin <b>dies</b> 'dag'. I Italien betyder det också 'skolkalender'.
+la memoria|minne|f|Ho una buona [memoria]: ricordo ancora il nome dell'albergo.|Jag har bra minne: jag minns fortfarande hotellets namn.|Plural: le memorie. Minnesförmågan heter memoria, ett enskilt minne heter ricordo.
+la nostalgia|längtan, hemlängtan|f|Dopo un mese all'estero avevo [nostalgia] di casa.|Efter en månad utomlands längtade jag hem.|Plural: le nostalgie. avere nostalgia di = längta efter. Grekiska <b>nostos</b> 'hemkomst' + <b>algos</b> 'smärta'.
+il panorama|utsikt, panorama|m|Dalla torre c'era un [panorama] bellissimo.|Från tornet var det en jättevacker utsikt.|Plural: i panorami. Maskulinum trots -a (grekiskt ursprung).
+la vista|utsikt; syn|f|Avevamo una camera con [vista] sul mare.|Vi hade ett rum med havsutsikt.|Plural: le viste. Av <b>vedere</b> 'se'. Betyder också 'syn'.
+la folla|folkmassa, trängsel|f|A Venezia c'era una [folla] incredibile.|I Venedig var det en otrolig trängsel.|Plural: le folle.
+l'ombrellone|parasoll (på stranden)|m|Abbiamo affittato un [ombrellone] e due lettini.|Vi hyrde ett parasoll och två solstolar.|Plural: gli ombrelloni. Förstoring av <b>ombrello</b> 'paraply'.
+l'onda|våg|f|Quel giorno le [onde] erano altissime.|Den dagen var vågorna jättehöga.|Plural: le onde. Latin <b>unda</b>.
+l'avventura|äventyr|f|Quel viaggio in Sardegna è stato una vera [avventura].|Den resan till Sardinien var ett riktigt äventyr.|Plural: le avventure. Latin <b>adventura</b> 'det som ska komma'.
+il mondo|värld|m|Un giorno vorrei fare il giro del [mondo].|En dag skulle jag vilja resa jorden runt.|Plural: i mondi. fare il giro del mondo = resa jorden runt. Latin <b>mundus</b>.
+l'aereo|flygplan|m|Era la prima volta che prendevo l'[aereo].|Det var första gången jag flög.|Plural: gli aerei. in aereo = med flyg. Grekiska <b>aēr</b> 'luft'.
+il luogo|plats, ställe|m|È un [luogo] magico: ci tornerò sicuramente.|Det är en magisk plats: dit kommer jag säkert att åka tillbaka.|Plural: i luoghi. Lite formellare än posto. Latin <b>locus</b>.
+viaggiare|resa||Da giovane mia nonna [ha viaggiato] molto in Europa.|Som ung reste min mormor mycket i Europa.|Passato prossimo: ho viaggiato. Av <b>viaggio</b> 'resa'.
+partire|åka i väg, resa||Siamo [partiti] alle cinque di mattina.|Vi åkte klockan fem på morgonen.|Passato prossimo: sono partito/partita (essere). Motsats: arrivare.
+arrivare|komma fram, anlända||Quando [siamo arrivati] a Napoli pioveva.|När vi kom fram till Neapel regnade det.|Passato prossimo: sono arrivato/arrivata (essere).
+esplorare|utforska||Il primo giorno [abbiamo esplorato] il centro storico.|Första dagen utforskade vi den gamla stadskärnan.|Passato prossimo: ho esplorato.
+fermarsi|stanna||Ci [siamo fermati] a mangiare in un autogrill.|Vi stannade och åt på ett vägkafé.|Passato prossimo: mi sono fermato/fermata. Ett autogrill är en restaurang vid motorvägen.
+camminare|gå, promenera||[Abbiamo camminato] per tre ore in montagna.|Vi gick i tre timmar i bergen.|Passato prossimo: ho camminato. Andare = gå någonstans, camminare = röra sig till fots.
+raggiungere|nå fram till; ansluta till||Domani [raggiungeremo] i nostri amici a Roma.|I morgon ansluter vi till våra vänner i Rom.|Passato prossimo: ho raggiunto. Oregelbunden particip: raggiunto.
+percorrere|färdas, tillryggalägga||[Abbiamo percorso] più di mille chilometri in macchina.|Vi körde mer än tusen kilometer.|Passato prossimo: ho percorso. Oregelbunden particip: percorso. Av <b>per</b> 'genom' + <b>correre</b> 'springa'.
+guidare|köra (bil); leda||Mio padre [ha guidato] tutta la notte.|Pappa körde hela natten.|Passato prossimo: ho guidato. la patente = körkort.
+affittare|hyra, hyra ut||L'estate scorsa [abbiamo affittato] una casa in Liguria.|Förra sommaren hyrde vi ett hus i Ligurien.|Passato prossimo: ho affittato. Affittare används om bostäder, noleggiare om bil och cykel.
+fotografare|fotografera||[Ho fotografato] ogni monumento di Roma.|Jag fotograferade varje monument i Rom.|Passato prossimo: ho fotografato.
+salutare|hälsa på, säga hej då||Prima di partire [abbiamo salutato] tutti i vicini.|Innan vi åkte sa vi hej då till alla grannar.|Passato prossimo: ho salutato. Av <b>salute</b> 'hälsa'.
+spedire|skicka||Ti [spedirò] una cartolina da Venezia.|Jag ska skicka ett vykort till dig från Venedig.|Passato prossimo: ho spedito. Böjs med -isc- som finire: spedisco, spedisci …
+accompagnare|följa, skjutsa||Lo zio ci [ha accompagnato] all'aeroporto.|Morbror skjutsade oss till flygplatsen.|Passato prossimo: ho accompagnato. Av <b>compagno</b> 'kamrat'.
+trascorrere|tillbringa||[Abbiamo trascorso] due settimane in Calabria.|Vi tillbringade två veckor i Kalabrien.|Passato prossimo: ho trascorso. Oregelbunden particip: trascorso. Betyder samma sak som passare om tid.
+mostrare|visa||La guida ci [ha mostrato] la casa di Giulietta.|Guiden visade oss Julias hus.|Passato prossimo: ho mostrato. Latin <b>monstrare</b>.
+riconoscere|känna igen||Dopo dieci anni non [ho riconosciuto] il paese.|Efter tio år kände jag inte igen byn.|Passato prossimo: ho riconosciuto. Böjs som conoscere. <b>ri-</b> 'åter' + <b>conoscere</b> 'känna'.
+sembrare|verka, se ut||La città mi [sembrava] enorme.|Staden verkade enorm för mig.|Passato prossimo: è sembrato/sembrata (essere). Mi sembra = jag tycker, det verkar.
+sbagliare|göra fel, ta fel||[Abbiamo sbagliato] strada e siamo finiti in un paesino.|Vi tog fel väg och hamnade i en liten by.|Passato prossimo: ho sbagliato. sbagliare strada = ta fel väg.
+abituarsi|vänja sig||All'inizio era difficile, ma poi mi [sono abituato] al caldo.|I början var det svårt, men sedan vande jag mig vid värmen.|Passato prossimo: mi sono abituato/abituata. abituarsi a qualcosa = vänja sig vid något.
+lasciare|lämna; låta||[Abbiamo lasciato] la macchina al parcheggio e siamo andati a piedi.|Vi lämnade bilen på parkeringen och gick.|Passato prossimo: ho lasciato. Betyder också 'låta': lasciami dormire!
+trovare|hitta||Per caso [abbiamo trovato] una piccola trattoria in montagna.|Av en slump hittade vi en liten trattoria i bergen.|Passato prossimo: ho trovato. trovarsi = befinna sig, ligga; trovarsi bene = trivas.
+indimenticabile|oförglömlig||Quella vacanza a Capri è stata [indimenticabile].|Den semestern på Capri var oförglömlig.|Femininum: indimenticabile (samma form). Av <b>in-</b> 'o-' + <b>dimenticare</b> 'glömma'.
+straniero|utländsk; utlänning||In estate ci sono molti turisti [stranieri].|På sommaren finns det många utländska turister.|Femininum: straniera. Också substantiv: lo straniero 'utlänningen'. Latin <b>extraneus</b> 'yttre, främmande'.
+famoso|berömd, känd||Siamo andati a vedere la [famosa] torre di Pisa.|Vi åkte för att se det berömda tornet i Pisa.|Femininum: famosa. Latin <b>fama</b> 'rykte'.
+antico|forntida, antik, gammal||Pompei è una città [antica] distrutta dal Vesuvio.|Pompeji är en antik stad som förstördes av Vesuvius.|Femininum: antica. Plural: antichi, antiche.
+tipico|typisk||A Bologna abbiamo mangiato i piatti [tipici] della regione.|I Bologna åt vi regionens typiska rätter.|Femininum: tipica. Plural: tipici, tipiche.
+pieno|full||Il treno era [pieno] di turisti.|Tåget var fullt av turister.|Femininum: piena. pieno di = full av. Motsats: vuoto 'tom'.
+affollato|full av folk, trång||D'estate le spiagge sono sempre [affollate].|På sommaren är stränderna alltid fulla av folk.|Femininum: affollata. Av <b>folla</b> 'folkmassa'.
+stupendo|fantastisk, underbar||Il panorama da Positano era [stupendo].|Utsikten från Positano var fantastisk.|Femininum: stupenda. Latin <b>stupere</b> 'häpna'.
+meraviglioso|underbar||Abbiamo passato una settimana [meravigliosa].|Vi hade en underbar vecka.|Femininum: meravigliosa. Av <b>meraviglia</b> 'under, förundran'.
+lento|långsam||Il treno regionale era [lentissimo].|Regionaltåget var jättelångsamt.|Femininum: lenta. Adverb: lentamente.
+veloce|snabb||Con il Frecciarossa il viaggio è più [veloce].|Med Frecciarossa går resan snabbare.|Femininum: veloce (samma form). Frecciarossa är Italiens snabbtåg.
+stretto|smal, trång||Le strade di Napoli sono [strette] e piene di motorini.|Neapels gator är smala och fulla av mopeder.|Femininum: stretta. Motsats: largo 'bred'.
+abbronzato|solbränd||Sei tornato dalla Sicilia tutto [abbronzato]!|Du kom tillbaka från Sicilien alldeles solbränd!|Femininum: abbronzata. Av verbet abbronzarsi 'bli brun'.
+deserto|öde, tom||La mattina presto la spiaggia era [deserta].|Tidigt på morgonen var stranden öde.|Femininum: deserta. Också substantiv: il deserto 'öknen'.
+durante|under (om tid)||[Durante] il viaggio ho letto tre libri.|Under resan läste jag tre böcker.|Preposition. Latin <b>durare</b> 'vara, hålla på'.
+verso|mot, åt; vid (om tid)||Siamo arrivati a Roma [verso] le dieci di sera.|Vi kom fram till Rom vid tiotiden på kvällen.|Preposition. verso sud = söderut, verso le dieci = vid tiotiden.
+già|redan||Quando siamo arrivati, il sole era [già] tramontato.|När vi kom fram hade solen redan gått ner.|Adverb. Motsats: non … ancora 'inte än'.
+appena|precis, nyss; så fort||Eravamo [appena] arrivati quando ha cominciato a piovere.|Vi hade precis kommit fram när det började regna.|Adverb. Som konjunktion: appena arrivo, ti chiamo = så fort jag kommer fram ringer jag dig.
+a lungo|länge||Siamo rimasti [a lungo] a guardare il mare.|Vi stod länge och tittade på havet.|Adverb.|<b>a</b> på · <b>lungo</b> lång → "på lång (tid)"
+fare un viaggio|göra en resa, resa||L'anno prossimo [faremo un viaggio] in Sicilia.|Nästa år ska vi resa till Sicilien.|Passato prossimo: ho fatto un viaggio.|<b>fare</b> göra · <b>un viaggio</b> en resa
+andare in vacanza|åka på semester||Da piccoli [andavamo in vacanza] sempre nello stesso posto.|När vi var små åkte vi alltid på semester till samma ställe.|Passato prossimo: sono andato/andata in vacanza.|<b>andare</b> gå, åka · <b>in vacanza</b> på semester
+fare il bagno|bada||Ogni mattina [facevamo il bagno] in mare.|Varje morgon badade vi i havet.|Passato prossimo: ho fatto il bagno. Betyder också 'bada i badkar'.|<b>fare</b> göra · <b>il bagno</b> badet → "göra badet"
+prendere il sole|sola||La mamma [prendeva il sole] mentre noi giocavamo.|Mamma solade medan vi lekte.|Passato prossimo: ho preso il sole.|<b>prendere</b> ta · <b>il sole</b> solen → "ta solen"
+fare una foto|ta ett foto||Scusi, ci può [fare una foto]?|Ursäkta, kan ni ta ett foto av oss?|Passato prossimo: ho fatto una foto. Man säger också scattare una foto.|<b>fare</b> göra · <b>una foto</b> ett foto → "göra ett foto"
+per la prima volta|för första gången||Nel 2019 ho visto il mare [per la prima volta].|År 2019 såg jag havet för första gången.|Motsats: per l'ultima volta 'för sista gången'.|<b>per</b> för · <b>la prima</b> den första · <b>volta</b> gång
+ne vale la pena|det är värt det||È un viaggio lungo, ma [ne vale la pena].|Det är en lång resa, men det är värt det.|Av <b>valere</b> 'vara värd'. Dåtid: ne è valsa la pena.|<b>ne</b> av det · <b>vale</b> är värd · <b>la pena</b> mödan → "det är värt mödan"
+c'era una volta|det var en gång||[C'era una volta] un piccolo paese sul mare.|Det var en gång en liten by vid havet.|Så börjar sagor. C'era är imperfetto av c'è.|<b>c'era</b> det fanns · <b>una volta</b> en gång
+andare in giro|åka runt, gå runt||Abbiamo noleggiato le bici per [andare in giro] per l'isola.|Vi hyrde cyklar för att åka runt på ön.|Passato prossimo: sono andato/andata in giro.|<b>andare</b> gå · <b>in giro</b> i runda → "gå i runda"
+fare l'autostop|lifta||Da giovane mio padre [ha fatto l'autostop] fino in Grecia.|Som ung liftade pappa ända till Grekland.|Passato prossimo: ho fatto l'autostop.|<b>fare</b> göra · <b>l'autostop</b> liftandet (från engelska auto + stop)
+#k2|Kap 2 · Studiare e lavorare
+l'insegnante|lärare|m|Il nostro [insegnante] di storia era molto simpatico.|Vår historielärare var väldigt trevlig.|Plural: gli insegnanti. Samma form för kvinnor: l'insegnante. Av <b>insegnare</b> 'undervisa'.
+il preside|rektor|m|Il [preside] ha parlato a tutta la scuola.|Rektorn talade till hela skolan.|Plural: i presidi. Femininum: la preside. Latin <b>praesidere</b> 'sitta ordförande'.
+l'alunno|elev|m|In questa classe ci sono venticinque [alunni].|I den här klassen finns det tjugofem elever.|Plural: gli alunni. Femininum: l'alunna. Latin <b>alumnus</b> 'fosterbarn'.
+l'aula|klassrum, sal|f|L'[aula] di chimica è al secondo piano.|Kemisalen ligger på andra våningen.|Plural: le aule. Latin <b>aula</b> 'gård, sal'.
+la lavagna|tavla (i klassrummet)|f|Il professore ha scritto la regola alla [lavagna].|Läraren skrev regeln på tavlan.|Plural: le lavagne. Efter staden <b>Lavagna</b> i Ligurien, där man bröt skiffer till tavlor.
+il banco|skolbänk; disk|m|Mi sono seduto all'ultimo [banco] vicino alla finestra.|Jag satte mig i den sista bänken vid fönstret.|Plural: i banchi. Betyder också 'disk, stånd' på marknaden.
+la ricreazione|rast|f|Durante la [ricreazione] mangiavamo la merenda in cortile.|På rasten åt vi mellanmål på skolgården.|Plural: le ricreazioni. Man säger också l'intervallo.
+la mensa|matsal (i skola, på jobb)|f|In Svezia il pranzo alla [mensa] è gratis.|I Sverige är lunchen i skolmatsalen gratis.|Plural: le mense. Latin <b>mensa</b> 'bord'.
+l'esame|prov, examen|m|L'anno prossimo farò l'[esame] di maturità.|Nästa år tar jag studentexamen.|Plural: gli esami. fare/dare un esame = göra ett prov.
+l'esercizio|övning|m|Per domani dovete fare gli [esercizi] a pagina venti.|Till i morgon ska ni göra övningarna på sidan tjugo.|Plural: gli esercizi. Latin <b>exercitium</b>.
+il risultato|resultat|m|Quando arriveranno i [risultati] dell'esame?|När kommer provresultaten?|Plural: i risultati.
+la media|medelbetyg, snitt|f|Quest'anno ho la [media] dell'otto.|I år har jag åtta i snitt.|Plural: le medie. I Italien sätts betyg från 1 till 10, och 6 är godkänt. La scuola media = högstadiet.
+l'errore|fel, misstag|m|Nel compito ho fatto solo due [errori].|I provet gjorde jag bara två fel.|Plural: gli errori. Latin <b>errare</b> 'irra, ta fel'.
+la risposta|svar|f|Non sapevo la [risposta] e sono diventato rosso.|Jag kunde inte svaret och blev röd.|Plural: le risposte. Av <b>rispondere</b> 'svara'.
+la regola|regel|f|Il professore ci ha spiegato la [regola] del passato prossimo.|Läraren förklarade regeln för passato prossimo för oss.|Plural: le regole. Latin <b>regula</b> 'linjal, rättesnöre'.
+l'argomento|ämne (att prata eller skriva om)|m|Qual è l'[argomento] della tua presentazione?|Vad handlar din presentation om?|Plural: gli argomenti. Ett skolämne heter la materia.
+il riassunto|sammanfattning|m|Per domani dobbiamo scrivere un [riassunto] del capitolo.|Till i morgon ska vi skriva en sammanfattning av kapitlet.|Plural: i riassunti. Av <b>riassumere</b> 'sammanfatta'.
+il tema|uppsats; tema|m|Ieri in classe abbiamo scritto un [tema] sulle vacanze.|Igår skrev vi en uppsats om sommarlovet i klassen.|Plural: i temi. Maskulinum trots -a (grekiskt ursprung).
+il dizionario|ordbok|m|Posso usare il [dizionario] durante la verifica?|Får jag använda ordboken under provet?|Plural: i dizionari. Latin <b>dictio</b> 'ord, uttryck'.
+il foglio|pappersark, blad|m|Prendete un [foglio] e scrivete il vostro nome.|Ta ett papper och skriv ert namn.|Plural: i fogli. Latin <b>folium</b> 'blad'.
+l'astuccio|pennfodral|m|Nel mio [astuccio] ci sono penne di tutti i colori.|I mitt pennfodral finns det pennor i alla färger.|Plural: gli astucci.
+la fisica|fysik|f|A me la [fisica] sembrava difficilissima.|Jag tyckte att fysik var jättesvårt.|Plural: används inte i plural som skolämne. Grekiska <b>physis</b> 'natur'. Il fisico = fysikern.
+la chimica|kemi|f|Nel laboratorio di [chimica] abbiamo fatto un esperimento.|I kemisalen gjorde vi ett experiment.|Plural: används inte i plural som skolämne. Il chimico = kemisten.
+l'informatica|datavetenskap, IT|f|Al liceo scientifico si studia anche l'[informatica].|På det naturvetenskapliga gymnasiet läser man också IT.|Plural: används inte i plural. Av <b>informazione</b> + <b>automatica</b>.
+la filosofia|filosofi|f|In Italia la [filosofia] si studia al liceo per tre anni.|I Italien läser man filosofi i tre år på gymnasiet.|Plural: le filosofie. Grekiska <b>philos</b> 'vän' + <b>sophia</b> 'visdom'.
+il latino|latin|m|Mio fratello studiava [latino] e greco al liceo classico.|Min bror läste latin och grekiska på den klassiska gymnasielinjen.|Plural: används inte i plural om språket. Av <b>Lazio</b>, latin Latium, regionen runt Rom.
+lo studio|studier; arbetsrum|m|Dopo il liceo continuerò gli [studi] all'università.|Efter gymnasiet ska jag fortsätta studera på universitetet.|Plural: gli studi. Betyder också 'arbetsrum, mottagning': lo studio del medico.
+la conoscenza|kunskap; bekantskap|f|Per questo lavoro serve una buona [conoscenza] dell'inglese.|För det här jobbet behövs goda kunskaper i engelska.|Plural: le conoscenze. Av <b>conoscere</b> 'känna till'.
+l'orario|schema; tidtabell|m|Secondo l'[orario], il lunedì abbiamo sei ore di lezione.|Enligt schemat har vi sex lektioner på måndagar.|Plural: gli orari. Också 'tidtabell': l'orario dei treni. Av <b>ora</b> 'timme'.
+il diploma|examensbevis (från gymnasiet)|m|Prenderò il [diploma] tra due anni.|Jag tar studenten om två år.|Plural: i diplomi. Maskulinum trots -a (grekiskt ursprung). Gymnasiet slutar med esame di maturità och diploma.
+il lavoro|arbete, jobb|m|Quest'estate troverò sicuramente un [lavoro].|I sommar kommer jag säkert att hitta ett jobb.|Plural: i lavori. Av <b>lavorare</b> 'arbeta'.
+l'ufficio|kontor|m|Ieri mia madre è rimasta in [ufficio] fino alle otto.|Igår stannade mamma på kontoret till åtta.|Plural: gli uffici. Latin <b>officium</b> 'plikt, tjänst'.
+l'azienda|företag|f|Mio zio lavora in un'[azienda] che produce scarpe.|Min morbror jobbar på ett företag som tillverkar skor.|Plural: le aziende. Man säger också la ditta.
+il capo|chef|m|Il mio [capo] era molto gentile con me.|Min chef var väldigt snäll mot mig.|Plural: i capi. Betyder egentligen 'huvud', som i capoluogo.
+il cliente|kund|m|Al negozio dovevo essere sempre gentile con i [clienti].|I affären var jag tvungen att alltid vara trevlig mot kunderna.|Plural: i clienti. Femininum: la cliente.
+il dipendente|anställd|m|L'azienda di mio padre ha cinquanta [dipendenti].|Pappas företag har femtio anställda.|Plural: i dipendenti. Samma form för kvinnor: la dipendente. Av <b>dipendere</b> 'bero på'.
+il contratto|kontrakt, avtal|m|Prima di cominciare ho firmato il [contratto].|Innan jag började skrev jag på kontraktet.|Plural: i contratti. Latin <b>contractus</b> 'överenskommelse'.
+la paga|lön (per timme eller vecka)|f|Per me la [paga] era bassa, ma il lavoro mi piaceva.|Jag tyckte att lönen var låg, men jag gillade jobbet.|Plural: le paghe. Av <b>pagare</b> 'betala'. Månadslön heter lo stipendio.
+la pausa|paus, rast|f|Durante la [pausa] andavo al bar con lui.|Under pausen gick jag till kaféet med honom.|Plural: le pause. Grekiska <b>pausis</b> 'upphörande'.
+la professione|yrke|f|Che [professione] vorresti fare in futuro?|Vilket yrke skulle du vilja ha i framtiden?|Plural: le professioni. Mer formellt än il mestiere.
+l'ingegnere|ingenjör|m|Mia sorella studia per diventare [ingegnere].|Min syster pluggar för att bli ingenjör.|Plural: gli ingegneri. Samma form används ofta för kvinnor. Av <b>ingegno</b> 'begåvning, uppfinningsrikedom'.
+il cuoco|kock|m|Da grande farò il [cuoco] in un grande ristorante.|När jag blir stor ska jag bli kock på en stor restaurang.|Plural: i cuochi. Femininum: la cuoca. fare il cuoco = jobba som kock.
+il poliziotto|polis|m|Il [poliziotto] ci ha chiesto i documenti.|Polisen bad att få se våra id-handlingar.|Plural: i poliziotti. Femininum: la poliziotta. La polizia = polisen (myndigheten).
+il dentista|tandläkare|m|Il [dentista] mi ha detto di lavarmi meglio i denti.|Tandläkaren sa åt mig att borsta tänderna bättre.|Plural: i dentisti. Femininum: la dentista, plural le dentiste. Av <b>dente</b> 'tand'.
+l'autista|chaufför, förare|m|Mio nonno faceva l'[autista] di autobus.|Min farfar jobbade som busschaufför.|Plural: gli autisti. Samma form för kvinnor: l'autista, plural le autiste.
+il bagnino|badvakt, livräddare|m|L'estate scorsa ho lavorato come [bagnino] a Rimini.|Förra sommaren jobbade jag som badvakt i Rimini.|Plural: i bagnini. Femininum: la bagnina. Av <b>bagno</b> 'bad'.
+la babysitter|barnvakt|f|Quest'estate farò la [babysitter] per i vicini.|I sommar ska jag vara barnvakt åt grannarna.|Plural: le babysitter (oförändrat). Lånord från engelska.
+il cassiere|kassör, kassabiträde|m|Il [cassiere] mi ha dato il resto sbagliato.|Kassören gav mig fel växel.|Plural: i cassieri. Femininum: la cassiera. Av <b>cassa</b> 'kassa'.
+il segretario|sekreterare|m|Il [segretario] della scuola mi ha dato l'orario delle lezioni.|Skolans sekreterare gav mig mitt schema.|Plural: i segretari. Femininum: la segretaria. La segreteria = skolans expedition.
+insegnare|undervisa, lära ut||La signora Rossi [ha insegnato] in questa scuola per trent'anni.|Fru Rossi undervisade på den här skolan i trettio år.|Passato prossimo: ho insegnato. Imparare = lära sig, insegnare = lära någon annan.
+spiegare|förklara||Il prof ci [ha spiegato] l'esercizio due volte.|Läraren förklarade övningen två gånger för oss.|Passato prossimo: ho spiegato. Tu-formen får h: spieghi. Futuro: spiegherò.
+capire|förstå||Finalmente [ho capito] come funziona il futuro!|Äntligen har jag förstått hur futurum fungerar!|Passato prossimo: ho capito. Böjs med -isc-: capisco, capisci, capisce, capiamo, capite, capiscono.
+sapere|veta; kunna||[Sapevo] già leggere a cinque anni.|Jag kunde redan läsa när jag var fem.|Passato prossimo: ho saputo (= fick veta). Oregelbundet: so, sai, sa, sappiamo, sapete, sanno. Futuro: saprò. Sapere + infinitiv = kunna (ha lärt sig).
+frequentare|gå i (skola); umgås med||Anche mio padre [frequentava] questo liceo.|Pappa gick också på det här gymnasiet.|Passato prossimo: ho frequentato. Betyder också 'umgås med' någon.
+copiare|skriva av, fuska||Durante la verifica Marco [ha copiato] dal compagno.|Under provet skrev Marco av från kompisen.|Passato prossimo: ho copiato. Tu-formen: copi (bara ett i).
+bocciare|kugga, underkänna||Se non studi, ti [bocceranno]!|Om du inte pluggar kommer de att kugga dig!|Passato prossimo: ho bocciato. Essere bocciato = få gå om ett år. Motsats: essere promosso. Futuro: boccerò (utan i).
+concentrarsi|koncentrera sig||Con questo rumore non riesco a [concentrarmi].|Med det här oväsendet kan jag inte koncentrera mig.|Passato prossimo: mi sono concentrato/concentrata.
+correggere|rätta, korrigera||La prof [ha corretto] i nostri temi in un giorno.|Läraren rättade våra uppsatser på en dag.|Passato prossimo: ho corretto. Oregelbunden particip: corretto.
+ripetere|upprepa; gå om||Il professore [ha ripetuto] la domanda tre volte.|Läraren upprepade frågan tre gånger.|Passato prossimo: ho ripetuto. ripetere l'anno = gå om ett år.
+occuparsi di|ta hand om, syssla med||In quel negozio mi [occupavo] dei clienti stranieri.|I den affären tog jag hand om de utländska kunderna.|Passato prossimo: mi sono occupato/occupata.
+aiutare|hjälpa||Mia sorella mi [aiuterà] con i compiti di matematica.|Min syster ska hjälpa mig med matteläxan.|Passato prossimo: ho aiutato. Latin <b>adiutare</b>.
+servire|servera; behövas||D'estate [servivo] ai tavoli in una pizzeria.|På sommaren serverade jag i en pizzeria.|Passato prossimo: ho servito. Mi serve = jag behöver.
+consegnare|lämna in; leverera||Ieri [ho consegnato] il tema alla professoressa.|Igår lämnade jag in uppsatsen till läraren.|Passato prossimo: ho consegnato. Betyder också 'leverera' (pizzor, paket).
+firmare|skriva under||Mio padre [ha firmato] la pagella.|Pappa skrev under betyget.|Passato prossimo: ho firmato. la firma = namnteckning.
+licenziare|avskeda, sparka||Il capo [ha licenziato] due camerieri.|Chefen sparkade två servitörer.|Passato prossimo: ho licenziato. Licenziarsi = säga upp sig.
+impegnarsi|anstränga sig, satsa||Quest'anno mi [impegnerò] di più a scuola.|I år ska jag anstränga mig mer i skolan.|Passato prossimo: mi sono impegnato/impegnata. Av <b>impegno</b> 'engagemang, åtagande'.
+bravo|duktig||Sei stato [bravissimo] all'interrogazione!|Du var jätteduktig på förhöret!|Femininum: brava. bravo in matematica = duktig i matte.
+severo|sträng||Il nostro professore di latino era molto [severo].|Vår latinlärare var väldigt sträng.|Femininum: severa. Latin <b>severus</b> 'allvarlig'.
+attento|uppmärksam, försiktig||Se starai [attento] in classe, capirai tutto.|Om du är uppmärksam på lektionen kommer du att förstå allt.|Femininum: attenta. stare attento = vara uppmärksam, se upp.
+distratto|tankspridd, ouppmärksam||Oggi sei molto [distratto]: sarai stanco.|Du är väldigt ouppmärksam i dag: du är nog trött.|Femininum: distratta.
+puntuale|punktlig||Al lavoro bisogna essere sempre [puntuali].|På jobbet måste man alltid vara punktlig.|Femininum: puntuale (samma form). Plural: puntuali.
+utile|användbar, nyttig||Secondo te, il tedesco mi sarà [utile] nel lavoro?|Tror du att tyska kommer att vara användbart för mig i jobbet?|Femininum: utile (samma form). Motsats: inutile.
+necessario|nödvändig||Per questo lavoro non è [necessaria] l'esperienza.|För det här jobbet behövs ingen erfarenhet.|Femininum: necessaria. Plural: necessari, necessarie.
+stressante|stressig||La settimana degli esami è stata molto [stressante].|Provveckan var väldigt stressig.|Femininum: stressante (samma form). Av engelska <b>stress</b>.
+obbligatorio|obligatorisk||In Italia la scuola è [obbligatoria] fino a sedici anni.|I Italien är skolan obligatorisk till sexton års ålder.|Femininum: obbligatoria. Plural: obbligatori, obbligatorie.
+privato|privat||Mia cugina frequenta una scuola [privata].|Min kusin går i en privatskola.|Femininum: privata. Motsats: pubblico. Lezioni private = privatlektioner.
+preparato|förberedd, kunnig||Per l'esame ero molto [preparata].|Jag var väldigt väl förberedd inför provet.|Femininum: preparata. Particip av <b>preparare</b> 'förbereda'.
+capace|kapabel, i stånd att||Sono sicuro che sarai [capace] di farlo.|Jag är säker på att du kommer att klara det.|Femininum: capace (samma form). essere capace di = kunna, klara av.
+impegnativo|krävande||Il liceo classico è una scuola molto [impegnativa].|Den klassiska gymnasielinjen är en väldigt krävande skola.|Femininum: impegnativa. Av <b>impegno</b> 'engagemang'.
+abbastanza|tillräckligt; ganska||Non ho studiato [abbastanza] per la verifica.|Jag pluggade inte tillräckligt till provet.|Adverb. Betyder också 'ganska': abbastanza bene.
+almeno|åtminstone||Dovresti studiare [almeno] un'ora al giorno.|Du borde plugga åtminstone en timme om dagen.|Adverb.
+prendere appunti|anteckna||Durante la lezione [prendevo appunti] su tutto.|Under lektionen antecknade jag allt.|Passato prossimo: ho preso appunti.|<b>prendere</b> ta · <b>appunti</b> anteckningar
+fare domanda|söka (jobb, plats)||[Ho fatto domanda] per un lavoro in gelateria.|Jag sökte ett jobb på en glassbar.|Passato prossimo: ho fatto domanda.|<b>fare</b> göra · <b>domanda</b> ansökan → "göra ansökan"
+cercare lavoro|söka jobb||Dopo la maturità [cercherò lavoro] a Londra.|Efter studenten ska jag söka jobb i London.|Passato prossimo: ho cercato lavoro. Futuro med h: cercherò.|<b>cercare</b> söka · <b>lavoro</b> arbete
+marinare la scuola|skolka||Una volta [ho marinato la scuola] e mia madre l'ha scoperto.|En gång skolkade jag och mamma kom på det.|Passato prossimo: ho marinato la scuola. Vardagligt.|<b>marinare</b> marinera · <b>la scuola</b> skolan → "marinera skolan"
+fare carriera|göra karriär||Mia zia [ha fatto carriera] in una grande banca.|Min moster gjorde karriär på en stor bank.|Passato prossimo: ho fatto carriera.|<b>fare</b> göra · <b>carriera</b> karriär
+andare bene a scuola|gå bra i skolan||Da piccolo [andavo bene a scuola], ma poi è cambiato tutto.|Som liten gick det bra för mig i skolan, men sedan ändrades allt.|Passato prossimo: sono andato/andata bene. Motsats: andare male a scuola.|<b>andare</b> gå · <b>bene</b> bra · <b>a scuola</b> i skolan
+fare pratica|öva, skaffa erfarenhet||In quel ristorante [ho fatto pratica] in cucina.|På den restaurangen fick jag öva i köket.|Passato prossimo: ho fatto pratica.|<b>fare</b> göra · <b>pratica</b> praktik
+a memoria|utantill||Dovevamo imparare le poesie [a memoria].|Vi var tvungna att lära oss dikterna utantill.|Också sapere qualcosa a memoria = kunna något utantill.|<b>a</b> på · <b>memoria</b> minnet → "på minnet"
+in ritardo|för sent, försenad||Stamattina sono arrivato [in ritardo] a scuola.|I morse kom jag för sent till skolan.|Motsats: in orario 'i tid'.|<b>in</b> i · <b>ritardo</b> försening → "i försening"
+#k3|Kap 3 · Media e notizie
+il giornale|tidning|m|Stamattina mio padre ha letto il [giornale] al bar.|I morse läste min pappa tidningen på kaféet.|Plural: i giornali. Av <b>giorno</b> 'dag': en tidning som kommer ut varje dag. Jämför journal.
+il quotidiano|dagstidning|m|Il [quotidiano] più letto in Italia è il Corriere della Sera.|Den mest lästa dagstidningen i Italien är Corriere della Sera.|Plural: i quotidiani. Som adjektiv betyder quotidiano 'daglig, vardaglig'. Latin <b>quotidie</b> 'varje dag'.
+la rivista|tidskrift, veckotidning|f|Da piccola compravo una [rivista] di cavalli ogni settimana.|När jag var liten köpte jag en hästtidning varje vecka.|Plural: le riviste. Av <b>rivedere</b> 'se igen, granska'. Jämför revy.
+l'articolo|artikel|m|Hai letto l'[articolo] sul nuovo stadio? L'ho letto ieri.|Har du läst artikeln om den nya arenan? Jag läste den igår.|Plural: gli articoli. Latin <b>articulus</b> 'liten led, avsnitt'. Betyder också 'vara' i en butik.
+il titolo|rubrik, titel|m|Il [titolo] dell'articolo era molto strano.|Artikelns rubrik var väldigt konstig.|Plural: i titoli. Latin <b>titulus</b> 'skylt, påskrift'.
+la prima pagina|förstasida|f|La notizia è finita in [prima pagina] su tutti i giornali.|Nyheten hamnade på förstasidan i alla tidningar.|Plural: le prime pagine. <b>prima</b> 'första' + <b>pagina</b> 'sida'.
+la cronaca|nyhetsbevakning, lokala nyheter|f|Leggo sempre la [cronaca] della mia città.|Jag läser alltid lokalnyheterna från min stad.|Plural: le cronache. Grekiska <b>chronos</b> 'tid', jämför krönika. La cronaca nera = brott och olyckor.
+la politica|politik|f|A mio nonno interessava molto la [politica].|Min morfar var väldigt intresserad av politik.|Plural: le politiche. Grekiska <b>polis</b> 'stad'. Il politico = politiker.
+l'economia|ekonomi|f|Si parla molto di [economia] al telegiornale.|Man pratar mycket om ekonomi på nyheterna.|Plural: le economie. Grekiska <b>oikos</b> 'hus' + <b>nomos</b> 'lag'.
+la pagina|sida|f|Le notizie sportive si trovano a [pagina] venti.|Sportnyheterna finns på sidan tjugo.|Plural: le pagine. Latin <b>pagina</b> 'blad'. Una pagina web = en webbsida.
+il telegiornale|tv-nyheterna|m|Ieri sera abbiamo guardato il [telegiornale] a cena.|I går kväll tittade vi på nyheterna under middagen.|Plural: i telegiornali. Förkortas ofta TG (uttalas ti-dji). <b>tele-</b> 'fjärran' + <b>giornale</b>.
+la televisione|tv, television|f|Da bambino guardavo troppa [televisione].|Som barn tittade jag på för mycket tv.|Plural: le televisioni. Kortform: la tv (uttalas ti-vu). Apparaten heter il televisore.
+il canale|kanal|m|Su quale [canale] danno la partita stasera?|Vilken kanal visar matchen i kväll?|Plural: i canali. Latin <b>canalis</b> 'ränna'. Används också om kanaler i Venedig och på YouTube.
+il programma|program|m|Questo [programma] mi piaceva tantissimo da piccolo.|Jag älskade det här programmet när jag var liten.|Plural: i programmi. Maskulinum trots -a (grekiskt ord). Betyder också 'plan': che programmi hai?
+la trasmissione|sändning, tv-program|f|La [trasmissione] comincerà alle nove.|Sändningen börjar klockan nio.|Plural: le trasmissioni. Av <b>trasmettere</b> 'sända', latin trans 'över' + mittere 'skicka'.
+il presentatore|programledare|m|Il [presentatore] ha fatto una domanda difficile.|Programledaren ställde en svår fråga.|Plural: i presentatori. Femininum: la presentatrice. Av <b>presentare</b> 'presentera'.
+il pubblico|publik|m|Il [pubblico] ha applaudito a lungo.|Publiken applåderade länge.|Plural: sällsynt. Som adjektiv: pubblico/pubblica 'offentlig'. Latin <b>publicus</b> 'folkets'.
+lo spettatore|tittare, åskådare|m|Ieri sera il programma ha avuto tre milioni di [spettatori].|I går kväll hade programmet tre miljoner tittare.|Plural: gli spettatori. Femininum: la spettatrice. Latin <b>spectare</b> 'titta'.
+il lettore|läsare|m|Il giornale ha perso molti [lettori] negli ultimi anni.|Tidningen har förlorat många läsare de senaste åren.|Plural: i lettori. Femininum: la lettrice. Av <b>leggere</b> 'läsa'.
+la radio|radio|f|In macchina ascoltiamo sempre la [radio].|I bilen lyssnar vi alltid på radio.|Plural: le radio (oförändrat). Femininum trots -o, kortform av la radiotelefonia.
+la pubblicità|reklam|f|Odio la [pubblicità] durante i film.|Jag hatar reklam under filmer.|Plural: le pubblicità (oförändrat). Av <b>pubblico</b> 'offentlig': att göra något känt.
+l'intervista|intervju|f|Ho visto l'[intervista] al calciatore e l'ho trovata noiosa.|Jag såg intervjun med fotbollsspelaren och tyckte den var tråkig.|Plural: le interviste. Man säger un'intervista a qualcuno.
+intervistare|intervjua||Il giornalista ha [intervistato] il sindaco.|Journalisten intervjuade borgmästaren.|Passato prossimo: ho intervistato. Regelbundet -are-verb.
+l'informazione|information, upplysning|f|Su internet si trovano tante [informazioni].|På internet hittar man mycket information.|Plural: le informazioni. Används ofta i plural där svenskan har singular.
+informare|informera||Il sito ci [informerà] sui risultati.|Webbplatsen kommer att informera oss om resultaten.|Passato prossimo: ho informato. Latin <b>informare</b> 'ge form åt'.
+informarsi|ta reda på, hålla sig informerad||Prima di votare, dovresti [informarti] bene.|Innan du röstar borde du ta reda på saker ordentligt.|Passato prossimo: mi sono informato/informata. Reflexivt verb, pronomenet sätts på infinitiven.
+l'opinione|åsikt|f|Qual è la tua [opinione] su questa notizia?|Vad har du för åsikt om den här nyheten?|Plural: le opinioni. Latin <b>opinio</b> 'uppfattning'.
+il fatto|fakta, händelse|m|Il giornalista deve raccontare i [fatti], non le sue opinioni.|Journalisten ska berätta fakta, inte sina åsikter.|Plural: i fatti. Egentligen particip av <b>fare</b> 'göra': det som är gjort. Uttryck: di fatto 'i själva verket'.
+l'evento|händelse, evenemang|m|Il concerto è stato l'[evento] dell'anno.|Konserten var årets händelse.|Plural: gli eventi. Latin <b>eventus</b> 'utfall', av evenire 'hända'.
+la fonte|källa|f|Da quale [fonte] viene questa informazione?|Från vilken källa kommer den här informationen?|Plural: le fonti. Betyder också 'källa' med vatten. Latin <b>fons</b> 'källa'.
+vero|sann, riktig||Non so se questa storia è [vera].|Jag vet inte om den här historien är sann.|Femininum: vera. Latin <b>verus</b> 'sann'. È vero! = Det stämmer!
+falso|falsk, osann||Molte notizie su internet sono [false].|Många nyheter på internet är falska.|Femininum: falsa. Latin <b>falsus</b> 'bedräglig'.
+la bufala|bluff, falsk nyhet|f|Quella notizia era una [bufala]: non era vero niente!|Den där nyheten var en bluff: inget av det var sant!|Plural: le bufale. Egentligen 'buffelko'. Vardagligt ord för fake news.
+controllare|kontrollera||Hai [controllato] la fonte prima di condividere il post?|Kollade du källan innan du delade inlägget?|Passato prossimo: ho controllato. Av franska <b>contre-rôle</b> 'motrulle', en kopia att jämföra med.
+credere|tro||Non [credevo] alla notizia, ma era vera.|Jag trodde inte på nyheten, men den var sann.|Passato prossimo: ho creduto. Man säger credere a qualcosa 'tro på något'.
+il sito|webbplats|m|Si legge tutto sul [sito] del giornale.|Man läser allt på tidningens webbplats.|Plural: i siti. Egentligen 'plats', latin <b>situs</b>. Il sito web = webbplatsen.
+internet|internet||Ho cercato la risposta su [internet].|Jag sökte svaret på internet.|Används oftast utan artikel: su internet, in internet.
+la rete|nätet, nätverk|f|In [rete] si trovano molte bugie.|På nätet hittar man många lögner.|Plural: le reti. Betyder också 'nät' och 'mål' i fotboll. Latin <b>rete</b> 'nät'.
+il messaggio|meddelande|m|Ti ho mandato un [messaggio]: l'hai letto?|Jag skickade ett meddelande till dig: har du läst det?|Plural: i messaggi. Jämför engelska message.
+il video|video, filmklipp|m|Hai visto il [video] del gatto? Io l'ho visto dieci volte!|Har du sett videon med katten? Jag har sett den tio gånger!|Plural: i video (oförändrat). Latin <b>video</b> 'jag ser'.
+la foto|foto|f|Le [foto] della festa? Le ho messe sul mio profilo.|Bilderna från festen? Jag har lagt upp dem på min profil.|Plural: le foto (oförändrat). Kortform av la fotografia, därför femininum.
+il post|inlägg|m|Il tuo ultimo [post] ha avuto cento like.|Ditt senaste inlägg fick hundra likes.|Plural: i post (oförändrat). Lånord från engelska.
+l'influencer|influerare, influencer|m|Quell'[influencer] ha due milioni di follower.|Den där influencern har två miljoner följare.|Plural: gli influencer (oförändrat). Även femininum: l'influencer (una ragazza). Lånord från engelska.
+il podcast|podd|m|Ogni mattina ascolto un [podcast] sulle notizie del giorno.|Varje morgon lyssnar jag på en podd om dagens nyheter.|Plural: i podcast (oförändrat). Lånord från engelska.
+la stampa|press, tryck|f|La [stampa] straniera ha parlato molto dell'elezione.|Utländsk press skrev mycket om valet.|Plural: le stampe. Av <b>stampare</b> 'trycka'. La libertà di stampa = pressfrihet.
+la puntata|avsnitt|f|Hai visto l'ultima [puntata]? Non dirmi come finisce!|Har du sett sista avsnittet? Säg inte hur det slutar!|Plural: le puntate. Används om avsnitt av tv-serier och program.
+il documentario|dokumentär|m|Abbiamo visto un [documentario] sugli animali in classe.|Vi såg en dokumentär om djur i klassen.|Plural: i documentari. Av <b>documento</b> 'dokument', latin docere 'lära'.
+il dibattito|debatt|m|Il [dibattito] in tv è durato due ore.|Tv-debatten varade i två timmar.|Plural: i dibattiti. Av <b>dibattere</b> 'diskutera', jämför debatt.
+discutere|diskutera||In classe abbiamo [discusso] delle notizie false.|I klassen diskuterade vi falska nyheter.|Passato prossimo: ho discusso. Oregelbunden particip: discusso. Betyder också 'gräla'.
+criticare|kritisera||Molti hanno [criticato] il programma sui social.|Många kritiserade programmet på sociala medier.|Passato prossimo: ho criticato. Tu-formen får h: critichi. Substantiv: la critica.
+il governo|regering|m|Il [governo] ha annunciato nuove leggi.|Regeringen har meddelat nya lagar.|Plural: i governi. Latin <b>gubernare</b> 'styra ett skepp'.
+il presidente|president, ordförande|m|Il [presidente] parlerà in tv stasera.|Presidenten kommer att tala på tv i kväll.|Plural: i presidenti. Femininum: la presidente. Latin <b>praesidere</b> 'sitta främst'.
+le elezioni|val (politiska)|fpl|Le [elezioni] si faranno a giugno.|Valet kommer att hållas i juni.|Singular: l'elezione. Används mest i plural. Latin <b>eligere</b> 'välja ut'.
+votare|rösta||In Italia si può [votare] a diciotto anni.|I Italien får man rösta när man är arton.|Passato prossimo: ho votato. Il voto = röst (och betyg i skolan).
+il cittadino|medborgare, invånare|m|I [cittadini] hanno protestato in piazza.|Invånarna protesterade på torget.|Plural: i cittadini. Femininum: la cittadina. Av <b>città</b> 'stad'.
+la guerra|krig|f|Al telegiornale si vedono sempre immagini di [guerra].|På nyheterna ser man alltid bilder av krig.|Plural: le guerre. Germanskt ursprung, jämför engelska war.
+internazionale|internationell||Leggo le notizie [internazionali] ogni giorno.|Jag läser utrikesnyheterna varje dag.|Samma form för maskulinum och femininum. Plural: internazionali.
+il problema|problem|m|Il giornale ha parlato del [problema] del traffico.|Tidningen skrev om trafikproblemet.|Plural: i problemi. Maskulinum trots -a (grekiskt ord). Nessun problema! = Inga problem!
+la crisi|kris|f|Tutti parlano della [crisi] economica.|Alla pratar om den ekonomiska krisen.|Plural: le crisi (oförändrat). Grekiska <b>krisis</b> 'avgörande'.
+l'incidente|olycka|m|Ieri c'è stato un [incidente] in autostrada.|Igår var det en olycka på motorvägen.|Plural: gli incidenti. Obs: betyder 'olycka', inte 'incident'.
+la polizia|polis (myndigheten)|f|La [polizia] è arrivata dopo dieci minuti.|Polisen kom efter tio minuter.|Plural: le polizie. En polis (person) = il poliziotto / la poliziotta.
+il ladro|tjuv|m|Il [ladro] è scappato con la borsa.|Tjuven sprang iväg med väskan.|Plural: i ladri. Femininum: la ladra. Latin <b>latro</b> 'rövare'.
+rubare|stjäla||Mi hanno [rubato] il cellulare sull'autobus.|Någon stal min mobil på bussen.|Passato prossimo: ho rubato. Germanskt ursprung, jämför svenska röva.
+il testimone|vittne|m|Un [testimone] ha raccontato tutto alla polizia.|Ett vittne berättade allt för polisen.|Plural: i testimoni. Latin <b>testis</b> 'vittne'. Betyder också 'bestman'.
+annunciare|meddela, tillkännage||Il sindaco ha [annunciato] la notizia su internet.|Borgmästaren meddelade nyheten på internet.|Passato prossimo: ho annunciato. Latin <b>nuntius</b> 'budbärare'. Jämför annons.
+affidabile|pålitlig||Questo sito non è [affidabile].|Den här webbplatsen är inte pålitlig.|Samma form för maskulinum och femininum. Av <b>fidarsi</b> 'lita på'.
+l'attualità|aktuella händelser|f|A scuola facciamo un'ora di [attualità] ogni venerdì.|I skolan har vi en lektion om aktuella händelser varje fredag.|Plural: le attualità (oförändrat). Obs: attuale betyder 'aktuell, nuvarande', inte 'faktisk'.
+recente|nylig, ny||Secondo un sondaggio [recente], i giovani leggono poco.|Enligt en färsk undersökning läser unga lite.|Samma form för maskulinum och femininum. Latin <b>recens</b> 'färsk'. Adverb: recentemente.
+la novità|nyhet (något nytt)|f|Ci sono [novità] sulla partita di domani?|Finns det något nytt om matchen i morgon?|Plural: le novità (oförändrat). Av <b>nuovo</b> 'ny'. Che novità? = Vad är nytt?
+il computer|dator|m|Ho letto le notizie sul [computer] di mio padre.|Jag läste nyheterna på min pappas dator.|Plural: i computer (oförändrat). Lånord från engelska.
+navigare|surfa (på nätet), segla||Da piccolo [navigavo] su internet per ore.|När jag var liten surfade jag på nätet i timmar.|Passato prossimo: ho navigato. Tu-formen får h: navighi. Latin <b>navis</b> 'skepp'.
+il motore di ricerca|sökmotor|m|Si scrive la domanda nel [motore di ricerca].|Man skriver frågan i sökmotorn.|Plural: i motori di ricerca. <b>motore</b> 'motor' + <b>ricerca</b> 'sökning'.
+il link|länk|m|Mi mandi il [link] dell'articolo?|Skickar du länken till artikeln?|Plural: i link (oförändrat). Lånord från engelska.
+l'account|konto (på nätet)|m|Ho chiuso il mio [account] l'anno scorso.|Jag stängde mitt konto förra året.|Plural: gli account (oförändrat). Lånord från engelska.
+segnalare|anmäla, rapportera||Ho [segnalato] il commento offensivo.|Jag anmälde den kränkande kommentaren.|Passato prossimo: ho segnalato. Av <b>segnale</b> 'signal, tecken'.
+mandare|skicka||Le foto? Te le [manderò] stasera.|Bilderna? Jag skickar dem till dig i kväll.|Passato prossimo: ho mandato. Latin <b>mandare</b> 'anförtro'.
+virale|viral||Il suo video è diventato [virale] in un giorno.|Hans video blev viral på en dag.|Samma form för maskulinum och femininum. Av <b>virus</b>: sprider sig som ett virus.
+il contenuto|innehåll|m|Il [contenuto] del post era falso.|Innehållet i inlägget var falskt.|Plural: i contenuti. Av <b>contenere</b> 'innehålla'.
+accendere|sätta på, tända||Appena sono tornato a casa, ho [acceso] la tv.|Så fort jag kom hem satte jag på tv:n.|Passato prossimo: ho acceso. Oregelbunden particip: acceso. Motsats: spegnere.
+il telecomando|fjärrkontroll|m|Dov'è il [telecomando]? Non lo trovo.|Var är fjärrkontrollen? Jag hittar den inte.|Plural: i telecomandi. <b>tele-</b> 'fjärran' + <b>comando</b> 'styrning'.
+andare in onda|sändas||Il programma [va in onda] ogni sabato.|Programmet sänds varje lördag.|Oregelbundet: va, vanno. Passato prossimo: è andato in onda.|<b>andare</b> gå · <b>in</b> på · <b>onda</b> våg → "gå ut på vågen"
+in diretta|direktsänd, live||Abbiamo visto la partita [in diretta].|Vi såg matchen live.|Motsats: in differita 'i efterhand'. Una diretta = en livesändning.|<b>in</b> i · <b>diretta</b> direkt → "i direkt"
+fare notizia|bli en nyhet, väcka uppmärksamhet||Un cane che parla [farebbe notizia]!|En hund som pratar skulle bli en nyhet!|Oregelbundet: faccio, fai, fa … Passato prossimo: ha fatto notizia.|<b>fare</b> göra · <b>notizia</b> nyhet → "göra nyhet"
+tenersi aggiornato|hålla sig uppdaterad||Per [tenermi aggiornato] leggo le notizie ogni mattina.|För att hålla mig uppdaterad läser jag nyheterna varje morgon.|Passato prossimo: mi sono tenuto aggiornato. Femininum: aggiornata. Pronomenet sitter på infinitiven: tenermi.|<b>tenersi</b> hålla sig · <b>aggiornato</b> uppdaterad → "hålla sig uppdaterad"
+a quanto pare|tydligen, som det verkar||[A quanto pare] il concerto è stato cancellato.|Tydligen har konserten ställts in.|Fast uttryck. <b>pare</b> kommer av parere 'verka'.|<b>a</b> till · <b>quanto</b> hur mycket · <b>pare</b> verkar → "till hur mycket det verkar"
+si dice che|det sägs att||[Si dice che] il film sarà bellissimo.|Det sägs att filmen kommer att bli jättebra.|Opersonligt si: si dice, si legge, si sente.|<b>si</b> man · <b>dice</b> säger · <b>che</b> att → "man säger att"
+prendere sul serio|ta på allvar||Non ho [preso sul serio] quella notizia.|Jag tog inte den där nyheten på allvar.|Passato prossimo: ho preso sul serio. Oregelbunden particip: preso.|<b>prendere</b> ta · <b>sul</b> på det · <b>serio</b> allvarliga → "ta på det allvarliga"
+la verità|sanning|f|Non sapremo mai tutta la [verità].|Vi kommer aldrig att få veta hela sanningen.|Plural: le verità (oförändrat). Av <b>vero</b> 'sann'. Dire la verità = säga sanningen.
+la bugia|lögn|f|Ho capito subito che era una [bugia].|Jag förstod direkt att det var en lögn.|Plural: le bugie. Dire bugie = ljuga.
+lo smartphone|smartphone, mobil|m|Si leggono le notizie soprattutto sullo [smartphone].|Man läser nyheterna mest på mobilen.|Plural: gli smartphone (oförändrat). Lånord från engelska, lo framför s + konsonant.
+l'immagine|bild|f|Le [immagini] dell'incidente erano terribili.|Bilderna från olyckan var hemska.|Plural: le immagini. Latin <b>imago</b> 'bild'. Obs: femininum.
+l'edizione|upplaga, utgåva|f|L'[edizione] della sera del telegiornale comincia alle otto.|Kvällssändningen av nyheterna börjar klockan åtta.|Plural: le edizioni. Latin <b>edere</b> 'ge ut'.
+l'abbonamento|prenumeration, abonnemang|m|Ho fatto un [abbonamento] al giornale online.|Jag har skaffat en prenumeration på nättidningen.|Plural: gli abbonamenti. Används också om årskort: l'abbonamento in palestra.
+#k4|Kap 4 · Salute e sport
+il movimento|rörelse|m|Il [movimento] fa bene al corpo e alla mente.|Rörelse är bra för kroppen och sinnet.|Plural: i movimenti. Av <b>muovere</b> 'röra'.
+l'attività fisica|fysisk aktivitet|f|Dovresti fare più [attività fisica].|Du borde röra på dig mer.|Plural: le attività fisiche. <b>attività</b> 'aktivitet' + <b>fisica</b> 'fysisk'.
+la dieta|diet, kost|f|Una [dieta] sana ha tanta frutta e verdura.|En sund kost innehåller mycket frukt och grönsaker.|Plural: le diete. Grekiska <b>diaita</b> 'levnadssätt'. Obs: betyder både 'kost' och 'banta'.
+l'alimentazione|kost, matvanor|f|Per gli atleti l'[alimentazione] è molto importante.|För idrottare är kosten väldigt viktig.|Plural: le alimentazioni. Av <b>alimentare</b> 'nära', latin alimentum 'föda'.
+le vitamine|vitaminer|fpl|La frutta è piena di [vitamine].|Frukt är full av vitaminer.|Singular: la vitamina. Latin <b>vita</b> 'liv'.
+le proteine|protein|fpl|Dopo l'allenamento dovresti mangiare [proteine].|Efter träningen borde du äta protein.|Singular: la proteina. Används oftast i plural. Grekiska <b>protos</b> 'först'.
+il cibo|mat, föda|m|Il [cibo] della mensa era terribile.|Maten i skolmatsalen var hemsk.|Plural: i cibi. Latin <b>cibus</b> 'föda'. Il cibo spazzatura = skräpmat.
+lo spuntino|mellanmål|m|Alle dieci faccio sempre uno [spuntino].|Klockan tio äter jag alltid ett mellanmål.|Plural: gli spuntini. Lo framför s + konsonant.
+la bevanda|dryck|f|Le [bevande] gassate hanno troppo zucchero.|Kolsyrade drycker har för mycket socker.|Plural: le bevande. Av <b>bere</b> 'dricka' (latin bibere).
+il grasso|fett|m|Questo piatto ha troppo [grasso].|Den här rätten har för mycket fett.|Plural: i grassi. Som adjektiv: grasso/grassa 'fet, tjock'.
+leggero|lätt||Stasera vorrei mangiare qualcosa di [leggero].|I kväll skulle jag vilja äta något lätt.|Femininum: leggera. Motsats: pesante. Qualcosa di + maskulinum.
+pesante|tung||La cena di ieri era troppo [pesante].|Gårdagens middag var för tung.|Samma form för maskulinum och femininum. Av <b>peso</b> 'vikt'. Betyder också 'jobbig, tråkig' om en person.
+il peso|vikt|m|Il medico mi ha misurato il [peso] e l'altezza.|Läkaren mätte min vikt och längd.|Plural: i pesi. Latin <b>pensum</b> 'avvägt'. Sollevare pesi = lyfta vikter.
+il sonno|sömn|m|Il [sonno] è importante per la memoria.|Sömnen är viktig för minnet.|Plural: i sonni (sällsynt). Latin <b>somnus</b> 'sömn'.
+il riposo|vila|m|Dopo la partita i giocatori hanno bisogno di [riposo].|Efter matchen behöver spelarna vila.|Plural: i riposi. Av <b>riposare</b> 'vila'.
+la stanchezza|trötthet|f|Per la [stanchezza] mi sono addormentato sul divano.|Av trötthet somnade jag på soffan.|Plural: le stanchezze (sällsynt). Av <b>stanco</b> 'trött'.
+lo stress|stress|m|Prima degli esami avevo tanto [stress].|Före proven var jag väldigt stressad.|Plural: gli stress (oförändrat, sällsynt). Lånord från engelska.
+stressato|stressad||Ultimamente sei molto [stressato]: dovresti riposarti.|På senaste tiden är du väldigt stressad: du borde vila.|Femininum: stressata. Av <b>stress</b>.
+l'ansia|ångest, oro|f|Prima della gara avevo un po' d'[ansia].|Före tävlingen var jag lite nervös.|Plural: le ansie. Latin <b>anxia</b> 'ängslig'. Avere l'ansia = vara orolig, nervös.
+rilassarsi|koppla av, slappna av||Dopo la scuola ho bisogno di [rilassarmi].|Efter skolan behöver jag koppla av.|Passato prossimo: mi sono rilassato/rilassata. Pronomenet sitter på infinitiven.
+la mente|sinne, tankar|f|Lo yoga mi aiuta a liberare la [mente].|Yoga hjälper mig att rensa tankarna.|Plural: le menti. Latin <b>mens</b> 'sinne'. Jämför mental.
+il muscolo|muskel|m|Mi fanno male tutti i [muscoli].|Jag har ont i alla muskler.|Plural: i muscoli. Latin <b>musculus</b> 'liten mus' (muskeln rör sig som en mus under huden).
+la forza|styrka, kraft|f|Non avevo più la [forza] di correre.|Jag hade inte längre kraft att springa.|Plural: le forze. Forza! = Heja! Kom igen!
+forte|stark||Mio fratello è diventato molto [forte] in palestra.|Min bror har blivit väldigt stark på gymmet.|Samma form för maskulinum och femininum. Betyder också 'bra på': è forte in matematica.
+debole|svag||Dopo l'influenza mi sentivo ancora [debole].|Efter influensan kände jag mig fortfarande svag.|Samma form för maskulinum och femininum. Latin <b>debilis</b> 'svag'.
+l'energia|energi|f|La mattina non ho mai [energia].|På morgonen har jag aldrig någon energi.|Plural: le energie. Grekiska <b>energeia</b> 'verksamhet'.
+la fatica|ansträngning, möda|f|Che [fatica] salire fino in cima!|Vad jobbigt det var att gå upp till toppen!|Plural: le fatiche. Adjektiv: faticoso 'ansträngande'. Fare fatica = ha svårt.
+sudare|svettas||Durante la partita ho [sudato] tantissimo.|Under matchen svettades jag jättemycket.|Passato prossimo: ho sudato. Latin <b>sudare</b> 'svettas'. Il sudore = svett.
+il fiato|andning, andetag|m|Dopo la corsa ero senza [fiato].|Efter löpningen var jag andfådd.|Plural: i fiati. Senza fiato = andfådd.
+la corsa|löpning, lopp|f|Ogni mattina faccio una [corsa] nel parco.|Varje morgon springer jag en runda i parken.|Plural: le corse. Av <b>correre</b> 'springa'. Di corsa = i full fart.
+il ciclismo|cykling (sport)|m|Il [ciclismo] è molto popolare in Italia.|Cykling är väldigt populärt i Italien.|Plural: saknas. Av <b>ciclo</b> 'cykel'. Il ciclista = cyklist.
+il nuoto|simning|m|Da piccola facevo [nuoto] due volte alla settimana.|När jag var liten simmade jag två gånger i veckan.|Plural: saknas. Av <b>nuotare</b> 'simma'. Man säger fare nuoto.
+il tennis|tennis|m|Mi piacerebbe imparare a giocare a [tennis].|Jag skulle vilja lära mig att spela tennis.|Plural: saknas. Man säger giocare a tennis.
+la pallavolo|volleyboll|f|Nella nostra scuola si gioca molto a [pallavolo].|På vår skola spelar man mycket volleyboll.|Plural: saknas. <b>palla</b> 'boll' + <b>volo</b> 'flykt'.
+la pallacanestro|basket|f|Mio cugino gioca a [pallacanestro] da cinque anni.|Min kusin har spelat basket i fem år.|Plural: saknas. <b>palla</b> 'boll' + <b>canestro</b> 'korg'. Man säger också il basket.
+l'atletica|friidrott|f|Alle Olimpiadi guardo sempre l'[atletica].|Under OS tittar jag alltid på friidrott.|Plural: saknas. Grekiska <b>athlos</b> 'tävling'. L'atletica leggera = friidrott.
+la ginnastica|gymnastik|f|Mia sorella faceva [ginnastica] artistica.|Min syster höll på med artistisk gymnastik.|Plural: le ginnastiche. Grekiska <b>gymnos</b> 'naken'.
+lo yoga|yoga|m|Da quando faccio [yoga] dormo meglio.|Sedan jag började med yoga sover jag bättre.|Plural: saknas. Lo framför y. Från sanskrit.
+la piscina|simbassäng, simhall|f|Andremo in [piscina] sabato mattina.|Vi ska gå till simhallen på lördag morgon.|Plural: le piscine. Latin <b>piscis</b> 'fisk', egentligen 'fiskdamm'.
+il campo|plan, fält|m|I giocatori sono entrati in [campo].|Spelarna gick in på planen.|Plural: i campi. Il campo da calcio = fotbollsplan. Betyder också 'åker'.
+la palla|boll|f|Passami la [palla]!|Passa bollen till mig!|Plural: le palle. Il pallone = stor boll, fotboll.
+il giocatore|spelare|m|È il [giocatore] più forte della squadra.|Han är den bästa spelaren i laget.|Plural: i giocatori. Femininum: la giocatrice. Av <b>giocare</b> 'spela'.
+l'allenatore|tränare|m|L'[allenatore] ci ha detto di correre di più.|Tränaren sade åt oss att springa mer.|Plural: gli allenatori. Femininum: l'allenatrice. Av <b>allenare</b> 'träna'.
+l'atleta|idrottare|m|Gli [atleti] si allenano tutti i giorni.|Idrottarna tränar varje dag.|Plural: gli atleti, le atlete. Samma form i singular för båda könen: l'atleta.
+il campione|mästare|m|Da bambino sognavo di diventare un [campione].|Som barn drömde jag om att bli mästare.|Plural: i campioni. Femininum: la campionessa. Betyder också 'prov'.
+il campionato|mästerskap, serie|m|Chi vincerà il [campionato] quest'anno?|Vem kommer att vinna serien i år?|Plural: i campionati. Av <b>campione</b> 'mästare'. Il campionato di Serie A = högsta ligan.
+la medaglia|medalj|f|Ha vinto una [medaglia] d'oro alle Olimpiadi.|Hon vann en guldmedalj i OS.|Plural: le medaglie. Latin <b>metallum</b> 'metall'.
+la vittoria|seger|f|Abbiamo festeggiato la [vittoria] tutta la notte.|Vi firade segern hela natten.|Plural: le vittorie. Latin <b>victoria</b>, av vincere 'segra'.
+la sconfitta|förlust, nederlag|f|Dopo la [sconfitta] eravamo tutti tristi.|Efter förlusten var vi alla ledsna.|Plural: le sconfitte. Av <b>sconfiggere</b> 'besegra'.
+il gol|mål (i fotboll)|m|Ha segnato un [gol] bellissimo all'ultimo minuto.|Han gjorde ett jättefint mål i sista minuten.|Plural: i gol (oförändrat). Lånord från engelska goal.
+la coppa|pokal, cup|f|La squadra ha vinto la [coppa] per la prima volta.|Laget vann pokalen för första gången.|Plural: le coppe. Betyder också 'skål, glasskål'.
+le Olimpiadi|olympiska spelen|fpl|Le prossime [Olimpiadi] saranno tra due anni.|Nästa olympiska spel blir om två år.|Singular: l'Olimpiade (sällsynt). Från <b>Olympia</b> i Grekland.
+la maratona|maraton|f|Un giorno vorrei correre una [maratona].|En dag skulle jag vilja springa ett maraton.|Plural: le maratone. Från staden <b>Marathon</b> i Grekland.
+battere|slå, besegra||Ieri abbiamo [battuto] la squadra più forte del campionato.|Igår slog vi det starkaste laget i serien.|Passato prossimo: ho battuto. Latin <b>battuere</b> 'slå'.
+tirare|skjuta (boll), dra, kasta||Ha [tirato] in porta, ma il portiere ha preso la palla.|Han sköt mot mål, men målvakten tog bollen.|Passato prossimo: ho tirato. Betyder också 'dra': tirare la porta.
+pedalare|trampa, cykla||Abbiamo [pedalato] per tre ore in montagna.|Vi cyklade i tre timmar i bergen.|Passato prossimo: ho pedalato. Av <b>pedale</b> 'pedal'.
+la tuta|träningsoverall|f|Mi sono messo la [tuta] e sono uscito a correre.|Jag tog på mig träningsoverallen och gick ut och sprang.|Plural: le tute. La tuta da ginnastica = träningsoverall.
+lo sforzo|ansträngning|m|Il medico ha detto che non devo fare [sforzi].|Läkaren sa att jag inte får anstränga mig.|Plural: gli sforzi. Av <b>sforzarsi</b> 'anstränga sig', jämför forza 'kraft'.
+l'infortunio|skada (idrottsskada)|m|Dopo l'[infortunio] non ha giocato per due mesi.|Efter skadan spelade han inte på två månader.|Plural: gli infortuni. Latin <b>infortunium</b> 'otur'.
+la caviglia|fotled|f|Mi sono storto la [caviglia] durante la partita.|Jag stukade foten under matchen.|Plural: le caviglie. Latin <b>clavicula</b> 'liten nyckel'.
+il dolore|smärta|m|Se il [dolore] continua, dovresti andare dal medico.|Om smärtan fortsätter borde du gå till läkaren.|Plural: i dolori. Latin <b>dolor</b> 'smärta'. Också 'sorg'.
+la malattia|sjukdom|f|Il fumo causa molte [malattie].|Rökning orsakar många sjukdomar.|Plural: le malattie. Av <b>malato</b> 'sjuk'.
+grave|allvarlig||Per fortuna l'infortunio non era [grave].|Som tur var var skadan inte allvarlig.|Samma form för maskulinum och femininum. Latin <b>gravis</b> 'tung'.
+il fumo|rökning, rök|m|Il [fumo] fa male ai polmoni.|Rökning är dåligt för lungorna.|Plural: i fumi. Latin <b>fumus</b> 'rök'. Vietato fumare = rökning förbjuden.
+fumare|röka||Mio zio ha smesso di [fumare] due anni fa.|Min farbror slutade röka för två år sedan.|Passato prossimo: ho fumato. Smettere di fumare = sluta röka.
+dannoso|skadlig||Lo zucchero in quantità è [dannoso] per i denti.|Socker i stora mängder är skadligt för tänderna.|Femininum: dannosa. Av <b>danno</b> 'skada'.
+equilibrato|balanserad||Dovresti seguire una dieta più [equilibrata].|Du borde äta mer balanserat.|Femininum: equilibrata. Av <b>equilibrio</b> 'jämvikt'.
+il benessere|välbefinnande|m|Lo sport è importante per il [benessere] dei ragazzi.|Idrott är viktigt för ungdomars välbefinnande.|Plural: saknas. <b>bene</b> 'bra' + <b>essere</b> 'vara'.
+il vaccino|vaccin|m|L'anno scorso ho fatto il [vaccino] contro l'influenza.|Förra året tog jag vaccin mot influensan.|Plural: i vaccini. Latin <b>vacca</b> 'ko': det första vaccinet kom från kokoppor.
+l'ambulanza|ambulans|f|Hanno chiamato l'[ambulanza] dopo l'incidente.|De ringde efter ambulansen efter olyckan.|Plural: le ambulanze. Latin <b>ambulare</b> 'gå omkring'.
+l'avversario|motståndare|m|Gli [avversari] erano più veloci di noi.|Motståndarna var snabbare än vi.|Plural: gli avversari. Femininum: l'avversaria. Latin <b>adversarius</b>.
+la classifica|tabell, ranking|f|Siamo primi in [classifica]!|Vi leder tabellen!|Plural: le classifiche. Av <b>classificare</b> 'klassificera'.
+lo spogliatoio|omklädningsrum|m|Ho dimenticato le scarpe nello [spogliatoio].|Jag glömde skorna i omklädningsrummet.|Plural: gli spogliatoi. Av <b>spogliarsi</b> 'klä av sig'.
+riscaldarsi|värma upp||Prima di correre dovresti sempre [riscaldarti].|Innan du springer borde du alltid värma upp.|Passato prossimo: mi sono riscaldato/riscaldata. Av <b>caldo</b> 'varm'. Il riscaldamento = uppvärmning.
+fare sport|idrotta, träna||Mi piacerebbe [fare sport] più spesso.|Jag skulle vilja idrotta oftare.|Oregelbundet: faccio, fai, fa … Passato prossimo: ho fatto sport.|<b>fare</b> göra · <b>sport</b> sport → "göra sport"
+fare una passeggiata|ta en promenad||Dopo cena abbiamo [fatto una passeggiata] sul lungomare.|Efter middagen tog vi en promenad längs strandpromenaden.|Passato prossimo: ho fatto una passeggiata. La passeggiata = promenad.|<b>fare</b> göra · <b>una passeggiata</b> en promenad → "göra en promenad"
+perdere peso|gå ner i vikt||Mio padre ha [perso peso] camminando ogni giorno.|Min pappa har gått ner i vikt genom att promenera varje dag.|Passato prossimo: ho perso peso. Oregelbunden particip: perso.|<b>perdere</b> förlora · <b>peso</b> vikt → "förlora vikt"
+mettersi a dieta|börja banta||Dopo le vacanze mi sono [messo a dieta].|Efter semestern började jag banta.|Passato prossimo: mi sono messo/messa a dieta. Oregelbunden particip: messo.|<b>mettersi</b> sätta sig · <b>a</b> på · <b>dieta</b> diet → "sätta sig på diet"
+avere sonno|vara sömnig||Stamattina [avevo sonno] e non riuscivo a studiare.|I morse var jag sömnig och kunde inte plugga.|Passato prossimo: ho avuto sonno. Jämför avere fame, avere sete.|<b>avere</b> ha · <b>sonno</b> sömn → "ha sömn"
+prendersi cura di|ta hand om||Dovresti [prenderti cura] di te stesso.|Du borde ta hand om dig själv.|Passato prossimo: mi sono preso/presa cura di. Pronomenet sitter på infinitiven.|<b>prendersi</b> ta sig · <b>cura</b> omsorg · <b>di</b> om → "ta sig omsorg om"
+dare il massimo|göra sitt bästa||In finale abbiamo [dato il massimo].|I finalen gjorde vi vårt bästa.|Oregelbundet: do, dai, dà … Passato prossimo: ho dato il massimo.|<b>dare</b> ge · <b>il massimo</b> det mesta → "ge det mesta"
+tenersi in forma|hålla sig i form||Per [tenersi in forma] mia nonna nuota ogni mattina.|För att hålla sig i form simmar min mormor varje morgon.|Oregelbundet: mi tengo, ti tieni … Passato prossimo: mi sono tenuto/tenuta in forma.|<b>tenersi</b> hålla sig · <b>in</b> i · <b>forma</b> form → "hålla sig i form"
+avere bisogno di|behöva||[Ho bisogno di] dormire di più.|Jag behöver sova mer.|Passato prossimo: ho avuto bisogno di. Il bisogno = behov.|<b>avere</b> ha · <b>bisogno</b> behov · <b>di</b> av → "ha behov av"
+stare attento|vara försiktig, se upp||[Stai attento] quando corri sulla strada!|Var försiktig när du springer på vägen!|Femininum: stare attenta. Oregelbundet: sto, stai, sta … Passato prossimo: sono stato attento.|<b>stare</b> vara · <b>attento</b> uppmärksam → "vara uppmärksam"
+rilassante|avkopplande||Un bagno caldo è molto [rilassante].|Ett varmt bad är väldigt avkopplande.|Samma form för maskulinum och femininum. Av rilassarsi.
+pesare|väga||Quanto [pesavi] quando eri piccolo?|Hur mycket vägde du när du var liten?|Passato prossimo: ho pesato. Latin <b>pensare</b> 'väga'.
+la sigaretta|cigarett|f|Anche una sola [sigaretta] al giorno fa male.|Även en enda cigarett om dagen är skadlig.|Plural: le sigarette. Av sigaro 'cigarr', från spanska cigarro.
+l'alcol|alkohol|m|Chi fa sport dovrebbe bere poco [alcol].|Den som idrottar borde dricka lite alkohol.|Plural saknas. Arabiska <b>al-kuhl</b>. Skrivs också alcool.
+fisico|fysisk||Oggi abbiamo fatto una prova [fisica] in palestra.|Idag gjorde vi ett fysiskt test i gympasalen.|Femininum: fisica. Plural: fisici, fisiche. Il fisico = kroppen: ha un bel fisico.
+muoversi|röra på sig||Dovresti [muoverti] di più invece di stare sempre al computer.|Du borde röra på dig mer i stället för att alltid sitta vid datorn.|Passato prossimo: mi sono mosso/mossa. Oregelbunden particip: mosso. Obs: devo muovermi = mi devo muovere.
+il basket|basket|m|Mio fratello gioca a [basket] in una squadra del quartiere.|Min bror spelar basket i ett lag i området.|Plural saknas. Från engelskan. Italienskt ord: la pallacanestro.
+lo sci|skidåkning; skida|m|Quest'inverno mi piacerebbe provare lo [sci].|I vinter skulle jag vilja prova skidåkning.|Plural: gli sci (oförändrad) = skidorna. Från norska ski. Verb: sciare.
+il punto|poäng; punkt|m|Abbiamo perso per un solo [punto].|Vi förlorade med bara en poäng.|Plural: i punti. Latin <b>punctum</b> 'stick, punkt'.
+il record|rekord|m|Ha battuto il [record] del mondo.|Hon slog världsrekordet.|Plural: i record (oförändrad). Från engelskan. Battere un record = slå ett rekord.
+lanciare|kasta||Ha [lanciato] la palla fuori dal campo.|Hon kastade bollen utanför planen.|Passato prossimo: ho lanciato. Futuro: lancerò (i:et faller bort).
+la sfida|utmaning|f|Correre una maratona è una bella [sfida].|Att springa ett maraton är en rejäl utmaning.|Plural: le sfide. Verb: sfidare 'utmana'. Kan också betyda match: la sfida tra Roma e Lazio.
+partecipare|delta||L'anno prossimo [parteciperò] a una gara di nuoto.|Nästa år ska jag delta i en simtävling.|Passato prossimo: ho partecipato. Partecipare a qualcosa. Latin <b>pars</b> 'del' + <b>capere</b> 'ta'.
+la cura|behandling, vård; omsorg|f|La [cura] è durata tre settimane.|Behandlingen varade i tre veckor.|Plural: le cure. Latin <b>cura</b> 'omsorg'. Verb: curare.
+il dottore|doktor, läkare|m|Il [dottore] mi ha detto di bere più acqua.|Doktorn sa åt mig att dricka mer vatten.|Plural: i dottori. Femininum: la dottoressa. Används också som titel för alla med universitetsexamen.
+la pressione|blodtryck; press|f|L'infermiere mi ha misurato la [pressione].|Sjuksköterskan tog mitt blodtryck.|Plural: le pressioni. Latin <b>premere</b> 'trycka'. Essere sotto pressione = vara under press.
+regolare|regelbunden||Per dormire bene servono orari [regolari].|För att sova bra behövs regelbundna tider.|Samma form för maskulinum och femininum. Latin <b>regula</b> 'regel'. Som verb: reglera, ställa in.
+smettere di|sluta (med)||Mio padre ha [smesso] di fumare due anni fa.|Min pappa slutade röka för två år sedan.|Passato prossimo: ho smesso. Oregelbunden particip: smesso. Smettere di + infinitiv.
+migliorare|förbättra, bli bättre||Da quando mi alleno, il mio tempo è [migliorato] molto.|Sedan jag började träna har min tid blivit mycket bättre.|Passato prossimo: ho migliorato (förbättra något) / è migliorato (bli bättre). Av migliore 'bättre'.
+il traguardo|mållinje; mål|m|Ha tagliato il [traguardo] per primo.|Han gick först i mål.|Plural: i traguardi. Bildligt: ett mål man når i livet.
+mangiare sano|äta nyttigt||Da quando [mangio sano] mi sento meglio.|Sedan jag började äta nyttigt mår jag bättre.|Sano används här som adverb och böjs inte.|<b>mangiare</b> äta · <b>sano</b> frisk → "äta friskt"
+stare a dieta|banta, hålla diet||Mia sorella [sta a dieta] da un mese.|Min syster har bantat i en månad.|Passato prossimo: sono stato/stata a dieta. Oregelbundet: sto, stai, sta …|<b>stare</b> vara · <b>a</b> på · <b>dieta</b> diet → "vara på diet"
+fare una pausa|ta en paus||Dopo due ore di studio [ho fatto una pausa].|Efter två timmars plugg tog jag en paus.|Passato prossimo: ho fatto una pausa. La pausa = pausen.|<b>fare</b> göra · <b>una</b> en · <b>pausa</b> paus → "göra en paus"
+fare il tifo per|heja på, hålla på||Per quale squadra [fai il tifo]?|Vilket lag håller du på?|Passato prossimo: ho fatto il tifo. Il tifoso = supportern.|<b>fare</b> göra · <b>il tifo</b> hejandet · <b>per</b> för → "göra hejandet för"
+fare un pisolino|ta en tupplur||Dopo pranzo il nonno [fa un pisolino].|Efter lunch tar farfar en tupplur.|Passato prossimo: ho fatto un pisolino. Il pisolino är vardagligt.|<b>fare</b> göra · <b>un</b> en · <b>pisolino</b> liten slummer → "göra en liten slummer"
+avere il fiatone|vara andfådd||Dopo le scale [avevo il fiatone].|Efter trapporna var jag andfådd.|Passato prossimo: ho avuto il fiatone. Il fiato = andedräkt; -one förstärker.|<b>avere</b> ha · <b>il fiatone</b> det stora flåset → "ha det stora flåset"
+#k5|Kap 5 · Natura e ambiente
+la natura|natur|f|Da bambino passavo ogni estate in mezzo alla [natura].|Som barn tillbringade jag varje sommar mitt ute i naturen.|Plural: le nature (ovanligt). Latin <b>natura</b> av nasci 'födas'.
+l'ambiente|miljö|m|Dobbiamo fare qualcosa per proteggere l'[ambiente].|Vi måste göra något för att skydda miljön.|Plural: gli ambienti. Betyder också 'omgivning, stämning': un ambiente tranquillo.
+il pianeta|planet|m|Non abbiamo un altro [pianeta] dove andare.|Vi har ingen annan planet att flytta till.|Plural: i pianeti. Maskulinum trots -a, grekiska <b>planetes</b> 'vandrare'.
+il bosco|skog|m|Ieri siamo andati a cercare funghi nel [bosco].|Igår gick vi och letade svamp i skogen.|Plural: i boschi (med h). Vanligaste ordet för en mindre skog.
+la foresta|skog (stor), urskog|f|La [foresta] amazzonica è in pericolo.|Amazonas regnskog är i fara.|Plural: le foreste. Används om stora skogar; en vanlig skog är il bosco.
+il fiume|flod, å|m|Da piccoli facevamo il bagno nel [fiume].|När vi var små badade vi i ån.|Plural: i fiumi. Latin <b>flumen</b> 'flod'. Jämför svenskans flöde.
+il prato|äng, gräsmatta|m|Abbiamo fatto un picnic sul [prato].|Vi hade picknick på gräset.|Plural: i prati. Latin <b>pratum</b> 'äng'.
+il sentiero|stig|m|Abbiamo seguito il [sentiero] fino al lago.|Vi följde stigen ända till sjön.|Plural: i sentieri. Av latin <b>semita</b> 'stig'.
+l'escursione|utflykt, vandring|f|Domenica faremo un'[escursione] in montagna.|På söndag ska vi göra en vandring i bergen.|Plural: le escursioni. Fare un'escursione 'göra en utflykt/vandring'.
+il cielo|himmel|m|Stanotte il [cielo] era pieno di stelle.|I natt var himlen full av stjärnor.|Plural: i cieli. Både 'himmel' (väder) och 'himmelrike'.
+la terra|jord, mark, land|f|Qualche mela è caduta per [terra].|Några äpplen ramlade ner på marken.|Plural: le terre. La Terra med stor bokstav = jorden (planeten). Per terra 'på golvet/marken'.
+l'aria|luft|f|In campagna l'[aria] è più pulita.|På landet är luften renare.|Plural: le arie. Betyder också 'min, uppsyn' och 'aria' (sång i opera).
+il fuoco|eld|m|La sera abbiamo acceso un [fuoco] sulla spiaggia.|På kvällen tände vi en eld på stranden.|Plural: i fuochi (med h). Latin <b>focus</b> 'härd'. Al fuoco! 'Det brinner!'
+la luce|ljus|f|D'estate in Svezia c'è [luce] fino a tardi.|På sommaren i Sverige är det ljust till sent.|Plural: le luci. Latin <b>lux</b>. Accendere/spegnere la luce 'tända/släcka ljuset'.
+la pianta|växt, planta|f|Mia madre ha tantissime [piante] sul balcone.|Min mamma har jättemånga växter på balkongen.|Plural: le piante. Betyder också 'karta över stad': la pianta di Roma.
+l'albero|träd|m|Ogni anno piantiamo un [albero] nel giardino della scuola.|Varje år planterar vi ett träd i skolans trädgård.|Plural: gli alberi. Latin <b>arbor</b> 'träd'.
+il fiore|blomma|m|Per il suo compleanno le ho regalato dei [fiori].|Till hennes födelsedag gav jag henne blommor.|Plural: i fiori. Latin <b>flos, floris</b>. Jämför flora.
+l'erba|gräs|f|Non camminate sull'[erba]!|Gå inte på gräset!|Plural: le erbe. Le erbe kan också betyda 'örter'.
+la foglia|löv, blad|f|In autunno le [foglie] diventano gialle e rosse.|På hösten blir löven gula och röda.|Plural: le foglie. Latin <b>folium</b>. Jämför folie.
+la pietra|sten|f|Il vecchio ponte è fatto di [pietra].|Den gamla bron är gjord av sten.|Plural: le pietre. Latin <b>petra</b>. En liten sten heter il sasso.
+la sabbia|sand|f|Avevo [sabbia] dappertutto, anche nelle scarpe!|Jag hade sand överallt, även i skorna!|Inget plural i vanliga fall. Latin <b>sabulum</b>.
+la luna|måne|f|Ieri sera c'era la [luna] piena.|I går kväll var det fullmåne.|Plural: le lune. Luna di miele 'smekmånad'.
+la stella|stjärna|f|In città non si vede nessuna [stella].|I stan syns inte en enda stjärna.|Plural: le stelle. Latin <b>stella</b>. Hotel a cinque stelle 'femstjärnigt hotell'.
+la nuvola|moln|f|Non c'era neanche una [nuvola] in cielo.|Det fanns inte ett enda moln på himlen.|Plural: le nuvole. Adjektivet är nuvoloso 'molnigt'.
+il vento|vind|m|Ieri tirava un [vento] fortissimo.|I går blåste det en jättestark vind.|Plural: i venti. Tira vento 'det blåser'. Latin <b>ventus</b>. Jämför ventil.
+il temporale|åskväder|m|Durante la notte c'è stato un forte [temporale].|Under natten var det ett kraftigt åskväder.|Plural: i temporali. Latin <b>tempus</b> 'tid, väder'.
+la tempesta|storm|f|La [tempesta] ha distrutto alcuni alberi nel parco.|Stormen förstörde några träd i parken.|Plural: le tempeste. Samma ursprung som tempo och temporale.
+la nebbia|dimma|f|Stamattina c'era così tanta [nebbia] che non si vedeva niente.|I morse var det så mycket dimma att man inte såg någonting.|Plural: le nebbie. Vanligt på Poslätten (la Pianura Padana).
+il ghiaccio|is|m|Vorrei una limonata con [ghiaccio], per favore.|Jag skulle vilja ha en lemonad med is, tack.|Plural: i ghiacci. Il ghiacciaio 'glaciär'.
+il caldo|värme, hetta|m|Con questo [caldo] non riesco a dormire.|I den här värmen kan jag inte sova.|Inget plural i denna betydelse. Adjektiv: caldo, calda 'varm'. Ho caldo 'jag är varm'.
+il freddo|kyla|m|Ogni inverno il [freddo] arriva sempre prima.|Varje vinter kommer kylan allt tidigare.|Inget plural i denna betydelse. Adjektiv: freddo, fredda 'kall'. Ho freddo 'jag fryser'.
+umido|fuktig||A Milano d'estate fa caldo ed è molto [umido].|I Milano är det varmt och väldigt fuktigt på sommaren.|Femininum: umida. Latin <b>umidus</b>. Substantiv: l'umidità 'fukt'.
+secco|torr||Dopo mesi senza pioggia, il terreno era [secco].|Efter månader utan regn var marken torr.|Femininum: secca. Plural: secchi, secche. Un vino secco 'ett torrt vin'.
+la temperatura|temperatur|f|Domani la [temperatura] salirà fino a trentacinque gradi.|I morgon kommer temperaturen att stiga till trettiofem grader.|Plural: le temperature. Latin <b>temperare</b> 'blanda lagom'.
+il clima|klimat|m|Il [clima] in Sicilia è molto più mite che in Svezia.|Klimatet på Sicilien är mycket mildare än i Sverige.|Plural: i climi. Maskulinum trots -a (grekiska <b>klima</b>).
+la siccità|torka|f|Quest'estate la [siccità] ha colpito tutto il sud.|I somras drabbade torkan hela södra Italien.|Plural: le siccità (oförändrat, slutar på betonad vokal). Av <b>secco</b> 'torr'.
+l'alluvione|översvämning|f|L'[alluvione] ha distrutto molte case.|Översvämningen förstörde många hus.|Plural: le alluvioni. Latin <b>alluvio</b> 'översvämning'.
+il terremoto|jordbävning|m|Nel 2009 c'è stato un grave [terremoto] all'Aquila.|2009 var det en svår jordbävning i L'Aquila.|Plural: i terremoti. Av <b>terra</b> 'jord' + <b>moto</b> 'rörelse'.
+il vulcano|vulkan|m|L'Etna è il [vulcano] più alto d'Europa.|Etna är Europas högsta vulkan.|Plural: i vulcani. Efter guden <b>Vulcanus</b>, eldens gud.
+l'inquinamento|föroreningar, miljöförstöring|m|L'[inquinamento] dell'aria è un grande problema nelle città.|Luftföroreningarna är ett stort problem i städerna.|Plural: gli inquinamenti (ovanligt). Av verbet <b>inquinare</b>.
+inquinare|förorena||Le fabbriche hanno [inquinato] il fiume per anni.|Fabrikerna förorenade floden i åratal.|Passato prossimo: ho inquinato. Latin <b>inquinare</b> 'smutsa ner'.
+inquinato|förorenad||Nessuno fa il bagno qui perché l'acqua è [inquinata].|Ingen badar här eftersom vattnet är förorenat.|Femininum: inquinata. Particip av inquinare.
+lo smog|smog, avgaser|m|A Milano c'è troppo [smog] d'inverno.|I Milano är det för mycket smog på vintern.|Oföränderligt. Engelska <b>smoke</b> + <b>fog</b>. Lo, eftersom ordet börjar på s + konsonant.
+i rifiuti|avfall, sopor|mpl|Ognuno deve portare via i suoi [rifiuti].|Var och en måste ta med sig sitt eget skräp.|Singular: il rifiuto (betyder också 'vägran'). Av <b>rifiutare</b> 'vägra, avvisa'.
+la spazzatura|sopor, skräp|f|Chi porta fuori la [spazzatura] stasera?|Vem tar ut soporna i kväll?|Plural: le spazzature (ovanligt). Av <b>spazzare</b> 'sopa'.
+riciclare|återvinna||Abbiamo [riciclato] tutte le bottiglie di vetro.|Vi återvann alla glasflaskor.|Passato prossimo: ho riciclato. Av <b>ri-</b> 'åter' + <b>ciclo</b> 'kretslopp'.
+la plastica|plast|f|Nel mare c'è sempre più [plastica].|Det finns allt mer plast i havet.|Plural: le plastiche. Di plastica 'av plast': un sacchetto di plastica.
+la carta|papper|f|La [carta] va nel bidone blu.|Papper ska i den blå tunnan.|Plural: le carte. Betyder också 'kort': la carta di credito. Latin <b>charta</b>.
+il vetro|glas (materialet)|m|Ho buttato le bottiglie nel contenitore del [vetro].|Jag slängde flaskorna i glasbehållaren.|Plural: i vetri. Ett dricksglas heter il bicchiere. Latin <b>vitrum</b>.
+il cestino|papperskorg|m|Butta la carta nel [cestino], non per terra!|Släng pappret i papperskorgen, inte på marken!|Plural: i cestini. Diminutiv av <b>cesta</b> 'korg'.
+buttare|slänga, kasta||Non ho mai [buttato] niente per terra.|Jag har aldrig slängt någonting på marken.|Passato prossimo: ho buttato. Buttare via 'slänga bort'.
+sprecare|slösa (bort)||Ieri abbiamo [sprecato] tanta acqua.|I går slösade vi bort mycket vatten.|Passato prossimo: ho sprecato. Tu-formen får h: sprechi.
+lo spreco|slöseri|m|Buttare il cibo è uno [spreco].|Att slänga mat är slöseri.|Plural: gli sprechi (med h). Av <b>sprecare</b>.
+il petrolio|olja, petroleum|m|Un giorno non useremo più il [petrolio].|En dag kommer vi inte att använda olja längre.|Plural: i petroli (ovanligt). Latin <b>petra</b> 'sten' + <b>oleum</b> 'olja'. Matolja heter l'olio.
+il pannello solare|solpanel|m|Sul tetto della scuola hanno messo alcuni [pannelli solari].|På skolans tak har de satt upp några solpaneler.|Plural: i pannelli solari. <b>solare</b> av sole 'sol'.
+rinnovabile|förnybar||Il vento è una fonte di energia [rinnovabile].|Vinden är en förnybar energikälla.|Samma form för maskulinum och femininum. Av <b>rinnovare</b> 'förnya'.
+proteggere|skydda||In futuro dovremo [proteggere] meglio i nostri mari.|I framtiden måste vi skydda våra hav bättre.|Passato prossimo: ho protetto (oregelbunden particip).
+salvare|rädda||I volontari hanno [salvato] alcuni animali dall'incendio.|Volontärerna räddade några djur från branden.|Passato prossimo: ho salvato. Salvare un file 'spara en fil'.
+la specie|art|f|Molte [specie] di animali sono in pericolo.|Många djurarter är i fara.|Plural: le specie (oförändrat). Latin <b>species</b>. Una specie di 'en sorts'.
+l'animale|djur|m|Qual è il tuo [animale] preferito?|Vilket är ditt favoritdjur?|Plural: gli animali. Latin <b>animal</b>, av anima 'själ, andning'.
+l'uccello|fågel|m|Ogni mattina qualche [uccello] canta davanti alla mia finestra.|Varje morgon sjunger någon fågel utanför mitt fönster.|Plural: gli uccelli. Latin <b>aucellus</b>.
+il cavallo|häst|m|Da piccola andavo a [cavallo] ogni sabato.|När jag var liten red jag varje lördag.|Plural: i cavalli. Andare a cavallo 'rida'. Latin <b>caballus</b>.
+la mucca|ko|f|Nella fattoria dello zio ci sono venti [mucche].|På farbroderns bondgård finns det tjugo kor.|Plural: le mucche (med h). Ett ord med ljudhärmande ursprung (<b>mu</b>).
+il lupo|varg|m|Nessuno ha mai visto un [lupo] in questo bosco.|Ingen har någonsin sett en varg i den här skogen.|Plural: i lupi. Latin <b>lupus</b>. In bocca al lupo! 'Lycka till!'
+l'orso|björn|m|In Trentino vivono alcuni [orsi].|I Trentino lever några björnar.|Plural: gli orsi. Latin <b>ursus</b>. Jämför Ursa Major 'Stora björn'.
+la volpe|räv|f|Stanotte una [volpe] è entrata nel giardino.|I natt kom en räv in i trädgården.|Plural: le volpi. Latin <b>vulpes</b>.
+l'insetto|insekt|m|Non mi piacciono gli [insetti].|Jag gillar inte insekter.|Plural: gli insetti. Latin <b>insectum</b> 'insekt, inskuren'.
+l'ape|bi|f|Senza le [api] non ci sarebbe la frutta.|Utan bin skulle det inte finnas någon frukt.|Plural: le api. Latin <b>apis</b>. Il miele 'honung' kommer från bina.
+la farfalla|fjäril|f|Nel prato c'erano tantissime [farfalle].|På ängen fanns det jättemånga fjärilar.|Plural: le farfalle. Nuoto a farfalla 'fjärilsim'. Även en pastaform.
+il topo|mus, råtta|m|C'è un [topo] in cucina!|Det är en mus i köket!|Plural: i topi. Topolino = Musse Pigg.
+il serpente|orm|m|Durante l'escursione abbiamo visto un [serpente].|Under vandringen såg vi en orm.|Plural: i serpenti. Latin <b>serpere</b> 'krypa'.
+la pecora|får|f|Sulla collina c'erano alcune [pecore].|På kullen fanns det några får.|Plural: le pecore. Latin <b>pecus</b> 'boskap'. La pecora nera 'det svarta fåret'.
+il maiale|gris|m|Il nonno aveva un [maiale] e qualche gallina.|Farfar hade en gris och några höns.|Plural: i maiali. Betyder också 'fläskkött': carne di maiale.
+l'animale domestico|husdjur|m|Hai qualche [animale domestico]?|Har du något husdjur?|Plural: gli animali domestici. <b>domestico</b> av latin domus 'hus'.
+selvatico|vild||Nel parco nazionale vivono molti animali [selvatici].|I nationalparken lever många vilda djur.|Femininum: selvatica. Plural: selvatici, selvatiche. Av <b>selva</b> 'skog'.
+sporco|smutsig||Dopo la festa la spiaggia era tutta [sporca].|Efter festen var stranden helt nedskräpad.|Femininum: sporca. Plural: sporchi, sporche.
+pulito|ren||Vorrei vivere in una città più [pulita].|Jag skulle vilja bo i en renare stad.|Femininum: pulita. Particip av <b>pulire</b> 'städa'.
+naturale|naturlig||Preferisco i prodotti [naturali].|Jag föredrar naturliga produkter.|Samma form för maskulinum och femininum. Acqua naturale 'vatten utan kolsyra'.
+ecologico|miljövänlig, ekologisk||La bici è il mezzo più [ecologico].|Cykeln är det mest miljövänliga färdmedlet.|Femininum: ecologica. Plural: ecologici, ecologiche.
+sostenibile|hållbar||Dovremmo scegliere un turismo più [sostenibile].|Vi borde välja en mer hållbar turism.|Samma form för maskulinum och femininum. Av <b>sostenere</b> 'upprätthålla'.
+le previsioni del tempo|väderleksrapport, väderprognos|fpl|Secondo le [previsioni del tempo], domani pioverà.|Enligt väderprognosen kommer det att regna i morgon.|Singular: la previsione 'förutsägelse'. Ofta bara le previsioni.|<b>le previsioni</b> förutsägelserna · <b>del tempo</b> om vädret → "förutsägelserna om vädret"
+il cambiamento climatico|klimatförändringen|m|Il [cambiamento climatico] riguarda tutti.|Klimatförändringen angår alla.|Plural: i cambiamenti climatici. Av <b>cambiare</b> 'ändra' och <b>clima</b>.|<b>il cambiamento</b> förändringen · <b>climatico</b> klimat- → "den klimatiska förändringen"
+il riscaldamento globale|den globala uppvärmningen|m|Il [riscaldamento globale] fa sciogliere i ghiacciai.|Den globala uppvärmningen får glaciärerna att smälta.|Plural används inte. Il riscaldamento betyder också 'uppvärmning, element' i ett hus.|<b>il riscaldamento</b> uppvärmningen · <b>globale</b> global → "den globala uppvärmningen"
+la raccolta differenziata|sopsortering|f|Da noi ognuno fa la [raccolta differenziata].|Hos oss sorterar alla sina sopor.|Plural används inte. Fare la raccolta differenziata 'sortera sopor'.|<b>la raccolta</b> insamlingen · <b>differenziata</b> uppdelad → "den uppdelade insamlingen"
+in via di estinzione|utrotningshotad||Il panda è una specie [in via di estinzione].|Pandan är en utrotningshotad art.|Oföränderligt uttryck. <b>estinzione</b> 'utdöende', av estinguere 'släcka'.|<b>in via di</b> på väg mot · <b>estinzione</b> utdöende → "på väg mot utdöende"
+fa un freddo cane|det är svinkallt||Metti il cappotto, fuori [fa un freddo cane]!|Ta på dig kappan, det är svinkallt ute!|Vardagligt. Imperfetto: faceva un freddo cane.|<b>fa</b> gör · <b>un freddo</b> en kyla · <b>cane</b> hund → "det gör en hundkyla"
+piove a dirotto|det ösregnar||Siamo rimasti a casa perché [pioveva a dirotto].|Vi stannade hemma eftersom det ösregnade.|Imperfetto: pioveva a dirotto. Passato prossimo: è piovuto / ha piovuto a dirotto.|<b>piove</b> det regnar · <b>a dirotto</b> utan uppehåll → "det regnar utan att hejda sig"
+all'aria aperta|utomhus, i friska luften||Oggi è bello, mangiamo [all'aria aperta]!|Det är fint i dag, vi äter utomhus!|Oföränderligt uttryck. Betyder ungefär samma som all'aperto.|<b>all'aria</b> i luften · <b>aperta</b> öppna → "i den öppna luften"
+spegnere la luce|släcka ljuset||Ricordati di [spegnere la luce] quando esci!|Kom ihåg att släcka ljuset när du går ut!|Passato prossimo: ho spento la luce (oregelbunden particip spento).|<b>spegnere</b> släcka · <b>la luce</b> ljuset → "släcka ljuset"
+#k6|Kap 6 · Città o campagna?
+la campagna|landsbygd, landet|f|I miei nonni vivono in [campagna].|Mina morföräldrar bor på landet.|Plural: le campagne. Vivere in campagna 'bo på landet'. Betyder också 'kampanj'. Latin <b>campus</b> 'fält'.
+vivere|leva, bo||Da piccolo ho [vissuto] tre anni a Napoli.|När jag var liten bodde jag tre år i Neapel.|Passato prossimo: ho vissuto / sono vissuto (oregelbunden particip vissuto). Futuro: vivrò.
+il villaggio|by|m|Il [villaggio] più vicino è a dieci chilometri.|Närmaste by ligger tio kilometer bort.|Plural: i villaggi. Il villaggio turistico 'semesterby'.
+il borgo|liten ort, medeltida by|m|Abbiamo visitato un [borgo] medievale in Umbria.|Vi besökte en medeltida by i Umbrien.|Plural: i borghi (med h). Germanskt ursprung, jämför <b>borg</b>.
+la periferia|förort, utkant|f|Abito in [periferia], lontano dal centro.|Jag bor i en förort, långt från centrum.|Plural: le periferie. Grekiska <b>periphereia</b> 'omkrets'.
+il centro storico|gamla stan|m|Nel [centro storico] non possono entrare le macchine.|I gamla stan får inga bilar köra in.|Plural: i centri storici. <b>storico</b> 'historisk'.
+la zona|område, zon|f|È una [zona] tranquilla, con molti parchi.|Det är ett lugnt område med många parker.|Plural: le zone. La zona pedonale 'gågatan, bilfritt område'.
+il vicino di casa|granne|m|Il mio [vicino di casa] suona la batteria ogni sera.|Min granne spelar trummor varje kväll.|Plural: i vicini di casa. Femininum: la vicina di casa. Ofta bara il vicino.
+il palazzo|flerfamiljshus, palats|m|Abitiamo al quinto piano di un vecchio [palazzo].|Vi bor på femte våningen i ett gammalt hyreshus.|Plural: i palazzi. Betyder både 'stort bostadshus' och 'palats'. Latin <b>Palatium</b>, kullen i Rom.
+il condominio|bostadsrättsförening, flerbostadshus|m|Nel nostro [condominio] ci sono venti famiglie.|I vårt hus bor tjugo familjer.|Plural: i condomini. Latin <b>con-</b> 'tillsammans' + <b>dominium</b> 'ägande'.
+l'edificio|byggnad|m|È l'[edificio] più alto della città.|Det är stadens högsta byggnad.|Plural: gli edifici. Latin <b>aedificium</b>, av aedes 'hus'.
+il grattacielo|skyskrapa|m|Milano ha sempre più [grattacieli].|Milano har allt fler skyskrapor.|Plural: i grattacieli. Av <b>grattare</b> 'skrapa' + <b>cielo</b> 'himmel'.
+la fattoria|bondgård|f|D'estate lavoravo nella [fattoria] di mio zio.|På somrarna jobbade jag på min farbrors bondgård.|Plural: le fattorie. Av <b>fattore</b> 'förvaltare'.
+il contadino|bonde|m|Compriamo le uova direttamente dal [contadino].|Vi köper äggen direkt från bonden.|Plural: i contadini. Femininum: la contadina. Av <b>contado</b> 'landsbygden runt en stad'.
+l'orto|köksträdgård, grönsaksland|m|Nel nostro [orto] coltiviamo pomodori e zucchine.|I vårt grönsaksland odlar vi tomater och zucchini.|Plural: gli orti. Latin <b>hortus</b> 'trädgård'.
+coltivare|odla||Il nonno ha sempre [coltivato] la sua verdura.|Farfar har alltid odlat sina egna grönsaker.|Passato prossimo: ho coltivato. Latin <b>colere</b> 'odla', jämför kultur.
+la gallina|höna|f|Le [galline] della nonna fanno un uovo al giorno.|Mormors höns värper ett ägg om dagen.|Plural: le galline. Tuppen heter il gallo.
+il traffico|trafik|m|C'era così tanto [traffico] che sono arrivato in ritardo.|Det var så mycket trafik att jag kom för sent.|Plural: i traffici (ovanligt). Betyder också 'handel'.
+l'ingorgo|trafikstockning, bilkö|m|Siamo rimasti un'ora in un [ingorgo].|Vi satt fast en timme i en bilkö.|Plural: gli ingorghi (med h). Av <b>gorgo</b> 'virvel'.
+l'ora di punta|rusningstid|f|All'[ora di punta] l'autobus è sempre pieno.|I rusningstid är bussen alltid full.|Plural: le ore di punta.|<b>l'ora</b> timmen · <b>di punta</b> av spets → "spetstimmen"
+i mezzi pubblici|kollektivtrafik|mpl|In città è meglio usare i [mezzi pubblici].|I stan är det bättre att åka kollektivt.|Singular: il mezzo pubblico. Il mezzo 'medel, fordon'.|<b>i mezzi</b> medlen · <b>pubblici</b> allmänna → "de allmänna fordonen"
+il tram|spårvagn|m|A Milano prendo il [tram] per andare a scuola.|I Milano tar jag spårvagnen till skolan.|Plural: i tram (oförändrat). Från engelskan.
+il motorino|moped|m|A quattordici anni avevo già il [motorino].|När jag var fjorton hade jag redan moped.|Plural: i motorini. Diminutiv av <b>motore</b>.
+la moto|motorcykel|f|Mio fratello ha comprato una [moto] nuova.|Min bror har köpt en ny motorcykel.|Plural: le moto (oförändrat). Kortform av la motocicletta.
+il camion|lastbil|m|I [camion] non possono entrare nel centro.|Lastbilar får inte köra in i centrum.|Plural: i camion (oförändrat). Från franskan.
+la patente|körkort|f|Quando avrò diciotto anni, prenderò la [patente].|När jag fyller arton ska jag ta körkort.|Plural: le patenti. Prendere la patente 'ta körkort'. Latin <b>patens</b> 'öppen'.
+parcheggiare|parkera||Non si può [parcheggiare] in centro.|Man får inte parkera i centrum.|Passato prossimo: ho parcheggiato. Av <b>parco</b> 'park'.
+il parcheggio|parkering|m|Non c'era nessun [parcheggio] libero vicino a casa.|Det fanns ingen ledig parkering nära hemmet.|Plural: i parcheggi. Av <b>parcheggiare</b>.
+il marciapiede|trottoar|m|Le biciclette non possono andare sul [marciapiede].|Cyklar får inte köra på trottoaren.|Plural: i marciapiedi. Av <b>marciare</b> 'marschera' + <b>piede</b> 'fot'.
+il pedone|fotgängare|m|In questa strada i [pedoni] sono sempre in pericolo.|På den här gatan är fotgängarna alltid i fara.|Plural: i pedoni. Av latin <b>pes, pedis</b> 'fot'. La zona pedonale 'gågata'.
+le strisce pedonali|övergångsställe|fpl|Attraversa sempre sulle [strisce pedonali]!|Gå alltid över på övergångsstället!|Singular: la striscia 'rand'. Ofta bara le strisce.|<b>le strisce</b> ränderna · <b>pedonali</b> för fotgängare → "fotgängarränderna"
+la pista ciclabile|cykelbana|f|Nella mia città ci sono poche [piste ciclabili].|I min stad finns det få cykelbanor.|Plural: le piste ciclabili. <b>ciclabile</b> 'cykelbar', av ciclo 'cykel'.|<b>la pista</b> banan · <b>ciclabile</b> cykelbar → "den cykelbara banan"
+la multa|böter|f|Mio padre ha preso una [multa] per eccesso di velocità.|Min pappa fick böter för fortkörning.|Plural: le multe. Prendere una multa 'få böter'. Latin <b>multa</b> 'straffavgift'.
+la velocità|hastighet, fart|f|In città la [velocità] massima è cinquanta all'ora.|I stan är högsta hastigheten femtio kilometer i timmen.|Plural: le velocità (oförändrat). Av <b>veloce</b> 'snabb'.
+l'affitto|hyra|m|In centro l'[affitto] è carissimo.|I centrum är hyran jättedyr.|Plural: gli affitti. In affitto 'att hyra, hyrd': una casa in affitto.
+il proprietario|ägare, hyresvärd|m|Il [proprietario] dell'appartamento abita al piano di sopra.|Ägaren till lägenheten bor på våningen ovanför.|Plural: i proprietari. Femininum: la proprietaria. Av <b>proprio</b> 'egen'.
+l'inquilino|hyresgäst|m|I nuovi [inquilini] sono molto simpatici.|De nya hyresgästerna är väldigt trevliga.|Plural: gli inquilini. Femininum: l'inquilina. Latin <b>inquilinus</b>.
+il trasloco|flytt|m|Il [trasloco] è stato faticosissimo.|Flytten var jättejobbig.|Plural: i traslochi (med h). Fare il trasloco 'flytta (bohag)'. Jämför trasferirsi 'flytta till annan ort'.
+traslocare|flytta (bohag)||Abbiamo [traslocato] a settembre.|Vi flyttade i september.|Passato prossimo: ho traslocato. Tu-formen får h: traslochi.
+arredare|inreda, möblera||Ho [arredato] la mia camera con mobili usati.|Jag inredde mitt rum med begagnade möbler.|Passato prossimo: ho arredato. Arredato 'möblerad': un appartamento arredato.
+il monolocale|etta, enrumslägenhet|m|Da studente vivrò in un piccolo [monolocale].|Som student ska jag bo i en liten etta.|Plural: i monolocali. Av <b>mono-</b> 'en' + <b>locale</b> 'rum'. Il bilocale = tvåa.
+il riscaldamento|uppvärmning, värme (i hus)|m|D'inverno il [riscaldamento] è acceso tutto il giorno.|På vintern är värmen på hela dagen.|Plural: i riscaldamenti. Av <b>riscaldare</b> 'värma upp'.
+la bolletta|räkning (el, gas, vatten)|f|Questo mese la [bolletta] della luce è altissima.|Den här månaden är elräkningen jättehög.|Plural: le bollette. Il conto används på restaurang.
+il terrazzo|terrass|m|D'estate ceniamo sempre sul [terrazzo].|På sommaren äter vi alltid middag på terrassen.|Plural: i terrazzi. Av <b>terra</b> 'jord'.
+il garage|garage|m|Il [garage] è pieno di biciclette.|Garaget är fullt av cyklar.|Plural: i garage (oförändrat). Från franskan, uttalas garàge.
+il citofono|porttelefon|m|Suona al [citofono] quando arrivi!|Ring på porttelefonen när du kommer!|Plural: i citofoni. Av <b>città</b> + grekiska <b>phone</b> 'röst'.
+la cantina|källare, vinkällare|f|Teniamo le bici in [cantina].|Vi har cyklarna i källaren.|Plural: le cantine. Betyder också 'vingård/vinkällare'.
+il rumore|ljud, buller|m|Non riesco a dormire per il [rumore] delle macchine.|Jag kan inte sova för bullret från bilarna.|Plural: i rumori. Latin <b>rumor</b> 'sorl'. Obs: inte 'rykte' (= la voce).
+rumoroso|bullrig, högljudd||La nostra strada è la più [rumorosa] del quartiere.|Vår gata är den bullrigaste i kvarteret.|Femininum: rumorosa. Av <b>rumore</b>.
+tranquillo|lugn||In campagna la vita è più [tranquilla].|På landet är livet lugnare.|Femininum: tranquilla. Stai tranquillo! 'Ta det lugnt!'
+silenzioso|tyst||Di notte il paese è [silenziosissimo].|På natten är byn jättetyst.|Femininum: silenziosa. Av <b>silenzio</b> 'tystnad'.
+isolato|isolerad, avlägsen||La casa era così [isolata] che non passava nessuno.|Huset låg så avsides att ingen gick förbi.|Femininum: isolata. Av <b>isola</b> 'ö'. L'isolato (subst.) = kvarter.
+pericoloso|farlig||Questo incrocio è più [pericoloso] di quello vicino alla scuola.|Den här korsningen är farligare än den vid skolan.|Femininum: pericolosa. Av <b>pericolo</b> 'fara'.
+sicuro|säker, trygg||Il mio quartiere è molto [sicuro], anche di sera.|Mitt kvarter är väldigt tryggt, även på kvällen.|Femininum: sicura. Betyder också 'säker på': sono sicuro. Latin <b>securus</b>.
+caotico|kaotisk||Roma è bellissima, ma il traffico è [caotico].|Rom är jättevackert, men trafiken är kaotisk.|Femininum: caotica. Plural: caotici, caotiche. Av <b>caos</b>.
+spazioso|rymlig||La nuova casa è molto più [spaziosa] della vecchia.|Det nya huset är mycket rymligare än det gamla.|Femininum: spaziosa. Av <b>spazio</b> 'utrymme'.
+vuoto|tom||D'agosto la città è quasi [vuota].|I augusti är staden nästan tom.|Femininum: vuota. Latin <b>vocitus</b>.
+la tranquillità|lugn, stillhet|f|In campagna cerco soprattutto la [tranquillità].|På landet söker jag framför allt lugnet.|Plural: le tranquillità (oförändrat, ovanligt). Av <b>tranquillo</b>.
+la sicurezza|säkerhet, trygghet|f|Per i genitori la [sicurezza] è la cosa più importante.|För föräldrarna är tryggheten det viktigaste.|Plural: le sicurezze. Di sicurezza 'säkerhets-': la cintura di sicurezza.
+la qualità della vita|livskvalitet|f|In una città piccola la [qualità della vita] è migliore.|I en liten stad är livskvaliteten bättre.|Plural används inte. La qualità 'kvalitet' är oförändrad i plural.|<b>la qualità</b> kvaliteten · <b>della vita</b> av livet → "livets kvalitet"
+i servizi|service, samhällsservice|mpl|In paese mancano alcuni [servizi], per esempio l'ospedale.|I byn saknas en del service, till exempel sjukhus.|Singular: il servizio. I servizi betyder också 'toalett och badrum' i bostadsannonser.
+il centro commerciale|köpcentrum|m|Sabato andremo al [centro commerciale].|På lördag ska vi gå till köpcentret.|Plural: i centri commerciali. <b>commerciale</b> av commercio 'handel'.
+il comune|kommun|m|Il [comune] ha costruito una nuova piscina.|Kommunen har byggt en ny simhall.|Plural: i comuni. Latin <b>communis</b> 'gemensam'. Adjektivet comune = 'vanlig, gemensam'.
+il sindaco|borgmästare, kommunstyrelsens ordförande|m|Il [sindaco] ha promesso più piste ciclabili.|Borgmästaren har lovat fler cykelbanor.|Plural: i sindaci. Om en kvinna: la sindaca eller il sindaco.
+la popolazione|befolkning|f|La [popolazione] dei piccoli paesi diminuisce ogni anno.|Befolkningen i de små byarna minskar varje år.|Plural: le popolazioni. Latin <b>populus</b> 'folk'.
+il pendolare|pendlare|m|Mio padre fa il [pendolare] tra Bergamo e Milano.|Min pappa pendlar mellan Bergamo och Milano.|Plural: i pendolari. Samma form för kvinnor: la pendolare. Fare il pendolare 'pendla'. Av <b>pendolo</b> 'pendel'.
+spostarsi|förflytta sig, ta sig fram||In città mi [sposto] sempre in bici.|I stan tar jag mig alltid fram med cykel.|Passato prossimo: mi sono spostato/spostata. Spostare (utan si) 'flytta på något'.
+mancare|saknas, sakna||Quando vivevo a Roma, mi [mancava] il mare.|När jag bodde i Rom saknade jag havet.|Passato prossimo: è mancato. Omvänd konstruktion som piacere: mi manchi 'jag saknar dig'.
+meglio|bättre (adverb)||Secondo me si vive [meglio] in campagna.|Enligt mig lever man bättre på landet.|Adverbets komparativ av bene. Adjektivet 'bättre' är migliore. Il meglio 'det bästa'.
+peggio|sämre, värre (adverb)||Il traffico va sempre [peggio].|Trafiken blir allt värre.|Adverbets komparativ av male. Adjektivet 'sämre' är peggiore.
+sempre di più|allt mer||[Sempre di più] giovani lasciano i piccoli paesi.|Allt fler unga lämnar de små byarna.|Oföränderligt. Motsats: sempre di meno 'allt mindre'.|<b>sempre</b> alltid · <b>di più</b> mer → "alltid mer"
+a due passi|alldeles i närheten||Abito [a due passi] dalla stazione.|Jag bor alldeles i närheten av stationen.|Oföränderligt uttryck. A due passi da 'ett stenkast från'.|<b>a</b> på · <b>due passi</b> två steg → "på två stegs avstånd"
+fuori città|utanför stan||Da grande vorrei abitare [fuori città].|När jag blir stor skulle jag vilja bo utanför stan.|Oföränderligt uttryck, ingen artikel.|<b>fuori</b> utanför · <b>città</b> stad → "utanför stad"
+in mezzo al verde|mitt i grönskan||La nostra casa è [in mezzo al verde].|Vårt hus ligger mitt i grönskan.|Oföränderligt uttryck. Il verde (substantiv) = 'grönska, grönområden'.|<b>in mezzo a</b> mitt i · <b>il verde</b> det gröna → "mitt i det gröna"
+dare fastidio|störa, irritera||Il rumore del traffico mi [dà fastidio].|Trafikbullret stör mig.|Passato prossimo: ha dato fastidio. Konstruktion som piacere: mi dà fastidio.|<b>dare</b> ge · <b>fastidio</b> obehag → "ge obehag"
+in affitto|att hyra, hyrd||Cerchiamo un appartamento [in affitto] vicino all'università.|Vi letar efter en hyreslägenhet nära universitetet.|Oföränderligt. Motsats: di proprietà 'ägd'. Prendere in affitto 'hyra'.|<b>in</b> i · <b>affitto</b> hyra → "i hyra"
+#k7|Kap 7 · Arte e musica
+l'arte|konst|f|Mi piace molto l'[arte] del Rinascimento.|Jag gillar Renässansens konst väldigt mycket.|Plural: le arti. Latin <b>ars</b> 'skicklighet, konst'.
+l'artista|konstnär, artist|m|Da bambino volevo diventare un [artista].|Som barn ville jag bli konstnär.|Plural: gli artisti, le artiste. Samma form för man och kvinna: l'artista.
+il cantante|sångare|m|Il [cantante] ha salutato il pubblico prima di cominciare.|Sångaren hälsade på publiken innan han började.|Plural: i cantanti. Samma form för kvinna: la cantante. Av <b>cantare</b> 'sjunga'.
+il cantautore|låtskrivare som sjunger sina egna låtar|m|Lucio Dalla era un [cantautore] molto amato in Italia.|Lucio Dalla var en mycket älskad sångare och låtskrivare i Italien.|Plural: i cantautori. Femininum: la cantautrice. Av <b>cantante</b> + <b>autore</b>.
+il musicista|musiker|m|Mio zio faceva il [musicista] in un'orchestra.|Min farbror var musiker i en orkester.|Plural: i musicisti, le musiciste. Samma form för kvinna: la musicista.
+la band|band|f|Qual è la tua [band] preferita?|Vilket är ditt favoritband?|Plural: le band (oföränderligt). Från engelska. Man säger också il gruppo.
+il pittore|målare, konstnär|m|Caravaggio è il [pittore] che mi è piaciuto di più.|Caravaggio är den målare jag gillade mest.|Plural: i pittori. Femininum: la pittrice. Latin <b>pingere</b> 'måla'.
+lo scultore|skulptör|m|Michelangelo era pittore e anche [scultore].|Michelangelo var målare och även skulptör.|Plural: gli scultori. Femininum: la scultrice.
+lo scrittore|författare|m|Italo Calvino è lo [scrittore] di cui ti ho parlato.|Italo Calvino är den författare som jag berättade om för dig.|Plural: gli scrittori. Femininum: la scrittrice. Av <b>scrivere</b> 'skriva'.
+l'autore|upphovsman, författare|m|Chi è l'[autore] di questa canzone?|Vem har skrivit den här låten?|Plural: gli autori. Femininum: l'autrice. Latin <b>auctor</b> 'skapare'.
+il poeta|poet|m|Dante è il [poeta] più famoso d'Italia.|Dante är Italiens mest berömda poet.|Plural: i poeti. Femininum: la poetessa. Maskulinum trots -a.
+il fotografo|fotograf|m|Il [fotografo] ha fatto una foto a tutta la band.|Fotografen tog ett foto av hela bandet.|Plural: i fotografi. Obs betoningen: fotògrafo.
+il ballerino|dansare|m|Da piccola sognavo di fare la [ballerina].|När jag var liten drömde jag om att bli dansare.|Plural: i ballerini. Femininum: la ballerina. Av <b>ballare</b> 'dansa'.
+il tenore|tenor|m|Il [tenore] ha cantato un'aria di Puccini.|Tenoren sjöng en aria av Puccini.|Plural: i tenori. Den högsta mansrösten i opera.
+il fan|beundrare, fan|m|Sono un grande [fan] di questa cantante.|Jag är ett stort fan av den här sångerskan.|Plural: i fan (oföränderligt). Från engelska. Femininum: la fan.
+l'opera|opera; verk|f|Non ero mai stato all'[opera] prima.|Jag hade aldrig varit på opera förut.|Plural: le opere. Latin <b>opera</b> 'arbete'. Un'opera d'arte = ett konstverk.
+il capolavoro|mästerverk|m|Secondo me questo quadro è un [capolavoro].|Jag tycker att den här tavlan är ett mästerverk.|Plural: i capolavori. Av <b>capo</b> 'huvud' + <b>lavoro</b> 'arbete'.
+il dipinto|målning|m|Il [dipinto] che abbiamo visto ieri era enorme.|Målningen som vi såg igår var enorm.|Plural: i dipinti. Particip av <b>dipingere</b> 'måla'.
+la pittura|måleri; målarfärg|f|La [pittura] italiana del Seicento è molto famosa.|Det italienska 1600-talsmåleriet är mycket berömt.|Plural: le pitture. Verbet är dipingere 'måla'.
+la scultura|skulptur|f|Nel museo c'erano [sculture] di marmo bellissime.|I museet fanns det jättevackra marmorskulpturer.|Plural: le sculture. Latin <b>sculpere</b> 'hugga ut'.
+la statua|staty|f|La [statua] del David si trova a Firenze.|Davidstatyn finns i Florens.|Plural: le statue.
+il ritratto|porträtt|m|La Gioconda è il [ritratto] più famoso del mondo.|Mona Lisa är världens mest berömda porträtt.|Plural: i ritratti. Av <b>ritrarre</b> 'avbilda'.
+l'affresco|fresk, väggmålning|m|Gli [affreschi] di Giotto sono a Padova.|Giottos fresker finns i Padua.|Plural: gli affreschi. Målad på fuktig puts, <b>a fresco</b> 'på det färska'.
+la tela|duk (att måla på)|f|Il pittore ha preparato una [tela] bianca.|Målaren gjorde i ordning en vit duk.|Plural: le tele. Betyder också 'tyg'.
+il pennello|pensel|m|Ho comprato un [pennello] nuovo per dipingere.|Jag köpte en ny pensel för att måla.|Plural: i pennelli. Latin <b>penicillus</b> 'liten svans'.
+il disegno|teckning|m|Mi è piaciuto molto il tuo [disegno].|Jag gillade din teckning väldigt mycket.|Plural: i disegni. Av <b>disegnare</b> 'teckna'. Betyder också 'ritning'.
+la poesia|dikt; poesi|f|A scuola abbiamo letto una [poesia] di Leopardi.|I skolan läste vi en dikt av Leopardi.|Plural: le poesie. Obs: una poesia = en dikt.
+il romanzo|roman|m|Questo [romanzo] mi è piaciuto tantissimo.|Jag gillade den här romanen jättemycket.|Plural: i romanzi.
+la galleria|galleri; tunnel|f|La [galleria] degli Uffizi era piena di turisti.|Uffizierna var fulla av turister.|Plural: le gallerie. Betyder också 'tunnel' och 'balkong' på teatern.
+l'ingresso|entré, ingång|m|L'[ingresso] al museo è gratuito la prima domenica del mese.|Det är gratis inträde till museet första söndagen i månaden.|Plural: gli ingressi. Uscita = utgång.
+il Rinascimento|renässansen|m|Firenze è la città in cui è nato il [Rinascimento].|Florens är staden där renässansen föddes.|Ingen plural. Av <b>rinascere</b> 'återfödas'.
+lo stile|stil|m|Mi piace lo [stile] di questo pittore.|Jag gillar den här målarens stil.|Plural: gli stili.
+il genere|genre, sort|m|Che [genere] di musica ascolti?|Vilken sorts musik lyssnar du på?|Plural: i generi. Betyder också 'genus' och 'kön'.
+la musica classica|klassisk musik|f|Mia nonna ascoltava sempre la [musica classica].|Min mormor lyssnade alltid på klassisk musik.|Plural används inte.
+la lirica|opera (som genre)|f|In Italia la [lirica] è ancora molto popolare.|I Italien är operan fortfarande väldigt populär.|Plural: le liriche. Opera lirica = opera.
+il rap|rap|m|Mio fratello ascolta solo [rap] italiano.|Min bror lyssnar bara på italiensk rap.|Oföränderligt. Den som rappar är un rapper.
+il disco|skiva|m|Il nuovo [disco] uscirà a maggio.|Den nya skivan kommer ut i maj.|Plural: i dischi. Latin <b>discus</b> 'diskus'.
+l'album|album|m|Qual è l'[album] che ti è piaciuto di più quest'anno?|Vilket album har du gillat mest i år?|Plural: gli album (oföränderligt).
+il brano|låt, musikstycke|m|Il primo [brano] del concerto era lentissimo.|Den första låten på konserten var jättelångsam.|Plural: i brani. Betyder också 'textstycke'.
+il testo|text; låttext|m|Il [testo] di questa canzone è molto triste.|Texten till den här låten är väldigt sorglig.|Plural: i testi. Latin <b>textus</b> 'väv'.
+la melodia|melodi|f|Non ricordo le parole, ma la [melodia] sì.|Jag minns inte orden, men melodin minns jag.|Plural: le melodie. Från grekiska.
+il ritmo|rytm|m|Questa canzone ha un [ritmo] fantastico.|Den här låten har en fantastisk rytm.|Plural: i ritmi.
+la nota|ton, not; anteckning|f|Il cantante non ha preso la [nota] alta.|Sångaren tog inte den höga tonen.|Plural: le note. Do, re, mi, fa, sol, la, si är le note.
+il suono|ljud, klang|m|Mi piace il [suono] del violoncello.|Jag gillar cellons klang.|Plural: i suoni. Av <b>suonare</b> 'spela, låta'.
+la voce|röst|f|Ha una [voce] bellissima.|Hon har en jättevacker röst.|Plural: le voci. Latin <b>vox</b> 'röst'. A voce alta = högt.
+il coro|kör|m|Canto nel [coro] della scuola da tre anni.|Jag har sjungit i skolans kör i tre år.|Plural: i cori.
+l'orchestra|orkester|f|L'[orchestra] ha suonato per due ore.|Orkestern spelade i två timmar.|Plural: le orchestre. Obs uttalet: orkèstra.
+il direttore d'orchestra|dirigent|m|Il [direttore d'orchestra] ha ringraziato i musicisti.|Dirigenten tackade musikerna.|Plural: i direttori d'orchestra.
+il palco|scen|m|Alla fine tutti i musicisti sono tornati sul [palco].|På slutet kom alla musiker tillbaka upp på scenen.|Plural: i palchi. Il palcoscenico på teatern.
+l'applauso|applåd|m|Alla fine c'è stato un lungo [applauso].|På slutet blev det en lång applåd.|Plural: gli applausi.
+applaudire|applådera||Il pubblico ha [applaudito] per cinque minuti.|Publiken applåderade i fem minuter.|Passato prossimo: ho applaudito.
+il bis|extranummer|m|Il pubblico ha chiesto il [bis].|Publiken ropade efter extranummer.|Plural: i bis. Latin <b>bis</b> 'två gånger'. Man ropar: Bis! Bis!
+la tournée|turné|f|La band farà una [tournée] in Europa l'anno prossimo.|Bandet ska göra en turné i Europa nästa år.|Plural: le tournée. Från franska.
+il festival|festival|m|Il [festival] di Sanremo si guarda in tutta Italia.|Sanremofestivalen ses i hela Italien.|Plural: i festival.
+la colonna sonora|filmmusik, soundtrack|f|Ennio Morricone ha scritto la [colonna sonora] di tanti film.|Ennio Morricone skrev musiken till många filmer.|Plural: le colonne sonore. Ordagrant 'ljudkolumn'.
+le cuffie|hörlurar|fpl|Ho dimenticato le [cuffie] a casa.|Jag glömde hörlurarna hemma.|Singular: la cuffia (betyder också 'badmössa').
+la playlist|spellista|f|Ho fatto una [playlist] per il viaggio.|Jag gjorde en spellista för resan.|Plural: le playlist. Från engelska.
+le prove|repetition (musik, teater)|fpl|Oggi pomeriggio abbiamo le [prove] con il gruppo.|I eftermiddag har vi repetition med bandet.|Singular: la prova 'prov, försök'. Fare le prove = repetera.
+il talento|talang|m|Tua sorella ha un vero [talento] per il disegno.|Din syster har verklig talang för att teckna.|Plural: i talenti.
+l'ispirazione|inspiration|f|Il mare è stato la sua [ispirazione].|Havet var hans inspiration.|Plural: le ispirazioni. Verbet är ispirare.
+il successo|framgång|m|La canzone ha avuto un grande [successo].|Låten blev en stor succé.|Plural: i successi. Obs: inte 'succession'. Avere successo = lyckas, bli populär.
+la danza|dans|f|Faccio [danza] classica da quando avevo sei anni.|Jag har dansat balett sedan jag var sex år.|Plural: le danze. Ballo är vanligare om att dansa på fest.
+registrare|spela in||La band ha [registrato] il disco in un mese.|Bandet spelade in skivan på en månad.|Passato prossimo: ho registrato.
+comporre|komponera||Chi ha [composto] questa musica?|Vem har komponerat den här musiken?|Oregelbundet: compongo, componi … Passato prossimo: ho composto.
+dipingere|måla (tavla)||Van Gogh ha [dipinto] molti girasoli.|Van Gogh målade många solrosor.|Passato prossimo: ho dipinto.
+esporre|ställa ut||L'anno prossimo il museo [esporrà] le opere di Caravaggio.|Nästa år kommer museet att ställa ut Caravaggios verk.|Som porre: espongo, esponi … Passato prossimo: ho esposto.
+esibirsi|uppträda||Stasera si [esibiscono] tre gruppi giovani.|I kväll uppträder tre unga band.|Som finire: mi esibisco. Passato prossimo: mi sono esibito/esibita.
+creare|skapa||L'artista ha [creato] una scultura con la plastica riciclata.|Konstnären skapade en skulptur av återvunnen plast.|Passato prossimo: ho creato.
+ispirare|inspirera||Questa città ha [ispirato] molti pittori.|Den här staden har inspirerat många målare.|Passato prossimo: ho ispirato. Ispirarsi a = inspireras av.
+emozionare|beröra, göra rörd||Quella canzone mi [emoziona] ogni volta.|Den låten berör mig varje gång.|Passato prossimo: ho emozionato.
+contemporaneo|samtida, nutida||Non capisco sempre l'arte [contemporanea].|Jag förstår inte alltid samtida konst.|Femininum: contemporanea.
+originale|originell; original||La sua musica è molto [originale].|Hans musik är väldigt originell.|Samma form för maskulinum och femininum. In lingua originale = på originalspråket.
+stonato|falsk (om sång)||Scusate, oggi sono un po' [stonato].|Förlåt, jag sjunger lite falskt i dag.|Femininum: stonata. Av <b>tono</b> 'ton'.
+intonato|som sjunger rent||Tua cugina canta benissimo, è molto [intonata].|Din kusin sjunger jättebra, hon sjunger väldigt rent.|Femininum: intonata. Motsats: stonato.
+dal vivo|live||Li ho visti [dal vivo] l'estate scorsa a Roma.|Jag såg dem live i somras i Rom.|Används om konserter och musik. Un concerto dal vivo.|<b>dal</b> från det · <b>vivo</b> levande → "från det levande"
+avere successo|ha framgång, slå igenom||Il gruppo ha [avuto successo] con la prima canzone.|Bandet slog igenom med sin första låt.|Passato prossimo: ho avuto successo.|<b>avere</b> ha · <b>successo</b> framgång → "ha framgång"
+fare le prove|repetera, öva (inför uppträdande)||Domani [faremo le prove] per il concerto di Natale.|I morgon ska vi repetera inför julkonserten.|Passato prossimo: ho fatto le prove.|<b>fare</b> göra · <b>le prove</b> proven → "göra proven"
+salire sul palco|gå upp på scenen||Quando sono [salito sul palco], avevo le gambe che tremavano.|När jag gick upp på scenen skakade benen.|Passato prossimo: sono salito/salita sul palco.|<b>salire</b> gå upp · <b>sul palco</b> på scenen → "gå upp på scenen"
+in prima fila|på första raden||Al concerto eravamo [in prima fila]!|På konserten stod vi längst fram!|Fila = rad, kö.|<b>in</b> i · <b>prima</b> första · <b>fila</b> rad → "i första raden"
+a squarciagola|för full hals||In macchina abbiamo cantato [a squarciagola].|I bilen sjöng vi för full hals.|Squarciare = slita sönder, gola = hals.|<b>a</b> med · <b>squarcia</b> sliter sönder · <b>gola</b> hals → "så att halsen slits sönder"
+da brividi|så man får gåshud||Al concerto c'era un'atmosfera [da brividi].|På konserten var det en stämning som gav gåshud.|Il brivido = rysning.|<b>da</b> för · <b>brividi</b> rysningar → "för rysningar"
+rimanere a bocca aperta|bli mållös, häpna||Quando ho visto la Cappella Sistina, sono [rimasto a bocca aperta].|När jag såg Sixtinska kapellet blev jag alldeles mållös.|Passato prossimo: sono rimasto/rimasta a bocca aperta.|<b>rimanere</b> bli kvar · <b>a bocca aperta</b> med öppen mun → "bli kvar med öppen mun"
+mettere in scena|sätta upp (en pjäs)||La nostra classe [metterà in scena] una commedia di Goldoni.|Vår klass ska sätta upp en komedi av Goldoni.|Passato prossimo: ho messo in scena.|<b>mettere</b> sätta · <b>in scena</b> på scenen → "sätta på scenen"
+valere la pena|vara värt besväret||La mostra era cara, ma [valeva la pena].|Utställningen var dyr, men den var värd det.|Passato prossimo: è valsa la pena. Ne vale la pena = det är värt det.|<b>valere</b> vara värd · <b>la pena</b> mödan → "vara värd mödan"
+#k8|Kap 8 · Relazioni ed emozioni
+l'amore|kärlek|m|È una canzone d'[amore] molto famosa.|Det är en mycket känd kärlekssång.|Plural: gli amori. Latin <b>amor</b> 'kärlek'. Amore mio = min älskling.
+innamorarsi|bli kär||Si sono [innamorati] durante una vacanza al mare.|De blev kära under en semester vid havet.|Passato prossimo: mi sono innamorato/innamorata. Innamorarsi di qualcuno.
+innamorato|kär||Marco è [innamorato] di Giulia da mesi.|Marco har varit kär i Giulia i flera månader.|Femininum: innamorata. Essere innamorato di = vara kär i.
+fidanzarsi|förlova sig; bli ihop||Mia cugina si è [fidanzata] con un ragazzo di Napoli.|Min kusin har förlovat sig med en kille från Neapel.|Passato prossimo: mi sono fidanzato/fidanzata.
+la coppia|par|f|Sono una [coppia] da dieci anni.|De har varit ett par i tio år.|Plural: le coppie. Latin <b>copula</b> 'band'.
+il partner|partner|m|Vorrei un [partner] simpatico e sincero.|Jag skulle vilja ha en trevlig och ärlig partner.|Plural: i partner. Samma form för kvinna: la partner.
+l'ex|före detta, ex|m|Ieri ho incontrato il mio [ex] al supermercato.|Igår träffade jag mitt ex i mataffären.|Oföränderligt: gli ex, le ex. Latin <b>ex</b> 'ut ur'.
+l'appuntamento|dejt; möte, tid|m|Il nostro primo [appuntamento] è stato al cinema.|Vår första dejt var på bio.|Plural: gli appuntamenti. Betyder också 'bokad tid' hos t.ex. läkaren.
+il bacio|kyss, puss|m|Mi ha dato un [bacio] sulla guancia.|Hon gav mig en puss på kinden.|Plural: i baci. Baci Perugina är kända chokladpraliner.
+baciare|kyssa, pussa||L'ha [baciata] sotto la pioggia.|Han kysste henne i regnet.|Passato prossimo: ho baciato. Baciarsi = kyssas.
+l'abbraccio|kram|m|Mi serve un [abbraccio].|Jag behöver en kram.|Plural: gli abbracci. Av <b>braccio</b> 'arm'. Un abbraccio! i slutet av ett brev = kram!
+abbracciare|krama||Quando mi ha visto, mi ha [abbracciato] forte.|När han såg mig kramade han mig hårt.|Passato prossimo: ho abbracciato. Abbracciarsi = kramas.
+lasciarsi|göra slut, separera||Laura e Paolo si sono [lasciati] la settimana scorsa.|Laura och Paolo gjorde slut förra veckan.|Passato prossimo: ci siamo lasciati/lasciate. Lasciare qualcuno = göra slut med någon.
+tradire|vara otrogen; svika||Non ti [tradirei] mai!|Jag skulle aldrig svika dig!|Som finire: tradisco. Passato prossimo: ho tradito.
+divorziare|skilja sig||I miei genitori hanno [divorziato] quando avevo sei anni.|Mina föräldrar skilde sig när jag var sex.|Passato prossimo: ho divorziato. Il divorzio = skilsmässa.
+i parenti|släktingar|mpl|A Natale vengono tutti i [parenti].|Till jul kommer alla släktingar.|Singular: il parente. Obs: inte 'föräldrar' (= i genitori).
+il nipote|barnbarn; syskonbarn|m|La nonna ha sei [nipoti].|Mormor har sex barnbarn.|Plural: i nipoti. Femininum: la nipote. Betyder både barnbarn och brors-/systerbarn.
+il sentimento|känsla|m|È difficile parlare dei propri [sentimenti].|Det är svårt att prata om sina känslor.|Plural: i sentimenti. Av <b>sentire</b> 'känna'.
+l'emozione|känsla, sinnesrörelse|f|Che [emozione] vederti dopo tanti anni!|Vad rörande att se dig efter så många år!|Plural: le emozioni. Emozione är starkare än sentimento, ofta positiv spänning.
+la felicità|lycka|f|La [felicità] è stare con le persone che ami.|Lycka är att vara med dem man älskar.|Ingen plural. Av <b>felice</b> 'lycklig'.
+felice|lycklig, glad||Sono [felice] di rivederti.|Jag är glad att se dig igen.|Samma form för maskulinum och femininum. Latin <b>felix</b> 'lycklig'.
+la gioia|glädje|f|Quando ho saputo la notizia, ho pianto di [gioia].|När jag fick veta nyheten grät jag av glädje.|Plural: le gioie. Gioia mia = min älskling.
+la tristezza|sorg, sorgsenhet|f|Dopo la partenza di Luca ho sentito una grande [tristezza].|Efter att Luca åkt kände jag en stor sorg.|Plural: le tristezze. Av <b>triste</b> 'ledsen'.
+la rabbia|ilska|f|Ho pianto per la [rabbia].|Jag grät av ilska.|Plural: le rabbie (sällsynt). Betyder också 'rabies'.
+arrabbiarsi|bli arg||Mia madre si è [arrabbiata] perché sono tornato tardi.|Min mamma blev arg för att jag kom hem sent.|Passato prossimo: mi sono arrabbiato/arrabbiata.
+arrabbiato|arg||Perché sei così [arrabbiato] con me?|Varför är du så arg på mig?|Femininum: arrabbiata. Penne all'arrabbiata = pasta med stark tomatsås.
+deluso|besviken||Sono rimasta [delusa] dal suo comportamento.|Jag blev besviken på hans beteende.|Femininum: delusa. Particip av <b>deludere</b> 'göra besviken'.
+la delusione|besvikelse|f|Quel concerto è stato una grande [delusione].|Den konserten var en stor besvikelse.|Plural: le delusioni.
+preoccupato|orolig||Eri [preoccupato] per l'esame?|Var du orolig för provet?|Femininum: preoccupata.
+preoccuparsi|oroa sig||Non ti [preoccupare], andrà tutto bene.|Oroa dig inte, allt kommer att gå bra.|Passato prossimo: mi sono preoccupato/preoccupata. Non ti preoccupare / non preoccuparti.
+nervoso|nervös; irriterad||Prima dell'esame ero molto [nervosa].|Före provet var jag väldigt nervös.|Femininum: nervosa. Betyder ofta också 'irriterad, på dåligt humör'.
+calmarsi|lugna sig||Dopo un po' si è [calmato] e abbiamo parlato.|Efter ett tag lugnade han sig och vi pratade.|Passato prossimo: mi sono calmato/calmata. Calmati! = Lugna dig!
+la vergogna|skam, pinsamhet|f|Sono diventato rosso per la [vergogna].|Jag blev röd av skam.|Plural: le vergogne. Che vergogna! = Så pinsamt!
+vergognarsi|skämmas||Mi [vergogno] a cantare davanti a tutti.|Jag skäms för att sjunga inför alla.|Passato prossimo: mi sono vergognato/vergognata.
+imbarazzato|generad||Quando mi ha fatto il complimento ero un po' [imbarazzata].|När han gav mig komplimangen var jag lite generad.|Femininum: imbarazzata. Obs: betyder inte 'gravid' (= incinta).
+orgoglioso|stolt||I miei genitori sono [orgogliosi] di me.|Mina föräldrar är stolta över mig.|Femininum: orgogliosa. Av <b>orgoglio</b> 'stolthet'.
+soddisfatto|nöjd||Sei [soddisfatto] del tuo voto?|Är du nöjd med ditt betyg?|Femininum: soddisfatta.
+sorpreso|förvånad||Sono rimasto [sorpreso] quando l'ho visto.|Jag blev förvånad när jag såg honom.|Femininum: sorpresa. Particip av <b>sorprendere</b> 'överraska'.
+spaventato|rädd, skrämd||Il bambino era [spaventato] dal temporale.|Barnet var rädd för åskvädret.|Femininum: spaventata. Av <b>spaventare</b> 'skrämma'.
+emozionato|rörd; förväntansfull, spänd||Ero così [emozionata] prima del primo appuntamento!|Jag var så spänd innan den första dejten!|Femininum: emozionata. Nästan alltid positivt.
+commosso|rörd||Il nonno era [commosso] e aveva le lacrime agli occhi.|Morfar var rörd och hade tårar i ögonen.|Femininum: commossa. Particip av <b>commuovere</b> 'röra'.
+la solitudine|ensamhet|f|Da quando si è trasferito soffre di [solitudine].|Sedan han flyttade lider han av ensamhet.|Plural: le solitudini. Latin <b>solus</b> 'ensam'.
+la gelosia|svartsjuka|f|La [gelosia] ha rovinato il loro rapporto.|Svartsjukan förstörde deras förhållande.|Plural: le gelosie. Av <b>geloso</b> 'svartsjuk'.
+l'invidia|avundsjuka|f|Non provo [invidia] per nessuno.|Jag känner inte avund mot någon.|Plural: le invidie. Latin <b>invidia</b>. Adjektivet är invidioso.
+l'umore|humör|m|Oggi sei di cattivo [umore]?|Är du på dåligt humör i dag?|Plural: gli umori. Latin <b>humor</b> 'vätska'.
+il sorriso|leende|m|Ha un [sorriso] bellissimo.|Hon har ett jättefint leende.|Plural: i sorrisi. Av <b>sorridere</b> 'le'.
+sorridere|le||Quando mi ha visto, mi ha [sorriso].|När hon såg mig log hon mot mig.|Passato prossimo: ho sorriso.
+la lacrima|tår|f|Alla fine del film avevo le [lacrime] agli occhi.|I slutet av filmen hade jag tårar i ögonen.|Plural: le lacrime. Latin <b>lacrima</b> 'tår'.
+la fiducia|förtroende, tillit|f|Ho molta [fiducia] in te.|Jag har stort förtroende för dig.|Plural används inte. Av samma ord som <b>fidarsi</b> 'lita på'.
+il rispetto|respekt|m|In una coppia ci vuole [rispetto].|I ett par krävs det respekt.|Plural: i rispetti (ovanligt).
+rispettare|respektera||Dovresti [rispettare] le sue decisioni.|Du borde respektera hennes beslut.|Passato prossimo: ho rispettato.
+la pazienza|tålamod|f|Con il mio fratellino ci vuole tanta [pazienza].|Med min lillebror behövs det mycket tålamod.|Ingen plural. Pazienza! = Det får vara, strunt samma.
+il segreto|hemlighet|m|Ti posso dire un [segreto]?|Kan jag berätta en hemlighet för dig?|Plural: i segreti. In segreto = i hemlighet.
+il litigio|gräl, bråk|m|Dopo il [litigio] non ci siamo parlati per una settimana.|Efter grälet pratade vi inte med varandra på en vecka.|Plural: i litigi. Av <b>litigare</b> 'bråka'.
+il malinteso|missförstånd|m|Scusa, è stato solo un [malinteso].|Förlåt, det var bara ett missförstånd.|Plural: i malintesi. Av <b>male</b> 'fel' + <b>inteso</b> 'uppfattat'.
+perdonare|förlåta||Mi [perdonerai] un giorno?|Kommer du att förlåta mig någon gång?|Passato prossimo: ho perdonato. Perdono = förlåtelse.
+offendersi|ta illa upp, bli sårad||Si è [offesa] perché non l'ho invitata.|Hon tog illa upp för att jag inte bjöd in henne.|Passato prossimo: mi sono offeso/offesa.
+sopportare|stå ut med||Non [sopporto] le persone che mentono.|Jag står inte ut med folk som ljuger.|Passato prossimo: ho sopportato.
+odiare|hata||[Odiavo] i broccoli da piccolo.|Jag hatade broccoli när jag var liten.|Passato prossimo: ho odiato. L'odio = hat.
+consolare|trösta||Quando ero triste, mia sorella mi [consolava] sempre.|När jag var ledsen tröstade min syster mig alltid.|Passato prossimo: ho consolato.
+confidarsi|anförtro sig||Mi [confido] sempre con mia nonna.|Jag anförtror mig alltid åt min mormor.|Passato prossimo: mi sono confidato/confidata. Confidarsi con qualcuno.
+sfogarsi|få ur sig, avreagera sig||Avevo bisogno di [sfogarmi] con qualcuno.|Jag behövde prata av mig med någon.|Passato prossimo: mi sono sfogato/sfogata.
+affettuoso|kärleksfull, tillgiven||Il mio cane è molto [affettuoso].|Min hund är väldigt tillgiven.|Femininum: affettuosa. Av <b>affetto</b> 'tillgivenhet'. Saluti affettuosi = kärleksfulla hälsningar.
+comprensivo|förstående||Per fortuna il prof è stato [comprensivo].|Som tur var var läraren förstående.|Femininum: comprensiva. Obs: inte 'omfattande'.
+fedele|trogen||Il cane è un amico [fedele].|Hunden är en trogen vän.|Samma form för maskulinum och femininum. Latin <b>fides</b> 'tro'.
+insopportabile|outhärdlig, olidlig||Quando ha fame, mio fratello è [insopportabile].|När han är hungrig är min bror outhärdlig.|Samma form för maskulinum och femininum. Av <b>sopportare</b> 'stå ut med'.
+solo|ensam||Da quando si è trasferita, si sente molto [sola].|Sedan hon flyttade känner hon sig väldigt ensam.|Femininum: sola. Betyder också 'bara': solo un minuto.
+volere bene|tycka om, älska (vänner, familj)||Ti [voglio bene], mamma.|Jag älskar dig, mamma.|Passato prossimo: ho voluto bene. Ti amo säger man bara till sin partner.|<b>volere</b> vilja · <b>bene</b> gott → "vilja (någon) gott"
+fare amicizia|bli vänner, få vänner||Al campo estivo ho [fatto amicizia] con una ragazza di Bari.|På sommarlägret blev jag vän med en tjej från Bari.|Passato prossimo: ho fatto amicizia. Fare amicizia con qualcuno.|<b>fare</b> göra · <b>amicizia</b> vänskap → "göra vänskap"
+chiedere scusa|be om ursäkt||Ti ho già [chiesto scusa] tre volte!|Jag har redan bett dig om ursäkt tre gånger!|Passato prossimo: ho chiesto scusa. Chiedere scusa a qualcuno.|<b>chiedere</b> be · <b>scusa</b> ursäkt → "be ursäkt"
+il colpo di fulmine|kärlek vid första ögonkastet|m|Tra noi è stato un [colpo di fulmine].|Det var kärlek vid första ögonkastet mellan oss.|Plural: i colpi di fulmine.|<b>il colpo</b> slaget · <b>di fulmine</b> av blixt → "blixtnedslaget"
+avere una cotta per|vara förälskad i, vara kär i||In terza media [avevo una cotta] per il mio compagno di banco.|I nian var jag kär i min bänkkamrat.|Vardagligt. Passato prossimo: ho avuto una cotta.|<b>avere</b> ha · <b>una cotta</b> en kokning · <b>per</b> för → "ha en kokning för"
+stare insieme|vara tillsammans||Stefano e Chiara [stanno insieme] da due anni.|Stefano och Chiara har varit tillsammans i två år.|Passato prossimo: siamo stati/state insieme.|<b>stare</b> vara, stå · <b>insieme</b> tillsammans → "vara tillsammans"
+uscire con|gå ut med, dejta||Sabato [uscirei] volentieri con lui.|På lördag skulle jag gärna gå ut med honom.|Passato prossimo: sono uscito/uscita con. Oregelbundet: esco, esci.|<b>uscire</b> gå ut · <b>con</b> med → "gå ut med"
+perdere la pazienza|tappa tålamodet||Alla fine il professore ha [perso la pazienza].|Till slut tappade läraren tålamodet.|Passato prossimo: ho perso la pazienza.|<b>perdere</b> förlora · <b>la pazienza</b> tålamodet → "förlora tålamodet"
+essere giù|vara nere, deppig||Oggi sono un po' [giù], scusa.|Jag är lite nere i dag, förlåt.|Vardagligt. Essere giù di morale.|<b>essere</b> vara · <b>giù</b> nere → "vara nere"
+avere voglia di|ha lust att||Non [ho voglia di] parlare adesso.|Jag har inte lust att prata nu.|Passato prossimo: ho avuto voglia di. Voglia = lust.|<b>avere</b> ha · <b>voglia</b> lust · <b>di</b> att → "ha lust att"
+tenere a|bry sig om, vara mån om||[Tengo] molto a te, lo sai.|Jag bryr mig mycket om dig, det vet du.|Oregelbundet: tengo, tieni … Passato prossimo: ho tenuto a.|<b>tenere</b> hålla · <b>a</b> till → "hålla till"
+#kr|Espressioni · Discutere e reagire
+la penso come te|jag tycker som du||Sì, [la penso come te]: il film era troppo lungo.|Ja, jag tycker som du: filmen var för lång.|Motsats: non la penso così.|<b>la</b> den · <b>penso</b> jag tänker · <b>come</b> som · <b>te</b> dig → "jag tänker den som du"
+proprio così|precis så||Quindi domani non c'è scuola? – [Proprio così]!|Så det är ingen skola i morgon? – Precis så!|<b>proprio</b> 'precis, verkligen'.|<b>proprio</b> precis · <b>così</b> så → "precis så"
+è vero|det stämmer||[È vero], non ci avevo pensato.|Det stämmer, det hade jag inte tänkt på.|Ett sätt att medge att den andra har en poäng.|<b>è</b> det är · <b>vero</b> sant → "det är sant"
+come no!|absolut!, klart!||Mi presti la bici? – [Come no]!|Lånar du ut cykeln till mig? – Klart!|Kan också vara ironiskt: Come no! = 'Jo, säkert!'|<b>come</b> hur · <b>no</b> inte → "hur inte!"
+hai perfettamente ragione|du har helt rätt||[Hai perfettamente ragione], scusa.|Du har helt rätt, förlåt.|Starkare än hai ragione. Lei-form: ha perfettamente ragione.|<b>hai</b> du har · <b>perfettamente</b> perfekt · <b>ragione</b> förnuft, rätt → "du har perfekt rätt"
+non la penso così|jag ser inte på det så||Scusa, ma [non la penso così].|Förlåt, men jag ser inte på det så.|Artigare än non sono d'accordo.|<b>non</b> inte · <b>la</b> den · <b>penso</b> jag tänker · <b>così</b> så → "jag tänker den inte så"
+non direi|det skulle jag inte säga||È facile, no? – Mah, [non direi].|Det är lätt, eller hur? – Nja, det skulle jag inte säga.|Condizionale av dire. Ett mjukt sätt att säga emot.|<b>non</b> inte · <b>direi</b> jag skulle säga → "jag skulle inte säga"
+non è detto|inte säkert, det är inte sagt||Pioverà di sicuro. – [Non è detto].|Det kommer säkert att regna. – Det är inte sagt.|<b>detto</b> particip av dire 'säga'.|<b>non</b> inte · <b>è</b> är · <b>detto</b> sagt → "är inte sagt"
+sì, però|ja, men||[Sì, però] costa troppo.|Ja, men det kostar för mycket.|Ett vanligt sätt att först hålla med och sedan invända.|<b>sì</b> ja · <b>però</b> men → "ja, men"
+al contrario|tvärtom||Non era noioso, [al contrario]: era bellissimo!|Det var inte tråkigt, tvärtom: det var jättebra!|<b>contrario</b> 'motsats'.|<b>al</b> till det · <b>contrario</b> motsatta → "till det motsatta"
+non esageriamo|nu ska vi inte överdriva||Il peggior film di sempre? [Non esageriamo]!|Den sämsta filmen någonsin? Nu ska vi inte överdriva!|Av <b>esagerare</b> 'överdriva'.|<b>non</b> inte · <b>esageriamo</b> låt oss överdriva → "låt oss inte överdriva"
+neanche per sogno|inte en chans, aldrig i livet||Vieni a correre alle sei? – [Neanche per sogno]!|Följer du med och springer klockan sex? – Aldrig i livet!|Stark vägran, vardagligt.|<b>neanche</b> inte ens · <b>per sogno</b> i dröm → "inte ens i drömmen"
+per niente|inte alls||Ti è piaciuto? – [Per niente].|Gillade du det? – Inte alls.|Non mi è piaciuto per niente = jag gillade det inte alls.|<b>per</b> för · <b>niente</b> ingenting → "för ingenting"
+ma va!|äh!, nej men!||Luca e Sara si sono lasciati. – [Ma va]!|Luca och Sara har gjort slut. – Nej men!|Uttrycker förvåning eller att man inte tror på det.|<b>ma</b> men · <b>va</b> gå → "men gå!"
+sul serio?|på allvar?, seriöst?||Hai vinto il concorso? [Sul serio]?|Har du vunnit tävlingen? På allvar?|<b>serio</b> 'allvarlig'. Dico sul serio = jag menar allvar.|<b>sul</b> på det · <b>serio</b> allvarliga → "på det allvarliga?"
+capisco|jag förstår||[Capisco], deve essere stato difficile.|Jag förstår, det måste ha varit svårt.|Visar att man lyssnar och förstår.|<b>capisco</b> jag förstår → "jag förstår"
+ah, ecco|jaha, just det||[Ah, ecco], adesso ho capito!|Jaha, nu förstår jag!|Säger man när något plötsligt blir klart.|<b>ah</b> ah · <b>ecco</b> se här → "ah, se här"
+e poi?|och sedan?||Siamo arrivati alla stazione... – [E poi]?|Vi kom fram till stationen … – Och sedan?|Uppmanar den andra att berätta vidare.|<b>e</b> och · <b>poi</b> sedan → "och sedan?"
+immagino|jag kan tänka mig||Ero stanchissimo. – [Immagino]!|Jag var jättetrött. – Det kan jag tänka mig!|Av <b>immaginare</b> 'föreställa sig'.|<b>immagino</b> jag föreställer mig → "jag föreställer mig"
+ti ascolto|jag lyssnar||Dimmi pure, [ti ascolto].|Säg bara, jag lyssnar.|Lei-form: la ascolto.|<b>ti</b> dig · <b>ascolto</b> jag lyssnar på → "jag lyssnar på dig"
+dimmi pure|säg bara, varsågod||Posso chiederti una cosa? – Certo, [dimmi pure].|Kan jag fråga dig en sak? – Visst, säg bara.|Lei-form: mi dica pure.|<b>dimmi</b> säg mig · <b>pure</b> gärna, bara → "säg mig bara"
+in che senso?|hur menar du?||Il film era strano. – [In che senso]?|Filmen var konstig. – Hur menar du?|Ordagrant 'i vilken mening?'.|<b>in</b> i · <b>che</b> vilken · <b>senso</b> mening → "i vilken mening?"
+cosa intendi?|vad menar du?||Scusa, [cosa intendi] con "strano"?|Förlåt, vad menar du med "konstig"?|Av <b>intendere</b> 'mena'. Lei-form: cosa intende?|<b>cosa</b> vad · <b>intendi</b> menar du → "vad menar du?"
+vuoi dire che|menar du att||[Vuoi dire che] non vieni alla festa?|Menar du att du inte kommer på festen?|Lei-form: vuole dire che.|<b>vuoi</b> du vill · <b>dire</b> säga · <b>che</b> att → "vill du säga att"
+puoi fare un esempio?|kan du ge ett exempel?||Non ho capito bene. [Puoi fare un esempio]?|Jag förstod inte riktigt. Kan du ge ett exempel?|Lei-form: può fare un esempio?|<b>puoi</b> kan du · <b>fare</b> göra · <b>un esempio</b> ett exempel → "kan du göra ett exempel?"
+come hai detto?|vad sa du?||Scusa, [come hai detto]? C'era troppo rumore.|Förlåt, vad sa du? Det var för mycket oväsen.|Lei-form: come ha detto?|<b>come</b> hur · <b>hai detto</b> har du sagt → "hur har du sagt?"
+cambiando discorso|för att byta ämne||[Cambiando discorso], cosa fai sabato?|För att byta ämne, vad gör du på lördag?|<b>discorso</b> 'samtal, tal'.|<b>cambiando</b> bytande · <b>discorso</b> samtal → "bytande samtal"
+a parte questo|bortsett från det||[A parte questo], com'è andata la vacanza?|Bortsett från det, hur var semestern?|<b>a parte</b> 'förutom'.|<b>a parte</b> åt sidan · <b>questo</b> detta → "detta åt sidan"
+tornando a noi|för att återgå till ämnet||[Tornando a noi], a che ora partiamo?|För att återgå till ämnet, när åker vi?|Används när samtalet har svävat ut.|<b>tornando</b> återvändande · <b>a noi</b> till oss → "återvändande till oss"
+prima che mi dimentichi|innan jag glömmer||[Prima che mi dimentichi], domani non c'è lezione.|Innan jag glömmer: i morgon är det ingen lektion.|Efter prima che följer konjunktiv (dimentichi).|<b>prima che</b> innan · <b>mi dimentichi</b> jag glömmer → "innan jag glömmer"
+si è fatto tardi|det har blivit sent||Scusate, [si è fatto tardi], devo andare.|Ursäkta, det har blivit sent, jag måste gå.|Ett artigt sätt att börja avsluta.|<b>si è fatto</b> det har gjort sig · <b>tardi</b> sent → "det har gjort sig sent"
+è stato un piacere|det var trevligt||Arrivederci, [è stato un piacere]!|Adjö, det var trevligt att träffas!|Femininum om det gäller en sak: è stata una bella serata.|<b>è stato</b> det har varit · <b>un piacere</b> ett nöje → "det har varit ett nöje"
+allora ti lascio|då ska jag inte störa längre||[Allora ti lascio], ci sentiamo domani.|Då ska jag inte störa längre, vi hörs i morgon.|Vanligt i telefon. Lei-form: allora la lascio.|<b>allora</b> då · <b>ti</b> dig · <b>lascio</b> jag lämnar → "då lämnar jag dig"
+salutami|hälsa till||[Salutami] tua madre!|Hälsa till din mamma!|Imperativ av salutare + mi. Lei-form: mi saluti …|<b>saluta</b> hälsa · <b>mi</b> (från) mig → "hälsa (från) mig"
+alla prossima|vi ses nästa gång||Grazie di tutto e [alla prossima]!|Tack för allt och vi ses nästa gång!|Vardagligt avsked.|<b>alla</b> till den · <b>prossima</b> nästa → "till nästa (gång)"
+non ci posso credere|jag kan inte tro det||Abbiamo vinto? [Non ci posso credere]!|Vann vi? Jag kan inte tro det!|<b>ci</b> = 'på det'.|<b>non</b> inte · <b>ci</b> på det · <b>posso</b> jag kan · <b>credere</b> tro → "jag kan inte tro på det"
+non ne posso più|jag orkar inte mer||Tre ore di compiti? [Non ne posso più]!|Tre timmars läxor? Jag orkar inte mer!|<b>ne</b> = 'av det'.|<b>non</b> inte · <b>ne</b> av det · <b>posso</b> jag kan · <b>più</b> mer → "jag kan inte mer av det"
+che fortuna!|vilken tur!||Hai trovato i biglietti? [Che fortuna]!|Har du fått tag på biljetter? Vilken tur!|Motsats: che sfortuna!|<b>che</b> vilken · <b>fortuna</b> tur → "vilken tur!"
+che rabbia!|vad irriterande!, så sjukt störigt!||Ho perso l'autobus per un minuto, [che rabbia]!|Jag missade bussen med en minut, vad irriterande!|<b>rabbia</b> 'ilska'.|<b>che</b> vilken · <b>rabbia</b> ilska → "vilken ilska!"
+che noia!|så tråkigt!||Un'altra lezione di due ore? [Che noia]!|En lektion till på två timmar? Så tråkigt!|<b>noia</b> 'tristess'.|<b>che</b> vilken · <b>noia</b> tristess → "vilken tristess!"
+che vergogna!|så pinsamt!||Sono caduto davanti a tutti, [che vergogna]!|Jag ramlade inför alla, så pinsamt!|Kan också betyda 'vilken skandal!'|<b>che</b> vilken · <b>vergogna</b> skam → "vilken skam!"
+che schifo!|äckligt!, usch!||C'è un capello nella pasta, [che schifo]!|Det är ett hårstrå i pastan, äckligt!|Vardagligt. Fa schifo = det är urdåligt.|<b>che</b> vilket · <b>schifo</b> äckel → "vilket äckel!"
+che sollievo!|vilken lättnad!||L'esame è andato bene, [che sollievo]!|Provet gick bra, vilken lättnad!|<b>sollievo</b> 'lättnad'.|<b>che</b> vilken · <b>sollievo</b> lättnad → "vilken lättnad!"
+accidenti!|attans!, jösses!||[Accidenti], ho dimenticato le chiavi!|Attans, jag har glömt nycklarna!|Kan också visa beundran: Accidenti, che bello!|<b>accidenti</b> olyckor → "olyckor!"
+ci mancava solo questo!|det var just vad som fattades!||Piove e ho dimenticato l'ombrello. [Ci mancava solo questo]!|Det regnar och jag har glömt paraplyet. Det var just vad som fattades!|Ironiskt, när något dåligt händer till.|<b>ci mancava</b> det fattades · <b>solo</b> bara · <b>questo</b> detta → "bara detta fattades"

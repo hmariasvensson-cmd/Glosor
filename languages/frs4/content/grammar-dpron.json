@@ -1,0 +1,288 @@
+[
+ {
+  "id": "dpron-001",
+  "topic": "dpron",
+  "rule": "dpron-ordre",
+  "q": "Ton vélo ? Je [te le] prête demain.",
+  "alt": [
+   "le te",
+   "te lui",
+   "lui le"
+  ],
+  "why": "Me/te/nous/vous kommer före le/la/les: je te le prête.",
+  "sv": "Din cykel? Jag lånar dig den i morgon."
+ },
+ {
+  "id": "dpron-002",
+  "topic": "dpron",
+  "rule": "dpron-ordre",
+  "q": "Cette photo ? Mon père [me l'] a montrée hier.",
+  "alt": [
+   "la me",
+   "m'la",
+   "lui l'"
+  ],
+  "why": "Me före la: il me l'a montrée. La blir l' före vokal.",
+  "sv": "Det fotot? Min pappa visade mig det i går."
+ },
+ {
+  "id": "dpron-003",
+  "topic": "dpron",
+  "rule": "dpron-ordre",
+  "q": "Les réponses ? Le prof [nous les] donnera lundi.",
+  "alt": [
+   "les nous",
+   "leur les",
+   "nous leur"
+  ],
+  "why": "Nous före les: il nous les donnera.",
+  "sv": "Svaren? Läraren ger oss dem på måndag."
+ },
+ {
+  "id": "dpron-004",
+  "topic": "dpron",
+  "rule": "dpron-ordre",
+  "q": "Votre billet ? Je [vous l'] envoie par mail.",
+  "alt": [
+   "l'vous",
+   "le vous",
+   "vous lui"
+  ],
+  "why": "Vous före le (l' före vokal): je vous l'envoie.",
+  "sv": "Er biljett? Jag skickar den till er via mejl."
+ },
+ {
+  "id": "dpron-005",
+  "topic": "dpron",
+  "rule": "dpron-ordre",
+  "q": "Ce secret, tu ne [me le] diras jamais ?",
+  "alt": [
+   "le me",
+   "me lui",
+   "lui le"
+  ],
+  "why": "Me före le, och ne står före båda pronomenen.",
+  "sv": "Den hemligheten, kommer du aldrig att berätta den för mig?"
+ },
+ {
+  "id": "dpron-006",
+  "topic": "dpron",
+  "rule": "dpron-lui",
+  "q": "Le livre ? Je [le lui] ai rendu hier.",
+  "alt": [
+   "lui le",
+   "le leur",
+   "l'y"
+  ],
+  "why": "Le/la/les kommer FÖRE lui/leur: je le lui ai rendu.",
+  "sv": "Boken? Jag lämnade tillbaka den till honom i går."
+ },
+ {
+  "id": "dpron-007",
+  "topic": "dpron",
+  "rule": "dpron-lui",
+  "q": "Les clés ? Elle [les leur] a données.",
+  "alt": [
+   "leur les",
+   "les lui",
+   "leurs les"
+  ],
+  "why": "Les före leur: elle les leur a données. Leur tar aldrig -s som pronomen.",
+  "sv": "Nycklarna? Hon gav dem till dem."
+ },
+ {
+  "id": "dpron-008",
+  "topic": "dpron",
+  "rule": "dpron-lui",
+  "q": "La vérité ? Il ne [la lui] a pas dite.",
+  "alt": [
+   "lui la",
+   "la leur",
+   "le lui"
+  ],
+  "why": "La före lui. Participet böjs efter la (dite).",
+  "sv": "Sanningen? Han sa den inte till henne."
+ },
+ {
+  "id": "dpron-009",
+  "topic": "dpron",
+  "rule": "dpron-lui",
+  "q": "Ces fleurs, on [les lui] offre pour son anniversaire.",
+  "alt": [
+   "lui les",
+   "les leur",
+   "leur les"
+  ],
+  "why": "Les före lui: on les lui offre.",
+  "sv": "De här blommorna ger vi henne på hennes födelsedag."
+ },
+ {
+  "id": "dpron-010",
+  "topic": "dpron",
+  "rule": "dpron-lui",
+  "q": "Le message ? Je [le leur] ai envoyé ce matin.",
+  "alt": [
+   "leur le",
+   "le lui",
+   "les leur"
+  ],
+  "why": "Le före leur (till dem): je le leur ai envoyé.",
+  "sv": "Meddelandet? Jag skickade det till dem i morse."
+ },
+ {
+  "id": "dpron-011",
+  "topic": "dpron",
+  "rule": "dpron-en",
+  "q": "Des bonbons ? Ma grand-mère [m'en] donne toujours.",
+  "alt": [
+   "en me",
+   "me les",
+   "m'y"
+  ],
+  "why": "Me/te/lui före en: elle m'en donne.",
+  "sv": "Godis? Min mormor ger mig alltid godis."
+ },
+ {
+  "id": "dpron-012",
+  "topic": "dpron",
+  "rule": "dpron-en",
+  "q": "Du gâteau ? Je [lui en] ai gardé un morceau.",
+  "alt": [
+   "en lui",
+   "le lui",
+   "lui y"
+  ],
+  "why": "Lui före en: je lui en ai gardé.",
+  "sv": "Tårta? Jag har sparat en bit åt honom."
+ },
+ {
+  "id": "dpron-013",
+  "topic": "dpron",
+  "rule": "dpron-en",
+  "q": "Il y a des problèmes ? Oui, il [y en] a beaucoup.",
+  "alt": [
+   "en y",
+   "y les",
+   "en a y"
+  ],
+  "why": "Y före en: il y en a.",
+  "sv": "Finns det problem? Ja, det finns många."
+ },
+ {
+  "id": "dpron-014",
+  "topic": "dpron",
+  "rule": "dpron-en",
+  "q": "Tu parles de ton projet à tes amis ? Oui, je [leur en] parle souvent.",
+  "alt": [
+   "en leur",
+   "les en",
+   "leur y"
+  ],
+  "why": "Leur före en: je leur en parle.",
+  "sv": "Pratar du om ditt projekt med dina vänner? Ja, jag pratar ofta med dem om det."
+ },
+ {
+  "id": "dpron-015",
+  "topic": "dpron",
+  "rule": "dpron-pc",
+  "q": "Ta carte postale ? Mon frère [me l'a] apportée.",
+  "alt": [
+   "m'a la",
+   "l'm'a",
+   "la m'a"
+  ],
+  "why": "I passé composé står pronomenen före hjälpverbet: me l'a apportée.",
+  "sv": "Ditt vykort? Min bror kom med det till mig."
+ },
+ {
+  "id": "dpron-016",
+  "topic": "dpron",
+  "rule": "dpron-pc",
+  "q": "Ces histoires, elle [nous les a] racontées cent fois.",
+  "alt": [
+   "les nous a",
+   "nous a les",
+   "a nous les"
+  ],
+  "why": "Nous les före hjälpverbet a. Participet böjs efter les (racontées).",
+  "sv": "De där historierna har hon berättat för oss hundra gånger."
+ },
+ {
+  "id": "dpron-017",
+  "topic": "dpron",
+  "rule": "dpron-pc",
+  "q": "Ma guitare ? Je vais [te la] prêter.",
+  "alt": [
+   "la te",
+   "te lui",
+   "lui la"
+  ],
+  "why": "Med infinitiv står pronomenen före infinitiven: vais te la prêter.",
+  "sv": "Min gitarr? Jag ska låna dig den."
+ },
+ {
+  "id": "dpron-018",
+  "topic": "dpron",
+  "rule": "dpron-pc",
+  "q": "Le résultat ? Je ne peux pas [vous le] dire.",
+  "alt": [
+   "le vous",
+   "vous lui",
+   "lui le"
+  ],
+  "why": "Före infinitiven dire, med vous före le.",
+  "sv": "Resultatet? Jag kan inte säga det till er."
+ },
+ {
+  "id": "dpron-019",
+  "topic": "dpron",
+  "rule": "dpron-imper",
+  "q": "Ton numéro ? Donne-[le-moi] !",
+  "alt": [
+   "moi-le",
+   "me-le",
+   "le-me"
+  ],
+  "why": "Jakande imperativ: le/la/les först, sedan moi/toi/lui: donne-le-moi.",
+  "sv": "Ditt nummer? Ge mig det!"
+ },
+ {
+  "id": "dpron-020",
+  "topic": "dpron",
+  "rule": "dpron-imper",
+  "q": "La lettre ? Envoie-[la-lui] aujourd'hui.",
+  "alt": [
+   "lui-la",
+   "la-le",
+   "le-lui"
+  ],
+  "why": "Jakande imperativ: la-lui.",
+  "sv": "Brevet? Skicka det till honom i dag."
+ },
+ {
+  "id": "dpron-021",
+  "topic": "dpron",
+  "rule": "dpron-imper",
+  "q": "Ces photos ? Ne [me les] montre pas !",
+  "alt": [
+   "les-moi",
+   "moi les",
+   "les me"
+  ],
+  "why": "Nekande imperativ: vanlig ordning före verbet, ne me les montre pas.",
+  "sv": "De där fotona? Visa dem inte för mig!"
+ },
+ {
+  "id": "dpron-022",
+  "topic": "dpron",
+  "rule": "dpron-imper",
+  "q": "Les billets ? Rendez-[les-leur], s'il vous plaît.",
+  "alt": [
+   "leur-les",
+   "les-lui",
+   "leurs-les"
+  ],
+  "why": "Jakande imperativ: les-leur.",
+  "sv": "Biljetterna? Ge tillbaka dem till dem, tack."
+ }
+]

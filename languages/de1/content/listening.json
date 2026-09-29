@@ -1,0 +1,843 @@
+[
+ {
+  "id": "de1-l-e1",
+  "sec": "e1",
+  "title": "Hallo, ich bin Jonas!",
+  "lines": [
+   {
+    "who": "A",
+    "fr": "Hallo! Wie heißt du?",
+    "sv": "Hej! Vad heter du?"
+   },
+   {
+    "who": "B",
+    "fr": "Hallo! Ich heiße Jonas. Und du?",
+    "sv": "Hej! Jag heter Jonas. Och du?"
+   },
+   {
+    "who": "A",
+    "fr": "Ich bin Lea. Woher kommst du, Jonas?",
+    "sv": "Jag heter Lea. Varifrån kommer du, Jonas?"
+   },
+   {
+    "who": "B",
+    "fr": "Ich komme aus Schweden, aus Uppsala. Und du?",
+    "sv": "Jag kommer från Sverige, från Uppsala. Och du?"
+   },
+   {
+    "who": "A",
+    "fr": "Ich komme aus Österreich, aus Wien. Aber ich wohne jetzt in Berlin.",
+    "sv": "Jag kommer från Österrike, från Wien. Men jag bor i Berlin nu."
+   },
+   {
+    "who": "B",
+    "fr": "Wie alt bist du?",
+    "sv": "Hur gammal är du?"
+   },
+   {
+    "who": "A",
+    "fr": "Ich bin sechzehn. Und du?",
+    "sv": "Jag är sexton. Och du?"
+   },
+   {
+    "who": "B",
+    "fr": "Ich bin auch sechzehn. Sprichst du Englisch?",
+    "sv": "Jag är också sexton. Pratar du engelska?"
+   },
+   {
+    "who": "A",
+    "fr": "Ja, ein bisschen. Aber du sprichst sehr gut Deutsch!",
+    "sv": "Ja, lite grann. Men du pratar väldigt bra tyska!"
+   },
+   {
+    "who": "B",
+    "fr": "Danke! Tschüss, Lea!",
+    "sv": "Tack! Hej då, Lea!"
+   },
+   {
+    "who": "A",
+    "fr": "Tschüss, Jonas!",
+    "sv": "Hej då, Jonas!"
+   }
+  ],
+  "questions": [
+   {
+    "type": "helhet",
+    "q": "Vad handlar samtalet om?",
+    "opts": [
+     "Två ungdomar som presenterar sig",
+     "En elev som beställer mat",
+     "En lärare som ger läxor"
+    ],
+    "a": 0,
+    "why": "De frågar vad den andra heter, var hen kommer ifrån och hur gammal hen är."
+   },
+   {
+    "type": "detalj",
+    "q": "Var bor Lea nu?",
+    "opts": [
+     "I Wien",
+     "I Berlin",
+     "I Uppsala"
+    ],
+    "a": 1,
+    "why": "Lea säger: ”Aber ich wohne jetzt in Berlin.”"
+   },
+   {
+    "type": "detalj",
+    "q": "Hur gammal är Jonas?",
+    "opts": [
+     "15",
+     "16",
+     "17"
+    ],
+    "a": 1,
+    "why": "”Ich bin auch sechzehn.”"
+   }
+  ],
+  "gloss": {
+   "woher": {
+    "t": "woher",
+    "sv": "varifrån",
+    "g": ""
+   },
+   "bisschen": {
+    "t": "ein bisschen",
+    "sv": "lite grann",
+    "g": ""
+   },
+   "jetzt": {
+    "t": "jetzt",
+    "sv": "nu",
+    "g": ""
+   }
+  }
+ },
+ {
+  "id": "de1-l-e2",
+  "sec": "e2",
+  "title": "Das ist meine Familie",
+  "lines": [
+   {
+    "who": "Mia",
+    "fr": "Guck mal, Tom! Das ist ein Foto von meiner Familie.",
+    "sv": "Titta, Tom! Det här är ett foto av min familj."
+   },
+   {
+    "who": "Tom",
+    "fr": "Oh, schön! Wer ist das?",
+    "sv": "Åh, fint! Vem är det?"
+   },
+   {
+    "who": "Mia",
+    "fr": "Das ist mein Vater. Er heißt Martin. Und das ist meine Mutter, Sara.",
+    "sv": "Det är min pappa. Han heter Martin. Och det är min mamma, Sara."
+   },
+   {
+    "who": "Tom",
+    "fr": "Und das Mädchen mit den blonden Haaren?",
+    "sv": "Och flickan med det blonda håret?"
+   },
+   {
+    "who": "Mia",
+    "fr": "Das ist meine Schwester Lotta. Sie ist zehn Jahre alt und sehr lustig.",
+    "sv": "Det är min syster Lotta. Hon är tio år och väldigt rolig."
+   },
+   {
+    "who": "Tom",
+    "fr": "Hast du auch einen Bruder?",
+    "sv": "Har du en bror också?"
+   },
+   {
+    "who": "Mia",
+    "fr": "Nein, ich habe keinen Bruder. Aber wir haben einen Hund. Er heißt Bruno.",
+    "sv": "Nej, jag har ingen bror. Men vi har en hund. Han heter Bruno."
+   },
+   {
+    "who": "Tom",
+    "fr": "Der Hund ist ja groß! Und wer ist die Frau hier?",
+    "sv": "Hunden är ju stor! Och vem är kvinnan här?"
+   },
+   {
+    "who": "Mia",
+    "fr": "Das ist meine Oma. Sie lebt allein, aber sie ist oft bei uns.",
+    "sv": "Det är min mormor. Hon bor ensam, men hon är ofta hos oss."
+   }
+  ],
+  "questions": [
+   {
+    "type": "helhet",
+    "q": "Vad tittar Mia och Tom på?",
+    "opts": [
+     "Ett foto av Mias familj",
+     "En film om hundar",
+     "Mias skolbok"
+    ],
+    "a": 0,
+    "why": "”Das ist ein Foto von meiner Familie.”"
+   },
+   {
+    "type": "detalj",
+    "q": "Hur gammal är Lotta?",
+    "opts": [
+     "Sex år",
+     "Tio år",
+     "Sexton år"
+    ],
+    "a": 1,
+    "why": "”Sie ist zehn Jahre alt.”"
+   },
+   {
+    "type": "detalj",
+    "q": "Vilket stämmer om Mia?",
+    "opts": [
+     "Hon har en bror",
+     "Hon har en hund",
+     "Hon bor hos mormor"
+    ],
+    "a": 1,
+    "why": "”Ich habe keinen Bruder. Aber wir haben einen Hund.”"
+   }
+  ],
+  "gloss": {
+   "guck": {
+    "t": "gucken",
+    "sv": "titta",
+    "g": ""
+   },
+   "bei": {
+    "t": "bei",
+    "sv": "hos",
+    "g": ""
+   },
+   "oft": {
+    "t": "oft",
+    "sv": "ofta",
+    "g": ""
+   }
+  }
+ },
+ {
+  "id": "de1-l-e3",
+  "sec": "e3",
+  "title": "Eine Nachricht von Frau Schmidt",
+  "lines": [
+   {
+    "who": "Frau Schmidt",
+    "fr": "Hallo, Klasse 8b! Hier ist Frau Schmidt, eure Lehrerin für Deutsch.",
+    "sv": "Hej, klass 8b! Det här är Frau Schmidt, er lärare i tyska."
+   },
+   {
+    "who": "Frau Schmidt",
+    "fr": "Morgen haben wir keinen Unterricht in Raum 12. Wir sind in der Bibliothek.",
+    "sv": "I morgon har vi ingen lektion i sal 12. Vi är i biblioteket."
+   },
+   {
+    "who": "Frau Schmidt",
+    "fr": "Bitte bringt ein Buch, ein Heft und einen Stift mit.",
+    "sv": "Ta med en bok, ett häfte och en penna."
+   },
+   {
+    "who": "Frau Schmidt",
+    "fr": "Wir lesen einen Text und schreiben zusammen. Das ist nicht schwer.",
+    "sv": "Vi läser en text och skriver tillsammans. Det är inte svårt."
+   },
+   {
+    "who": "Frau Schmidt",
+    "fr": "Und noch etwas: Der Test ist nicht am Montag, sondern am Mittwoch.",
+    "sv": "Och en sak till: Provet är inte på måndag utan på onsdag."
+   },
+   {
+    "who": "Frau Schmidt",
+    "fr": "Fragen? Schreibt mir eine E-Mail. Bis morgen!",
+    "sv": "Frågor? Skicka ett mejl till mig. Vi ses i morgon!"
+   }
+  ],
+  "questions": [
+   {
+    "type": "helhet",
+    "q": "Vad är det här för text?",
+    "opts": [
+     "Ett meddelande från en lärare",
+     "En reklam för en bokhandel",
+     "Ett samtal mellan två elever"
+    ],
+    "a": 0,
+    "why": "Frau Schmidt säger att hon är klassens lärare i tyska."
+   },
+   {
+    "type": "detalj",
+    "q": "Var har klassen lektion i morgon?",
+    "opts": [
+     "I sal 12",
+     "I biblioteket",
+     "I idrottshallen"
+    ],
+    "a": 1,
+    "why": "”Wir sind in der Bibliothek.”"
+   },
+   {
+    "type": "detalj",
+    "q": "När är provet?",
+    "opts": [
+     "På måndag",
+     "På onsdag",
+     "På fredag"
+    ],
+    "a": 1,
+    "why": "”… nicht am Montag, sondern am Mittwoch.”"
+   }
+  ],
+  "gloss": {
+   "bibliothek": {
+    "t": "die Bibliothek",
+    "sv": "bibliotek",
+    "g": "f"
+   },
+   "bringt": {
+    "t": "mitbringen",
+    "sv": "ta med sig",
+    "g": ""
+   },
+   "mit": {
+    "t": "mit",
+    "sv": "med",
+    "g": ""
+   },
+   "sondern": {
+    "t": "sondern",
+    "sv": "utan",
+    "g": ""
+   },
+   "raum": {
+    "t": "der Raum",
+    "sv": "rum, sal",
+    "g": "m"
+   },
+   "lehrerin": {
+    "t": "die Lehrerin",
+    "sv": "lärarinna, lärare",
+    "g": "f"
+   }
+  }
+ },
+ {
+  "id": "de1-l-e4",
+  "sec": "e4",
+  "title": "Hast du am Samstag Zeit?",
+  "lines": [
+   {
+    "who": "Lukas",
+    "fr": "Hallo, Emma! Hast du am Samstag Zeit?",
+    "sv": "Hej, Emma! Har du tid på lördag?"
+   },
+   {
+    "who": "Emma",
+    "fr": "Am Samstag? Am Morgen nicht. Da schlafe ich lange.",
+    "sv": "På lördag? Inte på morgonen. Då sover jag länge."
+   },
+   {
+    "who": "Lukas",
+    "fr": "Und am Nachmittag? Um drei Uhr?",
+    "sv": "Och på eftermiddagen? Klockan tre?"
+   },
+   {
+    "who": "Emma",
+    "fr": "Um drei spiele ich Tennis. Das dauert eine Stunde.",
+    "sv": "Klockan tre spelar jag tennis. Det tar en timme."
+   },
+   {
+    "who": "Lukas",
+    "fr": "Dann um halb fünf?",
+    "sv": "Halv fem då?"
+   },
+   {
+    "who": "Emma",
+    "fr": "Ja, um halb fünf ist gut. Was machen wir?",
+    "sv": "Ja, halv fem är bra. Vad gör vi?"
+   },
+   {
+    "who": "Lukas",
+    "fr": "Wir gehen in den Park und dann ins Café.",
+    "sv": "Vi går till parken och sedan till kaféet."
+   },
+   {
+    "who": "Emma",
+    "fr": "Super! Und am Sonntag arbeite ich. Bis Samstag!",
+    "sv": "Toppen! Och på söndag jobbar jag. Vi ses på lördag!"
+   }
+  ],
+  "questions": [
+   {
+    "type": "helhet",
+    "q": "Vad vill Lukas?",
+    "opts": [
+     "Träffa Emma på lördag",
+     "Spela tennis med Emma",
+     "Jobba på söndag"
+    ],
+    "a": 0,
+    "why": "”Hast du am Samstag Zeit?”"
+   },
+   {
+    "type": "detalj",
+    "q": "Vad gör Emma klockan tre?",
+    "opts": [
+     "Hon sover",
+     "Hon spelar tennis",
+     "Hon jobbar"
+    ],
+    "a": 1,
+    "why": "”Um drei spiele ich Tennis.”"
+   },
+   {
+    "type": "detalj",
+    "q": "När ses de?",
+    "opts": [
+     "Klockan tre",
+     "Halv fem",
+     "Halv fyra"
+    ],
+    "a": 1,
+    "why": "”Ja, um halb fünf ist gut.” Halb fünf = halv fem."
+   }
+  ],
+  "gloss": {
+   "nachmittag": {
+    "t": "der Nachmittag",
+    "sv": "eftermiddag",
+    "g": "m"
+   },
+   "café": {
+    "t": "das Café",
+    "sv": "kafé",
+    "g": "n"
+   },
+   "lange": {
+    "t": "lange",
+    "sv": "länge",
+    "g": ""
+   }
+  }
+ },
+ {
+  "id": "de1-l-e5",
+  "sec": "e5",
+  "title": "Im Restaurant",
+  "lines": [
+   {
+    "who": "Kellnerin",
+    "fr": "Guten Abend! Was möchten Sie trinken?",
+    "sv": "God kväll! Vad vill ni dricka?"
+   },
+   {
+    "who": "Herr Berg",
+    "fr": "Ich möchte ein Wasser, bitte.",
+    "sv": "Jag skulle vilja ha ett vatten, tack."
+   },
+   {
+    "who": "Nora",
+    "fr": "Und ich nehme eine Cola.",
+    "sv": "Och jag tar en cola."
+   },
+   {
+    "who": "Kellnerin",
+    "fr": "Und was möchten Sie essen?",
+    "sv": "Och vad vill ni äta?"
+   },
+   {
+    "who": "Herr Berg",
+    "fr": "Ich nehme den Fisch mit Salat.",
+    "sv": "Jag tar fisken med sallad."
+   },
+   {
+    "who": "Nora",
+    "fr": "Ich esse kein Fleisch. Ich möchte eine Pizza mit Tomaten.",
+    "sv": "Jag äter inte kött. Jag skulle vilja ha en pizza med tomater."
+   },
+   {
+    "who": "Kellnerin",
+    "fr": "Gern. Möchten Sie auch eine Suppe?",
+    "sv": "Gärna. Vill ni ha en soppa också?"
+   },
+   {
+    "who": "Herr Berg",
+    "fr": "Nein, danke. Aber später nehmen wir einen Kuchen.",
+    "sv": "Nej tack. Men senare tar vi en kaka."
+   },
+   {
+    "who": "Nora",
+    "fr": "Oh ja, mit Schokolade!",
+    "sv": "Åh ja, med choklad!"
+   }
+  ],
+  "questions": [
+   {
+    "type": "helhet",
+    "q": "Var är personerna?",
+    "opts": [
+     "På en restaurang",
+     "I en affär",
+     "Hemma i köket"
+    ],
+    "a": 0,
+    "why": "En servitris frågar vad de vill dricka och äta."
+   },
+   {
+    "type": "detalj",
+    "q": "Vad dricker Nora?",
+    "opts": [
+     "Vatten",
+     "Cola",
+     "Mjölk"
+    ],
+    "a": 1,
+    "why": "”Und ich nehme eine Cola.”"
+   },
+   {
+    "type": "detalj",
+    "q": "Varför tar Nora pizza med tomater?",
+    "opts": [
+     "Hon äter inte kött",
+     "Hon tycker inte om fisk",
+     "Den är billig"
+    ],
+    "a": 0,
+    "why": "”Ich esse kein Fleisch.”"
+   }
+  ],
+  "gloss": {}
+ },
+ {
+  "id": "de1-l-e6",
+  "sec": "e6",
+  "title": "Was machst du gern?",
+  "lines": [
+   {
+    "who": "Ben",
+    "fr": "Was machst du gern, Alva?",
+    "sv": "Vad gör du gärna, Alva?"
+   },
+   {
+    "who": "Alva",
+    "fr": "Ich spiele Handball. Ich bin in einem Team in Stockholm.",
+    "sv": "Jag spelar handboll. Jag är med i ett lag i Stockholm."
+   },
+   {
+    "who": "Ben",
+    "fr": "Cool! Ich spiele Fußball, aber nicht so gut. Ich mag Musik lieber.",
+    "sv": "Coolt! Jag spelar fotboll, men inte så bra. Jag gillar musik mer."
+   },
+   {
+    "who": "Alva",
+    "fr": "Spielst du ein Instrument?",
+    "sv": "Spelar du ett instrument?"
+   },
+   {
+    "who": "Ben",
+    "fr": "Ja, Gitarre. Und du, hörst du gern Musik?",
+    "sv": "Ja, gitarr. Och du, lyssnar du gärna på musik?"
+   },
+   {
+    "who": "Alva",
+    "fr": "Ja, im Radio. Und am Wochenende sehe ich gern Filme.",
+    "sv": "Ja, på radio. Och på helgen ser jag gärna filmer."
+   },
+   {
+    "who": "Ben",
+    "fr": "Im Winter fährst du bestimmt Ski, oder?",
+    "sv": "På vintern åker du säkert skidor, eller hur?"
+   },
+   {
+    "who": "Alva",
+    "fr": "Ja, natürlich! Wir fahren in die Berge. Da ist viel Schnee.",
+    "sv": "Ja, självklart! Vi åker till bergen. Där finns det mycket snö."
+   }
+  ],
+  "questions": [
+   {
+    "type": "helhet",
+    "q": "Vad pratar Ben och Alva om?",
+    "opts": [
+     "Vad de gör på fritiden",
+     "Sina familjer",
+     "Vägen till skolan"
+    ],
+    "a": 0,
+    "why": "De pratar om sport, musik och film."
+   },
+   {
+    "type": "detalj",
+    "q": "Vilken sport spelar Alva i ett lag?",
+    "opts": [
+     "Fotboll",
+     "Handboll",
+     "Tennis"
+    ],
+    "a": 1,
+    "why": "”Ich spiele Handball. Ich bin in einem Team.”"
+   },
+   {
+    "type": "detalj",
+    "q": "Vilket instrument spelar Ben?",
+    "opts": [
+     "Piano",
+     "Gitarr",
+     "Inget"
+    ],
+    "a": 1,
+    "why": "”Ja, Gitarre.”"
+   }
+  ],
+  "gloss": {
+   "instrument": {
+    "t": "das Instrument",
+    "sv": "instrument",
+    "g": "n"
+   },
+   "gitarre": {
+    "t": "die Gitarre",
+    "sv": "gitarr",
+    "g": "f"
+   },
+   "bestimmt": {
+    "t": "bestimmt",
+    "sv": "säkert",
+    "g": ""
+   },
+   "berge": {
+    "t": "der Berg",
+    "sv": "berg",
+    "g": "m"
+   }
+  }
+ },
+ {
+  "id": "de1-l-e7",
+  "sec": "e7",
+  "title": "Mein Zimmer",
+  "lines": [
+   {
+    "who": "Oma",
+    "fr": "Na, Paul, wie ist dein Zimmer in Berlin?",
+    "sv": "Nå, Paul, hur är ditt rum i Berlin?"
+   },
+   {
+    "who": "Paul",
+    "fr": "Es ist klein, aber schön, Oma.",
+    "sv": "Det är litet men fint, mormor."
+   },
+   {
+    "who": "Oma",
+    "fr": "Was gibt es im Zimmer?",
+    "sv": "Vad finns det i rummet?"
+   },
+   {
+    "who": "Paul",
+    "fr": "Es gibt ein Bett, einen Tisch und einen Stuhl. Neben dem Bett steht eine Lampe.",
+    "sv": "Det finns en säng, ett bord och en stol. Bredvid sängen står en lampa."
+   },
+   {
+    "who": "Oma",
+    "fr": "Und hast du einen Fernseher?",
+    "sv": "Och har du en tv?"
+   },
+   {
+    "who": "Paul",
+    "fr": "Nein, ich habe keinen Fernseher. Ich sehe Filme auf dem Tablet.",
+    "sv": "Nej, jag har ingen tv. Jag ser filmer på surfplattan."
+   },
+   {
+    "who": "Oma",
+    "fr": "Ist das Zimmer hell?",
+    "sv": "Är rummet ljust?"
+   },
+   {
+    "who": "Paul",
+    "fr": "Ja, es hat ein großes Fenster. An der Wand hängen Poster von meiner Band.",
+    "sv": "Ja, det har ett stort fönster. På väggen hänger affischer av mitt band."
+   },
+   {
+    "who": "Oma",
+    "fr": "Und ist es sauber?",
+    "sv": "Och är det städat?"
+   },
+   {
+    "who": "Paul",
+    "fr": "Na ja … nicht immer!",
+    "sv": "Nja … inte alltid!"
+   }
+  ],
+  "questions": [
+   {
+    "type": "helhet",
+    "q": "Vad pratar Paul och mormor om?",
+    "opts": [
+     "Pauls rum",
+     "Pauls skola",
+     "Mormors hus"
+    ],
+    "a": 0,
+    "why": "”Wie ist dein Zimmer in Berlin?”"
+   },
+   {
+    "type": "detalj",
+    "q": "Vad finns INTE i Pauls rum?",
+    "opts": [
+     "En säng",
+     "En tv",
+     "En lampa"
+    ],
+    "a": 1,
+    "why": "”Ich habe keinen Fernseher.”"
+   },
+   {
+    "type": "detalj",
+    "q": "Hur är rummet?",
+    "opts": [
+     "Stort och mörkt",
+     "Litet men fint",
+     "Stort och fint"
+    ],
+    "a": 1,
+    "why": "”Es ist klein, aber schön.”"
+   }
+  ],
+  "gloss": {
+   "hell": {
+    "t": "hell",
+    "sv": "ljus",
+    "g": ""
+   },
+   "steht": {
+    "t": "stehen",
+    "sv": "stå",
+    "g": ""
+   },
+   "hängen": {
+    "t": "hängen",
+    "sv": "hänga",
+    "g": ""
+   },
+   "band": {
+    "t": "die Band",
+    "sv": "band (musikgrupp)",
+    "g": "f"
+   },
+   "na": {
+    "t": "na",
+    "sv": "nå, nja",
+    "g": ""
+   }
+  }
+ },
+ {
+  "id": "de1-l-e8",
+  "sec": "e8",
+  "title": "Wo ist die Post?",
+  "lines": [
+   {
+    "who": "Tourist",
+    "fr": "Entschuldigung, wo ist die Post?",
+    "sv": "Ursäkta, var ligger posten?"
+   },
+   {
+    "who": "Frau",
+    "fr": "Die Post? Die ist nicht weit. Gehen Sie hier geradeaus bis zur Kirche.",
+    "sv": "Posten? Den ligger inte långt bort. Gå rakt fram här till kyrkan."
+   },
+   {
+    "who": "Tourist",
+    "fr": "Bis zur Kirche. Und dann?",
+    "sv": "Till kyrkan. Och sedan?"
+   },
+   {
+    "who": "Frau",
+    "fr": "Dann gehen Sie links. Die Post ist neben der Bank.",
+    "sv": "Sedan går ni till vänster. Posten ligger bredvid banken."
+   },
+   {
+    "who": "Tourist",
+    "fr": "Ist das weit? Nehme ich besser den Bus?",
+    "sv": "Är det långt? Ska jag hellre ta bussen?"
+   },
+   {
+    "who": "Frau",
+    "fr": "Nein, das sind nur fünf Minuten zu Fuß.",
+    "sv": "Nej, det är bara fem minuter till fots."
+   },
+   {
+    "who": "Tourist",
+    "fr": "Und gibt es hier auch ein Museum?",
+    "sv": "Och finns det ett museum här också?"
+   },
+   {
+    "who": "Frau",
+    "fr": "Ja, am Marktplatz, gegenüber vom Rathaus.",
+    "sv": "Ja, vid torget, mittemot rådhuset."
+   },
+   {
+    "who": "Tourist",
+    "fr": "Vielen Dank!",
+    "sv": "Tack så mycket!"
+   },
+   {
+    "who": "Frau",
+    "fr": "Bitte schön!",
+    "sv": "Varsågod!"
+   }
+  ],
+  "questions": [
+   {
+    "type": "helhet",
+    "q": "Vad vill turisten veta?",
+    "opts": [
+     "Vägen till posten",
+     "När bussen går",
+     "Vad ett frimärke kostar"
+    ],
+    "a": 0,
+    "why": "”Entschuldigung, wo ist die Post?”"
+   },
+   {
+    "type": "detalj",
+    "q": "Var ligger posten?",
+    "opts": [
+     "Bredvid banken",
+     "Mittemot rådhuset",
+     "Vid torget"
+    ],
+    "a": 0,
+    "why": "”Die Post ist neben der Bank.”"
+   },
+   {
+    "type": "detalj",
+    "q": "Hur långt är det?",
+    "opts": [
+     "Fem minuter till fots",
+     "Fem minuter med buss",
+     "En kilometer"
+    ],
+    "a": 0,
+    "why": "”Das sind nur fünf Minuten zu Fuß.”"
+   }
+  ],
+  "gloss": {
+   "besser": {
+    "t": "besser",
+    "sv": "bättre, hellre",
+    "g": ""
+   },
+   "fuß": {
+    "t": "zu Fuß",
+    "sv": "till fots",
+    "g": ""
+   },
+   "gegenüber": {
+    "t": "gegenüber",
+    "sv": "mittemot",
+    "g": ""
+   }
+  }
+ }
+]

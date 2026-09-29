@@ -1,0 +1,537 @@
+// Ordlista för Franska 2 (Moderna språk 2, A1.2 → A2). Rader som börjar med // är kommentarer och tas bort vid bygget.
+//
+// Format, en rad per ord:
+//   franska|svenska|genus|exempel på franska|exempel på svenska|ursprung|ordagrant
+// Hakparentes i den franska exempelmeningen markerar luckan i meningsövningen:
+//   Nous avons [réservé] une chambre.
+// Genus: m, f, mpl, fpl eller tomt. Ursprung får innehålla <b>fetstil</b>. Ordagrant är valfritt och används för fraser.
+// En rad som börjar med # startar ett nytt avsnitt:  #id|Namn som visas
+// Avsnittets id och ordets franska form används som nycklar för sparade framsteg,
+// så ändra dem inte i efterhand (ändra gärna svenska, exempel och ursprung).
+// Ord som redan finns i Franska 1 (fr1), Franska 3 (fr, även bokorden), Franska 4 (fr4) och Franska I (fru) upprepas inte här.
+#d1|Kap 1 · En voyage
+le voyage|resa|m|Notre [voyage] en Bretagne a duré deux semaines.|Vår resa till Bretagne varade i två veckor.|Latin <b>viaticum</b> 'respengar', av <b>via</b> 'väg'. Jämför engelska <b>voyage</b>.
+voyager|resa||Cet été, je vais [voyager] en Italie avec mes cousins.|I sommar ska jag resa till Italien med mina kusiner.|Av <b>voyage</b> 'resa', ytterst latin <b>via</b> 'väg'.
+les vacances|semester, lov|fpl|Nous partons en [vacances] au mois de juillet.|Vi åker på semester i juli.|Latin <b>vacare</b> 'vara tom, ledig'. Jämför engelska <b>vacation</b> och svenska vakant. Alltid plural.
+partir en vacances|åka på semester||Cette année, ma famille va [partir en vacances] en Grèce.|I år ska min familj åka på semester till Grekland.|<b>partir</b> 'ge sig av', latin <b>partire</b> 'dela'.|<b>partir</b> ge sig av · <b>en vacances</b> på semester → "ge sig av på semester"
+bon voyage !|trevlig resa!||Tu pars demain ? [Bon voyage] et amuse-toi bien !|Åker du i morgon? Trevlig resa och ha det så kul!|Latin <b>bonus</b> 'god' + voyage.|<b>bon</b> god · <b>voyage</b> resa → "god resa"
+faire sa valise|packa sin väska||Tu as déjà [fait ta valise] pour demain ?|Har du redan packat din väska till i morgon?|<b>valise</b> 'resväska' från italienska <b>valigia</b>. Particip: fait.|<b>faire</b> göra · <b>sa</b> sin · <b>valise</b> resväska → "göra sin resväska"
+le passeport|pass|m|N'oublie pas ton [passeport] pour aller au Maroc.|Glöm inte ditt pass när du åker till Marocko.|<b>passer</b> 'passera' + <b>port</b> 'hamn': tillstånd att passera hamnen. Jämför engelska <b>passport</b>.
+le billet|biljett|m|J'ai acheté mon [billet] de train sur internet.|Jag har köpt min tågbiljett på nätet.|Av fornfranska <b>bullette</b> 'litet dokument', latin <b>bulla</b> 'sigill'. Svenska biljett kommer härifrån.
+l'aller-retour|tur och retur-biljett|m|Un [aller-retour] pour Lyon, s'il vous plaît.|En tur och retur till Lyon, tack.|<b>aller</b> 'gå, åka' + <b>retour</b> 'återkomst'.
+le wagon|vagn (på tåg)|m|Notre place est dans le [wagon] numéro huit.|Vår plats är i vagn nummer åtta.|Från engelska <b>waggon</b>, släkt med svenska <b>vagn</b>.
+le départ|avgång, avresa|m|Le [départ] du train est à huit heures dix.|Tåget avgår klockan åtta och tio.|Av <b>partir</b> 'ge sig av'. Jämför engelska <b>departure</b>.
+l'arrivée|ankomst|f|L'[arrivée] à Paris est prévue à midi.|Ankomsten till Paris är planerad till klockan tolv.|Av <b>arriver</b> 'komma fram', latin <b>ad ripam</b> 'till stranden'.
+l'horaire|tidtabell|m|Regarde l'[horaire] pour voir quand le bus passe.|Titta på tidtabellen för att se när bussen går.|Latin <b>hora</b> 'timme'. Jämför engelska <b>hour</b>.
+la correspondance|anslutning, byte|f|Nous avons une [correspondance] à Bruxelles.|Vi har ett byte i Bryssel.|Av <b>correspondre</b> 'motsvara, passa ihop'. Tågen 'passar ihop' med varandra.
+rater|missa||Dépêche-toi, on va [rater] le train !|Skynda dig, vi kommer att missa tåget!|Vardagligt ord, ursprungligen om ett gevär som inte går av. Motsats: <b>réussir</b>. Ursprunget är osäkert.
+le contrôleur, la contrôleuse|konduktör|m|Le [contrôleur] a vérifié nos billets.|Konduktören har kontrollerat våra biljetter.|Av <b>contrôler</b> 'kontrollera', från <b>contre-rôle</b> 'motrulle', en kopia av en lista.
+la couchette|liggplats, sovbrits|f|Dans le train de nuit, j'ai dormi sur une [couchette].|I nattåget sov jag i en liggplats.|Av <b>coucher</b> 'lägga sig', latin <b>collocare</b> 'placera'.
+le passager, la passagère|passagerare|m|Tous les [passagers] doivent attacher leur ceinture.|Alla passagerare måste spänna fast sig.|Av <b>passage</b> 'genomfart', av <b>passer</b> 'passera'.
+décoller|lyfta (om flyg)||L'avion a [décollé] avec vingt minutes de retard.|Planet lyfte med tjugo minuters försening.|<b>dé-</b> 'bort' + <b>coller</b> 'klistra': planet 'lossnar' från marken.
+la carte d'embarquement|boardingkort|f|Montrez votre [carte d'embarquement] à l'hôtesse.|Visa ert boardingkort för flygvärdinnan.|<b>embarquer</b> 'gå ombord', av <b>barque</b> 'båt'.|<b>carte</b> kort · <b>de</b> för · <b>embarquement</b> ombordstigning → "kort för ombordstigning"
+annuler|ställa in, avboka||Le vol pour Nice est [annulé] à cause de la neige.|Flyget till Nice är inställt på grund av snön.|Latin <b>annullare</b> 'göra till intet', av <b>nullus</b> 'ingen'. Jämför annullera.
+la chambre|rum (sovrum, hotellrum)|f|Notre [chambre] d'hôtel a une vue sur la mer.|Vårt hotellrum har utsikt över havet.|Latin <b>camera</b> 'välvt rum'. Jämför svenska kammare.
+réserver|boka||Nous avons [réservé] une chambre près de la plage.|Vi har bokat ett rum nära stranden.|Latin <b>reservare</b> 'spara undan'. Jämför reservera.
+la réservation|bokning|f|J'ai une [réservation] au nom de Lindberg.|Jag har en bokning i namnet Lindberg.|Av <b>réserver</b> 'boka'.
+la réception|reception|f|Demande la clé à la [réception].|Be om nyckeln i receptionen.|Latin <b>receptio</b> 'mottagande', av <b>recipere</b> 'ta emot'.
+le séjour|vistelse|m|Bon [séjour] à Paris !|Trevlig vistelse i Paris!|Av <b>séjourner</b> 'vistas', latin <b>sub-diurnare</b> 'stanna en dag'.
+la caravane|husvagn|f|Mes grands-parents voyagent toujours avec leur [caravane].|Mina morföräldrar reser alltid med sin husvagn.|Från persiska <b>karwan</b> 'grupp av resenärer'. Jämför karavan.
+le sac de couchage|sovsäck|m|Il fait froid la nuit, prends ton [sac de couchage].|Det är kallt på natten, ta med din sovsäck.|<b>coucher</b> 'lägga sig, sova'.|<b>sac</b> säck · <b>de</b> för · <b>couchage</b> sovande → "säck för sovande"
+le pique-nique|picknick|m|On a fait un [pique-nique] au bord du lac.|Vi hade picknick vid sjön.|Av <b>piquer</b> 'plocka' + <b>nique</b> 'småsak'. Svenska picknick kommer härifrån.
+faire du camping|campa||L'été dernier, nous avons [fait du camping] en Provence.|Förra sommaren campade vi i Provence.|Från engelska <b>camping</b>, ytterst latin <b>campus</b> 'fält'. Particip: fait.|<b>faire</b> göra · <b>du camping</b> camping → "göra camping"
+la mer|hav|f|Les enfants se baignent dans la [mer].|Barnen badar i havet.|Latin <b>mare</b> 'hav'. Jämför marin.
+au bord de la mer|vid havet||Nous allons passer une semaine [au bord de la mer].|Vi ska tillbringa en vecka vid havet.|<b>bord</b> 'kant', germanskt ord, jämför svenska bord (fartygskant).|<b>au bord</b> vid kanten · <b>de la mer</b> av havet → "vid havets kant"
+la montagne|berg, fjällen|f|En hiver, on va skier à la [montagne].|På vintern åker vi och åker skidor i bergen.|Latin <b>montanea</b>, av <b>mons</b> 'berg'. Jämför engelska <b>mountain</b>.
+la campagne|landet, landsbygd|f|Mes cousins habitent à la [campagne], loin de la ville.|Mina kusiner bor på landet, långt från staden.|Latin <b>campania</b> 'slätt', av <b>campus</b> 'fält'. Jämför kampanj (militärt fälttåg).
+à l'étranger|utomlands||C'est la première fois que je pars [à l'étranger] sans mes parents.|Det är första gången jag åker utomlands utan mina föräldrar.|<b>étranger</b> 'främmande', latin <b>extraneus</b> 'utomstående'. Jämför engelska <b>stranger</b>.|<b>à</b> i · <b>l'étranger</b> det främmande → "i det främmande"
+l'excursion|utflykt|f|Nous avons fait une [excursion] en bateau.|Vi gjorde en utflykt med båt.|Latin <b>excursio</b> 'utfall', av <b>ex</b> 'ut' + <b>currere</b> 'springa'.
+le guide|guide; guidebok|m|Le [guide] nous a montré la vieille ville.|Guiden visade oss gamla stan.|Av <b>guider</b> 'leda', germanskt ursprung, släkt med engelska <b>wit</b>. Svenska guide kommer härifrån.
+le souvenir|minne; souvenir|m|J'ai acheté un petit [souvenir] pour ma sœur.|Jag har köpt en liten souvenir till min syster.|Av <b>se souvenir</b> 'minnas', latin <b>subvenire</b> 'komma upp i tankarna'.
+la carte postale|vykort|f|J'ai envoyé une [carte postale] à ma grand-mère.|Jag har skickat ett vykort till min mormor.|<b>carte</b> 'kort', latin <b>charta</b> 'papper'. <b>poste</b> 'post'.|<b>carte</b> kort · <b>postale</b> post- → "postkort"
+l'appareil photo|kamera|m|Il a pris son [appareil photo] pour la randonnée.|Han har tagit med sin kamera på vandringen.|<b>appareil</b> 'apparat', latin <b>apparare</b> 'förbereda'.|<b>appareil</b> apparat · <b>photo</b> foto → "fotoapparat"
+le bateau|båt|m|On prend le [bateau] pour aller en Corse.|Vi tar båten till Korsika.|Från fornengelska <b>bat</b>, släkt med svenska <b>båt</b>.
+le port|hamn|m|Le bateau arrive au [port] de Marseille à sept heures.|Båten kommer in till Marseilles hamn klockan sju.|Latin <b>portus</b> 'hamn'. Jämför engelska <b>port</b>.
+la destination|resmål|f|Quelle est ta [destination] préférée pour les vacances ?|Vilket är ditt favoritresmål på semestern?|Latin <b>destinatio</b> 'bestämmelse', av <b>destinare</b> 'bestämma'.
+le trajet|resväg, sträcka, resa|m|Le [trajet] entre Paris et Lyon dure deux heures.|Resan mellan Paris och Lyon tar två timmar.|Italienska <b>tragetto</b> 'överfart', latin <b>traiectus</b> 'överfart'.
+durer|vara, ta (om tid)||Le vol va [durer] trois heures.|Flygresan kommer att ta tre timmar.|Latin <b>durare</b> 'hålla ut', av <b>durus</b> 'hård'. Jämför engelska <b>during</b>.
+complet, complète|fullbokad, full||Désolé, l'hôtel est [complet] ce week-end.|Tyvärr är hotellet fullbokat i helgen.|Latin <b>completus</b> 'fylld'. Jämför komplett.
+libre|ledig||Est-ce qu'il y a une chambre [libre] pour ce soir ?|Finns det ett ledigt rum i kväll?|Latin <b>liber</b> 'fri'. Jämför liberal.
+occupé, -e|upptagen||Désolé, cette place est [occupée].|Tyvärr, den här platsen är upptagen.|Latin <b>occupare</b> 'ta i besittning'. Jämför ockupera.
+la randonnée|vandring|f|Nous avons fait une longue [randonnée] dans les Alpes.|Vi gjorde en lång vandring i Alperna.|Av <b>randonner</b> 'vandra', fornfranska <b>randir</b> 'springa snabbt'.
+la crème solaire|solkräm|f|Mets de la [crème solaire], le soleil est très fort.|Smörj in dig med solkräm, solen är väldigt stark.|<b>solaire</b> 'sol-', latin <b>sol</b> 'sol'.|<b>crème</b> kräm · <b>solaire</b> sol- → "solkräm"
+les lunettes de soleil|solglasögon|fpl|J'ai oublié mes [lunettes de soleil] à l'hôtel.|Jag har glömt mina solglasögon på hotellet.|<b>lunette</b> 'liten måne', av <b>lune</b>: glasen är runda som månen.|<b>lunettes</b> glasögon · <b>de soleil</b> för sol → "glasögon för sol"
+se baigner|bada||L'eau est froide, mais on va quand même [se baigner].|Vattnet är kallt, men vi ska bada ändå.|Av <b>bain</b> 'bad', latin <b>balneum</b>.
+bronzer|sola, bli brun||Ma sœur a [bronzé] toute la journée sur la plage.|Min syster har solat hela dagen på stranden.|Av <b>bronze</b> 'brons': man får huden i bronsfärg.
+en plein air|utomhus, i det fria||On a dormi [en plein air] sous les étoiles.|Vi sov utomhus under stjärnorna.|<b>plein</b> 'full', latin <b>plenus</b>; <b>air</b> 'luft'.|<b>en</b> i · <b>plein</b> full · <b>air</b> luft → "i full luft"
+le coup de soleil|solbränna (bränd hud)|m|J'ai oublié la crème et j'ai attrapé un [coup de soleil].|Jag glömde solkrämen och blev solbränd.|<b>coup</b> 'slag', latin <b>colpus</b>.|<b>coup</b> slag · <b>de soleil</b> av sol → "solslag"
+la vue|utsikt|f|Depuis le balcon, on a une belle [vue] sur la montagne.|Från balkongen har man en fin utsikt över berget.|Particip av <b>voir</b> 'se', latin <b>videre</b>. Jämför engelska <b>view</b>.
+la location|uthyrning; hyra|f|Nous avons pris une maison en [location] pour l'été.|Vi har hyrt ett hus för sommaren.|Latin <b>locatio</b> 'uthyrning', av <b>locare</b> 'placera'. Falsk vän: inte 'plats'.
+louer|hyra||On peut [louer] des vélos près de la gare.|Man kan hyra cyklar nära stationen.|Latin <b>locare</b> 'hyra ut'. Obs: <b>louer</b> kan också betyda 'berömma' (latin laudare).
+l'escale|mellanlandning|f|Notre vol pour Montréal fait une [escale] à Paris.|Vårt flyg till Montreal mellanlandar i Paris.|Italienska <b>scala</b> 'trappa, landgång'. Jämför eskalera.
+découvrir|upptäcka||Pendant ce voyage, j'ai [découvert] une ville magnifique.|Under den här resan har jag upptäckt en fantastisk stad.|<b>dé-</b> + <b>couvrir</b> 'täcka', 'ta av täcket'. Particip: découvert. Jämför engelska <b>discover</b>.
+profiter de|njuta av, passa på||On a bien [profité du] soleil pendant les vacances.|Vi har verkligen njutit av solen på semestern.|Latin <b>profectus</b> 'framsteg', av <b>proficere</b> 'göra framsteg'. Jämför profit.
+faire la queue|köa, stå i kö||Il faut [faire la queue] pour acheter les billets.|Man måste köa för att köpa biljetterna.|<b>queue</b> 'svans', latin <b>cauda</b>. Kön är en lång 'svans' av människor.|<b>faire</b> göra · <b>la queue</b> svansen → "göra svansen"
+en avance|i god tid, för tidigt||Nous sommes arrivés à l'aéroport deux heures [en avance].|Vi kom till flygplatsen två timmar i förväg.|<b>avance</b> 'försprång', av <b>avancer</b> 'gå framåt'.|<b>en</b> i · <b>avance</b> försprång → "i försprång"
+la voie|spår (på station)|f|Le train pour Nantes part de la [voie] trois.|Tåget till Nantes går från spår tre.|Latin <b>via</b> 'väg'. Jämför engelska <b>via</b>.
+l'emplacement|tältplats, plats (på camping)|m|Nous avons réservé un [emplacement] près de la rivière.|Vi har bokat en tältplats nära ån.|Av <b>place</b> 'plats', latin <b>platea</b>.
+#d2|Kap 2 · Chez moi
+chez moi|hemma, hem till mig||Tu veux venir [chez moi] après l'école ?|Vill du komma hem till mig efter skolan?|Latin <b>casa</b> 'hydda, hus'. Jämför italienska casa.|<b>chez</b> hos · <b>moi</b> mig → "hos mig"
+la maison|hus, hem|f|Notre [maison] a un grand jardin.|Vårt hus har en stor trädgård.|Latin <b>mansio</b> 'uppehållsort', av <b>manere</b> 'stanna'.
+l'appartement|lägenhet|m|Nous habitons dans un [appartement] au centre de Lyon.|Vi bor i en lägenhet i centrala Lyon.|Italienska <b>appartamento</b>, av <b>appartare</b> 'avskilja'.
+l'immeuble|flerbostadshus|m|Notre [immeuble] a six étages.|Vårt hus har sex våningar.|Latin <b>immobilis</b> 'orörlig'. Ett hus kan inte flyttas, till skillnad från möbler.
+l'étage|våning|m|J'habite au troisième [étage].|Jag bor på fjärde våningen.|Av fornfranska <b>estage</b> 'vistelse', latin <b>stare</b> 'stå'. Obs: premier étage = svensk andra våning.
+le rez-de-chaussée|bottenvåning|m|La cuisine est au [rez-de-chaussée].|Köket ligger på bottenvåningen.|<b>rez</b> 'i jämnhöjd med' + <b>chaussée</b> 'gata'.|<b>rez</b> i jämnhöjd · <b>de</b> med · <b>chaussée</b> gatan → "i jämnhöjd med gatan"
+le salon|vardagsrum|m|Le soir, on regarde la télé dans le [salon].|På kvällen tittar vi på tv i vardagsrummet.|Italienska <b>salone</b> 'stor sal'. Jämför salong.
+la cuisine|kök; matlagning|f|Maman prépare le dîner dans la [cuisine].|Mamma lagar middag i köket.|Latin <b>coquina</b> 'kök', av <b>coquere</b> 'koka'. Jämför engelska <b>kitchen</b>.
+la salle de bains|badrum|f|Il y a une douche dans la [salle de bains].|Det finns en dusch i badrummet.|<b>salle</b> 'sal, rum', germanskt ord, släkt med svenska <b>sal</b>.|<b>salle</b> rum · <b>de bains</b> för bad → "rum för bad"
+la salle à manger|matsal|f|Nous mangeons dans la [salle à manger] le dimanche.|Vi äter i matsalen på söndagar.|<b>manger</b> 'äta', latin <b>manducare</b> 'tugga'.|<b>salle</b> rum · <b>à manger</b> att äta → "rum att äta i"
+le couloir|hall, korridor|m|Les toilettes sont au bout du [couloir].|Toaletten ligger i slutet av korridoren.|Av <b>couler</b> 'rinna, glida', latin <b>colare</b> 'sila'.
+le jardin|trädgård|m|Mon père plante des tomates dans le [jardin].|Min pappa planterar tomater i trädgården.|Av germanska <b>gard</b> 'inhägnad', släkt med svenska <b>gård</b>.
+le balcon|balkong|m|On prend le petit-déjeuner sur le [balcon].|Vi äter frukost på balkongen.|Italienska <b>balcone</b>, germanskt <b>balko</b> 'bjälke'. Jämför svenska balk.
+la cave|källare|f|On a mis les vieilles chaises à la [cave].|Vi har ställt de gamla stolarna i källaren.|Latin <b>cavus</b> 'ihålig'. Jämför engelska <b>cave</b> 'grotta'.
+le grenier|vind, vindsförråd|m|Il y a des vieux jouets au [grenier].|Det finns gamla leksaker på vinden.|Latin <b>granarium</b> 'sädesmagasin', av <b>granum</b> 'korn'.
+le toit|tak (yttertak)|m|Le chat dort sur le [toit] de la maison.|Katten sover på husets tak.|Latin <b>tectum</b> 'tak', av <b>tegere</b> 'täcka'. Jämför svenska täcka.
+le mur|vägg; mur|m|J'ai mis des photos sur le [mur] de ma chambre.|Jag har satt upp foton på väggen i mitt rum.|Latin <b>murus</b> 'mur'. Svenska mur kommer härifrån.
+le plafond|innertak|m|Il y a une grande lampe au [plafond].|Det hänger en stor lampa i taket.|<b>plat</b> 'platt' + <b>fond</b> 'botten'.
+le meuble|möbel|m|Nous avons acheté de nouveaux [meubles] pour le salon.|Vi har köpt nya möbler till vardagsrummet.|Latin <b>mobilis</b> 'rörlig'. Möbler kan flyttas. Svenska möbel kommer härifrån.
+l'armoire|klädskåp, garderob|f|Range tes vêtements dans l'[armoire] !|Lägg in dina kläder i garderoben!|Latin <b>armarium</b> 'skåp', ursprungligen för vapen (<b>arma</b>).
+le placard|inbyggt skåp|m|Les verres sont dans le [placard] au-dessus de l'évier.|Glasen står i skåpet ovanför diskhon.|Av <b>plaquer</b> 'sätta fast'. Skåpet sitter fast i väggen. Jämför plakat.
+l'étagère|hylla|f|Mes livres sont sur l'[étagère] au-dessus du lit.|Mina böcker står på hyllan ovanför sängen.|Av <b>étage</b> 'våning': hyllan har flera 'våningar'.
+le canapé|soffa|m|Le chien dort toujours sur le [canapé].|Hunden sover alltid i soffan.|Grekiska <b>konopeion</b> 'säng med myggnät'. Jämför engelska <b>canopy</b>.
+le fauteuil|fåtölj|m|Mon grand-père lit le journal dans son [fauteuil].|Min morfar läser tidningen i sin fåtölj.|Germanska <b>faldistôl</b> 'fällstol'. Svenska fåtölj kommer härifrån.
+la lampe|lampa|f|Allume la [lampe], il fait sombre.|Tänd lampan, det är mörkt.|Grekiska <b>lampas</b> 'fackla'.
+le miroir|spegel|m|Il se regarde dans le [miroir] avant de sortir.|Han tittar sig i spegeln innan han går ut.|Latin <b>mirari</b> 'beundra, förundras'. Jämför engelska <b>mirror</b>.
+la douche|dusch|f|Je prends une [douche] tous les matins.|Jag duschar varje morgon.|Italienska <b>doccia</b> 'rör', latin <b>ductio</b> 'ledning'.
+la baignoire|badkar|f|Mon petit frère joue dans la [baignoire].|Min lillebror leker i badkaret.|Av <b>se baigner</b> 'bada', latin <b>balneum</b> 'bad'.
+l'évier|diskho|m|Mets les assiettes sales dans l'[évier].|Ställ de smutsiga tallrikarna i diskhon.|Latin <b>aquarium</b> 'vattenställe', av <b>aqua</b> 'vatten'.
+le frigo|kylskåp|m|Il n'y a plus de lait dans le [frigo].|Det finns ingen mjölk kvar i kylen.|Kortform av <b>réfrigérateur</b>, latin <b>frigus</b> 'kyla'.
+le four|ugn|m|Le gâteau est dans le [four] depuis vingt minutes.|Kakan har varit i ugnen i tjugo minuter.|Latin <b>furnus</b> 'ugn'. Jämför engelska <b>furnace</b>.
+le lave-vaisselle|diskmaskin|m|Tu peux vider le [lave-vaisselle], s'il te plaît ?|Kan du tömma diskmaskinen, snälla?|<b>laver</b> 'tvätta' + <b>vaisselle</b> 'disk, porslin'.|<b>lave</b> tvättar · <b>vaisselle</b> disk → "tvättar disk"
+la machine à laver|tvättmaskin|f|J'ai mis mon jean dans la [machine à laver].|Jag har lagt mina jeans i tvättmaskinen.|<b>laver</b> 'tvätta', latin <b>lavare</b>.|<b>machine</b> maskin · <b>à laver</b> för att tvätta → "maskin för att tvätta"
+l'aspirateur|dammsugare|m|L'[aspirateur] est dans le placard du couloir.|Dammsugaren står i skåpet i hallen.|Latin <b>aspirare</b> 'andas in'. Jämför aspirera.
+faire le ménage|städa||Le samedi, toute la famille [fait le ménage].|På lördagar städar hela familjen.|<b>ménage</b> 'hushåll', latin <b>mansio</b> 'bostad'.|<b>faire</b> göra · <b>le ménage</b> hushållet → "göra hushållet"
+ranger|städa undan, plocka i ordning||Tu dois [ranger] ta chambre avant de sortir.|Du måste städa ditt rum innan du går ut.|Av <b>rang</b> 'rad, led'. Man ställer saker i rader. Jämför engelska <b>arrange</b>.
+nettoyer|göra ren, rengöra||J'ai [nettoyé] la salle de bains ce matin.|Jag har gjort rent badrummet i morse.|Av <b>net</b> 'ren', latin <b>nitidus</b> 'glänsande'. Jämför netto.
+passer l'aspirateur|dammsuga||C'est mon tour de [passer l'aspirateur] aujourd'hui.|Det är min tur att dammsuga i dag.|<b>passer</b> 'föra, dra' (dammsugaren över golvet).|<b>passer</b> föra · <b>l'aspirateur</b> dammsugaren → "föra dammsugaren"
+faire la vaisselle|diska||Après le dîner, mon frère et moi [faisons la vaisselle].|Efter middagen diskar min bror och jag.|<b>vaisselle</b> 'porslin, disk', latin <b>vascella</b> 'små kärl'. Jämför vas.|<b>faire</b> göra · <b>la vaisselle</b> disken → "göra disken"
+faire la lessive|tvätta (kläder)||Mon père [fait la lessive] le dimanche.|Min pappa tvättar på söndagarna.|<b>lessive</b> 'tvätt', latin <b>lixivia</b> 'lut'.|<b>faire</b> göra · <b>la lessive</b> tvätten → "göra tvätten"
+faire son lit|bädda sin säng||Je [fais mon lit] tous les matins.|Jag bäddar min säng varje morgon.|<b>lit</b> 'säng', latin <b>lectus</b>.|<b>faire</b> göra · <b>son lit</b> sin säng → "göra sin säng"
+la poubelle|soptunna|f|La [poubelle] est pleine, il faut la vider.|Soptunnan är full, den måste tömmas.|Efter <b>Eugène Poubelle</b>, prefekt i Paris som 1884 införde soptunnor.
+sortir la poubelle|gå ut med soporna||C'est à toi de [sortir la poubelle] ce soir.|Det är din tur att gå ut med soporna i kväll.|<b>sortir</b> 'gå ut; ta ut'. Particip: sorti.|<b>sortir</b> ta ut · <b>la poubelle</b> soptunnan → "ta ut soptunnan"
+mettre la table|duka||Tu peux [mettre la table] ? On mange dans cinq minutes.|Kan du duka? Vi äter om fem minuter.|<b>mettre</b> 'sätta, ställa', latin <b>mittere</b> 'skicka'. Particip: mis.|<b>mettre</b> ställa · <b>la table</b> bordet → "ställa i ordning bordet"
+débarrasser la table|duka av||Après le repas, j'ai [débarrassé la table].|Efter maten dukade jag av.|<b>débarrasser</b> 'göra sig av med', av <b>barre</b> 'spärr', alltså 'ta bort hindren'.|<b>débarrasser</b> röja · <b>la table</b> bordet → "röja bordet"
+arroser les plantes|vattna blommorna||Pendant les vacances, la voisine va [arroser les plantes].|Under semestern ska grannen vattna blommorna.|<b>arroser</b> 'vattna', latin <b>rorare</b> 'dugga', av <b>ros</b> 'dagg'.|<b>arroser</b> vattna · <b>les plantes</b> växterna → "vattna växterna"
+la plante|växt, krukväxt|f|Il y a beaucoup de [plantes] vertes dans ma chambre.|Det finns många gröna växter i mitt rum.|Latin <b>planta</b> 'planta, skott'.
+le voisin, la voisine|granne|m|Notre [voisin] a un chien très gentil.|Vår granne har en väldigt snäll hund.|Latin <b>vicinus</b> 'granne', av <b>vicus</b> 'by'.
+déménager|flytta (byta bostad)||Nous avons [déménagé] à Stockholm l'année dernière.|Vi flyttade till Stockholm förra året.|<b>dé-</b> 'bort' + <b>ménage</b> 'hushåll': flytta bort hushållet.
+le chauffage|uppvärmning, element|m|Il fait froid, tu peux mettre le [chauffage] ?|Det är kallt, kan du sätta på värmen?|Av <b>chauffer</b> 'värma', latin <b>calefacere</b> 'göra varm'. Jämför chaufför (som eldade ångmaskiner).
+la lumière|ljus|f|N'oublie pas d'éteindre la [lumière] en sortant.|Glöm inte att släcka ljuset när du går.|Latin <b>luminaria</b>, av <b>lumen</b> 'ljus'.
+allumer|tända, sätta på||Tu peux [allumer] la lumière dans le couloir ?|Kan du tända ljuset i hallen?|Latin <b>ad</b> + <b>luminare</b> 'lysa upp'.
+éteindre|släcka, stänga av||J'ai [éteint] la télé avant de me coucher.|Jag stängde av tv:n innan jag gick och lade mig.|Latin <b>exstinguere</b> 'släcka'. Oregelbundet: j'éteins. Particip: éteint.
+propre|ren; egen||Ma chambre est enfin [propre] !|Mitt rum är äntligen rent!|Latin <b>proprius</b> 'egen'. Före substantivet: 'egen' (ma propre chambre).
+sale|smutsig||Mets tes vêtements [sales] dans la machine.|Lägg dina smutsiga kläder i maskinen.|Germanskt <b>salo</b> 'grumlig, mörk', släkt med svenska <b>sölig</b>.
+en désordre|stökig, i oordning||Ta chambre est toujours [en désordre] !|Ditt rum är alltid stökigt!|<b>dés-</b> 'o-' + <b>ordre</b> 'ordning', latin <b>ordo</b>.|<b>en</b> i · <b>désordre</b> oordning → "i oordning"
+rangé, -e|städad, i ordning||Pour une fois, le salon est bien [rangé].|För en gångs skull är vardagsrummet ordentligt städat.|Particip av <b>ranger</b> 'ställa i ordning'.
+confortable|bekväm||Ce canapé est très [confortable].|Den här soffan är väldigt bekväm.|Från engelska <b>comfortable</b>, ytterst latin <b>confortare</b> 'stärka'.
+clair, -e|ljus||Mon appartement est petit mais très [clair].|Min lägenhet är liten men väldigt ljus.|Latin <b>clarus</b> 'klar, ljus'. Jämför engelska <b>clear</b>.
+ancien, ancienne|gammal; före detta||Nous habitons dans une [ancienne] maison en pierre.|Vi bor i ett gammalt stenhus.|Latin <b>ante</b> 'före'. Jämför engelska <b>ancient</b>. Före substantivet oftast 'före detta'.
+l'oreiller|huvudkudde|m|Je dors mieux avec un gros [oreiller].|Jag sover bättre med en stor kudde.|Av <b>oreille</b> 'öra': man lägger örat på den.
+la couverture|filt, täcke|f|Il fait froid, prends une [couverture].|Det är kallt, ta en filt.|Av <b>couvrir</b> 'täcka', latin <b>cooperire</b>. Jämför engelska <b>cover</b>.
+le tiroir|byrålåda|m|Mes chaussettes sont dans le premier [tiroir].|Mina strumpor ligger i översta lådan.|Av <b>tirer</b> 'dra': lådan man drar ut.
+aider|hjälpa||J'[aide] souvent ma mère dans la cuisine.|Jag hjälper ofta min mamma i köket.|Latin <b>adiutare</b> 'hjälpa'. Jämför engelska <b>aid</b>.
+la tâche|syssla, uppgift|f|Chez nous, chacun a une [tâche] à faire le samedi.|Hemma hos oss har alla en syssla att göra på lördagar.|Latin <b>taxa</b> 'avgift, uppgift'. Jämför taxa. Obs: <b>la tache</b> utan accent betyder 'fläck'.
+#d3|Kap 3 · Le corps et la santé
+la tête|huvud|f|Il a mis un bonnet sur sa [tête].|Han har satt en mössa på huvudet.|Latin <b>testa</b> 'kruka, skal'. Latinets vanliga ord caput finns i <b>chef</b>.
+le visage|ansikte|m|Lave-toi le [visage] avec de l'eau froide.|Tvätta ansiktet med kallt vatten.|Av fornfranska <b>vis</b> 'ansikte', latin <b>visus</b> 'syn, utseende'.
+l'œil|öga|m|J'ai quelque chose dans l'[œil].|Jag har fått något i ögat.|Latin <b>oculus</b> 'öga'. Plural: <b>les yeux</b>. Jämför okulär.
+le nez|näsa|m|Mon petit frère a le [nez] qui coule.|Min lillebror är snorig.|Latin <b>nasus</b> 'näsa'. Jämför nasal.
+la bouche|mun|f|Ouvrez la [bouche], s'il vous plaît.|Öppna munnen, tack.|Latin <b>bucca</b> 'kind'. Jämför buckla.
+la dent|tand|f|J'ai perdu une [dent] en mangeant une pomme.|Jag tappade en tand när jag åt ett äpple.|Latin <b>dens, dentis</b> 'tand'. Jämför dental och engelska <b>dentist</b>.
+le cou|hals (utsida)|m|Il porte une écharpe autour du [cou].|Han har en halsduk runt halsen.|Latin <b>collum</b> 'hals'. Jämför engelska <b>collar</b>.
+la gorge|hals, strupe|f|J'ai mal à la [gorge] depuis hier.|Jag har haft ont i halsen sedan i går.|Latin <b>gurges</b> 'strömvirvel, avgrund'. Jämför svenska gurgla.
+l'épaule|axel, skuldra|f|Il s'est fait mal à l'[épaule] au foot.|Han gjorde sig illa i axeln på fotbollen.|Latin <b>spatula</b> 'skulderblad', av <b>spatha</b> 'spade'. Jämför spatel.
+le bras|arm|m|Elle s'est cassé le [bras] au ski.|Hon bröt armen när hon åkte skidor.|Latin <b>bracchium</b> 'arm'. Jämför engelska <b>bracelet</b>.
+la main|hand|f|Lave-toi les [mains] avant de manger.|Tvätta händerna innan du äter.|Latin <b>manus</b> 'hand'. Jämför manuell.
+le doigt|finger|m|Je me suis coupé le [doigt] en préparant le repas.|Jag skar mig i fingret när jag lagade maten.|Latin <b>digitus</b> 'finger'. Jämför digital (räkna på fingrarna).
+le dos|rygg|m|Après le déménagement, j'ai mal au [dos].|Efter flytten har jag ont i ryggen.|Latin <b>dorsum</b> 'rygg'. Jämför dossier (samlade på ryggen).
+la jambe|ben (kroppsdel)|f|Il a une [jambe] dans le plâtre.|Han har ena benet i gips.|Latin <b>gamba</b> 'hov, ben'. Jämför gambit.
+le genou|knä|m|Je suis tombé et je me suis fait mal au [genou].|Jag ramlade och gjorde illa knät.|Latin <b>genu</b> 'knä', släkt med svenska <b>knä</b>. Plural: genoux.
+le pied|fot|m|On va à la plage à [pied].|Vi går till stranden till fots.|Latin <b>pes, pedis</b> 'fot'. Jämför pedal.
+la cheville|fotled, vrist|f|J'ai mal à la [cheville] après la course.|Jag har ont i fotleden efter löprundan.|Latin <b>clavicula</b> 'liten nyckel, pinne'.
+se tordre la cheville|vricka foten||Il [s'est tordu la cheville] en jouant au basket.|Han vrickade foten när han spelade basket.|<b>tordre</b> 'vrida', latin <b>torquere</b>. Particip: tordu.|<b>se tordre</b> vrida sig · <b>la cheville</b> fotleden → "vrida sig fotleden"
+la peau|hud|f|Mets de la crème, ta [peau] est rouge.|Smörj in dig, din hud är röd.|Latin <b>pellis</b> 'skinn, päls'. Jämför svenska päls.
+l'os|ben (skelett)|m|Le médecin dit que l'[os] n'est pas cassé.|Läkaren säger att benet inte är brutet.|Latin <b>os, ossis</b> 'ben'. Uttalas [ås], plural [å].
+le muscle|muskel|m|J'ai mal aux [muscles] après le match.|Jag har ont i musklerna efter matchen.|Latin <b>musculus</b> 'liten mus'. En spänd muskel liknar en mus under huden.
+la joue|kind|f|Il a les [joues] rouges à cause du froid.|Han har röda kinder på grund av kylan.|Förromanskt ord, kanske besläktat med latin <b>gabata</b> 'skål'. Ursprunget är osäkert.
+l'estomac|mage|m|J'ai mangé trop vite, j'ai mal à l'[estomac].|Jag åt för fort, jag har ont i magen.|Grekiska <b>stomachos</b> 'magmun', av <b>stoma</b> 'mun'.
+avoir mal à|ha ont i||J'[ai mal aux] dents depuis deux jours.|Jag har haft ont i tänderna i två dagar.|<b>mal</b> 'ont, illa', latin <b>malum</b> 'något ont'. à + le = au, à + les = aux.|<b>avoir</b> ha · <b>mal</b> ont · <b>à</b> i → "ha ont i"
+le mal de tête|huvudvärk|m|J'ai un gros [mal de tête] ce matin.|Jag har jätteont i huvudet i morse.|<b>mal</b> 'ont', latin <b>malum</b>.|<b>mal</b> ont · <b>de tête</b> i huvudet → "ont i huvudet"
+malade|sjuk||Je ne vais pas à l'école, je suis [malade].|Jag går inte till skolan, jag är sjuk.|Latin <b>male habitus</b> 'i dåligt skick'.
+la maladie|sjukdom|f|La grippe est une [maladie] fréquente en hiver.|Influensa är en vanlig sjukdom på vintern.|Av <b>malade</b> 'sjuk'.
+la fièvre|feber|f|Il a trente-neuf de [fièvre].|Han har trettionio graders feber.|Latin <b>febris</b> 'feber'. Svenska feber kommer härifrån.
+le rhume|förkylning|m|J'ai attrapé un [rhume] à cause de la pluie.|Jag har blivit förkyld på grund av regnet.|Grekiska <b>rheuma</b> 'flöde' (näsan rinner). Jämför reumatism.
+enrhumé, -e|förkyld||Elle est [enrhumée] et elle tousse beaucoup.|Hon är förkyld och hostar mycket.|Av <b>rhume</b> 'förkylning'.
+la grippe|influensa|f|Toute la classe a eu la [grippe] en février.|Hela klassen hade influensa i februari.|Av <b>gripper</b> 'gripa tag', germanskt ord. Sjukdomen 'griper' en. Jämför svenska gripa.
+la toux|hosta|f|Ce sirop est bon contre la [toux].|Den här hostmedicinen är bra mot hosta.|Latin <b>tussis</b> 'hosta'.
+tousser|hosta||Tu [tousses] beaucoup, tu dois aller chez le médecin.|Du hostar mycket, du måste gå till läkaren.|Latin <b>tussire</b> 'hosta'.
+éternuer|nysa||Le chat me fait [éternuer].|Katten får mig att nysa.|Latin <b>sternutare</b> 'nysa'. Man säger <b>À tes souhaits !</b> 'Prosit!'
+fatigué, -e|trött||Je suis très [fatigué] après le match.|Jag är väldigt trött efter matchen.|Latin <b>fatigare</b> 'trötta ut'. Jämför engelska <b>fatigue</b>.
+guéri, -e|frisk (igen)||Après une semaine, je suis enfin [guéri].|Efter en vecka är jag äntligen frisk.|Particip av <b>guérir</b> 'bota', germanskt <b>warjan</b> 'skydda', släkt med svenska <b>värja</b>.
+le docteur|doktor|m|Le [docteur] m'a dit de rester au lit.|Doktorn sa åt mig att stanna i sängen.|Latin <b>doctor</b> 'lärare', av <b>docere</b> 'undervisa'. Används ofta i tal i stället för médecin.
+l'infirmière, l'infirmier|sjuksköterska|f|L'[infirmière] m'a fait une piqûre.|Sjuksköterskan gav mig en spruta.|Latin <b>infirmus</b> 'svag, sjuk'. Förr: den som tog hand om de svaga.
+le dentiste|tandläkare|m|Je vais chez le [dentiste] une fois par an.|Jag går till tandläkaren en gång om året.|Av <b>dent</b> 'tand', latin <b>dens</b>.
+le pharmacien, la pharmacienne|apotekare|m|Le [pharmacien] m'a donné des conseils.|Apotekaren har gett mig råd.|Av <b>pharmacie</b>.
+le médicament|läkemedel, medicin|m|Prends ce [médicament] trois fois par jour.|Ta den här medicinen tre gånger om dagen.|Latin <b>medicamentum</b> 'botemedel', av <b>mederi</b> 'bota'.
+le comprimé|tablett|m|Prenez un [comprimé] le matin et un le soir.|Ta en tablett på morgonen och en på kvällen.|Latin <b>comprimere</b> 'trycka ihop'. Jämför komprimera.
+le sirop|hostmedicin; saft|m|Ce [sirop] a un goût horrible !|Den här hostmedicinen smakar hemskt!|Arabiska <b>sharab</b> 'dryck'. Jämför sirap.
+le pansement|plåster, förband|m|Tu as un [pansement] ? Je me suis coupé.|Har du ett plåster? Jag har skurit mig.|Av <b>panser</b> 'lägga om ett sår', ursprungligen 'tänka på', latin <b>pensare</b>.
+les urgences|akuten|fpl|On l'a amené aux [urgences] en ambulance.|De tog honom till akuten med ambulans.|Latin <b>urgere</b> 'trycka på, brådska'. Jämför engelska <b>urgent</b>.
+l'ambulance|ambulans|f|L'[ambulance] est arrivée très vite.|Ambulansen kom väldigt snabbt.|Latin <b>ambulare</b> 'gå, vandra'. Från början ett 'rörligt' fältsjukhus.
+prendre rendez-vous|boka tid||J'ai [pris rendez-vous] chez le dentiste pour lundi.|Jag har bokat tid hos tandläkaren på måndag.|<b>rendez-vous</b> 'infinn er'. Particip: pris.|<b>prendre</b> ta · <b>rendez-vous</b> möte → "ta ett möte"
+blessé, -e|skadad||Le joueur est [blessé] au genou.|Spelaren är skadad i knät.|Av <b>blesser</b> 'skada', germanskt ursprung.
+se blesser|skada sig||Il s'est [blessé] pendant l'entraînement.|Han skadade sig under träningen.|Germanskt <b>blettjan</b> 'krossa'. Passé composé med être: je me suis blessé.
+se casser le bras|bryta armen||Elle [s'est cassé le bras] en tombant de vélo.|Hon bröt armen när hon ramlade av cykeln.|<b>casser</b> 'krossa', latin <b>quassare</b> 'skaka'. Jämför kassera.|<b>se casser</b> bryta sig · <b>le bras</b> armen → "bryta sig armen"
+se faire mal|göra sig illa||Tu [t'es fait mal] ? Tu veux un pansement ?|Har du gjort dig illa? Vill du ha ett plåster?|<b>mal</b> 'ont', latin <b>malum</b>.|<b>se faire</b> göra sig · <b>mal</b> ont → "göra sig ont"
+le plâtre|gips|m|Il a le bras dans le [plâtre] pendant six semaines.|Han har armen i gips i sex veckor.|Latin <b>emplastrum</b> 'plåster', grekiska <b>emplastron</b>. Jämför plåster.
+l'allergie|allergi|f|J'ai une [allergie] aux chats.|Jag är allergisk mot katter.|Grekiska <b>allos</b> 'annan' + <b>ergon</b> 'verkan'.
+allergique|allergisk||Ma sœur est [allergique] aux noisettes.|Min syster är allergisk mot hasselnötter.|Av <b>allergie</b>.
+en forme|i form, pigg||Après les vacances, je suis en pleine [forme].|Efter semestern är jag i toppform.|Latin <b>forma</b> 'form, gestalt'.|<b>en</b> i · <b>forme</b> form → "i form"
+en bonne santé|frisk, vid god hälsa||Mon grand-père a quatre-vingt-dix ans et il est [en bonne santé].|Min morfar är nittio år och vid god hälsa.|<b>santé</b> 'hälsa', latin <b>sanitas</b>. Jämför sanitär.|<b>en</b> vid · <b>bonne</b> god · <b>santé</b> hälsa → "vid god hälsa"
+se détendre|koppla av||Le soir, j'écoute de la musique pour [me détendre].|På kvällen lyssnar jag på musik för att koppla av.|<b>dé-</b> + <b>tendre</b> 'spänna': 'släppa spänningen'. Presens: je me détends.
+stressé, -e|stressad||Je suis [stressé] avant les examens.|Jag är stressad inför proven.|Från engelska <b>stress</b>, ytterst latin <b>strictus</b> 'hårt åtdragen'.
+se coucher|lägga sig||Je [me couche] tôt quand je suis malade.|Jag lägger mig tidigt när jag är sjuk.|Latin <b>collocare</b> 'lägga ner'.
+se réveiller|vakna||Ce matin, je [me suis réveillé] avec de la fièvre.|I morse vaknade jag med feber.|<b>re-</b> + <b>éveiller</b> 'väcka', latin <b>vigilare</b> 'vaka'.
+se brosser les dents|borsta tänderna||Il faut [se brosser les dents] deux fois par jour.|Man ska borsta tänderna två gånger om dagen.|<b>brosse</b> 'borste', germanskt ursprung, släkt med svenska borst.|<b>se brosser</b> borsta sig · <b>les dents</b> tänderna → "borsta sig tänderna"
+respirer|andas||Le médecin m'a demandé de [respirer] profondément.|Läkaren bad mig att andas djupt.|Latin <b>respirare</b> 'andas ut och in', av <b>spirare</b> 'andas'. Jämför respirator.
+vomir|kräkas||Il a mangé trop de bonbons et il a [vomi].|Han åt för mycket godis och kräktes.|Latin <b>vomere</b> 'spy'.
+examiner|undersöka||Le docteur m'a [examiné] et il m'a donné un médicament.|Doktorn undersökte mig och gav mig en medicin.|Latin <b>examinare</b> 'väga, pröva'. Jämför examen.
+le vaccin|vaccin|m|J'ai eu un [vaccin] contre la grippe.|Jag har fått en vaccination mot influensa.|Latin <b>vacca</b> 'ko'. De första vaccinen gjordes av kokoppor.
+la piqûre|spruta, stick; bett|f|J'ai peur des [piqûres].|Jag är rädd för sprutor.|Av <b>piquer</b> 'sticka'. Används också om myggbett.
+dormir|sova||Quand on est malade, il faut [dormir] beaucoup.|När man är sjuk måste man sova mycket.|Latin <b>dormire</b> 'sova'. Jämför dormitory. Presens: je dors, nous dormons.
+#d4|Kap 4 · Le temps et les saisons
+la météo|väderprognos, vädret|f|Qu'est-ce que la [météo] dit pour demain ?|Vad säger väderprognosen för i morgon?|Kortform av <b>météorologie</b>, grekiska <b>meteoros</b> 'uppe i luften'.
+quel temps fait-il ?|hur är vädret?||[Quel temps fait-il] chez toi à Stockholm ?|Hur är vädret hos dig i Stockholm?|<b>temps</b> betyder både 'tid' och 'väder', latin <b>tempus</b>.|<b>quel</b> vilket · <b>temps</b> väder · <b>fait-il</b> gör det → "vilket väder gör det?"
+il fait doux|det är milt||Au printemps, [il fait doux] à Paris.|På våren är det milt i Paris.|<b>doux</b> 'mild, söt', latin <b>dulcis</b> 'söt'.|<b>il</b> det · <b>fait</b> gör · <b>doux</b> milt → "det gör milt"
+il y a du vent|det blåser||[Il y a du vent] aujourd'hui, c'est parfait pour la voile.|Det blåser i dag, det är perfekt för segling.|<b>vent</b> 'vind', latin <b>ventus</b>. Jämför ventil.|<b>il y a</b> det finns · <b>du vent</b> vind → "det finns vind"
+il gèle|det fryser, det är minusgrader||Cette nuit, [il gèle], fais attention sur la route.|I natt fryser det, var försiktig på vägen.|Av <b>geler</b> 'frysa', latin <b>gelare</b>. Jämför gelé.
+la pluie|regn|f|La [pluie] n'a pas arrêté de tout le week-end.|Regnet har inte slutat under hela helgen.|Latin <b>pluvia</b> 'regn'.
+la neige|snö|f|Il y a beaucoup de [neige] dans les Alpes.|Det finns mycket snö i Alperna.|Av <b>neiger</b>, latin <b>nix, nivis</b>.
+le nuage|moln|m|Il y a de gros [nuages] noirs dans le ciel.|Det finns stora svarta moln på himlen.|Latin <b>nubes</b> 'moln'.
+nuageux, nuageuse|molnig||Ce matin, le ciel est [nuageux] et gris.|I morse är himlen molnig och grå.|Av <b>nuage</b> 'moln'.
+l'orage|åskväder|m|Il y a eu un gros [orage] cette nuit.|Det var ett kraftigt åskväder i natt.|Latin <b>aura</b> 'vindpust'.
+le tonnerre|åska (ljudet)|m|Le chien a peur du [tonnerre].|Hunden är rädd för åskan.|Latin <b>tonitrus</b> 'åska', släkt med svenska <b>dunder</b> och <b>Tor</b>.
+l'éclair|blixt|m|J'ai vu un [éclair] au-dessus de la mer.|Jag såg en blixt över havet.|Av <b>éclairer</b> 'lysa upp', latin <b>clarus</b> 'klar'. Också en bakelse!
+l'arc-en-ciel|regnbåge|m|Après la pluie, on a vu un [arc-en-ciel].|Efter regnet såg vi en regnbåge.|<b>arc</b> 'båge', latin <b>arcus</b>.|<b>arc</b> båge · <b>en</b> på · <b>ciel</b> himlen → "båge på himlen"
+le ciel|himmel|m|Le [ciel] est tout bleu aujourd'hui.|Himlen är alldeles blå i dag.|Latin <b>caelum</b> 'himmel'. Jämför engelska <b>ceiling</b>.
+la température|temperatur|f|La [température] va baisser ce week-end.|Temperaturen kommer att sjunka i helgen.|Latin <b>temperatura</b> 'blandning, avvägning'.
+pluvieux, pluvieuse|regnig||Le mois de novembre est souvent [pluvieux].|November är ofta regnig.|Latin <b>pluviosus</b>, av <b>pluvia</b> 'regn'.
+humide|fuktig||L'air est très [humide] après l'orage.|Luften är väldigt fuktig efter åskvädret.|Latin <b>humidus</b> 'fuktig'.
+sec, sèche|torr||Cet été a été très chaud et très [sec].|Den här sommaren har varit väldigt varm och väldigt torr.|Latin <b>siccus</b> 'torr'. Jämför sekt (torrt vin).
+doux, douce|mild; mjuk; söt||L'hiver a été [doux] cette année.|Vintern har varit mild i år.|Latin <b>dulcis</b> 'söt'. Jämför engelska <b>dulcet</b>.
+le verglas|halka, svartis|m|Attention, il y a du [verglas] sur la route !|Se upp, det är halt på vägen!|<b>verre</b> 'glas' + <b>glace</b> 'is'.
+l'averse|regnskur|f|On a eu une [averse] pendant le match.|Vi fick en regnskur under matchen.|Av <b>à verse</b> 'som hälls ut', av <b>verser</b> 'hälla'.
+la grêle|hagel|f|La [grêle] a abîmé les voitures.|Haglet har skadat bilarna.|Germanskt ursprung, kanske släkt med <b>grès</b> 'sandsten'.
+la saison|årstid|f|Quelle est ta [saison] préférée ?|Vilken är din favoritårstid?|Latin <b>satio</b> 'sådd': tiden för att så. Jämför säsong.
+au printemps|på våren||[Au printemps], on joue au foot dehors.|På våren spelar vi fotboll utomhus.|Obs: <b>au</b> printemps men <b>en</b> été, automne, hiver.|<b>au</b> på · <b>printemps</b> våren → "på våren"
+en hiver|på vintern||[En hiver], il fait nuit à trois heures.|På vintern blir det mörkt klockan tre.|Före ord som börjar på vokal används <b>en</b>.|<b>en</b> på · <b>hiver</b> vinter → "på vinter"
+la nature|natur|f|J'aime me promener dans la [nature].|Jag tycker om att promenera i naturen.|Latin <b>natura</b>, av <b>nasci</b> 'födas'.
+l'arbre|träd|m|Il y a un vieil [arbre] devant la maison.|Det står ett gammalt träd framför huset.|Latin <b>arbor</b> 'träd'. Jämför arboretum.
+la fleur|blomma|f|J'ai cueilli des [fleurs] pour ma mère.|Jag har plockat blommor till min mamma.|Latin <b>flos, floris</b> 'blomma'. Jämför engelska <b>flower</b>.
+l'herbe|gräs|f|Les enfants jouent dans l'[herbe].|Barnen leker i gräset.|Latin <b>herba</b> 'gräs, ört'. Jämför herbarium.
+le bois|skog (liten); trä|m|Nous avons fait une promenade dans le [bois].|Vi har tagit en promenad i skogen.|Germanskt <b>bosk</b> 'buske'. Jämför svenska buske.
+le lac|sjö|m|On se baigne dans le [lac] en été.|Vi badar i sjön på sommaren.|Latin <b>lacus</b> 'sjö'. Jämför engelska <b>lake</b>.
+l'île|ö|f|La Corse est une [île] dans la Méditerranée.|Korsika är en ö i Medelhavet.|Latin <b>insula</b> 'ö'. Jämför isolera.
+le champ|åker, fält|m|Il y a des vaches dans le [champ].|Det står kor på fältet.|Latin <b>campus</b> 'fält'. Jämför champinjon ('fältsvamp').
+l'océan|ocean|m|L'[océan] Atlantique est froid en Bretagne.|Atlanten är kall i Bretagne.|Grekiska <b>okeanos</b>, havet som omgav jorden.
+le rocher|klippa|m|Les enfants sautent du [rocher] dans l'eau.|Barnen hoppar från klippan ner i vattnet.|Av <b>roche</b> 'berg, sten', latin <b>rocca</b>. Jämför engelska <b>rock</b>.
+la vague|våg|f|Les [vagues] sont très hautes aujourd'hui.|Vågorna är väldigt höga i dag.|Fornnordiska <b>vágr</b> 'våg', släkt med svenska <b>våg</b>.
+l'insecte|insekt|m|Il y a beaucoup d'[insectes] près du lac.|Det finns många insekter nära sjön.|Latin <b>insectum</b> 'inskuren': kroppen är delad i avsnitt.
+l'étoile|stjärna|f|Ce soir, on voit beaucoup d'[étoiles].|I kväll ser man många stjärnor.|Latin <b>stella</b> 'stjärna'. Jämför engelska <b>star</b>.
+la lune|måne|f|La [lune] est pleine ce soir.|Det är fullmåne i kväll.|Latin <b>luna</b> 'måne'. Jämför lunatic.
+la pleine lune|fullmåne|f|Ce soir, c'est la [pleine lune].|I kväll är det fullmåne.|<b>plein</b> 'full', latin <b>plenus</b>.|<b>pleine</b> full · <b>lune</b> måne → "full måne"
+la terre|jord|f|La [Terre] tourne autour du soleil.|Jorden snurrar runt solen.|Latin <b>terra</b> 'jord, land'. Jämför terräng.
+la planète|planet|f|Il faut protéger notre [planète].|Vi måste skydda vår planet.|Grekiska <b>planetes</b> 'vandrare'. Planeterna 'vandrar' på himlen.
+protéger|skydda||Nous devons [protéger] la nature.|Vi måste skydda naturen.|Latin <b>protegere</b> 'täcka framför'. Jämför protektion.
+le parapluie|paraply|m|Prends ton [parapluie], il va pleuvoir.|Ta med ditt paraply, det kommer att regna.|<b>para-</b> 'skydda mot' + <b>pluie</b> 'regn'.
+l'imperméable|regnrock|m|Mets ton [imperméable], il pleut.|Ta på dig regnrocken, det regnar.|Latin <b>in-</b> 'icke' + <b>permeabilis</b> 'genomtränglig'.
+briller|lysa, skina||Le soleil [brille] sur la neige.|Solen skiner på snön.|Italienska <b>brillare</b> 'glänsa'. Jämför briljant.
+souffler|blåsa||Le vent [souffle] fort sur la côte.|Vinden blåser hårt vid kusten.|Latin <b>sufflare</b> 'blåsa'. Jämför sufflé ('uppblåst').
+fondre|smälta||La neige a [fondu] au soleil.|Snön har smält i solen.|Latin <b>fundere</b> 'hälla, gjuta'. Particip: fondu. Jämför fondue.
+le bonhomme de neige|snögubbe|m|Les enfants ont fait un [bonhomme de neige] dans le jardin.|Barnen har gjort en snögubbe i trädgården.|<b>bonhomme</b> 'gubbe', av <b>bon</b> 'god' + <b>homme</b> 'man'.|<b>bonhomme</b> gubbe · <b>de neige</b> av snö → "gubbe av snö"
+patiner|åka skridskor||On va [patiner] sur le lac gelé ?|Ska vi åka skridskor på den frusna sjön?|Av <b>patin</b> 'skridsko', av <b>patte</b> 'tass'.
+le coucher de soleil|solnedgång|m|Nous avons regardé le [coucher de soleil] sur la plage.|Vi har tittat på solnedgången på stranden.|<b>coucher</b> 'lägga sig'.|<b>coucher</b> läggande · <b>de soleil</b> av sol → "solens läggande"
+les prévisions|prognos|fpl|Les [prévisions] annoncent de la pluie pour demain.|Prognosen säger regn i morgon.|Latin <b>praevidere</b> 'förutse'.
+mouillé, -e|blöt||Mes chaussures sont toutes [mouillées].|Mina skor är helt blöta.|Latin <b>molliare</b> 'mjuka upp', av <b>mollis</b> 'mjuk'.
+trempé, -e|genomblöt||Je suis rentré de l'école [trempé].|Jag kom hem från skolan genomblöt.|Av <b>tremper</b> 'blöta, doppa', latin <b>temperare</b> 'blanda'.
+avoir chaud|vara varm (om person)||J'[ai chaud], je peux ouvrir la fenêtre ?|Jag är varm, får jag öppna fönstret?|Man 'har' värme på franska.|<b>avoir</b> ha · <b>chaud</b> varmt → "ha varmt"
+avoir froid|frysa||Tu [as froid] ? Prends mon pull.|Fryser du? Ta min tröja.|Man 'har' kyla på franska.|<b>avoir</b> ha · <b>froid</b> kallt → "ha kallt"
+
+geler|frysa, vara minusgrader||Cette nuit, il a [gelé] et le lac est blanc.|I natt var det minusgrader och sjön är vit.|Latin <b>gelare</b> 'frysa', av <b>gelu</b> 'köld'. Jämför gelé.
+se promener|promenera, gå en promenad||Le dimanche, nous [nous promenons] au bord de la mer.|På söndagarna promenerar vi längs havet.|Reflexivt verb: je me promène (è i jag-, du-, han- och de-formen). Av <b>mener</b> 'leda'.
+la promenade|promenad|f|On fait une [promenade] dans la forêt ?|Ska vi ta en promenad i skogen?|Av <b>promener</b> 'föra runt'. Samma ord har lånats in i svenskan som promenad.
+le lever du soleil|soluppgång|m|On s'est réveillés tôt pour voir le [lever du soleil].|Vi vaknade tidigt för att se soluppgången.|<b>lever</b> 'resa sig', latin <b>levare</b> 'lyfta'. Jämför levitation.|<b>le lever</b> uppstigandet · <b>du soleil</b> av solen → "solens uppstigande"
+le coucher du soleil|solnedgång|m|Le [coucher du soleil] sur la plage est magnifique.|Solnedgången på stranden är fantastisk.|<b>coucher</b> 'lägga (sig)', latin <b>collocare</b> 'placera'. Solen 'lägger sig'.|<b>le coucher</b> sänggåendet · <b>du soleil</b> av solen → "solens sänggående"
+le flocon|snöflinga|m|Regarde, il y a des [flocons] partout dans le ciel !|Titta, det är snöflingor överallt på himlen!|Av fornfranska <b>floc</b> 'tofs, tott', från latin <b>floccus</b> 'ulltott'.
+la goutte|droppe|f|Il ne tombe pas une [goutte] de pluie depuis un mois.|Det har inte fallit en droppe regn på en månad.|Latin <b>gutta</b> 'droppe'. Sjukdomen gikt heter också la goutte.
+sécher|torka (bli torr, göra torr)||Mon pull [sèche] au soleil sur le balcon.|Min tröja torkar i solen på balkongen.|Av <b>sec</b> 'torr', latin <b>siccus</b> 'torr'. Obs: je sèche, men nous séchons.
+la luge|pulka, kälke|f|Les enfants ont fait de la [luge] tout l'après-midi.|Barnen åkte pulka hela eftermiddagen.|Ett ord från dialekterna i Savojen och Schweiz, troligen keltiskt ursprung. <b>Faire de la luge</b> = åka pulka.
+cueillir|plocka (blommor, bär, svamp)||En automne, on va [cueillir] des pommes chez mon oncle.|På hösten ska vi plocka äpplen hos min morbror.|Latin <b>colligere</b> 'samla ihop'. Oregelbundet: je cueille (som ett -er-verb). Particip: cueilli.
+le champignon|svamp|m|Nous avons trouvé beaucoup de [champignons] dans le bois.|Vi hittade mycket svamp i skogen.|Av latin <b>campania</b> 'slätt, fält': svampen som växer på fältet. Jämför champinjon.
+la feuille morte|vissnat löv|f|En octobre, le jardin est plein de [feuilles mortes].|I oktober är trädgården full av vissna löv.|<b>feuille</b> 'löv, blad' från latin <b>folium</b>. <b>mort</b> 'död'.|<b>la feuille</b> lövet · <b>morte</b> död → "det döda lövet"
+#d5|Kap 5 · Faire les courses
+faire les courses|handla (mat och varor)||Le samedi, je [fais les courses] avec mon père.|På lördagar handlar jag med min pappa.|<b>course</b> 'lopp, ärende', från latin <b>currere</b> 'springa'. Man springer ärenden.|<b>faire</b> göra · <b>les courses</b> ärendena → "göra ärendena"
+la boutique|(liten) butik|f|Cette petite [boutique] vend des bijoux faits à la main.|Den här lilla butiken säljer handgjorda smycken.|Från grekiska <b>apothēkē</b> 'förråd'. Samma ursprung som <b>apotek</b>.
+le boulanger, la boulangère|bagare|m|Le [boulanger] commence à travailler à quatre heures du matin.|Bagaren börjar jobba klockan fyra på morgonen.|Troligen av <b>boule</b> 'klot': den som bakar runda bröd.
+la boucherie|köttaffär, slakteri|f|Maman a acheté un poulet à la [boucherie].|Mamma köpte en kyckling i köttaffären.|Av <b>bouc</b> 'bock'. Slaktaren sålde från början getkött.
+le boucher, la bouchère|slaktare|m|Le [boucher] coupe la viande devant les clients.|Slaktaren skär köttet framför kunderna.|Av <b>bouc</b> 'bock', se boucherie.
+la charcuterie|charkuteri (affär och varor)|f|On a acheté du jambon à la [charcuterie].|Vi köpte skinka på charkuteriet.|Av <b>chair cuite</b> 'tillagat kött', latin <b>caro</b> 'kött'. Svenskan har lånat ordet.
+l'épicerie|speceriaffär, kvartersbutik|f|L'[épicerie] du coin est ouverte le dimanche.|Butiken på hörnet har öppet på söndagar.|Av <b>épice</b> 'krydda', latin <b>species</b> 'sort, vara'. Jämför svenska <b>speceri</b>.
+la pâtisserie|konditori; bakelse|f|Il y a de très beaux gâteaux dans cette [pâtisserie].|Det finns jättefina tårtor på det här konditoriet.|Av <b>pâte</b> 'deg', latin <b>pasta</b>. Jämför svenska <b>pastej</b>.
+la librairie|bokhandel|f|Elle a trouvé un bon roman à la [librairie].|Hon hittade en bra roman i bokhandeln.|Latin <b>liber</b> 'bok'. Falsk vän: bibliotek heter la bibliothèque.
+la poissonnerie|fiskaffär|f|On trouve du saumon frais à la [poissonnerie].|Man hittar färsk lax i fiskaffären.|Av <b>poisson</b> 'fisk', latin <b>piscis</b>. Jämför engelska <b>fish</b>.
+le marchand, la marchande|försäljare, handlare|m|Le [marchand] de fruits nous a donné une pomme.|Frukthandlaren gav oss ett äpple.|Av latin <b>mercari</b> 'handla', av <b>merx</b> 'vara'.
+la caisse|kassa|f|Il faut payer à la [caisse] près de la sortie.|Man ska betala i kassan vid utgången.|Latin <b>capsa</b> 'låda'. Jämför svenska <b>kassa</b> och engelska <b>case</b>.
+la monnaie|växel; valuta|f|Le vendeur m'a rendu la [monnaie].|Försäljaren gav mig växeln.|Latin <b>moneta</b>. I Rom präglades mynt vid gudinnan Juno Monetas tempel. Jämför engelska <b>money</b>.
+la carte bancaire|bankkort|f|Est-ce que je peux payer par [carte bancaire] ?|Kan jag betala med bankkort?|<b>banque</b> från italienska <b>banca</b> 'bänk', växlarens bänk. Kallas också la carte bleue.|<b>la carte</b> kortet · <b>bancaire</b> bank- → "bankkortet"
+en espèces|kontant||Au marché, beaucoup de gens paient [en espèces].|På marknaden betalar många kontant.|Latin <b>species</b> 'sort'. Pengar i form av riktiga mynt och sedlar.|<b>en</b> i · <b>espèces</b> sorter → "i sorter"
+le centime|cent (hundradels euro)|m|Ça fait trois euros et cinquante [centimes].|Det blir tre euro och femtio cent.|Latin <b>centum</b> 'hundra'. Jämför <b>centimeter</b>.
+le ticket de caisse|kvitto|m|Garde le [ticket de caisse] si tu veux échanger le pull.|Spara kvittot om du vill byta tröjan.|<b>ticket</b> från engelskan, som lånat franska <b>étiquette</b> 'lapp'.|<b>le ticket</b> lappen · <b>de caisse</b> från kassan → "kassalappen"
+économiser|spara (pengar)||Je vais [économiser] pour acheter un vélo.|Jag ska spara för att köpa en cykel.|Grekiska <b>oikonomia</b> 'hushållning'. Jämför <b>ekonomi</b>.
+en promotion|på extrapris||Les yaourts sont [en promotion] cette semaine.|Yoghurten är på extrapris den här veckan.|Latin <b>promovere</b> 'flytta fram'. Varan lyfts fram.|<b>en</b> i · <b>promotion</b> framflyttning → "i framflyttning"
+le rayon|avdelning, hylla (i affär)|m|Le lait est au [rayon] frais, au fond du magasin.|Mjölken finns på kylavdelningen längst in i affären.|Från <b>rayon de miel</b> 'vaxkaka': rader av små fack, som hyllor. Rayon 'stråle' är ett annat ord.
+le panier|korg|m|Prends un [panier] à l'entrée, s'il te plaît.|Ta en korg vid ingången, är du snäll.|Latin <b>panarium</b> 'brödkorg', av <b>panis</b> 'bröd'.
+le chariot|kundvagn|m|Le [chariot] est plein, on a trop acheté !|Kundvagnen är full, vi har köpt för mycket!|Av <b>char</b> 'vagn', latin <b>carrus</b>. Jämför engelska <b>car</b>.
+la liste de courses|inköpslista|f|J'ai oublié la [liste de courses] à la maison.|Jag glömde inköpslistan hemma.|<b>liste</b> från italienska <b>lista</b> 'remsa'.|<b>la liste</b> listan · <b>de courses</b> med ärenden → "ärendelistan"
+le kilo|kilo|m|Je voudrais un [kilo] de pommes, s'il vous plaît.|Jag skulle vilja ha ett kilo äpplen, tack.|Kort för <b>kilogramme</b>, grekiska <b>chilioi</b> 'tusen'. Efter mängdord bara de: un kilo de pommes.
+le gramme|gram|m|Donnez-moi deux cents [grammes] de fromage, s'il vous plaît.|Ge mig tvåhundra gram ost, tack.|Grekiska <b>gramma</b>, en liten vikt.
+le litre|liter|m|Il faut un [litre] de lait pour les crêpes.|Man behöver en liter mjölk till pannkakorna.|Från grekiska <b>litra</b>, ett gammalt viktmått.
+la bouteille|flaska|f|J'ai pris une [bouteille] d'eau pour le voyage.|Jag tog en flaska vatten till resan.|Latin <b>butticula</b> 'liten tunna'. Jämför engelska <b>bottle</b>.
+le paquet|paket|m|Il a acheté un [paquet] de biscuits.|Han köpte ett paket kex.|Från nederländska <b>pak</b> 'packe'. Jämför svenska <b>packe</b>.
+la tranche|skiva|f|Je voudrais quatre [tranches] de jambon.|Jag skulle vilja ha fyra skivor skinka.|Av <b>trancher</b> 'skära', ytterst latin <b>truncare</b> 'hugga av'.
+la douzaine|dussin|f|J'ai acheté une [douzaine] d'œufs.|Jag köpte ett dussin ägg.|Av <b>douze</b> 'tolv', latin <b>duodecim</b>. Jämför <b>dussin</b>.
+un peu de|lite||Tu veux [un peu de] sucre dans ton café ?|Vill du ha lite socker i kaffet?|<b>peu</b> 'lite' från latin <b>paucum</b>. Efter mängdord bara de: un peu de pain.|<b>un peu</b> en smula · <b>de</b> av → "en smula av"
+beaucoup de|mycket, många||Il y a [beaucoup de] monde au marché aujourd'hui.|Det är mycket folk på marknaden i dag.|<b>beau</b> 'fin' + <b>coup</b> 'slag'. Ett 'fint slag' blev 'mycket'.|<b>beau</b> fint · <b>coup</b> slag · <b>de</b> av → "ett fint slag av"
+assez de|tillräckligt (med)||On n'a pas [assez d']argent pour ça.|Vi har inte tillräckligt med pengar för det.|Latin <b>ad satis</b> 'till nog'. Jämför engelska <b>satisfied</b>.|<b>assez</b> nog · <b>de</b> av → "nog av"
+trop de|för mycket, för många||Tu as mis [trop de] sel dans la soupe.|Du har hällt i för mycket salt i soppan.|Från frankiska <b>throp</b> 'hop, hög'. Jämför svenska <b>torp</b>.|<b>trop</b> för mycket · <b>de</b> av → "för mycket av"
+la moitié|hälft|f|Mon frère a mangé la [moitié] du gâteau.|Min bror åt hälften av kakan.|Latin <b>medietas</b> 'mitt', av <b>medius</b>. Jämför <b>medium</b>.
+le pot|burk, kruka|m|Elle a acheté un [pot] de confiture.|Hon köpte en burk sylt.|Samma ord som svenska <b>potta</b> och engelska <b>pot</b>.
+la canette|burk (för dryck)|f|Une [canette] de soda coûte un euro cinquante.|En burk läsk kostar en och femtio.|Av <b>cane</b>, ett gammalt ord för kanna. Jämför svenska <b>kanna</b>.
+le sachet|liten påse|m|Je prends un [sachet] de bonbons pour le film.|Jag tar en påse godis till filmen.|Diminutiv av <b>sac</b> 'påse': 'liten påse'.
+peser|väga||Le vendeur a [pesé] les cerises.|Försäljaren vägde körsbären.|Latin <b>pensare</b> 'väga'. Jämför <b>pensée</b> 'tanke': att väga i huvudet. Accent i je pèse.
+échanger|byta||Je voudrais [échanger] ces chaussures, elles sont trop petites.|Jag skulle vilja byta de här skorna, de är för små.|<b>é-</b> 'ut' + <b>changer</b> 'byta'. Jämför engelska <b>exchange</b>.
+Vous désirez ?|Vad får det lov att vara?||Bonjour madame, [vous désirez] ?|Hej, vad får det lov att vara?|<b>désirer</b> 'önska', latin <b>desiderare</b> 'längta efter'.|<b>vous</b> ni · <b>désirez</b> önskar → "ni önskar?"
+Et avec ceci ?|Något mer?||Voilà vos pommes. [Et avec ceci] ?|Här är dina äpplen. Något mer?|<b>ceci</b> 'detta', av <b>ce</b> + <b>ici</b> 'här'.|<b>et</b> och · <b>avec</b> med · <b>ceci</b> detta → "och med detta?"
+avoir besoin de|behöva||J'[ai besoin d']un nouveau sac pour l'école.|Jag behöver en ny väska till skolan.|<b>besoin</b> 'behov', från ett germanskt ord för 'omsorg'.|<b>avoir</b> ha · <b>besoin</b> behov · <b>de</b> av → "ha behov av"
+les horaires d'ouverture|öppettider|mpl|Regarde les [horaires d'ouverture] sur la porte.|Titta på öppettiderna på dörren.|<b>horaire</b> av latin <b>hora</b> 'timme'. <b>ouverture</b> av ouvrir 'öppna'.|<b>les horaires</b> tiderna · <b>d'ouverture</b> för öppning → "tiderna för öppning"
+le produit|vara, produkt|m|Ce magasin vend seulement des [produits] locaux.|Den här affären säljer bara lokala varor.|Latin <b>productum</b> 'det framtagna', av <b>producere</b>.
+la marque|märke|f|Tu préfères quelle [marque] de baskets ?|Vilket märke på gympaskor föredrar du?|Från germanska <b>marka</b> 'tecken'. Jämför svenska <b>märke</b>.
+le distributeur|bankomat; automat|m|Je vais retirer de l'argent au [distributeur].|Jag ska ta ut pengar i bankomaten.|Latin <b>distribuere</b> 'dela ut'. Jämför <b>distribuera</b>.
+retirer de l'argent|ta ut pengar||Il a [retiré de l'argent] avant d'aller au marché.|Han tog ut pengar innan han gick till marknaden.|<b>retirer</b> 'dra tillbaka', av <b>tirer</b> 'dra'.|<b>retirer</b> dra ut · <b>de l'argent</b> pengar → "dra ut pengar"
+le porte-monnaie|portmonnä|m|J'ai perdu mon [porte-monnaie] au supermarché !|Jag har tappat min portmonnä i snabbköpet!|<b>porter</b> 'bära' + <b>monnaie</b> 'mynt'. Svenskan har lånat ordet.|<b>porte</b> bär · <b>monnaie</b> mynt → "myntbärare"
+l'argent de poche|veckopeng, fickpengar|m|Je reçois vingt euros d'[argent de poche] par semaine.|Jag får tjugo euro i veckopeng.|<b>poche</b> 'ficka'. Jämför engelska <b>pocket</b>.|<b>l'argent</b> pengarna · <b>de poche</b> för fickan → "fickpengarna"
+la livraison|leverans|f|La [livraison] est gratuite pour les commandes en ligne.|Leveransen är gratis för beställningar på nätet.|Av <b>livrer</b> 'leverera', latin <b>liberare</b> 'befria'. Man släpper iväg varan.
+rendre la monnaie|ge växel (tillbaka)||La boulangère m'a [rendu la monnaie] sur dix euros.|Bagerskan gav mig växel på tio euro.|<b>rendre</b> 'ge tillbaka', latin <b>reddere</b>. <b>La monnaie</b> 'växel, småpengar' kommer från templet för Juno <b>Moneta</b> i Rom, där man präglade mynt.|<b>rendre</b> ge tillbaka · <b>la monnaie</b> växeln → "ge tillbaka växeln"
+le billet de banque|sedel|m|J'ai payé avec un [billet de banque] de vingt euros.|Jag betalade med en tjugoeurosedel.|<b>billet</b> 'lapp, biljett' av fornfranska <b>bullette</b> 'liten sigill'. <b>Banque</b> från italienska <b>banca</b> 'bänk', växlarnas bänk.|<b>le billet</b> lappen · <b>de banque</b> från banken → "banklapp"
+le reçu|kvitto|m|Gardez le [reçu] si vous voulez échanger le pull.|Spara kvittot om du vill byta tröjan.|Particip av <b>recevoir</b> 'ta emot': det man har 'tagit emot'. Man säger också le ticket de caisse.
+le commerçant, la commerçante|handlare, butiksägare|m|Les [commerçants] du quartier ouvrent à neuf heures.|Handlarna i kvarteret öppnar klockan nio.|Av <b>commerce</b> 'handel', latin <b>commercium</b>, av <b>merx</b> 'vara'. Jämför kommers.
+livrer|leverera, köra ut||Le magasin va [livrer] le canapé samedi.|Affären ska leverera soffan på lördag.|Latin <b>liberare</b> 'befria, lämna ut'. Jämför leverera.
+commander en ligne|beställa på nätet||J'ai [commandé en ligne] des chaussures pour mon anniversaire.|Jag beställde skor på nätet till min födelsedag.|<b>commander</b> 'beställa' av latin <b>mandare</b> 'ge i uppdrag'. <b>En ligne</b> 'på linjen', alltså uppkopplad.|<b>commander</b> beställa · <b>en ligne</b> på linjen → "beställa på linjen"
+le colis|paket (med posten)|m|Ton [colis] est arrivé à la poste.|Ditt paket har kommit till posten.|Från italienska <b>colli</b> 'bördor', av latin <b>collum</b> 'hals, nacke': det man bär på axlarna.
+la vitrine|skyltfönster|f|J'ai vu une belle veste dans la [vitrine].|Jag såg en snygg jacka i skyltfönstret.|Av <b>vitre</b> 'fönsterruta', från latin <b>vitrum</b> 'glas'.
+faire du lèche-vitrines|fönstershoppa||Samedi, on a [fait du lèche-vitrines] sans rien acheter.|I lördags fönstershoppade vi utan att köpa något.|<b>lécher</b> 'slicka' + <b>vitrine</b> 'skyltfönster': man 'slickar' fönstren med blicken.|<b>faire</b> göra · <b>du lèche-vitrines</b> skyltfönsterslickande → "göra fönsterslickning"
+la carte de fidélité|kundkort, stamkort|f|Avec la [carte de fidélité], le dixième café est gratuit.|Med kundkortet är det tionde kaffet gratis.|<b>fidélité</b> 'trohet', latin <b>fidelitas</b>, av <b>fides</b> 'tro'. Jämför fidelitet.|<b>la carte</b> kortet · <b>de fidélité</b> för trohet → "trohetskortet"
+prêter|låna ut||Tu peux me [prêter] cinq euros ? Je te les rends demain.|Kan du låna mig fem euro? Jag ger tillbaka dem i morgon.|Latin <b>praestare</b> 'ställa till förfogande'. Obs: prêter = låna ut, emprunter = låna (av någon).
+la tirelire|spargris, sparbössa|f|J'ai mis mon argent de poche dans ma [tirelire].|Jag har lagt min veckopeng i spargrisen.|Troligen ljudhärmande, från ett gammalt refrängord <b>tire-lire</b>, efter ljudet av mynt som skramlar.
+le budget|budget|m|Pour les vacances, j'ai un [budget] de trois cents euros.|Till semestern har jag en budget på tre hundra euro.|Engelska <b>budget</b>, från fornfranska <b>bougette</b> 'liten läderpung'. Ordet har alltså gått fram och tillbaka mellan språken.
+#d6|Kap 6 · Fêtes et événements
+faire la fête|festa||Samedi soir, on a [fait la fête] chez Lucas.|I lördags kväll festade vi hemma hos Lucas.|Se <b>fête</b>.|<b>faire</b> göra · <b>la fête</b> festen → "göra festen"
+l'anniversaire|födelsedag; årsdag|m|Mon [anniversaire], c'est le 3 mars.|Min födelsedag är den 3 mars.|Latin <b>anniversarius</b> 'som återkommer varje år', av <b>annus</b> 'år'.
+Joyeux anniversaire !|Grattis på födelsedagen!||[Joyeux anniversaire], Emma ! Tu as quel âge ?|Grattis på födelsedagen, Emma! Hur gammal är du?|<b>joyeux</b> 'glad', av <b>joie</b> 'glädje', latin <b>gaudium</b>.|<b>joyeux</b> glad · <b>anniversaire</b> födelsedag → "glad födelsedag"
+souhaiter|önska||Je te [souhaite] une bonne journée !|Jag önskar dig en trevlig dag!|Från ett germanskt ord för 'lova', jämför tyska <b>heißen</b>. Konstruktion: souhaiter quelque chose à quelqu'un.
+fêter|fira||On va [fêter] la victoire au restaurant.|Vi ska fira segern på restaurang.|Av <b>fête</b> 'fest'. Jämför <b>festa</b>.
+célébrer|fira, högtidlighålla||Mes grands-parents ont [célébré] leurs cinquante ans de mariage.|Mina morföräldrar firade att de varit gifta i femtio år.|Latin <b>celebrare</b> 'fira, besöka i mängd'. Jämför <b>celebritet</b>.
+l'invitation|inbjudan|f|Merci pour l'[invitation], je viens avec plaisir !|Tack för inbjudan, jag kommer gärna!|Latin <b>invitare</b> 'bjuda in'. Jämför engelska <b>invite</b>.
+l'invité, l'invitée|gäst|m|Les [invités] sont arrivés à huit heures.|Gästerna kom klockan åtta.|Particip av <b>inviter</b> 'bjuda in': 'den inbjudna'.
+la soirée|kväll; fest|f|On a passé une super [soirée] chez Chloé.|Vi hade en superkväll hos Chloé.|Av <b>soir</b> 'kväll', latin <b>serus</b> 'sen'. Ändelsen -ée betonar längd: hela kvällen.
+la boum|(tonårs)fest|f|Tu viens à la [boum] de Léo samedi ?|Kommer du på Léos fest på lördag?|Ljudord, som när något smäller. Lite gammaldags; unga säger ofta une soirée.
+souffler les bougies|blåsa ut ljusen||Elle a [soufflé les bougies] d'un seul coup.|Hon blåste ut ljusen på en gång.|<b>souffler</b> av latin <b>sufflare</b> 'blåsa'. <b>bougie</b> efter staden <b>Bejaïa</b> (Bougie) i Algeriet, som sålde vax.|<b>souffler</b> blåsa · <b>les bougies</b> ljusen → "blåsa ljusen"
+le ballon|ballong; boll|m|Les enfants ont gonflé des [ballons] pour la fête.|Barnen blåste upp ballonger till festen.|Italienska <b>pallone</b> 'stor boll'. Jämför <b>ballong</b>.
+la décoration|dekoration, pynt|f|On a fait toutes les [décorations] nous-mêmes.|Vi gjorde allt pynt själva.|Latin <b>decorare</b> 'pryda', av <b>decus</b> 'prydnad'.
+décorer|pynta, dekorera||On va [décorer] la salle avec des guirlandes.|Vi ska pynta salen med girlanger.|Latin <b>decorare</b> 'pryda'. Jämför <b>dekorera</b>.
+Noël|jul|m|Qu'est-ce que tu fais pour [Noël] cette année ?|Vad gör du i jul i år?|Latin <b>natalis</b> 'födelse-', Jesu födelse. Utan artikel: à Noël 'i jul', Joyeux Noël ! 'God jul!'.
+le sapin de Noël|julgran|m|On a décoré le [sapin de Noël] hier soir.|Vi klädde julgranen i går kväll.|<b>sapin</b> 'gran', från latin <b>sappinus</b>.|<b>le sapin</b> granen · <b>de Noël</b> julens → "julens gran"
+le réveillon|jul- eller nyårsaftonsmiddag|m|Pour le [réveillon], toute la famille mange ensemble.|På julafton äter hela familjen tillsammans.|Av <b>réveiller</b> 'väcka': man håller sig vaken till midnatt.
+le jour de l'An|nyårsdagen|m|Le [jour de l'An], on se souhaite une bonne année.|På nyårsdagen önskar man varandra gott nytt år.|<b>an</b> 'år', latin <b>annus</b>.|<b>le jour</b> dagen · <b>de l'An</b> för året → "årets dag"
+Bonne année !|Gott nytt år!||À minuit, tout le monde crie : « [Bonne année] ! »|Vid midnatt ropar alla: ”Gott nytt år!”|<b>année</b> 'år (som tidsperiod)', av <b>an</b>.|<b>bonne</b> gott · <b>année</b> år → "gott år"
+Pâques|påsk|fpl|Cette année, on va chez ma grand-mère à [Pâques].|I år åker vi till min mormor i påsk.|Från hebreiska <b>pesach</b>. Jämför svenska <b>påsk</b>. Utan artikel: à Pâques, Joyeuses Pâques !
+l'œuf de Pâques|påskägg|m|Mon petit frère a trouvé dix [œufs de Pâques] dans le jardin.|Min lillebror hittade tio påskägg i trädgården.|<b>œuf</b> latin <b>ovum</b> 'ägg'. I Frankrike kommer påskäggen med kyrkklockorna, <b>les cloches</b>.|<b>l'œuf</b> ägget · <b>de Pâques</b> påskens → "påskens ägg"
+la Saint-Valentin|alla hjärtans dag|f|Pour la [Saint-Valentin], il lui a offert des fleurs.|På alla hjärtans dag gav han henne blommor.|Efter helgonet <b>Valentin</b>. <b>La</b> står för la fête de.
+le 14 juillet|14 juli, Frankrikes nationaldag|m|Le [14 juillet], on regarde le feu d'artifice.|Den 14 juli tittar man på fyrverkerierna.|Till minne av stormningen av Bastiljen <b>1789</b>. Kallas också la fête nationale.
+le défilé|parad; modevisning|m|Il y a un grand [défilé] sur les Champs-Élysées.|Det är en stor parad på Champs-Élysées.|Av <b>défiler</b> 'gå i rad', av <b>fil</b> 'tråd'.
+le bal|dans, bal|m|Le soir du 14 juillet, il y a un [bal] sur la place.|På kvällen den 14 juli är det dans på torget.|Latin <b>ballare</b> 'dansa'. Jämför <b>balett</b>.
+la fête de la musique|musikens dag (21 juni)|f|À la [fête de la musique], il y a des concerts partout.|På musikens dag är det konserter överallt.|Startade i Frankrike 1982 och firas den 21 juni.|<b>la fête</b> festen · <b>de la musique</b> för musiken → "musikens fest"
+le mariage|bröllop; äktenskap|m|Le [mariage] de ma cousine a duré toute la nuit.|Min kusins bröllop höll på hela natten.|Latin <b>maritus</b> 'make'. Jämför engelska <b>marriage</b>.
+se marier|gifta sig||Ils [se sont mariés] en juin.|De gifte sig i juni.|Latin <b>maritare</b> 'gifta bort'. Passé composé med être.
+la mariée|brud|f|La [mariée] porte une longue robe blanche.|Bruden har en lång vit klänning.|Particip av <b>marier</b>: 'den gifta'.
+la naissance|födelse|f|On a fêté la [naissance] de mon petit frère.|Vi firade att min lillebror föddes.|Latin <b>nasci</b> 'födas'. Jämför <b>nation</b>.
+l'enterrement|begravning|m|Toute la famille est venue à l'[enterrement] de mon grand-père.|Hela familjen kom till min morfars begravning.|<b>en</b> 'i' + <b>terre</b> 'jord', latin <b>terra</b>.
+la tradition|tradition|f|Chez nous, c'est une [tradition] de manger des crêpes en février.|Hemma hos oss är det tradition att äta pannkakor i februari.|Latin <b>traditio</b> 'överlämnande', av <b>tradere</b> 'lämna över'.
+traditionnel, traditionnelle|traditionell||On a mangé un plat [traditionnel] pour Noël.|Vi åt en traditionell rätt till jul.|Av <b>tradition</b>. Dubbelt n i femininum.
+la coutume|sed, sedvänja|f|Chaque région a ses propres [coutumes].|Varje region har sina egna seder.|Latin <b>consuetudo</b> 'vana'. Jämför engelska <b>custom</b>.
+le jour férié|helgdag, röd dag|m|Le 1er mai est un [jour férié] en France.|Första maj är en röd dag i Frankrike.|Latin <b>feriae</b> 'lediga dagar'. Jämför <b>ferie</b>.|<b>le jour</b> dagen · <b>férié</b> ledig → "ledig dag"
+le week-end dernier|förra helgen||Le [week-end dernier], je suis allé à un concert.|Förra helgen gick jag på en konsert.|<b>dernier</b> 'sista, förra', latin <b>de retro</b> 'bakifrån'.|<b>le week-end</b> helgen · <b>dernier</b> sista → "den sista helgen"
+samedi dernier|i lördags||[Samedi dernier], on est allés à la plage.|I lördags åkte vi till stranden.|Utan artikel: samedi dernier 'i lördags'. Med artikel: le samedi 'på lördagar'.|<b>samedi</b> lördag · <b>dernier</b> sista → "sista lördag"
+la semaine dernière|förra veckan||[La semaine dernière], j'ai eu trois contrôles.|Förra veckan hade jag tre prov.|<b>semaine</b> av latin <b>septimana</b> 'sjutal'.|<b>la semaine</b> veckan · <b>dernière</b> sista → "den sista veckan"
+rentrer|komma hem, gå hem||Je [suis rentrée] à minuit après la fête.|Jag kom hem vid midnatt efter festen.|<b>re-</b> 'igen' + <b>entrer</b> 'gå in'. Passé composé med être.
+revenir|komma tillbaka||Elle [est revenue] de vacances hier.|Hon kom tillbaka från semestern i går.|<b>re-</b> + <b>venir</b> 'komma', latin <b>venire</b>. Particip: revenu. Passé composé med être.
+s'amuser|ha roligt||On [s'est bien amusés] à la boum.|Vi hade jättekul på festen.|Av <b>muser</b> 'dröja, drömma'. Jämför svenska <b>amusera sig</b>.
+Félicitations !|Grattis!||Tu as eu ton bac ? [Félicitations] !|Har du tagit studenten? Grattis!|Latin <b>felix</b> 'lycklig'. Jämför namnet <b>Felix</b>.
+Bonne fête !|Grattis på namnsdagen!||C'est la Sainte-Anne aujourd'hui : [bonne fête], Anne !|I dag har Anne namnsdag: grattis, Anne!|I Frankrike firar man namnsdag, <b>la fête</b>, efter helgonkalendern.|<b>bonne</b> god · <b>fête</b> fest → "god fest"
+Santé !|Skål!||Tout le monde lève son verre : « [Santé] ! »|Alla höjer sina glas: ”Skål!”|Kort för <b>à ta santé</b> 'för din hälsa'. Latin <b>sanitas</b> 'hälsa'.
+trinquer|skåla||On a [trinqué] à la santé des mariés.|Vi skålade för brudparet.|Från tyska <b>trinken</b> 'dricka'.
+porter un toast|hålla ett skåltal, utbringa en skål||Le père de la mariée a [porté un toast].|Brudens pappa utbringade en skål.|<b>toast</b> från engelskan: förr lade man en bit rostat bröd i vinet.|<b>porter</b> bära · <b>un toast</b> en skål → "bära en skål"
+le repas de fête|festmåltid|m|Le [repas de fête] a duré quatre heures !|Festmåltiden höll på i fyra timmar!|<b>repas</b> 'måltid', ytterst latin <b>pastus</b> 'föda'.|<b>le repas</b> måltiden · <b>de fête</b> för fest → "måltiden för fest"
+le déguisement|maskeraddräkt, utklädnad|m|Quel [déguisement] tu vas mettre pour le carnaval ?|Vad ska du klä ut dig till på karnevalen?|Av <b>déguiser</b>, se se déguiser.
+se déguiser|klä ut sig||Il [s'est déguisé] en pirate.|Han klädde ut sig till pirat.|<b>dé-</b> 'bort' + <b>guise</b> 'sätt': att ändra sitt vanliga sätt att se ut.
+le masque|mask|m|Au carnaval, tout le monde porte un [masque].|På karnevalen har alla mask.|Från italienska <b>maschera</b>.
+la Chandeleur|kyndelsmäss (2 februari)|f|À la [Chandeleur], on mange des crêpes.|På kyndelsmäss äter man pannkakor.|Latin <b>candela</b> 'ljus'. Jämför <b>kandelaber</b>.
+la galette des rois|trettondagskaka|f|On a mangé la [galette des rois] en janvier.|Vi åt trettondagskakan i januari.|<b>galette</b> 'platt kaka', av <b>galet</b> 'platt sten'. <b>rois</b> 'kungar': de tre vise männen.|<b>la galette</b> kakan · <b>des rois</b> kungarnas → "kungarnas kaka"
+la fève|figur (i trettondagskakan); böna|f|Qui a trouvé la [fève] ? C'est lui, le roi !|Vem hittade figuren? Han är kung!|Latin <b>faba</b> 'böna'. Förr låg en riktig böna i kakan.
+le poisson d'avril|aprilskämt|m|Mon frère m'a fait un [poisson d'avril].|Min bror lurade mig april.|Barn tejpar en pappersfisk på ryggen på någon den 1 april.|<b>le poisson</b> fisken · <b>d'avril</b> aprils → "aprilfisken"
+la Toussaint|allhelgona (1 november)|f|À la [Toussaint], on a une semaine de vacances.|Vid allhelgona har vi en veckas lov.|<b>tous</b> 'alla' + <b>saints</b> 'helgon'.
+la surprise|överraskning|f|Chut ! C'est une [surprise] pour maman.|Tyst! Det är en överraskning till mamma.|Av <b>surprendre</b> 'överraska': <b>sur</b> 'över' + <b>prendre</b> 'ta'. Jämför engelska <b>surprise</b>.
+préparer|förbereda, göra i ordning||On a [préparé] la salle tout l'après-midi.|Vi gjorde i ordning salen hela eftermiddagen.|Latin <b>praeparare</b> 'ordna i förväg'. Jämför <b>preparera</b>.
+organiser|ordna, organisera||Qui va [organiser] la fête de fin d'année ?|Vem ska ordna avslutningsfesten?|Av <b>organe</b> 'verktyg', grekiska <b>organon</b>.
+l'événement|händelse, evenemang|m|Pour notre village, le festival est un grand [événement].|För vår by är festivalen en stor händelse.|Latin <b>evenire</b> 'hända'. Jämför <b>evenemang</b>.
+le spectacle|föreställning, show|m|Après le repas, les enfants ont fait un petit [spectacle].|Efter maten gjorde barnen en liten föreställning.|Latin <b>spectaculum</b>, av <b>spectare</b> 'titta'. Jämför <b>spektakel</b>.
+accepter|tacka ja till, acceptera||Elle a [accepté] l'invitation avec plaisir.|Hon tackade gärna ja till inbjudan.|Latin <b>acceptare</b> 'ta emot'.
+refuser|tacka nej till, vägra||Il a [refusé] l'invitation, il a un match samedi.|Han tackade nej till inbjudan, han har match på lördag.|Latin <b>refusare</b>, av <b>refundere</b> 'hälla tillbaka'.
+la carte d'anniversaire|födelsedagskort|f|Toute la classe a signé la [carte d'anniversaire].|Hela klassen skrev på födelsedagskortet.|<b>carte</b> av latin <b>charta</b> 'papper'.|<b>la carte</b> kortet · <b>d'anniversaire</b> för födelsedag → "kortet för födelsedag"
+emballer|slå in||J'ai [emballé] le cadeau dans du papier rouge.|Jag slog in presenten i rött papper.|<b>en</b> 'i' + <b>balle</b> 'packe'. Jämför <b>emballage</b> 'förpackning'.
+le papier cadeau|presentpapper|m|Zut, on n'a plus de [papier cadeau] !|Äsch, vi har inget presentpapper kvar!|<b>papier</b> av grekiska <b>papyros</b>.|<b>le papier</b> papperet · <b>cadeau</b> present → "papperet present"
+remercier|tacka||Elle a [remercié] ses amis pour les cadeaux.|Hon tackade sina vänner för presenterna.|Av <b>merci</b> 'tack', latin <b>merces</b> 'lön'. Konstruktion: remercier quelqu'un pour quelque chose.
+passer un bon moment|ha det trevligt||On a [passé un bon moment] ensemble.|Vi hade det trevligt tillsammans.|<b>moment</b> av latin <b>momentum</b> 'ögonblick'.|<b>passer</b> tillbringa · <b>un bon moment</b> en bra stund → "tillbringa en bra stund"
+#d7|Kap 7 · Amis et relations
+le meilleur ami, la meilleure amie|bästa vän|m|Léa est ma [meilleure amie] depuis six ans.|Léa har varit min bästa vän i sex år.|<b>meilleur</b> 'bättre, bäst', latin <b>melior</b>.|<b>le meilleur</b> den bästa · <b>ami</b> vän → "den bästa vännen"
+le pote|polare (vardagligt)|m|Samedi, je sors avec mes [potes].|På lördag går jag ut med mina polare.|Kort för <b>poteau</b> 'stolpe': en vän är någon man kan luta sig mot. Vardagligt.
+la bande|gäng|f|Toute la [bande] est venue à mon anniversaire.|Hela gänget kom på min födelsedag.|Från germanska <b>bandwa</b> 'fana, tecken'. Jämför svenska <b>band</b>.
+l'amitié|vänskap|f|Notre [amitié] est très importante pour moi.|Vår vänskap är väldigt viktig för mig.|Latin <b>amicitas</b>, av <b>amicus</b> 'vän'.
+amoureux, amoureuse|förälskad, kär||Je crois que Hugo est [amoureux] de Léa.|Jag tror att Hugo är kär i Léa.|Av <b>amour</b> 'kärlek', latin <b>amor</b>. Kär i någon: amoureux <b>de</b> quelqu'un.
+se disputer|bråka, gräla||Léa et Emma [se sont disputées] hier.|Léa och Emma bråkade i går.|Latin <b>disputare</b> 'diskutera'. Jämför <b>disputera</b>.
+se réconcilier|bli sams igen||Heureusement, elles [se sont réconciliées] le lendemain.|Som tur var blev de sams igen dagen efter.|Latin <b>reconciliare</b> 'föra samman igen'. Jämför engelska <b>reconcile</b>.
+se fâcher|bli arg||Mon père [s'est fâché] quand j'ai cassé son téléphone.|Min pappa blev arg när jag hade sönder hans telefon.|Latin <b>fastidiare</b> 'känna avsmak'. Se fâcher avec quelqu'un = bli osams med någon.
+la jalousie|svartsjuka, avundsjuka|f|La [jalousie] peut détruire une amitié.|Svartsjuka kan förstöra en vänskap.|Grekiska <b>zēlos</b> 'iver'. Jämför engelska <b>jealousy</b>.
+content, contente|glad, nöjd||Je suis [contente] de te voir !|Jag är glad att se dig!|Latin <b>contentus</b> 'nöjd'. Jämför engelska <b>content</b>.
+le bonheur|lycka|m|Pour moi, les amis sont une grande partie du [bonheur].|För mig är vännerna en stor del av lyckan.|<b>bon</b> 'god' + <b>heur</b> 'öde', latin <b>augurium</b> 'förebud'. Motsats: le malheur.
+malheureux, malheureuse|olycklig||Il est [malheureux] depuis le départ de son meilleur ami.|Han är olycklig sedan hans bästa vän flyttade.|<b>mal</b> 'dåligt' + <b>heur</b> 'öde'. Se bonheur.
+fidèle|trogen, lojal||Un vrai ami reste toujours [fidèle].|En riktig vän är alltid lojal.|Latin <b>fidelis</b>, av <b>fides</b> 'tro'. Jämför hundnamnet <b>Fido</b>.
+généreux, généreuse|generös||Ma copine est très [généreuse], elle partage tout.|Min kompis är väldigt generös, hon delar allt.|Latin <b>generosus</b> 'av god släkt'.
+égoïste|självisk||Il pense seulement à lui, il est [égoïste].|Han tänker bara på sig själv, han är självisk.|Latin <b>ego</b> 'jag'. Jämför <b>egoist</b>.
+la confiance|förtroende, tillit|f|J'ai totalement [confiance] en ma meilleure amie.|Jag litar helt på min bästa vän.|Latin <b>confidere</b> 'lita på', av <b>fides</b> 'tro'. Jämför <b>konfidentiell</b>.
+faire confiance à|lita på||Tu peux me [faire confiance], je ne vais rien dire.|Du kan lita på mig, jag tänker inte säga något.|Se <b>confiance</b>. Med pronomen: je te fais confiance.|<b>faire</b> göra · <b>confiance</b> förtroende · <b>à</b> åt → "göra förtroende åt"
+le secret|hemlighet|m|Je vais te dire un [secret].|Jag ska berätta en hemlighet för dig.|Latin <b>secretum</b> 'det avskilda'. Jämför <b>sekreterare</b>, den som vet hemligheterna.
+garder un secret|hålla en hemlighet||Camille ne sait pas [garder un secret].|Camille kan inte hålla tyst med hemligheter.|<b>garder</b> 'vakta, behålla', från germanska <b>wardon</b>. Jämför <b>vårda</b>.|<b>garder</b> behålla · <b>un secret</b> en hemlighet → "behålla en hemlighet"
+mentir|ljuga||Pourquoi tu m'as [menti] sur ton week-end ?|Varför ljög du för mig om din helg?|Latin <b>mentiri</b>. Böjs: je mens, j'ai menti.
+le mensonge|lögn|m|C'est un petit [mensonge], ce n'est pas grave.|Det är en liten lögn, det gör inget.|Av latin <b>mentiri</b> 'ljuga'.
+la vérité|sanning|f|Maintenant, je veux savoir toute la [vérité].|Nu vill jag veta hela sanningen.|Latin <b>veritas</b>, av <b>verus</b> 'sann'. Jämför <b>verifiera</b>.
+dire la vérité|säga sanningen||Il a enfin [dit la vérité] à ses parents.|Han sa till slut sanningen till sina föräldrar.|<b>dire</b> 'säga', latin <b>dicere</b>. Particip: dit.|<b>dire</b> säga · <b>la vérité</b> sanningen → "säga sanningen"
+la rencontre|möte|f|Notre première [rencontre], c'était au camp d'été.|Första gången vi träffades var på sommarlägret.|<b>re-</b> + <b>encontre</b> 'emot', latin <b>contra</b>.
+se retrouver|träffas (som man bestämt)||On [se retrouve] devant le cinéma à huit heures ?|Ses vi utanför bion klockan åtta?|<b>re-</b> 'igen' + <b>trouver</b> 'hitta': att hitta varandra igen.
+se faire des amis|få nya vänner||C'est facile de [se faire des amis] au club de foot.|Det är lätt att få vänner i fotbollsklubben.|Böjs: je me fais des amis, je me suis fait des amis.|<b>se faire</b> göra sig · <b>des amis</b> vänner → "göra sig vänner"
+avoir des points communs|ha saker gemensamt||Julie et moi, on [a des points communs] : on adore le sport.|Julie och jag har saker gemensamt: vi älskar idrott.|<b>commun</b> 'gemensam', latin <b>communis</b>. Jämför <b>kommun</b>.|<b>avoir</b> ha · <b>des points</b> punkter · <b>communs</b> gemensamma → "ha gemensamma punkter"
+l'aide|hjälp|f|Merci beaucoup pour ton [aide] hier soir !|Tack så mycket för din hjälp i går kväll!|Av <b>aider</b>. Obs: l'aide är feminint.
+soutenir|stödja, stötta||Mes amis m'ont [soutenu] quand j'ai eu des problèmes.|Mina vänner stöttade mig när jag hade problem.|Latin <b>sustinere</b> 'hålla uppe'. Böjs som tenir: particip soutenu.
+le conseil|råd|m|Tu peux me donner un [conseil] pour parler à Léa ?|Kan du ge mig ett råd om hur jag ska prata med Léa?|Latin <b>consilium</b> 'överläggning, råd'.
+conseiller|ge råd, råda||Je te [conseille] de lui parler franchement.|Jag råder dig att prata ärligt med henne.|Av <b>conseil</b> 'råd'. Konstruktion: conseiller à quelqu'un de + infinitiv.
+pardonner|förlåta||Elle m'a [pardonné], on est de nouveau amies.|Hon har förlåtit mig, vi är vänner igen.|<b>par</b> 'helt' + <b>donner</b> 'ge'. Jämför engelska <b>forgive</b>. Konstruktion: pardonner à quelqu'un.
+s'excuser|be om ursäkt||Tu dois [t'excuser], tu as été méchant avec lui.|Du måste be om ursäkt, du var elak mot honom.|Latin <b>excusare</b> 'fria från anklagelse', av <b>causa</b> 'sak'.
+manquer|missa; fattas||Il a [manqué] la fête de Léa à cause d'un match.|Han missade Léas fest på grund av en match.|Italienska <b>mancare</b> 'fattas', latin <b>mancus</b> 'stympad'. Om att sakna någon: se tu me manques.
+Tu me manques|jag saknar dig||Depuis ton départ, [tu me manques] beaucoup.|Sedan du åkte saknar jag dig mycket.|Omvänd konstruktion: den man saknar är subjekt. Jag saknar honom = il me manque.|<b>tu</b> du · <b>me</b> mig · <b>manques</b> fattas → "du fattas mig"
+se sentir seul|känna sig ensam||Elle [se sent seule] depuis la rentrée.|Hon känner sig ensam sedan skolstarten.|<b>sentir</b> 'känna', latin <b>sentire</b>. Femininum: seule.|<b>se sentir</b> känna sig · <b>seul</b> ensam → "känna sig ensam"
+la solitude|ensamhet|f|Beaucoup de jeunes souffrent de la [solitude].|Många unga lider av ensamhet.|Latin <b>solitudo</b>, av <b>solus</b> 'ensam'. Jämför <b>solo</b>.
+le sentiment|känsla|m|C'est difficile de parler de ses [sentiments].|Det är svårt att prata om sina känslor.|Av <b>sentir</b> 'känna'. Jämför <b>sentimental</b>.
+l'émotion|känsla, rörelse|f|Elle a pleuré d'[émotion] au mariage.|Hon grät av rörelse på bröllopet.|Latin <b>emovere</b> 'sätta i rörelse'. Jämför <b>motor</b>.
+sourire|le; leende||Elle m'a [souri] dans le couloir.|Hon log mot mig i korridoren.|<b>sous</b> 'under' + <b>rire</b> 'skratta': ett litet skratt. Particip: souri. Le sourire = leendet.
+pleurer|gråta||Elle a [pleuré] après la dispute avec sa copine.|Hon grät efter bråket med sin kompis.|Latin <b>plorare</b> 'gråta'. Jämför engelska <b>implore</b>.
+faire la bise|hälsa med kindpussar||En France, on [fait la bise] à ses amis.|I Frankrike hälsar man på sina vänner med kindpussar.|<b>bise</b> 'puss', av <b>baiser</b> 'kyssa'. Antalet pussar skiljer sig mellan regionerna.|<b>faire</b> göra · <b>la bise</b> pussen → "göra pussen"
+le câlin|kram|m|Ma petite sœur m'a fait un gros [câlin].|Min lillasyster gav mig en stor kram.|Av <b>câliner</b> 'gosa', troligen latin <b>calere</b> 'vara varm'.
+se séparer|separera, gå isär||Ses parents [se sont séparés] l'année dernière.|Hans föräldrar separerade förra året.|Latin <b>separare</b> 'skilja åt'. Jämför <b>separera</b>.
+rompre|göra slut; bryta||Sarah a [rompu] avec son copain.|Sarah har gjort slut med sin pojkvän.|Latin <b>rumpere</b> 'bryta'. Jämför <b>ruptur</b>. Particip: rompu.
+sortir avec|vara ihop med||Tu [sors avec] Nathan depuis quand ?|Hur länge har du varit ihop med Nathan?|<b>sortir</b> 'gå ut'. Med någon: vara tillsammans.|<b>sortir</b> gå ut · <b>avec</b> med → "gå ut med"
+le camarade de classe|klasskamrat|m|J'ai invité tous mes [camarades de classe].|Jag har bjudit alla mina klasskamrater.|<b>camarade</b> från spanska <b>camarada</b> 'rumskamrat', av <b>cámara</b> 'rum'.|<b>le camarade</b> kamraten · <b>de classe</b> i klassen → "kamraten i klassen"
+le réseau social|socialt medium|m|On se parle surtout sur les [réseaux sociaux].|Vi pratar mest med varandra på sociala medier.|<b>réseau</b> 'nät', av latin <b>rete</b> 'nät'. Plural: réseaux sociaux.|<b>le réseau</b> nätet · <b>social</b> sociala → "det sociala nätet"
+envoyer un message|skicka ett meddelande||Je t'ai [envoyé un message] ce matin.|Jag skickade ett meddelande till dig i morse.|<b>envoyer</b> 'skicka', av <b>en voie</b> 'på väg'.|<b>envoyer</b> skicka · <b>un message</b> ett meddelande → "skicka ett meddelande"
+appeler|ringa (till); kalla||Je vais t'[appeler] après le match.|Jag ringer dig efter matchen.|Latin <b>appellare</b> 'tilltala'. Dubbelt l när ändelsen är stum: j'appelle.
+discuter|prata, diskutera||On a [discuté] pendant des heures au café.|Vi pratade i flera timmar på kaféet.|Latin <b>discutere</b> 'skaka isär'. Vanligt i vardagen för 'prata'.
+bavarder|prata, snacka||Arrêtez de [bavarder] pendant le cours !|Sluta prata under lektionen!|Av <b>bave</b> 'dregel': den som pratar mycket 'dreglar' ord.
+se confier à|anförtro sig åt||Je [me confie à] ma sœur quand j'ai un problème.|Jag anförtror mig åt min syster när jag har problem.|Latin <b>confidere</b> 'lita på'. Se confiance.
+l'humeur|humör|f|Mon frère change souvent d'[humeur].|Min bror byter ofta humör.|Latin <b>humor</b> 'vätska'. Man trodde förr att kroppsvätskorna styrde humöret.
+de bonne humeur|på gott humör||Aujourd'hui, Hugo est [de bonne humeur] : il a gagné son match.|I dag är Hugo på gott humör: han vann sin match.|Se <b>humeur</b>.|<b>de</b> av · <b>bonne</b> gott · <b>humeur</b> humör → "av gott humör"
+de mauvaise humeur|på dåligt humör||Ne lui parle pas, il est [de mauvaise humeur].|Prata inte med honom, han är på dåligt humör.|<b>mauvais</b> 'dålig', latin <b>malifatius</b> 'med dåligt öde'.|<b>de</b> av · <b>mauvaise</b> dåligt · <b>humeur</b> humör → "av dåligt humör"
+énervé, énervée|irriterad, arg||Tu as l'air [énervé], qu'est-ce qui se passe ?|Du ser irriterad ut, vad är det som händer?|Av <b>nerf</b> 'nerv': med nerverna på helspänn.
+déçu, déçue|besviken||Je suis [déçue], elle n'est pas venue à ma fête.|Jag är besviken, hon kom inte på min fest.|Particip av <b>décevoir</b> 'göra besviken'. Falsk vän: inte 'bedragen' som engelska <b>deceive</b>.
+surpris, surprise|överraskad||Elle est très [surprise] de te voir ici !|Hon är jätteöverraskad att se dig här!|Particip av <b>surprendre</b> 'överraska'.
+inquiet, inquiète|orolig||Ma mère est [inquiète] quand je rentre tard.|Min mamma är orolig när jag kommer hem sent.|Latin <b>inquietus</b> 'utan ro', av <b>quies</b> 'vila'.
+s'inquiéter|oroa sig||Ne [t'inquiète] pas, tout va bien !|Oroa dig inte, allt är bra!|Av <b>inquiet</b> 'orolig'. Accent i je m'inquiète.
+#d8|Kap 8 · Le français dans le monde
+la Belgique|Belgien|f|À Bruxelles, en [Belgique], on parle français et néerlandais.|I Bryssel i Belgien talar man franska och nederländska.|Efter <b>belgerna</b>, ett keltiskt folk på Caesars tid.
+la Suisse|Schweiz|f|On parle quatre langues en [Suisse].|Man talar fyra språk i Schweiz.|Efter kantonen <b>Schwyz</b>. Adjektivet är också suisse.
+le Canada|Kanada|m|Mon cousin habite au [Canada], à Montréal.|Min kusin bor i Kanada, i Montréal.|Troligen irokesiska <b>kanata</b> 'by'. Maskulina länder: <b>au</b> Canada.
+le Québec|Québec (provins i Kanada)|m|Au [Québec], presque tout le monde parle français.|I Québec talar nästan alla franska.|Från ett algonkinord, <b>kébec</b> 'där floden smalnar'. Staden Québec har ingen artikel.
+l'Algérie|Algeriet|f|Son grand-père est né en [Algérie].|Hans farfar föddes i Algeriet.|Efter huvudstaden <b>Alger</b>, arabiska <b>al-Jaza'ir</b> 'öarna'.
+le Cameroun|Kamerun|m|Au [Cameroun], on parle français et anglais.|I Kamerun talar man franska och engelska.|Portugisiska <b>camarões</b> 'räkor', efter räkorna i floden Wouri.
+la Martinique|Martinique|f|La [Martinique] est une île française dans la mer des Caraïbes.|Martinique är en fransk ö i Karibiska havet.|Troligen från ett karibiskt namn, <b>Madinina</b> 'blommornas ö'. Man säger en Martinique eller à la Martinique.
+la Guadeloupe|Guadeloupe|f|Il fait chaud toute l'année en [Guadeloupe].|Det är varmt hela året på Guadeloupe.|Efter ett kloster i <b>Guadalupe</b> i Spanien, som Columbus besökte.
+la Réunion|Réunion|f|On a fait une randonnée sur un volcan à la [Réunion].|Vi vandrade på en vulkan på Réunion.|<b>réunion</b> 'förening'. Ön i Indiska oceanen fick namnet under franska revolutionen.
+le Luxembourg|Luxemburg|m|Au [Luxembourg], beaucoup de gens parlent trois langues.|I Luxemburg talar många människor tre språk.|Från fornhögtyska <b>Lucilinburhuc</b> 'liten borg'.
+le Royaume-Uni|Storbritannien|m|Elle va étudier au [Royaume-Uni] l'année prochaine.|Hon ska plugga i Storbritannien nästa år.|<b>royaume</b> 'kungarike' + <b>uni</b> 'förenat'.|<b>le Royaume</b> kungariket · <b>Uni</b> förenade → "det förenade kungariket"
+le Japon|Japan|m|Elle rêve d'aller au [Japon].|Hon drömmer om att åka till Japan.|Från kinesiska <b>Jihpun</b> 'solens ursprung'.
+la Chine|Kina|f|Mon père est allé en [Chine] pour son travail.|Min pappa åkte till Kina i jobbet.|Troligen efter <b>Qin</b>-dynastin.
+le Brésil|Brasilien|m|Rio de Janeiro est une grande ville du [Brésil].|Rio de Janeiro är en stor stad i Brasilien.|Efter trädet <b>pau-brasil</b>, som gav rött färgämne.
+l'Afrique|Afrika|f|On parle français dans beaucoup de pays d'[Afrique].|Man talar franska i många länder i Afrika.|Latin <b>Africa</b>, romarnas namn på området kring Kartago.
+l'Europe|Europa|f|La Suède et la France sont en [Europe].|Sverige och Frankrike ligger i Europa.|Efter <b>Europa</b>, en prinsessa i grekisk mytologi.
+l'Amérique|Amerika|f|Il a voyagé en [Amérique] du Sud pendant trois mois.|Han reste i Sydamerika i tre månader.|Efter upptäcktsresanden <b>Amerigo Vespucci</b>.
+l'Asie|Asien|f|Le Vietnam et le Laos sont en [Asie].|Vietnam och Laos ligger i Asien.|Grekiska <b>Asia</b>, kanske från ett ord för 'öster'.
+le continent|kontinent, världsdel|m|Le français est parlé sur cinq [continents].|Franska talas på fem kontinenter.|Latin <b>terra continens</b> 'sammanhängande land'.
+la capitale|huvudstad|f|Dakar est la [capitale] du Sénégal.|Dakar är Senegals huvudstad.|Latin <b>caput</b> 'huvud'. Jämför <b>kapten</b>.
+la langue|språk; tunga|f|Quelle [langue] est-ce que tu parles à la maison ?|Vilket språk talar du hemma?|Latin <b>lingua</b> 'tunga, språk'. Jämför <b>lingvistik</b>.
+la langue étrangère|främmande språk|f|Le français est ma deuxième [langue étrangère].|Franska är mitt andra främmande språk.|<b>étranger</b> 'främmande', latin <b>extraneus</b> 'yttre'.|<b>la langue</b> språket · <b>étrangère</b> främmande → "det främmande språket"
+parler couramment|tala flytande||Ma tante [parle couramment] quatre langues.|Min moster talar fyra språk flytande.|<b>courant</b> 'strömmande', av <b>courir</b> 'springa'. Orden flyter som ett vattendrag.|<b>parler</b> tala · <b>couramment</b> strömmande → "tala strömmande"
+l'expression|uttryck|f|« Avoir la pêche » est une [expression] très française.|”Avoir la pêche” (vara pigg) är ett väldigt franskt uttryck.|Latin <b>exprimere</b> 'trycka ut'. Jämför <b>express</b>.
+traduire|översätta||Tu peux [traduire] ce texte en suédois ?|Kan du översätta den här texten till svenska?|Latin <b>traducere</b> 'föra över'. Particip: traduit.
+la traduction|översättning|f|La [traduction] de ce livre est très bonne.|Översättningen av den här boken är väldigt bra.|Av <b>traduire</b> 'översätta'.
+italien, italienne|italiensk; italienska (språket)||On a mangé dans un restaurant [italien].|Vi åt på en italiensk restaurang.|Av <b>Italie</b>. Dubbelt n i femininum.
+belge|belgisk||Les frites [belges] sont très célèbres.|De belgiska pommes fritesen är väldigt kända.|Av <b>Belgique</b>. Samma form i maskulinum och femininum.
+canadien, canadienne|kanadensisk||Céline Dion est une chanteuse [canadienne].|Céline Dion är en kanadensisk sångerska.|Av <b>Canada</b>. Dubbelt n i femininum.
+sénégalais, sénégalaise|senegalesisk||Moussa est [sénégalais], il parle wolof et français.|Moussa är från Senegal, han talar wolof och franska.|Av <b>Sénégal</b>, efter floden Senegal.
+marocain, marocaine|marockansk||J'adore le thé à la menthe [marocain].|Jag älskar marockanskt myntate.|Av <b>Maroc</b>, efter staden <b>Marrakech</b>.
+algérien, algérienne|algerisk||Sa mère est [algérienne] et son père est français.|Hennes mamma är algerisk och hennes pappa är fransk.|Av <b>Algérie</b>.
+africain, africaine|afrikansk||Il écoute beaucoup de musique [africaine].|Han lyssnar mycket på afrikansk musik.|Av <b>Afrique</b>.
+européen, européenne|europeisk||La Suède est membre de l'Union [européenne].|Sverige är medlem i Europeiska unionen.|Av <b>Europe</b>. Dubbelt n i femininum.
+américain, américaine|amerikansk||Elle regarde beaucoup de séries [américaines].|Hon tittar på många amerikanska serier.|Av <b>Amérique</b>.
+chinois, chinoise|kinesisk; kinesiska (språket)||Le [chinois] est une langue très difficile.|Kinesiska är ett väldigt svårt språk.|Av <b>Chine</b>. C'est du chinois ! = det är rena grekiskan!
+japonais, japonaise|japansk; japanska (språket)||Mon frère lit des mangas [japonais].|Min bror läser japanska mangor.|Av <b>Japon</b>.
+norvégien, norvégienne|norsk; norska (språket)||Le [norvégien] ressemble beaucoup au suédois.|Norska liknar svenska mycket.|Av <b>Norvège</b>, 'vägen mot norr'.
+danois, danoise|dansk; danska (språket)||Tu comprends le [danois] quand on parle vite ?|Förstår du danska när man pratar fort?|Av <b>Danemark</b>.
+finlandais, finlandaise|finländsk||Mon ami [finlandais] parle aussi suédois.|Min finländska kompis talar också svenska.|Av <b>Finlande</b>. Språket finska heter le finnois.
+portugais, portugaise|portugisisk; portugisiska (språket)||Au Brésil, les gens parlent [portugais].|I Brasilien talar folk portugisiska.|Av <b>Portugal</b>, latin <b>Portus Cale</b> 'hamnen Cale'.
+l'arabe|arabiska (språket)|m|Au Maroc, on parle [arabe] et français.|I Marocko talar man arabiska och franska.|Arabiska <b>'arabi</b>. Många franska ord kommer från arabiskan, t.ex. <b>café</b> och <b>algèbre</b>.
+étranger, étrangère|utländsk; främmande||Il y a beaucoup d'élèves [étrangers] dans ma classe.|Det finns många utländska elever i min klass.|Latin <b>extraneus</b> 'yttre'. Jämför engelska <b>strange</b>. Un étranger = en utlänning.
+la population|befolkning|f|La [population] du Québec est surtout francophone.|Québecs befolkning är mest fransktalande.|Latin <b>populus</b> 'folk'. Jämför <b>populär</b>.
+le monde|världen; folk|m|On parle français partout dans le [monde].|Man talar franska överallt i världen.|Latin <b>mundus</b> 'världen'. Tout le monde = alla.
+dans le monde entier|i hela världen||Ce chanteur est connu [dans le monde entier].|Den här sångaren är känd i hela världen.|<b>entier</b> 'hel', latin <b>integer</b> 'orörd'. Jämför <b>integrera</b>.|<b>dans</b> i · <b>le monde</b> världen · <b>entier</b> hel → "i världen hel"
+international, internationale|internationell||Genève est une ville très [internationale].|Genève är en väldigt internationell stad.|<b>inter</b> 'mellan' + <b>nation</b>. Plural maskulinum: internationaux.
+la culture|kultur|f|J'aime découvrir la [culture] des autres pays.|Jag gillar att upptäcka andra länders kultur.|Latin <b>cultura</b> 'odling', av <b>colere</b> 'odla'. Jämför engelska <b>agriculture</b>.
+être d'origine|ha ursprung i, vara av … härkomst||Mon ami [est d'origine] vietnamienne.|Min kompis har vietnamesiskt ursprung.|<b>origine</b> av latin <b>origo</b> 'början'. Adjektivet står i femininum efter origine.|<b>être</b> vara · <b>d'origine</b> av ursprung → "vara av ursprung"
+venir de|komma från||Je [viens de] Suède, et toi ?|Jag kommer från Sverige, och du?|<b>venir</b> 'komma', latin <b>venire</b>. Feminina länder: de Suède; maskulina: du Canada.|<b>venir</b> komma · <b>de</b> från → "komma från"
+habiter à|bo i (stad)||Ma correspondante [habite à] Lyon.|Min brevvän bor i Lyon.|Latin <b>habitare</b> 'bo'. <b>à</b> före städer, men en France, au Canada.|<b>habiter</b> bo · <b>à</b> i → "bo i"
+le nord|norr|m|Lille est dans le [nord] de la France.|Lille ligger i norra Frankrike.|Från germanska. Jämför svenska <b>nord</b>.
+le sud|söder|m|Marseille est dans le [sud] de la France.|Marseille ligger i södra Frankrike.|Från germanska. Jämför svenska <b>syd</b>. d:et uttalas.
+l'est|öster|m|Strasbourg se trouve dans l'[est] de la France.|Strasbourg ligger i östra Frankrike.|Från fornengelska <b>east</b>. Uttalas med t: [est].
+l'ouest|väster|m|La Bretagne est à l'[ouest] de la France.|Bretagne ligger i västra Frankrike.|Från fornengelska <b>west</b>. Jämför svenska <b>väst</b>.
+le mélange|blandning|m|Le créole est un [mélange] de français et d'autres langues.|Kreolska är en blandning av franska och andra språk.|Av <b>mêler</b> 'blanda', latin <b>miscere</b>. Jämför <b>mixa</b>.
+le Vietnam|Vietnam|m|Au [Vietnam], quelques personnes âgées parlent encore français.|I Vietnam talar några äldre personer fortfarande franska.|<b>Viet</b>, folkets namn, + <b>Nam</b> 'söder'.
+la Russie|Ryssland|f|La [Russie] est le plus grand pays du monde.|Ryssland är världens största land.|Efter <b>rus</b>, troligen från ett nordiskt ord för 'roddare'. Jämför <b>Roslagen</b>.
+le Congo|Kongo|m|Au [Congo], la langue officielle est le français.|I Kongo är franska det officiella språket.|Efter floden och det gamla <b>Kongoriket</b>. Två länder heter Kongo.
+le Mexique|Mexiko|m|Mon oncle est parti au [Mexique] en vacances.|Min morbror har åkt på semester till Mexiko.|Efter <b>mexica</b>, aztekernas eget namn. Maskulint trots -e: au Mexique.

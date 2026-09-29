@@ -1,0 +1,317 @@
+{
+  "name": "DELF A1",
+  "pass": 50,
+  "note": "Övningar i provets stil, skrivna för appen. Inte officiellt material. För att klara DELF A1 krävs 50 av 100 poäng och minst 5 av 25 i varje del.",
+  "parts": [
+    {"id": "co", "name": "Compréhension de l'oral", "sv": "Hörförståelse", "time": 20},
+    {"id": "ce", "name": "Compréhension des écrits", "sv": "Läsförståelse", "time": 30},
+    {"id": "pe", "name": "Production écrite", "sv": "Skriva", "time": 30},
+    {"id": "po", "name": "Production orale", "sv": "Tala", "time": 7}
+  ],
+  "tasks": [
+    {
+      "id": "fr2-co-1",
+      "part": "co",
+      "teil": "Exercice 1",
+      "title": "Un message sur le répondeur",
+      "time": 4,
+      "plays": 2,
+      "instr": "Du hör ett meddelande på din telefonsvarare. Läs frågorna först. Du hör meddelandet två gånger. Välj rätt svar.",
+      "lines": [
+        {"fr": "Salut, c'est Camille !", "sv": "Hej, det är Camille!"},
+        {"fr": "Samedi, je vais faire un pique-nique au parc avec Hugo et Inès.", "sv": "På lördag ska jag ha picknick i parken med Hugo och Inès."},
+        {"fr": "Tu veux venir avec nous ?", "sv": "Vill du följa med oss?"},
+        {"fr": "On se retrouve à midi devant la fontaine.", "sv": "Vi ses klockan tolv framför fontänen."},
+        {"fr": "Moi, j'apporte les sandwichs. Toi, tu peux apporter des fruits ?", "sv": "Jag tar med smörgåsarna. Kan du ta med frukt?"},
+        {"fr": "Rappelle-moi ce soir, mon numéro, c'est le 06 45 12 38 90. À plus !", "sv": "Ring mig i kväll, mitt nummer är 06 45 12 38 90. Hörs!"}
+      ],
+      "qs": [
+        {"q": "Camille propose…", "opts": ["un pique-nique.", "un match de foot.", "une fête chez elle."], "a": 0, "why": "« Samedi, je vais faire un pique-nique au parc »."},
+        {"q": "Le rendez-vous est à quelle heure ?", "opts": ["À dix heures.", "À midi.", "À deux heures."], "a": 1, "why": "« On se retrouve à midi devant la fontaine. »"},
+        {"q": "Qu'est-ce que tu dois apporter ?", "opts": ["Des sandwichs.", "Des boissons.", "Des fruits."], "a": 2, "why": "« Toi, tu peux apporter des fruits ? » Smörgåsarna tar Camille med."},
+        {"q": "Quel est le numéro de Camille ?", "opts": ["06 45 12 38 90", "06 54 12 38 90", "06 45 21 38 19"], "a": 0, "why": "« mon numéro, c'est le 06 45 12 38 90 »."}
+      ]
+    },
+    {
+      "id": "fr2-co-2",
+      "part": "co",
+      "teil": "Exercice 2",
+      "title": "À la gare",
+      "time": 4,
+      "plays": 2,
+      "instr": "Du är på en tågstation i Frankrike och hör ett utrop i högtalarna. Läs frågorna först. Du hör utropet två gånger. Välj rätt svar.",
+      "lines": [
+        {"fr": "Mesdames et messieurs, votre attention, s'il vous plaît.", "sv": "Mina damer och herrar, var vänliga och lyssna."},
+        {"fr": "Le TGV numéro 6123 à destination de Marseille part avec un retard de vingt-cinq minutes.", "sv": "TGV nummer 6123 mot Marseille avgår med tjugofem minuters försening."},
+        {"fr": "Le départ est prévu à quatorze heures quarante, voie 7, et non voie 3.", "sv": "Avgången är planerad till 14.40 från spår 7, inte spår 3."},
+        {"fr": "Le wagon-bar est fermé aujourd'hui.", "sv": "Restaurangvagnen är stängd i dag."},
+        {"fr": "Nous vous prions de nous excuser pour ce retard.", "sv": "Vi ber om ursäkt för förseningen."}
+      ],
+      "qs": [
+        {"q": "Le train va à…", "opts": ["Lyon.", "Marseille.", "Bordeaux."], "a": 1, "why": "« à destination de Marseille »."},
+        {"q": "Le train a combien de minutes de retard ?", "opts": ["15 minutes.", "20 minutes.", "25 minutes."], "a": 2, "why": "« avec un retard de vingt-cinq minutes »."},
+        {"q": "Le train part de quelle voie ?", "opts": ["Voie 3.", "Voie 7.", "Voie 14."], "a": 1, "why": "« voie 7, et non voie 3 ». Spår 3 var det gamla spåret."},
+        {"q": "Dans le train, aujourd'hui…", "opts": ["on ne peut pas acheter à manger.", "le wagon-bar est gratuit.", "il n'y a pas de places."], "a": 0, "why": "« Le wagon-bar est fermé aujourd'hui. » Restaurangvagnen är stängd, så man kan inte köpa mat."}
+      ]
+    },
+    {
+      "id": "fr2-co-3",
+      "part": "co",
+      "teil": "Exercice 3",
+      "title": "À la boulangerie",
+      "time": 5,
+      "plays": 2,
+      "instr": "Du hör en dialog i ett bageri. Läs frågorna först. Du hör dialogen två gånger. Välj rätt svar.",
+      "lines": [
+        {"fr": "— Bonjour, monsieur. Qu'est-ce que je vous sers ?", "sv": "– Hej. Vad får det lov att vara?"},
+        {"fr": "— Bonjour. Je voudrais deux baguettes et quatre croissants, s'il vous plaît.", "sv": "– Hej. Jag skulle vilja ha två baguetter och fyra croissanter, tack."},
+        {"fr": "— Désolée, il n'y a plus de croissants. J'ai des pains au chocolat.", "sv": "– Tyvärr, det finns inga croissanter kvar. Jag har chokladbröd."},
+        {"fr": "— D'accord, alors quatre pains au chocolat.", "sv": "– Okej, då tar jag fyra chokladbröd."},
+        {"fr": "— Et avec ceci ?", "sv": "– Något mer?"},
+        {"fr": "— C'est tout, merci. Ça fait combien ?", "sv": "– Det var allt, tack. Hur mycket blir det?"},
+        {"fr": "— Six euros quarante, s'il vous plaît.", "sv": "– Sex euro och fyrtio cent, tack."},
+        {"fr": "— Je peux payer par carte ?", "sv": "– Kan jag betala med kort?"},
+        {"fr": "— Oui, bien sûr.", "sv": "– Ja, självklart."}
+      ],
+      "qs": [
+        {"q": "Combien de baguettes est-ce que le client achète ?", "opts": ["Une.", "Deux.", "Quatre."], "a": 1, "why": "« Je voudrais deux baguettes »."},
+        {"q": "Pourquoi le client ne prend pas de croissants ?", "opts": ["Il n'aime pas les croissants.", "Ils sont trop chers.", "Il n'y en a plus."], "a": 2, "why": "« il n'y a plus de croissants »."},
+        {"q": "Le client paie combien ?", "opts": ["6,40 €", "4,60 €", "16,40 €"], "a": 0, "why": "« Six euros quarante »."},
+        {"q": "Comment est-ce qu'il paie ?", "opts": ["En espèces.", "Par carte.", "Avec son téléphone."], "a": 1, "why": "« Je peux payer par carte ? – Oui, bien sûr. »"}
+      ]
+    },
+    {
+      "id": "fr2-co-4",
+      "part": "co",
+      "teil": "Exercice 4",
+      "title": "Une publicité à la radio",
+      "time": 4,
+      "plays": 2,
+      "instr": "Du hör en reklam i radion. Läs frågorna först. Du hör reklamen två gånger. Välj rätt svar.",
+      "lines": [
+        {"fr": "Vous aimez la nature et le sport ?", "sv": "Gillar ni naturen och idrott?"},
+        {"fr": "Venez au camping Les Pins, au bord du lac d'Annecy !", "sv": "Kom till campingen Les Pins vid sjön i Annecy!"},
+        {"fr": "Chez nous, il y a une grande piscine, des vélos et des cours de kayak.", "sv": "Hos oss finns en stor pool, cyklar och paddelkurser i kajak."},
+        {"fr": "Le camping est ouvert d'avril à septembre.", "sv": "Campingen har öppet från april till september."},
+        {"fr": "En juin, les enfants de moins de dix ans ne paient pas !", "sv": "I juni betalar barn under tio år ingenting!"},
+        {"fr": "Réservez sur notre site : campinglespins.fr.", "sv": "Boka på vår webbplats: campinglespins.fr."}
+      ],
+      "qs": [
+        {"q": "Le camping est…", "opts": ["à la mer.", "à côté d'un lac.", "en ville."], "a": 1, "why": "« au bord du lac d'Annecy »."},
+        {"q": "Au camping, on peut…", "opts": ["faire du kayak.", "faire du ski.", "faire du cheval."], "a": 0, "why": "« des cours de kayak »."},
+        {"q": "Le camping est fermé en…", "opts": ["mai.", "juillet.", "décembre."], "a": 2, "why": "Campingen har öppet « d'avril à septembre », så i december är det stängt."},
+        {"q": "En juin, qui ne paie pas ?", "opts": ["Les grands-parents.", "Les enfants de moins de dix ans.", "Les étudiants."], "a": 1, "why": "« En juin, les enfants de moins de dix ans ne paient pas ! »"}
+      ]
+    },
+    {
+      "id": "fr2-ce-1",
+      "part": "ce",
+      "teil": "Exercice 1",
+      "title": "Un message de ta famille d'accueil",
+      "time": 7,
+      "instr": "Du bor hos en värdfamilj i Frankrike. När du kommer hem från skolan hittar du den här lappen på kylskåpet. Läs lappen och svara på frågorna.",
+      "lines": [
+        {"fr": "Bonjour Elsa,", "sv": "Hej Elsa,"},
+        {"fr": "Ce soir, je rentre tard du travail, vers vingt heures.", "sv": "I kväll kommer jag hem sent från jobbet, runt klockan åtta."},
+        {"fr": "Paul est chez son copain Théo et il va dormir chez lui.", "sv": "Paul är hos sin kompis Théo och ska sova över där."},
+        {"fr": "Il y a une quiche dans le frigo pour toi : dix minutes au four.", "sv": "Det finns en paj i kylskåpet till dig: tio minuter i ugnen."},
+        {"fr": "Tu peux donner à manger au chat, s'il te plaît ?", "sv": "Kan du ge katten mat, tack?"},
+        {"fr": "Et n'oublie pas : demain, on part à la mer à sept heures !", "sv": "Och glöm inte: i morgon åker vi till havet klockan sju!"},
+        {"fr": "Bisous, Nathalie", "sv": "Kram, Nathalie"}
+      ],
+      "qs": [
+        {"q": "Nathalie rentre à quelle heure ?", "opts": ["Vers 18 heures.", "Vers 20 heures.", "Vers 7 heures."], "a": 1, "why": "« je rentre tard du travail, vers vingt heures »."},
+        {"q": "Où est Paul ce soir ?", "opts": ["Chez un ami.", "À la mer.", "Au travail."], "a": 0, "why": "« Paul est chez son copain Théo »."},
+        {"q": "Qu'est-ce qu'Elsa va manger ?", "opts": ["Une pizza.", "Une quiche.", "Une salade."], "a": 1, "why": "« Il y a une quiche dans le frigo pour toi »."},
+        {"q": "Qu'est-ce qu'Elsa doit faire ?", "opts": ["Promener le chien.", "Faire les courses.", "Donner à manger au chat."], "a": 2, "why": "« Tu peux donner à manger au chat, s'il te plaît ? »"},
+        {"q": "Demain matin, la famille…", "opts": ["part à la mer.", "va au travail.", "va chez Théo."], "a": 0, "why": "« demain, on part à la mer à sept heures ! »"}
+      ]
+    },
+    {
+      "id": "fr2-ce-2",
+      "part": "ce",
+      "teil": "Exercice 2",
+      "title": "Petites annonces",
+      "time": 8,
+      "instr": "Du letar efter något att göra i sommar i Frankrike. Läs annonserna och svara på frågorna.",
+      "lines": [
+        {"fr": "A – Cours de surf à Biarritz. Pour les jeunes de 12 à 17 ans. Du lundi au vendredi, de 9 h à 12 h. Prix : 150 € la semaine. Il faut savoir nager !", "sv": "A – Surfkurs i Biarritz. För unga mellan 12 och 17 år. Måndag till fredag, 9–12. Pris: 150 € i veckan. Man måste kunna simma!"},
+        {"fr": "B – Atelier de cuisine à Lyon. Apprenez à faire des crêpes et des gâteaux. Le samedi après-midi. Prix : 30 € par atelier.", "sv": "B – Matlagningskurs i Lyon. Lär dig göra crêpes och kakor. Lördagseftermiddagar. Pris: 30 € per tillfälle."},
+        {"fr": "C – Randonnée dans les Alpes. Trois jours à pied avec un guide, nuits au refuge. Pour les jeunes à partir de 15 ans. Prix : 200 €, repas compris.", "sv": "C – Vandring i Alperna. Tre dagar till fots med guide, nätter i fjällstuga. För unga från 15 år. Pris: 200 €, måltider ingår."}
+      ],
+      "qs": [
+        {"q": "Pour faire du surf, il faut…", "opts": ["avoir 18 ans.", "savoir nager.", "avoir sa planche."], "a": 1, "why": "« Il faut savoir nager ! »"},
+        {"q": "L'atelier de cuisine a lieu…", "opts": ["le samedi.", "le lundi matin.", "tous les jours."], "a": 0, "why": "« Le samedi après-midi. »"},
+        {"q": "Quelle activité est la moins chère ?", "opts": ["Le surf.", "La randonnée.", "L'atelier de cuisine."], "a": 2, "why": "Matlagningskursen kostar 30 €, surfen 150 € och vandringen 200 €."},
+        {"q": "Pendant la randonnée, on dort…", "opts": ["à l'hôtel.", "dans un refuge.", "chez des familles."], "a": 1, "why": "« nuits au refuge »."},
+        {"q": "Tu as 14 ans. Quelle activité n'est pas possible pour toi ?", "opts": ["Le surf.", "L'atelier de cuisine.", "La randonnée."], "a": 2, "why": "Vandringen är « pour les jeunes à partir de 15 ans »."}
+      ]
+    },
+    {
+      "id": "fr2-ce-3",
+      "part": "ce",
+      "teil": "Exercice 3",
+      "title": "Une affiche à la pharmacie",
+      "time": 7,
+      "instr": "Du ser den här affischen på ett apotek. Läs den och svara på frågorna.",
+      "lines": [
+        {"fr": "La grippe arrive ! Protégez-vous !", "sv": "Influensan kommer! Skydda er!"},
+        {"fr": "Lavez-vous les mains souvent, avec de l'eau et du savon.", "sv": "Tvätta händerna ofta, med vatten och tvål."},
+        {"fr": "Toussez dans votre coude.", "sv": "Hosta i armvecket."},
+        {"fr": "Vous avez de la fièvre ? Restez à la maison et buvez beaucoup d'eau.", "sv": "Har ni feber? Stanna hemma och drick mycket vatten."},
+        {"fr": "Après trois jours de fièvre, appelez votre médecin.", "sv": "Efter tre dagar med feber, ring er läkare."},
+        {"fr": "Le vaccin contre la grippe est possible ici, à la pharmacie, du lundi au samedi, sans rendez-vous.", "sv": "Man kan vaccinera sig mot influensa här på apoteket, måndag till lördag, utan tidsbokning."}
+      ],
+      "qs": [
+        {"q": "Cette affiche parle…", "opts": ["d'une maladie.", "d'un nouveau médecin.", "d'un magasin."], "a": 0, "why": "Affischen handlar om influensan: « La grippe arrive ! »"},
+        {"q": "Quand on tousse, il faut tousser…", "opts": ["dans la main.", "dans le coude.", "dehors."], "a": 1, "why": "« Toussez dans votre coude. »"},
+        {"q": "Quand est-ce qu'il faut appeler le médecin ?", "opts": ["Tout de suite.", "Après un jour de fièvre.", "Après trois jours de fièvre."], "a": 2, "why": "« Après trois jours de fièvre, appelez votre médecin. »"},
+        {"q": "Pour le vaccin à la pharmacie, …", "opts": ["il faut prendre rendez-vous.", "on peut venir sans rendez-vous.", "il faut venir le dimanche."], "a": 1, "why": "« du lundi au samedi, sans rendez-vous »."}
+      ]
+    },
+    {
+      "id": "fr2-ce-4",
+      "part": "ce",
+      "teil": "Exercice 4",
+      "title": "Un courriel d'une correspondante",
+      "time": 8,
+      "instr": "Du får ett mejl från din franska brevvän Julie. Läs mejlet och svara på frågorna.",
+      "lines": [
+        {"fr": "Salut !", "sv": "Hej!"},
+        {"fr": "Merci pour ta carte de Suède, elle est très jolie !", "sv": "Tack för ditt vykort från Sverige, det är jättefint!"},
+        {"fr": "Ici, à Montpellier, il fait encore beau et chaud en octobre.", "sv": "Här i Montpellier är det fortfarande fint och varmt i oktober."},
+        {"fr": "Le week-end dernier, je suis allée à la plage avec ma sœur et nous avons nagé !", "sv": "I helgen som var åkte jag till stranden med min syster och vi badade!"},
+        {"fr": "Samedi prochain, c'est l'anniversaire de mon frère Mathis. Il va avoir douze ans.", "sv": "Nästa lördag fyller min bror Mathis år. Han fyller tolv."},
+        {"fr": "Nous allons faire une fête au jardin avec toute la famille.", "sv": "Vi ska ha en fest i trädgården med hela familjen."},
+        {"fr": "Et toi, en Suède, il fait froid ? Tu vas faire quoi pendant les vacances de la Toussaint ?", "sv": "Och du, är det kallt i Sverige? Vad ska du göra på höstlovet?"},
+        {"fr": "Bises, Julie", "sv": "Kramar, Julie"}
+      ],
+      "qs": [
+        {"q": "Julie habite…", "opts": ["en Suède.", "à Montpellier.", "à Paris."], "a": 1, "why": "« Ici, à Montpellier »."},
+        {"q": "Le week-end dernier, Julie…", "opts": ["est allée à la plage.", "est restée à la maison.", "a fait une fête."], "a": 0, "why": "« je suis allée à la plage avec ma sœur »."},
+        {"q": "Mathis, c'est…", "opts": ["le père de Julie.", "le copain de Julie.", "le frère de Julie."], "a": 2, "why": "« l'anniversaire de mon frère Mathis »."},
+        {"q": "Où est-ce que la fête va avoir lieu ?", "opts": ["Au restaurant.", "Dans le jardin.", "À la plage."], "a": 1, "why": "« Nous allons faire une fête au jardin »."},
+        {"q": "Julie veut savoir…", "opts": ["ce que tu vas faire pendant les vacances.", "quand tu vas venir en France.", "ton âge."], "a": 0, "why": "« Tu vas faire quoi pendant les vacances de la Toussaint ? »"}
+      ]
+    },
+    {
+      "id": "fr2-pe-1",
+      "part": "pe",
+      "teil": "Exercice 1",
+      "title": "Inscription au club de sport",
+      "time": 10,
+      "minWords": 25,
+      "instr": "På provet fyller man först i ett formulär. Här skriver du uppgifterna som korta meningar eller rader: namn, ålder, nationalitet, adress, telefon, sport och när du kan träna.",
+      "task": "Vous êtes en France pour un mois et vous voulez faire du sport. Vous remplissez la fiche d'inscription du club « Sport pour tous » : nom, prénom, âge, nationalité, adresse en France, numéro de téléphone, sport choisi, jours et heures où vous êtes libre, et pourquoi vous voulez faire ce sport.",
+      "criteria": [
+        "Respect de la consigne",
+        "Capacité à donner des informations personnelles",
+        "Lexique et orthographe",
+        "Morphosyntaxe"
+      ],
+      "model": "Nom : Andersson\nPrénom : Klara\nÂge : 15 ans\nNationalité : suédoise\nAdresse en France : 8 rue des Lilas, 34000 Montpellier\nTéléphone : 06 72 14 55 30\nSport choisi : le tennis\nJours et heures libres : le mercredi après-midi et le samedi matin\nPourquoi ? Je joue au tennis en Suède et je veux rencontrer des jeunes français.",
+      "modelSv": "Efternamn: Andersson\nFörnamn: Klara\nÅlder: 15 år\nNationalitet: svensk\nAdress i Frankrike: rue des Lilas 8, 34000 Montpellier\nTelefon: 06 72 14 55 30\nVald sport: tennis\nLediga dagar och tider: onsdag eftermiddag och lördag förmiddag\nVarför? Jag spelar tennis i Sverige och vill träffa franska ungdomar."
+    },
+    {
+      "id": "fr2-pe-2",
+      "part": "pe",
+      "teil": "Exercice 2",
+      "title": "Une carte postale de vacances",
+      "time": 20,
+      "minWords": 40,
+      "instr": "Skriv ett vykort på cirka 40 ord till en fransk kompis. Säg var du är, hur vädret är, vad du gör och vad du tycker om platsen. Glöm inte hälsning och avslutning.",
+      "task": "Vous êtes en vacances. Vous écrivez une carte postale à votre ami français Lucas. Vous lui dites où vous êtes, quel temps il fait, ce que vous faites et ce que vous aimez. (40 mots minimum)",
+      "criteria": [
+        "Respect de la consigne",
+        "Correction sociolinguistique (salutations, tu)",
+        "Capacité à informer et à décrire",
+        "Lexique et orthographe",
+        "Morphosyntaxe"
+      ],
+      "model": "Salut Lucas !\nJe suis en vacances à Barcelone avec mes parents. Il fait beau et très chaud. Le matin, nous visitons la ville, et l'après-midi, je vais à la plage. Hier, j'ai mangé une paella délicieuse ! J'aime beaucoup cette ville.\nÀ bientôt,\nOlle",
+      "modelSv": "Hej Lucas!\nJag är på semester i Barcelona med mina föräldrar. Det är fint väder och väldigt varmt. På förmiddagen tittar vi på staden, och på eftermiddagen går jag till stranden. I går åt jag en jättegod paella! Jag gillar den här staden mycket.\nVi ses snart,\nOlle"
+    },
+    {
+      "id": "fr2-pe-3",
+      "part": "pe",
+      "teil": "Exercice 2",
+      "title": "Un courriel pour une invitation",
+      "time": 20,
+      "minWords": 40,
+      "instr": "Skriv ett mejl på cirka 40 ord. Bjud in en fransk kompis till något du ska göra. Säg vad, när och var, och vad ni ska göra. Be kompisen svara.",
+      "task": "Vous invitez votre amie française Chloé à votre anniversaire. Vous lui écrivez un courriel. Vous indiquez la date, l'heure, le lieu et les activités prévues. (40 mots minimum)",
+      "criteria": [
+        "Respect de la consigne",
+        "Correction sociolinguistique (salutations, tu)",
+        "Capacité à inviter et à informer",
+        "Lexique et orthographe",
+        "Morphosyntaxe"
+      ],
+      "model": "Salut Chloé !\nSamedi 12 mai, c'est mon anniversaire : je vais avoir seize ans ! Je t'invite à ma fête chez moi, 5 rue du Port, à dix-neuf heures. Nous allons manger des crêpes, écouter de la musique et danser. Tu peux venir ? Réponds-moi vite !\nBisous,\nAstrid",
+      "modelSv": "Hej Chloé!\nLördag den 12 maj fyller jag år: jag fyller sexton! Jag bjuder dig på min fest hemma hos mig på rue du Port 5 klockan sju. Vi ska äta crêpes, lyssna på musik och dansa. Kan du komma? Svara mig snabbt!\nKramar,\nAstrid"
+    },
+    {
+      "id": "fr2-po-1",
+      "part": "po",
+      "teil": "Exercice 1",
+      "title": "Entretien dirigé : parlez de vous",
+      "prep": 0,
+      "time": 1,
+      "instr": "Första delen av den muntliga delen är ett kort samtal om dig själv, utan förberedelsetid (ungefär 1 minut). Examinatorn ställer enkla frågor om dig, din familj och dina intressen. Svara med hela meningar.",
+      "task": "L'examinateur vous pose des questions, par exemple :\n– Comment vous appelez-vous ?\n– Quel âge avez-vous ?\n– Où habitez-vous ?\n– Vous avez des frères et sœurs ?\n– Qu'est-ce que vous aimez faire le week-end ?",
+      "phrases": [
+        "Je m'appelle …",
+        "J'ai … ans.",
+        "J'habite à …, en Suède.",
+        "J'ai un frère / une sœur. Je suis fils / fille unique.",
+        "Le week-end, j'aime …",
+        "Je suis élève au lycée / au collège.",
+        "J'apprends le français depuis …"
+      ],
+      "model": "Je m'appelle Ella et j'ai quinze ans. J'habite à Västerås, en Suède, avec ma mère, mon beau-père et mon petit frère. Je suis en troisième, au collège. J'apprends le français depuis deux ans. Le week-end, j'aime voir mes amis et jouer au basket. J'aime aussi faire des gâteaux.",
+      "modelSv": "Jag heter Ella och är femton år. Jag bor i Västerås i Sverige med min mamma, min styvpappa och min lillebror. Jag går i nian. Jag har läst franska i två år. På helgerna tycker jag om att träffa mina kompisar och spela basket. Jag tycker också om att baka kakor."
+    },
+    {
+      "id": "fr2-po-2",
+      "part": "po",
+      "teil": "Exercice 2",
+      "title": "Échange d'informations",
+      "prep": 10,
+      "time": 2,
+      "instr": "Du drar kort med ett ord på, till exempel « Vacances ? » eller « Sport ? ». Med hjälp av orden ställer du frågor till examinatorn (ungefär 2 minuter). Förberedelsetiden på 10 minuter delas med övning 3. Skriv 6 frågor, en för varje ord nedan.",
+      "task": "Posez des questions à l'examinateur à partir des mots suivants :\nMaison ? – Vacances ? – Frères et sœurs ? – Sport ? – Anniversaire ? – Langues ?",
+      "phrases": [
+        "Est-ce que vous … ?",
+        "Où est-ce que vous … ?",
+        "Quand est-ce que … ?",
+        "Qu'est-ce que vous aimez … ?",
+        "Combien de … avez-vous ?",
+        "Quel / Quelle est votre … ?"
+      ],
+      "model": "Est-ce que vous habitez dans une maison ou dans un appartement ?\nOù est-ce que vous allez partir en vacances cet été ?\nCombien de frères et sœurs avez-vous ?\nQuel sport est-ce que vous aimez ?\nQuand est-ce que c'est votre anniversaire ?\nQuelles langues est-ce que vous parlez ?",
+      "modelSv": "Bor ni i ett hus eller i en lägenhet?\nVart ska ni åka på semester i sommar?\nHur många syskon har ni?\nVilken sport tycker ni om?\nNär fyller ni år?\nVilka språk talar ni?"
+    },
+    {
+      "id": "fr2-po-3",
+      "part": "po",
+      "teil": "Exercice 3",
+      "title": "Dialogue simulé : au marché",
+      "prep": 10,
+      "time": 3,
+      "instr": "Rollspel (2–3 minuter). Du handlar på en marknad, och examinatorn är försäljaren. Du har en bild med varor och priser. Hälsa, fråga efter priser, köp minst tre saker med mängder, betala och tacka. Säg vous till försäljaren.",
+      "task": "Vous êtes au marché. Vous achetez des fruits et des légumes pour un pique-nique. Vous demandez les prix, vous choisissez les quantités et vous payez. L'examinateur joue le rôle du vendeur.\n\nPrix : pommes 2,50 € le kilo – tomates 3 € le kilo – fraises 4 € la barquette – fromage 3,20 € le morceau – baguette 1,10 €",
+      "phrases": [
+        "Bonjour, monsieur / madame.",
+        "Je voudrais un kilo de …, s'il vous plaît.",
+        "Combien coûtent les … ?",
+        "C'est combien, le fromage ?",
+        "Je prends aussi une barquette de …",
+        "C'est tout, merci. Ça fait combien ?",
+        "Voilà dix euros.",
+        "Merci, au revoir, bonne journée !"
+      ],
+      "model": "— Bonjour, madame. Combien coûtent les fraises, s'il vous plaît ?\n— Quatre euros la barquette.\n— D'accord, je prends une barquette de fraises. Et je voudrais aussi un kilo de tomates.\n— Voilà. Et avec ceci ?\n— Un morceau de fromage, s'il vous plaît. C'est tout. Ça fait combien ?\n— Dix euros vingt.\n— Voilà, je paie par carte. Merci, au revoir, bonne journée !",
+      "modelSv": "– Hej. Vad kostar jordgubbarna?\n– Fyra euro asken.\n– Okej, jag tar en ask jordgubbar. Och jag skulle också vilja ha ett kilo tomater.\n– Varsågod. Något mer?\n– En bit ost, tack. Det var allt. Vad blir det?\n– Tio euro och tjugo cent.\n– Här, jag betalar med kort. Tack, hej då, ha en bra dag!"
+    }
+  ]
+}

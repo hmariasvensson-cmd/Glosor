@@ -1,0 +1,1942 @@
+[
+ {
+  "id": "poss-001",
+  "topic": "poss",
+  "rule": "poss-sg",
+  "q": "C'est [ma] sœur, elle s'appelle Emma.",
+  "alt": [
+   "mon",
+   "mes",
+   "ton"
+  ],
+  "why": "Sœur är feminin singular, så det blir ma.",
+  "sv": "Det är min syster, hon heter Emma."
+ },
+ {
+  "id": "poss-002",
+  "topic": "poss",
+  "rule": "poss-sg",
+  "q": "Voici [mon] père.",
+  "alt": [
+   "ma",
+   "mes",
+   "ta"
+  ],
+  "why": "Père är maskulint, så det blir mon.",
+  "sv": "Här är min pappa."
+ },
+ {
+  "id": "poss-003",
+  "topic": "poss",
+  "rule": "poss-sg",
+  "q": "Tu aimes [ta] maison ?",
+  "alt": [
+   "ton",
+   "tes",
+   "mon"
+  ],
+  "why": "Maison är feminint och börjar på konsonant, så det blir ta.",
+  "sv": "Tycker du om ditt hus?"
+ },
+ {
+  "id": "poss-004",
+  "topic": "poss",
+  "rule": "poss-sg",
+  "q": "Léa cherche [son] stylo.",
+  "alt": [
+   "sa",
+   "ses",
+   "ma"
+  ],
+  "why": "Stylo är maskulint, så det blir son – även om Léa är en tjej. Det är saken som styr, inte ägaren.",
+  "sv": "Léa letar efter sin penna."
+ },
+ {
+  "id": "poss-005",
+  "topic": "poss",
+  "rule": "poss-sg",
+  "q": "Marc parle avec [sa] mère.",
+  "alt": [
+   "son",
+   "ses",
+   "mon"
+  ],
+  "why": "Mère är feminint, så det blir sa – även om Marc är en kille.",
+  "sv": "Marc pratar med sin mamma."
+ },
+ {
+  "id": "poss-006",
+  "topic": "poss",
+  "rule": "poss-sg",
+  "q": "Où est [ton] sac ?",
+  "alt": [
+   "ta",
+   "tes",
+   "ma"
+  ],
+  "why": "Sac är maskulint, så det blir ton.",
+  "sv": "Var är din väska?"
+ },
+ {
+  "id": "poss-007",
+  "topic": "poss",
+  "rule": "poss-sg",
+  "q": "[Ma] chambre est petite.",
+  "alt": [
+   "Mon",
+   "Mes",
+   "Ton"
+  ],
+  "why": "Chambre är feminint och börjar på konsonant, så det blir ma.",
+  "sv": "Mitt rum är litet."
+ },
+ {
+  "id": "poss-008",
+  "topic": "poss",
+  "rule": "poss-sg",
+  "q": "Il habite avec [son] frère.",
+  "alt": [
+   "sa",
+   "ses",
+   "ma"
+  ],
+  "why": "Frère är maskulint, så det blir son.",
+  "sv": "Han bor med sin bror."
+ },
+ {
+  "id": "poss-009",
+  "topic": "poss",
+  "rule": "poss-pl",
+  "q": "[Mes] parents sont gentils.",
+  "alt": [
+   "Mon",
+   "Ma",
+   "Ta"
+  ],
+  "why": "Parents är plural, så det blir mes.",
+  "sv": "Mina föräldrar är snälla."
+ },
+ {
+  "id": "poss-010",
+  "topic": "poss",
+  "rule": "poss-pl",
+  "q": "Tu as [tes] clés ?",
+  "alt": [
+   "ton",
+   "ta",
+   "ma"
+  ],
+  "why": "Clés är plural, så det blir tes.",
+  "sv": "Har du dina nycklar?"
+ },
+ {
+  "id": "poss-011",
+  "topic": "poss",
+  "rule": "poss-pl",
+  "q": "Julie range [ses] vêtements.",
+  "alt": [
+   "son",
+   "sa",
+   "ma"
+  ],
+  "why": "Vêtements är plural, så det blir ses.",
+  "sv": "Julie plockar undan sina kläder."
+ },
+ {
+  "id": "poss-012",
+  "topic": "poss",
+  "rule": "poss-pl",
+  "q": "Je fais [mes] devoirs.",
+  "alt": [
+   "mon",
+   "ma",
+   "ta"
+  ],
+  "why": "Devoirs är plural, så det blir mes.",
+  "sv": "Jag gör mina läxor."
+ },
+ {
+  "id": "poss-013",
+  "topic": "poss",
+  "rule": "poss-pl",
+  "q": "Paul joue avec [ses] amis.",
+  "alt": [
+   "son",
+   "sa",
+   "ma"
+  ],
+  "why": "Amis är plural, så det blir ses.",
+  "sv": "Paul leker med sina kompisar."
+ },
+ {
+  "id": "poss-014",
+  "topic": "poss",
+  "rule": "poss-pl",
+  "q": "[Tes] chaussures sont belles.",
+  "alt": [
+   "Ton",
+   "Ta",
+   "Ma"
+  ],
+  "why": "Chaussures är plural, så det blir tes.",
+  "sv": "Dina skor är fina."
+ },
+ {
+  "id": "poss-015",
+  "topic": "poss",
+  "rule": "poss-voc",
+  "q": "C'est [mon] amie Sarah.",
+  "alt": [
+   "ma",
+   "m'",
+   "mes"
+  ],
+  "why": "Amie är feminint men börjar på vokal. Då säger man mon, inte ma.",
+  "sv": "Det är min kompis Sarah."
+ },
+ {
+  "id": "poss-016",
+  "topic": "poss",
+  "rule": "poss-voc",
+  "q": "[Mon] école est grande.",
+  "alt": [
+   "Ma",
+   "M'",
+   "Mes"
+  ],
+  "why": "École är feminint men börjar på vokal, så det blir mon.",
+  "sv": "Min skola är stor."
+ },
+ {
+  "id": "poss-017",
+  "topic": "poss",
+  "rule": "poss-voc",
+  "q": "Comment s'appelle [ton] amie ?",
+  "alt": [
+   "ta",
+   "t'",
+   "tes"
+  ],
+  "why": "Amie börjar på vokal, så det blir ton trots att ordet är feminint.",
+  "sv": "Vad heter din kompis?"
+ },
+ {
+  "id": "poss-018",
+  "topic": "poss",
+  "rule": "poss-voc",
+  "q": "Sophie adore [son] école.",
+  "alt": [
+   "sa",
+   "s'",
+   "ses"
+  ],
+  "why": "École börjar på vokal, så det blir son trots att ordet är feminint.",
+  "sv": "Sophie älskar sin skola."
+ },
+ {
+  "id": "poss-019",
+  "topic": "poss",
+  "rule": "poss-voc",
+  "q": "[Mon] adresse, c'est 12 rue Victor Hugo.",
+  "alt": [
+   "Ma",
+   "M'",
+   "Mes"
+  ],
+  "why": "Adresse är feminint men börjar på vokal, så det blir mon.",
+  "sv": "Min adress är Victor Hugo-gatan 12."
+ },
+ {
+  "id": "poss-020",
+  "topic": "poss",
+  "rule": "poss-nous",
+  "q": "Nous aimons [notre] ville.",
+  "alt": [
+   "nos",
+   "notres",
+   "nous"
+  ],
+  "why": "Vår + ett ord i singular = notre. Nos används bara i plural.",
+  "sv": "Vi tycker om vår stad."
+ },
+ {
+  "id": "poss-021",
+  "topic": "poss",
+  "rule": "poss-nous",
+  "q": "Vous avez [vos] livres ?",
+  "alt": [
+   "votre",
+   "vous",
+   "votres"
+  ],
+  "why": "Livres är plural, så det blir vos.",
+  "sv": "Har ni era böcker?"
+ },
+ {
+  "id": "poss-022",
+  "topic": "poss",
+  "rule": "poss-nous",
+  "q": "Les enfants jouent avec [leur] chien.",
+  "alt": [
+   "leurs",
+   "ses",
+   "lui"
+  ],
+  "why": "Deras + ett ord i singular = leur. Leurs används i plural.",
+  "sv": "Barnen leker med sin hund."
+ },
+ {
+  "id": "poss-023",
+  "topic": "poss",
+  "rule": "poss-nous",
+  "q": "Mes grands-parents aiment [leurs] petits-enfants.",
+  "alt": [
+   "leur",
+   "son",
+   "lui"
+  ],
+  "why": "Petits-enfants är plural, så det blir leurs med -s.",
+  "sv": "Mina farföräldrar älskar sina barnbarn."
+ },
+ {
+  "id": "poss-024",
+  "topic": "poss",
+  "rule": "poss-nous",
+  "q": "[Notre] professeur de français est sympa.",
+  "alt": [
+   "Nos",
+   "Nous",
+   "Notres"
+  ],
+  "why": "Professeur är singular, så det blir notre.",
+  "sv": "Vår franskalärare är trevlig."
+ },
+ {
+  "id": "quest-001",
+  "topic": "quest",
+  "rule": "q-mot",
+  "q": "[Où] est-ce que tu habites ? – À Lyon.",
+  "alt": [
+   "Quand",
+   "Qui",
+   "Comment"
+  ],
+  "why": "Svaret är en plats, så frågan börjar med où (var).",
+  "sv": "Var bor du? – I Lyon."
+ },
+ {
+  "id": "quest-002",
+  "topic": "quest",
+  "rule": "q-mot",
+  "q": "[Comment] tu t'appelles ? – Je m'appelle Lucas.",
+  "alt": [
+   "Où",
+   "Quand",
+   "Qui"
+  ],
+  "why": "Man frågar om namn med comment (hur): Comment tu t'appelles ?",
+  "sv": "Vad heter du? – Jag heter Lucas."
+ },
+ {
+  "id": "quest-003",
+  "topic": "quest",
+  "rule": "q-mot",
+  "q": "[Quand] est-ce que tu as cours de français ? – Le lundi.",
+  "alt": [
+   "Où",
+   "Comment",
+   "Qui"
+  ],
+  "why": "Svaret är en dag, så frågan börjar med quand (när).",
+  "sv": "När har du franska? – På måndagar."
+ },
+ {
+  "id": "quest-004",
+  "topic": "quest",
+  "rule": "q-mot",
+  "q": "Tu as [quel] âge ? – J'ai quinze ans.",
+  "alt": [
+   "quelle",
+   "qui",
+   "que"
+  ],
+  "why": "Ålder frågar man om med quel âge. Âge är maskulint, så det är quel, inte quelle.",
+  "sv": "Hur gammal är du? – Jag är femton år."
+ },
+ {
+  "id": "quest-005",
+  "topic": "quest",
+  "rule": "q-mot",
+  "q": "[Qui] est-ce ? – C'est mon frère.",
+  "alt": [
+   "Que",
+   "Quoi",
+   "Où"
+  ],
+  "why": "Man frågar om en person med qui (vem).",
+  "sv": "Vem är det? – Det är min bror."
+ },
+ {
+  "id": "quest-006",
+  "topic": "quest",
+  "rule": "q-mot",
+  "q": "[Pourquoi] tu apprends le français ? – Parce que j'aime la France.",
+  "alt": [
+   "Comment",
+   "Où",
+   "Quand"
+  ],
+  "why": "Svaret börjar med parce que (därför att), så frågan är pourquoi (varför).",
+  "sv": "Varför lär du dig franska? – För att jag gillar Frankrike."
+ },
+ {
+  "id": "quest-007",
+  "topic": "quest",
+  "rule": "q-mot",
+  "q": "Ça coûte [combien] ? – Deux euros.",
+  "alt": [
+   "comment",
+   "quand",
+   "où"
+  ],
+  "why": "Pris frågar man om med combien (hur mycket).",
+  "sv": "Hur mycket kostar det? – Två euro."
+ },
+ {
+  "id": "quest-008",
+  "topic": "quest",
+  "rule": "q-questce",
+  "q": "[Qu'est-ce que] tu manges ? – Une pizza.",
+  "alt": [
+   "Que est-ce que",
+   "Quoi est-ce que",
+   "Est-ce que"
+  ],
+  "why": "Vad = qu'est-ce que. Que blir qu' framför est-ce.",
+  "sv": "Vad äter du? – En pizza."
+ },
+ {
+  "id": "quest-009",
+  "topic": "quest",
+  "rule": "q-questce",
+  "q": "[Qu'est-ce que] vous faites ce soir ?",
+  "alt": [
+   "Que est-ce que",
+   "Quoi est-ce que",
+   "Est-ce que"
+  ],
+  "why": "Vad = qu'est-ce que. Bara est-ce que ger en ja/nej-fråga och passar inte här.",
+  "sv": "Vad gör ni i kväll?"
+ },
+ {
+  "id": "quest-010",
+  "topic": "quest",
+  "rule": "q-questce",
+  "q": "[Qu'est-ce qu'il] aime faire ?",
+  "alt": [
+   "Qu'est-ce que il",
+   "Que est-ce qu'il",
+   "Quoi est-ce qu'il"
+  ],
+  "why": "Que blir qu' framför vokal två gånger: qu'est-ce qu'il.",
+  "sv": "Vad tycker han om att göra?"
+ },
+ {
+  "id": "quest-011",
+  "topic": "quest",
+  "rule": "q-estce",
+  "q": "[Est-ce que] tu parles anglais ? – Oui, un peu.",
+  "alt": [
+   "Qu'est-ce que",
+   "Est-ce",
+   "Que"
+  ],
+  "why": "En ja/nej-fråga kan börja med est-ce que. Qu'est-ce que betyder vad.",
+  "sv": "Pratar du engelska? – Ja, lite."
+ },
+ {
+  "id": "quest-012",
+  "topic": "quest",
+  "rule": "q-estce",
+  "q": "[Est-ce qu'elle] a un chat ?",
+  "alt": [
+   "Est-ce que elle",
+   "Qu'est-ce qu'elle",
+   "Est-ce elle"
+  ],
+  "why": "Que blir qu' framför vokal: est-ce qu'elle.",
+  "sv": "Har hon en katt?"
+ },
+ {
+  "id": "quest-013",
+  "topic": "quest",
+  "rule": "q-int",
+  "q": "Tu aimes le sport ? – [Oui], j'adore le foot.",
+  "alt": [
+   "Non",
+   "Si",
+   "Merci"
+  ],
+  "why": "Svaret är jakande på en jakande fråga, så det blir oui. Si använder man bara efter en nekad fråga.",
+  "sv": "Gillar du sport? – Ja, jag älskar fotboll."
+ },
+ {
+  "id": "quest-014",
+  "topic": "quest",
+  "rule": "q-int",
+  "q": "Tu n'as pas faim ? – [Si], j'ai très faim !",
+  "alt": [
+   "Oui",
+   "Non",
+   "Merci"
+  ],
+  "why": "Ett jakande svar på en nekad fråga är si – precis som svenskans jo.",
+  "sv": "Är du inte hungrig? – Jo, jag är jättehungrig!"
+ },
+ {
+  "id": "quest-015",
+  "topic": "quest",
+  "rule": "q-int",
+  "type": "rw",
+  "q": "Est-ce que tu as un chien ?",
+  "cue": "fråga med rösten",
+  "a": "Tu as un chien ?",
+  "alt": [
+   "As tu un chien ?",
+   "Un chien tu as ?"
+  ],
+  "why": "Med rösten behåller man vanlig ordföljd och höjer bara tonen i slutet.",
+  "sv": "Har du en hund?"
+ },
+ {
+  "id": "quest-016",
+  "topic": "quest",
+  "rule": "q-int",
+  "type": "rw",
+  "q": "Est-ce que vous êtes suédois ?",
+  "cue": "fråga med rösten",
+  "a": "Vous êtes suédois ?",
+  "alt": [
+   "Êtes vous suédois ?",
+   "Suédois vous êtes ?"
+  ],
+  "why": "Vanlig ordföljd som i ett påstående – bara frågetecknet och tonen visar att det är en fråga.",
+  "sv": "Är ni svenskar?"
+ },
+ {
+  "id": "quest-017",
+  "topic": "quest",
+  "rule": "q-estce",
+  "type": "rw",
+  "q": "Tu as un frère.",
+  "cue": "est-ce que",
+  "a": "Est-ce que tu as un frère ?",
+  "alt": [
+   "Est-ce que as tu un frère ?",
+   "Tu est-ce que as un frère ?"
+  ],
+  "why": "Sätt est-ce que först och behåll sedan vanlig ordföljd: tu as.",
+  "sv": "Har du en bror?"
+ },
+ {
+  "id": "quest-018",
+  "topic": "quest",
+  "rule": "q-estce",
+  "type": "rw",
+  "q": "Vous habitez à Lyon.",
+  "cue": "est-ce que",
+  "a": "Est-ce que vous habitez à Lyon ?",
+  "alt": [
+   "Est-ce que habitez vous à Lyon ?",
+   "Vous habitez est-ce que à Lyon ?"
+  ],
+  "why": "Est-ce que först, sedan subjekt + verb som vanligt.",
+  "sv": "Bor ni i Lyon?"
+ },
+ {
+  "id": "quest-019",
+  "topic": "quest",
+  "rule": "q-estce",
+  "type": "rw",
+  "q": "Paul a une sœur.",
+  "cue": "est-ce que",
+  "a": "Est-ce que Paul a une sœur ?",
+  "alt": [
+   "Est-ce que a Paul une sœur ?",
+   "Paul est-ce que a une sœur ?"
+  ],
+  "why": "Est-ce que först – ordföljden efteråt ändras inte (inte som i svenskan: Har Paul …).",
+  "sv": "Har Paul en syster?"
+ },
+ {
+  "id": "quest-020",
+  "topic": "quest",
+  "rule": "q-estce",
+  "type": "rw",
+  "q": "Tu aimes les maths.",
+  "cue": "est-ce que",
+  "a": "Est-ce que tu aimes les maths ?",
+  "alt": [
+   "Est-ce que aimes tu les maths ?",
+   "Tu aimes est-ce que les maths ?"
+  ],
+  "why": "Est-ce que först, sedan tu aimes med vanlig ordföljd.",
+  "sv": "Gillar du matte?"
+ },
+ {
+  "id": "quest-021",
+  "topic": "quest",
+  "rule": "q-estce",
+  "type": "rw",
+  "q": "Nous mangeons à midi.",
+  "cue": "est-ce que",
+  "a": "Est-ce que nous mangeons à midi ?",
+  "alt": [
+   "Est-ce que mangeons nous à midi ?",
+   "Nous est-ce que mangeons à midi ?"
+  ],
+  "why": "Est-ce que först, sedan nous mangeons som vanligt.",
+  "sv": "Äter vi klockan tolv?"
+ },
+ {
+  "id": "quest-022",
+  "topic": "quest",
+  "rule": "q-mot",
+  "type": "rw",
+  "q": "Tu habites à Nice.",
+  "cue": "où + est-ce que",
+  "a": "Où est-ce que tu habites ?",
+  "alt": [
+   "Est-ce que où tu habites ?",
+   "Où tu est-ce que habites ?"
+  ],
+  "why": "Frågeordet först, sedan est-ce que och vanlig ordföljd: où est-ce que tu habites.",
+  "sv": "Var bor du?"
+ },
+ {
+  "id": "quest-023",
+  "topic": "quest",
+  "rule": "q-mot",
+  "type": "rw",
+  "q": "Tu arrives à huit heures.",
+  "cue": "quand + est-ce que",
+  "a": "Quand est-ce que tu arrives ?",
+  "alt": [
+   "Est-ce que quand tu arrives ?",
+   "Quand tu est-ce que arrives ?"
+  ],
+  "why": "Frågeordet först, sedan est-ce que och vanlig ordföljd.",
+  "sv": "När kommer du?"
+ },
+ {
+  "id": "quest-024",
+  "topic": "quest",
+  "rule": "q-questce",
+  "type": "rw",
+  "q": "Tu cherches ton sac.",
+  "cue": "qu'est-ce que",
+  "a": "Qu'est-ce que tu cherches ?",
+  "alt": [
+   "Qu'est-ce que cherches tu ?",
+   "Tu qu'est-ce que cherches ?"
+  ],
+  "why": "Qu'est-ce que (vad) först, sedan tu cherches med vanlig ordföljd.",
+  "sv": "Vad letar du efter?"
+ },
+ {
+  "id": "quest-025",
+  "topic": "quest",
+  "rule": "q-questce",
+  "type": "rw",
+  "q": "Elle regarde un film.",
+  "cue": "qu'est-ce que",
+  "a": "Qu'est-ce qu'elle regarde ?",
+  "alt": [
+   "Qu'est-ce regarde qu'elle ?",
+   "Qu'elle qu'est-ce regarde ?"
+  ],
+  "why": "Qu'est-ce que blir qu'est-ce qu' framför elle. Sedan kommer verbet: qu'est-ce qu'elle regarde.",
+  "sv": "Vad tittar hon på?"
+ },
+ {
+  "id": "neg-001",
+  "topic": "neg",
+  "rule": "neg-pas",
+  "q": "Je [ne] parle [pas] espagnol.",
+  "alt": [
+   "pas … ne",
+   "non … pas",
+   "ne … non"
+  ],
+  "why": "Ne står före verbet och pas efter: je ne parle pas.",
+  "sv": "Jag pratar inte spanska."
+ },
+ {
+  "id": "neg-002",
+  "topic": "neg",
+  "rule": "neg-pas",
+  "q": "Il [ne] joue [pas] au tennis.",
+  "alt": [
+   "n' … pas",
+   "pas … ne",
+   "ne … non"
+  ],
+  "why": "Joue börjar på konsonant, så det blir ne (inte n'). Pas kommer efter verbet.",
+  "sv": "Han spelar inte tennis."
+ },
+ {
+  "id": "neg-003",
+  "topic": "neg",
+  "rule": "neg-pas",
+  "q": "Nous [ne sommes pas] en retard.",
+  "alt": [
+   "sommes ne pas",
+   "ne pas sommes",
+   "ne sommes non"
+  ],
+  "why": "Verbet står mellan ne och pas: ne sommes pas.",
+  "sv": "Vi är inte sena."
+ },
+ {
+  "id": "neg-004",
+  "topic": "neg",
+  "rule": "neg-pas",
+  "q": "Tu [ne] regardes [pas] la télé ?",
+  "alt": [
+   "n' … pas",
+   "pas … ne",
+   "ne … non"
+  ],
+  "why": "Ne före verbet, pas efter. Non betyder nej och används inte så här.",
+  "sv": "Tittar du inte på tv?"
+ },
+ {
+  "id": "neg-005",
+  "topic": "neg",
+  "rule": "neg-n",
+  "q": "Ce [n'est pas] mon sac.",
+  "alt": [
+   "ne est pas",
+   "est ne pas",
+   "n'est non"
+  ],
+  "why": "Est börjar på vokal, så ne blir n': n'est pas.",
+  "sv": "Det är inte min väska."
+ },
+ {
+  "id": "neg-006",
+  "topic": "neg",
+  "rule": "neg-n",
+  "q": "Je [n'aime pas] le poisson.",
+  "alt": [
+   "ne aime pas",
+   "n'aime non",
+   "ne pas aime"
+  ],
+  "why": "Aime börjar på vokal, så ne blir n'. Pas kommer efter verbet.",
+  "sv": "Jag tycker inte om fisk."
+ },
+ {
+  "id": "neg-007",
+  "topic": "neg",
+  "rule": "neg-n",
+  "q": "Elle [n'habite pas] à Paris.",
+  "alt": [
+   "ne habite pas",
+   "habite ne pas",
+   "n'habite non"
+  ],
+  "why": "H:et i habite är stumt, så ne blir n': n'habite pas.",
+  "sv": "Hon bor inte i Paris."
+ },
+ {
+  "id": "neg-008",
+  "topic": "neg",
+  "rule": "neg-n",
+  "q": "Vous [n'écoutez pas] le prof !",
+  "alt": [
+   "ne écoutez pas",
+   "écoutez ne pas",
+   "n'écoutez non"
+  ],
+  "why": "Écoutez börjar på vokal, så ne blir n'.",
+  "sv": "Ni lyssnar inte på läraren!"
+ },
+ {
+  "id": "neg-009",
+  "topic": "neg",
+  "rule": "neg-de",
+  "q": "Je n'ai pas [de] frère.",
+  "alt": [
+   "un",
+   "des",
+   "une"
+  ],
+  "why": "Efter ne … pas blir un, une och des oftast de: pas de frère.",
+  "sv": "Jag har ingen bror."
+ },
+ {
+  "id": "neg-010",
+  "topic": "neg",
+  "rule": "neg-de",
+  "q": "Nous n'avons pas [de] chien.",
+  "alt": [
+   "un",
+   "une",
+   "des"
+  ],
+  "why": "Efter ne … pas blir un till de: pas de chien.",
+  "sv": "Vi har ingen hund."
+ },
+ {
+  "id": "neg-011",
+  "topic": "neg",
+  "rule": "neg-de",
+  "q": "Elle ne mange pas [de] viande.",
+  "alt": [
+   "de la",
+   "du",
+   "des"
+  ],
+  "why": "Efter ne … pas blir det bara de: pas de viande.",
+  "sv": "Hon äter inte kött."
+ },
+ {
+  "id": "neg-012",
+  "topic": "neg",
+  "rule": "neg-de",
+  "q": "Je n'ai pas [d'] ordinateur.",
+  "alt": [
+   "de",
+   "un",
+   "d'un"
+  ],
+  "why": "Pas de blir pas d' framför vokal: pas d'ordinateur.",
+  "sv": "Jag har ingen dator."
+ },
+ {
+  "id": "neg-013",
+  "topic": "neg",
+  "rule": "neg-de",
+  "q": "Tu ne bois pas [de] café ?",
+  "alt": [
+   "du",
+   "d'",
+   "des"
+  ],
+  "why": "Efter ne … pas blir det de. Café börjar på konsonant, så ingen apostrof.",
+  "sv": "Dricker du inte kaffe?"
+ },
+ {
+  "id": "neg-014",
+  "topic": "neg",
+  "rule": "neg-de",
+  "q": "Je n'ai pas [d'] argent.",
+  "alt": [
+   "de",
+   "de l'",
+   "du"
+  ],
+  "why": "Pas de blir pas d' framför vokal: pas d'argent.",
+  "sv": "Jag har inga pengar."
+ },
+ {
+  "id": "neg-015",
+  "topic": "neg",
+  "rule": "neg-pas",
+  "type": "rw",
+  "q": "Je parle allemand.",
+  "cue": "ne … pas",
+  "a": "Je ne parle pas allemand.",
+  "alt": [
+   "Je ne pas parle allemand.",
+   "Ne je parle pas allemand."
+  ],
+  "why": "Ne före verbet och pas direkt efter: je ne parle pas.",
+  "sv": "Jag pratar inte tyska."
+ },
+ {
+  "id": "neg-016",
+  "topic": "neg",
+  "rule": "neg-pas",
+  "type": "rw",
+  "q": "Nous regardons le match.",
+  "cue": "ne … pas",
+  "a": "Nous ne regardons pas le match.",
+  "alt": [
+   "Nous ne pas regardons le match.",
+   "Nous regardons ne pas le match."
+  ],
+  "why": "Verbet står mellan ne och pas: ne regardons pas.",
+  "sv": "Vi tittar inte på matchen."
+ },
+ {
+  "id": "neg-017",
+  "topic": "neg",
+  "rule": "neg-pas",
+  "type": "rw",
+  "q": "Tu travailles le samedi.",
+  "cue": "ne … pas",
+  "a": "Tu ne travailles pas le samedi.",
+  "alt": [
+   "Tu ne travailles le samedi pas.",
+   "Tu pas ne travailles le samedi."
+  ],
+  "why": "Pas kommer direkt efter verbet, inte sist i meningen.",
+  "sv": "Du jobbar inte på lördagar."
+ },
+ {
+  "id": "neg-018",
+  "topic": "neg",
+  "rule": "neg-pas",
+  "type": "rw",
+  "q": "Mon frère parle français.",
+  "cue": "ne … pas",
+  "a": "Mon frère ne parle pas français.",
+  "alt": [
+   "Mon frère ne pas parle français.",
+   "Ne mon frère parle pas français."
+  ],
+  "why": "Ne står före verbet och pas efter – inte först i meningen.",
+  "sv": "Min bror pratar inte franska."
+ },
+ {
+  "id": "neg-019",
+  "topic": "neg",
+  "rule": "neg-n",
+  "type": "rw",
+  "q": "J'aime le fromage.",
+  "cue": "ne … pas",
+  "a": "Je n'aime pas le fromage.",
+  "alt": [
+   "Je n'aime le fromage pas.",
+   "Je pas n'aime le fromage."
+  ],
+  "why": "J'aime blir je n'aime pas. Le finns kvar efter aimer.",
+  "sv": "Jag tycker inte om ost."
+ },
+ {
+  "id": "neg-020",
+  "topic": "neg",
+  "rule": "neg-n",
+  "type": "rw",
+  "q": "Il habite à Marseille.",
+  "cue": "ne … pas",
+  "a": "Il n'habite pas à Marseille.",
+  "alt": [
+   "Il n'habite à Marseille pas.",
+   "Il pas n'habite à Marseille."
+  ],
+  "why": "Ne blir n' framför habite. Pas kommer direkt efter verbet.",
+  "sv": "Han bor inte i Marseille."
+ },
+ {
+  "id": "neg-021",
+  "topic": "neg",
+  "rule": "neg-n",
+  "type": "rw",
+  "q": "Mon frère est grand.",
+  "cue": "ne … pas",
+  "a": "Mon frère n'est pas grand.",
+  "alt": [
+   "Mon frère pas n'est grand.",
+   "Mon frère n'est grand pas."
+  ],
+  "why": "Est börjar på vokal, så det blir n'est pas.",
+  "sv": "Min bror är inte lång."
+ },
+ {
+  "id": "neg-022",
+  "topic": "neg",
+  "rule": "neg-de",
+  "type": "rw",
+  "q": "J'ai un chien.",
+  "cue": "ne … pas",
+  "a": "Je n'ai pas de chien.",
+  "alt": [
+   "Je n'ai de chien pas.",
+   "Je pas n'ai de chien."
+  ],
+  "why": "Un blir de efter ne … pas: je n'ai pas de chien.",
+  "sv": "Jag har ingen hund."
+ },
+ {
+  "id": "neg-023",
+  "topic": "neg",
+  "rule": "neg-de",
+  "type": "rw",
+  "q": "Elle a une voiture.",
+  "cue": "ne … pas",
+  "a": "Elle n'a pas de voiture.",
+  "alt": [
+   "Elle n'a de voiture pas.",
+   "Elle pas n'a de voiture."
+  ],
+  "why": "Une blir de efter ne … pas: pas de voiture.",
+  "sv": "Hon har ingen bil."
+ },
+ {
+  "id": "neg-024",
+  "topic": "neg",
+  "rule": "neg-de",
+  "type": "rw",
+  "q": "Nous avons des devoirs ce soir.",
+  "cue": "ne … pas",
+  "a": "Nous n'avons pas de devoirs ce soir.",
+  "alt": [
+   "Nous n'avons de devoirs pas ce soir.",
+   "Nous pas n'avons de devoirs ce soir."
+  ],
+  "why": "Des blir de efter ne … pas: pas de devoirs.",
+  "sv": "Vi har inga läxor i kväll."
+ },
+ {
+  "id": "voudrais-001",
+  "topic": "voudrais",
+  "rule": "voudrais",
+  "q": "Je [voudrais] un café, s'il vous plaît.",
+  "alt": [
+   "voudrait",
+   "vouloir",
+   "voudrez"
+  ],
+  "why": "Med je slutar formen på -s: je voudrais.",
+  "sv": "Jag skulle vilja ha en kaffe, tack."
+ },
+ {
+  "id": "voudrais-002",
+  "topic": "voudrais",
+  "rule": "voudrais",
+  "q": "Bonjour, je [voudrais] deux croissants.",
+  "alt": [
+   "voudrait",
+   "veut",
+   "vouloir"
+  ],
+  "why": "Je voudrais är det artiga sättet att beställa. Je + -s.",
+  "sv": "Hej, jag skulle vilja ha två croissanter."
+ },
+ {
+  "id": "voudrais-003",
+  "topic": "voudrais",
+  "rule": "voudrais",
+  "q": "Tu [voudrais] un sandwich ?",
+  "alt": [
+   "voudrait",
+   "voudrez",
+   "vouloir"
+  ],
+  "why": "Tu voudrais – samma form som je voudrais, med -s.",
+  "sv": "Skulle du vilja ha en smörgås?"
+ },
+ {
+  "id": "voudrais-004",
+  "topic": "voudrais",
+  "rule": "voudrais",
+  "q": "Elle [voudrait] un jus d'orange.",
+  "alt": [
+   "voudrais",
+   "voudrez",
+   "vouloir"
+  ],
+  "why": "Med il och elle slutar formen på -t: elle voudrait.",
+  "sv": "Hon skulle vilja ha en apelsinjuice."
+ },
+ {
+  "id": "voudrais-005",
+  "topic": "voudrais",
+  "rule": "voudrais",
+  "q": "Vous [voudriez] un dessert ?",
+  "alt": [
+   "voudrais",
+   "voudrait",
+   "vouloir"
+  ],
+  "why": "Med vous blir det voudriez.",
+  "sv": "Skulle ni vilja ha en efterrätt?"
+ },
+ {
+  "id": "voudrais-006",
+  "topic": "voudrais",
+  "rule": "voudrais",
+  "q": "Nous [voudrions] deux billets.",
+  "alt": [
+   "voudrais",
+   "voudrait",
+   "voudriez"
+  ],
+  "why": "Med nous blir det voudrions.",
+  "sv": "Vi skulle vilja ha två biljetter."
+ },
+ {
+  "id": "voudrais-007",
+  "topic": "voudrais",
+  "rule": "voudrais",
+  "q": "Je voudrais [aller] au cinéma ce soir.",
+  "alt": [
+   "vais",
+   "va",
+   "allé"
+  ],
+  "why": "Efter je voudrais kommer verbet i infinitiv: aller.",
+  "sv": "Jag skulle vilja gå på bio i kväll."
+ },
+ {
+  "id": "voudrais-008",
+  "topic": "voudrais",
+  "rule": "voudrais",
+  "q": "Je voudrais [parler] avec le professeur.",
+  "alt": [
+   "parle",
+   "parles",
+   "parlé"
+  ],
+  "why": "Efter voudrais står infinitiv, som slutar på -er: parler.",
+  "sv": "Jag skulle vilja prata med läraren."
+ },
+ {
+  "id": "voudrais-009",
+  "topic": "voudrais",
+  "rule": "voudrais",
+  "q": "Tu voudrais [manger] une pizza ?",
+  "alt": [
+   "manges",
+   "mange",
+   "mangé"
+  ],
+  "why": "Efter voudrais står infinitiv: manger.",
+  "sv": "Skulle du vilja äta en pizza?"
+ },
+ {
+  "id": "voudrais-010",
+  "topic": "voudrais",
+  "rule": "voudrais",
+  "q": "Il voudrait [habiter] à Paris.",
+  "alt": [
+   "habite",
+   "habites",
+   "habité"
+  ],
+  "why": "Efter voudrait står infinitiv: habiter.",
+  "sv": "Han skulle vilja bo i Paris."
+ },
+ {
+  "id": "voudrais-011",
+  "topic": "voudrais",
+  "rule": "voudrais",
+  "q": "Je voudrais [acheter] une robe.",
+  "alt": [
+   "achète",
+   "achètes",
+   "acheté"
+  ],
+  "why": "Efter voudrais står infinitiv: acheter, utan accent.",
+  "sv": "Jag skulle vilja köpa en klänning."
+ },
+ {
+  "id": "voudrais-012",
+  "topic": "voudrais",
+  "rule": "voudrais",
+  "q": "Je voudrais [visiter] le Louvre.",
+  "alt": [
+   "visite",
+   "visites",
+   "visité"
+  ],
+  "why": "Efter voudrais står infinitiv: visiter.",
+  "sv": "Jag skulle vilja besöka Louvren."
+ },
+ {
+  "id": "voudrais-013",
+  "topic": "voudrais",
+  "rule": "aimer-inf",
+  "q": "J'aime [nager] en été.",
+  "alt": [
+   "nage",
+   "nages",
+   "nagé"
+  ],
+  "why": "Efter aimer står nästa verb i infinitiv: nager. Som svenskans ”tycker om att simma”.",
+  "sv": "Jag tycker om att simma på sommaren."
+ },
+ {
+  "id": "voudrais-014",
+  "topic": "voudrais",
+  "rule": "aimer-inf",
+  "q": "Tu aimes [danser] ?",
+  "alt": [
+   "danses",
+   "danse",
+   "dansé"
+  ],
+  "why": "Bara aimer böjs. Nästa verb står i infinitiv: danser.",
+  "sv": "Gillar du att dansa?"
+ },
+ {
+  "id": "voudrais-015",
+  "topic": "voudrais",
+  "rule": "aimer-inf",
+  "q": "Mon frère aime [jouer] aux jeux vidéo.",
+  "alt": [
+   "joue",
+   "joues",
+   "joué"
+  ],
+  "why": "Efter aime står infinitiv: jouer.",
+  "sv": "Min bror gillar att spela tv-spel."
+ },
+ {
+  "id": "voudrais-016",
+  "topic": "voudrais",
+  "rule": "aimer-inf",
+  "q": "Elle adore [lire] des BD.",
+  "alt": [
+   "lit",
+   "lis",
+   "lu"
+  ],
+  "why": "Efter adorer står infinitiv, precis som efter aimer: lire.",
+  "sv": "Hon älskar att läsa serier."
+ },
+ {
+  "id": "voudrais-017",
+  "topic": "voudrais",
+  "rule": "aimer-inf",
+  "q": "Je déteste [ranger] ma chambre.",
+  "alt": [
+   "range",
+   "ranges",
+   "rangé"
+  ],
+  "why": "Efter détester står infinitiv: ranger.",
+  "sv": "Jag hatar att städa mitt rum."
+ },
+ {
+  "id": "voudrais-018",
+  "topic": "voudrais",
+  "rule": "aimer-inf",
+  "q": "Nous aimons [chanter].",
+  "alt": [
+   "chantons",
+   "chante",
+   "chanté"
+  ],
+  "why": "Bara aimons böjs efter nous. Nästa verb står i infinitiv: chanter.",
+  "sv": "Vi tycker om att sjunga."
+ },
+ {
+  "id": "voudrais-019",
+  "topic": "voudrais",
+  "rule": "aimer-inf",
+  "q": "Vous aimez [voyager] ?",
+  "alt": [
+   "voyagez",
+   "voyage",
+   "voyagé"
+  ],
+  "why": "Bara aimez böjs. Nästa verb står i infinitiv: voyager.",
+  "sv": "Tycker ni om att resa?"
+ },
+ {
+  "id": "voudrais-020",
+  "topic": "voudrais",
+  "rule": "aimer-inf",
+  "q": "Je n'aime pas [courir].",
+  "alt": [
+   "cours",
+   "court",
+   "couru"
+  ],
+  "why": "Även efter n'aime pas står infinitiv: courir.",
+  "sv": "Jag tycker inte om att springa."
+ },
+ {
+  "id": "voudrais-021",
+  "topic": "voudrais",
+  "rule": "aimer-inf",
+  "q": "Tu aimes [regarder] des films ?",
+  "alt": [
+   "regardes",
+   "regarde",
+   "regardé"
+  ],
+  "why": "Efter aimes står infinitiv: regarder.",
+  "sv": "Gillar du att titta på film?"
+ },
+ {
+  "id": "voudrais-022",
+  "topic": "voudrais",
+  "rule": "aimer-inf",
+  "q": "Mes amis aiment [faire] du sport.",
+  "alt": [
+   "font",
+   "fait",
+   "fais"
+  ],
+  "why": "Efter aiment står infinitiv: faire.",
+  "sv": "Mina kompisar gillar att träna."
+ },
+ {
+  "id": "voudrais-023",
+  "topic": "voudrais",
+  "rule": "aimer-inf",
+  "q": "J'aime [écouter] de la musique.",
+  "alt": [
+   "écoute",
+   "écoutes",
+   "écouté"
+  ],
+  "why": "Efter aime står infinitiv: écouter.",
+  "sv": "Jag tycker om att lyssna på musik."
+ },
+ {
+  "id": "voudrais-024",
+  "topic": "voudrais",
+  "rule": "aimer-inf",
+  "q": "[J'aime] cuisiner avec ma mère.",
+  "alt": [
+   "Je aime",
+   "J'aimer",
+   "Je aimer"
+  ],
+  "why": "Je blir j' framför vokal, och aimer böjs: j'aime. Det är nästa verb som står i infinitiv.",
+  "sv": "Jag tycker om att laga mat med min mamma."
+ },
+ {
+  "id": "ilya-001",
+  "topic": "ilya",
+  "rule": "ilya",
+  "q": "Dans ma ville, [il y a] un parc.",
+  "alt": [
+   "il est",
+   "c'est",
+   "il a"
+  ],
+  "why": "Det finns = il y a.",
+  "sv": "I min stad finns det en park."
+ },
+ {
+  "id": "ilya-002",
+  "topic": "ilya",
+  "rule": "ilya",
+  "q": "[Il y a] vingt élèves dans ma classe.",
+  "alt": [
+   "Il est",
+   "Ils sont",
+   "C'est"
+  ],
+  "why": "Det finns/det är (antal) = il y a. Il y a ändras inte i plural.",
+  "sv": "Det är tjugo elever i min klass."
+ },
+ {
+  "id": "ilya-003",
+  "topic": "ilya",
+  "rule": "ilya",
+  "q": "Dans la cuisine, [il y a] une table.",
+  "alt": [
+   "il est",
+   "c'est",
+   "ils sont"
+  ],
+  "why": "Det finns = il y a.",
+  "sv": "I köket finns det ett bord."
+ },
+ {
+  "id": "ilya-004",
+  "topic": "ilya",
+  "rule": "ilya",
+  "q": "[Il y a] des magasins près de chez moi.",
+  "alt": [
+   "Ils sont",
+   "Il est",
+   "Il sont"
+  ],
+  "why": "Il y a används både med singular och plural: il y a des magasins.",
+  "sv": "Det finns affärer nära mig."
+ },
+ {
+  "id": "ilya-005",
+  "topic": "ilya",
+  "rule": "ilya",
+  "q": "Il y a [une] boulangerie dans ma rue.",
+  "alt": [
+   "un",
+   "de",
+   "des"
+  ],
+  "why": "Boulangerie är feminint, så det blir une.",
+  "sv": "Det finns ett bageri på min gata."
+ },
+ {
+  "id": "ilya-006",
+  "topic": "ilya",
+  "rule": "ilya",
+  "q": "[Il y a] un problème ?",
+  "alt": [
+   "Il est",
+   "Il a",
+   "Est"
+  ],
+  "why": "Finns det ett problem? = Il y a un problème ?",
+  "sv": "Är det något problem?"
+ },
+ {
+  "id": "ilya-007",
+  "topic": "ilya",
+  "rule": "ilya",
+  "q": "Sur la table, [il y a] trois livres.",
+  "alt": [
+   "il est",
+   "ils sont",
+   "sont"
+  ],
+  "why": "Il y a ändras inte, även om det är flera saker.",
+  "sv": "På bordet ligger det tre böcker."
+ },
+ {
+  "id": "ilya-008",
+  "topic": "ilya",
+  "rule": "ilya",
+  "q": "Il y a [des] fleurs dans le jardin.",
+  "alt": [
+   "de",
+   "un",
+   "une"
+  ],
+  "why": "Fleurs är plural, så det blir des. De används bara efter en negation.",
+  "sv": "Det finns blommor i trädgården."
+ },
+ {
+  "id": "ilya-009",
+  "topic": "ilya",
+  "rule": "ilya",
+  "q": "[Il y a] un chat sous le lit !",
+  "alt": [
+   "Il est",
+   "Il a",
+   "Est"
+  ],
+  "why": "Det är/finns en katt = il y a un chat.",
+  "sv": "Det är en katt under sängen!"
+ },
+ {
+  "id": "ilya-010",
+  "topic": "ilya",
+  "rule": "ilya",
+  "q": "À Paris, [il y a] beaucoup de musées.",
+  "alt": [
+   "il est",
+   "c'est",
+   "ils sont"
+  ],
+  "why": "Det finns = il y a, även med beaucoup de.",
+  "sv": "I Paris finns det många museer."
+ },
+ {
+  "id": "ilya-011",
+  "topic": "ilya",
+  "rule": "ilya",
+  "q": "Dans ma famille, [il y a] cinq personnes.",
+  "alt": [
+   "il est",
+   "ils sont",
+   "c'est"
+  ],
+  "why": "Il y a används när man räknar hur många det är.",
+  "sv": "Vi är fem personer i min familj."
+ },
+ {
+  "id": "ilya-012",
+  "topic": "ilya",
+  "rule": "ilya",
+  "q": "[Il y a] combien d'élèves dans ta classe ?",
+  "alt": [
+   "Il est",
+   "Ils sont",
+   "C'est"
+  ],
+  "why": "Hur många finns det? = Il y a combien … ?",
+  "sv": "Hur många elever är det i din klass?"
+ },
+ {
+  "id": "ilya-013",
+  "topic": "ilya",
+  "rule": "ilya",
+  "q": "Dans mon quartier, il y a [un] stade.",
+  "alt": [
+   "de",
+   "une",
+   "des"
+  ],
+  "why": "Stade är maskulint, och i en jakande mening står un kvar. De kommer bara efter en negation.",
+  "sv": "I mitt kvarter finns det en idrottsarena."
+ },
+ {
+  "id": "ilya-014",
+  "topic": "ilya",
+  "rule": "ilya-neg",
+  "q": "Il [n'y a] pas de métro dans ma ville.",
+  "alt": [
+   "y a",
+   "n'a",
+   "ne y a"
+  ],
+  "why": "Nekat blir det il n'y a pas. Ne blir n' framför y.",
+  "sv": "Det finns ingen tunnelbana i min stad."
+ },
+ {
+  "id": "ilya-015",
+  "topic": "ilya",
+  "rule": "ilya-neg",
+  "q": "Il n'y a pas [de] piscine ici.",
+  "alt": [
+   "une",
+   "des",
+   "un"
+  ],
+  "why": "Efter il n'y a pas blir une till de.",
+  "sv": "Det finns ingen simhall här."
+ },
+ {
+  "id": "ilya-016",
+  "topic": "ilya",
+  "rule": "ilya-neg",
+  "q": "[Il n'y a pas] de cinéma dans mon village.",
+  "alt": [
+   "Il n'y pas a",
+   "Il ne y a pas",
+   "Il n'a pas"
+  ],
+  "why": "Ne blir n' framför y, och pas kommer efter a: il n'y a pas.",
+  "sv": "Det finns ingen bio i min by."
+ },
+ {
+  "id": "ilya-017",
+  "topic": "ilya",
+  "rule": "ilya-neg",
+  "q": "Il n'y a pas [d'] eau dans la bouteille.",
+  "alt": [
+   "de",
+   "de l'",
+   "du"
+  ],
+  "why": "Pas de blir pas d' framför vokal: pas d'eau.",
+  "sv": "Det finns inget vatten i flaskan."
+ },
+ {
+  "id": "ilya-018",
+  "topic": "ilya",
+  "rule": "ilya-neg",
+  "q": "Dans le frigo, il n'y a pas [de] lait.",
+  "alt": [
+   "du",
+   "un",
+   "des"
+  ],
+  "why": "Efter il n'y a pas står bara de: pas de lait.",
+  "sv": "Det finns ingen mjölk i kylen."
+ },
+ {
+  "id": "ilya-019",
+  "topic": "ilya",
+  "rule": "ilya-neg",
+  "q": "Il n'y a pas [de] cours aujourd'hui.",
+  "alt": [
+   "des",
+   "du",
+   "d'"
+  ],
+  "why": "Efter il n'y a pas blir des till de. Cours börjar på konsonant, så ingen apostrof.",
+  "sv": "Det är inga lektioner i dag."
+ },
+ {
+  "id": "ilya-020",
+  "topic": "ilya",
+  "rule": "ilya-neg",
+  "q": "Il [n'y a] pas de bus le dimanche.",
+  "alt": [
+   "y a",
+   "n'a",
+   "ne y a"
+  ],
+  "why": "Det finns inte = il n'y a pas. Glöm inte n' framför y.",
+  "sv": "Det går inga bussar på söndagar."
+ },
+ {
+  "id": "ilya-021",
+  "topic": "ilya",
+  "rule": "ilya-neg",
+  "q": "Dans ma rue, il n'y a [pas de] magasins.",
+  "alt": [
+   "pas des",
+   "pas",
+   "non de"
+  ],
+  "why": "Efter negationen blir des till de: pas de magasins.",
+  "sv": "På min gata finns det inga affärer."
+ },
+ {
+  "id": "ilya-022",
+  "topic": "ilya",
+  "rule": "ilya-neg",
+  "q": "Il n'y a pas [de] place dans le bus.",
+  "alt": [
+   "une",
+   "des",
+   "du"
+  ],
+  "why": "Efter il n'y a pas står bara de: pas de place.",
+  "sv": "Det finns ingen plats i bussen."
+ },
+ {
+  "id": "ilya-023",
+  "topic": "ilya",
+  "rule": "ilya-neg",
+  "q": "Il y a un cinéma, mais il n'y a pas [de] théâtre.",
+  "alt": [
+   "un",
+   "du",
+   "des"
+  ],
+  "why": "Efter il n'y a pas blir un till de: pas de théâtre.",
+  "sv": "Det finns en bio men ingen teater."
+ },
+ {
+  "id": "ilya-024",
+  "topic": "ilya",
+  "rule": "ilya-neg",
+  "q": "Aujourd'hui, [il n'y a pas] de soleil.",
+  "alt": [
+   "il n'y pas a",
+   "il ne y a pas",
+   "il n'est pas"
+  ],
+  "why": "Det finns inte = il n'y a pas. Ne blir n' framför y, och pas kommer efter a.",
+  "sv": "I dag är det ingen sol."
+ },
+ {
+  "id": "adj-001",
+  "topic": "adj",
+  "rule": "adj-e",
+  "q": "Ma sœur est [petite].",
+  "alt": [
+   "petit",
+   "petits",
+   "petites"
+  ],
+  "why": "Sœur är feminint singular, så adjektivet får -e: petite.",
+  "sv": "Min syster är liten."
+ },
+ {
+  "id": "adj-002",
+  "topic": "adj",
+  "rule": "adj-e",
+  "q": "La maison est [grande].",
+  "alt": [
+   "grand",
+   "grands",
+   "grandes"
+  ],
+  "why": "Maison är feminint, så adjektivet får -e: grande.",
+  "sv": "Huset är stort."
+ },
+ {
+  "id": "adj-003",
+  "topic": "adj",
+  "rule": "adj-e",
+  "q": "J'ai une robe [verte].",
+  "alt": [
+   "vert",
+   "verts",
+   "vertes"
+  ],
+  "why": "Robe är feminint singular: verte.",
+  "sv": "Jag har en grön klänning."
+ },
+ {
+  "id": "adj-004",
+  "topic": "adj",
+  "rule": "adj-e",
+  "q": "Elle est très [contente].",
+  "alt": [
+   "content",
+   "contents",
+   "contentes"
+  ],
+  "why": "Elle är feminint singular: contente.",
+  "sv": "Hon är mycket nöjd."
+ },
+ {
+  "id": "adj-005",
+  "topic": "adj",
+  "rule": "adj-e",
+  "q": "Ma copine a une voiture [noire].",
+  "alt": [
+   "noir",
+   "noirs",
+   "noires"
+  ],
+  "why": "Voiture är feminint singular: noire.",
+  "sv": "Min kompis har en svart bil."
+ },
+ {
+  "id": "adj-006",
+  "topic": "adj",
+  "rule": "adj-pl",
+  "q": "J'ai des chaussures [noires].",
+  "alt": [
+   "noir",
+   "noire",
+   "noirs"
+  ],
+  "why": "Chaussures är feminint plural: -e + -s = noires.",
+  "sv": "Jag har svarta skor."
+ },
+ {
+  "id": "adj-007",
+  "topic": "adj",
+  "rule": "adj-pl",
+  "q": "Mes frères sont [grands].",
+  "alt": [
+   "grand",
+   "grande",
+   "grandes"
+  ],
+  "why": "Frères är maskulint plural: grands.",
+  "sv": "Mina bröder är långa."
+ },
+ {
+  "id": "adj-008",
+  "topic": "adj",
+  "rule": "adj-pl",
+  "q": "Les garçons sont [contents].",
+  "alt": [
+   "content",
+   "contente",
+   "contentes"
+  ],
+  "why": "Garçons är maskulint plural: contents.",
+  "sv": "Killarna är nöjda."
+ },
+ {
+  "id": "adj-009",
+  "topic": "adj",
+  "rule": "adj-pl",
+  "q": "Il a les yeux [verts].",
+  "alt": [
+   "vert",
+   "verte",
+   "vertes"
+  ],
+  "why": "Yeux är maskulint plural: verts.",
+  "sv": "Han har gröna ögon."
+ },
+ {
+  "id": "adj-010",
+  "topic": "adj",
+  "rule": "adj-pl",
+  "q": "Mes sœurs sont [petites].",
+  "alt": [
+   "petit",
+   "petite",
+   "petits"
+  ],
+  "why": "Sœurs är feminint plural: petites.",
+  "sv": "Mina systrar är små."
+ },
+ {
+  "id": "adj-011",
+  "topic": "adj",
+  "rule": "adj-pl",
+  "q": "Tu as des pulls [blancs] ?",
+  "alt": [
+   "blanc",
+   "blanche",
+   "blanches"
+  ],
+  "why": "Pulls är maskulint plural: blancs.",
+  "sv": "Har du vita tröjor?"
+ },
+ {
+  "id": "adj-012",
+  "topic": "adj",
+  "rule": "adj-irr",
+  "q": "Ma sœur est très [gentille].",
+  "alt": [
+   "gentil",
+   "gentile",
+   "gentils"
+  ],
+  "why": "Gentil blir gentille i femininum, med två l.",
+  "sv": "Min syster är väldigt snäll."
+ },
+ {
+  "id": "adj-013",
+  "topic": "adj",
+  "rule": "adj-irr",
+  "q": "Ma mère est [sportive].",
+  "alt": [
+   "sportif",
+   "sportife",
+   "sportifs"
+  ],
+  "why": "Adjektiv på -if slutar på -ive i femininum: sportive.",
+  "sv": "Min mamma är sportig."
+ },
+ {
+  "id": "adj-014",
+  "topic": "adj",
+  "rule": "adj-irr",
+  "q": "C'est une [belle] ville.",
+  "alt": [
+   "beau",
+   "bel",
+   "beaux"
+  ],
+  "why": "Ville är feminint, och beau blir belle i femininum.",
+  "sv": "Det är en vacker stad."
+ },
+ {
+  "id": "adj-015",
+  "topic": "adj",
+  "rule": "adj-irr",
+  "q": "J'ai une [nouvelle] prof de maths.",
+  "alt": [
+   "nouveau",
+   "nouvel",
+   "nouveaux"
+  ],
+  "why": "Une prof är feminint, och nouveau blir nouvelle.",
+  "sv": "Jag har en ny mattelärare."
+ },
+ {
+  "id": "adj-016",
+  "topic": "adj",
+  "rule": "adj-irr",
+  "q": "Elle a une jupe [blanche].",
+  "alt": [
+   "blanc",
+   "blance",
+   "blancs"
+  ],
+  "why": "Blanc blir blanche i femininum.",
+  "sv": "Hon har en vit kjol."
+ },
+ {
+  "id": "adj-017",
+  "topic": "adj",
+  "rule": "adj-irr",
+  "q": "Mon père est [sportif].",
+  "alt": [
+   "sportive",
+   "sportifs",
+   "sportives"
+  ],
+  "why": "Père är maskulint singular, så grundformen sportif.",
+  "sv": "Min pappa är sportig."
+ },
+ {
+  "id": "adj-018",
+  "topic": "adj",
+  "rule": "adj-irr",
+  "q": "C'est un [beau] parc.",
+  "alt": [
+   "belle",
+   "bel",
+   "beaux"
+  ],
+  "why": "Parc är maskulint och börjar på konsonant: beau.",
+  "sv": "Det är en vacker park."
+ },
+ {
+  "id": "adj-019",
+  "topic": "adj",
+  "rule": "adj-irr",
+  "q": "J'ai un [nouveau] vélo.",
+  "alt": [
+   "nouvelle",
+   "nouvel",
+   "nouveaux"
+  ],
+  "why": "Vélo är maskulint och börjar på konsonant: nouveau.",
+  "sv": "Jag har en ny cykel."
+ },
+ {
+  "id": "adj-020",
+  "topic": "adj",
+  "rule": "adj-irr",
+  "q": "Mes grands-parents sont très [gentils].",
+  "alt": [
+   "gentil",
+   "gentille",
+   "gentilles"
+  ],
+  "why": "Grands-parents är maskulint plural: gentils.",
+  "sv": "Mina farföräldrar är väldigt snälla."
+ },
+ {
+  "id": "adj-021",
+  "topic": "adj",
+  "rule": "adj-place",
+  "q": "J'ai un [chat noir].",
+  "alt": [
+   "noir chat",
+   "chat noire",
+   "noire chat"
+  ],
+  "why": "Färger står efter substantivet: un chat noir.",
+  "sv": "Jag har en svart katt."
+ },
+ {
+  "id": "adj-022",
+  "topic": "adj",
+  "rule": "adj-place",
+  "q": "C'est une [petite maison].",
+  "alt": [
+   "maison petite",
+   "petit maison",
+   "maison petit"
+  ],
+  "why": "Petit hör till de korta adjektiven som står före substantivet. Maison är feminint: petite.",
+  "sv": "Det är ett litet hus."
+ },
+ {
+  "id": "adj-023",
+  "topic": "adj",
+  "rule": "adj-place",
+  "q": "Elle porte une [robe blanche].",
+  "alt": [
+   "blanche robe",
+   "robe blanc",
+   "blanc robe"
+  ],
+  "why": "Färger står efter substantivet, och blanc blir blanche i femininum.",
+  "sv": "Hon har på sig en vit klänning."
+ },
+ {
+  "id": "adj-024",
+  "topic": "adj",
+  "rule": "adj-place",
+  "q": "Nous avons un [grand jardin].",
+  "alt": [
+   "jardin grand",
+   "grande jardin",
+   "jardin grande"
+  ],
+  "why": "Grand är ett kort adjektiv som står före substantivet.",
+  "sv": "Vi har en stor trädgård."
+ },
+ {
+  "id": "adj-025",
+  "topic": "adj",
+  "rule": "adj-place",
+  "q": "J'aime les [voitures vertes].",
+  "alt": [
+   "vertes voitures",
+   "voitures vert",
+   "verts voitures"
+  ],
+  "why": "Färger står efter substantivet och böjs: voitures vertes (feminint plural).",
+  "sv": "Jag gillar gröna bilar."
+ }
+]

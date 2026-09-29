@@ -16,11 +16,15 @@ Glosor har tre sorters data, och de hålls helt åtskilda.
 1. Läser varje kurs: `lang.js`, `grammar.json`, sedan `words.txt` och `book/kapNN/words.txt`, sedan `content/*.json` och `book/kapNN/content/*.json`. Filer med samma namn slås ihop, så att bokens `reading.json` hamnar bland kursens lästexter. `grammar-*.json` blir en gemensam frågebank.
 2. Kontrollerar ordlistan (format, dubbletter), grammatikfrågorna (luckor, felalternativ, artiklar och kasus för tyskan), att id:n är unika inom varje innehållstyp, `extends` (föräldern finns, ingen cirkel) och id-låsen (se nedan).
 3. Skriver
-   - `dist/index.html`: appen och alla kursers `lang.js` (cirka 310 kB),
+   - `dist/index.html`: appen och alla kursers `lang.js` (cirka 380 kB med 8 kurser; build.py varnar över 450 kB, så håll stora tabeller som verb i lang.js små eller ärv dem),
    - `dist/data/<kod>.json`: en fil per kurs med ord (`words`), innehåll (`content`), videor (`videos`) och grammatikens områden och regler (`grammar`), som appen hämtar först när kursen väljs,
    - `dist/preview.html`: allt inbakat i en fil (`INLINE_DATA`), för att öppna lokalt och för testerna.
 
 `DATA_VERSION` är `{<kod>: hash}`, ett hash per datafil, och läggs i adressen till just den kursens fil (`data/de.json?v=<hash>`). En ny version blandas aldrig med en gammal i webbläsarens cache, och en ändring i en kurs tvingar inte fram en ny hämtning av de andra.
+
+### Kursväljaren
+
+`fillCourses` i `src/app.js`: en grupp (`<optgroup>`) per språk (`name`) i den ordning kurserna kommer i `LANGUAGES`, sorterad efter `step` ("U" sist). Texten är `courseLine`: "Franska 3 · steg 3 · A2 · mål DELF B1". Kommande kurser ur `languages/upcoming.json` (`{code, name, course, step, level}`) står på sin plats i stegordningen som ej valbara "– kommer"; build.py kontrollerar fälten och tar bort rader vars kurs redan finns. Rubrikens chip visar "Franska 3 · steg 3 · nivå A2" (`courseChip`). Förslaget att gå vidare (`nextPanel`) läser `nextCourses()`, som tar både en kod och en lista.
 
 ### Arv mellan kurser
 
@@ -55,7 +59,13 @@ Alla filer i `dist/data/` ska med vid varje publicering. `tests/run_tests.py` te
 
 - **Nytt bokkapitel:** skapa `languages/fr/book/kapNN/` enligt `book/README.md` och `book/SPEC-bok.md`, och uppdatera `book/sidor.json`. Inget i koden behöver ändras.
 - **Nytt innehåll av en befintlig typ:** lägg till i `content/<typ>.json`, eller i en ny fil med samma namn i ett bokkapitel.
-- **Ny kurs:** ny mapp `languages/<kod>/` med `lang.js` (egen `storageKey` som aldrig ändras), `words.txt` och `content/`. Se `languages/de4/` och `languages/it1/` som mallar.
+- **Ny kurs:** ny mapp `languages/<kod>/`. Koden är fri (den säger inget om steget); se `languages/it1/` och `languages/de4/` som mallar. Minimikrav för att bygget och testerna ska gå igenom:
+  1. `lang.js` med `LANGUAGES.<kod> = {…}` och fälten `name` (språket, t.ex. `"Franska"`: samma namn = samma grupp i väljaren och i "Bara franska"), `title`, `course` (t.ex. `"Franska 5"`), `step` (1–7 = Moderna språk 1–7, `"U"` = universitet; sorterar väljaren), `level` (GERS enligt Skolverket och vart kursen leder, ska börja med stegets nivå: 1–2 A1, 3–4 A2, 5–6 B1, 7 B2, se `docs/kursmall.md` 2.1 och 3.7), `inLang` (`"på franska"`), `tts` (`"fr-FR"`) och en ny, unik `storageKey` som aldrig ändras. build.py stoppar om något av dem saknas.
+  2. `words.txt` med minst ett avsnitt (`#id|Namn`) och ord i formatet ovan.
+  3. Ta bort kursens rad i `languages/upcoming.json` (annars en varning; väljaren visar den ändå inte två gånger) och peka `nextCourse` i kursen före hit. `nextCourse` är en kod eller en lista (`["fr5", "fru"]`); med en lista erbjuder startsidan båda vägarna. Varje kod måste finnas.
+  4. `python3 build.py` skapar `ids.lock`; checka in det.
+
+  Allt annat är valfritt och övningen visas bara om innehållet finns: `content/*.json` (hör- och lästexter, berättelser, fraser, skrivuppgifter, kultur, `exam.json`, uttal, musikteori …), `grammar.json` + `content/grammar-*.json` (Grammatik och Hitta felet), `verbs` (verbträning), `genders`, `accents`, `connectors`, `tenseCheck`, `exam`, `plan.json`, `videos.json`, arv med `extends`/`inherit`. Utan content får kursen glosquiz, meningar, diktamen, översätt, ordföljd, skugga och kapitelprov ur ordlistans exempelmeningar. `test_minimal_course` i `tests/run_tests.py` bygger en sådan låtsaskurs (bara `lang.js` och 20 ord) i en temporär kopia och kör looparna "alla kurser" (`testCourses()`, `COURSES_UNDER_TEST`) på den. Testerna som går över alla kurser kräver bara det innehåll kursen har.
 - **Ny innehållstyp eller övningstyp:** en ny fil i `src/kinds/` (se nedan), en knapp i `src/kinds/99-menu.js` och ett format beskrivet i en SPEC-fil.
 
 ## Övningstyperna (`src/kinds/`)

@@ -1,0 +1,933 @@
+{
+"name": "CELI 2 (B1)",
+"pass": 60,
+"note": "Övningar i provets stil, skrivna för appen. Inte officiellt material. Delen Competenza linguistica och uppgifterna märkta CELI 3 är delmål mot B2.",
+"parts": [
+{
+"id": "lettura",
+"name": "Comprensione della lettura",
+"sv": "Läsa",
+"time": 60
+},
+{
+"id": "scritta",
+"name": "Produzione di testi scritti",
+"sv": "Skriva",
+"time": 60
+},
+{
+"id": "competenza",
+"name": "Competenza linguistica (CELI 3)",
+"sv": "Språklig kompetens",
+"time": 45,
+"level": "B2"
+},
+{
+"id": "ascolto",
+"name": "Comprensione dell'ascolto",
+"sv": "Hörförståelse",
+"time": 20
+},
+{
+"id": "orale",
+"name": "Produzione orale",
+"sv": "Tala",
+"time": 15
+}
+],
+"tasks": [
+{
+"id": "it6-le-1",
+"part": "lettura",
+"teil": "Prova 1",
+"title": "Annunci: corsi estivi",
+"time": 20,
+"instr": "Läs annonserna och svara på frågorna. Välj rätt alternativ.",
+"lines": [
+{
+"fr": "A. Scuola di lingua Dante, Siena. Corsi intensivi di italiano per stranieri, 4 ore al giorno, dal lunedì al venerdì. Alloggio in famiglia su richiesta. Sconto del 10% per chi si iscrive entro il 31 marzo.",
+"sv": "A. Språkskolan Dante, Siena. Intensivkurser i italienska för utlänningar, 4 timmar om dagen, måndag till fredag. Boende i familj på begäran. 10 % rabatt för den som anmäler sig senast den 31 mars."
+},
+{
+"fr": "B. Accademia musicale del Lago, Como. Masterclass estive per giovani strumentisti tra i 16 e i 25 anni. Ammissione tramite video. Borse di studio disponibili per i candidati più meritevoli.",
+"sv": "B. Musikakademien vid sjön, Como. Mästarkurser på sommaren för unga instrumentalister mellan 16 och 25 år. Antagning via video. Stipendier finns för de mest förtjänta sökande."
+},
+{
+"fr": "C. Associazione Mare Pulito, Liguria. Cerchiamo volontari per la pulizia delle spiagge a luglio. Vitto e alloggio gratuiti in cambio di sei ore di lavoro al giorno. Richiesta conoscenza base dell'italiano.",
+"sv": "C. Föreningen Rent hav, Ligurien. Vi söker volontärer för strandstädning i juli. Gratis mat och logi mot sex timmars arbete om dagen. Grundläggande kunskaper i italienska krävs."
+},
+{
+"fr": "D. Museo civico di Bologna. Tirocinio non retribuito di tre mesi per studenti universitari di storia dell'arte. Inviare curriculum e lettera di motivazione entro il 15 maggio.",
+"sv": "D. Stadsmuseet i Bologna. Obetald praktik i tre månader för universitetsstudenter i konsthistoria. Skicka cv och personligt brev senast den 15 maj."
+}
+],
+"qs": [
+{
+"q": "Vilken annons passar en 17-årig violinist?",
+"opts": [
+"A",
+"B",
+"C",
+"D"
+],
+"a": 1,
+"why": "B: mästarkurser för unga instrumentalister 16–25 år."
+},
+{
+"q": "Var kan man bo gratis?",
+"opts": [
+"A",
+"B",
+"C",
+"D"
+],
+"a": 2,
+"why": "C: «Vitto e alloggio gratuiti»."
+},
+{
+"q": "Vilken annons ger rabatt vid tidig anmälan?",
+"opts": [
+"A",
+"B",
+"C",
+"D"
+],
+"a": 0,
+"why": "A: «Sconto del 10% per chi si iscrive entro il 31 marzo»."
+},
+{
+"q": "Vilken annons kräver att man studerar på universitet?",
+"opts": [
+"A",
+"B",
+"C",
+"D"
+],
+"a": 3,
+"why": "D: «per studenti universitari di storia dell'arte»."
+},
+{
+"q": "Hur antas man till B?",
+"opts": [
+"Genom en intervju",
+"Genom en video",
+"Genom ett skriftligt prov",
+"Genom lottning"
+],
+"a": 1,
+"why": "«Ammissione tramite video»."
+},
+{
+"q": "Vad får volontärerna i C i utbyte mot arbetet?",
+"opts": [
+"Lön",
+"Mat och logi",
+"Ett intyg",
+"En kurs"
+],
+"a": 1,
+"why": "«Vitto e alloggio gratuiti»."
+},
+{
+"q": "Vilken annons erbjuder en obetald plats?",
+"opts": [
+"A",
+"B",
+"C",
+"D"
+],
+"a": 3,
+"why": "D: «Tirocinio non retribuito»."
+}
+]
+},
+{
+"id": "it6-le-2",
+"part": "lettura",
+"teil": "Prova 2",
+"title": "Articolo: la biblioteca aperta di notte",
+"time": 25,
+"instr": "Läs artikeln och svara på frågorna.",
+"lines": [
+{
+"fr": "A Padova, da ottobre, la biblioteca universitaria di via San Biagio resta aperta fino alle due di notte, dal lunedì al giovedì. L'idea è venuta da un gruppo di studenti, che l'anno scorso avevano raccolto più di tremila firme.",
+"sv": "I Padua har universitetsbiblioteket på via San Biagio sedan oktober öppet till klockan två på natten, måndag till torsdag. Idén kom från en grupp studenter som förra året hade samlat in mer än tretusen namnunderskrifter."
+},
+{
+"fr": "«Molti di noi lavorano durante il giorno per pagarsi gli studi», spiega Matteo, uno degli organizzatori. «Se la biblioteca chiudesse alle sette, come prima, non avremmo un posto tranquillo dove studiare.»",
+"sv": "«Många av oss arbetar på dagen för att betala studierna», förklarar Matteo, en av organisatörerna. «Om biblioteket stängde klockan sju, som förut, skulle vi inte ha någon lugn plats att plugga på.»"
+},
+{
+"fr": "L'università ha accettato a patto che il servizio fosse gestito in parte da studenti volontari, pagati con una piccola borsa. Nei primi due mesi la biblioteca ha registrato in media centoventi presenze a notte.",
+"sv": "Universitetet gick med på det på villkor att tjänsten delvis sköttes av studenter som volontärer, betalda med ett litet stipendium. Under de första två månaderna registrerade biblioteket i genomsnitt hundratjugo besök per natt."
+},
+{
+"fr": "Non tutti, però, sono d'accordo. Alcuni professori temono che gli studenti dormano troppo poco. «Studiare di notte non è sempre una buona idea», dice una psicologa. «Tuttavia, per chi lavora, è meglio una biblioteca aperta che una cucina rumorosa.»",
+"sv": "Alla håller dock inte med. Några lärare är rädda att studenterna sover för lite. «Att plugga på natten är inte alltid en bra idé», säger en psykolog. «Men för den som arbetar är ett öppet bibliotek bättre än ett bullrigt kök.»"
+}
+],
+"qs": [
+{
+"q": "Vem kom på idén?",
+"opts": [
+"Rektorn",
+"En grupp studenter",
+"Kommunen",
+"En psykolog"
+],
+"a": 1,
+"why": "«L'idea è venuta da un gruppo di studenti»."
+},
+{
+"q": "Varför behöver Matteo biblioteket på kvällen?",
+"opts": [
+"Han bor långt bort",
+"Han arbetar på dagen",
+"Han gillar att plugga på natten",
+"Biblioteket är billigt"
+],
+"a": 1,
+"why": "«Molti di noi lavorano durante il giorno»."
+},
+{
+"q": "Vilket villkor ställde universitetet?",
+"opts": [
+"Att studenterna betalade en avgift",
+"Att tjänsten delvis sköttes av studentvolontärer",
+"Att biblioteket bara var öppet på helger",
+"Att lärarna var där"
+],
+"a": 1,
+"why": "«a patto che il servizio fosse gestito in parte da studenti volontari»."
+},
+{
+"q": "Hur många besök per natt hade biblioteket i genomsnitt?",
+"opts": [
+"Tretusen",
+"Tjugo",
+"Hundratjugo",
+"Tvåhundra"
+],
+"a": 2,
+"why": "«centoventi presenze a notte»."
+},
+{
+"q": "Vad oroar några lärare sig för?",
+"opts": [
+"Att studenterna sover för lite",
+"Att biblioteket blir smutsigt",
+"Att det kostar för mycket",
+"Att böckerna stjäls"
+],
+"a": 0,
+"why": "«temono che gli studenti dormano troppo poco»."
+},
+{
+"q": "Vad tycker psykologen?",
+"opts": [
+"Att nattpluggande alltid är dåligt",
+"Att biblioteket bör stänga",
+"Att ett öppet bibliotek är bättre än ett bullrigt kök för den som arbetar",
+"Att studenterna borde sluta arbeta"
+],
+"a": 2,
+"why": "«per chi lavora, è meglio una biblioteca aperta che una cucina rumorosa»."
+},
+{
+"q": "Vilken form har «se la biblioteca chiudesse … non avremmo»?",
+"opts": [
+"Verklig om-sats",
+"Overklig om-sats i nutid",
+"Overklig om-sats i dåtid",
+"Indirekt tal"
+],
+"a": 1,
+"why": "Se + congiuntivo imperfetto + condizionale presente."
+}
+]
+},
+{
+"id": "it6-le-3",
+"part": "lettura",
+"teil": "Prova 3",
+"title": "Lettera: una lamentela formale",
+"time": 20,
+"instr": "Läs brevet och svara på frågorna.",
+"lines": [
+{
+"fr": "Spett.le Direzione dell'Hotel Bellavista, Le scrivo per esprimere il mio disappunto riguardo al soggiorno che ho trascorso presso la Vostra struttura dal 3 al 7 agosto.",
+"sv": "Till ledningen för Hotel Bellavista. Jag skriver för att uttrycka mitt missnöje med vistelsen som jag tillbringade på ert hotell 3–7 augusti."
+},
+{
+"fr": "Al momento della prenotazione mi era stata garantita una camera con vista sul lago. All'arrivo, invece, mi è stata assegnata una stanza al piano terra, che dava sul parcheggio. Inoltre l'aria condizionata non funzionava, e nonostante le mie richieste nessuno è venuto a ripararla.",
+"sv": "Vid bokningen hade jag blivit lovad ett rum med utsikt över sjön. Vid ankomsten fick jag i stället ett rum på bottenvåningen, som vette mot parkeringen. Dessutom fungerade inte luftkonditioneringen, och trots mina förfrågningar kom ingen för att laga den."
+},
+{
+"fr": "Se fossi stato informato in anticipo, avrei potuto cercare un'altra sistemazione. Le chiedo pertanto un rimborso parziale del prezzo pagato. Allego la conferma della prenotazione. In attesa di un Suo riscontro, porgo distinti saluti. Johan Berg",
+"sv": "Om jag hade blivit informerad i förväg hade jag kunnat leta efter ett annat boende. Jag begär därför en delvis återbetalning av det betalda priset. Jag bifogar bokningsbekräftelsen. I väntan på ert svar sänder jag vänliga hälsningar. Johan Berg"
+}
+],
+"qs": [
+{
+"q": "Vad är syftet med brevet?",
+"opts": [
+"Att boka ett rum",
+"Att klaga och begära delvis återbetalning",
+"Att tacka för vistelsen",
+"Att söka jobb på hotellet"
+],
+"a": 1,
+"why": "«esprimere il mio disappunto … Le chiedo pertanto un rimborso parziale»."
+},
+{
+"q": "Vad hade Johan blivit lovad?",
+"opts": [
+"Frukost på rummet",
+"Ett rum med sjöutsikt",
+"En parkeringsplats",
+"Ett billigare pris"
+],
+"a": 1,
+"why": "«una camera con vista sul lago»."
+},
+{
+"q": "Vilket av följande hände INTE?",
+"opts": [
+"Rummet vette mot parkeringen",
+"Luftkonditioneringen var trasig",
+"Ingen kom för att laga den",
+"Rummet var smutsigt"
+],
+"a": 3,
+"why": "Smuts nämns inte."
+},
+{
+"q": "Vad bifogar Johan?",
+"opts": [
+"Kvitton från restaurangen",
+"Bokningsbekräftelsen",
+"Foton",
+"Ett läkarintyg"
+],
+"a": 1,
+"why": "«Allego la conferma della prenotazione»."
+},
+{
+"q": "Vad betyder «pertanto» här?",
+"opts": [
+"Dock",
+"Därför",
+"Trots det",
+"Dessutom"
+],
+"a": 1,
+"why": "Pertanto = därför, en följd av det han har berättat."
+}
+]
+},
+{
+"id": "it6-sc-1",
+"part": "scritta",
+"teil": "Prova 1",
+"title": "Mail formale: richiesta di informazioni",
+"time": 35,
+"minWords": 90,
+"instr": "Skriv ett formellt mejl på 90–100 ord.",
+"task": "Vuole iscriversi a un corso estivo di italiano a Perugia. Scriva una mail alla segreteria: si presenti, chieda informazioni sulle date, sui prezzi e sull'alloggio, e chieda se è possibile ricevere una borsa di studio. (90–100 parole)",
+"criteria": [
+"Adeguatezza al compito",
+"Coerenza e coesione",
+"Lessico",
+"Grammatica"
+],
+"model": "Gentile segreteria, mi chiamo Elin Karlsson, ho diciotto anni e vivo a Lund, in Svezia. Studio italiano da cinque anni e vorrei iscrivermi a uno dei vostri corsi estivi di livello B2. Le scrivo per chiedere alcune informazioni. Innanzitutto vorrei sapere quali sono le date dei corsi di luglio e quanto costano. Inoltre sarei grata se potesse dirmi se è possibile alloggiare presso una famiglia. Infine vorrei sapere se esistono borse di studio per studenti stranieri e come si presenta la domanda. La ringrazio per la disponibilità. Cordiali saluti, Elin Karlsson",
+"modelSv": "Bästa kansli, jag heter Elin Karlsson, är arton år och bor i Lund i Sverige. Jag har studerat italienska i fem år och skulle vilja anmäla mig till en av era sommarkurser på B2-nivå. Jag skriver för att be om några upplysningar. För det första vill jag veta vilka datum kurserna i juli har och vad de kostar. Dessutom skulle jag vara tacksam om ni kunde säga om det går att bo hos en familj. Till sist vill jag veta om det finns stipendier för utländska studenter och hur man ansöker. Tack för er hjälp. Vänliga hälsningar, Elin Karlsson"
+},
+{
+"id": "it6-sc-2",
+"part": "scritta",
+"teil": "Prova 2",
+"title": "Annuncio: cerco coinquilino",
+"time": 20,
+"minWords": 50,
+"instr": "Skriv en annons på ungefär 50 ord.",
+"task": "Lei studia a Bologna e cerca una persona con cui dividere l'appartamento. Scriva un annuncio per la bacheca dell'università: descriva l'appartamento, il prezzo e che tipo di persona cerca. (circa 50 parole)",
+"criteria": [
+"Adeguatezza al compito",
+"Coerenza e coesione",
+"Lessico",
+"Grammatica"
+],
+"model": "Cerco coinquilina o coinquilino per appartamento luminoso in via Mascarella, a dieci minuti dall'università. Camera singola arredata, cucina e bagno in comune, 380 euro al mese spese incluse. Cerco una persona tranquilla, ordinata e non fumatrice, che ami la musica (suono il pianoforte!). Disponibile da settembre. Scrivere a lisa.bo@esempio.it.",
+"modelSv": "Söker rumskamrat till ljus lägenhet på via Mascarella, tio minuter från universitetet. Möblerat enkelrum, delat kök och badrum, 380 euro i månaden inklusive avgifter. Jag söker en lugn, ordningsam person som inte röker och som gillar musik (jag spelar piano!). Ledigt från september. Skriv till lisa.bo@esempio.it."
+},
+{
+"id": "it6-sc-3",
+"part": "scritta",
+"teil": "Prova 3",
+"title": "Lettera a un amico: un'esperienza importante",
+"time": 35,
+"minWords": 90,
+"instr": "Skriv ett brev på 90–100 ord till en italiensk vän.",
+"task": "Scriva una lettera a un amico italiano per raccontare un'esperienza che ha cambiato il suo modo di vedere le cose. Racconti che cosa è successo, come si è sentito/a e che cosa ha imparato. (90–100 parole)",
+"criteria": [
+"Adeguatezza al compito",
+"Coerenza e coesione",
+"Lessico",
+"Grammatica"
+],
+"model": "Caro Matteo, come stai? Ti scrivo per raccontarti una cosa che mi è successa quest'estate. Ho fatto volontariato per tre settimane in un campo per bambini con disabilità vicino a Stoccolma. All'inizio ero molto nervosa, perché non avevo mai fatto niente di simile e temevo di sbagliare tutto. Tuttavia i bambini erano allegrissimi e mi hanno insegnato a essere paziente. Se non avessi fatto questa esperienza, non avrei capito quanto siano importanti le piccole cose. Adesso penso di studiare pedagogia. E tu, che cosa hai fatto quest'estate? Un abbraccio, Karin",
+"modelSv": "Kära Matteo, hur mår du? Jag skriver för att berätta om något som hände mig i somras. Jag var volontär i tre veckor på ett läger för barn med funktionsnedsättning nära Stockholm. I början var jag mycket nervös, eftersom jag aldrig hade gjort något liknande och var rädd att göra allt fel. Men barnen var jätteglada och lärde mig att vara tålmodig. Om jag inte hade gjort den här erfarenheten hade jag inte förstått hur viktiga de små sakerna är. Nu funderar jag på att läsa pedagogik. Och du, vad gjorde du i somras? Kram, Karin"
+},
+{
+"id": "it6-sc-4",
+"part": "scritta",
+"teil": "Prova 4",
+"title": "Testo argomentativo (CELI 3)",
+"time": 50,
+"minWords": 120,
+"instr": "CELI 3-delmål: skriv en argumenterande text på 120–180 ord.",
+"task": "«I compiti a casa dovrebbero essere aboliti.» Esprima la Sua opinione su questa affermazione, con argomenti a favore e contro. (120–180 parole)",
+"criteria": [
+"Adeguatezza al compito",
+"Coerenza e coesione",
+"Lessico",
+"Grammatica"
+],
+"model": "Da anni si discute se i compiti a casa siano utili. Alcuni sostengono che dovrebbero essere aboliti, perché gli studenti passano già molte ore a scuola e hanno bisogno di tempo libero per lo sport, la musica e le amicizie. Inoltre non tutti hanno a casa un posto tranquillo o genitori che possano aiutarli, e così i compiti aumentano le disuguaglianze. Dall'altra parte, però, alcuni compiti sono necessari: per imparare una lingua o uno strumento bisogna esercitarsi ogni giorno, e a scuola non c'è abbastanza tempo. Secondo me, quindi, non bisognerebbe abolirli del tutto, ma ridurli e renderli più sensati. Sarebbe meglio assegnare pochi esercizi utili, magari da fare in biblioteca, piuttosto che ore di lavoro ripetitivo. In conclusione, i compiti non sono un male in sé, purché siano pochi e ben pensati.",
+"modelSv": "I åratal har man diskuterat om läxor är nyttiga. En del hävdar att de borde avskaffas, eftersom eleverna redan tillbringar många timmar i skolan och behöver fritid för idrott, musik och vänner. Dessutom har inte alla en lugn plats hemma eller föräldrar som kan hjälpa dem, och så ökar läxorna ojämlikheten. Å andra sidan behövs vissa läxor: för att lära sig ett språk eller ett instrument måste man öva varje dag, och i skolan finns inte tillräckligt med tid. Enligt mig borde man alltså inte avskaffa dem helt, utan minska dem och göra dem mer meningsfulla. Det vore bättre att ge några få nyttiga övningar, kanske att göra i biblioteket, än timmar av upprepande arbete. Sammanfattningsvis är läxor inte dåliga i sig, bara de är få och väl genomtänkta.",
+"level": "B2"
+},
+{
+"id": "it6-cl-1",
+"part": "competenza",
+"teil": "Prova 1",
+"title": "Completare il testo: la fuga dei cervelli",
+"time": 15,
+"instr": "CELI 3-delmål: välj rätt ord i varje lucka i texten.",
+"lines": [
+{
+"fr": "Negli ultimi dieci anni centinaia di migliaia di giovani italiani (1) ___ il paese. Molti di loro sono laureati e, se in Italia (2) ___ un lavoro adeguato, probabilmente sarebbero rimasti. (3) ___ gli stipendi più alti, molti scelgono la Germania o il Regno Unito. Il governo ha introdotto sgravi fiscali (4) ___ i giovani tornino, ma i risultati sono ancora limitati. Secondo un sondaggio, quasi la metà dei giovani emigrati dice che (5) ___ tornare, se le condizioni cambiassero.",
+"sv": "De senaste tio åren har hundratusentals unga italienare lämnat landet. Många av dem har examen och hade troligen stannat om de hade hittat ett passande jobb i Italien. På grund av de högre lönerna väljer många Tyskland eller Storbritannien. Regeringen har infört skattelättnader för att de unga ska återvända, men resultaten är fortfarande begränsade. Enligt en undersökning säger nästan hälften av de utvandrade unga att de skulle vilja återvända om villkoren förändrades."
+}
+],
+"qs": [
+{
+"q": "(1)",
+"opts": [
+"hanno lasciato",
+"lasciassero",
+"lascerebbero",
+"lasciando"
+],
+"a": 0,
+"why": "Avslutad handling under en period som når nutid: passato prossimo."
+},
+{
+"q": "(2)",
+"opts": [
+"trovano",
+"avessero trovato",
+"troverebbero",
+"trovassero stato"
+],
+"a": 1,
+"why": "Overklig dåtid: se + congiuntivo trapassato (sarebbero rimasti)."
+},
+{
+"q": "(3)",
+"opts": [
+"Nonostante",
+"A causa degli",
+"Affinché",
+"Purché"
+],
+"a": 1,
+"why": "A causa di = på grund av (+ substantiv)."
+},
+{
+"q": "(4)",
+"opts": [
+"perché",
+"affinché",
+"benché",
+"sebbene"
+],
+"a": 1,
+"why": "Affinché + congiuntivo = för att (syfte)."
+},
+{
+"q": "(5)",
+"opts": [
+"vorrebbe",
+"voglia",
+"volesse",
+"vorrà"
+],
+"a": 0,
+"why": "Huvudsats i en overklig om-sats: condizionale presente."
+}
+],
+"level": "B2"
+},
+{
+"id": "it6-cl-2",
+"part": "competenza",
+"teil": "Prova 2",
+"title": "Completare il testo: Pirandello",
+"time": 15,
+"instr": "CELI 3-delmål: välj rätt form i varje lucka.",
+"lines": [
+{
+"fr": "Luigi Pirandello (1) ___ ad Agrigento nel 1867. Dopo gli studi a Roma e a Bonn, (2) ___ a scrivere novelle e romanzi. La sua vita non fu facile: quando la moglie (3) ___ malata, dovette affrontare anni difficili. (4) ___ il successo del Fu Mattia Pascal, cominciò a dedicarsi al teatro. Nel 1934 (5) ___ il premio Nobel per la letteratura.",
+"sv": "Luigi Pirandello föddes i Agrigento 1867. Efter studier i Rom och Bonn började han skriva noveller och romaner. Hans liv var inte lätt: när hustrun blev sjuk fick han gå igenom svåra år. Efter framgången med Den salige Mattia Pascal började han ägna sig åt teatern. 1934 fick han Nobelpriset i litteratur."
+}
+],
+"qs": [
+{
+"q": "(1)",
+"opts": [
+"nacque",
+"nasceva",
+"nascesse",
+"è nata"
+],
+"a": 0,
+"why": "Passato remoto i biografi: nacque."
+},
+{
+"q": "(2)",
+"opts": [
+"cominciò",
+"cominciasse",
+"comincerebbe",
+"cominciando"
+],
+"a": 0,
+"why": "Passato remoto: cominciò."
+},
+{
+"q": "(3)",
+"opts": [
+"si ammalò",
+"si ammalasse",
+"si ammalerà",
+"ammalando"
+],
+"a": 0,
+"why": "Passato remoto av ammalarsi."
+},
+{
+"q": "(4)",
+"opts": [
+"Ottenuto",
+"Ottenendo stato",
+"Ottenere",
+"Ottenuta"
+],
+"a": 0,
+"why": "Particip som bisats; il successo är mask. sg.: ottenuto."
+},
+{
+"q": "(5)",
+"opts": [
+"vinse",
+"vincesse",
+"vincerebbe",
+"vinca"
+],
+"a": 0,
+"why": "Passato remoto av vincere: vinse."
+}
+],
+"level": "B2"
+},
+{
+"id": "it6-cl-3",
+"part": "competenza",
+"teil": "Prova 3",
+"title": "Trasformare: discorso indiretto",
+"time": 12,
+"instr": "CELI 3-delmål: välj den mening som återger det direkta talet korrekt.",
+"lines": [
+{
+"fr": "Il direttore ha detto ieri: «Domani firmerò il contratto e la settimana prossima assumerò due nuovi dipendenti. Voi dovete preparare gli uffici.»",
+"sv": "Direktören sa i går: «I morgon skriver jag på avtalet och nästa vecka anställer jag två nya medarbetare. Ni måste förbereda kontoren.»"
+}
+],
+"qs": [
+{
+"q": "«Domani firmerò il contratto» →",
+"opts": [
+"Il direttore ha detto che il giorno dopo avrebbe firmato il contratto.",
+"Il direttore ha detto che domani firmerà il contratto.",
+"Il direttore ha detto che il giorno dopo firmasse il contratto.",
+"Il direttore ha detto che ieri aveva firmato il contratto."
+],
+"a": 0,
+"why": "Futuro → condizionale passato, domani → il giorno dopo."
+},
+{
+"q": "«la settimana prossima assumerò» →",
+"opts": [
+"… che la settimana dopo avrebbe assunto …",
+"… che la settimana prossima assume …",
+"… che la settimana dopo assumesse …",
+"… che la settimana prima aveva assunto …"
+],
+"a": 0,
+"why": "La settimana prossima → la settimana dopo; futuro → condizionale passato."
+},
+{
+"q": "«Voi dovete preparare gli uffici» →",
+"opts": [
+"… e che noi dovevamo preparare gli uffici.",
+"… e che voi dovete preparare gli uffici.",
+"… e che noi dovremo preparare gli uffici.",
+"… e che loro devono preparare gli uffici."
+],
+"a": 0,
+"why": "Voi blir noi om vi återger det till andra; presens → imperfetto."
+},
+{
+"q": "«Preparate gli uffici!» →",
+"opts": [
+"Ci ha detto di preparare gli uffici.",
+"Ci ha detto che preparate gli uffici.",
+"Ci ha detto di preparassimo gli uffici.",
+"Ci ha detto preparare gli uffici."
+],
+"a": 0,
+"why": "Imperativ → di + infinitiv."
+}
+],
+"level": "B2"
+},
+{
+"id": "it6-as-1",
+"part": "ascolto",
+"teil": "Prova 1",
+"title": "Messaggi in segreteria",
+"time": 12,
+"instr": "Du hör tre meddelanden två gånger. Svara på frågorna.",
+"lines": [
+{
+"fr": "Messaggio 1. Buongiorno, sono Laura della segreteria del conservatorio. La chiamo perché nella Sua domanda di ammissione manca la copia del documento d'identità. Può inviarcela per mail entro venerdì? Altrimenti non potremo inserirLa nella graduatoria. Grazie.",
+"sv": "Meddelande 1. God dag, det är Laura på konservatoriets kansli. Jag ringer eftersom kopian av er id-handling saknas i er ansökan om antagning. Kan ni mejla den till oss senast fredag? Annars kan vi inte föra in er i rangordningen. Tack."
+},
+{
+"fr": "Messaggio 2. Ciao Sara, sono Giulia. Ti ricordi che domani c'era la presentazione in biblioteca? L'hanno spostata a giovedì alle cinque, perché il relatore ha perso il treno. Fammi sapere se vieni!",
+"sv": "Meddelande 2. Hej Sara, det är Giulia. Kommer du ihåg att presentationen i biblioteket skulle vara i morgon? De har flyttat den till torsdag klockan fem, eftersom föredragshållaren missade tåget. Hör av dig om du kommer!"
+},
+{
+"fr": "Messaggio 3. Avviso ai clienti: a causa dello sciopero dei trasporti di lunedì, il nostro servizio di consegna a domicilio sarà sospeso. Gli ordini ricevuti saranno consegnati martedì mattina. Ci scusiamo per il disagio.",
+"sv": "Meddelande 3. Meddelande till kunderna: på grund av transportstrejken på måndag kommer vår hemleveranstjänst att ställas in. Mottagna beställningar levereras tisdag förmiddag. Vi ber om ursäkt för besväret."
+}
+],
+"qs": [
+{
+"q": "Vad saknas i ansökan i meddelande 1?",
+"opts": [
+"Ett cv",
+"En kopia av id-handlingen",
+"Ett foto",
+"Betalningen"
+],
+"a": 1,
+"why": "«manca la copia del documento d'identità»."
+},
+{
+"q": "Vad händer om dokumentet inte kommer senast fredag?",
+"opts": [
+"Ansökan blir dyrare",
+"Man förs inte in i rangordningen",
+"Man får ett nytt prov",
+"Inget"
+],
+"a": 1,
+"why": "«non potremo inserirLa nella graduatoria»."
+},
+{
+"q": "Varför har presentationen flyttats?",
+"opts": [
+"Biblioteket är stängt",
+"Föredragshållaren missade tåget",
+"Det är strejk",
+"Giulia är sjuk"
+],
+"a": 1,
+"why": "«il relatore ha perso il treno»."
+},
+{
+"q": "När är presentationen nu?",
+"opts": [
+"I morgon",
+"Torsdag klockan fem",
+"Fredag",
+"Måndag"
+],
+"a": 1,
+"why": "«a giovedì alle cinque»."
+},
+{
+"q": "När levereras beställningarna i meddelande 3?",
+"opts": [
+"Måndag",
+"Tisdag förmiddag",
+"Onsdag",
+"De ställs in helt"
+],
+"a": 1,
+"why": "«saranno consegnati martedì mattina»."
+}
+],
+"plays": 2
+},
+{
+"id": "it6-as-2",
+"part": "ascolto",
+"teil": "Prova 2",
+"title": "Intervista radiofonica: un giovane viticoltore",
+"time": 15,
+"instr": "Du hör en radiointervju två gånger. Svara på frågorna.",
+"lines": [
+{
+"fr": "Oggi abbiamo con noi Pietro, ventisei anni, che ha lasciato un lavoro in banca a Milano per tornare nelle Langhe, in Piemonte, e occuparsi della vigna del nonno. Pietro, perché questa scelta?",
+"sv": "I dag har vi Pietro med oss, tjugosex år, som lämnade ett bankjobb i Milano för att återvända till Langhe i Piemonte och ta hand om farfars vingård. Pietro, varför det valet?"
+},
+{
+"fr": "Guardi, in banca guadagnavo bene, ma passavo dieci ore al giorno davanti a uno schermo. Quando mio nonno si è ammalato, nessuno in famiglia voleva prendersi cura della vigna. Se l'avessimo venduta, avrei perso una parte della mia storia. Così sono tornato.",
+"sv": "Ni förstår, på banken tjänade jag bra, men jag satt tio timmar om dagen framför en skärm. När min farfar blev sjuk ville ingen i familjen ta hand om vingården. Om vi hade sålt den skulle jag ha förlorat en del av min historia. Så jag åkte tillbaka."
+},
+{
+"fr": "E com'è stato l'inizio? Difficilissimo. Non sapevo quasi niente. Ho frequentato un corso serale di enologia ad Alba e ho imparato molto dai vicini, che all'inizio mi guardavano con sospetto. Oggi produco circa diecimila bottiglie l'anno e le vendo soprattutto all'estero, in Germania e in Svezia.",
+"sv": "Och hur var början? Jättesvår. Jag kunde nästan ingenting. Jag gick en kvällskurs i vinkunskap i Alba och lärde mig mycket av grannarna, som i början såg misstänksamt på mig. I dag producerar jag ungefär tiotusen flaskor om året och säljer dem främst utomlands, i Tyskland och Sverige."
+}
+],
+"qs": [
+{
+"q": "Vad arbetade Pietro med tidigare?",
+"opts": [
+"Som lärare",
+"På en bank",
+"Som kock",
+"Som journalist"
+],
+"a": 1,
+"why": "«ha lasciato un lavoro in banca»."
+},
+{
+"q": "Vad var det negativa med det gamla jobbet?",
+"opts": [
+"Låg lön",
+"Tio timmar om dagen framför en skärm",
+"Långa resor",
+"Dåliga kollegor"
+],
+"a": 1,
+"why": "«passavo dieci ore al giorno davanti a uno schermo»."
+},
+{
+"q": "Varför återvände han?",
+"opts": [
+"Han blev uppsagd",
+"Farfar blev sjuk och ingen ville ta hand om vingården",
+"Han ärvde mycket pengar",
+"Han ville bli känd"
+],
+"a": 1,
+"why": "«Quando mio nonno si è ammalato, nessuno … voleva prendersi cura della vigna»."
+},
+{
+"q": "Hur såg grannarna på honom i början?",
+"opts": [
+"Med misstänksamhet",
+"Med beundran",
+"De brydde sig inte",
+"De hjälpte honom inte alls"
+],
+"a": 0,
+"why": "«all'inizio mi guardavano con sospetto»."
+},
+{
+"q": "Var säljer han mest vin?",
+"opts": [
+"I Milano",
+"I Piemonte",
+"Utomlands",
+"På nätet i Italien"
+],
+"a": 2,
+"why": "«le vendo soprattutto all'estero»."
+}
+],
+"plays": 2
+},
+{
+"id": "it6-as-3",
+"part": "ascolto",
+"teil": "Prova 3",
+"title": "Annuncio in stazione e in museo",
+"time": 10,
+"instr": "Du hör två meddelanden en gång. Svara på frågorna.",
+"lines": [
+{
+"fr": "Annuncio 1. Si avvisano i signori viaggiatori che il treno regionale per Firenze delle ore 14:10 partirà con un ritardo di circa trenta minuti a causa di un guasto tecnico. Il treno partirà dal binario 7 anziché dal binario 3. Ci scusiamo per il disagio.",
+"sv": "Meddelande 1. Resenärerna meddelas att regionaltåget mot Florens klockan 14.10 avgår med cirka trettio minuters försening på grund av ett tekniskt fel. Tåget avgår från spår 7 i stället för spår 3. Vi ber om ursäkt för besväret."
+},
+{
+"fr": "Annuncio 2. Gentili visitatori, il museo chiuderà tra quindici minuti. Vi preghiamo di dirigervi verso l'uscita. Ricordiamo che la mostra su Caravaggio sarà prorogata fino al 30 novembre e che il martedì l'ingresso è gratuito per gli studenti.",
+"sv": "Meddelande 2. Bästa besökare, museet stänger om femton minuter. Vi ber er att gå mot utgången. Vi påminner om att Caravaggioutställningen förlängs till den 30 november och att studenter har fri entré på tisdagar."
+}
+],
+"qs": [
+{
+"q": "Hur mycket är tåget försenat?",
+"opts": [
+"Tio minuter",
+"Ungefär trettio minuter",
+"En timme",
+"Det är inställt"
+],
+"a": 1,
+"why": "«ritardo di circa trenta minuti»."
+},
+{
+"q": "Från vilket spår avgår tåget?",
+"opts": [
+"3",
+"7",
+"14",
+"10"
+],
+"a": 1,
+"why": "«dal binario 7 anziché dal binario 3»."
+},
+{
+"q": "Vad händer med Caravaggioutställningen?",
+"opts": [
+"Den stänger i dag",
+"Den förlängs till den 30 november",
+"Den flyttar till Florens",
+"Den blir gratis för alla"
+],
+"a": 1,
+"why": "«sarà prorogata fino al 30 novembre»."
+},
+{
+"q": "När är det fri entré för studenter?",
+"opts": [
+"Måndag",
+"Tisdag",
+"Söndag",
+"Aldrig"
+],
+"a": 1,
+"why": "«il martedì l'ingresso è gratuito per gli studenti»."
+}
+],
+"plays": 1
+},
+{
+"id": "it6-or-1",
+"part": "orale",
+"teil": "Prova 1",
+"title": "Presentarsi e parlare di sé",
+"prep": 1,
+"time": 3,
+"instr": "Examinatorn ställer frågor om dig, dina studier och dina planer. Svara utförligt.",
+"task": "Si presenti: parli dei Suoi studi, dei Suoi interessi e dei Suoi progetti per il futuro. Perché studia l'italiano?",
+"criteria": [
+"Competenza lessicale",
+"Competenza grammaticale",
+"Competenza sociolinguistica",
+"Pronuncia e intonazione"
+],
+"phrases": [
+"Mi chiamo … e frequento …",
+"Studio l'italiano perché …",
+"Nel tempo libero …",
+"In futuro vorrei …",
+"Se potessi, …"
+],
+"model": "Mi chiamo Ella, ho diciotto anni e frequento l'ultimo anno di un liceo musicale a Uppsala. Suono il violoncello da quando avevo otto anni. Studio l'italiano perché amo l'opera e perché vorrei studiare musica in Italia, magari a Bologna o a Milano. Nel tempo libero suono in un'orchestra giovanile e leggo molto. In futuro vorrei diventare musicista d'orchestra, ma so che è difficile. Se non ci riuscissi, mi piacerebbe insegnare musica ai bambini.",
+"modelSv": "Jag heter Ella, är arton år och går sista året på ett musikgymnasium i Uppsala. Jag har spelat cello sedan jag var åtta. Jag läser italienska eftersom jag älskar opera och skulle vilja studera musik i Italien, kanske i Bologna eller Milano. På fritiden spelar jag i en ungdomsorkester och läser mycket. I framtiden vill jag bli orkestermusiker, men jag vet att det är svårt. Om jag inte lyckades skulle jag vilja undervisa barn i musik."
+},
+{
+"id": "it6-or-2",
+"part": "orale",
+"teil": "Prova 2",
+"title": "Descrivere una foto: una piazza italiana",
+"prep": 2,
+"time": 3,
+"instr": "Beskriv bilden du föreställer dig: en italiensk piazza en sommarkväll med människor, barer och en kyrka. Berätta vad du ser och vad du tänker om det.",
+"task": "Descriva una piazza italiana d'estate, la sera: che cosa fanno le persone? Che cosa rappresenta la piazza nella vita italiana? C'è qualcosa di simile in Svezia?",
+"criteria": [
+"Competenza lessicale",
+"Competenza grammaticale",
+"Competenza sociolinguistica",
+"Pronuncia e intonazione"
+],
+"phrases": [
+"Al centro della foto si vede …",
+"Sullo sfondo c'è …",
+"Sembra che …",
+"Secondo me la piazza è …",
+"In Svezia invece …"
+],
+"model": "Nella foto si vede una piazza italiana in una sera d'estate. Al centro c'è una fontana, e sullo sfondo una chiesa con una bella facciata di marmo. Intorno ci sono dei bar con i tavolini all'aperto, pieni di gente. Alcuni anziani chiacchierano su una panchina, mentre dei bambini giocano a pallone. Sembra che tutti si conoscano. Secondo me la piazza è il cuore della vita italiana: è il luogo dove ci si incontra, si discute e si passeggia. In Svezia, invece, la vita sociale si svolge più spesso in casa, anche per via del clima.",
+"modelSv": "På bilden ser man en italiensk piazza en sommarkväll. I mitten finns en fontän, och i bakgrunden en kyrka med en vacker marmorfasad. Runt omkring finns barer med bord utomhus, fulla av folk. Några äldre pratar på en bänk, medan några barn spelar fotboll. Det verkar som om alla känner varandra. Jag tycker att piazzan är hjärtat i det italienska livet: det är platsen där man träffas, diskuterar och promenerar. I Sverige sker det sociala livet däremot oftare hemma, bland annat på grund av klimatet."
+},
+{
+"id": "it6-or-3",
+"part": "orale",
+"teil": "Prova 3",
+"title": "Gioco di ruolo: in segreteria",
+"prep": 2,
+"time": 3,
+"instr": "Rollspel: du ringer till ett universitets kansli. Examinatorn spelar sekreteraren.",
+"task": "Lei ha fatto domanda di ammissione a un corso di laurea, ma non ha ancora ricevuto nessuna risposta. Telefoni alla segreteria: si presenti, spieghi il problema, chieda che cosa deve fare e quando riceverà una risposta.",
+"criteria": [
+"Competenza lessicale",
+"Competenza grammaticale",
+"Competenza sociolinguistica",
+"Pronuncia e intonazione"
+],
+"phrases": [
+"Buongiorno, La chiamo perché …",
+"Ho inviato la domanda il …",
+"Volevo sapere se …",
+"Potrebbe dirmi …",
+"La ringrazio molto."
+],
+"model": "Buongiorno, mi chiamo Oskar Nilsson. La chiamo perché un mese fa ho inviato la domanda di ammissione al corso di laurea in musicologia, ma non ho ancora ricevuto nessuna risposta. Volevo sapere se la domanda è arrivata e se è completa. … Ah, capisco, manca il certificato di lingua. Potrebbe dirmi entro quando devo mandarlo? … Va bene, lo invierò oggi stesso per mail. E quando uscirà la graduatoria? … Perfetto. La ringrazio molto per la disponibilità. Arrivederci.",
+"modelSv": "God dag, jag heter Oskar Nilsson. Jag ringer eftersom jag för en månad sedan skickade in ansökan till kandidatprogrammet i musikvetenskap, men jag har ännu inte fått något svar. Jag undrar om ansökan har kommit fram och om den är fullständig. … Jaha, jag förstår, språkintyget saknas. Kan ni säga när jag senast måste skicka det? … Okej, jag skickar det med mejl redan i dag. Och när kommer rangordningen? … Perfekt. Tack så mycket för hjälpen. Hej då."
+},
+{
+"id": "it6-or-4",
+"part": "orale",
+"teil": "Prova 4",
+"title": "Riassumere un testo (CELI 3)",
+"prep": 10,
+"time": 4,
+"instr": "CELI 3-delmål: läs en av kursens lästexter (till exempel om Venedigs entréavgift) och sammanfatta den muntligt på 2–3 minuter. Avsluta med din egen åsikt.",
+"task": "Riassuma l'articolo 'Venezia a pagamento?' e dica che cosa ne pensa.",
+"criteria": [
+"Competenza lessicale",
+"Competenza grammaticale",
+"Competenza sociolinguistica",
+"Pronuncia e intonazione"
+],
+"phrases": [
+"L'articolo parla di …",
+"Secondo …, invece, …",
+"L'autore riporta due opinioni: …",
+"Per concludere, …",
+"Personalmente credo che …"
+],
+"model": "L'articolo parla del contributo d'accesso che Venezia chiede dal 2024 a chi visita la città per un solo giorno. Riporta due opinioni. Marco, una guida turistica, è a favore: secondo lui la città si sta svuotando e il biglietto è un primo segnale contro il turismo di massa. Elena, un'architetta, è contraria: pensa che cinque o dieci euro non fermino nessuno e che servano piuttosto case per i giovani e limiti agli affitti brevi. L'articolo conclude che i visitatori non sono diminuiti molto. Personalmente sono d'accordo con Elena: il biglietto da solo non basta.",
+"modelSv": "Artikeln handlar om tillträdesavgiften som Venedig sedan 2024 tar ut av dem som besöker staden för en enda dag. Den återger två åsikter. Marco, en guide, är för: enligt honom håller staden på att tömmas och avgiften är en första signal mot massturismen. Elena, en arkitekt, är emot: hon tycker att fem eller tio euro inte stoppar någon och att det snarare behövs bostäder för unga och gränser för korttidsuthyrning. Artikeln slutar med att besökarna inte har minskat mycket. Själv håller jag med Elena: avgiften räcker inte ensam.",
+"level": "B2"
+}
+]
+}

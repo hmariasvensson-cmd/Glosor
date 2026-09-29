@@ -1,0 +1,1626 @@
+[
+ {
+  "id": "t3-l-t1a",
+  "sec": "t1",
+  "title": "Am Fahrkartenschalter",
+  "lines": [
+   {
+    "who": "A",
+    "fr": "Guten Tag! Ich möchte am Samstag nach Salzburg fahren. Gibt es eine direkte Verbindung?",
+    "sv": "Hej! Jag vill åka till Salzburg på lördag. Finns det en direkt förbindelse?"
+   },
+   {
+    "who": "B",
+    "fr": "Von München aus, ja. Wann möchten Sie denn losfahren?",
+    "sv": "Från München, ja. När vill ni åka?"
+   },
+   {
+    "who": "A",
+    "fr": "Am liebsten am Vormittag, so gegen neun Uhr.",
+    "sv": "Helst på förmiddagen, runt klockan nio."
+   },
+   {
+    "who": "B",
+    "fr": "Um 9.12 Uhr fährt ein Zug von Gleis 14. Die Fahrt dauert knapp zwei Stunden. Sie sind also um elf in Salzburg.",
+    "sv": "Klockan 9.12 går ett tåg från spår 14. Resan tar knappt två timmar. Ni är alltså i Salzburg klockan elva."
+   },
+   {
+    "who": "A",
+    "fr": "Super. Was kostet die Fahrkarte? Ich bin Schülerin.",
+    "sv": "Toppen. Vad kostar biljetten? Jag är elev."
+   },
+   {
+    "who": "B",
+    "fr": "Hin und zurück kostet es 58 Euro. Mit einem Schülerausweis bekommen Sie 25 Prozent Rabatt.",
+    "sv": "Tur och retur kostar det 58 euro. Med elevlegitimation får ni 25 procents rabatt."
+   },
+   {
+    "who": "A",
+    "fr": "Den habe ich dabei. Und die Rückfahrt ist am Sonntagabend.",
+    "sv": "Den har jag med mig. Och hemresan är på söndagskvällen."
+   },
+   {
+    "who": "B",
+    "fr": "Dann nehmen Sie den Zug um 18.45 Uhr. Möchten Sie einen Sitzplatz reservieren? Am Wochenende sind die Züge oft sehr voll.",
+    "sv": "Då tar ni tåget 18.45. Vill ni boka en sittplats? På helgerna är tågen ofta väldigt fulla."
+   },
+   {
+    "who": "A",
+    "fr": "Ja, gern. Einen Fensterplatz, wenn es geht.",
+    "sv": "Ja, gärna. En fönsterplats om det går."
+   },
+   {
+    "who": "B",
+    "fr": "Kein Problem. Das macht zusammen 47,50 Euro. Zahlen Sie bar oder mit Karte?",
+    "sv": "Inga problem. Det blir 47,50 euro sammanlagt. Betalar ni kontant eller med kort?"
+   },
+   {
+    "who": "A",
+    "fr": "Mit Karte, bitte.",
+    "sv": "Med kort, tack."
+   }
+  ],
+  "questions": [
+   {
+    "type": "helhet",
+    "q": "Vad handlar samtalet om?",
+    "opts": [
+     "En tjej köper en tågbiljett till Salzburg",
+     "En tjej klagar på ett försenat tåg",
+     "En tjej frågar efter vägen till stationen",
+     "En tjej bokar ett hotell i Salzburg"
+    ],
+    "a": 0,
+    "why": "Hon vill „am Samstag nach Salzburg fahren“ och köper en biljett i luckan."
+   },
+   {
+    "type": "detalj",
+    "q": "Hur lång tid tar resan?",
+    "opts": [
+     "Knappt en timme",
+     "Knappt två timmar",
+     "Tre timmar",
+     "Fyra timmar"
+    ],
+    "a": 1,
+    "why": "„Die Fahrt dauert knapp zwei Stunden.“"
+   },
+   {
+    "type": "detalj",
+    "q": "Varför får hon rabatt?",
+    "opts": [
+     "Hon är under 12 år",
+     "Hon köper biljetten på nätet",
+     "Hon är elev",
+     "Hon reser en vardag"
+    ],
+    "a": 2,
+    "why": "„Mit einem Schülerausweis bekommen Sie 25 Prozent Rabatt.“"
+   },
+   {
+    "type": "detalj",
+    "q": "När åker hon hem?",
+    "opts": [
+     "På lördagskvällen",
+     "På söndagsmorgonen",
+     "På söndagskvällen",
+     "På måndagen"
+    ],
+    "a": 2,
+    "why": "„die Rückfahrt ist am Sonntagabend“ – tåget går 18.45."
+   },
+   {
+    "type": "tolkning",
+    "q": "Varför föreslår kvinnan i luckan att hon ska boka en sittplats?",
+    "opts": [
+     "Det är obligatoriskt i Österrike",
+     "Tågen är ofta fulla på helgerna",
+     "Hon får en billigare biljett då",
+     "Tåget har bara få vagnar"
+    ],
+    "a": 1,
+    "why": "„Am Wochenende sind die Züge oft sehr voll.“"
+   }
+  ]
+ },
+ {
+  "id": "t3-l-t1b",
+  "sec": "t1",
+  "title": "Durchsage und Sprachnachricht",
+  "lines": [
+   {
+    "who": "N",
+    "fr": "Achtung am Gleis 5: Der ICE 578 nach Hamburg hat heute etwa 30 Minuten Verspätung. Grund ist eine Störung an einem anderen Zug. Wir bitten um Entschuldigung.",
+    "sv": "Obs på spår 5: ICE 578 till Hamburg är ungefär 30 minuter försenat i dag. Orsaken är ett fel på ett annat tåg. Vi ber om ursäkt."
+   },
+   {
+    "who": "N",
+    "fr": "Reisende nach Hannover können auch den Regionalzug um 14.20 Uhr von Gleis 7 nehmen. Die Fahrkarten sind in diesem Zug gültig.",
+    "sv": "Resenärer till Hannover kan också ta regionaltåget 14.20 från spår 7. Biljetterna gäller i det tåget."
+   },
+   {
+    "who": "A",
+    "fr": "Hallo Mama, ich bin's, Jonas. Ich stehe gerade am Bahnhof in Kassel. Mein Zug hat leider eine halbe Stunde Verspätung. Ich komme also nicht um fünf, sondern erst um halb sechs in Hamburg an.",
+    "sv": "Hej mamma, det är jag, Jonas. Jag står på stationen i Kassel just nu. Mitt tåg är tyvärr en halvtimme försenat. Jag kommer alltså inte fram till Hamburg klockan fem, utan först halv sex."
+   },
+   {
+    "who": "A",
+    "fr": "Kannst du mich trotzdem vom Bahnhof abholen? Mein Koffer ist ziemlich schwer, und mit der S-Bahn muss ich zweimal umsteigen.",
+    "sv": "Kan du hämta mig på stationen ändå? Min resväska är ganska tung, och med pendeltåget måste jag byta två gånger."
+   },
+   {
+    "who": "A",
+    "fr": "Ach ja, und ich habe mein Ladegerät bei Oma vergessen. Mein Akku ist fast leer. Wenn du mich nicht erreichen kannst, warte ich einfach am Haupteingang. Bis später!",
+    "sv": "Just det, och jag har glömt min laddare hos mormor. Mitt batteri är nästan slut. Om du inte kan nå mig väntar jag bara vid huvudingången. Vi ses!"
+   }
+  ],
+  "questions": [
+   {
+    "type": "helhet",
+    "q": "Vad är det du hör?",
+    "opts": [
+     "Ett utrop på stationen och ett röstmeddelande",
+     "En intervju med en konduktör",
+     "Ett samtal mellan två resenärer",
+     "En reklam för tåg"
+    ],
+    "a": 0,
+    "why": "Först ett utrop „Achtung am Gleis 5“, sedan Jonas röstmeddelande till sin mamma."
+   },
+   {
+    "type": "detalj",
+    "q": "Varför är tåget försenat?",
+    "opts": [
+     "Det snöar",
+     "Det är fel på ett annat tåg",
+     "Personalen strejkar",
+     "Det är en olycka på spåret"
+    ],
+    "a": 1,
+    "why": "„Grund ist eine Störung an einem anderen Zug.“"
+   },
+   {
+    "type": "detalj",
+    "q": "Vad kan resenärer till Hannover göra?",
+    "opts": [
+     "Ta en buss",
+     "Vänta på nästa ICE",
+     "Ta regionaltåget från spår 7",
+     "Köpa en ny biljett"
+    ],
+    "a": 2,
+    "why": "„können auch den Regionalzug um 14.20 Uhr von Gleis 7 nehmen“."
+   },
+   {
+    "type": "detalj",
+    "q": "Varför vill Jonas bli hämtad?",
+    "opts": [
+     "Han har ingen biljett till S-Bahn",
+     "Resväskan är tung och han måste byta två gånger",
+     "Han vet inte vägen",
+     "Det är sent på kvällen"
+    ],
+    "a": 1,
+    "why": "„Mein Koffer ist ziemlich schwer, und mit der S-Bahn muss ich zweimal umsteigen.“"
+   },
+   {
+    "type": "detalj",
+    "q": "Var väntar Jonas om mamman inte når honom?",
+    "opts": [
+     "På perrongen",
+     "I kaféet",
+     "Vid huvudingången",
+     "Hos mormor"
+    ],
+    "a": 2,
+    "why": "„warte ich einfach am Haupteingang“."
+   }
+  ]
+ },
+ {
+  "id": "t3-l-t2a",
+  "sec": "t2",
+  "title": "Mein Schülerpraktikum",
+  "lines": [
+   {
+    "who": "A",
+    "fr": "Hallo Mia! Du warst doch zwei Wochen im Praktikum, oder? Wie war es?",
+    "sv": "Hej Mia! Du har ju varit på praktik i två veckor, eller hur? Hur var det?"
+   },
+   {
+    "who": "B",
+    "fr": "Echt toll! Ich war in einer Tierarztpraxis. Am Anfang war ich ziemlich nervös, aber das Team war sehr freundlich.",
+    "sv": "Jättebra! Jag var på en veterinärmottagning. I början var jag ganska nervös, men teamet var väldigt vänligt."
+   },
+   {
+    "who": "A",
+    "fr": "Was musstest du denn machen?",
+    "sv": "Vad var du tvungen att göra då?"
+   },
+   {
+    "who": "B",
+    "fr": "Morgens musste ich die Käfige sauber machen und die Tiere füttern. Später durfte ich bei Untersuchungen helfen. Einmal war ein Hund mit einem gebrochenen Bein da. Das war spannend.",
+    "sv": "På morgnarna var jag tvungen att göra rent burarna och mata djuren. Senare fick jag hjälpa till vid undersökningar. En gång kom en hund med ett brutet ben. Det var spännande."
+   },
+   {
+    "who": "A",
+    "fr": "Und wie lange hast du jeden Tag gearbeitet?",
+    "sv": "Och hur länge jobbade du varje dag?"
+   },
+   {
+    "who": "B",
+    "fr": "Von acht bis vier. Das war anstrengend, weil ich um sechs aufstehen musste. Aber die Arbeit war sehr abwechslungsreich.",
+    "sv": "Från åtta till fyra. Det var ansträngande, eftersom jag var tvungen att gå upp klockan sex. Men jobbet var väldigt omväxlande."
+   },
+   {
+    "who": "A",
+    "fr": "Möchtest du später Tierärztin werden?",
+    "sv": "Vill du bli veterinär sen?"
+   },
+   {
+    "who": "B",
+    "fr": "Vielleicht. Früher wollte ich Lehrerin werden, aber jetzt bin ich nicht mehr so sicher. Die Chefin hat gesagt, dass ich in den Sommerferien wiederkommen kann.",
+    "sv": "Kanske. Förr ville jag bli lärare, men nu är jag inte så säker längre. Chefen sa att jag kan komma tillbaka på sommarlovet."
+   }
+  ],
+  "questions": [
+   {
+    "type": "helhet",
+    "q": "Vad berättar Mia om?",
+    "opts": [
+     "Sin praktik på en veterinärmottagning",
+     "Sitt sommarjobb på ett kafé",
+     "Sin nya hund",
+     "Ett prov i biologi"
+    ],
+    "a": 0,
+    "why": "„Ich war in einer Tierarztpraxis.“"
+   },
+   {
+    "type": "detalj",
+    "q": "Hur kände sig Mia i början?",
+    "opts": [
+     "Uttråkad",
+     "Ganska nervös",
+     "Arg",
+     "Trött"
+    ],
+    "a": 1,
+    "why": "„Am Anfang war ich ziemlich nervös.“"
+   },
+   {
+    "type": "detalj",
+    "q": "Vad gjorde Mia på morgnarna?",
+    "opts": [
+     "Hon svarade i telefon",
+     "Hon gjorde rent burarna och matade djuren",
+     "Hon opererade hundar",
+     "Hon skrev räkningar"
+    ],
+    "a": 1,
+    "why": "„Morgens musste ich die Käfige sauber machen und die Tiere füttern.“"
+   },
+   {
+    "type": "detalj",
+    "q": "Varför var praktiken ansträngande?",
+    "opts": [
+     "Hon var tvungen att gå upp klockan sex",
+     "Hon fick ingen lunch",
+     "Chefen var sträng",
+     "Hon jobbade på helgerna"
+    ],
+    "a": 0,
+    "why": "„weil ich um sechs aufstehen musste“."
+   },
+   {
+    "type": "tolkning",
+    "q": "Vad tror du Mia gör i sommar?",
+    "opts": [
+     "Hon åker på semester",
+     "Hon börjar studera till lärare",
+     "Hon jobbar kanske på mottagningen igen",
+     "Hon letar efter ett annat jobb"
+    ],
+    "a": 2,
+    "why": "Chefen sa „dass ich in den Sommerferien wiederkommen kann“."
+   }
+  ]
+ },
+ {
+  "id": "t3-l-t2b",
+  "sec": "t2",
+  "title": "Radio: Jobs für Jugendliche",
+  "lines": [
+   {
+    "who": "N",
+    "fr": "Und jetzt unser Thema am Nachmittag: Ferienjobs. Viele Jugendliche möchten in den Ferien Geld verdienen. Aber was ist erlaubt?",
+    "sv": "Och nu vårt eftermiddagstema: sommarjobb. Många ungdomar vill tjäna pengar på lovet. Men vad är tillåtet?"
+   },
+   {
+    "who": "N",
+    "fr": "In Deutschland dürfen Schülerinnen und Schüler ab 15 Jahren in den Ferien arbeiten, aber höchstens vier Wochen im Jahr und nicht mehr als acht Stunden am Tag. Nachts und am Sonntag ist Arbeit meistens verboten.",
+    "sv": "I Tyskland får elever från 15 år arbeta på loven, men högst fyra veckor om året och inte mer än åtta timmar om dagen. På nätterna och på söndagar är arbete oftast förbjudet."
+   },
+   {
+    "who": "N",
+    "fr": "Wir haben Paul gefragt. Er ist 16 und hat letzten Sommer in einem Supermarkt gearbeitet.",
+    "sv": "Vi har frågat Paul. Han är 16 och jobbade i en mataffär förra sommaren."
+   },
+   {
+    "who": "A",
+    "fr": "Ich musste Regale auffüllen und manchmal an der Kasse helfen. Ich habe zwölf Euro pro Stunde verdient. Mit dem Geld habe ich mir ein neues Fahrrad gekauft. Am besten war, dass meine Kollegen so nett waren.",
+    "sv": "Jag var tvungen att fylla på hyllor och ibland hjälpa till i kassan. Jag tjänade tolv euro i timmen. För pengarna köpte jag en ny cykel. Det bästa var att mina kollegor var så trevliga."
+   },
+   {
+    "who": "N",
+    "fr": "Unser Tipp: Sucht früh! Die besten Ferienjobs sind schon im März weg.",
+    "sv": "Vårt tips: Börja leta tidigt! De bästa sommarjobben är borta redan i mars."
+   }
+  ],
+  "questions": [
+   {
+    "type": "helhet",
+    "q": "Vad handlar radioinslaget om?",
+    "opts": [
+     "Regler och erfarenheter kring sommarjobb för ungdomar",
+     "Hur man startar ett företag",
+     "Arbetslöshet i Tyskland",
+     "Skolans praktik"
+    ],
+    "a": 0,
+    "why": "Temat är „Ferienjobs“: vad som är tillåtet och Pauls erfarenhet."
+   },
+   {
+    "type": "detalj",
+    "q": "Hur länge får en 15-åring jobba på loven?",
+    "opts": [
+     "Hela sommarlovet",
+     "Högst fyra veckor om året",
+     "Två veckor",
+     "Bara på helgerna"
+    ],
+    "a": 1,
+    "why": "„höchstens vier Wochen im Jahr“."
+   },
+   {
+    "type": "detalj",
+    "q": "När är arbete oftast förbjudet?",
+    "opts": [
+     "På lördagar",
+     "På morgonen",
+     "På nätterna och på söndagar",
+     "Efter klockan fyra"
+    ],
+    "a": 2,
+    "why": "„Nachts und am Sonntag ist Arbeit meistens verboten.“"
+   },
+   {
+    "type": "detalj",
+    "q": "Vad köpte Paul för pengarna?",
+    "opts": [
+     "En mobil",
+     "En cykel",
+     "Kläder",
+     "En resa"
+    ],
+    "a": 1,
+    "why": "„habe ich mir ein neues Fahrrad gekauft“."
+   },
+   {
+    "type": "detalj",
+    "q": "Vilket tips ger radion?",
+    "opts": [
+     "Fråga föräldrarna först",
+     "Börja leta tidigt",
+     "Jobba bara i mataffärer",
+     "Förhandla om lönen"
+    ],
+    "a": 1,
+    "why": "„Sucht früh! Die besten Ferienjobs sind schon im März weg.“"
+   }
+  ]
+ },
+ {
+  "id": "t3-l-t3a",
+  "sec": "t3",
+  "title": "Zu viel am Handy?",
+  "lines": [
+   {
+    "who": "A",
+    "fr": "Lea, du bist schon wieder am Handy! Wir essen gleich.",
+    "sv": "Lea, du sitter med mobilen igen! Vi ska äta snart."
+   },
+   {
+    "who": "B",
+    "fr": "Ja, gleich. Ich schreibe nur noch schnell eine Nachricht in unsere Gruppe. Wir planen die Party für Samstag.",
+    "sv": "Ja, strax. Jag skriver bara ett snabbt meddelande i vår grupp. Vi planerar festen på lördag."
+   },
+   {
+    "who": "A",
+    "fr": "Weißt du, wie viele Stunden du gestern am Handy warst? Die App zeigt es dir doch.",
+    "sv": "Vet du hur många timmar du satt med mobilen i går? Appen visar det ju."
+   },
+   {
+    "who": "B",
+    "fr": "Hm … fünf Stunden. Aber das meiste war für die Schule! Ich habe Videos für Bio geschaut und Vokabeln gelernt.",
+    "sv": "Hm … fem timmar. Men det mesta var för skolan! Jag tittade på videor till biologin och pluggade glosor."
+   },
+   {
+    "who": "A",
+    "fr": "Und drei Stunden soziale Medien. Ich finde, dass das zu viel ist. Du schläfst auch schlecht, wenn du abends so lange am Bildschirm bist.",
+    "sv": "Och tre timmar sociala medier. Jag tycker att det är för mycket. Du sover också dåligt när du sitter vid skärmen så länge på kvällarna."
+   },
+   {
+    "who": "B",
+    "fr": "Das stimmt vielleicht. Was schlägst du vor?",
+    "sv": "Det stämmer kanske. Vad föreslår du?"
+   },
+   {
+    "who": "A",
+    "fr": "Ab neun Uhr liegt das Handy in der Küche. Ich mache das auch, versprochen.",
+    "sv": "Från klockan nio ligger mobilen i köket. Jag gör det också, jag lovar."
+   },
+   {
+    "who": "B",
+    "fr": "Okay, wir können es eine Woche probieren. Aber nur, wenn du beim Essen auch nicht mehr die Nachrichten liest!",
+    "sv": "Okej, vi kan prova i en vecka. Men bara om du inte heller läser nyheterna vid maten!"
+   }
+  ],
+  "questions": [
+   {
+    "type": "helhet",
+    "q": "Vad handlar samtalet om?",
+    "opts": [
+     "Hur mycket Lea använder mobilen",
+     "En ny mobil som Lea vill köpa",
+     "En fest som ställs in",
+     "Leas betyg i biologi"
+    ],
+    "a": 0,
+    "why": "Pappan säger „du bist schon wieder am Handy“, och de diskuterar skärmtiden."
+   },
+   {
+    "type": "detalj",
+    "q": "Hur länge satt Lea med mobilen i går?",
+    "opts": [
+     "Två timmar",
+     "Tre timmar",
+     "Fem timmar",
+     "Åtta timmar"
+    ],
+    "a": 2,
+    "why": "„fünf Stunden“."
+   },
+   {
+    "type": "detalj",
+    "q": "Vad säger Lea att hon använde mobilen till?",
+    "opts": [
+     "Mest spel",
+     "Mest till skolan",
+     "Mest för att ringa",
+     "Mest till musik"
+    ],
+    "a": 1,
+    "why": "„das meiste war für die Schule“."
+   },
+   {
+    "type": "detalj",
+    "q": "Vad föreslår föräldern?",
+    "opts": [
+     "Mobilen ligger i köket från klockan nio",
+     "Lea får ingen mobil på helgen",
+     "Lea får bara en timme om dagen",
+     "Lea ska radera apparna"
+    ],
+    "a": 0,
+    "why": "„Ab neun Uhr liegt das Handy in der Küche.“"
+   },
+   {
+    "type": "tolkning",
+    "q": "Vilket villkor ställer Lea?",
+    "opts": [
+     "Att hon får en ny mobil",
+     "Att föräldern inte heller läser nyheter vid maten",
+     "Att festen blir av",
+     "Att hon får gå och lägga sig senare"
+    ],
+    "a": 1,
+    "why": "„nur, wenn du beim Essen auch nicht mehr die Nachrichten liest“."
+   }
+  ]
+ },
+ {
+  "id": "t3-l-t3b",
+  "sec": "t3",
+  "title": "Nachrichten aus der Schule",
+  "lines": [
+   {
+    "who": "N",
+    "fr": "Hier ist das Schulradio der Goethe-Schule mit den Nachrichten der Woche.",
+    "sv": "Här är Goetheskolans skolradio med veckans nyheter."
+   },
+   {
+    "who": "N",
+    "fr": "Erstens: Ab Montag gibt es in der ganzen Schule WLAN. Das Passwort bekommt ihr bei eurer Klassenlehrerin. Aber Achtung: Im Unterricht bleiben Handys weiter verboten, wenn die Lehrkraft es nicht erlaubt.",
+    "sv": "För det första: Från måndag finns det wifi i hela skolan. Lösenordet får ni av er klassföreståndare. Men obs: på lektionerna är mobiler fortfarande förbjudna om läraren inte tillåter det."
+   },
+   {
+    "who": "N",
+    "fr": "Zweitens: Die Klasse 9b hat einen Podcast gemacht. Das Thema ist „Fake News“. Die Schüler erklären, wie man falsche Nachrichten im Internet erkennt. Ihr findet den Podcast auf der Webseite der Schule.",
+    "sv": "För det andra: Klass 9b har gjort en podd. Temat är \"falska nyheter\". Eleverna förklarar hur man känner igen falska nyheter på internet. Ni hittar podden på skolans webbsida."
+   },
+   {
+    "who": "N",
+    "fr": "Und drittens: Am Donnerstag kommt eine Polizistin in die Aula. Sie spricht über Mobbing im Internet und darüber, was man tun kann, wenn man Hilfe braucht. Alle Klassen ab Klasse 7 nehmen teil.",
+    "sv": "Och för det tredje: På torsdag kommer en polis till aulan. Hon pratar om mobbning på nätet och om vad man kan göra om man behöver hjälp. Alla klasser från årskurs 7 deltar."
+   }
+  ],
+  "questions": [
+   {
+    "type": "helhet",
+    "q": "Vad är det här?",
+    "opts": [
+     "Nyheter i skolradion",
+     "En reklam för en app",
+     "En lektion i tyska",
+     "Ett telefonsamtal"
+    ],
+    "a": 0,
+    "why": "„Hier ist das Schulradio … mit den Nachrichten der Woche.“"
+   },
+   {
+    "type": "detalj",
+    "q": "Var får man lösenordet till wifi:t?",
+    "opts": [
+     "På webbsidan",
+     "Av klassföreståndaren",
+     "I aulan",
+     "Av rektorn"
+    ],
+    "a": 1,
+    "why": "„Das Passwort bekommt ihr bei eurer Klassenlehrerin.“"
+   },
+   {
+    "type": "detalj",
+    "q": "Vad gäller för mobiler på lektionerna?",
+    "opts": [
+     "De är tillåtna från måndag",
+     "De är förbjudna om läraren inte tillåter dem",
+     "De måste lämnas hos rektorn",
+     "De får bara användas för podden"
+    ],
+    "a": 1,
+    "why": "„Im Unterricht bleiben Handys weiter verboten, wenn die Lehrkraft es nicht erlaubt.“"
+   },
+   {
+    "type": "detalj",
+    "q": "Vad handlar klass 9b:s podd om?",
+    "opts": [
+     "Mobbning",
+     "Falska nyheter",
+     "Wifi",
+     "Datorspel"
+    ],
+    "a": 1,
+    "why": "„Das Thema ist Fake News.“"
+   },
+   {
+    "type": "detalj",
+    "q": "Vem kommer till aulan på torsdag?",
+    "opts": [
+     "En journalist",
+     "En polis",
+     "En psykolog",
+     "En programmerare"
+    ],
+    "a": 1,
+    "why": "„kommt eine Polizistin in die Aula“."
+   }
+  ]
+ },
+ {
+  "id": "t3-l-t4a",
+  "sec": "t4",
+  "title": "Beim Arzt",
+  "lines": [
+   {
+    "who": "A",
+    "fr": "Guten Morgen, Frau Berger. Was fehlt Ihnen denn?",
+    "sv": "God morgon, fru Berger. Vad är det för problem?"
+   },
+   {
+    "who": "B",
+    "fr": "Seit drei Tagen habe ich Halsschmerzen und Husten. Heute Nacht hatte ich auch Fieber, fast 39 Grad.",
+    "sv": "Jag har haft halsont och hosta i tre dagar. I natt hade jag också feber, nästan 39 grader."
+   },
+   {
+    "who": "A",
+    "fr": "Das tut mir leid. Haben Sie auch Kopfschmerzen?",
+    "sv": "Det var tråkigt. Har ni ont i huvudet också?"
+   },
+   {
+    "who": "B",
+    "fr": "Ja, ein bisschen. Und ich fühle mich total schwach. Gestern konnte ich nicht zur Arbeit gehen.",
+    "sv": "Ja, lite. Och jag känner mig jättesvag. I går kunde jag inte gå till jobbet."
+   },
+   {
+    "who": "A",
+    "fr": "Ich untersuche Sie mal. Machen Sie bitte den Mund auf … Der Hals ist sehr rot. Das ist eine Erkältung, vielleicht auch eine leichte Grippe.",
+    "sv": "Jag ska undersöka er. Öppna munnen … Halsen är väldigt röd. Det är en förkylning, kanske också en lätt influensa."
+   },
+   {
+    "who": "B",
+    "fr": "Brauche ich Antibiotika?",
+    "sv": "Behöver jag antibiotika?"
+   },
+   {
+    "who": "A",
+    "fr": "Nein, das ist ein Virus, da helfen Antibiotika nicht. Sie müssen sich ausruhen und viel trinken, am besten Tee mit Honig. Ich schreibe Ihnen ein Rezept für einen Hustensaft. Bleiben Sie bis Freitag zu Hause.",
+    "sv": "Nej, det är ett virus, då hjälper inte antibiotika. Ni måste vila och dricka mycket, helst te med honung. Jag skriver ut ett recept på hostmedicin. Stanna hemma till fredag."
+   },
+   {
+    "who": "B",
+    "fr": "Brauche ich eine Krankmeldung für meinen Chef?",
+    "sv": "Behöver jag ett sjukintyg till min chef?"
+   },
+   {
+    "who": "A",
+    "fr": "Ja, die bekommen Sie gleich an der Rezeption. Gute Besserung!",
+    "sv": "Ja, det får ni i receptionen. Krya på er!"
+   }
+  ],
+  "questions": [
+   {
+    "type": "helhet",
+    "q": "Vad handlar samtalet om?",
+    "opts": [
+     "En sjuk kvinna hos läkaren",
+     "En olycka på jobbet",
+     "Ett besök på apoteket",
+     "En vaccination"
+    ],
+    "a": 0,
+    "why": "Kvinnan berättar om sina symtom och läkaren undersöker henne."
+   },
+   {
+    "type": "detalj",
+    "q": "Vilka symtom har fru Berger INTE?",
+    "opts": [
+     "Halsont",
+     "Feber",
+     "Hosta",
+     "Magont"
+    ],
+    "a": 3,
+    "why": "Hon nämner Halsschmerzen, Husten, Fieber och lite huvudvärk, men inget magont."
+   },
+   {
+    "type": "detalj",
+    "q": "Varför får hon inte antibiotika?",
+    "opts": [
+     "Hon är allergisk",
+     "Det är ett virus",
+     "Det är för dyrt",
+     "Hon är inte så sjuk"
+    ],
+    "a": 1,
+    "why": "„das ist ein Virus, da helfen Antibiotika nicht“."
+   },
+   {
+    "type": "detalj",
+    "q": "Vad skriver läkaren ut?",
+    "opts": [
+     "Tabletter mot feber",
+     "Hostmedicin",
+     "Antibiotika",
+     "Näsdroppar"
+    ],
+    "a": 1,
+    "why": "„ein Rezept für einen Hustensaft“."
+   },
+   {
+    "type": "detalj",
+    "q": "Var får hon sjukintyget?",
+    "opts": [
+     "På apoteket",
+     "Av sin chef",
+     "I receptionen",
+     "Via mejl"
+    ],
+    "a": 2,
+    "why": "„die bekommen Sie gleich an der Rezeption“."
+   }
+  ]
+ },
+ {
+  "id": "t3-l-t4b",
+  "sec": "t4",
+  "title": "Tipps gegen Stress",
+  "lines": [
+   {
+    "who": "N",
+    "fr": "Willkommen zu „Gesund und fit“, dem Podcast für junge Leute. Heute geht es um Stress. Viele Schülerinnen und Schüler fühlen sich vor Prüfungen gestresst. Was kann man tun? Hier sind drei Tipps von unserer Expertin, der Psychologin Anna Weber.",
+    "sv": "Välkommen till \"Frisk och i form\", podden för unga. I dag handlar det om stress. Många elever känner sig stressade före prov. Vad kan man göra? Här är tre tips från vår expert, psykologen Anna Weber."
+   },
+   {
+    "who": "B",
+    "fr": "Erstens: Schlaf ist sehr wichtig. Jugendliche brauchen acht bis neun Stunden pro Nacht. Wer zu wenig schläft, kann sich schlecht konzentrieren.",
+    "sv": "För det första: sömn är väldigt viktigt. Ungdomar behöver åtta till nio timmar per natt. Den som sover för lite kan inte koncentrera sig bra."
+   },
+   {
+    "who": "B",
+    "fr": "Zweitens: Bewegen Sie sich! Schon ein Spaziergang von zwanzig Minuten an der frischen Luft hilft gegen Stress.",
+    "sv": "För det andra: rör på er! Redan en promenad på tjugo minuter i friska luften hjälper mot stress."
+   },
+   {
+    "who": "B",
+    "fr": "Drittens: Reden Sie darüber. Viele denken, dass sie mit ihren Sorgen allein sind. Aber es hilft, mit Freunden, den Eltern oder einer Beratung in der Schule zu sprechen.",
+    "sv": "För det tredje: prata om det. Många tror att de är ensamma med sina bekymmer. Men det hjälper att prata med vänner, föräldrarna eller skolans kurator."
+   },
+   {
+    "who": "N",
+    "fr": "Vielen Dank! Und ihr? Schickt uns eure Tipps als Sprachnachricht!",
+    "sv": "Tack så mycket! Och ni? Skicka era tips till oss som röstmeddelande!"
+   }
+  ],
+  "questions": [
+   {
+    "type": "helhet",
+    "q": "Vad handlar podden om?",
+    "opts": [
+     "Tips mot stress",
+     "Hur man lagar nyttig mat",
+     "En ny idrott",
+     "Prov i biologi"
+    ],
+    "a": 0,
+    "why": "„Heute geht es um Stress.“"
+   },
+   {
+    "type": "detalj",
+    "q": "Hur mycket sömn behöver ungdomar enligt psykologen?",
+    "opts": [
+     "Sex till sju timmar",
+     "Åtta till nio timmar",
+     "Tio timmar",
+     "Minst elva timmar"
+    ],
+    "a": 1,
+    "why": "„acht bis neun Stunden pro Nacht“."
+   },
+   {
+    "type": "detalj",
+    "q": "Hur lång promenad hjälper redan?",
+    "opts": [
+     "Fem minuter",
+     "Tjugo minuter",
+     "En timme",
+     "Två timmar"
+    ],
+    "a": 1,
+    "why": "„Schon ein Spaziergang von zwanzig Minuten“."
+   },
+   {
+    "type": "detalj",
+    "q": "Vad är det tredje tipset?",
+    "opts": [
+     "Att sluta med sociala medier",
+     "Att prata om sina bekymmer",
+     "Att äta mer frukt",
+     "Att plugga mer"
+    ],
+    "a": 1,
+    "why": "„Reden Sie darüber.“"
+   },
+   {
+    "type": "tolkning",
+    "q": "Vad vill podden att lyssnarna ska göra till sist?",
+    "opts": [
+     "Skicka egna tips",
+     "Boka tid hos psykologen",
+     "Sova mer på helgen",
+     "Köpa en app"
+    ],
+    "a": 0,
+    "why": "„Schickt uns eure Tipps als Sprachnachricht!“"
+   }
+  ]
+ },
+ {
+  "id": "t3-l-t5a",
+  "sec": "t5",
+  "title": "Der Wetterbericht",
+  "lines": [
+   {
+    "who": "N",
+    "fr": "Und nun das Wetter für morgen, Dienstag. Im Norden bleibt es wolkig und windig. An der Nordsee gibt es am Nachmittag Regen, die Temperaturen liegen bei 14 Grad.",
+    "sv": "Och nu vädret för i morgon, tisdag. I norr förblir det molnigt och blåsigt. Vid Nordsjön blir det regn på eftermiddagen, temperaturen ligger kring 14 grader."
+   },
+   {
+    "who": "N",
+    "fr": "Im Osten und in der Mitte scheint oft die Sonne. In Berlin und Leipzig wird es mit 22 Grad deutlich wärmer als heute.",
+    "sv": "I öster och i mitten skiner solen ofta. I Berlin och Leipzig blir det med 22 grader betydligt varmare än i dag."
+   },
+   {
+    "who": "N",
+    "fr": "Am wärmsten wird es im Süden: In München sind es bis zu 26 Grad. Aber Vorsicht: Am Abend kommen in den Alpen Gewitter mit Blitz und Donner, und es kann auch Hagel geben.",
+    "sv": "Varmast blir det i söder: I München blir det upp till 26 grader. Men se upp: på kvällen kommer det åskväder med blixt och dunder i Alperna, och det kan också bli hagel."
+   },
+   {
+    "who": "N",
+    "fr": "Am Mittwoch wird es überall kühler. Im Norden gibt es morgens Nebel. Wer wandern möchte, sollte am besten schon morgen früh losgehen.",
+    "sv": "På onsdag blir det svalare överallt. I norr blir det dimma på morgonen. Den som vill vandra bör helst gå i väg redan i morgon bitti."
+   }
+  ],
+  "questions": [
+   {
+    "type": "helhet",
+    "q": "Vad hör du?",
+    "opts": [
+     "En väderprognos",
+     "En nyhet om en olycka",
+     "En reklam för en resa",
+     "Ett samtal mellan två vänner"
+    ],
+    "a": 0,
+    "why": "„Und nun das Wetter für morgen.“"
+   },
+   {
+    "type": "detalj",
+    "q": "Hur blir vädret vid Nordsjön?",
+    "opts": [
+     "Soligt och varmt",
+     "Regn på eftermiddagen",
+     "Snö",
+     "Åska"
+    ],
+    "a": 1,
+    "why": "„An der Nordsee gibt es am Nachmittag Regen.“"
+   },
+   {
+    "type": "detalj",
+    "q": "Var blir det varmast?",
+    "opts": [
+     "I norr",
+     "I Berlin",
+     "I söder",
+     "Vid Nordsjön"
+    ],
+    "a": 2,
+    "why": "„Am wärmsten wird es im Süden.“"
+   },
+   {
+    "type": "detalj",
+    "q": "Vad varnar prognosen för i Alperna?",
+    "opts": [
+     "Dimma",
+     "Åska och hagel på kvällen",
+     "Storm på morgonen",
+     "Mycket snö"
+    ],
+    "a": 1,
+    "why": "„Am Abend kommen in den Alpen Gewitter … Hagel“."
+   },
+   {
+    "type": "tolkning",
+    "q": "Varför är det bättre att vandra redan på tisdag?",
+    "opts": [
+     "På onsdag blir det svalare och dimmigt",
+     "På onsdag är vägarna stängda",
+     "På tisdag är det helgdag",
+     "På onsdag blir det 30 grader"
+    ],
+    "a": 0,
+    "why": "„Am Mittwoch wird es überall kühler. Im Norden gibt es morgens Nebel.“"
+   }
+  ]
+ },
+ {
+  "id": "t3-l-t5b",
+  "sec": "t5",
+  "title": "Müll trennen in der WG",
+  "lines": [
+   {
+    "who": "A",
+    "fr": "Sag mal, Tim, warum liegt die Pizzaschachtel im Papiermüll?",
+    "sv": "Säg, Tim, varför ligger pizzakartongen i pappersinsamlingen?"
+   },
+   {
+    "who": "B",
+    "fr": "Na ja, sie ist doch aus Papier, oder?",
+    "sv": "Ja, den är väl av papper?"
+   },
+   {
+    "who": "A",
+    "fr": "Ja, aber sie ist ganz fettig. Die gehört in den Restmüll. Im Papier darf nur sauberes Papier sein.",
+    "sv": "Ja, men den är helt flottig. Den ska i restavfallet. I pappret får bara rent papper vara."
+   },
+   {
+    "who": "B",
+    "fr": "Oh, das wusste ich nicht. In Schweden trennen wir auch Müll, aber die Regeln sind ein bisschen anders.",
+    "sv": "Oj, det visste jag inte. I Sverige sorterar vi också sopor, men reglerna är lite annorlunda."
+   },
+   {
+    "who": "A",
+    "fr": "Hier ist es ganz einfach: Die gelbe Tonne ist für Plastik und Dosen, die blaue für Papier, die braune für Biomüll, also Essensreste und Kaffeefilter. Und die schwarze Tonne ist für den Rest.",
+    "sv": "Här är det jätteenkelt: den gula tunnan är för plast och burkar, den blåa för papper, den bruna för matavfall, alltså matrester och kaffefilter. Och den svarta tunnan är för resten."
+   },
+   {
+    "who": "B",
+    "fr": "Und die Flaschen?",
+    "sv": "Och flaskorna?"
+   },
+   {
+    "who": "A",
+    "fr": "Flaschen mit Pfand bringst du in den Supermarkt, da bekommst du Geld zurück. Die anderen Glasflaschen kommen in den Glascontainer an der Ecke, aber bitte nicht am Sonntag, das ist zu laut für die Nachbarn.",
+    "sv": "Pantflaskor lämnar du i mataffären, där får du pengar tillbaka. De andra glasflaskorna ska i glasinsamlingen på hörnet, men inte på söndagar, det är för mycket oväsen för grannarna."
+   },
+   {
+    "who": "B",
+    "fr": "Okay, ich glaube, ich mache mir eine Liste!",
+    "sv": "Okej, jag tror jag gör en lista!"
+   }
+  ],
+  "questions": [
+   {
+    "type": "helhet",
+    "q": "Vad handlar samtalet om?",
+    "opts": [
+     "Hur man sorterar sopor",
+     "Hur man lagar pizza",
+     "Att flytta till en ny lägenhet",
+     "Grannar som bråkar"
+    ],
+    "a": 0,
+    "why": "De pratar om vilken tunna olika saker ska i."
+   },
+   {
+    "type": "detalj",
+    "q": "Varför ska pizzakartongen inte i pappersinsamlingen?",
+    "opts": [
+     "Den är för stor",
+     "Den är flottig",
+     "Den är av plast",
+     "Den är från Sverige"
+    ],
+    "a": 1,
+    "why": "„sie ist ganz fettig. Die gehört in den Restmüll.“"
+   },
+   {
+    "type": "detalj",
+    "q": "Vad ska i den bruna tunnan?",
+    "opts": [
+     "Plast och burkar",
+     "Papper",
+     "Matrester och kaffefilter",
+     "Glas"
+    ],
+    "a": 2,
+    "why": "„die braune für Biomüll, also Essensreste und Kaffeefilter“."
+   },
+   {
+    "type": "detalj",
+    "q": "Vad gör man med pantflaskor?",
+    "opts": [
+     "Lägger dem i den gula tunnan",
+     "Lämnar dem i mataffären",
+     "Lämnar dem i glasinsamlingen",
+     "Slänger dem i restavfallet"
+    ],
+    "a": 1,
+    "why": "„Flaschen mit Pfand bringst du in den Supermarkt“."
+   },
+   {
+    "type": "detalj",
+    "q": "Varför ska man inte lämna glas på söndagar?",
+    "opts": [
+     "Containern är stängd",
+     "Det är för högljutt för grannarna",
+     "Det kostar pengar",
+     "Det är förbjudet i hela Europa"
+    ],
+    "a": 1,
+    "why": "„das ist zu laut für die Nachbarn“."
+   }
+  ]
+ },
+ {
+  "id": "t3-l-t6a",
+  "sec": "t6",
+  "title": "Ins Konzert oder ins Museum?",
+  "lines": [
+   {
+    "who": "A",
+    "fr": "Hast du am Samstag schon was vor?",
+    "sv": "Har du något för dig på lördag?"
+   },
+   {
+    "who": "B",
+    "fr": "Noch nicht. Warum?",
+    "sv": "Inte än. Varför?"
+   },
+   {
+    "who": "A",
+    "fr": "Im Stadtpark gibt es ein Open-Air-Konzert. Eine junge Band aus Wien spielt, die ist gerade total beliebt. Der Eintritt ist gratis!",
+    "sv": "I stadsparken blir det en utomhuskonsert. Ett ungt band från Wien spelar, det är jättepopulärt just nu. Inträdet är gratis!"
+   },
+   {
+    "who": "B",
+    "fr": "Klingt gut. Aber der Wetterbericht sagt, dass es am Samstag regnet.",
+    "sv": "Låter bra. Men väderprognosen säger att det regnar på lördag."
+   },
+   {
+    "who": "A",
+    "fr": "Hm, stimmt. Was machen wir, wenn es regnet?",
+    "sv": "Hm, det stämmer. Vad gör vi om det regnar?"
+   },
+   {
+    "who": "B",
+    "fr": "Dann können wir ins Museum gehen. Es gibt eine neue Ausstellung über Fotografie, und für Schüler kostet der Eintritt nur drei Euro.",
+    "sv": "Då kan vi gå på museet. Det finns en ny utställning om fotografi, och för elever kostar inträdet bara tre euro."
+   },
+   {
+    "who": "A",
+    "fr": "Ein Museum ist nicht so spannend wie ein Konzert … Aber okay. Und am Abend? Vielleicht ins Kino?",
+    "sv": "Ett museum är inte lika spännande som en konsert … Men okej. Och på kvällen? Kanske på bio?"
+   },
+   {
+    "who": "B",
+    "fr": "Gute Idee! Es läuft ein neuer Krimi aus Österreich. Aber ich möchte ihn im Original sehen, nicht synchronisiert.",
+    "sv": "Bra idé! Det går en ny deckare från Österrike. Men jag vill se den på originalspråk, inte dubbad."
+   },
+   {
+    "who": "A",
+    "fr": "Der ist doch sowieso auf Deutsch! Also, wir treffen uns um zwei am Park.",
+    "sv": "Den är ju på tyska ändå! Alltså, vi ses klockan två vid parken."
+   }
+  ],
+  "questions": [
+   {
+    "type": "helhet",
+    "q": "Vad planerar de?",
+    "opts": [
+     "Vad de ska göra på lördag",
+     "En resa till Wien",
+     "Ett eget band",
+     "En födelsedagsfest"
+    ],
+    "a": 0,
+    "why": "„Hast du am Samstag schon was vor?“"
+   },
+   {
+    "type": "detalj",
+    "q": "Vad kostar utomhuskonserten?",
+    "opts": [
+     "Tre euro",
+     "Ingenting",
+     "Tio euro",
+     "Det sägs inte"
+    ],
+    "a": 1,
+    "why": "„Der Eintritt ist gratis!“"
+   },
+   {
+    "type": "detalj",
+    "q": "Vad gör de om det regnar?",
+    "opts": [
+     "Stannar hemma",
+     "Går på museet",
+     "Går på konsert ändå",
+     "Går och handlar"
+    ],
+    "a": 1,
+    "why": "„Dann können wir ins Museum gehen.“"
+   },
+   {
+    "type": "detalj",
+    "q": "Vad handlar utställningen om?",
+    "opts": [
+     "Måleri",
+     "Fotografi",
+     "Musik",
+     "Historia"
+    ],
+    "a": 1,
+    "why": "„eine neue Ausstellung über Fotografie“."
+   },
+   {
+    "type": "tolkning",
+    "q": "Varför skämtar A om att se filmen på originalspråk?",
+    "opts": [
+     "Filmen är österrikisk och alltså redan på tyska",
+     "Filmen är på engelska",
+     "Bion visar bara dubbade filmer",
+     "A förstår inte tyska"
+    ],
+    "a": 0,
+    "why": "„Der ist doch sowieso auf Deutsch!“"
+   }
+  ]
+ },
+ {
+  "id": "t3-l-t6b",
+  "sec": "t6",
+  "title": "Eine Musikerin erzählt",
+  "lines": [
+   {
+    "who": "N",
+    "fr": "In unserer Sendung „Junge Talente“ ist heute die Geigerin Sophie Hartmann zu Gast. Sie ist 19 Jahre alt und studiert Musik in Leipzig.",
+    "sv": "I vårt program \"Unga talanger\" är violinisten Sophie Hartmann gäst i dag. Hon är 19 år och studerar musik i Leipzig."
+   },
+   {
+    "who": "B",
+    "fr": "Mit sechs Jahren habe ich angefangen, Geige zu spielen. Meine Mutter ist Musiklehrerin, deshalb gab es bei uns zu Hause immer Musik. Als Kind wollte ich aber nicht jeden Tag üben. Ich wollte lieber draußen spielen!",
+    "sv": "Jag började spela fiol när jag var sex år. Min mamma är musiklärare, därför fanns det alltid musik hemma hos oss. Som barn ville jag dock inte öva varje dag. Jag ville hellre leka ute!"
+   },
+   {
+    "who": "B",
+    "fr": "Mit vierzehn war ich dann in einem Jugendorchester. Wir sind nach Italien und Polen gefahren und haben Konzerte gegeben. Das war die schönste Zeit. Da wusste ich: Ich will Musikerin werden.",
+    "sv": "När jag var fjorton var jag sedan med i en ungdomsorkester. Vi åkte till Italien och Polen och gav konserter. Det var den finaste tiden. Då visste jag: jag vill bli musiker."
+   },
+   {
+    "who": "B",
+    "fr": "Die Aufnahmeprüfung an der Hochschule war sehr schwer. Ich musste drei Stücke vorspielen und war total nervös. Aber es hat geklappt!",
+    "sv": "Antagningsprovet till högskolan var väldigt svårt. Jag var tvungen att spela tre stycken och var jättenervös. Men det gick!"
+   },
+   {
+    "who": "B",
+    "fr": "Heute übe ich jeden Tag vier bis fünf Stunden. Mein Traum? Einmal in der Wiener Staatsoper spielen.",
+    "sv": "I dag övar jag fyra till fem timmar om dagen. Min dröm? Att en gång spela på Wiens statsopera."
+   }
+  ],
+  "questions": [
+   {
+    "type": "helhet",
+    "q": "Vad berättar Sophie om?",
+    "opts": [
+     "Sin väg till att bli musiker",
+     "Sin mammas jobb",
+     "En resa till Wien",
+     "Hur man bygger en fiol"
+    ],
+    "a": 0,
+    "why": "Hon berättar om barndomen, orkestern, antagningsprovet och drömmen."
+   },
+   {
+    "type": "detalj",
+    "q": "Varför fanns det alltid musik hemma?",
+    "opts": [
+     "Pappan var dirigent",
+     "Mamman är musiklärare",
+     "De bodde bredvid en opera",
+     "Hennes syster sjöng"
+    ],
+    "a": 1,
+    "why": "„Meine Mutter ist Musiklehrerin.“"
+   },
+   {
+    "type": "detalj",
+    "q": "Vad ville Sophie som barn hellre göra?",
+    "opts": [
+     "Titta på tv",
+     "Leka ute",
+     "Sjunga",
+     "Läsa"
+    ],
+    "a": 1,
+    "why": "„Ich wollte lieber draußen spielen!“"
+   },
+   {
+    "type": "detalj",
+    "q": "När visste hon att hon ville bli musiker?",
+    "opts": [
+     "På antagningsprovet",
+     "I ungdomsorkestern, när hon var fjorton",
+     "När hon var sex",
+     "Efter en konsert i Wien"
+    ],
+    "a": 1,
+    "why": "„Mit vierzehn war ich dann in einem Jugendorchester … Da wusste ich“."
+   },
+   {
+    "type": "detalj",
+    "q": "Hur mycket övar hon i dag?",
+    "opts": [
+     "En timme",
+     "Två timmar",
+     "Fyra till fem timmar",
+     "Åtta timmar"
+    ],
+    "a": 2,
+    "why": "„jeden Tag vier bis fünf Stunden“."
+   }
+  ]
+ },
+ {
+  "id": "t3-l-t7a",
+  "sec": "t7",
+  "title": "Was machst du nach dem Abi?",
+  "lines": [
+   {
+    "who": "A",
+    "fr": "Noch ein Jahr bis zum Abi! Weißt du schon, was du danach machen willst?",
+    "sv": "Ett år kvar till studenten! Vet du redan vad du vill göra efter?"
+   },
+   {
+    "who": "B",
+    "fr": "Ich bin mir noch nicht sicher. Meine Eltern möchten, dass ich sofort studiere, am besten Medizin.",
+    "sv": "Jag är inte säker än. Mina föräldrar vill att jag börjar studera direkt, helst medicin."
+   },
+   {
+    "who": "A",
+    "fr": "Und du?",
+    "sv": "Och du?"
+   },
+   {
+    "who": "B",
+    "fr": "Ich möchte zuerst ein Jahr ins Ausland. Vielleicht ein Freiwilligendienst in Südamerika. Ich will wissen, ob ich wirklich Ärztin werden will.",
+    "sv": "Jag vill först åka utomlands ett år. Kanske volontärtjänst i Sydamerika. Jag vill veta om jag verkligen vill bli läkare."
+   },
+   {
+    "who": "A",
+    "fr": "Das finde ich eine gute Idee. Ich mache nach dem Abi eine Ausbildung als Mechatroniker. Ich habe schon einen Platz bei einer Firma in Stuttgart.",
+    "sv": "Det tycker jag är en bra idé. Jag ska gå en yrkesutbildning till mekatroniker efter studenten. Jag har redan en plats på ett företag i Stuttgart."
+   },
+   {
+    "who": "B",
+    "fr": "Echt? Wolltest du nicht immer Informatik studieren?",
+    "sv": "Verkligen? Ville du inte alltid studera datavetenskap?"
+   },
+   {
+    "who": "A",
+    "fr": "Früher schon. Aber im Praktikum habe ich gemerkt, dass ich lieber praktisch arbeite. Und in der Ausbildung verdiene ich schon Geld.",
+    "sv": "Förr, ja. Men på praktiken märkte jag att jag hellre jobbar praktiskt. Och under utbildningen tjänar jag redan pengar."
+   },
+   {
+    "who": "B",
+    "fr": "Das stimmt. Vielleicht frage ich mal bei der Berufsberatung, welche Möglichkeiten es noch gibt.",
+    "sv": "Det stämmer. Jag kanske frågar på studie- och yrkesvägledningen vilka fler möjligheter det finns."
+   }
+  ],
+  "questions": [
+   {
+    "type": "helhet",
+    "q": "Vad pratar de om?",
+    "opts": [
+     "Planer efter studenten",
+     "Ett prov i medicin",
+     "En resa till Stuttgart",
+     "Deras föräldrars jobb"
+    ],
+    "a": 0,
+    "why": "„Weißt du schon, was du danach machen willst?“"
+   },
+   {
+    "type": "detalj",
+    "q": "Vad vill B:s föräldrar?",
+    "opts": [
+     "Att hon börjar jobba",
+     "Att hon studerar medicin direkt",
+     "Att hon åker utomlands",
+     "Att hon går en yrkesutbildning"
+    ],
+    "a": 1,
+    "why": "„Meine Eltern möchten, dass ich sofort studiere, am besten Medizin.“"
+   },
+   {
+    "type": "detalj",
+    "q": "Varför vill B åka utomlands först?",
+    "opts": [
+     "För att lära sig spanska",
+     "För att ta reda på om hon verkligen vill bli läkare",
+     "För att tjäna pengar",
+     "För att hennes kompis åker"
+    ],
+    "a": 1,
+    "why": "„Ich will wissen, ob ich wirklich Ärztin werden will.“"
+   },
+   {
+    "type": "detalj",
+    "q": "Varför valde A en yrkesutbildning?",
+    "opts": [
+     "Han fick inte studera",
+     "Han märkte på praktiken att han hellre jobbar praktiskt",
+     "Hans pappa jobbar på företaget",
+     "Utbildningen är kortare"
+    ],
+    "a": 1,
+    "why": "„im Praktikum habe ich gemerkt, dass ich lieber praktisch arbeite“."
+   },
+   {
+    "type": "detalj",
+    "q": "Vart tänker B vända sig?",
+    "opts": [
+     "Till sin lärare",
+     "Till studie- och yrkesvägledningen",
+     "Till ett universitet",
+     "Till ett företag"
+    ],
+    "a": 1,
+    "why": "„Vielleicht frage ich mal bei der Berufsberatung“."
+   }
+  ]
+ },
+ {
+  "id": "t3-l-t7b",
+  "sec": "t7",
+  "title": "Nachricht von der Schule",
+  "lines": [
+   {
+    "who": "N",
+    "fr": "Liebe Eltern, liebe Schülerinnen und Schüler der Klassen 10, hier eine Nachricht vom Sekretariat.",
+    "sv": "Kära föräldrar, kära elever i årskurs 10, här är ett meddelande från expeditionen."
+   },
+   {
+    "who": "N",
+    "fr": "Am Dienstag, dem 14. März, findet in der Aula der Informationsabend zur Oberstufe statt. Beginn ist um 19 Uhr. Wir informieren über die Fächer, die Klausuren und das Abitur.",
+    "sv": "Tisdagen den 14 mars hålls informationskvällen om gymnasiets högre årskurser i aulan. Den börjar klockan 19. Vi informerar om ämnena, skrivningarna och studentexamen."
+   },
+   {
+    "who": "N",
+    "fr": "Außerdem stellen sich unsere Partnerschulen in Frankreich und in den USA vor. Wer im nächsten Schuljahr einen Austausch machen möchte, muss sich bis zum 1. April anmelden.",
+    "sv": "Dessutom presenterar sig våra partnerskolor i Frankrike och USA. Den som vill göra ett utbyte nästa läsår måste anmäla sig senast den 1 april."
+   },
+   {
+    "who": "N",
+    "fr": "Bitte bringen Sie Ihr Zeugnis vom letzten Halbjahr mit. Wer am Dienstag keine Zeit hat, kann einen Termin bei Frau Schulz machen. Sie ist montags und mittwochs von acht bis zwölf Uhr im Büro.",
+    "sv": "Ta med betyget från förra terminen. Den som inte har tid på tisdag kan boka en tid hos fru Schulz. Hon är på kontoret måndagar och onsdagar klockan åtta till tolv."
+   }
+  ],
+  "questions": [
+   {
+    "type": "helhet",
+    "q": "Vad är meddelandet om?",
+    "opts": [
+     "En informationskväll om gymnasiets högre årskurser",
+     "En skolresa till Frankrike",
+     "En ny rektor",
+     "Ett inställt prov"
+    ],
+    "a": 0,
+    "why": "„findet in der Aula der Informationsabend zur Oberstufe statt“."
+   },
+   {
+    "type": "detalj",
+    "q": "När börjar informationskvällen?",
+    "opts": [
+     "Klockan 17",
+     "Klockan 18",
+     "Klockan 19",
+     "Klockan 20"
+    ],
+    "a": 2,
+    "why": "„Beginn ist um 19 Uhr.“"
+   },
+   {
+    "type": "detalj",
+    "q": "Senast när måste man anmäla sig till utbytet?",
+    "opts": [
+     "14 mars",
+     "1 april",
+     "Efter sommaren",
+     "På informationskvällen"
+    ],
+    "a": 1,
+    "why": "„bis zum 1. April anmelden“."
+   },
+   {
+    "type": "detalj",
+    "q": "Vad ska man ta med?",
+    "opts": [
+     "Passet",
+     "Betyget från förra terminen",
+     "En penna",
+     "Pengar"
+    ],
+    "a": 1,
+    "why": "„Bitte bringen Sie Ihr Zeugnis vom letzten Halbjahr mit.“"
+   },
+   {
+    "type": "detalj",
+    "q": "När kan man träffa fru Schulz?",
+    "opts": [
+     "Tisdag kväll",
+     "Måndagar och onsdagar på förmiddagen",
+     "Varje dag",
+     "Bara på fredagar"
+    ],
+    "a": 1,
+    "why": "„montags und mittwochs von acht bis zwölf Uhr“."
+   }
+  ]
+ },
+ {
+  "id": "t3-l-t8a",
+  "sec": "t8",
+  "title": "Grüezi und Servus",
+  "lines": [
+   {
+    "who": "A",
+    "fr": "Du warst doch letzte Woche in der Schweiz, oder? Wie war's?",
+    "sv": "Du var väl i Schweiz förra veckan? Hur var det?"
+   },
+   {
+    "who": "B",
+    "fr": "Super schön, aber am Anfang habe ich fast nichts verstanden! Die Leute in Zürich sprechen Schweizerdeutsch. Das klingt ganz anders als das Deutsch aus der Schule.",
+    "sv": "Jättefint, men i början förstod jag nästan ingenting! Folk i Zürich pratar schweizertyska. Det låter helt annorlunda än skoltyskan."
+   },
+   {
+    "who": "A",
+    "fr": "Echt? Konntest du dich trotzdem unterhalten?",
+    "sv": "Verkligen? Kunde du prata med folk ändå?"
+   },
+   {
+    "who": "B",
+    "fr": "Ja, zum Glück. Wenn die Schweizer merken, dass man aus dem Ausland kommt, sprechen sie Hochdeutsch. Und viele Wörter sind anders. Zum Beispiel sagt man „Velo“ statt „Fahrrad“ und „Grüezi“ statt „Guten Tag“.",
+    "sv": "Ja, som tur var. När schweizarna märker att man kommer från utlandet pratar de högtyska. Och många ord är annorlunda. Till exempel säger man \"Velo\" i stället för \"Fahrrad\" och \"Grüezi\" i stället för \"Guten Tag\"."
+   },
+   {
+    "who": "A",
+    "fr": "Das kenne ich aus Österreich. Da heißt die Tomate „Paradeiser“, und im Januar sagt man „Jänner“.",
+    "sv": "Det känner jag igen från Österrike. Där heter tomaten \"Paradeiser\", och i januari säger man \"Jänner\"."
+   },
+   {
+    "who": "B",
+    "fr": "Und in Bayern sagen alle „Servus“, wenn sie kommen und wenn sie gehen.",
+    "sv": "Och i Bayern säger alla \"Servus\" när de kommer och när de går."
+   },
+   {
+    "who": "A",
+    "fr": "Ich finde die Dialekte toll. Aber ich bin froh, dass es Hochdeutsch gibt!",
+    "sv": "Jag tycker att dialekterna är jättehäftiga. Men jag är glad att det finns högtyska!"
+   }
+  ],
+  "questions": [
+   {
+    "type": "helhet",
+    "q": "Vad handlar samtalet om?",
+    "opts": [
+     "Dialekter och regionala ord i tyskspråkiga länder",
+     "En skidresa i Alperna",
+     "Hur man lär sig franska",
+     "Mat i Schweiz"
+    ],
+    "a": 0,
+    "why": "De pratar om schweizertyska, österrikiska ord och bayerska hälsningar."
+   },
+   {
+    "type": "detalj",
+    "q": "Varför förstod B nästan ingenting i början?",
+    "opts": [
+     "Folk pratade franska",
+     "Folk pratade schweizertyska",
+     "Det var för mycket oväsen",
+     "B var sjuk"
+    ],
+    "a": 1,
+    "why": "„Die Leute in Zürich sprechen Schweizerdeutsch.“"
+   },
+   {
+    "type": "detalj",
+    "q": "Vad gör schweizarna när de märker att man kommer från utlandet?",
+    "opts": [
+     "De pratar engelska",
+     "De pratar högtyska",
+     "De pratar långsammare dialekt",
+     "De slutar prata"
+    ],
+    "a": 1,
+    "why": "„sprechen sie Hochdeutsch“."
+   },
+   {
+    "type": "detalj",
+    "q": "Vad betyder „Velo“?",
+    "opts": [
+     "Tomat",
+     "Cykel",
+     "Januari",
+     "Hej"
+    ],
+    "a": 1,
+    "why": "„man sagt Velo statt Fahrrad“."
+   },
+   {
+    "type": "detalj",
+    "q": "När säger man „Servus“ i Bayern?",
+    "opts": [
+     "Bara på morgonen",
+     "Både när man kommer och går",
+     "Bara till lärare",
+     "Bara i telefon"
+    ],
+    "a": 1,
+    "why": "„wenn sie kommen und wenn sie gehen“."
+   }
+  ]
+ },
+ {
+  "id": "t3-l-t8b",
+  "sec": "t8",
+  "title": "Eine Stadtführung in Berlin",
+  "lines": [
+   {
+    "who": "N",
+    "fr": "Herzlich willkommen zu unserer Stadtführung! Wir stehen hier an der East Side Gallery. Das ist das längste Stück der Berliner Mauer, das es noch gibt: über 1,3 Kilometer.",
+    "sv": "Hjärtligt välkomna till vår stadsvandring! Vi står här vid East Side Gallery. Det är den längsta biten av Berlinmuren som finns kvar: över 1,3 kilometer."
+   },
+   {
+    "who": "N",
+    "fr": "Von 1961 bis 1989 war Berlin eine geteilte Stadt. Die Menschen in Ost-Berlin durften nicht in den Westen reisen. Viele Familien konnten sich jahrelang nicht besuchen.",
+    "sv": "Från 1961 till 1989 var Berlin en delad stad. Människorna i Östberlin fick inte resa till väst. Många familjer kunde inte hälsa på varandra på flera år."
+   },
+   {
+    "who": "N",
+    "fr": "Am 9. November 1989 ist die Mauer gefallen. In dieser Nacht sind Tausende Menschen über die Grenze gegangen und haben zusammen gefeiert. Ein knappes Jahr später, am 3. Oktober 1990, war Deutschland wieder ein Land.",
+    "sv": "Den 9 november 1989 föll muren. Den natten gick tusentals människor över gränsen och firade tillsammans. Knappt ett år senare, den 3 oktober 1990, var Tyskland ett land igen."
+   },
+   {
+    "who": "N",
+    "fr": "Nach dem Mauerfall haben Künstler aus der ganzen Welt die Mauer hier bemalt. Heute ist sie eine der beliebtesten Sehenswürdigkeiten der Stadt. Sie haben jetzt zwanzig Minuten Zeit für Fotos. Wir treffen uns dann hier am Eingang.",
+    "sv": "Efter murens fall målade konstnärer från hela världen muren här. I dag är den en av stadens mest populära sevärdheter. Ni har nu tjugo minuter för att ta bilder. Sedan ses vi här vid ingången."
+   }
+  ],
+  "questions": [
+   {
+    "type": "helhet",
+    "q": "Vad är det här?",
+    "opts": [
+     "En guidad stadsvandring vid Berlinmuren",
+     "En nyhet om en ny utställning",
+     "En lektion om konst",
+     "En reklam för en resebyrå"
+    ],
+    "a": 0,
+    "why": "„Herzlich willkommen zu unserer Stadtführung!“"
+   },
+   {
+    "type": "detalj",
+    "q": "Hur lång är East Side Gallery?",
+    "opts": [
+     "300 meter",
+     "Över 1,3 kilometer",
+     "5 kilometer",
+     "13 kilometer"
+    ],
+    "a": 1,
+    "why": "„über 1,3 Kilometer“."
+   },
+   {
+    "type": "detalj",
+    "q": "När föll muren?",
+    "opts": [
+     "3 oktober 1990",
+     "9 november 1989",
+     "1961",
+     "1 januari 1990"
+    ],
+    "a": 1,
+    "why": "„Am 9. November 1989 ist die Mauer gefallen.“"
+   },
+   {
+    "type": "detalj",
+    "q": "Vad hände den 3 oktober 1990?",
+    "opts": [
+     "Muren byggdes",
+     "Tyskland blev ett land igen",
+     "Konstnärerna målade muren",
+     "Berlin blev huvudstad i DDR"
+    ],
+    "a": 1,
+    "why": "„am 3. Oktober 1990, war Deutschland wieder ein Land“."
+   },
+   {
+    "type": "detalj",
+    "q": "Vad ska gruppen göra nu?",
+    "opts": [
+     "Äta lunch",
+     "Ta bilder i tjugo minuter",
+     "Åka buss vidare",
+     "Gå på museum"
+    ],
+    "a": 1,
+    "why": "„Sie haben jetzt zwanzig Minuten Zeit für Fotos.“"
+   }
+  ]
+ }
+]

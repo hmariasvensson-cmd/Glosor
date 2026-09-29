@@ -268,8 +268,11 @@ details.more[open] summary{margin-bottom:10px}
 /* Kurs och nivå */
 .coursebar{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px 12px;margin-top:12px}
 .coursechip{font-size:.8rem;font-weight:700;letter-spacing:.04em;background:var(--ok-soft);color:var(--green);padding:5px 10px;border-radius:999px}
-.coursepick{display:flex;align-items:center;gap:8px}
-.coursepick select{width:auto;padding:7px 10px}
+.coursepick{display:flex;align-items:center;gap:8px;min-width:0;max-width:100%;flex:1 1 220px}
+.coursepick select{flex:1;min-width:0;width:100%;max-width:100%;padding:7px 10px;text-overflow:ellipsis}
+.coursepick option.soon{color:var(--ink-2)}
+.nextc{display:grid;gap:8px}
+.nextc .btn .sub{display:block;font-weight:400;font-size:.85em;opacity:.8;margin-top:2px}
 .lrow .rm{grid-column:1/-1;justify-self:end;background:none;border:1px solid var(--line);border-radius:999px;padding:3px 12px;font:inherit;font-size:.8rem;color:var(--ink-2);cursor:pointer}
 .lrow .rm.sure{border-color:var(--pink);color:var(--pink)}
 .ownf{display:grid;gap:8px;margin-block:10px}

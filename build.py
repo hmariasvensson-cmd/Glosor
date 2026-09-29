@@ -371,6 +371,17 @@ def lock_ids(code, storage_key, ids, allowed):
     return errors, notes, writes
 
 
+def has_field(confs, code, field, seen=()):
+    """Kursen har fältet i sin lang.js, eller ärver det (extends + inherit) från en kurs som har det."""
+    conf = confs.get(code, "")
+    if re.search(rf'^\s*{re.escape(field)}\s*:', conf, re.M):
+        return True
+    m = re.search(r'^\s*extends:\s*"([^"]+)"', conf, re.M)
+    inh = re.search(r'^\s*inherit:\s*\[([^\]]*)\]', conf, re.M)
+    return bool(m and inh and m.group(1) not in seen and f'"{field}"' in inh.group(1)
+                and has_field(confs, m.group(1), field, seen + (code,)))
+
+
 def check_extends(confs):
     """extends/inherit i lang.js: kursen som ärvs från ska finnas, inga cirklar, och storageKey ärvs aldrig."""
     errors, parent = [], {}
@@ -388,13 +399,18 @@ def check_extends(confs):
         if inh and re.search(r'"(storageKey|code|words|content|videos|grammar)"', inh.group(1)):
             errors.append(f"languages/{code}/lang.js: storageKey, words, content, videos och grammar kan inte ärvas")
         # Ett fält i inherit som föräldern inte har (t.ex. ett stavfel) skulle annars tyst bli tomt i webbläsaren
+        # Föräldern kan i sin tur ha ärvt fältet (it3 → it2 → it1), så kedjan följs
         if m and inh and m.group(1) in confs:
             for f in re.findall(r'"([^"]+)"', inh.group(1)):
-                if not re.search(rf'^\s*{re.escape(f)}\s*:', confs[m.group(1)], re.M):
+                if not has_field(confs, m.group(1), f):
                     errors.append(f"languages/{code}/lang.js: inherit '{f}' finns inte i languages/{m.group(1)}/lang.js")
-        nxt = re.search(r'^\s*nextCourse:\s*"([^"]+)"', conf, re.M)
-        if nxt and nxt.group(1) not in confs:
-            errors.append(f"languages/{code}/lang.js: nextCourse '{nxt.group(1)}' finns inte")
+        # nextCourse: en kod ("de6") eller en lista med koder (["fr5", "fru"]); varje kurs måste finnas
+        nxt = re.search(r'^\s*nextCourse:\s*("[^"]*"|\[[^\]]*\])', conf, re.M)
+        for n in re.findall(r'"([^"]*)"', nxt.group(1)) if nxt else []:
+            if n not in confs:
+                errors.append(f"languages/{code}/lang.js: nextCourse '{n}' finns inte")
+            elif n == code:
+                errors.append(f"languages/{code}/lang.js: nextCourse pekar på kursen själv")
     for code in parent:
         seen, c = set(), code
         while c in parent:
@@ -427,6 +443,50 @@ def check_grammar_refs(content, grammar, section_ids, where, has_book):
     if isinstance(regler, dict):
         errors += [f"{where}/content/regler.json: '{k}' är inget område i grammar.json" for k in regler if k not in topics]
     return errors
+
+
+# Steg (Moderna språk 1–7, eller "U" för universitetet) och GERS-nivån som steget börjar på (Skolverkets
+# kommentarmaterial, betyget E: steg 1 = A1.1, 2 = A1.2, 3 = A2.1 … 7 = B2.1), se docs/kursmall.md 2.1 och 3.7
+STEP_LEVEL = {1: "A1", 2: "A1", 3: "A2", 4: "A2", 5: "B1", 6: "B1", 7: "B2"}
+
+
+def check_steps(confs, upcoming):
+    """step och level i lang.js och upcoming.json: step är 1–7 eller "U", level börjar på stegets GERS-nivå
+    (t.ex. steg 4: "A2 → B1"). Kommande kurser har kod, språk, namn och steg, och en kod som redan är byggd ger en varning."""
+    errors, warnings = [], []
+    def one(where, step, level):
+        if step is None:
+            errors.append(f"{where}: step saknas (1–7 för Moderna språk 1–7, \"U\" för universitetet)")
+        elif step not in STEP_LEVEL and step != "U":
+            errors.append(f"{where}: step ska vara 1–7 eller \"U\", inte {step!r}")
+        if not level:
+            errors.append(f"{where}: level saknas (t.ex. \"A2 → B1\")")
+        elif step in STEP_LEVEL and not level.startswith(STEP_LEVEL[step]):
+            warnings.append(f"{where}: level '{level}' börjar inte med {STEP_LEVEL[step]} (steg {step}, se docs/kursmall.md 3.7)")
+    for code, conf in confs.items():
+        # Fält som varje kurs måste ha (resten är valfria och har standardvärden i appen)
+        for f in ("name", "title", "course", "inLang", "tts"):
+            if not re.search(rf'^\s*{f}\s*:\s*"[^"]+"', conf, re.M):
+                errors.append(f"languages/{code}/lang.js: {f} saknas")
+        m = re.search(r'^\s*step:\s*("[^"]*"|\d+)', conf, re.M)
+        lv = re.search(r'^\s*level:\s*"([^"]*)"', conf, re.M)
+        step = None if not m else (m.group(1).strip('"') if m.group(1).startswith('"') else int(m.group(1)))
+        one(f"languages/{code}/lang.js", step, lv.group(1) if lv else "")
+    seen = set()
+    for i, u in enumerate(upcoming if isinstance(upcoming, list) else []):
+        where = f"languages/upcoming.json: {u.get('code') or i + 1}" if isinstance(u, dict) else f"languages/upcoming.json: {i + 1}"
+        if not isinstance(u, dict) or not all(u.get(k) for k in ("code", "name", "course")):
+            errors.append(f"{where}: varje kommande kurs behöver code, name (språket, som i lang.js) och course")
+            continue
+        one(where, u.get("step"), u.get("level"))
+        if u["code"] in seen:
+            errors.append(f"{where}: koden finns två gånger")
+        seen.add(u["code"])
+        if u["code"] in confs:
+            warnings.append(f"{where}: kursen finns redan i languages/{u['code']}/ och visas inte som kommande; ta bort raden")
+    if not isinstance(upcoming, list):
+        errors.append("languages/upcoming.json: ska vara en lista")
+    return errors, warnings
 
 
 def js_string(value):
@@ -540,10 +600,22 @@ def main():
             lock_writes.update(writes)
         lang_js.append(js)
         course_data[code] = cdata
-        print(f"{code}: {n_words} ord i {n_sections} avsnitt")
+        print(f"{code}: {n_words} ord i {n_words and n_sections} avsnitt")
+        if not n_words:
+            print(f"Varning: languages/{code}/words.txt saknas eller har inga ord; kursen går att bygga men inte att öva i (testerna kräver ord)")
 
     all_errors += [f"storageKey '{k}' används av flera kurser: {', '.join(cs)}" for k, cs in keys.items() if len(cs) > 1]
     all_errors += check_extends(confs)
+    upcoming = []
+    if (LANG_DIR / "upcoming.json").exists():
+        try:
+            upcoming = json.loads((LANG_DIR / "upcoming.json").read_text(encoding="utf-8"))
+        except json.JSONDecodeError as e:
+            all_errors.append(f"languages/upcoming.json: {e}")
+    errs, warns = check_steps(confs, upcoming)
+    all_errors += errs
+    for w in warns:
+        print("Varning:", w)
     if all_errors:
         print("\nBygget avbröts:", *all_errors, sep="\n  ")
         sys.exit(1)
@@ -571,7 +643,7 @@ def main():
         "APP": "\n".join(f.read_text(encoding="utf-8").strip() for f in [ROOT / "src" / "app.js", *sorted((ROOT / "src" / "kinds").glob("*.js")), ROOT / "src" / "feedback.js", ROOT / "src" / "main.js"]),
         "BUILT": datetime.datetime.now().strftime("%Y-%m-%d %H:%M"),
         "DATAVERSION": js_string(dataversion),
-        "UPCOMING": js_string(json.loads((LANG_DIR / "upcoming.json").read_text(encoding="utf-8"))) if (LANG_DIR / "upcoming.json").exists() else "[]",
+        "UPCOMING": js_string([u for u in upcoming if u.get("code") not in confs]),
     }
     html = re.sub(r"\{\{(\w+)\}\}", lambda m: parts[m.group(1)], page)
     # preview.html har datan inbakad, så att den går att öppna direkt från disken och i testerna

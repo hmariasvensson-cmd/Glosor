@@ -1,0 +1,1486 @@
+{
+ "name": "DELF A2",
+ "pass": 50,
+ "note": "Övningar i provets stil, skrivna för appen. Inte officiellt material. För att klara DELF A2 krävs 50 av 100 poäng och minst 5 av 25 i varje del. Hör- och läsförståelsen har fyra övningar var, skriftlig produktion två texter på minst 60 ord och den muntliga delen tre delar (samtal, monolog, rollspel).",
+ "parts": [
+  {
+   "id": "co",
+   "name": "Compréhension de l'oral",
+   "sv": "Hörförståelse",
+   "time": 25
+  },
+  {
+   "id": "ce",
+   "name": "Compréhension des écrits",
+   "sv": "Läsförståelse",
+   "time": 30
+  },
+  {
+   "id": "pe",
+   "name": "Production écrite",
+   "sv": "Skriva",
+   "time": 45
+  },
+  {
+   "id": "po",
+   "name": "Production orale",
+   "sv": "Tala",
+   "time": 8
+  }
+ ],
+ "tasks": [
+  {
+   "id": "frs4-co-1",
+   "part": "co",
+   "teil": "Exercice 1",
+   "title": "Messages sur le répondeur",
+   "time": 6,
+   "plays": 2,
+   "instr": "Du hör tre korta meddelanden på en telefonsvarare. Läs frågorna först. Du hör varje meddelande två gånger. Välj rätt svar.",
+   "lines": [
+    {
+     "fr": "Message 1. — Bonjour, c'est Julie de l'agence Bellevue. Le studio de la rue Victor-Hugo est toujours libre. La visite est possible jeudi à dix-huit heures. N'oubliez pas d'apporter une copie de votre carte d'identité. Rappelez-moi au 04 78 22 15 90.",
+     "sv": "Meddelande 1. – Hej, det är Julie på mäklarbyrån Bellevue. Ettan på rue Victor-Hugo är fortfarande ledig. Visning är möjlig på torsdag klockan arton. Glöm inte att ta med en kopia av ditt id-kort. Ring tillbaka på 04 78 22 15 90."
+    },
+    {
+     "fr": "Message 2. — Salut, c'est Tom. Le concert de samedi est annulé, le chanteur est malade. Mais on peut aller au cinéma à la place. Il y a une comédie à vingt heures au Rex. Tu me dis ?",
+     "sv": "Meddelande 2. – Hej, det är Tom. Konserten på lördag är inställd, sångaren är sjuk. Men vi kan gå på bio i stället. Det går en komedi klockan tjugo på Rex. Säg till?"
+    },
+    {
+     "fr": "Message 3. — Bonjour, ici le cabinet du docteur Martin. Votre rendez-vous de mardi est déplacé à mercredi, même heure, dix heures trente. Si ce n'est pas possible, appelez le secrétariat avant lundi.",
+     "sv": "Meddelande 3. – Hej, det här är doktor Martins mottagning. Din tid på tisdag är flyttad till onsdag, samma tid, halv elva. Om det inte går, ring sekreteraren före måndag."
+    }
+   ],
+   "qs": [
+    {
+     "q": "Message 1 : quand est-ce qu'on peut visiter le studio ?",
+     "opts": [
+      "Jeudi à 18 heures.",
+      "Mardi à 10 h 30.",
+      "Samedi à 20 heures."
+     ],
+     "a": 0,
+     "why": "« La visite est possible jeudi à dix-huit heures »."
+    },
+    {
+     "q": "Message 1 : qu'est-ce qu'il faut apporter ?",
+     "opts": [
+      "Un chèque.",
+      "Une copie de la carte d'identité.",
+      "Une lettre des parents."
+     ],
+     "a": 1,
+     "why": "« N'oubliez pas d'apporter une copie de votre carte d'identité »."
+    },
+    {
+     "q": "Message 2 : pourquoi le concert est-il annulé ?",
+     "opts": [
+      "Il n'y a plus de places.",
+      "Le chanteur est malade.",
+      "La salle est fermée."
+     ],
+     "a": 1,
+     "why": "« le chanteur est malade »."
+    },
+    {
+     "q": "Message 2 : que propose Tom ?",
+     "opts": [
+      "D'aller au cinéma.",
+      "De rester à la maison.",
+      "D'aller au concert dimanche."
+     ],
+     "a": 0,
+     "why": "« on peut aller au cinéma à la place »."
+    },
+    {
+     "q": "Message 3 : le nouveau rendez-vous est…",
+     "opts": [
+      "mardi à 10 h 30.",
+      "mercredi à 10 h 30.",
+      "lundi à 10 h 30."
+     ],
+     "a": 1,
+     "why": "« déplacé à mercredi, même heure, dix heures trente »."
+    }
+   ]
+  },
+  {
+   "id": "frs4-co-2",
+   "part": "co",
+   "teil": "Exercice 1",
+   "title": "Messages de vacances",
+   "time": 6,
+   "plays": 2,
+   "instr": "Du hör tre korta meddelanden på en telefonsvarare. Läs frågorna först. Du hör varje meddelande två gånger. Välj rätt svar.",
+   "lines": [
+    {
+     "fr": "Message 1. — Bonjour Madame Lind, ici l'auberge de jeunesse du Vieux-Port. Nous avons bien reçu votre réservation pour deux nuits, du 12 au 14 juillet. Le petit-déjeuner est compris. L'accueil ferme à vingt-trois heures, alors prévenez-nous si vous arrivez plus tard.",
+     "sv": "Meddelande 1. – Hej fru Lind, det här är vandrarhemmet Vieux-Port. Vi har tagit emot din bokning för två nätter, från 12 till 14 juli. Frukost ingår. Receptionen stänger klockan tjugotre, så säg till om du kommer senare."
+    },
+    {
+     "fr": "Message 2. — Coucou, c'est Maman. Ton train pour Nice a une heure de retard à cause d'une grève. Tu arriveras donc à seize heures au lieu de quinze heures. Papa viendra te chercher à la gare.",
+     "sv": "Meddelande 2. – Hej, det är mamma. Ditt tåg till Nice är en timme försenat på grund av en strejk. Du kommer alltså fram klockan sexton i stället för femton. Pappa hämtar dig på stationen."
+    },
+    {
+     "fr": "Message 3. — Salut, c'est Inès ! Pour le pique-nique de dimanche, rendez-vous à midi au bord du lac. Moi, j'apporte les boissons. Toi, tu peux faire une salade ? Et n'oublie pas ton maillot de bain !",
+     "sv": "Meddelande 3. – Hej, det är Inès! Till picknicken på söndag träffas vi klockan tolv vid sjön. Jag tar med dryck. Kan du göra en sallad? Och glöm inte badkläderna!"
+    }
+   ],
+   "qs": [
+    {
+     "q": "Message 1 : combien de nuits Madame Lind a-t-elle réservées ?",
+     "opts": [
+      "Une.",
+      "Deux.",
+      "Quatorze."
+     ],
+     "a": 1,
+     "why": "« pour deux nuits, du 12 au 14 juillet »."
+    },
+    {
+     "q": "Message 1 : que doit-elle faire si elle arrive après 23 heures ?",
+     "opts": [
+      "Prévenir l'auberge.",
+      "Payer plus.",
+      "Dormir ailleurs."
+     ],
+     "a": 0,
+     "why": "« prévenez-nous si vous arrivez plus tard »."
+    },
+    {
+     "q": "Message 2 : pourquoi le train est-il en retard ?",
+     "opts": [
+      "À cause de la neige.",
+      "À cause d'une grève.",
+      "À cause d'un accident."
+     ],
+     "a": 1,
+     "why": "« à cause d'une grève »."
+    },
+    {
+     "q": "Message 2 : à quelle heure le train arrivera-t-il ?",
+     "opts": [
+      "À 15 heures.",
+      "À 16 heures.",
+      "À 17 heures."
+     ],
+     "a": 1,
+     "why": "« Tu arriveras donc à seize heures »."
+    },
+    {
+     "q": "Message 3 : qu'est-ce qu'Inès demande d'apporter ?",
+     "opts": [
+      "Les boissons.",
+      "Une salade.",
+      "Un gâteau."
+     ],
+     "a": 1,
+     "why": "« tu peux faire une salade ? »"
+    }
+   ]
+  },
+  {
+   "id": "frs4-co-3",
+   "part": "co",
+   "teil": "Exercice 2",
+   "title": "Annonce à la radio : la Fête des voisins",
+   "time": 6,
+   "plays": 2,
+   "instr": "Du hör ett kort radioinslag. Läs frågorna först. Du hör inslaget två gånger. Välj rätt svar.",
+   "lines": [
+    {
+     "fr": "Vous écoutez Radio Ville. Vendredi 30 mai, c'est la Fête des voisins ! Depuis plus de vingt ans, cette fête permet aux habitants d'un même immeuble ou d'une même rue de se rencontrer autour d'un repas.",
+     "sv": "Ni lyssnar på Radio Ville. Fredagen den 30 maj är det grannfest! I över tjugo år har festen låtit invånare i samma hus eller på samma gata träffas kring en måltid."
+    },
+    {
+     "fr": "Le principe est simple : chacun apporte quelque chose à manger ou à boire. La mairie prête gratuitement des tables et des chaises : il suffit de les réserver avant le 20 mai sur le site de la ville.",
+     "sv": "Principen är enkel: var och en tar med något att äta eller dricka. Kommunen lånar ut bord och stolar gratis: det räcker att boka dem före den 20 maj på stadens webbplats."
+    },
+    {
+     "fr": "Cette année, la fête aura aussi un thème : la musique. Les musiciens amateurs sont invités à jouer pour leurs voisins. S'il pleut, la fête aura lieu dans les halls des immeubles.",
+     "sv": "I år har festen också ett tema: musik. Amatörmusiker uppmanas att spela för sina grannar. Om det regnar hålls festen i husens entréer."
+    }
+   ],
+   "qs": [
+    {
+     "q": "Quel est le but de la Fête des voisins ?",
+     "opts": [
+      "Rencontrer les habitants de son immeuble ou de sa rue.",
+      "Nettoyer le quartier.",
+      "Élire un nouveau maire."
+     ],
+     "a": 0,
+     "why": "« permet aux habitants… de se rencontrer autour d'un repas »."
+    },
+    {
+     "q": "Qu'est-ce que la mairie prête ?",
+     "opts": [
+      "Des instruments de musique.",
+      "Des tables et des chaises.",
+      "De la nourriture."
+     ],
+     "a": 1,
+     "why": "« La mairie prête gratuitement des tables et des chaises »."
+    },
+    {
+     "q": "Avant quelle date faut-il réserver ?",
+     "opts": [
+      "Le 30 mai.",
+      "Le 20 mai.",
+      "Le 1er juin."
+     ],
+     "a": 1,
+     "why": "« avant le 20 mai »."
+    },
+    {
+     "q": "Quel est le thème de cette année ?",
+     "opts": [
+      "La cuisine.",
+      "La musique.",
+      "Le sport."
+     ],
+     "a": 1,
+     "why": "« la fête aura aussi un thème : la musique »."
+    },
+    {
+     "q": "Que se passe-t-il s'il pleut ?",
+     "opts": [
+      "La fête est annulée.",
+      "La fête a lieu dans les halls des immeubles.",
+      "La fête est déplacée au samedi."
+     ],
+     "a": 1,
+     "why": "« S'il pleut, la fête aura lieu dans les halls des immeubles »."
+    }
+   ]
+  },
+  {
+   "id": "frs4-co-4",
+   "part": "co",
+   "teil": "Exercice 2",
+   "title": "Annonce à la radio : un festival de cinéma",
+   "time": 6,
+   "plays": 2,
+   "instr": "Du hör ett kort radioinslag. Läs frågorna först. Du hör inslaget två gånger. Välj rätt svar.",
+   "lines": [
+    {
+     "fr": "Bonjour à tous ! Du 3 au 9 octobre, le festival « Jeunes Regards » revient au cinéma Le Palace. Au programme : quarante courts-métrages réalisés par des jeunes de quinze à vingt-cinq ans, venus de toute l'Europe.",
+     "sv": "Hej allihop! Den 3–9 oktober kommer festivalen ”Jeunes Regards” tillbaka till biografen Le Palace. På programmet: fyrtio kortfilmer gjorda av unga mellan femton och tjugofem år från hela Europa."
+    },
+    {
+     "fr": "Les films sont en version originale, avec des sous-titres en français. L'entrée coûte trois euros par séance, et elle est gratuite pour les lycéens le mercredi après-midi.",
+     "sv": "Filmerna visas på originalspråk med franska undertexter. Inträdet kostar tre euro per visning och är gratis för gymnasieelever på onsdagseftermiddagen."
+    },
+    {
+     "fr": "Le dernier soir, c'est le public qui choisit le meilleur film. Le gagnant recevra une caméra professionnelle. Programme complet sur notre site.",
+     "sv": "Sista kvällen är det publiken som väljer den bästa filmen. Vinnaren får en professionell filmkamera. Hela programmet finns på vår webbplats."
+    }
+   ],
+   "qs": [
+    {
+     "q": "Quels films sont présentés au festival ?",
+     "opts": [
+      "Des films de jeunes réalisateurs européens.",
+      "Des films américains célèbres.",
+      "Des dessins animés pour enfants."
+     ],
+     "a": 0,
+     "why": "« quarante courts-métrages réalisés par des jeunes… venus de toute l'Europe »."
+    },
+    {
+     "q": "Comment les films sont-ils présentés ?",
+     "opts": [
+      "Doublés en français.",
+      "En version originale sous-titrée.",
+      "Sans son."
+     ],
+     "a": 1,
+     "why": "« en version originale, avec des sous-titres en français »."
+    },
+    {
+     "q": "Combien coûte une séance ?",
+     "opts": [
+      "Trois euros.",
+      "Neuf euros.",
+      "C'est toujours gratuit."
+     ],
+     "a": 0,
+     "why": "« L'entrée coûte trois euros par séance »."
+    },
+    {
+     "q": "Quand est-ce gratuit pour les lycéens ?",
+     "opts": [
+      "Le samedi soir.",
+      "Le mercredi après-midi.",
+      "Le dernier soir."
+     ],
+     "a": 1,
+     "why": "« gratuite pour les lycéens le mercredi après-midi »."
+    },
+    {
+     "q": "Qui choisit le meilleur film ?",
+     "opts": [
+      "Un jury de professionnels.",
+      "Le public.",
+      "Les réalisateurs."
+     ],
+     "a": 1,
+     "why": "« c'est le public qui choisit le meilleur film »."
+    }
+   ]
+  },
+  {
+   "id": "frs4-co-5",
+   "part": "co",
+   "teil": "Exercice 3",
+   "title": "Au bureau des étudiants étrangers",
+   "time": 7,
+   "plays": 2,
+   "instr": "Du hör ett samtal. Läs frågorna först. Du hör samtalet två gånger. Välj rätt svar.",
+   "lines": [
+    {
+     "fr": "— Bonjour, je suis une nouvelle étudiante suédoise. Je cherche un logement pour le semestre.",
+     "sv": "– Hej, jag är en ny svensk student. Jag letar efter en bostad för terminen."
+    },
+    {
+     "fr": "— Bienvenue ! Vous avez plusieurs possibilités. La résidence universitaire, c'est le moins cher : environ trois cents euros par mois. Mais il n'y a plus beaucoup de places.",
+     "sv": "– Välkommen! Du har flera möjligheter. Studentbostaden är billigast: ungefär trehundra euro i månaden. Men det finns inte många platser kvar."
+    },
+    {
+     "fr": "— Et sinon ?",
+     "sv": "– Och annars?"
+    },
+    {
+     "fr": "— Il y a la colocation. Vous partagez un appartement avec d'autres étudiants. C'est un peu plus cher, mais c'est plus grand et on se fait vite des amis. Vous pouvez regarder les annonces sur ce tableau.",
+     "sv": "– Det finns kollektiv. Du delar lägenhet med andra studenter. Det är lite dyrare, men större och man får snabbt vänner. Du kan titta på annonserna på den här tavlan."
+    },
+    {
+     "fr": "— Et les aides au logement, je peux les demander ?",
+     "sv": "– Och bostadsbidrag, kan jag söka det?"
+    },
+    {
+     "fr": "— Oui, même si vous êtes étrangère. Il faut remplir un formulaire en ligne quand vous avez signé votre contrat. Si vous avez un problème, venez me voir le mardi ou le jeudi matin.",
+     "sv": "– Ja, även om du är utländsk. Du fyller i ett formulär på nätet när du har skrivit på kontraktet. Om du får problem kan du komma till mig på tisdag eller torsdag förmiddag."
+    }
+   ],
+   "qs": [
+    {
+     "q": "Que cherche l'étudiante ?",
+     "opts": [
+      "Un travail.",
+      "Un logement.",
+      "Un cours de français."
+     ],
+     "a": 1,
+     "why": "« Je cherche un logement pour le semestre. »"
+    },
+    {
+     "q": "Quel est le logement le moins cher ?",
+     "opts": [
+      "La résidence universitaire.",
+      "La colocation.",
+      "L'hôtel."
+     ],
+     "a": 0,
+     "why": "« La résidence universitaire, c'est le moins cher »."
+    },
+    {
+     "q": "Quel est l'avantage de la colocation selon l'employé ?",
+     "opts": [
+      "C'est gratuit.",
+      "On se fait vite des amis.",
+      "C'est près de l'université."
+     ],
+     "a": 1,
+     "why": "« c'est plus grand et on se fait vite des amis »."
+    },
+    {
+     "q": "Peut-elle recevoir les aides au logement ?",
+     "opts": [
+      "Non, parce qu'elle est étrangère.",
+      "Oui, en remplissant un formulaire en ligne.",
+      "Seulement l'année prochaine."
+     ],
+     "a": 1,
+     "why": "« Oui, même si vous êtes étrangère. Il faut remplir un formulaire en ligne »."
+    },
+    {
+     "q": "Quand peut-elle revenir voir l'employé ?",
+     "opts": [
+      "Le mardi ou le jeudi matin.",
+      "Tous les jours.",
+      "Le lundi après-midi."
+     ],
+     "a": 0,
+     "why": "« venez me voir le mardi ou le jeudi matin »."
+    }
+   ]
+  },
+  {
+   "id": "frs4-co-6",
+   "part": "co",
+   "teil": "Exercice 3",
+   "title": "Préparer une fête d'anniversaire",
+   "time": 7,
+   "plays": 2,
+   "instr": "Du hör ett samtal. Läs frågorna först. Du hör samtalet två gånger. Välj rätt svar.",
+   "lines": [
+    {
+     "fr": "— Alors, pour les dix-huit ans de Léa, on fait quoi ? Une fête chez toi ?",
+     "sv": "– Nå, vad gör vi för Léas artonårsdag? En fest hemma hos dig?"
+    },
+    {
+     "fr": "— Non, mes parents ne veulent pas. L'appartement est trop petit, et les voisins se plaignent du bruit. J'ai pensé à la salle de la maison des jeunes. On peut la louer pour cinquante euros.",
+     "sv": "– Nej, mina föräldrar vill inte. Lägenheten är för liten, och grannarna klagar på oljud. Jag tänkte på lokalen i ungdomsgården. Man kan hyra den för femtio euro."
+    },
+    {
+     "fr": "— Bonne idée. On sera combien ?",
+     "sv": "– Bra idé. Hur många blir vi?"
+    },
+    {
+     "fr": "— Une trentaine. Si chacun donne cinq euros, on pourra payer la salle et acheter un cadeau.",
+     "sv": "– Ett trettiotal. Om alla ger fem euro kan vi betala lokalen och köpa en present."
+    },
+    {
+     "fr": "— Et le cadeau, tu as une idée ?",
+     "sv": "– Och presenten, har du någon idé?"
+    },
+    {
+     "fr": "— Elle rêve d'aller au festival de musique en juillet. On pourrait lui offrir un billet ! Mais attention, c'est une surprise : ne lui dis rien.",
+     "sv": "– Hon drömmer om att gå på musikfestivalen i juli. Vi skulle kunna ge henne en biljett! Men se upp, det är en överraskning: säg ingenting till henne."
+    }
+   ],
+   "qs": [
+    {
+     "q": "Pourquoi la fête n'a-t-elle pas lieu dans l'appartement ?",
+     "opts": [
+      "Il est trop petit et les voisins se plaignent.",
+      "Les parents sont en vacances.",
+      "Il est trop loin."
+     ],
+     "a": 0,
+     "why": "« L'appartement est trop petit, et les voisins se plaignent du bruit »."
+    },
+    {
+     "q": "Où la fête va-t-elle avoir lieu ?",
+     "opts": [
+      "Dans un restaurant.",
+      "À la maison des jeunes.",
+      "Dans un parc."
+     ],
+     "a": 1,
+     "why": "« la salle de la maison des jeunes »."
+    },
+    {
+     "q": "Combien d'invités y aura-t-il environ ?",
+     "opts": [
+      "Dix.",
+      "Trente.",
+      "Cinquante."
+     ],
+     "a": 1,
+     "why": "« Une trentaine. »"
+    },
+    {
+     "q": "Combien chaque invité va-t-il donner ?",
+     "opts": [
+      "Cinq euros.",
+      "Cinquante euros.",
+      "Rien."
+     ],
+     "a": 0,
+     "why": "« Si chacun donne cinq euros »."
+    },
+    {
+     "q": "Quel cadeau veulent-ils offrir ?",
+     "opts": [
+      "Un billet pour un festival de musique.",
+      "Un vélo.",
+      "Un voyage à Paris."
+     ],
+     "a": 0,
+     "why": "« On pourrait lui offrir un billet ! » till musikfestivalen."
+    }
+   ]
+  },
+  {
+   "id": "frs4-co-7",
+   "part": "co",
+   "teil": "Exercice 4",
+   "title": "Témoignage : un an en Irlande",
+   "time": 7,
+   "plays": 2,
+   "instr": "Du hör ett längre radioinslag. Läs frågorna först. Du hör inslaget två gånger. Välj rätt svar.",
+   "lines": [
+    {
+     "fr": "Aujourd'hui, dans « Partir », nous écoutons Mathis, dix-neuf ans. Après le bac, il a passé un an en Irlande.",
+     "sv": "I dag i ”Partir” lyssnar vi på Mathis, nitton år. Efter studenten tillbringade han ett år på Irland."
+    },
+    {
+     "fr": "« Au début, c'était dur. Je comprenais très mal l'accent irlandais, et je me sentais seul. J'ai trouvé un travail dans un hôtel, à la réception. Mes collègues venaient de partout : de Pologne, du Brésil, d'Italie. Petit à petit, on est devenus amis, et mon anglais a fait d'énormes progrès.",
+     "sv": "”I början var det tufft. Jag förstod den irländska brytningen väldigt dåligt, och jag kände mig ensam. Jag fick jobb i receptionen på ett hotell. Mina kolleger kom från hela världen: från Polen, Brasilien, Italien. Så småningom blev vi vänner, och min engelska gjorde enorma framsteg."
+    },
+    {
+     "fr": "Ce qui m'a le plus appris, c'est de vivre seul : payer un loyer, faire mes courses, gérer mon budget. Mes parents m'ont trouvé beaucoup plus mûr à mon retour.",
+     "sv": "Det som lärde mig mest var att bo ensam: betala hyra, handla, sköta min budget. Mina föräldrar tyckte att jag var mycket mognare när jag kom tillbaka."
+    },
+    {
+     "fr": "Maintenant, je fais des études de tourisme à Nantes. Sans cette année, je n'aurais jamais choisi cette filière. »",
+     "sv": "Nu läser jag turism i Nantes. Utan det här året hade jag aldrig valt den inriktningen.”"
+    }
+   ],
+   "qs": [
+    {
+     "q": "Qu'a fait Mathis après le bac ?",
+     "opts": [
+      "Il a passé un an en Irlande.",
+      "Il a commencé l'université.",
+      "Il a travaillé chez ses parents."
+     ],
+     "a": 0,
+     "why": "« il a passé un an en Irlande »."
+    },
+    {
+     "q": "Quel problème avait-il au début ?",
+     "opts": [
+      "Il n'avait pas d'argent.",
+      "Il comprenait mal l'accent et se sentait seul.",
+      "Il était malade."
+     ],
+     "a": 1,
+     "why": "« Je comprenais très mal l'accent irlandais, et je me sentais seul »."
+    },
+    {
+     "q": "Où travaillait-il ?",
+     "opts": [
+      "Dans un restaurant.",
+      "Dans un hôtel.",
+      "Dans une école."
+     ],
+     "a": 1,
+     "why": "« J'ai trouvé un travail dans un hôtel »."
+    },
+    {
+     "q": "Qu'est-ce qui lui a le plus appris ?",
+     "opts": [
+      "Vivre seul.",
+      "Voyager en Europe.",
+      "Travailler la nuit."
+     ],
+     "a": 0,
+     "why": "« Ce qui m'a le plus appris, c'est de vivre seul »."
+    },
+    {
+     "q": "Que fait-il maintenant ?",
+     "opts": [
+      "Il travaille en Irlande.",
+      "Il étudie le tourisme à Nantes.",
+      "Il cherche un travail."
+     ],
+     "a": 1,
+     "why": "« je fais des études de tourisme à Nantes »."
+    },
+    {
+     "q": "Selon Mathis, sans cette année…",
+     "opts": [
+      "il aurait choisi une autre filière.",
+      "il parlerait mieux anglais.",
+      "il habiterait encore en Irlande."
+     ],
+     "a": 0,
+     "why": "« Sans cette année, je n'aurais jamais choisi cette filière »."
+    }
+   ]
+  },
+  {
+   "id": "frs4-co-8",
+   "part": "co",
+   "teil": "Exercice 4",
+   "title": "Reportage : un village sans voitures",
+   "time": 7,
+   "plays": 2,
+   "instr": "Du hör ett längre radioinslag. Läs frågorna först. Du hör inslaget två gånger. Välj rätt svar.",
+   "lines": [
+    {
+     "fr": "Nous sommes à Saint-Martin, un petit village des Alpes où les voitures sont interdites depuis dix ans dans le centre.",
+     "sv": "Vi är i Saint-Martin, en liten by i Alperna där bilar har varit förbjudna i centrum i tio år."
+    },
+    {
+     "fr": "Les habitants laissent leur voiture dans un parking à l'entrée du village, puis ils continuent à pied, à vélo ou avec un petit bus électrique gratuit.",
+     "sv": "Invånarna lämnar bilen på en parkering vid infarten till byn och fortsätter sedan till fots, på cykel eller med en liten gratis elbuss."
+    },
+    {
+     "fr": "« Au début, beaucoup de gens étaient contre, explique le maire. Les commerçants avaient peur de perdre leurs clients. Aujourd'hui, c'est le contraire : les touristes viennent justement parce que le village est calme et que l'air est pur. »",
+     "sv": "”I början var många emot det”, förklarar borgmästaren. ”Handlarna var rädda att förlora sina kunder. I dag är det tvärtom: turisterna kommer just för att byn är lugn och luften är ren.”"
+    },
+    {
+     "fr": "Tout n'est pas parfait. Les personnes âgées trouvent parfois difficile de porter leurs courses. C'est pourquoi des jeunes du village les aident le samedi matin.",
+     "sv": "Allt är inte perfekt. Äldre personer tycker ibland att det är svårt att bära sina matkassar. Därför hjälper unga i byn dem på lördagsförmiddagarna."
+    }
+   ],
+   "qs": [
+    {
+     "q": "Qu'est-ce qui est interdit dans le centre du village ?",
+     "opts": [
+      "Les vélos.",
+      "Les voitures.",
+      "Les touristes."
+     ],
+     "a": 1,
+     "why": "« les voitures sont interdites depuis dix ans dans le centre »."
+    },
+    {
+     "q": "Comment les habitants se déplacent-ils dans le village ?",
+     "opts": [
+      "En taxi.",
+      "À pied, à vélo ou en bus électrique.",
+      "En voiture électrique."
+     ],
+     "a": 1,
+     "why": "« à pied, à vélo ou avec un petit bus électrique gratuit »."
+    },
+    {
+     "q": "De quoi les commerçants avaient-ils peur ?",
+     "opts": [
+      "De perdre leurs clients.",
+      "Du bruit.",
+      "De la pollution."
+     ],
+     "a": 0,
+     "why": "« Les commerçants avaient peur de perdre leurs clients »."
+    },
+    {
+     "q": "Pourquoi les touristes viennent-ils aujourd'hui ?",
+     "opts": [
+      "Parce que c'est moins cher.",
+      "Parce que le village est calme et l'air pur.",
+      "Parce qu'il y a un grand parking."
+     ],
+     "a": 1,
+     "why": "« parce que le village est calme et que l'air est pur »."
+    },
+    {
+     "q": "Qui aide les personnes âgées ?",
+     "opts": [
+      "Le maire.",
+      "Des jeunes du village.",
+      "Les commerçants."
+     ],
+     "a": 1,
+     "why": "« des jeunes du village les aident le samedi matin »."
+    }
+   ]
+  },
+  {
+   "id": "frs4-ce-1",
+   "part": "ce",
+   "teil": "Exercice 1",
+   "title": "Petites annonces : logement",
+   "time": 7,
+   "instr": "Läs de korta texterna (annonser och meddelanden) och svara på frågorna. Välj rätt svar.",
+   "lines": [
+    {
+     "fr": "A – Chambre chez l'habitant, quartier de la gare. 350 € par mois, charges comprises. Petit-déjeuner possible. Non-fumeur. Idéal pour étudiant.",
+     "sv": "A – Rum hos privatperson, stationsområdet. 350 € i månaden, allt inräknat. Frukost möjlig. Rökfritt. Perfekt för student."
+    },
+    {
+     "fr": "B – Colocation : trois étudiantes cherchent une quatrième colocataire pour grand appartement au centre-ville. 420 € + charges. Animaux acceptés.",
+     "sv": "B – Kollektiv: tre studenter söker en fjärde för stor lägenhet i centrum. 420 € + avgifter. Djur tillåtna."
+    },
+    {
+     "fr": "C – Studio meublé, 18 m², au 5e étage sans ascenseur. 480 € charges comprises. Libre le 1er septembre. Garant obligatoire.",
+     "sv": "C – Möblerad etta, 18 m², på femte våningen utan hiss. 480 € allt inräknat. Ledig 1 september. Borgensman krävs."
+    }
+   ],
+   "qs": [
+    {
+     "q": "Quelle annonce convient à une personne qui a un chat ?",
+     "opts": [
+      "A",
+      "B",
+      "C"
+     ],
+     "a": 1,
+     "why": "B: « Animaux acceptés »."
+    },
+    {
+     "q": "Quel logement est le moins cher ?",
+     "opts": [
+      "A",
+      "B",
+      "C"
+     ],
+     "a": 0,
+     "why": "A kostar 350 € allt inräknat."
+    },
+    {
+     "q": "Dans quel logement peut-on prendre le petit-déjeuner ?",
+     "opts": [
+      "A",
+      "B",
+      "C"
+     ],
+     "a": 0,
+     "why": "A: « Petit-déjeuner possible »."
+    },
+    {
+     "q": "Pour quel logement faut-il un garant ?",
+     "opts": [
+      "A",
+      "B",
+      "C"
+     ],
+     "a": 2,
+     "why": "C: « Garant obligatoire »."
+    },
+    {
+     "q": "Quel logement est libre le 1er septembre ?",
+     "opts": [
+      "A",
+      "B",
+      "C"
+     ],
+     "a": 2,
+     "why": "C: « Libre le 1er septembre »."
+    }
+   ]
+  },
+  {
+   "id": "frs4-ce-2",
+   "part": "ce",
+   "teil": "Exercice 1",
+   "title": "Affiches au lycée",
+   "time": 7,
+   "instr": "Läs de korta texterna (annonser och meddelanden) och svara på frågorna. Välj rätt svar.",
+   "lines": [
+    {
+     "fr": "A – Club théâtre : le mardi de 17 h à 19 h, salle 12. Pas besoin d'expérience ! Spectacle de fin d'année en juin. Inscription auprès de Mme Roux.",
+     "sv": "A – Teaterklubb: tisdagar 17–19, sal 12. Ingen erfarenhet behövs! Föreställning vid läsårets slut i juni. Anmälan hos Mme Roux."
+    },
+    {
+     "fr": "B – Échange avec l'Allemagne : dix jours à Munich en avril. Il faut étudier l'allemand depuis au moins deux ans. Réunion d'information jeudi à 18 h.",
+     "sv": "B – Utbyte med Tyskland: tio dagar i München i april. Man måste ha läst tyska i minst två år. Informationsmöte torsdag kl. 18."
+    },
+    {
+     "fr": "C – Objets trouvés : un sac à dos bleu, une calculatrice et des clés ont été trouvés à la cantine. S'adresser à la vie scolaire, bureau 3.",
+     "sv": "C – Hittegods: en blå ryggsäck, en miniräknare och nycklar har hittats i matsalen. Vänd dig till elevservice, rum 3."
+    }
+   ],
+   "qs": [
+    {
+     "q": "Qui peut participer au club théâtre ?",
+     "opts": [
+      "Seulement les élèves qui ont de l'expérience.",
+      "Tout le monde, même sans expérience.",
+      "Seulement les élèves de Mme Roux."
+     ],
+     "a": 1,
+     "why": "« Pas besoin d'expérience ! »"
+    },
+    {
+     "q": "Quand a lieu le spectacle du club théâtre ?",
+     "opts": [
+      "En avril.",
+      "En juin.",
+      "Chaque mardi."
+     ],
+     "a": 1,
+     "why": "« Spectacle de fin d'année en juin »."
+    },
+    {
+     "q": "Pour partir à Munich, il faut…",
+     "opts": [
+      "étudier l'allemand depuis au moins deux ans.",
+      "avoir dix-huit ans.",
+      "payer avant jeudi."
+     ],
+     "a": 0,
+     "why": "« Il faut étudier l'allemand depuis au moins deux ans »."
+    },
+    {
+     "q": "Vous avez perdu vos clés à la cantine. Où allez-vous ?",
+     "opts": [
+      "Salle 12.",
+      "Au bureau 3.",
+      "Chez Mme Roux."
+     ],
+     "a": 1,
+     "why": "« S'adresser à la vie scolaire, bureau 3 »."
+    }
+   ]
+  },
+  {
+   "id": "frs4-ce-3",
+   "part": "ce",
+   "teil": "Exercice 2",
+   "title": "Un mail d'invitation",
+   "time": 7,
+   "instr": "Läs meddelandet och svara på frågorna. Välj rätt svar.",
+   "lines": [
+    {
+     "fr": "De : Camille  À : Elsa  Objet : Mon mariage !",
+     "sv": "Från: Camille  Till: Elsa  Ärende: Mitt bröllop!"
+    },
+    {
+     "fr": "Chère Elsa, j'ai une grande nouvelle : Samir et moi, nous allons nous marier le samedi 14 juin à Villefranche ! La cérémonie aura lieu à la mairie à 15 heures. Ensuite, nous ferons une grande fête dans la ferme de mes grands-parents, à dix kilomètres.",
+     "sv": "Kära Elsa, jag har en stor nyhet: Samir och jag ska gifta oss lördagen den 14 juni i Villefranche! Ceremonin äger rum på rådhuset klockan 15. Sedan har vi en stor fest på mina morföräldrars gård, en mil bort."
+    },
+    {
+     "fr": "Ce serait génial si tu pouvais venir de Suède. Tu pourrais dormir chez mes parents, ils ont une chambre libre. Il y aura un bus pour aller de la mairie à la ferme, alors tu n'as pas besoin de voiture.",
+     "sv": "Det vore jättekul om du kunde komma från Sverige. Du kan sova hos mina föräldrar, de har ett ledigt rum. Det går en buss från rådhuset till gården, så du behöver ingen bil."
+    },
+    {
+     "fr": "Pas besoin de cadeau ! Mais si tu veux, tu peux nous aider à financer notre voyage de noces au Maroc. Réponds-moi avant le 1er mai, s'il te plaît. Je t'embrasse, Camille",
+     "sv": "Ingen present behövs! Men om du vill kan du hjälpa oss att betala vår bröllopsresa till Marocko. Svara mig före den 1 maj, tack. Kram, Camille"
+    }
+   ],
+   "qs": [
+    {
+     "q": "Pourquoi Camille écrit-elle à Elsa ?",
+     "opts": [
+      "Pour l'inviter à son mariage.",
+      "Pour lui demander de l'argent.",
+      "Pour annuler une visite."
+     ],
+     "a": 0,
+     "why": "« nous allons nous marier… Ce serait génial si tu pouvais venir »."
+    },
+    {
+     "q": "Où aura lieu la fête ?",
+     "opts": [
+      "À la mairie.",
+      "Dans la ferme des grands-parents.",
+      "Au Maroc."
+     ],
+     "a": 1,
+     "why": "« une grande fête dans la ferme de mes grands-parents »."
+    },
+    {
+     "q": "Où Elsa pourrait-elle dormir ?",
+     "opts": [
+      "À l'hôtel.",
+      "Chez les parents de Camille.",
+      "Dans la ferme."
+     ],
+     "a": 1,
+     "why": "« Tu pourrais dormir chez mes parents »."
+    },
+    {
+     "q": "Comment Elsa ira-t-elle de la mairie à la fête ?",
+     "opts": [
+      "En bus.",
+      "En voiture.",
+      "À pied."
+     ],
+     "a": 0,
+     "why": "« Il y aura un bus pour aller de la mairie à la ferme »."
+    },
+    {
+     "q": "Qu'est-ce que Camille propose à la place d'un cadeau ?",
+     "opts": [
+      "D'aider à payer le voyage de noces.",
+      "D'apporter un gâteau.",
+      "De chanter à la fête."
+     ],
+     "a": 0,
+     "why": "« tu peux nous aider à financer notre voyage de noces »."
+    },
+    {
+     "q": "Avant quelle date Elsa doit-elle répondre ?",
+     "opts": [
+      "Le 14 juin.",
+      "Le 1er mai.",
+      "Le 15 mai."
+     ],
+     "a": 1,
+     "why": "« Réponds-moi avant le 1er mai »."
+    }
+   ]
+  },
+  {
+   "id": "frs4-ce-4",
+   "part": "ce",
+   "teil": "Exercice 2",
+   "title": "Message d'un correspondant",
+   "time": 7,
+   "instr": "Läs meddelandet och svara på frågorna. Välj rätt svar.",
+   "lines": [
+    {
+     "fr": "Salut Oskar ! Merci pour ton mail et tes photos de la Saint-Jean, c'était très beau. Chez nous, en France, le 21 juin, c'est la Fête de la musique. Cette année, avec mon groupe, on a joué dans la rue devant la boulangerie de mon quartier. Il y avait au moins cent personnes !",
+     "sv": "Hej Oskar! Tack för ditt mejl och dina midsommarbilder, det var jättefint. Hos oss i Frankrike är det musikens dag den 21 juni. I år spelade jag och mitt band på gatan framför bageriet i mitt kvarter. Det var minst hundra personer där!"
+    },
+    {
+     "fr": "Je t'écris aussi pour te poser une question. Mes parents sont d'accord pour que je vienne te voir en Suède en août. Est-ce que tes parents seraient d'accord ? Je pourrais rester deux semaines. Je voudrais voir Stockholm, mais surtout la nature : les lacs, les forêts…",
+     "sv": "Jag skriver också för att fråga en sak. Mina föräldrar går med på att jag hälsar på dig i Sverige i augusti. Skulle dina föräldrar gå med på det? Jag skulle kunna stanna två veckor. Jag skulle vilja se Stockholm, men framför allt naturen: sjöarna, skogarna …"
+    },
+    {
+     "fr": "Je prendrais le train jusqu'à Copenhague, puis un autre train jusqu'à chez toi. C'est plus long que l'avion, mais c'est meilleur pour la planète. Dis-moi vite ! Amitiés, Lucas",
+     "sv": "Jag skulle ta tåget till Köpenhamn och sedan ett annat tåg hem till dig. Det tar längre tid än flyget, men det är bättre för planeten. Svara snart! Hälsningar, Lucas"
+    }
+   ],
+   "qs": [
+    {
+     "q": "Qu'a fait Lucas le 21 juin ?",
+     "opts": [
+      "Il a joué de la musique dans la rue.",
+      "Il a fêté la Saint-Jean.",
+      "Il a travaillé à la boulangerie."
+     ],
+     "a": 0,
+     "why": "« avec mon groupe, on a joué dans la rue »."
+    },
+    {
+     "q": "Que demande Lucas à Oskar ?",
+     "opts": [
+      "S'il peut venir chez lui en août.",
+      "S'il veut venir en France.",
+      "S'il peut lui envoyer des photos."
+     ],
+     "a": 0,
+     "why": "« Est-ce que tes parents seraient d'accord ? » – att komma i augusti."
+    },
+    {
+     "q": "Combien de temps Lucas voudrait-il rester ?",
+     "opts": [
+      "Une semaine.",
+      "Deux semaines.",
+      "Un mois."
+     ],
+     "a": 1,
+     "why": "« Je pourrais rester deux semaines »."
+    },
+    {
+     "q": "Qu'est-ce qui intéresse le plus Lucas ?",
+     "opts": [
+      "Les musées de Stockholm.",
+      "La nature.",
+      "Les magasins."
+     ],
+     "a": 1,
+     "why": "« mais surtout la nature »."
+    },
+    {
+     "q": "Comment Lucas voudrait-il voyager ?",
+     "opts": [
+      "En avion.",
+      "En train.",
+      "En bus."
+     ],
+     "a": 1,
+     "why": "« Je prendrais le train jusqu'à Copenhague »."
+    },
+    {
+     "q": "Pourquoi choisit-il ce moyen de transport ?",
+     "opts": [
+      "C'est plus rapide.",
+      "C'est meilleur pour la planète.",
+      "C'est moins cher."
+     ],
+     "a": 1,
+     "why": "« c'est meilleur pour la planète »."
+    }
+   ]
+  },
+  {
+   "id": "frs4-ce-5",
+   "part": "ce",
+   "teil": "Exercice 3",
+   "title": "Article : la bibliothèque qui prête tout",
+   "time": 8,
+   "instr": "Läs artikeln och svara på frågorna. Välj rätt svar.",
+   "lines": [
+    {
+     "fr": "À Rennes, une bibliothèque pas comme les autres a ouvert l'année dernière. Ici, on n'emprunte pas seulement des livres : on peut aussi emprunter une perceuse, une tente, une machine à coudre ou même une guitare.",
+     "sv": "I Rennes öppnade förra året ett bibliotek som inte liknar något annat. Här lånar man inte bara böcker: man kan också låna en borrmaskin, ett tält, en symaskin eller till och med en gitarr."
+    },
+    {
+     "fr": "L'idée vient de trois jeunes du quartier. « Chez moi, on avait une perceuse qu'on utilisait une fois par an, explique Hugo, vingt-quatre ans. C'est absurde d'acheter des objets qu'on utilise si peu. »",
+     "sv": "Idén kommer från tre unga i kvarteret. ”Hemma hade vi en borrmaskin som vi använde en gång om året”, förklarar Hugo, tjugofyra år. ”Det är absurt att köpa saker som man använder så sällan.”"
+    },
+    {
+     "fr": "L'inscription coûte dix euros par an. Les habitants peuvent emprunter jusqu'à trois objets pendant deux semaines. Beaucoup d'objets ont été donnés par des voisins.",
+     "sv": "Medlemskapet kostar tio euro om året. Invånarna kan låna upp till tre saker i två veckor. Många av sakerna har skänkts av grannar."
+    },
+    {
+     "fr": "Aujourd'hui, la bibliothèque compte plus de six cents membres. « C'est bon pour la planète et pour le porte-monnaie, dit une utilisatrice. Et en plus, on rencontre ses voisins ! »",
+     "sv": "I dag har biblioteket över sexhundra medlemmar. ”Det är bra för planeten och för plånboken”, säger en användare. ”Och dessutom träffar man sina grannar!”"
+    }
+   ],
+   "qs": [
+    {
+     "q": "Qu'est-ce qui est spécial dans cette bibliothèque ?",
+     "opts": [
+      "On peut emprunter des objets, pas seulement des livres.",
+      "Elle est ouverte la nuit.",
+      "Les livres sont gratuits pour toujours."
+     ],
+     "a": 0,
+     "why": "« on peut aussi emprunter une perceuse, une tente… »"
+    },
+    {
+     "q": "Qui a eu l'idée ?",
+     "opts": [
+      "La mairie.",
+      "Trois jeunes du quartier.",
+      "Un écrivain."
+     ],
+     "a": 1,
+     "why": "« L'idée vient de trois jeunes du quartier »."
+    },
+    {
+     "q": "Pourquoi Hugo a-t-il eu cette idée ?",
+     "opts": [
+      "Il trouve absurde d'acheter des objets qu'on utilise peu.",
+      "Il n'aimait pas lire.",
+      "Il voulait gagner de l'argent."
+     ],
+     "a": 0,
+     "why": "« C'est absurde d'acheter des objets qu'on utilise si peu »."
+    },
+    {
+     "q": "Combien coûte l'inscription ?",
+     "opts": [
+      "Rien.",
+      "Dix euros par an.",
+      "Dix euros par objet."
+     ],
+     "a": 1,
+     "why": "« L'inscription coûte dix euros par an »."
+    },
+    {
+     "q": "Combien d'objets peut-on emprunter en même temps ?",
+     "opts": [
+      "Un.",
+      "Trois.",
+      "Six."
+     ],
+     "a": 1,
+     "why": "« jusqu'à trois objets »."
+    },
+    {
+     "q": "Selon l'utilisatrice, quel est un autre avantage ?",
+     "opts": [
+      "On rencontre ses voisins.",
+      "On apprend à réparer.",
+      "On reçoit des cadeaux."
+     ],
+     "a": 0,
+     "why": "« Et en plus, on rencontre ses voisins ! »"
+    }
+   ]
+  },
+  {
+   "id": "frs4-ce-6",
+   "part": "ce",
+   "teil": "Exercice 3",
+   "title": "Article : des lycéens contre le gaspillage",
+   "time": 8,
+   "instr": "Läs artikeln och svara på frågorna. Välj rätt svar.",
+   "lines": [
+    {
+     "fr": "Au lycée Jean-Jaurès de Toulouse, les élèves ont remarqué que la cantine jetait chaque jour près de quarante kilos de nourriture. Ils ont décidé d'agir.",
+     "sv": "På gymnasiet Jean-Jaurès i Toulouse märkte eleverna att matsalen slängde nästan fyrtio kilo mat varje dag. De bestämde sig för att göra något."
+    },
+    {
+     "fr": "D'abord, ils ont installé une balance à la sortie de la cantine : chaque élève pèse ce qu'il n'a pas mangé. Les résultats sont affichés chaque semaine. Ensuite, ils ont proposé deux tailles d'assiettes, une petite et une grande, et la possibilité de reprendre du pain.",
+     "sv": "Först ställde de upp en våg vid utgången från matsalen: varje elev väger det hen inte har ätit. Resultaten sätts upp varje vecka. Sedan föreslog de två storlekar på tallrikar, en liten och en stor, och möjligheten att ta mer bröd."
+    },
+    {
+     "fr": "En trois mois, le gaspillage a diminué de moitié. Avec l'argent économisé, la cantine achète maintenant plus de produits bio et locaux.",
+     "sv": "På tre månader har matsvinnet halverats. För pengarna som sparats köper matsalen nu mer ekologiska och lokala produkter."
+    },
+    {
+     "fr": "« On pensait que ce serait difficile de changer les habitudes, raconte Léna, élève de terminale. Mais quand on voit les chiffres, on fait attention. » D'autres lycées de la région veulent maintenant copier l'idée.",
+     "sv": "”Vi trodde att det skulle bli svårt att ändra vanorna”, berättar Léna, som går sista året. ”Men när man ser siffrorna blir man uppmärksam.” Andra gymnasier i regionen vill nu ta efter idén."
+    }
+   ],
+   "qs": [
+    {
+     "q": "Quel problème les élèves ont-ils remarqué ?",
+     "opts": [
+      "La cantine jetait beaucoup de nourriture.",
+      "La nourriture était trop chère.",
+      "Il n'y avait pas assez de place."
+     ],
+     "a": 0,
+     "why": "« la cantine jetait chaque jour près de quarante kilos de nourriture »."
+    },
+    {
+     "q": "À quoi sert la balance ?",
+     "opts": [
+      "À peser ce que les élèves n'ont pas mangé.",
+      "À peser les élèves.",
+      "À peser les livraisons."
+     ],
+     "a": 0,
+     "why": "« chaque élève pèse ce qu'il n'a pas mangé »."
+    },
+    {
+     "q": "Qu'est-ce que les élèves ont proposé ?",
+     "opts": [
+      "Deux tailles d'assiettes.",
+      "Un seul menu.",
+      "Supprimer le pain."
+     ],
+     "a": 0,
+     "why": "« deux tailles d'assiettes, une petite et une grande »."
+    },
+    {
+     "q": "Quel est le résultat après trois mois ?",
+     "opts": [
+      "Le gaspillage a diminué de moitié.",
+      "Le gaspillage a doublé.",
+      "Rien n'a changé."
+     ],
+     "a": 0,
+     "why": "« le gaspillage a diminué de moitié »."
+    },
+    {
+     "q": "Que fait la cantine avec l'argent économisé ?",
+     "opts": [
+      "Elle achète plus de produits bio et locaux.",
+      "Elle baisse les prix.",
+      "Elle achète une nouvelle balance."
+     ],
+     "a": 0,
+     "why": "« la cantine achète maintenant plus de produits bio et locaux »."
+    },
+    {
+     "q": "Que pensait Léna au début ?",
+     "opts": [
+      "Que ce serait facile.",
+      "Que ce serait difficile de changer les habitudes.",
+      "Que l'idée était inutile."
+     ],
+     "a": 1,
+     "why": "« On pensait que ce serait difficile de changer les habitudes »."
+    }
+   ]
+  },
+  {
+   "id": "frs4-ce-7",
+   "part": "ce",
+   "teil": "Exercice 4",
+   "title": "Règlement de l'auberge de jeunesse",
+   "time": 7,
+   "instr": "Läs texten (instruktioner eller regler) och svara på frågorna. Välj rätt svar.",
+   "lines": [
+    {
+     "fr": "Bienvenue à l'auberge de jeunesse des Calanques !",
+     "sv": "Välkommen till vandrarhemmet Calanques!"
+    },
+    {
+     "fr": "L'accueil est ouvert de 7 h à 23 h. Si vous arrivez plus tard, prévenez-nous par téléphone : nous vous donnerons le code de la porte.",
+     "sv": "Receptionen är öppen 7–23. Om ni kommer senare, meddela oss per telefon: vi ger er portkoden."
+    },
+    {
+     "fr": "Les chambres doivent être libérées avant 10 h le jour du départ. Vous pouvez laisser vos bagages à l'accueil jusqu'à 18 h.",
+     "sv": "Rummen ska lämnas före klockan 10 avresedagen. Ni kan lämna bagaget i receptionen till klockan 18."
+    },
+    {
+     "fr": "La cuisine commune est ouverte à tous de 7 h à 22 h. Merci de laver votre vaisselle et de noter votre nom sur vos produits dans le frigo.",
+     "sv": "Det gemensamma köket är öppet för alla 7–22. Diska efter er och skriv ert namn på era varor i kylen."
+    },
+    {
+     "fr": "Il est interdit de fumer dans le bâtiment. Le silence est demandé après 22 h. Les draps sont compris dans le prix, mais les serviettes coûtent 3 € par séjour.",
+     "sv": "Det är förbjudet att röka i byggnaden. Tystnad gäller efter klockan 22. Lakan ingår i priset, men handdukar kostar 3 € per vistelse."
+    }
+   ],
+   "qs": [
+    {
+     "q": "Vous arrivez à minuit. Que devez-vous faire ?",
+     "opts": [
+      "Téléphoner pour avoir le code de la porte.",
+      "Attendre le matin.",
+      "Dormir dans la cuisine."
+     ],
+     "a": 0,
+     "why": "« Si vous arrivez plus tard, prévenez-nous par téléphone : nous vous donnerons le code »."
+    },
+    {
+     "q": "Avant quelle heure faut-il quitter la chambre le dernier jour ?",
+     "opts": [
+      "7 h.",
+      "10 h.",
+      "18 h."
+     ],
+     "a": 1,
+     "why": "« avant 10 h le jour du départ »."
+    },
+    {
+     "q": "Que faut-il faire dans la cuisine ?",
+     "opts": [
+      "Laver sa vaisselle.",
+      "Payer 3 €.",
+      "Réserver une heure."
+     ],
+     "a": 0,
+     "why": "« Merci de laver votre vaisselle »."
+    },
+    {
+     "q": "Qu'est-ce qui n'est pas compris dans le prix ?",
+     "opts": [
+      "Les draps.",
+      "Les serviettes.",
+      "La cuisine."
+     ],
+     "a": 1,
+     "why": "« les serviettes coûtent 3 € par séjour »."
+    },
+    {
+     "q": "Qu'est-ce qui est interdit ?",
+     "opts": [
+      "Fumer dans le bâtiment.",
+      "Utiliser le frigo.",
+      "Laisser ses bagages."
+     ],
+     "a": 0,
+     "why": "« Il est interdit de fumer dans le bâtiment »."
+    }
+   ]
+  },
+  {
+   "id": "frs4-ce-8",
+   "part": "ce",
+   "teil": "Exercice 4",
+   "title": "Comment trier ses déchets",
+   "time": 7,
+   "instr": "Läs texten (instruktioner eller regler) och svara på frågorna. Välj rätt svar.",
+   "lines": [
+    {
+     "fr": "Mairie de Villeneuve – Nouveau : le tri des déchets change le 1er janvier !",
+     "sv": "Villeneuve kommun – Nyhet: sopsorteringen ändras den 1 januari!"
+    },
+    {
+     "fr": "Poubelle jaune : tous les emballages en plastique, en métal et en carton. Inutile de les laver, il suffit de bien les vider.",
+     "sv": "Gul tunna: alla förpackningar av plast, metall och kartong. Ni behöver inte diska dem, det räcker att tömma dem ordentligt."
+    },
+    {
+     "fr": "Conteneur vert (dans la rue) : bouteilles et pots en verre, sans bouchon.",
+     "sv": "Grön behållare (på gatan): glasflaskor och glasburkar, utan kork."
+    },
+    {
+     "fr": "Poubelle marron : les restes de repas, les épluchures et le marc de café. Ils deviendront du compost.",
+     "sv": "Brun tunna: matrester, skal och kaffesump. Det blir kompost."
+    },
+    {
+     "fr": "Les vêtements usés et les appareils électriques ne vont dans aucune poubelle : apportez-les à la déchetterie, ouverte du mardi au samedi.",
+     "sv": "Utslitna kläder och elektriska apparater hör inte hemma i någon tunna: lämna dem på återvinningscentralen, som är öppen tisdag till lördag."
+    }
+   ],
+   "qs": [
+    {
+     "q": "Où met-on une bouteille en plastique vide ?",
+     "opts": [
+      "Dans la poubelle jaune.",
+      "Dans le conteneur vert.",
+      "Dans la poubelle marron."
+     ],
+     "a": 0,
+     "why": "Gul tunna: « tous les emballages en plastique »."
+    },
+    {
+     "q": "Faut-il laver les emballages ?",
+     "opts": [
+      "Oui, toujours.",
+      "Non, il suffit de les vider.",
+      "Seulement le carton."
+     ],
+     "a": 1,
+     "why": "« Inutile de les laver, il suffit de bien les vider »."
+    },
+    {
+     "q": "Où met-on un pot de confiture en verre ?",
+     "opts": [
+      "Dans la poubelle jaune.",
+      "Dans le conteneur vert.",
+      "À la déchetterie."
+     ],
+     "a": 1,
+     "why": "Grön behållare: « bouteilles et pots en verre »."
+    },
+    {
+     "q": "Que deviennent les restes de repas ?",
+     "opts": [
+      "Du compost.",
+      "Du plastique.",
+      "De l'énergie."
+     ],
+     "a": 0,
+     "why": "« Ils deviendront du compost »."
+    },
+    {
+     "q": "Où apporte-t-on un vieux téléphone ?",
+     "opts": [
+      "Dans la poubelle jaune.",
+      "À la déchetterie.",
+      "À la mairie."
+     ],
+     "a": 1,
+     "why": "« les appareils électriques… apportez-les à la déchetterie »."
+    }
+   ]
+  },
+  {
+   "id": "frs4-pe-1",
+   "part": "pe",
+   "teil": "Exercice 1",
+   "title": "Raconter une fête",
+   "time": 22,
+   "minWords": 60,
+   "instr": "Berätta om en händelse du har varit med om och beskriv dina intryck. Skriv i dåtid (passé composé och imparfait). Minst 60 ord.",
+   "task": "Vous avez participé à une fête (anniversaire, mariage, fête de fin d'année…). Vous écrivez à un ami français pour lui raconter cette fête : où, quand, avec qui, ce que vous avez fait, et ce que vous avez pensé de cette journée. (60 mots minimum)",
+   "criteria": [
+    "Respect de la consigne",
+    "Capacité à raconter et à décrire",
+    "Capacité à donner ses impressions",
+    "Lexique et orthographe",
+    "Morphosyntaxe",
+    "Cohérence et cohésion"
+   ],
+   "model": "Salut Paul ! Samedi dernier, je suis allée au mariage de ma cousine Anna. La cérémonie a eu lieu dans une petite église au bord de la mer. Il faisait très beau et Anna était magnifique dans sa robe blanche. Après, nous avons mangé dans un grand restaurant. Il y avait plus de cent invités ! Le soir, on a dansé jusqu'à trois heures du matin. J'ai adoré cette journée, parce que toute la famille était réunie. Et toi, tu es déjà allé à un mariage ? Bises, Klara",
+   "modelSv": "Hej Paul! I lördags var jag på min kusin Annas bröllop. Vigseln hölls i en liten kyrka vid havet. Det var jättefint väder och Anna var fantastisk i sin vita klänning. Efteråt åt vi på en stor restaurang. Det var över hundra gäster! På kvällen dansade vi till tre på morgonen. Jag älskade dagen, eftersom hela släkten var samlad. Och du, har du varit på ett bröllop? Kram, Klara"
+  },
+  {
+   "id": "frs4-pe-2",
+   "part": "pe",
+   "teil": "Exercice 1",
+   "title": "Un week-end inoubliable",
+   "time": 22,
+   "minWords": 60,
+   "instr": "Berätta om en händelse du har varit med om och beskriv dina intryck. Skriv i dåtid (passé composé och imparfait). Minst 60 ord.",
+   "task": "Sur un forum pour jeunes, on vous demande de raconter un week-end que vous n'oublierez jamais. Vous racontez ce qui s'est passé et vous expliquez pourquoi ce week-end était spécial. (60 mots minimum)",
+   "criteria": [
+    "Respect de la consigne",
+    "Capacité à raconter et à décrire",
+    "Capacité à donner ses impressions",
+    "Lexique et orthographe",
+    "Morphosyntaxe",
+    "Cohérence et cohésion"
+   ],
+   "model": "Le week-end que je n'oublierai jamais, c'est mon premier week-end de camping avec mes amis, l'été dernier. Nous avons pris le train jusqu'à un lac, puis nous avons marché deux heures dans la forêt. Le soir, nous avons fait un feu et nous avons chanté. Pendant la nuit, il y a eu un orage terrible et notre tente était pleine d'eau ! Nous avions très froid, mais nous avons beaucoup ri. C'était spécial parce que nous étions libres, sans nos parents.",
+   "modelSv": "Helgen som jag aldrig kommer att glömma är min första campinghelg med mina kompisar, förra sommaren. Vi tog tåget till en sjö och gick sedan två timmar i skogen. På kvällen gjorde vi upp eld och sjöng. Under natten blev det ett fruktansvärt åskväder och vårt tält var fullt av vatten! Vi frös jättemycket, men vi skrattade mycket. Det var speciellt eftersom vi var fria, utan våra föräldrar."
+  },
+  {
+   "id": "frs4-pe-3",
+   "part": "pe",
+   "teil": "Exercice 2",
+   "title": "Répondre à une invitation",
+   "time": 22,
+   "minWords": 60,
+   "instr": "Svara på ett meddelande: tacka, tacka ja eller nej med en förklaring och föreslå något. Anpassa tonen (tu eller vous). Minst 60 ord.",
+   "task": "Vous recevez ce message de votre amie Chloé : « Salut ! Pour mes 18 ans, j'organise une fête chez moi le samedi 12 avril à partir de 19 heures. Tu viens ? Tu peux apporter quelque chose à manger ? Bises, Chloé » Vous répondez à Chloé : vous la remerciez, vous acceptez ou vous refusez en expliquant pourquoi, et vous proposez quelque chose. (60 mots minimum)",
+   "criteria": [
+    "Respect de la consigne",
+    "Correction sociolinguistique",
+    "Capacité à interagir (inviter, remercier, accepter, refuser, s'excuser …)",
+    "Lexique et orthographe",
+    "Morphosyntaxe",
+    "Cohérence et cohésion"
+   ],
+   "model": "Salut Chloé ! Merci beaucoup pour ton invitation, c'est très gentil. Malheureusement, je ne pourrai pas venir le 12 avril, parce que je pars en vacances en Espagne avec mes parents ce week-end-là. Je suis vraiment désolée ! Mais je voudrais fêter ton anniversaire avec toi. Est-ce que ça te dirait d'aller au cinéma ou de manger une pizza ensemble quand je reviendrai, le samedi 19 ? C'est moi qui t'invite ! Passe une super soirée. Bisous, Elin",
+   "modelSv": "Hej Chloé! Tack så mycket för inbjudan, det är jättesnällt. Tyvärr kan jag inte komma den 12 april, eftersom jag åker på semester till Spanien med mina föräldrar den helgen. Jag är verkligen ledsen! Men jag vill fira din födelsedag med dig. Har du lust att gå på bio eller äta pizza tillsammans när jag kommer tillbaka, lördagen den 19:e? Jag bjuder! Ha en jättetrevlig kväll. Puss, Elin"
+  },
+  {
+   "id": "frs4-pe-4",
+   "part": "pe",
+   "teil": "Exercice 2",
+   "title": "S'excuser auprès d'un voisin",
+   "time": 22,
+   "minWords": 60,
+   "instr": "Svara på ett meddelande: be om ursäkt, förklara och föreslå en lösning. Anpassa tonen (vous till en granne du inte känner väl). Minst 60 ord.",
+   "task": "Vous habitez dans un immeuble en France. Votre voisin, M. Durand, a laissé ce mot sous votre porte : « Hier soir, il y avait beaucoup de bruit chez vous jusqu'à deux heures du matin. Je n'ai pas pu dormir. » Vous lui écrivez un mot pour vous excuser, expliquer la situation et proposer une solution. (60 mots minimum)",
+   "criteria": [
+    "Respect de la consigne",
+    "Correction sociolinguistique",
+    "Capacité à interagir (inviter, remercier, accepter, refuser, s'excuser …)",
+    "Lexique et orthographe",
+    "Morphosyntaxe",
+    "Cohérence et cohésion"
+   ],
+   "model": "Monsieur Durand, je vous prie de m'excuser pour le bruit d'hier soir. C'était l'anniversaire de ma colocataire et nous avons invité quelques amis. Nous n'avons pas remarqué qu'il était si tard. Je suis vraiment désolé que vous n'ayez pas pu dormir. La prochaine fois, je vous préviendrai à l'avance et nous arrêterons la musique à vingt-deux heures. Pour me faire pardonner, est-ce que je pourrais vous offrir un gâteau ? Bien cordialement, Erik (appartement 12)",
+   "modelSv": "Herr Durand, jag ber om ursäkt för oljudet i går kväll. Det var min rumskamrats födelsedag och vi hade bjudit några vänner. Vi märkte inte att det var så sent. Jag är verkligen ledsen att ni inte kunde sova. Nästa gång säger jag till i förväg och vi stänger av musiken klockan tjugotvå. Kan jag få bjuda er på en kaka för att be om förlåtelse? Vänliga hälsningar, Erik (lägenhet 12)"
+  },
+  {
+   "id": "frs4-po-1",
+   "part": "po",
+   "teil": "Exercice 1",
+   "title": "Entretien dirigé : parlez de vous",
+   "prep": 0,
+   "time": 2,
+   "instr": "Första delen är ett kort samtal om dig själv, utan förberedelse (ungefär 1–2 minuter). Examinatorn hälsar och ställer frågor om dig, din familj, dina intressen och din vardag.",
+   "task": "L'examinateur vous pose des questions, par exemple :\n– Comment vous appelez-vous ? Quel âge avez-vous ?\n– Où habitez-vous ? Avec qui ?\n– Qu'est-ce que vous faites dans la vie ?\n– Qu'est-ce que vous aimez faire le week-end ?\n– Pourquoi apprenez-vous le français ?",
+   "phrases": [
+    "Je m'appelle … et j'ai … ans.",
+    "J'habite à … avec …",
+    "Je suis en … année de lycée.",
+    "Le week-end, j'aime …",
+    "J'apprends le français depuis … parce que …",
+    "Plus tard, j'aimerais …"
+   ],
+   "model": "Je m'appelle Oskar et j'ai dix-sept ans. J'habite à Västerås, une ville près de Stockholm, avec mes parents et mon petit frère. Je suis en deuxième année de lycée, en sciences sociales. Le week-end, je joue au basket et je vois mes amis. J'apprends le français depuis quatre ans, parce que j'aime la langue et que je voudrais voyager en France. Plus tard, j'aimerais devenir journaliste.",
+   "modelSv": "Jag heter Oskar och är sjutton år. Jag bor i Västerås, en stad nära Stockholm, med mina föräldrar och min lillebror. Jag går andra året på gymnasiet, samhällsvetenskap. På helgerna spelar jag basket och träffar mina kompisar. Jag har läst franska i fyra år, eftersom jag gillar språket och vill resa i Frankrike. Senare skulle jag vilja bli journalist."
+  },
+  {
+   "id": "frs4-po-2",
+   "part": "po",
+   "teil": "Exercice 2",
+   "title": "Monologue suivi : une fête que vous aimez",
+   "prep": 5,
+   "time": 3,
+   "instr": "Andra delen är en kort monolog (ungefär 2 minuter) om ett vardagsämne. På provet drar du två ämnen och väljer ett, och förbereder dig tillsammans med del 3. Examinatorn kan ställa några frågor efteråt.",
+   "task": "Parlez d'une fête ou d'une tradition que vous aimez. Comment la célèbre-t-on ? Avec qui ? Pourquoi l'aimez-vous ?",
+   "phrases": [
+    "Ma fête préférée, c'est …",
+    "On la fête le …",
+    "D'habitude, on …",
+    "Quand j'étais petit(e), …",
+    "Ce que j'aime, c'est …",
+    "L'année dernière, …"
+   ],
+   "model": "Ma fête préférée, c'est la Saint-Jean, en juin. En Suède, on la fête à la campagne, avec la famille et les amis. D'abord, on décore un grand mât avec des fleurs et des feuilles, puis on danse autour en chantant des chansons traditionnelles. Ensuite, on mange du hareng, des pommes de terre nouvelles et des fraises. Quand j'étais petite, je faisais une couronne de fleurs avec ma grand-mère. Ce que j'aime, c'est qu'il fait jour presque toute la nuit. L'année dernière, on a même nagé dans le lac à minuit !",
+   "modelSv": "Min favorithögtid är midsommar, i juni. I Sverige firar man den på landet, med familj och vänner. Först klär man en stor stång med blommor och löv, sedan dansar man runt den och sjunger traditionella sånger. Därefter äter man sill, färskpotatis och jordgubbar. När jag var liten gjorde jag en blomsterkrans med min mormor. Det jag gillar är att det är ljust nästan hela natten. Förra året badade vi till och med i sjön vid midnatt!"
+  },
+  {
+   "id": "frs4-po-3",
+   "part": "po",
+   "teil": "Exercice 3",
+   "title": "Exercice en interaction : chercher un logement",
+   "prep": 5,
+   "time": 3,
+   "instr": "Tredje delen är ett rollspel (3–4 minuter). Examinatorn spelar en roll. Du ska få information, ställa frågor och komma fram till en lösning. Var artig och använd vous.",
+   "task": "Vous faites vos études en France et vous cherchez une chambre. Vous téléphonez à une propriétaire qui a publié une annonce. Vous posez des questions sur la chambre (prix, charges, meubles, quartier, transports) et vous prenez rendez-vous pour la visiter. L'examinateur joue le rôle de la propriétaire.",
+   "phrases": [
+    "Bonjour madame, je vous appelle pour l'annonce …",
+    "La chambre est toujours libre ?",
+    "Le loyer, c'est combien ?",
+    "Les charges sont comprises ?",
+    "Est-ce qu'elle est meublée ?",
+    "Est-ce qu'il y a un bus près de chez vous ?",
+    "Est-ce que je pourrais la visiter … ?"
+   ],
+   "model": "— Bonjour madame, je vous appelle pour l'annonce de la chambre. Elle est toujours libre ?\n— Oui, tout à fait.\n— Très bien. Le loyer, c'est combien ?\n— Trois cent cinquante euros par mois.\n— Les charges sont comprises ?\n— Oui, l'eau et l'électricité sont comprises.\n— Et la chambre est meublée ?\n— Oui, il y a un lit, un bureau et une armoire.\n— Parfait. Est-ce qu'il y a un bus pour aller à l'université ?\n— Oui, l'arrêt est à deux minutes.\n— Super. Est-ce que je pourrais la visiter mercredi après-midi ?\n— Mercredi à quinze heures, ça vous va ?\n— Oui, c'est parfait. Merci beaucoup, madame, à mercredi !",
+   "modelSv": "– Hej, jag ringer om annonsen för rummet. Är det fortfarande ledigt?\n– Ja, absolut.\n– Mycket bra. Hur mycket är hyran?\n– Trehundrafemtio euro i månaden.\n– Ingår avgifterna?\n– Ja, vatten och el ingår.\n– Och är rummet möblerat?\n– Ja, det finns en säng, ett skrivbord och en garderob.\n– Perfekt. Finns det någon buss till universitetet?\n– Ja, hållplatsen ligger två minuter bort.\n– Toppen. Skulle jag kunna titta på det på onsdag eftermiddag?\n– Onsdag klockan femton, passar det?\n– Ja, det är perfekt. Tack så mycket, vi ses på onsdag!"
+  },
+  {
+   "id": "frs4-po-4",
+   "part": "po",
+   "teil": "Exercice 2",
+   "title": "Monologue suivi : vos projets",
+   "prep": 5,
+   "time": 3,
+   "instr": "Andra delen är en kort monolog (ungefär 2 minuter) om ett vardagsämne. Förbered stödord och tala sedan fritt.",
+   "task": "Parlez de vos projets pour l'année prochaine. Qu'est-ce que vous voudriez faire ? Pourquoi ? Qu'est-ce qui vous fait un peu peur ?",
+   "phrases": [
+    "L'année prochaine, je voudrais …",
+    "Je vais peut-être …",
+    "Si c'est possible, …",
+    "J'ai choisi … parce que …",
+    "Ce qui me fait un peu peur, c'est …",
+    "Mais je suis sûr(e) que …"
+   ],
+   "model": "L'année prochaine, je termine le lycée. Je voudrais faire une année de césure avant l'université. D'abord, je vais travailler quelques mois dans un supermarché pour économiser de l'argent. Ensuite, si c'est possible, je partirai en France comme jeune fille au pair, parce que je veux parler français couramment. Ce qui me fait un peu peur, c'est d'habiter loin de ma famille et de mes amis. Mais je suis sûre que ce sera une expérience formidable.",
+   "modelSv": "Nästa år slutar jag gymnasiet. Jag skulle vilja ta ett sabbatsår innan universitetet. Först ska jag jobba några månader i en mataffär för att spara pengar. Sedan, om det går, åker jag till Frankrike som au pair, eftersom jag vill tala flytande franska. Det som skrämmer mig lite är att bo långt från min familj och mina vänner. Men jag är säker på att det blir en fantastisk upplevelse."
+  }
+ ]
+}

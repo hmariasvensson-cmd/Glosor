@@ -9,6 +9,9 @@
     {"id": "futant", "name": "Futur antérieur", "sub": "Quand j'aurai fini le bac, je partirai.", "secs": ["q1", "q5"]},
     {"id": "relief", "name": "Framhävning: c'est … qui, ce qui, ce que", "sub": "C'est elle qui a raison. Ce qui compte, c'est …", "secs": ["q4", "qr"]},
     {"id": "conn", "name": "Bindeord i argumentation", "sub": "puisque, par conséquent, alors que, afin que, malgré", "secs": ["q3", "q8", "qr"]},
+    {"id": "condp", "name": "Conditionnel passé", "sub": "j'aurais dû, elle serait venue, selon la police, il aurait fui", "secs": ["q1", "q2"]},
+    {"id": "subjp", "name": "Subjonctif passé", "sub": "Je suis content que tu sois venu. Le meilleur film que j'aie vu.", "secs": ["q7", "q8"]},
+    {"id": "psimp", "name": "Passé simple: känna igen", "sub": "Il fut, il fit, il vint. Elle entra et regarda. Ils partirent.", "secs": ["q6", "q4"]},
     {"id": "err", "name": "Hitta felet", "sub": "En mening har ett fel. Vilket ord?"}
   ],
   "rules": {
@@ -59,6 +62,19 @@
     "conn-cons": "Följd",
     "conn-opp": "Motsats och medgivande",
     "conn-but": "Syfte",
-    "conn-prep": "Bindeord eller preposition"
+    "conn-prep": "Bindeord eller preposition",
+    "condp-form": "Conditionnel passé med avoir",
+    "condp-etre": "Conditionnel passé med être",
+    "condp-regret": "Ånger och förebråelse: j'aurais dû, tu aurais pu",
+    "condp-si": "Si + plus-que-parfait → conditionnel passé",
+    "condp-info": "Obekräftad uppgift: il aurait fui",
+    "subjp-form": "Subjonctif passé med avoir",
+    "subjp-etre": "Subjonctif passé med être",
+    "subjp-temps": "Subjonctif présent eller passé",
+    "subjp-sup": "Efter superlativ, le seul och personne qui",
+    "psimp-irr": "Passé simple: oregelbundna verb (fut, eut, fit, vit, vint)",
+    "psimp-er": "Passé simple: verb på -er (il parla, ils parlèrent)",
+    "psimp-ir": "Passé simple: verb på -ir och -re (il finit, il répondit)",
+    "psimp-pers": "Passé simple: singular eller plural"
   }
 }

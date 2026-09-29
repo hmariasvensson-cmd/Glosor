@@ -1,0 +1,563 @@
+[
+{
+"id": "nomverb-001",
+"topic": "nomverb",
+"rule": "nv-prep",
+"q": "[Nach] Abschluss des Studiums möchte sie in einem Orchester spielen.",
+"alt": [
+"Nachdem",
+"Seit",
+"Während dem"
+],
+"why": "Nominalstil: nachdem-bisatsen blir preposition + substantiv, nach + dativ. Nachdem är en subjunktion och kräver en bisats.",
+"sv": "Efter avslutade studier vill hon spela i en orkester."
+},
+{
+"id": "nomverb-002",
+"topic": "nomverb",
+"rule": "nv-prep",
+"q": "[Bei] Nichtbestehen der Prüfung kann man sie einmal wiederholen.",
+"alt": [
+"Wenn",
+"Falls",
+"Ob"
+],
+"why": "Villkorsbisatsen (Wenn man die Prüfung nicht besteht) blir bei + substantiv i nominalstil. Wenn, falls och ob kräver bisats.",
+"sv": "Om man inte klarar provet kan man göra om det en gång."
+},
+{
+"id": "nomverb-003",
+"topic": "nomverb",
+"rule": "nv-prep",
+"q": "[Trotz] intensiver Vorbereitung hat er die Eignungsprüfung nicht bestanden.",
+"alt": [
+"Obwohl",
+"Trotzdem",
+"Dennoch"
+],
+"why": "Medgivande i nominalstil: trotz + genitiv (här: intensiver Vorbereitung). Obwohl kräver bisats, trotzdem och dennoch är adverb.",
+"sv": "Trots intensiva förberedelser klarade han inte lämplighetsprovet."
+},
+{
+"id": "nomverb-004",
+"topic": "nomverb",
+"rule": "nv-nom",
+"q": "Die [Veröffentlichung] der Ergebnisse ist für März geplant.",
+"alt": [
+"Veröffentlichen",
+"Veröffentlicht",
+"Veröffentlichheit"
+],
+"why": "Av verbet veröffentlichen bildas substantivet med -ung: die Veröffentlichung. -heit används för adjektiv.",
+"sv": "Publiceringen av resultaten är planerad till mars."
+},
+{
+"id": "nomverb-005",
+"topic": "nomverb",
+"rule": "nv-fvg",
+"q": "Die Frage wurde im Seminar lange [zur] Diskussion gestellt.",
+"alt": [
+"in die",
+"auf die",
+"an der"
+],
+"why": "Fast uttryck (Funktionsverbgefüge): etwas zur Diskussion stellen = ta upp till diskussion.",
+"sv": "Frågan togs länge upp till diskussion på seminariet."
+},
+{
+"id": "nomverb-006",
+"topic": "nomverb",
+"rule": "nv-fvg",
+"q": "Die neue Studienordnung [tritt] im Wintersemester in Kraft.",
+"alt": [
+"kommt",
+"geht",
+"stellt"
+],
+"why": "in Kraft treten = träda i kraft. Verbet i uttrycket är fast.",
+"sv": "Den nya studieordningen träder i kraft på vinterterminen."
+},
+{
+"id": "nomverb-007",
+"topic": "nomverb",
+"rule": "nv-verb",
+"type": "rw",
+"q": "Nach der Auswertung der Daten wurde die Studie veröffentlicht.",
+"cue": "nachdem",
+"a": "Nachdem die Daten ausgewertet worden waren, wurde die Studie veröffentlicht.",
+"acc": [
+"Die Studie wurde veröffentlicht, nachdem die Daten ausgewertet worden waren."
+],
+"alt": [
+"Nachdem die Daten waren ausgewertet worden, wurde die Studie veröffentlicht.",
+"Nachdem die Daten ausgewertet worden waren, die Studie wurde veröffentlicht."
+],
+"why": "Nach + substantiv blir nachdem + bisats. Det som hände först står i pluskvamperfekt passiv (ausgewertet worden waren), med det finita verbet sist. Efter bisatsen kommer huvudsatsens verb direkt.",
+"sv": "Efter att uppgifterna hade analyserats publicerades studien."
+},
+{
+"id": "fut2-001",
+"topic": "fut2",
+"rule": "f2-zukunft",
+"q": "Bis Ende März werde ich die Hausarbeit [abgegeben haben].",
+"alt": [
+"abgeben haben",
+"abgegeben sein",
+"abgegeben werden"
+],
+"why": "Futur II: werden + particip II + haben/sein. Abgeben bildar perfekt med haben: werde … abgegeben haben.",
+"sv": "Till slutet av mars kommer jag att ha lämnat in hemuppsatsen."
+},
+{
+"id": "fut2-002",
+"topic": "fut2",
+"rule": "f2-bildung",
+"q": "Wenn du ankommst, wird das Konzert schon [begonnen haben].",
+"alt": [
+"begonnen sein",
+"beginnen haben",
+"begann haben"
+],
+"why": "Beginnen bildar perfekt med haben (hat begonnen), alltså Futur II: wird … begonnen haben.",
+"sv": "När du kommer fram har konserten redan börjat."
+},
+{
+"id": "fut2-003",
+"topic": "fut2",
+"rule": "f2-bildung",
+"q": "Bis zum Sommer wird sie nach Leipzig [umgezogen sein].",
+"alt": [
+"umgezogen haben",
+"umziehen sein",
+"umgezogen werden"
+],
+"why": "Umziehen (flytta) bildar perfekt med sein, alltså Futur II med sein: wird … umgezogen sein.",
+"sv": "Till sommaren kommer hon att ha flyttat till Leipzig."
+},
+{
+"id": "fut2-004",
+"topic": "fut2",
+"rule": "f2-vermutung",
+"q": "Er ist nicht gekommen. Er [wird] den Zug verpasst haben.",
+"alt": [
+"würde",
+"wurde",
+"worden"
+],
+"why": "Futur II uttrycker här en förmodan om något som redan hänt: Er wird … verpasst haben = han har nog missat tåget.",
+"sv": "Han har inte kommit. Han har nog missat tåget."
+},
+{
+"id": "fut2-005",
+"topic": "fut2",
+"rule": "f2-vermutung",
+"q": "Die Professorin antwortet nicht. Sie wird die Mail wohl noch nicht [gelesen] haben.",
+"alt": [
+"lesen",
+"las",
+"gelest"
+],
+"why": "Futur II som förmodan: wird + particip II (gelesen) + haben.",
+"sv": "Professorn svarar inte. Hon har väl inte läst mejlet än."
+},
+{
+"id": "nomverb-008",
+"topic": "nomverb",
+"rule": "nv-prep",
+"q": "[Wegen] fehlender Unterlagen wurde die Bewerbung abgelehnt.",
+"alt": [
+"Weil",
+"Da",
+"Denn"
+],
+"why": "Orsak i nominalstil: wegen + genitiv. Weil och da inleder bisatser, denn en huvudsats.",
+"sv": "På grund av saknade handlingar avslogs ansökan."
+},
+{
+"id": "nomverb-009",
+"topic": "nomverb",
+"rule": "nv-prep",
+"q": "[Zur] Vorbereitung auf die Prüfung empfiehlt sich ein Tutorium.",
+"alt": [
+"Um",
+"Damit",
+"Für die"
+],
+"why": "Syfte i nominalstil: zur (zu der) + substantiv. Um … zu och damit kräver verb.",
+"sv": "Som förberedelse inför provet rekommenderas en handledningsgrupp."
+},
+{
+"id": "nomverb-010",
+"topic": "nomverb",
+"rule": "nv-prep",
+"q": "[Während] der Vorlesungszeit ist die Bibliothek bis 22 Uhr geöffnet.",
+"alt": [
+"Solange",
+"Als",
+"Wenn"
+],
+"why": "Tid i nominalstil: während + genitiv (der Vorlesungszeit). Solange, als och wenn inleder bisatser.",
+"sv": "Under föreläsningsperioden är biblioteket öppet till 22."
+},
+{
+"id": "nomverb-011",
+"topic": "nomverb",
+"rule": "nv-prep",
+"q": "[Bei] Verspätung verfällt der Anspruch auf einen Platz.",
+"alt": [
+"Wenn",
+"Falls",
+"Sobald"
+],
+"why": "Villkor i nominalstil: bei + dativ. Wenn, falls och sobald kräver en bisats med verb.",
+"sv": "Vid försening förfaller rätten till en plats."
+},
+{
+"id": "nomverb-012",
+"topic": "nomverb",
+"rule": "nv-prep",
+"q": "[Vor] Beginn des Konzerts werden die Handys ausgeschaltet.",
+"alt": [
+"Bevor",
+"Ehe",
+"Vorher"
+],
+"why": "Tid i nominalstil: vor + dativ. Bevor och ehe är subjunktioner, vorher ett adverb.",
+"sv": "Före konsertens början stängs mobilerna av."
+},
+{
+"id": "nomverb-013",
+"topic": "nomverb",
+"rule": "nv-nom",
+"q": "Die [Zunahme] der Bewerberzahlen überrascht die Hochschule.",
+"alt": [
+"Zunehmung",
+"Zunehmen",
+"Zugenommene"
+],
+"why": "Av zunehmen bildas substantivet die Zunahme (stam + e), inte med -ung.",
+"sv": "Ökningen av antalet sökande överraskar högskolan."
+},
+{
+"id": "nomverb-014",
+"topic": "nomverb",
+"rule": "nv-nom",
+"q": "Nach der [Ankunft] des Dirigenten begann die Probe.",
+"alt": [
+"Ankommung",
+"Ankommen",
+"Ankunftung"
+],
+"why": "Substantivet till ankommen är oregelbundet: die Ankunft.",
+"sv": "Efter dirigentens ankomst började repetitionen."
+},
+{
+"id": "nomverb-015",
+"topic": "nomverb",
+"rule": "nv-nom",
+"q": "Die [Durchführung] der Studie dauerte zwei Jahre.",
+"alt": [
+"Durchführen",
+"Durchfuhr",
+"Durchführheit"
+],
+"why": "durchführen → die Durchführung (-ung, femininum).",
+"sv": "Genomförandet av studien tog två år."
+},
+{
+"id": "nomverb-016",
+"topic": "nomverb",
+"rule": "nv-nom",
+"q": "Die [Genauigkeit] der Messung ist entscheidend.",
+"alt": [
+"Genauheit",
+"Genauung",
+"Genauschaft"
+],
+"why": "Adjektiv genau får -igkeit: die Genauigkeit.",
+"sv": "Mätningens noggrannhet är avgörande."
+},
+{
+"id": "nomverb-017",
+"topic": "nomverb",
+"rule": "nv-fvg",
+"q": "Die Hochschule hat die Entscheidung erst im Mai [getroffen].",
+"alt": [
+"gemacht",
+"gegeben",
+"gestellt"
+],
+"why": "eine Entscheidung treffen = fatta ett beslut. Verbet är fast.",
+"sv": "Högskolan fattade beslutet först i maj."
+},
+{
+"id": "nomverb-018",
+"topic": "nomverb",
+"rule": "nv-fvg",
+"q": "Die Ergebnisse wurden in einer Fachzeitschrift zur [Verfügung] gestellt.",
+"alt": [
+"Verfassung",
+"Verteilung",
+"Vorstellung"
+],
+"why": "zur Verfügung stellen = ställa till förfogande.",
+"sv": "Resultaten ställdes till förfogande i en facktidskrift."
+},
+{
+"id": "nomverb-019",
+"topic": "nomverb",
+"rule": "nv-fvg",
+"q": "Die neue Methode hat in vielen Orchestern [Anwendung] gefunden.",
+"alt": [
+"Anwendungen",
+"Anwenden",
+"Verwendung gefunden"
+],
+"why": "Anwendung finden = användas (fast uttryck, singular utan artikel).",
+"sv": "Den nya metoden har börjat användas i många orkestrar."
+},
+{
+"id": "nomverb-020",
+"topic": "nomverb",
+"rule": "nv-fvg",
+"q": "Der Vorschlag [stieß] bei den Studierenden auf Kritik.",
+"alt": [
+"fiel",
+"kam",
+"trat"
+],
+"why": "auf Kritik stoßen = möta kritik.",
+"sv": "Förslaget mötte kritik bland studenterna."
+},
+{
+"id": "nomverb-021",
+"topic": "nomverb",
+"rule": "nv-verb",
+"type": "rw",
+"q": "Wegen der Erkrankung der Solistin wurde das Konzert abgesagt.",
+"cue": "weil",
+"a": "Weil die Solistin erkrankt war, wurde das Konzert abgesagt.",
+"acc": [
+"Das Konzert wurde abgesagt, weil die Solistin erkrankt war."
+],
+"alt": [
+"Weil die Solistin war erkrankt, wurde das Konzert abgesagt.",
+"Weil die Solistin erkrankt war, das Konzert wurde abgesagt."
+],
+"why": "Wegen + substantiv blir weil + bisats med verbet sist. Efter bisatsen följer huvudsatsens verb.",
+"sv": "Eftersom solisten hade blivit sjuk ställdes konserten in."
+},
+{
+"id": "nomverb-022",
+"topic": "nomverb",
+"rule": "nv-verb",
+"type": "rw",
+"q": "Bei rechtzeitiger Anmeldung erhalten Sie einen Rabatt.",
+"cue": "wenn",
+"a": "Wenn Sie sich rechtzeitig anmelden, erhalten Sie einen Rabatt.",
+"acc": [
+"Sie erhalten einen Rabatt, wenn Sie sich rechtzeitig anmelden."
+],
+"alt": [
+"Wenn Sie sich anmelden rechtzeitig, erhalten Sie einen Rabatt.",
+"Wenn Sie sich rechtzeitig anmelden, Sie erhalten einen Rabatt."
+],
+"why": "Bei + substantiv blir wenn + bisats. Anmeldung → sich anmelden, verbet sist.",
+"sv": "Om du anmäler dig i tid får du rabatt."
+},
+{
+"id": "fut2-006",
+"topic": "fut2",
+"rule": "f2-zukunft",
+"q": "Bis zum Konzert [werden] wir das Stück mindestens zwanzigmal geprobt haben.",
+"alt": [
+"würden",
+"wurden",
+"haben"
+],
+"why": "Futur II: werden (böjt: wir werden) + particip + haben.",
+"sv": "Till konserten kommer vi att ha repeterat stycket minst tjugo gånger."
+},
+{
+"id": "fut2-007",
+"topic": "fut2",
+"rule": "f2-zukunft",
+"q": "In zwei Jahren wird sie ihr Studium [abgeschlossen] haben.",
+"alt": [
+"abschließen",
+"abschloss",
+"abgeschließt"
+],
+"why": "Particip II av abschließen: abgeschlossen.",
+"sv": "Om två år kommer hon att ha avslutat sina studier."
+},
+{
+"id": "fut2-008",
+"topic": "fut2",
+"rule": "f2-zukunft",
+"q": "Wenn du zurückkommst, [werde] ich die Hausarbeit fertig geschrieben haben.",
+"alt": [
+"wurde",
+"würde",
+"bin"
+],
+"why": "Futur II med ich: werde … geschrieben haben.",
+"sv": "När du kommer tillbaka kommer jag att ha skrivit klart hemuppsatsen."
+},
+{
+"id": "fut2-009",
+"topic": "fut2",
+"rule": "f2-bildung",
+"q": "Bis Mitternacht werden alle Gäste [gegangen sein].",
+"alt": [
+"gegangen haben",
+"gehen sein",
+"gegangen werden"
+],
+"why": "gehen bildar perfekt med sein: werden … gegangen sein.",
+"sv": "Till midnatt kommer alla gäster att ha gått."
+},
+{
+"id": "fut2-010",
+"topic": "fut2",
+"rule": "f2-bildung",
+"q": "Bis zum Frühjahr wird der Preis stark [gestiegen sein].",
+"alt": [
+"gestiegen haben",
+"steigen sein",
+"gestiegen werden"
+],
+"why": "steigen bildar perfekt med sein: wird … gestiegen sein.",
+"sv": "Till våren kommer priset att ha stigit kraftigt."
+},
+{
+"id": "fut2-011",
+"topic": "fut2",
+"rule": "f2-bildung",
+"q": "Bis Freitag werden die Ergebnisse [veröffentlicht worden sein].",
+"alt": [
+"veröffentlicht haben",
+"veröffentlicht geworden sein",
+"veröffentlichen worden sein"
+],
+"why": "Futur II i passiv: werden + particip + worden sein.",
+"sv": "Till fredag kommer resultaten att ha publicerats."
+},
+{
+"id": "fut2-012",
+"topic": "fut2",
+"rule": "f2-bildung",
+"q": "Nächste Woche werde ich den Vertrag [unterschrieben haben].",
+"alt": [
+"unterschreiben haben",
+"geunterschrieben haben",
+"unterschrieben sein"
+],
+"why": "Oskiljbart prefix: unterschrieben utan ge-, perfekt med haben.",
+"sv": "Nästa vecka kommer jag att ha skrivit under avtalet."
+},
+{
+"id": "fut2-013",
+"topic": "fut2",
+"rule": "f2-vermutung",
+"q": "Das Licht ist aus. Sie [werden] schon ins Bett gegangen sein.",
+"alt": [
+"wurden",
+"würden",
+"sind"
+],
+"why": "Futur II som förmodan om det förflutna: sie werden … gegangen sein = de har nog gått och lagt sig.",
+"sv": "Ljuset är släckt. De har nog redan gått och lagt sig."
+},
+{
+"id": "fut2-014",
+"topic": "fut2",
+"rule": "f2-vermutung",
+"q": "Er hat die Prüfung bestanden. Er wird wohl viel [geübt] haben.",
+"alt": [
+"üben",
+"geübte",
+"übte"
+],
+"why": "Förmodan: wird + particip II + haben.",
+"sv": "Han klarade provet. Han har väl övat mycket."
+},
+{
+"id": "fut2-015",
+"topic": "fut2",
+"rule": "f2-vermutung",
+"q": "Die Mail ist nicht angekommen. Ich werde mich bei der Adresse [vertippt] haben.",
+"alt": [
+"vertippen",
+"vertippte",
+"gevertippt"
+],
+"why": "sich vertippen (skriva fel) – oskiljbart prefix, particip vertippt.",
+"sv": "Mejlet har inte kommit fram. Jag har nog skrivit fel adress."
+},
+{
+"id": "fut2-016",
+"topic": "fut2",
+"rule": "f2-vermutung",
+"q": "Die Straßen sind nass. Es [wird] in der Nacht geregnet haben.",
+"alt": [
+"wurde",
+"hat",
+"würde"
+],
+"why": "Förmodan om något som har hänt: es wird … geregnet haben.",
+"sv": "Gatorna är våta. Det har nog regnat i natt."
+},
+{
+"id": "fut2-017",
+"topic": "fut2",
+"rule": "f2-vermutung",
+"q": "Sie ist nicht zur Probe gekommen. Sie wird krank [gewesen] sein.",
+"alt": [
+"sein",
+"war",
+"geworden"
+],
+"why": "Futur II av sein: wird … gewesen sein.",
+"sv": "Hon kom inte till repetitionen. Hon var nog sjuk."
+},
+{
+"id": "fut2-018",
+"topic": "fut2",
+"rule": "f2-zukunft",
+"q": "Wenn das Semester beginnt, [wird] die Renovierung abgeschlossen sein.",
+"alt": [
+"würde",
+"wurde",
+"ist geworden"
+],
+"why": "Här Futur II med Zustandspassiv: wird … abgeschlossen sein (framtida tillstånd).",
+"sv": "När terminen börjar kommer renoveringen att vara avslutad."
+},
+{
+"id": "fut2-019",
+"topic": "fut2",
+"rule": "f2-vermutung",
+"q": "Der Brief trägt kein Datum, aber er wird um 1850 [entstanden] sein.",
+"alt": [
+"entsteht",
+"entstand",
+"entstehen"
+],
+"why": "Förmodan om det förflutna: wird … entstanden sein (entstehen med sein).",
+"sv": "Brevet har inget datum, men det kom nog till kring 1850."
+},
+{
+"id": "fut2-020",
+"topic": "fut2",
+"rule": "f2-zukunft",
+"q": "Bis zur Premiere werden die Sänger den Text auswendig [gelernt] haben.",
+"alt": [
+"lernen",
+"lernten",
+"gelernen"
+],
+"why": "Futur II: werden + gelernt + haben.",
+"sv": "Till premiären kommer sångarna att ha lärt sig texten utantill."
+}
+]

@@ -1,0 +1,602 @@
+// Ordlista för Tyska 1 (A1, nybörjare, steg 1). Rader som börjar med // är kommentarer.
+// Kapitlen följer docs/nivaer-tyska.md (Tyska 1) med teman för steg 1. Ord som redan finns i Tyska 4, 5 och 6
+// (languages/de4, de, de6) var först bortvalda, men de viktigaste A1-orden (der Käse, die Wohnung, der Bahnhof …) är
+// tillagda sist i varje kapitel: en nybörjarkurs måste ha grundorden, och eleven repeterar dem i Tyska 4.
+// Orden är valda efter frekvens (DeReWo, IDS Mannheim, CC BY-NC, bara använd för urvalet) och tema.
+//
+// Format, en rad per ord (se languages/de/SPEC-ordlista.md):
+//   tyska|svenska|genus|exempel på tyska|exempel på svenska|kommentar|ordagrant (valfritt, för fraser)
+// Ordets tyska form och avsnittets id används som nycklar för sparade framsteg, ändra dem inte i efterhand.
+#e1|Kap 1 · Hallo!
+hallo|hej||[Hallo], ich heiße Anna.|Hej, jag heter Anna.|Vanlig och lite vardaglig hälsning. Jämför engelskans <b>hello</b>.
+guten Tag|god dag, hej||[Guten Tag], Herr Müller!|God dag, herr Müller!|Artig hälsning mitt på dagen, särskilt till vuxna man säger Sie till.|<b>guten</b> god · <b>Tag</b> dag → "god dag"
+guten Morgen|god morgon||[Guten Morgen], Mama!|God morgon, mamma!|Säg det på förmiddagen. Jämför engelskans <b>good morning</b>.|<b>guten</b> god · <b>Morgen</b> morgon → "god morgon"
+guten Abend|god kväll||[Guten Abend], wie geht es Ihnen?|God kväll, hur mår ni?|Säg det på kvällen när man träffas, inte när man går och lägger sig.|<b>guten</b> god · <b>Abend</b> kväll → "god kväll"
+gute Nacht|god natt||[Gute Nacht], bis morgen!|God natt, vi ses i morgon!|Säg det när någon ska gå och lägga sig. Jämför engelskans <b>good night</b>.|<b>gute</b> god · <b>Nacht</b> natt → "god natt"
+tschüss|hej då||[Tschüss], bis morgen!|Hej då, vi ses i morgon!|Vardagligt avsked till vänner och familj. Stavas också tschüs.
+auf Wiedersehen|adjö, på återseende||[Auf Wiedersehen], Frau Schmidt!|Adjö, fru Schmidt!|Artigt avsked, till exempel till en lärare eller i en affär.|<b>auf</b> på · <b>Wiedersehen</b> återseende → "på återseende"
+danke|tack||[Danke], das ist sehr nett!|Tack, det är väldigt snällt!|Danke schön betyder tack så mycket. Jämför engelskans <b>thank</b>.
+ja|ja||[Ja], ich komme aus Schweden.|Ja, jag kommer från Sverige.|Uttalas som svenskans ja.
+nein|nej||[Nein], ich wohne nicht in Berlin.|Nej, jag bor inte i Berlin.|Uttalas med ai-ljud: "najn".
+heißen|heta||Ich [heiße] Lukas.|Jag heter Lukas.|Regelbundet: ich heiße, du heißt, er heißt. Jämför svenskans <b>heta</b>.
+sein|vara||Ich [bin] sechzehn Jahre alt.|Jag är sexton år gammal.|Oregelbundet: ich bin, du bist, er ist, wir sind, ihr seid, sie sind.
+kommen|komma||Ich [komme] aus Schweden.|Jag kommer från Sverige.|Regelbundet: ich komme, du kommst, er kommt. Jämför engelskans <b>come</b>.
+wohnen|bo||Ich [wohne] in Stockholm.|Jag bor i Stockholm.|Regelbundet: ich wohne, du wohnst, er wohnt.
+sprechen|tala, prata||Ich [spreche] Schwedisch und Englisch.|Jag talar svenska och engelska.|Starkt verb: du sprichst, er spricht. Jämför engelskans <b>speak</b>.
+der Name (-n)|namn|m|Mein [Name] ist Emma.|Mitt namn är Emma.|Plural: die Namen. Jämför engelskans <b>name</b>.
+der Vorname (-n)|förnamn|m|Mein [Vorname] ist Elias.|Mitt förnamn är Elias.|Plural: die Vornamen. <b>vor</b> betyder före, alltså namnet som står före.
+der Nachname (-n)|efternamn|m|Wie ist dein [Nachname]?|Vad är ditt efternamn?|Plural: die Nachnamen. <b>nach</b> betyder efter.
+das Land (Länder)|land|n|Deutschland ist ein [Land] in Europa.|Tyskland är ett land i Europa.|Plural med omljud: die Länder. Jämför svenskans <b>land</b>.
+Deutschland|Tyskland||Ich komme aus [Deutschland].|Jag kommer från Tyskland.|Används utan artikel: aus Deutschland, in Deutschland.
+Österreich|Österrike||Tom wohnt in [Österreich].|Tom bor i Österrike.|Används utan artikel. Huvudstaden är Wien.
+die Schweiz|Schweiz|f|Lara kommt aus der [Schweiz].|Lara kommer från Schweiz.|Används alltid med artikel: in der Schweiz, aus der Schweiz.
+Schweden|Sverige||Ich wohne in [Schweden].|Jag bor i Sverige.|Används utan artikel. En svensk heter ein Schwede eller eine Schwedin.
+Deutsch|tyska (språket)|n|Ich lerne [Deutsch].|Jag lär mig tyska.|Språket heter das Deutsch men används oftast utan artikel och har ingen plural. Stor bokstav som substantiv.
+Englisch|engelska (språket)|n|Sprichst du [Englisch]?|Pratar du engelska?|Språk skrivs med stor bokstav på tyska: das Englisch, ingen plural.
+Schwedisch|svenska (språket)|n|Mein Freund spricht auch [Schwedisch].|Min kompis pratar också svenska.|Språket är neutrum (das Schwedisch), ingen plural.
+der Freund (-e)|vän, kompis; pojkvän|m|Das ist mein [Freund] Max.|Det här är min kompis Max.|Plural: die Freunde. Jämför svenskans <b>frände</b> och engelskans <b>friend</b>.
+die Freundin (-nen)|väninna, kompis (flicka); flickvän|f|Meine [Freundin] heißt Mia.|Min kompis heter Mia.|Plural: die Freundinnen. Ändelsen -in gör ordet feminint.
+der Herr (-en)|herr, herre|m|Das ist [Herr] Schmidt.|Det här är herr Schmidt.|Plural: die Herren. Används före efternamn: Herr Müller.
+die Person (-en)|person|f|Wer ist die [Person] auf dem Foto?|Vem är personen på fotot?|Plural: die Personen. Alltid feminint, även om det är en man.
+wie|hur||[Wie] heißt du?|Vad heter du?|Wie heißt du? är svenskans vad heter du, men wie betyder hur.
+woher|varifrån||[Woher] kommst du?|Var kommer du ifrån?|Sammansatt av <b>wo</b> (var) och <b>her</b> (hit).
+wo|var||[Wo] wohnst du?|Var bor du?|Obs: wo betyder var, inte vem. Vem heter wer.
+was|vad||[Was] ist das?|Vad är det?|Jämför engelskans <b>what</b>.
+wer|vem||[Wer] ist das?|Vem är det?|Obs: wer betyder vem, inte var. Var heter wo.
+das Jahr (-e)|år|n|Ich bin fünfzehn [Jahre] alt.|Jag är femton år gammal.|Plural: die Jahre. Jämför svenskans <b>år</b> och engelskans <b>year</b>.
+null|noll||Meine Nummer beginnt mit [null].|Mitt nummer börjar med noll.|Jämför svenskans <b>noll</b>.
+zwei|två||Ich habe [zwei] Schwestern.|Jag har två systrar.|Uttalas med ts-ljud i början: "tsvaj". Jämför engelskans <b>two</b>.
+drei|tre||Ich habe [drei] Brüder.|Jag har tre bröder.|Jämför svenskans <b>tre</b> och engelskans <b>three</b>.
+vier|fyra||Ich habe [vier] Bücher.|Jag har fyra böcker.|Uttalas "fir". Jämför svenskans <b>fyra</b>.
+fünf|fem||Das Kind ist [fünf] Jahre alt.|Barnet är fem år gammalt.|Jämför svenskans <b>fem</b> och engelskans <b>five</b>.
+sechs|sex||Wir haben [sechs] Stunden Schule.|Vi har sex timmar skola.|Uttalas "sex". Jämför svenskans <b>sex</b>.
+sieben|sju||Die Woche hat [sieben] Tage.|Veckan har sju dagar.|Jämför engelskans <b>seven</b>.
+acht|åtta||Der Test beginnt um [acht].|Provet börjar klockan åtta.|Jämför svenskans <b>åtta</b> och engelskans <b>eight</b>.
+neun|nio||Meine Schwester ist [neun].|Min syster är nio.|Uttalas med oj-ljud: "nojn". Jämför engelskans <b>nine</b>.
+zehn|tio||Ich habe [zehn] Stifte.|Jag har tio pennor.|Uttalas "tsen". Jämför svenskans <b>tio</b> och engelskans <b>ten</b>.
+elf|elva||Mein Bruder ist [elf] Jahre alt.|Min bror är elva år gammal.|Jämför svenskans <b>elva</b> och engelskans <b>eleven</b>.
+zwölf|tolv||Das Jahr hat [zwölf] Monate.|Året har tolv månader.|Jämför svenskans <b>tolv</b> och engelskans <b>twelve</b>.
+sechzehn|sexton||Ich bin [sechzehn] Jahre alt.|Jag är sexton år gammal.|Obs stavningen: sechzehn, utan s efter sech-.
+siebzehn|sjutton||Meine Cousine ist [siebzehn].|Min kusin är sjutton.|Obs stavningen: siebzehn, utan -en i mitten.
+zwanzig|tjugo||Wir sind [zwanzig] Personen im Kurs.|Vi är tjugo personer i kursen.|Tiotalen slutar på -zig: zwanzig, dreißig. Jämför engelskans <b>twenty</b>.
+hundert|hundra||Das Buch hat [hundert] Seiten.|Boken har hundra sidor.|Jämför svenskans <b>hundra</b> och engelskans <b>hundred</b>.
+die Zahl (-en)|tal, siffra|f|Sieben ist meine [Zahl].|Sju är mitt tal.|Plural: die Zahlen. Jämför svenskans <b>tal</b>.
+die Nummer (-n)|nummer|f|Wie ist deine [Nummer]?|Vad har du för nummer?|Plural: die Nummern. Jämför svenskans <b>nummer</b>.
+die Adresse (-n)|adress|f|Wie ist deine [Adresse]?|Vad är din adress?|Plural: die Adressen. Stavas med dubbel-d och dubbel-s.
+die E-Mail (-s)|mejl, e-post|f|Ich schreibe dir eine [E-Mail].|Jag skriver ett mejl till dig.|Plural: die E-Mails. Lånat från engelskans <b>e-mail</b>.
+buchstabieren|stava||Kannst du das bitte [buchstabieren]?|Kan du stava det, tack?|Regelbundet: ich buchstabiere, du buchstabierst, er buchstabiert. Kommer av der Buchstabe (bokstav).
+gut|bra||Mein Deutsch ist [gut].|Min tyska är bra.|Jämför svenskans <b>god</b> och engelskans <b>good</b>.
+sehr|mycket, väldigt||Das ist [sehr] gut!|Det är mycket bra!|Används före adjektiv: sehr nett (väldigt snäll).
+auch|också||Ich komme [auch] aus Schweden.|Jag kommer också från Sverige.|Uttalas "auch" med ach-ljud i slutet.
+aber|men||Ich spreche Englisch, [aber] nicht Deutsch.|Jag pratar engelska, men inte tyska.|Visar en motsats, precis som svenskans men. Aber påverkar inte ordföljden: aber ich komme.
+nicht|inte||Ich wohne [nicht] in Berlin.|Jag bor inte i Berlin.|Jämför engelskans <b>not</b>.
+Entschuldigung|ursäkta, förlåt||[Entschuldigung], wo ist die Post?|Ursäkta, var ligger posten?|Används både för att få någons uppmärksamhet och för att be om förlåtelse. Hör till verbet sich entschuldigen (be om ursäkt).
+bitte|snälla, tack (när man ber om något); varsågod||Ein Wasser, [bitte].|Ett vatten, tack.|Bitte används när man ber om något och när man ger något: Bitte schön! (varsågod). Jämför engelskans please.
+eins|ett (räkneordet)||Eins, zwei, drei – los! Ich habe nur [eins].|Ett, två, tre – kör! Jag har bara en.|När man räknar säger man eins. Framför ett substantiv heter det ein/eine: ein Hund, eine Katze.
+#e2|Kap 2 · Familie und Freunde
+die Familie (-n)|familj|f|Meine [Familie] ist groß.|Min familj är stor.|Plural: die Familien. Uttalas "fa-MI-li-e".
+die Mutter (Mütter)|mamma, mor|f|Meine [Mutter] heißt Karin.|Min mamma heter Karin.|Plural med omljud: die Mütter. Jämför svenskans <b>moder</b> och engelskans <b>mother</b>.
+der Vater (Väter)|pappa, far|m|Mein [Vater] kommt aus Deutschland.|Min pappa kommer från Tyskland.|Plural med omljud: die Väter. Jämför svenskans <b>fader</b> och engelskans <b>father</b>.
+die Eltern|föräldrar|pl|Meine [Eltern] wohnen in Stockholm.|Mina föräldrar bor i Stockholm.|Finns bara i plural. Jämför svenskans <b>äldre</b>.
+der Bruder (Brüder)|bror|m|Das ist mein [Bruder] Jonas.|Det här är min bror Jonas.|Plural med omljud: die Brüder. Jämför svenskans <b>broder</b> och engelskans <b>brother</b>.
+die Schwester (-n)|syster|f|Meine [Schwester] ist zwölf Jahre alt.|Min syster är tolv år gammal.|Plural: die Schwestern. Jämför svenskans <b>syster</b> och engelskans <b>sister</b>.
+das Kind (-er)|barn|n|Sie haben drei [Kinder].|De har tre barn.|Plural: die Kinder. Finns i engelskans lånord <b>kindergarten</b> (barnträdgård, förskola).
+der Sohn (Söhne)|son|m|Das ist ihr [Sohn] Paul.|Det här är hennes son Paul.|Plural med omljud: die Söhne. Jämför svenskans <b>son</b> och engelskans <b>son</b>.
+die Tochter (Töchter)|dotter|f|Ihre [Tochter] heißt Lena.|Hennes dotter heter Lena.|Plural med omljud: die Töchter. Jämför svenskans <b>dotter</b> och engelskans <b>daughter</b>.
+die Oma (-s)|farmor, mormor|f|Meine [Oma] ist sehr lustig.|Min mormor är väldigt rolig.|Plural: die Omas. Vardagligt ord för die Großmutter.
+der Opa (-s)|farfar, morfar|m|Mein [Opa] ist achtzig Jahre alt.|Min morfar är åttio år gammal.|Plural: die Opas. Vardagligt ord för der Großvater.
+die Großeltern|mor- och farföräldrar|pl|Meine [Großeltern] wohnen in Österreich.|Mina mor- och farföräldrar bor i Österrike.|Finns bara i plural. Jämför engelskans <b>grandparents</b>.
+der Onkel (-)|farbror, morbror|m|Mein [Onkel] hat einen Hund.|Min morbror har en hund.|Plural: die Onkel. Samma ord för farbror och morbror, jämför engelskans <b>uncle</b>.
+die Tante (-n)|faster, moster|f|Meine [Tante] wohnt in Berlin.|Min moster bor i Berlin.|Plural: die Tanten. Samma ord för faster och moster, jämför svenskans <b>tant</b>.
+der Cousin (-s)|kusin (pojke)|m|Mein [Cousin] ist sechzehn.|Min kusin är sexton.|Plural: die Cousins. Franskt lånord, uttalas "kuzäng".
+die Cousine (-n)|kusin (flicka)|f|Meine [Cousine] spricht Englisch.|Min kusin pratar engelska.|Plural: die Cousinen. Uttalas "ku-SI-ne".
+der Mann (Männer)|man; make|m|Der [Mann] ist mein Vater.|Mannen är min pappa.|Plural med omljud: die Männer. Mein Mann betyder min man, min make.
+die Frau (-en)|kvinna; fru|f|Die [Frau] heißt Anna.|Kvinnan heter Anna.|Plural: die Frauen. Används också som fru före efternamn: Frau Schmidt.
+der Junge (-n)|pojke|m|Der [Junge] ist mein Bruder.|Pojken är min bror.|Plural: die Jungen. Jämför adjektivet jung (ung).
+das Mädchen (-)|flicka, tjej|n|Das [Mädchen] heißt Sara.|Flickan heter Sara.|Plural: die Mädchen. Neutrum eftersom ord på -chen alltid är das.
+der Mensch (-en)|människa|m|Er ist ein netter [Mensch].|Han är en trevlig människa.|Plural: die Menschen. Jämför svenskans <b>människa</b>.
+die Leute|folk, människor|pl|Die [Leute] hier sind sehr nett.|Folk här är väldigt trevliga.|Finns bara i plural och tar verbet i plural: die Leute sind.
+das Baby (-s)|bebis|n|Das [Baby] ist klein und süß.|Bebisen är liten och söt.|Plural: die Babys. Lånat från engelskans <b>baby</b>.
+der Hund (-e)|hund|m|Wir haben einen [Hund].|Vi har en hund.|Plural: die Hunde. Jämför svenskans <b>hund</b> och engelskans <b>hound</b>.
+die Katze (-n)|katt|f|Meine [Katze] ist schwarz.|Min katt är svart.|Plural: die Katzen. Jämför svenskans <b>katt</b> och engelskans <b>cat</b>.
+das Tier (-e)|djur|n|Hast du ein [Tier]?|Har du något djur?|Plural: die Tiere. Jämför svenskans <b>djur</b>.
+der Vogel (Vögel)|fågel|m|Der [Vogel] ist gelb.|Fågeln är gul.|Plural med omljud: die Vögel. Jämför svenskans <b>fågel</b>.
+die Maus (Mäuse)|mus|f|Die Katze sieht eine [Maus].|Katten ser en mus.|Plural med omljud: die Mäuse. Jämför svenskans <b>mus</b> och engelskans <b>mouse</b>.
+haben|ha||Ich [habe] eine Schwester.|Jag har en syster.|Oregelbundet: ich habe, du hast, er hat, wir haben, ihr habt, sie haben.
+lieben|älska||Ich [liebe] meine Familie.|Jag älskar min familj.|Regelbundet: ich liebe, du liebst, er liebt. Jämför engelskans <b>love</b>.
+kennen|känna (en person), känna till||[Kennst] du meinen Bruder?|Känner du min bror?|Regelbundet: ich kenne, du kennst, er kennt. Jämför svenskans <b>känna</b>.
+leben|leva, bo||Meine Oma [lebt] in Österreich.|Min mormor bor i Österrike.|Regelbundet: ich lebe, du lebst, er lebt. Jämför svenskans <b>leva</b>.
+groß|stor; lång||Mein Vater ist sehr [groß].|Min pappa är väldigt lång.|Om personer betyder groß lång. Jämför engelskans <b>great</b>.
+klein|liten; kort||Meine Schwester ist noch [klein].|Min syster är fortfarande liten.|Om personer kan klein också betyda kort. Jämför svenskans <b>klen</b>.
+jung|ung||Meine Tante ist noch [jung].|Min moster är fortfarande ung.|Jämför svenskans <b>ung</b> och engelskans <b>young</b>.
+alt|gammal||Wie [alt] bist du?|Hur gammal är du?|Wie alt bist du? betyder hur gammal är du. Jämför engelskans <b>old</b>.
+nett|snäll, trevlig||Meine Lehrerin ist sehr [nett].|Min lärare är väldigt snäll.|Betyder inte nätt. Används mycket om personer.
+lustig|rolig||Mein Opa ist sehr [lustig].|Min morfar är väldigt rolig.|Betyder rolig, skojig. Jämför svenskans <b>lustig</b>.
+freundlich|vänlig||Die Leute sind sehr [freundlich].|Folket är väldigt vänligt.|Kommer av der Freund (vän). Jämför engelskans <b>friendly</b>.
+lang|lång||Sie hat [lange] Haare.|Hon har långt hår.|Om saker, inte om personer (en lång person är groß). Jämför engelskans <b>long</b>.
+kurz|kort||Er hat [kurze] Haare.|Han har kort hår.|Om saker och tid. Jämför svenskans <b>kort</b>.
+das Haar (-e)|hår|n|Sie hat blonde [Haare].|Hon har blont hår.|Plural: die Haare. Tyskan använder oftast plural om håret på huvudet.
+blond|blond, ljushårig||Meine Mutter ist [blond].|Min mamma är blond.|Samma som svenskans <b>blond</b>.
+braun|brun||Mein Hund ist [braun].|Min hund är brun.|Jämför svenskans <b>brun</b> och engelskans <b>brown</b>.
+blau|blå||Der Himmel ist [blau].|Himlen är blå.|Jämför svenskans <b>blå</b> och engelskans <b>blue</b>.
+grün|grön||Mein Rucksack ist [grün].|Min ryggsäck är grön.|Jämför svenskans <b>grön</b> och engelskans <b>green</b>.
+rot|röd||Die Tasche ist [rot].|Väskan är röd.|Jämför svenskans <b>röd</b> och engelskans <b>red</b>.
+schwarz|svart||Die Katze ist [schwarz].|Katten är svart.|Jämför svenskans <b>svart</b>.
+weiß|vit||Der Hund ist [weiß].|Hunden är vit.|Stavas med ß. Jämför svenskans <b>vit</b> och engelskans <b>white</b>.
+grau|grå||Mein Opa hat [graue] Haare.|Min morfar har grått hår.|Jämför svenskans <b>grå</b> och engelskans <b>grey</b>.
+gelb|gul||Der Vogel ist [gelb].|Fågeln är gul.|Jämför svenskans <b>gul</b> och engelskans <b>yellow</b>.
+bunt|färgglad, brokig||Das Bild ist sehr [bunt].|Bilden är väldigt färgglad.|Betyder att något har många färger.
+die Farbe (-n)|färg|f|Was ist deine [Farbe]?|Vilken är din färg?|Plural: die Farben. Jämför svenskans <b>färg</b>.
+das Foto (-s)|foto, bild|n|Das ist ein [Foto] von meiner Familie.|Det här är ett foto av min familj.|Plural: die Fotos. Samma som svenskans <b>foto</b>.
+zusammen|tillsammans||Wir wohnen [zusammen].|Vi bor tillsammans.|Jämför svenskans <b>samman</b>.
+verheiratet|gift||Meine Eltern sind [verheiratet].|Mina föräldrar är gifta.|Används med sein: ich bin verheiratet (jag är gift).
+allein|ensam, själv||Mein Onkel wohnt [allein].|Min morbror bor ensam.|Jämför engelskans <b>alone</b>.
+glücklich|lycklig||Meine Oma ist sehr [glücklich].|Min mormor är väldigt lycklig.|Kommer av das Glück (lycka). Jämför svenskans <b>lycklig</b>.
+lachen|skratta||Wir [lachen] oft zusammen.|Vi skrattar ofta tillsammans.|Regelbundet: ich lache, du lachst, er lacht. Jämför engelskans <b>laugh</b>.
+die Liebe|kärlek|f|[Liebe] ist wichtig.|Kärlek är viktigt.|Ingen plural. Hör ihop med lieben (älska), jämför engelskans <b>love</b>.
+der Partner (-)|partner, sambo (man)|m|Das ist mein [Partner] Tom.|Det här är min partner Tom.|Plural: die Partner. Samma som svenskans <b>partner</b>.
+die Partnerin (-nen)|partner, sambo (kvinna)|f|Meine [Partnerin] heißt Julia.|Min partner heter Julia.|Plural: die Partnerinnen. Ändelsen -in gör ordet feminint.
+die Geschwister|syskon|pl|Hast du [Geschwister]?|Har du syskon?|Bara plural. Hör ihop med die Schwester (syster).
+das Auge (-n)|öga|n|Sie hat blaue [Augen].|Hon har blå ögon.|Plural: die Augen. Jämför svenskans <b>öga</b> och engelskans <b>eye</b>.
+der Geburtstag (-e)|födelsedag|m|Heute ist mein [Geburtstag]!|I dag är det min födelsedag!|Sammansatt av <b>Geburt</b> (födelse) och <b>Tag</b> (dag). Grattis: Herzlichen Glückwunsch zum Geburtstag!
+der Nachbar (-n)|granne|m|Unser [Nachbar] hat einen Hund.|Vår granne har en hund.|Plural: die Nachbarn. En kvinnlig granne: die Nachbarin. Jämför svenskans <b>granne</b> och engelskans <b>neighbour</b>.
+#e3|Kap 3 · Schule und Unterricht
+die Schule (-n)|skola|f|Meine [Schule] ist groß.|Min skola är stor.|Plural: die Schulen. Jämför svenskans <b>skola</b> och engelskans <b>school</b>.
+die Lehrerin (-nen)|lärare (kvinna), lärarinna|f|Meine [Lehrerin] heißt Frau Braun.|Min lärare heter fru Braun.|Plural: die Lehrerinnen. En manlig lärare heter der Lehrer. Jämför svenskans <b>lära</b>.
+die Schülerin (-nen)|elev (flicka)|f|Emma ist eine [Schülerin] aus Schweden.|Emma är en elev från Sverige.|Plural: die Schülerinnen. En manlig elev heter der Schüler.
+der Mitschüler (-)|klasskamrat (pojke)|m|Jonas ist mein [Mitschüler].|Jonas är min klasskamrat.|Plural: die Mitschüler. <b>mit</b> betyder med, alltså en som går i skolan med dig.
+die Mitschülerin (-nen)|klasskamrat (flicka)|f|Meine [Mitschülerin] ist sehr nett.|Min klasskamrat är väldigt snäll.|Plural: die Mitschülerinnen.
+Mathe|matte|f|[Mathe] ist leicht.|Matte är lätt.|Vardaglig kortform av die Mathematik, heter die Mathe. Används oftast utan artikel.
+die Kunst (Künste)|konst; bild (skolämne)|f|[Kunst] macht Spaß.|Bild är roligt.|Plural med omljud: die Künste. Som skolämne används ordet utan artikel och utan plural.
+die Religion (-en)|religion, religionskunskap|f|Wir haben heute [Religion].|Vi har religion i dag.|Plural: die Religionen. Som skolämne ofta utan artikel.
+die Informatik|datavetenskap, programmering|f|[Informatik] ist interessant.|Programmering är intressant.|Ingen plural. Jämför svenskans <b>informatik</b>.
+das Französisch|franska (språket)|n|Ich lerne [Französisch].|Jag lär mig franska.|Ingen plural. Språk används oftast utan artikel.
+das Spanisch|spanska (språket)|n|Mein Bruder spricht [Spanisch].|Min bror pratar spanska.|Ingen plural. Språk används oftast utan artikel.
+das Buch (Bücher)|bok|n|Das [Buch] ist interessant.|Boken är intressant.|Plural med omljud: die Bücher. Jämför svenskans <b>bok</b> och engelskans <b>book</b>.
+der Stift (-e)|penna|m|Hast du einen [Stift]?|Har du en penna?|Plural: die Stifte. Allmänt ord för penna, jämför svenskans <b>stift</b>.
+der Kuli (-s)|kulspetspenna|m|Mein [Kuli] ist blau.|Min kulspetspenna är blå.|Plural: die Kulis. Kortform av der Kugelschreiber.
+der Bleistift (-e)|blyertspenna|m|Ich schreibe mit dem [Bleistift].|Jag skriver med blyertspennan.|Plural: die Bleistifte. <b>Blei</b> betyder bly.
+das Papier (-e)|papper|n|Hast du [Papier]?|Har du papper?|Plural: die Papiere (dokument). Jämför svenskans <b>papper</b> och engelskans <b>paper</b>.
+das Blatt (Blätter)|blad, papper; löv|n|Nehmt bitte ein [Blatt] Papier.|Ta ett papper.|Plural med omljud: die Blätter. Jämför svenskans <b>blad</b>.
+der Radiergummi (-s)|suddgummi|m|Hast du einen [Radiergummi]?|Har du ett suddgummi?|Plural: die Radiergummis. <b>Gummi</b> betyder gummi.
+das Lineal (-e)|linjal|n|Das [Lineal] ist lang.|Linjalen är lång.|Plural: die Lineale. Jämför svenskans <b>linjal</b>.
+der Tisch (-e)|bord|m|Das Buch ist auf dem [Tisch].|Boken ligger på bordet.|Plural: die Tische. Jämför svenskans <b>disk</b> och engelskans <b>dish</b>.
+der Stuhl (Stühle)|stol|m|Der [Stuhl] ist neu.|Stolen är ny.|Plural med omljud: die Stühle. Jämför svenskans <b>stol</b>.
+die Tasche (-n)|väska; ficka|f|Meine [Tasche] ist schwarz.|Min väska är svart.|Plural: die Taschen. Jämför svenskans <b>taska</b>.
+der Rucksack (Rucksäcke)|ryggsäck|m|Mein [Rucksack] ist grün.|Min ryggsäck är grön.|Plural med omljud: die Rucksäcke. Lånat till engelskan som <b>rucksack</b>.
+der Computer (-)|dator|m|Wir haben einen [Computer] in der Schule.|Vi har en dator i skolan.|Plural: die Computer. Lånat från engelskans <b>computer</b>.
+die Stunde (-n)|timme; lektion|f|Die [Stunde] beginnt um acht Uhr.|Lektionen börjar klockan åtta.|Plural: die Stunden. Betyder både timme och lektion. Jämför svenskans <b>stund</b>.
+der Test (-s)|prov, test|m|Morgen haben wir einen [Test].|I morgon har vi ett prov.|Plural: die Tests. Jämför svenskans <b>test</b>.
+die Übung (-en)|övning|f|Die [Übung] ist leicht.|Övningen är lätt.|Plural: die Übungen. Jämför svenskans <b>övning</b>.
+der Text (-e)|text|m|Lest bitte den [Text].|Läs texten.|Plural: die Texte. Samma som svenskans <b>text</b>.
+lernen|lära sig, plugga||Ich [lerne] Deutsch.|Jag lär mig tyska.|Regelbundet: ich lerne, du lernst, er lernt. Jämför svenskans <b>lära</b> och engelskans <b>learn</b>.
+lesen|läsa||Ich [lese] ein Buch.|Jag läser en bok.|Starkt verb: du liest, er liest. Jämför svenskans <b>läsa</b>.
+schreiben|skriva||Wir [schreiben] einen Text.|Vi skriver en text.|Regelbundet i presens: ich schreibe, du schreibst, er schreibt. Jämför svenskans <b>skriva</b>.
+rechnen|räkna||Ich [rechne] gern.|Jag räknar gärna.|Regelbundet: ich rechne, du rechnest, er rechnet. Jämför svenskans <b>räkna</b>.
+die Frage (-n)|fråga|f|Ich habe eine [Frage].|Jag har en fråga.|Plural: die Fragen. Jämför svenskans <b>fråga</b>.
+die Antwort (-en)|svar|f|Die [Antwort] ist richtig.|Svaret är rätt.|Plural: die Antworten. Innehåller <b>Wort</b> (ord).
+machen|göra||Was [machst] du?|Vad gör du?|Regelbundet: ich mache, du machst, er macht. Jämför engelskans <b>make</b>.
+hören|höra, lyssna||Ich [höre] Musik.|Jag lyssnar på musik.|Regelbundet: ich höre, du hörst, er hört. Jämför svenskans <b>höra</b>.
+sagen|säga||Was [sagt] die Lehrerin?|Vad säger läraren?|Regelbundet: ich sage, du sagst, er sagt. Jämför svenskans <b>säga</b> och engelskans <b>say</b>.
+zeigen|visa||Ich [zeige] dir mein Buch.|Jag visar dig min bok.|Regelbundet: ich zeige, du zeigst, er zeigt.
+erzählen|berätta||Mein Opa [erzählt] viel.|Min morfar berättar mycket.|Regelbundet: ich erzähle, du erzählst, er erzählt. Jämför svenskans <b>tala</b> och engelskans <b>tell</b>.
+bedeuten|betyda||Was [bedeutet] das Wort?|Vad betyder ordet?|Regelbundet: ich bedeute, du bedeutest, er bedeutet. Jämför svenskans <b>betyda</b>.
+meinen|mena, tycka||Was [meinst] du?|Vad menar du?|Regelbundet: ich meine, du meinst, er meint. Jämför svenskans <b>mena</b> och engelskans <b>mean</b>.
+das Wort (Wörter)|ord|n|Das [Wort] ist neu.|Ordet är nytt.|Plural med omljud: die Wörter. Jämför svenskans <b>ord</b> och engelskans <b>word</b>.
+die Sprache (-n)|språk|f|Deutsch ist eine schöne [Sprache].|Tyska är ett vackert språk.|Plural: die Sprachen. Hör ihop med sprechen (tala), jämför svenskans <b>språk</b>.
+leicht|lätt||Die Übung ist [leicht].|Övningen är lätt.|Betyder både lätt att göra och lätt att bära. Jämför engelskans <b>light</b>.
+schwer|svår; tung||Mathe ist [schwer].|Matte är svårt.|Betyder både svår och tung. Jämför svenskans <b>svår</b>.
+einfach|enkel||Die Frage ist [einfach].|Frågan är enkel.|Sammansatt av <b>ein</b> (en) och -fach (-faldig). Betyder också helt enkelt.
+richtig|rätt, riktig||Die Antwort ist [richtig].|Svaret är rätt.|Motsatsen är falsch. Jämför svenskans <b>riktig</b> och engelskans <b>right</b>.
+falsch|fel||Das ist [falsch].|Det är fel.|Motsatsen är richtig. Jämför svenskans <b>falsk</b> och engelskans <b>false</b>.
+interessant|intressant||Der Text ist [interessant].|Texten är intressant.|Jämför svenskans <b>intressant</b>.
+wichtig|viktig||Die Übung ist [wichtig].|Övningen är viktig.|Jämför svenskans <b>viktig</b>.
+fertig|klar, färdig||Ich bin [fertig].|Jag är klar.|Jämför svenskans <b>färdig</b>.
+noch|fortfarande, ännu, till||Ich lerne [noch].|Jag pluggar fortfarande.|Noch ein betyder en till: noch eine Frage (en fråga till).
+schon|redan||Ich bin [schon] fertig.|Jag är redan klar.|Uttalas "schon" med långt o.
+das Beispiel (-e)|exempel|n|Hier ist ein [Beispiel].|Här är ett exempel.|Plural: die Beispiele. Zum Beispiel betyder till exempel.
+die Seite (-n)|sida|f|Lest bitte [Seite] zehn.|Läs sidan tio.|Plural: die Seiten. Jämför svenskans <b>sida</b> och engelskans <b>side</b>.
+der Kurs (-e)|kurs|m|Der [Kurs] ist interessant.|Kursen är intressant.|Plural: die Kurse. Samma som svenskans <b>kurs</b>.
+das Problem (-e)|problem|n|Das ist kein [Problem].|Det är inget problem.|Plural: die Probleme. Kein Problem betyder inga problem.
+die Idee (-n)|idé|f|Das ist eine gute [Idee]!|Det är en bra idé!|Plural: die Ideen. Uttalas "i-DE". Jämför svenskans <b>idé</b>.
+die Kantine (-n)|skolmatsal, matsal|f|Wir essen in der [Kantine].|Vi äter i matsalen.|Plural: die Kantinen. Jämför svenskans <b>kantin</b>.
+die Sporthalle (-n)|idrottshall, gympasal|f|Wir sind in der [Sporthalle].|Vi är i idrottshallen.|Plural: die Sporthallen. Sammansatt av <b>Sport</b> och <b>Halle</b> (hall).
+der Lehrer (-)|lärare|m|Unser [Lehrer] ist sehr nett.|Vår lärare är väldigt trevlig.|Plural: die Lehrer. En kvinnlig lärare: die Lehrerin. Hör till verbet lehren (lära ut), jämför svenskans <b>lära</b>.
+der Schüler (-)|elev|m|Die [Schüler] haben heute Mathe.|Eleverna har matte i dag.|Plural: die Schüler (utan ändelse). En kvinnlig elev: die Schülerin. Hör till die Schule.
+die Klasse (-n)|klass|f|In meiner [Klasse] sind zwanzig Schüler.|I min klass finns det tjugo elever.|Plural: die Klassen. Jämför svenskans <b>klass</b>.
+die Hausaufgabe (-n)|läxa|f|Ich mache jetzt meine [Hausaufgaben].|Jag gör mina läxor nu.|Sammansatt av <b>Haus</b> (hus, hem) och <b>Aufgabe</b> (uppgift). Oftast i plural: die Hausaufgaben.
+die Pause (-n)|rast, paus|f|In der [Pause] esse ich einen Apfel.|På rasten äter jag ett äpple.|Plural: die Pausen. Jämför svenskans <b>paus</b>.
+der Unterricht|undervisning, lektion(er)|m|Der [Unterricht] beginnt um acht Uhr.|Lektionerna börjar klockan åtta.|Ingen plural. En enskild lektion heter die Stunde.
+das Heft (-e)|skrivhäfte|n|Schreib das Wort in dein [Heft].|Skriv ordet i ditt häfte.|Plural: die Hefte. Jämför svenskans <b>häfte</b>.
+das Handy (-s)|mobil(telefon)|n|Mein [Handy] ist in der Tasche.|Min mobil är i väskan.|Plural: die Handys. Ser engelskt ut, men engelsmän säger mobile phone.
+verstehen|förstå||Ich [verstehe] das Wort nicht.|Jag förstår inte ordet.|Regelbundet i presens: ich verstehe, du verstehst, er versteht. Jämför engelskans <b>understand</b>.
+fragen|fråga||Die Lehrerin [fragt] und wir antworten.|Läraren frågar och vi svarar.|Regelbundet: ich frage, du fragst, er fragt. Substantivet är die Frage.
+wissen|veta||Ich [weiß] es nicht.|Jag vet inte.|Oregelbundet: ich weiß, du weißt, er weiß, wir wissen. Jämför svenskans <b>veta</b> och engelskans <b>wit</b>.
+langweilig|tråkig||Der Film ist [langweilig].|Filmen är tråkig.|Sammansatt av <b>lang</b> (lång) och <b>Weile</b> (stund): en stund som känns lång.
+#e4|Kap 4 · Mein Tag
+der Tag (-e)|dag|m|Heute ist ein guter [Tag].|I dag är en bra dag.|Plural: die Tage. Jämför svenskans <b>dag</b> och engelskans <b>day</b>.
+die Woche (-n)|vecka|f|Die [Woche] hat sieben Tage.|Veckan har sju dagar.|Plural: die Wochen. Jämför svenskans <b>vecka</b> och engelskans <b>week</b>.
+der Monat (-e)|månad|m|Der [Monat] ist lang.|Månaden är lång.|Plural: die Monate. Jämför svenskans <b>månad</b> och engelskans <b>month</b>.
+der Morgen (-)|morgon|m|Am [Morgen] lerne ich Deutsch.|På morgonen pluggar jag tyska.|Plural: die Morgen. Stor bokstav som substantiv, liten i morgen (morgen).
+der Mittag (-e)|middag, lunchtid (kl. 12)|m|Am [Mittag] bin ich in der Kantine.|Vid lunchtid är jag i matsalen.|Plural: die Mittage. Betyder mitt på dagen, inte middagsmålet på kvällen.
+der Abend (-e)|kväll|m|Am [Abend] bin ich zu Hause.|På kvällen är jag hemma.|Plural: die Abende. Jämför engelskans <b>evening</b>.
+die Nacht (Nächte)|natt|f|Die [Nacht] ist kurz.|Natten är kort.|Plural med omljud: die Nächte. Jämför svenskans <b>natt</b> och engelskans <b>night</b>.
+der Montag (-e)|måndag|m|Am [Montag] habe ich Mathe.|På måndag har jag matte.|Plural: die Montage. Alla veckodagar är maskulina: am Montag (på måndag).
+der Dienstag (-e)|tisdag|m|Am [Dienstag] habe ich Deutsch.|På tisdag har jag tyska.|Plural: die Dienstage. Am Dienstag betyder på tisdag.
+der Mittwoch (-e)|onsdag|m|Am [Mittwoch] haben wir einen Test.|På onsdag har vi ett prov.|Plural: die Mittwoche. Betyder mitten av veckan, <b>Mitte</b> och <b>Woche</b>.
+der Donnerstag (-e)|torsdag|m|Am [Donnerstag] arbeite ich.|På torsdag jobbar jag.|Plural: die Donnerstage. Jämför svenskans <b>torsdag</b> och <b>dunder</b>.
+der Freitag (-e)|fredag|m|Am [Freitag] bin ich früh fertig.|På fredag är jag klar tidigt.|Plural: die Freitage. Jämför svenskans <b>fredag</b> och engelskans <b>Friday</b>.
+der Samstag (-e)|lördag|m|Am [Samstag] schlafe ich lange.|På lördag sover jag länge.|Plural: die Samstage. I norra Tyskland säger man också Sonnabend.
+der Sonntag (-e)|söndag|m|Am [Sonntag] bin ich zu Hause.|På söndag är jag hemma.|Plural: die Sonntage. Jämför svenskans <b>söndag</b> och engelskans <b>Sunday</b>.
+heute|i dag||[Heute] ist Montag.|I dag är det måndag.|Uttalas "hojte".
+morgen|i morgon||[Morgen] habe ich einen Test.|I morgon har jag ett prov.|Liten bokstav betyder i morgon, stor bokstav (der Morgen) betyder morgon. Jämför svenskans <b>morgon</b>.
+gestern|i går||Heute oder [gestern]?|I dag eller i går?|Jämför svenskans <b>i går</b> och engelskans <b>yesterday</b>.
+jetzt|nu||Ich lerne [jetzt] Deutsch.|Jag pluggar tyska nu.|Uttalas "jetst".
+die Uhr (-en)|klocka; klockan (tid)|f|Es ist acht [Uhr].|Klockan är åtta.|Plural: die Uhren. Vid klockslag står Uhr efter siffran: um acht Uhr (klockan åtta).
+die Minute (-n)|minut|f|Ich komme in fünf [Minuten].|Jag kommer om fem minuter.|Plural: die Minuten. Jämför svenskans <b>minut</b>.
+das Viertel (-)|kvart, fjärdedel|n|Es ist [Viertel] nach acht.|Klockan är kvart över åtta.|Plural: die Viertel. Viertel vor acht betyder kvart i åtta. Jämför engelskans <b>quarter</b>.
+die Zeit (-en)|tid|f|Ich habe keine [Zeit].|Jag har ingen tid.|Plural: die Zeiten. Jämför svenskans <b>tid</b> och engelskans <b>time</b>.
+spät|sen||Es ist schon [spät].|Det är redan sent.|Wie spät ist es? betyder vad är klockan.
+früh|tidig, tidigt||Ich komme [früh] nach Hause.|Jag kommer hem tidigt.|Jämför svenskans <b>tidig</b>. Morgen früh betyder i morgon bitti.
+schlafen|sova||Ich [schlafe] acht Stunden.|Jag sover åtta timmar.|Starkt verb: du schläfst, er schläft. Jämför engelskans <b>sleep</b>.
+arbeiten|arbeta, jobba||Mein Vater [arbeitet] in Berlin.|Min pappa jobbar i Berlin.|Regelbundet: ich arbeite, du arbeitest, er arbeitet. Jämför svenskans <b>arbeta</b>.
+die Arbeit (-en)|arbete, jobb|f|Meine Mutter ist bei der [Arbeit].|Min mamma är på jobbet.|Plural: die Arbeiten. Jämför svenskans <b>arbete</b>.
+beginnen|börja||Die Schule [beginnt] um acht Uhr.|Skolan börjar klockan åtta.|Regelbundet i presens: ich beginne, du beginnst, er beginnt. Jämför engelskans <b>begin</b>.
+anfangen|börja||Der Kurs [fängt] am Montag an.|Kursen börjar på måndag.|Starkt och delbart verb: ich fange an, du fängst an, er fängt an.
+dauern|vara, ta (tid)||Der Test [dauert] eine Stunde.|Provet tar en timme.|Regelbundet: es dauert. Wie lange dauert das? betyder hur lång tid tar det?
+gehen|gå||Ich [gehe] in die Schule.|Jag går till skolan.|Regelbundet i presens: ich gehe, du gehst, er geht. Jämför svenskans <b>gå</b> och engelskans <b>go</b>.
+fahren|åka, köra||Ich [fahre] nach Hause.|Jag åker hem.|Starkt verb: du fährst, er fährt. Jämför svenskans <b>fara</b>.
+immer|alltid||Ich bin [immer] früh in der Schule.|Jag är alltid tidigt i skolan.|Motsatsen är nie (aldrig).
+oft|ofta||Ich lese [oft].|Jag läser ofta.|Jämför svenskans <b>ofta</b> och engelskans <b>often</b>.
+nie|aldrig||Ich bin [nie] spät.|Jag är aldrig sen.|Uttalas "ni".
+dann|sedan, då||Ich lerne und [dann] schlafe ich.|Jag pluggar och sedan sover jag.|Efter dann kommer verbet direkt: dann schlafe ich. Jämför engelskans <b>then</b>.
+später|senare||Ich komme [später].|Jag kommer senare.|Kommer av spät (sen). Bis später! betyder vi ses senare!
+bald|snart||Ich bin [bald] fertig.|Jag är snart klar.|Bis bald! betyder vi ses snart!
+gleich|strax, genast||Ich komme [gleich].|Jag kommer strax.|Betyder också likadan. Jämför svenskans <b>lik</b>.
+erst|först, inte förrän||Ich schlafe [erst] um elf Uhr.|Jag sover inte förrän klockan elva.|Med tid betyder erst att något händer senare än man tror.
+wann|när||[Wann] beginnt die Schule?|När börjar skolan?|Frågeord om tid. Jämför engelskans <b>when</b>.
+um|klockan, vid (om tid)||Die Schule beginnt [um] acht Uhr.|Skolan börjar klockan åtta.|Används före klockslag: um acht Uhr (klockan åtta). Um wie viel Uhr? betyder hur dags?
+der Januar|januari|m|Im [Januar] ist es kalt.|I januari är det kallt.|Månaderna är maskulina och har i regel ingen plural. Im Januar betyder i januari.
+der Februar|februari|m|Im [Februar] ist viel Schnee.|I februari är det mycket snö.|Månaderna är maskulina. Im Februar betyder i februari.
+der März|mars|m|Im [März] ist mein Test.|I mars är mitt prov.|Obs omljudet: März.
+der April|april|m|Im [April] bin ich sechzehn.|I april fyller jag sexton.|Månaderna är maskulina: der April.
+der Mai|maj|m|Im [Mai] ist es warm.|I maj är det varmt.|Uttalas "maj".
+der Juni|juni|m|Im [Juni] ist die Schule fertig.|I juni slutar skolan.|Uttalas "juni". Ibland säger man Juno för att inte blanda ihop med Juli.
+der Juli|juli|m|Im [Juli] fahren wir nach Österreich.|I juli åker vi till Österrike.|Uttalas "juli". Ibland säger man Julei för att inte blanda ihop med Juni.
+der August|augusti|m|Im [August] beginnt die Schule.|I augusti börjar skolan.|Betoning på sista stavelsen: au-GUST.
+der September|september|m|Im [September] lerne ich viel.|I september pluggar jag mycket.|Månaderna är maskulina: der September.
+der Oktober|oktober|m|Im [Oktober] ist es oft grau.|I oktober är det ofta grått.|Stavas med k, som på svenska.
+der November|november|m|Im [November] ist es oft kalt.|I november är det ofta kallt.|Månaderna är maskulina: der November.
+der Dezember|december|m|Im [Dezember] bin ich zu Hause.|I december är jag hemma.|Stavas med z på tyska.
+der Anfang (Anfänge)|början|m|Am [Anfang] ist Deutsch schwer.|I början är tyska svårt.|Plural med omljud: die Anfänge. Hör ihop med anfangen (börja).
+das Ende (-n)|slut, ände|n|Am [Ende] ist alles gut.|I slutet är allt bra.|Plural: die Enden. Jämför svenskans <b>ände</b> och engelskans <b>end</b>.
+nach Hause|hem (riktning)||Ich gehe jetzt [nach Hause].|Jag går hem nu.|Nach Hause säger vart man går. Zu Hause betyder hemma.|<b>nach</b> till, mot · <b>Hause</b> hus, hem → "mot huset"
+vorher|innan, före, dessförinnan||Ich lerne [vorher] noch.|Jag pluggar lite innan.|Motsatsen är nachher (efteråt).
+das Datum (Daten)|datum|n|Welches [Datum] ist heute?|Vilket datum är det i dag?|Plural: die Daten. Jämför svenskans <b>datum</b>.
+der Kalender (-)|kalender|m|Das Datum ist im [Kalender].|Datumet står i kalendern.|Plural: die Kalender. Samma som svenskans <b>kalender</b>.
+der Moment (-e)|ögonblick, stund|m|Einen [Moment], bitte!|Ett ögonblick, tack!|Plural: die Momente. Jämför svenskans <b>moment</b> och engelskans <b>moment</b>.
+aufstehen|gå upp, stiga upp||Ich möchte am Sonntag nicht früh [aufstehen].|Jag vill inte gå upp tidigt på söndag.|Delbart verb: Ich stehe um sieben Uhr auf (auf hamnar sist).
+das Wochenende (-n)|helg|n|Am [Wochenende] schlafe ich lange.|På helgen sover jag länge.|Plural: die Wochenenden. Sammansatt av <b>Woche</b> (vecka) och <b>Ende</b> (slut): veckans slut.
+halb|halv||Wir treffen uns um [halb] acht.|Vi ses halv åtta.|Som på svenska: halb acht betyder 7.30.
+manchmal|ibland||Ich trinke [manchmal] Kaffee.|Jag dricker kaffe ibland.|Står ofta direkt efter verbet. Jämför immer (alltid), oft (ofta) och nie (aldrig).
+der Frühling (-e)|vår|m|Im [Frühling] ist es oft schön.|På våren är det ofta fint.|Hör till früh (tidig): årets tidiga del. Alla årstider är der: der Frühling, der Sommer, der Herbst, der Winter.
+der Sommer (-)|sommar|m|Im [Sommer] fahren wir nach Österreich.|På sommaren åker vi till Österrike.|Plural: die Sommer. Jämför svenskans <b>sommar</b> och engelskans <b>summer</b>.
+der Herbst (-e)|höst|m|Im [Herbst] beginnt die Schule.|På hösten börjar skolan.|Plural: die Herbste. Jämför svenskans <b>höst</b> och engelskans <b>harvest</b> (skörd).
+der Winter (-)|vinter|m|Im [Winter] gibt es viel Schnee.|På vintern finns det mycket snö.|Plural: die Winter. Jämför svenskans <b>vinter</b>.
+das Frühstück (-e)|frukost|n|Zum [Frühstück] esse ich Brot.|Till frukost äter jag smörgås.|Sammansatt av <b>früh</b> (tidig) och <b>Stück</b> (bit). Pluralen används sällan.
+müde|trött||Am Abend bin ich immer [müde].|På kvällen är jag alltid trött.|Trött är man: Ich bin müde (med sein).
+#e5|Kap 5 · Essen und Trinken
+essen|äta||Wir [essen] heute Fisch.|Vi äter fisk i dag.|Starkt verb: du isst, er isst. Jämför engelskans <b>eat</b>.
+trinken|dricka||Ich [trinke] gern Milch.|Jag dricker gärna mjölk.|Regelbundet i presens: ich trinke, du trinkst, er trinkt. Jämför svenskans <b>dricka</b> och engelskans <b>drink</b>.
+kaufen|köpa||Ich [kaufe] Brot und Butter.|Jag köper bröd och smör.|Regelbundet: ich kaufe, du kaufst, er kauft. Jämför svenskans <b>köpa</b>.
+das Essen (-)|maten, måltiden|n|Das [Essen] ist warm.|Maten är varm.|Samma ord som verbet essen, men med stor bokstav och das.
+das Mittagessen (-)|lunch|n|Das [Mittagessen] ist um zwölf Uhr.|Lunchen är klockan tolv.|Der Mittag (mitt på dagen) + das Essen (maten).
+das Brot (-e)|bröd|n|Ich esse [Brot] mit Honig.|Jag äter bröd med honung.|Jämför engelskans <b>bread</b> och svenskans <b>bröd</b>.
+die Butter|smör|f|Das Brot mit [Butter] ist gut.|Brödet med smör är gott.|Obs. die på tyska. Jämför engelskans <b>butter</b>.
+der Fisch (-e)|fisk|m|Der [Fisch] ist sehr gut.|Fisken är mycket god.|Jämför svenskans <b>fisk</b> och engelskans <b>fish</b>.
+der Salat (-e)|sallad|m|Ich nehme einen [Salat].|Jag tar en sallad.|Jämför svenskans <b>sallad</b>.
+die Nudel (-n)|nudel; pasta (i plural)|f|Ich esse gern [Nudeln].|Jag äter gärna pasta.|Används oftast i plural: Nudeln betyder pasta i allmänhet.
+die Suppe (-n)|soppa|f|Die [Suppe] ist heiß.|Soppan är het.|Jämför svenskans <b>soppa</b> och engelskans <b>soup</b>.
+der Apfel (Äpfel)|äpple|m|Der [Apfel] ist rot.|Äpplet är rött.|Plural med omljud: Äpfel. Jämför engelskans <b>apple</b>.
+die Banane (-n)|banan|f|Die [Banane] ist gelb.|Bananen är gul.|Obs. -e på slutet och die.
+die Tomate (-n)|tomat|f|Ich kaufe zwei [Tomaten].|Jag köper två tomater.|Obs. -e på slutet och die.
+die Orange (-n)|apelsin|f|Ich möchte eine [Orange].|Jag vill ha en apelsin.|Uttalas ungefär o-rang-sche. Jämför engelskans <b>orange</b>.
+die Karotte (-n)|morot|f|Das Kind isst eine [Karotte].|Barnet äter en morot.|Kallas också die Möhre. Jämför engelskans <b>carrot</b>.
+der Kuchen (-)|kaka, tårta|m|Der [Kuchen] ist sehr süß.|Kakan är mycket söt.|Jämför svenskans <b>kaka</b> och engelskans <b>cake</b>.
+die Schokolade|choklad|f|Ich esse gern [Schokolade].|Jag äter gärna choklad.|Obs. stavningen med k och -e på slutet.
+der Zucker|socker|m|Ich trinke Tee mit [Zucker].|Jag dricker te med socker.|Jämför svenskans <b>socker</b> och engelskans <b>sugar</b>.
+das Salz|salt|n|Die Suppe braucht [Salz].|Soppan behöver salt.|Jämför svenskans <b>salt</b>. Obs. z på tyska.
+der Honig|honung|m|Der Tee mit [Honig] ist süß.|Teet med honung är sött.|Jämför engelskans <b>honey</b>.
+die Marmelade (-n)|sylt, marmelad|f|Ich esse Brot mit [Marmelade].|Jag äter bröd med sylt.|På tyska betyder Marmelade all sorts sylt, inte bara av apelsin.
+der Joghurt (-s)|yoghurt|m|Ich esse [Joghurt] mit Müsli.|Jag äter yoghurt med müsli.|Obs. stavningen med gh.
+das Müsli (-s)|müsli|n|Das [Müsli] ist gut.|Müslin är god.|Kommer från Schweiz. Obs. das.
+die Pommes|pommes frites|pl|Ich möchte [Pommes] mit Salz.|Jag vill ha pommes frites med salt.|Finns bara i plural. Uttalas ofta pommes med s.
+der Hamburger (-)|hamburgare|m|Er isst einen [Hamburger].|Han äter en hamburgare.|Jämför engelskans <b>hamburger</b>.
+das Wasser|vatten|n|Ich trinke ein Glas [Wasser].|Jag dricker ett glas vatten.|Jämför engelskans <b>water</b> och svenskans <b>vatten</b>.
+die Milch|mjölk|f|Die [Milch] ist kalt.|Mjölken är kall.|Jämför svenskans <b>mjölk</b> och engelskans <b>milk</b>.
+der Kaffee|kaffe|m|Mein Vater trinkt [Kaffee].|Min pappa dricker kaffe.|Obs. dubbel-e och der.
+der Tee|te|m|Der [Tee] ist heiß.|Teet är hett.|Obs. der på tyska. Jämför engelskans <b>tea</b>.
+die Cola|cola|f|Ich trinke eine [Cola].|Jag dricker en cola.|I södra Tyskland och Österreich säger man också das Cola.
+süß|söt||Der Kuchen ist [süß].|Kakan är söt.|Jämför svenskans <b>söt</b> och engelskans <b>sweet</b>.
+warm|varm||Die Suppe ist [warm].|Soppan är varm.|Samma som svenskans <b>varm</b> och engelskans <b>warm</b>.
+kalt|kall||Das Wasser ist [kalt].|Vattnet är kallt.|Jämför svenskans <b>kall</b> och engelskans <b>cold</b>.
+heiß|het, mycket varm||Der Tee ist sehr [heiß].|Teet är mycket hett.|Obs. ß. Jämför engelskans <b>hot</b>.
+das Restaurant (-s)|restaurang|n|Das [Restaurant] ist klein.|Restaurangen är liten.|Obs. stavningen utan g. Uttalas som på franska.
+der Euro|euro|m|Die Pizza kostet zehn [Euro].|Pizzan kostar tio euro.|Efter tal säger man Euro utan plural-s: zehn Euro.
+der Cent|cent|m|Das Brot kostet neunzig [Cent].|Brödet kostar nittio cent.|Efter tal säger man Cent utan plural-s. 100 Cent = 1 Euro.
+das Geld|pengar|n|Ich habe kein [Geld].|Jag har inga pengar.|Singular på tyska: das Geld, fast pengar är plural på svenska.
+zahlen|betala||Wir möchten [zahlen], bitte.|Vi vill betala, tack.|Regelbundet: ich zahle, du zahlst, er zahlt. Säg det till servitören på restaurangen.
+das Glas (Gläser)|glas|n|Das [Glas] ist leer.|Glaset är tomt.|Plural med omljud: Gläser.
+die Tasse (-n)|kopp|f|Ich trinke eine [Tasse] Tee.|Jag dricker en kopp te.|Eine Tasse Tee = en kopp te, utan av.
+der Teller (-)|tallrik|m|Der [Teller] ist sauber.|Tallriken är ren.|Jämför svenskans <b>tallrik</b>.
+das Messer (-)|kniv|n|Das [Messer] liegt auf dem Tisch.|Kniven ligger på bordet.|Obs. das.
+die Gabel (-n)|gaffel|f|Ich brauche eine [Gabel].|Jag behöver en gaffel.|Jämför svenskans <b>gaffel</b>.
+der Löffel (-)|sked|m|Ich esse die Suppe mit dem [Löffel].|Jag äter soppan med skeden.|Obs. der och ö.
+möchten|vilja ha, skulle vilja||Ich [möchte] ein Glas Wasser.|Jag skulle vilja ha ett glas vatten.|möchten: ich möchte, du möchtest, er möchte. Artigt sätt att beställa.
+mögen|tycka om||Ich [mag] keinen Fisch.|Jag tycker inte om fisk.|Oregelbundet: ich mag, du magst, er mag.
+gern|gärna||Ich trinke [gern] Tee.|Jag dricker gärna te.|Verb + gern betyder att man tycker om att göra något.
+lieber|hellre||Ich trinke [lieber] Wasser.|Jag dricker hellre vatten.|Komparativ av gern: gern, lieber (gärna, hellre).
+das Kilo (-s)|kilo|n|Ich kaufe ein [Kilo] Äpfel.|Jag köper ett kilo äpplen.|Efter tal utan plural-s: zwei Kilo.
+der Liter (-)|liter|m|Wir brauchen einen [Liter] Milch.|Vi behöver en liter mjölk.|Obs. der på tyska. Zwei Liter Milch, utan av.
+das Stück (-e)|bit, stycke|n|Ich möchte ein [Stück] Kuchen.|Jag vill ha en bit kaka.|Jämför svenskans <b>stycke</b>. Ein Stück Kuchen, utan av.
+die Pizza (Pizzen)|pizza|f|Die [Pizza] ist heiß.|Pizzan är het.|Plural Pizzen eller Pizzas.
+der Koch (Köche)|kock|m|Der [Koch] ist sehr gut.|Kocken är mycket bra.|Plural med omljud: Köche. Jämför svenskans <b>kock</b>.
+die Kellnerin (-nen)|servitris|f|Die [Kellnerin] bringt das Essen.|Servitrisen kommer med maten.|Om en man: der Kellner.
+die Portion (-en)|portion|f|Eine [Portion] Pommes, bitte.|En portion pommes frites, tack.|Obs. -tion uttalas ungefär tsjon.
+geben|ge||Kannst du mir das Salz [geben]?|Kan du ge mig saltet?|Starkt verb: du gibst, er gibt. Jämför <b>ge</b> och engelskans <b>give</b>.
+nehmen|ta||Ich [nehme] eine Suppe.|Jag tar en soppa.|Starkt verb: du nimmst, er nimmt. Används när man beställer mat.
+viel|mycket||Er trinkt [viel] Wasser.|Han dricker mycket vatten.|Viel om mängd, sehr om grad: sehr gut (mycket bra).
+wenig|lite, få||Ich esse [wenig] Zucker.|Jag äter lite socker.|Motsatsen är viel (mycket).
+ein bisschen|lite grann, lite||Ich möchte nur [ein bisschen] Salat.|Jag vill bara ha lite sallad.|Vardagligt. Obs. ss i bisschen.
+kochen|laga mat, koka||Mein Vater [kocht] heute Suppe.|Min pappa lagar soppa i dag.|Regelbundet: ich koche, du kochst, er kocht. Jämför svenskans <b>koka</b>.
+kosten|kosta||Was [kostet] das Brot?|Vad kostar brödet?|Regelbundet, men med extra e: es kostet. Jämför svenskans <b>kosta</b>.
+bezahlen|betala||Ich möchte bitte [bezahlen].|Jag skulle vilja betala.|Regelbundet: ich bezahle, du bezahlst. Samma betydelse som zahlen.
+teuer|dyr||Die Pizza ist sehr [teuer].|Pizzan är väldigt dyr.|Motsatsen är billig. Jämför svenskans <b>dyr</b> (samma ursprung).
+billig|billig||Das Brot ist hier [billig].|Brödet är billigt här.|Samma ord som på svenska. Motsatsen är teuer.
+der Käse (-)|ost|m|Ich esse Brot mit [Käse].|Jag äter smörgås med ost.|Plural: die Käse. Jämför engelskans <b>cheese</b>.
+die Wurst (Würste)|korv; pålägg|f|Möchtest du eine [Wurst]?|Vill du ha en korv?|Plural: die Würste. Tyskland är känt för sina korvar.
+das Fleisch|kött|n|Ich esse kein [Fleisch].|Jag äter inte kött.|Ingen plural. Jämför svenskans <b>fläsk</b>.
+das Ei (-er)|ägg|n|Zum Frühstück esse ich ein [Ei].|Till frukost äter jag ett ägg.|Plural: die Eier. Jämför svenskans <b>ägg</b> och engelskans <b>egg</b>.
+die Kartoffel (-n)|potatis|f|Wir essen Fisch mit [Kartoffeln].|Vi äter fisk med potatis.|Plural: die Kartoffeln. Ordet kommer från italienskans tartufolo (tryffel).
+das Obst|frukt|n|[Obst] ist gesund und lecker.|Frukt är nyttigt och gott.|Ingen plural, samlingsord. En enskild frukt: eine Frucht.
+das Brötchen (-)|fralla, småfranska|n|Ich kaufe vier [Brötchen].|Jag köper fyra frallor.|Plural: die Brötchen. -chen betyder liten: ett litet bröd.
+der Hunger|hunger|m|Ich habe [Hunger].|Jag är hungrig.|Man HAR hunger på tyska: Ich habe Hunger. Ingen plural.
+lecker|god (om mat)||Der Kuchen ist sehr [lecker].|Kakan är väldigt god.|Vanligt i talspråk om mat och dryck. Gut går också.
+#e6|Kap 6 · Freizeit und Hobbys
+spielen|spela, leka||Wir [spielen] Fußball im Park.|Vi spelar fotboll i parken.|Regelbundet: ich spiele, du spielst, er spielt. Jämför svenskans <b>spela</b>.
+der Fußball (-bälle)|fotboll|m|Ich spiele gern [Fußball].|Jag spelar gärna fotboll.|Obs. ß. Både sporten och själva bollen.
+der Sport|sport, idrott|m|[Sport] macht Spaß.|Sport är kul.|Man säger Sport machen (idrotta).
+der Basketball|basket|m|Mein Bruder spielt [Basketball].|Min bror spelar basket.|Uttalas på tyskt sätt: bas-ket-ball.
+der Handball|handboll|m|Wir spielen oft [Handball].|Vi spelar ofta handboll.|Jämför svenskans <b>handboll</b>.
+der Volleyball|volleyboll|m|Wir spielen [Volleyball].|Vi spelar volleyboll.|Samma ord som på engelska, <b>volleyball</b>.
+das Tennis|tennis|n|Sie spielt gern [Tennis].|Hon spelar gärna tennis.|Obs. das.
+das Eishockey|ishockey|n|Wir sehen [Eishockey] im Stadion.|Vi ser ishockey på arenan.|Das Eis (isen) + Hockey.
+der Ski (-er)|skida|m|Im Winter fahre ich [Ski].|På vintern åker jag skidor.|Ski fahren = åka skidor. Uttalas schi.
+das Schach|schack|n|Mein Opa spielt [Schach].|Min morfar spelar schack.|Jämför svenskans <b>schack</b>.
+das Fahrrad (-räder)|cykel|n|Ich fahre mit dem [Fahrrad].|Jag åker cykel.|Fahren (åka) + das Rad (hjulet). Kallas också bara das Rad.
+die Musik|musik|f|Ich höre gern [Musik].|Jag lyssnar gärna på musik.|Obs. k och betoningen på sista stavelsen.
+das Radio (-s)|radio|n|Ich höre gern [Radio].|Jag lyssnar gärna på radio.|Obs. das.
+der Film (-e)|film|m|Der [Film] ist lustig.|Filmen är rolig.|Samma som på svenska och engelska.
+das Video (-s)|video|n|Wir sehen ein [Video].|Vi tittar på en video.|Obs. das.
+die Kamera (-s)|kamera|f|Die [Kamera] ist neu.|Kameran är ny.|Jämför engelskans <b>camera</b>.
+die Karte (-n)|kort; karta; biljett|f|Wir spielen [Karten].|Vi spelar kort.|Betyder både spelkort, karta och biljett. Jämför svenskans <b>karta</b>.
+der Park (-s)|park|m|Der [Park] ist sehr schön.|Parken är mycket fin.|Samma som på svenska.
+der Ball (Bälle)|boll|m|Der [Ball] ist rot.|Bollen är röd.|Plural med omljud: Bälle. Jämför engelskans <b>ball</b>.
+die Sonne|sol|f|Die [Sonne] ist heute warm.|Solen är varm i dag.|Obs. die på tyska. Jämför engelskans <b>sun</b>.
+der Regen|regn|m|Ich mag keinen [Regen].|Jag tycker inte om regn.|Jämför svenskans <b>regn</b> och engelskans <b>rain</b>.
+der Schnee|snö|m|Der [Schnee] ist weiß.|Snön är vit.|Jämför engelskans <b>snow</b>.
+der Wind (-e)|vind, blåst|m|Heute ist der [Wind] kalt.|I dag är vinden kall.|Samma ord som på svenska och engelska.
+der Himmel|himmel|m|Der [Himmel] ist blau.|Himlen är blå.|Jämför svenskans <b>himmel</b>.
+der Mond (-e)|måne|m|Der [Mond] ist heute groß.|Månen är stor i kväll.|Obs. der på tyska. Jämför engelskans <b>moon</b>.
+der Stern (-e)|stjärna|m|Ich sehe einen [Stern].|Jag ser en stjärna.|Jämför svenskans <b>stjärna</b> och engelskans <b>star</b>.
+der Baum (Bäume)|träd|m|Der [Baum] ist sehr groß.|Trädet är mycket stort.|Plural med omljud: Bäume. Jämför svenskans <b>bom</b> och engelskans <b>beam</b>.
+die Blume (-n)|blomma|f|Die [Blume] ist gelb.|Blomman är gul.|Jämför svenskans <b>blomma</b>.
+der See (-n)|sjö|m|Der [See] ist kalt.|Sjön är kall.|Obs. der See = sjö, men die See = havet.
+der Berg (-e)|berg|m|Der [Berg] ist sehr groß.|Berget är mycket stort.|Samma som svenskans <b>berg</b>.
+der Wald (Wälder)|skog|m|Wir gehen in den [Wald].|Vi går till skogen.|Plural med omljud: Wälder.
+das Internet|internet|n|Ich lese die Zeitung im [Internet].|Jag läser tidningen på internet.|Obs. im Internet (på internet).
+das Theater (-)|teater|n|Das [Theater] ist alt.|Teatern är gammal.|Obs. das och -er på slutet.
+das Museum (Museen)|museum|n|Wir gehen ins [Museum].|Vi går till museet.|Plural: Museen.
+der Zoo (-s)|djurpark|m|Im [Zoo] gibt es viele Tiere.|På djurparken finns det många djur.|Uttalas tså.
+das Schwimmbad (-bäder)|simhall, badhus|n|Das [Schwimmbad] ist neu.|Simhallen är ny.|Schwimmen (simma) + das Bad (badet).
+das Stadion (Stadien)|arena, idrottsplats|n|Das [Stadion] ist voll.|Arenan är full.|Plural: Stadien. Jämför svenskans <b>stadion</b>.
+das Tablet (-s)|surfplatta|n|Ich lese auf dem [Tablet].|Jag läser på surfplattan.|Från engelskan <b>tablet</b>.
+die App (-s)|app|f|Die [App] ist super.|Appen är jättebra.|Obs. die.
+online|på nätet, online||Ich bin oft [online].|Jag är ofta ute på nätet.|Samma ord som på engelska.
+super|jättebra, super||Der Film ist [super]!|Filmen är jättebra!|Vardagligt och mycket vanligt.
+der Tanz (Tänze)|dans|m|Der [Tanz] ist schön.|Dansen är fin.|Plural med omljud: Tänze. Obs. z.
+der Comic (-s)|serietidning|m|Ich lese gern [Comics].|Jag läser gärna serier.|Från engelskan <b>comic</b>.
+gucken|titta||Wir [gucken] einen Film.|Vi tittar på en film.|Regelbundet: ich gucke, du guckst, er guckt. Vardagligt, särskilt i norra Tyskland.
+sehen|se||Ich [sehe] den Mond.|Jag ser månen.|Starkt verb: du siehst, er sieht. Jämför <b>se</b> och engelskans <b>see</b>.
+schauen|titta, se||[Schau] mal, ein Stern!|Titta, en stjärna!|Regelbundet: ich schaue, du schaust, er schaut. Särskilt vanligt i södra Tyskland och Österreich.
+die Zeitung (-en)|tidning|f|Mein Vater liest die [Zeitung].|Min pappa läser tidningen.|Jämför svenskans <b>tidning</b>.
+ganz|helt||Das ist [ganz] einfach.|Det är helt enkelt.|Kan också betyda ganska: ganz gut (ganska bra).
+wirklich|verkligen||Das ist [wirklich] lustig.|Det är verkligen roligt.|Jämför svenskans <b>verklig</b>.
+natürlich|naturligtvis, förstås||[Natürlich] komme ich mit.|Förstås följer jag med.|Jämför svenskans <b>naturligtvis</b>.
+einmal|en gång||Ich spiele [einmal] in der Woche Tennis.|Jag spelar tennis en gång i veckan.|Ein (en) + das Mal (gång). Zweimal = två gånger.
+das Mal (-e)|gång|n|Das erste [Mal] ist schwer.|Första gången är svårt.|Zum ersten Mal = för första gången.
+wieder|igen||Es regnet [wieder].|Det regnar igen.|Obs. stavningen med ie. Auf Wiedersehen = på återseende.
+tun|göra||Was kann ich [tun]?|Vad kan jag göra?|Oregelbundet: ich tue, du tust, er tut. Machen är vanligare i vardagen.
+bekommen|få||Ich [bekomme] ein Fahrrad.|Jag får en cykel.|Starkt verb, men regelbundet i presens: ich bekomme, du bekommst, er bekommt. Falsk vän: betyder inte bli!
+das Team (-s)|lag|n|Unser [Team] spielt gut.|Vårt lag spelar bra.|Från engelskan <b>team</b>. Uttalas tiim.
+der Fan (-s)|fan, supporter|m|Ich bin ein [Fan] von Bayern München.|Jag håller på Bayern München.|Uttalas fän som på engelska.
+die Gruppe (-n)|grupp|f|Wir arbeiten in der [Gruppe].|Vi arbetar i gruppen.|Jämför svenskans <b>grupp</b>.
+das Hobby (-s)|hobby|n|Mein [Hobby] ist Musik.|Min hobby är musik.|Plural: die Hobbys (inte -ies som på engelska).
+die Freizeit|fritid|f|In meiner [Freizeit] spiele ich Tennis.|På fritiden spelar jag tennis.|Sammansatt av <b>frei</b> (fri) och <b>Zeit</b> (tid). Ingen plural.
+schwimmen|simma, bada||Im Sommer [schwimmen] wir im See.|På sommaren badar vi i sjön.|Regelbundet i presens: ich schwimme, du schwimmst. Jämför svenskans <b>simma</b> och engelskans <b>swim</b>.
+tanzen|dansa||Lisa [tanzt] sehr gut.|Lisa dansar väldigt bra.|Regelbundet: ich tanze, du tanzt (bara -t efter z). Jämför svenskans <b>dansa</b>.
+singen|sjunga||Wir [singen] zusammen ein Lied.|Vi sjunger en sång tillsammans.|Regelbundet i presens: ich singe, du singst, er singt. Jämför svenskans <b>sjunga</b> och engelskans <b>sing</b>.
+das Kino (-s)|bio|n|Am Samstag gehen wir ins [Kino].|På lördag går vi på bio.|Plural: die Kinos. Ins Kino gehen = gå på bio.
+das Wetter|väder|n|Das [Wetter] ist heute schön.|Vädret är fint i dag.|Ingen plural. Jämför svenskans <b>väder</b> och engelskans <b>weather</b>.
+treffen|träffa||Ich [treffe] am Samstag meine Freunde.|Jag träffar mina kompisar på lördag.|Starkt verb: du triffst, er trifft. Jämför svenskans <b>träffa</b>.
+#e7|Kap 7 · Zu Hause
+das Haus (Häuser)|hus|n|Das [Haus] ist groß.|Huset är stort.|Plural med omljud: Häuser. Jämför engelskans <b>house</b>.
+das Kinderzimmer (-)|barnrum, rum|n|Mein [Kinderzimmer] ist klein.|Mitt rum är litet.|Das Kind (barnet) + das Zimmer (rummet). Används även om tonåringens rum.
+die Tür (-en)|dörr|f|Die [Tür] ist links.|Dörren är till vänster.|Jämför engelskans <b>door</b> och svenskans <b>dörr</b>.
+das Fenster (-)|fönster|n|Das [Fenster] ist groß.|Fönstret är stort.|Jämför svenskans <b>fönster</b>.
+die Wand (Wände)|vägg|f|Das Bild ist an der [Wand].|Tavlan sitter på väggen.|Plural med omljud: Wände. Obs. die. Används om väggar både inne och ute.
+der Stock|våning|m|Wir wohnen im dritten [Stock].|Vi bor på tredje våningen.|Im ersten Stock = en trappa upp.
+die Etage (-n)|våning|f|Mein Zimmer ist in der ersten [Etage].|Mitt rum är på första våningen.|Uttalas som på franska: e-ta-sche.
+das Bett (-en)|säng|n|Das [Bett] ist neu.|Sängen är ny.|Jämför engelskans <b>bed</b>. Ins Bett gehen = gå och lägga sig.
+die Lampe (-n)|lampa|f|Die [Lampe] ist neu.|Lampan är ny.|Jämför svenskans <b>lampa</b>.
+der Spiegel (-)|spegel|m|Der [Spiegel] ist an der Wand.|Spegeln sitter på väggen.|Jämför svenskans <b>spegel</b>.
+das Bild (-er)|bild, tavla|n|Das [Bild] ist schön.|Tavlan är fin.|Jämför svenskans <b>bild</b>.
+die Dusche (-n)|dusch|f|Die [Dusche] ist sauber.|Duschen är ren.|Jämför svenskans <b>dusch</b>.
+die Toilette (-n)|toalett|f|Die [Toilette] ist oben.|Toaletten är på övervåningen.|Uttalas to-a-let-te.
+der Fernseher (-)|tv-apparat|m|Der [Fernseher] ist neu.|Tv:n är ny.|Fern (fjärran) + sehen (se), som engelskans <b>television</b>.
+der Sessel (-)|fåtölj|m|Mein Opa sitzt im [Sessel].|Min morfar sitter i fåtöljen.|Obs. der. Der Stuhl = stolen.
+die Decke (-n)|tak (inomhus); filt|f|Die Lampe ist an der [Decke].|Lampan sitter i taket.|Betyder både innertak och filt. Taket utanpå huset heter das Dach.
+die Kommode (-n)|byrå|f|Die [Kommode] ist neben dem Bett.|Byrån står bredvid sängen.|Jämför svenskans <b>kommod</b>.
+das Kissen (-)|kudde|n|Das [Kissen] liegt auf dem Bett.|Kudden ligger på sängen.|Obs. das.
+das Waschbecken (-)|handfat|n|Das [Waschbecken] ist schmutzig.|Handfatet är smutsigt.|Waschen (tvätta) + das Becken (bäckenet).
+die Mikrowelle (-n)|mikrovågsugn|f|Die [Mikrowelle] ist neu.|Mikron är ny.|Die Welle betyder våg.
+die Garage (-n)|garage|f|Das Auto ist in der [Garage].|Bilen är i garaget.|Obs. die på tyska. Uttalas som på franska.
+der Hof (Höfe)|gård|m|Die Kinder spielen im [Hof].|Barnen leker på gården.|Plural med omljud: Höfe. Jämför svenskans <b>hov</b>.
+das Dach (Dächer)|tak (på ett hus)|n|Das [Dach] ist rot.|Taket är rött.|Plural med omljud: Dächer. Jämför svenskans <b>tak</b>.
+das Licht (-er)|ljus|n|Das [Licht] ist an.|Ljuset är tänt.|Jämför engelskans <b>light</b>.
+liegen|ligga||Das Buch [liegt] auf dem Tisch.|Boken ligger på bordet.|Starkt verb, men regelbundet i presens: ich liege, du liegst, er liegt. Jämför svenskans <b>ligga</b>.
+sitzen|sitta||Die Katze [sitzt] auf dem Sessel.|Katten sitter på fåtöljen.|Starkt verb, men regelbundet i presens: ich sitze, du sitzt, er sitzt.
+legen|lägga||Ich [lege] das Buch auf den Tisch.|Jag lägger boken på bordet.|Regelbundet: ich lege, du legst, er legt. Resultatet: das Buch liegt.
+stellen|ställa||Ich [stelle] die Lampe auf den Tisch.|Jag ställer lampan på bordet.|Regelbundet: ich stelle, du stellst, er stellt. Jämför svenskans <b>ställa</b>.
+setzen|sätta||Ich [setze] das Baby auf den Stuhl.|Jag sätter bebisen på stolen.|Regelbundet: ich setze, du setzt, er setzt. Resultatet: das Baby sitzt.
+öffnen|öppna||Kannst du die Tür [öffnen]?|Kan du öppna dörren?|Regelbundet: ich öffne, du öffnest, er öffnet. Jämför svenskans <b>öppna</b>.
+aufmachen|öppna||Ich möchte das Fenster [aufmachen].|Jag vill öppna fönstret.|Delbart verb: prefixet hamnar sist, Ich mache das Fenster auf. Vardagligare än öffnen.
+zumachen|stänga||Kannst du die Tür [zumachen]?|Kan du stänga dörren?|Delbart verb: prefixet hamnar sist, Ich mache die Tür zu.
+bringen|ta med, komma med||Ich [bringe] dir ein Glas Wasser.|Jag kommer med ett glas vatten till dig.|Regelbundet i presens: ich bringe, du bringst, er bringt. Jämför engelskans <b>bring</b>.
+helfen|hjälpa||Kannst du mir [helfen]?|Kan du hjälpa mig?|Starkt verb: du hilfst, er hilft. Tar dativ: Ich helfe dir.
+brauchen|behöva||Ich [brauche] eine Lampe.|Jag behöver en lampa.|Regelbundet: ich brauche, du brauchst, er braucht. Jämför svenskans <b>bruka</b>.
+finden|hitta; tycka||Ich [finde] mein Buch nicht.|Jag hittar inte min bok.|Regelbundet i presens: ich finde, du findest, er findet. Jämför engelskans <b>find</b>.
+neu|ny||Mein Bett ist [neu].|Min säng är ny.|Jämför svenskans <b>ny</b> och engelskans <b>new</b>.
+schön|fin, vacker||Das Haus ist sehr [schön].|Huset är mycket fint.|Jämför svenskans <b>skön</b>.
+sauber|ren||Das Zimmer ist [sauber].|Rummet är rent.|Motsatsen är schmutzig (smutsig).
+schmutzig|smutsig||Die Dusche ist [schmutzig].|Duschen är smutsig.|Jämför svenskans <b>smutsig</b>.
+leer|tom||Das Glas ist [leer].|Glaset är tomt.|Motsatsen är voll (full).
+voll|full||Der Teller ist [voll].|Tallriken är full.|Jämför svenskans <b>full</b> och engelskans <b>full</b>.
+oben|uppe, på övervåningen||Mein Zimmer ist [oben].|Mitt rum är på övervåningen.|Motsatsen är unten (nere).
+unten|nere, på nedervåningen||Die Garage ist [unten].|Garaget är på nedervåningen.|Motsatsen är oben (uppe).
+links|till vänster||Die Tür ist [links].|Dörren är till vänster.|Motsatsen är rechts (till höger).
+rechts|till höger||Die Toilette ist [rechts].|Toaletten är till höger.|Jämför svenskans <b>rätt</b> och engelskans <b>right</b>.
+hier|här||[Hier] ist mein Zimmer.|Här är mitt rum.|Jämför engelskans <b>here</b> och svenskans <b>här</b>.
+dort|där||Die Lampe ist [dort].|Lampan är där.|Motsatsen är hier (här). Man säger också da.
+neben|bredvid||Die Lampe ist [neben] dem Bett.|Lampan är bredvid sängen.|Neben + dativ när något står still.
+es gibt|det finns||In meinem Zimmer [gibt es] ein Bett.|I mitt rum finns det en säng.|Es gibt + ackusativ: Es gibt einen Tisch.
+die Hausnummer (-n)|gatunummer|f|Was ist deine [Hausnummer]?|Vilket nummer bor du på?|Das Haus (huset) + die Nummer (numret).
+alles|allt||[Alles] ist sauber.|Allt är rent.|Motsatsen är nichts (ingenting).
+nichts|ingenting||Ich esse heute [nichts].|Jag äter ingenting i dag.|Jämför engelskans <b>nothing</b>.
+etwas|något, lite||Ich brauche [etwas] Hilfe.|Jag behöver lite hjälp.|Vardagligt säger man ofta was.
+lassen|låta; lämna||Ich [lasse] das Buch hier.|Jag lämnar boken här.|Starkt verb: du lässt, er lässt. Jämför svenskans <b>låta</b> och engelskans <b>let</b>.
+das Zuhause|hem|n|Mein [Zuhause] ist klein, aber schön.|Mitt hem är litet men fint.|Från zu Hause (hemma). Inget plural.
+das Poster (-)|affisch|n|Das [Poster] ist an der Wand.|Affischen sitter på väggen.|Från engelskan <b>poster</b>.
+die Wohnung (-en)|lägenhet|f|Unsere [Wohnung] ist klein, aber schön.|Vår lägenhet är liten men fin.|Plural: die Wohnungen. Hör till verbet wohnen (bo).
+das Zimmer (-)|rum|n|Mein [Zimmer] ist oben.|Mitt rum ligger en trappa upp.|Plural: die Zimmer. Jämför svenskans <b>timmer</b> (trä att bygga med).
+die Küche (-n)|kök|f|Wir essen in der [Küche].|Vi äter i köket.|Plural: die Küchen. Jämför svenskans <b>kök</b> och engelskans <b>kitchen</b>.
+das Bad (Bäder)|badrum; bad|n|Das [Bad] ist neben meinem Zimmer.|Badrummet ligger bredvid mitt rum.|Plural: die Bäder. Jämför svenskans <b>bad</b>.
+der Garten (Gärten)|trädgård|m|Wir haben einen großen [Garten].|Vi har en stor trädgård.|Plural: die Gärten. Jämför svenskans <b>gård</b> och engelskans <b>garden</b>.
+suchen|leta efter, söka||Ich [suche] meinen Schlüssel.|Jag letar efter min nyckel.|Regelbundet: ich suche, du suchst, er sucht. Jämför svenskans <b>söka</b>.
+#e8|Kap 8 · In der Stadt
+die Stadt (Städte)|stad|f|Die [Stadt] ist groß.|Staden är stor.|Plural med omljud: Städte. Jämför svenskans <b>stad</b>.
+die Straße (-n)|gata|f|Die [Straße] ist lang.|Gatan är lång.|Obs. ß. Jämför engelskans <b>street</b>.
+der Platz (Plätze)|torg, plats|m|Der [Platz] ist sehr schön.|Torget är mycket fint.|Plural med omljud: Plätze.
+der Bus (-se)|buss|m|Ich fahre mit dem [Bus].|Jag åker buss.|Plural: Busse.
+die Bahn (-en)|tåg, bana|f|Ich fahre mit der [Bahn].|Jag åker tåg.|Jämför svenskans <b>bana</b> och järnväg.
+das Auto (-s)|bil|n|Das [Auto] ist rot.|Bilen är röd.|Obs. das.
+das Taxi (-s)|taxi|n|Wir nehmen ein [Taxi].|Vi tar en taxi.|Obs. das.
+die Post|post, postkontor|f|Die [Post] ist neben der Bank.|Posten ligger bredvid banken.|Både posten och postkontoret.
+die Bank (-en)|bank|f|Die [Bank] ist im Zentrum.|Banken ligger i centrum.|Die Bank (Bänke) betyder också bänk.
+die Polizei|polis (myndigheten)|f|Die [Polizei] hilft.|Polisen hjälper till.|Betonas på sista stavelsen.
+der Polizist (-en)|polis, polisman|m|Der [Polizist] ist nett.|Polisen är trevlig.|Om en person. Plural Polizisten.
+die Polizistin (-nen)|polis (kvinna)|f|Die [Polizistin] hilft mir.|Polisen hjälper mig.|Om en kvinna. Plural Polizistinnen.
+die Kirche (-n)|kyrka|f|Die [Kirche] ist alt.|Kyrkan är gammal.|Jämför svenskans <b>kyrka</b> och engelskans <b>church</b>.
+das Rathaus (-häuser)|rådhus, stadshus|n|Das [Rathaus] ist am Marktplatz.|Rådhuset ligger vid torget.|Der Rat (rådet) + das Haus.
+das Zentrum (Zentren)|centrum|n|Wir wohnen im [Zentrum].|Vi bor i centrum.|Plural: Zentren.
+der Markt (Märkte)|marknad, torg|m|Wir kaufen Äpfel auf dem [Markt].|Vi köper äpplen på torget.|Plural med omljud: Märkte.
+der Marktplatz (-plätze)|torg|m|Der [Marktplatz] ist im Zentrum.|Torget ligger i centrum.|Der Markt + der Platz.
+der Laden (Läden)|affär, butik|m|Der [Laden] ist klein.|Affären är liten.|Plural med omljud: Läden. Vanligt ord för en mindre affär.
+der Kiosk (-e)|kiosk|m|Ich kaufe eine Cola am [Kiosk].|Jag köper en cola i kiosken.|Samma ord som på svenska.
+die Buchhandlung (-en)|bokhandel|f|Die [Buchhandlung] ist neben der Post.|Bokhandeln ligger bredvid posten.|Das Buch (boken) + die Handlung (handeln).
+das Büro (-s)|kontor|n|Meine Mutter arbeitet im [Büro].|Min mamma arbetar på kontor.|Jämför svenskans <b>byrå</b>.
+der Dom (-e)|domkyrka|m|Der [Dom] ist sehr alt.|Domkyrkan är mycket gammal.|Jämför svenskans <b>domkyrka</b>.
+die Burg (-en)|borg|f|Die [Burg] ist auf dem Berg.|Borgen ligger på berget.|Jämför svenskans <b>borg</b>.
+das Schloss (Schlösser)|slott; lås|n|Das [Schloss] ist schön.|Slottet är vackert.|Plural med omljud: Schlösser. Jämför svenskans <b>slott</b>.
+der Turm (Türme)|torn|m|Der [Turm] ist sehr alt.|Tornet är mycket gammalt.|Plural med omljud: Türme. Jämför svenskans <b>torn</b>.
+die Brücke (-n)|bro|f|Die [Brücke] ist lang.|Bron är lång.|Jämför svenskans <b>brygga</b> och engelskans <b>bridge</b>.
+der Fluss (Flüsse)|flod, å|m|Der [Fluss] ist groß.|Floden är stor.|Plural med omljud: Flüsse. Jämför svenskans <b>flöde</b>.
+das Schiff (-e)|fartyg, båt|n|Das [Schiff] ist groß.|Fartyget är stort.|Jämför svenskans <b>skepp</b> och engelskans <b>ship</b>.
+das Boot (-e)|båt|n|Das [Boot] ist klein.|Båten är liten.|Jämför engelskans <b>boat</b> och svenskans <b>båt</b>.
+das Motorrad (-räder)|motorcykel|n|Mein Onkel hat ein [Motorrad].|Min morbror har en motorcykel.|Der Motor + das Rad (hjulet).
+das Rad (Räder)|cykel; hjul|n|Ich fahre mit dem [Rad].|Jag cyklar.|Plural med omljud: Räder. Kortform av das Fahrrad.
+die Mitte|mitt|f|Der Platz ist in der [Mitte] der Stadt.|Torget ligger mitt i staden.|Jämför svenskans <b>mitt</b>.
+der Ort (-e)|ort, plats|m|Der [Ort] ist klein.|Orten är liten.|Samma som svenskans <b>ort</b>.
+die Insel (-n)|ö|f|Die [Insel] ist schön.|Ön är vacker.|Jämför engelskans <b>island</b>.
+die Welt (-en)|värld|f|Die [Welt] ist groß.|Världen är stor.|Jämför svenskans <b>värld</b> och engelskans <b>world</b>.
+nah|nära||Die Post ist [nah].|Posten ligger nära.|Motsatsen är weit weg (långt bort).
+weit weg|långt bort||Der Zoo ist [weit weg].|Djurparken ligger långt bort.|Motsatsen är nah (nära).
+zurück|tillbaka||Ich fahre mit dem Bus [zurück].|Jag åker tillbaka med bussen.|Används ofta i delbara verb: zurückfahren.
+vorbei|förbi||Der Bus fährt [vorbei].|Bussen åker förbi.|Jämför svenskans <b>förbi</b>.
+bis|till, tills||Ich fahre [bis] zur Kirche.|Jag åker till kyrkan.|Bis morgen! = Vi ses i morgon!
+dorthin|dit||Wie komme ich [dorthin]?|Hur kommer jag dit?|Dort (där) + hin (dit).
+die Hilfe|hjälp|f|Ich brauche [Hilfe].|Jag behöver hjälp.|Jämför verbet helfen (hjälpa).
+der Kilometer (-)|kilometer|m|Das Zentrum ist zwei [Kilometer] weit weg.|Centrum ligger två kilometer bort.|Obs. der.
+der Meter (-)|meter|m|Die Post ist hundert [Meter] weit weg.|Posten ligger hundra meter bort.|Obs. der.
+schnell|snabb, fort||Das Taxi ist [schnell].|Taxin är snabb.|Jämför svenskans <b>snäll</b>, som förr betydde snabb.
+bleiben|stanna||Ich [bleibe] heute zu Hause.|Jag stannar hemma i dag.|Starkt verb, men regelbundet i presens: ich bleibe, du bleibst, er bleibt. Falsk vän: betyder inte bli!
+zwischen|mellan||Die Bank ist [zwischen] der Post und der Kirche.|Banken ligger mellan posten och kyrkan.|Zwischen + dativ när något står still.
+vor|framför, före||Das Taxi ist [vor] dem Rathaus.|Taxin är framför rådhuset.|Vor + dativ när något står still. Jämför engelskans <b>before</b>.
+hinter|bakom||Der Park ist [hinter] der Schule.|Parken ligger bakom skolan.|Jämför engelskans <b>behind</b>.
+wohin|vart||[Wohin] fährst du?|Vart åker du?|Wo = var, wohin = vart, woher = varifrån.
+der Parkplatz (-plätze)|parkeringsplats|m|Der [Parkplatz] ist voll.|Parkeringen är full.|Parken (parkera) + der Platz.
+der Job (-s)|jobb|m|Mein Bruder hat einen [Job] im Café.|Min bror har ett jobb på ett kafé.|Från engelskan <b>job</b>. Obs. der.
+die Ärztin (-nen)|läkare (kvinna)|f|Die [Ärztin] ist sehr nett.|Läkaren är mycket trevlig.|Om en man: der Arzt.
+der Eingang (-gänge)|ingång|m|Wo ist der [Eingang]?|Var är ingången?|Plural med omljud: Eingänge. Jämför svenskans <b>ingång</b>.
+der Ausgang (-gänge)|utgång|m|Der [Ausgang] ist links.|Utgången är till vänster.|Plural med omljud: Ausgänge. Jämför svenskans <b>utgång</b>.
+die Information (-en)|information|f|Ich brauche eine [Information].|Jag behöver en upplysning.|Obs. -tion uttalas ungefär tsjon.
+die Region (-en)|region, trakt|f|Die [Region] ist sehr schön.|Regionen är mycket vacker.|Jämför svenskans <b>region</b>.
+die Hauptstraße (-n)|huvudgata, storgata|f|Die Bank ist in der [Hauptstraße].|Banken ligger på huvudgatan.|Das Haupt (huvudet) + die Straße.
+der Bahnhof (Bahnhöfe)|järnvägsstation|m|Der [Bahnhof] ist im Zentrum.|Järnvägsstationen ligger i centrum.|Plural: die Bahnhöfe. Sammansatt av <b>Bahn</b> (bana, tåg) och <b>Hof</b> (gård).
+der Zug (Züge)|tåg|m|Der [Zug] fährt um zehn Uhr.|Tåget går klockan tio.|Plural: die Züge. Hör till verbet ziehen (dra).
+die Haltestelle (-n)|hållplats|f|Die [Haltestelle] ist gegenüber vom Park.|Hållplatsen ligger mittemot parken.|Plural: die Haltestellen. Sammansatt av <b>halten</b> (hålla, stanna) och <b>Stelle</b> (ställe).
+das Hotel (-s)|hotell|n|Unser [Hotel] ist am Marktplatz.|Vårt hotell ligger vid torget.|Plural: die Hotels. Samma ord som på svenska.
+geradeaus|rakt fram||Gehen Sie hier [geradeaus].|Gå rakt fram här.|Sammansatt av <b>gerade</b> (rak) och <b>aus</b> (ut).
+weit|långt (bort); vid||Ist der Bahnhof [weit]?|Är det långt till järnvägsstationen?|Motsatsen är nah (nära). Jämför svenskans <b>vid</b> och engelskans <b>wide</b>.
+#er|Redemittel · Nützliche Sätze
+Wie heißt du?|Vad heter du?||[Wie heißt du]? – Ich heiße Lena.|Vad heter du? – Jag heter Lena.|Till en vuxen man inte känner: Wie heißen Sie?|<b>wie</b> hur · <b>heißt</b> heter · <b>du</b> du → "hur heter du"
+Ich heiße …|Jag heter …||Hallo, [ich heiße] Tom.|Hej, jag heter Tom.|Man kan också säga Mein Name ist Tom.|<b>ich</b> jag · <b>heiße</b> heter → "jag heter"
+Wie alt bist du?|Hur gammal är du?||[Wie alt bist du]? – Ich bin fünfzehn.|Hur gammal är du? – Jag är femton.|Svaret: Ich bin … Jahre alt.|<b>wie</b> hur · <b>alt</b> gammal · <b>bist</b> är · <b>du</b> du → "hur gammal är du"
+Woher kommst du?|Var kommer du ifrån?||[Woher kommst du]? – Aus Schweden.|Var kommer du ifrån? – Från Sverige.|Svaret: Ich komme aus …|<b>woher</b> varifrån · <b>kommst</b> kommer · <b>du</b> du → "varifrån kommer du"
+Wo wohnst du?|Var bor du?||[Wo wohnst du]? – In Stockholm.|Var bor du? – I Stockholm.|Svaret: Ich wohne in …|<b>wo</b> var · <b>wohnst</b> bor · <b>du</b> du → "var bor du"
+Wie geht es dir?|Hur mår du?||Hallo Anna! [Wie geht es dir]?|Hej Anna! Hur mår du?|Kortare: Wie geht's? Till en vuxen: Wie geht es Ihnen?|<b>wie</b> hur · <b>geht</b> går · <b>es</b> det · <b>dir</b> för dig → "hur går det för dig"
+Wie geht es Ihnen?|Hur mår ni? (artigt)||Guten Tag, Frau Weber! [Wie geht es Ihnen]?|God dag, fru Weber! Hur mår ni?|Artig form till vuxna man inte känner väl.|<b>wie</b> hur · <b>geht</b> går · <b>es</b> det · <b>Ihnen</b> för er → "hur går det för er"
+Mir geht es gut.|Jag mår bra.||Danke, [mir geht es gut].|Tack, jag mår bra.|Kortare: Mir geht's gut. Eller bara: Gut, danke.|<b>mir</b> för mig · <b>geht</b> går · <b>es</b> det · <b>gut</b> bra → "för mig går det bra"
+Ich verstehe das nicht.|Jag förstår inte det.||Entschuldigung, [ich verstehe das nicht].|Förlåt, jag förstår inte det.|Bra att kunna i klassrummet.|<b>ich</b> jag · <b>verstehe</b> förstår · <b>das</b> det · <b>nicht</b> inte → "jag förstår det inte"
+Kannst du das bitte wiederholen?|Kan du upprepa det, tack?||[Kannst du das bitte wiederholen]? Ich verstehe das nicht.|Kan du upprepa det? Jag förstår det inte.|Till en lärare eller vuxen: Können Sie das bitte wiederholen?|<b>kannst</b> kan · <b>du</b> du · <b>das</b> det · <b>bitte</b> snälla · <b>wiederholen</b> upprepa → "kan du det snälla upprepa"
+Wie sagt man das auf Deutsch?|Hur säger man det på tyska?||[Wie sagt man das auf Deutsch]? – Das ist ein Stift.|Hur säger man det på tyska? – Det är en penna.|Man pekar på något och frågar.|<b>wie</b> hur · <b>sagt</b> säger · <b>man</b> man · <b>das</b> det · <b>auf</b> på · <b>Deutsch</b> tyska → "hur säger man det på tyska"
+Was bedeutet das?|Vad betyder det?||[Was bedeutet das]? Ich verstehe das Wort nicht.|Vad betyder det? Jag förstår inte ordet.|Man kan också fråga: Was bedeutet … auf Schwedisch?|<b>was</b> vad · <b>bedeutet</b> betyder · <b>das</b> det → "vad betyder det"
+Langsamer, bitte.|Långsammare, tack.||Das ist schwer. [Langsamer, bitte].|Det är svårt. Långsammare, tack.|Langsam = långsam, langsamer = långsammare.|<b>langsamer</b> långsammare · <b>bitte</b> tack, snälla → "långsammare, snälla"
+Ich weiß es nicht.|Jag vet inte.||Wo ist Tom? – [Ich weiß es nicht].|Var är Tom? – Jag vet inte.|Wissen är oregelbundet: ich weiß, du weißt, er weiß.|<b>ich</b> jag · <b>weiß</b> vet · <b>es</b> det · <b>nicht</b> inte → "jag vet det inte"
+Bitte schön.|Varsågod.; Ingen orsak.||Danke! – [Bitte schön].|Tack! – Ingen orsak.|Svar på danke, eller när man ger någon något.|<b>bitte</b> var så god · <b>schön</b> fint → "var så god, fint"
+Bis morgen!|Vi ses i morgon!||Tschüss, Anna! [Bis morgen]!|Hej då, Anna! Vi ses i morgon!|Bis betyder till, tills.|<b>bis</b> till · <b>morgen</b> i morgon → "till i morgon"
+Bis später!|Vi ses senare!||Ich gehe jetzt. [Bis später]!|Jag går nu. Vi ses senare!|Används när man ses igen samma dag.|<b>bis</b> till · <b>später</b> senare → "till senare"
+Bis bald!|Vi ses snart!||Tschüss, Oma! [Bis bald]!|Hej då, mormor! Vi ses snart!|Bald = snart.|<b>bis</b> till · <b>bald</b> snart → "till snart"
+Schönes Wochenende!|Trevlig helg!||Tschüss! [Schönes Wochenende]!|Hej då! Trevlig helg!|Sägs på fredagen. Das Wochenende = helgen.|<b>schönes</b> fin · <b>Wochenende</b> veckoslut → "fint veckoslut"
+Das ist toll!|Vad bra!; Det är jättebra!||Du hast einen Hund? [Das ist toll]!|Har du en hund? Vad kul!|Toll = jättebra, häftigt. Vardagligt.|<b>das</b> det · <b>ist</b> är · <b>toll</b> toppen → "det är toppen"
+Ich habe Hunger.|Jag är hungrig.||Mama, [ich habe Hunger]!|Mamma, jag är hungrig!|På tyska har man hunger. Törstig: Ich habe Durst.|<b>ich</b> jag · <b>habe</b> har · <b>Hunger</b> hunger → "jag har hunger"
+Was kostet das?|Vad kostar det?||[Was kostet das]? – Zwei Euro.|Vad kostar det? – Två euro.|Om flera saker: Was kosten die Äpfel?|<b>was</b> vad · <b>kostet</b> kostar · <b>das</b> det → "vad kostar det"
+Wie viel Uhr ist es?|Vad är klockan?||[Wie viel Uhr ist es]? – Es ist acht Uhr.|Vad är klockan? – Den är åtta.|Man kan också fråga: Wie spät ist es?|<b>wie viel</b> hur mycket · <b>Uhr</b> klocka · <b>ist</b> är · <b>es</b> det → "hur mycket klocka är det"
+Um wie viel Uhr?|Hur dags?||Die Party ist heute. – [Um wie viel Uhr]?|Festen är i dag. – Hur dags?|Svaret: Um acht Uhr (klockan åtta).|<b>um</b> vid · <b>wie viel</b> hur mycket · <b>Uhr</b> klocka → "vid hur mycket klocka"
+Na klar!|Absolut!; Klart!||Kommst du mit? – [Na klar]!|Följer du med? – Klart!|Vardagligt. Man kan också säga bara Klar!|<b>na</b> nå · <b>klar</b> klart → "nå, klart"
+Moment, bitte.|Ett ögonblick, tack.||[Moment, bitte]. Ich komme gleich.|Ett ögonblick. Jag kommer strax.|Der Moment = ögonblicket.|<b>Moment</b> ögonblick · <b>bitte</b> tack, snälla → "ögonblick, snälla"
+Wie schreibt man das?|Hur stavar man det?||[Wie schreibt man das]? – M-A-X.|Hur stavar man det? – M-A-X.|Svara gärna genom att buchstabieren (stava).|<b>wie</b> hur · <b>schreibt</b> skriver · <b>man</b> man · <b>das</b> det → "hur skriver man det"
+Ich komme aus Schweden.|Jag kommer från Sverige.||Hallo, ich bin Lisa. [Ich komme aus Schweden].|Hej, jag är Lisa. Jag kommer från Sverige.|Aus = från. Wir kommen aus Schweden.|<b>ich</b> jag · <b>komme</b> kommer · <b>aus</b> ur, från · <b>Schweden</b> Sverige → "jag kommer från Sverige"
+Ich bin sechzehn Jahre alt.|Jag är sexton år gammal.||Ich heiße Jonas. [Ich bin sechzehn Jahre alt].|Jag heter Jonas. Jag är sexton år.|Man kan också säga bara Ich bin sechzehn.|<b>ich</b> jag · <b>bin</b> är · <b>sechzehn</b> sexton · <b>Jahre</b> år · <b>alt</b> gammal → "jag är sexton år gammal"
+Wie findest du das?|Vad tycker du om det?||Das ist mein Zimmer. [Wie findest du das]?|Det här är mitt rum. Vad tycker du om det?|Finden betyder här tycka.|<b>wie</b> hur · <b>findest</b> finner · <b>du</b> du · <b>das</b> det → "hur finner du det"
+Das gefällt mir.|Det tycker jag om.||Das Bild ist schön. [Das gefällt mir].|Tavlan är fin. Den tycker jag om.|Motsatsen: Das gefällt mir nicht.|<b>das</b> det · <b>gefällt</b> behagar · <b>mir</b> mig → "det behagar mig"
+Wo ist die Toilette?|Var är toaletten?||Entschuldigung, [wo ist die Toilette]?|Ursäkta, var är toaletten?|Svaret kan vara: Oben links.|<b>wo</b> var · <b>ist</b> är · <b>die</b> den · <b>Toilette</b> toalett → "var är toaletten"
+Wie komme ich zum Bahnhof?|Hur kommer jag till stationen?||Entschuldigung, [wie komme ich zum Bahnhof]?|Ursäkta, hur kommer jag till stationen?|Zum = zu dem. Der Bahnhof = järnvägsstationen.|<b>wie</b> hur · <b>komme</b> kommer · <b>ich</b> jag · <b>zum</b> till · <b>Bahnhof</b> station → "hur kommer jag till stationen"
+Was machst du gern?|Vad tycker du om att göra?||[Was machst du gern]? – Ich spiele gern Fußball.|Vad tycker du om att göra? – Jag spelar gärna fotboll.|Svaret: Ich … gern.|<b>was</b> vad · <b>machst</b> gör · <b>du</b> du · <b>gern</b> gärna → "vad gör du gärna"
+Hast du Geschwister?|Har du syskon?||[Hast du Geschwister]? – Ja, einen Bruder.|Har du syskon? – Ja, en bror.|Die Geschwister = syskon, finns nästan bara i plural.|<b>hast</b> har · <b>du</b> du · <b>Geschwister</b> syskon → "har du syskon"
+Was ist das?|Vad är det?||[Was ist das]? – Das ist ein Radiergummi.|Vad är det? – Det är ett suddgummi.|Svaret: Das ist …|<b>was</b> vad · <b>ist</b> är · <b>das</b> det → "vad är det"
+Ich habe keine Zeit.|Jag har inte tid.||Heute [habe ich keine Zeit].|I dag har jag inte tid.|Kein används före substantiv i stället för nicht.|<b>ich</b> jag · <b>habe</b> har · <b>keine</b> ingen · <b>Zeit</b> tid → "jag har ingen tid"
+Bis dann!|Vi ses!||Okay, um acht Uhr. [Bis dann]!|Okej, klockan åtta. Vi ses då!|Används när man har bestämt en tid.|<b>bis</b> till · <b>dann</b> då → "till då"
+Ich möchte bitte …|Jag skulle vilja ha …||[Ich möchte bitte] eine Cola.|Jag skulle vilja ha en cola, tack.|Artigt när man beställer eller köper något.|<b>ich</b> jag · <b>möchte</b> skulle vilja · <b>bitte</b> tack, snälla → "jag skulle vilja, snälla"
+Wie ist deine Handynummer?|Vad har du för mobilnummer?||[Wie ist deine Handynummer]? – Null, sieben, zwei …|Vad har du för mobilnummer? – Noll, sju, två …|Das Handy = mobilen på tyska.|<b>wie</b> hur · <b>ist</b> är · <b>deine</b> ditt · <b>Handynummer</b> mobilnummer → "hur är ditt mobilnummer"
+Herzlich willkommen!|Hjärtligt välkommen!||[Herzlich willkommen] in Deutschland!|Hjärtligt välkommen till Tyskland!|Jämför svenskans <b>hjärtligt välkommen</b>.|<b>herzlich</b> hjärtligt · <b>willkommen</b> välkommen → "hjärtligt välkommen"

@@ -1,0 +1,782 @@
+[
+{
+"id": "wortbild-001",
+"topic": "wortbild",
+"rule": "wb-prefix",
+"q": "Die neue Studie [widerlegt] die alte Theorie.",
+"alt": [
+"legt wider",
+"gewiderlegt",
+"widerlegen"
+],
+"why": "wider- är här oskiljbart: widerlegt, hat widerlegt.",
+"sv": "Den nya studien vederlägger den gamla teorin."
+},
+{
+"id": "wortbild-002",
+"topic": "wortbild",
+"rule": "wb-subst",
+"q": "Die [Glaubwürdigkeit] der Quelle ist umstritten.",
+"alt": [
+"Glaubwürdigheit",
+"Glaubwürdigung",
+"Glaubwürdigschaft"
+],
+"why": "Adjektiv på -ig får -keit: würdig → Würdigkeit.",
+"sv": "Källans trovärdighet är omstridd."
+},
+{
+"id": "wortbild-003",
+"topic": "wortbild",
+"rule": "wb-komp",
+"q": "Die [Forschungsergebnisse] werden im Herbst veröffentlicht.",
+"alt": [
+"Forschungergebnisse",
+"Forschungenergebnisse",
+"Forschensergebnisse"
+],
+"why": "Efter -ung kommer alltid fog-s i sammansättningar: Forschung + s + Ergebnisse.",
+"sv": "Forskningsresultaten publiceras på hösten."
+},
+{
+"id": "mittelfeld-001",
+"topic": "mittelfeld",
+"rule": "mf-pron",
+"q": "Ich habe [es ihr] gestern gegeben.",
+"alt": [
+"ihr es",
+"es sie",
+"sie es"
+],
+"why": "Två pronomen: ackusativ före dativ (es ihr). Två substantiv skulle ha dativ före ackusativ.",
+"sv": "Jag gav henne det i går."
+},
+{
+"id": "mittelfeld-002",
+"topic": "mittelfeld",
+"rule": "mf-tekamolo",
+"q": "Sie ist [gestern wegen des Streiks mit dem Taxi] zur Probe gefahren.",
+"alt": [
+"mit dem Taxi gestern wegen des Streiks",
+"wegen des Streiks mit dem Taxi gestern",
+"mit dem Taxi wegen des Streiks gestern"
+],
+"why": "Te-ka-mo-lo: tid (gestern), orsak (wegen des Streiks), sätt (mit dem Taxi), plats (zur Probe).",
+"sv": "Hon åkte i går taxi till repetitionen på grund av strejken."
+},
+{
+"id": "mittelfeld-003",
+"topic": "mittelfeld",
+"rule": "mf-reflex",
+"q": "Gestern hat [sich] die Professorin bei mir gemeldet.",
+"alt": [
+"mich",
+"sie",
+"ihr"
+],
+"why": "Reflexivpronomenet sich står gärna tidigt i mittfältet, före substantivsubjektet.",
+"sv": "I går hörde professorn av sig till mig."
+},
+{
+"id": "k1ref-001",
+"topic": "k1ref",
+"rule": "kr-rede",
+"q": "Die Autorin betont, die Quellenlage [sei] sehr dünn.",
+"alt": [
+"seien",
+"seiest",
+"sein"
+],
+"why": "Konjunktiv I av sein i tredje person singular: sei.",
+"sv": "Författaren betonar att källäget är mycket tunt."
+},
+{
+"id": "k1ref-002",
+"topic": "k1ref",
+"rule": "kr-ersatz",
+"q": "Die Forscher behaupten, sie [hätten] neue Belege gefunden.",
+"alt": [
+"haben",
+"hatten",
+"hättet"
+],
+"why": "Konjunktiv I av haben i plural (sie haben) ser ut som indikativ, därför används Konjunktiv II: hätten.",
+"sv": "Forskarna påstår att de har hittat nya belägg."
+},
+{
+"id": "k1ref-003",
+"topic": "k1ref",
+"rule": "kr-verg",
+"q": "Laut dem Bericht [habe] der Komponist das Werk nie gehört.",
+"alt": [
+"hat",
+"hatte",
+"haben"
+],
+"why": "Referat i dåtid: Konjunktiv I av haben + particip II (habe … gehört).",
+"sv": "Enligt rapporten hörde tonsättaren aldrig verket."
+},
+{
+"id": "k1ref-004",
+"topic": "k1ref",
+"rule": "kr-einl",
+"q": "Dem Autor [zufolge] war die Uraufführung ein Misserfolg.",
+"alt": [
+"laut",
+"nach der",
+"gemäß von"
+],
+"why": "zufolge står EFTER substantivet (i dativ). Laut står före: laut dem Autor.",
+"sv": "Enligt författaren var urpremiären ett misslyckande."
+},
+{
+"id": "wortbild-004",
+"topic": "wortbild",
+"rule": "wb-prefix",
+"q": "Der Sturm hat das Dach völlig [zerstört].",
+"alt": [
+"verstört",
+"gestört",
+"erstört"
+],
+"why": "zer- betyder sönder: zerstören = förstöra.",
+"sv": "Stormen förstörde taket helt."
+},
+{
+"id": "wortbild-005",
+"topic": "wortbild",
+"rule": "wb-prefix",
+"q": "Die Forscherin hat eine neue Methode [entwickelt].",
+"alt": [
+"verwickelt",
+"gewickelt",
+"zerwickelt"
+],
+"why": "ent- + wickeln: entwickeln = utveckla. verwickeln = inveckla.",
+"sv": "Forskaren har utvecklat en ny metod."
+},
+{
+"id": "wortbild-006",
+"topic": "wortbild",
+"rule": "wb-prefix",
+"q": "Er hat das Gedicht aus dem Russischen [übersetzt].",
+"alt": [
+"übergesetzt",
+"geübersetzt",
+"übersetzte"
+],
+"why": "übersetzen (översätta) är oskiljbart och betonat på -set-: particip übersetzt.",
+"sv": "Han har översatt dikten från ryska."
+},
+{
+"id": "wortbild-007",
+"topic": "wortbild",
+"rule": "wb-prefix",
+"q": "Der Veranstalter hat die Kosten [erstattet].",
+"alt": [
+"zerstattet",
+"entstattet",
+"bestattet"
+],
+"why": "erstatten = ersätta (kostnader). bestatten betyder begrava.",
+"sv": "Arrangören har ersatt kostnaderna."
+},
+{
+"id": "wortbild-008",
+"topic": "wortbild",
+"rule": "wb-prefix",
+"q": "Die Professorin [beantwortete] alle Fragen geduldig.",
+"alt": [
+"antwortete",
+"verantwortete",
+"erantwortete"
+],
+"why": "be- gör verbet transitivt: etwas beantworten (ack.) men auf etwas antworten.",
+"sv": "Professorn besvarade tålmodigt alla frågor."
+},
+{
+"id": "wortbild-009",
+"topic": "wortbild",
+"rule": "wb-subst",
+"q": "Die [Freiheit] der Kunst ist im Grundgesetz geschützt.",
+"alt": [
+"Freikeit",
+"Freiung",
+"Freischaft"
+],
+"why": "Adjektiv + -heit: frei → die Freiheit.",
+"sv": "Konstens frihet är skyddad i grundlagen."
+},
+{
+"id": "wortbild-010",
+"topic": "wortbild",
+"rule": "wb-subst",
+"q": "Die [Wissenschaft] lebt vom kritischen Austausch.",
+"alt": [
+"Wissenheit",
+"Wissung",
+"Wissnis"
+],
+"why": "-schaft bildar kollektiv och abstrakta substantiv: die Wissenschaft.",
+"sv": "Vetenskapen lever av kritiskt utbyte."
+},
+{
+"id": "wortbild-011",
+"topic": "wortbild",
+"rule": "wb-subst",
+"q": "Das [Ergebnis] der Studie war eindeutig.",
+"alt": [
+"Ergebung",
+"Ergebheit",
+"Ergebtum"
+],
+"why": "-nis: ergeben → das Ergebnis (neutrum).",
+"sv": "Studiens resultat var entydigt."
+},
+{
+"id": "wortbild-012",
+"topic": "wortbild",
+"rule": "wb-subst",
+"q": "Das [Eigentum] des Orchesters umfasst drei Stradivari-Geigen.",
+"alt": [
+"Eigenheit",
+"Eigenung",
+"Eigenschaft"
+],
+"why": "-tum: das Eigentum = egendom. Eigenschaft betyder egenskap.",
+"sv": "Orkesterns egendom omfattar tre Stradivariusfioler."
+},
+{
+"id": "wortbild-013",
+"topic": "wortbild",
+"rule": "wb-subst",
+"q": "Die [Möglichkeit], im Ausland zu studieren, ist groß.",
+"alt": [
+"Möglichheit",
+"Möglichung",
+"Möglichschaft"
+],
+"why": "Adjektiv på -lich får -keit: möglich → die Möglichkeit.",
+"sv": "Möjligheten att studera utomlands är stor."
+},
+{
+"id": "wortbild-014",
+"topic": "wortbild",
+"rule": "wb-adj",
+"q": "Ihr Spiel war [fehlerlos].",
+"alt": [
+"fehlerbar",
+"fehlerhaft",
+"fehlersam"
+],
+"why": "-los = utan: fehlerlos = felfri. fehlerhaft betyder tvärtom felaktig.",
+"sv": "Hennes spel var felfritt."
+},
+{
+"id": "wortbild-015",
+"topic": "wortbild",
+"rule": "wb-adj",
+"q": "Die Übersetzung ist leider [fehlerhaft].",
+"alt": [
+"fehlerlos",
+"fehlerlich",
+"fehlerig"
+],
+"why": "-haft = med egenskapen: fehlerhaft = felaktig.",
+"sv": "Översättningen är tyvärr felaktig."
+},
+{
+"id": "wortbild-016",
+"topic": "wortbild",
+"rule": "wb-adj",
+"q": "Er ist ein sehr [sparsamer] Mensch.",
+"alt": [
+"sparbarer",
+"sparloser",
+"sparhafter"
+],
+"why": "-sam = benägen att: sparsam.",
+"sv": "Han är en mycket sparsam människa."
+},
+{
+"id": "wortbild-017",
+"topic": "wortbild",
+"rule": "wb-adj",
+"q": "Die Aufgabe ist [lösbar], aber schwer.",
+"alt": [
+"löslich",
+"lösig",
+"lösesam"
+],
+"why": "-bar = går att: lösbar = går att lösa. löslich betyder löslig (i vätska).",
+"sv": "Uppgiften går att lösa, men är svår."
+},
+{
+"id": "wortbild-018",
+"topic": "wortbild",
+"rule": "wb-komp",
+"q": "Die [Arbeitsbedingungen] im Orchester haben sich verbessert.",
+"alt": [
+"Arbeitbedingungen",
+"Arbeitenbedingungen",
+"Arbeitesbedingungen"
+],
+"why": "Arbeit får fog-s: Arbeitsbedingungen.",
+"sv": "Arbetsvillkoren i orkestern har förbättrats."
+},
+{
+"id": "wortbild-019",
+"topic": "wortbild",
+"rule": "wb-komp",
+"q": "Die [Universitätsbibliothek] ist rund um die Uhr geöffnet.",
+"alt": [
+"Universitätbibliothek",
+"Universitätenbibliothek",
+"Universitätesbibliothek"
+],
+"why": "Efter -tät kommer fog-s: Universitätsbibliothek.",
+"sv": "Universitetsbiblioteket är öppet dygnet runt."
+},
+{
+"id": "wortbild-020",
+"topic": "wortbild",
+"rule": "wb-komp",
+"q": "Das [Liederbuch] liegt auf dem Klavier.",
+"alt": [
+"Liedbuchs",
+"Liedesbuch",
+"Liedsbuch"
+],
+"why": "Fogen -er- (pluralform): Lied → Liederbuch.",
+"sv": "Sångboken ligger på pianot."
+},
+{
+"id": "mittelfeld-004",
+"topic": "mittelfeld",
+"rule": "mf-pron",
+"q": "Kannst du [mir das Buch] morgen mitbringen?",
+"alt": [
+"das Buch mir",
+"das Buch mich",
+"mich das Buch"
+],
+"why": "Pronomen står före substantiv i mittfältet: mir (dativ) före das Buch.",
+"sv": "Kan du ta med boken till mig i morgon?"
+},
+{
+"id": "mittelfeld-005",
+"topic": "mittelfeld",
+"rule": "mf-pron",
+"q": "Die Professorin hat [ihm die Noten] geschickt.",
+"alt": [
+"die Noten ihm",
+"ihn die Noten",
+"die Noten ihn"
+],
+"why": "Pronomenet (ihm, dativ) står före substantivet.",
+"sv": "Professorn har skickat noterna till honom."
+},
+{
+"id": "mittelfeld-006",
+"topic": "mittelfeld",
+"rule": "mf-pron",
+"q": "Ich habe [dem Dirigenten die Partitur] gegeben.",
+"alt": [
+"die Partitur dem Dirigenten",
+"den Dirigenten die Partitur",
+"dem Dirigent die Partitur"
+],
+"why": "Två substantiv: dativ före ackusativ (normal ordföljd).",
+"sv": "Jag har gett dirigenten partituret."
+},
+{
+"id": "mittelfeld-007",
+"topic": "mittelfeld",
+"rule": "mf-pron",
+"q": "Ich habe [sie ihm] gestern gegeben.",
+"alt": [
+"ihm sie",
+"sie ihn",
+"ihn sie"
+],
+"why": "Två pronomen: ackusativ (sie) före dativ (ihm).",
+"sv": "Jag gav den till honom i går."
+},
+{
+"id": "mittelfeld-008",
+"topic": "mittelfeld",
+"rule": "mf-tekamolo",
+"q": "Wir fahren [morgen mit dem Zug] nach Leipzig.",
+"alt": [
+"mit dem Zug morgen",
+"nach mit dem Zug morgen",
+"mit morgen dem Zug"
+],
+"why": "Tid (morgen) före sätt (mit dem Zug) före plats (nach Leipzig).",
+"sv": "Vi åker tåg till Leipzig i morgon."
+},
+{
+"id": "mittelfeld-009",
+"topic": "mittelfeld",
+"rule": "mf-tekamolo",
+"q": "Sie hat [wegen der Prüfung] nachts in der Bibliothek gearbeitet.",
+"alt": [
+"wegen die Prüfung",
+"wegen dem Prüfung",
+"wegen den Prüfung"
+],
+"why": "wegen + genitiv: wegen der Prüfung. Orsaken står före plats i mittfältet.",
+"sv": "Hon har arbetat nätterna i biblioteket på grund av provet."
+},
+{
+"id": "mittelfeld-010",
+"topic": "mittelfeld",
+"rule": "mf-tekamolo",
+"q": "Er ist [trotz des Regens zu Fuß] zur Hochschule gegangen.",
+"alt": [
+"zu Fuß trotz des Regens zur",
+"zur trotz des Regens zu Fuß",
+"zu Fuß zur trotz des Regens"
+],
+"why": "Orsak/medgivande (trotz des Regens) före sätt (zu Fuß) före plats.",
+"sv": "Han gick till högskolan till fots trots regnet."
+},
+{
+"id": "mittelfeld-011",
+"topic": "mittelfeld",
+"rule": "mf-nicht",
+"q": "Ich habe das Buch [nicht] gelesen.",
+"alt": [
+"nicht das Buch",
+"gelesen nicht",
+"das nicht Buch"
+],
+"why": "Vid satsnegation står nicht efter det bestämda objektet, före verbet sist.",
+"sv": "Jag har inte läst boken."
+},
+{
+"id": "mittelfeld-012",
+"topic": "mittelfeld",
+"rule": "mf-nicht",
+"q": "Sie wohnt [nicht] in Berlin, sondern in Potsdam.",
+"alt": [
+"Berlin nicht",
+"in nicht",
+"wohnt nicht"
+],
+"why": "nicht före det som negeras (in Berlin) när sondern följer.",
+"sv": "Hon bor inte i Berlin utan i Potsdam."
+},
+{
+"id": "mittelfeld-013",
+"topic": "mittelfeld",
+"rule": "mf-nicht",
+"q": "Er hat die Professorin gestern [nicht] angerufen.",
+"alt": [
+"nicht gestern die",
+"nicht die",
+"angerufen nicht"
+],
+"why": "nicht står sent i mittfältet, efter objekt och tidsadverb, före particip.",
+"sv": "Han ringde inte professorn i går."
+},
+{
+"id": "mittelfeld-014",
+"topic": "mittelfeld",
+"rule": "mf-nicht",
+"q": "Wir sind [nicht] mit dem Auto gekommen.",
+"alt": [
+"mit nicht dem",
+"gekommen nicht",
+"dem nicht Auto"
+],
+"why": "nicht före prepositionsfras som hör nära verbet (mit dem Auto).",
+"sv": "Vi kom inte med bil."
+},
+{
+"id": "mittelfeld-015",
+"topic": "mittelfeld",
+"rule": "mf-reflex",
+"q": "Deshalb hat [sich] der Vorstand für die Renovierung entschieden.",
+"alt": [
+"ihn",
+"ihm",
+"uns"
+],
+"why": "sich entscheiden: reflexivpronomenet står tidigt, gärna före substantivsubjektet.",
+"sv": "Därför beslutade styrelsen om renoveringen."
+},
+{
+"id": "mittelfeld-016",
+"topic": "mittelfeld",
+"rule": "mf-reflex",
+"q": "Gestern haben [sich] viele Studierende über die Gebühren beschwert.",
+"alt": [
+"ihnen",
+"sie",
+"euch"
+],
+"why": "sich beschweren; sich före substantivsubjektet viele Studierende.",
+"sv": "I går klagade många studenter på avgifterna."
+},
+{
+"id": "mittelfeld-017",
+"topic": "mittelfeld",
+"rule": "mf-reflex",
+"q": "Ich weiß, dass [sich] die Situation bald ändert.",
+"alt": [
+"sie",
+"ihr",
+"ihm"
+],
+"why": "I bisats: sich tidigt, före substantivsubjektet.",
+"sv": "Jag vet att situationen snart ändras."
+},
+{
+"id": "mittelfeld-018",
+"topic": "mittelfeld",
+"rule": "mf-pron",
+"q": "Hat [es dir] gefallen?",
+"alt": [
+"dir es",
+"es dich",
+"dich es"
+],
+"why": "Två pronomen: es (nominativ/ack.) först, sedan dativ dir.",
+"sv": "Tyckte du om det?"
+},
+{
+"id": "mittelfeld-019",
+"topic": "mittelfeld",
+"rule": "mf-tekamolo",
+"q": "Das Orchester probt [jeden Morgen konzentriert im großen Saal].",
+"alt": [
+"im großen Saal konzentriert jeden Morgen",
+"konzentriert im großen Saal jeden Morgen",
+"im großen Saal jeden Morgen konzentriert"
+],
+"why": "Tid – sätt – plats.",
+"sv": "Orkestern repeterar koncentrerat i stora salen varje morgon."
+},
+{
+"id": "mittelfeld-020",
+"topic": "mittelfeld",
+"rule": "mf-nicht",
+"q": "Das ist [nicht] richtig.",
+"alt": [
+"richtig nicht",
+"nichts",
+"kein"
+],
+"why": "nicht före predikativt adjektiv.",
+"sv": "Det är inte rätt."
+},
+{
+"id": "k1ref-005",
+"topic": "k1ref",
+"rule": "kr-rede",
+"q": "Der Minister erklärte, er [habe] von dem Vorfall nichts gewusst.",
+"alt": [
+"hat",
+"hatte",
+"haben"
+],
+"why": "Konjunktiv I av haben, tredje person singular: habe.",
+"sv": "Ministern förklarade att han inte hade vetat något om händelsen."
+},
+{
+"id": "k1ref-006",
+"topic": "k1ref",
+"rule": "kr-rede",
+"q": "Die Studie zeige, so die Autoren, dass Musik das Gedächtnis [stärke].",
+"alt": [
+"stärken",
+"stärkte",
+"stärkst"
+],
+"why": "Konjunktiv I: er/sie/es stärke (stam + e).",
+"sv": "Studien visar, enligt författarna, att musik stärker minnet."
+},
+{
+"id": "k1ref-007",
+"topic": "k1ref",
+"rule": "kr-rede",
+"q": "Die Intendantin sagte, man [könne] die Preise nicht senken.",
+"alt": [
+"kann",
+"konnte",
+"können"
+],
+"why": "Konjunktiv I av können: man könne.",
+"sv": "Intendenten sa att man inte kan sänka priserna."
+},
+{
+"id": "k1ref-008",
+"topic": "k1ref",
+"rule": "kr-rede",
+"q": "Er behauptet, die Aufnahme [sei] gefälscht.",
+"alt": [
+"ist",
+"wäre gewesen",
+"seien"
+],
+"why": "sein i Konjunktiv I: sei.",
+"sv": "Han påstår att inspelningen är förfalskad."
+},
+{
+"id": "k1ref-009",
+"topic": "k1ref",
+"rule": "kr-rede",
+"q": "Die Kritikerin schreibt, das Orchester [spiele] zu laut.",
+"alt": [
+"spielen",
+"spielst",
+"spielte"
+],
+"why": "Konjunktiv I av spielen, tredje person singular: spiele.",
+"sv": "Kritikern skriver att orkestern spelar för högt."
+},
+{
+"id": "k1ref-010",
+"topic": "k1ref",
+"rule": "kr-ersatz",
+"q": "Die Studierenden sagen, sie [hätten] zu wenig Übezeit.",
+"alt": [
+"haben",
+"hatten",
+"hättet"
+],
+"why": "Konj. I sie haben = indikativ → ersätts med Konj. II hätten.",
+"sv": "Studenterna säger att de har för lite övningstid."
+},
+{
+"id": "k1ref-011",
+"topic": "k1ref",
+"rule": "kr-ersatz",
+"q": "Die Forscher meinen, sie [würden] die Daten bald veröffentlichen.",
+"alt": [
+"werden",
+"wurden",
+"wird"
+],
+"why": "Konj. I sie werden = indikativ → würden.",
+"sv": "Forskarna menar att de snart ska publicera uppgifterna."
+},
+{
+"id": "k1ref-012",
+"topic": "k1ref",
+"rule": "kr-ersatz",
+"q": "Die Musiker erklärten, sie [müssten] mehr verdienen.",
+"alt": [
+"müssen",
+"mussten",
+"musst"
+],
+"why": "Konj. I sie müssen = indikativ → Konj. II müssten.",
+"sv": "Musikerna förklarade att de borde tjäna mer."
+},
+{
+"id": "k1ref-013",
+"topic": "k1ref",
+"rule": "kr-verg",
+"q": "Die Zeitung berichtet, das Konzert [sei] ausverkauft gewesen.",
+"alt": [
+"ist",
+"war",
+"habe"
+],
+"why": "Dåtid i Konj. I med sein: sei … gewesen.",
+"sv": "Tidningen rapporterar att konserten var utsåld."
+},
+{
+"id": "k1ref-014",
+"topic": "k1ref",
+"rule": "kr-verg",
+"q": "Sie erzählt, sie sei 2019 nach Wien [gezogen].",
+"alt": [
+"ziehen",
+"zog",
+"gezieht"
+],
+"why": "Dåtid: sei + particip II (ziehen med sein).",
+"sv": "Hon berättar att hon flyttade till Wien 2019."
+},
+{
+"id": "k1ref-015",
+"topic": "k1ref",
+"rule": "kr-verg",
+"q": "Die Autoren schreiben, sie [hätten] 500 Personen befragt.",
+"alt": [
+"haben",
+"hatten",
+"habe"
+],
+"why": "Dåtid plural: hätten (ersättning, eftersom haben = indikativ) + particip.",
+"sv": "Författarna skriver att de har intervjuat 500 personer."
+},
+{
+"id": "k1ref-016",
+"topic": "k1ref",
+"rule": "kr-einl",
+"q": "[Laut] einer neuen Studie hört jeder Dritte täglich klassische Musik.",
+"alt": [
+"Zufolge",
+"Gemäß von",
+"Nach dem"
+],
+"why": "laut står före substantivet (dativ eller genitiv).",
+"sv": "Enligt en ny studie lyssnar var tredje person på klassisk musik dagligen."
+},
+{
+"id": "k1ref-017",
+"topic": "k1ref",
+"rule": "kr-einl",
+"q": "[Wie] die Autorin betont, ist die Quellenlage unsicher.",
+"alt": [
+"Was",
+"Dass",
+"Als"
+],
+"why": "Wie + källa + verb inleder en hänvisning (indikativ efter wie).",
+"sv": "Som författaren betonar är källäget osäkert."
+},
+{
+"id": "k1ref-018",
+"topic": "k1ref",
+"rule": "kr-einl",
+"q": "Den Angaben des Veranstalters [zufolge] kamen 3 000 Besucher.",
+"alt": [
+"laut",
+"nach",
+"gemäß von"
+],
+"why": "zufolge står efter substantivgruppen i dativ.",
+"sv": "Enligt arrangörens uppgifter kom 3 000 besökare."
+},
+{
+"id": "k1ref-019",
+"topic": "k1ref",
+"rule": "kr-einl",
+"q": "[Nach] Ansicht der Expertin ist die Reform überfällig.",
+"alt": [
+"Laut der",
+"Zufolge",
+"Gemäß von"
+],
+"why": "nach Ansicht/Meinung + genitiv = enligt … uppfattning.",
+"sv": "Enligt expertens uppfattning är reformen på tiden."
+},
+{
+"id": "k1ref-021",
+"topic": "k1ref",
+"rule": "kr-rede",
+"q": "Der Autor vertritt die These, die Oper [bedeute] einen Wendepunkt.",
+"alt": [
+"bedeuten",
+"bedeutest",
+"bedeutete"
+],
+"why": "Konjunktiv I av bedeuten, tredje person singular: bedeute.",
+"sv": "Författaren hävdar att operan innebär en vändpunkt."
+}
+]

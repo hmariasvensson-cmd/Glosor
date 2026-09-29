@@ -1,0 +1,262 @@
+[
+ {
+  "id": "psimp-001",
+  "topic": "psimp",
+  "rule": "psimp-irr",
+  "q": "En 1851, Victor Hugo [fut] obligé de quitter la France.",
+  "alt": [
+   "fit",
+   "eut",
+   "vit"
+  ],
+  "why": "Fut = passé simple av être (blev, var). Fit kommer från faire, eut från avoir och vit från voir.",
+  "sv": "År 1851 blev Victor Hugo tvungen att lämna Frankrike."
+ },
+ {
+  "id": "psimp-002",
+  "topic": "psimp",
+  "rule": "psimp-irr",
+  "q": "Le public [eut] peur quand le rideau tomba soudain.",
+  "alt": [
+   "fut",
+   "fit",
+   "vint"
+  ],
+  "why": "Avoir peur (vara rädd): eut är passé simple av avoir. Fut är être, fit faire och vint venir.",
+  "sv": "Publiken blev rädd när ridån plötsligt föll."
+ },
+ {
+  "id": "psimp-003",
+  "topic": "psimp",
+  "rule": "psimp-irr",
+  "q": "Louis XIV [fit] agrandir le château de Versailles.",
+  "alt": [
+   "fut",
+   "eut",
+   "prit"
+  ],
+  "why": "Fit = passé simple av faire. Faire + infinitiv = låta göra: il fit agrandir (han lät bygga ut).",
+  "sv": "Ludvig XIV lät bygga ut slottet i Versailles."
+ },
+ {
+  "id": "psimp-004",
+  "topic": "psimp",
+  "rule": "psimp-irr",
+  "q": "Soudain, elle [vit] une lumière au bout du couloir.",
+  "alt": [
+   "vint",
+   "fit",
+   "fut"
+  ],
+  "why": "Vit = passé simple av voir (såg). Vint kommer från venir (kom), som ser nästan likadant ut.",
+  "sv": "Plötsligt såg hon ett ljus i slutet av korridoren."
+ },
+ {
+  "id": "psimp-005",
+  "topic": "psimp",
+  "rule": "psimp-irr",
+  "q": "Le lendemain, un messager [vint] annoncer la nouvelle.",
+  "alt": [
+   "vit",
+   "fit",
+   "eut"
+  ],
+  "why": "Vint = passé simple av venir (kom). Venir + infinitiv: kom för att.",
+  "sv": "Dagen därpå kom en budbärare med nyheten."
+ },
+ {
+  "id": "psimp-006",
+  "topic": "psimp",
+  "rule": "psimp-irr",
+  "q": "Il [prit] son violon et commença à jouer.",
+  "alt": [
+   "vint",
+   "fit",
+   "put"
+  ],
+  "why": "Prit = passé simple av prendre (tog). Vint kommer från venir och put från pouvoir.",
+  "sv": "Han tog sin fiol och började spela."
+ },
+ {
+  "id": "psimp-007",
+  "topic": "psimp",
+  "rule": "psimp-irr",
+  "q": "Elle ne [put] retenir ses larmes.",
+  "alt": [
+   "fut",
+   "prit",
+   "vit"
+  ],
+  "why": "Put = passé simple av pouvoir (kunde). Ne put retenir = kunde inte hålla tillbaka.",
+  "sv": "Hon kunde inte hålla tillbaka tårarna."
+ },
+ {
+  "id": "psimp-008",
+  "topic": "psimp",
+  "rule": "psimp-irr",
+  "q": "Ils [durent] partir avant l'aube.",
+  "alt": [
+   "furent",
+   "eurent",
+   "firent"
+  ],
+  "why": "Durent = passé simple av devoir (var tvungna). Furent är être, eurent avoir och firent faire.",
+  "sv": "De var tvungna att ge sig av före gryningen."
+ },
+ {
+  "id": "psimp-009",
+  "topic": "psimp",
+  "rule": "psimp-er",
+  "q": "Le jeune homme [entra] dans le salon sans frapper.",
+  "alt": [
+   "entrit",
+   "entrèrent",
+   "entrai"
+  ],
+  "why": "Verb på -er får -a i tredje person singular: il entra. Entrèrent är plural och entrai är je-formen.",
+  "sv": "Den unge mannen gick in i salongen utan att knacka."
+ },
+ {
+  "id": "psimp-010",
+  "topic": "psimp",
+  "rule": "psimp-er",
+  "q": "Les musiciens [jouèrent] jusqu'à minuit.",
+  "alt": [
+   "jouirent",
+   "joua",
+   "jouâmes"
+  ],
+  "why": "-er-verb i tredje person plural: -èrent (ils jouèrent). Joua är singular och jouâmes är nous-formen.",
+  "sv": "Musikerna spelade till midnatt."
+ },
+ {
+  "id": "psimp-011",
+  "topic": "psimp",
+  "rule": "psimp-er",
+  "q": "La comtesse [regarda] longuement le portrait.",
+  "alt": [
+   "regardit",
+   "regardèrent",
+   "regardai"
+  ],
+  "why": "Regarder är ett -er-verb: elle regarda. Formen på -it finns bara för verb på -ir och -re.",
+  "sv": "Grevinnan betraktade porträttet länge."
+ },
+ {
+  "id": "psimp-012",
+  "topic": "psimp",
+  "rule": "psimp-er",
+  "q": "Nous [arrivâmes] à Paris à la tombée de la nuit.",
+  "alt": [
+   "arrivèrent",
+   "arrivâtes",
+   "arrivai"
+  ],
+  "why": "Nous-formen av -er-verb i passé simple slutar på -âmes: nous arrivâmes. Arrivâtes är vous-formen.",
+  "sv": "Vi kom fram till Paris när det började skymma."
+ },
+ {
+  "id": "psimp-013",
+  "topic": "psimp",
+  "rule": "psimp-er",
+  "q": "Le 14 juillet 1789, les Parisiens [attaquèrent] la Bastille.",
+  "alt": [
+   "attaqua",
+   "attaquirent",
+   "attaquâmes"
+  ],
+  "why": "Les Parisiens är plural: attaquèrent (-èrent för -er-verb).",
+  "sv": "Den 14 juli 1789 angrep parisarna Bastiljen."
+ },
+ {
+  "id": "psimp-014",
+  "topic": "psimp",
+  "rule": "psimp-ir",
+  "q": "Le concert [finit] sous les applaudissements.",
+  "alt": [
+   "fina",
+   "finirent",
+   "finîmes"
+  ],
+  "why": "Verb på -ir får -it i tredje person singular: il finit. Samma form som i presens, så sammanhanget avgör.",
+  "sv": "Konserten slutade under applåder."
+ },
+ {
+  "id": "psimp-015",
+  "topic": "psimp",
+  "rule": "psimp-ir",
+  "q": "Elle [répondit] sans hésiter.",
+  "alt": [
+   "réponda",
+   "répondirent",
+   "répondîmes"
+  ],
+  "why": "Verb på -re får -it: elle répondit. Formen på -a finns bara för -er-verb.",
+  "sv": "Hon svarade utan att tveka."
+ },
+ {
+  "id": "psimp-016",
+  "topic": "psimp",
+  "rule": "psimp-ir",
+  "q": "Les soldats [partirent] à l'aube.",
+  "alt": [
+   "partèrent",
+   "partit",
+   "partîmes"
+  ],
+  "why": "Partir: ils partirent (-irent i plural). Partit är singular.",
+  "sv": "Soldaterna gav sig av i gryningen."
+ },
+ {
+  "id": "psimp-017",
+  "topic": "psimp",
+  "rule": "psimp-ir",
+  "q": "Il [attendit] toute la nuit devant la porte.",
+  "alt": [
+   "attenda",
+   "attendirent",
+   "attendis"
+  ],
+  "why": "Attendre (-re): il attendit. Attendis är je- eller tu-formen.",
+  "sv": "Han väntade hela natten utanför dörren."
+ },
+ {
+  "id": "psimp-018",
+  "topic": "psimp",
+  "rule": "psimp-pers",
+  "q": "Les deux amis [furent] séparés par la guerre.",
+  "alt": [
+   "fut",
+   "firent",
+   "eurent"
+  ],
+  "why": "Les deux amis är plural: furent (être). Fut är singular.",
+  "sv": "De två vännerna skildes åt av kriget."
+ },
+ {
+  "id": "psimp-019",
+  "topic": "psimp",
+  "rule": "psimp-pers",
+  "q": "Ils [firent] le tour de la ville à cheval.",
+  "alt": [
+   "fit",
+   "furent",
+   "virent"
+  ],
+  "why": "Faire le tour = åka runt. Ils → plural: firent. Fit är singular.",
+  "sv": "De red runt staden."
+ },
+ {
+  "id": "psimp-020",
+  "topic": "psimp",
+  "rule": "psimp-pers",
+  "q": "Le couple [eut] trois enfants.",
+  "alt": [
+   "eurent",
+   "fut",
+   "fit"
+  ],
+  "why": "Le couple är singular: eut (avoir). Eurent är plural.",
+  "sv": "Paret fick tre barn."
+ }
+]

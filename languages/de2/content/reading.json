@@ -1,0 +1,1628 @@
+[
+ {
+  "id": "de2-r-b1",
+  "sec": "b1",
+  "title": "Eine E-Mail von Hannah",
+  "lines": [
+   {
+    "fr": "Liebe Elsa,",
+    "sv": "Kära Elsa,"
+   },
+   {
+    "fr": "wie geht's dir? Ich hatte ein tolles Wochenende und möchte dir davon erzählen.",
+    "sv": "hur mår du? Jag hade en toppenhelg och vill berätta om den för dig."
+   },
+   {
+    "fr": "Am Freitag bin ich mit meiner Klasse ins Stadion gegangen. Wir haben ein Fußballspiel gesehen: Bayern gegen Dortmund! Das Stadion war voll, und die Fans haben die ganze Zeit gesungen.",
+    "sv": "På fredagen gick jag till arenan med min klass. Vi såg en fotbollsmatch: Bayern mot Dortmund! Arenan var full, och fansen sjöng hela tiden."
+   },
+   {
+    "fr": "Am Samstag habe ich lange geschlafen. Am Nachmittag bin ich mit meinem Bruder in den Wald gegangen. Wir haben eine Radtour gemacht, aber dann hat es plötzlich geregnet. Wir sind ganz nass nach Hause gekommen!",
+    "sv": "På lördagen sov jag länge. På eftermiddagen gick jag till skogen med min bror. Vi gjorde en cykeltur, men sedan började det plötsligt regna. Vi kom hem alldeles blöta!"
+   },
+   {
+    "fr": "Am Abend war ich auf einer Übernachtungsparty bei Leonie. Wir haben Pizza bestellt, Karten gespielt und bis zwei Uhr gechattet.",
+    "sv": "På kvällen var jag på en sovfest hos Leonie. Vi beställde pizza, spelade kort och chattade till klockan två."
+   },
+   {
+    "fr": "Am Sonntag war ich deshalb sehr müde und habe nichts gemacht.",
+    "sv": "På söndagen var jag därför väldigt trött och gjorde ingenting."
+   },
+   {
+    "fr": "Und du? Was hast du am Wochenende gemacht? Schreib mir bald!",
+    "sv": "Och du? Vad gjorde du i helgen? Skriv snart!"
+   },
+   {
+    "fr": "Liebe Grüße, Hannah",
+    "sv": "Kära hälsningar, Hannah"
+   }
+  ],
+  "questions": [
+   {
+    "type": "detalj",
+    "q": "Vad gjorde Hannah på fredagen?",
+    "opts": [
+     "Hon såg en fotbollsmatch på arenan",
+     "Hon var på en fest",
+     "Hon cyklade",
+     "Hon sov länge"
+    ],
+    "a": 0,
+    "why": "„Wir haben ein Fußballspiel gesehen.“"
+   },
+   {
+    "type": "detalj",
+    "q": "Varför kom Hannah och hennes bror hem blöta?",
+    "opts": [
+     "De badade i sjön",
+     "Det började plötsligt regna",
+     "De ramlade i en pöl",
+     "De tvättade cyklarna"
+    ],
+    "a": 1,
+    "why": "„dann hat es plötzlich geregnet“."
+   },
+   {
+    "type": "detalj",
+    "q": "Vad gjorde flickorna på sovfesten?",
+    "opts": [
+     "Tittade på film",
+     "Beställde pizza, spelade kort och chattade",
+     "Bakade en kaka",
+     "Dansade hela natten"
+    ],
+    "a": 1,
+    "why": "„Wir haben Pizza bestellt, Karten gespielt und bis zwei Uhr gechattet.“"
+   },
+   {
+    "type": "detalj",
+    "q": "Varför gjorde Hannah ingenting på söndagen?",
+    "opts": [
+     "Hon var sjuk",
+     "Hon var väldigt trött",
+     "Det regnade",
+     "Hon hade läxor"
+    ],
+    "a": 1,
+    "why": "„Am Sonntag war ich deshalb sehr müde.“"
+   }
+  ],
+  "gloss": {
+   "plötzlich": {
+    "t": "plötzlich",
+    "sv": "plötsligt",
+    "g": ""
+   },
+   "gesungen": {
+    "t": "singen",
+    "sv": "sjunga",
+    "g": ""
+   },
+   "voll": {
+    "t": "voll",
+    "sv": "full",
+    "g": ""
+   },
+   "geregnet": {
+    "t": "regnen",
+    "sv": "regna",
+    "g": ""
+   },
+   "deshalb": {
+    "t": "deshalb",
+    "sv": "därför",
+    "g": ""
+   },
+   "müde": {
+    "t": "müde",
+    "sv": "trött",
+    "g": ""
+   },
+   "bestellt": {
+    "t": "bestellen",
+    "sv": "beställa",
+    "g": ""
+   },
+   "gegen": {
+    "t": "gegen",
+    "sv": "mot",
+    "g": ""
+   },
+   "bruder": {
+    "t": "der Bruder",
+    "sv": "bror",
+    "g": "m"
+   },
+   "nachmittag": {
+    "t": "der Nachmittag",
+    "sv": "eftermiddag",
+    "g": "m"
+   },
+   "auf": {
+    "t": "auf",
+    "sv": "på, upp på",
+    "g": ""
+   },
+   "bei": {
+    "t": "bei",
+    "sv": "hos",
+    "g": ""
+   },
+   "dir": {
+    "t": "dir",
+    "sv": "dig (dativ)",
+    "g": ""
+   },
+   "fußballspiel": {
+    "t": "das Fußballspiel (-e)",
+    "sv": "fotbollsmatch",
+    "g": "n"
+   },
+   "in": {
+    "t": "in",
+    "sv": "i, till (länder med artikel)",
+    "g": ""
+   },
+   "lange": {
+    "t": "lange",
+    "sv": "länge",
+    "g": ""
+   },
+   "mir": {
+    "t": "mir",
+    "sv": "mig (dativ)",
+    "g": ""
+   },
+   "nach": {
+    "t": "nach",
+    "sv": "till (länder och städer)",
+    "g": ""
+   },
+   "nass": {
+    "t": "nass",
+    "sv": "blöt, våt",
+    "g": ""
+   },
+   "radtour": {
+    "t": "die Radtour (-en)",
+    "sv": "cykeltur",
+    "g": "f"
+   },
+   "übernachtungsparty": {
+    "t": "die Übernachtungsparty (-s)",
+    "sv": "övernattningsfest, sovfest",
+    "g": "f"
+   }
+  }
+ },
+ {
+  "id": "de2-r-b2",
+  "sec": "b2",
+  "title": "Sommerschlussverkauf im Kaufhaus Weber",
+  "lines": [
+   {
+    "fr": "Kaufhaus Weber – Sommerschlussverkauf!",
+    "sv": "Varuhuset Weber – sommarrea!"
+   },
+   {
+    "fr": "Vom 20. bis 31. Juli ist bei uns alles billiger.",
+    "sv": "Från 20 till 31 juli är allt billigare hos oss."
+   },
+   {
+    "fr": "Damenmode (1. Stock): Kleider, Röcke und Blusen – jetzt 30 Prozent billiger. Alle Bikinis nur 15 Euro!",
+    "sv": "Dammode (plan 1): klänningar, kjolar och blusar – nu 30 procent billigare. Alla bikinis bara 15 euro!"
+   },
+   {
+    "fr": "Herrenmode (2. Stock): Hemden ab 12 Euro. Anzüge: zwei zum Preis von einem.",
+    "sv": "Herrmode (plan 2): skjortor från 12 euro. Kostymer: två till priset av en."
+   },
+   {
+    "fr": "Kinder und Jugend (3. Stock): T-Shirts, Shorts und Badehosen – jedes Stück nur 5 Euro. Turnschuhe von 49 Euro für nur 29 Euro.",
+    "sv": "Barn och ungdom (plan 3): t-shirtar, shorts och badbyxor – varje plagg bara 5 euro. Gympaskor för 29 euro i stället för 49 euro."
+   },
+   {
+    "fr": "Taschen und Schmuck (Erdgeschoss): Sonnenbrillen, Ketten und Ringe – bis zu 50 Prozent billiger.",
+    "sv": "Väskor och smycken (bottenvåningen): solglasögon, halsband och ringar – upp till 50 procent billigare."
+   },
+   {
+    "fr": "Öffnungszeiten: Montag bis Freitag 9 bis 20 Uhr, Samstag 9 bis 18 Uhr. Sonntags ist das Kaufhaus geschlossen.",
+    "sv": "Öppettider: måndag till fredag 9–20, lördag 9–18. På söndagar är varuhuset stängt."
+   },
+   {
+    "fr": "Sie können bar oder mit Karte bezahlen. Umtausch nur mit Quittung, innerhalb von 14 Tagen.",
+    "sv": "Ni kan betala kontant eller med kort. Byte bara med kvitto, inom 14 dagar."
+   },
+   {
+    "fr": "Wir freuen uns auf Ihren Besuch!",
+    "sv": "Välkommen!"
+   }
+  ],
+  "questions": [
+   {
+    "type": "detalj",
+    "q": "På vilken våning finns gympaskor?",
+    "opts": [
+     "Bottenvåningen",
+     "Plan 1",
+     "Plan 2",
+     "Plan 3"
+    ],
+    "a": 3,
+    "why": "Kinder und Jugend (3. Stock): „Turnschuhe … für nur 29 Euro“."
+   },
+   {
+    "type": "detalj",
+    "q": "Vad kostar en bikini?",
+    "opts": [
+     "5 euro",
+     "12 euro",
+     "15 euro",
+     "29 euro"
+    ],
+    "a": 2,
+    "why": "„Alle Bikinis nur 15 Euro!“"
+   },
+   {
+    "type": "detalj",
+    "q": "När är varuhuset stängt?",
+    "opts": [
+     "På lördagar",
+     "På söndagar",
+     "Efter klockan 18 alla dagar",
+     "Hela juli"
+    ],
+    "a": 1,
+    "why": "„Sonntags ist das Kaufhaus geschlossen.“"
+   },
+   {
+    "type": "detalj",
+    "q": "Vad behöver man för att byta en vara?",
+    "opts": [
+     "Ett kort",
+     "Kvitto, och bytet måste ske inom 14 dagar",
+     "Ingenting",
+     "Ett medlemskort"
+    ],
+    "a": 1,
+    "why": "„Umtausch nur mit Quittung, innerhalb von 14 Tagen.“"
+   }
+  ],
+  "gloss": {
+   "sommerschlussverkauf": {
+    "t": "der Sommerschlussverkauf",
+    "sv": "sommarrea",
+    "g": "m"
+   },
+   "billiger": {
+    "t": "billig",
+    "sv": "billig",
+    "g": ""
+   },
+   "damenmode": {
+    "t": "die Damenmode",
+    "sv": "dammode",
+    "g": "f"
+   },
+   "herrenmode": {
+    "t": "die Herrenmode",
+    "sv": "herrmode",
+    "g": "f"
+   },
+   "stock": {
+    "t": "der Stock",
+    "sv": "våning",
+    "g": "m"
+   },
+   "erdgeschoss": {
+    "t": "das Erdgeschoss",
+    "sv": "bottenvåning",
+    "g": "n"
+   },
+   "umtausch": {
+    "t": "der Umtausch",
+    "sv": "byte (av vara)",
+    "g": "m"
+   },
+   "innerhalb": {
+    "t": "innerhalb",
+    "sv": "inom",
+    "g": ""
+   },
+   "preis": {
+    "t": "der Preis",
+    "sv": "pris",
+    "g": "m"
+   },
+   "ab": {
+    "t": "ab",
+    "sv": "från",
+    "g": ""
+   },
+   "besuch": {
+    "t": "der Besuch",
+    "sv": "besök",
+    "g": "m"
+   },
+   "freuen": {
+    "t": "sich freuen auf",
+    "sv": "se fram emot",
+    "g": ""
+   },
+   "auf": {
+    "t": "auf",
+    "sv": "på, upp på",
+    "g": ""
+   },
+   "bar": {
+    "t": "bar",
+    "sv": "kontant",
+    "g": ""
+   },
+   "bei": {
+    "t": "bei",
+    "sv": "hos",
+    "g": ""
+   },
+   "geschlossen": {
+    "t": "geschlossen",
+    "sv": "stängd",
+    "g": ""
+   },
+   "kaufhaus": {
+    "t": "das Kaufhaus (-häuser)",
+    "sv": "varuhus",
+    "g": "n"
+   },
+   "prozent": {
+    "t": "das Prozent (-e)",
+    "sv": "procent",
+    "g": "n"
+   },
+   "quittung": {
+    "t": "die Quittung (-en)",
+    "sv": "kvitto",
+    "g": "f"
+   },
+   "schmuck": {
+    "t": "der Schmuck",
+    "sv": "smycken",
+    "g": "m"
+   },
+   "shorts": {
+    "t": "die Shorts (pl)",
+    "sv": "shorts",
+    "g": "pl"
+   },
+   "sonntags": {
+    "t": "sonntags",
+    "sv": "på söndagarna",
+    "g": ""
+   },
+   "uns": {
+    "t": "uns",
+    "sv": "oss",
+    "g": ""
+   },
+   "zu": {
+    "t": "zu",
+    "sv": "till (personer och platser)",
+    "g": ""
+   },
+   "öffnungszeiten": {
+    "t": "die Öffnungszeiten (pl)",
+    "sv": "öppettider",
+    "g": "pl"
+   }
+  }
+ },
+ {
+  "id": "de2-r-b3",
+  "sec": "b3",
+  "title": "Notiz: Das Wetter am Wochenende",
+  "lines": [
+   {
+    "fr": "Stadtzeitung Freiburg – Wetter",
+    "sv": "Freiburgs lokaltidning – väder"
+   },
+   {
+    "fr": "Endlich Sommer! Nach zwei Wochen mit Regen und Wind kommt am Wochenende die Sonne zurück.",
+    "sv": "Äntligen sommar! Efter två veckor med regn och blåst kommer solen tillbaka i helgen."
+   },
+   {
+    "fr": "Am Samstag ist der Himmel schon am Morgen blau. Am Nachmittag wird es heiß: bis zu 32 Grad!",
+    "sv": "På lördagen är himlen redan blå på morgonen. På eftermiddagen blir det hett: upp till 32 grader!"
+   },
+   {
+    "fr": "Am Sonntag bleibt es sonnig und warm. Aber am Abend kommen Wolken, und in der Nacht gibt es Gewitter mit Blitz und Donner.",
+    "sv": "På söndagen fortsätter det att vara soligt och varmt. Men på kvällen kommer moln, och i natt blir det åska med blixtar."
+   },
+   {
+    "fr": "Tipps bei Hitze: Trinken Sie viel Wasser. Vergessen Sie die Sonnencreme nicht. Bleiben Sie mittags drinnen, denn dann ist die Sonne am stärksten.",
+    "sv": "Tips vid värme: Drick mycket vatten. Glöm inte solkrämen. Stanna inne mitt på dagen, för då är solen starkast."
+   },
+   {
+    "fr": "Das Freibad ist am Samstag und Sonntag von 8 bis 21 Uhr geöffnet. Eintritt für Schüler: 3 Euro.",
+    "sv": "Utomhusbadet är öppet på lördag och söndag 8–21. Inträde för elever: 3 euro."
+   },
+   {
+    "fr": "Und nächste Woche? Die Vorhersage sagt: 22 bis 25 Grad, manchmal ein bisschen Regen. Ein ganz normaler Sommer also.",
+    "sv": "Och nästa vecka? Prognosen säger: 22 till 25 grader, ibland lite regn. En helt vanlig sommar alltså."
+   }
+  ],
+  "questions": [
+   {
+    "type": "detalj",
+    "q": "Hur har vädret varit de senaste två veckorna?",
+    "opts": [
+     "Soligt och varmt",
+     "Regn och blåst",
+     "Snö",
+     "Dimma"
+    ],
+    "a": 1,
+    "why": "„Nach zwei Wochen mit Regen und Wind …“"
+   },
+   {
+    "type": "detalj",
+    "q": "Hur varmt blir det på lördagen?",
+    "opts": [
+     "22 grader",
+     "25 grader",
+     "Upp till 32 grader",
+     "18 grader"
+    ],
+    "a": 2,
+    "why": "„bis zu 32 Grad!“"
+   },
+   {
+    "type": "detalj",
+    "q": "Vad händer på söndagsnatten?",
+    "opts": [
+     "Det snöar",
+     "Det blir åska",
+     "Det blir kallt",
+     "Det blir dimma"
+    ],
+    "a": 1,
+    "why": "„in der Nacht gibt es Gewitter mit Blitz und Donner“."
+   },
+   {
+    "type": "detalj",
+    "q": "Vad kostar inträdet till badet för elever?",
+    "opts": [
+     "Gratis",
+     "3 euro",
+     "8 euro",
+     "21 euro"
+    ],
+    "a": 1,
+    "why": "„Eintritt für Schüler: 3 Euro.“"
+   }
+  ],
+  "gloss": {
+   "stadtzeitung": {
+    "t": "die Stadtzeitung",
+    "sv": "lokaltidning",
+    "g": "f"
+   },
+   "endlich": {
+    "t": "endlich",
+    "sv": "äntligen",
+    "g": ""
+   },
+   "wolken": {
+    "t": "die Wolke",
+    "sv": "moln",
+    "g": "f"
+   },
+   "gewitter": {
+    "t": "das Gewitter",
+    "sv": "åskväder",
+    "g": "n"
+   },
+   "stärksten": {
+    "t": "stark",
+    "sv": "stark",
+    "g": ""
+   },
+   "mittags": {
+    "t": "mittags",
+    "sv": "mitt på dagen",
+    "g": ""
+   },
+   "freibad": {
+    "t": "das Freibad",
+    "sv": "utomhusbad",
+    "g": "n"
+   },
+   "vergessen": {
+    "t": "vergessen",
+    "sv": "glömma",
+    "g": ""
+   },
+   "sonnig": {
+    "t": "sonnig",
+    "sv": "solig",
+    "g": ""
+   },
+   "normaler": {
+    "t": "normal",
+    "sv": "normal, vanlig",
+    "g": ""
+   },
+   "eintritt": {
+    "t": "der Eintritt",
+    "sv": "inträde",
+    "g": "m"
+   },
+   "bei": {
+    "t": "bei",
+    "sv": "hos",
+    "g": ""
+   },
+   "blitz": {
+    "t": "der Blitz (-e)",
+    "sv": "blixt",
+    "g": "m"
+   },
+   "donner": {
+    "t": "der Donner (-)",
+    "sv": "åska, åskknall",
+    "g": "m"
+   },
+   "drinnen": {
+    "t": "drinnen",
+    "sv": "inne, inomhus",
+    "g": ""
+   },
+   "geöffnet": {
+    "t": "geöffnet",
+    "sv": "öppen (om affär)",
+    "g": ""
+   },
+   "grad": {
+    "t": "der Grad (-)",
+    "sv": "grad",
+    "g": "m"
+   },
+   "hitze": {
+    "t": "die Hitze",
+    "sv": "hetta, värme",
+    "g": "f"
+   },
+   "in": {
+    "t": "in",
+    "sv": "i, till (länder med artikel)",
+    "g": ""
+   },
+   "nach": {
+    "t": "nach",
+    "sv": "till (länder och städer)",
+    "g": ""
+   },
+   "nächste": {
+    "t": "nächste",
+    "sv": "nästa",
+    "g": ""
+   },
+   "sonnencreme": {
+    "t": "die Sonnencreme (-s)",
+    "sv": "solkräm",
+    "g": "f"
+   },
+   "vorhersage": {
+    "t": "die Vorhersage (-n)",
+    "sv": "prognos",
+    "g": "f"
+   },
+   "zu": {
+    "t": "zu",
+    "sv": "till (personer och platser)",
+    "g": ""
+   }
+  }
+ },
+ {
+  "id": "de2-r-b4",
+  "sec": "b4",
+  "title": "Apotheke am Markt",
+  "lines": [
+   {
+    "fr": "Apotheke am Markt – Ihre Apotheke in der Altstadt",
+    "sv": "Apoteket vid torget – ditt apotek i gamla stan"
+   },
+   {
+    "fr": "Öffnungszeiten: Montag bis Freitag 8 bis 19 Uhr, Samstag 9 bis 14 Uhr.",
+    "sv": "Öppettider: måndag till fredag 8–19, lördag 9–14."
+   },
+   {
+    "fr": "Am Sonntag und in der Nacht: Bitte gehen Sie zur Notdienst-Apotheke. Die Adresse finden Sie an unserer Tür.",
+    "sv": "På söndagar och nätter: gå till jourapoteket. Adressen hittar du på vår dörr."
+   },
+   {
+    "fr": "Tipps bei Erkältung:",
+    "sv": "Tips vid förkylning:"
+   },
+   {
+    "fr": "Bleiben Sie zu Hause und ruhen Sie sich aus. Trinken Sie viel – am besten Tee mit Honig.",
+    "sv": "Stanna hemma och vila. Drick mycket – helst te med honung."
+   },
+   {
+    "fr": "Bei Halsschmerzen helfen Halstabletten. Bei Schnupfen hilft ein Nasenspray, aber nehmen Sie es nicht länger als eine Woche.",
+    "sv": "Vid ont i halsen hjälper halstabletter. Vid snuva hjälper nässpray, men använd den inte längre än en vecka."
+   },
+   {
+    "fr": "Waschen Sie sich oft die Hände mit Seife, und nehmen Sie immer ein Taschentuch.",
+    "sv": "Tvätta ofta händerna med tvål, och använd alltid en näsduk."
+   },
+   {
+    "fr": "Haben Sie Fieber über 39 Grad oder fühlen Sie sich nach drei Tagen nicht besser? Dann gehen Sie bitte zum Arzt.",
+    "sv": "Har du feber över 39 grader eller mår du inte bättre efter tre dagar? Gå då till läkaren."
+   },
+   {
+    "fr": "Neu bei uns: Mückenspray für den Sommer und Tests für Zecken. Fragen Sie unsere Apothekerin!",
+    "sv": "Nytt hos oss: myggspray för sommaren och tester för fästingar. Fråga vår apotekare!"
+   },
+   {
+    "fr": "Wir wünschen Ihnen gute Besserung!",
+    "sv": "Vi önskar dig god bättring!"
+   }
+  ],
+  "questions": [
+   {
+    "type": "detalj",
+    "q": "När är apoteket öppet på lördagar?",
+    "opts": [
+     "8–19",
+     "9–14",
+     "Det är stängt",
+     "Hela dagen"
+    ],
+    "a": 1,
+    "why": "„Samstag 9 bis 14 Uhr“."
+   },
+   {
+    "type": "detalj",
+    "q": "Vad ska man göra på söndagar?",
+    "opts": [
+     "Ringa läkaren",
+     "Gå till jourapoteket",
+     "Vänta till måndag",
+     "Beställa på nätet"
+    ],
+    "a": 1,
+    "why": "„Bitte gehen Sie zur Notdienst-Apotheke.“"
+   },
+   {
+    "type": "detalj",
+    "q": "Hur länge får man använda nässpray?",
+    "opts": [
+     "Högst en vecka",
+     "Tre dagar",
+     "En månad",
+     "Så länge man vill"
+    ],
+    "a": 0,
+    "why": "„nicht länger als eine Woche“."
+   },
+   {
+    "type": "detalj",
+    "q": "När ska man gå till läkaren?",
+    "opts": [
+     "Direkt när man blir förkyld",
+     "Vid feber över 39 grader eller om man inte blir bättre efter tre dagar",
+     "Om man har snuva",
+     "Aldrig"
+    ],
+    "a": 1,
+    "why": "„Haben Sie Fieber über 39 Grad oder fühlen Sie sich nach drei Tagen nicht besser?“"
+   }
+  ],
+  "gloss": {
+   "notdienst-apotheke": {
+    "t": "die Notdienst-Apotheke",
+    "sv": "jourapotek",
+    "g": "f"
+   },
+   "erkältung": {
+    "t": "die Erkältung",
+    "sv": "förkylning",
+    "g": "f"
+   },
+   "ruhen": {
+    "t": "sich ausruhen",
+    "sv": "vila",
+    "g": ""
+   },
+   "honig": {
+    "t": "der Honig",
+    "sv": "honung",
+    "g": "m"
+   },
+   "halsschmerzen": {
+    "t": "die Halsschmerzen",
+    "sv": "ont i halsen",
+    "g": "pl"
+   },
+   "schnupfen": {
+    "t": "der Schnupfen",
+    "sv": "snuva",
+    "g": "m"
+   },
+   "fieber": {
+    "t": "das Fieber",
+    "sv": "feber",
+    "g": "n"
+   },
+   "tür": {
+    "t": "die Tür",
+    "sv": "dörr",
+    "g": "f"
+   },
+   "adresse": {
+    "t": "die Adresse",
+    "sv": "adress",
+    "g": "f"
+   },
+   "apotheke": {
+    "t": "die Apotheke",
+    "sv": "apotek",
+    "g": "f"
+   },
+   "altstadt": {
+    "t": "die Altstadt",
+    "sv": "gamla stan",
+    "g": "f"
+   },
+   "mückenspray": {
+    "t": "das Mückenspray",
+    "sv": "myggspray",
+    "g": "n"
+   },
+   "hände": {
+    "t": "die Hand (Hände)",
+    "sv": "hand",
+    "g": "f"
+   },
+   "arzt": {
+    "t": "der Arzt",
+    "sv": "läkare",
+    "g": "m"
+   },
+   "an": {
+    "t": "an",
+    "sv": "vid, till (vatten)",
+    "g": ""
+   },
+   "apothekerin": {
+    "t": "die Apothekerin (-nen)",
+    "sv": "apotekare (kvinna)",
+    "g": "f"
+   },
+   "aus": {
+    "t": "aus",
+    "sv": "från, ur",
+    "g": ""
+   },
+   "bei": {
+    "t": "bei",
+    "sv": "hos",
+    "g": ""
+   },
+   "fühlen": {
+    "t": "fühlen",
+    "sv": "känna",
+    "g": ""
+   },
+   "grad": {
+    "t": "der Grad (-)",
+    "sv": "grad",
+    "g": "m"
+   },
+   "ihnen": {
+    "t": "ihnen",
+    "sv": "dem (dativ)",
+    "g": ""
+   },
+   "in": {
+    "t": "in",
+    "sv": "i, till (länder med artikel)",
+    "g": ""
+   },
+   "nach": {
+    "t": "nach",
+    "sv": "till (länder och städer)",
+    "g": ""
+   },
+   "nasenspray": {
+    "t": "das Nasenspray (-s)",
+    "sv": "nässpray",
+    "g": "n"
+   },
+   "seife": {
+    "t": "die Seife (-n)",
+    "sv": "tvål",
+    "g": "f"
+   },
+   "taschentuch": {
+    "t": "das Taschentuch (-tücher)",
+    "sv": "näsduk",
+    "g": "n"
+   },
+   "uns": {
+    "t": "uns",
+    "sv": "oss",
+    "g": ""
+   },
+   "zu": {
+    "t": "zu",
+    "sv": "till (personer och platser)",
+    "g": ""
+   },
+   "öffnungszeiten": {
+    "t": "die Öffnungszeiten (pl)",
+    "sv": "öppettider",
+    "g": "pl"
+   }
+  }
+ },
+ {
+  "id": "de2-r-b5",
+  "sec": "b5",
+  "title": "Im Forum: Hilfe, meine beste Freundin hat einen Freund!",
+  "lines": [
+   {
+    "fr": "Lotta_15 schreibt:",
+    "sv": "Lotta_15 skriver:"
+   },
+   {
+    "fr": "Hallo zusammen! Ich brauche einen Tipp. Meine beste Freundin Jana ist seit zwei Monaten mit Felix zusammen.",
+    "sv": "Hej allihop! Jag behöver ett tips. Min bästa vän Jana har varit tillsammans med Felix i två månader."
+   },
+   {
+    "fr": "Früher haben wir alles zusammen gemacht. Jetzt hat sie nie Zeit für mich. Am Samstag wollten wir ins Kino gehen, aber sie hat abgesagt, denn Felix hatte Geburtstag.",
+    "sv": "Förut gjorde vi allt tillsammans. Nu har hon aldrig tid för mig. På lördagen skulle vi gå på bio, men hon ställde in, för Felix fyllde år."
+   },
+   {
+    "fr": "Ich bin traurig und ein bisschen wütend. Was soll ich machen?",
+    "sv": "Jag är ledsen och lite arg. Vad ska jag göra?"
+   },
+   {
+    "fr": "Ben_16 antwortet:",
+    "sv": "Ben_16 svarar:"
+   },
+   {
+    "fr": "Sprich mit ihr! Sag ihr, dass du sie vermisst. Vielleicht weiß sie das gar nicht.",
+    "sv": "Prata med henne! Säg att du saknar henne. Kanske vet hon inte ens om det."
+   },
+   {
+    "fr": "Mia_14 antwortet:",
+    "sv": "Mia_14 svarar:"
+   },
+   {
+    "fr": "Das hatte ich auch letztes Jahr. Wir haben dann einen festen Tag gemacht: Jeden Freitag treffen wir uns, nur wir zwei. Das hilft mir sehr.",
+    "sv": "Det hade jag också förra året. Vi bestämde då en fast dag: varje fredag träffas vi, bara vi två. Det hjälper mig mycket."
+   },
+   {
+    "fr": "Lotta_15 schreibt:",
+    "sv": "Lotta_15 skriver:"
+   },
+   {
+    "fr": "Danke euch! Ich habe Jana gestern angerufen. Sie hat gesagt, es tut ihr leid. Am Freitag gehen wir zusammen Eis essen!",
+    "sv": "Tack ska ni ha! Jag ringde Jana i går. Hon sa att hon var ledsen. På fredag ska vi äta glass tillsammans!"
+   }
+  ],
+  "questions": [
+   {
+    "type": "helhet",
+    "q": "Vad är Lottas problem?",
+    "opts": [
+     "Hennes bästa vän har aldrig tid längre",
+     "Hon har bråkat med sin pojkvän",
+     "Hon har flyttat",
+     "Hon har inga vänner i klassen"
+    ],
+    "a": 0,
+    "why": "„Jetzt hat sie nie Zeit für mich.“"
+   },
+   {
+    "type": "detalj",
+    "q": "Varför blev det ingen bio på lördagen?",
+    "opts": [
+     "Filmen var slut",
+     "Felix fyllde år",
+     "Jana var sjuk",
+     "Lotta hade inga pengar"
+    ],
+    "a": 1,
+    "why": "„sie hat abgesagt, denn Felix hatte Geburtstag“."
+   },
+   {
+    "type": "detalj",
+    "q": "Vilket råd ger Mia?",
+    "opts": [
+     "Att hitta nya vänner",
+     "Att ha en fast dag varje vecka för bara de två",
+     "Att prata med Felix",
+     "Att skriva ett brev"
+    ],
+    "a": 1,
+    "why": "„Wir haben dann einen festen Tag gemacht.“"
+   },
+   {
+    "type": "detalj",
+    "q": "Hur slutar det?",
+    "opts": [
+     "Lotta och Jana ska äta glass på fredag",
+     "Lotta är fortfarande arg",
+     "Jana gör slut med Felix",
+     "Lotta går på bio ensam"
+    ],
+    "a": 0,
+    "why": "„Am Freitag gehen wir zusammen Eis essen!“"
+   }
+  ],
+  "gloss": {
+   "früher": {
+    "t": "früher",
+    "sv": "förr, förut",
+    "g": ""
+   },
+   "abgesagt": {
+    "t": "absagen",
+    "sv": "ställa in",
+    "g": ""
+   },
+   "wütend": {
+    "t": "wütend",
+    "sv": "arg",
+    "g": ""
+   },
+   "vermisst": {
+    "t": "vermissen",
+    "sv": "sakna",
+    "g": ""
+   },
+   "festen": {
+    "t": "fest",
+    "sv": "fast",
+    "g": ""
+   },
+   "zusammen": {
+    "t": "zusammen",
+    "sv": "tillsammans",
+    "g": ""
+   },
+   "antwortet": {
+    "t": "antworten",
+    "sv": "svara",
+    "g": ""
+   },
+   "beste": {
+    "t": "beste",
+    "sv": "bäst",
+    "g": ""
+   },
+   "euch": {
+    "t": "euch",
+    "sv": "er (du-form plural)",
+    "g": ""
+   },
+   "ihr": {
+    "t": "ihr",
+    "sv": "henne (dativ)",
+    "g": ""
+   },
+   "mir": {
+    "t": "mir",
+    "sv": "mig (dativ)",
+    "g": ""
+   },
+   "seit": {
+    "t": "seit",
+    "sv": "sedan, i (om tid)",
+    "g": ""
+   },
+   "tipp": {
+    "t": "der Tipp (-s)",
+    "sv": "tips, råd",
+    "g": "m"
+   },
+   "traurig": {
+    "t": "traurig",
+    "sv": "ledsen",
+    "g": ""
+   },
+   "uns": {
+    "t": "uns",
+    "sv": "oss",
+    "g": ""
+   }
+  }
+ },
+ {
+  "id": "de2-r-b6",
+  "sec": "b6",
+  "title": "Eine Einladung zum Laternenumzug",
+  "lines": [
+   {
+    "fr": "Einladung zum Laternenumzug!",
+    "sv": "Inbjudan till lykttåg!"
+   },
+   {
+    "fr": "Liebe Nachbarn, liebe Kinder,",
+    "sv": "Kära grannar, kära barn,"
+   },
+   {
+    "fr": "am Montag, den 11. November, ist Sankt Martin. Wie jedes Jahr machen wir einen Laternenumzug durch unser Viertel.",
+    "sv": "måndagen den 11 november är det Mårtensdagen. Som varje år går vi i lykttåg genom vårt kvarter."
+   },
+   {
+    "fr": "Wir treffen uns um 17 Uhr vor der Kirche. Bringen Sie bitte eine Laterne mit. Um 17:15 Uhr gehen wir los.",
+    "sv": "Vi träffas klockan 17 framför kyrkan. Ta med en lykta. Klockan 17.15 går vi iväg."
+   },
+   {
+    "fr": "Ein Mann auf einem Pferd spielt Sankt Martin, und wir singen zusammen Martinslieder.",
+    "sv": "En man på en häst spelar Sankt Martin, och vi sjunger mårtenssånger tillsammans."
+   },
+   {
+    "fr": "Nach dem Umzug gibt es im Park ein Feuer. Dort gibt es Kinderpunsch, Tee und Brezeln für alle. Der Eintritt ist frei.",
+    "sv": "Efter tåget blir det en brasa i parken. Där finns alkoholfri glögg, te och kringlor för alla. Det är gratis."
+   },
+   {
+    "fr": "Sie haben keine Laterne? Kein Problem! Am Samstag, den 9. November, basteln wir von 14 bis 16 Uhr zusammen Laternen im Gemeindehaus.",
+    "sv": "Har ni ingen lykta? Inga problem! Lördagen den 9 november pysslar vi lyktor tillsammans i församlingshemmet 14–16."
+   },
+   {
+    "fr": "Bitte ziehen Sie sich warm an, am Abend ist es kalt!",
+    "sv": "Klä er varmt, på kvällen är det kallt!"
+   },
+   {
+    "fr": "Wir freuen uns auf Sie!",
+    "sv": "Vi ser fram emot att träffa er!"
+   },
+   {
+    "fr": "Ihr Team vom Kindergarten Sonnenschein",
+    "sv": "Ert team från förskolan Solsken"
+   }
+  ],
+  "questions": [
+   {
+    "type": "detalj",
+    "q": "När börjar lykttåget?",
+    "opts": [
+     "Klockan 17.00",
+     "Klockan 17.15",
+     "Klockan 14.00",
+     "Klockan 16.00"
+    ],
+    "a": 1,
+    "why": "„Um 17:15 Uhr gehen wir los.“ Man träffas klockan 17."
+   },
+   {
+    "type": "detalj",
+    "q": "Vad ska man ta med?",
+    "opts": [
+     "En lykta",
+     "Mat",
+     "Pengar",
+     "En present"
+    ],
+    "a": 0,
+    "why": "„Bringen Sie bitte eine Laterne mit.“"
+   },
+   {
+    "type": "detalj",
+    "q": "Vad händer efter tåget?",
+    "opts": [
+     "Man går hem",
+     "Det blir brasa i parken med glögg, te och kringlor",
+     "Det blir fyrverkeri",
+     "Man äter gås i kyrkan"
+    ],
+    "a": 1,
+    "why": "„Nach dem Umzug gibt es im Park ein Feuer.“"
+   },
+   {
+    "type": "detalj",
+    "q": "Vad kan man göra på lördagen den 9 november?",
+    "opts": [
+     "Köpa lyktor",
+     "Pyssla lyktor",
+     "Sjunga i kyrkan",
+     "Rida"
+    ],
+    "a": 1,
+    "why": "„basteln wir … zusammen Laternen im Gemeindehaus“."
+   }
+  ],
+  "gloss": {
+   "einladung": {
+    "t": "die Einladung",
+    "sv": "inbjudan",
+    "g": "f"
+   },
+   "laterne": {
+    "t": "die Laterne",
+    "sv": "lykta",
+    "g": "f"
+   },
+   "viertel": {
+    "t": "das Viertel",
+    "sv": "kvarter",
+    "g": "n"
+   },
+   "pferd": {
+    "t": "das Pferd",
+    "sv": "häst",
+    "g": "n"
+   },
+   "feuer": {
+    "t": "das Feuer",
+    "sv": "eld, brasa",
+    "g": "n"
+   },
+   "gemeindehaus": {
+    "t": "das Gemeindehaus",
+    "sv": "församlingshem",
+    "g": "n"
+   },
+   "nachbarn": {
+    "t": "der Nachbar",
+    "sv": "granne",
+    "g": "m"
+   },
+   "kindergarten": {
+    "t": "der Kindergarten",
+    "sv": "förskola",
+    "g": "m"
+   },
+   "umzug": {
+    "t": "der Umzug",
+    "sv": "tåg, procession",
+    "g": "m"
+   },
+   "martinslieder": {
+    "t": "das Martinslied",
+    "sv": "mårtenssång",
+    "g": "n"
+   },
+   "frei": {
+    "t": "frei",
+    "sv": "fri, gratis",
+    "g": ""
+   },
+   "an": {
+    "t": "an",
+    "sv": "vid, till (vatten)",
+    "g": ""
+   },
+   "auf": {
+    "t": "auf",
+    "sv": "på, upp på",
+    "g": ""
+   },
+   "basteln": {
+    "t": "basteln",
+    "sv": "pyssla",
+    "g": ""
+   },
+   "eintritt": {
+    "t": "der Eintritt",
+    "sv": "inträde",
+    "g": "m"
+   },
+   "ihr": {
+    "t": "ihr",
+    "sv": "henne (dativ)",
+    "g": ""
+   },
+   "kinderpunsch": {
+    "t": "der Kinderpunsch",
+    "sv": "julglögg utan alkohol",
+    "g": "m"
+   },
+   "laternenumzug": {
+    "t": "der Laternenumzug (-züge)",
+    "sv": "lykttåg",
+    "g": "m"
+   },
+   "nach": {
+    "t": "nach",
+    "sv": "till (länder och städer)",
+    "g": ""
+   },
+   "sonnenschein": {
+    "t": "der Sonnenschein",
+    "sv": "solsken",
+    "g": "m"
+   },
+   "uns": {
+    "t": "uns",
+    "sv": "oss",
+    "g": ""
+   }
+  }
+ },
+ {
+  "id": "de2-r-b7",
+  "sec": "b7",
+  "title": "Fahrplan: Mit dem Zug in die Berge",
+  "lines": [
+   {
+    "fr": "Wanderzug „Zugspitze“ – Fahrplan Sommer (Juni bis September)",
+    "sv": "Vandringståget ”Zugspitze” – tidtabell sommar (juni till september)"
+   },
+   {
+    "fr": "München Hbf ab 7:32 – Garmisch-Partenkirchen an 8:55 – Gleis 1",
+    "sv": "München central avg. 7.32 – Garmisch-Partenkirchen ank. 8.55 – spår 1"
+   },
+   {
+    "fr": "München Hbf ab 9:32 – Garmisch-Partenkirchen an 10:55 – Gleis 1",
+    "sv": "München central avg. 9.32 – Garmisch-Partenkirchen ank. 10.55 – spår 1"
+   },
+   {
+    "fr": "Garmisch-Partenkirchen ab 17:05 – München Hbf an 18:28",
+    "sv": "Garmisch-Partenkirchen avg. 17.05 – München central ank. 18.28"
+   },
+   {
+    "fr": "In Garmisch-Partenkirchen können Sie in die Zahnradbahn umsteigen. Sie fahren dann bis auf den Berg. Danach geht es mit der Seilbahn auf die Zugspitze, 2962 Meter hoch.",
+    "sv": "I Garmisch-Partenkirchen kan du byta till kuggstångsbanan. Den går ända upp på berget. Sedan tar du linbanan upp till Zugspitze, 2 962 meter högt."
+   },
+   {
+    "fr": "Die Zugspitze ist der höchste Berg in Deutschland. Oben ist es auch im Sommer kalt, und manchmal liegt Schnee. Nehmen Sie eine Jacke mit!",
+    "sv": "Zugspitze är Tysklands högsta berg. Uppe är det kallt även på sommaren, och ibland ligger det snö. Ta med en jacka!"
+   },
+   {
+    "fr": "Tickets: Hin- und Rückfahrt mit Zug, Zahnradbahn und Seilbahn: 75 Euro, Jugendliche (6–18 Jahre) 45 Euro.",
+    "sv": "Biljetter: tur och retur med tåg, kuggstångsbana och linbana: 75 euro, ungdomar (6–18 år) 45 euro."
+   },
+   {
+    "fr": "Sie können die Tickets online oder am Automaten im Bahnhof kaufen.",
+    "sv": "Du kan köpa biljetterna på nätet eller i automaten på stationen."
+   }
+  ],
+  "questions": [
+   {
+    "type": "detalj",
+    "q": "När kommer det första tåget fram till Garmisch-Partenkirchen?",
+    "opts": [
+     "7.32",
+     "8.55",
+     "9.32",
+     "10.55"
+    ],
+    "a": 1,
+    "why": "„Garmisch-Partenkirchen an 8:55“."
+   },
+   {
+    "type": "detalj",
+    "q": "Hur kommer man sista biten upp på Zugspitze?",
+    "opts": [
+     "Med buss",
+     "Med linbana",
+     "Till fots",
+     "Med taxi"
+    ],
+    "a": 1,
+    "why": "„Danach geht es mit der Seilbahn auf die Zugspitze.“"
+   },
+   {
+    "type": "detalj",
+    "q": "Varför ska man ta med en jacka?",
+    "opts": [
+     "Det regnar alltid",
+     "Det är kallt uppe, även på sommaren",
+     "Det är kallt på tåget",
+     "Man måste ha jacka på linbanan"
+    ],
+    "a": 1,
+    "why": "„Oben ist es auch im Sommer kalt.“"
+   },
+   {
+    "type": "detalj",
+    "q": "Vad kostar biljetten för en 16-åring?",
+    "opts": [
+     "75 euro",
+     "45 euro",
+     "Gratis",
+     "18 euro"
+    ],
+    "a": 1,
+    "why": "„Jugendliche (6–18 Jahre) 45 Euro“."
+   }
+  ],
+  "gloss": {
+   "fahrplan": {
+    "t": "der Fahrplan",
+    "sv": "tidtabell",
+    "g": "m"
+   },
+   "hbf": {
+    "t": "der Hauptbahnhof (Hbf)",
+    "sv": "centralstation",
+    "g": "m"
+   },
+   "zahnradbahn": {
+    "t": "die Zahnradbahn",
+    "sv": "kuggstångsbana",
+    "g": "f"
+   },
+   "umsteigen": {
+    "t": "umsteigen",
+    "sv": "byta",
+    "g": ""
+   },
+   "höchste": {
+    "t": "hoch",
+    "sv": "hög",
+    "g": ""
+   },
+   "oben": {
+    "t": "oben",
+    "sv": "uppe",
+    "g": ""
+   },
+   "jugendliche": {
+    "t": "der/die Jugendliche",
+    "sv": "ungdom",
+    "g": "m"
+   },
+   "automaten": {
+    "t": "der Automat",
+    "sv": "automat",
+    "g": "m"
+   },
+   "wanderzug": {
+    "t": "der Wanderzug",
+    "sv": "vandringståg",
+    "g": "m"
+   },
+   "gleis": {
+    "t": "das Gleis",
+    "sv": "spår",
+    "g": "n"
+   },
+   "jacke": {
+    "t": "die Jacke",
+    "sv": "jacka",
+    "g": "f"
+   },
+   "meter": {
+    "t": "der Meter",
+    "sv": "meter",
+    "g": "m"
+   },
+   "an": {
+    "t": "an",
+    "sv": "vid, till (vatten)",
+    "g": ""
+   },
+   "auf": {
+    "t": "auf",
+    "sv": "på, upp på",
+    "g": ""
+   },
+   "danach": {
+    "t": "danach",
+    "sv": "efter det, sedan",
+    "g": ""
+   },
+   "in": {
+    "t": "in",
+    "sv": "i, till (länder med artikel)",
+    "g": ""
+   },
+   "rückfahrt": {
+    "t": "die Rückfahrt (-en)",
+    "sv": "återresa",
+    "g": "f"
+   },
+   "seilbahn": {
+    "t": "die Seilbahn (-en)",
+    "sv": "linbana",
+    "g": "f"
+   }
+  }
+ },
+ {
+  "id": "de2-r-b8",
+  "sec": "b8",
+  "title": "Eine Sprache, viele Länder (Gedicht und Fakten)",
+  "lines": [
+   {
+    "fr": "Eine Sprache, viele Länder",
+    "sv": "Ett språk, många länder"
+   },
+   {
+    "fr": "In Wien sagt man Servus, in Hamburg sagt man Moin,",
+    "sv": "I Wien säger man Servus, i Hamburg säger man Moin,"
+   },
+   {
+    "fr": "in Zürich sagt man Grüezi – und alle meinen: Komm herein!",
+    "sv": "i Zürich säger man Grüezi – och alla menar: kom in!"
+   },
+   {
+    "fr": "Der eine isst Paradeiser, der andre isst Tomaten,",
+    "sv": "Den ena äter Paradeiser, den andra äter Tomaten,"
+   },
+   {
+    "fr": "der eine fährt mit dem Velo, der andre mit dem Rad.",
+    "sv": "den ena åker Velo, den andra åker Rad."
+   },
+   {
+    "fr": "Wir sprechen alle Deutsch, nur jeder ein bisschen anders.",
+    "sv": "Vi talar alla tyska, bara var och en lite annorlunda."
+   },
+   {
+    "fr": "Fakten: Etwa 100 Millionen Menschen in Europa haben Deutsch als Muttersprache. Deutsch ist Amtssprache in Deutschland, Österreich, der Schweiz, Liechtenstein, Luxemburg und Belgien.",
+    "sv": "Fakta: Ungefär 100 miljoner människor i Europa har tyska som modersmål. Tyska är officiellt språk i Tyskland, Österrike, Schweiz, Liechtenstein, Luxemburg och Belgien."
+   },
+   {
+    "fr": "Auch in Südtirol in Italien sprechen viele Menschen Deutsch.",
+    "sv": "Även i Sydtyrolen i Italien talar många människor tyska."
+   },
+   {
+    "fr": "Weltweit lernen etwa 15 Millionen Menschen Deutsch als Fremdsprache – zum Beispiel am Goethe-Institut.",
+    "sv": "I hela världen lär sig ungefär 15 miljoner människor tyska som främmande språk – till exempel på Goethe-institutet."
+   }
+  ],
+  "questions": [
+   {
+    "type": "detalj",
+    "q": "Vad säger man i Hamburg för att hälsa enligt dikten?",
+    "opts": [
+     "Servus",
+     "Grüezi",
+     "Moin",
+     "Tschüss"
+    ],
+    "a": 2,
+    "why": "„in Hamburg sagt man Moin“."
+   },
+   {
+    "type": "helhet",
+    "q": "Vad är dikten främst om?",
+    "opts": [
+     "Att tyskan är olika i olika regioner men ändå samma språk",
+     "Att tyska är svårt",
+     "Mat i Österrike",
+     "Cykling i Schweiz"
+    ],
+    "a": 0,
+    "why": "„Wir sprechen alle Deutsch, nur jeder ein bisschen anders.“"
+   },
+   {
+    "type": "detalj",
+    "q": "I hur många länder är tyska officiellt språk enligt texten?",
+    "opts": [
+     "Tre",
+     "Fyra",
+     "Sex",
+     "Åtta"
+    ],
+    "a": 2,
+    "why": "Tyskland, Österrike, Schweiz, Liechtenstein, Luxemburg och Belgien."
+   },
+   {
+    "type": "detalj",
+    "q": "Hur många lär sig tyska som främmande språk i världen?",
+    "opts": [
+     "Ungefär 15 miljoner",
+     "Ungefär 100 miljoner",
+     "Ungefär en miljon",
+     "Ungefär 50 miljoner"
+    ],
+    "a": 0,
+    "why": "„Weltweit lernen etwa 15 Millionen Menschen Deutsch als Fremdsprache.“"
+   }
+  ],
+  "gloss": {
+   "fakten": {
+    "t": "der Fakt (-en)",
+    "sv": "fakta",
+    "g": "m"
+   },
+   "meinen": {
+    "t": "meinen",
+    "sv": "mena",
+    "g": ""
+   },
+   "herein": {
+    "t": "herein",
+    "sv": "in (hit in)",
+    "g": ""
+   },
+   "tomaten": {
+    "t": "die Tomate",
+    "sv": "tomat",
+    "g": "f"
+   },
+   "andre": {
+    "t": "andere",
+    "sv": "annan",
+    "g": ""
+   },
+   "anders": {
+    "t": "anders",
+    "sv": "annorlunda",
+    "g": ""
+   },
+   "muttersprache": {
+    "t": "die Muttersprache",
+    "sv": "modersmål",
+    "g": "f"
+   },
+   "fremdsprache": {
+    "t": "die Fremdsprache",
+    "sv": "främmande språk",
+    "g": "f"
+   },
+   "südtirol": {
+    "t": "Südtirol",
+    "sv": "Sydtyrolen",
+    "g": ""
+   },
+   "rad": {
+    "t": "das Rad",
+    "sv": "cykel",
+    "g": "n"
+   },
+   "etwa": {
+    "t": "etwa",
+    "sv": "ungefär",
+    "g": ""
+   },
+   "amtssprache": {
+    "t": "die Amtssprache (-n)",
+    "sv": "officiellt språk",
+    "g": "f"
+   },
+   "belgien": {
+    "t": "Belgien",
+    "sv": "Belgien",
+    "g": ""
+   },
+   "europa": {
+    "t": "Europa",
+    "sv": "Europa",
+    "g": ""
+   },
+   "goethe-institut": {
+    "t": "das Goethe-Institut (-e)",
+    "sv": "Goethe-institutet",
+    "g": "n"
+   },
+   "in": {
+    "t": "in",
+    "sv": "i, till (länder med artikel)",
+    "g": ""
+   },
+   "italien": {
+    "t": "Italien",
+    "sv": "Italien",
+    "g": ""
+   },
+   "liechtenstein": {
+    "t": "Liechtenstein",
+    "sv": "Liechtenstein",
+    "g": ""
+   },
+   "luxemburg": {
+    "t": "Luxemburg",
+    "sv": "Luxemburg",
+    "g": ""
+   },
+   "paradeiser": {
+    "t": "der Paradeiser (-)",
+    "sv": "tomat (Österrike)",
+    "g": "m"
+   },
+   "weltweit": {
+    "t": "weltweit",
+    "sv": "i hela världen",
+    "g": ""
+   }
+  }
+ }
+]

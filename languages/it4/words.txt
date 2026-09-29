@@ -1,0 +1,828 @@
+// Ordlista för Italienska 4 (A2.2, mot CELI 1). Rader som börjar med // är kommentarer och tas bort vid bygget.
+//
+// Format, en rad per ord:
+//   italienska|svenska|genus|exempel på italienska|exempel på svenska|kommentar
+// Hakparentes i den italienska exempelmeningen markerar luckan i meningsövningen:
+//   Ho [preso] il treno delle otto.
+// Genus: m, f, mpl, fpl eller tomt. Kommentaren får innehålla <b>fetstil</b>.
+// Substantiv skrivs med bestämd artikel, plural först i kommentaren. Verb har particip och hjälpverb i kommentaren.
+// En rad som börjar med # startar ett nytt avsnitt:  #id|Namn som visas
+// Avsnittets id och ordets italienska form används som nycklar för sparade framsteg,
+// så ändra inte ord-id eller avsnitts-id i efterhand (ändra gärna svenska, exempel och kommentar).
+// Orden i Italienska 1–3 (languages/it1, it2, it3/words.txt) upprepas inte här.
+#c1|Kap 1 · Progetti per il futuro
+l'iscrizione|anmälan, inskrivning|f|L'[iscrizione] al corso costa cinquanta euro.|Anmälan till kursen kostar femtio euro.|Plural: le iscrizioni.
+il corso di laurea|utbildningsprogram (på universitet)|m|Ho scelto un [corso di laurea] in economia.|Jag har valt ett utbildningsprogram i ekonomi.|Plural: i corsi di laurea.
+lo stage|praktik|m|Quest'estate farò uno [stage] in un'agenzia di viaggi.|I sommar ska jag göra praktik på en resebyrå.|Plural: gli stage. Från franska, uttalas ofta [staʒ]. Också il tirocinio.
+il colloquio|intervju, samtal|m|Domani ho un [colloquio] di lavoro alle nove.|I morgon har jag en anställningsintervju klockan nio.|Plural: i colloqui. Latin <b>colloquium</b> 'samtal'.
+precario|osäker, tillfällig (om anställning)||Molti giovani hanno un lavoro [precario].|Många unga har en osäker anställning.|Femininum: precaria. Il precariato = otrygga anställningar.
+la disoccupazione|arbetslöshet|f|La [disoccupazione] giovanile è ancora alta al Sud.|Ungdomsarbetslösheten är fortfarande hög i södra Italien.|Utan plural.
+la competenza|kompetens|f|Nel curriculum scrivi le tue [competenze] linguistiche.|I CV:t skriver du dina språkkunskaper.|Plural: le competenze.
+la capacità|förmåga|f|Ha una grande [capacità] di ascoltare gli altri.|Hon har en stor förmåga att lyssna på andra.|Plural: le capacità.
+la decisione|beslut|f|Prendere una [decisione] non è sempre facile.|Att fatta ett beslut är inte alltid lätt.|Plural: le decisioni. Prendere una decisione = fatta ett beslut.
+il dubbio|tvivel|m|Ho ancora qualche [dubbio] sulla facoltà.|Jag tvekar fortfarande lite om utbildningen.|Plural: i dubbi. Senza dubbio = utan tvekan.
+l'incertezza|osäkerhet|f|Molti ragazzi vivono il futuro con [incertezza].|Många unga upplever framtiden med osäkerhet.|Plural: le incertezze. Av certo 'säker'.
+la possibilità|möjlighet|f|All'estero ci sono più [possibilità] di lavoro.|Utomlands finns det fler jobbmöjligheter.|Plural: le possibilità.
+l'opportunità|möjlighet, chans|f|Questo stage è una grande [opportunità].|Den här praktiken är en stor chans.|Plural: le opportunità.
+l'indipendenza|självständighet|f|Un lavoro part-time mi dà un po' di [indipendenza].|Ett deltidsjobb ger mig lite självständighet.|Utan plural. Indipendente = självständig.
+maggiorenne|myndig||Quando sarò [maggiorenne], prenderò la patente.|När jag blir myndig ska jag ta körkort.|Samma form m/f. Motsats: minorenne. Latin <b>maior</b> 'större, äldre'.
+il volontariato|volontärarbete, ideellt arbete|m|Dopo la scuola farò un anno di [volontariato] in Africa.|Efter skolan ska jag göra ett år som volontär i Afrika.|Utan plural. Il/la volontario/a = volontären.
+l'anno sabbatico|sabbatsår, mellanår|m|Molti ragazzi svedesi prendono un [anno sabbatico].|Många svenska ungdomar tar ett sabbatsår.|Plural: gli anni sabbatici. Av hebreiska <b>shabbat</b> 'vilodag'.
+il conservatorio|musikhögskola, konservatorium|m|Vorrei entrare al [conservatorio] di Bologna.|Jag skulle vilja komma in på musikhögskolan i Bologna.|Plural: i conservatori. Förr ett barnhem som 'bevarade' föräldralösa barn och lärde dem musik.
+l'ammissione|antagning|f|L'esame di [ammissione] è a settembre.|Antagningsprovet är i september.|Plural: le ammissioni. Av ammettere 'släppa in'.
+prevedere|förutse, planera||Che cosa [prevedi] di fare dopo l'esame?|Vad planerar du att göra efter provet?|Particip: previsto (avere). Böjs som vedere.
+la previsione|prognos, förutsägelse|f|Le [previsioni] del tempo dicono che pioverà.|Väderprognosen säger att det kommer att regna.|Plural: le previsioni.
+entro|inom, senast||Devo mandare la domanda [entro] venerdì.|Jag måste skicka ansökan senast på fredag.|Preposition. Entro l'anno = före årets slut.
+la domanda di lavoro|arbetsansökan|f|Ho scritto una [domanda di lavoro] per un bar.|Jag har skrivit en arbetsansökan till ett kafé.|Plural: le domande di lavoro. Fare domanda = söka.
+il settore|bransch, sektor|m|Lavora nel [settore] turistico.|Hon arbetar inom turistbranschen.|Plural: i settori.
+lo psicologo|psykolog|m|Dopo la laurea vorrei lavorare come [psicologo].|Efter examen skulle jag vilja arbeta som psykolog.|Plural: gli psicologi. Femininum: la psicologa.
+il ricercatore|forskare|m|Fa il [ricercatore] all'università di Padova.|Han är forskare vid universitetet i Padova.|Plural: i ricercatori. Femininum: la ricercatrice.
+l'imprenditore|företagare, entreprenör|m|Suo padre è un [imprenditore] di successo.|Hennes pappa är en framgångsrik företagare.|Plural: gli imprenditori. Femininum: l'imprenditrice.
+l'artigiano|hantverkare|m|L'[artigiano] fa scarpe a mano.|Hantverkaren gör skor för hand.|Plural: gli artigiani. Femininum: l'artigiana. Av arte.
+lo stilista|modeskapare|m|Armani è uno [stilista] famoso in tutto il mondo.|Armani är en modeskapare som är känd i hela världen.|Plural: gli stilisti. Femininum: la stilista.
+ambizioso|ambitiös, ärelysten||È una ragazza [ambiziosa]: vuole diventare direttrice.|Hon är en ambitiös tjej: hon vill bli chef.|Femininum: ambiziosa.
+motivato|motiverad||Sono molto [motivato] a imparare l'italiano.|Jag är väldigt motiverad att lära mig italienska.|Femininum: motivata. La motivazione = motivation.
+la motivazione|motivation, motivering|f|Nella lettera spiega la tua [motivazione].|I brevet ska du förklara din motivation.|Plural: le motivazioni.
+affrontare|ta itu med, möta||Bisogna [affrontare] i problemi con calma.|Man måste ta itu med problemen lugnt.|Particip: affrontato (avere). Av fronte 'panna, front'.
+riuscire|lyckas||Spero di [riuscire] a trovare un lavoro estivo.|Jag hoppas att jag lyckas hitta ett sommarjobb.|Particip: riuscito (essere). Riuscire a + infinitiv. Böjs som uscire: riesco.
+fallire|misslyckas, gå i konkurs||Il ristorante è [fallito] dopo due anni.|Restaurangen gick i konkurs efter två år.|Particip: fallito (essere om företag, avere om person som misslyckas med något).
+il fallimento|misslyckande, konkurs|m|Un [fallimento] può insegnarti molto.|Ett misslyckande kan lära dig mycket.|Plural: i fallimenti.
+rinunciare|avstå, ge upp||Non voglio [rinunciare] alla musica.|Jag vill inte ge upp musiken.|Particip: rinunciato (avere). Rinunciare a qualcosa.
+l'aspettativa|förväntning|f|I miei genitori hanno grandi [aspettative] su di me.|Mina föräldrar har stora förväntningar på mig.|Plural: le aspettative.
+l'orientamento|vägledning, orientering|m|L'ufficio di [orientamento] aiuta gli studenti a scegliere.|Vägledningskontoret hjälper eleverna att välja.|Utan plural i den här betydelsen.
+qualificato|utbildad, kvalificerad||Cercano personale [qualificato].|De söker kvalificerad personal.|Femininum: qualificata.
+specializzarsi|specialisera sig||Dopo la laurea voglio [specializzarmi] in pediatria.|Efter examen vill jag specialisera mig på barnmedicin.|Particip: specializzato (essere).
+l'intelligenza artificiale|artificiell intelligens|f|L'[intelligenza artificiale] cambierà molti mestieri.|Artificiell intelligens kommer att förändra många yrken.|Förkortas IA (på engelska AI).
+il pensionato|pensionär|m|Mio nonno è [pensionato] ma lavora ancora nell'orto.|Min farfar är pensionär men arbetar fortfarande i trädgårdslandet.|Plural: i pensionati. Femininum: la pensionata.
+pessimista|pessimistisk, pessimist||Non essere così [pessimista]!|Var inte så pessimistisk!|Samma form m/f i singular. Plural: pessimisti/pessimiste.
+nel frattempo|under tiden||Studio medicina e [nel frattempo] lavoro in un bar.|Jag studerar medicin och arbetar under tiden på ett kafé.|Ordagrant 'i mellantiden'.
+fra qualche anno|om några år||[Fra qualche anno] avrò finito l'università.|Om några år har jag gått klart universitetet.|Fra = tra. Används ofta med futuro anteriore.
+dopo che|efter att||[Dopo che] avrai letto il libro, dimmi che ne pensi.|När du har läst boken, säg vad du tycker.|Bisatsinledare. Följs ofta av futuro anteriore eller trapassato.
+il percorso|väg, bana|m|Ognuno ha il suo [percorso] di studi.|Var och en har sin egen studieväg.|Plural: i percorsi.
+la vocazione|kall|f|Insegnare è la sua [vocazione].|Att undervisa är hennes kall.|Plural: le vocazioni. Latin <b>vocare</b> 'kalla'.
+l'attitudine|fallenhet, begåvning|f|Ha una grande [attitudine] per le lingue.|Hon har en stor fallenhet för språk.|Plural: le attitudini. Obs: inte 'attityd' (atteggiamento).
+la predisposizione|anlag|f|Mio fratello ha una [predisposizione] per la matematica.|Min bror har anlag för matematik.|Plural: le predisposizioni.
+appassionato|entusiastisk, passionerad||È [appassionata] di cinema.|Hon älskar film.|Femininum: appassionata. Appassionato di = mycket intresserad av.
+il mondo del lavoro|arbetslivet|m|Il [mondo del lavoro] cambia velocemente.|Arbetslivet förändras snabbt.|Ordagrant 'arbetets värld'.
+il posto di lavoro|arbetsplats, jobb|m|Ha trovato un [posto di lavoro] fisso.|Hon har hittat en fast anställning.|Plural: i posti di lavoro. Il posto fisso = fast jobb.
+il posto fisso|fast anställning|m|I miei genitori sognano per me il [posto fisso].|Mina föräldrar drömmer om att jag ska få en fast anställning.|Uttrycket är nästan en symbol för trygghet i Italien.
+la candidatura|ansökan, kandidatur|f|Ho inviato la mia [candidatura] ieri.|Jag skickade min ansökan i går.|Plural: le candidature.
+la lettera di presentazione|personligt brev|f|Allega il CV e una [lettera di presentazione].|Bifoga CV och ett personligt brev.|Plural: le lettere di presentazione.
+il requisito|krav, behörighet|m|Il [requisito] principale è la laurea.|Huvudkravet är en examen.|Plural: i requisiti.
+richiesto|efterfrågad, krävd||L'inglese è sempre [richiesto].|Engelska efterfrågas alltid.|Femininum: richiesta. Particip av richiedere.
+la formazione|utbildning|f|L'azienda offre [formazione] ai nuovi assunti.|Företaget erbjuder utbildning till nyanställda.|Utan plural i den här betydelsen.
+l'apprendista|lärling|m|Lavora come [apprendista] da un parrucchiere.|Han arbetar som lärling hos en frisör.|Plural: gli apprendisti. Samma form för kvinnor: l'apprendista.
+il liceo musicale|musikgymnasium|m|Frequento il [liceo musicale] di Torino.|Jag går på musikgymnasiet i Turin.|Plural: i licei musicali.
+l'istituto professionale|yrkesgymnasium|m|Mio cugino va all'[istituto professionale] alberghiero.|Min kusin går på hotell- och restaurangprogrammet.|Plural: gli istituti professionali.
+promosso|godkänd, uppflyttad||Sono stato [promosso] con buoni voti.|Jag flyttades upp med bra betyg.|Femininum: promossa. Av promuovere.
+la media dei voti|betygssnitt|f|Ho la [media dei voti] dell'otto.|Jag har åtta i betygssnitt.|Plural: le medie.
+l'ateneo|universitet, lärosäte|m|L'[ateneo] di Padova è del 1222.|Universitetet i Padova är från 1222.|Plural: gli atenei. Från Athena-templet i Aten.
+il fuorisede|student som bor på annan ort|m|A Bologna ci sono tantissimi studenti [fuorisede].|I Bologna finns väldigt många studenter från andra orter.|Oböjligt. Fuori + sede 'utanför hemorten'.
+il semestre|termin|m|Nel secondo [semestre] farò l'Erasmus.|Andra terminen ska jag göra Erasmus.|Plural: i semestri.
+lo scambio|utbyte|m|Ho fatto uno [scambio] di un mese in Irlanda.|Jag var på utbyte en månad i Irland.|Plural: gli scambi.
+la tesi|examensarbete, uppsats|f|Sto scrivendo la [tesi] di laurea.|Jag skriver mitt examensarbete.|Plural: le tesi.
+il laureato|person med examen|m|Molti [laureati] lavorano all'estero.|Många med examen arbetar utomlands.|Plural: i laureati. Femininum: la laureata.
+lo studente lavoratore|student som arbetar vid sidan av|m|Sono uno [studente lavoratore]: studio e faccio il cameriere.|Jag är student och jobbar vid sidan av som servitör.|Plural: gli studenti lavoratori.
+il lavoretto|småjobb, extrajobb|m|D'estate faccio qualche [lavoretto].|På sommaren gör jag några småjobb.|Plural: i lavoretti. Diminutiv av lavoro.
+lo straordinario|övertid|m|Questa settimana ho fatto dieci ore di [straordinario].|Den här veckan har jag jobbat tio timmar övertid.|Plural: gli straordinari.
+il direttore|direktör, chef|m|Il [direttore] vuole parlarti.|Chefen vill prata med dig.|Plural: i direttori. Femininum: la direttrice.
+il pregio|fördel, förtjänst|m|Qual è il tuo [pregio] più grande?|Vilken är din största förtjänst?|Plural: i pregi. Motsats: il difetto.
+il difetto|brist, svaghet|m|Il mio [difetto] è che sono impaziente.|Min svaghet är att jag är otålig.|Plural: i difetti.
+flessibile|flexibel||L'orario di lavoro è [flessibile].|Arbetstiden är flexibel.|Samma form m/f.
+creativo|kreativ||È un lavoro [creativo] e vario.|Det är ett kreativt och varierat jobb.|Femininum: creativa.
+dinamico|dynamisk, energisk||Cerchiamo un ragazzo [dinamico].|Vi söker en energisk kille.|Femininum: dinamica. Plural: dinamici.
+il lavoro da casa|distansarbete|m|Il [lavoro da casa] è ormai normale.|Distansarbete är numera normalt.|Också lo smart working (italiensk engelska).
+lo smart working|distansarbete|m|Mia madre fa [smart working] due giorni a settimana.|Min mamma jobbar hemifrån två dagar i veckan.|Italiensk användning av engelska ord; på engelska säger man remote work.
+immaginarsi|föreställa sig||Non [mi immagino] a fare l'avvocato.|Jag kan inte se mig själv som advokat.|Particip: immaginato (essere).
+diventare grande|växa upp, bli vuxen||Che cosa vuoi fare quando [diventerai grande]?|Vad vill du bli när du blir stor?|Da grande = som vuxen.
+realizzarsi|förverkliga sig själv||Nel lavoro voglio [realizzarmi].|I arbetet vill jag förverkliga mig själv.|Particip: realizzato (essere).
+il sacrificio|uppoffring|m|Studiare all'estero richiede molti [sacrifici].|Att studera utomlands kräver många uppoffringar.|Plural: i sacrifici.
+la soddisfazione|tillfredsställelse|f|Questo lavoro mi dà tante [soddisfazioni].|Det här jobbet ger mig mycket tillfredsställelse.|Plural: le soddisfazioni.
+lo stagista|praktikant|m|Lo [stagista] prepara il caffè per tutti.|Praktikanten kokar kaffe åt alla.|Plural: gli stagisti. Femininum: la stagista.
+il tirocinante|praktikant (formellt)|m|Cerchiamo due [tirocinanti] per l'estate.|Vi söker två praktikanter i sommar.|Plural: i tirocinanti.
+il settore pubblico|offentlig sektor|m|Molti italiani sognano di lavorare nel [settore pubblico].|Många italienare drömmer om att arbeta inom offentlig sektor.|Motsats: il settore privato.
+il concorso|uttagningsprov (för statlig tjänst)|m|Per diventare insegnante bisogna vincere un [concorso].|För att bli lärare måste man klara ett uttagningsprov.|Plural: i concorsi. Också 'tävling'.
+la disoccupazione giovanile|ungdomsarbetslöshet|f|La [disoccupazione giovanile] in Italia è intorno al 20%.|Ungdomsarbetslösheten i Italien är runt 20 %.|Utan plural.
+il futuro incerto|osäker framtid|m|Molti giovani temono un [futuro incerto].|Många unga är rädda för en osäker framtid.|Incerto = osäker.
+incerto|osäker||Sono ancora [incerta] sulla scelta.|Jag är fortfarande osäker på valet.|Femininum: incerta.
+deciso|bestämd, beslutsam||È una ragazza molto [decisa].|Hon är en väldigt beslutsam tjej.|Femininum: decisa. Också particip av decidere.
+emigrare all'estero|flytta utomlands||Molti laureati [emigrano all'estero].|Många med examen flyttar utomlands.|Particip: emigrato (essere).
+il rientro|återkomst|m|Il governo incentiva il [rientro] dei giovani.|Regeringen uppmuntrar unga att komma tillbaka.|Plural: i rientri.
+#c2|Kap 2 · Questioni etiche
+l'etica|etik|f|Si parla molto di [etica] nella ricerca scientifica.|Det pratas mycket om etik inom forskningen.|Grekiska <b>ēthos</b> 'sed'.
+etico|etisk||Mangiare carne è una questione [etica] per molti.|Att äta kött är en etisk fråga för många.|Femininum: etica.
+la coscienza|samvete, medvetande|f|Ho la [coscienza] pulita.|Jag har rent samvete.|Plural: le coscienze.
+il diritto|rättighet, rätt|m|Ogni bambino ha [diritto] all'istruzione.|Varje barn har rätt till utbildning.|Plural: i diritti. Avere diritto a = ha rätt till.
+il dovere|plikt|m|Votare è un diritto ma anche un [dovere].|Att rösta är en rättighet men också en plikt.|Plural: i doveri. Samma ord som verbet dovere.
+giusto|rättvis, rätt||Non è [giusto] che paghino sempre i più poveri.|Det är inte rättvist att de fattigaste alltid får betala.|Femininum: giusta. Följs ofta av congiuntivo.
+ingiusto|orättvis||Trovo [ingiusto] che le donne guadagnino meno.|Jag tycker att det är orättvist att kvinnor tjänar mindre.|Femininum: ingiusta.
+la giustizia|rättvisa|f|Chiedono [giustizia] per le vittime.|De kräver rättvisa för offren.|Utan plural.
+il benessere animale|djurvälfärd|m|Questa azienda pensa al [benessere animale].|Det här företaget tänker på djurvälfärden.|Il benessere = välbefinnande.
+l'allevamento|djuruppfödning|m|Gli [allevamenti] intensivi inquinano molto.|Storskalig djuruppfödning förorenar mycket.|Plural: gli allevamenti. Allevare = föda upp.
+vegano|vegan, vegansk||Al matrimonio c'era anche un menù [vegano].|På bröllopet fanns det också en vegansk meny.|Femininum: vegana.
+la sperimentazione animale|djurförsök|f|Molti sono contrari alla [sperimentazione animale].|Många är emot djurförsök.|Plural: le sperimentazioni.
+la caccia|jakt|f|In alcune regioni la [caccia] è molto diffusa.|I vissa regioner är jakt mycket vanligt.|Plural: le cacce. Il cacciatore = jägaren.
+lo zoo|djurpark|m|Pensi che gli [zoo] siano ancora necessari?|Tycker du att djurparker fortfarande behövs?|Plural: gli zoo.
+il consumo|konsumtion|m|Dobbiamo ridurre il [consumo] di plastica.|Vi måste minska plastkonsumtionen.|Plural: i consumi.
+il consumatore|konsument|m|I [consumatori] vogliono prodotti più sostenibili.|Konsumenterna vill ha mer hållbara produkter.|Plural: i consumatori. Femininum: la consumatrice.
+il commercio equo|rättvis handel|m|Compro caffè del [commercio equo].|Jag köper kaffe från rättvis handel.|Equo = rättvis (formellt). Också equo e solidale.
+lo sfruttamento|utnyttjande, exploatering|m|Lo [sfruttamento] dei lavoratori è un crimine.|Att utnyttja arbetare är ett brott.|Sfruttare = utnyttja.
+sfruttare|utnyttja||Alcune fabbriche [sfruttano] i bambini.|Vissa fabriker utnyttjar barn.|Particip: sfruttato (avere).
+la povertà|fattigdom|f|La [povertà] è aumentata negli ultimi anni.|Fattigdomen har ökat de senaste åren.|Utan plural. Povero = fattig.
+la ricchezza|rikedom|f|La [ricchezza] è distribuita male.|Rikedomen är ojämnt fördelad.|Plural: le ricchezze.
+l'uguaglianza|jämlikhet|f|Lottiamo per l'[uguaglianza] tra uomini e donne.|Vi kämpar för jämställdhet mellan män och kvinnor.|Utan plural. Uguale = lika.
+la discriminazione|diskriminering|f|La [discriminazione] è vietata dalla legge.|Diskriminering är förbjuden enligt lag.|Plural: le discriminazioni.
+il pregiudizio|fördom|m|Dobbiamo combattere i [pregiudizi].|Vi måste bekämpa fördomar.|Plural: i pregiudizi.
+la libertà di parola|yttrandefrihet|f|La [libertà di parola] è fondamentale.|Yttrandefriheten är grundläggande.|Ordagrant 'ordets frihet'.
+la privacy|integritet, privatliv|f|Le app raccolgono dati e non rispettano la [privacy].|Apparna samlar in data och respekterar inte integriteten.|Engelskt lånord, uttalas ofta [ˈpraivasi].
+mentire|ljuga||Secondo te, è mai giusto [mentire]?|Tycker du att det någonsin är rätt att ljuga?|Particip: mentito (avere). Böjs som dormire: mento.
+onesto|ärlig||Voglio che tu sia [onesto] con me.|Jag vill att du är ärlig mot mig.|Femininum: onesta. L'onestà = ärlighet.
+l'onestà|ärlighet|f|L'[onestà] è la cosa più importante in un'amicizia.|Ärlighet är det viktigaste i en vänskap.|Utan plural.
+responsabile|ansvarig, ansvarsfull||Chi è [responsabile] di questo disastro?|Vem är ansvarig för den här katastrofen?|Samma form m/f.
+la colpa|skuld, fel|f|Non è [colpa] mia!|Det är inte mitt fel!|Plural: le colpe. Dare la colpa a = skylla på.
+il dilemma|dilemma|m|Mi trovo davanti a un [dilemma].|Jag står inför ett dilemma.|Plural: i dilemmi. Maskulinum trots -a (grekiskt).
+il punto di vista|synvinkel, synsätt|m|Dal mio [punto di vista], hai ragione.|Ur min synvinkel har du rätt.|Plural: i punti di vista.
+convinto|övertygad||Sono [convinta] che sia la scelta giusta.|Jag är övertygad om att det är rätt val.|Femininum: convinta. Av convincere.
+convincere|övertyga||Mi hai [convinto]!|Du har övertygat mig!|Particip: convinto (avere).
+sostenere|stödja, hävda||Molti esperti [sostengono] che sia pericoloso.|Många experter hävdar att det är farligt.|Particip: sostenuto (avere). Böjs som tenere: sostengo.
+essere d'accordo|hålla med||Non [sono d'accordo] con te.|Jag håller inte med dig.|Essere d'accordo con qualcuno su qualcosa.
+essere contrario|vara emot||[Sono contrario] alla caccia.|Jag är emot jakt.|Femininum: contraria. Essere contrario a.
+essere favorevole|vara för||Sei [favorevole] al voto a sedici anni?|Är du för rösträtt från sexton år?|Samma form m/f.
+la soluzione|lösning|f|Bisogna che troviamo una [soluzione] insieme.|Vi måste hitta en lösning tillsammans.|Plural: le soluzioni.
+a chilometro zero|närproducerad||Al mercato compro frutta [a chilometro zero].|På marknaden köper jag närproducerad frukt.|Ordagrant 'på noll kilometer'. Förkortas km 0.
+biologico|ekologisk||Queste uova sono [biologiche].|De här äggen är ekologiska.|Femininum: biologica. Förkortas bio.
+la donazione|donation, gåva|f|Abbiamo fatto una [donazione] alla Croce Rossa.|Vi har gett en gåva till Röda korset.|Plural: le donazioni.
+donare|donera, skänka||Mio padre [dona] il sangue ogni tre mesi.|Min pappa ger blod var tredje månad.|Particip: donato (avere).
+l'organizzazione|organisation|f|Lavora per un'[organizzazione] non governativa.|Hon arbetar för en ideell organisation.|Plural: le organizzazioni. ONG = NGO.
+la beneficenza|välgörenhet|f|Il concerto è di [beneficenza].|Konserten är till förmån för välgörenhet.|Utan plural.
+la solidarietà|solidaritet|f|Dopo il terremoto c'è stata molta [solidarietà].|Efter jordbävningen visades mycket solidaritet.|Utan plural.
+approfittare|utnyttja, passa på||Non [approfittare] della sua gentilezza.|Utnyttja inte hans vänlighet.|Particip: approfittato (avere). Approfittare di.
+il comportamento|beteende|m|Il suo [comportamento] non è accettabile.|Hans beteende är inte acceptabelt.|Plural: i comportamenti. Comportarsi = bete sig.
+comportarsi|bete sig||Si è [comportato] molto male.|Han betedde sig väldigt illa.|Particip: comportato (essere).
+accettabile|acceptabel||Non è [accettabile] trattare così un animale.|Det är inte acceptabelt att behandla ett djur så.|Samma form m/f.
+vietare|förbjuda||Il comune [ha vietato] i fuochi d'artificio.|Kommunen har förbjudit fyrverkerier.|Particip: vietato (avere). Vietato fumare = rökning förbjuden.
+permettere|tillåta||I miei non mi [permettono] di uscire la sera.|Mina föräldrar tillåter mig inte att gå ut på kvällen.|Particip: permesso (avere).
+la legge|lag|f|La nuova [legge] entrerà in vigore a gennaio.|Den nya lagen träder i kraft i januari.|Plural: le leggi.
+illegale|olaglig||Scaricare film pirata è [illegale].|Att ladda ner piratkopierade filmer är olagligt.|Samma form m/f. Motsats: legale.
+la pena di morte|dödsstraff|f|L'Italia ha abolito la [pena di morte].|Italien har avskaffat dödsstraffet.|Cesare Beccaria skrev mot dödsstraffet redan 1764.
+bisogna che|det är nödvändigt att||[Bisogna che] tutti facciano qualcosa.|Det är nödvändigt att alla gör något.|Följs av congiuntivo. Utan che: bisogna + infinitiv.
+è ora che|det är dags att||[È ora che] i politici ci ascoltino.|Det är dags att politikerna lyssnar på oss.|Följs av congiuntivo.
+temere|frukta, vara rädd för||[Temo] che sia troppo tardi.|Jag är rädd att det är för sent.|Particip: temuto (avere). Temere che + congiuntivo.
+dubitare|tvivla||[Dubito] che sia vero.|Jag tvivlar på att det är sant.|Particip: dubitato (avere). Följs av congiuntivo.
+la protesta|protest|f|Migliaia di studenti hanno partecipato alla [protesta].|Tusentals studenter deltog i protesten.|Plural: le proteste. Protestare = protestera.
+la manifestazione|demonstration|f|Venerdì c'è una [manifestazione] per il clima.|På fredag är det en klimatdemonstration.|Plural: le manifestazioni.
+il principio|princip|m|Per [principio] non mangio carne.|Av princip äter jag inte kött.|Plural: i principi. Obs: il principe = prinsen.
+il valore|värde|m|L'amicizia è un [valore] importante.|Vänskap är ett viktigt värde.|Plural: i valori.
+morale|moralisk||È un problema [morale], non economico.|Det är ett moraliskt, inte ekonomiskt, problem.|Samma form m/f. La morale = moralen, sensmoralen.
+la dignità|värdighet|f|Ogni persona ha diritto alla [dignità].|Varje människa har rätt till värdighet.|Utan plural.
+dignitoso|värdig, anständig||Tutti meritano una vita [dignitosa].|Alla förtjänar ett anständigt liv.|Femininum: dignitosa.
+la sofferenza|lidande|f|Bisogna evitare la [sofferenza] degli animali.|Man måste undvika djurens lidande.|Plural: le sofferenze.
+soffrire|lida||Molti animali [soffrono] negli allevamenti.|Många djur lider i uppfödningen.|Particip: sofferto (avere). Böjs som aprire.
+la crudeltà|grymhet|f|È una [crudeltà] tenere un cane in gabbia.|Det är grymt att hålla en hund i bur.|Plural: le crudeltà.
+crudele|grym||Non essere [crudele] con gli animali.|Var inte grym mot djuren.|Samma form m/f.
+la gabbia|bur|f|L'uccello vive in una [gabbia].|Fågeln lever i en bur.|Plural: le gabbie.
+abbandonare|överge||D'estate molti cani vengono [abbandonati].|På sommaren överges många hundar.|Particip: abbandonato (avere).
+adottare|adoptera||Abbiamo [adottato] un gatto dal gattile.|Vi har adopterat en katt från katthemmet.|Particip: adottato (avere).
+il canile|hundhem|m|Faccio volontariato al [canile].|Jag är volontär på hundhemmet.|Plural: i canili. Il gattile = katthem.
+la pelliccia|päls (plagg)|f|Molti stilisti non usano più la [pelliccia].|Många designers använder inte längre päls.|Plural: le pellicce.
+il prodotto|produkt|m|Scelgo [prodotti] non testati sugli animali.|Jag väljer produkter som inte har testats på djur.|Plural: i prodotti.
+l'etichetta|etikett|f|Leggi sempre l'[etichetta] prima di comprare.|Läs alltid etiketten innan du köper.|Plural: le etichette. Också 'etikett' = gott uppförande.
+l'imballaggio|förpackning|m|Troppo [imballaggio] di plastica!|För mycket plastförpackningar!|Plural: gli imballaggi.
+usa e getta|engångs-||Evito i piatti [usa e getta].|Jag undviker engångstallrikar.|Oböjligt. Ordagrant 'använd och kasta'.
+di seconda mano|begagnad||Compro vestiti [di seconda mano].|Jag köper begagnade kläder.|Också usato.
+la moda veloce|snabbmode|f|La [moda veloce] inquina moltissimo.|Snabbmode förorenar jättemycket.|Också fast fashion.
+lo scambio di vestiti|klädbyte|m|A scuola abbiamo organizzato uno [scambio di vestiti].|I skolan har vi ordnat ett klädbyte.|Plural: gli scambi di vestiti.
+l'impronta ecologica|ekologiskt fotavtryck|f|Voglio ridurre la mia [impronta ecologica].|Jag vill minska mitt ekologiska fotavtryck.|Plural: le impronte ecologiche.
+le emissioni|utsläpp|fpl|Le [emissioni] di CO2 devono diminuire.|Koldioxidutsläppen måste minska.|Singular: l'emissione.
+ridurre|minska||Dobbiamo [ridurre] i consumi.|Vi måste minska konsumtionen.|Particip: ridotto (avere). Riduco, riduci.
+la scelta consapevole|medvetet val|f|Comprare locale è una [scelta consapevole].|Att köpa lokalt är ett medvetet val.|Consapevole = medveten.
+consapevole|medveten||I giovani sono più [consapevoli] dei problemi ambientali.|Unga är mer medvetna om miljöproblemen.|Samma form m/f.
+l'ingiustizia|orättvisa|f|È un'[ingiustizia] che i bambini lavorino.|Det är en orättvisa att barn arbetar.|Plural: le ingiustizie.
+il lavoro minorile|barnarbete|m|Il [lavoro minorile] esiste ancora in molti paesi.|Barnarbete finns fortfarande i många länder.|Minorile = som gäller minderåriga.
+la fame|svält; hunger|f|Milioni di persone soffrono la [fame].|Miljontals människor lider av svält.|Avere fame = vara hungrig.
+la vittima|offer|f|Le [vittime] dell'incidente erano tre.|Olycksoffren var tre.|Plural: le vittime. Alltid femininum, även om män.
+il reato|brott|m|Rubare è un [reato].|Att stjäla är ett brott.|Plural: i reati.
+punire|straffa||Chi inquina deve essere [punito].|Den som förorenar måste straffas.|Particip: punito (avere). Böjs som finire.
+la punizione|straff|f|La [punizione] è stata troppo severa.|Straffet var för strängt.|Plural: le punizioni.
+imbrogliare|fuska, lura||Non si deve [imbrogliare] agli esami.|Man får inte fuska på proven.|Particip: imbrogliato (avere). Också copiare.
+ammettere|erkänna, medge||[Ammetto] che ho sbagliato.|Jag erkänner att jag hade fel.|Particip: ammesso (avere). Också 'anta' (till utbildning).
+scusarsi|be om ursäkt||Si è [scusato] con tutti.|Han bad alla om ursäkt.|Particip: scusato (essere).
+fidarsi|lita på||Non mi [fido] delle notizie sui social.|Jag litar inte på nyheterna på sociala medier.|Particip: fidato (essere). Fidarsi di.
+la tolleranza|tolerans|f|La [tolleranza] è alla base della convivenza.|Tolerans är grunden för samlevnad.|Utan plural.
+la libertà|frihet|f|La [libertà] di uno finisce dove comincia quella dell'altro.|Ens frihet slutar där den andres börjar.|Plural: le libertà.
+la censura|censur|f|In alcuni paesi c'è ancora la [censura].|I vissa länder finns det fortfarande censur.|Plural: le censure.
+lecito|tillåten, rätt||È [lecito] mentire per proteggere un amico?|Är det tillåtet att ljuga för att skydda en vän?|Femininum: lecita. Motsats: illecito.
+indignato|upprörd, indignerad||Sono [indignata] per questa notizia.|Jag är upprörd över den här nyheten.|Femininum: indignata.
+l'animalista|djurrättsaktivist|m|Gli [animalisti] protestano contro il circo.|Djurrättsaktivisterna protesterar mot cirkusen.|Plural: gli animalisti. Samma form m/f.
+il circo|cirkus|m|Molti paesi hanno vietato gli animali nel [circo].|Många länder har förbjudit djur på cirkus.|Plural: i circhi.
+l'attivista|aktivist|m|È un'[attivista] per il clima.|Hon är klimataktivist.|Plural: gli attivisti. Samma form m/f.
+lo sciopero per il clima|klimatstrejk|m|Venerdì c'è lo [sciopero per il clima].|På fredag är det klimatstrejk.|Plural: gli scioperi per il clima.
+la sostenibilità|hållbarhet|f|La [sostenibilità] è un tema centrale per i giovani.|Hållbarhet är en central fråga för unga.|Utan plural.
+il biologico|ekologisk mat|m|Il [biologico] costa di più.|Ekologisk mat kostar mer.|Substantiverat adjektiv.
+la carne coltivata|odlat kött|f|In Italia la [carne coltivata] è vietata.|I Italien är odlat kött förbjudet.|Coltivato = odlad.
+l'onnivoro|allätare|m|Io sono [onnivoro]: mangio di tutto.|Jag är allätare: jag äter allt.|Femininum: onnivora.
+lo sciopero della fame|hungerstrejk|m|Ha fatto lo [sciopero della fame] per protesta.|Han hungerstrejkade i protest.|Plural: gli scioperi della fame.
+#c3|Kap 3 · Tradizioni e feste
+l'usanza|sed, sedvänja|f|È un'[usanza] antica che si ripete ogni anno.|Det är en gammal sed som upprepas varje år.|Plural: le usanze. Av usare 'bruka'.
+il costume|sed; dräkt|m|Gli usi e [costumi] cambiano da regione a regione.|Seder och bruk skiljer sig mellan regionerna.|Plural: i costumi. Också 'maskeraddräkt' och costume da bagno 'baddräkt'.
+la ricorrenza|högtidsdag, årsdag|f|Il 2 giugno è una [ricorrenza] nazionale.|Den 2 juni är en nationell högtidsdag.|Plural: le ricorrenze. Av ricorrere 'återkomma'.
+celebrare|fira (högtidligt)||In chiesa [si celebra] la messa di mezzanotte.|I kyrkan firas midnattsmässan.|Particip: celebrato (avere).
+l'Epifania|trettondagen|f|All'[Epifania] arriva la Befana.|På trettondagen kommer Befana.|Grekiska <b>epiphaneia</b> 'uppenbarelse'. Den 6 januari.
+la Festa della Repubblica|nationaldagen (2 juni)|f|Per la [Festa della Repubblica] c'è una parata a Roma.|På nationaldagen är det parad i Rom.|Firar folkomröstningen 1946 då Italien blev republik.
+il 25 aprile|befrielsedagen|m|Il [25 aprile] si ricorda la Liberazione.|Den 25 april minns man befrielsen.|Festa della Liberazione, slutet på den tyska ockupationen 1945.
+la Liberazione|befrielsen (1945)|f|I nonni raccontano ancora della [Liberazione].|Morföräldrarna berättar fortfarande om befrielsen.|Plural: le liberazioni (i allmän betydelse).
+il patrono|skyddshelgon|m|San Gennaro è il [patrono] di Napoli.|San Gennaro är Neapels skyddshelgon.|Plural: i patroni. Varje stad har sin festa del patrono och ledig dag.
+il santo|helgon|m|Oggi è la festa del [santo] del paese.|I dag är det byns helgonfest.|Plural: i santi. Framför namn: San Marco, Santo Stefano, Sant'Antonio.
+il palio|palio (historisk tävling)|m|Il [Palio] di Siena è una corsa di cavalli.|Palio i Siena är en hästkapplöpning.|Plural: i pali. Latin <b>pallium</b> 'tygstycke', priset.
+la contrada|stadsdel (i Siena)|f|Ogni [contrada] ha il suo colore e il suo simbolo.|Varje stadsdel har sin färg och sin symbol.|Plural: le contrade.
+il carro|vagn|m|I [carri] di Viareggio sono enormi.|Vagnarna i Viareggio är enorma.|Plural: i carri.
+mascherarsi|klä ut sig||Per Carnevale [mi sono mascherato] da pirata.|På karnevalen klädde jag ut mig till pirat.|Particip: mascherato (essere).
+le chiacchiere|karnevalsbakelser; prat|fpl|A Carnevale la nonna prepara le [chiacchiere].|På karnevalen gör mormor chiacchiere.|Friterade bakelser med florsocker. Också 'prat, skvaller'.
+le lenticchie|linser|fpl|Chi mangia [lenticchie] a Capodanno avrà soldi tutto l'anno.|Den som äter linser på nyårsafton får pengar hela året.|Singular: la lenticchia. De runda linserna liknar mynt.
+il cotechino|kokkorv (nyårsrätt)|m|Con le lenticchie si mangia il [cotechino].|Med linserna äter man cotechino.|Från Modena. Av cotica 'fläsksvål'.
+il pandoro|pandoro (julkaka från Verona)|m|Preferisci il panettone o il [pandoro]?|Föredrar du panettone eller pandoro?|Ordagrant 'guldbröd'.
+l'uovo di cioccolato|chokladägg|m|Nell'[uovo di cioccolato] c'è una sorpresa.|I chokladägget finns en överraskning.|Plural: le uova di cioccolato (femininum i plural!).
+Ognissanti|allhelgona|m|A [Ognissanti] le famiglie vanno al cimitero.|På allhelgona går familjerna till kyrkogården.|Den 1 november. Ognissanti = alla helgon.
+il cimitero|kyrkogård|m|Portiamo fiori al [cimitero].|Vi tar med blommor till kyrkogården.|Plural: i cimiteri.
+religioso|religiös||Molte feste italiane hanno un'origine [religiosa].|Många italienska högtider har ett religiöst ursprung.|Femininum: religiosa.
+cattolico|katolsk||L'Italia è un paese di tradizione [cattolica].|Italien är ett land med katolsk tradition.|Femininum: cattolica. Plural: cattolici.
+laico|sekulär, icke-religiös||Lo Stato italiano è [laico].|Den italienska staten är sekulär.|Femininum: laica. Plural: laici.
+il battesimo|dop|m|Siamo invitati al [battesimo] di mio cugino.|Vi är bjudna på min kusins dop.|Plural: i battesimi.
+la comunione|nattvard, första kommunion|f|A nove anni ho fatto la prima [comunione].|Vid nio års ålder gick jag min första kommunion.|Plural: le comunioni.
+i confetti|sockerdragéer (bröllopsgodis)|mpl|Agli invitati si regalano cinque [confetti].|Gästerna får fem sockerdragéer.|Singular: il confetto. Obs: inte konfetti, det heter coriandoli.
+la bomboniera|liten present till gästerna|f|Nella [bomboniera] ci sono i confetti.|I den lilla presenten finns sockerdragéerna.|Plural: le bomboniere. Från franska bonbon.
+gli auguri|gratulationer, lyckönskningar|mpl|Tanti [auguri] di buon compleanno!|Grattis på födelsedagen!|Singular: l'augurio. Fare gli auguri = gratulera.
+la cartolina di auguri|gratulationskort|f|Ho ricevuto una [cartolina di auguri] da Roma.|Jag har fått ett gratulationskort från Rom.|Plural: le cartoline di auguri.
+la ricetta della nonna|mormors recept|f|Il ragù si fa con la [ricetta della nonna].|Ragùn görs efter mormors recept.|Plural: le ricette. Latin <b>recepta</b> 'mottaget'.
+tramandare|föra vidare (till nästa generation)||Le ricette si [tramandano] di madre in figlia.|Recepten förs vidare från mor till dotter.|Particip: tramandato (avere). Si passivante i exemplet.
+l'antenato|förfader|m|I miei [antenati] erano contadini.|Mina förfäder var bönder.|Plural: gli antenati.
+la leggenda|legend, sägen|f|Secondo la [leggenda], Roma è stata fondata da Romolo.|Enligt sägnen grundades Rom av Romulus.|Plural: le leggende.
+la superstizione|vidskepelse|f|Il venerdì 17 è una [superstizione] italiana.|Fredag den 17:e är en italiensk vidskepelse.|Plural: le superstizioni. I Italien är 17, inte 13, olyckstalet.
+superstizioso|vidskeplig||Mio nonno è molto [superstizioso].|Min farfar är väldigt vidskeplig.|Femininum: superstiziosa.
+portare fortuna|ge tur||Il corno rosso [porta fortuna].|Det röda hornet ger tur.|Portare sfortuna = ge otur.
+la sfortuna|otur|f|Rompere uno specchio porta [sfortuna].|Att slå sönder en spegel ger otur.|Utan plural.
+il folclore|folklore|m|La tarantella fa parte del [folclore] del Sud.|Tarantella är en del av folkloren i södra Italien.|Engelska <b>folk-lore</b> 'folkets kunskap'.
+la tarantella|tarantella (folkdans)|f|Al matrimonio abbiamo ballato la [tarantella].|På bröllopet dansade vi tarantella.|Namnet sägs komma från staden Taranto eller spindeln tarantola.
+il costume tradizionale|folkdräkt|m|Le ragazze portano il [costume tradizionale] sardo.|Tjejerna bär den sardiska folkdräkten.|Plural: i costumi tradizionali.
+l'occasione|tillfälle|f|Per l'[occasione] si prepara un pranzo speciale.|För tillfället lagar man en speciell lunch.|Plural: le occasioni. Obs: inte 'fynd', det heter affare.
+l'invitato|gäst|m|Al matrimonio c'erano duecento [invitati].|På bröllopet fanns det tvåhundra gäster.|Plural: gli invitati. Femininum: l'invitata.
+le luminarie|festbelysning|fpl|Per la festa le strade sono piene di [luminarie].|Till festen är gatorna fulla av festbelysning.|Singular: la luminaria. Särskilt i södra Italien.
+il mercatino|liten marknad|m|A Bolzano c'è un famoso [mercatino] di Natale.|I Bolzano finns en känd julmarknad.|Plural: i mercatini. Diminutiv av mercato.
+la zampogna|säckpipa|f|A Natale gli zampognari suonano la [zampogna].|På jul spelar säckpipeblåsarna.|Plural: le zampogne. Grekiska <b>symphonia</b>.
+la festa della mamma|mors dag|f|Per la [festa della mamma] le ho regalato dei fiori.|På mors dag gav jag henne blommor.|Andra söndagen i maj. La festa del papà = 19 mars.
+la festa della donna|internationella kvinnodagen|f|Per la [festa della donna] si regalano mimose.|På kvinnodagen ger man bort mimosa.|Den 8 mars.
+la mimosa|mimosa (blomma)|f|La [mimosa] è il simbolo dell'8 marzo.|Mimosan är symbolen för den 8 mars.|Plural: le mimose.
+il simbolo|symbol|m|La colomba è il [simbolo] della pace.|Duvan är fredens symbol.|Plural: i simboli.
+simbolico|symbolisk||Il regalo ha un valore [simbolico].|Presenten har ett symboliskt värde.|Femininum: simbolica.
+risalire|gå tillbaka till (i tiden)||Questa festa [risale] al Medioevo.|Den här festen går tillbaka till medeltiden.|Particip: risalito (essere). Risalire a.
+il Medioevo|medeltiden|m|Nel [Medioevo] Siena era una città potente.|Under medeltiden var Siena en mäktig stad.|Medio + evo 'mellersta tidsåldern'.
+la festività|helgdag|f|Durante le [festività] i negozi sono chiusi.|Under helgdagarna är affärerna stängda.|Plural: le festività.
+il giorno feriale|vardag|m|L'orario cambia nei [giorni feriali].|Tiderna ändras på vardagarna.|Plural: i giorni feriali. Obs: feriale = vardag, inte semester!
+la Quaresima|fastan|f|Il Carnevale finisce prima della [Quaresima].|Karnevalen slutar före fastan.|Latin <b>quadragesima</b> 'den fyrtionde'.
+il martedì grasso|fettisdagen|m|Il [martedì grasso] è l'ultimo giorno di Carnevale.|Fettisdagen är karnevalens sista dag.|Ordagrant 'fet tisdag'.
+la cerimonia|ceremoni|f|La [cerimonia] è cominciata alle undici.|Ceremonin började klockan elva.|Plural: le cerimonie.
+il corteo|tåg, procession|m|Il [corteo] del 25 aprile passa per il centro.|Tåget den 25 april går genom centrum.|Plural: i cortei.
+l'inno nazionale|nationalsång|m|Prima della partita si canta l'[inno nazionale].|Före matchen sjunger man nationalsången.|Plural: gli inni nazionali. Italiens heter Il Canto degli Italiani.
+la patria|fosterland|f|Mio nonno parlava sempre della sua [patria].|Min farfar pratade alltid om sitt fosterland.|Plural: le patrie.
+la parata|parad|f|La [parata] militare si svolge a Roma.|Militärparaden hålls i Rom.|Plural: le parate.
+svolgersi|äga rum||La festa [si svolge] in piazza.|Festen äger rum på torget.|Particip: svolto (essere).
+la festa patronale|helgonfest (skyddshelgon)|f|La [festa patronale] dura tre giorni.|Helgonfesten varar i tre dagar.|Plural: le feste patronali.
+la banda|musikkår|f|La [banda] del paese suona in piazza.|Byns musikkår spelar på torget.|Plural: le bande.
+il cavaliere|ryttare; riddare|m|Il [cavaliere] è caduto dal cavallo.|Ryttaren föll av hästen.|Plural: i cavalieri.
+il drappo|tygstycke, fana|m|Il premio del Palio è un [drappo] dipinto.|Palios pris är ett målat tygstycke.|Plural: i drappi.
+il tifo|hejande, supporterskap|m|In piazza c'è un [tifo] incredibile.|På torget är hejandet otroligt.|Utan plural.
+la cartapesta|papier-maché|f|Le maschere sono di [cartapesta].|Maskerna är av papier-maché.|Carta + pesta 'stampat papper'.
+il mantello|mantel|m|Porta un lungo [mantello] nero.|Han bär en lång svart mantel.|Plural: i mantelli.
+il travestimento|utklädnad|m|Che [travestimento] hai scelto?|Vilken utklädnad har du valt?|Plural: i travestimenti.
+lo scherzo|skämt, spratt|m|A Carnevale ogni [scherzo] vale.|På karnevalen är alla spratt tillåtna.|Plural: gli scherzi. «A Carnevale ogni scherzo vale».
+il pesce d'aprile|aprilskämt|m|Mi hanno fatto un [pesce d'aprile].|De lurade mig första april.|Ordagrant 'aprilfisk': barn fäster en pappersfisk på ryggen.
+il dolce tipico|traditionell sötsak|m|Ogni festa ha il suo [dolce tipico].|Varje högtid har sin traditionella sötsak.|Plural: i dolci tipici.
+la castagna|kastanj|f|In autunno mangiamo le [castagne] arrosto.|På hösten äter vi rostade kastanjer.|Plural: le castagne.
+la vendemmia|vinskörd|f|A settembre c'è la [vendemmia].|I september är det vinskörd.|Plural: le vendemmie. Latin <b>vindemia</b>.
+la raccolta delle olive|olivskörd|f|A novembre aiutiamo nella [raccolta delle olive].|I november hjälper vi till med olivskörden.|La raccolta = skörden, insamlingen.
+il raccolto|skörd (resultatet)|m|Quest'anno il [raccolto] è stato buono.|I år var skörden bra.|Plural: i raccolti.
+il rito|rit|m|Il caffè al bar è quasi un [rito].|Kaffet på baren är nästan en rit.|Plural: i riti.
+il rituale|ritual|m|Ogni famiglia ha i suoi [rituali].|Varje familj har sina ritualer.|Plural: i rituali.
+la credenza|tro, föreställning|f|È una [credenza] popolare molto antica.|Det är en mycket gammal folktro.|Plural: le credenze. Också 'skänk' (möbel).
+il malocchio|onda ögat|m|Il corno rosso protegge dal [malocchio].|Det röda hornet skyddar mot onda ögat.|Male + occhio.
+il portafortuna|lyckobringare, amulett|m|Questo braccialetto è il mio [portafortuna].|Det här armbandet är min lyckobringare.|Oböjligt. Porta + fortuna.
+il gatto nero|svart katt|m|Se un [gatto nero] attraversa la strada, porta sfortuna.|Om en svart katt går över vägen ger det otur.|Plural: i gatti neri.
+toccare ferro|ta i trä||[Tocca ferro], speriamo che vada bene!|Ta i trä, vi får hoppas att det går bra!|Ordagrant 'ta i järn'.
+il calendario|kalender|m|Segno le feste sul [calendario].|Jag skriver in högtiderna i kalendern.|Plural: i calendari.
+l'addobbo|dekoration, pynt|m|Gli [addobbi] natalizi sono già nei negozi.|Julpyntet finns redan i affärerna.|Plural: gli addobbi.
+natalizio|jul-||Il mercatino [natalizio] apre a dicembre.|Julmarknaden öppnar i december.|Femininum: natalizia.
+pasquale|påsk-||Le vacanze [pasquali] durano una settimana.|Påsklovet varar en vecka.|Samma form m/f.
+il pranzo di Natale|juldagslunch|m|Il [pranzo di Natale] dura quattro ore.|Juldagslunchen varar i fyra timmar.|I Italien är den 25 december den stora festmåltiden.
+lo scambio di regali|julklappsutdelning, byte av presenter|m|Lo [scambio di regali] si fa la sera della vigilia.|Presenterna delas ut på julaftonskvällen.|Plural: gli scambi di regali.
+l'usanza popolare|folksed|f|Il falò di San Giovanni è un'[usanza popolare].|Midsommarbrasan är en folksed.|Plural: le usanze popolari.
+il falò|brasa, bål|m|Accendiamo un [falò] sulla spiaggia.|Vi tänder en brasa på stranden.|Plural: i falò.
+la Pentecoste|pingst|f|La [Pentecoste] è cinquanta giorni dopo Pasqua.|Pingsten är femtio dagar efter påsk.|Grekiska <b>pentekoste</b> 'femtionde'.
+il pellegrinaggio|pilgrimsfärd|m|Molti fanno un [pellegrinaggio] ad Assisi.|Många gör en pilgrimsfärd till Assisi.|Plural: i pellegrinaggi.
+il campanile|klocktorn|m|Dal [campanile] si vede tutta la città.|Från klocktornet ser man hela staden.|Plural: i campanili. Campana = klocka.
+commemorare|hedra minnet av||Oggi [commemoriamo] le vittime della guerra.|I dag hedrar vi minnet av krigets offer.|Particip: commemorato (avere).
+la Festa della Liberazione|befrielsedagen|f|La [Festa della Liberazione] è il 25 aprile.|Befrielsedagen är den 25 april.|Firar slutet på den tyska ockupationen 1945.
+il Canto degli Italiani|Italiens nationalsång|m|Il [Canto degli Italiani] è di Goffredo Mameli.|Italiens nationalsång är av Goffredo Mameli.|Kallas också Inno di Mameli (1847).
+il tricolore|trikoloren (flaggan)|m|Il [tricolore] è stato adottato nel 1797.|Trikoloren antogs 1797.|Tre + colore.
+la Candelora|kyndelsmäss|f|La [Candelora] è il 2 febbraio.|Kyndelsmäss är den 2 februari.|Av candela 'ljus'.
+San Silvestro|nyårsafton|m|A [San Silvestro] si festeggia fino all'alba.|På nyårsafton firar man till gryningen.|Den 31 december, uppkallad efter helgonet.
+Santo Stefano|annandag jul|m|A [Santo Stefano] si mangiano gli avanzi del pranzo di Natale.|På annandag jul äter man resterna från juldagslunchen.|Den 26 december.
+gli avanzi|rester|mpl|Con gli [avanzi] facciamo le polpette.|Av resterna gör vi köttbullar.|Singular: l'avanzo.
+#c4|Kap 4 · Come si vive
+le condizioni di vita|levnadsvillkor|fpl|Le [condizioni di vita] sono migliorate molto.|Levnadsvillkoren har förbättrats mycket.|Singular: la condizione.
+il tenore di vita|levnadsstandard|m|In Svezia il [tenore di vita] è alto.|I Sverige är levnadsstandarden hög.|Tenore = nivå (också 'tenor').
+il costo della vita|levnadskostnader|m|A Milano il [costo della vita] è molto alto.|I Milano är levnadskostnaderna väldigt höga.|Plural: i costi.
+il mutuo|bolån|m|Per comprare casa hanno chiesto un [mutuo].|För att köpa hus har de tagit ett bolån.|Plural: i mutui.
+le bollette|räkningar (el, gas, vatten)|fpl|Le [bollette] della luce sono aumentate.|Elräkningarna har ökat.|Singular: la bolletta.
+le spese|utgifter|fpl|Alla fine del mese le [spese] sono sempre troppe.|I slutet av månaden är utgifterna alltid för många.|Singular: la spesa. Fare la spesa = handla mat.
+i risparmi|besparingar|mpl|Ha speso tutti i suoi [risparmi] per il viaggio.|Hon har gjort av med alla sina besparingar på resan.|Singular: il risparmio.
+il reddito|inkomst|m|Molte famiglie hanno un [reddito] basso.|Många familjer har en låg inkomst.|Plural: i redditi.
+arrivare a fine mese|få pengarna att räcka månaden ut||Con uno stipendio solo è difficile [arrivare a fine mese].|Med bara en lön är det svårt att få pengarna att räcka.|Ordagrant 'komma fram till månadens slut'.
+permettersi|ha råd med||Non posso [permettermi] un'auto nuova.|Jag har inte råd med en ny bil.|Particip: permesso (essere). Böjs som mettere.
+benestante|välbärgad||Viene da una famiglia [benestante].|Hon kommer från en välbärgad familj.|Samma form m/f. Bene + stare.
+la generazione|generation|f|Tre [generazioni] vivono sotto lo stesso tetto.|Tre generationer bor under samma tak.|Plural: le generazioni.
+il divario|klyfta, skillnad|m|C'è un grande [divario] tra Nord e Sud.|Det finns en stor klyfta mellan norr och söder.|Plural: i divari.
+i bamboccioni|vuxna barn som bor hemma|mpl|I giornali chiamano [bamboccioni] i giovani che vivono con i genitori.|Tidningarna kallar unga som bor hemma för bamboccioni.|Singular: il bamboccione. Av bamboccio 'stor bebis'. Skämtsamt och lite nedsättande.
+coabitare|bo tillsammans||[Coabito] con due studenti di Erasmus.|Jag bor ihop med två Erasmusstudenter.|Particip: coabitato (avere).
+il coinquilino|rumskamrat, inneboende|m|Il mio [coinquilino] non lava mai i piatti.|Min rumskamrat diskar aldrig.|Plural: i coinquilini. Femininum: la coinquilina.
+la convivenza|samboskap, samlevnad|f|La [convivenza] con i suoceri non è facile.|Att bo med svärföräldrarna är inte lätt.|Plural: le convivenze. Convivere = vara sambo.
+convivere|bo ihop, vara sambo||Marco e Sara [convivono] da due anni.|Marco och Sara har varit sambo i två år.|Particip: convissuto (avere). Böjs som vivere.
+l'anziano|äldre person|m|Gli [anziani] sono sempre di più in Italia.|De äldre blir allt fler i Italien.|Plural: gli anziani. Femininum: l'anziana.
+la badante|hemtjänstbiträde (som bor hos äldre)|f|La nonna vive con una [badante] ucraina.|Mormor bor med ett hemtjänstbiträde från Ukraina.|Plural: le badanti. Av badare 'ta hand om'.
+la casa di riposo|äldreboende|f|In Svezia molti anziani vanno in [casa di riposo].|I Sverige flyttar många äldre till äldreboende.|Plural: le case di riposo.
+arredato|möblerad||Cerco un appartamento [arredato] vicino all'università.|Jag söker en möblerad lägenhet nära universitetet.|Femininum: arredata. Arredare = inreda.
+il vicinato|grannskap|m|Nel mio paese c'è un bel rapporto di [vicinato].|I min by är det bra kontakt mellan grannarna.|Utan plural. Av vicino 'granne'.
+lo spostamento|förflyttning, resa|m|Gli [spostamenti] in città sono lenti.|Att ta sig fram i stan går långsamt.|Plural: gli spostamenti. Spostarsi = förflytta sig.
+la zona rurale|landsbygd|f|Nelle [zone rurali] mancano i servizi.|På landsbygden saknas service.|Plural: le zone rurali. Rurale = lantlig.
+spopolarsi|avfolkas||Molti paesi di montagna [si stanno spopolando].|Många bergsbyar håller på att avfolkas.|Particip: spopolato (essere). Popolo = folk.
+lo spopolamento|avfolkning|m|Lo [spopolamento] dei piccoli paesi è un problema.|Avfolkningen av de små byarna är ett problem.|Utan plural.
+la sanità|sjukvård|f|In Italia la [sanità] pubblica è per tutti.|I Italien är den offentliga vården till för alla.|Utan plural. Sano = frisk.
+l'istruzione|utbildning|f|L'[istruzione] è gratuita fino a sedici anni.|Utbildningen är gratis upp till sexton års ålder.|Utan plural. Istruire = undervisa.
+il welfare|välfärd|m|Il [welfare] svedese è famoso nel mondo.|Den svenska välfärden är känd i världen.|Engelskt lånord. Också lo stato sociale.
+lo stato sociale|välfärdsstat|m|Lo [stato sociale] aiuta chi è in difficoltà.|Välfärdsstaten hjälper den som har det svårt.|Utan plural.
+il sussidio|bidrag|m|Ricevono un [sussidio] per l'affitto.|De får bostadsbidrag.|Plural: i sussidi.
+le tasse|skatter|fpl|In Svezia si pagano molte [tasse].|I Sverige betalar man mycket skatt.|Singular: la tassa. Också le imposte.
+il congedo parentale|föräldraledighet|m|In Svezia il [congedo parentale] è lungo.|I Sverige är föräldraledigheten lång.|Plural: i congedi.
+l'asilo nido|förskola (för de minsta)|m|L'[asilo nido] costa molto in Italia.|Förskola kostar mycket i Italien.|Plural: gli asili nido. Nido = bo.
+la natalità|födelsetal|f|In Italia la [natalità] è molto bassa.|I Italien är födelsetalet väldigt lågt.|Utan plural.
+invecchiare|åldras||La popolazione italiana [invecchia].|Den italienska befolkningen åldras.|Particip: invecchiato (essere). Av vecchio.
+l'invecchiamento|åldrande|m|L'[invecchiamento] della popolazione è una sfida.|Befolkningens åldrande är en utmaning.|Utan plural.
+la statistica|statistik|f|Secondo le [statistiche], i giovani leggono meno.|Enligt statistiken läser unga mindre.|Plural: le statistiche.
+la percentuale|procentandel|f|Una [percentuale] alta di giovani lavora al Nord.|En stor andel av de unga arbetar i norr.|Plural: le percentuali.
+aumentare|öka||I prezzi [sono aumentati] del dieci per cento.|Priserna har ökat med tio procent.|Particip: aumentato (essere när något ökar, avere när man ökar något).
+diminuire|minska||La disoccupazione [è diminuita].|Arbetslösheten har minskat.|Particip: diminuito (essere/avere). Böjs som finire: diminuisce.
+peggiorare|försämra, bli sämre||La situazione [è peggiorata].|Situationen har försämrats.|Particip: peggiorato (essere/avere).
+la differenza|skillnad|f|Qual è la [differenza] tra la vita in Italia e in Svezia?|Vad är skillnaden mellan livet i Italien och i Sverige?|Plural: le differenze.
+il paragone|jämförelse|m|Facciamo un [paragone] tra le due città.|Vi gör en jämförelse mellan de två städerna.|Plural: i paragoni. Paragonare = jämföra.
+invece di|i stället för||[Invece di] prendere la macchina, vado a piedi.|I stället för att ta bilen går jag.|Följs av infinitiv eller substantiv.
+la mancanza|brist|f|C'è [mancanza] di case per gli studenti.|Det är brist på bostäder för studenter.|Plural: le mancanze. Mancare = saknas.
+la casa popolare|allmännyttig bostad|f|Vivono in una [casa popolare] in periferia.|De bor i en kommunal hyreslägenhet i förorten.|Plural: le case popolari.
+il senzatetto|hemlös|m|D'inverno la città apre dormitori per i [senzatetto].|På vintern öppnar staden härbärgen för hemlösa.|Plural: i senzatetto (oförändrat). Senza + tetto 'utan tak'.
+l'emigrato|emigrant|m|Molti [emigrati] tornano al paese d'estate.|Många emigranter återvänder till byn på sommaren.|Plural: gli emigrati. Femininum: l'emigrata.
+emigrare|emigrera||Negli anni Cinquanta mio nonno [è emigrato] in Svezia.|På femtiotalet emigrerade min morfar till Sverige.|Particip: emigrato (essere).
+la fuga dei cervelli|kompetensflykt|f|La [fuga dei cervelli] preoccupa il governo.|Kompetensflykten oroar regeringen.|Ordagrant 'hjärnornas flykt'.
+l'abitazione|bostad|f|Il prezzo delle [abitazioni] è aumentato.|Bostadspriserna har ökat.|Plural: le abitazioni. Formellt för casa.
+l'alloggio|boende, logi|m|Il comune offre [alloggi] agli studenti.|Kommunen erbjuder boende till studenter.|Plural: gli alloggi.
+il bilocale|tvåa|m|Viviamo in un [bilocale] con balcone.|Vi bor i en tvåa med balkong.|Plural: i bilocali.
+il seminterrato|souterrängvåning|m|L'appartamento è in un [seminterrato] e c'è poca luce.|Lägenheten ligger i souterrängen och det är lite ljus.|Plural: i seminterrati.
+l'inquilina|hyresgäst (kvinna)|f|L'[inquilina] del secondo piano è gentilissima.|Hyresgästen på andra våningen är jättevänlig.|Plural: le inquiline.
+il padrone di casa|hyresvärd|m|Il [padrone di casa] non vuole animali.|Hyresvärden vill inte ha djur.|Femininum: la padrona di casa.
+la caparra|handpenning, deposition|f|Per la stanza ho pagato due mesi di [caparra].|För rummet betalade jag två månaders deposition.|Plural: le caparre.
+le spese condominiali|husavgifter|fpl|Le [spese condominiali] sono comprese nell'affitto.|Husavgifterna ingår i hyran.|Singular: la spesa condominiale.
+il canone|hyra, avgift|m|Il [canone] mensile è di 500 euro.|Månadshyran är 500 euro.|Plural: i canoni. Formellt.
+disdire|säga upp (avtal)||Ho [disdetto] il contratto d'affitto.|Jag har sagt upp hyreskontraktet.|Particip: disdetto (avere). Böjs som dire.
+lo scatolone|flyttkartong|m|Ho riempito venti [scatoloni].|Jag har fyllt tjugo flyttkartonger.|Plural: gli scatoloni. Scatola + förstorande -one.
+l'elettrodomestico|hushållsapparat|m|La lavatrice è l'[elettrodomestico] più utile.|Tvättmaskinen är den mest användbara hushållsapparaten.|Plural: gli elettrodomestici.
+la lavastoviglie|diskmaskin|f|Chi svuota la [lavastoviglie]?|Vem tömmer diskmaskinen?|Plural: le lavastoviglie. Lavare + stoviglie 'porslin'.
+le faccende domestiche|hushållssysslor|fpl|Dividiamo le [faccende domestiche].|Vi delar på hushållssysslorna.|Singular: la faccenda.
+il turno delle pulizie|städschema|m|Questa settimana tocca a te il [turno delle pulizie].|Den här veckan är det din tur att städa.|Plural: i turni.
+toccare a|vara ens tur||Oggi [tocca a] me cucinare.|I dag är det min tur att laga mat.|Tocca a te = det är din tur.
+la privacy domestica|eget utrymme|f|In una casa piccola manca la [privacy domestica].|I ett litet hus saknas eget utrymme.|Engelskt lånord i italiensk användning.
+il nucleo familiare|hushåll|m|Il [nucleo familiare] medio ha 2,3 persone.|Ett genomsnittligt hushåll har 2,3 personer.|Plural: i nuclei familiari.
+il figlio unico|enda barn|m|Sono [figlio unico].|Jag är enda barnet.|Femininum: figlia unica.
+la famiglia allargata|ombildad familj|f|Vivo in una [famiglia allargata], con due fratellastri.|Jag bor i en ombildad familj, med två styvbröder.|Plural: le famiglie allargate.
+separarsi|separera||I miei genitori [si sono separati] due anni fa.|Mina föräldrar separerade för två år sedan.|Particip: separato (essere).
+il suocero|svärfar|m|Il mio [suocero] è molto simpatico.|Min svärfar är väldigt trevlig.|Plural: i suoceri = svärföräldrar. Femininum: la suocera.
+l'adolescenza|tonåren|f|L'[adolescenza] è un periodo difficile.|Tonåren är en svår period.|Utan plural.
+l'età adulta|vuxen ålder|f|Il passaggio all'[età adulta] è lento in Italia.|Övergången till vuxenlivet går långsamt i Italien.|Utan plural.
+la terza età|pensionsåldern, ålderdomen|f|Ci sono corsi di informatica per la [terza età].|Det finns datakurser för pensionärer.|Ordagrant 'den tredje åldern'.
+la vecchiaia|ålderdom|f|Mio nonno vive la [vecchiaia] con serenità.|Min farfar lever sin ålderdom i lugn och ro.|Utan plural.
+dipendere da|bero på, vara beroende av||Molti giovani [dipendono dai] genitori.|Många unga är beroende av sina föräldrar.|Particip: dipeso (essere).
+economicamente|ekonomiskt||Non sono ancora [economicamente] indipendente.|Jag är ännu inte ekonomiskt självständig.|Adverb av economico.
+la paghetta|veckopeng|f|Ricevo venti euro di [paghetta] alla settimana.|Jag får tjugo euro i veckopeng.|Plural: le paghette. Diminutiv av paga 'lön'.
+il bilancio|budget, balans|m|Faccio un [bilancio] delle spese del mese.|Jag gör en budget över månadens utgifter.|Plural: i bilanci.
+il potere d'acquisto|köpkraft|m|Il [potere d'acquisto] delle famiglie è diminuito.|Hushållens köpkraft har minskat.|Utan plural.
+l'inflazione|inflation|f|L'[inflazione] fa aumentare i prezzi.|Inflationen får priserna att stiga.|Utan plural.
+la bolletta della luce|elräkning|f|La [bolletta della luce] è arrivata!|Elräkningen har kommit!|La luce = ljuset, men här 'el'.
+il divario Nord-Sud|klyftan mellan norr och söder|m|Il [divario Nord-Sud] è ancora grande.|Klyftan mellan norr och söder är fortfarande stor.|Utan plural.
+industriale|industri-||Il Nord è più [industriale] del Sud.|Norr är mer industrialiserat än söder.|Samma form m/f.
+agricolo|jordbruks-||La Puglia è una regione [agricola].|Apulien är en jordbruksregion.|Femininum: agricola. Plural: agricoli.
+il collegamento|förbindelse|m|Non ci sono [collegamenti] con la città.|Det finns inga förbindelser med staden.|Plural: i collegamenti.
+la connessione|uppkoppling|f|In montagna la [connessione] è lenta.|I bergen är uppkopplingen långsam.|Plural: le connessioni.
+vivibile|beboelig, trivsam||Secondo i giovani, Bologna è la città più [vivibile].|Enligt de unga är Bologna den trivsammaste staden.|Samma form m/f.
+la zona pedonale|gågata, bilfritt område|f|Il centro è [zona pedonale].|Centrum är bilfritt.|Plural: le zone pedonali. Pedone = fotgängare.
+il verde pubblico|parker och grönområden|m|La città ha poco [verde pubblico].|Staden har få parker.|Il verde = grönska.
+#c5|Kap 5 · Cinema e letteratura
+la regia|regi|f|La [regia] è di Vittorio De Sica.|Regin är av Vittorio De Sica.|Utan plural.
+le riprese|inspelning|fpl|Le [riprese] sono durate tre mesi.|Inspelningen varade i tre månader.|Singular: la ripresa.
+il protagonista|huvudperson|m|Il [protagonista] è un bambino di otto anni.|Huvudpersonen är en pojke på åtta år.|Plural: i protagonisti. Femininum: la protagonista.
+il personaggio|gestalt, rollfigur|m|Il mio [personaggio] preferito è la nonna.|Min favoritfigur är mormodern.|Plural: i personaggi.
+interpretare|spela (en roll), tolka||Sophia Loren [ha interpretato] una madre coraggiosa.|Sophia Loren spelade en modig mamma.|Particip: interpretato (avere).
+il ruolo|roll|m|Ha avuto un piccolo [ruolo] in una serie TV.|Hon fick en liten roll i en tv-serie.|Plural: i ruoli.
+la scena|scen|f|La [scena] finale mi ha fatto piangere.|Slutscenen fick mig att gråta.|Plural: le scene.
+doppiato|dubbad||In Italia quasi tutti i film sono [doppiati].|I Italien är nästan alla filmer dubbade.|Femininum: doppiata. Il doppiaggio = dubbning.
+la versione originale|originalversion|f|Preferisco vedere i film in [versione originale].|Jag föredrar att se filmer i originalversion.|Förkortas v.o.
+il giallo|deckare|m|Mi piace leggere i [gialli].|Jag gillar att läsa deckare.|Plural: i gialli. Förlaget Mondadoris deckare hade gula omslag.
+la commedia|komedi|f|È una [commedia] divertentissima.|Det är en jätterolig komedi.|Plural: le commedie. Commedia all'italiana = italiensk komedi på 50- och 60-talet.
+il neorealismo|neorealismen|m|Il [neorealismo] mostra l'Italia povera del dopoguerra.|Neorealismen visar det fattiga Italien efter kriget.|Filmrörelse ca 1943–1952: Rossellini, De Sica.
+il dopoguerra|efterkrigstiden|m|Nel [dopoguerra] l'Italia era molto povera.|Efter kriget var Italien väldigt fattigt.|Dopo + guerra.
+la recensione|recension|f|Ho letto una [recensione] molto positiva.|Jag har läst en väldigt positiv recension.|Plural: le recensioni.
+il critico|kritiker|m|I [critici] hanno amato il film.|Kritikerna älskade filmen.|Plural: i critici. Femininum: la critica.
+il premio|pris (utmärkelse)|m|Il film ha vinto il [premio] come miglior film straniero.|Filmen vann priset för bästa utländska film.|Plural: i premi.
+commuoversi|bli rörd||Alla fine del film [mi sono commossa].|I slutet av filmen blev jag rörd.|Particip: commosso (essere).
+la letteratura|litteratur|f|Studio [letteratura] italiana.|Jag studerar italiensk litteratur.|Utan plural.
+il racconto|novell, berättelse|m|Il libro contiene dieci [racconti] brevi.|Boken innehåller tio korta noveller.|Plural: i racconti. Raccontare = berätta.
+la novella|novell (klassisk)|f|Boccaccio ha scritto cento [novelle].|Boccaccio skrev hundra noveller.|Plural: le novelle. Decameron är den mest kända samlingen.
+il capitolo|kapitel|m|Ho letto solo il primo [capitolo].|Jag har bara läst första kapitlet.|Plural: i capitoli.
+il narratore|berättare|m|Il [narratore] parla in prima persona.|Berättaren talar i första person.|Plural: i narratori.
+la fiaba|saga|f|Le [fiabe] italiane sono state raccolte da Calvino.|De italienska sagorna samlades av Calvino.|Plural: le fiabe. Latin <b>fabula</b>.
+la casa editrice|förlag|f|Einaudi è una [casa editrice] di Torino.|Einaudi är ett förlag i Turin.|Plural: le case editrici.
+la copertina|omslag|f|Mi piace la [copertina] di questo libro.|Jag gillar omslaget på den här boken.|Plural: le copertine.
+prendere in prestito|låna||Ho [preso in prestito] tre libri.|Jag har lånat tre böcker.|Prestare = låna ut.
+ambientato|som utspelar sig||Il film è [ambientato] in Sicilia.|Filmen utspelar sig på Sicilien.|Femininum: ambientata.
+descrivere|beskriva||L'autore [descrive] la vita in un paese.|Författaren beskriver livet i en by.|Particip: descritto (avere). Böjs som scrivere.
+la descrizione|beskrivning|f|Le [descrizioni] sono molto lunghe.|Beskrivningarna är väldigt långa.|Plural: le descrizioni.
+il finale|slut (i en berättelse)|m|Non dirmi il [finale]!|Berätta inte slutet för mig!|Plural: i finali. Maskulinum i den här betydelsen.
+lo spoiler|spoiler|m|Niente [spoiler], per favore!|Inga spoilers, tack!|Engelskt lånord. Plural: gli spoiler.
+il cortometraggio|kortfilm|m|Ha girato un [cortometraggio] con il telefono.|Han har spelat in en kortfilm med mobilen.|Plural: i cortometraggi. Lungometraggio = långfilm.
+il cinema d'autore|konstnärlig film|m|Mi piace il [cinema d'autore] italiano.|Jag gillar italiensk konstnärlig film.|Ordagrant 'författarfilm'.
+il verso|vers, rad (i en dikt)|m|Ricordo i primi [versi] della poesia.|Jag minns diktens första rader.|Plural: i versi.
+la rima|rim|f|Questa poesia non ha [rime].|Den här dikten har inga rim.|Plural: le rime.
+riassumere|sammanfatta||Puoi [riassumere] la trama in tre frasi?|Kan du sammanfatta handlingen på tre meningar?|Particip: riassunto (avere).
+la morale|sensmoral|f|La [morale] della favola è: non mentire.|Sensmoralen i fabeln är: ljug inte.|Plural: le morali.
+consigliare|rekommendera, råda||Ti [consiglio] questo romanzo.|Jag rekommenderar den här romanen.|Particip: consigliato (avere).
+il burattino|marionett, docka|m|Pinocchio è un [burattino] di legno.|Pinocchio är en trädocka.|Plural: i burattini. Collodi, 1883.
+la fantasia|fantasi|f|Rodari aveva una [fantasia] incredibile.|Rodari hade en otrolig fantasi.|Plural: le fantasie.
+immaginare|föreställa sig||[Immagina] di vivere nel 1950.|Föreställ dig att du lever 1950.|Particip: immaginato (avere).
+la sceneggiatura|manus (film)|f|La [sceneggiatura] è di Cesare Zavattini.|Manuset är av Cesare Zavattini.|Plural: le sceneggiature.
+lo sceneggiatore|manusförfattare|m|Lo [sceneggiatore] ha scritto dieci versioni.|Manusförfattaren skrev tio versioner.|Plural: gli sceneggiatori.
+il produttore|producent|m|Il [produttore] ha trovato i soldi per il film.|Producenten hittade pengarna till filmen.|Plural: i produttori.
+il set|filminspelningsplats|m|Sul [set] c'erano cento persone.|På inspelningsplatsen var det hundra personer.|Plural: i set.
+la sala|salong|f|La [sala] era piena.|Salongen var full.|Plural: le sale. Cinema = biograf.
+il grande schermo|bioduken|m|È un film da vedere sul [grande schermo].|Det är en film att se på bio.|Lo schermo = skärmen.
+la locandina|filmaffisch|f|La [locandina] del film è bellissima.|Filmaffischen är jättefin.|Plural: le locandine.
+il trailer|trailer|m|Hai visto il [trailer] del nuovo film?|Har du sett trailern till den nya filmen?|Engelskt lånord.
+l'uscita|premiär; utgång|f|L'[uscita] del film è prevista per dicembre.|Filmens premiär väntas i december.|Plural: le uscite. Uscire al cinema = gå upp på bio.
+la prima|premiär|f|Siamo andati alla [prima] del film a Venezia.|Vi gick på filmens premiär i Venedig.|Plural: le prime.
+il bianco e nero|svartvitt|m|È un film in [bianco e nero].|Det är en svartvit film.|Utan plural.
+restaurato|restaurerad||Hanno proiettato la versione [restaurata].|De visade den restaurerade versionen.|Femininum: restaurata.
+proiettare|visa (film)||Il cinema [proietta] film d'autore.|Biografen visar konstnärlig film.|Particip: proiettato (avere).
+il proiezionista|biografmaskinist|m|Il [proiezionista] ha cambiato la pellicola.|Maskinisten bytte filmrulle.|Plural: i proiezionisti.
+la pellicola|film(rulle)|f|Il film è stato girato su [pellicola].|Filmen spelades in på film.|Plural: le pellicole.
+il doppiaggio|dubbning|m|Il [doppiaggio] italiano è famoso nel mondo.|Den italienska dubbningen är berömd i världen.|Plural: i doppiaggi.
+il cast|rollbesättning|m|Il [cast] è pieno di stelle.|Rollbesättningen är full av stjärnor.|Engelskt lånord.
+la stella del cinema|filmstjärna|f|Sophia Loren è una [stella del cinema].|Sophia Loren är en filmstjärna.|Plural: le stelle del cinema.
+recitare|spela (teater, film)||Ha [recitato] in tre film di Fellini.|Hon spelade i tre Fellinifilmer.|Particip: recitato (avere).
+la recitazione|skådespeleri|f|La [recitazione] è naturale.|Skådespeleriet är naturligt.|Plural: le recitazioni.
+drammatico|dramatisk||È una storia molto [drammatica].|Det är en väldigt dramatisk historia.|Femininum: drammatica. Plural: drammatici.
+comico|komisk||Benigni è un attore [comico].|Benigni är en komisk skådespelare.|Femininum: comica. Plural: comici.
+coinvolgente|engagerande, fängslande||Il romanzo è molto [coinvolgente].|Romanen är väldigt fängslande.|Samma form m/f.
+deludente|en besvikelse||Il finale è [deludente].|Slutet är en besvikelse.|Samma form m/f. Deludere = göra besviken.
+sopravvalutato|överskattad||Secondo me quel film è [sopravvalutato].|Enligt mig är den filmen överskattad.|Femininum: sopravvalutata.
+il colpo di scena|oväntad vändning|m|Alla fine c'è un [colpo di scena].|I slutet kommer en oväntad vändning.|Plural: i colpi di scena. Ordagrant 'scenslag'.
+il lieto fine|lyckligt slut|m|Mi piacciono i film con il [lieto fine].|Jag gillar filmer med lyckligt slut.|Lieto = glad (litterärt).
+lo scrittore di gialli|deckarförfattare|m|Camilleri era uno [scrittore di gialli].|Camilleri var en deckarförfattare.|Plural: gli scrittori di gialli.
+il commissario|kommissarie|m|Il [commissario] Montalbano lavora in Sicilia.|Kommissarie Montalbano arbetar på Sicilien.|Plural: i commissari.
+l'indagine|utredning|f|L'[indagine] dura tutto il romanzo.|Utredningen pågår under hela romanen.|Plural: le indagini.
+il mistero|mysterium|m|Il [mistero] si risolve alla fine.|Mysteriet löses i slutet.|Plural: i misteri.
+la raccolta|samling|f|È una [raccolta] di racconti.|Det är en novellsamling.|Plural: le raccolte.
+il saggio|essä, facklitteratur|m|Ho letto un [saggio] sulla storia della lingua.|Jag har läst en essä om språkets historia.|Plural: i saggi. Också 'vis' (adjektiv).
+la trama principale|huvudhandling|f|La [trama principale] è semplice.|Huvudhandlingen är enkel.|Plural: le trame principali.
+il tema centrale|huvudtema|m|Il [tema centrale] è l'amicizia.|Huvudtemat är vänskap.|Plural: i temi centrali.
+il racconto breve|kortnovell|m|Rodari ha scritto molti [racconti brevi].|Rodari skrev många korta berättelser.|Plural: i racconti brevi.
+la filastrocca|ramsa, barnvers|f|I bambini imparano le [filastrocche] a memoria.|Barnen lär sig ramsorna utantill.|Plural: le filastrocche.
+il premio letterario|litterärt pris|m|Lo Strega è il [premio letterario] più famoso d'Italia.|Strega är Italiens mest kända litteraturpris.|Plural: i premi letterari.
+la trasposizione|filmatisering|f|Il film è una [trasposizione] del romanzo.|Filmen är en filmatisering av romanen.|Plural: le trasposizioni.
+tratto da|baserad på||Il film è [tratto da] un libro di Calvino.|Filmen är baserad på en bok av Calvino.|Femininum: tratta da. Av trarre 'dra'.
+la citazione|citat|f|Ho scritto una [citazione] di Dante sul diario.|Jag har skrivit ett Dantecitat i dagboken.|Plural: le citazioni.
+il classico|klassiker|m|I promessi sposi è un [classico] della letteratura.|De trolovade är en klassiker i litteraturen.|Plural: i classici.
+la lettura|läsning|f|La [lettura] è il mio passatempo preferito.|Läsning är mitt favoritnöje.|Plural: le letture.
+divorare|sluka||Ho [divorato] il libro in due giorni.|Jag slukade boken på två dagar.|Particip: divorato (avere).
+sfogliare|bläddra||[Sfogliavo] un vecchio libro di fiabe.|Jag bläddrade i en gammal sagobok.|Particip: sfogliato (avere). Il foglio = bladet.
+la libreria antiquaria|antikvariat|f|Ho trovato questo libro in una [libreria antiquaria].|Jag hittade den här boken på ett antikvariat.|Plural: le librerie antiquarie.
+il bestseller|storsäljare|m|Il romanzo è diventato un [bestseller].|Romanen blev en storsäljare.|Engelskt lånord.
+l'audiolibro|ljudbok|m|In macchina ascolto un [audiolibro].|I bilen lyssnar jag på en ljudbok.|Plural: gli audiolibri.
+l'ebook|e-bok|m|Leggo gli [ebook] sul telefono.|Jag läser e-böcker på mobilen.|Engelskt lånord.
+il neorealista|neorealist|m|De Sica era un regista [neorealista].|De Sica var en neorealistisk regissör.|Plural: i neorealisti. Också adjektiv.
+il cortometraggista|kortfilmare|m|È un giovane [cortometraggista] di talento.|Han är en ung, begåvad kortfilmare.|Plural: i cortometraggisti.
+l'animazione|animation|f|Il film d'[animazione] ha vinto un premio.|Den animerade filmen vann ett pris.|Plural: le animazioni.
+la saga|filmserie, saga|f|Ho visto tutta la [saga] in un fine settimana.|Jag såg hela filmserien på en helg.|Plural: le saghe.
+il seguito|uppföljare|m|Il [seguito] è meno bello del primo film.|Uppföljaren är sämre än den första filmen.|Plural: i seguiti.
+la biografia|biografi|f|Ho letto la [biografia] di Maria Montessori.|Jag har läst Maria Montessoris biografi.|Plural: le biografie.
+l'autobiografia|självbiografi|f|Nella sua [autobiografia] racconta l'infanzia.|I sin självbiografi berättar hon om barndomen.|Plural: le autobiografie.
+#c6|Kap 6 · La società
+la società|samhälle|f|Viviamo in una [società] sempre più digitale.|Vi lever i ett allt mer digitalt samhälle.|Plural: le società. Också 'bolag'.
+sociale|social, samhälls-||I problemi [sociali] riguardano tutti.|Samhällsproblemen berör alla.|Samma form m/f.
+la cittadinanza|medborgarskap|f|Ha ottenuto la [cittadinanza] italiana.|Han har fått italienskt medborgarskap.|Plural: le cittadinanze.
+lo Stato|staten|m|Lo [Stato] deve aiutare i più deboli.|Staten måste hjälpa de svagaste.|Plural: gli Stati. Stor bokstav i betydelsen 'staten'.
+il parlamento|parlament, riksdag|m|Il [parlamento] italiano ha due camere.|Italiens parlament har två kamrar.|Plural: i parlamenti.
+il partito|parti|m|Per chi voti? Per quale [partito]?|Vem röstar du på? Vilket parti?|Plural: i partiti. Också particip av partire.
+la Costituzione|grundlagen|f|La [Costituzione] italiana è del 1948.|Italiens grundlag är från 1948.|Plural: le costituzioni.
+la democrazia|demokrati|f|Il voto è la base della [democrazia].|Rösten är grunden för demokratin.|Plural: le democrazie.
+il potere|makt|m|Chi ha il [potere] in questa città?|Vem har makten i den här staden?|Plural: i poteri. Samma ord som verbet potere.
+la partecipazione|deltagande|f|La [partecipazione] dei giovani è importante.|Ungdomars deltagande är viktigt.|Plural: le partecipazioni.
+l'impegno|engagemang; åtagande|m|Grazie per il tuo [impegno]!|Tack för ditt engagemang!|Plural: gli impegni. Ho molti impegni = jag är upptagen.
+il volontario|volontär|m|I [volontari] aiutano gli anziani a fare la spesa.|Volontärerna hjälper de äldre att handla.|Plural: i volontari. Femininum: la volontaria.
+l'associazione|förening|f|Faccio parte di un'[associazione] culturale.|Jag är med i en kulturförening.|Plural: le associazioni.
+l'immigrazione|invandring|f|L'[immigrazione] ha cambiato la società italiana.|Invandringen har förändrat det italienska samhället.|Utan plural.
+l'immigrato|invandrare|m|Molti [immigrati] lavorano nell'agricoltura.|Många invandrare arbetar inom jordbruket.|Plural: gli immigrati. Femininum: l'immigrata.
+lo straniero|utlänning|m|In classe ci sono molti figli di [stranieri].|I klassen finns många barn till utlänningar.|Plural: gli stranieri. Också adjektiv: främmande.
+il rifugiato|flykting|m|Il paese ha accolto cento [rifugiati].|Byn har tagit emot hundra flyktingar.|Plural: i rifugiati. Femininum: la rifugiata.
+accogliere|ta emot||La famiglia [ha accolto] un ragazzo ucraino.|Familjen har tagit emot en ukrainsk pojke.|Particip: accolto (avere). Accolgo, accogli.
+l'accoglienza|mottagande|f|L'[accoglienza] dei migranti è un tema molto discusso.|Mottagandet av migranter är ett mycket omdiskuterat ämne.|Utan plural.
+l'integrazione|integration|f|La lingua è la chiave dell'[integrazione].|Språket är nyckeln till integration.|Utan plural.
+il razzismo|rasism|m|Il [razzismo] esiste ancora, anche nello sport.|Rasismen finns fortfarande, även inom idrotten.|Utan plural. Razzista = rasist.
+la parità|jämställdhet, likhet|f|La [parità] di genere è un obiettivo dell'ONU.|Jämställdhet mellan könen är ett FN-mål.|Utan plural. A parità di = med samma.
+il femminismo|feminism|m|Il [femminismo] italiano è nato negli anni Settanta.|Den italienska feminismen föddes på sjuttiotalet.|Utan plural.
+la violenza|våld|f|Diciamo no alla [violenza] contro le donne.|Vi säger nej till våld mot kvinnor.|Plural: le violenze.
+la criminalità|brottslighet|f|La [criminalità] è diminuita.|Brottsligheten har minskat.|Utan plural.
+la mafia|maffia|f|Giovanni Falcone ha combattuto la [mafia].|Giovanni Falcone bekämpade maffian.|Från sicilianskan, osäkert ursprung.
+la legalità|laglydnad, rättsstat|f|A scuola si parla di educazione alla [legalità].|I skolan pratar man om att lära sig respektera lagen.|Utan plural.
+il sindacato|fackförening|m|Il [sindacato] ha organizzato uno sciopero.|Facket har organiserat en strejk.|Plural: i sindacati.
+la fake news|falsk nyhet|f|Quella notizia era una [fake news].|Den nyheten var en falsk nyhet.|Engelskt lånord. Också notizia falsa, bufala.
+influenzare|påverka||I social [influenzano] le opinioni dei giovani.|Sociala medier påverkar ungas åsikter.|Particip: influenzato (avere).
+il cambiamento|förändring|m|Serve un [cambiamento] radicale.|Det behövs en radikal förändring.|Plural: i cambiamenti.
+la questione|fråga (att lösa)|f|È una [questione] complessa.|Det är en komplicerad fråga.|Plural: le questioni. Obs: la domanda = fråga man ställer.
+affermare|påstå||Il ministro [afferma] che la crisi è finita.|Ministern påstår att krisen är över.|Particip: affermato (avere).
+secondo|enligt||[Secondo] il giornale, l'affitto è aumentato.|Enligt tidningen har hyran ökat.|Preposition. Secondo me = enligt mig.
+quindi|alltså, därför||Ha piovuto, [quindi] la festa è stata annullata.|Det regnade, så festen ställdes in.|Anger följd.
+perciò|därför||Non avevo soldi, [perciò] sono rimasto a casa.|Jag hade inga pengar, därför stannade jag hemma.|Perciò = per ciò 'för det'.
+però|men, dock||È caro, [però] è bellissimo.|Det är dyrt, men det är jättefint.|Betoning på sista stavelsen. Kan stå sist: È caro, però.
+tuttavia|dock, ändå||Il piano è buono; [tuttavia] costa troppo.|Planen är bra, men den kostar ändå för mycket.|Mer formellt än però.
+siccome|eftersom||[Siccome] pioveva, abbiamo preso l'autobus.|Eftersom det regnade tog vi bussen.|Står först i meningen, till skillnad från perché.
+anche se|även om||[Anche se] è stanca, continua a lavorare.|Även om hon är trött fortsätter hon att arbeta.|Följs av indikativ.
+infatti|mycket riktigt, nämligen||Era stanco; [infatti] è andato a letto presto.|Han var trött; mycket riktigt gick han och lade sig tidigt.|Bekräftar det som sagts. Inte 'i själva verket', som heter in realtà.
+inoltre|dessutom||Il corso è gratuito; [inoltre] è online.|Kursen är gratis; dessutom är den på nätet.|In + oltre 'bortom'.
+da una parte|å ena sidan||[Da una parte] è comodo, dall'altra è caro.|Å ena sidan är det bekvämt, å andra sidan är det dyrt.|Fortsätter med dall'altra (parte).
+in conclusione|sammanfattningsvis||[In conclusione], credo che sia una buona idea.|Sammanfattningsvis tror jag att det är en bra idé.|Används för att avsluta en text.
+quello che|det som||[Quello che] dici è vero.|Det du säger är sant.|Också ciò che (mer formellt).
+il quale|som, vilken (relativt)||Ho parlato con il sindaco, [il quale] mi ha promesso aiuto.|Jag talade med borgmästaren, som lovade mig hjälp.|Böjs: la quale, i quali, le quali. Formellare än che.
+il ministro|minister|m|Il [ministro] dell'istruzione ha parlato agli studenti.|Utbildningsministern talade till eleverna.|Plural: i ministri. Även om kvinnor: la ministra.
+il presidente della Repubblica|republikens president|m|Il [presidente della Repubblica] vive al Quirinale.|Republikens president bor i Quirinalen.|Väljs av parlamentet för sju år.
+il senato|senat|m|Il [senato] ha approvato la legge.|Senaten har antagit lagen.|Plural: i senati.
+la camera dei deputati|deputeradekammaren|f|La [camera dei deputati] ha 400 membri.|Deputeradekammaren har 400 ledamöter.|Il deputato = riksdagsledamoten.
+approvare|anta, godkänna||Il parlamento ha [approvato] la riforma.|Parlamentet har antagit reformen.|Particip: approvato (avere).
+la riforma|reform|f|La [riforma] della scuola è molto discussa.|Skolreformen är mycket omdiskuterad.|Plural: le riforme.
+la destra|högern|f|La [destra] ha vinto le elezioni.|Högern vann valet.|Plural: le destre. A destra = till höger.
+la sinistra|vänstern|f|La [sinistra] è all'opposizione.|Vänstern är i opposition.|Plural: le sinistre.
+l'opposizione|opposition|f|L'[opposizione] critica il governo.|Oppositionen kritiserar regeringen.|Plural: le opposizioni.
+il candidato|kandidat|m|Quale [candidato] preferisci?|Vilken kandidat föredrar du?|Plural: i candidati. Femininum: la candidata.
+la scheda elettorale|valsedel|f|Metti la [scheda elettorale] nell'urna.|Lägg valsedeln i urnan.|Plural: le schede elettorali.
+il referendum|folkomröstning|m|Nel 1946 c'è stato un [referendum].|År 1946 hölls en folkomröstning.|Plural: i referendum.
+il diritto di voto|rösträtt|m|Le donne italiane hanno il [diritto di voto] dal 1946.|Italienska kvinnor har haft rösträtt sedan 1946.|Utan plural.
+l'educazione civica|samhällskunskap|f|A scuola facciamo un'ora di [educazione civica].|I skolan har vi en timme samhällskunskap.|Utan plural.
+politico|politisk; politiker||È una decisione [politica].|Det är ett politiskt beslut.|Femininum: politica. Plural: politici.
+l'amministrazione|förvaltning|f|L'[amministrazione] comunale ha chiuso la piscina.|Kommunförvaltningen har stängt badhuset.|Plural: le amministrazioni.
+il consiglio comunale|kommunfullmäktige|m|Il [consiglio comunale] si riunisce il lunedì.|Kommunfullmäktige sammanträder på måndagar.|Plural: i consigli comunali.
+la firma|namnteckning|f|Abbiamo raccolto mille [firme].|Vi har samlat in tusen namnteckningar.|Plural: le firme. Firmare = skriva under.
+la petizione|namninsamling, petition|f|Hai firmato la [petizione] per il parco?|Har du skrivit under namninsamlingen för parken?|Plural: le petizioni.
+il volontariato sociale|socialt volontärarbete|m|Il [volontariato sociale] aiuta migliaia di persone.|Det sociala volontärarbetet hjälper tusentals människor.|Utan plural.
+la mensa dei poveri|soppkök|f|Il sabato aiuto alla [mensa dei poveri].|På lördagar hjälper jag till på soppköket.|Plural: le mense dei poveri.
+la Croce Rossa|Röda korset|f|La [Croce Rossa] cerca volontari.|Röda korset söker volontärer.|Utan plural.
+il migrante|migrant|m|Molti [migranti] arrivano in barca.|Många migranter kommer med båt.|Plural: i migranti.
+lo sbarco|landstigning|m|Gli [sbarchi] sono aumentati quest'estate.|Landstigningarna har ökat i somras.|Plural: gli sbarchi. Om båtar med migranter.
+il permesso di soggiorno|uppehållstillstånd|m|Ha ottenuto il [permesso di soggiorno].|Han har fått uppehållstillstånd.|Plural: i permessi di soggiorno.
+la seconda generazione|andra generationen|f|I ragazzi di [seconda generazione] sono nati in Italia.|Ungdomarna i andra generationen är födda i Italien.|Plural: le seconde generazioni.
+multiculturale|mångkulturell||Milano è una città [multiculturale].|Milano är en mångkulturell stad.|Samma form m/f.
+la convivenza civile|fredlig samlevnad|f|La scuola insegna la [convivenza civile].|Skolan lär ut fredlig samlevnad.|Utan plural.
+il divario salariale|lönegap|m|Il [divario salariale] tra uomini e donne esiste ancora.|Lönegapet mellan män och kvinnor finns kvar.|Salario = lön.
+lo stereotipo di genere|könsstereotyp|m|Bisogna combattere gli [stereotipi di genere].|Man måste bekämpa könsstereotyper.|Plural: gli stereotipi di genere.
+il bullismo|mobbning|m|A scuola si parla di [bullismo].|I skolan pratar man om mobbning.|Il bullo = mobbaren.
+il cyberbullismo|nätmobbning|m|Il [cyberbullismo] è un reato in Italia.|Nätmobbning är ett brott i Italien.|Utan plural.
+denunciare|anmäla (till polisen)||Hanno [denunciato] il furto.|De har polisanmält stölden.|Particip: denunciato (avere).
+i carabinieri|carabinieri (militärpolis)|mpl|I [carabinieri] hanno fermato la macchina.|Carabinieri stoppade bilen.|Singular: il carabiniere.
+il furto|stöld|m|C'è stato un [furto] in biblioteca.|Det har varit en stöld på biblioteket.|Plural: i furti.
+la corruzione|korruption|f|La [corruzione] è un problema in molti paesi.|Korruption är ett problem i många länder.|Utan plural.
+la testata|tidning (titel)|f|È una [testata] giornalistica indipendente.|Det är en oberoende tidning.|Plural: le testate.
+il giornalino|skoltidning, liten tidning|m|Il [giornalino] della scuola esce ogni mese.|Skoltidningen kommer ut varje månad.|Plural: i giornalini.
+verificare|kontrollera||Bisogna [verificare] le informazioni.|Man måste kontrollera informationen.|Particip: verificato (avere).
+la manipolazione|manipulation|f|I social possono essere uno strumento di [manipolazione].|Sociala medier kan vara ett manipulationsverktyg.|Plural: le manipolazioni.
+la maggioranza|majoritet|f|La [maggioranza] degli studenti è d'accordo.|Majoriteten av eleverna håller med.|Plural: le maggioranze.
+la cittadinanza attiva|medborgarengagemang|f|La scuola promuove la [cittadinanza attiva].|Skolan främjar medborgarengagemang.|Utan plural.
+la raccolta firme|namninsamling|f|Abbiamo organizzato una [raccolta firme].|Vi har ordnat en namninsamling.|Plural: le raccolte firme.
+il corteo studentesco|elevdemonstration|m|Il [corteo studentesco] è partito dalla piazza.|Elevdemonstrationen startade från torget.|Plural: i cortei studenteschi.
+la rappresentante di classe|klassrepresentant|f|Sono la [rappresentante di classe].|Jag är klassrepresentant.|Maskulinum: il rappresentante.
+l'assemblea|stormöte, församling|f|Domani c'è l'[assemblea] di istituto.|I morgon är det skolans stormöte.|Plural: le assemblee.
+#c7|Kap 7 · Sport e salute
+tifare|heja på||Per quale squadra [tifi]?|Vilket lag hejar du på?|Particip: tifato (avere). Tifare per.
+il rigore|straffspark|m|Ha segnato su [rigore].|Han gjorde mål på straff.|Plural: i rigori. Också 'stränghet'.
+la resistenza|uthållighet; motstånd|f|Per la maratona serve molta [resistenza].|För maraton krävs mycket uthållighet.|Utan plural. La Resistenza = motståndsrörelsen.
+farcela|klara det, orka||Non ce la [faccio] più!|Jag orkar inte mer!|Pronominellt verb: ce la faccio, ce l'ho fatta. 
+il gesso|gips|m|Ha il braccio nel [gesso].|Han har armen i gips.|Plural: i gessi. Också 'krita'.
+la ricetta medica|recept (på medicin)|f|Per questo farmaco serve la [ricetta medica].|För det här läkemedlet behövs recept.|Plural: le ricette mediche.
+il farmaco|läkemedel|m|Prenda questo [farmaco] due volte al giorno.|Ta det här läkemedlet två gånger om dagen.|Plural: i farmaci. Imperativ med Lei i exemplet.
+la pastiglia|tablett|f|Prenda una [pastiglia] dopo i pasti.|Ta en tablett efter maten.|Plural: le pastiglie. Också la compressa.
+i sintomi|symtom|mpl|Quali [sintomi] ha?|Vilka symtom har ni?|Singular: il sintomo.
+si accomodi|sätt er, varsågod och stig in||Buongiorno, [si accomodi] pure.|God dag, varsågod och sätt er.|Imperativ med Lei av accomodarsi.
+mi dica|säg mig, vad kan jag hjälpa till med||Buongiorno, [mi dica].|God dag, vad kan jag hjälpa till med?|Imperativ med Lei av dire + mi.
+la dieta mediterranea|medelhavskost|f|La [dieta mediterranea] è patrimonio UNESCO.|Medelhavskosten är ett Unescoarv.|Dieta betyder 'livsstil' på grekiska.
+smettere|sluta||Mio padre [ha smesso] di fumare.|Min pappa har slutat röka.|Particip: smesso (avere). Smettere di + infinitiv.
+la dipendenza|beroende|f|La [dipendenza] dal telefono è un problema.|Mobilberoende är ett problem.|Plural: le dipendenze.
+la salute mentale|psykisk hälsa|f|Si parla sempre più di [salute mentale].|Man pratar allt mer om psykisk hälsa.|Utan plural.
+sedentario|stillasittande||Lo stile di vita [sedentario] fa male.|En stillasittande livsstil är skadlig.|Femininum: sedentaria.
+lo stile di vita|livsstil|m|Ha cambiato completamente [stile di vita].|Hon har helt ändrat livsstil.|Plural: gli stili di vita.
+la prevenzione|förebyggande (vård)|f|La [prevenzione] è meglio della cura.|Att förebygga är bättre än att bota.|Utan plural.
+volerci|behövas, ta (tid)||Quanto tempo [ci vuole] per arrivare?|Hur lång tid tar det att komma fram?|Ci vuole + singular, ci vogliono + plural.
+metterci|ta (tid för någon)||Ci [ho messo] un'ora a finire il percorso.|Det tog mig en timme att klara banan.|Personen är subjekt: ci metto dieci minuti.
+andarsene|gå därifrån, ge sig av||Me ne [vado], sono stanco.|Jag går nu, jag är trött.|Pronominellt verb: me ne vado, te ne vai, se ne è andato.
+lo sport di squadra|lagsport|m|Il calcio è uno [sport di squadra].|Fotboll är en lagsport.|Plural: gli sport di squadra.
+lo sport individuale|individuell sport|m|Il tennis è uno [sport individuale].|Tennis är en individuell sport.|Plural: gli sport individuali.
+la società sportiva|idrottsförening|f|Mi sono iscritto a una [società sportiva].|Jag har gått med i en idrottsförening.|Plural: le società sportive.
+il tesserato|licensierad medlem|m|La federazione ha un milione di [tesserati].|Förbundet har en miljon licensierade medlemmar.|Plural: i tesserati. La tessera = medlemskortet.
+il calcetto|femmanna-fotboll|m|Il giovedì giochiamo a [calcetto].|På torsdagar spelar vi femmanna-fotboll.|Diminutiv av calcio.
+la calciatrice|fotbollsspelare (kvinna)|f|La [calciatrice] ha segnato due gol.|Fotbollsspelaren gjorde två mål.|Plural: le calciatrici. Maskulinum: il calciatore.
+l'attaccante|anfallare|m|L'[attaccante] ha tirato in porta.|Anfallaren sköt mot mål.|Plural: gli attaccanti. Samma form m/f.
+il portiere|målvakt|m|Il [portiere] ha parato il rigore.|Målvakten räddade straffen.|Plural: i portieri. Också 'portvakt'.
+parare|rädda (boll)||Ha [parato] tre tiri.|Hon räddade tre skott.|Particip: parato (avere).
+la corsa campestre|terränglöpning|f|A scuola c'è la [corsa campestre] a ottobre.|I skolan är det terränglöpning i oktober.|Plural: le corse campestri.
+l'arrampicata|klättring|f|L'[arrampicata] è diventata di moda.|Klättring har blivit populärt.|Plural: le arrampicate.
+lo scarpone|känga|m|Per la montagna servono gli [scarponi].|Till bergen behövs kängor.|Plural: gli scarponi.
+lo stretching|stretching|m|Dopo la corsa faccio [stretching].|Efter löpningen stretchar jag.|Engelskt lånord.
+il riscaldamento muscolare|uppvärmning|m|Non saltare il [riscaldamento muscolare]!|Hoppa inte över uppvärmningen!|Il riscaldamento = också 'element'.
+arrendersi|ge upp||Non [arrenderti] mai!|Ge aldrig upp!|Particip: arreso (essere).
+mollare|släppa, ge upp||Dai, non [mollare]!|Kom igen, ge inte upp!|Particip: mollato (avere). Vardagligt.
+la costanza|uthållighet, regelbundenhet|f|Con la [costanza] si ottengono risultati.|Med uthållighet får man resultat.|Utan plural.
+il doping|dopning|m|Il ciclista è stato squalificato per [doping].|Cyklisten diskvalificerades för dopning.|Engelskt lånord.
+la dottoressa|läkare (kvinna)|f|La [dottoressa] mi ha visitato.|Läkaren undersökte mig.|Plural: le dottoresse.
+il medico di base|husläkare|m|Prendi un appuntamento dal [medico di base].|Boka en tid hos husläkaren.|Plural: i medici di base. Också medico di famiglia.
+la radiografia|röntgen|f|Faccio una [radiografia] al piede.|Jag röntgar foten.|Plural: le radiografie.
+slogarsi|stuka||Si è [slogato] il polso.|Han stukade handleden.|Particip: slogato (essere).
+la guarigione|tillfrisknande|f|Auguri di pronta [guarigione]!|Krya på dig!|Plural: le guarigioni.
+il mal di gola|halsont|m|Da ieri ho [mal di gola].|Sedan i går har jag ont i halsen.|Utan plural.
+i carboidrati|kolhydrater|mpl|La pasta è ricca di [carboidrati].|Pasta är rik på kolhydrater.|Singular: il carboidrato.
+i grassi|fetter|mpl|Evita i [grassi] fritti.|Undvik friterade fetter.|Singular: il grasso. Grasso = också 'fet'.
+idratarsi|dricka vätska||Durante lo sport bisogna [idratarsi].|Under idrott måste man dricka.|Particip: idratato (essere).
+la meditazione|meditation|f|Faccio dieci minuti di [meditazione] ogni sera.|Jag mediterar tio minuter varje kväll.|Plural: le meditazioni.
+l'insonnia|sömnlöshet|f|Soffro di [insonnia] prima degli esami.|Jag lider av sömnlöshet före proven.|Utan plural.
+esaurito|utbränd; slutsåld||Dopo gli esami ero [esaurita].|Efter proven var jag helt slut.|Femininum: esaurita. Biglietti esauriti = slutsålt.
+la federazione|förbund|f|La [federazione] di calcio ha cambiato le regole.|Fotbollsförbundet har ändrat reglerna.|Plural: le federazioni.
+la nazionale|landslag|f|La [nazionale] italiana gioca in azzurro.|Italiens landslag spelar i blått.|Plural: le nazionali. Gli Azzurri = landslaget.
+il mondiale|VM|m|L'Italia ha vinto quattro [mondiali] di calcio.|Italien har vunnit fyra fotbolls-VM.|Plural: i mondiali. Också i Mondiali.
+l'europeo|EM|m|Nel 2021 l'Italia ha vinto l'[europeo].|År 2021 vann Italien EM.|Plural: gli europei.
+la curva|kortsida (där supportrarna står)|f|I tifosi più accesi stanno in [curva].|De mest hängivna supportrarna står på kortsidan.|Plural: le curve. Också 'kurva'.
+la panchina|avbytarbänk; parkbänk|f|Oggi sono in [panchina].|I dag sitter jag på bänken.|Plural: le panchine.
+il torneo|turnering|m|Abbiamo vinto il [torneo] di Natale.|Vi vann julturneringen.|Plural: i tornei.
+la finale|final|f|La [finale] è domenica alle tre.|Finalen är på söndag klockan tre.|Plural: le finali. Obs: il finale = slutet.
+qualificarsi|kvalificera sig||La squadra [si è qualificata] per la finale.|Laget har kvalificerat sig till finalen.|Particip: qualificato (essere).
+squalificare|diskvalificera||L'atleta è stato [squalificato].|Idrottaren blev diskvalificerad.|Particip: squalificato (avere).
+il fair play|juste spel|m|Il [fair play] è importante quanto la vittoria.|Juste spel är lika viktigt som att vinna.|Engelskt lånord.
+il sedentarismo|stillasittande|m|Il [sedentarismo] è un problema tra i giovani.|Stillasittande är ett problem bland unga.|Utan plural.
+l'obesità|fetma|f|L'[obesità] infantile è in aumento.|Fetma bland barn ökar.|Utan plural.
+il battito|puls, hjärtslag|m|Dopo la corsa il [battito] è alto.|Efter löpningen är pulsen hög.|Plural: i battiti.
+i polmoni|lungor|mpl|Il fumo fa male ai [polmoni].|Rökning är dåligt för lungorna.|Singular: il polmone.
+il polso|handled; puls|m|Mi sono fatta male al [polso].|Jag har skadat handleden.|Plural: i polsi.
+la benda|bandage, binda|f|L'infermiera mi ha messo una [benda].|Sjuksköterskan satte ett bandage på mig.|Plural: le bende.
+la visita medica|läkarundersökning|f|Per fare sport serve la [visita medica].|För att idrotta krävs en läkarundersökning.|Plural: le visite mediche. I Italien krävs intyg för föreningsidrott.
+il certificato medico|läkarintyg|m|Porta il [certificato medico] in palestra.|Ta med läkarintyget till gymmet.|Plural: i certificati medici.
+il ricovero|sjukhusvistelse, intagning|m|Dopo l'incidente è stato necessario il [ricovero].|Efter olyckan behövdes intagning på sjukhus.|Plural: i ricoveri.
+la salute fisica|fysisk hälsa|f|La [salute fisica] e quella mentale sono collegate.|Den fysiska och den psykiska hälsan hänger ihop.|Utan plural.
+lo psicologo scolastico|skolpsykolog|m|Puoi parlare con lo [psicologo scolastico].|Du kan prata med skolpsykologen.|Plural: gli psicologi scolastici.
+la dipendenza dal telefono|mobilberoende|f|La [dipendenza dal telefono] disturba il sonno.|Mobilberoende stör sömnen.|La dipendenza = beroendet.
+#c8|Kap 8 · Regioni e dialetti
+la lingua madre|modersmål|f|La mia [lingua madre] è lo svedese.|Mitt modersmål är svenska.|Plural: le lingue madri.
+l'accento|brytning; accent (tecken)|m|Dall'[accento] capisco che sei di Napoli.|På dialekten hör jag att du är från Neapel.|Plural: gli accenti.
+la pronuncia|uttal|f|La [pronuncia] toscana è particolare.|Det toskanska uttalet är speciellt.|Plural: le pronunce.
+regionale|regional||Ogni regione ha piatti [regionali].|Varje region har regionala rätter.|Samma form m/f.
+settentrionale|nordlig, nord-||Le regioni [settentrionali] sono più industriali.|De norra regionerna är mer industrialiserade.|Samma form m/f. Latin <b>septentriones</b> 'Karlavagnens sju stjärnor'.
+meridionale|sydlig, syd-||L'Italia [meridionale] è ricca di storia.|Syditalien är rikt på historia.|Samma form m/f. Il Meridione = södra Italien.
+il Mezzogiorno|Syditalien|m|Il [Mezzogiorno] ha un clima caldo.|Syditalien har ett varmt klimat.|Ordagrant 'middag': solen står i söder vid middagstid.
+lo stivale|stövel|m|Gli italiani chiamano il loro paese lo [Stivale].|Italienarna kallar sitt land Stövel.|Plural: gli stivali.
+il territorio|område, territorium|m|Il [territorio] della Liguria è montuoso.|Liguriens område är bergigt.|Plural: i territori.
+montuoso|bergig||La Valle d'Aosta è una regione [montuosa].|Aostadalen är en bergig region.|Femininum: montuosa.
+pianeggiante|flat, slät||La Pianura Padana è [pianeggiante].|Poslätten är flack.|Samma form m/f. Pianura = slätt.
+la pianura|slätt|f|Il Po attraversa una grande [pianura].|Po flyter genom en stor slätt.|Plural: le pianure.
+bilingue|tvåspråkig||In Alto Adige le scuole sono [bilingui].|I Sydtyrolen är skolorna tvåspråkiga.|Samma form m/f. Plural: bilingui.
+la minoranza|minoritet|f|In Italia vivono diverse [minoranze] linguistiche.|I Italien bor flera språkliga minoriteter.|Plural: le minoranze.
+il sardo|sardiska|m|Il [sardo] è considerato una lingua, non un dialetto.|Sardiskan räknas som ett eget språk, inte en dialekt.|Också adjektiv: sardisk.
+il napoletano|napolitanska; napolitanare|m|Molte canzoni famose sono in [napoletano].|Många kända sånger är på napolitanska.|Femininum: la napoletana.
+il siciliano|sicilianska; sicilianare|m|Mia nonna parla [siciliano] con le amiche.|Min farmor talar sicilianska med väninnorna.|Femininum: la siciliana.
+il veneto|venetianska (dialekt)|m|A Venezia molti parlano ancora [veneto].|I Venedig talar många fortfarande venetianska.|Il Veneto = regionen.
+il toscano|toskanska|m|L'italiano standard si basa sul [toscano].|Standarditalienskan bygger på toskanskan.|Femininum: la toscana.
+il fiorentino|florentinska|m|Dante scriveva in [fiorentino].|Dante skrev på florentinska.|Femininum: la fiorentina. Bistecca alla fiorentina = biff på florentinskt vis.
+l'unità d'Italia|Italiens enande|f|L'[unità d'Italia] risale al 1861.|Italiens enande skedde 1861.|Il Risorgimento = enandeprocessen.
+unificare|ena||Garibaldi ha contribuito a [unificare] il paese.|Garibaldi bidrog till att ena landet.|Particip: unificato (avere).
+diffondersi|spridas||Grazie alla televisione l'italiano [si è diffuso] in tutto il paese.|Tack vare tv:n spreds italienskan över hela landet.|Particip: diffuso (essere).
+diffuso|utbredd, vanlig||Il dialetto è ancora molto [diffuso] al Sud.|Dialekten är fortfarande mycket utbredd i söder.|Femininum: diffusa.
+l'identità|identitet|f|Il dialetto fa parte della nostra [identità].|Dialekten är en del av vår identitet.|Plural: le identità.
+l'orgoglio|stolthet|m|Parla il dialetto con [orgoglio].|Han talar dialekt med stolthet.|Utan plural. Orgoglioso = stolt.
+le origini|ursprung, rötter|fpl|Ha [origini] calabresi.|Hon har kalabriska rötter.|Singular: l'origine.
+l'emigrazione|utvandring|f|L'[emigrazione] italiana verso l'America è stata enorme.|Den italienska utvandringen till Amerika var enorm.|Plural: le emigrazioni.
+l'emigrante|emigrant|m|Molti [emigranti] partivano da Genova in nave.|Många emigranter reste från Genua med båt.|Plural: gli emigranti.
+la comunità|gemenskap, samhälle|f|A Buenos Aires c'è una grande [comunità] italiana.|I Buenos Aires finns en stor italiensk gemenskap.|Plural: le comunità.
+il discendente|ättling|m|Milioni di argentini sono [discendenti] di italiani.|Miljontals argentinare är ättlingar till italienare.|Plural: i discendenti.
+l'italoamericano|italienskamerikan|m|Gli [italoamericani] festeggiano il Columbus Day.|Italienskamerikanerna firar Columbus Day.|Plural: gli italoamericani. Femininum: l'italoamericana.
+la Svizzera italiana|italienskspråkiga Schweiz|f|Lugano si trova nella [Svizzera italiana].|Lugano ligger i den italienskspråkiga delen av Schweiz.|Kantonen Ticino och delar av Graubünden.
+ufficiale|officiell||L'italiano è lingua [ufficiale] anche a San Marino.|Italienska är officiellt språk även i San Marino.|Samma form m/f.
+il parlante|talare|m|L'italiano ha circa 65 milioni di [parlanti].|Italienska har cirka 65 miljoner talare.|Plural: i parlanti.
+la parola in prestito|lånord|f|Pizza è una [parola in prestito] in molte lingue.|Pizza är ett lånord på många språk.|Också il prestito linguistico.
+il modo di dire|talesätt, uttryck|m|Ogni regione ha i suoi [modi di dire].|Varje region har sina egna uttryck.|Plural: i modi di dire.
+il prodotto tipico|lokal specialitet|m|Il parmigiano è un [prodotto tipico] emiliano.|Parmesan är en specialitet från Emilia.|Plural: i prodotti tipici.
+DOP|skyddad ursprungsbeteckning||Il prosciutto di Parma è [DOP].|Parmaskinka har skyddad ursprungsbeteckning.|Denominazione di Origine Protetta.
+il patrimonio|arv, tillgång|m|L'Italia ha molti siti [patrimonio] dell'UNESCO.|Italien har många platser på Unescos världsarvslista.|Plural: i patrimoni.
+il turismo di massa|massturism|m|Venezia soffre per il [turismo di massa].|Venedig lider av massturismen.|Utan plural.
+la differenza culturale|kulturskillnad|f|Ci sono grandi [differenze culturali] tra Nord e Sud.|Det finns stora kulturskillnader mellan norr och söder.|Plural: le differenze culturali.
+lo stereotipo|stereotyp|m|È solo uno [stereotipo] che tutti i napoletani cantano.|Det är bara en stereotyp att alla napolitanare sjunger.|Plural: gli stereotipi.
+generalizzare|generalisera||Non bisogna [generalizzare].|Man ska inte generalisera.|Particip: generalizzato (avere).
+nordico|nordisk||Gli italiani pensano che i paesi [nordici] siano freddi.|Italienarna tror att de nordiska länderna är kalla.|Femininum: nordica. Plural: nordici.
+la mentalità|mentalitet|f|La [mentalità] cambia da regione a regione.|Mentaliteten skiljer sig mellan regionerna.|Plural: le mentalità.
+il campanilismo|lokalpatriotism|m|Il [campanilismo] è forte in Italia.|Lokalpatriotismen är stark i Italien.|Av campanile 'kyrktorn': man håller på sitt eget torn.
+la rivalità|rivalitet|f|C'è una vecchia [rivalità] tra Pisa e Firenze.|Det finns en gammal rivalitet mellan Pisa och Florens.|Plural: le rivalità.
+accorgersi|märka, lägga märke till||Non [mi ero accorto] che parlavi in dialetto.|Jag hade inte märkt att du pratade dialekt.|Particip: accorto (essere). Accorgersi di.
+la Pianura Padana|Poslätten|f|La [Pianura Padana] è molto nebbiosa d'inverno.|Poslätten är väldigt dimmig på vintern.|Po + slätt.
+gli Appennini|Apenninerna|mpl|Gli [Appennini] attraversano tutta l'Italia.|Apenninerna går genom hela Italien.|Bergskedja från Ligurien till Kalabrien.
+le Alpi|Alperna|fpl|D'inverno andiamo a sciare sulle [Alpi].|På vintern åker vi skidor i Alperna.|Italiens nordgräns.
+le Dolomiti|Dolomiterna|fpl|Le [Dolomiti] sono patrimonio UNESCO.|Dolomiterna är ett världsarv.|Uppkallade efter geologen Dolomieu.
+la laguna|lagun|f|Venezia si trova in una [laguna].|Venedig ligger i en lagun.|Plural: le lagune.
+lo stretto|sund|m|Lo [stretto] di Messina separa la Sicilia dalla Calabria.|Messinasundet skiljer Sicilien från Kalabrien.|Plural: gli stretti. Också 'smal, trång'.
+il golfo|bukt, golf|m|Il [golfo] di Napoli è famosissimo.|Neapelbukten är världsberömd.|Plural: i golfi.
+il clima mediterraneo|medelhavsklimat|m|Il Sud ha un [clima mediterraneo].|Södra Italien har medelhavsklimat.|Mediterraneo = medelhavs-.
+nebbioso|dimmig||Milano è spesso [nebbiosa].|Milano är ofta dimmigt.|Femininum: nebbiosa. La nebbia = dimman.
+il settentrione|norra Italien|m|Nel [settentrione] ci sono molte industrie.|I norra Italien finns många industrier.|Formellt; vanligare: il Nord.
+il meridione|södra Italien|m|Il [meridione] ha un clima caldo.|Södra Italien har ett varmt klimat.|Också il Sud, il Mezzogiorno.
+il meridionale|sydbo, syditaliensk||Mio padre è [meridionale], di Bari.|Min pappa är syditaliensk, från Bari.|Femininum: meridionale.
+il settentrionale|nordbo, norditaliensk||I [settentrionali] mangiano più riso.|Norditalienarna äter mer ris.|Samma form m/f.
+isolano|ö-, öbo||La cultura [isolana] è molto diversa.|Öns kultur är väldigt annorlunda.|Femininum: isolana.
+la Sardegna|Sardinien|f|In [Sardegna] si parla il sardo.|På Sardinien talar man sardiska.|Adjektiv: sardo.
+la Calabria|Kalabrien|f|La [Calabria] è la punta dello stivale.|Kalabrien är stövelns tå.|Adjektiv: calabrese.
+la Puglia|Apulien|f|La [Puglia] è il tacco dello stivale.|Apulien är stövelns klack.|Adjektiv: pugliese.
+il tacco|klack|m|La Puglia è il [tacco] d'Italia.|Apulien är Italiens klack.|Plural: i tacchi.
+la Liguria|Ligurien|f|La [Liguria] è famosa per il pesto.|Ligurien är känt för pesto.|Adjektiv: ligure.
+l'Emilia-Romagna|Emilia-Romagna|f|L'[Emilia-Romagna] è la patria del parmigiano.|Emilia-Romagna är parmesanens hemland.|Adjektiv: emiliano, romagnolo.
+l'Umbria|Umbrien|f|L'[Umbria] è il cuore verde d'Italia.|Umbrien är Italiens gröna hjärta.|Adjektiv: umbro.
+calabrese|kalabrisk||Mia nonna è [calabrese].|Min mormor är från Kalabrien.|Samma form m/f.
+veneto|venetiansk (från Veneto)||Il dialetto [veneto] è molto musicale.|Dialekten från Veneto är väldigt melodisk.|Femininum: veneta.
+lombardo|lombardisk||Milano è il capoluogo [lombardo].|Milano är Lombardiets huvudort.|Femininum: lombarda.
+piemontese|piemontesisk||Il vino [piemontese] è famoso.|Vinet från Piemonte är känt.|Samma form m/f.
+il romanesco|romerska (dialekt)|m|Nei film di Alberto Sordi si sente il [romanesco].|I Alberto Sordis filmer hör man romerska dialekten.|Also adjektiv.
+la cadenza|tonfall, sätt att tala|f|Ha una [cadenza] milanese.|Hon har ett milanesiskt tonfall.|Plural: le cadenze.
+la varietà|varietet, variant|f|Ogni regione ha la sua [varietà] di italiano.|Varje region har sin variant av italienska.|Plural: le varietà.
+la lingua standard|standardspråk|f|A scuola si insegna la [lingua standard].|I skolan lär man ut standardspråket.|Plural: le lingue standard.
+il linguista|språkforskare|m|I [linguisti] studiano i dialetti.|Språkforskarna studerar dialekterna.|Plural: i linguisti. Femininum: la linguista.
+derivare|härstamma||Molte parole svedesi [derivano] dal latino.|Många svenska ord härstammar från latin.|Particip: derivato (essere).
+scomparire|försvinna||Alcuni dialetti rischiano di [scomparire].|Vissa dialekter riskerar att försvinna.|Particip: scomparso (essere).
+riscoprire|återupptäcka||I giovani [riscoprono] il dialetto.|De unga återupptäcker dialekten.|Particip: riscoperto (avere).
+la ricchezza culturale|kulturell rikedom|f|I dialetti sono una [ricchezza culturale].|Dialekterna är en kulturell rikedom.|Plural: le ricchezze culturali.
+la parolaccia|svordom, fult ord|f|Non dire [parolacce]!|Säg inte fula ord!|Plural: le parolacce. Parola + nedsättande -accia.
+l'espressione|uttryck|f|È un'[espressione] tipica di Napoli.|Det är ett typiskt uttryck från Neapel.|Plural: le espressioni.
+il soprannome|smeknamn|m|A Roma tutti hanno un [soprannome].|I Rom har alla ett smeknamn.|Plural: i soprannomi.
+la gestualità|gestik|f|La [gestualità] italiana è famosa nel mondo.|Den italienska gestiken är världsberömd.|Il gesto = gesten.
+il gesto|gest|m|Questo [gesto] vuol dire «che cosa vuoi?».|Den här gesten betyder «vad vill du?».|Plural: i gesti.
+la diaspora|diaspora|f|La [diaspora] italiana conta milioni di persone.|Den italienska diasporan omfattar miljontals människor.|Grekiska 'utspridning'.
+l'oriundo|ättling till emigranter|m|Nella nazionale ci sono alcuni [oriundi].|I landslaget finns några ättlingar till italienska emigranter.|Plural: gli oriundi.
+la valigia di cartone|pappresväska (emigrantsymbol)|f|Il nonno partì con una [valigia di cartone].|Farfar reste med en pappresväska.|Symbol för 1900-talets fattiga emigranter.
+imbarcarsi|gå ombord||Si [imbarcarono] a Genova per l'America.|De gick ombord i Genua för att åka till Amerika.|Particip: imbarcato (essere).
+sbarcare|landstiga, komma i land||Sono [sbarcati] a New York nel 1905.|De landsteg i New York 1905.|Particip: sbarcato (essere).
+integrarsi|integreras||La famiglia [si è integrata] bene.|Familjen har integrerats väl.|Particip: integrato (essere).
+l'Italia unita|det enade Italien|f|L'[Italia unita] ha poco più di 160 anni.|Det enade Italien är drygt 160 år gammalt.|Unito = enad.
+il Risorgimento|Risorgimento (enandet)|m|Garibaldi è l'eroe del [Risorgimento].|Garibaldi är Risorgimentos hjälte.|Ordagrant 'återuppståndelsen'.
+#cr|Espressioni · Discutere e argomentare
+per quanto mi riguarda|vad mig beträffar||[Per quanto mi riguarda], sono d'accordo.|Vad mig beträffar håller jag med.|Riguardare = beträffa.|<b>per</b> för · <b>quanto</b> så mycket · <b>mi riguarda</b> rör mig → "för så mycket som rör mig"
+ho l'impressione che|jag har intrycket att||[Ho l'impressione che] tu sia stanco.|Jag har intrycket att du är trött.|Följs av congiuntivo.|<b>ho</b> jag har · <b>l'impressione</b> intrycket · <b>che</b> att
+mi sembra che|det verkar som att||[Mi sembra che] abbia ragione lei.|Det verkar som att hon har rätt.|Följs av congiuntivo.|<b>mi</b> för mig · <b>sembra</b> verkar · <b>che</b> att → "det verkar för mig att"
+non sono sicuro che|jag är inte säker på att||[Non sono sicuro che] sia una buona idea.|Jag är inte säker på att det är en bra idé.|Femininum: sicura. Följs av congiuntivo.|<b>non sono</b> jag är inte · <b>sicuro</b> säker · <b>che</b> att
+non sono affatto d'accordo|jag håller inte alls med||Scusa, ma [non sono affatto d'accordo].|Förlåt, men jag håller inte alls med.|Affatto förstärker nekningen.|<b>non sono</b> jag är inte · <b>affatto</b> alls · <b>d'accordo</b> överens
+da un lato … dall'altro|å ena sidan … å andra sidan||[Da un lato] è comodo, dall'altro costa troppo.|Å ena sidan är det bekvämt, å andra sidan kostar det för mycket.|Samma som da una parte … dall'altra.|<b>da un lato</b> från en sida · <b>dall'altro</b> från den andra
+il fatto è che|saken är den att||[Il fatto è che] non ho tempo.|Saken är den att jag inte har tid.|Il fatto = faktum.|<b>il fatto</b> faktumet · <b>è</b> är · <b>che</b> att
+in realtà|i själva verket||Sembra facile, ma [in realtà] è difficile.|Det verkar lätt, men i själva verket är det svårt.|Inte infatti, som betyder 'mycket riktigt'.|<b>in</b> i · <b>realtà</b> verkligheten
+prima di tutto|först och främst||[Prima di tutto], grazie per l'invito.|Först och främst, tack för inbjudan.|Används för att inleda en uppräkning.|<b>prima di</b> före · <b>tutto</b> allt → "före allt"
+per concludere|för att avsluta||[Per concludere], vorrei ringraziare tutti.|För att avsluta vill jag tacka alla.|Concludere = avsluta.|<b>per</b> för att · <b>concludere</b> avsluta
+per esempio|till exempel||Mi piacciono gli sport d'acqua, [per esempio] il nuoto.|Jag gillar vattensporter, till exempel simning.|Förkortas p.es. Också ad esempio.|<b>per</b> för · <b>esempio</b> exempel
+cioè?|vad menar du?||Ho un problema. – [Cioè]? Che succede?|Jag har ett problem. – Hur då? Vad har hänt?|Som fråga ber cioè om en förklaring.|<b>ci</b> det · <b>è</b> är → "det är?"
+e tu che ne pensi?|och vad tycker du om det?||Io preferisco il mare. [E tu che ne pensi]?|Jag föredrar havet. Och vad tycker du?|Ne = om det. Med Lei: E Lei che ne pensa?|<b>e tu</b> och du · <b>che</b> vad · <b>ne</b> om det · <b>pensi</b> tänker du
+mi spiego?|förstår du vad jag menar?||Non è cattivo, è solo timido. [Mi spiego]?|Han är inte elak, bara blyg. Förstår du vad jag menar?|Spiegarsi = uttrycka sig tydligt.|<b>mi</b> mig · <b>spiego</b> förklarar jag → "förklarar jag mig?"
+volevo dire che|jag menade att||Scusa, [volevo dire che] arrivo alle otto, non alle sette.|Förlåt, jag menade att jag kommer klockan åtta, inte sju.|Imperfetto som artighet.|<b>volevo</b> jag ville · <b>dire</b> säga · <b>che</b> att
+magari!|om det ändå vore så!||Vinceremo? – [Magari]!|Kommer vi att vinna? – Om det ändå vore så!|Från grekiska <b>makarie</b> 'lycklig'. Också 'kanske'.
+mi dispiace, ma|jag är ledsen, men||[Mi dispiace, ma] non posso accettare.|Jag är ledsen, men jag kan inte tacka ja.|Artigt sätt att tacka nej.|<b>mi dispiace</b> det mishagar mig · <b>ma</b> men
+potrebbe ripetere?|skulle ni kunna upprepa?||Scusi, non ho capito. [Potrebbe ripetere]?|Ursäkta, jag förstod inte. Skulle ni kunna upprepa?|Condizionale av potere, Lei-form.|<b>potrebbe</b> skulle ni kunna · <b>ripetere</b> upprepa
+come si dice …?|hur säger man …?||[Come si dice] 'lagom' in italiano?|Hur säger man 'lagom' på italienska?|Si opersonligt.|<b>come</b> hur · <b>si dice</b> säger man
+vale la pena|det är värt det||[Vale la pena] vedere quel film.|Det är värt att se den filmen.|Valere = vara värd. La pena = mödan.|<b>vale</b> är värd · <b>la pena</b> mödan
+non c'entra|det har inget med saken att göra||Questo [non c'entra] con la discussione.|Det här har inget med diskussionen att göra.|Av entrarci.|<b>non c'entra</b> det går inte in där
+tanto per cambiare|som vanligt (ironiskt)||[Tanto per cambiare], il treno è in ritardo.|Som vanligt är tåget försenat.|Ironiskt: 'bara för att förändra'.|<b>tanto per</b> bara för att · <b>cambiare</b> förändra
+fare una figuraccia|göra bort sig||Ho [fatto una figuraccia] davanti a tutti.|Jag gjorde bort mig inför alla.|Figura + nedsättande -accia. Fare bella figura = göra ett gott intryck.|<b>fare</b> göra · <b>una figuraccia</b> en dålig figur
+essere in grado di|kunna, klara av||Non [sono in grado di] rispondere.|Jag kan inte svara.|Il grado = graden, nivån.|<b>essere</b> vara · <b>in grado</b> i stånd · <b>di</b> att
+secondo quanto dice|enligt vad … säger||[Secondo quanto dice] l'articolo, i prezzi aumentano.|Enligt vad artikeln säger ökar priserna.|Användbart för att återge en text.|<b>secondo</b> enligt · <b>quanto</b> så mycket · <b>dice</b> säger
+sono convinto che|jag är övertygad om att||[Sono convinto che] sia la scelta migliore.|Jag är övertygad om att det är det bästa valet.|Femininum: convinta. Följs av congiuntivo.|<b>sono</b> jag är · <b>convinto</b> övertygad · <b>che</b> att
+bisogna dire che|man måste säga att||[Bisogna dire che] il film è lungo.|Man måste säga att filmen är lång.|Opersonligt uttryck, följs av indikativ här.|<b>bisogna</b> det behövs · <b>dire</b> säga · <b>che</b> att
+non è detto che|det är inte säkert att||[Non è detto che] vinca il migliore.|Det är inte säkert att den bäste vinner.|Följs av congiuntivo.|<b>non è detto</b> det är inte sagt · <b>che</b> att
+d'altra parte|å andra sidan||Il lavoro è faticoso; [d'altra parte] è ben pagato.|Jobbet är slitsamt; å andra sidan är det välbetalt.|Används ensamt också.|<b>d'altra</b> från andra · <b>parte</b> sidan
+anzi|tvärtom, snarare||Non sono stanco, [anzi]!|Jag är inte trött, tvärtom!|Kort och mycket vanligt.
+per forza|nödvändigtvis; självklart||Devi venire [per forza]?|Måste du verkligen komma?|Ordagrant 'med kraft'.|<b>per</b> med · <b>forza</b> kraft
+a dire il vero|om sanningen ska fram||[A dire il vero], non mi è piaciuto.|Om sanningen ska fram gillade jag den inte.|Mjukar upp en ärlig åsikt.|<b>a dire</b> att säga · <b>il vero</b> det sanna
+tutto sommato|på det hela taget||[Tutto sommato], è stata una bella giornata.|På det hela taget var det en fin dag.|Sommare = summera.|<b>tutto</b> allt · <b>sommato</b> summerat
+senza dubbio|utan tvekan||È [senza dubbio] il migliore.|Det är utan tvekan den bästa.|Il dubbio = tvivlet.|<b>senza</b> utan · <b>dubbio</b> tvivel
+ti do ragione|jag håller med dig||Su questo punto [ti do ragione].|På den punkten håller jag med dig.|Dare ragione a qualcuno.|<b>ti do</b> jag ger dig · <b>ragione</b> rätt
+ma dai!|nej men!, äh!||Ho vinto la lotteria! – [Ma dai]!|Jag har vunnit på lotteriet! – Nej men!|Förvåning eller misstro.|<b>ma</b> men · <b>dai</b> ge
+ci sta|det är rimligt||Un po' di pausa [ci sta].|Lite paus är rimligt.|Vardagligt.|<b>ci</b> där · <b>sta</b> står → "det får plats"
+lasciamo perdere|strunta i det||[Lasciamo perdere], non è importante.|Strunta i det, det är inte viktigt.|Ordagrant 'låt oss låta det gå förlorat'.|<b>lasciamo</b> låt oss låta · <b>perdere</b> förlora
+mi raccomando|glöm inte, snälla||[Mi raccomando], chiamami quando arrivi!|Glöm inte att ringa mig när du kommer fram!|Uttrycker omtanke och eftertryck.|<b>mi</b> mig · <b>raccomando</b> anbefaller jag
+magari un'altra volta|kanske en annan gång||Stasera non posso, [magari un'altra volta].|I kväll kan jag inte, kanske en annan gång.|Artigt nej.|<b>magari</b> kanske · <b>un'altra volta</b> en annan gång
+che ne dici?|vad säger du om det?||Andiamo al mare? [Che ne dici]?|Ska vi åka till havet? Vad säger du?|Ne = om det.|<b>che</b> vad · <b>ne</b> om det · <b>dici</b> säger du

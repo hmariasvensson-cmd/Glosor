@@ -1,0 +1,42 @@
+{
+  "topics": [
+    {"id": "trennbar", "name": "Delbara verb", "sub": "Ich rufe dich an. Ich habe dich angerufen.", "secs": ["b1"]},
+    {"id": "perfekt", "name": "Perfekt med haben och sein", "sub": "Ich habe gespielt. Wir sind gefahren. Es war toll.", "secs": ["b1", "b7"]},
+    {"id": "modal", "name": "Modalverb", "sub": "können, müssen, wollen, dürfen, sollen, möchten", "secs": ["b2"]},
+    {"id": "dativ", "name": "Dativ efter prepositioner", "sub": "mit dem Bus, bei der Oma, zum Arzt, aus dem Haus", "secs": ["b2", "b6"]},
+    {"id": "zeitprep", "name": "Tidsprepositioner", "sub": "am Montag, im Mai, um acht Uhr, seit, vor, nach", "secs": ["b3"]},
+    {"id": "imperativ", "name": "Imperativ", "sub": "Komm! Kommt! Kommen Sie! Nimm! Ruf an!", "secs": ["b4"]},
+    {"id": "datpron", "name": "Pronomen i dativ och verb med dativ", "sub": "mir, dir, ihm – helfen, gefallen, danken", "secs": ["b5"]},
+    {"id": "ortprep", "name": "Platsprepositioner", "sub": "nach Berlin, in die Schweiz, zu Oma, am Meer", "secs": ["b7", "b8"]}
+  ],
+  "rules": {
+    "tr-pres": "Delbart verb i presens: prefixet sist",
+    "tr-modal": "Delbart verb efter modalverb: ihop sist",
+    "tr-perf": "Delbart verb i perfekt: an-ge-rufen",
+    "pf-haben": "Perfekt med haben",
+    "pf-sein": "Perfekt med sein",
+    "pf-part": "Particip: ge-…-t och ge-…-en",
+    "pf-prt": "war och hatte",
+    "mv-form": "Modalverbens former",
+    "mv-satz": "Modalverb + infinitiv sist",
+    "mv-val": "Vilket modalverb?",
+    "dat-art": "Artiklar i dativ",
+    "dat-kurz": "zum, zur, beim, vom, im, am",
+    "dat-prep": "Prepositioner som alltid tar dativ",
+    "zp-am": "am: dagar och tider på dygnet",
+    "zp-im": "im: månader och årstider",
+    "zp-um": "um: klockslag",
+    "zp-seit": "seit, vor, nach, in",
+    "imp-du": "Imperativ du",
+    "imp-ihr": "Imperativ ihr",
+    "imp-sie": "Imperativ Sie",
+    "imp-tr": "Imperativ av delbara verb",
+    "dp-form": "Personliga pronomen i dativ",
+    "dp-verb": "Verb med dativ",
+    "dp-ausdr": "Uttryck med dativ: Mir ist kalt.",
+    "op-nach": "nach eller in: länder och städer",
+    "op-zu": "zu och bei: personer och platser",
+    "op-an": "an, auf, in: vatten, öar och berg",
+    "op-aus": "aus och von: varifrån?"
+  }
+}

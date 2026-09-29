@@ -1,0 +1,400 @@
+{
+"congimp": {
+"title": "Congiuntivo imperfetto",
+"intro": "Congiuntivo imperfetto används efter che när huvudsatsen står i dåtid eller condizionale, efter konjunktioner som benché och affinché i dåtid, efter come se och magari, och i overkliga om-satser.",
+"parts": [
+{
+"h": "Former",
+"t": "Stammen från imperfetto (parla-vo, prende-vo, dormi-vo) + **-ssi, -ssi, -sse, -ssimo, -ste, -ssero**. Oregelbundna: **fossi** (essere), **dessi** (dare), **stessi** (stare). Fare, dire och bere: **facessi, dicessi, bevessi**.",
+"table": {
+"head": [
+"",
+"parlare",
+"prendere",
+"essere"
+],
+"rows": [
+[
+"io",
+"parlassi",
+"prendessi",
+"fossi"
+],
+[
+"tu",
+"parlassi",
+"prendessi",
+"fossi"
+],
+[
+"lui/lei",
+"parlasse",
+"prendesse",
+"fosse"
+],
+[
+"noi",
+"parlassimo",
+"prendessimo",
+"fossimo"
+],
+[
+"voi",
+"parlaste",
+"prendeste",
+"foste"
+],
+[
+"loro",
+"parlassero",
+"prendessero",
+"fossero"
+]
+]
+},
+"ex": [
+{
+"fr": "Volevo che tu **venissi**.",
+"sv": "Jag ville att du skulle komma."
+},
+{
+"fr": "Se **avessi** tempo, leggerei di più.",
+"sv": "Om jag hade tid skulle jag läsa mer."
+}
+]
+},
+{
+"h": "Användning",
+"t": "Efter **pensavo che, volevo che, era necessario che, vorrei che**, efter **benché, affinché, prima che, senza che** i dåtid, och alltid efter **come se** och **magari** (önskan).",
+"ex": [
+{
+"fr": "Parla **come se fosse** il capo.",
+"sv": "Han pratar som om han vore chefen."
+},
+{
+"fr": "**Magari potessi** venire!",
+"sv": "Om jag ändå kunde komma!"
+}
+]
+}
+]
+},
+"congtrap": {
+"title": "Congiuntivo trapassato",
+"intro": "Congiuntivo trapassato = congiuntivo imperfetto av avere eller essere + particip. Det visar något som hade hänt före en annan dåtid, och används i overkliga om-satser om det förflutna.",
+"parts": [
+{
+"h": "Former",
+"t": "**avessi fatto, avesse detto** – **fossi partito/partita, fossero arrivati**. Samma val av hjälpverb och samma kongruens som i passato prossimo.",
+"ex": [
+{
+"fr": "Pensavo che **fosse** già **partita**.",
+"sv": "Jag trodde att hon redan hade åkt."
+},
+{
+"fr": "Se **avessi saputo**, sarei venuto.",
+"sv": "Om jag hade vetat det hade jag kommit."
+}
+]
+}
+]
+},
+"consec": {
+"title": "Tempusföljd (consecutio temporum)",
+"intro": "Tempus i bisatsen beror på tempus i huvudsatsen och på om bisatsens handling sker före, samtidigt eller efter.",
+"parts": [
+{
+"h": "Huvudsats i presens",
+"t": "Samtidigt: **congiuntivo presente** (penso che sia). Före: **congiuntivo passato** (penso che sia stato). Efter: congiuntivo presente eller futuro (penso che verrà).",
+"ex": [
+{
+"fr": "Credo che Marco **abbia** ragione.",
+"sv": "Jag tror att Marco har rätt."
+},
+{
+"fr": "Credo che Marco **abbia avuto** ragione.",
+"sv": "Jag tror att Marco hade rätt."
+}
+]
+},
+{
+"h": "Huvudsats i dåtid eller condizionale",
+"t": "Samtidigt: **congiuntivo imperfetto** (pensavo che fosse). Före: **congiuntivo trapassato** (pensavo che fosse stato). Efter: **condizionale passato** (pensavo che sarebbe venuto), aldrig condizionale presente.",
+"table": {
+"head": [
+"Huvudsats",
+"före",
+"samtidigt",
+"efter"
+],
+"rows": [
+[
+"Penso che …",
+"sia stato",
+"sia",
+"sarà / sia"
+],
+[
+"Pensavo che …",
+"fosse stato",
+"fosse",
+"sarebbe stato"
+]
+]
+},
+"ex": [
+{
+"fr": "Disse che **sarebbe arrivato** alle dieci.",
+"sv": "Han sa att han skulle komma klockan tio."
+}
+]
+}
+]
+},
+"ipot": {
+"title": "Overkliga om-satser",
+"intro": "Periodo ipotetico dell'irrealtà: något som inte är sant nu, eller som inte hände. Efter **se** står aldrig condizionale.",
+"parts": [
+{
+"h": "Nutid",
+"t": "**se + congiuntivo imperfetto**, huvudsats i **condizionale presente**.",
+"ex": [
+{
+"fr": "Se **fossi** ricco, **viaggerei**.",
+"sv": "Om jag vore rik skulle jag resa."
+}
+]
+},
+{
+"h": "Dåtid",
+"t": "**se + congiuntivo trapassato**, huvudsats i **condizionale passato**. I talspråk hörs också imperfetto i båda: se lo sapevo, venivo.",
+"ex": [
+{
+"fr": "Se l'**avessi saputo**, **sarei venuto**.",
+"sv": "Om jag hade vetat det hade jag kommit."
+}
+]
+}
+]
+},
+"ipotmix": {
+"title": "Blandade om-satser",
+"intro": "Villkor och följd kan gälla olika tider. Tänk på varje sats för sig: dåtid → trapassato/condizionale passato, nutid → imperfetto/condizionale presente. Verkliga villkor tar indikativ.",
+"parts": [
+{
+"h": "Blandat",
+"t": "Dåtida villkor, följd i nu: **se avessi studiato, ora saprei**. Varaktig egenskap, följd i dåtid: **se fossi più attento, non avrei sbagliato**.",
+"ex": [
+{
+"fr": "Se **avessi preso** il treno, ora **sarei** a casa.",
+"sv": "Om jag hade tagit tåget skulle jag vara hemma nu."
+},
+{
+"fr": "Se **piove**, **restiamo** a casa.",
+"sv": "Om det regnar stannar vi hemma."
+}
+]
+}
+]
+},
+"indir": {
+"title": "Indirekt tal",
+"intro": "När man återger vad någon sa i dåtid flyttas tempus bakåt, och pronomen, tid och plats ändras efter den nya situationen.",
+"parts": [
+{
+"h": "Tempus",
+"t": "presente → **imperfetto**; passato prossimo → **trapassato**; futuro → **condizionale passato**; imperativ → **di + infinitiv**; frågor → se/dove + congiuntivo imperfetto (formellt).",
+"ex": [
+{
+"fr": "«Sono stanco.» → Disse che **era** stanco.",
+"sv": "Han sa att han var trött."
+},
+{
+"fr": "«Chiudi la porta!» → Mi disse **di chiudere** la porta.",
+"sv": "Han sa åt mig att stänga dörren."
+}
+]
+},
+{
+"h": "Pronomen, tid och plats",
+"t": "io → lui/lei, mio → suo; **qui → lì**, **questo → quello**, **oggi → quel giorno**, **ieri → il giorno prima**, **domani → il giorno dopo**, **stasera → quella sera**.",
+"ex": [
+{
+"fr": "«Ci vediamo qui domani.» → Disse che ci saremmo visti **lì il giorno dopo**.",
+"sv": "Han sa att vi skulle ses där dagen därpå."
+}
+]
+}
+]
+},
+"remoto": {
+"title": "Passato remoto",
+"intro": "Passato remoto berättar om avslutade händelser långt tillbaka, i historia, biografier och romaner. I norra Italien används det nästan bara i skrift; i Syditalien även i tal.",
+"parts": [
+{
+"h": "Regelbundna verb",
+"t": "**-are**: -ai, -asti, -ò, -ammo, -aste, -arono. **-ere**: -ei (-etti), -esti, -é (-ette), -emmo, -este, -erono (-ettero). **-ire**: -ii, -isti, -ì, -immo, -iste, -irono.",
+"table": {
+"head": [
+"",
+"parlare",
+"credere",
+"partire"
+],
+"rows": [
+[
+"io",
+"parlai",
+"credei",
+"partii"
+],
+[
+"lui/lei",
+"parlò",
+"credé",
+"partì"
+],
+[
+"loro",
+"parlarono",
+"crederono",
+"partirono"
+]
+]
+},
+"ex": [
+{
+"fr": "Garibaldi **partì** da Quarto.",
+"sv": "Garibaldi avseglade från Quarto."
+}
+]
+},
+{
+"h": "Oregelbundna verb",
+"t": "Oregelbundna i **io, lui/lei, loro** (1-3-3-regeln), regelbundna i tu, noi, voi: **ebbi, ebbe, ebbero** – avesti. Vanliga: fu, fece, disse, nacque, scrisse, vide, venne, prese, vinse, visse, volle.",
+"ex": [
+{
+"fr": "Dante **nacque** a Firenze e **morì** a Ravenna.",
+"sv": "Dante föddes i Florens och dog i Ravenna."
+}
+]
+}
+]
+},
+"gerund": {
+"title": "Gerundium som bisats",
+"intro": "Gerundium (-ando, -endo) kan ersätta en bisats när subjektet är detsamma: sätt, tid, orsak, villkor. Med **pur** blir det medgivande (fast).",
+"parts": [
+{
+"h": "Former",
+"t": "Presens: **parlando, facendo, dicendo**. Perfekt: **avendo parlato, essendo partito/partita**. Pronomen hängs på: **parlandone, essendosi laureata**.",
+"ex": [
+{
+"fr": "**Studiando** ogni giorno, migliorerai.",
+"sv": "Om du pluggar varje dag blir du bättre."
+},
+{
+"fr": "**Avendo perso** il treno, arrivai tardi.",
+"sv": "Eftersom jag hade missat tåget kom jag sent."
+},
+{
+"fr": "**Pur essendo** stanco, continuò.",
+"sv": "Fast han var trött fortsatte han."
+}
+]
+}
+]
+},
+"partic": {
+"title": "Particip som bisats",
+"intro": "Ett perfekt particip i början av meningen kan ersätta en tidsbisats (när … hade): **finito il lavoro** = quando il lavoro fu finito.",
+"parts": [
+{
+"h": "Kongruens",
+"t": "Transitiva verb: participet böjs efter **objektet** (letta la lettera, terminate le lezioni). Essere-verb: efter **subjektet** (arrivati a Roma, uscita di casa).",
+"ex": [
+{
+"fr": "**Finito** il concerto, uscimmo.",
+"sv": "När konserten var slut gick vi ut."
+},
+{
+"fr": "**Arrivata** a casa, Sara chiamò la madre.",
+"sv": "När Sara hade kommit hem ringde hon sin mamma."
+}
+]
+}
+]
+},
+"farelas": {
+"title": "Fare och lasciare + infinitiv",
+"intro": "**Fare + infinitiv** = låta göra (ge i uppdrag) eller få någon att. **Lasciare + infinitiv** = tillåta, låta bli. Infinitiven följer direkt, utan preposition.",
+"parts": [
+{
+"h": "Exempel",
+"t": "Ho **fatto riparare** la bici (jag lämnade in den). Il film mi ha **fatto piangere**. **Lasciami finire**! **Farsi** + infinitiv: mi sono fatto/fatta tagliare i capelli.",
+"ex": [
+{
+"fr": "**Fammi sapere**!",
+"sv": "Hör av dig! (låt mig veta)"
+},
+{
+"fr": "**Lascia perdere**.",
+"sv": "Strunta i det."
+}
+]
+}
+]
+},
+"formale": {
+"title": "Formellt register",
+"intro": "I formella brev, mejl och ansökningar använder man **Lei** (ofta med stor bokstav: Le, La, Suo), condizionale och congiuntivo för att vara artig, och fasta fraser.",
+"parts": [
+{
+"h": "Inledning och avslutning",
+"t": "**Gentile** signora/dottor … – **Egregio** professore – **Spett.le** Ditta (företag). Avslutning: **Cordiali saluti**, **Distinti saluti**, **In attesa di un Suo cortese riscontro**.",
+"ex": [
+{
+"fr": "**Le scrivo in merito all'annuncio** …",
+"sv": "Jag skriver angående annonsen …"
+}
+]
+},
+{
+"h": "Artighet",
+"t": "**Sarei grato/grata se potesse** … – **Vorrei sapere se fosse possibile** … – **Qualora avesse bisogno** … – **Non esiti a contattarmi**.",
+"ex": [
+{
+"fr": "**Mi permetta di** presentarmi.",
+"sv": "Låt mig presentera mig."
+}
+]
+}
+]
+},
+"connett": {
+"title": "Argumenterande sambandsord",
+"intro": "Sambandsord visar hur argumenten hänger ihop. Några kräver congiuntivo.",
+"parts": [
+{
+"h": "Med indikativ",
+"t": "motsats: **tuttavia, però, eppure, invece**; följd: **pertanto, quindi, di conseguenza**; orsak: **poiché, dal momento che, visto che**; tillägg: **inoltre**; slutsats: **in conclusione, in sintesi**.",
+"ex": [
+{
+"fr": "È caro; **tuttavia** lo compro.",
+"sv": "Det är dyrt; ändå köper jag det."
+}
+]
+},
+{
+"h": "Med congiuntivo",
+"t": "**benché, sebbene, nonostante** (fast), **purché, a patto che** (bara, på villkor att), **affinché** (för att), **qualora** (om, ifall), **prima che**, **senza che**.",
+"ex": [
+{
+"fr": "Vengo, **purché** tu mi **aspetti**.",
+"sv": "Jag kommer, bara du väntar på mig."
+}
+]
+}
+]
+}
+}

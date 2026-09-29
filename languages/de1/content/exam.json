@@ -1,0 +1,492 @@
+{
+ "name": "Goethe-Zertifikat A1: Start Deutsch 1",
+ "pass": 60,
+ "approxWords": true,
+ "note": "Övningar i provets stil, skrivna för appen. Inte officiellt material. Det här är en liten version av provet Start Deutsch 1 (A1): en uppgift per del, så att du lär känna formatet. Hela provet tränar du i Tyska 2.",
+ "parts": [
+  {
+   "id": "hoeren",
+   "name": "Hören",
+   "sv": "Hörförståelse",
+   "time": 20
+  },
+  {
+   "id": "lesen",
+   "name": "Lesen",
+   "sv": "Läsa",
+   "time": 25
+  },
+  {
+   "id": "schreiben",
+   "name": "Schreiben",
+   "sv": "Skriva",
+   "time": 20
+  },
+  {
+   "id": "sprechen",
+   "name": "Sprechen",
+   "sv": "Tala",
+   "time": 15
+  }
+ ],
+ "tasks": [
+  {
+   "id": "de1-hoe-1",
+   "part": "hoeren",
+   "teil": "Teil 1",
+   "title": "Kurze Gespräche",
+   "time": 7,
+   "plays": 2,
+   "instr": "Du hör tre korta samtal. Du hör varje samtal två gånger. Välj rätt svar (a, b eller c).",
+   "lines": [
+    {
+     "fr": "Text 1. – Entschuldigung, wie viel Uhr ist es? – Es ist halb elf. – Danke! Dann habe ich noch Zeit.",
+     "sv": "Text 1. – Ursäkta, vad är klockan? – Den är halv elva. – Tack! Då har jag fortfarande tid."
+    },
+    {
+     "fr": "Text 2. – Was möchtest du trinken, Tim? – Einen Tee, bitte. Keinen Kaffee. – Und ein Stück Kuchen? – Nein, danke.",
+     "sv": "Text 2. – Vad vill du dricka, Tim? – Ett te, tack. Inget kaffe. – Och en bit kaka? – Nej tack."
+    },
+    {
+     "fr": "Text 3. – Wo wohnst du, Lara? – In der Hauptstraße, Nummer vierzehn. – Vierzig? – Nein, vierzehn!",
+     "sv": "Text 3. – Var bor du, Lara? – På Hauptstraße, nummer fjorton. – Fyrtio? – Nej, fjorton!"
+    }
+   ],
+   "qs": [
+    {
+     "q": "1. Wie spät ist es?",
+     "opts": [
+      "10.30 Uhr",
+      "11.30 Uhr",
+      "10.00 Uhr"
+     ],
+     "a": 0,
+     "why": "”Es ist halb elf” = 10.30."
+    },
+    {
+     "q": "2. Was trinkt Tim?",
+     "opts": [
+      "Kaffee",
+      "Tee",
+      "Wasser"
+     ],
+     "a": 1,
+     "why": "”Einen Tee, bitte. Keinen Kaffee.”"
+    },
+    {
+     "q": "3. Laras Hausnummer ist …",
+     "opts": [
+      "4",
+      "14",
+      "40"
+     ],
+     "a": 1,
+     "why": "”Nein, vierzehn!”"
+    }
+   ]
+  },
+  {
+   "id": "de1-hoe-2",
+   "part": "hoeren",
+   "teil": "Teil 2",
+   "title": "Durchsagen",
+   "time": 6,
+   "plays": 1,
+   "instr": "Du hör tre utrop, på stationen och i ett varuhus. Du hör varje text en gång. Är påståendet rätt (Richtig) eller fel (Falsch)?",
+   "lines": [
+    {
+     "fr": "Durchsage 1. Achtung, bitte! Der Bus Nummer 7 fährt heute nicht zum Bahnhof. Bitte nehmen Sie den Bus Nummer 9.",
+     "sv": "Utrop 1. Observera! Buss nummer 7 går inte till järnvägsstationen i dag. Ta buss nummer 9."
+    },
+    {
+     "fr": "Durchsage 2. Liebe Kunden, heute gibt es Obst und Gemüse im Erdgeschoss. Ein Kilo Äpfel kostet nur zwei Euro.",
+     "sv": "Utrop 2. Kära kunder, i dag finns det frukt och grönsaker på bottenvåningen. Ett kilo äpplen kostar bara två euro."
+    },
+    {
+     "fr": "Durchsage 3. Der kleine Paul sucht seine Mutter. Paul wartet an der Information im Erdgeschoss.",
+     "sv": "Utrop 3. Lille Paul letar efter sin mamma. Paul väntar vid informationen på bottenvåningen."
+    }
+   ],
+   "qs": [
+    {
+     "q": "1. Der Bus 7 fährt heute zum Bahnhof.",
+     "opts": [
+      "Richtig",
+      "Falsch"
+     ],
+     "a": 1,
+     "why": "Falsch: ”Der Bus Nummer 7 fährt heute nicht zum Bahnhof.”"
+    },
+    {
+     "q": "2. Ein Kilo Äpfel kostet zwei Euro.",
+     "opts": [
+      "Richtig",
+      "Falsch"
+     ],
+     "a": 0,
+     "why": "Richtig: ”Ein Kilo Äpfel kostet nur zwei Euro.”"
+    },
+    {
+     "q": "3. Paul ist an der Information.",
+     "opts": [
+      "Richtig",
+      "Falsch"
+     ],
+     "a": 0,
+     "why": "Richtig: ”Paul wartet an der Information.”"
+    }
+   ]
+  },
+  {
+   "id": "de1-hoe-3",
+   "part": "hoeren",
+   "teil": "Teil 3",
+   "title": "Nachrichten am Telefon",
+   "time": 6,
+   "plays": 2,
+   "instr": "Du hör tre meddelanden på telefonsvararen. Du hör varje text två gånger. Välj rätt svar (a, b eller c).",
+   "lines": [
+    {
+     "fr": "Nachricht 1. Hallo Mia, hier ist Oma. Wir essen am Sonntag um zwölf Uhr zusammen. Bring bitte deinen Bruder mit. Tschüss!",
+     "sv": "Meddelande 1. Hej Mia, det är mormor. Vi äter tillsammans på söndag klockan tolv. Ta med din bror. Hej då!"
+    },
+    {
+     "fr": "Nachricht 2. Guten Tag, hier ist die Schule. Morgen ist kein Unterricht. Der Test ist am Freitag.",
+     "sv": "Meddelande 2. Goddag, det här är skolan. I morgon är det ingen undervisning. Provet är på fredag."
+    },
+    {
+     "fr": "Nachricht 3. Hi Jonas, hier ist Ben. Wir spielen heute nicht Fußball, es regnet. Wir gehen ins Kino. Kommst du?",
+     "sv": "Meddelande 3. Hej Jonas, det är Ben. Vi spelar inte fotboll i dag, det regnar. Vi går på bio. Kommer du?"
+    }
+   ],
+   "qs": [
+    {
+     "q": "1. Wann isst Mia bei Oma?",
+     "opts": [
+      "Am Samstag",
+      "Am Sonntag um zwölf",
+      "Am Sonntag um zwei"
+     ],
+     "a": 1,
+     "why": "”Wir essen am Sonntag um zwölf Uhr.”"
+    },
+    {
+     "q": "2. Wann ist der Test?",
+     "opts": [
+      "Morgen",
+      "Am Freitag",
+      "Am Montag"
+     ],
+     "a": 1,
+     "why": "”Der Test ist am Freitag.”"
+    },
+    {
+     "q": "3. Was machen Ben und seine Freunde heute?",
+     "opts": [
+      "Sie spielen Fußball",
+      "Sie gehen ins Kino",
+      "Sie bleiben zu Hause"
+     ],
+     "a": 1,
+     "why": "”Wir gehen ins Kino.”"
+    }
+   ]
+  },
+  {
+   "id": "de1-le-1",
+   "part": "lesen",
+   "teil": "Teil 1",
+   "title": "Eine E-Mail von Sara",
+   "time": 8,
+   "instr": "Läs mejlet. Är påståendena rätt (Richtig) eller fel (Falsch)?",
+   "lines": [
+    {
+     "fr": "Hallo Emma,",
+     "sv": "Hej Emma,"
+    },
+    {
+     "fr": "am Samstag habe ich Geburtstag! Ich bin dann sechzehn. Wir machen am Abend eine Party bei mir zu Hause, um sieben Uhr.",
+     "sv": "på lördag fyller jag år! Då blir jag sexton. Vi har fest hemma hos mig på kvällen, klockan sju."
+    },
+    {
+     "fr": "Meine Eltern sind nicht da, aber mein Bruder ist da. Er macht Musik.",
+     "sv": "Mina föräldrar är inte hemma, men min bror är där. Han spelar musik."
+    },
+    {
+     "fr": "Bitte bring etwas zu trinken mit, zum Beispiel Saft oder Cola. Essen haben wir genug.",
+     "sv": "Ta med något att dricka, till exempel juice eller cola. Mat har vi tillräckligt av."
+    },
+    {
+     "fr": "Kommst du? Schreib mir bitte bis Donnerstag.",
+     "sv": "Kommer du? Skriv till mig senast på torsdag."
+    },
+    {
+     "fr": "Liebe Grüße, Sara",
+     "sv": "Kära hälsningar, Sara"
+    }
+   ],
+   "qs": [
+    {
+     "q": "1. Sara ist am Samstag sechzehn.",
+     "opts": [
+      "Richtig",
+      "Falsch"
+     ],
+     "a": 0,
+     "why": "Richtig: ”am Samstag habe ich Geburtstag! Ich bin dann sechzehn.”"
+    },
+    {
+     "q": "2. Die Party beginnt am Nachmittag.",
+     "opts": [
+      "Richtig",
+      "Falsch"
+     ],
+     "a": 1,
+     "why": "Falsch: den börjar på kvällen, klockan sju."
+    },
+    {
+     "q": "3. Emma soll etwas zu essen mitbringen.",
+     "opts": [
+      "Richtig",
+      "Falsch"
+     ],
+     "a": 1,
+     "why": "Falsch: hon ska ta med något att dricka. ”Essen haben wir genug.”"
+    },
+    {
+     "q": "4. Emma soll bis Donnerstag antworten.",
+     "opts": [
+      "Richtig",
+      "Falsch"
+     ],
+     "a": 0,
+     "why": "Richtig: ”Schreib mir bitte bis Donnerstag.”"
+    }
+   ]
+  },
+  {
+   "id": "de1-le-2",
+   "part": "lesen",
+   "teil": "Teil 2",
+   "title": "Anzeigen",
+   "time": 8,
+   "instr": "Läs uppgiften och de två annonserna. Vilken annons passar: a eller b?",
+   "lines": [
+    {
+     "fr": "a) Café Sonne: Frühstück jeden Tag von 8 bis 11 Uhr. Am Sonntag geschlossen.",
+     "sv": "a) Café Sonne: frukost varje dag kl. 8–11. Stängt på söndagar."
+    },
+    {
+     "fr": "b) Café am See: Frühstück am Wochenende bis 14 Uhr. Auch am Sonntag offen!",
+     "sv": "b) Café am See: frukost på helgen till kl. 14. Öppet även på söndagar!"
+    },
+    {
+     "fr": "a) Fahrrad zu verkaufen: rot, 3 Jahre alt, 80 Euro. Telefon 0176 123456.",
+     "sv": "a) Cykel säljes: röd, 3 år gammal, 80 euro. Telefon 0176 123456."
+    },
+    {
+     "fr": "b) Fahrrad-Reparatur: schnell und billig. Montag bis Freitag, 9–18 Uhr.",
+     "sv": "b) Cykelreparationer: snabbt och billigt. Måndag till fredag, 9–18."
+    },
+    {
+     "fr": "a) Deutschkurs für Jugendliche: montags und mittwochs, 16–17.30 Uhr, in der Stadtbibliothek.",
+     "sv": "a) Tyskkurs för ungdomar: måndagar och onsdagar kl. 16–17.30 i stadsbiblioteket."
+    },
+    {
+     "fr": "b) Deutschkurs für Erwachsene: am Abend, 19–21 Uhr, in der Volkshochschule.",
+     "sv": "b) Tyskkurs för vuxna: på kvällen kl. 19–21 på folkhögskolan."
+    }
+   ],
+   "qs": [
+    {
+     "q": "1. Sie möchten am Sonntag um 12 Uhr frühstücken.",
+     "opts": [
+      "a",
+      "b"
+     ],
+     "a": 1,
+     "why": "Café am See har frukost till 14 på helgen och är öppet på söndagar."
+    },
+    {
+     "q": "2. Sie möchten ein Fahrrad kaufen.",
+     "opts": [
+      "a",
+      "b"
+     ],
+     "a": 0,
+     "why": "Annons a säljer en cykel. Annons b reparerar cyklar."
+    },
+    {
+     "q": "3. Sie sind 15 und möchten nach der Schule Deutsch lernen.",
+     "opts": [
+      "a",
+      "b"
+     ],
+     "a": 0,
+     "why": "Kurs a är för ungdomar på eftermiddagen."
+    }
+   ]
+  },
+  {
+   "id": "de1-le-3",
+   "part": "lesen",
+   "teil": "Teil 3",
+   "title": "Schilder",
+   "time": 7,
+   "instr": "Läs skyltarna. Är påståendet rätt (Richtig) eller fel (Falsch)?",
+   "lines": [
+    {
+     "fr": "An der Tür vom Museum: Heute geschlossen. Morgen wieder ab 10 Uhr geöffnet.",
+     "sv": "På museets dörr: Stängt i dag. Öppet igen i morgon från kl. 10."
+    },
+    {
+     "fr": "In der Schule: Die Kantine ist im Erdgeschoss. Essen von 11.30 bis 13.30 Uhr.",
+     "sv": "I skolan: Matsalen finns på bottenvåningen. Mat kl. 11.30–13.30."
+    },
+    {
+     "fr": "Am Bahnhof: Toiletten – 50 Cent. Bitte an der Kasse zahlen.",
+     "sv": "På stationen: Toaletter – 50 cent. Betala i kassan."
+    },
+    {
+     "fr": "Im Park: Hunde bitte an die Leine!",
+     "sv": "I parken: Hundar ska hållas i koppel!"
+    }
+   ],
+   "qs": [
+    {
+     "q": "1. Sie können heute ins Museum gehen.",
+     "opts": [
+      "Richtig",
+      "Falsch"
+     ],
+     "a": 1,
+     "why": "Falsch: ”Heute geschlossen.”"
+    },
+    {
+     "q": "2. In der Kantine gibt es um 12 Uhr Essen.",
+     "opts": [
+      "Richtig",
+      "Falsch"
+     ],
+     "a": 0,
+     "why": "Richtig: mat mellan 11.30 och 13.30."
+    },
+    {
+     "q": "3. Die Toilette am Bahnhof ist gratis.",
+     "opts": [
+      "Richtig",
+      "Falsch"
+     ],
+     "a": 1,
+     "why": "Falsch: den kostar 50 cent."
+    },
+    {
+     "q": "4. Im Park dürfen Hunde frei laufen.",
+     "opts": [
+      "Richtig",
+      "Falsch"
+     ],
+     "a": 1,
+     "why": "Falsch: hundar ska vara i koppel (an die Leine)."
+    }
+   ]
+  },
+  {
+   "id": "de1-sc-1",
+   "part": "schreiben",
+   "teil": "Teil 1",
+   "title": "Formular: Anmeldung im Sportverein",
+   "time": 8,
+   "minWords": 20,
+   "instr": "Fyll i formuläret för din kompis. Skriv svaren som korta rader (ungefär 20 ord totalt). På provet fyller man i fem luckor i ett formulär.",
+   "task": "Ihr Freund Erik Holm (16) aus Schweden möchte im Sportverein Handball spielen. Er wohnt jetzt in der Gartenstraße 5, 10115 Berlin. Er spricht Schwedisch, Englisch und ein bisschen Deutsch. Er hat am Dienstag und am Donnerstag Zeit.\n\nFüllen Sie das Formular aus:\nName: …\nAlter: …\nAdresse: …\nSprachen: …\nSport: …\nWann hat er Zeit? …",
+   "criteria": [
+    "Erfüllung der Aufgabe"
+   ],
+   "model": "Name: Erik Holm\nAlter: 16 Jahre\nAdresse: Gartenstraße 5, 10115 Berlin\nSprachen: Schwedisch, Englisch, ein bisschen Deutsch\nSport: Handball\nZeit: am Dienstag und am Donnerstag",
+   "modelSv": "Namn: Erik Holm\nÅlder: 16 år\nAdress: Gartenstraße 5, 10115 Berlin\nSpråk: svenska, engelska, lite tyska\nSport: handboll\nTid: tisdag och torsdag"
+  },
+  {
+   "id": "de1-sc-2",
+   "part": "schreiben",
+   "teil": "Teil 2",
+   "title": "Eine Nachricht an eine Freundin",
+   "time": 12,
+   "minWords": 30,
+   "instr": "Skriv ett kort meddelande (ungefär 30 ord). Skriv något om alla tre punkterna. Glöm inte hälsning och avslutning.",
+   "task": "Ihre Freundin Nina hat am Freitag Geburtstag und macht eine Party. Sie können nicht kommen.\n\nSchreiben Sie Nina:\n– Warum können Sie nicht kommen?\n– Wünschen Sie ihr alles Gute.\n– Machen Sie einen neuen Vorschlag (wann und wo treffen Sie sich?).",
+   "criteria": [
+    "Erfüllung der Aufgabe",
+    "Wortschatz",
+    "Strukturen"
+   ],
+   "model": "Liebe Nina,\n\nherzlichen Glückwunsch zum Geburtstag! Leider komme ich am Freitag nicht, denn ich bin bei meiner Oma in Hamburg. Hast du am Sonntag Zeit? Wir gehen zusammen ins Café, ich bezahle!\n\nViele Grüße\nLinnea",
+   "modelSv": "Kära Nina,\n\ngrattis på födelsedagen! Tyvärr kommer jag inte på fredag, för jag är hos min mormor i Hamburg. Har du tid på söndag? Vi går till ett kafé tillsammans, jag bjuder!\n\nMånga hälsningar\nLinnea"
+  },
+  {
+   "id": "de1-sp-1",
+   "part": "sprechen",
+   "teil": "Teil 1",
+   "title": "Sich vorstellen",
+   "time": 2,
+   "instr": "Presentera dig med hjälp av stödorden. Säg sedan ditt telefonnummer och stava ditt namn.",
+   "task": "Name? · Alter? · Land? · Wohnort? · Sprachen? · Hobby?",
+   "criteria": [
+    "Erfüllung der Aufgabe"
+   ],
+   "phrases": [
+    "Ich heiße …",
+    "Ich bin … Jahre alt.",
+    "Ich komme aus …",
+    "Ich wohne in …",
+    "Ich spreche …",
+    "Mein Hobby ist …"
+   ],
+   "model": "Ich heiße Maja Berg. Ich bin sechzehn Jahre alt. Ich komme aus Schweden und wohne in Örebro. Ich spreche Schwedisch, Englisch und ein bisschen Deutsch. Mein Hobby ist Musik, ich spiele Gitarre.",
+   "modelSv": "Jag heter Maja Berg. Jag är sexton år. Jag kommer från Sverige och bor i Örebro. Jag pratar svenska, engelska och lite tyska. Min hobby är musik, jag spelar gitarr."
+  },
+  {
+   "id": "de1-sp-2",
+   "part": "sprechen",
+   "teil": "Teil 2",
+   "title": "Fragen und antworten: Essen und Trinken",
+   "time": 3,
+   "instr": "Du drar ordkort med temat ”Essen und Trinken”. Ställ en fråga med ordet på kortet, och svara på din partners fråga (eller hitta på svaret själv).",
+   "task": "Thema: Essen und Trinken\nKarten: Frühstück · Lieblingsessen · Kaffee · Pizza",
+   "criteria": [
+    "Erfüllung der Aufgabe",
+    "Wortschatz"
+   ],
+   "phrases": [
+    "Was isst du zum Frühstück?",
+    "Was ist dein Lieblingsessen?",
+    "Trinkst du gern Kaffee?",
+    "Magst du Pizza?"
+   ],
+   "model": "A: Was isst du zum Frühstück? – B: Ich esse Brot mit Butter und trinke Tee.\nB: Trinkst du gern Kaffee? – A: Nein, ich trinke keinen Kaffee. Ich trinke lieber Milch.",
+   "modelSv": "A: Vad äter du till frukost? – B: Jag äter smörgås med smör och dricker te.\nB: Dricker du gärna kaffe? – A: Nej, jag dricker inte kaffe. Jag dricker hellre mjölk."
+  },
+  {
+   "id": "de1-sp-3",
+   "part": "sprechen",
+   "teil": "Teil 3",
+   "title": "Um etwas bitten",
+   "time": 3,
+   "instr": "Du drar kort med en bild eller ett ord. Be din partner om något, och reagera på din partners önskan.",
+   "task": "Karten: ein Stift · ein Glas Wasser · das Fenster öffnen · langsam sprechen",
+   "criteria": [
+    "Erfüllung der Aufgabe",
+    "Wortschatz"
+   ],
+   "phrases": [
+    "Hast du einen Stift für mich?",
+    "Ich möchte bitte ein Glas Wasser.",
+    "Kannst du bitte das Fenster öffnen?",
+    "Langsamer, bitte.",
+    "Ja, gern. / Hier, bitte. / Tut mir leid, …"
+   ],
+   "model": "A: Hast du bitte einen Stift für mich? – B: Ja, hier, bitte.\nB: Kannst du bitte das Fenster öffnen? Es ist so warm. – A: Ja, gern.",
+   "modelSv": "A: Har du en penna till mig? – B: Ja, varsågod.\nB: Kan du öppna fönstret? Det är så varmt. – A: Ja, gärna."
+  }
+ ]
+}

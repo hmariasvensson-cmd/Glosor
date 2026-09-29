@@ -1,0 +1,1184 @@
+[
+ {
+  "id": "de1-r-e1",
+  "sec": "e1",
+  "title": "Mein Profil",
+  "lines": [
+   {
+    "fr": "Name: Anna Keller",
+    "sv": "Namn: Anna Keller"
+   },
+   {
+    "fr": "Alter: 16 Jahre",
+    "sv": "Ålder: 16 år"
+   },
+   {
+    "fr": "Land: die Schweiz",
+    "sv": "Land: Schweiz"
+   },
+   {
+    "fr": "Hallo! Ich heiße Anna und ich bin sechzehn Jahre alt.",
+    "sv": "Hej! Jag heter Anna och jag är sexton år."
+   },
+   {
+    "fr": "Ich komme aus der Schweiz und wohne in Zürich.",
+    "sv": "Jag kommer från Schweiz och bor i Zürich."
+   },
+   {
+    "fr": "Ich spreche Deutsch, Englisch und ein bisschen Französisch.",
+    "sv": "Jag pratar tyska, engelska och lite franska."
+   },
+   {
+    "fr": "Mein Vater kommt aus Schweden, aus Göteborg. Aber er spricht nicht so gut Schwedisch!",
+    "sv": "Min pappa kommer från Sverige, från Göteborg. Men han pratar inte så bra svenska!"
+   },
+   {
+    "fr": "Ich suche eine Freundin oder einen Freund in Schweden.",
+    "sv": "Jag söker en kompis i Sverige."
+   },
+   {
+    "fr": "Wir schreiben zusammen auf Deutsch oder auf Englisch. Das ist gut für die Schule!",
+    "sv": "Vi skriver till varandra på tyska eller på engelska. Det är bra för skolan!"
+   },
+   {
+    "fr": "Meine E-Mail-Adresse ist anna.keller@beispiel.ch.",
+    "sv": "Min mejladress är anna.keller@beispiel.ch."
+   },
+   {
+    "fr": "Viele Grüße, Anna",
+    "sv": "Många hälsningar, Anna"
+   }
+  ],
+  "questions": [
+   {
+    "type": "helhet",
+    "q": "Varför skriver Anna profilen?",
+    "opts": [
+     "Hon söker en kompis i Sverige",
+     "Hon vill flytta till Göteborg",
+     "Hon säljer en bok"
+    ],
+    "a": 0,
+    "why": "”Ich suche eine Freundin oder einen Freund in Schweden.”"
+   },
+   {
+    "type": "detalj",
+    "q": "Var bor Anna?",
+    "opts": [
+     "I Göteborg",
+     "I Zürich",
+     "I Wien"
+    ],
+    "a": 1,
+    "why": "”Ich komme aus der Schweiz und wohne in Zürich.”"
+   },
+   {
+    "type": "detalj",
+    "q": "Vilket stämmer om Annas pappa?",
+    "opts": [
+     "Han kommer från Sverige",
+     "Han pratar bra svenska",
+     "Han bor i Göteborg"
+    ],
+    "a": 0,
+    "why": "”Mein Vater kommt aus Schweden … Aber er spricht nicht so gut Schwedisch!”"
+   }
+  ],
+  "gloss": {
+   "alter": {
+    "t": "das Alter",
+    "sv": "ålder",
+    "g": "n"
+   },
+   "bisschen": {
+    "t": "ein bisschen",
+    "sv": "lite grann",
+    "g": ""
+   },
+   "grüße": {
+    "t": "der Gruß (Grüße)",
+    "sv": "hälsning",
+    "g": "m"
+   },
+   "viele": {
+    "t": "viel",
+    "sv": "mycket, många",
+    "g": ""
+   }
+  }
+ },
+ {
+  "id": "de1-r-e2",
+  "sec": "e2",
+  "title": "Eine Postkarte von Oma",
+  "lines": [
+   {
+    "fr": "Liebe Maja,",
+    "sv": "Kära Maja,"
+   },
+   {
+    "fr": "hier ist es sehr schön! Opa und ich sind in Österreich, in einem kleinen Dorf.",
+    "sv": "här är det jättefint! Morfar och jag är i Österrike, i en liten by."
+   },
+   {
+    "fr": "Wir sind nicht allein: Tante Karin und Onkel Paul sind auch hier, mit ihren Kindern.",
+    "sv": "Vi är inte ensamma: moster Karin och morbror Paul är också här, med sina barn."
+   },
+   {
+    "fr": "Deine Cousine Lisa ist jetzt zwölf. Sie ist groß und hat lange, braune Haare.",
+    "sv": "Din kusin Lisa är tolv nu. Hon är lång och har långt, brunt hår."
+   },
+   {
+    "fr": "Dein Cousin Felix ist acht. Er ist klein und sehr lustig.",
+    "sv": "Din kusin Felix är åtta. Han är liten och väldigt rolig."
+   },
+   {
+    "fr": "Die Familie hat jetzt auch einen Hund. Er ist schwarz und weiß und heißt Max.",
+    "sv": "Familjen har också en hund nu. Han är svart och vit och heter Max."
+   },
+   {
+    "fr": "Die Kinder lieben den Hund, und Opa auch!",
+    "sv": "Barnen älskar hunden, och morfar också!"
+   },
+   {
+    "fr": "Wie geht es dir und deinen Eltern? Und wie geht es deiner Katze?",
+    "sv": "Hur mår du och dina föräldrar? Och hur mår din katt?"
+   },
+   {
+    "fr": "Viele Grüße und bis bald,",
+    "sv": "Många hälsningar och vi ses snart,"
+   },
+   {
+    "fr": "deine Oma",
+    "sv": "din mormor"
+   }
+  ],
+  "questions": [
+   {
+    "type": "helhet",
+    "q": "Vad är det här för text?",
+    "opts": [
+     "Ett vykort från mormor",
+     "Ett mejl från en lärare",
+     "En annons om en hund"
+    ],
+    "a": 0,
+    "why": "Texten börjar med ”Liebe Maja” och slutar med ”deine Oma”."
+   },
+   {
+    "type": "detalj",
+    "q": "Hur ser Lisa ut?",
+    "opts": [
+     "Liten med blont hår",
+     "Lång med långt brunt hår",
+     "Lång med kort svart hår"
+    ],
+    "a": 1,
+    "why": "”Sie ist groß und hat lange, braune Haare.”"
+   },
+   {
+    "type": "detalj",
+    "q": "Vilket djur har Maja?",
+    "opts": [
+     "En hund",
+     "En katt",
+     "Inget djur"
+    ],
+    "a": 1,
+    "why": "Mormor frågar: ”Und wie geht es deiner Katze?”"
+   }
+  ],
+  "gloss": {
+   "liebe": {
+    "t": "liebe",
+    "sv": "kära",
+    "g": ""
+   },
+   "dorf": {
+    "t": "das Dorf",
+    "sv": "by",
+    "g": "n"
+   },
+   "grüße": {
+    "t": "der Gruß (Grüße)",
+    "sv": "hälsning",
+    "g": "m"
+   },
+   "viele": {
+    "t": "viel",
+    "sv": "mycket, många",
+    "g": ""
+   }
+  }
+ },
+ {
+  "id": "de1-r-e3",
+  "sec": "e3",
+  "title": "Der Stundenplan von Tim",
+  "lines": [
+   {
+    "fr": "Montag: Mathe, Deutsch, Englisch, Sport",
+    "sv": "Måndag: matte, tyska, engelska, idrott"
+   },
+   {
+    "fr": "Dienstag: Kunst, Mathe, Informatik, Religion",
+    "sv": "Tisdag: bild, matte, datakunskap, religion"
+   },
+   {
+    "fr": "Mittwoch: Deutsch, Französisch, Musik",
+    "sv": "Onsdag: tyska, franska, musik"
+   },
+   {
+    "fr": "Hallo, ich bin Tim und das ist mein Stundenplan.",
+    "sv": "Hej, jag heter Tim och det här är mitt schema."
+   },
+   {
+    "fr": "Am Montag habe ich vier Stunden. Mathe ist schwer, aber wichtig.",
+    "sv": "På måndag har jag fyra lektioner. Matte är svårt men viktigt."
+   },
+   {
+    "fr": "Am Dienstag habe ich Kunst. Das finde ich super, denn ich zeichne gern.",
+    "sv": "På tisdag har jag bild. Det tycker jag är toppen, för jag tecknar gärna."
+   },
+   {
+    "fr": "Informatik ist auch interessant. Wir lernen viel über Computer.",
+    "sv": "Datakunskap är också intressant. Vi lär oss mycket om datorer."
+   },
+   {
+    "fr": "Am Mittwoch lernen wir Französisch. Französisch ist nicht leicht! Ich verstehe nicht jedes Wort.",
+    "sv": "På onsdag läser vi franska. Franska är inte lätt! Jag förstår inte varje ord."
+   },
+   {
+    "fr": "Die Lehrerin ist nett und erklärt alles zweimal.",
+    "sv": "Läraren är trevlig och förklarar allt två gånger."
+   },
+   {
+    "fr": "Mittags essen wir in der Kantine. Das Essen ist nicht immer gut!",
+    "sv": "Mitt på dagen äter vi i matsalen. Maten är inte alltid god!"
+   }
+  ],
+  "questions": [
+   {
+    "type": "helhet",
+    "q": "Vad handlar texten om?",
+    "opts": [
+     "Tims skolschema och ämnen",
+     "Tims fritid",
+     "Tims familj"
+    ],
+    "a": 0,
+    "why": "”Das ist mein Stundenplan.”"
+   },
+   {
+    "type": "detalj",
+    "q": "Vilket ämne tycker Tim är svårt?",
+    "opts": [
+     "Bild",
+     "Matte",
+     "Musik"
+    ],
+    "a": 1,
+    "why": "”Mathe ist schwer, aber wichtig.”"
+   },
+   {
+    "type": "detalj",
+    "q": "Varför gillar Tim bild?",
+    "opts": [
+     "Läraren är snäll",
+     "Han tecknar gärna",
+     "Lektionen är kort"
+    ],
+    "a": 1,
+    "why": "”… denn ich zeichne gern.”"
+   }
+  ],
+  "gloss": {
+   "stundenplan": {
+    "t": "der Stundenplan",
+    "sv": "schema",
+    "g": "m"
+   },
+   "zeichne": {
+    "t": "zeichnen",
+    "sv": "teckna",
+    "g": ""
+   },
+   "jedes": {
+    "t": "jeder, jede, jedes",
+    "sv": "varje",
+    "g": ""
+   },
+   "erklärt": {
+    "t": "erklären",
+    "sv": "förklara",
+    "g": ""
+   },
+   "mittags": {
+    "t": "mittags",
+    "sv": "mitt på dagen",
+    "g": ""
+   },
+   "über": {
+    "t": "über",
+    "sv": "om",
+    "g": ""
+   }
+  }
+ },
+ {
+  "id": "de1-r-e4",
+  "sec": "e4",
+  "title": "Chat: Wann hast du Zeit?",
+  "lines": [
+   {
+    "fr": "Jonas (16:05): Hi Sofia! Was machst du heute Abend?",
+    "sv": "Jonas (16.05): Hej Sofia! Vad gör du i kväll?"
+   },
+   {
+    "fr": "Sofia (16:07): Heute Abend lerne ich für den Test. Morgen ist Mathe 😩",
+    "sv": "Sofia (16.07): I kväll pluggar jag till provet. I morgon är det matte 😩"
+   },
+   {
+    "fr": "Jonas (16:08): Und am Freitag?",
+    "sv": "Jonas (16.08): Och på fredag?"
+   },
+   {
+    "fr": "Sofia (16:10): Am Freitag arbeite ich von vier bis acht im Café.",
+    "sv": "Sofia (16.10): På fredag jobbar jag från fyra till åtta på kaféet."
+   },
+   {
+    "fr": "Jonas (16:11): Hmm. Samstag? Am Morgen spiele ich Fußball, aber am Nachmittag habe ich Zeit.",
+    "sv": "Jonas (16.11): Hmm. Lördag? På morgonen spelar jag fotboll, men på eftermiddagen har jag tid."
+   },
+   {
+    "fr": "Sofia (16:13): Samstag ist gut! Um wie viel Uhr?",
+    "sv": "Sofia (16.13): Lördag är bra! Hur dags?"
+   },
+   {
+    "fr": "Jonas (16:14): Um drei? Wir gehen zusammen in den Park.",
+    "sv": "Jonas (16.14): Klockan tre? Vi går till parken tillsammans."
+   },
+   {
+    "fr": "Sofia (16:15): Okay, um drei am Park. Aber ich komme immer ein bisschen spät 😉",
+    "sv": "Sofia (16.15): Okej, klockan tre vid parken. Men jag kommer alltid lite sent 😉"
+   },
+   {
+    "fr": "Jonas (16:16): Kein Problem. Bis Samstag!",
+    "sv": "Jonas (16.16): Inga problem. Vi ses på lördag!"
+   }
+  ],
+  "questions": [
+   {
+    "type": "helhet",
+    "q": "Vad försöker Jonas och Sofia göra?",
+    "opts": [
+     "Hitta en tid att träffas",
+     "Plugga till ett prov tillsammans",
+     "Köpa biljetter till en match"
+    ],
+    "a": 0,
+    "why": "De frågar varandra när de har tid och bestämmer lördag."
+   },
+   {
+    "type": "detalj",
+    "q": "Vad gör Sofia på fredag?",
+    "opts": [
+     "Hon pluggar",
+     "Hon jobbar på ett kafé",
+     "Hon spelar fotboll"
+    ],
+    "a": 1,
+    "why": "”Am Freitag arbeite ich von vier bis acht im Café.”"
+   },
+   {
+    "type": "detalj",
+    "q": "När ses de?",
+    "opts": [
+     "På lördag klockan tre",
+     "På lördag morgon",
+     "På fredag klockan åtta"
+    ],
+    "a": 0,
+    "why": "”Okay, um drei am Park.”"
+   }
+  ],
+  "gloss": {
+   "café": {
+    "t": "das Café",
+    "sv": "kafé",
+    "g": "n"
+   },
+   "nachmittag": {
+    "t": "der Nachmittag",
+    "sv": "eftermiddag",
+    "g": "m"
+   },
+   "bisschen": {
+    "t": "ein bisschen",
+    "sv": "lite grann",
+    "g": ""
+   },
+   "problem": {
+    "t": "das Problem",
+    "sv": "problem",
+    "g": "n"
+   }
+  }
+ },
+ {
+  "id": "de1-r-e5",
+  "sec": "e5",
+  "title": "Speisekarte: Café am Markt",
+  "lines": [
+   {
+    "fr": "Café am Markt – Speisekarte",
+    "sv": "Café am Markt – meny"
+   },
+   {
+    "fr": "Frühstück (8–11 Uhr): Brot mit Butter und Marmelade, ein Ei, Kaffee oder Tee – 7,50 Euro",
+    "sv": "Frukost (8–11): bröd med smör och marmelad, ett ägg, kaffe eller te – 7,50 euro"
+   },
+   {
+    "fr": "Müsli mit Joghurt und Obst – 5,90 Euro",
+    "sv": "Müsli med yoghurt och frukt – 5,90 euro"
+   },
+   {
+    "fr": "Mittagessen (12–15 Uhr): Suppe des Tages mit Brot – 6,50 Euro",
+    "sv": "Lunch (12–15): dagens soppa med bröd – 6,50 euro"
+   },
+   {
+    "fr": "Pizza mit Tomaten und Käse – 9,00 Euro",
+    "sv": "Pizza med tomater och ost – 9,00 euro"
+   },
+   {
+    "fr": "Fisch mit Salat – 12,50 Euro",
+    "sv": "Fisk med sallad – 12,50 euro"
+   },
+   {
+    "fr": "Kuchen und Eis: Apfelkuchen – 3,80 Euro, Schokoladenkuchen – 4,20 Euro, Eis (eine Kugel) – 1,50 Euro",
+    "sv": "Kakor och glass: äppelkaka – 3,80 euro, chokladkaka – 4,20 euro, glass (en kula) – 1,50 euro"
+   },
+   {
+    "fr": "Getränke: Wasser 2,50 Euro, Cola 3,00 Euro, Milch 2,00 Euro, Kaffee 2,80 Euro, Tee 2,50 Euro",
+    "sv": "Drycker: vatten 2,50 euro, cola 3,00 euro, mjölk 2,00 euro, kaffe 2,80 euro, te 2,50 euro"
+   },
+   {
+    "fr": "Am Sonntag gibt es kein Mittagessen. Wir haben dann nur Kuchen!",
+    "sv": "På söndag finns det ingen lunch. Då har vi bara kakor!"
+   }
+  ],
+  "questions": [
+   {
+    "type": "helhet",
+    "q": "Vad är det här för text?",
+    "opts": [
+     "En meny",
+     "Ett recept",
+     "En inköpslista"
+    ],
+    "a": 0,
+    "why": "Det står ”Speisekarte” (meny) och priser."
+   },
+   {
+    "type": "detalj",
+    "q": "Vad kostar pizzan?",
+    "opts": [
+     "7,50 euro",
+     "9,00 euro",
+     "12,50 euro"
+    ],
+    "a": 1,
+    "why": "”Pizza mit Tomaten und Käse – 9,00 Euro”"
+   },
+   {
+    "type": "detalj",
+    "q": "Vad kan man INTE äta på söndag?",
+    "opts": [
+     "Kaka",
+     "Lunch",
+     "Glass"
+    ],
+    "a": 1,
+    "why": "”Am Sonntag gibt es kein Mittagessen.”"
+   }
+  ],
+  "gloss": {
+   "speisekarte": {
+    "t": "die Speisekarte",
+    "sv": "meny",
+    "g": "f"
+   },
+   "kugel": {
+    "t": "die Kugel",
+    "sv": "kula",
+    "g": "f"
+   },
+   "getränke": {
+    "t": "das Getränk",
+    "sv": "dryck",
+    "g": "n"
+   },
+   "eis": {
+    "t": "das Eis",
+    "sv": "glass",
+    "g": "n"
+   },
+   "tages": {
+    "t": "der Tag",
+    "sv": "dag",
+    "g": "m"
+   }
+  }
+ },
+ {
+  "id": "de1-r-e6",
+  "sec": "e6",
+  "title": "Freizeit in Hamburg: Was ist los am Wochenende?",
+  "lines": [
+   {
+    "fr": "Samstag, 10 Uhr: Fußball im Stadion – Hamburg gegen Bremen. Tickets ab 15 Euro.",
+    "sv": "Lördag kl. 10: fotboll på stadion – Hamburg mot Bremen. Biljetter från 15 euro."
+   },
+   {
+    "fr": "Samstag, 14 Uhr: Im Park spielen wir zusammen Volleyball. Jeder kann mitmachen! Bring einen Ball mit.",
+    "sv": "Lördag kl. 14: I parken spelar vi volleyboll tillsammans. Alla kan vara med! Ta med en boll."
+   },
+   {
+    "fr": "Samstag, 20 Uhr: Konzert im Theater – Musik aus Schweden und Norwegen.",
+    "sv": "Lördag kl. 20: konsert på teatern – musik från Sverige och Norge."
+   },
+   {
+    "fr": "Sonntag, 11 Uhr: Das Museum ist heute frei. Es gibt ein Video über die Stadt.",
+    "sv": "Söndag kl. 11: Museet är gratis i dag. Det finns en video om staden."
+   },
+   {
+    "fr": "Sonntag, 15 Uhr: Im Zoo gibt es heute viele Tiere und Spiele für Kinder.",
+    "sv": "Söndag kl. 15: I djurparken finns det i dag många djur och lekar för barn."
+   },
+   {
+    "fr": "Wetter: Am Samstag scheint die Sonne. Am Sonntag gibt es Regen und Wind.",
+    "sv": "Vädret: På lördag skiner solen. På söndag blir det regn och blåst."
+   },
+   {
+    "fr": "Tipp: Am Sonntag ist das Museum super, denn da ist es warm und trocken!",
+    "sv": "Tips: På söndag passar museet perfekt, för där är det varmt och torrt!"
+   }
+  ],
+  "questions": [
+   {
+    "type": "helhet",
+    "q": "Vad är det här för text?",
+    "opts": [
+     "Tips om vad man kan göra i helgen",
+     "En tidtabell för bussar",
+     "Ett brev till en kompis"
+    ],
+    "a": 0,
+    "why": "Texten listar aktiviteter på lördag och söndag."
+   },
+   {
+    "type": "detalj",
+    "q": "Vad ska man ta med till volleybollen?",
+    "opts": [
+     "En boll",
+     "En biljett",
+     "Pengar"
+    ],
+    "a": 0,
+    "why": "”Bring einen Ball mit.”"
+   },
+   {
+    "type": "detalj",
+    "q": "Varför tipsar texten om museet på söndag?",
+    "opts": [
+     "Det är gratis och det regnar ute",
+     "Det finns fotboll där",
+     "Det är öppet på natten"
+    ],
+    "a": 0,
+    "why": "Museet är ”frei” och på söndag blir det regn: ”da ist es warm und trocken”."
+   }
+  ],
+  "gloss": {
+   "gegen": {
+    "t": "gegen",
+    "sv": "mot",
+    "g": ""
+   },
+   "jeder": {
+    "t": "jeder",
+    "sv": "alla, var och en",
+    "g": ""
+   },
+   "mitmachen": {
+    "t": "mitmachen",
+    "sv": "vara med",
+    "g": ""
+   },
+   "bring": {
+    "t": "mitbringen",
+    "sv": "ta med",
+    "g": ""
+   },
+   "konzert": {
+    "t": "das Konzert",
+    "sv": "konsert",
+    "g": "n"
+   },
+   "frei": {
+    "t": "frei",
+    "sv": "fri, gratis",
+    "g": ""
+   },
+   "scheint": {
+    "t": "scheinen",
+    "sv": "skina",
+    "g": ""
+   },
+   "trocken": {
+    "t": "trocken",
+    "sv": "torr",
+    "g": ""
+   },
+   "tipp": {
+    "t": "der Tipp",
+    "sv": "tips",
+    "g": "m"
+   },
+   "kann": {
+    "t": "können",
+    "sv": "kunna",
+    "g": ""
+   },
+   "ab": {
+    "t": "ab",
+    "sv": "från",
+    "g": ""
+   }
+  }
+ },
+ {
+  "id": "de1-r-e7",
+  "sec": "e7",
+  "title": "Zimmer frei!",
+  "lines": [
+   {
+    "fr": "Zimmer in Wien frei – ab 1. März!",
+    "sv": "Rum ledigt i Wien – från den 1 mars!"
+   },
+   {
+    "fr": "Wir sind eine Familie mit zwei Kindern und einer Katze. Unser Haus ist groß und alt, aber schön.",
+    "sv": "Vi är en familj med två barn och en katt. Vårt hus är stort och gammalt men fint."
+   },
+   {
+    "fr": "Das Zimmer ist oben, im zweiten Stock. Es ist klein, aber hell: Es hat zwei Fenster.",
+    "sv": "Rummet ligger en trappa upp, på andra våningen. Det är litet men ljust: det har två fönster."
+   },
+   {
+    "fr": "Im Zimmer gibt es ein Bett, einen Tisch, einen Stuhl und eine Lampe.",
+    "sv": "I rummet finns en säng, ett bord, en stol och en lampa."
+   },
+   {
+    "fr": "Die Dusche und die Toilette sind neben dem Zimmer.",
+    "sv": "Duschen och toaletten ligger bredvid rummet."
+   },
+   {
+    "fr": "Unten gibt es eine Küche mit Mikrowelle. Du kannst hier kochen.",
+    "sv": "På nedervåningen finns ett kök med mikrovågsugn. Du kan laga mat här."
+   },
+   {
+    "fr": "Wir brauchen eine Person, sauber und nett, vielleicht einen Studenten oder eine Studentin.",
+    "sv": "Vi behöver en person som är städad och trevlig, kanske en student."
+   },
+   {
+    "fr": "Hast du Fragen? Schreib eine E-Mail an familie.gruber@beispiel.at.",
+    "sv": "Har du frågor? Skicka ett mejl till familie.gruber@beispiel.at."
+   }
+  ],
+  "questions": [
+   {
+    "type": "helhet",
+    "q": "Vad är det här för text?",
+    "opts": [
+     "En annons om ett rum att hyra",
+     "Ett vykort från Wien",
+     "En beskrivning av en skola"
+    ],
+    "a": 0,
+    "why": "”Zimmer in Wien frei” och ”Wir brauchen eine Person”."
+   },
+   {
+    "type": "detalj",
+    "q": "Var ligger rummet?",
+    "opts": [
+     "På nedervåningen",
+     "På andra våningen",
+     "I källaren"
+    ],
+    "a": 1,
+    "why": "”Das Zimmer ist oben, im zweiten Stock.”"
+   },
+   {
+    "type": "detalj",
+    "q": "Vilket stämmer?",
+    "opts": [
+     "Rummet är stort och mörkt",
+     "Rummet har två fönster",
+     "Rummet har egen kök"
+    ],
+    "a": 1,
+    "why": "”Es hat zwei Fenster.”"
+   }
+  ],
+  "gloss": {
+   "frei": {
+    "t": "frei",
+    "sv": "ledig, fri",
+    "g": ""
+   },
+   "zweiten": {
+    "t": "zweiter",
+    "sv": "andra",
+    "g": ""
+   },
+   "hell": {
+    "t": "hell",
+    "sv": "ljus",
+    "g": ""
+   },
+   "kannst": {
+    "t": "können",
+    "sv": "kunna",
+    "g": ""
+   },
+   "vielleicht": {
+    "t": "vielleicht",
+    "sv": "kanske",
+    "g": ""
+   },
+   "studenten": {
+    "t": "der Student",
+    "sv": "student",
+    "g": "m"
+   },
+   "ab": {
+    "t": "ab",
+    "sv": "från",
+    "g": ""
+   },
+   "schreib": {
+    "t": "schreiben",
+    "sv": "skriv!",
+    "g": ""
+   },
+   "studentin": {
+    "t": "die Studentin",
+    "sv": "student (kvinna)",
+    "g": "f"
+   }
+  }
+ },
+ {
+  "id": "de1-r-e8",
+  "sec": "e8",
+  "title": "Der Weg zum Hotel",
+  "lines": [
+   {
+    "fr": "Hallo Frau Andersson,",
+    "sv": "Hej fru Andersson,"
+   },
+   {
+    "fr": "willkommen in Heidelberg! Hier ist der Weg zu unserem Hotel.",
+    "sv": "välkommen till Heidelberg! Här är vägen till vårt hotell."
+   },
+   {
+    "fr": "Vom Bahnhof nehmen Sie den Bus 32. Sie fahren fünf Minuten bis zum Marktplatz.",
+    "sv": "Från järnvägsstationen tar ni buss 32. Ni åker fem minuter till torget."
+   },
+   {
+    "fr": "Am Marktplatz sehen Sie eine große Kirche und das Rathaus.",
+    "sv": "Vid torget ser ni en stor kyrka och rådhuset."
+   },
+   {
+    "fr": "Gehen Sie dann links, zwischen der Kirche und der Bank. Das ist die Hauptstraße.",
+    "sv": "Gå sedan till vänster, mellan kyrkan och banken. Det är huvudgatan."
+   },
+   {
+    "fr": "Nach 200 Metern sehen Sie den Fluss und eine alte Brücke.",
+    "sv": "Efter 200 meter ser ni floden och en gammal bro."
+   },
+   {
+    "fr": "Das Hotel ist vor der Brücke, rechts. Es ist nicht weit, nur zehn Minuten zu Fuß.",
+    "sv": "Hotellet ligger före bron, till höger. Det är inte långt, bara tio minuter till fots."
+   },
+   {
+    "fr": "Mit dem Taxi kostet es ungefähr 12 Euro.",
+    "sv": "Med taxi kostar det ungefär 12 euro."
+   },
+   {
+    "fr": "Bis bald und gute Reise!",
+    "sv": "Vi ses snart och trevlig resa!"
+   },
+   {
+    "fr": "Ihr Hotel am Fluss",
+    "sv": "Ert Hotel am Fluss"
+   }
+  ],
+  "questions": [
+   {
+    "type": "helhet",
+    "q": "Vad är det här för text?",
+    "opts": [
+     "En vägbeskrivning från ett hotell",
+     "En tidtabell",
+     "En reklam för en taxi"
+    ],
+    "a": 0,
+    "why": "”Hier ist der Weg zu unserem Hotel.”"
+   },
+   {
+    "type": "detalj",
+    "q": "Vilken buss tar Frau Andersson?",
+    "opts": [
+     "Buss 12",
+     "Buss 32",
+     "Buss 200"
+    ],
+    "a": 1,
+    "why": "”Vom Bahnhof nehmen Sie den Bus 32.”"
+   },
+   {
+    "type": "detalj",
+    "q": "Var ligger hotellet?",
+    "opts": [
+     "Före bron, till höger",
+     "Bredvid kyrkan",
+     "Vid järnvägsstationen"
+    ],
+    "a": 0,
+    "why": "”Das Hotel ist vor der Brücke, rechts.”"
+   }
+  ],
+  "gloss": {
+   "weg": {
+    "t": "der Weg",
+    "sv": "väg",
+    "g": "m"
+   },
+   "fuß": {
+    "t": "zu Fuß",
+    "sv": "till fots",
+    "g": ""
+   },
+   "ungefähr": {
+    "t": "ungefähr",
+    "sv": "ungefär",
+    "g": ""
+   },
+   "reise": {
+    "t": "die Reise",
+    "sv": "resa",
+    "g": "f"
+   },
+   "willkommen": {
+    "t": "willkommen",
+    "sv": "välkommen",
+    "g": ""
+   },
+   "nach": {
+    "t": "nach",
+    "sv": "efter",
+    "g": ""
+   }
+  }
+ },
+ {
+  "id": "de1-r-lied-entchen",
+  "sec": "e6",
+  "title": "Lied: Alle meine Entchen",
+  "lines": [
+   {
+    "fr": "Ein altes Kinderlied aus Deutschland. Man singt es seit etwa 200 Jahren. Du findest die Melodie leicht im Internet.",
+    "sv": "En gammal barnvisa från Tyskland. Man har sjungit den i ungefär 200 år. Melodin hittar du lätt på nätet."
+   },
+   {
+    "fr": "Alle meine Entchen schwimmen auf dem See, schwimmen auf dem See,",
+    "sv": "Alla mina små ankor simmar på sjön, simmar på sjön,"
+   },
+   {
+    "fr": "Köpfchen in das Wasser, Schwänzchen in die Höh'.",
+    "sv": "huvudet i vattnet, stjärten i vädret."
+   },
+   {
+    "fr": "Alle meine Täubchen gurren auf dem Dach, gurren auf dem Dach,",
+    "sv": "Alla mina små duvor kuttrar på taket, kuttrar på taket,"
+   },
+   {
+    "fr": "fliegt eins durch die Lüfte, fliegen alle nach.",
+    "sv": "flyger en upp i luften, flyger alla efter."
+   },
+   {
+    "fr": "Alle meine Hühner scharren in dem Stroh, scharren in dem Stroh,",
+    "sv": "Alla mina hönor sprättar i halmen, sprättar i halmen,"
+   },
+   {
+    "fr": "finden sie ein Körnchen, sind sie alle froh.",
+    "sv": "hittar de ett litet korn, blir de alla glada."
+   }
+  ],
+  "questions": [
+   {
+    "type": "helhet",
+    "q": "Vad handlar visan om?",
+    "opts": [
+     "Djur och vad de gör",
+     "En familj som reser",
+     "Ett barn som går till skolan"
+    ],
+    "a": 0,
+    "why": "Varje vers handlar om ett djur: Entchen (ankor), Täubchen (duvor) och Hühner (hönor)."
+   },
+   {
+    "type": "detalj",
+    "q": "Var är duvorna (Täubchen)?",
+    "opts": [
+     "På sjön",
+     "På taket",
+     "I halmen"
+    ],
+    "a": 1,
+    "why": "”Alle meine Täubchen gurren auf dem Dach.”"
+   }
+  ],
+  "gloss": {
+   "kinderlied": {
+    "t": "das Kinderlied",
+    "sv": "barnvisa",
+    "g": "n"
+   },
+   "etwa": {
+    "t": "etwa",
+    "sv": "ungefär",
+    "g": ""
+   },
+   "melodie": {
+    "t": "die Melodie",
+    "sv": "melodi",
+    "g": "f"
+   },
+   "entchen": {
+    "t": "das Entchen",
+    "sv": "liten anka",
+    "g": "n"
+   },
+   "köpfchen": {
+    "t": "das Köpfchen",
+    "sv": "litet huvud",
+    "g": "n"
+   },
+   "schwänzchen": {
+    "t": "das Schwänzchen",
+    "sv": "liten stjärt",
+    "g": "n"
+   },
+   "täubchen": {
+    "t": "das Täubchen",
+    "sv": "liten duva",
+    "g": "n"
+   },
+   "gurren": {
+    "t": "gurren",
+    "sv": "kuttra",
+    "g": ""
+   },
+   "fliegt": {
+    "t": "fliegen",
+    "sv": "flyga",
+    "g": ""
+   },
+   "fliegen": {
+    "t": "fliegen",
+    "sv": "flyga",
+    "g": ""
+   },
+   "lüfte": {
+    "t": "die Luft (Lüfte)",
+    "sv": "luft",
+    "g": "f"
+   },
+   "nach": {
+    "t": "nachfliegen",
+    "sv": "flyga efter",
+    "g": ""
+   },
+   "hühner": {
+    "t": "das Huhn (Hühner)",
+    "sv": "höna",
+    "g": "n"
+   },
+   "scharren": {
+    "t": "scharren",
+    "sv": "sprätta, krafsa",
+    "g": ""
+   },
+   "stroh": {
+    "t": "das Stroh",
+    "sv": "halm",
+    "g": "n"
+   },
+   "körnchen": {
+    "t": "das Körnchen",
+    "sv": "litet korn",
+    "g": "n"
+   },
+   "froh": {
+    "t": "froh",
+    "sv": "glad",
+    "g": ""
+   },
+   "höh'": {
+    "t": "die Höhe",
+    "sv": "höjd; in die Höh' = i vädret",
+    "g": "f"
+   }
+  }
+ },
+ {
+  "id": "de1-r-lied-haenschen",
+  "sec": "e2",
+  "title": "Lied: Hänschen klein",
+  "lines": [
+   {
+    "fr": "Ein bekanntes Kinderlied. Der Text ist von Franz Wiedemann (1821–1882). Hänschen ist ein Name für einen kleinen Jungen: Hans.",
+    "sv": "En känd barnvisa. Texten är skriven av Franz Wiedemann (1821–1882). Hänschen är ett namn på en liten pojke: lille Hans."
+   },
+   {
+    "fr": "Hänschen klein ging allein in die weite Welt hinein.",
+    "sv": "Lille Hans gick ensam ut i den vida världen."
+   },
+   {
+    "fr": "Stock und Hut steht ihm gut, ist gar wohlgemut.",
+    "sv": "Käpp och hatt klär honom bra, han är vid gott mod."
+   },
+   {
+    "fr": "Aber Mama weinet sehr, hat ja nun kein Hänschen mehr.",
+    "sv": "Men mamma gråter mycket, hon har ju ingen lille Hans längre."
+   },
+   {
+    "fr": "„Wünsch dir Glück!“, sagt ihr Blick, „kehr nur bald zurück!“",
+    "sv": "”Lycka till!”, säger hennes blick, ”kom snart tillbaka!”"
+   }
+  ],
+  "questions": [
+   {
+    "type": "helhet",
+    "q": "Vad handlar visan om?",
+    "opts": [
+     "En pojke som går ut i världen och en mamma som är ledsen",
+     "En pojke som får en hatt på födelsedagen",
+     "En mamma som lagar mat"
+    ],
+    "a": 0,
+    "why": "Hänschen ”ging allein in die weite Welt hinein”, och ”Mama weinet sehr”."
+   },
+   {
+    "type": "detalj",
+    "q": "Vad vill mamma?",
+    "opts": [
+     "Att Hänschen kommer tillbaka snart",
+     "Att Hänschen köper en hatt",
+     "Att Hänschen stannar i skogen"
+    ],
+    "a": 0,
+    "why": "”Kehr nur bald zurück!” = kom snart tillbaka!"
+   }
+  ],
+  "gloss": {
+   "bekanntes": {
+    "t": "bekannt",
+    "sv": "känd",
+    "g": ""
+   },
+   "kinderlied": {
+    "t": "das Kinderlied",
+    "sv": "barnvisa",
+    "g": "n"
+   },
+   "ging": {
+    "t": "gehen (ging)",
+    "sv": "gick",
+    "g": ""
+   },
+   "weite": {
+    "t": "weit",
+    "sv": "vid",
+    "g": ""
+   },
+   "hinein": {
+    "t": "hinein",
+    "sv": "in, ut i",
+    "g": ""
+   },
+   "stock": {
+    "t": "der Stock",
+    "sv": "käpp",
+    "g": "m"
+   },
+   "hut": {
+    "t": "der Hut",
+    "sv": "hatt",
+    "g": "m"
+   },
+   "steht": {
+    "t": "stehen",
+    "sv": "stå; jmdm. gut stehen = klä någon",
+    "g": ""
+   },
+   "gar": {
+    "t": "gar",
+    "sv": "helt, riktigt",
+    "g": ""
+   },
+   "wohlgemut": {
+    "t": "wohlgemut",
+    "sv": "vid gott mod",
+    "g": ""
+   },
+   "weinet": {
+    "t": "weinen",
+    "sv": "gråta (weinet = gammal form av weint)",
+    "g": ""
+   },
+   "mehr": {
+    "t": "kein … mehr",
+    "sv": "inte … längre",
+    "g": ""
+   },
+   "wünsch": {
+    "t": "wünschen",
+    "sv": "önska",
+    "g": ""
+   },
+   "glück": {
+    "t": "das Glück",
+    "sv": "lycka",
+    "g": "n"
+   },
+   "blick": {
+    "t": "der Blick",
+    "sv": "blick",
+    "g": "m"
+   },
+   "kehr": {
+    "t": "zurückkehren",
+    "sv": "återvända",
+    "g": ""
+   },
+   "zurück": {
+    "t": "zurück",
+    "sv": "tillbaka",
+    "g": ""
+   }
+  }
+ }
+]

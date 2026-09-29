@@ -1,0 +1,680 @@
+{
+ "trennbar": {
+  "title": "Delbara verb",
+  "intro": "Många tyska verb har ett prefix som lossnar: anrufen, einkaufen, aufstehen. Svenskan har samma sak (ringa upp, gå ut), men på tyska hamnar prefixet sist i satsen.",
+  "parts": [
+   {
+    "h": "I presens: prefixet sist",
+    "t": "Den böjda delen står på plats 2 och prefixet **sist** i satsen.",
+    "ex": [
+     {
+      "fr": "Ich **rufe** dich morgen **an**.",
+      "sv": "Jag ringer dig i morgon."
+     },
+     {
+      "fr": "Der Film **fängt** um acht **an**.",
+      "sv": "Filmen börjar klockan åtta."
+     },
+     {
+      "fr": "**Kommst** du **mit**?",
+      "sv": "Följer du med?"
+     }
+    ]
+   },
+   {
+    "h": "Med modalverb: ihop sist",
+    "t": "Efter ett modalverb står verbet i infinitiv, **ihop**, sist i satsen.",
+    "ex": [
+     {
+      "fr": "Ich muss früh **aufstehen**.",
+      "sv": "Jag måste gå upp tidigt."
+     },
+     {
+      "fr": "Kannst du mich **abholen**?",
+      "sv": "Kan du hämta mig?"
+     }
+    ]
+   },
+   {
+    "h": "I perfekt: ge- i mitten",
+    "t": "Participet får **ge-** mellan prefixet och stammen: an-**ge**-rufen, ein-**ge**-kauft, auf-**ge**-standen.",
+    "table": {
+     "head": [
+      "infinitiv",
+      "perfekt"
+     ],
+     "rows": [
+      [
+       "anrufen",
+       "hat an**ge**rufen"
+      ],
+      [
+       "einkaufen",
+       "hat ein**ge**kauft"
+      ],
+      [
+       "aufstehen",
+       "ist auf**ge**standen"
+      ],
+      [
+       "mitkommen",
+       "ist mit**ge**kommen"
+      ]
+     ]
+    },
+    "ex": [
+     {
+      "fr": "Ich habe dich **angerufen**.",
+      "sv": "Jag ringde dig."
+     }
+    ]
+   }
+  ],
+  "tip": "Prefix som an-, auf-, aus-, ein-, mit-, zu-, ab-, los-, zurück- lossnar. be-, er-, ver- lossnar aldrig och får inget ge-."
+ },
+ "perfekt": {
+  "title": "Perfekt med haben och sein",
+  "intro": "Perfekt är den vanligaste dåtiden i talad tyska. Den byggs med haben eller sein + particip sist i satsen.",
+  "parts": [
+   {
+    "h": "haben eller sein?",
+    "t": "De flesta verb tar **haben**. Verb för **förflyttning** (gehen, fahren, fliegen, kommen) och **förändring** (aufwachen, einschlafen) tar **sein**, liksom sein, bleiben och passieren.",
+    "ex": [
+     {
+      "fr": "Ich **habe** Fußball gespielt.",
+      "sv": "Jag spelade fotboll."
+     },
+     {
+      "fr": "Wir **sind** nach Wien gefahren.",
+      "sv": "Vi åkte till Wien."
+     },
+     {
+      "fr": "Ich **bin** zu Hause geblieben.",
+      "sv": "Jag stannade hemma."
+     }
+    ]
+   },
+   {
+    "h": "Participet",
+    "t": "Svaga verb: **ge- … -t** (gemacht, gespielt). Starka verb: **ge- … -en**, ofta med ny vokal (gefahren, getroffen, geschwommen). Verb på -ieren och med be-, er-, ver- får inget ge-: passiert, besichtigt, erzählt.",
+    "table": {
+     "head": [
+      "typ",
+      "exempel"
+     ],
+     "rows": [
+      [
+       "svagt",
+       "machen → **ge**mach**t**"
+      ],
+      [
+       "starkt",
+       "schlafen → **ge**schlaf**en**"
+      ],
+      [
+       "-ieren",
+       "passieren → passier**t**"
+      ],
+      [
+       "be-/er-/ver-",
+       "erzählen → erzähl**t**"
+      ]
+     ]
+    }
+   },
+   {
+    "h": "war och hatte",
+    "t": "För sein och haben använder man oftast **präteritum**: ich **war**, ich **hatte**.",
+    "table": {
+     "head": [
+      "",
+      "sein",
+      "haben"
+     ],
+     "rows": [
+      [
+       "ich",
+       "war",
+       "hatte"
+      ],
+      [
+       "du",
+       "warst",
+       "hattest"
+      ],
+      [
+       "er/sie/es",
+       "war",
+       "hatte"
+      ],
+      [
+       "wir",
+       "waren",
+       "hatten"
+      ],
+      [
+       "ihr",
+       "wart",
+       "hattet"
+      ],
+      [
+       "sie/Sie",
+       "waren",
+       "hatten"
+      ]
+     ]
+    },
+    "ex": [
+     {
+      "fr": "Gestern **war** ich im Kino.",
+      "sv": "I går var jag på bio."
+     },
+     {
+      "fr": "Wir **hatten** viel Spaß.",
+      "sv": "Vi hade jättekul."
+     }
+    ]
+   }
+  ],
+  "tip": "Svenskan säger ”jag åkte”, men tyskan säger oftast ”jag är åkt”: Ich bin gefahren."
+ },
+ "modal": {
+  "title": "Modalverb",
+  "intro": "Modalverben (können, müssen, wollen, dürfen, sollen, möchten) säger om man kan, måste, vill eller får göra något. Huvudverbet står i infinitiv sist.",
+  "parts": [
+   {
+    "h": "Formerna",
+    "t": "Ich och er/sie/es har **ingen ändelse**, och vokalen ändras ofta i singular.",
+    "table": {
+     "head": [
+      "",
+      "können",
+      "müssen",
+      "wollen",
+      "dürfen",
+      "sollen",
+      "möchten"
+     ],
+     "rows": [
+      [
+       "ich",
+       "kann",
+       "muss",
+       "will",
+       "darf",
+       "soll",
+       "möchte"
+      ],
+      [
+       "du",
+       "kannst",
+       "musst",
+       "willst",
+       "darfst",
+       "sollst",
+       "möchtest"
+      ],
+      [
+       "er/sie/es",
+       "kann",
+       "muss",
+       "will",
+       "darf",
+       "soll",
+       "möchte"
+      ],
+      [
+       "wir",
+       "können",
+       "müssen",
+       "wollen",
+       "dürfen",
+       "sollen",
+       "möchten"
+      ],
+      [
+       "ihr",
+       "könnt",
+       "müsst",
+       "wollt",
+       "dürft",
+       "sollt",
+       "möchtet"
+      ],
+      [
+       "sie/Sie",
+       "können",
+       "müssen",
+       "wollen",
+       "dürfen",
+       "sollen",
+       "möchten"
+      ]
+     ]
+    }
+   },
+   {
+    "h": "Infinitiven sist",
+    "ex": [
+     {
+      "fr": "Ich **kann** heute nicht **kommen**.",
+      "sv": "Jag kan inte komma i dag."
+     },
+     {
+      "fr": "**Darf** ich hier **fotografieren**?",
+      "sv": "Får jag fotografera här?"
+     }
+    ],
+    "t": "Modalverbet står på plats 2, infinitiven sist."
+   },
+   {
+    "h": "Vilket modalverb?",
+    "t": "**können** = kunna, **müssen** = måste, **wollen** = vilja, **dürfen** = få (lov), **sollen** = ska/bör (någon annan vill det), **möchten** = skulle vilja (artigt).",
+    "ex": [
+     {
+      "fr": "Der Arzt sagt, ich **soll** viel trinken.",
+      "sv": "Läkaren säger att jag ska dricka mycket."
+     },
+     {
+      "fr": "Ich **möchte** ein T-Shirt, bitte.",
+      "sv": "Jag skulle vilja ha en t-shirt."
+     }
+    ]
+   }
+  ],
+  "tip": "Ich will betyder jag vill, inte jag ska. Och nicht müssen betyder behöver inte: Du musst nicht kommen."
+ },
+ "dativ": {
+  "title": "Dativ efter prepositioner",
+  "intro": "Vissa prepositioner tar alltid dativ: **aus, bei, mit, nach, seit, von, zu**. Då ändras artikeln.",
+  "parts": [
+   {
+    "h": "Artiklarna i dativ",
+    "table": {
+     "head": [
+      "",
+      "maskulinum",
+      "femininum",
+      "neutrum",
+      "plural"
+     ],
+     "rows": [
+      [
+       "nominativ",
+       "der / ein",
+       "die / eine",
+       "das / ein",
+       "die"
+      ],
+      [
+       "dativ",
+       "**dem / einem**",
+       "**der / einer**",
+       "**dem / einem**",
+       "**den** + -n"
+      ]
+     ]
+    },
+    "t": "Samma ändelse på mein, dein, unser: mit mein**em** Bruder, mit mein**er** Schwester, mit mein**en** Freunde**n**."
+   },
+   {
+    "h": "Kortformer",
+    "t": "zu dem → **zum**, zu der → **zur**, bei dem → **beim**, von dem → **vom**.",
+    "ex": [
+     {
+      "fr": "Ich gehe **zum** Arzt.",
+      "sv": "Jag går till läkaren."
+     },
+     {
+      "fr": "Wir gehen **zur** Party.",
+      "sv": "Vi går på festen."
+     },
+     {
+      "fr": "Ich bin **beim** Zahnarzt.",
+      "sv": "Jag är hos tandläkaren."
+     }
+    ]
+   },
+   {
+    "h": "Prepositionerna",
+    "t": "**mit** med · **bei** hos · **zu** till · **von** från, av · **aus** från, ur · **nach** efter, till · **seit** sedan",
+    "ex": [
+     {
+      "fr": "Ich fahre **mit dem** Bus.",
+      "sv": "Jag åker buss."
+     },
+     {
+      "fr": "Ich wohne **seit einem** Jahr hier.",
+      "sv": "Jag har bott här i ett år."
+     }
+    ]
+   }
+  ],
+  "tip": "Ramsa: aus, bei, mit, nach, seit, von, zu – dativ, det vet du!"
+ },
+ "zeitprep": {
+  "title": "Tidsprepositioner",
+  "intro": "När något händer säger man med am, im, um, von … bis, vor, nach, seit och in.",
+  "parts": [
+   {
+    "h": "am, im, um",
+    "table": {
+     "head": [
+      "preposition",
+      "används för",
+      "exempel"
+     ],
+     "rows": [
+      [
+       "**am**",
+       "dagar, datum, tid på dygnet",
+       "am Montag, am 3. Mai, am Abend"
+      ],
+      [
+       "**im**",
+       "månader och årstider",
+       "im Juli, im Winter"
+      ],
+      [
+       "**um**",
+       "klockslag",
+       "um acht Uhr"
+      ],
+      [
+       "**in der**",
+       "natten",
+       "in der Nacht"
+      ]
+     ]
+    }
+   },
+   {
+    "h": "seit, vor, nach, in",
+    "t": "**seit** = har pågått sedan (med presens) · **vor** = för … sedan · **nach** = efter · **in** = om (framtid). Alla tar dativ.",
+    "ex": [
+     {
+      "fr": "Es regnet **seit** drei Tagen.",
+      "sv": "Det har regnat i tre dagar."
+     },
+     {
+      "fr": "**Vor** einer Woche war es warm.",
+      "sv": "För en vecka sedan var det varmt."
+     },
+     {
+      "fr": "**In** zwei Wochen haben wir Ferien.",
+      "sv": "Om två veckor har vi lov."
+     }
+    ]
+   },
+   {
+    "h": "Från och till",
+    "t": "**von** neun **bis** fünf = från nio till fem.",
+    "ex": [
+     {
+      "fr": "Der Laden ist **von** 9 **bis** 18 Uhr geöffnet.",
+      "sv": "Affären är öppen 9–18."
+     }
+    ]
+   }
+  ],
+  "tip": "Seit + presens: Ich wohne seit zwei Jahren hier (inte: habe gewohnt)."
+ },
+ "imperativ": {
+  "title": "Imperativ",
+  "intro": "Med imperativ ger man uppmaningar, råd och instruktioner. Det finns tre former: du, ihr och Sie.",
+  "parts": [
+   {
+    "h": "du, ihr, Sie",
+    "table": {
+     "head": [
+      "",
+      "kommen",
+      "nehmen",
+      "fahren",
+      "sein"
+     ],
+     "rows": [
+      [
+       "du",
+       "Komm!",
+       "Nimm!",
+       "Fahr!",
+       "Sei!"
+      ],
+      [
+       "ihr",
+       "Kommt!",
+       "Nehmt!",
+       "Fahrt!",
+       "Seid!"
+      ],
+      [
+       "Sie",
+       "Kommen Sie!",
+       "Nehmen Sie!",
+       "Fahren Sie!",
+       "Seien Sie!"
+      ]
+     ]
+    },
+    "t": "**du**: du-formen utan -st och utan du. **ihr**: ihr-formen utan ihr. **Sie**: verbet först, sedan Sie."
+   },
+   {
+    "h": "e → i, men inte a → ä",
+    "t": "Verb med e → i behåller i: nimm, lies, hilf, iss. Verb med a → ä får **inget** omljud: fahr, schlaf.",
+    "ex": [
+     {
+      "fr": "**Nimm** die Tabletten!",
+      "sv": "Ta tabletterna!"
+     },
+     {
+      "fr": "**Fahr** vorsichtig!",
+      "sv": "Kör försiktigt!"
+     }
+    ]
+   },
+   {
+    "h": "Delbara verb",
+    "t": "Prefixet står sist även i imperativ.",
+    "ex": [
+     {
+      "fr": "**Ruf** mich **an**!",
+      "sv": "Ring mig!"
+     },
+     {
+      "fr": "**Mach** den Mund **auf**!",
+      "sv": "Öppna munnen!"
+     }
+    ]
+   }
+  ],
+  "tip": "Lägg till bitte för att vara artig: Komm bitte!"
+ },
+ "datpron": {
+  "title": "Pronomen i dativ och verb med dativ",
+  "intro": "Den som får något eller som något händer står i dativ: Ich gebe **dir** das Buch. Några vanliga verb tar alltid dativ.",
+  "parts": [
+   {
+    "h": "Pronomen",
+    "table": {
+     "head": [
+      "nominativ",
+      "ackusativ",
+      "dativ"
+     ],
+     "rows": [
+      [
+       "ich",
+       "mich",
+       "**mir**"
+      ],
+      [
+       "du",
+       "dich",
+       "**dir**"
+      ],
+      [
+       "er",
+       "ihn",
+       "**ihm**"
+      ],
+      [
+       "sie",
+       "sie",
+       "**ihr**"
+      ],
+      [
+       "es",
+       "es",
+       "**ihm**"
+      ],
+      [
+       "wir",
+       "uns",
+       "**uns**"
+      ],
+      [
+       "ihr",
+       "euch",
+       "**euch**"
+      ],
+      [
+       "sie/Sie",
+       "sie/Sie",
+       "**ihnen/Ihnen**"
+      ]
+     ]
+    }
+   },
+   {
+    "h": "Verb med dativ",
+    "t": "**helfen, danken, gefallen, gehören, passen, schmecken, stehen (klä), gratulieren, zuhören, antworten**",
+    "ex": [
+     {
+      "fr": "Kannst du **mir** helfen?",
+      "sv": "Kan du hjälpa mig?"
+     },
+     {
+      "fr": "Das Kleid gefällt **ihr**.",
+      "sv": "Hon gillar klänningen."
+     },
+     {
+      "fr": "Wem gehört das?",
+      "sv": "Vems är det?"
+     }
+    ]
+   },
+   {
+    "h": "Uttryck",
+    "t": "Känslor i kroppen uttrycks med dativ + ist: **Mir ist kalt.** Också: Mir tut der Kopf weh. Es tut mir leid. Das ist mir egal. Wie geht es dir?",
+    "ex": [
+     {
+      "fr": "**Mir** ist schlecht.",
+      "sv": "Jag mår illa."
+     }
+    ]
+   }
+  ],
+  "tip": "Gefallen vänder på meningen jämfört med svenskan: Die Jacke gefällt mir = Jag gillar jackan (jackan behagar mig)."
+ },
+ "ortprep": {
+  "title": "Platsprepositioner",
+  "intro": "Vart man åker och var man är beror på vilken sorts plats det är.",
+  "parts": [
+   {
+    "h": "Vart? (Wohin?)",
+    "table": {
+     "head": [
+      "plats",
+      "preposition",
+      "exempel"
+     ],
+     "rows": [
+      [
+       "stad, land utan artikel",
+       "**nach**",
+       "nach Berlin, nach Italien"
+      ],
+      [
+       "land med artikel",
+       "**in** + ack.",
+       "in die Schweiz, in die Türkei"
+      ],
+      [
+       "person, byggnad, plats",
+       "**zu** + dat.",
+       "zu Oma, zum Bahnhof"
+      ],
+      [
+       "in i en byggnad",
+       "**in** + ack.",
+       "ins Kino, ins Museum"
+      ],
+      [
+       "vatten",
+       "**an** + ack.",
+       "ans Meer, an den See"
+      ],
+      [
+       "ö",
+       "**auf** + ack.",
+       "auf die Insel"
+      ],
+      [
+       "hem",
+       "**nach Hause**",
+       ""
+      ]
+     ]
+    }
+   },
+   {
+    "h": "Var? (Wo?)",
+    "table": {
+     "head": [
+      "plats",
+      "preposition",
+      "exempel"
+     ],
+     "rows": [
+      [
+       "stad, land",
+       "**in**",
+       "in Wien, in der Schweiz"
+      ],
+      [
+       "hos en person",
+       "**bei** + dat.",
+       "bei Oma, beim Arzt"
+      ],
+      [
+       "vid vatten",
+       "**an** + dat.",
+       "am Meer, am See"
+      ],
+      [
+       "hemma",
+       "**zu Hause**",
+       ""
+      ]
+     ]
+    }
+   },
+   {
+    "h": "Varifrån? (Woher?)",
+    "t": "**aus** + land, stad eller byggnad; **von** + person eller plats.",
+    "ex": [
+     {
+      "fr": "Ich komme **aus** Schweden.",
+      "sv": "Jag kommer från Sverige."
+     },
+     {
+      "fr": "Ich komme **vom** Arzt.",
+      "sv": "Jag kommer från läkaren."
+     }
+    ]
+   }
+  ],
+  "tip": "nach Hause = hem (vart), zu Hause = hemma (var)."
+ }
+}

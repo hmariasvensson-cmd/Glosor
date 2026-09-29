@@ -5,6 +5,7 @@ LANGUAGES.de6 = {
   title: "Tyska glosor",
   course: "Tyska 6",
   courseGy25: "Moderna språk – fördjupning, nivå 2",
+  step: 6,                       // steg 1–7 (Moderna språk 1–7), "U" = universitet; sorterar kursväljaren
   level: "B1 → B2",           // steg 6 ≈ B1.2 enligt Skolverket, provmålet B2 står i exam
   inLang: "på tyska",
   tts: "de-DE",
@@ -12,6 +13,7 @@ LANGUAGES.de6 = {
   etyLabel: "Kommentar",
   nextLabel: "Nästa ord i ordlistan",
   storageKey: "glosor-de6-v1", // ÄNDRA ALDRIG: sparade framsteg ligger under den här nyckeln
+  nextCourse: "de7",          // kursen man går vidare till när den här är klar
   extends: "de",               // fälten i inherit hämtas från Tyska 5 och slås ihop med fälten här (egna fält vinner)
   inherit: ["connectors", "tenseCheck", "verbs"],
 
@@ -24,6 +26,7 @@ LANGUAGES.de6 = {
   genders: {m: "maskulinum", f: "femininum", n: "neutrum", pl: "plural"},
   selfStudy: true,             // eleven pluggar på egen hand, utan lärare och lärobok
   exam: {name: "Goethe-Zertifikat B2 (eller telc B2/TestDaF)", level: "B2"},   // språkprovet eleven siktar på
+  goal: "att klara språkprovet för att få studera musik utomlands (i Tyskland)",   // valfritt: elevens mål, nämns i Claudes bedömning
   nounCaps: true,
   genderGame: {m: "der", f: "die", n: "das"},
 

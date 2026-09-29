@@ -83,7 +83,7 @@ function adjIds(k){
 // eller där vardagsspråket godtar alternativet (indikativ i indirekt tal), tas inte med
 // Franskans tempusval (imparfait/passé composé, plus-que-parfait, futur/presens) och artighetsformer går ofta att försvara
 // i talspråk, så de passar inte heller som "Hitta felet"
-const ERR_SKIP=["rel-nom","rel-akk","k1-rede","tps-bakgrund","tps-vana","tps-handelse","tps-avbrott","tps-signal","pqp-avoir","pqp-etre","cond-poli","cond-rai","fut-reg","disc-imp","disc-pqp","disc-cond","disc-tps"];
+const ERR_SKIP=["rel-nom","rel-akk","k1-rede","tps-bakgrund","tps-vana","tps-handelse","tps-avbrott","tps-signal","pqp-avoir","pqp-etre","cond-poli","cond-rai","fut-reg","disc-imp","disc-pqp","disc-cond","disc-tps","nomin-reg","nomin-titre","dm-agg","dm-avv","dm-caus","dm-org","dm-parl","dm-rif","ob-pref","ob-suff","reg-form","reg-inf","reg-lex"];
 // Felalternativ som går att sätta in i luckan: inga med flera delar, och när luckan sitter ihop med ett ord
 // ("[parce qu']il", "Je [t']aime", "[L']estate") bara alternativ som slutar med apostrof, så att orden inte klistras ihop
 // ("malgréil", "Je teaime", "Ilestate"). Meningen måste också ha minst 3 andra ord att välja mellan.

@@ -1,6 +1,6 @@
 # Innehåll till övningarna i Franska I (universitet)
 
-Franska I motsvarar den första terminen (1–30 hp) i franska vid ett svenskt universitet, se `docs/franska-universitet.md`. Kursen har ingen lärobok och följer universitetens fyra block: grammatik och skriftlig färdighet, fonetik och muntlig franska, litteratur, och kultur och samhälle. Eleven har läst Franska 3 och 4, siktar på **DELF B2** (provet i `lang.js`; Franska 4 tränar redan DELF B1) och vill studera musik i Frankrike.
+Franska I motsvarar den första terminen (1–30 hp) i franska vid ett svenskt universitet, se `docs/franska-universitet.md`. Kursen har ingen lärobok och följer universitetens fyra block: grammatik och skriftlig färdighet, fonetik och muntlig franska, litteratur, och kultur och samhälle. Eleven har läst Franska 3–6 (Franska 6 = koden `fr4`), siktar på **DELF B2** (provet i `lang.js`; Franska 4 tränar redan DELF B1) och vill studera musik i Frankrike.
 
 Nivån är **B1 → B2**: texterna ska vara på B1+/B2, naturlig och korrekt modern franska, med alla tempus (även passé simple i litterära och historiska texter), subjonctif, sammansatta relativpronomen, passiv, dubbla pronomen, indirekt tal med tempusföljd och bindeord för akademisk text. Förklaringar och frågor skrivs på svenska för en vuxen student, med **både svensk och fransk terminologi** (direkt objekt / COD, bisats / proposition subordonnée …). Texttyperna är universitetets: föreläsningsutdrag, seminariediskussion, radioreportage, intervju, sakprosa om geografi, historia och politik, porträtt av författare och epoker, och analys av dikter och romanutdrag.
 
@@ -22,7 +22,7 @@ Nivån är **B1 → B2**: texterna ska vara på B1+/B2, naturlig och korrekt mod
 
 ## Format
 
-Formatet och reglerna är desamma som för Franska 3 och 4: se `languages/fr/content/SPEC.md`, `languages/fr/content/GRAMMATIK-SPEC.md`, `docs/REGLER-SPEC.md` och exemplen i `languages/fr4/content/*.json`. Observera:
+Formatet och reglerna är desamma som för Franska 3 och Franska 6 (`fr4`): se `languages/fr/content/SPEC.md`, `languages/fr/content/GRAMMATIK-SPEC.md`, `docs/REGLER-SPEC.md` och exemplen i `languages/fr4/content/*.json`. Observera:
 
 - Grammatikområdena och regel-id:n står i `languages/fru/grammar.json`. Varje område har en egen fil, `grammar-<område>.json`, med id-prefixet `<område>-` och 25–30 frågor. Alla regler ingår i "Hitta felet", så felalternativen måste vara entydigt fel.
 - `fonc` (satsanalys) är luckfrågor där luckan är termen, inte satsdelen. Till exempel `« Le jury a félicité la pianiste. » Ici, « la pianiste » est [complément d'objet direct (COD)].` med felalternativ som `COI`, `attribut du sujet`, `complément circonstanciel`. Terminologin följer den franska skolgrammatiken, och `why` ger den svenska termen.

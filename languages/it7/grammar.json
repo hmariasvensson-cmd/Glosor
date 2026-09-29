@@ -1,0 +1,109 @@
+{
+ "topics": [
+  {
+   "id": "remoto",
+   "name": "Passato remoto",
+   "sub": "nacque, scrisse, fu, ebbe – och trapassato remoto",
+   "secs": [
+    "t6",
+    "t8"
+   ]
+  },
+  {
+   "id": "congsub",
+   "name": "Congiuntivo i bisatser",
+   "sub": "Non so se sia vero. Il più bello che abbia mai visto.",
+   "secs": [
+    "t1",
+    "t2"
+   ]
+  },
+  {
+   "id": "comese",
+   "name": "Come se och om-satser",
+   "sub": "come se fosse, se l'avessi saputo – se lo sapevo, venivo",
+   "secs": [
+    "t1",
+    "t5"
+   ]
+  },
+  {
+   "id": "impliciti",
+   "name": "Implicita konstruktioner",
+   "sub": "dopo aver letto, essendo malato, finita la lezione",
+   "secs": [
+    "t3",
+    "t7"
+   ]
+  },
+  {
+   "id": "ordbild",
+   "name": "Ordbildning",
+   "sub": "-zione, -ità, -ibile, dis-, in-, ri-, -one, -accio",
+   "secs": [
+    "t4",
+    "t6"
+   ]
+  },
+  {
+   "id": "discorso",
+   "name": "Diskursmarkörer",
+   "sub": "anzi, tuttavia, pertanto, cioè, insomma",
+   "secs": [
+    "tf",
+    "t5"
+   ]
+  },
+  {
+   "id": "registro",
+   "name": "Stilnivå och register",
+   "sub": "Gentile professoressa … Distinti saluti – eller che palle!",
+   "secs": [
+    "t3",
+    "t7"
+   ]
+  },
+  {
+   "id": "nominal",
+   "name": "Nominalisering",
+   "sub": "arrivare → l'arrivo, ridurre → la riduzione",
+   "secs": [
+    "t4",
+    "t2"
+   ]
+  },
+  {
+   "id": "err",
+   "name": "Hitta felet",
+   "sub": "En mening har ett fel. Vilket ord?"
+  }
+ ],
+ "rules": {
+  "rem-reg": "Passato remoto: regelbundna verb",
+  "rem-irr": "Passato remoto: oregelbundna verb",
+  "rem-uso": "Passato remoto eller imperfetto",
+  "trap-rem": "Trapassato remoto",
+  "cong-ind": "Congiuntivo i indirekta frågor",
+  "cong-sup": "Congiuntivo efter superlativ och i relativsatser",
+  "cong-conc": "Congiuntivo efter benché, chiunque, qualunque",
+  "come-se": "come se + congiuntivo",
+  "se-parl": "Om-satser: standard och talspråk",
+  "impl-inf": "Infinitiv i stället för bisats",
+  "impl-ger": "Gerundium i stället för bisats",
+  "impl-part": "Particip i stället för bisats",
+  "ob-suff": "Suffix",
+  "ob-pref": "Prefix",
+  "dm-agg": "Lägga till",
+  "dm-avv": "Motsats",
+  "dm-caus": "Orsak och följd",
+  "dm-rif": "Omformulera",
+  "dm-org": "Ordna texten",
+  "dm-parl": "Diskursmarkörer i tal",
+  "reg-form": "Formellt skriftspråk",
+  "reg-inf": "Vardagligt talspråk",
+  "reg-lex": "Formellt ordval",
+  "nom-verb": "Substantiv av verb",
+  "nom-adj": "Substantiv av adjektiv",
+  "nom-trasf": "Nominal stil"
+ }
+}

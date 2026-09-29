@@ -4,14 +4,16 @@ LANGUAGES.fr = {
   title: "Franska glosor",    // rubrik på sidan
   course: "Franska 3",         // kursen som ordlistan hör till
   exam: {name: "DELF B1", level: "B1"},   // språkprovet eleven siktar på
+  goal: "att klara språkprovet för att få studera musik utomlands (i Frankrike)",   // valfritt: elevens mål, nämns i Claudes bedömning
   courseGy25: "Moderna språk – fortsättning, nivå 1",   // samma kurs i Gy25 (gymnasiet från juli 2025)
   // Elevens lärobok. Kapitel märkta #id|Namn|bok i words.txt kommer från boken (se docs/BOK.md).
   book: {title: "Escalade", authors: "Waagaard, Rödemark, Jonchère och Sandberg"},
+  step: 3,                       // steg 1–7 (Moderna språk 1–7), "U" = universitet; sorterar kursväljaren
   level: "A2",                // ungefärlig GERS-nivå: steg 3 ≈ A2.1 enligt Skolverket (provmålet B1 står i exam)
   inLang: "på franska",       // "Skriv på franska"
   tts: "fr-FR",               // röst för uppläsning
   storageKey: "franska-glosor-v2", // ÄNDRA ALDRIG: sparade framsteg ligger under den här nyckeln
-  nextCourse: "fr4",          // kursen man går vidare till när den här är klar
+  nextCourse: "frs4",         // kursen man går vidare till när den här är klar (Franska 4, steg 4)
   // Valfria avsnitt: ord härifrån kommer bara när eleven själv väljer avsnittet under "Nya ord från"
   elective: {test: /^mt\d$/, label: "Musikteori · bara när du väljer det"},
 

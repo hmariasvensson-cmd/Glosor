@@ -1,0 +1,718 @@
+// Ordlista för Tyska 3 (A2.1). Rader som börjar med // är kommentarer.
+// Kapitlen följer temana resor, arbete, medier, hälsa, natur, kultur, skola och framtid, samt regioner och dialekter i D-A-CH.
+// Ordvalet blandar temaord och vanliga ord ur DeReWo (IDS Mannheim, CC BY-NC; bara använd för att välja ord).
+// Ord som redan finns i Tyska 4, 5 och 6 är inte med.
+//
+// Format, en rad per ord (se languages/de4/SPEC-ordlista.md):
+//   tyska|svenska|genus|exempel på tyska|exempel på svenska|kommentar|ordagrant (för fraser)
+// Ordets tyska form och avsnittets id används som nycklar för sparade framsteg, ändra dem inte i efterhand.
+#t1|Kap 1 · Reisen und Verkehr
+der Verkehr|trafik|m|In der Stadt gibt es morgens viel [Verkehr].|I stan är det mycket trafik på morgonen.|Används nästan bara i singular. Der Straßenverkehr = vägtrafiken.
+öffentlich|offentlig, allmän||Ich fahre meistens mit [öffentlichen] Verkehrsmitteln.|Jag åker oftast kollektivt.|Jämför die Öffentlichkeit (offentligheten).
+die Linie (-n)|linje|f|Du musst die [Linie] 5 bis zum Marktplatz nehmen.|Du måste ta linje 5 till torget.|Uttalas med fyra stavelser: Li-ni-e.
+direkt|direkt||Der Zug fährt [direkt] nach Berlin, ohne Umsteigen.|Tåget går direkt till Berlin, utan byte.|Kan också betyda "precis": direkt neben der Tür.
+die Strecke (-n)|sträcka|f|Die [Strecke] von Hamburg nach Berlin ist schön.|Sträckan mellan Hamburg och Berlin är fin.|Jämför svenskans "sträcka".
+der Führerschein (-e)|körkort|m|Meine Schwester macht gerade den [Führerschein].|Min syster tar körkort just nu.|Av führen (föra) och der Schein (intyg).
+parken|parkera||Hier darf man nicht [parken].|Här får man inte parkera.|Svagt verb. Der Parkplatz = parkeringsplatsen.
+tanken|tanka||Wir müssen noch [tanken], bevor wir losfahren.|Vi måste tanka innan vi åker.|Svagt verb. Die Tankstelle = bensinstationen.
+der Helm (-e)|hjälm|m|Beim Radfahren trage ich immer einen [Helm].|När jag cyklar har jag alltid hjälm.|Jämför svenskans "hjälm", samma ursprung.
+starten|starta, lyfta||Das Flugzeug [startet] mit einer Stunde Verspätung.|Planet lyfter med en timmes försening.|Svagt verb. Om flygplan: perfekt med sein (ist gestartet).
+fremd|främmande, okänd||In einer [fremden] Stadt verlaufe ich mich oft.|I en främmande stad går jag ofta vilse.|Der/die Fremde = främlingen. Jämför die Fremdsprache.
+sich auskennen|hitta, vara hemma (på ett ställe)||Kennst du [dich] hier aus?|Hittar du här?|Oregelbundet verb: kannte sich aus, hat sich ausgekannt.|<b>sich</b> sig · <b>auskennen</b> känna till ordentligt → "känna sig ut"
+fragen nach|fråga efter||Ein Tourist hat mich [nach] dem Weg gefragt.|En turist frågade mig om vägen.|Nach styr dativ: nach dem Weg fragen.|<b>fragen</b> fråga · <b>nach</b> efter
+frei|ledig, fri||Entschuldigung, ist hier noch [frei]?|Ursäkta, är det ledigt här?|Frei haben = vara ledig från jobb/skola.
+besetzt|upptagen||Tut mir leid, der Platz ist [besetzt].|Tyvärr, platsen är upptagen.|Particip av besetzen (besätta). Också om telefon och toalett.
+der Schaffner (-)|konduktör|m|Der [Schaffner] kontrolliert die Fahrkarten.|Konduktören kontrollerar biljetterna.|Hör till schaffen (skaffa, ordna). Femininum: die Schaffnerin.
+sich erinnern an|minnas, komma ihåg||Ich [erinnere] mich gern an den Urlaub in Tirol.|Jag minns gärna semestern i Tyrolen.|Svagt verb. An styr ackusativ: an den Urlaub.|<b>sich</b> sig · <b>erinnern</b> påminna · <b>an</b> om → "påminna sig om"
+früher|förr, tidigare||[Früher] bin ich oft mit meinen Eltern gecampt.|Förr campade jag ofta med mina föräldrar.|Komparativ av früh (tidig).
+die Postkarte (-n)|vykort|f|Ich schreibe meiner Oma eine [Postkarte] aus Wien.|Jag skriver ett vykort till mormor från Wien.|Av Post (post) och Karte (kort).
+das Andenken (-)|souvenir, minne|n|Als [Andenken] habe ich eine Tasse gekauft.|Som souvenir köpte jag en kopp.|Av an (på) och denken (tänka): något att tänka på. Också das Souvenir.
+die Fahrt (-en)|resa, åktur, färd|f|Die [Fahrt] mit dem Bus hat drei Stunden gedauert.|Bussresan tog tre timmar.|Hör till fahren. Gute Fahrt! = Trevlig resa! (med bil eller tåg)
+abreisen|resa (i väg), avresa||Wir wollen am Sonntag früh [abreisen].|Vi vill resa i väg tidigt på söndag.|Svagt, delbart verb, perfekt med sein: ist abgereist. Die Abreise = avresan.
+der Hauptbahnhof (-höfe)|centralstation|m|Wir treffen uns um acht am [Hauptbahnhof].|Vi ses klockan åtta på centralstationen.|Förkortas Hbf. Av Haupt- (huvud-) och Bahnhof.
+das Abteil (-e)|kupé|n|In unserem [Abteil] sitzt eine nette Familie.|I vår kupé sitter en trevlig familj.|Av ab (av) och Teil (del): en avdelad del av vagnen.
+der Fensterplatz (-plätze)|fönsterplats|m|Ich hätte gern einen [Fensterplatz].|Jag skulle vilja ha en fönsterplats.|Motsats: der Gangplatz (plats vid gången).
+der Passagier (-e)|passagerare|m|Alle [Passagiere] müssen jetzt einsteigen.|Alla passagerare måste stiga på nu.|Om flyg och båt. Om buss och tåg säger man oftare der Fahrgast.
+das Benzin|bensin|n|Das [Benzin] ist in der Schweiz teurer.|Bensinen är dyrare i Schweiz.|Saknar plural. Diesel = diesel.
+die Geschwindigkeit (-en)|hastighet|f|Auf dieser Straße ist die [Geschwindigkeit] begrenzt.|På den här vägen är hastigheten begränsad.|Av geschwind (snabb, ålderdomligt).
+der Fahrer (-)|förare, chaufför|m|Der [Fahrer] hat die Tür vorne aufgemacht.|Föraren öppnade dörren längst fram.|Femininum: die Fahrerin. Der Autofahrer = bilisten.
+der Radfahrer (-)|cyklist|m|In Münster gibt es sehr viele [Radfahrer].|I Münster finns det väldigt många cyklister.|Av Rad (cykel) och Fahrer. Femininum: die Radfahrerin.
+der Fußgänger (-)|fotgängare|m|Die Innenstadt ist nur für [Fußgänger].|Innerstaden är bara för fotgängare.|Die Fußgängerzone = gågatan.
+der Bürgersteig (-e)|trottoar|m|Fahr nicht auf dem [Bürgersteig]!|Cykla inte på trottoaren!|I Schweiz säger man das Trottoir. Också der Gehweg.
+die Führung (-en)|guidad visning|f|Um elf Uhr gibt es eine [Führung] durch das Schloss.|Klockan elva finns det en guidad visning av slottet.|Hör till führen (leda, föra).
+die Wanderung (-en)|vandring|f|Nach der langen [Wanderung] waren alle müde.|Efter den långa vandringen var alla trötta.|Hör till wandern (vandra).
+der Aufenthalt (-e)|vistelse, uppehåll|m|Wir wünschen Ihnen einen schönen [Aufenthalt]!|Vi önskar er en trevlig vistelse!|Hör till sich aufhalten (uppehålla sig).
+der Automat (-en)|automat|m|Die Fahrkarte kannst du am [Automaten] kaufen.|Biljetten kan du köpa i automaten.|Svag maskulin: am Automaten. Der Fahrkartenautomat = biljettautomaten.
+mitnehmen|ta med sig||Darf ich meinen Hund im Zug [mitnehmen]?|Får jag ta med min hund på tåget?|Starkt, delbart: nimmt mit, nahm mit, hat mitgenommen.
+bremsen|bromsa||Der Fahrer musste plötzlich [bremsen].|Föraren var tvungen att bromsa plötsligt.|Svagt verb. Die Bremse = bromsen.
+die Panne (-n)|motorstopp, haveri|f|Wir hatten auf der Autobahn eine [Panne].|Vi fick motorstopp på motorvägen.|Från franskan. Används också om små missöden.
+der Reifen (-)|däck|m|Mein Fahrrad hat einen platten [Reifen].|Min cykel har punktering.|Einen Platten haben = ha punktering.
+gefährlich|farlig||Radfahren ohne Licht ist nachts [gefährlich].|Att cykla utan lyse är farligt på natten.|Hör till die Gefahr (fara).
+sicher|säker, trygg; säkert||Ist es hier nachts [sicher]?|Är det tryggt här på natten?|Också "säkert, visst": Sicher komme ich mit!
+sich anschnallen|spänna fast sig||Im Auto musst du dich immer [anschnallen].|I bilen måste du alltid spänna fast dig.|Svagt verb. Der Sicherheitsgurt = säkerhetsbältet.|<b>sich</b> sig · <b>an</b> fast · <b>schnallen</b> spänna → "spänna fast sig"
+das Denkmal (-mäler)|monument, minnesmärke|n|Vor dem Rathaus steht ein [Denkmal] für Mozart.|Framför rådhuset står ett monument över Mozart.|Av denken (tänka) och Mal (tecken).
+das Ufer (-)|strand (vid sjö eller flod)|n|Wir haben am [Ufer] vom Rhein gepicknickt.|Vi picknickade vid Rhens strand.|Die Küste = havskust, der Strand = sandstrand.
+das Abenteuer (-)|äventyr|n|Die Reise mit dem Fahrrad war ein echtes [Abenteuer].|Cykelresan var ett riktigt äventyr.|Från franskan aventure.
+erleben|uppleva||Im Urlaub haben wir viel [erlebt].|Vi upplevde mycket på semestern.|Svagt, oskiljbart: hat erlebt. Das Erlebnis = upplevelsen.
+der Reisende (-n)|resenär|m|Alle [Reisenden] nach München bitte zu Gleis 5.|Alla resenärer till München till spår 5.|Adjektivböjt: ein Reisender, die Reisenden.
+die Anreise (-n)|ankomst, resa dit|f|Die [Anreise] mit dem Zug dauert vier Stunden.|Resan dit med tåg tar fyra timmar.|Anreisen = resa dit, anlända.
+die Rückreise (-n)|hemresa|f|Auf der [Rückreise] haben wir in Prag übernachtet.|På hemresan övernattade vi i Prag.|Av zurück och Reise.
+der Pilot (-en)|pilot|m|Der [Pilot] begrüßt die Passagiere.|Piloten hälsar passagerarna välkomna.|Svag maskulin. Femininum: die Pilotin.
+das Parkhaus (-häuser)|parkeringshus|n|Wir parken im [Parkhaus] am Bahnhof.|Vi parkerar i parkeringshuset vid stationen.|Av parken och Haus.
+die Stadtrundfahrt (-en)|stadsrundtur|f|Mit dem Bus machen wir eine [Stadtrundfahrt].|Vi gör en stadsrundtur med buss.|Av Stadt, rund och Fahrt.
+das Navi (-s)|gps|n|Ohne [Navi] hätten wir uns verfahren.|Utan gps hade vi kört vilse.|Kort för das Navigationsgerät.
+überqueren|gå över, korsa||Hier kannst du die Straße sicher [überqueren].|Här kan du gå över gatan säkert.|Svagt, oskiljbart: hat überquert.
+weiterfahren|åka vidare||Nach der Pause wollen wir nach Linz [weiterfahren].|Efter pausen vill vi åka vidare till Linz.|Starkt, delbart: ist weitergefahren.
+die Bremse (-n)|broms|f|Die [Bremse] an meinem Fahrrad funktioniert nicht.|Bromsen på min cykel fungerar inte.|Bremsen = bromsa.
+die Werkstatt (-stätten)|verkstad|f|Das Auto ist seit Montag in der [Werkstatt].|Bilen har stått på verkstaden sedan måndag.|Av Werk och Statt (ställe).
+Achtung!|se upp!, obs!||[Achtung], der Zug fährt ein!|Se upp, tåget kommer in!|Die Achtung = aktning, uppmärksamhet.|<b>Achtung</b> uppmärksamhet
+der Brunnen (-)|brunn, fontän|m|Wir treffen uns am [Brunnen] auf dem Marktplatz.|Vi ses vid fontänen på torget.|Jämför svenskans "brunn".
+der Hügel (-)|kulle|m|Vom [Hügel] sieht man die ganze Stadt.|Från kullen ser man hela staden.|Hügelig = kuperad.
+das Tal (Täler)|dal|n|Das Dorf liegt tief unten im [Tal].|Byn ligger djupt nere i dalen.|Jämför svenskans "dal".
+der Besucher (-)|besökare|m|Das Museum hat jedes Jahr viele [Besucher].|Museet har många besökare varje år.|Hör till besuchen. Femininum: die Besucherin.
+der Kreisverkehr (-e)|rondell|m|Im [Kreisverkehr] nimmst du die zweite Ausfahrt.|I rondellen tar du andra avfarten.|Av Kreis (cirkel) och Verkehr.
+die Ausfahrt (-en)|avfart, utfart|f|Die [Ausfahrt] darf man nicht zuparken.|Utfarten får man inte parkera framför.|Motsats: die Einfahrt.
+die Rolltreppe (-n)|rulltrappa|f|Die [Rolltreppe] zur U-Bahn ist kaputt.|Rulltrappan till tunnelbanan är trasig.|Av rollen och Treppe.
+die Auskunft (-künfte)|upplysning, information|f|Am Schalter bekommen Sie [Auskunft].|I luckan får ni information.|Die Auskunft = också upplysningsdisken.
+das Fundbüro (-s)|hittegodsexpedition|n|Vielleicht ist deine Tasche im [Fundbüro].|Kanske finns din väska på hittegodset.|Av finden (hitta) och Büro.
+das Schließfach (-fächer)|förvaringsbox|n|Den Koffer lassen wir im [Schließfach].|Resväskan lämnar vi i förvaringsboxen.|Av schließen (låsa) och Fach (fack).
+das Schild (-er)|skylt|n|Auf dem [Schild] steht „Ausgang“.|På skylten står det "Utgång".|Der Schild (maskulinum) = skölden.
+die Umleitung (-en)|omledning, omväg|f|Wegen einer Baustelle gibt es eine [Umleitung].|På grund av ett vägarbete finns det en omledning.|Hör till umleiten.
+die Baustelle (-n)|byggarbetsplats, vägarbete|f|Vor unserem Haus ist seit Wochen eine [Baustelle].|Utanför vårt hus har det varit byggarbete i veckor.|Av bauen och Stelle.
+gesperrt|avstängd||Die Straße ist heute [gesperrt].|Vägen är avstängd i dag.|Particip av sperren (spärra).
+der Speisewagen (-)|restaurangvagn|m|Im [Speisewagen] trinken wir einen Kaffee.|I restaurangvagnen dricker vi en kaffe.|Av speisen (äta) och Wagen (vagn).
+der Schlafwagen (-)|sovvagn|m|Mit dem Nachtzug fahren wir im [Schlafwagen] nach Wien.|Med nattåget åker vi i sovvagn till Wien.|Av schlafen och Wagen.
+die Reservierung (-en)|reservation, platsbokning|f|Brauche ich für den ICE eine [Reservierung]?|Behöver jag en platsbokning till ICE-tåget?|Hör till reservieren.
+die Monatskarte (-n)|månadskort|f|Mit der [Monatskarte] fahre ich billiger.|Med månadskortet åker jag billigare.|Av Monat och Karte.
+der Sessellift (-e)|stollift|m|Mit dem [Sessellift] fahren wir auf den Gipfel.|Med stolliften åker vi upp till toppen.|Av Sessel (fåtölj) och Lift.
+der Skilift (-e)|skidlift|m|Am [Skilift] mussten wir lange warten.|Vid skidliften var vi tvungna att vänta länge.|Också der Schlepplift.
+die Piste (-n)|pist, skidbacke|f|Die rote [Piste] ist nicht so schwer.|Den röda backen är inte så svår.|Från franskan.
+die Berghütte (-n)|fjällstuga|f|Auf der [Berghütte] gibt es warme Suppe.|Uppe i fjällstugan finns det varm soppa.|Av Berg och Hütte (stuga).
+der Wegweiser (-)|vägvisare, skylt|m|Folg einfach dem [Wegweiser] zum See.|Följ bara skylten till sjön.|Av Weg och weisen (visa).
+der Tunnel (-)|tunnel|m|Der Zug fährt durch einen langen [Tunnel].|Tåget åker genom en lång tunnel.|Plural också die Tunnels.
+der Kapitän (-e)|kapten|m|Der [Kapitän] begrüßt uns an Bord.|Kaptenen hälsar oss välkomna ombord.|Från franskan capitaine.
+der Rundgang (-gänge)|rundvandring|m|Nach dem [Rundgang] durch die Altstadt trinken wir Kaffee.|Efter rundvandringen i gamla stan dricker vi kaffe.|Av rund och Gang.
+stornieren|avboka||Ich muss leider das Hotel [stornieren].|Jag måste tyvärr avboka hotellet.|Svagt verb på -ieren. Die Stornierung = avbokningen.
+der Fernbus (-se)|fjärrbuss, långfärdsbuss|m|Mit dem [Fernbus] ist die Reise billiger als mit dem Zug.|Med långfärdsbussen är resan billigare än med tåget.|Av fern (fjärran) och Bus.
+die Mitfahrgelegenheit (-en)|samåkning|f|Ich suche eine [Mitfahrgelegenheit] nach Köln.|Jag söker samåkning till Köln.|Av mitfahren och Gelegenheit (tillfälle).
+der Kofferraum (-räume)|bagageutrymme|m|Die Koffer passen nicht in den [Kofferraum].|Resväskorna får inte plats i bagageutrymmet.|Av Koffer och Raum.
+das Fahrradschloss (-schlösser)|cykellås|n|Vergiss nicht dein [Fahrradschloss]!|Glöm inte ditt cykellås!|Av Fahrrad och Schloss (lås).
+der Proviant|matsäck|m|Für die Wanderung packen wir [Proviant] ein.|Till vandringen packar vi matsäck.|Från italienskan.
+#t2|Kap 2 · Arbeit und Praktikum
+der Sommerjob (-s)|sommarjobb|m|Mein [Sommerjob] war im Freibad.|Mitt sommarjobb var på utomhusbadet.|Också der Ferienjob.
+der Praktikant (-en)|praktikant|m|Der neue [Praktikant] kommt aus Schweden.|Den nya praktikanten kommer från Sverige.|Svag maskulin: den Praktikanten. Femininum: die Praktikantin.
+die Ausbildung (-en)|yrkesutbildning, utbildning|f|Nach der Schule mache ich eine [Ausbildung] als Koch.|Efter skolan ska jag gå en utbildning till kock.|I Tyskland ofta lärlingsutbildning: delvis i skolan, delvis på en arbetsplats.
+der Azubi (-s)|lärling|m|Die Firma sucht zwei [Azubis] für nächstes Jahr.|Företaget söker två lärlingar till nästa år.|Kortform av der/die Auszubildende. Kan vara både han och hon.
+der Chef (-s)|chef|m|Mein [Chef] ist sehr nett und hilfsbereit.|Min chef är väldigt snäll och hjälpsam.|Femininum: die Chefin. Uttalas med sj-ljud: [ʃɛf].
+die Abteilung (-en)|avdelning|f|In welcher [Abteilung] machst du dein Praktikum?|På vilken avdelning gör du din praktik?|Hör till teilen (dela).
+die Sitzung (-en)|möte, sammanträde|f|Die [Sitzung] dauert heute bis drei Uhr.|Mötet håller på till klockan tre i dag.|Hör till sitzen (sitta). Vardagligt också das Meeting.
+das Bewerbungsgespräch (-e)|anställningsintervju|n|Morgen habe ich ein [Bewerbungsgespräch] bei einer Bank.|I morgon har jag en anställningsintervju på en bank.|Av Bewerbung (ansökan) och Gespräch (samtal). Också das Vorstellungsgespräch.
+die Anzeige (-n)|annons|f|Ich habe die [Anzeige] in der Zeitung gelesen.|Jag läste annonsen i tidningen.|Die Stellenanzeige = platsannons. Också "polisanmälan".
+der Handwerker (-)|hantverkare|m|Der [Handwerker] repariert unsere Heizung.|Hantverkaren reparerar vårt element.|Av Hand och Werk (verk). Das Handwerk = hantverket.
+der Mechaniker (-)|mekaniker|m|Der [Mechaniker] hat mein Auto schnell repariert.|Mekanikern lagade min bil snabbt.|Femininum: die Mechanikerin. Betoning: Me-CHA-ni-ker.
+der Elektriker (-)|elektriker|m|Für die neue Lampe brauchen wir einen [Elektriker].|Till den nya lampan behöver vi en elektriker.|Femininum: die Elektrikerin.
+der Bäcker (-)|bagare|m|Der [Bäcker] fängt schon um drei Uhr nachts an.|Bagaren börjar redan klockan tre på natten.|Beim Bäcker = på bageriet. Die Bäckerei = bageriet.
+der Friseur (-e)|frisör|m|Am Samstag gehe ich zum [Friseur].|På lördag går jag till frisören.|Från franskan. Femininum: die Friseurin.
+der Krankenpfleger (-)|sjuksköterska (man)|m|Mein Cousin arbeitet als [Krankenpfleger] im Krankenhaus.|Min kusin jobbar som sjuksköterska på sjukhuset.|Femininum: die Krankenpflegerin. Äldre ord: die Krankenschwester.
+die Feuerwehr (-en)|brandkår|f|Die [Feuerwehr] war nach fünf Minuten da.|Brandkåren var där efter fem minuter.|Av Feuer (eld) och Wehr (värn). Der Feuerwehrmann = brandmannen.
+der Ingenieur (-e)|ingenjör|m|Mein Onkel ist [Ingenieur] bei einer Autofirma.|Min farbror är ingenjör på ett bilföretag.|Från franskan. Femininum: die Ingenieurin. Uttalas [ɪnʒeˈni̯øːɐ̯].
+der Informatiker (-)|dataingenjör, systemutvecklare|m|Als [Informatiker] verdient man ganz gut.|Som dataingenjör tjänar man ganska bra.|Die Informatik = datavetenskap (också skolämne).
+der Architekt (-en)|arkitekt|m|Der [Architekt] hat das neue Museum geplant.|Arkitekten har ritat det nya museet.|Svag maskulin: den Architekten. Femininum: die Architektin.
+der Erzieher (-)|förskollärare, fritidspedagog|m|Im Kindergarten arbeiten drei [Erzieher].|På förskolan arbetar tre förskollärare.|Hör till erziehen (uppfostra). Femininum: die Erzieherin.
+der Kindergarten (-gärten)|förskola|m|Mein kleiner Bruder geht noch in den [Kindergarten].|Min lillebror går fortfarande på förskolan.|Ordet har lånats till engelskan. I Österrike säger man också der Kindergarten.
+der Bauer (-n)|bonde|m|Der [Bauer] verkauft Eier und Milch direkt vom Hof.|Bonden säljer ägg och mjölk direkt från gården.|Svag maskulin: den Bauern. Femininum: die Bäuerin.
+die Fabrik (-en)|fabrik|f|In dieser [Fabrik] werden Autos gebaut.|I den här fabriken byggs det bilar.|Betoning på sista stavelsen: Fa-BRIK.
+die Maschine (-n)|maskin|f|Die [Maschine] ist kaputt, wir müssen warten.|Maskinen är trasig, vi måste vänta.|Från franskan. Die Waschmaschine = tvättmaskinen.
+das Werkzeug (-e)|verktyg|n|Im Keller liegt das [Werkzeug] von meinem Vater.|I källaren ligger pappas verktyg.|Av Werk (verk) och Zeug (don, grejer).
+die Uniform (-en)|uniform|f|In der Bank müssen alle eine [Uniform] tragen.|På banken måste alla bära uniform.|Från franskan.
+höflich|artig||Am Telefon muss man immer [höflich] sein.|I telefon måste man alltid vara artig.|Hör till der Hof (hovet): "som vid hovet". Die Höflichkeit = artigheten.
+die Geduld|tålamod|f|Mit kleinen Kindern braucht man viel [Geduld].|Med små barn behöver man mycket tålamod.|Adjektiv: geduldig (tålmodig), ungeduldig (otålig).
+ordentlich|ordentlig, prydlig||Bitte räum deinen Arbeitsplatz [ordentlich] auf.|Städa din arbetsplats ordentligt.|Hör till die Ordnung (ordning).
+kreativ|kreativ||In der Werbung muss man sehr [kreativ] sein.|Inom reklam måste man vara väldigt kreativ.|Die Kreativität = kreativiteten.
+anstrengend|ansträngande, jobbig||Die Arbeit im Restaurant war sehr [anstrengend].|Jobbet på restaurangen var väldigt ansträngande.|Hör till sich anstrengen (anstränga sig).
+abwechslungsreich|omväxlande||Mein Praktikum war sehr [abwechslungsreich].|Min praktik var väldigt omväxlande.|Av die Abwechslung (omväxling) och reich (rik).
+erfolgreich|framgångsrik||Die Firma ist sehr [erfolgreich].|Företaget är väldigt framgångsrikt.|Av der Erfolg (framgång) och reich (rik).
+klappen|fungera, gå bra (vardagligt)||Hat es mit dem Praktikum [geklappt]?|Gick det bra med praktiken?|Svagt verb. Vardagligt: Das klappt! = Det funkar!
+beibringen|lära (ut), lära någon||Mein Kollege hat mir viel [beigebracht].|Min kollega lärde mig mycket.|Oregelbundet: brachte bei, hat beigebracht. Tar dativ: Ich bringe dir das bei.
+die Stärke (-n)|styrka, stark sida|f|Meine [Stärke] ist, dass ich gut mit Menschen kann.|Min styrka är att jag är bra med människor.|Hör till stark. Motsats: die Schwäche.
+die Schwäche (-n)|svaghet|f|Eine [Schwäche] von mir ist Ungeduld.|En svaghet hos mig är otålighet.|Hör till schwach (svag).
+unterschreiben|skriva under||Bitte [unterschreiben] Sie hier unten.|Skriv under här nere, tack.|Starkt, oskiljbart: unterschrieb, hat unterschrieben. Die Unterschrift = namnteckningen.
+ausfüllen|fylla i||Du musst dieses Formular [ausfüllen].|Du måste fylla i den här blanketten.|Svagt, delbart verb: hat ausgefüllt.
+kopieren|kopiera||Kannst du mir die Seiten bitte [kopieren]?|Kan du kopiera sidorna åt mig?|Svagt verb på -ieren: hat kopiert. Die Kopie = kopian.
+drucken|skriva ut, trycka||Ich muss noch meinen Lebenslauf [drucken].|Jag måste skriva ut mitt cv också.|Svagt verb. Der Drucker = skrivaren. Obs.: drücken = trycka (på knapp).
+der Drucker (-)|skrivare|m|Der [Drucker] hat kein Papier mehr.|Skrivaren har inget papper kvar.|Hör till drucken.
+telefonieren|prata i telefon, ringa||Ich [telefoniere] jeden Abend mit meiner Oma.|Jag pratar i telefon med mormor varje kväll.|Svagt verb på -ieren: hat telefoniert. Mit jemandem telefonieren.
+das Telefon (-e)|telefon|n|Kannst du bitte ans [Telefon] gehen?|Kan du svara i telefonen?|Ans Telefon gehen = svara i telefon.
+der Brief (-e)|brev|m|Früher hat man Bewerbungen als [Brief] geschickt.|Förr skickade man ansökningar som brev.|Jämför svenskans "brev", samma ursprung.
+die Lieferung (-en)|leverans|f|Die [Lieferung] kommt am Donnerstag.|Leveransen kommer på torsdag.|Hör till liefern (leverera).
+die Bestellung (-en)|beställning|f|Ich kümmere mich um die [Bestellungen] im Online-Shop.|Jag tar hand om beställningarna i nätbutiken.|Hör till bestellen (beställa).
+bedienen|betjäna, servera||Im Café habe ich die Gäste [bedient].|På kaféet serverade jag gästerna.|Svagt verb. Die Bedienung = servitören/servitrisen; betjäningen.
+verkaufen|sälja||Auf dem Markt [verkaufen] wir Obst und Gemüse.|På marknaden säljer vi frukt och grönsaker.|Svagt verb. Der Verkauf = försäljningen.
+die Versicherung (-en)|försäkring; försäkringsbolag|f|Meine Mutter arbeitet bei einer [Versicherung].|Min mamma jobbar på ett försäkringsbolag.|Hör till sicher (säker).
+die Industrie (-n)|industri|f|In dieser Stadt gibt es viel [Industrie].|I den här staden finns det mycket industri.|Betoning på sista stavelsen: In-dus-TRIE.
+das Produkt (-e)|produkt|n|Unser neues [Produkt] ist sehr beliebt.|Vår nya produkt är väldigt populär.|Från latin. Produzieren = producera.
+die Qualität (-en)|kvalitet|f|Die [Qualität] ist uns sehr wichtig.|Kvaliteten är väldigt viktig för oss.|Från latin qualitas.
+versuchen|försöka||Ich [versuche], immer pünktlich zu sein.|Jag försöker alltid vara i tid.|Svagt verb. Der Versuch = försöket.
+wechseln|byta, växla||Ich möchte nach dem Sommer den Job [wechseln].|Jag vill byta jobb efter sommaren.|Svagt verb. Geld wechseln = växla pengar.
+organisieren|organisera, ordna||Wer [organisiert] die Weihnachtsfeier im Büro?|Vem ordnar julfesten på kontoret?|Svagt verb på -ieren: hat organisiert.
+prüfen|kontrollera, pröva||Bitte [prüfen] Sie noch einmal die Adresse.|Kontrollera adressen en gång till.|Svagt verb. Die Prüfung = provet, examen.
+möglich|möjlig||Ist es [möglich], dass ich früher gehe?|Är det möjligt att jag går tidigare?|Motsats: unmöglich. So schnell wie möglich = så snabbt som möjligt.
+genug|nog, tillräckligt||Ich habe noch nicht [genug] Geld für ein Auto.|Jag har inte tillräckligt med pengar för en bil än.|Står före substantiv: genug Zeit.
+normal|normal, vanlig||Ein [normaler] Arbeitstag beginnt um acht Uhr.|En vanlig arbetsdag börjar klockan åtta.|Normalerweise = vanligtvis.
+der Arbeitstag (-e)|arbetsdag|m|Mein erster [Arbeitstag] war sehr aufregend.|Min första arbetsdag var väldigt spännande.|Av Arbeit och Tag. Obs. fogen -s-.
+der Rentner (-)|pensionär|m|Mein Opa ist seit zwei Jahren [Rentner].|Morfar har varit pensionär i två år.|Die Rente = pensionen. Femininum: die Rentnerin.
+der Lehrling (-e)|lärling|m|Der [Lehrling] lernt beim Bäcker das Backen.|Lärlingen lär sig baka hos bagaren.|Äldre ord; idag oftast der Azubi.
+das Meeting (-s)|möte|n|Das [Meeting] fängt um neun Uhr an.|Mötet börjar klockan nio.|Lånat från engelskan.
+die Kopie (-n)|kopia|f|Ich brauche eine [Kopie] von deinem Zeugnis.|Jag behöver en kopia av ditt betyg.|Kopieren = kopiera.
+die Kiste (-n)|låda, back|f|Kannst du mir helfen, die [Kisten] zu tragen?|Kan du hjälpa mig att bära lådorna?|Jämför svenskans "kista".
+der Beamte (-n)|tjänsteman|m|Mein Vater ist [Beamter] bei der Stadt.|Min pappa är tjänsteman på kommunen.|Adjektivböjt: ein Beamter. Femininum: die Beamtin.
+der Praktikumsplatz (-plätze)|praktikplats|m|Ich habe einen [Praktikumsplatz] in einer Tierarztpraxis.|Jag har fått en praktikplats på en veterinärmottagning.|Av Praktikum och Platz.
+anbieten|erbjuda||Die Firma hat mir einen Job [angeboten].|Företaget har erbjudit mig ett jobb.|Starkt, delbart: bot an, hat angeboten. Das Angebot = erbjudandet.
+produzieren|producera, tillverka||Die Fabrik [produziert] Teile für Autos.|Fabriken tillverkar delar till bilar.|Svagt verb på -ieren.
+der Fleiß|flit|m|Mit [Fleiß] schafft man viel.|Med flit klarar man mycket.|Fleißig = flitig.
+weitermachen|fortsätta||Nach der Pause wollen wir [weitermachen].|Efter pausen vill vi fortsätta.|Svagt, delbart: hat weitergemacht.
+bauen|bygga||Mein Onkel [baut] Häuser.|Min farbror bygger hus.|Svagt verb. Der Bau = bygget.
+heben|lyfta||Die Kisten sind zu schwer zum [Heben].|Lådorna är för tunga att lyfta.|Starkt verb: hob, hat gehoben.
+verteilen|dela ut, fördela||Ich [verteile] Zeitungen in unserem Viertel.|Jag delar ut tidningar i vårt kvarter.|Svagt verb.
+die Sache (-n)|sak|f|Das ist eine wichtige [Sache].|Det är en viktig sak.|Meine Sachen = mina saker.
+das Ding (-e)|sak, grej|n|Was ist das für ein [Ding]?|Vad är det för en grej?|Vardagligt.
+das Stück (-e)|bit, stycke; pjäs|n|Ich nehme noch ein [Stück] Kuchen.|Jag tar en bit kaka till.|Också teaterpjäs: das Theaterstück.
+der Teil (-e)|del|m|Der erste [Teil] der Arbeit ist fertig.|Första delen av arbetet är klar.|Zum Teil = delvis.
+tagsüber|på dagen, under dagen||[Tagsüber] arbeite ich, abends lerne ich.|På dagarna jobbar jag, på kvällarna pluggar jag.|Av Tag och über.
+die Überstunden|övertid|pl|Diese Woche musste ich viele [Überstunden] machen.|Den här veckan var jag tvungen att jobba mycket övertid.|Singular die Überstunde.
+auffüllen|fylla på||Im Supermarkt muss ich die Regale [auffüllen].|På snabbköpet måste jag fylla på hyllorna.|Svagt, delbart verb.
+kassieren|ta betalt, sitta i kassan||Am Samstag [kassiere] ich im Laden.|På lördag sitter jag i kassan i affären.|Svagt verb på -ieren.
+die Aushilfe (-n)|extrapersonal|f|Das Café sucht eine [Aushilfe] für das Wochenende.|Kaféet söker extrapersonal till helgen.|Hör till aushelfen (hoppa in och hjälpa).
+der Babysitter (-)|barnvakt|m|Am Freitag arbeite ich als [Babysitter].|På fredag jobbar jag som barnvakt.|Lånat från engelskan. Babysitten = vara barnvakt.
+der Tischler (-)|snickare|m|Der [Tischler] baut einen neuen Tisch.|Snickaren bygger ett nytt bord.|I södra Tyskland: der Schreiner.
+der Gärtner (-)|trädgårdsmästare|m|Der [Gärtner] pflanzt Blumen im Park.|Trädgårdsmästaren planterar blommor i parken.|Femininum: die Gärtnerin.
+der Tierarzt (-ärzte)|veterinär|m|Mit unserer Katze gehen wir zum [Tierarzt].|Vi går till veterinären med vår katt.|Femininum: die Tierärztin.
+das Altenheim (-e)|äldreboende|n|Meine Oma wohnt im [Altenheim].|Min mormor bor på äldreboende.|Också das Pflegeheim.
+#t3|Kap 3 · Medien und Technik
+die Medien|medier|pl|Jugendliche nutzen jeden Tag viele [Medien].|Ungdomar använder många medier varje dag.|Singular: das Medium. Die sozialen Medien = sociala medier.
+das Smartphone (-s)|smarttelefon, mobil|n|Ohne [Smartphone] gehe ich nie aus dem Haus.|Jag går aldrig hemifrån utan mobil.|Vardagligt oftast das Handy.
+der Laptop (-s)|bärbar dator|m|Mein [Laptop] ist schon fünf Jahre alt.|Min laptop är redan fem år gammal.|Lånat från engelskan. Också das Notebook.
+der Bildschirm (-e)|skärm|m|Der [Bildschirm] von meinem Handy ist kaputt.|Skärmen på min mobil är trasig.|Av Bild (bild) och Schirm (skärm).
+die Tastatur (-en)|tangentbord|f|Auf der deutschen [Tastatur] sind Y und Z vertauscht.|På det tyska tangentbordet har Y och Z bytt plats.|Hör till die Taste (tangent, knapp).
+das Kabel (-)|kabel, sladd|n|Hast du ein [Kabel] für mein Handy?|Har du en sladd till min mobil?|Jämför svenskans "kabel".
+der Akku (-s)|batteri (laddbart)|m|Mein [Akku] ist fast leer.|Mitt batteri är nästan slut.|Kortform av der Akkumulator. Der Akku ist alle = batteriet är slut.
+aufladen|ladda||Ich muss mein Handy [aufladen].|Jag måste ladda mobilen.|Starkt, delbart: lädt auf, lud auf, hat aufgeladen.
+das Ladegerät (-e)|laddare|n|Ich habe mein [Ladegerät] zu Hause vergessen.|Jag har glömt laddaren hemma.|Av laden (ladda) och Gerät (apparat).
+das WLAN (-s)|wifi, trådlöst nätverk|n|Wie ist das Passwort für das [WLAN]?|Vad är lösenordet till wifi:t?|Uttalas [ˈveːlaːn]. Förkortning för Wireless LAN.
+das Netz (-e)|nät; täckning|n|Hier in den Bergen habe ich kein [Netz].|Här uppe i bergen har jag ingen täckning.|Också "nät": das Fischernetz, das soziale Netz.
+die Webseite (-n)|webbsida|f|Auf der [Webseite] der Schule stehen alle Termine.|På skolans webbsida står alla datum.|Också die Website, die Homepage.
+der Link (-s)|länk|m|Schick mir bitte den [Link] zu dem Video.|Skicka länken till videon.|Lånat från engelskan.
+klicken|klicka||Du musst hier auf den Knopf [klicken].|Du måste klicka på knappen här.|Svagt verb. Auf etwas klicken.
+tippen|skriva (på tangentbord); tippa||Sie [tippt] total schnell auf dem Handy.|Hon skriver jättesnabbt på mobilen.|Svagt verb. Också "gissa, tippa": Ich tippe auf Bayern.
+einloggen|logga in||Ich kann mich nicht [einloggen].|Jag kan inte logga in.|Svagt, delbart verb: hat sich eingeloggt. Också sich anmelden.
+sich registrieren|registrera sig||Für die App musst du dich zuerst [registrieren].|För appen måste du först registrera dig.|Svagt verb på -ieren: hat sich registriert.|<b>sich</b> sig · <b>registrieren</b> registrera
+hochladen|ladda upp||Sie hat die Fotos vom Urlaub [hochgeladen].|Hon har laddat upp bilderna från semestern.|Starkt, delbart: lud hoch, hat hochgeladen.
+das Programm (-e)|program|n|Welches [Programm] benutzt du für Videos?|Vilket program använder du för videor?|Också tv-kanal och programförklaring.
+die Datei (-en)|fil (dator)|f|Ich habe die [Datei] aus Versehen gelöscht.|Jag råkade radera filen.|Av Daten (data) och -ei.
+der Ordner (-)|mapp; pärm|m|Alle Fotos sind in diesem [Ordner].|Alla bilder ligger i den här mappen.|Hör till ordnen (ordna).
+liken|gilla (på nätet)||Sie hat mein Foto sofort [geliked].|Hon gillade min bild direkt.|Svagt verb från engelskan. Perfekt: hat geliked eller gelikt.
+der Kommentar (-e)|kommentar|m|Unter dem Video gibt es viele [Kommentare].|Under videon finns det många kommentarer.|Kommentieren = kommentera.
+filmen|filma||Beim Konzert darf man nicht [filmen].|På konserten får man inte filma.|Svagt verb.
+der Artikel (-)|artikel|m|Hast du den [Artikel] über das Konzert gelesen?|Har du läst artikeln om konserten?|Också grammatiskt: der bestimmte Artikel.
+die Nachrichten|nyheter|pl|Um acht Uhr kommen die [Nachrichten].|Klockan åtta kommer nyheterna.|Singular die Nachricht = meddelande. Plural på tv och radio = nyheterna.
+die Meinung (-en)|åsikt|f|Was ist deine [Meinung] dazu?|Vad är din åsikt om det?|Meiner Meinung nach = enligt min åsikt.
+wahr|sann||Nicht alles im Internet ist [wahr].|Allt på internet är inte sant.|Nicht wahr? = eller hur? Die Wahrheit = sanningen.
+privat|privat||Meine Fotos sind [privat].|Mina bilder är privata.|Die Privatsphäre = privatlivet.
+das Mobbing|mobbning|n|[Mobbing] im Internet ist ein großes Problem.|Mobbning på nätet är ett stort problem.|Lånat från engelskan. Mobben = mobba.
+das Videospiel (-e)|tv-spel, datorspel|n|Am Wochenende spiele ich gern [Videospiele].|På helgerna spelar jag gärna tv-spel.|Också das Computerspiel. Zocken = spela (vardagligt).
+die Technik (-en)|teknik|f|Mein Bruder interessiert sich sehr für [Technik].|Min bror är väldigt intresserad av teknik.|Technisch = teknisk.
+technisch|teknisk||Wir haben leider ein [technisches] Problem.|Vi har tyvärr ett tekniskt problem.|Hör till die Technik.
+modern|modern||Die Schule hat sehr [moderne] Computer.|Skolan har väldigt moderna datorer.|Betoning på sista stavelsen: mo-DERN.
+das Gerät (-e)|apparat, grej|n|Wie funktioniert dieses [Gerät]?|Hur fungerar den här apparaten?|Das Küchengerät = köksmaskinen.
+benutzen|använda||Darf ich kurz deinen Laptop [benutzen]?|Får jag låna din laptop en stund?|Svagt verb. Samma betydelse som verwenden och nutzen.
+verwenden|använda||Welche App [verwendest] du für Musik?|Vilken app använder du för musik?|Svagt verb: verwendete, hat verwendet. Lite formellare än benutzen.
+die Batterie (-n)|batteri|f|Die Fernbedienung braucht neue [Batterien].|Fjärrkontrollen behöver nya batterier.|Uttalas med långt i: Bat-te-RIE.
+der Lautsprecher (-)|högtalare|m|Die [Lautsprecher] sind zu leise.|Högtalarna är för tysta.|Av laut (högt) och sprechen (tala).
+der Kopfhörer (-)|hörlurar|m|Mit [Kopfhörern] kann ich mich besser konzentrieren.|Med hörlurar kan jag koncentrera mig bättre.|Av Kopf (huvud) och hören (höra). Ofta i plural.
+die Suchmaschine (-n)|sökmotor|f|Ich suche das Wort mit einer [Suchmaschine].|Jag söker ordet med en sökmotor.|Av suchen (söka) och Maschine.
+googeln|googla||Ich [google] das schnell mal.|Jag googlar det snabbt.|Svagt verb: hat gegoogelt.
+der Blog (-s)|blogg|m|Sie schreibt einen [Blog] über Musik.|Hon skriver en blogg om musik.|Också das Blog. Der Blogger = bloggaren.
+der Podcast (-s)|podd|m|Diesen [Podcast] höre ich jeden Morgen.|Den här podden lyssnar jag på varje morgon.|Lånat från engelskan.
+der Kanal (Kanäle)|kanal|m|Er hat einen eigenen [Kanal] auf YouTube.|Han har en egen kanal på Youtube.|Också "kanal" med vatten: der Nord-Ostsee-Kanal.
+der Anhang (-hänge)|bilaga|m|Die Fotos schicke ich dir im [Anhang].|Bilderna skickar jag i en bilaga.|Hör till anhängen (hänga på).
+der Empfänger (-)|mottagare|m|Du hast den falschen [Empfänger] eingetragen.|Du har skrivit in fel mottagare.|Hör till empfangen (ta emot). Motsats: der Absender.
+praktisch|praktisk||Das Handy ist sehr [praktisch] für Fahrpläne.|Mobilen är väldigt praktisk för tidtabeller.|Praktisch betyder också "nästan": Ich bin praktisch fertig.
+der Empfang|mottagning, täckning; mottagande|m|Im Keller hat man keinen [Empfang].|I källaren har man ingen täckning.|Också "reception" på hotell och "mottagning" (fest).
+das Signal (-e)|signal|n|Das [Signal] ist hier sehr schwach.|Signalen är väldigt svag här.|Uttalas [zɪˈɡnaːl].
+aktuell|aktuell, nuvarande||Hier findest du die [aktuellen] Nachrichten.|Här hittar du de senaste nyheterna.|Falsk vän: betyder "aktuell, dagsfärsk", inte "faktisk".
+häufig|ofta, vanlig||Ich schaue [häufig] Videos auf dem Handy.|Jag tittar ofta på videor på mobilen.|Synonym till oft. Häufig gestellte Fragen = vanliga frågor.
+der Knopf (Knöpfe)|knapp|m|Du musst auf den roten [Knopf] drücken.|Du måste trycka på den röda knappen.|Också knapp på kläder.
+drücken|trycka||[Drück] mal auf die Taste unten links.|Tryck på knappen nere till vänster.|Svagt verb. Obs.: drucken = skriva ut.
+anmachen|sätta på, tända||Kannst du bitte den Fernseher [anmachen]?|Kan du sätta på tv:n?|Svagt, delbart, vardagligt. Formellare: einschalten.
+ausmachen|stänga av, släcka||Kannst du bitte das Licht [ausmachen]?|Kan du släcka ljuset?|Svagt, delbart, vardagligt. Formellare: ausschalten.
+einschalten|slå på||Vergiss nicht, den Computer [einzuschalten].|Glöm inte att slå på datorn.|Svagt, delbart: hat eingeschaltet.
+ausschalten|stänga av||Im Kino muss man das Handy [ausschalten].|På bio måste man stänga av mobilen.|Svagt, delbart: hat ausgeschaltet.
+das Update (-s)|uppdatering|n|Für die App gibt es ein neues [Update].|Det finns en ny uppdatering till appen.|Lånat från engelskan.
+aktualisieren|uppdatera||Du musst die Seite [aktualisieren].|Du måste uppdatera sidan.|Svagt verb på -ieren.
+die Version (-en)|version|f|Hast du schon die neue [Version]?|Har du redan den nya versionen?|Från latin.
+die Einstellungen|inställningar|pl|In den [Einstellungen] kannst du die Sprache ändern.|I inställningarna kan du ändra språket.|Hör till einstellen (ställa in).
+der Hacker (-)|hackare|m|Ein [Hacker] hat mein Konto geknackt.|En hackare har tagit sig in på mitt konto.|Lånat från engelskan.
+die Altersgrenze (-n)|åldersgräns|f|Für die App gibt es eine [Altersgrenze] von 13 Jahren.|Appen har en åldersgräns på 13 år.|Av Alter och Grenze.
+erlaubt|tillåten||Handys sind im Unterricht nicht [erlaubt].|Mobiler är inte tillåtna på lektionerna.|Particip av erlauben (tillåta).
+verboten|förbjuden||Fotografieren ist hier [verboten].|Det är förbjudet att fotografera här.|Particip av verbieten.
+kontrollieren|kontrollera||Meine Eltern [kontrollieren] meine Bildschirmzeit.|Mina föräldrar kontrollerar min skärmtid.|Svagt verb på -ieren.
+der Moderator (-en)|programledare|m|Der [Moderator] stellt die Gäste vor.|Programledaren presenterar gästerna.|Femininum: die Moderatorin.
+das Interview (-s)|intervju|n|In dem [Interview] erzählt die Sängerin von ihrer Kindheit.|I intervjun berättar sångerskan om sin barndom.|Interviewen = intervjua.
+die Erlaubnis|tillstånd, lov|f|Du brauchst die [Erlaubnis] deiner Eltern.|Du behöver dina föräldrars tillstånd.|Hör till erlauben.
+ansehen|titta på||Wollen wir uns das Video zusammen [ansehen]?|Ska vi titta på videon tillsammans?|Starkt, delbart: sah an, hat angesehen.
+erscheinen|komma ut, dyka upp||Das neue Spiel [erscheint] im Mai.|Det nya spelet kommer ut i maj.|Starkt verb: erschien, ist erschienen.
+das Emoji (-s)|emoji|n|Sie schickt immer ein [Emoji] mit einem Herz.|Hon skickar alltid en emoji med ett hjärta.|Neutrum.
+der Screenshot (-s)|skärmdump|m|Ich habe einen [Screenshot] von der Nachricht gemacht.|Jag tog en skärmdump av meddelandet.|Lånat från engelskan.
+blockieren|blockera||Ich habe den Spam-Account [blockiert].|Jag har blockerat spamkontot.|Svagt verb på -ieren.
+das Abo (-s)|prenumeration|n|Ich habe mein [Abo] für den Streamingdienst gekündigt.|Jag har sagt upp min prenumeration på streamingtjänsten.|Kort för das Abonnement.
+die Fernbedienung (-en)|fjärrkontroll|f|Wo ist die [Fernbedienung]?|Var är fjärrkontrollen?|Av fern (fjärran) och bedienen (sköta).
+die Spielkonsole (-n)|spelkonsol|f|Zum Geburtstag hat er eine [Spielkonsole] bekommen.|Han fick en spelkonsol i födelsedagspresent.|Av Spiel och Konsole.
+die Anleitung (-en)|instruktion, bruksanvisning|f|Lies zuerst die [Anleitung]!|Läs instruktionen först!|Hör till anleiten (instruera).
+das Funkloch (-löcher)|område utan täckning|n|Im Zug waren wir oft in einem [Funkloch].|På tåget var vi ofta utan täckning.|Av Funk (radio) och Loch (hål).
+die Cloud (-s)|moln (lagring)|f|Meine Fotos speichere ich in der [Cloud].|Mina bilder sparar jag i molnet.|Lånat från engelskan.
+der Klassenchat (-s)|klassens chatt|m|Im [Klassenchat] steht, dass Mathe ausfällt.|I klasschatten står det att matten är inställd.|Av Klasse och Chat.
+#t4|Kap 4 · Gesundheit und Arztbesuch
+die Klinik (-en)|klinik, sjukhus|f|Nach dem Unfall musste er in die [Klinik].|Efter olyckan var han tvungen att åka till sjukhuset.|Formellare än das Krankenhaus. I Schweiz och Österrike också das Spital.
+die Arztpraxis (-praxen)|läkarmottagning|f|Die [Arztpraxis] ist am Mittwochnachmittag geschlossen.|Läkarmottagningen är stängd på onsdagseftermiddagen.|Kort: die Praxis. I Tyskland går man först till sin Hausarzt.
+der Augenarzt (-ärzte)|ögonläkare|m|Ich sehe schlecht, ich muss zum [Augenarzt].|Jag ser dåligt, jag måste gå till ögonläkaren.|Av Auge (öga) och Arzt. Femininum: die Augenärztin.
+der Kinderarzt (-ärzte)|barnläkare|m|Mit dem Baby gehen wir zum [Kinderarzt].|Med bebisen går vi till barnläkaren.|Femininum: die Kinderärztin.
+der Apotheker (-)|apotekare|m|Der [Apotheker] hat mir einen Hustensaft empfohlen.|Apotekaren rekommenderade en hostmedicin.|Femininum: die Apothekerin.
+die Pille (-n)|piller, tablett|f|Diese [Pille] musst du dreimal am Tag nehmen.|Det här pillret måste du ta tre gånger om dagen.|Vanligare: die Tablette. Die Pille = också p-piller.
+impfen|vaccinera||Bist du gegen Grippe [geimpft]?|Är du vaccinerad mot influensa?|Svagt verb. Die Impfung = vaccinationen.
+die Schmerzen|smärta, värk|pl|Hast du noch [Schmerzen]?|Har du fortfarande ont?|Oftast i plural. Singular: der Schmerz.
+weh|ont||Mein Fuß tut sehr [weh].|Min fot gör väldigt ont.|Wehtun (tut weh, tat weh, hat wehgetan) = göra ont. Mir tut der Kopf weh.
+die Infektion (-en)|infektion|f|Der Arzt meint, es ist nur eine leichte [Infektion].|Läkaren tror att det bara är en lätt infektion.|Från latin. Ansteckend = smittsam.
+stark|stark||Er hat sehr [starke] Kopfschmerzen.|Han har väldigt kraftig huvudvärk.|Om mat används scharf (stark), inte stark.
+die Müdigkeit|trötthet|f|Gegen [Müdigkeit] hilft ein Spaziergang.|Mot trötthet hjälper en promenad.|Hör till müde (trött).
+die Erholung|vila, återhämtning|f|Nach der Operation brauchst du viel [Erholung].|Efter operationen behöver du mycket vila.|Hör till sich erholen (återhämta sig).
+die Entspannung|avslappning|f|Zur [Entspannung] mache ich Yoga.|För att slappna av gör jag yoga.|Hör till sich entspannen.
+das Gewicht (-e)|vikt|n|Das [Gewicht] ist nicht so wichtig, du sollst dich wohlfühlen.|Vikten är inte så viktig, du ska må bra.|Hör till wiegen (väga).
+der Raucher (-)|rökare|m|In Deutschland gibt es immer weniger [Raucher].|I Tyskland finns det allt färre rökare.|Rauchen = röka. Nichtraucher = icke-rökare.
+pflegen|vårda, sköta om||Meine Tante [pflegt] ihre kranke Mutter.|Min moster vårdar sin sjuka mamma.|Svagt verb. Die Pflege = vården.
+die Pflege|vård, omvårdnad|f|Die [Pflege] von alten Menschen ist ein wichtiger Beruf.|Vård av gamla människor är ett viktigt yrke.|Hör till pflegen. Das Pflegeheim = äldreboendet.
+sterben|dö||Mein Opa ist letztes Jahr [gestorben].|Min morfar dog förra året.|Starkt verb: stirbt, starb, ist gestorben.
+tot|död||Der Vogel ist leider [tot].|Fågeln är tyvärr död.|Der Tod = döden. Obs.: tot är adjektiv, der Tod substantiv.
+geboren|född||Ich bin 2009 in Göteborg [geboren].|Jag är född 2009 i Göteborg.|Particip av gebären (föda). Wann bist du geboren?
+die Geburt (-en)|födelse, förlossning|f|Nach der [Geburt] war das Baby sehr klein.|Efter förlossningen var bebisen väldigt liten.|Der Geburtstag = födelsedagen.
+das Alter|ålder|n|In meinem [Alter] schläft man gern lange.|I min ålder sover man gärna länge.|Im Alter von 16 Jahren = vid 16 års ålder. Också "ålderdom".
+besser|bättre||Geht es dir heute [besser]?|Mår du bättre i dag?|Komparativ av gut. Gute Besserung! = Krya på dig!
+schlechter|sämre||Mein Husten ist leider [schlechter] geworden.|Min hosta har tyvärr blivit värre.|Komparativ av schlecht (dålig).
+operieren|operera||Der Arzt muss das Knie [operieren].|Läkaren måste operera knät.|Svagt verb på -ieren: hat operiert. Die Operation = operationen.
+die Rettung (-en)|räddning; ambulans (Österrike)|f|Ruf schnell die [Rettung]!|Ring ambulansen snabbt!|I Österrike betyder die Rettung ambulansen. Hör till retten (rädda).
+sich hinlegen|lägga sig (och vila)||Ich bin müde und [lege] mich kurz hin.|Jag är trött och lägger mig en stund.|Svagt, delbart verb: hat sich hingelegt.|<b>sich</b> sig · <b>hin</b> dit, ner · <b>legen</b> lägga → "lägga sig ner"
+die Ohnmacht|svimning, maktlöshet|f|Sie ist in [Ohnmacht] gefallen.|Hon svimmade.|In Ohnmacht fallen = svimma. Ohnmächtig = medvetslös.
+der Schwindel|yrsel; bluff|m|Bei [Schwindel] solltest du dich hinsetzen.|Om du blir yr bör du sätta dig.|Schwindlig = yr: Mir ist schwindlig. Också "bedrägeri".
+das Asthma|astma|n|Mein Bruder hat [Asthma] und braucht ein Spray.|Min bror har astma och behöver en inhalator.|Uttalas utan h: [ˈastma].
+hinfallen|ramla, falla omkull||Beim Fußball bin ich [hingefallen].|Jag ramlade när jag spelade fotboll.|Starkt, delbart: fällt hin, fiel hin, ist hingefallen.
+stürzen|störta, ramla (illa)||Sie ist mit dem Fahrrad [gestürzt].|Hon ramlade med cykeln.|Svagt verb, perfekt med sein. Der Sturz = fallet.
+ausrutschen|halka||Pass auf, dass du auf dem Eis nicht [ausrutschst].|Akta dig så att du inte halkar på isen.|Svagt, delbart verb: ist ausgerutscht.
+der Rollstuhl (-stühle)|rullstol|m|Seit dem Unfall sitzt er im [Rollstuhl].|Sedan olyckan sitter han i rullstol.|Av rollen (rulla) och Stuhl (stol).
+geschwollen|svullen||Mein Knöchel ist ganz [geschwollen].|Min fotknöl är helt svullen.|Particip av schwellen (svälla).
+die Erste Hilfe|första hjälpen|f|Weißt du, wie [Erste Hilfe] funktioniert?|Vet du hur första hjälpen går till?|Erste står med stor bokstav i uttrycket. Der Erste-Hilfe-Kurs.|<b>erste</b> första · <b>Hilfe</b> hjälp
+der Mittagsschlaf|middagsvila, tupplur|m|Mein Opa macht jeden Tag einen [Mittagsschlaf].|Morfar tar en tupplur varje dag.|Av Mittag (middag, lunch) och Schlaf (sömn).
+gähnen|gäspa||Warum [gähnst] du die ganze Zeit?|Varför gäspar du hela tiden?|Svagt verb.
+schnarchen|snarka||Mein Vater [schnarcht] so laut!|Pappa snarkar så högt!|Svagt verb.
+der Albtraum (-träume)|mardröm|m|Letzte Nacht hatte ich einen [Albtraum].|I natt hade jag en mardröm.|Av Alb (mara, alf) och Traum (dröm). Också Alptraum.
+blind|blind||Ohne Brille bin ich fast [blind].|Utan glasögon är jag nästan blind.|Der/die Blinde = den blinde.
+taub|döv||Mein Opa ist auf einem Ohr [taub].|Morfar är döv på ena örat.|Jämför svenskans "döv".
+die Behinderung (-en)|funktionsnedsättning|f|Menschen mit [Behinderung] sollen überall mitmachen können.|Människor med funktionsnedsättning ska kunna vara med överallt.|Hör till behindern (hindra). Behindert = funktionsnedsatt.
+positiv|positiv||Der Corona-Test ist [positiv].|Coronatestet är positivt.|Motsats: negativ.
+das Symptom (-e)|symtom|n|Welche [Symptome] haben Sie?|Vilka symtom har ni?|Från grekiskan.
+der Puls|puls|m|Der Arzt misst meinen [Puls].|Läkaren mäter min puls.|Den Puls messen = ta pulsen.
+der Atem|andning, andetag|m|Nach dem Laufen war ich außer [Atem].|Efter löpningen var jag andfådd.|Außer Atem = andfådd. Atmen = andas.
+die Nerven|nerver|pl|Die Prüfung kostet mich echt [Nerven].|Provet sliter verkligen på mina nerver.|Singular der Nerv. Du gehst mir auf die Nerven! = Du går mig på nerverna!
+die Panik|panik|f|Keine [Panik], das ist nicht schlimm!|Ingen panik, det är inte farligt!|Panisch = panisk.
+der Psychologe (-n)|psykolog|m|Bei großem Stress kann ein [Psychologe] helfen.|Vid mycket stress kan en psykolog hjälpa.|Svag maskulin: den Psychologen. Femininum: die Psychologin.
+die Beratung (-en)|rådgivning|f|In der Schule gibt es eine kostenlose [Beratung].|I skolan finns det gratis rådgivning.|Hör till beraten (ge råd).
+der Humor|humor|m|Meine Ärztin hat viel [Humor].|Min läkare har mycket humor.|Humorvoll = humoristisk.
+die Diät (-en)|diet, bantning|f|Meine Mutter macht gerade eine [Diät].|Min mamma bantar just nu.|Eine Diät machen = banta.
+die Hygiene|hygien|f|Im Krankenhaus ist [Hygiene] sehr wichtig.|På sjukhuset är hygien väldigt viktigt.|Uttalas [hyˈɡi̯eːnə].
+das Handgelenk (-e)|handled|n|Beim Volleyball habe ich mir das [Handgelenk] verletzt.|Jag skadade handleden när jag spelade volleyboll.|Av Hand och Gelenk (led).
+die Blase (-n)|blåsa, blåsa på huden|f|Nach der Wanderung hatte ich [Blasen] an den Füßen.|Efter vandringen hade jag skavsår på fötterna.|Också urinblåsa och bubbla.
+die Wärmflasche (-n)|varmvattenflaska|f|Bei Bauchweh hilft eine [Wärmflasche].|Vid magont hjälper en varmvattenflaska.|Av warm och Flasche.
+die Bakterie (-n)|bakterie|f|Wasch dir die Hände, dann sind die [Bakterien] weg.|Tvätta händerna, så försvinner bakterierna.|Oftast plural.
+negativ|negativ||Zum Glück war der Test [negativ].|Som tur var var testet negativt.|Motsats: positiv.
+der Kummer|sorg, bekymmer|m|Hast du [Kummer]? Du siehst traurig aus.|Är du ledsen? Du ser ledsen ut.|Der Liebeskummer = kärlekssorg.
+weich|mjuk||Das Bett im Krankenhaus ist nicht sehr [weich].|Sängen på sjukhuset är inte särskilt mjuk.|Motsats: hart.
+entspannt|avslappnad||Nach dem Yoga bin ich ganz [entspannt].|Efter yogan är jag helt avslappnad.|Hör till sich entspannen.
+bitter|besk, bitter||Die Medizin schmeckt sehr [bitter].|Medicinen smakar väldigt beskt.|Samma ord som på svenska.
+salzig|salt||Das Essen im Krankenhaus war zu [salzig].|Sjukhusmaten var för salt.|Das Salz = saltet.
+roh|rå||[Rohes] Gemüse ist sehr gesund.|Rå grönsaker är väldigt nyttiga.|Jämför svenskans "rå".
+schneiden|skära, klippa||Ich habe mir in den Finger [geschnitten].|Jag har skurit mig i fingret.|Starkt verb: schnitt, hat geschnitten.
+springen|hoppa||Beim [Springen] habe ich mir den Fuß verletzt.|Jag skadade foten när jag hoppade.|Starkt verb: sprang, ist gesprungen.
+stoßen|stöta, slå i||Ich habe mir den Kopf an der Tür [gestoßen].|Jag slog huvudet i dörren.|Starkt verb: stößt, stieß, hat gestoßen.
+schlimm|allvarlig, illa||Ist es [schlimm], Herr Doktor?|Är det allvarligt, doktorn?|Nicht so schlimm! = Inte så farligt!
+glücklich|lycklig||Nach der Operation war sie sehr [glücklich].|Efter operationen var hon väldigt lycklig.|Das Glück = lyckan.
+die Übelkeit|illamående|f|Nach dem Essen hatte ich starke [Übelkeit].|Efter maten mådde jag väldigt illa.|Mir ist übel = jag mår illa.
+der Sanitäter (-)|ambulanssjukvårdare|m|Die [Sanitäter] waren nach zehn Minuten da.|Ambulanspersonalen var där efter tio minuter.|Femininum: die Sanitäterin.
+der Facharzt (-ärzte)|specialistläkare|m|Der Hausarzt schickt mich zu einem [Facharzt].|Husläkaren skickar mig till en specialist.|Av Fach (ämne) och Arzt.
+die Narbe (-n)|ärr|f|Von dem Unfall habe ich eine [Narbe] am Knie.|Efter olyckan har jag ett ärr på knät.|Jämför svenskans "narv".
+das Gelenk (-e)|led|n|Beim Laufen tun mir die [Gelenke] weh.|När jag springer gör lederna ont.|Das Handgelenk, das Fußgelenk.
+der Ausschlag (-schläge)|utslag|m|Nach dem Essen hatte ich einen roten [Ausschlag].|Efter maten fick jag röda utslag.|Hör till ausschlagen.
+jucken|klia||Der Mückenstich [juckt] total.|Myggbettet kliar jättemycket.|Svagt verb. Es juckt mich = det kliar.
+der Stich (-e)|stick, bett|m|Ein [Stich] von einer Wespe tut sehr weh.|Ett getingstick gör väldigt ont.|Hör till stechen.
+der Sonnenstich (-e)|solsting|m|Setz eine Mütze auf, sonst bekommst du einen [Sonnenstich].|Ta på dig en mössa, annars får du solsting.|Av Sonne och Stich.
+die Erschöpfung|utmattning|f|Nach dem Marathon lag er vor [Erschöpfung] im Gras.|Efter maratonloppet låg han utmattad i gräset.|Erschöpft = utmattad.
+ausgeschlafen|utvilad||Heute bin ich endlich mal [ausgeschlafen].|I dag är jag äntligen utvilad.|Hör till ausschlafen (sova ut).
+das Kopfkissen (-)|huvudkudde|n|Mit einem neuen [Kopfkissen] schlafe ich besser.|Med en ny kudde sover jag bättre.|Av Kopf och Kissen.
+das Vollkornbrot (-e)|fullkornsbröd|n|[Vollkornbrot] ist gesünder als Weißbrot.|Fullkornsbröd är nyttigare än vitt bröd.|Av voll, Korn och Brot.
+die Kalorie (-n)|kalori|f|Ein Stück Kuchen hat viele [Kalorien].|En bit kaka har många kalorier.|Från latin.
+das Mineralwasser (-)|mineralvatten|n|Ich hätte gern ein [Mineralwasser], bitte.|Jag skulle vilja ha ett mineralvatten.|Oftast med kolsyra i Tyskland.
+das Leitungswasser|kranvatten|n|In Deutschland kann man [Leitungswasser] trinken.|I Tyskland kan man dricka kranvatten.|Av Leitung (ledning) och Wasser.
+das Hausmittel (-)|huskur|n|Honig ist ein gutes [Hausmittel] gegen Husten.|Honung är en bra huskur mot hosta.|Av Haus och Mittel (medel).
+der Ingwer|ingefära|m|Tee mit [Ingwer] hilft bei Erkältungen.|Te med ingefära hjälper mot förkylningar.|Uttalas [ˈɪŋvɐ].
+das Yoga|yoga|n|Zweimal pro Woche mache ich [Yoga].|Två gånger i veckan gör jag yoga.|Neutrum, oftast utan artikel.
+das Selbstvertrauen|självförtroende|n|Sport gibt mir mehr [Selbstvertrauen].|Idrott ger mig mer självförtroende.|Av selbst och Vertrauen (förtroende).
+#t5|Kap 5 · Natur und Umwelt
+die Natur|natur|f|In der [Natur] fühle ich mich am wohlsten.|I naturen trivs jag bäst.|Natürlich = naturlig; också "naturligtvis".
+die Umwelt|miljö|f|Wir müssen die [Umwelt] schützen.|Vi måste skydda miljön.|Av um (omkring) och Welt (värld). Der Umweltschutz = miljöskydd.
+das Feuer (-)|eld|n|Im Sommer ist [Feuer] im Wald verboten.|På sommaren är det förbjudet att elda i skogen.|Das Lagerfeuer = lägerelden.
+pflanzen|plantera||Wir haben im Garten einen Apfelbaum [gepflanzt].|Vi har planterat ett äppelträd i trädgården.|Svagt verb. Die Pflanze = växten.
+das Gras (Gräser)|gräs|n|Die Kühe fressen [Gras].|Korna äter gräs.|Jämför svenskans "gräs".
+die Wiese (-n)|äng|f|Wir picknicken auf der [Wiese].|Vi har picknick på ängen.|Jämför svenskans "vis" i "hövis"? Nej – bara "äng".
+das Feld (-er)|fält, åker|n|Auf dem [Feld] wächst Weizen.|På åkern växer det vete.|Jämför svenskans "fält".
+das Gebirge (-)|bergskedja, fjäll|n|Die Alpen sind das höchste [Gebirge] Europas.|Alperna är Europas högsta bergskedja.|Hör till der Berg.
+der Bach (Bäche)|bäck|m|Im [Bach] ist das Wasser eiskalt.|I bäcken är vattnet iskallt.|Jämför svenskans "bäck". Kompositören heter också Bach.
+die Wüste (-n)|öken|f|In der [Wüste] regnet es fast nie.|I öknen regnar det nästan aldrig.|Jämför svenskans "ödemark".
+das Insekt (-en)|insekt|n|Viele [Insekten] sterben wegen der Pestizide.|Många insekter dör på grund av bekämpningsmedlen.|Från latin.
+der Bär (-en)|björn|m|In den Alpen gibt es wieder ein paar [Bären].|I Alperna finns det några björnar igen.|Svag maskulin: den Bären. Berlins symbol.
+der Wolf (Wölfe)|varg|m|Der [Wolf] ist nach Deutschland zurückgekommen.|Vargen har kommit tillbaka till Tyskland.|Jämför svenskans "ulv".
+der Fuchs (Füchse)|räv|m|Der [Fuchs] kommt nachts in die Stadt.|Räven kommer in till stan på natten.|Schlau wie ein Fuchs = listig som en räv.
+der Hase (-n)|hare|m|Auf dem Feld sitzt ein [Hase].|Det sitter en hare på åkern.|Svag maskulin. Der Osterhase = påskharen.
+das Reh (-e)|rådjur|n|Am Waldrand haben wir ein [Reh] gesehen.|Vid skogskanten såg vi ett rådjur.|Jämför svenskans "rå" i rådjur.
+das Eichhörnchen (-)|ekorre|n|Das [Eichhörnchen] sammelt Nüsse für den Winter.|Ekorren samlar nötter inför vintern.|Neutrum på grund av -chen. Av Eiche (ek) och Hörnchen.
+der Frosch (Frösche)|groda|m|Im Teich wohnen viele [Frösche].|I dammen bor det många grodor.|Jämför svenskans "frö"? Nej – "groda", annat ord.
+die Tierart (-en)|djurart|f|Jedes Jahr sterben viele [Tierarten] aus.|Varje år dör många djurarter ut.|Av Tier och Art (art, sort).
+der Nationalpark (-s)|nationalpark|m|Der [Nationalpark] Bayerischer Wald ist sehr alt.|Nationalparken Bayerischer Wald är väldigt gammal.|Plural också -e.
+der Abfall (-fälle)|avfall, skräp|m|Den [Abfall] muss man richtig trennen.|Man måste sortera avfallet rätt.|Formellare än der Müll.
+die Tonne (-n)|soptunna; ton|f|Papier kommt in die blaue [Tonne].|Papper ska i den blåa tunnan.|Die Mülltonne = soptunnan. Också ton (1 000 kg).
+der Biomüll|matavfall, kompost|m|Kartoffelschalen gehören in den [Biomüll].|Potatisskal hör till matavfallet.|Av Bio (bio, organiskt) och Müll.
+das Altpapier|returpapper|n|Alte Zeitungen kommen ins [Altpapier].|Gamla tidningar ska i pappersinsamlingen.|Av alt (gammal) och Papier.
+das Plastik|plast|n|Im Meer schwimmt viel zu viel [Plastik].|I havet flyter det alldeles för mycket plast.|Också der Kunststoff.
+die Plastiktüte (-n)|plastpåse|f|Im Supermarkt gibt es keine [Plastiktüten] mehr.|I mataffären finns det inga plastpåsar längre.|Die Tüte = påsen. I Österrike: das Sackerl.
+recyceln|återvinna||Aus altem Papier kann man neues [recyceln].|Av gammalt papper kan man återvinna nytt.|Svagt verb: hat recycelt. Das Recycling = återvinningen.
+die Energie (-n)|energi|f|Wir sollten weniger [Energie] verbrauchen.|Vi borde använda mindre energi.|Die erneuerbare Energie = förnybar energi.
+die Sonnenenergie|solenergi|f|Unser Haus heizt mit [Sonnenenergie].|Vårt hus värms upp med solenergi.|Av Sonne och Energie.
+das Windrad (-räder)|vindkraftverk|n|An der Küste stehen viele [Windräder].|Vid kusten står det många vindkraftverk.|Av Wind och Rad (hjul).
+das Öl (-e)|olja|n|Autos brauchen immer noch viel [Öl].|Bilar behöver fortfarande mycket olja.|Också matolja: das Olivenöl.
+das Gas (-e)|gas|n|Wir kochen mit [Gas].|Vi lagar mat med gas.|Gas geben = gasa (bil).
+verbrauchen|förbruka, använda||Ein altes Auto [verbraucht] viel Benzin.|En gammal bil drar mycket bensin.|Svagt verb. Der Verbrauch = förbrukningen.
+die Abgase|avgaser|pl|Die [Abgase] von Autos sind schlecht für die Luft.|Bilarnas avgaser är dåliga för luften.|Av ab (av) och Gas.
+verschmutzen|förorena, smutsa ner||Die Fabrik [verschmutzt] den Fluss.|Fabriken förorenar floden.|Svagt verb. Die Verschmutzung = föroreningen.
+die Luftverschmutzung|luftförorening|f|In großen Städten ist die [Luftverschmutzung] ein Problem.|I stora städer är luftföroreningarna ett problem.|Av Luft och Verschmutzung.
+das Hochwasser (-)|översvämning, högvatten|n|Nach dem Regen gab es [Hochwasser] am Rhein.|Efter regnet blev det översvämning vid Rhen.|Av hoch (hög) och Wasser.
+die Trockenheit|torka|f|Wegen der [Trockenheit] gibt es wenig Obst.|På grund av torkan blir det lite frukt.|Hör till trocken (torr).
+wachsen|växa||Die Bäume [wachsen] hier sehr langsam.|Träden växer väldigt långsamt här.|Starkt verb: wächst, wuchs, ist gewachsen.
+die Erwärmung|uppvärmning|f|Die [Erwärmung] der Erde ist gefährlich.|Jordens uppvärmning är farlig.|Die Erderwärmung = den globala uppvärmningen.
+der Bioladen (-läden)|ekobutik|m|Mein Gemüse kaufe ich im [Bioladen].|Mina grönsaker köper jag i ekobutiken.|Bio = ekologisk: Bio-Äpfel.
+ernten|skörda||Im Herbst [ernten] wir die Äpfel.|På hösten skördar vi äpplena.|Svagt verb. Die Ernte = skörden.
+giftig|giftig||Diese Pilze sind [giftig]!|De här svamparna är giftiga!|Das Gift = giftet. Falsk vän med svenskans "gift" (äktenskap).
+der Schatten (-)|skugga|m|Setzen wir uns in den [Schatten].|Vi sätter oss i skuggan.|Jämför svenskans "skugga" (inte samma rot).
+heizen|värma upp, elda||Im Winter [heizen] wir mit Holz.|På vintern eldar vi med ved.|Svagt verb. Die Heizung = elementet, uppvärmningen.
+der Planet (-en)|planet|m|Wir haben nur einen [Planeten].|Vi har bara en planet.|Svag maskulin: den Planeten.
+verbieten|förbjuda||In vielen Städten sind alte Dieselautos [verboten].|I många städer är gamla dieselbilar förbjudna.|Starkt verb: verbot, hat verboten.
+das Pferd (-e)|häst|n|Meine Schwester reitet jeden Samstag auf einem [Pferd].|Min syster rider på en häst varje lördag.|Reiten = rida.
+die Kuh (Kühe)|ko|f|Auf der Alm fressen die [Kühe] frisches Gras.|På fäboden äter korna färskt gräs.|Jämför svenskans "ko".
+das Schwein (-e)|gris|n|Der Bauer hat hundert [Schweine].|Bonden har hundra grisar.|Schwein haben = ha tur (vardagligt).
+das Schaf (-e)|får|n|Auf dem Deich stehen viele [Schafe].|På vallen står det många får.|Jämför svenskans "får" (inte samma rot).
+die Ziege (-n)|get|f|Aus der Milch von [Ziegen] macht man Käse.|Av getmjölk gör man ost.|Jämför svenskans "kid".
+das Huhn (Hühner)|höna|n|Unsere [Hühner] legen jeden Tag Eier.|Våra hönor lägger ägg varje dag.|Das Hähnchen = kyckling (mat).
+die Schlange (-n)|orm; kö|f|Keine Angst, die [Schlange] ist nicht giftig.|Var inte rädd, ormen är inte giftig.|Också kö: Schlange stehen = köa.
+die Ente (-n)|anka|f|Auf dem See schwimmen [Enten].|På sjön simmar det ankor.|Jämför svenskans "and".
+das Kaninchen (-)|kanin|n|Mein [Kaninchen] frisst am liebsten Karotten.|Min kanin äter helst morötter.|Neutrum på grund av -chen.
+das Tierheim (-e)|djurhem|n|Unseren Hund haben wir aus dem [Tierheim].|Vår hund har vi från djurhemmet.|Av Tier och Heim (hem).
+das Recycling|återvinning|n|[Recycling] ist gut für die Umwelt.|Återvinning är bra för miljön.|Uttalas som på engelska.
+die Windenergie|vindkraft|f|Norddeutschland produziert viel [Windenergie].|Nordtyskland producerar mycket vindkraft.|Av Wind och Energie.
+die Atomkraft|kärnkraft|f|Deutschland hat die [Atomkraft] 2023 beendet.|Tyskland avvecklade kärnkraften 2023.|Också die Kernkraft.
+der Protest (-e)|protest|m|Tausende Schüler kamen zum [Protest] für das Klima.|Tusentals elever kom till klimatprotesten.|Protestieren = protestera.
+der Ozean (-e)|ocean|m|Im [Ozean] gibt es riesige Inseln aus Plastik.|I oceanen finns jättelika öar av plast.|Betoning på första stavelsen.
+das Erdbeben (-)|jordbävning|n|In der Schweiz gibt es manchmal kleine [Erdbeben].|I Schweiz blir det ibland små jordbävningar.|Av Erde och beben (bäva).
+der Vulkan (-e)|vulkan|m|In der Eifel gibt es alte [Vulkane].|I Eifel finns det gamla vulkaner.|Från latin.
+die Ernte (-n)|skörd|f|Die [Ernte] war dieses Jahr schlecht.|Skörden var dålig i år.|Ernten = skörda.
+feucht|fuktig||Nach dem Regen ist die Wiese noch [feucht].|Efter regnet är ängen fortfarande fuktig.|Die Feuchtigkeit = fukten.
+die Solaranlage (-n)|solcellsanläggning|f|Auf unserem Dach ist eine [Solaranlage].|På vårt tak finns det solceller.|Av Solar- och Anlage.
+das E-Auto (-s)|elbil|n|Unser neues Auto ist ein [E-Auto].|Vår nya bil är en elbil.|Kort för Elektroauto.
+reduzieren|minska||Wir wollen unseren Müll [reduzieren].|Vi vill minska våra sopor.|Svagt verb på -ieren.
+der Becher (-)|mugg, bägare|m|Ich nehme meinen eigenen [Becher] ins Café mit.|Jag tar med min egen mugg till kaféet.|Der Kaffeebecher = kaffemuggen.
+der Strohhalm (-e)|sugrör|m|[Strohhalme] aus Plastik sind in der EU verboten.|Sugrör av plast är förbjudna i EU.|Av Stroh (halm) och Halm.
+der Stoffbeutel (-)|tygkasse|m|Zum Einkaufen nehme ich einen [Stoffbeutel] mit.|Jag tar med en tygkasse när jag handlar.|Av Stoff (tyg) och Beutel (påse).
+beobachten|iaktta, observera||Im Wald kann man Vögel [beobachten].|I skogen kan man titta på fåglar.|Svagt verb: hat beobachtet.
+breit|bred||Der Rhein ist hier sehr [breit].|Rhen är väldigt bred här.|Komparativ breiter.
+schmal|smal||Der Weg auf den Berg ist sehr [schmal].|Stigen upp på berget är väldigt smal.|Komparativ schmaler eller schmäler.
+hoch|hög||Die Zugspitze ist der [höchste] Berg Deutschlands.|Zugspitze är Tysklands högsta berg.|Hoch blir hoh- före ändelse: ein hoher Berg. Komparativ höher.
+groß|stor||Der Bodensee ist [größer] als der Chiemsee.|Bodensjön är större än Chiemsee.|Komparativ größer, superlativ am größten.
+klein|liten||Liechtenstein ist eines der [kleinsten] Länder der Welt.|Liechtenstein är ett av världens minsta länder.|Komparativ kleiner.
+lang|lång||Die Donau ist [länger] als der Rhein.|Donau är längre än Rhen.|Komparativ länger, superlativ am längsten.
+kurz|kort||Im Winter sind die Tage sehr [kurz].|På vintern är dagarna väldigt korta.|Komparativ kürzer, superlativ am kürzesten.
+schnell|snabb||Der Gepard ist das [schnellste] Tier der Welt.|Geparden är världens snabbaste djur.|Komparativ schneller.
+der Schauer (-)|skur|m|Am Nachmittag gibt es einzelne [Schauer].|På eftermiddagen blir det enstaka skurar.|Der Regenschauer = regnskuren.
+die Wasserkraft|vattenkraft|f|Österreich produziert viel Strom aus [Wasserkraft].|Österrike producerar mycket el från vattenkraft.|Av Wasser och Kraft.
+die Tanne (-n)|gran (ädelgran)|f|Im Schwarzwald wachsen viele [Tannen].|I Schwarzwald växer det många granar.|Der Tannenbaum = julgranen.
+die Eiche (-n)|ek|f|Die alte [Eiche] ist über 500 Jahre alt.|Den gamla eken är över 500 år gammal.|Das Eichhörnchen = ekorren.
+der Pilz (-e)|svamp|m|Im Herbst sammeln wir [Pilze] im Wald.|På hösten plockar vi svamp i skogen.|Pilze sammeln = plocka svamp.
+die Beere (-n)|bär|f|Im Sommer pflücken wir [Beeren].|På sommaren plockar vi bär.|Die Erdbeere, die Himbeere.
+der Teich (-e)|damm|m|Im [Teich] schwimmen Enten.|I dammen simmar det ankor.|En liten sjö.
+das Watt|vadehav|n|Bei Ebbe kann man im [Watt] wandern.|Vid ebb kan man vandra på vadehavet.|Das Wattenmeer vid Nordsjön är världsarv.
+die Ebbe (-n)|ebb|f|Bei [Ebbe] ist das Meer weit weg.|Vid ebb är havet långt borta.|Motsats: die Flut.
+die Lawine (-n)|lavin|f|Nach dem Schnee gibt es Gefahr von [Lawinen].|Efter snön finns det risk för laviner.|Från latin.
+der Adler (-)|örn|m|Hoch über den Bergen fliegt ein [Adler].|Högt över bergen flyger en örn.|Tysklands riksvapen är en örn.
+der Igel (-)|igelkott|m|Im Garten wohnt ein kleiner [Igel].|I trädgården bor en liten igelkott.|Jämför svenskans "igelkott".
+das Wildschwein (-e)|vildsvin|n|In Berlin laufen manchmal [Wildschweine] durch die Straßen.|I Berlin springer det ibland vildsvin på gatorna.|Av wild och Schwein.
+der Schmetterling (-e)|fjäril|m|Auf der Blume sitzt ein bunter [Schmetterling].|På blomman sitter en färgglad fjäril.|Hör till Schmetten (grädde, äldre ord).
+die Müllabfuhr|sophämtning|f|Die [Müllabfuhr] kommt jeden Dienstag.|Sophämtningen kommer varje tisdag.|Av Müll och Abfuhr (bortforsling).
+#t6|Kap 6 · Kultur und Musik
+kulturell|kulturell||In Berlin gibt es ein großes [kulturelles] Angebot.|I Berlin finns det ett stort kulturutbud.|Hör till die Kultur.
+die Kunst (Künste)|konst|f|Meine Schwester studiert [Kunst] in Hamburg.|Min syster studerar konst i Hamburg.|Hör till können: konst = "kunnande". Der Künstler = konstnären.
+die Musik|musik|f|Welche [Musik] hörst du am liebsten?|Vilken musik lyssnar du helst på?|Musik hören = lyssna på musik (utan preposition).
+das Theater (-)|teater|n|Am Freitag gehen wir ins [Theater].|På fredag går vi på teater.|Ins Theater gehen = gå på teater.
+der Song (-s)|låt|m|Der neue [Song] läuft überall im Radio.|Den nya låten spelas överallt på radion.|Lånat från engelskan, om pop och rock.
+die Flöte (-n)|flöjt|f|Meine kleine Schwester lernt [Flöte].|Min lillasyster lär sig spela flöjt.|Die Blockflöte = blockflöjten.
+anhören|lyssna på||Willst du dir mein neues Lied [anhören]?|Vill du lyssna på min nya låt?|Svagt, delbart verb: sich etwas anhören.
+der Hit (-s)|hitlåt, succé|m|Das Lied war 1990 ein großer [Hit].|Låten var en stor hit 1990.|Lånat från engelskan.
+die Charts|topplistan|pl|Der Song ist seit Wochen auf Platz eins der [Charts].|Låten har legat etta på topplistan i veckor.|Lånat från engelskan.
+der Pop|pop, popmusik|m|Ich höre am liebsten [Pop] und Hip-Hop.|Jag lyssnar helst på pop och hiphop.|Die Popmusik = popmusiken.
+der Jazz|jazz|m|Mein Opa liebt alten [Jazz].|Morfar älskar gammal jazz.|Uttalas som på engelska.
+der Rap|rap|m|Deutscher [Rap] ist sehr beliebt bei Jugendlichen.|Tysk rap är väldigt populär bland ungdomar.|Der Rapper = rapparen.
+die Volksmusik|folkmusik|f|In Bayern hört man oft [Volksmusik].|I Bayern hör man ofta folkmusik.|Av Volk (folk) och Musik.
+der Schlager (-)|schlager|m|Auf der Party haben alle [Schlager] gesungen.|På festen sjöng alla schlager.|Samma ord som i svenskan, lånat från tyskan.
+der Star (-s)|stjärna, kändis|m|Nach dem Konzert wollten alle ein Foto mit dem [Star].|Efter konserten ville alla ha en bild med stjärnan.|Lånat från engelskan.
+der Fan (-s)|fan, beundrare|m|Ich bin ein großer [Fan] von dieser Band.|Jag är ett stort fan av det här bandet.|Lånat från engelskan.
+beliebt|populär, omtyckt||Dieses Museum ist bei Touristen sehr [beliebt].|Det här museet är väldigt populärt bland turister.|Hör till lieben. Beliebt bei = populär bland.
+das Autogramm (-e)|autograf|n|Ich habe ein [Autogramm] von der Sängerin bekommen!|Jag fick sångerskans autograf!|Från grekiskan.
+der Krimi (-s)|deckare|m|Am Sonntag sehen viele Deutsche den [Krimi] im Fernsehen.|På söndagen ser många tyskar deckaren på tv.|Kortform av Kriminalroman/-film. "Tatort" är den mest kända.
+der Horrorfilm (-e)|skräckfilm|m|Nach dem [Horrorfilm] konnte ich nicht schlafen.|Efter skräckfilmen kunde jag inte sova.|Också der Gruselfilm.
+der Zeichentrickfilm (-e)|tecknad film|m|Als Kind habe ich viele [Zeichentrickfilme] gesehen.|Som barn såg jag många tecknade filmer.|Av zeichnen (teckna) och Trick.
+synchronisiert|dubbad||In Deutschland sind fast alle Filme [synchronisiert].|I Tyskland är nästan alla filmer dubbade.|Particip av synchronisieren (dubba).
+die Galerie (-n)|galleri|f|In der [Galerie] hängen moderne Bilder.|I galleriet hänger moderna tavlor.|Betoning på sista stavelsen.
+der Maler (-)|målare, konstnär|m|Der [Maler] Albrecht Dürer lebte in Nürnberg.|Målaren Albrecht Dürer bodde i Nürnberg.|Femininum: die Malerin. Också yrket "målare".
+die Zeichnung (-en)|teckning|f|An der Wand hängt eine [Zeichnung] von meinem Bruder.|På väggen hänger en teckning av min bror.|Hör till zeichnen.
+der Fotograf (-en)|fotograf|m|Der [Fotograf] hat tolle Bilder vom Konzert gemacht.|Fotografen tog fantastiska bilder från konserten.|Svag maskulin. Femininum: die Fotografin.
+das Buch (Bücher)|bok|n|Das [Buch] war viel besser als der Film.|Boken var mycket bättre än filmen.|Die Bücherei = biblioteket.
+das Ende (-n)|slut|n|Das [Ende] vom Film war sehr traurig.|Slutet på filmen var väldigt sorgligt.|Am Ende = till slut. Zu Ende = slut.
+der Anfang (-fänge)|början|m|Am [Anfang] war das Buch langweilig.|I början var boken tråkig.|Hör till anfangen.
+die Literatur (-en)|litteratur|f|Im Deutschunterricht lesen wir auch [Literatur].|På tyskalektionerna läser vi också litteratur.|Betoning på sista stavelsen.
+der Tanz (Tänze)|dans|m|Der Walzer ist ein [Tanz] aus Österreich.|Valsen är en dans från Österrike.|Tanzen = dansa. Die Tanzschule = dansskolan.
+der Tänzer (-)|dansare|m|Die [Tänzer] im Ballett sind sehr gut trainiert.|Dansarna i baletten är mycket vältränade.|Femininum: die Tänzerin.
+das Ballett (-e)|balett|n|Meine Freundin geht zweimal pro Woche zum [Ballett].|Min kompis går på balett två gånger i veckan.|Från italienskan.
+genießen|njuta av||Ich [genieße] die Musik mit geschlossenen Augen.|Jag njuter av musiken med slutna ögon.|Starkt verb: genoss, hat genossen. Tar ackusativ utan preposition.
+die Begeisterung|entusiasm, hänförelse|f|Das Publikum hat mit [Begeisterung] geklatscht.|Publiken applåderade entusiastiskt.|Begeistert = entusiastisk.
+romantisch|romantisk||Wir haben einen [romantischen] Film gesehen.|Vi såg en romantisk film.|Die Romantik = romantiken (epok).
+merkwürdig|konstig, egendomlig||Das Ende vom Buch fand ich [merkwürdig].|Jag tyckte bokens slut var konstigt.|Av merken (märka) och würdig (värd).
+fantastisch|fantastisk||Die Stimme der Sängerin ist [fantastisch].|Sångerskans röst är fantastisk.|Också phantastisch.
+live|live||Ich möchte die Band einmal [live] sehen.|Jag vill se bandet live någon gång.|Uttalas som på engelska.
+talentiert|begåvad||Mein Bruder ist sehr [talentiert] im Zeichnen.|Min bror är väldigt begåvad på att teckna.|Das Talent = talangen.
+der Stil (-e)|stil|m|Mir gefällt der [Stil] von diesem Maler.|Jag gillar den här målarens stil.|Uttalas [ʃtiːl] eller [stiːl].
+lustig|rolig, lustig||Die Komödie war total [lustig].|Komedin var jätterolig.|Obs.: lustig = rolig (som får en att skratta), inte "konstig".
+spannend|spännande||Das Buch ist so [spannend], ich kann nicht aufhören.|Boken är så spännande att jag inte kan sluta.|Hör till spannen (spänna).
+bunt|färgglad, brokig||Die Bilder von dieser Malerin sind sehr [bunt].|Den här målarens tavlor är väldigt färgglada.|Jämför svenskans "brokig".
+die Idee (-n)|idé|f|Das ist eine super [Idee]!|Det är en jättebra idé!|Betoning på sista stavelsen.
+mögen|tycka om||Ich [mag] klassische Musik.|Jag gillar klassisk musik.|Oregelbundet: mag, mochte, hat gemocht.
+ausleihen|låna (av någon)||Kann ich mir dein Buch [ausleihen]?|Kan jag låna din bok?|Starkt, delbart: lieh aus, hat ausgeliehen.
+die CD (-s)|cd-skiva|f|Früher habe ich viele [CDs] gekauft.|Förr köpte jag många cd-skivor.|Uttalas [tseːˈdeː].
+die Platte (-n)|skiva (vinyl); platta|f|Mein Vater sammelt alte [Platten].|Min pappa samlar på gamla skivor.|Die Schallplatte = grammofonskivan.
+der Hip-Hop|hiphop|m|Zu [Hip-Hop] kann ich gut tanzen.|Till hiphop kan jag dansa bra.|Lånat från engelskan.
+der Thriller (-)|thriller|m|Der [Thriller] war so spannend, dass ich nicht schlafen konnte.|Thrillern var så spännande att jag inte kunde sova.|Lånat från engelskan.
+der Liebesfilm (-e)|kärleksfilm|m|Meine Freundin sieht gern [Liebesfilme].|Min kompis ser gärna kärleksfilmer.|Av Liebe och Film.
+ausstellen|ställa ut||Im Museum werden Bilder von Klimt [ausgestellt].|På museet ställs tavlor av Klimt ut.|Svagt, delbart verb.
+die Statue (-n)|staty|f|Vor der Oper steht eine [Statue] von Mozart.|Framför operan står en staty av Mozart.|Från latin.
+die Kapelle (-n)|musikkår; kapell|f|Beim Fest spielt die [Kapelle] vom Dorf.|På festen spelar byns musikkår.|Också ett litet kyrkorum.
+lieben|älska||Ich [liebe] diesen Song!|Jag älskar den här låten!|Svagt verb. Die Liebe = kärleken.
+die Liebe|kärlek|f|In vielen Liedern geht es um [Liebe].|Många låtar handlar om kärlek.|Hör till lieben.
+niedlich|söt, gullig||Der kleine Hund im Film ist so [niedlich]!|Den lilla hunden i filmen är så gullig!|Om små barn och djur.
+staunen|häpna, förundras||Das Publikum hat über die Artisten [gestaunt].|Publiken häpnade över artisterna.|Svagt verb.
+sich wundern|förvåna sig, undra||Ich [wundere] mich, dass das Konzert so leer ist.|Jag förvånas över att konserten är så tom.|Svagt verb.|<b>sich</b> sig · <b>wundern</b> förundra
+die Gemeinschaft (-en)|gemenskap|f|Im Chor fühle ich mich wie in einer [Gemeinschaft].|I kören känner jag gemenskap.|Av gemein (gemensam) och -schaft.
+gratis|gratis||Das Konzert im Park ist [gratis].|Konserten i parken är gratis.|Också kostenlos, umsonst.
+die Regie|regi|f|Wer hat bei dem Film [Regie] geführt?|Vem har regisserat filmen?|Regie führen = regissera.
+die Leinwand (-wände)|bioduk; duk|f|Auf der großen [Leinwand] sieht der Film toll aus.|På den stora bioduken ser filmen fantastisk ut.|Av Leinen (linne) och Wand.
+der Gewinner (-)|vinnare|m|Der [Gewinner] bekommt 1.000 Euro.|Vinnaren får 1 000 euro.|Hör till gewinnen. Femininum: die Gewinnerin.
+die Talentshow (-s)|talangshow|f|Sie hat bei einer [Talentshow] gesungen.|Hon sjöng i en talangshow.|Av Talent och Show.
+der Refrain (-s)|refräng|m|Den [Refrain] kann ich schon mitsingen.|Refrängen kan jag redan sjunga med i.|Från franskan.
+das Volkslied (-er)|folkvisa|n|Viele deutsche [Volkslieder] sind sehr alt.|Många tyska folkvisor är väldigt gamla.|Av Volk och Lied.
+das Akkordeon (-s)|dragspel|n|Mein Opa spielt [Akkordeon].|Morfar spelar dragspel.|Också die Ziehharmonika.
+das Saxofon (-e)|saxofon|n|Im Jazz hört man oft ein [Saxofon].|I jazz hör man ofta en saxofon.|Också Saxophon.
+die Lesung (-en)|författaruppläsning|f|Die Autorin gibt heute Abend eine [Lesung].|Författaren håller en uppläsning i kväll.|Hör till lesen.
+die Bewertung (-en)|betyg, recension|f|Der Film hat im Internet gute [Bewertungen].|Filmen har bra betyg på nätet.|Hör till bewerten (bedöma).
+#t7|Kap 7 · Schule und Zukunftspläne
+die Schule (-n)|skola|f|Nach der [Schule] gehe ich oft in die Stadt.|Efter skolan går jag ofta in till stan.|In die Schule gehen = gå i skolan.
+die Geografie|geografi|f|In [Geografie] lernen wir etwas über Flüsse und Berge.|I geografi lär vi oss om floder och berg.|Också die Erdkunde.
+der Direktor (-en)|rektor|m|Der [Direktor] hat eine Rede gehalten.|Rektorn höll ett tal.|Också der Schulleiter. Femininum: die Direktorin.
+die Hausaufgaben|läxor|pl|Hast du deine [Hausaufgaben] schon gemacht?|Har du redan gjort dina läxor?|Singular: die Hausaufgabe. Av Haus och Aufgabe.
+das Abi (-s)|studentexamen (vardagligt)|n|Nach dem [Abi] will ich ein Jahr reisen.|Efter studenten vill jag resa ett år.|Kortform av das Abitur. I Österrike och Schweiz: die Matura.
+die Punkte|poäng|pl|Im Test habe ich 45 von 50 [Punkten] bekommen.|På provet fick jag 45 av 50 poäng.|Singular der Punkt (punkt, poäng).
+sitzenbleiben|gå om (en årskurs)||Wer zwei Fünfen hat, kann [sitzenbleiben].|Den som har två femmor kan få gå om.|Starkt verb: blieb sitzen, ist sitzengeblieben. Finns inte i svenska skolan.
+die Realschule (-n)|realskola|f|Mein Bruder geht auf die [Realschule].|Min bror går på realskolan.|Tysk skolform efter klass 4 som slutar efter klass 10.
+die Gesamtschule (-n)|sammanhållen skola|f|An der [Gesamtschule] lernen alle Schüler zusammen.|På Gesamtschule går alla elever tillsammans.|Liknar den svenska grundskolan.
+der Student (-en)|student (på universitet)|m|Mein Cousin ist [Student] in Heidelberg.|Min kusin studerar i Heidelberg.|Svag maskulin. Obs.: bara om högskolestudier. Femininum: die Studentin.
+die Uni (-s)|universitet (vardagligt)|f|Nach der Schule möchte ich an die [Uni].|Efter skolan vill jag börja på universitetet.|Kortform av die Universität.
+die Fachhochschule (-n)|yrkeshögskola|f|An der [Fachhochschule] ist das Studium sehr praktisch.|På Fachhochschule är utbildningen väldigt praktisk.|Förkortas FH. Högskola med tydlig yrkesinriktning.
+der Plan (Pläne)|plan|m|Was sind deine [Pläne] für die Zukunft?|Vad har du för planer för framtiden?|Pläne machen = göra upp planer.
+die Chance (-n)|chans|f|Das Auslandsjahr ist eine große [Chance] für mich.|Utlandsåret är en stor chans för mig.|Uttalas franskt: [ˈʃɑ̃ːsə].
+hoffen|hoppas||Ich [hoffe], dass ich einen Studienplatz bekomme.|Jag hoppas att jag får en studieplats.|Svagt verb. Auf etwas hoffen = hoppas på något.
+die Erklärung (-en)|förklaring|f|Danke für die gute [Erklärung]!|Tack för den bra förklaringen!|Hör till erklären (förklara).
+auswendig|utantill||Das Gedicht müssen wir [auswendig] lernen.|Dikten måste vi lära oss utantill.|Auswendig lernen = plugga in utantill.
+die Aula (Aulen)|aula|f|Die Abschlussfeier ist in der [Aula].|Avslutningen är i aulan.|Från latin.
+die Turnhalle (-n)|gympasal, idrottshall|f|Der Sportunterricht ist heute in der [Turnhalle].|Idrottslektionen är i gympasalen i dag.|Av turnen (gympa) och Halle.
+das Mäppchen (-)|pennfodral|n|In meinem [Mäppchen] sind nur noch zwei Stifte.|I mitt pennfodral finns det bara två pennor kvar.|Också das Federmäppchen.
+der Schulabschluss (-schlüsse)|skolavslutning, examen|m|Ohne [Schulabschluss] ist es schwer, eine Arbeit zu finden.|Utan examen är det svårt att hitta jobb.|Av Schule och Abschluss (avslut).
+kompliziert|komplicerad||Die Aufgabe ist mir zu [kompliziert].|Uppgiften är för komplicerad för mig.|Motsats: einfach.
+die Konzentration|koncentration|f|Für Mathe brauche ich viel [Konzentration].|Till matte behöver jag mycket koncentration.|Sich konzentrieren = koncentrera sig.
+die Mühe (-n)|möda, besvär|f|Ich gebe mir viel [Mühe] mit meinen Hausaufgaben.|Jag anstränger mig mycket med mina läxor.|Sich Mühe geben = anstränga sig.
+der Freiwilligendienst|volontärtjänst|m|Nach dem Abi mache ich einen [Freiwilligendienst] in Afrika.|Efter studenten gör jag volontärtjänst i Afrika.|T.ex. das Freiwillige Soziale Jahr (FSJ).
+die WG (-s)|kollektiv, delad lägenhet|f|Während des Studiums möchte ich in einer [WG] wohnen.|Under studietiden vill jag bo i kollektiv.|Förkortning av die Wohngemeinschaft.
+später|senare, sen||[Später] möchte ich Lehrerin werden.|Senare vill jag bli lärare.|Komparativ av spät.
+leicht|lätt||Der Test war [leichter] als ich dachte.|Provet var lättare än jag trodde.|Motsats: schwer. Komparativ leichter.
+schwer|svår; tung||Physik finde ich sehr [schwer].|Fysik tycker jag är väldigt svårt.|Motsats: leicht.
+einfach|enkel, lätt; helt enkelt||Die erste Aufgabe war ganz [einfach].|Första uppgiften var jättelätt.|Också "enkel biljett": einfach oder hin und zurück?
+die Frage (-n)|fråga|f|Hat jemand noch eine [Frage]?|Har någon en fråga till?|Eine Frage stellen = ställa en fråga.
+die Übung (-en)|övning|f|Macht bitte die [Übung] auf Seite zwölf.|Gör övningen på sidan tolv.|Hör till üben.
+das Wort (Wörter)|ord|n|Dieses [Wort] kenne ich nicht.|Det här ordet kan jag inte.|Plural die Wörter (enskilda ord), die Worte (yttrande).
+die Sprache (-n)|språk|f|Deutsch ist eine schöne [Sprache].|Tyska är ett vackert språk.|Die Fremdsprache = främmande språk.
+erzählen|berätta||[Erzähl] mal, wie war dein erster Schultag?|Berätta, hur var din första skoldag?|Svagt verb: hat erzählt. Von etwas erzählen.
+beschreiben|beskriva||[Beschreib] bitte deine Traumschule.|Beskriv din drömskola.|Starkt verb: beschrieb, hat beschrieben.
+bedeuten|betyda||Was [bedeutet] dieses Wort?|Vad betyder det här ordet?|Svagt verb: bedeutete, hat bedeutet. Die Bedeutung = betydelsen.
+rechnen|räkna||Im Kopf [rechnen] kann ich nicht so gut.|Jag är inte så bra på huvudräkning.|Svagt verb. Mit etwas rechnen = räkna med något.
+sich merken|komma ihåg, lägga på minnet||Ich kann mir die Wörter nicht [merken].|Jag kan inte komma ihåg orden.|Svagt verb med dativ: Ich merke mir das.|<b>sich</b> sig · <b>merken</b> märka → "märka sig"
+raten|gissa; råda||[Rate] mal, welche Note ich bekommen habe!|Gissa vilket betyg jag fick!|Starkt verb: rät, riet, hat geraten. Jemandem raten = ge råd.
+vermuten|anta, gissa||Ich [vermute], dass der Test schwer wird.|Jag antar att provet blir svårt.|Svagt verb. Die Vermutung = antagandet.
+loben|berömma||Die Lehrerin hat mich heute [gelobt].|Läraren berömde mig i dag.|Svagt verb. Das Lob = berömmet.
+schimpfen|skälla, gräla||Mein Vater hat wegen der schlechten Note [geschimpft].|Pappa skällde på grund av det dåliga betyget.|Svagt verb. Mit jemandem schimpfen.
+das Beispiel (-e)|exempel|n|Kannst du mir ein [Beispiel] geben?|Kan du ge mig ett exempel?|Zum Beispiel (z. B.) = till exempel.
+das Gegenteil (-e)|motsats|n|Was ist das [Gegenteil] von „schwer“?|Vad är motsatsen till "svår"?|Im Gegenteil = tvärtom.
+die Zahl (-en)|tal, siffra|f|Schreib die [Zahlen] bitte in Worten.|Skriv talen med bokstäver.|Zählen = räkna (antal). Die Anzahl = antalet.
+das Gespräch (-e)|samtal|n|Ich hatte ein langes [Gespräch] mit meinem Lehrer.|Jag hade ett långt samtal med min lärare.|Hör till sprechen.
+klug|klok, intelligent||Sie ist sehr [klug] und liest viel.|Hon är väldigt klok och läser mycket.|Komparativ klüger, superlativ am klügsten.
+schlau|smart, listig||Das war eine [schlaue] Idee!|Det var en smart idé!|Vardagligare än klug.
+dumm|dum||Es gibt keine [dummen] Fragen.|Det finns inga dumma frågor.|Komparativ dümmer, superlativ am dümmsten.
+intelligent|intelligent||Mein Hund ist sehr [intelligent].|Min hund är väldigt intelligent.|Die Intelligenz = intelligensen.
+frech|fräck, uppkäftig||Sei nicht so [frech] zu deiner Lehrerin!|Var inte så uppkäftig mot din lärare!|Die Frechheit = fräckheten.
+fair|rättvis, schysst||Die Note war nicht [fair].|Betyget var inte rättvist.|Lånat från engelskan. Unfair = orättvis.
+ungeduldig|otålig||Vor den Ferien sind alle Schüler [ungeduldig].|Före lovet är alla elever otåliga.|Motsats: geduldig.
+chaotisch|kaotisk, rörig||Mein Schreibtisch ist ziemlich [chaotisch].|Mitt skrivbord är ganska rörigt.|Das Chaos = kaoset.
+sportlich|sportig, idrottslig||Meine Schwester ist sehr [sportlich].|Min syster är väldigt sportig.|Hör till der Sport.
+musikalisch|musikalisk||Sie ist sehr [musikalisch] und spielt drei Instrumente.|Hon är väldigt musikalisk och spelar tre instrument.|Hör till die Musik.
+mutig|modig||Es war sehr [mutig], vor der ganzen Schule zu singen.|Det var väldigt modigt att sjunga inför hela skolan.|Der Mut = modet. Motsats: feige.
+vorher|innan, före, dessförinnan||Vor dem Test muss ich [vorher] noch lernen.|Innan provet måste jag plugga.|Motsats: nachher (efteråt).
+zuletzt|sist, senast||Wann hast du [zuletzt] ein Buch gelesen?|När läste du en bok senast?|Hör till letzt (sist).
+besonders|särskilt||Mathe finde ich [besonders] schwer.|Matte tycker jag är särskilt svårt.|Besonder- = särskild: ein besonderer Tag.
+einzeln|enskild, en och en||Die Schüler kommen [einzeln] ins Zimmer.|Eleverna kommer in i rummet en och en.|Die Einzelarbeit = enskilt arbete.
+die Ordnung|ordning|f|In meinem Zimmer herrscht [Ordnung].|I mitt rum råder ordning.|In Ordnung! = Okej!
+der Moment (-e)|ögonblick|m|Einen [Moment], bitte!|Ett ögonblick!|Im Moment = för tillfället.
+akzeptieren|acceptera||Ich [akzeptiere] deine Entscheidung.|Jag accepterar ditt beslut.|Svagt verb på -ieren.
+der Rest (-e)|rest, resten|m|Den [Rest] mache ich morgen.|Resten gör jag i morgon.|Jämför svenskans "rest".
+die Summe (-n)|summa|f|Wie hoch ist die [Summe]?|Hur stor är summan?|Från latin.
+die Unterhaltung (-en)|samtal; underhållning|f|Die [Unterhaltung] mit ihr war sehr nett.|Samtalet med henne var väldigt trevligt.|Hör till sich unterhalten (samtala; roa sig).
+testen|testa||Heute [testen] wir, wie viel ihr wisst.|I dag testar vi hur mycket ni kan.|Svagt verb. Der Test = testet.
+wirklich|verkligen, verklig||Ich will [wirklich] Musik studieren.|Jag vill verkligen studera musik.|Die Wirklichkeit = verkligheten.
+der Kurs (-e)|kurs|m|Im Sommer mache ich einen [Kurs] in Wien.|På sommaren går jag en kurs i Wien.|Der Sprachkurs = språkkursen.
+der Klassensprecher (-)|klassrepresentant|m|Ich bin dieses Jahr [Klassensprecher].|Jag är klassrepresentant i år.|Femininum: die Klassensprecherin.
+die Schülerzeitung (-en)|skoltidning|f|Ich schreibe Artikel für die [Schülerzeitung].|Jag skriver artiklar till skoltidningen.|Av Schüler och Zeitung.
+die Präsentation (-en)|presentation|f|Morgen halte ich eine [Präsentation] über Wien.|I morgon håller jag en presentation om Wien.|Präsentieren = presentera.
+die Gruppenarbeit (-en)|grupparbete|f|Bei der [Gruppenarbeit] macht nicht jeder mit.|I grupparbetet är inte alla med.|Av Gruppe och Arbeit.
+der Aufsatz (-sätze)|uppsats|m|Wir müssen einen [Aufsatz] über die Ferien schreiben.|Vi måste skriva en uppsats om lovet.|Av auf och Satz.
+der Notendurchschnitt (-e)|betygsgenomsnitt|m|Für das Studium brauche ich einen guten [Notendurchschnitt].|För studierna behöver jag ett bra betygsgenomsnitt.|Av Note och Durchschnitt (genomsnitt).
+spicken|fuska (på prov)||Beim Test darf man nicht [spicken]!|På provet får man inte fuska!|Svagt verb. Der Spickzettel = fusklappen.
+das Halbjahr (-e)|termin (halvår)|n|Im zweiten [Halbjahr] haben wir mehr Prüfungen.|Andra terminen har vi fler prov.|Av halb och Jahr.
+die Berufsberatung|studie- och yrkesvägledning|f|Bei der [Berufsberatung] bekomme ich Tipps für die Zukunft.|På yrkesvägledningen får jag tips för framtiden.|Av Beruf och Beratung.
+das Au-pair (-s)|au pair|n|Nach dem Abi möchte ich als [Au-pair] nach Frankreich.|Efter studenten vill jag åka till Frankrike som au pair.|Också der/die Au-pair.
+#t8|Kap 8 · Regionen und Dialekte
+das Land (Länder)|land; landsbygd; delstat|n|Deutschland ist ein [Land] mit vielen Dialekten.|Tyskland är ett land med många dialekter.|Auf dem Land = på landet. Också delstat: das Land Bayern.
+die Region (-en)|region, trakt|f|In dieser [Region] spricht man einen starken Dialekt.|I den här regionen pratar man en tydlig dialekt.|Regional = regional.
+die Stadt (Städte)|stad|f|Graz ist die zweitgrößte [Stadt] Österreichs.|Graz är Österrikes näst största stad.|Die Großstadt, die Kleinstadt.
+Deutschland|Tyskland|n|[Deutschland] hat sechzehn Bundesländer.|Tyskland har sexton förbundsländer.|Utan artikel: in Deutschland, nach Deutschland.
+Österreich|Österrike|n|In [Österreich] sagt man „Servus“.|I Österrike säger man "Servus".|Av Ost (öst) och Reich (rike). Nach Österreich fahren.
+die Schweiz|Schweiz|f|Die [Schweiz] hat vier Landessprachen.|Schweiz har fyra nationalspråk.|Alltid med artikel: in der Schweiz, in die Schweiz.
+österreichisch|österrikisk||Das ist ein typisch [österreichisches] Wort.|Det är ett typiskt österrikiskt ord.|Der Österreicher, die Österreicherin.
+schweizerisch|schweizisk||Das [schweizerische] Hochdeutsch klingt anders.|Den schweiziska högtyskan låter annorlunda.|Der Schweizer, die Schweizerin. Schweizer Käse (utan ändelse).
+europäisch|europeisk||Deutsch ist eine wichtige [europäische] Sprache.|Tyska är ett viktigt europeiskt språk.|Europa = Europa.
+die EU|EU|f|Österreich ist seit 1995 in der [EU].|Österrike har varit med i EU sedan 1995.|Die Europäische Union. Schweiz är inte med.
+Bayern|Bayern|n|In [Bayern] trägt man zu Festen oft Tracht.|I Bayern bär man ofta folkdräkt på fester.|Tysklands största delstat. Adjektiv: bayerisch.
+bayerisch|bayersk||Er spricht mit einem [bayerischen] Akzent.|Han pratar med bayersk brytning.|Das Bairisch = den bayerska dialekten.
+norddeutsch|nordtysk||„Moin“ ist ein [norddeutscher] Gruß.|"Moin" är en nordtysk hälsning.|Motsats: süddeutsch.
+süddeutsch|sydtysk||Im [süddeutschen] Raum sagt man „Grüß Gott“.|I södra Tyskland säger man "Grüß Gott".|Av Süd (syd) och deutsch.
+verschieden|olika||In jeder Region gibt es [verschiedene] Wörter für Brötchen.|I varje region finns det olika ord för småfranska.|Synonym: unterschiedlich.
+typisch|typisk||Was ist [typisch] deutsch?|Vad är typiskt tyskt?|Das ist typisch! = Det är typiskt!
+historisch|historisk||Die [historische] Altstadt von Bamberg ist sehr schön.|Den historiska gamla stan i Bamberg är väldigt vacker.|Die Geschichte = historien.
+die Königin (-nen)|drottning|f|Die [Königin] Luise ist in Preußen sehr bekannt.|Drottning Luise är väldigt känd i Preussen.|Maskulinum: der König.
+das Jahrhundert (-e)|århundrade|n|Das Schloss ist aus dem 18. [Jahrhundert].|Slottet är från 1700-talet.|Obs.: das 18. Jahrhundert = 1700-talet.
+das Jahrzehnt (-e)|årtionde|n|Seit einem [Jahrzehnt] wohnt meine Familie in Tirol.|Min familj har bott i Tyrolen i ett årtionde.|Av Jahr och zehn.
+die Gegenwart|nutid|f|Das Buch spielt in der [Gegenwart].|Boken utspelar sig i nutid.|Också "närvaro". Motsats: die Vergangenheit.
+die Politik|politik|f|Interessierst du dich für [Politik]?|Är du intresserad av politik?|Politisch = politisk.
+der Politiker (-)|politiker|m|Der [Politiker] hat eine lange Rede gehalten.|Politikern höll ett långt tal.|Femininum: die Politikerin.
+der Präsident (-en)|president|m|Der deutsche [Präsident] wohnt im Schloss Bellevue.|Tysklands president bor i slottet Bellevue.|Svag maskulin. Regeringschefen heißt Bundeskanzler.
+katholisch|katolsk||Bayern und Österreich sind traditionell [katholisch].|Bayern och Österrike är traditionellt katolska.|Die katholische Kirche.
+evangelisch|evangelisk, protestantisk||Norddeutschland ist mehr [evangelisch].|Nordtyskland är mer protestantiskt.|Luther började reformationen i Wittenberg.
+die Spezialität (-en)|specialitet|f|Knödel sind eine [Spezialität] aus Bayern.|Knödel är en specialitet från Bayern.|Betoning på sista stavelsen.
+der Knödel (-)|klimp, kroppkaka|m|Zum Braten gibt es [Knödel].|Till steken blir det klimpar.|I norra Tyskland: der Kloß.
+das Schnitzel (-)|schnitzel|n|Das Wiener [Schnitzel] ist aus Kalbfleisch.|Wienerschnitzeln är gjord på kalvkött.|Neutrum på tyska.
+das Bier (-e)|öl|n|Bayern ist für sein [Bier] bekannt.|Bayern är känt för sitt öl.|Das Oktoberfest i München är världens största ölfest.
+der Wein (-e)|vin|m|An der Mosel wächst guter [Wein].|Vid Mosel växer det bra vin.|Der Weißwein, der Rotwein.
+das Sackerl (-n)|påse (österrikiska)|n|Brauchen Sie ein [Sackerl]?|Behöver ni en påse?|Österrikiska för die Tüte.
+der Quark|kvarg|m|Zum Kuchen braucht man [Quark].|Till kakan behöver man kvarg.|I Österrike: der Topfen.
+das Trottoir (-s)|trottoar (schweiziska)|n|In Zürich sagt man [Trottoir] statt Bürgersteig.|I Zürich säger man Trottoir i stället för Bürgersteig.|Från franskan, som det svenska "trottoar".
+das Billett (-e)|biljett (schweiziska)|n|Hast du ein [Billett] für den Zug?|Har du en biljett till tåget?|Schweiziska för die Fahrkarte. Från franskan.
+das Natel (-s)|mobiltelefon (schweiziska)|n|Ruf mich auf dem [Natel] an!|Ring mig på mobilen!|Schweiziska för das Handy.
+das Rüebli (-)|morot (schweiziska)|n|Der [Rüebli]kuchen ist eine Spezialität aus dem Aargau.|Morotskakan är en specialitet från Aargau.|Schweiziska för die Karotte / die Möhre.
+das Obers|grädde (österrikiska)|n|Einen Kaffee mit [Obers], bitte!|En kaffe med grädde, tack!|Österrikiska för die Sahne. Schlagobers = vispgrädde.
+die Stiege (-n)|trappa (österrikiska)|f|Die [Stiege] zum Keller ist sehr steil.|Trappan ner till källaren är väldigt brant.|Österrikiska och sydtyska för die Treppe.
+die Brotzeit (-en)|mellanmål (bayerska)|f|Um zehn machen wir [Brotzeit].|Klockan tio tar vi mellanmål.|Bayerska. I Österrike: die Jause, i Schweiz: der Znüni.
+der Metzger (-)|slaktare|m|Beim [Metzger] kaufen wir Wurst.|Hos slaktaren köper vi korv.|I norr: der Schlachter, i öst: der Fleischer.
+der Sonnabend (-e)|lördag (nordtyska)|m|Am [Sonnabend] ist in Hamburg Markt.|På lördag är det marknad i Hamburg.|I norra och östra Tyskland. Annars der Samstag.
+der Tourismus|turism|m|In den Alpen ist der [Tourismus] sehr wichtig.|I Alperna är turismen väldigt viktig.|Der Tourist = turisten.
+die Aprikose (-n)|aprikos|f|In der Wachau wachsen viele [Aprikosen].|I Wachau växer det många aprikoser.|I Österrike: die Marille.
+der Mensch (-en)|människa|m|Hier leben [Menschen] aus vielen Ländern.|Här bor människor från många länder.|Svag maskulin: den Menschen.
+die Leute|folk, människor|pl|Die [Leute] in Köln sind sehr offen.|Folk i Köln är väldigt öppna.|Finns bara i plural.
+anders|annorlunda, annars||In der Schweiz ist vieles [anders].|I Schweiz är mycket annorlunda.|Anders als = annorlunda än.
+überall|överallt||[Überall] in Wien gibt es Kaffeehäuser.|Överallt i Wien finns det kaféer.|Av über och all.
+begrüßen|hälsa (på), välkomna||Die Gastfamilie hat mich herzlich [begrüßt].|Värdfamiljen hälsade mig hjärtligt välkommen.|Svagt verb. Die Begrüßung = hälsningen.
+grüßen|hälsa||[Grüß] deine Eltern von mir!|Hälsa till dina föräldrar från mig!|Svagt verb. Der Gruß = hälsningen.
+unbekannt|okänd||Dieses Wort ist in Norddeutschland [unbekannt].|Det här ordet är okänt i norra Tyskland.|Motsats: bekannt.
+eigen|egen||Die Schweiz hat eine [eigene] Währung.|Schweiz har en egen valuta.|Böjs som adjektiv: mein eigenes Zimmer.
+Ostdeutschland|Östtyskland (östra Tyskland)|n|Leipzig ist eine Stadt in [Ostdeutschland].|Leipzig är en stad i östra Tyskland.|Används om de nya förbundsländerna.
+Westdeutschland|Västtyskland (västra Tyskland)|n|Meine Eltern sind in [Westdeutschland] aufgewachsen.|Mina föräldrar växte upp i Västtyskland.|Förr också om BRD.
+die BRD|Förbundsrepubliken Tyskland|f|Die [BRD] wurde 1949 gegründet.|Förbundsrepubliken grundades 1949.|Bundesrepublik Deutschland.
+der Fleischer (-)|slaktare (östtyska)|m|In Sachsen kauft man Wurst beim [Fleischer].|I Sachsen köper man korv hos slaktaren.|Regionalt ord; i söder der Metzger.
+der Schlachter (-)|slaktare (nordtyska)|m|In Hamburg geht man zum [Schlachter].|I Hamburg går man till slaktaren.|Nordtyskt ord.
+das Mädel (-s)|flicka (sydtyska)|n|Das [Mädel] aus Bayern singt sehr schön.|Tjejen från Bayern sjunger väldigt fint.|Sydtyskt för das Mädchen.
+der Znüni|förmiddagsmellanmål (schweiziska)|m|In der Pause essen die Kinder ihren [Znüni].|På rasten äter barnen sitt mellanmål.|Av "zu neun": mellanmålet klockan nio.
+irgendwo|någonstans||[Irgendwo] in Tirol wohnt meine Tante.|Någonstans i Tyrolen bor min faster.|Irgend- = någon.
+nirgends|ingenstans||So gute Knödel gibt es [nirgends] sonst.|Så goda klimpar finns ingen annanstans.|Också nirgendwo.
+die Kanzlerin (-nen)|kansler (kvinna)|f|Angela Merkel war sechzehn Jahre [Kanzlerin].|Angela Merkel var förbundskansler i sexton år.|Maskulinum: der Kanzler.
+sonst|annars||In Bayern sagt man „Semmel“, [sonst] meistens „Brötchen“.|I Bayern säger man "Semmel", annars oftast "Brötchen".|Sonst noch etwas? = Något mer?
+gleich|lika, samma; strax||Nicht überall spricht man [gleich].|Man pratar inte likadant överallt.|Också "strax": Ich komme gleich.
+außen|utanpå, ute||Von [außen] sieht das Haus ganz alt aus.|Utifrån ser huset jättegammalt ut.|Motsats: innen.
+aussehen|se ut||Das Wiener Rathaus soll wie eine Kirche [aussehen].|Rådhuset i Wien ska se ut som en kyrka.|Starkt, delbart: sah aus, hat ausgesehen.
+bilden|bilda||Österreich [bildet] mit Deutschland und der Schweiz den D-A-CH-Raum.|Österrike bildar D-A-CH-området tillsammans med Tyskland och Schweiz.|Svagt verb.
+verbinden|förbinda||Die Donau [verbindet] viele Länder.|Donau förbinder många länder.|Starkt verb: verband, hat verbunden.
+das Schwäbisch|schwäbiska|n|In Stuttgart hört man oft [Schwäbisch].|I Stuttgart hör man ofta schwäbiska.|Dialekt i Baden-Württemberg.
+das Dreiländereck (-e)|tre länders gränspunkt|n|Basel liegt am [Dreiländereck] von Deutschland, Frankreich und der Schweiz.|Basel ligger där Tyskland, Frankrike och Schweiz möts.|Av drei, Länder och Eck (hörn).
+die Hansestadt (-städte)|hansestad|f|Hamburg und Lübeck sind [Hansestädte].|Hamburg och Lübeck är hansestäder.|Die Hanse var ett handelsförbund på medeltiden.
+der Weinberg (-e)|vingård|m|An der Mosel gibt es viele steile [Weinberge].|Vid Mosel finns det många branta vingårdar.|Av Wein och Berg.
+die Currywurst (-würste)|currywurst|f|In Berlin essen wir eine [Currywurst].|I Berlin äter vi en currywurst.|Berlinsk snabbmat sedan 1949.
+der Trabi (-s)|Trabant (östtysk bil)|m|In der DDR fuhren viele Leute einen [Trabi].|I DDR körde många en Trabant.|Kortform av Trabant.
+#tr|Redemittel · Im Gespräch
+ich finde, dass|jag tycker att||[Ich finde, dass] Wien schöner ist als Berlin.|Jag tycker att Wien är vackrare än Berlin.|Efter dass står verbet sist.|<b>ich</b> jag · <b>finde</b> finner · <b>dass</b> att → "jag finner att"
+ich glaube, dass|jag tror att||[Ich glaube, dass] der Zug Verspätung hat.|Jag tror att tåget är försenat.|Verbet sist i dass-satsen.|<b>ich</b> jag · <b>glaube</b> tror · <b>dass</b> att
+wie bitte?|förlåt, vad sa du?||[Wie bitte]? Ich habe Sie nicht verstanden.|Förlåt? Jag förstod er inte.|Artigt sätt att be någon upprepa.|<b>wie</b> hur · <b>bitte</b> var så god
+können Sie das bitte wiederholen?|kan ni upprepa det?||[Können Sie das bitte wiederholen]? Das war zu schnell.|Kan ni upprepa det? Det gick för fort.|Du-form: Kannst du das wiederholen?|<b>können</b> kan · <b>Sie</b> ni · <b>das</b> det · <b>bitte</b> tack · <b>wiederholen</b> upprepa
+können Sie bitte langsamer sprechen?|kan ni prata långsammare?||Entschuldigung, [können Sie bitte langsamer sprechen]?|Ursäkta, kan ni prata långsammare?|Langsamer = komparativ av langsam.|<b>können</b> kan · <b>Sie</b> ni · <b>langsamer</b> långsammare · <b>sprechen</b> tala
+was bedeutet das?|vad betyder det?||„Heuer“? [Was bedeutet das]?|"Heuer"? Vad betyder det?|Was bedeutet … auf Deutsch?|<b>was</b> vad · <b>bedeutet</b> betyder · <b>das</b> det
+wie sagt man … auf Deutsch?|hur säger man … på tyska?||[Wie sagt man] „tåg“ auf Deutsch?|Hur säger man "tåg" på tyska?|Mycket användbart i samtal.|<b>wie</b> hur · <b>sagt</b> säger · <b>man</b> man · <b>auf Deutsch</b> på tyska
+gute Idee!|bra idé!||Wollen wir ins Kino gehen? – [Gute Idee]!|Ska vi gå på bio? – Bra idé!|Också: Klingt gut! (Låter bra!)|<b>gute</b> bra · <b>Idee</b> idé
+Das freut mich!|vad roligt!, det gläder mig||Du hast die Prüfung bestanden? [Das freut mich]!|Har du klarat provet? Vad roligt!|Av sich freuen.|<b>das</b> det · <b>freut</b> gläder · <b>mich</b> mig
+Das tut mir leid.|det är jag ledsen för, förlåt||Du bist krank? [Das tut mir leid].|Är du sjuk? Vad tråkigt.|Leidtun = beklaga.|<b>das</b> det · <b>tut</b> gör · <b>mir</b> mig · <b>leid</b> ont
+Viel Glück!|lycka till!||Morgen ist die Prüfung? [Viel Glück]!|Är provet i morgon? Lycka till!|Också: Viel Erfolg!|<b>viel</b> mycket · <b>Glück</b> lycka
+Viel Spaß!|ha så roligt!||Du fährst zum Festival? [Viel Spaß]!|Åker du på festival? Ha så kul!|Der Spaß = det roliga.|<b>viel</b> mycket · <b>Spaß</b> skoj
+Hier ist …|det här är … (i telefon)||Hallo, [hier ist] Anna. Ist Paul da?|Hej, det är Anna. Är Paul där?|Så börjar man ett telefonsamtal.|<b>hier</b> här · <b>ist</b> är
+Kann ich eine Nachricht hinterlassen?|kan jag lämna ett meddelande?||Paul ist nicht da? [Kann ich eine Nachricht hinterlassen]?|Är Paul inte där? Kan jag lämna ett meddelande?|Hinterlassen = lämna efter sig.|<b>kann</b> kan · <b>ich</b> jag · <b>eine Nachricht</b> ett meddelande · <b>hinterlassen</b> lämna kvar
+Ich rufe später noch mal an.|jag ringer igen senare||Du hast keine Zeit? [Ich rufe später noch mal an].|Har du inte tid? Jag ringer igen senare.|Anrufen = ringa.|<b>ich</b> jag · <b>rufe … an</b> ringer · <b>später</b> senare · <b>noch mal</b> en gång till
+Liebe Grüße|kärlek, hälsningar (i brev)||[Liebe Grüße] und bis bald, deine Mia|Kram och vi ses snart, din Mia|Informellt. Formellt: Mit freundlichen Grüßen.|<b>liebe</b> kära · <b>Grüße</b> hälsningar
+Ich melde mich.|jag hör av mig||Ich weiß es noch nicht, [ich melde mich].|Jag vet inte än, jag hör av mig.|Sich melden = höra av sig.|<b>ich</b> jag · <b>melde</b> anmäler · <b>mich</b> mig
+Ich habe eine Frage.|jag har en fråga||Entschuldigung, [ich habe eine Frage].|Ursäkta, jag har en fråga.|Också: Darf ich etwas fragen?|<b>ich habe</b> jag har · <b>eine Frage</b> en fråga
+Könnten Sie mir helfen?|skulle ni kunna hjälpa mig?||Entschuldigung, [könnten Sie mir helfen]?|Ursäkta, skulle ni kunna hjälpa mig?|Konjunktiv II = extra artigt. Helfen tar dativ: mir.|<b>könnten</b> skulle kunna · <b>Sie</b> ni · <b>mir</b> mig · <b>helfen</b> hjälpa
+Einen Moment, bitte.|ett ögonblick||[Einen Moment, bitte], ich suche die Nummer.|Ett ögonblick, jag letar efter numret.|Också: Moment mal!|<b>einen Moment</b> ett ögonblick · <b>bitte</b> tack
+Ach so!|jaha!, jaså!||[Ach so]! Jetzt verstehe ich es.|Jaha! Nu förstår jag.|Visar att man har förstått.|<b>ach</b> ack · <b>so</b> så
+Echt?|på riktigt?, verkligen?||Du warst schon dreimal in Wien? [Echt]?|Har du varit i Wien tre gånger redan? På riktigt?|Vardagligt. Formellare: Wirklich?|<b>echt</b> äkta
+Na klar!|självklart!||Kommst du mit? – [Na klar]!|Följer du med? – Självklart!|Vardagligt. Också: Natürlich!|<b>na</b> nå · <b>klar</b> klar
+Wie war's?|hur var det?||Du warst beim Konzert? [Wie war's]?|Var du på konserten? Hur var det?|Kort för Wie war es?|<b>wie</b> hur · <b>war's</b> var det
+Es kommt darauf an.|det beror på||Fährst du mit dem Rad? – [Es kommt darauf an], ob es regnet.|Cyklar du? – Det beror på om det regnar.|Ankommen auf = bero på.|<b>es</b> det · <b>kommt … an</b> kommer an · <b>darauf</b> på det

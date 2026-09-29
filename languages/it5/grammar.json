@@ -1,0 +1,41 @@
+{
+  "topics": [
+    {"id": "cong-pres", "name": "Congiuntivo presente", "sub": "penso che sia, voglio che tu venga, è importante che", "secs": ["m1"]},
+    {"id": "cong-pass", "name": "Congiuntivo passato", "sub": "credo che abbia capito, mi dispiace che sia partita", "secs": ["m1"]},
+    {"id": "cong-cong", "name": "Konjunktioner med congiuntivo", "sub": "benché, affinché, prima che, a patto che, senza che", "secs": ["m2"]},
+    {"id": "passivo", "name": "Passiv", "sub": "è stato scoperto, viene usato, va fatto", "secs": ["m3"]},
+    {"id": "cong-imp", "name": "Congiuntivo imperfetto", "sub": "vorrei che tu venissi, pensavo che fosse", "secs": ["m4"]},
+    {"id": "ipotetico", "name": "Möjliga om-satser", "sub": "se avessi tempo, viaggerei", "secs": ["m4"]},
+    {"id": "cond-pass", "name": "Condizionale passato", "sub": "avrei voluto, ha detto che sarebbe venuto", "secs": ["m5"]},
+    {"id": "disc-ind", "name": "Indirekt tal", "sub": "Dice che è stanco. Ha detto che era stanco.", "secs": ["m5"]},
+    {"id": "pass-rem", "name": "Passato remoto (förstå)", "sub": "nacque, scrisse, fu, ebbe", "secs": ["m6"]},
+    {"id": "inf-pass", "name": "Infinitiv i perfekt", "sub": "dopo aver mangiato, dopo essere arrivata", "secs": ["m6"]},
+    {"id": "cui", "name": "Il cui och cui", "sub": "l'autore il cui libro, la città in cui vivo", "secs": ["m7"]},
+    {"id": "ci-si", "name": "Ci si och si opersonligt", "sub": "ci si alza presto, si è parlato, si diventa", "secs": ["m8"]}
+  ],
+  "rules": {
+    "cp-opin": "Congiuntivo efter åsikt och tvivel",
+    "cp-vol": "Congiuntivo efter vilja och känsla",
+    "cp-imp": "Congiuntivo efter opersonliga uttryck",
+    "cps": "Congiuntivo passato",
+    "cc-conc": "benché, sebbene, nonostante",
+    "cc-fin": "affinché, perché (för att)",
+    "cc-temp": "prima che, senza che, a patto che",
+    "pa-ess": "Passiv med essere",
+    "pa-ven": "Passiv med venire",
+    "pa-and": "Passiv med andare (måste)",
+    "ci-forme": "Congiuntivo imperfettos former",
+    "ci-uso": "Congiuntivo imperfetto: vorrei che, pensavo che",
+    "ip-poss": "Se + congiuntivo imperfetto + condizionale",
+    "cpa-rimp": "Condizionale passato: det som inte blev av",
+    "cpa-fut": "Framtid i dåtid",
+    "di-pres": "Indirekt tal i presens",
+    "di-pass": "Indirekt tal i dåtid",
+    "pr-forme": "Passato remotos former",
+    "ip-dopo": "Dopo aver/essere + particip",
+    "cui-prep": "Preposition + cui",
+    "cui-poss": "Il cui, la cui (vars)",
+    "cisi": "Ci si med reflexiva verb",
+    "si-pp": "Si i sammansatta tempus"
+  }
+}

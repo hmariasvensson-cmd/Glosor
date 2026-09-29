@@ -20,6 +20,8 @@ function student(){const st={pass:5,newCount:10,src:"auto",mode:"mix",vt:{},vv:{
   return st}
 window.__err=[];window.onerror=(m,s,l,c)=>{__err.push(m+" @"+l+":"+c)};
 localStorage.clear();
+// Kurserna som looparna "alla kurser" går igenom. test_minimal_course sätter COURSES_UNDER_TEST till låtsaskursen.
+window.testCourses=()=>window.COURSES_UNDER_TEST||Object.keys(LANGUAGES);
 // Väntar tills cond() gäller (högst ms) i stället för en fast väntetid. appReady: kursen är vald och molnet anslutet och klart.
 window.until=(cond,ms=5000)=>new Promise(r=>{const t0=Date.now();(function p(){let v=false;try{v=cond()}catch(e){} if(v||Date.now()-t0>ms) r(!!v); else setTimeout(p,20);})();});
 window.appReady=()=>until(()=>typeof CLOUD!=="undefined"&&CLOUD.ready&&!CLOUD.busy&&!Object.keys(CLOUD.pending).length&&typeof L!=="undefined"&&!!L&&!!L.base);
@@ -100,7 +102,8 @@ appReady().then(()=>{ try{
   { const t=EX().tasks.find(t=>t.part==="hoeren"); examTask(t.id); ok("tyska: hörprov döljer texten", !!q("#explay")&&q("#lines").hidden); }
   // Tyska 4: egen kurs med egen sparnyckel
   renderStart(); q('[data-only="1"]').click();
-  ok("bara tyska: båda tyska kurserna i väljaren", !q(".coursepick").hidden&&[...q("#course").options].map(o=>o.value).join()==="de4,de,de6", [...q("#course").options].map(o=>o.value).join());
+  { const got=[...q("#course").options].map(o=>o.value), want=Object.keys(LANGUAGES).filter(c=>LANGUAGES[c].name==="Tyska"), sub=got.filter(c=>["de4","de","de6"].includes(c)).join();
+    ok("bara tyska: alla tyska kurser i väljaren, efter steg", !q(".coursepick").hidden&&got.length===want.length&&want.every(c=>got.includes(c))&&sub==="de4,de,de6", got.join()); }
   q('[data-only="0"]').click();
   useLang("de4"); ok("tyska 4: kurs byts", q("#coursechip").textContent.includes("Tyska 4")&&L.storageKey==="glosor-de4-v1");
   ok("tyska 4: egna framsteg", S.pass===1||!Object.keys(S.w).some(id=>LANGUAGES.de.base&&!byId[id]), S.pass);
@@ -126,7 +129,7 @@ appReady().then(()=>{ try{
     { const bad=(C().prompts||[]).filter(p=>!writeChecks(p,p.model).every(c=>c.ok)).map(p=>p.id);
       ok(c+": texter och modelltexter", (C().listening||[]).length>=5&&(C().reading||[]).length>=4&&!bad.length, bad.join()); }
     startMix(); runDe(); ok(c+": blandad runda", !sess); }
-  // Franska 4 och Tyska 6 (steg 6)
+  // Franska 6 (koden fr4), Tyska 6 (steg 6) och Franska I (universitet)
   ok("tyska 5 föreslår tyska 6", LANGUAGES.de.nextCourse==="de6");
   for(const [c,key] of [["fr4","glosor-fr4-v1"],["de6","glosor-de6-v1"],["fru","glosor-fru-v1"]]){ useLang(c);
     ok(c+": egen sparnyckel och ord", L.storageKey===key&&q("#coursechip").textContent.includes(L.course)&&WORDS.length>900, WORDS.length);
@@ -217,7 +220,7 @@ appReady().then(async()=>{ try{
     ok("verb: subjonctif med que", f("avoir","subjonctif",0)==="que j'aie"&&f("avoir","subjonctif",2)==="qu'il/elle ait"&&f("parler","futur simple",3)==="nous parlerons", f("avoir","subjonctif",0)+" | "+f("avoir","subjonctif",2));
     ok("verb: que je tas bort vid rättning", check("que je fasse",["fasse"],true)==="right"); }
   ok("kurs och nivå visas", q("#coursechip").textContent.includes("Franska 3"), q("#coursechip").textContent);
-  ok("kommande kurs går inte att välja", [...q("#course").options].some(o=>o.disabled&&o.text.includes("Italienska 3")));
+  { const soon=UPCOMING.filter(u=>!LANGUAGES[u.code]); ok("kommande kurser går inte att välja", soon.every(u=>[...q("#course").options].some(o=>o.disabled&&o.text.startsWith(u.course+" · ")&&o.text.endsWith("kommer"))), soon.length+" kommande"); }
   ok("dagens pass finns", !!q("#daily"));
   ok("bokpanel med kapitel", !!q("#chapter")&&q(".book").textContent.includes("Escalade"));
   q("#chapter").value="k2"; q("#chapter").dispatchEvent(new Event("change"));
@@ -331,7 +334,7 @@ appReady().then(async()=>{ try{
   { const keep=S.log.slice(); for(let i=0;i<1100;i++) S.log.push({d:Date.now()-i*1000,dur:10,right:1,total:1,kind:"dict"}); save();
     ok("gammal logg sammanfattas", S.log.length===1000&&S.logOld&&S.logOld.dur>0, S.log.length+" "+JSON.stringify(S.logOld)); S.log=keep; delete S.logOld; save(); }
   renderStart(); q('[data-gy="1"]').click(); ok("Gy25-namn", q("#coursechip").textContent.includes("fortsättning, nivå 1")); q('[data-gy="0"]').click();
-  renderStart(); q('[data-only="1"]').click(); ok("bara franska: bara de franska kurserna i väljaren", onlyCourse()==="fr"&&!q(".coursepick").hidden&&[...q("#course").options].map(o=>o.value).join()==="fr,fr4,fru", [...q("#course").options].map(o=>o.value).join()); q('[data-only="0"]').click();
+  renderStart(); q('[data-only="1"]').click(); { const got=[...q("#course").options].map(o=>o.value); ok("bara franska: bara de franska kurserna i väljaren", onlyCourse()==="fr"&&!q(".coursepick").hidden&&got.every(c=>LANGUAGES[c]&&LANGUAGES[c].name==="Franska")&&got.filter(c=>["fr","fr4","fru"].includes(c)).join()==="fr,fr4,fru", got.join()); } q('[data-only="0"]').click();
   ok("visa alla kurser igen", !q(".coursepick").hidden&&!onlyCourse());
   setView("fb"); ok("tyck till: flik", q("#tab-fb").getAttribute("aria-selected")==="true"&&!!q("#fbtext"));
   q("#fbsend").click(); ok("tyck till: tomt meddelande skickas inte", !Object.keys(__remote).some(k=>k.startsWith("feedback/")));
@@ -441,7 +444,7 @@ appReady().then(async()=>{ try{
     ok("rättelser: hörprov säger att ljudet är av", q("#plays").textContent.includes("avstängt"));
     q("#explay").click(); ok("rättelser: hörprov slår på ljudet", SOUND&&q("#plays").textContent.includes("Uppspelad 1")); openExam(); }
   // Alla kurser: Hitta felet, glosor, tempus i skrivuppgifterna
-  for(const c of Object.keys(LANGUAGES)){ useLang(c);
+  for(const c of testCourses()){ useLang(c);
     if(c==="fr4"){ const p={min:1,max:200,need:{connectors:2}}, a=writeChecks(p,"Il pleut, c’est pourquoi je reste, alors que tu sors.")[1];
       ok("rättelser: fr4 c’est pourquoi och alors que", a.ok&&a.label.includes("c'est pourquoi")&&a.label.includes("alors que")&&!/alors,|alors\)/.test(a.label), a.label);
       ok("rättelser: fr4 éclairait är inte conditionnel", !L.tenseCheck.conditionnel("La lune éclairait la rue.")&&L.tenseCheck.conditionnel("Je voudrais venir.")); }
@@ -451,7 +454,8 @@ appReady().then(async()=>{ try{
     errBase().forEach(b=>errAlts(b).forEach(i=>{ n++; const x=errItem(`err|${b.id}|${i}`), bad=x.bad, pre=b.p.parts[0], post=b.p.parts[1];
       if((/\p{L}$/u.test(pre)&&/^\p{L}/u.test(bad))||(/\p{L}$/u.test(bad)&&/^\p{L}/u.test(post))||/'\s/.test(gapos(bad)+post.slice(0,1))) glued.push(x.wrongText);
       if(x.opts.length<4) few.push(b.id); }));
-    ok(`rättelser: ${c}: Hitta felet utan ihopklistrade ord`, n>0&&!glued.length, n+" "+glued.slice(0,3).join(" | "));
+    // Kurser utan grammatikfrågor (t.ex. en ny, liten kurs) har ingen Hitta felet
+    ok(`rättelser: ${c}: Hitta felet utan ihopklistrade ord`, (n>0||!hasGrammar())&&!glued.length, n+" "+glued.slice(0,3).join(" | "));
     ok(`rättelser: ${c}: Hitta felet har minst 3 felalternativ`, !few.length, few.slice(0,5).join());
     const tc=Object.keys(L.tenseCheck||{}), badT=(C().prompts||[]).flatMap(p=>((p.need||{}).tenses||[]).filter(t=>!tc.includes(t)).map(t=>p.id+": "+t));
     ok(`rättelser: ${c}: need.tenses finns i tenseCheck`, !badT.length, badT.join(", "));
@@ -635,9 +639,9 @@ appReady().then(async()=>{ try{
 </script>"""
 
 
-def run(scenario, budget=5000):
-    page = (ROOT / "dist" / "preview.html").read_text(encoding="utf-8")
-    html = page.replace("<title>", SEED + "<title>", 1).replace("</body></html>", scenario + "</body></html>")
+def run(scenario, budget=5000, root=ROOT, head=""):
+    page = (root / "dist" / "preview.html").read_text(encoding="utf-8")
+    html = page.replace("<title>", SEED + head + "<title>", 1).replace("</body></html>", scenario + "</body></html>")
     with tempfile.TemporaryDirectory() as tmp:
         f = pathlib.Path(tmp) / "test.html"; f.write_text(html, encoding="utf-8")
         dump = pathlib.Path(tmp) / "dump.html"
@@ -669,7 +673,7 @@ setTimeout(async()=>{ try{
   q("#course").value=other; q("#course").dispatchEvent(new Event("change"));
   ok("byte av kurs visar att den hämtas", q("#app").textContent.includes("Hämtar"));
   await wait(()=>L.code===other);
-  ok("byte av kurs hämtar nästa kurs", L.code===other&&WORDS.length>200, other);
+  ok("byte av kurs hämtar nästa kurs", L.code===other&&WORDS.length>0, other+" "+WORDS.length);
  }catch(e){ ok("undantag", false, e.message); }
  ok("inga JavaScript-fel", !__err.length, __err.join(" ; "));
  document.body.insertAdjacentHTML("beforeend","<pre id=out>"+out.join("\n").replace(/</g,"&lt;")+"</pre>");
@@ -751,7 +755,7 @@ setTimeout(async()=>{ try{
       &&f4.verbs.tenses===fr.verbs.tenses, Object.keys(f4.tenseCheck).join());
     ok("arv: it2 hämtar artiklar, pronomen, elision, bindeord och tempusigenkänning från it1",
       ["articles","hintStrip","pronouns","elision","connectors","tenseCheck"].every(k=>i2[k]===i1[k])&&i2.verbs!==i1.verbs);
-    ok("arv: fält som inte står i inherit ärvs inte", d6.nextCourse===undefined&&d4.nextCourse==="de"&&d4.elective===undefined&&f4.book===undefined&&i2.nextCourse===undefined&&f4.storageKey==="glosor-fr4-v1");
+    ok("arv: fält som inte står i inherit ärvs inte", String(d6.nextCourse)!==String(LANGUAGES.de.nextCourse)&&d4.nextCourse==="de"&&d4.elective===undefined&&f4.book===undefined&&String(i2.nextCourse)!==String(i1.nextCourse)&&f4.storageKey==="glosor-fr4-v1");
     const m=mergeInherited({a:[1],b:{x:1,y:2,z:3},c:1},{a:{$append:[2]},b:{$remove:["y"],z:9,w:4}});
     ok("arv: sammanslagningen ($append, $remove, egna fält vinner, förälderns ordning)", canon(m)===canon({a:[1,2],b:{x:1,z:9,w:4},c:1})&&canon(Object.keys(m.b))==='["x","z","w"]', canon(m)); }
 
@@ -993,8 +997,9 @@ const allRight=n0=>{const l=logsSince(n0); return l.length>0&&l.every(e=>e.right
   // 5. Alla kurser
   const t0=Date.now(), commaInfo=[]; let commaN=0, commaSplit=0;
   const conj=new Set(["weil","dass","aber","ob","und","oder","denn","wenn","mais","que","et","ou","car","donc","ma","e","o","che","perché","però"]);
-  for(const c of Object.keys(LANGUAGES)){
+  for(const c of testCourses()){
     useLang(c); await wait(()=>L.code===c&&WORDS&&WORDS.length>0&&!sess,5000);
+    if(!(L.base&&L.base.words.length)){ ok(c+": kursen har ord i words.txt (krävs för att övningarna ska testas)", false); continue; }
     const e0=__err.length; S.runs={}; delete S.run;
     Object.values(LANGUAGES).forEach(x=>(Array.isArray(x.connectors)?x.connectors:[]).forEach(s=>conj.add(norm(s))));
     // Glosquiz
@@ -1008,7 +1013,7 @@ const allRight=n0=>{const l=logsSince(n0); return l.length>0&&l.every(e=>e.right
     // Varje övning i menyn
     const menu=exGroups().flatMap(g=>g.items.map(h=>(h.match(/data-ex="(\w+)"/)||[])[1]).filter(Boolean));
     ok(c+": varje knapp i menyn har en typ med open", menu.every(id=>KINDS[id]&&KINDS[id].open), menu.join());
-    const need=["lq","rq","story","phr","ktest","dict","trans","order","shadow"].concat((C().prompts||[]).length?["write"]:[],hasGrammar()?["gram"]:[],(C().uttal||[]).length?["utt"]:[],hasExam()?["exam"]:[],(C().culture||[]).length?["culture"]:[]);
+    const need=["ktest","dict","trans","order","shadow"].concat((C().listening||[]).length?["lq"]:[],(C().reading||[]).length?["rq"]:[],(C().stories||[]).length?["story"]:[],(C().phrases||[]).length?["phr"]:[],(C().prompts||[]).length?["write"]:[],hasGrammar()?["gram"]:[],(C().uttal||[]).length?["utt"]:[],hasExam()?["exam"]:[],(C().culture||[]).length?["culture"]:[]);
     ok(c+": alla övningar som kursen har innehåll för finns i menyn", need.every(k=>menu.includes(k)), need.filter(k=>!menu.includes(k)).join()+" · "+menu.length+" övningar");
     for(const id of menu){ const n0=S.log.length; let res=null, info="";
       try{
@@ -1045,7 +1050,7 @@ const allRight=n0=>{const l=logsSince(n0); return l.length>0&&l.every(e=>e.right
       ok(c+": facit med komma blir aldrig ett enstaka bindeord eller en bit av en fras", !bad.length, bad.slice(0,6).join(" | ")); }
     ok(c+": inga JavaScript-fel", __err.length===e0, __err.slice(e0).join(" ; "));
   }
-  ok("alla kurser genomspelade", true, Object.keys(LANGUAGES).join(", "));
+  ok("alla kurser genomspelade", true, testCourses().join(", "));
   { const ck=(code,i,w)=>{const k=L; L=LANGUAGES[code]; try{return check(i,variants(w))}finally{L=k}};
     const va=(code,w)=>{const k=L; L=LANGUAGES[code]; try{return variants(w)}finally{L=k}};
     ok("facit: moniteur de ski och monitrice de ski godkänns", ck("fr","moniteur de ski","moniteur, monitrice de ski")==="right"&&ck("fr","monitrice de ski","moniteur, monitrice de ski")==="right"
@@ -1053,7 +1058,7 @@ const allRight=n0=>{const l=logsSince(n0); return l.length>0&&l.every(e=>e.right
     ok("facit: weil godkänns inte för en fras med komma", ck("de6","weil","ich habe dieses Thema gewählt, weil")==="wrong"&&ck("de6","aber","das mag sein, aber")==="wrong"&&ck("fr","c'est","ce qui me plaît, c'est")==="wrong");
     ok("facit: former av samma ord godkänns fortfarande", ["vif","vive"].every(x=>ck("fr",x,"vif, vive")==="right")&&ck("fr","petite amie","petit ami, petite amie")==="right"
       &&ck("fr4","l'envoyée spéciale","l'envoyé spécial, l'envoyée spéciale")==="right"&&ck("fr4","monsieur","Madame, Monsieur")!=="right");
-    ok("facit: ord med komma i alla kurser", commaN>200, commaN+" ord med komma, "+commaSplit+" delas i former, t.ex. "+commaInfo.filter(s=>/moniteur|petit ami|envoyé/.test(s)).join(" | ")); }
+    ok("facit: ord med komma i alla kurser", commaN>200||!!window.COURSES_UNDER_TEST, commaN+" ord med komma, "+commaSplit+" delas i former, t.ex. "+commaInfo.filter(s=>/moniteur|petit ami|envoyé/.test(s)).join(" | ")); }
   useLang("fr");
  }catch(e){ ok("undantag", false, e.message+" "+(e.stack||"").split("\n")[1]); }
  ok("inga JavaScript-fel", !__err.length, __err.join(" ; "));
@@ -1140,7 +1145,7 @@ const SA=[
   delete L.content.transkription; delete L.content.satsanalys; renderStart();
   ok("ipa/sats: knapparna försvinner utan innehåll", !menuIds().includes("ipa")&&!menuIds().includes("sats"));
   // Andra kurser än fru har inga knappar
-  for(const c of Object.keys(LANGUAGES).filter(c=>c!=="fru"&&c!=="fr")){ useLang(c); await wait(()=>L.code===c&&WORDS&&!sess,5000);
+  for(const c of testCourses().filter(c=>c!=="fru"&&c!=="fr")){ useLang(c); await wait(()=>L.code===c&&WORDS&&!sess,5000);
     ok(c+": inga knappar för transkription och satsanalys", !menuIds().includes("ipa")&&!menuIds().includes("sats")); }
   // Kursens eget innehåll
   if(LANGUAGES.fru){ useLang("fru"); await wait(()=>L.code==="fru"&&L.base&&!sess,5000);
@@ -1241,7 +1246,7 @@ const ok=(name,cond,info="")=>out.push((cond?"OK   ":"FEL  ")+name+(info?"  ("+i
 const crit={kriterier:[{namn:"A",poang:4},{namn:"B",poang:4},{namn:"C",poang:4},{namn:"D",poang:4}],helhet:"Bra."};
 appReady().then(async()=>{ try{
   const keep=SAMPLE; SAMPLE={json:async()=>JSON.parse(JSON.stringify(crit))};
-  for(const c of Object.keys(LANGUAGES)){ useLang(c); await until(()=>L.code===c&&L.base&&!sess,5000);
+  for(const c of testCourses()){ useLang(c); await until(()=>L.code===c&&L.base&&!sess,5000);
     if(!hasExam()) continue;
     const e=EX(), want=[]; e.tasks.forEach(t=>{ if(exKind(t)!=="speak"&&!want.includes(t.part+"|"+t.teil)) want.push(t.part+"|"+t.teil); });
     S.exam={t:{},sims:[{d:Date.now()-86400000,parts:{[e.parts[0].id]:40}}]}; delete S.drafts; delete S.fb;
@@ -1326,6 +1331,48 @@ appReady().then(async()=>{ try{
     ok("trasigt moln: läget lagas och tas emot efter tre försök", S.pass===lp+10&&CLOUD.ready, S.pass+" "+lp);
     ok("trasigt moln: inga ord försvinner", Object.keys(S.w).length>=localWords, Object.keys(S.w).length+" "+localWords);
     ok("trasigt moln: alla bitar skrivs om och stämmer igen", !!d&&d.parts[wn]!=="annan-rev"&&Object.keys(d.parts).every(n=>__remote[K+"~"+n]&&__remote[K+"~"+n].rev===d.parts[n])&&d.head.pass===lp+10); }
+ }catch(e){ ok("undantag", false, e.message+" "+(e.stack||"").split("\n")[1]); }
+ ok("inga JavaScript-fel", !__err.length, __err.join(" ; "));
+ document.body.insertAdjacentHTML("beforeend","<pre id=out>"+out.join("\n").replace(/</g,"&lt;")+"</pre>");
+});
+</script>"""
+
+
+# ---------------------------------------------------------------------------------------------------------
+# Nivåstyrd bedömning (2026-09-29): Claudes bedömningsprompt i provträningen (examPrompt, 70-exam.js) och för
+# skrivuppgifter (feedbackPrompt, 00-common.js) följer uppgiftens/provets/kursens nivå (A1–C1), elevbeskrivningen
+# byggs av kursen, och musikmålet nämns bara när lang.js har fältet goal. Korta A1-uppgifter (formulär) går att skicka.
+# ---------------------------------------------------------------------------------------------------------
+SCENARIO_LEVELPROMPT = r"""<script>
+const out=[]; const q=s=>document.querySelector(s);
+const ok=(name,cond,info="")=>out.push((cond?"OK   ":"FEL  ")+name+(info?"  ("+info+")":""));
+appReady().then(async()=>{ try{
+  const codes=testCourses(), lvOf=c=>cefrOf(LANGUAGES[c].exam&&LANGUAGES[c].exam.level)||cefrOf(LANGUAGES[c].level,true);
+  // A1-kurs: helst en med nivå A1 och provträning (Franska 1), annars en med provet på A1
+  const a1=codes.filter(c=>lvOf(c)==="A1").sort((x,y)=>(LANGUAGES[y].level==="A1")-(LANGUAGES[x].level==="A1")||(y==="fr1")-(x==="fr1"))[0], b2=codes.find(c=>lvOf(c)==="B2"&&LANGUAGES[c].goal), nogoal=a1&&!LANGUAGES[a1].goal?a1:codes.find(c=>!LANGUAGES[c].goal);
+  ok("det finns en A1-kurs och en B2-kurs att testa", !!a1&&!!b2, a1+" "+b2);
+  const prompts=async c=>{ useLang(c); await until(()=>L.code===c&&L.base&&!sess,8000);
+    const t=hasExam()&&EX().tasks.find(x=>exKind(x)==="write");
+    return {fb:feedbackPrompt("Écris un texte.","Bonjour je m'appelle Anna."), ex:t?examPrompt(t,"Bonjour je m'appelle Anna.",false):null, t}; };
+  if(a1){ const r=await prompts(a1);
+    ok(a1+": skrivprompten gäller kursens nivå", r.fb.includes("förväntas på nivå "+cefrOf(L.level,true))&&/^A/.test(cefrOf(L.level,true))&&r.fb.includes(LEVEL_GUIDE[cefrOf(L.level,true)]), r.fb.slice(0,200));
+    ok(a1+": elevbeskrivningen är generell", r.fb.includes("svensk elev som läser "+L.course)&&!/gymnasieelev som ska söka/.test(r.fb));
+    if(r.ex){ ok(a1+": provprompten bedömer mot A1", r.ex.includes("helt på A1-nivå")&&!r.ex.includes("B1-nivå"), r.ex.slice(-400));
+      ok(a1+": provprompten har A1-kriterier", r.ex.includes("A1: korta, enkla texter")); }
+    // Kort A1-uppgift (formulär): färre än 15 ord räcker för att skicka in
+    const f=hasExam()&&EX().tasks.filter(x=>exKind(x)==="write").sort((x,y)=>x.minWords-y.minWords)[0];
+    if(f&&f.minWords<30){ const keep=SAMPLE; let called=0; SAMPLE={json:async()=>{called++; return {kriterier:[{namn:"A",poang:3}],helhet:"Bra."};}};
+      examWrite(f); q("#xtext").value="Nom : Svensson. Prénom : Anna. Âge : 15 ans. Pays : Suède."; q("#exdone").click();
+      await until(()=>called,3000); ok(a1+": formulär med 12 ord skickas till bedömning", called===1, q("#exres").textContent.slice(0,120));
+      SAMPLE=keep; openExam(); } }
+  if(nogoal){ const r=await prompts(nogoal);
+    ok(nogoal+": ingen musikmening utan goal", !/musik/i.test(r.fb)&&!(r.ex&&/musik/i.test(r.ex)), (r.fb.match(/.{0,60}musik.{0,60}/i)||[""])[0]); }
+  if(b2){ const r=await prompts(b2);
+    ok(b2+": skrivprompten har kursens elevbeskrivning och mål", r.fb.includes(L.course)&&r.fb.includes(L.goal));
+    if(r.ex){ ok(b2+": provprompten bedömer mot B2", r.ex.includes("helt på B2-nivå")&&r.ex.includes("B2: tydlig, detaljerad text"), r.ex.slice(-300));
+      ok(b2+": provprompten nämner målet", /musik/.test(r.ex)); } }
+  ok("nivå ur text", cefrOf("A1 → A2",true)==="A2"&&cefrOf("CELI 1 (A2)")==="A2"&&cefrOf("Goethe-Zertifikat A1: Start Deutsch 1")==="A1"&&cefrOf("")===null);
+  ok("ordgräns för kommentarer", minForFeedback(15)===8&&minForFeedback(40)===15&&minForFeedback(160)===15&&minForFeedback()===15&&minForFeedback(6)===5);
  }catch(e){ ok("undantag", false, e.message+" "+(e.stack||"").split("\n")[1]); }
  ok("inga JavaScript-fel", !__err.length, __err.join(" ; "));
  document.body.insertAdjacentHTML("beforeend","<pre id=out>"+out.join("\n").replace(/</g,"&lt;")+"</pre>");
@@ -1445,6 +1492,152 @@ appReady().then(async()=>{ try{
 </script>"""
 
 
+# ---------------------------------------------------------------------------------------------------------
+# En ny, liten kurs (2026-09-29, 8 → 21 kurser): en låtsaskurs med bara lang.js och words.txt (inget content, ingen
+# grammatik, inga verb, inget prov) byggs i en temporär kopia. Bygget ska gå igenom, kursen ska stå i väljaren under
+# sitt språk sorterad efter steg, kommande kurser står diskret som "kommer", nextCourse som lista ger två vägar, och
+# looparna "alla kurser" i SCENARIO_FIXES och SCENARIO_KINDS körs på låtsaskursen (COURSES_UNDER_TEST; SCENARIO_IPA och
+# SCENARIO_EXAMSIM använder också testCourses() och hoppar över kurser utan innehållet).
+# Byggkontrollerna för step och nextCourse-listor testas också här.
+# ---------------------------------------------------------------------------------------------------------
+FIXTURE_COURSES = ["fr", "fr4", "fru", "de", "de4", "de6", "it1", "it2"]   # kurserna som följer med in i kopian
+MINI_LANG = """/* Låtsaskurs för testerna (tests/run_tests.py, test_minimal_course): bara det en ny kurs måste ha. */
+LANGUAGES.zz1 = {
+  name: "Franska",
+  title: "Franska glosor",
+  course: "Testfranska 1",
+  step: 1,
+  level: "A1",
+  inLang: "på franska",
+  tts: "fr-FR",
+  storageKey: "glosor-zz1-test",
+  nextCourse: ["fr", "fr4"],
+};
+"""
+MINI_WORDS = """// Låtsaskursens ordlista
+#z1|Hälsningar
+bonjour|hej||Bonjour, Marie !|Hej, Marie!|
+merci|tack||Merci beaucoup.|Tack så mycket.|
+au revoir|hej då||Au revoir, Paul.|Hej då, Paul.|
+oui|ja|||| 
+non|nej||Non, merci.|Nej tack.|
+le chat|katten|m|Le chat dort.|Katten sover.|
+la maison|huset|f|La maison est grande.|Huset är stort.|
+le livre|boken|m|Je lis le livre.|Jag läser boken.|
+la table|bordet|f|Le livre est sur la table.|Boken ligger på bordet.|
+le pain|brödet|m|Je mange du pain.|Jag äter bröd.|
+#z2|Familjen
+la mère|mamma|f|Ma mère travaille.|Min mamma arbetar.|
+le père|pappa|m|Mon père chante.|Min pappa sjunger.|
+la sœur|systern|f|Ma sœur a dix ans.|Min syster är tio år.|
+le frère|brodern|m|Mon frère joue au foot.|Min bror spelar fotboll.|
+l'ami|vännen|m|C'est mon ami.|Det är min vän.|
+l'amie|väninnan|f|C'est mon amie Léa.|Det är min väninna Léa.|
+la famille|familjen|f|Ma famille est petite.|Min familj är liten.|
+le fils|sonen|m|Son fils est grand.|Hennes son är lång.|
+la fille|dottern|f|Leur fille est gentille.|Deras dotter är snäll.|
+l'enfant|barnet|m|L'enfant rit.|Barnet skrattar.|
+"""
+SCENARIO_MINI = r"""<script>
+const out=[]; const q=s=>document.querySelector(s);
+const ok=(name,cond,info="")=>out.push((cond?"OK   ":"FEL  ")+name+(info?"  ("+info+")":""));
+const noScroll=()=>{ document.body.style.width="320px"; const w=document.documentElement.scrollWidth, r=q(".coursebar").getBoundingClientRect(), s=q("#course").getBoundingClientRect();
+  document.body.style.width=""; return w<=window.innerWidth&&s.right<=r.right+.5; };
+appReady().then(async()=>{ try{
+  const opts=[...q("#course").options], groups=[...q("#course").querySelectorAll("optgroup")].map(g=>g.label);
+  ok("ny kurs: finns i LANGUAGES och i väljaren", !!LANGUAGES.zz1&&opts.some(o=>o.value==="zz1"&&!o.disabled));
+  ok("väljaren: en grupp per språk", groups.length>=3&&new Set(groups).size===groups.length&&groups[0]==="Franska", groups.join());
+  const fr=[...q('#course optgroup[label="Franska"]').querySelectorAll("option")];
+  const steps=fr.map(o=>{const m=o.text.match(/steg (\d)/); return m?+m[1]:o.text.includes("universitet")?8:9;});
+  const zi=fr.findIndex(o=>o.value==="zz1");
+  ok("väljaren: sorterad efter steg inom språket", steps.every((s,i)=>!i||s>=steps[i-1])&&zi>=0&&steps[zi]===1&&(zi===0||steps[zi-1]===1), fr.map(o=>o.text).join(" | "));
+  const z=fr.find(o=>o.value==="zz1"); ok("väljaren: Testfranska 1 · steg 1 · A1", z&&z.text==="Testfranska 1 · steg 1 · A1", z&&z.text);
+  const f3=fr.find(o=>o.value==="fr"); ok("väljaren: steg, nivå och provmål", f3&&f3.text==="Franska 3 · steg 3 · A2 · mål DELF B1", f3&&f3.text);
+  const f6=fr.find(o=>o.value==="fr4"); ok("väljaren: fr4 heter Franska 6 (steg 6, B1)", f6&&f6.text==="Franska 6 · steg 6 · B1 · mål DELF B1", f6&&f6.text);
+  const fu=fr.find(o=>o.value==="fru"); ok("väljaren: Franska I motsvarar steg 7 (B2) och står sist", fu&&fu.text==="Franska I (universitet) · motsvarar steg 7 · B2 · mål DELF B2"&&fr[fr.length-1]===fu, fu&&fu.text);
+  const soon=opts.filter(o=>o.disabled); ok("väljaren: kommande kurser går inte att välja och står som kommer", soon.length===UPCOMING.filter(u=>!LANGUAGES[u.code]).length&&soon.every(o=>/ – kommer$/.test(o.text)&&!o.value.match(/^[a-z]+\d$/)), soon.length+" "+(soon[0]&&soon[0].text));
+  ok("väljaren: kommande kurs som redan finns visas inte två gånger", !soon.some(o=>/^(Franska 3|Tyska 5) /.test(o.text)));
+  ok("väljaren: ryms i 320 px", noScroll());
+  // Välj kursen
+  q("#course").value="zz1"; q("#course").dispatchEvent(new Event("change")); await until(()=>L.code==="zz1"&&L.base&&!sess,5000);
+  ok("ny kurs: vald och har ord", L.code==="zz1"&&WORDS.length===20, WORDS.length);
+  ok("ny kurs: rubriken visar steg och nivå", q("#coursechip").textContent==="Testfranska 1 · steg 1 · nivå A1", q("#coursechip").textContent);
+  ok("ny kurs: startsidan och menyn", !!q("#go")&&exGroups().length>0&&!q("#app").textContent.includes("undefined"));
+  setView("stats"); ok("ny kurs: statistiken", !/undefined|NaN/.test(q("#app").textContent)); setView("ova");
+  // nextCourse som lista: två vägar
+  const keep=S.w; S.w={}; WORDS.forEach(w=>S.w[w.id]={s:5,due:9e9,dd:Date.now()+864e7}); rebuildWords&&rebuildWords(); renderStart();
+  const nb=[...document.querySelectorAll("[data-nextc]")].map(b=>b.dataset.nextc);
+  ok("nextCourse som lista: två knappar", nb.join()==="fr,fr4"&&q("#app").textContent.includes("Redo för Franska 3 eller Franska 6"), nb.join());
+  document.querySelector('[data-nextc="fr4"]').click(); await until(()=>L.code==="fr4"&&L.base,5000);
+  ok("nextCourse som lista: knappen byter kurs", L.code==="fr4");
+  useLang("zz1"); S.w=keep; save();
+  ok("nextCourses: sträng och lista", nextCourses({nextCourse:"fr4"}).join()==="fr4"&&nextCourses(LANGUAGES.zz1).join()==="fr,fr4"&&nextCourses({nextCourse:["finnsinte"]}).length===0);
+ }catch(e){ ok("undantag", false, e.message+" "+(e.stack||"").split("\n")[1]); }
+ ok("inga JavaScript-fel", !__err.length, __err.join(" ; "));
+ document.body.insertAdjacentHTML("beforeend","<pre id=out>"+out.join("\n").replace(/</g,"&lt;")+"</pre>");
+});
+</script>"""
+
+
+def test_minimal_course():
+    import json, shutil
+    out = []
+    ok = lambda name, cond, info="": out.append(("OK   " if cond else "FEL  ") + name + (f"  ({info})" if info else ""))
+    with tempfile.TemporaryDirectory() as tmp:
+        t = pathlib.Path(tmp) / "g"
+        # Bara de etablerade kurserna följer med, så att kurser som är under arbete inte stör testet av låtsaskursen
+        skip = lambda d, names: [n for n in names if pathlib.Path(d) == ROOT / "languages" and (ROOT / "languages" / n).is_dir() and n not in FIXTURE_COURSES]
+        ign = shutil.ignore_patterns(".git", "dist", "book", "*.jpg", "*.jpeg", "*.png", "*.heic", "*.pdf")
+        shutil.copytree(ROOT, t, ignore=lambda d, names: set(ign(d, names)) | set(skip(d, names)))
+        # nextCourse som pekar på en kurs som inte följde med (t.ex. fr → frs4) tas bort i kopian
+        for lj in (t / "languages").glob("*/lang.js"):
+            src = lj.read_text(encoding="utf-8")
+            m = re.search(r'^\s*nextCourse:\s*("[^"]*"|\[[^\]]*\]),?[^\n]*\n', src, re.M)
+            if m and any(c not in FIXTURE_COURSES for c in re.findall(r'"([^"]+)"', m.group(1))):
+                lj.write_text(src[:m.start()] + "\n" + src[m.end():], encoding="utf-8")
+        build =lambda: subprocess.run([sys.executable, str(t / "build.py")], capture_output=True, text=True)
+        z = t / "languages" / "zz1"
+        z.mkdir()
+        (z / "lang.js").write_text(MINI_LANG, encoding="utf-8")
+        (z / "words.txt").write_text(MINI_WORDS, encoding="utf-8")
+        r = build()
+        ok("ny kurs: bygget går igenom med bara lang.js och words.txt", r.returncode == 0, r.stdout[-400:] if r.returncode else "")
+        ok("ny kurs: id-låset skapas", (z / "ids.lock").exists())
+        if r.returncode:
+            return "\n".join(out)
+
+        def broken(change, name, want, warn=False):
+            orig = (z / "lang.js").read_text(encoding="utf-8")
+            (z / "lang.js").write_text(change(orig), encoding="utf-8")
+            r = build()
+            (z / "lang.js").write_text(orig, encoding="utf-8")
+            good = (r.returncode == 0 if warn else r.returncode != 0) and want in r.stdout
+            ok(name, good, "" if good else r.stdout[-300:])
+        broken(lambda s: s.replace("  step: 1,\n", ""), "bygge: kurs utan step stoppar", "step saknas")
+        broken(lambda s: s.replace("step: 1,", "step: 9,"), "bygge: step utanför 1–7 stoppar", "step ska vara 1–7")
+        broken(lambda s: s.replace('level: "A1"', 'level: "B2"'), "bygge: level som inte passar steget ger en varning", "börjar inte med A1", warn=True)
+        broken(lambda s: s.replace('["fr", "fr4"]', '["fr", "xx9"]'), "bygge: nextCourse-lista med en kurs som inte finns stoppar", "nextCourse 'xx9'")
+        orig = (z / "lang.js").read_text(encoding="utf-8")
+        (z / "lang.js").write_text(orig.replace('  nextCourse:', '  extends: "fru",\n  inherit: ["accents", "genders"],\n  nextCourse:'), encoding="utf-8")
+        r = build()
+        (z / "lang.js").write_text(orig, encoding="utf-8")
+        ok("arv i kedja: ett fält som föräldern själv ärvt (zz1 → fru → fr) går att ärva", r.returncode == 0, r.stdout[-300:] if r.returncode else "")
+        up = t / "languages" / "upcoming.json"
+        orig = up.read_text(encoding="utf-8")
+        up.write_text(json.dumps(json.loads(orig) + [{"code": "zz1", "name": "Franska", "course": "Testfranska 1", "step": 1, "level": "A1"}], ensure_ascii=False), encoding="utf-8")
+        r = build()
+        up.write_text(orig, encoding="utf-8")
+        ok("bygge: kommande kurs som redan finns ger en varning", r.returncode == 0 and "zz1: kursen finns redan" in r.stdout, "" if r.returncode == 0 else r.stdout[-300:])
+        r = build()
+        ok("ny kurs: bygget går igenom igen", r.returncode == 0)
+        head = '<script>window.COURSES_UNDER_TEST=["zz1"];</script>'
+        text = run(SCENARIO_MINI, 30000, root=t)
+        for name, sc, budget in [("rättelser", SCENARIO_FIXES, 5000), ("övningar", SCENARIO_KINDS, 60000)]:
+            res = run(sc, budget, root=t, head=head)
+            text += "\n" + "\n".join(l[:5] + "ny kurs (" + name + "): " + l[5:] if l[:5] in ("OK   ", "FEL  ") else l for l in res.splitlines())
+    return "\n".join(out) + "\n" + text
+
+
 def main():
     text = run(SCENARIO) + "\n" + run(SCENARIO_DE) + "\n" + run(SCENARIO_FIXES) + "\n" + run(SCENARIO_SYNC, 30000) + "\n" + run_http(SCENARIO_HTTP)
     text += "\n" + run(SCENARIO_ARCH, 30000) + "\n" + test_build_locks()   # arkitektur, del 6
@@ -1455,6 +1648,8 @@ def main():
     text += "\n" + run(SCENARIO_PLAN, 30000)   # studieplanen (P2: Studieplan för självstudier)
     text += "\n" + run(SCENARIO_EXAMSIM, 60000)   # provsimuleringen som hela provet (P2)
     text += "\n" + run(SCENARIO_BUGHUNT, 30000)   # buggjakten 2026-09-29
+    text += "\n" + run(SCENARIO_LEVELPROMPT, 30000)   # nivåstyrd bedömning (A1–C1)
+    text += "\n" + test_minimal_course()   # en ny, liten kurs (8 → 21 kurser)
     print(text)
     sys.exit(1 if "FEL  " in text else 0)
 

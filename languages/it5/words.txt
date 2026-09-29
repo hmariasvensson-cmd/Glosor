@@ -1,0 +1,974 @@
+// Ordlista för Italienska 5 (B1.1, mot CELI 2). Rader som börjar med // är kommentarer och tas bort vid bygget.
+//
+// Format, en rad per ord:
+//   italienska|svenska|genus|exempel på italienska|exempel på svenska|kommentar|ordagrant (för fraser)
+// Hakparentes i den italienska exempelmeningen markerar luckan i meningsövningen.
+// Genus: m, f, mpl, fpl eller tomt.
+// En rad som börjar med # startar ett nytt avsnitt:  #id|Namn som visas
+// Ord-id (italienska formen) och avsnitts-id är nycklar för sparade framsteg: ändra dem inte i efterhand.
+// Orden i Italienska 1–4 (languages/it1–it4/words.txt) upprepas inte här.
+
+#m1|Kap 1 · Lavoro e società
+l'annuncio di lavoro|platsannons|m|Ho trovato un [annuncio di lavoro] interessante su internet.|Jag hittade en intressant platsannons på nätet.|Plural: gli annunci.
+a tempo indeterminato|tillsvidare (anställning)||Finalmente ha un contratto [a tempo indeterminato].|Äntligen har hon en fast anställning.|Motsats: a tempo determinato 'visstid'.|<b>a tempo</b> på tid · <b>indeterminato</b> obestämd
+a tempo determinato|visstidsanställd, på viss tid||Molti giovani lavorano [a tempo determinato].|Många unga har visstidsanställningar.|Determinato = bestämd.|<b>a tempo</b> på tid · <b>determinato</b> bestämd
+il precariato|osäkra anställningar, prekariat|m|Il [precariato] è un problema per molti giovani.|Osäkra anställningar är ett problem för många unga.|Precario = osäker, tillfällig.
+l'esperienza lavorativa|arbetslivserfarenhet|f|Non ho ancora molta [esperienza lavorativa].|Jag har inte så mycket arbetslivserfarenhet än.|Lavorativo = arbets-.
+licenziarsi|säga upp sig||Mia zia si è [licenziata] per aprire un bar.|Min moster sa upp sig för att öppna ett kafé.|Passato prossimo med essere.
+l'orario di lavoro|arbetstid|m|Il mio [orario di lavoro] è dalle nove alle diciotto.|Min arbetstid är från nio till sex.|Plural: gli orari.
+il part-time|deltid|m|Lavoro [part-time] in un negozio.|Jag jobbar deltid i en affär.|Motsats: a tempo pieno 'heltid'.
+il lavoro autonomo|egenföretagande|m|Il [lavoro autonomo] dà libertà ma anche rischi.|Att vara egenföretagare ger frihet men också risker.|Lavoratore autonomo = egenföretagare.
+il libero professionista|egenföretagare, frilans|m|Mio padre è un [libero professionista]: fa l'architetto.|Min pappa är egenföretagare: han är arkitekt.|Femininum: la libera professionista.
+l'impresa|företag|f|È una piccola [impresa] familiare.|Det är ett litet familjeföretag.|Plural: le imprese. Betyder också 'bedrift'.
+l'industria|industri|f|L'[industria] tessile è importante in Toscana.|Textilindustrin är viktig i Toscana.|Plural: le industrie.
+il Parlamento|riksdag, parlament|m|Il [Parlamento] italiano ha due camere.|Italiens parlament har två kammare.|Camera dei deputati och Senato.
+la disuguaglianza|ojämlikhet|f|La [disuguaglianza] tra Nord e Sud è ancora forte.|Ojämlikheten mellan Nord och Syd är fortfarande stor.|Plural: le disuguaglianze.
+la parità di genere|jämställdhet|f|La Svezia è un modello per la [parità di genere].|Sverige är en förebild när det gäller jämställdhet.|Parità = likhet. Genere = kön, genus.|<b>parità</b> likhet · <b>di genere</b> mellan könen
+la crisi economica|ekonomisk kris|f|La [crisi economica] del 2008 ha colpito molte famiglie.|Den ekonomiska krisen 2008 drabbade många familjer.|Crisi är oförändrat i plural: le crisi.
+la concorrenza|konkurrens|f|La [concorrenza] tra i negozi è forte.|Konkurrensen mellan butikerna är hård.|Concorrente = konkurrent.
+la produttività|produktivitet|f|Lo smart working può aumentare la [produttività].|Distansarbete kan öka produktiviteten.|Oförändrat i plural.
+il lavoro nero|svartarbete|m|Il [lavoro nero] è ancora diffuso nell'agricoltura.|Svartarbete är fortfarande vanligt inom jordbruket.|Nero = svart, som på svenska.
+la sicurezza sul lavoro|arbetsmiljö, säkerhet på jobbet|f|La [sicurezza sul lavoro] deve essere una priorità.|Säkerheten på jobbet måste prioriteras.|Sicurezza = säkerhet, trygghet.
+il pubblico impiego|offentlig sektor|m|Molti italiani sognano un posto nel [pubblico impiego].|Många italienare drömmer om ett jobb i offentlig sektor.|Il posto fisso = fast jobb.
+la raccomandazione|rekommendation, protektion|f|Ha trovato lavoro grazie a una [raccomandazione].|Han fick jobb tack vare kontakter.|Ofta negativt: att få jobb genom någon man känner.
+il merito|förtjänst, merit|m|Il lavoro deve essere dato in base al [merito].|Jobb ska delas ut efter förtjänst.|Plural: i meriti. Per merito tuo = tack vare dig.
+il settore terziario|tjänstesektorn|m|Oggi la maggioranza lavora nel [settore terziario].|I dag arbetar majoriteten inom tjänstesektorn.|Primario = jordbruk, secondario = industri.
+gli straordinari|övertid|mpl|Questa settimana ho fatto dieci ore di [straordinari].|Den här veckan har jag jobbat tio timmar övertid.|Straordinario = extraordinär.
+il permesso|ledighet, tillstånd|m|Ho chiesto un giorno di [permesso].|Jag har bett om en dags ledighet.|Plural: i permessi. Permesso? = Får jag komma in?
+la maternità|mammaledighet, moderskap|f|È in [maternità] fino a settembre.|Hon är mammaledig till september.|Congedo di paternità = pappaledighet.
+conciliare|förena, jämka||È difficile [conciliare] lavoro e famiglia.|Det är svårt att förena arbete och familj.|Conciliare il sonno = somna.
+la mansione|arbetsuppgift|f|Quali sono le tue [mansioni] in ufficio?|Vilka är dina arbetsuppgifter på kontoret?|Plural: le mansioni.
+gestire|leda, sköta, hantera||[Gestisce] un gruppo di venti persone.|Hon leder en grupp på tjugo personer.|Presens: gestisco (-isc-). La gestione = ledningen.
+il responsabile|ansvarig, chef|m|Devo parlare con il [responsabile] del personale.|Jag måste prata med personalchefen.|Femininum: la responsabile. Även adjektiv: ansvarsfull.
+la riunione|möte|f|La [riunione] è stata rimandata a domani.|Mötet har skjutits upp till i morgon.|Plural: le riunioni.
+la scadenza|deadline, sista dag|f|La [scadenza] per le domande è il 15 marzo.|Sista ansökningsdag är den 15 mars.|Scadere = gå ut, löpa ut.
+lo sviluppo|utveckling|m|Lo [sviluppo] del Sud è una sfida storica.|Syditaliens utveckling är en historisk utmaning.|Sviluppare = utveckla.
+garantire|garantera||La Costituzione [garantisce] il diritto al lavoro.|Grundlagen garanterar rätten till arbete.|Presens: garantisco (-isc-).
+fondato su|grundad på||L'Italia è una Repubblica [fondata sul] lavoro.|Italien är en republik grundad på arbete.|Fondare = grunda.
+protestare|protestera||I lavoratori [protestano] contro i tagli.|Arbetarna protesterar mot nedskärningarna.|La protesta = protesten.
+il taglio|nedskärning, skärning|m|Il governo ha annunciato [tagli] alla sanità.|Regeringen har aviserat nedskärningar i vården.|Plural: i tagli. Tagliare = skära.
+la mobilità sociale|social rörlighet|f|In Italia la [mobilità sociale] è bassa.|I Italien är den sociala rörligheten låg.|Mobilità = rörlighet.
+il ceto medio|medelklassen|m|Il [ceto medio] si sta impoverendo.|Medelklassen blir fattigare.|Ceto = samhällsklass.
+impoverirsi|bli fattigare, utarmas||Molte famiglie si sono [impoverite].|Många familjer har blivit fattigare.|Presens: mi impoverisco. Av povero 'fattig'.
+il lavoratore|arbetstagare, arbetare|m|I [lavoratori] chiedono stipendi più alti.|Arbetstagarna kräver högre löner.|Femininum: la lavoratrice.
+il salario minimo|minimilön|m|In Italia si discute del [salario minimo].|I Italien diskuterar man minimilön.|Salario = lön (för arbetare). Latin salarium 'saltpengar'.
+la busta paga|lönebesked|f|Controlla bene la [busta paga] ogni mese.|Kontrollera lönebeskedet noga varje månad.|Busta = kuvert, paga = lön.|<b>busta</b> kuvert · <b>paga</b> lön
+il colloquio conoscitivo|första intervju|m|Il primo passo è un [colloquio conoscitivo] online.|Första steget är en inledande intervju på nätet.|Conoscitivo = för att lära känna.
+il selezionatore|rekryterare|m|Il [selezionatore] mi ha fatto domande difficili.|Rekryteraren ställde svåra frågor till mig.|Femininum: la selezionatrice. Selezionare = välja ut.
+la posizione aperta|ledig tjänst|f|Sul sito ci sono tre [posizioni aperte].|På webbplatsen finns tre lediga tjänster.|Posizione = befattning.
+il periodo di prova|provanställning|m|Il [periodo di prova] dura tre mesi.|Provanställningen varar i tre månader.|Prova = prov, försök.
+le dimissioni|avskedsansökan|fpl|Ha dato le [dimissioni] dopo dieci anni.|Hon lämnade in sin avskedsansökan efter tio år.|Bara plural. Dimettersi = avgå.
+dimettersi|avgå||Il ministro si è [dimesso] ieri sera.|Ministern avgick i går kväll.|Particip: dimesso. Passato prossimo med essere.
+il licenziamento|uppsägning, avsked|m|Dopo il [licenziamento] ha cercato un nuovo lavoro.|Efter uppsägningen sökte han ett nytt jobb.|Licenziare = avskeda.
+la cassa integrazione|permittering med ersättning|f|Durante la crisi molti operai erano in [cassa integrazione].|Under krisen var många arbetare permitterade.|Ett italienskt system där staten betalar en del av lönen.
+il rinnovo|förnyelse, förlängning|m|Aspetto il [rinnovo] del contratto.|Jag väntar på att kontraktet ska förlängas.|Rinnovare = förnya.
+l'orientamento professionale|yrkesvägledning|m|A scuola c'è un servizio di [orientamento professionale].|På skolan finns yrkesvägledning.|Orientarsi = orientera sig.
+la qualifica|kvalifikation, behörighet|f|Per questo lavoro serve una [qualifica] specifica.|För det här jobbet krävs en särskild behörighet.|Plural: le qualifiche.
+la mansione di responsabilità|ansvarsfull uppgift|f|Dopo due anni le hanno dato una [mansione di responsabilità].|Efter två år fick hon en ansvarsfull uppgift.|Mansione = arbetsuppgift.
+la gavetta|att börja från botten|f|Tutti i grandi cuochi hanno fatto la [gavetta].|Alla stora kockar har börjat från botten.|Fare la gavetta. Ordagrant soldatens mathink.
+il lavoro di squadra|lagarbete|m|Questo progetto è frutto del [lavoro di squadra].|Det här projektet är resultatet av lagarbete.|Squadra = lag.
+la leadership|ledarskap|f|Ha una forte capacità di [leadership].|Hon har ett starkt ledarskap.|Lånord från engelska. Italienska ord: la guida.
+l'imprenditoria|företagande|f|L'[imprenditoria] femminile è in crescita.|Kvinnors företagande ökar.|Av imprenditore 'företagare'.
+la start-up|nystartat företag|f|Ha fondato una [start-up] a Torino.|Hon har grundat ett nystartat företag i Turin.|Oförändrat i plural.
+il fatturato|omsättning|m|Il [fatturato] è cresciuto del venti per cento.|Omsättningen har ökat med tjugo procent.|Fattura = faktura.
+la fattura|faktura|f|Mi può fare la [fattura], per favore?|Kan ni skriva en faktura, tack?|Plural: le fatture. Av fare 'göra'.
+il cliente fidelizzato|stamkund|m|Il negozio punta sui [clienti fidelizzati].|Butiken satsar på stamkunder.|Fedele = trogen.
+il mercato del lavoro|arbetsmarknaden|m|Il [mercato del lavoro] cambia velocemente.|Arbetsmarknaden förändras snabbt.|Mercato = marknad.
+il tasso di disoccupazione|arbetslöshetstal|m|Il [tasso di disoccupazione] è sceso all'otto per cento.|Arbetslösheten har sjunkit till åtta procent.|Tasso = nivå, andel, ränta.
+l'occupazione|sysselsättning|f|L'[occupazione] femminile è più bassa al Sud.|Kvinnors sysselsättning är lägre i södra Italien.|Betyder också 'ockupation'.
+la spesa pubblica|offentliga utgifter|f|Il governo vuole ridurre la [spesa pubblica].|Regeringen vill minska de offentliga utgifterna.|Spesa = utgift, inköp.
+il debito pubblico|statsskuld|m|L'Italia ha un [debito pubblico] molto alto.|Italien har en mycket hög statsskuld.|Debito = skuld.
+l'evasione fiscale|skattefusk|f|L'[evasione fiscale] è un problema grave.|Skattefusk är ett allvarligt problem.|Evadere = rymma, undgå. Fisco = skatteverket.
+il fisco|skattemyndigheten|m|Bisogna dichiarare tutto al [fisco].|Man måste deklarera allt till skattemyndigheten.|Latin fiscus 'statskassa'.
+la dichiarazione dei redditi|deklaration|f|A giugno faccio la [dichiarazione dei redditi].|I juni gör jag min deklaration.|Dichiarare = förklara, deklarera.
+il sistema sanitario|sjukvårdssystem|m|Il [sistema sanitario] italiano è pubblico.|Den italienska sjukvården är offentlig.|Sanità = hälsovård.
+l'assistenza sociale|socialtjänst, socialt stöd|f|La famiglia riceve l'[assistenza sociale].|Familjen får socialt stöd.|Assistente sociale = socialsekreterare.
+il reddito di cittadinanza|medborgarlön (italienskt bidrag)|m|Il [reddito di cittadinanza] è stato abolito nel 2023.|Medborgarlönen avskaffades 2023.|Ett italienskt försörjningsstöd 2019–2023.
+abolire|avskaffa||Molti vogliono [abolire] questa legge.|Många vill avskaffa den här lagen.|Presens: abolisco (-isc-).
+il decreto|förordning, dekret|m|Il governo ha firmato un nuovo [decreto].|Regeringen har skrivit under en ny förordning.|Plural: i decreti.
+il deputato|riksdagsledamot|m|Il [deputato] ha votato contro.|Ledamoten röstade emot.|Femininum: la deputata. Camera dei deputati = underhuset.
+l'astensionismo|att inte rösta, lågt valdeltagande|m|L'[astensionismo] è in aumento tra i giovani.|Allt fler unga avstår från att rösta.|Astenersi = avstå.
+l'impegno civile|samhällsengagemang|m|Il suo [impegno civile] è ammirevole.|Hennes samhällsengagemang är beundransvärt.|Civile = medborgerlig.
+il bene comune|det allmänna bästa|m|La politica dovrebbe pensare al [bene comune].|Politiken borde tänka på det allmänna bästa.|Bene = gott, egendom.
+la solidarietà sociale|social solidaritet|f|La [solidarietà sociale] è un valore della Costituzione.|Social solidaritet är ett av grundlagens värden.|Solidale = solidarisk.
+il divario generazionale|generationsklyfta|m|Esiste un [divario generazionale] nel mondo del lavoro.|Det finns en generationsklyfta i arbetslivet.|Generazione = generation.
+l'ascensore sociale|social rörlighet (uppåt)|m|L'istruzione è il vero [ascensore sociale].|Utbildning är den verkliga vägen uppåt i samhället.|Ordagrant 'social hiss'.
+precarizzare|göra osäker||Le nuove regole hanno [precarizzato] il lavoro.|De nya reglerna har gjort jobben osäkrare.|Av precario 'osäker'.
+la tutela|skydd|f|La [tutela] dei lavoratori è fondamentale.|Skyddet för arbetstagarna är grundläggande.|Tutelare = skydda.
+tutelare|skydda||La legge deve [tutelare] i più deboli.|Lagen måste skydda de svagaste.|La tutela = skyddet.
+il ricambio generazionale|generationsskifte|m|Nelle aziende serve un [ricambio generazionale].|Företagen behöver ett generationsskifte.|Ricambio = utbyte.
+la fascia d'età|åldersgrupp|f|Nella [fascia d'età] 15–24 la disoccupazione è alta.|I åldersgruppen 15–24 är arbetslösheten hög.|Fascia = band, remsa.
+il NEET|ung som varken arbetar eller studerar|m|L'Italia ha molti [NEET].|Italien har många unga som varken arbetar eller studerar.|Engelska: Not in Education, Employment or Training.
+lo sportello|disk, lucka, servicekontor|m|Rivolgiti allo [sportello] informazioni.|Vänd dig till informationsdisken.|Sportello bancomat = bankomat.
+il centro per l'impiego|arbetsförmedling|m|Si è iscritto al [centro per l'impiego].|Han har skrivit in sig på arbetsförmedlingen.|Impiego = anställning.
+la burocrazia|byråkrati|f|In Italia la [burocrazia] è lenta.|I Italien är byråkratin långsam.|Burocratico = byråkratisk.
+il modulo|blankett, formulär|m|Compili questo [modulo], per favore.|Fyll i den här blanketten, tack.|Plural: i moduli. Compilare un modulo = fylla i en blankett.
+compilare|fylla i (blankett)||Devi [compilare] il modulo online.|Du måste fylla i formuläret på nätet.|Betyder inte 'sammanställa' här.
+allegare|bifoga||[Allego] il mio curriculum.|Jag bifogar mitt cv.|L'allegato = bilagan.
+l'allegato|bilaga|m|Trova il curriculum in [allegato].|Mitt cv finns som bilaga.|In allegato = bifogat.
+la mansione ripetitiva|enformig arbetsuppgift|f|Le macchine fanno le [mansioni ripetitive].|Maskinerna sköter de enformiga uppgifterna.|Ripetere = upprepa.
+il pendolarismo|pendling|m|Il [pendolarismo] costa tempo e denaro.|Pendling kostar tid och pengar.|Il pendolare = pendlaren.
+la busta|kuvert|f|Metti la lettera nella [busta].|Lägg brevet i kuvertet.|Plural: le buste.
+l'agenzia per il lavoro|bemanningsföretag|f|Ho trovato lavoro tramite un'[agenzia per il lavoro].|Jag fick jobb genom ett bemanningsföretag.|Agenzia = byrå.
+il lavoro stagionale|säsongsarbete|m|D'estate faccio un [lavoro stagionale] al mare.|På sommaren har jag säsongsarbete vid havet.|Stagione = säsong.
+il cameriere stagionale|säsongsservitör|m|Cercasi [cameriere stagionale] per luglio e agosto.|Säsongsservitör sökes för juli och augusti.|Cercasi = sökes.
+cercasi|sökes (i annonser)||[Cercasi] commessa con esperienza.|Erfaren expedit sökes.|Opersonligt si: cerca + si.
+la mansione principale|huvuduppgift|f|La mia [mansione principale] è rispondere ai clienti.|Min huvuduppgift är att svara kunderna.|Principale = huvud-.
+il lavoro d'ufficio|kontorsarbete|m|Il [lavoro d'ufficio] non fa per me.|Kontorsarbete passar inte mig.|Ufficio = kontor.
+il lavoro manuale|kroppsarbete, hantverk|m|Il [lavoro manuale] è poco valorizzato.|Kroppsarbete uppskattas för lite.|Manuale = manuell.
+valorizzare|värdesätta, lyfta fram||Bisogna [valorizzare] i giovani talenti.|Man måste lyfta fram unga talanger.|Valore = värde.
+lo sciopero generale|generalstrejk|m|I sindacati hanno proclamato uno [sciopero generale].|Facken har utlyst generalstrejk.|Generale = allmän.
+la Festa dei lavoratori|arbetarnas dag, första maj|f|Il primo maggio è la [Festa dei lavoratori].|Första maj är arbetarnas dag.|Konserten på piazza San Giovanni i Rom.
+#m2|Kap 2 · Studiare in Italia
+la laurea triennale|kandidatexamen (3 år)|f|Dopo la [laurea triennale] ho fatto un master.|Efter kandidatexamen gick jag en master.|Triennale = treårig.
+la laurea magistrale|masterexamen (2 år)|f|La [laurea magistrale] dura due anni.|Masterutbildningen tar två år.|Magistrale = magister-.
+il dottorato|forskarutbildning, doktorsexamen|m|Sta facendo un [dottorato] in fisica.|Hon forskarstuderar i fysik.|Il dottorando = doktoranden.
+il laureando|student som snart tar examen|m|I [laureandi] discutono la tesi a luglio.|Examensstudenterna försvarar sina uppsatser i juli.|Femininum: la laureanda.
+il neolaureato|nyutexaminerad|m|Molti [neolaureati] vanno all'estero.|Många nyutexaminerade flyttar utomlands.|Neo- = ny.
+il relatore|handledare (för uppsats)|m|Il mio [relatore] mi ha dato buoni consigli.|Min handledare gav mig goda råd.|Femininum: la relatrice. Också 'föredragshållare'.
+discutere la tesi|försvara sitt examensarbete||Il 20 marzo [discuto la tesi].|Den 20 mars försvarar jag mitt examensarbete.|I Italien är det en högtidlig ceremoni med familjen.
+il credito formativo|högskolepoäng|m|Ogni esame vale sei [crediti formativi].|Varje tenta ger sex högskolepoäng.|Förkortas CFU. En laurea triennale = 180 CFU.
+il piano di studi|studieplan|m|Devo presentare il [piano di studi] entro ottobre.|Jag måste lämna in min studieplan före oktober.|Piano = plan.
+l'esame orale|muntlig tentamen|m|In Italia molti esami universitari sono [esami orali].|I Italien är många tentor på universitetet muntliga.|Orale = muntlig.
+lo scritto|skriftlig tentamen|m|Ho passato lo [scritto], ora c'è l'orale.|Jag har klarat den skriftliga delen, nu är det den muntliga.|Ordagrant 'det skrivna'.
+l'appello|tentamenstillfälle|m|Ci sono tre [appelli] a giugno e luglio.|Det finns tre tentatillfällen i juni och juli.|Plural: gli appelli. Fare l'appello = ropa upp namn.
+la sessione d'esami|tentaperiod|f|Durante la [sessione d'esami] studio dieci ore al giorno.|Under tentaperioden pluggar jag tio timmar om dagen.|Sessione = period, session.
+il trenta e lode|högsta betyg (30 med beröm)|m|Ha preso [trenta e lode] in storia dell'arte.|Hon fick högsta betyg i konsthistoria.|Universitetsbetygen går från 18 till 30. Lode = beröm.
+il libretto universitario|studiebok (betygsbok)|m|Ogni voto è registrato nel [libretto universitario].|Varje betyg registreras i studieboken.|Numera oftast digitalt.
+la matricola|nybörjarstudent, registreringsnummer|f|Le [matricole] si perdono sempre il primo giorno.|Förstaårsstudenterna går alltid vilse första dagen.|Numero di matricola = studentnummer.
+il fuoricorso|student som studerat längre än normaltid|m|Mio cugino è [fuoricorso] da due anni.|Min kusin har gått över normal studietid med två år.|Vanligt i Italien.
+la retta|terminsavgift, avgift|f|La [retta] universitaria dipende dal reddito.|Universitetsavgiften beror på inkomsten.|Le tasse universitarie betyder samma sak.
+l'ISEE|intyg om familjens ekonomi|m|Per la borsa di studio serve l'[ISEE].|För stipendiet behövs intyget om familjens ekonomi.|Förkortning; avgör avgifter och bidrag.
+lo studentato|studenthem|m|Vivo in uno [studentato] vicino all'università.|Jag bor i ett studenthem nära universitetet.|Även la residenza universitaria.
+la residenza universitaria|studentboende|f|La [residenza universitaria] ha una mensa e una palestra.|Studentboendet har en matsal och ett gym.|Residenza = bostad.
+l'Erasmus|Erasmusutbyte|m|Ho fatto l'[Erasmus] a Granada.|Jag gjorde Erasmusutbyte i Granada.|EU:s utbytesprogram, efter Erasmus av Rotterdam.
+il bando|utlysning, ansökningsomgång|m|È uscito il [bando] per le borse Erasmus.|Utlysningen för Erasmusstipendier har kommit ut.|Plural: i bandi. Bando di concorso.
+la graduatoria|rangordning, ranking|f|Sono il terzo in [graduatoria].|Jag står trea på rankinglistan.|Graduare = gradera.
+il numero chiuso|begränsat antal platser|m|Medicina è a [numero chiuso].|Medicin har ett begränsat antal platser.|Motsats: accesso libero 'fritt tillträde'.
+il test d'ingresso|antagningsprov|m|Il [test d'ingresso] di medicina è molto difficile.|Antagningsprovet till läkarlinjen är väldigt svårt.|Ingresso = ingång, inträde.
+l'ammissione al conservatorio|antagning till konservatoriet|f|L'[ammissione al conservatorio] prevede una prova pratica.|Antagningen till konservatoriet innehåller ett praktiskt prov.|Ammettere = släppa in.
+la prova attitudinale|lämplighetsprov|f|Per il conservatorio c'è una [prova attitudinale].|För konservatoriet finns ett lämplighetsprov.|Attitudine = fallenhet.
+il bando di ammissione|antagningsinformation|m|Leggi bene il [bando di ammissione] prima di iscriverti.|Läs antagningsinformationen noga innan du anmäler dig.|Bando = kungörelse.
+il corso di studi|utbildningsprogram|m|Ho cambiato [corso di studi] dopo un anno.|Jag bytte utbildning efter ett år.|Corso = kurs, lopp.
+il docente|lärare (på universitet)|m|Il [docente] riceve gli studenti il martedì.|Läraren tar emot studenter på tisdagar.|Femininum: la docente. Latin docere 'undervisa'.
+l'orario di ricevimento|mottagningstid|m|Qual è l'[orario di ricevimento] della professoressa?|När har professorn mottagningstid?|Ricevere = ta emot.
+il ricercatore universitario|universitetsforskare|m|Mia zia è [ricercatrice universitaria] a Padova.|Min moster är forskare vid universitetet i Padua.|Femininum: la ricercatrice.
+la dispensa|kompendium|f|Il professore ha caricato le [dispense] online.|Professorn har lagt upp kompendierna på nätet.|Plural: le dispense. Betyder också 'skafferi'.
+il manuale|lärobok, handbok|m|Il [manuale] di diritto ha ottocento pagine.|Läroboken i juridik har åttahundra sidor.|Plural: i manuali. Latin manus 'hand'.
+la bibliografia|litteraturlista|f|Alla fine della tesi c'è la [bibliografia].|I slutet av uppsatsen finns litteraturlistan.|Grekiska biblion 'bok' + graphein 'skriva'.
+citare|citera, hänvisa till||Devi [citare] sempre le fonti.|Du måste alltid ange källorna.|La citazione = citatet.
+il plagio|plagiat|m|Copiare da internet è [plagio].|Att kopiera från internet är plagiat.|Plagiare = plagiera.
+il seminario|seminarium|m|Il [seminario] di giovedì è obbligatorio.|Seminariet på torsdag är obligatoriskt.|Plural: i seminari.
+il laboratorio|laboration, verkstad|m|Oggi abbiamo [laboratorio] di chimica.|I dag har vi kemilabb.|Plural: i laboratori.
+la frequenza|närvaro, frekvens|f|La [frequenza] alle lezioni è obbligatoria.|Närvaron på föreläsningarna är obligatorisk.|Frequentare = gå på, besöka regelbundet.
+superare un esame|klara en tenta||Ho [superato l'esame] di storia con 28.|Jag klarade historietentan med 28.|Motsats: essere bocciato.
+rimandare|skjuta upp, flytta fram||Ho [rimandato] l'esame a settembre.|Jag har flyttat tentan till september.|Rimandato a settembre = få omprov i september (gymnasiet).
+il debito formativo|underkänt ämne (att ta igen)|m|Ha un [debito formativo] in matematica.|Han har ett underkänt ämne i matte att ta igen.|Debito = skuld.
+l'esame di Stato|studentexamen (officiellt namn)|m|L'[esame di Stato] ha due prove scritte e un orale.|Studentexamen har två skriftliga prov och ett muntligt.|Kallas i vardagen la maturità.
+la tesina|kort uppsats|f|Per l'orale ho preparato una [tesina] sull'opera.|Inför det muntliga förberedde jag en kort uppsats om opera.|Diminutiv av tesi.
+l'indirizzo|inriktning, adress|m|Al liceo ho scelto l'[indirizzo] musicale.|På gymnasiet valde jag den musikaliska inriktningen.|Betyder också 'adress'.
+l'istituto tecnico|tekniskt gymnasium|m|Mio fratello va all'[istituto tecnico] per l'informatica.|Min bror går på ett tekniskt gymnasium med datainriktning.|Plural: gli istituti tecnici.
+l'ITS|yrkeshögskola|m|Dopo la maturità ha scelto un [ITS] di meccatronica.|Efter studenten valde han en yrkeshögskola i mekatronik.|Istituto Tecnico Superiore.
+l'alternanza scuola-lavoro|arbetsplatsförlagt lärande|f|Con l'[alternanza scuola-lavoro] ho lavorato in un museo.|Genom arbetsplatspraktiken jobbade jag på ett museum.|Heter nu officiellt PCTO.
+il dirigente scolastico|rektor|m|Il [dirigente scolastico] ha incontrato i genitori.|Rektorn har träffat föräldrarna.|Officiellt namn; i vardagen il preside.
+il consiglio di classe|klasskonferens|m|Il [consiglio di classe] decide i voti finali.|Klasskonferensen beslutar om slutbetygen.|Lärarna i klassen plus elev- och föräldrarepresentanter.
+il rappresentante degli studenti|elevrepresentant|m|Sono stata eletta [rappresentante degli studenti].|Jag har valts till elevrepresentant.|Rappresentare = representera.
+l'assemblea d'istituto|stormöte (för hela skolan)|f|Oggi c'è l'[assemblea d'istituto] in palestra.|I dag är det skolans stormöte i gymnastiksalen.|Assemblea = församling.
+l'occupazione della scuola|skolockupation|f|Gli studenti hanno fatto un'[occupazione della scuola] per protesta.|Eleverna ockuperade skolan i protest.|En vanlig proteststrategi i Italien.
+il registro elettronico|digital närvaro- och betygsbok|m|I genitori controllano i voti sul [registro elettronico].|Föräldrarna kollar betygen i den digitala betygsboken.|Registro = liggare.
+la nota disciplinare|anmärkning (för uppförande)|f|Ha preso una [nota disciplinare] per il cellulare.|Han fick en anmärkning för mobilen.|Disciplina = disciplin.
+bigiare|skolka (i Milano)||Da ragazzo [bigiava] spesso la scuola.|Som ung skolkade han ofta.|Regionalt; i Rom fare sega, i Neapel fare filone.
+lo studio matto e disperatissimo|intensivt plugg|m|Prima dell'esame è stato [studio matto e disperatissimo].|Innan tentan var det intensivt plugg.|Citat av Leopardi om sin ungdom.|<b>matto</b> galet · <b>disperatissimo</b> ytterst förtvivlat
+secchione|plugghäst||Non sono un [secchione], studio il giusto.|Jag är ingen plugghäst, jag pluggar lagom.|Vardagligt. Femininum: secchiona.
+memorizzare|lära sig utantill||Non basta [memorizzare], bisogna capire.|Det räcker inte att lära sig utantill, man måste förstå.|Imparare a memoria = lära sig utantill.
+approfondire|fördjupa||Vorrei [approfondire] questo argomento.|Jag skulle vilja fördjupa mig i det här ämnet.|Av profondo 'djup'. Presens: approfondisco.
+l'approfondimento|fördjupning|m|Nel libro ci sono schede di [approfondimento].|I boken finns fördjupningsavsnitt.|Plural: gli approfondimenti.
+il metodo di studio|studieteknik|m|Un buon [metodo di studio] fa risparmiare tempo.|En bra studieteknik sparar tid.|Metodo = metod.
+la scadenza di iscrizione|sista anmälningsdag|f|La [scadenza di iscrizione] è il 31 luglio.|Sista anmälningsdag är den 31 juli.|Scadere = löpa ut.
+immatricolarsi|skriva in sig (på universitetet)||Mi sono [immatricolata] a Lettere.|Jag har skrivit in mig på humanistisk fakultet.|Av matricola 'register'.
+Lettere|humaniora, litteraturvetenskap|fpl|Studia [Lettere] moderne a Firenze.|Hon läser litteraturvetenskap i Florens.|Lettere = bokstäver, brev, litteratur.
+Giurisprudenza|juridik (fakultet)|f|Ha scelto [Giurisprudenza] per diventare avvocato.|Han valde juridik för att bli advokat.|Latin iuris prudentia 'kunskap om rätten'.
+Ingegneria|ingenjörsvetenskap|f|Il Politecnico è famoso per [Ingegneria].|Polytekniska högskolan är känd för sin ingenjörsutbildning.|Ingegnere = ingenjör.
+il Politecnico|tekniska högskolan|m|Studia architettura al [Politecnico] di Milano.|Han läser arkitektur på Polytekniska högskolan i Milano.|Grekiska polys 'många' + techne 'konst'.
+Medicina|medicin (utbildning)|f|Il test di [Medicina] si fa a settembre.|Antagningsprovet till läkarlinjen är i september.|Med stor bokstav om utbildningen.
+Economia|ekonomi (utbildning)|f|Mia sorella studia [Economia] alla Bocconi.|Min syster läser ekonomi på Bocconi.|Bocconi är ett privat universitet i Milano.
+le discipline umanistiche|humaniora|fpl|Le [discipline umanistiche] insegnano a pensare.|Humaniora lär en att tänka.|Umanistico = humanistisk.
+le materie scientifiche|naturvetenskapliga ämnen|fpl|Sono più portato per le [materie scientifiche].|Jag har mer fallenhet för naturvetenskapliga ämnen.|Scientifico = vetenskaplig.
+essere portato per|ha fallenhet för||Sei [portato per] le lingue!|Du har fallenhet för språk!|Portato = buren, lagd åt.|<b>essere portato</b> vara buren · <b>per</b> för
+il talento musicale|musikalisk begåvning|m|Il [talento musicale] non basta senza esercizio.|Musikalisk begåvning räcker inte utan övning.|Talento = talang.
+l'autodidatta|självlärd person|m|È un [autodidatta]: ha imparato il piano da solo.|Han är självlärd: han har lärt sig piano på egen hand.|Oförändrat i maskulinum och femininum. Grekiska autos 'själv' + didaskein 'lära'.
+lo studio individuale|självstudier|m|Lo [studio individuale] richiede disciplina.|Självstudier kräver disciplin.|Individuale = individuell.
+la certificazione linguistica|språkcertifikat|f|Per iscriversi serve una [certificazione linguistica] B2.|För att få skriva in sig krävs ett språkcertifikat på B2.|CELI, CILS, PLIDA är italienska certifikat.
+il livello|nivå|m|Il mio [livello] di italiano è B1.|Min nivå i italienska är B1.|Plural: i livelli.
+la prova scritta|skriftligt prov|f|La [prova scritta] dura due ore.|Det skriftliga provet varar i två timmar.|Prova = prov.
+la prova orale|muntligt prov|f|Alla [prova orale] bisogna descrivere una foto.|På det muntliga provet ska man beskriva ett foto.|Orale = muntlig.
+il punteggio|poäng, resultat|m|Ho ottenuto un [punteggio] alto.|Jag fick ett högt resultat.|Plural: i punteggi. Punto = poäng.
+la soglia|gräns, tröskel|f|La [soglia] per superare l'esame è il 60%.|Gränsen för godkänt är 60 %.|Plural: le soglie.
+ottenere|få, uppnå||Ha [ottenuto] una borsa di studio.|Hon har fått ett stipendium.|Böjs som tenere: ottengo, ottieni. Particip: ottenuto.
+il riconoscimento|erkännande, validering|m|Il [riconoscimento] del titolo straniero richiede mesi.|Valideringen av en utländsk examen tar månader.|Riconoscere = känna igen, erkänna.
+il titolo di studio|examen, utbildningsbevis|m|Qual è il tuo [titolo di studio]?|Vilken utbildning har du?|Titolo = titel.
+l'equipollenza|likvärdighet (av examen)|f|Ho chiesto l'[equipollenza] del mio diploma svedese.|Jag har ansökt om att min svenska examen ska jämställas.|Latin aeque pollens 'lika stark'.
+la segreteria studenti|studentexpedition|f|Chiedi alla [segreteria studenti].|Fråga på studentexpeditionen.|Segreteria = kansli.
+il tutor|studiehandledare|m|Ogni matricola ha un [tutor].|Varje nybörjarstudent har en studiehandledare.|Lånord från engelska.
+il corso di recupero|stödundervisning|m|D'estate ho fatto un [corso di recupero] di latino.|På sommaren gick jag stödundervisning i latin.|Recuperare = ta igen.
+le ripetizioni|privatlektioner|fpl|Do [ripetizioni] di inglese per guadagnare qualcosa.|Jag ger privatlektioner i engelska för att tjäna lite.|Bara plural i den betydelsen.
+il prestito d'onore|studielån|m|Ha chiesto un [prestito d'onore] per il master.|Hon har tagit studielån till sin master.|Ordagrant 'hederslån'.
+la fuga all'estero|flykten utomlands|f|La [fuga all'estero] dei laureati preoccupa il paese.|Att akademiker flyttar utomlands oroar landet.|Jämför la fuga dei cervelli.
+il rientro dei cervelli|att akademiker flyttar hem igen|m|Il governo incentiva il [rientro dei cervelli].|Regeringen uppmuntrar hemflyttning av akademiker.|Rientrare = komma tillbaka.
+competitivo|konkurrensinriktad, konkurrenskraftig||L'ammissione è molto [competitiva].|Antagningen är mycket konkurrensutsatt.|Femininum: competitiva.
+meritocratico|meritokratisk||Il sistema non è abbastanza [meritocratico].|Systemet är inte tillräckligt meritokratiskt.|Merito = förtjänst.
+lo sbocco lavorativo|jobbmöjlighet (efter utbildning)|m|Questa facoltà offre molti [sbocchi lavorativi].|Den här utbildningen ger många jobbmöjligheter.|Sbocco = mynning, utlopp.
+il divario di genere|könsskillnad|m|Nelle materie scientifiche c'è ancora un [divario di genere].|I naturvetenskapliga ämnen finns fortfarande en könsskillnad.|Genere = kön.
+l'abbandono scolastico|avhopp från skolan|m|L'[abbandono scolastico] è più alto al Sud.|Avhoppen från skolan är fler i södra Italien.|Abbandonare = överge.
+l'istruzione obbligatoria|skolplikt|f|L'[istruzione obbligatoria] dura fino ai sedici anni.|Skolplikten gäller till sexton års ålder.|Obbligatorio = obligatorisk.
+la scuola paritaria|friskola (godkänd privatskola)|f|Frequenta una [scuola paritaria] cattolica.|Hon går på en katolsk friskola.|Paritario = likställd.
+la corona d'alloro|lagerkrans|f|Alla laurea gli amici le hanno messo la [corona d'alloro].|Vid examen satte vännerna lagerkransen på henne.|Alloro = lager (växt).
+la festa di laurea|examensfest|f|Stasera c'è la [festa di laurea] di Marco.|I kväll är det Marcos examensfest.|Laurea = examen.
+il portico|arkad, pelargång|m|A Bologna si cammina sotto i [portici].|I Bologna går man under arkaderna.|Plural: i portici.
+dotto|lärd||Bologna è chiamata «la [dotta]».|Bologna kallas »den lärda«.|Femininum: dotta.
+l'anno accademico|läsår (på universitet)|m|L'[anno accademico] inizia a ottobre.|Läsåret börjar i oktober.|Accademico = akademisk.
+la famiglia ospitante|värdfamilj|f|Durante lo scambio vivo con una [famiglia ospitante].|Under utbytet bor jag hos en värdfamilj.|Ospitare = ta emot som gäst.
+lo studente di scambio|utbytesstudent|m|Nella mia classe c'è uno [studente di scambio] giapponese.|I min klass finns en japansk utbytesstudent.|Scambio = utbyte.
+la dichiarazione di valore|värdeintyg (för utländsk examen)|f|Per iscriversi serve la [dichiarazione di valore] del diploma.|För att skriva in sig krävs ett värdeintyg för examen.|Utfärdas av italienska ambassaden.
+la registrazione|inspelning, registrering|f|Ho mandato una [registrazione] del mio concerto.|Jag skickade en inspelning av min konsert.|Registrare = spela in.
+la disponibilità|tillgänglighet, tillmötesgående|f|Grazie per la sua [disponibilità].|Tack för ert tillmötesgående.|Disponibile = tillgänglig.
+#m3|Kap 3 · Scienza e tecnologia
+la scienza|vetenskap|f|La [scienza] ha cambiato la nostra vita.|Vetenskapen har förändrat vårt liv.|Plural: le scienze. Latin scientia 'kunskap'.
+lo scienziato|vetenskapsman, forskare|m|Galileo è stato un grande [scienziato].|Galilei var en stor vetenskapsman.|Femininum: la scienziata.
+scientifico|vetenskaplig||Uno studio [scientifico] ha dimostrato il contrario.|En vetenskaplig studie har visat motsatsen.|Femininum: scientifica.
+la ricerca scientifica|vetenskaplig forskning|f|L'Italia investe poco nella [ricerca scientifica].|Italien satsar lite på vetenskaplig forskning.|Ricercare = forska.
+la scoperta|upptäckt|f|La [scoperta] della penicillina è del 1928.|Upptäckten av penicillinet gjordes 1928.|Scoprire = upptäcka.
+l'invenzione|uppfinning|f|Il telefono è un'[invenzione] italiana, secondo alcuni.|Telefonen är en italiensk uppfinning, enligt vissa.|Inventare = uppfinna. Antonio Meucci.
+l'inventore|uppfinnare|m|Marconi è l'[inventore] della radio.|Marconi är radions uppfinnare.|Femininum: l'inventrice.
+l'esperimento|experiment|m|Abbiamo fatto un [esperimento] in laboratorio.|Vi gjorde ett experiment i labbet.|Plural: gli esperimenti.
+l'ipotesi|hypotes|f|Gli scienziati hanno formulato un'[ipotesi].|Forskarna har formulerat en hypotes.|Oförändrat i plural: le ipotesi.
+dimostrare|visa, bevisa||Lo studio [dimostra] che il sonno è importante.|Studien visar att sömnen är viktig.|La dimostrazione = beviset.
+il dato|uppgift, data|m|I [dati] sono stati raccolti in dieci paesi.|Uppgifterna samlades in i tio länder.|Plural: i dati. Latin datum 'det givna'.
+l'analisi|analys|f|L'[analisi] dei dati ha richiesto un anno.|Analysen av uppgifterna tog ett år.|Oförändrat i plural: le analisi. Analisi del sangue = blodprov.
+la teoria|teori|f|La [teoria] della relatività è di Einstein.|Relativitetsteorin är Einsteins.|Plural: le teorie.
+la legge di natura|naturlag|f|La gravità è una [legge di natura].|Gravitationen är en naturlag.|Legge = lag.
+il fenomeno|fenomen|m|L'aurora boreale è un [fenomeno] naturale.|Norrskenet är ett naturfenomen.|Plural: i fenomeni.
+la gravità|gravitation, allvar|f|Newton ha studiato la [gravità].|Newton studerade gravitationen.|Betyder också 'allvar': la gravità della situazione.
+l'universo|universum|m|L'[universo] ha circa quattordici miliardi di anni.|Universum är ungefär fjorton miljarder år gammalt.|Latin universus 'hel'.
+lo spazio|rymden, utrymme|m|Samantha Cristoforetti è stata nello [spazio].|Samantha Cristoforetti har varit i rymden.|Plural: gli spazi.
+l'astronauta|astronaut|m|L'[astronauta] italiana ha passato 200 giorni in orbita.|Den italienska astronauten tillbringade 200 dagar i omloppsbana.|Samma form för maskulinum och femininum. Plural: gli astronauti.
+il satellite|satellit|m|Il [satellite] trasmette dati sul clima.|Satelliten skickar data om klimatet.|Plural: i satelliti.
+l'orbita|omloppsbana|f|La stazione spaziale è in [orbita] intorno alla Terra.|Rymdstationen är i omloppsbana runt jorden.|Plural: le orbite.
+il telescopio|teleskop|m|Galileo ha migliorato il [telescopio].|Galilei förbättrade teleskopet.|Grekiska tele 'fjärran' + skopein 'se'.
+l'atomo|atom|m|Enrico Fermi ha studiato l'[atomo].|Enrico Fermi studerade atomen.|Plural: gli atomi. Grekiska atomos 'odelbar'.
+la molecola|molekyl|f|L'acqua è formata da [molecole] di H₂O.|Vatten består av molekyler av H₂O.|Plural: le molecole.
+la cellula|cell|f|Il corpo umano ha miliardi di [cellule].|Människokroppen har miljarder celler.|Plural: le cellule. Cellulare = mobil (ursprungligen 'cell-').
+il DNA|dna|m|Il [DNA] contiene le informazioni genetiche.|Dna:t innehåller den genetiska informationen.|Uttalas di-enne-a.
+genetico|genetisk||È una malattia [genetica].|Det är en genetisk sjukdom.|Femininum: genetica. La genetica = genetiken.
+il virus|virus|m|Il [virus] si è diffuso in tutto il mondo.|Viruset spreds över hela världen.|Oförändrat i plural.
+il batterio|bakterie|m|Gli antibiotici uccidono i [batteri].|Antibiotika dödar bakterier.|Plural: i batteri.
+la tecnologia|teknik, teknologi|f|La [tecnologia] cambia il modo di lavorare.|Tekniken förändrar sättet att arbeta.|Plural: le tecnologie.
+tecnologico|teknisk, teknologisk||Viviamo in un'epoca [tecnologica].|Vi lever i en teknisk epok.|Femininum: tecnologica.
+digitale|digital||La scuola sta diventando sempre più [digitale].|Skolan blir alltmer digital.|Samma form för maskulinum och femininum.
+la digitalizzazione|digitalisering|f|La [digitalizzazione] della pubblica amministrazione è lenta.|Digitaliseringen av den offentliga förvaltningen går långsamt.|Digitalizzare = digitalisera.
+il dispositivo|enhet, apparat|m|Spegnete tutti i [dispositivi] elettronici.|Stäng av alla elektroniska apparater.|Plural: i dispositivi.
+l'algoritmo|algoritm|m|L'[algoritmo] decide quali video vediamo.|Algoritmen bestämmer vilka videor vi ser.|Efter den persiske matematikern al-Khwarizmi.
+il software|programvara|m|Hanno installato un nuovo [software].|De har installerat en ny programvara.|Oförändrat i plural.
+l'hardware|hårdvara|m|Il problema non è il software ma l'[hardware].|Problemet är inte mjukvaran utan hårdvaran.|Oförändrat i plural.
+il programma informatico|datorprogram|m|Ha scritto un [programma informatico] per la scuola.|Han har skrivit ett datorprogram åt skolan.|Informatico = data-.
+programmare|programmera, planera||Sto imparando a [programmare] in Python.|Jag håller på att lära mig programmera i Python.|Betyder också 'planera'.
+il codice|kod|m|Il [codice] ha un errore alla riga dieci.|Koden har ett fel på rad tio.|Plural: i codici. Codice fiscale = personnummer.
+la banca dati|databas|f|I risultati sono in una [banca dati] pubblica.|Resultaten finns i en offentlig databas.|Även il database.
+il cloud|molnet|m|Salvo tutte le foto nel [cloud].|Jag sparar alla foton i molnet.|Italienska säger ibland la nuvola.
+la fibra ottica|fiberoptik|f|In paese è arrivata la [fibra ottica].|Fibern har kommit till byn.|Fibra = fiber.
+il robot|robot|m|In fabbrica lavorano molti [robot].|Det arbetar många robotar i fabriken.|Oförändrat i plural. Tjeckiska robota 'slavarbete'.
+l'automazione|automatisering|f|L'[automazione] cambierà molti lavori.|Automatiseringen kommer att förändra många jobb.|Automatico = automatisk.
+la realtà virtuale|virtuell verklighet|f|Con la [realtà virtuale] si può visitare Pompei.|Med VR kan man besöka Pompeji.|Virtuale = virtuell.
+il visore|VR-glasögon, visir|m|Metti il [visore] e guarda intorno.|Sätt på dig VR-glasögonen och titta runt.|Vedere = se.
+il chatbot|chattbot|m|Ho chiesto aiuto a un [chatbot] per i compiti.|Jag bad en chattbot om hjälp med läxan.|Oförändrat i plural.
+addestrare|träna (maskin, djur)||Il modello è stato [addestrato] su milioni di testi.|Modellen har tränats på miljontals texter.|Av destro 'skicklig'.
+generare|skapa, generera||Il programma può [generare] immagini.|Programmet kan skapa bilder.|La generazione = generationen, skapandet.
+l'innovazione|innovation|f|L'[innovazione] è la chiave del futuro.|Innovation är nyckeln till framtiden.|Innovare = förnya.
+innovativo|nyskapande, innovativ||È un progetto molto [innovativo].|Det är ett mycket nyskapande projekt.|Femininum: innovativa.
+il brevetto|patent|m|L'azienda ha depositato un [brevetto].|Företaget har lämnat in en patentansökan.|Brevettare = patentera.
+il prototipo|prototyp|m|Hanno presentato il [prototipo] di un'auto elettrica.|De har presenterat prototypen till en elbil.|Grekiska protos 'först' + typos 'form'.
+l'auto elettrica|elbil|f|L'[auto elettrica] si ricarica di notte.|Elbilen laddas på natten.|Auto är oförändrat i plural: le auto.
+ricaricare|ladda (batteri)||Devo [ricaricare] il telefono.|Jag måste ladda telefonen.|Il caricabatterie = laddaren.
+scarico|urladdad, tom||Ho il telefono [scarico].|Min telefon är urladdad.|Femininum: scarica.
+il consumo energetico|energiförbrukning|m|Le lampadine LED riducono il [consumo energetico].|LED-lampor minskar energiförbrukningen.|Energetico = energi-.
+l'energia nucleare|kärnkraft|f|In Italia l'[energia nucleare] è stata abbandonata nel 1987.|I Italien avvecklades kärnkraften 1987.|Nucleare = kärn-.
+la centrale|kraftverk|f|Hanno chiuso la [centrale] a carbone.|De har stängt kolkraftverket.|Centrale elettrica.
+l'impianto|anläggning|m|L'[impianto] eolico produce energia per mille case.|Vindkraftsanläggningen producerar energi till tusen hus.|Impiantare = installera.
+eolico|vind- (om energi)||L'energia [eolica] è in crescita.|Vindkraften ökar.|Efter Aiolos, vindarnas gud.
+il progresso|framsteg|m|Il [progresso] scientifico ha allungato la vita.|De vetenskapliga framstegen har förlängt livet.|Plural: i progressi.
+l'evoluzione|utveckling, evolution|f|Darwin ha spiegato l'[evoluzione] delle specie.|Darwin förklarade arternas utveckling.|Evolversi = utvecklas.
+il fisico|fysiker|m|Enrico Fermi è stato un [fisico] geniale.|Enrico Fermi var en genial fysiker.|Femininum: la fisica. Som adjektiv: fysisk.
+il chimico|kemist|m|Primo Levi era un [chimico].|Primo Levi var kemist.|Femininum: la chimica.
+l'astronomo|astronom|m|L'[astronomo] osserva le stelle.|Astronomen observerar stjärnorna.|Femininum: l'astronoma.
+l'osservatorio|observatorium|m|Abbiamo visitato l'[osservatorio] sul monte.|Vi besökte observatoriet på berget.|Osservare = observera.
+osservare|observera, iaktta||Galileo ha [osservato] le lune di Giove.|Galilei observerade Jupiters månar.|L'osservazione = iakttagelsen.
+la precisione|precision, noggrannhet|f|Questo lavoro richiede [precisione].|Det här arbetet kräver noggrannhet.|Preciso = exakt.
+il margine di errore|felmarginal|m|Il [margine di errore] è del tre per cento.|Felmarginalen är tre procent.|Margine = marginal.
+la fonte attendibile|tillförlitlig källa|f|Wikipedia non è sempre una [fonte attendibile].|Wikipedia är inte alltid en tillförlitlig källa.|Attendibile = trovärdig.
+il fact-checking|faktagranskning|m|Il [fact-checking] è importante contro le bufale.|Faktagranskning är viktigt mot falska nyheter.|Lånord från engelska.
+la divulgazione scientifica|populärvetenskap|f|Piero Angela era un maestro della [divulgazione scientifica].|Piero Angela var en mästare på populärvetenskap.|Divulgare = sprida.
+il divulgatore|populärvetenskaplig skribent, folkbildare|m|Il [divulgatore] spiega la scienza a tutti.|Folkbildaren förklarar vetenskapen för alla.|Femininum: la divulgatrice.
+la rivista scientifica|vetenskaplig tidskrift|f|L'articolo è uscito su una [rivista scientifica].|Artikeln publicerades i en vetenskaplig tidskrift.|Rivista = tidskrift.
+lo studio pubblicato|publicerad studie|m|Secondo uno [studio pubblicato] ieri, il mare si scalda.|Enligt en studie som publicerades i går blir havet varmare.|Studio = studie.
+il ricercatore precario|forskare med osäker anställning|m|Molti [ricercatori precari] lasciano l'Italia.|Många forskare med osäkra anställningar lämnar Italien.|Precario = osäker.
+il finanziamento|finansiering|m|Il progetto ha ottenuto un [finanziamento] europeo.|Projektet har fått EU-finansiering.|Finanziare = finansiera.
+finanziare|finansiera||L'Unione Europea [finanzia] la ricerca.|EU finansierar forskningen.|Presens: finanzio.
+il premio Nobel|Nobelpriset|m|Rita Levi-Montalcini ha vinto il [premio Nobel] nel 1986.|Rita Levi-Montalcini fick Nobelpriset 1986.|Italienska Nobelpristagare: Fermi, Marconi, Montale m.fl.
+l'etica della scienza|forskningsetik|f|L'[etica della scienza] pone limiti alla ricerca.|Forskningsetiken sätter gränser för forskningen.|Etica = etik.
+la clonazione|kloning|f|La [clonazione] umana è vietata.|Kloning av människor är förbjuden.|Clonare = klona.
+il rischio|risk|m|Ogni nuova tecnologia porta dei [rischi].|Varje ny teknik för med sig risker.|Plural: i rischi. Rischiare = riskera.
+la dipendenza digitale|digitalt beroende|f|La [dipendenza digitale] colpisce molti adolescenti.|Digitalt beroende drabbar många tonåringar.|Dipendenza = beroende.
+disconnettersi|koppla ner, logga ut||Ogni tanto bisogna [disconnettersi].|Ibland måste man koppla ner.|Particip: disconnesso.
+la sorveglianza|övervakning|f|Le telecamere di [sorveglianza] sono ovunque.|Övervakningskamerorna finns överallt.|Sorvegliare = övervaka.
+i dati personali|personuppgifter|mpl|Proteggi i tuoi [dati personali].|Skydda dina personuppgifter.|Personale = personlig.
+l'hacker|hackare|m|Un [hacker] è entrato nel sistema.|En hackare har tagit sig in i systemet.|Oförändrat i plural.
+l'attacco informatico|dataintrång, it-attack|m|L'ospedale ha subito un [attacco informatico].|Sjukhuset har drabbats av ett dataintrång.|Attacco = attack.
+la sicurezza informatica|it-säkerhet|f|Lavora nella [sicurezza informatica].|Hon arbetar med it-säkerhet.|Sicurezza = säkerhet.
+aggiornare|uppdatera||Devi [aggiornare] il sistema operativo.|Du måste uppdatera operativsystemet.|L'aggiornamento = uppdateringen.
+l'aggiornamento|uppdatering|m|È disponibile un nuovo [aggiornamento].|En ny uppdatering finns tillgänglig.|Plural: gli aggiornamenti.
+installare|installera||Ho [installato] l'app sul tablet.|Jag har installerat appen på surfplattan.|L'installazione = installationen.
+il tablet|surfplatta|m|Legge i giornali sul [tablet].|Han läser tidningarna på surfplattan.|Oförändrat i plural.
+lo schermo tattile|pekskärm|m|Lo [schermo tattile] non risponde.|Pekskärmen svarar inte.|Tattile = känsel-. Även touchscreen.
+funzionare|fungera||La stampante non [funziona].|Skrivaren fungerar inte.|Il funzionamento = funktionen.
+il guasto|fel, skada (tekniskt)|m|C'è un [guasto] alla linea elettrica.|Det är ett fel på elledningen.|Guastarsi = gå sönder.
+guastarsi|gå sönder||Il frigorifero si è [guastato].|Kylskåpet har gått sönder.|Passato prossimo med essere.
+le istruzioni per l'uso|bruksanvisning|fpl|Leggi le [istruzioni per l'uso] prima di accendere.|Läs bruksanvisningen innan du sätter på den.|Uso = användning.
+premere|trycka (på)||[Premere] il tasto verde per iniziare.|Tryck på den gröna knappen för att börja.|Infinitiv används ofta som instruktion.
+il tasto|knapp, tangent|m|Tieni premuto il [tasto] per tre secondi.|Håll knappen intryckt i tre sekunder.|Plural: i tasti.
+collegare|ansluta, koppla ihop||[Collega] il cavo alla presa.|Anslut kabeln till uttaget.|Il collegamento = anslutningen.
+la presa|eluttag|f|La [presa] è dietro al divano.|Uttaget sitter bakom soffan.|Av prendere 'ta'.
+il cavo|kabel, sladd|m|Mi presti il [cavo] del caricatore?|Lånar du mig laddsladden?|Plural: i cavi.
+accendersi|sättas på, tändas||Il computer non si [accende] più.|Datorn startar inte längre.|Accendere = tända, sätta på.
+riavviare|starta om||Prova a [riavviare] il computer.|Försök att starta om datorn.|Av avviare 'starta'.
+la stampante 3D|3D-skrivare|f|A scuola abbiamo una [stampante 3D].|I skolan har vi en 3D-skrivare.|Stampare = skriva ut, trycka.
+il drone|drönare|m|Hanno filmato il concerto con un [drone].|De filmade konserten med en drönare.|Plural: i droni.
+la nanotecnologia|nanoteknik|f|La [nanotecnologia] lavora con particelle piccolissime.|Nanotekniken arbetar med mycket små partiklar.|Grekiska nanos 'dvärg'.
+la ricerca di base|grundforskning|f|La [ricerca di base] non dà risultati immediati.|Grundforskning ger inga omedelbara resultat.|Base = grund.
+la ricerca applicata|tillämpad forskning|f|La [ricerca applicata] risolve problemi concreti.|Tillämpad forskning löser konkreta problem.|Applicare = tillämpa.
+il ricercatore sul campo|fältforskare|m|Il [ricercatore sul campo] raccoglie dati in Antartide.|Fältforskaren samlar data på Antarktis.|Sul campo = i fält.
+lo sviluppatore|utvecklare (programmerare)|m|Lavora come [sviluppatore] di app.|Han jobbar som apputvecklare.|Femininum: la sviluppatrice.
+la scienza aperta|öppen vetenskap|f|La [scienza aperta] rende i dati accessibili a tutti.|Öppen vetenskap gör data tillgängliga för alla.|Aperto = öppen.
+accessibile|tillgänglig||Il sito deve essere [accessibile] a tutti.|Webbplatsen ska vara tillgänglig för alla.|Samma form för maskulinum och femininum.
+#m4|Kap 4 · Salute e stile di vita
+lo stile di vita sano|hälsosam livsstil|m|Uno [stile di vita sano] allunga la vita.|En hälsosam livsstil förlänger livet.|Stile di vita = livsstil.
+l'aspettativa di vita|förväntad livslängd|f|In Italia l'[aspettativa di vita] è tra le più alte del mondo.|I Italien är den förväntade livslängden bland de högsta i världen.|Aspettarsi = förvänta sig.
+la longevità|långt liv|f|La Sardegna è famosa per la [longevità] dei suoi abitanti.|Sardinien är känt för att invånarna lever länge.|Latin longus 'lång' + aevum 'tid'.
+il centenario|hundraåring|m|In questo paese vivono dieci [centenari].|I den här byn bor tio hundraåringar.|Femininum: la centenaria. Betyder också 'hundraårsjubileum'.
+il sovrappeso|övervikt|m|Il [sovrappeso] aumenta il rischio di malattie.|Övervikt ökar risken för sjukdomar.|Essere in sovrappeso = vara överviktig.
+il colesterolo|kolesterol|m|Il medico mi ha controllato il [colesterolo].|Läkaren kontrollerade mitt kolesterol.|Grekiska chole 'galla'.
+il diabete|diabetes|m|Mio nonno ha il [diabete].|Min morfar har diabetes.|Diabetico = diabetiker.
+la malattia cronica|kronisk sjukdom|f|L'asma è una [malattia cronica].|Astma är en kronisk sjukdom.|Grekiska chronos 'tid'.
+il tumore|tumör, cancer|m|La ricerca sui [tumori] ha fatto grandi progressi.|Cancerforskningen har gjort stora framsteg.|Plural: i tumori. Il cancro används också.
+la circolazione|blodcirkulation|f|Il movimento migliora la [circolazione].|Rörelse förbättrar blodcirkulationen.|Circolare = cirkulera.
+il sistema immunitario|immunförsvar|m|Il sonno rafforza il [sistema immunitario].|Sömn stärker immunförsvaret.|Immune = immun.
+le difese immunitarie|kroppens försvar|fpl|D'inverno le [difese immunitarie] sono più basse.|På vintern är kroppens försvar sämre.|Difesa = försvar.
+rafforzare|stärka||Lo sport [rafforza] i muscoli e il carattere.|Idrott stärker musklerna och karaktären.|Forte = stark.
+l'esame del sangue|blodprov|m|Domani devo fare l'[esame del sangue] a digiuno.|I morgon ska jag ta blodprov på fastande mage.|Även le analisi del sangue.
+a digiuno|på fastande mage||Prendi la pastiglia [a digiuno].|Ta tabletten på fastande mage.|Digiunare = fasta.|<b>a</b> på · <b>digiuno</b> fasta
+la visita di controllo|kontrollbesök, undersökning|f|Faccio una [visita di controllo] ogni anno.|Jag går på kontroll varje år.|Controllo = kontroll.
+il medico di famiglia|husläkare|m|Il [medico di famiglia] mi ha mandato da uno specialista.|Husläkaren har remitterat mig till en specialist.|Även il medico di base.
+lo specialista|specialist|m|Devo prenotare una visita dallo [specialista].|Jag måste boka tid hos specialisten.|Femininum: la specialista.
+l'impegnativa|remiss|f|Senza [impegnativa] la visita costa di più.|Utan remiss kostar besöket mer.|Från impegnare 'förplikta'.
+il ticket|patientavgift|m|Per la visita ho pagato un [ticket] di trenta euro.|För besöket betalade jag en patientavgift på trettio euro.|Italiensk betydelse av engelska ticket.
+la lista d'attesa|väntelista, kö|f|Le [liste d'attesa] negli ospedali sono lunghe.|Köerna på sjukhusen är långa.|Attesa = väntan.
+la diagnosi|diagnos|f|Il medico ha fatto la [diagnosi] in pochi minuti.|Läkaren ställde diagnosen på några minuter.|Oförändrat i plural.
+la terapia|behandling, terapi|f|La [terapia] dura due settimane.|Behandlingen varar i två veckor.|Plural: le terapie.
+gli effetti collaterali|biverkningar|mpl|Questo farmaco ha pochi [effetti collaterali].|Det här läkemedlet har få biverkningar.|Collaterale = sido-.
+la prescrizione|förskrivning, recept|f|Serve la [prescrizione] del medico.|Det krävs läkarrecept.|Prescrivere = skriva ut.
+prescrivere|skriva ut (medicin)||Il medico mi ha [prescritto] un antibiotico.|Läkaren skrev ut antibiotika till mig.|Particip: prescritto.
+l'antibiotico|antibiotika|m|Non prendere l'[antibiotico] per il raffreddore.|Ta inte antibiotika mot förkylning.|Plural: gli antibiotici.
+l'antidolorifico|smärtstillande medel|m|Ho preso un [antidolorifico] per il mal di denti.|Jag tog en smärtstillande tablett mot tandvärken.|Anti- + dolore 'smärta'.
+ricoverare|lägga in (på sjukhus)||L'hanno [ricoverato] in ospedale.|De lade in honom på sjukhuset.|Essere ricoverato = vara inlagd.
+l'intervento chirurgico|operation|m|L'[intervento chirurgico] è andato bene.|Operationen gick bra.|Chirurgo = kirurg.
+operare|operera||Domani la [operano] al ginocchio.|I morgon opererar de hennes knä.|Betyder också 'verka, arbeta'.
+la riabilitazione|rehabilitering|f|Dopo l'infortunio ha fatto sei mesi di [riabilitazione].|Efter skadan gick han på rehabilitering i sex månader.|Abile = duglig.
+il fisioterapista|sjukgymnast, fysioterapeut|m|Il [fisioterapista] mi ha dato degli esercizi.|Sjukgymnasten gav mig några övningar.|Femininum: la fisioterapista.
+la guardia medica|jourmottagning|f|Di notte bisogna chiamare la [guardia medica].|På natten måste man ringa jourmottagningen.|Guardia = vakt.
+il benessere psicologico|psykiskt välbefinnande|m|Anche il [benessere psicologico] fa parte della salute.|Även det psykiska välbefinnandet är en del av hälsan.|Psicologico = psykologisk.
+la depressione|depression|f|La [depressione] è una malattia, non una debolezza.|Depression är en sjukdom, inte en svaghet.|Depresso = deprimerad.
+l'esaurimento|utbrändhet, utmattning|m|Ha avuto un [esaurimento] per il troppo lavoro.|Hon blev utbränd av för mycket arbete.|Esaurire = uttömma. Esaurito = slutsåld, utmattad.
+il burnout|utbrändhet|m|Molti insegnanti soffrono di [burnout].|Många lärare lider av utbrändhet.|Lånord från engelska.
+soffrire di|lida av||Mia madre [soffre di] mal di testa.|Min mamma lider av huvudvärk.|Particip: sofferto.
+riposare bene|sova gott, vila ordentligt||Prima di un esame devi [riposare bene].|Före en tenta måste du vila ordentligt.|Riposare = vila.
+il ritmo sonno-veglia|dygnsrytm|m|Gli schermi disturbano il [ritmo sonno-veglia].|Skärmar stör dygnsrytmen.|Veglia = vaka.
+la consapevolezza|medvetenhet|f|La [consapevolezza] aiuta a ridurre l'ansia.|Medvetenhet hjälper till att minska ångest.|Consapevole = medveten.
+l'autostima|självkänsla|f|I social possono abbassare l'[autostima].|Sociala medier kan sänka självkänslan.|Auto- 'själv' + stima 'aktning'.
+il corpo perfetto|perfekt kropp|m|Il mito del [corpo perfetto] fa male ai giovani.|Myten om den perfekta kroppen skadar unga.|Perfetto = perfekt.
+il disturbo alimentare|ätstörning|m|L'anoressia è un [disturbo alimentare].|Anorexi är en ätstörning.|Disturbo = störning.
+l'abitudine|vana|f|Cambiare le [abitudini] è difficile.|Det är svårt att ändra sina vanor.|Plural: le abitudini. Abituarsi = vänja sig.
+la cattiva abitudine|ovana|f|Mangiare davanti alla TV è una [cattiva abitudine].|Att äta framför teven är en ovana.|Cattivo = dålig, elak.
+la sedentarietà|stillasittande|f|La [sedentarietà] è un rischio per la salute.|Stillasittande är en hälsorisk.|Sedentario = stillasittande.
+muoversi di più|röra sig mer||Il medico dice che devo [muovermi di più].|Läkaren säger att jag måste röra på mig mer.|Muoversi = röra sig.
+fare movimento|motionera||È importante [fare movimento] ogni giorno.|Det är viktigt att motionera varje dag.|Movimento = rörelse.
+la camminata veloce|rask promenad|f|Mezz'ora di [camminata veloce] basta.|En halvtimmes rask promenad räcker.|Camminare = gå.
+i passi|steg|mpl|L'app conta i [passi] che faccio.|Appen räknar stegen jag tar.|Singular: il passo.
+la corsetta|joggingtur|f|Ogni mattina faccio una [corsetta] nel parco.|Varje morgon joggar jag en runda i parken.|Diminutiv av corsa.
+l'alimentazione equilibrata|balanserad kost|f|Un'[alimentazione equilibrata] contiene frutta e verdura.|En balanserad kost innehåller frukt och grönsaker.|Equilibrato = balanserad.
+le fibre|fibrer|fpl|I legumi sono ricchi di [fibre].|Baljväxter är rika på fibrer.|Singular: la fibra.
+i legumi|baljväxter|mpl|Ceci, fagioli e lenticchie sono [legumi].|Kikärtor, bönor och linser är baljväxter.|Singular: il legume.
+i cereali integrali|fullkorn|mpl|Il pane con [cereali integrali] sazia di più.|Fullkornsbröd mättar mer.|Integrale = fullkorns-, hel.
+lo zucchero aggiunto|tillsatt socker|m|Molte bibite contengono [zucchero aggiunto].|Många läskedrycker innehåller tillsatt socker.|Aggiungere = tillsätta.
+la bibita gassata|läsk|f|Bevo poche [bibite gassate].|Jag dricker lite läsk.|Gassato = kolsyrad.
+il cibo spazzatura|skräpmat|m|Il [cibo spazzatura] costa poco ma fa male.|Skräpmat är billig men ohälsosam.|Spazzatura = sopor.
+la caloria|kalori|f|Questo dolce ha troppe [calorie].|Den här efterrätten har för många kalorier.|Plural: le calorie.
+saziare|mätta||Le verdure [saziano] senza ingrassare.|Grönsaker mättar utan att göra en tjock.|Sazio = mätt.
+la porzione|portion|f|Le [porzioni] al ristorante sono enormi.|Portionerna på restaurangen är enorma.|Plural: le porzioni.
+l'intolleranza|intolerans|f|Ho un'[intolleranza] al lattosio.|Jag är laktosintolerant.|Tollerare = tåla.
+celiaco|celiakisk (glutenintolerant)||Mia cugina è [celiaca] e non mangia glutine.|Min kusin har celiaki och äter inte gluten.|La celiachia = celiaki.
+il glutine|gluten|m|Questa pasta è senza [glutine].|Den här pastan är glutenfri.|Latin gluten 'lim'.
+la dipendenza dal fumo|nikotinberoende|f|Ha superato la [dipendenza dal fumo].|Han har blivit fri från sitt nikotinberoende.|Fumo = rök.
+smettere di fumare|sluta röka||Mio padre ha [smesso di fumare] dieci anni fa.|Min pappa slutade röka för tio år sedan.|Particip: smesso.
+la sigaretta elettronica|e-cigarett|f|La [sigaretta elettronica] non è innocua.|E-cigaretten är inte ofarlig.|Elettronico = elektronisk.
+lo sballo|rus, kick|m|Alcuni giovani bevono solo per lo [sballo].|Vissa unga dricker bara för ruset.|Vardagligt. Sballare = bli hög.
+l'abuso di alcol|alkoholmissbruk|m|L'[abuso di alcol] tra i giovani preoccupa.|Alkoholmissbruk bland unga oroar.|Abusare = missbruka.
+la sostanza stupefacente|narkotika|f|La vendita di [sostanze stupefacenti] è reato.|Försäljning av narkotika är brottsligt.|Stupefacente = bedövande. Vardagligt: la droga.
+nocivo|skadlig||Il fumo passivo è [nocivo].|Passiv rökning är skadlig.|Femininum: nociva. Latin nocere 'skada'.
+fare bene alla salute|vara bra för hälsan||Il sole [fa bene alla salute], con moderazione.|Solen är bra för hälsan, med måtta.|Motsats: fare male.
+con moderazione|med måtta||Il vino va bevuto [con moderazione].|Vin ska drickas med måtta.|Moderare = måttfullt.
+la prevenzione primaria|förebyggande hälsovård|f|La [prevenzione primaria] costa meno delle cure.|Förebyggande vård kostar mindre än behandling.|Prevenire = förebygga.
+lo screening|screening, hälsokontroll|m|Le donne sopra i 50 anni fanno lo [screening] gratuito.|Kvinnor över 50 får gratis screening.|Oförändrat i plural.
+la campagna di sensibilizzazione|informationskampanj|f|La regione ha lanciato una [campagna di sensibilizzazione].|Regionen har startat en informationskampanj.|Sensibilizzare = göra medveten.
+la vaccinazione|vaccination|f|La [vaccinazione] è obbligatoria per andare a scuola.|Vaccination krävs för att gå i skolan.|Vaccinare = vaccinera.
+la pandemia|pandemi|f|Durante la [pandemia] le scuole erano chiuse.|Under pandemin var skolorna stängda.|Grekiska pan 'all' + demos 'folk'.
+il contagio|smitta, smittspridning|m|La mascherina riduce il [contagio].|Munskyddet minskar smittspridningen.|Contagioso = smittsam.
+contagioso|smittsam||L'influenza è molto [contagiosa].|Influensan är mycket smittsam.|Femininum: contagiosa.
+la mascherina|munskydd|f|In ospedale si porta la [mascherina].|På sjukhuset bär man munskydd.|Diminutiv av maschera 'mask'.
+l'igiene|hygien|f|L'[igiene] delle mani è fondamentale.|Handhygien är grundläggande.|Grekiska hygieinos 'hälsosam'.
+il sistema sanitario nazionale|den nationella sjukvården|m|Il [sistema sanitario nazionale] è nato nel 1978.|Italiens nationella sjukvård inrättades 1978.|Förkortas SSN.
+la tessera sanitaria|sjukförsäkringskort|f|In farmacia chiedono la [tessera sanitaria].|På apoteket frågar de efter sjukförsäkringskortet.|Tessera = kort.
+l'assicurazione sanitaria|sjukförsäkring|f|Negli Stati Uniti serve un'[assicurazione sanitaria].|I USA behöver man en sjukförsäkring.|Assicurare = försäkra.
+la medicina alternativa|alternativmedicin|f|Non credo nella [medicina alternativa].|Jag tror inte på alternativmedicin.|Alternativo = alternativ.
+l'omeopatia|homeopati|f|L'efficacia dell'[omeopatia] non è dimostrata.|Homeopatins effekt är inte bevisad.|Grekiska homoios 'lik' + pathos 'lidande'.
+l'efficacia|effekt, verkan|f|Gli studi confermano l'[efficacia] del vaccino.|Studierna bekräftar vaccinets effekt.|Efficace = verksam.
+efficace|verksam, effektiv||È un rimedio [efficace] contro il mal di gola.|Det är ett verksamt botemedel mot halsont.|Samma form för maskulinum och femininum.
+il rimedio|botemedel|m|Il miele è un vecchio [rimedio] per la tosse.|Honung är ett gammalt botemedel mot hosta.|Plural: i rimedi. Rimediare = avhjälpa.
+la tisana|örtte|f|Prima di dormire bevo una [tisana].|Innan jag somnar dricker jag örtte.|Plural: le tisane.
+il mal di schiena|ryggont|m|Stare seduti tutto il giorno provoca [mal di schiena].|Att sitta hela dagen ger ryggont.|Schiena = rygg.
+la postura|kroppshållning|f|Attenzione alla [postura] quando studi!|Tänk på kroppshållningen när du pluggar!|Plural: le posture.
+lo stiramento|sträckning (muskel)|m|Durante la partita ha avuto uno [stiramento].|Under matchen fick han en sträckning.|Stirare = sträcka, stryka.
+la distorsione|stukning|f|Ho una [distorsione] alla caviglia.|Jag har stukat foten.|Distorcere = vrida.
+la frattura|benbrott|f|La radiografia mostra una [frattura].|Röntgenbilden visar ett benbrott.|Fratturarsi = bryta.
+ingessare|gipsa||Mi hanno [ingessato] il braccio.|De gipsade min arm.|Il gesso = gipset.
+le stampelle|kryckor|fpl|Cammino con le [stampelle] da una settimana.|Jag har gått med kryckor i en vecka.|Singular: la stampella.
+l'udito|hörsel|m|La musica troppo alta danneggia l'[udito].|För hög musik skadar hörseln.|Udire = höra (högtidligt).
+danneggiare|skada||Il sole può [danneggiare] la pelle.|Solen kan skada huden.|Il danno = skadan.
+i tappi per le orecchie|öronproppar|mpl|Ai concerti porto sempre i [tappi per le orecchie].|På konserter har jag alltid öronproppar.|Tappo = kork, propp.
+la vista stanca|trötta ögon, ålderssynthet|f|Dopo ore al computer ho la [vista stanca].|Efter timmar vid datorn har jag trötta ögon.|Vista = syn.
+la salute pubblica|folkhälsa|f|Il fumo è un problema di [salute pubblica].|Rökning är ett folkhälsoproblem.|Pubblico = offentlig.
+l'OMS|WHO, Världshälsoorganisationen|f|L'[OMS] consiglia trenta minuti di movimento al giorno.|WHO rekommenderar trettio minuters rörelse om dagen.|Organizzazione Mondiale della Sanità.
+il pediatra|barnläkare|m|Il [pediatra] ha visitato il bambino.|Barnläkaren undersökte barnet.|Femininum: la pediatra.
+il consultorio|mottagning (ungdoms-, familje-)|m|Al [consultorio] i ragazzi ricevono consigli gratuiti.|På mottagningen får ungdomar gratis råd.|Consultare = rådfråga.
+lo sportello d'ascolto|samtalsstöd (i skolan)|m|A scuola c'è uno [sportello d'ascolto] con una psicologa.|På skolan finns samtalsstöd med en psykolog.|Ascolto = lyssnande.
+chiedere aiuto|be om hjälp||Non avere paura di [chiedere aiuto].|Var inte rädd för att be om hjälp.|Aiuto = hjälp.
+il pastore|herde|m|Il [pastore] porta le pecore in montagna.|Herden driver fåren upp i bergen.|Femininum: la pastora. Betyder också 'präst' (protestantisk).
+la zona blu|blå zon (område med många hundraåringar)|f|L'Ogliastra è una [zona blu].|Ogliastra är en blå zon.|Zona = område.
+la casa di cura|vårdhem|f|Il nonno è in una [casa di cura].|Farfar bor på ett vårdhem.|Cura = vård.
+il ritmo circadiano|dygnsrytm|m|La luce blu altera il [ritmo circadiano].|Blått ljus stör dygnsrytmen.|Latin circa diem 'omkring en dag'.
+#m5|Kap 5 · L'italiano nel mondo
+la lingua ufficiale|officiellt språk|f|L'italiano è [lingua ufficiale] anche in Svizzera.|Italienska är officiellt språk även i Schweiz.|Ufficiale = officiell.
+il parlante nativo|infödd talare|m|Ci sono circa 65 milioni di [parlanti nativi].|Det finns ungefär 65 miljoner infödda talare.|Nativo = infödd.
+l'italofono|italiensktalande|m|Nel Canton Ticino gli [italofoni] sono la maggioranza.|I kantonen Ticino är de italiensktalande i majoritet.|Grekiska phone 'röst, språk'.
+la diffusione|spridning|f|La [diffusione] dell'italiano è legata alla cultura.|Italienskans spridning hänger ihop med kulturen.|Diffondere = sprida.
+la lingua straniera|främmande språk|f|L'italiano è la quarta [lingua straniera] più studiata.|Italienska är det fjärde mest studerade främmande språket.|Straniero = utländsk.
+il prestito linguistico|lånord|m|"Pizza" è un [prestito linguistico] in tutte le lingue.|"Pizza" är ett lånord i alla språk.|Prestito = lån.
+l'italianismo|italienskt lånord|m|"Piano" e "allegro" sono [italianismi] musicali.|"Piano" och "allegro" är italienska lånord inom musiken.|Plural: gli italianismi.
+l'anglicismo|anglicism, engelskt lånord|m|L'italiano di oggi è pieno di [anglicismi].|Dagens italienska är full av engelska lånord.|Plural: gli anglicismi.
+la variante|variant, variation|f|Ogni regione ha la sua [variante] dell'italiano.|Varje region har sin egen variant av italienskan.|Plural: le varianti.
+l'italiano standard|standarditalienska|m|In TV si parla l'[italiano standard].|På tv talar man standarditalienska.|Bygger på florentinskan.
+il toscano letterario|den litterära toskanskan|m|L'italiano deriva dal [toscano letterario] di Dante.|Italienskan kommer från Dantes litterära toskanska.|Letterario = litterär.
+derivare da|härstamma från||Molte parole [derivano dal] latino.|Många ord kommer från latin.|La derivazione = härledningen.
+il volgare|folkspråk (medeltida)|m|Dante ha scritto la Commedia in [volgare].|Dante skrev Commedia på folkspråket.|Latin vulgus 'folk'. Motsats: latinet.
+la questione della lingua|språkfrågan|f|La [questione della lingua] ha diviso gli intellettuali per secoli.|Språkfrågan splittrade de intellektuella i århundraden.|Frågan om vilket språk Italien skulle ha.
+unificare la lingua|ena språket||La televisione ha aiutato a [unificare la lingua].|Televisionen hjälpte till att ena språket.|Unificare = ena.
+l'analfabetismo|analfabetism|m|Nel 1861 l'[analfabetismo] era al 75%.|År 1861 var 75 % analfabeter.|Analfabeta = analfabet.
+l'Accademia della Crusca|Italienska språkakademin|f|L'[Accademia della Crusca] studia la lingua italiana dal 1583.|Accademia della Crusca har studerat italienska sedan 1583.|Crusca = kli: akademin skiljer "mjölet från klit".
+il neologismo|nybildat ord|m|"Petaloso" è un [neologismo] inventato da un bambino.|"Petaloso" är ett nyord som hittades på av ett barn.|Grekiska neos 'ny' + logos 'ord'.
+il registro|stilnivå, register|m|Con il professore uso un [registro] formale.|Med läraren använder jag ett formellt språk.|Plural: i registri.
+formale|formell||Una lettera [formale] inizia con "Gentile".|Ett formellt brev börjar med "Gentile".|Samma form för maskulinum och femininum.
+informale|informell, vardaglig||Con gli amici uso un linguaggio [informale].|Med kompisar använder jag ett vardagligt språk.|Samma form för maskulinum och femininum.
+il gergo|slang, jargong|m|Il [gergo] giovanile cambia ogni anno.|Ungdomsslangen förändras varje år.|Plural: i gerghi.
+il linguaggio|språk (sätt att uttrycka sig)|m|Il [linguaggio] dei social è molto veloce.|Språket på sociala medier är mycket snabbt.|Lingua = språket som system; linguaggio = språkbruk.
+la comunità italiana|den italienska gruppen (utomlands)|f|A Buenos Aires c'è una grande [comunità italiana].|I Buenos Aires finns en stor italiensk grupp.|Comunità = gemenskap.
+gli italiani all'estero|utlandsitalienare|mpl|Gli [italiani all'estero] sono circa sei milioni.|Utlandsitalienarna är ungefär sex miljoner.|Estero = utlandet.
+la Piccola Italia|Little Italy|f|A New York si visita la [Piccola Italia].|I New York besöker man Little Italy.|Oftast på engelska: Little Italy.
+il flusso migratorio|migrationsflöde|m|Il [flusso migratorio] verso l'America è finito negli anni Venti.|Utvandringen till Amerika upphörde på 1920-talet.|Flusso = flöde.
+la migrazione|migration|f|La [migrazione] è un fenomeno antico.|Migration är ett gammalt fenomen.|Migrare = flytta.
+il richiedente asilo|asylsökande|m|Il [richiedente asilo] aspetta una risposta da mesi.|Den asylsökande har väntat på svar i månader.|Richiedere = begära. Asilo = asyl.
+il diritto d'asilo|asylrätt|m|Il [diritto d'asilo] è nella Costituzione.|Asylrätten finns i grundlagen.|Asilo betyder också 'förskola'.
+il barcone|båt (med flyktingar)|m|Il [barcone] era partito dalla Libia.|Båten hade avgått från Libyen.|Förstärkningsform av barca.
+il salvataggio|räddning|m|La nave ha fatto un [salvataggio] in mare.|Fartyget genomförde en räddning till sjöss.|Salvare = rädda.
+il centro di accoglienza|mottagningsförläggning|m|I minori vivono in un [centro di accoglienza].|De minderåriga bor på en förläggning.|Accogliere = ta emot.
+il minore non accompagnato|ensamkommande barn|m|In Italia ci sono migliaia di [minori non accompagnati].|I Italien finns tusentals ensamkommande barn.|Minore = minderårig.
+lo ius soli|medborgarskap genom födelse i landet|m|In Italia non esiste lo [ius soli].|I Italien finns inte medborgarskap genom födelseort.|Latin 'jordens rätt'. Motsats: ius sanguinis 'blodets rätt'.
+la doppia cittadinanza|dubbelt medborgarskap|f|Ha la [doppia cittadinanza] italiana e argentina.|Han har dubbelt italienskt och argentinskt medborgarskap.|Doppio = dubbel.
+la convivenza pacifica|fredlig samexistens|f|La città è un esempio di [convivenza pacifica].|Staden är ett exempel på fredlig samexistens.|Pacifico = fredlig.
+la società multiculturale|mångkulturellt samhälle|f|Viviamo in una [società multiculturale].|Vi lever i ett mångkulturellt samhälle.|Multi- = mång-.
+l'intercultura|interkulturellt utbyte|f|La scuola promuove l'[intercultura].|Skolan främjar interkulturellt utbyte.|Inter- = mellan.
+la xenofobia|främlingsfientlighet|f|La [xenofobia] nasce dalla paura.|Främlingsfientlighet föds ur rädsla.|Grekiska xenos 'främling' + phobos 'rädsla'.
+accogliente|välkomnande, gästfri||La famiglia di Marco è molto [accogliente].|Marcos familj är mycket välkomnande.|Samma form för maskulinum och femininum.
+il paese d'origine|ursprungsland|m|Ogni estate torna nel suo [paese d'origine].|Varje sommar reser hon hem till sitt ursprungsland.|Origine = ursprung.
+il paese di destinazione|mottagarland|m|La Germania era il [paese di destinazione] più comune.|Tyskland var det vanligaste mottagarlandet.|Destinazione = mål.
+il bisnonno|gammelfarfar, gammelmorfar|m|Il mio [bisnonno] è emigrato in Brasile.|Min gammelfarfar utvandrade till Brasilien.|Femininum: la bisnonna. Bis- = två gånger.
+la nave a vapore|ångbåt|f|Il viaggio in [nave a vapore] durava un mese.|Resan med ångbåt tog en månad.|Vapore = ånga.
+Ellis Island|Ellis Island||Gli emigranti sbarcavano a [Ellis Island].|Emigranterna steg i land på Ellis Island.|Ön i New York där emigranterna registrerades 1892–1954.
+la miniera|gruva|f|Molti italiani lavoravano nelle [miniere] del Belgio.|Många italienare arbetade i gruvorna i Belgien.|Plural: le miniere. Il minatore = gruvarbetaren.
+il frontaliere|gränspendlare|m|Molti lombardi sono [frontalieri] in Svizzera.|Många lombarder pendlar över gränsen till Schweiz.|Frontiera = gräns.
+adattarsi|anpassa sig||Non è facile [adattarsi] a un nuovo clima.|Det är inte lätt att anpassa sig till ett nytt klimat.|L'adattamento = anpassningen.
+lo spaesamento|känsla av främlingskap|m|I primi mesi ho provato un forte [spaesamento].|De första månaderna kände jag mig väldigt vilsen.|Spaesato = vilsen, utan sitt land (paese).
+spaesato|vilsen, bortkommen||Al primo giorno mi sentivo [spaesato].|Första dagen kände jag mig bortkommen.|Femininum: spaesata.
+lo shock culturale|kulturchock|m|Il cibo è stato il mio primo [shock culturale].|Maten var min första kulturchock.|Lånord från engelska.
+il senso di appartenenza|samhörighetskänsla|m|La lingua dà un [senso di appartenenza].|Språket ger en samhörighetskänsla.|Appartenere = tillhöra.
+appartenere|tillhöra||Questa tradizione [appartiene] alla nostra famiglia.|Den här traditionen hör till vår familj.|Böjs som tenere: appartengo, appartieni.
+le radici|rötter|fpl|Sono svedese ma ho [radici] siciliane.|Jag är svensk men har sicilianska rötter.|Singular: la radice.
+la memoria collettiva|kollektivt minne|f|L'emigrazione fa parte della [memoria collettiva].|Utvandringen är en del av det kollektiva minnet.|Collettivo = kollektiv.
+il museo dell'emigrazione|emigrationsmuseum|m|A Genova c'è un [museo dell'emigrazione].|I Genua finns ett emigrationsmuseum.|Emigrazione = utvandring.
+la rimessa|pengar som skickas hem|f|Le [rimesse] degli emigranti aiutavano le famiglie.|Pengarna som emigranterna skickade hem hjälpte familjerna.|Rimettere = skicka tillbaka.
+rimpatriare|återvända hem, skicka hem||Dopo trent'anni è [rimpatriato].|Efter trettio år återvände han hem.|Patria = fosterland.
+la lingua d'arrivo|målspråk (vid översättning)|f|Il traduttore conosce bene la [lingua d'arrivo].|Översättaren kan målspråket väl.|Motsats: la lingua di partenza.
+tradurre|översätta||Ho [tradotto] la lettera in svedese.|Jag har översatt brevet till svenska.|Particip: tradotto. Presens: traduco.
+la traduzione|översättning|f|La [traduzione] non è mai perfetta.|En översättning är aldrig perfekt.|Traduttore, traditore = översättare, förrädare (ordspråk).
+il traduttore|översättare|m|Il [traduttore] ha lavorato due anni al romanzo.|Översättaren arbetade två år med romanen.|Femininum: la traduttrice.
+l'interprete|tolk|m|All'ospedale c'era un'[interprete] di arabo.|På sjukhuset fanns en arabisktolk.|Samma form för maskulinum och femininum.
+la mediazione linguistica|språklig medling|f|Faccio un corso di [mediazione linguistica].|Jag går en kurs i språklig medling.|Mediare = medla.
+il mediatore culturale|kulturtolk|m|Il [mediatore culturale] aiuta le famiglie straniere.|Kulturtolken hjälper utländska familjer.|Femininum: la mediatrice culturale.
+spiegare con parole semplici|förklara med enkla ord||Puoi [spiegare con parole semplici] cosa dice il medico?|Kan du förklara med enkla ord vad läkaren säger?|Semplice = enkel.
+riassumere in breve|sammanfatta kort||Ti [riassumo in breve] la lettera.|Jag sammanfattar brevet kort för dig.|In breve = kortfattat.
+il malinteso culturale|kulturellt missförstånd|m|Il gesto ha causato un [malinteso culturale].|Gesten orsakade ett kulturellt missförstånd.|Malinteso = missförstånd.
+il luogo comune|kliché, stereotyp|m|Che gli italiani mangino solo pasta è un [luogo comune].|Att italienare bara äter pasta är en kliché.|Ordagrant 'allmän plats'.
+la cucina italiana nel mondo|italiensk mat i världen|f|La [cucina italiana nel mondo] spesso cambia molto.|Italiensk mat förändras ofta mycket ute i världen.|Cucina = kök, matlagning.
+l'italian sounding|falsk italiensk (produkt)|m|Il "parmesan" americano è un esempio di [italian sounding].|Amerikansk "parmesan" är ett exempel på falskt italienska produkter.|Produkter med italienskklingande namn som inte kommer från Italien.
+il marchio|varumärke, märke|m|Il Made in Italy è un [marchio] forte.|Made in Italy är ett starkt varumärke.|Plural: i marchi.
+l'Istituto Italiano di Cultura|Italienska kulturinstitutet|m|L'[Istituto Italiano di Cultura] di Stoccolma organizza corsi.|Italienska kulturinstitutet i Stockholm ordnar kurser.|Finns i många huvudstäder.
+la Società Dante Alighieri|Dante Alighieri-sällskapet|f|La [Società Dante Alighieri] promuove l'italiano nel mondo.|Dante Alighieri-sällskapet sprider italienska i världen.|Grundat 1889. Ansvarar för provet PLIDA.
+promuovere|främja, befordra||Il governo [promuove] la lingua italiana all'estero.|Regeringen främjar italienskan utomlands.|Particip: promosso. Betyder också 'flytta upp en klass'.
+la settimana della lingua italiana|italienska språkveckan|f|A ottobre c'è la [settimana della lingua italiana] nel mondo.|I oktober är det den italienska språkveckan i världen.|Ordnas varje år sedan 2001.
+il corso di lingua|språkkurs|m|Ho fatto un [corso di lingua] a Siena.|Jag gick en språkkurs i Siena.|Lingua = språk.
+l'Università per Stranieri|universitetet för utlänningar|f|L'[Università per Stranieri] di Perugia organizza il CELI.|Universitetet för utlänningar i Perugia ordnar CELI.|Finns i Perugia och Siena.
+l'emigrazione giovanile|unga som flyttar utomlands|f|L'[emigrazione giovanile] è di nuovo in aumento.|Allt fler unga flyttar utomlands igen.|Giovanile = ungdoms-.
+il cervello in fuga|akademiker som flyttat utomlands|m|È un [cervello in fuga]: fa ricerca a Stoccolma.|Hon är en akademiker som flytt landet: hon forskar i Stockholm.|Ordagrant 'hjärna på flykt'.
+l'espatrio|utflyttning, att bosätta sig utomlands|m|L'[espatrio] è una scelta difficile.|Att flytta utomlands är ett svårt val.|Espatriare = emigrera.
+l'expat|utlandsboende (frivilligt)|m|A Londra ci sono molti [expat] italiani.|I London finns många utlandsboende italienare.|Lånord från engelska. Oförändrat i plural.
+l'AIRE|registret över utlandsitalienare|f|Gli italiani che vivono all'estero si iscrivono all'[AIRE].|Italienare som bor utomlands skriver in sig i AIRE.|Anagrafe degli Italiani Residenti all'Estero.
+l'anagrafe|folkbokföring|f|Devo andare all'[anagrafe] per il certificato.|Jag måste gå till folkbokföringen för intyget.|Grekiska anagraphe 'register'.
+la residenza|hemvist, folkbokföringsadress|f|Ho la [residenza] a Roma ma vivo a Milano.|Jag är skriven i Rom men bor i Milano.|Residente = bosatt.
+il visto|visum|m|Per lavorare negli Stati Uniti serve il [visto].|För att arbeta i USA behövs visum.|Particip av vedere: 'sett'.
+la frontiera|gräns|f|Hanno attraversato la [frontiera] di notte.|De gick över gränsen på natten.|Plural: le frontiere. Il confine = gränslinjen.
+lo spazio Schengen|Schengenområdet|m|Nello [spazio Schengen] non ci sono controlli alle frontiere.|I Schengenområdet finns inga gränskontroller.|Efter byn Schengen i Luxemburg.
+la libera circolazione|fri rörlighet|f|La [libera circolazione] è un diritto dei cittadini europei.|Fri rörlighet är en rättighet för EU-medborgare.|Circolare = röra sig.
+l'Unione Europea|Europeiska unionen|f|L'Italia è tra i fondatori dell'[Unione Europea].|Italien är ett av EU:s grundarländer.|Förkortas UE. Romfördraget 1957.
+la pronuncia regionale|regionalt uttal|f|Dalla [pronuncia regionale] capisco che è napoletano.|På hans regionala uttal hör jag att han är från Neapel.|Pronuncia = uttal.
+l'inflessione|tonfall, brytning|f|Parla con un'[inflessione] veneta.|Han talar med venetiansk brytning.|Inflettere = böja.
+l'italiano regionale|regional italienska|m|L'[italiano regionale] cambia da città a città.|Den regionala italienskan varierar från stad till stad.|Mellan dialekt och standard.
+la lingua minoritaria|minoritetsspråk|f|Il sardo è una [lingua minoritaria] riconosciuta.|Sardiska är ett erkänt minoritetsspråk.|Minoritario = minoritets-.
+il ladino|ladinska|m|Nelle Dolomiti si parla il [ladino].|I Dolomiterna talar man ladinska.|Ett retoromanskt språk.
+il friulano|friulanska|m|Il [friulano] ha una sua letteratura.|Friulanskan har en egen litteratur.|Talas i Friuli.
+il Canton Ticino|kantonen Ticino|m|Nel [Canton Ticino] si parla italiano.|I kantonen Ticino talar man italienska.|Den italiensktalande delen av Schweiz.
+San Marino|San Marino|m|[San Marino] è una delle repubbliche più antiche del mondo.|San Marino är en av världens äldsta republiker.|En självständig stat inne i Italien.
+la Città del Vaticano|Vatikanstaten|f|Nella [Città del Vaticano] l'italiano è lingua ufficiale.|I Vatikanstaten är italienska officiellt språk.|Världens minsta stat.
+l'ex colonia|före detta koloni|f|In Eritrea, [ex colonia] italiana, alcuni anziani parlano italiano.|I Eritrea, en före detta italiensk koloni, talar en del äldre italienska.|Colonia = koloni.
+il colonialismo|kolonialism|m|Il [colonialismo] italiano è poco studiato a scuola.|Den italienska kolonialismen studeras lite i skolan.|Colonia = koloni.
+il contatto linguistico|språkkontakt|m|Il [contatto linguistico] crea parole nuove.|Språkkontakt skapar nya ord.|Contatto = kontakt.
+l'italo-argentino|italienskättad argentinare|m|Papa Francesco era un [italo-argentino].|Påve Franciskus var italienskättad argentinare.|Italo- = italiensk-.
+lo slang|slang|m|Nel suo italiano c'è molto [slang] americano.|I hans italienska finns mycket amerikansk slang.|Italienska: il gergo.
+il fenomeno migratorio|migrationen som fenomen|m|Il [fenomeno migratorio] va capito, non temuto.|Migrationen ska förstås, inte fruktas.|Migratorio = migrations-.
+la politica migratoria|migrationspolitik|f|La [politica migratoria] divide l'Europa.|Migrationspolitiken splittrar Europa.|Politica = politik.
+il ricongiungimento familiare|familjeåterförening|m|Ha chiesto il [ricongiungimento familiare].|Han har ansökt om familjeåterförening.|Ricongiungere = återförena.
+la mediazione|medling|f|La [mediazione] tra due lingue richiede tatto.|Medling mellan två språk kräver takt.|Mediare = medla.
+#m6|Kap 6 · Letteratura e cinema
+la narrativa|skönlitteratur (prosa)|f|Preferisco la [narrativa] alla poesia.|Jag föredrar prosa framför poesi.|Narrare = berätta.
+la saggistica|facklitteratur|f|In libreria il reparto di [saggistica] è al primo piano.|I bokhandeln finns facklitteraturen på första våningen.|Il saggio = essän.
+il romanzo storico|historisk roman|m|I promessi sposi è un [romanzo storico].|De trolovade är en historisk roman.|Storico = historisk.
+il romanzo di formazione|uppväxtroman|m|Il [romanzo di formazione] racconta la crescita di un giovane.|Uppväxtromanen berättar om hur en ung människa växer upp.|Formazione = bildning.
+l'opera letteraria|litterärt verk|f|La Divina Commedia è l'[opera letteraria] più famosa d'Italia.|Den gudomliga komedin är Italiens mest kända litterära verk.|Opera = verk.
+il testo letterario|litterär text|m|Analizziamo un [testo letterario] di Pirandello.|Vi analyserar en litterär text av Pirandello.|Testo = text.
+la prosa|prosa|f|Verga ha scritto in [prosa] e non in versi.|Verga skrev på prosa och inte på vers.|Latin prosa oratio 'rak framställning'.
+la strofa|strof|f|La poesia ha quattro [strofe].|Dikten har fyra strofer.|Plural: le strofe.
+il sonetto|sonett|m|Petrarca ha scritto centinaia di [sonetti].|Petrarca skrev hundratals sonetter.|Italiensk uppfinning: 14 rader.
+la metafora|metafor|f|"Un mare di problemi" è una [metafora].|"Ett hav av problem" är en metafor.|Grekiska metaphora 'överföring'.
+il simbolo letterario|litterär symbol|m|Il mare è un [simbolo letterario] frequente.|Havet är en vanlig litterär symbol.|Simbolo = symbol.
+lo stile narrativo|berättarstil|m|Lo [stile narrativo] di Verga è molto asciutto.|Vergas berättarstil är mycket torr och saklig.|Narrativo = berättande.
+il punto di vista narrativo|berättarperspektiv|m|Il [punto di vista narrativo] cambia in ogni capitolo.|Berättarperspektivet växlar i varje kapitel.|Punto di vista = synvinkel.
+in prima persona|i jagform||Il romanzo è scritto [in prima persona].|Romanen är skriven i jagform.|Persona = person.
+in terza persona|i tredje person||La storia è raccontata [in terza persona].|Berättelsen är berättad i tredje person.|Terzo = tredje.
+il monologo interiore|inre monolog|m|Svevo usa il [monologo interiore].|Svevo använder inre monolog.|Interiore = inre.
+il flashback|tillbakablick|m|Il film inizia con un [flashback].|Filmen börjar med en tillbakablick.|Italienskt ord: l'analessi.
+l'intreccio|intrig, handling|m|L'[intreccio] del romanzo è complicato.|Romanens intrig är komplicerad.|Intrecciare = fläta samman.
+l'ambientazione|miljö (i berättelse)|f|L'[ambientazione] è la Sicilia dell'Ottocento.|Handlingen utspelar sig på 1800-talets Sicilien.|Ambiente = miljö.
+l'epoca|epok, tid|f|Il film ricostruisce bene l'[epoca].|Filmen återskapar tiden väl.|Plural: le epoche.
+l'Ottocento|1800-talet|m|Verga è uno scrittore dell'[Ottocento].|Verga är en 1800-talsförfattare.|Ordagrant 'åttahundra': 1800-talet. Novecento = 1900-talet.
+il Novecento|1900-talet|m|Pirandello è un autore del [Novecento].|Pirandello är en 1900-talsförfattare.|Även filmen Novecento av Bertolucci.
+il verismo|verism (italiensk realism)|m|Verga è il padre del [verismo].|Verga är verismens fader.|Vero = sann.
+la corrente letteraria|litterär strömning|f|Il verismo è una [corrente letteraria] di fine Ottocento.|Verismen är en litterär strömning från slutet av 1800-talet.|Corrente = ström.
+l'umorismo|humor|m|Per Pirandello l'[umorismo] è il "sentimento del contrario".|För Pirandello är humorn "känslan av motsatsen".|Umorista = humorist.
+la maschera sociale|social mask|f|I personaggi di Pirandello portano una [maschera sociale].|Pirandellos gestalter bär en social mask.|Maschera = mask.
+il drammaturgo|dramatiker|m|Pirandello è stato anche un grande [drammaturgo].|Pirandello var också en stor dramatiker.|Femininum: la drammaturga.
+la tragedia|tragedi|f|La storia finisce in [tragedia].|Berättelsen slutar i tragedi.|Plural: le tragedie.
+il best seller|storsäljare|m|Il suo romanzo è diventato un [best seller].|Hennes roman blev en storsäljare.|Oförändrat i plural.
+l'editore|förläggare, förlag|m|L'[editore] ha rifiutato il manoscritto.|Förläggaren refuserade manuset.|Femininum: l'editrice. Obs: inte 'redaktör'.
+il manoscritto|manus|m|Il [manoscritto] originale è in una biblioteca.|Originalmanuset finns på ett bibliotek.|Latin manu scriptum 'skrivet för hand'.
+la prima edizione|förstaupplaga|f|Ho trovato una [prima edizione] di Collodi.|Jag har hittat en förstaupplaga av Collodi.|Edizione = upplaga.
+il lettore forte|storläsare|m|Solo il 15% degli italiani è un [lettore forte].|Bara 15 % av italienarna är storläsare.|Forte = stark.
+l'e-book|e-bok|m|Leggo gli [e-book] sul tablet.|Jag läser e-böcker på surfplattan.|Oförändrat i plural.
+il cinema italiano|italiensk film|m|Il [cinema italiano] ha vinto molti Oscar.|Italiensk film har vunnit många Oscar.|Cinema = bio och filmkonst.
+l'adattamento|bearbetning, filmatisering|m|L'[adattamento] cinematografico è fedele al libro.|Filmatiseringen är trogen boken.|Adattare = anpassa.
+il ruolo principale|huvudroll|m|Sophia Loren aveva il [ruolo principale].|Sophia Loren hade huvudrollen.|Principale = huvud-.
+il personaggio secondario|bifigur|m|Il [personaggio secondario] è il più divertente.|Bifiguren är den roligaste.|Secondario = sekundär.
+l'inquadratura|bildutsnitt, tagning|f|La prima [inquadratura] mostra il mare.|Den första bilden visar havet.|Quadro = ram, tavla.
+il primo piano|närbild|m|Il regista usa molti [primi piani].|Regissören använder många närbilder.|Betyder också 'första våningen'.
+la fotografia del film|filmfoto|f|La [fotografia del film] è bellissima.|Filmens foto är jättevackert.|Direttore della fotografia = filmfotograf.
+il montaggio|klippning (film)|m|Il [montaggio] è molto veloce.|Klippningen är mycket snabb.|Montare = klippa ihop.
+gli effetti speciali|specialeffekter|mpl|Il film non ha bisogno di [effetti speciali].|Filmen behöver inga specialeffekter.|Speciale = special-.
+girare un film|spela in en film||Fellini ha [girato un film] a Rimini.|Fellini spelade in en film i Rimini.|Girare = vrida (kameran vevades förr).
+uscire nelle sale|ha biopremiär||Il film [esce nelle sale] giovedì.|Filmen har biopremiär på torsdag.|Sala = salong.
+la Mostra del Cinema di Venezia|filmfestivalen i Venedig|f|La [Mostra del Cinema di Venezia] è la più antica del mondo.|Filmfestivalen i Venedig är världens äldsta.|Sedan 1932. Priset heter Leone d'oro.
+il Leone d'oro|Guldlejonet|m|Il film ha vinto il [Leone d'oro].|Filmen vann Guldlejonet.|Lejonet är Venedigs symbol.
+il David di Donatello|italienska filmpriset|m|Ha vinto il [David di Donatello] come miglior attrice.|Hon fick David di Donatello för bästa kvinnliga huvudroll.|Italiens motsvarighet till Oscar, efter Donatellos staty.
+il cinema muto|stumfilm|m|Il [cinema muto] non aveva dialoghi.|Stumfilmen hade inga dialoger.|Muto = stum.
+la commedia all'italiana|italiensk komedi (1950–70-tal)|f|La [commedia all'italiana] ride dei difetti degli italiani.|Den italienska komedin skämtar om italienarnas fel.|En genre med Sordi, Gassman, Tognazzi.
+lo spaghetti western|spaghettiwestern|m|Sergio Leone ha inventato lo [spaghetti western].|Sergio Leone uppfann spaghettiwestern.|Oförändrat i plural.
+la serie TV|tv-serie|f|Guardo una [serie TV] tratta da un romanzo.|Jag tittar på en tv-serie baserad på en roman.|Oförändrat i plural.
+la stagione della serie|säsong (av serie)|f|La seconda [stagione della serie] è più bella.|Seriens andra säsong är bättre.|Stagione = årstid, säsong.
+l'episodio|avsnitt|m|Ho visto tre [episodi] di fila.|Jag såg tre avsnitt i rad.|Plural: gli episodi. Även la puntata.
+la piattaforma di streaming|streamingtjänst|f|Il film è su una [piattaforma di streaming].|Filmen finns på en streamingtjänst.|Piattaforma = plattform.
+consigliare un libro|tipsa om en bok||Mi puoi [consigliare un libro] per l'estate?|Kan du tipsa mig om en bok till sommaren?|Consigliare = råda.
+la critica|kritik, kritikerna|f|La [critica] ha amato il film.|Kritikerna älskade filmen.|Il critico = kritikern.
+stroncare|såga (en bok, film)||La critica ha [stroncato] il suo ultimo film.|Kritikerna sågade hans senaste film.|La stroncatura = sågningen.
+il giudizio|omdöme, bedömning|m|Il mio [giudizio] sul libro è positivo.|Mitt omdöme om boken är positivt.|Giudicare = bedöma.
+consigliato|rekommenderad||È un film [consigliato] a tutti.|Det är en film som rekommenderas till alla.|Femininum: consigliata.
+avvincente|spännande, fängslande||È un giallo [avvincente].|Det är en spännande deckare.|Avvincere = fängsla.
+scorrevole|lättläst, flytande||Lo stile è semplice e [scorrevole].|Stilen är enkel och lättläst.|Scorrere = flyta.
+noioso da morire|dödtråkig||Il secondo tempo è [noioso da morire].|Andra halvan är dödtråkig.|Da morire = till döds.
+il pubblico in sala|publiken i salongen|m|Il [pubblico in sala] ha applaudito.|Publiken i salongen applåderade.|Sala = salong.
+il cinefilo|filmälskare|m|Mio zio è un vero [cinefilo].|Min morbror är en riktig filmälskare.|Femininum: la cinefila. Grekiska philos 'vän'.
+il passato remoto|passato remoto (historiskt perfekt)|m|Le fiabe sono scritte al [passato remoto].|Sagor är skrivna i passato remoto.|Remoto = avlägsen.
+c'era una volta un re|det var en gång en kung||[C'era una volta un re] che aveva tre figlie.|Det var en gång en kung som hade tre döttrar.|Början på sagor.
+nacque|föddes (passato remoto)||Pirandello [nacque] ad Agrigento nel 1867.|Pirandello föddes i Agrigento 1867.|Passato remoto av nascere. Presens: nasce.
+morì|dog (passato remoto)||Collodi [morì] a Firenze nel 1890.|Collodi dog i Florens 1890.|Passato remoto av morire.
+scrisse|skrev (passato remoto)||Verga [scrisse] I Malavoglia nel 1881.|Verga skrev I Malavoglia 1881.|Passato remoto av scrivere.
+fu|var, blev (passato remoto)||Dante [fu] esiliato da Firenze.|Dante blev landsförvisad från Florens.|Passato remoto av essere.
+ebbe|fick, hade (passato remoto)||Il libro [ebbe] un enorme successo.|Boken fick en enorm framgång.|Passato remoto av avere.
+il burattinaio|dockspelare|m|Mangiafuoco è il [burattinaio] di Pinocchio.|Mangiafuoco är dockspelaren i Pinocchio.|Burattino = docka.
+il naso lungo|lång näsa|m|Quando dice una bugia, Pinocchio ha il [naso lungo].|När Pinocchio ljuger får han lång näsa.|Naso = näsa.
+la morale della favola|sensmoral|f|La [morale della favola] è che non bisogna mentire.|Sensmoralen är att man inte ska ljuga.|Morale = moral.
+l'esilio|landsflykt|m|Dante scrisse la Commedia in [esilio].|Dante skrev Commedia i landsflykt.|Esiliare = landsförvisa.
+il Sommo Poeta|den störste poeten (Dante)|m|Il [Sommo Poeta] è nato a Firenze nel 1265.|Den störste poeten föddes i Florens 1265.|Sommo = högst. Epitet för Dante.
+l'Inferno|Inferno, helvetet|m|Nell'[Inferno] Dante incontra molte anime.|I Inferno möter Dante många själar.|Första delen av Commedia.
+la terzina|terzin (treradig strof)|f|La Commedia è scritta in [terzine].|Commedia är skriven i terziner.|Tre rader, efter Treenigheten.
+il romanzo epistolare|brevroman|m|Le ultime lettere di Jacopo Ortis è un [romanzo epistolare].|Jacopo Ortis sista brev är en brevroman.|Epistola = brev.
+la fiaba popolare|folksaga|f|Calvino ha raccolto le [fiabe popolari] italiane.|Calvino samlade de italienska folksagorna.|Popolare = folk-.
+il finale aperto|öppet slut|m|Il romanzo ha un [finale aperto].|Romanen har ett öppet slut.|Aperto = öppen.
+il sequel|uppföljare|m|Il [sequel] è peggio del primo film.|Uppföljaren är sämre än den första filmen.|Lånord från engelska.
+il cinema d'animazione|animerad film|m|Il [cinema d'animazione] non è solo per bambini.|Animerad film är inte bara för barn.|Animazione = animation.
+il protagonista maschile|manlig huvudperson|m|Il [protagonista maschile] è un bibliotecario.|Den manliga huvudpersonen är bibliotekarie.|Maschile = manlig.
+la voce narrante|berättarröst|f|La [voce narrante] è quella di un bambino.|Berättarrösten är ett barns.|Narrare = berätta.
+l'incipit|inledning (av bok)|m|L'[incipit] dei Promessi sposi descrive il lago di Como.|Inledningen till De trolovade beskriver Comosjön.|Latin 'det börjar'.
+la descrizione del paesaggio|landskapsbeskrivning|f|Verga è bravo nella [descrizione del paesaggio].|Verga är skicklig på landskapsbeskrivningar.|Paesaggio = landskap.
+il dialogo|dialog|m|Il [dialogo] tra i due fratelli è molto vivace.|Dialogen mellan de två bröderna är mycket livlig.|Plural: i dialoghi.
+il tono|ton|m|Il [tono] del romanzo è ironico.|Romanens ton är ironisk.|Plural: i toni.
+ironico|ironisk||Pirandello ha uno sguardo [ironico] sulla società.|Pirandello har en ironisk blick på samhället.|Femininum: ironica.
+malinconico|vemodig||Il finale è un po' [malinconico].|Slutet är lite vemodigt.|Femininum: malinconica.
+annegare|drunkna||Nel romanzo un uomo [annega] nel fiume.|I romanen drunknar en man i floden.|Passato prossimo: è annegato.
+il falegname|snickare|m|Geppetto è un povero [falegname].|Geppetto är en fattig snickare.|Plural: i falegnami.
+il legno|trä|m|Pinocchio è fatto di [legno].|Pinocchio är gjord av trä.|Plural: i legni.
+il romanzo psicologico|psykologisk roman|m|La coscienza di Zeno è un [romanzo psicologico].|Zenos samvete är en psykologisk roman.|Psicologico = psykologisk.
+la psicoanalisi|psykoanalys|f|Svevo era interessato alla [psicoanalisi].|Svevo var intresserad av psykoanalys.|Oförändrat i plural.
+il narratore inaffidabile|opålitlig berättare|m|Zeno è un [narratore inaffidabile].|Zeno är en opålitlig berättare.|Inaffidabile = opålitlig.
+l'antieroe|antihjälte|m|Mattia Pascal è un [antieroe].|Mattia Pascal är en antihjälte.|Anti- + eroe.
+la novellistica|novellkonst|f|Verga è un maestro della [novellistica].|Verga är en mästare i novellkonsten.|Novella = novell.
+il personaggio in cerca d'autore|gestalt som söker en författare|m|Ognuno di noi è un [personaggio in cerca d'autore].|Var och en av oss är en gestalt som söker en författare.|Efter Pirandellos pjäs Sei personaggi in cerca d'autore (1921).
+la messinscena|uppsättning, iscensättning|f|La nuova [messinscena] dell'opera è moderna.|Den nya uppsättningen av operan är modern.|Mettere in scena = sätta upp.
+il teatro di prosa|talteater|m|Preferisco il [teatro di prosa] all'opera.|Jag föredrar talteater framför opera.|Prosa = prosa, tal.
+il copione|manus (teater)|m|Gli attori studiano il [copione].|Skådespelarna pluggar in manuset.|Plural: i copioni.
+la battuta finale|slutreplik|f|La [battuta finale] del film è famosissima.|Filmens slutreplik är jättekänd.|Battuta = replik.
+il doppiatore|dubbningsskådespelare|m|Il [doppiatore] italiano di Harry Potter è famoso.|Harry Potters italienska röst är känd.|Femininum: la doppiatrice.
+la sala cinematografica|biograf, biosalong|f|Molte [sale cinematografiche] hanno chiuso.|Många biografer har stängt.|Sala = salong.
+#m7|Kap 7 · Musica e opera
+il melodramma|opera (1800-talets italienska)|m|Il [melodramma] è nato in Italia nel Seicento.|Operan uppstod i Italien på 1600-talet.|Grekiska melos 'sång' + drama.
+il libretto|libretto, operatext|m|Il [libretto] della Traviata è di Piave.|Librettot till La traviata är skrivet av Piave.|Diminutiv av libro 'bok'.
+il librettista|librettoförfattare|m|Da Ponte è stato il [librettista] di Mozart.|Da Ponte var Mozarts librettoförfattare.|Femininum: la librettista.
+il compositore|kompositör, tonsättare|m|Verdi è il [compositore] più amato d'Italia.|Verdi är Italiens mest älskade tonsättare.|Femininum: la compositrice. Comporre = komponera.
+il recitativo|recitativ|m|Nel [recitativo] i cantanti quasi parlano.|I recitativet nästan talar sångarna.|Recitare = recitera.
+il duetto|duett|m|Il [duetto] d'amore è il momento più bello.|Kärleksduetten är det vackraste ögonblicket.|Due = två.
+il soprano|sopran|m|Il [soprano] ha cantato benissimo.|Sopranen sjöng alldeles utmärkt.|Oftast maskulinum även om sångerskan är kvinna. Sopra = ovanför.
+il mezzosoprano|mezzosopran|m|Carmen è un ruolo per [mezzosoprano].|Carmen är en roll för mezzosopran.|Mezzo = halv.
+il baritono|baryton|m|Rigoletto è un ruolo per [baritono].|Rigoletto är en roll för baryton.|Grekiska barys 'tung'.
+il basso|bas (röst)|m|Il [basso] ha la voce più profonda.|Basen har den djupaste rösten.|Basso = låg.
+il contralto|alt|m|La voce di [contralto] è rara.|Altrösten är sällsynt.|Contra + alto.
+il registro vocale|röstregister|m|Ogni cantante ha il suo [registro vocale].|Varje sångare har sitt röstregister.|Vocale = röst-.
+l'estensione vocale|röstomfång|f|Ha un'[estensione vocale] di tre ottave.|Hon har ett röstomfång på tre oktaver.|Estendere = sträcka ut.
+l'ottava|oktav|f|La scala ha otto note: un'[ottava].|Skalan har åtta toner: en oktav.|Ottavo = åttonde.
+la scala musicale|skala|f|Oggi studiamo la [scala musicale] di do maggiore.|I dag övar vi C-durskalan.|Scala = trappa, skala.
+il do|c (ton)|m|La canzone è in [do] maggiore.|Sången går i C-dur.|Do, re, mi, fa, sol, la, si: Italien använder solmisation.
+la tonalità|tonart|f|In che [tonalità] è questo brano?|Vilken tonart går det här stycket i?|Maggiore = dur, minore = moll.
+lo spartito|noter, partitur|m|Ho dimenticato lo [spartito] a casa.|Jag har glömt noterna hemma.|Plural: gli spartiti.
+la partitura|partitur (för hela orkestern)|f|Il direttore studia la [partitura].|Dirigenten studerar partituret.|Partire = dela upp.
+leggere la musica|läsa noter||Sai [leggere la musica]?|Kan du läsa noter?|Ordagrant 'läsa musiken'.
+a prima vista|från bladet||Sa suonare [a prima vista] qualsiasi pezzo.|Han kan spela vilket stycke som helst från bladet.|Prima vista = första anblick.
+esercitarsi|öva||Mi [esercito] al pianoforte tre ore al giorno.|Jag övar piano tre timmar om dagen.|L'esercizio = övningen.
+lo studio dello strumento|instrumentstudier|m|Lo [studio dello strumento] richiede costanza.|Instrumentstudier kräver uthållighet.|Strumento = instrument.
+il saggio di fine anno|terminsavslutning, uppspelning|m|Al [saggio di fine anno] ho suonato Chopin.|På avslutningskonserten spelade jag Chopin.|Saggio = prov, uppvisning.
+l'audizione|provspelning, audition|f|Domani ho un'[audizione] al conservatorio.|I morgon har jag provspelning på konservatoriet.|Plural: le audizioni.
+il programma d'esame|provrepertoar|m|Il [programma d'esame] comprende tre brani.|Provrepertoaren omfattar tre stycken.|Programma = program.
+il repertorio|repertoar|m|Il suo [repertorio] va da Bach a Puccini.|Hennes repertoar sträcker sig från Bach till Puccini.|Plural: i repertori.
+il solista|solist|m|Il [solista] ha suonato un concerto di Vivaldi.|Solisten spelade en konsert av Vivaldi.|Femininum: la solista.
+il quartetto d'archi|stråkkvartett|m|Suono la viola in un [quartetto d'archi].|Jag spelar altfiol i en stråkkvartett.|Arco = båge, stråke.
+gli archi|stråkar, stråkinstrument|mpl|Gli [archi] iniziano piano.|Stråkarna börjar svagt.|Singular: l'arco.
+i fiati|blåsinstrument|mpl|I [fiati] suonano la melodia.|Blåsarna spelar melodin.|Fiato = andedräkt.
+le percussioni|slagverk|fpl|Mio fratello suona le [percussioni] in orchestra.|Min bror spelar slagverk i orkestern.|Percuotere = slå.
+il violoncello|cello|m|Il [violoncello] ha un suono caldo.|Cellon har en varm klang.|Diminutiv av violone 'stor fiol'.
+la viola|altfiol|f|La [viola] è un po' più grande del violino.|Altfiolen är lite större än fiolen.|Obs: inte blomman viola i den här betydelsen.
+il flauto|flöjt|m|Suona il [flauto] traverso.|Hon spelar tvärflöjt.|Plural: i flauti.
+il clarinetto|klarinett|m|Il [clarinetto] ha un assolo nel secondo movimento.|Klarinetten har ett solo i andra satsen.|Diminutiv av clarino 'klar trumpet'.
+la tromba|trumpet|f|La [tromba] annuncia l'arrivo del re.|Trumpeten tillkännager kungens ankomst.|Plural: le trombe.
+l'organo|orgel|m|Bach ha scritto molta musica per [organo].|Bach skrev mycket musik för orgel.|Betyder också 'organ' i kroppen.
+l'arpa|harpa|f|L'[arpa] ha quarantasette corde.|Harpan har fyrtiosju strängar.|Plural: le arpe.
+la corda|sträng, rep|f|Mi si è rotta una [corda] del violino.|En sträng på fiolen har gått av.|Strumenti a corda = stränginstrument.
+l'accordatura|stämning (av instrument)|f|Controlla l'[accordatura] prima del concerto.|Kontrollera stämningen före konserten.|Accordare = stämma.
+accordare|stämma (instrument)||L'orchestra [accorda] gli strumenti.|Orkestern stämmer instrumenten.|Accordo = ackord, överenskommelse.
+l'accordo|ackord|m|Con tre [accordi] puoi suonare mille canzoni.|Med tre ackord kan du spela tusen sånger.|Betyder också 'överenskommelse'.
+la sinfonia|symfoni|f|La Nona [sinfonia] di Beethoven è famosissima.|Beethovens nionde symfoni är väldigt känd.|Grekiska symphonia 'samklang'.
+il concerto per violino|violinkonsert|m|Le Quattro Stagioni sono [concerti per violino].|De fyra årstiderna är violinkonserter.|Concerto = konsert (verk och evenemang).
+il tempo musicale|tempo|m|"Allegro" indica il [tempo musicale].|"Allegro" anger tempot.|Tempo = tid, tempo.
+l'andante|andante (lugnt tempo)|m|Il secondo movimento è un [andante].|Andra satsen är ett andante.|Andare = gå: 'gående'.
+il crescendo|crescendo|m|Il finale è un lungo [crescendo].|Finalen är ett långt crescendo.|Crescere = växa.
+il pianissimo|mycket svagt|m|L'aria finisce in [pianissimo].|Arian slutar mycket svagt.|Superlativ av piano 'svagt'.
+il vibrato|vibrato|m|Il suo [vibrato] è molto naturale.|Hennes vibrato är mycket naturligt.|Vibrare = vibrera.
+la voce impostata|skolad röst|f|Per l'opera serve una [voce impostata].|För opera krävs en skolad röst.|Impostare = lägga upp, ställa in.
+il bel canto|belcanto|m|Bellini è un maestro del [bel canto].|Bellini är en mästare på belcanto.|Ordagrant 'vacker sång'.
+il loggione|översta raden (på operan)|m|I veri appassionati stanno in [loggione].|De riktiga entusiasterna sitter på översta raden.|Loggionisti = publiken där, kända för att bua.
+il palco d'opera|loge|m|Abbiamo prenotato un [palco d'opera] per quattro.|Vi har bokat en loge för fyra.|Palco = loge, scen.
+la platea|parkett|f|I biglietti di [platea] costano di più.|Parkettbiljetterna kostar mer.|Grekiska plateia 'bred gata'.
+il sipario|ridå|m|Si alza il [sipario].|Ridån går upp.|Plural: i sipari.
+l'ouverture|uvertyr|f|L'[ouverture] del Barbiere è famosissima.|Uvertyren till Barberaren är mycket känd.|Franska. Även la sinfonia d'apertura.
+fischiare|bua, vissla||Alla Scala il pubblico ha [fischiato] il tenore.|På Scala buade publiken åt tenoren.|Obs: i Italien visslar man för att bua.
+la Scala|Scalaoperan|f|La prima della [Scala] è il 7 dicembre.|Premiären på Scala är den 7 december.|Teatro alla Scala i Milano.
+il teatro lirico|operahus|m|Ogni città ha il suo [teatro lirico].|Varje stad har sitt operahus.|Lirico = lyrisk, opera-.
+la stagione lirica|operasäsong|f|La [stagione lirica] inizia in autunno.|Operasäsongen börjar på hösten.|Stagione = säsong.
+l'Arena di Verona|Arenan i Verona|f|D'estate si fa l'opera all'[Arena di Verona].|På sommaren spelas opera i Arenan i Verona.|En romersk amfiteater.
+Va' pensiero|Va' pensiero (kör ur Nabucco)||Tutti conoscono il coro [Va' pensiero].|Alla känner till kören Va' pensiero.|'Flyg, tanke'. Verdi, 1842.
+il maestro|dirigent, mästare|m|Il [maestro] alza la bacchetta.|Dirigenten lyfter taktpinnen.|Betyder också 'lågstadielärare'.
+la bacchetta|taktpinne|f|Toscanini dirigeva senza [bacchetta]?|Dirigerade Toscanini utan taktpinne?|Betyder också 'trollstav'.
+dirigere|dirigera, leda||Muti ha [diretto] l'orchestra per anni.|Muti dirigerade orkestern i många år.|Particip: diretto.
+il cantautorato|visdiktning, singer-songwriters|m|Il [cantautorato] italiano è nato negli anni Sessanta.|Den italienska visdiktningen föddes på 1960-talet.|Cantautore = sångare som skriver egna sånger.
+il testo della canzone|sångtext|m|Il [testo della canzone] parla dell'emigrazione.|Sångtexten handlar om emigrationen.|Testo = text.
+il ritornello|refräng|m|Tutti cantano il [ritornello].|Alla sjunger refrängen.|Ritornare = komma tillbaka.
+la strofa della canzone|vers (i sång)|f|Non ricordo la seconda [strofa della canzone].|Jag kommer inte ihåg andra versen.|Strofa = strof.
+l'arrangiamento|arrangemang|m|L'[arrangiamento] è moderno.|Arrangemanget är modernt.|Arrangiare = arrangera.
+il concerto all'aperto|utomhuskonsert|m|D'estate ci sono molti [concerti all'aperto].|På sommaren finns det många utomhuskonserter.|All'aperto = utomhus.
+la musica leggera|populärmusik|f|Sanremo è il festival della [musica leggera].|Sanremo är populärmusikens festival.|Ordagrant 'lätt musik'.
+il genere musicale|musikgenre|m|Qual è il tuo [genere musicale] preferito?|Vilken är din favoritgenre?|Genere = sort, genre.
+la trap|trap (musik)|f|La [trap] piace molto ai ragazzi.|Ungdomarna gillar trap mycket.|Oförändrat i plural.
+lo streaming musicale|musikstreaming|m|Con lo [streaming musicale] i dischi si vendono poco.|Med musikstreaming säljs det få skivor.|Lånord.
+i diritti d'autore|upphovsrätt|mpl|I [diritti d'autore] proteggono i compositori.|Upphovsrätten skyddar tonsättarna.|Autore = upphovsman.
+la SIAE|den italienska upphovsrättsorganisationen|f|Per un concerto pubblico si paga la [SIAE].|För en offentlig konsert betalar man till SIAE.|Motsvarar svenska STIM.
+l'orecchio assoluto|absolut gehör|m|Mozart aveva l'[orecchio assoluto].|Mozart hade absolut gehör.|Orecchio = öra, gehör.
+avere orecchio|ha gehör||Non so cantare, non [ho orecchio].|Jag kan inte sjunga, jag har inget gehör.|Orecchio = öra.
+improvvisare|improvisera||Nel jazz si [improvvisa] molto.|I jazz improviserar man mycket.|All'improvviso = plötsligt.
+il virtuoso|virtuos|m|Paganini era un [virtuoso] del violino.|Paganini var en fiolvirtuos.|Femininum: la virtuosa.
+l'interpretazione|tolkning|f|La sua [interpretazione] di Chopin è emozionante.|Hans tolkning av Chopin är gripande.|Interpretare = tolka.
+il timbro|klangfärg|m|Il violoncello ha un [timbro] scuro.|Cellon har en mörk klangfärg.|Betyder också 'stämpel'.
+l'acustica|akustik|f|L'[acustica] di questa sala è perfetta.|Akustiken i den här salen är perfekt.|Grekiska akouein 'höra'.
+l'intervallo|paus (i föreställning), intervall|m|Durante l'[intervallo] beviamo un caffè.|Under pausen dricker vi en kaffe.|Även musikaliskt intervall.
+il mecenate|mecenat|m|I Medici erano [mecenati] di artisti e musicisti.|Medici var mecenater för konstnärer och musiker.|Efter romaren Maecenas.
+la commissione d'esame|examinationsnämnd|f|La [commissione d'esame] ascolta dieci minuti.|Examinationsnämnden lyssnar i tio minuter.|Commissione = kommitté.
+l'emozione da palcoscenico|scenskräck, nervositet|f|Prima di suonare ho sempre l'[emozione da palcoscenico].|Innan jag spelar är jag alltid nervös.|Palcoscenico = scen.
+il palcoscenico|scen|m|Sul [palcoscenico] mi sento libera.|På scenen känner jag mig fri.|Plural: i palcoscenici.
+il musical|musikal|m|Abbiamo visto un [musical] a Milano.|Vi såg en musikal i Milano.|Oförändrat i plural.
+la liuteria|fiolbyggarkonst|f|Cremona è la capitale della [liuteria].|Cremona är fiolbyggarkonstens huvudstad.|Il liutaio = fiolbyggaren. Liuto = luta.
+il liutaio|fiolbyggare|m|Stradivari fu il [liutaio] più famoso della storia.|Stradivari var historiens mest berömde fiolbyggare.|Femininum: la liutaia.
+la voce di petto|bröströst|f|Il tenore canta con la [voce di petto].|Tenoren sjunger med bröströst.|Petto = bröst.
+il fiato corto|andfåddhet, kort andning|m|Se canti con il [fiato corto], la frase si spezza.|Om du sjunger med kort andning bryts frasen.|Fiato = andedräkt.
+la respirazione|andning|f|Il canto parte dalla [respirazione].|Sången utgår från andningen.|Respirare = andas.
+il diaframma|diafragma, mellangärde|m|Respira con il [diaframma], non con le spalle.|Andas med mellangärdet, inte med axlarna.|Grekiska diaphragma 'skiljevägg'.
+il vocalizzo|sångövning (på vokaler)|m|Prima di cantare faccio i [vocalizzi].|Innan jag sjunger gör jag sångövningar.|Vocale = vokal.
+il metronomo|metronom|m|Studia con il [metronomo] per andare a tempo.|Öva med metronom för att hålla takten.|Grekiska metron 'mått' + nomos 'lag'.
+andare a tempo|hålla takten||Il batterista non [va a tempo].|Trummisen håller inte takten.|Tempo = tempo, takt.
+fuori tempo|i otakt||Il coro è entrato [fuori tempo].|Kören kom in i otakt.|Fuori = utanför.
+la battuta|takt (musik), replik|f|Ripetiamo dalla battuta venti. – Dalla [battuta] venti?|Vi tar om från takt tjugo. – Från takt tjugo?|Betyder också 'skämt, replik'.
+la pausa musicale|paus (i noter)|f|Conta le [pause musicali] prima di entrare.|Räkna pauserna innan du kommer in.|Pausa = paus.
+il diploma di conservatorio|konservatorieexamen|m|Ha preso il [diploma di conservatorio] in pianoforte.|Hon tog konservatorieexamen i piano.|Nu motsvarar det en högskoleexamen.
+l'AFAM|högre konstnärlig utbildning|f|I conservatori fanno parte dell'[AFAM].|Konservatorierna hör till den högre konstnärliga utbildningen.|Alta Formazione Artistica, Musicale e Coreutica.
+la masterclass|mästarklass|f|Ho seguito una [masterclass] con un grande violinista.|Jag gick en mästarklass med en stor violinist.|Oförändrat i plural.
+il concorso musicale|musiktävling|m|Ha vinto il primo premio al [concorso musicale].|Hon vann förstapriset i musiktävlingen.|Concorso = tävling.
+l'opera buffa|komisk opera|f|Il Barbiere di Siviglia è un'[opera buffa].|Barberaren i Sevilla är en komisk opera.|Buffo = rolig.
+l'opera seria|allvarlig opera|f|Nel Settecento l'[opera seria] parlava di eroi antichi.|På 1700-talet handlade den allvarliga operan om antikens hjältar.|Serio = allvarlig.
+l'abete|gran|m|La tavola del violino è di [abete].|Fiolens lock är av gran.|Plural: gli abeti.
+l'acero|lönn|m|Il fondo del violino è di [acero].|Fiolens botten är av lönn.|Plural: gli aceri.
+la vernice|fernissa, lack|f|La [vernice] protegge il legno del violino.|Fernissan skyddar fiolens trä.|Verniciare = lackera.
+l'artigianato|hantverk|m|L'[artigianato] italiano è famoso nel mondo.|Det italienska hantverket är världsberömt.|Artigiano = hantverkare.
+la bottega|verkstad, liten butik|f|Il liutaio lavora nella sua [bottega].|Fiolbyggaren arbetar i sin verkstad.|Plural: le botteghe.
+l'orchestra giovanile|ungdomsorkester|f|Suono nell'[orchestra giovanile] della regione.|Jag spelar i regionens ungdomsorkester.|Giovanile = ungdoms-.
+la candela|stearinljus|f|All'Arena il pubblico accende le [candele].|På Arenan tänder publiken ljus.|Plural: le candele.
+#m8|Kap 8 · Cibo e sostenibilità
+la filiera corta|kort leveranskedja, närproducerat|f|Compro solo prodotti di [filiera corta].|Jag köper bara närproducerat.|Filiera = kedja (från producent till konsument).
+la filiera alimentare|livsmedelskedja|f|La [filiera alimentare] va dal campo alla tavola.|Livsmedelskedjan går från åkern till bordet.|Alimentare = livsmedels-.
+il produttore locale|lokal producent|m|Al mercato compro dai [produttori locali].|På torget köper jag av lokala producenter.|Produrre = producera.
+la tracciabilità|spårbarhet|f|La [tracciabilità] garantisce l'origine del prodotto.|Spårbarheten garanterar varans ursprung.|Traccia = spår.
+la denominazione d'origine|ursprungsbeteckning|f|Il Parmigiano ha la [denominazione d'origine] protetta.|Parmesanen har skyddad ursprungsbeteckning.|DOP = Denominazione di Origine Protetta.
+il disciplinare|produktionsregler|m|Il [disciplinare] stabilisce come si fa il prosciutto.|Produktionsreglerna fastställer hur skinkan ska tillverkas.|Disciplina = regelverk.
+la stagionalità|säsong (om råvaror)|f|Rispettare la [stagionalità] della frutta è importante.|Det är viktigt att äta frukt efter säsong.|Stagione = säsong.
+di stagione|säsongens, i säsong||Compra la frutta [di stagione].|Köp frukt som är i säsong.|Fuori stagione = utanför säsongen.
+l'anidride carbonica|koldioxid|f|Gli alberi assorbono l'[anidride carbonica].|Träden tar upp koldioxid.|Förkortas CO₂.
+i gas serra|växthusgaser|mpl|I [gas serra] riscaldano il pianeta.|Växthusgaserna värmer upp planeten.|Serra = växthus. Gas är oförändrat.
+la neutralità climatica|klimatneutralitet|f|L'Europa punta alla [neutralità climatica] nel 2050.|Europa siktar på klimatneutralitet till 2050.|Neutrale = neutral.
+la transizione ecologica|grön omställning|f|La [transizione ecologica] costa ma è necessaria.|Den gröna omställningen kostar men är nödvändig.|Transizione = övergång.
+l'agricoltura|jordbruk|f|L'[agricoltura] consuma molta acqua.|Jordbruket förbrukar mycket vatten.|Latin ager 'åker' + cultura 'odling'.
+l'agricoltura biologica|ekologiskt jordbruk|f|L'Italia è leader nell'[agricoltura biologica].|Italien ligger i topp inom ekologiskt jordbruk.|Biologico = ekologisk.
+i pesticidi|bekämpningsmedel|mpl|Questa frutta è coltivata senza [pesticidi].|Den här frukten odlas utan bekämpningsmedel.|Singular: il pesticida.
+il concime|gödsel|m|Usiamo il [concime] naturale.|Vi använder naturgödsel.|Plural: i concimi.
+il frantoio|olivpress|m|Portiamo le olive al [frantoio].|Vi tar oliverna till olivpressen.|Frangere = krossa.
+l'olio extravergine|extra jungfruolja|m|L'[olio extravergine] toscano è ottimo.|Extra jungfruolja från Toscana är utmärkt.|Vergine = jungfru, obehandlad.
+il caseificio|mejeri, osteri|m|Abbiamo visitato un [caseificio] di mozzarella.|Vi besökte ett mozzarellamejeri.|Cacio = ost (gammalt ord).
+la stagionatura|lagring (av ost, skinka)|f|La [stagionatura] del Parmigiano dura almeno dodici mesi.|Parmesanen lagras i minst tolv månader.|Stagionato = lagrad.
+l'allevamento intensivo|industriell djuruppfödning|m|L'[allevamento intensivo] è criticato dagli animalisti.|Den industriella djuruppfödningen kritiseras av djurrättsaktivister.|Intensivo = intensiv.
+le proteine vegetali|vegetabiliskt protein|fpl|I legumi sono ricchi di [proteine vegetali].|Baljväxter är rika på vegetabiliskt protein.|Vegetale = växt-.
+flexitariano|flexitarian||Sono [flexitariana]: mangio carne una volta a settimana.|Jag är flexitarian: jag äter kött en gång i veckan.|Femininum: flexitariana.
+lo spreco alimentare|matsvinn|m|Lo [spreco alimentare] è un problema etico.|Matsvinn är ett etiskt problem.|Sprecare = slösa.
+la cucina del riciclo|restmatlagning|f|La [cucina del riciclo] è una tradizione italiana.|Att laga mat av rester är en italiensk tradition.|Riciclo = återvinning.
+la schiscetta|matlåda (i Milano)|f|Porto la [schiscetta] in ufficio.|Jag tar med mig matlåda till kontoret.|Milanesiskt ord.
+la doggy bag|hundpåse (för restmat)|f|In Italia pochi chiedono la [doggy bag] al ristorante.|I Italien är det få som ber om att få ta med resten från restaurangen.|Numera ofta rimpiattino.
+la data di scadenza|bäst före-datum|f|Controlla la [data di scadenza] del latte.|Kolla bäst före-datumet på mjölken.|Scadere = gå ut.
+da consumarsi preferibilmente entro|bäst före||Sulla confezione c'è scritto "[da consumarsi preferibilmente entro]".|På förpackningen står det "bäst före".|Betyder att maten ofta går att äta även efter datumet.
+scaduto|utgången (datum)||Lo yogurt è [scaduto] da due giorni.|Yoghurten gick ut för två dagar sedan.|Femininum: scaduta.
+la confezione|förpackning|f|La [confezione] è di carta riciclata.|Förpackningen är av återvunnet papper.|Confezionare = förpacka.
+lo sfuso|lösvikt|m|Compro pasta e riso [sfuso].|Jag köper pasta och ris i lösvikt.|Negozio di sfuso = lösviktsbutik.
+monouso|engångs-||Le posate [monouso] sono vietate.|Engångsbestick är förbjudna.|Oförändrat. Mono = en, uso = användning.
+riutilizzabile|återanvändbar||Porto sempre una borraccia [riutilizzabile].|Jag har alltid med mig en återanvändbar vattenflaska.|Riutilizzare = återanvända.
+la borraccia|vattenflaska|f|Riempio la [borraccia] alla fontana.|Jag fyller vattenflaskan vid fontänen.|Plural: le borracce.
+compostabile|komposterbar||Il sacchetto è [compostabile].|Påsen är komposterbar.|Il compost = komposten.
+l'umido|matavfall|m|Le bucce vanno nell'[umido].|Skalen ska i matavfallet.|Umido = fuktig.
+il bidone|soptunna|m|Il [bidone] della carta è blu.|Papperstunnan är blå.|Plural: i bidoni.
+l'economia circolare|cirkulär ekonomi|f|L'[economia circolare] riduce i rifiuti.|Den cirkulära ekonomin minskar avfallet.|Circolare = cirkulär.
+il consumo consapevole|medveten konsumtion|m|Il [consumo consapevole] parte dal carrello della spesa.|Medveten konsumtion börjar i kundvagnen.|Consapevole = medveten.
+il gruppo di acquisto solidale|inköpsgrupp (för närproducerat)|m|Faccio parte di un [gruppo di acquisto solidale].|Jag är med i en inköpsgrupp.|Förkortas GAS.
+lo Slow Food|Slow Food|m|Lo [Slow Food] è nato a Bra, in Piemonte.|Slow Food grundades i Bra i Piemonte.|Grundat 1986 av Carlo Petrini.
+il presidio|skyddad produkt (Slow Food)|m|Questo formaggio è un [presidio] Slow Food.|Den här osten är skyddad av Slow Food.|Betyder också 'garnison'.
+la biodiversità|biologisk mångfald|f|L'agricoltura intensiva minaccia la [biodiversità].|Det intensiva jordbruket hotar den biologiska mångfalden.|Bio = liv.
+le api|bin|fpl|Senza le [api] non c'è impollinazione.|Utan bin ingen pollinering.|Singular: l'ape.
+l'impollinazione|pollinering|f|L'[impollinazione] è essenziale per la frutta.|Pollinering är nödvändig för frukten.|Polline = pollen.
+la varietà antica|gammal sort|f|Coltiviamo [varietà antiche] di pomodoro.|Vi odlar gamla tomatsorter.|Varietà = sort.
+il seme|frö|m|Scambiamo [semi] tra vicini.|Vi byter frön med grannarna.|Plural: i semi.
+la terra fertile|bördig jord|f|La Pianura Padana ha una [terra fertile].|Poslätten har bördig jord.|Fertile = bördig.
+la desertificazione|ökenspridning|f|Il Sud rischia la [desertificazione].|Södra Italien riskerar ökenspridning.|Deserto = öken.
+l'irrigazione|bevattning|f|L'[irrigazione] a goccia risparmia acqua.|Droppbevattning sparar vatten.|Irrigare = bevattna.
+la risorsa idrica|vattenresurs|f|L'acqua è una [risorsa idrica] preziosa.|Vatten är en dyrbar resurs.|Idrico = vatten-.
+l'acqua del rubinetto|kranvatten|f|Bevo l'[acqua del rubinetto], non quella in bottiglia.|Jag dricker kranvatten, inte buteljerat vatten.|Rubinetto = kran.
+l'acqua in bottiglia|buteljerat vatten|f|Gli italiani bevono molta [acqua in bottiglia].|Italienarna dricker mycket buteljerat vatten.|Bottiglia = flaska.
+il chilometro percorso|transportsträcka|m|Ogni [chilometro percorso] dal cibo inquina.|Varje kilometer maten transporteras förorenar.|Percorrere = tillryggalägga.
+la mensa scolastica|skolmatsal|f|La [mensa scolastica] usa prodotti biologici.|Skolmatsalen använder ekologiska produkter.|Mensa = matsal.
+la gastronomia|gastronomi|f|La [gastronomia] italiana è patrimonio dell'umanità.|Den italienska gastronomin är ett världsarv.|Grekiska gaster 'mage'.
+la cucina regionale|regional matlagning|f|Non esiste una cucina italiana, ma tante [cucine regionali].|Det finns inte ett italienskt kök, utan många regionala.|Regionale = regional.
+il piatto povero|husmanskost (enkel rätt)|m|La ribollita è un [piatto povero] toscano.|Ribollita är en enkel toskansk rätt.|Povero = fattig.
+la cucina povera|bondekök, enkel matlagning|f|La [cucina povera] usa ingredienti semplici.|Bondeköket använder enkla ingredienser.|Povero = fattig, enkel.
+il ricettario|kokbok|m|Ho il [ricettario] di mia nonna.|Jag har min mormors kokbok.|Ricetta = recept.
+l'Artusi|Artusis kokbok (klassiker)|m|L'[Artusi] è il libro di cucina più famoso d'Italia.|Artusi är Italiens mest kända kokbok.|Pellegrino Artusi, 1891.
+il sapore|smak|m|Il pomodoro di stagione ha più [sapore].|Tomater i säsong har mer smak.|Sapere = smaka (gammalt).
+genuino|äkta, naturlig||Il cibo della nonna è [genuino].|Mormors mat är äkta.|Femininum: genuina.
+artigianale|hantverksmässig||È un gelato [artigianale].|Det är hantverksglass.|Artigiano = hantverkare.
+il conservante|konserveringsmedel|m|Questa marmellata è senza [conservanti].|Den här marmeladen är utan konserveringsmedel.|Conservare = bevara.
+l'additivo|tillsats|m|Leggi quali [additivi] contiene.|Läs vilka tillsatser den innehåller.|Aggiungere = tillsätta.
+il cibo ultraprocessato|ultraprocessad mat|m|I bambini mangiano troppo [cibo ultraprocessato].|Barnen äter för mycket ultraprocessad mat.|Processato = bearbetad.
+la sicurezza alimentare|livsmedelssäkerhet|f|L'UE controlla la [sicurezza alimentare].|EU kontrollerar livsmedelssäkerheten.|Sicurezza = säkerhet.
+la fame nel mondo|världssvält|f|La [fame nel mondo] non è ancora sconfitta.|Världssvälten är inte besegrad än.|Fame = hunger.
+la FAO|FN:s livsmedels- och jordbruksorganisation|f|La [FAO] ha sede a Roma.|FAO har sitt huvudkontor i Rom.|Food and Agriculture Organization.
+la malnutrizione|undernäring, felnäring|f|La [malnutrizione] colpisce milioni di bambini.|Undernäring drabbar miljontals barn.|Nutrire = nära.
+il banco alimentare|matbank|m|Il [banco alimentare] raccoglie cibo per i poveri.|Matbanken samlar in mat till de fattiga.|Banco = disk, bänk.
+donare il cibo|skänka mat||I supermercati possono [donare il cibo] invenduto.|Mataffärerna kan skänka osåld mat.|Donare = skänka.
+invenduto|osåld||Il pane [invenduto] va alla mensa dei poveri.|Osålt bröd går till soppköket.|Vendere = sälja.
+l'etichetta ambientale|miljömärkning|f|L'[etichetta ambientale] spiega come riciclare.|Miljömärkningen förklarar hur man återvinner.|Ambientale = miljö-.
+il marchio biologico|ekologisk märkning|m|Cerca il [marchio biologico] europeo.|Leta efter EU:s ekologiska märkning.|Marchio = märke.
+certificato|certifierad||È un prodotto [certificato] biologico.|Det är en certifierad ekologisk produkt.|Il certificato = intyget.
+il greenwashing|grönmålning|m|Molte pubblicità fanno [greenwashing].|Många reklamer ägnar sig åt grönmålning.|Lånord från engelska.
+la generazione futura|kommande generation|f|Dobbiamo proteggere il pianeta per le [generazioni future].|Vi måste skydda planeten för kommande generationer.|Futuro = framtida.
+la riduzione|minskning|f|La [riduzione] delle emissioni è urgente.|Minskningen av utsläppen är brådskande.|Plural: le riduzioni.
+compensare|kompensera||Piantano alberi per [compensare] le emissioni.|De planterar träd för att kompensera för utsläppen.|La compensazione = kompensationen.
+incentivare|uppmuntra (med bidrag)||Il comune [incentiva] l'uso della bicicletta.|Kommunen uppmuntrar cykling.|L'incentivo = stimulansen.
+sensibilizzare|göra medveten||La campagna vuole [sensibilizzare] i cittadini.|Kampanjen vill göra medborgarna medvetna.|Sensibile = känslig.
+il mercato contadino|bondemarknad|m|Il sabato vado al [mercato contadino].|På lördagar går jag till bondemarknaden.|Contadino = bonde.
+l'orto urbano|stadsodling|m|Nel quartiere abbiamo creato un [orto urbano].|I kvarteret har vi skapat en stadsodling.|Urbano = stads-.
+l'orto condiviso|gemensam odling|m|L'[orto condiviso] unisce i vicini.|Den gemensamma odlingen för grannarna samman.|Condividere = dela.
+la pesca sostenibile|hållbart fiske|f|Compra pesce da [pesca sostenibile].|Köp fisk från hållbart fiske.|Pesca = fiske (och persika).
+il pesce azzurro|fet fisk (sardin, ansjovis)|m|Il [pesce azzurro] costa poco ed è sano.|Fet fisk som sardiner är billig och nyttig.|Azzurro = blå.
+la pesca eccessiva|överfiske|f|La [pesca eccessiva] svuota il Mediterraneo.|Överfisket tömmer Medelhavet.|Eccessivo = överdriven.
+il Mediterraneo|Medelhavet|m|Il [Mediterraneo] si sta scaldando.|Medelhavet blir allt varmare.|Latin 'mitt i landet'.
+l'agrumeto|citrusodling|m|In Sicilia ci sono molti [agrumeti].|På Sicilien finns många citrusodlingar.|Agrumi = citrusfrukter.
+gli agrumi|citrusfrukter|mpl|Arance e limoni sono [agrumi].|Apelsiner och citroner är citrusfrukter.|Agro = syrlig.
+il caporalato|olaglig arbetsförmedling (inom jordbruket)|m|Il [caporalato] sfrutta i braccianti stranieri.|Det olagliga arbetsförmedlandet utnyttjar utländska lantarbetare.|Caporale = arbetsledare.
+il bracciante|lantarbetare|m|I [braccianti] raccolgono i pomodori a mano.|Lantarbetarna plockar tomaterna för hand.|Braccio = arm.
+il prezzo equo|skäligt pris|m|I produttori chiedono un [prezzo equo].|Producenterna kräver ett skäligt pris.|Equo = rättvis.
+il frutteto|fruktodling|m|Il [frutteto] della nonna ha cento meli.|Mormors fruktodling har hundra äppelträd.|Frutto = frukt.
+ammaccato|stött (om frukt)||Queste pesche sono un po' [ammaccate].|De här persikorna har lite stötskador.|Femininum: ammaccata.
+la buccia|skal|f|La [buccia] della mela contiene molte vitamine.|Äppelskalet innehåller mycket vitaminer.|Plural: le bucce.
+la macchia|fläck|f|C'è una [macchia] sulla pera, ma è buona.|Det är en fläck på päronet, men det är gott.|Plural: le macchie.
+la grande distribuzione|stora livsmedelskedjor|f|La [grande distribuzione] decide i prezzi.|De stora livsmedelskedjorna bestämmer priserna.|Distribuire = distribuera.
+la cassetta|låda|f|Compro una [cassetta] di pomodori al mercato.|Jag köper en låda tomater på torget.|Diminutiv av cassa.
+il pane raffermo|gammalt bröd|m|Con il [pane raffermo] si fa la panzanella.|Av gammalt bröd gör man panzanella.|Raffermo = stelnat.
+congelare|frysa in||[Congelo] il pane per non buttarlo.|Jag fryser brödet för att inte slänga det.|Il congelatore = frysen.
+la minestra|soppa|f|Con la verdura avanzata faccio una [minestra].|Av överbliven grönsaker gör jag en soppa.|Minestrone = grönsakssoppa.
+il supermercato di quartiere|kvarterbutik|m|Vado al [supermercato di quartiere] a piedi.|Jag går till kvartersbutiken.|Quartiere = kvarter.
+il produttore agricolo|jordbruksproducent|m|Il [produttore agricolo] vende direttamente ai clienti.|Jordbruksproducenten säljer direkt till kunderna.|Agricolo = jordbruks-.
+l'allevatore|djuruppfödare|m|L'[allevatore] ha duecento mucche.|Djuruppfödaren har tvåhundra kor.|Femininum: l'allevatrice.
+la pecora da latte|mjölkfår|f|Il pecorino si fa con il latte di [pecora da latte].|Pecorino görs av mjölk från mjölkfår.|Pecora = får.
+#mr|Espressioni · Argomentare, scrivere e mediare
+Gentile Signora|Bästa fru … (i brev)||[Gentile Signora] Rossi, le scrivo per chiedere informazioni.|Bästa fru Rossi, jag skriver för att be om information.|Formell inledning i brev och mejl.|<b>gentile</b> vänlig · <b>signora</b> fru
+Egregio Direttore|Ärade direktör||[Egregio Direttore], le scrivo a proposito dell'annuncio.|Ärade direktör, jag skriver angående annonsen.|Mycket formellt. Egregio = framstående.|<b>egregio</b> framstående · <b>direttore</b> direktör
+Spettabile Ditta|Till företaget (i brev)||[Spettabile Ditta], vi chiedo un preventivo.|Till företaget: jag ber om en offert.|Används när man skriver till ett företag.|<b>spettabile</b> aktningsvärd · <b>ditta</b> firma
+le scrivo per|jag skriver för att||[Le scrivo per] chiedere alcune informazioni sul corso.|Jag skriver för att be om lite information om kursen.|Le = Er (formellt).|<b>le</b> till er · <b>scrivo</b> skriver · <b>per</b> för att
+in riferimento a|med hänvisning till||[In riferimento a] quanto pubblicato sul vostro sito, vorrei candidarmi.|Med hänvisning till annonsen på er webbplats vill jag söka tjänsten.|Formellt. Riferimento = hänvisning.|<b>in</b> i · <b>riferimento</b> hänvisning · <b>a</b> till
+vorrei sapere se|jag skulle vilja veta om||[Vorrei sapere se] ci sono ancora posti liberi.|Jag skulle vilja veta om det fortfarande finns lediga platser.|Artig fråga.|<b>vorrei</b> jag skulle vilja · <b>sapere</b> veta · <b>se</b> om
+le sarei grato se|jag vore tacksam om||[Le sarei grato se] potesse rispondermi entro venerdì.|Jag vore tacksam om ni kunde svara före fredag.|Efter se följer congiuntivo imperfetto. Grata om skribenten är kvinna.|<b>le</b> er · <b>sarei</b> jag vore · <b>grato</b> tacksam · <b>se</b> om
+resto in attesa di una sua risposta|jag ser fram emot ert svar||[Resto in attesa di una sua risposta].|Jag ser fram emot ert svar.|Standardavslutning i formella brev.|<b>resto</b> jag förblir · <b>in attesa</b> i väntan · <b>di una sua risposta</b> på ert svar
+distinti saluti|med vänliga hälsningar||[Distinti saluti], Anna Berg|Med vänliga hälsningar, Anna Berg|Formell hälsning.|<b>distinti</b> utmärkta · <b>saluti</b> hälsningar
+cordiali saluti|vänliga hälsningar||Grazie ancora. [Cordiali saluti], Erik|Tack igen. Vänliga hälsningar, Erik|Något mindre formellt än distinti saluti.|<b>cordiali</b> hjärtliga · <b>saluti</b> hälsningar
+in allegato trova|bifogat finner ni||[In allegato trova] il mio curriculum.|Bifogat finner ni mitt cv.|Trova = ni hittar (Lei-form).|<b>in allegato</b> i bilaga · <b>trova</b> ni finner
+la ringrazio per l'attenzione|tack för er uppmärksamhet||[La ringrazio per l'attenzione] e resto a disposizione.|Tack för er uppmärksamhet, jag står till förfogande.|La = er (formellt objekt).|<b>la</b> er · <b>ringrazio</b> jag tackar · <b>per l'attenzione</b> för uppmärksamheten
+resto a disposizione|jag står till förfogande||Per qualsiasi domanda [resto a disposizione].|Jag står till förfogande för alla frågor.|Disposizione = förfogande.|<b>resto</b> jag förblir · <b>a disposizione</b> till förfogande
+a mio avviso|enligt min mening||[A mio avviso], la scuola dovrebbe iniziare più tardi.|Enligt min mening borde skolan börja senare.|Mer formellt än secondo me.|<b>a</b> enligt · <b>mio</b> min · <b>avviso</b> åsikt
+dal mio punto di vista|ur min synvinkel||[Dal mio punto di vista] è una scelta giusta.|Ur min synvinkel är det ett rätt val.|Punto di vista = synvinkel.|<b>dal</b> från · <b>mio punto di vista</b> min synvinkel
+non credo che|jag tror inte att||[Non credo che] sia una buona idea.|Jag tror inte att det är en bra idé.|Följs av congiuntivo.|<b>non credo</b> jag tror inte · <b>che</b> att
+è vero che …, però|visserligen …, men||[È vero che] costa molto, però è di qualità.|Visserligen kostar det mycket, men det håller hög kvalitet.|Medge och invända.|<b>è vero</b> det är sant · <b>che</b> att · <b>però</b> men
+in primo luogo|för det första||[In primo luogo], bisogna pensare all'ambiente.|För det första måste man tänka på miljön.|In secondo luogo = för det andra.|<b>in</b> på · <b>primo</b> första · <b>luogo</b> plats
+in secondo luogo|för det andra||[In secondo luogo], i costi sono troppo alti.|För det andra är kostnaderna för höga.|Luogo = plats.|<b>in</b> på · <b>secondo</b> andra · <b>luogo</b> plats
+infine|slutligen||[Infine], vorrei ringraziare tutti.|Slutligen vill jag tacka alla.|Används för sista punkten i en uppräkning.|<b>in</b> i · <b>fine</b> slutet
+per quanto riguarda|när det gäller||[Per quanto riguarda] il prezzo, siamo d'accordo.|När det gäller priset är vi överens.|Riguardare = gälla.|<b>per quanto</b> så mycket som · <b>riguarda</b> gäller
+a proposito di|på tal om||[A proposito di] musica, sei andato al concerto?|På tal om musik, gick du på konserten?|Proposito = avsikt, ämne.|<b>a proposito</b> på tal · <b>di</b> om
+dal momento che|eftersom||[Dal momento che] piove, restiamo a casa.|Eftersom det regnar stannar vi hemma.|Formellare än siccome.|<b>dal momento</b> från ögonblicket · <b>che</b> att
+nonostante|trots||[Nonostante] la pioggia, il concerto è continuato.|Trots regnet fortsatte konserten.|Nonostante che + congiuntivo = trots att.|<b>non</b> inte · <b>ostante</b> hindrande
+grazie a|tack vare||[Grazie a] questa borsa di studio posso studiare a Roma.|Tack vare det här stipendiet kan jag studera i Rom.|Positivt. Negativt: a causa di.|<b>grazie</b> tack · <b>a</b> till
+a causa di|på grund av||Il treno è in ritardo [a causa dello] sciopero.|Tåget är försenat på grund av strejken.|Causa = orsak.|<b>a causa</b> på grund · <b>di</b> av
+di conseguenza|följaktligen||Non ha studiato e, [di conseguenza], non ha superato l'esame.|Han pluggade inte och klarade följaktligen inte tentan.|Conseguenza = följd.|<b>di</b> av · <b>conseguenza</b> följd
+riassumendo|för att sammanfatta||[Riassumendo], ci sono tre problemi principali.|För att sammanfatta finns det tre huvudproblem.|Gerundium av riassumere.|<b>riassumendo</b> sammanfattande
+secondo l'autore|enligt författaren||[Secondo l'autore], la tecnologia ci rende soli.|Enligt författaren gör tekniken oss ensamma.|Bra när man återger en text.|<b>secondo</b> enligt · <b>l'autore</b> författaren
+il testo afferma che|texten hävdar att||[Il testo afferma che] i giovani leggono poco.|Texten hävdar att unga läser lite.|Affermare = hävda.|<b>il testo</b> texten · <b>afferma</b> hävdar · <b>che</b> att
+in altre parole|med andra ord||[In altre parole], dobbiamo cambiare abitudini.|Med andra ord måste vi ändra våra vanor.|Används när man förklarar något på ett annat sätt.|<b>in</b> med · <b>altre</b> andra · <b>parole</b> ord
+vuol dire che|det betyder att||Se non risponde, [vuol dire che] è occupato.|Om han inte svarar betyder det att han är upptagen.|Voler dire = betyda.|<b>vuol dire</b> vill säga · <b>che</b> att
+ti spiego in due parole|jag förklarar kort||[Ti spiego in due parole] cosa dice la lettera.|Jag förklarar kort vad det står i brevet.|Bra vid medling.|<b>ti spiego</b> jag förklarar för dig · <b>in due parole</b> med två ord
+in pratica|i praktiken, alltså||[In pratica], devi pagare entro lunedì.|Alltså: du måste betala före måndag.|Vardagligt för att sammanfatta.|<b>in</b> i · <b>pratica</b> praktiken
+il punto è che|poängen är att||[Il punto è che] nessuno ci ha avvisati.|Poängen är att ingen varnade oss.|Punto = punkt, poäng.|<b>il punto</b> punkten · <b>è che</b> är att
+non è che|det är inte så att||[Non è che] non voglio, è che non posso.|Det är inte så att jag inte vill, jag kan bara inte.|Vardagligt.|<b>non è</b> det är inte · <b>che</b> att
+mettiamo che|anta att||[Mettiamo che] tu vinca la borsa: cosa fai?|Anta att du får stipendiet: vad gör du?|Följs av congiuntivo.|<b>mettiamo</b> låt oss sätta · <b>che</b> att
+se fossi in te|om jag vore du||[Se fossi in te], accetterei l'offerta.|Om jag vore du skulle jag tacka ja till erbjudandet.|Congiuntivo imperfetto + condizionale.|<b>se</b> om · <b>fossi</b> jag vore · <b>in te</b> i dig
+avrei voluto|jag skulle ha velat||[Avrei voluto] venire, ma ero malata.|Jag skulle ha velat komma, men jag var sjuk.|Condizionale passato av volere.|<b>avrei</b> jag skulle ha · <b>voluto</b> velat
+magari fosse vero!|om det ändå vore sant!||Mi hanno detto che l'esame è facile. – [Magari fosse vero!]|De sa att provet är lätt. – Om det ändå vore sant!|Magari + congiuntivo imperfetto = önskan.|<b>magari</b> kanske, om ändå · <b>fosse</b> vore · <b>vero</b> sant
+ci mancherebbe altro!|det skulle bara fattas!||Grazie per l'aiuto! – [Ci mancherebbe altro!]|Tack för hjälpen! – Det skulle bara fattas!|Svar på tack.|<b>ci mancherebbe</b> det skulle fattas · <b>altro</b> annat
+è un peccato che|det är synd att||[È un peccato che] tu non possa venire.|Det är synd att du inte kan komma.|Följs av congiuntivo.|<b>è un peccato</b> det är en synd · <b>che</b> att
+sono contento che|jag är glad att||[Sono contento che] tu abbia superato l'esame.|Jag är glad att du klarade provet.|Känsla + congiuntivo.|<b>sono</b> jag är · <b>contento</b> glad · <b>che</b> att
+ho paura che|jag är rädd att||[Ho paura che] il treno sia già partito.|Jag är rädd att tåget redan har gått.|Följs av congiuntivo.|<b>ho paura</b> jag har rädsla · <b>che</b> att
+spero che|jag hoppas att||[Spero che] tu stia meglio.|Jag hoppas att du mår bättre.|Följs av congiuntivo.|<b>spero</b> jag hoppas · <b>che</b> att
+bisogna tenere conto di|man måste ta hänsyn till||[Bisogna tenere conto dei] costi.|Man måste ta hänsyn till kostnaderna.|Conto = räkning, hänsyn.|<b>bisogna</b> det behövs · <b>tenere conto</b> hålla räkning · <b>di</b> av
+vale a dire|det vill säga||Tre ore, [vale a dire] tutto il pomeriggio.|Tre timmar, det vill säga hela eftermiddagen.|Formellare än cioè.|<b>vale</b> gäller · <b>a dire</b> att säga
+tanto per cominciare|till att börja med||[Tanto per cominciare], presentiamoci.|Till att börja med kan vi presentera oss.|Tanto = så mycket.|<b>tanto</b> så · <b>per cominciare</b> för att börja
+d'accordo, ma|visst, men||[D'accordo, ma] chi paga?|Visst, men vem betalar?|Håll med och invänd.|<b>d'accordo</b> överens · <b>ma</b> men
+non sono del tutto d'accordo|jag håller inte helt med||[Non sono del tutto d'accordo] con te.|Jag håller inte helt med dig.|Mjukare än non sono d'accordo.|<b>non sono</b> jag är inte · <b>del tutto</b> helt · <b>d'accordo</b> överens
+hai centrato il punto|du har träffat mitt i prick||Esatto, [hai centrato il punto]!|Precis, du har träffat mitt i prick!|Centrare = träffa mitten.|<b>hai centrato</b> du har träffat · <b>il punto</b> punkten
+fammi capire|låt mig förstå||[Fammi capire]: tu parti domani?|Låt mig förstå: åker du i morgon?|Fare + infinitiv.|<b>fammi</b> låt mig · <b>capire</b> förstå
+potrebbe spiegarmi meglio?|kan ni förklara närmare?||Scusi, [potrebbe spiegarmi meglio]?|Ursäkta, kan ni förklara närmare?|Formellt.|<b>potrebbe</b> skulle ni kunna · <b>spiegarmi</b> förklara för mig · <b>meglio</b> bättre
+come ho già detto|som jag redan har sagt||[Come ho già detto], il problema è il tempo.|Som jag redan har sagt är problemet tiden.|Används för att upprepa.|<b>come</b> som · <b>ho già detto</b> jag har redan sagt
+prendo la parola|jag tar ordet||Se permettete, [prendo la parola] un momento.|Om ni tillåter tar jag ordet en stund.|Parola = ord.|<b>prendo</b> jag tar · <b>la parola</b> ordet
+mi permetta di|tillåt mig att||[Mi permetta di] presentarmi.|Tillåt mig att presentera mig.|Formellt imperativ med Lei.|<b>mi permetta</b> tillåt mig · <b>di</b> att
+che ne dice?|vad säger ni om det?||Potremmo vederci giovedì. [Che ne dice]?|Vi skulle kunna ses på torsdag. Vad säger ni?|Formell (Lei). Informellt: che ne dici?|<b>che</b> vad · <b>ne</b> om det · <b>dice</b> säger ni
+per carità!|för guds skull!, inte alls!||Disturbo? – [Per carità!], entra pure.|Stör jag? – Inte alls, kom in!|Carità = barmhärtighet.|<b>per</b> för · <b>carità</b> barmhärtighet
+mi faccia sapere|låt mig veta||[Mi faccia sapere] se viene.|Låt mig veta om ni kommer.|Formell imperativ.|<b>mi faccia</b> låt mig · <b>sapere</b> veta
+ci tengo a dire che|jag vill verkligen säga att||[Ci tengo a dire che] siete stati bravissimi.|Jag vill verkligen säga att ni har varit fantastiska.|Tenerci = vara mån om.|<b>ci tengo</b> jag är mån om · <b>a dire</b> att säga · <b>che</b> att
+va da sé che|det säger sig självt att||[Va da sé che] devi studiare.|Det säger sig självt att du måste plugga.|Ordagrant 'det går av sig självt'.|<b>va</b> går · <b>da sé</b> av sig själv · <b>che</b> att
+si dà il caso che|det råkar vara så att||[Si dà il caso che] io sia il responsabile.|Det råkar vara så att det är jag som är ansvarig.|Ironiskt. Följs av congiuntivo.|<b>si dà</b> det ges · <b>il caso</b> fallet · <b>che</b> att

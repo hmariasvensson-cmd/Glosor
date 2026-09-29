@@ -1,0 +1,288 @@
+[
+ {
+  "id": "disc-001",
+  "topic": "disc",
+  "rule": "disc-que",
+  "q": "Paul dit [qu'] il est malade.",
+  "alt": [
+   "qu'est-ce qu'",
+   "si",
+   "ce qu'"
+  ],
+  "why": "Indirekt påstående: dire que. Que blir qu' före il.",
+  "sv": "Paul säger att han är sjuk."
+ },
+ {
+  "id": "disc-002",
+  "topic": "disc",
+  "rule": "disc-que",
+  "q": "Ma mère dit que je [dois] ranger ma chambre.",
+  "alt": [
+   "dois de",
+   "devrais pas",
+   "doit"
+  ],
+  "why": "Je-form: que je dois. I presens byts inte tempus.",
+  "sv": "Min mamma säger att jag måste städa mitt rum."
+ },
+ {
+  "id": "disc-003",
+  "topic": "disc",
+  "rule": "disc-que",
+  "q": "Le journaliste explique [que] la grève va durer.",
+  "alt": [
+   "si",
+   "ce que",
+   "qu'est-ce que"
+  ],
+  "why": "Påstående: expliquer que.",
+  "sv": "Journalisten förklarar att strejken kommer att fortsätta."
+ },
+ {
+  "id": "disc-004",
+  "topic": "disc",
+  "rule": "disc-que",
+  "q": "« Je suis fatigué. » → Il dit qu'il [est] fatigué.",
+  "alt": [
+   "suis",
+   "était pas",
+   "sont"
+  ],
+  "why": "Jag → han: je suis blir il est.",
+  "sv": "Han säger att han är trött."
+ },
+ {
+  "id": "disc-005",
+  "topic": "disc",
+  "rule": "disc-que",
+  "q": "« Nous partons demain. » → Ils disent qu'ils [partent] demain.",
+  "alt": [
+   "partons",
+   "partez",
+   "part"
+  ],
+  "why": "Nous → ils: partent.",
+  "sv": "De säger att de åker i morgon."
+ },
+ {
+  "id": "disc-006",
+  "topic": "disc",
+  "rule": "disc-si",
+  "q": "Elle me demande [si] je viens ce soir.",
+  "alt": [
+   "que",
+   "est-ce que",
+   "ce que"
+  ],
+  "why": "Ja/nej-fråga blir si i indirekt tal.",
+  "sv": "Hon frågar mig om jag kommer i kväll."
+ },
+ {
+  "id": "disc-007",
+  "topic": "disc",
+  "rule": "disc-si",
+  "q": "« Tu as faim ? » → Il me demande [si] j'ai faim.",
+  "alt": [
+   "que",
+   "est-ce que",
+   "qu'"
+  ],
+  "why": "Ja/nej-fråga → si. Est-ce que försvinner.",
+  "sv": "Han frågar om jag är hungrig."
+ },
+ {
+  "id": "disc-008",
+  "topic": "disc",
+  "rule": "disc-si",
+  "q": "Je me demande [s'] il va neiger.",
+  "alt": [
+   "si",
+   "qu'",
+   "est-ce qu'"
+  ],
+  "why": "Si blir s' före il (men inte före elle).",
+  "sv": "Jag undrar om det kommer att snöa."
+ },
+ {
+  "id": "disc-009",
+  "topic": "disc",
+  "rule": "disc-si",
+  "q": "Le prof demande [si] tout le monde a compris.",
+  "alt": [
+   "que",
+   "ce que",
+   "qu'est-ce que"
+  ],
+  "why": "Ja/nej-fråga → si.",
+  "sv": "Läraren frågar om alla har förstått."
+ },
+ {
+  "id": "disc-010",
+  "topic": "disc",
+  "rule": "disc-q",
+  "q": "« Qu'est-ce que tu fais ? » → Il me demande [ce que] je fais.",
+  "alt": [
+   "qu'est-ce que",
+   "ce qui",
+   "si"
+  ],
+  "why": "Qu'est-ce que → ce que i indirekt fråga.",
+  "sv": "Han frågar mig vad jag gör."
+ },
+ {
+  "id": "disc-011",
+  "topic": "disc",
+  "rule": "disc-q",
+  "q": "« Qu'est-ce qui se passe ? » → Elle demande [ce qui] se passe.",
+  "alt": [
+   "ce que",
+   "qu'est-ce qui",
+   "si"
+  ],
+  "why": "Qu'est-ce qui → ce qui.",
+  "sv": "Hon frågar vad som händer."
+ },
+ {
+  "id": "disc-012",
+  "topic": "disc",
+  "rule": "disc-q",
+  "q": "« Où habites-tu ? » → Il me demande [où] j'habite.",
+  "alt": [
+   "si",
+   "ce que",
+   "que"
+  ],
+  "why": "Frågeordet står kvar: où. Ordföljden blir rak.",
+  "sv": "Han frågar mig var jag bor."
+ },
+ {
+  "id": "disc-013",
+  "topic": "disc",
+  "rule": "disc-q",
+  "q": "Dis-moi [quand] tu arrives.",
+  "alt": [
+   "si quand",
+   "ce que",
+   "qu'est-ce que"
+  ],
+  "why": "Frågeordet quand står kvar.",
+  "sv": "Säg när du kommer."
+ },
+ {
+  "id": "disc-014",
+  "topic": "disc",
+  "rule": "disc-q",
+  "q": "Je ne sais pas [pourquoi] elle est partie.",
+  "alt": [
+   "ce que",
+   "si",
+   "qu'"
+  ],
+  "why": "Frågeordet pourquoi står kvar.",
+  "sv": "Jag vet inte varför hon gick."
+ },
+ {
+  "id": "disc-015",
+  "topic": "disc",
+  "rule": "disc-q",
+  "q": "Tu sais [comment] il s'appelle ?",
+  "alt": [
+   "ce que",
+   "qu'",
+   "si"
+  ],
+  "why": "Comment står kvar.",
+  "sv": "Vet du vad han heter?"
+ },
+ {
+  "id": "disc-016",
+  "topic": "disc",
+  "rule": "disc-pron",
+  "q": "« J'aime ton pull. » → Elle dit qu'elle aime [mon] pull.",
+  "alt": [
+   "ton",
+   "son",
+   "ma"
+  ],
+  "why": "Hon talar till mig: ton → mon.",
+  "sv": "Hon säger att hon gillar min tröja."
+ },
+ {
+  "id": "disc-017",
+  "topic": "disc",
+  "rule": "disc-pron",
+  "q": "« Mes parents sont stricts. » → Il dit que [ses] parents sont stricts.",
+  "alt": [
+   "mes",
+   "leurs",
+   "vos"
+  ],
+  "why": "Mes (hans egna) → ses.",
+  "sv": "Han säger att hans föräldrar är stränga."
+ },
+ {
+  "id": "disc-018",
+  "topic": "disc",
+  "rule": "disc-pron",
+  "q": "« Nous aimons notre quartier. » → Ils disent qu'ils aiment [leur] quartier.",
+  "alt": [
+   "notre",
+   "son",
+   "leurs"
+  ],
+  "why": "Notre → leur (ett kvarter, alltså utan -s).",
+  "sv": "De säger att de gillar sitt kvarter."
+ },
+ {
+  "id": "disc-019",
+  "topic": "disc",
+  "rule": "disc-pron",
+  "q": "« Je t'aime. » → Il lui dit qu'il [l'] aime.",
+  "alt": [
+   "t'",
+   "lui",
+   "m'"
+  ],
+  "why": "Te blir la (l') när vi berättar om henne.",
+  "sv": "Han säger till henne att han älskar henne."
+ },
+ {
+  "id": "disc-020",
+  "topic": "disc",
+  "rule": "disc-imper",
+  "q": "« Range ta chambre ! » → Ma mère me dit [de] ranger ma chambre.",
+  "alt": [
+   "que",
+   "à",
+   "en"
+  ],
+  "why": "Uppmaning → dire DE + infinitiv.",
+  "sv": "Min mamma säger åt mig att städa mitt rum."
+ },
+ {
+  "id": "disc-021",
+  "topic": "disc",
+  "rule": "disc-imper",
+  "q": "« Ne parlez pas ! » → Le prof nous demande de [ne pas parler].",
+  "alt": [
+   "ne parler pas",
+   "pas parler",
+   "ne parlez pas"
+  ],
+  "why": "Nekad infinitiv: ne pas står tillsammans före infinitiven.",
+  "sv": "Läraren ber oss att inte prata."
+ },
+ {
+  "id": "disc-022",
+  "topic": "disc",
+  "rule": "disc-imper",
+  "q": "Le médecin lui dit [de] rester au lit.",
+  "alt": [
+   "qu'",
+   "à",
+   "en"
+  ],
+  "why": "Dire à quelqu'un DE faire.",
+  "sv": "Läkaren säger åt honom att stanna i sängen."
+ }
+]

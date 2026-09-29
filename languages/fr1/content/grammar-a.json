@@ -1,0 +1,1900 @@
+[
+ {
+  "id": "etre-001",
+  "topic": "etre",
+  "rule": "etre-form",
+  "q": "Je [suis] suédoise.",
+  "alt": [
+   "es",
+   "est",
+   "sommes"
+  ],
+  "why": "Je → suis. Es är tu-form, est är il/elle och sommes är nous.",
+  "sv": "Jag är svensk."
+ },
+ {
+  "id": "etre-002",
+  "topic": "etre",
+  "rule": "etre-form",
+  "q": "Tu [es] de Stockholm ?",
+  "alt": [
+   "est",
+   "suis",
+   "êtes"
+  ],
+  "why": "Tu → es. Est är il/elle, suis är je och êtes är vous.",
+  "sv": "Är du från Stockholm?"
+ },
+ {
+  "id": "etre-003",
+  "topic": "etre",
+  "rule": "etre-form",
+  "q": "Ma mère [est] à la maison.",
+  "alt": [
+   "es",
+   "sont",
+   "suis"
+  ],
+  "why": "Ma mère = elle, och elle → est. Es är tu-form, sont är ils/elles.",
+  "sv": "Min mamma är hemma."
+ },
+ {
+  "id": "etre-004",
+  "topic": "etre",
+  "rule": "etre-form",
+  "q": "Nous [sommes] dans la même classe.",
+  "alt": [
+   "êtes",
+   "sont",
+   "est"
+  ],
+  "why": "Nous → sommes. Êtes är vous och sont är ils/elles.",
+  "sv": "Vi går i samma klass."
+ },
+ {
+  "id": "etre-005",
+  "topic": "etre",
+  "rule": "etre-form",
+  "q": "Vous [êtes] prêts ?",
+  "alt": [
+   "sommes",
+   "sont",
+   "es"
+  ],
+  "why": "Vous → êtes. Sommes är nous och sont är ils/elles.",
+  "sv": "Är ni redo?"
+ },
+ {
+  "id": "etre-006",
+  "topic": "etre",
+  "rule": "etre-form",
+  "q": "Mes parents [sont] en vacances.",
+  "alt": [
+   "est",
+   "êtes",
+   "sommes"
+  ],
+  "why": "Mes parents = ils, och ils → sont. Est är bara för en person.",
+  "sv": "Mina föräldrar är på semester."
+ },
+ {
+  "id": "etre-007",
+  "topic": "etre",
+  "rule": "etre-form",
+  "q": "On [est] en retard !",
+  "alt": [
+   "sommes",
+   "sont",
+   "es"
+  ],
+  "why": "On betyder ofta ”vi”, men verbet böjs som för il/elle: on est.",
+  "sv": "Vi är sena!"
+ },
+ {
+  "id": "etre-008",
+  "topic": "etre",
+  "rule": "etre-form",
+  "q": "Elles [sont] au café.",
+  "alt": [
+   "est",
+   "êtes",
+   "ont"
+  ],
+  "why": "Elles → sont. Förväxla inte med ont, som betyder ”har”.",
+  "sv": "De är på kaféet."
+ },
+ {
+  "id": "etre-009",
+  "topic": "etre",
+  "rule": "etre-form",
+  "q": "Il [est] huit heures.",
+  "alt": [
+   "a",
+   "sont",
+   "es"
+  ],
+  "why": "Klockan uttrycks med il est: il est huit heures.",
+  "sv": "Klockan är åtta."
+ },
+ {
+  "id": "etre-010",
+  "topic": "etre",
+  "rule": "etre-form",
+  "q": "Tu [es] fatigué ?",
+  "alt": [
+   "as",
+   "est",
+   "êtes"
+  ],
+  "why": "Tu → es (vara). As betyder ”har”, och est är il/elle-form.",
+  "sv": "Är du trött?"
+ },
+ {
+  "id": "etre-011",
+  "topic": "etre",
+  "rule": "etre-desc",
+  "q": "Mon père est [professeur].",
+  "alt": [
+   "un professeur",
+   "une professeur",
+   "de professeur"
+  ],
+  "why": "Efter être + yrke har franskan ingen artikel, precis som svenskan: han är lärare.",
+  "sv": "Min pappa är lärare."
+ },
+ {
+  "id": "etre-012",
+  "topic": "etre",
+  "rule": "etre-desc",
+  "q": "Ma sœur est [infirmière].",
+  "alt": [
+   "une infirmière",
+   "un infirmière",
+   "l'infirmière"
+  ],
+  "why": "Yrke efter être står utan artikel: elle est infirmière.",
+  "sv": "Min syster är sjuksköterska."
+ },
+ {
+  "id": "etre-013",
+  "topic": "etre",
+  "rule": "etre-desc",
+  "q": "Erik est [suédois].",
+  "alt": [
+   "un suédois",
+   "suédoise",
+   "Suède"
+  ],
+  "why": "Nationalitet efter être: utan artikel och med liten bokstav. Suédoise är femininum, Suède är landet.",
+  "sv": "Erik är svensk."
+ },
+ {
+  "id": "etre-014",
+  "topic": "etre",
+  "rule": "etre-desc",
+  "q": "Emma est [suédoise].",
+  "alt": [
+   "suédois",
+   "une suédoise",
+   "Suède"
+  ],
+  "why": "Emma är en tjej, så adjektivet får -e: suédoise. Ingen artikel efter être.",
+  "sv": "Emma är svensk."
+ },
+ {
+  "id": "etre-015",
+  "topic": "etre",
+  "rule": "etre-desc",
+  "q": "Mes amis [sont] très sympas.",
+  "alt": [
+   "est",
+   "êtes",
+   "ont"
+  ],
+  "why": "Mes amis = ils → sont. Egenskaper uttrycks med être.",
+  "sv": "Mina kompisar är jättetrevliga."
+ },
+ {
+  "id": "etre-016",
+  "topic": "etre",
+  "rule": "etre-desc",
+  "q": "Tu [es] d'où ?",
+  "alt": [
+   "est",
+   "as",
+   "êtes"
+  ],
+  "why": "Tu → es. Varifrån man är säger man med être + de (d').",
+  "sv": "Varifrån är du?"
+ },
+ {
+  "id": "etre-017",
+  "topic": "etre",
+  "rule": "etre-desc",
+  "q": "Ma copine est [italienne].",
+  "alt": [
+   "une italienne",
+   "italien",
+   "Italie"
+  ],
+  "why": "Min kompis är en tjej, så italienne (femininum). Ingen artikel, och Italie är landet.",
+  "sv": "Min kompis är italienska."
+ },
+ {
+  "id": "etre-018",
+  "topic": "etre",
+  "rule": "etre-desc",
+  "q": "Mon père est [médecin].",
+  "alt": [
+   "un médecin",
+   "médecine",
+   "une médecin"
+  ],
+  "why": "Yrke efter être utan artikel. Médecine betyder ”medicin” (ämnet).",
+  "sv": "Min pappa är läkare."
+ },
+ {
+  "id": "etre-019",
+  "topic": "etre",
+  "rule": "cest",
+  "q": "[C'est] mon frère, Hugo.",
+  "alt": [
+   "Il est",
+   "Ce est",
+   "Elle est"
+  ],
+  "why": "Före mon, ma, un, une … säger man c'est, inte il est. Ce blir c' framför est.",
+  "sv": "Det här är min bror, Hugo."
+ },
+ {
+  "id": "etre-020",
+  "topic": "etre",
+  "rule": "cest",
+  "q": "[Ce sont] mes parents.",
+  "alt": [
+   "Ils sont",
+   "Ce est",
+   "Sont"
+  ],
+  "why": "Flera personer eller saker: ce sont. Ils sont går inte före mes.",
+  "sv": "Det här är mina föräldrar."
+ },
+ {
+  "id": "etre-021",
+  "topic": "etre",
+  "rule": "cest",
+  "q": "[C'est] une belle ville.",
+  "alt": [
+   "Il est",
+   "Elle est",
+   "Ce est"
+  ],
+  "why": "C'est + artikel + substantiv: c'est une belle ville. Ce est skrivs alltid c'est.",
+  "sv": "Det är en vacker stad."
+ },
+ {
+  "id": "etre-022",
+  "topic": "etre",
+  "rule": "cest",
+  "q": "Qui est-ce ? – [C'est] Léa, ma cousine.",
+  "alt": [
+   "Elle est",
+   "Ce est",
+   "Ce sont"
+  ],
+  "why": "Man presenterar en person med c'est + namn. Ce sont används för flera.",
+  "sv": "Vem är det? – Det är Léa, min kusin."
+ },
+ {
+  "id": "etre-023",
+  "topic": "etre",
+  "rule": "cest",
+  "q": "[Ce sont] des amis de l'école.",
+  "alt": [
+   "Ils sont",
+   "Ce est",
+   "Sont"
+  ],
+  "why": "Flera: ce sont + des … Ils sont går inte före en artikel.",
+  "sv": "Det är kompisar från skolan."
+ },
+ {
+  "id": "etre-024",
+  "topic": "etre",
+  "rule": "cest",
+  "q": "[C'est] un bon restaurant.",
+  "alt": [
+   "Il est",
+   "Ce est",
+   "Ce sont"
+  ],
+  "why": "En sak: c'est + un … Ce sont är för flera.",
+  "sv": "Det är en bra restaurang."
+ },
+ {
+  "id": "er-001",
+  "topic": "er",
+  "rule": "er-form",
+  "q": "Je [parle] suédois et anglais.",
+  "alt": [
+   "parles",
+   "parlent",
+   "parlons"
+  ],
+  "why": "Je → -e: je parle. Parles (tu) och parlent (ils) låter likadant men stavas annorlunda.",
+  "sv": "Jag pratar svenska och engelska."
+ },
+ {
+  "id": "er-002",
+  "topic": "er",
+  "rule": "er-form",
+  "q": "Tu [habites] où ?",
+  "alt": [
+   "habite",
+   "habitez",
+   "habitent"
+  ],
+  "why": "Tu → -es: tu habites. S:et hörs inte men måste skrivas.",
+  "sv": "Var bor du?"
+ },
+ {
+  "id": "er-003",
+  "topic": "er",
+  "rule": "er-form",
+  "q": "Mon frère [joue] au foot le samedi.",
+  "alt": [
+   "joues",
+   "jouent",
+   "jouer"
+  ],
+  "why": "Mon frère = il → -e: il joue. Jouer är infinitiv.",
+  "sv": "Min bror spelar fotboll på lördagar."
+ },
+ {
+  "id": "er-004",
+  "topic": "er",
+  "rule": "er-form",
+  "q": "Nous [regardons] un film ce soir.",
+  "alt": [
+   "regardez",
+   "regardent",
+   "regarde"
+  ],
+  "why": "Nous → -ons: nous regardons. -ez är vous.",
+  "sv": "Vi tittar på en film i kväll."
+ },
+ {
+  "id": "er-005",
+  "topic": "er",
+  "rule": "er-form",
+  "q": "Vous [aimez] le chocolat ?",
+  "alt": [
+   "aimons",
+   "aiment",
+   "aimer"
+  ],
+  "why": "Vous → -ez. Aimer (infinitiv) låter likadant men är fel här.",
+  "sv": "Tycker ni om choklad?"
+ },
+ {
+  "id": "er-006",
+  "topic": "er",
+  "rule": "er-form",
+  "q": "Mes sœurs [dansent] très bien.",
+  "alt": [
+   "danse",
+   "dansez",
+   "dansons"
+  ],
+  "why": "Ils/elles → -ent: elles dansent. -ent uttalas inte.",
+  "sv": "Mina systrar dansar jättebra."
+ },
+ {
+  "id": "er-007",
+  "topic": "er",
+  "rule": "er-form",
+  "q": "On [écoute] de la musique.",
+  "alt": [
+   "écoutons",
+   "écoutent",
+   "écoutes"
+  ],
+  "why": "On böjs som il/elle: on écoute, även när det betyder ”vi”.",
+  "sv": "Vi lyssnar på musik."
+ },
+ {
+  "id": "er-008",
+  "topic": "er",
+  "rule": "er-form",
+  "q": "Elles [travaillent] dans un magasin.",
+  "alt": [
+   "travaille",
+   "travaillez",
+   "travailler"
+  ],
+  "why": "Elles → -ent: elles travaillent. Ändelsen hörs inte men måste skrivas.",
+  "sv": "De jobbar i en affär."
+ },
+ {
+  "id": "er-009",
+  "topic": "er",
+  "rule": "er-form",
+  "q": "Tu [portes] un jean aujourd'hui.",
+  "alt": [
+   "porte",
+   "portez",
+   "portent"
+  ],
+  "why": "Tu → -es: tu portes.",
+  "sv": "Du har jeans på dig i dag."
+ },
+ {
+  "id": "er-010",
+  "topic": "er",
+  "rule": "er-elision",
+  "q": "[J'habite] à Lyon.",
+  "alt": [
+   "Je habite",
+   "J'habites",
+   "Je habites"
+  ],
+  "why": "Je blir j' framför vokal och stumt h: j'habite. Ändelsen är -e.",
+  "sv": "Jag bor i Lyon."
+ },
+ {
+  "id": "er-011",
+  "topic": "er",
+  "rule": "er-elision",
+  "q": "[J'aime] le sport.",
+  "alt": [
+   "Je aime",
+   "J'aimes",
+   "J'aiment"
+  ],
+  "why": "Je blir j' framför vokal: j'aime.",
+  "sv": "Jag tycker om sport."
+ },
+ {
+  "id": "er-012",
+  "topic": "er",
+  "rule": "er-elision",
+  "q": "[J'écoute] la radio le matin.",
+  "alt": [
+   "Je écoute",
+   "J'écoutes",
+   "J'écoutent"
+  ],
+  "why": "Je blir j' framför vokal: j'écoute. Ändelsen för je är -e.",
+  "sv": "Jag lyssnar på radio på morgonen."
+ },
+ {
+  "id": "er-013",
+  "topic": "er",
+  "rule": "er-elision",
+  "q": "[J'étudie] l'anglais au lycée.",
+  "alt": [
+   "Je étudie",
+   "J'étudies",
+   "J'étudions"
+  ],
+  "why": "Je → j' framför é: j'étudie.",
+  "sv": "Jag läser engelska på gymnasiet."
+ },
+ {
+  "id": "er-014",
+  "topic": "er",
+  "rule": "er-elision",
+  "q": "Le soir, [j'arrive] à la maison à six heures.",
+  "alt": [
+   "je arrive",
+   "j'arrives",
+   "je arrives"
+  ],
+  "why": "Je → j' framför vokal: j'arrive. Ändelsen är -e.",
+  "sv": "På kvällen kommer jag hem klockan sex."
+ },
+ {
+  "id": "er-015",
+  "topic": "er",
+  "rule": "er-elision",
+  "q": "[Je regarde] la télé.",
+  "alt": [
+   "J'regarde",
+   "Je regardes",
+   "J'regardes"
+  ],
+  "why": "Je blir bara j' framför vokal eller stumt h. Framför r står je kvar.",
+  "sv": "Jag tittar på tv."
+ },
+ {
+  "id": "er-016",
+  "topic": "er",
+  "rule": "er-appeler",
+  "q": "Je [m'appelle] Emma.",
+  "alt": [
+   "appelle",
+   "me appelle",
+   "m'appele"
+  ],
+  "why": "Je m'appelle: me blir m' framför vokal, och appelle har två l.",
+  "sv": "Jag heter Emma."
+ },
+ {
+  "id": "er-017",
+  "topic": "er",
+  "rule": "er-appeler",
+  "q": "Comment tu [t'appelles] ?",
+  "alt": [
+   "t'appelle",
+   "te appelles",
+   "t'appeles"
+  ],
+  "why": "Tu t'appelles: te blir t', två l och -es för tu.",
+  "sv": "Vad heter du?"
+ },
+ {
+  "id": "er-018",
+  "topic": "er",
+  "rule": "er-appeler",
+  "q": "Mon frère [s'appelle] Lucas.",
+  "alt": [
+   "appelle",
+   "m'appelle",
+   "s'appele"
+  ],
+  "why": "Il s'appelle: se blir s', och två l.",
+  "sv": "Min bror heter Lucas."
+ },
+ {
+  "id": "er-019",
+  "topic": "er",
+  "rule": "er-appeler",
+  "q": "Comment vous [vous appelez] ?",
+  "alt": [
+   "vous appellez",
+   "appelez",
+   "vous appelles"
+  ],
+  "why": "Vous vous appelez: med nous och vous bara ett l.",
+  "sv": "Vad heter ni?"
+ },
+ {
+  "id": "er-020",
+  "topic": "er",
+  "rule": "er-appeler",
+  "q": "Mes chats [s'appellent] Tom et Tim.",
+  "alt": [
+   "s'appelle",
+   "s'appelent",
+   "appellent"
+  ],
+  "why": "Ils s'appellent: två l och -ent.",
+  "sv": "Mina katter heter Tom och Tim."
+ },
+ {
+  "id": "er-021",
+  "topic": "er",
+  "rule": "er-stam",
+  "q": "Nous [mangeons] à la cantine.",
+  "alt": [
+   "mangons",
+   "mangez",
+   "mangent"
+  ],
+  "why": "Nous mangeons: e:et behövs så att g:et låter som i je mange.",
+  "sv": "Vi äter i skolmatsalen."
+ },
+ {
+  "id": "er-022",
+  "topic": "er",
+  "rule": "er-stam",
+  "q": "Nous [commençons] à huit heures.",
+  "alt": [
+   "commencons",
+   "commençez",
+   "commencent"
+  ],
+  "why": "Nous commençons: ç behövs så att c låter som s före o.",
+  "sv": "Vi börjar klockan åtta."
+ },
+ {
+  "id": "er-023",
+  "topic": "er",
+  "rule": "er-stam",
+  "q": "[J'achète] du pain.",
+  "alt": [
+   "J'achete",
+   "Je achète",
+   "J'achètes"
+  ],
+  "why": "Acheter får è i je-formen: j'achète. Je blir j' framför vokal.",
+  "sv": "Jag köper bröd."
+ },
+ {
+  "id": "er-024",
+  "topic": "er",
+  "rule": "er-stam",
+  "q": "Tu [préfères] le thé ou le café ?",
+  "alt": [
+   "préferes",
+   "préfèrez",
+   "préfère"
+  ],
+  "why": "Préférer: é blir è i tu-formen, och tu → -es: tu préfères.",
+  "sv": "Föredrar du te eller kaffe?"
+ },
+ {
+  "id": "er-025",
+  "topic": "er",
+  "rule": "er-stam",
+  "q": "Vous [préférez] la mer ou la montagne ?",
+  "alt": [
+   "préfèrez",
+   "préférer",
+   "préfèrent"
+  ],
+  "why": "Med vous behålls é: vous préférez. Préférer är infinitiv.",
+  "sv": "Föredrar ni havet eller bergen?"
+ },
+ {
+  "id": "avoir-001",
+  "topic": "avoir",
+  "rule": "avoir-form",
+  "q": "[J'ai] un frère et une sœur.",
+  "alt": [
+   "Je ai",
+   "J'as",
+   "J'a"
+  ],
+  "why": "Je + ai blir j'ai.",
+  "sv": "Jag har en bror och en syster."
+ },
+ {
+  "id": "avoir-002",
+  "topic": "avoir",
+  "rule": "avoir-form",
+  "q": "Tu [as] un chien ?",
+  "alt": [
+   "a",
+   "es",
+   "ai"
+  ],
+  "why": "Tu → as. A är il/elle och es är ”är”.",
+  "sv": "Har du en hund?"
+ },
+ {
+  "id": "avoir-003",
+  "topic": "avoir",
+  "rule": "avoir-form",
+  "q": "Ma sœur [a] un vélo rouge.",
+  "alt": [
+   "as",
+   "à",
+   "est"
+  ],
+  "why": "Elle → a (utan accent). À med accent betyder ”till, i”.",
+  "sv": "Min syster har en röd cykel."
+ },
+ {
+  "id": "avoir-004",
+  "topic": "avoir",
+  "rule": "avoir-form",
+  "q": "Nous [avons] cours de maths le lundi.",
+  "alt": [
+   "avez",
+   "ont",
+   "sommes"
+  ],
+  "why": "Nous → avons. Avez är vous och ont är ils/elles.",
+  "sv": "Vi har mattelektion på måndagar."
+ },
+ {
+  "id": "avoir-005",
+  "topic": "avoir",
+  "rule": "avoir-form",
+  "q": "Vous [avez] un stylo ?",
+  "alt": [
+   "avons",
+   "ont",
+   "êtes"
+  ],
+  "why": "Vous → avez. Êtes betyder ”är”.",
+  "sv": "Har ni en penna?"
+ },
+ {
+  "id": "avoir-006",
+  "topic": "avoir",
+  "rule": "avoir-form",
+  "q": "Mes cousins [ont] une maison à la campagne.",
+  "alt": [
+   "sont",
+   "a",
+   "avons"
+  ],
+  "why": "Ils → ont (har). Sont betyder ”är” – förväxla dem inte!",
+  "sv": "Mina kusiner har ett hus på landet."
+ },
+ {
+  "id": "avoir-007",
+  "topic": "avoir",
+  "rule": "avoir-form",
+  "q": "On [a] un contrôle demain.",
+  "alt": [
+   "avons",
+   "as",
+   "ont"
+  ],
+  "why": "On böjs som il/elle: on a.",
+  "sv": "Vi har prov i morgon."
+ },
+ {
+  "id": "avoir-008",
+  "topic": "avoir",
+  "rule": "avoir-form",
+  "q": "Elles [ont] les yeux bleus.",
+  "alt": [
+   "sont",
+   "a",
+   "avez"
+  ],
+  "why": "Elles → ont (har). Sont betyder ”är”.",
+  "sv": "De har blå ögon."
+ },
+ {
+  "id": "avoir-009",
+  "topic": "avoir",
+  "rule": "avoir-form",
+  "q": "Paul [a] les cheveux courts.",
+  "alt": [
+   "est",
+   "as",
+   "ont"
+  ],
+  "why": "Paul = il → a. Utseende som ”ha kort hår” säger man med avoir.",
+  "sv": "Paul har kort hår."
+ },
+ {
+  "id": "avoir-010",
+  "topic": "avoir",
+  "rule": "avoir-form",
+  "q": "Tu [as] une question ?",
+  "alt": [
+   "a",
+   "es",
+   "avez"
+  ],
+  "why": "Tu → as.",
+  "sv": "Har du en fråga?"
+ },
+ {
+  "id": "avoir-011",
+  "topic": "avoir",
+  "rule": "avoir-age",
+  "q": "[J'ai] quinze ans.",
+  "alt": [
+   "Je suis",
+   "Je ai",
+   "J'as"
+  ],
+  "why": "På franska HAR man år: j'ai quinze ans. Aldrig je suis quinze.",
+  "sv": "Jag är femton år."
+ },
+ {
+  "id": "avoir-012",
+  "topic": "avoir",
+  "rule": "avoir-age",
+  "q": "Mon frère [a] dix-sept ans.",
+  "alt": [
+   "est",
+   "as",
+   "ont"
+  ],
+  "why": "Ålder säger man med avoir: il a dix-sept ans.",
+  "sv": "Min bror är sjutton år."
+ },
+ {
+  "id": "avoir-013",
+  "topic": "avoir",
+  "rule": "avoir-age",
+  "q": "Tu [as] quel âge ?",
+  "alt": [
+   "es",
+   "a",
+   "est"
+  ],
+  "why": "Tu as quel âge ? – ålder med avoir, tu → as.",
+  "sv": "Hur gammal är du?"
+ },
+ {
+  "id": "avoir-014",
+  "topic": "avoir",
+  "rule": "avoir-age",
+  "q": "Ma sœur a douze [ans].",
+  "alt": [
+   "an",
+   "années",
+   "âge"
+  ],
+  "why": "Efter ett tal används ans (plural): douze ans.",
+  "sv": "Min syster är tolv år."
+ },
+ {
+  "id": "avoir-015",
+  "topic": "avoir",
+  "rule": "avoir-age",
+  "q": "Nous [avons] seize ans.",
+  "alt": [
+   "sommes",
+   "avez",
+   "ont"
+  ],
+  "why": "Ålder med avoir: nous avons seize ans.",
+  "sv": "Vi är sexton år."
+ },
+ {
+  "id": "avoir-016",
+  "topic": "avoir",
+  "rule": "avoir-age",
+  "q": "Mes parents [ont] quarante-cinq ans.",
+  "alt": [
+   "sont",
+   "a",
+   "avons"
+  ],
+  "why": "Ålder med avoir: ils ont … ans.",
+  "sv": "Mina föräldrar är fyrtiofem år."
+ },
+ {
+  "id": "avoir-017",
+  "topic": "avoir",
+  "rule": "avoir-uttr",
+  "q": "Maman, [j'ai] faim !",
+  "alt": [
+   "je suis",
+   "je ai",
+   "j'es"
+  ],
+  "why": "Hunger säger man med avoir: j'ai faim (ordagrant ”jag har hunger”).",
+  "sv": "Mamma, jag är hungrig!"
+ },
+ {
+  "id": "avoir-018",
+  "topic": "avoir",
+  "rule": "avoir-uttr",
+  "q": "Tu [as] soif ?",
+  "alt": [
+   "es",
+   "a",
+   "est"
+  ],
+  "why": "Avoir soif = vara törstig. Tu → as.",
+  "sv": "Är du törstig?"
+ },
+ {
+  "id": "avoir-019",
+  "topic": "avoir",
+  "rule": "avoir-uttr",
+  "q": "Nous [avons] froid.",
+  "alt": [
+   "sommes",
+   "avez",
+   "ont"
+  ],
+  "why": "Avoir froid = frysa. Nous sommes froids betyder att man är kall som person.",
+  "sv": "Vi fryser."
+ },
+ {
+  "id": "avoir-020",
+  "topic": "avoir",
+  "rule": "avoir-uttr",
+  "q": "Elle [a] peur des chiens.",
+  "alt": [
+   "est",
+   "as",
+   "à"
+  ],
+  "why": "Avoir peur = vara rädd. Elle → a.",
+  "sv": "Hon är rädd för hundar."
+ },
+ {
+  "id": "avoir-021",
+  "topic": "avoir",
+  "rule": "avoir-uttr",
+  "q": "Tu [as] raison !",
+  "alt": [
+   "es",
+   "est",
+   "a"
+  ],
+  "why": "Avoir raison = ha rätt. Tu → as.",
+  "sv": "Du har rätt!"
+ },
+ {
+  "id": "avoir-022",
+  "topic": "avoir",
+  "rule": "avoir-uttr",
+  "q": "Vous [avez] chaud ?",
+  "alt": [
+   "êtes",
+   "avons",
+   "ont"
+  ],
+  "why": "Avoir chaud = vara varm, tycka att det är varmt. Vous → avez.",
+  "sv": "Är ni varma?"
+ },
+ {
+  "id": "avoir-023",
+  "topic": "avoir",
+  "rule": "avoir-uttr",
+  "q": "On [a] envie de manger une pizza.",
+  "alt": [
+   "est",
+   "avons",
+   "as"
+  ],
+  "why": "Avoir envie de = ha lust att, vara sugen på. On → a.",
+  "sv": "Vi är sugna på att äta pizza."
+ },
+ {
+  "id": "avoir-024",
+  "topic": "avoir",
+  "rule": "avoir-uttr",
+  "q": "Les élèves [ont] besoin d'une pause.",
+  "alt": [
+   "sont",
+   "a",
+   "avons"
+  ],
+  "why": "Avoir besoin de = behöva. Ils → ont.",
+  "sv": "Eleverna behöver en paus."
+ },
+ {
+  "id": "art-001",
+  "topic": "art",
+  "rule": "art-def",
+  "q": "[Le] livre est sur la table.",
+  "alt": [
+   "La",
+   "L'",
+   "Les"
+  ],
+  "why": "Livre är maskulinum och börjar på konsonant: le livre.",
+  "sv": "Boken ligger på bordet."
+ },
+ {
+  "id": "art-002",
+  "topic": "art",
+  "rule": "art-def",
+  "q": "[La] maison est grande.",
+  "alt": [
+   "Le",
+   "L'",
+   "Les"
+  ],
+  "why": "Maison är femininum: la maison.",
+  "sv": "Huset är stort."
+ },
+ {
+  "id": "art-003",
+  "topic": "art",
+  "rule": "art-def",
+  "q": "[L'école] commence à huit heures.",
+  "alt": [
+   "La école",
+   "Le école",
+   "Les école"
+  ],
+  "why": "Framför vokal blir le och la till l': l'école.",
+  "sv": "Skolan börjar klockan åtta."
+ },
+ {
+  "id": "art-004",
+  "topic": "art",
+  "rule": "art-def",
+  "q": "[Les] enfants jouent dans le parc.",
+  "alt": [
+   "Le",
+   "La",
+   "L'"
+  ],
+  "why": "Plural: les, för både maskulinum och femininum.",
+  "sv": "Barnen leker i parken."
+ },
+ {
+  "id": "art-005",
+  "topic": "art",
+  "rule": "art-def",
+  "q": "Où est [la] gare ?",
+  "alt": [
+   "le",
+   "l'",
+   "les"
+  ],
+  "why": "Gare är femininum: la gare.",
+  "sv": "Var ligger stationen?"
+ },
+ {
+  "id": "art-006",
+  "topic": "art",
+  "rule": "art-def",
+  "q": "Je cherche [l'hôpital].",
+  "alt": [
+   "le hôpital",
+   "la hôpital",
+   "les hôpital"
+  ],
+  "why": "H är stumt i hôpital, så le blir l': l'hôpital.",
+  "sv": "Jag letar efter sjukhuset."
+ },
+ {
+  "id": "art-007",
+  "topic": "art",
+  "rule": "art-def",
+  "q": "[Le] soleil brille.",
+  "alt": [
+   "La",
+   "L'",
+   "Les"
+  ],
+  "why": "Soleil är maskulinum: le soleil.",
+  "sv": "Solen skiner."
+ },
+ {
+  "id": "art-008",
+  "topic": "art",
+  "rule": "art-def",
+  "q": "Tu as [la] clé ?",
+  "alt": [
+   "le",
+   "l'",
+   "les"
+  ],
+  "why": "Clé är femininum: la clé.",
+  "sv": "Har du nyckeln?"
+ },
+ {
+  "id": "art-009",
+  "topic": "art",
+  "rule": "art-def",
+  "q": "[L'ami] de Paul s'appelle Tom.",
+  "alt": [
+   "Le ami",
+   "La ami",
+   "Les ami"
+  ],
+  "why": "Ami börjar på vokal: l'ami.",
+  "sv": "Pauls kompis heter Tom."
+ },
+ {
+  "id": "art-010",
+  "topic": "art",
+  "rule": "art-ind",
+  "q": "J'ai [un] frère.",
+  "alt": [
+   "une",
+   "des",
+   "le"
+  ],
+  "why": "Frère är maskulinum: un frère.",
+  "sv": "Jag har en bror."
+ },
+ {
+  "id": "art-011",
+  "topic": "art",
+  "rule": "art-ind",
+  "q": "Elle a [une] sœur.",
+  "alt": [
+   "un",
+   "des",
+   "la"
+  ],
+  "why": "Sœur är femininum: une sœur.",
+  "sv": "Hon har en syster."
+ },
+ {
+  "id": "art-012",
+  "topic": "art",
+  "rule": "art-ind",
+  "q": "Il y a [un] cinéma près d'ici.",
+  "alt": [
+   "une",
+   "des",
+   "du"
+  ],
+  "why": "Cinéma är maskulinum trots -a: un cinéma.",
+  "sv": "Det finns en bio i närheten."
+ },
+ {
+  "id": "art-013",
+  "topic": "art",
+  "rule": "art-ind",
+  "q": "Je voudrais [une] pomme.",
+  "alt": [
+   "un",
+   "des",
+   "de"
+  ],
+  "why": "Pomme är femininum: une pomme.",
+  "sv": "Jag skulle vilja ha ett äpple."
+ },
+ {
+  "id": "art-014",
+  "topic": "art",
+  "rule": "art-ind",
+  "q": "Nous avons [des] amis à Paris.",
+  "alt": [
+   "un",
+   "une",
+   "de"
+  ],
+  "why": "Flera, obestämd form: des. Svenskan har ingen artikel här, men franskan måste ha det.",
+  "sv": "Vi har kompisar i Paris."
+ },
+ {
+  "id": "art-015",
+  "topic": "art",
+  "rule": "art-ind",
+  "q": "Tu as [un] stylo ?",
+  "alt": [
+   "une",
+   "des",
+   "la"
+  ],
+  "why": "Stylo är maskulinum: un stylo.",
+  "sv": "Har du en penna?"
+ },
+ {
+  "id": "art-016",
+  "topic": "art",
+  "rule": "art-ind",
+  "q": "Il porte [une] chemise blanche.",
+  "alt": [
+   "un",
+   "des",
+   "le"
+  ],
+  "why": "Chemise är femininum: une chemise.",
+  "sv": "Han har en vit skjorta på sig."
+ },
+ {
+  "id": "art-017",
+  "topic": "art",
+  "rule": "art-ind",
+  "q": "J'achète [des] croissants.",
+  "alt": [
+   "un",
+   "une",
+   "de"
+  ],
+  "why": "Flera croissanter: des. På svenska säger man bara ”croissanter”.",
+  "sv": "Jag köper croissanter."
+ },
+ {
+  "id": "art-018",
+  "topic": "art",
+  "rule": "art-ind",
+  "q": "C'est [une] ville magnifique.",
+  "alt": [
+   "un",
+   "des",
+   "la"
+  ],
+  "why": "Ville är femininum: une ville.",
+  "sv": "Det är en fantastisk stad."
+ },
+ {
+  "id": "art-019",
+  "topic": "art",
+  "rule": "art-gout",
+  "q": "J'aime [le] chocolat.",
+  "alt": [
+   "du",
+   "un",
+   "de"
+  ],
+  "why": "Efter aimer, adorer, détester och préférer används bestämd artikel: j'aime le chocolat.",
+  "sv": "Jag tycker om choklad."
+ },
+ {
+  "id": "art-020",
+  "topic": "art",
+  "rule": "art-gout",
+  "q": "Tu aimes [les] chats ?",
+  "alt": [
+   "des",
+   "un",
+   "de"
+  ],
+  "why": "Om man gillar något i allmänhet: bestämd artikel. Tu aimes les chats ?",
+  "sv": "Gillar du katter?"
+ },
+ {
+  "id": "art-021",
+  "topic": "art",
+  "rule": "art-gout",
+  "q": "Je déteste [les] maths.",
+  "alt": [
+   "des",
+   "de",
+   "un"
+  ],
+  "why": "Efter détester: bestämd artikel, och maths är plural: les maths.",
+  "sv": "Jag hatar matte."
+ },
+ {
+  "id": "art-022",
+  "topic": "art",
+  "rule": "art-gout",
+  "q": "Elle adore [la] musique.",
+  "alt": [
+   "une",
+   "de la",
+   "de"
+  ],
+  "why": "Efter adorer: bestämd artikel. Musique är femininum: la musique.",
+  "sv": "Hon älskar musik."
+ },
+ {
+  "id": "art-023",
+  "topic": "art",
+  "rule": "art-gout",
+  "q": "Mon père préfère [le] café.",
+  "alt": [
+   "du",
+   "un",
+   "de"
+  ],
+  "why": "Efter préférer: bestämd artikel. Café är maskulinum: le café.",
+  "sv": "Min pappa föredrar kaffe."
+ },
+ {
+  "id": "art-024",
+  "topic": "art",
+  "rule": "art-gout",
+  "q": "Nous aimons [le] sport.",
+  "alt": [
+   "du",
+   "un",
+   "de"
+  ],
+  "why": "Efter aimer: bestämd artikel: le sport. Svenskan har ingen artikel här.",
+  "sv": "Vi tycker om sport."
+ },
+ {
+  "id": "plur-001",
+  "topic": "plur",
+  "rule": "plur-s",
+  "q": "J'ai deux [frères].",
+  "alt": [
+   "frère",
+   "frèrex",
+   "frèrs"
+  ],
+  "why": "Plural med -s: frères. S:et hörs inte men måste skrivas.",
+  "sv": "Jag har två bröder."
+ },
+ {
+  "id": "plur-002",
+  "topic": "plur",
+  "rule": "plur-s",
+  "q": "Il y a trente [élèves] dans ma classe.",
+  "alt": [
+   "élève",
+   "élèvex",
+   "élèvs"
+  ],
+  "why": "Plural: lägg till -s. Élèves.",
+  "sv": "Det finns trettio elever i min klass."
+ },
+ {
+  "id": "plur-003",
+  "topic": "plur",
+  "rule": "plur-s",
+  "q": "Les [filles] jouent au basket.",
+  "alt": [
+   "fille",
+   "fillex",
+   "fills"
+  ],
+  "why": "Efter les står substantivet i plural: filles.",
+  "sv": "Tjejerna spelar basket."
+ },
+ {
+  "id": "plur-004",
+  "topic": "plur",
+  "rule": "plur-s",
+  "q": "J'achète trois [pommes].",
+  "alt": [
+   "pomme",
+   "pommex",
+   "pommees"
+  ],
+  "why": "Efter trois: plural med -s. Pommes.",
+  "sv": "Jag köper tre äpplen."
+ },
+ {
+  "id": "plur-005",
+  "topic": "plur",
+  "rule": "plur-s",
+  "q": "Nous avons deux [chats].",
+  "alt": [
+   "chat",
+   "chatx",
+   "chates"
+  ],
+  "why": "Plural med -s: chats.",
+  "sv": "Vi har två katter."
+ },
+ {
+  "id": "plur-006",
+  "topic": "plur",
+  "rule": "plur-s",
+  "q": "Mes [amis] sont sympas.",
+  "alt": [
+   "ami",
+   "amix",
+   "amie"
+  ],
+  "why": "Efter mes står substantivet i plural: amis.",
+  "sv": "Mina kompisar är trevliga."
+ },
+ {
+  "id": "plur-007",
+  "topic": "plur",
+  "rule": "plur-s",
+  "q": "Je mange deux [croissants].",
+  "alt": [
+   "croissant",
+   "croissantx",
+   "croissantes"
+  ],
+  "why": "Plural med -s: croissants.",
+  "sv": "Jag äter två croissanter."
+ },
+ {
+  "id": "plur-008",
+  "topic": "plur",
+  "rule": "plur-s",
+  "q": "Les [maisons] sont petites.",
+  "alt": [
+   "maison",
+   "maisonx",
+   "maisones"
+  ],
+  "why": "Plural med -s: maisons.",
+  "sv": "Husen är små."
+ },
+ {
+  "id": "plur-009",
+  "topic": "plur",
+  "rule": "plur-s",
+  "q": "Je prends deux [bus] pour aller à l'école.",
+  "alt": [
+   "buss",
+   "buses",
+   "bux"
+  ],
+  "why": "Ord som redan slutar på -s ändras inte i plural: un bus – deux bus.",
+  "sv": "Jag tar två bussar till skolan."
+ },
+ {
+  "id": "plur-010",
+  "topic": "plur",
+  "rule": "plur-x",
+  "q": "Il y a des [bateaux] sur le lac.",
+  "alt": [
+   "bateaus",
+   "bateau",
+   "bateauxs"
+  ],
+  "why": "Ord på -eau får -x i plural: bateaux.",
+  "sv": "Det finns båtar på sjön."
+ },
+ {
+  "id": "plur-011",
+  "topic": "plur",
+  "rule": "plur-x",
+  "q": "J'aime les [animaux].",
+  "alt": [
+   "animals",
+   "animal",
+   "animaus"
+  ],
+  "why": "Ord på -al får -aux i plural: un animal – des animaux.",
+  "sv": "Jag tycker om djur."
+ },
+ {
+  "id": "plur-012",
+  "topic": "plur",
+  "rule": "plur-x",
+  "q": "Mes [cheveux] sont longs.",
+  "alt": [
+   "chevaux",
+   "cheveus",
+   "cheveu"
+  ],
+  "why": "Ord på -eu får -x: cheveux (hår). Chevaux betyder hästar!",
+  "sv": "Mitt hår är långt."
+ },
+ {
+  "id": "plur-013",
+  "topic": "plur",
+  "rule": "plur-x",
+  "q": "Nous avons deux [chevaux].",
+  "alt": [
+   "chevals",
+   "cheval",
+   "cheveux"
+  ],
+  "why": "-al blir -aux: un cheval – deux chevaux. Cheveux betyder hår.",
+  "sv": "Vi har två hästar."
+ },
+ {
+  "id": "plur-014",
+  "topic": "plur",
+  "rule": "plur-x",
+  "q": "Les [journaux] sont sur la table.",
+  "alt": [
+   "journals",
+   "journal",
+   "journaus"
+  ],
+  "why": "-al blir -aux: un journal – des journaux.",
+  "sv": "Tidningarna ligger på bordet."
+ },
+ {
+  "id": "plur-015",
+  "topic": "plur",
+  "rule": "plur-x",
+  "q": "Les [gâteaux] de ma grand-mère sont délicieux.",
+  "alt": [
+   "gâteaus",
+   "gâteau",
+   "gâteauxs"
+  ],
+  "why": "-eau får -x: gâteaux.",
+  "sv": "Mormors kakor är jättegoda."
+ },
+ {
+  "id": "plur-016",
+  "topic": "plur",
+  "rule": "plur-x",
+  "q": "Il a beaucoup de [jeux] vidéo.",
+  "alt": [
+   "jeus",
+   "jeu",
+   "jeuxs"
+  ],
+  "why": "-eu får -x: un jeu – des jeux.",
+  "sv": "Han har många tv-spel."
+ },
+ {
+  "id": "plur-017",
+  "topic": "plur",
+  "rule": "plur-x",
+  "q": "Les [oiseaux] chantent.",
+  "alt": [
+   "oiseaus",
+   "oiseau",
+   "oiseals"
+  ],
+  "why": "-eau får -x: un oiseau – des oiseaux.",
+  "sv": "Fåglarna sjunger."
+ },
+ {
+  "id": "plur-018",
+  "topic": "plur",
+  "rule": "plur-x",
+  "q": "Elle a beaucoup de [bijoux].",
+  "alt": [
+   "bijous",
+   "bijou",
+   "bijouxs"
+  ],
+  "why": "Några ord på -ou får -x, till exempel bijou – bijoux.",
+  "sv": "Hon har många smycken."
+ },
+ {
+  "id": "plur-019",
+  "topic": "plur",
+  "rule": "plur-art",
+  "q": "[Les] livres sont sur la table.",
+  "alt": [
+   "Le",
+   "La",
+   "L'"
+  ],
+  "why": "Bestämd artikel i plural: les, för alla ord.",
+  "sv": "Böckerna ligger på bordet."
+ },
+ {
+  "id": "plur-020",
+  "topic": "plur",
+  "rule": "plur-art",
+  "q": "Il a [des] cousins en France.",
+  "alt": [
+   "un",
+   "une",
+   "de"
+  ],
+  "why": "Obestämd artikel i plural: des. Svenskan har ingen artikel här.",
+  "sv": "Han har kusiner i Frankrike."
+ },
+ {
+  "id": "plur-021",
+  "topic": "plur",
+  "rule": "plur-art",
+  "q": "[Les] enfants de Marie sont petits.",
+  "alt": [
+   "Le",
+   "L'",
+   "La"
+  ],
+  "why": "Flera barn: les enfants. S:et i les binds till vokalen: [lez-anfan].",
+  "sv": "Maries barn är små."
+ },
+ {
+  "id": "plur-022",
+  "topic": "plur",
+  "rule": "plur-art",
+  "q": "Je cherche [des] chaussures.",
+  "alt": [
+   "un",
+   "une",
+   "de"
+  ],
+  "why": "Un/une blir des i plural: des chaussures.",
+  "sv": "Jag letar efter skor."
+ },
+ {
+  "id": "plur-023",
+  "topic": "plur",
+  "rule": "plur-art",
+  "q": "[Les] vacances commencent demain.",
+  "alt": [
+   "La",
+   "Le",
+   "L'"
+  ],
+  "why": "Vacances är alltid plural: les vacances.",
+  "sv": "Lovet börjar i morgon."
+ },
+ {
+  "id": "plur-024",
+  "topic": "plur",
+  "rule": "plur-art",
+  "q": "Elle porte [des] lunettes.",
+  "alt": [
+   "une",
+   "un",
+   "de"
+  ],
+  "why": "Lunettes (glasögon) är plural: des lunettes.",
+  "sv": "Hon har glasögon."
+ },
+ {
+  "id": "aller-faire-001",
+  "topic": "aller-faire",
+  "rule": "aller-form",
+  "q": "Je [vais] à l'école à pied.",
+  "alt": [
+   "vas",
+   "va",
+   "allons"
+  ],
+  "why": "Aller är oregelbundet: je vais.",
+  "sv": "Jag går till skolan."
+ },
+ {
+  "id": "aller-faire-002",
+  "topic": "aller-faire",
+  "rule": "aller-form",
+  "q": "Tu [vas] où ?",
+  "alt": [
+   "va",
+   "vais",
+   "allez"
+  ],
+  "why": "Tu vas – med -s som vanligt för tu.",
+  "sv": "Vart ska du?"
+ },
+ {
+  "id": "aller-faire-003",
+  "topic": "aller-faire",
+  "rule": "aller-form",
+  "q": "Mon père [va] au travail en bus.",
+  "alt": [
+   "vas",
+   "vont",
+   "aller"
+  ],
+  "why": "Il/elle → va.",
+  "sv": "Min pappa åker buss till jobbet."
+ },
+ {
+  "id": "aller-faire-004",
+  "topic": "aller-faire",
+  "rule": "aller-form",
+  "q": "Nous [allons] à la plage.",
+  "alt": [
+   "allez",
+   "vont",
+   "vais"
+  ],
+  "why": "Nous → allons. Här syns infinitiven aller igen.",
+  "sv": "Vi går till stranden."
+ },
+ {
+  "id": "aller-faire-005",
+  "topic": "aller-faire",
+  "rule": "aller-form",
+  "q": "Vous [allez] bien ?",
+  "alt": [
+   "allons",
+   "vont",
+   "allé"
+  ],
+  "why": "Vous → allez. Allé är en annan form (particip).",
+  "sv": "Mår ni bra?"
+ },
+ {
+  "id": "aller-faire-006",
+  "topic": "aller-faire",
+  "rule": "aller-form",
+  "q": "Mes amis [vont] au concert ce soir.",
+  "alt": [
+   "va",
+   "vais",
+   "allont"
+  ],
+  "why": "Ils → vont. Allont finns inte!",
+  "sv": "Mina kompisar går på konsert i kväll."
+ },
+ {
+  "id": "aller-faire-007",
+  "topic": "aller-faire",
+  "rule": "aller-form",
+  "q": "On [va] au cinéma ?",
+  "alt": [
+   "allons",
+   "vont",
+   "vas"
+  ],
+  "why": "On böjs som il: on va.",
+  "sv": "Ska vi gå på bio?"
+ },
+ {
+  "id": "aller-faire-008",
+  "topic": "aller-faire",
+  "rule": "aller-form",
+  "q": "Ça [va] ?",
+  "alt": [
+   "vas",
+   "vais",
+   "vont"
+  ],
+  "why": "Ça va ? = Hur är det? Ça böjs som il: va.",
+  "sv": "Hur är det?"
+ },
+ {
+  "id": "aller-faire-009",
+  "topic": "aller-faire",
+  "rule": "aller-a",
+  "q": "On va [au] cinéma.",
+  "alt": [
+   "à le",
+   "à la",
+   "aux"
+  ],
+  "why": "À + le blir alltid au: au cinéma.",
+  "sv": "Vi går på bio."
+ },
+ {
+  "id": "aller-faire-010",
+  "topic": "aller-faire",
+  "rule": "aller-a",
+  "q": "Je vais [à la] piscine.",
+  "alt": [
+   "au",
+   "à le",
+   "aux"
+  ],
+  "why": "Piscine är femininum: à la ändras inte.",
+  "sv": "Jag går till simhallen."
+ },
+ {
+  "id": "aller-faire-011",
+  "topic": "aller-faire",
+  "rule": "aller-a",
+  "q": "Tu vas [à l'école] demain ?",
+  "alt": [
+   "au école",
+   "à le école",
+   "à la école"
+  ],
+  "why": "Framför vokal: à l'. À l' ändras inte.",
+  "sv": "Ska du till skolan i morgon?"
+ },
+ {
+  "id": "aller-faire-012",
+  "topic": "aller-faire",
+  "rule": "aller-a",
+  "q": "Les enfants vont [au] parc.",
+  "alt": [
+   "à le",
+   "à la",
+   "aux"
+  ],
+  "why": "Parc är maskulinum: à + le = au.",
+  "sv": "Barnen går till parken."
+ },
+ {
+  "id": "aller-faire-013",
+  "topic": "aller-faire",
+  "rule": "aller-a",
+  "q": "Je vais [au] marché le samedi.",
+  "alt": [
+   "à le",
+   "à la",
+   "aux"
+  ],
+  "why": "Marché är maskulinum: à + le = au.",
+  "sv": "Jag går till marknaden på lördagar."
+ },
+ {
+  "id": "aller-faire-014",
+  "topic": "aller-faire",
+  "rule": "aller-a",
+  "q": "Mes parents vont [aux] États-Unis.",
+  "alt": [
+   "au",
+   "à les",
+   "à la"
+  ],
+  "why": "À + les blir aux: aux États-Unis.",
+  "sv": "Mina föräldrar åker till USA."
+ },
+ {
+  "id": "aller-faire-015",
+  "topic": "aller-faire",
+  "rule": "aller-a",
+  "q": "Il va [à la] boulangerie.",
+  "alt": [
+   "au",
+   "à le",
+   "aux"
+  ],
+  "why": "Boulangerie är femininum: à la.",
+  "sv": "Han går till bageriet."
+ },
+ {
+  "id": "aller-faire-016",
+  "topic": "aller-faire",
+  "rule": "aller-a",
+  "q": "Vous allez [au] restaurant ce soir ?",
+  "alt": [
+   "à le",
+   "à la",
+   "aux"
+  ],
+  "why": "Restaurant är maskulinum: à + le = au.",
+  "sv": "Går ni på restaurang i kväll?"
+ },
+ {
+  "id": "aller-faire-017",
+  "topic": "aller-faire",
+  "rule": "aller-a",
+  "q": "Tu vas [à l'hôpital] ?",
+  "alt": [
+   "au hôpital",
+   "à le hôpital",
+   "à la hôpital"
+  ],
+  "why": "Stumt h räknas som vokal: à l'hôpital, inte au.",
+  "sv": "Ska du till sjukhuset?"
+ },
+ {
+  "id": "aller-faire-018",
+  "topic": "aller-faire",
+  "rule": "faire-form",
+  "q": "Je [fais] mes devoirs.",
+  "alt": [
+   "fait",
+   "faites",
+   "font"
+  ],
+  "why": "Je → fais. Fait (il/elle) låter likadant men stavas med t.",
+  "sv": "Jag gör mina läxor."
+ },
+ {
+  "id": "aller-faire-019",
+  "topic": "aller-faire",
+  "rule": "faire-form",
+  "q": "Qu'est-ce que tu [fais] ce soir ?",
+  "alt": [
+   "fait",
+   "faisez",
+   "font"
+  ],
+  "why": "Tu → fais.",
+  "sv": "Vad gör du i kväll?"
+ },
+ {
+  "id": "aller-faire-020",
+  "topic": "aller-faire",
+  "rule": "faire-form",
+  "q": "Mon frère [fait] du vélo.",
+  "alt": [
+   "fais",
+   "font",
+   "faire"
+  ],
+  "why": "Il → fait. Faire du vélo = cykla.",
+  "sv": "Min bror cyklar."
+ },
+ {
+  "id": "aller-faire-021",
+  "topic": "aller-faire",
+  "rule": "faire-form",
+  "q": "Nous [faisons] les courses le samedi.",
+  "alt": [
+   "faites",
+   "font",
+   "fasons"
+  ],
+  "why": "Nous → faisons.",
+  "sv": "Vi handlar på lördagar."
+ },
+ {
+  "id": "aller-faire-022",
+  "topic": "aller-faire",
+  "rule": "faire-form",
+  "q": "Vous [faites] du sport ?",
+  "alt": [
+   "faisez",
+   "faisons",
+   "font"
+  ],
+  "why": "Vous → faites. Faisez finns inte!",
+  "sv": "Tränar ni?"
+ },
+ {
+  "id": "aller-faire-023",
+  "topic": "aller-faire",
+  "rule": "faire-form",
+  "q": "Mes parents [font] la cuisine.",
+  "alt": [
+   "faisent",
+   "fait",
+   "faites"
+  ],
+  "why": "Ils → font. Faisent finns inte.",
+  "sv": "Mina föräldrar lagar mat."
+ },
+ {
+  "id": "aller-faire-024",
+  "topic": "aller-faire",
+  "rule": "faire-form",
+  "q": "Il [fait] beau aujourd'hui.",
+  "alt": [
+   "est",
+   "a",
+   "fais"
+  ],
+  "why": "Väder säger man med il fait: il fait beau, il fait froid.",
+  "sv": "Det är fint väder i dag."
+ },
+ {
+  "id": "aller-faire-025",
+  "topic": "aller-faire",
+  "rule": "faire-form",
+  "q": "On [fait] une pause ?",
+  "alt": [
+   "faisons",
+   "font",
+   "fais"
+  ],
+  "why": "On böjs som il: on fait.",
+  "sv": "Ska vi ta en paus?"
+ }
+]

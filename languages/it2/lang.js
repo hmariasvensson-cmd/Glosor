@@ -5,12 +5,14 @@ LANGUAGES.it2 = {
   title: "Italienska glosor",
   course: "Italienska 2",
   courseGy25: "Moderna språk – grund, nivå 1",
+  step: 2,                       // steg 1–7 (Moderna språk 1–7), "U" = universitet; sorterar kursväljaren
   level: "A1 → A2",           // steg 2 ≈ A1.2 enligt Skolverket
   inLang: "på italienska",
   tts: "it-IT",
   htmlLang: "it",
   etyLabel: "Kommentar",
   nextLabel: "Nästa ord i ordlistan",
+  nextCourse: "it3",            // kursen man går vidare till när den här är klar
   storageKey: "glosor-it2-v1",   // ÄNDRA ALDRIG: sparade framsteg ligger under den här nyckeln
   extends: "it1",                // fälten i inherit hämtas från Italienska 1 (egna fält vinner)
   inherit: ["articles", "hintStrip", "pronouns", "elision", "connectors", "tenseCheck"],

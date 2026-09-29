@@ -4,7 +4,8 @@ LANGUAGES.de = {
   title: "Tyska glosor",
   course: "Tyska 5",          // kursen som ordlistan hör till
   courseGy25: "Moderna språk – fördjupning, nivå 1",   // samma kurs i Gy25 (gymnasiet från juli 2025)
-  level: "B1 → B2",           // ungefärlig nivå i europeiska språkskalan (GERS/CEFR)
+  step: 5,                       // steg 1–7 (Moderna språk 1–7), "U" = universitet; sorterar kursväljaren
+  level: "B1 → B2",           // steg 5 ≈ B1.1 enligt Skolverket, kursen för mot B2 (provmålet B2 står i exam)
   inLang: "på tyska",
   tts: "de-DE",
   etyLabel: "Kommentar",               // rubrik för sjätte fältet i words.txt
@@ -25,6 +26,7 @@ LANGUAGES.de = {
   genders: {m: "maskulinum", f: "femininum", n: "neutrum", pl: "plural"},
   selfStudy: true,
   exam: {name: "Goethe-Zertifikat B2 (eller telc B2/TestDaF)", level: "B2"},   // språkprovet eleven siktar på            // eleven pluggar på egen hand, utan lärare och lärobok (påverkar texterna i appen)
+  goal: "att klara språkprovet för att få studera musik utomlands (i Tyskland)",   // valfritt: elevens mål, nämns i Claudes bedömning
   nounCaps: true,             // substantiv skrivs med stor bokstav (ord man sparar från texter behåller sin stavning)
   genderGame: {m: "der", f: "die", n: "das"},   // spelet der, die, das och plural
 

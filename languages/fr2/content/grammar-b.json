@@ -1,0 +1,1653 @@
+[
+ {
+  "id": "comp-001",
+  "topic": "comp",
+  "rule": "comp-plus",
+  "q": "Aujourd'hui, il fait 30 degrés à Nice et 20 degrés à Paris. Il fait [plus] chaud à Nice qu'à Paris.",
+  "alt": [
+   "moins",
+   "aussi",
+   "très"
+  ],
+  "why": "Nice är varmast, så det blir plus … que (varmare än). Moins betyder mindre och aussi lika.",
+  "sv": "I dag är det 30 grader i Nice och 20 grader i Paris. Det är varmare i Nice än i Paris."
+ },
+ {
+  "id": "comp-002",
+  "topic": "comp",
+  "rule": "comp-plus",
+  "q": "Le train coûte 40 euros et l'avion 90 euros. Le train est [moins] cher que l'avion.",
+  "alt": [
+   "plus",
+   "aussi",
+   "meilleur"
+  ],
+  "why": "Tåget kostar mindre, så det blir moins … que (mindre dyrt än = billigare än).",
+  "sv": "Tåget kostar 40 euro och flyget 90 euro. Tåget är billigare än flyget."
+ },
+ {
+  "id": "comp-003",
+  "topic": "comp",
+  "rule": "comp-plus",
+  "q": "Ma chambre est plus grande [que] la chambre de ma sœur.",
+  "alt": [
+   "de",
+   "comme",
+   "à"
+  ],
+  "why": "Svenskans än heter que efter plus/moins/aussi. Comme betyder som.",
+  "sv": "Mitt rum är större än min systers rum."
+ },
+ {
+  "id": "comp-004",
+  "topic": "comp",
+  "rule": "comp-plus",
+  "q": "En hiver, les jours sont [plus courts] qu'en été.",
+  "alt": [
+   "plus court",
+   "moins courts",
+   "plus courtes"
+  ],
+  "why": "Adjektivet böjs efter les jours (maskulinum plural): courts. Dagarna är kortare på vintern, så plus.",
+  "sv": "På vintern är dagarna kortare än på sommaren."
+ },
+ {
+  "id": "comp-005",
+  "topic": "comp",
+  "rule": "comp-plus",
+  "q": "Ma sœur a 16 ans et moi 14 ans. Elle est [plus âgée] que moi.",
+  "alt": [
+   "plus âgé",
+   "moins âgée",
+   "aussi âgée"
+  ],
+  "why": "Systern är äldst: plus âgée. Adjektivet böjs efter elle, så det får -e.",
+  "sv": "Min syster är 16 år och jag är 14. Hon är äldre än jag."
+ },
+ {
+  "id": "comp-006",
+  "topic": "comp",
+  "rule": "comp-plus",
+  "q": "La veste coûte 30 euros et le manteau 80 euros. La veste est [moins chère] que le manteau.",
+  "alt": [
+   "moins cher",
+   "plus chère",
+   "moins chères"
+  ],
+  "why": "La veste är femininum singular, så adjektivet blir chère. Jackan är billigare, så moins.",
+  "sv": "Jackan kostar 30 euro och kappan 80 euro. Jackan är billigare än kappan."
+ },
+ {
+  "id": "comp-007",
+  "topic": "comp",
+  "rule": "comp-plus",
+  "q": "Le Canada est plus grand [que] la France.",
+  "alt": [
+   "de",
+   "comme",
+   "qu'"
+  ],
+  "why": "Än heter que. Qu' används bara före vokal, och la börjar med konsonant.",
+  "sv": "Kanada är större än Frankrike."
+ },
+ {
+  "id": "comp-008",
+  "topic": "comp",
+  "rule": "comp-plus",
+  "q": "Il pleut plus à Bergen [qu'à] Stockholm.",
+  "alt": [
+   "que à",
+   "de à",
+   "comme à"
+  ],
+  "why": "Que blir qu' före vokal: qu'à. Man skriver aldrig que à.",
+  "sv": "Det regnar mer i Bergen än i Stockholm."
+ },
+ {
+  "id": "comp-009",
+  "topic": "comp",
+  "rule": "comp-plus",
+  "q": "En juillet, il y a [plus de] touristes à Paris qu'en novembre.",
+  "alt": [
+   "plus des",
+   "plus que",
+   "plus"
+  ],
+  "why": "Före ett substantiv säger man plus de (mer/fler), utan artikel.",
+  "sv": "I juli finns det fler turister i Paris än i november."
+ },
+ {
+  "id": "comp-010",
+  "topic": "comp",
+  "rule": "comp-plus",
+  "type": "rw",
+  "q": "Le TGV est rapide. Le bus n'est pas très rapide.",
+  "cue": "plus … que",
+  "a": "Le TGV est plus rapide que le bus.",
+  "alt": [
+   "Le TGV est rapide plus que le bus.",
+   "Le TGV plus est rapide que le bus."
+  ],
+  "why": "Plus står direkt före adjektivet, och que före det man jämför med.",
+  "sv": "Snabbtåget är snabbare än bussen."
+ },
+ {
+  "id": "comp-011",
+  "topic": "comp",
+  "rule": "comp-plus",
+  "type": "rw",
+  "q": "Ma chambre est petite. La chambre de mon frère est grande.",
+  "cue": "plus … que",
+  "a": "Ma chambre est plus petite que la chambre de mon frère.",
+  "alt": [
+   "Ma chambre est petite plus que la chambre de mon frère.",
+   "Ma chambre plus petite est que la chambre de mon frère."
+  ],
+  "why": "Ordföljden är som i svenskan: är + plus + adjektiv + que (är mindre än).",
+  "sv": "Mitt rum är mindre än min brors rum."
+ },
+ {
+  "id": "comp-012",
+  "topic": "comp",
+  "rule": "comp-aussi",
+  "q": "Il fait 15 degrés à Lyon et 15 degrés à Bordeaux. Il fait [aussi] chaud à Lyon qu'à Bordeaux.",
+  "alt": [
+   "plus",
+   "moins",
+   "autant"
+  ],
+  "why": "Samma temperatur, så det blir aussi … que (lika … som). Autant används inte före adjektiv.",
+  "sv": "Det är 15 grader i Lyon och 15 grader i Bordeaux. Det är lika varmt i Lyon som i Bordeaux."
+ },
+ {
+  "id": "comp-013",
+  "topic": "comp",
+  "rule": "comp-aussi",
+  "q": "Julie et Léa font 1,65 m. Julie est aussi grande [que] Léa.",
+  "alt": [
+   "comme",
+   "de",
+   "à"
+  ],
+  "why": "Lika … som heter aussi … que. Man säger inte comme efter aussi, fast svenskan har som.",
+  "sv": "Julie och Léa är 1,65 m långa. Julie är lika lång som Léa."
+ },
+ {
+  "id": "comp-014",
+  "topic": "comp",
+  "rule": "comp-aussi",
+  "q": "Le pull coûte 25 euros, et le t-shirt aussi. Le t-shirt est [aussi cher] que le pull.",
+  "alt": [
+   "aussi chère",
+   "plus cher",
+   "si cher"
+  ],
+  "why": "Samma pris ger aussi … que. Le t-shirt är maskulinum, så cher utan -e.",
+  "sv": "Tröjan kostar 25 euro, och t-shirten också. T-shirten är lika dyr som tröjan."
+ },
+ {
+  "id": "comp-015",
+  "topic": "comp",
+  "rule": "comp-aussi",
+  "q": "Après la fête, ma sœur et moi, nous sommes très fatiguées. Elle est [aussi fatiguée] que moi.",
+  "alt": [
+   "aussi fatigué",
+   "autant fatiguée",
+   "aussi fatiguées"
+  ],
+  "why": "Aussi + adjektiv + que. Adjektivet böjs efter elle (femininum singular): fatiguée.",
+  "sv": "Efter festen är min syster och jag väldigt trötta. Hon är lika trött som jag."
+ },
+ {
+  "id": "comp-016",
+  "topic": "comp",
+  "rule": "comp-aussi",
+  "q": "Au Québec, l'hiver est aussi froid [qu'en] Suède.",
+  "alt": [
+   "que en",
+   "comme en",
+   "qu'à"
+  ],
+  "why": "Que blir qu' före vokal. Suède är ett femininum land, så det heter en Suède.",
+  "sv": "I Québec är vintern lika kall som i Sverige."
+ },
+ {
+  "id": "comp-017",
+  "topic": "comp",
+  "rule": "comp-aussi",
+  "type": "rw",
+  "q": "Lucas est sympa. Son frère est sympa aussi.",
+  "cue": "aussi … que",
+  "a": "Lucas est aussi sympa que son frère.",
+  "alt": [
+   "Lucas est sympa aussi que son frère.",
+   "Lucas aussi est sympa que son frère."
+  ],
+  "why": "Aussi står direkt före adjektivet och que före det man jämför med: aussi sympa que.",
+  "sv": "Lucas är lika trevlig som sin bror."
+ },
+ {
+  "id": "comp-018",
+  "topic": "comp",
+  "rule": "comp-aussi",
+  "type": "rw",
+  "q": "La plage est belle. La montagne est belle aussi.",
+  "cue": "aussi … que",
+  "a": "La montagne est aussi belle que la plage.",
+  "acc": [
+   "La plage est aussi belle que la montagne."
+  ],
+  "alt": [
+   "La montagne est belle aussi que la plage.",
+   "La montagne aussi est belle que la plage."
+  ],
+  "why": "Aussi + adjektiv + que, precis som lika + adjektiv + som på svenska.",
+  "sv": "Bergen är lika vackra som stranden."
+ },
+ {
+  "id": "comp-019",
+  "topic": "comp",
+  "rule": "comp-meilleur",
+  "q": "Ce gâteau est [meilleur] que le gâteau du supermarché.",
+  "alt": [
+   "plus bon",
+   "mieux",
+   "meilleure"
+  ],
+  "why": "Bon blir meilleur i komparativ, aldrig plus bon. Gâteau är maskulinum, så inget -e.",
+  "sv": "Den här kakan är godare än kakan från affären."
+ },
+ {
+  "id": "comp-020",
+  "topic": "comp",
+  "rule": "comp-meilleur",
+  "q": "Ma mère chante [mieux] que moi.",
+  "alt": [
+   "meilleur",
+   "plus bien",
+   "meilleure"
+  ],
+  "why": "Chanter är ett verb, och bien (bra, om hur man gör något) blir mieux. Meilleur hör till substantiv.",
+  "sv": "Min mamma sjunger bättre än jag."
+ },
+ {
+  "id": "comp-021",
+  "topic": "comp",
+  "rule": "comp-meilleur",
+  "q": "Les croissants de cette boulangerie sont [meilleurs] que les croissants du supermarché.",
+  "alt": [
+   "meilleur",
+   "mieux",
+   "plus bons"
+  ],
+  "why": "Om substantiv (croissants) används meilleur, som böjs: meilleurs i maskulinum plural.",
+  "sv": "Croissanterna från det här bageriet är godare än croissanterna från affären."
+ },
+ {
+  "id": "comp-022",
+  "topic": "comp",
+  "rule": "comp-meilleur",
+  "q": "Je me sens [mieux] aujourd'hui qu'hier.",
+  "alt": [
+   "meilleur",
+   "plus bien",
+   "bien"
+  ],
+  "why": "Se sentir bien blir se sentir mieux (må bättre). Bien har komparativen mieux.",
+  "sv": "Jag mår bättre i dag än i går."
+ },
+ {
+  "id": "comp-023",
+  "topic": "comp",
+  "rule": "comp-meilleur",
+  "q": "La pizza de ce restaurant est [meilleure] que la pizza de la cantine.",
+  "alt": [
+   "meilleur",
+   "mieux",
+   "plus bonne"
+  ],
+  "why": "Bonne blir meilleure. La pizza är femininum, så det behövs -e.",
+  "sv": "Pizzan på den här restaurangen är godare än pizzan i skolmatsalen."
+ },
+ {
+  "id": "comp-024",
+  "topic": "comp",
+  "rule": "comp-meilleur",
+  "q": "Tu parles [mieux] français que ton frère.",
+  "alt": [
+   "meilleur",
+   "plus bien",
+   "bon"
+  ],
+  "why": "Parler är ett verb, och bra om hur man gör något är bien, som blir mieux.",
+  "sv": "Du pratar bättre franska än din bror."
+ },
+ {
+  "id": "comp-025",
+  "topic": "comp",
+  "rule": "comp-meilleur",
+  "q": "Le temps est [meilleur] en juin qu'en avril.",
+  "alt": [
+   "meilleure",
+   "mieux",
+   "plus bon"
+  ],
+  "why": "Le temps är ett maskulint substantiv, så bon blir meilleur.",
+  "sv": "Vädret är bättre i juni än i april."
+ },
+ {
+  "id": "comp-026",
+  "topic": "comp",
+  "rule": "comp-meilleur",
+  "type": "rw",
+  "q": "Le café de Lucie est bon. Mon café n'est pas très bon.",
+  "cue": "meilleur … que",
+  "a": "Le café de Lucie est meilleur que mon café.",
+  "alt": [
+   "Mon café est meilleur que le café de Lucie.",
+   "Le café de Lucie meilleur est que mon café."
+  ],
+  "why": "Lucies kaffe är godast, så det står först. Meilleur står efter est, precis som bättre efter är.",
+  "sv": "Lucies kaffe är godare än mitt kaffe."
+ },
+ {
+  "id": "part-001",
+  "topic": "part",
+  "rule": "part-art",
+  "q": "Le matin, je bois [du] café.",
+  "alt": [
+   "de la",
+   "des",
+   "le"
+  ],
+  "why": "Café är maskulinum och en odefinierad mängd, så det blir du. På svenska säger man bara kaffe.",
+  "sv": "På morgonen dricker jag kaffe."
+ },
+ {
+  "id": "part-002",
+  "topic": "part",
+  "rule": "part-art",
+  "q": "Pour le gâteau, il faut [de la] farine et du sucre.",
+  "alt": [
+   "du",
+   "des",
+   "la"
+  ],
+  "why": "Farine är femininum och en mängd, så de la. Svenskan har ingen artikel här.",
+  "sv": "Till kakan behövs det mjöl och socker."
+ },
+ {
+  "id": "part-003",
+  "topic": "part",
+  "rule": "part-art",
+  "q": "Tu veux [de l'eau] ?",
+  "alt": [
+   "du eau",
+   "de la eau",
+   "des eau"
+  ],
+  "why": "Före vokal blir du och de la till de l': de l'eau.",
+  "sv": "Vill du ha vatten?"
+ },
+ {
+  "id": "part-004",
+  "topic": "part",
+  "rule": "part-art",
+  "q": "Au marché, j'achète [des] tomates et du fromage.",
+  "alt": [
+   "du",
+   "de la",
+   "de"
+  ],
+  "why": "Tomates står i plural, så det blir des (några tomater).",
+  "sv": "På marknaden köper jag tomater och ost."
+ },
+ {
+  "id": "part-005",
+  "topic": "part",
+  "rule": "part-art",
+  "q": "Pour la fête, nous avons acheté [du] jus d'orange et des chips.",
+  "alt": [
+   "de la",
+   "des",
+   "le"
+  ],
+  "why": "Jus är maskulinum och en mängd, så du.",
+  "sv": "Till festen köpte vi apelsinjuice och chips."
+ },
+ {
+  "id": "part-006",
+  "topic": "part",
+  "rule": "part-art",
+  "q": "En hiver, il y a [de la] neige dans les Alpes.",
+  "alt": [
+   "du",
+   "des",
+   "la"
+  ],
+  "why": "Neige är femininum: de la neige (snö, en mängd).",
+  "sv": "På vintern finns det snö i Alperna."
+ },
+ {
+  "id": "part-007",
+  "topic": "part",
+  "rule": "part-art",
+  "q": "Quand j'ai mal à la gorge, je bois du thé avec [du] miel.",
+  "alt": [
+   "de la",
+   "des",
+   "de l'"
+  ],
+  "why": "Miel är maskulinum och börjar med konsonant, så du.",
+  "sv": "När jag har ont i halsen dricker jag te med honung."
+ },
+ {
+  "id": "part-008",
+  "topic": "part",
+  "rule": "part-art",
+  "q": "Ce soir, on mange [des] crêpes chez Marie.",
+  "alt": [
+   "du",
+   "de la",
+   "de"
+  ],
+  "why": "Crêpes står i plural, så det blir des.",
+  "sv": "I kväll äter vi crêpes hos Marie."
+ },
+ {
+  "id": "part-009",
+  "topic": "part",
+  "rule": "part-art",
+  "q": "Dans le placard, il y a [de l'huile] et des pâtes.",
+  "alt": [
+   "du huile",
+   "de la huile",
+   "des huile"
+  ],
+  "why": "Huile börjar med stumt h, som räknas som vokal, så de l'huile.",
+  "sv": "I skåpet finns det olja och pasta."
+ },
+ {
+  "id": "part-010",
+  "topic": "part",
+  "rule": "part-art",
+  "q": "Au Sénégal, on mange souvent [du] riz avec du poisson.",
+  "alt": [
+   "de la",
+   "des",
+   "le"
+  ],
+  "why": "Riz är maskulinum och en mängd, så du.",
+  "sv": "I Senegal äter man ofta ris med fisk."
+ },
+ {
+  "id": "part-011",
+  "topic": "part",
+  "rule": "part-neg",
+  "q": "Je ne bois pas [de] café le soir.",
+  "alt": [
+   "du",
+   "de la",
+   "des"
+  ],
+  "why": "Efter negation blir du, de la och des till de.",
+  "sv": "Jag dricker inte kaffe på kvällen."
+ },
+ {
+  "id": "part-012",
+  "topic": "part",
+  "rule": "part-neg",
+  "q": "Il n'y a plus [de] lait dans le frigo.",
+  "alt": [
+   "du",
+   "de la",
+   "des"
+  ],
+  "why": "Ne … plus är också en negation, så du blir de.",
+  "sv": "Det finns ingen mjölk kvar i kylen."
+ },
+ {
+  "id": "part-013",
+  "topic": "part",
+  "rule": "part-neg",
+  "q": "Nous n'avons pas [d'argent] pour le cinéma.",
+  "alt": [
+   "de l'argent",
+   "du argent",
+   "de argent"
+  ],
+  "why": "Efter negation blir det de, och de blir d' före vokal: d'argent.",
+  "sv": "Vi har inga pengar till bion."
+ },
+ {
+  "id": "part-014",
+  "topic": "part",
+  "rule": "part-neg",
+  "q": "Elle est végétarienne : elle ne mange pas [de] viande.",
+  "alt": [
+   "de la",
+   "du",
+   "des"
+  ],
+  "why": "Efter ne … pas blir de la till bara de.",
+  "sv": "Hon är vegetarian: hon äter inte kött."
+ },
+ {
+  "id": "part-015",
+  "topic": "part",
+  "rule": "part-neg",
+  "q": "Il ne fait pas beau et il n'y a pas [de] soleil aujourd'hui.",
+  "alt": [
+   "du",
+   "le",
+   "des"
+  ],
+  "why": "Il y a du soleil blir il n'y a pas de soleil i negation.",
+  "sv": "Det är inte fint väder och det är ingen sol i dag."
+ },
+ {
+  "id": "part-016",
+  "topic": "part",
+  "rule": "part-neg",
+  "q": "Tu as des chips pour la fête ? – Non, je n'ai pas [de] chips.",
+  "alt": [
+   "des",
+   "les",
+   "du"
+  ],
+  "why": "Även des blir de efter negation.",
+  "sv": "Har du chips till festen? – Nej, jag har inga chips."
+ },
+ {
+  "id": "part-017",
+  "topic": "part",
+  "rule": "part-neg",
+  "q": "À la pharmacie, ils n'ont pas [d'aspirine] aujourd'hui.",
+  "alt": [
+   "de l'aspirine",
+   "de aspirine",
+   "du aspirine"
+  ],
+  "why": "Efter negation blir det de, och före vokal d': d'aspirine.",
+  "sv": "På apoteket har de inget aspirin i dag."
+ },
+ {
+  "id": "part-018",
+  "topic": "part",
+  "rule": "part-neg",
+  "q": "On n'a pas acheté [de] fleurs pour l'anniversaire de maman.",
+  "alt": [
+   "des",
+   "les",
+   "du"
+  ],
+  "why": "Negationen gäller även i passé composé: des fleurs blir pas de fleurs.",
+  "sv": "Vi köpte inga blommor till mammas födelsedag."
+ },
+ {
+  "id": "part-019",
+  "topic": "part",
+  "rule": "part-qte",
+  "q": "J'ai acheté un kilo [de] pommes au marché.",
+  "alt": [
+   "des",
+   "du",
+   "d'"
+  ],
+  "why": "Efter mängdord (un kilo) används bara de, utan artikel. D' bara före vokal.",
+  "sv": "Jag köpte ett kilo äpplen på marknaden."
+ },
+ {
+  "id": "part-020",
+  "topic": "part",
+  "rule": "part-qte",
+  "q": "Il y a beaucoup [de] monde à la fête.",
+  "alt": [
+   "du",
+   "des",
+   "de la"
+  ],
+  "why": "Efter beaucoup används bara de.",
+  "sv": "Det är mycket folk på festen."
+ },
+ {
+  "id": "part-021",
+  "topic": "part",
+  "rule": "part-qte",
+  "q": "Tu veux un peu [de] sucre dans ton thé ?",
+  "alt": [
+   "du",
+   "des",
+   "le"
+  ],
+  "why": "Efter un peu används bara de: un peu de sucre.",
+  "sv": "Vill du ha lite socker i teet?"
+ },
+ {
+  "id": "part-022",
+  "topic": "part",
+  "rule": "part-qte",
+  "q": "Il y a trop [de] touristes à Paris en été.",
+  "alt": [
+   "des",
+   "les",
+   "du"
+  ],
+  "why": "Efter trop används bara de, även i plural.",
+  "sv": "Det är för många turister i Paris på sommaren."
+ },
+ {
+  "id": "part-023",
+  "topic": "part",
+  "rule": "part-qte",
+  "q": "Achète une bouteille [d'eau] pour le voyage.",
+  "alt": [
+   "de l'eau",
+   "de eau",
+   "du eau"
+  ],
+  "why": "Efter mängdord används bara de, som blir d' före vokal.",
+  "sv": "Köp en flaska vatten till resan."
+ },
+ {
+  "id": "part-024",
+  "topic": "part",
+  "rule": "part-qte",
+  "q": "Je voudrais 200 grammes [de] jambon, s'il vous plaît.",
+  "alt": [
+   "du",
+   "de la",
+   "des"
+  ],
+  "why": "Efter en mängd (200 grammes) används bara de.",
+  "sv": "Jag skulle vilja ha 200 gram skinka, tack."
+ },
+ {
+  "id": "part-025",
+  "topic": "part",
+  "rule": "part-qte",
+  "q": "Il a mangé beaucoup [de] chocolat et maintenant il a mal au ventre.",
+  "alt": [
+   "du",
+   "des",
+   "le"
+  ],
+  "why": "Efter beaucoup används bara de, aldrig du.",
+  "sv": "Han har ätit mycket choklad och nu har han ont i magen."
+ },
+ {
+  "id": "dem-001",
+  "topic": "dem",
+  "rule": "dem-form",
+  "q": "[Ce] train va à Marseille.",
+  "alt": [
+   "Cet",
+   "Cette",
+   "Ces"
+  ],
+  "why": "Train är maskulinum och börjar med konsonant, så ce.",
+  "sv": "Tåget går till Marseille."
+ },
+ {
+  "id": "dem-002",
+  "topic": "dem",
+  "rule": "dem-form",
+  "q": "[Cet] hôtel est très confortable.",
+  "alt": [
+   "Ce",
+   "Cette",
+   "Ces"
+  ],
+  "why": "Hôtel är maskulinum och börjar med stumt h, så ce blir cet.",
+  "sv": "Det här hotellet är mycket bekvämt."
+ },
+ {
+  "id": "dem-003",
+  "topic": "dem",
+  "rule": "dem-form",
+  "q": "[Cette] maison a un grand jardin.",
+  "alt": [
+   "Ce",
+   "Cet",
+   "Ces"
+  ],
+  "why": "Maison är femininum, så cette.",
+  "sv": "Det här huset har en stor trädgård."
+ },
+ {
+  "id": "dem-004",
+  "topic": "dem",
+  "rule": "dem-form",
+  "q": "[Ces] chaussures coûtent 60 euros.",
+  "alt": [
+   "Ce",
+   "Cet",
+   "Cette"
+  ],
+  "why": "Chaussures står i plural, så ces (både maskulinum och femininum).",
+  "sv": "De här skorna kostar 60 euro."
+ },
+ {
+  "id": "dem-005",
+  "topic": "dem",
+  "rule": "dem-form",
+  "q": "[Cet] été, nous allons faire du camping en Bretagne.",
+  "alt": [
+   "Ce",
+   "Cette",
+   "Ces"
+  ],
+  "why": "Été är maskulinum och börjar med vokal, så cet.",
+  "sv": "I sommar ska vi campa i Bretagne."
+ },
+ {
+  "id": "dem-006",
+  "topic": "dem",
+  "rule": "dem-form",
+  "q": "[Cette] semaine, il fait très froid.",
+  "alt": [
+   "Ce",
+   "Cet",
+   "Ces"
+  ],
+  "why": "Semaine är femininum, så cette.",
+  "sv": "Den här veckan är det väldigt kallt."
+ },
+ {
+  "id": "dem-007",
+  "topic": "dem",
+  "rule": "dem-form",
+  "q": "Tu aimes [ce] pantalon ? Il est en solde.",
+  "alt": [
+   "cet",
+   "cette",
+   "ces"
+  ],
+  "why": "Pantalon är maskulinum singular på franska (fast svenskan säger byxor), så ce.",
+  "sv": "Gillar du de här byxorna? De är på rea."
+ },
+ {
+  "id": "dem-008",
+  "topic": "dem",
+  "rule": "dem-form",
+  "q": "[Cet] homme est mon médecin.",
+  "alt": [
+   "Ce",
+   "Cette",
+   "Ces"
+  ],
+  "why": "Homme är maskulinum och börjar med stumt h, så cet.",
+  "sv": "Den här mannen är min läkare."
+ },
+ {
+  "id": "dem-009",
+  "topic": "dem",
+  "rule": "dem-form",
+  "q": "Je prends [ces] tomates, s'il vous plaît.",
+  "alt": [
+   "ce",
+   "cet",
+   "cette"
+  ],
+  "why": "Tomates står i plural, så ces.",
+  "sv": "Jag tar de här tomaterna, tack."
+ },
+ {
+  "id": "dem-010",
+  "topic": "dem",
+  "rule": "dem-form",
+  "q": "[Cet] appartement est trop petit pour nous.",
+  "alt": [
+   "Ce",
+   "Cette",
+   "Ces"
+  ],
+  "why": "Appartement är maskulinum och börjar med vokal, så cet.",
+  "sv": "Den här lägenheten är för liten för oss."
+ },
+ {
+  "id": "dem-011",
+  "topic": "dem",
+  "rule": "dem-form",
+  "q": "[Cette] année, mon anniversaire tombe un samedi.",
+  "alt": [
+   "Ce",
+   "Cet",
+   "Ces"
+  ],
+  "why": "Année är femininum, så cette, även före vokal. Cet finns bara i maskulinum.",
+  "sv": "I år infaller min födelsedag på en lördag."
+ },
+ {
+  "id": "dem-012",
+  "topic": "dem",
+  "rule": "dem-form",
+  "q": "[Ce] week-end, on fait une fête chez Hugo.",
+  "alt": [
+   "Cet",
+   "Cette",
+   "Ces"
+  ],
+  "why": "Week-end är maskulinum och börjar med konsonant, så ce.",
+  "sv": "Den här helgen har vi fest hos Hugo."
+ },
+ {
+  "id": "dem-013",
+  "topic": "dem",
+  "rule": "dem-form",
+  "q": "[Cet] arbre perd ses feuilles en automne.",
+  "alt": [
+   "Ce",
+   "Cette",
+   "Ces"
+  ],
+  "why": "Arbre är maskulinum och börjar med vokal, så cet.",
+  "sv": "Det här trädet tappar sina löv på hösten."
+ },
+ {
+  "id": "dem-014",
+  "topic": "dem",
+  "rule": "dem-form",
+  "q": "[Cet] hiver, il a beaucoup neigé.",
+  "alt": [
+   "Ce",
+   "Cette",
+   "Ces"
+  ],
+  "why": "Hiver är maskulinum och börjar med stumt h, så cet.",
+  "sv": "I vintras snöade det mycket."
+ },
+ {
+  "id": "dem-015",
+  "topic": "dem",
+  "rule": "dem-form",
+  "q": "Combien coûte [cette] robe ?",
+  "alt": [
+   "ce",
+   "cet",
+   "ces"
+  ],
+  "why": "Robe är femininum, så cette.",
+  "sv": "Hur mycket kostar den här klänningen?"
+ },
+ {
+  "id": "dem-016",
+  "topic": "dem",
+  "rule": "dem-form",
+  "q": "[Ces] enfants jouent dans le parc.",
+  "alt": [
+   "Ce",
+   "Cet",
+   "Cette"
+  ],
+  "why": "Enfants står i plural, så ces. Cet gäller bara singular.",
+  "sv": "De här barnen leker i parken."
+ },
+ {
+  "id": "dem-017",
+  "topic": "dem",
+  "rule": "dem-form",
+  "q": "J'ai mal à [cette] dent depuis hier.",
+  "alt": [
+   "ce",
+   "cet",
+   "ces"
+  ],
+  "why": "Dent är femininum, så cette.",
+  "sv": "Jag har haft ont i den här tanden sedan i går."
+ },
+ {
+  "id": "dem-018",
+  "topic": "dem",
+  "rule": "dem-form",
+  "q": "[Cet] ami de Paul vient du Québec.",
+  "alt": [
+   "Ce",
+   "Cette",
+   "Ces"
+  ],
+  "why": "Ami är maskulinum och börjar med vokal, så cet.",
+  "sv": "Den här vännen till Paul kommer från Québec."
+ },
+ {
+  "id": "dem-019",
+  "topic": "dem",
+  "rule": "dem-form",
+  "q": "[Cette] amie de Léa habite à Genève.",
+  "alt": [
+   "Ce",
+   "Cet",
+   "Ces"
+  ],
+  "why": "Amie är femininum, så cette. Cet används bara framför maskulina ord.",
+  "sv": "Den här väninnan till Léa bor i Genève."
+ },
+ {
+  "id": "dem-020",
+  "topic": "dem",
+  "rule": "dem-form",
+  "q": "On a vu [ce] film ensemble samedi.",
+  "alt": [
+   "cet",
+   "cette",
+   "ces"
+  ],
+  "why": "Film är maskulinum och börjar med konsonant, så ce.",
+  "sv": "Vi såg den här filmen tillsammans i lördags."
+ },
+ {
+  "id": "dem-021",
+  "topic": "dem",
+  "rule": "dem-form",
+  "q": "[Ce] matin, j'ai rangé ma chambre.",
+  "alt": [
+   "Cet",
+   "Cette",
+   "Ces"
+  ],
+  "why": "Matin är maskulinum, så ce.",
+  "sv": "I morse städade jag mitt rum."
+ },
+ {
+  "id": "dem-022",
+  "topic": "dem",
+  "rule": "dem-form",
+  "q": "[Ces] vacances ont été super !",
+  "alt": [
+   "Ce",
+   "Cet",
+   "Cette"
+  ],
+  "why": "Vacances står alltid i plural på franska, så ces.",
+  "sv": "Den här semestern var jättebra!"
+ },
+ {
+  "id": "dem-023",
+  "topic": "dem",
+  "rule": "dem-form",
+  "q": "Je n'aime pas [ce] temps : il pleut tout le temps.",
+  "alt": [
+   "cet",
+   "cette",
+   "ces"
+  ],
+  "why": "Temps är maskulinum singular (fast det slutar på -s), så ce.",
+  "sv": "Jag gillar inte det här vädret: det regnar hela tiden."
+ },
+ {
+  "id": "dem-024",
+  "topic": "dem",
+  "rule": "dem-form",
+  "q": "[Cet] ordinateur est à mon père.",
+  "alt": [
+   "Ce",
+   "Cette",
+   "Ces"
+  ],
+  "why": "Ordinateur är maskulinum och börjar med vokal, så cet.",
+  "sv": "Den här datorn är min pappas."
+ },
+ {
+  "id": "dem-025",
+  "topic": "dem",
+  "rule": "dem-form",
+  "q": "[Cette] pharmacie est ouverte le dimanche.",
+  "alt": [
+   "Ce",
+   "Cet",
+   "Ces"
+  ],
+  "why": "Pharmacie är femininum, så cette.",
+  "sv": "Det här apoteket har öppet på söndagar."
+ },
+ {
+  "id": "pton-001",
+  "topic": "pton",
+  "rule": "pton-prep",
+  "q": "Tu viens au cinéma avec [moi] ?",
+  "alt": [
+   "me",
+   "je",
+   "mon"
+  ],
+  "why": "Efter en preposition (avec) används betonad form: moi. Me och je står bara intill verbet.",
+  "sv": "Följer du med mig på bio?"
+ },
+ {
+  "id": "pton-002",
+  "topic": "pton",
+  "rule": "pton-prep",
+  "q": "Mes grands-parents sont gentils. Cet été, je vais passer une semaine chez [eux].",
+  "alt": [
+   "ils",
+   "leur",
+   "les"
+  ],
+  "why": "Efter chez används betonad form. Eux = dem (män eller blandad grupp).",
+  "sv": "Mina morföräldrar är snälla. I sommar ska jag vara en vecka hos dem."
+ },
+ {
+  "id": "pton-003",
+  "topic": "pton",
+  "rule": "pton-prep",
+  "q": "C'est l'anniversaire de Sara. Ce cadeau est pour [elle].",
+  "alt": [
+   "la",
+   "lui",
+   "sa"
+  ],
+  "why": "Efter pour används betonad form. Elle = henne. Lui efter preposition betyder honom.",
+  "sv": "Det är Saras födelsedag. Den här presenten är till henne."
+ },
+ {
+  "id": "pton-004",
+  "topic": "pton",
+  "rule": "pton-prep",
+  "q": "Marc est malade. On va faire la fête sans [lui].",
+  "alt": [
+   "il",
+   "le",
+   "leur"
+  ],
+  "why": "Efter sans används betonad form: lui = honom.",
+  "sv": "Marc är sjuk. Vi ska ha festen utan honom."
+ },
+ {
+  "id": "pton-005",
+  "topic": "pton",
+  "rule": "pton-prep",
+  "q": "Merci pour l'invitation ! On arrive chez [vous] à 19 heures.",
+  "alt": [
+   "votre",
+   "vos",
+   "tu"
+  ],
+  "why": "Efter chez används betonad form: chez vous = hemma hos er. Votre och vos betyder er/ert.",
+  "sv": "Tack för inbjudan! Vi kommer hem till er klockan 19."
+ },
+ {
+  "id": "pton-006",
+  "topic": "pton",
+  "rule": "pton-prep",
+  "q": "Tu es fatigué ? Rentre chez [toi] !",
+  "alt": [
+   "te",
+   "tu",
+   "ton"
+  ],
+  "why": "Efter chez används betonad form: chez toi = hem till dig.",
+  "sv": "Är du trött? Gå hem!"
+ },
+ {
+  "id": "pton-007",
+  "topic": "pton",
+  "rule": "pton-prep",
+  "q": "Mes amies sont au Maroc en ce moment. Je pense souvent à [elles].",
+  "alt": [
+   "eux",
+   "leur",
+   "les"
+  ],
+  "why": "Efter à används betonad form. Amies är bara tjejer, så elles. Eux gäller killar eller en blandad grupp.",
+  "sv": "Mina väninnor är i Marocko just nu. Jag tänker ofta på dem."
+ },
+ {
+  "id": "pton-008",
+  "topic": "pton",
+  "rule": "pton-prep",
+  "q": "Venez dîner chez [nous] vendredi !",
+  "alt": [
+   "notre",
+   "nos",
+   "on"
+  ],
+  "why": "Efter chez används betonad form: chez nous = hemma hos oss.",
+  "sv": "Kom och ät middag hos oss på fredag!"
+ },
+ {
+  "id": "pton-009",
+  "topic": "pton",
+  "rule": "pton-prep",
+  "q": "Paul et Tom sont mes meilleurs amis. Je fais tout avec [eux].",
+  "alt": [
+   "ils",
+   "leur",
+   "elles"
+  ],
+  "why": "Efter avec används betonad form. Paul och Tom är killar, så eux.",
+  "sv": "Paul och Tom är mina bästa vänner. Jag gör allt med dem."
+ },
+ {
+  "id": "pton-010",
+  "topic": "pton",
+  "rule": "pton-cest",
+  "q": "Qui a fait ce gâteau ? – C'est [moi] !",
+  "alt": [
+   "je",
+   "me",
+   "mon"
+  ],
+  "why": "Efter c'est används betonad form: c'est moi = det är jag.",
+  "sv": "Vem har bakat den här kakan? – Det är jag!"
+ },
+ {
+  "id": "pton-011",
+  "topic": "pton",
+  "rule": "pton-cest",
+  "q": "Qui est à la porte ? – C'est [lui], mon cousin Karim.",
+  "alt": [
+   "il",
+   "le",
+   "leur"
+  ],
+  "why": "Efter c'est används betonad form: c'est lui = det är han.",
+  "sv": "Vem är det vid dörren? – Det är han, min kusin Karim."
+ },
+ {
+  "id": "pton-012",
+  "topic": "pton",
+  "rule": "pton-cest",
+  "q": "Sur la photo, ce sont [eux], mes parents.",
+  "alt": [
+   "ils",
+   "leur",
+   "les"
+  ],
+  "why": "Efter ce sont används betonad form: eux = de (män eller blandad grupp).",
+  "sv": "På bilden är det de, mina föräldrar."
+ },
+ {
+  "id": "pton-013",
+  "topic": "pton",
+  "rule": "pton-cest",
+  "q": "Tu vois les filles là-bas ? Ce sont [elles], mes cousines de Genève.",
+  "alt": [
+   "eux",
+   "ils",
+   "les"
+  ],
+  "why": "Efter ce sont används betonad form. Bara tjejer, så elles.",
+  "sv": "Ser du tjejerna där borta? Det är de, mina kusiner från Genève."
+ },
+ {
+  "id": "pton-014",
+  "topic": "pton",
+  "rule": "pton-cest",
+  "q": "Allô, Emma ? C'est [toi] ?",
+  "alt": [
+   "tu",
+   "te",
+   "ton"
+  ],
+  "why": "Efter c'est används betonad form: c'est toi = är det du.",
+  "sv": "Hallå, Emma? Är det du?"
+ },
+ {
+  "id": "pton-015",
+  "topic": "pton",
+  "rule": "pton-cest",
+  "q": "Qui a gagné le match ? – C'est [nous] !",
+  "alt": [
+   "on",
+   "notre",
+   "nos"
+  ],
+  "why": "Efter c'est används betonad form: c'est nous = det är vi.",
+  "sv": "Vem vann matchen? – Det är vi!"
+ },
+ {
+  "id": "pton-016",
+  "topic": "pton",
+  "rule": "pton-cest",
+  "q": "Qui a téléphoné ? – C'est [elle], ta sœur.",
+  "alt": [
+   "la",
+   "lui",
+   "sa"
+  ],
+  "why": "Efter c'est används betonad form: c'est elle = det är hon.",
+  "sv": "Vem ringde? – Det är hon, din syster."
+ },
+ {
+  "id": "pton-017",
+  "topic": "pton",
+  "rule": "pton-bet",
+  "q": "[Moi], j'adore la neige !",
+  "alt": [
+   "Me",
+   "Je",
+   "Mon"
+  ],
+  "why": "För att betona jag sätter man moi först: Moi, j'adore … Je står redan i meningen.",
+  "sv": "Jag älskar snö!"
+ },
+ {
+  "id": "pton-018",
+  "topic": "pton",
+  "rule": "pton-bet",
+  "q": "Je n'aime pas le froid. – Moi [non plus].",
+  "alt": [
+   "aussi",
+   "pas",
+   "non"
+  ],
+  "why": "Om man håller med om något nekande säger man moi non plus (inte jag heller), inte moi aussi.",
+  "sv": "Jag gillar inte kyla. – Inte jag heller."
+ },
+ {
+  "id": "pton-019",
+  "topic": "pton",
+  "rule": "pton-bet",
+  "q": "J'aime beaucoup les vacances à la mer. – [Moi aussi] !",
+  "alt": [
+   "Moi non plus",
+   "Je aussi",
+   "Me aussi"
+  ],
+  "why": "Man håller med om något jakande: moi aussi (jag också). Je kan inte stå ensamt.",
+  "sv": "Jag gillar verkligen semester vid havet. – Jag också!"
+ },
+ {
+  "id": "pton-020",
+  "topic": "pton",
+  "rule": "pton-bet",
+  "q": "Léa adore danser. Et Hugo ? – [Lui] aussi !",
+  "alt": [
+   "Il",
+   "Le",
+   "Leur"
+  ],
+  "why": "Utan verb används betonad form: lui aussi = han också.",
+  "sv": "Léa älskar att dansa. Och Hugo? – Han också!"
+ },
+ {
+  "id": "pton-021",
+  "topic": "pton",
+  "rule": "pton-bet",
+  "q": "[Toi], tu es toujours en retard !",
+  "alt": [
+   "Tu",
+   "Te",
+   "Ton"
+  ],
+  "why": "Betonad form först för att betona: Toi, tu … (Du, du är alltid sen!).",
+  "sv": "Du är alltid sen!"
+ },
+ {
+  "id": "pton-022",
+  "topic": "pton",
+  "rule": "pton-bet",
+  "q": "Mes parents ne sont pas allés à la fête. – Nous [non plus].",
+  "alt": [
+   "aussi",
+   "pas",
+   "non"
+  ],
+  "why": "Meningen är nekande, så det blir nous non plus (inte vi heller).",
+  "sv": "Mina föräldrar gick inte på festen. – Inte vi heller."
+ },
+ {
+  "id": "pton-023",
+  "topic": "pton",
+  "rule": "pton-bet",
+  "q": "[Eux], ils habitent au Canada, mais nous, nous habitons en France.",
+  "alt": [
+   "Ils",
+   "Leur",
+   "Les"
+  ],
+  "why": "För att betona de (en blandad grupp) sätter man eux först: Eux, ils …",
+  "sv": "De bor i Kanada, men vi bor i Frankrike."
+ },
+ {
+  "id": "pton-024",
+  "topic": "pton",
+  "rule": "pton-bet",
+  "q": "Je suis fatiguée. Et [toi] ?",
+  "alt": [
+   "tu",
+   "te",
+   "ton"
+  ],
+  "why": "Utan verb används betonad form: Et toi ? = Och du?",
+  "sv": "Jag är trött. Och du?"
+ },
+ {
+  "id": "prep-001",
+  "topic": "prep",
+  "rule": "prep-ville",
+  "q": "Cet été, je vais [à] Paris avec ma famille.",
+  "alt": [
+   "en",
+   "au",
+   "dans"
+  ],
+  "why": "Före städer används à, både för i och till.",
+  "sv": "I sommar åker jag till Paris med min familj."
+ },
+ {
+  "id": "prep-002",
+  "topic": "prep",
+  "rule": "prep-ville",
+  "q": "Mon oncle habite [à] Montréal.",
+  "alt": [
+   "au",
+   "en",
+   "dans"
+  ],
+  "why": "Före städer används à: à Montréal.",
+  "sv": "Min farbror bor i Montréal."
+ },
+ {
+  "id": "prep-003",
+  "topic": "prep",
+  "rule": "prep-ville",
+  "q": "Nous avons passé trois jours [à] Bruxelles.",
+  "alt": [
+   "en",
+   "au",
+   "dans"
+  ],
+  "why": "Städer får à, även om de ligger i ett annat land.",
+  "sv": "Vi tillbringade tre dagar i Bryssel."
+ },
+ {
+  "id": "prep-004",
+  "topic": "prep",
+  "rule": "prep-ville",
+  "q": "L'avion arrive [à] Dakar à midi.",
+  "alt": [
+   "au",
+   "en",
+   "dans"
+  ],
+  "why": "Före städer används à: à Dakar.",
+  "sv": "Planet kommer fram till Dakar klockan tolv."
+ },
+ {
+  "id": "prep-005",
+  "topic": "prep",
+  "rule": "prep-ville",
+  "q": "Mes cousins sont nés [à] Genève.",
+  "alt": [
+   "en",
+   "au",
+   "dans"
+  ],
+  "why": "Före städer används à: nés à Genève (födda i Genève).",
+  "sv": "Mina kusiner är födda i Genève."
+ },
+ {
+  "id": "prep-006",
+  "topic": "prep",
+  "rule": "prep-pays-f",
+  "q": "Nous habitons [en] Suède.",
+  "alt": [
+   "à",
+   "au",
+   "dans"
+  ],
+  "why": "La Suède är femininum, och feminina länder får en.",
+  "sv": "Vi bor i Sverige."
+ },
+ {
+  "id": "prep-007",
+  "topic": "prep",
+  "rule": "prep-pays-f",
+  "q": "L'année prochaine, je vais aller [en] France.",
+  "alt": [
+   "à",
+   "au",
+   "dans la"
+  ],
+  "why": "La France är femininum, så en France, både för i och till.",
+  "sv": "Nästa år ska jag åka till Frankrike."
+ },
+ {
+  "id": "prep-008",
+  "topic": "prep",
+  "rule": "prep-pays-f",
+  "q": "Mon amie Laura fait ses études [en] Belgique.",
+  "alt": [
+   "au",
+   "à",
+   "dans"
+  ],
+  "why": "La Belgique är femininum (slutar på -e), så en.",
+  "sv": "Min kompis Laura pluggar i Belgien."
+ },
+ {
+  "id": "prep-009",
+  "topic": "prep",
+  "rule": "prep-pays-f",
+  "q": "On parle arabe et français [en] Tunisie.",
+  "alt": [
+   "au",
+   "à la",
+   "à"
+  ],
+  "why": "La Tunisie är femininum, så en Tunisie.",
+  "sv": "Man talar arabiska och franska i Tunisien."
+ },
+ {
+  "id": "prep-010",
+  "topic": "prep",
+  "rule": "prep-pays-f",
+  "q": "Cet hiver, ils sont allés faire du ski [en] Italie.",
+  "alt": [
+   "au",
+   "à",
+   "à l'"
+  ],
+  "why": "L'Italie är femininum och börjar på vokal, så en.",
+  "sv": "I vintras åkte de och åkte skidor i Italien."
+ },
+ {
+  "id": "prep-011",
+  "topic": "prep",
+  "rule": "prep-pays-f",
+  "q": "Il fait très chaud [en] Espagne en août.",
+  "alt": [
+   "au",
+   "à",
+   "à l'"
+  ],
+  "why": "L'Espagne är femininum, så en Espagne.",
+  "sv": "Det är väldigt varmt i Spanien i augusti."
+ },
+ {
+  "id": "prep-012",
+  "topic": "prep",
+  "rule": "prep-pays-f",
+  "q": "Mon grand-père est né [en] Iran.",
+  "alt": [
+   "au",
+   "à",
+   "à l'"
+  ],
+  "why": "L'Iran är maskulinum men börjar på vokal, och då blir det också en.",
+  "sv": "Min morfar är född i Iran."
+ },
+ {
+  "id": "prep-013",
+  "topic": "prep",
+  "rule": "prep-pays-m",
+  "q": "On parle français [au] Canada.",
+  "alt": [
+   "en",
+   "à",
+   "à le"
+  ],
+  "why": "Le Canada är maskulinum, så à + le = au.",
+  "sv": "Man talar franska i Kanada."
+ },
+ {
+  "id": "prep-014",
+  "topic": "prep",
+  "rule": "prep-pays-m",
+  "q": "Mon père travaille [au] Sénégal.",
+  "alt": [
+   "en",
+   "à",
+   "dans"
+  ],
+  "why": "Le Sénégal är maskulinum, så au.",
+  "sv": "Min pappa jobbar i Senegal."
+ },
+ {
+  "id": "prep-015",
+  "topic": "prep",
+  "rule": "prep-pays-m",
+  "q": "Cet été, nous allons [au] Maroc.",
+  "alt": [
+   "en",
+   "à",
+   "à le"
+  ],
+  "why": "Le Maroc är maskulinum och börjar med konsonant, så au. À le blir alltid au.",
+  "sv": "I sommar åker vi till Marocko."
+ },
+ {
+  "id": "prep-016",
+  "topic": "prep",
+  "rule": "prep-pays-m",
+  "q": "Il fait froid [au] Danemark en hiver.",
+  "alt": [
+   "en",
+   "à",
+   "dans"
+  ],
+  "why": "Le Danemark är maskulinum, så au.",
+  "sv": "Det är kallt i Danmark på vintern."
+ },
+ {
+  "id": "prep-017",
+  "topic": "prep",
+  "rule": "prep-pays-m",
+  "q": "Ils ont passé leurs vacances [au] Portugal.",
+  "alt": [
+   "en",
+   "à",
+   "aux"
+  ],
+  "why": "Le Portugal är maskulinum singular, så au. Aux gäller bara länder i plural.",
+  "sv": "De tillbringade sin semester i Portugal."
+ },
+ {
+  "id": "prep-018",
+  "topic": "prep",
+  "rule": "prep-pays-pl",
+  "q": "Mon cousin habite [aux] États-Unis.",
+  "alt": [
+   "en",
+   "au",
+   "à les"
+  ],
+  "why": "Les États-Unis står i plural, så à + les = aux.",
+  "sv": "Min kusin bor i USA."
+ },
+ {
+  "id": "prep-019",
+  "topic": "prep",
+  "rule": "prep-pays-pl",
+  "q": "Nous allons [aux] Pays-Bas en train.",
+  "alt": [
+   "au",
+   "en",
+   "à les"
+  ],
+  "why": "Les Pays-Bas står i plural, så aux.",
+  "sv": "Vi åker till Nederländerna med tåg."
+ },
+ {
+  "id": "prep-020",
+  "topic": "prep",
+  "rule": "prep-pays-pl",
+  "q": "Tu as déjà voyagé [aux] Philippines ?",
+  "alt": [
+   "en",
+   "au",
+   "à les"
+  ],
+  "why": "Les Philippines står i plural, så aux. À les säger man aldrig.",
+  "sv": "Har du någon gång rest i Filippinerna?"
+ },
+ {
+  "id": "prep-021",
+  "topic": "prep",
+  "rule": "prep-de",
+  "q": "Je viens [du] Canada.",
+  "alt": [
+   "de",
+   "des",
+   "de le"
+  ],
+  "why": "Le Canada är maskulinum, så de + le = du.",
+  "sv": "Jag kommer från Kanada."
+ },
+ {
+  "id": "prep-022",
+  "topic": "prep",
+  "rule": "prep-de",
+  "q": "Elle vient [d'Italie].",
+  "alt": [
+   "de Italie",
+   "de l'Italie",
+   "du Italie"
+  ],
+  "why": "Feminina länder får bara de utan artikel, och de blir d' före vokal.",
+  "sv": "Hon kommer från Italien."
+ },
+ {
+  "id": "prep-023",
+  "topic": "prep",
+  "rule": "prep-de",
+  "q": "Mes voisins viennent [des] États-Unis.",
+  "alt": [
+   "du",
+   "de",
+   "de les"
+  ],
+  "why": "Les États-Unis är plural, så de + les = des.",
+  "sv": "Mina grannar kommer från USA."
+ },
+ {
+  "id": "prep-024",
+  "topic": "prep",
+  "rule": "prep-de",
+  "q": "Notre prof vient [de] Belgique.",
+  "alt": [
+   "du",
+   "de la",
+   "des"
+  ],
+  "why": "La Belgique är femininum, så det blir bara de utan artikel.",
+  "sv": "Vår lärare kommer från Belgien."
+ },
+ {
+  "id": "prep-025",
+  "topic": "prep",
+  "rule": "prep-de",
+  "q": "Mon ami Moussa vient [du] Mali.",
+  "alt": [
+   "de",
+   "des",
+   "d'"
+  ],
+  "why": "Le Mali är maskulinum, så du.",
+  "sv": "Min kompis Moussa kommer från Mali."
+ },
+ {
+  "id": "prep-026",
+  "topic": "prep",
+  "rule": "prep-de",
+  "q": "Mon amie Chloé vient [de] Genève.",
+  "alt": [
+   "du",
+   "des",
+   "de la"
+  ],
+  "why": "Städer får bara de (från), utan artikel.",
+  "sv": "Min kompis Chloé kommer från Genève."
+ }
+]

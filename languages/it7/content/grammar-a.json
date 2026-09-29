@@ -1,0 +1,2303 @@
+[
+ {
+  "id": "remoto-001",
+  "topic": "remoto",
+  "rule": "rem-reg",
+  "q": "Nel 1861 Vittorio Emanuele II [diventò] re d'Italia.",
+  "alt": [
+   "diventava",
+   "diventì",
+   "è diventando"
+  ],
+  "why": "Passato remoto av -are-verb i tredje person: -ò (diventò). En avslutad historisk händelse.",
+  "sv": "År 1861 blev Viktor Emanuel II kung av Italien."
+ },
+ {
+  "id": "remoto-002",
+  "topic": "remoto",
+  "rule": "rem-reg",
+  "q": "I Mille [partirono] da Quarto nel maggio 1860.",
+  "alt": [
+   "partivano",
+   "partettero",
+   "partarono"
+  ],
+  "why": "-ire-verb i loro-form: -irono (partirono). Partarono är en blandning med -are.",
+  "sv": "De tusen avseglade från Quarto i maj 1860."
+ },
+ {
+  "id": "remoto-003",
+  "topic": "remoto",
+  "rule": "rem-reg",
+  "q": "Dopo la battaglia i soldati [tornarono] a casa.",
+  "alt": [
+   "tornerono",
+   "tornavano",
+   "tornorono"
+  ],
+  "why": "-are-verb, loro: -arono (tornarono).",
+  "sv": "Efter slaget återvände soldaterna hem."
+ },
+ {
+  "id": "remoto-004",
+  "topic": "remoto",
+  "rule": "rem-irr",
+  "q": "Pirandello [nacque] ad Agrigento nel 1867.",
+  "alt": [
+   "nascé",
+   "nasceva",
+   "nascette"
+  ],
+  "why": "Nascere är oregelbundet: nacqui, nacque, nacquero.",
+  "sv": "Pirandello föddes i Agrigento 1867."
+ },
+ {
+  "id": "remoto-005",
+  "topic": "remoto",
+  "rule": "rem-irr",
+  "q": "Italo Svevo [scrisse] La coscienza di Zeno nel 1923.",
+  "alt": [
+   "scrivé",
+   "scriveva",
+   "scrivette"
+  ],
+  "why": "Scrivere: scrissi, scrisse, scrissero (1-3-3-mönstret).",
+  "sv": "Italo Svevo skrev Zenos samvete 1923."
+ },
+ {
+  "id": "remoto-006",
+  "topic": "remoto",
+  "rule": "rem-irr",
+  "q": "Grazia Deledda [ebbe] il premio Nobel nel 1926.",
+  "alt": [
+   "avé",
+   "avette",
+   "aveva avuto"
+  ],
+  "why": "Avere i passato remoto: ebbi, avesti, ebbe, avemmo, aveste, ebbero.",
+  "sv": "Grazia Deledda fick Nobelpriset 1926."
+ },
+ {
+  "id": "remoto-007",
+  "topic": "remoto",
+  "rule": "rem-irr",
+  "q": "Quando lo vide, la ragazza [fu] presa dal panico.",
+  "alt": [
+   "era stata",
+   "fui",
+   "fosse"
+  ],
+  "why": "Essere: fui, fosti, fu. Fui är jag-formen.",
+  "sv": "När hon såg honom greps flickan av panik."
+ },
+ {
+  "id": "remoto-008",
+  "topic": "remoto",
+  "rule": "rem-irr",
+  "q": "Verdi [compose] il Nabucco a ventotto anni.",
+  "alt": [
+   "componé",
+   "componeva",
+   "composse"
+  ],
+  "why": "Comporre böjs som porre: composi, compose, composero.",
+  "sv": "Verdi komponerade Nabucco vid tjugoåtta års ålder."
+ },
+ {
+  "id": "remoto-009",
+  "topic": "remoto",
+  "rule": "rem-irr",
+  "q": "Il vecchio [disse] poche parole e se ne andò.",
+  "alt": [
+   "dicé",
+   "diceva",
+   "dissé"
+  ],
+  "why": "Dire: dissi, dicesti, disse, dicemmo, diceste, dissero.",
+  "sv": "Den gamle sa några få ord och gick."
+ },
+ {
+  "id": "remoto-010",
+  "topic": "remoto",
+  "rule": "rem-irr",
+  "q": "I due amici non si [videro] mai più.",
+  "alt": [
+   "vedettero",
+   "vedarono",
+   "vederono"
+  ],
+  "why": "Vedere: vidi, vide, videro.",
+  "sv": "De två vännerna sågs aldrig mer."
+ },
+ {
+  "id": "remoto-011",
+  "topic": "remoto",
+  "rule": "rem-irr",
+  "q": "Galileo [fece] le sue osservazioni con un telescopio.",
+  "alt": [
+   "facette",
+   "faceva",
+   "fecé"
+  ],
+  "why": "Fare: feci, facesti, fece, facemmo, faceste, fecero.",
+  "sv": "Galilei gjorde sina observationer med ett teleskop."
+ },
+ {
+  "id": "remoto-012",
+  "topic": "remoto",
+  "rule": "rem-irr",
+  "q": "Nel 1946 gli italiani [scelsero] la repubblica.",
+  "alt": [
+   "sceglierono",
+   "sceglievano",
+   "scelserono"
+  ],
+  "why": "Scegliere: scelsi, scelse, scelsero.",
+  "sv": "År 1946 valde italienarna republiken."
+ },
+ {
+  "id": "remoto-013",
+  "topic": "remoto",
+  "rule": "rem-irr",
+  "q": "Quella sera io [decisi] di non tornare più.",
+  "alt": [
+   "decidei",
+   "decise",
+   "decidetti"
+  ],
+  "why": "Decidere: decisi (io), decise (lui/lei). Decise är tredje person.",
+  "sv": "Den kvällen bestämde jag mig för att aldrig komma tillbaka."
+ },
+ {
+  "id": "remoto-014",
+  "topic": "remoto",
+  "rule": "rem-irr",
+  "q": "Tu [venisti] a trovarmi solo una volta.",
+  "alt": [
+   "venni",
+   "venesti",
+   "venissi"
+  ],
+  "why": "Venire, tu-form: venisti (regelbunden stam). Venni är jag-form, venissi är congiuntivo imperfetto.",
+  "sv": "Du hälsade på mig bara en gång."
+ },
+ {
+  "id": "remoto-015",
+  "topic": "remoto",
+  "rule": "rem-irr",
+  "q": "Noi [fummo] i primi ad arrivare.",
+  "alt": [
+   "fossimo",
+   "fumimo",
+   "eravamo stati"
+  ],
+  "why": "Essere, noi: fummo. Fossimo är congiuntivo imperfetto.",
+  "sv": "Vi var de första som kom fram."
+ },
+ {
+  "id": "remoto-016",
+  "topic": "remoto",
+  "rule": "rem-irr",
+  "q": "Il re [volle] vedere il pittore.",
+  "alt": [
+   "volé",
+   "volse",
+   "voleva"
+  ],
+  "why": "Volere: volli, volle, vollero.",
+  "sv": "Kungen ville träffa målaren."
+ },
+ {
+  "id": "remoto-017",
+  "topic": "remoto",
+  "rule": "rem-irr",
+  "q": "Quando [seppe] la notizia, scoppiò a piangere.",
+  "alt": [
+   "sapé",
+   "sapette",
+   "sapeva"
+  ],
+  "why": "Sapere: seppi, seppe, seppero. Passato remoto av sapere betyder ofta 'fick veta'.",
+  "sv": "När hon fick veta nyheten brast hon i gråt."
+ },
+ {
+  "id": "remoto-018",
+  "topic": "remoto",
+  "rule": "rem-irr",
+  "q": "Caravaggio [morì] nel 1610 a Porto Ercole.",
+  "alt": [
+   "morse",
+   "moriva",
+   "morette"
+  ],
+  "why": "Morire är regelbundet i passato remoto: morii, morì, morirono.",
+  "sv": "Caravaggio dog 1610 i Porto Ercole."
+ },
+ {
+  "id": "remoto-019",
+  "topic": "remoto",
+  "rule": "rem-irr",
+  "q": "Il pubblico [rimase] in silenzio fino alla fine.",
+  "alt": [
+   "rimanette",
+   "rimaneva",
+   "rimanì"
+  ],
+  "why": "Rimanere: rimasi, rimase, rimasero.",
+  "sv": "Publiken förblev tyst till slutet."
+ },
+ {
+  "id": "remoto-020",
+  "topic": "remoto",
+  "rule": "rem-irr",
+  "q": "Stradivari [costruì] più di mille strumenti.",
+  "alt": [
+   "costrusse",
+   "costruette",
+   "costruiva"
+  ],
+  "why": "Costruire är regelbundet (-ire): costruii, costruì, costruirono.",
+  "sv": "Stradivari byggde mer än tusen instrument."
+ },
+ {
+  "id": "remoto-021",
+  "topic": "remoto",
+  "rule": "rem-uso",
+  "q": "Dante [morì] a Ravenna nel 1321.",
+  "alt": [
+   "è morto",
+   "moriva",
+   "morirà"
+  ],
+  "why": "I en biografi om det avlägsna förflutna används passato remoto för en avslutad händelse.",
+  "sv": "Dante dog i Ravenna 1321."
+ },
+ {
+  "id": "remoto-022",
+  "topic": "remoto",
+  "rule": "rem-uso",
+  "q": "Mentre la nonna [cuciva], qualcuno bussò alla porta.",
+  "alt": [
+   "cucì",
+   "cucisse",
+   "ebbe cucito"
+  ],
+  "why": "Bakgrund och pågående handling i imperfetto; händelsen som avbryter (bussò) i passato remoto.",
+  "sv": "Medan mormor sydde knackade någon på dörren."
+ },
+ {
+  "id": "remoto-023",
+  "topic": "remoto",
+  "rule": "rem-uso",
+  "q": "Da bambino Leopardi [trascorreva] ore nella biblioteca del padre.",
+  "alt": [
+   "trascorse",
+   "trascorrette",
+   "trascorsero"
+  ],
+  "why": "En vana i det förflutna uttrycks med imperfetto, även i en text med passato remoto.",
+  "sv": "Som barn tillbringade Leopardi timmar i sin fars bibliotek."
+ },
+ {
+  "id": "remoto-024",
+  "topic": "remoto",
+  "rule": "trap-rem",
+  "q": "Dopo che [ebbe finito] di parlare, il ministro lasciò la sala.",
+  "alt": [
+   "aveva finito",
+   "finì",
+   "ha finito"
+  ],
+  "why": "Trapassato remoto (ebbe + particip) används efter dopo che, appena, quando när huvudsatsen står i passato remoto.",
+  "sv": "När ministern hade talat färdigt lämnade han salen."
+ },
+ {
+  "id": "remoto-025",
+  "topic": "remoto",
+  "rule": "trap-rem",
+  "q": "Appena [fu arrivato] a Roma, cercò un alloggio.",
+  "alt": [
+   "era arrivato",
+   "arrivava",
+   "è arrivato"
+  ],
+  "why": "Appena + trapassato remoto, huvudsatsen i passato remoto (cercò). Arrivare tar essere: fu arrivato.",
+  "sv": "Så snart han hade kommit till Rom letade han efter ett boende."
+ },
+ {
+  "id": "congsub-001",
+  "topic": "congsub",
+  "rule": "cong-ind",
+  "q": "Non so se Marco [sia] già partito.",
+  "alt": [
+   "è",
+   "sarà",
+   "fosse"
+  ],
+  "why": "Indirekt fråga efter non so se: congiuntivo i formell stil. Huvudsatsen i presens → congiuntivo presente/passato.",
+  "sv": "Jag vet inte om Marco redan har åkt."
+ },
+ {
+  "id": "congsub-002",
+  "topic": "congsub",
+  "rule": "cong-ind",
+  "q": "Mi chiedo che cosa [pensino] davvero gli elettori.",
+  "alt": [
+   "pensano",
+   "pensassero",
+   "penserebbero"
+  ],
+  "why": "Mi chiedo + indirekt fråga: congiuntivo presente (pensino). I tal hörs också indikativ, men i skrift föredras congiuntivo.",
+  "sv": "Jag undrar vad väljarna egentligen tycker."
+ },
+ {
+  "id": "congsub-003",
+  "topic": "congsub",
+  "rule": "cong-ind",
+  "q": "Il professore ci domandò chi [avesse] scritto la relazione.",
+  "alt": [
+   "abbia",
+   "aveva",
+   "ha"
+  ],
+  "why": "Huvudsatsen i dåtid (domandò) → congiuntivo imperfetto eller trapassato: avesse scritto.",
+  "sv": "Professorn frågade oss vem som hade skrivit rapporten."
+ },
+ {
+  "id": "congsub-004",
+  "topic": "congsub",
+  "rule": "cong-ind",
+  "q": "Non capivo perché lei [fosse] così arrabbiata.",
+  "alt": [
+   "sia",
+   "era stata",
+   "sarà"
+  ],
+  "why": "Non capivo perché + congiuntivo imperfetto (samtidighet i dåtid).",
+  "sv": "Jag förstod inte varför hon var så arg."
+ },
+ {
+  "id": "congsub-005",
+  "topic": "congsub",
+  "rule": "cong-ind",
+  "q": "Nessuno sa dove [si trovi] il manoscritto originale.",
+  "alt": [
+   "si trova",
+   "si trovasse",
+   "si troverebbe"
+  ],
+  "why": "Nessuno sa dove: indirekt fråga med tvivel → congiuntivo presente.",
+  "sv": "Ingen vet var originalmanuskriptet finns."
+ },
+ {
+  "id": "congsub-006",
+  "topic": "congsub",
+  "rule": "cong-ind",
+  "q": "Gli studiosi discutono se la lettera [sia] autentica.",
+  "alt": [
+   "è",
+   "fosse",
+   "sarebbe"
+  ],
+  "why": "Discutere se + indirekt fråga: congiuntivo presente i formell text.",
+  "sv": "Forskarna diskuterar om brevet är äkta."
+ },
+ {
+  "id": "congsub-007",
+  "topic": "congsub",
+  "rule": "cong-ind",
+  "q": "Ti ho chiesto quando [saresti arrivato], non perché.",
+  "alt": [
+   "arrivi",
+   "arriverai",
+   "sei arrivato"
+  ],
+  "why": "Framtid i det förflutna i en indirekt fråga: condizionale passato (saresti arrivato).",
+  "sv": "Jag frågade dig när du skulle komma, inte varför."
+ },
+ {
+  "id": "congsub-008",
+  "topic": "congsub",
+  "rule": "cong-ind",
+  "q": "Non era chiaro chi [dovesse] pagare le spese.",
+  "alt": [
+   "deve",
+   "debba",
+   "dovrà"
+  ],
+  "why": "Non era chiaro + indirekt fråga i dåtid → congiuntivo imperfetto (dovesse).",
+  "sv": "Det var oklart vem som skulle betala kostnaderna."
+ },
+ {
+  "id": "congsub-009",
+  "topic": "congsub",
+  "rule": "cong-ind",
+  "q": "Vorrei sapere come [abbiate] ottenuto questi dati.",
+  "alt": [
+   "avete",
+   "aveste",
+   "avrete"
+  ],
+  "why": "Vorrei sapere + indirekt fråga om något redan gjort: congiuntivo passato (abbiate ottenuto).",
+  "sv": "Jag skulle vilja veta hur ni har fått fram de här uppgifterna."
+ },
+ {
+  "id": "congsub-010",
+  "topic": "congsub",
+  "rule": "cong-ind",
+  "q": "Mi domando se non [sia] meglio aspettare.",
+  "alt": [
+   "è",
+   "era",
+   "fossi"
+  ],
+  "why": "Mi domando se: congiuntivo presente (sia). Fossi är fel person och tid.",
+  "sv": "Jag undrar om det inte är bättre att vänta."
+ },
+ {
+  "id": "congsub-011",
+  "topic": "congsub",
+  "rule": "cong-sup",
+  "q": "È il libro più bello che io [abbia] mai letto.",
+  "alt": [
+   "ho",
+   "avevo",
+   "avrò"
+  ],
+  "why": "Efter superlativ + che används congiuntivo: il più bello che abbia mai letto.",
+  "sv": "Det är den vackraste bok jag någonsin har läst."
+ },
+ {
+  "id": "congsub-012",
+  "topic": "congsub",
+  "rule": "cong-sup",
+  "q": "Era la città più affascinante che [avessimo] mai visitato.",
+  "alt": [
+   "abbiamo",
+   "avevamo",
+   "abbiamo avuto"
+  ],
+  "why": "Superlativ i dåtid (era) → congiuntivo trapassato: avessimo visitato.",
+  "sv": "Det var den mest fascinerande stad vi någonsin hade besökt."
+ },
+ {
+  "id": "congsub-013",
+  "topic": "congsub",
+  "rule": "cong-sup",
+  "q": "È l'unica persona che mi [capisca] davvero.",
+  "alt": [
+   "capisce",
+   "capiva",
+   "capirà"
+  ],
+  "why": "L'unico/l'unica che + congiuntivo, som efter superlativ.",
+  "sv": "Hon är den enda som verkligen förstår mig."
+ },
+ {
+  "id": "congsub-014",
+  "topic": "congsub",
+  "rule": "cong-sup",
+  "q": "Il primo che [arrivi] in ritardo paga il caffè a tutti.",
+  "alt": [
+   "arriva",
+   "arrivasse",
+   "arriverebbe"
+  ],
+  "why": "Il primo che, l'ultimo che, il solo che tar ofta congiuntivo.",
+  "sv": "Den förste som kommer för sent bjuder alla på kaffe."
+ },
+ {
+  "id": "congsub-015",
+  "topic": "congsub",
+  "rule": "cong-sup",
+  "q": "Fu la decisione più difficile che [avesse] mai preso.",
+  "alt": [
+   "abbia",
+   "aveva",
+   "ebbe"
+  ],
+  "why": "Superlativ i passato remoto → congiuntivo trapassato.",
+  "sv": "Det var det svåraste beslut han någonsin hade fattat."
+ },
+ {
+  "id": "congsub-016",
+  "topic": "congsub",
+  "rule": "cong-sup",
+  "q": "Cerco un appartamento che [abbia] due camere e un balcone.",
+  "alt": [
+   "ha",
+   "avrebbe",
+   "avesse"
+  ],
+  "why": "Relativsats om något man söker men inte vet om det finns: congiuntivo.",
+  "sv": "Jag söker en lägenhet som har två rum och en balkong."
+ },
+ {
+  "id": "congsub-017",
+  "topic": "congsub",
+  "rule": "cong-sup",
+  "q": "Non c'è nessuno che [sappia] rispondere.",
+  "alt": [
+   "sa",
+   "sapeva",
+   "saprà"
+  ],
+  "why": "Non c'è nessuno che + congiuntivo: det nekade gör relativsatsen hypotetisk.",
+  "sv": "Det finns ingen som kan svara."
+ },
+ {
+  "id": "congsub-018",
+  "topic": "congsub",
+  "rule": "cong-sup",
+  "q": "È la sinfonia meno eseguita che Rossini [abbia] scritto.",
+  "alt": [
+   "ha",
+   "aveva",
+   "ebbe"
+  ],
+  "why": "Även efter meno + adjektiv (negativ superlativ) används congiuntivo.",
+  "sv": "Det är den minst framförda symfoni som Rossini har skrivit."
+ },
+ {
+  "id": "congsub-019",
+  "topic": "congsub",
+  "rule": "cong-conc",
+  "q": "Chiunque [voglia] partecipare deve iscriversi entro lunedì.",
+  "alt": [
+   "vuole",
+   "volesse",
+   "vorrà"
+  ],
+  "why": "Chiunque (vem som än) tar congiuntivo.",
+  "sv": "Den som vill delta måste anmäla sig senast måndag."
+ },
+ {
+  "id": "congsub-020",
+  "topic": "congsub",
+  "rule": "cong-conc",
+  "q": "Qualunque cosa tu [dica], non cambierò idea.",
+  "alt": [
+   "dici",
+   "dirai",
+   "dicessi"
+  ],
+  "why": "Qualunque cosa + congiuntivo.",
+  "sv": "Vad du än säger ändrar jag mig inte."
+ },
+ {
+  "id": "congsub-021",
+  "topic": "congsub",
+  "rule": "cong-conc",
+  "q": "Ovunque [andasse], lo riconoscevano.",
+  "alt": [
+   "andava",
+   "vada",
+   "andò"
+  ],
+  "why": "Ovunque (var som än) + congiuntivo; i dåtid congiuntivo imperfetto.",
+  "sv": "Vart han än gick blev han igenkänd."
+ },
+ {
+  "id": "congsub-022",
+  "topic": "congsub",
+  "rule": "cong-conc",
+  "q": "Benché [fosse] stanchissimo, continuò a studiare.",
+  "alt": [
+   "era",
+   "è",
+   "sarebbe"
+  ],
+  "why": "Benché + congiuntivo; i dåtid congiuntivo imperfetto.",
+  "sv": "Fast han var jättetrött fortsatte han att plugga."
+ },
+ {
+  "id": "comese-001",
+  "topic": "comese",
+  "rule": "come-se",
+  "q": "Parla come se [fosse] il direttore.",
+  "alt": [
+   "è",
+   "sia",
+   "sarebbe"
+  ],
+  "why": "Come se tar alltid congiuntivo imperfetto eller trapassato, oavsett huvudsatsens tempus.",
+  "sv": "Han pratar som om han vore chefen."
+ },
+ {
+  "id": "comese-002",
+  "topic": "comese",
+  "rule": "come-se",
+  "q": "Mi guardò come se non mi [avesse] mai visto.",
+  "alt": [
+   "abbia",
+   "aveva",
+   "avrebbe"
+  ],
+  "why": "Något som skulle ha hänt före: come se + congiuntivo trapassato (avesse visto).",
+  "sv": "Hon tittade på mig som om hon aldrig hade sett mig."
+ },
+ {
+  "id": "comese-003",
+  "topic": "comese",
+  "rule": "come-se",
+  "q": "Spende come se [avesse] milioni in banca.",
+  "alt": [
+   "ha",
+   "abbia",
+   "avrà"
+  ],
+  "why": "Come se + congiuntivo imperfetto även när huvudsatsen står i presens.",
+  "sv": "Han gör av med pengar som om han hade miljoner på banken."
+ },
+ {
+  "id": "comese-004",
+  "topic": "comese",
+  "rule": "come-se",
+  "q": "Si comportano come se nulla [fosse] successo.",
+  "alt": [
+   "è",
+   "sia",
+   "sarebbe"
+  ],
+  "why": "Come se nulla fosse successo: fast uttryck med congiuntivo trapassato.",
+  "sv": "De beter sig som om ingenting hade hänt."
+ },
+ {
+  "id": "comese-005",
+  "topic": "comese",
+  "rule": "come-se",
+  "q": "Canta come se [fosse] l'ultima volta.",
+  "alt": [
+   "è",
+   "sarà",
+   "sia"
+  ],
+  "why": "Come se + congiuntivo imperfetto.",
+  "sv": "Hon sjunger som om det vore sista gången."
+ },
+ {
+  "id": "comese-006",
+  "topic": "comese",
+  "rule": "come-se",
+  "q": "Mi tratti come se io [fossi] un bambino.",
+  "alt": [
+   "sono",
+   "sia",
+   "sarei"
+  ],
+  "why": "Io-formen av congiuntivo imperfetto: fossi.",
+  "sv": "Du behandlar mig som om jag vore ett barn."
+ },
+ {
+  "id": "comese-007",
+  "topic": "comese",
+  "rule": "come-se",
+  "q": "Il politico parlò come se [avesse] già vinto le elezioni.",
+  "alt": [
+   "abbia",
+   "aveva",
+   "avrebbe"
+  ],
+  "why": "Något tänkt som redan avslutat: congiuntivo trapassato.",
+  "sv": "Politikern talade som om han redan hade vunnit valet."
+ },
+ {
+  "id": "comese-008",
+  "topic": "comese",
+  "rule": "come-se",
+  "q": "Correvano come se li [inseguisse] un lupo.",
+  "alt": [
+   "inseguiva",
+   "insegua",
+   "inseguirà"
+  ],
+  "why": "Come se + congiuntivo imperfetto (inseguisse).",
+  "sv": "De sprang som om en varg jagade dem."
+ },
+ {
+  "id": "comese-009",
+  "topic": "comese",
+  "rule": "come-se",
+  "q": "Fa' come se [fossi] a casa tua.",
+  "alt": [
+   "sei",
+   "sia",
+   "saresti"
+  ],
+  "why": "Fast artighetsfras: fa' come se fossi a casa tua = känn dig som hemma.",
+  "sv": "Känn dig som hemma."
+ },
+ {
+  "id": "comese-010",
+  "topic": "comese",
+  "rule": "come-se",
+  "q": "Ne parlate come se lo [conosceste] da anni.",
+  "alt": [
+   "conoscete",
+   "conosciate",
+   "conoscereste"
+  ],
+  "why": "Voi-form av congiuntivo imperfetto: conosceste.",
+  "sv": "Ni pratar om honom som om ni hade känt honom i åratal."
+ },
+ {
+  "id": "comese-011",
+  "topic": "comese",
+  "rule": "come-se",
+  "q": "Quasi [fosse] un sogno, la città sembrava sospesa.",
+  "alt": [
+   "era",
+   "sia",
+   "sarebbe"
+  ],
+  "why": "Quasi (come om) används som come se med congiuntivo.",
+  "sv": "Som om det vore en dröm verkade staden svävande."
+ },
+ {
+  "id": "comese-012",
+  "topic": "comese",
+  "rule": "come-se",
+  "q": "Mi sento come se [avessi] corso una maratona.",
+  "alt": [
+   "ho",
+   "abbia",
+   "avrei"
+  ],
+  "why": "Come se + congiuntivo trapassato: avessi corso.",
+  "sv": "Jag känner mig som om jag hade sprungit ett maraton."
+ },
+ {
+  "id": "comese-013",
+  "topic": "comese",
+  "rule": "se-parl",
+  "q": "Se lo [sapevo], venivo anch'io.",
+  "alt": [
+   "saprei",
+   "so",
+   "sappia"
+  ],
+  "why": "Talspråk: se + imperfetto, venivo i stället för se l'avessi saputo, sarei venuto. Förekommer i vardagligt tal men inte i formell skrift.",
+  "sv": "Om jag hade vetat det hade jag också kommit."
+ },
+ {
+  "id": "comese-014",
+  "topic": "comese",
+  "rule": "se-parl",
+  "q": "Se l'[avessi saputo], sarei venuto anch'io.",
+  "alt": [
+   "sapevo",
+   "avrei saputo",
+   "ho saputo"
+  ],
+  "why": "Standardspråkets form: se + congiuntivo trapassato, condizionale passato i huvudsatsen.",
+  "sv": "Om jag hade vetat det skulle jag också ha kommit."
+ },
+ {
+  "id": "comese-015",
+  "topic": "comese",
+  "rule": "se-parl",
+  "q": "Se mi chiamavi, ti [venivo] a prendere.",
+  "alt": [
+   "verrei",
+   "venni",
+   "venga"
+  ],
+  "why": "I talspråkets om-sats står både villkoret och följden i imperfetto.",
+  "sv": "Om du hade ringt hade jag hämtat dig."
+ },
+ {
+  "id": "comese-016",
+  "topic": "comese",
+  "rule": "se-parl",
+  "q": "Se ci [fossimo organizzati] meglio, non avremmo perso il treno.",
+  "alt": [
+   "organizzavamo",
+   "saremmo organizzati",
+   "siamo organizzati"
+  ],
+  "why": "Formell stil: congiuntivo trapassato. Reflexiva verb tar essere: ci fossimo organizzati.",
+  "sv": "Om vi hade organiserat oss bättre hade vi inte missat tåget."
+ },
+ {
+  "id": "comese-017",
+  "topic": "comese",
+  "rule": "se-parl",
+  "q": "Magari [avessi] più tempo per leggere!",
+  "alt": [
+   "ho",
+   "abbia",
+   "avrei"
+  ],
+  "why": "Magari + congiuntivo imperfetto uttrycker en önskan: om jag ändå hade.",
+  "sv": "Om jag ändå hade mer tid att läsa!"
+ },
+ {
+  "id": "comese-018",
+  "topic": "comese",
+  "rule": "se-parl",
+  "q": "Se [avessi studiato] di più, ora saprei rispondere.",
+  "alt": [
+   "studiavo",
+   "avrei studiato",
+   "studierei"
+  ],
+  "why": "Blandad om-sats: villkoret i det förflutna (congiuntivo trapassato), följden nu (condizionale presente).",
+  "sv": "Om jag hade pluggat mer skulle jag kunna svara nu."
+ },
+ {
+  "id": "comese-019",
+  "topic": "comese",
+  "rule": "se-parl",
+  "q": "Qualora il contratto non [venisse] rinnovato, l'inquilino dovrà lasciare l'appartamento.",
+  "alt": [
+   "viene",
+   "verrà",
+   "sarebbe"
+  ],
+  "why": "Qualora (formellt 'om, i händelse av') tar alltid congiuntivo.",
+  "sv": "Om avtalet inte förnyas måste hyresgästen lämna lägenheten."
+ },
+ {
+  "id": "comese-020",
+  "topic": "comese",
+  "rule": "se-parl",
+  "q": "Nel caso in cui [dovessero] sorgere problemi, contattateci.",
+  "alt": [
+   "dovranno",
+   "devono",
+   "dovrebbero"
+  ],
+  "why": "Nel caso in cui + congiuntivo (dovessero = om det skulle).",
+  "sv": "Om problem skulle uppstå, kontakta oss."
+ },
+ {
+  "id": "impliciti-001",
+  "topic": "impliciti",
+  "rule": "impl-inf",
+  "q": "Dopo [aver letto] il contratto, lo firmò.",
+  "alt": [
+   "avendo letto",
+   "leggere",
+   "letto"
+  ],
+  "why": "Dopo + infinito passato (aver/essere + particip) ersätter dopo che + verb, när subjektet är detsamma.",
+  "sv": "Efter att ha läst avtalet skrev han under det."
+ },
+ {
+  "id": "impliciti-002",
+  "topic": "impliciti",
+  "rule": "impl-inf",
+  "q": "Prima di [firmare], leggi tutte le clausole.",
+  "alt": [
+   "firmando",
+   "aver firmato",
+   "firmato"
+  ],
+  "why": "Prima di + infinito presente, när subjektet är detsamma.",
+  "sv": "Läs alla klausuler innan du skriver under."
+ },
+ {
+  "id": "impliciti-003",
+  "topic": "impliciti",
+  "rule": "impl-inf",
+  "q": "Dopo [essere arrivata] a Bologna, cercò una stanza.",
+  "alt": [
+   "aver arrivato",
+   "arrivando",
+   "arrivare"
+  ],
+  "why": "Arrivare tar essere, så infinito passato blir essere arrivato/arrivata (subjektet är en kvinna).",
+  "sv": "Efter att ha kommit till Bologna letade hon efter ett rum."
+ },
+ {
+  "id": "impliciti-004",
+  "topic": "impliciti",
+  "rule": "impl-inf",
+  "q": "Penso di [avere] ragione.",
+  "alt": [
+   "che ho",
+   "che abbia",
+   "avendo"
+  ],
+  "why": "Samma subjekt i båda satserna → di + infinito i stället för che + congiuntivo.",
+  "sv": "Jag tror att jag har rätt."
+ },
+ {
+  "id": "impliciti-005",
+  "topic": "impliciti",
+  "rule": "impl-inf",
+  "q": "Mi dispiace di non [essere venuto] alla festa.",
+  "alt": [
+   "venire",
+   "venendo",
+   "che non sono venuto"
+  ],
+  "why": "Något som redan hänt: di + infinito passato (essere venuto).",
+  "sv": "Jag är ledsen att jag inte kom till festen."
+ },
+ {
+  "id": "impliciti-006",
+  "topic": "impliciti",
+  "rule": "impl-inf",
+  "q": "Il sindaco ha promesso di [ridurre] le tasse.",
+  "alt": [
+   "che riduce",
+   "riducendo",
+   "ridotto"
+  ],
+  "why": "Promettere di + infinito, samma subjekt.",
+  "sv": "Borgmästaren har lovat att sänka skatterna."
+ },
+ {
+  "id": "impliciti-007",
+  "topic": "impliciti",
+  "rule": "impl-inf",
+  "q": "Senza [dire] una parola, uscì dalla stanza.",
+  "alt": [
+   "dicendo",
+   "detto",
+   "che dicesse"
+  ],
+  "why": "Senza + infinito (utan att), samma subjekt.",
+  "sv": "Utan att säga ett ord gick han ut ur rummet."
+ },
+ {
+  "id": "impliciti-008",
+  "topic": "impliciti",
+  "rule": "impl-ger",
+  "q": "[Leggendo] i giornali, ci si fa un'idea della situazione.",
+  "alt": [
+   "Letto",
+   "A leggere",
+   "Lettura"
+  ],
+  "why": "Gerundio för medel eller sätt: genom att läsa.",
+  "sv": "Genom att läsa tidningarna får man en uppfattning om läget."
+ },
+ {
+  "id": "impliciti-009",
+  "topic": "impliciti",
+  "rule": "impl-ger",
+  "q": "[Essendo] malato, non poté partecipare al concerto.",
+  "alt": [
+   "Stato",
+   "Essere",
+   "Sia"
+  ],
+  "why": "Gerundio för orsak: eftersom han var sjuk.",
+  "sv": "Eftersom han var sjuk kunde han inte vara med på konserten."
+ },
+ {
+  "id": "impliciti-010",
+  "topic": "impliciti",
+  "rule": "impl-ger",
+  "q": "[Avendo finito] gli esami, partì per le vacanze.",
+  "alt": [
+   "Finendo",
+   "Finito avendo",
+   "Aver finito"
+  ],
+  "why": "Gerundio passato (avendo + particip) för något som hänt före huvudsatsen.",
+  "sv": "Efter att ha klarat tentorna åkte hon på semester."
+ },
+ {
+  "id": "impliciti-011",
+  "topic": "impliciti",
+  "rule": "impl-ger",
+  "q": "[Volendo], potresti anche iscriverti al conservatorio.",
+  "alt": [
+   "Voluto",
+   "Volere",
+   "Vuoi"
+  ],
+  "why": "Gerundio för villkor: om man vill.",
+  "sv": "Om du vill kan du också söka till konservatoriet."
+ },
+ {
+  "id": "impliciti-012",
+  "topic": "impliciti",
+  "rule": "impl-ger",
+  "q": "Pur [essendo] giovane, ha già una grande esperienza.",
+  "alt": [
+   "essere",
+   "stato",
+   "sia"
+  ],
+  "why": "Pur + gerundio = trots att (medgivande).",
+  "sv": "Trots att hon är ung har hon redan stor erfarenhet."
+ },
+ {
+  "id": "impliciti-013",
+  "topic": "impliciti",
+  "rule": "impl-ger",
+  "q": "[Essendo arrivati] tardi, trovammo la porta chiusa.",
+  "alt": [
+   "Arrivando",
+   "Stati arrivati",
+   "Arrivato"
+  ],
+  "why": "Gerundio passato av ett essere-verb: essendo arrivati (vi, plural).",
+  "sv": "Eftersom vi kom sent hittade vi dörren stängd."
+ },
+ {
+  "id": "impliciti-014",
+  "topic": "impliciti",
+  "rule": "impl-part",
+  "q": "[Finita] la lezione, gli studenti uscirono.",
+  "alt": [
+   "Finito",
+   "Finendo",
+   "Finire"
+  ],
+  "why": "Particip som bisats (participio assoluto): participet böjs efter substantivet (la lezione → finita).",
+  "sv": "När lektionen var slut gick studenterna ut."
+ },
+ {
+  "id": "impliciti-015",
+  "topic": "impliciti",
+  "rule": "impl-part",
+  "q": "[Letti] i documenti, il giudice emise la sentenza.",
+  "alt": [
+   "Letto",
+   "Leggendo",
+   "Lette"
+  ],
+  "why": "Participio assoluto böjs efter objektet: i documenti → letti.",
+  "sv": "Sedan domaren hade läst handlingarna avkunnade han domen."
+ },
+ {
+  "id": "impliciti-016",
+  "topic": "impliciti",
+  "rule": "impl-part",
+  "q": "[Arrivata] a Roma, la delegazione incontrò il Presidente.",
+  "alt": [
+   "Arrivato",
+   "Arrivando",
+   "Arrivati"
+  ],
+  "why": "Med essere-verb böjs participet efter subjektet: la delegazione → arrivata.",
+  "sv": "När delegationen hade kommit till Rom träffade den presidenten."
+ },
+ {
+  "id": "impliciti-017",
+  "topic": "impliciti",
+  "rule": "impl-part",
+  "q": "Una volta [firmato] il contratto, non si può più recedere.",
+  "alt": [
+   "firmando",
+   "firmare",
+   "firmata"
+  ],
+  "why": "Una volta + particip = när väl. Il contratto (m) → firmato.",
+  "sv": "När avtalet väl är undertecknat kan man inte längre frånträda det."
+ },
+ {
+  "id": "impliciti-018",
+  "topic": "impliciti",
+  "rule": "impl-part",
+  "q": "[Approvata] la legge, il governo si dimise.",
+  "alt": [
+   "Approvato",
+   "Approvando",
+   "Approvati"
+  ],
+  "why": "Participio assoluto: la legge (f) → approvata.",
+  "sv": "Sedan lagen hade antagits avgick regeringen."
+ },
+ {
+  "id": "impliciti-019",
+  "topic": "impliciti",
+  "rule": "impl-part",
+  "q": "[Considerati] i costi, abbiamo rinunciato al progetto.",
+  "alt": [
+   "Considerato",
+   "Considerando",
+   "Considerate"
+  ],
+  "why": "I costi (m pl) → considerati.",
+  "sv": "Med tanke på kostnaderna avstod vi från projektet."
+ },
+ {
+  "id": "impliciti-020",
+  "topic": "impliciti",
+  "rule": "impl-part",
+  "q": "I dati [raccolti] dal gruppo sono pubblici.",
+  "alt": [
+   "raccogliendo",
+   "che raccolti",
+   "raccolto"
+  ],
+  "why": "Particip i stället för relativsats: i dati raccolti = i dati che sono stati raccolti.",
+  "sv": "De uppgifter som gruppen har samlat in är offentliga."
+ },
+ {
+  "id": "impliciti-021",
+  "topic": "impliciti",
+  "rule": "impl-part",
+  "q": "Gli studenti [iscritti] al corso riceveranno una mail.",
+  "alt": [
+   "iscrivendo",
+   "iscritto",
+   "iscrittisi"
+  ],
+  "why": "Particip som förkortad relativsats: gli studenti (che sono) iscritti.",
+  "sv": "Studenterna som är anmälda till kursen får ett mejl."
+ },
+ {
+  "id": "impliciti-022",
+  "topic": "impliciti",
+  "rule": "impl-inf",
+  "q": "È stato multato per [aver parcheggiato] in divieto.",
+  "alt": [
+   "parcheggiare",
+   "parcheggiando",
+   "avendo parcheggiato"
+  ],
+  "why": "Per + infinito passato anger orsak till något som redan hänt.",
+  "sv": "Han fick böter för att ha parkerat där det var förbjudet."
+ },
+ {
+  "id": "ordbild-001",
+  "topic": "ordbild",
+  "rule": "ob-suff",
+  "q": "Chi fa ricerca è un [ricercatore].",
+  "alt": [
+   "ricercante",
+   "ricercista",
+   "ricerchiere"
+  ],
+  "why": "Suffixet -tore bildar substantiv för den som gör något: ricercare → ricercatore.",
+  "sv": "Den som forskar är en forskare."
+ },
+ {
+  "id": "ordbild-002",
+  "topic": "ordbild",
+  "rule": "ob-suff",
+  "q": "Il fatto di essere possibile è la [possibilità].",
+  "alt": [
+   "possibilezza",
+   "possibilanza",
+   "possibilaggine"
+  ],
+  "why": "-ità bildar abstrakta substantiv av adjektiv: possibile → possibilità.",
+  "sv": "Att något är möjligt är möjligheten."
+ },
+ {
+  "id": "ordbild-003",
+  "topic": "ordbild",
+  "rule": "ob-suff",
+  "q": "Il fatto di essere gentile è la [gentilezza].",
+  "alt": [
+   "gentilità",
+   "gentilanza",
+   "gentilismo"
+  ],
+  "why": "-ezza bildar abstrakta substantiv av vissa adjektiv: gentile → gentilezza, bello → bellezza.",
+  "sv": "Att vara vänlig är vänlighet."
+ },
+ {
+  "id": "ordbild-004",
+  "topic": "ordbild",
+  "rule": "ob-suff",
+  "q": "Un'azione che si può fare è [fattibile].",
+  "alt": [
+   "facibile",
+   "fattabile",
+   "facevole"
+  ],
+  "why": "-ibile/-abile = som kan ...: fare → fattibile (från latinets factibilis).",
+  "sv": "En handling som går att genomföra är genomförbar."
+ },
+ {
+  "id": "ordbild-005",
+  "topic": "ordbild",
+  "rule": "ob-suff",
+  "q": "Un testo che si legge facilmente è [leggibile].",
+  "alt": [
+   "leggevole",
+   "leggiabile",
+   "lettibile"
+  ],
+  "why": "-ibile till -ere-verb: leggere → leggibile.",
+  "sv": "En text som är lätt att läsa är läsbar."
+ },
+ {
+  "id": "ordbild-006",
+  "topic": "ordbild",
+  "rule": "ob-suff",
+  "q": "Il fatto di cambiare è il [cambiamento].",
+  "alt": [
+   "cambiazione",
+   "cambiaggio",
+   "cambiezza"
+  ],
+  "why": "-mento bildar handlingssubstantiv av verb: cambiare → cambiamento.",
+  "sv": "Att förändra är förändringen."
+ },
+ {
+  "id": "ordbild-007",
+  "topic": "ordbild",
+  "rule": "ob-suff",
+  "q": "L'atto di organizzare è l'[organizzazione].",
+  "alt": [
+   "organizzamento",
+   "organizzità",
+   "organizzanza"
+  ],
+  "why": "-zione bildar handlingssubstantiv av verb på -are: organizzare → organizzazione.",
+  "sv": "Att organisera är organisationen."
+ },
+ {
+  "id": "ordbild-008",
+  "topic": "ordbild",
+  "rule": "ob-suff",
+  "q": "Chi suona il pianoforte è un [pianista].",
+  "alt": [
+   "pianiere",
+   "pianatore",
+   "pianante"
+  ],
+  "why": "-ista för yrke eller utövare: piano → pianista (samma form för m och f).",
+  "sv": "Den som spelar piano är pianist."
+ },
+ {
+  "id": "ordbild-009",
+  "topic": "ordbild",
+  "rule": "ob-suff",
+  "q": "Un piccolo libro è un [libretto].",
+  "alt": [
+   "librone",
+   "libraccio",
+   "librato"
+  ],
+  "why": "-etto/-ino är diminutivsuffix: libro → libretto, också 'operatext'.",
+  "sv": "En liten bok är ett häfte."
+ },
+ {
+  "id": "ordbild-010",
+  "topic": "ordbild",
+  "rule": "ob-suff",
+  "q": "Una parola brutta e volgare è una [parolaccia].",
+  "alt": [
+   "parolina",
+   "parolona",
+   "paroletta"
+  ],
+  "why": "-accio är pejorativt suffix: parola → parolaccia (svordom).",
+  "sv": "Ett fult ord är en svordom."
+ },
+ {
+  "id": "ordbild-011",
+  "topic": "ordbild",
+  "rule": "ob-suff",
+  "q": "Una porta molto grande è un [portone].",
+  "alt": [
+   "portina",
+   "portaccia",
+   "portetta"
+  ],
+  "why": "-one är augmentativt suffix: porta → portone (femininum blir ofta maskulinum).",
+  "sv": "En stor dörr är en port."
+ },
+ {
+  "id": "ordbild-012",
+  "topic": "ordbild",
+  "rule": "ob-suff",
+  "q": "Una casa piccola e carina è una [casetta].",
+  "alt": [
+   "casone",
+   "casaccia",
+   "casuccio"
+  ],
+  "why": "-etta/-ina är diminutiv: casa → casetta.",
+  "sv": "Ett litet och gulligt hus är en stuga."
+ },
+ {
+  "id": "ordbild-013",
+  "topic": "ordbild",
+  "rule": "ob-pref",
+  "q": "Chi non è d'accordo è in [disaccordo].",
+  "alt": [
+   "inaccordo",
+   "saccordo",
+   "antiaccordo"
+  ],
+  "why": "Prefixet dis- anger motsats: accordo → disaccordo.",
+  "sv": "Den som inte håller med är oense."
+ },
+ {
+  "id": "ordbild-014",
+  "topic": "ordbild",
+  "rule": "ob-pref",
+  "q": "Una cosa che non si può credere è [incredibile].",
+  "alt": [
+   "discredibile",
+   "scredibile",
+   "noncredibile"
+  ],
+  "why": "In- = o-: credibile → incredibile. Framför p och b blir in- till im-: impossibile.",
+  "sv": "Något som inte går att tro är otroligt."
+ },
+ {
+  "id": "ordbild-015",
+  "topic": "ordbild",
+  "rule": "ob-pref",
+  "q": "Ciò che non è legale è [illegale].",
+  "alt": [
+   "inlegale",
+   "dislegale",
+   "slegale"
+  ],
+  "why": "In- blir il- framför l: legale → illegale. Framför r blir det ir-: irregolare.",
+  "sv": "Det som inte är lagligt är olagligt."
+ },
+ {
+  "id": "ordbild-016",
+  "topic": "ordbild",
+  "rule": "ob-pref",
+  "q": "Scrivere di nuovo un testo significa [riscrivere].",
+  "alt": [
+   "discrivere",
+   "prescrivere",
+   "sottoscrivere"
+  ],
+  "why": "Ri- = igen: scrivere → riscrivere. Prescrivere betyder föreskriva.",
+  "sv": "Att skriva en text igen är att skriva om den."
+ },
+ {
+  "id": "ordbild-017",
+  "topic": "ordbild",
+  "rule": "ob-pref",
+  "q": "Il periodo prima della guerra è l'[anteguerra].",
+  "alt": [
+   "postguerra",
+   "dopoguerra",
+   "sottoguerra"
+  ],
+  "why": "Ante- = före; dopo-/post- = efter. Anteguerra = tiden före kriget.",
+  "sv": "Tiden före kriget är förkrigstiden."
+ },
+ {
+  "id": "ordbild-018",
+  "topic": "ordbild",
+  "rule": "ob-pref",
+  "q": "Un'azione contro la mafia è un'azione [antimafia].",
+  "alt": [
+   "dismafia",
+   "contromafiosa",
+   "inmafia"
+  ],
+  "why": "Anti- = mot: antimafia, antifascista.",
+  "sv": "En handling mot maffian är en antimaffiahandling."
+ },
+ {
+  "id": "ordbild-019",
+  "topic": "ordbild",
+  "rule": "ob-pref",
+  "q": "Chi ha finito da poco la laurea è un [neolaureato].",
+  "alt": [
+   "prelaureato",
+   "rilaureato",
+   "dislaureato"
+  ],
+  "why": "Neo- = ny, nyss: neolaureato, neonato.",
+  "sv": "Den som nyss har tagit examen är nyexaminerad."
+ },
+ {
+  "id": "ordbild-020",
+  "topic": "ordbild",
+  "rule": "ob-pref",
+  "q": "Fare qualcosa in modo troppo semplice è [ipersemplificare].",
+  "alt": [
+   "iposemplificare",
+   "disemplificare",
+   "risemplificare"
+  ],
+  "why": "Iper- = över, för mycket; ipo- = under, för lite.",
+  "sv": "Att göra något alltför enkelt är att översimplifiera."
+ },
+ {
+  "id": "ordbild-021",
+  "topic": "ordbild",
+  "rule": "ob-pref",
+  "q": "Un'azione che va oltre i confini nazionali è [sovranazionale].",
+  "alt": [
+   "sottonazionale",
+   "internazionalità",
+   "antinazionale"
+  ],
+  "why": "Sovra- = över: sovranazionale (överstatlig).",
+  "sv": "Något som går över nationsgränserna är överstatligt."
+ },
+ {
+  "id": "ordbild-022",
+  "topic": "ordbild",
+  "rule": "ob-suff",
+  "q": "Il sistema di parole usato dai burocrati è il [burocratese].",
+  "alt": [
+   "burocratismo",
+   "burocratità",
+   "burocratura"
+  ],
+  "why": "-ese kan bilda namn på jargonger: burocratese, politichese, sindacalese.",
+  "sv": "Byråkraternas språk är byråkratsvenskan."
+ },
+ {
+  "id": "discorso-001",
+  "topic": "discorso",
+  "rule": "dm-agg",
+  "q": "Il film è lungo e, [per di più], noioso.",
+  "alt": [
+   "tuttavia",
+   "dunque",
+   "invece"
+  ],
+  "why": "Per di più = dessutom, lägger till ett argument i samma riktning.",
+  "sv": "Filmen är lång och dessutom tråkig."
+ },
+ {
+  "id": "discorso-002",
+  "topic": "discorso",
+  "rule": "dm-agg",
+  "q": "Non è stato un fallimento, [anzi]: è stato un successo.",
+  "alt": [
+   "cioè",
+   "dunque",
+   "però"
+  ],
+  "why": "Anzi = tvärtom, snarare: förstärker och korrigerar det som sagts.",
+  "sv": "Det var inget misslyckande, tvärtom: det var en succé."
+ },
+ {
+  "id": "discorso-003",
+  "topic": "discorso",
+  "rule": "dm-avv",
+  "q": "Il progetto è interessante; [tuttavia] mancano i fondi.",
+  "alt": [
+   "inoltre",
+   "infatti",
+   "cioè"
+  ],
+  "why": "Tuttavia = dock, emellertid: en motsats.",
+  "sv": "Projektet är intressant; det saknas dock pengar."
+ },
+ {
+  "id": "discorso-004",
+  "topic": "discorso",
+  "rule": "dm-avv",
+  "q": "Era stanco. [Ciononostante], continuò a suonare.",
+  "alt": [
+   "Pertanto",
+   "Infatti",
+   "Inoltre"
+  ],
+  "why": "Ciononostante = trots det.",
+  "sv": "Han var trött. Trots det fortsatte han att spela."
+ },
+ {
+  "id": "discorso-005",
+  "topic": "discorso",
+  "rule": "dm-avv",
+  "q": "Il Nord è ricco; il Sud, [invece], è più povero.",
+  "alt": [
+   "infatti",
+   "dunque",
+   "cioè"
+  ],
+  "why": "Invece = däremot, å andra sidan.",
+  "sv": "Norr är rikt; Syd däremot är fattigare."
+ },
+ {
+  "id": "discorso-006",
+  "topic": "discorso",
+  "rule": "dm-caus",
+  "q": "I dati sono incompleti; [pertanto] non possiamo trarre conclusioni.",
+  "alt": [
+   "tuttavia",
+   "anzi",
+   "eppure"
+  ],
+  "why": "Pertanto = därför, följaktligen (formellt).",
+  "sv": "Uppgifterna är ofullständiga; därför kan vi inte dra några slutsatser."
+ },
+ {
+  "id": "discorso-007",
+  "topic": "discorso",
+  "rule": "dm-caus",
+  "q": "[Dal momento che] tutti sono d'accordo, possiamo cominciare.",
+  "alt": [
+   "Nonostante",
+   "Affinché",
+   "Benché"
+  ],
+  "why": "Dal momento che = eftersom. De andra tar congiuntivo och betyder annat.",
+  "sv": "Eftersom alla är överens kan vi börja."
+ },
+ {
+  "id": "discorso-008",
+  "topic": "discorso",
+  "rule": "dm-caus",
+  "q": "Non posso esprimermi, [in quanto] non conosco i fatti.",
+  "alt": [
+   "benché",
+   "purché",
+   "affinché"
+  ],
+  "why": "In quanto = eftersom (formellt), med indikativ.",
+  "sv": "Jag kan inte uttala mig, eftersom jag inte känner till fakta."
+ },
+ {
+  "id": "discorso-009",
+  "topic": "discorso",
+  "rule": "dm-rif",
+  "q": "L'IVA, [ossia] l'imposta sul valore aggiunto, è del 22%.",
+  "alt": [
+   "anzi",
+   "eppure",
+   "dunque"
+  ],
+  "why": "Ossia/ovvero/vale a dire = det vill säga, förklarar.",
+  "sv": "Momsen, det vill säga mervärdesskatten, är 22 %."
+ },
+ {
+  "id": "discorso-010",
+  "topic": "discorso",
+  "rule": "dm-rif",
+  "q": "Arrivo sabato, [cioè] fra tre giorni.",
+  "alt": [
+   "anzi",
+   "però",
+   "quindi"
+  ],
+  "why": "Cioè = det vill säga, vanligast i tal.",
+  "sv": "Jag kommer på lördag, alltså om tre dagar."
+ },
+ {
+  "id": "discorso-011",
+  "topic": "discorso",
+  "rule": "dm-rif",
+  "q": "[In altre parole], il governo ha cambiato idea.",
+  "alt": [
+   "In primo luogo",
+   "Del resto",
+   "Eppure"
+  ],
+  "why": "In altre parole = med andra ord, omformulerar.",
+  "sv": "Med andra ord har regeringen ändrat sig."
+ },
+ {
+  "id": "discorso-012",
+  "topic": "discorso",
+  "rule": "dm-org",
+  "q": "[In primo luogo] presenterò i dati, poi le conclusioni.",
+  "alt": [
+   "Infine",
+   "Invece",
+   "Anzi"
+  ],
+  "why": "In primo luogo inleder en uppräkning.",
+  "sv": "Först ska jag presentera uppgifterna, sedan slutsatserna."
+ },
+ {
+  "id": "discorso-013",
+  "topic": "discorso",
+  "rule": "dm-org",
+  "q": "[Infine], vorrei ringraziare tutti voi.",
+  "alt": [
+   "Innanzitutto",
+   "Anzitutto",
+   "Dapprima"
+  ],
+  "why": "Infine = slutligen, avslutar en uppräkning.",
+  "sv": "Slutligen vill jag tacka er alla."
+ },
+ {
+  "id": "discorso-014",
+  "topic": "discorso",
+  "rule": "dm-org",
+  "q": "[In sintesi], i risultati confermano l'ipotesi.",
+  "alt": [
+   "Per esempio",
+   "Invece",
+   "Eppure"
+  ],
+  "why": "In sintesi = sammanfattningsvis.",
+  "sv": "Sammanfattningsvis bekräftar resultaten hypotesen."
+ },
+ {
+  "id": "discorso-015",
+  "topic": "discorso",
+  "rule": "dm-parl",
+  "q": "[Insomma], vieni o non vieni?",
+  "alt": [
+   "Pertanto",
+   "Tuttavia",
+   "Ossia"
+  ],
+  "why": "Insomma = kort sagt, alltså; i tal visar det ofta otålighet.",
+  "sv": "Alltså, kommer du eller inte?"
+ },
+ {
+  "id": "discorso-016",
+  "topic": "discorso",
+  "rule": "dm-parl",
+  "q": "– Hai finito? – Beh, [diciamo] che ci sono quasi.",
+  "alt": [
+   "dunque",
+   "anzi",
+   "pertanto"
+  ],
+  "why": "Diciamo = låt oss säga, mildrar ett påstående i tal.",
+  "sv": "– Är du klar? – Tja, låt oss säga att jag nästan är det."
+ },
+ {
+  "id": "discorso-017",
+  "topic": "discorso",
+  "rule": "dm-parl",
+  "q": "[Comunque], non è questo il punto.",
+  "alt": [
+   "Poiché",
+   "Affinché",
+   "Qualora"
+  ],
+  "why": "Comunque = i alla fall, hur som helst: byter eller avslutar ämne.",
+  "sv": "Hur som helst är det inte det som är poängen."
+ },
+ {
+  "id": "discorso-018",
+  "topic": "discorso",
+  "rule": "dm-parl",
+  "q": "[Del resto], nessuno lo aveva previsto.",
+  "alt": [
+   "Affinché",
+   "Qualora",
+   "Purché"
+  ],
+  "why": "Del resto = för övrigt, för den delen.",
+  "sv": "För den delen hade ingen förutsett det."
+ },
+ {
+  "id": "discorso-019",
+  "topic": "discorso",
+  "rule": "dm-avv",
+  "q": "Studia molto, [eppure] non supera l'esame.",
+  "alt": [
+   "perciò",
+   "infatti",
+   "dunque"
+  ],
+  "why": "Eppure = och ändå, uttrycker en oväntad motsats.",
+  "sv": "Hon pluggar mycket och ändå klarar hon inte tentan."
+ },
+ {
+  "id": "discorso-020",
+  "topic": "discorso",
+  "rule": "dm-caus",
+  "q": "Il concerto è stato annullato [a causa del] maltempo.",
+  "alt": [
+   "grazie al",
+   "malgrado il",
+   "invece del"
+  ],
+  "why": "A causa di = på grund av (något negativt). Grazie a används för något positivt.",
+  "sv": "Konserten ställdes in på grund av det dåliga vädret."
+ },
+ {
+  "id": "discorso-021",
+  "topic": "discorso",
+  "rule": "dm-agg",
+  "q": "[Non solo] è bravo, ma è anche simpatico.",
+  "alt": [
+   "Non tanto",
+   "Neanche",
+   "Né"
+  ],
+  "why": "Non solo ... ma anche = inte bara ... utan också.",
+  "sv": "Han är inte bara duktig utan också trevlig."
+ },
+ {
+  "id": "discorso-022",
+  "topic": "discorso",
+  "rule": "dm-org",
+  "q": "[Da un lato] il lavoro è interessante, dall'altro è mal pagato.",
+  "alt": [
+   "Dall'altro",
+   "Invece",
+   "Anzi"
+  ],
+  "why": "Da un lato ... dall'altro (lato) = å ena sidan ... å andra sidan.",
+  "sv": "Å ena sidan är jobbet intressant, å andra sidan är det dåligt betalt."
+ },
+ {
+  "id": "registro-001",
+  "topic": "registro",
+  "rule": "reg-form",
+  "q": "Formellt mejl: [Gentile] professoressa Rossi, le scrivo per chiederle un appuntamento.",
+  "alt": [
+   "Ciao",
+   "Cara mia",
+   "Ehi"
+  ],
+  "why": "I ett formellt mejl inleder man med Gentile + titel. Ciao och Ehi är för vänner.",
+  "sv": "Bästa professor Rossi, jag skriver för att be om ett möte."
+ },
+ {
+  "id": "registro-002",
+  "topic": "registro",
+  "rule": "reg-form",
+  "q": "Formellt: La [ringrazio] per la sua cortese risposta.",
+  "alt": [
+   "ringrazi",
+   "ringraziamo",
+   "ti ringrazio"
+  ],
+  "why": "Artighetsformen Lei: La ringrazio (jag tackar er). Ti är du-form.",
+  "sv": "Tack för ert vänliga svar."
+ },
+ {
+  "id": "registro-003",
+  "topic": "registro",
+  "rule": "reg-form",
+  "q": "Formellt: [Resto] in attesa di un suo cortese riscontro.",
+  "alt": [
+   "Aspetto",
+   "Sto",
+   "Faccio"
+  ],
+  "why": "Fast avslutningsfras i formella brev: Resto in attesa di un suo cortese riscontro.",
+  "sv": "Jag ser fram emot ert svar."
+ },
+ {
+  "id": "registro-004",
+  "topic": "registro",
+  "rule": "reg-form",
+  "q": "Formellt: [Distinti] saluti.",
+  "alt": [
+   "Tanti",
+   "Bacioni",
+   "Un abbraccio"
+  ],
+  "why": "Distinti saluti är den neutrala formella hälsningen. De andra är för vänner och familj.",
+  "sv": "Med vänliga hälsningar."
+ },
+ {
+  "id": "registro-005",
+  "topic": "registro",
+  "rule": "reg-form",
+  "q": "Formellt: Le [sarei] grato se potesse inviarmi il modulo.",
+  "alt": [
+   "sono",
+   "sarò",
+   "ero"
+  ],
+  "why": "Condizionale i artiga förfrågningar: Le sarei grato se ... (congiuntivo imperfetto).",
+  "sv": "Jag vore tacksam om ni kunde skicka blanketten till mig."
+ },
+ {
+  "id": "registro-006",
+  "topic": "registro",
+  "rule": "reg-form",
+  "q": "Formellt: Si [prega] di non fumare.",
+  "alt": [
+   "prego",
+   "preghi",
+   "pregate"
+  ],
+  "why": "Si prega di + infinitiv = var vänlig och, i skyltar och formella meddelanden.",
+  "sv": "Vänligen rök inte."
+ },
+ {
+  "id": "registro-007",
+  "topic": "registro",
+  "rule": "reg-form",
+  "q": "Formellt: In [allegato] trova il mio curriculum.",
+  "alt": [
+   "attaccato",
+   "appiccicato",
+   "insieme"
+  ],
+  "why": "In allegato = bifogat, standard i formella mejl.",
+  "sv": "Bifogat finner ni mitt CV."
+ },
+ {
+  "id": "registro-008",
+  "topic": "registro",
+  "rule": "reg-form",
+  "q": "Formellt: Mi [permetto] di segnalarle un errore.",
+  "alt": [
+   "lascio",
+   "faccio",
+   "do"
+  ],
+  "why": "Mi permetto di = jag tillåter mig att, artig inledning till kritik.",
+  "sv": "Jag tillåter mig att påpeka ett fel."
+ },
+ {
+  "id": "registro-009",
+  "topic": "registro",
+  "rule": "reg-form",
+  "q": "Byråkratiskt: Il modulo va [compilato] in ogni sua parte.",
+  "alt": [
+   "riempito tutto",
+   "fatto",
+   "scritto su"
+  ],
+  "why": "Compilare un modulo = fylla i en blankett. Andare + particip = ska (passiv plikt).",
+  "sv": "Blanketten ska fyllas i helt."
+ },
+ {
+  "id": "registro-010",
+  "topic": "registro",
+  "rule": "reg-form",
+  "q": "Formellt: [Qualora] desiderasse ulteriori informazioni, non esiti a contattarci.",
+  "alt": [
+   "Se mai che",
+   "Casomai che",
+   "Quando che"
+  ],
+  "why": "Qualora + congiuntivo imperfetto är typiskt för formella brev.",
+  "sv": "Om ni önskar ytterligare information, tveka inte att kontakta oss."
+ },
+ {
+  "id": "registro-011",
+  "topic": "registro",
+  "rule": "reg-form",
+  "q": "Formellt: La riunione è [rinviata] a data da destinarsi.",
+  "alt": [
+   "spostata a poi",
+   "messa più in là",
+   "buttata"
+  ],
+  "why": "Rinviare = skjuta upp (formellt); a data da destinarsi = till ett senare datum.",
+  "sv": "Mötet skjuts upp till ett senare datum."
+ },
+ {
+  "id": "registro-012",
+  "topic": "registro",
+  "rule": "reg-inf",
+  "q": "Vardagligt: Che [palle], domani c'è l'esame!",
+  "alt": [
+   "delizia",
+   "piacere",
+   "gioia"
+  ],
+  "why": "Che palle! är en vardaglig (lite grov) svordom för 'vad trist'. Hör hemma i tal mellan vänner.",
+  "sv": "Så trist, i morgon är det tenta!"
+ },
+ {
+  "id": "registro-013",
+  "topic": "registro",
+  "rule": "reg-inf",
+  "q": "Vardagligt: Non ci [sto] capendo niente.",
+  "alt": [
+   "capisco",
+   "sono",
+   "ho"
+  ],
+  "why": "Stare + gerundio i vardagligt tal. I formell text: Non comprendo.",
+  "sv": "Jag fattar ingenting."
+ },
+ {
+  "id": "registro-014",
+  "topic": "registro",
+  "rule": "reg-inf",
+  "q": "Vardagligt: Ci [vediamo] dopo, ok?",
+  "alt": [
+   "vedremmo",
+   "vedessimo",
+   "vediamoci pure"
+  ],
+  "why": "Ci vediamo dopo = vi ses sen. Presens för nära framtid är typiskt i tal.",
+  "sv": "Vi ses sen, okej?"
+ },
+ {
+  "id": "registro-015",
+  "topic": "registro",
+  "rule": "reg-inf",
+  "q": "Vardagligt: A me mi [piace] tanto la pizza.",
+  "alt": [
+   "piacciono",
+   "piaccio",
+   "piacciamo"
+  ],
+  "why": "A me mi piace är en dubblering som är vanlig i tal men undviks i skrift, där det heter A me piace eller Mi piace.",
+  "sv": "Jag gillar pizza så mycket."
+ },
+ {
+  "id": "registro-016",
+  "topic": "registro",
+  "rule": "reg-lex",
+  "q": "Formellt: Il ministro ha [affermato] che la crisi è finita.",
+  "alt": [
+   "detto tipo",
+   "fatto",
+   "sparato"
+  ],
+  "why": "I en nyhetstext används precisa anföringsverb: affermare, dichiarare, sostenere, i stället för dire.",
+  "sv": "Ministern har uppgett att krisen är över."
+ },
+ {
+  "id": "registro-017",
+  "topic": "registro",
+  "rule": "reg-lex",
+  "q": "Formellt: I prezzi sono [aumentati] del 5%.",
+  "alt": [
+   "andati su",
+   "saliti su",
+   "schizzati"
+  ],
+  "why": "I formell text: aumentare, crescere. Andare su är vardagligt.",
+  "sv": "Priserna har ökat med 5 %."
+ },
+ {
+  "id": "registro-018",
+  "topic": "registro",
+  "rule": "reg-lex",
+  "q": "Formellt: È necessario [effettuare] il pagamento entro venerdì.",
+  "alt": [
+   "fare",
+   "buttare",
+   "mettere"
+  ],
+  "why": "Effettuare är den byråkratiska motsvarigheten till fare.",
+  "sv": "Betalningen måste göras senast fredag."
+ },
+ {
+  "id": "registro-019",
+  "topic": "registro",
+  "rule": "reg-lex",
+  "q": "Formellt: Il volo ha subito un [ritardo] di due ore.",
+  "alt": [
+   "casino",
+   "pasticcio",
+   "guaio"
+  ],
+  "why": "Casino, pasticcio och guaio är vardagliga ord för 'röra, problem'.",
+  "sv": "Flyget blev två timmar försenat."
+ },
+ {
+  "id": "registro-020",
+  "topic": "registro",
+  "rule": "reg-lex",
+  "q": "Formellt: L'autore [mette in luce] le contraddizioni del sistema.",
+  "alt": [
+   "fa vedere bene",
+   "tira fuori",
+   "sbatte in faccia"
+  ],
+  "why": "Mettere in luce = belysa, framhäva, i akademisk stil.",
+  "sv": "Författaren belyser systemets motsägelser."
+ },
+ {
+  "id": "registro-021",
+  "topic": "registro",
+  "rule": "reg-lex",
+  "q": "Formellt: [Pertanto] la domanda non può essere accolta.",
+  "alt": [
+   "Allora",
+   "Quindi tipo",
+   "E niente"
+  ],
+  "why": "Pertanto är formellt. Allora och E niente är talspråk.",
+  "sv": "Därför kan ansökan inte beviljas."
+ },
+ {
+  "id": "registro-022",
+  "topic": "registro",
+  "rule": "reg-lex",
+  "q": "Formellt: Il candidato [possiede] ottime competenze informatiche.",
+  "alt": [
+   "ha un sacco di",
+   "è pieno di",
+   "si ritrova"
+  ],
+  "why": "Possedere eller disporre di är formella alternativ till avere.",
+  "sv": "Den sökande har mycket goda datorkunskaper."
+ },
+ {
+  "id": "nominal-001",
+  "topic": "nominal",
+  "rule": "nom-verb",
+  "q": "Verbet arrivare → substantiv: L'[arrivo] del treno è previsto alle 9.",
+  "alt": [
+   "arrivamento",
+   "arrivazione",
+   "arrivata"
+  ],
+  "why": "Arrivare → l'arrivo. Nominaliseringen gör texten mer formell: il treno arriva → l'arrivo del treno.",
+  "sv": "Tåget beräknas ankomma klockan 9."
+ },
+ {
+  "id": "nominal-002",
+  "topic": "nominal",
+  "rule": "nom-verb",
+  "q": "Verbet partire → substantiv: La [partenza] è fissata per lunedì.",
+  "alt": [
+   "partita",
+   "partimento",
+   "partizione"
+  ],
+  "why": "Partire → la partenza. La partita = matchen.",
+  "sv": "Avresan är bestämd till måndag."
+ },
+ {
+  "id": "nominal-003",
+  "topic": "nominal",
+  "rule": "nom-verb",
+  "q": "Verbet scegliere → substantiv: La [scelta] del governo è stata criticata.",
+  "alt": [
+   "sceglienza",
+   "scelgimento",
+   "scegliazione"
+  ],
+  "why": "Scegliere → la scelta (particip som substantiv).",
+  "sv": "Regeringens val har kritiserats."
+ },
+ {
+  "id": "nominal-004",
+  "topic": "nominal",
+  "rule": "nom-verb",
+  "q": "Verbet ridurre → substantiv: Chiediamo la [riduzione] delle tasse.",
+  "alt": [
+   "riducimento",
+   "ridotta",
+   "riduttura"
+  ],
+  "why": "Ridurre → la riduzione.",
+  "sv": "Vi kräver en sänkning av skatterna."
+ },
+ {
+  "id": "nominal-005",
+  "topic": "nominal",
+  "rule": "nom-verb",
+  "q": "Verbet approvare → substantiv: Dopo l'[approvazione] della legge, iniziarono le proteste.",
+  "alt": [
+   "approvamento",
+   "approvanza",
+   "approvata"
+  ],
+  "why": "Approvare → l'approvazione.",
+  "sv": "Efter att lagen antagits började protesterna."
+ },
+ {
+  "id": "nominal-006",
+  "topic": "nominal",
+  "rule": "nom-verb",
+  "q": "Verbet crescere → substantiv: La [crescita] economica è lenta.",
+  "alt": [
+   "crescenza",
+   "crescimento",
+   "cresciuta"
+  ],
+  "why": "Crescere → la crescita.",
+  "sv": "Den ekonomiska tillväxten är långsam."
+ },
+ {
+  "id": "nominal-007",
+  "topic": "nominal",
+  "rule": "nom-verb",
+  "q": "Verbet chiudere → substantiv: La [chiusura] della fabbrica ha colpito la città.",
+  "alt": [
+   "chiudimento",
+   "chiusione",
+   "chiusezza"
+  ],
+  "why": "Chiudere → la chiusura.",
+  "sv": "Nedläggningen av fabriken drabbade staden."
+ },
+ {
+  "id": "nominal-008",
+  "topic": "nominal",
+  "rule": "nom-verb",
+  "q": "Verbet aprire → substantiv: L'[apertura] del museo è prevista a maggio.",
+  "alt": [
+   "aprimento",
+   "aprizione",
+   "apertezza"
+  ],
+  "why": "Aprire → l'apertura.",
+  "sv": "Museet beräknas öppna i maj."
+ },
+ {
+  "id": "nominal-009",
+  "topic": "nominal",
+  "rule": "nom-verb",
+  "q": "Verbet vendere → substantiv: Le [vendite] sono calate.",
+  "alt": [
+   "vendimenti",
+   "vendizioni",
+   "venduti"
+  ],
+  "why": "Vendere → la vendita, le vendite.",
+  "sv": "Försäljningen har minskat."
+ },
+ {
+  "id": "nominal-010",
+  "topic": "nominal",
+  "rule": "nom-verb",
+  "q": "Verbet costruire → substantiv: La [costruzione] del ponte è durata anni.",
+  "alt": [
+   "costruimento",
+   "costruitura",
+   "costrutta"
+  ],
+  "why": "Costruire → la costruzione.",
+  "sv": "Bygget av bron tog flera år."
+ },
+ {
+  "id": "nominal-011",
+  "topic": "nominal",
+  "rule": "nom-verb",
+  "q": "Verbet sviluppare → substantiv: Lo [sviluppo] del Sud è una priorità.",
+  "alt": [
+   "sviluppamento",
+   "sviluppazione",
+   "sviluppanza"
+  ],
+  "why": "Sviluppare → lo sviluppo.",
+  "sv": "Utvecklingen av Syditalien är en prioritet."
+ },
+ {
+  "id": "nominal-012",
+  "topic": "nominal",
+  "rule": "nom-verb",
+  "q": "Verbet ritardare → substantiv: Ci scusiamo per il [ritardo].",
+  "alt": [
+   "ritardamento",
+   "ritardazione",
+   "ritardanza"
+  ],
+  "why": "Ritardare → il ritardo.",
+  "sv": "Vi ber om ursäkt för förseningen."
+ },
+ {
+  "id": "nominal-013",
+  "topic": "nominal",
+  "rule": "nom-adj",
+  "q": "Adjektivet efficace → substantiv: Nessuno mette in dubbio l'[efficacia] del vaccino.",
+  "alt": [
+   "efficacità",
+   "efficacezza",
+   "efficacenza"
+  ],
+  "why": "Efficace → l'efficacia (oregelbunden).",
+  "sv": "Ingen ifrågasätter vaccinets effektivitet."
+ },
+ {
+  "id": "nominal-014",
+  "topic": "nominal",
+  "rule": "nom-adj",
+  "q": "Adjektivet libero → substantiv: La [libertà] di stampa è garantita.",
+  "alt": [
+   "liberezza",
+   "liberanza",
+   "liberità"
+  ],
+  "why": "Libero → la libertà.",
+  "sv": "Pressfriheten är garanterad."
+ },
+ {
+  "id": "nominal-015",
+  "topic": "nominal",
+  "rule": "nom-adj",
+  "q": "Adjektivet debole → substantiv: La [debolezza] del governo è evidente.",
+  "alt": [
+   "debolità",
+   "debolanza",
+   "debolaggine"
+  ],
+  "why": "Debole → la debolezza (-ezza).",
+  "sv": "Regeringens svaghet är tydlig."
+ },
+ {
+  "id": "nominal-016",
+  "topic": "nominal",
+  "rule": "nom-adj",
+  "q": "Adjektivet coerente → substantiv: Manca [coerenza] nel suo discorso.",
+  "alt": [
+   "coerenzità",
+   "coerentezza",
+   "coerentità"
+  ],
+  "why": "Adjektiv på -ente → substantiv på -enza: coerente → coerenza.",
+  "sv": "Det saknas konsekvens i hans tal."
+ },
+ {
+  "id": "nominal-017",
+  "topic": "nominal",
+  "rule": "nom-adj",
+  "q": "Adjektivet trasparente → substantiv: I cittadini chiedono [trasparenza].",
+  "alt": [
+   "trasparentità",
+   "trasparentezza",
+   "trasparenzia"
+  ],
+  "why": "-ente → -enza: trasparente → trasparenza.",
+  "sv": "Medborgarna kräver öppenhet."
+ },
+ {
+  "id": "nominal-018",
+  "topic": "nominal",
+  "rule": "nom-trasf",
+  "q": "Den formella varianten av 'Il sindaco ha deciso di chiudere il centro': Il sindaco ha deciso la [chiusura] del centro.",
+  "alt": [
+   "chiudere",
+   "chiuso",
+   "chiudendo"
+  ],
+  "why": "Nominaliseringen (la chiusura del centro) är typisk för tidningsrubriker och formell text.",
+  "sv": "Borgmästaren har beslutat att stänga centrum."
+ },
+ {
+  "id": "nominal-019",
+  "topic": "nominal",
+  "rule": "nom-trasf",
+  "q": "Rubrik: [Aumento] dei prezzi: proteste in tutta Italia.",
+  "alt": [
+   "Aumentano",
+   "Aumentati",
+   "Aumentare"
+  ],
+  "why": "Tidningsrubriker är ofta nominala, utan verb: Aumento dei prezzi.",
+  "sv": "Prishöjning: protester i hela Italien."
+ },
+ {
+  "id": "nominal-020",
+  "topic": "nominal",
+  "rule": "nom-trasf",
+  "q": "Rubrik: [Arresto] del sindaco per corruzione.",
+  "alt": [
+   "Arrestano",
+   "Arrestato è",
+   "Arrestare"
+  ],
+  "why": "Nominal rubrik: l'arresto (av arrestare).",
+  "sv": "Borgmästaren gripen för korruption."
+ },
+ {
+  "id": "nominal-021",
+  "topic": "nominal",
+  "rule": "nom-trasf",
+  "q": "In seguito alla [scoperta] del virus, il laboratorio fu chiuso.",
+  "alt": [
+   "scoprire",
+   "scoperto",
+   "scoprimento"
+  ],
+  "why": "Efter en preposition (in seguito a) behövs ett substantiv: la scoperta.",
+  "sv": "Efter upptäckten av viruset stängdes laboratoriet."
+ },
+ {
+  "id": "nominal-022",
+  "topic": "nominal",
+  "rule": "nom-trasf",
+  "q": "Dopo l'[elezione] del nuovo rettore, cambiò tutto.",
+  "alt": [
+   "eleggere",
+   "eletto",
+   "eleggimento"
+  ],
+  "why": "Eleggere → l'elezione.",
+  "sv": "Efter valet av den nye rektorn förändrades allt."
+ }
+]

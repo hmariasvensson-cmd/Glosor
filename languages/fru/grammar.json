@@ -12,6 +12,8 @@
     {"id": "concord", "name": "Tempusföljd och indirekt tal", "sub": "Il a dit qu'il viendrait. Elle m'a demandé ce que je faisais.", "secs": ["u8"]},
     {"id": "inv", "name": "Ordföljd och inversion", "sub": "Peut-être viendra-t-il. Marie est-elle partie ? « Non », dit-elle.", "secs": ["u8", "ug"]},
     {"id": "fonc", "name": "Satsanalys: satsdelarnas funktion", "sub": "sujet, COD, COI, attribut, complément circonstanciel, proposition relative", "secs": ["ug"]},
+    {"id": "nomin", "name": "Nominalisering och stilnivåer", "sub": "augmenter → l'augmentation, rapide → la rapidité; bosser, travailler, œuvrer", "secs": ["u8", "u3"]},
+    {"id": "conces", "name": "Medgivande", "sub": "avoir beau, quand bien même, bien que, même si, malgré", "secs": ["u4", "ur"]},
     {"id": "err", "name": "Hitta felet", "sub": "En mening har ett fel. Vilket ord?"}
   ],
   "rules": {
@@ -78,6 +80,15 @@
     "fonc-attr": "Attribut",
     "fonc-cc": "Adverbial (complément circonstanciel)",
     "fonc-suj": "Subjekt",
-    "fonc-prop": "Bisatstyper"
+    "fonc-prop": "Bisatstyper",
+    "nomin-verb": "Substantiv av verb: -tion, -ment, -ure, -ée",
+    "nomin-adj": "Substantiv av adjektiv: -té, -ité, -esse",
+    "nomin-titre": "Nominalisering i rubriker och sammanfattningar",
+    "nomin-reg": "Stilnivå: familier, courant, soutenu",
+    "conces-beau": "avoir beau + infinitiv",
+    "conces-qbm": "quand bien même + conditionnel",
+    "conces-bienque": "bien que och quoique + subjonctif",
+    "conces-memesi": "même si + indikativ",
+    "conces-choix": "Välj rätt uttryck för medgivande"
   }
 }

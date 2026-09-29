@@ -1,0 +1,574 @@
+[
+{
+"id": "modperf-001",
+"topic": "modperf",
+"rule": "mpf-perf",
+"q": "Gestern hat sie sechs Stunden üben [müssen].",
+"alt": [
+"gemusst",
+"musste",
+"müsste"
+],
+"why": "Modalverb med infinitiv i perfekt: hat + infinitiv + modalverbet i infinitiv (dubbel infinitiv), inte gemusst.",
+"sv": "I går var hon tvungen att öva i sex timmar."
+},
+{
+"id": "modperf-002",
+"topic": "modperf",
+"rule": "mpf-perf",
+"q": "Ich habe das Buch nicht in der Bibliothek finden [können].",
+"alt": [
+"gekonnt",
+"konnte",
+"kann"
+],
+"why": "Dubbel infinitiv: habe … finden können. Gekonnt används bara när modalverbet står utan annat verb (Ich habe es nicht gekonnt).",
+"sv": "Jag kunde inte hitta boken på biblioteket."
+},
+{
+"id": "modperf-003",
+"topic": "modperf",
+"rule": "mpf-neben",
+"q": "Sie erzählt, dass sie die Prüfung [hat wiederholen müssen].",
+"alt": [
+"wiederholen müssen hat",
+"wiederholen hat müssen",
+"hat gemusst wiederholen"
+],
+"why": "I bisats med dubbel infinitiv står hjälpverbet hat FÖRE de två infinitiverna: dass sie … hat wiederholen müssen.",
+"sv": "Hon berättar att hon var tvungen att göra om provet."
+},
+{
+"id": "modperf-004",
+"topic": "modperf",
+"rule": "mpf-k2",
+"q": "Du [hättest] dich früher bewerben sollen.",
+"alt": [
+"hast",
+"hattest",
+"würdest"
+],
+"why": "Konjunktiv II i dåtid med modalverb: hätte + infinitiv + sollen. Det uttrycker att något borde ha gjorts.",
+"sv": "Du borde ha sökt tidigare."
+},
+{
+"id": "modperf-005",
+"topic": "modperf",
+"rule": "mpf-lassen",
+"q": "Er hat seine Geige in Cremona reparieren [lassen].",
+"alt": [
+"gelassen",
+"ließ",
+"lässt"
+],
+"why": "lassen med infinitiv beter sig som ett modalverb: hat … reparieren lassen (dubbel infinitiv).",
+"sv": "Han har låtit reparera sin fiol i Cremona."
+},
+{
+"id": "modsubj-001",
+"topic": "modsubj",
+"rule": "msu-sollen",
+"q": "Der Dirigent [soll] schon mit sechs Jahren komponiert haben.",
+"alt": [
+"will",
+"muss",
+"darf"
+],
+"why": "sollen = det sägs att (man påstår det om honom). will skulle betyda att han själv påstår det.",
+"sv": "Dirigenten ska ha komponerat redan vid sex års ålder."
+},
+{
+"id": "modsubj-002",
+"topic": "modsubj",
+"rule": "msu-wollen",
+"q": "Der Minister [will] von dem Plan nichts gewusst haben.",
+"alt": [
+"soll",
+"muss",
+"kann"
+],
+"why": "wollen = påstår sig själv. Ministern hävdar att han inte visste något (men man tvivlar).",
+"sv": "Ministern påstår att han inte visste något om planen."
+},
+{
+"id": "modsubj-003",
+"topic": "modsubj",
+"rule": "msu-grad",
+"q": "Die Zahlen [dürften] im nächsten Jahr weiter steigen.",
+"alt": [
+"durften",
+"dürfen",
+"darften"
+],
+"why": "dürfte (Konjunktiv II) = troligen, sannolikt. Presens dürfen skulle betyda tillåtelse.",
+"sv": "Siffrorna kommer sannolikt att fortsätta stiga nästa år."
+},
+{
+"id": "modsubj-004",
+"topic": "modsubj",
+"rule": "msu-verg",
+"q": "Das Manuskript muss um 1820 entstanden [sein].",
+"alt": [
+"haben",
+"werden",
+"gewesen"
+],
+"why": "Bedömning av det förflutna: modalverb + perfektinfinitiv. Entstehen bildar perfekt med sein: entstanden sein.",
+"sv": "Manuskriptet måste ha kommit till omkring 1820."
+},
+{
+"id": "modsubj-005",
+"topic": "modsubj",
+"rule": "msu-grad",
+"q": "Das [kann] nicht stimmen, die Zahl ist viel zu hoch.",
+"alt": [
+"soll",
+"will",
+"möchte"
+],
+"why": "kann nicht = det är omöjligt, talaren är säker på att något är fel.",
+"sv": "Det kan inte stämma, siffran är alldeles för hög."
+},
+{
+"id": "modperf-006",
+"topic": "modperf",
+"rule": "mpf-perf",
+"q": "Wir haben den Saal früher verlassen [müssen].",
+"alt": [
+"gemusst",
+"mussten",
+"gemüsst"
+],
+"why": "Dubbel infinitiv i perfekt: haben … verlassen müssen.",
+"sv": "Vi var tvungna att lämna salen tidigare."
+},
+{
+"id": "modperf-007",
+"topic": "modperf",
+"rule": "mpf-perf",
+"q": "Sie hat das Konzert leider nicht besuchen [dürfen].",
+"alt": [
+"gedurft",
+"durfte",
+"dürfte"
+],
+"why": "Med infinitiv: hat … besuchen dürfen, inte gedurft.",
+"sv": "Hon fick tyvärr inte gå på konserten."
+},
+{
+"id": "modperf-008",
+"topic": "modperf",
+"rule": "mpf-perf",
+"q": "Er hat nie Klavier spielen [wollen].",
+"alt": [
+"gewollt",
+"wollte",
+"wolle"
+],
+"why": "Dubbel infinitiv: hat … spielen wollen.",
+"sv": "Han har aldrig velat spela piano."
+},
+{
+"id": "modperf-009",
+"topic": "modperf",
+"rule": "mpf-perf",
+"q": "Das Stück hat sie in einer Woche auswendig lernen [können].",
+"alt": [
+"gekonnt",
+"konnte",
+"könne"
+],
+"why": "Perfekt av modalverb med infinitiv: hat … lernen können.",
+"sv": "Stycket kunde hon lära sig utantill på en vecka."
+},
+{
+"id": "modperf-010",
+"topic": "modperf",
+"rule": "mpf-perf",
+"q": "Ich habe die Aufgabe nicht [gekonnt].",
+"alt": [
+"können",
+"konnten",
+"gekönnt"
+],
+"why": "Utan annat verb används modalverbets vanliga particip: gekonnt.",
+"sv": "Jag klarade inte uppgiften."
+},
+{
+"id": "modperf-011",
+"topic": "modperf",
+"rule": "mpf-perf",
+"q": "Als Kind hat sie jeden Tag üben [sollen].",
+"alt": [
+"gesollt",
+"sollte",
+"gesollen"
+],
+"why": "Dubbel infinitiv: hat … üben sollen.",
+"sv": "Som barn skulle hon öva varje dag."
+},
+{
+"id": "modperf-012",
+"topic": "modperf",
+"rule": "mpf-neben",
+"q": "Ich weiß nicht, ob er den Termin [hat verschieben können].",
+"alt": [
+"verschieben können hat",
+"verschieben hat können",
+"hat gekonnt verschieben"
+],
+"why": "I bisats: hat före de två infinitiverna (hat verschieben können).",
+"sv": "Jag vet inte om han har kunnat flytta tiden."
+},
+{
+"id": "modperf-013",
+"topic": "modperf",
+"rule": "mpf-neben",
+"q": "Es ist schade, dass wir nicht länger [haben bleiben dürfen].",
+"alt": [
+"bleiben dürfen haben",
+"bleiben haben dürfen",
+"haben gedurft bleiben"
+],
+"why": "Hjälpverbet haben står först i verbklustret vid dubbel infinitiv.",
+"sv": "Det är synd att vi inte fick stanna längre."
+},
+{
+"id": "modperf-014",
+"topic": "modperf",
+"rule": "mpf-neben",
+"q": "Sie erzählte, dass sie das Instrument [hatte verkaufen müssen].",
+"alt": [
+"verkaufen müssen hatte",
+"verkaufen hatte müssen",
+"hatte gemusst verkaufen"
+],
+"why": "Pluskvamperfekt i bisats: hatte + verkaufen müssen.",
+"sv": "Hon berättade att hon hade varit tvungen att sälja instrumentet."
+},
+{
+"id": "modperf-015",
+"topic": "modperf",
+"rule": "mpf-neben",
+"q": "Weil er [hat arbeiten müssen], kam er zu spät.",
+"alt": [
+"arbeiten müssen hat",
+"arbeiten hat müssen",
+"musste arbeiten hat"
+],
+"why": "hat står före infinitiverna i bisatsen.",
+"sv": "Eftersom han var tvungen att arbeta kom han för sent."
+},
+{
+"id": "modperf-016",
+"topic": "modperf",
+"rule": "mpf-k2",
+"q": "Wir [hätten] die Karten früher kaufen sollen.",
+"alt": [
+"haben",
+"hatten",
+"würden"
+],
+"why": "hätte + infinitiv + sollen = borde ha.",
+"sv": "Vi borde ha köpt biljetterna tidigare."
+},
+{
+"id": "modperf-017",
+"topic": "modperf",
+"rule": "mpf-k2",
+"q": "Das hättest du mir früher sagen [können].",
+"alt": [
+"gekonnt",
+"konntest",
+"kannst"
+],
+"why": "hätte … sagen können = kunde ha sagt.",
+"sv": "Det kunde du ha sagt till mig tidigare."
+},
+{
+"id": "modperf-018",
+"topic": "modperf",
+"rule": "mpf-k2",
+"q": "Sie hätte die Stelle bekommen, wenn sie nicht hätte absagen [müssen].",
+"alt": [
+"gemusst",
+"musste",
+"müsste"
+],
+"why": "Dubbel infinitiv även i wenn-sats: hätte absagen müssen.",
+"sv": "Hon hade fått tjänsten om hon inte hade varit tvungen att tacka nej."
+},
+{
+"id": "modperf-019",
+"topic": "modperf",
+"rule": "mpf-k2",
+"q": "Das Orchester [hätte] nicht so schnell spielen dürfen.",
+"alt": [
+"hatte",
+"hat",
+"wäre"
+],
+"why": "Kritik i efterhand: hätte … nicht … dürfen = borde inte ha.",
+"sv": "Orkestern borde inte ha spelat så snabbt."
+},
+{
+"id": "modperf-020",
+"topic": "modperf",
+"rule": "mpf-lassen",
+"q": "Ich habe die Sängerin in der Kirche singen [hören].",
+"alt": [
+"hörte",
+"gehören",
+"hört"
+],
+"why": "hören + infinitiv får dubbel infinitiv i perfekt: habe … singen hören.",
+"sv": "Jag har hört sångerskan sjunga i kyrkan."
+},
+{
+"id": "modperf-021",
+"topic": "modperf",
+"rule": "mpf-lassen",
+"q": "Sie hat sich die Noten aus Wien schicken [lassen].",
+"alt": [
+"gelassen",
+"ließ",
+"lässt"
+],
+"why": "lassen + infinitiv: hat … schicken lassen.",
+"sv": "Hon har låtit skicka noterna från Wien."
+},
+{
+"id": "modperf-022",
+"topic": "modperf",
+"rule": "mpf-lassen",
+"q": "Er sagt, dass er das Klavier [hat stimmen lassen].",
+"alt": [
+"stimmen lassen hat",
+"stimmen hat lassen",
+"hat gelassen stimmen"
+],
+"why": "Samma ordning som med modalverb: hat stimmen lassen.",
+"sv": "Han säger att han har låtit stämma pianot."
+},
+{
+"id": "modperf-023",
+"topic": "modperf",
+"rule": "mpf-lassen",
+"q": "Wir haben ihn kommen [sehen].",
+"alt": [
+"gesehen haben",
+"sahen",
+"sehend"
+],
+"why": "sehen + infinitiv: haben … kommen sehen.",
+"sv": "Vi såg honom komma."
+},
+{
+"id": "modsubj-006",
+"topic": "modsubj",
+"rule": "msu-sollen",
+"q": "Die Sängerin [soll] den Vertrag schon unterschrieben haben.",
+"alt": [
+"will",
+"möchte",
+"darf"
+],
+"why": "sollen = det sägs (andra påstår det).",
+"sv": "Sångerskan ska redan ha skrivit under kontraktet."
+},
+{
+"id": "modsubj-007",
+"topic": "modsubj",
+"rule": "msu-sollen",
+"q": "Das neue Konzerthaus [soll] eine hervorragende Akustik haben.",
+"alt": [
+"will",
+"muss",
+"mag"
+],
+"why": "sollen: man säger att …",
+"sv": "Det nya konserthuset sägs ha en utmärkt akustik."
+},
+{
+"id": "modsubj-008",
+"topic": "modsubj",
+"rule": "msu-sollen",
+"q": "Laut Zeitung [sollen] mehrere Stellen gestrichen werden.",
+"alt": [
+"wollen",
+"müssen",
+"dürfen"
+],
+"why": "Rykte eller uppgift från annan källa: sollen.",
+"sv": "Enligt tidningen ska flera tjänster dras in."
+},
+{
+"id": "modsubj-009",
+"topic": "modsubj",
+"rule": "msu-wollen",
+"q": "Er [will] das Stück in nur einer Nacht komponiert haben.",
+"alt": [
+"soll",
+"muss",
+"kann"
+],
+"why": "wollen = påstår sig själv.",
+"sv": "Han påstår att han komponerade stycket på bara en natt."
+},
+{
+"id": "modsubj-010",
+"topic": "modsubj",
+"rule": "msu-wollen",
+"q": "Niemand [will] den Unfall gesehen haben.",
+"alt": [
+"soll",
+"muss",
+"darf"
+],
+"why": "wollen: ingen påstår sig ha sett olyckan.",
+"sv": "Ingen säger sig ha sett olyckan."
+},
+{
+"id": "modsubj-011",
+"topic": "modsubj",
+"rule": "msu-wollen",
+"q": "Die Studentin will die Hausarbeit allein [geschrieben] haben.",
+"alt": [
+"schreiben",
+"schrieb",
+"schreibend"
+],
+"why": "Perfektinfinitiv efter subjektivt modalverb: geschrieben haben.",
+"sv": "Studenten påstår att hon skrev hemuppsatsen själv."
+},
+{
+"id": "modsubj-012",
+"topic": "modsubj",
+"rule": "msu-grad",
+"q": "Er hat den ganzen Tag geprobt, er [muss] müde sein.",
+"alt": [
+"soll",
+"will",
+"darf"
+],
+"why": "muss = talaren är nästan säker (slutsats).",
+"sv": "Han har repeterat hela dagen, han måste vara trött."
+},
+{
+"id": "modsubj-013",
+"topic": "modsubj",
+"rule": "msu-grad",
+"q": "Das [könnte] ein Fehler in der Partitur sein.",
+"alt": [
+"sollte",
+"wollte",
+"durfte"
+],
+"why": "könnte = möjligen (låg säkerhet).",
+"sv": "Det kan vara ett fel i partituret."
+},
+{
+"id": "modsubj-014",
+"topic": "modsubj",
+"rule": "msu-grad",
+"q": "Die Reparatur [dürfte] etwa 300 Euro kosten.",
+"alt": [
+"darf",
+"durfte",
+"will"
+],
+"why": "dürfte = troligen (ganska säker).",
+"sv": "Reparationen kommer troligen att kosta ungefär 300 euro."
+},
+{
+"id": "modsubj-015",
+"topic": "modsubj",
+"rule": "msu-grad",
+"q": "Sie [kann] nicht die Komponistin sein, sie wurde erst 1990 geboren.",
+"alt": [
+"will",
+"soll",
+"möchte"
+],
+"why": "kann nicht = omöjligt.",
+"sv": "Hon kan inte vara tonsättaren, hon föddes först 1990."
+},
+{
+"id": "modsubj-016",
+"topic": "modsubj",
+"rule": "msu-grad",
+"q": "Es [mag] sein, dass die Methode funktioniert, aber sie ist teuer.",
+"alt": [
+"will",
+"soll",
+"darf"
+],
+"why": "mag sein = det må vara (medgivande).",
+"sv": "Det må vara att metoden fungerar, men den är dyr."
+},
+{
+"id": "modsubj-017",
+"topic": "modsubj",
+"rule": "msu-verg",
+"q": "Der Brief muss verloren gegangen [sein].",
+"alt": [
+"haben",
+"werden",
+"worden"
+],
+"why": "verloren gehen bildar perfekt med sein.",
+"sv": "Brevet måste ha kommit bort."
+},
+{
+"id": "modsubj-018",
+"topic": "modsubj",
+"rule": "msu-verg",
+"q": "Sie dürfte die Nachricht inzwischen gelesen [haben].",
+"alt": [
+"sein",
+"werden",
+"gehabt"
+],
+"why": "lesen bildar perfekt med haben: gelesen haben.",
+"sv": "Hon har troligen läst meddelandet vid det här laget."
+},
+{
+"id": "modsubj-019",
+"topic": "modsubj",
+"rule": "msu-verg",
+"q": "Der Komponist soll sehr arm [gewesen] sein.",
+"alt": [
+"sein",
+"war",
+"geworden"
+],
+"why": "Perfektinfinitiv av sein: gewesen sein.",
+"sv": "Tonsättaren ska ha varit mycket fattig."
+},
+{
+"id": "modsubj-020",
+"topic": "modsubj",
+"rule": "msu-verg",
+"q": "Das Gemälde kann nicht von Rembrandt gemalt worden [sein].",
+"alt": [
+"haben",
+"werden",
+"geworden"
+],
+"why": "Passiv perfektinfinitiv: gemalt worden sein.",
+"sv": "Målningen kan inte ha målats av Rembrandt."
+},
+{
+"id": "modsubj-021",
+"topic": "modsubj",
+"rule": "msu-sollen",
+"q": "Beethoven [soll] beim Komponieren oft laut gesungen haben.",
+"alt": [
+"will",
+"darf",
+"mag"
+],
+"why": "sollen: enligt uppgift.",
+"sv": "Beethoven ska ofta ha sjungit högt när han komponerade."
+}
+]

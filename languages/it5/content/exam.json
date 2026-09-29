@@ -1,0 +1,787 @@
+{
+ "name": "CELI 2 (B1)",
+ "pass": 60,
+ "note": "Övningar i provets stil (Università per Stranieri di Perugia), skrivna för appen. Inte officiellt material. På det riktiga provet räknas skriftliga delar (läsa, skriva, lyssna) och muntlig del var för sig.",
+ "parts": [
+  {
+   "id": "lettura",
+   "name": "Comprensione della lettura",
+   "sv": "Läsa",
+   "time": 70
+  },
+  {
+   "id": "scrittura",
+   "name": "Produzione di testi scritti",
+   "sv": "Skriva",
+   "time": 80
+  },
+  {
+   "id": "ascolto",
+   "name": "Comprensione dell'ascolto",
+   "sv": "Lyssna",
+   "time": 30
+  },
+  {
+   "id": "orale",
+   "name": "Produzione orale",
+   "sv": "Tala",
+   "time": 15
+  }
+ ],
+ "tasks": [
+  {
+   "id": "it5-le-1",
+   "part": "lettura",
+   "teil": "Prova 1",
+   "title": "Un anno in un conservatorio italiano",
+   "time": 20,
+   "instr": "Läs texten och välj rätt svar på varje fråga (a, b eller c).",
+   "lines": [
+    {
+     "fr": "Mi chiamo Elin, ho diciannove anni e vengo da Göteborg. Da settembre studio pianoforte al Conservatorio di Parma, grazie a una borsa di studio. Prima di partire avevo molti dubbi: non ero sicura che il mio italiano fosse abbastanza buono e temevo di sentirmi sola.",
+     "sv": "Jag heter Elin, är nitton år och kommer från Göteborg. Sedan september studerar jag piano på konservatoriet i Parma, tack vare ett stipendium. Innan jag åkte hade jag många tvivel: jag var inte säker på att min italienska var tillräckligt bra och var rädd att känna mig ensam."
+    },
+    {
+     "fr": "L'esame di ammissione è stato più facile di quanto pensassi. La commissione mi ha chiesto di suonare due brani e poi mi ha fatto qualche domanda sulla mia formazione. Hanno parlato lentamente, affinché capissi tutto, e alla fine mi hanno fatto i complimenti per la pronuncia.",
+     "sv": "Antagningsprovet var lättare än jag trodde. Nämnden bad mig spela två stycken och ställde sedan några frågor om min utbildning. De pratade långsamt så att jag skulle förstå allt, och till slut berömde de mitt uttal."
+    },
+    {
+     "fr": "La vita qui è diversa da quella in Svezia. Le lezioni di strumento sono individuali e il professore è molto esigente: ogni settimana devo preparare un nuovo studio. Mi esercito almeno cinque ore al giorno in un'aula che si prenota online. Il problema è che le aule sono poche e bisogna prenotare con giorni di anticipo.",
+     "sv": "Livet här skiljer sig från det i Sverige. Instrumentlektionerna är individuella och läraren är mycket krävande: varje vecka måste jag förbereda en ny etyd. Jag övar minst fem timmar om dagen i en sal som man bokar på nätet. Problemet är att salarna är få och att man måste boka flera dagar i förväg."
+    },
+    {
+     "fr": "Per fortuna non mi sento sola. Vivo con due studentesse fuorisede, una di Bari e una di Palermo, che mi hanno insegnato a cucinare e a parlare con le mani. Se potessi cambiare una cosa, sceglierei un appartamento più vicino al conservatorio: ogni mattina perdo quaranta minuti in autobus.",
+     "sv": "Som tur är känner jag mig inte ensam. Jag bor med två studenter från andra orter, en från Bari och en från Palermo, som har lärt mig att laga mat och att prata med händerna. Om jag kunde ändra på en sak skulle jag välja en lägenhet närmare konservatoriet: varje morgon förlorar jag fyrtio minuter på bussen."
+    }
+   ],
+   "qs": [
+    {
+     "q": "Prima di partire Elin aveva paura…",
+     "opts": [
+      "di non trovare un appartamento.",
+      "che il suo italiano non bastasse.",
+      "di non superare l'esame di pianoforte."
+     ],
+     "a": 1,
+     "why": "«non ero sicura che il mio italiano fosse abbastanza buono»."
+    },
+    {
+     "q": "Durante l'esame di ammissione la commissione…",
+     "opts": [
+      "ha parlato lentamente per farsi capire.",
+      "ha parlato in inglese.",
+      "le ha chiesto di cantare."
+     ],
+     "a": 0,
+     "why": "«Hanno parlato lentamente, affinché capissi tutto»."
+    },
+    {
+     "q": "Che cosa dice Elin delle lezioni di strumento?",
+     "opts": [
+      "Sono in piccoli gruppi.",
+      "Il professore chiede molto.",
+      "Sono solo online."
+     ],
+     "a": 1,
+     "why": "«il professore è molto esigente»."
+    },
+    {
+     "q": "Qual è il problema delle aule?",
+     "opts": [
+      "Sono troppo care.",
+      "Non hanno pianoforti.",
+      "Sono poche e vanno prenotate in anticipo."
+     ],
+     "a": 2,
+     "why": "«le aule sono poche e bisogna prenotare con giorni di anticipo»."
+    },
+    {
+     "q": "Le coinquiline di Elin…",
+     "opts": [
+      "vengono dal Sud Italia.",
+      "studiano pianoforte.",
+      "sono svedesi."
+     ],
+     "a": 0,
+     "why": "De kommer från Bari och Palermo."
+    },
+    {
+     "q": "Che cosa cambierebbe Elin?",
+     "opts": [
+      "Il professore.",
+      "La posizione dell'appartamento.",
+      "Le coinquiline."
+     ],
+     "a": 1,
+     "why": "«sceglierei un appartamento più vicino al conservatorio»."
+    }
+   ]
+  },
+  {
+   "id": "it5-le-4",
+   "part": "lettura",
+   "teil": "Prova 1",
+   "title": "L'intelligenza artificiale a scuola",
+   "time": 20,
+   "instr": "Läs artikeln och välj rätt svar.",
+   "lines": [
+    {
+     "fr": "Da quest'anno in alcuni licei di Milano e Torino gli studenti possono usare un chatbot durante le lezioni di italiano e di storia. Il progetto, finanziato dal Ministero, viene seguito da un gruppo di ricercatori dell'Università di Pavia.",
+     "sv": "Från och med i år får eleverna på några gymnasier i Milano och Turin använda en chattbot på lektionerna i italienska och historia. Projektet, som finansieras av departementet, följs av en forskargrupp från universitetet i Pavia."
+    },
+    {
+     "fr": "«Non vogliamo che l'intelligenza artificiale scriva i temi al posto dei ragazzi», spiega la professoressa Rinaldi. «Vogliamo che impari a fare domande migliori.» Gli studenti, per esempio, chiedono al programma di spiegare un testo di Verga con parole semplici e poi devono verificare le informazioni sui libri.",
+     "sv": "»Vi vill inte att AI ska skriva uppsatserna i stället för eleverna», förklarar läraren Rinaldi. »Vi vill att de ska lära sig att ställa bättre frågor.» Eleverna ber till exempel programmet förklara en text av Verga med enkla ord och måste sedan kontrollera uppgifterna i böckerna."
+    },
+    {
+     "fr": "Non tutti sono d'accordo. Alcuni genitori temono che i figli diventino pigri e che perdano la capacità di concentrarsi. Altri pensano che sia meglio insegnare a usare questi strumenti piuttosto che vietarli. I primi risultati saranno pubblicati a giugno.",
+     "sv": "Alla håller inte med. En del föräldrar är rädda att barnen ska bli lata och förlora förmågan att koncentrera sig. Andra tycker att det är bättre att lära ut hur man använder verktygen än att förbjuda dem. De första resultaten publiceras i juni."
+    }
+   ],
+   "qs": [
+    {
+     "q": "Chi segue il progetto?",
+     "opts": [
+      "Un gruppo di genitori.",
+      "Dei ricercatori universitari.",
+      "Gli studenti stessi."
+     ],
+     "a": 1,
+     "why": "«viene seguito da un gruppo di ricercatori dell'Università di Pavia»."
+    },
+    {
+     "q": "Qual è lo scopo del progetto secondo la professoressa?",
+     "opts": [
+      "Far scrivere i temi al computer.",
+      "Insegnare a fare domande migliori.",
+      "Sostituire i libri."
+     ],
+     "a": 1,
+     "why": "«Vogliamo che impari a fare domande migliori»."
+    },
+    {
+     "q": "Dopo aver usato il chatbot, gli studenti devono…",
+     "opts": [
+      "controllare le informazioni sui libri.",
+      "scrivere un tema a mano.",
+      "fare un esame orale."
+     ],
+     "a": 0,
+     "why": "«devono verificare le informazioni sui libri»."
+    },
+    {
+     "q": "Di che cosa hanno paura alcuni genitori?",
+     "opts": [
+      "Che i figli spendano troppo.",
+      "Che i figli perdano la concentrazione.",
+      "Che la scuola chiuda."
+     ],
+     "a": 1,
+     "why": "«temono … che perdano la capacità di concentrarsi»."
+    },
+    {
+     "q": "Quando si sapranno i primi risultati?",
+     "opts": [
+      "A settembre.",
+      "Già adesso.",
+      "A giugno."
+     ],
+     "a": 2,
+     "why": "«I primi risultati saranno pubblicati a giugno»."
+    }
+   ]
+  },
+  {
+   "id": "it5-le-2",
+   "part": "lettura",
+   "teil": "Prova 2",
+   "title": "Lo spreco alimentare",
+   "time": 15,
+   "instr": "Läs texten. Är påståendena sanna (Vero) eller falska (Falso)?",
+   "lines": [
+    {
+     "fr": "Ogni anno in Italia vengono buttati circa quattro milioni di tonnellate di cibo. Secondo una recente indagine, la maggior parte dello spreco non avviene nei ristoranti o nei supermercati, ma nelle case: ogni famiglia butta in media mezzo chilo di cibo alla settimana.",
+     "sv": "Varje år slängs ungefär fyra miljoner ton mat i Italien. Enligt en ny undersökning sker det mesta av svinnet inte på restauranger eller i butiker, utan i hemmen: varje familj slänger i genomsnitt ett halvt kilo mat i veckan."
+    },
+    {
+     "fr": "I prodotti buttati più spesso sono il pane, la frutta e la verdura fresca. Molti consumatori confondono la data di scadenza con la dicitura «da consumarsi preferibilmente entro», che indica solo che il prodotto potrebbe perdere un po' di sapore.",
+     "sv": "De varor som oftast slängs är bröd, frukt och färska grönsaker. Många konsumenter blandar ihop sista förbrukningsdag med 'bäst före', som bara betyder att varan kan förlora lite smak."
+    },
+    {
+     "fr": "Dal 2016 una legge italiana, la legge Gadda, rende più facile per i negozi donare il cibo invenduto alle associazioni. Da allora le donazioni sono aumentate di oltre il venti per cento. Anche le scuole partecipano: in molte mense gli avanzi vengono raccolti e portati ai centri per chi ha bisogno.",
+     "sv": "Sedan 2016 gör en italiensk lag, Gadda-lagen, det lättare för butiker att skänka osåld mat till organisationer. Sedan dess har donationerna ökat med över tjugo procent. Även skolorna deltar: i många skolmatsalar samlas resterna in och körs till center för behövande."
+    },
+    {
+     "fr": "Gli esperti consigliano di fare la lista della spesa, di controllare il frigorifero prima di uscire e di usare gli avanzi per nuove ricette, come facevano le nonne con la cucina del riciclo.",
+     "sv": "Experterna råder oss att skriva inköpslista, kolla kylskåpet innan man går och använda rester till nya rätter, så som mormödrarna gjorde med restmatlagningen."
+    }
+   ],
+   "qs": [
+    {
+     "q": "La maggior parte dello spreco avviene nei ristoranti.",
+     "opts": [
+      "Vero",
+      "Falso"
+     ],
+     "a": 1,
+     "why": "Falso: det mesta sker «nelle case»."
+    },
+    {
+     "q": "Il pane è uno dei prodotti buttati più spesso.",
+     "opts": [
+      "Vero",
+      "Falso"
+     ],
+     "a": 0,
+     "why": "Vero: «il pane, la frutta e la verdura fresca»."
+    },
+    {
+     "q": "«Da consumarsi preferibilmente entro» significa che il prodotto è pericoloso dopo quella data.",
+     "opts": [
+      "Vero",
+      "Falso"
+     ],
+     "a": 1,
+     "why": "Falso: det betyder bara att varan kan förlora lite smak."
+    },
+    {
+     "q": "La legge Gadda aiuta i negozi a donare il cibo.",
+     "opts": [
+      "Vero",
+      "Falso"
+     ],
+     "a": 0,
+     "why": "Vero."
+    },
+    {
+     "q": "Dopo la legge le donazioni sono diminuite.",
+     "opts": [
+      "Vero",
+      "Falso"
+     ],
+     "a": 1,
+     "why": "Falso: de har ökat med över tjugo procent."
+    },
+    {
+     "q": "Gli esperti consigliano di cucinare con gli avanzi.",
+     "opts": [
+      "Vero",
+      "Falso"
+     ],
+     "a": 0,
+     "why": "Vero: «usare gli avanzi per nuove ricette»."
+    }
+   ]
+  },
+  {
+   "id": "it5-le-3",
+   "part": "lettura",
+   "teil": "Prova 3",
+   "title": "Una lettera dal passato",
+   "time": 15,
+   "instr": "Läs brevet och välj det ord som passar i varje lucka (1–8).",
+   "lines": [
+    {
+     "fr": "Cara Giulia, ti scrivo da Buenos Aires, dove sono arrivato (1) ___ tre settimane. Il viaggio in nave è stato lunghissimo, ma (2) ___ la stanchezza sto bene. Ho trovato lavoro in un panificio (3) ___ proprietario è di Genova come noi. Lavoro di notte, perciò di giorno (4) ___ riposa poco.",
+     "sv": "Kära Giulia, jag skriver till dig från Buenos Aires, dit jag kom för tre veckor sedan. Båtresan var väldigt lång, men trots tröttheten mår jag bra. Jag har fått jobb på ett bageri vars ägare är från Genua som vi. Jag jobbar på natten, så på dagen vilar man lite."
+    },
+    {
+     "fr": "Spero che tu e la mamma (5) ___ bene. Vorrei che mi (6) ___ presto, anche solo due righe. Se (7) ___ più soldi, vi manderei subito il biglietto per venire qui. Il padrone mi ha detto che a primavera mi (8) ___ lo stipendio. Un abbraccio, tuo fratello Pietro.",
+     "sv": "Jag hoppas att du och mamma mår bra. Jag skulle vilja att du skrev snart, även om det bara blir två rader. Om jag hade mer pengar skulle jag genast skicka biljetten så att ni kunde komma hit. Chefen har sagt att han ska höja min lön i vår. En kram, din bror Pietro."
+    }
+   ],
+   "qs": [
+    {
+     "q": "(1)",
+     "opts": [
+      "da",
+      "fa",
+      "tra"
+     ],
+     "a": 0,
+     "why": "Sono arrivato da tre settimane: sedan tre veckor (han är fortfarande kvar)."
+    },
+    {
+     "q": "(2)",
+     "opts": [
+      "nonostante",
+      "benché",
+      "perché"
+     ],
+     "a": 0,
+     "why": "Nonostante + substantiv = trots."
+    },
+    {
+     "q": "(3)",
+     "opts": [
+      "il cui",
+      "che il",
+      "di cui"
+     ],
+     "a": 0,
+     "why": "Il cui proprietario = vars ägare."
+    },
+    {
+     "q": "(4)",
+     "opts": [
+      "ci si",
+      "si si",
+      "ci"
+     ],
+     "a": 0,
+     "why": "Riposarsi opersonligt: ci si riposa."
+    },
+    {
+     "q": "(5)",
+     "opts": [
+      "stiate",
+      "state",
+      "stareste"
+     ],
+     "a": 0,
+     "why": "Spero che + congiuntivo: stiate."
+    },
+    {
+     "q": "(6)",
+     "opts": [
+      "scrivessi",
+      "scrivi",
+      "scriverai"
+     ],
+     "a": 0,
+     "why": "Vorrei che + congiuntivo imperfetto."
+    },
+    {
+     "q": "(7)",
+     "opts": [
+      "avessi",
+      "avrei",
+      "ho"
+     ],
+     "a": 0,
+     "why": "Se + congiuntivo imperfetto i möjlig om-sats."
+    },
+    {
+     "q": "(8)",
+     "opts": [
+      "avrebbe aumentato",
+      "aumenterà",
+      "aumentasse"
+     ],
+     "a": 0,
+     "why": "Framtid i dåtid efter mi ha detto che: condizionale passato."
+    }
+   ]
+  },
+  {
+   "id": "it5-sc-1",
+   "part": "scrittura",
+   "teil": "Prova 1",
+   "title": "Rispondere a un questionario",
+   "time": 25,
+   "minWords": 80,
+   "instr": "CELI 2 börjar skrivdelen med korta svar på frågor. Svara på alla frågorna med 1–2 meningar var, sammanlagt cirka 80–100 ord.",
+   "task": "Un'associazione culturale italiana organizza un corso estivo di musica e vuole conoscere i partecipanti. Rispondi alle domande.\n\n1. Da quanto tempo studi musica e quale strumento suoni?\n2. Perché vorresti partecipare al corso?\n3. Che tipo di musica preferisci ascoltare?\n4. Hai già studiato in un altro paese? Racconta.\n5. Che cosa ti aspetti da questa esperienza?",
+   "criteria": [
+    "Adeguatezza al compito",
+    "Coerenza e coesione",
+    "Lessico",
+    "Grammatica"
+   ],
+   "model": "1. Studio pianoforte da dieci anni e da due anni canto anche in un coro.\n2. Vorrei partecipare perché sogno di studiare in un conservatorio italiano e voglio migliorare il mio italiano.\n3. Preferisco la musica classica, soprattutto Chopin, ma ascolto anche i cantautori italiani.\n4. Sì, l'anno scorso ho fatto un corso di due settimane a Vienna. È stato faticoso ma bellissimo.\n5. Spero che il corso mi aiuti a suonare con più sicurezza e che io possa conoscere musicisti di altri paesi.",
+   "modelSv": "1. Jag har spelat piano i tio år och sjunger sedan två år också i en kör.\n2. Jag vill vara med eftersom jag drömmer om att studera på ett italienskt konservatorium och vill förbättra min italienska.\n3. Jag föredrar klassisk musik, framför allt Chopin, men lyssnar också på italienska visdiktare.\n4. Ja, förra året gick jag en tvåveckorskurs i Wien. Det var jobbigt men underbart.\n5. Jag hoppas att kursen hjälper mig att spela säkrare och att jag får träffa musiker från andra länder."
+  },
+  {
+   "id": "it5-sc-2",
+   "part": "scrittura",
+   "teil": "Prova 2",
+   "title": "Un annuncio",
+   "time": 20,
+   "minWords": 50,
+   "instr": "Skriv en annons på cirka 50 ord.",
+   "task": "Stai cercando una stanza in affitto a Bologna per il prossimo anno accademico. Scrivi un annuncio per il sito dell'università: presentati, di' che cosa cerchi (tipo di stanza, prezzo, zona) e come contattarti.",
+   "criteria": [
+    "Adeguatezza al compito",
+    "Coerenza e coesione",
+    "Lessico",
+    "Grammatica"
+   ],
+   "model": "Cerco stanza singola a Bologna da settembre! Sono Sara, studentessa svedese di vent'anni, iscritta al conservatorio. Sono tranquilla, ordinata e non fumo. Cerco una stanza vicino al centro, massimo 400 euro al mese. Studio pianoforte: sarebbe perfetto se si potesse suonare di giorno. Scrivetemi a sara.lind@mail.se!",
+   "modelSv": "Söker enkelrum i Bologna från september! Jag heter Sara, en tjugoårig svensk student på konservatoriet. Jag är lugn, ordningsam och röker inte. Jag söker ett rum nära centrum, högst 400 euro i månaden. Jag spelar piano: det vore perfekt om man fick spela på dagen. Mejla mig på sara.lind@mail.se!"
+  },
+  {
+   "id": "it5-sc-3",
+   "part": "scrittura",
+   "teil": "Prova 3",
+   "title": "Una lettera formale",
+   "time": 35,
+   "minWords": 90,
+   "instr": "Skriv ett formellt mejl på 90–100 ord. Tänk på inledning och avslutning.",
+   "task": "Hai letto sul sito dell'Università per Stranieri di Perugia che ci sono corsi estivi di italiano con borse di studio. Scrivi una mail alla segreteria: presentati, spiega perché ti interessa il corso, chiedi informazioni sulle date, sull'alloggio e su come ottenere la borsa di studio.",
+   "criteria": [
+    "Adeguatezza al compito",
+    "Coerenza e coesione",
+    "Lessico",
+    "Grammatica"
+   ],
+   "model": "Gentile Segreteria,\n\nmi chiamo Erik Holm, ho diciotto anni e frequento l'ultimo anno di liceo in Svezia. Le scrivo in riferimento ai corsi estivi pubblicati sul vostro sito. Studio italiano da cinque anni e vorrei migliorarlo, affinché possa iscrivermi a un conservatorio in Italia.\n\nVorrei sapere quando cominciano i corsi di luglio e se l'università offre un alloggio per gli studenti. Inoltre, le sarei grato se potesse spiegarmi come si fa domanda per la borsa di studio.\n\nResto in attesa di una sua risposta.\n\nDistinti saluti,\nErik Holm",
+   "modelSv": "Till studentexpeditionen,\n\njag heter Erik Holm, är arton år och går sista året på gymnasiet i Sverige. Jag skriver angående sommarkurserna på er webbplats. Jag har läst italienska i fem år och vill bli bättre, så att jag kan söka till ett konservatorium i Italien.\n\nJag skulle vilja veta när kurserna i juli börjar och om universitetet erbjuder boende för studenter. Jag vore också tacksam om ni kunde förklara hur man söker stipendiet.\n\nJag ser fram emot ert svar.\n\nMed vänliga hälsningar,\nErik Holm"
+  },
+  {
+   "id": "it5-sc-4",
+   "part": "scrittura",
+   "teil": "Prova 3",
+   "title": "Una lettera a un'amica",
+   "time": 35,
+   "minWords": 90,
+   "instr": "Skriv ett personligt brev på 90–100 ord.",
+   "task": "Una tua amica italiana ti ha scritto che vorrebbe venire a studiare in Svezia per un anno, ma ha dei dubbi. Rispondile: dalle consigli sulla scuola, sulla vita quotidiana e sul clima, e raccontale che cosa avresti voluto sapere tu prima di andare in Italia.",
+   "criteria": [
+    "Adeguatezza al compito",
+    "Coerenza e coesione",
+    "Lessico",
+    "Grammatica"
+   ],
+   "model": "Cara Chiara,\n\nche bella notizia! Se fossi in te, verrei senza dubbi. La scuola svedese è meno severa di quella italiana: i professori si chiamano per nome e non ci sono interrogazioni. Però bisogna che tu sia organizzata, perché si lavora molto da soli.\n\nD'inverno fa buio alle tre, quindi porta vestiti caldi e una lampada! Ci si abitua, te lo prometto.\n\nIo, prima di venire in Italia, avrei voluto sapere che si cena tardissimo. La prima sera avevo una fame da lupi!\n\nScrivimi presto,\nun abbraccio,\nMaja",
+   "modelSv": "Kära Chiara,\n\nvilka goda nyheter! Om jag vore du skulle jag komma utan att tveka. Den svenska skolan är mindre sträng än den italienska: man kallar lärarna vid förnamn och det finns inga muntliga förhör. Men du måste vara organiserad, för man arbetar mycket på egen hand.\n\nPå vintern blir det mörkt klockan tre, så ta med varma kläder och en lampa! Man vänjer sig, det lovar jag.\n\nInnan jag åkte till Italien skulle jag ha velat veta att man äter middag jättesent. Första kvällen var jag hungrig som en varg!\n\nSkriv snart,\nkram,\nMaja"
+  },
+  {
+   "id": "it5-as-1",
+   "part": "ascolto",
+   "teil": "Prova 1",
+   "title": "Messaggi in segreteria",
+   "time": 10,
+   "plays": 2,
+   "instr": "Du hör tre meddelanden två gånger. Välj rätt svar.",
+   "lines": [
+    {
+     "fr": "Messaggio 1. Buongiorno, sono la segreteria del Conservatorio di Bologna. Chiamo per la signorina Karlsson. La sua audizione è stata spostata da martedì a giovedì, sempre alle dieci. Le chiediamo di portare lo spartito in due copie, una per la commissione. Grazie.",
+     "sv": "Meddelande 1. God dag, det här är expeditionen på konservatoriet i Bologna. Jag ringer till Karlsson. Din provspelning har flyttats från tisdag till torsdag, fortfarande klockan tio. Vi ber dig ta med noterna i två exemplar, ett till nämnden. Tack."
+    },
+    {
+     "fr": "Messaggio 2. Ciao Marco, sono Luisa. Ho parlato con il proprietario dell'appartamento: ha detto che l'affitto sarebbe rimasto uguale, ma che le bollette andranno pagate a parte. Richiamami stasera dopo le otto, così decidiamo.",
+     "sv": "Meddelande 2. Hej Marco, det är Luisa. Jag har pratat med hyresvärden: han sa att hyran skulle vara densamma, men att räkningarna ska betalas separat. Ring upp mig i kväll efter åtta, så bestämmer vi."
+    },
+    {
+     "fr": "Messaggio 3. Salve, qui è lo studio del dottor Ferri. Gli esami del sangue sono pronti. Può passare a ritirarli da lunedì a venerdì, dalle nove all'una. Si ricordi di portare la tessera sanitaria.",
+     "sv": "Meddelande 3. Hej, det här är doktor Ferris mottagning. Blodproverna är klara. Ni kan hämta dem måndag till fredag, nio till ett. Kom ihåg att ta med sjukförsäkringskortet."
+    }
+   ],
+   "qs": [
+    {
+     "q": "Messaggio 1: l'audizione è…",
+     "opts": [
+      "martedì alle dieci.",
+      "giovedì alle dieci.",
+      "giovedì alle due."
+     ],
+     "a": 1,
+     "why": "«spostata da martedì a giovedì, sempre alle dieci»."
+    },
+    {
+     "q": "Messaggio 1: la signorina Karlsson deve portare…",
+     "opts": [
+      "due copie dello spartito.",
+      "il suo strumento.",
+      "una lettera del professore."
+     ],
+     "a": 0,
+     "why": "«portare lo spartito in due copie»."
+    },
+    {
+     "q": "Messaggio 2: che cosa ha detto il proprietario?",
+     "opts": [
+      "L'affitto aumenterà.",
+      "Le bollette sono comprese.",
+      "L'affitto non cambia, ma le bollette si pagano a parte."
+     ],
+     "a": 2,
+     "why": "«l'affitto sarebbe rimasto uguale, ma … le bollette andranno pagate a parte»."
+    },
+    {
+     "q": "Messaggio 2: quando deve richiamare Marco?",
+     "opts": [
+      "Stasera dopo le otto.",
+      "Domani mattina.",
+      "Subito."
+     ],
+     "a": 0,
+     "why": "«Richiamami stasera dopo le otto»."
+    },
+    {
+     "q": "Messaggio 3: gli esami si possono ritirare…",
+     "opts": [
+      "il sabato mattina.",
+      "nei giorni feriali la mattina.",
+      "solo lunedì."
+     ],
+     "a": 1,
+     "why": "Måndag–fredag 9–13."
+    },
+    {
+     "q": "Messaggio 3: che cosa bisogna portare?",
+     "opts": [
+      "La tessera sanitaria.",
+      "L'impegnativa.",
+      "Il passaporto."
+     ],
+     "a": 0,
+     "why": "«portare la tessera sanitaria»."
+    }
+   ]
+  },
+  {
+   "id": "it5-as-2",
+   "part": "ascolto",
+   "teil": "Prova 2",
+   "title": "Intervista a una ricercatrice",
+   "time": 10,
+   "plays": 2,
+   "instr": "Du hör en radiointervju två gånger. Är påståendena sanna (Vero) eller falska (Falso)?",
+   "lines": [
+    {
+     "who": "A",
+     "fr": "Oggi è con noi la dottoressa Paola Bassi, che fa ricerca sul sonno degli adolescenti. Dottoressa, i ragazzi dormono abbastanza?",
+     "sv": "I dag är doktor Paola Bassi här, som forskar om tonåringars sömn. Doktor Bassi, sover ungdomarna tillräckligt?"
+    },
+    {
+     "who": "B",
+     "fr": "Purtroppo no. Un adolescente avrebbe bisogno di nove ore di sonno, ma in media ne dorme sei e mezza. Il problema principale sono gli schermi: la luce del telefono disturba il ritmo sonno-veglia.",
+     "sv": "Tyvärr inte. En tonåring skulle behöva nio timmars sömn, men sover i genomsnitt sex och en halv. Huvudproblemet är skärmarna: ljuset från mobilen stör dygnsrytmen."
+    },
+    {
+     "who": "A",
+     "fr": "Che cosa consiglia ai genitori?",
+     "sv": "Vad råder ni föräldrarna?"
+    },
+    {
+     "who": "B",
+     "fr": "Consiglio che il telefono resti fuori dalla camera almeno un'ora prima di dormire. E se fossi un ministro, farei cominciare la scuola alle nove invece che alle otto. In alcuni paesi è già stato fatto e i risultati degli studenti sono migliorati.",
+     "sv": "Jag råder att mobilen blir kvar utanför sovrummet minst en timme innan man ska sova. Och om jag var minister skulle jag låta skolan börja klockan nio i stället för åtta. I vissa länder har man redan gjort det, och elevernas resultat har blivit bättre."
+    },
+    {
+     "who": "A",
+     "fr": "E lo sport aiuta?",
+     "sv": "Och hjälper idrott?"
+    },
+    {
+     "who": "B",
+     "fr": "Sì, ma non la sera tardi. Fare movimento di pomeriggio aiuta ad addormentarsi prima.",
+     "sv": "Ja, men inte sent på kvällen. Att röra på sig på eftermiddagen hjälper en att somna tidigare."
+    }
+   ],
+   "qs": [
+    {
+     "q": "Gli adolescenti dormono in media nove ore.",
+     "opts": [
+      "Vero",
+      "Falso"
+     ],
+     "a": 1,
+     "why": "Falso: de behöver nio men sover sex och en halv."
+    },
+    {
+     "q": "Secondo la ricercatrice, gli schermi disturbano il sonno.",
+     "opts": [
+      "Vero",
+      "Falso"
+     ],
+     "a": 0,
+     "why": "Vero."
+    },
+    {
+     "q": "Consiglia di spegnere il telefono cinque minuti prima di dormire.",
+     "opts": [
+      "Vero",
+      "Falso"
+     ],
+     "a": 1,
+     "why": "Falso: minst en timme före."
+    },
+    {
+     "q": "Vorrebbe che la scuola cominciasse più tardi.",
+     "opts": [
+      "Vero",
+      "Falso"
+     ],
+     "a": 0,
+     "why": "Vero: «farei cominciare la scuola alle nove»."
+    },
+    {
+     "q": "In nessun paese la scuola comincia più tardi.",
+     "opts": [
+      "Vero",
+      "Falso"
+     ],
+     "a": 1,
+     "why": "Falso: «In alcuni paesi è già stato fatto»."
+    },
+    {
+     "q": "Fare sport la sera tardi aiuta a dormire.",
+     "opts": [
+      "Vero",
+      "Falso"
+     ],
+     "a": 1,
+     "why": "Falso: «non la sera tardi»."
+    }
+   ]
+  },
+  {
+   "id": "it5-as-3",
+   "part": "ascolto",
+   "teil": "Prova 3",
+   "title": "Alla stazione e alla radio",
+   "time": 10,
+   "plays": 2,
+   "instr": "Du hör fyra korta texter två gånger. Välj rätt svar.",
+   "lines": [
+    {
+     "fr": "Testo 1. Attenzione: a causa di uno sciopero del personale, il treno regionale delle 8.15 per Firenze è stato cancellato. I passeggeri possono usare il treno delle 8.45 con lo stesso biglietto.",
+     "sv": "Text 1. Observera: på grund av en personalstrejk är regionaltåget kl. 8.15 till Florens inställt. Resenärerna kan ta tåget kl. 8.45 med samma biljett."
+    },
+    {
+     "fr": "Testo 2. Siete appassionati di opera? Sabato sera all'Arena di Verona va in scena l'Aida. I biglietti per studenti costano venti euro e vanno acquistati entro giovedì.",
+     "sv": "Text 2. Älskar ni opera? På lördag kväll ges Aida på Arenan i Verona. Studentbiljetterna kostar tjugo euro och måste köpas senast på torsdag."
+    },
+    {
+     "fr": "Testo 3. Il museo dell'emigrazione di Genova resterà chiuso per lavori fino a marzo. Nel frattempo le visite guidate si faranno online, ogni mercoledì alle diciotto.",
+     "sv": "Text 3. Emigrationsmuseet i Genua är stängt för renovering till mars. Under tiden hålls guidade visningar på nätet varje onsdag kl. 18."
+    },
+    {
+     "fr": "Testo 4. Domani al mercato contadino di piazza Verdi i produttori locali regaleranno la frutta invenduta a chi porta una borsa riutilizzabile.",
+     "sv": "Text 4. I morgon på bondemarknaden på piazza Verdi skänker de lokala producenterna bort osåld frukt till den som har med sig en återanvändbar kasse."
+    }
+   ],
+   "qs": [
+    {
+     "q": "Testo 1: perché il treno è cancellato?",
+     "opts": [
+      "Per un guasto.",
+      "Per uno sciopero.",
+      "Per il maltempo."
+     ],
+     "a": 1,
+     "why": "«a causa di uno sciopero del personale»."
+    },
+    {
+     "q": "Testo 1: che cosa possono fare i passeggeri?",
+     "opts": [
+      "Prendere il treno successivo con lo stesso biglietto.",
+      "Chiedere un rimborso.",
+      "Prendere l'autobus."
+     ],
+     "a": 0,
+     "why": "«il treno delle 8.45 con lo stesso biglietto»."
+    },
+    {
+     "q": "Testo 2: i biglietti per studenti vanno comprati…",
+     "opts": [
+      "sabato sera.",
+      "entro giovedì.",
+      "online."
+     ],
+     "a": 1,
+     "why": "«vanno acquistati entro giovedì»."
+    },
+    {
+     "q": "Testo 3: fino a marzo il museo…",
+     "opts": [
+      "è aperto solo il mercoledì.",
+      "offre visite online.",
+      "è gratuito."
+     ],
+     "a": 1,
+     "why": "Stängt, men guidade visningar på nätet."
+    },
+    {
+     "q": "Testo 4: per avere la frutta bisogna…",
+     "opts": [
+      "pagare un euro.",
+      "portare una borsa riutilizzabile.",
+      "essere studenti."
+     ],
+     "a": 1,
+     "why": "«a chi porta una borsa riutilizzabile»."
+    }
+   ]
+  },
+  {
+   "id": "it5-or-1",
+   "part": "orale",
+   "teil": "Prova 1",
+   "title": "Presentarsi",
+   "time": 3,
+   "instr": "Muntliga provet börjar med ett kort samtal där du presenterar dig. Tala i ungefär tre minuter.",
+   "task": "Presentati all'esaminatore: parla della tua famiglia, dei tuoi studi, della musica nella tua vita e dei tuoi progetti per il futuro. Spiega perché studi l'italiano.",
+   "criteria": [
+    "Pronuncia e intonazione",
+    "Lessico",
+    "Grammatica",
+    "Interazione e contenuto"
+   ],
+   "phrases": [
+    "Mi chiamo … e vengo da …",
+    "Studio … da … anni.",
+    "La musica per me è …",
+    "Mi piacerebbe …",
+    "Studio l'italiano perché …",
+    "In futuro spero di …"
+   ],
+   "model": "Mi chiamo Anna, ho diciotto anni e vengo da Uppsala. Vivo con i miei genitori e mio fratello minore. Frequento l'ultimo anno di liceo, indirizzo musicale, e suono il violino da quando avevo sette anni. La musica è la cosa più importante della mia vita. Studio l'italiano perché vorrei studiare al conservatorio di Milano: mi piacerebbe che il mio italiano fosse perfetto prima di partire. Se tutto va bene, l'anno prossimo farò l'esame di ammissione.",
+   "modelSv": "Jag heter Anna, är arton år och kommer från Uppsala. Jag bor med mina föräldrar och min lillebror. Jag går sista året på gymnasiet, musikinriktning, och har spelat fiol sedan jag var sju. Musiken är det viktigaste i mitt liv. Jag läser italienska eftersom jag vill studera på konservatoriet i Milano: jag skulle vilja att min italienska var perfekt innan jag åker. Om allt går bra gör jag antagningsprovet nästa år."
+  },
+  {
+   "id": "it5-or-2",
+   "part": "orale",
+   "teil": "Prova 2",
+   "title": "Descrivere una foto",
+   "time": 4,
+   "prep": 2,
+   "instr": "Du får ett foto och ska beskriva det och sedan prata om ämnet. Här beskrivs fotot i ord.",
+   "task": "La foto mostra una famiglia in cucina: la nonna prepara la pasta fatta in casa, due ragazzi la aiutano, sul tavolo ci sono verdure del mercato e un barattolo con gli avanzi del giorno prima.\n\nDescrivi la foto. Poi parla: in Svezia si cucina insieme in famiglia? Che cosa fai tu per non sprecare il cibo?",
+   "criteria": [
+    "Pronuncia e intonazione",
+    "Lessico",
+    "Grammatica",
+    "Interazione e contenuto"
+   ],
+   "phrases": [
+    "Nella foto si vede/vedono …",
+    "In primo piano … / Sullo sfondo …",
+    "Mi sembra che …",
+    "Probabilmente …",
+    "Da noi invece …",
+    "Secondo me è importante che …"
+   ],
+   "model": "Nella foto si vede una famiglia in cucina. In primo piano c'è una nonna che prepara la pasta fatta in casa, e due ragazzi la aiutano. Mi sembra che si divertano. Sul tavolo ci sono verdure fresche, probabilmente comprate al mercato, e un barattolo con gli avanzi. In Svezia si cucina insieme soprattutto nei giorni di festa. Io cerco di non sprecare il cibo: controllo il frigorifero prima di fare la spesa e con gli avanzi preparo il pranzo del giorno dopo.",
+   "modelSv": "På bilden ser man en familj i köket. I förgrunden står en farmor och gör hemgjord pasta, och två ungdomar hjälper henne. Det verkar som att de har roligt. På bordet finns färska grönsaker, troligen köpta på torget, och en burk med rester. I Sverige lagar man mat tillsammans mest på helger och högtider. Jag försöker att inte slänga mat: jag kollar kylen innan jag handlar och av resterna gör jag lunch till nästa dag."
+  },
+  {
+   "id": "it5-or-3",
+   "part": "orale",
+   "teil": "Prova 3",
+   "title": "Gioco di ruolo: in segreteria",
+   "time": 4,
+   "prep": 2,
+   "instr": "Rollspel med examinatorn. Du förbereder dig kort och spelar sedan din roll.",
+   "task": "Sei uno studente straniero appena arrivato a Perugia. Vai alla segreteria dell'università perché il tuo nome non è nella lista del corso. L'esaminatore è l'impiegato. Spiega il problema, rispondi alle domande e chiedi che cosa devi fare.",
+   "criteria": [
+    "Pronuncia e intonazione",
+    "Lessico",
+    "Grammatica",
+    "Interazione e contenuto"
+   ],
+   "phrases": [
+    "Buongiorno, avrei un problema.",
+    "Mi sono iscritto/iscritta a … ma …",
+    "Potrebbe controllare, per favore?",
+    "Ho qui la ricevuta del pagamento.",
+    "Che cosa devo fare?",
+    "La ringrazio molto."
+   ],
+   "model": "Buongiorno, avrei un problema. Mi sono iscritta al corso di italiano B1 un mese fa, ma il mio nome non è nella lista. Potrebbe controllare, per favore? Mi chiamo Lina Berg. Ho qui la ricevuta del pagamento. … Ah, capisco, la mail non è arrivata. Che cosa devo fare? Devo compilare di nuovo il modulo? … Va bene, lo compilo subito. Posso comunque frequentare la lezione di oggi? … Perfetto, la ringrazio molto per l'aiuto.",
+   "modelSv": "God dag, jag har ett problem. Jag anmälde mig till kursen i italienska B1 för en månad sedan, men mitt namn står inte på listan. Kan ni kontrollera? Jag heter Lina Berg. Här har jag kvittot på betalningen. … Jaha, jag förstår, mejlet kom inte fram. Vad ska jag göra? Måste jag fylla i blanketten igen? … Okej, jag fyller i den direkt. Får jag ändå gå på lektionen i dag? … Perfekt, tack så mycket för hjälpen."
+  }
+ ]
+}

@@ -1,0 +1,2927 @@
+[
+ {
+  "id": "it4-ripasso-001",
+  "topic": "ripasso",
+  "rule": "pron",
+  "q": "Hai visto Giulia? Sì, [l'ho vista] ieri.",
+  "alt": [
+   "l'ho visto",
+   "ho vista",
+   "la ho vista"
+  ],
+  "why": "Direkt objekt före passato prossimo: lo/la blir l', och participet böjs efter objektet (la → vista).",
+  "sv": "Har du sett Giulia? Ja, jag såg henne i går."
+ },
+ {
+  "id": "it4-ripasso-002",
+  "topic": "ripasso",
+  "rule": "pron",
+  "q": "Hai comprato i biglietti? Sì, [li ho comprati].",
+  "alt": [
+   "li ho comprato",
+   "le ho comprati",
+   "ho comprati"
+  ],
+  "why": "Li (dem, maskulinum) före avere, och participet får -i: comprati.",
+  "sv": "Har du köpt biljetterna? Ja, jag har köpt dem."
+ },
+ {
+  "id": "it4-ripasso-003",
+  "topic": "ripasso",
+  "rule": "pron",
+  "q": "Telefoni a Marco? Sì, [gli] telefono stasera.",
+  "alt": [
+   "lo",
+   "le",
+   "ci"
+  ],
+  "why": "Telefonare a qualcuno: indirekt objekt. Till honom = gli.",
+  "sv": "Ringer du Marco? Ja, jag ringer honom i kväll."
+ },
+ {
+  "id": "it4-ripasso-004",
+  "topic": "ripasso",
+  "rule": "pron",
+  "q": "Hai scritto alla nonna? No, non [le] ho ancora scritto.",
+  "alt": [
+   "la",
+   "gli",
+   "l'"
+  ],
+  "why": "Scrivere a qualcuno: indirekt objekt. Till henne = le.",
+  "sv": "Har du skrivit till mormor? Nej, jag har inte skrivit till henne än."
+ },
+ {
+  "id": "it4-ripasso-005",
+  "topic": "ripasso",
+  "rule": "pron",
+  "q": "Queste scarpe sono belle, [le] compro!",
+  "alt": [
+   "li",
+   "la",
+   "gli"
+  ],
+  "why": "Scarpe är femininum plural: le.",
+  "sv": "De här skorna är fina, jag köper dem!"
+ },
+ {
+  "id": "it4-ripasso-006",
+  "topic": "ripasso",
+  "rule": "ci-ne",
+  "q": "Quante mele vuoi? [Ne] voglio tre.",
+  "alt": [
+   "Le",
+   "Ci",
+   "Li"
+  ],
+  "why": "Ne står för en del av något: tre av dem.",
+  "sv": "Hur många äpplen vill du ha? Jag vill ha tre."
+ },
+ {
+  "id": "it4-ripasso-007",
+  "topic": "ripasso",
+  "rule": "ci-ne",
+  "q": "Vai spesso a Roma? Sì, [ci] vado ogni mese.",
+  "alt": [
+   "ne",
+   "la",
+   "lo"
+  ],
+  "why": "Ci = dit, till en plats.",
+  "sv": "Åker du ofta till Rom? Ja, jag åker dit varje månad."
+ },
+ {
+  "id": "it4-ripasso-008",
+  "topic": "ripasso",
+  "rule": "ci-ne",
+  "q": "Hai parlato del progetto? Sì, [ne] abbiamo parlato.",
+  "alt": [
+   "ci",
+   "lo",
+   "gli"
+  ],
+  "why": "Parlare di qualcosa: ne = om det.",
+  "sv": "Har ni pratat om projektet? Ja, vi har pratat om det."
+ },
+ {
+  "id": "it4-ripasso-009",
+  "topic": "ripasso",
+  "rule": "ci-ne",
+  "q": "Pensi mai al futuro? Sì, [ci] penso spesso.",
+  "alt": [
+   "ne",
+   "lo",
+   "gli"
+  ],
+  "why": "Pensare a qualcosa: ci = på det.",
+  "sv": "Tänker du någonsin på framtiden? Ja, jag tänker ofta på det."
+ },
+ {
+  "id": "it4-ripasso-010",
+  "topic": "ripasso",
+  "rule": "ci-ne",
+  "q": "Quanti libri hai letto? [Ne ho letti] cinque.",
+  "alt": [
+   "Ne ho letto",
+   "Li ho letti",
+   "Ci ho letti"
+  ],
+  "why": "Med ne och en mängd böjs participet efter substantivet: letti.",
+  "sv": "Hur många böcker har du läst? Jag har läst fem."
+ },
+ {
+  "id": "it4-ripasso-011",
+  "topic": "ripasso",
+  "rule": "tempi",
+  "q": "Ieri [sono andata] al cinema con Luca.",
+  "alt": [
+   "andavo",
+   "andrò",
+   "vado"
+  ],
+  "why": "En avslutad händelse i går: passato prossimo.",
+  "sv": "I går gick jag på bio med Luca."
+ },
+ {
+  "id": "it4-ripasso-012",
+  "topic": "ripasso",
+  "rule": "tempi",
+  "q": "Da bambino [giocavo] sempre a calcio.",
+  "alt": [
+   "ho giocato",
+   "giocherò",
+   "gioco"
+  ],
+  "why": "En vana i dåtid (sempre, da bambino): imperfetto.",
+  "sv": "Som barn spelade jag alltid fotboll."
+ },
+ {
+  "id": "it4-ripasso-013",
+  "topic": "ripasso",
+  "rule": "tempi",
+  "q": "L'anno prossimo [studierò] a Bologna.",
+  "alt": [
+   "ho studiato",
+   "studiavo",
+   "studiassi"
+  ],
+  "why": "Framtid: futuro.",
+  "sv": "Nästa år ska jag studera i Bologna."
+ },
+ {
+  "id": "it4-ripasso-014",
+  "topic": "ripasso",
+  "rule": "tempi",
+  "q": "Mentre [dormivo], è suonato il telefono.",
+  "alt": [
+   "ho dormito",
+   "dormirò",
+   "dormo"
+  ],
+  "why": "Bakgrund (pågående) i dåtid: imperfetto. Händelsen som avbryter står i passato prossimo.",
+  "sv": "Medan jag sov ringde telefonen."
+ },
+ {
+  "id": "it4-ripasso-015",
+  "topic": "ripasso",
+  "rule": "tempi",
+  "q": "Studio italiano [da] tre anni.",
+  "alt": [
+   "per",
+   "fa",
+   "tra"
+  ],
+  "why": "Da + tid med presens: något som började förr och pågår nu.",
+  "sv": "Jag har studerat italienska i tre år."
+ },
+ {
+  "id": "it4-ripasso-016",
+  "topic": "ripasso",
+  "rule": "tempi",
+  "q": "Sono arrivata in Italia due mesi [fa].",
+  "alt": [
+   "da",
+   "tra",
+   "per"
+  ],
+  "why": "Fa = för … sedan.",
+  "sv": "Jag kom till Italien för två månader sedan."
+ },
+ {
+  "id": "it4-ripasso-017",
+  "topic": "ripasso",
+  "rule": "tempi",
+  "q": "Stasera [sarà] stanco, ha lavorato tutto il giorno.",
+  "alt": [
+   "è stato",
+   "era",
+   "fosse"
+  ],
+  "why": "Futuro kan uttrycka en gissning om nuet: han är nog trött.",
+  "sv": "I kväll är han nog trött, han har jobbat hela dagen."
+ },
+ {
+  "id": "it4-ripasso-018",
+  "topic": "ripasso",
+  "rule": "tempi",
+  "q": "Ti [piacerebbe] venire con noi?",
+  "alt": [
+   "piacerà",
+   "piaceva",
+   "piace"
+  ],
+  "why": "Artig fråga: condizionale.",
+  "sv": "Skulle du vilja följa med oss?"
+ },
+ {
+  "id": "it4-ripasso-019",
+  "topic": "ripasso",
+  "rule": "pron",
+  "q": "Il libro? Te [lo] presto volentieri.",
+  "alt": [
+   "la",
+   "li",
+   "gli"
+  ],
+  "why": "Libro är maskulinum singular: lo.",
+  "sv": "Boken? Jag lånar gärna ut den till dig."
+ },
+ {
+  "id": "it4-ripasso-020",
+  "topic": "ripasso",
+  "rule": "ci-ne",
+  "q": "Hai soldi? No, non [ne] ho.",
+  "alt": [
+   "ci",
+   "li",
+   "lo"
+  ],
+  "why": "Ne = något av det, här 'inga'.",
+  "sv": "Har du pengar? Nej, jag har inga."
+ },
+ {
+  "id": "it4-fut-ant-001",
+  "topic": "fut-ant",
+  "rule": "fa-forme",
+  "q": "Quando [avrò finito] la scuola, farò un viaggio.",
+  "alt": [
+   "finirò",
+   "ho finito",
+   "avessi finito"
+  ],
+  "why": "Futuro anteriore = futuro av avere + particip: avrò finito.",
+  "sv": "När jag har gått ut skolan ska jag göra en resa."
+ },
+ {
+  "id": "it4-fut-ant-002",
+  "topic": "fut-ant",
+  "rule": "fa-forme",
+  "q": "Appena [sarai arrivata] a Roma, chiamami!",
+  "alt": [
+   "arriverai",
+   "sei arrivata",
+   "avrai arrivato"
+  ],
+  "why": "Arrivare tar essere: sarai arrivata (femininum).",
+  "sv": "Så fort du har kommit fram till Rom, ring mig!"
+ },
+ {
+  "id": "it4-fut-ant-003",
+  "topic": "fut-ant",
+  "rule": "fa-forme",
+  "q": "Dopo che [avremo mangiato], usciremo.",
+  "alt": [
+   "mangeremo",
+   "abbiamo mangiato",
+   "saremo mangiati"
+  ],
+  "why": "Mangiare tar avere: avremo mangiato.",
+  "sv": "När vi har ätit ska vi gå ut."
+ },
+ {
+  "id": "it4-fut-ant-004",
+  "topic": "fut-ant",
+  "rule": "fa-forme",
+  "q": "Quando i ragazzi [saranno partiti], la casa sarà tranquilla.",
+  "alt": [
+   "partiranno",
+   "avranno partito",
+   "sono partiti"
+  ],
+  "why": "Partire tar essere, participet i plural: saranno partiti.",
+  "sv": "När killarna har åkt blir det lugnt i huset."
+ },
+ {
+  "id": "it4-fut-ant-005",
+  "topic": "fut-ant",
+  "rule": "fa-forme",
+  "q": "Se entro giugno non [avrai trovato] lavoro, che cosa farai?",
+  "alt": [
+   "troverai",
+   "hai trovato",
+   "sarai trovato"
+  ],
+  "why": "Något som ska vara klart före en tidpunkt i framtiden: futuro anteriore med avere.",
+  "sv": "Om du inte har hittat jobb senast i juni, vad gör du då?"
+ },
+ {
+  "id": "it4-fut-ant-006",
+  "topic": "fut-ant",
+  "rule": "fa-uso",
+  "q": "Quando [avrò preso] la laurea, cercherò lavoro all'estero.",
+  "alt": [
+   "prenderò",
+   "prendevo",
+   "prendo"
+  ],
+  "why": "Laurean kommer före jobbsökandet: futuro anteriore.",
+  "sv": "När jag har tagit examen ska jag söka jobb utomlands."
+ },
+ {
+  "id": "it4-fut-ant-007",
+  "topic": "fut-ant",
+  "rule": "fa-uso",
+  "q": "Ti presterò il libro appena lo [avrò letto].",
+  "alt": [
+   "leggerò",
+   "leggo",
+   "ho letto"
+  ],
+  "why": "Först läser jag, sedan lånar jag ut: futuro anteriore efter appena.",
+  "sv": "Jag lånar ut boken till dig så fort jag har läst den."
+ },
+ {
+  "id": "it4-fut-ant-008",
+  "topic": "fut-ant",
+  "rule": "fa-uso",
+  "q": "Fra un anno [avrete imparato] molte parole nuove.",
+  "alt": [
+   "imparerete",
+   "avete imparato",
+   "imparavate"
+  ],
+  "why": "Något som är klart vid en tidpunkt i framtiden.",
+  "sv": "Om ett år har ni lärt er många nya ord."
+ },
+ {
+  "id": "it4-fut-ant-009",
+  "topic": "fut-ant",
+  "rule": "fa-uso",
+  "q": "Una volta che [ti sarai abituato], ti piacerà.",
+  "alt": [
+   "ti abituerai",
+   "ti sei abituato",
+   "ti avrai abituato"
+  ],
+  "why": "Abituarsi är reflexivt och tar essere: ti sarai abituato.",
+  "sv": "När du väl har vant dig kommer du att gilla det."
+ },
+ {
+  "id": "it4-fut-ant-010",
+  "topic": "fut-ant",
+  "rule": "fa-uso",
+  "q": "Quando [sarà finito] il film, andremo a dormire.",
+  "alt": [
+   "finirà",
+   "è finito",
+   "avrà finito"
+  ],
+  "why": "Finire om något som tar slut tar essere: sarà finito.",
+  "sv": "När filmen är slut går vi och lägger oss."
+ },
+ {
+  "id": "it4-fut-ant-011",
+  "topic": "fut-ant",
+  "rule": "fa-ipotesi",
+  "q": "Marco non risponde. [Sarà già uscito].",
+  "alt": [
+   "È già uscito",
+   "Uscirà già",
+   "Era già uscito"
+  ],
+  "why": "Futuro anteriore för en gissning om det förflutna: han har nog redan gått.",
+  "sv": "Marco svarar inte. Han har nog redan gått ut."
+ },
+ {
+  "id": "it4-fut-ant-012",
+  "topic": "fut-ant",
+  "rule": "fa-ipotesi",
+  "q": "Giulia ha gli occhi rossi: [avrà pianto].",
+  "alt": [
+   "piangerà",
+   "ha pianto",
+   "piangeva"
+  ],
+  "why": "Gissning om något som har hänt: hon har nog gråtit.",
+  "sv": "Giulia har röda ögon: hon har nog gråtit."
+ },
+ {
+  "id": "it4-fut-ant-013",
+  "topic": "fut-ant",
+  "rule": "fa-ipotesi",
+  "q": "Dove ho messo le chiavi? Le [avrò lasciate] in macchina.",
+  "alt": [
+   "lascerò",
+   "ho lasciate",
+   "lasciavo"
+  ],
+  "why": "Gissning om det förflutna. Participet böjs efter le: lasciate.",
+  "sv": "Var har jag lagt nycklarna? Jag har nog lämnat dem i bilen."
+ },
+ {
+  "id": "it4-fut-ant-014",
+  "topic": "fut-ant",
+  "rule": "fa-ipotesi",
+  "q": "Il treno non è ancora arrivato. [Avrà avuto] un problema.",
+  "alt": [
+   "Avrà",
+   "Ha avuto",
+   "Aveva avuto"
+  ],
+  "why": "Gissning: tåget har nog haft ett problem.",
+  "sv": "Tåget har inte kommit än. Det har nog haft problem."
+ },
+ {
+  "id": "it4-fut-ant-015",
+  "topic": "fut-ant",
+  "rule": "fa-ipotesi",
+  "q": "Quanti anni avrà quella casa? [Sarà stata] costruita nell'Ottocento.",
+  "alt": [
+   "Sarà",
+   "È stata",
+   "Era stata"
+  ],
+  "why": "Gissning om det förflutna i passiv: sarà stata costruita.",
+  "sv": "Hur gammalt kan det där huset vara? Det byggdes nog på 1800-talet."
+ },
+ {
+  "id": "it4-fut-ant-016",
+  "topic": "fut-ant",
+  "rule": "fa-forme",
+  "q": "Domani a quest'ora [avremo finito] gli esami!",
+  "alt": [
+   "finiremo",
+   "abbiamo finito",
+   "finivamo"
+  ],
+  "why": "Något som är klart vid en viss tid i framtiden.",
+  "sv": "I morgon vid den här tiden har vi klarat proven!"
+ },
+ {
+  "id": "it4-fut-ant-017",
+  "topic": "fut-ant",
+  "rule": "fa-forme",
+  "q": "Quando [avrai compiuto] diciotto anni, potrai votare.",
+  "alt": [
+   "compirai",
+   "hai compiuto",
+   "sarai compiuto"
+  ],
+  "why": "Compiere gli anni tar avere: avrai compiuto.",
+  "sv": "När du har fyllt arton kan du rösta."
+ },
+ {
+  "id": "it4-fut-ant-018",
+  "topic": "fut-ant",
+  "rule": "fa-uso",
+  "q": "Ti chiamo dopo che [avrò parlato] con il capo.",
+  "alt": [
+   "parlerò",
+   "parlo",
+   "parlavo"
+  ],
+  "why": "Dopo che + futuro anteriore när huvudsatsen gäller framtiden.",
+  "sv": "Jag ringer dig efter att jag har pratat med chefen."
+ },
+ {
+  "id": "it4-fut-ant-019",
+  "topic": "fut-ant",
+  "rule": "fa-forme",
+  "q": "Le ragazze [saranno tornate] prima di mezzanotte.",
+  "alt": [
+   "torneranno",
+   "avranno tornato",
+   "sono tornate"
+  ],
+  "why": "Tornare tar essere, och participet böjs i femininum plural.",
+  "sv": "Tjejerna har nog kommit hem före midnatt."
+ },
+ {
+  "id": "it4-fut-ant-020",
+  "topic": "fut-ant",
+  "rule": "fa-ipotesi",
+  "q": "Non trovo il mio telefono. Me l'[avranno rubato]?",
+  "alt": [
+   "ruberanno",
+   "hanno rubato",
+   "rubavano"
+  ],
+  "why": "Futuro anteriore i en fråga uttrycker oro eller tvivel.",
+  "sv": "Jag hittar inte min mobil. Kan någon ha stulit den?"
+ },
+ {
+  "id": "it4-se-reale-001",
+  "topic": "se-reale",
+  "rule": "se-pres",
+  "q": "Se [piove], restiamo a casa.",
+  "alt": [
+   "pioverebbe",
+   "piovesse",
+   "pioveva"
+  ],
+  "why": "Verklig om-sats om nuet: se + presens, presens i huvudsatsen.",
+  "sv": "Om det regnar stannar vi hemma."
+ },
+ {
+  "id": "it4-se-reale-002",
+  "topic": "se-reale",
+  "rule": "se-pres",
+  "q": "Se hai fame, [c'è] della pizza in frigo.",
+  "alt": [
+   "ci sarebbe",
+   "ci fosse",
+   "c'era"
+  ],
+  "why": "Se + presens, presens i huvudsatsen.",
+  "sv": "Om du är hungrig finns det pizza i kylen."
+ },
+ {
+  "id": "it4-se-reale-003",
+  "topic": "se-reale",
+  "rule": "se-pres",
+  "q": "Se [studi] ogni giorno, impari in fretta.",
+  "alt": [
+   "studierai",
+   "studiassi",
+   "studiavi"
+  ],
+  "why": "Allmän sanning: se + presens.",
+  "sv": "Om du pluggar varje dag lär du dig snabbt."
+ },
+ {
+  "id": "it4-se-reale-004",
+  "topic": "se-reale",
+  "rule": "se-fut",
+  "q": "Se [avrò] tempo, verrò alla festa.",
+  "alt": [
+   "avrei",
+   "avessi",
+   "ho avuto"
+  ],
+  "why": "Om framtid: se + futuro, futuro i huvudsatsen (presens går också i vardagligt tal).",
+  "sv": "Om jag har tid kommer jag till festen."
+ },
+ {
+  "id": "it4-se-reale-005",
+  "topic": "se-reale",
+  "rule": "se-fut",
+  "q": "Se domani fa bel tempo, [andremo] al mare.",
+  "alt": [
+   "andremmo",
+   "andassimo",
+   "andavamo"
+  ],
+  "why": "Verklig om-sats om framtiden: futuro i huvudsatsen.",
+  "sv": "Om det är fint väder i morgon åker vi till havet."
+ },
+ {
+  "id": "it4-se-reale-006",
+  "topic": "se-reale",
+  "rule": "se-fut",
+  "q": "Se [troverò] un lavoro, mi trasferirò a Milano.",
+  "alt": [
+   "troverei",
+   "trovassi",
+   "trovavo"
+  ],
+  "why": "Se + futuro när båda delarna gäller framtiden.",
+  "sv": "Om jag hittar ett jobb flyttar jag till Milano."
+ },
+ {
+  "id": "it4-se-reale-007",
+  "topic": "se-reale",
+  "rule": "se-fut",
+  "q": "Se non vi [sbrigate], perderete il treno.",
+  "alt": [
+   "sbrighereste",
+   "sbrigaste",
+   "sbrigavate"
+  ],
+  "why": "Se + presens är också vanligt om framtid.",
+  "sv": "Om ni inte skyndar er missar ni tåget."
+ },
+ {
+  "id": "it4-se-reale-008",
+  "topic": "se-reale",
+  "rule": "se-imp",
+  "q": "Se hai bisogno di aiuto, [chiamami]!",
+  "alt": [
+   "mi chiami",
+   "chiamarmi",
+   "chiameresti"
+  ],
+  "why": "Se + presens och imperativ i huvudsatsen: ett råd eller en uppmaning.",
+  "sv": "Om du behöver hjälp, ring mig!"
+ },
+ {
+  "id": "it4-se-reale-009",
+  "topic": "se-reale",
+  "rule": "se-imp",
+  "q": "Se vedi Luca, [digli] di chiamarmi.",
+  "alt": [
+   "gli dici",
+   "dillo",
+   "dirgli"
+  ],
+  "why": "Imperativ tu av dire + gli: digli (g:et dubblas inte framför gli).",
+  "sv": "Om du ser Luca, säg åt honom att ringa mig."
+ },
+ {
+  "id": "it4-se-reale-010",
+  "topic": "se-reale",
+  "rule": "se-imp",
+  "q": "Se non ti senti bene, [resta] a casa!",
+  "alt": [
+   "resti",
+   "restare",
+   "restassi"
+  ],
+  "why": "Imperativ tu av restare: resta.",
+  "sv": "Om du inte mår bra, stanna hemma!"
+ },
+ {
+  "id": "it4-se-reale-011",
+  "topic": "se-reale",
+  "rule": "se-pres",
+  "q": "Se [mangio] troppo, poi dormo male.",
+  "alt": [
+   "mangerei",
+   "mangiassi",
+   "mangiavo"
+  ],
+  "why": "Allmän vana: se + presens.",
+  "sv": "Om jag äter för mycket sover jag dåligt sedan."
+ },
+ {
+  "id": "it4-se-reale-012",
+  "topic": "se-reale",
+  "rule": "se-fut",
+  "q": "Se [finirete] presto, potrete uscire.",
+  "alt": [
+   "finireste",
+   "finiste",
+   "finivate"
+  ],
+  "why": "Se + futuro och futuro: båda gäller framtiden.",
+  "sv": "Om ni blir klara tidigt får ni gå ut."
+ },
+ {
+  "id": "it4-se-reale-013",
+  "topic": "se-reale",
+  "rule": "se-pres",
+  "q": "Se il negozio [è] chiuso, torniamo domani.",
+  "alt": [
+   "sarebbe",
+   "fosse",
+   "era stato"
+  ],
+  "why": "Se + presens om något som kan vara sant nu.",
+  "sv": "Om affären är stängd kommer vi tillbaka i morgon."
+ },
+ {
+  "id": "it4-se-reale-014",
+  "topic": "se-reale",
+  "rule": "se-imp",
+  "q": "Se Le serve qualcosa, mi [chiami].",
+  "alt": [
+   "chiama",
+   "chiamarmi",
+   "chiamerebbe"
+  ],
+  "why": "Till en person man säger Lei till: imperativ med Lei, chiami.",
+  "sv": "Om ni behöver något, ring mig."
+ },
+ {
+  "id": "it4-se-reale-015",
+  "topic": "se-reale",
+  "rule": "se-pres",
+  "q": "Se lo [sai], perché non me lo dici?",
+  "alt": [
+   "sapessi",
+   "sapresti",
+   "sapevi"
+  ],
+  "why": "Se + presens: om du vet det (och det tror jag).",
+  "sv": "Om du vet det, varför säger du det inte till mig?"
+ },
+ {
+  "id": "it4-se-reale-016",
+  "topic": "se-reale",
+  "rule": "se-fut",
+  "q": "Se non [pioverà], faremo un picnic.",
+  "alt": [
+   "piovesse",
+   "pioverebbe",
+   "è piovuto"
+  ],
+  "why": "Se + futuro.",
+  "sv": "Om det inte regnar ska vi ha picknick."
+ },
+ {
+  "id": "it4-se-reale-017",
+  "topic": "se-reale",
+  "rule": "se-fut",
+  "q": "Se vinciamo la partita, [festeggeremo] tutta la notte.",
+  "alt": [
+   "festeggeremmo",
+   "festeggiassimo",
+   "festeggiavamo"
+  ],
+  "why": "Se + presens i om-satsen, futuro i huvudsatsen.",
+  "sv": "Om vi vinner matchen ska vi fira hela natten."
+ },
+ {
+  "id": "it4-se-reale-018",
+  "topic": "se-reale",
+  "rule": "se-pres",
+  "q": "Se vuoi, [posso] aiutarti con i compiti.",
+  "alt": [
+   "potrei essere",
+   "potessi",
+   "potei"
+  ],
+  "why": "Se + presens och presens: ett erbjudande.",
+  "sv": "Om du vill kan jag hjälpa dig med läxorna."
+ },
+ {
+  "id": "it4-se-reale-019",
+  "topic": "se-reale",
+  "rule": "se-imp",
+  "q": "Se hai finito, [spegni] il computer.",
+  "alt": [
+   "spegnessi",
+   "spegnere",
+   "spegneresti"
+  ],
+  "why": "Imperativ tu: spegni.",
+  "sv": "Om du är klar, stäng av datorn."
+ },
+ {
+  "id": "it4-se-reale-020",
+  "topic": "se-reale",
+  "rule": "se-pres",
+  "q": "Se non capisci, [chiedi] all'insegnante.",
+  "alt": [
+   "chiederesti",
+   "chiedessi",
+   "chiedevi"
+  ],
+  "why": "Se + presens och imperativ tu.",
+  "sv": "Om du inte förstår, fråga läraren."
+ },
+ {
+  "id": "it4-congiuntivo-001",
+  "topic": "congiuntivo",
+  "rule": "cong-forme",
+  "q": "Penso che Marco [sia] a casa.",
+  "alt": [
+   "è",
+   "era",
+   "sarà"
+  ],
+  "why": "Efter penso che följer congiuntivo: essere → sia.",
+  "sv": "Jag tror att Marco är hemma."
+ },
+ {
+  "id": "it4-congiuntivo-002",
+  "topic": "congiuntivo",
+  "rule": "cong-forme",
+  "q": "Credo che loro [abbiano] ragione.",
+  "alt": [
+   "hanno",
+   "avessero",
+   "avranno"
+  ],
+  "why": "Congiuntivo av avere, loro: abbiano.",
+  "sv": "Jag tror att de har rätt."
+ },
+ {
+  "id": "it4-congiuntivo-003",
+  "topic": "congiuntivo",
+  "rule": "cong-forme",
+  "q": "Voglio che tu [venga] con me.",
+  "alt": [
+   "vieni",
+   "venire",
+   "verrai"
+  ],
+  "why": "Voglio che + congiuntivo: venire → venga.",
+  "sv": "Jag vill att du följer med mig."
+ },
+ {
+  "id": "it4-congiuntivo-004",
+  "topic": "congiuntivo",
+  "rule": "cong-forme",
+  "q": "Spero che voi [stiate] bene.",
+  "alt": [
+   "state",
+   "stare",
+   "stavate"
+  ],
+  "why": "Congiuntivo av stare, voi: stiate.",
+  "sv": "Jag hoppas att ni mår bra."
+ },
+ {
+  "id": "it4-congiuntivo-005",
+  "topic": "congiuntivo",
+  "rule": "cong-forme",
+  "q": "È importante che tutti [facciano] la loro parte.",
+  "alt": [
+   "fanno",
+   "fare",
+   "faranno"
+  ],
+  "why": "Congiuntivo av fare, loro: facciano.",
+  "sv": "Det är viktigt att alla gör sin del."
+ },
+ {
+  "id": "it4-congiuntivo-006",
+  "topic": "congiuntivo",
+  "rule": "cong-forme",
+  "q": "Bisogna che tu [parli] con i tuoi genitori.",
+  "alt": [
+   "parla",
+   "parlare",
+   "parlerai"
+  ],
+  "why": "-are-verb får -i i congiuntivo: che tu parli.",
+  "sv": "Du måste prata med dina föräldrar."
+ },
+ {
+  "id": "it4-congiuntivo-007",
+  "topic": "congiuntivo",
+  "rule": "cong-forme",
+  "q": "Penso che lei [prenda] il treno delle otto.",
+  "alt": [
+   "prende",
+   "prendere",
+   "prenderà"
+  ],
+  "why": "-ere-verb får -a i congiuntivo: prenda.",
+  "sv": "Jag tror att hon tar åttatåget."
+ },
+ {
+  "id": "it4-congiuntivo-008",
+  "topic": "congiuntivo",
+  "rule": "cong-forme",
+  "q": "Mi sembra che il film [finisca] alle dieci.",
+  "alt": [
+   "finisce",
+   "finire",
+   "finirà"
+  ],
+  "why": "-isc-verb behåller -isc-: finisca.",
+  "sv": "Jag tror att filmen slutar klockan tio."
+ },
+ {
+  "id": "it4-congiuntivo-009",
+  "topic": "congiuntivo",
+  "rule": "cong-forme",
+  "q": "Non credo che Paolo [possa] venire.",
+  "alt": [
+   "può",
+   "potere",
+   "potrà"
+  ],
+  "why": "Congiuntivo av potere: possa.",
+  "sv": "Jag tror inte att Paolo kan komma."
+ },
+ {
+  "id": "it4-congiuntivo-010",
+  "topic": "congiuntivo",
+  "rule": "cong-forme",
+  "q": "Voglio che voi [diciate] la verità.",
+  "alt": [
+   "dite",
+   "dire",
+   "direte"
+  ],
+  "why": "Congiuntivo av dire, voi: diciate.",
+  "sv": "Jag vill att ni säger sanningen."
+ },
+ {
+  "id": "it4-congiuntivo-011",
+  "topic": "congiuntivo",
+  "rule": "cong-opinione",
+  "q": "Credo che l'italiano [sia] una lingua bellissima.",
+  "alt": [
+   "è stato",
+   "sarà",
+   "sarebbe"
+  ],
+  "why": "Credo che uttrycker åsikt: congiuntivo sia.",
+  "sv": "Jag tycker att italienska är ett jättevackert språk."
+ },
+ {
+  "id": "it4-congiuntivo-012",
+  "topic": "congiuntivo",
+  "rule": "cong-opinione",
+  "q": "Penso che i giovani [debbano] votare.",
+  "alt": [
+   "devono",
+   "dovere",
+   "dovranno"
+  ],
+  "why": "Åsikt med penso che: congiuntivo debbano.",
+  "sv": "Jag tycker att unga ska rösta."
+ },
+ {
+  "id": "it4-congiuntivo-013",
+  "topic": "congiuntivo",
+  "rule": "cong-opinione",
+  "q": "Non penso che sia giusto che gli animali [soffrano].",
+  "alt": [
+   "soffrono",
+   "soffrire",
+   "soffriranno"
+  ],
+  "why": "Både non penso che och è giusto che följs av congiuntivo: soffrano.",
+  "sv": "Jag tycker inte att det är rätt att djuren lider."
+ },
+ {
+  "id": "it4-congiuntivo-014",
+  "topic": "congiuntivo",
+  "rule": "cong-volonta",
+  "q": "I miei genitori vogliono che io [studi] medicina.",
+  "alt": [
+   "studio",
+   "studiare",
+   "studierò"
+  ],
+  "why": "Vilja (vogliono che): congiuntivo. Studiare → che io studi.",
+  "sv": "Mina föräldrar vill att jag ska läsa medicin."
+ },
+ {
+  "id": "it4-congiuntivo-015",
+  "topic": "congiuntivo",
+  "rule": "cong-volonta",
+  "q": "Sono contenta che tu [sia] qui.",
+  "alt": [
+   "sei",
+   "essere",
+   "sarai"
+  ],
+  "why": "Känsla (sono contenta che): congiuntivo.",
+  "sv": "Jag är glad att du är här."
+ },
+ {
+  "id": "it4-congiuntivo-016",
+  "topic": "congiuntivo",
+  "rule": "cong-volonta",
+  "q": "Ho paura che [piova] domani.",
+  "alt": [
+   "piove",
+   "piovere",
+   "pioverà"
+  ],
+  "why": "Rädsla (ho paura che): congiuntivo.",
+  "sv": "Jag är rädd att det regnar i morgon."
+ },
+ {
+  "id": "it4-congiuntivo-017",
+  "topic": "congiuntivo",
+  "rule": "cong-imp",
+  "q": "Bisogna che [andiamo] subito.",
+  "alt": [
+   "andare",
+   "andremo",
+   "vadano"
+  ],
+  "why": "Noi-formen i congiuntivo är som i presens: andiamo.",
+  "sv": "Vi måste gå genast."
+ },
+ {
+  "id": "it4-congiuntivo-018",
+  "topic": "congiuntivo",
+  "rule": "cong-imp",
+  "q": "È meglio che tu non [dica] niente.",
+  "alt": [
+   "dici",
+   "dire",
+   "dirai"
+  ],
+  "why": "È meglio che + congiuntivo: dica.",
+  "sv": "Det är bäst att du inte säger något."
+ },
+ {
+  "id": "it4-congiuntivo-019",
+  "topic": "congiuntivo",
+  "rule": "cong-imp",
+  "q": "È necessario che gli studenti [sappiano] le regole.",
+  "alt": [
+   "sanno",
+   "sapere",
+   "sapranno"
+  ],
+  "why": "Congiuntivo av sapere: sappiano.",
+  "sv": "Det är nödvändigt att eleverna kan reglerna."
+ },
+ {
+  "id": "it4-congiuntivo-020",
+  "topic": "congiuntivo",
+  "rule": "cong-o-ind",
+  "q": "So che Marco [è] malato.",
+  "alt": [
+   "sia",
+   "essere",
+   "fosse"
+  ],
+  "why": "So che uttrycker säker kunskap: indikativ, inte congiuntivo.",
+  "sv": "Jag vet att Marco är sjuk."
+ },
+ {
+  "id": "it4-congiuntivo-021",
+  "topic": "congiuntivo",
+  "rule": "cong-o-ind",
+  "q": "Sono sicuro che [vinceremo].",
+  "alt": [
+   "vinciamo che",
+   "vincessimo",
+   "vincere"
+  ],
+  "why": "Sono sicuro che uttrycker säkerhet: indikativ (här futuro).",
+  "sv": "Jag är säker på att vi kommer att vinna."
+ },
+ {
+  "id": "it4-congiuntivo-022",
+  "topic": "congiuntivo",
+  "rule": "cong-o-ind",
+  "q": "Voglio [andare] al mare.",
+  "alt": [
+   "che vada",
+   "vada",
+   "andrò"
+  ],
+  "why": "Samma subjekt i båda leden: voglio + infinitiv, inte congiuntivo.",
+  "sv": "Jag vill åka till havet."
+ },
+ {
+  "id": "it4-congiuntivo-023",
+  "topic": "congiuntivo",
+  "rule": "cong-o-ind",
+  "q": "Penso di [avere] ragione.",
+  "alt": [
+   "che abbia",
+   "abbia",
+   "ho"
+  ],
+  "why": "Samma subjekt: penso di + infinitiv.",
+  "sv": "Jag tror att jag har rätt."
+ },
+ {
+  "id": "it4-congiuntivo-024",
+  "topic": "congiuntivo",
+  "rule": "cong-opinione",
+  "q": "Dubito che il negozio [sia] aperto a quest'ora.",
+  "alt": [
+   "è",
+   "era",
+   "sarà"
+  ],
+  "why": "Tvivel (dubito che): congiuntivo.",
+  "sv": "Jag tvivlar på att affären är öppen den här tiden."
+ },
+ {
+  "id": "it4-congiuntivo-025",
+  "topic": "congiuntivo",
+  "rule": "cong-forme",
+  "q": "Speriamo che non [ci sia] troppo traffico.",
+  "alt": [
+   "c'è",
+   "ci fosse",
+   "c'era"
+  ],
+  "why": "Congiuntivo av c'è: ci sia.",
+  "sv": "Vi får hoppas att det inte är för mycket trafik."
+ },
+ {
+  "id": "it4-si-pass-001",
+  "topic": "si-pass",
+  "rule": "si-sing",
+  "q": "In Italia a Natale [si mangia] il panettone.",
+  "alt": [
+   "si mangiano",
+   "mangia",
+   "si mangiare"
+  ],
+  "why": "Si passivante: verbet står i singular när subjektet (il panettone) är singular.",
+  "sv": "I Italien äter man panettone på jul."
+ },
+ {
+  "id": "it4-si-pass-002",
+  "topic": "si-pass",
+  "rule": "si-plur",
+  "q": "A Capodanno [si mangiano] le lenticchie.",
+  "alt": [
+   "si mangia",
+   "mangiano",
+   "si mangiato"
+  ],
+  "why": "Le lenticchie är plural, så verbet står i plural: si mangiano.",
+  "sv": "På nyårsafton äter man linser."
+ },
+ {
+  "id": "it4-si-pass-003",
+  "topic": "si-pass",
+  "rule": "si-plur",
+  "q": "In questo negozio [si vendono] libri usati.",
+  "alt": [
+   "si vende",
+   "vendono",
+   "si venduto"
+  ],
+  "why": "Libri är plural: si vendono.",
+  "sv": "I den här affären säljs begagnade böcker."
+ },
+ {
+  "id": "it4-si-pass-004",
+  "topic": "si-pass",
+  "rule": "si-sing",
+  "q": "Da qui [si vede] il mare.",
+  "alt": [
+   "si vedono",
+   "vede",
+   "si visto"
+  ],
+  "why": "Il mare är singular: si vede.",
+  "sv": "Härifrån ser man havet."
+ },
+ {
+  "id": "it4-si-pass-005",
+  "topic": "si-pass",
+  "rule": "si-plur",
+  "q": "Da qui [si vedono] le montagne.",
+  "alt": [
+   "si vede",
+   "vedono",
+   "si visti"
+  ],
+  "why": "Le montagne är plural: si vedono.",
+  "sv": "Härifrån ser man bergen."
+ },
+ {
+  "id": "it4-si-pass-006",
+  "topic": "si-pass",
+  "rule": "si-sing",
+  "q": "Come [si dice] 'lagom' in italiano?",
+  "alt": [
+   "si dicono",
+   "dice",
+   "si detto"
+  ],
+  "why": "Si + tredje person singular: si dice.",
+  "sv": "Hur säger man 'lagom' på italienska?"
+ },
+ {
+  "id": "it4-si-pass-007",
+  "topic": "si-pass",
+  "rule": "si-plur",
+  "q": "A Venezia [si usano] molto le maschere a Carnevale.",
+  "alt": [
+   "si usa",
+   "usano",
+   "si usato"
+  ],
+  "why": "Le maschere är plural: si usano.",
+  "sv": "I Venedig används maskerna mycket under karnevalen."
+ },
+ {
+  "id": "it4-si-pass-008",
+  "topic": "si-pass",
+  "rule": "si-sing",
+  "q": "In Svezia [si festeggia] Santa Lucia il 13 dicembre.",
+  "alt": [
+   "si festeggiano",
+   "festeggia",
+   "si festeggiare"
+  ],
+  "why": "Santa Lucia är singular: si festeggia.",
+  "sv": "I Sverige firar man Lucia den 13 december."
+ },
+ {
+  "id": "it4-si-pass-009",
+  "topic": "si-pass",
+  "rule": "si-plur",
+  "q": "Per la festa [si preparano] dolci tradizionali.",
+  "alt": [
+   "si prepara",
+   "preparano",
+   "si preparato"
+  ],
+  "why": "Dolci är plural: si preparano.",
+  "sv": "Till festen lagar man traditionella sötsaker."
+ },
+ {
+  "id": "it4-si-pass-010",
+  "topic": "si-pass",
+  "rule": "si-sing",
+  "q": "In quel ristorante [si paga] poco.",
+  "alt": [
+   "si pagano",
+   "paga",
+   "si pagato"
+  ],
+  "why": "Utan subjekt (opersonligt): tredje person singular.",
+  "sv": "På den restaurangen betalar man lite."
+ },
+ {
+  "id": "it4-si-pass-011",
+  "topic": "si-pass",
+  "rule": "si-imp",
+  "q": "D'estate [si va] al mare.",
+  "alt": [
+   "si vanno",
+   "va",
+   "si andare"
+  ],
+  "why": "Si opersonligt med verb utan objekt: alltid singular.",
+  "sv": "På sommaren åker man till havet."
+ },
+ {
+  "id": "it4-si-pass-012",
+  "topic": "si-pass",
+  "rule": "si-imp",
+  "q": "In montagna [si sta] bene anche ad agosto.",
+  "alt": [
+   "si stanno",
+   "sta",
+   "si stato"
+  ],
+  "why": "Si opersonligt: si sta.",
+  "sv": "I bergen har man det bra även i augusti."
+ },
+ {
+  "id": "it4-si-pass-013",
+  "topic": "si-pass",
+  "rule": "si-plur",
+  "q": "Qui [si parlano] tre lingue.",
+  "alt": [
+   "si parla",
+   "parlano",
+   "si parlato"
+  ],
+  "why": "Tre lingue är plural: si parlano.",
+  "sv": "Här talas tre språk."
+ },
+ {
+  "id": "it4-si-pass-014",
+  "topic": "si-pass",
+  "rule": "si-sing",
+  "q": "Qui [si parla] italiano.",
+  "alt": [
+   "si parlano",
+   "parla",
+   "si parlato"
+  ],
+  "why": "Italiano är singular: si parla.",
+  "sv": "Här talas italienska."
+ },
+ {
+  "id": "it4-si-pass-015",
+  "topic": "si-pass",
+  "rule": "si-plur",
+  "q": "Le ricette della nonna [si tramandano] di generazione in generazione.",
+  "alt": [
+   "si tramanda",
+   "tramandano",
+   "si tramandato"
+  ],
+  "why": "Le ricette är plural: si tramandano.",
+  "sv": "Mormors recept förs vidare från generation till generation."
+ },
+ {
+  "id": "it4-si-pass-016",
+  "topic": "si-pass",
+  "rule": "si-sing",
+  "q": "A Pasqua [si regala] l'uovo di cioccolato.",
+  "alt": [
+   "si regalano",
+   "regala",
+   "si regalato"
+  ],
+  "why": "L'uovo är singular: si regala.",
+  "sv": "På påsk ger man bort chokladägg."
+ },
+ {
+  "id": "it4-si-pass-017",
+  "topic": "si-pass",
+  "rule": "si-plur",
+  "q": "Il 2 novembre [si portano] fiori al cimitero.",
+  "alt": [
+   "si porta",
+   "portano",
+   "si portato"
+  ],
+  "why": "Fiori är plural: si portano.",
+  "sv": "Den 2 november tar man med blommor till kyrkogården."
+ },
+ {
+  "id": "it4-si-pass-018",
+  "topic": "si-pass",
+  "rule": "si-imp",
+  "q": "Quando [si è] giovani, tutto sembra possibile.",
+  "alt": [
+   "si sono",
+   "è",
+   "si siamo"
+  ],
+  "why": "Si + essere + adjektiv: verbet i singular men adjektivet i plural (giovani).",
+  "sv": "När man är ung verkar allt möjligt."
+ },
+ {
+  "id": "it4-si-pass-019",
+  "topic": "si-pass",
+  "rule": "si-sing",
+  "q": "In Sicilia [si produce] molto vino.",
+  "alt": [
+   "si producono",
+   "produce",
+   "si prodotto"
+  ],
+  "why": "Vino är singular: si produce.",
+  "sv": "På Sicilien produceras mycket vin."
+ },
+ {
+  "id": "it4-si-pass-020",
+  "topic": "si-pass",
+  "rule": "si-plur",
+  "q": "Oggi [si comprano] molti regali online.",
+  "alt": [
+   "si compra",
+   "comprano",
+   "si comprato"
+  ],
+  "why": "Regali är plural: si comprano.",
+  "sv": "I dag köper man många presenter på nätet."
+ },
+ {
+  "id": "it4-combinati-001",
+  "topic": "combinati",
+  "rule": "comb-me",
+  "q": "Mi presti la penna? Sì, [te la] presto.",
+  "alt": [
+   "ti la",
+   "te lo",
+   "la ti"
+  ],
+  "why": "Ti + la blir te la. Det indirekta pronomenet står först och i blir e.",
+  "sv": "Lånar du mig pennan? Ja, jag lånar ut den till dig."
+ },
+ {
+  "id": "it4-combinati-002",
+  "topic": "combinati",
+  "rule": "comb-me",
+  "q": "Mi dai il numero? Sì, [te lo] do.",
+  "alt": [
+   "ti lo",
+   "te la",
+   "lo ti"
+  ],
+  "why": "Ti + lo = te lo.",
+  "sv": "Ger du mig numret? Ja, jag ger dig det."
+ },
+ {
+  "id": "it4-combinati-003",
+  "topic": "combinati",
+  "rule": "comb-me",
+  "q": "Ci portate i libri? Sì, [ve li] portiamo domani.",
+  "alt": [
+   "vi li",
+   "ce li",
+   "li vi"
+  ],
+  "why": "Vi + li = ve li.",
+  "sv": "Tar ni med er böckerna till oss? Ja, vi tar med dem till er i morgon."
+ },
+ {
+  "id": "it4-combinati-004",
+  "topic": "combinati",
+  "rule": "comb-me",
+  "q": "Chi ti ha regalato questa borsa? [Me l'ha] regalata mia madre.",
+  "alt": [
+   "Mi l'ha",
+   "Me la ha",
+   "Te l'ha"
+  ],
+  "why": "Mi + la = me la, och la blir l' framför ha.",
+  "sv": "Vem gav dig den här väskan? Min mamma gav mig den."
+ },
+ {
+  "id": "it4-combinati-005",
+  "topic": "combinati",
+  "rule": "comb-me",
+  "q": "Ci spieghi la regola? Sì, [ve la] spiego subito.",
+  "alt": [
+   "vi la",
+   "ce la",
+   "la vi"
+  ],
+  "why": "Vi + la = ve la.",
+  "sv": "Förklarar du regeln för oss? Ja, jag förklarar den för er genast."
+ },
+ {
+  "id": "it4-combinati-006",
+  "topic": "combinati",
+  "rule": "comb-glie",
+  "q": "Hai dato il libro a Marco? Sì, [gliel'ho] dato.",
+  "alt": [
+   "gli l'ho",
+   "le l'ho",
+   "glie l'ho"
+  ],
+  "why": "Gli + lo = glielo, skrivet i ett ord. Framför ho blir det gliel'ho.",
+  "sv": "Har du gett boken till Marco? Ja, jag har gett honom den."
+ },
+ {
+  "id": "it4-combinati-007",
+  "topic": "combinati",
+  "rule": "comb-glie",
+  "q": "Hai detto la verità a Giulia? Sì, [gliel'ho] detta.",
+  "alt": [
+   "le l'ho",
+   "la le ho",
+   "gli la ho"
+  ],
+  "why": "Le + la = gliela (samma form för honom och henne). Framför ho: gliel'ho.",
+  "sv": "Har du sagt sanningen till Giulia? Ja, jag har sagt den till henne."
+ },
+ {
+  "id": "it4-combinati-008",
+  "topic": "combinati",
+  "rule": "comb-glie",
+  "q": "Mandi le foto ai nonni? Sì, [gliele] mando stasera.",
+  "alt": [
+   "gli le",
+   "le gli",
+   "glieli"
+  ],
+  "why": "Gli (till dem) + le = gliele.",
+  "sv": "Skickar du bilderna till morföräldrarna? Ja, jag skickar dem till dem i kväll."
+ },
+ {
+  "id": "it4-combinati-009",
+  "topic": "combinati",
+  "rule": "comb-glie",
+  "q": "Posso dare il biscotto al cane? Sì, [glielo] puoi dare.",
+  "alt": [
+   "gli lo",
+   "lo gli",
+   "gliela"
+  ],
+  "why": "Gli + lo = glielo.",
+  "sv": "Får jag ge kexet till hunden? Ja, du kan ge honom det."
+ },
+ {
+  "id": "it4-combinati-010",
+  "topic": "combinati",
+  "rule": "comb-glie",
+  "q": "Signora, Le porto il caffè? Sì, [me lo] porti, grazie.",
+  "alt": [
+   "mi lo",
+   "lo mi",
+   "me la"
+  ],
+  "why": "Mi + lo = me lo.",
+  "sv": "Frun, ska jag ta med kaffet till er? Ja, ta med det till mig, tack."
+ },
+ {
+  "id": "it4-combinati-011",
+  "topic": "combinati",
+  "rule": "comb-glie",
+  "q": "Hai parlato del problema al professore? Sì, [gliene] ho parlato.",
+  "alt": [
+   "gli ne",
+   "ne gli",
+   "glielo"
+  ],
+  "why": "Gli + ne = gliene.",
+  "sv": "Har du pratat med läraren om problemet? Ja, jag har pratat med honom om det."
+ },
+ {
+  "id": "it4-combinati-012",
+  "topic": "combinati",
+  "rule": "comb-pp",
+  "q": "Le chiavi? [Me le] ha date Luca.",
+  "alt": [
+   "Mi le",
+   "Me li",
+   "Le mi"
+  ],
+  "why": "Mi + le = me le. Participet böjs efter le: date.",
+  "sv": "Nycklarna? Luca gav mig dem."
+ },
+ {
+  "id": "it4-combinati-013",
+  "topic": "combinati",
+  "rule": "comb-pp",
+  "q": "I biglietti? Ce [li ha] mandati l'agenzia.",
+  "alt": [
+   "le ha",
+   "lo ha",
+   "l'ha"
+  ],
+  "why": "Biglietti är maskulinum plural: ce li ha mandati.",
+  "sv": "Biljetterna? Resebyrån skickade dem till oss."
+ },
+ {
+  "id": "it4-combinati-014",
+  "topic": "combinati",
+  "rule": "comb-pp",
+  "q": "La lettera? Te l'ho [mandata] ieri.",
+  "alt": [
+   "mandato",
+   "mandati",
+   "mandate"
+  ],
+  "why": "Te l'ho: l' = la, så participet får -a: mandata.",
+  "sv": "Brevet? Jag skickade det till dig i går."
+ },
+ {
+  "id": "it4-combinati-015",
+  "topic": "combinati",
+  "rule": "comb-pp",
+  "q": "Chi ti ha detto queste cose? [Me le] ha dette Sara.",
+  "alt": [
+   "Me li",
+   "Mi le",
+   "Me la"
+  ],
+  "why": "Queste cose är femininum plural: me le ha dette.",
+  "sv": "Vem har sagt de här sakerna till dig? Sara sa dem till mig."
+ },
+ {
+  "id": "it4-combinati-016",
+  "topic": "combinati",
+  "rule": "comb-ce",
+  "q": "Hai il biglietto? Sì, [ce l'ho].",
+  "alt": [
+   "l'ho",
+   "ci ho",
+   "ce lo ho"
+  ],
+  "why": "I talspråk säger man ce l'ho (ci + lo + ho) för 'jag har det'.",
+  "sv": "Har du biljetten? Ja, jag har den."
+ },
+ {
+  "id": "it4-combinati-017",
+  "topic": "combinati",
+  "rule": "comb-ce",
+  "q": "Hai la patente? No, non [ce l'ho] ancora.",
+  "alt": [
+   "la ho",
+   "ci l'ho",
+   "ce la ho"
+  ],
+  "why": "Ce l'ho = jag har den. La blir l' framför ho.",
+  "sv": "Har du körkort? Nej, jag har inte det än."
+ },
+ {
+  "id": "it4-combinati-018",
+  "topic": "combinati",
+  "rule": "comb-ce",
+  "q": "Avete le chiavi? Sì, [ce le] abbiamo.",
+  "alt": [
+   "ce li",
+   "le ci",
+   "ci le"
+  ],
+  "why": "Le chiavi är femininum plural: ce le abbiamo.",
+  "sv": "Har ni nycklarna? Ja, vi har dem."
+ },
+ {
+  "id": "it4-combinati-019",
+  "topic": "combinati",
+  "rule": "comb-me",
+  "q": "Puoi prestarmi la bici? Sì, posso [prestartela].",
+  "alt": [
+   "prestarte la",
+   "prestartila",
+   "prestarla ti"
+  ],
+  "why": "Med infinitiv hängs båda pronomenen på verbet: prestartela.",
+  "sv": "Kan du låna mig cykeln? Ja, jag kan låna ut den till dig."
+ },
+ {
+  "id": "it4-combinati-020",
+  "topic": "combinati",
+  "rule": "comb-me",
+  "q": "Ti hanno spiegato l'esercizio? No, non [me l'hanno] spiegato.",
+  "alt": [
+   "mi l'hanno",
+   "me lo hanno",
+   "te l'hanno"
+  ],
+  "why": "Mi + lo = me lo, framför hanno: me l'hanno.",
+  "sv": "Har de förklarat övningen för dig? Nej, de har inte förklarat den för mig."
+ },
+ {
+  "id": "it4-combinati-021",
+  "topic": "combinati",
+  "rule": "comb-me",
+  "q": "Dammi il sale! – Aspetta, [te lo] passo subito.",
+  "alt": [
+   "ti lo",
+   "te la",
+   "lo ti"
+  ],
+  "why": "Il sale är maskulinum: te lo.",
+  "sv": "Ge mig saltet! – Vänta, jag skickar det till dig direkt."
+ },
+ {
+  "id": "it4-combinati-022",
+  "topic": "combinati",
+  "rule": "comb-glie",
+  "q": "Il regalo per la mamma? [Gliel'abbiamo] già dato.",
+  "alt": [
+   "Le l'abbiamo",
+   "Glie l'abbiamo",
+   "L'le abbiamo"
+  ],
+  "why": "Le (till henne) + lo = glielo, framför abbiamo: gliel'abbiamo.",
+  "sv": "Presenten till mamma? Vi har redan gett henne den."
+ },
+ {
+  "id": "it4-trapassato-001",
+  "topic": "trapassato",
+  "rule": "trap-forme",
+  "q": "Quando sono arrivato, il film [era già cominciato].",
+  "alt": [
+   "è già cominciato",
+   "già cominciava",
+   "sarà già cominciato"
+  ],
+  "why": "Något som hade hänt före en annan händelse i dåtid: trapassato prossimo (imperfetto av essere + particip).",
+  "sv": "När jag kom hade filmen redan börjat."
+ },
+ {
+  "id": "it4-trapassato-002",
+  "topic": "trapassato",
+  "rule": "trap-forme",
+  "q": "Non avevo fame perché [avevo già mangiato].",
+  "alt": [
+   "ho già mangiato",
+   "mangiavo già",
+   "avrò già mangiato"
+  ],
+  "why": "Ätandet kom före: trapassato med avere.",
+  "sv": "Jag var inte hungrig, för jag hade redan ätit."
+ },
+ {
+  "id": "it4-trapassato-003",
+  "topic": "trapassato",
+  "rule": "trap-forme",
+  "q": "Maria era stanca perché [era tornata] tardi.",
+  "alt": [
+   "è tornata",
+   "aveva tornato",
+   "tornava"
+  ],
+  "why": "Tornare tar essere: era tornata.",
+  "sv": "Maria var trött, för hon hade kommit hem sent."
+ },
+ {
+  "id": "it4-trapassato-004",
+  "topic": "trapassato",
+  "rule": "trap-forme",
+  "q": "Quando li ho chiamati, [erano già partiti].",
+  "alt": [
+   "sono già partiti",
+   "avevano già partito",
+   "partivano già"
+  ],
+  "why": "Partire tar essere, participet i plural: erano partiti.",
+  "sv": "När jag ringde dem hade de redan åkt."
+ },
+ {
+  "id": "it4-trapassato-005",
+  "topic": "trapassato",
+  "rule": "trap-forme",
+  "q": "Non l'ho riconosciuta: non l'[avevo] mai vista prima.",
+  "alt": [
+   "ho",
+   "avrò",
+   "avessi"
+  ],
+  "why": "Trapassato: avevo + particip. Hon hade aldrig setts förut.",
+  "sv": "Jag kände inte igen henne: jag hade aldrig sett henne förut."
+ },
+ {
+  "id": "it4-trapassato-006",
+  "topic": "trapassato",
+  "rule": "trap-forme",
+  "q": "Mi ha raccontato che [si era trasferito] a Milano.",
+  "alt": [
+   "si è trasferito",
+   "si aveva trasferito",
+   "si trasferiva"
+  ],
+  "why": "Reflexiva verb tar essere: si era trasferito.",
+  "sv": "Han berättade för mig att han hade flyttat till Milano."
+ },
+ {
+  "id": "it4-trapassato-007",
+  "topic": "trapassato",
+  "rule": "trap-forme",
+  "q": "Avete visto il film che vi [avevo consigliato]?",
+  "alt": [
+   "ho consigliato",
+   "consigliavo",
+   "avrò consigliato"
+  ],
+  "why": "Rådet kom före att de såg filmen: trapassato.",
+  "sv": "Såg ni filmen som jag hade rekommenderat er?"
+ },
+ {
+  "id": "it4-trapassato-008",
+  "topic": "trapassato",
+  "rule": "trap-forme",
+  "q": "Ero felice perché [avevo superato] l'esame.",
+  "alt": [
+   "ho superato",
+   "superavo",
+   "superai"
+  ],
+  "why": "Provet klarades före glädjen: trapassato.",
+  "sv": "Jag var glad för att jag hade klarat provet."
+ },
+ {
+  "id": "it4-trapassato-009",
+  "topic": "trapassato",
+  "rule": "trap-uso",
+  "q": "Ieri [ho incontrato] Luca al bar.",
+  "alt": [
+   "avevo incontrato",
+   "incontravo",
+   "avrò incontrato"
+  ],
+  "why": "En vanlig händelse i dåtid utan någon tidigare händelse att jämföra med: passato prossimo.",
+  "sv": "I går träffade jag Luca på kaféet."
+ },
+ {
+  "id": "it4-trapassato-010",
+  "topic": "trapassato",
+  "rule": "trap-uso",
+  "q": "Luca mi ha detto che [aveva perso] il portafoglio.",
+  "alt": [
+   "perde",
+   "perderà",
+   "ha perso che"
+  ],
+  "why": "Det han berättade om hade hänt före: trapassato.",
+  "sv": "Luca sa till mig att han hade tappat plånboken."
+ },
+ {
+  "id": "it4-trapassato-011",
+  "topic": "trapassato",
+  "rule": "trap-uso",
+  "q": "Quando siamo arrivati alla stazione, il treno [era già partito].",
+  "alt": [
+   "partiva",
+   "è partito",
+   "partirà"
+  ],
+  "why": "Tåget gick före vår ankomst: trapassato.",
+  "sv": "När vi kom till stationen hade tåget redan gått."
+ },
+ {
+  "id": "it4-trapassato-012",
+  "topic": "trapassato",
+  "rule": "trap-uso",
+  "q": "Prima di quel viaggio non [ero mai stata] all'estero.",
+  "alt": [
+   "sono mai stata",
+   "ero mai",
+   "sarei mai stata"
+  ],
+  "why": "Före en tidpunkt i dåtid: trapassato.",
+  "sv": "Före den resan hade jag aldrig varit utomlands."
+ },
+ {
+  "id": "it4-trapassato-013",
+  "topic": "trapassato",
+  "rule": "trap-uso",
+  "q": "Il ladro [era entrato] dalla finestra che qualcuno aveva lasciato aperta.",
+  "alt": [
+   "entrava",
+   "aveva entrato",
+   "entrerà"
+  ],
+  "why": "Entrare tar essere: era entrato.",
+  "sv": "Tjuven hade tagit sig in genom fönstret som någon hade lämnat öppet."
+ },
+ {
+  "id": "it4-trapassato-014",
+  "topic": "trapassato",
+  "rule": "trap-forme",
+  "q": "Antonio cercava la bicicletta che gli [avevano rubato].",
+  "alt": [
+   "hanno rubato",
+   "rubavano",
+   "ruberanno"
+  ],
+  "why": "Stölden kom före letandet: trapassato.",
+  "sv": "Antonio letade efter cykeln som de hade stulit från honom."
+ },
+ {
+  "id": "it4-trapassato-015",
+  "topic": "trapassato",
+  "rule": "trap-forme",
+  "q": "Le ragazze [erano uscite] prima della pioggia.",
+  "alt": [
+   "sono uscite",
+   "avevano uscito",
+   "uscivano"
+  ],
+  "why": "Uscire tar essere, femininum plural: erano uscite.",
+  "sv": "Tjejerna hade gått ut före regnet."
+ },
+ {
+  "id": "it4-trapassato-016",
+  "topic": "trapassato",
+  "rule": "trap-uso",
+  "q": "Siccome non [avevo studiato], ho preso un brutto voto.",
+  "alt": [
+   "ho studiato",
+   "studierò",
+   "studio"
+  ],
+  "why": "Orsaken kom före följden: trapassato.",
+  "sv": "Eftersom jag inte hade pluggat fick jag ett dåligt betyg."
+ },
+ {
+  "id": "it4-trapassato-017",
+  "topic": "trapassato",
+  "rule": "trap-forme",
+  "q": "Non sapevo che voi vi [eravate conosciuti] in Spagna.",
+  "alt": [
+   "siete conosciuti",
+   "avevate conosciuto",
+   "conoscevate"
+  ],
+  "why": "Conoscersi (reflexivt, träffas första gången) tar essere.",
+  "sv": "Jag visste inte att ni hade träffats i Spanien."
+ },
+ {
+  "id": "it4-trapassato-018",
+  "topic": "trapassato",
+  "rule": "trap-uso",
+  "q": "Il romanzo [era stato pubblicato] vent'anni prima.",
+  "alt": [
+   "è pubblicato",
+   "fu pubblicato",
+   "sarà pubblicato"
+  ],
+  "why": "Passiv i trapassato: era stato pubblicato.",
+  "sv": "Romanen hade getts ut tjugo år tidigare."
+ },
+ {
+  "id": "it4-trapassato-019",
+  "topic": "trapassato",
+  "rule": "trap-forme",
+  "q": "Quando ho acceso la TV, la partita [era già finita].",
+  "alt": [
+   "finiva",
+   "è finita",
+   "aveva finita"
+  ],
+  "why": "Finire om något som tar slut tar essere.",
+  "sv": "När jag satte på tv:n var matchen redan slut."
+ },
+ {
+  "id": "it4-relativi-001",
+  "topic": "relativi",
+  "rule": "rel-chi",
+  "q": "[Chi] cerca, trova.",
+  "alt": [
+   "Che",
+   "Cui",
+   "Quale"
+  ],
+  "why": "Chi = den som. Står utan förled.",
+  "sv": "Den som söker, finner."
+ },
+ {
+  "id": "it4-relativi-002",
+  "topic": "relativi",
+  "rule": "rel-chi",
+  "q": "[Chi] arriva tardi non può entrare.",
+  "alt": [
+   "Che",
+   "Quello",
+   "Cui"
+  ],
+  "why": "Chi = den som, med verbet i singular.",
+  "sv": "Den som kommer sent får inte komma in."
+ },
+ {
+  "id": "it4-relativi-003",
+  "topic": "relativi",
+  "rule": "rel-chi",
+  "q": "Ringrazio [chi] mi ha aiutato.",
+  "alt": [
+   "che",
+   "cui",
+   "il quale"
+  ],
+  "why": "Utan förled: chi (= coloro che).",
+  "sv": "Jag tackar dem som har hjälpt mig."
+ },
+ {
+  "id": "it4-relativi-004",
+  "topic": "relativi",
+  "rule": "rel-chi",
+  "q": "Non parlo con [chi] dice bugie.",
+  "alt": [
+   "che",
+   "cui",
+   "quale"
+  ],
+  "why": "Chi = den som.",
+  "sv": "Jag pratar inte med den som ljuger."
+ },
+ {
+  "id": "it4-relativi-005",
+  "topic": "relativi",
+  "rule": "rel-quello",
+  "q": "Non capisco [quello che] dici.",
+  "alt": [
+   "che",
+   "chi",
+   "cui"
+  ],
+  "why": "Quello che = det som. Che ensamt behöver ett substantiv före.",
+  "sv": "Jag förstår inte vad du säger."
+ },
+ {
+  "id": "it4-relativi-006",
+  "topic": "relativi",
+  "rule": "rel-quello",
+  "q": "[Quello che] mi piace di più è il finale.",
+  "alt": [
+   "Che",
+   "Chi",
+   "Cui"
+  ],
+  "why": "Quello che = det som.",
+  "sv": "Det jag gillar mest är slutet."
+ },
+ {
+  "id": "it4-relativi-007",
+  "topic": "relativi",
+  "rule": "rel-quello",
+  "q": "Fai [quello che] vuoi.",
+  "alt": [
+   "che",
+   "chi",
+   "cui"
+  ],
+  "why": "Quello che = det som.",
+  "sv": "Gör som du vill."
+ },
+ {
+  "id": "it4-relativi-008",
+  "topic": "relativi",
+  "rule": "rel-quello",
+  "q": "Ho fatto tutto [quello che] potevo.",
+  "alt": [
+   "che quello",
+   "chi",
+   "cui"
+  ],
+  "why": "Tutto quello che = allt det som.",
+  "sv": "Jag har gjort allt jag kunde."
+ },
+ {
+  "id": "it4-relativi-009",
+  "topic": "relativi",
+  "rule": "rel-quale",
+  "q": "Ho parlato con la direttrice, [la quale] mi ha dato ragione.",
+  "alt": [
+   "il quale",
+   "i quali",
+   "le quali"
+  ],
+  "why": "La direttrice är femininum singular: la quale.",
+  "sv": "Jag talade med rektorn, som gav mig rätt."
+ },
+ {
+  "id": "it4-relativi-010",
+  "topic": "relativi",
+  "rule": "rel-quale",
+  "q": "Sono arrivati i nuovi studenti, [i quali] vengono dalla Spagna.",
+  "alt": [
+   "il quale",
+   "le quali",
+   "la quale"
+  ],
+  "why": "Studenti är maskulinum plural: i quali.",
+  "sv": "De nya studenterna har kommit, och de kommer från Spanien."
+ },
+ {
+  "id": "it4-relativi-011",
+  "topic": "relativi",
+  "rule": "rel-quale",
+  "q": "Questo è il film del [quale] ti ho parlato.",
+  "alt": [
+   "che",
+   "chi",
+   "quale il"
+  ],
+  "why": "Efter preposition: del quale (= di cui).",
+  "sv": "Det här är filmen som jag berättade om för dig."
+ },
+ {
+  "id": "it4-relativi-012",
+  "topic": "relativi",
+  "rule": "rel-quale",
+  "q": "Le ragioni per [le quali] sono partito sono personali.",
+  "alt": [
+   "i quali",
+   "la quale",
+   "che"
+  ],
+  "why": "Ragioni är femininum plural: per le quali.",
+  "sv": "Skälen till att jag åkte är personliga."
+ },
+ {
+  "id": "it4-relativi-013",
+  "topic": "relativi",
+  "rule": "rel-cui",
+  "q": "La città in [cui] vivo è piccola.",
+  "alt": [
+   "che",
+   "quale",
+   "chi"
+  ],
+  "why": "Efter preposition: cui.",
+  "sv": "Staden som jag bor i är liten."
+ },
+ {
+  "id": "it4-relativi-014",
+  "topic": "relativi",
+  "rule": "rel-cui",
+  "q": "Il ragazzo con [cui] esco si chiama Luca.",
+  "alt": [
+   "che",
+   "chi",
+   "il quale con"
+  ],
+  "why": "Con + cui.",
+  "sv": "Killen som jag går ut med heter Luca."
+ },
+ {
+  "id": "it4-relativi-015",
+  "topic": "relativi",
+  "rule": "rel-cui",
+  "q": "È un libro di [cui] tutti parlano.",
+  "alt": [
+   "che",
+   "chi",
+   "quale"
+  ],
+  "why": "Parlare di: di cui.",
+  "sv": "Det är en bok som alla pratar om."
+ },
+ {
+  "id": "it4-relativi-016",
+  "topic": "relativi",
+  "rule": "rel-cui",
+  "q": "Il motivo per [cui] ti chiamo è semplice.",
+  "alt": [
+   "che",
+   "quale",
+   "chi"
+  ],
+  "why": "Per cui = därför, varför.",
+  "sv": "Anledningen till att jag ringer dig är enkel."
+ },
+ {
+  "id": "it4-relativi-017",
+  "topic": "relativi",
+  "rule": "rel-quello",
+  "q": "Mi ha detto [quello che] pensava.",
+  "alt": [
+   "che",
+   "chi",
+   "cui"
+  ],
+  "why": "Quello che = det som.",
+  "sv": "Han sa det han tänkte."
+ },
+ {
+  "id": "it4-relativi-018",
+  "topic": "relativi",
+  "rule": "rel-chi",
+  "q": "C'è [chi] preferisce il mare e chi la montagna.",
+  "alt": [
+   "che",
+   "cui",
+   "quello"
+  ],
+  "why": "C'è chi … e chi … = somliga … andra.",
+  "sv": "En del föredrar havet och andra bergen."
+ },
+ {
+  "id": "it4-relativi-019",
+  "topic": "relativi",
+  "rule": "rel-cui",
+  "q": "Il regista di [cui] ti ho parlato ha vinto un premio.",
+  "alt": [
+   "che",
+   "chi",
+   "quale"
+  ],
+  "why": "Parlare di qualcuno: di cui.",
+  "sv": "Regissören som jag berättade om har vunnit ett pris."
+ },
+ {
+  "id": "it4-relativi-020",
+  "topic": "relativi",
+  "rule": "rel-quale",
+  "q": "Il signore accanto al [quale] ero seduto era un attore.",
+  "alt": [
+   "cui",
+   "che",
+   "chi"
+  ],
+  "why": "Efter en sammansatt preposition (accanto a): al quale.",
+  "sv": "Mannen som jag satt bredvid var skådespelare."
+ },
+ {
+  "id": "it4-connettivi-001",
+  "topic": "connettivi",
+  "rule": "conn-cons",
+  "q": "Pioveva, [quindi] siamo rimasti a casa.",
+  "alt": [
+   "anche se",
+   "invece",
+   "mentre"
+  ],
+  "why": "Följd: quindi = alltså, så.",
+  "sv": "Det regnade, så vi stannade hemma."
+ },
+ {
+  "id": "it4-connettivi-002",
+  "topic": "connettivi",
+  "rule": "conn-cons",
+  "q": "Ho perso l'autobus, [perciò] sono arrivato tardi.",
+  "alt": [
+   "siccome",
+   "anche se",
+   "però"
+  ],
+  "why": "Perciò = därför.",
+  "sv": "Jag missade bussen, därför kom jag för sent."
+ },
+ {
+  "id": "it4-connettivi-003",
+  "topic": "connettivi",
+  "rule": "conn-cons",
+  "q": "Non ho soldi, [quindi] non posso venire.",
+  "alt": [
+   "però",
+   "siccome",
+   "anche se"
+  ],
+  "why": "Följd: quindi.",
+  "sv": "Jag har inga pengar, så jag kan inte komma."
+ },
+ {
+  "id": "it4-connettivi-004",
+  "topic": "connettivi",
+  "rule": "conn-contr",
+  "q": "Io amo il caldo; mio fratello [invece] preferisce il freddo.",
+  "alt": [
+   "quindi",
+   "perciò",
+   "siccome"
+  ],
+  "why": "Kontrast: invece = däremot.",
+  "sv": "Jag älskar värme; min bror föredrar däremot kyla."
+ },
+ {
+  "id": "it4-connettivi-005",
+  "topic": "connettivi",
+  "rule": "conn-contr",
+  "q": "Il film è lungo, [però] è bellissimo.",
+  "alt": [
+   "quindi",
+   "siccome",
+   "perciò"
+  ],
+  "why": "Kontrast: però = men.",
+  "sv": "Filmen är lång, men den är jättebra."
+ },
+ {
+  "id": "it4-connettivi-006",
+  "topic": "connettivi",
+  "rule": "conn-contr",
+  "q": "Al Nord fa freddo, [mentre] al Sud fa caldo.",
+  "alt": [
+   "quindi",
+   "siccome",
+   "perciò"
+  ],
+  "why": "Mentre kan uttrycka kontrast: medan däremot.",
+  "sv": "I norr är det kallt, medan det är varmt i söder."
+ },
+ {
+  "id": "it4-connettivi-007",
+  "topic": "connettivi",
+  "rule": "conn-contr",
+  "q": "[Mentre] cucinavo, ascoltavo la radio.",
+  "alt": [
+   "Siccome",
+   "Quindi",
+   "Perciò"
+  ],
+  "why": "Mentre = medan (samtidighet).",
+  "sv": "Medan jag lagade mat lyssnade jag på radio."
+ },
+ {
+  "id": "it4-connettivi-008",
+  "topic": "connettivi",
+  "rule": "conn-causa",
+  "q": "[Siccome] era tardi, abbiamo preso un taxi.",
+  "alt": [
+   "Quindi",
+   "Perciò",
+   "Anche se"
+  ],
+  "why": "Siccome = eftersom, står först i meningen.",
+  "sv": "Eftersom det var sent tog vi en taxi."
+ },
+ {
+  "id": "it4-connettivi-009",
+  "topic": "connettivi",
+  "rule": "conn-causa",
+  "q": "Sono rimasto a casa [perché] ero malato.",
+  "alt": [
+   "siccome",
+   "quindi",
+   "anche se"
+  ],
+  "why": "Perché = för att, eftersom, står efter huvudsatsen.",
+  "sv": "Jag stannade hemma för att jag var sjuk."
+ },
+ {
+  "id": "it4-connettivi-010",
+  "topic": "connettivi",
+  "rule": "conn-causa",
+  "q": "[Siccome] non parlo tedesco, ho chiesto aiuto.",
+  "alt": [
+   "Perciò",
+   "Invece",
+   "Anche se"
+  ],
+  "why": "Orsak först i meningen: siccome.",
+  "sv": "Eftersom jag inte talar tyska bad jag om hjälp."
+ },
+ {
+  "id": "it4-connettivi-011",
+  "topic": "connettivi",
+  "rule": "conn-conc",
+  "q": "[Anche se] è stanca, continua a studiare.",
+  "alt": [
+   "Siccome",
+   "Quindi",
+   "Perciò"
+  ],
+  "why": "Anche se = även om.",
+  "sv": "Även om hon är trött fortsätter hon att plugga."
+ },
+ {
+  "id": "it4-connettivi-012",
+  "topic": "connettivi",
+  "rule": "conn-conc",
+  "q": "Esco lo stesso, [anche se] piove.",
+  "alt": [
+   "perché",
+   "quindi",
+   "siccome"
+  ],
+  "why": "Anche se + indikativ = även om.",
+  "sv": "Jag går ut ändå, även om det regnar."
+ },
+ {
+  "id": "it4-connettivi-013",
+  "topic": "connettivi",
+  "rule": "conn-conc",
+  "q": "[Anche se] non lo conosco bene, mi sembra simpatico.",
+  "alt": [
+   "Siccome",
+   "Perciò",
+   "Invece"
+  ],
+  "why": "Medgivande: anche se.",
+  "sv": "Även om jag inte känner honom så väl verkar han trevlig."
+ },
+ {
+  "id": "it4-connettivi-014",
+  "topic": "connettivi",
+  "rule": "conn-cons",
+  "q": "È un tema importante; [perciò] ne parliamo oggi.",
+  "alt": [
+   "anche se",
+   "mentre",
+   "siccome"
+  ],
+  "why": "Perciò = därför.",
+  "sv": "Det är ett viktigt ämne; därför pratar vi om det i dag."
+ },
+ {
+  "id": "it4-connettivi-015",
+  "topic": "connettivi",
+  "rule": "conn-contr",
+  "q": "Volevo andare al mare; [invece] sono rimasto in città.",
+  "alt": [
+   "quindi",
+   "perciò",
+   "siccome"
+  ],
+  "why": "Invece = i stället.",
+  "sv": "Jag ville åka till havet; i stället stannade jag i stan."
+ },
+ {
+  "id": "it4-connettivi-016",
+  "topic": "connettivi",
+  "rule": "conn-cons",
+  "q": "Il biglietto è caro; [inoltre] il treno è sempre in ritardo.",
+  "alt": [
+   "invece",
+   "anche se",
+   "siccome"
+  ],
+  "why": "Inoltre = dessutom (lägger till ett argument).",
+  "sv": "Biljetten är dyr; dessutom är tåget alltid försenat."
+ },
+ {
+  "id": "it4-connettivi-017",
+  "topic": "connettivi",
+  "rule": "conn-contr",
+  "q": "Il progetto è interessante; [tuttavia] costa troppo.",
+  "alt": [
+   "quindi",
+   "siccome",
+   "inoltre"
+  ],
+  "why": "Tuttavia = dock (formellt).",
+  "sv": "Projektet är intressant; det kostar dock för mycket."
+ },
+ {
+  "id": "it4-connettivi-018",
+  "topic": "connettivi",
+  "rule": "conn-cons",
+  "q": "Ha studiato molto; [infatti] ha preso dieci.",
+  "alt": [
+   "invece",
+   "anche se",
+   "però"
+  ],
+  "why": "Infatti bekräftar det som sagts: mycket riktigt.",
+  "sv": "Han pluggade mycket; mycket riktigt fick han högsta betyg."
+ },
+ {
+  "id": "it4-connettivi-019",
+  "topic": "connettivi",
+  "rule": "conn-causa",
+  "q": "Non posso uscire [perché] devo studiare.",
+  "alt": [
+   "siccome",
+   "quindi",
+   "invece"
+  ],
+  "why": "Perché i mitten av meningen, efter huvudsatsen.",
+  "sv": "Jag kan inte gå ut för att jag måste plugga."
+ },
+ {
+  "id": "it4-imp-lei-001",
+  "topic": "imp-lei",
+  "rule": "lei-forme",
+  "q": "Buongiorno signora, [entri] pure!",
+  "alt": [
+   "entra",
+   "entrate",
+   "entrare"
+  ],
+  "why": "Imperativ med Lei av -are-verb: -i (entri).",
+  "sv": "God dag frun, varsågod och kom in!"
+ },
+ {
+  "id": "it4-imp-lei-002",
+  "topic": "imp-lei",
+  "rule": "lei-forme",
+  "q": "Signor Rossi, [prenda] questa medicina due volte al giorno.",
+  "alt": [
+   "prendi",
+   "prendete",
+   "prendere"
+  ],
+  "why": "Imperativ med Lei av -ere-verb: -a (prenda).",
+  "sv": "Herr Rossi, ta den här medicinen två gånger om dagen."
+ },
+ {
+  "id": "it4-imp-lei-003",
+  "topic": "imp-lei",
+  "rule": "lei-forme",
+  "q": "[Senta], scusi, dov'è la stazione?",
+  "alt": [
+   "Senti",
+   "Sentite",
+   "Sentire"
+  ],
+  "why": "Imperativ med Lei av sentire: senta. Används för att få uppmärksamhet.",
+  "sv": "Hör här, ursäkta, var ligger stationen?"
+ },
+ {
+  "id": "it4-imp-lei-004",
+  "topic": "imp-lei",
+  "rule": "lei-forme",
+  "q": "Per il museo, [giri] a destra.",
+  "alt": [
+   "gira",
+   "girate",
+   "girare"
+  ],
+  "why": "-are-verb får -i med Lei: giri.",
+  "sv": "Till museet svänger ni till höger."
+ },
+ {
+  "id": "it4-imp-lei-005",
+  "topic": "imp-lei",
+  "rule": "lei-forme",
+  "q": "[Venga] pure, il dottore La aspetta.",
+  "alt": [
+   "Vieni",
+   "Venite",
+   "Venire"
+  ],
+  "why": "Oregelbundet: venire → venga (samma som congiuntivo).",
+  "sv": "Kom in, doktorn väntar på er."
+ },
+ {
+  "id": "it4-imp-lei-006",
+  "topic": "imp-lei",
+  "rule": "lei-forme",
+  "q": "[Faccia] attenzione, il pavimento è bagnato.",
+  "alt": [
+   "Fai",
+   "Fate",
+   "Fare"
+  ],
+  "why": "Fare → faccia med Lei.",
+  "sv": "Var försiktig, golvet är vått."
+ },
+ {
+  "id": "it4-imp-lei-007",
+  "topic": "imp-lei",
+  "rule": "lei-forme",
+  "q": "[Abbia] pazienza, arrivo subito.",
+  "alt": [
+   "Abbi",
+   "Abbiate",
+   "Avere"
+  ],
+  "why": "Avere → abbia med Lei.",
+  "sv": "Ha tålamod, jag kommer strax."
+ },
+ {
+  "id": "it4-imp-lei-008",
+  "topic": "imp-lei",
+  "rule": "lei-forme",
+  "q": "[Vada] sempre dritto e poi a sinistra.",
+  "alt": [
+   "Vai",
+   "Andate",
+   "Andare"
+  ],
+  "why": "Andare → vada med Lei.",
+  "sv": "Gå rakt fram och sedan till vänster."
+ },
+ {
+  "id": "it4-imp-lei-009",
+  "topic": "imp-lei",
+  "rule": "lei-forme",
+  "q": "[Finisca] pure di mangiare, non c'è fretta.",
+  "alt": [
+   "Finisci",
+   "Finite",
+   "Finire"
+  ],
+  "why": "-isc-verb: finisca med Lei.",
+  "sv": "Ät färdigt i lugn och ro, det är ingen brådska."
+ },
+ {
+  "id": "it4-imp-lei-010",
+  "topic": "imp-lei",
+  "rule": "lei-pron",
+  "q": "Buongiorno, [mi dica]!",
+  "alt": [
+   "dimmi",
+   "mi dici",
+   "ditemi"
+  ],
+  "why": "Med Lei står pronomenet före verbet: mi dica. Med tu hängs det på: dimmi.",
+  "sv": "God dag, vad kan jag hjälpa till med?"
+ },
+ {
+  "id": "it4-imp-lei-011",
+  "topic": "imp-lei",
+  "rule": "lei-pron",
+  "q": "Prego, [si accomodi].",
+  "alt": [
+   "accomodati",
+   "si accomoda",
+   "accomodatevi"
+  ],
+  "why": "Accomodarsi med Lei: si accomodi.",
+  "sv": "Varsågod, sätt er."
+ },
+ {
+  "id": "it4-imp-lei-012",
+  "topic": "imp-lei",
+  "rule": "lei-pron",
+  "q": "Ecco il modulo: [lo compili] e me lo riporti.",
+  "alt": [
+   "compilalo",
+   "lo compila",
+   "compilatelo"
+  ],
+  "why": "Med Lei: pronomen före verbet, lo compili.",
+  "sv": "Här är blanketten: fyll i den och lämna tillbaka den till mig."
+ },
+ {
+  "id": "it4-imp-lei-013",
+  "topic": "imp-lei",
+  "rule": "lei-pron",
+  "q": "Se ha domande, [mi chiami].",
+  "alt": [
+   "chiamami",
+   "mi chiama",
+   "chiamatemi"
+  ],
+  "why": "Med Lei: mi chiami.",
+  "sv": "Om ni har frågor, ring mig."
+ },
+ {
+  "id": "it4-imp-lei-014",
+  "topic": "imp-lei",
+  "rule": "lei-pron",
+  "q": "Il passaporto, per favore. [Me lo dia].",
+  "alt": [
+   "Dammelo",
+   "Me lo dà",
+   "Datemelo"
+  ],
+  "why": "Dare → dia med Lei. Pronomenen före: me lo dia.",
+  "sv": "Passet, tack. Ge mig det."
+ },
+ {
+  "id": "it4-imp-lei-015",
+  "topic": "imp-lei",
+  "rule": "lei-pron",
+  "q": "[Si ricordi] di prendere le pastiglie.",
+  "alt": [
+   "Ricordati",
+   "Si ricorda",
+   "Ricordatevi"
+  ],
+  "why": "Ricordarsi med Lei: si ricordi.",
+  "sv": "Kom ihåg att ta tabletterna."
+ },
+ {
+  "id": "it4-imp-lei-016",
+  "topic": "imp-lei",
+  "rule": "lei-neg",
+  "q": "[Non si preoccupi], non è niente di grave.",
+  "alt": [
+   "Non preoccuparti",
+   "Non si preoccupa",
+   "Non preoccupatevi"
+  ],
+  "why": "Nekad imperativ med Lei: non + Lei-formen.",
+  "sv": "Oroa er inte, det är inget allvarligt."
+ },
+ {
+  "id": "it4-imp-lei-017",
+  "topic": "imp-lei",
+  "rule": "lei-neg",
+  "q": "Signora, [non fumi] qui, per favore.",
+  "alt": [
+   "non fumare",
+   "non fuma",
+   "non fumate"
+  ],
+  "why": "Non + Lei-formen: non fumi.",
+  "sv": "Frun, rök inte här, är ni snäll."
+ },
+ {
+  "id": "it4-imp-lei-018",
+  "topic": "imp-lei",
+  "rule": "lei-neg",
+  "q": "[Non dimentichi] l'ombrello!",
+  "alt": [
+   "Non dimenticare",
+   "Non dimentica",
+   "Non dimenticate"
+  ],
+  "why": "Non + Lei-formen: non dimentichi (h för k-ljudet).",
+  "sv": "Glöm inte paraplyet!"
+ },
+ {
+  "id": "it4-imp-lei-019",
+  "topic": "imp-lei",
+  "rule": "lei-forme",
+  "q": "[Scusi], che ore sono?",
+  "alt": [
+   "Scusa",
+   "Scusate",
+   "Scusare"
+  ],
+  "why": "Scusare med Lei: scusi.",
+  "sv": "Ursäkta, vad är klockan?"
+ },
+ {
+  "id": "it4-imp-lei-020",
+  "topic": "imp-lei",
+  "rule": "lei-pron",
+  "q": "Il dottore arriva subito, [si sieda] qui.",
+  "alt": [
+   "siediti",
+   "si siede",
+   "sedetevi"
+  ],
+  "why": "Sedersi med Lei: si sieda.",
+  "sv": "Doktorn kommer strax, sätt er här."
+ },
+ {
+  "id": "it4-pron-verbi-001",
+  "topic": "pron-verbi",
+  "rule": "pv-andarsene",
+  "q": "È tardi, [me ne vado].",
+  "alt": [
+   "mi vado",
+   "me ne va",
+   "ne vado"
+  ],
+  "why": "Andarsene: me ne vado = jag går härifrån.",
+  "sv": "Det är sent, jag går nu."
+ },
+ {
+  "id": "it4-pron-verbi-002",
+  "topic": "pron-verbi",
+  "rule": "pv-andarsene",
+  "q": "Perché [te ne vai] già?",
+  "alt": [
+   "ti vai",
+   "te ne va",
+   "ne vai"
+  ],
+  "why": "Andarsene, tu: te ne vai.",
+  "sv": "Varför går du redan?"
+ },
+ {
+  "id": "it4-pron-verbi-003",
+  "topic": "pron-verbi",
+  "rule": "pv-andarsene",
+  "q": "Luca [se n'è andato] senza salutare.",
+  "alt": [
+   "si è andato",
+   "se ne ha andato",
+   "ne è andato"
+  ],
+  "why": "Andarsene i passato prossimo: se n'è andato (essere).",
+  "sv": "Luca gick utan att säga hej då."
+ },
+ {
+  "id": "it4-pron-verbi-004",
+  "topic": "pron-verbi",
+  "rule": "pv-andarsene",
+  "q": "[Andiamocene], questo film è noioso!",
+  "alt": [
+   "Andiamoci",
+   "Andiamo",
+   "Andiamone"
+  ],
+  "why": "Imperativ noi av andarsene: andiamocene.",
+  "sv": "Vi går härifrån, den här filmen är tråkig!"
+ },
+ {
+  "id": "it4-pron-verbi-005",
+  "topic": "pron-verbi",
+  "rule": "pv-andarsene",
+  "q": "Le ragazze [se ne sono andate] a mezzanotte.",
+  "alt": [
+   "si sono andate",
+   "se ne hanno andate",
+   "ne sono andate"
+  ],
+  "why": "Passato prossimo med essere, femininum plural.",
+  "sv": "Tjejerna gick vid midnatt."
+ },
+ {
+  "id": "it4-pron-verbi-006",
+  "topic": "pron-verbi",
+  "rule": "pv-farcela",
+  "q": "È troppo difficile, non [ce la faccio]!",
+  "alt": [
+   "ci faccio",
+   "ce lo faccio",
+   "la faccio"
+  ],
+  "why": "Farcela = klara det: ce la faccio.",
+  "sv": "Det är för svårt, jag klarar det inte!"
+ },
+ {
+  "id": "it4-pron-verbi-007",
+  "topic": "pron-verbi",
+  "rule": "pv-farcela",
+  "q": "Coraggio, [ce la farai]!",
+  "alt": [
+   "ce lo farai",
+   "ci farai",
+   "la farai"
+  ],
+  "why": "Farcela i futuro: ce la farai.",
+  "sv": "Kämpa på, du kommer att klara det!"
+ },
+ {
+  "id": "it4-pron-verbi-008",
+  "topic": "pron-verbi",
+  "rule": "pv-farcela",
+  "q": "Alla fine [ce l'ho fatta]: ho finito la maratona!",
+  "alt": [
+   "ce l'ho fatto",
+   "ce lo ho fatto",
+   "l'ho fatta"
+  ],
+  "why": "Farcela i passato prossimo: ce l'ho fatta (participet får -a efter la).",
+  "sv": "Till slut klarade jag det: jag fullföljde maratonloppet!"
+ },
+ {
+  "id": "it4-pron-verbi-009",
+  "topic": "pron-verbi",
+  "rule": "pv-farcela",
+  "q": "Pensi che [ce la facciamo] ad arrivare in tempo?",
+  "alt": [
+   "ce lo facciamo",
+   "ci facciamo",
+   "la facciamo"
+  ],
+  "why": "Farcela a + infinitiv.",
+  "sv": "Tror du att vi hinner fram i tid?"
+ },
+ {
+  "id": "it4-pron-verbi-010",
+  "topic": "pron-verbi",
+  "rule": "pv-farcela",
+  "q": "Siamo stanchi, non [ce la facciamo] più.",
+  "alt": [
+   "ce la fanno",
+   "ci facciamo",
+   "ce lo facciamo"
+  ],
+  "why": "Noi-form: ce la facciamo.",
+  "sv": "Vi är trötta, vi orkar inte mer."
+ },
+ {
+  "id": "it4-pron-verbi-011",
+  "topic": "pron-verbi",
+  "rule": "pv-metterci",
+  "q": "Quanto tempo [ci vuole] per arrivare a Roma?",
+  "alt": [
+   "ci vogliono",
+   "ci metti",
+   "ci mette ne"
+  ],
+  "why": "Volerci + singular (tempo): ci vuole.",
+  "sv": "Hur lång tid tar det att komma till Rom?"
+ },
+ {
+  "id": "it4-pron-verbi-012",
+  "topic": "pron-verbi",
+  "rule": "pv-metterci",
+  "q": "[Ci vogliono] tre ore in treno.",
+  "alt": [
+   "Ci vuole",
+   "Ci metto",
+   "Ne vogliono"
+  ],
+  "why": "Volerci + plural (tre ore): ci vogliono.",
+  "sv": "Det tar tre timmar med tåg."
+ },
+ {
+  "id": "it4-pron-verbi-013",
+  "topic": "pron-verbi",
+  "rule": "pv-metterci",
+  "q": "Io [ci metto] venti minuti ad andare a scuola.",
+  "alt": [
+   "ci vuole",
+   "ci vogliono",
+   "mi metto"
+  ],
+  "why": "Metterci: personen är subjekt. Io ci metto.",
+  "sv": "Det tar mig tjugo minuter att ta mig till skolan."
+ },
+ {
+  "id": "it4-pron-verbi-014",
+  "topic": "pron-verbi",
+  "rule": "pv-metterci",
+  "q": "Quanto [ci hai messo] a fare i compiti?",
+  "alt": [
+   "ci è voluto",
+   "ti sei messo",
+   "ci hai voluto"
+  ],
+  "why": "Metterci i passato prossimo tar avere: ci hai messo.",
+  "sv": "Hur lång tid tog det dig att göra läxorna?"
+ },
+ {
+  "id": "it4-pron-verbi-015",
+  "topic": "pron-verbi",
+  "rule": "pv-metterci",
+  "q": "Per fare il pane [ci vuole] pazienza.",
+  "alt": [
+   "ci vogliono",
+   "ci metto",
+   "ci mette"
+  ],
+  "why": "Volerci = behövas. Pazienza är singular: ci vuole.",
+  "sv": "För att baka bröd behövs tålamod."
+ },
+ {
+  "id": "it4-pron-verbi-016",
+  "topic": "pron-verbi",
+  "rule": "pv-metterci",
+  "q": "Per questa ricetta [ci vogliono] quattro uova.",
+  "alt": [
+   "ci vuole",
+   "ci mettono",
+   "ne vuole"
+  ],
+  "why": "Uova är plural: ci vogliono.",
+  "sv": "Till det här receptet behövs fyra ägg."
+ },
+ {
+  "id": "it4-pron-verbi-017",
+  "topic": "pron-verbi",
+  "rule": "pv-metterci",
+  "q": "[C'è voluta] un'ora per trovare parcheggio.",
+  "alt": [
+   "Ci ha voluto",
+   "Ci è voluto",
+   "C'è messo"
+  ],
+  "why": "Volerci tar essere och böjs efter subjektet: c'è voluta un'ora.",
+  "sv": "Det tog en timme att hitta parkering."
+ },
+ {
+  "id": "it4-pron-verbi-018",
+  "topic": "pron-verbi",
+  "rule": "pv-metterci",
+  "q": "I miei genitori [ci hanno messo] due giorni ad arrivare in Sicilia.",
+  "alt": [
+   "ci sono voluti",
+   "ci hanno voluto",
+   "si sono messi"
+  ],
+  "why": "Metterci: subjektet är personerna, avere som hjälpverb.",
+  "sv": "Mina föräldrar tog två dagar på sig att komma till Sicilien."
+ },
+ {
+  "id": "it4-pron-verbi-019",
+  "topic": "pron-verbi",
+  "rule": "pv-andarsene",
+  "q": "Se non ti piace, [vattene]!",
+  "alt": [
+   "vai via",
+   "te ne vai",
+   "vattine"
+  ],
+  "why": "Imperativ tu av andarsene: vattene (dubbel t).",
+  "sv": "Om du inte gillar det, gå härifrån!"
+ },
+ {
+  "id": "it4-pron-verbi-020",
+  "topic": "pron-verbi",
+  "rule": "pv-farcela",
+  "q": "L'esame era difficile, ma Sara [ce l'ha fatta].",
+  "alt": [
+   "ce l'ha fatto",
+   "ce lo ha fatto",
+   "l'ha fatta"
+  ],
+  "why": "Farcela: ce l'ha fatta (participet på -a).",
+  "sv": "Provet var svårt, men Sara klarade det."
+ }
+]

@@ -1,0 +1,288 @@
+[
+ {
+  "id": "conn-001",
+  "topic": "conn",
+  "rule": "conn-cause",
+  "q": "Je reste à la maison [parce que] je suis malade.",
+  "alt": [
+   "donc",
+   "pourtant",
+   "alors"
+  ],
+  "why": "Orsak: parce que (eftersom).",
+  "sv": "Jag stannar hemma eftersom jag är sjuk."
+ },
+ {
+  "id": "conn-002",
+  "topic": "conn",
+  "rule": "conn-cause",
+  "q": "[Comme] il pleuvait, on a pris le bus.",
+  "alt": [
+   "Parce qu'",
+   "Donc",
+   "Pourtant"
+  ],
+  "why": "Comme = eftersom, står först i meningen. Parce que står inte gärna först.",
+  "sv": "Eftersom det regnade tog vi bussen."
+ },
+ {
+  "id": "conn-003",
+  "topic": "conn",
+  "rule": "conn-cause",
+  "q": "Tu peux venir, [puisque] tu es en vacances.",
+  "alt": [
+   "pourtant",
+   "donc",
+   "alors que"
+  ],
+  "why": "Puisque = eftersom ju (något båda vet).",
+  "sv": "Du kan komma, du har ju lov."
+ },
+ {
+  "id": "conn-004",
+  "topic": "conn",
+  "rule": "conn-cause",
+  "q": "Il ne vient pas, [car] il a trop de travail.",
+  "alt": [
+   "donc",
+   "pourtant",
+   "mais"
+  ],
+  "why": "Car = för (skriftligt, efter kommatecken).",
+  "sv": "Han kommer inte, för han har för mycket att göra."
+ },
+ {
+  "id": "conn-005",
+  "topic": "conn",
+  "rule": "conn-cause",
+  "q": "Le match est annulé [à cause de] la tempête.",
+  "alt": [
+   "grâce à",
+   "parce que",
+   "car"
+  ],
+  "why": "À cause de + substantiv (negativ orsak).",
+  "sv": "Matchen är inställd på grund av stormen."
+ },
+ {
+  "id": "conn-006",
+  "topic": "conn",
+  "rule": "conn-cause",
+  "q": "J'ai trouvé un stage [grâce à] ma tante.",
+  "alt": [
+   "à cause de",
+   "parce que",
+   "donc"
+  ],
+  "why": "Grâce à + substantiv (positiv orsak: tack vare).",
+  "sv": "Jag fick en praktikplats tack vare min moster."
+ },
+ {
+  "id": "conn-007",
+  "topic": "conn",
+  "rule": "conn-cause",
+  "q": "Pourquoi tu ris ? – [Parce que] ton histoire est drôle.",
+  "alt": [
+   "Comme",
+   "Donc",
+   "Car"
+  ],
+  "why": "Svar på pourquoi: parce que.",
+  "sv": "Varför skrattar du? – För att din historia är rolig."
+ },
+ {
+  "id": "conn-008",
+  "topic": "conn",
+  "rule": "conn-cons",
+  "q": "Il a raté le bus, [donc] il est arrivé en retard.",
+  "alt": [
+   "parce qu'",
+   "comme",
+   "pourtant"
+  ],
+  "why": "Följd: donc (alltså, så).",
+  "sv": "Han missade bussen, så han kom för sent."
+ },
+ {
+  "id": "conn-009",
+  "topic": "conn",
+  "rule": "conn-cons",
+  "q": "Il faisait beau, [alors] on est allés à la plage.",
+  "alt": [
+   "parce qu'",
+   "car",
+   "pourtant"
+  ],
+  "why": "Följd i talspråk: alors (så).",
+  "sv": "Det var fint väder, så vi gick till stranden."
+ },
+ {
+  "id": "conn-010",
+  "topic": "conn",
+  "rule": "conn-cons",
+  "q": "Les loyers sont très chers. [C'est pourquoi] beaucoup d'étudiants vivent en colocation.",
+  "alt": [
+   "Parce que",
+   "Comme",
+   "Pourtant"
+  ],
+  "why": "Följd: c'est pourquoi (därför).",
+  "sv": "Hyrorna är väldigt dyra. Därför bor många studenter i kollektiv."
+ },
+ {
+  "id": "conn-011",
+  "topic": "conn",
+  "rule": "conn-cons",
+  "q": "Je n'avais pas d'argent, [alors] je suis resté chez moi.",
+  "alt": [
+   "car",
+   "parce que",
+   "comme"
+  ],
+  "why": "Följd: alors.",
+  "sv": "Jag hade inga pengar, så jag stannade hemma."
+ },
+ {
+  "id": "conn-012",
+  "topic": "conn",
+  "rule": "conn-cons",
+  "q": "Tu as travaillé dur, tu mérites [donc] de bonnes vacances.",
+  "alt": [
+   "car",
+   "parce que",
+   "comme"
+  ],
+  "why": "Donc kan stå efter verbet: du förtjänar alltså.",
+  "sv": "Du har jobbat hårt, du förtjänar alltså en bra semester."
+ },
+ {
+  "id": "conn-013",
+  "topic": "conn",
+  "rule": "conn-opp",
+  "q": "Il est riche, [mais] il n'est pas heureux.",
+  "alt": [
+   "donc",
+   "car",
+   "comme"
+  ],
+  "why": "Motsats: mais.",
+  "sv": "Han är rik, men han är inte lycklig."
+ },
+ {
+  "id": "conn-014",
+  "topic": "conn",
+  "rule": "conn-opp",
+  "q": "Elle a beaucoup révisé. [Pourtant], elle a raté l'examen.",
+  "alt": [
+   "Donc",
+   "Alors",
+   "Comme"
+  ],
+  "why": "Pourtant = ändå, trots det.",
+  "sv": "Hon pluggade mycket. Ändå kuggade hon provet."
+ },
+ {
+  "id": "conn-015",
+  "topic": "conn",
+  "rule": "conn-opp",
+  "q": "Mon frère adore le sport ; moi, [par contre], je préfère lire.",
+  "alt": [
+   "donc",
+   "car",
+   "alors"
+  ],
+  "why": "Par contre = däremot.",
+  "sv": "Min bror älskar sport; jag däremot läser hellre."
+ },
+ {
+  "id": "conn-016",
+  "topic": "conn",
+  "rule": "conn-opp",
+  "q": "Ce n'est pas cher, [au contraire] !",
+  "alt": [
+   "donc",
+   "pourtant",
+   "car"
+  ],
+  "why": "Au contraire = tvärtom.",
+  "sv": "Det är inte dyrt, tvärtom!"
+ },
+ {
+  "id": "conn-017",
+  "topic": "conn",
+  "rule": "conn-opp",
+  "q": "[Même si] c'est difficile, je ne vais pas abandonner.",
+  "alt": [
+   "Parce que",
+   "Donc",
+   "Comme"
+  ],
+  "why": "Même si = även om (med indikativ).",
+  "sv": "Även om det är svårt tänker jag inte ge upp."
+ },
+ {
+  "id": "conn-018",
+  "topic": "conn",
+  "rule": "conn-opp",
+  "q": "Il dit qu'il est pauvre, [alors qu'] il a trois voitures.",
+  "alt": [
+   "parce qu'",
+   "donc",
+   "comme"
+  ],
+  "why": "Alors que = medan, fast (kontrast).",
+  "sv": "Han säger att han är fattig, fast han har tre bilar."
+ },
+ {
+  "id": "conn-019",
+  "topic": "conn",
+  "rule": "conn-temps",
+  "q": "[D'abord], on va au cinéma, ensuite on mange.",
+  "alt": [
+   "Enfin",
+   "Donc",
+   "Pourtant"
+  ],
+  "why": "Ordning: d'abord (först), ensuite, enfin.",
+  "sv": "Först går vi på bio, sedan äter vi."
+ },
+ {
+  "id": "conn-020",
+  "topic": "conn",
+  "rule": "conn-temps",
+  "q": "On a fait les courses, [ensuite] on a préparé le dîner.",
+  "alt": [
+   "d'abord",
+   "pourtant",
+   "car"
+  ],
+  "why": "Ensuite = sedan, därefter.",
+  "sv": "Vi handlade, sedan lagade vi middag."
+ },
+ {
+  "id": "conn-021",
+  "topic": "conn",
+  "rule": "conn-temps",
+  "q": "J'écoute de la musique [pendant que] je travaille.",
+  "alt": [
+   "pendant",
+   "parce que",
+   "donc"
+  ],
+  "why": "Pendant que + sats; pendant + substantiv.",
+  "sv": "Jag lyssnar på musik medan jag jobbar."
+ },
+ {
+  "id": "conn-022",
+  "topic": "conn",
+  "rule": "conn-temps",
+  "q": "[Enfin], je voudrais remercier mes parents.",
+  "alt": [
+   "D'abord",
+   "Donc",
+   "Car"
+  ],
+  "why": "Enfin = till sist (sista punkten).",
+  "sv": "Till sist vill jag tacka mina föräldrar."
+ }
+]

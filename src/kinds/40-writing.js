@@ -58,9 +58,10 @@ function writeScreen(id){
     <details class="more"><summary>Visa en exempeltext</summary><p class="ex-t" ${lang()}>${esc(p.model||"")}</p><p class="ex-sv">${esc(p.modelSv||"")}</p></details></section>
   <button class="quit" id="quit">Tillbaka</button>`;
   const ta=$("#wtext"); let tm=null; wireAccents(ta);
-  wireFeedback(ta,dk,`${p.title}: ${p.task} (${p.min}–${p.max} ord)`);
+  wireFeedback(ta,dk,`${p.title}: ${p.task} (${p.min}–${p.max} ord)`,{level:cefrOf(p.level),minWords:p.min});   // nivå: uppgiftens (valfritt fält level) eller kursens
   const draw=()=>{$("#checks").innerHTML=writeChecks(p,ta.value).map(c=>`<li class="${c.ok?"ok":""}">${esc(c.label)}</li>`).join("");};
-  ta.oninput=()=>{draw(); clearTimeout(tm); tm=setTimeout(()=>{S.drafts[dk]=ta.value; save(); const m=$("#wmsg"); if(m) m.textContent="Sparat.";},800);};
+  // Utkastet sparas i kursen det skrevs i: har eleven hunnit byta kurs (eller läge) innan tiden gått sparas det inte i fel S
+  const st=S; ta.oninput=()=>{draw(); clearTimeout(tm); tm=setTimeout(()=>{ if(S!==st) return; (S.drafts=S.drafts||{})[dk]=ta.value; save(); const m=$("#wmsg"); if(m) m.textContent="Sparat.";},800);};
   draw();
   $("#copy").onclick=()=>copyText(ta,$("#wmsg"));
   // Flera tryck på Klar ger en enda loggpost: samma text räknas inte igen, och en ändrad text uppdaterar

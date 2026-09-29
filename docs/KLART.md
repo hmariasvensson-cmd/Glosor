@@ -2,6 +2,19 @@
 
 Punkter som har flyttats från [`BACKLOG.md`](BACKLOG.md) när de byggdes. **Referens** anger backloggens rubrik och prioritet. **Commit** anger var ändringen finns i git. **Publicerat** anger versionen av artefakten på https://claude.ai/artifact/YBQv8j4qXQQLuPwLAWt5mP.
 
+## 2026-09-29, del 3 (publicerat som version 30)
+
+| Referens | Vad som byggdes | Commit |
+|---|---|---|
+| Kurser · P2 *Alla tre språken från steg 1 till steg 7* | 13 nya kurser, så att franska, tyska och italienska täcker steg 1–7: **Franska 1** (fr1, 533 ord, DELF A1), **Franska 2** (fr2, 517, DELF A1), **Franska 4** (frs4, 839, DELF A2), **Franska 5** (frs5, 1 008, DELF B1), **Tyska 1** (de1, 584, Goethe A1), **Tyska 2** (de2, 519, Goethe A1), **Tyska 3** (de3, 701, Goethe A2), **Tyska 7** (de7, 700, Goethe C1/TestDaF), **Italienska 3–7** (it3 757, it4 807 CELI 1, it5 955 CELI 2, it6 911 CELI 2, it7 984 CELI 3). Varje kurs har kapitel, grammatik med regelsidor, hör- och lästexter, berättelser, kultur, skrivuppgifter, fraser, mål, uttal och videor. Kedjor: fr1→fr2→fr→frs4→frs5→fr4→fru, de1→de2→de3→de4→de→de6→de7, it1→…→it7. | se git log |
+| Föräldern: *rätt nivå på franskan* | Kursen som hette Franska 4 (fr4) låg på steg 6 och heter nu **Franska 6** (kod och sparnyckel oförändrade), med nya områden conditionnel passé, subjonctif passé och passé simple (igenkänning). **Franska I** visas som "motsvarar steg 7 · B2" och fick områdena nominalisering/stilnivå och medgivande. | se git log |
+| Kursväljaren | Grupperad per språk och sorterad efter `step` ("Franska 3 · steg 3 · A2 · mål DELF B1"), kommande kurser i stegordning, `nextCourse` kan vara en lista (två vägar vidare), byggkontroller för `step`/`level`/upcoming, arv i kedja, testet `test_minimal_course`. | se git log |
+| Nivåresearch | `docs/nivaer.md` (Skolverket Gy11/Gy25, GERS, forskning om ordförråd, täckning och studietid), `docs/nivaer-franska.md`, `nivaer-tyska.md`, `nivaer-italienska.md` (krav per nivå, provformat, granskning av befintliga kurser). | se git log |
+| Videor | 6 videor per kapitel i alla befintliga kurser (fr, fr4, fru, de4, de, de6, it1, it2; 222 nya) och videoförråd per språk och nivå A1–B2 (`docs/videopool-*.json`, ca 470 videor), alla kontrollerade med oEmbed. Nya kurser har 16–38 videor var. | se git log |
+| Provbedömning | Claudes bedömning av skriv- och provuppgifter följer uppgiftens/kursens nivå A1–C1 (`LEVEL_GUIDE`, `examLevel`, `studentDesc`); målet musikstudier nämns bara när kursen har `goal`. | se git log |
+
+Testerna har 1 357 kontroller.
+
 ## 2026-09-29, del 2 (publicerat som version 29)
 
 | Referens | Vad som byggdes | Commit |

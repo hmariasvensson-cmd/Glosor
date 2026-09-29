@@ -31,7 +31,7 @@ function vocabLevel(n){
   for(let i=1;i<VOC_PTS.length;i++){ const [a,la]=VOC_PTS[i-1],[b,lb]=VOC_PTS[i]; if(n<=b) return la+(lb-la)*(n-a)/(b-a); }
   return VOC_PTS[VOC_PTS.length-1][1];
 }
-const VOC_NEXT={2:1500,3:2500,4:3500,5:4500};   // ungefär så många ord brukar nivån kräva (den lägre siffran)
+const VOC_NEXT={1:750,2:1500,3:2500,4:3500,5:4500};   // ungefär så många ord brukar nivån kräva (den lägre siffran)
 
 // Sparat läge för en annan kurs, bara för läsning (localStorage på den här enheten)
 function peekState(code){

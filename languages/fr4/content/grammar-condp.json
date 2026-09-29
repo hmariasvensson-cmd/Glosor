@@ -1,0 +1,327 @@
+[
+ {
+  "id": "condp-001",
+  "topic": "condp",
+  "rule": "condp-form",
+  "q": "Sans ton aide, je [n'aurais pas terminé] mon dossier d'inscription à temps.",
+  "alt": [
+   "n'aurais pas terminer",
+   "ne serais pas terminé",
+   "n'aurai pas terminé"
+  ],
+  "why": "Conditionnel passé = avoir i conditionnel (aurais) + participe passé. Terminer tar avoir, och aurai (utan -s) är futur antérieur.",
+  "sv": "Utan din hjälp hade jag inte blivit klar med min ansökan i tid."
+ },
+ {
+  "id": "condp-002",
+  "topic": "condp",
+  "rule": "condp-form",
+  "q": "À ta place, j'[aurais accepté] la bourse sans hésiter.",
+  "alt": [
+   "aurais accepter",
+   "serais accepté",
+   "avais accepté"
+  ],
+  "why": "I ditt ställe = en tänkt situation, alltså conditionnel. Det gäller det förflutna, så conditionnel passé: aurais + accepté. Avais accepté är plus-que-parfait.",
+  "sv": "I ditt ställe hade jag tackat ja till stipendiet utan att tveka."
+ },
+ {
+  "id": "condp-003",
+  "topic": "condp",
+  "rule": "condp-form",
+  "q": "Nous [aurions préféré] un concert en plein air, mais il pleuvait.",
+  "alt": [
+   "aurions préférer",
+   "serions préféré",
+   "aurons préféré"
+  ],
+  "why": "Aurions (conditionnel av avoir) + participet préféré. Aurons är futur, och efter hjälpverbet kommer participet, inte infinitiven.",
+  "sv": "Vi hade hellre haft en utomhuskonsert, men det regnade."
+ },
+ {
+  "id": "condp-004",
+  "topic": "condp",
+  "rule": "condp-form",
+  "q": "Avec un meilleur micro, vous [auriez obtenu] un enregistrement plus propre.",
+  "alt": [
+   "auriez obtenir",
+   "seriez obtenu",
+   "aviez obtenu"
+  ],
+  "why": "Med en bättre mikrofon (tänkt villkor) → conditionnel passé: auriez + obtenu. Aviez obtenu är plus-que-parfait och passar inte i huvudsatsen.",
+  "sv": "Med en bättre mikrofon hade ni fått en renare inspelning."
+ },
+ {
+  "id": "condp-005",
+  "topic": "condp",
+  "rule": "condp-form",
+  "q": "Ils [auraient pris] le train de nuit s'il y avait eu des places.",
+  "alt": [
+   "auraient prendu",
+   "seraient pris",
+   "auront pris"
+  ],
+  "why": "Si + plus-que-parfait (il y avait eu) → conditionnel passé: auraient pris. Participet av prendre är pris, och prendre tar avoir.",
+  "sv": "De hade tagit nattåget om det hade funnits platser."
+ },
+ {
+  "id": "condp-006",
+  "topic": "condp",
+  "rule": "condp-etre",
+  "q": "Elle [serait venue] à la répétition si on l'avait prévenue.",
+  "alt": [
+   "aurait venue",
+   "serait venu",
+   "aurait venu"
+  ],
+  "why": "Venir tar être, också i conditionnel passé: serait venue. Med être böjs participet efter subjektet (elle → venue).",
+  "sv": "Hon hade kommit till repetitionen om man hade sagt till henne."
+ },
+ {
+  "id": "condp-007",
+  "topic": "condp",
+  "rule": "condp-etre",
+  "q": "Sans la grève, nous [serions arrivés] à Lyon avant midi.",
+  "alt": [
+   "aurions arrivé",
+   "serions arrivé",
+   "aurions arrivés"
+  ],
+  "why": "Arriver tar être: serions arrivés. Participet får -s eftersom subjektet nous är plural.",
+  "sv": "Utan strejken hade vi kommit fram till Lyon före lunch."
+ },
+ {
+  "id": "condp-008",
+  "topic": "condp",
+  "rule": "condp-etre",
+  "q": "Mes parents [se seraient inquiétés] s'ils avaient su.",
+  "alt": [
+   "se seraient inquiété",
+   "s'auraient inquiétés",
+   "auraient inquiété"
+  ],
+  "why": "Reflexiva verb tar alltid être: se seraient inquiétés. Participet böjs efter subjektet (mes parents, plural).",
+  "sv": "Mina föräldrar hade blivit oroliga om de hade vetat."
+ },
+ {
+  "id": "condp-009",
+  "topic": "condp",
+  "rule": "condp-etre",
+  "q": "Julien [serait resté] plus longtemps à Montréal s'il avait trouvé un travail.",
+  "alt": [
+   "aurait resté",
+   "serait restée",
+   "aurait restée"
+  ],
+  "why": "Rester tar être: serait resté. Julien är maskulinum singular, så participet får ingen ändelse.",
+  "sv": "Julien hade stannat längre i Montréal om han hade hittat ett jobb."
+ },
+ {
+  "id": "condp-010",
+  "topic": "condp",
+  "rule": "condp-etre",
+  "q": "Sans ce retard, les musiciennes [seraient montées] sur scène à vingt heures.",
+  "alt": [
+   "auraient monté",
+   "seraient monté",
+   "seraient montés"
+  ],
+  "why": "Monter utan objekt (gå upp) tar être: seraient montées, med -es efter les musiciennes (femininum plural).",
+  "sv": "Utan förseningen hade musikerna gått upp på scenen klockan åtta."
+ },
+ {
+  "id": "condp-011",
+  "topic": "condp",
+  "rule": "condp-regret",
+  "q": "Je suis arrivé en retard à l'audition : j'[aurais dû] partir plus tôt.",
+  "alt": [
+   "aurais devoir",
+   "serais dû",
+   "aurai dû"
+  ],
+  "why": "Ånger över något som har hänt: j'aurais dû (jag borde ha). Aurai dû är futur antérieur och uttrycker inte ånger.",
+  "sv": "Jag kom för sent till provspelningen: jag borde ha åkt tidigare."
+ },
+ {
+  "id": "condp-012",
+  "topic": "condp",
+  "rule": "condp-regret",
+  "q": "Tu [aurais pu] me prévenir que le cours était annulé !",
+  "alt": [
+   "aurais pouvoir",
+   "serais pu",
+   "auras pu"
+  ],
+  "why": "Förebråelse: tu aurais pu … (du kunde ha …). Pouvoir tar avoir och participet är pu.",
+  "sv": "Du kunde ha sagt till mig att lektionen var inställd!"
+ },
+ {
+  "id": "condp-013",
+  "topic": "condp",
+  "rule": "condp-regret",
+  "q": "Vous [n'auriez pas dû] publier cette photo sans son accord.",
+  "alt": [
+   "ne seriez pas dû",
+   "n'auriez pas devoir",
+   "n'aurez pas dû"
+  ],
+  "why": "Vous n'auriez pas dû = ni borde inte ha. Negationen ne … pas omger hjälpverbet, och devoir tar avoir.",
+  "sv": "Ni borde inte ha publicerat det där fotot utan hennes tillåtelse."
+ },
+ {
+  "id": "condp-014",
+  "topic": "condp",
+  "rule": "condp-regret",
+  "q": "Nous [aurions aimé] vous voir, mais le festival était complet.",
+  "alt": [
+   "aurions aimer",
+   "serions aimés",
+   "aurons aimé"
+  ],
+  "why": "En önskan som inte gick i uppfyllelse: nous aurions aimé (vi hade gärna velat). Aimer tar avoir.",
+  "sv": "Vi hade gärna träffat er, men festivalen var fullbokad."
+ },
+ {
+  "id": "condp-015",
+  "topic": "condp",
+  "rule": "condp-regret",
+  "q": "Il [aurait mieux valu] réserver les billets en avance.",
+  "alt": [
+   "aurait mieux valoir",
+   "serait mieux valu",
+   "aura mieux valu"
+  ],
+  "why": "Il aurait mieux valu = det hade varit bättre att. Valoir tar avoir och participet är valu.",
+  "sv": "Det hade varit bättre att boka biljetterna i förväg."
+ },
+ {
+  "id": "condp-016",
+  "topic": "condp",
+  "rule": "condp-si",
+  "q": "Si j'avais su que le concert était gratuit, j'[aurais invité] toute la classe.",
+  "alt": [
+   "invitais",
+   "aurai invité",
+   "avais invité"
+  ],
+  "why": "Si + plus-que-parfait (j'avais su) → conditionnel passé i huvudsatsen: j'aurais invité.",
+  "sv": "Om jag hade vetat att konserten var gratis hade jag bjudit hela klassen."
+ },
+ {
+  "id": "condp-017",
+  "topic": "condp",
+  "rule": "condp-si",
+  "q": "Si tu [avais écouté] les conseils du professeur, tu aurais réussi l'examen.",
+  "alt": [
+   "aurais écouté",
+   "écouterais",
+   "auras écouté"
+  ],
+  "why": "I si-satsen står aldrig conditionnel. Om det förflutna: si + plus-que-parfait (avais écouté).",
+  "sv": "Om du hade lyssnat på lärarens råd hade du klarat provet."
+ },
+ {
+  "id": "condp-018",
+  "topic": "condp",
+  "rule": "condp-si",
+  "q": "Si elle n'était pas tombée malade, elle [aurait chanté] le solo hier soir.",
+  "alt": [
+   "chanterait",
+   "avait chanté",
+   "aura chanté"
+  ],
+  "why": "Hier soir visar att följden gäller det förflutna: conditionnel passé (aurait chanté). Chanterait skulle gälla nu eller framtiden.",
+  "sv": "Om hon inte hade blivit sjuk hade hon sjungit solot i går kväll."
+ },
+ {
+  "id": "condp-019",
+  "topic": "condp",
+  "rule": "condp-si",
+  "q": "Nous aurions visité le Louvre si le musée [n'avait pas été] fermé ce jour-là.",
+  "alt": [
+   "n'aurait pas été",
+   "n'a pas été",
+   "ne sera pas"
+  ],
+  "why": "Efter si kommer plus-que-parfait, inte conditionnel: si le musée n'avait pas été fermé.",
+  "sv": "Vi hade besökt Louvren om museet inte hade varit stängt den dagen."
+ },
+ {
+  "id": "condp-020",
+  "topic": "condp",
+  "rule": "condp-si",
+  "q": "S'ils étaient partis à l'heure, ils [n'auraient pas raté] le début du film.",
+  "alt": [
+   "n'avaient pas raté",
+   "n'auront pas raté",
+   "n'auraient pas rater"
+  ],
+  "why": "Huvudsatsen efter si + plus-que-parfait: conditionnel passé, ils n'auraient pas raté.",
+  "sv": "Om de hade gått i tid hade de inte missat början av filmen."
+ },
+ {
+  "id": "condp-021",
+  "topic": "condp",
+  "rule": "condp-info",
+  "q": "Selon la police, l'incendie [aurait commencé] dans la cuisine du restaurant.",
+  "alt": [
+   "aurait commencer",
+   "serait commencé",
+   "aurait commencée"
+  ],
+  "why": "I nyheter visar conditionnel passé att uppgiften inte är bekräftad: l'incendie aurait commencé (branden ska ha börjat). Commencer tar avoir, och participet böjs inte efter subjektet.",
+  "sv": "Enligt polisen ska branden ha börjat i restaurangens kök."
+ },
+ {
+  "id": "condp-022",
+  "topic": "condp",
+  "rule": "condp-info",
+  "q": "D'après la presse, le chef d'orchestre [aurait quitté] la salle avant la fin.",
+  "alt": [
+   "aurait quitter",
+   "serait quitté",
+   "aurait quittée"
+  ],
+  "why": "Obekräftad uppgift: aurait quitté (ska ha lämnat). Quitter tar avoir, och chef d'orchestre är maskulinum.",
+  "sv": "Enligt pressen ska dirigenten ha lämnat salen före slutet."
+ },
+ {
+  "id": "condp-023",
+  "topic": "condp",
+  "rule": "condp-info",
+  "q": "Selon certaines sources, plus de mille personnes [auraient participé] à la manifestation.",
+  "alt": [
+   "auraient participer",
+   "seraient participé",
+   "aurait participé"
+  ],
+  "why": "Plus de mille personnes är plural: auraient participé (ska ha deltagit). Participer tar avoir.",
+  "sv": "Enligt vissa källor ska över tusen personer ha deltagit i demonstrationen."
+ },
+ {
+  "id": "condp-024",
+  "topic": "condp",
+  "rule": "condp-info",
+  "q": "Le suspect [se serait enfui] par la fenêtre, d'après les témoins.",
+  "alt": [
+   "s'aurait enfui",
+   "se serait enfuir",
+   "se serait enfuis"
+  ],
+  "why": "S'enfuir är reflexivt och tar être: se serait enfui. Le suspect är singular, så inget -s.",
+  "sv": "Den misstänkte ska ha flytt genom fönstret, enligt vittnena."
+ },
+ {
+  "id": "condp-025",
+  "topic": "condp",
+  "rule": "condp-info",
+  "q": "D'après le journal du lycée, la chorale [aurait gagné] le concours régional.",
+  "alt": [
+   "aurait gagner",
+   "serait gagné",
+   "aurait gagnée"
+  ],
+  "why": "Aurait gagné = ska ha vunnit (uppgiften är inte bekräftad). Med avoir böjs participet inte efter subjektet la chorale.",
+  "sv": "Enligt skoltidningen ska kören ha vunnit den regionala tävlingen."
+ }
+]

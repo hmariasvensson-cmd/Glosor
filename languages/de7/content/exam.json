@@ -1,0 +1,435 @@
+{
+ "name": "Goethe-Zertifikat C1 (och TestDaF)",
+ "pass": 60,
+ "note": "Övningar i provets stil, skrivna för appen. Inte officiellt material. Goethe C1 har fyra moduler: Lesen (65 min), Hören (ca 40 min), Schreiben (80 min) och Sprechen (ca 15 min i par). Varje modul är godkänd från 60 procent. Några uppgifter följer TestDaF (argumenterande text och grafikbeskrivning).",
+ "parts": [
+  {
+   "id": "lesen",
+   "name": "Lesen",
+   "sv": "Läsa",
+   "time": 65
+  },
+  {
+   "id": "hoeren",
+   "name": "Hören",
+   "sv": "Hörförståelse",
+   "time": 40
+  },
+  {
+   "id": "schreiben",
+   "name": "Schreiben",
+   "sv": "Skriva",
+   "time": 80
+  },
+  {
+   "id": "sprechen",
+   "name": "Sprechen",
+   "sv": "Tala",
+   "time": 15
+  }
+ ],
+ "approxWords": true,
+ "tasks": [
+  {
+   "id": "de7-le-1",
+   "part": "lesen",
+   "teil": "Teil 1",
+   "title": "Künstliche Intelligenz im Kompositionsunterricht",
+   "time": 20,
+   "instr": "Läs texten och välj det svar som stämmer bäst med texten.",
+   "lines": [
+    {
+     "fr": "Seit einigen Semestern experimentieren mehrere Musikhochschulen mit Programmen, die auf Knopfdruck Melodien, Harmonisierungen oder ganze Klavierstücke erzeugen. Was Befürworter als Werkzeug feiern, halten Kritiker für eine Bedrohung des Fachs.",
+     "sv": "Sedan några terminer experimenterar flera musikhögskolor med program som med en knapptryckning skapar melodier, harmoniseringar eller hela pianostycken. Det som förespråkarna hyllar som ett verktyg anser kritikerna vara ett hot mot ämnet."
+    },
+    {
+     "fr": "Die Kompositionsprofessorin Katrin Maier sieht die Sache gelassen. Die Programme, so Maier, produzierten vor allem Durchschnitt: stilistisch sauber, aber ohne Überraschung. Gerade deshalb eigneten sie sich für den Unterricht. Studierende könnten an den Ergebnissen lernen, was ein Stück langweilig mache, und ihre eigenen Entscheidungen bewusster treffen.",
+     "sv": "Kompositionsprofessorn Katrin Maier ser lugnt på saken. Programmen, säger Maier, producerar framför allt medelmåttighet: stilistiskt rena men utan överraskning. Just därför passar de i undervisningen. Studenterna kan av resultaten lära sig vad som gör ett stycke tråkigt och fatta sina egna beslut mer medvetet."
+    },
+    {
+     "fr": "Skeptischer äußert sich der Musiktheoretiker Paul Engel. Er befürchtet, dass Studierende grundlegende Fertigkeiten wie den vierstimmigen Satz gar nicht mehr erlernen, wenn eine Maschine ihnen die Arbeit abnimmt. Wer nie selbst eine Stimmführung erarbeitet habe, könne auch die Vorschläge des Programms nicht beurteilen.",
+     "sv": "Mer skeptisk är musikteoretikern Paul Engel. Han befarar att studenterna inte alls lär sig grundläggande färdigheter som fyrstämmig sats om en maskin gör arbetet åt dem. Den som aldrig själv har arbetat fram en stämföring kan inte heller bedöma programmets förslag."
+    },
+    {
+     "fr": "Einig sind sich beide in einem Punkt: Verbote seien keine Lösung. Die Hochschulen müssten vielmehr klare Regeln aufstellen, etwa zur Kennzeichnung von Arbeiten, bei denen KI verwendet wurde. Ungeklärt ist bislang auch die Frage des Urheberrechts: Wem gehört ein Stück, das zur Hälfte von einem Programm stammt?",
+     "sv": "I en punkt är båda överens: förbud är ingen lösning. Högskolorna borde snarare ställa upp tydliga regler, till exempel om märkning av arbeten där AI har använts. Hittills oklar är också frågan om upphovsrätt: vem äger ett stycke som till hälften kommer från ett program?"
+    }
+   ],
+   "qs": [
+    {
+     "q": "Wie bewertet Katrin Maier die Programme?",
+     "opts": [
+      "Als Gefahr für das Fach",
+      "Als nützlich für den Unterricht, weil sie Durchschnitt erzeugen",
+      "Als besser als menschliche Komponisten",
+      "Als zu teuer"
+     ],
+     "a": 1,
+     "why": "Gerade deshalb eigneten sie sich für den Unterricht."
+    },
+    {
+     "q": "Was befürchtet Paul Engel?",
+     "opts": [
+      "Dass Programme zu teuer werden",
+      "Dass Studierende grundlegende Fertigkeiten nicht mehr lernen",
+      "Dass Professoren arbeitslos werden",
+      "Dass die Programme verboten werden"
+     ],
+     "a": 1,
+     "why": "… grundlegende Fertigkeiten … gar nicht mehr erlernen."
+    },
+    {
+     "q": "Worin sind sich beide einig?",
+     "opts": [
+      "KI sollte verboten werden",
+      "Verbote sind keine Lösung, es braucht klare Regeln",
+      "Das Urheberrecht ist geklärt",
+      "Programme komponieren besser"
+     ],
+     "a": 1,
+     "why": "Verbote seien keine Lösung."
+    },
+    {
+     "q": "Welche Frage ist laut Text noch offen?",
+     "opts": [
+      "Wer das Programm entwickelt hat",
+      "Wem ein teilweise maschinell erzeugtes Stück gehört",
+      "Wie viel die Programme kosten",
+      "Wann die Semester beginnen"
+     ],
+     "a": 1,
+     "why": "Wem gehört ein Stück, das zur Hälfte von einem Programm stammt?"
+    },
+    {
+     "q": "Warum stehen viele Verben im Konjunktiv I?",
+     "opts": [
+      "Der Text ist ein Märchen",
+      "Der Text gibt Meinungen der Befragten wieder",
+      "Die Aussagen sind falsch",
+      "Es handelt sich um Befehle"
+     ],
+     "a": 1,
+     "why": "Indirekt tal."
+    }
+   ]
+  },
+  {
+   "id": "de7-le-2",
+   "part": "lesen",
+   "teil": "Teil 2",
+   "title": "Hausordnung des Studierendenwohnheims",
+   "time": 15,
+   "instr": "Läs utdraget ur ordningsreglerna. Stämmer påståendena (richtig) eller inte (falsch)?",
+   "lines": [
+    {
+     "fr": "§ 3 Ruhezeiten: Von 22 bis 7 Uhr sowie an Sonn- und Feiertagen ganztägig ist Zimmerlautstärke einzuhalten. Das Musizieren ist werktags zwischen 9 und 13 Uhr sowie zwischen 15 und 20 Uhr gestattet, höchstens jedoch drei Stunden täglich.",
+     "sv": "§ 3 Tysta timmar: Från 22 till 7 samt hela dagen på sön- och helgdagar ska ljudnivån vara låg. Musicerande är tillåtet vardagar mellan 9 och 13 samt mellan 15 och 20, dock högst tre timmar per dag."
+    },
+    {
+     "fr": "§ 4 Übungsräume: Für Studierende der Musikhochschule stehen im Keller zwei schallgedämmte Übungsräume zur Verfügung. Diese sind über die Hausverwaltung zu buchen; eine Buchung ist höchstens eine Woche im Voraus möglich.",
+     "sv": "§ 4 Övningsrum: För studenter vid musikhögskolan finns två ljudisolerade övningsrum i källaren. De bokas via förvaltningen; bokning är möjlig högst en vecka i förväg."
+    },
+    {
+     "fr": "§ 7 Untervermietung: Eine Untervermietung des Zimmers ist nur mit schriftlicher Zustimmung der Verwaltung und für höchstens sechs Monate zulässig, etwa während eines Auslandssemesters.",
+     "sv": "§ 7 Andrahandsuthyrning: Andrahandsuthyrning av rummet är bara tillåten med förvaltningens skriftliga medgivande och i högst sex månader, till exempel under en utlandstermin."
+    },
+    {
+     "fr": "§ 9 Verstöße: Bei wiederholten Verstößen gegen diese Hausordnung kann der Mietvertrag nach vorheriger Abmahnung gekündigt werden.",
+     "sv": "§ 9 Överträdelser: Vid upprepade överträdelser av ordningsreglerna kan hyresavtalet sägas upp efter föregående varning."
+    }
+   ],
+   "qs": [
+    {
+     "q": "Am Sonntagnachmittag darf man eine Stunde Klavier üben.",
+     "opts": [
+      "richtig",
+      "falsch"
+     ],
+     "a": 1,
+     "why": "An Sonn- und Feiertagen gilt ganztägig Zimmerlautstärke."
+    },
+    {
+     "q": "An einem Dienstag darf man insgesamt höchstens drei Stunden musizieren.",
+     "opts": [
+      "richtig",
+      "falsch"
+     ],
+     "a": 0,
+     "why": "höchstens jedoch drei Stunden täglich."
+    },
+    {
+     "q": "Die Übungsräume kann man einen Monat im Voraus buchen.",
+     "opts": [
+      "richtig",
+      "falsch"
+     ],
+     "a": 1,
+     "why": "höchstens eine Woche im Voraus."
+    },
+    {
+     "q": "Für ein Auslandssemester darf man das Zimmer mit Erlaubnis untervermieten.",
+     "opts": [
+      "richtig",
+      "falsch"
+     ],
+     "a": 0,
+     "why": "nur mit schriftlicher Zustimmung … etwa während eines Auslandssemesters."
+    },
+    {
+     "q": "Beim ersten Verstoß wird der Vertrag sofort gekündigt.",
+     "opts": [
+      "richtig",
+      "falsch"
+     ],
+     "a": 1,
+     "why": "Bei wiederholten Verstößen … nach vorheriger Abmahnung."
+    }
+   ]
+  },
+  {
+   "id": "de7-hoe-1",
+   "part": "hoeren",
+   "teil": "Teil 1",
+   "title": "Vorlesungsausschnitt: Das Konzertpublikum im 19. Jahrhundert",
+   "time": 12,
+   "plays": 1,
+   "instr": "Du hör ett utdrag ur en föreläsning en gång. Välj rätt svar.",
+   "lines": [
+    {
+     "fr": "Meine Damen und Herren, wenn wir heute ein Sinfoniekonzert besuchen, sitzen wir still, applaudieren nicht zwischen den Sätzen und husten allenfalls in den Pausen. Dieses Verhalten ist jedoch keineswegs selbstverständlich, sondern das Ergebnis einer Entwicklung des 19. Jahrhunderts.",
+     "sv": "Mina damer och herrar, när vi i dag går på en symfonikonsert sitter vi tysta, applåderar inte mellan satserna och hostar högst i pauserna. Det beteendet är dock inte alls självklart, utan resultatet av en utveckling under 1800-talet."
+    },
+    {
+     "fr": "Um 1800 war ein Konzert ein gesellschaftliches Ereignis. Man unterhielt sich, aß und trank, und wenn ein Satz gefiel, wurde er sofort wiederholt. Mozart berichtet in einem Brief stolz, das Publikum habe mitten in einer Sinfonie applaudiert.",
+     "sv": "Kring 1800 var en konsert en social händelse. Man pratade, åt och drack, och om en sats föll i smaken spelades den genast igen. Mozart berättar stolt i ett brev att publiken hade applåderat mitt i en symfoni."
+    },
+    {
+     "fr": "Mit dem Aufstieg des Bildungsbürgertums änderte sich das. Musik galt zunehmend als Kunst, die man andächtig und konzentriert anhören müsse, fast wie eine Predigt. Die Konzertsäle wurden abgedunkelt, und Dirigenten wie Gustav Mahler bestanden auf absoluter Ruhe.",
+     "sv": "Med det bildade borgerskapets framväxt ändrades det. Musik sågs alltmer som konst som man måste lyssna på andäktigt och koncentrerat, nästan som en predikan. Konsertsalarna mörklades, och dirigenter som Gustav Mahler insisterade på absolut tystnad."
+    },
+    {
+     "fr": "Heute gibt es Stimmen, die diese Strenge kritisieren. Sie argumentieren, sie schrecke junge Menschen ab. Einige Orchester experimentieren deshalb mit lockeren Formaten, in denen Applaus zwischen den Sätzen ausdrücklich erlaubt ist.",
+     "sv": "I dag finns röster som kritiserar den här stränghet. De hävdar att den skrämmer bort unga människor. Några orkestrar experimenterar därför med friare format där applåd mellan satserna uttryckligen är tillåten."
+    }
+   ],
+   "qs": [
+    {
+     "q": "Wie verhielt sich das Publikum um 1800?",
+     "opts": [
+      "Völlig still",
+      "Es unterhielt sich, aß und applaudierte spontan",
+      "Es durfte nicht klatschen",
+      "Es saß im Dunkeln"
+     ],
+     "a": 1,
+     "why": "Man unterhielt sich, aß und trank …"
+    },
+    {
+     "q": "Was berichtet Mozart in einem Brief?",
+     "opts": [
+      "Das Publikum sei eingeschlafen",
+      "Das Publikum habe mitten in einer Sinfonie applaudiert",
+      "Das Konzert sei ausgefallen",
+      "Er habe nicht dirigiert"
+     ],
+     "a": 1,
+     "why": "das Publikum habe mitten in einer Sinfonie applaudiert."
+    },
+    {
+     "q": "Womit vergleicht der Dozent das neue Hörverhalten?",
+     "opts": [
+      "Mit einem Fußballspiel",
+      "Mit einer Predigt",
+      "Mit einem Fest",
+      "Mit einer Vorlesung"
+     ],
+     "a": 1,
+     "why": "fast wie eine Predigt."
+    },
+    {
+     "q": "Wer bestand auf absoluter Ruhe?",
+     "opts": [
+      "Mozart",
+      "Gustav Mahler",
+      "Das Publikum",
+      "Die Kritiker"
+     ],
+     "a": 1,
+     "why": "Dirigenten wie Gustav Mahler."
+    },
+    {
+     "q": "Was machen einige Orchester heute?",
+     "opts": [
+      "Sie verbieten Applaus ganz",
+      "Sie erlauben Applaus zwischen den Sätzen in lockeren Formaten",
+      "Sie spielen nur noch Mozart",
+      "Sie schließen die Säle"
+     ],
+     "a": 1,
+     "why": "… Applaus zwischen den Sätzen ausdrücklich erlaubt."
+    }
+   ]
+  },
+  {
+   "id": "de7-hoe-2",
+   "part": "hoeren",
+   "teil": "Teil 2",
+   "title": "Gespräch in der Sprechstunde",
+   "time": 10,
+   "plays": 2,
+   "instr": "Du hör ett samtal mellan en student och en professor två gånger. Välj rätt svar.",
+   "lines": [
+    {
+     "fr": "Studentin: Guten Tag, Frau Professor Lang. Ich wollte mit Ihnen über das Thema meiner Hausarbeit sprechen. Ich möchte über Clara Schumann schreiben.",
+     "sv": "Studenten: God dag, professor Lang. Jag ville tala med er om ämnet för min hemuppsats. Jag vill skriva om Clara Schumann."
+    },
+    {
+     "fr": "Professorin: Schön. Aber „Clara Schumann“ allein ist noch kein Thema. Was genau interessiert Sie?",
+     "sv": "Professorn: Fint. Men \"Clara Schumann\" ensamt är ännu inget ämne. Vad exakt intresserar dig?"
+    },
+    {
+     "fr": "Studentin: Vor allem, warum sie nach dem Tod ihres Mannes kaum noch komponiert hat.",
+     "sv": "Studenten: Framför allt varför hon knappt komponerade längre efter makens död."
+    },
+    {
+     "fr": "Professorin: Das ist eine gute Fragestellung. Sie sollten sich die Tagebücher und die Briefe an Brahms ansehen. Und bitte grenzen Sie den Zeitraum ein, etwa auf die Jahre 1854 bis 1860. Schicken Sie mir bis nächsten Freitag eine Gliederung, dann können wir sie in zwei Wochen besprechen.",
+     "sv": "Professorn: Det är en bra frågeställning. Du bör titta på dagböckerna och breven till Brahms. Och avgränsa perioden, till exempel till åren 1854 till 1860. Skicka mig en disposition senast nästa fredag, så kan vi diskutera den om två veckor."
+    }
+   ],
+   "qs": [
+    {
+     "q": "Warum ist „Clara Schumann“ laut Professorin noch kein Thema?",
+     "opts": [
+      "Es gibt keine Quellen",
+      "Es ist zu allgemein",
+      "Es ist zu modern",
+      "Sie mag Clara Schumann nicht"
+     ],
+     "a": 1,
+     "why": "… allein ist noch kein Thema."
+    },
+    {
+     "q": "Was möchte die Studentin untersuchen?",
+     "opts": [
+      "Claras Konzertreisen",
+      "Warum sie nach dem Tod ihres Mannes kaum noch komponierte",
+      "Ihre Kinder",
+      "Ihre Klavierschule"
+     ],
+     "a": 1,
+     "why": "warum sie nach dem Tod ihres Mannes kaum noch komponiert hat."
+    },
+    {
+     "q": "Welche Quellen empfiehlt die Professorin?",
+     "opts": [
+      "Zeitungskritiken",
+      "Tagebücher und Briefe an Brahms",
+      "Filme",
+      "Wikipedia"
+     ],
+     "a": 1,
+     "why": "die Tagebücher und die Briefe an Brahms."
+    },
+    {
+     "q": "Was soll die Studentin bis Freitag schicken?",
+     "opts": [
+      "Die fertige Arbeit",
+      "Eine Gliederung",
+      "Ein Literaturverzeichnis",
+      "Ein Handout"
+     ],
+     "a": 1,
+     "why": "Schicken Sie mir bis nächsten Freitag eine Gliederung."
+    }
+   ]
+  },
+  {
+   "id": "de7-sc-1",
+   "part": "schreiben",
+   "teil": "Teil 1",
+   "title": "Argumentierender Text: Studiengebühren für Musikhochschulen?",
+   "time": 50,
+   "minWords": 250,
+   "instr": "Skriv en argumenterande text på cirka 250 ord (TestDaF/Goethe C1). Ta upp alla punkter och avsluta med din egen ståndpunkt.",
+   "task": "In mehreren Bundesländern wird diskutiert, ob Musikhochschulen Studiengebühren erheben sollten, da ein Studienplatz dort besonders teuer ist (Einzelunterricht, Instrumente, Übungsräume).\n\n– Stellen Sie die Ausgangslage dar.\n– Nennen Sie Argumente für und gegen Studiengebühren.\n– Wägen Sie die Argumente ab.\n– Nehmen Sie begründet Stellung.\n\nSchreiben Sie circa 250 Wörter.",
+   "criteria": [
+    "Erfüllung der Aufgabe",
+    "Kohärenz",
+    "Wortschatz",
+    "Strukturen"
+   ],
+   "model": "Ein Studienplatz an einer Musikhochschule gehört zu den teuersten im deutschen Hochschulsystem. Der Grund liegt auf der Hand: Einzelunterricht im Hauptfach, Korrepetition und Übungsräume verursachen hohe Kosten. Deshalb fordern einige Politiker, dass sich die Studierenden daran beteiligen sollen.\n\nFür Studiengebühren spricht zunächst, dass die öffentlichen Haushalte unter Druck stehen. Mit zusätzlichen Einnahmen könnten die Hochschulen ihre Ausstattung verbessern, etwa neue Instrumente anschaffen. Außerdem wird argumentiert, dass Absolventinnen und Absolventen später von ihrer Ausbildung profitieren und daher einen Teil zurückgeben könnten.\n\nDagegen spricht jedoch vor allem die soziale Gerechtigkeit. Schon heute kommen viele Musikstudierende aus Familien, die jahrelang privaten Instrumentalunterricht finanzieren konnten. Gebühren würden diese Schieflage noch verstärken. Hinzu kommt, dass die Einkommen im Musikbereich oft niedrig und unsicher sind; das Argument, man verdiene später viel, trifft hier kaum zu. Schließlich könnten Gebühren begabte ausländische Studierende abschrecken, die das Musikleben bereichern.\n\nWägt man die Argumente ab, so wiegen die Nachteile schwerer. Zwar ist die Finanzlage der Länder angespannt, aber die Gebühren würden nur einen kleinen Teil der Kosten decken und gleichzeitig Talente ausschließen.\n\nMeiner Meinung nach sollten Musikhochschulen daher gebührenfrei bleiben. Sinnvoller wäre es, Stiftungen und Unternehmen stärker in die Förderung einzubinden und Stipendien für Studierende aus einkommensschwachen Familien auszubauen.",
+   "modelSv": "Exempeltext: utgångsläge, argument för och emot, avvägning och en motiverad ståndpunkt."
+  },
+  {
+   "id": "de7-sc-2",
+   "part": "schreiben",
+   "teil": "Teil 2",
+   "title": "Formelle E-Mail: Bitte um Verlängerung der Abgabefrist",
+   "time": 30,
+   "minWords": 120,
+   "instr": "Skriv ett formellt mejl på cirka 120 ord. Ta upp alla punkter.",
+   "task": "Sie können Ihre Hausarbeit wegen einer Erkrankung nicht rechtzeitig abgeben. Schreiben Sie Ihrem Dozenten, Herrn Dr. Wolf, eine E-Mail.\n\n– Erklären Sie Ihre Situation.\n– Bitten Sie um eine Verlängerung und schlagen Sie einen neuen Termin vor.\n– Fragen Sie, welche Nachweise nötig sind.\n– Bedanken Sie sich.\n\nSchreiben Sie circa 120 Wörter.",
+   "criteria": [
+    "Erfüllung der Aufgabe",
+    "Kohärenz",
+    "Wortschatz",
+    "Strukturen"
+   ],
+   "model": "Sehr geehrter Herr Dr. Wolf,\n\nich besuche Ihr Seminar „Musik und Politik im 20. Jahrhundert“ und schreibe derzeit meine Hausarbeit über Hanns Eisler. Leider bin ich seit zehn Tagen an einer Lungenentzündung erkrankt und konnte in dieser Zeit nicht an der Arbeit weiterschreiben.\n\nDaher möchte ich Sie höflich um eine Verlängerung der Abgabefrist bitten. Wäre es möglich, die Arbeit statt am 15. März erst am 5. April einzureichen? Ein ärztliches Attest liegt mir vor. Könnten Sie mir bitte mitteilen, ob ich es Ihnen direkt schicken soll oder beim Prüfungsamt einreichen muss?\n\nVielen Dank im Voraus für Ihr Verständnis.\n\nMit freundlichen Grüßen\nAnna Svensson",
+   "modelSv": "Exempeltext: situation, begäran med nytt datum, fråga om intyg och tack."
+  },
+  {
+   "id": "de7-sp-1",
+   "part": "sprechen",
+   "teil": "Teil 1",
+   "title": "Vortrag: Musikunterricht für alle?",
+   "prep": 15,
+   "time": 4,
+   "instr": "Håll en presentation på ungefär fyra minuter. Förbered dig med stödord.",
+   "task": "Halten Sie einen Vortrag zum Thema: „Sollte jedes Kind in der Schule ein Instrument lernen?“\n\n– Stellen Sie das Thema und die Situation in Ihrem Land dar.\n– Nennen Sie Vor- und Nachteile.\n– Nehmen Sie Stellung und begründen Sie Ihre Meinung.\n– Beenden Sie den Vortrag mit einem Fazit.",
+   "criteria": [
+    "Erfüllung der Aufgabe",
+    "Kohärenz",
+    "Wortschatz",
+    "Strukturen",
+    "Aussprache"
+   ],
+   "phrases": [
+    "In meinem Vortrag geht es um die Frage, ob …",
+    "In Schweden ist es so, dass …",
+    "Ein wichtiges Argument dafür ist …",
+    "Dem ist allerdings entgegenzuhalten, dass …",
+    "Meiner Ansicht nach …",
+    "Zusammenfassend lässt sich sagen, dass …"
+   ],
+   "model": "In meinem Vortrag geht es um die Frage, ob jedes Kind in der Schule ein Instrument lernen sollte. In Schweden gibt es kommunale Musikschulen, aber die Teilnahme kostet Geld und ist freiwillig. Ein wichtiges Argument dafür ist die Chancengleichheit: Viele Kinder hätten sonst nie die Möglichkeit, ein Instrument auszuprobieren. Außerdem lernt man im Ensemble, aufeinander zu hören. Dem ist allerdings entgegenzuhalten, dass nicht alle Kinder Freude daran haben, und dass es an Lehrkräften fehlt. Meiner Ansicht nach sollte jedes Kind zumindest ein Jahr lang ein Instrument ausprobieren dürfen, kostenlos und ohne Noten. Zusammenfassend lässt sich sagen: Musik darf kein Privileg sein.",
+   "modelSv": "Exempel på stödord som hel text: inledning, situationen i Sverige, för- och nackdelar, ställningstagande, slutsats."
+  },
+  {
+   "id": "de7-sp-2",
+   "part": "sprechen",
+   "teil": "Teil 2",
+   "title": "Diskussion: Konzerte nur noch digital?",
+   "prep": 5,
+   "time": 6,
+   "instr": "Diskutera med en partner (skriv vad du skulle säga). Argumentera, reagera på motargument och försök komma fram till en slutsats.",
+   "task": "Ein Kulturzentrum überlegt, aus Kostengründen die Hälfte seiner Konzerte nur noch als Livestream anzubieten. Diskutieren Sie mit Ihrer Gesprächspartnerin oder Ihrem Gesprächspartner Vor- und Nachteile und einigen Sie sich auf einen Vorschlag.",
+   "criteria": [
+    "Erfüllung der Aufgabe",
+    "Interaktion",
+    "Wortschatz",
+    "Strukturen",
+    "Aussprache"
+   ],
+   "phrases": [
+    "Ich sehe das etwas anders, denn …",
+    "Da haben Sie recht, allerdings …",
+    "Was halten Sie davon, wenn …?",
+    "Könnten wir uns darauf einigen, dass …?"
+   ],
+   "model": "Ich sehe durchaus Vorteile: Ein Livestream erreicht Menschen, die nicht in die Stadt kommen können, zum Beispiel ältere oder kranke Menschen. Allerdings fehlt das gemeinsame Erlebnis im Saal, und gerade das macht ein Konzert aus. Da haben Sie recht, dass die Kosten ein Problem sind, aber ein Stream kostet ja auch Geld für Technik und Rechte. Was halten Sie davon, wenn wir nur ausgewählte Konzerte zusätzlich streamen, statt die Hälfte abzusagen? Könnten wir uns darauf einigen, dass die Live-Konzerte bleiben und der Stream eine Ergänzung ist?",
+   "modelSv": "Exempel på repliker: argument, medhåll med invändning, förslag och kompromiss."
+  }
+ ]
+}

@@ -1,0 +1,1024 @@
+// Ordlista för Franska 5 (Moderna språk 5, steg 5, B1.1). Rader som börjar med // är kommentarer.
+// Kapitlen följer spec för steg 5 i docs/nivaer-franska.md och DELF B1. Kursen har ingen lärobok.
+// Ord som finns i Franska 3 (languages/fr/words.txt) är inte med. Viss överlappning med Franska 4 (frs4) och Franska 6 (fr4) finns.
+//
+// Format, en rad per ord:
+//   franska|svenska|genus|exempel på franska|exempel på svenska|ursprung|ordagrant
+// Ordets franska form och avsnittets id används som nycklar för sparade framsteg, ändra dem inte i efterhand.
+#v1|Kap 1 · Travail et société
+le marché du travail|arbetsmarknaden|m|Les jeunes diplômés entrent sur [le marché du travail] à un moment difficile.|De nyutexaminerade kommer ut på arbetsmarknaden i ett svårt läge.||<b>le marché</b> marknaden · <b>du travail</b> för arbete → "arbetets marknad"
+le chômage|arbetslöshet|m|Le [chômage] des jeunes a baissé cette année.|Ungdomsarbetslösheten har minskat i år.|Av <b>chômer</b> 'vila', ursprungligen om vila under den värmsta tiden på dagen (grekiska <b>kauma</b> 'hetta').
+le chômeur, la chômeuse|arbetslös (person)|m|Mon oncle a été [chômeur] pendant six mois avant de retrouver un poste.|Min morbror var arbetslös i sex månader innan han fick en ny tjänst.|Se chômage.
+embaucher|anställa||Le restaurant va [embaucher] trois serveurs pour l'été.|Restaurangen ska anställa tre servitörer i sommar.|Av <b>bauche</b> 'verkstad': ta in någon i verkstaden.
+licencier|avskeda, säga upp||L'usine a dû [licencier] deux cents ouvriers.|Fabriken var tvungen att säga upp tvåhundra arbetare.|Latin <b>licentia</b> 'tillåtelse': man 'ger lov att gå'.
+le licenciement|uppsägning|m|Le [licenciement] de son père a bouleversé toute la famille.|Pappans uppsägning vände upp och ner på hela familjen.|Se licencier.
+démissionner|säga upp sig||Elle a décidé de [démissionner] pour se consacrer à la musique.|Hon bestämde sig för att säga upp sig för att ägna sig åt musiken.|Latin <b>demittere</b> 'släppa ner', jämför demission.
+le poste|tjänst, befattning|m|Il a postulé pour un [poste] de professeur de guitare.|Han har sökt en tjänst som gitarrlärare.|Genus spelar roll: <b>la poste</b> = posten.
+l'entretien d'embauche|anställningsintervju|m|Avant son [entretien d'embauche], Léo a répété ses réponses devant le miroir.|Före anställningsintervjun övade Léo på sina svar framför spegeln.||<b>l'entretien</b> samtalet · <b>d'embauche</b> för anställning → "anställningssamtal"
+le CDI|fast anställning|m|Après trois ans de remplacements, il a enfin obtenu un [CDI].|Efter tre år av vikariat fick han äntligen en fast anställning.|Förkortning av <b>contrat à durée indéterminée</b> 'avtal på obestämd tid'.
+le CDD|visstidsanställning|m|Beaucoup de jeunes enchaînent les [CDD] avant de trouver un emploi stable.|Många unga har den ena visstidsanställningen efter den andra innan de hittar ett fast jobb.|<b>contrat à durée déterminée</b> 'avtal på bestämd tid'.
+le salarié, la salariée|anställd, löntagare|m|L'entreprise compte cinquante [salariés].|Företaget har femtio anställda.|Av salaire.
+l'employeur|arbetsgivare|m|Votre [employeur] doit vous payer les heures supplémentaires.|Din arbetsgivare måste betala dig för övertiden.|Av employer.
+le collègue, la collègue|kollega|m|Mes [collègues] m'ont offert un cadeau pour mon départ.|Mina kolleger gav mig en present när jag slutade.|Latin <b>collega</b> 'den som valts tillsammans med en annan'.
+l'usine|fabrik|f|Mon grand-père a travaillé quarante ans dans la même [usine].|Min morfar arbetade fyrtio år på samma fabrik.|Latin <b>officina</b> 'verkstad'.
+l'ouvrier, l'ouvrière|arbetare|m|Les [ouvriers] commencent à six heures du matin.|Arbetarna börjar klockan sex på morgonen.|Latin <b>operarius</b>, av opus 'verk'.
+le cadre|tjänsteman i chefsställning; ram|m|Sa mère est [cadre] dans une banque à Lyon.|Hans mamma är chef på en bank i Lyon.|Italienska <b>quadro</b> 'fyrkant, ram'.
+le fonctionnaire|statligt anställd, tjänsteman|m|Les enseignants sont des [fonctionnaires] en France.|Lärare är statsanställda i Frankrike.|Av <b>fonction</b> 'uppgift, ämbete'.
+l'indépendant, l'indépendante|egenföretagare, frilans|m|Comme beaucoup de musiciens, il travaille en [indépendant].|Som många musiker arbetar han som frilans.|
+le métier|yrke|m|Musicien, c'est un beau [métier], mais pas toujours facile.|Musiker är ett fint yrke, men inte alltid lätt.|Latin <b>ministerium</b> 'tjänst'.
+l'horaire|arbetstid, schema|m|Les [horaires] de ce travail sont très flexibles.|Arbetstiderna på det här jobbet är väldigt flexibla.|Latin <b>hora</b> 'timme'.
+à temps partiel|på deltid||Pendant ses études, elle a travaillé [à temps partiel] dans une librairie.|Under studierna jobbade hon deltid i en bokhandel.||<b>à</b> på · <b>temps</b> tid · <b>partiel</b> delvis → "på delvis tid"
+à plein temps|på heltid||Il ne peut pas travailler [à plein temps] et répéter quatre heures par jour.|Han kan inte jobba heltid och öva fyra timmar om dagen.||<b>à plein temps</b> "på full tid"
+les heures supplémentaires|övertid|fpl|Cette semaine, j'ai fait dix [heures supplémentaires].|Den här veckan har jag jobbat tio timmar övertid.||<b>les heures</b> timmarna · <b>supplémentaires</b> extra → "extratimmar"
+le télétravail|distansarbete|m|Depuis la pandémie, le [télétravail] s'est beaucoup développé.|Sedan pandemin har distansarbetet ökat mycket.|Grekiska <b>tēle</b> 'fjärran' + travail.
+le congé|ledighet, semester|m|Elle a pris un [congé] pour accompagner l'orchestre en tournée.|Hon tog ledigt för att följa med orkestern på turné.|
+le congé parental|föräldraledighet|m|En Suède, les pères prennent souvent un long [congé parental].|I Sverige tar papporna ofta lång föräldraledighet.|
+le retraité, la retraitée|pensionär|m|Beaucoup de [retraités] chantent dans une chorale.|Många pensionärer sjunger i en kör.|
+le syndicat|fackförening|m|Le [syndicat] a appelé à la grève pour jeudi.|Facket har utlyst strejk på torsdag.|Grekiska <b>syndikos</b> 'ombud'.
+faire grève|strejka||Les enseignants vont [faire grève] contre la réforme.|Lärarna ska strejka mot reformen.||<b>faire</b> göra · <b>grève</b> strejk → "göra strejk"
+manifester|demonstrera; visa||Les étudiants ont décidé de [manifester] devant le ministère.|Studenterna bestämde sig för att demonstrera utanför ministeriet.|
+revendiquer|kräva (som sin rätt)||Les musiciens [revendiquent] un meilleur statut.|Musikerna kräver bättre villkor.|Latin <b>rem vindicare</b> 'kräva en sak'.
+la revendication|krav|f|Leur principale [revendication] est une hausse des salaires.|Deras viktigaste krav är högre löner.|
+la discrimination|diskriminering|f|La loi interdit toute [discrimination] à l'embauche.|Lagen förbjuder all diskriminering vid anställning.|
+le citoyen, la citoyenne|medborgare|m|Chaque [citoyen] a le droit de voter à partir de dix-huit ans.|Varje medborgare har rösträtt från arton år.|Av <b>cité</b> 'stad'.
+la citoyenneté|medborgarskap|f|Elle a obtenu la [citoyenneté] française l'année dernière.|Hon fick franskt medborgarskap förra året.|
+le gouvernement|regering|m|Le [gouvernement] a présenté un nouveau projet de loi.|Regeringen har lagt fram ett nytt lagförslag.|
+le député, la députée|riksdagsledamot (i Frankrike)|m|Le [député] de notre région a visité le lycée.|Vår regions parlamentsledamot besökte gymnasiet.|
+la sécurité sociale|socialförsäkringen|f|En France, la [sécurité sociale] rembourse une partie des frais médicaux.|I Frankrike ersätter socialförsäkringen en del av sjukvårdskostnaderna.|
+les impôts|skatter|mpl|Une partie de nos [impôts] sert à financer les écoles.|En del av våra skatter används för att finansiera skolorna.|Av <b>imposer</b> 'pålägga'.
+la richesse|rikedom|f|La [richesse] est mal répartie dans le monde.|Rikedomen är ojämnt fördelad i världen.|
+la solidarité|solidaritet|f|La [solidarité] entre les générations est essentielle.|Solidariteten mellan generationerna är viktig.|
+le bénévole, la bénévole|volontär, frivillig|m|Les [bénévoles] distribuent des repas tous les soirs.|Volontärerna delar ut mat varje kväll.|Latin <b>benevolus</b> 'välvillig'.
+le bénévolat|volontärarbete|m|Elle fait du [bénévolat] dans une association d'aide aux migrants.|Hon arbetar som volontär i en förening som hjälper migranter.|
+l'association|förening|f|Il a fondé une [association] pour offrir des cours de musique gratuits.|Han grundade en förening som erbjuder gratis musiklektioner.|
+l'engagement|engagemang|m|Son [engagement] dans l'association est admirable.|Hans engagemang i föreningen är beundransvärt.|
+la carrière|karriär|f|Elle a fait une belle [carrière] de chanteuse d'opéra.|Hon har gjort en fin karriär som operasångerska.|
+compétent, -e|kompetent, kunnig||C'est une employée très [compétente].|Hon är en mycket kunnig medarbetare.|
+qualifié, -e|kvalificerad, utbildad||On manque de personnel [qualifié] dans les hôpitaux.|Det saknas utbildad personal på sjukhusen.|
+l'expérience professionnelle|arbetslivserfarenhet|f|Pour ce poste, une première [expérience professionnelle] est souhaitée.|För den här tjänsten är det önskvärt med viss arbetslivserfarenhet.|
+le stagiaire, la stagiaire|praktikant|m|Le [stagiaire] a préparé les partitions pour la répétition.|Praktikanten förberedde noterna till repetitionen.|
+l'alternance|varvad utbildning (skola och arbete)|f|Il fait ses études en [alternance] : deux semaines à l'école, deux semaines en entreprise.|Han läser en varvad utbildning: två veckor i skolan, två veckor på ett företag.|Av <b>alterner</b> 'växla'.
+le secteur|sektor, bransch|m|Le [secteur] culturel emploie beaucoup de jeunes.|Kultursektorn sysselsätter många unga.|
+l'agriculteur, l'agricultrice|lantbrukare, bonde|m|Les [agriculteurs] travaillent souvent sept jours sur sept.|Lantbrukarna arbetar ofta sju dagar i veckan.|
+l'artisan|hantverkare|m|Un [artisan] de Mirecourt fabrique des violons à la main.|En hantverkare i Mirecourt tillverkar fioler för hand.|
+le commerçant, la commerçante|handlare|m|Les [commerçants] du quartier se connaissent tous.|Handlarna i kvarteret känner alla varandra.|
+le cuisinier, la cuisinière|kock|m|Le [cuisinier] prépare le menu du jour.|Kocken lagar dagens meny.|
+l'infirmier, l'infirmière|sjuksköterska|m|Ma sœur est [infirmière] dans un hôpital de nuit.|Min syster är sjuksköterska och jobbar natt på ett sjukhus.|
+l'ingénieur, l'ingénieure|ingenjör|m|Son frère est [ingénieur] du son.|Hans bror är ljudtekniker.|
+l'agent|tjänsteman, agent|m|Un [agent] de sécurité contrôle les billets à l'entrée.|En säkerhetsvakt kontrollerar biljetterna vid ingången.|
+le serveur, la serveuse|servitör, servitris|m|Pendant l'été, j'ai travaillé comme [serveuse] dans un café.|I somras jobbade jag som servitris på ett kafé.|
+le petit boulot|extrajobb, ströjobb|m|Pendant ses études, il a enchaîné les [petits boulots].|Under studietiden hade han det ena extrajobbet efter det andra.|<b>boulot</b> är vardagligt för travail.
+la hausse|höjning, ökning|f|Les syndicats demandent une [hausse] des salaires.|Facken kräver löneökningar.|
+la baisse|minskning, sänkning|f|On observe une [baisse] du nombre de chômeurs.|Man ser en minskning av antalet arbetslösa.|
+diminuer|minska||Le temps de travail a beaucoup [diminué] en un siècle.|Arbetstiden har minskat mycket på ett sekel.|
+l'ordre du jour|dagordning|m|Le premier point à l'[ordre du jour] est le budget.|Första punkten på dagordningen är budgeten.||<b>l'ordre</b> ordningen · <b>du jour</b> för dagen
+le délai|tidsfrist|m|Le [délai] pour rendre le dossier est de deux semaines.|Tidsfristen för att lämna in ansökan är två veckor.|
+la tâche|uppgift, arbetsuppgift|f|Ma [tâche] principale est d'accueillir les clients.|Min huvuduppgift är att ta emot kunderna.|Obs! <b>la tache</b> utan circumflex = fläck.
+se charger de|ta hand om, åta sig||C'est Julie qui [se charge de] la communication du groupe.|Det är Julie som tar hand om bandets kommunikation.|
+le responsable, la responsable|ansvarig, chef|m|Adressez-vous au [responsable] du service.|Vänd er till avdelningens chef.|
+l'équipe|lag, team|f|Dans notre [équipe], chacun a son rôle.|I vårt team har alla sin roll.|
+la formation continue|fortbildning|f|L'entreprise propose une [formation continue] en informatique.|Företaget erbjuder fortbildning i data.|
+se reconvertir|byta yrke, skola om sig||À quarante ans, il a décidé de [se reconvertir] dans la musique.|Vid fyrtio bestämde han sig för att byta bana till musiken.|
+le stress|stress|m|Le [stress] au travail est une cause fréquente de maladie.|Stress på jobbet är en vanlig orsak till sjukdom.|
+l'épuisement professionnel|utbrändhet|m|L'[épuisement professionnel] touche de plus en plus de jeunes cadres.|Utbrändhet drabbar allt fler unga chefer.|På engelska <b>burn-out</b>, som också används på franska.
+l'équilibre|balans, jämvikt|m|Il faut trouver un [équilibre] entre vie professionnelle et vie privée.|Man måste hitta en balans mellan arbete och privatliv.|Latin <b>aequilibrium</b> 'lika vikt'.
+exiger|kräva||Ce métier [exige] beaucoup de patience.|Det här yrket kräver mycket tålamod.|
+l'exigence|krav|f|Les [exigences] de ce poste sont très élevées.|Kraven för den här tjänsten är mycket höga.|
+l'offre d'emploi|platsannons, lediga jobb|f|Il y a peu d'[offres d'emploi] pour les musiciens classiques.|Det finns få lediga jobb för klassiska musiker.|
+le candidat, la candidate|sökande|m|Chaque [candidat] doit envoyer deux enregistrements.|Varje sökande ska skicka två inspelningar.|
+recruter|rekrytera||L'orchestre [recrute] un violoncelliste pour la saison prochaine.|Orkestern rekryterar en cellist till nästa säsong.|
+le recrutement|rekrytering|m|Le [recrutement] se fait en deux étapes.|Rekryteringen sker i två steg.|
+l'avenir professionnel|yrkesframtid|m|Elle pense déjà à son [avenir professionnel].|Hon tänker redan på sin framtid i arbetslivet.|
+la précarité|osäker ekonomisk situation|f|Beaucoup d'artistes vivent dans la [précarité].|Många konstnärer lever under osäkra förhållanden.|Latin <b>precarius</b> 'som man fått genom att be'.
+précaire|osäker, tillfällig||Les contrats courts rendent la situation [précaire].|De korta anställningarna gör situationen osäker.|
+l'intermittent du spectacle|frilansande scenarbetare (med särskild a-kassa)|m|En France, beaucoup de musiciens ont le statut d'[intermittent du spectacle].|I Frankrike har många musiker ställningen som intermittent du spectacle.|<b>intermittent</b> 'som kommer och går': man jobbar i perioder.
+la cotisation|avgift (till försäkring, fack)|f|Une partie du salaire sert à payer les [cotisations] sociales.|En del av lönen går till sociala avgifter.|
+la fiche de paie|lönebesked|f|Vérifiez chaque mois votre [fiche de paie].|Kontrollera ditt lönebesked varje månad.|
+le travailleur, la travailleuse|arbetare, arbetstagare|m|Les [travailleurs] saisonniers arrivent en juin.|Säsongsarbetarna kommer i juni.|
+saisonnier, -ère|säsongs-||Il cherche un emploi [saisonnier] dans une station de ski.|Han söker ett säsongsjobb på en skidort.|Av <b>saison</b>.
+le niveau de vie|levnadsstandard|m|Le [niveau de vie] a beaucoup augmenté depuis 1950.|Levnadsstandarden har ökat mycket sedan 1950.|
+le pourboire|dricks|m|Les touristes laissent souvent un bon [pourboire].|Turisterna lämnar ofta bra dricks.|<b>pour boire</b> 'för att dricka': pengar till en drink.
+faire la caisse|räkna kassan||Le soir, il faut [faire la caisse] avant de fermer.|På kvällen måste man räkna kassan innan man stänger.|
+la commande|beställning|f|Le serveur a pris notre [commande].|Servitören tog vår beställning.|
+le client, la cliente|kund|m|Le [client] a demandé l'addition.|Kunden bad om notan.|
+le bureau|kontor|m|Elle arrive au [bureau] à huit heures.|Hon kommer till kontoret klockan åtta.|
+le télétravailleur, la télétravailleuse|distansarbetare|m|Les [télétravailleurs] se sentent parfois isolés.|Distansarbetare känner sig ibland isolerade.|
+la pause déjeuner|lunchrast|f|Pendant la [pause déjeuner], nous mangeons ensemble.|Under lunchrasten äter vi tillsammans.|
+le trajet|resväg, pendling|m|Mon [trajet] pour aller au travail dure une heure.|Min resa till jobbet tar en timme.|
+la productivité|produktivitet|f|La [productivité] a augmenté depuis la réforme.|Produktiviteten har ökat sedan reformen.|
+l'entrepreneur, l'entrepreneuse|företagare|m|Elle est devenue [entrepreneuse] à vingt-cinq ans.|Hon blev företagare vid tjugofem.|
+créer son entreprise|starta eget företag||Il rêve de [créer son entreprise] de production musicale.|Han drömmer om att starta ett eget musikproduktionsbolag.|
+la concurrence|konkurrens|f|La [concurrence] est forte entre les jeunes musiciens.|Konkurrensen är hård bland unga musiker.|
+le chef d'entreprise|företagsledare|m|Le [chef d'entreprise] a présenté les résultats.|Företagsledaren presenterade resultaten.|
+la réforme|reform|f|La [réforme] des retraites a provoqué des manifestations.|Pensionsreformen ledde till demonstrationer.|
+le quartier populaire|arbetarkvarter|m|Il a grandi dans un [quartier populaire] de Marseille.|Han växte upp i ett arbetarkvarter i Marseille.|
+la mairie|kommunkontor, stadshus|f|Le stage a lieu au service culturel de la [mairie].|Praktiken är på kommunens kulturförvaltning.|
+la candidature spontanée|spontanansökan|f|J'ai envoyé une [candidature spontanée] à dix entreprises.|Jag skickade en spontanansökan till tio företag.|
+la rémunération|ersättning, lön|f|La [rémunération] dépend de l'expérience.|Lönen beror på erfarenheten.|
+la semaine de quatre jours|fyradagarsvecka|f|Cette entreprise a adopté la [semaine de quatre jours].|Det här företaget har infört fyradagarsvecka.|
+le graphiste, la graphiste|grafisk formgivare|m|Le [graphiste] a créé l'affiche du festival.|Den grafiska formgivaren gjorde festivalens affisch.|
+le vendeur, la vendeuse|försäljare, expedit|m|La [vendeuse] m'a conseillé un autre modèle.|Expediten rekommenderade en annan modell.|
+le caissier, la caissière|kassör, kassörska|m|Le [caissier] m'a rendu la monnaie.|Kassören gav mig växel.|
+le livreur, la livreuse|bud|m|Le [livreur] a laissé le colis chez le voisin.|Budet lämnade paketet hos grannen.|
+le temps de travail|arbetstid|m|Le [temps de travail] a diminué depuis cinquante ans.|Arbetstiden har minskat de senaste femtio åren.|
+la mise en place|förberedelser (i restaurang)|f|Le matin, je fais la [mise en place] avant l'ouverture.|På morgonen gör jag förberedelserna före öppningen.|
+le tablier|förkläde|m|Le serveur porte un [tablier] noir.|Servitören bär ett svart förkläde.|
+le gréviste, la gréviste|strejkande|m|Les [grévistes] se sont réunis devant l'usine.|De strejkande samlades utanför fabriken.|
+le jour férié|helgdag|m|Le 14 juillet est un [jour férié] en France.|Den 14 juli är en helgdag i Frankrike.|
+#v2|Kap 2 · Étudier à l'étranger
+étudier à l'étranger|studera utomlands||Elle a toujours rêvé d'[étudier à l'étranger].|Hon har alltid drömt om att studera utomlands.||<b>à l'étranger</b> "i det främmande"
+le programme d'échange|utbytesprogram|m|Erasmus est le [programme d'échange] le plus connu en Europe.|Erasmus är det mest kända utbytesprogrammet i Europa.|
+le semestre|termin|m|Le premier [semestre] commence en septembre.|Första terminen börjar i september.|Latin <b>semestris</b> 'sex månader'.
+l'année de césure|mellanår, sabbatsår|f|Avant l'université, elle a pris une [année de césure] pour voyager.|Före universitetet tog hon ett sabbatsår för att resa.|<b>césure</b> 'paus, snitt' (i versmått).
+le boursier, la boursière|stipendiat|m|Les [boursiers] ne paient pas de frais d'inscription.|Stipendiaterna betalar inga inskrivningsavgifter.|
+l'inscription|inskrivning, anmälan|f|L'[inscription] au conservatoire se fait en ligne.|Anmälan till konservatoriet görs på nätet.|
+les frais d'inscription|anmälningsavgift, terminsavgift|mpl|Les [frais d'inscription] sont de 170 euros par an.|Avgiften är 170 euro per år.|
+le dossier de candidature|ansökningshandlingar|m|Envoyez votre [dossier de candidature] avant le 15 mars.|Skicka era ansökningshandlingar före den 15 mars.|
+le relevé de notes|betygsutdrag|m|Joignez une copie de votre dernier [relevé de notes].|Bifoga en kopia av ert senaste betygsutdrag.|
+diplômé, -e|utexaminerad||Elle est [diplômée] du conservatoire de Genève.|Hon har examen från konservatoriet i Genève.|
+reconnaître un diplôme|erkänna en examen||La France va-t-elle [reconnaître mon diplôme] suédois ?|Kommer Frankrike att erkänna min svenska examen?|
+l'équivalence|motsvarighet, tillgodoräknande|f|Il faut demander une [équivalence] pour les cours suivis en Suède.|Man måste ansöka om att få tillgodoräkna kurserna man läst i Sverige.|
+le niveau de langue|språknivå|m|Quel [niveau de langue] faut-il pour étudier en France ?|Vilken språknivå behövs för att studera i Frankrike?|
+le certificat|intyg, certifikat|m|Le DELF B1 est un [certificat] reconnu par beaucoup d'universités.|DELF B1 är ett intyg som erkänns av många universitet.|
+l'attestation|intyg|f|Demandez une [attestation] de scolarité au secrétariat.|Be om ett intyg om skolgång på kansliet.|
+le justificatif|intyg, verifikation|m|Il faut fournir un [justificatif] de domicile.|Man måste lämna ett intyg om bostadsadress.|Av <b>justifier</b> 'styrka'.
+fournir|lämna, tillhandahålla||Vous devez [fournir] une copie de votre passeport.|Ni måste lämna en kopia av ert pass.|
+remplir un formulaire|fylla i en blankett||N'oubliez pas de [remplir ce formulaire] en majuscules.|Glöm inte att fylla i blanketten med versaler.|
+le titre de séjour|uppehållstillstånd|m|Les étudiants de l'UE n'ont pas besoin de [titre de séjour].|Studenter från EU behöver inget uppehållstillstånd.|
+l'ambassade|ambassad|f|Il a pris rendez-vous à l'[ambassade] de France.|Han bokade en tid på franska ambassaden.|
+les démarches|formaliteter, ärenden|fpl|Les [démarches] administratives prennent beaucoup de temps.|Den administrativa pappersexercisen tar mycket tid.|
+administratif, -ve|administrativ||J'ai reçu un courrier [administratif] de l'université.|Jag har fått ett brev från universitetets administration.|
+la paperasse|pappersarbete (vardagligt)|f|Avant de partir, il y a toujours beaucoup de [paperasse].|Innan man åker blir det alltid massor av pappersarbete.|
+le logement étudiant|studentbostad|m|Il est difficile de trouver un [logement étudiant] à Paris.|Det är svårt att hitta en studentbostad i Paris.|
+la résidence universitaire|studenthem|f|Elle habite dans une [résidence universitaire] près du campus.|Hon bor på ett studenthem nära campus.|
+la colocation|delat boende, kollektiv|f|La [colocation] coûte moins cher qu'un studio.|Kollektiv kostar mindre än en egen etta.|
+le colocataire, la colocataire|rumskompis|m|Mes [colocataires] viennent d'Italie et du Maroc.|Mina rumskompisar kommer från Italien och Marocko.|
+le loyer|hyra|m|Le [loyer] est payé le premier de chaque mois.|Hyran betalas den första varje månad.|
+la caution|deposition, borgen|f|Le propriétaire demande une [caution] d'un mois de loyer.|Hyresvärden kräver en deposition på en månadshyra.|
+le propriétaire, la propriétaire|hyresvärd, ägare|m|Le [propriétaire] a accepté que je joue du piano.|Hyresvärden gick med på att jag spelar piano.|
+l'aide au logement|bostadsbidrag|f|Les étudiants étrangers peuvent aussi recevoir l'[aide au logement].|Utländska studenter kan också få bostadsbidrag.|
+le campus|campus|m|Le [campus] se trouve à vingt minutes du centre-ville.|Campus ligger tjugo minuter från centrum.|
+la faculté|fakultet (vardagligt: la fac)|f|Il est en deuxième année à la [faculté] de lettres.|Han går andra året på humanistiska fakulteten.|
+l'amphithéâtre|föreläsningssal|m|Le cours a lieu dans le grand [amphithéâtre].|Föreläsningen hålls i den stora hörsalen.|Vardagligt <b>l'amphi</b>.
+le cours magistral|föreläsning|m|Au [cours magistral], le professeur parle et les étudiants prennent des notes.|På föreläsningen talar läraren och studenterna antecknar.|Latin <b>magister</b> 'lärare'.
+les travaux dirigés|lektioner i mindre grupp, seminarier|mpl|Les [travaux dirigés] permettent de poser des questions.|På seminarierna kan man ställa frågor.|Förkortas TD.
+prendre des notes|anteckna||J'ai du mal à [prendre des notes] en français.|Jag har svårt att anteckna på franska.|
+le partiel|tentamen (under terminen)|m|Les [partiels] ont lieu en janvier.|Tentorna är i januari.|
+réviser|plugga inför prov, repetera||Je dois [réviser] pour mon partiel d'histoire de la musique.|Jag måste plugga till min tenta i musikhistoria.|
+le mémoire|uppsats, examensarbete|m|Elle écrit son [mémoire] sur la musique baroque.|Hon skriver sin uppsats om barockmusik.|Genus: <b>la mémoire</b> = minnet.
+la soutenance|disputation, muntlig redovisning av uppsats|f|Sa [soutenance] aura lieu devant un jury de trois professeurs.|Hon ska försvara sin uppsats inför en jury på tre lärare.|
+le directeur de recherche|handledare|m|Mon [directeur de recherche] m'a conseillé de lire ce livre.|Min handledare rådde mig att läsa den här boken.|
+l'enseignant, l'enseignante|lärare|m|Les [enseignants] sont très disponibles.|Lärarna är lätta att nå.|
+le concours d'entrée|antagningsprov|m|Seuls dix candidats réussiront le [concours d'entrée].|Bara tio sökande klarar antagningsprovet.|
+l'audition|provspelning|f|Mon [audition] est prévue le 12 avril à dix heures.|Min provspelning är planerad till den 12 april klockan tio.|
+admis, -e|antagen||Elle a été [admise] dans la classe de piano de Madame Roux.|Hon blev antagen till Madame Roux pianoklass.|
+refusé, -e|inte antagen, nekad||Il a été [refusé] la première fois, mais il a réessayé.|Han kom inte in första gången, men försökte igen.|
+la liste d'attente|reservlista|f|Je suis sur [liste d'attente] pour la résidence.|Jag står på reservlistan till studenthemmet.|
+s'adapter|anpassa sig||Il lui a fallu quelques mois pour [s'adapter] à la vie parisienne.|Det tog honom några månader att anpassa sig till livet i Paris.|
+le choc culturel|kulturkrock|m|Le premier mois, j'ai vécu un vrai [choc culturel].|Första månaden upplevde jag en riktig kulturkrock.|
+le mal du pays|hemlängtan|m|En novembre, elle a eu le [mal du pays].|I november fick hon hemlängtan.||<b>le mal</b> smärtan · <b>du pays</b> efter landet
+s'ennuyer de|sakna (någon, något)||Je [m'ennuie de] ma famille et de la neige.|Jag saknar min familj och snön.|Kanadensisk franska; i Frankrike säger man oftare <b>manquer</b>: ma famille me manque.
+manquer à quelqu'un|saknas av någon||Mes amis me [manquent] beaucoup.|Jag saknar mina vänner väldigt mycket.|Obs! Omvänd konstruktion: det saknade är subjekt.
+autonome|självständig||Vivre seule à l'étranger m'a rendue plus [autonome].|Att bo ensam utomlands har gjort mig mer självständig.|Grekiska <b>autos</b> 'själv' + <b>nomos</b> 'lag'.
+l'autonomie|självständighet|f|Les études à l'étranger développent l'[autonomie].|Studier utomlands utvecklar självständigheten.|
+s'intégrer|integrera sig, komma in i||Grâce à la chorale, il s'est vite [intégré].|Tack vare kören kom han snabbt in i gemenskapen.|
+les coutumes|seder, vanor|fpl|Il est intéressant de découvrir les [coutumes] d'un autre pays.|Det är intressant att upptäcka ett annat lands seder.|
+l'étudiant étranger|utländsk student|m|Il y a plus de quatre cent mille [étudiants étrangers] en France.|Det finns över fyrahundratusen utländska studenter i Frankrike.|
+l'expatrié, l'expatriée|utlandsboende (person)|m|Beaucoup d'[expatriés] se retrouvent dans le même quartier.|Många utlandsboende samlas i samma kvarter.|Latin <b>ex</b> 'ut' + <b>patria</b> 'fosterland'.
+le compte bancaire|bankkonto|m|Ouvrir un [compte bancaire] en France peut prendre du temps.|Att öppna ett bankkonto i Frankrike kan ta tid.|
+l'assurance|försäkring|f|N'oubliez pas de prendre une [assurance] habitation.|Glöm inte att teckna en hemförsäkring.|
+la carte européenne d'assurance maladie|europeiskt sjukförsäkringskort|f|Avec la [carte européenne d'assurance maladie], les soins sont remboursés.|Med det europeiska sjukförsäkringskortet ersätts vården.|
+le bilan|sammanfattning, bokslut|m|À la fin de l'année, elle a fait le [bilan] de son séjour.|I slutet av året summerade hon sin vistelse.|
+enrichissant, -e|givande, berikande||Cette année à Lyon a été très [enrichissante].|Det här året i Lyon har varit mycket givande.|
+l'ouverture d'esprit|öppenhet, fördomsfrihet|f|Les voyages développent l'[ouverture d'esprit].|Resor utvecklar öppenheten.||<b>l'ouverture</b> öppningen · <b>d'esprit</b> av sinnet
+élargir|vidga||Partir à l'étranger permet d'[élargir] ses horizons.|Att åka utomlands gör det möjligt att vidga sina vyer.|
+le séjour|vistelse|m|Pendant mon [séjour] à Québec, j'ai beaucoup progressé.|Under min vistelse i Québec gjorde jag stora framsteg.|
+progresser|göra framsteg||Elle a [progressé] très vite en français.|Hon gjorde mycket snabba framsteg i franska.|
+les progrès|framsteg|mpl|Tu as fait d'énormes [progrès] depuis l'été.|Du har gjort enorma framsteg sedan i somras.|
+parler couramment|tala flytande||Au bout d'un an, il [parlait couramment] français.|Efter ett år talade han flytande franska.|
+maîtriser|behärska||Il faut [maîtriser] le français pour suivre les cours.|Man måste behärska franska för att kunna följa kurserna.|
+la langue maternelle|modersmål|f|Sa [langue maternelle] est le suédois.|Hennes modersmål är svenska.|
+le tandem linguistique|språktandem|m|Elle fait un [tandem linguistique] avec une étudiante qui apprend le suédois.|Hon har språktandem med en student som lär sig svenska.|
+le décalage|skillnad; tidsskillnad|m|Avec le [décalage] horaire, j'appelle mes parents le matin.|På grund av tidsskillnaden ringer jag mina föräldrar på morgonen.|
+se lancer|ge sig i kast med, våga||Elle a longtemps hésité, puis elle s'est [lancée].|Hon tvekade länge, sedan vågade hon.|
+le défi|utmaning|m|Étudier dans une autre langue est un vrai [défi].|Att studera på ett annat språk är en verklig utmaning.|
+relever un défi|anta en utmaning||Il a décidé de [relever le défi].|Han bestämde sig för att anta utmaningen.|
+la mobilité|rörlighet|f|L'Union européenne encourage la [mobilité] des étudiants.|EU uppmuntrar studenters rörlighet.|
+le cursus|utbildning, studiegång|m|Le [cursus] dure trois ans.|Utbildningen tar tre år.|
+la licence|kandidatexamen|f|Elle a fait une [licence] de musicologie à Strasbourg.|Hon tog en kandidatexamen i musikvetenskap i Strasbourg.|Falsk vän: examen efter tre år.
+la rentrée universitaire|terminsstart på universitetet|f|La [rentrée universitaire] a lieu début septembre.|Terminsstarten på universitetet är i början av september.|
+le calendrier|kalender, schema|m|Consultez le [calendrier] des examens sur le site.|Se tentaschemat på webbplatsen.|
+le secrétariat|kansli, expedition|m|Le [secrétariat] est ouvert de 9 h à 12 h.|Kansliet är öppet 9–12.|
+le guichet|lucka, disk|m|Faites la queue au [guichet] numéro trois.|Ställ er i kö vid lucka tre.|
+l'orientation|studie- och yrkesvägledning|f|La conseillère d'[orientation] m'a parlé des études en Belgique.|Studievägledaren berättade för mig om studier i Belgien.|
+le lycéen, la lycéenne|gymnasieelev|m|Beaucoup de [lycéens] rêvent de partir à l'étranger.|Många gymnasieelever drömmer om att åka utomlands.|
+l'université d'accueil|värduniversitet|f|Mon [université d'accueil] se trouve à Montpellier.|Mitt värduniversitet ligger i Montpellier.|
+la famille d'accueil|värdfamilj|f|Ma [famille d'accueil] m'a fait découvrir la cuisine alsacienne.|Min värdfamilj lät mig upptäcka Alsace-köket.|
+le pays d'origine|hemland, ursprungsland|m|Après son master, il est rentré dans son [pays d'origine].|Efter mastern flyttade han tillbaka till sitt hemland.|
+rentrer au pays|åka hem (till hemlandet)||Elle a décidé de [rentrer au pays] après deux ans.|Hon bestämde sig för att flytta hem efter två år.|
+prolonger|förlänga||Il a demandé à [prolonger] son séjour d'un semestre.|Han ansökte om att förlänga sin vistelse en termin.|
+le contrat d'études|studieavtal|m|Signez le [contrat d'études] avant votre départ.|Skriv under studieavtalet före avresan.|
+le relevé bancaire|kontoutdrag|m|Votre achat apparaît sur votre [relevé bancaire].|Ert köp syns på ert kontoutdrag.|
+le départ|avresa|m|Le [départ] est prévu le 28 août.|Avresan är planerad till den 28 augusti.|
+le retour|hemkomst, återkomst|m|Après son [retour], elle parlait beaucoup mieux français.|Efter hemkomsten pratade hon mycket bättre franska.|
+la solitude|ensamhet|f|La [solitude] est parfois difficile les premières semaines.|Ensamheten är ibland svår de första veckorna.|
+se faire des amis|skaffa vänner||Grâce à la chorale, il s'est vite [fait des amis].|Tack vare kören skaffade han snabbt vänner.|
+l'accueil des étudiants|studentmottagning|m|Le service d'[accueil des étudiants] est au rez-de-chaussée.|Studentmottagningen finns på bottenvåningen.|
+le bureau des relations internationales|internationella kontoret|m|Renseigne-toi au [bureau des relations internationales].|Ta reda på det på internationella kontoret.|
+la grande école|elitskola (i Frankrike)|f|Il prépare le concours d'une [grande école].|Han förbereder sig för antagningsprovet till en elitskola.|
+les études supérieures|högre studier|fpl|Elle veut faire des [études supérieures] en musique.|Hon vill läsa vidare inom musik.|
+le niveau requis|nivå som krävs|m|Le [niveau requis] en français est B2.|Den franskanivå som krävs är B2.|
+exigé, -e|krävd, obligatorisk||Aucun diplôme n'est [exigé].|Ingen examen krävs.|
+facultatif, -ve|frivillig, valfri||Le cours de suédois est [facultatif].|Svenskkursen är frivillig.|
+l'emploi du temps|schema|m|Mon [emploi du temps] est très chargé ce semestre.|Mitt schema är väldigt fullt den här terminen.|
+chargé, -e|fullt, späckat||J'ai une semaine très [chargée].|Jag har en mycket späckad vecka.|
+la bibliothèque universitaire|universitetsbibliotek|f|Je révise à la [bibliothèque universitaire].|Jag pluggar på universitetsbiblioteket.|
+le restaurant universitaire|studentrestaurang|m|Au [restaurant universitaire], un repas coûte un euro.|På studentrestaurangen kostar en måltid en euro.|Vardagligt <b>le resto U</b>.
+la carte d'étudiant|studentkort|f|Avec ta [carte d'étudiant], tu as des réductions.|Med ditt studentkort får du rabatter.|
+la médiathèque|mediatek, bibliotek|f|La nouvelle [médiathèque] prête aussi des instruments.|Det nya mediateket lånar också ut instrument.|
+le rez-de-chaussée|bottenvåning|m|L'accueil se trouve au [rez-de-chaussée].|Receptionen ligger på bottenvåningen.|
+l'étage|våning|m|La salle Ravel est au deuxième [étage].|Salen Ravel ligger på andra våningen.|
+l'appréciation|omdöme|f|Le professeur a écrit une [appréciation] positive.|Läraren skrev ett positivt omdöme.|
+la copie|skrivning, provsvar|f|Le professeur corrige nos [copies] le week-end.|Läraren rättar våra prov på helgen.|
+le correcteur, la correctrice|rättare|m|Chaque copie est lue par deux [correcteurs].|Varje prov läses av två rättare.|
+le semestre d'échange|utbytestermin|m|Il a passé un [semestre d'échange] à Genève.|Han tillbringade en utbytestermin i Genève.|
+la demande de logement|bostadsansökan|f|Fais ta [demande de logement] dès que tu es admis.|Gör din bostadsansökan så fort du är antagen.|
+sous-louer|hyra i andra hand||Il [sous-loue] une chambre chez une vieille dame.|Han hyr ett rum i andra hand hos en gammal dam.|
+l'arnaque|bedrägeri, bluff|f|Méfie-toi des [arnaques] sur les sites de logement.|Akta dig för bedrägerier på bostadssajter.|
+l'association étudiante|studentkår|f|L'[association étudiante] organise une soirée d'accueil.|Studentkåren ordnar en välkomstkväll.|
+le nouvel arrivant, la nouvelle arrivante|nykomling|m|Les [nouveaux arrivants] reçoivent un guide de la ville.|Nykomlingarna får en stadsguide.|
+#v3|Kap 3 · Sciences et techniques
+la science|vetenskap|f|La [science] avance grâce au travail de milliers de chercheurs.|Vetenskapen går framåt tack vare tusentals forskares arbete.|Latin <b>scientia</b> 'kunskap'.
+scientifique|vetenskaplig; forskare||Une étude [scientifique] montre que la musique aide à mémoriser.|En vetenskaplig studie visar att musik hjälper minnet.|
+le laboratoire|laboratorium|m|Les échantillons sont analysés dans un [laboratoire].|Proverna analyseras i ett laboratorium.|Vardagligt <b>le labo</b>.
+l'hypothèse|hypotes|f|L'expérience a confirmé leur [hypothèse].|Experimentet bekräftade deras hypotes.|
+découvrir|upptäcka||Marie Curie a [découvert] le radium avec son mari.|Marie Curie upptäckte radium tillsammans med sin man.|
+l'invention|uppfinning|f|L'imprimerie est une [invention] qui a changé le monde.|Boktryckarkonsten är en uppfinning som förändrade världen.|
+l'inventeur, l'inventrice|uppfinnare|m|L'[inventeur] du cinéma serait Louis Lumière.|Filmens uppfinnare sägs vara Louis Lumière.|
+le progrès technique|teknisk utveckling|m|Le [progrès technique] a transformé l'industrie de la musique.|Den tekniska utvecklingen har förvandlat musikbranschen.|
+numérique|digital||Le passage au [numérique] a bouleversé la presse.|Övergången till det digitala har vänt upp och ner på pressen.|Av <b>nombre</b> 'tal'.
+l'appareil|apparat, enhet|m|Éteignez tous vos [appareils] électroniques.|Stäng av alla era elektroniska apparater.|
+le logiciel|program, programvara|m|Elle compose avec un [logiciel] gratuit.|Hon komponerar med ett gratisprogram.|Av <b>logique</b> + -iel (jämför matériel).
+mettre à jour|uppdatera||N'oublie pas de [mettre à jour] ton téléphone.|Glöm inte att uppdatera din telefon.||<b>mettre</b> sätta · <b>à jour</b> i dag → "sätta till dagens läge"
+la mise à jour|uppdatering|f|La dernière [mise à jour] a corrigé plusieurs erreurs.|Den senaste uppdateringen rättade flera fel.|
+le réseau|nätverk|m|Le [réseau] ne fonctionne pas dans le métro.|Nätet fungerar inte i tunnelbanan.|
+se connecter|logga in, ansluta||Il faut un mot de passe pour [se connecter].|Man behöver ett lösenord för att logga in.|
+le compte|konto|m|J'ai créé un [compte] sur la plateforme.|Jag har skapat ett konto på plattformen.|
+l'intelligence artificielle|artificiell intelligens|f|L'[intelligence artificielle] peut aujourd'hui composer de la musique.|Artificiell intelligens kan i dag komponera musik.|Förkortas IA.
+l'algorithme|algoritm|m|Un [algorithme] choisit les chansons qu'on te propose.|En algoritm väljer låtarna som föreslås för dig.|Efter matematikern al-Khwarizmi.
+automatique|automatisk||La traduction [automatique] fait encore des erreurs.|Maskinöversättning gör fortfarande fel.|
+remplacer|ersätta||Les machines vont-elles [remplacer] les traducteurs ?|Kommer maskinerna att ersätta översättarna?|
+fonctionner|fungera||Comment [fonctionne] ce micro ?|Hur fungerar den här mikrofonen?|
+le fonctionnement|funktion, sätt att fungera|m|Le [fonctionnement] du cerveau reste en partie mystérieux.|Hjärnans sätt att fungera är delvis fortfarande en gåta.|
+la panne|haveri, fel|f|L'ordinateur est en [panne] depuis hier.|Datorn har varit trasig sedan i går.|
+la batterie|batteri; trumset|f|Ma [batterie] est presque vide.|Mitt batteri är nästan slut.|
+brancher|koppla in||[Branche] la guitare sur l'ampli.|Koppla in gitarren i förstärkaren.|Av <b>branche</b> 'gren'.
+le câble|kabel|m|J'ai oublié le [câble] de mon ordinateur.|Jag har glömt sladden till min dator.|
+nucléaire|kärn-, kärnkraft-||La France produit surtout de l'énergie [nucléaire].|Frankrike producerar mest kärnkraft.|Latin <b>nucleus</b> 'kärna'.
+la centrale|kraftverk|f|Il y a une [centrale] nucléaire près de la ville.|Det finns ett kärnkraftverk nära staden.|
+l'astronaute|astronaut|m|L'[astronaute] a joué du saxophone dans la station spatiale.|Astronauten spelade saxofon i rymdstationen.|
+la fusée|raket|f|La [fusée] Ariane est lancée depuis la Guyane.|Ariane-raketen skjuts upp från Franska Guyana.|
+la planète|planet|f|Mars est la [planète] la plus étudiée après la Terre.|Mars är den mest studerade planeten efter jorden.|
+l'univers|universum|m|L'[univers] a environ quatorze milliards d'années.|Universum är ungefär fjorton miljarder år gammalt.|
+l'étoile|stjärna|f|On voyait des milliers d'[étoiles] dans le ciel.|Man såg tusentals stjärnor på himlen.|
+la physique|fysik|f|La [physique] explique pourquoi une corde vibre.|Fysiken förklarar varför en sträng vibrerar.|
+la chimie|kemi|f|Elle est forte en [chimie].|Hon är bra på kemi.|
+la biologie|biologi|f|En [biologie], nous étudions les cellules.|I biologi studerar vi celler.|
+la cellule|cell|f|Le corps humain contient des milliards de [cellules].|Människokroppen innehåller miljarder celler.|
+le gène|gen|m|La couleur des yeux dépend de plusieurs [gènes].|Ögonfärgen beror på flera gener.|
+l'onde|våg (fysik)|f|Le son est une [onde] qui se propage dans l'air.|Ljud är en våg som sprids i luften.|
+la vitesse|hastighet|f|La [vitesse] du son est d'environ 340 mètres par seconde.|Ljudets hastighet är ungefär 340 meter per sekund.|
+la fréquence|frekvens|f|La note la a une [fréquence] de 440 hertz.|Tonen a har frekvensen 440 hertz.|
+mesurer|mäta||On [mesure] le bruit en décibels.|Man mäter buller i decibel.|
+la mesure|mätning; takt (musik)|f|Les [mesures] montrent une hausse de la température.|Mätningarna visar en temperaturökning.|
+le chiffre|siffra|m|Les [chiffres] sont inquiétants.|Siffrorna är oroande.|
+la moyenne|genomsnitt, medelvärde|f|En [moyenne], un Français écoute deux heures de musique par jour.|I genomsnitt lyssnar en fransman på musik två timmar om dagen.|
+le pourcentage|procentsats, andel|m|Quel [pourcentage] des jeunes écoute de la musique classique ?|Hur stor andel av de unga lyssnar på klassisk musik?|
+le graphique|diagram|m|Le [graphique] montre l'évolution des ventes de vinyles.|Diagrammet visar hur vinylförsäljningen utvecklats.|
+l'évolution|utveckling|f|L'[évolution] des technologies est très rapide.|Teknikens utveckling går mycket snabbt.|
+évoluer|utvecklas, förändras||Les métiers [évoluent] avec l'intelligence artificielle.|Yrkena förändras med artificiell intelligens.|
+le phénomène|fenomen|m|Les aurores boréales sont un [phénomène] naturel spectaculaire.|Norrsken är ett spektakulärt naturfenomen.|
+expliquer|förklara||Le professeur nous a [expliqué] comment fonctionne une fusée.|Läraren förklarade för oss hur en raket fungerar.|
+l'explication|förklaring|f|Il n'y a pas encore d'[explication] à ce phénomène.|Det finns ännu ingen förklaring till det fenomenet.|
+observer|observera, iaktta||Les chercheurs ont [observé] le cerveau de musiciens.|Forskarna observerade musikers hjärnor.|
+l'observation|iakttagelse, observation|f|L'[observation] des étoiles demande de la patience.|Att observera stjärnor kräver tålamod.|
+l'échantillon|prov, stickprov|m|Un [échantillon] de mille personnes a été interrogé.|Ett urval på tusen personer har tillfrågats.|
+le cerveau|hjärna|m|La musique active plusieurs zones du [cerveau].|Musik aktiverar flera områden i hjärnan.|
+la mémoire|minne|f|Apprendre un instrument améliore la [mémoire].|Att lära sig ett instrument förbättrar minnet.|Genus: <b>le mémoire</b> = uppsats.
+la vie privée|privatliv|f|Les réseaux sociaux menacent-ils notre [vie privée] ?|Hotar sociala medier vårt privatliv?|
+le piratage|piratkopiering; dataintrång|m|Le [piratage] de musique a beaucoup diminué grâce au streaming.|Piratkopieringen av musik har minskat mycket tack vare streaming.|
+la cybersécurité|it-säkerhet|f|La [cybersécurité] est devenue un enjeu majeur.|It-säkerhet har blivit en central fråga.|
+l'enjeu|vad som står på spel, viktig fråga|m|Quels sont les [enjeux] de l'intelligence artificielle ?|Vilka är de viktiga frågorna kring artificiell intelligens?|Av <b>en jeu</b> 'i spel'.
+permettre de|göra det möjligt att||Internet [permet de] travailler avec des musiciens du monde entier.|Internet gör det möjligt att arbeta med musiker i hela världen.|
+faciliter|underlätta||Les applications [facilitent] l'apprentissage des langues.|Appar underlättar språkinlärning.|
+la santé numérique|e-hälsa|f|La [santé numérique] permet de consulter un médecin en ligne.|E-hälsa gör det möjligt att träffa en läkare på nätet.|
+l'outil|verktyg|m|Le dictionnaire en ligne est un [outil] précieux.|Onlineordboken är ett värdefullt verktyg.|
+la machine|maskin|f|La [machine] à vapeur a lancé la révolution industrielle.|Ångmaskinen startade den industriella revolutionen.|
+l'industrie|industri|f|L'[industrie] musicale dépend aujourd'hui du streaming.|Musikindustrin är i dag beroende av streaming.|
+le brevet|patent|m|Il a déposé un [brevet] pour son invention.|Han har tagit patent på sin uppfinning.|
+l'innovation|innovation, nyskapande|f|Cette entreprise mise sur l'[innovation].|Det här företaget satsar på nyskapande.|
+innovant, -e|innovativ, nyskapande||C'est un projet très [innovant].|Det är ett mycket nyskapande projekt.|
+le calcul|beräkning|m|Un ordinateur fait ce [calcul] en une seconde.|En dator gör den här beräkningen på en sekund.|Latin <b>calculus</b> 'liten sten' (man räknade med stenar).
+calculer|räkna ut||[Calcule] combien de temps il te faut pour venir.|Räkna ut hur lång tid det tar för dig att komma.|
+précis, -e|exakt, precis||Il faut des mesures très [précises].|Det behövs mycket exakta mätningar.|
+fiable|pålitlig||Cette source n'est pas très [fiable].|Den här källan är inte särskilt pålitlig.|Av <b>se fier à</b> 'lita på'.
+la source|källa|f|Cite toujours tes [sources] dans un exposé.|Ange alltid dina källor i en redovisning.|
+l'expert, l'experte|expert|m|Selon les [experts], le climat se réchauffe plus vite que prévu.|Enligt experterna blir klimatet varmare fortare än väntat.|
+la vulgarisation|populärvetenskap|f|Ce livre de [vulgarisation] explique la physique aux enfants.|Den här populärvetenskapliga boken förklarar fysik för barn.|Latin <b>vulgus</b> 'folket': göra begripligt för alla.
+le vaccin|vaccin|m|Louis Pasteur a mis au point le [vaccin] contre la rage.|Louis Pasteur utvecklade vaccinet mot rabies.|Latin <b>vacca</b> 'ko' (det första vaccinet kom från kokoppor).
+mettre au point|utveckla, ta fram||Les ingénieurs ont [mis au point] un nouveau casque.|Ingenjörerna har tagit fram nya hörlurar.|
+le prototype|prototyp|m|Le [prototype] sera testé l'année prochaine.|Prototypen ska testas nästa år.|
+tester|testa||Nous avons [testé] l'application pendant un mois.|Vi har testat appen i en månad.|
+l'utilisateur, l'utilisatrice|användare|m|L'application compte dix millions d'[utilisateurs].|Appen har tio miljoner användare.|
+le mode d'emploi|bruksanvisning|m|Lis le [mode d'emploi] avant d'installer l'appareil.|Läs bruksanvisningen innan du installerar apparaten.||<b>le mode</b> sättet · <b>d'emploi</b> att använda
+appuyer sur|trycka på||[Appuyez sur] le bouton rouge pour commencer l'enregistrement.|Tryck på den röda knappen för att starta inspelningen.|
+le bouton|knapp|m|Maintenez le [bouton] enfoncé pendant trois secondes.|Håll knappen intryckt i tre sekunder.|
+allumer|slå på, tända||[Allumez] l'appareil et attendez le signal sonore.|Slå på apparaten och vänta på ljudsignalen.|
+éteindre|stänga av, släcka||N'oubliez pas d'[éteindre] le micro après l'enregistrement.|Glöm inte att stänga av mikrofonen efter inspelningen.|
+régler|ställa in, justera||[Réglez] le volume avant de commencer.|Ställ in volymen innan ni börjar.|
+le réglage|inställning|m|Les [réglages] se trouvent dans le menu principal.|Inställningarna finns i huvudmenyn.|
+le phonographe|fonograf|m|Le [phonographe] permettait d'écouter des sons enregistrés.|Fonografen gjorde det möjligt att lyssna på inspelade ljud.|
+l'enregistreur|inspelningsapparat|m|J'utilise un petit [enregistreur] pour mes répétitions.|Jag använder en liten inspelningsapparat till mina repetitioner.|
+le casque|hörlurar; hjälm|m|J'écoute de la musique avec un [casque].|Jag lyssnar på musik med hörlurar.|
+les écouteurs|hörlurar (in-ear)|mpl|J'ai perdu mes [écouteurs] dans le bus.|Jag tappade mina hörlurar på bussen.|
+sans fil|trådlös||Ce casque [sans fil] a une bonne batterie.|De här trådlösa hörlurarna har ett bra batteri.|
+le décibel|decibel|m|Un concert de rock atteint cent [décibels].|En rockkonsert når hundra decibel.|
+la vibration|vibration|f|Le son est une [vibration] de l'air.|Ljud är en vibration i luften.|
+imiter|härma||L'algorithme [imite] le style de Mozart.|Algoritmen härmar Mozarts stil.|
+entraîner|träna (en maskin, ett lag)||On [entraîne] l'intelligence artificielle avec des milliers d'exemples.|Man tränar den artificiella intelligensen med tusentals exempel.|
+le stockage|lagring|m|Le [stockage] des données consomme beaucoup d'énergie.|Lagringen av data förbrukar mycket energi.|
+stocker|lagra||Où sont [stockées] nos photos ?|Var lagras våra bilder?|
+le nuage|moln|m|Mes fichiers sont sauvegardés dans le [nuage].|Mina filer är sparade i molnet.|
+sauvegarder|spara (en fil), säkerhetskopiera||N'oublie pas de [sauvegarder] ton travail.|Glöm inte att spara ditt arbete.|
+le fichier|fil|m|Envoie-moi le [fichier] audio.|Skicka ljudfilen till mig.|
+le clavier|tangentbord; klaviatur|m|Le [clavier] de mon ordinateur est cassé.|Tangentbordet på min dator är trasigt.|
+la souris|mus (dator och djur)|f|Clique avec le bouton droit de la [souris].|Klicka med höger musknapp.|
+le navigateur|webbläsare|m|Mettez votre [navigateur] à jour.|Uppdatera er webbläsare.|
+désactiver|stänga av, inaktivera||J'ai [désactivé] la localisation.|Jag har stängt av platstjänsterna.|
+redémarrer|starta om||[Redémarrez] l'appareil avant de nous appeler.|Starta om apparaten innan ni ringer oss.|
+la radiographie|röntgen|f|Le médecin a demandé une [radiographie] du poignet.|Läkaren beställde en röntgen av handleden.|
+l'imagerie médicale|medicinsk bilddiagnostik|f|Grâce à l'[imagerie médicale], on observe le cerveau.|Tack vare medicinsk bilddiagnostik kan man observera hjärnan.|
+la dopamine|dopamin|f|La musique libère de la [dopamine].|Musik frigör dopamin.|
+le frisson|rysning|m|Cette chanson me donne des [frissons].|Den här låten ger mig rysningar.|
+anticiper|förutse, föregripa||Le cerveau [anticipe] la suite de la mélodie.|Hjärnan förutser fortsättningen på melodin.|
+la prédiction|förutsägelse|f|Notre cerveau fait sans cesse des [prédictions].|Vår hjärna gör hela tiden förutsägelser.|
+l'élément|grundämne; element|m|Le radium est un [élément] radioactif.|Radium är ett radioaktivt grundämne.|
+radioactif, -ve|radioaktiv||Les déchets [radioactifs] sont très dangereux.|Radioaktivt avfall är mycket farligt.|
+la traduction automatique|maskinöversättning|f|La [traduction automatique] est pratique pour lire un document.|Maskinöversättning är praktisk för att läsa ett dokument.|
+la localisation|platstjänster, positionering|f|Désactive la [localisation] si tu ne l'utilises pas.|Stäng av platstjänsterna om du inte använder dem.|
+en arrière-plan|i bakgrunden||L'application tournait [en arrière-plan].|Appen körde i bakgrunden.|
+la luminosité|ljusstyrka|f|Baisse la [luminosité] de l'écran le soir.|Sänk skärmens ljusstyrka på kvällen.|
+la radioactivité|radioaktivitet|f|Henri Becquerel a découvert la [radioactivité] en 1896.|Henri Becquerel upptäckte radioaktiviteten 1896.|
+le prix Nobel|Nobelpris|m|Marie Curie a reçu deux fois le [prix Nobel].|Marie Curie fick Nobelpriset två gånger.|
+#v4|Kap 4 · Santé et bien-être
+la santé|hälsa|f|Le sommeil est essentiel pour la [santé].|Sömnen är avgörande för hälsan.|
+le bien-être|välbefinnande|m|Le yoga améliore le [bien-être] des musiciens.|Yoga förbättrar musikers välbefinnande.|
+la santé mentale|psykisk hälsa|f|On parle de plus en plus de la [santé mentale] des jeunes.|Man talar allt mer om ungas psykiska hälsa.|
+le médecin généraliste|allmänläkare|m|Prenez d'abord rendez-vous chez votre [médecin généraliste].|Boka först en tid hos din allmänläkare.|
+le spécialiste, la spécialiste|specialist|m|Le généraliste m'a envoyé chez un [spécialiste].|Allmänläkaren skickade mig till en specialist.|
+le cabinet médical|läkarmottagning|m|Le [cabinet médical] est fermé le samedi.|Läkarmottagningen är stängd på lördagar.|
+la consultation|läkarbesök|f|La [consultation] coûte trente euros.|Läkarbesöket kostar trettio euro.|
+l'ordonnance|recept|f|Ce médicament n'est vendu que sur [ordonnance].|Det här läkemedlet säljs bara på recept.|Av <b>ordonner</b> 'ordinera'.
+le médicament|läkemedel|m|Ne prenez pas ce [médicament] à jeun.|Ta inte det här läkemedlet på fastande mage.|
+le traitement|behandling|m|Le [traitement] dure trois semaines.|Behandlingen pågår i tre veckor.|
+soigner|vårda, behandla||Il faut [soigner] cette blessure tout de suite.|Det såret måste behandlas genast.|
+les soins|vård|mpl|Les [soins] sont gratuits pour les enfants.|Vården är gratis för barn.|
+guérir|bota; bli frisk||Elle a mis deux mois à [guérir].|Det tog henne två månader att bli frisk.|
+la guérison|tillfrisknande|f|Je vous souhaite une prompte [guérison].|Jag önskar er ett snabbt tillfrisknande.|
+le symptôme|symtom|m|La fièvre est un [symptôme] de la grippe.|Feber är ett symtom på influensa.|
+la douleur|smärta|f|Il ressent une [douleur] dans le dos quand il joue.|Han har ont i ryggen när han spelar.|
+souffrir de|lida av||Beaucoup de musiciens [souffrent de] douleurs au poignet.|Många musiker lider av smärtor i handleden.|
+la maladie|sjukdom|f|Le diabète est une [maladie] de plus en plus fréquente.|Diabetes är en allt vanligare sjukdom.|
+la blessure|skada, sår|f|Cette [blessure] l'a empêché de jouer pendant un mois.|Skadan hindrade honom från att spela i en månad.|
+se blesser|skada sig||Elle s'est [blessée] au genou en faisant du ski.|Hon skadade knät när hon åkte skidor.|
+l'urgence|nödsituation; akut|f|En cas d'[urgence], appelez le 15.|Vid nödsituation, ring 15.|
+les urgences|akuten|fpl|On l'a emmené aux [urgences] à trois heures du matin.|Man tog honom till akuten klockan tre på natten.|
+l'hôpital|sjukhus|m|Elle a passé deux nuits à l'[hôpital].|Hon tillbringade två nätter på sjukhuset.|
+la prise de sang|blodprov|f|Il faut être à jeun pour la [prise de sang].|Man måste vara fastande inför blodprovet.|
+le pharmacien, la pharmacienne|apotekare|m|Demandez conseil au [pharmacien].|Fråga apotekaren om råd.|
+la grippe|influensa|f|Toute la famille a attrapé la [grippe].|Hela familjen har fått influensa.|
+la fièvre|feber|f|J'ai trente-neuf de [fièvre].|Jag har trettionio graders feber.|
+tousser|hosta||Il [tousse] depuis une semaine.|Han har hostat i en vecka.|
+éternuer|nysa||Le pollen me fait [éternuer].|Pollen får mig att nysa.|
+l'allergie|allergi|f|Il a une [allergie] aux noix.|Han är allergisk mot nötter.|
+allergique|allergisk||Je suis [allergique] aux chats.|Jag är allergisk mot katter.|
+le rhume|förkylning|m|Un simple [rhume] peut gêner une chanteuse.|En vanlig förkylning kan störa en sångerska.|
+enrhumé, -e|förkyld||Je suis [enrhumé], je ne peux pas chanter ce soir.|Jag är förkyld, jag kan inte sjunga i kväll.|
+la gorge|hals, strupe|f|J'ai mal à la [gorge].|Jag har ont i halsen.|
+le poignet|handled|m|Le pianiste s'est fait mal au [poignet].|Pianisten har gjort illa sin handled.|
+l'épaule|axel, skuldra|f|Porter un violon sur l'[épaule] peut provoquer des tensions.|Att bära en fiol på axeln kan ge spänningar.|
+la colonne vertébrale|ryggrad|f|Une bonne posture protège la [colonne vertébrale].|En bra hållning skyddar ryggraden.|
+le muscle|muskel|m|Il faut échauffer ses [muscles] avant de jouer.|Man ska värma upp musklerna innan man spelar.|
+s'échauffer|värma upp||Les chanteurs [s'échauffent] la voix avant le concert.|Sångarna värmer upp rösten före konserten.|
+l'échauffement|uppvärmning|m|Dix minutes d'[échauffement] suffisent.|Tio minuters uppvärmning räcker.|
+la posture|hållning|f|Fais attention à ta [posture] quand tu joues.|Tänk på din hållning när du spelar.|
+l'ouïe|hörsel|f|Le bruit trop fort peut abîmer l'[ouïe].|För starkt ljud kan skada hörseln.|Av det gamla verbet <b>ouïr</b> 'höra'.
+les bouchons d'oreille|öronproppar|mpl|Les musiciens de rock portent souvent des [bouchons d'oreille].|Rockmusiker använder ofta öronproppar.|
+l'acouphène|tinnitus|m|Après le concert, il avait des [acouphènes].|Efter konserten hade han tinnitus.|
+abîmer|skada, förstöra||Le soleil peut [abîmer] la peau.|Solen kan skada huden.|
+la peau|hud|f|Protégez votre [peau] avec de la crème solaire.|Skydda er hud med solkräm.|
+le sommeil|sömn|m|Les adolescents manquent souvent de [sommeil].|Tonåringar sover ofta för lite.|
+l'insomnie|sömnlöshet|f|Le stress provoque des [insomnies].|Stress orsakar sömnlöshet.|
+la fatigue|trötthet|f|La [fatigue] augmente le risque d'accident.|Trötthet ökar risken för olyckor.|
+épuisé, -e|utmattad||Après la tournée, elle était complètement [épuisée].|Efter turnén var hon helt utmattad.|
+l'alimentation|kost, mat|f|Une [alimentation] variée est importante.|En varierad kost är viktig.|
+équilibré, -e|balanserad, allsidig||Essaie de manger de façon [équilibrée].|Försök äta allsidigt.|
+le régime|diet; kosthållning|m|Il suit un [régime] sans sel.|Han följer en saltfri diet.|
+les produits laitiers|mejeriprodukter|mpl|Il ne mange pas de [produits laitiers].|Han äter inga mejeriprodukter.|
+les matières grasses|fett (i mat)|fpl|Évitez les aliments trop riches en [matières grasses].|Undvik mat med för mycket fett.|
+le sucre|socker|m|Les boissons gazeuses contiennent beaucoup de [sucre].|Läsk innehåller mycket socker.|
+l'obésité|fetma|f|L'[obésité] augmente chez les enfants.|Fetma ökar bland barn.|
+l'activité physique|fysisk aktivitet|f|Trente minutes d'[activité physique] par jour sont recommandées.|Trettio minuters fysisk aktivitet om dagen rekommenderas.|
+sédentaire|stillasittande||La vie [sédentaire] est mauvaise pour la santé.|Ett stillasittande liv är dåligt för hälsan.|Latin <b>sedere</b> 'sitta'.
+en forme|i form, pigg||Je me sens en pleine [forme] aujourd'hui.|Jag känner mig i toppform i dag.|
+la dépendance|beroende|f|La [dépendance] au téléphone touche surtout les jeunes.|Mobilberoende drabbar framför allt unga.|
+arrêter de fumer|sluta röka||Mon oncle a enfin réussi à [arrêter de fumer].|Min morbror har äntligen lyckats sluta röka.|
+l'alcool|alkohol|m|La vente d'[alcool] est interdite aux mineurs.|Det är förbjudet att sälja alkohol till minderåriga.|
+la prévention|förebyggande arbete|f|La [prévention] coûte moins cher que les soins.|Att förebygga kostar mindre än att vårda.|
+prévenir|förebygga; varna||Mieux vaut [prévenir] que guérir.|Bättre att förebygga än att bota.|
+le dépistage|screening, undersökning|m|Le [dépistage] précoce sauve des vies.|Tidig screening räddar liv.|
+la campagne|kampanj; landsbygd|f|Le ministère lance une [campagne] contre le tabac.|Ministeriet startar en kampanj mot tobak.|
+le trac|nervositet (inför scen), scenskräck|m|Avant chaque concert, j'ai le [trac].|Före varje konsert får jag scenskräck.|
+l'angoisse|ångest|f|Les examens provoquent chez lui une grande [angoisse].|Proven ger honom stor ångest.|
+anxieux, -se|ängslig, orolig||Elle est très [anxieuse] avant les examens.|Hon är mycket orolig inför proven.|
+se détendre|koppla av||La musique m'aide à [me détendre].|Musiken hjälper mig att koppla av.|
+la respiration|andning|f|Travaillez votre [respiration] pour calmer le trac.|Arbeta med andningen för att dämpa scenskräcken.|
+respirer|andas||[Respirez] profondément avant d'entrer en scène.|Andas djupt innan ni går in på scenen.|
+la méditation|meditation|f|La [méditation] réduit le stress.|Meditation minskar stress.|
+le psychologue, la psychologue|psykolog|m|Il consulte un [psychologue] une fois par semaine.|Han går till en psykolog en gång i veckan.|
+déprimé, -e|deprimerad, nedstämd||Depuis l'hiver, il se sent un peu [déprimé].|Sedan vintern känner han sig lite nedstämd.|
+la dépression|depression|f|La [dépression] est une vraie maladie.|Depression är en riktig sjukdom.|
+le fauteuil roulant|rullstol|m|Depuis l'accident, il se déplace en [fauteuil roulant].|Sedan olyckan tar han sig fram i rullstol.|
+aveugle|blind||Ce pianiste [aveugle] joue tout de mémoire.|Den här blinde pianisten spelar allt utantill.|
+sourd, -e|döv||Beethoven est devenu [sourd] à la fin de sa vie.|Beethoven blev döv mot slutet av sitt liv.|
+la vue|syn; utsikt|f|Lire sur un écran fatigue la [vue].|Att läsa på skärm tröttar ut synen.|
+enceinte|gravid||Sa sœur est [enceinte] de six mois.|Hans syster är gravid i sjätte månaden.|
+la naissance|födsel|f|L'espérance de vie à la [naissance] augmente.|Den förväntade livslängden vid födseln ökar.|
+l'espérance de vie|förväntad livslängd|f|L'[espérance de vie] en France est de 83 ans.|Den förväntade livslängden i Frankrike är 83 år.|
+vieillir|åldras||La population [vieillit] dans toute l'Europe.|Befolkningen åldras i hela Europa.|
+le vieillissement|åldrande|m|Le [vieillissement] de la population pose de nouveaux défis.|Befolkningens åldrande innebär nya utmaningar.|
+la mutuelle|tilläggsförsäkring för vård|f|La [mutuelle] rembourse ce que la sécurité sociale ne paie pas.|Tilläggsförsäkringen ersätter det som socialförsäkringen inte betalar.|
+rembourser|ersätta, betala tillbaka||Les lunettes sont mal [remboursées].|Glasögon ersätts dåligt.|
+la carte Vitale|franska sjukförsäkringskortet|f|Présentez votre [carte Vitale] à l'accueil.|Visa upp ert sjukförsäkringskort i receptionen.|Latin <b>vita</b> 'liv'.
+l'arrêt maladie|sjukskrivning|m|Le médecin lui a donné un [arrêt maladie] d'une semaine.|Läkaren sjukskrev honom i en vecka.|
+le don du sang|blodgivning|m|Le [don du sang] sauve des vies chaque jour.|Blodgivning räddar liv varje dag.|
+le secourisme|första hjälpen|m|Elle a suivi une formation de [secourisme].|Hon har gått en kurs i första hjälpen.|
+les premiers secours|första hjälpen|mpl|Apprendre les gestes de [premiers secours] peut sauver une vie.|Att lära sig första hjälpen kan rädda ett liv.|
+s'évanouir|svimma||Il faisait si chaud qu'une spectatrice s'est [évanouie].|Det var så varmt att en åskådare svimmade.|
+la canicule|värmebölja|f|Pendant la [canicule], buvez beaucoup d'eau.|Drick mycket vatten under värmeböljan.|Latin <b>canicula</b> 'lilla hunden', stjärnan Sirius som syns under den varmaste tiden.
+la cure|kur|f|Il a fait une [cure] thermale dans les Pyrénées.|Han gjorde en kurort-vistelse i Pyrenéerna.|
+la kinésithérapie|sjukgymnastik, fysioterapi|f|Après son opération, il a eu dix séances de [kinésithérapie].|Efter operationen fick han tio behandlingar hos sjukgymnasten.|Vardagligt <b>le kiné</b>.
+l'opération|operation|f|L'[opération] s'est bien passée.|Operationen gick bra.|
+se faire opérer|bli opererad||Elle doit [se faire opérer] du genou.|Hon måste opereras i knät.|
+le rendez-vous médical|läkartid|m|J'ai un [rendez-vous médical] à dix heures.|Jag har en läkartid klockan tio.|
+prescrire|skriva ut (medicin)||Le médecin m'a [prescrit] des antibiotiques.|Läkaren skrev ut antibiotika till mig.|
+l'antibiotique|antibiotikum|m|Les [antibiotiques] ne soignent pas la grippe.|Antibiotika botar inte influensa.|
+le comprimé|tablett|m|Prenez un [comprimé] trois fois par jour.|Ta en tablett tre gånger om dagen.|
+la pharmacie de garde|jourhavande apotek|f|Le dimanche, cherchez la [pharmacie de garde].|På söndagar, leta upp det jourhavande apoteket.|
+avoir mal au ventre|ha ont i magen||Avant les examens, j'[ai mal au ventre].|Före proven har jag ont i magen.|
+avoir mal à la tête|ha huvudvärk||J'[ai mal à la tête] depuis ce matin.|Jag har haft huvudvärk sedan i morse.|
+trembler|darra||Avant le concert, mes mains [tremblent].|Före konserten darrar mina händer.|
+se concentrer|koncentrera sig||Je n'arrive pas à [me concentrer] quand je suis fatigué.|Jag kan inte koncentrera mig när jag är trött.|
+la concentration|koncentration|f|La musique améliore la [concentration].|Musik förbättrar koncentrationen.|
+s'endormir|somna||Je [m'endors] toujours en lisant.|Jag somnar alltid när jag läser.|
+se réveiller|vakna||Je [me réveille] à six heures en semaine.|Jag vaknar klockan sex på vardagarna.|
+le rythme de vie|livsrytm|m|Mon [rythme de vie] a changé depuis que je travaille.|Min livsrytm har förändrats sedan jag började jobba.|
+la pause|paus|f|Fais une [pause] toutes les heures.|Ta en paus varje timme.|
+la vaccination|vaccination|f|La [vaccination] contre la grippe est conseillée.|Vaccination mot influensa rekommenderas.|
+se faire vacciner|vaccinera sig||Il faut [se faire vacciner] avant de partir.|Man måste vaccinera sig före avresan.|
+contagieux, -se|smittsam||La grippe est très [contagieuse].|Influensa är mycket smittsam.|
+le virus|virus|m|Ce [virus] se transmet par l'air.|Det här viruset sprids genom luften.|
+l'épidémie|epidemi|f|L'[épidémie] de grippe a commencé en décembre.|Influensaepidemin började i december.|
+le masque|munskydd; mask|m|Porte un [masque] si tu es malade.|Bär munskydd om du är sjuk.|
+bénéfique|nyttig, välgörande||La musique a des effets [bénéfiques] sur le moral.|Musik har välgörande effekter på humöret.|
+le moral|humör, stämning|m|J'ai le [moral] à zéro aujourd'hui.|Jag är på botten i dag.|
+le trac de scène|scenskräck|m|Beaucoup de musiciens souffrent du [trac de scène].|Många musiker lider av scenskräck.|
+la gestion du stress|stresshantering|f|Le conservatoire propose un atelier de [gestion du stress].|Konservatoriet erbjuder en workshop i stresshantering.|
+expirer|andas ut||[Expirez] lentement par la bouche.|Andas ut långsamt genom munnen.|
+l'infection|infektion|f|Il a une [infection] à l'oreille.|Han har en öroninflammation.|
+le malentendant, la malentendante|hörselskadad (person)|m|Le théâtre propose des sous-titres pour les [malentendants].|Teatern erbjuder textning för hörselskadade.|
+la santé auditive|hörselhälsa|f|Protège ta [santé auditive] pendant les concerts.|Skydda din hörsel på konserter.|
+l'ouïe fine|gott gehör, god hörsel||Les musiciens ont souvent l'[ouïe fine].|Musiker har ofta god hörsel.|
+les protections auditives|hörselskydd|fpl|Portez des [protections auditives] sur le chantier.|Använd hörselskydd på byggarbetsplatsen.|
+le médecin du travail|företagsläkare|m|Le [médecin du travail] contrôle l'audition des musiciens.|Företagsläkaren kontrollerar musikernas hörsel.|
+le contrôle|kontroll|m|Fais un [contrôle] de ton audition chaque année.|Gör en hörselkontroll varje år.|
+#v5|Kap 5 · La francophonie et le français
+la francophonie|den fransktalande världen|f|La [francophonie] compte plus de 320 millions de locuteurs.|Den fransktalande världen har över 320 miljoner talare.|Ordet skapades 1880 av geografen Onésime Reclus.
+francophone|fransktalande||Le Sénégal est un pays [francophone].|Senegal är ett fransktalande land.|<b>franco-</b> 'fransk' + grekiska <b>phōnē</b> 'röst'.
+le locuteur, la locutrice|talare (av ett språk)|m|Le français a de plus en plus de [locuteurs] en Afrique.|Franskan har allt fler talare i Afrika.|Latin <b>loqui</b> 'tala'.
+la langue officielle|officiellt språk|f|Le français est [langue officielle] dans vingt-neuf pays.|Franska är officiellt språk i tjugonio länder.|
+la langue seconde|andraspråk|f|Au Maroc, le français est souvent une [langue seconde].|I Marocko är franskan ofta ett andraspråk.|
+la langue étrangère|främmande språk|f|Le français est la deuxième [langue étrangère] la plus apprise au monde.|Franska är det näst mest studerade främmande språket i världen.|
+le dialecte|dialekt|m|On parle encore des [dialectes] alsaciens.|Man talar fortfarande alsaciska dialekter.|
+la langue régionale|regionalt språk|f|Le breton est une [langue régionale] de France.|Bretonska är ett regionalt språk i Frankrike.|
+le créole|kreol(språk)|m|En Martinique, on parle français et [créole].|På Martinique talar man franska och kreol.|
+le patois|lokal dialekt, bygdemål|m|Ma grand-mère parlait encore le [patois] de son village.|Min mormor talade fortfarande bygdemålet från sin by.|
+l'expression|uttryck|f|Cette [expression] n'existe qu'au Québec.|Det här uttrycket finns bara i Québec.|
+le mot d'origine|ord med ursprung i|m|« Algèbre » est un [mot d'origine] arabe.|”Algèbre” är ett ord med arabiskt ursprung.|
+l'emprunt|lån; lånord|m|« Week-end » est un [emprunt] à l'anglais.|”Week-end” är ett lånord från engelskan.|
+l'anglicisme|anglicism, engelskt lånord|m|Les Québécois évitent les [anglicismes] : ils disent « courriel » et non « mail ».|Québecborna undviker anglicismer: de säger ”courriel” och inte ”mail”.|
+le néologisme|nybildat ord|m|« Divulgâcher » est un [néologisme] québécois pour « spoiler ».|”Divulgâcher” är ett nyord från Québec för ”spoiler”.|
+l'Académie française|Franska akademien|f|L'[Académie française] a été fondée en 1635 par Richelieu.|Franska akademien grundades 1635 av Richelieu.|
+l'académicien, l'académicienne|ledamot av Franska akademien|m|Les [académiciens] sont surnommés « les Immortels ».|Akademiens ledamöter kallas ”de odödliga”.|
+l'orthographe|stavning|f|L'[orthographe] française est difficile, même pour les Français.|Den franska stavningen är svår, även för fransmän.|Grekiska <b>orthos</b> 'rätt' + <b>graphein</b> 'skriva'.
+la dictée|diktamen|f|Chaque année, des milliers de personnes participent à une [dictée] géante.|Varje år deltar tusentals människor i en jättediktamen.|
+corriger|rätta||Le professeur a [corrigé] nos copies.|Läraren har rättat våra prov.|
+la grammaire|grammatik|f|La [grammaire] du subjonctif me pose encore problème.|Grammatiken kring subjonctif är fortfarande svår för mig.|
+le vocabulaire|ordförråd|m|Lire des romans enrichit le [vocabulaire].|Att läsa romaner berikar ordförrådet.|
+la prononciation|uttal|f|La [prononciation] des voyelles nasales est difficile.|Uttalet av nasalvokalerna är svårt.|
+prononcer|uttala||Comment on [prononce] ce mot ?|Hur uttalar man det här ordet?|
+le registre|stilnivå|m|« Bosser » appartient au [registre] familier.|”Bosser” hör till den vardagliga stilnivån.|
+familier, -ère|vardaglig||« Bouquin » est un mot [familier] pour « livre ».|”Bouquin” är ett vardagligt ord för ”bok”.|
+soutenu, -e|formell, högtidlig (om språk)||Dans une lettre officielle, on utilise un langage [soutenu].|I ett officiellt brev använder man ett formellt språk.|
+l'argot|slang|m|L'[argot] des jeunes change très vite.|Ungdomsslangen förändras mycket snabbt.|
+le verlan|verlan (slang med omvända stavelser)|m|« Meuf » vient du [verlan] de « femme ».|”Meuf” kommer från verlan av ”femme”.|Av <b>l'envers</b> 'baksidan', uttalat baklänges.
+le Québécois, la Québécoise|québecbo|m|Les [Québécois] sont très attachés à la langue française.|Québecborna är mycket fästa vid franska språket.|
+québécois, -e|québecisk||La chanson [québécoise] est très populaire en France.|Québecisk sång är mycket populär i Frankrike.|
+le Belge, la Belge|belgare|m|Les [Belges] disent « septante » et « nonante ».|Belgarna säger ”septante” och ”nonante”.|
+belge|belgisk||La bande dessinée [belge] est célèbre dans le monde entier.|Den belgiska serietecknarkonsten är känd i hela världen.|
+le Suisse, la Suissesse|schweizare|m|Beaucoup de [Suisses] parlent au moins trois langues.|Många schweizare talar minst tre språk.|
+suisse|schweizisk||Le chocolat [suisse] est connu dans le monde entier.|Franskspråkiga Schweiz talar franska.|
+romand, -e|fransktalande (i Schweiz)||Genève et Lausanne sont en Suisse [romande].|Genève och Lausanne ligger i franskspråkiga Schweiz.|
+l'Afrique de l'Ouest|Västafrika|f|Le français est très parlé en [Afrique de l'Ouest].|Franska talas mycket i Västafrika.|
+le Maghreb|Maghreb (Marocko, Algeriet, Tunisien)|m|Les pays du [Maghreb] ont gardé une forte présence du français.|Maghrebländerna har behållit en stark närvaro av franskan.|Arabiska 'där solen går ner, västern'.
+les DOM-TOM|franska utomeuropeiska områden|mpl|La Réunion et la Guadeloupe font partie des [DOM-TOM].|Réunion och Guadeloupe hör till de franska utomeuropeiska områdena.|Départements et territoires d'outre-mer.
+d'outre-mer|utomeuropeisk, på andra sidan havet||La Guyane est un territoire [d'outre-mer].|Franska Guyana är ett utomeuropeiskt territorium.|
+la colonisation|kolonisering|f|La [colonisation] explique la présence du français en Afrique.|Koloniseringen förklarar franskans närvaro i Afrika.|
+la colonie|koloni|f|L'Algérie a été une [colonie] française jusqu'en 1962.|Algeriet var en fransk koloni fram till 1962.|
+l'héritage|arv|m|La langue française fait partie de l'[héritage] colonial.|Det franska språket är en del av det koloniala arvet.|
+le métissage|blandning (av kulturer)|m|La musique antillaise est le fruit d'un [métissage].|Antillernas musik är resultatet av en kulturblandning.|
+la diversité|mångfald|f|La [diversité] culturelle est une richesse.|Den kulturella mångfalden är en tillgång.|
+l'identité|identitet|f|La langue est une partie importante de l'[identité].|Språket är en viktig del av identiteten.|
+appartenir à|tillhöra||Ce mot [appartient à] la langue parlée.|Det här ordet hör till talspråket.|
+le sentiment d'appartenance|samhörighetskänsla|m|La chanson crée un [sentiment d'appartenance].|Sången skapar en samhörighetskänsla.|
+la frontière|gräns|f|La [frontière] entre la France et la Belgique est ouverte.|Gränsen mellan Frankrike och Belgien är öppen.|
+le territoire|territorium, område|m|Le français est parlé sur tous les continents, sur des [territoires] très différents.|Franska talas på alla kontinenter, i mycket olika områden.|
+le continent|kontinent, världsdel|m|L'Afrique est le [continent] où le français progresse le plus.|Afrika är den världsdel där franskan växer mest.|
+la population|befolkning|f|La moitié de la [population] a moins de vingt ans.|Halva befolkningen är under tjugo år.|
+l'habitant, l'habitante|invånare|m|Kinshasa compte plus de quinze millions d'[habitants].|Kinshasa har över femton miljoner invånare.|
+la capitale|huvudstad|f|Dakar est la [capitale] du Sénégal.|Dakar är Senegals huvudstad.|
+l'Organisation internationale de la Francophonie|Internationella frankofoniorganisationen|f|L'[Organisation internationale de la Francophonie] réunit 88 États.|Internationella frankofoniorganisationen samlar 88 stater.|Förkortas OIF.
+promouvoir|främja||L'OIF cherche à [promouvoir] la langue française.|OIF försöker främja det franska språket.|
+menacé, -e|hotad||Certaines langues régionales sont [menacées].|Vissa regionala språk är hotade.|
+survivre|överleva||Le français a [survécu] en Louisiane grâce aux chansons.|Franskan har överlevt i Louisiana tack vare sångerna.|
+transmettre|överföra, föra vidare||Les parents veulent [transmettre] leur langue à leurs enfants.|Föräldrarna vill föra vidare sitt språk till sina barn.|
+la transmission|överföring|f|La [transmission] de la langue passe par la famille.|Språket förs vidare genom familjen.|
+le rayonnement|inflytande, utstrålning|m|Le [rayonnement] de la culture française passe aussi par le cinéma.|Den franska kulturens utstrålning går också genom filmen.|Av <b>rayon</b> 'stråle'.
+l'influence|inflytande|f|L'anglais a une grande [influence] sur le français des jeunes.|Engelskan har stort inflytande på ungas franska.|
+influencer|påverka||Le latin a [influencé] toutes les langues européennes.|Latinet har påverkat alla europeiska språk.|
+le statut|ställning, status|m|Quel est le [statut] du français en Belgique ?|Vilken ställning har franskan i Belgien?|
+la politique linguistique|språkpolitik|f|La Loi 101 est au cœur de la [politique linguistique] du Québec.|Lag 101 är kärnan i Québecs språkpolitik.|
+imposer|tvinga fram, införa||La loi [impose] le français dans les écoles publiques.|Lagen föreskriver franska i de allmänna skolorna.|
+l'alphabétisation|läs- och skrivundervisning|f|L'[alphabétisation] des adultes progresse.|Läs- och skrivkunnigheten bland vuxna ökar.|
+le griot|griot, västafrikansk sångare och berättare|m|Le [griot] raconte l'histoire du village en chantant.|Grioten berättar byns historia genom att sjunga.|
+la tradition orale|muntlig tradition|f|En Afrique de l'Ouest, la [tradition orale] est très riche.|I Västafrika är den muntliga traditionen mycket rik.|
+le conte|saga|m|Le [conte] commence toujours par la même formule.|Sagan börjar alltid med samma fras.|
+le proverbe|ordspråk|m|Un [proverbe] africain dit : « Seul, on va plus vite ; ensemble, on va plus loin. »|Ett afrikanskt ordspråk säger: ”Ensam går man fortare, tillsammans kommer man längre.”|
+le traducteur, la traductrice|översättare|m|Elle voudrait devenir [traductrice] à Bruxelles.|Hon skulle vilja bli översättare i Bryssel.|
+traduire|översätta||Ce roman a été [traduit] en quarante langues.|Den här romanen har översatts till fyrtio språk.|
+la traduction|översättning|f|La [traduction] automatique ne remplace pas un bon traducteur.|Maskinöversättning ersätter inte en bra översättare.|
+l'interprète|tolk; uttolkare|m|L'[interprète] traduit le discours en direct.|Tolken översätter talet direkt.|
+international, -e|internationell||Le français est une langue [internationale] de la diplomatie.|Franskan är ett internationellt diplomatspråk.|
+la diplomatie|diplomati|f|Pendant des siècles, le français était la langue de la [diplomatie].|Under århundraden var franskan diplomatins språk.|
+la mondialisation|globalisering|f|La [mondialisation] favorise l'anglais.|Globaliseringen gynnar engelskan.|
+le Sénégalais, la Sénégalaise|senegales|m|Beaucoup de [Sénégalais] parlent wolof à la maison.|Många senegaleser pratar wolof hemma.|
+l'accent du Midi|sydfransk brytning|m|On reconnaît tout de suite l'[accent du Midi].|Man känner genast igen den sydfranska brytningen.|
+la région|region|f|Chaque [région] a ses propres expressions.|Varje region har sina egna uttryck.|
+l'écrivain francophone|fransktalande författare|m|Ce prix récompense un [écrivain francophone] qui n'est pas français.|Priset belönar en fransktalande författare som inte är fransman.|
+le séjour linguistique|språkresa|m|Il a fait un [séjour linguistique] à Montpellier.|Han har varit på språkresa i Montpellier.|
+la fierté|stolthet|f|Pour les Acadiens, parler français est une [fierté].|För akadierna är det en stolthet att tala franska.|
+d'ailleurs|för övrigt||[D'ailleurs], le français n'est pas la seule langue officielle du Canada.|För övrigt är franska inte det enda officiella språket i Kanada.|
+parler plusieurs langues|tala flera språk||Au Luxembourg, presque tout le monde sait [parler plusieurs langues].|I Luxemburg kan nästan alla tala flera språk.|
+le plurilinguisme|flerspråkighet|m|Le [plurilinguisme] est normal dans une grande partie du monde.|Flerspråkighet är normalt i en stor del av världen.|
+le mélange|blandning|m|Leur langue est un [mélange] de français et d'anglais.|Deras språk är en blandning av franska och engelska.|
+mélanger|blanda||Les jeunes Montréalais [mélangent] souvent le français et l'anglais.|Unga Montréalbor blandar ofta franska och engelska.|
+comprendre de travers|missförstå||J'ai [compris de travers] : je croyais qu'il parlait du dîner.|Jag missförstod: jag trodde att han pratade om middagen.|
+le sous-titre|undertext|m|Je regarde les films québécois avec des [sous-titres].|Jag tittar på québecfilmer med undertext.|
+le wolof|wolof (språk)|m|Au Sénégal, beaucoup de gens parlent [wolof].|I Senegal pratar många wolof.|
+l'arabe|arabiska|m|L'[arabe] est aussi parlé au Maghreb.|Arabiska talas också i Maghreb.|
+le néerlandais|nederländska|m|En Belgique, on parle français, [néerlandais] et allemand.|I Belgien talar man franska, nederländska och tyska.|
+septante|sjuttio (i Belgien och Schweiz)||Le billet coûte [septante] euros.|Biljetten kostar sjuttio euro.|
+nonante|nittio (i Belgien och Schweiz)||Ma grand-mère a [nonante] ans.|Min mormor är nittio år.|
+huitante|åttio (i delar av Schweiz)||Il a [huitante] ans et joue encore du violon.|Han är åttio och spelar fortfarande fiol.|
+le dîner|middag; lunch (i Belgien, Schweiz, Québec)|m|En Belgique, le [dîner] est le repas de midi.|I Belgien är ”dîner” lunchen.|
+le souper|kvällsmat (i Belgien, Schweiz, Québec)|m|Nous prenons le [souper] à dix-neuf heures.|Vi äter kvällsmat klockan sju.|
+la variété|variant; varietéunderhållning|f|Le français de Québec est une [variété] du français.|Québecfranskan är en variant av franskan.|
+la norme|norm|f|La [norme] du français est souvent celle de Paris.|Normen för franskan är ofta Paris.|
+la Loi 101|Lag 101 (språklag i Québec)|f|La [Loi 101] protège le français au Québec.|Lag 101 skyddar franskan i Québec.|
+l'anglophone|engelsktalande (person)|m|Les [anglophones] de Montréal sont souvent bilingues.|Engelsktalande i Montréal är ofta tvåspråkiga.|
+l'Acadie|Akadien (fransktalande region i östra Kanada)|f|L'[Acadie] a sa propre culture francophone.|Akadien har en egen fransktalande kultur.|
+la Louisiane|Louisiana|f|On parle encore français en [Louisiane].|Man talar fortfarande franska i Louisiana.|
+le Cajun|cajun (fransktalande i Louisiana)|m|Les [Cajuns] descendent des Acadiens.|Cajunerna härstammar från akadierna.|
+descendre de|härstamma från||Elle [descend d']une famille italienne.|Hon härstammar från en italiensk familj.|
+les ancêtres|förfäder|mpl|Nos [ancêtres] venaient de Normandie.|Våra förfäder kom från Normandie.|
+l'accent québécois|québecfransk brytning|m|L'[accent québécois] est très mélodieux.|Québecbrytningen är mycket melodisk.|
+l'Institut français|Institut français|m|L'[Institut français] de Stockholm propose des cours.|Institut français i Stockholm erbjuder kurser.|
+la Journée de la Francophonie|frankofonidagen (20 mars)|f|La [Journée de la Francophonie] a lieu le 20 mars.|Frankofonidagen är den 20 mars.|
+le francophile, la francophile|frankofil (person som älskar Frankrike)|m|Mon grand-père était un grand [francophile].|Min morfar var en stor frankofil.|
+l'essencerie|bensinstation (i Senegal)|f|Au Sénégal, on fait le plein à l'[essencerie].|I Senegal tankar man på ”essencerie”.|
+à tantôt|vi ses snart (i Belgien)||Je dois y aller, [à tantôt] !|Jag måste gå, vi ses snart!|
+le clavardage|chatt (i Québec)|m|Au Québec, on dit « [clavardage] » pour chat.|I Québec säger man ”clavardage” för chatt.|<b>clavier</b> 'tangentbord' + <b>bavardage</b> 'prat'.
+la balado|podd (i Québec)|f|J'écoute une [balado] québécoise sur la musique.|Jag lyssnar på en québecisk podd om musik.|
+le canton|kanton (i Schweiz)|m|La Suisse compte vingt-six [cantons].|Schweiz har tjugosex kantoner.|
+la Charte de la langue française|stadgan om franska språket (Québec)|f|La [Charte de la langue française] date de 1977.|Stadgan om franska språket är från 1977.|
+l'affichage|skyltning|m|L'[affichage] commercial doit être en français.|Reklamskyltningen måste vara på franska.|
+la minorité linguistique|språklig minoritet|f|Les francophones du Canada forment une [minorité linguistique].|De fransktalande i Kanada utgör en språklig minoritet.|
+le locuteur natif|infödd talare|m|Elle parle comme un [locuteur natif].|Hon pratar som en infödd talare.|
+la langue de travail|arbetsspråk|f|Le français est une [langue de travail] de l'ONU.|Franska är ett av FN:s arbetsspråk.|
+l'ONU|FN|f|L'[ONU] a six langues officielles.|FN har sex officiella språk.|
+le Parlement européen|Europaparlamentet|m|Au [Parlement européen], on parle vingt-quatre langues.|I Europaparlamentet talar man tjugofyra språk.|
+la Nouvelle-France|Nya Frankrike (fransk koloni i Nordamerika)|f|La [Nouvelle-France] s'étendait du Québec à la Louisiane.|Nya Frankrike sträckte sig från Québec till Louisiana.|
+#v6|Kap 6 · La fiction : histoires et formes
+la fiction|fiktion|f|La [fiction] permet de vivre d'autres vies.|Fiktion gör det möjligt att leva andra liv.|
+le polar|deckare (vardagligt)|m|Ce [polar] se passe à Marseille.|Den här deckaren utspelar sig i Marseille.|
+le roman historique|historisk roman|m|Ce [roman historique] raconte la vie d'une musicienne au XVIIIe siècle.|Den här historiska romanen berättar om en musikers liv på 1700-talet.|
+le recueil|samling|m|J'ai acheté un [recueil] de poèmes de Prévert.|Jag köpte en diktsamling av Prévert.|
+le roman graphique|grafisk roman|m|Ce [roman graphique] raconte l'exil d'une famille.|Den här grafiska romanen berättar om en familjs flykt.|
+le conte de fées|saga|m|Perrault a écrit des [contes de fées] comme Cendrillon.|Perrault skrev sagor som Askungen.|
+la fable|fabel|f|Dans les [fables] de La Fontaine, les animaux parlent.|I La Fontaines fabler pratar djuren.|
+la morale|sensmoral; moral|f|La [morale] de cette fable est qu'il ne faut pas se moquer des autres.|Sensmoralen i fabeln är att man inte ska håna andra.|
+le genre|genre, litteraturart|m|Quel est ton [genre] littéraire préféré ?|Vilken är din favoritgenre?|
+le narrateur, la narratrice|berättare|m|Le [narrateur] est un enfant de dix ans.|Berättaren är ett barn på tio år.|
+le récit|berättelse|m|Le [récit] commence à la fin de la guerre.|Berättelsen börjar i slutet av kriget.|
+l'intrigue|handling, intrig|f|L'[intrigue] est pleine de surprises.|Handlingen är full av överraskningar.|
+le méchant|skurk|m|Dans ce film, le [méchant] est plus intéressant que le héros.|I den här filmen är skurken intressantare än hjälten.|
+le dénouement|upplösning|m|Je ne m'attendais pas du tout à ce [dénouement].|Jag hade inte alls väntat mig den upplösningen.|Av <b>dénouer</b> 'knyta upp'.
+la fin ouverte|öppet slut|f|Le film a une [fin ouverte] : chacun imagine la suite.|Filmen har ett öppet slut: var och en föreställer sig fortsättningen.|
+le suspense|spänning|m|Le [suspense] dure jusqu'à la dernière page.|Spänningen håller i sig till sista sidan.|
+se dérouler|utspela sig||L'histoire [se déroule] à Paris en 1920.|Historien utspelar sig i Paris 1920.|
+l'époque|tid, epok|f|À cette [époque], les femmes ne pouvaient pas voter.|På den tiden kunde kvinnor inte rösta.|
+à la première personne|i jagform||Le roman est écrit [à la première personne].|Romanen är skriven i jagform.|
+le retour en arrière|tillbakablick|m|Le film commence par un [retour en arrière].|Filmen börjar med en tillbakablick.|
+imaginaire|fantasi-, påhittad||Le pays où se passe l'histoire est [imaginaire].|Landet där historien utspelar sig är påhittat.|
+réaliste|realistisk||Les personnages sont très [réalistes].|Personerna är mycket realistiska.|
+vraisemblable|trovärdig, sannolik||La fin n'est pas très [vraisemblable].|Slutet är inte särskilt trovärdigt.|
+émouvant, -e|rörande, gripande||C'est une histoire très [émouvante].|Det är en mycket gripande historia.|
+ennuyeux, -se|tråkig||J'ai trouvé la deuxième partie un peu [ennuyeuse].|Jag tyckte att andra delen var lite tråkig.|
+drôle|rolig||Les dialogues sont vraiment [drôles].|Dialogerna är verkligen roliga.|
+bouleversant, -e|omskakande||La scène finale est [bouleversante].|Slutscenen är omskakande.|
+captivant, -e|fängslande||Un roman [captivant] qu'on ne peut pas lâcher.|En fängslande roman som man inte kan lägga ifrån sig.|
+la critique|recension; kritik|f|Cette [critique] donne envie de lire le livre.|Den här recensionen ger lust att läsa boken.|
+le critique, la critique|kritiker, recensent|m|Les [critiques] ont adoré le film.|Kritikerna älskade filmen.|
+la lecture|läsning|f|La [lecture] est mon passe-temps préféré.|Läsning är mitt favoritfritidsintresse.|
+le prix littéraire|litteraturpris|m|Le Goncourt est le [prix littéraire] le plus célèbre de France.|Goncourt är Frankrikes mest kända litteraturpris.|
+l'éditeur, l'éditrice|förläggare|m|Aucun [éditeur] ne voulait publier son premier manuscrit.|Ingen förläggare ville ge ut hennes första manus.|Obs! Inte 'redaktör' i första hand.
+la maison d'édition|förlag|f|Elle travaille dans une petite [maison d'édition].|Hon arbetar på ett litet förlag.|
+le manuscrit|manus|m|Il a envoyé son [manuscrit] à vingt éditeurs.|Han skickade sitt manus till tjugo förlag.|Latin <b>manu scriptus</b> 'skriven för hand'.
+paraître|komma ut (om bok); verka||Le nouveau roman [paraîtra] en septembre.|Den nya romanen kommer ut i september.|
+la parution|utgivning|f|Dès sa [parution], le livre a eu un grand succès.|Redan när den kom ut fick boken stor framgång.|
+la poésie|poesi|f|La [poésie] et la musique sont très proches.|Poesi och musik ligger mycket nära varandra.|
+la rime|rim|f|Les [rimes] donnent du rythme au poème.|Rimmen ger dikten rytm.|
+la strophe|strof|f|Le poème a quatre [strophes].|Dikten har fyra strofer.|
+la métaphore|metafor|f|« La mer de ses larmes » est une [métaphore].|”Havet av hennes tårar” är en metafor.|
+la comparaison|jämförelse, liknelse|f|« Rapide comme l'éclair » est une [comparaison].|”Snabb som blixten” är en liknelse.|
+la pièce de théâtre|teaterpjäs|f|Nous avons vu une [pièce de théâtre] de Molière.|Vi såg en pjäs av Molière.|
+l'acte|akt|m|La pièce compte cinq [actes].|Pjäsen har fem akter.|
+le metteur en scène|regissör (teater)|m|Le [metteur en scène] a modernisé la pièce.|Regissören har moderniserat pjäsen.|
+jouer le rôle de|spela rollen som||Elle [joue le rôle de] la reine.|Hon spelar rollen som drottningen.|
+le scénario|manus (film)|m|Le [scénario] est tiré d'un roman.|Filmmanuset bygger på en roman.|
+le scénariste|manusförfattare|m|Le [scénariste] a travaillé deux ans sur le film.|Manusförfattaren arbetade i två år med filmen.|
+tiré, -e de|baserad på||Le film est [tiré d']une histoire vraie.|Filmen är baserad på en sann historia.|
+la série|serie (tv)|f|J'ai regardé toute la [série] en un week-end.|Jag såg hela serien på en helg.|
+la saison|säsong|f|La deuxième [saison] est encore meilleure.|Andra säsongen är ännu bättre.|
+divulgâcher|spoila, avslöja slutet||Ne me [divulgâche] pas la fin !|Spoila inte slutet för mig!|Québecisk nybildning: <b>divulguer</b> 'avslöja' + <b>gâcher</b> 'förstöra'.
+la suite|fortsättning|f|J'attends la [suite] avec impatience.|Jag väntar otåligt på fortsättningen.|
+inventer une histoire|hitta på en historia||Ma petite sœur adore [inventer des histoires].|Min lillasyster älskar att hitta på historier.|
+le mythe|myt|m|Le [mythe] d'Orphée parle d'un musicien qui descend aux enfers.|Myten om Orfeus handlar om en musiker som stiger ner i underjorden.|
+la légende|legend, sägen|f|Selon la [légende], la ville a été fondée par un géant.|Enligt sägnen grundades staden av en jätte.|
+tragique|tragisk||La fin est [tragique] : le héros meurt.|Slutet är tragiskt: hjälten dör.|
+comique|komisk||Molière a écrit des pièces [comiques].|Molière skrev komiska pjäser.|
+l'humour|humor|m|L'auteur parle de sujets graves avec beaucoup d'[humour].|Författaren tar upp allvarliga ämnen med mycket humor.|
+l'ironie|ironi|f|Il y a beaucoup d'[ironie] dans ce dialogue.|Det finns mycket ironi i den här dialogen.|
+le personnage secondaire|bifigur|m|Le [personnage secondaire] le plus drôle est le voisin.|Den roligaste bifiguren är grannen.|
+la trahison|svek, förräderi|f|La [trahison] est un thème classique.|Svek är ett klassiskt tema.|
+se venger|hämnas||Elle veut [se venger] de ceux qui l'ont trompée.|Hon vill hämnas på dem som lurade henne.|
+la vengeance|hämnd|f|Le Comte de Monte-Cristo est une histoire de [vengeance].|Greven av Monte Cristo är en historia om hämnd.|
+le secret|hemlighet|m|Toute la famille cache un [secret].|Hela familjen döljer en hemlighet.|
+révéler|avslöja||À la fin, on [révèle] l'identité du coupable.|På slutet avslöjas den skyldiges identitet.|
+l'enquête|utredning|f|Le commissaire Maigret mène l'[enquête].|Kommissarie Maigret leder utredningen.|
+l'enquêteur, l'enquêtrice|utredare|m|L'[enquêtrice] interroge les voisins.|Utredaren förhör grannarna.|
+soupçonner|misstänka||La police [soupçonne] le jardinier.|Polisen misstänker trädgårdsmästaren.|
+le rebondissement|oväntad vändning|m|L'histoire est pleine de [rebondissements].|Historien är full av oväntade vändningar.|Av <b>rebondir</b> 'studsa'.
+le roman d'aventures|äventyrsroman|m|« Les Trois Mousquetaires » est un [roman d'aventures].|”De tre musketörerna” är en äventyrsroman.|
+le journal intime|dagbok|m|Elle écrit dans son [journal intime] chaque soir.|Hon skriver i sin dagbok varje kväll.|
+la couverture|omslag; täcke|f|J'ai choisi ce livre pour sa [couverture].|Jag valde den här boken för omslagets skull.|
+la page|sida|f|Le roman fait trois cents [pages].|Romanen är trehundra sidor.|
+le lecteur numérique|läsplatta|m|Je lis mes romans sur un [lecteur numérique].|Jag läser mina romaner på en läsplatta.|
+le livre audio|ljudbok|m|J'écoute des [livres audio] dans le train.|Jag lyssnar på ljudböcker på tåget.|
+la bibliothèque|bibliotek|f|J'emprunte trois livres par semaine à la [bibliothèque].|Jag lånar tre böcker i veckan på biblioteket.|
+emprunter un livre|låna en bok||On peut [emprunter un livre] pour trois semaines.|Man kan låna en bok i tre veckor.|
+la librairie|bokhandel|f|Il travaille dans une [librairie] de quartier.|Han arbetar i en kvartersbokhandel.|
+le club de lecture|bokcirkel|m|Notre [club de lecture] se réunit une fois par mois.|Vår bokcirkel träffas en gång i månaden.|
+deviner|gissa||Je n'avais pas [deviné] la fin.|Jag hade inte gissat slutet.|
+la voix narrative|berättarröst|f|La [voix narrative] change à chaque chapitre.|Berättarrösten byts i varje kapitel.|
+l'atmosphère|atmosfär, stämning|f|L'[atmosphère] du roman est très sombre.|Stämningen i romanen är mycket mörk.|
+la narration|berättande|f|La [narration] alterne entre passé et présent.|Berättandet växlar mellan dåtid och nutid.|
+la rancune|agg|f|Elle garde de la [rancune] contre sa sœur.|Hon bär agg mot sin syster.|
+les retrouvailles|återseende|fpl|Les [retrouvailles] entre les deux frères sont émouvantes.|Återseendet mellan de två bröderna är rörande.|
+l'hirondelle|svala|f|Une [hirondelle] ne fait pas le printemps.|En svala gör ingen sommar.|
+inoubliable|oförglömlig||C'est un personnage [inoubliable].|Det är en oförglömlig gestalt.|
+caricatural, -e|karikatyrartad||Certains personnages sont un peu [caricaturaux].|Vissa personer är lite karikatyrartade.|
+lâcher|släppa||Je n'ai pas pu [lâcher] ce livre.|Jag kunde inte släppa den här boken.|
+le Goncourt des lycéens|Goncourtpriset för gymnasieelever|m|Le [Goncourt des lycéens] est décerné par des élèves.|Goncourtpriset för gymnasieelever delas ut av elever.|
+le polar nordique|nordisk deckare|m|Les Français adorent le [polar nordique].|Fransmännen älskar nordiska deckare.|
+l'inspecteur, l'inspectrice|kommissarie, inspektör|m|L'[inspectrice] interroge les témoins.|Inspektören förhör vittnena.|
+l'indice|ledtråd; index|m|Le détective cherche des [indices].|Detektiven letar efter ledtrådar.|
+le mobile|motiv (för brott); mobiltelefon|m|Quel était le [mobile] du crime ?|Vad var motivet för brottet?|
+la tirade|lång replik|f|La [tirade] du nez de Cyrano est célèbre.|Cyranos replik om näsan är berömd.|
+#v7|Kap 7 · Musique et arts
+l'artiste|konstnär, artist|m|Cette [artiste] mélange peinture et musique.|Den här konstnären blandar måleri och musik.|
+le compositeur, la compositrice|kompositör, tonsättare|m|Lili Boulanger est une [compositrice] française.|Lili Boulanger är en fransk tonsättare.|
+composer|komponera||Debussy a [composé] La Mer en 1905.|Debussy komponerade La Mer 1905.|
+la composition|komposition|f|Elle étudie la [composition] au conservatoire.|Hon studerar komposition på konservatoriet.|
+le chef d'orchestre|dirigent|m|Le [chef d'orchestre] lève sa baguette.|Dirigenten lyfter taktpinnen.|
+diriger un orchestre|dirigera en orkester||Elle rêve de [diriger un orchestre].|Hon drömmer om att dirigera en orkester.|
+le soliste, la soliste|solist|m|La [soliste] a joué sans partition.|Solisten spelade utan noter.|
+le répertoire|repertoar|m|Son [répertoire] va de Bach au jazz.|Hans repertoar sträcker sig från Bach till jazz.|
+le morceau|stycke, låt|m|Quel [morceau] vas-tu jouer à l'audition ?|Vilket stycke ska du spela på provspelningen?|Egentligen 'bit'.
+la partition|noter, partitur|f|J'ai oublié ma [partition] dans le bus.|Jag glömde mina noter på bussen.|
+la répétition|repetition|f|La [répétition] générale a lieu la veille du concert.|Generalrepetitionen är dagen före konserten.|
+l'album|album|m|Son nouvel [album] sort en mai.|Hennes nya album kommer ut i maj.|
+le single|singel|m|Le premier [single] a été écouté un million de fois.|Den första singeln har lyssnats på en miljon gånger.|
+la tournée|turné|f|Le groupe part en [tournée] en Afrique.|Bandet åker på turné i Afrika.|
+la salle de concert|konsertsal|f|La Philharmonie est une [salle de concert] moderne.|Philharmonie är en modern konsertsal.|
+le bis|extranummer|m|Le public a réclamé un [bis].|Publiken krävde ett extranummer.|Latin <b>bis</b> 'två gånger'.
+le festival|festival|m|Le [festival] d'Avignon est consacré au théâtre.|Avignonfestivalen är tillägnad teater.|
+le genre musical|musikgenre|m|Le rap est le [genre musical] le plus écouté en France.|Rap är den mest lyssnade musikgenren i Frankrike.|
+la chanson française|fransk visa|f|Brel et Brassens sont des légendes de la [chanson française].|Brel och Brassens är legender inom fransk visa.|
+le chanteur, la chanteuse|sångare, sångerska|m|Cette [chanteuse] belge chante en français et en anglais.|Den här belgiska sångerskan sjunger på franska och engelska.|
+les paroles|sångtext|fpl|J'adore les [paroles] de cette chanson.|Jag älskar texten i den här låten.|
+le refrain|refräng|m|Tout le monde chante le [refrain].|Alla sjunger refrängen.|
+le couplet|vers (i sång)|m|Le deuxième [couplet] est plus triste.|Andra versen är sorgligare.|
+la mélodie|melodi|f|La [mélodie] est simple mais inoubliable.|Melodin är enkel men oförglömlig.|
+le rythme|rytm|m|Le [rythme] de cette chanson donne envie de danser.|Rytmen i den här låten får en att vilja dansa.|
+l'accord|ackord|m|Il ne connaît que trois [accords] à la guitare.|Han kan bara tre ackord på gitarr.|
+la gamme|skala|f|Fais tes [gammes] avant de jouer le morceau.|Spela dina skalor innan du spelar stycket.|
+l'harmonie|harmoni|f|Nous étudions l'[harmonie] en première année.|Vi läser harmonilära första året.|
+jouer juste|spela rent||Il est difficile de [jouer juste] quand il fait froid.|Det är svårt att spela rent när det är kallt.|
+jouer faux|spela falskt||Le violon [jouait faux] pendant tout le concert.|Fiolen spelade falskt under hela konserten.|
+improviser|improvisera||Les musiciens de jazz [improvisent] souvent.|Jazzmusiker improviserar ofta.|
+l'improvisation|improvisation|f|L'[improvisation] demande beaucoup d'écoute.|Improvisation kräver att man lyssnar mycket.|
+la virtuosité|virtuositet|f|Sa [virtuosité] impressionne le public.|Hans virtuositet imponerar på publiken.|
+la sensibilité|känslighet, lyhördhet|f|Elle joue avec beaucoup de [sensibilité].|Hon spelar med stor lyhördhet.|
+l'émotion|känsla|f|Ce morceau me donne toujours beaucoup d'[émotion].|Det här stycket rör mig alltid djupt.|
+la peinture|måleri; målning|f|Elle préfère la [peinture] moderne.|Hon föredrar modernt måleri.|
+le peintre, la peintre|målare|m|Monet est un [peintre] impressionniste.|Monet är en impressionistisk målare.|
+le tableau|tavla, målning|m|Ce [tableau] vaut des millions.|Den här tavlan är värd miljoner.|
+le portrait|porträtt|m|Il a fait le [portrait] de sa grand-mère.|Han målade ett porträtt av sin farmor.|
+la sculpture|skulptur|f|Rodin a réalisé la [sculpture] du Penseur.|Rodin gjorde skulpturen Tänkaren.|
+le sculpteur, la sculptrice|skulptör|m|Camille Claudel était une grande [sculptrice].|Camille Claudel var en stor skulptör.|
+le musée|museum|m|Le [musée] d'Orsay est installé dans une ancienne gare.|Musée d'Orsay ligger i en gammal järnvägsstation.|
+l'exposition|utställning|f|L'[exposition] Picasso a attiré un million de visiteurs.|Picassoutställningen lockade en miljon besökare.|
+exposer|ställa ut||Cette galerie [expose] de jeunes artistes.|Det här galleriet ställer ut unga konstnärer.|
+la galerie|galleri|f|Elle a ouvert une [galerie] d'art à Lyon.|Hon har öppnat ett konstgalleri i Lyon.|
+le visiteur, la visiteuse|besökare|m|Les [visiteurs] font la queue devant le musée.|Besökarna köar utanför museet.|
+l'art contemporain|samtidskonst|m|Je ne comprends pas toujours l'[art contemporain].|Jag förstår inte alltid samtidskonsten.|
+le street art|gatukonst|m|Le [street art] a transformé ce quartier.|Gatukonsten har förvandlat det här kvarteret.|
+la photographie|fotografi|f|Elle a pris des cours de [photographie].|Hon har gått kurser i fotografi.|
+la danse|dans|f|La [danse] contemporaine me fascine.|Samtidsdansen fascinerar mig.|
+le danseur, la danseuse|dansare|m|Les [danseurs] de l'Opéra répètent tous les jours.|Operans dansare repeterar varje dag.|
+la chorégraphie|koreografi|f|La [chorégraphie] est inspirée du hip-hop.|Koreografin är inspirerad av hiphop.|
+l'opéra|opera|m|Carmen est l'[opéra] français le plus joué au monde.|Carmen är den franska opera som spelas mest i världen.|
+le spectacle|föreställning|m|Le [spectacle] commence à vingt heures.|Föreställningen börjar klockan åtta.|
+la mise en scène|regi, iscensättning|f|La [mise en scène] est très moderne.|Regin är mycket modern.|
+les décors|scenografi, kulisser|mpl|Les [décors] ont été créés par une artiste.|Scenografin har skapats av en konstnär.|
+les costumes|kostymer|mpl|Les [costumes] sont magnifiques.|Kostymerna är fantastiska.|
+l'éclairage|ljussättning|m|L'[éclairage] crée une atmosphère mystérieuse.|Ljussättningen skapar en mystisk stämning.|
+l'inspiration|inspiration|f|Où trouves-tu ton [inspiration] ?|Var hittar du din inspiration?|
+la création|skapande; verk|f|La [création] artistique demande du temps.|Konstnärligt skapande tar tid.|
+créer|skapa||Le groupe a [créé] un spectacle pour les enfants.|Bandet har skapat en föreställning för barn.|
+le mécène|mecenat|m|Un [mécène] a financé la restauration de l'orgue.|En mecenat finansierade restaureringen av orgeln.|Efter romaren Maecenas, som stödde poeter.
+la subvention|bidrag, statsbidrag|f|Le festival reçoit une [subvention] de la région.|Festivalen får bidrag från regionen.|
+financer|finansiera||Qui va [financer] le nouveau théâtre ?|Vem ska finansiera den nya teatern?|
+les droits d'auteur|upphovsrätt; royalty|mpl|Les musiciens touchent des [droits d'auteur] quand on passe leurs chansons.|Musikerna får royalty när deras låtar spelas.|
+la plateforme|plattform|f|Sur cette [plateforme], on trouve des millions de chansons.|På den här plattformen finns miljontals låtar.|
+la reprise|cover, ny version|f|Cette [reprise] est plus connue que l'original.|Den här covern är mer känd än originalet.|
+le tube|hit|m|Cette chanson a été le [tube] de l'été.|Den här låten var sommarens hit.|
+à la mode|på modet||Le vinyle est de nouveau [à la mode].|Vinyl är på modet igen.|
+le goût|smak|m|Nous avons les mêmes [goûts] musicaux.|Vi har samma musiksmak.|
+apprécier|uppskatta||J'[apprécie] beaucoup la musique baroque.|Jag uppskattar barockmusik mycket.|
+émouvoir|röra, beröra||Sa voix m'a profondément [ému].|Hennes röst berörde mig djupt.|
+le chœur|kör|m|Le [chœur] compte soixante chanteurs.|Kören har sextio sångare.|Uttalas [kör], grekiska <b>khoros</b>.
+la chorale|kör (amatör)|f|Je chante dans la [chorale] de mon lycée.|Jag sjunger i skolans kör.|
+l'orchestre symphonique|symfoniorkester|m|L'[orchestre symphonique] joue ce soir à la Philharmonie.|Symfoniorkestern spelar i kväll på Philharmonie.|
+la musique de chambre|kammarmusik|f|J'adore jouer de la [musique de chambre] avec mes amis.|Jag älskar att spela kammarmusik med mina vänner.|
+le quatuor|kvartett|m|Un [quatuor] à cordes est composé de deux violons, d'un alto et d'un violoncelle.|En stråkkvartett består av två fioler, en altfiol och en cello.|
+l'instrument à vent|blåsinstrument|m|La flûte est un [instrument à vent].|Flöjten är ett blåsinstrument.|
+l'instrument à cordes|stråkinstrument|m|Le violoncelle est un [instrument à cordes].|Cellon är ett stråkinstrument.|
+les percussions|slagverk|fpl|Il joue des [percussions] dans l'orchestre.|Han spelar slagverk i orkestern.|
+le mouvement|sats (i musikstycke); rörelse|m|Le deuxième [mouvement] est lent.|Andra satsen är långsam.|
+le violoniste, la violoniste|violinist|m|La [violoniste] a joué sans partition.|Violinisten spelade utan noter.|
+le pianiste, la pianiste|pianist|m|Le [pianiste] accompagne la chanteuse.|Pianisten ackompanjerar sångerskan.|
+l'accompagnateur, l'accompagnatrice|ackompanjatör|m|L'[accompagnateur] joue le piano pendant l'audition.|Ackompanjatören spelar piano under provspelningen.|
+le récital|soloafton, recital|m|Il donne un [récital] de piano samedi.|Han ger en pianorecital på lördag.|
+le concerto|konsert (verk för solist och orkester)|m|Elle joue le [concerto] pour violon de Beethoven.|Hon spelar Beethovens violinkonsert.|
+la symphonie|symfoni|f|Beethoven a composé neuf [symphonies].|Beethoven komponerade nio symfonier.|
+la sonate|sonat|f|Il répète une [sonate] de Mozart.|Han övar på en sonat av Mozart.|
+les cuivres|bleckblås|mpl|Les [cuivres] jouent très fort à la fin.|Bleckblåset spelar väldigt starkt i slutet.|
+la baguette|taktpinne; baguette|f|Le chef lève sa [baguette].|Dirigenten lyfter taktpinnen.|
+la note|ton; betyg|f|Il a raté une [note] au début du morceau.|Han missade en ton i början av stycket.|
+le tempo|tempo|m|Le [tempo] est trop rapide pour moi.|Tempot är för snabbt för mig.|
+l'impressionnisme|impressionism|m|L'[impressionnisme] est né en France vers 1870.|Impressionismen föddes i Frankrike runt 1870.|
+peindre|måla (tavla)||Monet a [peint] les mêmes nymphéas des dizaines de fois.|Monet målade samma näckrosor tiotals gånger.|
+dessiner|teckna||Elle [dessine] depuis toute petite.|Hon har tecknat sedan hon var liten.|
+le dessin|teckning|m|Ce [dessin] a été fait au crayon.|Den här teckningen gjordes med blyerts.|
+l'esquisse|skiss|f|Le peintre a fait plusieurs [esquisses] avant le tableau.|Målaren gjorde flera skisser före tavlan.|
+la couleur|färg|f|Il utilise des [couleurs] très vives.|Han använder mycket starka färger.|
+la lumière|ljus|f|Les impressionnistes peignaient la [lumière].|Impressionisterna målade ljuset.|
+la visite guidée|guidad visning|f|La [visite guidée] dure une heure.|Den guidade visningen tar en timme.|
+l'audioguide|audioguide|m|Prenez un [audioguide] à l'entrée.|Ta en audioguide vid ingången.|
+la médiathèque musicale|musikbibliotek|f|On peut emprunter des partitions à la [médiathèque musicale].|Man kan låna noter på musikbiblioteket.|
+le local de répétition|replokal|m|Nous cherchons un [local de répétition] pour notre groupe.|Vi letar efter en replokal till vårt band.|
+le groupe de musique|band|m|Mon frère joue dans un [groupe de musique].|Min bror spelar i ett band.|
+le programmateur, la programmatrice|bokare (för konserter)|m|Un [programmateur] nous a invités au festival.|En bokare bjöd in oss till festivalen.|
+le flûtiste, la flûtiste|flöjtist|m|La [flûtiste] a joué un solo magnifique.|Flöjtisten spelade ett fantastiskt solo.|
+le violoncelliste, la violoncelliste|cellist|m|Le [violoncelliste] accorde son instrument.|Cellisten stämmer sitt instrument.|
+jouer d'oreille|spela på gehör||Il ne lit pas la musique, il [joue d'oreille].|Han läser inte noter, han spelar på gehör.|
+la salle comble|fullsatt salong|f|Le pianiste a joué devant une [salle comble].|Pianisten spelade inför fullsatt salong.|
+le nymphéa|näckros|m|Monet a peint des centaines de [nymphéas].|Monet målade hundratals näckrosor.|
+#v8|Kap 8 · Consommer autrement
+la consommation|konsumtion|f|Notre [consommation] de vêtements a doublé en vingt ans.|Vår klädkonsumtion har fördubblats på tjugo år.|
+consommer|konsumera||Nous [consommons] trop de plastique.|Vi konsumerar för mycket plast.|
+le consommateur, la consommatrice|konsument|m|Les [consommateurs] veulent des produits plus durables.|Konsumenterna vill ha mer hållbara produkter.|
+la société de consommation|konsumtionssamhälle|f|Ce film critique la [société de consommation].|Den här filmen kritiserar konsumtionssamhället.|
+le pouvoir d'achat|köpkraft|m|L'inflation réduit le [pouvoir d'achat].|Inflationen minskar köpkraften.|
+les soldes|rea|mpl|Les [soldes] d'hiver commencent en janvier.|Vinterrean börjar i januari.|
+la réduction|rabatt|f|Avec la carte étudiant, on a une [réduction] de dix pour cent.|Med studentkortet får man tio procents rabatt.|
+la promotion|erbjudande, kampanj|f|Ce shampoing est en [promotion] cette semaine.|Det här schampot är på extrapris den här veckan.|
+bon marché|billig||Ces vêtements sont [bon marché], mais de mauvaise qualité.|De här kläderna är billiga men av dålig kvalitet.|
+la qualité|kvalitet|f|Je préfère acheter moins, mais de meilleure [qualité].|Jag föredrar att köpa mindre men av bättre kvalitet.|
+la marque|märke|f|Les jeunes sont très sensibles aux [marques].|Unga är mycket fästa vid märken.|
+l'achat en ligne|näthandel, köp på nätet|m|L'[achat en ligne] a explosé pendant la pandémie.|Näthandeln exploderade under pandemin.|
+la livraison|leverans|f|La [livraison] est gratuite à partir de cinquante euros.|Leveransen är gratis från femtio euro.|
+livrer|leverera||Le colis sera [livré] demain.|Paketet levereras i morgon.|
+le colis|paket|m|J'ai reçu un [colis] de ma grand-mère.|Jag har fått ett paket från min mormor.|
+se faire rembourser|få pengarna tillbaka||Si l'article ne vous plaît pas, vous pouvez [vous faire rembourser].|Om varan inte faller er i smaken kan ni få pengarna tillbaka.|
+la réclamation|reklamation, klagomål|f|J'ai fait une [réclamation] au service client.|Jag har reklamerat varan hos kundtjänst.|
+le service client|kundtjänst|m|Contactez le [service client] par téléphone.|Kontakta kundtjänst per telefon.|
+la garantie|garanti|f|L'appareil est sous [garantie] pendant deux ans.|Apparaten har två års garanti.|
+la mode|mode|f|La [mode] rapide pollue énormément.|Snabbmode förorenar enormt.|
+la fast fashion|snabbmode|f|La [fast fashion] produit des vêtements à très bas prix.|Snabbmodet producerar kläder till mycket låga priser.|
+d'occasion|begagnad||J'ai acheté ma guitare [d'occasion].|Jag köpte min gitarr begagnad.|
+la seconde main|second hand|f|Elle ne s'habille qu'en [seconde main].|Hon klär sig bara i second hand.|
+la friperie|second hand-butik (kläder)|f|J'ai trouvé cette veste dans une [friperie].|Jag hittade den här jackan i en second hand-butik.|
+échanger|byta||On peut [échanger] des livres à la bibliothèque du quartier.|Man kan byta böcker på kvartersbiblioteket.|
+le repair café|reparationskafé|m|Au [repair café], des bénévoles t'aident à réparer tes objets.|På reparationskaféet hjälper volontärer dig att laga dina saker.|
+le gaspillage|slöseri|m|Le [gaspillage] alimentaire est un problème mondial.|Matsvinnet är ett globalt problem.|
+gaspiller|slösa||Arrête de [gaspiller] l'eau !|Sluta slösa med vattnet!|
+les déchets|avfall, sopor|mpl|Nous produisons trop de [déchets].|Vi producerar för mycket avfall.|
+trier|sortera||Il faut [trier] le verre, le papier et le plastique.|Man måste sortera glas, papper och plast.|
+le tri sélectif|källsortering|m|Le [tri sélectif] est obligatoire dans notre immeuble.|Källsortering är obligatorisk i vårt hus.|
+recycler|återvinna||Ces bouteilles sont [recyclées] pour faire des vêtements.|De här flaskorna återvinns till kläder.|
+le recyclage|återvinning|m|Le [recyclage] ne suffit pas : il faut consommer moins.|Återvinning räcker inte: vi måste konsumera mindre.|
+l'emballage|förpackning|m|Évitez les produits avec trop d'[emballage].|Undvik produkter med för mycket förpackning.|
+jetable|engångs-||Les couverts [jetables] en plastique sont interdits.|Engångsbestick i plast är förbjudna.|
+durable|hållbar||Il faut encourager une consommation [durable].|Man måste uppmuntra en hållbar konsumtion.|
+le développement durable|hållbar utveckling|m|L'école organise une semaine du [développement durable].|Skolan anordnar en vecka om hållbar utveckling.|
+l'obsolescence programmée|planerat åldrande (av produkter)|f|L'[obsolescence programmée] est interdite en France depuis 2015.|Planerat åldrande är förbjudet i Frankrike sedan 2015.|Latin <b>obsolescere</b> 'bli omodern'.
+la durée de vie|livslängd|f|La [durée de vie] d'un téléphone est de trois ans en moyenne.|En telefons livslängd är i genomsnitt tre år.|
+l'environnement|miljö|m|Protéger l'[environnement] est l'affaire de tous.|Att skydda miljön angår alla.|
+écologique|miljövänlig, ekologisk||Le train est plus [écologique] que l'avion.|Tåget är mer miljövänligt än flyget.|
+l'empreinte carbone|koldioxidavtryck|f|Réduire son [empreinte carbone], c'est d'abord moins prendre l'avion.|Att minska sitt koldioxidavtryck är framför allt att flyga mindre.|
+les gaz à effet de serre|växthusgaser|mpl|Les transports émettent beaucoup de [gaz à effet de serre].|Transporter släpper ut mycket växthusgaser.|
+le réchauffement climatique|global uppvärmning|m|Le [réchauffement climatique] menace de nombreuses espèces.|Den globala uppvärmningen hotar många arter.|
+la pollution|föroreningar|f|La [pollution] de l'air est un problème dans les grandes villes.|Luftföroreningar är ett problem i storstäderna.|
+polluer|förorena||Les usines [polluent] la rivière.|Fabrikerna förorenar floden.|
+les ressources naturelles|naturresurser|fpl|Les [ressources naturelles] ne sont pas illimitées.|Naturresurserna är inte obegränsade.|
+les matières premières|råvaror|fpl|Le prix des [matières premières] augmente.|Priset på råvaror stiger.|
+épuiser|tömma, uttömma||Nous [épuisons] les ressources de la planète.|Vi tömmer jordens resurser.|
+économiser|spara||Éteins la lumière pour [économiser] l'énergie.|Släck ljuset för att spara energi.|
+les économies d'énergie|energibesparing|fpl|Les [économies d'énergie] sont bonnes pour le portefeuille.|Energibesparing är bra för plånboken.|
+le circuit court|direkthandel (från producent)|m|Au marché, on achète en [circuit court].|På torget köper man direkt från producenten.|
+bio|ekologisk||Les légumes [bio] coûtent plus cher.|Ekologiska grönsaker kostar mer.|Förkortning av <b>biologique</b>.
+le commerce équitable|rättvis handel|m|Ce café vient du [commerce équitable].|Det här kaffet är rättvisemärkt.|
+le label|märkning, certifiering|m|Ce [label] garantit que le coton est bio.|Den här märkningen garanterar att bomullen är ekologisk.|
+l'étiquette|etikett|f|Lis l'[étiquette] pour savoir d'où vient le produit.|Läs etiketten för att veta var produkten kommer ifrån.|
+fabriquer|tillverka||Ce jean a été [fabriqué] au Bangladesh.|De här jeansen tillverkades i Bangladesh.|
+la fabrication|tillverkning|f|La [fabrication] d'un jean demande 7 000 litres d'eau.|Tillverkningen av ett par jeans kräver 7 000 liter vatten.|
+les conditions de travail|arbetsvillkor|fpl|Les [conditions de travail] dans ces usines sont terribles.|Arbetsvillkoren i de här fabrikerna är fruktansvärda.|
+le geste|handling, gest|m|Chaque petit [geste] compte.|Varje liten handling räknas.|
+le mode de vie|livsstil|m|Changer de [mode de vie] n'est pas facile.|Att byta livsstil är inte lätt.|
+la sobriété|måttfullhet, återhållsamhet|f|La [sobriété] énergétique est devenue une priorité.|Energisnålhet har blivit en prioritering.|
+le minimalisme|minimalism|m|Le [minimalisme] consiste à posséder moins d'objets.|Minimalism innebär att äga färre saker.|
+posséder|äga||Il [possède] plus de cent paires de chaussures !|Han äger över hundra par skor!|
+l'objet|sak, föremål|m|On garde beaucoup d'[objets] inutiles.|Man sparar många onödiga saker.|
+inutile|onödig||Évitez les achats [inutiles].|Undvik onödiga köp.|
+l'influenceur, l'influenceuse|influencer|m|Les [influenceurs] font la promotion de nombreux produits.|Influencers gör reklam för många produkter.|
+le boycott|bojkott|m|Les étudiants ont lancé un [boycott] de cette marque.|Studenterna startade en bojkott av det här märket.|
+boycotter|bojkotta||Faut-il [boycotter] les produits qui polluent ?|Ska man bojkotta produkter som förorenar?|
+la location|uthyrning, hyra|f|La [location] de vêtements devient populaire.|Att hyra kläder blir populärt.|
+louer|hyra||Pour le concert, j'ai [loué] un costume.|Till konserten hyrde jag en kostym.|
+l'économie circulaire|cirkulär ekonomi|f|L'[économie circulaire] transforme les déchets en ressources.|Den cirkulära ekonomin förvandlar avfall till resurser.|
+le covoiturage|samåkning|m|Je vais au festival en [covoiturage].|Jag åker till festivalen med samåkning.|
+les transports en commun|kollektivtrafik|mpl|Prenez les [transports en commun] plutôt que la voiture.|Åk kollektivt i stället för bil.|
+la sécheresse|torka|f|La [sécheresse] a détruit les récoltes.|Torkan förstörde skördarna.|
+la biodiversité|biologisk mångfald|f|La [biodiversité] diminue très vite.|Den biologiska mångfalden minskar mycket snabbt.|
+l'espèce|art|f|Des milliers d'[espèces] sont menacées de disparition.|Tusentals arter hotas av utrotning.|
+protéger|skydda||Il faut [protéger] les forêts.|Vi måste skydda skogarna.|
+la protection|skydd|f|La [protection] de la nature est inscrite dans la Constitution.|Naturskyddet är inskrivet i grundlagen.|
+le militant, la militante|aktivist|m|Des [militants] écologistes ont bloqué la route.|Miljöaktivister blockerade vägen.|
+sensibiliser|göra medveten, informera||Cette campagne veut [sensibiliser] les jeunes au gaspillage.|Kampanjen vill göra unga medvetna om slöseri.|
+la prise de conscience|insikt, uppvaknande|f|On observe une vraie [prise de conscience] écologique.|Man ser ett verkligt miljömedvetande växa fram.|
+l'avenir de la planète|jordens framtid|m|L'[avenir de la planète] dépend de nos choix.|Jordens framtid beror på våra val.|
+les générations futures|framtida generationer|fpl|Nous devons penser aux [générations futures].|Vi måste tänka på framtida generationer.|
+la taxe|skatt, avgift|f|Une [taxe] sur les billets d'avion finance le train.|En avgift på flygbiljetter finansierar tåget.|
+l'interdiction|förbud|f|L'[interdiction] des sacs plastiques date de 2016.|Förbudet mot plastpåsar är från 2016.|
+la platine vinyle|skivspelare|f|J'ai trouvé une [platine vinyle] au vide-grenier.|Jag hittade en skivspelare på loppisen.|
+le disque|skiva|m|Il collectionne les [disques] de jazz.|Han samlar på jazzskivor.|
+marchander|pruta||Au marché, on peut [marchander].|På marknaden kan man pruta.|
+chiner|fynda, leta på loppis||Le dimanche, j'aime [chiner] dans les brocantes.|På söndagar gillar jag att fynda på loppisar.|
+reconditionné, -e|renoverad (om elektronik)||Mon téléphone est [reconditionné].|Min telefon är renoverad.|
+le particulier|privatperson|m|Il a acheté sa guitare à un [particulier].|Han köpte sin gitarr av en privatperson.|
+la vente entre particuliers|försäljning mellan privatpersoner|f|La [vente entre particuliers] se fait souvent sur des applications.|Försäljning mellan privatpersoner sker ofta via appar.|
+la consigne|pant; instruktion|f|En Suède, il y a une [consigne] sur les canettes.|I Sverige finns det pant på burkar.|
+la canette|burk|f|Rapporte tes [canettes] au supermarché.|Lämna tillbaka dina burkar i butiken.|
+le sac en tissu|tygpåse|m|J'ai toujours un [sac en tissu] dans mon sac à dos.|Jag har alltid en tygpåse i ryggsäcken.|
+le sac plastique|plastpåse|m|Les [sacs plastiques] sont interdits dans les magasins.|Plastpåsar är förbjudna i butikerna.|
+le bocal|glasburk|m|Je range le riz dans un [bocal].|Jag förvarar riset i en glasburk.|
+la poubelle|soptunna|f|Ne jette pas le verre dans cette [poubelle].|Släng inte glas i den här soptunnan.|
+les restes|rester|mpl|Avec les [restes], je prépare une soupe.|Av resterna lagar jag en soppa.|
+la date de péremption|bäst före-datum|f|Vérifie la [date de péremption] avant de jeter.|Kontrollera bäst före-datumet innan du slänger.|
+périmé, -e|för gammal, har gått ut||Ce yaourt est [périmé] depuis hier.|Den här yoghurten gick ut i går.|
+les invendus|osålda varor|mpl|Le supermarché donne ses [invendus] à une association.|Stormarknaden skänker sina osålda varor till en förening.|
+le coton|bomull|m|Ce tee-shirt est en [coton] bio.|Den här t-shirten är av ekologisk bomull.|
+le tissu|tyg|m|Ce [tissu] est fabriqué avec des bouteilles recyclées.|Det här tyget är tillverkat av återvunna flaskor.|
+coudre|sy||Ma grand-mère m'a appris à [coudre].|Min mormor lärde mig att sy.|
+raccommoder|laga (kläder)||J'ai [raccommodé] mon pull au lieu de le jeter.|Jag lagade min tröja i stället för att slänga den.|
+l'impact|påverkan|m|Quel est l'[impact] de nos achats sur la planète ?|Vilken påverkan har våra inköp på planeten?|
+le mode de consommation|konsumtionsmönster|m|Il faut changer nos [modes de consommation].|Vi måste ändra våra konsumtionsmönster.|
+la réparabilité|reparerbarhet|f|L'indice de [réparabilité] aide à choisir un téléphone.|Reparerbarhetsindexet hjälper en att välja telefon.|
+réparable|lagningsbar||Cet ordinateur est facilement [réparable].|Den här datorn är lätt att laga.|
+la teinture|färgning; färgämne|f|La [teinture] des vêtements pollue les rivières.|Färgningen av kläder förorenar floderna.|
+le fournisseur, la fournisseuse|leverantör|m|La marque doit contrôler ses [fournisseurs].|Märket måste kontrollera sina leverantörer.|
+la chaîne de production|produktionskedja|f|Chaque étape de la [chaîne de production] pollue.|Varje steg i produktionskedjan förorenar.|
+le portefeuille|plånbok|m|C'est bon pour la planète et pour le [portefeuille].|Det är bra för planeten och för plånboken.|
+la bonne affaire|fynd, bra köp|f|Ce vélo d'occasion, c'est une [bonne affaire] !|Den här begagnade cykeln är ett fynd!|
+la platine|skivspelare (kort)|f|J'ai branché la [platine] sur les enceintes.|Jag kopplade skivspelaren till högtalarna.|
+l'enceinte|högtalare|f|Cette [enceinte] portable est très puissante.|Den här bärbara högtalaren är mycket kraftfull.|
+le ticket de caisse|kvitto|m|J'ai perdu le [ticket de caisse].|Jag har tappat bort kvittot.|
+l'échange standard|byte mot ny vara|m|Le magasin propose un [échange standard].|Butiken erbjuder byte mot en ny vara.|
+le magasin de vrac|lösviktsbutik|m|J'achète le riz et les pâtes dans un [magasin de vrac].|Jag köper ris och pasta i en lösviktsbutik.|
+#vr|Expressions · Nuancer, résumer, réagir
+à mon avis|enligt min mening||[À mon avis], les études à l'étranger sont une chance.|Enligt min mening är studier utomlands en chans.||<b>à</b> enligt · <b>mon avis</b> min åsikt
+selon moi|enligt mig||[Selon moi], il faudrait interdire la fast fashion.|Enligt mig borde man förbjuda snabbmode.|
+il me semble que|det verkar som om, jag tycker att||[Il me semble que] ce film est trop long.|Jag tycker att filmen är för lång.||<b>il</b> det · <b>me semble</b> förefaller mig · <b>que</b> att
+je suis d'accord avec|jag håller med||[Je suis d'accord avec] toi sur ce point.|Jag håller med dig på den punkten.|
+je ne suis pas du tout d'accord|jag håller inte alls med||[Je ne suis pas du tout d'accord] avec cette idée.|Jag håller inte alls med om den idén.|
+d'un côté … de l'autre|å ena sidan … å andra sidan||[D'un côté], c'est cher ; de l'autre, c'est de bonne qualité.|Å ena sidan är det dyrt, å andra sidan är det bra kvalitet.||<b>d'un côté</b> från en sida
+en revanche|däremot||Le livre est génial ; [en revanche], le film est décevant.|Boken är lysande; filmen är däremot en besvikelse.|
+pourtant|ändå||Il a beaucoup travaillé ; [pourtant], il a échoué.|Han jobbade mycket; ändå misslyckades han.|
+cependant|emellertid, dock||Le projet est intéressant. [Cependant], il coûte trop cher.|Projektet är intressant. Det är dock för dyrt.|
+néanmoins|likväl, ändå||C'est difficile ; [néanmoins], c'est possible.|Det är svårt; ändå är det möjligt.|
+même si|även om||[Même si] j'ai le trac, j'adore jouer en public.|Även om jag har scenskräck älskar jag att spela inför publik.|
+bien que|fast, trots att||[Bien qu']il soit fatigué, il continue à répéter.|Fast han är trött fortsätter han att öva.|
+malgré|trots||[Malgré] la pluie, le concert a eu lieu.|Trots regnet blev konserten av.|
+alors que|medan, fast||Il joue dehors [alors qu']il fait très froid.|Han spelar utomhus fast det är väldigt kallt.|
+au lieu de|i stället för||[Au lieu de] prendre l'avion, prends le train.|I stället för att flyga, ta tåget.|
+afin de|för att||Elle économise [afin de] partir étudier à Paris.|Hon sparar för att kunna åka och studera i Paris.|
+pour que|för att, så att||Je parle lentement [pour que] tu comprennes.|Jag talar långsamt så att du förstår.|
+de sorte que|så att||Il a tout expliqué [de sorte que] tout le monde a compris.|Han förklarade allt så att alla förstod.|
+en résumé|sammanfattningsvis||[En résumé], le texte présente trois solutions.|Sammanfattningsvis presenterar texten tre lösningar.|
+en bref|kort sagt||[En bref], c'était une année formidable.|Kort sagt var det ett fantastiskt år.|
+le texte traite de|texten handlar om||[Le texte traite de] la place du français en Afrique.|Texten handlar om franskans ställning i Afrika.|
+il s'agit de|det handlar om||Dans ce roman, [il s'agit d']une jeune musicienne.|Den här romanen handlar om en ung musiker.|
+selon l'auteur|enligt författaren||[Selon l'auteur], la lecture rend plus empathique.|Enligt författaren gör läsning en mer empatisk.|
+l'article montre que|artikeln visar att||[L'article montre que] les jeunes lisent moins.|Artikeln visar att unga läser mindre.|
+il est vrai que|visserligen||[Il est vrai que] c'est cher, mais ça dure longtemps.|Visserligen är det dyrt, men det håller länge.|
+certes|visserligen||[Certes], le train est lent, mais il pollue moins.|Visserligen är tåget långsamt, men det förorenar mindre.|
+il faut reconnaître que|man måste medge att||[Il faut reconnaître que] l'application est pratique.|Man måste medge att appen är praktisk.|
+ça dépend|det beror på||Tu préfères lire ou regarder des séries ? – [Ça dépend].|Föredrar du att läsa eller titta på serier? – Det beror på.|
+quel dommage|vad synd||Tu ne peux pas venir ? [Quel dommage] !|Kan du inte komma? Vad synd!|
+ça ne vaut pas le coup|det är inte värt det||Ce film [ne vaut pas le coup].|Den här filmen är inte värd att se.|
+avoir hâte de|längta efter att||J'[ai hâte de] commencer mes études à Lyon.|Jag längtar efter att börja studera i Lyon.|
+avoir du mal à|ha svårt att||J'[ai du mal à] comprendre l'accent québécois.|Jag har svårt att förstå québecfranskan.|
+avoir l'intention de|ha för avsikt att||J'[ai l'intention de] passer le DELF B1 en juin.|Jag har för avsikt att ta DELF B1 i juni.|
+il est indispensable que|det är nödvändigt att||[Il est indispensable que] vous envoyiez le dossier avant vendredi.|Det är nödvändigt att ni skickar in ansökan före fredag.|
+je regrette que|jag beklagar att||[Je regrette que] tu ne sois pas venu.|Jag beklagar att du inte kom.|
+j'aurais dû|jag borde ha||[J'aurais dû] réviser plus tôt.|Jag borde ha pluggat tidigare.|
+si j'avais su|om jag hade vetat||[Si j'avais su], je serais venu plus tôt.|Om jag hade vetat skulle jag ha kommit tidigare.|
+je vous remercie de|jag tackar er för||[Je vous remercie de] votre réponse rapide.|Jag tackar er för ert snabba svar.|
+je vous prie de|jag ber er att||[Je vous prie de] m'envoyer les informations.|Jag ber er att skicka informationen till mig.|
+dans l'attente de votre réponse|i väntan på ert svar||[Dans l'attente de votre réponse], je vous adresse mes salutations.|I väntan på ert svar sänder jag mina hälsningar.|
+veuillez agréer|var vänlig motta (i brevavslutning)||[Veuillez agréer], Madame, mes salutations distinguées.|Med vänliga hälsningar (ordagrant: Var vänlig motta, fru, mina utmärkta hälsningar).|
+je me permets de|jag tillåter mig att||[Je me permets de] vous écrire au sujet de votre annonce.|Jag tillåter mig att skriva till er angående er annons.|
+suite à|med anledning av||[Suite à] notre conversation, je vous envoie mon CV.|Med anledning av vårt samtal skickar jag mitt cv.|
+au sujet de|angående||Je vous écris [au sujet de] la bourse d'études.|Jag skriver till er angående studiestipendiet.|
+pour conclure|för att avsluta||[Pour conclure], je dirais que les avantages l'emportent.|Avslutningsvis skulle jag säga att fördelarna överväger.|
+tout d'abord|först och främst||[Tout d'abord], je voudrais vous remercier.|Först och främst vill jag tacka er.|
+ensuite|sedan, därefter||[Ensuite], nous parlerons du budget.|Därefter ska vi tala om budgeten.|
+à vrai dire|ärligt talat||[À vrai dire], je n'ai pas aimé ce film.|Ärligt talat gillade jag inte den här filmen.|
+quant à moi|vad mig beträffar||[Quant à moi], je préfère le train.|Vad mig beträffar föredrar jag tåget.|
+d'une part … d'autre part|dels … dels||[D'une part], c'est cher ; d'autre part, c'est polluant.|Dels är det dyrt, dels är det förorenande.|
+non seulement … mais aussi|inte bara … utan också||C'est [non seulement] utile, mais aussi amusant.|Det är inte bara nyttigt utan också roligt.|
+contrairement à|till skillnad från||[Contrairement à] mon frère, j'adore lire.|Till skillnad från min bror älskar jag att läsa.|
+à condition que|på villkor att||Je viens [à condition que] tu m'attendes.|Jag kommer på villkor att du väntar på mig.|
+avant que|innan||Rentre [avant qu']il fasse nuit.|Kom hem innan det blir mörkt.|
+je suis ravi que|jag är glad att||[Je suis ravi que] tu sois venu.|Jag är så glad att du kom.|
+ça m'étonnerait|det skulle förvåna mig||Qu'il arrive à l'heure ? [Ça m'étonnerait] !|Att han kommer i tid? Det skulle förvåna mig!|
+tu aurais pu|du kunde ha||[Tu aurais pu] me le dire !|Du kunde ha sagt det till mig!|
+il aurait mieux valu|det hade varit bättre||[Il aurait mieux valu] partir plus tôt.|Det hade varit bättre att åka tidigare.|
+il me paraît essentiel que|det förefaller mig viktigt att||[Il me paraît essentiel que] chacun fasse un effort.|Det förefaller mig viktigt att alla anstränger sig.|
+force est de constater que|man måste konstatera att||[Force est de constater que] la situation ne s'améliore pas.|Man måste konstatera att situationen inte blir bättre.|
+en définitive|när allt kommer omkring||[En définitive], c'est une bonne décision.|När allt kommer omkring är det ett bra beslut.|
+sans aucun doute|utan tvekan||C'est [sans aucun doute] le meilleur concert de l'année.|Det är utan tvekan årets bästa konsert.|
+qu'en pensez-vous ?|vad tycker ni?||J'ai présenté mon point de vue. [Qu'en pensez-vous] ?|Jag har presenterat min synpunkt. Vad tycker ni?|

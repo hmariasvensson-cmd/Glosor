@@ -31,16 +31,32 @@ const onlyCourse=()=>{try{return localStorage.getItem(ONLY_KEY)||""}catch(e){ret
 // "Bara tyska" visar bara kurserna i samma språk som den sparade kursen (Tyska 4 och Tyska 5), och döljer väljaren om bara en är kvar
 const sameLang=(a,b)=>!!LANGUAGES[a]&&!!LANGUAGES[b]&&LANGUAGES[a].name===LANGUAGES[b].name;
 function setOnly(code){ try{ if(code) localStorage.setItem(ONLY_KEY,code); else localStorage.removeItem(ONLY_KEY); }catch(e){} fillCourses(); }
-// Kursväljaren: byggda kurser går att välja, kommande kurser visas men går inte att välja än
+// Steg: 1–7 (Moderna språk 1–7) eller "U" (universitet), fältet step i lang.js och upcoming.json.
+// En universitetskurs kan ange stepAs (t.ex. 7 för Franska I): då står "motsvarar steg 7" i stället för "universitet"
+const stepNum=s=>s==="U"?8:(+s||9);
+const stepLabel=(s,as)=>s==="U"?(as?"motsvarar steg "+as:"universitet"):s?"steg "+s:"";
+const examShort=e=>e&&e.name?e.name.replace(/\s*\(.*\)\s*$/,"").replace("-Zertifikat",""):"";
+// "Franska 3 · steg 3 · A2 · mål DELF B1" (kursväljaren)
+const courseLine=x=>[x.course||x.label||x.name,stepLabel(x.step,x.stepAs),x.level,x.exam?"mål "+examShort(x.exam):""].filter(Boolean).join(" · ");
+// nextCourse kan vara en kod eller en lista med koder (två vägar, t.ex. Franska 5 eller Franska I); bara kurser som finns
+const nextCourses=(x=L)=>[].concat((x&&x.nextCourse)||[]).filter(c=>LANGUAGES[c]);
+// Kursväljaren: en grupp per språk, sorterad efter steg. Byggda kurser går att välja, kommande kurser
+// (languages/upcoming.json) står på sin plats i stegordningen men går inte att välja än.
 function fillCourses(){
   const only=onlyCourse(), sel=document.querySelector("#course"); if(!sel) return;
-  const codes=Object.keys(LANGUAGES).filter(c=>!LANGUAGES[only]||sameLang(c,only))
-    .sort((a,b)=>(LANGUAGES[a].course||a).localeCompare(LANGUAGES[b].course||b,"sv"));
-  sel.innerHTML=codes.map(c=>`<option value="${c}">${esc(LANGUAGES[c].course||LANGUAGES[c].name)} · ${esc(LANGUAGES[c].level||"")}</option>`).join("")
-    +(LANGUAGES[only]?[]:UPCOMING).map(u=>`<option disabled>${esc(u.label)} · ${esc(u.level||"")} (kommer ${esc(u.note||"senare")})</option>`).join("");
+  const codes=Object.keys(LANGUAGES).filter(c=>!LANGUAGES[only]||sameLang(c,only));
+  const items=codes.map(c=>({code:c,x:LANGUAGES[c]})).concat(LANGUAGES[only]?[]:(Array.isArray(UPCOMING)?UPCOMING:[])
+    .filter(u=>u&&!LANGUAGES[u.code]).map(u=>({x:u,soon:true})));
+  const langs=[]; items.forEach(i=>{ const n=i.x.name||""; if(!langs.includes(n)) langs.push(n); });
+  const byStep=(a,b)=>stepNum(a.x.step)-stepNum(b.x.step)||(a.soon?1:0)-(b.soon?1:0)||String(a.x.course||a.x.label||"").localeCompare(String(b.x.course||b.x.label||""),"sv");
+  const opt=i=>i.soon?`<option disabled class="soon">${esc(courseLine(i.x))} – kommer</option>`:`<option value="${esc(i.code)}">${esc(courseLine(i.x))}</option>`;
+  sel.innerHTML=langs.map(n=>{ const g=items.filter(i=>(i.x.name||"")===n).sort(byStep).map(opt).join("");
+    return n&&langs.length>1?`<optgroup label="${esc(n)}">${g}</optgroup>`:g; }).join("");
   if(L) sel.value=L.code;
   const p=document.querySelector(".coursepick"); if(p) p.hidden=!!LANGUAGES[only]&&codes.length<2;
 }
+// Texten under rubriken: "Franska 3 · steg 3 · nivå A2"
+const courseChip=()=>[courseName(),stepLabel(L.step,L.stepAs),L.level?"nivå "+L.level:""].filter(Boolean).join(" · ");
 
 // Luckan i exempelmeningen: [hakparentes] i words.txt, annars ordet självt om det står i meningen
 function findGap(word, ex){
@@ -525,8 +541,11 @@ const SPK='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 5 6 9H3v6h3l
 const PLAY='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>';
 function shuffle(a){a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
 const secName=id=>(SECTIONS.find(s=>s.id===id)||{}).name||"";
-const gtag=g=>g?`<span class="tag ${g[0]}">${L.genders[g]||g}</span>`:"";
-const accentKeys=list=>`<div class="accents">${list.split(" ").map(c=>`<button type="button" data-c="${c}">${c}</button>`).join("")}</div>`;
+// Genusnamn om kursen inte har egna (genders i lang.js), så att en ny kurs fungerar med bara de fält den måste ha
+const GENDER_NAMES={m:"maskulinum",f:"femininum",n:"neutrum",pl:"plural",mpl:"mask. plural",fpl:"fem. plural",npl:"neutr. plural"};
+const genderName=g=>(L.genders||GENDER_NAMES)[g]||g;
+const gtag=g=>g?`<span class="tag ${g[0]}">${genderName(g)}</span>`:"";
+const accentKeys=list=>list?`<div class="accents">${String(list).split(" ").filter(Boolean).map(c=>`<button type="button" data-c="${c}">${c}</button>`).join("")}</div>`:"";
 const lang=()=>`lang="${L.htmlLang||L.code}"`;
 
 // Valfria avsnitt (L.elective, t.ex. musikteorin) tas bara med när eleven väljer dem själv
@@ -541,13 +560,16 @@ function pickNew(){
 }
 
 /* ---------- Startsida ---------- */
-// Förslag att gå vidare till nästa kurs (Tyska 4 → Tyska 5) när nästan alla ord är påbörjade och hälften sitter
+// Förslag att gå vidare till nästa kurs (Tyska 4 → Tyska 5) när nästan alla ord är påbörjade och hälften sitter.
+// Med en lista i nextCourse (t.ex. ["fr5","fru"]) erbjuds båda vägarna.
 function nextPanel(){
-  const nx=LANGUAGES[L.nextCourse], core=coreWords(), learned=core.filter(isLearned).length, mastered=core.filter(isMastered).length;
-  if(!nx||!core.length||learned<core.length*0.9||mastered<core.length*0.5) return "";
-  return `<section class="panel"><h2>Redo för ${esc(nx.course)}?</h2>
-    <p class="plan">Du har övat på ${learned} av ${core.length} ord i ${esc(L.course)}, och ${mastered} kan du redan. Du kan fortsätta repetera här och samtidigt börja på ${esc(nx.course)}. Framstegen sparas separat i varje kurs.</p>
-    <button class="btn" id="nextc">Gå till ${esc(nx.course)}</button></section>`;
+  const nx=nextCourses().map(c=>LANGUAGES[c]), core=coreWords(), learned=core.filter(isLearned).length, mastered=core.filter(isMastered).length;
+  if(!nx.length||!core.length||learned<core.length*0.9||mastered<core.length*0.5) return "";
+  const names=nx.map(x=>x.course||x.name), which=names.length>1?names.slice(0,-1).join(", ")+" eller "+names[names.length-1]:names[0];
+  return `<section class="panel"><h2>Redo för ${esc(which)}?</h2>
+    <p class="plan">Du har övat på ${learned} av ${core.length} ord i ${esc(L.course)}, och ${mastered} kan du redan. Du kan fortsätta repetera här och samtidigt börja på ${esc(names.length>1?"nästa kurs":names[0])}. Framstegen sparas separat i varje kurs.</p>
+    ${nx.length>1?`<div class="nextc">${nextCourses().map(c=>`<button class="btn" data-nextc="${esc(c)}">${esc(LANGUAGES[c].course||LANGUAGES[c].name)}<span class="sub">${esc([stepLabel(LANGUAGES[c].step,LANGUAGES[c].stepAs),LANGUAGES[c].level].filter(Boolean).join(" · "))}</span></button>`).join("")}</div>`
+      :`<button class="btn" id="nextc" data-nextc="${esc(nextCourses()[0])}">Gå till ${esc(names[0])}</button>`}</section>`;
 }
 function renderStart(){
   document.body.classList.remove("has-tray");
@@ -614,7 +636,7 @@ function renderStart(){
   $("#src").value=S.src; if(!$("#src").selectedOptions[0]||$("#src").selectedOptions[0].disabled){S.src="auto";$("#src").value="auto"}
   $("#src").onchange=e=>{S.src=e.target.value;save();renderStart()};
   wireBookPanel(); wireChapterMap();
-  if($("#nextc")) $("#nextc").onclick=()=>useLang(L.nextCourse);
+  app.querySelectorAll("[data-nextc]").forEach(b=>b.onclick=()=>useLang(b.dataset.nextc));
   app.querySelectorAll("[data-n]").forEach(b=>b.onclick=()=>{S.newCount=+b.dataset.n;save();renderStart()});
   app.querySelectorAll("[data-m]").forEach(b=>b.onclick=()=>{S.mode=b.dataset.m;save();renderStart()});
   app.querySelectorAll("[data-slow]").forEach(b=>b.onclick=()=>{S.slow=b.dataset.slow==="1";save();renderStart()});
@@ -622,7 +644,7 @@ function renderStart(){
   $("#setd").ontoggle=()=>{SET_OPEN=$("#setd").open};
   app.querySelectorAll("[data-only]").forEach(b=>b.onclick=()=>{setOnly(b.dataset.only==="1"?L.code:"");renderStart()});
   app.querySelectorAll("[data-goal]").forEach(b=>b.onclick=()=>{S.goal=+b.dataset.goal;save();boardPush();renderStart()});
-  app.querySelectorAll("[data-gy]").forEach(b=>b.onclick=()=>{S.gy25=b.dataset.gy==="1";save();$("#coursechip").textContent=`${courseName()} · nivå ${L.level||""}`;renderStart()});
+  app.querySelectorAll("[data-gy]").forEach(b=>b.onclick=()=>{S.gy25=b.dataset.gy==="1";save();$("#coursechip").textContent=courseChip();renderStart()});
   if($("#daily")) $("#daily").onclick=()=>startDaily(newW,due);
   $("#go").onclick=()=>startSession(newW,due);
   if(S.run){ $("#run-go").onclick=resumeRun; $("#run-drop").onclick=quitSession; }
@@ -1206,7 +1228,7 @@ defineKind("words",{name:"Glosor",
     explain:explain(w), say:w.t, sayOnShow:true}},
   type:c=>{const w=c.w;return{
     head:`<p class="q-prompt">${esc(w.sv)}</p>`,
-    ask:`Skriv ${L.inLang} ${w.g?`(${L.genders[w.g]||w.g})`:""}`, placeholder:"Skriv här", accents:L.accents,
+    ask:`Skriv ${L.inLang} ${w.g?`(${genderName(w.g)})`:""}`, placeholder:"Skriv här", accents:L.accents,
     accepted:variants(w.t), answer:esc(w.t), explain:explain(w), wrongCard:studyCard(w), say:w.t, override:true}}});
 
 /* ---------- Pass klart: schemaläggning ---------- */
@@ -1546,7 +1568,7 @@ function useLang(code){
   $("#search").value="";
   $("#search").placeholder=`Sök ${L.inLang} eller svenska`;
   $("#course").value=code;
-  $("#coursechip").textContent=`${courseName()} · nivå ${L.level||""}`;
+  $("#coursechip").textContent=courseChip();
   setView("ova");
   setSaveNote();
   cloudAttach();

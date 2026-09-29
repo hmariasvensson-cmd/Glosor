@@ -1,0 +1,137 @@
+{
+ "topics": [
+  {
+   "id": "congimp",
+   "name": "Congiuntivo imperfetto",
+   "sub": "se avessi, volevo che tu venissi, come se fosse",
+   "secs": [
+    "h1",
+    "h2"
+   ]
+  },
+  {
+   "id": "congtrap",
+   "name": "Congiuntivo trapassato",
+   "sub": "pensavo che fosse partito, se avessi saputo",
+   "secs": [
+    "h2",
+    "h3"
+   ]
+  },
+  {
+   "id": "consec",
+   "name": "Tempusföljd",
+   "sub": "penso che sia / pensavo che fosse / disse che sarebbe venuto",
+   "secs": [
+    "h3",
+    "h4"
+   ]
+  },
+  {
+   "id": "ipot",
+   "name": "Overkliga om-satser",
+   "sub": "Se fossi ricco, viaggerei. Se l'avessi saputo, sarei venuto.",
+   "secs": [
+    "h3",
+    "h7"
+   ]
+  },
+  {
+   "id": "ipotmix",
+   "name": "Blandade om-satser",
+   "sub": "Se avessi studiato, ora saprei.",
+   "secs": [
+    "h7",
+    "h8"
+   ]
+  },
+  {
+   "id": "indir",
+   "name": "Indirekt tal",
+   "sub": "Disse che era stanco e che sarebbe partito il giorno dopo.",
+   "secs": [
+    "h2",
+    "h5"
+   ]
+  },
+  {
+   "id": "remoto",
+   "name": "Passato remoto",
+   "sub": "fu, ebbe, fece, nacque, scrisse, partì",
+   "secs": [
+    "h3",
+    "h4",
+    "h5"
+   ]
+  },
+  {
+   "id": "gerund",
+   "name": "Gerundium som bisats",
+   "sub": "Studiando, imparerai. Avendo perso il treno, …",
+   "secs": [
+    "h5",
+    "h6"
+   ]
+  },
+  {
+   "id": "partic",
+   "name": "Particip som bisats",
+   "sub": "Finito il lavoro, … Arrivati a Roma, …",
+   "secs": [
+    "h4",
+    "h6"
+   ]
+  },
+  {
+   "id": "farelas",
+   "name": "Fare och lasciare + infinitiv",
+   "sub": "Ho fatto riparare la bici. Lasciami parlare.",
+   "secs": [
+    "h6",
+    "hr"
+   ]
+  },
+  {
+   "id": "formale",
+   "name": "Formellt register",
+   "sub": "Gentile dottoressa, Le scrivo … Sarei grato se …",
+   "secs": [
+    "h1"
+   ]
+  },
+  {
+   "id": "connett",
+   "name": "Argumenterande sambandsord",
+   "sub": "tuttavia, pertanto, nonostante, purché, dal momento che",
+   "secs": [
+    "h2",
+    "h7",
+    "hr"
+   ]
+  },
+  {
+   "id": "err",
+   "name": "Hitta felet",
+   "sub": "En mening har ett fel. Vilket ord?"
+  }
+ ],
+ "rules": {
+  "ci-forme": "Congiuntivo imperfetto: former",
+  "ci-uso": "Congiuntivo imperfetto: användning",
+  "ct": "Congiuntivo trapassato",
+  "cons-pres": "Tempusföljd efter presens",
+  "cons-pass": "Tempusföljd efter dåtid",
+  "ip-irr": "Overklig om-sats",
+  "ip-mix": "Blandad och verklig om-sats",
+  "ind-tempo": "Indirekt tal: tempus",
+  "ind-pron": "Indirekt tal: pronomen, tid och plats",
+  "rem-reg": "Passato remoto: regelbundna verb",
+  "rem-irr": "Passato remoto: oregelbundna verb",
+  "ger": "Gerundium som bisats",
+  "part": "Particip som bisats",
+  "fare-inf": "Fare + infinitiv",
+  "lasciare-inf": "Lasciare + infinitiv",
+  "form": "Formellt register",
+  "conn": "Argumenterande sambandsord"
+ }
+}

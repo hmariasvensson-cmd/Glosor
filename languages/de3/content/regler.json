@@ -1,0 +1,623 @@
+{
+ "praep": {
+  "title": "Prepositioner och kasus",
+  "intro": "Varje preposition styr ett kasus. Vissa tar alltid dativ, vissa alltid ackusativ, och några tar dativ eller ackusativ beroende på om det handlar om plats eller riktning.",
+  "parts": [
+   {
+    "h": "Artiklarna",
+    "table": {
+     "head": [
+      "",
+      "maskulinum",
+      "femininum",
+      "neutrum",
+      "plural"
+     ],
+     "rows": [
+      [
+       "ackusativ",
+       "**den / einen**",
+       "die / eine",
+       "das / ein",
+       "die"
+      ],
+      [
+       "dativ",
+       "**dem / einem**",
+       "**der / einer**",
+       "**dem / einem**",
+       "**den**"
+      ]
+     ]
+    },
+    "t": "Kortformer: zu dem → **zum**, zu der → **zur**, in dem → **im**, an dem → **am**, bei dem → **beim**, in das → **ins**."
+   },
+   {
+    "h": "Var eller vart?",
+    "t": "**in, an, auf, über, unter, vor, hinter, neben, zwischen** tar:\n**dativ** när något är på en plats (**Wo?**)\n**ackusativ** när något rör sig dit (**Wohin?**)",
+    "ex": [
+     {
+      "fr": "Der Käse liegt **im** Kühlschrank.",
+      "sv": "Osten ligger i kylskåpet. (Wo?)"
+     },
+     {
+      "fr": "Stell die Butter bitte in **den** Kühlschrank.",
+      "sv": "Ställ in smöret i kylskåpet. (Wohin?)"
+     },
+     {
+      "fr": "Wir treffen uns um acht **am** Bahnhof.",
+      "sv": "Vi ses klockan åtta vid stationen."
+     },
+     {
+      "fr": "Am Samstag gehen wir **ins** Kino.",
+      "sv": "På lördag går vi på bio."
+     }
+    ],
+    "tip": "liegen, stehen, hängen, sitzen (är där) → dativ. legen, stellen, hängen, setzen (sätter dit) → ackusativ."
+   },
+   {
+    "h": "Alltid dativ",
+    "t": "**aus, bei, mit, nach, seit, von, zu** tar alltid dativ.",
+    "ex": [
+     {
+      "fr": "Ich fahre jeden Tag mit **dem** Bus zur Schule.",
+      "sv": "Jag åker buss till skolan varje dag."
+     },
+     {
+      "fr": "Heute Abend essen wir bei **meiner** Oma.",
+      "sv": "I kväll äter vi hos min mormor."
+     },
+     {
+      "fr": "Seit **einem** Jahr spiele ich Gitarre.",
+      "sv": "Jag har spelat gitarr i ett år."
+     }
+    ]
+   },
+   {
+    "h": "Alltid ackusativ",
+    "t": "**durch, für, gegen, ohne, um** tar alltid ackusativ.",
+    "ex": [
+     {
+      "fr": "Ich suche ein Geschenk für **meinen** Opa.",
+      "sv": "Jag letar efter en present till min morfar."
+     },
+     {
+      "fr": "Wir machen einen Spaziergang durch **den** Wald.",
+      "sv": "Vi tar en promenad genom skogen."
+     },
+     {
+      "fr": "Wir gehen nie ohne **einen** Regenschirm aus dem Haus.",
+      "sv": "Vi går aldrig ut utan paraply."
+     }
+    ]
+   }
+  ]
+ },
+ "reflexiv": {
+  "title": "Reflexiva verb",
+  "intro": "Reflexiva verb har ett pronomen som syftar tillbaka på subjektet, som svenskans \"jag tvättar mig\". Många tyska verb är reflexiva fast de inte är det på svenska, till exempel sich freuen (glädjas) och sich beeilen (skynda sig).",
+  "parts": [
+   {
+    "h": "Ackusativ: mich, dich, sich",
+    "t": "Oftast står reflexivpronomenet i **ackusativ**. Det liknar svenskan: mig, dig, sig, oss, er, sig.",
+    "table": {
+     "head": [
+      "",
+      "ackusativ",
+      "dativ"
+     ],
+     "rows": [
+      [
+       "ich",
+       "mich",
+       "**mir**"
+      ],
+      [
+       "du",
+       "dich",
+       "**dir**"
+      ],
+      [
+       "er/sie/es",
+       "sich",
+       "sich"
+      ],
+      [
+       "wir",
+       "uns",
+       "uns"
+      ],
+      [
+       "ihr",
+       "euch",
+       "euch"
+      ],
+      [
+       "sie/Sie",
+       "sich",
+       "sich"
+      ]
+     ]
+    },
+    "ex": [
+     {
+      "fr": "Ich freue **mich** sehr auf die Sommerferien.",
+      "sv": "Jag ser verkligen fram emot sommarlovet."
+     },
+     {
+      "fr": "Beeil **dich**, der Bus kommt gleich!",
+      "sv": "Skynda dig, bussen kommer snart!"
+     },
+     {
+      "fr": "Wir treffen **uns** um sieben vor dem Kino.",
+      "sv": "Vi ses klockan sju utanför bion."
+     }
+    ]
+   },
+   {
+    "h": "Dativ: mir, dir",
+    "t": "Finns det **ett annat objekt** i meningen (die Hände, die Zähne, ein Fahrrad), står reflexivpronomenet i **dativ**. Bara ich och du ändras: **mir, dir**. Resten är samma som i ackusativ.",
+    "ex": [
+     {
+      "fr": "Ich wasche **mir** die Hände.",
+      "sv": "Jag tvättar händerna."
+     },
+     {
+      "fr": "Putz **dir** bitte die Zähne!",
+      "sv": "Borsta tänderna!"
+     },
+     {
+      "fr": "Zum Geburtstag wünsche ich **mir** ein Fahrrad.",
+      "sv": "Jag önskar mig en cykel i födelsedagspresent."
+     }
+    ],
+    "tip": "Jämför: Ich wasche **mich** (hela mig) – Ich wasche **mir** die Hände (händerna är objektet)."
+   }
+  ]
+ },
+ "komp": {
+  "title": "Jämförelser",
+  "intro": "Som på svenska jämför man med komparativ (större) och superlativ (störst). Ändelserna är -er och -(e)st.",
+  "parts": [
+   {
+    "h": "Komparativ: -er",
+    "t": "Lägg till **-er**. Många korta adjektiv får omljud: alt → **älter**, groß → **größer**, lang → **länger**, warm → **wärmer**. Några är oregelbundna: gut → **besser**, gern → **lieber**, viel → **mehr**, hoch → **höher**.",
+    "table": {
+     "head": [
+      "grundform",
+      "komparativ",
+      "superlativ"
+     ],
+     "rows": [
+      [
+       "schnell",
+       "schneller",
+       "am schnellsten"
+      ],
+      [
+       "alt",
+       "älter",
+       "am ältesten"
+      ],
+      [
+       "groß",
+       "größer",
+       "am größten"
+      ],
+      [
+       "warm",
+       "wärmer",
+       "am wärmsten"
+      ],
+      [
+       "gut",
+       "**besser**",
+       "**am besten**"
+      ],
+      [
+       "gern",
+       "**lieber**",
+       "**am liebsten**"
+      ],
+      [
+       "viel",
+       "**mehr**",
+       "**am meisten**"
+      ],
+      [
+       "hoch",
+       "**höher**",
+       "**am höchsten**"
+      ]
+     ]
+    },
+    "ex": [
+     {
+      "fr": "Mein Bruder ist zwei Jahre **älter** als ich.",
+      "sv": "Min bror är två år äldre än jag."
+     },
+     {
+      "fr": "Heute ist das Wetter viel **besser** als gestern.",
+      "sv": "I dag är vädret mycket bättre än i går."
+     },
+     {
+      "fr": "Ich trinke **lieber** Tee als Kaffee.",
+      "sv": "Jag dricker hellre te än kaffe."
+     }
+    ]
+   },
+   {
+    "h": "Superlativ: am …sten eller der …ste",
+    "t": "Efter verbet används **am + -sten**: Lena läuft am schnellsten. Framför ett substantiv används artikel + **-ste** med vanlig adjektivändelse: der höchste Berg, das beste Eis.",
+    "ex": [
+     {
+      "fr": "Im Juli ist es bei uns **am wärmsten**.",
+      "sv": "I juli är det varmast hos oss."
+     },
+     {
+      "fr": "Von allen Fächern mag ich Musik **am liebsten**.",
+      "sv": "Av alla ämnen gillar jag musik bäst."
+     },
+     {
+      "fr": "Die Zugspitze ist der **höchste** Berg Deutschlands.",
+      "sv": "Zugspitze är Tysklands högsta berg."
+     }
+    ]
+   },
+   {
+    "h": "als eller wie?",
+    "t": "Olika: komparativ + **als** (större än). Lika: **so / genauso … wie** (lika stor som). Även efter nicht so … wie används wie.",
+    "ex": [
+     {
+      "fr": "Anna ist ein Jahr älter **als** ihre Schwester.",
+      "sv": "Anna är ett år äldre än sin syster."
+     },
+     {
+      "fr": "Mein Zimmer ist genauso groß **wie** deins.",
+      "sv": "Mitt rum är lika stort som ditt."
+     },
+     {
+      "fr": "Der Test war nicht so schwer, **wie** ich gedacht hatte.",
+      "sv": "Provet var inte så svårt som jag hade trott."
+     }
+    ],
+    "tip": "Svenska \"än\" = als. Svenska \"som\" (lika … som) = wie."
+   }
+  ]
+ },
+ "adj": {
+  "title": "Adjektivändelser",
+  "intro": "Ett adjektiv framför ett substantiv får en ändelse. Den beror på artikeln före, på kasus och på genus.",
+  "parts": [
+   {
+    "h": "Efter der/die/das",
+    "t": "Efter der, die, das (och dieser, jeder) får adjektivet bara **-e** eller **-en**.\n**-e** i nominativ och i ackusativ femininum och neutrum. **-en** i alla andra fall: ackusativ maskulinum, hela dativ och plural.",
+    "table": {
+     "head": [
+      "",
+      "maskulinum",
+      "femininum",
+      "neutrum"
+     ],
+     "rows": [
+      [
+       "nom",
+       "der neu**e** Rucksack",
+       "die neu**e** Jacke",
+       "das neu**e** Fahrrad"
+      ],
+      [
+       "akk",
+       "den neu**en** Rucksack",
+       "die neu**e** Jacke",
+       "das neu**e** Fahrrad"
+      ],
+      [
+       "dat",
+       "dem neu**en** Rucksack",
+       "der neu**en** Jacke",
+       "dem neu**en** Fahrrad"
+      ]
+     ]
+    },
+    "ex": [
+     {
+      "fr": "Der **alte** Rucksack ist hier.",
+      "sv": "Den gamla ryggsäcken är här."
+     },
+     {
+      "fr": "Ich suche den **kleinen** Schlüssel.",
+      "sv": "Jag letar efter den lilla nyckeln."
+     },
+     {
+      "fr": "Ich komme mit dem **neuen** Fahrrad.",
+      "sv": "Jag kommer med den nya cykeln."
+     }
+    ]
+   },
+   {
+    "h": "Efter ein/kein",
+    "t": "Efter ein, kein och mein, dein … syns genus inte alltid på artikeln. När ein saknar ändelse måste adjektivet visa genus: **-er** för maskulinum (ein neu**er** Rucksack) och **-es** för neutrum (ein neu**es** Fahrrad). I dativ blir det alltid **-en**.",
+    "table": {
+     "head": [
+      "",
+      "maskulinum",
+      "femininum",
+      "neutrum"
+     ],
+     "rows": [
+      [
+       "nom",
+       "ein neu**er** Rucksack",
+       "eine neu**e** Jacke",
+       "ein neu**es** Fahrrad"
+      ],
+      [
+       "akk",
+       "einen neu**en** Rucksack",
+       "eine neu**e** Jacke",
+       "ein neu**es** Fahrrad"
+      ],
+      [
+       "dat",
+       "einem neu**en** Rucksack",
+       "einer neu**en** Jacke",
+       "einem neu**en** Fahrrad"
+      ]
+     ]
+    },
+    "ex": [
+     {
+      "fr": "Das ist ein **schönes** Haus.",
+      "sv": "Det är ett fint hus."
+     },
+     {
+      "fr": "Wir brauchen einen **großen** Tisch.",
+      "sv": "Vi behöver ett stort bord."
+     },
+     {
+      "fr": "Ich komme mit einer **guten** Freundin.",
+      "sv": "Jag kommer med en god vän."
+     }
+    ],
+    "tip": "Adjektivet lånar slutbokstaven från der/das när ein inte visar den: de**r** → neu**er**, da**s** → neu**es**."
+   }
+  ]
+ },
+ "bisatz": {
+  "title": "Ordföljd",
+  "intro": "I en huvudsats står verbet på plats två. I en bisats står det sist. Ordet som binder ihop två meningar avgör vilken ordföljd det blir.",
+  "parts": [
+   {
+    "h": "Subjunktion: verbet sist",
+    "t": "Efter **weil, dass, ob, wenn, als, obwohl** står det böjda verbet **sist**.",
+    "ex": [
+     {
+      "fr": "Ich kann nicht kommen, weil ich Fieber **habe**.",
+      "sv": "Jag kan inte komma eftersom jag har feber."
+     },
+     {
+      "fr": "Mein Vater sagt, dass das Essen gleich fertig **ist**.",
+      "sv": "Pappa säger att maten är klar snart."
+     },
+     {
+      "fr": "Ich weiß nicht, ob der Laden heute offen **hat**.",
+      "sv": "Jag vet inte om affären är öppen i dag."
+     }
+    ]
+   },
+   {
+    "h": "Adverb: verbet direkt efter",
+    "t": "Efter **deshalb, deswegen, trotzdem, dann, sonst, außerdem** kommer verbet direkt, och sedan subjektet. Precis som på svenska: \"därför **stannar vi** hemma\".",
+    "ex": [
+     {
+      "fr": "Es regnet, deshalb **bleiben wir** zu Hause.",
+      "sv": "Det regnar, därför stannar vi hemma."
+     },
+     {
+      "fr": "Ich war müde, trotzdem **bin ich** zur Party gegangen.",
+      "sv": "Jag var trött, ändå gick jag på festen."
+     },
+     {
+      "fr": "Zieh eine Jacke an, sonst **erkältest du** dich.",
+      "sv": "Ta på dig en jacka, annars blir du förkyld."
+     }
+    ]
+   },
+   {
+    "h": "Konjunktion: ingen ändring",
+    "t": "Efter **und, aber, oder, denn, sondern** kommer en vanlig huvudsats: subjekt + verb.",
+    "ex": [
+     {
+      "fr": "Ich komme nicht mit, denn **ich habe** keine Zeit.",
+      "sv": "Jag följer inte med, för jag har inte tid."
+     },
+     {
+      "fr": "Ich mag Pizza, aber **mein Bruder isst** lieber Pasta.",
+      "sv": "Jag gillar pizza, men min bror äter hellre pasta."
+     }
+    ],
+    "tip": "weil och denn betyder samma sak, men bara weil skickar verbet sist."
+   },
+   {
+    "h": "Bisatsen först",
+    "t": "Börjar meningen med bisatsen kommer huvudsatsens verb direkt efter kommat: **verb, komma, verb**.",
+    "ex": [
+     {
+      "fr": "Wenn ich Zeit **habe**, **helfe** ich dir.",
+      "sv": "Om jag har tid hjälper jag dig."
+     },
+     {
+      "fr": "Als ich nach Hause **kam**, **schliefen** meine Eltern schon.",
+      "sv": "När jag kom hem sov mina föräldrar redan."
+     }
+    ]
+   }
+  ]
+ },
+ "praet": {
+  "title": "Präteritum av sein, haben och modalverb",
+  "intro": "I tal berättar man oftast om det som hänt i **Perfekt** (ich bin gefahren). Men sein, haben och modalverben används nästan alltid i **Präteritum**, också i tal: ich war, ich hatte, ich musste.",
+  "parts": [
+   {
+    "h": "sein och haben",
+    "t": "Ich- och er/sie/es-formen är lika. Du får **-st**, wir och sie/Sie **-en**, ihr **-t**.",
+    "table": {
+     "head": [
+      "",
+      "sein",
+      "haben"
+     ],
+     "rows": [
+      [
+       "ich",
+       "war",
+       "hatte"
+      ],
+      [
+       "du",
+       "war**st**",
+       "hatte**st**"
+      ],
+      [
+       "er/sie/es",
+       "war",
+       "hatte"
+      ],
+      [
+       "wir",
+       "war**en**",
+       "hatte**n**"
+      ],
+      [
+       "ihr",
+       "war**t**",
+       "hatte**t**"
+      ],
+      [
+       "sie/Sie",
+       "war**en**",
+       "hatte**n**"
+      ]
+     ]
+    },
+    "ex": [
+     {
+      "fr": "Als Kind **war** ich oft bei meiner Oma.",
+      "sv": "Som barn var jag ofta hos mormor."
+     },
+     {
+      "fr": "Wir **hatten** leider schlechtes Wetter.",
+      "sv": "Vi hade tyvärr dåligt väder."
+     }
+    ]
+   },
+   {
+    "h": "Modalverben",
+    "t": "Stam + **-te**, och omljudet försvinner: können → **konnte**, müssen → **musste**, dürfen → **durfte**, mögen → **mochte**. Wollen och sollen: **wollte, sollte**. Obs.: könnte, müsste, dürfte (med omljud) är konjunktiv II och betyder skulle kunna osv.",
+    "table": {
+     "head": [
+      "",
+      "können",
+      "müssen",
+      "wollen"
+     ],
+     "rows": [
+      [
+       "ich",
+       "konnte",
+       "musste",
+       "wollte"
+      ],
+      [
+       "du",
+       "konntest",
+       "musstest",
+       "wolltest"
+      ],
+      [
+       "er/sie/es",
+       "konnte",
+       "musste",
+       "wollte"
+      ],
+      [
+       "wir",
+       "konnten",
+       "mussten",
+       "wollten"
+      ]
+     ]
+    },
+    "ex": [
+     {
+      "fr": "Gestern **musste** ich lange arbeiten.",
+      "sv": "I går var jag tvungen att jobba länge."
+     },
+     {
+      "fr": "Früher **durften** wir abends nicht fernsehen.",
+      "sv": "Förr fick vi inte titta på tv på kvällarna."
+     }
+    ]
+   }
+  ]
+ },
+ "nebensatz": {
+  "title": "weil, dass, wenn",
+  "intro": "Weil, dass och wenn inleder **bisatser**. I bisatsen står det böjda verbet **sist**.",
+  "parts": [
+   {
+    "h": "Vilken subjunktion?",
+    "t": "**weil** = eftersom (orsak). **dass** = att (efter t.ex. glauben, finden, wissen, hoffen, es ist wichtig). **wenn** = när (varje gång, i nutid och framtid) eller om (villkor).",
+    "ex": [
+     {
+      "fr": "Ich bleibe zu Hause, **weil** ich krank **bin**.",
+      "sv": "Jag stannar hemma eftersom jag är sjuk."
+     },
+     {
+      "fr": "Ich glaube, **dass** das Video falsch **ist**.",
+      "sv": "Jag tror att videon är falsk."
+     },
+     {
+      "fr": "**Wenn** es regnet, **nehmen** wir den Bus.",
+      "sv": "Om det regnar tar vi bussen."
+     }
+    ]
+   },
+   {
+    "h": "denn eller weil?",
+    "t": "**denn** betyder också eftersom, men ger **rak ordföljd**: Ich bleibe zu Hause, denn ich **bin** krank."
+   }
+  ]
+ },
+ "indirekt": {
+  "title": "Indirekta frågor",
+  "intro": "En indirekt fråga är en fråga inuti en annan mening: Weißt du, …? Kannst du mir sagen, …? Ich frage mich, … Det är en bisats, så verbet står **sist**.",
+  "parts": [
+   {
+    "h": "Ja/nej-frågor: ob",
+    "t": "En fråga utan frågeord (Kommt der Zug?) blir en bisats med **ob** (= om): Weißt du, **ob** der Zug **kommt**? Använd inte wenn här.",
+    "ex": [
+     {
+      "fr": "Weißt du, **ob** es hier WLAN **gibt**?",
+      "sv": "Vet du om det finns wifi här?"
+     }
+    ]
+   },
+   {
+    "h": "Frågor med frågeord",
+    "t": "Frågeordet (wann, wo, wohin, woher, was, wer, wie, warum, wie viel) står kvar först, och verbet flyttas sist: Wann **fängt** der Film an? → Weißt du, wann der Film **anfängt**?",
+    "ex": [
+     {
+      "fr": "Können Sie mir sagen, **wo** der Bahnhof **ist**?",
+      "sv": "Kan ni säga mig var stationen är?"
+     },
+     {
+      "fr": "Ich weiß nicht, **was** ich nach der Schule machen **soll**.",
+      "sv": "Jag vet inte vad jag ska göra efter skolan."
+     }
+    ]
+   }
+  ]
+ }
+}

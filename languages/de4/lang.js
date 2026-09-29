@@ -5,6 +5,7 @@ LANGUAGES.de4 = {
   title: "Tyska glosor",
   course: "Tyska 4",
   courseGy25: "Moderna språk – fortsättning, nivå 2",
+  step: 4,                       // steg 1–7 (Moderna språk 1–7), "U" = universitet; sorterar kursväljaren
   level: "A2 → B1",           // steg 4 ≈ A2.2 enligt Skolverket
   inLang: "på tyska",
   tts: "de-DE",
@@ -25,6 +26,7 @@ LANGUAGES.de4 = {
   genders: {m: "maskulinum", f: "femininum", n: "neutrum", pl: "plural"},
   selfStudy: true,             // eleven pluggar på egen hand, utan lärare och lärobok
   exam: {name: "Goethe-Zertifikat B1 (delmål mot B2)", level: "B1"},   // språkprovet eleven tränar på i Tyska 4 (B2 i Tyska 5)
+  goal: "att klara språkprovet för att få studera musik utomlands (i Tyskland)",   // valfritt: elevens mål, nämns i Claudes bedömning
   nounCaps: true,
   genderGame: {m: "der", f: "die", n: "das"},
 

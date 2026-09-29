@@ -1,0 +1,1829 @@
+[
+  {
+    "id": "fr1-r-e1",
+    "sec": "e1",
+    "title": "Salut tout le monde !",
+    "lines": [
+      {
+        "fr": "Salut tout le monde !",
+        "sv": "Hej allihop!"
+      },
+      {
+        "fr": "Je m'appelle Chloé Martin et je suis nouvelle ici.",
+        "sv": "Jag heter Chloé Martin och jag är ny här."
+      },
+      {
+        "fr": "Je suis française, mais j'habite à Bruxelles, en Belgique.",
+        "sv": "Jag är fransyska, men jag bor i Bryssel, i Belgien."
+      },
+      {
+        "fr": "Je parle français, anglais et un peu néerlandais.",
+        "sv": "Jag pratar franska, engelska och lite nederländska."
+      },
+      {
+        "fr": "À l'école, j'étudie aussi l'allemand. C'est difficile !",
+        "sv": "I skolan läser jag också tyska. Det är svårt!"
+      },
+      {
+        "fr": "J'adore la musique et je chante dans un groupe.",
+        "sv": "Jag älskar musik och jag sjunger i ett band."
+      },
+      {
+        "fr": "J'aime aussi le cinéma et les chats.",
+        "sv": "Jag gillar också film och katter."
+      },
+      {
+        "fr": "Mon nombre préféré, c'est le sept.",
+        "sv": "Mitt favorittal är sju."
+      },
+      {
+        "fr": "Mon amie Sofia est italienne. Elle habite à Rome et elle parle quatre langues !",
+        "sv": "Min kompis Sofia är italienska. Hon bor i Rom och hon pratar fyra språk!"
+      },
+      {
+        "fr": "Maintenant, je cherche des amis en Suède.",
+        "sv": "Nu letar jag efter vänner i Sverige."
+      },
+      {
+        "fr": "Vous parlez français ? Vous aimez la musique ?",
+        "sv": "Pratar ni franska? Gillar ni musik?"
+      },
+      {
+        "fr": "Alors, écrivez-moi ! À bientôt !",
+        "sv": "Skriv till mig då! Hörs snart!"
+      },
+      {
+        "fr": "Chloé",
+        "sv": "Chloé"
+      }
+    ],
+    "questions": [
+      {
+        "type": "helhet",
+        "q": "Varför skriver Chloé inlägget?",
+        "opts": [
+          "Hon vill sälja sin gitarr",
+          "Hon söker nya vänner i Sverige",
+          "Hon letar efter en lärare i tyska",
+          "Hon vill flytta till Rom"
+        ],
+        "a": 1,
+        "why": "Hon skriver: « je cherche des amis en Suède » och « écrivez-moi ! »."
+      },
+      {
+        "type": "detalj",
+        "q": "Var bor Chloé?",
+        "opts": [
+          "I Paris",
+          "I Rom",
+          "I Bryssel",
+          "I Sverige"
+        ],
+        "a": 2,
+        "why": "« j'habite à Bruxelles, en Belgique ». Hon är fransyska men bor i Belgien."
+      },
+      {
+        "type": "detalj",
+        "q": "Vilket språk läser Chloé i skolan?",
+        "opts": [
+          "Tyska",
+          "Nederländska",
+          "Engelska",
+          "Italienska"
+        ],
+        "a": 0,
+        "why": "« À l'école, j'étudie aussi l'allemand »."
+      },
+      {
+        "type": "tolkning",
+        "q": "Vad stämmer om Sofia?",
+        "opts": [
+          "Hon är fransyska och bor i Bryssel",
+          "Hon sjunger i Chloés band",
+          "Hon letar också efter vänner i Sverige",
+          "Hon är italienska och kan många språk"
+        ],
+        "a": 3,
+        "why": "« Mon amie Sofia est italienne … elle parle quatre langues ! »"
+      }
+    ],
+    "gloss": {
+      "monde": {
+        "t": "tout le monde",
+        "sv": "alla",
+        "g": ""
+      },
+      "nouvelle": {
+        "t": "nouveau, nouvelle",
+        "sv": "ny",
+        "g": ""
+      },
+      "française": {
+        "t": "français, -e",
+        "sv": "fransk",
+        "g": ""
+      },
+      "bruxelles": {
+        "t": "Bruxelles",
+        "sv": "Bryssel",
+        "g": ""
+      },
+      "belgique": {
+        "t": "la Belgique",
+        "sv": "Belgien",
+        "g": "f"
+      },
+      "néerlandais": {
+        "t": "le néerlandais",
+        "sv": "nederländska",
+        "g": "m"
+      },
+      "école": {
+        "t": "l'école",
+        "sv": "skola",
+        "g": "f"
+      },
+      "étudie": {
+        "t": "étudier",
+        "sv": "studera, läsa (ett ämne)",
+        "g": ""
+      },
+      "allemand": {
+        "t": "l'allemand",
+        "sv": "tyska (språket)",
+        "g": "m"
+      },
+      "difficile": {
+        "t": "difficile",
+        "sv": "svår",
+        "g": ""
+      },
+      "adore": {
+        "t": "adorer",
+        "sv": "älska",
+        "g": ""
+      },
+      "chante": {
+        "t": "chanter",
+        "sv": "sjunga",
+        "g": ""
+      },
+      "groupe": {
+        "t": "le groupe",
+        "sv": "band, grupp",
+        "g": "m"
+      },
+      "cinéma": {
+        "t": "le cinéma",
+        "sv": "bio, film",
+        "g": "m"
+      },
+      "nombre": {
+        "t": "le nombre",
+        "sv": "tal",
+        "g": "m"
+      },
+      "préféré": {
+        "t": "préféré, -e",
+        "sv": "favorit-",
+        "g": ""
+      },
+      "sept": {
+        "t": "sept",
+        "sv": "sju",
+        "g": ""
+      },
+      "italienne": {
+        "t": "italien, italienne",
+        "sv": "italiensk",
+        "g": ""
+      },
+      "quatre": {
+        "t": "quatre",
+        "sv": "fyra",
+        "g": ""
+      },
+      "langues": {
+        "t": "la langue",
+        "sv": "språk",
+        "g": "f"
+      },
+      "cherche": {
+        "t": "chercher",
+        "sv": "leta efter, söka",
+        "g": ""
+      },
+      "suède": {
+        "t": "la Suède",
+        "sv": "Sverige",
+        "g": "f"
+      },
+      "écrivez-moi": {
+        "t": "écrire",
+        "sv": "skriv till mig",
+        "g": ""
+      },
+      "bientôt": {
+        "t": "à bientôt",
+        "sv": "hörs snart, vi ses snart",
+        "g": ""
+      }
+    }
+  },
+  {
+    "id": "fr1-r-e2",
+    "sec": "e2",
+    "title": "Un mail de Lucie",
+    "lines": [
+      {
+        "fr": "Salut Elsa,",
+        "sv": "Hej Elsa,"
+      },
+      {
+        "fr": "Merci pour ton mail ! Aujourd'hui, voici ma famille.",
+        "sv": "Tack för ditt mejl! I dag kommer här min familj."
+      },
+      {
+        "fr": "J'ai quinze ans et j'habite à Toulouse avec ma mère, mon beau-père et mes deux frères.",
+        "sv": "Jag är femton år och jag bor i Toulouse med min mamma, min styvpappa och mina två bröder."
+      },
+      {
+        "fr": "Mes frères s'appellent Adam et Noé. Ils ont six ans. Ce sont des jumeaux !",
+        "sv": "Mina bröder heter Adam och Noé. De är sex år. De är tvillingar!"
+      },
+      {
+        "fr": "Ma mère est infirmière et mon beau-père est cuisinier.",
+        "sv": "Min mamma är sjuksköterska och min styvpappa är kock."
+      },
+      {
+        "fr": "Mon père habite à Paris avec sa femme et leur fille, Jade.",
+        "sv": "Min pappa bor i Paris med sin fru och deras dotter, Jade."
+      },
+      {
+        "fr": "Jade est ma demi-sœur. Elle a trois ans et elle est très mignonne.",
+        "sv": "Jade är min halvsyster. Hon är tre år och hon är jättesöt."
+      },
+      {
+        "fr": "Nous avons aussi un chien, Biscotte. Il est petit et très drôle.",
+        "sv": "Vi har också en hund, Biscotte. Han är liten och väldigt rolig."
+      },
+      {
+        "fr": "Mes grands-parents habitent à la campagne. Ils ont des poules et un cheval !",
+        "sv": "Mina mor- och farföräldrar bor på landet. De har höns och en häst!"
+      },
+      {
+        "fr": "Et toi ? Tu as des frères et sœurs ? Tu as un animal ?",
+        "sv": "Och du? Har du syskon? Har du något husdjur?"
+      },
+      {
+        "fr": "Grosses bises,",
+        "sv": "Stora kramar,"
+      },
+      {
+        "fr": "Lucie",
+        "sv": "Lucie"
+      }
+    ],
+    "questions": [
+      {
+        "type": "helhet",
+        "q": "Vad handlar mejlet om?",
+        "opts": [
+          "Lucies nya skola",
+          "Lucies familj och husdjur",
+          "Lucies resa till Paris",
+          "Lucies sommarjobb"
+        ],
+        "a": 1,
+        "why": "Hon skriver « voici ma famille » och berättar om alla i familjen och om djuren."
+      },
+      {
+        "type": "detalj",
+        "q": "Vilka bor Lucie med?",
+        "opts": [
+          "Sin mamma, sin styvpappa och sina två bröder",
+          "Sin pappa och sin halvsyster",
+          "Sina mor- och farföräldrar",
+          "Bara sin mamma och sin hund"
+        ],
+        "a": 0,
+        "why": "« j'habite à Toulouse avec ma mère, mon beau-père et mes deux frères »."
+      },
+      {
+        "type": "detalj",
+        "q": "Vem är Jade?",
+        "opts": [
+          "Lucies kusin",
+          "Lucies bästa kompis",
+          "Lucies halvsyster",
+          "Lucies hund"
+        ],
+        "a": 2,
+        "why": "« Jade est ma demi-sœur ». Hon är dotter till Lucies pappa och hans fru."
+      },
+      {
+        "type": "tolkning",
+        "q": "Varför är Adam och Noé lika gamla?",
+        "opts": [
+          "De är kusiner",
+          "De fyller år samma dag av en slump",
+          "Det står inte i texten",
+          "De är tvillingar"
+        ],
+        "a": 3,
+        "why": "« Ce sont des jumeaux ! » Jumeaux betyder tvillingar."
+      }
+    ],
+    "gloss": {
+      "mail": {
+        "t": "le mail",
+        "sv": "mejl",
+        "g": "m"
+      },
+      "famille": {
+        "t": "la famille",
+        "sv": "familj",
+        "g": "f"
+      },
+      "quinze": {
+        "t": "quinze",
+        "sv": "femton",
+        "g": ""
+      },
+      "ans": {
+        "t": "l'an",
+        "sv": "år (j'ai quinze ans = jag är femton år)",
+        "g": "m"
+      },
+      "beau-père": {
+        "t": "le beau-père",
+        "sv": "styvpappa",
+        "g": "m"
+      },
+      "frères": {
+        "t": "le frère",
+        "sv": "bror",
+        "g": "m"
+      },
+      "jumeaux": {
+        "t": "les jumeaux",
+        "sv": "tvillingar",
+        "g": "m"
+      },
+      "infirmière": {
+        "t": "l'infirmière",
+        "sv": "sjuksköterska",
+        "g": "f"
+      },
+      "cuisinier": {
+        "t": "le cuisinier",
+        "sv": "kock",
+        "g": "m"
+      },
+      "femme": {
+        "t": "la femme",
+        "sv": "kvinna; fru",
+        "g": "f"
+      },
+      "leur": {
+        "t": "leur",
+        "sv": "deras",
+        "g": ""
+      },
+      "fille": {
+        "t": "la fille",
+        "sv": "dotter; flicka",
+        "g": "f"
+      },
+      "demi-sœur": {
+        "t": "la demi-sœur",
+        "sv": "halvsyster",
+        "g": "f"
+      },
+      "mignonne": {
+        "t": "mignon, mignonne",
+        "sv": "söt, gullig",
+        "g": ""
+      },
+      "chien": {
+        "t": "le chien",
+        "sv": "hund",
+        "g": "m"
+      },
+      "drôle": {
+        "t": "drôle",
+        "sv": "rolig",
+        "g": ""
+      },
+      "grands-parents": {
+        "t": "les grands-parents",
+        "sv": "mor- och farföräldrar",
+        "g": "m"
+      },
+      "campagne": {
+        "t": "la campagne",
+        "sv": "landet, landsbygden",
+        "g": "f"
+      },
+      "poules": {
+        "t": "la poule",
+        "sv": "höna",
+        "g": "f"
+      },
+      "cheval": {
+        "t": "le cheval",
+        "sv": "häst",
+        "g": "m"
+      },
+      "sœurs": {
+        "t": "la sœur",
+        "sv": "syster",
+        "g": "f"
+      },
+      "animal": {
+        "t": "l'animal",
+        "sv": "djur, husdjur",
+        "g": "m"
+      },
+      "bises": {
+        "t": "les bises",
+        "sv": "kramar, pussar (i slutet av brev)",
+        "g": "f"
+      }
+    }
+  },
+  {
+    "id": "fr1-r-e3",
+    "sec": "e3",
+    "title": "Nouveaux élèves : vos questions",
+    "lines": [
+      {
+        "fr": "Bienvenue au lycée Victor Hugo !",
+        "sv": "Välkommen till Victor Hugo-gymnasiet!"
+      },
+      {
+        "fr": "Nouveaux élèves : vos questions, nos réponses",
+        "sv": "Nya elever: era frågor, våra svar"
+      },
+      {
+        "fr": "Où sont les salles de classe ?",
+        "sv": "Var ligger klassrummen?"
+      },
+      {
+        "fr": "Les salles de classe sont au premier et au deuxième étage.",
+        "sv": "Klassrummen ligger på första och andra våningen."
+      },
+      {
+        "fr": "Est-ce que les cours commencent à huit heures ?",
+        "sv": "Börjar lektionerna klockan åtta?"
+      },
+      {
+        "fr": "Oui, du lundi au vendredi.",
+        "sv": "Ja, från måndag till fredag."
+      },
+      {
+        "fr": "Qu'est-ce que j'apporte dans mon sac ?",
+        "sv": "Vad ska jag ta med i väskan?"
+      },
+      {
+        "fr": "Des cahiers, des stylos, une trousse et une calculatrice pour les maths.",
+        "sv": "Skrivhäften, pennor, ett pennfodral och en miniräknare till matten."
+      },
+      {
+        "fr": "Où est la cantine ?",
+        "sv": "Var är matsalen?"
+      },
+      {
+        "fr": "Elle est au rez-de-chaussée, à côté de la cour.",
+        "sv": "Den ligger på bottenvåningen, bredvid skolgården."
+      },
+      {
+        "fr": "Quelles langues est-ce que les élèves étudient ?",
+        "sv": "Vilka språk läser eleverna?"
+      },
+      {
+        "fr": "L'anglais et une autre langue : l'espagnol, l'allemand ou l'italien.",
+        "sv": "Engelska och ett annat språk: spanska, tyska eller italienska."
+      },
+      {
+        "fr": "Qui répond à mes questions ?",
+        "sv": "Vem svarar på mina frågor?"
+      },
+      {
+        "fr": "Chaque classe a un professeur principal. Il ou elle est là pour vous !",
+        "sv": "Varje klass har en mentor. Han eller hon finns där för er!"
+      },
+      {
+        "fr": "Bonne rentrée à tous !",
+        "sv": "Lycka till med skolstarten allihop!"
+      }
+    ],
+    "questions": [
+      {
+        "type": "helhet",
+        "q": "Vem är texten skriven för?",
+        "opts": [
+          "För föräldrar som vill jobba på skolan",
+          "För lärare som är nya på skolan",
+          "För nya elever på skolan",
+          "För turister som besöker skolan"
+        ],
+        "a": 2,
+        "why": "Rubriken är « Nouveaux élèves : vos questions, nos réponses »."
+      },
+      {
+        "type": "detalj",
+        "q": "Var ligger matsalen?",
+        "opts": [
+          "På bottenvåningen, bredvid skolgården",
+          "På första våningen",
+          "På andra våningen, bredvid klassrummen",
+          "Utanför skolan"
+        ],
+        "a": 0,
+        "why": "« Elle est au rez-de-chaussée, à côté de la cour »."
+      },
+      {
+        "type": "detalj",
+        "q": "Vad ska man ha med sig till matten?",
+        "opts": [
+          "En ordbok",
+          "En miniräknare",
+          "En dator",
+          "En linjal"
+        ],
+        "a": 1,
+        "why": "« une calculatrice pour les maths »."
+      },
+      {
+        "type": "tolkning",
+        "q": "Du har en fråga om skolan. Vem kan du fråga?",
+        "opts": [
+          "Rektorn",
+          "En elev i andra klass",
+          "Personalen i matsalen",
+          "Din klass mentor (professeur principal)"
+        ],
+        "a": 3,
+        "why": "« Chaque classe a un professeur principal. Il ou elle est là pour vous ! »"
+      }
+    ],
+    "gloss": {
+      "lycée": {
+        "t": "le lycée",
+        "sv": "gymnasium",
+        "g": "m"
+      },
+      "nouveaux": {
+        "t": "nouveau, nouvelle",
+        "sv": "ny",
+        "g": ""
+      },
+      "élèves": {
+        "t": "l'élève",
+        "sv": "elev",
+        "g": "m"
+      },
+      "réponses": {
+        "t": "la réponse",
+        "sv": "svar",
+        "g": "f"
+      },
+      "salles": {
+        "t": "la salle de classe",
+        "sv": "klassrum",
+        "g": "f"
+      },
+      "deuxième": {
+        "t": "deuxième",
+        "sv": "andra",
+        "g": ""
+      },
+      "étage": {
+        "t": "l'étage",
+        "sv": "våning",
+        "g": "m"
+      },
+      "cours": {
+        "t": "le cours",
+        "sv": "lektion",
+        "g": "m"
+      },
+      "commencent": {
+        "t": "commencer",
+        "sv": "börja",
+        "g": ""
+      },
+      "lundi": {
+        "t": "lundi",
+        "sv": "måndag",
+        "g": "m"
+      },
+      "vendredi": {
+        "t": "vendredi",
+        "sv": "fredag",
+        "g": "m"
+      },
+      "sac": {
+        "t": "le sac",
+        "sv": "väska",
+        "g": "m"
+      },
+      "cahiers": {
+        "t": "le cahier",
+        "sv": "skrivhäfte",
+        "g": "m"
+      },
+      "stylos": {
+        "t": "le stylo",
+        "sv": "penna (bläck)",
+        "g": "m"
+      },
+      "trousse": {
+        "t": "la trousse",
+        "sv": "pennfodral",
+        "g": "f"
+      },
+      "calculatrice": {
+        "t": "la calculatrice",
+        "sv": "miniräknare",
+        "g": "f"
+      },
+      "cantine": {
+        "t": "la cantine",
+        "sv": "skolmatsal",
+        "g": "f"
+      },
+      "rez-de-chaussée": {
+        "t": "le rez-de-chaussée",
+        "sv": "bottenvåning",
+        "g": "m"
+      },
+      "cour": {
+        "t": "la cour",
+        "sv": "skolgård",
+        "g": "f"
+      },
+      "langues": {
+        "t": "la langue",
+        "sv": "språk",
+        "g": "f"
+      },
+      "étudient": {
+        "t": "étudier",
+        "sv": "studera, läsa (ett ämne)",
+        "g": ""
+      },
+      "répond": {
+        "t": "répondre",
+        "sv": "svara",
+        "g": ""
+      },
+      "chaque": {
+        "t": "chaque",
+        "sv": "varje",
+        "g": ""
+      },
+      "principal": {
+        "t": "le professeur principal",
+        "sv": "mentor, klassföreståndare",
+        "g": "m"
+      },
+      "rentrée": {
+        "t": "la rentrée",
+        "sv": "skolstart (efter sommarlovet)",
+        "g": "f"
+      }
+    }
+  },
+  {
+    "id": "fr1-r-e4",
+    "sec": "e4",
+    "title": "Tu fais quoi samedi ?",
+    "lines": [
+      {
+        "fr": "Hugo : Salut Emma ! Tu fais quoi samedi ?",
+        "sv": "Hugo: Hej Emma! Vad gör du på lördag?"
+      },
+      {
+        "fr": "Emma : Salut ! Le matin, je vais à la piscine avec ma sœur. Pourquoi ?",
+        "sv": "Emma: Hej! På förmiddagen går jag till simhallen med min syster. Varför undrar du?"
+      },
+      {
+        "fr": "Hugo : Il y a un concert au parc l'après-midi. Tu viens ?",
+        "sv": "Hugo: Det är en konsert i parken på eftermiddagen. Hänger du med?"
+      },
+      {
+        "fr": "Emma : C'est quel groupe ?",
+        "sv": "Emma: Vilket band är det?"
+      },
+      {
+        "fr": "Hugo : Les Chats Noirs. C'est du rock. J'adore !",
+        "sv": "Hugo: Les Chats Noirs. Det är rock. Jag älskar det!"
+      },
+      {
+        "fr": "Emma : Bof, je n'aime pas trop le rock. Je préfère le rap.",
+        "sv": "Emma: Äsch, jag gillar inte rock så mycket. Jag föredrar rap."
+      },
+      {
+        "fr": "Hugo : Il y a aussi un rappeur, à cinq heures !",
+        "sv": "Hugo: Det kommer en rappare också, klockan fem!"
+      },
+      {
+        "fr": "Emma : Ah, super ! Mais je ne suis pas libre avant quatre heures. Je fais du basket avec mon équipe.",
+        "sv": "Emma: Åh, toppen! Men jag är inte ledig före klockan fyra. Jag spelar basket med mitt lag."
+      },
+      {
+        "fr": "Hugo : Pas de problème. On va au parc ensemble après ton match ?",
+        "sv": "Hugo: Inga problem. Ska vi gå till parken tillsammans efter din match?"
+      },
+      {
+        "fr": "Emma : D'accord ! Rendez-vous devant le gymnase à quatre heures et quart ?",
+        "sv": "Emma: Okej! Ska vi ses framför idrottshallen kvart över fyra?"
+      },
+      {
+        "fr": "Hugo : Parfait ! Mon frère vient aussi. À samedi !",
+        "sv": "Hugo: Perfekt! Min bror följer också med. Vi ses på lördag!"
+      }
+    ],
+    "questions": [
+      {
+        "type": "helhet",
+        "q": "Vad handlar sms-tråden om?",
+        "opts": [
+          "Emma och Hugo bestämmer att gå på en konsert",
+          "Emma bjuder Hugo på en basketmatch",
+          "Hugo vill låna Emmas gitarr",
+          "Hugo och Emma pratar om en läxa"
+        ],
+        "a": 0,
+        "why": "Hugo frågar om Emma vill följa med på en konsert i parken, och de bestämmer var de ska ses."
+      },
+      {
+        "type": "detalj",
+        "q": "Vad gör Emma på lördag förmiddag?",
+        "opts": [
+          "Hon spelar basket",
+          "Hon går till simhallen med sin syster",
+          "Hon lyssnar på rap",
+          "Hon sover"
+        ],
+        "a": 1,
+        "why": "« Le matin, je vais à la piscine avec ma sœur »."
+      },
+      {
+        "type": "detalj",
+        "q": "Vilken musik gillar Emma mest?",
+        "opts": [
+          "Rock",
+          "Pop",
+          "Rap",
+          "Klassisk musik"
+        ],
+        "a": 2,
+        "why": "« je n'aime pas trop le rock. Je préfère le rap »."
+      },
+      {
+        "type": "detalj",
+        "q": "När och var ska de träffas?",
+        "opts": [
+          "Klockan fem i parken",
+          "Klockan fyra vid simhallen",
+          "Klockan fem framför idrottshallen",
+          "Kvart över fyra framför idrottshallen"
+        ],
+        "a": 3,
+        "why": "« Rendez-vous devant le gymnase à quatre heures et quart »."
+      }
+    ],
+    "gloss": {
+      "fais": {
+        "t": "faire",
+        "sv": "göra (faire du basket = spela basket)",
+        "g": ""
+      },
+      "quoi": {
+        "t": "quoi",
+        "sv": "vad",
+        "g": ""
+      },
+      "samedi": {
+        "t": "samedi",
+        "sv": "lördag",
+        "g": "m"
+      },
+      "vais": {
+        "t": "aller",
+        "sv": "gå, åka",
+        "g": ""
+      },
+      "piscine": {
+        "t": "la piscine",
+        "sv": "simhall",
+        "g": "f"
+      },
+      "pourquoi": {
+        "t": "pourquoi",
+        "sv": "varför",
+        "g": ""
+      },
+      "parc": {
+        "t": "le parc",
+        "sv": "park",
+        "g": "m"
+      },
+      "viens": {
+        "t": "venir",
+        "sv": "komma (Tu viens ? = Hänger du med?)",
+        "g": ""
+      },
+      "groupe": {
+        "t": "le groupe",
+        "sv": "band, grupp",
+        "g": "m"
+      },
+      "bof": {
+        "t": "bof",
+        "sv": "äsch, nja",
+        "g": ""
+      },
+      "trop": {
+        "t": "pas trop",
+        "sv": "inte så mycket",
+        "g": ""
+      },
+      "préfère": {
+        "t": "préférer",
+        "sv": "föredra",
+        "g": ""
+      },
+      "rappeur": {
+        "t": "le rappeur",
+        "sv": "rappare",
+        "g": "m"
+      },
+      "libre": {
+        "t": "libre",
+        "sv": "ledig",
+        "g": ""
+      },
+      "avant": {
+        "t": "avant",
+        "sv": "före",
+        "g": ""
+      },
+      "équipe": {
+        "t": "l'équipe",
+        "sv": "lag",
+        "g": "f"
+      },
+      "ensemble": {
+        "t": "ensemble",
+        "sv": "tillsammans",
+        "g": ""
+      },
+      "après": {
+        "t": "après",
+        "sv": "efter",
+        "g": ""
+      },
+      "rendez-vous": {
+        "t": "le rendez-vous",
+        "sv": "träff; vi ses …",
+        "g": "m"
+      },
+      "devant": {
+        "t": "devant",
+        "sv": "framför",
+        "g": ""
+      },
+      "gymnase": {
+        "t": "le gymnase",
+        "sv": "idrottshall",
+        "g": "m"
+      },
+      "quart": {
+        "t": "et quart",
+        "sv": "kvart över",
+        "g": ""
+      },
+      "vient": {
+        "t": "venir",
+        "sv": "komma",
+        "g": ""
+      }
+    }
+  },
+  {
+    "id": "fr1-r-e5",
+    "sec": "e5",
+    "title": "Le Café des Amis",
+    "lines": [
+      {
+        "fr": "Le Café des Amis : la carte",
+        "sv": "Le Café des Amis: menyn"
+      },
+      {
+        "fr": "Boissons chaudes : café 2 €, thé 2,50 €, chocolat chaud 3 €",
+        "sv": "Varma drycker: kaffe 2 €, te 2,50 €, varm choklad 3 €"
+      },
+      {
+        "fr": "Boissons froides : jus d'orange 3,50 €, limonade 3 €, eau minérale 2 €",
+        "sv": "Kalla drycker: apelsinjuice 3,50 €, läsk 3 €, mineralvatten 2 €"
+      },
+      {
+        "fr": "Salé : croque-monsieur 6 €, sandwich jambon-beurre 5 €, omelette au fromage 7 €, salade verte 6 €",
+        "sv": "Salt: varm ost- och skinksmörgås 6 €, baguette med skinka och smör 5 €, omelett med ost 7 €, grönsallad 6 €"
+      },
+      {
+        "fr": "Sucré : crêpe au sucre 3 €, crêpe au chocolat 4 €, tarte aux pommes 4,50 €, glace (deux boules) 4 €",
+        "sv": "Sött: crêpe med socker 3 €, crêpe med choklad 4 €, äppelpaj 4,50 €, glass (två kulor) 4 €"
+      },
+      {
+        "fr": "Le plat du jour : poulet et frites 12 €",
+        "sv": "Dagens rätt: kyckling och pommes frites 12 €"
+      },
+      {
+        "fr": "Menu Ado (moins de 18 ans) : un croque-monsieur, une boisson froide et une crêpe au sucre, 10 € seulement !",
+        "sv": "Tonårsmeny (under 18 år): en croque-monsieur, en kall dryck och en crêpe med socker, bara 10 €!"
+      },
+      {
+        "fr": "Vous êtes végétarien ? Nous avons une omelette, une salade et des crêpes.",
+        "sv": "Är du vegetarian? Vi har omelett, sallad och crêpes."
+      },
+      {
+        "fr": "Vous avez une allergie ? Demandez au serveur !",
+        "sv": "Har du en allergi? Fråga servitören!"
+      },
+      {
+        "fr": "Ouvert tous les jours de 8 h à 19 h, sauf le lundi.",
+        "sv": "Öppet alla dagar 8–19, utom på måndagar."
+      }
+    ],
+    "questions": [
+      {
+        "type": "helhet",
+        "q": "Vad är det för text?",
+        "opts": [
+          "Ett recept",
+          "En meny på ett kafé",
+          "En inköpslista",
+          "Ett schema för en skolmatsal"
+        ],
+        "a": 1,
+        "why": "Texten är « la carte » på Le Café des Amis, med mat, dryck och priser."
+      },
+      {
+        "type": "detalj",
+        "q": "Vad kostar en varm choklad?",
+        "opts": [
+          "2 €",
+          "2,50 €",
+          "3,50 €",
+          "3 €"
+        ],
+        "a": 3,
+        "why": "« chocolat chaud 3 € »."
+      },
+      {
+        "type": "detalj",
+        "q": "Vad ingår i Menu Ado?",
+        "opts": [
+          "En croque-monsieur, en kall dryck och en crêpe med socker",
+          "Kyckling, pommes frites och en läsk",
+          "En omelett, en sallad och en glass",
+          "En varm dryck och en äppelpaj"
+        ],
+        "a": 0,
+        "why": "« un croque-monsieur, une boisson froide et une crêpe au sucre, 10 € seulement ! »"
+      },
+      {
+        "type": "tolkning",
+        "q": "Du vill fika där en måndag. Vad händer?",
+        "opts": [
+          "Du får Menu Ado gratis",
+          "Kaféet öppnar först klockan 19",
+          "Kaféet är stängt",
+          "Du kan bara köpa dryck"
+        ],
+        "a": 2,
+        "why": "« Ouvert tous les jours … sauf le lundi ». Sauf betyder utom."
+      }
+    ],
+    "gloss": {
+      "carte": {
+        "t": "la carte",
+        "sv": "meny, matsedel",
+        "g": "f"
+      },
+      "boissons": {
+        "t": "la boisson",
+        "sv": "dryck",
+        "g": "f"
+      },
+      "chaudes": {
+        "t": "chaud, -e",
+        "sv": "varm",
+        "g": ""
+      },
+      "thé": {
+        "t": "le thé",
+        "sv": "te",
+        "g": "m"
+      },
+      "froides": {
+        "t": "froid, -e",
+        "sv": "kall",
+        "g": ""
+      },
+      "limonade": {
+        "t": "la limonade",
+        "sv": "läsk (sockerdricka)",
+        "g": "f"
+      },
+      "eau": {
+        "t": "l'eau",
+        "sv": "vatten",
+        "g": "f"
+      },
+      "salé": {
+        "t": "salé, -e",
+        "sv": "salt",
+        "g": ""
+      },
+      "jambon-beurre": {
+        "t": "le jambon-beurre",
+        "sv": "baguette med skinka och smör",
+        "g": "m"
+      },
+      "fromage": {
+        "t": "le fromage",
+        "sv": "ost",
+        "g": "m"
+      },
+      "salade": {
+        "t": "la salade",
+        "sv": "sallad",
+        "g": "f"
+      },
+      "sucré": {
+        "t": "sucré, -e",
+        "sv": "söt",
+        "g": ""
+      },
+      "pommes": {
+        "t": "la pomme",
+        "sv": "äpple",
+        "g": "f"
+      },
+      "glace": {
+        "t": "la glace",
+        "sv": "glass",
+        "g": "f"
+      },
+      "boules": {
+        "t": "la boule",
+        "sv": "kula",
+        "g": "f"
+      },
+      "plat": {
+        "t": "le plat du jour",
+        "sv": "dagens rätt",
+        "g": "m"
+      },
+      "poulet": {
+        "t": "le poulet",
+        "sv": "kyckling",
+        "g": "m"
+      },
+      "frites": {
+        "t": "les frites",
+        "sv": "pommes frites",
+        "g": "f"
+      },
+      "moins": {
+        "t": "moins de",
+        "sv": "mindre än, under",
+        "g": ""
+      },
+      "seulement": {
+        "t": "seulement",
+        "sv": "bara, endast",
+        "g": ""
+      },
+      "végétarien": {
+        "t": "végétarien, végétarienne",
+        "sv": "vegetarian",
+        "g": ""
+      },
+      "demandez": {
+        "t": "demander",
+        "sv": "fråga",
+        "g": ""
+      },
+      "serveur": {
+        "t": "le serveur",
+        "sv": "servitör",
+        "g": "m"
+      },
+      "ouvert": {
+        "t": "ouvert, -e",
+        "sv": "öppen",
+        "g": ""
+      },
+      "sauf": {
+        "t": "sauf",
+        "sv": "utom",
+        "g": ""
+      }
+    }
+  },
+  {
+    "id": "fr1-r-e6",
+    "sec": "e6",
+    "title": "Une carte postale de Strasbourg",
+    "lines": [
+      {
+        "fr": "Salut Maxime !",
+        "sv": "Hej Maxime!"
+      },
+      {
+        "fr": "Je suis à Strasbourg avec ma classe. C'est une ville magnifique !",
+        "sv": "Jag är i Strasbourg med min klass. Det är en jättevacker stad!"
+      },
+      {
+        "fr": "Notre hôtel est dans le centre, près de la cathédrale.",
+        "sv": "Vårt hotell ligger i centrum, nära katedralen."
+      },
+      {
+        "fr": "Dans la vieille ville, il y a beaucoup de petites rues et de jolies maisons.",
+        "sv": "I gamla stan finns det många små gator och fina hus."
+      },
+      {
+        "fr": "Il y a aussi des canaux, un grand marché et beaucoup de magasins.",
+        "sv": "Det finns också kanaler, en stor marknad och massor av affärer."
+      },
+      {
+        "fr": "Le matin, nous visitons un musée. L'après-midi, nous faisons un tour en bateau.",
+        "sv": "På förmiddagen besöker vi ett museum. På eftermiddagen åker vi en tur med båt."
+      },
+      {
+        "fr": "Ici, les gens prennent le tram ou le vélo.",
+        "sv": "Här tar folk spårvagnen eller cykeln."
+      },
+      {
+        "fr": "Il n'y a pas beaucoup de voitures dans le centre, et c'est très calme.",
+        "sv": "Det finns inte många bilar i centrum, och det är väldigt lugnt."
+      },
+      {
+        "fr": "La cathédrale est très haute : il y a 332 marches pour aller en haut !",
+        "sv": "Katedralen är väldigt hög: det är 332 trappsteg upp till toppen!"
+      },
+      {
+        "fr": "Demain, nous allons au Parlement européen en bus.",
+        "sv": "I morgon åker vi buss till Europaparlamentet."
+      },
+      {
+        "fr": "Bises,",
+        "sv": "Kramar,"
+      },
+      {
+        "fr": "Alice",
+        "sv": "Alice"
+      }
+    ],
+    "questions": [
+      {
+        "type": "helhet",
+        "q": "Varför är Alice i Strasbourg?",
+        "opts": [
+          "Hon bor där med sin familj",
+          "Hon är på klassresa",
+          "Hon hälsar på Maxime",
+          "Hon jobbar på ett hotell"
+        ],
+        "a": 1,
+        "why": "« Je suis à Strasbourg avec ma classe »."
+      },
+      {
+        "type": "detalj",
+        "q": "Var ligger hotellet?",
+        "opts": [
+          "I centrum, nära katedralen",
+          "Nära flygplatsen",
+          "Vid Europaparlamentet",
+          "Utanför staden"
+        ],
+        "a": 0,
+        "why": "« Notre hôtel est dans le centre, près de la cathédrale »."
+      },
+      {
+        "type": "detalj",
+        "q": "Vad gör klassen på eftermiddagen?",
+        "opts": [
+          "De besöker ett museum",
+          "De går upp i katedralen",
+          "De åker båt",
+          "De åker buss till parlamentet"
+        ],
+        "a": 2,
+        "why": "« L'après-midi, nous faisons un tour en bateau ». Museet är på förmiddagen."
+      },
+      {
+        "type": "tolkning",
+        "q": "Varför är det lugnt i centrum?",
+        "opts": [
+          "Alla är på marknaden",
+          "Det är söndag",
+          "Gatorna är stängda för turister",
+          "Det finns inte så många bilar där"
+        ],
+        "a": 3,
+        "why": "Folk tar spårvagnen eller cykeln, och « Il n'y a pas beaucoup de voitures dans le centre »."
+      }
+    ],
+    "gloss": {
+      "ville": {
+        "t": "la ville",
+        "sv": "stad",
+        "g": "f"
+      },
+      "magnifique": {
+        "t": "magnifique",
+        "sv": "jättevacker, fantastisk",
+        "g": ""
+      },
+      "hôtel": {
+        "t": "l'hôtel",
+        "sv": "hotell",
+        "g": "m"
+      },
+      "centre": {
+        "t": "le centre",
+        "sv": "centrum",
+        "g": "m"
+      },
+      "près": {
+        "t": "près de",
+        "sv": "nära",
+        "g": ""
+      },
+      "cathédrale": {
+        "t": "la cathédrale",
+        "sv": "katedral, domkyrka",
+        "g": "f"
+      },
+      "vieille": {
+        "t": "vieux, vieille",
+        "sv": "gammal (la vieille ville = gamla stan)",
+        "g": ""
+      },
+      "y": {
+        "t": "il y a",
+        "sv": "det finns",
+        "g": ""
+      },
+      "rues": {
+        "t": "la rue",
+        "sv": "gata",
+        "g": "f"
+      },
+      "maisons": {
+        "t": "la maison",
+        "sv": "hus",
+        "g": "f"
+      },
+      "canaux": {
+        "t": "le canal (pl. les canaux)",
+        "sv": "kanal",
+        "g": "m"
+      },
+      "marché": {
+        "t": "le marché",
+        "sv": "marknad, torg",
+        "g": "m"
+      },
+      "magasins": {
+        "t": "le magasin",
+        "sv": "affär, butik",
+        "g": "m"
+      },
+      "visitons": {
+        "t": "visiter",
+        "sv": "besöka (en plats)",
+        "g": ""
+      },
+      "musée": {
+        "t": "le musée",
+        "sv": "museum",
+        "g": "m"
+      },
+      "bateau": {
+        "t": "le bateau",
+        "sv": "båt",
+        "g": "m"
+      },
+      "gens": {
+        "t": "les gens",
+        "sv": "folk, människor",
+        "g": "m"
+      },
+      "prennent": {
+        "t": "prendre",
+        "sv": "ta",
+        "g": ""
+      },
+      "tram": {
+        "t": "le tram",
+        "sv": "spårvagn",
+        "g": "m"
+      },
+      "vélo": {
+        "t": "le vélo",
+        "sv": "cykel",
+        "g": "m"
+      },
+      "voitures": {
+        "t": "la voiture",
+        "sv": "bil",
+        "g": "f"
+      },
+      "calme": {
+        "t": "calme",
+        "sv": "lugn",
+        "g": ""
+      },
+      "haute": {
+        "t": "haut, -e",
+        "sv": "hög",
+        "g": ""
+      },
+      "marches": {
+        "t": "la marche",
+        "sv": "trappsteg",
+        "g": "f"
+      },
+      "demain": {
+        "t": "demain",
+        "sv": "i morgon",
+        "g": ""
+      }
+    }
+  },
+  {
+    "id": "fr1-r-e7",
+    "sec": "e7",
+    "title": "Grandes soldes !",
+    "lines": [
+      {
+        "fr": "Grandes soldes chez Mode Jeune !",
+        "sv": "Stor rea hos Mode Jeune!"
+      },
+      {
+        "fr": "Cette semaine seulement !",
+        "sv": "Bara den här veckan!"
+      },
+      {
+        "fr": "Pour les filles : jupes noires et robes rouges, 15 € !",
+        "sv": "För tjejer: svarta kjolar och röda klänningar, 15 €!"
+      },
+      {
+        "fr": "Pour les garçons : chemises blanches et chemises bleues, 12 € !",
+        "sv": "För killar: vita skjortor och blåa skjortor, 12 €!"
+      },
+      {
+        "fr": "Pour tous : jeans bleus 20 €, t-shirts blancs 8 €, baskets blanches 35 € (avant : 60 €).",
+        "sv": "För alla: blå jeans 20 €, vita t-shirtar 8 €, vita gympaskor 35 € (förut: 60 €)."
+      },
+      {
+        "fr": "Pulls gris et verts : moins 50 % !",
+        "sv": "Grå och gröna tröjor: 50 % rabatt!"
+      },
+      {
+        "fr": "Manteaux chauds pour l'hiver : noirs, gris ou marron.",
+        "sv": "Varma rockar för vintern: svarta, grå eller bruna."
+      },
+      {
+        "fr": "Casquettes et bonnets de toutes les couleurs : 5 € !",
+        "sv": "Kepsar och mössor i alla färger: 5 €!"
+      },
+      {
+        "fr": "Nouveau : de grands sacs à dos jaunes et violets !",
+        "sv": "Nyhet: stora ryggsäckar i gult och lila!"
+      },
+      {
+        "fr": "Vous êtes étudiant ? Montrez votre carte : encore 10 % de réduction !",
+        "sv": "Är du student? Visa ditt kort: ytterligare 10 % rabatt!"
+      },
+      {
+        "fr": "Les cabines d'essayage sont au premier étage.",
+        "sv": "Provrummen ligger på första våningen."
+      },
+      {
+        "fr": "Ouvert du lundi au samedi, de 10 h à 19 h.",
+        "sv": "Öppet måndag till lördag, 10–19."
+      }
+    ],
+    "questions": [
+      {
+        "type": "helhet",
+        "q": "Vad är det för text?",
+        "opts": [
+          "En annons för en klädrea",
+          "Ett mejl från en kompis",
+          "En skylt i en skola",
+          "Ett recept"
+        ],
+        "a": 0,
+        "why": "« Grandes soldes chez Mode Jeune ! » med kläder och priser. Soldes betyder rea."
+      },
+      {
+        "type": "detalj",
+        "q": "Vad kostar de vita t-shirtarna?",
+        "opts": [
+          "5 €",
+          "12 €",
+          "8 €",
+          "20 €"
+        ],
+        "a": 2,
+        "why": "« t-shirts blancs 8 € »."
+      },
+      {
+        "type": "detalj",
+        "q": "Vilka färger finns rockarna i?",
+        "opts": [
+          "Gult och lila",
+          "Svart, grått eller brunt",
+          "Rött och svart",
+          "Grått och grönt"
+        ],
+        "a": 1,
+        "why": "« Manteaux chauds pour l'hiver : noirs, gris ou marron »."
+      },
+      {
+        "type": "tolkning",
+        "q": "Hur kan man få ännu lägre pris?",
+        "opts": [
+          "Genom att komma på måndag",
+          "Genom att köpa två tröjor",
+          "Genom att prova kläderna först",
+          "Genom att visa sitt studentkort"
+        ],
+        "a": 3,
+        "why": "« Vous êtes étudiant ? Montrez votre carte : encore 10 % de réduction ! »"
+      }
+    ],
+    "gloss": {
+      "soldes": {
+        "t": "les soldes",
+        "sv": "rea",
+        "g": "m"
+      },
+      "seulement": {
+        "t": "seulement",
+        "sv": "bara, endast",
+        "g": ""
+      },
+      "jupes": {
+        "t": "la jupe",
+        "sv": "kjol",
+        "g": "f"
+      },
+      "noires": {
+        "t": "noir, -e",
+        "sv": "svart",
+        "g": ""
+      },
+      "robes": {
+        "t": "la robe",
+        "sv": "klänning",
+        "g": "f"
+      },
+      "garçons": {
+        "t": "le garçon",
+        "sv": "pojke, kille",
+        "g": "m"
+      },
+      "chemises": {
+        "t": "la chemise",
+        "sv": "skjorta",
+        "g": "f"
+      },
+      "blanches": {
+        "t": "blanc, blanche",
+        "sv": "vit",
+        "g": ""
+      },
+      "bleues": {
+        "t": "bleu, -e",
+        "sv": "blå",
+        "g": ""
+      },
+      "baskets": {
+        "t": "les baskets",
+        "sv": "gympaskor, sneakers",
+        "g": "f"
+      },
+      "pulls": {
+        "t": "le pull",
+        "sv": "tröja",
+        "g": "m"
+      },
+      "gris": {
+        "t": "gris, -e",
+        "sv": "grå",
+        "g": ""
+      },
+      "verts": {
+        "t": "vert, -e",
+        "sv": "grön",
+        "g": ""
+      },
+      "manteaux": {
+        "t": "le manteau",
+        "sv": "rock, kappa",
+        "g": "m"
+      },
+      "hiver": {
+        "t": "l'hiver",
+        "sv": "vinter",
+        "g": "m"
+      },
+      "marron": {
+        "t": "marron",
+        "sv": "brun (böjs inte)",
+        "g": ""
+      },
+      "casquettes": {
+        "t": "la casquette",
+        "sv": "keps",
+        "g": "f"
+      },
+      "bonnets": {
+        "t": "le bonnet",
+        "sv": "mössa",
+        "g": "m"
+      },
+      "couleurs": {
+        "t": "la couleur",
+        "sv": "färg",
+        "g": "f"
+      },
+      "sacs": {
+        "t": "le sac à dos",
+        "sv": "ryggsäck",
+        "g": "m"
+      },
+      "jaunes": {
+        "t": "jaune",
+        "sv": "gul",
+        "g": ""
+      },
+      "violets": {
+        "t": "violet, violette",
+        "sv": "lila",
+        "g": ""
+      },
+      "montrez": {
+        "t": "montrer",
+        "sv": "visa",
+        "g": ""
+      },
+      "réduction": {
+        "t": "la réduction",
+        "sv": "rabatt",
+        "g": "f"
+      },
+      "essayage": {
+        "t": "la cabine d'essayage",
+        "sv": "provrum",
+        "g": "f"
+      }
+    }
+  },
+  {
+    "id": "fr1-r-e8",
+    "sec": "e8",
+    "title": "La semaine de Jules",
+    "lines": [
+      {
+        "fr": "Ma semaine",
+        "sv": "Min vecka"
+      },
+      {
+        "fr": "Lundi : école de huit heures à cinq heures. Il fait froid, je prends mon bonnet !",
+        "sv": "Måndag: skola från åtta till fem. Det är kallt, jag tar min mössa!"
+      },
+      {
+        "fr": "Mardi : entraînement de foot à six heures et demie.",
+        "sv": "Tisdag: fotbollsträning halv sju."
+      },
+      {
+        "fr": "Mercredi : pas de cours l'après-midi. Je vais chez ma grand-mère. Elle a quatre-vingt-dix ans !",
+        "sv": "Onsdag: inga lektioner på eftermiddagen. Jag går till min mormor. Hon är nittio år!"
+      },
+      {
+        "fr": "Jeudi : contrôle de maths à dix heures et quart. Aïe !",
+        "sv": "Torsdag: matteprov kvart över tio. Aj!"
+      },
+      {
+        "fr": "Vendredi : anniversaire de Lina, à sept heures du soir. Elle a seize ans.",
+        "sv": "Fredag: Linas födelsedag, klockan sju på kvällen. Hon fyller sexton."
+      },
+      {
+        "fr": "Samedi : il pleut toute la journée. Je reste à la maison et je regarde des films.",
+        "sv": "Lördag: det regnar hela dagen. Jag stannar hemma och tittar på film."
+      },
+      {
+        "fr": "Dimanche : il fait beau et chaud, vingt-quatre degrés ! Tour à vélo avec papa à onze heures.",
+        "sv": "Söndag: det är fint och varmt, tjugofyra grader! Cykeltur med pappa klockan elva."
+      },
+      {
+        "fr": "À faire : acheter un cadeau pour Lina avant vendredi. J'ai trente euros.",
+        "sv": "Att göra: köpa en present till Lina före fredag. Jag har trettio euro."
+      },
+      {
+        "fr": "Idée : un livre ou un t-shirt de son groupe préféré ?",
+        "sv": "Idé: en bok eller en t-shirt med hennes favoritband?"
+      }
+    ],
+    "questions": [
+      {
+        "type": "helhet",
+        "q": "Vad är det för text?",
+        "opts": [
+          "En inbjudan till ett kalas",
+          "En väderprognos",
+          "Jules planering för veckan",
+          "Ett brev till Lina"
+        ],
+        "a": 2,
+        "why": "Texten heter « Ma semaine » och går igenom veckodagarna från lundi till dimanche."
+      },
+      {
+        "type": "detalj",
+        "q": "När har Jules matteprov?",
+        "opts": [
+          "På torsdag kvart över tio",
+          "På tisdag halv sju",
+          "På onsdag eftermiddag",
+          "På fredag klockan sju"
+        ],
+        "a": 0,
+        "why": "« Jeudi : contrôle de maths à dix heures et quart »."
+      },
+      {
+        "type": "detalj",
+        "q": "Hur gammal är Jules mormor?",
+        "opts": [
+          "70 år",
+          "80 år",
+          "60 år",
+          "90 år"
+        ],
+        "a": 3,
+        "why": "« Elle a quatre-vingt-dix ans ! » Quatre-vingt-dix betyder 90."
+      },
+      {
+        "type": "tolkning",
+        "q": "Varför är Jules hemma på lördag?",
+        "opts": [
+          "Han är sjuk",
+          "Det regnar hela dagen",
+          "Han har prov på måndag",
+          "Han väntar på Lina"
+        ],
+        "a": 1,
+        "why": "« il pleut toute la journée. Je reste à la maison »."
+      }
+    ],
+    "gloss": {
+      "semaine": {
+        "t": "la semaine",
+        "sv": "vecka",
+        "g": "f"
+      },
+      "lundi": {
+        "t": "lundi",
+        "sv": "måndag",
+        "g": "m"
+      },
+      "froid": {
+        "t": "il fait froid",
+        "sv": "det är kallt",
+        "g": ""
+      },
+      "bonnet": {
+        "t": "le bonnet",
+        "sv": "mössa",
+        "g": "m"
+      },
+      "mardi": {
+        "t": "mardi",
+        "sv": "tisdag",
+        "g": "m"
+      },
+      "entraînement": {
+        "t": "l'entraînement",
+        "sv": "träning",
+        "g": "m"
+      },
+      "demie": {
+        "t": "et demie",
+        "sv": "halv (six heures et demie = halv sju)",
+        "g": ""
+      },
+      "mercredi": {
+        "t": "mercredi",
+        "sv": "onsdag",
+        "g": "m"
+      },
+      "grand-mère": {
+        "t": "la grand-mère",
+        "sv": "mormor, farmor",
+        "g": "f"
+      },
+      "quatre-vingt-dix": {
+        "t": "quatre-vingt-dix",
+        "sv": "nittio",
+        "g": ""
+      },
+      "jeudi": {
+        "t": "jeudi",
+        "sv": "torsdag",
+        "g": "m"
+      },
+      "contrôle": {
+        "t": "le contrôle",
+        "sv": "prov",
+        "g": "m"
+      },
+      "quart": {
+        "t": "et quart",
+        "sv": "kvart över",
+        "g": ""
+      },
+      "vendredi": {
+        "t": "vendredi",
+        "sv": "fredag",
+        "g": "m"
+      },
+      "anniversaire": {
+        "t": "l'anniversaire",
+        "sv": "födelsedag",
+        "g": "m"
+      },
+      "soir": {
+        "t": "le soir",
+        "sv": "kväll",
+        "g": "m"
+      },
+      "pleut": {
+        "t": "il pleut",
+        "sv": "det regnar",
+        "g": ""
+      },
+      "reste": {
+        "t": "rester",
+        "sv": "stanna",
+        "g": ""
+      },
+      "dimanche": {
+        "t": "dimanche",
+        "sv": "söndag",
+        "g": "m"
+      },
+      "vingt-quatre": {
+        "t": "vingt-quatre",
+        "sv": "tjugofyra",
+        "g": ""
+      },
+      "degrés": {
+        "t": "le degré",
+        "sv": "grad",
+        "g": "m"
+      },
+      "onze": {
+        "t": "onze",
+        "sv": "elva",
+        "g": ""
+      },
+      "acheter": {
+        "t": "acheter",
+        "sv": "köpa",
+        "g": ""
+      },
+      "cadeau": {
+        "t": "le cadeau",
+        "sv": "present",
+        "g": "m"
+      },
+      "trente": {
+        "t": "trente",
+        "sv": "trettio",
+        "g": ""
+      }
+    }
+  }
+]

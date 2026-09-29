@@ -1,0 +1,386 @@
+[
+ {
+  "id": "de1-c-dach",
+  "sec": "e1",
+  "title": "Deutsch in drei Ländern",
+  "lines": [
+   {
+    "fr": "Man spricht Deutsch in Deutschland, in Österreich und in der Schweiz.",
+    "sv": "Man talar tyska i Tyskland, i Österrike och i Schweiz."
+   },
+   {
+    "fr": "Die Hauptstadt von Deutschland ist Berlin. In Österreich ist es Wien, und in der Schweiz ist es Bern.",
+    "sv": "Tysklands huvudstad är Berlin. I Österrike är det Wien, och i Schweiz är det Bern."
+   },
+   {
+    "fr": "In der Schweiz spricht man auch Französisch, Italienisch und Rätoromanisch.",
+    "sv": "I Schweiz talar man också franska, italienska och rätoromanska."
+   },
+   {
+    "fr": "In Deutschland sagt man oft „Guten Tag“ oder „Hallo“.",
+    "sv": "I Tyskland säger man ofta ”Guten Tag” eller ”Hallo”."
+   },
+   {
+    "fr": "Im Süden von Deutschland und in Österreich sagt man auch „Grüß Gott“ oder „Servus“.",
+    "sv": "I södra Tyskland och i Österrike säger man också ”Grüß Gott” eller ”Servus”."
+   },
+   {
+    "fr": "In der Schweiz sagt man „Grüezi“.",
+    "sv": "I Schweiz säger man ”Grüezi”."
+   }
+  ],
+  "gloss": {
+   "hauptstadt": {
+    "t": "die Hauptstadt",
+    "sv": "huvudstad",
+    "g": "f"
+   },
+   "süden": {
+    "t": "der Süden",
+    "sv": "söder",
+    "g": "m"
+   },
+   "rätoromanisch": {
+    "t": "Rätoromanisch",
+    "sv": "rätoromanska",
+    "g": ""
+   },
+   "grüß": {
+    "t": "Grüß Gott",
+    "sv": "goddag (i södra Tyskland och Österrike)",
+    "g": ""
+   },
+   "servus": {
+    "t": "Servus",
+    "sv": "hej, hej då (Österrike, Bayern)",
+    "g": ""
+   },
+   "grüezi": {
+    "t": "Grüezi",
+    "sv": "goddag (Schweiz)",
+    "g": ""
+   },
+   "man": {
+    "t": "man",
+    "sv": "man",
+    "g": ""
+   }
+  },
+  "q": {
+   "q": "Vad säger man ofta i Schweiz när man hälsar?",
+   "opts": [
+    "Grüezi",
+    "Servus",
+    "Moin"
+   ],
+   "a": 0,
+   "why": "I texten står det: ”In der Schweiz sagt man „Grüezi“.”"
+  },
+  "ask": "Und in Schweden? Skriv 2–3 meningar på tyska: vad säger man i Sverige när man hälsar, och vilka språk talar du?",
+  "model": "In Schweden sagt man „Hej“. Man spricht Schwedisch. Ich spreche Schwedisch, Englisch und ein bisschen Deutsch.",
+  "modelSv": "I Sverige säger man ”Hej”. Man talar svenska. Jag talar svenska, engelska och lite tyska."
+ },
+ {
+  "id": "de1-c-sie",
+  "sec": "e2",
+  "title": "Du oder Sie?",
+  "lines": [
+   {
+    "fr": "Auf Deutsch gibt es zwei Wörter für „du“: du und Sie.",
+    "sv": "På tyska finns det två ord för ”du”: du och Sie."
+   },
+   {
+    "fr": "Du sagt man zu Freunden, zur Familie und zu Kindern.",
+    "sv": "Du säger man till kompisar, till familjen och till barn."
+   },
+   {
+    "fr": "Sie sagt man zu Erwachsenen, zum Beispiel zu einer Lehrerin oder zu einem Mann im Geschäft.",
+    "sv": "Sie säger man till vuxna, till exempel till en lärare eller till en man i en affär."
+   },
+   {
+    "fr": "Jugendliche sagen immer du zusammen.",
+    "sv": "Ungdomar säger alltid du till varandra."
+   },
+   {
+    "fr": "Mit Sie sagt man auch Herr oder Frau und den Nachnamen: „Guten Tag, Frau Weber!“",
+    "sv": "Med Sie säger man också Herr eller Frau och efternamnet: ”Goddag, fru Weber!”"
+   },
+   {
+    "fr": "Sie schreibt man immer mit einem großen S.",
+    "sv": "Sie skriver man alltid med stort S."
+   }
+  ],
+  "gloss": {
+   "erwachsenen": {
+    "t": "der/die Erwachsene",
+    "sv": "vuxen",
+    "g": ""
+   },
+   "geschäft": {
+    "t": "das Geschäft",
+    "sv": "affär",
+    "g": "n"
+   },
+   "jugendliche": {
+    "t": "der/die Jugendliche",
+    "sv": "ungdom",
+    "g": ""
+   },
+   "wörter": {
+    "t": "das Wort (Wörter)",
+    "sv": "ord",
+    "g": "n"
+   }
+  },
+  "q": {
+   "q": "Vad säger en tysk elev till sin lärare?",
+   "opts": [
+    "du och förnamnet",
+    "Sie och Frau/Herr + efternamnet",
+    "ingenting, bara hej"
+   ],
+   "a": 1,
+   "why": "Till vuxna, till exempel en lärare, säger man Sie och Frau eller Herr och efternamnet."
+  },
+  "ask": "Und in Schweden? Skriv 2–3 meningar: vad säger elever i Sverige till sina lärare? Vad heter din lärare?",
+  "model": "In Schweden sagen wir du. Wir sagen zum Beispiel „Anna“ zur Lehrerin. Meine Lehrerin heißt Karin.",
+  "modelSv": "I Sverige säger vi du. Vi säger till exempel ”Anna” till läraren. Min lärare heter Karin."
+ },
+ {
+  "id": "de1-c-schule",
+  "sec": "e3",
+  "title": "Die Schule in Deutschland",
+  "lines": [
+   {
+    "fr": "In Deutschland beginnt die Schule oft um acht Uhr, manchmal auch früher.",
+    "sv": "I Tyskland börjar skolan ofta klockan åtta, ibland också tidigare."
+   },
+   {
+    "fr": "Viele Schüler haben nur bis zum Mittag Unterricht. Dann essen sie zu Hause.",
+    "sv": "Många elever har bara lektioner fram till lunch. Sedan äter de hemma."
+   },
+   {
+    "fr": "Aber viele Schulen haben jetzt auch eine Kantine.",
+    "sv": "Men många skolor har nu också en matsal."
+   },
+   {
+    "fr": "Die Noten sind von 1 bis 6. Eine 1 ist sehr gut, eine 6 ist sehr schlecht.",
+    "sv": "Betygen går från 1 till 6. En etta är mycket bra, en sexa är mycket dåligt."
+   },
+   {
+    "fr": "Am ersten Schultag bekommen Kinder in der ersten Klasse eine Schultüte mit Süßigkeiten.",
+    "sv": "På första skoldagen får barn i första klass en skolstrut med godis."
+   }
+  ],
+  "gloss": {
+   "früher": {
+    "t": "früher",
+    "sv": "tidigare",
+    "g": ""
+   },
+   "viele": {
+    "t": "viel",
+    "sv": "många",
+    "g": ""
+   },
+   "noten": {
+    "t": "die Note",
+    "sv": "betyg",
+    "g": "f"
+   },
+   "schlecht": {
+    "t": "schlecht",
+    "sv": "dålig",
+    "g": ""
+   },
+   "ersten": {
+    "t": "erster",
+    "sv": "första",
+    "g": ""
+   },
+   "schultag": {
+    "t": "der Schultag",
+    "sv": "skoldag",
+    "g": "m"
+   },
+   "schultüte": {
+    "t": "die Schultüte",
+    "sv": "skolstrut",
+    "g": "f"
+   },
+   "süßigkeiten": {
+    "t": "die Süßigkeiten",
+    "sv": "godis",
+    "g": "pl"
+   },
+   "schulen": {
+    "t": "die Schule",
+    "sv": "skola",
+    "g": "f"
+   }
+  },
+  "q": {
+   "q": "Vilket betyg är bäst i Tyskland?",
+   "opts": [
+    "1",
+    "6",
+    "A"
+   ],
+   "a": 0,
+   "why": "”Eine 1 ist sehr gut, eine 6 ist sehr schlecht.”"
+  },
+  "ask": "Und in Schweden? Skriv 2–3 meningar: när börjar skolan, och var äter du lunch?",
+  "model": "In Schweden beginnt die Schule um acht Uhr. Wir essen in der Kantine. Das Essen ist gratis, aber nicht immer gut.",
+  "modelSv": "I Sverige börjar skolan klockan åtta. Vi äter i matsalen. Maten är gratis, men inte alltid god."
+ },
+ {
+  "id": "de1-c-brot",
+  "sec": "e5",
+  "title": "Brot und Abendbrot",
+  "lines": [
+   {
+    "fr": "In Deutschland gibt es sehr viel Brot: mehr als 3000 Sorten!",
+    "sv": "I Tyskland finns det väldigt mycket bröd: mer än 3 000 sorter!"
+   },
+   {
+    "fr": "Zum Frühstück essen viele Menschen Brötchen mit Butter, Käse oder Marmelade.",
+    "sv": "Till frukost äter många människor frallor med smör, ost eller marmelad."
+   },
+   {
+    "fr": "Am Mittag essen viele Familien warm, zum Beispiel Kartoffeln oder Nudeln.",
+    "sv": "Mitt på dagen äter många familjer varm mat, till exempel potatis eller pasta."
+   },
+   {
+    "fr": "Am Abend essen sie oft kalt: Brot mit Käse oder Wurst und einen Salat. Das heißt „Abendbrot“.",
+    "sv": "På kvällen äter de ofta kall mat: bröd med ost eller korv och en sallad. Det kallas ”Abendbrot”."
+   }
+  ],
+  "gloss": {
+   "mehr": {
+    "t": "mehr als",
+    "sv": "mer än",
+    "g": ""
+   },
+   "sorten": {
+    "t": "die Sorte",
+    "sv": "sort",
+    "g": "f"
+   },
+   "viele": {
+    "t": "viel",
+    "sv": "många",
+    "g": ""
+   },
+   "abendbrot": {
+    "t": "das Abendbrot",
+    "sv": "kvällsmat (smörgåsar)",
+    "g": "n"
+   },
+   "oft": {
+    "t": "oft",
+    "sv": "ofta",
+    "g": ""
+   }
+  },
+  "q": {
+   "q": "Vad är ”Abendbrot”?",
+   "opts": [
+    "En kall kvällsmåltid med bröd",
+    "En varm lunch",
+    "En sorts kaka"
+   ],
+   "a": 0,
+   "why": "”Am Abend essen sie oft kalt: Brot mit Käse oder Wurst … Das heißt „Abendbrot“.”"
+  },
+  "ask": "Und in Schweden? Skriv 2–3 meningar: vad äter du till frukost och till middag?",
+  "model": "In Schweden essen wir am Abend oft warm. Zum Frühstück esse ich Brot mit Butter und trinke Milch. Am Abend esse ich gern Fisch.",
+  "modelSv": "I Sverige äter vi ofta varm mat på kvällen. Till frukost äter jag smörgås med smör och dricker mjölk. På kvällen äter jag gärna fisk."
+ },
+ {
+  "id": "de1-c-sonntag",
+  "sec": "e8",
+  "title": "Der Sonntag",
+  "lines": [
+   {
+    "fr": "In Deutschland und in Österreich ist der Sonntag ein Ruhetag.",
+    "sv": "I Tyskland och Österrike är söndagen en vilodag."
+   },
+   {
+    "fr": "Die Geschäfte und die Supermärkte sind zu.",
+    "sv": "Affärerna och mataffärerna är stängda."
+   },
+   {
+    "fr": "Nur eine Bäckerei, ein Kiosk oder ein Geschäft im Bahnhof ist manchmal offen.",
+    "sv": "Bara ett bageri, en kiosk eller en affär på järnvägsstationen är ibland öppen."
+   },
+   {
+    "fr": "Am Sonntag sind viele Familien zusammen. Sie gehen in den Park oder in den Wald.",
+    "sv": "På söndagen är många familjer tillsammans. De går till parken eller till skogen."
+   },
+   {
+    "fr": "Am Nachmittag gibt es oft Kaffee und Kuchen.",
+    "sv": "På eftermiddagen blir det ofta kaffe och kaka."
+   }
+  ],
+  "gloss": {
+   "ruhetag": {
+    "t": "der Ruhetag",
+    "sv": "vilodag",
+    "g": "m"
+   },
+   "geschäfte": {
+    "t": "das Geschäft",
+    "sv": "affär",
+    "g": "n"
+   },
+   "supermärkte": {
+    "t": "der Supermarkt",
+    "sv": "mataffär",
+    "g": "m"
+   },
+   "zu": {
+    "t": "zu",
+    "sv": "stängd",
+    "g": ""
+   },
+   "bäckerei": {
+    "t": "die Bäckerei",
+    "sv": "bageri",
+    "g": "f"
+   },
+   "offen": {
+    "t": "offen",
+    "sv": "öppen",
+    "g": ""
+   },
+   "viele": {
+    "t": "viel",
+    "sv": "många",
+    "g": ""
+   },
+   "nachmittag": {
+    "t": "der Nachmittag",
+    "sv": "eftermiddag",
+    "g": "m"
+   },
+   "oft": {
+    "t": "oft",
+    "sv": "ofta",
+    "g": ""
+   }
+  },
+  "q": {
+   "q": "Vad är stängt på söndagar i Tyskland?",
+   "opts": [
+    "Affärer och mataffärer",
+    "Parker",
+    "Kiosker på stationen"
+   ],
+   "a": 0,
+   "why": "”Die Geschäfte und die Supermärkte sind zu.”"
+  },
+  "ask": "Und in Schweden? Skriv 2–3 meningar: är affärerna öppna på söndag? Vad gör du på söndagar?",
+  "model": "In Schweden sind die Geschäfte am Sonntag offen. Am Sonntag schlafe ich lange. Dann gehe ich mit dem Hund in den Wald.",
+  "modelSv": "I Sverige är affärerna öppna på söndag. På söndagen sover jag länge. Sedan går jag till skogen med hunden."
+ }
+]

@@ -1,0 +1,150 @@
+[
+ {
+  "id": "w-s1-anfrage",
+  "sec": "s1",
+  "title": "Formellt mejl: fråga om tillgodoräknande",
+  "task": "Du har läst två terminer musikvetenskap i Sverige och vill börja på en tysk musikhögskola. Skriv ett formellt mejl (180–250 ord) till examensexpeditionen (Prüfungsamt): presentera dig, förklara vilka kurser du har läst, fråga om de kan tillgodoräknas (angerechnet werden) och vilka handlingar som behövs, och be om ett svar före en viss tidsfrist. Använd nominalstil där det passar och avsluta formellt.",
+  "min": 180,
+  "max": 250,
+  "need": {
+   "connectors": 3,
+   "chapterWords": 2,
+   "tenses": [
+    "Präsens",
+    "Perfekt",
+    "Konjunktiv II"
+   ]
+  },
+  "model": "Sehr geehrte Damen und Herren,\n\nmein Name ist Sara Lind, ich studiere derzeit im zweiten Semester Musikwissenschaft an der Universität Uppsala in Schweden. Vor zwei Wochen habe ich eine Zusage für den Bachelorstudiengang Violine an Ihrer Hochschule erhalten, worüber ich mich sehr freue.\n\nIm Rahmen meines bisherigen Studiums habe ich unter anderem die Module Musikgeschichte I und II, Harmonielehre, Gehörbildung sowie eine Einführung in das wissenschaftliche Arbeiten abgeschlossen. Insgesamt habe ich dabei 45 Leistungspunkte erworben. Da sich die Inhalte teilweise mit den Pflichtmodulen Ihres Studiengangs überschneiden, möchte ich anfragen, ob diese Leistungen angerechnet werden können.\n\nKönnten Sie mir bitte mitteilen, welche Unterlagen für einen Antrag auf Anerkennung erforderlich sind? Ein Transcript of Records sowie ausführliche Modulbeschreibungen liegen mir in englischer Sprache vor. Falls eine beglaubigte Übersetzung ins Deutsche nötig sein sollte, könnte ich diese selbstverständlich nachreichen. Außerdem wäre es hilfreich zu wissen, ob die Anrechnung vor oder erst nach der Immatrikulation beantragt werden muss.\n\nWeil die Einschreibung bereits Ende September erfolgt und ich meinen Studienverlaufsplan rechtzeitig erstellen möchte, wäre ich Ihnen für eine kurze Rückmeldung bis zum 15. August sehr dankbar. Für Rückfragen stehe ich Ihnen jederzeit gern zur Verfügung.\n\nVielen Dank im Voraus für Ihre Mühe.\n\nMit freundlichen Grüßen\nSara Lind",
+  "modelSv": "Exempeltext: ett formellt mejl som presenterar skribenten, räknar upp kurserna, frågar om tillgodoräknande och vilka handlingar som behövs och ber om svar före ett visst datum."
+ },
+ {
+  "id": "w-s2-referat",
+  "sec": "s2",
+  "title": "Referat: en epok eller ett verk",
+  "task": "Skriv manus till ett kort referat (200–300 ord) om ett musikverk du spelar: tillkomsthistoria, form, uppförandepraxis och mottagande. Använd referatfraser (Im Folgenden …, Zunächst …, Abschließend …) och Konjunktiv I när du återger en källa.",
+  "min": 200,
+  "max": 300,
+  "need": {
+   "connectors": 4,
+   "chapterWords": 2,
+   "tenses": [
+    "Präsens",
+    "Präteritum",
+    "Passiv"
+   ]
+  },
+  "model": "Im Folgenden möchte ich Ihnen die Violinsonate Nr. 1 in G-Dur von Johannes Brahms vorstellen. Zunächst gehe ich auf die Entstehungsgeschichte ein, anschließend auf die Form und die Harmonik, und abschließend auf die Rezeption des Werkes.\n\nDie Sonate entstand in den Sommern 1878 und 1879 im österreichischen Pörtschach am Wörthersee, wo Brahms gern seine Ferien verbrachte. Sie wurde im November 1879 in Bonn uraufgeführt. Brahms war damals bereits ein berühmter Komponist, hatte aber zuvor mehrere Violinsonaten vernichtet, weil er mit ihnen nicht zufrieden war.\n\nBesonders auffällig ist, dass alle drei Sätze thematisch miteinander verbunden sind. Das Finale zitiert nämlich die Melodie von Brahms' eigenem Lied „Regenlied“. Deshalb wird die Sonate oft auch Regenlied-Sonate genannt. Wie die Musikwissenschaftlerin Clara Voss betont, sei dieses Zitat mehr als ein technisches Mittel: Es verleihe dem ganzen Werk einen melancholischen, fast erinnernden Charakter.\n\nFür die Interpretation bedeutet das, dass man die Sätze nicht isoliert spielen sollte. Die Phrasierung muss sich am Gesang orientieren, und das Tempo darf nicht zu schnell sein, obwohl die Bezeichnung „Vivace ma non troppo“ lautet.\n\nZusammenfassend lässt sich festhalten, dass die Sonate zu den persönlichsten Kammermusikwerken von Brahms gehört. Sie wurde vom Publikum sofort begeistert aufgenommen und gehört bis heute zum Standardrepertoire. Vielen Dank für Ihre Aufmerksamkeit. Ich freue mich auf Ihre Fragen.",
+  "modelSv": "Exempel på ett kort referat om ett verk med struktur, källa i Konjunktiv I och avslutning."
+ },
+ {
+  "id": "w-s3-grafik",
+  "sec": "s3",
+  "title": "Grafikbeskrivning (TestDaF)",
+  "task": "Beskriv följande uppgifter i en sammanhängande text (150–200 ord), som i TestDaF: Anteil der Jugendlichen (12–19 Jahre), die ein Instrument spielen: 2005: 28 %, 2010: 26 %, 2015: 24 %, 2020: 21 %, 2025: 23 %. Mädchen 2025: 29 %, Jungen 2025: 17 %. Beskriv den viktigaste utvecklingen, jämför och ge möjliga orsaker.",
+  "min": 150,
+  "max": 200,
+  "need": {
+   "connectors": 4,
+   "chapterWords": 1,
+   "tenses": [
+    "Präsens",
+    "Präteritum"
+   ]
+  },
+  "model": "Die Grafik zeigt, wie sich der Anteil der Jugendlichen zwischen 12 und 19 Jahren, die ein Instrument spielen, in den Jahren von 2005 bis 2025 entwickelt hat. Die Angaben sind in Prozent gemacht.\n\nAuffällig ist zunächst ein stetiger Rückgang über fünfzehn Jahre: Während der Anteil im Jahr 2005 noch bei 28 Prozent lag, sank er bis 2020 um sieben Prozentpunkte auf 21 Prozent. Das war der Tiefpunkt der gesamten Entwicklung. Danach ist wieder ein leichter Anstieg zu beobachten, denn 2025 spielten 23 Prozent der Jugendlichen ein Instrument.\n\nDeutliche Unterschiede bestehen außerdem zwischen den Geschlechtern. Im Jahr 2025 spielten 29 Prozent der Mädchen, aber nur 17 Prozent der Jungen ein Instrument. Der Anteil der Mädchen ist damit fast doppelt so hoch.\n\nDer Rückgang könnte darauf zurückzuführen sein, dass digitale Medien immer mehr Freizeit beanspruchen. Der jüngste Anstieg hängt möglicherweise mit neuen Angeboten an Ganztagsschulen zusammen, wo Kinder kostenlos ein Instrument ausprobieren können. Insgesamt lässt sich festhalten, dass das Musizieren bei Jugendlichen zwar an Bedeutung verloren hat, der Trend sich aber inzwischen umkehrt.",
+  "modelSv": "Exempel: inledning om vad diagrammet visar, huvudtrend med siffror, jämförelse och möjliga orsaker."
+ },
+ {
+  "id": "w-s4-beschwerde",
+  "sec": "s4",
+  "title": "Formellt brev: klagomål till hyresvärden",
+  "task": "Din granne klagar på att du övar på ditt instrument, och hyresvärden har skickat en varning (Abmahnung). Skriv ett formellt brev (170–250 ord): hänvisa till varningen, förklara när och hur länge du övar, hänvisa till ordningsreglerna (tysta timmar), föreslå en lösning och be om ett samtal.",
+  "min": 170,
+  "max": 250,
+  "need": {
+   "connectors": 4,
+   "chapterWords": 1,
+   "tenses": [
+    "Präsens",
+    "Konjunktiv II"
+   ]
+  },
+  "model": "Sehr geehrte Frau Krüger,\n\nmit Bezug auf Ihr Schreiben vom 3. Mai, in dem Sie mich wegen Ruhestörung abmahnen, möchte ich hiermit Stellung nehmen.\n\nZunächst möchte ich betonen, dass ich die Beschwerde meines Nachbarn ernst nehme. Ich studiere Violine an der Musikhochschule und muss daher täglich mehrere Stunden üben. Allerdings übe ich werktags nur zwischen 10 und 12 Uhr sowie zwischen 16 und 19 Uhr, also ausschließlich außerhalb der Ruhezeiten, die in der Hausordnung festgelegt sind. Laut Mietvertrag ist das Musizieren in diesem Rahmen ausdrücklich erlaubt. Die Abmahnung halte ich deshalb für nicht gerechtfertigt.\n\nTrotzdem liegt mir viel an einem guten Verhältnis zu meinen Nachbarn. Um die Situation zu entschärfen, wäre ich bereit, beim Üben einen Dämpfer zu verwenden und am Wochenende nur in den Übezellen der Hochschule zu spielen. Außerdem könnte ich meinem Nachbarn einen Plan mit meinen Übezeiten geben, damit er sich darauf einstellen kann.\n\nIch würde mich freuen, wenn wir die Angelegenheit in einem persönlichen Gespräch klären könnten, gern auch gemeinsam mit meinem Nachbarn. Sollte ich bis zum 20. Mai nichts von Ihnen hören, werde ich mich telefonisch bei Ihnen melden.\n\nMit freundlichen Grüßen\nElin Berg",
+  "modelSv": "Exempel på ett formellt brev: hänvisning till varningen, förklaring med hänvisning till reglerna, förslag på lösning och önskan om samtal."
+ },
+ {
+  "id": "w-s5-eroerterung",
+  "sec": "s5",
+  "title": "Erörterung: Grundeinkommen für Künstler?",
+  "task": "Skriv en Erörterung (200–350 ord): Sollte der Staat Künstlerinnen und Künstlern ein Grundeinkommen zahlen? Ta upp argument för och emot, använd gärna exempel från Irland och Tyskland och avsluta med din ståndpunkt.",
+  "min": 200,
+  "max": 350,
+  "need": {
+   "connectors": 5,
+   "chapterWords": 3,
+   "tenses": [
+    "Präsens",
+    "Konjunktiv II",
+    "Passiv"
+   ]
+  },
+  "model": "Viele freischaffende Musikerinnen und Musiker leben in prekären Verhältnissen. Ihr Einkommen schwankt stark, und Rücklagen für das Alter können sie kaum bilden. Deshalb wird immer wieder gefordert, der Staat solle Künstlern ein Grundeinkommen zahlen. Ist das eine gute Idee?\n\nFür ein solches Grundeinkommen spricht zunächst die Existenzsicherung. Wer nicht jeden Monat um seine Miete fürchten muss, kann sich auf seine künstlerische Arbeit konzentrieren. Außerdem zeigt ein Pilotprojekt in Irland, dass die Teilnehmenden mehr Zeit für ihre Kunst hatten und seltener den Beruf aufgaben. Nicht zuletzt profitiert die ganze Gesellschaft davon, wenn Kultur nicht nur von denen gemacht wird, die es sich leisten können.\n\nAndererseits gibt es gewichtige Einwände. Ein Grundeinkommen wäre sehr teuer und müsste aus Steuergeldern finanziert werden. Zudem stellt sich die Frage, wer überhaupt als Künstler gilt. Schließlich könnte man einwenden, dass auch Pflegekräfte oder Erzieher schlecht bezahlt werden, ohne ein Grundeinkommen zu erhalten.\n\nWägt man die Argumente ab, so überzeugt mich vor allem das Beispiel aus Irland. Zwar sind die Kosten hoch, aber verglichen mit dem gesamten Kulturhaushalt wären sie überschaubar. Allerdings müsste man klare Kriterien festlegen, etwa eine Mitgliedschaft in der Künstlersozialkasse.\n\nZusammenfassend bin ich der Meinung, dass ein befristetes Grundeinkommen für Künstler sinnvoll wäre, wenn es wissenschaftlich begleitet wird. So ließe sich überprüfen, ob es tatsächlich die erhofften Wirkungen hat.",
+  "modelSv": "Exempel på en Erörterung med inledning, argument för och emot, avvägning och slutsats."
+ },
+ {
+  "id": "w-s6-leserbrief",
+  "sec": "s6",
+  "title": "Insändare: sänkt rösträttsålder",
+  "task": "Skriv en insändare (Leserbrief, 160–250 ord) till en tidning om förslaget att sänka rösträttsåldern till 16 år i förbundsdagsvalet. Hänvisa till en artikel, ta ställning och motivera.",
+  "min": 160,
+  "max": 250,
+  "need": {
+   "connectors": 4,
+   "tenses": [
+    "Präsens",
+    "Perfekt",
+    "Konjunktiv II"
+   ]
+  },
+  "model": "Zu Ihrem Artikel „Wählen ab 16?“ vom 12. März\n\nMit großem Interesse habe ich Ihren Beitrag über die Senkung des Wahlalters gelesen. Als Achtzehnjährige, die gerade zum ersten Mal wählen durfte, möchte ich mich dazu äußern.\n\nIch halte eine Senkung des Wahlalters auf 16 Jahre bei der Bundestagswahl für überfällig. Erstens sind Jugendliche von vielen politischen Entscheidungen besonders lange betroffen, etwa beim Klimaschutz oder bei der Rente. Zweitens dürfen Sechzehnjährige in mehreren Bundesländern bereits bei Landtagswahlen abstimmen, und die Erfahrungen sind durchaus positiv. Drittens könnte ein früheres Wahlrecht der Politikverdrossenheit entgegenwirken, weil Schulen das Thema dann im Unterricht behandeln würden.\n\nZwar wird oft eingewandt, junge Menschen seien noch nicht reif genug und ließen sich leicht beeinflussen. Dem ist jedoch entgegenzuhalten, dass auch viele Erwachsene ihre Entscheidung nicht besonders gründlich treffen. Außerdem zeigen Studien, dass die Wahlbeteiligung höher ist, wenn Menschen zum ersten Mal wählen, solange sie noch zu Hause wohnen.\n\nAbschließend möchte ich betonen, dass eine Demokratie davon lebt, dass möglichst viele Menschen mitentscheiden. Deshalb sollte der Bundestag das Wahlalter senken.\n\nLea Andersson, Hamburg",
+  "modelSv": "Exempel på en insändare med hänvisning till artikeln, tes, argument, bemött motargument och avslutning."
+ },
+ {
+  "id": "w-s7-rede",
+  "sec": "s7",
+  "title": "Tal: rädda musikskolan",
+  "task": "Skriv ett kort tal (200–300 ord) som du håller på ett möte i kommunfullmäktige mot att musikskolan läggs ned. Använd minst tre retoriska grepp (anekdot, retorisk fråga, anafor, appell) och ett tydligt slut.",
+  "min": 200,
+  "max": 300,
+  "need": {
+   "connectors": 4,
+   "tenses": [
+    "Präsens",
+    "Präteritum",
+    "Konjunktiv II"
+   ]
+  },
+  "model": "Sehr geehrte Damen und Herren,\n\nals ich sieben Jahre alt war, hielt ich in diesem Gebäude zum ersten Mal eine Geige in der Hand. Sie war viel zu groß für mich, und der erste Ton klang furchtbar. Trotzdem wusste ich in diesem Moment, dass ich Musikerin werden wollte. Heute studiere ich an der Musikhochschule, und ohne unsere Musikschule stünde ich nicht hier.\n\nDie Stadt plant, die Musikschule zu schließen, weil sie sparen muss. Das verstehe ich. Aber was wäre diese Stadt ohne ihre Musikschule? Wo sollen Kinder lernen, einander zuzuhören, wenn es keinen Ort mehr dafür gibt?\n\nDie Musikschule ist ein Ort, an dem Kinder aus allen Stadtteilen zusammenkommen. Sie ist ein Ort, an dem niemand fragt, woher man kommt. Sie ist ein Ort, an dem man lernt, dass Üben sich lohnt. Über 800 Kinder werden hier jede Woche unterrichtet, und für viele von ihnen gibt es keine andere Möglichkeit, ein Instrument zu lernen.\n\nMan könnte einwenden, dass private Lehrer diese Aufgabe übernehmen können. Doch Privatunterricht kostet oft das Doppelte, und das können sich viele Familien nicht leisten. Die Einsparung wäre dagegen gering, denn sie beträgt weniger als ein Prozent des städtischen Haushalts.\n\nDeshalb appelliere ich an Sie: Stimmen Sie gegen die Schließung! Geben Sie den Kindern dieser Stadt dieselbe Chance, die ich bekommen habe. Vielen Dank.",
+  "modelSv": "Exempel på ett tal med anekdot, retoriska frågor, anafor, bemött invändning och en appell på slutet."
+ },
+ {
+  "id": "w-s8-eroerterung",
+  "sec": "s8",
+  "title": "Erörterung: minneskultur utan tidsvittnen",
+  "task": "Snart finns inga tidsvittnen kvar från andra världskriget. Skriv en Erörterung (180–350 ord): Hur kann Erinnerung an den Nationalsozialismus in Zukunft lebendig bleiben? Diskutera minst tre möjligheter (skola, digitala medier, minnesplatser, konst och musik).",
+  "min": 180,
+  "max": 350,
+  "need": {
+   "connectors": 5,
+   "chapterWords": 1,
+   "tenses": [
+    "Präsens",
+    "Passiv",
+    "Perfekt"
+   ]
+  },
+  "model": "In wenigen Jahren wird es keine Zeitzeugen des Nationalsozialismus mehr geben. Viele Schülerinnen und Schüler haben noch Überlebende getroffen, die von Verfolgung und Deportation erzählt haben. Wie kann die Erinnerung lebendig bleiben, wenn diese persönlichen Begegnungen nicht mehr möglich sind?\n\nEine erste Möglichkeit sind Besuche in Gedenkstätten. Wer das ehemalige Konzentrationslager Buchenwald besucht, begreift die Dimension der Verbrechen anders als im Klassenzimmer. Allerdings reicht ein einzelner Besuch nicht aus, wenn er nicht gut vorbereitet und nachbereitet wird.\n\nZweitens können digitale Medien helfen. Schon heute werden Interviews mit Zeitzeugen aufgezeichnet, sodass auch künftige Generationen ihre Stimmen hören können. Manche Projekte ermöglichen sogar Gespräche mit einer Aufnahme, die auf Fragen antwortet. Kritiker befürchten jedoch, dass die Erinnerung dadurch zu einem technischen Erlebnis wird.\n\nDrittens sind lokale Projekte wie die Stolpersteine besonders wirkungsvoll. Wenn Jugendliche selbst die Biographie einer Nachbarin recherchieren, die deportiert wurde, wird Geschichte konkret und persönlich. Auch Konzerte mit Musik verfolgter Komponisten können Erinnerung stiften.\n\nWägt man diese Möglichkeiten ab, so zeigt sich, dass keine allein ausreicht. Entscheidend ist, dass Erinnerung nicht nur verordnet, sondern selbst erarbeitet wird. Deshalb sollten Schulen vor allem lokale und eigene Projekte fördern, die durch Gedenkstättenbesuche und digitale Zeugnisse ergänzt werden.",
+  "modelSv": "Exempel på en Erörterung med tre möjligheter, deras gränser och en slutsats."
+ }
+]

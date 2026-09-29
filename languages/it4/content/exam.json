@@ -1,0 +1,855 @@
+{
+ "name": "CELI 1 (A2)",
+ "pass": 60,
+ "note": "Övningar i samma format som CELI 1 (Università per Stranieri di Perugia), skrivna för appen. Inte officiellt material. På provet görs läsförståelse och skrivande under sammanlagt två timmar, hörförståelsen tar 20 minuter och den muntliga delen ungefär tio minuter inför en examinator. Uppgiftstyper som bygger på bilder eller på att para ihop meningsdelar och frågor med svar (A.1, A.3, A.4) och luckfyllnad med egna ord (B.1) finns inte här ännu.",
+ "parts": [
+  {
+   "id": "lettura",
+   "name": "Comprensione della lettura",
+   "sv": "Läsa",
+   "time": 60
+  },
+  {
+   "id": "ascolto",
+   "name": "Comprensione dell'ascolto",
+   "sv": "Lyssna",
+   "time": 20
+  },
+  {
+   "id": "scrittura",
+   "name": "Produzione di testi scritti",
+   "sv": "Skriva",
+   "time": 60
+  },
+  {
+   "id": "orale",
+   "name": "Produzione orale",
+   "sv": "Tala",
+   "time": 10
+  }
+ ],
+ "approxWords": true,
+ "tasks": [
+  {
+   "id": "it4-le-1",
+   "part": "lettura",
+   "teil": "A.2",
+   "title": "Avvisi e cartelli",
+   "time": 12,
+   "instr": "Du läser fem korta texter: skyltar, meddelanden och annonser. Välj det alternativ som passar bäst till varje text.",
+   "lines": [
+    {
+     "fr": "1. BIBLIOTECA COMUNALE – Da lunedì 3 marzo la biblioteca è aperta anche il sabato mattina, dalle 9 alle 13. Il prestito dei libri è gratuito per tutti gli studenti.",
+     "sv": "1. KOMMUNBIBLIOTEKET – Från måndag 3 mars är biblioteket öppet även på lördagsförmiddagar, 9–13. Boklån är gratis för alla elever."
+    },
+    {
+     "fr": "2. Cercasi ragazzo o ragazza per lavoro estivo in gelateria, luglio e agosto, quattro ore al giorno. Richiesta conoscenza dell'inglese. Telefonare a Marco dopo le 18.",
+     "sv": "2. Vi söker kille eller tjej för sommarjobb på glassbar, juli och augusti, fyra timmar om dagen. Engelskkunskaper krävs. Ring Marco efter kl. 18."
+    },
+    {
+     "fr": "3. Gentili clienti, il ristorante resterà chiuso per ferie dal 10 al 25 agosto. Vi aspettiamo a settembre con il nuovo menù!",
+     "sv": "3. Kära gäster, restaurangen håller semesterstängt 10–25 augusti. Vi väntar på er i september med den nya menyn!"
+    },
+    {
+     "fr": "4. Palestra «In forma»: a settembre il primo mese costa solo 20 euro. Porta un amico e anche lui avrà lo sconto!",
+     "sv": "4. Gymmet «In forma»: i september kostar första månaden bara 20 euro. Ta med en kompis så får även hen rabatt!"
+    },
+    {
+     "fr": "5. Ciao Luca, sono andata dal dottore, torno verso le sei. La cena è nel frigo, devi solo scaldarla. Non dimenticare di dare da mangiare al gatto! Mamma",
+     "sv": "5. Hej Luca, jag har gått till doktorn, jag kommer hem vid sex. Middagen står i kylen, du behöver bara värma den. Glöm inte att ge katten mat! Mamma"
+    }
+   ],
+   "qs": [
+    {
+     "q": "Testo 1: Che cosa cambia in biblioteca?",
+     "opts": [
+      "Adesso è aperta anche il sabato mattina",
+      "Il prestito dei libri costa di più",
+      "È chiusa il lunedì"
+     ],
+     "a": 0,
+     "why": "«è aperta anche il sabato mattina»."
+    },
+    {
+     "q": "Testo 2: Che cosa si chiede a chi vuole il lavoro?",
+     "opts": [
+      "Di lavorare tutto il giorno",
+      "Di parlare inglese",
+      "Di telefonare la mattina"
+     ],
+     "a": 1,
+     "why": "«Richiesta conoscenza dell'inglese»."
+    },
+    {
+     "q": "Testo 3: Quando si può mangiare di nuovo al ristorante?",
+     "opts": [
+      "Dal 10 agosto",
+      "Dal 25 luglio",
+      "Da settembre"
+     ],
+     "a": 2,
+     "why": "«Vi aspettiamo a settembre»."
+    },
+    {
+     "q": "Testo 4: Che cosa offre la palestra?",
+     "opts": [
+      "Un mese gratis",
+      "Uno sconto anche per un amico",
+      "Lezioni private"
+     ],
+     "a": 1,
+     "why": "«Porta un amico e anche lui avrà lo sconto»."
+    },
+    {
+     "q": "Testo 5: Che cosa deve fare Luca?",
+     "opts": [
+      "Andare dal dottore",
+      "Preparare la cena per la mamma",
+      "Scaldare la cena e dare da mangiare al gatto"
+     ],
+     "a": 2,
+     "why": "«devi solo scaldarla … dare da mangiare al gatto»."
+    }
+   ]
+  },
+  {
+   "id": "it4-le-2",
+   "part": "lettura",
+   "teil": "A.2",
+   "title": "Messaggi e annunci",
+   "time": 12,
+   "instr": "Du läser fem korta texter. Välj det alternativ som passar bäst till varje text.",
+   "lines": [
+    {
+     "fr": "1. Treno regionale 3421 per Firenze: a causa di lavori sulla linea, oggi il treno parte dal binario 8 invece che dal binario 3.",
+     "sv": "1. Regionaltåg 3421 till Florens: på grund av banarbeten avgår tåget i dag från spår 8 i stället för spår 3."
+    },
+    {
+     "fr": "2. Affittasi monolocale arredato vicino all'università, 450 euro al mese, spese comprese. Solo studenti, no animali.",
+     "sv": "2. Möblerad etta uthyres nära universitetet, 450 euro i månaden, avgifter ingår. Endast studenter, inga djur."
+    },
+    {
+     "fr": "3. Ciao Giulia! Il concerto di sabato è stato annullato perché il cantante è malato. I biglietti sono validi per la nuova data, il 12 novembre. Baci, Anna",
+     "sv": "3. Hej Giulia! Konserten på lördag är inställd eftersom sångaren är sjuk. Biljetterna gäller för det nya datumet, 12 november. Puss, Anna"
+    },
+    {
+     "fr": "4. Farmacia di turno: questa notte è aperta la farmacia Centrale, in piazza Garibaldi 5. Per le urgenze chiamare il 118.",
+     "sv": "4. Jourapotek: i natt har apoteket Centrale på piazza Garibaldi 5 öppet. Vid akuta fall ring 118."
+    },
+    {
+     "fr": "5. Corso di cucina tradizionale: impara a fare la pasta fresca con la nonna Rosa! Ogni giovedì alle 18. Posti limitati, iscrizione obbligatoria.",
+     "sv": "5. Kurs i traditionell matlagning: lär dig göra färsk pasta med mormor Rosa! Varje torsdag kl. 18. Begränsat antal platser, anmälan krävs."
+    }
+   ],
+   "qs": [
+    {
+     "q": "Testo 1: Che cosa è cambiato per il treno?",
+     "opts": [
+      "L'orario",
+      "Il binario",
+      "La destinazione"
+     ],
+     "a": 1,
+     "why": "«parte dal binario 8 invece che dal binario 3»."
+    },
+    {
+     "q": "Testo 2: Chi può affittare il monolocale?",
+     "opts": [
+      "Una famiglia con un cane",
+      "Uno studente",
+      "Un turista per una settimana"
+     ],
+     "a": 1,
+     "why": "«Solo studenti, no animali»."
+    },
+    {
+     "q": "Testo 3: Che cosa succede con i biglietti?",
+     "opts": [
+      "Si possono usare il 12 novembre",
+      "Sono rimborsati",
+      "Non valgono più"
+     ],
+     "a": 0,
+     "why": "«I biglietti sono validi per la nuova data»."
+    },
+    {
+     "q": "Testo 4: Perché si legge questo avviso?",
+     "opts": [
+      "Per sapere quale farmacia è aperta di notte",
+      "Per prenotare una visita",
+      "Per comprare medicine online"
+     ],
+     "a": 0,
+     "why": "«Farmacia di turno: questa notte è aperta …»."
+    },
+    {
+     "q": "Testo 5: Che cosa bisogna fare per partecipare al corso?",
+     "opts": [
+      "Portare la pasta",
+      "Iscriversi prima",
+      "Arrivare alle 16"
+     ],
+     "a": 1,
+     "why": "«iscrizione obbligatoria»."
+    }
+   ]
+  },
+  {
+   "id": "it4-le-3",
+   "part": "lettura",
+   "teil": "A.5",
+   "title": "Tre brevi testi sul tempo libero",
+   "time": 15,
+   "instr": "Du läser korta texter. Välj rätt svar (a, b eller c) till varje fråga.",
+   "lines": [
+    {
+     "fr": "Testo A. Mi chiamo Paolo e ho diciassette anni. Da due anni faccio volontariato in un canile vicino a Bologna. Ogni domenica porto a passeggio i cani e li aiuto a stare con le persone. Mio padre all'inizio era contrario, perché diceva che dovevo studiare. Adesso invece viene anche lui, e l'anno scorso abbiamo adottato Lillo, un cane di dieci anni che nessuno voleva.",
+     "sv": "Text A. Jag heter Paolo och är sjutton år. I två år har jag arbetat som volontär på ett hundhem nära Bologna. Varje söndag tar jag ut hundarna på promenad och hjälper dem att vänja sig vid människor. Min pappa var emot det i början, eftersom han sa att jag skulle plugga. Nu följer han däremot med, och förra året adopterade vi Lillo, en tioårig hund som ingen ville ha."
+    },
+    {
+     "fr": "Testo B. Quest'anno la festa del paese di San Vito sarà diversa. Siccome molti abitanti si sono lamentati del rumore, la musica finirà a mezzanotte e non alle due. In compenso la festa durerà tre giorni invece di due, e sabato ci sarà un mercatino di prodotti tipici in piazza.",
+     "sv": "Text B. I år blir byfesten i San Vito annorlunda. Eftersom många invånare har klagat på oljudet slutar musiken vid midnatt och inte klockan två. I gengäld varar festen i tre dagar i stället för två, och på lördag blir det en marknad med lokala specialiteter på torget."
+    },
+    {
+     "fr": "Testo C. Cara Sofia, grazie per il libro che mi hai regalato! L'avevo già visto in libreria, ma costava troppo. L'ho cominciato ieri sera e non sono riuscita a smettere fino alle due di notte. Quando l'avrò finito, te lo presto, così ne parliamo insieme. Un abbraccio, Chiara",
+     "sv": "Text C. Kära Sofia, tack för boken du gav mig! Jag hade redan sett den i bokhandeln, men den kostade för mycket. Jag började på den i går kväll och kunde inte sluta förrän klockan två på natten. När jag har läst ut den lånar jag ut den till dig, så pratar vi om den tillsammans. Kram, Chiara"
+    }
+   ],
+   "qs": [
+    {
+     "q": "Testo A: Che cosa fa Paolo la domenica?",
+     "opts": [
+      "Studia con il padre",
+      "Porta a passeggio i cani del canile",
+      "Lavora in un negozio di animali"
+     ],
+     "a": 1,
+     "why": "«Ogni domenica porto a passeggio i cani»."
+    },
+    {
+     "q": "Testo A: Che cosa pensa oggi il padre di Paolo?",
+     "opts": [
+      "È ancora contrario",
+      "Aiuta anche lui",
+      "Vuole comprare un cane giovane"
+     ],
+     "a": 1,
+     "why": "«Adesso invece viene anche lui»."
+    },
+    {
+     "q": "Testo B: Perché la musica finirà prima?",
+     "opts": [
+      "Per il rumore",
+      "Perché piove",
+      "Perché costa troppo"
+     ],
+     "a": 0,
+     "why": "«molti abitanti si sono lamentati del rumore»."
+    },
+    {
+     "q": "Testo B: Che cosa c'è di nuovo quest'anno?",
+     "opts": [
+      "Un concerto alle due di notte",
+      "Un giorno di festa in più e un mercatino",
+      "Una festa solo per turisti"
+     ],
+     "a": 1,
+     "why": "«durerà tre giorni invece di due … un mercatino»."
+    },
+    {
+     "q": "Testo C: Che cosa farà Chiara con il libro?",
+     "opts": [
+      "Lo restituirà alla libreria",
+      "Lo presterà a Sofia dopo averlo letto",
+      "Lo leggerà l'anno prossimo"
+     ],
+     "a": 1,
+     "why": "«Quando l'avrò finito, te lo presto»."
+    }
+   ]
+  },
+  {
+   "id": "it4-le-4",
+   "part": "lettura",
+   "teil": "A.5",
+   "title": "Una giornata diversa",
+   "time": 15,
+   "instr": "Du läser en text. Välj rätt svar (a, b eller c) till varje fråga.",
+   "lines": [
+    {
+     "fr": "Sabato scorso la classe 4B del liceo Galilei ha passato una giornata diversa dal solito. Invece di andare a scuola, gli studenti hanno pulito il parco vicino al fiume, insieme ai volontari di un'associazione per l'ambiente.",
+     "sv": "I lördags tillbringade klass 4B på Galileigymnasiet en annorlunda dag. I stället för att gå till skolan städade eleverna parken nära floden, tillsammans med volontärer från en miljöförening."
+    },
+    {
+     "fr": "«All'inizio molti non erano contenti di alzarsi presto il sabato», racconta la professoressa Neri, che aveva organizzato l'iniziativa. «Però dopo un'ora tutti lavoravano con entusiasmo». In quattro ore i ragazzi hanno raccolto più di trecento chili di rifiuti: soprattutto bottiglie di plastica, ma anche una bicicletta e una vecchia televisione.",
+     "sv": "«I början var många inte glada över att gå upp tidigt på en lördag», berättar läraren Neri, som hade organiserat initiativet. «Men efter en timme arbetade alla med entusiasm». På fyra timmar samlade ungdomarna in mer än trehundra kilo skräp: framför allt plastflaskor, men också en cykel och en gammal tv."
+    },
+    {
+     "fr": "Alla fine il sindaco è venuto a ringraziarli e ha promesso di mettere nuovi cestini nel parco. Gli studenti hanno già deciso: lo faranno di nuovo in primavera, e questa volta inviteranno anche le altre classi.",
+     "sv": "Till slut kom borgmästaren för att tacka dem och lovade att sätta upp nya papperskorgar i parken. Eleverna har redan bestämt sig: de ska göra det igen i vår, och den här gången ska de bjuda in de andra klasserna också."
+    }
+   ],
+   "qs": [
+    {
+     "q": "Che cosa hanno fatto gli studenti sabato scorso?",
+     "opts": [
+      "Hanno fatto lezione nel parco",
+      "Hanno pulito un parco",
+      "Hanno visitato un'associazione"
+     ],
+     "a": 1,
+     "why": "«gli studenti hanno pulito il parco»."
+    },
+    {
+     "q": "Chi aveva organizzato la giornata?",
+     "opts": [
+      "Il sindaco",
+      "Gli studenti",
+      "Una professoressa"
+     ],
+     "a": 2,
+     "why": "«la professoressa Neri, che aveva organizzato l'iniziativa»."
+    },
+    {
+     "q": "Come si sentivano gli studenti all'inizio?",
+     "opts": [
+      "Molti non erano contenti",
+      "Erano tutti entusiasti",
+      "Erano stanchi dopo la festa"
+     ],
+     "a": 0,
+     "why": "«All'inizio molti non erano contenti»."
+    },
+    {
+     "q": "Che cosa hanno trovato soprattutto?",
+     "opts": [
+      "Biciclette",
+      "Bottiglie di plastica",
+      "Televisioni"
+     ],
+     "a": 1,
+     "why": "«soprattutto bottiglie di plastica»."
+    },
+    {
+     "q": "Che cosa succederà in primavera?",
+     "opts": [
+      "Il parco chiuderà",
+      "Il sindaco pulirà il parco",
+      "Gli studenti ripeteranno l'iniziativa con altre classi"
+     ],
+     "a": 2,
+     "why": "«lo faranno di nuovo in primavera … inviteranno anche le altre classi»."
+    }
+   ]
+  },
+  {
+   "id": "it4-as-1",
+   "part": "ascolto",
+   "teil": "C.1",
+   "title": "Brevi dialoghi",
+   "time": 6,
+   "plays": 2,
+   "instr": "Du hör sex korta dialoger två gånger. Är påståendet rätt (Vero) eller fel (Falso)?",
+   "lines": [
+    {
+     "fr": "Dialogo 1. – Scusi, a che ora parte l'autobus per l'aeroporto? – Ogni mezz'ora, il prossimo alle dieci e un quarto. – Grazie!",
+     "sv": "Dialog 1. – Ursäkta, när går bussen till flygplatsen? – Varje halvtimme, nästa kvart över tio. – Tack!"
+    },
+    {
+     "fr": "Dialogo 2. – Vieni al cinema stasera? – Mi dispiace, non posso. Domani ho l'esame di matematica e devo studiare. – Allora un'altra volta!",
+     "sv": "Dialog 2. – Hänger du med på bio i kväll? – Tyvärr, jag kan inte. I morgon har jag matteprov och måste plugga. – Då en annan gång!"
+    },
+    {
+     "fr": "Dialogo 3. – Buongiorno, vorrei due etti di prosciutto crudo. – Ecco a Lei. Altro? – Sì, anche un po' di parmigiano.",
+     "sv": "Dialog 3. – God dag, jag skulle vilja ha två hekto lufttorkad skinka. – Varsågod. Något mer? – Ja, lite parmesan också."
+    },
+    {
+     "fr": "Dialogo 4. – Mamma, posso andare alla festa di Marco sabato? – Sì, ma alle undici devi essere a casa. – Uffa, a mezzanotte no?",
+     "sv": "Dialog 4. – Mamma, får jag gå på Marcos fest på lördag? – Ja, men du måste vara hemma klockan elva. – Äsch, inte midnatt?"
+    },
+    {
+     "fr": "Dialogo 5. – Hai visto il mio telefono? – Sì, l'hai lasciato in cucina, vicino alla finestra.",
+     "sv": "Dialog 5. – Har du sett min mobil? – Ja, du lämnade den i köket, vid fönstret."
+    },
+    {
+     "fr": "Dialogo 6. – Com'è andato il viaggio a Napoli? – Benissimo, ma ha piovuto tutti i giorni! – Peccato!",
+     "sv": "Dialog 6. – Hur gick resan till Neapel? – Jättebra, men det regnade varje dag! – Synd!"
+    }
+   ],
+   "qs": [
+    {
+     "q": "Dialogo 1: Il prossimo autobus parte alle dieci e un quarto.",
+     "opts": [
+      "Vero",
+      "Falso"
+     ],
+     "a": 0,
+     "why": "«il prossimo alle dieci e un quarto»."
+    },
+    {
+     "q": "Dialogo 2: La ragazza va al cinema stasera.",
+     "opts": [
+      "Vero",
+      "Falso"
+     ],
+     "a": 1,
+     "why": "«non posso … devo studiare»."
+    },
+    {
+     "q": "Dialogo 3: Il cliente compra solo prosciutto.",
+     "opts": [
+      "Vero",
+      "Falso"
+     ],
+     "a": 1,
+     "why": "Han köper också parmesan."
+    },
+    {
+     "q": "Dialogo 4: Il ragazzo deve tornare a casa a mezzanotte.",
+     "opts": [
+      "Vero",
+      "Falso"
+     ],
+     "a": 1,
+     "why": "«alle undici devi essere a casa»."
+    },
+    {
+     "q": "Dialogo 5: Il telefono è in cucina.",
+     "opts": [
+      "Vero",
+      "Falso"
+     ],
+     "a": 0,
+     "why": "«l'hai lasciato in cucina»."
+    },
+    {
+     "q": "Dialogo 6: A Napoli c'era sempre il sole.",
+     "opts": [
+      "Vero",
+      "Falso"
+     ],
+     "a": 1,
+     "why": "«ha piovuto tutti i giorni»."
+    }
+   ]
+  },
+  {
+   "id": "it4-as-2",
+   "part": "ascolto",
+   "teil": "C.2",
+   "title": "Annunci e messaggi",
+   "time": 6,
+   "plays": 2,
+   "instr": "Du hör sex korta texter två gånger: utrop, telefonmeddelanden och radio. Välj rätt svar (a, b eller c).",
+   "lines": [
+    {
+     "fr": "1. Attenzione: il treno Frecciarossa per Roma delle 14.30 viaggia con venti minuti di ritardo. Ci scusiamo per il disagio.",
+     "sv": "1. Observera: Frecciarossa-tåget till Rom kl. 14.30 är tjugo minuter försenat. Vi ber om ursäkt för besväret."
+    },
+    {
+     "fr": "2. Ciao Sara, sono Elena. Domani non posso venire a lezione di chitarra perché ho la febbre. Ci vediamo giovedì prossimo. Ciao!",
+     "sv": "2. Hej Sara, det är Elena. I morgon kan jag inte komma till gitarrlektionen eftersom jag har feber. Vi ses nästa torsdag. Hej!"
+    },
+    {
+     "fr": "3. Gentili clienti, il supermercato chiuderà tra quindici minuti. Vi preghiamo di andare alle casse.",
+     "sv": "3. Kära kunder, affären stänger om femton minuter. Var vänliga gå till kassorna."
+    },
+    {
+     "fr": "4. E ora il meteo: domani al Nord pioggia e vento, al Sud sole e temperature fino a ventotto gradi.",
+     "sv": "4. Och nu vädret: i morgon i norr regn och blåst, i söder sol och temperaturer upp till tjugoåtta grader."
+    },
+    {
+     "fr": "5. Buongiorno, qui è lo studio del dottor Ferri. Il suo appuntamento di martedì è spostato a mercoledì alla stessa ora. Grazie.",
+     "sv": "5. God dag, det här är doktor Ferris mottagning. Er tid på tisdag är flyttad till onsdag samma tid. Tack."
+    },
+    {
+     "fr": "6. Al museo archeologico, questo fine settimana, l'ingresso è gratuito per i ragazzi sotto i diciotto anni.",
+     "sv": "6. På arkeologiska museet är det gratis inträde i helgen för ungdomar under arton år."
+    }
+   ],
+   "qs": [
+    {
+     "q": "1. Il treno per Roma…",
+     "opts": [
+      "è cancellato",
+      "parte in ritardo",
+      "parte da un altro binario"
+     ],
+     "a": 1,
+     "why": "«viaggia con venti minuti di ritardo»."
+    },
+    {
+     "q": "2. Elena non va a lezione perché…",
+     "opts": [
+      "è malata",
+      "ha un esame",
+      "è in vacanza"
+     ],
+     "a": 0,
+     "why": "«ho la febbre»."
+    },
+    {
+     "q": "3. Il supermercato…",
+     "opts": [
+      "apre tra quindici minuti",
+      "sta per chiudere",
+      "è chiuso domani"
+     ],
+     "a": 1,
+     "why": "«chiuderà tra quindici minuti»."
+    },
+    {
+     "q": "4. Domani al Sud…",
+     "opts": [
+      "piove",
+      "fa bel tempo",
+      "fa freddo"
+     ],
+     "a": 1,
+     "why": "«al Sud sole»."
+    },
+    {
+     "q": "5. L'appuntamento dal dottore è…",
+     "opts": [
+      "cancellato",
+      "spostato a mercoledì",
+      "alla stessa ora di martedì, ma un'altra settimana"
+     ],
+     "a": 1,
+     "why": "«spostato a mercoledì alla stessa ora»."
+    },
+    {
+     "q": "6. Questo fine settimana al museo…",
+     "opts": [
+      "i ragazzi non pagano",
+      "il museo è chiuso",
+      "c'è una mostra nuova"
+     ],
+     "a": 0,
+     "why": "«l'ingresso è gratuito per i ragazzi sotto i diciotto anni»."
+    }
+   ]
+  },
+  {
+   "id": "it4-as-3",
+   "part": "ascolto",
+   "teil": "C.3",
+   "title": "Cinque ragazzi parlano del futuro",
+   "time": 5,
+   "plays": 2,
+   "instr": "Du hör fem korta monologer två gånger. Sägs det här i texterna (Sì) eller inte (No)?",
+   "lines": [
+    {
+     "fr": "Luca: Dopo la maturità vorrei studiare medicina a Padova. So che è difficile, ma è il mio sogno da quando ero piccolo.",
+     "sv": "Luca: Efter studenten skulle jag vilja läsa medicin i Padova. Jag vet att det är svårt, men det har varit min dröm sedan jag var liten."
+    },
+    {
+     "fr": "Giulia: Io non voglio andare all'università. Mio zio ha un ristorante e io lavorerò con lui. Mi piace cucinare.",
+     "sv": "Giulia: Jag vill inte gå på universitetet. Min farbror har en restaurang och jag ska jobba med honom. Jag gillar att laga mat."
+    },
+    {
+     "fr": "Ahmed: Il prossimo anno farò un anno di scambio in Irlanda, per migliorare l'inglese. Poi vedrò.",
+     "sv": "Ahmed: Nästa år ska jag göra ett utbytesår på Irland, för att förbättra min engelska. Sedan får vi se."
+    },
+    {
+     "fr": "Marta: Io suono il violino da dieci anni. Quando avrò finito il liceo, proverò l'esame al conservatorio.",
+     "sv": "Marta: Jag har spelat fiol i tio år. När jag har gått ut gymnasiet ska jag försöka komma in på musikhögskolan."
+    },
+    {
+     "fr": "Davide: Non ho ancora deciso. I miei genitori vogliono che faccia ingegneria, ma io preferisco lo sport.",
+     "sv": "Davide: Jag har inte bestämt mig än. Mina föräldrar vill att jag läser till ingenjör, men jag föredrar idrott."
+    }
+   ],
+   "qs": [
+    {
+     "q": "Luca vuole diventare medico.",
+     "opts": [
+      "Sì",
+      "No"
+     ],
+     "a": 0,
+     "why": "«vorrei studiare medicina»."
+    },
+    {
+     "q": "Giulia vuole aprire un ristorante da sola.",
+     "opts": [
+      "Sì",
+      "No"
+     ],
+     "a": 1,
+     "why": "Hon ska jobba på sin farbrors restaurang."
+    },
+    {
+     "q": "Ahmed andrà in Irlanda.",
+     "opts": [
+      "Sì",
+      "No"
+     ],
+     "a": 0,
+     "why": "«farò un anno di scambio in Irlanda»."
+    },
+    {
+     "q": "Marta suona il pianoforte.",
+     "opts": [
+      "Sì",
+      "No"
+     ],
+     "a": 1,
+     "why": "Hon spelar fiol (il violino)."
+    },
+    {
+     "q": "Davide ha già scelto l'università.",
+     "opts": [
+      "Sì",
+      "No"
+     ],
+     "a": 1,
+     "why": "«Non ho ancora deciso»."
+    }
+   ]
+  },
+  {
+   "id": "it4-as-4",
+   "part": "ascolto",
+   "teil": "C.4",
+   "title": "Una guida a Siena",
+   "time": 4,
+   "plays": 2,
+   "instr": "Du hör en guide berätta om Siena två gånger. Är påståendena rätt (Vero) eller fel (Falso)?",
+   "lines": [
+    {
+     "fr": "Buongiorno a tutti e benvenuti a Siena! Oggi faremo una passeggiata di due ore nel centro storico. Cominciamo da Piazza del Campo, dove due volte all'anno si corre il Palio. Dopo visiteremo il Duomo: attenzione, per entrare bisogna comprare il biglietto, costa otto euro. Alle dodici e mezza ci fermeremo per il pranzo in una trattoria tipica, dove assaggerete i pici, una pasta fatta a mano. Nel pomeriggio siete liberi. L'autobus per tornare a Firenze parte alle sei da Piazza Gramsci. Mi raccomando, non arrivate in ritardo!",
+     "sv": "God morgon allihop och välkomna till Siena! I dag ska vi ta en två timmar lång promenad i gamla stan. Vi börjar på Piazza del Campo, där Palio körs två gånger om året. Sedan besöker vi domkyrkan: observera, för att komma in måste man köpa biljett, den kostar åtta euro. Halv ett stannar vi för lunch på en typisk krog, där ni får smaka pici, en handgjord pasta. På eftermiddagen är ni lediga. Bussen tillbaka till Florens går klockan sex från Piazza Gramsci. Kom inte för sent, är ni snälla!"
+    }
+   ],
+   "qs": [
+    {
+     "q": "La passeggiata dura due ore.",
+     "opts": [
+      "Vero",
+      "Falso"
+     ],
+     "a": 0,
+     "why": "«una passeggiata di due ore»."
+    },
+    {
+     "q": "L'ingresso al Duomo è gratuito.",
+     "opts": [
+      "Vero",
+      "Falso"
+     ],
+     "a": 1,
+     "why": "«bisogna comprare il biglietto, costa otto euro»."
+    },
+    {
+     "q": "A pranzo si mangia una pasta tipica.",
+     "opts": [
+      "Vero",
+      "Falso"
+     ],
+     "a": 0,
+     "why": "«assaggerete i pici, una pasta fatta a mano»."
+    },
+    {
+     "q": "Il pomeriggio c'è un'altra visita guidata.",
+     "opts": [
+      "Vero",
+      "Falso"
+     ],
+     "a": 1,
+     "why": "«Nel pomeriggio siete liberi»."
+    },
+    {
+     "q": "L'autobus per Firenze parte alle sei.",
+     "opts": [
+      "Vero",
+      "Falso"
+     ],
+     "a": 0,
+     "why": "«parte alle sei da Piazza Gramsci»."
+    }
+   ]
+  },
+  {
+   "id": "it4-sc-1",
+   "part": "scrittura",
+   "teil": "B.2",
+   "title": "Email a un'amica: la festa",
+   "time": 25,
+   "minWords": 80,
+   "criteria": [
+    "Adeguatezza al compito",
+    "Coerenza e coesione",
+    "Lessico",
+    "Grammatica"
+   ],
+   "instr": "Skriv ett personligt mejl till en kompis (tu). Skriv något om alla punkterna. Ungefär 80 ord.",
+   "task": "Sei stato/stata alla festa di compleanno di un amico. La tua amica Giulia non è potuta venire.\n\nScrivi un'email a Giulia:\n– dove e quando era la festa\n– chi c'era e che cosa avete fatto\n– una cosa divertente che è successa\n– proponi di vedervi presto\n\n(circa 80 parole)",
+   "model": "Cara Giulia,\npeccato che sabato non c'eri! La festa di Marco era a casa sua, in giardino, e c'erano quasi trenta persone. Abbiamo mangiato la pizza, ballato e cantato fino a mezzanotte. La cosa più divertente? Il cane di Marco ha mangiato metà della torta quando nessuno guardava! Tutti ridevano, anche Marco. Ti ho fatto tante foto, te le mando stasera. Ci vediamo domenica per un gelato?\nUn abbraccio,\nElsa",
+   "modelSv": "Kära Giulia,\nsynd att du inte kom i lördags! Marcos fest var hemma hos honom, i trädgården, och det var nästan trettio personer där. Vi åt pizza, dansade och sjöng till midnatt. Det roligaste? Marcos hund åt upp halva tårtan när ingen tittade! Alla skrattade, även Marco. Jag har tagit massor av bilder åt dig, jag skickar dem i kväll. Ses vi på söndag för en glass?\nKram,\nElsa"
+  },
+  {
+   "id": "it4-sc-2",
+   "part": "scrittura",
+   "teil": "B.2",
+   "title": "Email alla famiglia ospitante",
+   "time": 25,
+   "minWords": 80,
+   "criteria": [
+    "Adeguatezza al compito",
+    "Coerenza e coesione",
+    "Lessico",
+    "Grammatica"
+   ],
+   "instr": "Skriv ett mejl till en värdfamilj som du inte känner (Lei eller voi). Skriv något om alla punkterna. Ungefär 80 ord.",
+   "task": "A settembre passerai un mese in Italia presso una famiglia. Scrivi un'email alla famiglia Bianchi:\n– presentati\n– racconta che cosa ti piace fare nel tempo libero\n– chiedi informazioni sulla scuola o sulla città\n– ringrazia e saluta\n\n(circa 80 parole)",
+   "model": "Gentile famiglia Bianchi,\nmi chiamo Linnea, ho diciassette anni e abito a Göteborg, in Svezia. Studio italiano da quattro anni e sono molto contenta di venire da voi a settembre. Nel tempo libero suono il pianoforte, gioco a pallavolo e leggo molto. Vorrei sapere quanto tempo ci vuole per andare a scuola da casa vostra: posso andare a piedi o devo prendere l'autobus? Inoltre, c'è una piscina in città? Grazie mille per l'ospitalità.\nA presto,\nLinnea",
+   "modelSv": "Bästa familjen Bianchi,\njag heter Linnea, är sjutton år och bor i Göteborg i Sverige. Jag har läst italienska i fyra år och är väldigt glad att få komma till er i september. På fritiden spelar jag piano, spelar volleyboll och läser mycket. Jag skulle vilja veta hur lång tid det tar att ta sig till skolan från ert hus: kan jag gå eller måste jag ta bussen? Finns det dessutom en simhall i stan? Tusen tack för gästfriheten.\nVi hörs snart,\nLinnea"
+  },
+  {
+   "id": "it4-sc-3",
+   "part": "scrittura",
+   "teil": "B.2",
+   "title": "Il mio fine settimana ideale",
+   "time": 25,
+   "minWords": 80,
+   "criteria": [
+    "Adeguatezza al compito",
+    "Coerenza e coesione",
+    "Lessico",
+    "Grammatica"
+   ],
+   "instr": "Skriv en kort text till en italiensk skoltidning. Skriv något om alla punkterna. Ungefär 80 ord.",
+   "task": "Il giornalino della scuola italiana con cui la tua classe fa uno scambio chiede: «Come passano il fine settimana i ragazzi nel tuo paese?»\n\nScrivi un breve testo:\n– che cosa fai di solito il sabato e la domenica\n– racconta lo scorso fine settimana\n– come sarebbe il tuo fine settimana ideale\n\n(circa 80 parole)",
+   "model": "In Svezia molti ragazzi il sabato lavorano qualche ora o fanno sport. Io di solito gioco a calcio la mattina e la sera esco con gli amici. La domenica invece resto a casa, studio e ceno con la famiglia. Lo scorso fine settimana, però, è stato speciale: siamo andati in campagna dai nonni e abbiamo raccolto le mele. Il mio fine settimana ideale? Un viaggio a Roma con le mie amiche, senza compiti e con tanto gelato!",
+   "modelSv": "I Sverige jobbar många ungdomar några timmar eller idrottar på lördagen. Jag brukar spela fotboll på förmiddagen och gå ut med kompisar på kvällen. På söndagen stannar jag däremot hemma, pluggar och äter middag med familjen. Förra helgen var dock speciell: vi åkte till mormor och morfar på landet och plockade äpplen. Min idealhelg? En resa till Rom med mina väninnor, utan läxor och med massor av glass!"
+  },
+  {
+   "id": "it4-sc-4",
+   "part": "scrittura",
+   "teil": "B.2",
+   "title": "Messaggio a un insegnante",
+   "time": 25,
+   "minWords": 80,
+   "criteria": [
+    "Adeguatezza al compito",
+    "Coerenza e coesione",
+    "Lessico",
+    "Grammatica"
+   ],
+   "instr": "Skriv ett mejl till din italienska lärare (Lei). Skriv något om alla punkterna. Ungefär 80 ord.",
+   "task": "Sei stato/stata malato/malata e non sei potuto/potuta andare a scuola per tre giorni. Scrivi un'email alla tua insegnante di italiano, la professoressa Conti:\n– spiega perché sei stato/stata assente\n– chiedi quali compiti devi fare\n– chiedi se puoi fare la verifica un altro giorno\n– saluta in modo formale\n\n(circa 80 parole)",
+   "model": "Gentile professoressa Conti,\nLe scrivo perché da lunedì a mercoledì non sono venuta a scuola. Ho avuto la febbre alta e il medico mi ha detto di restare a letto. Adesso sto meglio e domani tornerò in classe. Potrebbe dirmi quali compiti devo fare per recuperare? Inoltre so che martedì c'è stata la verifica sul trapassato prossimo: sarebbe possibile farla un altro giorno, per esempio venerdì? La ringrazio molto per la comprensione.\nCordiali saluti,\nEmma Holm",
+   "modelSv": "Bästa professor Conti,\njag skriver till er eftersom jag inte var i skolan måndag till onsdag. Jag hade hög feber och läkaren sa att jag skulle stanna i sängen. Nu mår jag bättre och i morgon kommer jag tillbaka till klassen. Kan ni säga vilka uppgifter jag ska göra för att komma ikapp? Jag vet dessutom att det var prov på trapassato prossimo i tisdags: vore det möjligt att göra det en annan dag, till exempel på fredag? Tack så mycket för er förståelse.\nMed vänliga hälsningar,\nEmma Holm"
+  },
+  {
+   "id": "it4-or-1",
+   "part": "orale",
+   "teil": "Parte 1",
+   "title": "Presentarsi",
+   "prep": 0,
+   "time": 3,
+   "criteria": [
+    "Adeguatezza al compito",
+    "Interazione",
+    "Lessico",
+    "Grammatica",
+    "Pronuncia"
+   ],
+   "instr": "Presentera dig för examinatorn och svara på frågorna. På provet börjar samtalet utan förberedelse. Tala i ungefär tre minuter.",
+   "task": "L'esaminatore ti chiede:\n– Come ti chiami? Di dove sei? Quanti anni hai?\n– Com'è la tua famiglia?\n– Che cosa studi? Che cosa ti piace della scuola?\n– Che cosa fai nel tempo libero?\n– Perché studi l'italiano? Sei mai stato/stata in Italia?\n– Che progetti hai per il futuro?",
+   "phrases": [
+    "Mi chiamo … e ho … anni.",
+    "Abito a …, una città nel sud/nord della Svezia.",
+    "Nella mia famiglia siamo in …",
+    "Nel tempo libero mi piace …",
+    "Studio italiano perché …",
+    "Quando avrò finito la scuola, vorrei …",
+    "Non ho capito, può ripetere, per favore?"
+   ],
+   "model": "Mi chiamo Elsa, ho diciotto anni e abito a Uppsala, una città vicino a Stoccolma. Nella mia famiglia siamo in quattro: mia madre, mio padre, mio fratello e io. Faccio l'ultimo anno di liceo e studio musica. Nel tempo libero suono il violino in un'orchestra e vado a correre. Studio italiano perché amo la musica italiana e l'opera. Sono stata a Firenze due anni fa con la scuola. Quando avrò finito il liceo, vorrei studiare al conservatorio in Italia.",
+   "modelSv": "Jag heter Elsa, är arton år och bor i Uppsala, en stad nära Stockholm. I min familj är vi fyra: min mamma, min pappa, min bror och jag. Jag går sista året på gymnasiet och läser musik. På fritiden spelar jag fiol i en orkester och springer. Jag läser italienska för att jag älskar italiensk musik och opera. Jag var i Florens för två år sedan med skolan. När jag har gått ut gymnasiet vill jag studera på musikhögskola i Italien."
+  },
+  {
+   "id": "it4-or-2",
+   "part": "orale",
+   "teil": "Parte 2",
+   "title": "Descrivere una situazione",
+   "prep": 10,
+   "time": 3,
+   "criteria": [
+    "Adeguatezza al compito",
+    "Interazione",
+    "Lessico",
+    "Grammatica",
+    "Pronuncia"
+   ],
+   "instr": "På provet får du en bild eller en bildserie att beskriva. Här beskrivs situationen i ord: berätta vad som händer, i dåtid, som om du såg bilderna. Du har tio minuter att förbereda dig.",
+   "task": "Una giornata al mare in quattro momenti:\n1. La mattina una famiglia carica la macchina: borse, ombrellone, un pallone.\n2. In autostrada c'è una lunga coda; il bambino è stanco e la mamma guarda la cartina.\n3. Al mare finalmente: il papà dorme sotto l'ombrellone, i bambini giocano a pallone.\n4. Comincia a piovere forte e tutti corrono verso la macchina.\n\nRacconta che cosa è successo.",
+   "phrases": [
+    "Nella prima immagine si vede …",
+    "All'inizio …",
+    "Poi / Dopo / Mentre …",
+    "Alla fine …",
+    "Secondo me …, perché …",
+    "Mi sembra che …"
+   ],
+   "model": "Una domenica d'estate una famiglia ha deciso di andare al mare. La mattina presto hanno caricato la macchina con le borse, l'ombrellone e un pallone. Purtroppo in autostrada c'era una lunga coda: il bambino era stanco e annoiato, e la mamma guardava la cartina per trovare un'altra strada. Finalmente sono arrivati al mare. Il papà si è addormentato sotto l'ombrellone, mentre i bambini giocavano a pallone. Ma dopo un'ora ha cominciato a piovere forte e tutti sono corsi verso la macchina. Che giornata!",
+   "modelSv": "En sommarsöndag bestämde sig en familj för att åka till havet. Tidigt på morgonen packade de bilen med väskor, parasollet och en boll. Tyvärr var det lång kö på motorvägen: pojken var trött och uttråkad, och mamman tittade på kartan för att hitta en annan väg. Äntligen kom de fram till havet. Pappan somnade under parasollet medan barnen spelade boll. Men efter en timme började det regna kraftigt och alla sprang mot bilen. Vilken dag!"
+  },
+  {
+   "id": "it4-or-3",
+   "part": "orale",
+   "teil": "Parte 3",
+   "title": "Role play: in farmacia",
+   "prep": 10,
+   "time": 3,
+   "criteria": [
+    "Adeguatezza al compito",
+    "Interazione",
+    "Lessico",
+    "Grammatica",
+    "Pronuncia"
+   ],
+   "instr": "Rollspel: examinatorn spelar farmaceuten. Använd Lei. Du har tio minuter att förbereda dig (föreställ dig farmaceutens repliker när du övar ensam).",
+   "task": "Sei in vacanza in Italia e da ieri hai mal di gola e un po' di febbre. Vai in farmacia.\n– Saluta e spiega che cosa hai e da quando.\n– Rispondi alle domande del farmacista.\n– Chiedi un consiglio e quanto costa la medicina.\n– Chiedi quante volte al giorno devi prenderla.\n– Ringrazia e saluta.",
+   "phrases": [
+    "Buongiorno, avrei bisogno di qualcosa per …",
+    "Ho mal di gola da ieri.",
+    "Che cosa mi consiglia?",
+    "Quanto costa?",
+    "Quante volte al giorno devo prenderla?",
+    "Grazie mille, arrivederci."
+   ],
+   "model": "A: Buongiorno, mi dica.\nB: Buongiorno. Da ieri ho mal di gola e un po' di febbre. Avrei bisogno di qualcosa.\nA: Ha anche la tosse?\nB: No, solo mal di gola. Sono in vacanza e domani devo prendere il treno per Roma.\nA: Allora prenda queste pastiglie. Ne prenda una ogni sei ore, non più di quattro al giorno.\nB: Quanto costano?\nA: Sette euro e cinquanta.\nB: Va bene. E se domani ho ancora la febbre?\nA: Allora vada dal medico.\nB: Grazie mille, arrivederci.",
+   "modelSv": "A: God dag, vad kan jag hjälpa till med?\nB: God dag. Sedan i går har jag ont i halsen och lite feber. Jag skulle behöva något.\nA: Hostar ni också?\nB: Nej, bara ont i halsen. Jag är på semester och i morgon ska jag ta tåget till Rom.\nA: Ta de här tabletterna då. Ta en var sjätte timme, högst fyra om dagen.\nB: Vad kostar de?\nA: Sju euro och femtio.\nB: Okej. Och om jag fortfarande har feber i morgon?\nA: Gå till läkaren då.\nB: Tack så mycket, hej då."
+  },
+  {
+   "id": "it4-or-4",
+   "part": "orale",
+   "teil": "Parte 3",
+   "title": "Role play: prenotare una stanza",
+   "prep": 10,
+   "time": 3,
+   "criteria": [
+    "Adeguatezza al compito",
+    "Interazione",
+    "Lessico",
+    "Grammatica",
+    "Pronuncia"
+   ],
+   "instr": "Rollspel på telefon: examinatorn spelar receptionisten på ett hotell. Använd Lei.",
+   "task": "Vuoi passare un fine settimana a Bologna con un amico. Telefoni a un albergo.\n– Saluta e di' che vuoi prenotare una stanza.\n– Di' per quando e per quante persone.\n– Chiedi il prezzo e se la colazione è compresa.\n– Chiedi come arrivare dalla stazione.\n– Conferma la prenotazione e saluta.",
+   "phrases": [
+    "Buongiorno, vorrei prenotare una stanza doppia.",
+    "Per due notti, dal … al …",
+    "Quanto costa a notte?",
+    "La colazione è compresa?",
+    "Come si arriva dalla stazione?",
+    "Va bene, la prendo."
+   ],
+   "model": "A: Albergo Due Torri, buongiorno.\nB: Buongiorno, vorrei prenotare una stanza doppia per il fine settimana del 14 marzo, per due notti.\nA: Sì, abbiamo una stanza libera. Costa novanta euro a notte.\nB: La colazione è compresa?\nA: Sì, è compresa.\nB: Perfetto. E come si arriva dalla stazione?\nA: Ci vogliono dieci minuti a piedi, oppure può prendere l'autobus 25.\nB: Benissimo, la prendo. Mi chiamo Karin Nilsson.\nA: Grazie, signora Nilsson. A presto!\nB: Grazie a Lei, arrivederci.",
+   "modelSv": "A: Hotell Due Torri, god dag.\nB: God dag, jag skulle vilja boka ett dubbelrum helgen den 14 mars, två nätter.\nA: Ja, vi har ett ledigt rum. Det kostar nittio euro per natt.\nB: Ingår frukost?\nA: Ja, den ingår.\nB: Perfekt. Och hur tar man sig dit från stationen?\nA: Det tar tio minuter till fots, eller så kan ni ta buss 25.\nB: Jättebra, jag tar det. Jag heter Karin Nilsson.\nA: Tack, fru Nilsson. Vi ses!\nB: Tack själv, hej då."
+  }
+ ]
+}

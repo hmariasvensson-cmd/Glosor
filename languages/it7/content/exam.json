@@ -1,0 +1,903 @@
+{
+ "name": "CELI 3 (B2)",
+ "pass": 60,
+ "note": "Övningar i provets stil, skrivna för appen. Inte officiellt material. Ordbildningen tränas här som flerval; på provet skriver man själv rätt form.",
+ "parts": [
+  {
+   "id": "lettura",
+   "name": "Comprensione della lettura",
+   "sv": "Läsförståelse",
+   "time": 70
+  },
+  {
+   "id": "scrittura",
+   "name": "Produzione di testi scritti",
+   "sv": "Skriva",
+   "time": 65
+  },
+  {
+   "id": "competenza",
+   "name": "Competenza linguistica",
+   "sv": "Språklig kompetens",
+   "time": 45
+  },
+  {
+   "id": "ascolto",
+   "name": "Comprensione dell'ascolto",
+   "sv": "Hörförståelse",
+   "time": 25
+  },
+  {
+   "id": "orale",
+   "name": "Produzione orale",
+   "sv": "Muntligt",
+   "time": 15
+  }
+ ],
+ "tasks": [
+  {
+   "id": "it7-ex-let-1",
+   "part": "lettura",
+   "teil": "Prova 1",
+   "title": "Il ritorno dei borghi",
+   "time": 20,
+   "instr": "Läs texten och välj rätt alternativ (a, b, c eller d) för varje fråga.",
+   "lines": [
+    {
+     "fr": "Negli ultimi anni molti piccoli borghi dell'Appennino, abbandonati dopo la guerra, stanno tornando a vivere.",
+     "sv": "Under de senaste åren har många småbyar i Apenninerna, som övergavs efter kriget, börjat leva igen."
+    },
+    {
+     "fr": "Merito dello smart working, che permette a giovani professionisti di lavorare lontano dalle grandi città, ma anche di alcuni sindaci coraggiosi.",
+     "sv": "Det är distansarbetets förtjänst, som låter unga yrkesverksamma arbeta långt från storstäderna, men också några modiga borgmästares."
+    },
+    {
+     "fr": "A Santo Stefano di Sessanio, in Abruzzo, un imprenditore ha trasformato le case vuote in un «albergo diffuso»: le camere sono sparse per il paese.",
+     "sv": "I Santo Stefano di Sessanio i Abruzzo har en företagare förvandlat de tomma husen till ett «utspritt hotell»: rummen är utspridda i byn."
+    },
+    {
+     "fr": "Altri comuni vendono case a un euro, a patto che chi le compra le ristrutturi entro tre anni.",
+     "sv": "Andra kommuner säljer hus för en euro, på villkor att köparen renoverar dem inom tre år."
+    },
+    {
+     "fr": "Non mancano però le critiche: secondo alcuni esperti, senza scuole, medici e trasporti pubblici, i nuovi abitanti se ne andranno presto.",
+     "sv": "Men kritiken saknas inte: enligt vissa experter kommer de nya invånarna snart att flytta om det inte finns skolor, läkare och kollektivtrafik."
+    },
+    {
+     "fr": "«Non basta vendere case», spiega un urbanista, «bisogna creare comunità.»",
+     "sv": "«Det räcker inte att sälja hus», förklarar en stadsplanerare, «man måste skapa gemenskap.»"
+    },
+    {
+     "fr": "Il fenomeno, insomma, è promettente, ma il suo futuro dipenderà dalle scelte politiche dei prossimi anni.",
+     "sv": "Fenomenet är alltså lovande, men dess framtid kommer att bero på de politiska besluten under de kommande åren."
+    }
+   ],
+   "qs": [
+    {
+     "q": "Perché i borghi stanno tornando a vivere?",
+     "opts": [
+      "Grazie al turismo di massa",
+      "Grazie al lavoro a distanza e ad alcuni sindaci",
+      "Perché lo Stato ha costruito nuove scuole",
+      "Perché le città sono troppo care"
+     ],
+     "a": 1,
+     "why": "«Merito dello smart working … ma anche di alcuni sindaci coraggiosi»."
+    },
+    {
+     "q": "Che cos'è un «albergo diffuso»?",
+     "opts": [
+      "Un albergo molto grande fuori dal paese",
+      "Un albergo con camere in diverse case del paese",
+      "Un ostello per studenti",
+      "Una catena di alberghi"
+     ],
+     "a": 1,
+     "why": "«le camere sono sparse per il paese»."
+    },
+    {
+     "q": "A quale condizione si può comprare una casa a un euro?",
+     "opts": [
+      "Bisogna abitarci tutto l'anno",
+      "Bisogna ristrutturarla entro tre anni",
+      "Bisogna aprire un'attività",
+      "Bisogna essere giovani"
+     ],
+     "a": 1,
+     "why": "«a patto che chi le compra le ristrutturi entro tre anni»."
+    },
+    {
+     "q": "Qual è l'opinione dell'urbanista?",
+     "opts": [
+      "Le case costano troppo",
+      "Servono servizi e comunità, non solo case",
+      "I borghi devono restare vuoti",
+      "Lo smart working è un errore"
+     ],
+     "a": 1,
+     "why": "«Non basta vendere case … bisogna creare comunità»."
+    },
+    {
+     "q": "Qual è il tono della conclusione?",
+     "opts": [
+      "Entusiasta senza riserve",
+      "Totalmente negativo",
+      "Prudentemente ottimista",
+      "Ironico"
+     ],
+     "a": 2,
+     "why": "«promettente, ma il suo futuro dipenderà …»: optimistisk men med förbehåll."
+    }
+   ]
+  },
+  {
+   "id": "it7-ex-let-2",
+   "part": "lettura",
+   "teil": "Prova 1",
+   "title": "Leggere in digitale",
+   "time": 20,
+   "instr": "Läs texten och välj rätt alternativ för varje fråga.",
+   "lines": [
+    {
+     "fr": "Leggiamo meglio su carta o sullo schermo? Una ricerca dell'Università di Valencia, che ha analizzato oltre cinquanta studi, suggerisce una risposta.",
+     "sv": "Läser vi bättre på papper eller på skärm? En studie från universitetet i Valencia, som analyserade mer än femtio studier, ger ett svar."
+    },
+    {
+     "fr": "Per i testi brevi e narrativi le differenze sono minime.",
+     "sv": "För korta och berättande texter är skillnaderna minimala."
+    },
+    {
+     "fr": "Per i testi informativi e lunghi, invece, chi legge su carta capisce di più.",
+     "sv": "För informerande och långa texter förstår däremot den som läser på papper mer."
+    },
+    {
+     "fr": "Gli studiosi parlano di «effetto superficialità»: sullo schermo tendiamo a scorrere il testo velocemente, come se fosse un messaggio sui social.",
+     "sv": "Forskarna talar om en «ytlighetseffekt»: på skärmen tenderar vi att skumma texten snabbt, som om det vore ett inlägg på sociala medier."
+    },
+    {
+     "fr": "Curiosamente, i giovani che dicono di preferire lo schermo non ottengono risultati migliori.",
+     "sv": "Märkligt nog får de unga som säger att de föredrar skärmen inte bättre resultat."
+    },
+    {
+     "fr": "Gli autori non chiedono di abbandonare il digitale, ma di insegnare strategie di lettura profonda anche online.",
+     "sv": "Författarna kräver inte att man överger det digitala, utan att man lär ut strategier för djupläsning även på nätet."
+    }
+   ],
+   "qs": [
+    {
+     "q": "Secondo la ricerca, per quali testi la carta è migliore?",
+     "opts": [
+      "Per tutti i testi",
+      "Per i testi brevi",
+      "Per i testi lunghi e informativi",
+      "Per i romanzi"
+     ],
+     "a": 2,
+     "why": "«Per i testi informativi e lunghi … chi legge su carta capisce di più»."
+    },
+    {
+     "q": "Che cos'è l'«effetto superficialità»?",
+     "opts": [
+      "La tendenza a leggere velocemente sullo schermo",
+      "La difficoltà a leggere su carta",
+      "La stanchezza degli occhi",
+      "La preferenza per i testi brevi"
+     ],
+     "a": 0,
+     "why": "«sullo schermo tendiamo a scorrere il testo velocemente»."
+    },
+    {
+     "q": "Che cosa è «curioso» nei risultati?",
+     "opts": [
+      "I giovani leggono di più",
+      "Chi preferisce lo schermo non capisce meglio",
+      "Gli anziani preferiscono lo schermo",
+      "La carta costa meno"
+     ],
+     "a": 1,
+     "why": "«i giovani che dicono di preferire lo schermo non ottengono risultati migliori»."
+    },
+    {
+     "q": "Che cosa propongono gli autori?",
+     "opts": [
+      "Vietare i tablet a scuola",
+      "Tornare solo alla carta",
+      "Insegnare a leggere in profondità anche online",
+      "Scrivere testi più brevi"
+     ],
+     "a": 2,
+     "why": "«insegnare strategie di lettura profonda anche online»."
+    }
+   ]
+  },
+  {
+   "id": "it7-ex-let-3",
+   "part": "lettura",
+   "teil": "Prova 2",
+   "title": "Due opinioni sul numero chiuso",
+   "time": 20,
+   "instr": "Läs de två texterna och avgör vem som säger vad: A (Giulia), B (Paolo) eller båda.",
+   "lines": [
+    {
+     "fr": "A – Giulia, studentessa: Il numero chiuso a Medicina è ingiusto. Un test di cento minuti non può dire se una persona sarà un buon medico. Molti miei amici bravissimi sono stati esclusi e sono andati a studiare in Romania o in Spagna.",
+     "sv": "A – Giulia, student: Det begränsade antalet platser på medicin är orättvist. Ett prov på hundra minuter kan inte avgöra om någon blir en bra läkare. Många av mina jätteduktiga vänner blev utestängda och åkte till Rumänien eller Spanien för att studera."
+    },
+    {
+     "fr": "B – Paolo, docente: Capisco la frustrazione degli studenti, ma senza un limite le università non avrebbero abbastanza laboratori e ospedali per la formazione. Il problema non è il numero chiuso in sé, ma il tipo di test: bisognerebbe valutare anche la motivazione.",
+     "sv": "B – Paolo, lärare: Jag förstår studenternas frustration, men utan en gräns skulle universiteten inte ha tillräckligt många laboratorier och sjukhus för utbildningen. Problemet är inte platsbegränsningen i sig, utan typen av prov: man borde också bedöma motivationen."
+    }
+   ],
+   "qs": [
+    {
+     "q": "Chi pensa che il test attuale non sia adatto?",
+     "opts": [
+      "Solo Giulia",
+      "Solo Paolo",
+      "Entrambi",
+      "Nessuno dei due"
+     ],
+     "a": 2,
+     "why": "Giulia: ett prov kan inte avgöra; Paolo: problemet är typen av prov."
+    },
+    {
+     "q": "Chi difende l'esistenza di un limite di posti?",
+     "opts": [
+      "Giulia",
+      "Paolo",
+      "Entrambi",
+      "Nessuno dei due"
+     ],
+     "a": 1,
+     "why": "Paolo: «senza un limite le università non avrebbero abbastanza laboratori»."
+    },
+    {
+     "q": "Chi parla di studenti che vanno all'estero?",
+     "opts": [
+      "Giulia",
+      "Paolo",
+      "Entrambi",
+      "Nessuno dei due"
+     ],
+     "a": 0,
+     "why": "Giulia: «sono andati a studiare in Romania o in Spagna»."
+    },
+    {
+     "q": "Chi propone di valutare la motivazione?",
+     "opts": [
+      "Giulia",
+      "Paolo",
+      "Entrambi",
+      "Nessuno dei due"
+     ],
+     "a": 1,
+     "why": "Paolo: «bisognerebbe valutare anche la motivazione»."
+    }
+   ]
+  },
+  {
+   "id": "it7-ex-scr-1",
+   "part": "scrittura",
+   "teil": "Prova 1",
+   "title": "Testo argomentativo: lo smart working",
+   "time": 40,
+   "minWords": 120,
+   "instr": "Välj ett ämne och skriv 120–180 ord. På provet väljer du ett av två ämnen.",
+   "task": "Molte aziende italiane permettono ai dipendenti di lavorare da casa alcuni giorni alla settimana. Secondo te, lo smart working migliora la vita delle persone o crea nuovi problemi? Scrivi un testo per il giornale della tua scuola in cui esprimi la tua opinione con esempi concreti. (120–180 parole)",
+   "criteria": [
+    "Adeguatezza al compito",
+    "Coerenza e coesione",
+    "Lessico",
+    "Grammatica"
+   ],
+   "model": "Negli ultimi anni lo smart working è diventato normale per milioni di italiani. Secondo me, ha molti vantaggi, ma anche qualche rischio. In primo luogo, chi lavora da casa risparmia tempo e denaro: niente traffico, niente treni in ritardo. Mio padre, ad esempio, può finalmente cenare con noi. In secondo luogo, i piccoli paesi possono tornare a vivere, perché non è più necessario abitare in città. Tuttavia, lavorare sempre da soli può essere pesante. Molti dicono di sentirsi isolati, come se fossero chiusi in una bolla, e hanno difficoltà a separare il lavoro dalla vita privata. Per questo credo che la soluzione migliore sia un modello misto: due o tre giorni a casa e gli altri in ufficio. In conclusione, lo smart working migliora la vita, a patto che sia una scelta e non un obbligo.",
+   "modelSv": "Under de senaste åren har distansarbete blivit normalt för miljontals italienare. Jag tycker att det har många fördelar men också vissa risker. För det första sparar den som arbetar hemifrån tid och pengar: ingen trafik, inga försenade tåg. Min pappa kan till exempel äntligen äta middag med oss. För det andra kan småbyarna börja leva igen, eftersom man inte längre måste bo i staden. Men att alltid arbeta ensam kan vara tungt. Många säger att de känner sig isolerade, som om de vore instängda i en bubbla, och har svårt att skilja arbetet från privatlivet. Därför tror jag att den bästa lösningen är en blandmodell: två eller tre dagar hemma och resten på kontoret. Sammanfattningsvis gör distansarbete livet bättre, på villkor att det är ett val och inte ett tvång."
+  },
+  {
+   "id": "it7-ex-scr-2",
+   "part": "scrittura",
+   "teil": "Prova 2",
+   "title": "Lettera formale: reclamo",
+   "time": 25,
+   "minWords": 80,
+   "instr": "Skriv ett formellt brev på 80–100 ord. På provet väljer du en av tre uppgifter.",
+   "task": "Hai comprato online un biglietto per un concerto al Teatro Regio di Parma, ma il concerto è stato annullato e non hai ancora ricevuto il rimborso. Scrivi una mail formale al teatro: spiega la situazione, chiedi il rimborso e indica un termine. (80–100 parole)",
+   "criteria": [
+    "Adeguatezza al compito",
+    "Registro",
+    "Lessico",
+    "Grammatica"
+   ],
+   "model": "Gentile Direzione, le scrivo in merito al concerto del 12 marzo, annullato pochi giorni prima della data prevista. Avendo acquistato online due biglietti per un totale di 90 euro, ho chiesto il rimborso già il 15 marzo, ma a oggi non ho ricevuto alcuna risposta. Le sarei grato se potesse effettuare il rimborso entro trenta giorni dalla presente. Qualora ciò non avvenisse, mi vedrei costretto a rivolgermi a un'associazione di consumatori. Resto in attesa di un suo cortese riscontro. Distinti saluti, Erik Lind",
+   "modelSv": "Bästa ledning, jag skriver angående konserten den 12 mars, som ställdes in några dagar före det planerade datumet. Eftersom jag köpte två biljetter på nätet för totalt 90 euro begärde jag återbetalning redan den 15 mars, men hittills har jag inte fått något svar. Jag vore tacksam om ni kunde göra återbetalningen inom trettio dagar från detta brev. Om det inte skulle ske vore jag tvungen att vända mig till en konsumentorganisation. Jag ser fram emot ert svar. Med vänliga hälsningar, Erik Lind"
+  },
+  {
+   "id": "it7-ex-scr-3",
+   "part": "scrittura",
+   "teil": "Prova 1",
+   "title": "Testo espositivo: una tradizione",
+   "time": 40,
+   "minWords": 120,
+   "instr": "Skriv 120–180 ord.",
+   "task": "Una rivista italiana per giovani chiede ai lettori stranieri di presentare una tradizione del loro Paese e di confrontarla con una tradizione italiana che conoscono. Scrivi il tuo articolo. (120–180 parole)",
+   "criteria": [
+    "Adeguatezza al compito",
+    "Coerenza e coesione",
+    "Lessico",
+    "Grammatica"
+   ]
+  },
+  {
+   "id": "it7-ex-scr-4",
+   "part": "scrittura",
+   "teil": "Prova 2",
+   "title": "Mail a un'amica italiana",
+   "time": 25,
+   "minWords": 80,
+   "instr": "Skriv ett informellt mejl på 80–100 ord.",
+   "task": "Un'amica italiana ti ha invitato a passare l'estate a Bologna, ma tu non puoi andare. Scrivile una mail: ringraziala, spiega perché non puoi e proponi un'alternativa. (80–100 parole)",
+   "criteria": [
+    "Adeguatezza al compito",
+    "Registro",
+    "Lessico",
+    "Grammatica"
+   ]
+  },
+  {
+   "id": "it7-ex-cl-1",
+   "part": "competenza",
+   "teil": "Prova 1",
+   "title": "Lettera all'università",
+   "time": 12,
+   "instr": "Läs texten och välj det ord eller den form som passar i varje lucka (1–6).",
+   "lines": [
+    {
+     "fr": "Gentile segreteria, vi scrivo per chiedere informazioni sul corso di laurea in Musicologia. Vorrei sapere se (1) ___ possibile iscriversi anche con un diploma straniero e quali documenti (2) ___ presentare.",
+     "sv": "Bästa studentexpedition, jag skriver för att fråga om programmet i musikvetenskap. Jag skulle vilja veta om det är möjligt att skriva in sig med ett utländskt examensbevis och vilka handlingar man måste lämna in."
+    },
+    {
+     "fr": "(3) ___ letto il vostro sito, non ho capito se sia richiesta una certificazione linguistica. (4) ___ fosse necessaria, potrei sostenere il CELI 3 a dicembre.",
+     "sv": "Efter att ha läst er webbplats har jag inte förstått om ett språkcertifikat krävs. Om det skulle behövas kan jag skriva CELI 3 i december."
+    },
+    {
+     "fr": "Vi sarei grato (5) ___ poteste rispondermi entro fine mese. Resto in attesa di un vostro cortese (6) ___. Distinti saluti.",
+     "sv": "Jag vore tacksam om ni kunde svara före månadens slut. Jag ser fram emot ert svar. Med vänliga hälsningar."
+    }
+   ],
+   "qs": [
+    {
+     "q": "(1)",
+     "opts": [
+      "sia",
+      "è stato",
+      "fosse",
+      "sarà"
+     ],
+     "a": 0,
+     "why": "Indirekt fråga efter vorrei sapere se: congiuntivo presente (sia)."
+    },
+    {
+     "q": "(2)",
+     "opts": [
+      "bisogna",
+      "occorra",
+      "occorre",
+      "servano"
+     ],
+     "a": 3,
+     "why": "Quali documenti … servano: plural, congiuntivo i indirekt fråga."
+    },
+    {
+     "q": "(3)",
+     "opts": [
+      "Dopo",
+      "Avendo",
+      "Essendo",
+      "Dopo che"
+     ],
+     "a": 1,
+     "why": "Avendo letto = efter att ha läst (gerundio passato)."
+    },
+    {
+     "q": "(4)",
+     "opts": [
+      "Se",
+      "Qualora",
+      "Quando",
+      "Perché"
+     ],
+     "a": 1,
+     "why": "Qualora + congiuntivo imperfetto (fosse) i formell stil. Se fungerar också i talspråk, men qualora är det formella valet här."
+    },
+    {
+     "q": "(5)",
+     "opts": [
+      "che",
+      "se",
+      "quando",
+      "perché"
+     ],
+     "a": 1,
+     "why": "Vi sarei grato se + congiuntivo imperfetto."
+    },
+    {
+     "q": "(6)",
+     "opts": [
+      "risposta",
+      "riscontro",
+      "ritorno",
+      "rimando"
+     ],
+     "a": 1,
+     "why": "Fast uttryck: resto in attesa di un vostro cortese riscontro."
+    }
+   ]
+  },
+  {
+   "id": "it7-ex-cl-2",
+   "part": "competenza",
+   "teil": "Prova 1",
+   "title": "Una biografia",
+   "time": 12,
+   "instr": "Läs texten och välj det ord eller den form som passar i varje lucka (1–6).",
+   "lines": [
+    {
+     "fr": "Grazia Deledda (1) ___ a Nuoro, in Sardegna, nel 1871. Pur non (2) ___ frequentato l'università, studiò da sola e cominciò a scrivere molto giovane.",
+     "sv": "Grazia Deledda föddes i Nuoro på Sardinien 1871. Fast hon inte hade gått på universitetet studerade hon på egen hand och började skriva mycket ung."
+    },
+    {
+     "fr": "Nel 1900 si (3) ___ a Roma con il marito. I suoi romanzi raccontano una Sardegna arcaica, dove i personaggi lottano contro la colpa e il destino, come se non (4) ___ via d'uscita.",
+     "sv": "År 1900 flyttade hon till Rom med sin man. Hennes romaner skildrar ett ålderdomligt Sardinien, där gestalterna kämpar mot skuld och öde, som om det inte fanns någon utväg."
+    },
+    {
+     "fr": "Nel 1926 (5) ___ il premio Nobel, prima e finora unica donna italiana. È forse la scrittrice sarda più importante che (6) ___ mai esistita.",
+     "sv": "År 1926 fick hon Nobelpriset, som första och hittills enda italienska kvinna. Hon är kanske den viktigaste sardiska författarinna som någonsin har funnits."
+    }
+   ],
+   "qs": [
+    {
+     "q": "(1)",
+     "opts": [
+      "nacque",
+      "nasceva",
+      "è nascita",
+      "nascette"
+     ],
+     "a": 0,
+     "why": "Passato remoto av nascere: nacque."
+    },
+    {
+     "q": "(2)",
+     "opts": [
+      "essendo",
+      "avendo",
+      "avere",
+      "aver"
+     ],
+     "a": 1,
+     "why": "Pur + gerundio passato: pur non avendo frequentato."
+    },
+    {
+     "q": "(3)",
+     "opts": [
+      "trasferì",
+      "trasferiva",
+      "trasferisse",
+      "trasferita"
+     ],
+     "a": 0,
+     "why": "Passato remoto: si trasferì."
+    },
+    {
+     "q": "(4)",
+     "opts": [
+      "c'era",
+      "ci fosse",
+      "ci sia",
+      "ci sarebbe"
+     ],
+     "a": 1,
+     "why": "Come se + congiuntivo imperfetto."
+    },
+    {
+     "q": "(5)",
+     "opts": [
+      "vinse",
+      "vinceva",
+      "vincé",
+      "ha vinto stato"
+     ],
+     "a": 0,
+     "why": "Passato remoto av vincere: vinse."
+    },
+    {
+     "q": "(6)",
+     "opts": [
+      "è",
+      "sia",
+      "fosse",
+      "sarebbe"
+     ],
+     "a": 1,
+     "why": "Superlativ + che → congiuntivo passato: sia mai esistita."
+    }
+   ]
+  },
+  {
+   "id": "it7-ex-cl-3",
+   "part": "competenza",
+   "teil": "Prova 1",
+   "title": "Ordbildning i sammanhang",
+   "time": 12,
+   "instr": "Läs texten och välj det ord eller den form som passar i varje lucka (1–6).",
+   "lines": [
+    {
+     "fr": "Il governo ha annunciato una (1) ___ (RIDURRE) delle tasse per i giovani. Secondo l'opposizione, però, la misura è (2) ___ (SOSTENERE) solo con nuovi tagli.",
+     "sv": "Regeringen har aviserat en skattesänkning för unga. Enligt oppositionen är åtgärden dock bara hållbar med nya nedskärningar."
+    },
+    {
+     "fr": "Il ministro ha difeso la (3) ___ (SCEGLIERE) con grande (4) ___ (FERMO). «La (5) ___ (OCCUPARE) giovanile è la nostra priorità», ha detto.",
+     "sv": "Ministern försvarade beslutet med stor fasthet. «Ungdomssysselsättningen är vår prioritet», sa han."
+    },
+    {
+     "fr": "Molti economisti restano (6) ___ (SCETTICO): per loro il piano è poco (7) ___ (CREDERE).",
+     "sv": "Många ekonomer är fortfarande skeptiska: för dem är planen föga trovärdig."
+    }
+   ],
+   "qs": [
+    {
+     "q": "(1) RIDURRE",
+     "opts": [
+      "riduzione",
+      "riducimento",
+      "ridotta",
+      "riduttura"
+     ],
+     "a": 0,
+     "why": "Ridurre → la riduzione (-zione)."
+    },
+    {
+     "q": "(2) SOSTENERE",
+     "opts": [
+      "sostenuta",
+      "sostenibile",
+      "sostenente",
+      "sostegnosa"
+     ],
+     "a": 1,
+     "why": "-ibile = som kan …: sostenibile."
+    },
+    {
+     "q": "(3) SCEGLIERE",
+     "opts": [
+      "scelta",
+      "sceglienza",
+      "scegliazione",
+      "scelto"
+     ],
+     "a": 0,
+     "why": "Scegliere → la scelta."
+    },
+    {
+     "q": "(4) FERMO",
+     "opts": [
+      "fermità",
+      "fermezza",
+      "fermanza",
+      "fermaggio"
+     ],
+     "a": 1,
+     "why": "Fermo → la fermezza (-ezza)."
+    },
+    {
+     "q": "(5) OCCUPARE",
+     "opts": [
+      "occupamento",
+      "occupanza",
+      "occupazione",
+      "occupità"
+     ],
+     "a": 2,
+     "why": "Occupare → l'occupazione."
+    },
+    {
+     "q": "(6) SCETTICO",
+     "opts": [
+      "scettici",
+      "scetticismo",
+      "scettiche",
+      "scettico"
+     ],
+     "a": 0,
+     "why": "Adjektivet böjs efter molti economisti: scettici."
+    },
+    {
+     "q": "(7) CREDERE",
+     "opts": [
+      "credente",
+      "credibile",
+      "creduto",
+      "credulo"
+     ],
+     "a": 1,
+     "why": "Credibile = trovärdig."
+    }
+   ]
+  },
+  {
+   "id": "it7-ex-asc-1",
+   "part": "ascolto",
+   "teil": "Prova 1",
+   "title": "Intervista a una liutaia",
+   "time": 8,
+   "plays": 2,
+   "instr": "Du hör en radiointervju två gånger. Välj rätt alternativ.",
+   "lines": [
+    {
+     "fr": "Oggi siamo a Cremona con Chiara, trent'anni, liutaia. Chiara, come hai cominciato?",
+     "sv": "I dag är vi i Cremona med Chiara, trettio år, fiolbyggare. Chiara, hur började du?"
+    },
+    {
+     "fr": "Suonavo il violoncello al conservatorio, ma mi interessava di più capire come fosse fatto lo strumento. Così, dopo il diploma, mi sono iscritta alla scuola di liuteria.",
+     "sv": "Jag spelade cello på konservatoriet, men jag var mer intresserad av att förstå hur instrumentet var byggt. Så efter examen skrev jag in mig på fiolbyggarskolan."
+    },
+    {
+     "fr": "Quanto tempo ci vuole per costruire un violino?",
+     "sv": "Hur lång tid tar det att bygga en fiol?"
+    },
+    {
+     "fr": "Circa due mesi di lavoro, ma il legno deve stagionare per almeno dieci anni prima. Io uso ancora legno comprato dal mio maestro.",
+     "sv": "Ungefär två månaders arbete, men träet måste lagras i minst tio år först. Jag använder fortfarande trä som min lärare köpte."
+    },
+    {
+     "fr": "E i clienti chi sono?",
+     "sv": "Och vilka är kunderna?"
+    },
+    {
+     "fr": "Soprattutto giovani musicisti. Un violino antico costa milioni, i miei costano come una piccola automobile. Molti arrivano dall'Asia, dove la musica classica è in grande crescita.",
+     "sv": "Framför allt unga musiker. En gammal fiol kostar miljoner, mina kostar som en liten bil. Många kommer från Asien, där den klassiska musiken växer kraftigt."
+    }
+   ],
+   "qs": [
+    {
+     "q": "Perché Chiara ha scelto la liuteria?",
+     "opts": [
+      "Non era brava a suonare",
+      "Voleva capire come è fatto lo strumento",
+      "Suo padre era liutaio",
+      "Guadagna di più"
+     ],
+     "a": 1,
+     "why": "«mi interessava di più capire come fosse fatto lo strumento»."
+    },
+    {
+     "q": "Quanto tempo deve stagionare il legno?",
+     "opts": [
+      "Due mesi",
+      "Un anno",
+      "Almeno dieci anni",
+      "Non serve"
+     ],
+     "a": 2,
+     "why": "«il legno deve stagionare per almeno dieci anni»."
+    },
+    {
+     "q": "Chi sono soprattutto i suoi clienti?",
+     "opts": [
+      "Orchestre famose",
+      "Collezionisti",
+      "Giovani musicisti",
+      "Negozi di musica"
+     ],
+     "a": 2,
+     "why": "«Soprattutto giovani musicisti»."
+    },
+    {
+     "q": "Quanto costa un violino di Chiara?",
+     "opts": [
+      "Milioni di euro",
+      "Come una piccola automobile",
+      "Pochi euro",
+      "Non lo dice"
+     ],
+     "a": 1,
+     "why": "«i miei costano come una piccola automobile»."
+    }
+   ]
+  },
+  {
+   "id": "it7-ex-asc-2",
+   "part": "ascolto",
+   "teil": "Prova 1",
+   "title": "Annuncio all'università",
+   "time": 6,
+   "plays": 2,
+   "instr": "Du hör ett meddelande två gånger. Välj rätt alternativ.",
+   "lines": [
+    {
+     "fr": "Si comunica agli studenti del primo anno che la lezione di Storia contemporanea di giovedì è spostata in aula magna, perché l'aula 4 è in ristrutturazione.",
+     "sv": "Studenterna i första årskursen meddelas att torsdagens föreläsning i samtidshistoria flyttas till aulan, eftersom sal 4 renoveras."
+    },
+    {
+     "fr": "L'appello d'esame di gennaio è anticipato dal 20 al 15. Le iscrizioni si chiudono cinque giorni prima.",
+     "sv": "Tentamenstillfället i januari tidigareläggs från den 20:e till den 15:e. Anmälan stänger fem dagar innan."
+    },
+    {
+     "fr": "Si ricorda inoltre che il ricevimento del professor Galli è sospeso fino a nuovo avviso.",
+     "sv": "Vi påminner också om att professor Gallis mottagning är inställd tills vidare."
+    }
+   ],
+   "qs": [
+    {
+     "q": "Dove si terrà la lezione di giovedì?",
+     "opts": [
+      "Nell'aula 4",
+      "In aula magna",
+      "Online",
+      "In biblioteca"
+     ],
+     "a": 1,
+     "why": "«è spostata in aula magna»."
+    },
+    {
+     "q": "Quando è il nuovo appello?",
+     "opts": [
+      "Il 10 gennaio",
+      "Il 15 gennaio",
+      "Il 20 gennaio",
+      "Il 25 gennaio"
+     ],
+     "a": 1,
+     "why": "«anticipato dal 20 al 15»."
+    },
+    {
+     "q": "Entro quando ci si deve iscrivere?",
+     "opts": [
+      "Il 10 gennaio",
+      "Il 15 gennaio",
+      "Il 20 gennaio",
+      "Non si deve"
+     ],
+     "a": 0,
+     "why": "Cinque giorni prima del 15 = il 10."
+    },
+    {
+     "q": "Che cosa succede al ricevimento del professor Galli?",
+     "opts": [
+      "Cambia orario",
+      "È sospeso",
+      "Si fa online",
+      "Si sposta in aula magna"
+     ],
+     "a": 1,
+     "why": "«è sospeso fino a nuovo avviso»."
+    }
+   ]
+  },
+  {
+   "id": "it7-ex-asc-3",
+   "part": "ascolto",
+   "teil": "Prova 2",
+   "title": "Radio: il caffè sospeso",
+   "time": 8,
+   "plays": 2,
+   "instr": "Du hör ett radioinslag två gånger. Välj rätt alternativ.",
+   "lines": [
+    {
+     "fr": "A Napoli esiste un'usanza antica: il caffè sospeso. Chi entra al bar paga due caffè ma ne beve uno solo.",
+     "sv": "I Neapel finns en gammal sed: det väntande kaffet. Den som går in på baren betalar två kaffe men dricker bara ett."
+    },
+    {
+     "fr": "Il secondo resta «sospeso», cioè pagato, per una persona che non può permetterselo.",
+     "sv": "Det andra blir kvar «i väntan», det vill säga betalt, åt någon som inte har råd."
+    },
+    {
+     "fr": "La tradizione era quasi scomparsa, ma durante la crisi del 2008 è tornata di moda e si è diffusa in tutta Europa.",
+     "sv": "Traditionen hade nästan försvunnit, men under krisen 2008 kom den tillbaka och spreds över hela Europa."
+    },
+    {
+     "fr": "Oggi esistono anche il «libro sospeso» e la «spesa sospesa»: la solidarietà napoletana ha fatto scuola.",
+     "sv": "I dag finns också «den väntande boken» och «den väntande matkassen»: den napolitanska solidariteten har blivit en förebild."
+    }
+   ],
+   "qs": [
+    {
+     "q": "Che cos'è il caffè sospeso?",
+     "opts": [
+      "Un caffè molto forte",
+      "Un caffè pagato per chi non può permetterselo",
+      "Un caffè gratis del barista",
+      "Un caffè da portare via"
+     ],
+     "a": 1,
+     "why": "«pagato, per una persona che non può permetterselo»."
+    },
+    {
+     "q": "Quando è tornata di moda la tradizione?",
+     "opts": [
+      "Dopo la guerra",
+      "Durante la crisi del 2008",
+      "Negli anni Sessanta",
+      "Durante la pandemia"
+     ],
+     "a": 1,
+     "why": "«durante la crisi del 2008 è tornata di moda»."
+    },
+    {
+     "q": "Che cosa significa «ha fatto scuola»?",
+     "opts": [
+      "È stata insegnata a scuola",
+      "È diventata un modello imitato",
+      "È finita",
+      "È vietata"
+     ],
+     "a": 1,
+     "why": "Fare scuola = bli en förebild som andra följer."
+    }
+   ]
+  },
+  {
+   "id": "it7-ex-or-1",
+   "part": "orale",
+   "teil": "Prova 1",
+   "title": "Presentarsi e parlare di una foto",
+   "prep": 2,
+   "time": 4,
+   "instr": "Presentera dig kort och beskriv sedan fotot som examinatorn visar. Kommentera vad bilden säger om samhället.",
+   "task": "Presentati brevemente (studi, interessi, progetti). Poi descrivi la foto: una piazza italiana piena di turisti, con un cartello «Venezia non è in vendita». Che cosa rappresenta? Che cosa ne pensi?",
+   "phrases": [
+    "In primo piano si vede …",
+    "Sullo sfondo c'è …",
+    "L'immagine fa pensare a …",
+    "A mio avviso, il problema è …"
+   ]
+  },
+  {
+   "id": "it7-ex-or-2",
+   "part": "orale",
+   "teil": "Prova 2",
+   "title": "Riassumere un testo",
+   "prep": 5,
+   "time": 4,
+   "instr": "Läs texten (i provet ges en kort text), sammanfatta den muntligt och ge din åsikt. Använd en text ur kapitlet Culture, t.ex. om Galilei eller Verdi.",
+   "task": "Riassumi con parole tue il testo «Verdi, voce di una nazione»: chi era Verdi, perché la sua musica divenne un simbolo e che cosa successe al suo funerale. Poi di' che cosa ne pensi: la musica può avere un ruolo politico?",
+   "phrases": [
+    "Il testo parla di …",
+    "L'autore mette in luce …",
+    "In sintesi, …",
+    "Personalmente ritengo che …"
+   ]
+  },
+  {
+   "id": "it7-ex-or-3",
+   "part": "orale",
+   "teil": "Prova 3",
+   "title": "Gioco di ruolo: la stanza in affitto",
+   "prep": 2,
+   "time": 4,
+   "instr": "Rollspel. Examinatorn är hyresvärden. Förhandla om villkoren.",
+   "task": "Sei uno studente Erasmus a Bologna. Il padrone di casa ti chiede tre mensilità di deposito e un contratto di un anno, ma tu resti solo sei mesi. Negozia: proponi una soluzione e cerca un compromesso.",
+   "phrases": [
+    "Capisco le sue esigenze, però …",
+    "E se ci venissimo incontro?",
+    "A patto che …",
+    "Potremmo mettere per iscritto …"
+   ]
+  },
+  {
+   "id": "it7-ex-or-4",
+   "part": "orale",
+   "teil": "Prova 3",
+   "title": "Gioco di ruolo: all'ammissione",
+   "prep": 2,
+   "time": 4,
+   "instr": "Rollspel. Examinatorn är ordförande i antagningskommittén på ett konservatorium.",
+   "task": "Ti presenti all'esame di ammissione di un conservatorio italiano. La commissione ti chiede perché vuoi studiare in Italia, che repertorio hai preparato e quali sono i tuoi progetti. Rispondi e fai almeno una domanda anche tu.",
+   "phrases": [
+    "Ho scelto questo conservatorio perché …",
+    "Ho preparato …",
+    "Mi piacerebbe …",
+    "Vorrei sapere se …"
+   ]
+  }
+ ]
+}

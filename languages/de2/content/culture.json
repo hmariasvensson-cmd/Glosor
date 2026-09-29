@@ -1,0 +1,958 @@
+[
+ {
+  "id": "de2-c-b2-ladenschluss",
+  "sec": "b2",
+  "title": "Sonntags ist alles zu",
+  "lines": [
+   {
+    "fr": "In Deutschland sind die Geschäfte am Sonntag geschlossen.",
+    "sv": "I Tyskland är affärerna stängda på söndagar."
+   },
+   {
+    "fr": "Das steht im Gesetz: Der Sonntag ist ein Ruhetag.",
+    "sv": "Det står i lagen: söndagen är en vilodag."
+   },
+   {
+    "fr": "Supermärkte, Kaufhäuser und Kleidergeschäfte machen erst am Montag wieder auf.",
+    "sv": "Snabbköp, varuhus och klädaffärer öppnar först på måndagen igen."
+   },
+   {
+    "fr": "Nur Bäckereien, Tankstellen und Geschäfte in großen Bahnhöfen dürfen offen sein.",
+    "sv": "Bara bagerier, bensinstationer och affärer på stora stationer får ha öppet."
+   },
+   {
+    "fr": "Von Montag bis Samstag sind viele Supermärkte bis 20 oder 22 Uhr geöffnet.",
+    "sv": "Måndag till lördag har många snabbköp öppet till 20 eller 22."
+   },
+   {
+    "fr": "Deshalb kaufen viele Familien am Samstag für das ganze Wochenende ein.",
+    "sv": "Därför handlar många familjer för hela helgen på lördagen."
+   },
+   {
+    "fr": "Ein paar Mal im Jahr gibt es einen „verkaufsoffenen Sonntag“. Dann darf man auch sonntags einkaufen.",
+    "sv": "Några gånger om året är det ”köpsöndag”. Då får man handla på söndagar också."
+   },
+   {
+    "fr": "Auch in Österreich und in der Schweiz sind die meisten Geschäfte am Sonntag zu.",
+    "sv": "Även i Österrike och Schweiz är de flesta affärer stängda på söndagar."
+   }
+  ],
+  "gloss": {
+   "gesetz": {
+    "t": "das Gesetz",
+    "sv": "lag",
+    "g": "n"
+   },
+   "ruhetag": {
+    "t": "der Ruhetag",
+    "sv": "vilodag",
+    "g": "m"
+   },
+   "supermärkte": {
+    "t": "der Supermarkt",
+    "sv": "snabbköp",
+    "g": "m"
+   },
+   "bäckereien": {
+    "t": "die Bäckerei",
+    "sv": "bageri",
+    "g": "f"
+   },
+   "tankstellen": {
+    "t": "die Tankstelle",
+    "sv": "bensinstation",
+    "g": "f"
+   },
+   "bahnhöfen": {
+    "t": "der Bahnhof",
+    "sv": "station",
+    "g": "m"
+   },
+   "verkaufsoffenen": {
+    "t": "verkaufsoffen",
+    "sv": "med öppna affärer",
+    "g": ""
+   },
+   "offen": {
+    "t": "offen",
+    "sv": "öppen",
+    "g": ""
+   },
+   "sonntags": {
+    "t": "sonntags",
+    "sv": "på söndagar",
+    "g": ""
+   },
+   "auf": {
+    "t": "auf",
+    "sv": "på, upp på",
+    "g": ""
+   },
+   "geschlossen": {
+    "t": "geschlossen",
+    "sv": "stängd",
+    "g": ""
+   },
+   "geöffnet": {
+    "t": "geöffnet",
+    "sv": "öppen (om affär)",
+    "g": ""
+   },
+   "in": {
+    "t": "in",
+    "sv": "i, till (länder med artikel)",
+    "g": ""
+   },
+   "paar": {
+    "t": "das Paar (-e)",
+    "sv": "par",
+    "g": "n"
+   },
+   "zu": {
+    "t": "zu",
+    "sv": "till (personer och platser)",
+    "g": ""
+   }
+  },
+  "q": {
+   "q": "Vilka affärer får ha öppet på söndagar?",
+   "opts": [
+    "Alla snabbköp",
+    "Bagerier, bensinstationer och affärer på stora stationer",
+    "Klädaffärer",
+    "Varuhus"
+   ],
+   "a": 1,
+   "why": "„Nur Bäckereien, Tankstellen und Geschäfte in großen Bahnhöfen dürfen offen sein.“"
+  },
+  "ask": "Und in Schweden? Skriv 2–3 meningar på tyska: När är affärerna öppna i Sverige? Handlar du på söndagar?",
+  "model": "In Schweden sind viele Geschäfte auch am Sonntag geöffnet. Ich kaufe manchmal am Sonntag im Supermarkt ein. Ich finde das praktisch.",
+  "modelSv": "I Sverige är många affärer öppna på söndagar också. Jag handlar ibland i snabbköpet på söndagen. Jag tycker att det är praktiskt."
+ },
+ {
+  "id": "de2-c-b3-jahreszeiten",
+  "sec": "b3",
+  "title": "Vier Jahreszeiten in D-A-CH",
+  "lines": [
+   {
+    "fr": "In Deutschland, Österreich und der Schweiz gibt es vier Jahreszeiten.",
+    "sv": "I Tyskland, Österrike och Schweiz finns det fyra årstider."
+   },
+   {
+    "fr": "Der Sommer ist warm: Im Juli sind es oft 25 Grad oder mehr.",
+    "sv": "Sommaren är varm: i juli är det ofta 25 grader eller mer."
+   },
+   {
+    "fr": "Der Winter ist im Norden oft grau und nass, mit wenig Schnee.",
+    "sv": "Vintern är i norr ofta grå och blöt, med lite snö."
+   },
+   {
+    "fr": "In den Alpen gibt es im Winter viel Schnee. Viele Leute fahren dort Ski.",
+    "sv": "I Alperna är det mycket snö på vintern. Många åker skidor där."
+   },
+   {
+    "fr": "Im Sommer ist es in Deutschland nicht so lange hell wie in Schweden.",
+    "sv": "På sommaren är det inte ljust lika länge i Tyskland som i Sverige."
+   },
+   {
+    "fr": "In München geht die Sonne am 21. Juni um etwa 21:15 Uhr unter, in Stockholm erst um etwa 22 Uhr.",
+    "sv": "I München går solen ner omkring 21.15 den 21 juni, i Stockholm först omkring 22."
+   },
+   {
+    "fr": "Aber im Winter ist es in Deutschland heller: Im Dezember ist es in München etwa acht Stunden hell.",
+    "sv": "Men på vintern är det ljusare i Tyskland: i december är det ljust ungefär åtta timmar i München."
+   },
+   {
+    "fr": "Der Herbst ist oft windig, und im Frühling blühen schon im März die ersten Blumen.",
+    "sv": "Hösten är ofta blåsig, och på våren blommar de första blommorna redan i mars."
+   }
+  ],
+  "gloss": {
+   "jahreszeiten": {
+    "t": "die Jahreszeit",
+    "sv": "årstid",
+    "g": "f"
+   },
+   "unter": {
+    "t": "untergehen",
+    "sv": "gå ner",
+    "g": ""
+   },
+   "geht": {
+    "t": "untergehen",
+    "sv": "gå ner",
+    "g": ""
+   },
+   "heller": {
+    "t": "hell",
+    "sv": "ljus",
+    "g": ""
+   },
+   "herbst": {
+    "t": "der Herbst",
+    "sv": "höst",
+    "g": "m"
+   },
+   "frühling": {
+    "t": "der Frühling",
+    "sv": "vår",
+    "g": "m"
+   },
+   "blühen": {
+    "t": "blühen",
+    "sv": "blomma",
+    "g": ""
+   },
+   "alpen": {
+    "t": "die Alpen",
+    "sv": "Alperna",
+    "g": "pl"
+   },
+   "sommer": {
+    "t": "der Sommer",
+    "sv": "sommar",
+    "g": "m"
+   },
+   "winter": {
+    "t": "der Winter",
+    "sv": "vinter",
+    "g": "m"
+   },
+   "grad": {
+    "t": "der Grad (-)",
+    "sv": "grad",
+    "g": "m"
+   },
+   "in": {
+    "t": "in",
+    "sv": "i, till (länder med artikel)",
+    "g": ""
+   },
+   "lange": {
+    "t": "lange",
+    "sv": "länge",
+    "g": ""
+   },
+   "nass": {
+    "t": "nass",
+    "sv": "blöt, våt",
+    "g": ""
+   },
+   "norden": {
+    "t": "der Norden",
+    "sv": "norr",
+    "g": "m"
+   },
+   "windig": {
+    "t": "windig",
+    "sv": "blåsigt",
+    "g": ""
+   }
+  },
+  "q": {
+   "q": "Var är det mycket snö på vintern?",
+   "opts": [
+    "I norra Tyskland",
+    "I Alperna",
+    "I Hamburg",
+    "Överallt"
+   ],
+   "a": 1,
+   "why": "„In den Alpen gibt es im Winter viel Schnee.“"
+  },
+  "ask": "Und in Schweden? Skriv 2–3 meningar på tyska: Hur är vädret där du bor? Vilken är din favoritårstid?",
+  "model": "Bei uns in Umeå ist der Winter lang und kalt. Im Sommer ist es sehr lange hell. Meine Lieblingsjahreszeit ist der Sommer, denn ich schwimme gern im See.",
+  "modelSv": "Hos oss i Umeå är vintern lång och kall. På sommaren är det ljust väldigt länge. Min favoritårstid är sommaren, för jag badar gärna i sjön."
+ },
+ {
+  "id": "de2-c-b4-krankenkasse",
+  "sec": "b4",
+  "title": "Zum Arzt in Deutschland",
+  "lines": [
+   {
+    "fr": "In Deutschland muss jeder Mensch eine Krankenversicherung haben.",
+    "sv": "I Tyskland måste alla ha en sjukförsäkring."
+   },
+   {
+    "fr": "Die meisten Menschen sind in einer Krankenkasse, zum Beispiel der AOK oder der TK.",
+    "sv": "De flesta är med i en sjukkassa, till exempel AOK eller TK."
+   },
+   {
+    "fr": "Kinder und Jugendliche sind meistens bei ihren Eltern mitversichert.",
+    "sv": "Barn och ungdomar är oftast medförsäkrade hos sina föräldrar."
+   },
+   {
+    "fr": "Beim Arzt zeigt man seine Gesundheitskarte. Dann bezahlt die Krankenkasse.",
+    "sv": "Hos läkaren visar man sitt försäkringskort. Sedan betalar sjukkassan."
+   },
+   {
+    "fr": "Viele Menschen haben einen Hausarzt. Sie gehen zuerst zu ihm, auch mit kleinen Problemen.",
+    "sv": "Många har en husläkare. De går först till honom, även med små problem."
+   },
+   {
+    "fr": "Medikamente kauft man in der Apotheke. Man erkennt sie an einem großen roten A.",
+    "sv": "Mediciner köper man på apoteket. Man känner igen det på ett stort rött A."
+   },
+   {
+    "fr": "Wer krank ist, bekommt vom Arzt eine Krankmeldung für die Schule oder die Arbeit.",
+    "sv": "Den som är sjuk får en sjukanmälan från läkaren till skolan eller jobbet."
+   },
+   {
+    "fr": "Die Notrufnummer ist 112, wie in Schweden.",
+    "sv": "Larmnumret är 112, som i Sverige."
+   }
+  ],
+  "gloss": {
+   "krankenversicherung": {
+    "t": "die Krankenversicherung",
+    "sv": "sjukförsäkring",
+    "g": "f"
+   },
+   "krankenkasse": {
+    "t": "die Krankenkasse",
+    "sv": "sjukkassa",
+    "g": "f"
+   },
+   "mitversichert": {
+    "t": "mitversichert",
+    "sv": "medförsäkrad",
+    "g": ""
+   },
+   "hausarzt": {
+    "t": "der Hausarzt",
+    "sv": "husläkare",
+    "g": "m"
+   },
+   "medikamente": {
+    "t": "das Medikament",
+    "sv": "medicin",
+    "g": "n"
+   },
+   "erkennt": {
+    "t": "erkennen",
+    "sv": "känna igen",
+    "g": ""
+   },
+   "apotheke": {
+    "t": "die Apotheke",
+    "sv": "apotek",
+    "g": "f"
+   },
+   "arzt": {
+    "t": "der Arzt",
+    "sv": "läkare",
+    "g": "m"
+   },
+   "notrufnummer": {
+    "t": "die Notrufnummer",
+    "sv": "larmnummer",
+    "g": "f"
+   },
+   "jugendliche": {
+    "t": "der/die Jugendliche",
+    "sv": "ungdom",
+    "g": "m"
+   },
+   "an": {
+    "t": "an",
+    "sv": "vid, till (vatten)",
+    "g": ""
+   },
+   "bei": {
+    "t": "bei",
+    "sv": "hos",
+    "g": ""
+   },
+   "gesundheitskarte": {
+    "t": "die Gesundheitskarte (-n)",
+    "sv": "försäkringskort (sjukförsäkring)",
+    "g": "f"
+   },
+   "ihm": {
+    "t": "ihm",
+    "sv": "honom (dativ)",
+    "g": ""
+   },
+   "in": {
+    "t": "in",
+    "sv": "i, till (länder med artikel)",
+    "g": ""
+   },
+   "krankmeldung": {
+    "t": "die Krankmeldung (-en)",
+    "sv": "sjukanmälan",
+    "g": "f"
+   },
+   "zu": {
+    "t": "zu",
+    "sv": "till (personer och platser)",
+    "g": ""
+   }
+  },
+  "q": {
+   "q": "Hur känner man igen ett apotek i Tyskland?",
+   "opts": [
+    "På ett grönt kors",
+    "På ett stort rött A",
+    "På en blå skylt",
+    "På ordet Pharmacy"
+   ],
+   "a": 1,
+   "why": "„Man erkennt sie an einem großen roten A.“"
+  },
+  "ask": "Und in Schweden? Skriv 2–3 meningar på tyska: Vart går du när du är sjuk? Vad gör du när du är förkyld?",
+  "model": "Wenn ich krank bin, rufe ich zuerst die Vårdcentral an. Wenn ich erkältet bin, bleibe ich zu Hause und trinke viel Tee. Medikamente kaufe ich in der Apotheke.",
+  "modelSv": "När jag är sjuk ringer jag först vårdcentralen. När jag är förkyld stannar jag hemma och dricker mycket te. Mediciner köper jag på apoteket."
+ },
+ {
+  "id": "de2-c-b5-duzen",
+  "sec": "b5",
+  "title": "Du oder Sie?",
+  "lines": [
+   {
+    "fr": "Im Deutschen gibt es zwei Wörter für „du“: du und Sie.",
+    "sv": "På tyska finns det två ord för ”du”: du och Sie."
+   },
+   {
+    "fr": "Freunde, Familie und Kinder sagen du.",
+    "sv": "Vänner, familj och barn säger du."
+   },
+   {
+    "fr": "Jugendliche sagen auch zu anderen Jugendlichen immer du.",
+    "sv": "Ungdomar säger alltid du till andra ungdomar också."
+   },
+   {
+    "fr": "Zu Erwachsenen, die man nicht gut kennt, sagt man Sie: zum Beispiel zu Lehrern, zum Arzt oder zu Verkäufern.",
+    "sv": "Till vuxna som man inte känner väl säger man Sie: till exempel till lärare, läkare eller expediter."
+   },
+   {
+    "fr": "Mit Sie sagt man auch Herr oder Frau und den Familiennamen: „Guten Tag, Frau Müller!“",
+    "sv": "Med Sie säger man också Herr eller Frau och efternamnet: ”God dag, fru Müller!”"
+   },
+   {
+    "fr": "Ab 16 Jahren sagen viele Lehrer Sie zu ihren Schülern.",
+    "sv": "Från 16 år säger många lärare Sie till sina elever."
+   },
+   {
+    "fr": "Wenn man nicht sicher ist, sagt man lieber Sie. Der Ältere kann dann sagen: „Wir können uns duzen.“",
+    "sv": "Om man inte är säker säger man hellre Sie. Den äldre kan då säga: ”Vi kan säga du till varandra.”"
+   },
+   {
+    "fr": "In Schweden sagt man fast immer du. Das nennt man die „du-reformen“.",
+    "sv": "I Sverige säger man nästan alltid du. Det kallas du-reformen."
+   }
+  ],
+  "gloss": {
+   "erwachsenen": {
+    "t": "der/die Erwachsene",
+    "sv": "vuxen",
+    "g": "m"
+   },
+   "familiennamen": {
+    "t": "der Familienname",
+    "sv": "efternamn",
+    "g": "m"
+   },
+   "sicher": {
+    "t": "sicher",
+    "sv": "säker",
+    "g": ""
+   },
+   "ältere": {
+    "t": "älter",
+    "sv": "äldre",
+    "g": ""
+   },
+   "duzen": {
+    "t": "duzen",
+    "sv": "säga du",
+    "g": ""
+   },
+   "lehrern": {
+    "t": "der Lehrer",
+    "sv": "lärare",
+    "g": "m"
+   },
+   "verkäufern": {
+    "t": "der Verkäufer",
+    "sv": "expedit",
+    "g": "m"
+   },
+   "wörter": {
+    "t": "das Wort",
+    "sv": "ord",
+    "g": "n"
+   },
+   "nennt": {
+    "t": "nennen",
+    "sv": "kalla",
+    "g": ""
+   },
+   "lieber": {
+    "t": "lieber",
+    "sv": "hellre",
+    "g": ""
+   },
+   "jugendliche": {
+    "t": "der/die Jugendliche",
+    "sv": "ungdom",
+    "g": "m"
+   },
+   "in": {
+    "t": "in",
+    "sv": "i, till (länder med artikel)",
+    "g": ""
+   },
+   "uns": {
+    "t": "uns",
+    "sv": "oss",
+    "g": ""
+   },
+   "zu": {
+    "t": "zu",
+    "sv": "till (personer och platser)",
+    "g": ""
+   }
+  },
+  "q": {
+   "q": "Vad säger man till en läkare som man inte känner?",
+   "opts": [
+    "du",
+    "Sie",
+    "ihr",
+    "Herr du"
+   ],
+   "a": 1,
+   "why": "„Zu Erwachsenen, die man nicht gut kennt, sagt man Sie: … zum Arzt“."
+  },
+  "ask": "Und in Schweden? Skriv 2–3 meningar på tyska: Vad säger du till din lärare? Vad tycker du om du och Sie?",
+  "model": "In Schweden sage ich zu meiner Lehrerin du und ihren Vornamen. Ich finde das gut, denn es ist einfach. Aber Sie ist auch höflich.",
+  "modelSv": "I Sverige säger jag du och förnamnet till min lärare. Jag tycker det är bra, för det är enkelt. Men Sie är också artigt."
+ },
+ {
+  "id": "de2-c-b6-karneval",
+  "sec": "b6",
+  "title": "Karneval, Fasching, Fastnacht",
+  "lines": [
+   {
+    "fr": "Im Februar feiert man in vielen Städten die „fünfte Jahreszeit“.",
+    "sv": "I februari firar man ”den femte årstiden” i många städer."
+   },
+   {
+    "fr": "In Köln heißt das Fest Karneval, in Bayern und Österreich Fasching und in Mainz und Basel Fastnacht.",
+    "sv": "I Köln heter festen Karneval, i Bayern och Österrike Fasching och i Mainz och Basel Fastnacht."
+   },
+   {
+    "fr": "Die Menschen verkleiden sich als Clown, Pirat oder Prinzessin.",
+    "sv": "Människor klär ut sig till clown, pirat eller prinsessa."
+   },
+   {
+    "fr": "Der wichtigste Tag in Köln ist der Rosenmontag. Dann gibt es einen großen Umzug durch die Stadt.",
+    "sv": "Den viktigaste dagen i Köln är Rosenmontag. Då blir det ett stort karnevalståg genom staden."
+   },
+   {
+    "fr": "Von den Wagen werfen die Leute Süßigkeiten und Blumen. Die Zuschauer rufen „Kamelle!“ oder „Alaaf!“.",
+    "sv": "Från vagnarna kastar folk godis och blommor. Åskådarna ropar ”Kamelle!” eller ”Alaaf!”."
+   },
+   {
+    "fr": "In Köln kommen jedes Jahr über eine Million Menschen zum Umzug.",
+    "sv": "I Köln kommer över en miljon människor till karnevalståget varje år."
+   },
+   {
+    "fr": "Am Aschermittwoch ist alles vorbei. Dann beginnt die Fastenzeit bis Ostern.",
+    "sv": "På askonsdagen är allt över. Då börjar fastan fram till påsk."
+   }
+  ],
+  "gloss": {
+   "jahreszeit": {
+    "t": "die Jahreszeit",
+    "sv": "årstid",
+    "g": "f"
+   },
+   "wichtigste": {
+    "t": "wichtig",
+    "sv": "viktig",
+    "g": ""
+   },
+   "rosenmontag": {
+    "t": "der Rosenmontag",
+    "sv": "karnevalsmåndagen",
+    "g": "m"
+   },
+   "wagen": {
+    "t": "der Wagen",
+    "sv": "vagn",
+    "g": "m"
+   },
+   "werfen": {
+    "t": "werfen",
+    "sv": "kasta",
+    "g": ""
+   },
+   "zuschauer": {
+    "t": "der Zuschauer",
+    "sv": "åskådare",
+    "g": "m"
+   },
+   "aschermittwoch": {
+    "t": "der Aschermittwoch",
+    "sv": "askonsdagen",
+    "g": "m"
+   },
+   "fastenzeit": {
+    "t": "die Fastenzeit",
+    "sv": "fastan",
+    "g": "f"
+   },
+   "umzug": {
+    "t": "der Umzug",
+    "sv": "tåg, procession",
+    "g": "m"
+   },
+   "ostern": {
+    "t": "Ostern",
+    "sv": "påsk",
+    "g": ""
+   },
+   "clown": {
+    "t": "der Clown (-s)",
+    "sv": "clown",
+    "g": "m"
+   },
+   "fastnacht": {
+    "t": "die Fastnacht",
+    "sv": "karneval (sydvästtysk)",
+    "g": "f"
+   },
+   "in": {
+    "t": "in",
+    "sv": "i, till (länder med artikel)",
+    "g": ""
+   },
+   "million": {
+    "t": "die Million (-en)",
+    "sv": "miljon",
+    "g": "f"
+   },
+   "pirat": {
+    "t": "der Pirat (-en)",
+    "sv": "pirat",
+    "g": "m"
+   },
+   "prinzessin": {
+    "t": "die Prinzessin (-nen)",
+    "sv": "prinsessa",
+    "g": "f"
+   },
+   "rufen": {
+    "t": "rufen",
+    "sv": "ropa, kalla",
+    "g": ""
+   },
+   "verkleiden": {
+    "t": "verkleiden",
+    "sv": "klä ut",
+    "g": ""
+   }
+  },
+  "q": {
+   "q": "Vad heter den viktigaste karnevalsdagen i Köln?",
+   "opts": [
+    "Aschermittwoch",
+    "Rosenmontag",
+    "Fastnacht",
+    "Ostermontag"
+   ],
+   "a": 1,
+   "why": "„Der wichtigste Tag in Köln ist der Rosenmontag.“"
+  },
+  "ask": "Und in Schweden? Skriv 2–3 meningar på tyska: Klär man ut sig i Sverige? När och till vad har du klätt ut dig?",
+  "model": "In Schweden verkleiden sich die Kinder zu Ostern als Osterhexen. Ich habe mich als Kind auch als Hexe verkleidet. Zu Halloween gehen wir manchmal auf eine Party.",
+  "modelSv": "I Sverige klär barnen ut sig till påskkärringar. Jag klädde också ut mig till häxa när jag var liten. På Halloween går vi ibland på fest."
+ },
+ {
+  "id": "de2-c-b6-weihnachtsmarkt",
+  "sec": "b6",
+  "title": "Auf dem Weihnachtsmarkt",
+  "lines": [
+   {
+    "fr": "Im Advent gibt es in fast jeder Stadt in Deutschland und Österreich einen Weihnachtsmarkt.",
+    "sv": "Under advent finns det en julmarknad i nästan varje stad i Tyskland och Österrike."
+   },
+   {
+    "fr": "Einer der ältesten und bekanntesten ist der Striezelmarkt in Dresden. Es gibt ihn seit 1434.",
+    "sv": "En av de äldsta och mest kända är Striezelmarkt i Dresden. Den har funnits sedan 1434."
+   },
+   {
+    "fr": "Auf dem Markt gibt es kleine Holzhäuser mit Lichterketten.",
+    "sv": "På marknaden finns små trähus med ljusslingor."
+   },
+   {
+    "fr": "Man kann dort Geschenke, Kerzen und Sterne kaufen.",
+    "sv": "Där kan man köpa presenter, ljus och stjärnor."
+   },
+   {
+    "fr": "Die Erwachsenen trinken Glühwein, die Kinder Kinderpunsch.",
+    "sv": "De vuxna dricker glögg, barnen alkoholfri glögg."
+   },
+   {
+    "fr": "Man isst Bratwurst, Lebkuchen und Stollen.",
+    "sv": "Man äter grillkorv, pepparkaka och stollen."
+   },
+   {
+    "fr": "Am 24. Dezember, am Heiligabend, bekommen die Kinder ihre Geschenke, wie in Schweden.",
+    "sv": "Den 24 december, på julafton, får barnen sina julklappar, som i Sverige."
+   },
+   {
+    "fr": "Am 25. und 26. Dezember sind Feiertage.",
+    "sv": "Den 25 och 26 december är helgdagar."
+   }
+  ],
+  "gloss": {
+   "advent": {
+    "t": "der Advent",
+    "sv": "advent",
+    "g": "m"
+   },
+   "ältesten": {
+    "t": "alt",
+    "sv": "gammal",
+    "g": ""
+   },
+   "bekanntesten": {
+    "t": "bekannt",
+    "sv": "känd",
+    "g": ""
+   },
+   "holzhäuser": {
+    "t": "das Holzhaus",
+    "sv": "trähus",
+    "g": "n"
+   },
+   "glühwein": {
+    "t": "der Glühwein",
+    "sv": "glögg",
+    "g": "m"
+   },
+   "bratwurst": {
+    "t": "die Bratwurst",
+    "sv": "grillkorv",
+    "g": "f"
+   },
+   "lebkuchen": {
+    "t": "der Lebkuchen",
+    "sv": "pepparkaka",
+    "g": "m"
+   },
+   "heiligabend": {
+    "t": "der Heiligabend",
+    "sv": "julafton",
+    "g": "m"
+   },
+   "feiertage": {
+    "t": "der Feiertag",
+    "sv": "helgdag",
+    "g": "m"
+   },
+   "geschenke": {
+    "t": "das Geschenk",
+    "sv": "present",
+    "g": "n"
+   },
+   "kerzen": {
+    "t": "die Kerze",
+    "sv": "ljus",
+    "g": "f"
+   },
+   "weihnachtsmarkt": {
+    "t": "der Weihnachtsmarkt",
+    "sv": "julmarknad",
+    "g": "m"
+   },
+   "auf": {
+    "t": "auf",
+    "sv": "på, upp på",
+    "g": ""
+   },
+   "in": {
+    "t": "in",
+    "sv": "i, till (länder med artikel)",
+    "g": ""
+   },
+   "kinderpunsch": {
+    "t": "der Kinderpunsch",
+    "sv": "julglögg utan alkohol",
+    "g": "m"
+   },
+   "seit": {
+    "t": "seit",
+    "sv": "sedan, i (om tid)",
+    "g": ""
+   },
+   "stollen": {
+    "t": "der Stollen (-)",
+    "sv": "stollen (julbröd)",
+    "g": "m"
+   }
+  },
+  "q": {
+   "q": "Hur gammal är julmarknaden i Dresden?",
+   "opts": [
+    "Den har funnits sedan 1434",
+    "Den öppnade 1990",
+    "Den är från 1800-talet",
+    "Den har funnits i tio år"
+   ],
+   "a": 0,
+   "why": "„Es gibt ihn seit 1434.“"
+  },
+  "ask": "Und in Schweden? Skriv 2–3 meningar på tyska: Hur firar du jul? Finns det julmarknader där du bor?",
+  "model": "Bei uns gibt es auch einen Weihnachtsmarkt, aber er ist klein. Am Heiligabend essen wir Schinken und sehen Kalle Anka. Dann bekommen wir die Geschenke.",
+  "modelSv": "Hos oss finns det också en julmarknad, men den är liten. På julafton äter vi skinka och tittar på Kalle Anka. Sedan får vi julklapparna."
+ },
+ {
+  "id": "de2-c-b8-dach",
+  "sec": "b8",
+  "title": "Deutsch in vielen Ländern",
+  "lines": [
+   {
+    "fr": "Deutsch ist die Sprache mit den meisten Muttersprachlern in der EU.",
+    "sv": "Tyska är det språk som har flest modersmålstalare i EU."
+   },
+   {
+    "fr": "Man spricht es in Deutschland, Österreich, der Schweiz und Liechtenstein.",
+    "sv": "Man talar det i Tyskland, Österrike, Schweiz och Liechtenstein."
+   },
+   {
+    "fr": "In Luxemburg ist Deutsch eine von drei Amtssprachen, in Belgien eine von drei.",
+    "sv": "I Luxemburg är tyska ett av tre officiella språk, i Belgien ett av tre."
+   },
+   {
+    "fr": "In Südtirol in Italien sprechen etwa zwei Drittel der Menschen Deutsch.",
+    "sv": "I Sydtyrolen i Italien talar ungefär två tredjedelar av invånarna tyska."
+   },
+   {
+    "fr": "Die Schweiz hat vier Landessprachen: Deutsch, Französisch, Italienisch und Rätoromanisch.",
+    "sv": "Schweiz har fyra nationella språk: tyska, franska, italienska och rätoromanska."
+   },
+   {
+    "fr": "Deutsch klingt nicht überall gleich. In Österreich sagt man „Jänner“ für Januar und „Servus“ für Hallo.",
+    "sv": "Tyska låter inte likadant överallt. I Österrike säger man ”Jänner” för januari och ”Servus” för hej."
+   },
+   {
+    "fr": "In der Schweiz schreibt man kein ß: Man schreibt „Strasse“, nicht „Straße“.",
+    "sv": "I Schweiz skriver man inget ß: man skriver ”Strasse”, inte ”Straße”."
+   },
+   {
+    "fr": "Auch in Namibia, Brasilien und den USA gibt es kleine deutschsprachige Gruppen.",
+    "sv": "Även i Namibia, Brasilien och USA finns det små tysktalande grupper."
+   }
+  ],
+  "gloss": {
+   "muttersprachlern": {
+    "t": "der Muttersprachler",
+    "sv": "modersmålstalare",
+    "g": "m"
+   },
+   "amtssprachen": {
+    "t": "die Amtssprache",
+    "sv": "officiellt språk",
+    "g": "f"
+   },
+   "drittel": {
+    "t": "das Drittel",
+    "sv": "tredjedel",
+    "g": "n"
+   },
+   "landessprachen": {
+    "t": "die Landessprache",
+    "sv": "nationellt språk",
+    "g": "f"
+   },
+   "klingt": {
+    "t": "klingen",
+    "sv": "låta",
+    "g": ""
+   },
+   "gleich": {
+    "t": "gleich",
+    "sv": "likadan",
+    "g": ""
+   },
+   "deutschsprachige": {
+    "t": "deutschsprachig",
+    "sv": "tysktalande",
+    "g": ""
+   },
+   "jänner": {
+    "t": "der Jänner",
+    "sv": "januari (Österrike)",
+    "g": "m"
+   },
+   "rätoromanisch": {
+    "t": "das Rätoromanisch",
+    "sv": "rätoromanska",
+    "g": "n"
+   },
+   "überall": {
+    "t": "überall",
+    "sv": "överallt",
+    "g": ""
+   },
+   "belgien": {
+    "t": "Belgien",
+    "sv": "Belgien",
+    "g": ""
+   },
+   "brasilien": {
+    "t": "Brasilien",
+    "sv": "Brasilien",
+    "g": ""
+   },
+   "in": {
+    "t": "in",
+    "sv": "i, till (länder med artikel)",
+    "g": ""
+   },
+   "italien": {
+    "t": "Italien",
+    "sv": "Italien",
+    "g": ""
+   },
+   "italienisch": {
+    "t": "Italienisch",
+    "sv": "italienska",
+    "g": ""
+   },
+   "liechtenstein": {
+    "t": "Liechtenstein",
+    "sv": "Liechtenstein",
+    "g": ""
+   },
+   "luxemburg": {
+    "t": "Luxemburg",
+    "sv": "Luxemburg",
+    "g": ""
+   },
+   "namibia": {
+    "t": "Namibia",
+    "sv": "Namibia",
+    "g": ""
+   }
+  },
+  "q": {
+   "q": "Vad skriver man inte i Schweiz?",
+   "opts": [
+    "ä",
+    "ß",
+    "ü",
+    "sch"
+   ],
+   "a": 1,
+   "why": "„In der Schweiz schreibt man kein ß.“"
+  },
+  "ask": "Und in Schweden? Skriv 2–3 meningar på tyska: Vilka språk talar man i Sverige? Vilka språk talar du?",
+  "model": "In Schweden spricht man Schwedisch. Es gibt auch Minderheitensprachen, zum Beispiel Finnisch und Samisch. Ich spreche Schwedisch, Englisch und ein bisschen Deutsch.",
+  "modelSv": "I Sverige talar man svenska. Det finns också minoritetsspråk, till exempel finska och samiska. Jag talar svenska, engelska och lite tyska."
+ }
+]

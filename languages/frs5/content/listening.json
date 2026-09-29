@@ -1,0 +1,2520 @@
+[
+ {
+  "id": "l-v1-1",
+  "sec": "v1",
+  "title": "Un petit boulot pour l'été",
+  "lines": [
+   {
+    "who": "A",
+    "fr": "Salut Inès ! Alors, tu as trouvé un petit boulot pour cet été ?",
+    "sv": "Hej Inès! Har du hittat ett sommarjobb?"
+   },
+   {
+    "who": "B",
+    "fr": "Oui, enfin ! J'ai passé un entretien d'embauche hier dans un café près de la gare. Le patron m'a proposé un CDD de deux mois, en juillet et en août.",
+    "sv": "Ja, äntligen! Jag var på en anställningsintervju i går på ett kafé nära stationen. Ägaren erbjöd mig en visstidsanställning på två månader, i juli och augusti."
+   },
+   {
+    "who": "A",
+    "fr": "Super ! Et c'est à plein temps ?",
+    "sv": "Toppen! Och är det heltid?"
+   },
+   {
+    "who": "B",
+    "fr": "Non, à temps partiel : vingt-quatre heures par semaine. Je travaille surtout le matin, de sept heures à midi, et deux soirs par semaine. Ça me laisse l'après-midi pour répéter.",
+    "sv": "Nej, deltid: tjugofyra timmar i veckan. Jag jobbar mest på morgonen, från sju till tolv, och två kvällar i veckan. Då har jag eftermiddagarna till att öva."
+   },
+   {
+    "who": "A",
+    "fr": "Tu es payée combien ?",
+    "sv": "Hur mycket får du betalt?"
+   },
+   {
+    "who": "B",
+    "fr": "Le SMIC, comme la plupart des jeunes. Mais il y a les pourboires, et le patron dit que les touristes sont généreux en été.",
+    "sv": "Minimilön, som de flesta unga. Men det blir dricks, och ägaren säger att turisterna är generösa på sommaren."
+   },
+   {
+    "who": "A",
+    "fr": "Et qu'est-ce qu'il faut que tu fasses exactement ?",
+    "sv": "Och vad är det du ska göra exakt?"
+   },
+   {
+    "who": "B",
+    "fr": "Je dois accueillir les clients, prendre les commandes et servir. Il faut aussi que je fasse la caisse le soir. Ça me fait un peu peur, parce que je ne suis pas très forte en calcul !",
+    "sv": "Jag ska ta emot kunderna, ta beställningar och servera. Jag måste också räkna kassan på kvällen. Det skrämmer mig lite, för jag är inte så bra på att räkna!"
+   },
+   {
+    "who": "A",
+    "fr": "Ne t'inquiète pas, la caisse fait tout automatiquement. Moi, j'ai fait ça l'année dernière dans une boulangerie.",
+    "sv": "Oroa dig inte, kassan räknar ut allt automatiskt. Jag gjorde det i fjol på ett bageri."
+   },
+   {
+    "who": "B",
+    "fr": "Ah oui ? Et tu avais aimé ?",
+    "sv": "Jaså? Och tyckte du om det?"
+   },
+   {
+    "who": "A",
+    "fr": "Plutôt, oui. Le plus difficile, c'était de se lever à cinq heures. Mais j'ai rencontré des gens sympas et j'ai gagné assez d'argent pour m'acheter une nouvelle guitare.",
+    "sv": "Ganska mycket, ja. Det svåraste var att gå upp klockan fem. Men jag träffade trevliga människor och tjänade tillräckligt för att köpa en ny gitarr."
+   },
+   {
+    "who": "B",
+    "fr": "C'est exactement mon objectif ! Moi, j'économise pour partir étudier à Lyon l'année prochaine. Il faut que j'aie au moins deux mille euros de côté avant septembre.",
+    "sv": "Det är precis mitt mål! Jag sparar för att kunna åka och studera i Lyon nästa år. Jag måste ha minst tvåtusen euro undanlagt före september."
+   },
+   {
+    "who": "A",
+    "fr": "Bon courage, alors ! Je passerai te voir au café, et je laisserai un gros pourboire.",
+    "sv": "Lycka till då! Jag kommer förbi och hälsar på på kaféet, och lämnar stor dricks."
+   }
+  ],
+  "questions": [
+   {
+    "type": "helhet",
+    "q": "Vad handlar samtalet om?",
+    "opts": [
+     "Inès berättar om sitt nya sommarjobb",
+     "Inès söker en plats på musikhögskolan",
+     "Två vänner planerar en resa till Lyon",
+     "Inès klagar på sin chef"
+    ],
+    "a": 0,
+    "why": "Inès berättar att hon har fått ett jobb på ett kafé: « Le patron m'a proposé un CDD de deux mois »."
+   },
+   {
+    "type": "detalj",
+    "q": "Vilken sorts anställning har Inès fått?",
+    "opts": [
+     "En fast anställning på heltid",
+     "En visstidsanställning på deltid",
+     "Ett praktikjobb utan lön",
+     "Ett jobb bara på helgerna"
+    ],
+    "a": 1,
+    "why": "« un CDD de deux mois » och « Non, à temps partiel : vingt-quatre heures par semaine »."
+   },
+   {
+    "type": "detalj",
+    "q": "Varför passar arbetstiderna Inès?",
+    "opts": [
+     "Hon kan sova länge",
+     "Hon har eftermiddagarna fria för att öva",
+     "Hon kan jobba hemifrån",
+     "Hon slipper jobba på kvällarna"
+    ],
+    "a": 1,
+    "why": "« Ça me laisse l'après-midi pour répéter »."
+   },
+   {
+    "type": "detalj",
+    "q": "Vad oroar Inès lite?",
+    "opts": [
+     "Att hon ska räkna kassan",
+     "Att turisterna inte talar franska",
+     "Att lönen är för låg",
+     "Att hon måste gå upp klockan fem"
+    ],
+    "a": 0,
+    "why": "« Il faut aussi que je fasse la caisse le soir. Ça me fait un peu peur »."
+   },
+   {
+    "type": "detalj",
+    "q": "Vad köpte vännen för pengarna från sitt bageri-jobb?",
+    "opts": [
+     "En resa till Lyon",
+     "En ny gitarr",
+     "En dator",
+     "Ingenting, hen sparade dem"
+    ],
+    "a": 1,
+    "why": "« j'ai gagné assez d'argent pour m'acheter une nouvelle guitare »."
+   },
+   {
+    "type": "slutsats",
+    "q": "Varför sparar Inès pengar?",
+    "opts": [
+     "För att köpa ett kafé",
+     "För att studera i Lyon",
+     "För att betala sin hyra i sommar",
+     "För att åka på semester med vännen"
+    ],
+    "a": 1,
+    "why": "« j'économise pour partir étudier à Lyon l'année prochaine »."
+   }
+  ],
+  "gloss": {
+   "pourboires": {
+    "t": "le pourboire",
+    "sv": "dricks",
+    "g": "m"
+   },
+   "caisse": {
+    "t": "faire la caisse",
+    "sv": "räkna kassan",
+    "g": "f"
+   },
+   "commandes": {
+    "t": "la commande",
+    "sv": "beställning",
+    "g": "f"
+   },
+   "économise": {
+    "t": "économiser",
+    "sv": "spara",
+    "g": ""
+   },
+   "côté": {
+    "t": "mettre de côté",
+    "sv": "lägga undan (pengar)",
+    "g": ""
+   }
+  }
+ },
+ {
+  "id": "l-v1-2",
+  "sec": "v1",
+  "title": "Semaine de quatre jours : pour ou contre ?",
+  "lines": [
+   {
+    "who": "A",
+    "fr": "Bonjour et bienvenue dans « Le monde du travail ». Aujourd'hui, nous parlons de la semaine de quatre jours. Avec nous, Karim, qui dirige une petite entreprise de graphisme à Nantes. Karim, votre entreprise est passée à la semaine de quatre jours l'année dernière. Pourquoi ?",
+    "sv": "Hej och välkomna till « Arbetslivet ». I dag talar vi om fyradagarsveckan. Med oss har vi Karim, som leder ett litet grafiskt företag i Nantes. Karim, ert företag gick över till fyradagarsvecka förra året. Varför?"
+   },
+   {
+    "who": "B",
+    "fr": "Parce que mes salariés étaient épuisés. Deux personnes avaient déjà démissionné, et j'avais du mal à recruter. J'ai pensé qu'il fallait que je fasse quelque chose.",
+    "sv": "För att mina anställda var utmattade. Två personer hade redan sagt upp sig, och jag hade svårt att rekrytera. Jag tänkte att jag måste göra något."
+   },
+   {
+    "who": "A",
+    "fr": "Et concrètement, comment ça fonctionne ?",
+    "sv": "Och hur fungerar det konkret?"
+   },
+   {
+    "who": "B",
+    "fr": "Nous travaillons trente-deux heures, du lundi au jeudi, avec le même salaire qu'avant. Le vendredi, le bureau est fermé.",
+    "sv": "Vi arbetar trettiotvå timmar, måndag till torsdag, med samma lön som tidigare. På fredagar är kontoret stängt."
+   },
+   {
+    "who": "A",
+    "fr": "Avec le même salaire ? Ça ne coûte pas trop cher ?",
+    "sv": "Med samma lön? Blir det inte för dyrt?"
+   },
+   {
+    "who": "B",
+    "fr": "C'est ce que je craignais au début. Pourtant, nous n'avons pas perdu de clients. En supprimant les réunions inutiles et en organisant mieux les tâches, nous produisons autant qu'avant. Et il y a beaucoup moins d'arrêts maladie.",
+    "sv": "Det var vad jag var rädd för i början. Ändå har vi inte förlorat några kunder. Genom att ta bort onödiga möten och organisera uppgifterna bättre producerar vi lika mycket som förut. Och det är mycket färre sjukskrivningar."
+   },
+   {
+    "who": "A",
+    "fr": "Il y a quand même des inconvénients ?",
+    "sv": "Finns det ändå nackdelar?"
+   },
+   {
+    "who": "B",
+    "fr": "Oui, les journées sont plus longues et plus intenses. Certains salariés, qui ont des enfants, préféraient finir plus tôt chaque jour plutôt que d'avoir un jour libre. Et ce système n'est pas possible partout : un hôpital ou une école ne peut pas fermer le vendredi !",
+    "sv": "Ja, dagarna är längre och mer intensiva. Vissa anställda som har barn ville hellre sluta tidigare varje dag än ha en ledig dag. Och systemet är inte möjligt överallt: ett sjukhus eller en skola kan inte stänga på fredagar!"
+   },
+   {
+    "who": "A",
+    "fr": "Si c'était à refaire, vous le referiez ?",
+    "sv": "Om ni fick göra om det, skulle ni göra det igen?"
+   },
+   {
+    "who": "B",
+    "fr": "Sans hésiter. J'aurais même dû le faire plus tôt. L'équilibre entre vie professionnelle et vie privée, ce n'est pas un luxe, c'est une condition pour bien travailler.",
+    "sv": "Utan att tveka. Jag borde till och med ha gjort det tidigare. Balansen mellan arbete och privatliv är ingen lyx, det är en förutsättning för att arbeta bra."
+   }
+  ],
+  "questions": [
+   {
+    "type": "helhet",
+    "q": "Vad är ämnet för radioinslaget?",
+    "opts": [
+     "Ett företag som infört fyradagarsvecka",
+     "Ett företag som har sagt upp personal",
+     "Hur man hittar ett jobb i Nantes",
+     "Arbetsvillkoren på sjukhus"
+    ],
+    "a": 0,
+    "why": "« Votre entreprise est passée à la semaine de quatre jours l'année dernière »."
+   },
+   {
+    "type": "detalj",
+    "q": "Varför ändrade Karim arbetstiden?",
+    "opts": [
+     "Kunderna krävde det",
+     "De anställda var utmattade och det var svårt att rekrytera",
+     "En ny lag tvingade honom",
+     "Han ville spara pengar på lokalen"
+    ],
+    "a": 1,
+    "why": "« mes salariés étaient épuisés … j'avais du mal à recruter »."
+   },
+   {
+    "type": "detalj",
+    "q": "Hur har lönerna påverkats?",
+    "opts": [
+     "De har sänkts med tjugo procent",
+     "De är oförändrade",
+     "De har höjts",
+     "De anställda får betalt per timme"
+    ],
+    "a": 1,
+    "why": "« avec le même salaire qu'avant »."
+   },
+   {
+    "type": "detalj",
+    "q": "Hur lyckas företaget producera lika mycket?",
+    "opts": [
+     "Genom att anställa fler",
+     "Genom färre onödiga möten och bättre organisation",
+     "Genom att jobba på lördagar",
+     "Genom att använda artificiell intelligens"
+    ],
+    "a": 1,
+    "why": "« En supprimant les réunions inutiles et en organisant mieux les tâches »."
+   },
+   {
+    "type": "detalj",
+    "q": "Vilken nackdel nämner Karim?",
+    "opts": [
+     "Kunderna har försvunnit",
+     "Dagarna är längre och mer intensiva",
+     "Lönerna har sjunkit",
+     "Kontoret är för litet"
+    ],
+    "a": 1,
+    "why": "« les journées sont plus longues et plus intenses »."
+   },
+   {
+    "type": "slutsats",
+    "q": "Vad tycker Karim i dag om sitt beslut?",
+    "opts": [
+     "Han ångrar det",
+     "Han är osäker",
+     "Han hade gärna gjort det ännu tidigare",
+     "Han vill gå tillbaka till fem dagar"
+    ],
+    "a": 2,
+    "why": "« Sans hésiter. J'aurais même dû le faire plus tôt »."
+   }
+  ],
+  "gloss": {
+   "graphisme": {
+    "t": "le graphisme",
+    "sv": "grafisk design",
+    "g": "m"
+   },
+   "craignais": {
+    "t": "craindre",
+    "sv": "frukta, vara rädd för",
+    "g": ""
+   },
+   "supprimant": {
+    "t": "supprimer",
+    "sv": "ta bort",
+    "g": ""
+   },
+   "intenses": {
+    "t": "intense",
+    "sv": "intensiv",
+    "g": ""
+   },
+   "luxe": {
+    "t": "le luxe",
+    "sv": "lyx",
+    "g": "m"
+   }
+  }
+ },
+ {
+  "id": "l-v2-1",
+  "sec": "v2",
+  "title": "Premiers jours à Montréal",
+  "lines": [
+   {
+    "who": "A",
+    "fr": "Allô, Maman ? C'est Elsa ! Tu m'entends bien ?",
+    "sv": "Hallå, mamma? Det är Elsa! Hör du mig bra?"
+   },
+   {
+    "who": "B",
+    "fr": "Oui, ma chérie ! Alors, raconte : comment se passent tes premiers jours à Montréal ?",
+    "sv": "Ja, gumman! Berätta: hur går dina första dagar i Montréal?"
+   },
+   {
+    "who": "A",
+    "fr": "C'est génial, mais un peu fatigant. Avec le décalage horaire, je me réveille à quatre heures du matin ! Et il y a eu beaucoup de démarches administratives : ouvrir un compte bancaire, m'inscrire aux cours, obtenir ma carte d'étudiante…",
+    "sv": "Det är toppen, men lite tröttsamt. Med tidsskillnaden vaknar jag klockan fyra på morgonen! Och det har varit mycket pappersexercis: öppna ett bankkonto, skriva in mig på kurserna, få mitt studentkort …"
+   },
+   {
+    "who": "B",
+    "fr": "Et ta résidence universitaire, elle est comment ?",
+    "sv": "Och ditt studenthem, hur är det?"
+   },
+   {
+    "who": "A",
+    "fr": "Ma chambre est petite, mais la cuisine est partagée, alors je rencontre plein de monde. Ma voisine vient du Sénégal, et un autre étudiant vient de Belgique. On parle tous français, mais avec des accents différents !",
+    "sv": "Mitt rum är litet, men köket är gemensamt, så jag träffar massor av folk. Min granne kommer från Senegal, och en annan student kommer från Belgien. Vi pratar alla franska, men med olika brytning!"
+   },
+   {
+    "who": "B",
+    "fr": "Et tu comprends les Québécois ?",
+    "sv": "Och förstår du québecborna?"
+   },
+   {
+    "who": "A",
+    "fr": "Pas toujours ! Le premier jour, le chauffeur de bus m'a dit « Bienvenue » quand je l'ai remercié. J'ai cru qu'il se trompait, mais en fait, ici, ça veut dire « de rien ». Et on ne dit pas « mail », on dit « courriel ».",
+    "sv": "Inte alltid! Första dagen sa busschauffören ”Bienvenue” när jag tackade honom. Jag trodde att han tog fel, men i själva verket betyder det ”varsågod” här. Och man säger inte ”mail”, man säger ”courriel”."
+   },
+   {
+    "who": "B",
+    "fr": "C'est drôle ! Et les cours, ils ont commencé ?",
+    "sv": "Vad roligt! Och kurserna, har de börjat?"
+   },
+   {
+    "who": "A",
+    "fr": "Oui, lundi. J'ai un cours magistral d'histoire de la musique dans un amphithéâtre de trois cents places. C'est très différent du lycée : personne ne vérifie si on a fait le travail. Il faut être autonome.",
+    "sv": "Ja, i måndags. Jag har en föreläsning i musikhistoria i en hörsal med trehundra platser. Det är väldigt annorlunda mot gymnasiet: ingen kontrollerar om man har gjort arbetet. Man måste vara självständig."
+   },
+   {
+    "who": "B",
+    "fr": "Tu n'as pas le mal du pays ?",
+    "sv": "Har du ingen hemlängtan?"
+   },
+   {
+    "who": "A",
+    "fr": "Un peu, le soir. Vous me manquez, et le chat aussi ! Mais j'ai rejoint une chorale, et on répète deux fois par semaine. Si je n'étais pas partie, je n'aurais jamais vécu tout ça.",
+    "sv": "Lite, på kvällarna. Jag saknar er, och katten också! Men jag har gått med i en kör, och vi repeterar två gånger i veckan. Om jag inte hade åkt skulle jag aldrig ha upplevt allt det här."
+   }
+  ],
+  "questions": [
+   {
+    "type": "helhet",
+    "q": "Vem pratar Elsa med?",
+    "opts": [
+     "Sin lärare",
+     "Sin mamma",
+     "Sin rumskompis",
+     "En busschaufför"
+    ],
+    "a": 1,
+    "why": "« Allô, Maman ? C'est Elsa ! »"
+   },
+   {
+    "type": "detalj",
+    "q": "Varför vaknar Elsa klockan fyra?",
+    "opts": [
+     "Hon har en tidig kurs",
+     "Grannarna är högljudda",
+     "På grund av tidsskillnaden",
+     "Hon jobbar på morgonen"
+    ],
+    "a": 2,
+    "why": "« Avec le décalage horaire, je me réveille à quatre heures du matin »."
+   },
+   {
+    "type": "detalj",
+    "q": "Var kommer Elsas granne ifrån?",
+    "opts": [
+     "Belgien",
+     "Québec",
+     "Senegal",
+     "Frankrike"
+    ],
+    "a": 2,
+    "why": "« Ma voisine vient du Sénégal »."
+   },
+   {
+    "type": "detalj",
+    "q": "Vad betyder « Bienvenue » i Québec när man tackar?",
+    "opts": [
+     "Välkommen",
+     "Varsågod, ingen orsak",
+     "Hej då",
+     "Förlåt"
+    ],
+    "a": 1,
+    "why": "« ici, ça veut dire « de rien » »."
+   },
+   {
+    "type": "detalj",
+    "q": "Vad är annorlunda med universitetet jämfört med gymnasiet?",
+    "opts": [
+     "Kurserna är på engelska",
+     "Ingen kontrollerar om man gör arbetet",
+     "Man måste bära uniform",
+     "Det finns inga föreläsningar"
+    ],
+    "a": 1,
+    "why": "« personne ne vérifie si on a fait le travail. Il faut être autonome »."
+   },
+   {
+    "type": "slutsats",
+    "q": "Hur känner Elsa inför sitt beslut att åka?",
+    "opts": [
+     "Hon ångrar det",
+     "Hon är glad att hon åkte, trots lite hemlängtan",
+     "Hon vill åka hem direkt",
+     "Hon vet inte än"
+    ],
+    "a": 1,
+    "why": "« Si je n'étais pas partie, je n'aurais jamais vécu tout ça »."
+   }
+  ],
+  "gloss": {
+   "fatigant": {
+    "t": "fatigant, -e",
+    "sv": "tröttsam",
+    "g": ""
+   },
+   "partagée": {
+    "t": "partager",
+    "sv": "dela",
+    "g": ""
+   },
+   "chauffeur": {
+    "t": "le chauffeur",
+    "sv": "chaufför, förare",
+    "g": "m"
+   },
+   "trompait": {
+    "t": "se tromper",
+    "sv": "ta fel",
+    "g": ""
+   },
+   "rejoint": {
+    "t": "rejoindre",
+    "sv": "gå med i, ansluta sig till",
+    "g": ""
+   }
+  }
+ },
+ {
+  "id": "l-v2-2",
+  "sec": "v2",
+  "title": "Au bureau des relations internationales",
+  "lines": [
+   {
+    "who": "A",
+    "fr": "Bonjour, je voudrais des renseignements sur le programme Erasmus. Je suis en première année de licence de musicologie.",
+    "sv": "Hej, jag skulle vilja ha information om Erasmusprogrammet. Jag går första året på kandidatprogrammet i musikvetenskap."
+   },
+   {
+    "who": "B",
+    "fr": "Bonjour. Vous pouvez partir à partir de la deuxième année, pour un semestre ou pour une année entière. Vous avez déjà une idée de destination ?",
+    "sv": "Hej. Ni kan åka från och med andra året, en termin eller ett helt år. Har ni redan en idé om vart ni vill åka?"
+   },
+   {
+    "who": "A",
+    "fr": "J'aimerais aller en Suède, à Stockholm. Ma grand-mère était suédoise, et je voudrais apprendre la langue.",
+    "sv": "Jag skulle vilja åka till Sverige, till Stockholm. Min mormor var svensk, och jag skulle vilja lära mig språket."
+   },
+   {
+    "who": "B",
+    "fr": "Très bien, nous avons un accord avec une université là-bas. Les cours sont en anglais, mais vous pourrez suivre des cours de suédois gratuits.",
+    "sv": "Mycket bra, vi har ett avtal med ett universitet där. Kurserna är på engelska, men ni kan gå gratis kurser i svenska."
+   },
+   {
+    "who": "A",
+    "fr": "Et est-ce qu'il faut payer des frais d'inscription là-bas ?",
+    "sv": "Och måste man betala terminsavgifter där?"
+   },
+   {
+    "who": "B",
+    "fr": "Non, avec Erasmus, vous restez inscrite ici et vous ne payez rien à l'université d'accueil. En plus, vous recevez une bourse d'environ quatre cents euros par mois.",
+    "sv": "Nej, med Erasmus är ni fortfarande inskriven här och betalar ingenting till värduniversitetet. Dessutom får ni ett stipendium på ungefär fyrahundra euro i månaden."
+   },
+   {
+    "who": "A",
+    "fr": "Quatre cents euros ? La vie est chère à Stockholm, non ?",
+    "sv": "Fyrahundra euro? Livet är dyrt i Stockholm, eller hur?"
+   },
+   {
+    "who": "B",
+    "fr": "C'est vrai. Il faudra que vous prévoyiez un budget plus important, surtout pour le logement. Je vous conseille de faire votre demande de logement dès que vous serez acceptée, car les places partent vite.",
+    "sv": "Det stämmer. Ni måste räkna med en större budget, framför allt för boendet. Jag råder er att söka bostad så fort ni är antagen, för platserna tar snabbt slut."
+   },
+   {
+    "who": "A",
+    "fr": "D'accord. Et les crédits que j'obtiendrai en Suède seront reconnus ici ?",
+    "sv": "Okej. Och kommer poängen som jag tar i Sverige att erkännas här?"
+   },
+   {
+    "who": "B",
+    "fr": "Oui, à condition que vous signiez un contrat d'études avant le départ. Il indique les cours que vous suivrez et leurs équivalences. La date limite pour déposer votre dossier est le quinze février.",
+    "sv": "Ja, på villkor att ni skriver under ett studieavtal före avresan. Det anger vilka kurser ni ska läsa och vad de motsvarar. Sista dagen att lämna in er ansökan är den femtonde februari."
+   },
+   {
+    "who": "A",
+    "fr": "Merci beaucoup, c'est très clair !",
+    "sv": "Tack så mycket, det är väldigt tydligt!"
+   }
+  ],
+  "questions": [
+   {
+    "type": "helhet",
+    "q": "Varför kommer studenten till kontoret?",
+    "opts": [
+     "För att klaga på ett betyg",
+     "För att få information om att studera utomlands",
+     "För att söka jobb",
+     "För att hämta sitt studentkort"
+    ],
+    "a": 1,
+    "why": "« je voudrais des renseignements sur le programme Erasmus »."
+   },
+   {
+    "type": "detalj",
+    "q": "När kan man tidigast åka?",
+    "opts": [
+     "Första året",
+     "Andra året",
+     "Tredje året",
+     "Efter examen"
+    ],
+    "a": 1,
+    "why": "« Vous pouvez partir à partir de la deuxième année »."
+   },
+   {
+    "type": "detalj",
+    "q": "Varför vill studenten åka till Sverige?",
+    "opts": [
+     "Hennes mormor var svensk och hon vill lära sig språket",
+     "Kurserna är gratis där",
+     "Hon har en pojkvän där",
+     "Hon har redan bott där"
+    ],
+    "a": 0,
+    "why": "« Ma grand-mère était suédoise, et je voudrais apprendre la langue »."
+   },
+   {
+    "type": "detalj",
+    "q": "Vad måste studenten betala till värduniversitetet?",
+    "opts": [
+     "Fyrahundra euro i månaden",
+     "Terminsavgift",
+     "Ingenting",
+     "Bara boendet"
+    ],
+    "a": 2,
+    "why": "« vous ne payez rien à l'université d'accueil »."
+   },
+   {
+    "type": "detalj",
+    "q": "Vilket råd ger handläggaren om boendet?",
+    "opts": [
+     "Att bo hos en värdfamilj",
+     "Att söka bostad så fort hon är antagen",
+     "Att vänta tills hon är på plats",
+     "Att bo i en förort"
+    ],
+    "a": 1,
+    "why": "« faire votre demande de logement dès que vous serez acceptée »."
+   },
+   {
+    "type": "detalj",
+    "q": "Vad krävs för att poängen ska erkännas?",
+    "opts": [
+     "Ett studieavtal som skrivs under före avresan",
+     "Ett språkprov i svenska",
+     "Ett brev från läraren",
+     "Ingenting särskilt"
+    ],
+    "a": 0,
+    "why": "« à condition que vous signiez un contrat d'études avant le départ »."
+   }
+  ],
+  "gloss": {
+   "renseignements": {
+    "t": "le renseignement",
+    "sv": "upplysning, information",
+    "g": "m"
+   },
+   "accord": {
+    "t": "l'accord",
+    "sv": "avtal",
+    "g": "m"
+   },
+   "prévoyiez": {
+    "t": "prévoir",
+    "sv": "räkna med, planera",
+    "g": ""
+   },
+   "déposer": {
+    "t": "déposer",
+    "sv": "lämna in",
+    "g": ""
+   },
+   "conseille": {
+    "t": "conseiller",
+    "sv": "råda",
+    "g": ""
+   }
+  }
+ },
+ {
+  "id": "l-v3-1",
+  "sec": "v3",
+  "title": "L'intelligence artificielle et la musique",
+  "lines": [
+   {
+    "who": "A",
+    "fr": "Bonsoir à tous. Dans « Sciences en direct », nous recevons Claire Martin, chercheuse en informatique musicale. Claire, peut-on dire aujourd'hui qu'une machine compose de la musique ?",
+    "sv": "God kväll allihop. I « Vetenskap direkt » har vi besök av Claire Martin, forskare i musikinformatik. Claire, kan man i dag säga att en maskin komponerar musik?"
+   },
+   {
+    "who": "B",
+    "fr": "Oui et non. Des algorithmes peuvent produire des mélodies en quelques secondes. Ils ont été entraînés avec des milliers de morceaux, et ils imitent ce qu'ils ont entendu. Mais ils ne savent pas pourquoi une mélodie nous émeut.",
+    "sv": "Ja och nej. Algoritmer kan producera melodier på några sekunder. De har tränats med tusentals stycken, och de härmar det de har hört. Men de vet inte varför en melodi berör oss."
+   },
+   {
+    "who": "A",
+    "fr": "Est-ce que les musiciens doivent avoir peur de perdre leur travail ?",
+    "sv": "Måste musikerna vara rädda för att förlora sitt jobb?"
+   },
+   {
+    "who": "B",
+    "fr": "Certains métiers vont évoluer, c'est sûr. Par exemple, la musique de fond pour les vidéos ou les jeux est déjà souvent créée par des logiciels. En revanche, je ne crois pas qu'une machine puisse remplacer un concert. Le public vient pour partager une émotion avec des êtres humains.",
+    "sv": "Vissa yrken kommer att förändras, det är säkert. Till exempel skapas bakgrundsmusik till videor eller spel redan ofta av program. Däremot tror jag inte att en maskin kan ersätta en konsert. Publiken kommer för att dela en känsla med människor."
+   },
+   {
+    "who": "A",
+    "fr": "Et dans votre laboratoire, sur quoi travaillez-vous ?",
+    "sv": "Och i ert laboratorium, vad arbetar ni med?"
+   },
+   {
+    "who": "B",
+    "fr": "Nous développons un outil pour aider les élèves à s'entraîner. L'application écoute l'élève jouer, puis elle lui indique s'il joue juste et en rythme. Ça ne remplace pas le professeur, mais ça permet de progresser entre deux cours.",
+    "sv": "Vi utvecklar ett verktyg för att hjälpa elever att öva. Appen lyssnar på eleven när hen spelar, och sedan visar den om hen spelar rent och i takt. Det ersätter inte läraren, men det gör det möjligt att göra framsteg mellan två lektioner."
+   },
+   {
+    "who": "A",
+    "fr": "Il y a quand même des risques ?",
+    "sv": "Finns det ändå risker?"
+   },
+   {
+    "who": "B",
+    "fr": "Oui, surtout pour les droits d'auteur. Si un algorithme a appris avec les chansons d'une artiste, est-ce qu'elle devrait être payée ? Pour l'instant, la loi ne répond pas clairement. C'est un vrai enjeu pour les années à venir.",
+    "sv": "Ja, framför allt när det gäller upphovsrätt. Om en algoritm har lärt sig med en artists låtar, borde hon då få betalt? Än så länge ger lagen inget tydligt svar. Det är en verkligt viktig fråga för de kommande åren."
+   }
+  ],
+  "questions": [
+   {
+    "type": "helhet",
+    "q": "Vad handlar intervjun om?",
+    "opts": [
+     "Artificiell intelligens och musik",
+     "En ny konsertsal",
+     "Hur man blir forskare",
+     "Musikundervisning i skolan"
+    ],
+    "a": 0,
+    "why": "Frågan gäller om « une machine compose de la musique », och forskaren arbetar med « informatique musicale »."
+   },
+   {
+    "type": "detalj",
+    "q": "Hur har algoritmerna lärt sig skapa melodier?",
+    "opts": [
+     "De har tränats med tusentals stycken",
+     "Musiker har programmerat dem för hand",
+     "De har gått på konservatoriet",
+     "De har läst noter i böcker"
+    ],
+    "a": 0,
+    "why": "« Ils ont été entraînés avec des milliers de morceaux »."
+   },
+   {
+    "type": "detalj",
+    "q": "Vilken sorts musik skapas redan ofta av program?",
+    "opts": [
+     "Opera",
+     "Bakgrundsmusik till videor och spel",
+     "Livekonserter",
+     "Folkmusik"
+    ],
+    "a": 1,
+    "why": "« la musique de fond pour les vidéos ou les jeux est déjà souvent créée par des logiciels »."
+   },
+   {
+    "type": "detalj",
+    "q": "Varför tror forskaren inte att maskiner ersätter konserter?",
+    "opts": [
+     "Maskiner är för dyra",
+     "Publiken vill dela en känsla med människor",
+     "Lagen förbjuder det",
+     "Maskiner kan inte spela högt"
+    ],
+    "a": 1,
+    "why": "« Le public vient pour partager une émotion avec des êtres humains »."
+   },
+   {
+    "type": "detalj",
+    "q": "Vad gör appen som hennes laboratorium utvecklar?",
+    "opts": [
+     "Den komponerar låtar",
+     "Den lyssnar på eleven och säger om hen spelar rent och i takt",
+     "Den ersätter läraren",
+     "Den säljer konsertbiljetter"
+    ],
+    "a": 1,
+    "why": "« L'application écoute l'élève jouer, puis elle lui indique s'il joue juste et en rythme »."
+   },
+   {
+    "type": "slutsats",
+    "q": "Vilket problem är olöst enligt forskaren?",
+    "opts": [
+     "Upphovsrätten när en algoritm lärt sig av artisters låtar",
+     "Att appen är för dyr",
+     "Att eleverna inte vill öva",
+     "Att konsertsalarna är tomma"
+    ],
+    "a": 0,
+    "why": "« surtout pour les droits d'auteur … la loi ne répond pas clairement »."
+   }
+  ],
+  "gloss": {
+   "imitent": {
+    "t": "imiter",
+    "sv": "härma",
+    "g": ""
+   },
+   "émeut": {
+    "t": "émouvoir",
+    "sv": "röra, beröra",
+    "g": ""
+   },
+   "développons": {
+    "t": "développer",
+    "sv": "utveckla",
+    "g": ""
+   },
+   "humains": {
+    "t": "l'être humain",
+    "sv": "människa",
+    "g": "m"
+   },
+   "fond": {
+    "t": "la musique de fond",
+    "sv": "bakgrundsmusik",
+    "g": "m"
+   }
+  }
+ },
+ {
+  "id": "l-v3-2",
+  "sec": "v3",
+  "title": "Mon téléphone est en panne",
+  "lines": [
+   {
+    "who": "A",
+    "fr": "Bonjour, j'ai un problème avec mon téléphone. Depuis la dernière mise à jour, la batterie se vide en trois heures.",
+    "sv": "Hej, jag har ett problem med min telefon. Sedan den senaste uppdateringen tar batteriet slut på tre timmar."
+   },
+   {
+    "who": "B",
+    "fr": "D'accord. Vous l'avez acheté quand ?",
+    "sv": "Okej. När köpte ni den?"
+   },
+   {
+    "who": "A",
+    "fr": "Il y a un an et demi, ici, dans votre magasin. J'ai gardé le ticket.",
+    "sv": "För ett och ett halvt år sedan, här i er butik. Jag har kvar kvittot."
+   },
+   {
+    "who": "B",
+    "fr": "Parfait, il est donc encore sous garantie : en France, la garantie légale est de deux ans. Avez-vous essayé de redémarrer l'appareil ?",
+    "sv": "Perfekt, då har den fortfarande garanti: i Frankrike är den lagstadgade garantin två år. Har ni försökt starta om apparaten?"
+   },
+   {
+    "who": "A",
+    "fr": "Oui, plusieurs fois. J'ai aussi fermé toutes les applications et baissé la luminosité de l'écran. Rien ne marche.",
+    "sv": "Ja, flera gånger. Jag har också stängt alla appar och sänkt skärmens ljusstyrka. Ingenting fungerar."
+   },
+   {
+    "who": "B",
+    "fr": "Je vois. Je vais d'abord vérifier les réglages… Voilà : une application de musique tournait en arrière-plan et utilisait le GPS en permanence. Je l'ai désactivée.",
+    "sv": "Jag förstår. Jag ska först kontrollera inställningarna … Så: en musikapp körde i bakgrunden och använde GPS:en hela tiden. Jag har stängt av den."
+   },
+   {
+    "who": "A",
+    "fr": "Ah bon ? C'est l'application que j'utilise pour écouter mes cours enregistrés !",
+    "sv": "Jaså? Det är appen jag använder för att lyssna på mina inspelade föreläsningar!"
+   },
+   {
+    "who": "B",
+    "fr": "Vous pouvez continuer à l'utiliser, mais n'autorisez pas la localisation. Si la batterie se vide encore dans une semaine, revenez me voir. On l'enverra en réparation, et on vous prêtera un téléphone pendant ce temps.",
+    "sv": "Ni kan fortsätta använda den, men tillåt inte platstjänster. Om batteriet fortfarande tar slut om en vecka, kom tillbaka till mig. Då skickar vi den på reparation, och ni får låna en telefon under tiden."
+   },
+   {
+    "who": "A",
+    "fr": "Et ça coûtera combien ?",
+    "sv": "Och vad kommer det att kosta?"
+   },
+   {
+    "who": "B",
+    "fr": "Rien du tout, puisqu'il est sous garantie. Et si on ne peut pas le réparer, il sera remplacé.",
+    "sv": "Ingenting alls, eftersom den har garanti. Och om vi inte kan laga den byts den ut."
+   },
+   {
+    "who": "A",
+    "fr": "Merci beaucoup ! J'avais peur de devoir en acheter un nouveau.",
+    "sv": "Tack så mycket! Jag var rädd att jag skulle behöva köpa en ny."
+   }
+  ],
+  "questions": [
+   {
+    "type": "helhet",
+    "q": "Var utspelar sig samtalet?",
+    "opts": [
+     "I en telefonbutik",
+     "På ett bibliotek",
+     "På en musikskola",
+     "Hemma hos en kompis"
+    ],
+    "a": 0,
+    "why": "Kunden har köpt telefonen « ici, dans votre magasin »."
+   },
+   {
+    "type": "detalj",
+    "q": "Vilket problem har kunden?",
+    "opts": [
+     "Skärmen är sönder",
+     "Batteriet tar slut på tre timmar",
+     "Telefonen startar inte",
+     "Mikrofonen fungerar inte"
+    ],
+    "a": 1,
+    "why": "« la batterie se vide en trois heures »."
+   },
+   {
+    "type": "detalj",
+    "q": "Hur lång är den lagstadgade garantin i Frankrike?",
+    "opts": [
+     "Ett år",
+     "Ett och ett halvt år",
+     "Två år",
+     "Fem år"
+    ],
+    "a": 2,
+    "why": "« la garantie légale est de deux ans »."
+   },
+   {
+    "type": "detalj",
+    "q": "Vad var orsaken till problemet?",
+    "opts": [
+     "En app använde GPS:en hela tiden i bakgrunden",
+     "Batteriet var trasigt",
+     "Skärmen var för ljus",
+     "Uppdateringen var inte installerad"
+    ],
+    "a": 0,
+    "why": "« une application de musique tournait en arrière-plan et utilisait le GPS en permanence »."
+   },
+   {
+    "type": "detalj",
+    "q": "Vad händer om problemet finns kvar om en vecka?",
+    "opts": [
+     "Kunden får pengarna tillbaka",
+     "Telefonen skickas på reparation och kunden får låna en",
+     "Kunden måste köpa en ny",
+     "Säljaren installerar om appen"
+    ],
+    "a": 1,
+    "why": "« On l'enverra en réparation, et on vous prêtera un téléphone pendant ce temps »."
+   },
+   {
+    "type": "slutsats",
+    "q": "Hur känner sig kunden i slutet?",
+    "opts": [
+     "Arg",
+     "Lättad",
+     "Besviken",
+     "Förvirrad"
+    ],
+    "a": 1,
+    "why": "« Merci beaucoup ! J'avais peur de devoir en acheter un nouveau »."
+   }
+  ],
+  "gloss": {
+   "ticket": {
+    "t": "le ticket de caisse",
+    "sv": "kvitto",
+    "g": "m"
+   },
+   "redémarrer": {
+    "t": "redémarrer",
+    "sv": "starta om",
+    "g": ""
+   },
+   "luminosité": {
+    "t": "la luminosité",
+    "sv": "ljusstyrka",
+    "g": "f"
+   },
+   "arrière-plan": {
+    "t": "en arrière-plan",
+    "sv": "i bakgrunden",
+    "g": "m"
+   },
+   "localisation": {
+    "t": "la localisation",
+    "sv": "platstjänster, positionering",
+    "g": "f"
+   }
+  }
+ },
+ {
+  "id": "l-v4-1",
+  "sec": "v4",
+  "title": "Le trac avant le concert",
+  "lines": [
+   {
+    "who": "A",
+    "fr": "Bonjour docteur. Je suis violoniste et je viens vous voir parce que j'ai un problème de trac. Avant chaque concert, mes mains tremblent et j'ai mal au ventre.",
+    "sv": "Hej doktorn. Jag är violinist och jag kommer till er för att jag har problem med scenskräck. Före varje konsert darrar mina händer och jag har ont i magen."
+   },
+   {
+    "who": "B",
+    "fr": "C'est très fréquent chez les musiciens, vous savez. Depuis quand est-ce que ça dure ?",
+    "sv": "Det är mycket vanligt bland musiker, vet ni. Hur länge har det pågått?"
+   },
+   {
+    "who": "A",
+    "fr": "Depuis environ un an. Avant, j'avais un peu le trac, mais c'était agréable, ça me donnait de l'énergie. Maintenant, ça m'empêche de jouer. La semaine dernière, j'ai failli annuler une audition.",
+    "sv": "Sedan ungefär ett år. Förut hade jag lite scenskräck, men det var behagligt, det gav mig energi. Nu hindrar det mig från att spela. Förra veckan höll jag på att ställa in en provspelning."
+   },
+   {
+    "who": "B",
+    "fr": "Est-ce que vous dormez bien ?",
+    "sv": "Sover ni bra?"
+   },
+   {
+    "who": "A",
+    "fr": "Pas vraiment. Je travaille mon instrument cinq heures par jour, et le soir, je n'arrive pas à me détendre.",
+    "sv": "Inte riktigt. Jag övar fem timmar om dagen, och på kvällen lyckas jag inte koppla av."
+   },
+   {
+    "who": "B",
+    "fr": "Je ne vais pas vous prescrire de médicaments pour l'instant. D'abord, il faut que vous dormiez mieux et que vous fassiez des pauses. En travaillant par séances de quarante-cinq minutes, vous serez plus efficace et vous protégerez vos poignets.",
+    "sv": "Jag tänker inte skriva ut några läkemedel just nu. Först måste ni sova bättre och ta pauser. Om ni övar i pass om fyrtiofem minuter blir ni effektivare och skyddar era handleder."
+   },
+   {
+    "who": "A",
+    "fr": "Et pour le trac lui-même ?",
+    "sv": "Och för själva scenskräcken?"
+   },
+   {
+    "who": "B",
+    "fr": "Je vous conseille des exercices de respiration. Avant d'entrer en scène, respirez lentement : quatre secondes pour inspirer, six secondes pour expirer. Ça calme le cœur. Il existe aussi des ateliers de gestion du trac au conservatoire.",
+    "sv": "Jag rekommenderar andningsövningar. Innan ni går in på scenen, andas långsamt: fyra sekunder in, sex sekunder ut. Det lugnar hjärtat. Det finns också workshoppar om att hantera scenskräck på konservatoriet."
+   },
+   {
+    "who": "A",
+    "fr": "D'accord, je vais essayer. Merci, docteur.",
+    "sv": "Okej, jag ska försöka. Tack, doktorn."
+   },
+   {
+    "who": "B",
+    "fr": "Revenez me voir dans un mois. Et n'oubliez pas : le trac, c'est normal, c'est la preuve que la musique compte pour vous.",
+    "sv": "Kom tillbaka om en månad. Och glöm inte: scenskräck är normalt, det är beviset på att musiken betyder något för er."
+   }
+  ],
+  "questions": [
+   {
+    "type": "helhet",
+    "q": "Varför går musikern till läkaren?",
+    "opts": [
+     "Hon har ont i ryggen",
+     "Hon har svår scenskräck",
+     "Hon har tappat hörseln",
+     "Hon behöver ett intyg"
+    ],
+    "a": 1,
+    "why": "« je viens vous voir parce que j'ai un problème de trac »."
+   },
+   {
+    "type": "detalj",
+    "q": "Hur var scenskräcken förut?",
+    "opts": [
+     "Den fanns inte alls",
+     "Den var behaglig och gav energi",
+     "Den var mycket värre",
+     "Den kom bara vid prov"
+    ],
+    "a": 1,
+    "why": "« c'était agréable, ça me donnait de l'énergie »."
+   },
+   {
+    "type": "detalj",
+    "q": "Vad höll hon på att göra förra veckan?",
+    "opts": [
+     "Ställa in en provspelning",
+     "Byta instrument",
+     "Sluta på konservatoriet",
+     "Säga upp sig"
+    ],
+    "a": 0,
+    "why": "« j'ai failli annuler une audition » (failli = höll på att)."
+   },
+   {
+    "type": "detalj",
+    "q": "Vad ger läkaren för råd om övningen?",
+    "opts": [
+     "Att öva mer",
+     "Att öva i pass om fyrtiofem minuter",
+     "Att sluta öva helt en månad",
+     "Att bara öva på morgonen"
+    ],
+    "a": 1,
+    "why": "« En travaillant par séances de quarante-cinq minutes, vous serez plus efficace »."
+   },
+   {
+    "type": "detalj",
+    "q": "Hur ska andningsövningen göras?",
+    "opts": [
+     "Fyra sekunder in, sex sekunder ut",
+     "Sex sekunder in, fyra sekunder ut",
+     "Andas snabbt i en minut",
+     "Hålla andan i tio sekunder"
+    ],
+    "a": 0,
+    "why": "« quatre secondes pour inspirer, six secondes pour expirer »."
+   },
+   {
+    "type": "slutsats",
+    "q": "Vad är läkarens inställning till scenskräck?",
+    "opts": [
+     "Det är en farlig sjukdom",
+     "Det är normalt och visar att musiken är viktig",
+     "Det går bara bort med medicin",
+     "Det betyder att man inte ska bli musiker"
+    ],
+    "a": 1,
+    "why": "« le trac, c'est normal, c'est la preuve que la musique compte pour vous »."
+   }
+  ],
+  "gloss": {
+   "tremblent": {
+    "t": "trembler",
+    "sv": "darra",
+    "g": ""
+   },
+   "failli": {
+    "t": "faillir + infinitiv",
+    "sv": "hålla på att",
+    "g": ""
+   },
+   "prescrire": {
+    "t": "prescrire",
+    "sv": "skriva ut (läkemedel)",
+    "g": ""
+   },
+   "séances": {
+    "t": "la séance",
+    "sv": "pass, tillfälle",
+    "g": "f"
+   },
+   "ateliers": {
+    "t": "l'atelier",
+    "sv": "workshop",
+    "g": "m"
+   },
+   "inspirer": {
+    "t": "inspirer",
+    "sv": "andas in",
+    "g": ""
+   },
+   "expirer": {
+    "t": "expirer",
+    "sv": "andas ut",
+    "g": ""
+   }
+  }
+ },
+ {
+  "id": "l-v4-2",
+  "sec": "v4",
+  "title": "Les jeunes et le sommeil",
+  "lines": [
+   {
+    "who": "A",
+    "fr": "Selon une étude publiée ce mois-ci, un adolescent français sur trois dort moins de sept heures par nuit. Or, les médecins recommandent entre huit et dix heures à cet âge.",
+    "sv": "Enligt en studie som publicerats den här månaden sover var tredje fransk tonåring mindre än sju timmar per natt. Läkarna rekommenderar dock mellan åtta och tio timmar i den åldern."
+   },
+   {
+    "who": "A",
+    "fr": "La principale cause, ce sont les écrans. Huit jeunes sur dix gardent leur téléphone dans leur chambre la nuit. La lumière bleue des écrans retarde l'endormissement, et les notifications réveillent parfois les jeunes au milieu de la nuit.",
+    "sv": "Den främsta orsaken är skärmarna. Åtta av tio unga har sin telefon i sovrummet på natten. Det blå ljuset från skärmarna fördröjer insomnandet, och aviseringar väcker ibland de unga mitt i natten."
+   },
+   {
+    "who": "A",
+    "fr": "Le manque de sommeil a des conséquences importantes. Les chercheurs ont observé que les élèves qui dorment peu ont plus de mal à se concentrer et à mémoriser leurs cours. Ils sont aussi plus souvent irritables et anxieux.",
+    "sv": "Sömnbristen får viktiga följder. Forskarna har sett att elever som sover lite har svårare att koncentrera sig och att minnas det de lärt sig. De är också oftare lättirriterade och oroliga."
+   },
+   {
+    "who": "A",
+    "fr": "Que faire ? Les spécialistes donnent quelques conseils simples. D'abord, éteindre les écrans une heure avant de se coucher. Ensuite, se lever à la même heure chaque jour, même le week-end. Enfin, faire du sport, mais pas trop tard le soir.",
+    "sv": "Vad kan man göra? Specialisterna ger några enkla råd. Först: stäng av skärmarna en timme innan man lägger sig. Sedan: gå upp vid samma tid varje dag, även på helgen. Slutligen: träna, men inte för sent på kvällen."
+   },
+   {
+    "who": "A",
+    "fr": "Certains lycées ont décidé d'agir. À Rennes, un établissement commence désormais les cours à neuf heures au lieu de huit heures. Après un an, les professeurs constatent que les élèves sont plus attentifs et que les absences ont diminué.",
+    "sv": "Vissa gymnasier har bestämt sig för att agera. I Rennes börjar en skola nu lektionerna klockan nio i stället för åtta. Efter ett år ser lärarna att eleverna är mer uppmärksamma och att frånvaron har minskat."
+   },
+   {
+    "who": "A",
+    "fr": "Pour les chercheurs, le message est clair : bien dormir n'est pas une perte de temps. C'est au contraire une des meilleures façons de réussir ses études.",
+    "sv": "För forskarna är budskapet tydligt: att sova bra är inte slöseri med tid. Det är tvärtom ett av de bästa sätten att lyckas med studierna."
+   }
+  ],
+  "questions": [
+   {
+    "type": "helhet",
+    "q": "Vad handlar inslaget om?",
+    "opts": [
+     "Ungas sömnbrist",
+     "Ett nytt sömnläkemedel",
+     "Idrott i skolan",
+     "Mobilförbud i Frankrike"
+    ],
+    "a": 0,
+    "why": "Inslaget börjar med att « un adolescent français sur trois dort moins de sept heures par nuit »."
+   },
+   {
+    "type": "detalj",
+    "q": "Hur mycket sömn rekommenderas för tonåringar?",
+    "opts": [
+     "Sex till sju timmar",
+     "Sju timmar",
+     "Åtta till tio timmar",
+     "Minst elva timmar"
+    ],
+    "a": 2,
+    "why": "« les médecins recommandent entre huit et dix heures »."
+   },
+   {
+    "type": "detalj",
+    "q": "Vad är den främsta orsaken till sömnbristen?",
+    "opts": [
+     "Läxorna",
+     "Skärmarna",
+     "Buller",
+     "Koffein"
+    ],
+    "a": 1,
+    "why": "« La principale cause, ce sont les écrans »."
+   },
+   {
+    "type": "detalj",
+    "q": "Vilken följd av sömnbrist nämns?",
+    "opts": [
+     "Svårt att koncentrera sig och minnas",
+     "Bättre betyg",
+     "Viktökning",
+     "Sämre syn"
+    ],
+    "a": 0,
+    "why": "« ont plus de mal à se concentrer et à mémoriser leurs cours »."
+   },
+   {
+    "type": "detalj",
+    "q": "Vilket råd ges?",
+    "opts": [
+     "Att sova länge på helgerna",
+     "Att stänga av skärmarna en timme före sänggåendet",
+     "Att träna sent på kvällen",
+     "Att dricka mjölk"
+    ],
+    "a": 1,
+    "why": "« éteindre les écrans une heure avant de se coucher ». Man ska tvärtom gå upp samma tid även på helgen."
+   },
+   {
+    "type": "detalj",
+    "q": "Vad har skolan i Rennes ändrat?",
+    "opts": [
+     "Den har förbjudit mobiler",
+     "Lektionerna börjar klockan nio",
+     "Den har infört sovpauser",
+     "Den har kortare lov"
+    ],
+    "a": 1,
+    "why": "« commence désormais les cours à neuf heures au lieu de huit heures »."
+   }
+  ],
+  "gloss": {
+   "retarde": {
+    "t": "retarder",
+    "sv": "fördröja",
+    "g": ""
+   },
+   "endormissement": {
+    "t": "l'endormissement",
+    "sv": "insomnande",
+    "g": "m"
+   },
+   "irritables": {
+    "t": "irritable",
+    "sv": "lättirriterad",
+    "g": ""
+   },
+   "désormais": {
+    "t": "désormais",
+    "sv": "hädanefter, numera",
+    "g": ""
+   },
+   "attentifs": {
+    "t": "attentif, -ve",
+    "sv": "uppmärksam",
+    "g": ""
+   },
+   "absences": {
+    "t": "l'absence",
+    "sv": "frånvaro",
+    "g": "f"
+   }
+  }
+ },
+ {
+  "id": "l-v5-1",
+  "sec": "v5",
+  "title": "Le français à Dakar",
+  "lines": [
+   {
+    "who": "A",
+    "fr": "Bonjour Awa. Vous êtes professeure de français à Dakar. Quelle est la place du français au Sénégal aujourd'hui ?",
+    "sv": "Hej Awa. Du är franskalärare i Dakar. Vilken ställning har franskan i Senegal i dag?"
+   },
+   {
+    "who": "B",
+    "fr": "Le français est la langue officielle : c'est la langue de l'administration, de la justice et de l'école. Mais dans la rue, au marché, en famille, la plupart des gens parlent wolof.",
+    "sv": "Franskan är det officiella språket: det är förvaltningens, rättsväsendets och skolans språk. Men på gatan, på marknaden och i familjen pratar de flesta wolof."
+   },
+   {
+    "who": "A",
+    "fr": "Donc les enfants apprennent le français à l'école ?",
+    "sv": "Så barnen lär sig franska i skolan?"
+   },
+   {
+    "who": "B",
+    "fr": "Exactement. Pour beaucoup, c'est une langue seconde. Certains élèves arrivent en première année sans connaître un mot de français, et on leur demande d'apprendre à lire dans cette langue. C'est pourquoi on teste depuis quelques années un enseignement bilingue, en wolof et en français, pendant les premières années.",
+    "sv": "Precis. För många är det ett andraspråk. Vissa elever kommer till första klass utan att kunna ett ord franska, och man ber dem att lära sig läsa på det språket. Därför testar man sedan några år tvåspråkig undervisning, på wolof och franska, under de första åren."
+   },
+   {
+    "who": "A",
+    "fr": "Et les résultats ?",
+    "sv": "Och resultaten?"
+   },
+   {
+    "who": "B",
+    "fr": "Ils sont encourageants. Les enfants qui apprennent d'abord à lire dans leur langue maternelle lisent ensuite mieux en français. Ça paraît logique, non ?",
+    "sv": "De är lovande. Barn som först lär sig läsa på sitt modersmål läser sedan bättre på franska. Det verkar logiskt, eller hur?"
+   },
+   {
+    "who": "A",
+    "fr": "Est-ce que le français des Sénégalais est différent de celui des Français ?",
+    "sv": "Är senegalesernas franska annorlunda än fransmännens?"
+   },
+   {
+    "who": "B",
+    "fr": "Un peu, surtout à l'oral. On mélange souvent le français et le wolof dans la même phrase. Et il y a des mots qui n'existent qu'ici : par exemple, on dit « essencerie » pour une station-service. Mais un Sénégalais et un Parisien se comprennent sans problème.",
+    "sv": "Lite, framför allt i talspråket. Man blandar ofta franska och wolof i samma mening. Och det finns ord som bara finns här: till exempel säger man « essencerie » för en bensinstation. Men en senegales och en parisare förstår varandra utan problem."
+   },
+   {
+    "who": "A",
+    "fr": "Et l'avenir du français en Afrique ?",
+    "sv": "Och franskans framtid i Afrika?"
+   },
+   {
+    "who": "B",
+    "fr": "Il est brillant ! Aujourd'hui, la majorité des francophones vivent en Afrique, et ce sera encore plus vrai en 2050. Le français n'appartient plus seulement à la France.",
+    "sv": "Den är ljus! I dag bor majoriteten av de fransktalande i Afrika, och det kommer att gälla ännu mer 2050. Franskan tillhör inte längre bara Frankrike."
+   }
+  ],
+  "questions": [
+   {
+    "type": "helhet",
+    "q": "Vad handlar intervjun om?",
+    "opts": [
+     "Franskans ställning i Senegal",
+     "Turism i Dakar",
+     "Senegalesisk musik",
+     "Hur man blir lärare i Frankrike"
+    ],
+    "a": 0,
+    "why": "« Quelle est la place du français au Sénégal aujourd'hui ? »"
+   },
+   {
+    "type": "detalj",
+    "q": "Vilket språk talar de flesta på gatan och i familjen?",
+    "opts": [
+     "Franska",
+     "Engelska",
+     "Wolof",
+     "Arabiska"
+    ],
+    "a": 2,
+    "why": "« dans la rue, au marché, en famille, la plupart des gens parlent wolof »."
+   },
+   {
+    "type": "detalj",
+    "q": "Vad testar man i skolan sedan några år?",
+    "opts": [
+     "Undervisning bara på engelska",
+     "Tvåspråkig undervisning på wolof och franska",
+     "Kortare skoldagar",
+     "Digitala läroböcker"
+    ],
+    "a": 1,
+    "why": "« on teste depuis quelques années un enseignement bilingue, en wolof et en français »."
+   },
+   {
+    "type": "detalj",
+    "q": "Vad visar resultaten?",
+    "opts": [
+     "Barnen blir sämre på franska",
+     "Barn som först lär sig läsa på modersmålet läser sedan bättre på franska",
+     "Det finns inga skillnader",
+     "Föräldrarna är emot det"
+    ],
+    "a": 1,
+    "why": "« Les enfants qui apprennent d'abord à lire dans leur langue maternelle lisent ensuite mieux en français »."
+   },
+   {
+    "type": "detalj",
+    "q": "Vad betyder « essencerie » i Senegal?",
+    "opts": [
+     "En bensinstation",
+     "En parfymaffär",
+     "Ett bageri",
+     "En skola"
+    ],
+    "a": 0,
+    "why": "« on dit « essencerie » pour une station-service »."
+   },
+   {
+    "type": "slutsats",
+    "q": "Vad menar Awa med att franskan inte längre bara tillhör Frankrike?",
+    "opts": [
+     "Att franskan håller på att dö ut",
+     "Att de flesta fransktalande i dag bor i Afrika",
+     "Att Frankrike har förbjudit franska i Afrika",
+     "Att wolof ersätter franskan"
+    ],
+    "a": 1,
+    "why": "« la majorité des francophones vivent en Afrique »."
+   }
+  ],
+  "gloss": {
+   "administration": {
+    "t": "l'administration",
+    "sv": "förvaltning, myndigheter",
+    "g": "f"
+   },
+   "justice": {
+    "t": "la justice",
+    "sv": "rättsväsende",
+    "g": "f"
+   },
+   "encourageants": {
+    "t": "encourageant, -e",
+    "sv": "uppmuntrande, lovande",
+    "g": ""
+   },
+   "station-service": {
+    "t": "la station-service",
+    "sv": "bensinstation",
+    "g": "f"
+   },
+   "brillant": {
+    "t": "brillant, -e",
+    "sv": "lysande",
+    "g": ""
+   }
+  }
+ },
+ {
+  "id": "l-v5-2",
+  "sec": "v5",
+  "title": "Septante ou soixante-dix ?",
+  "lines": [
+   {
+    "who": "A",
+    "fr": "Tu as vu ? Sur le menu, c'est écrit « septante euros » pour le menu dégustation !",
+    "sv": "Har du sett? På menyn står det ”septante euros” för avsmakningsmenyn!"
+   },
+   {
+    "who": "B",
+    "fr": "Normal, on est en Belgique ! Ici, on dit « septante » pour soixante-dix et « nonante » pour quatre-vingt-dix. C'est beaucoup plus logique que chez vous, avouez-le.",
+    "sv": "Normalt, vi är i Belgien! Här säger man ”septante” för sjuttio och ”nonante” för nittio. Det är mycket mer logiskt än hos er, erkänn det."
+   },
+   {
+    "who": "A",
+    "fr": "C'est vrai que « quatre-vingt-dix-sept », c'est long. Et les Suisses, ils disent pareil ?",
+    "sv": "Det är sant att ”quatre-vingt-dix-sept” är långt. Och schweizarna, säger de likadant?"
+   },
+   {
+    "who": "B",
+    "fr": "Oui, et dans certains cantons ils disent même « huitante » pour quatre-vingts. Mais ce n'est pas la seule différence. Chez nous, le repas de midi, c'est le « dîner », et celui du soir, c'est le « souper ».",
+    "sv": "Ja, och i vissa kantoner säger de till och med ”huitante” för åttio. Men det är inte den enda skillnaden. Hos oss är lunchen ”dîner” och kvällsmaten ”souper”."
+   },
+   {
+    "who": "A",
+    "fr": "Attends, donc si un Belge m'invite à dîner, il faut que je vienne à midi ?",
+    "sv": "Vänta, så om en belgare bjuder mig på ”dîner” måste jag komma klockan tolv?"
+   },
+   {
+    "who": "B",
+    "fr": "Exactement ! Un ami français a fait cette erreur l'année dernière : il est arrivé à vingt heures, et on avait déjà mangé depuis longtemps. On en rit encore.",
+    "sv": "Precis! En fransk kompis gjorde det misstaget förra året: han kom klockan åtta på kvällen, och vi hade ätit för länge sedan. Vi skrattar fortfarande åt det."
+   },
+   {
+    "who": "A",
+    "fr": "Il y a d'autres pièges ?",
+    "sv": "Finns det andra fällor?"
+   },
+   {
+    "who": "B",
+    "fr": "Plein ! Si quelqu'un te dit « à tantôt », ça veut dire « à tout à l'heure ». Et si tu entends « Ça va ? », il faut répondre « Ça va », pas raconter ta vie ! Mais ne t'inquiète pas : on se comprend toujours. Et quand on ne se comprend pas, ça fait de bonnes histoires.",
+    "sv": "Massor! Om någon säger ”à tantôt” betyder det ”vi ses snart”. Och om du hör ”Ça va?” ska du svara ”Ça va”, inte berätta hela ditt liv! Men oroa dig inte: man förstår alltid varandra. Och när man inte förstår varandra blir det bra historier."
+   }
+  ],
+  "questions": [
+   {
+    "type": "helhet",
+    "q": "Vad handlar samtalet om?",
+    "opts": [
+     "Skillnader mellan belgisk och fransk franska",
+     "Priser på restauranger i Bryssel",
+     "Hur man bokar bord",
+     "Belgisk historia"
+    ],
+    "a": 0,
+    "why": "De jämför ord som « septante », « dîner » och « à tantôt »."
+   },
+   {
+    "type": "detalj",
+    "q": "Vad betyder « nonante »?",
+    "opts": [
+     "Nio",
+     "Sjuttio",
+     "Åttio",
+     "Nittio"
+    ],
+    "a": 3,
+    "why": "« nonante » pour quatre-vingt-dix."
+   },
+   {
+    "type": "detalj",
+    "q": "Vad säger man i vissa schweiziska kantoner för åttio?",
+    "opts": [
+     "Octante",
+     "Huitante",
+     "Septante",
+     "Quatre-vingts"
+    ],
+    "a": 1,
+    "why": "« ils disent même « huitante » pour quatre-vingts »."
+   },
+   {
+    "type": "detalj",
+    "q": "Vad är « dîner » i Belgien?",
+    "opts": [
+     "Frukost",
+     "Lunch",
+     "Kvällsmat",
+     "Mellanmål"
+    ],
+    "a": 1,
+    "why": "« le repas de midi, c'est le « dîner » »."
+   },
+   {
+    "type": "detalj",
+    "q": "Vilket misstag gjorde den franska kompisen?",
+    "opts": [
+     "Han kom till lunchen på kvällen",
+     "Han beställde fel rätt",
+     "Han betalade för mycket",
+     "Han sa septante i Frankrike"
+    ],
+    "a": 0,
+    "why": "« il est arrivé à vingt heures, et on avait déjà mangé depuis longtemps »."
+   },
+   {
+    "type": "slutsats",
+    "q": "Vad tycker den belgiska talaren om missförstånden?",
+    "opts": [
+     "De är farliga",
+     "De är sällsynta",
+     "De blir roliga historier",
+     "De skapar konflikter"
+    ],
+    "a": 2,
+    "why": "« quand on ne se comprend pas, ça fait de bonnes histoires »."
+   }
+  ],
+  "gloss": {
+   "dégustation": {
+    "t": "la dégustation",
+    "sv": "avsmakning",
+    "g": "f"
+   },
+   "cantons": {
+    "t": "le canton",
+    "sv": "kanton (delstat i Schweiz)",
+    "g": "m"
+   },
+   "pièges": {
+    "t": "le piège",
+    "sv": "fälla",
+    "g": "m"
+   },
+   "tantôt": {
+    "t": "à tantôt",
+    "sv": "vi ses snart (belgiska)",
+    "g": ""
+   },
+   "avouez-le": {
+    "t": "avouer",
+    "sv": "erkänna",
+    "g": ""
+   }
+  }
+ },
+ {
+  "id": "l-v6-1",
+  "sec": "v6",
+  "title": "Un club de lecture",
+  "lines": [
+   {
+    "who": "A",
+    "fr": "Bon, tout le monde a fini le roman ? Alors, qu'est-ce que vous en avez pensé ?",
+    "sv": "Okej, har alla läst ut romanen? Vad tyckte ni?"
+   },
+   {
+    "who": "B",
+    "fr": "Moi, j'ai adoré. L'histoire se déroule dans un petit village de montagne pendant un hiver très long. La narratrice est une jeune fille de quinze ans qui découvre un secret de famille.",
+    "sv": "Jag älskade den. Historien utspelar sig i en liten bergsby under en mycket lång vinter. Berättaren är en femtonårig flicka som upptäcker en familjehemlighet."
+   },
+   {
+    "who": "C",
+    "fr": "Moi, je l'ai trouvé un peu lent au début. Les descriptions de la neige sont belles, mais il ne se passe rien pendant cent pages !",
+    "sv": "Jag tyckte att den var lite långsam i början. Beskrivningarna av snön är vackra, men det händer ingenting på hundra sidor!"
+   },
+   {
+    "who": "B",
+    "fr": "C'est vrai, mais c'est voulu. L'autrice veut qu'on ressente l'ennui et l'isolement des personnages. Et après, les rebondissements s'enchaînent.",
+    "sv": "Det stämmer, men det är avsiktligt. Författaren vill att man ska känna personernas uttråkning och isolering. Och sedan kommer den ena vändningen efter den andra."
+   },
+   {
+    "who": "A",
+    "fr": "Et le dénouement ? Vous vous y attendiez ?",
+    "sv": "Och upplösningen? Hade ni väntat er den?"
+   },
+   {
+    "who": "C",
+    "fr": "Pas du tout ! Si j'avais deviné que le grand-père était le coupable, j'aurais été déçue. Là, j'ai été vraiment surprise.",
+    "sv": "Inte alls! Om jag hade gissat att farfadern var den skyldige hade jag blivit besviken. Nu blev jag verkligen överraskad."
+   },
+   {
+    "who": "B",
+    "fr": "Moi, j'ai aimé la fin ouverte. On ne sait pas si la narratrice va partir ou rester au village. Chacun peut imaginer la suite.",
+    "sv": "Jag gillade det öppna slutet. Man vet inte om berättaren kommer att åka eller stanna i byn. Var och en kan föreställa sig fortsättningen."
+   },
+   {
+    "who": "C",
+    "fr": "Moi, je déteste les fins ouvertes ! J'ai besoin de savoir ce qui se passe.",
+    "sv": "Jag avskyr öppna slut! Jag behöver veta vad som händer."
+   },
+   {
+    "who": "A",
+    "fr": "En tout cas, le livre a été adapté au cinéma l'an dernier. On pourrait regarder le film ensemble la prochaine fois et comparer ?",
+    "sv": "I alla fall filmatiserades boken förra året. Vi kunde titta på filmen tillsammans nästa gång och jämföra?"
+   },
+   {
+    "who": "B",
+    "fr": "Bonne idée ! Mais je suis sûre que le livre est meilleur.",
+    "sv": "Bra idé! Men jag är säker på att boken är bättre."
+   }
+  ],
+  "questions": [
+   {
+    "type": "helhet",
+    "q": "Vad gör personerna?",
+    "opts": [
+     "Diskuterar en roman i en bokcirkel",
+     "Skriver en roman tillsammans",
+     "Tittar på en film",
+     "Planerar en resa till bergen"
+    ],
+    "a": 0,
+    "why": "« tout le monde a fini le roman ? Alors, qu'est-ce que vous en avez pensé ? »"
+   },
+   {
+    "type": "detalj",
+    "q": "Vem är berättaren i romanen?",
+    "opts": [
+     "En gammal man",
+     "En femtonårig flicka",
+     "En polis",
+     "En lärare"
+    ],
+    "a": 1,
+    "why": "« La narratrice est une jeune fille de quinze ans »."
+   },
+   {
+    "type": "detalj",
+    "q": "Vad tyckte C om början av boken?",
+    "opts": [
+     "Den var för våldsam",
+     "Den var lite långsam",
+     "Den var för kort",
+     "Den var rolig"
+    ],
+    "a": 1,
+    "why": "« je l'ai trouvé un peu lent au début »."
+   },
+   {
+    "type": "detalj",
+    "q": "Varför händer det lite i början, enligt B?",
+    "opts": [
+     "Författaren ville att man skulle känna uttråkningen och isoleringen",
+     "Författaren hade bråttom",
+     "Det är ett fel i översättningen",
+     "Boken är en dikt"
+    ],
+    "a": 0,
+    "why": "« L'autrice veut qu'on ressente l'ennui et l'isolement des personnages »."
+   },
+   {
+    "type": "detalj",
+    "q": "Vem var den skyldige?",
+    "opts": [
+     "Berättaren",
+     "Farfadern",
+     "Läraren",
+     "Grannen"
+    ],
+    "a": 1,
+    "why": "« Si j'avais deviné que le grand-père était le coupable »."
+   },
+   {
+    "type": "slutsats",
+    "q": "Vad föreslår A till nästa gång?",
+    "opts": [
+     "Att läsa en deckare",
+     "Att se filmatiseringen och jämföra",
+     "Att skriva en recension",
+     "Att träffa författaren"
+    ],
+    "a": 1,
+    "why": "« On pourrait regarder le film ensemble la prochaine fois et comparer ? »"
+   }
+  ],
+  "gloss": {
+   "ressente": {
+    "t": "ressentir",
+    "sv": "känna",
+    "g": ""
+   },
+   "ennui": {
+    "t": "l'ennui",
+    "sv": "uttråkning, leda",
+    "g": "m"
+   },
+   "isolement": {
+    "t": "l'isolement",
+    "sv": "isolering",
+    "g": "m"
+   },
+   "enchaînent": {
+    "t": "s'enchaîner",
+    "sv": "följa på varandra",
+    "g": ""
+   },
+   "deviné": {
+    "t": "deviner",
+    "sv": "gissa",
+    "g": ""
+   },
+   "déçue": {
+    "t": "déçu, -e",
+    "sv": "besviken",
+    "g": ""
+   }
+  }
+ },
+ {
+  "id": "l-v6-2",
+  "sec": "v6",
+  "title": "Rencontre avec une autrice de BD",
+  "lines": [
+   {
+    "who": "A",
+    "fr": "Bonjour Léa Morel, votre roman graphique « Les Oiseaux de papier » vient de recevoir le prix du public au festival d'Angoulême. Félicitations !",
+    "sv": "Hej Léa Morel, din grafiska roman « Pappersfåglarna » har just fått publikens pris på festivalen i Angoulême. Grattis!"
+   },
+   {
+    "who": "B",
+    "fr": "Merci ! Je ne m'y attendais pas du tout. Quand on m'a appelée, j'ai cru que c'était une blague.",
+    "sv": "Tack! Jag hade inte alls väntat mig det. När de ringde trodde jag att det var ett skämt."
+   },
+   {
+    "who": "A",
+    "fr": "De quoi parle le livre ?",
+    "sv": "Vad handlar boken om?"
+   },
+   {
+    "who": "B",
+    "fr": "C'est l'histoire de ma grand-mère, qui a quitté l'Algérie en 1962, à dix-sept ans. Elle ne parlait jamais de son passé. C'est en rangeant son appartement, après sa mort, que j'ai trouvé des lettres qu'elle avait écrites à sa sœur.",
+    "sv": "Det är min mormors historia. Hon lämnade Algeriet 1962, när hon var sjutton. Hon pratade aldrig om sitt förflutna. Det var när jag städade hennes lägenhet efter hennes död som jag hittade brev som hon hade skrivit till sin syster."
+   },
+   {
+    "who": "A",
+    "fr": "Donc c'est une histoire vraie ?",
+    "sv": "Så det är en sann historia?"
+   },
+   {
+    "who": "B",
+    "fr": "En partie. Les lettres sont vraies, mais j'ai inventé des dialogues et des personnages secondaires. Il y avait des trous dans l'histoire, et je les ai remplis avec mon imagination.",
+    "sv": "Delvis. Breven är äkta, men jag har hittat på dialoger och bifigurer. Det fanns luckor i historien, och jag fyllde dem med min fantasi."
+   },
+   {
+    "who": "A",
+    "fr": "Pourquoi avoir choisi la bande dessinée plutôt que le roman ?",
+    "sv": "Varför valde du tecknad serie i stället för roman?"
+   },
+   {
+    "who": "B",
+    "fr": "Parce que je dessine depuis toute petite ! Et le dessin permet de montrer des émotions sans mots. Par exemple, pour les souvenirs de l'Algérie, j'ai utilisé des couleurs chaudes, et pour l'arrivée en France, du gris et du bleu.",
+    "sv": "För att jag har tecknat sedan jag var liten! Och teckningen gör det möjligt att visa känslor utan ord. Till exempel använde jag varma färger för minnena från Algeriet och grått och blått för ankomsten till Frankrike."
+   },
+   {
+    "who": "A",
+    "fr": "Vous travaillez déjà sur un nouveau projet ?",
+    "sv": "Arbetar du redan med ett nytt projekt?"
+   },
+   {
+    "who": "B",
+    "fr": "Oui, mais c'est un secret ! Je peux juste vous dire que ce sera une histoire de musique.",
+    "sv": "Ja, men det är en hemlighet! Jag kan bara säga att det blir en historia om musik."
+   }
+  ],
+  "questions": [
+   {
+    "type": "helhet",
+    "q": "Vem intervjuas?",
+    "opts": [
+     "En serietecknare som har vunnit ett pris",
+     "En historiker",
+     "En förläggare",
+     "En filmregissör"
+    ],
+    "a": 0,
+    "why": "Hennes « roman graphique … vient de recevoir le prix du public »."
+   },
+   {
+    "type": "detalj",
+    "q": "Hur reagerade hon när hon fick veta om priset?",
+    "opts": [
+     "Hon trodde att det var ett skämt",
+     "Hon grät",
+     "Hon var inte förvånad",
+     "Hon tackade nej"
+    ],
+    "a": 0,
+    "why": "« j'ai cru que c'était une blague »."
+   },
+   {
+    "type": "detalj",
+    "q": "Vad bygger boken på?",
+    "opts": [
+     "Hennes egen barndom",
+     "Brev som hennes mormor skrev till sin syster",
+     "En gammal roman",
+     "En tv-serie"
+    ],
+    "a": 1,
+    "why": "« j'ai trouvé des lettres qu'elle avait écrites à sa sœur »."
+   },
+   {
+    "type": "detalj",
+    "q": "Vad har hon hittat på?",
+    "opts": [
+     "Breven",
+     "Dialoger och bifigurer",
+     "Mormoderns namn",
+     "Årtalet"
+    ],
+    "a": 1,
+    "why": "« j'ai inventé des dialogues et des personnages secondaires »."
+   },
+   {
+    "type": "detalj",
+    "q": "Hur använder hon färgerna?",
+    "opts": [
+     "Varma färger för Algeriet, grått och blått för Frankrike",
+     "Bara svartvitt",
+     "Rött för hela boken",
+     "Samma färger överallt"
+    ],
+    "a": 0,
+    "why": "« pour les souvenirs de l'Algérie, j'ai utilisé des couleurs chaudes, et pour l'arrivée en France, du gris et du bleu »."
+   },
+   {
+    "type": "detalj",
+    "q": "Vad handlar hennes nästa projekt om?",
+    "opts": [
+     "Algeriet",
+     "Musik",
+     "Mat",
+     "Sport"
+    ],
+    "a": 1,
+    "why": "« ce sera une histoire de musique »."
+   }
+  ],
+  "gloss": {
+   "blague": {
+    "t": "la blague",
+    "sv": "skämt",
+    "g": "f"
+   },
+   "quitté": {
+    "t": "quitter",
+    "sv": "lämna",
+    "g": ""
+   },
+   "rangeant": {
+    "t": "ranger",
+    "sv": "städa, plocka undan",
+    "g": ""
+   },
+   "trous": {
+    "t": "le trou",
+    "sv": "hål, lucka",
+    "g": "m"
+   },
+   "dessine": {
+    "t": "dessiner",
+    "sv": "teckna",
+    "g": ""
+   }
+  }
+ },
+ {
+  "id": "l-v7-1",
+  "sec": "v7",
+  "title": "La Fête de la musique",
+  "lines": [
+   {
+    "who": "A",
+    "fr": "Ce soir, c'est le 21 juin, et comme chaque année, la France entière fête la musique. Je suis place de la République, à Lyon, et l'ambiance est incroyable. Je vais interroger quelques musiciens.",
+    "sv": "I kväll är det den 21 juni, och som varje år firar hela Frankrike musiken. Jag står på Place de la République i Lyon, och stämningen är otrolig. Jag ska intervjua några musiker."
+   },
+   {
+    "who": "A",
+    "fr": "Bonsoir ! Vous jouez dans quel groupe ?",
+    "sv": "God kväll! Vilket band spelar ni i?"
+   },
+   {
+    "who": "B",
+    "fr": "On s'appelle « Les Voisins ». On est quatre, on s'est rencontrés au lycée. On joue un mélange de rock et de chanson française. C'est la troisième fois qu'on joue à la Fête de la musique.",
+    "sv": "Vi heter « Grannarna ». Vi är fyra, vi träffades på gymnasiet. Vi spelar en blandning av rock och fransk visa. Det är tredje gången vi spelar på musikens dag."
+   },
+   {
+    "who": "A",
+    "fr": "Pourquoi est-ce que c'est important pour vous ?",
+    "sv": "Varför är det viktigt för er?"
+   },
+   {
+    "who": "B",
+    "fr": "Parce que c'est le seul jour où tout le monde peut jouer dans la rue sans autorisation. Pour un petit groupe comme nous, c'est l'occasion de jouer devant des centaines de personnes. L'année dernière, un programmateur nous a entendus et nous a invités dans un festival.",
+    "sv": "För att det är den enda dagen då alla får spela på gatan utan tillstånd. För ett litet band som vi är det en chans att spela inför hundratals människor. Förra året hörde en bokare oss och bjöd in oss till en festival."
+   },
+   {
+    "who": "A",
+    "fr": "Et vous, madame, vous êtes venue écouter ?",
+    "sv": "Och ni, är ni här för att lyssna?"
+   },
+   {
+    "who": "C",
+    "fr": "Oui, avec mes petits-enfants. Il y a de tout : du jazz, du rap, une chorale d'enfants, même un orchestre symphonique devant l'opéra. C'est gratuit, alors on se promène et on s'arrête où on veut.",
+    "sv": "Ja, med mina barnbarn. Det finns allt: jazz, rap, en barnkör, till och med en symfoniorkester framför operan. Det är gratis, så man promenerar och stannar där man vill."
+   },
+   {
+    "who": "A",
+    "fr": "Vous savez que cette fête a été créée en 1982 ?",
+    "sv": "Vet ni att den här festen skapades 1982?"
+   },
+   {
+    "who": "C",
+    "fr": "Bien sûr ! J'avais vingt ans, et je jouais de la flûte dans la rue. Aujourd'hui, elle est célébrée dans plus de cent pays. C'est une belle idée française, non ?",
+    "sv": "Självklart! Jag var tjugo år och spelade flöjt på gatan. I dag firas den i över hundra länder. Det är en fin fransk idé, eller hur?"
+   }
+  ],
+  "questions": [
+   {
+    "type": "helhet",
+    "q": "Vad är inslaget?",
+    "opts": [
+     "Ett reportage från musikens dag",
+     "En intervju med en känd sångerska",
+     "En reklam för en festival",
+     "Ett samtal om musikundervisning"
+    ],
+    "a": 0,
+    "why": "« Ce soir, c'est le 21 juin … la France entière fête la musique »."
+   },
+   {
+    "type": "detalj",
+    "q": "Var träffades medlemmarna i « Les Voisins »?",
+    "opts": [
+     "På gymnasiet",
+     "På konservatoriet",
+     "I samma hus",
+     "På en festival"
+    ],
+    "a": 0,
+    "why": "« on s'est rencontrés au lycée »."
+   },
+   {
+    "type": "detalj",
+    "q": "Vad är speciellt med den 21 juni enligt bandet?",
+    "opts": [
+     "Alla får spela på gatan utan tillstånd",
+     "Konserterna är dyra",
+     "Bara proffs får spela",
+     "Man måste anmäla sig i förväg"
+    ],
+    "a": 0,
+    "why": "« c'est le seul jour où tout le monde peut jouer dans la rue sans autorisation »."
+   },
+   {
+    "type": "detalj",
+    "q": "Vad hände bandet förra året?",
+    "opts": [
+     "De vann en tävling",
+     "En bokare bjöd in dem till en festival",
+     "De spelade in ett album",
+     "De splittrades"
+    ],
+    "a": 1,
+    "why": "« un programmateur nous a entendus et nous a invités dans un festival »."
+   },
+   {
+    "type": "detalj",
+    "q": "Vilken musik nämner kvinnan?",
+    "opts": [
+     "Bara rock",
+     "Jazz, rap, en barnkör och en symfoniorkester",
+     "Bara klassisk musik",
+     "Bara folkmusik"
+    ],
+    "a": 1,
+    "why": "« du jazz, du rap, une chorale d'enfants, même un orchestre symphonique »."
+   },
+   {
+    "type": "detalj",
+    "q": "När skapades festen?",
+    "opts": [
+     "1962",
+     "1982",
+     "2002",
+     "1882"
+    ],
+    "a": 1,
+    "why": "« cette fête a été créée en 1982 »."
+   }
+  ],
+  "gloss": {
+   "autorisation": {
+    "t": "l'autorisation",
+    "sv": "tillstånd",
+    "g": "f"
+   },
+   "programmateur": {
+    "t": "le programmateur",
+    "sv": "bokare (för konserter)",
+    "g": "m"
+   },
+   "gratuit": {
+    "t": "gratuit, -e",
+    "sv": "gratis",
+    "g": ""
+   },
+   "célébrée": {
+    "t": "célébrer",
+    "sv": "fira",
+    "g": ""
+   },
+   "flûte": {
+    "t": "la flûte",
+    "sv": "flöjt",
+    "g": "f"
+   }
+  }
+ },
+ {
+  "id": "l-v7-2",
+  "sec": "v7",
+  "title": "Au musée avec un audioguide",
+  "lines": [
+   {
+    "who": "A",
+    "fr": "Bienvenue au musée d'Orsay. Vous êtes devant l'un des tableaux les plus célèbres du musée : « Bal du moulin de la Galette », peint par Auguste Renoir en 1876.",
+    "sv": "Välkommen till Musée d'Orsay. Ni står framför en av museets mest kända målningar: « Bal du moulin de la Galette », målad av Auguste Renoir 1876."
+   },
+   {
+    "who": "A",
+    "fr": "Le tableau représente un dimanche après-midi à Montmartre, qui était alors un village au nord de Paris. Des jeunes gens dansent, discutent et boivent sous les arbres. Regardez la lumière : le soleil passe à travers les feuilles et fait des taches claires sur les vêtements et sur le sol.",
+    "sv": "Målningen föreställer en söndagseftermiddag på Montmartre, som då var en by norr om Paris. Unga människor dansar, pratar och dricker under träden. Titta på ljuset: solen går genom löven och gör ljusa fläckar på kläderna och på marken."
+   },
+   {
+    "who": "A",
+    "fr": "Renoir fait partie des peintres impressionnistes. Ces artistes voulaient peindre en plein air et saisir un moment, une impression. Ils ont été très critiqués au début : on trouvait leurs tableaux inachevés, comme des esquisses.",
+    "sv": "Renoir hör till de impressionistiska målarna. De här konstnärerna ville måla utomhus och fånga ett ögonblick, ett intryck. De kritiserades hårt i början: man tyckte att deras tavlor var ofärdiga, som skisser."
+   },
+   {
+    "who": "A",
+    "fr": "Pour ce grand tableau, Renoir a demandé à ses amis de poser. On reconnaît plusieurs peintres et écrivains de l'époque. En l'observant de près, vous verrez que les visages ne sont pas précis : c'est la couleur qui crée la forme.",
+    "sv": "För den här stora målningen bad Renoir sina vänner att sitta modell. Man känner igen flera målare och författare från den tiden. Om ni tittar närmare ser ni att ansiktena inte är exakta: det är färgen som skapar formen."
+   },
+   {
+    "who": "A",
+    "fr": "Aujourd'hui, ce tableau est considéré comme un chef-d'œuvre. Une deuxième version, plus petite, a été vendue en 1990 pour environ soixante-dix-huit millions de dollars. À l'époque, c'était l'un des tableaux les plus chers du monde.",
+    "sv": "I dag betraktas den här målningen som ett mästerverk. En andra, mindre version såldes 1990 för ungefär sjuttioåtta miljoner dollar. Då var det en av världens dyraste tavlor."
+   },
+   {
+    "who": "A",
+    "fr": "Pour continuer la visite, dirigez-vous vers la salle suivante, où vous découvrirez les œuvres de Claude Monet.",
+    "sv": "För att fortsätta besöket, gå vidare till nästa sal, där ni kommer att upptäcka Claude Monets verk."
+   }
+  ],
+  "questions": [
+   {
+    "type": "helhet",
+    "q": "Vad är det man hör?",
+    "opts": [
+     "En audioguide på ett museum",
+     "En konstauktion",
+     "En lektion i måleri",
+     "En intervju med Renoir"
+    ],
+    "a": 0,
+    "why": "« Bienvenue au musée d'Orsay. Vous êtes devant l'un des tableaux les plus célèbres »."
+   },
+   {
+    "type": "detalj",
+    "q": "Vad föreställer målningen?",
+    "opts": [
+     "En söndagseftermiddag med dans på Montmartre",
+     "En storm vid havet",
+     "Ett porträtt av Renoirs fru",
+     "En marknad i Paris"
+    ],
+    "a": 0,
+    "why": "« Le tableau représente un dimanche après-midi à Montmartre … Des jeunes gens dansent »."
+   },
+   {
+    "type": "detalj",
+    "q": "Vad ville impressionisterna?",
+    "opts": [
+     "Måla i ateljén efter fotografier",
+     "Måla utomhus och fånga ett ögonblick",
+     "Måla historiska händelser",
+     "Måla bara landskap"
+    ],
+    "a": 1,
+    "why": "« Ces artistes voulaient peindre en plein air et saisir un moment »."
+   },
+   {
+    "type": "detalj",
+    "q": "Vilken kritik fick impressionisterna i början?",
+    "opts": [
+     "Tavlorna var för dyra",
+     "Tavlorna verkade ofärdiga, som skisser",
+     "Tavlorna var för mörka",
+     "Tavlorna var för små"
+    ],
+    "a": 1,
+    "why": "« on trouvait leurs tableaux inachevés, comme des esquisses »."
+   },
+   {
+    "type": "detalj",
+    "q": "Vem satt modell för målningen?",
+    "opts": [
+     "Renoirs vänner",
+     "Professionella modeller",
+     "Renoirs familj",
+     "Turister"
+    ],
+    "a": 0,
+    "why": "« Renoir a demandé à ses amis de poser »."
+   },
+   {
+    "type": "detalj",
+    "q": "Vad hände 1990?",
+    "opts": [
+     "Museet öppnade",
+     "En mindre version av målningen såldes för cirka 78 miljoner dollar",
+     "Målningen stals",
+     "Målningen restaurerades"
+    ],
+    "a": 1,
+    "why": "« Une deuxième version, plus petite, a été vendue en 1990 pour environ soixante-dix-huit millions de dollars »."
+   }
+  ],
+  "gloss": {
+   "moulin": {
+    "t": "le moulin",
+    "sv": "kvarn",
+    "g": "m"
+   },
+   "taches": {
+    "t": "la tache",
+    "sv": "fläck",
+    "g": "f"
+   },
+   "saisir": {
+    "t": "saisir",
+    "sv": "fånga, gripa",
+    "g": ""
+   },
+   "inachevés": {
+    "t": "inachevé, -e",
+    "sv": "ofärdig",
+    "g": ""
+   },
+   "esquisses": {
+    "t": "l'esquisse",
+    "sv": "skiss",
+    "g": "f"
+   },
+   "poser": {
+    "t": "poser",
+    "sv": "sitta modell",
+    "g": ""
+   }
+  }
+ },
+ {
+  "id": "l-v8-1",
+  "sec": "v8",
+  "title": "Au vide-grenier",
+  "lines": [
+   {
+    "who": "A",
+    "fr": "Bonjour ! Elle est à combien, cette platine vinyle ?",
+    "sv": "Hej! Vad kostar den här skivspelaren?"
+   },
+   {
+    "who": "B",
+    "fr": "Trente euros. Elle date des années quatre-vingt, mais elle marche parfaitement. Je l'ai fait réparer l'année dernière dans un repair café.",
+    "sv": "Trettio euro. Den är från åttiotalet, men den fungerar perfekt. Jag lät laga den förra året på ett reparationskafé."
+   },
+   {
+    "who": "A",
+    "fr": "Trente euros, c'est un peu cher pour moi. Vous me la feriez à vingt ?",
+    "sv": "Trettio euro är lite dyrt för mig. Kan ni tänka er tjugo?"
+   },
+   {
+    "who": "B",
+    "fr": "Vingt-cinq, et je vous donne trois disques de jazz en plus.",
+    "sv": "Tjugofem, och så får ni tre jazzskivor på köpet."
+   },
+   {
+    "who": "A",
+    "fr": "D'accord, marché conclu ! Vous vendez beaucoup de choses aujourd'hui ?",
+    "sv": "Okej, affären är klar! Säljer ni mycket i dag?"
+   },
+   {
+    "who": "B",
+    "fr": "Oui, on déménage dans un appartement plus petit, alors on vide le grenier. Et puis, avec ma femme, on a décidé de consommer moins. Avant, on achetait des vêtements tous les mois, et la moitié restait dans l'armoire avec l'étiquette !",
+    "sv": "Ja, vi flyttar till en mindre lägenhet, så vi tömmer vinden. Och så har min fru och jag bestämt oss för att konsumera mindre. Förut köpte vi kläder varje månad, och hälften blev kvar i garderoben med prislappen på!"
+   },
+   {
+    "who": "A",
+    "fr": "Je vous comprends. Moi, depuis un an, je n'achète presque plus rien de neuf. Mes vêtements viennent de friperies, et mon ordinateur est reconditionné.",
+    "sv": "Jag förstår er. Själv köper jag nästan ingenting nytt sedan ett år. Mina kläder kommer från second hand-butiker, och min dator är renoverad."
+   },
+   {
+    "who": "B",
+    "fr": "Et ça ne vous manque pas, le shopping ?",
+    "sv": "Och saknar ni inte shoppingen?"
+   },
+   {
+    "who": "A",
+    "fr": "Au début, un peu. Mais en achetant d'occasion, j'ai économisé beaucoup d'argent, et j'ai l'impression de faire un geste pour la planète. Et puis, chiner, c'est amusant : on ne sait jamais ce qu'on va trouver.",
+    "sv": "I början lite. Men genom att köpa begagnat har jag sparat mycket pengar, och jag känner att jag gör något för planeten. Och att fynda är roligt: man vet aldrig vad man ska hitta."
+   },
+   {
+    "who": "B",
+    "fr": "Comme cette platine ! Profitez bien de vos disques.",
+    "sv": "Som den här skivspelaren! Njut av era skivor."
+   }
+  ],
+  "questions": [
+   {
+    "type": "helhet",
+    "q": "Var utspelar sig samtalet?",
+    "opts": [
+     "På en loppis",
+     "I en skivaffär",
+     "På ett reparationskafé",
+     "I en klädbutik"
+    ],
+    "a": 0,
+    "why": "Titeln och säljaren som « vide le grenier »."
+   },
+   {
+    "type": "detalj",
+    "q": "Vad köper kunden till slut, och för hur mycket?",
+    "opts": [
+     "En skivspelare för 20 euro",
+     "En skivspelare och tre skivor för 25 euro",
+     "Tre skivor för 30 euro",
+     "En dator för 25 euro"
+    ],
+    "a": 1,
+    "why": "« Vingt-cinq, et je vous donne trois disques de jazz en plus. – D'accord »."
+   },
+   {
+    "type": "detalj",
+    "q": "Varför säljer säljaren sina saker?",
+    "opts": [
+     "Han behöver pengar till en resa",
+     "Han flyttar till en mindre lägenhet och vill konsumera mindre",
+     "Han ska börja ett nytt jobb",
+     "Han har ärvt ett hus"
+    ],
+    "a": 1,
+    "why": "« on déménage dans un appartement plus petit … on a décidé de consommer moins »."
+   },
+   {
+    "type": "detalj",
+    "q": "Vad hände med kläderna som paret köpte förut?",
+    "opts": [
+     "De gav bort dem",
+     "Hälften användes aldrig",
+     "De gick sönder snabbt",
+     "De sålde dem på nätet"
+    ],
+    "a": 1,
+    "why": "« la moitié restait dans l'armoire avec l'étiquette ! »"
+   },
+   {
+    "type": "detalj",
+    "q": "Var kommer kundens kläder ifrån?",
+    "opts": [
+     "Från second hand-butiker",
+     "Från kända märken",
+     "Från nätbutiker",
+     "Från hennes mamma"
+    ],
+    "a": 0,
+    "why": "« Mes vêtements viennent de friperies »."
+   },
+   {
+    "type": "slutsats",
+    "q": "Vad tycker kunden om att köpa begagnat?",
+    "opts": [
+     "Det är tråkigt",
+     "Det sparar pengar, är bra för planeten och roligt",
+     "Det är för dyrt",
+     "Det är svårt att hitta något"
+    ],
+    "a": 1,
+    "why": "« j'ai économisé beaucoup d'argent … un geste pour la planète … chiner, c'est amusant »."
+   }
+  ],
+  "gloss": {
+   "platine": {
+    "t": "la platine vinyle",
+    "sv": "skivspelare",
+    "g": "f"
+   },
+   "conclu": {
+    "t": "marché conclu",
+    "sv": "affären är klar",
+    "g": ""
+   },
+   "déménage": {
+    "t": "déménager",
+    "sv": "flytta",
+    "g": ""
+   },
+   "reconditionné": {
+    "t": "reconditionné, -e",
+    "sv": "renoverad, begagnad och genomgången",
+    "g": ""
+   },
+   "chiner": {
+    "t": "chiner",
+    "sv": "fynda (på loppis)",
+    "g": ""
+   }
+  }
+ },
+ {
+  "id": "l-v8-2",
+  "sec": "v8",
+  "title": "Le défi « un mois sans plastique »",
+  "lines": [
+   {
+    "who": "A",
+    "fr": "Dans notre émission « Vivre autrement », nous suivons ce mois-ci la famille Garnier, qui a relevé un défi : vivre un mois sans plastique jetable. Nous retrouvons Julie Garnier après trois semaines.",
+    "sv": "I vårt program « Leva annorlunda » följer vi den här månaden familjen Garnier, som har antagit en utmaning: att leva en månad utan engångsplast. Vi träffar Julie Garnier efter tre veckor."
+   },
+   {
+    "who": "B",
+    "fr": "Honnêtement, c'est plus difficile que je ne le pensais. Au supermarché, presque tout est emballé : les fruits, le fromage, même les concombres ! Donc maintenant, on fait nos courses au marché et dans un magasin de vrac.",
+    "sv": "Ärligt talat är det svårare än jag trodde. I stormarknaden är nästan allt förpackat: frukten, osten, till och med gurkorna! Så nu handlar vi på torget och i en lösviktsbutik."
+   },
+   {
+    "who": "A",
+    "fr": "Qu'est-ce qui a changé dans votre quotidien ?",
+    "sv": "Vad har förändrats i er vardag?"
+   },
+   {
+    "who": "B",
+    "fr": "On emporte toujours des sacs en tissu et des bocaux en verre. Les enfants ont une gourde réutilisable pour l'école. Et j'ai appris à faire mon propre dentifrice ! Mon fils trouve que le goût est bizarre, mais il s'habitue.",
+    "sv": "Vi tar alltid med tygpåsar och glasburkar. Barnen har en återanvändbar vattenflaska till skolan. Och jag har lärt mig göra min egen tandkräm! Min son tycker att smaken är konstig, men han vänjer sig."
+   },
+   {
+    "who": "A",
+    "fr": "Et le budget ?",
+    "sv": "Och budgeten?"
+   },
+   {
+    "who": "B",
+    "fr": "Certains produits en vrac sont plus chers, mais on gaspille moins, parce qu'on achète juste la quantité dont on a besoin. Au final, on dépense à peu près la même chose.",
+    "sv": "Vissa lösviktsvaror är dyrare, men vi slösar mindre, eftersom vi köper precis den mängd vi behöver. I slutändan gör vi av med ungefär lika mycket."
+   },
+   {
+    "who": "A",
+    "fr": "Vous allez continuer après le défi ?",
+    "sv": "Kommer ni att fortsätta efter utmaningen?"
+   },
+   {
+    "who": "B",
+    "fr": "Pas à cent pour cent, ce serait trop de travail. Mais on garde les bonnes habitudes. Notre poubelle est deux fois moins remplie qu'avant ! Si on avait su que c'était possible, on aurait commencé bien plus tôt.",
+    "sv": "Inte till hundra procent, det skulle bli för mycket jobb. Men vi behåller de goda vanorna. Vår soptunna är bara halvfull jämfört med förut! Om vi hade vetat att det gick hade vi börjat mycket tidigare."
+   }
+  ],
+  "questions": [
+   {
+    "type": "helhet",
+    "q": "Vad handlar programmet om?",
+    "opts": [
+     "En familj som försöker leva utan engångsplast",
+     "En ny återvinningscentral",
+     "En stormarknad som slutar sälja plast",
+     "Hur man gör tandkräm"
+    ],
+    "a": 0,
+    "why": "« vivre un mois sans plastique jetable »."
+   },
+   {
+    "type": "detalj",
+    "q": "Vad var svårare än Julie trodde?",
+    "opts": [
+     "Att undvika förpackad mat i stormarknaden",
+     "Att övertyga barnen",
+     "Att laga mat",
+     "Att hitta ett torg"
+    ],
+    "a": 0,
+    "why": "« Au supermarché, presque tout est emballé »."
+   },
+   {
+    "type": "detalj",
+    "q": "Var handlar familjen nu?",
+    "opts": [
+     "På nätet",
+     "På torget och i en lösviktsbutik",
+     "I en stormarknad",
+     "I en second hand-butik"
+    ],
+    "a": 1,
+    "why": "« on fait nos courses au marché et dans un magasin de vrac »."
+   },
+   {
+    "type": "detalj",
+    "q": "Vad tycker sonen om den hemgjorda tandkrämen?",
+    "opts": [
+     "Att den är god",
+     "Att smaken är konstig, men han vänjer sig",
+     "Att den är för dyr",
+     "Han vägrar använda den"
+    ],
+    "a": 1,
+    "why": "« Mon fils trouve que le goût est bizarre, mais il s'habitue »."
+   },
+   {
+    "type": "detalj",
+    "q": "Hur har utgifterna påverkats?",
+    "opts": [
+     "De har fördubblats",
+     "De är ungefär desamma",
+     "De har halverats",
+     "De har ökat lite"
+    ],
+    "a": 1,
+    "why": "« Au final, on dépense à peu près la même chose »."
+   },
+   {
+    "type": "slutsats",
+    "q": "Vad ska familjen göra efter utmaningen?",
+    "opts": [
+     "Sluta helt",
+     "Fortsätta till hundra procent",
+     "Behålla de goda vanorna",
+     "Flytta till landet"
+    ],
+    "a": 2,
+    "why": "« Pas à cent pour cent … Mais on garde les bonnes habitudes »."
+   }
+  ],
+  "gloss": {
+   "emballé": {
+    "t": "emballer",
+    "sv": "förpacka",
+    "g": ""
+   },
+   "concombres": {
+    "t": "le concombre",
+    "sv": "gurka",
+    "g": "m"
+   },
+   "tissu": {
+    "t": "le tissu",
+    "sv": "tyg",
+    "g": "m"
+   },
+   "bocaux": {
+    "t": "le bocal",
+    "sv": "glasburk",
+    "g": "m"
+   },
+   "gourde": {
+    "t": "la gourde",
+    "sv": "vattenflaska",
+    "g": "f"
+   },
+   "dentifrice": {
+    "t": "le dentifrice",
+    "sv": "tandkräm",
+    "g": "m"
+   },
+   "poubelle": {
+    "t": "la poubelle",
+    "sv": "soptunna",
+    "g": "f"
+   }
+  }
+ }
+]

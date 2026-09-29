@@ -1,0 +1,1876 @@
+[
+ {
+  "id": "indef-001",
+  "topic": "indef",
+  "rule": "ind-qualche",
+  "q": "Nel bosco abbiamo visto [qualche] cervo.",
+  "alt": [
+   "alcuni",
+   "qualcuno",
+   "alcune"
+  ],
+  "why": "Qualche följs alltid av singular, men betyder 'några'. Alcuni/alcune kräver plural, och qualcuno står ensamt (någon).",
+  "sv": "I skogen såg vi några hjortar."
+ },
+ {
+  "id": "indef-002",
+  "topic": "indef",
+  "rule": "ind-qualche",
+  "q": "Ci sono [alcune] nuvole sopra le montagne.",
+  "alt": [
+   "qualche",
+   "alcuni",
+   "qualcuna"
+  ],
+  "why": "Nuvole är femininum plural, alltså alcune. Qualche kräver singular (qualche nuvola).",
+  "sv": "Det finns några moln över bergen."
+ },
+ {
+  "id": "indef-003",
+  "topic": "indef",
+  "rule": "ind-qualche",
+  "q": "Ieri ho letto [qualche] articolo sul clima.",
+  "alt": [
+   "alcuni",
+   "qualcuno",
+   "alcune"
+  ],
+  "why": "Articolo står i singular, så det måste vara qualche. Alcuni skulle kräva plural: alcuni articoli.",
+  "sv": "I går läste jag några artiklar om klimatet."
+ },
+ {
+  "id": "indef-004",
+  "topic": "indef",
+  "rule": "ind-qualche",
+  "q": "Nel parco ci sono [alcuni] alberi molto vecchi.",
+  "alt": [
+   "qualche",
+   "alcune",
+   "qualcuno"
+  ],
+  "why": "Alberi är maskulinum plural: alcuni. Qualche kräver singular (qualche albero).",
+  "sv": "I parken finns några väldigt gamla träd."
+ },
+ {
+  "id": "indef-005",
+  "topic": "indef",
+  "rule": "ind-qualche",
+  "q": "Hai [qualche] domanda sulla raccolta differenziata?",
+  "alt": [
+   "alcune",
+   "qualcuna",
+   "qualcosa"
+  ],
+  "why": "Domanda står i singular, så det blir qualche. Alcune kräver plural (alcune domande).",
+  "sv": "Har du några frågor om sopsorteringen?"
+ },
+ {
+  "id": "indef-006",
+  "topic": "indef",
+  "rule": "ind-qualche",
+  "q": "Tra [qualche] giorno andiamo in montagna con la classe.",
+  "alt": [
+   "alcuni",
+   "qualcuno",
+   "alcune"
+  ],
+  "why": "Qualche + singular (giorno) betyder 'några dagar'. Alcuni skulle kräva giorni.",
+  "sv": "Om några dagar åker vi till fjällen med klassen."
+ },
+ {
+  "id": "indef-007",
+  "topic": "indef",
+  "rule": "ind-qualche",
+  "q": "[Alcune] ragazze della mia classe fanno volontariato al canile.",
+  "alt": [
+   "Qualche",
+   "Alcuni",
+   "Qualcuna"
+  ],
+  "why": "Ragazze är femininum plural: alcune. Qualche kräver singular och alcuni är maskulinum.",
+  "sv": "Några tjejer i min klass jobbar ideellt på hundhemmet."
+ },
+ {
+  "id": "indef-008",
+  "topic": "indef",
+  "rule": "ind-nessuno",
+  "q": "Ho bussato alla porta, ma non è venuto [nessuno] ad aprire.",
+  "alt": [
+   "niente",
+   "nessun",
+   "qualche"
+  ],
+  "why": "Non … nessuno = ingen (person). Niente gäller saker, och nessun står bara framför ett substantiv.",
+  "sv": "Jag knackade på dörren, men ingen kom och öppnade."
+ },
+ {
+  "id": "indef-009",
+  "topic": "indef",
+  "rule": "ind-nessuno",
+  "q": "Non ho comprato [niente] al mercato: era tutto troppo caro.",
+  "alt": [
+   "nessuno",
+   "nessun",
+   "qualche"
+  ],
+  "acc": [
+   "nulla"
+  ],
+  "why": "Non … niente = ingenting (saker). Nessuno gäller personer, och nessun/qualche måste följas av ett substantiv.",
+  "sv": "Jag köpte ingenting på marknaden: allt var för dyrt."
+ },
+ {
+  "id": "indef-010",
+  "topic": "indef",
+  "rule": "ind-nessuno",
+  "q": "In questo paese non c'è [nessun] cinema.",
+  "alt": [
+   "nessuno",
+   "nessuna",
+   "niente"
+  ],
+  "why": "Framför ett maskulint substantiv blir nessuno kortat till nessun (som un). Cinema är maskulinum, så inte nessuna.",
+  "sv": "I den här byn finns det ingen bio."
+ },
+ {
+  "id": "indef-011",
+  "topic": "indef",
+  "rule": "ind-nessuno",
+  "q": "Oggi non ho [nessuna] voglia di uscire.",
+  "alt": [
+   "nessun",
+   "nessuno",
+   "niente"
+  ],
+  "why": "Voglia är femininum, så det blir nessuna. Nessun och nessuno är maskulinum.",
+  "sv": "I dag har jag ingen lust att gå ut."
+ },
+ {
+  "id": "indef-012",
+  "topic": "indef",
+  "rule": "ind-nessuno",
+  "q": "Sono nuovo in classe e non ho ancora parlato con [nessuno].",
+  "alt": [
+   "niente",
+   "nessun",
+   "qualche"
+  ],
+  "why": "Man pratar med personer: non … nessuno. Niente betyder 'ingenting', och nessun/qualche måste följas av ett substantiv.",
+  "sv": "Jag är ny i klassen och har inte pratat med någon än."
+ },
+ {
+  "id": "indef-013",
+  "topic": "indef",
+  "rule": "ind-nessuno",
+  "q": "[Nessuno] sa quando riapre il parco.",
+  "alt": [
+   "Niente",
+   "Nessun",
+   "Qualche"
+  ],
+  "why": "När nessuno står först i meningen behövs inget non. Niente gäller saker, och nessun/qualche kräver ett substantiv.",
+  "sv": "Ingen vet när parken öppnar igen."
+ },
+ {
+  "id": "indef-014",
+  "topic": "indef",
+  "rule": "ind-nessuno",
+  "type": "rw",
+  "q": "Ho visto qualcuno nel bosco. (Säg motsatsen.)",
+  "cue": "non … nessuno",
+  "a": "Non ho visto nessuno nel bosco.",
+  "alt": [
+   "Nessuno non ho visto nel bosco.",
+   "Non nessuno ho visto nel bosco."
+  ],
+  "why": "Non står före verbet och nessuno efter det: non ho visto nessuno. Italienskan har dubbel negation.",
+  "sv": "Jag såg ingen i skogen."
+ },
+ {
+  "id": "indef-015",
+  "topic": "indef",
+  "rule": "ind-ogni",
+  "q": "[Ogni] mattina porto fuori il cane.",
+  "alt": [
+   "Ognuno",
+   "Tutti",
+   "Tutte"
+  ],
+  "why": "Ogni + substantiv i singular = varje. Ognuno står ensamt (var och en), och tutte kräver artikel och plural (tutte le mattine).",
+  "sv": "Varje morgon går jag ut med hunden."
+ },
+ {
+  "id": "indef-016",
+  "topic": "indef",
+  "rule": "ind-ogni",
+  "q": "[Ognuno] deve portare la sua bottiglia d'acqua.",
+  "alt": [
+   "Ogni",
+   "Tutti",
+   "Nessun"
+  ],
+  "why": "Ognuno = var och en, står ensamt och tar verbet i singular. Ogni kräver ett substantiv, och tutti skulle ge devono.",
+  "sv": "Var och en måste ta med sin egen vattenflaska."
+ },
+ {
+  "id": "indef-017",
+  "topic": "indef",
+  "rule": "ind-ogni",
+  "q": "In famiglia separiamo la plastica [ogni] giorno.",
+  "alt": [
+   "ognuno",
+   "tutti",
+   "tutto"
+  ],
+  "why": "Ogni + singular: ogni giorno = varje dag. Tutti kräver artikel och plural (tutti i giorni).",
+  "sv": "Hemma sorterar vi plasten varje dag."
+ },
+ {
+  "id": "indef-018",
+  "topic": "indef",
+  "rule": "ind-ogni",
+  "q": "[Tutti] gli studenti hanno una borraccia.",
+  "alt": [
+   "Ogni",
+   "Ognuno",
+   "Tutto"
+  ],
+  "why": "Tutti + artikel + plural = alla. Ogni tar aldrig artikel och följs av singular (ogni studente).",
+  "sv": "Alla elever har en vattenflaska."
+ },
+ {
+  "id": "indef-019",
+  "topic": "indef",
+  "rule": "ind-ogni",
+  "q": "In questo giardino botanico [ogni] albero ha un cartello con il nome.",
+  "alt": [
+   "ognuno",
+   "tutti",
+   "alcuni"
+  ],
+  "why": "Ogni + substantiv i singular (albero). Ognuno står utan substantiv, och tutti/alcuni kräver plural.",
+  "sv": "I den här botaniska trädgården har varje träd en skylt med namnet."
+ },
+ {
+  "id": "indef-020",
+  "topic": "indef",
+  "rule": "ind-ogni",
+  "q": "Alla festa [ognuno] ha portato qualcosa da mangiare.",
+  "alt": [
+   "ogni",
+   "tutti",
+   "nessun"
+  ],
+  "why": "Ognuno = var och en, med verbet i singular (ha portato). Ogni kräver ett substantiv efter sig.",
+  "sv": "På festen tog var och en med sig något att äta."
+ },
+ {
+  "id": "indef-021",
+  "topic": "indef",
+  "rule": "ind-qualcosa",
+  "type": "rw",
+  "q": "Stasera vorrei fare qualcosa. Deve essere divertente.",
+  "cue": "qualcosa di",
+  "a": "Stasera vorrei fare qualcosa di divertente.",
+  "alt": [
+   "Stasera vorrei fare di qualcosa divertente.",
+   "Stasera vorrei fare qualcosa divertente di."
+  ],
+  "why": "Qualcosa + di + adjektiv: qualcosa di divertente = något roligt.",
+  "sv": "I kväll skulle jag vilja göra något roligt."
+ },
+ {
+  "id": "indef-022",
+  "topic": "indef",
+  "rule": "ind-qualcosa",
+  "q": "Hai visto qualcosa di [strano] nel cielo?",
+  "alt": [
+   "strana",
+   "strane",
+   "strani"
+  ],
+  "why": "Efter qualcosa di står adjektivet alltid i maskulinum singular.",
+  "sv": "Såg du något konstigt på himlen?"
+ },
+ {
+  "id": "indef-023",
+  "topic": "indef",
+  "rule": "ind-qualcosa",
+  "q": "Al telegiornale non c'era niente di [nuovo] sul clima.",
+  "alt": [
+   "nuova",
+   "nuove",
+   "nuovi"
+  ],
+  "why": "Niente di + adjektiv i maskulinum singular: niente di nuovo = inget nytt.",
+  "sv": "På nyheterna fanns det inget nytt om klimatet."
+ },
+ {
+  "id": "indef-024",
+  "topic": "indef",
+  "rule": "ind-qualcosa",
+  "q": "Mangiamo qualcosa [di] leggero prima della gita.",
+  "alt": [
+   "da",
+   "del",
+   "che"
+  ],
+  "why": "Qualcosa + di + adjektiv. Qualcosa da + infinitiv betyder något att göra (qualcosa da mangiare).",
+  "sv": "Vi äter något lätt innan utflykten."
+ },
+ {
+  "id": "indef-025",
+  "topic": "indef",
+  "rule": "ind-qualcosa",
+  "q": "C'è [qualcosa] di bello da vedere in questo parco?",
+  "alt": [
+   "qualche",
+   "alcuni",
+   "ogni"
+  ],
+  "why": "Qualcosa = något (en sak), här med di + adjektiv. Qualche, alcuni och ogni måste följas av ett substantiv.",
+  "sv": "Finns det något fint att se i den här parken?"
+ },
+ {
+  "id": "si-imp-001",
+  "topic": "si-imp",
+  "rule": "si-imp",
+  "q": "In Italia [si mangia] molto bene.",
+  "alt": [
+   "si mangiano",
+   "se mangia",
+   "ci mangia"
+  ],
+  "why": "Si + verbet i tredje person singular = man. Här finns inget plural substantiv, så inte si mangiano. Se betyder 'om'.",
+  "sv": "I Italien äter man väldigt gott."
+ },
+ {
+  "id": "si-imp-002",
+  "topic": "si-imp",
+  "rule": "si-imp",
+  "q": "In questo giornale [si parla] spesso di ambiente.",
+  "alt": [
+   "si parlano",
+   "se parla",
+   "si parli"
+  ],
+  "why": "Si + tredje person singular: si parla = man pratar. Di ambiente är inget subjekt, så verbet står i singular.",
+  "sv": "I den här tidningen skriver man ofta om miljön."
+ },
+ {
+  "id": "si-imp-003",
+  "topic": "si-imp",
+  "rule": "si-imp",
+  "q": "Come [si dice] 'källkritik' in italiano?",
+  "alt": [
+   "si dicono",
+   "se dice",
+   "si dici"
+  ],
+  "why": "Si dice = man säger. Si + tredje person singular, aldrig du-formen (dici).",
+  "sv": "Hur säger man 'källkritik' på italienska?"
+ },
+ {
+  "id": "si-imp-004",
+  "topic": "si-imp",
+  "rule": "si-imp",
+  "q": "Quando si va in gita, [si parte] presto la mattina.",
+  "alt": [
+   "si partono",
+   "se parte",
+   "si partiamo"
+  ],
+  "why": "Si + tredje person singular: si parte = man åker. Si partiamo blandar ihop si och noi.",
+  "sv": "När man åker på utflykt åker man tidigt på morgonen."
+ },
+ {
+  "id": "si-imp-005",
+  "topic": "si-imp",
+  "rule": "si-imp",
+  "q": "Su internet non [si può] credere a tutto.",
+  "alt": [
+   "si possono",
+   "se può",
+   "si posso"
+  ],
+  "why": "Si può + infinitiv = man kan. Verbet står i singular eftersom en infinitiv följer.",
+  "sv": "På internet kan man inte tro på allt."
+ },
+ {
+  "id": "si-imp-006",
+  "topic": "si-imp",
+  "rule": "si-imp",
+  "q": "In ospedale non [si fuma].",
+  "alt": [
+   "si fumano",
+   "se fuma",
+   "si fumi"
+  ],
+  "why": "Si + tredje person singular: non si fuma = man får inte röka. Se betyder 'om'.",
+  "sv": "På sjukhuset röker man inte."
+ },
+ {
+  "id": "si-imp-007",
+  "topic": "si-imp",
+  "rule": "si-imp",
+  "q": "Da questa terrazza [si vede] tutta la città.",
+  "alt": [
+   "si vedono",
+   "se vede",
+   "si vedi"
+  ],
+  "why": "Tutta la città är singular, så verbet står i singular: si vede.",
+  "sv": "Från den här terrassen ser man hela staden."
+ },
+ {
+  "id": "si-imp-008",
+  "topic": "si-imp",
+  "rule": "si-imp",
+  "q": "Quando [si dorme] poco, si è sempre stanchi.",
+  "alt": [
+   "si dormono",
+   "se dorme",
+   "si dormi"
+  ],
+  "why": "Si dorme = man sover (singular). Observera att adjektivet efter si è står i plural: si è stanchi.",
+  "sv": "När man sover lite är man alltid trött."
+ },
+ {
+  "id": "si-imp-009",
+  "topic": "si-imp",
+  "rule": "si-imp",
+  "q": "Alla festa della scuola [si balla] fino a mezzanotte.",
+  "alt": [
+   "si ballano",
+   "se balla",
+   "si balli"
+  ],
+  "why": "Si balla = man dansar. Si + tredje person singular när inget plural substantiv följer.",
+  "sv": "På skolfesten dansar man till midnatt."
+ },
+ {
+  "id": "si-imp-010",
+  "topic": "si-imp",
+  "rule": "si-imp",
+  "q": "Oggi [si legge] di più sul telefono che sui giornali.",
+  "alt": [
+   "si leggono",
+   "se legge",
+   "si leggi"
+  ],
+  "why": "Si legge = man läser. Inget plural substantiv är subjekt, så verbet står i singular.",
+  "sv": "Numera läser man mer i mobilen än i tidningar."
+ },
+ {
+  "id": "si-imp-011",
+  "topic": "si-imp",
+  "rule": "si-imp",
+  "q": "In questa scuola [si studia] l'inglese dal primo anno.",
+  "alt": [
+   "si studiano",
+   "se studia",
+   "si studi"
+  ],
+  "why": "L'inglese är singular, så det blir si studia. Plural (si studiano) bara om ett plural substantiv följer.",
+  "sv": "På den här skolan läser man engelska från första året."
+ },
+ {
+  "id": "si-imp-012",
+  "topic": "si-imp",
+  "rule": "si-pass",
+  "q": "In edicola [si vendono] giornali e riviste.",
+  "alt": [
+   "si vende",
+   "se vendono",
+   "si vendano"
+  ],
+  "why": "När ett plural substantiv följer (giornali e riviste) står verbet i plural: si vendono.",
+  "sv": "I tidningskiosken säljs tidningar och tidskrifter."
+ },
+ {
+  "id": "si-imp-013",
+  "topic": "si-imp",
+  "rule": "si-pass",
+  "q": "Su questo sito [si trovano] molte notizie false.",
+  "alt": [
+   "si trova",
+   "se trovano",
+   "si trovino"
+  ],
+  "why": "Notizie är plural, så verbet står i plural: si trovano.",
+  "sv": "På den här sajten hittar man många falska nyheter."
+ },
+ {
+  "id": "si-imp-014",
+  "topic": "si-imp",
+  "rule": "si-pass",
+  "q": "In Sicilia [si coltivano] molte arance.",
+  "alt": [
+   "si coltiva",
+   "se coltivano",
+   "si coltivino"
+  ],
+  "why": "Arance är plural, så det blir si coltivano. Med ett substantiv i singular hade det varit si coltiva.",
+  "sv": "På Sicilien odlar man många apelsiner."
+ },
+ {
+  "id": "si-imp-015",
+  "topic": "si-imp",
+  "rule": "si-pass",
+  "q": "Al mercato [si comprano] frutta e verdura fresche.",
+  "alt": [
+   "si compra",
+   "se comprano",
+   "si comprino"
+  ],
+  "why": "Två substantiv (frutta e verdura) räknas som plural, så verbet blir si comprano.",
+  "sv": "På marknaden köper man färsk frukt och grönsaker."
+ },
+ {
+  "id": "si-imp-016",
+  "topic": "si-imp",
+  "rule": "si-pass",
+  "q": "Per il lavoro estivo al campeggio [si cercano] ragazzi che parlano inglese.",
+  "alt": [
+   "si cerca",
+   "se cercano",
+   "si cercono"
+  ],
+  "why": "Ragazzi är plural: si cercano. Cercono finns inte, verbet heter cercare.",
+  "sv": "Till sommarjobbet på campingen söker man ungdomar som talar engelska."
+ },
+ {
+  "id": "si-imp-017",
+  "topic": "si-imp",
+  "rule": "si-pass",
+  "q": "In estate [si organizzano] molti concerti all'aperto.",
+  "alt": [
+   "si organizza",
+   "se organizzano",
+   "si organizzeno"
+  ],
+  "why": "Concerti är plural, så verbet står i plural: si organizzano.",
+  "sv": "På sommaren ordnar man många konserter utomhus."
+ },
+ {
+  "id": "si-imp-018",
+  "topic": "si-imp",
+  "rule": "si-pass",
+  "q": "Nel bidone giallo [si buttano] le bottiglie di plastica.",
+  "alt": [
+   "si butta",
+   "se buttano",
+   "si buttino"
+  ],
+  "why": "Le bottiglie är plural: si buttano. Si butta används med singular (si butta la carta).",
+  "sv": "I den gula tunnan slänger man plastflaskorna."
+ },
+ {
+  "id": "si-imp-019",
+  "topic": "si-imp",
+  "rule": "si-pass",
+  "q": "Dal treno [si vedono] le montagne con la neve.",
+  "alt": [
+   "si vede",
+   "se vedono",
+   "si vedano"
+  ],
+  "why": "Le montagne är plural, så det blir si vedono.",
+  "sv": "Från tåget ser man bergen med snö."
+ },
+ {
+  "id": "si-imp-020",
+  "topic": "si-imp",
+  "rule": "si-rifl",
+  "q": "La domenica [ci si alza] tardi.",
+  "alt": [
+   "si si alza",
+   "ci si alzano",
+   "ci alza"
+  ],
+  "why": "Med reflexiva verb (alzarsi) blir 'man' ci si, eftersom si si inte går: ci si alza.",
+  "sv": "På söndagar går man upp sent."
+ },
+ {
+  "id": "si-imp-021",
+  "topic": "si-imp",
+  "rule": "si-rifl",
+  "q": "In montagna [ci si diverte] sempre.",
+  "alt": [
+   "si si diverte",
+   "ci si divertono",
+   "se si diverte"
+  ],
+  "why": "Divertirsi är reflexivt, så 'man har roligt' blir ci si diverte, med verbet i singular.",
+  "sv": "På fjället har man alltid roligt."
+ },
+ {
+  "id": "si-imp-022",
+  "topic": "si-imp",
+  "rule": "si-rifl",
+  "q": "Dopo una partita [ci si sente] stanchi ma felici.",
+  "alt": [
+   "si si sente",
+   "ci si sentono",
+   "se si sente"
+  ],
+  "why": "Sentirsi är reflexivt: ci si sente. Verbet står i singular, men adjektiven i plural (stanchi, felici).",
+  "sv": "Efter en match känner man sig trött men glad."
+ },
+ {
+  "id": "comp-001",
+  "topic": "comp",
+  "rule": "comp-piu",
+  "q": "Roma è più grande [di] Firenze.",
+  "alt": [
+   "che",
+   "come",
+   "del"
+  ],
+  "why": "När man jämför två namn eller substantiv används di: più grande di Firenze.",
+  "sv": "Rom är större än Florens."
+ },
+ {
+  "id": "comp-002",
+  "topic": "comp",
+  "rule": "comp-piu",
+  "q": "In città ci sono più macchine [che] biciclette.",
+  "alt": [
+   "di",
+   "delle",
+   "come"
+  ],
+  "why": "När man jämför två mängder (macchine och biciclette) används che, inte di.",
+  "sv": "I staden finns det fler bilar än cyklar."
+ },
+ {
+  "id": "comp-003",
+  "topic": "comp",
+  "rule": "comp-piu",
+  "q": "Mi piace più camminare [che] prendere l'autobus.",
+  "alt": [
+   "di",
+   "del",
+   "come"
+  ],
+  "why": "När två verb jämförs används che: più camminare che prendere.",
+  "sv": "Jag gillar att gå mer än att ta bussen."
+ },
+ {
+  "id": "comp-004",
+  "topic": "comp",
+  "rule": "comp-piu",
+  "q": "Il mio quartiere è meno rumoroso [del] centro.",
+  "alt": [
+   "che il",
+   "di",
+   "dal"
+  ],
+  "why": "Meno … di, och di + il blir del: meno rumoroso del centro.",
+  "sv": "Mitt kvarter är mindre bullrigt än centrum."
+ },
+ {
+  "id": "comp-005",
+  "topic": "comp",
+  "rule": "comp-piu",
+  "q": "La nostra nuova casa è più comoda [che] bella.",
+  "alt": [
+   "di",
+   "della",
+   "come"
+  ],
+  "why": "När två adjektiv om samma sak jämförs används che: più comoda che bella.",
+  "sv": "Vårt nya hus är mer bekvämt än vackert."
+ },
+ {
+  "id": "comp-006",
+  "topic": "comp",
+  "rule": "comp-piu",
+  "q": "In campagna l'aria è più pulita [che] in città.",
+  "alt": [
+   "di",
+   "della",
+   "del"
+  ],
+  "why": "Före en preposition (in città) används che, inte di.",
+  "sv": "På landet är luften renare än i staden."
+ },
+ {
+  "id": "comp-007",
+  "topic": "comp",
+  "rule": "comp-piu",
+  "q": "Mio fratello è più alto [di] me.",
+  "alt": [
+   "che",
+   "del",
+   "come"
+  ],
+  "why": "Före ett pronomen används di: più alto di me. Me är betonat pronomen efter preposition.",
+  "sv": "Min bror är längre än jag."
+ },
+ {
+  "id": "comp-008",
+  "topic": "comp",
+  "rule": "comp-piu",
+  "type": "rw",
+  "q": "Milano è grande. Bologna è meno grande.",
+  "cue": "più … di",
+  "a": "Milano è più grande di Bologna.",
+  "alt": [
+   "Milano è di più grande Bologna.",
+   "Milano è più di grande Bologna."
+  ],
+  "why": "Più står före adjektivet och di före det man jämför med: più grande di Bologna.",
+  "sv": "Milano är större än Bologna."
+ },
+ {
+  "id": "comp-009",
+  "topic": "comp",
+  "rule": "comp-piu",
+  "type": "rw",
+  "q": "In città ci sono molti negozi. Ci sono pochi parchi.",
+  "cue": "più … che",
+  "a": "In città ci sono più negozi che parchi.",
+  "alt": [
+   "In città ci sono più che negozi parchi.",
+   "In città più ci sono negozi che parchi."
+  ],
+  "why": "Två substantiv jämförs: più + det första, che + det andra.",
+  "sv": "I staden finns det fler affärer än parker."
+ },
+ {
+  "id": "comp-010",
+  "topic": "comp",
+  "rule": "comp-irr",
+  "q": "Questo appartamento è [migliore] di quello vecchio.",
+  "alt": [
+   "meglio",
+   "più migliore",
+   "più bene"
+  ],
+  "why": "Migliore = bättre, adjektiv (beskriver appartamento). Meglio är adverb, och più migliore är dubbelt.",
+  "sv": "Den här lägenheten är bättre än den gamla."
+ },
+ {
+  "id": "comp-011",
+  "topic": "comp",
+  "rule": "comp-irr",
+  "q": "Dopo il trasloco dormo [meglio] di prima.",
+  "alt": [
+   "migliore",
+   "più bene",
+   "più meglio"
+  ],
+  "why": "Meglio = bättre, adverb (beskriver verbet dormo). Migliore är adjektiv, och più bene säger man inte.",
+  "sv": "Efter flytten sover jag bättre än förut."
+ },
+ {
+  "id": "comp-012",
+  "topic": "comp",
+  "rule": "comp-irr",
+  "q": "Il traffico oggi è [peggiore] di ieri.",
+  "alt": [
+   "peggio",
+   "più peggiore",
+   "più cattivo"
+  ],
+  "why": "Peggiore = sämre/värre, adjektiv (beskriver traffico). Peggio är adverb, och più peggiore är dubbelt.",
+  "sv": "Trafiken i dag är värre än i går."
+ },
+ {
+  "id": "comp-013",
+  "topic": "comp",
+  "rule": "comp-irr",
+  "q": "Luca guida [peggio] di suo padre.",
+  "alt": [
+   "peggiore",
+   "più peggio",
+   "peggiori"
+  ],
+  "why": "Peggio = sämre, adverb (beskriver hur han kör). Peggiore är adjektiv.",
+  "sv": "Luca kör sämre än sin pappa."
+ },
+ {
+  "id": "comp-014",
+  "topic": "comp",
+  "rule": "comp-irr",
+  "q": "Secondo te, in campagna si vive [meglio] che in città?",
+  "alt": [
+   "migliore",
+   "più bene",
+   "migliori"
+  ],
+  "why": "Meglio är adverb och beskriver verbet si vive. Migliore/migliori är adjektiv.",
+  "sv": "Tycker du att man lever bättre på landet än i staden?"
+ },
+ {
+  "id": "comp-015",
+  "topic": "comp",
+  "rule": "comp-irr",
+  "q": "I mezzi pubblici di Milano sono [migliori] di quelli della mia città.",
+  "alt": [
+   "meglio",
+   "migliore",
+   "più migliori"
+  ],
+  "why": "Migliori är adjektiv i plural och beskriver mezzi. Meglio är adverb och böjs aldrig.",
+  "sv": "Kollektivtrafiken i Milano är bättre än den i min stad."
+ },
+ {
+  "id": "comp-016",
+  "topic": "comp",
+  "rule": "comp-irr",
+  "q": "Mia sorella [maggiore] vive a Torino.",
+  "alt": [
+   "maggiori",
+   "migliore",
+   "meglio"
+  ],
+  "why": "Maggiore = äldre (om syskon). Migliore betyder bättre, och maggiori är plural.",
+  "sv": "Min storasyster bor i Turin."
+ },
+ {
+  "id": "comp-017",
+  "topic": "comp",
+  "rule": "comp-irr",
+  "q": "Oggi sto [peggio] di ieri: ho ancora la febbre.",
+  "alt": [
+   "peggiore",
+   "più male",
+   "peggiori"
+  ],
+  "why": "Stare + adverb: sto peggio = jag mår sämre. Peggiore är adjektiv.",
+  "sv": "I dag mår jag sämre än i går: jag har fortfarande feber."
+ },
+ {
+  "id": "comp-018",
+  "topic": "comp",
+  "rule": "superl-rel",
+  "q": "Via Roma è la strada [più] lunga del paese.",
+  "alt": [
+   "la più",
+   "di più",
+   "più di"
+  ],
+  "why": "Relativ superlativ efter substantivet: la strada più lunga. Artikeln står bara en gång, före strada.",
+  "sv": "Via Roma är den längsta gatan i byn."
+ },
+ {
+  "id": "comp-019",
+  "topic": "comp",
+  "rule": "superl-rel",
+  "q": "Questo è il quartiere più tranquillo [della] città.",
+  "alt": [
+   "che la",
+   "dalla",
+   "per la"
+  ],
+  "why": "Efter superlativ används di (+ artikel): il più tranquillo della città = i staden.",
+  "sv": "Det här är stadens lugnaste kvarter."
+ },
+ {
+  "id": "comp-020",
+  "topic": "comp",
+  "rule": "superl-rel",
+  "q": "Il centro è la zona [peggiore] per trovare parcheggio.",
+  "alt": [
+   "peggio",
+   "più peggiore",
+   "peggiori"
+  ],
+  "why": "La zona peggiore = det sämsta området (adjektiv). Peggio är adverb och più peggiore dubbelt.",
+  "sv": "Centrum är det sämsta området för att hitta parkering."
+ },
+ {
+  "id": "comp-021",
+  "topic": "comp",
+  "rule": "superl-rel",
+  "type": "rw",
+  "q": "Questo parco è molto grande. Nessun parco della città è più grande.",
+  "cue": "il più",
+  "a": "È il parco più grande della città.",
+  "alt": [
+   "È il più parco grande della città.",
+   "È più il parco grande della città."
+  ],
+  "why": "Relativ superlativ: artikel + substantiv + più + adjektiv (il parco più grande).",
+  "sv": "Det är stadens största park."
+ },
+ {
+  "id": "comp-022",
+  "topic": "comp",
+  "rule": "superl-ass",
+  "q": "La vista dalla collina è [bellissima].",
+  "alt": [
+   "molto bellissima",
+   "bellissimo",
+   "più bellissima"
+  ],
+  "why": "-issimo betyder 'väldigt' och tar inte molto eller più. Vista är femininum: bellissima.",
+  "sv": "Utsikten från kullen är jättefin."
+ },
+ {
+  "id": "comp-023",
+  "topic": "comp",
+  "rule": "superl-ass",
+  "q": "Il paese dei miei nonni è [piccolissimo].",
+  "alt": [
+   "piccolissima",
+   "molto piccolissimo",
+   "piccolisimo"
+  ],
+  "why": "Paese är maskulinum: piccolissimo, med dubbelt s. Molto behövs inte med -issimo.",
+  "sv": "Mina morföräldrars by är jätteliten."
+ },
+ {
+  "id": "comp-024",
+  "topic": "comp",
+  "rule": "superl-ass",
+  "q": "Abbiamo mangiato [benissimo] in quella trattoria.",
+  "alt": [
+   "buonissimo",
+   "molto benissimo",
+   "benisimo"
+  ],
+  "why": "Mangiare beskrivs med ett adverb: bene blir benissimo. Buonissimo är adjektiv.",
+  "sv": "Vi åt jättegott på den krogen."
+ },
+ {
+  "id": "comp-025",
+  "topic": "comp",
+  "rule": "superl-ass",
+  "q": "Le strade del centro storico sono [strettissime].",
+  "alt": [
+   "strettissimi",
+   "molto strettissime",
+   "strettisime"
+  ],
+  "why": "Strade är femininum plural: strettissime. -issimo böjs som ett vanligt adjektiv.",
+  "sv": "Gatorna i den gamla stadskärnan är jättesmala."
+ },
+ {
+  "id": "cond-001",
+  "topic": "cond",
+  "rule": "cond-forme",
+  "q": "Io [sarei] felice di venire con voi.",
+  "alt": [
+   "sarebbe",
+   "saremmo",
+   "essrei"
+  ],
+  "why": "Essere i condizionale: io sarei. Sarebbe är lui/lei och saremmo noi.",
+  "sv": "Jag skulle bli glad att följa med er."
+ },
+ {
+  "id": "cond-002",
+  "topic": "cond",
+  "rule": "cond-forme",
+  "q": "Noi [andremmo] volentieri al mare, ma piove.",
+  "alt": [
+   "andrebbero",
+   "anderemmo",
+   "andaremmo"
+  ],
+  "why": "Andare har kort stam i condizionale: andr-. Noi andremmo, med dubbelt m.",
+  "sv": "Vi skulle gärna åka till havet, men det regnar."
+ },
+ {
+  "id": "cond-003",
+  "topic": "cond",
+  "rule": "cond-forme",
+  "q": "Tu [verresti] con me al concerto sabato?",
+  "alt": [
+   "verreste",
+   "veniresti",
+   "verrebbe"
+  ],
+  "why": "Venire har stammen verr-: tu verresti. Verreste är voi och verrebbe lui/lei.",
+  "sv": "Skulle du följa med mig på konserten på lördag?"
+ },
+ {
+  "id": "cond-004",
+  "topic": "cond",
+  "rule": "cond-forme",
+  "q": "I miei genitori [farebbero] qualsiasi cosa per me.",
+  "alt": [
+   "farebbe",
+   "farrebbero",
+   "fareste"
+  ],
+  "why": "Fare: loro farebbero (ett r). Farebbe är singular, men subjektet är plural.",
+  "sv": "Mina föräldrar skulle göra vad som helst för mig."
+ },
+ {
+  "id": "cond-005",
+  "topic": "cond",
+  "rule": "cond-forme",
+  "q": "Voi [avreste] tempo di aiutarmi domani?",
+  "alt": [
+   "avresti",
+   "avereste",
+   "avrebbero"
+  ],
+  "why": "Avere har kort stam: avr-. Voi avreste. Avresti är tu och avrebbero loro.",
+  "sv": "Skulle ni ha tid att hjälpa mig i morgon?"
+ },
+ {
+  "id": "cond-006",
+  "topic": "cond",
+  "rule": "cond-forme",
+  "q": "Marco [potrebbe] venire a prenderci alla stazione.",
+  "alt": [
+   "potrebbero",
+   "poterebbe",
+   "potresti"
+  ],
+  "why": "Potere har kort stam: potr-. Lui potrebbe. Potrebbero är plural.",
+  "sv": "Marco skulle kunna hämta oss vid stationen."
+ },
+ {
+  "id": "cond-007",
+  "topic": "cond",
+  "rule": "cond-forme",
+  "q": "Senza musica la vita [sarebbe] triste.",
+  "alt": [
+   "sarebbero",
+   "essrebbe",
+   "sarei"
+  ],
+  "why": "La vita är tredje person singular: sarebbe. Sarebbero är plural och sarei jag-form.",
+  "sv": "Utan musik skulle livet vara sorgligt."
+ },
+ {
+  "id": "cond-008",
+  "topic": "cond",
+  "rule": "cond-forme",
+  "q": "Io non [saprei] cosa dire.",
+  "alt": [
+   "sapresti",
+   "saperei",
+   "saprebbero"
+  ],
+  "why": "Sapere har kort stam: sapr-. Io saprei.",
+  "sv": "Jag skulle inte veta vad jag skulle säga."
+ },
+ {
+  "id": "cond-009",
+  "topic": "cond",
+  "rule": "cond-forme",
+  "q": "Con più tempo libero, noi [leggeremmo] di più.",
+  "alt": [
+   "leggerebbero",
+   "leggiremmo",
+   "leggereste"
+  ],
+  "why": "Leggere: stam legger- + -emmo = leggeremmo. Leggerebbero är loro och leggereste voi.",
+  "sv": "Med mer fritid skulle vi läsa mer."
+ },
+ {
+  "id": "cond-010",
+  "topic": "cond",
+  "rule": "cond-consiglio",
+  "q": "Sei sempre stanco: [dovresti] dormire di più.",
+  "alt": [
+   "dovrebbe",
+   "doveresti",
+   "dovreste"
+  ],
+  "why": "Råd till tu: dovresti + infinitiv = du borde. Dovere har kort stam: dovr-.",
+  "sv": "Du är alltid trött: du borde sova mer."
+ },
+ {
+  "id": "cond-011",
+  "topic": "cond",
+  "rule": "cond-consiglio",
+  "q": "Al posto tuo, [parlerei] con lei.",
+  "alt": [
+   "parleresti",
+   "parlarei",
+   "parlerebbe"
+  ],
+  "why": "Al posto tuo (i ditt ställe) + jag-form: parlerei. Verb på -are får -er- i condizionale.",
+  "sv": "I ditt ställe skulle jag prata med henne."
+ },
+ {
+  "id": "cond-012",
+  "topic": "cond",
+  "rule": "cond-consiglio",
+  "q": "Se hai mal di testa, [dovresti] bere più acqua.",
+  "alt": [
+   "dovreste",
+   "doveresti",
+   "dovrebbero"
+  ],
+  "why": "Hai visar att det är tu: dovresti. Dovreste är voi och dovrebbero loro.",
+  "sv": "Om du har huvudvärk borde du dricka mer vatten."
+ },
+ {
+  "id": "cond-013",
+  "topic": "cond",
+  "rule": "cond-consiglio",
+  "q": "Ragazzi, [dovreste] mangiare più frutta e verdura.",
+  "alt": [
+   "dovresti",
+   "dovrebbero",
+   "dovereste"
+  ],
+  "why": "Man pratar till flera (ragazzi) = voi: dovreste.",
+  "sv": "Killar, ni borde äta mer frukt och grönsaker."
+ },
+ {
+  "id": "cond-014",
+  "topic": "cond",
+  "rule": "cond-consiglio",
+  "q": "Io al posto tuo [andrei] dal medico.",
+  "alt": [
+   "andresti",
+   "anderei",
+   "andrebbe"
+  ],
+  "why": "Io + condizionale av andare: andrei (kort stam andr-).",
+  "sv": "Jag skulle gå till läkaren om jag var du."
+ },
+ {
+  "id": "cond-015",
+  "topic": "cond",
+  "rule": "cond-consiglio",
+  "q": "Signora, [dovrebbe] riposarsi un po'.",
+  "alt": [
+   "dovresti",
+   "doverebbe",
+   "dovrebbero"
+  ],
+  "why": "Signora = Lei (artigt), som tar tredje person singular: dovrebbe.",
+  "sv": "Ni borde vila lite, frun."
+ },
+ {
+  "id": "cond-016",
+  "topic": "cond",
+  "rule": "cond-consiglio",
+  "q": "Secondo me, tu [faresti] bene a chiedergli scusa.",
+  "alt": [
+   "farebbe",
+   "fareste",
+   "faceresti"
+  ],
+  "why": "Fare bene a = göra rätt i. Tu faresti; fare har stammen far-.",
+  "sv": "Jag tycker att du skulle göra rätt i att be honom om ursäkt."
+ },
+ {
+  "id": "cond-017",
+  "topic": "cond",
+  "rule": "cond-consiglio",
+  "q": "Marco, con quel mal di schiena non [dovresti] sollevare pesi.",
+  "alt": [
+   "dovrebbero",
+   "doveresti",
+   "dovreste"
+  ],
+  "why": "Man pratar till Marco (tu): non dovresti = du borde inte.",
+  "sv": "Marco, med den där ryggvärken borde du inte lyfta vikter."
+ },
+ {
+  "id": "cond-018",
+  "topic": "cond",
+  "rule": "cond-desiderio",
+  "q": "Io [vorrei] un caffè, per favore.",
+  "alt": [
+   "vorresti",
+   "volerei",
+   "vorrebbe"
+  ],
+  "why": "Vorrei = jag skulle vilja, artigt sätt att beställa. Volere har stammen vorr-.",
+  "sv": "Jag skulle vilja ha en kaffe, tack."
+ },
+ {
+  "id": "cond-019",
+  "topic": "cond",
+  "rule": "cond-desiderio",
+  "q": "Mi [piacerebbe] fare un viaggio in Giappone.",
+  "alt": [
+   "piacerei",
+   "piacerebbero",
+   "piacerà"
+  ],
+  "why": "Mi piacerebbe = jag skulle vilja. Det som behagar är en infinitiv (fare), så verbet står i singular.",
+  "sv": "Jag skulle vilja göra en resa till Japan."
+ },
+ {
+  "id": "cond-020",
+  "topic": "cond",
+  "rule": "cond-desiderio",
+  "q": "Ai miei nonni [piacerebbe] vivere al mare.",
+  "alt": [
+   "piacerebbero",
+   "piacerebbono",
+   "piacereste"
+  ],
+  "why": "Subjektet för piacere är vivere (singular), inte nonni: piacerebbe.",
+  "sv": "Mina morföräldrar skulle vilja bo vid havet."
+ },
+ {
+  "id": "cond-021",
+  "topic": "cond",
+  "rule": "cond-desiderio",
+  "q": "Giulia, [potresti] aiutarmi con i compiti?",
+  "alt": [
+   "poteresti",
+   "potrei",
+   "potrebbero"
+  ],
+  "why": "Artig fråga till tu: potresti = skulle du kunna. Potrei är jag-form.",
+  "sv": "Giulia, skulle du kunna hjälpa mig med läxorna?"
+ },
+ {
+  "id": "cond-022",
+  "topic": "cond",
+  "rule": "cond-desiderio",
+  "q": "Scusi, mi [potrebbe] dire che ore sono?",
+  "alt": [
+   "potresti",
+   "poterebbe",
+   "potrebbero"
+  ],
+  "why": "Scusi visar att det är Lei (artigt), alltså tredje person singular: potrebbe.",
+  "sv": "Ursäkta, skulle ni kunna säga vad klockan är?"
+ },
+ {
+  "id": "cond-023",
+  "topic": "cond",
+  "rule": "cond-desiderio",
+  "q": "Io e Sara [vorremmo] andare al concerto insieme.",
+  "alt": [
+   "vorrebbero",
+   "voleremmo",
+   "vorreste"
+  ],
+  "why": "Io e Sara = noi: vorremmo, med dubbelt m.",
+  "sv": "Sara och jag skulle vilja gå på konserten tillsammans."
+ },
+ {
+  "id": "cond-024",
+  "topic": "cond",
+  "rule": "cond-desiderio",
+  "q": "Ci [piacerebbe] vedere più spesso i nostri cugini.",
+  "alt": [
+   "piacerebbero",
+   "piacerei",
+   "piacereste"
+  ],
+  "why": "Det som behagar är vedere (infinitiv), så verbet står i singular: ci piacerebbe.",
+  "sv": "Vi skulle vilja träffa våra kusiner oftare."
+ },
+ {
+  "id": "cond-025",
+  "topic": "cond",
+  "rule": "cond-desiderio",
+  "q": "Sei triste? [Vorresti] parlarne con me?",
+  "alt": [
+   "Vorrei",
+   "Voresti",
+   "Vorrebbe"
+  ],
+  "why": "Man pratar till tu (sei): vorresti. Stavas med dubbelt r.",
+  "sv": "Är du ledsen? Skulle du vilja prata om det med mig?"
+ },
+ {
+  "id": "rel-001",
+  "topic": "rel",
+  "rule": "rel-che",
+  "q": "Il concerto [che] abbiamo visto ieri era fantastico.",
+  "alt": [
+   "cui",
+   "in cui",
+   "di cui"
+  ],
+  "why": "Che är objekt (vi såg konserten), utan preposition. Cui används bara efter en preposition.",
+  "sv": "Konserten som vi såg i går var fantastisk."
+ },
+ {
+  "id": "rel-002",
+  "topic": "rel",
+  "rule": "rel-che",
+  "q": "Il ragazzo [che] suona la chitarra è mio cugino.",
+  "alt": [
+   "cui",
+   "chi",
+   "a cui"
+  ],
+  "why": "Che är subjekt i bisatsen (killen spelar). Chi betyder 'den som' och används inte efter ett substantiv.",
+  "sv": "Killen som spelar gitarr är min kusin."
+ },
+ {
+  "id": "rel-003",
+  "topic": "rel",
+  "rule": "rel-che",
+  "q": "Ti piace la canzone [che] ti ho mandato?",
+  "alt": [
+   "cui",
+   "di cui",
+   "chi"
+  ],
+  "why": "Che är objekt (jag skickade låten). Ingen preposition, alltså inte cui.",
+  "sv": "Gillar du låten som jag skickade till dig?"
+ },
+ {
+  "id": "rel-004",
+  "topic": "rel",
+  "rule": "rel-che",
+  "q": "Il museo [che] ha aperto in piazza è gratuito.",
+  "alt": [
+   "cui",
+   "in cui",
+   "dove"
+  ],
+  "why": "Che är subjekt (museet har öppnat). Cui kräver preposition.",
+  "sv": "Museet som har öppnat på torget är gratis."
+ },
+ {
+  "id": "rel-005",
+  "topic": "rel",
+  "rule": "rel-che",
+  "q": "Questo è il quadro [che] preferisco.",
+  "alt": [
+   "cui",
+   "di cui",
+   "a cui"
+  ],
+  "why": "Preferire tar direkt objekt: che. Ingen preposition, alltså inte cui.",
+  "sv": "Det här är tavlan som jag tycker bäst om."
+ },
+ {
+  "id": "rel-006",
+  "topic": "rel",
+  "rule": "rel-che",
+  "q": "Ho un'amica [che] canta in un coro.",
+  "alt": [
+   "cui",
+   "chi",
+   "la cui"
+  ],
+  "why": "Che är subjekt (väninnan sjunger). Che används både som subjekt och objekt.",
+  "sv": "Jag har en väninna som sjunger i en kör."
+ },
+ {
+  "id": "rel-007",
+  "topic": "rel",
+  "rule": "rel-che",
+  "q": "Le foto [che] hai fatto al museo sono bellissime.",
+  "alt": [
+   "cui",
+   "chi",
+   "di cui"
+  ],
+  "why": "Che är objekt (du tog bilderna). Cui används bara efter preposition.",
+  "sv": "Bilderna som du tog på museet är jättefina."
+ },
+ {
+  "id": "rel-008",
+  "topic": "rel",
+  "rule": "rel-che",
+  "type": "rw",
+  "q": "Ho un vicino. Il vicino suona il pianoforte ogni sera.",
+  "cue": "che",
+  "a": "Ho un vicino che suona il pianoforte ogni sera.",
+  "alt": [
+   "Ho un vicino suona che il pianoforte ogni sera.",
+   "Che ho un vicino suona il pianoforte ogni sera."
+  ],
+  "why": "Che står direkt efter ordet det syftar på (un vicino) och ersätter il vicino.",
+  "sv": "Jag har en granne som spelar piano varje kväll."
+ },
+ {
+  "id": "rel-009",
+  "topic": "rel",
+  "rule": "rel-che",
+  "q": "Lo strumento [che] studio al conservatorio è il violino.",
+  "alt": [
+   "cui",
+   "chi",
+   "a cui"
+  ],
+  "why": "Studiare tar direkt objekt (studio lo strumento): che. Cui kräver preposition.",
+  "sv": "Instrumentet som jag studerar på musikkonservatoriet är fiol."
+ },
+ {
+  "id": "rel-010",
+  "topic": "rel",
+  "rule": "rel-cui",
+  "q": "Firenze è la città [in cui] sono nato.",
+  "alt": [
+   "che",
+   "di cui",
+   "a cui"
+  ],
+  "acc": [
+   "dove"
+  ],
+  "why": "Nascere in una città: prepositionen in följer med, in cui = där. (Dove går också.)",
+  "sv": "Florens är staden där jag föddes."
+ },
+ {
+  "id": "rel-011",
+  "topic": "rel",
+  "rule": "rel-cui",
+  "q": "La ragazza [con cui] suono nella band si chiama Elena.",
+  "alt": [
+   "che",
+   "a cui",
+   "di cui"
+  ],
+  "why": "Suonare con qualcuno: con + cui = som jag spelar med.",
+  "sv": "Tjejen som jag spelar med i bandet heter Elena."
+ },
+ {
+  "id": "rel-012",
+  "topic": "rel",
+  "rule": "rel-cui",
+  "q": "Il libro [di cui] ti ho parlato è molto bello.",
+  "alt": [
+   "che",
+   "a cui",
+   "in cui"
+  ],
+  "why": "Parlare di qualcosa: di + cui = som jag pratade om.",
+  "sv": "Boken som jag pratade med dig om är jättebra."
+ },
+ {
+  "id": "rel-013",
+  "topic": "rel",
+  "rule": "rel-cui",
+  "q": "L'amico [a cui] ho scritto non mi ha ancora risposto.",
+  "alt": [
+   "che",
+   "di cui",
+   "in cui"
+  ],
+  "why": "Scrivere a qualcuno: a + cui = som jag skrev till.",
+  "sv": "Kompisen som jag skrev till har inte svarat mig än."
+ },
+ {
+  "id": "rel-014",
+  "topic": "rel",
+  "rule": "rel-cui",
+  "q": "Questo è il motivo [per cui] non sono venuto.",
+  "alt": [
+   "che",
+   "di cui",
+   "in cui"
+  ],
+  "why": "Il motivo per cui = anledningen till att. Per cui är fast uttryck efter motivo.",
+  "sv": "Det här är anledningen till att jag inte kom."
+ },
+ {
+  "id": "rel-015",
+  "topic": "rel",
+  "rule": "rel-cui",
+  "q": "Il paese [da cui] viene mia nonna è in Calabria.",
+  "alt": [
+   "che",
+   "in cui",
+   "a cui"
+  ],
+  "why": "Venire da un posto: da + cui = som hon kommer ifrån.",
+  "sv": "Byn som min mormor kommer ifrån ligger i Kalabrien."
+ },
+ {
+  "id": "rel-016",
+  "topic": "rel",
+  "rule": "rel-cui",
+  "q": "Il periodo [in cui] ascoltavo solo rock è finito.",
+  "alt": [
+   "di cui",
+   "con cui",
+   "a cui"
+  ],
+  "why": "Om tid används in cui: il periodo in cui = perioden då.",
+  "sv": "Perioden då jag bara lyssnade på rock är över."
+ },
+ {
+  "id": "rel-017",
+  "topic": "rel",
+  "rule": "rel-cui",
+  "q": "Il cantautore [di cui] parlano tutti viene da Genova.",
+  "alt": [
+   "che",
+   "in cui",
+   "chi"
+  ],
+  "why": "Parlare di qualcuno: di + cui = som alla pratar om.",
+  "sv": "Låtskrivaren som alla pratar om kommer från Genua."
+ },
+ {
+  "id": "rel-018",
+  "topic": "rel",
+  "rule": "rel-cui",
+  "q": "La persona [a cui] penso sempre è mia nonna.",
+  "alt": [
+   "che",
+   "di cui",
+   "con cui"
+  ],
+  "why": "Pensare a qualcuno: a + cui = som jag tänker på.",
+  "sv": "Personen som jag alltid tänker på är min mormor."
+ },
+ {
+  "id": "rel-019",
+  "topic": "rel",
+  "rule": "rel-cui",
+  "q": "Gli amici [con cui] sono andato in vacanza sono di Napoli.",
+  "alt": [
+   "che",
+   "a cui",
+   "di cui"
+  ],
+  "why": "Andare in vacanza con qualcuno: con + cui.",
+  "sv": "Kompisarna som jag åkte på semester med är från Neapel."
+ },
+ {
+  "id": "rel-020",
+  "topic": "rel",
+  "rule": "rel-cui",
+  "q": "La scuola [in cui] studio ha un'orchestra.",
+  "alt": [
+   "che",
+   "a cui",
+   "di cui"
+  ],
+  "acc": [
+   "dove"
+  ],
+  "why": "Studiare in una scuola: in + cui = där jag studerar.",
+  "sv": "Skolan där jag går har en orkester."
+ },
+ {
+  "id": "rel-021",
+  "topic": "rel",
+  "rule": "rel-cui",
+  "q": "Il museo [in cui] abbiamo visto i quadri di Caravaggio è a Roma.",
+  "alt": [
+   "che",
+   "di cui",
+   "a cui"
+  ],
+  "acc": [
+   "dove"
+  ],
+  "why": "Vedere qualcosa in un museo: in + cui = där vi såg.",
+  "sv": "Museet där vi såg Caravaggios tavlor ligger i Rom."
+ },
+ {
+  "id": "rel-022",
+  "topic": "rel",
+  "rule": "rel-cui",
+  "q": "È una cosa [di cui] ho davvero bisogno.",
+  "alt": [
+   "che",
+   "a cui",
+   "per cui"
+  ],
+  "why": "Avere bisogno di qualcosa: di + cui = som jag behöver.",
+  "sv": "Det är en sak som jag verkligen behöver."
+ },
+ {
+  "id": "rel-023",
+  "topic": "rel",
+  "rule": "rel-cui",
+  "type": "rw",
+  "q": "Questa è la piazza. Ci incontriamo sempre in questa piazza.",
+  "cue": "in cui",
+  "a": "Questa è la piazza in cui ci incontriamo sempre.",
+  "alt": [
+   "Questa è la piazza ci incontriamo in cui sempre.",
+   "In cui questa è la piazza ci incontriamo sempre."
+  ],
+  "why": "In cui står direkt efter la piazza och ersätter in questa piazza.",
+  "sv": "Det här är torget där vi alltid träffas."
+ },
+ {
+  "id": "rel-024",
+  "topic": "rel",
+  "rule": "rel-cui",
+  "type": "rw",
+  "q": "Marta è un'amica. Parlo di tutto con lei.",
+  "cue": "con cui",
+  "a": "Marta è un'amica con cui parlo di tutto.",
+  "alt": [
+   "Marta è un'amica parlo con cui di tutto.",
+   "Marta con cui è un'amica parlo di tutto."
+  ],
+  "why": "Con cui står direkt efter un'amica och ersätter con lei.",
+  "sv": "Marta är en väninna som jag pratar om allt med."
+ },
+ {
+  "id": "rel-025",
+  "topic": "rel",
+  "rule": "rel-cui",
+  "q": "Siamo stanchi: il concerto [da cui] torniamo è durato tre ore.",
+  "alt": [
+   "che",
+   "di cui",
+   "con cui"
+  ],
+  "why": "Tornare da un posto: da + cui = som vi kommer tillbaka från.",
+  "sv": "Vi är trötta: konserten som vi kommer från varade i tre timmar."
+ },
+ {
+  "id": "stare-per-001",
+  "topic": "stare-per",
+  "rule": "stare-per",
+  "q": "Il film non è ancora cominciato, ma [sta per] cominciare.",
+  "alt": [
+   "sta",
+   "sta di",
+   "è per"
+  ],
+  "why": "Stare per + infinitiv = ska precis. Utan per blir det fel, och det heter aldrig essere per.",
+  "sv": "Filmen har inte börjat än, men den ska precis börja."
+ },
+ {
+  "id": "stare-per-002",
+  "topic": "stare-per",
+  "rule": "stare-per",
+  "q": "Aspettami, sto [per] uscire!",
+  "alt": [
+   "di",
+   "a",
+   "da"
+  ],
+  "why": "Konstruktionen är alltid stare per + infinitiv, med per.",
+  "sv": "Vänta på mig, jag ska precis gå ut!"
+ },
+ {
+  "id": "stare-per-003",
+  "topic": "stare-per",
+  "rule": "stare-per",
+  "q": "Quando mi hai chiamato, [stavo per] andare a letto.",
+  "alt": [
+   "stavo",
+   "sto per",
+   "ero per"
+  ],
+  "why": "I dåtid används imperfetto: stavo per = jag skulle precis. Sto per är presens.",
+  "sv": "När du ringde skulle jag precis gå och lägga mig."
+ },
+ {
+  "id": "stare-per-004",
+  "topic": "stare-per",
+  "rule": "stare-per",
+  "q": "Corri, il treno [sta per] partire!",
+  "alt": [
+   "sta",
+   "è per",
+   "sta di"
+  ],
+  "why": "Stare per + infinitiv: il treno sta per partire = tåget ska precis gå.",
+  "sv": "Spring, tåget ska precis gå!"
+ },
+ {
+  "id": "stare-per-005",
+  "topic": "stare-per",
+  "rule": "stare-per",
+  "q": "Noi [stiamo per] finire la scuola, poi andiamo in vacanza.",
+  "alt": [
+   "stiamo",
+   "siamo per",
+   "stanno per"
+  ],
+  "why": "Noi stiamo per + infinitiv. Stanno är loro, och essere per finns inte.",
+  "sv": "Vi ska snart gå ut skolan, sedan åker vi på semester."
+ },
+ {
+  "id": "stare-per-006",
+  "topic": "stare-per",
+  "rule": "stare-per",
+  "q": "Sara era nervosa perché [stava per] parlare davanti a tutti.",
+  "alt": [
+   "stava",
+   "era per",
+   "stava di"
+  ],
+  "why": "Stava per + infinitiv = skulle precis. Per måste vara med, och det heter stare, inte essere.",
+  "sv": "Sara var nervös eftersom hon skulle prata inför alla."
+ },
+ {
+  "id": "stare-per-007",
+  "topic": "stare-per",
+  "rule": "stare-per",
+  "q": "Guarda quelle nuvole nere: [sta per] piovere.",
+  "alt": [
+   "sta",
+   "è per",
+   "sta di"
+  ],
+  "why": "Sta per piovere = det ska snart regna. Stare per + infinitiv.",
+  "sv": "Titta på de där svarta molnen: det ska snart börja regna."
+ },
+ {
+  "id": "stare-per-008",
+  "topic": "stare-per",
+  "rule": "stare-per",
+  "q": "Mia sorella [sta per] avere un bambino.",
+  "alt": [
+   "sta",
+   "è per",
+   "sta di"
+  ],
+  "why": "Sta per avere un bambino = ska snart få barn. Stare per + infinitiv.",
+  "sv": "Min syster ska snart få barn."
+ },
+ {
+  "id": "stare-per-009",
+  "topic": "stare-per",
+  "rule": "stare-per",
+  "q": "Ero così arrabbiato che [stavo per] piangere.",
+  "alt": [
+   "stavo",
+   "sto per",
+   "ero per"
+  ],
+  "why": "Berättelsen står i dåtid (ero), så det blir imperfetto: stavo per.",
+  "sv": "Jag var så arg att jag nästan började gråta."
+ },
+ {
+  "id": "stare-per-010",
+  "topic": "stare-per",
+  "rule": "stare-per",
+  "q": "I miei amici [stanno per] arrivare: prepariamo la tavola!",
+  "alt": [
+   "stanno",
+   "sono per",
+   "sta per"
+  ],
+  "why": "Loro stanno per + infinitiv. Sta per är singular, men subjektet är plural.",
+  "sv": "Mina kompisar kommer snart: vi dukar bordet!"
+ },
+ {
+  "id": "stare-per-011",
+  "topic": "stare-per",
+  "rule": "stare-per",
+  "q": "Il concerto [sta per] finire, dobbiamo andare.",
+  "alt": [
+   "sta",
+   "è per",
+   "stanno per"
+  ],
+  "why": "Il concerto är singular: sta per + infinitiv.",
+  "sv": "Konserten håller på att ta slut, vi måste gå."
+ },
+ {
+  "id": "stare-per-012",
+  "topic": "stare-per",
+  "rule": "stare-per",
+  "q": "[Stavamo] per uscire quando ha cominciato a piovere.",
+  "alt": [
+   "Stiamo",
+   "Eravamo",
+   "Staremo"
+  ],
+  "why": "Dåtid: imperfetto stavamo per = vi skulle precis. Essere används inte i den här konstruktionen.",
+  "sv": "Vi skulle precis gå ut när det började regna."
+ },
+ {
+  "id": "stare-per-013",
+  "topic": "stare-per",
+  "rule": "stare-ger",
+  "q": "Non posso parlare adesso, [sto studiando].",
+  "alt": [
+   "sto studiare",
+   "sono studiando",
+   "sto a studiando"
+  ],
+  "why": "Något som pågår just nu: stare + gerundium (studiando). Utan per följer gerundium, inte infinitiv.",
+  "sv": "Jag kan inte prata nu, jag pluggar."
+ },
+ {
+  "id": "stare-per-014",
+  "topic": "stare-per",
+  "rule": "stare-ger",
+  "q": "Silenzio, il professore [sta spiegando]!",
+  "alt": [
+   "sta spiegare",
+   "è spiegando",
+   "sta spieghendo"
+  ],
+  "why": "Stare + gerundium: -are blir -ando (spiegando).",
+  "sv": "Tyst, läraren förklarar!"
+ },
+ {
+  "id": "stare-per-015",
+  "topic": "stare-per",
+  "rule": "stare-ger",
+  "q": "Quando sei entrato, [stavo leggendo] un libro.",
+  "alt": [
+   "stavo leggere",
+   "stavo per leggendo",
+   "ero leggendo"
+  ],
+  "why": "Något pågick i dåtid: stavo + gerundium. -ere blir -endo (leggendo).",
+  "sv": "När du kom in satt jag och läste en bok."
+ },
+ {
+  "id": "stare-per-016",
+  "topic": "stare-per",
+  "rule": "stare-ger",
+  "q": "Cosa [stai facendo] in questo momento?",
+  "alt": [
+   "stai fare",
+   "sei facendo",
+   "stai fatto"
+  ],
+  "why": "Pågående handling: stare + gerundium. Fare har gerundium facendo.",
+  "sv": "Vad gör du just nu?"
+ },
+ {
+  "id": "stare-per-017",
+  "topic": "stare-per",
+  "rule": "stare-ger",
+  "q": "In questo momento i ragazzi [stanno giocando] in giardino.",
+  "alt": [
+   "stanno giocare",
+   "sono giocando",
+   "stanno per giocando"
+  ],
+  "why": "In questo momento = just nu, alltså stare + gerundium: stanno giocando.",
+  "sv": "Just nu leker barnen i trädgården."
+ },
+ {
+  "id": "stare-per-018",
+  "topic": "stare-per",
+  "rule": "stare-ger",
+  "q": "Ho visto un incidente mentre [stavo tornando] a casa.",
+  "alt": [
+   "stavo tornare",
+   "ero tornando",
+   "stavo tornato"
+  ],
+  "why": "Något pågick i dåtid (mentre): stavo + gerundium (tornando).",
+  "sv": "Jag såg en olycka medan jag var på väg hem."
+ },
+ {
+  "id": "stare-per-019",
+  "topic": "stare-per",
+  "rule": "stare-ger",
+  "q": "La partita è già cominciata: [stanno giocando] da dieci minuti.",
+  "alt": [
+   "stanno per giocare",
+   "stanno giocare",
+   "sono giocando"
+  ],
+  "why": "Matchen har redan börjat, så det pågår: stare + gerundium. Stare per betyder att något ska hända snart.",
+  "sv": "Matchen har redan börjat: de har spelat i tio minuter."
+ },
+ {
+  "id": "stare-per-020",
+  "topic": "stare-per",
+  "rule": "stare-ger",
+  "q": "Shh! La bambina [sta dormendo] da due ore.",
+  "alt": [
+   "sta per dormire",
+   "sta dormire",
+   "è dormendo"
+  ],
+  "why": "Hon har sovit i två timmar, så det pågår: sta dormendo. Sta per dormire = ska precis somna.",
+  "sv": "Sch! Den lilla flickan har sovit i två timmar."
+ }
+]

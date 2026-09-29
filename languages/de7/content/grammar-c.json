@@ -1,0 +1,813 @@
+[
+{
+"id": "passiv-001",
+"topic": "passiv",
+"rule": "pa-tempus",
+"q": "Die Sinfonie ist 1824 in Wien uraufgeführt [worden].",
+"alt": [
+"geworden",
+"werden",
+"wurde"
+],
+"why": "Passiv perfekt: ist + particip II + worden. Geworden används bara när werden betyder bli (Er ist Arzt geworden).",
+"sv": "Symfonin uruppfördes 1824 i Wien."
+},
+{
+"id": "passiv-002",
+"topic": "passiv",
+"rule": "pa-tempus",
+"q": "Als wir ankamen, [war] der Saal schon geöffnet worden.",
+"alt": [
+"wurde",
+"hatte",
+"ist"
+],
+"why": "Pluskvamperfekt passiv: war + particip II + worden, eftersom det hände före ankomsten.",
+"sv": "När vi kom fram hade salen redan öppnats."
+},
+{
+"id": "passiv-003",
+"topic": "passiv",
+"rule": "pa-modal",
+"q": "Die Frist hätte eingehalten [werden] müssen.",
+"alt": [
+"worden",
+"geworden",
+"wurden"
+],
+"why": "Passiv med modalverb i Konjunktiv II dåtid: hätte + particip II + werden + müssen.",
+"sv": "Tidsfristen borde ha hållits."
+},
+{
+"id": "passiv-004",
+"topic": "passiv",
+"rule": "pa-zustand",
+"q": "Die Bibliothek [ist] sonntags geschlossen.",
+"alt": [
+"wird",
+"wurde",
+"worden"
+],
+"why": "Zustandspassiv (tillstånd): sein + particip II. Wird geschlossen skulle beskriva handlingen att stänga.",
+"sv": "Biblioteket är stängt på söndagar."
+},
+{
+"id": "passiv-005",
+"topic": "passiv",
+"rule": "pa-von",
+"q": "Der Vertrag wurde [von] beiden Parteien unterschrieben.",
+"alt": [
+"durch",
+"mit",
+"bei"
+],
+"why": "Den som utför handlingen (personer) anges med von + dativ. Durch används för medel och förmedlare.",
+"sv": "Avtalet skrevs under av båda parterna."
+},
+{
+"id": "passersatz-001",
+"topic": "passersatz",
+"rule": "pe-lassen",
+"q": "Diese These [lässt] sich mit Quellen belegen.",
+"alt": [
+"lasst",
+"ließt",
+"gelassen"
+],
+"why": "sich lassen + infinitiv = kan + passiv: Die These kann belegt werden.",
+"sv": "Den här tesen går att belägga med källor."
+},
+{
+"id": "passersatz-002",
+"topic": "passersatz",
+"rule": "pe-seinzu",
+"q": "Der Antrag ist bis zum 15. Juli [einzureichen].",
+"alt": [
+"eingereicht",
+"einreichen",
+"zu einreichen"
+],
+"why": "sein + zu + infinitiv = måste + passiv. Vid delbara verb står zu mellan prefix och stam: einzureichen.",
+"sv": "Ansökan ska lämnas in senast den 15 juli."
+},
+{
+"id": "passersatz-003",
+"topic": "passersatz",
+"rule": "pe-bar",
+"q": "Der Unterschied ist kaum [messbar].",
+"alt": [
+"messlich",
+"messsam",
+"messhaft"
+],
+"why": "-bar = går att (kan + passiv): messbar = går att mäta.",
+"sv": "Skillnaden går knappt att mäta."
+},
+{
+"id": "partattr-001",
+"topic": "partattr",
+"rule": "pat-endung",
+"q": "Die 1824 [uraufgeführte] Sinfonie wurde sofort berühmt.",
+"alt": [
+"uraufgeführt",
+"uraufgeführten",
+"uraufführende"
+],
+"why": "Participet böjs som ett adjektiv: die … uraufgeführte Sinfonie (nominativ, femininum, efter bestämd artikel).",
+"sv": "Symfonin som uruppfördes 1824 blev genast berömd."
+},
+{
+"id": "partattr-002",
+"topic": "partattr",
+"rule": "pat-zu",
+"q": "Die noch zu [klärenden] Fragen besprechen wir nächste Woche.",
+"alt": [
+"geklärten",
+"klären",
+"klärend"
+],
+"why": "Gerundiv: zu + particip I = som måste klaras upp. Ändelsen -en efter die i plural.",
+"sv": "Frågorna som ännu måste klaras upp diskuterar vi nästa vecka."
+},
+{
+"id": "partattr-003",
+"topic": "partattr",
+"rule": "pat-rel",
+"q": "Die seit Jahren [steigenden] Mieten belasten viele Studierende.",
+"alt": [
+"gestiegen",
+"steigende",
+"steigen"
+],
+"why": "Particip I (steigend) beskriver något pågående. Efter die i plural blir ändelsen -en.",
+"sv": "Hyrorna som stigit i åratal belastar många studenter."
+},
+{
+"id": "passiv-006",
+"topic": "passiv",
+"rule": "pa-tempus",
+"q": "Das Werk [wurde] 1905 in Dresden uraufgeführt.",
+"alt": [
+"wird",
+"worden",
+"würde"
+],
+"why": "Präteritum passiv: wurde + particip II.",
+"sv": "Verket uruppfördes 1905 i Dresden."
+},
+{
+"id": "passiv-007",
+"topic": "passiv",
+"rule": "pa-tempus",
+"q": "Der Saal [wird] zurzeit renoviert.",
+"alt": [
+"ist",
+"wurde",
+"worden"
+],
+"why": "Pågående handling i presens: wird renoviert. Ist renoviert vore ett tillstånd (redan klart).",
+"sv": "Salen renoveras just nu."
+},
+{
+"id": "passiv-008",
+"topic": "passiv",
+"rule": "pa-tempus",
+"q": "Die Ergebnisse werden nächste Woche veröffentlicht [werden].",
+"alt": [
+"worden",
+"geworden",
+"wurden"
+],
+"why": "Futur I passiv: werden + particip + werden.",
+"sv": "Resultaten kommer att publiceras nästa vecka."
+},
+{
+"id": "passiv-009",
+"topic": "passiv",
+"rule": "pa-tempus",
+"q": "Nachdem der Vertrag unterschrieben worden [war], begannen die Proben.",
+"alt": [
+"ist",
+"wurde",
+"hatte"
+],
+"why": "Pluskvamperfekt passiv efter nachdem: war … worden.",
+"sv": "Efter att avtalet hade undertecknats började repetitionerna."
+},
+{
+"id": "passiv-010",
+"topic": "passiv",
+"rule": "pa-tempus",
+"q": "Die Orgel ist 1750 [gebaut] worden.",
+"alt": [
+"baut",
+"gebaute",
+"bauen"
+],
+"why": "Perfekt passiv: ist + particip II (gebaut) + worden.",
+"sv": "Orgeln byggdes 1750."
+},
+{
+"id": "passiv-011",
+"topic": "passiv",
+"rule": "pa-modal",
+"q": "Die Anmeldung muss bis Freitag abgeschickt [werden].",
+"alt": [
+"worden",
+"sein",
+"geworden"
+],
+"why": "Passiv med modalverb: muss + particip + werden.",
+"sv": "Anmälan måste skickas senast på fredag."
+},
+{
+"id": "passiv-012",
+"topic": "passiv",
+"rule": "pa-modal",
+"q": "Die Prüfung hat wegen Krankheit verschoben werden [müssen].",
+"alt": [
+"gemusst",
+"musste",
+"müssen worden"
+],
+"why": "Perfekt av passiv med modalverb: hat … verschoben werden müssen (dubbel infinitiv).",
+"sv": "Provet har måst flyttas på grund av sjukdom."
+},
+{
+"id": "passiv-013",
+"topic": "passiv",
+"rule": "pa-modal",
+"q": "Das Problem [hätte] früher erkannt werden können.",
+"alt": [
+"hatte",
+"hat",
+"wäre"
+],
+"why": "Konjunktiv II dåtid, passiv med modalverb: hätte … erkannt werden können.",
+"sv": "Problemet kunde ha upptäckts tidigare."
+},
+{
+"id": "passiv-014",
+"topic": "passiv",
+"rule": "pa-modal",
+"q": "Die Noten dürfen nicht kopiert [werden].",
+"alt": [
+"worden",
+"sein",
+"geworden"
+],
+"why": "Förbud i passiv: dürfen nicht + particip + werden.",
+"sv": "Noterna får inte kopieras."
+},
+{
+"id": "passiv-015",
+"topic": "passiv",
+"rule": "pa-zustand",
+"q": "Die Tickets [sind] bereits verkauft.",
+"alt": [
+"werden",
+"wurden",
+"worden"
+],
+"why": "Tillståndet (resultatet) uttrycks med sein: sind verkauft.",
+"sv": "Biljetterna är redan sålda."
+},
+{
+"id": "passiv-016",
+"topic": "passiv",
+"rule": "pa-zustand",
+"q": "Als wir ankamen, [war] die Tür schon abgeschlossen.",
+"alt": [
+"wurde",
+"hatte",
+"worden"
+],
+"why": "Zustandspassiv i dåtid: war abgeschlossen (tillstånd).",
+"sv": "När vi kom fram var dörren redan låst."
+},
+{
+"id": "passiv-017",
+"topic": "passiv",
+"rule": "pa-zustand",
+"q": "Das Manuskript ist in einem schlechten Zustand [erhalten].",
+"alt": [
+"erhaltet",
+"erhielt",
+"erhalt"
+],
+"why": "Zustandspassiv: ist + particip II erhalten.",
+"sv": "Manuskriptet är bevarat i dåligt skick."
+},
+{
+"id": "passiv-018",
+"topic": "passiv",
+"rule": "pa-von",
+"q": "Die Stadt wurde [durch] ein Erdbeben zerstört.",
+"alt": [
+"von",
+"mit",
+"bei"
+],
+"why": "Orsak eller medel (inte en person): durch.",
+"sv": "Staden förstördes av en jordbävning."
+},
+{
+"id": "passiv-019",
+"topic": "passiv",
+"rule": "pa-von",
+"q": "Der Brief wurde [von] Clara Schumann geschrieben.",
+"alt": [
+"durch",
+"mit",
+"aus"
+],
+"why": "Personen som gör handlingen: von + dativ.",
+"sv": "Brevet skrevs av Clara Schumann."
+},
+{
+"id": "passiv-020",
+"topic": "passiv",
+"rule": "pa-unpers",
+"q": "Im Seminar [wird] viel diskutiert.",
+"alt": [
+"werden",
+"ist",
+"hat"
+],
+"why": "Opersonligt passiv utan subjekt: verbet står i tredje person singular (wird).",
+"sv": "På seminariet diskuteras det mycket."
+},
+{
+"id": "passiv-021",
+"topic": "passiv",
+"rule": "pa-unpers",
+"q": "Hier [darf] nicht geraucht werden.",
+"alt": [
+"dürfen",
+"darfst",
+"durften"
+],
+"why": "Opersonligt passiv med modalverb i singular: darf.",
+"sv": "Här får man inte röka."
+},
+{
+"id": "passersatz-004",
+"topic": "passersatz",
+"rule": "pe-lassen",
+"q": "Das Fenster [lässt] sich nicht öffnen.",
+"alt": [
+"lasst",
+"gelassen",
+"ließe sich"
+],
+"why": "sich lassen + infinitiv = kan inte öppnas.",
+"sv": "Fönstret går inte att öppna."
+},
+{
+"id": "passersatz-005",
+"topic": "passersatz",
+"rule": "pe-lassen",
+"q": "Die Frage lässt sich nicht eindeutig [beantworten].",
+"alt": [
+"beantwortet",
+"zu beantworten",
+"beantwortend"
+],
+"why": "sich lassen + ren infinitiv (utan zu).",
+"sv": "Frågan kan inte besvaras entydigt."
+},
+{
+"id": "passersatz-006",
+"topic": "passersatz",
+"rule": "pe-lassen",
+"q": "Die Unterschiede [lassen] sich statistisch nachweisen.",
+"alt": [
+"lässt",
+"lasst",
+"ließt"
+],
+"why": "Subjektet är plural (die Unterschiede): lassen.",
+"sv": "Skillnaderna går att påvisa statistiskt."
+},
+{
+"id": "passersatz-007",
+"topic": "passersatz",
+"rule": "pe-lassen",
+"type": "rw",
+"q": "Das Problem kann leicht gelöst werden.",
+"cue": "sich lassen",
+"a": "Das Problem lässt sich leicht lösen.",
+"acc": [
+"Leicht lässt sich das Problem lösen."
+],
+"alt": [
+"Das Problem lässt leicht sich lösen.",
+"Das Problem lässt sich lösen leicht."
+],
+"why": "kann … gelöst werden → lässt sich … lösen. Sich direkt efter lässt, infinitiven sist.",
+"sv": "Problemet går lätt att lösa."
+},
+{
+"id": "passersatz-008",
+"topic": "passersatz",
+"rule": "pe-seinzu",
+"q": "Die Gebühr ist vor Semesterbeginn zu [bezahlen].",
+"alt": [
+"bezahlt",
+"bezahlend",
+"gezahlt"
+],
+"why": "sein + zu + infinitiv = måste betalas.",
+"sv": "Avgiften måste betalas före terminsstart."
+},
+{
+"id": "passersatz-009",
+"topic": "passersatz",
+"rule": "pe-seinzu",
+"q": "Die Folgen sind noch nicht [abzusehen].",
+"alt": [
+"zu absehen",
+"abgesehen",
+"absehen zu"
+],
+"why": "Delbart verb: zu mellan prefix och stam (abzusehen).",
+"sv": "Följderna går ännu inte att förutse."
+},
+{
+"id": "passersatz-010",
+"topic": "passersatz",
+"rule": "pe-seinzu",
+"q": "Der Lärm war kaum [zu] ertragen.",
+"alt": [
+"um",
+"für",
+"ge"
+],
+"why": "sein + zu + infinitiv = kunde knappt uthärdas.",
+"sv": "Bullret gick knappt att uthärda."
+},
+{
+"id": "passersatz-011",
+"topic": "passersatz",
+"rule": "pe-seinzu",
+"type": "rw",
+"q": "Die Formulare müssen vollständig ausgefüllt werden.",
+"cue": "sein + zu",
+"a": "Die Formulare sind vollständig auszufüllen.",
+"acc": [
+"Vollständig sind die Formulare auszufüllen."
+],
+"alt": [
+"Die Formulare sind auszufüllen vollständig.",
+"Die Formulare vollständig sind auszufüllen."
+],
+"why": "müssen + passiv → sein + zu. Delbart verb: auszufüllen.",
+"sv": "Formulären ska fyllas i fullständigt."
+},
+{
+"id": "passersatz-012",
+"topic": "passersatz",
+"rule": "pe-bar",
+"q": "Die Handschrift ist kaum [lesbar].",
+"alt": [
+"leslich",
+"lesig",
+"lesehaft"
+],
+"why": "-bar = går att läsa.",
+"sv": "Handskriften går knappt att läsa."
+},
+{
+"id": "passersatz-013",
+"topic": "passersatz",
+"rule": "pe-bar",
+"q": "Diese Entscheidung ist nicht [nachvollziehbar].",
+"alt": [
+"nachvollziehlich",
+"nachvollziehsam",
+"nachvollziehend"
+],
+"why": "nachvollziehbar = går att förstå, begriplig.",
+"sv": "Det här beslutet går inte att förstå."
+},
+{
+"id": "passersatz-014",
+"topic": "passersatz",
+"rule": "pe-bar",
+"q": "Die Daten sind nicht [vergleichbar].",
+"alt": [
+"vergleichlich",
+"vergleichsam",
+"vergleichend"
+],
+"why": "vergleichbar = går att jämföra.",
+"sv": "Uppgifterna går inte att jämföra."
+},
+{
+"id": "passersatz-015",
+"topic": "passersatz",
+"rule": "pe-bar",
+"q": "Der Schaden ist leider nicht [reparabel].",
+"alt": [
+"reparierlich",
+"reparierbarlich",
+"reparsam"
+],
+"why": "Lånord: reparabel = går att reparera (också reparierbar).",
+"sv": "Skadan går tyvärr inte att reparera."
+},
+{
+"id": "passersatz-016",
+"topic": "passersatz",
+"rule": "pe-bar",
+"q": "Das Ergebnis ist [unbestreitbar].",
+"alt": [
+"unbestreitlich",
+"unbestreitsam",
+"unbestreitend"
+],
+"why": "unbestreitbar = kan inte bestridas.",
+"sv": "Resultatet är obestridligt."
+},
+{
+"id": "passersatz-017",
+"topic": "passersatz",
+"rule": "pe-fvg",
+"q": "Sie [bekam] den Preis für die beste Interpretation verliehen.",
+"alt": [
+"wurde",
+"hat",
+"wird"
+],
+"why": "bekommen + particip = passiv med mottagaren som subjekt (Rezipientenpassiv).",
+"sv": "Hon tilldelades priset för den bästa tolkningen."
+},
+{
+"id": "passersatz-018",
+"topic": "passersatz",
+"rule": "pe-fvg",
+"q": "Die Frage kommt morgen zur [Sprache].",
+"alt": [
+"Rede",
+"Wort",
+"Diskussion kommen"
+],
+"why": "zur Sprache kommen = tas upp (passiv betydelse).",
+"sv": "Frågan tas upp i morgon."
+},
+{
+"id": "passersatz-019",
+"topic": "passersatz",
+"rule": "pe-fvg",
+"q": "Die Aufnahme [fand] großen Anklang beim Publikum.",
+"alt": [
+"bekam",
+"gab",
+"traf"
+],
+"why": "Anklang finden = mottas väl.",
+"sv": "Inspelningen mottogs mycket väl av publiken."
+},
+{
+"id": "passersatz-020",
+"topic": "passersatz",
+"rule": "pe-fvg",
+"q": "Das Gesetz [tritt] im Januar in Kraft.",
+"alt": [
+"kommt",
+"geht",
+"wird"
+],
+"why": "in Kraft treten = börja gälla.",
+"sv": "Lagen träder i kraft i januari."
+},
+{
+"id": "partattr-004",
+"topic": "partattr",
+"rule": "pat-endung",
+"q": "Wir sprachen mit dem [ausgezeichneten] Dirigenten.",
+"alt": [
+"ausgezeichnete",
+"ausgezeichnet",
+"ausgezeichnetem"
+],
+"why": "Dativ maskulinum efter dem: -en.",
+"sv": "Vi talade med den prisbelönte dirigenten."
+},
+{
+"id": "partattr-005",
+"topic": "partattr",
+"rule": "pat-endung",
+"q": "Ein lange [vergessenes] Werk wurde wiederentdeckt.",
+"alt": [
+"vergessene",
+"vergessen",
+"vergessenen"
+],
+"why": "Nominativ neutrum efter ein: -es.",
+"sv": "Ett länge bortglömt verk återupptäcktes."
+},
+{
+"id": "partattr-006",
+"topic": "partattr",
+"rule": "pat-endung",
+"q": "Die Zahl der an der Studie [teilnehmenden] Personen war klein.",
+"alt": [
+"teilnehmende",
+"teilgenommenen",
+"teilnehmend"
+],
+"why": "Genitiv plural efter der: -en. Particip I för pågående handling.",
+"sv": "Antalet personer som deltog i studien var litet."
+},
+{
+"id": "partattr-007",
+"topic": "partattr",
+"rule": "pat-endung",
+"q": "Mit großer, kaum [verborgener] Freude nahm sie den Preis an.",
+"alt": [
+"verborgene",
+"verborgen",
+"verborgenen"
+],
+"why": "Dativ femininum utan artikel: -er (stark böjning, som großer).",
+"sv": "Med stor, knappt dold glädje tog hon emot priset."
+},
+{
+"id": "partattr-008",
+"topic": "partattr",
+"rule": "pat-bau",
+"q": "Die [im Jahr 1824 in Wien] uraufgeführte Sinfonie ist Beethovens Neunte.",
+"alt": [
+"uraufgeführte im Jahr 1824 in Wien",
+"im Jahr 1824 uraufgeführte in Wien",
+"in Wien uraufgeführte im Jahr 1824"
+],
+"why": "Alla bestämningar står mellan artikel och particip; participet står sist före substantivet.",
+"sv": "Symfonin som uruppfördes i Wien 1824 är Beethovens nionde."
+},
+{
+"id": "partattr-009",
+"topic": "partattr",
+"rule": "pat-bau",
+"q": "Die [von vielen Kritikern gelobte] Aufnahme ist vergriffen.",
+"alt": [
+"gelobte von vielen Kritikern",
+"von gelobte vielen Kritikern",
+"vielen von Kritikern gelobte"
+],
+"why": "Agenten (von vielen Kritikern) står före participet.",
+"sv": "Inspelningen, som många kritiker berömt, är slutsåld."
+},
+{
+"id": "partattr-010",
+"topic": "partattr",
+"rule": "pat-zu",
+"q": "Die bis Freitag [einzureichenden] Unterlagen liegen bereit.",
+"alt": [
+"eingereichten",
+"einreichenden",
+"zu einreichenden"
+],
+"why": "Gerundiv av delbart verb: einzureichend + ändelse -en.",
+"sv": "Handlingarna som ska lämnas in senast fredag ligger klara."
+},
+{
+"id": "partattr-011",
+"topic": "partattr",
+"rule": "pat-zu",
+"q": "Das ist ein nicht zu [unterschätzendes] Problem.",
+"alt": [
+"unterschätztes",
+"unterschätzende",
+"unterschätzen"
+],
+"why": "Gerundiv: zu + particip I + ändelse (-es efter ein, neutrum).",
+"sv": "Det är ett problem som inte får underskattas."
+},
+{
+"id": "partattr-012",
+"topic": "partattr",
+"rule": "pat-zu",
+"q": "Die [zu erwartenden] Kosten sind hoch.",
+"alt": [
+"erwarteten zu",
+"zu erwartete",
+"erwartend zu"
+],
+"why": "die zu erwartenden Kosten = de kostnader som kan väntas.",
+"sv": "De väntade kostnaderna är höga."
+},
+{
+"id": "partattr-013",
+"topic": "partattr",
+"rule": "pat-rel",
+"type": "rw",
+"q": "Das Konzert, das gestern im Radio übertragen wurde, war großartig.",
+"cue": "particip-attribut",
+"a": "Das gestern im Radio übertragene Konzert war großartig.",
+"acc": [
+"Das im Radio gestern übertragene Konzert war großartig."
+],
+"alt": [
+"Das übertragene gestern im Radio Konzert war großartig.",
+"Das Konzert gestern im Radio übertragene war großartig."
+],
+"why": "Relativsatsen blir ett attribut före substantivet: particip II + ändelse -e.",
+"sv": "Konserten som sändes i radio i går var fantastisk."
+},
+{
+"id": "partattr-014",
+"topic": "partattr",
+"rule": "pat-rel",
+"type": "rw",
+"q": "Die Preise, die seit Jahren steigen, belasten die Studierenden.",
+"cue": "particip-attribut",
+"a": "Die seit Jahren steigenden Preise belasten die Studierenden.",
+"acc": [],
+"alt": [
+"Die steigenden seit Jahren Preise belasten die Studierenden.",
+"Die Preise seit Jahren steigenden belasten die Studierenden."
+],
+"why": "Aktiv, pågående handling → particip I (steigend) + -en.",
+"sv": "Priserna som stigit i åratal belastar studenterna."
+},
+{
+"id": "partattr-016",
+"topic": "partattr",
+"rule": "pat-endung",
+"q": "Das Buch enthält viele [unveröffentlichte] Briefe.",
+"alt": [
+"unveröffentlichten",
+"unveröffentlicht",
+"unveröffentlichter"
+],
+"why": "Ackusativ plural efter viele: -e (stark böjning).",
+"sv": "Boken innehåller många opublicerade brev."
+},
+{
+"id": "partattr-017",
+"topic": "partattr",
+"rule": "pat-endung",
+"q": "Trotz des [anhaltenden] Regens fand das Konzert im Freien statt.",
+"alt": [
+"anhaltende",
+"anhaltend",
+"angehaltenen"
+],
+"why": "Genitiv maskulinum efter des: -en. Particip I (pågående).",
+"sv": "Trots det ihållande regnet hölls konserten utomhus."
+},
+{
+"id": "partattr-018",
+"topic": "partattr",
+"rule": "pat-bau",
+"q": "Der [seit 1990 in Berlin lebende] Komponist stammt aus Chile.",
+"alt": [
+"lebende seit 1990 in Berlin",
+"seit lebende 1990 in Berlin",
+"in Berlin lebende seit 1990"
+],
+"why": "Bestämningarna före participet; tid före plats.",
+"sv": "Tonsättaren som bott i Berlin sedan 1990 kommer från Chile."
+},
+{
+"id": "partattr-019",
+"topic": "partattr",
+"rule": "pat-endung",
+"q": "Sie bewarb sich an einer [renommierten] Hochschule.",
+"alt": [
+"renommierte",
+"renommiert",
+"renommierter"
+],
+"why": "Dativ femininum efter einer: -en.",
+"sv": "Hon sökte till en välrenommerad högskola."
+},
+{
+"id": "partattr-020",
+"topic": "partattr",
+"rule": "pat-zu",
+"q": "Die noch zu [lösenden] Probleme sind zahlreich.",
+"alt": [
+"gelösten",
+"lösende",
+"lösend"
+],
+"why": "Gerundiv plural efter die: zu lösenden.",
+"sv": "Problemen som ännu måste lösas är många."
+},
+{
+"id": "partattr-021",
+"topic": "partattr",
+"rule": "pat-endung",
+"q": "Der Saal war mit [begeisterten] Zuhörern gefüllt.",
+"alt": [
+"begeisterte",
+"begeistert",
+"begeisterter"
+],
+"why": "Dativ plural utan artikel: -en.",
+"sv": "Salen var fylld av entusiastiska åhörare."
+}
+]

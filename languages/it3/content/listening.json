@@ -1,0 +1,3229 @@
+[
+ {
+  "id": "it3-l-k1",
+  "sec": "k1",
+  "title": "Il viaggio in Puglia",
+  "lines": [
+   {
+    "who": "A",
+    "fr": "Allora, Giulia, com'è andato il viaggio in Puglia?",
+    "sv": "Nå, Giulia, hur gick resan till Apulien?"
+   },
+   {
+    "who": "B",
+    "fr": "Benissimo! Siamo partiti il primo agosto. Faceva un caldo terribile, ma il mare era pulitissimo.",
+    "sv": "Jättebra! Vi åkte den första augusti. Det var fruktansvärt varmt, men havet var jätterent."
+   },
+   {
+    "who": "A",
+    "fr": "Dove avete dormito?",
+    "sv": "Var sov ni?"
+   },
+   {
+    "who": "B",
+    "fr": "In una masseria vicino a Lecce. Era una vecchia casa di campagna, con tanti ulivi intorno. Ogni mattina facevamo colazione in giardino.",
+    "sv": "På en masseria nära Lecce. Det var ett gammalt lanthus med massor av olivträd runtomkring. Varje morgon åt vi frukost i trädgården."
+   },
+   {
+    "who": "A",
+    "fr": "Che bello! E cosa avete visitato?",
+    "sv": "Vad fint! Och vad besökte ni?"
+   },
+   {
+    "who": "B",
+    "fr": "Alberobello, con i trulli, e poi Otranto. Mentre camminavamo nel centro storico di Otranto, è cominciato a piovere all'improvviso. Siamo entrati in un bar e abbiamo aspettato un'ora!",
+    "sv": "Alberobello, med trulli-husen, och sedan Otranto. Medan vi gick omkring i Otrantos gamla stad började det plötsligt regna. Vi gick in på ett kafé och väntade i en timme!"
+   },
+   {
+    "who": "A",
+    "fr": "Un'ora? E che cosa avete fatto?",
+    "sv": "En timme? Och vad gjorde ni?"
+   },
+   {
+    "who": "B",
+    "fr": "Abbiamo chiacchierato con il proprietario. Lui conosceva mio nonno, che è nato lì! Non lo sapevo.",
+    "sv": "Vi pratade med ägaren. Han kände min morfar, som är född där! Det visste jag inte."
+   },
+   {
+    "who": "A",
+    "fr": "Incredibile! Allora ci tornerai?",
+    "sv": "Otroligt! Kommer du att åka tillbaka då?"
+   },
+   {
+    "who": "B",
+    "fr": "Sicuramente. L'anno prossimo voglio portare anche il nonno.",
+    "sv": "Absolut. Nästa år vill jag ta med morfar också."
+   }
+  ],
+  "questions": [
+   {
+    "type": "helhet",
+    "q": "Vad handlar samtalet om?",
+    "opts": [
+     "Giulias semester i Apulien",
+     "Giulias nya jobb",
+     "En fotbollsmatch i Lecce",
+     "Giulias morfars födelsedag"
+    ],
+    "a": 0,
+    "why": "Samtalet börjar med « com'è andato il viaggio in Puglia? »."
+   },
+   {
+    "type": "detalj",
+    "q": "Hur var vädret när de åkte?",
+    "opts": [
+     "Det var kallt",
+     "Det regnade hela tiden",
+     "Det var mycket varmt",
+     "Det snöade"
+    ],
+    "a": 2,
+    "why": "« Faceva un caldo terribile » – det var fruktansvärt varmt. Imperfetto beskriver bakgrunden."
+   },
+   {
+    "type": "detalj",
+    "q": "Vad gjorde de varje morgon?",
+    "opts": [
+     "Badade i havet",
+     "Åt frukost i trädgården",
+     "Åkte till Otranto",
+     "Plockade oliver"
+    ],
+    "a": 1,
+    "why": "« Ogni mattina facevamo colazione in giardino » – en vana, därför imperfetto."
+   },
+   {
+    "type": "detalj",
+    "q": "Vad hände i Otranto?",
+    "opts": [
+     "De gick vilse",
+     "Det började plötsligt regna",
+     "De missade tåget",
+     "De träffade en kändis"
+    ],
+    "a": 1,
+    "why": "« è cominciato a piovere all'improvviso » – en händelse, därför passato prossimo."
+   },
+   {
+    "type": "tolkning",
+    "q": "Varför blev Giulia förvånad på kaféet?",
+    "opts": [
+     "Kaffet var gratis",
+     "Ägaren kände hennes morfar",
+     "Kaféet var stängt",
+     "Ägaren talade svenska"
+    ],
+    "a": 1,
+    "why": "« Lui conosceva mio nonno … Non lo sapevo. » Hon visste inte att morfar kom därifrån."
+   }
+  ],
+  "gloss": {
+   "partiti": {
+    "t": "partire",
+    "sv": "åka iväg",
+    "g": ""
+   },
+   "caldo": {
+    "t": "il caldo",
+    "sv": "värme",
+    "g": "m"
+   },
+   "terribile": {
+    "t": "terribile",
+    "sv": "fruktansvärd",
+    "g": ""
+   },
+   "pulitissimo": {
+    "t": "pulito",
+    "sv": "ren (-issimo: jätte-)",
+    "g": ""
+   },
+   "masseria": {
+    "t": "la masseria",
+    "sv": "lantgård i Apulien",
+    "g": "f"
+   },
+   "campagna": {
+    "t": "la campagna",
+    "sv": "landsbygd",
+    "g": "f"
+   },
+   "ulivi": {
+    "t": "l'ulivo",
+    "sv": "olivträd",
+    "g": "m"
+   },
+   "intorno": {
+    "t": "intorno",
+    "sv": "runtomkring",
+    "g": ""
+   },
+   "colazione": {
+    "t": "la colazione",
+    "sv": "frukost",
+    "g": "f"
+   },
+   "trulli": {
+    "t": "il trullo",
+    "sv": "runt stenhus med kägeltak",
+    "g": "m"
+   },
+   "camminavamo": {
+    "t": "camminare",
+    "sv": "gå, promenera",
+    "g": ""
+   },
+   "storico": {
+    "t": "il centro storico",
+    "sv": "gamla stan",
+    "g": "m"
+   },
+   "improvviso": {
+    "t": "all'improvviso",
+    "sv": "plötsligt",
+    "g": ""
+   },
+   "chiacchierato": {
+    "t": "chiacchierare",
+    "sv": "prata, småprata",
+    "g": ""
+   },
+   "proprietario": {
+    "t": "il proprietario",
+    "sv": "ägare",
+    "g": "m"
+   },
+   "conosceva": {
+    "t": "conoscere",
+    "sv": "känna",
+    "g": ""
+   },
+   "nato": {
+    "t": "nascere",
+    "sv": "födas",
+    "g": ""
+   },
+   "sicuramente": {
+    "t": "sicuramente",
+    "sv": "absolut, säkert",
+    "g": ""
+   },
+   "portare": {
+    "t": "portare",
+    "sv": "ta med",
+    "g": ""
+   }
+  }
+ },
+ {
+  "id": "it3-l-k1b",
+  "sec": "k1",
+  "title": "Un messaggio dalla Sardegna",
+  "lines": [
+   {
+    "who": "A",
+    "fr": "Ciao mamma, sono Luca. Ti lascio un messaggio perché non rispondi. Ti chiamo dal porto di Olbia.",
+    "sv": "Hej mamma, det är Luca. Jag lämnar ett meddelande eftersom du inte svarar. Jag ringer från hamnen i Olbia."
+   },
+   {
+    "who": "A",
+    "fr": "Il viaggio in traghetto è stato lunghissimo. Siamo partiti da Livorno ieri sera alle dieci e siamo arrivati stamattina alle sette.",
+    "sv": "Färjeresan var jättelång. Vi åkte från Livorno i går kväll klockan tio och kom fram i morse klockan sju."
+   },
+   {
+    "who": "A",
+    "fr": "Di notte c'era molto vento e il mare era mosso, quindi non ho dormito quasi niente. Marco invece ha dormito benissimo, come sempre!",
+    "sv": "På natten blåste det mycket och havet var oroligt, så jag sov nästan ingenting. Marco däremot sov jättebra, som vanligt!"
+   },
+   {
+    "who": "A",
+    "fr": "Quando siamo scesi dalla nave, però, c'era un sole fantastico e l'acqua era trasparente.",
+    "sv": "När vi gick av båten var det dock fantastiskt sol och vattnet var kristallklart."
+   },
+   {
+    "who": "A",
+    "fr": "Adesso aspettiamo l'autobus per San Teodoro, dove abbiamo prenotato il campeggio.",
+    "sv": "Nu väntar vi på bussen till San Teodoro, där vi har bokat campingen."
+   },
+   {
+    "who": "A",
+    "fr": "Ah, una cosa: ho dimenticato il caricabatterie a casa. È sulla mia scrivania. Non preoccuparti, ne compro uno qui.",
+    "sv": "Ja, en sak: jag glömde laddaren hemma. Den ligger på mitt skrivbord. Oroa dig inte, jag köper en här."
+   },
+   {
+    "who": "A",
+    "fr": "Ti richiamo stasera dal campeggio. Un bacio anche a papà!",
+    "sv": "Jag ringer igen i kväll från campingen. En puss till pappa också!"
+   }
+  ],
+  "questions": [
+   {
+    "type": "helhet",
+    "q": "Vilken sorts text är det här?",
+    "opts": [
+     "Ett röstmeddelande till mamma",
+     "En radionyhet",
+     "En reklam för Sardinien",
+     "Ett samtal mellan två kompisar"
+    ],
+    "a": 0,
+    "why": "« Ciao mamma … Ti lascio un messaggio perché non rispondi. »"
+   },
+   {
+    "type": "detalj",
+    "q": "Hur reste Luca till Sardinien?",
+    "opts": [
+     "Med flyg",
+     "Med färja",
+     "Med bil hela vägen",
+     "Med tåg"
+    ],
+    "a": 1,
+    "why": "« Il viaggio in traghetto è stato lunghissimo. »"
+   },
+   {
+    "type": "detalj",
+    "q": "Varför sov Luca dåligt?",
+    "opts": [
+     "Marco snarkade",
+     "Det blåste och havet var oroligt",
+     "Han var hungrig",
+     "Hytten var för varm"
+    ],
+    "a": 1,
+    "why": "« c'era molto vento e il mare era mosso, quindi non ho dormito quasi niente »."
+   },
+   {
+    "type": "detalj",
+    "q": "Vad har Luca glömt hemma?",
+    "opts": [
+     "Passet",
+     "Plånboken",
+     "Laddaren",
+     "Badbyxorna"
+    ],
+    "a": 2,
+    "why": "« ho dimenticato il caricabatterie a casa »."
+   },
+   {
+    "type": "tolkning",
+    "q": "Vad menar Luca med « ne compro uno qui »?",
+    "opts": [
+     "Han köper en ny laddare på Sardinien",
+     "Han köper en biljett hem",
+     "Han köper en present till mamma",
+     "Han köper mat"
+    ],
+    "a": 0,
+    "why": "Ne syftar på caricabatterie: jag köper en (laddare) här."
+   }
+  ],
+  "gloss": {
+   "porto": {
+    "t": "il porto",
+    "sv": "hamn",
+    "g": "m"
+   },
+   "traghetto": {
+    "t": "il traghetto",
+    "sv": "färja",
+    "g": "m"
+   },
+   "lunghissimo": {
+    "t": "lungo",
+    "sv": "lång (-issimo: jätte-)",
+    "g": ""
+   },
+   "vento": {
+    "t": "il vento",
+    "sv": "vind",
+    "g": "m"
+   },
+   "mosso": {
+    "t": "mosso",
+    "sv": "oroligt (om havet)",
+    "g": ""
+   },
+   "scesi": {
+    "t": "scendere",
+    "sv": "gå av, gå ner",
+    "g": ""
+   },
+   "nave": {
+    "t": "la nave",
+    "sv": "fartyg, båt",
+    "g": "f"
+   },
+   "trasparente": {
+    "t": "trasparente",
+    "sv": "genomskinlig, klar",
+    "g": ""
+   },
+   "aspettiamo": {
+    "t": "aspettare",
+    "sv": "vänta",
+    "g": ""
+   },
+   "prenotato": {
+    "t": "prenotare",
+    "sv": "boka",
+    "g": ""
+   },
+   "campeggio": {
+    "t": "il campeggio",
+    "sv": "camping",
+    "g": "m"
+   },
+   "dimenticato": {
+    "t": "dimenticare",
+    "sv": "glömma",
+    "g": ""
+   },
+   "caricabatterie": {
+    "t": "il caricabatterie",
+    "sv": "laddare",
+    "g": "m"
+   },
+   "scrivania": {
+    "t": "la scrivania",
+    "sv": "skrivbord",
+    "g": "f"
+   },
+   "preoccuparti": {
+    "t": "preoccuparsi",
+    "sv": "oroa sig",
+    "g": ""
+   },
+   "richiamo": {
+    "t": "richiamare",
+    "sv": "ringa igen",
+    "g": ""
+   },
+   "bacio": {
+    "t": "il bacio",
+    "sv": "puss, kyss",
+    "g": "m"
+   }
+  }
+ },
+ {
+  "id": "it3-l-k2",
+  "sec": "k2",
+  "title": "Dopo la maturità",
+  "lines": [
+   {
+    "who": "A",
+    "fr": "Sofia, hai già deciso cosa farai dopo la maturità?",
+    "sv": "Sofia, har du redan bestämt vad du ska göra efter studenten?"
+   },
+   {
+    "who": "B",
+    "fr": "Credo di sì. Mi iscriverò a medicina a Padova. E tu?",
+    "sv": "Jag tror det. Jag ska söka till läkarlinjen i Padova. Och du?"
+   },
+   {
+    "who": "A",
+    "fr": "Io non lo so ancora. A me piacciono le lingue, ma i miei genitori vorrebbero che studiassi economia.",
+    "sv": "Jag vet inte än. Jag gillar språk, men mina föräldrar vill att jag ska plugga ekonomi."
+   },
+   {
+    "who": "B",
+    "fr": "E tu cosa vuoi? Alla fine sei tu che devi studiare, non loro!",
+    "sv": "Och vad vill du? Till syvende och sist är det du som ska plugga, inte de!"
+   },
+   {
+    "who": "A",
+    "fr": "Hai ragione. Il prossimo anno forse farò un anno all'estero, in Irlanda o in Svezia.",
+    "sv": "Du har rätt. Nästa år kanske jag gör ett år utomlands, på Irland eller i Sverige."
+   },
+   {
+    "who": "B",
+    "fr": "In Svezia? Con te viene anche Matteo?",
+    "sv": "I Sverige? Följer Matteo med dig också?"
+   },
+   {
+    "who": "A",
+    "fr": "No, lui resterà qui. Farà l'istituto alberghiero e poi lavorerà nel ristorante di suo zio.",
+    "sv": "Nej, han stannar här. Han ska gå hotell- och restaurangskolan och sedan jobba på sin farbrors restaurang."
+   },
+   {
+    "who": "B",
+    "fr": "Per lui è perfetto: cucina benissimo. E Chiara? Non la vedo da settimane.",
+    "sv": "För honom är det perfekt: han lagar jättegod mat. Och Chiara? Jag har inte sett henne på flera veckor."
+   },
+   {
+    "who": "A",
+    "fr": "Chiara? Sarà a casa a studiare. Ha l'esame di matematica lunedì.",
+    "sv": "Chiara? Hon är nog hemma och pluggar. Hon har matteprovet på måndag."
+   },
+   {
+    "who": "B",
+    "fr": "Povera! Allora le scrivo un messaggio per farle coraggio.",
+    "sv": "Stackars henne! Då skriver jag ett meddelande till henne för att peppa henne."
+   }
+  ],
+  "questions": [
+   {
+    "type": "helhet",
+    "q": "Vad pratar de om?",
+    "opts": [
+     "Planer efter studenten",
+     "En resa till Irland",
+     "Ett matteprov de har gjort",
+     "Matteos restaurang"
+    ],
+    "a": 0,
+    "why": "« cosa farai dopo la maturità? » – samtalet handlar om framtiden, därför futuro."
+   },
+   {
+    "type": "detalj",
+    "q": "Vad ska Sofia studera?",
+    "opts": [
+     "Språk",
+     "Ekonomi",
+     "Medicin",
+     "Matlagning"
+    ],
+    "a": 2,
+    "why": "« Mi iscriverò a medicina a Padova. »"
+   },
+   {
+    "type": "detalj",
+    "q": "Vad vill föräldrarna att den andra personen ska studera?",
+    "opts": [
+     "Medicin",
+     "Ekonomi",
+     "Språk",
+     "Musik"
+    ],
+    "a": 1,
+    "why": "« i miei genitori vorrebbero che studiassi economia »."
+   },
+   {
+    "type": "detalj",
+    "q": "Vad ska Matteo göra?",
+    "opts": [
+     "Åka till Sverige",
+     "Plugga medicin",
+     "Gå hotell- och restaurangskolan",
+     "Arbeta på en bank"
+    ],
+    "a": 2,
+    "why": "« Farà l'istituto alberghiero e poi lavorerà nel ristorante di suo zio. »"
+   },
+   {
+    "type": "tolkning",
+    "q": "Vad betyder « Sarà a casa a studiare » här?",
+    "opts": [
+     "Hon ska plugga hemma nästa år",
+     "Hon är nog hemma och pluggar (en gissning)",
+     "Hon har aldrig pluggat",
+     "Hon bor hemma hos Sofia"
+    ],
+    "a": 1,
+    "why": "Futuro används här som gissning om nuet: hon är nog hemma."
+   }
+  ],
+  "gloss": {
+   "deciso": {
+    "t": "decidere",
+    "sv": "bestämma",
+    "g": ""
+   },
+   "maturità": {
+    "t": "la maturità",
+    "sv": "studentexamen",
+    "g": "f"
+   },
+   "iscriverò": {
+    "t": "iscriversi",
+    "sv": "skriva in sig, söka till",
+    "g": ""
+   },
+   "medicina": {
+    "t": "la medicina",
+    "sv": "medicin",
+    "g": "f"
+   },
+   "lingue": {
+    "t": "la lingua",
+    "sv": "språk",
+    "g": "f"
+   },
+   "economia": {
+    "t": "l'economia",
+    "sv": "ekonomi",
+    "g": "f"
+   },
+   "estero": {
+    "t": "all'estero",
+    "sv": "utomlands",
+    "g": ""
+   },
+   "resterà": {
+    "t": "restare",
+    "sv": "stanna",
+    "g": ""
+   },
+   "alberghiero": {
+    "t": "l'istituto alberghiero",
+    "sv": "hotell- och restaurangskola",
+    "g": "m"
+   },
+   "lavorerà": {
+    "t": "lavorare",
+    "sv": "arbeta",
+    "g": ""
+   },
+   "zio": {
+    "t": "lo zio",
+    "sv": "farbror, morbror",
+    "g": "m"
+   },
+   "settimane": {
+    "t": "la settimana",
+    "sv": "vecka",
+    "g": "f"
+   },
+   "sarà": {
+    "t": "essere (futuro)",
+    "sv": "vara (här: är nog)",
+    "g": ""
+   },
+   "esame": {
+    "t": "l'esame",
+    "sv": "prov, examen",
+    "g": "m"
+   },
+   "povera": {
+    "t": "povero",
+    "sv": "stackars",
+    "g": ""
+   },
+   "coraggio": {
+    "t": "il coraggio",
+    "sv": "mod",
+    "g": "m"
+   }
+  }
+ },
+ {
+  "id": "it3-l-k2b",
+  "sec": "k2",
+  "title": "Il colloquio per il lavoro estivo",
+  "lines": [
+   {
+    "who": "A",
+    "fr": "Buongiorno, si accomodi. Lei è Elin, vero?",
+    "sv": "God morgon, slå dig ner. Du är Elin, eller hur?"
+   },
+   {
+    "who": "B",
+    "fr": "Sì, buongiorno. Piacere.",
+    "sv": "Ja, god morgon. Trevligt att träffas."
+   },
+   {
+    "who": "A",
+    "fr": "Allora, Elin, perché vuole lavorare nella nostra gelateria quest'estate?",
+    "sv": "Nå, Elin, varför vill du jobba i vår glassbar i sommar?"
+   },
+   {
+    "who": "B",
+    "fr": "Perché mi piace lavorare con le persone e vorrei migliorare il mio italiano. L'anno scorso ho fatto la cameriera in un bar in Svezia.",
+    "sv": "För att jag tycker om att jobba med människor och vill förbättra min italienska. Förra året jobbade jag som servitris på ett kafé i Sverige."
+   },
+   {
+    "who": "A",
+    "fr": "Benissimo. Il lavoro non è facile: si comincia alle due del pomeriggio e si finisce a mezzanotte. Per Lei va bene?",
+    "sv": "Mycket bra. Jobbet är inte lätt: man börjar klockan två på eftermiddagen och slutar vid midnatt. Går det bra för dig?"
+   },
+   {
+    "who": "B",
+    "fr": "Sì, per me non è un problema. Sono abituata a lavorare la sera.",
+    "sv": "Ja, för mig är det inga problem. Jag är van att jobba på kvällen."
+   },
+   {
+    "who": "A",
+    "fr": "Lavorerà insieme a Paolo, il nostro ragazzo più esperto. Con lui imparerà tutto in pochi giorni.",
+    "sv": "Du kommer att jobba ihop med Paolo, vår mest erfarna kille. Med honom lär du dig allt på några dagar."
+   },
+   {
+    "who": "B",
+    "fr": "Perfetto. E quanto sarà lo stipendio, se posso chiedere?",
+    "sv": "Perfekt. Och hur hög blir lönen, om jag får fråga?"
+   },
+   {
+    "who": "A",
+    "fr": "Ottocento euro al mese, più le mance. Può cominciare il primo luglio?",
+    "sv": "Åttahundra euro i månaden, plus dricks. Kan du börja den första juli?"
+   },
+   {
+    "who": "B",
+    "fr": "Certo! Grazie mille per l'opportunità.",
+    "sv": "Absolut! Tack så mycket för möjligheten."
+   }
+  ],
+  "questions": [
+   {
+    "type": "helhet",
+    "q": "Vad är det här för situation?",
+    "opts": [
+     "En anställningsintervju",
+     "En beställning på en glassbar",
+     "Ett samtal mellan två kompisar",
+     "En lektion i skolan"
+    ],
+    "a": 0,
+    "why": "Chefen frågar « perché vuole lavorare nella nostra gelateria? »."
+   },
+   {
+    "type": "detalj",
+    "q": "Vilken arbetstid har jobbet?",
+    "opts": [
+     "Från åtta till fyra",
+     "Från två på eftermiddagen till midnatt",
+     "Bara på helger",
+     "Från tolv till sex"
+    ],
+    "a": 1,
+    "why": "« si comincia alle due del pomeriggio e si finisce a mezzanotte »."
+   },
+   {
+    "type": "detalj",
+    "q": "Vad gjorde Elin förra året?",
+    "opts": [
+     "Hon jobbade som servitris i Sverige",
+     "Hon pluggade i Italien",
+     "Hon jobbade på en glassbar",
+     "Hon var på semester"
+    ],
+    "a": 0,
+    "why": "« L'anno scorso ho fatto la cameriera in un bar in Svezia. »"
+   },
+   {
+    "type": "detalj",
+    "q": "Vem ska lära Elin jobbet?",
+    "opts": [
+     "Chefen",
+     "Paolo",
+     "En annan svensk tjej",
+     "Ingen"
+    ],
+    "a": 1,
+    "why": "« Con lui imparerà tutto » – lui är Paolo. Con + betonat pronomen."
+   },
+   {
+    "type": "tolkning",
+    "q": "Varför använder chefen Lei när hon pratar med Elin?",
+    "opts": [
+     "För att Elin är äldre än hon",
+     "För att det är en formell situation",
+     "För att Elin är hennes släkting",
+     "För att hon är arg"
+    ],
+    "a": 1,
+    "why": "I en anställningsintervju är man ofta formell, därför « si accomodi », « per Lei va bene? »."
+   }
+  ],
+  "gloss": {
+   "accomodi": {
+    "t": "accomodarsi",
+    "sv": "slå sig ner",
+    "g": ""
+   },
+   "gelateria": {
+    "t": "la gelateria",
+    "sv": "glassbar",
+    "g": "f"
+   },
+   "migliorare": {
+    "t": "migliorare",
+    "sv": "förbättra",
+    "g": ""
+   },
+   "cameriera": {
+    "t": "la cameriera",
+    "sv": "servitris",
+    "g": "f"
+   },
+   "comincia": {
+    "t": "cominciare",
+    "sv": "börja",
+    "g": ""
+   },
+   "mezzanotte": {
+    "t": "la mezzanotte",
+    "sv": "midnatt",
+    "g": "f"
+   },
+   "abituata": {
+    "t": "abituato",
+    "sv": "van",
+    "g": ""
+   },
+   "esperto": {
+    "t": "esperto",
+    "sv": "erfaren",
+    "g": ""
+   },
+   "imparerà": {
+    "t": "imparare",
+    "sv": "lära sig",
+    "g": ""
+   },
+   "stipendio": {
+    "t": "lo stipendio",
+    "sv": "lön",
+    "g": "m"
+   },
+   "mese": {
+    "t": "il mese",
+    "sv": "månad",
+    "g": "m"
+   },
+   "mance": {
+    "t": "la mancia",
+    "sv": "dricks",
+    "g": "f"
+   },
+   "opportunità": {
+    "t": "l'opportunità",
+    "sv": "möjlighet",
+    "g": "f"
+   },
+   "quest'estate": {
+    "t": "l'estate",
+    "sv": "sommar",
+    "g": "f"
+   }
+  }
+ },
+ {
+  "id": "it3-l-k3",
+  "sec": "k3",
+  "title": "Il giornale radio delle otto",
+  "lines": [
+   {
+    "who": "A",
+    "fr": "Buongiorno, sono le otto e questo è il giornale radio.",
+    "sv": "God morgon, klockan är åtta och det här är radionyheterna."
+   },
+   {
+    "who": "A",
+    "fr": "Apriamo con il tempo: da stamattina nevica forte in tutto il nord. Sulle autostrade si viaggia lentamente e alcuni treni sono stati cancellati.",
+    "sv": "Vi börjar med vädret: sedan i morse snöar det kraftigt i hela norra Italien. På motorvägarna kör man långsamt och några tåg har ställts in."
+   },
+   {
+    "who": "A",
+    "fr": "A Milano le scuole resteranno chiuse anche domani.",
+    "sv": "I Milano förblir skolorna stängda även i morgon."
+   },
+   {
+    "who": "A",
+    "fr": "Passiamo alla cultura. A Firenze si è aperta ieri una mostra dedicata a Leonardo da Vinci. Nel primo giorno l'hanno visitata più di tremila persone.",
+    "sv": "Vi går över till kultur. I Florens öppnade i går en utställning om Leonardo da Vinci. Den första dagen besöktes den av över tretusen personer."
+   },
+   {
+    "who": "A",
+    "fr": "Si possono vedere disegni, macchine e appunti originali. I biglietti si comprano online.",
+    "sv": "Man kan se teckningar, maskiner och originalanteckningar. Biljetterna köper man på nätet."
+   },
+   {
+    "who": "A",
+    "fr": "E ora lo sport. Ieri sera il Napoli ha battuto la Roma due a uno. I tifosi hanno festeggiato per le strade fino a tarda notte.",
+    "sv": "Och nu sport. I går kväll slog Napoli Roma med två–ett. Supportrarna firade på gatorna till sent på natten."
+   },
+   {
+    "who": "A",
+    "fr": "Il prossimo giornale radio è alle nove. Buona giornata!",
+    "sv": "Nästa nyhetssändning är klockan nio. Ha en bra dag!"
+   }
+  ],
+  "questions": [
+   {
+    "type": "helhet",
+    "q": "Vad är det här?",
+    "opts": [
+     "En nyhetssändning på radio",
+     "En reklam för en utställning",
+     "Ett telefonsamtal",
+     "En väderleksrapport för Sverige"
+    ],
+    "a": 0,
+    "why": "« questo è il giornale radio » – radionyheterna."
+   },
+   {
+    "type": "detalj",
+    "q": "Vad händer i norra Italien?",
+    "opts": [
+     "Det är mycket varmt",
+     "Det snöar kraftigt",
+     "Det är strejk på tågen",
+     "Det regnar lite"
+    ],
+    "a": 1,
+    "why": "« nevica forte in tutto il nord »."
+   },
+   {
+    "type": "detalj",
+    "q": "Vad händer med skolorna i Milano?",
+    "opts": [
+     "De öppnar igen i morgon",
+     "De är stängda även i morgon",
+     "De har kortare dagar",
+     "De stänger för sommaren"
+    ],
+    "a": 1,
+    "why": "« le scuole resteranno chiuse anche domani »."
+   },
+   {
+    "type": "detalj",
+    "q": "Hur köper man biljetter till utställningen?",
+    "opts": [
+     "I kassan",
+     "På nätet",
+     "På radio",
+     "De är gratis"
+    ],
+    "a": 1,
+    "why": "« I biglietti si comprano online. » – si + verb i plural eftersom biglietti är plural."
+   },
+   {
+    "type": "detalj",
+    "q": "Hur slutade matchen?",
+    "opts": [
+     "Roma vann 2–1",
+     "Napoli vann 2–1",
+     "Det blev oavgjort",
+     "Matchen ställdes in"
+    ],
+    "a": 1,
+    "why": "« il Napoli ha battuto la Roma due a uno »."
+   },
+   {
+    "type": "tolkning",
+    "q": "Vad syftar « l'hanno visitata » på?",
+    "opts": [
+     "Staden Florens",
+     "Utställningen",
+     "Skolan",
+     "Tåget"
+    ],
+    "a": 1,
+    "why": "L' = la mostra (utställningen). Därför slutar participet på -a: visitata."
+   }
+  ],
+  "gloss": {
+   "giornale": {
+    "t": "il giornale radio",
+    "sv": "radionyheter",
+    "g": "m"
+   },
+   "nevica": {
+    "t": "nevicare",
+    "sv": "snöa",
+    "g": ""
+   },
+   "autostrade": {
+    "t": "l'autostrada",
+    "sv": "motorväg",
+    "g": "f"
+   },
+   "lentamente": {
+    "t": "lentamente",
+    "sv": "långsamt",
+    "g": ""
+   },
+   "cancellati": {
+    "t": "cancellare",
+    "sv": "ställa in, stryka",
+    "g": ""
+   },
+   "resteranno": {
+    "t": "restare",
+    "sv": "förbli",
+    "g": ""
+   },
+   "chiuse": {
+    "t": "chiuso",
+    "sv": "stängd",
+    "g": ""
+   },
+   "cultura": {
+    "t": "la cultura",
+    "sv": "kultur",
+    "g": "f"
+   },
+   "mostra": {
+    "t": "la mostra",
+    "sv": "utställning",
+    "g": "f"
+   },
+   "dedicata": {
+    "t": "dedicato a",
+    "sv": "tillägnad, som handlar om",
+    "g": ""
+   },
+   "disegni": {
+    "t": "il disegno",
+    "sv": "teckning",
+    "g": "m"
+   },
+   "appunti": {
+    "t": "gli appunti",
+    "sv": "anteckningar",
+    "g": "mpl"
+   },
+   "originali": {
+    "t": "originale",
+    "sv": "original-",
+    "g": ""
+   },
+   "battuto": {
+    "t": "battere",
+    "sv": "slå, besegra",
+    "g": ""
+   },
+   "tifosi": {
+    "t": "il tifoso",
+    "sv": "supporter",
+    "g": "m"
+   },
+   "festeggiato": {
+    "t": "festeggiare",
+    "sv": "fira",
+    "g": ""
+   },
+   "tarda": {
+    "t": "tardo",
+    "sv": "sen",
+    "g": ""
+   }
+  }
+ },
+ {
+  "id": "it3-l-k3b",
+  "sec": "k3",
+  "title": "Ma è vero?",
+  "lines": [
+   {
+    "who": "A",
+    "fr": "Hai letto la notizia? Si dice che dal prossimo anno la scuola comincerà alle dieci!",
+    "sv": "Har du läst nyheten? Det sägs att skolan ska börja klockan tio från och med nästa år!"
+   },
+   {
+    "who": "B",
+    "fr": "Davvero? Dove l'hai letta?",
+    "sv": "Verkligen? Var läste du den?"
+   },
+   {
+    "who": "A",
+    "fr": "L'ho vista su un profilo che seguo. L'hanno condivisa tutti!",
+    "sv": "Jag såg den på en profil som jag följer. Alla har delat den!"
+   },
+   {
+    "who": "B",
+    "fr": "Mah, io non ci credo. Hai controllato la fonte?",
+    "sv": "Tja, jag tror inte på det. Har du kontrollerat källan?"
+   },
+   {
+    "who": "A",
+    "fr": "No… Non ci ho pensato.",
+    "sv": "Nej … Det tänkte jag inte på."
+   },
+   {
+    "who": "B",
+    "fr": "Guarda, l'ho cercata adesso sul sito del ministero e non c'è niente. Anche i giornali seri non ne parlano.",
+    "sv": "Titta, jag sökte efter den på departementets webbplats nu och där finns ingenting. De seriösa tidningarna skriver inte heller om det."
+   },
+   {
+    "who": "A",
+    "fr": "Quindi è una bufala?",
+    "sv": "Så det är en fejknyhet?"
+   },
+   {
+    "who": "B",
+    "fr": "Secondo me sì. Si vede anche dalla foto: è vecchia, l'hanno presa da un articolo del 2015.",
+    "sv": "Jag tror det. Det syns också på bilden: den är gammal, de har tagit den från en artikel från 2015."
+   },
+   {
+    "who": "A",
+    "fr": "Che peccato! Io l'avevo già mandata a mia madre.",
+    "sv": "Vad synd! Jag hade redan skickat den till min mamma."
+   },
+   {
+    "who": "B",
+    "fr": "Allora scrivile subito che non è vera, prima che la mandi a tutta la famiglia!",
+    "sv": "Skriv då genast till henne att den inte är sann, innan hon skickar den till hela familjen!"
+   }
+  ],
+  "questions": [
+   {
+    "type": "helhet",
+    "q": "Vad handlar samtalet om?",
+    "opts": [
+     "En falsk nyhet på sociala medier",
+     "Ett nytt schema som redan börjat gälla",
+     "Ett prov i skolan",
+     "En resa till Rom"
+    ],
+    "a": 0,
+    "why": "De kommer fram till att nyheten är « una bufala »."
+   },
+   {
+    "type": "detalj",
+    "q": "Vad påstod nyheten?",
+    "opts": [
+     "Skolan skulle börja klockan tio",
+     "Skolan skulle stänga",
+     "Sommarlovet blir kortare",
+     "Alla får en ny dator"
+    ],
+    "a": 0,
+    "why": "« la scuola comincerà alle dieci »."
+   },
+   {
+    "type": "detalj",
+    "q": "Var kontrollerade den andra personen nyheten?",
+    "opts": [
+     "På departementets webbplats",
+     "Hos rektorn",
+     "I en bok",
+     "På tv"
+    ],
+    "a": 0,
+    "why": "« l'ho cercata adesso sul sito del ministero »."
+   },
+   {
+    "type": "detalj",
+    "q": "Vad var fel med bilden?",
+    "opts": [
+     "Den var suddig",
+     "Den var gammal och kom från en annan artikel",
+     "Den visade fel skola",
+     "Den var ritad"
+    ],
+    "a": 1,
+    "why": "« è vecchia, l'hanno presa da un articolo del 2015 »."
+   },
+   {
+    "type": "tolkning",
+    "q": "Varför slutar participet på -a i « l'hai letta »?",
+    "opts": [
+     "För att det är en tjej som läser",
+     "För att l' syftar på la notizia",
+     "För att det är imperfetto",
+     "Det är ett stavfel"
+    ],
+    "a": 1,
+    "why": "Ett direkt objektspronomen före avere gör att participet böjs: la notizia → l'hai letta."
+   }
+  ],
+  "gloss": {
+   "notizia": {
+    "t": "la notizia",
+    "sv": "nyhet",
+    "g": "f"
+   },
+   "profilo": {
+    "t": "il profilo",
+    "sv": "profil",
+    "g": "m"
+   },
+   "seguo": {
+    "t": "seguire",
+    "sv": "följa",
+    "g": ""
+   },
+   "condivisa": {
+    "t": "condividere",
+    "sv": "dela",
+    "g": ""
+   },
+   "controllato": {
+    "t": "controllare",
+    "sv": "kontrollera",
+    "g": ""
+   },
+   "fonte": {
+    "t": "la fonte",
+    "sv": "källa",
+    "g": "f"
+   },
+   "sito": {
+    "t": "il sito",
+    "sv": "webbplats",
+    "g": "m"
+   },
+   "ministero": {
+    "t": "il ministero",
+    "sv": "departement, ministerium",
+    "g": "m"
+   },
+   "seri": {
+    "t": "serio",
+    "sv": "seriös",
+    "g": ""
+   },
+   "bufala": {
+    "t": "la bufala",
+    "sv": "fejknyhet, bluff",
+    "g": "f"
+   },
+   "articolo": {
+    "t": "l'articolo",
+    "sv": "artikel",
+    "g": "m"
+   },
+   "peccato": {
+    "t": "che peccato",
+    "sv": "vad synd",
+    "g": ""
+   },
+   "mandata": {
+    "t": "mandare",
+    "sv": "skicka",
+    "g": ""
+   },
+   "subito": {
+    "t": "subito",
+    "sv": "genast",
+    "g": ""
+   }
+  }
+ },
+ {
+  "id": "it3-l-k4",
+  "sec": "k4",
+  "title": "Dal medico sportivo",
+  "lines": [
+   {
+    "who": "A",
+    "fr": "Allora, Andrea, mi dica: che cosa è successo?",
+    "sv": "Nå, Andrea, berätta: vad har hänt?"
+   },
+   {
+    "who": "B",
+    "fr": "Domenica scorsa ho corso una mezza maratona. Mentre correvo, al quindicesimo chilometro, ho sentito un dolore forte al ginocchio.",
+    "sv": "I söndags sprang jag ett halvmaraton. Medan jag sprang, vid femtonde kilometern, kände jag en stark smärta i knät."
+   },
+   {
+    "who": "A",
+    "fr": "E si è fermato?",
+    "sv": "Och stannade du?"
+   },
+   {
+    "who": "B",
+    "fr": "No, ho continuato fino alla fine. Volevo finirla a tutti i costi.",
+    "sv": "Nej, jag fortsatte ända till mål. Jag ville fullfölja det till varje pris."
+   },
+   {
+    "who": "A",
+    "fr": "Mah, questo non è stato molto intelligente. Adesso deve riposarsi per almeno due settimane.",
+    "sv": "Tja, det var inte så smart. Nu måste du vila i minst två veckor."
+   },
+   {
+    "who": "B",
+    "fr": "Due settimane? Ma ho un'altra gara a maggio!",
+    "sv": "Två veckor? Men jag har ett annat lopp i maj!"
+   },
+   {
+    "who": "A",
+    "fr": "Se vuole farla, deve ascoltarmi. Metta il ghiaccio sul ginocchio tre volte al giorno. E non lo muova troppo.",
+    "sv": "Om du vill springa det måste du lyssna på mig. Lägg is på knät tre gånger om dagen. Och rör det inte för mycket."
+   },
+   {
+    "who": "B",
+    "fr": "Posso almeno andare in piscina?",
+    "sv": "Får jag åtminstone gå och simma?"
+   },
+   {
+    "who": "A",
+    "fr": "Sì, il nuoto va bene. Al posto Suo, però, comprerei anche delle scarpe nuove: queste sono troppo vecchie.",
+    "sv": "Ja, simning går bra. Men i ditt ställe skulle jag också köpa nya skor: de här är för gamla."
+   },
+   {
+    "who": "B",
+    "fr": "Ha ragione. Le compro domani.",
+    "sv": "Du har rätt. Jag köper dem i morgon."
+   }
+  ],
+  "questions": [
+   {
+    "type": "helhet",
+    "q": "Var utspelar sig samtalet?",
+    "opts": [
+     "Hos en idrottsläkare",
+     "På ett gym",
+     "I en skoaffär",
+     "Vid ett maratonlopp"
+    ],
+    "a": 0,
+    "why": "Andrea berättar om sitt knä och läkaren ger råd."
+   },
+   {
+    "type": "detalj",
+    "q": "När fick Andrea ont i knät?",
+    "opts": [
+     "Före loppet",
+     "Medan han sprang, vid femtonde kilometern",
+     "Efter loppet, hemma",
+     "När han simmade"
+    ],
+    "a": 1,
+    "why": "« Mentre correvo, al quindicesimo chilometro, ho sentito un dolore forte ». Mentre + imperfetto, sedan en händelse."
+   },
+   {
+    "type": "detalj",
+    "q": "Hur länge ska Andrea vila?",
+    "opts": [
+     "Två dagar",
+     "En vecka",
+     "Minst två veckor",
+     "En månad"
+    ],
+    "a": 2,
+    "why": "« deve riposarsi per almeno due settimane »."
+   },
+   {
+    "type": "detalj",
+    "q": "Vad får Andrea göra under tiden?",
+    "opts": [
+     "Springa lite",
+     "Simma",
+     "Spela fotboll",
+     "Cykla"
+    ],
+    "a": 1,
+    "why": "« il nuoto va bene »."
+   },
+   {
+    "type": "tolkning",
+    "q": "Vad menar läkaren med « Al posto Suo … comprerei »?",
+    "opts": [
+     "Hon ska köpa skor åt honom",
+     "Hon ger ett råd: i hans ställe skulle hon köpa nya skor",
+     "Hon har redan köpt skor",
+     "Hon tycker att skorna är för dyra"
+    ],
+    "a": 1,
+    "why": "Al posto Suo + condizionale = ett artigt råd."
+   }
+  ],
+  "gloss": {
+   "successo": {
+    "t": "succedere",
+    "sv": "hända",
+    "g": ""
+   },
+   "corso": {
+    "t": "correre",
+    "sv": "springa",
+    "g": ""
+   },
+   "maratona": {
+    "t": "la maratona",
+    "sv": "maraton",
+    "g": "f"
+   },
+   "chilometro": {
+    "t": "il chilometro",
+    "sv": "kilometer",
+    "g": "m"
+   },
+   "dolore": {
+    "t": "il dolore",
+    "sv": "smärta",
+    "g": "m"
+   },
+   "ginocchio": {
+    "t": "il ginocchio",
+    "sv": "knä",
+    "g": "m"
+   },
+   "fermato": {
+    "t": "fermarsi",
+    "sv": "stanna",
+    "g": ""
+   },
+   "continuato": {
+    "t": "continuare",
+    "sv": "fortsätta",
+    "g": ""
+   },
+   "costi": {
+    "t": "a tutti i costi",
+    "sv": "till varje pris",
+    "g": ""
+   },
+   "riposarsi": {
+    "t": "riposarsi",
+    "sv": "vila",
+    "g": ""
+   },
+   "gara": {
+    "t": "la gara",
+    "sv": "tävling, lopp",
+    "g": "f"
+   },
+   "ghiaccio": {
+    "t": "il ghiaccio",
+    "sv": "is",
+    "g": "m"
+   },
+   "muova": {
+    "t": "muovere",
+    "sv": "röra",
+    "g": ""
+   },
+   "piscina": {
+    "t": "la piscina",
+    "sv": "simhall, pool",
+    "g": "f"
+   },
+   "nuoto": {
+    "t": "il nuoto",
+    "sv": "simning",
+    "g": "m"
+   },
+   "posto": {
+    "t": "al posto Suo",
+    "sv": "i ert ställe",
+    "g": ""
+   }
+  }
+ },
+ {
+  "id": "it3-l-k4b",
+  "sec": "k4",
+  "title": "Consigli per dormire meglio",
+  "lines": [
+   {
+    "who": "A",
+    "fr": "Benvenuti a «Salute in cinque minuti». Oggi parliamo del sonno.",
+    "sv": "Välkomna till «Hälsa på fem minuter». I dag pratar vi om sömn."
+   },
+   {
+    "who": "A",
+    "fr": "Molti ragazzi mi scrivono: «Sono sempre stanco, cosa dovrei fare?» Ecco i miei consigli.",
+    "sv": "Många ungdomar skriver till mig: «Jag är alltid trött, vad borde jag göra?» Här är mina råd."
+   },
+   {
+    "who": "A",
+    "fr": "Primo: il telefono. Lo so, è difficile, ma dovreste spegnerlo almeno un'ora prima di dormire. Non portatelo in camera!",
+    "sv": "Ett: telefonen. Jag vet, det är svårt, men ni borde stänga av den minst en timme innan ni ska sova. Ta inte med den in i sovrummet!"
+   },
+   {
+    "who": "A",
+    "fr": "Secondo: il caffè e le bibite energetiche. Non bevetele dopo le quattro del pomeriggio.",
+    "sv": "Två: kaffe och energidrycker. Drick dem inte efter klockan fyra på eftermiddagen."
+   },
+   {
+    "who": "A",
+    "fr": "Terzo: lo sport fa bene, ma non fatelo tardi la sera, perché il corpo ha bisogno di calmarsi.",
+    "sv": "Tre: sport är bra för en, men gör det inte sent på kvällen, eftersom kroppen behöver lugna ner sig."
+   },
+   {
+    "who": "A",
+    "fr": "E infine: andate a letto sempre alla stessa ora, anche nel fine settimana.",
+    "sv": "Och till sist: gå och lägg er alltid vid samma tid, även på helgen."
+   },
+   {
+    "who": "A",
+    "fr": "Un ragazzo di Bari mi ha scritto la settimana scorsa: ha seguito questi consigli per un mese e adesso dorme otto ore a notte. Provateci anche voi!",
+    "sv": "En kille från Bari skrev till mig förra veckan: han följde de här råden i en månad och nu sover han åtta timmar per natt. Prova ni också!"
+   }
+  ],
+  "questions": [
+   {
+    "type": "helhet",
+    "q": "Vad handlar programmet om?",
+    "opts": [
+     "Råd för att sova bättre",
+     "En ny energidryck",
+     "Ett träningsprogram",
+     "Hur man använder mobilen"
+    ],
+    "a": 0,
+    "why": "« Oggi parliamo del sonno » och sedan kommer råd."
+   },
+   {
+    "type": "detalj",
+    "q": "När ska man stänga av telefonen?",
+    "opts": [
+     "När man vaknar",
+     "Minst en timme innan man sover",
+     "Efter middagen",
+     "Aldrig"
+    ],
+    "a": 1,
+    "why": "« dovreste spegnerlo almeno un'ora prima di dormire »."
+   },
+   {
+    "type": "detalj",
+    "q": "Vad ska man inte dricka efter klockan fyra?",
+    "opts": [
+     "Vatten",
+     "Mjölk",
+     "Kaffe och energidrycker",
+     "Te"
+    ],
+    "a": 2,
+    "why": "« il caffè e le bibite energetiche. Non bevetele dopo le quattro »."
+   },
+   {
+    "type": "detalj",
+    "q": "Varför ska man inte träna sent på kvällen?",
+    "opts": [
+     "Gymmet är stängt",
+     "Kroppen behöver lugna ner sig",
+     "Det är farligt",
+     "Man blir hungrig"
+    ],
+    "a": 1,
+    "why": "« il corpo ha bisogno di calmarsi »."
+   },
+   {
+    "type": "tolkning",
+    "q": "Var sitter pronomenet i « Non bevetele »?",
+    "opts": [
+     "Före verbet",
+     "Fast efter imperativen",
+     "Efter non",
+     "Det finns inget pronomen"
+    ],
+    "a": 1,
+    "why": "I imperativ för voi hänger pronomenet ihop med verbet: bevete + le = bevetele, även nekat."
+   }
+  ],
+  "gloss": {
+   "sonno": {
+    "t": "il sonno",
+    "sv": "sömn",
+    "g": "m"
+   },
+   "stanco": {
+    "t": "stanco",
+    "sv": "trött",
+    "g": ""
+   },
+   "dovrei": {
+    "t": "dovere (condizionale)",
+    "sv": "borde",
+    "g": ""
+   },
+   "consigli": {
+    "t": "il consiglio",
+    "sv": "råd",
+    "g": "m"
+   },
+   "spegnerlo": {
+    "t": "spegnere",
+    "sv": "stänga av",
+    "g": ""
+   },
+   "portatelo": {
+    "t": "portare",
+    "sv": "ta med, bära",
+    "g": ""
+   },
+   "camera": {
+    "t": "la camera",
+    "sv": "sovrum, rum",
+    "g": "f"
+   },
+   "bibite": {
+    "t": "la bibita",
+    "sv": "dryck, läsk",
+    "g": "f"
+   },
+   "energetiche": {
+    "t": "energetico",
+    "sv": "energi-",
+    "g": ""
+   },
+   "corpo": {
+    "t": "il corpo",
+    "sv": "kropp",
+    "g": "m"
+   },
+   "bisogno": {
+    "t": "avere bisogno di",
+    "sv": "behöva",
+    "g": ""
+   },
+   "calmarsi": {
+    "t": "calmarsi",
+    "sv": "lugna ner sig",
+    "g": ""
+   },
+   "infine": {
+    "t": "infine",
+    "sv": "till sist",
+    "g": ""
+   },
+   "seguito": {
+    "t": "seguire",
+    "sv": "följa",
+    "g": ""
+   },
+   "provateci": {
+    "t": "provarci",
+    "sv": "försöka",
+    "g": ""
+   }
+  }
+ },
+ {
+  "id": "it3-l-k5",
+  "sec": "k5",
+  "title": "Una giornata al parco",
+  "lines": [
+   {
+    "who": "A",
+    "fr": "Ciao a tutti, sono Marta e vi parlo dal Parco Nazionale d'Abruzzo. Oggi ho partecipato a una giornata di volontariato per pulire i sentieri.",
+    "sv": "Hej allihop, jag heter Marta och pratar med er från nationalparken i Abruzzo. I dag var jag med på en volontärdag för att städa stigarna."
+   },
+   {
+    "who": "A",
+    "fr": "Eravamo in trenta: studenti, pensionati e alcune famiglie con bambini. Ognuno aveva un sacco e un paio di guanti.",
+    "sv": "Vi var trettio: studenter, pensionärer och några familjer med barn. Var och en hade en säck och ett par handskar."
+   },
+   {
+    "who": "A",
+    "fr": "Purtroppo abbiamo trovato di tutto: bottiglie di plastica, lattine, perfino una vecchia bicicletta! Qualcuno l'aveva lasciata dietro un albero.",
+    "sv": "Tyvärr hittade vi allt möjligt: plastflaskor, burkar, till och med en gammal cykel! Någon hade lämnat den bakom ett träd."
+   },
+   {
+    "who": "A",
+    "fr": "Verso mezzogiorno ci siamo fermati a mangiare vicino a un lago. Mentre mangiavamo, abbiamo visto un cervo tra gli alberi. Nessuno ha parlato per un minuto: era bellissimo.",
+    "sv": "Vid tolvtiden stannade vi för att äta vid en sjö. Medan vi åt såg vi en hjort bland träden. Ingen sa något på en minut: det var jättevackert."
+   },
+   {
+    "who": "A",
+    "fr": "La guida ci ha spiegato che nel parco vivono anche lupi e orsi, ma è difficile vederli perché hanno paura delle persone.",
+    "sv": "Guiden förklarade för oss att det också lever vargar och björnar i parken, men att det är svårt att se dem eftersom de är rädda för människor."
+   },
+   {
+    "who": "A",
+    "fr": "Alla fine abbiamo raccolto più di cento chili di rifiuti. Non c'è niente di più bello di un bosco pulito!",
+    "sv": "Till slut hade vi samlat in över hundra kilo skräp. Det finns inget vackrare än en ren skog!"
+   },
+   {
+    "who": "A",
+    "fr": "Se volete partecipare anche voi, la prossima giornata sarà a ottobre. Vi aspetto!",
+    "sv": "Om ni också vill vara med, blir nästa dag i oktober. Jag väntar på er!"
+   }
+  ],
+  "questions": [
+   {
+    "type": "helhet",
+    "q": "Vad handlar Martas berättelse om?",
+    "opts": [
+     "En volontärdag då man städade i en nationalpark",
+     "En semester i bergen",
+     "En skolutflykt till ett zoo",
+     "En jakt på björnar"
+    ],
+    "a": 0,
+    "why": "« una giornata di volontariato per pulire i sentieri »."
+   },
+   {
+    "type": "detalj",
+    "q": "Vad hade var och en med sig?",
+    "opts": [
+     "En kamera och en karta",
+     "En säck och ett par handskar",
+     "En cykel",
+     "Mat till djuren"
+    ],
+    "a": 1,
+    "why": "« Ognuno aveva un sacco e un paio di guanti. » Ognuno = var och en."
+   },
+   {
+    "type": "detalj",
+    "q": "Vilket konstigt skräp hittade de?",
+    "opts": [
+     "En gammal cykel",
+     "En tv",
+     "En bil",
+     "En säng"
+    ],
+    "a": 0,
+    "why": "« perfino una vecchia bicicletta! »"
+   },
+   {
+    "type": "detalj",
+    "q": "Vilket djur såg de när de åt?",
+    "opts": [
+     "En varg",
+     "En björn",
+     "En hjort",
+     "En örn"
+    ],
+    "a": 2,
+    "why": "« abbiamo visto un cervo tra gli alberi »."
+   },
+   {
+    "type": "tolkning",
+    "q": "Vad betyder « Nessuno ha parlato per un minuto »?",
+    "opts": [
+     "Alla pratade samtidigt",
+     "Ingen sa något, alla var tysta",
+     "Bara guiden pratade",
+     "Någon ropade högt"
+    ],
+    "a": 1,
+    "why": "Nessuno = ingen. Alla var tysta för att inte skrämma hjorten."
+   },
+   {
+    "type": "detalj",
+    "q": "Hur mycket skräp samlade de in?",
+    "opts": [
+     "Tio kilo",
+     "Femtio kilo",
+     "Över hundra kilo",
+     "Ett ton"
+    ],
+    "a": 2,
+    "why": "« più di cento chili di rifiuti »."
+   }
+  ],
+  "gloss": {
+   "parco": {
+    "t": "il parco",
+    "sv": "park",
+    "g": "m"
+   },
+   "partecipato": {
+    "t": "partecipare",
+    "sv": "delta",
+    "g": ""
+   },
+   "volontariato": {
+    "t": "il volontariato",
+    "sv": "volontärarbete",
+    "g": "m"
+   },
+   "sentieri": {
+    "t": "il sentiero",
+    "sv": "stig",
+    "g": "m"
+   },
+   "pensionati": {
+    "t": "il pensionato",
+    "sv": "pensionär",
+    "g": "m"
+   },
+   "ognuno": {
+    "t": "ognuno",
+    "sv": "var och en",
+    "g": ""
+   },
+   "sacco": {
+    "t": "il sacco",
+    "sv": "säck",
+    "g": "m"
+   },
+   "guanti": {
+    "t": "il guanto",
+    "sv": "handske",
+    "g": "m"
+   },
+   "bottiglie": {
+    "t": "la bottiglia",
+    "sv": "flaska",
+    "g": "f"
+   },
+   "plastica": {
+    "t": "la plastica",
+    "sv": "plast",
+    "g": "f"
+   },
+   "lattine": {
+    "t": "la lattina",
+    "sv": "burk",
+    "g": "f"
+   },
+   "qualcuno": {
+    "t": "qualcuno",
+    "sv": "någon",
+    "g": ""
+   },
+   "cervo": {
+    "t": "il cervo",
+    "sv": "hjort",
+    "g": "m"
+   },
+   "nessuno": {
+    "t": "nessuno",
+    "sv": "ingen",
+    "g": ""
+   },
+   "guida": {
+    "t": "la guida",
+    "sv": "guide",
+    "g": "f"
+   },
+   "lupi": {
+    "t": "il lupo",
+    "sv": "varg",
+    "g": "m"
+   },
+   "orsi": {
+    "t": "l'orso",
+    "sv": "björn",
+    "g": "m"
+   },
+   "raccolto": {
+    "t": "raccogliere",
+    "sv": "samla in",
+    "g": ""
+   },
+   "rifiuti": {
+    "t": "i rifiuti",
+    "sv": "sopor, skräp",
+    "g": "mpl"
+   },
+   "bosco": {
+    "t": "il bosco",
+    "sv": "skog",
+    "g": "m"
+   }
+  }
+ },
+ {
+  "id": "it3-l-k5b",
+  "sec": "k5",
+  "title": "La raccolta differenziata",
+  "lines": [
+   {
+    "who": "A",
+    "fr": "Nonna, dove butto questa bottiglia?",
+    "sv": "Mormor, var slänger jag den här flaskan?"
+   },
+   {
+    "who": "B",
+    "fr": "È di vetro? Allora nel bidone verde. La plastica va in quello giallo e la carta in quello blu.",
+    "sv": "Är den av glas? Då i den gröna tunnan. Plast ska i den gula och papper i den blå."
+   },
+   {
+    "who": "A",
+    "fr": "E gli avanzi della cena?",
+    "sv": "Och resterna från middagen?"
+   },
+   {
+    "who": "B",
+    "fr": "Nell'organico, il bidoncino marrone. Qui a Treviso si ricicla quasi tutto. Ogni giorno passano a prendere un tipo di rifiuto diverso.",
+    "sv": "I matavfallet, den lilla bruna tunnan. Här i Treviso återvinner man nästan allt. Varje dag kommer de och hämtar en annan sorts avfall."
+   },
+   {
+    "who": "A",
+    "fr": "Anche da noi in Svezia si ricicla molto, ma non ho mai visto un calendario così!",
+    "sv": "Hemma hos oss i Sverige återvinner man också mycket, men jag har aldrig sett ett sådant schema!"
+   },
+   {
+    "who": "B",
+    "fr": "Quando ero giovane io, non si separava niente. Si buttava tutto insieme. Adesso nessuno lo fa più, e per fortuna!",
+    "sv": "När jag var ung sorterade man ingenting. Man slängde allt tillsammans. Nu gör ingen det längre, och tur är väl det!"
+   },
+   {
+    "who": "A",
+    "fr": "E se qualcuno sbaglia?",
+    "sv": "Och om någon gör fel?"
+   },
+   {
+    "who": "B",
+    "fr": "Allora non ritirano il sacchetto e ti lasciano un biglietto. A me è successo una volta, che vergogna!",
+    "sv": "Då hämtar de inte påsen och lämnar en lapp till dig. Det har hänt mig en gång, så pinsamt!"
+   },
+   {
+    "who": "A",
+    "fr": "Dai, nonna, non ci credo!",
+    "sv": "Kom igen, mormor, det tror jag inte på!"
+   },
+   {
+    "who": "B",
+    "fr": "È vero! Avevo messo una scatola di pizza nella carta, ma era sporca d'olio. Quella va nell'indifferenziata.",
+    "sv": "Det är sant! Jag hade lagt en pizzakartong i pappret, men den var smutsig av olja. Den ska i restavfallet."
+   }
+  ],
+  "questions": [
+   {
+    "type": "helhet",
+    "q": "Vad handlar samtalet om?",
+    "opts": [
+     "Sopsortering",
+     "Matlagning",
+     "En resa till Treviso",
+     "Att köpa en ny cykel"
+    ],
+    "a": 0,
+    "why": "De pratar om vilka tunnor sopor ska slängas i: raccolta differenziata."
+   },
+   {
+    "type": "detalj",
+    "q": "Vilken färg har tunnan för glas?",
+    "opts": [
+     "Gul",
+     "Blå",
+     "Grön",
+     "Brun"
+    ],
+    "a": 2,
+    "why": "« È di vetro? Allora nel bidone verde. »"
+   },
+   {
+    "type": "detalj",
+    "q": "Hur var det när mormor var ung?",
+    "opts": [
+     "Man sorterade allt",
+     "Man sorterade ingenting",
+     "Man brände soporna",
+     "Man hade inga sopor"
+    ],
+    "a": 1,
+    "why": "« non si separava niente. Si buttava tutto insieme. »"
+   },
+   {
+    "type": "detalj",
+    "q": "Vad gjorde mormor för fel en gång?",
+    "opts": [
+     "Hon slängde glas i plasten",
+     "Hon lade en oljig pizzakartong i pappret",
+     "Hon glömde soporna",
+     "Hon slängde mat i glaset"
+    ],
+    "a": 1,
+    "why": "« Avevo messo una scatola di pizza nella carta, ma era sporca d'olio. »"
+   },
+   {
+    "type": "tolkning",
+    "q": "Varför säger mormor « che vergogna! »?",
+    "opts": [
+     "Hon tyckte att det var pinsamt att få en lapp",
+     "Hon var arg på sophämtarna",
+     "Hon tyckte att pizzan var dålig",
+     "Hon hade tappat bort lappen"
+    ],
+    "a": 0,
+    "why": "Vergogna = skam. Det var pinsamt att få en lapp om att hon sorterat fel."
+   }
+  ],
+  "gloss": {
+   "butto": {
+    "t": "buttare",
+    "sv": "slänga",
+    "g": ""
+   },
+   "vetro": {
+    "t": "il vetro",
+    "sv": "glas",
+    "g": "m"
+   },
+   "bidone": {
+    "t": "il bidone",
+    "sv": "soptunna",
+    "g": "m"
+   },
+   "carta": {
+    "t": "la carta",
+    "sv": "papper",
+    "g": "f"
+   },
+   "avanzi": {
+    "t": "gli avanzi",
+    "sv": "matrester",
+    "g": "mpl"
+   },
+   "organico": {
+    "t": "l'organico",
+    "sv": "matavfall",
+    "g": "m"
+   },
+   "bidoncino": {
+    "t": "il bidoncino",
+    "sv": "liten soptunna",
+    "g": "m"
+   },
+   "marrone": {
+    "t": "marrone",
+    "sv": "brun",
+    "g": ""
+   },
+   "ricicla": {
+    "t": "riciclare",
+    "sv": "återvinna",
+    "g": ""
+   },
+   "calendario": {
+    "t": "il calendario",
+    "sv": "kalender, schema",
+    "g": "m"
+   },
+   "separava": {
+    "t": "separare",
+    "sv": "sortera, skilja",
+    "g": ""
+   },
+   "fortuna": {
+    "t": "per fortuna",
+    "sv": "som tur är",
+    "g": ""
+   },
+   "sbaglia": {
+    "t": "sbagliare",
+    "sv": "göra fel",
+    "g": ""
+   },
+   "ritirano": {
+    "t": "ritirare",
+    "sv": "hämta",
+    "g": ""
+   },
+   "sacchetto": {
+    "t": "il sacchetto",
+    "sv": "påse",
+    "g": "m"
+   },
+   "vergogna": {
+    "t": "la vergogna",
+    "sv": "skam",
+    "g": "f"
+   },
+   "scatola": {
+    "t": "la scatola",
+    "sv": "kartong, låda",
+    "g": "f"
+   },
+   "sporca": {
+    "t": "sporco",
+    "sv": "smutsig",
+    "g": ""
+   },
+   "indifferenziata": {
+    "t": "l'indifferenziata",
+    "sv": "restavfall",
+    "g": "f"
+   }
+  }
+ },
+ {
+  "id": "it3-l-k6",
+  "sec": "k6",
+  "title": "Città o campagna?",
+  "lines": [
+   {
+    "who": "A",
+    "fr": "Luca, tu sei cresciuto in un paesino di montagna e adesso vivi a Milano. Dove si vive meglio?",
+    "sv": "Luca, du växte upp i en liten by i bergen och nu bor du i Milano. Var lever man bäst?"
+   },
+   {
+    "who": "B",
+    "fr": "Bella domanda! In città c'è tutto: cinema, teatri, concerti. I mezzi pubblici sono migliori e non ho bisogno della macchina.",
+    "sv": "Bra fråga! I stan finns allt: bio, teatrar, konserter. Kollektivtrafiken är bättre och jag behöver ingen bil."
+   },
+   {
+    "who": "A",
+    "fr": "E i lati negativi?",
+    "sv": "Och de negativa sidorna?"
+   },
+   {
+    "who": "B",
+    "fr": "L'affitto è carissimo: pago più di mia sorella, che ha una casa intera in paese. E l'aria è peggiore, soprattutto d'inverno.",
+    "sv": "Hyran är jättedyr: jag betalar mer än min syster, som har ett helt hus i byn. Och luften är sämre, framför allt på vintern."
+   },
+   {
+    "who": "A",
+    "fr": "Ti manca la campagna?",
+    "sv": "Saknar du landet?"
+   },
+   {
+    "who": "B",
+    "fr": "Sì, a volte. In paese la vita è più lenta e più tranquilla. Tutti si conoscono e ci si aiuta. Qui invece non conosco nemmeno i miei vicini.",
+    "sv": "Ja, ibland. I byn är livet långsammare och lugnare. Alla känner varandra och man hjälper varandra. Här känner jag inte ens mina grannar."
+   },
+   {
+    "who": "A",
+    "fr": "Quindi un giorno tornerai?",
+    "sv": "Så en dag kommer du att flytta tillbaka?"
+   },
+   {
+    "who": "B",
+    "fr": "Forse. Per lavorare la città è meglio, ma per crescere dei figli preferirei la campagna. Lì i bambini giocano fuori e sono più liberi.",
+    "sv": "Kanske. För att jobba är stan bättre, men för att uppfostra barn skulle jag föredra landet. Där leker barnen ute och är friare."
+   },
+   {
+    "who": "A",
+    "fr": "Grazie, Luca, e buona fortuna!",
+    "sv": "Tack, Luca, och lycka till!"
+   }
+  ],
+  "questions": [
+   {
+    "type": "helhet",
+    "q": "Vad är det här för text?",
+    "opts": [
+     "En intervju om att bo i stan eller på landet",
+     "En reklam för Milano",
+     "Ett gräl mellan två grannar",
+     "En väderrapport"
+    ],
+    "a": 0,
+    "why": "« Dove si vive meglio? » – frågan jämför stad och land."
+   },
+   {
+    "type": "detalj",
+    "q": "Vad är positivt med stan enligt Luca?",
+    "opts": [
+     "Den friska luften",
+     "Kultur och bättre kollektivtrafik",
+     "De billiga hyrorna",
+     "Att alla känner varandra"
+    ],
+    "a": 1,
+    "why": "« cinema, teatri, concerti. I mezzi pubblici sono migliori »."
+   },
+   {
+    "type": "detalj",
+    "q": "Vem betalar mest för sitt boende?",
+    "opts": [
+     "Luca",
+     "Lucas syster",
+     "Lika mycket",
+     "Grannarna"
+    ],
+    "a": 0,
+    "why": "« pago più di mia sorella, che ha una casa intera in paese »."
+   },
+   {
+    "type": "detalj",
+    "q": "Hur är luften i Milano på vintern?",
+    "opts": [
+     "Bättre",
+     "Sämre",
+     "Kallare än i bergen",
+     "Renare"
+    ],
+    "a": 1,
+    "why": "« l'aria è peggiore, soprattutto d'inverno » – peggiore = sämre."
+   },
+   {
+    "type": "tolkning",
+    "q": "Var skulle Luca vilja uppfostra barn?",
+    "opts": [
+     "I Milano",
+     "På landet",
+     "Utomlands",
+     "Han vill inte ha barn"
+    ],
+    "a": 1,
+    "why": "« per crescere dei figli preferirei la campagna »."
+   },
+   {
+    "type": "tolkning",
+    "q": "Vad är skillnaden mellan meglio och migliori i intervjun?",
+    "opts": [
+     "Meglio är adverb (bättre sätt), migliori är adjektiv (bättre saker)",
+     "De betyder olika saker",
+     "Migliori är singular",
+     "Meglio är bara för personer"
+    ],
+    "a": 0,
+    "why": "Si vive meglio (adverb) men i mezzi pubblici sono migliori (adjektiv, plural)."
+   }
+  ],
+  "gloss": {
+   "cresciuto": {
+    "t": "crescere",
+    "sv": "växa upp",
+    "g": ""
+   },
+   "paesino": {
+    "t": "il paesino",
+    "sv": "liten by",
+    "g": "m"
+   },
+   "meglio": {
+    "t": "meglio",
+    "sv": "bättre (adverb)",
+    "g": ""
+   },
+   "teatri": {
+    "t": "il teatro",
+    "sv": "teater",
+    "g": "m"
+   },
+   "mezzi": {
+    "t": "i mezzi pubblici",
+    "sv": "kollektivtrafik",
+    "g": "mpl"
+   },
+   "migliori": {
+    "t": "migliore",
+    "sv": "bättre (adjektiv)",
+    "g": ""
+   },
+   "lati": {
+    "t": "il lato",
+    "sv": "sida",
+    "g": "m"
+   },
+   "affitto": {
+    "t": "l'affitto",
+    "sv": "hyra",
+    "g": "m"
+   },
+   "carissimo": {
+    "t": "caro",
+    "sv": "dyr (-issimo: jätte-)",
+    "g": ""
+   },
+   "intera": {
+    "t": "intero",
+    "sv": "hel",
+    "g": ""
+   },
+   "aria": {
+    "t": "l'aria",
+    "sv": "luft",
+    "g": "f"
+   },
+   "peggiore": {
+    "t": "peggiore",
+    "sv": "sämre",
+    "g": ""
+   },
+   "manca": {
+    "t": "mancare",
+    "sv": "saknas",
+    "g": ""
+   },
+   "lenta": {
+    "t": "lento",
+    "sv": "långsam",
+    "g": ""
+   },
+   "tranquilla": {
+    "t": "tranquillo",
+    "sv": "lugn",
+    "g": ""
+   },
+   "vicini": {
+    "t": "il vicino",
+    "sv": "granne",
+    "g": "m"
+   },
+   "preferirei": {
+    "t": "preferire",
+    "sv": "föredra",
+    "g": ""
+   },
+   "liberi": {
+    "t": "libero",
+    "sv": "fri",
+    "g": ""
+   }
+  }
+ },
+ {
+  "id": "it3-l-k6b",
+  "sec": "k6",
+  "title": "Cercasi appartamento",
+  "lines": [
+   {
+    "who": "A",
+    "fr": "Pronto, buongiorno. Chiamo per l'annuncio dell'appartamento in via Garibaldi. È ancora libero?",
+    "sv": "Hallå, god dag. Jag ringer om annonsen för lägenheten på via Garibaldi. Är den fortfarande ledig?"
+   },
+   {
+    "who": "B",
+    "fr": "Sì, è libero. È un bilocale al terzo piano, con un balcone e la cucina abitabile.",
+    "sv": "Ja, den är ledig. Det är en tvåa på tredje våningen, med balkong och kök med matplats."
+   },
+   {
+    "who": "A",
+    "fr": "C'è l'ascensore?",
+    "sv": "Finns det hiss?"
+   },
+   {
+    "who": "B",
+    "fr": "No, purtroppo no. Il palazzo è antico, del Settecento. Però le scale non sono ripide.",
+    "sv": "Nej, tyvärr inte. Huset är gammalt, från sjuttonhundratalet. Men trapporna är inte branta."
+   },
+   {
+    "who": "A",
+    "fr": "E la zona com'è? È rumorosa?",
+    "sv": "Och hur är området? Är det bullrigt?"
+   },
+   {
+    "who": "B",
+    "fr": "È una zona tranquillissima, a due passi dal centro. C'è un supermercato sotto casa e la fermata dell'autobus è proprio qui davanti.",
+    "sv": "Det är ett jättelugnt område, ett stenkast från centrum. Det finns en mataffär i huset och busshållplatsen är precis utanför."
+   },
+   {
+    "who": "A",
+    "fr": "Quanto costa l'affitto?",
+    "sv": "Hur mycket kostar hyran?"
+   },
+   {
+    "who": "B",
+    "fr": "Seicentocinquanta euro al mese, spese comprese.",
+    "sv": "Sexhundrafemtio euro i månaden, inklusive avgifter."
+   },
+   {
+    "who": "A",
+    "fr": "Un po' caro per me… L'appartamento che ho visto ieri costava meno, ma era più lontano e più piccolo.",
+    "sv": "Lite dyrt för mig … Lägenheten jag såg i går kostade mindre, men den låg längre bort och var mindre."
+   },
+   {
+    "who": "B",
+    "fr": "Allora venga a vederlo. Sono sicura che le piacerà. Può passare domani alle cinque?",
+    "sv": "Kom och titta på den då. Jag är säker på att du kommer att gilla den. Kan du komma förbi i morgon klockan fem?"
+   },
+   {
+    "who": "A",
+    "fr": "Va bene, a domani!",
+    "sv": "Okej, vi ses i morgon!"
+   }
+  ],
+  "questions": [
+   {
+    "type": "helhet",
+    "q": "Varför ringer personen?",
+    "opts": [
+     "För att hyra en lägenhet",
+     "För att sälja en bil",
+     "För att boka ett hotell",
+     "För att klaga på grannarna"
+    ],
+    "a": 0,
+    "why": "« Chiamo per l'annuncio dell'appartamento »."
+   },
+   {
+    "type": "detalj",
+    "q": "Vad saknar huset?",
+    "opts": [
+     "Balkong",
+     "Kök",
+     "Hiss",
+     "Trappor"
+    ],
+    "a": 2,
+    "why": "« C'è l'ascensore? – No, purtroppo no. »"
+   },
+   {
+    "type": "detalj",
+    "q": "Hur är området?",
+    "opts": [
+     "Bullrigt och långt från centrum",
+     "Jättelugnt och nära centrum",
+     "Farligt",
+     "På landet"
+    ],
+    "a": 1,
+    "why": "« tranquillissima, a due passi dal centro »."
+   },
+   {
+    "type": "detalj",
+    "q": "Vad ingår i hyran?",
+    "opts": [
+     "Avgifterna",
+     "Möblerna",
+     "En parkeringsplats",
+     "Internet"
+    ],
+    "a": 0,
+    "why": "« spese comprese » – avgifterna ingår."
+   },
+   {
+    "type": "tolkning",
+    "q": "Hur var lägenheten personen såg i går, jämfört med den här?",
+    "opts": [
+     "Billigare, men längre bort och mindre",
+     "Dyrare och större",
+     "Likadan",
+     "Mer centralt belägen"
+    ],
+    "a": 0,
+    "why": "« costava meno, ma era più lontano e più piccolo »."
+   }
+  ],
+  "gloss": {
+   "pronto": {
+    "t": "pronto",
+    "sv": "hallå (i telefon)",
+    "g": ""
+   },
+   "annuncio": {
+    "t": "l'annuncio",
+    "sv": "annons",
+    "g": "m"
+   },
+   "appartamento": {
+    "t": "l'appartamento",
+    "sv": "lägenhet",
+    "g": "m"
+   },
+   "libero": {
+    "t": "libero",
+    "sv": "ledig",
+    "g": ""
+   },
+   "bilocale": {
+    "t": "il bilocale",
+    "sv": "tvårumslägenhet",
+    "g": "m"
+   },
+   "piano": {
+    "t": "il piano",
+    "sv": "våning",
+    "g": "m"
+   },
+   "balcone": {
+    "t": "il balcone",
+    "sv": "balkong",
+    "g": "m"
+   },
+   "abitabile": {
+    "t": "la cucina abitabile",
+    "sv": "kök med matplats",
+    "g": ""
+   },
+   "ascensore": {
+    "t": "l'ascensore",
+    "sv": "hiss",
+    "g": "m"
+   },
+   "palazzo": {
+    "t": "il palazzo",
+    "sv": "hyreshus, palats",
+    "g": "m"
+   },
+   "scale": {
+    "t": "le scale",
+    "sv": "trappa",
+    "g": "fpl"
+   },
+   "ripide": {
+    "t": "ripido",
+    "sv": "brant",
+    "g": ""
+   },
+   "zona": {
+    "t": "la zona",
+    "sv": "område",
+    "g": "f"
+   },
+   "rumorosa": {
+    "t": "rumoroso",
+    "sv": "bullrig",
+    "g": ""
+   },
+   "passi": {
+    "t": "a due passi",
+    "sv": "ett stenkast bort",
+    "g": ""
+   },
+   "fermata": {
+    "t": "la fermata",
+    "sv": "hållplats",
+    "g": "f"
+   },
+   "spese": {
+    "t": "le spese",
+    "sv": "avgifter, kostnader",
+    "g": "fpl"
+   },
+   "comprese": {
+    "t": "compreso",
+    "sv": "inräknad, inklusive",
+    "g": ""
+   },
+   "lontano": {
+    "t": "lontano",
+    "sv": "långt bort",
+    "g": ""
+   }
+  }
+ },
+ {
+  "id": "it3-l-k7",
+  "sec": "k7",
+  "title": "Il concerto di ieri sera",
+  "lines": [
+   {
+    "who": "A",
+    "fr": "Allora, com'è stato il concerto? Ti è piaciuto?",
+    "sv": "Nå, hur var konserten? Gillade du den?"
+   },
+   {
+    "who": "B",
+    "fr": "Tantissimo! Mi è piaciuta soprattutto la seconda parte, quando hanno suonato le canzoni vecchie.",
+    "sv": "Jättemycket! Jag gillade framför allt andra delen, när de spelade de gamla låtarna."
+   },
+   {
+    "who": "A",
+    "fr": "E il cantante com'era?",
+    "sv": "Och hur var sångaren?"
+   },
+   {
+    "who": "B",
+    "fr": "Bravissimo. Ha una voce incredibile. Ma a Giulia non è piaciuto: dice che cantava troppo forte.",
+    "sv": "Jätteduktig. Han har en otrolig röst. Men Giulia gillade det inte: hon säger att han sjöng för högt."
+   },
+   {
+    "who": "A",
+    "fr": "Giulia non è mai contenta! E dove eravate?",
+    "sv": "Giulia är aldrig nöjd! Och var var ni?"
+   },
+   {
+    "who": "B",
+    "fr": "In terza fila, vicinissimi al palco. Il posto in cui eravamo era perfetto. Alla fine il chitarrista ha lanciato il suo plettro e l'ho preso io!",
+    "sv": "På tredje raden, jättenära scenen. Platsen där vi stod var perfekt. På slutet kastade gitarristen sitt plektrum och det var jag som fångade det!"
+   },
+   {
+    "who": "A",
+    "fr": "Che fortuna! Io invece sono rimasto a casa a studiare. Che noia!",
+    "sv": "Vilken tur! Jag stannade däremot hemma och pluggade. Så tråkigt!"
+   },
+   {
+    "who": "B",
+    "fr": "La prossima volta devi venire con noi. Ad aprile suonano a Bologna.",
+    "sv": "Nästa gång måste du följa med oss. I april spelar de i Bologna."
+   },
+   {
+    "who": "A",
+    "fr": "Quanto costavano i biglietti?",
+    "sv": "Hur mycket kostade biljetterna?"
+   },
+   {
+    "who": "B",
+    "fr": "Quaranta euro. Non pochissimo, ma ne valeva la pena.",
+    "sv": "Fyrtio euro. Inte jättelite, men det var värt det."
+   }
+  ],
+  "questions": [
+   {
+    "type": "helhet",
+    "q": "Vad pratar de om?",
+    "opts": [
+     "En konsert som en av dem var på",
+     "En konsert som ska bli i morgon",
+     "Ett musikprov i skolan",
+     "Hur man spelar gitarr"
+    ],
+    "a": 0,
+    "why": "« com'è stato il concerto? » – den var i går kväll."
+   },
+   {
+    "type": "detalj",
+    "q": "Vilken del gillade personen mest?",
+    "opts": [
+     "Första delen",
+     "Andra delen, med de gamla låtarna",
+     "Förbandet",
+     "Pausen"
+    ],
+    "a": 1,
+    "why": "« Mi è piaciuta soprattutto la seconda parte »."
+   },
+   {
+    "type": "detalj",
+    "q": "Vad tyckte Giulia?",
+    "opts": [
+     "Hon gillade allt",
+     "Hon tyckte att sångaren sjöng för högt",
+     "Hon ville gå hem tidigt",
+     "Hon tyckte biljetterna var billiga"
+    ],
+    "a": 1,
+    "why": "« a Giulia non è piaciuto: dice che cantava troppo forte »."
+   },
+   {
+    "type": "detalj",
+    "q": "Vad fångade personen på slutet?",
+    "opts": [
+     "En tröja",
+     "Ett plektrum",
+     "En trumstock",
+     "En blomma"
+    ],
+    "a": 1,
+    "why": "« il chitarrista ha lanciato il suo plettro e l'ho preso io! »"
+   },
+   {
+    "type": "tolkning",
+    "q": "Varför heter det « mi è piaciuta » men « ti è piaciuto »?",
+    "opts": [
+     "Participet böjs efter det man gillar: la parte (fem.) och il concerto (mask.)",
+     "Det beror på vem som talar",
+     "Det är två olika tempus",
+     "Det ena är fel"
+    ],
+    "a": 0,
+    "why": "Med piacere och essere följer participet det som man gillar: la seconda parte → piaciuta, il concerto → piaciuto."
+   }
+  ],
+  "gloss": {
+   "concerto": {
+    "t": "il concerto",
+    "sv": "konsert",
+    "g": "m"
+   },
+   "piaciuto": {
+    "t": "piacere (pass. pross.)",
+    "sv": "gilla, tycka om",
+    "g": ""
+   },
+   "piaciuta": {
+    "t": "piacere (pass. pross.)",
+    "sv": "gilla, tycka om",
+    "g": ""
+   },
+   "suonato": {
+    "t": "suonare",
+    "sv": "spela (instrument)",
+    "g": ""
+   },
+   "canzoni": {
+    "t": "la canzone",
+    "sv": "sång, låt",
+    "g": "f"
+   },
+   "cantante": {
+    "t": "il cantante",
+    "sv": "sångare",
+    "g": "m"
+   },
+   "voce": {
+    "t": "la voce",
+    "sv": "röst",
+    "g": "f"
+   },
+   "fila": {
+    "t": "la fila",
+    "sv": "rad",
+    "g": "f"
+   },
+   "palco": {
+    "t": "il palco",
+    "sv": "scen",
+    "g": "m"
+   },
+   "cui": {
+    "t": "in cui",
+    "sv": "där, i vilken",
+    "g": ""
+   },
+   "chitarrista": {
+    "t": "il chitarrista",
+    "sv": "gitarrist",
+    "g": "m"
+   },
+   "lanciato": {
+    "t": "lanciare",
+    "sv": "kasta",
+    "g": ""
+   },
+   "plettro": {
+    "t": "il plettro",
+    "sv": "plektrum",
+    "g": "m"
+   },
+   "noia": {
+    "t": "la noia",
+    "sv": "tristess, tråkighet",
+    "g": "f"
+   },
+   "biglietti": {
+    "t": "il biglietto",
+    "sv": "biljett",
+    "g": "m"
+   },
+   "valeva": {
+    "t": "valere la pena",
+    "sv": "vara värt det",
+    "g": ""
+   }
+  }
+ },
+ {
+  "id": "it3-l-k7b",
+  "sec": "k7",
+  "title": "Al museo con l'audioguida",
+  "lines": [
+   {
+    "who": "A",
+    "fr": "Benvenuti alla Galleria degli Uffizi. Siete nella sala quindici, la sala in cui si trovano le prime opere di Leonardo da Vinci.",
+    "sv": "Välkomna till Uffizierna. Ni är i sal femton, salen där Leonardo da Vincis första verk finns."
+   },
+   {
+    "who": "A",
+    "fr": "Davanti a voi c'è l'Annunciazione. Leonardo l'ha dipinta quando aveva poco più di vent'anni, mentre lavorava nella bottega del suo maestro, il Verrocchio.",
+    "sv": "Framför er finns Bebådelsen. Leonardo målade den när han var drygt tjugo år, medan han arbetade i sin mästare Verrocchios verkstad."
+   },
+   {
+    "who": "A",
+    "fr": "Guardate le ali dell'angelo: Leonardo aveva studiato gli uccelli per dipingerle in modo realistico.",
+    "sv": "Titta på ängelns vingar: Leonardo hade studerat fåglar för att kunna måla dem realistiskt."
+   },
+   {
+    "who": "A",
+    "fr": "Guardate anche il paesaggio dietro le figure. È un paesaggio di montagne e di acqua, che sembra quasi un sogno.",
+    "sv": "Titta också på landskapet bakom figurerna. Det är ett landskap med berg och vatten, som nästan ser ut som en dröm."
+   },
+   {
+    "who": "A",
+    "fr": "Leonardo non era solo un pittore. Era anche un ingegnere, un musicista e uno scienziato. Scriveva i suoi appunti al contrario, da destra a sinistra, e per leggerli ci vuole uno specchio.",
+    "sv": "Leonardo var inte bara målare. Han var också ingenjör, musiker och vetenskapsman. Han skrev sina anteckningar baklänges, från höger till vänster, och för att läsa dem behöver man en spegel."
+   },
+   {
+    "who": "A",
+    "fr": "Nella prossima sala vedrete opere di Michelangelo e di Raffaello, gli artisti di cui Leonardo era, in un certo senso, il rivale. Premete il numero sedici per continuare.",
+    "sv": "I nästa sal får ni se verk av Michelangelo och Rafael, de konstnärer som Leonardo på sätt och vis var rival med. Tryck på nummer sexton för att fortsätta."
+   }
+  ],
+  "questions": [
+   {
+    "type": "helhet",
+    "q": "Vad är det här för text?",
+    "opts": [
+     "En ljudguide på ett museum",
+     "En lektion i matematik",
+     "En reklam för en konstskola",
+     "En intervju med en målare"
+    ],
+    "a": 0,
+    "why": "« Benvenuti alla Galleria degli Uffizi … Premete il numero sedici »."
+   },
+   {
+    "type": "detalj",
+    "q": "Hur gammal var Leonardo när han målade Bebådelsen?",
+    "opts": [
+     "Tio år",
+     "Drygt tjugo år",
+     "Fyrtio år",
+     "Sextio år"
+    ],
+    "a": 1,
+    "why": "« quando aveva poco più di vent'anni »."
+   },
+   {
+    "type": "detalj",
+    "q": "Vad hade Leonardo studerat för att måla vingarna?",
+    "opts": [
+     "Fåglar",
+     "Fjärilar",
+     "Flygplan",
+     "Andra målningar"
+    ],
+    "a": 0,
+    "why": "« Leonardo aveva studiato gli uccelli »."
+   },
+   {
+    "type": "detalj",
+    "q": "Hur skrev Leonardo sina anteckningar?",
+    "opts": [
+     "På latin",
+     "Baklänges, från höger till vänster",
+     "Med röd penna",
+     "Bara med bilder"
+    ],
+    "a": 1,
+    "why": "« Scriveva i suoi appunti al contrario, da destra a sinistra »."
+   },
+   {
+    "type": "tolkning",
+    "q": "Vad betyder « la sala in cui si trovano »?",
+    "opts": [
+     "Salen där de finns",
+     "Salen som de hittar",
+     "Salen de går till",
+     "Salen utan konst"
+    ],
+    "a": 0,
+    "why": "In cui = i vilken, där. Efter en preposition använder man cui, inte che."
+   }
+  ],
+  "gloss": {
+   "galleria": {
+    "t": "la galleria",
+    "sv": "galleri, konstmuseum",
+    "g": "f"
+   },
+   "sala": {
+    "t": "la sala",
+    "sv": "sal",
+    "g": "f"
+   },
+   "opere": {
+    "t": "l'opera",
+    "sv": "verk",
+    "g": "f"
+   },
+   "annunciazione": {
+    "t": "l'Annunciazione",
+    "sv": "Bebådelsen",
+    "g": "f"
+   },
+   "dipinta": {
+    "t": "dipingere",
+    "sv": "måla",
+    "g": ""
+   },
+   "bottega": {
+    "t": "la bottega",
+    "sv": "verkstad",
+    "g": "f"
+   },
+   "maestro": {
+    "t": "il maestro",
+    "sv": "mästare, lärare",
+    "g": "m"
+   },
+   "ali": {
+    "t": "l'ala",
+    "sv": "vinge",
+    "g": "f"
+   },
+   "angelo": {
+    "t": "l'angelo",
+    "sv": "ängel",
+    "g": "m"
+   },
+   "uccelli": {
+    "t": "l'uccello",
+    "sv": "fågel",
+    "g": "m"
+   },
+   "realistico": {
+    "t": "realistico",
+    "sv": "realistisk",
+    "g": ""
+   },
+   "paesaggio": {
+    "t": "il paesaggio",
+    "sv": "landskap",
+    "g": "m"
+   },
+   "sogno": {
+    "t": "il sogno",
+    "sv": "dröm",
+    "g": "m"
+   },
+   "scienziato": {
+    "t": "lo scienziato",
+    "sv": "vetenskapsman",
+    "g": "m"
+   },
+   "contrario": {
+    "t": "al contrario",
+    "sv": "baklänges, tvärtom",
+    "g": ""
+   },
+   "specchio": {
+    "t": "lo specchio",
+    "sv": "spegel",
+    "g": "m"
+   },
+   "rivale": {
+    "t": "il rivale",
+    "sv": "rival",
+    "g": "m"
+   },
+   "premete": {
+    "t": "premere",
+    "sv": "trycka",
+    "g": ""
+   }
+  }
+ },
+ {
+  "id": "it3-l-k8",
+  "sec": "k8",
+  "title": "Un consiglio d'amore",
+  "lines": [
+   {
+    "who": "A",
+    "fr": "Fede, posso chiederti un consiglio?",
+    "sv": "Fede, får jag be dig om ett råd?"
+   },
+   {
+    "who": "B",
+    "fr": "Certo, dimmi tutto.",
+    "sv": "Absolut, berätta allt."
+   },
+   {
+    "who": "A",
+    "fr": "C'è un ragazzo nel mio corso di teatro. Si chiama Tommaso. Mi piace da mesi, ma non so se io piaccio a lui.",
+    "sv": "Det finns en kille i min teaterkurs. Han heter Tommaso. Jag har gillat honom i flera månader, men jag vet inte om han gillar mig."
+   },
+   {
+    "who": "B",
+    "fr": "E lui come si comporta con te?",
+    "sv": "Och hur beter han sig mot dig?"
+   },
+   {
+    "who": "A",
+    "fr": "È sempre gentile. Ieri, mentre stavo per uscire, mi ha chiesto se volevo un passaggio a casa. Ma forse è gentile con tutti.",
+    "sv": "Han är alltid snäll. I går, när jag precis skulle gå, frågade han om jag ville ha skjuts hem. Men han kanske är snäll mot alla."
+   },
+   {
+    "who": "B",
+    "fr": "Secondo me gli piaci. Io al posto tuo gli parlerei. Potresti invitarlo a prendere un gelato dopo la lezione.",
+    "sv": "Jag tror att han gillar dig. I ditt ställe skulle jag prata med honom. Du skulle kunna bjuda honom på glass efter lektionen."
+   },
+   {
+    "who": "A",
+    "fr": "Mi piacerebbe, ma ho paura. E se dice di no?",
+    "sv": "Det skulle jag gärna vilja, men jag är rädd. Och om han säger nej?"
+   },
+   {
+    "who": "B",
+    "fr": "Allora saprai la verità e potrai andare avanti. Ma sono sicura che dirà di sì.",
+    "sv": "Då vet du sanningen och kan gå vidare. Men jag är säker på att han säger ja."
+   },
+   {
+    "who": "A",
+    "fr": "Va bene. Glielo chiedo giovedì. Ma tu non dirlo a nessuno!",
+    "sv": "Okej. Jag frågar honom på torsdag. Men säg det inte till någon!"
+   },
+   {
+    "who": "B",
+    "fr": "Promesso. Le mie labbra sono sigillate.",
+    "sv": "Jag lovar. Mina läppar är förseglade."
+   }
+  ],
+  "questions": [
+   {
+    "type": "helhet",
+    "q": "Vad handlar samtalet om?",
+    "opts": [
+     "En tjej som är kär och ber om råd",
+     "Ett gräl mellan två vänner",
+     "En teaterföreställning",
+     "Ett glasskafé"
+    ],
+    "a": 0,
+    "why": "« Mi piace da mesi … posso chiederti un consiglio? »."
+   },
+   {
+    "type": "detalj",
+    "q": "Var har hon träffat Tommaso?",
+    "opts": [
+     "I skolan",
+     "På en teaterkurs",
+     "På gymmet",
+     "På en fest"
+    ],
+    "a": 1,
+    "why": "« C'è un ragazzo nel mio corso di teatro. »"
+   },
+   {
+    "type": "detalj",
+    "q": "Vad hände i går?",
+    "opts": [
+     "Tommaso bjöd henne på glass",
+     "Tommaso frågade om hon ville ha skjuts hem",
+     "De bråkade",
+     "Hon ringde honom"
+    ],
+    "a": 1,
+    "why": "« mi ha chiesto se volevo un passaggio a casa »."
+   },
+   {
+    "type": "detalj",
+    "q": "Vilket råd ger Fede?",
+    "opts": [
+     "Att vänta ett år",
+     "Att bjuda honom på glass efter lektionen",
+     "Att skriva ett brev",
+     "Att glömma honom"
+    ],
+    "a": 1,
+    "why": "« Potresti invitarlo a prendere un gelato dopo la lezione. »"
+   },
+   {
+    "type": "tolkning",
+    "q": "Vad betyder « mentre stavo per uscire »?",
+    "opts": [
+     "Medan jag var ute",
+     "När jag precis skulle gå",
+     "Efter att jag hade gått",
+     "Innan jag kom"
+    ],
+    "a": 1,
+    "why": "Stare per + infinitiv = ska precis, är på väg att."
+   }
+  ],
+  "gloss": {
+   "consiglio": {
+    "t": "il consiglio",
+    "sv": "råd",
+    "g": "m"
+   },
+   "corso": {
+    "t": "il corso",
+    "sv": "kurs",
+    "g": "m"
+   },
+   "teatro": {
+    "t": "il teatro",
+    "sv": "teater",
+    "g": "m"
+   },
+   "comporta": {
+    "t": "comportarsi",
+    "sv": "bete sig",
+    "g": ""
+   },
+   "gentile": {
+    "t": "gentile",
+    "sv": "snäll",
+    "g": ""
+   },
+   "stavo": {
+    "t": "stare per",
+    "sv": "ska precis",
+    "g": ""
+   },
+   "passaggio": {
+    "t": "il passaggio",
+    "sv": "skjuts",
+    "g": "m"
+   },
+   "parlerei": {
+    "t": "parlare (condizionale)",
+    "sv": "skulle prata",
+    "g": ""
+   },
+   "potresti": {
+    "t": "potere (condizionale)",
+    "sv": "skulle kunna",
+    "g": ""
+   },
+   "invitarlo": {
+    "t": "invitare",
+    "sv": "bjuda in",
+    "g": ""
+   },
+   "piacerebbe": {
+    "t": "piacere (condizionale)",
+    "sv": "skulle gilla",
+    "g": ""
+   },
+   "paura": {
+    "t": "la paura",
+    "sv": "rädsla",
+    "g": "f"
+   },
+   "verità": {
+    "t": "la verità",
+    "sv": "sanning",
+    "g": "f"
+   },
+   "avanti": {
+    "t": "andare avanti",
+    "sv": "gå vidare",
+    "g": ""
+   },
+   "promesso": {
+    "t": "promettere",
+    "sv": "lova",
+    "g": ""
+   },
+   "labbra": {
+    "t": "le labbra",
+    "sv": "läppar",
+    "g": "fpl"
+   },
+   "sigillate": {
+    "t": "sigillato",
+    "sv": "förseglad",
+    "g": ""
+   }
+  }
+ },
+ {
+  "id": "it3-l-k8b",
+  "sec": "k8",
+  "title": "Scusami",
+  "lines": [
+   {
+    "who": "A",
+    "fr": "Ciao Sara, sono io, Ilaria. Ti chiamo perché devo chiederti scusa.",
+    "sv": "Hej Sara, det är jag, Ilaria. Jag ringer för att jag måste be dig om ursäkt."
+   },
+   {
+    "who": "A",
+    "fr": "Sabato ti ho detto delle cose bruttissime davanti a tutti. Ero arrabbiata perché non eri venuta alla mia festa, ma non avevo il diritto di trattarti così.",
+    "sv": "I lördags sa jag jättefula saker till dig inför alla. Jag var arg för att du inte hade kommit på min fest, men jag hade ingen rätt att behandla dig så."
+   },
+   {
+    "who": "A",
+    "fr": "Poi Marco mi ha spiegato che tua nonna stava male e che eri andata all'ospedale con lei. Mi sono sentita malissimo. Non lo sapevo.",
+    "sv": "Sedan förklarade Marco för mig att din mormor var sjuk och att du hade åkt till sjukhuset med henne. Jag mådde jättedåligt. Det visste jag inte."
+   },
+   {
+    "who": "A",
+    "fr": "Siamo amiche da dieci anni e non voglio perdere la nostra amicizia per una stupidaggine.",
+    "sv": "Vi har varit vänner i tio år och jag vill inte förlora vår vänskap på grund av en dumhet."
+   },
+   {
+    "who": "A",
+    "fr": "Vorrei vederti per parlare con calma. Magari domani pomeriggio, al solito bar in piazza? Offro io.",
+    "sv": "Jag skulle vilja träffa dig för att prata i lugn och ro. Kanske i morgon eftermiddag, på vårt vanliga kafé på torget? Jag bjuder."
+   },
+   {
+    "who": "A",
+    "fr": "Se sei ancora arrabbiata con me, ti capisco. Ma per favore, rispondimi, anche solo con un messaggio.",
+    "sv": "Om du fortfarande är arg på mig förstår jag dig. Men snälla, svara mig, även om det bara är med ett meddelande."
+   },
+   {
+    "who": "A",
+    "fr": "Spero che tua nonna stia meglio. Ti voglio bene. Ciao.",
+    "sv": "Jag hoppas att din mormor mår bättre. Jag tycker om dig. Hej då."
+   }
+  ],
+  "questions": [
+   {
+    "type": "helhet",
+    "q": "Varför ringer Ilaria?",
+    "opts": [
+     "För att be Sara om ursäkt",
+     "För att bjuda Sara på fest",
+     "För att fråga om mormor ska med",
+     "För att klaga på Marco"
+    ],
+    "a": 0,
+    "why": "« Ti chiamo perché devo chiederti scusa. »"
+   },
+   {
+    "type": "detalj",
+    "q": "Varför var Ilaria arg i lördags?",
+    "opts": [
+     "Sara hade inte kommit på hennes fest",
+     "Sara hade glömt hennes födelsedag",
+     "Sara hade lånat hennes jacka",
+     "Sara hade ljugit"
+    ],
+    "a": 0,
+    "why": "« Ero arrabbiata perché non eri venuta alla mia festa »."
+   },
+   {
+    "type": "detalj",
+    "q": "Varför kom inte Sara på festen?",
+    "opts": [
+     "Hon var sjuk",
+     "Hon var på sjukhuset med sin mormor",
+     "Hon hade inte blivit bjuden",
+     "Hon var ute och reste"
+    ],
+    "a": 1,
+    "why": "« tua nonna stava male e … eri andata all'ospedale con lei »."
+   },
+   {
+    "type": "detalj",
+    "q": "Hur länge har de varit vänner?",
+    "opts": [
+     "Ett år",
+     "Fem år",
+     "Tio år",
+     "Hela livet"
+    ],
+    "a": 2,
+    "why": "« Siamo amiche da dieci anni ». Da + tid + presens = sedan."
+   },
+   {
+    "type": "tolkning",
+    "q": "Vad föreslår Ilaria?",
+    "opts": [
+     "Att de ska träffas på kaféet och prata",
+     "Att Sara ska ringa Marco",
+     "Att de ska sluta vara vänner",
+     "Att de ska ha en ny fest"
+    ],
+    "a": 0,
+    "why": "« Vorrei vederti per parlare con calma … al solito bar in piazza? »"
+   }
+  ],
+  "gloss": {
+   "scusa": {
+    "t": "chiedere scusa",
+    "sv": "be om ursäkt",
+    "g": ""
+   },
+   "bruttissime": {
+    "t": "brutto",
+    "sv": "ful, elak (-issimo: jätte-)",
+    "g": ""
+   },
+   "arrabbiata": {
+    "t": "arrabbiato",
+    "sv": "arg",
+    "g": ""
+   },
+   "diritto": {
+    "t": "il diritto",
+    "sv": "rätt",
+    "g": "m"
+   },
+   "trattarti": {
+    "t": "trattare",
+    "sv": "behandla",
+    "g": ""
+   },
+   "ospedale": {
+    "t": "l'ospedale",
+    "sv": "sjukhus",
+    "g": "m"
+   },
+   "malissimo": {
+    "t": "male",
+    "sv": "dåligt (-issimo: jätte-)",
+    "g": ""
+   },
+   "amicizia": {
+    "t": "l'amicizia",
+    "sv": "vänskap",
+    "g": "f"
+   },
+   "stupidaggine": {
+    "t": "la stupidaggine",
+    "sv": "dumhet",
+    "g": "f"
+   },
+   "calma": {
+    "t": "con calma",
+    "sv": "i lugn och ro",
+    "g": ""
+   },
+   "solito": {
+    "t": "solito",
+    "sv": "vanlig",
+    "g": ""
+   },
+   "offro": {
+    "t": "offrire",
+    "sv": "bjuda",
+    "g": ""
+   },
+   "rispondimi": {
+    "t": "rispondere",
+    "sv": "svara",
+    "g": ""
+   },
+   "spero": {
+    "t": "sperare",
+    "sv": "hoppas",
+    "g": ""
+   },
+   "stia": {
+    "t": "stare (congiuntivo)",
+    "sv": "må",
+    "g": ""
+   }
+  }
+ }
+]

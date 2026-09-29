@@ -1,0 +1,327 @@
+[
+ {
+  "id": "subjp-001",
+  "topic": "subjp",
+  "rule": "subjp-form",
+  "q": "Je suis content que tu [aies réussi] ton audition.",
+  "alt": [
+   "as réussi",
+   "aies réussir",
+   "sois réussi"
+  ],
+  "why": "Être content que kräver subjonctif. Provspelningen har redan skett, så subjonctif passé: avoir i subjonctif (aies) + réussi.",
+  "sv": "Jag är glad att du klarade provspelningen."
+ },
+ {
+  "id": "subjp-002",
+  "topic": "subjp",
+  "rule": "subjp-form",
+  "q": "Bien qu'il [ait beaucoup répété], il a oublié une partie du morceau.",
+  "alt": [
+   "a beaucoup répété",
+   "ait beaucoup répéter",
+   "soit beaucoup répété"
+  ],
+  "why": "Bien que tar alltid subjonctif. Repetitionerna låg före, så subjonctif passé: ait répété.",
+  "sv": "Fast han hade repeterat mycket glömde han en del av stycket."
+ },
+ {
+  "id": "subjp-003",
+  "topic": "subjp",
+  "rule": "subjp-form",
+  "q": "Il est dommage que vous [n'ayez pas vu] l'exposition.",
+  "alt": [
+   "n'avez pas vu",
+   "n'ayez pas voir",
+   "ne soyez pas vu"
+  ],
+  "why": "Il est dommage que + subjonctif. Ayez är subjonctif av avoir (vous), och efter det kommer participet vu.",
+  "sv": "Det är synd att ni inte har sett utställningen."
+ },
+ {
+  "id": "subjp-004",
+  "topic": "subjp",
+  "rule": "subjp-form",
+  "q": "Je doute qu'elle [ait lu] tout le roman en une nuit.",
+  "alt": [
+   "a lu",
+   "ait lire",
+   "soit lue"
+  ],
+  "why": "Douter que (tvivla på att) kräver subjonctif: qu'elle ait lu. Lire tar avoir.",
+  "sv": "Jag tvivlar på att hon läste hela romanen på en natt."
+ },
+ {
+  "id": "subjp-005",
+  "topic": "subjp",
+  "rule": "subjp-form",
+  "q": "Nous regrettons que nos voisins [aient porté] plainte.",
+  "alt": [
+   "ont porté",
+   "aient porter",
+   "soient portés"
+  ],
+  "why": "Regretter que + subjonctif. Klagomålet har redan gjorts: subjonctif passé, aient porté.",
+  "sv": "Vi beklagar att våra grannar har gjort en anmälan."
+ },
+ {
+  "id": "subjp-006",
+  "topic": "subjp",
+  "rule": "subjp-form",
+  "q": "C'est incroyable qu'ils [aient fini] les travaux en trois semaines.",
+  "alt": [
+   "ont fini",
+   "aient finir",
+   "soient finis"
+  ],
+  "why": "C'est incroyable que + subjonctif. Arbetet är redan klart: qu'ils aient fini.",
+  "sv": "Det är otroligt att de blev klara med bygget på tre veckor."
+ },
+ {
+  "id": "subjp-007",
+  "topic": "subjp",
+  "rule": "subjp-form",
+  "q": "Il se peut que [j'aie oublié] mon badge dans la salle de répétition.",
+  "alt": [
+   "j'ai oublié",
+   "j'aie oublier",
+   "je sois oublié"
+  ],
+  "why": "Il se peut que (det kan hända att) kräver subjonctif. Aie (med -e) är subjonctif av avoir; ai är indikativ.",
+  "sv": "Det kan hända att jag har glömt mitt passerkort i replokalen."
+ },
+ {
+  "id": "subjp-008",
+  "topic": "subjp",
+  "rule": "subjp-etre",
+  "q": "Je suis ravie que ta sœur [soit venue] au concert.",
+  "alt": [
+   "ait venue",
+   "soit venu",
+   "est venue"
+  ],
+  "why": "Venir tar être: subjonctif passé = soit + venue. Participet böjs efter ta sœur (femininum).",
+  "sv": "Jag är jätteglad att din syster kom på konserten."
+ },
+ {
+  "id": "subjp-009",
+  "topic": "subjp",
+  "rule": "subjp-etre",
+  "q": "Bien qu'ils [soient partis] tôt, ils ont raté le train.",
+  "alt": [
+   "aient partis",
+   "soient parti",
+   "sont partis"
+  ],
+  "why": "Bien que + subjonctif. Partir tar être: soient partis, med -s efter ils.",
+  "sv": "Fast de åkte tidigt missade de tåget."
+ },
+ {
+  "id": "subjp-010",
+  "topic": "subjp",
+  "rule": "subjp-etre",
+  "q": "Il est possible que la lettre [soit arrivée] hier.",
+  "alt": [
+   "ait arrivée",
+   "soit arrivé",
+   "est arrivée"
+  ],
+  "why": "Il est possible que + subjonctif. Arriver tar être, och participet böjs efter la lettre: soit arrivée.",
+  "sv": "Det är möjligt att brevet kom i går."
+ },
+ {
+  "id": "subjp-011",
+  "topic": "subjp",
+  "rule": "subjp-etre",
+  "q": "Je ne pense pas qu'elles [se soient trompées] de salle.",
+  "alt": [
+   "se sont trompées",
+   "s'aient trompées",
+   "se soient trompé"
+  ],
+  "why": "Nekat penser que + subjonctif. Reflexiva verb tar être: se soient trompées (femininum plural).",
+  "sv": "Jag tror inte att de gick till fel sal."
+ },
+ {
+  "id": "subjp-012",
+  "topic": "subjp",
+  "rule": "subjp-etre",
+  "q": "Mes parents sont soulagés que nous [soyons rentrés] sains et saufs.",
+  "alt": [
+   "ayons rentrés",
+   "sommes rentrés",
+   "soyons rentré"
+  ],
+  "why": "Être soulagé que + subjonctif. Rentrer (utan objekt) tar être: soyons rentrés.",
+  "sv": "Mina föräldrar är lättade över att vi kom hem välbehållna."
+ },
+ {
+  "id": "subjp-013",
+  "topic": "subjp",
+  "rule": "subjp-etre",
+  "q": "Le professeur est surpris que Léa [ne soit pas encore arrivée].",
+  "alt": [
+   "n'ait pas encore arrivée",
+   "n'est pas encore arrivée",
+   "ne soit pas encore arrivé"
+  ],
+  "why": "Être surpris que + subjonctif. Arriver tar être, och Léa ger femininum: arrivée.",
+  "sv": "Läraren är förvånad över att Léa inte har kommit än."
+ },
+ {
+  "id": "subjp-014",
+  "topic": "subjp",
+  "rule": "subjp-temps",
+  "q": "Je suis désolé que tu [aies été] malade la semaine dernière.",
+  "alt": [
+   "sois",
+   "es",
+   "as été"
+  ],
+  "why": "La semaine dernière = det har redan hänt. Då behövs subjonctif passé: que tu aies été.",
+  "sv": "Jag är ledsen att du var sjuk förra veckan."
+ },
+ {
+  "id": "subjp-015",
+  "topic": "subjp",
+  "rule": "subjp-temps",
+  "q": "Je voudrais que tu [viennes] avec moi au concert demain soir.",
+  "alt": [
+   "sois venu",
+   "es venu",
+   "viens"
+  ],
+  "why": "Demain soir = senare. Då räcker subjonctif présent: que tu viennes. Subjonctif passé är för det som redan har hänt.",
+  "sv": "Jag skulle vilja att du följer med mig på konserten i morgon kväll."
+ },
+ {
+  "id": "subjp-016",
+  "topic": "subjp",
+  "rule": "subjp-temps",
+  "q": "Elle est fière que son fils [ait obtenu] son bac l'an dernier.",
+  "alt": [
+   "obtienne",
+   "a obtenu",
+   "obtient"
+  ],
+  "why": "L'an dernier = det har redan hänt: subjonctif passé (ait obtenu). Être fier que kräver subjonctif, så a obtenu är fel.",
+  "sv": "Hon är stolt över att hennes son tog studenten förra året."
+ },
+ {
+  "id": "subjp-017",
+  "topic": "subjp",
+  "rule": "subjp-temps",
+  "q": "Je suis heureuse que tu [sois] là maintenant.",
+  "alt": [
+   "aies été",
+   "es",
+   "seras"
+  ],
+  "why": "Maintenant = samtidigt med glädjen: subjonctif présent (sois).",
+  "sv": "Jag är glad att du är här nu."
+ },
+ {
+  "id": "subjp-018",
+  "topic": "subjp",
+  "rule": "subjp-temps",
+  "q": "Bien qu'elle [ait raté] le bus ce matin, elle est arrivée à l'heure.",
+  "alt": [
+   "rate",
+   "rata",
+   "a raté"
+  ],
+  "why": "Missade bussen i morse, före ankomsten: subjonctif passé efter bien que (ait raté).",
+  "sv": "Fast hon missade bussen i morse kom hon i tid."
+ },
+ {
+  "id": "subjp-019",
+  "topic": "subjp",
+  "rule": "subjp-temps",
+  "q": "Je suis triste que mon grand-père [ne soit pas venu] à mon concert hier.",
+  "alt": [
+   "ne vienne pas",
+   "n'est pas venu",
+   "n'ait pas venu"
+  ],
+  "why": "Hier = redan hänt: subjonctif passé. Venir tar être: ne soit pas venu.",
+  "sv": "Jag är ledsen att min morfar inte kom på min konsert i går."
+ },
+ {
+  "id": "subjp-020",
+  "topic": "subjp",
+  "rule": "subjp-etre",
+  "q": "Nous attendrons jusqu'à ce que tout le monde [soit arrivé].",
+  "alt": [
+   "est arrivé",
+   "ait arrivé",
+   "sera arrivé"
+  ],
+  "why": "Jusqu'à ce que (tills) kräver subjonctif. Arriver tar être: soit arrivé (tout le monde är singular).",
+  "sv": "Vi väntar tills alla har kommit."
+ },
+ {
+  "id": "subjp-021",
+  "topic": "subjp",
+  "rule": "subjp-sup",
+  "q": "C'est le meilleur film que [j'aie jamais vu].",
+  "alt": [
+   "j'aie jamais voir",
+   "je sois jamais vu",
+   "j'aie jamais vue"
+  ],
+  "why": "Efter superlativ (le meilleur … que) står gärna subjonctif: j'aie vu. Participet böjs efter que = le film (maskulinum), så vu.",
+  "sv": "Det är den bästa film jag någonsin har sett."
+ },
+ {
+  "id": "subjp-022",
+  "topic": "subjp",
+  "rule": "subjp-sup",
+  "q": "C'est la seule pianiste qui [ait remporté] deux fois ce concours.",
+  "alt": [
+   "ait remportée",
+   "soit remportée",
+   "ait remporter"
+  ],
+  "why": "Efter le seul / la seule qui kommer subjonctif: ait remporté. Med avoir böjs participet inte efter subjektet.",
+  "sv": "Hon är den enda pianist som har vunnit den här tävlingen två gånger."
+ },
+ {
+  "id": "subjp-023",
+  "topic": "subjp",
+  "rule": "subjp-sup",
+  "q": "Voilà le texte le plus difficile que nous [ayons traduit] cette année.",
+  "alt": [
+   "ayons traduire",
+   "soyons traduits",
+   "ayons traduits"
+  ],
+  "why": "Superlativ + que → subjonctif passé: ayons traduit. Que syftar på le texte (maskulinum singular), så inget -s.",
+  "sv": "Det här är den svåraste text vi har översatt i år."
+ },
+ {
+  "id": "subjp-024",
+  "topic": "subjp",
+  "rule": "subjp-sup",
+  "q": "Montréal est la ville la plus froide que [j'aie visitée].",
+  "alt": [
+   "j'aie visité",
+   "je sois visitée",
+   "j'aie visiter"
+  ],
+  "why": "Superlativ → subjonctif: j'aie visitée. Objektet que (= la ville) står före verbet, så participet böjs: visitée.",
+  "sv": "Montréal är den kallaste stad jag har besökt."
+ },
+ {
+  "id": "subjp-025",
+  "topic": "subjp",
+  "rule": "subjp-sup",
+  "q": "Il n'y a personne qui [ait compris] la consigne.",
+  "alt": [
+   "ait comprise",
+   "soit compris",
+   "ait comprendre"
+  ],
+  "why": "Efter il n'y a personne qui kommer subjonctif: ait compris. Objektet la consigne står efter verbet, så participet böjs inte.",
+  "sv": "Det finns ingen som har förstått instruktionen."
+ }
+]

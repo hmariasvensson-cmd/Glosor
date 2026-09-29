@@ -1,0 +1,288 @@
+[
+ {
+  "id": "rel2-001",
+  "topic": "rel2",
+  "rule": "rel-dont",
+  "q": "C'est le film [dont] tout le monde parle.",
+  "alt": [
+   "que",
+   "qui",
+   "où"
+  ],
+  "why": "Parler DE quelque chose → dont.",
+  "sv": "Det är filmen som alla pratar om."
+ },
+ {
+  "id": "rel2-002",
+  "topic": "rel2",
+  "rule": "rel-dont",
+  "q": "Voici l'ami [dont] je t'ai parlé.",
+  "alt": [
+   "que",
+   "qui",
+   "lequel"
+  ],
+  "why": "Parler de quelqu'un → dont.",
+  "sv": "Här är vännen som jag har berättat om för dig."
+ },
+ {
+  "id": "rel2-003",
+  "topic": "rel2",
+  "rule": "rel-dont",
+  "q": "C'est un souvenir [dont] je suis très fier.",
+  "alt": [
+   "que",
+   "qui",
+   "ce que"
+  ],
+  "why": "Être fier DE → dont.",
+  "sv": "Det är ett minne som jag är väldigt stolt över."
+ },
+ {
+  "id": "rel2-004",
+  "topic": "rel2",
+  "rule": "rel-dont",
+  "q": "J'ai acheté le livre [dont] j'avais besoin.",
+  "alt": [
+   "que",
+   "qui",
+   "ce dont"
+  ],
+  "why": "Avoir besoin DE → dont.",
+  "sv": "Jag köpte boken som jag behövde."
+ },
+ {
+  "id": "rel2-005",
+  "topic": "rel2",
+  "rule": "rel-dont",
+  "q": "C'est une fête [dont] je me souviens bien.",
+  "alt": [
+   "que",
+   "qui",
+   "où"
+  ],
+  "why": "Se souvenir DE → dont.",
+  "sv": "Det är en fest som jag minns väl."
+ },
+ {
+  "id": "rel2-006",
+  "topic": "rel2",
+  "rule": "rel-dont",
+  "q": "La maison [dont] ils rêvent est trop chère.",
+  "alt": [
+   "qu'",
+   "qui",
+   "où"
+  ],
+  "why": "Rêver DE → dont.",
+  "sv": "Huset som de drömmer om är för dyrt."
+ },
+ {
+  "id": "rel2-007",
+  "topic": "rel2",
+  "rule": "rel-dont",
+  "q": "C'est une actrice [dont] j'admire le talent.",
+  "alt": [
+   "que",
+   "qui",
+   "laquelle"
+  ],
+  "why": "Dont = vars: le talent de l'actrice.",
+  "sv": "Det är en skådespelerska vars talang jag beundrar."
+ },
+ {
+  "id": "rel2-008",
+  "topic": "rel2",
+  "rule": "rel-cequi",
+  "q": "[Ce qui] me plaît, c'est l'ambiance.",
+  "alt": [
+   "Ce que",
+   "Qui",
+   "Que"
+  ],
+  "why": "Ce qui är subjekt för plaît: det som behagar mig.",
+  "sv": "Det jag gillar är stämningen."
+ },
+ {
+  "id": "rel2-009",
+  "topic": "rel2",
+  "rule": "rel-cequi",
+  "q": "Dis-moi [ce qui] ne va pas.",
+  "alt": [
+   "ce que",
+   "qui",
+   "que"
+  ],
+  "why": "Ce qui är subjekt för va: det som inte fungerar.",
+  "sv": "Säg vad det är som inte står rätt till."
+ },
+ {
+  "id": "rel2-010",
+  "topic": "rel2",
+  "rule": "rel-cequi",
+  "q": "[Ce qui] est important, c'est de rester honnête.",
+  "alt": [
+   "Ce que",
+   "Ce dont",
+   "Qu'"
+  ],
+  "why": "Ce qui är subjekt för est.",
+  "sv": "Det som är viktigt är att förbli ärlig."
+ },
+ {
+  "id": "rel2-011",
+  "topic": "rel2",
+  "rule": "rel-cequi",
+  "q": "Je ne comprends pas [ce qui] se passe.",
+  "alt": [
+   "ce que",
+   "qu'il",
+   "ce dont"
+  ],
+  "why": "Se passer har inget annat subjekt: ce qui se passe.",
+  "sv": "Jag förstår inte vad som händer."
+ },
+ {
+  "id": "rel2-012",
+  "topic": "rel2",
+  "rule": "rel-cequi",
+  "q": "[Ce qui] m'énerve, ce sont les pubs.",
+  "alt": [
+   "Ce que",
+   "Qui",
+   "Ce dont"
+  ],
+  "why": "Ce qui är subjekt för énerve.",
+  "sv": "Det som irriterar mig är reklamen."
+ },
+ {
+  "id": "rel2-013",
+  "topic": "rel2",
+  "rule": "rel-ceque",
+  "q": "[Ce que] je préfère, c'est la fin du film.",
+  "alt": [
+   "Ce qui",
+   "Ce dont",
+   "Qui"
+  ],
+  "why": "Je är subjekt, så ce que är objekt för préfère.",
+  "sv": "Det jag gillar bäst är slutet på filmen."
+ },
+ {
+  "id": "rel2-014",
+  "topic": "rel2",
+  "rule": "rel-ceque",
+  "q": "Fais [ce que] tu veux.",
+  "alt": [
+   "ce qui",
+   "qui",
+   "ce dont"
+  ],
+  "why": "Tu är subjekt: ce que (objekt för veux).",
+  "sv": "Gör vad du vill."
+ },
+ {
+  "id": "rel2-015",
+  "topic": "rel2",
+  "rule": "rel-ceque",
+  "q": "Je ne sais pas [ce qu'] il pense.",
+  "alt": [
+   "ce qui",
+   "qu'est-ce qu'",
+   "ce dont"
+  ],
+  "why": "Indirekt fråga om objekt: ce qu'il pense. Qu'est-ce que används bara i direkta frågor.",
+  "sv": "Jag vet inte vad han tycker."
+ },
+ {
+  "id": "rel2-016",
+  "topic": "rel2",
+  "rule": "rel-ceque",
+  "q": "Tout [ce que] tu dis est vrai.",
+  "alt": [
+   "ce qui",
+   "que ce",
+   "ce dont"
+  ],
+  "why": "Tu är subjekt: tout ce que tu dis.",
+  "sv": "Allt du säger är sant."
+ },
+ {
+  "id": "rel2-017",
+  "topic": "rel2",
+  "rule": "rel-ceque",
+  "q": "Raconte-moi [ce que] vous avez fait pendant les vacances.",
+  "alt": [
+   "ce qui",
+   "qu'est-ce que",
+   "quoi"
+  ],
+  "why": "Vous är subjekt: ce que vous avez fait.",
+  "sv": "Berätta vad ni gjorde under lovet."
+ },
+ {
+  "id": "rel2-018",
+  "topic": "rel2",
+  "rule": "rel-ceque",
+  "q": "[Ce que] les jeunes veulent, c'est plus de liberté.",
+  "alt": [
+   "Ce qui",
+   "Ce dont",
+   "Qui"
+  ],
+  "why": "Les jeunes är subjekt: ce que.",
+  "sv": "Det unga vill ha är mer frihet."
+ },
+ {
+  "id": "rel2-019",
+  "topic": "rel2",
+  "rule": "rel-mix",
+  "q": "Le garçon [qui] habite en face est musicien.",
+  "alt": [
+   "que",
+   "dont",
+   "où"
+  ],
+  "why": "Qui är subjekt för habite.",
+  "sv": "Killen som bor mittemot är musiker."
+ },
+ {
+  "id": "rel2-020",
+  "topic": "rel2",
+  "rule": "rel-mix",
+  "q": "La série [que] je regarde a cinq saisons.",
+  "alt": [
+   "qui",
+   "dont",
+   "où"
+  ],
+  "why": "Je är subjekt, que är objekt.",
+  "sv": "Serien som jag tittar på har fem säsonger."
+ },
+ {
+  "id": "rel2-021",
+  "topic": "rel2",
+  "rule": "rel-mix",
+  "q": "La ville [où] je suis né est au bord de la mer.",
+  "alt": [
+   "que",
+   "dont",
+   "qui"
+  ],
+  "why": "Plats: où.",
+  "sv": "Staden där jag föddes ligger vid havet."
+ },
+ {
+  "id": "rel2-022",
+  "topic": "rel2",
+  "rule": "rel-mix",
+  "q": "C'est un problème [dont] on parle trop peu.",
+  "alt": [
+   "qu'",
+   "qui",
+   "où"
+  ],
+  "why": "Parler de → dont.",
+  "sv": "Det är ett problem som man pratar för lite om."
+ }
+]

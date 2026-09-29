@@ -1,4 +1,4 @@
-/* ---------- Provträning: uppgifter i språkprovets format (Goethe B2, DELF B1) ----------
+/* ---------- Provträning: uppgifter i språkprovets format (DELF A1–B2, Goethe A1–C1 m.fl.) ----------
    Uppgifterna ligger i languages/<kod>/content/exam.json. Läs- och höruppgifter rättas direkt, skriv- och
    taluppgifter bedöms av Claude (sample) efter provets kriterier. Resultaten sparas i S.exam:
    {t: {<uppgift>: {pct, best, n, last}}, sims: [{d, parts: {<del>: pct}, tasks: {<uppgift>: pct}, min}]}
@@ -166,9 +166,12 @@ function examMC(t){
 }
 
 /* Skriva: bedöms av Claude med provets kriterier, 0–5 poäng per kriterium */
+// Provets nivå: uppgiftens level, provdelens level, exam.json:s level, nivån i provets namn, lang.js exam.level, kursens nivå
+const examLevel=t=>cefrOf(t&&t.level)||cefrOf(t&&exPart(t.part).level)||cefrOf(EX().level)||cefrOf(EX().name)||cefrOf(L.exam&&L.exam.level)||courseLevel();
 function examPrompt(t,text,speak){
-  const e=EX();
-  return `Du är en erfaren bedömare för ${e.name}. Eleven är en svensk gymnasieelev som ska söka musikutbildning utomlands och behöver klara provet.
+  const e=EX(), lv=examLevel(t), low=lv==="A1"||lv==="A2";
+  return `Du är en erfaren bedömare för ${e.name} (nivå ${lv}). Eleven är en ${studentDesc()}. Eleven tränar inför provet.
+Nivån som gäller: ${levelGuide(lv)}
 Uppgiften (${exPart(t.part).name}${t.teil?", "+t.teil:""}) var:
 ${t.task}
 ${speak?"Eleven har skrivit stödord eller det hon eller han skulle säga muntligt. Bedöm innehåll, struktur, ordförråd och grammatik som för en muntlig prestation.":(EX().approxWords?`Cirka ${t.minWords} ord (en text med mindre än hälften så många ord ger 0 poäng på provet).`:`Minst ${t.minWords} ord.`)}
@@ -179,13 +182,13 @@ ${text.slice(0,6000)}
 >>>
 
 Bedöm som på provet och svara på svenska med bara ett JSON-objekt:
-{"kriterier": [${(t.criteria||["Uppgiften","Sammanhang","Ordförråd","Grammatik"]).map(c=>`{"namn": ${JSON.stringify(c)}, "poang": 0-5, "kommentar": "en mening"}`).join(", ")}],
+{"kriterier": [${(t.criteria||(low?["Uppgiften","Ordförråd","Grammatik och stavning"]:["Uppgiften","Sammanhang","Ordförråd","Grammatik"])).map(c=>`{"namn": ${JSON.stringify(c)}, "poang": 0-5, "kommentar": "en mening"}`).join(", ")}],
  "helhet": "2–3 meningar: helhetsintryck och om texten skulle bli godkänd",
  "bra": ["högst 3 konkreta styrkor"],
  "fel": [{"citat": "exakt fras ur texten", "rattat": "rättad fras", "varfor": "kort förklaring"}],
  "nasta": "det viktigaste att träna inför provet",
  "niva": "ungefärlig nivå enligt GERS"}
-5 poäng = helt på ${e.name.includes("B2")?"B2":"B1"}-nivå, 3 = precis godkänt, 0 = saknas. Var ärlig: en för kort text, eller en text som missar punkter i uppgiften, får låga poäng på uppgiften. Högst 8 fel, de viktigaste först.`;
+5 poäng = helt på ${lv}-nivå, 3 = precis godkänt på ${lv}, 0 = saknas. Bedöm mot ${lv} och inte mot en högre nivå${low?": på "+lv+" räcker korta, enkla meningar och vanliga fel är väntade så länge texten går att förstå":""}. Var ärlig: en för kort text, eller en text som missar punkter i uppgiften, får låga poäng på uppgiften. Högst 8 fel, de viktigaste först.`;
 }
 // Procent av kriteriernas poäng, eller null när svaret saknar kriterier (då sparas inget resultat)
 const exScore=f=>{const k=(f&&f.kriterier)||[]; const n=k.length*5, r=k.reduce((a,x)=>a+Math.max(0,Math.min(5,+x.poang||0)),0); return n?exPct(r,n):null;};
@@ -196,7 +199,7 @@ function examWrite(t){ examText(t,false); }
 function examSpeak(t){ examText(t,true); }
 function examText(t,speak){
   S.drafts=S.drafts||{}; S.fb=S.fb||{};
-  const dk="x:"+t.id, start=Date.now(); let ctl=null, graded=null;
+  const dk="x:"+t.id, start=Date.now(); let ctl=null, graded=null; const low=()=>/^A/.test(examLevel(t));
   app.innerHTML=`<section class="panel">${exHead(t,speak?"Tala":"Skriva")}
     <div class="extask" ${lang()}>${esc(t.task).replace(/\n/g,"<br>")}</div>
     ${speak?`<p class="plan">${t.prep?`Förbered dig i ${t.prep} minuter och tala sedan`:"På provet finns ingen förberedelsetid här. Tala"} i ungefär ${t.time} minuter. Säg det högt, gärna inspelat med mobilen, så att du hör dig själv. Skriv sedan stödord eller det du sa nedanför, så kan Claude kommentera.</p>
@@ -212,13 +215,14 @@ function examText(t,speak){
   if(speak) $("#talk").onclick=()=>exClock(t.time,"Taltid");
   const ta=$("#xtext"); let tm=null; wireAccents(ta);
   const count=()=>{const n=tok(ta.value).length; $("#xcount").textContent=speak?"":`${n} ord${t.minWords?` av ${exWords()} ${t.minWords}`:""}`;};
-  ta.oninput=()=>{count(); clearTimeout(tm); tm=setTimeout(()=>{S.drafts[dk]=ta.value; save();},800);}; count();
+  const st=S; ta.oninput=()=>{count(); clearTimeout(tm); tm=setTimeout(()=>{ if(S!==st) return; (S.drafts=S.drafts||{})[dk]=ta.value; save();},800);}; count();   // inte i en annan kurs S
   if($("#mplay")) $("#mplay").onclick=()=>speakSeq([tlLine(t.model)]);
   $("#exdone").onclick=async()=>{
     const out=$("#exres"), btn=$("#exdone");
     if(ctl){ ctl.abort(); return; }
     const text=ta.value.trim();
-    if(tok(text).length<15){ out.innerHTML=`<p class="foot">Skriv minst 15 ord först.</p>`; return; }
+    const need=speak?(low()?5:15):minForFeedback(t.minWords);   // A1-formulär: färre ord
+    if(tok(text).length<need){ out.innerHTML=`<p class="foot">Skriv minst ${need} ord först.</p>`; return; }
     if(!SAMPLE){ out.innerHTML=`<p class="foot">Bedömningen fungerar när appen är öppnad på claude.ai.</p>`; return; }
     S.drafts[dk]=ta.value; ctl=new AbortController(); btn.textContent="Stoppa";
     out.innerHTML=`<p class="foot">Claude bedömer din text … Det brukar ta 10–40 sekunder.</p>`;
