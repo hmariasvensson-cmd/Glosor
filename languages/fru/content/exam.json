@@ -35,8 +35,8 @@
    "teil": "Exercice 1",
    "title": "Streaming : qui paie les musiciens ?",
    "time": 9,
-   "plays": 1,
-   "instr": "Du hör en radiointervju med Hélène Marchal, cellist och medgrundare till ett kollektiv som försvarar musikers rättigheter gentemot streamingtjänsterna. Läs frågorna först. Här hör du intervjun en gång, så var koncentrerad från början. Välj rätt svar på varje fråga.",
+   "plays": 2,
+   "instr": "Du hör en radiointervju med Hélène Marchal, cellist och medgrundare till ett kollektiv som försvarar musikers rättigheter gentemot streamingtjänsterna. Läs frågorna först. Du hör intervjun två gånger. Välj rätt svar på varje fråga.",
    "lines": [
     {
      "fr": "— Hélène Marchal, vous êtes violoncelliste et vous venez de cofonder un collectif qui défend les droits des musiciens face aux plateformes de streaming. Pourquoi ce combat ?",
@@ -113,13 +113,14 @@
      "why": "Pengarna fördelas efter andelen av alla lyssningar, så att en del av jazzlyssnarens avgift hamnar « dans la poche des vedettes les plus écoutées »."
     },
     {
-     "q": "Vrai ou faux ? Hélène Marchal présente le système « centré sur l'utilisateur » comme une solution qui réglera tous les problèmes.",
+     "q": "Comment Hélène Marchal présente-t-elle le système « centré sur l'utilisateur » ?",
      "opts": [
-      "Vrai",
-      "Faux"
+      "Comme une solution qui réglera tous les problèmes.",
+      "Comme une piste dont l'effet serait sans doute limité.",
+      "Comme une idée qu'aucune plateforme n'a encore testée."
      ],
      "a": 1,
-     "why": "Faux. Hon säger att studierna inte är eniga och att vinsten kan bli « modeste »: « Je ne prétends donc pas que ce soit une solution miracle »."
+     "why": "« pour plusieurs économistes, le gain pour les petits artistes serait modeste. Je ne prétends donc pas que ce soit une solution miracle ». Plattformar har testat systemet: « Certaines plateformes l'ont testé »."
     },
     {
      "q": "Pourquoi certains contrats sont-ils particulièrement désavantageux ?",
@@ -152,15 +153,6 @@
      "why": "Metadata är « mal renseignées, si bien que certains interprètes ne sont tout simplement pas identifiés »."
     },
     {
-     "q": "Vrai ou faux ? Selon Hélène Marchal, l'État n'a encore rien fait.",
-     "opts": [
-      "Vrai",
-      "Faux"
-     ],
-     "a": 1,
-     "why": "Faux. « Il intervient déjà en partie : une taxe sur le streaming a été créée pour financer le Centre national de la musique »."
-    },
-    {
      "q": "Quelle mesure lui paraît la plus importante ?",
      "opts": [
       "Augmenter la taxe sur le streaming.",
@@ -169,6 +161,272 @@
      ],
      "a": 2,
      "why": "« l'essentiel est ailleurs. Il faudrait que les musiciens apprennent, dès le conservatoire, à lire un contrat et à connaître leurs droits »."
+    }
+   ]
+  },
+  {
+   "id": "fru-co-3",
+   "part": "co",
+   "teil": "Exercice 1",
+   "title": "Bienvenue en licence",
+   "time": 9,
+   "plays": 2,
+   "instr": "Du hör ett utdrag ur ett välkomstföredrag för nya studenter i musikvetenskap (licence de musicologie) vid ett franskt universitet. Läs frågorna först. Du hör föredraget två gånger. Välj rätt svar på varje fråga.",
+   "lines": [
+    {
+     "fr": "— Bonjour à toutes et à tous, et bienvenue à l'université. Je suis Nadia Berthier, responsable de la première année de licence de musicologie. Avant que vous ne commenciez vos cours lundi, je voudrais vous expliquer comment fonctionne une licence, car beaucoup d'étudiants découvrent le système en cours de route, et parfois trop tard.",
+     "sv": "– God morgon allesammans, och välkomna till universitetet. Jag heter Nadia Berthier och är ansvarig för första året på kandidatprogrammet i musikvetenskap. Innan ni börjar med kurserna på måndag vill jag förklara hur en licence fungerar, eftersom många studenter upptäcker systemet under resans gång, och ibland för sent."
+    },
+    {
+     "fr": "— La licence se prépare en trois ans, soit six semestres. Chaque semestre vous permet d'obtenir trente crédits européens, les fameux ECTS, et il vous en faudra cent quatre-vingts pour décrocher le diplôme. Ces crédits sont regroupés dans des unités d'enseignement, que l'on appelle des UE.",
+     "sv": "– En licence tar tre år, alltså sex terminer. Varje termin ger er trettio europeiska poäng, de välkända ECTS-poängen, och ni behöver hundraåttio för att ta examen. Poängen är samlade i kursenheter, som kallas UE."
+    },
+    {
+     "fr": "— Vous aurez deux grands types de cours. Les cours magistraux, ou CM, ont lieu en amphithéâtre : l'enseignant expose, vous prenez des notes, et personne ne vérifiera si vous êtes présents. Ne vous y trompez pas : c'est pourtant là que se joue une grande partie de la réussite. Les travaux dirigés, ou TD, se déroulent en petits groupes ; on y applique ce qui a été vu en cours, qu'il s'agisse d'analyse, d'harmonie ou de commentaire d'écoute, et la présence y est obligatoire.",
+     "sv": "– Ni kommer att ha två huvudtyper av undervisning. Föreläsningarna, CM, hålls i en hörsal: läraren föreläser, ni antecknar, och ingen kontrollerar om ni är där. Låt er inte luras: det är ändå där en stor del av framgången avgörs. Seminarierna, TD, hålls i små grupper; där tillämpar man det man har gått igenom på föreläsningarna, vare sig det gäller analys, harmonilära eller lyssningsanalys, och där är närvaro obligatorisk."
+    },
+    {
+     "fr": "— Quant à l'évaluation, elle combine le contrôle continu, c'est-à-dire des devoirs et des exposés tout au long du semestre, et des examens terminaux en fin de semestre. En général, les notes se compensent : une moyenne de dix sur vingt suffit pour valider le semestre, même si vous avez échoué dans une matière. Et si ce n'est pas le cas, une session de rattrapage est organisée.",
+     "sv": "– När det gäller examinationen kombinerar den löpande examination, alltså inlämningsuppgifter och muntliga redovisningar under hela terminen, och slutexamina i slutet av terminen. I allmänhet kan betygen väga upp varandra: ett medelvärde på tio av tjugo räcker för att bli godkänd på terminen, även om ni har misslyckats i ett ämne. Och om det inte räcker ordnas ett omprov."
+    },
+    {
+     "fr": "— Maintenant, un conseil que je donne chaque année. Ce qui fait échouer les étudiants de première année, ce n'est presque jamais le manque de capacités. C'est l'organisation. Au lycée, on vous disait quoi faire et quand ; ici, vous aurez parfois une quinzaine d'heures de cours par semaine seulement, et tout le reste du temps, c'est à vous de le structurer. Ceux qui considèrent ces heures libres comme des vacances le regrettent en janvier.",
+     "sv": "– Nu ett råd som jag ger varje år. Det som får förstaårsstudenter att misslyckas är nästan aldrig bristande förmåga. Det är planeringen. På gymnasiet fick ni höra vad ni skulle göra och när; här har ni ibland bara ett femtontal timmar lektioner i veckan, och all övrig tid måste ni strukturera själva. De som ser de fria timmarna som semester ångrar sig i januari."
+    },
+    {
+     "fr": "— Excusez-moi, est-ce qu'on peut suivre la licence en même temps que le conservatoire ?",
+     "sv": "– Ursäkta, kan man läsa en licence samtidigt som man går på konservatoriet?"
+    },
+    {
+     "fr": "— Oui, et c'est même fréquent dans notre filière. Beaucoup d'universités proposent un aménagement d'études pour les étudiants qui suivent en parallèle une formation artistique : vous pouvez par exemple être dispensé d'assiduité dans certains TD. Mais renseignez-vous dès maintenant auprès du secrétariat pédagogique, car les demandes se font en début de semestre.",
+     "sv": "– Ja, och det är till och med vanligt på vår utbildning. Många universitet erbjuder anpassad studiegång för studenter som samtidigt går en konstnärlig utbildning: ni kan till exempel slippa närvarokravet i vissa seminarier. Men hör efter redan nu med studieadministrationen, för ansökningarna görs i början av terminen."
+    },
+    {
+     "fr": "— Enfin, n'hésitez pas à vous inscrire au tutorat : des étudiants de troisième année vous aident à préparer les examens. C'est gratuit, et ceux qui y participent le trouvent en général très utile.",
+     "sv": "– Till sist: tveka inte att anmäla er till mentorsprogrammet, där studenter i tredje året hjälper er att förbereda er inför tentorna. Det är gratis, och de som deltar tycker i allmänhet att det är mycket givande."
+    }
+   ],
+   "qs": [
+    {
+     "q": "Pourquoi Nadia Berthier explique-t-elle le fonctionnement de la licence ?",
+     "opts": [
+      "Parce que le système a changé cette année.",
+      "Parce que beaucoup d'étudiants le comprennent trop tard.",
+      "Parce que les étudiants le lui ont demandé par courriel."
+     ],
+     "a": 1,
+     "why": "« beaucoup d'étudiants découvrent le système en cours de route, et parfois trop tard »."
+    },
+    {
+     "q": "Combien de crédits faut-il pour obtenir la licence ?",
+     "opts": [
+      "Trente.",
+      "Soixante.",
+      "Cent quatre-vingts."
+     ],
+     "a": 2,
+     "why": "« il vous en faudra cent quatre-vingts pour décrocher le diplôme ». Trettio är poängen för en termin."
+    },
+    {
+     "q": "Que dit-elle des cours magistraux ?",
+     "opts": [
+      "La présence n'est pas contrôlée, mais ils sont essentiels.",
+      "Ils sont facultatifs et peu utiles pour les examens.",
+      "Ils ont lieu en petits groupes."
+     ],
+     "a": 0,
+     "why": "« personne ne vérifiera si vous êtes présents. Ne vous y trompez pas : c'est pourtant là que se joue une grande partie de la réussite »."
+    },
+    {
+     "q": "Que signifie ici le fait que « les notes se compensent » ?",
+     "opts": [
+      "Chaque matière doit être réussie séparément.",
+      "Une moyenne de 10/20 peut suffire malgré un échec dans une matière.",
+      "Les notes du contrôle continu remplacent les examens."
+     ],
+     "a": 1,
+     "why": "« une moyenne de dix sur vingt suffit pour valider le semestre, même si vous avez échoué dans une matière »."
+    },
+    {
+     "q": "Selon elle, quelle est la principale cause d'échec en première année ?",
+     "opts": [
+      "Le manque d'organisation.",
+      "Le niveau trop élevé des cours.",
+      "Le nombre d'heures de cours."
+     ],
+     "a": 0,
+     "why": "« ce n'est presque jamais le manque de capacités. C'est l'organisation »."
+    },
+    {
+     "q": "Que doit faire un étudiant qui suit aussi le conservatoire ?",
+     "opts": [
+      "Choisir entre les deux formations dès la première année.",
+      "Attendre la fin du premier semestre pour faire une demande.",
+      "Demander rapidement un aménagement au secrétariat pédagogique."
+     ],
+     "a": 2,
+     "why": "« renseignez-vous dès maintenant auprès du secrétariat pédagogique, car les demandes se font en début de semestre »."
+    },
+    {
+     "q": "Qui s'occupe du tutorat ?",
+     "opts": [
+      "Les enseignants du conservatoire.",
+      "Des étudiants de troisième année.",
+      "Des professeurs à la retraite."
+     ],
+     "a": 1,
+     "why": "« des étudiants de troisième année vous aident à préparer les examens »."
+    }
+   ]
+  },
+  {
+   "id": "fru-co-5",
+   "part": "co",
+   "teil": "Exercice 1",
+   "title": "Réparer plutôt que jeter",
+   "time": 10,
+   "plays": 2,
+   "instr": "Du hör en radiointervju med Sylvie Ferrand, som har grundat en förening där invånarna i en liten stad i Bretagne lagar sina trasiga saker tillsammans med frivilliga. Läs frågorna först. Här hör du intervjun två gånger. Välj rätt svar på varje fråga.",
+   "lines": [
+    {
+     "fr": "— Sylvie Ferrand, bonjour. Il y a quatre ans, dans une petite ville de Bretagne, vous avez fondé l'association « Les Tournevis solidaires ». Un samedi par mois, les habitants y apportent leurs objets en panne. Comment l'aventure a-t-elle commencé ?",
+     "sv": "– Sylvie Ferrand, god dag. För fyra år sedan grundade du föreningen ”Les Tournevis solidaires” i en liten stad i Bretagne. En lördag i månaden kommer invånarna dit med sina trasiga saker. Hur började det hela?"
+    },
+    {
+     "fr": "— Un peu par hasard, je dois l'avouer. Mon grille-pain était tombé en panne, et le vendeur m'a expliqué qu'il me coûterait plus cher de le faire réparer que d'en acheter un neuf. Ça m'a mise en colère. Un voisin, électricien à la retraite, l'a ouvert sur la table de ma cuisine : c'était un simple fil dessoudé. Dix minutes de travail. Je me suis dit que si cela m'arrivait à moi, cela devait arriver à beaucoup d'autres.",
+     "sv": "– Lite av en slump, måste jag erkänna. Min brödrost hade gått sönder, och försäljaren förklarade att det skulle bli dyrare för mig att laga den än att köpa en ny. Det gjorde mig arg. En granne, pensionerad elektriker, öppnade den på mitt köksbord: det var bara en sladd som hade lossnat från lödningen. Tio minuters arbete. Jag tänkte att om det hände mig, så måste det hända många andra också."
+    },
+    {
+     "fr": "— Concrètement, comment se passe une séance ?",
+     "sv": "– Hur går en träff till rent konkret?"
+    },
+    {
+     "fr": "— Les gens arrivent avec une lampe, une machine à coudre, un aspirateur… Et c'est là que beaucoup sont surpris : nous ne sommes pas un service de réparation gratuit. Le propriétaire reste à côté du bénévole et répare avec lui. L'idée, c'est qu'il reparte non seulement avec un objet qui fonctionne, mais aussi avec un savoir-faire. Certains reviennent quelques mois plus tard pour aider à leur tour.",
+     "sv": "– Folk kommer med en lampa, en symaskin, en dammsugare … Och det är här många blir förvånade: vi är ingen gratis reparationsservice. Ägaren stannar bredvid den frivillige och lagar saken tillsammans med honom. Tanken är att man ska gå därifrån inte bara med en sak som fungerar, utan också med en kunskap. En del kommer tillbaka några månader senare för att hjälpa till i sin tur."
+    },
+    {
+     "fr": "— Qui sont vos bénévoles ?",
+     "sv": "– Vilka är era frivilliga?"
+    },
+    {
+     "fr": "— Au départ, surtout des retraités : d'anciens électriciens, une couturière, un horloger. Mais depuis un an, nous voyons arriver des jeunes, notamment des élèves d'un lycée professionnel voisin, qui viennent s'entraîner. Ce mélange des générations, je ne l'avais pas du tout prévu, et c'est sans doute ce qui me rend le plus fière.",
+     "sv": "– Från början mest pensionärer: före detta elektriker, en sömmerska, en urmakare. Men sedan ett år tillbaka ser vi unga människor komma, framför allt elever från ett yrkesgymnasium i närheten, som kommer för att öva. Den blandningen av generationer hade jag inte alls räknat med, och det är nog det jag är stoltast över."
+    },
+    {
+     "fr": "— Et les réparateurs professionnels de la ville, comment ont-ils réagi ?",
+     "sv": "– Och stadens yrkesverksamma reparatörer, hur har de reagerat?"
+    },
+    {
+     "fr": "— Avec méfiance au début : un réparateur installé depuis trente ans craignait que nous lui prenions ses clients. Aujourd'hui, nous lui envoyons les pannes trop complexes pour nous, et il vient même parfois nous donner un coup de main le samedi.",
+     "sv": "– Med misstänksamhet i början: en reparatör som har haft sin verkstad i trettio år var rädd att vi skulle ta hans kunder. I dag skickar vi de fel som är för svåra för oss till honom, och ibland kommer han till och med och hjälper oss på lördagarna."
+    },
+    {
+     "fr": "— Est-ce que toutes les réparations réussissent ?",
+     "sv": "– Lyckas alla reparationer?"
+    },
+    {
+     "fr": "— Loin de là. Et les échecs ont souvent la même cause : de plus en plus d'appareils sont collés au lieu d'être vissés, si bien qu'on ne peut pas les ouvrir sans les casser. Et quand on y parvient, la pièce de rechange est parfois introuvable, ou vendue presque au prix de l'appareil entier.",
+     "sv": "– Långt ifrån. Och misslyckandena har ofta samma orsak: allt fler apparater är limmade i stället för skruvade, så att man inte kan öppna dem utan att förstöra dem. Och när man väl lyckas är reservdelen ibland omöjlig att hitta, eller så kostar den nästan lika mycket som hela apparaten."
+    },
+    {
+     "fr": "— Vous en voulez donc aux fabricants ?",
+     "sv": "– Så du är arg på tillverkarna?"
+    },
+    {
+     "fr": "— Je ne voudrais pas caricaturer. Certains fabricants font de vrais efforts, et nous, consommateurs, avons aussi notre part de responsabilité : nous réclamons des produits toujours moins chers, et un appareil bon marché est rarement conçu pour durer. Ce que je demande, c'est simplement de la transparence : qu'au moment de l'achat, on sache si un objet pourra être réparé, et à quel prix.",
+     "sv": "– Jag vill inte dra alla över en kam. Vissa tillverkare anstränger sig verkligen, och vi konsumenter har också vår del av ansvaret: vi vill ha allt billigare produkter, och en billig apparat är sällan gjord för att hålla. Det jag begär är helt enkelt öppenhet: att man när man köper något vet om det kommer att kunna lagas, och till vilket pris."
+    },
+    {
+     "fr": "— Au fond, votre association a-t-elle un poids réel face à la société de consommation ?",
+     "sv": "– Har er förening egentligen någon verklig betydelse mot konsumtionssamhället?"
+    },
+    {
+     "fr": "— Sur le plan écologique, soyons honnêtes, notre action reste modeste : quelques centaines d'objets sauvés par an, ce n'est pas ce qui va sauver la planète. Mais je crois que notre rôle est ailleurs. Quand quelqu'un a réparé lui-même son aspirateur, il ne regarde plus les objets de la même manière. Avant d'acheter, il se demande combien de temps celui-ci durera. C'est ce changement de regard, bien plus que les kilos de déchets évités, qui peut faire évoluer les choses.",
+     "sv": "– Miljömässigt, låt oss vara ärliga, är det vi gör blygsamt: några hundra räddade saker om året är inte det som kommer att rädda planeten. Men jag tror att vår roll ligger någon annanstans. När någon själv har lagat sin dammsugare ser han inte längre på saker på samma sätt. Innan han köper något frågar han sig hur länge det kommer att hålla. Det är den förändrade synen, mycket mer än de kilon avfall man har undvikit, som kan få saker att förändras."
+    },
+    {
+     "fr": "— Et si un auditeur a envie de se lancer ?",
+     "sv": "– Och om en lyssnare vill sätta i gång?"
+    },
+    {
+     "fr": "— Qu'il n'ait surtout pas peur de ne rien savoir faire ! Personne ne lui demandera de diplôme. Il suffit d'un peu de curiosité et, surtout, de beaucoup de patience.",
+     "sv": "– Då ska han absolut inte vara rädd för att inte kunna något! Ingen kommer att be om något examensbevis. Det räcker med lite nyfikenhet och framför allt mycket tålamod."
+    },
+    {
+     "fr": "— Sylvie Ferrand, merci.",
+     "sv": "– Sylvie Ferrand, tack."
+    }
+   ],
+   "qs": [
+    {
+     "q": "Qu'est-ce qui a poussé Sylvie Ferrand à créer l'association ?",
+     "opts": [
+      "Elle cherchait une activité pour sa retraite.",
+      "Un électricien lui a proposé d'ouvrir un atelier.",
+      "On lui avait conseillé de racheter un appareil qui était facile à réparer."
+     ],
+     "a": 2,
+     "why": "Försäljaren sa att det var dyrare att laga brödrosten än att köpa en ny, men det var « un simple fil dessoudé. Dix minutes de travail »."
+    },
+    {
+     "q": "Qu'est-ce qui surprend beaucoup de participants ?",
+     "opts": [
+      "Ils doivent participer eux-mêmes à la réparation.",
+      "Les réparations sont payantes.",
+      "Ils doivent laisser leur objet pendant un mois."
+     ],
+     "a": 0,
+     "why": "« nous ne sommes pas un service de réparation gratuit. Le propriétaire reste à côté du bénévole et répare avec lui »."
+    },
+    {
+     "q": "De quoi Sylvie Ferrand est-elle la plus fière ?",
+     "opts": [
+      "Du nombre d'objets réparés chaque année.",
+      "De la rencontre entre les générations.",
+      "Du partenariat avec le lycée professionnel."
+     ],
+     "a": 1,
+     "why": "« Ce mélange des générations, je ne l'avais pas du tout prévu, et c'est sans doute ce qui me rend le plus fière »."
+    },
+    {
+     "q": "Pourquoi de nombreuses réparations échouent-elles ?",
+     "opts": [
+      "Les bénévoles manquent de formation.",
+      "Les objets apportés sont trop anciens.",
+      "Beaucoup d'appareils sont collés et ne s'ouvrent pas sans être abîmés."
+     ],
+     "a": 2,
+     "why": "« de plus en plus d'appareils sont collés au lieu d'être vissés, si bien qu'on ne peut pas les ouvrir sans les casser »."
+    },
+    {
+     "q": "Quelle est sa position à l'égard des fabricants ?",
+     "opts": [
+      "Elle les juge seuls responsables du problème.",
+      "Elle estime que les consommateurs sont aussi responsables.",
+      "Elle pense qu'ils ont déjà réglé le problème."
+     ],
+     "a": 1,
+     "why": "« Certains fabricants font de vrais efforts, et nous, consommateurs, avons aussi notre part de responsabilité »."
+    },
+    {
+     "q": "Que réclame-t-elle ?",
+     "opts": [
+      "Savoir, au moment de l'achat, si un objet est réparable et à quel prix.",
+      "L'interdiction des appareils bon marché.",
+      "Des pièces de rechange gratuites."
+     ],
+     "a": 0,
+     "why": "« qu'au moment de l'achat, on sache si un objet pourra être réparé, et à quel prix »."
+    },
+    {
+     "q": "Selon elle, l'intérêt principal de son association est…",
+     "opts": [
+      "de réduire fortement les déchets de la région.",
+      "de changer la façon dont les gens regardent les objets.",
+      "de former de futurs électriciens."
+     ],
+     "a": 1,
+     "why": "Miljöeffekten är « modeste »; det viktiga är « ce changement de regard, bien plus que les kilos de déchets évités »."
     }
    ]
   },
@@ -266,15 +524,6 @@
      "why": "« Les quotas ont obligé les radios à chercher de nouveaux artistes, et toute une génération en a profité »."
     },
     {
-     "q": "Vrai ou faux ? Margaux Lefèvre conteste que les quotas aient aidé le rap français.",
-     "opts": [
-      "Vrai",
-      "Faux"
-     ],
-     "a": 1,
-     "why": "Faux. Hon svarar « Je ne le nie pas », men menar att sammanhanget har förändrats."
-    },
-    {
      "q": "Quel abus Antoine Rivière évoque-t-il ?",
      "opts": [
       "Certaines radios diffusaient toujours les mêmes titres.",
@@ -317,126 +566,268 @@
    ]
   },
   {
-   "id": "fru-co-3",
+   "id": "fru-co-6",
    "part": "co",
-   "teil": "Exercice 1",
-   "title": "Bienvenue en licence",
-   "time": 9,
-   "plays": 1,
-   "instr": "Du hör ett utdrag ur ett välkomstföredrag för nya studenter i musikvetenskap (licence de musicologie) vid ett franskt universitet. Läs frågorna först. Här hör du föredraget en gång. Välj rätt svar på varje fråga.",
+   "teil": "Exercice 2",
+   "title": "Le trac, une fatalité pour les musiciens ?",
+   "time": 10,
+   "plays": 2,
+   "instr": "Du hör en radiointervju med Claire Dumont, psykolog och forskare, som studerar scenskräck (le trac) hos studenter vid musikkonservatorier. Läs frågorna först. Här hör du intervjun två gånger. Välj rätt svar på varje fråga.",
    "lines": [
     {
-     "fr": "— Bonjour à toutes et à tous, et bienvenue à l'université. Je suis Nadia Berthier, responsable de la première année de licence de musicologie. Avant que vous ne commenciez vos cours lundi, je voudrais vous expliquer comment fonctionne une licence, car beaucoup d'étudiants découvrent le système en cours de route, et parfois trop tard.",
-     "sv": "– God morgon allesammans, och välkomna till universitetet. Jag heter Nadia Berthier och är ansvarig för första året på kandidatprogrammet i musikvetenskap. Innan ni börjar med kurserna på måndag vill jag förklara hur en licence fungerar, eftersom många studenter upptäcker systemet under resans gång, och ibland för sent."
+     "fr": "— Claire Dumont, vous êtes psychologue et chercheuse à l'université. Depuis trois ans, vous étudiez le trac chez les étudiants des conservatoires. Première question, toute simple : le trac, est-ce forcément un problème ?",
+     "sv": "– Claire Dumont, du är psykolog och forskare vid universitetet. I tre år har du studerat scenskräck hos konservatoriestudenter. En första, helt enkel fråga: är scenskräck nödvändigtvis ett problem?"
     },
     {
-     "fr": "— La licence se prépare en trois ans, soit six semestres. Chaque semestre vous permet d'obtenir trente crédits européens, les fameux ECTS, et il vous en faudra cent quatre-vingts pour décrocher le diplôme. Ces crédits sont regroupés dans des unités d'enseignement, que l'on appelle des UE.",
-     "sv": "– En licence tar tre år, alltså sex terminer. Varje termin ger er trettio europeiska poäng, de välkända ECTS-poängen, och ni behöver hundraåttio för att ta examen. Poängen är samlade i kursenheter, som kallas UE."
+     "fr": "— Non, et c'est la première chose que je dis aux étudiants. Un certain niveau de stress est même utile : il rend plus attentif, plus réactif. Le problème commence quand ce stress devient tel qu'il empêche de jouer : quand les mains tremblent au point de ne plus pouvoir tenir l'archet, ou quand la mémoire se vide complètement.",
+     "sv": "– Nej, och det är det första jag säger till studenterna. En viss nivå av stress är till och med nyttig: den gör en mer uppmärksam och snabbare i reaktionerna. Problemet börjar när stressen blir så stark att den hindrar en från att spela: när händerna darrar så mycket att man inte längre kan hålla stråken, eller när minnet töms helt."
     },
     {
-     "fr": "— Vous aurez deux grands types de cours. Les cours magistraux, ou CM, ont lieu en amphithéâtre : l'enseignant expose, vous prenez des notes, et personne ne vérifiera si vous êtes présents. Ne vous y trompez pas : c'est pourtant là que se joue une grande partie de la réussite. Les travaux dirigés, ou TD, se déroulent en petits groupes ; on y applique ce qui a été vu en cours, qu'il s'agisse d'analyse, d'harmonie ou de commentaire d'écoute, et la présence y est obligatoire.",
-     "sv": "– Ni kommer att ha två huvudtyper av undervisning. Föreläsningarna, CM, hålls i en hörsal: läraren föreläser, ni antecknar, och ingen kontrollerar om ni är där. Låt er inte luras: det är ändå där en stor del av framgången avgörs. Seminarierna, TD, hålls i små grupper; där tillämpar man det man har gått igenom på föreläsningarna, vare sig det gäller analys, harmonilära eller lyssningsanalys, och där är närvaro obligatorisk."
+     "fr": "— Vous avez interrogé environ deux cents étudiants. Qu'est-ce qui vous a le plus frappée ?",
+     "sv": "– Du har intervjuat ungefär tvåhundra studenter. Vad slog dig mest?"
     },
     {
-     "fr": "— Quant à l'évaluation, elle combine le contrôle continu, c'est-à-dire des devoirs et des exposés tout au long du semestre, et des examens terminaux en fin de semestre. En général, les notes se compensent : une moyenne de dix sur vingt suffit pour valider le semestre, même si vous avez échoué dans une matière. Et si ce n'est pas le cas, une session de rattrapage est organisée.",
-     "sv": "– När det gäller examinationen kombinerar den löpande examination, alltså inlämningsuppgifter och muntliga redovisningar under hela terminen, och slutexamina i slutet av terminen. I allmänhet kan betygen väga upp varandra: ett medelvärde på tio av tjugo räcker för att bli godkänd på terminen, även om ni har misslyckats i ett ämne. Och om det inte räcker ordnas ett omprov."
+     "fr": "— Le silence. La grande majorité d'entre eux souffre du trac, parfois intensément, mais très peu en ont déjà parlé à leur professeur. Dans un milieu aussi compétitif, avouer sa peur, c'est prendre le risque de passer pour quelqu'un de fragile, qui ne supportera pas la pression du métier. Alors on se tait, et on souffre seul.",
+     "sv": "– Tystnaden. De allra flesta av dem lider av scenskräck, ibland svårt, men väldigt få har någonsin pratat om det med sin lärare. I en så konkurrensinriktad miljö innebär det att erkänna sin rädsla en risk att framstå som skör, som någon som inte kommer att klara yrkets press. Så man håller tyst och lider ensam."
     },
     {
-     "fr": "— Maintenant, un conseil que je donne chaque année. Ce qui fait échouer les étudiants de première année, ce n'est presque jamais le manque de capacités. C'est l'organisation. Au lycée, on vous disait quoi faire et quand ; ici, vous aurez parfois une quinzaine d'heures de cours par semaine seulement, et tout le reste du temps, c'est à vous de le structurer. Ceux qui considèrent ces heures libres comme des vacances le regrettent en janvier.",
-     "sv": "– Nu ett råd som jag ger varje år. Det som får förstaårsstudenter att misslyckas är nästan aldrig bristande förmåga. Det är planeringen. På gymnasiet fick ni höra vad ni skulle göra och när; här har ni ibland bara ett femtontal timmar lektioner i veckan, och all övrig tid måste ni strukturera själva. De som ser de fria timmarna som semester ångrar sig i januari."
+     "fr": "— On entend souvent dire que le trac disparaît avec l'expérience…",
+     "sv": "– Man hör ofta att scenskräcken försvinner med erfarenheten …"
     },
     {
-     "fr": "— Excusez-moi, est-ce qu'on peut suivre la licence en même temps que le conservatoire ?",
-     "sv": "– Ursäkta, kan man läsa en licence samtidigt som man går på konservatoriet?"
+     "fr": "— C'est une idée reçue tenace, mais elle est largement fausse. Certains solistes très connus racontent qu'après trente ans de carrière, ils ont toujours la gorge serrée avant d'entrer en scène. Ce qui change avec l'expérience, ce n'est pas tant l'intensité du trac que la manière de le vivre : on apprend à l'apprivoiser.",
+     "sv": "– Det är en seglivad föreställning, men den är till stor del fel. Vissa mycket kända solister berättar att de efter trettio år i yrket fortfarande har en klump i halsen innan de går in på scenen. Det som förändras med erfarenheten är inte så mycket hur stark scenskräcken är, utan hur man upplever den: man lär sig att tämja den."
     },
     {
-     "fr": "— Oui, et c'est même fréquent dans notre filière. Beaucoup d'universités proposent un aménagement d'études pour les étudiants qui suivent en parallèle une formation artistique : vous pouvez par exemple être dispensé d'assiduité dans certains TD. Mais renseignez-vous dès maintenant auprès du secrétariat pédagogique, car les demandes se font en début de semestre.",
-     "sv": "– Ja, och det är till och med vanligt på vår utbildning. Många universitet erbjuder anpassad studiegång för studenter som samtidigt går en konstnärlig utbildning: ni kan till exempel slippa närvarokravet i vissa seminarier. Men hör efter redan nu med studieadministrationen, för ansökningarna görs i början av terminen."
+     "fr": "— Le trac touche-t-il tous les instruments de la même façon ?",
+     "sv": "– Drabbar scenskräcken alla instrument på samma sätt?"
     },
     {
-     "fr": "— Enfin, n'hésitez pas à vous inscrire au tutorat : des étudiants de troisième année vous aident à préparer les examens. C'est gratuit, et ceux qui y participent le trouvent en général très utile.",
-     "sv": "– Till sist: tveka inte att anmäla er till mentorsprogrammet, där studenter i tredje året hjälper er att förbereda er inför tentorna. Det är gratis, och de som deltar tycker i allmänhet att det är mycket givande."
+     "fr": "— Les chanteurs et les musiciens qui jouent d'un instrument à vent en parlent davantage, parce que la respiration est directement touchée : quand on a le souffle court, cela s'entend immédiatement. Mais je me méfie des généralisations. J'ai rencontré des pianistes paralysés par la peur et des chanteurs parfaitement sereins.",
+     "sv": "– Sångare och de som spelar blåsinstrument talar mer om den, eftersom andningen påverkas direkt: när man är andfådd hörs det genast. Men jag är försiktig med generaliseringar. Jag har träffat pianister som var förlamade av rädsla och sångare som var helt lugna."
+    },
+    {
+     "fr": "— D'où vient-il, au fond ? Du regard du public ?",
+     "sv": "– Var kommer den egentligen ifrån? Från publikens blickar?"
+    },
+    {
+     "fr": "— Moins qu'on ne le croit. Chez les étudiants que j'ai rencontrés, la peur principale n'est pas celle du public, mais celle de leur propre jugement. Ce sont souvent des perfectionnistes, qui ont passé des milliers d'heures à travailler seuls et pour qui la moindre fausse note devient une catastrophe. Le jury d'un concours ne fait que renforcer une exigence qu'ils s'imposent déjà à eux-mêmes.",
+     "sv": "– Mindre än man tror. Hos de studenter jag har träffat är den största rädslan inte rädslan för publiken, utan för deras eget omdöme. Det är ofta perfektionister som har övat ensamma i tusentals timmar och för vilka minsta felton blir en katastrof. Juryn vid en antagningsprovning förstärker bara ett krav som de redan ställer på sig själva."
+    },
+    {
+     "fr": "— Certains musiciens prennent des médicaments pour se calmer. Qu'en pensez-vous ?",
+     "sv": "– Vissa musiker tar mediciner för att lugna sig. Vad tycker du om det?"
+    },
+    {
+     "fr": "— Je comprends qu'on y ait recours, mais ce qui m'inquiète, c'est que certains étudiants les prennent sans avis médical, parfois avec des comprimés prêtés par un camarade. Ces médicaments ne sont pas anodins. Et surtout, ils traitent les symptômes sans jamais s'attaquer aux causes.",
+     "sv": "– Jag förstår att man tar till dem, men det som oroar mig är att vissa studenter tar dem utan att ha rådfrågat en läkare, ibland med tabletter som de har lånat av en kamrat. De här medicinerna är inte harmlösa. Och framför allt behandlar de symtomen utan att någonsin ta itu med orsakerna."
+    },
+    {
+     "fr": "— Alors, que conseillez-vous ?",
+     "sv": "– Vad rekommenderar du då?"
+    },
+    {
+     "fr": "— D'abord, de s'exposer régulièrement à la scène, dans des conditions proches du concert, mais sans enjeu : jouer devant quelques camarades, se filmer, organiser des auditions « pour de faux ». Ensuite, d'apprendre à interpréter autrement les signaux du corps : un cœur qui bat vite n'annonce pas forcément une catastrophe, c'est aussi de l'énergie disponible.",
+     "sv": "– För det första att regelbundet utsätta sig för scenen, under förhållanden som liknar en konsert men utan att något står på spel: spela för några kamrater, filma sig själv, ordna provspelningar ”på låtsas”. För det andra att lära sig tolka kroppens signaler på ett annat sätt: ett hjärta som slår snabbt betyder inte nödvändigtvis att en katastrof är på väg, det är också energi som finns att tillgå."
+    },
+    {
+     "fr": "— Et du côté des établissements ?",
+     "sv": "– Och när det gäller skolorna?"
+    },
+    {
+     "fr": "— C'est là que j'aimerais voir un vrai changement. Aujourd'hui, quand la préparation à la scène existe, elle prend la forme d'un atelier facultatif, un soir par mois. Or monter sur scène, c'est le cœur du métier ! Cela devrait être enseigné comme une discipline à part entière, au même titre que l'harmonie ou le déchiffrage.",
+     "sv": "– Det är där jag skulle vilja se en verklig förändring. I dag, när förberedelse för scenen alls finns, har den formen av en frivillig workshop en kväll i månaden. Men att gå upp på scenen är ju kärnan i yrket! Det borde undervisas som ett eget ämne, precis som harmonilära eller avistaspel."
+    },
+    {
+     "fr": "— Claire Dumont, merci.",
+     "sv": "– Claire Dumont, tack."
     }
    ],
    "qs": [
     {
-     "q": "Pourquoi Nadia Berthier explique-t-elle le fonctionnement de la licence ?",
+     "q": "Selon Claire Dumont, le trac…",
      "opts": [
-      "Parce que le système a changé cette année.",
-      "Parce que beaucoup d'étudiants le comprennent trop tard.",
-      "Parce que les étudiants le lui ont demandé par courriel."
+      "est toujours un obstacle pour le musicien.",
+      "devient un problème lorsqu'il empêche de jouer.",
+      "touche surtout les musiciens débutants."
      ],
      "a": 1,
-     "why": "« beaucoup d'étudiants découvrent le système en cours de route, et parfois trop tard »."
+     "why": "« Un certain niveau de stress est même utile […] Le problème commence quand ce stress devient tel qu'il empêche de jouer »."
     },
     {
-     "q": "Combien de crédits faut-il pour obtenir la licence ?",
+     "q": "Qu'est-ce qui l'a le plus frappée dans son enquête ?",
      "opts": [
-      "Trente.",
-      "Soixante.",
-      "Cent quatre-vingts."
+      "Très peu d'étudiants parlent de leur trac à leur professeur.",
+      "Très peu d'étudiants disent souffrir du trac.",
+      "Les étudiants parlent du trac surtout entre eux."
+     ],
+     "a": 0,
+     "why": "« Le silence. La grande majorité d'entre eux souffre du trac […] mais très peu en ont déjà parlé à leur professeur »."
+    },
+    {
+     "q": "Pourquoi les étudiants se taisent-ils ?",
+     "opts": [
+      "Ils ont honte de leurs mauvais résultats.",
+      "Ils ont peur que leurs camarades se moquent d'eux.",
+      "Ils craignent de paraître trop fragiles pour le métier."
      ],
      "a": 2,
-     "why": "« il vous en faudra cent quatre-vingts pour décrocher le diplôme ». Trettio är poängen för en termin."
+     "why": "« avouer sa peur, c'est prendre le risque de passer pour quelqu'un de fragile, qui ne supportera pas la pression du métier »."
     },
     {
-     "q": "Que dit-elle des cours magistraux ?",
+     "q": "D'après elle, avec l'expérience…",
      "opts": [
-      "La présence n'est pas contrôlée, mais ils sont essentiels.",
-      "Ils sont facultatifs et peu utiles pour les examens.",
-      "Ils ont lieu en petits groupes."
-     ],
-     "a": 0,
-     "why": "« personne ne vérifiera si vous êtes présents. Ne vous y trompez pas : c'est pourtant là que se joue une grande partie de la réussite »."
-    },
-    {
-     "q": "Vrai ou faux ? La présence est obligatoire en travaux dirigés.",
-     "opts": [
-      "Vrai",
-      "Faux"
-     ],
-     "a": 0,
-     "why": "Vrai. Om TD säger hon: « la présence y est obligatoire »."
-    },
-    {
-     "q": "Que signifie ici le fait que « les notes se compensent » ?",
-     "opts": [
-      "Chaque matière doit être réussie séparément.",
-      "Une moyenne de 10/20 peut suffire malgré un échec dans une matière.",
-      "Les notes du contrôle continu remplacent les examens."
+      "le trac finit par disparaître.",
+      "on apprend surtout à mieux vivre avec le trac.",
+      "le trac devient de plus en plus intense."
      ],
      "a": 1,
-     "why": "« une moyenne de dix sur vingt suffit pour valider le semestre, même si vous avez échoué dans une matière »."
+     "why": "« Ce qui change avec l'expérience, ce n'est pas tant l'intensité du trac que la manière de le vivre : on apprend à l'apprivoiser »."
     },
     {
-     "q": "Selon elle, quelle est la principale cause d'échec en première année ?",
+     "q": "Quelle est la principale source du trac chez les étudiants rencontrés ?",
      "opts": [
-      "Le manque d'organisation.",
-      "Le niveau trop élevé des cours.",
-      "Le nombre d'heures de cours."
-     ],
-     "a": 0,
-     "why": "« ce n'est presque jamais le manque de capacités. C'est l'organisation »."
-    },
-    {
-     "q": "Que doit faire un étudiant qui suit aussi le conservatoire ?",
-     "opts": [
-      "Choisir entre les deux formations dès la première année.",
-      "Attendre la fin du premier semestre pour faire une demande.",
-      "Demander rapidement un aménagement au secrétariat pédagogique."
+      "Le regard du public.",
+      "Le manque de travail.",
+      "L'exigence qu'ils s'imposent à eux-mêmes."
      ],
      "a": 2,
-     "why": "« renseignez-vous dès maintenant auprès du secrétariat pédagogique, car les demandes se font en début de semestre »."
+     "why": "« la peur principale n'est pas celle du public, mais celle de leur propre jugement »."
     },
     {
-     "q": "Qui s'occupe du tutorat ?",
+     "q": "Qu'est-ce qui l'inquiète au sujet des médicaments ?",
      "opts": [
-      "Les enseignants du conservatoire.",
-      "Des étudiants de troisième année.",
-      "Des professeurs à la retraite."
+      "Certains étudiants en prennent sans avis médical.",
+      "Ils sont trop chers pour les étudiants.",
+      "Ils diminuent la qualité du jeu."
+     ],
+     "a": 0,
+     "why": "« certains étudiants les prennent sans avis médical, parfois avec des comprimés prêtés par un camarade »."
+    },
+    {
+     "q": "Que souhaite-t-elle pour les établissements ?",
+     "opts": [
+      "Proposer un atelier facultatif chaque mois.",
+      "Faire de la préparation à la scène une discipline à part entière.",
+      "Remplacer les cours d'harmonie par des concerts."
      ],
      "a": 1,
-     "why": "« des étudiants de troisième année vous aident à préparer les examens »."
+     "why": "« Cela devrait être enseigné comme une discipline à part entière, au même titre que l'harmonie ou le déchiffrage »."
+    }
+   ]
+  },
+  {
+   "id": "fru-co-7",
+   "part": "co",
+   "teil": "Exercice 2",
+   "title": "Changer de métier en cours de route",
+   "time": 10,
+   "plays": 2,
+   "instr": "Du hör inledningen till ett föredrag på ett folkuniversitet (université populaire). Sociologen Isabelle Garnier talar om att byta yrke mitt i livet. Läs frågorna först. Här hör du inledningen två gånger. Välj rätt svar på varje fråga.",
+   "lines": [
+    {
+     "fr": "— Bonsoir à toutes et à tous, et merci d'être venus si nombreux. Ce soir, je voudrais vous parler de la reconversion professionnelle, c'est-à-dire du fait de changer de métier en cours de carrière. C'est un sujet que j'étudie depuis une dizaine d'années, en suivant des personnes avant, pendant et après leur changement de voie. Je précise d'emblée que je ne suis pas conseillère d'orientation : je ne vous dirai pas quel métier choisir, mais je peux vous dire ce que j'ai observé.",
+     "sv": "– God kväll allesammans, och tack för att ni har kommit så många. I kväll vill jag tala om omställning i arbetslivet, alltså att byta yrke mitt i karriären. Det är ett ämne som jag har studerat i ungefär tio år, genom att följa människor före, under och efter deras byte av bana. Jag vill genast klargöra att jag inte är studie- och yrkesvägledare: jag kommer inte att säga vilket yrke ni ska välja, men jag kan berätta vad jag har sett."
+    },
+    {
+     "fr": "Commençons par une image que vous connaissez tous. Un cadre parisien, épuisé par les réunions, quitte tout pour ouvrir une boulangerie à la campagne. Les magazines adorent ce genre d'histoire, et je les comprends : c'est un beau récit, avec un héros courageux et une fin heureuse. Le problème, c'est que ce récit est trompeur, et cela pour deux raisons.",
+     "sv": "Låt oss börja med en bild som ni alla känner till. En chef i Paris, utmattad av alla möten, lämnar allt för att öppna ett bageri på landet. Tidningarna älskar sådana historier, och jag förstår dem: det är en fin berättelse, med en modig hjälte och ett lyckligt slut. Problemet är att berättelsen är missvisande, och det av två skäl."
+    },
+    {
+     "fr": "D'abord, parce que beaucoup de reconversions ne sont pas choisies. Parmi les personnes que j'ai suivies, une bonne partie changeait de métier à la suite d'un licenciement, d'un problème de santé ou d'un épuisement professionnel. On est alors loin du rêve : il s'agit plutôt de reconstruire quelque chose après une rupture.",
+     "sv": "För det första därför att många yrkesbyten inte är självvalda. Bland dem jag har följt bytte en stor del yrke efter en uppsägning, ett hälsoproblem eller en utbrändhet. Då är man långt från drömmen: det handlar snarare om att bygga upp något nytt efter ett brott."
+    },
+    {
+     "fr": "Ensuite, parce que ce récit passe sous silence les difficultés. Une formation peut durer un ou deux ans, pendant lesquels les revenus baissent. Il faut convaincre sa famille, parfois déménager. Et il faut affronter des recruteurs qui, à compétences égales, préfèrent encore trop souvent un candidat plus jeune.",
+     "sv": "För det andra därför att berättelsen förtiger svårigheterna. En utbildning kan ta ett eller två år, och under den tiden sjunker inkomsten. Man måste övertyga sin familj, ibland flytta. Och man måste möta rekryterare som, vid lika kompetens, fortfarande alltför ofta föredrar en yngre sökande."
+    },
+    {
+     "fr": "Pourtant, je ne voudrais pas vous décourager, bien au contraire. Mes recherches font apparaître un résultat qui m'a moi-même surprise. Les reconversions qui réussissent le mieux ne sont pas les plus spectaculaires. Ce sont celles où la personne parvient à réutiliser une partie de ce qu'elle savait déjà faire. Je pense à une comptable devenue professeure de mathématiques, ou à un infirmier devenu formateur. Ils ont changé de métier, mais ils n'ont pas tout recommencé à zéro.",
+     "sv": "Ändå vill jag inte avskräcka er, tvärtom. Min forskning visar ett resultat som förvånade till och med mig själv. De yrkesbyten som lyckas bäst är inte de mest spektakulära. Det är de där personen lyckas återanvända en del av det hon redan kunde. Jag tänker på en redovisningsekonom som blev mattelärare, eller på en sjuksköterska som blev utbildare. De har bytt yrke, men de har inte börjat om helt från noll."
+    },
+    {
+     "fr": "Un mot encore sur l'âge. On imagine souvent que, passé cinquante ans, il est trop tard. Mes observations ne le confirment pas : certaines des reconversions les plus solides que j'ai suivies ont été engagées après cinquante ans, par des personnes qui savaient précisément ce qu'elles ne voulaient plus. Dans ce domaine, l'expérience de la vie est un atout autant qu'un obstacle.",
+     "sv": "Ett ord till om åldern. Man föreställer sig ofta att det är för sent när man har fyllt femtio. Mina iakttagelser bekräftar inte det: några av de mest hållbara yrkesbyten jag har följt påbörjades efter femtio, av människor som visste exakt vad de inte längre ville. På det här området är livserfarenheten lika mycket en tillgång som ett hinder."
+    },
+    {
+     "fr": "J'ai aussi constaté que le changement de métier se déroule rarement de façon linéaire. Il y a souvent une longue période de doute, parfois plusieurs années, avant la décision elle-même. Puis vient une phase d'exploration, où l'on se renseigne, où l'on rencontre des professionnels. Et enfin, une étape dont on parle très peu : le deuil de son ancienne identité. Quand on a été ingénieur pendant vingt ans, on ne cesse pas du jour au lendemain de se présenter comme tel.",
+     "sv": "Jag har också sett att ett yrkesbyte sällan sker rätlinjigt. Ofta finns det en lång period av tvivel, ibland flera år, före själva beslutet. Sedan kommer en utforskande fas, då man tar reda på saker och träffar yrkesverksamma. Och till sist ett steg som man talar väldigt lite om: sorgen över sin gamla identitet. När man har varit ingenjör i tjugo år slutar man inte från en dag till en annan att presentera sig som ingenjör."
+    },
+    {
+     "fr": "Ce soir, je procéderai donc en trois temps. Je reviendrai d'abord sur ces trois étapes, avec des exemples concrets. Je vous présenterai ensuite les dispositifs d'accompagnement qui existent, comme le bilan de compétences, en insistant sur leurs forces mais aussi sur leurs limites. Enfin, nous garderons une bonne demi-heure pour vos questions, car je sais que plusieurs d'entre vous sont venus avec un projet bien précis.",
+     "sv": "I kväll kommer jag alltså att gå fram i tre steg. Först återkommer jag till de här tre etapperna, med konkreta exempel. Sedan presenterar jag de stödformer som finns, som kompetenskartläggning (bilan de compétences), och tar upp både deras styrkor och deras begränsningar. Till sist sparar vi en dryg halvtimme till era frågor, för jag vet att flera av er har kommit hit med ett helt konkret projekt."
+    }
+   ],
+   "qs": [
+    {
+     "q": "Qu'est-ce qu'Isabelle Garnier étudie depuis une dizaine d'années ?",
+     "opts": [
+      "Le parcours de personnes qui changent de métier.",
+      "Les méthodes de recrutement des entreprises.",
+      "Les métiers de l'artisanat à la campagne."
+     ],
+     "a": 0,
+     "why": "Hon studerar « la reconversion professionnelle » och följer « des personnes avant, pendant et après leur changement de voie »."
+    },
+    {
+     "q": "Que reproche-t-elle à l'histoire du cadre devenu boulanger ?",
+     "opts": [
+      "Elle donne une image négative de la campagne.",
+      "Elle donne une vision trompeuse de la reconversion.",
+      "Elle décourage les gens de changer de métier."
+     ],
+     "a": 1,
+     "why": "« Le problème, c'est que ce récit est trompeur »."
+    },
+    {
+     "q": "Selon elle, beaucoup de reconversions…",
+     "opts": [
+      "sont motivées par le désir de gagner davantage.",
+      "concernent surtout des cadres parisiens.",
+      "sont imposées par les circonstances."
+     ],
+     "a": 2,
+     "why": "« beaucoup de reconversions ne sont pas choisies » – de sker « à la suite d'un licenciement, d'un problème de santé ou d'un épuisement professionnel »."
+    },
+    {
+     "q": "Parmi les difficultés, elle mentionne…",
+     "opts": [
+      "la préférence de certains recruteurs pour des candidats plus jeunes.",
+      "le manque de formations disponibles.",
+      "le refus des entreprises de financer les formations."
+     ],
+     "a": 0,
+     "why": "« des recruteurs qui, à compétences égales, préfèrent encore trop souvent un candidat plus jeune »."
+    },
+    {
+     "q": "D'après ses recherches, quelles reconversions réussissent le mieux ?",
+     "opts": [
+      "Les plus radicales.",
+      "Celles où l'on réutilise des compétences déjà acquises.",
+      "Celles qui sont décidées rapidement."
+     ],
+     "a": 1,
+     "why": "« Ce sont celles où la personne parvient à réutiliser une partie de ce qu'elle savait déjà faire »."
+    },
+    {
+     "q": "Quelle étape est rarement évoquée, selon elle ?",
+     "opts": [
+      "La recherche d'informations sur le nouveau métier.",
+      "La longue période de doute.",
+      "Le deuil de son ancienne identité professionnelle."
+     ],
+     "a": 2,
+     "why": "« une étape dont on parle très peu : le deuil de son ancienne identité »."
+    },
+    {
+     "q": "Comment la soirée se terminera-t-elle ?",
+     "opts": [
+      "Chaque participant fera un bilan de compétences.",
+      "Le public pourra poser ses questions.",
+      "Des professionnels viendront témoigner."
+     ],
+     "a": 1,
+     "why": "« nous garderons une bonne demi-heure pour vos questions »."
     }
    ]
   },
@@ -486,13 +877,14 @@
      "why": "« L'objectif est de créer des « îlots de fraîcheur » pour mieux supporter les vagues de chaleur »."
     },
     {
-     "q": "Document 1. Vrai ou faux ? Tout le monde est satisfait de ce changement.",
+     "q": "Document 1. Qu'est-ce que certains enseignants regrettent ?",
      "opts": [
-      "Vrai",
-      "Faux"
+      "Le coût des travaux.",
+      "La boue les jours de pluie.",
+      "L'ouverture des cours aux habitants le week-end."
      ],
      "a": 1,
-     "why": "Faux. « quelques enseignants regrettent déjà la boue des jours de pluie »."
+     "why": "« quelques enseignants regrettent déjà la boue des jours de pluie »."
     },
     {
      "q": "Document 2. Selon la sociologue, la recherche d'un travail qui a du sens…",
@@ -505,15 +897,6 @@
      "why": "« elle concerne surtout les diplômés qui ont le luxe de choisir »."
     },
     {
-     "q": "Document 2. Vrai ou faux ? D'après la sociologue, la quête de sens au travail est un phénomène nouveau.",
-     "opts": [
-      "Vrai",
-      "Faux"
-     ],
-     "a": 1,
-     "why": "Faux. « cette quête de sens n'a rien de nouveau »."
-    },
-    {
      "q": "Document 2. Quelle idée la chronique critique-t-elle ?",
      "opts": [
       "L'idée que les salaires des jeunes sont trop bas.",
@@ -522,16 +905,6 @@
      ],
      "a": 2,
      "why": "« parler d'une génération qui refuserait de travailler, c'est confondre une partie de la jeunesse avec l'ensemble »."
-    },
-    {
-     "q": "Document 3. Qu'est-ce que ses abonnés ont permis à Jade de faire ?",
-     "opts": [
-      "Financer son premier disque.",
-      "Entrer au conservatoire.",
-      "Créer un jeu vidéo."
-     ],
-     "a": 0,
-     "why": "« c'est grâce à eux que j'ai pu financer mon premier disque »."
     },
     {
      "q": "Document 3. Pourquoi Jade trouve-t-elle les réseaux sociaux épuisants ?",
@@ -552,6 +925,248 @@
      ],
      "a": 2,
      "why": "« Mes chiffres ont un peu baissé, mais je travaille enfin mon instrument sereinement »."
+    }
+   ]
+  },
+  {
+   "id": "fru-co-8",
+   "part": "co",
+   "teil": "Exercice 3",
+   "title": "Trois courts documents : médiathèque, colocation, master class",
+   "time": 8,
+   "plays": 1,
+   "instr": "Du hör tre korta inslag: en lokalnyhet om ett bibliotek som ska hålla öppet på söndagar, ett samtal mellan två vänner om att bo tillsammans med en äldre dam, och inledningen till en mästarklass i piano. Läs frågorna först. Här hör du varje inslag en gång. Välj rätt svar på varje fråga.",
+   "lines": [
+    {
+     "fr": "Document 1. — Info locale. À partir du premier dimanche d'octobre, la médiathèque des Tilleuls ouvrira ses portes le dimanche après-midi, de quatorze à dix-huit heures. Il s'agit d'une expérimentation de six mois, décidée par la municipalité après une consultation des habitants. Le prêt, le retour des documents et l'accès aux ordinateurs seront assurés comme en semaine, mais les salles de travail en groupe resteront fermées.",
+     "sv": "Inslag 1. – Lokala nyheter. Från och med den första söndagen i oktober kommer mediateket Les Tilleuls att hålla öppet på söndagseftermiddagar, från klockan fjorton till arton. Det är ett försök under sex månader, som kommunen har beslutat om efter att ha frågat invånarna. Utlåning, återlämning och tillgång till datorerna fungerar som på vardagar, men grupprummen förblir stängda."
+    },
+    {
+     "fr": "Selon l'adjointe à la culture, l'objectif n'est pas seulement de prêter davantage de livres. « Le dimanche, beaucoup de familles ne savent pas où aller quand il pleut, et les étudiants manquent de lieux calmes pour travailler. La médiathèque doit devenir un lieu de vie, et pas seulement un lieu de prêt », explique-t-elle. « C'est aussi souvent le seul jour où les parents qui travaillent peuvent venir avec leurs enfants. » Des ateliers de jeux de société et des lectures pour les enfants seront d'ailleurs proposés chaque semaine.",
+     "sv": "Enligt kommunalrådet med ansvar för kultur är målet inte bara att låna ut fler böcker. ”På söndagar vet många familjer inte vart de ska ta vägen när det regnar, och studenterna saknar lugna platser att plugga på. Mediateket ska bli en mötesplats och inte bara ett ställe där man lånar”, förklarar hon. ”Det är också ofta den enda dagen då föräldrar som arbetar kan komma hit med sina barn.” Det kommer för övrigt att ordnas sällskapsspel och högläsning för barn varje vecka."
+    },
+    {
+     "fr": "L'annonce ne fait cependant pas l'unanimité. Les représentants du personnel rappellent que les bibliothécaires travaillent déjà le samedi et craignent que cette ouverture se fasse au détriment de leur vie de famille. La mairie assure que seuls des volontaires travailleront le dimanche, et qu'ils bénéficieront d'une journée de repos supplémentaire. Un bilan sera présenté au conseil municipal au printemps : si le public n'est pas au rendez-vous, l'expérience sera abandonnée. D'autres communes de la région suivent le projet de près.",
+     "sv": "Beskedet välkomnas ändå inte av alla. Personalens representanter påminner om att bibliotekarierna redan arbetar på lördagar och är rädda att söndagsöppettiderna ska gå ut över deras familjeliv. Kommunen försäkrar att bara frivilliga kommer att arbeta på söndagar och att de får en extra ledig dag. En utvärdering ska läggas fram för kommunfullmäktige i vår: om publiken uteblir läggs försöket ned. Andra kommuner i regionen följer projektet noga."
+    },
+    {
+     "fr": "Document 2. — Alors, Inès, ta nouvelle colocation, ça se passe comment ?",
+     "sv": "Inslag 2. – Nå, Inès, hur går det med ditt nya boende?"
+    },
+    {
+     "fr": "— Très bien ! Franchement, je ne m'y attendais pas. Tu sais que j'habite chez Mme Aubert maintenant, la dame de quatre-vingts ans ?",
+     "sv": "– Jättebra! Ärligt talat hade jag inte väntat mig det. Du vet att jag bor hos Madame Aubert nu, den åttioåriga damen?"
+    },
+    {
+     "fr": "— Oui, c'est justement ce que je ne comprends pas. Tu n'as pas peur de t'ennuyer, ou de devenir son infirmière ?",
+     "sv": "– Ja, det är just det jag inte förstår. Är du inte rädd att ha tråkigt, eller att bli hennes sjuksköterska?"
+    },
+    {
+     "fr": "— Pas du tout, ce n'est pas le principe. Je ne m'occupe ni de ses médicaments ni de sa toilette : une aide à domicile vient pour ça. Moi, je m'engage à dîner avec elle trois soirs par semaine et à être là la plupart des nuits. En échange, je paie un loyer très modeste, à peu près le tiers de ce que je payais pour mon studio.",
+     "sv": "– Inte alls, det är inte så det fungerar. Jag sköter varken hennes mediciner eller hennes hygien: det kommer en hemtjänstpersonal för det. Jag åtar mig att äta middag med henne tre kvällar i veckan och att vara där de flesta nätter. I gengäld betalar jag en mycket låg hyra, ungefär en tredjedel av vad jag betalade för min lilla etta."
+    },
+    {
+     "fr": "— D'accord, mais alors tu n'es pas libre. Tu ne peux pas inviter tes amis ?",
+     "sv": "– Okej, men då är du ju inte fri. Du kan inte bjuda hem dina kompisar?"
+    },
+    {
+     "fr": "— Si, bien sûr, mais on a fixé des règles dès le départ : je la préviens, et pas de bruit après vingt-deux heures. Et puis ce n'est pas un sacrifice. Elle a été professeure d'histoire, elle me raconte des choses passionnantes. La semaine dernière, elle m'a même aidée à préparer un exposé.",
+     "sv": "– Jo, självklart, men vi bestämde regler från början: jag säger till henne i förväg, och inget oväsen efter klockan tjugotvå. Och det är inget offer. Hon har varit historielärare och berättar spännande saker. Förra veckan hjälpte hon mig till och med att förbereda en muntlig redovisning."
+    },
+    {
+     "fr": "— Et elle, qu'est-ce qu'elle y gagne ?",
+     "sv": "– Och hon, vad får hon ut av det?"
+    },
+    {
+     "fr": "— Ses enfants habitent loin, et depuis la mort de son mari, elle avait peur de rester seule la nuit. Maintenant, elle dit qu'elle dort mieux. En fait, le plus difficile, ce n'était pas elle, c'était moi : les premières semaines, je n'osais même pas me faire un café sans lui demander la permission.",
+     "sv": "– Hennes barn bor långt bort, och sedan hennes man dog var hon rädd för att vara ensam på nätterna. Nu säger hon att hon sover bättre. Egentligen var det svåraste inte hon, utan jag: de första veckorna vågade jag inte ens koka kaffe utan att be om lov."
+    },
+    {
+     "fr": "Document 3. — Bonsoir, et bienvenue à cette master class. Je m'appelle Mathilde Roche, j'enseigne le piano dans cette maison depuis quinze ans, et j'ai moi-même beaucoup appris dans des séances comme celle-ci. Avant que notre première étudiante ne s'installe au piano, je voudrais vous expliquer comment la soirée va se dérouler, surtout pour ceux d'entre vous qui assistent à ce genre de séance pour la première fois.",
+     "sv": "Inslag 3. – God kväll och välkomna till den här mästarklassen. Jag heter Mathilde Roche, jag har undervisat i piano här i femton år, och jag har själv lärt mig mycket på sådana här lektioner. Innan vår första student sätter sig vid pianot vill jag förklara hur kvällen kommer att gå till, framför allt för dem av er som är med på en sådan lektion för första gången."
+    },
+    {
+     "fr": "Une master class n'est pas un concert. Chacun des trois étudiants que vous allez entendre jouera d'abord son morceau en entier, puis nous le retravaillerons ensemble devant vous. Je l'interromprai souvent, parfois au bout de deux mesures. Ne croyez pas qu'il ait mal joué : c'est justement parce que ces jeunes musiciens ont déjà un excellent niveau que l'on peut s'attarder sur les détails.",
+     "sv": "En mästarklass är ingen konsert. Var och en av de tre studenter som ni kommer att höra spelar först sitt stycke i sin helhet, och sedan arbetar vi med det tillsammans framför er. Jag kommer att avbryta ofta, ibland efter två takter. Tro inte att det beror på att studenten har spelat dåligt: det är just för att de här unga musikerna redan håller en utmärkt nivå som man kan uppehålla sig vid detaljerna."
+    },
+    {
+     "fr": "Je vous demande donc de ne pas applaudir pendant le travail, mais seulement à la fin de chaque passage. Vous pourrez poser vos questions en fin de soirée : j'y répondrai volontiers, qu'elles portent sur la technique, sur les œuvres ou sur le métier lui-même.",
+     "sv": "Jag ber er därför att inte applådera medan vi arbetar, utan bara när varje student är klar. Ni kan ställa frågor i slutet av kvällen: jag svarar gärna, oavsett om de gäller tekniken, verken eller själva yrket."
+    },
+    {
+     "fr": "Enfin, une demande qui me tient à cœur : merci de ne pas filmer. Ce n'est pas une question de droits d'auteur. Les étudiants sont ici pour essayer, se tromper, recommencer, et ils doivent pouvoir le faire sans craindre de retrouver leurs hésitations sur les réseaux sociaux le lendemain. Ce qui se passe ce soir est un moment de travail, pas une performance.",
+     "sv": "Till sist en begäran som ligger mig varmt om hjärtat: filma inte, tack. Det handlar inte om upphovsrätt. Studenterna är här för att pröva, göra fel och börja om, och de måste kunna göra det utan att vara rädda för att hitta sina tvekanden på sociala medier dagen därpå. Det som händer i kväll är ett arbetstillfälle, inte en uppvisning."
+    }
+   ],
+   "qs": [
+    {
+     "q": "Document 1. Pourquoi la médiathèque ouvrira-t-elle le dimanche ?",
+     "opts": [
+      "Pour remplacer l'ouverture du samedi.",
+      "Pour offrir un lieu de vie aux familles et aux étudiants.",
+      "Pour organiser la consultation des habitants."
+     ],
+     "a": 1,
+     "why": "« La médiathèque doit devenir un lieu de vie » – för familjer som inte vet vart de ska ta vägen och studenter som « manquent de lieux calmes pour travailler »."
+    },
+    {
+     "q": "Document 1. Qu'est-ce que la mairie promet au personnel ?",
+     "opts": [
+      "Une augmentation de salaire.",
+      "L'embauche de nouveaux bibliothécaires.",
+      "Que seuls des volontaires travailleront, avec un jour de repos en plus."
+     ],
+     "a": 2,
+     "why": "« seuls des volontaires travailleront le dimanche, et […] ils bénéficieront d'une journée de repos supplémentaire »."
+    },
+    {
+     "q": "Document 2. À quoi Inès s'est-elle engagée ?",
+     "opts": [
+      "À donner ses médicaments à Mme Aubert.",
+      "À dîner avec elle trois soirs par semaine et à être là la plupart des nuits.",
+      "À faire le ménage chaque week-end."
+     ],
+     "a": 1,
+     "why": "« je m'engage à dîner avec elle trois soirs par semaine et à être là la plupart des nuits »."
+    },
+    {
+     "q": "Document 2. Qu'est-ce qui a été le plus difficile pour Inès ?",
+     "opts": [
+      "Ne plus pouvoir inviter ses amis.",
+      "Supporter le caractère de Mme Aubert.",
+      "Se sentir à l'aise chez quelqu'un d'autre au début."
+     ],
+     "a": 2,
+     "why": "« le plus difficile, ce n'était pas elle, c'était moi : les premières semaines, je n'osais même pas me faire un café sans lui demander la permission »."
+    },
+    {
+     "q": "Document 3. Pourquoi la pianiste interrompra-t-elle souvent les étudiants ?",
+     "opts": [
+      "Parce que leur niveau permet de travailler les détails.",
+      "Parce qu'ils ont mal préparé leur morceau.",
+      "Parce que le public doit pouvoir applaudir."
+     ],
+     "a": 0,
+     "why": "« c'est justement parce que ces jeunes musiciens ont déjà un excellent niveau que l'on peut s'attarder sur les détails »."
+    },
+    {
+     "q": "Document 3. Pourquoi demande-t-elle au public de ne pas filmer ?",
+     "opts": [
+      "Pour respecter les droits d'auteur.",
+      "Pour que les étudiants puissent se tromper sans crainte.",
+      "Pour ne pas déranger les autres spectateurs."
+     ],
+     "a": 1,
+     "why": "« Ce n'est pas une question de droits d'auteur. » Studenterna måste kunna göra fel « sans craindre de retrouver leurs hésitations sur les réseaux sociaux »."
+    }
+   ]
+  },
+  {
+   "id": "fru-co-9",
+   "part": "co",
+   "teil": "Exercice 3",
+   "title": "Trois courts documents : nuit noire, sédentarité, lutherie",
+   "time": 8,
+   "plays": 1,
+   "instr": "Du hör tre korta radioinslag: en nyhet om en kommun som släcker gatubelysningen på natten, en hälsokrönika om stillasittande och ett vittnesmål från en ung fiolbyggarlärling. Läs frågorna först. Här hör du varje inslag en gång. Välj rätt svar på varje fråga.",
+   "lines": [
+    {
+     "fr": "Document 1. — Dans une petite commune du Jura, les lampadaires s'éteignent désormais chaque nuit entre vingt-trois heures et cinq heures du matin. La mesure concerne toutes les rues, à l'exception de la route départementale qui traverse le village. Le conseil municipal a pris cette décision au début de l'année, d'abord pour des raisons financières : avec la hausse du prix de l'électricité, l'éclairage public était devenu l'une des principales dépenses de la commune.",
+     "sv": "Inslag 1. – I en liten kommun i Jura släcks gatlyktorna numera varje natt mellan klockan tjugotre och fem på morgonen. Åtgärden gäller alla gator utom landsvägen som går genom byn. Kommunfullmäktige fattade beslutet i början av året, i första hand av ekonomiska skäl: när elpriset steg hade gatubelysningen blivit en av kommunens största utgifter."
+    },
+    {
+     "fr": "Mais le maire met aussi en avant d'autres arguments. Les chauves-souris et de nombreux insectes, perturbés par la lumière artificielle, retrouvent un milieu plus favorable, et les habitants redécouvrent le ciel étoilé. Un club d'astronomie amateur organise même des soirées d'observation depuis le printemps. Quant aux économies réalisées, elles devraient permettre, selon la mairie, de rénover la salle des fêtes.",
+     "sv": "Men borgmästaren lyfter också fram andra argument. Fladdermöss och många insekter, som störs av det artificiella ljuset, får en gynnsammare miljö, och invånarna återupptäcker stjärnhimlen. En amatörastronomisk klubb ordnar till och med observationskvällar sedan i våras. De pengar man sparar ska enligt kommunen göra det möjligt att renovera festlokalen."
+    },
+    {
+     "fr": "Tout le monde n'est pas convaincu. Certains habitants, en particulier des personnes âgées et des salariés qui partent travailler tôt, disent ne pas se sentir en sécurité dans les rues plongées dans le noir. Le maire répond que les gendarmes n'ont constaté aucune hausse des cambriolages depuis la mise en place de la mesure. Il reconnaît toutefois que l'inquiétude est réelle et promet de maintenir l'éclairage autour de la gare et de l'arrêt de bus, où plusieurs habitants attendent chaque matin avant l'aube. Une réunion publique est prévue le mois prochain.",
+     "sv": "Alla är inte övertygade. Vissa invånare, särskilt äldre och anställda som åker tidigt till jobbet, säger att de inte känner sig trygga på de nedsläckta gatorna. Borgmästaren svarar att polisen inte har sett någon ökning av inbrotten sedan åtgärden infördes. Han medger ändå att oron är verklig och lovar att behålla belysningen runt järnvägsstationen och busshållplatsen, där flera invånare väntar varje morgon innan det har ljusnat. Ett offentligt möte planeras nästa månad."
+    },
+    {
+     "fr": "Document 2. — Chronique santé. Vous faites du sport deux fois par semaine ? Bravo. Mais si vous passez le reste de vos journées assis, au bureau, dans les transports, puis devant un écran, vous n'êtes peut-être pas aussi actif que vous le croyez. Car bouger, ce n'est pas seulement transpirer une heure à la salle de sport.",
+     "sv": "Inslag 2. – Hälsokrönikan. Tränar du två gånger i veckan? Bra. Men om du tillbringar resten av dina dagar sittande, på kontoret, på bussen eller tåget och sedan framför en skärm, är du kanske inte så aktiv som du tror. För att röra på sig är inte bara att svettas en timme på gymmet."
+    },
+    {
+     "fr": "Les médecins distinguent en effet deux notions que l'on confond souvent : l'inactivité physique, c'est-à-dire le manque d'exercice, et la sédentarité, c'est-à-dire le temps passé assis ou allongé sans bouger, en dehors du sommeil. On peut donc être à la fois sportif et sédentaire. Or rester assis de longues heures d'affilée a ses propres effets sur la santé, que la séance de sport du soir ne suffit pas à effacer complètement.",
+     "sv": "Läkarna skiljer nämligen mellan två begrepp som man ofta blandar ihop: fysisk inaktivitet, alltså brist på motion, och stillasittande, alltså tiden man sitter eller ligger utan att röra sig, sömnen oräknad. Man kan alltså vara både idrottande och stillasittande. Men att sitta många timmar i sträck har egna effekter på hälsan, som kvällens träningspass inte räcker för att helt sudda ut."
+    },
+    {
+     "fr": "La bonne nouvelle, c'est que les solutions sont simples. L'essentiel est d'interrompre régulièrement la position assise : se lever toutes les heures, ne serait-ce que deux ou trois minutes, téléphoner debout, aller voir un collègue plutôt que de lui envoyer un courriel, prendre l'escalier plutôt que l'ascenseur, descendre du bus un arrêt plus tôt. Rien de spectaculaire, donc, mais des habitudes qui, répétées chaque jour, finissent par compter. Et beaucoup d'étudiants en période d'examens le constatent : une courte pause pour marcher les aide aussi à se concentrer ensuite. Le sport reste donc indispensable, mais il ne dispense pas de bouger le reste du temps.",
+     "sv": "Den goda nyheten är att lösningarna är enkla. Det viktigaste är att regelbundet bryta sittandet: resa sig varje timme, om så bara i två eller tre minuter, prata i telefon stående, gå bort till en kollega i stället för att mejla, ta trappan i stället för hissen, kliva av bussen en hållplats tidigare. Inget spektakulärt alltså, men vanor som, upprepade varje dag, till slut gör skillnad. Och många studenter märker under tentaperioden att en kort promenadpaus också hjälper dem att koncentrera sig efteråt. Träning är alltså fortfarande nödvändig, men den befriar en inte från att röra sig resten av tiden."
+    },
+    {
+     "fr": "Document 3. — Témoignage. Je m'appelle Hugo, j'ai vingt ans et je suis apprenti luthier. Au lycée, j'étais en filière générale et tout le monde pensait que je ferais des études longues. Mais je jouais du violoncelle depuis l'enfance, et ce qui me fascinait, c'était l'instrument lui-même : comment un morceau de bois peut-il produire un son pareil ?",
+     "sv": "Inslag 3. – Vittnesmål. Jag heter Hugo, är tjugo år och lärling hos en fiolbyggare. På gymnasiet gick jag ett studieförberedande program och alla trodde att jag skulle läsa länge på universitetet. Men jag hade spelat cello sedan jag var liten, och det som fascinerade mig var själva instrumentet: hur kan en träbit ge ifrån sig en sådan klang?"
+    },
+    {
+     "fr": "Après le bac, j'ai trouvé une place dans un petit atelier d'une ville de province. Je passe quatre jours par semaine à l'atelier et un jour en formation. Au début, j'ai surtout fait des réparations : changer une corde, recoller une fissure, régler un chevalet. Le quotidien n'a rien de romantique : on passe des heures à poncer, à mesurer, à recommencer. Mon maître d'apprentissage refusait que je commence un instrument tant que je ne savais pas affûter correctement mes outils. Sur le moment, ça m'agaçait. Aujourd'hui, je comprends pourquoi.",
+     "sv": "Efter studentexamen fick jag en plats i en liten verkstad i en landsortsstad. Jag är fyra dagar i veckan i verkstaden och en dag i skolan. I början gjorde jag mest reparationer: byta en sträng, limma en spricka, justera ett stall. Vardagen är inte alls romantisk: man tillbringar timmar med att slipa, mäta och börja om. Min lärmästare vägrade låta mig börja bygga ett instrument så länge jag inte kunde slipa mina verktyg ordentligt. Då irriterade det mig. I dag förstår jag varför."
+    },
+    {
+     "fr": "Mon premier violon m'a pris presque neuf mois. Il n'est pas parfait, loin de là, mais je ne m'en séparerai jamais. Quand un musicien l'a joué pour la première fois devant moi, j'étais plus nerveux qu'avant un concert ! Ce que je dirais à ceux qui hésitent ? Que c'est un métier de patience, où l'on progresse lentement et où il faut accepter de rater souvent et de travailler seul pendant de longues journées. Mais je n'ai jamais regretté d'avoir quitté le chemin qu'on avait tracé pour moi.",
+     "sv": "Min första fiol tog nästan nio månader. Den är långt ifrån perfekt, men jag kommer aldrig att skiljas från den. När en musiker spelade på den för första gången inför mig var jag nervösare än före en konsert! Vad jag skulle säga till dem som tvekar? Att det är ett yrke som kräver tålamod, där man utvecklas långsamt och där man måste acceptera att ofta misslyckas och att arbeta ensam under långa dagar. Men jag har aldrig ångrat att jag lämnade den väg som andra hade stakat ut åt mig."
+    }
+   ],
+   "qs": [
+    {
+     "q": "Document 1. Quelle est la première raison de cette décision ?",
+     "opts": [
+      "Protéger les animaux nocturnes.",
+      "Permettre l'observation des étoiles.",
+      "Réduire les dépenses de la commune."
+     ],
+     "a": 2,
+     "why": "Beslutet togs « d'abord pour des raisons financières : avec la hausse du prix de l'électricité »."
+    },
+    {
+     "q": "Document 1. Comment le maire répond-il aux inquiétudes des habitants ?",
+     "opts": [
+      "Il laissera l'éclairage près de la gare et de l'arrêt de bus.",
+      "Il rallumera les lampadaires pendant l'hiver.",
+      "Il demandera aux gendarmes de patrouiller la nuit."
+     ],
+     "a": 0,
+     "why": "Han « promet de maintenir l'éclairage autour de la gare et de l'arrêt de bus »."
+    },
+    {
+     "q": "Document 2. D'après la chronique, une personne qui fait du sport…",
+     "opts": [
+      "ne peut pas être sédentaire.",
+      "peut quand même être sédentaire.",
+      "devrait s'entraîner tous les jours."
+     ],
+     "a": 1,
+     "why": "« On peut donc être à la fois sportif et sédentaire »."
+    },
+    {
+     "q": "Document 2. Que conseille la chronique ?",
+     "opts": [
+      "Faire une longue séance de sport le soir.",
+      "Remplacer le sport par la marche.",
+      "Interrompre régulièrement le temps passé assis."
+     ],
+     "a": 2,
+     "why": "« L'essentiel est d'interrompre régulièrement la position assise : se lever toutes les heures »."
+    },
+    {
+     "q": "Document 3. Qu'est-ce qui a attiré Hugo vers la lutherie ?",
+     "opts": [
+      "Ses mauvais résultats au lycée.",
+      "Sa fascination pour l'instrument lui-même.",
+      "Les conseils de son professeur de violoncelle."
+     ],
+     "a": 1,
+     "why": "« ce qui me fascinait, c'était l'instrument lui-même »."
+    },
+    {
+     "q": "Document 3. Qu'exigeait son maître d'apprentissage avant qu'il fabrique un instrument ?",
+     "opts": [
+      "Qu'il sache affûter correctement ses outils.",
+      "Qu'il ait terminé sa formation.",
+      "Qu'il sache jouer du violon."
+     ],
+     "a": 0,
+     "why": "Han « refusait que je commence un instrument tant que je ne savais pas affûter correctement mes outils »."
     }
    ]
   },
@@ -644,15 +1259,6 @@
      "why": "« les étudiants peuvent obtenir en trois ans à la fois leur diplôme d'interprète et une licence »."
     },
     {
-     "q": "Vrai ou faux ? Pour entrer en licence de musicologie, on exige en général le même niveau instrumental qu'au conservatoire.",
-     "opts": [
-      "Vrai",
-      "Faux"
-     ],
-     "a": 1,
-     "why": "Faux. « le niveau instrumental exigé y est en général bien moins élevé que dans les conservatoires »."
-    },
-    {
      "q": "Selon la professeure de piano, le choix d'une formation dépend avant tout…",
      "opts": [
       "du prix des études.",
@@ -671,121 +1277,6 @@
      ],
      "a": 0,
      "why": "« une bonne maîtrise du français est un atout, sinon une condition » – alltså en fördel, kanske till och med ett krav."
-    }
-   ]
-  },
-  {
-   "id": "fru-ce-2",
-   "part": "ce",
-   "teil": "Exercice 2",
-   "title": "La laïcité, une liberté avant d'être une interdiction",
-   "time": 20,
-   "instr": "Läs debattartikeln (tribune) av en filosofilärare och svara på frågorna. Tänk på skillnaden mellan det skribenten påstår, det skribenten medger och det skribenten avvisar.",
-   "lines": [
-    {
-     "fr": "Il est peu de mots aussi souvent prononcés, et aussi rarement définis, que celui de laïcité. Invoquée à chaque polémique, brandie tantôt comme un rempart, tantôt comme une menace, elle semble être devenue un synonyme d'interdiction. Il faut pourtant rappeler ce qu'elle est d'abord : un principe de liberté.",
-     "sv": "Det finns få ord som uttalas så ofta, och definieras så sällan, som ordet laïcité (sekularism). Det åberopas i varje kontrovers och viftas med än som ett skyddsvärn, än som ett hot, och det verkar ha blivit en synonym till förbud. Man måste ändå påminna om vad det i första hand är: en frihetsprincip."
-    },
-    {
-     "fr": "La loi du 9 décembre 1905, qui sépare les Églises et l'État, s'ouvre sur une phrase trop souvent oubliée : « La République assure la liberté de conscience. » Ce n'est qu'à l'article suivant qu'elle précise : « La République ne reconnaît, ne salarie ni ne subventionne aucun culte. » L'ordre des articles n'a rien d'anodin. Avant de limiter, la loi protège : chacun est libre de croire ou de ne pas croire, de pratiquer une religion ou d'en changer. La neutralité est exigée de l'État et de ceux qui le représentent, non des citoyens.",
-     "sv": "Lagen av den 9 december 1905, som skiljer kyrkorna från staten, inleds med en mening som alltför ofta glöms bort: ”Republiken garanterar samvetsfriheten.” Först i nästa artikel preciserar den: ”Republiken erkänner, avlönar och subventionerar inget trossamfund.” Artiklarnas ordning är inte betydelselös. Innan lagen begränsar, skyddar den: var och en är fri att tro eller inte tro, att utöva en religion eller byta religion. Neutralitet krävs av staten och av dem som företräder den, inte av medborgarna."
-    },
-    {
-     "fr": "Cette distinction est au cœur de nombreux malentendus. Un fonctionnaire, un enseignant ou un agent de mairie doit s'abstenir de manifester ses convictions religieuses dans l'exercice de ses fonctions, car il incarne un service public qui doit traiter tout le monde de la même manière. L'usager, lui, n'a pas cette obligation. La loi de 2004, qui interdit aux élèves des écoles, collèges et lycées publics le port de signes religieux ostensibles, constitue une exception, justifiée par l'âge des élèves et par la mission particulière de l'école. Elle ne s'applique pas à l'université, où les étudiants sont des adultes libres de leurs choix.",
-     "sv": "Den distinktionen ligger bakom många missförstånd. En tjänsteman, en lärare eller en kommunanställd måste avstå från att visa sin religiösa övertygelse i tjänsten, eftersom hen förkroppsligar en offentlig verksamhet som ska behandla alla lika. Användaren av tjänsten har däremot ingen sådan skyldighet. Lagen från 2004, som förbjuder elever i offentliga grundskolor och gymnasier att bära iögonfallande religiösa symboler, är ett undantag som motiveras av elevernas ålder och skolans särskilda uppdrag. Den gäller inte på universitetet, där studenterna är vuxna som fritt får göra sina val."
-    },
-    {
-     "fr": "Or, depuis une trentaine d'années, la tentation est grande d'étendre sans cesse le champ de la neutralité : aux parents qui accompagnent les sorties scolaires, aux plages, aux entreprises, voire à la rue. Chaque fois, on invoque la laïcité ; chaque fois, on oublie qu'elle n'a jamais eu pour but d'effacer les religions de l'espace public. Lorsqu'elle devient un moyen de désigner une partie de la population comme suspecte, elle se retourne contre elle-même.",
-     "sv": "Men under de senaste cirka trettio åren har frestelsen varit stor att hela tiden utvidga neutralitetens område: till föräldrar som följer med på skolutflykter, till stränderna, till företagen, ja till och med till gatan. Varje gång åberopar man laïcité; varje gång glömmer man att den aldrig har haft som mål att sudda ut religionerna ur det offentliga rummet. När den blir ett sätt att peka ut en del av befolkningen som misstänkt, vänds den mot sig själv."
-    },
-    {
-     "fr": "Faut-il pour autant renoncer à toute exigence ? Certainement pas. La laïcité protège aussi l'individu contre les pressions de son propre groupe : l'élève qui ne veut pas porter de signe religieux, la jeune femme qui refuse un mariage imposé, le professeur de sciences à qui l'on voudrait interdire d'enseigner la théorie de l'évolution. Céder sur ce point, au nom d'un respect mal compris des traditions, reviendrait à abandonner ceux qui comptent sur la République pour être libres.",
-     "sv": "Ska man därmed avstå från alla krav? Absolut inte. Laïcité skyddar också individen mot påtryckningar från den egna gruppen: eleven som inte vill bära någon religiös symbol, den unga kvinnan som vägrar ett påtvingat äktenskap, naturkunskapsläraren som någon vill förbjuda att undervisa om evolutionsteorin. Att ge efter på den punkten, i namn av en missförstådd respekt för traditioner, vore att överge dem som räknar med republiken för att kunna vara fria."
-    },
-    {
-     "fr": "Ce qui manque le plus, ce ne sont donc pas de nouvelles lois, mais une meilleure connaissance de celles qui existent. Combien de Français savent que l'Alsace et la Moselle, pour des raisons historiques, ne sont pas soumises à la loi de 1905 ? Combien d'élèves pourraient expliquer la différence entre la neutralité de l'État et la liberté du citoyen ? Plutôt que de faire de la laïcité un slogan, il est temps d'en refaire une culture partagée : une culture qui s'apprend, se discute et se transmet.",
-     "sv": "Det som saknas mest är alltså inte nya lagar, utan bättre kunskap om dem som redan finns. Hur många fransmän vet att Alsace och Moselle av historiska skäl inte omfattas av 1905 års lag? Hur många elever skulle kunna förklara skillnaden mellan statens neutralitet och medborgarens frihet? I stället för att göra laïcité till en slogan är det dags att åter göra den till en gemensam kultur: en kultur som man lär sig, diskuterar och för vidare."
-    }
-   ],
-   "qs": [
-    {
-     "q": "Quel constat l'auteur fait-il dans le premier paragraphe ?",
-     "opts": [
-      "La laïcité est un mot souvent employé, mais mal défini, et associé à l'interdiction.",
-      "La laïcité n'intéresse plus personne en France.",
-      "La laïcité est un principe récent, apparu avec les polémiques."
-     ],
-     "a": 0,
-     "why": "« Il est peu de mots aussi souvent prononcés, et aussi rarement définis » och « elle semble être devenue un synonyme d'interdiction »."
-    },
-    {
-     "q": "Pourquoi l'auteur insiste-t-il sur l'ordre des articles de la loi de 1905 ?",
-     "opts": [
-      "Pour montrer que la loi a été mal rédigée.",
-      "Pour montrer que la loi protège la liberté avant de poser des limites.",
-      "Pour montrer que la loi concerne surtout le financement des cultes."
-     ],
-     "a": 1,
-     "why": "« L'ordre des articles n'a rien d'anodin. Avant de limiter, la loi protège »."
-    },
-    {
-     "q": "Selon l'auteur, à qui l'obligation de neutralité s'impose-t-elle ?",
-     "opts": [
-      "À tous les citoyens dans l'espace public.",
-      "Uniquement aux responsables religieux.",
-      "À l'État et à ceux qui le représentent."
-     ],
-     "a": 2,
-     "why": "« La neutralité est exigée de l'État et de ceux qui le représentent, non des citoyens »."
-    },
-    {
-     "q": "Vrai ou faux ? D'après le texte, la loi de 2004 s'applique aussi aux étudiants des universités.",
-     "opts": [
-      "Vrai",
-      "Faux"
-     ],
-     "a": 1,
-     "why": "Faux. « Elle ne s'applique pas à l'université, où les étudiants sont des adultes libres de leurs choix »."
-    },
-    {
-     "q": "Que reproche l'auteur à l'extension continue de la neutralité ?",
-     "opts": [
-      "Elle risque de servir à désigner une partie de la population comme suspecte.",
-      "Elle coûte trop cher aux collectivités.",
-      "Elle a été décidée sans loi."
-     ],
-     "a": 0,
-     "why": "« Lorsqu'elle devient un moyen de désigner une partie de la population comme suspecte, elle se retourne contre elle-même »."
-    },
-    {
-     "q": "Dans le cinquième paragraphe, l'auteur…",
-     "opts": [
-      "change d'avis et défend de nouvelles interdictions.",
-      "reconnaît que la laïcité protège aussi l'individu contre les pressions de son groupe.",
-      "affirme que les traditions doivent toujours être respectées."
-     ],
-     "a": 1,
-     "why": "« Faut-il pour autant renoncer à toute exigence ? Certainement pas. La laïcité protège aussi l'individu contre les pressions de son propre groupe »."
-    },
-    {
-     "q": "Pourquoi l'auteur mentionne-t-il l'Alsace et la Moselle ?",
-     "opts": [
-      "Pour citer un exemple de laïcité réussie.",
-      "Pour proposer d'y appliquer enfin la loi de 1905.",
-      "Pour montrer que les lois existantes sont mal connues."
-     ],
-     "a": 2,
-     "why": "Exemplet visar att det som saknas är « une meilleure connaissance de celles qui existent »: « Combien de Français savent que l'Alsace et la Moselle […] ne sont pas soumises à la loi de 1905 ? »"
-    },
-    {
-     "q": "Quelle est la thèse générale de l'auteur ?",
-     "opts": [
-      "Il faut de nouvelles lois pour faire respecter la laïcité.",
-      "La laïcité est d'abord une liberté, qu'il faut mieux enseigner.",
-      "La laïcité est dépassée et devrait être abandonnée."
-     ],
-     "a": 1,
-     "why": "Han kallar den « un principe de liberté » och avslutar: « Plutôt que de faire de la laïcité un slogan, il est temps d'en refaire une culture partagée »."
     }
    ]
   },
@@ -864,15 +1355,6 @@
      "why": "« la plupart doivent se rendre au bureau deux ou trois jours par semaine, ce qui limite l'éloignement possible »."
     },
     {
-     "q": "Vrai ou faux ? Selon l'article, les guichets France services règlent le problème des déserts médicaux.",
-     "opts": [
-      "Vrai",
-      "Faux"
-     ],
-     "a": 1,
-     "why": "Faux. De hjälper till med « démarches administratives », men « aucun guichet ne remplace un médecin »."
-    },
-    {
      "q": "Que reprochent certains habitants de longue date aux nouveaux venus ?",
      "opts": [
       "De ne pas participer à la vie associative.",
@@ -901,6 +1383,218 @@
      ],
      "a": 0,
      "why": "« la clé n'est pas tant d'attirer des citadins que de maintenir les conditions d'une vie ordinaire : des services, des transports et du travail »."
+    }
+   ]
+  },
+  {
+   "id": "fru-ce-5",
+   "part": "ce",
+   "teil": "Exercice 1",
+   "title": "Le sommeil des adolescents, une affaire collective",
+   "time": 20,
+   "instr": "Läs artikeln, en argumenterande text ur ett magasin, och svara på frågorna. Var uppmärksam på skillnaden mellan det som ofta påstås och det som artikeln själv hävdar.",
+   "lines": [
+    {
+     "fr": "« Dors, tu seras plus en forme demain. » Combien de parents ont répété cette phrase à un adolescent qui, à minuit passé, faisait encore défiler des vidéos sous sa couette ? Le manque de sommeil des jeunes est souvent présenté comme une affaire de discipline personnelle, voire de mauvaise volonté. C'est pourtant, à bien des égards, un problème collectif, que ni les familles ni l'école ne peuvent résoudre seules.",
+     "sv": "”Sov nu, så orkar du mer i morgon.” Hur många föräldrar har inte upprepat den meningen för en tonåring som efter midnatt fortfarande scrollade bland videor under täcket? De ungas sömnbrist framställs ofta som en fråga om personlig disciplin, rentav om bristande vilja. Ändå är det i många avseenden ett gemensamt problem, som varken familjerna eller skolan kan lösa på egen hand."
+    },
+    {
+     "fr": "Les spécialistes le rappellent : à l'adolescence, l'horloge biologique se décale. L'envie de dormir arrive plus tard dans la soirée, et le corps réclame en conséquence de se réveiller plus tard le matin. « Demander à un lycéen de s'endormir à 22 heures, c'est un peu comme demander à un adulte de se coucher à 20 heures, explique Claire Vasseur, médecin du sommeil dans un hôpital de l'ouest de la France. Il peut se mettre au lit, mais il ne dormira pas. » Or les cours commencent souvent tôt, parfois après un long trajet en car. La dette de sommeil s'accumule au fil de la semaine, et la grasse matinée du week-end ne suffit pas à la rembourser.",
+     "sv": "Specialisterna påminner om att den biologiska klockan förskjuts i tonåren. Sömnigheten kommer senare på kvällen, och kroppen kräver därför att få vakna senare på morgonen. ”Att be en gymnasieelev somna klockan 22 är ungefär som att be en vuxen gå och lägga sig klockan 20”, förklarar Claire Vasseur, sömnläkare på ett sjukhus i västra Frankrike. ”Han kan lägga sig i sängen, men han kommer inte att sova.” Men lektionerna börjar ofta tidigt, ibland efter en lång bussresa. Sömnskulden växer under veckan, och sovmorgonen på helgen räcker inte för att betala tillbaka den."
+    },
+    {
+     "fr": "Les écrans aggravent évidemment la situation. Mais, contrairement à une idée répandue, ce n'est pas tant leur lumière qui pose problème que ce qu'on y fait. Une série dont on enchaîne les épisodes, une conversation de groupe qui ne s'arrête jamais, un jeu en ligne où l'on ne veut pas lâcher ses coéquipiers : tout est conçu pour retenir l'attention. « Confisquer le téléphone peut aider ponctuellement, reconnaît la médecin, mais si l'on n'explique pas pourquoi, l'adolescent le reprendra dès qu'il le pourra. »",
+     "sv": "Skärmarna förvärrar förstås situationen. Men i motsats till en utbredd föreställning är det inte så mycket deras ljus som är problemet, utan vad man gör på dem. En serie där man ser avsnitt efter avsnitt, en gruppchatt som aldrig tar slut, ett onlinespel där man inte vill svika sina lagkamrater: allt är utformat för att hålla kvar uppmärksamheten. ”Att ta ifrån dem telefonen kan hjälpa tillfälligt”, medger läkaren, ”men om man inte förklarar varför tar tonåringen tillbaka den så fort han kan.”"
+    },
+    {
+     "fr": "Les conséquences sont loin d'être anodines. Un élève qui dort mal retient moins bien ce qu'il apprend, se concentre difficilement et devient plus irritable. Paradoxalement, c'est souvent en période d'examens, quand le sommeil serait le plus utile, que les jeunes le sacrifient pour réviser.",
+     "sv": "Följderna är långt ifrån harmlösa. En elev som sover dåligt minns sämre det han lär sig, har svårt att koncentrera sig och blir mer lättirriterad. Paradoxalt nog är det ofta under tentaperioder, när sömnen skulle vara som mest till nytta, som de unga offrar den för att plugga."
+    },
+    {
+     "fr": "Que faire, alors ? Certains établissements ont tenté l'expérience de retarder le début des cours. Dans un lycée d'une petite ville de Bretagne, l'équipe de direction a ainsi décalé la première sonnerie à 9 heures deux jours par semaine. Le bilan, tiré au bout d'un an, est nuancé : les élèves disent se sentir plus reposés, mais les journées finissent plus tard, ce qui complique les activités sportives et musicales du soir.",
+     "sv": "Vad ska man då göra? Vissa skolor har provat att skjuta upp skoldagens början. På ett gymnasium i en liten stad i Bretagne flyttade skolledningen den första ringningen till klockan 9 två dagar i veckan. Utvärderingen efter ett år är blandad: eleverna säger att de känner sig mer utvilade, men dagarna slutar senare, vilket försvårar idrotts- och musikaktiviteter på kvällen."
+    },
+    {
+     "fr": "Pour Claire Vasseur, il n'existe pas de solution miracle, mais une addition de petits changements : des horaires mieux pensés, des cours d'éducation à la santé qui parlent enfin du sommeil, et des adultes qui montrent l'exemple. « On ne peut pas reprocher aux jeunes de rester connectés à minuit si leurs parents répondent à leurs mails professionnels à la même heure. »",
+     "sv": "Enligt Claire Vasseur finns det ingen mirakellösning, utan en rad små förändringar: bättre genomtänkta scheman, hälsoundervisning som äntligen tar upp sömnen, och vuxna som föregår med gott exempel. ”Man kan inte klandra de unga för att vara uppkopplade vid midnatt om deras föräldrar svarar på jobbmejl vid samma tid.”"
+    }
+   ],
+   "qs": [
+    {
+     "q": "Quelle est la position de l'auteur dans le premier paragraphe ?",
+     "opts": [
+      "Le manque de sommeil des jeunes s'explique d'abord par leur manque de volonté.",
+      "Le manque de sommeil des jeunes est un problème qui dépasse les seules familles.",
+      "C'est avant tout à l'école de régler le problème du sommeil des jeunes."
+     ],
+     "a": 1,
+     "why": "Det är « un problème collectif, que ni les familles ni l'école ne peuvent résoudre seules ». Att det handlar om vilja är bara hur det « est souvent présenté »."
+    },
+    {
+     "q": "Que veut montrer Claire Vasseur avec sa comparaison ?",
+     "opts": [
+      "Qu'un lycéen a du mal à s'endormir tôt à cause de son rythme biologique.",
+      "Que les adultes ont besoin de plus de sommeil que les adolescents.",
+      "Que les lycéens devraient se coucher vers 20 heures."
+     ],
+     "a": 0,
+     "why": "« À l'adolescence, l'horloge biologique se décale » – en gymnasieelev « peut se mettre au lit, mais il ne dormira pas »."
+    },
+    {
+     "q": "Pourquoi la grasse matinée du week-end ne règle-t-elle pas le problème ?",
+     "opts": [
+      "Parce que les jeunes se couchent encore plus tard le samedi.",
+      "Parce que beaucoup de lycéens ont aussi cours le samedi matin.",
+      "Parce qu'elle ne compense pas le manque accumulé pendant la semaine."
+     ],
+     "a": 2,
+     "why": "« La dette de sommeil s'accumule au fil de la semaine, et la grasse matinée du week-end ne suffit pas à la rembourser »."
+    },
+    {
+     "q": "D'après l'article, ce qui rend les écrans problématiques le soir, c'est surtout…",
+     "opts": [
+      "des contenus conçus pour capter l'attention.",
+      "la lumière qu'ils émettent.",
+      "le fait qu'on les utilise dans son lit."
+     ],
+     "a": 0,
+     "why": "« Ce n'est pas tant leur lumière qui pose problème que ce qu'on y fait […] tout est conçu pour retenir l'attention »."
+    },
+    {
+     "q": "Selon la médecin, confisquer le téléphone…",
+     "opts": [
+      "est la solution la plus efficace.",
+      "ne sert à rien, quelles que soient les circonstances.",
+      "n'a pas d'effet durable si l'on n'en explique pas la raison."
+     ],
+     "a": 2,
+     "why": "« Confisquer le téléphone peut aider ponctuellement […] mais si l'on n'explique pas pourquoi, l'adolescent le reprendra dès qu'il le pourra »."
+    },
+    {
+     "q": "Quel paradoxe l'article relève-t-il ?",
+     "opts": [
+      "Les jeunes dorment moins au moment où le sommeil leur serait le plus utile.",
+      "Les jeunes qui dorment le plus obtiennent les moins bons résultats.",
+      "Les examens ont lieu à l'heure où les jeunes sont le plus fatigués."
+     ],
+     "a": 0,
+     "why": "« C'est souvent en période d'examens, quand le sommeil serait le plus utile, que les jeunes le sacrifient pour réviser »."
+    },
+    {
+     "q": "Quel bilan le lycée breton tire-t-il de son expérience ?",
+     "opts": [
+      "Un bilan entièrement positif, qui pousse à généraliser la mesure.",
+      "Un bilan mitigé : des élèves plus reposés, mais des soirées plus difficiles à organiser.",
+      "Un bilan négatif, car les élèves ne se sentent pas plus reposés."
+     ],
+     "a": 1,
+     "why": "« Le bilan […] est nuancé : les élèves disent se sentir plus reposés, mais les journées finissent plus tard, ce qui complique les activités […] du soir »."
+    }
+   ]
+  },
+  {
+   "id": "fru-ce-2",
+   "part": "ce",
+   "teil": "Exercice 2",
+   "title": "La laïcité, une liberté avant d'être une interdiction",
+   "time": 20,
+   "instr": "Läs debattartikeln (tribune) av en filosofilärare och svara på frågorna. Tänk på skillnaden mellan det skribenten påstår, det skribenten medger och det skribenten avvisar.",
+   "lines": [
+    {
+     "fr": "Il est peu de mots aussi souvent prononcés, et aussi rarement définis, que celui de laïcité. Invoquée à chaque polémique, brandie tantôt comme un rempart, tantôt comme une menace, elle semble être devenue un synonyme d'interdiction. Il faut pourtant rappeler ce qu'elle est d'abord : un principe de liberté.",
+     "sv": "Det finns få ord som uttalas så ofta, och definieras så sällan, som ordet laïcité (sekularism). Det åberopas i varje kontrovers och viftas med än som ett skyddsvärn, än som ett hot, och det verkar ha blivit en synonym till förbud. Man måste ändå påminna om vad det i första hand är: en frihetsprincip."
+    },
+    {
+     "fr": "La loi du 9 décembre 1905, qui sépare les Églises et l'État, s'ouvre sur une phrase trop souvent oubliée : « La République assure la liberté de conscience. » Ce n'est qu'à l'article suivant qu'elle précise : « La République ne reconnaît, ne salarie ni ne subventionne aucun culte. » L'ordre des articles n'a rien d'anodin. Avant de limiter, la loi protège : chacun est libre de croire ou de ne pas croire, de pratiquer une religion ou d'en changer. La neutralité est exigée de l'État et de ceux qui le représentent, non des citoyens.",
+     "sv": "Lagen av den 9 december 1905, som skiljer kyrkorna från staten, inleds med en mening som alltför ofta glöms bort: ”Republiken garanterar samvetsfriheten.” Först i nästa artikel preciserar den: ”Republiken erkänner, avlönar och subventionerar inget trossamfund.” Artiklarnas ordning är inte betydelselös. Innan lagen begränsar, skyddar den: var och en är fri att tro eller inte tro, att utöva en religion eller byta religion. Neutralitet krävs av staten och av dem som företräder den, inte av medborgarna."
+    },
+    {
+     "fr": "Cette distinction est au cœur de nombreux malentendus. Un fonctionnaire, un enseignant ou un agent de mairie doit s'abstenir de manifester ses convictions religieuses dans l'exercice de ses fonctions, car il incarne un service public qui doit traiter tout le monde de la même manière. L'usager, lui, n'a pas cette obligation. La loi de 2004, qui interdit aux élèves des écoles, collèges et lycées publics le port de signes religieux ostensibles, constitue une exception, justifiée par l'âge des élèves et par la mission particulière de l'école. Elle ne s'applique pas à l'université, où les étudiants sont des adultes libres de leurs choix.",
+     "sv": "Den distinktionen ligger bakom många missförstånd. En tjänsteman, en lärare eller en kommunanställd måste avstå från att visa sin religiösa övertygelse i tjänsten, eftersom hen förkroppsligar en offentlig verksamhet som ska behandla alla lika. Användaren av tjänsten har däremot ingen sådan skyldighet. Lagen från 2004, som förbjuder elever i offentliga grundskolor och gymnasier att bära iögonfallande religiösa symboler, är ett undantag som motiveras av elevernas ålder och skolans särskilda uppdrag. Den gäller inte på universitetet, där studenterna är vuxna som fritt får göra sina val."
+    },
+    {
+     "fr": "Or, depuis une trentaine d'années, la tentation est grande d'étendre sans cesse le champ de la neutralité : aux parents qui accompagnent les sorties scolaires, aux plages, aux entreprises, voire à la rue. Chaque fois, on invoque la laïcité ; chaque fois, on oublie qu'elle n'a jamais eu pour but d'effacer les religions de l'espace public. Lorsqu'elle devient un moyen de désigner une partie de la population comme suspecte, elle se retourne contre elle-même.",
+     "sv": "Men under de senaste cirka trettio åren har frestelsen varit stor att hela tiden utvidga neutralitetens område: till föräldrar som följer med på skolutflykter, till stränderna, till företagen, ja till och med till gatan. Varje gång åberopar man laïcité; varje gång glömmer man att den aldrig har haft som mål att sudda ut religionerna ur det offentliga rummet. När den blir ett sätt att peka ut en del av befolkningen som misstänkt, vänds den mot sig själv."
+    },
+    {
+     "fr": "Faut-il pour autant renoncer à toute exigence ? Certainement pas. La laïcité protège aussi l'individu contre les pressions de son propre groupe : l'élève qui ne veut pas porter de signe religieux, la jeune femme qui refuse un mariage imposé, le professeur de sciences à qui l'on voudrait interdire d'enseigner la théorie de l'évolution. Céder sur ce point, au nom d'un respect mal compris des traditions, reviendrait à abandonner ceux qui comptent sur la République pour être libres.",
+     "sv": "Ska man därmed avstå från alla krav? Absolut inte. Laïcité skyddar också individen mot påtryckningar från den egna gruppen: eleven som inte vill bära någon religiös symbol, den unga kvinnan som vägrar ett påtvingat äktenskap, naturkunskapsläraren som någon vill förbjuda att undervisa om evolutionsteorin. Att ge efter på den punkten, i namn av en missförstådd respekt för traditioner, vore att överge dem som räknar med republiken för att kunna vara fria."
+    },
+    {
+     "fr": "Ce qui manque le plus, ce ne sont donc pas de nouvelles lois, mais une meilleure connaissance de celles qui existent. Combien de Français savent que l'Alsace et la Moselle, pour des raisons historiques, ne sont pas soumises à la loi de 1905 ? Combien d'élèves pourraient expliquer la différence entre la neutralité de l'État et la liberté du citoyen ? Plutôt que de faire de la laïcité un slogan, il est temps d'en refaire une culture partagée : une culture qui s'apprend, se discute et se transmet.",
+     "sv": "Det som saknas mest är alltså inte nya lagar, utan bättre kunskap om dem som redan finns. Hur många fransmän vet att Alsace och Moselle av historiska skäl inte omfattas av 1905 års lag? Hur många elever skulle kunna förklara skillnaden mellan statens neutralitet och medborgarens frihet? I stället för att göra laïcité till en slogan är det dags att åter göra den till en gemensam kultur: en kultur som man lär sig, diskuterar och för vidare."
+    }
+   ],
+   "qs": [
+    {
+     "q": "Quel constat l'auteur fait-il dans le premier paragraphe ?",
+     "opts": [
+      "La laïcité est un mot souvent employé, mais mal défini, et associé à l'interdiction.",
+      "La laïcité n'intéresse plus personne en France.",
+      "La laïcité est un principe récent, apparu avec les polémiques."
+     ],
+     "a": 0,
+     "why": "« Il est peu de mots aussi souvent prononcés, et aussi rarement définis » och « elle semble être devenue un synonyme d'interdiction »."
+    },
+    {
+     "q": "Pourquoi l'auteur insiste-t-il sur l'ordre des articles de la loi de 1905 ?",
+     "opts": [
+      "Pour montrer que la loi a été mal rédigée.",
+      "Pour montrer que la loi protège la liberté avant de poser des limites.",
+      "Pour montrer que la loi concerne surtout le financement des cultes."
+     ],
+     "a": 1,
+     "why": "« L'ordre des articles n'a rien d'anodin. Avant de limiter, la loi protège »."
+    },
+    {
+     "q": "Selon l'auteur, à qui l'obligation de neutralité s'impose-t-elle ?",
+     "opts": [
+      "À tous les citoyens dans l'espace public.",
+      "Uniquement aux responsables religieux.",
+      "À l'État et à ceux qui le représentent."
+     ],
+     "a": 2,
+     "why": "« La neutralité est exigée de l'État et de ceux qui le représentent, non des citoyens »."
+    },
+    {
+     "q": "Que reproche l'auteur à l'extension continue de la neutralité ?",
+     "opts": [
+      "Elle risque de servir à désigner une partie de la population comme suspecte.",
+      "Elle coûte trop cher aux collectivités.",
+      "Elle a été décidée sans loi."
+     ],
+     "a": 0,
+     "why": "« Lorsqu'elle devient un moyen de désigner une partie de la population comme suspecte, elle se retourne contre elle-même »."
+    },
+    {
+     "q": "Dans le cinquième paragraphe, l'auteur…",
+     "opts": [
+      "change d'avis et défend de nouvelles interdictions.",
+      "reconnaît que la laïcité protège aussi l'individu contre les pressions de son groupe.",
+      "affirme que les traditions doivent toujours être respectées."
+     ],
+     "a": 1,
+     "why": "« Faut-il pour autant renoncer à toute exigence ? Certainement pas. La laïcité protège aussi l'individu contre les pressions de son propre groupe »."
+    },
+    {
+     "q": "Pourquoi l'auteur mentionne-t-il l'Alsace et la Moselle ?",
+     "opts": [
+      "Pour citer un exemple de laïcité réussie.",
+      "Pour proposer d'y appliquer enfin la loi de 1905.",
+      "Pour montrer que les lois existantes sont mal connues."
+     ],
+     "a": 2,
+     "why": "Exemplet visar att det som saknas är « une meilleure connaissance de celles qui existent »: « Combien de Français savent que l'Alsace et la Moselle […] ne sont pas soumises à la loi de 1905 ? »"
+    },
+    {
+     "q": "Quelle est la thèse générale de l'auteur ?",
+     "opts": [
+      "Il faut de nouvelles lois pour faire respecter la laïcité.",
+      "La laïcité est d'abord une liberté, qu'il faut mieux enseigner.",
+      "La laïcité est dépassée et devrait être abandonnée."
+     ],
+     "a": 1,
+     "why": "Han kallar den « un principe de liberté » och avslutar: « Plutôt que de faire de la laïcité un slogan, il est temps d'en refaire une culture partagée »."
     }
    ]
   },
@@ -989,15 +1683,6 @@
      "why": "Flygbiljetten kan vara billigare « alors que le kérosène des vols internationaux échappe aux taxes qui frappent les autres carburants »."
     },
     {
-     "q": "Vrai ou faux ? L'autrice souhaite interdire l'avion à tous les étudiants en échange.",
-     "opts": [
-      "Vrai",
-      "Faux"
-     ],
-     "a": 1,
-     "why": "Faux. « Je ne plaide pas pour une interdiction » – hon vill att tåget blir normen för vistelser i Europa."
-    },
-    {
      "q": "Selon l'autrice, que devraient faire les universités ?",
      "opts": [
       "Réduire la durée des séjours à l'étranger.",
@@ -1016,6 +1701,364 @@
      ],
      "a": 0,
      "why": "Hon medger invändningar, godtar undantag och skriver « Ce n'est pas une accusation » och « Culpabiliser les individus ne mène nulle part »."
+    }
+   ]
+  },
+  {
+   "id": "fru-ce-6",
+   "part": "ce",
+   "teil": "Exercice 2",
+   "title": "Musicien : un métier, plusieurs vies",
+   "time": 20,
+   "instr": "Läs artikeln, ett reportage ur ett magasin om arbetsliv, och svara på frågorna.",
+   "lines": [
+    {
+     "fr": "Lorsqu'on imagine un musicien professionnel, on pense spontanément à un soliste qui enchaîne les concerts, ou au membre permanent d'un grand orchestre. La réalité du métier est pourtant bien plus diverse. Pour la plupart de ceux qui en vivent, la musique n'est pas un emploi unique, mais un assemblage d'activités qui change souvent d'une année à l'autre.",
+     "sv": "När man föreställer sig en professionell musiker tänker man spontant på en solist som reser från konsert till konsert, eller på en fast anställd medlem i en stor orkester. Verkligheten i yrket är dock betydligt mer varierad. För de flesta som lever på musiken är den inte en enda anställning, utan en kombination av verksamheter som ofta förändras från år till år."
+    },
+    {
+     "fr": "Julien Morel, trompettiste de 34 ans installé dans une ville moyenne du Sud-Ouest, en est un bon exemple. Sa semaine type ? Deux jours d'enseignement dans une école de musique associative, des répétitions avec un groupe de jazz, quelques séances d'enregistrement pour des publicités et, le week-end, des concerts dans des mariages ou des festivals. « Quand j'étais étudiant, je pensais que tout cela serait provisoire, en attendant de réussir un concours d'orchestre, confie-t-il. Aujourd'hui, j'ai compris que c'est ma façon de travailler, et elle me convient. »",
+     "sv": "Julien Morel, 34-årig trumpetare bosatt i en medelstor stad i sydvästra Frankrike, är ett bra exempel. Hans typiska vecka? Två dagars undervisning på en musikskola som drivs av en förening, repetitioner med ett jazzband, några inspelningar för reklamfilmer och, på helgerna, spelningar på bröllop eller festivaler. ”När jag studerade trodde jag att allt det här var tillfälligt, i väntan på att jag skulle vinna en provspelning till en orkester”, berättar han. ”I dag har jag förstått att det är mitt sätt att arbeta, och det passar mig.”"
+    },
+    {
+     "fr": "Cette pluriactivité a des avantages évidents. Elle permet de varier les répertoires, de rencontrer des publics différents et de ne pas dépendre d'un seul employeur. Elle a aussi ses revers : une charge administrative importante et des revenus irréguliers. En France, beaucoup de musiciens relèvent du régime de l'intermittence du spectacle, qui leur permet, sous certaines conditions, d'être indemnisés entre deux contrats. Mais ce filet de sécurité suppose de déclarer scrupuleusement chaque cachet, ce qui exige une rigueur que les écoles de musique n'enseignent pas toujours.",
+     "sv": "Att ha flera verksamheter har uppenbara fördelar. Man kan variera repertoaren, möta olika publiker och slipper vara beroende av en enda arbetsgivare. Men det har också sina baksidor: en tung administrativ börda och oregelbundna inkomster. I Frankrike omfattas många musiker av systemet för frilansande scenkonstnärer (intermittence du spectacle), som under vissa villkor ger dem ersättning mellan två uppdrag. Men det skyddsnätet förutsätter att man noggrant redovisar varje gage, vilket kräver en noggrannhet som musikutbildningarna inte alltid lär ut."
+    },
+    {
+     "fr": "C'est précisément ce que certains jeunes diplômés reprochent à leur formation. Pendant des années, l'enseignement supérieur musical s'est organisé presque exclusivement autour de la performance instrumentale : travailler son instrument, préparer des concours, jouer le mieux possible. « On m'a appris à jouer un concerto, pas à rédiger un devis ni à négocier un contrat », résume Léa, violoniste diplômée il y a trois ans.",
+     "sv": "Det är just detta som en del nyutexaminerade kritiserar sin utbildning för. Under många år var den högre musikutbildningen nästan helt inriktad på instrumentalt kunnande: öva på sitt instrument, förbereda sig för antagningsprov och provspelningar, spela så bra som möjligt. ”Jag lärde mig spela en konsert, men inte att skriva en offert eller förhandla om ett kontrakt”, sammanfattar Léa, violinist som tog examen för tre år sedan."
+    },
+    {
+     "fr": "Les établissements ont commencé à réagir. Plusieurs d'entre eux proposent désormais des modules consacrés au droit du travail, à la communication ou à la création d'une association. Pour Nadia Ferhat, chargée de l'insertion professionnelle dans un établissement d'enseignement supérieur de la musique, l'enjeu n'est pas de réduire l'exigence artistique : « Le niveau instrumental reste la base. Mais un musicien qui ne sait pas se présenter, construire un projet ou travailler avec d'autres risque de passer à côté de belles occasions, même s'il joue remarquablement. »",
+     "sv": "Utbildningarna har börjat reagera. Flera av dem erbjuder numera kurser i arbetsrätt, kommunikation eller i hur man startar en förening. För Nadia Ferhat, som ansvarar för studenternas väg ut i arbetslivet vid en musikhögskola, handlar det inte om att sänka de konstnärliga kraven: ”Den instrumentala nivån är fortfarande grunden. Men en musiker som inte kan presentera sig, bygga upp ett projekt eller samarbeta med andra riskerar att gå miste om fina möjligheter, även om hen spelar fantastiskt.”"
+    },
+    {
+     "fr": "Reste une question plus délicate : faut-il préparer les étudiants à un métier précaire, au risque de présenter cette précarité comme normale ? Certains enseignants s'en inquiètent. Selon eux, apprendre à « se débrouiller » ne doit pas dispenser les pouvoirs publics de soutenir les orchestres, les salles de concert et les écoles de musique, qui offrent aux musiciens des emplois stables. Former à la pluriactivité, disent-ils, oui ; renoncer à la sécurité de l'emploi, non.",
+     "sv": "Kvar står en känsligare fråga: ska man förbereda studenterna för ett osäkert yrke, med risk att framställa osäkerheten som normal? Vissa lärare oroar sig för det. Enligt dem får det faktum att man lär sig att ”klara sig själv” inte befria det allmänna från att stödja orkestrar, konsertlokaler och musikskolor, som ger musiker trygga anställningar. Att utbilda för ett yrkesliv med flera verksamheter, säger de, ja; att ge upp anställningstryggheten, nej."
+    }
+   ],
+   "qs": [
+    {
+     "q": "Selon le début de l'article, l'image habituelle du musicien professionnel…",
+     "opts": [
+      "correspond à la situation de la majorité des musiciens.",
+      "ne reflète qu'une petite partie de la réalité du métier.",
+      "concerne surtout les professeurs de musique."
+     ],
+     "a": 1,
+     "why": "« La réalité du métier est pourtant bien plus diverse. Pour la plupart de ceux qui en vivent, la musique n'est pas un emploi unique »."
+    },
+    {
+     "q": "Comment Julien Morel considère-t-il aujourd'hui sa manière de travailler ?",
+     "opts": [
+      "Comme une étape provisoire avant un poste dans un orchestre.",
+      "Comme une contrainte qu'il espère quitter rapidement.",
+      "Comme une organisation qui lui correspond."
+     ],
+     "a": 2,
+     "why": "« Aujourd'hui, j'ai compris que c'est ma façon de travailler, et elle me convient. » Att det var tillfälligt trodde han bara som student."
+    },
+    {
+     "q": "Parmi les inconvénients de la pluriactivité, l'article mentionne…",
+     "opts": [
+      "la difficulté de varier les répertoires.",
+      "des revenus irréguliers et beaucoup de démarches administratives.",
+      "l'obligation de travailler pour un seul employeur."
+     ],
+     "a": 1,
+     "why": "« Elle a aussi ses revers : une charge administrative importante et des revenus irréguliers ». Att variera repertoaren och inte bero av en arbetsgivare är fördelar."
+    },
+    {
+     "q": "Que dit l'article du régime de l'intermittence du spectacle ?",
+     "opts": [
+      "Il protège les musiciens à condition qu'ils déclarent soigneusement leurs contrats.",
+      "Il est réservé aux musiciens employés par un orchestre.",
+      "Il est enseigné en détail dans toutes les écoles de musique."
+     ],
+     "a": 0,
+     "why": "« Ce filet de sécurité suppose de déclarer scrupuleusement chaque cachet »."
+    },
+    {
+     "q": "Que reproche Léa à sa formation ?",
+     "opts": [
+      "D'avoir été trop courte.",
+      "De ne pas l'avoir assez préparée à jouer en soliste.",
+      "D'avoir négligé les aspects pratiques et administratifs du métier."
+     ],
+     "a": 2,
+     "why": "« On m'a appris à jouer un concerto, pas à rédiger un devis ni à négocier un contrat »."
+    },
+    {
+     "q": "Selon Nadia Ferhat, les nouveaux modules proposés…",
+     "opts": [
+      "devraient remplacer une partie du travail instrumental.",
+      "complètent l'exigence artistique sans la remettre en cause.",
+      "s'adressent surtout aux étudiants qui jouent moins bien."
+     ],
+     "a": 1,
+     "why": "För henne är « l'enjeu […] pas de réduire l'exigence artistique » : « Le niveau instrumental reste la base. Mais un musicien qui ne sait pas se présenter […] risque de passer à côté de belles occasions »."
+    },
+    {
+     "q": "Quelle inquiétude certains enseignants expriment-ils ?",
+     "opts": [
+      "Que la formation à la pluriactivité serve de prétexte pour ne plus financer les emplois stables.",
+      "Que les étudiants refusent désormais de travailler dans les orchestres.",
+      "Que les nouveaux modules coûtent trop cher aux établissements."
+     ],
+     "a": 0,
+     "why": "Att lära sig « se débrouiller » « ne doit pas dispenser les pouvoirs publics de soutenir les orchestres, les salles de concert et les écoles de musique, qui offrent aux musiciens des emplois stables »."
+    }
+   ]
+  },
+  {
+   "id": "fru-ce-7",
+   "part": "ce",
+   "teil": "Exercice 3",
+   "title": "Apprendre la musique : faut-il commencer par le solfège ?",
+   "time": 20,
+   "instr": "Läs tre personers inlägg på ett forum om hur man bäst lär sig musik: genom att först lära sig läsa noter eller genom att spela på gehör. Vem uttrycker vilken åsikt? Välj personen för varje påstående.",
+   "lines": [
+    {
+     "fr": "Bastien — J'ai commencé la guitare seul, avec des tutoriels, et pendant des années j'ai été incapable d'apprendre un morceau sans qu'on me le montre. Le jour où j'ai enfin su lire une partition, à vingt-cinq ans, j'ai eu l'impression qu'on m'ouvrait une bibliothèque entière : je pouvais découvrir n'importe quelle œuvre par moi-même, sans attendre qu'un prof ou une vidéo me la mâche. Alors oui, je défends le solfège. Je reconnais cependant que certains cours ressemblent davantage à une dictée qu'à de la musique : des exercices abstraits, sans lien avec ce que l'élève joue. Ce n'est pas la lecture qu'il faut abandonner, c'est cette pédagogie-là qu'il faut revoir.",
+     "sv": "Bastien — Jag började spela gitarr på egen hand, med hjälp av instruktionsvideor, och i flera år kunde jag inte lära mig en låt utan att någon visade den för mig. Den dag jag äntligen kunde läsa noter, vid tjugofem års ålder, kändes det som om någon öppnade ett helt bibliotek för mig: jag kunde upptäcka vilket verk som helst på egen hand, utan att vänta på att en lärare eller en video skulle tugga i mig det. Så ja, jag försvarar notläran. Jag medger ändå att vissa lektioner mer liknar en diktamen än musik: abstrakta övningar utan koppling till det eleven spelar. Det är inte notläsningen man ska överge, det är den pedagogiken man måste se över."
+    },
+    {
+     "fr": "Inès — Moi, j'ai appris le piano d'oreille, en reproduisant les chansons que j'entendais à la radio, puis j'ai monté un groupe avec des amis au lycée. C'est ça qui m'a fait tenir : chaque mois, on avait un concert à préparer et des copains qui comptaient sur moi. Aujourd'hui, je lis la musique, lentement, et ça me rend parfois service. Mais je suis convaincue que si l'on m'avait imposé deux ans de théorie avant de toucher un clavier, j'aurais laissé tomber, comme la plupart des enfants de ma classe qui s'étaient inscrits au conservatoire en même temps que moi. Commençons par le plaisir : la théorie viendra quand on en ressentira le besoin.",
+     "sv": "Inès — Jag lärde mig spela piano på gehör genom att härma låtarna jag hörde på radion, och sedan startade jag ett band med kompisar på gymnasiet. Det var det som fick mig att hålla i: varje månad hade vi en spelning att förbereda och kompisar som räknade med mig. I dag kan jag läsa noter, långsamt, och det kommer ibland till nytta. Men jag är övertygad om att jag skulle ha gett upp om jag hade tvingats läsa teori i två år innan jag fick röra en klaviatur, precis som de flesta barnen i min klass som hade börjat på musikskolan samtidigt som jag. Låt oss börja med glädjen: teorin kommer när man känner behov av den."
+    },
+    {
+     "fr": "Yann — Je suis professeur dans une école de musique, et j'ai l'impression que ce débat a un peu vieilli. Dans beaucoup d'écoles, on ne parle d'ailleurs plus de « solfège » mais de « formation musicale » : on apprend à lire en jouant, en chantant, en improvisant. Pour moi, l'oreille et la lecture progressent ensemble, comme parler et écrire. Cela dit, tout dépend aussi de ce qu'on veut jouer. Un violoniste qui rêve d'entrer dans un orchestre ne pourra pas se passer de la partition, alors qu'en musique traditionnelle ou dans une bonne partie du jazz, la transmission orale reste essentielle. Il n'y a pas une méthode, il y a des chemins.",
+     "sv": "Yann — Jag är lärare på en musikskola och tycker att den här debatten har blivit lite föråldrad. På många skolor talar man för övrigt inte längre om ”solfège” (notlära) utan om ”formation musicale” (musikalisk grundutbildning): man lär sig läsa genom att spela, sjunga och improvisera. För mig utvecklas gehöret och notläsningen tillsammans, som att tala och skriva. Samtidigt beror allt på vad man vill spela. En violinist som drömmer om att komma in i en orkester klarar sig inte utan noter, medan den muntliga traderingen fortfarande är avgörande inom folkmusik och i stora delar av jazzen. Det finns inte en metod, det finns olika vägar."
+    }
+   ],
+   "qs": [
+    {
+     "q": "Commencer par la théorie décourage une bonne partie des débutants.",
+     "opts": [
+      "Bastien",
+      "Inès",
+      "Yann"
+     ],
+     "a": 1,
+     "why": "Inès: « si l'on m'avait imposé deux ans de théorie avant de toucher un clavier, j'aurais laissé tomber, comme la plupart des enfants de ma classe »."
+    },
+    {
+     "q": "La bonne manière d'apprendre dépend du style de musique qu'on veut pratiquer.",
+     "opts": [
+      "Bastien",
+      "Inès",
+      "Yann"
+     ],
+     "a": 2,
+     "why": "Yann: « tout dépend aussi de ce qu'on veut jouer » – orkestermusiker behöver noter, i folkmusik och jazz är den muntliga traderingen viktig."
+    },
+    {
+     "q": "Savoir lire la musique permet de ne plus dépendre des autres pour apprendre.",
+     "opts": [
+      "Bastien",
+      "Inès",
+      "Yann"
+     ],
+     "a": 0,
+     "why": "Bastien: « je pouvais découvrir n'importe quelle œuvre par moi-même, sans attendre qu'un prof ou une vidéo me la mâche »."
+    },
+    {
+     "q": "L'opposition entre l'oreille et la lecture n'est plus vraiment d'actualité.",
+     "opts": [
+      "Bastien",
+      "Inès",
+      "Yann"
+     ],
+     "a": 2,
+     "why": "Yann: « ce débat a un peu vieilli » och « l'oreille et la lecture progressent ensemble »."
+    },
+    {
+     "q": "Ce qui pose problème, ce n'est pas la lecture elle-même, mais la façon dont on l'enseigne parfois.",
+     "opts": [
+      "Bastien",
+      "Inès",
+      "Yann"
+     ],
+     "a": 0,
+     "why": "Bastien: « Ce n'est pas la lecture qu'il faut abandonner, c'est cette pédagogie-là qu'il faut revoir »."
+    },
+    {
+     "q": "Jouer avec d'autres aide à ne pas abandonner.",
+     "opts": [
+      "Bastien",
+      "Inès",
+      "Yann"
+     ],
+     "a": 1,
+     "why": "Inès: bandet « m'a fait tenir : […] des copains qui comptaient sur moi »."
+    }
+   ]
+  },
+  {
+   "id": "fru-ce-8",
+   "part": "ce",
+   "teil": "Exercice 3",
+   "title": "Étudiant chez une personne âgée : la bonne formule ?",
+   "time": 20,
+   "instr": "Läs tre personers inlägg på ett forum om boendeformen där en student bor hos en äldre person (colocation intergénérationnelle). Vem uttrycker vilken åsikt? Välj personen för varje påstående.",
+   "lines": [
+    {
+     "fr": "Margaux — Sans cette formule, je n'aurais tout simplement pas pu faire mes études ici : avec les loyers de la ville, c'était impossible. Depuis deux ans, je vis chez Mme Leroy, qui a 84 ans. Je paie une somme symbolique et, en échange, je suis présente la plupart des soirs et je fais quelques courses. Ça m'a appris la patience, et on rit beaucoup ensemble. Mon conseil : tout mettre par écrit dès le départ, les soirs où l'on est là, les week-ends libres, les visites. Au début, on n'ose pas, on a peur de paraître froid, mais c'est justement ce qui évite les malentendus par la suite.",
+     "sv": "Margaux — Utan den här lösningen hade jag helt enkelt inte kunnat studera här: med stadens hyror var det omöjligt. I två år har jag bott hos Mme Leroy, som är 84 år. Jag betalar en symbolisk summa och i gengäld är jag hemma de flesta kvällar och handlar lite åt henne. Det har lärt mig tålamod, och vi skrattar mycket tillsammans. Mitt råd: skriv ner allt från början, vilka kvällar man är hemma, lediga helger, besök. I början vågar man inte, man är rädd för att verka kall, men det är just det som förhindrar missförstånd senare."
+    },
+    {
+     "fr": "Gérard — J'ai 72 ans, je suis veuf, et j'accueille un étudiant en informatique depuis la rentrée. Je ne vais pas mentir : la maison était devenue bien silencieuse, et le simple fait d'entendre quelqu'un rentrer le soir me fait du bien. Mes enfants, qui habitent loin, sont eux aussi plus tranquilles. Mais je tiens à une chose : ce jeune homme n'est pas là pour me soigner ni pour faire mon ménage. S'il fallait un jour une aide à domicile, ce serait le travail d'un professionnel. Lui, il est là pour étudier, et nous partageons un toit, quelques repas, et parfois une leçon de smartphone.",
+     "sv": "Gérard — Jag är 72 år, änkling, och har haft en datavetenskapsstudent boende hos mig sedan terminsstarten. Jag ska inte ljuga: huset hade blivit väldigt tyst, och bara att höra någon komma hem på kvällen gör mig gott. Mina barn, som bor långt bort, är också lugnare. Men en sak är viktig för mig: den unge mannen är inte här för att sköta om mig eller städa. Om jag en dag skulle behöva hemtjänst vore det ett jobb för en yrkesperson. Han är här för att studera, och vi delar tak, några måltider och ibland en lektion i hur man använder smarttelefonen."
+    },
+    {
+     "fr": "Samia — J'ai essayé pendant six mois, et je suis partie. Je ne dis pas que c'est une mauvaise idée, mais on la présente souvent comme une solution où tout le monde gagne, et c'est plus compliqué. La dame chez qui j'habitais était adorable, mais je n'osais plus inviter d'amis, et chaque fois que je sortais le soir, je me sentais coupable de la laisser seule. À dix-neuf ans, j'avais besoin d'une vie étudiante plus spontanée. Je pense que ça marche mieux pour des étudiants un peu plus âgés, en master par exemple, qui ont déjà vécu en colocation et savent ce qu'ils attendent.",
+     "sv": "Samia — Jag provade i sex månader och flyttade sedan. Jag säger inte att det är en dålig idé, men den framställs ofta som en lösning där alla vinner, och det är mer komplicerat än så. Damen jag bodde hos var förtjusande, men jag vågade inte längre bjuda hem vänner, och varje gång jag gick ut på kvällen fick jag dåligt samvete för att jag lämnade henne ensam. Som nittonåring behövde jag ett mer spontant studentliv. Jag tror att det fungerar bättre för lite äldre studenter, till exempel på masternivå, som redan har bott i kollektiv och vet vad de förväntar sig."
+    }
+   ],
+   "qs": [
+    {
+     "q": "L'étudiant hébergé ne doit pas remplacer le personnel d'aide à domicile.",
+     "opts": [
+      "Margaux",
+      "Gérard",
+      "Samia"
+     ],
+     "a": 1,
+     "why": "Gérard: « ce jeune homme n'est pas là pour me soigner ni pour faire mon ménage. S'il fallait un jour une aide à domicile, ce serait le travail d'un professionnel »."
+    },
+    {
+     "q": "Ce logement a rendu possibles des études qui, autrement, auraient été trop chères.",
+     "opts": [
+      "Margaux",
+      "Gérard",
+      "Samia"
+     ],
+     "a": 0,
+     "why": "Margaux: « Sans cette formule, je n'aurais tout simplement pas pu faire mes études ici : avec les loyers de la ville, c'était impossible »."
+    },
+    {
+     "q": "Dans ce type de logement, on peut se sentir fautif de profiter de sa liberté.",
+     "opts": [
+      "Margaux",
+      "Gérard",
+      "Samia"
+     ],
+     "a": 2,
+     "why": "Samia: « chaque fois que je sortais le soir, je me sentais coupable de la laisser seule »."
+    },
+    {
+     "q": "Cette cohabitation rassure aussi la famille de la personne âgée.",
+     "opts": [
+      "Margaux",
+      "Gérard",
+      "Samia"
+     ],
+     "a": 1,
+     "why": "Gérard: « Mes enfants, qui habitent loin, sont eux aussi plus tranquilles »."
+    },
+    {
+     "q": "Cette formule ne convient pas de la même façon à tous les étudiants.",
+     "opts": [
+      "Margaux",
+      "Gérard",
+      "Samia"
+     ],
+     "a": 2,
+     "why": "Samia: « ça marche mieux pour des étudiants un peu plus âgés, en master par exemple »."
+    },
+    {
+     "q": "Fixer clairement les règles dès le début évite des tensions plus tard.",
+     "opts": [
+      "Margaux",
+      "Gérard",
+      "Samia"
+     ],
+     "a": 0,
+     "why": "Margaux: « tout mettre par écrit dès le départ […] c'est justement ce qui évite les malentendus par la suite »."
+    }
+   ]
+  },
+  {
+   "id": "fru-ce-9",
+   "part": "ce",
+   "teil": "Exercice 3",
+   "title": "Un centre-ville sans voitures ?",
+   "time": 20,
+   "instr": "Läs tre personers inlägg på ett lokalt forum om kommunens förslag att stänga stadskärnan för biltrafik. Vem uttrycker vilken åsikt? Välj personen för varje påstående.",
+   "lines": [
+    {
+     "fr": "Thomas — Je tiens une librairie rue du Marché depuis quinze ans, et je ne suis pas contre le principe : une rue agréable attire du monde. Ce qui m'inquiète, c'est qu'une bonne partie de mes clients viennent des villages alentour, où il n'y a ni bus ni train. S'ils ne peuvent plus se garer à proximité, ils iront faire leurs achats en ligne ou dans la zone commerciale. Surtout, je reproche à la mairie sa précipitation : le projet a été présenté en juin pour une mise en œuvre en septembre. Pourquoi ne pas commencer par fermer les rues quelques samedis, puis faire le bilan avec les habitants et les commerçants ?",
+     "sv": "Thomas — Jag har drivit en bokhandel på rue du Marché i femton år, och jag är inte emot själva principen: en trevlig gata lockar folk. Det som oroar mig är att en stor del av mina kunder kommer från byarna runtomkring, där det varken finns buss eller tåg. Om de inte längre kan parkera i närheten kommer de att handla på nätet eller i köpcentret utanför stan. Framför allt kritiserar jag kommunen för att ha bråttom: förslaget presenterades i juni och ska genomföras i september. Varför inte börja med att stänga gatorna några lördagar och sedan utvärdera tillsammans med invånarna och handlarna?"
+    },
+    {
+     "fr": "Élodie — J'habite le centre avec mes deux enfants, et je vois le projet comme une chance. Aujourd'hui, la rue appartient aux voitures : on respire mal, on s'entend à peine, et je n'ose pas laisser ma fille de dix ans aller seule à l'école. Une rue, ce devrait d'abord être un endroit où l'on vit, où l'on se croise, où les enfants peuvent jouer. Quant aux commerçants, je comprends leur peur, mais dans la ville où vivait ma sœur, ils étaient presque tous opposés au projet au départ, et aujourd'hui plus personne ne voudrait revenir en arrière. Il faut parfois oser avant d'être convaincu.",
+     "sv": "Élodie — Jag bor i centrum med mina två barn och ser förslaget som en möjlighet. I dag tillhör gatan bilarna: luften är dålig, man hör knappt varandra, och jag vågar inte låta min tioåriga dotter gå ensam till skolan. En gata borde i första hand vara en plats där man lever, där man möts och där barnen kan leka. Vad gäller handlarna förstår jag deras rädsla, men i staden där min syster bodde var nästan alla emot förslaget från början, och i dag skulle ingen vilja gå tillbaka. Ibland måste man våga innan man är övertygad."
+    },
+    {
+     "fr": "Hélène — J'ai 76 ans et je marche avec une canne. Sur le papier, un centre piéton, c'est charmant : des terrasses, des bancs, du calme. Mais concrètement, pour moi, la voiture de mon fils, qui passe me chercher deux fois par semaine, est le seul moyen d'aller chez le médecin ou à la pharmacie, qui sont justement dans le centre. Je crains qu'on fabrique une ville pensée pour les jeunes en bonne santé, qui peuvent marcher ou pédaler, et qu'on oublie tous les autres. Je ne voterai pour ce projet que s'il prévoit une navette gratuite et des places réservées aux personnes handicapées aux entrées du centre.",
+     "sv": "Hélène — Jag är 76 år och går med käpp. På papperet är en bilfri stadskärna förtjusande: uteserveringar, bänkar, lugn. Men i praktiken är min sons bil – han hämtar mig två gånger i veckan – det enda sättet för mig att ta mig till läkaren eller apoteket, som ligger just i centrum. Jag är rädd att man bygger en stad för unga och friska som kan gå eller cykla, och att man glömmer alla andra. Jag röstar bara för förslaget om det innehåller en gratis pendelbuss och handikapparkeringar vid infarterna till centrum."
+    }
+   ],
+   "qs": [
+    {
+     "q": "Fermer le centre aux voitures risque de faire fuir la clientèle qui vient de la campagne.",
+     "opts": [
+      "Thomas",
+      "Élodie",
+      "Hélène"
+     ],
+     "a": 0,
+     "why": "Thomas: kunderna « viennent des villages alentour […] S'ils ne peuvent plus se garer à proximité, ils iront faire leurs achats en ligne »."
+    },
+    {
+     "q": "Un centre sans voitures pourrait exclure les personnes qui se déplacent difficilement.",
+     "opts": [
+      "Thomas",
+      "Élodie",
+      "Hélène"
+     ],
+     "a": 2,
+     "why": "Hélène: « Je crains qu'on fabrique une ville pensée pour les jeunes en bonne santé […] et qu'on oublie tous les autres »."
+    },
+    {
+     "q": "La rue devrait redevenir avant tout un lieu de vie pour ses habitants.",
+     "opts": [
+      "Thomas",
+      "Élodie",
+      "Hélène"
+     ],
+     "a": 1,
+     "why": "Élodie: « Une rue, ce devrait d'abord être un endroit où l'on vit, où l'on se croise, où les enfants peuvent jouer »."
+    },
+    {
+     "q": "Ce n'est pas l'objectif qui pose problème, mais le calendrier choisi.",
+     "opts": [
+      "Thomas",
+      "Élodie",
+      "Hélène"
+     ],
+     "a": 0,
+     "why": "Thomas: « je ne suis pas contre le principe » men « je reproche à la mairie sa précipitation »."
+    },
+    {
+     "q": "L'hostilité des commerçants disparaît souvent une fois le projet réalisé.",
+     "opts": [
+      "Thomas",
+      "Élodie",
+      "Hélène"
+     ],
+     "a": 1,
+     "why": "Élodie: handlarna « étaient presque tous opposés au projet au départ, et aujourd'hui plus personne ne voudrait revenir en arrière »."
+    },
+    {
+     "q": "Le soutien au projet dépend de mesures de transport adaptées.",
+     "opts": [
+      "Thomas",
+      "Élodie",
+      "Hélène"
+     ],
+     "a": 2,
+     "why": "Hélène: « Je ne voterai pour ce projet que s'il prévoit une navette gratuite et des places réservées aux personnes handicapées »."
     }
    ]
   },
@@ -1083,6 +2126,27 @@
    "modelSv": "Till redaktionen,\n\nJag läste med stort intresse debattartikeln ”Låt oss gå över till engelska på universitetet!”, som publicerades i er tidning förra veckan. Som svensk student på kandidatprogrammet i musikvetenskap tillhör jag just de utländska studenter som skribenten vill locka hit. Ändå delar jag inte hans analys.\n\nVisst är engelska i dag forskningens främsta internationella språk, och det är naturligt att vissa masterutbildningar ges på det språket. Jag medger också att språkbarriären kan avskräcka begåvade studenter. Men ska man därför ge upp franskan?\n\nDet tror jag inte. Om jag valde Frankrike framför Nederländerna, där många utbildningar ges på engelska, så var det just för att lära mig franska och uppleva en kultur inifrån. Att studera fransk musik utan att kunna läsa Berlioz eller Debussys texter på originalspråket vore ganska meningslöst. Dessutom lever en utländsk student inte bara på universitetet: man hyr en bostad, arbetar och skaffar vänner. Utan franska skulle man bli kvar i en internationell bubbla, utan att någonsin riktigt möta landet man bor i.\n\nFranskan är för övrigt inget lokalt språk: det talas på alla kontinenter och öppnar dörren till hela den fransktalande världen. Att offra det i konkurrenskraftens namn vore enligt min mening en mycket dålig kalkyl.\n\nI stället för att låta engelskan ta över vore det bättre att erbjuda utländska studenter intensivkurser i franska när de kommer hit, och att starta tvåspråkiga utbildningar i de ämnen där det är motiverat. Då skulle man locka studenter som kommer för Frankrikes skull, och inte bara för en examen.\n\nMed vänlig hälsning\n\nElin Berg, Lyon"
   },
   {
+   "id": "fru-pe-4",
+   "part": "pe",
+   "teil": "Production écrite",
+   "title": "Moderniser les classiques : audace ou trahison ?",
+   "time": 60,
+   "minWords": 250,
+   "instr": "Skriv en kritisk artikel (recension) för universitetets kulturwebbtidning. Ge texten en rubrik, presentera kort föreställningen, bedöm dess styrkor och svagheter med konkreta exempel och ta sedan ställning i den allmänna frågan om man bör modernisera klassiska verk. Tonen är personlig men nyanserad; variera värderande ord (réussi, convaincant, discutable, s'essouffler) och sambandsord (certes… mais, en revanche, pour autant, bien que + subjonctif, encore faut-il que + subjonctif).",
+   "task": "Le théâtre de votre ville vient de présenter une nouvelle mise en scène d'un opéra ou d'une pièce du répertoire classique, transposée à notre époque. Le spectacle a divisé le public : les uns ont crié au génie, les autres au sacrilège. Le webzine culturel de votre université vous demande d'en rédiger la critique. Vous présentez le spectacle, vous en analysez les qualités et les défauts, puis vous prenez position de manière argumentée sur la question suivante : faut-il moderniser les œuvres classiques pour toucher un nouveau public ? (250 mots minimum)",
+   "criteria": [
+    "Respect de la consigne",
+    "Correction sociolinguistique",
+    "Capacité à présenter des faits",
+    "Capacité à argumenter une prise de position",
+    "Cohérence et cohésion",
+    "Compétence lexicale",
+    "Compétence grammaticale"
+   ],
+   "model": "Carmen au bureau : audace réussie ou contresens ?\n\nSamedi dernier, le Théâtre municipal présentait une nouvelle mise en scène de Carmen, l'opéra de Bizet. Exit Séville et sa manufacture de tabac : l'action se déroule ici dans le centre d'appels d'une grande entreprise, où Carmen est une employée rebelle et Don José un agent de sécurité. À la sortie, les spectateurs se disputaient dans le hall. Pour ma part, je me range dans le camp des convaincus… avec quelques réserves.\n\nCommençons par ce qui fonctionne. La transposition donne une force nouvelle au personnage principal. Face à des chefs qui chronomètrent chaque pause, la liberté que revendique Carmen n'a plus rien d'un cliché exotique : elle devient le cri d'une femme qui refuse qu'on décide à sa place. La scène où les employées quittent leurs postes en chantant est d'une énergie irrésistible. Musicalement, enfin, la soirée est irréprochable : l'orchestre, précis et nuancé, ne cède jamais à la facilité.\n\nCertes, tout n'est pas aussi réussi. Transformer Escamillo en star de la téléréalité fait sourire au début, mais l'idée s'essouffle vite, et le dernier acte, noyé sous les écrans et les vidéos, perd en intensité. On a parfois l'impression que le metteur en scène craint que la musique ne suffise pas à retenir notre attention.\n\nFaut-il pour autant refuser toute modernisation ? Je ne le crois pas. Une œuvre classique n'est pas une pièce de musée : si elle a traversé les siècles, c'est justement parce qu'elle continue de parler à chaque époque. Encore faut-il que la transposition éclaire l'œuvre au lieu de la recouvrir. Ce soir-là, bien que la fin m'ait déçue, j'ai vu des étudiants qui n'avaient jamais mis les pieds à l'opéra rester jusqu'au bout, captivés. N'est-ce pas le plus beau compliment que l'on puisse faire à un spectacle ?\n\nÀ voir, donc, de préférence avec un ami persuadé de détester l'opéra.\n\nElin S.",
+   "modelSv": "Carmen på kontoret: lyckad djärvhet eller feltolkning?\n\nI lördags hade stadsteatern premiär på en ny uppsättning av Carmen, Bizets opera. Bort med Sevilla och tobaksfabriken: här utspelar sig handlingen på ett callcenter i ett stort företag, där Carmen är en upprorisk anställd och Don José en väktare. Efteråt grälade publiken i foajén. Själv hamnar jag i lägret av dem som blev övertygade … med vissa förbehåll.\n\nLåt oss börja med det som fungerar. Förflyttningen i tid ger huvudpersonen ny kraft. Inför chefer som tar tid på varje rast är den frihet som Carmen kräver inte längre någon exotisk kliché: den blir ropet från en kvinna som vägrar låta andra bestämma åt henne. Scenen där de anställda lämnar sina platser sjungande har en oemotståndlig energi. Musikaliskt, slutligen, är kvällen oklanderlig: orkestern, precis och nyanserad, faller aldrig för det lättköpta.\n\nVisst är inte allt lika lyckat. Att göra Escamillo till dokusåpastjärna är roligt i början, men idén tappar snabbt luften, och sista akten, som drunknar i skärmar och videor, förlorar i intensitet. Ibland får man intrycket att regissören är rädd att musiken inte ska räcka för att hålla kvar vår uppmärksamhet.\n\nMåste man för den skull förkasta all modernisering? Det tror jag inte. Ett klassiskt verk är inget museiföremål: om det har överlevt i århundraden är det just för att det fortsätter att tala till varje tid. Men då måste förflyttningen belysa verket i stället för att täcka över det. Den kvällen såg jag, trots att slutet gjorde mig besviken, studenter som aldrig hade satt sin fot på operan sitta kvar till slutet, fängslade. Är inte det den finaste komplimang man kan ge en föreställning?\n\nSe den alltså, gärna tillsammans med en vän som är övertygad om att han avskyr opera.\n\nElin S."
+  },
+  {
    "id": "fru-po-1",
    "part": "po",
    "teil": "Production orale",
@@ -1147,6 +2211,28 @@
    ],
    "model": "Le texte aborde un débat récurrent en France : l'université doit-elle sélectionner ses étudiants ? Il explique que depuis la création de Parcoursup, en 2018, les formations classent les candidatures, et il oppose deux positions : pour les uns, mieux orienter les étudiants éviterait des échecs en première année ; pour les autres, la sélection remettrait en cause l'égal accès au savoir. La question est donc de savoir comment concilier la réussite des étudiants et l'égalité des chances.\n\nÀ mon sens, une certaine forme d'orientation est nécessaire, mais une sélection stricte à l'entrée de l'université serait une erreur.\n\nD'abord, je comprends l'argument de la réussite. Laisser un étudiant s'inscrire dans une filière pour laquelle il n'a aucune base, puis le voir échouer au bout d'un an, ce n'est pas lui rendre service. C'est du temps perdu, et souvent une perte de confiance en soi. En ce sens, conseiller les lycéens et leur proposer des remises à niveau me paraît indispensable.\n\nCependant, un dossier établi à dix-sept ans dit peu de choses de ce qu'une personne est capable de devenir. Certains élèves s'épanouissent tard ; d'autres n'ont pas eu les mêmes conditions de travail que leurs camarades, faute de calme à la maison ou d'aide pour les devoirs. Une sélection fondée uniquement sur les notes risque donc de reproduire les inégalités sociales au lieu de les corriger.\n\nEnsuite, l'université a une mission particulière : elle doit permettre à chacun de se former, y compris en reprenant ses études à trente ou quarante ans. En Suède, par exemple, beaucoup d'adultes retournent à l'université au cours de leur vie, et cette seconde chance me semble précieuse.\n\nJe défendrais donc un système intermédiaire : un accès large, accompagné d'un véritable travail d'orientation au lycée, et une première année conçue pour aider les étudiants à trouver leur voie, avec des passerelles entre les filières plutôt que des portes fermées.\n\nPour conclure, je dirais que la question n'est pas tant de savoir qui mérite d'entrer à l'université que de savoir comment l'université peut aider chacun à réussir.",
    "modelSv": "Texten tar upp en återkommande debatt i Frankrike: ska universitetet välja ut sina studenter? Den förklarar att sedan Parcoursup infördes 2018 rangordnar utbildningarna de sökande, och den ställer två ståndpunkter mot varandra: enligt somliga skulle bättre studievägledning förhindra misslyckanden under första året; enligt andra skulle urval undergräva den lika tillgången till kunskap. Frågan är alltså hur man kan förena studenternas framgång med lika möjligheter.\n\nEnligt mig behövs en viss form av vägledning, men ett strikt urval vid antagningen till universitetet vore ett misstag.\n\nFör det första förstår jag argumentet om studieresultat. Att låta en student börja på en utbildning som hon eller han saknar grund för, och sedan se henne eller honom misslyckas efter ett år, är ingen tjänst. Det är bortkastad tid och ofta ett slag mot självförtroendet. I det avseendet tycker jag att det är nödvändigt att ge gymnasieelever råd och erbjuda dem kompletterande kurser.\n\nMen ett betygsunderlag från när man är sjutton säger inte mycket om vad en människa kan utvecklas till. Vissa elever blommar ut sent; andra har inte haft samma förutsättningar att plugga som sina klasskamrater, på grund av att det saknats lugn hemma eller hjälp med läxorna. Ett urval som bara bygger på betyg riskerar alltså att återskapa de sociala orättvisorna i stället för att rätta till dem.\n\nFör det andra har universitetet ett särskilt uppdrag: det ska göra det möjligt för alla att utbilda sig, även för den som börjar studera igen vid trettio eller fyrtio. I Sverige, till exempel, återvänder många vuxna till universitetet under livet, och den andra chansen tycker jag är värdefull.\n\nJag skulle därför förespråka ett mellanting: bred tillgång, i kombination med verklig studievägledning på gymnasiet, och ett första år som är utformat för att hjälpa studenterna att hitta sin väg, med övergångar mellan utbildningarna i stället för stängda dörrar.\n\nSammanfattningsvis skulle jag säga att frågan inte så mycket är vem som förtjänar att komma in på universitetet, som hur universitetet kan hjälpa alla att lyckas."
+  },
+  {
+   "id": "fru-po-4",
+   "part": "po",
+   "teil": "Production orale",
+   "title": "Monologue suivi d'un débat : les transports en commun doivent-ils être gratuits ?",
+   "prep": 30,
+   "time": 20,
+   "instr": "Du får ett kort dokument och har tid att förbereda dig (på provet 30 minuter). Presentera först frågan som dokumentet väcker med egna ord och försvara sedan din ståndpunkt i ett strukturerat anförande med inledning, 2–3 argument med exempel och slutsats (ungefär 5–7 minuter). Därefter följer en diskussion där examinatorn ifrågasätter dina argument. Hela den muntliga delen tar ungefär 20 minuter.",
+   "task": "Vous dégagerez le problème soulevé par le document ci-dessous. Vous présenterez ensuite votre opinion sous la forme d'un exposé argumenté de 5 à 7 minutes, puis vous la défendrez au cours d'un débat avec l'examinateur.\n\nBus gratuits : une idée qui fait son chemin\nFaut-il rendre les bus et les tramways gratuits ? À l'approche de chaque élection municipale, la question revient dans de nombreux programmes. Plusieurs villes françaises, comme Dunkerque, ont franchi le pas, et le Luxembourg a même étendu la gratuité à l'ensemble de son territoire. Pour leurs défenseurs, ces mesures redonnent du pouvoir d'achat aux ménages modestes, incitent les habitants à laisser leur voiture au garage, réduisent la pollution de l'air et redonnent vie aux centres-villes. Leurs adversaires rappellent pourtant que rien n'est vraiment gratuit : si les voyageurs ne paient plus leur billet, ce sont les contribuables qui financent le réseau. Selon eux, les nouveaux usagers seraient souvent d'anciens piétons ou cyclistes plutôt que des automobilistes, et l'argent public serait mieux employé à augmenter la fréquence des bus ou à desservir les zones rurales, où beaucoup d'habitants n'ont pas d'autre choix que la voiture. Entre justice sociale, écologie et bonne gestion des finances publiques, le débat reste ouvert.",
+   "phrases": [
+    "Ce document pose une question qui divise les élus comme les citoyens : …",
+    "Le problème pourrait se formuler ainsi : …",
+    "Je commencerai par …, avant d'examiner …",
+    "D'une part, … ; d'autre part, …",
+    "On objectera sans doute que … Pourtant, …",
+    "Il ne s'agit pas de …, mais plutôt de …",
+    "Je vous accorde que …, mais cela ne signifie pas pour autant que …",
+    "En définitive, je suis convaincu(e) que …"
+   ],
+   "model": "Ce document pose une question qui divise les élus comme les citoyens : faut-il rendre les transports en commun gratuits ? Il rappelle que plusieurs villes, comme Dunkerque, ont déjà fait ce choix, et que le Luxembourg l'a étendu à tout le pays. Les partisans y voient une mesure sociale et écologique ; les opposants soulignent son coût et doutent de son efficacité. Le problème pourrait se formuler ainsi : la gratuité est-elle le meilleur moyen de faire reculer la voiture ?\n\nPour ma part, je pense que la gratuité est une bonne idée, mais qu'elle ne doit pas passer avant la qualité du service. Je commencerai par ses avantages, avant d'examiner ses limites.\n\nD'une part, la gratuité a un effet social évident. Pour une famille modeste, un abonnement mensuel pour chaque membre représente une somme importante. Supprimer ce coût, c'est permettre à des jeunes ou à des personnes âgées de sortir de chez eux, d'aller au cinéma, de chercher un emploi plus loin. D'autre part, elle a une valeur symbolique : elle affirme que se déplacer est un droit, comme accéder à une bibliothèque ou à un parc.\n\nOn objectera sans doute que la gratuité ne convainc pas les automobilistes. C'est en partie vrai, et le document le rappelle : beaucoup de nouveaux usagers marchaient ou prenaient leur vélo auparavant. Pourtant, cela montre surtout que le prix n'est pas le seul critère. En Suède, par exemple, où j'ai grandi, ce qui décide les gens à prendre le bus, c'est d'abord qu'il passe souvent et à l'heure. Un bus gratuit qui passe toutes les quarante minutes ne fera jamais concurrence à la voiture.\n\nC'est pourquoi il ne s'agit pas, selon moi, de choisir entre gratuité et qualité, mais de les mettre dans le bon ordre. Une ville devrait d'abord construire un réseau fiable et dense, puis introduire la gratuité progressivement, par exemple pour les moins de vingt-cinq ans, les chômeurs et les retraités, avant de l'étendre à tous si les finances le permettent.\n\nEn définitive, je suis convaincue que la gratuité peut changer nos habitudes de déplacement, à condition qu'elle soit la dernière étape d'une politique ambitieuse, et non un simple effet d'annonce.",
+   "modelSv": "Dokumentet tar upp en fråga som delar både politiker och medborgare: ska kollektivtrafiken vara gratis? Det påminner om att flera städer, som Dunkerque, redan har gjort det valet, och att Luxemburg har infört det i hela landet. Förespråkarna ser det som en social och miljövänlig åtgärd; motståndarna betonar kostnaden och tvivlar på effekten. Problemet skulle kunna formuleras så här: är avgiftsfrihet det bästa sättet att minska bilåkandet?\n\nJag tycker för min del att gratis kollektivtrafik är en bra idé, men att den inte får gå före kvaliteten på trafiken. Jag börjar med fördelarna, innan jag tar upp begränsningarna.\n\nÅ ena sidan har avgiftsfriheten en tydlig social effekt. För en familj med små marginaler är ett månadskort för varje familjemedlem en stor summa. Att ta bort den kostnaden gör det möjligt för unga eller äldre att komma ut hemifrån, gå på bio, söka jobb längre bort. Å andra sidan har den ett symbolvärde: den slår fast att det är en rättighet att förflytta sig, precis som att ha tillgång till ett bibliotek eller en park.\n\nMan kommer säkert att invända att gratis resor inte övertygar bilisterna. Det stämmer delvis, och dokumentet påpekar det: många nya resenärer gick eller cyklade tidigare. Men det visar framför allt att priset inte är det enda som avgör. I Sverige, till exempel, där jag har vuxit upp, är det som får folk att ta bussen främst att den går ofta och i tid. En gratisbuss som går var fyrtionde minut kommer aldrig att kunna konkurrera med bilen.\n\nDärför handlar det enligt mig inte om att välja mellan avgiftsfrihet och kvalitet, utan om att ta dem i rätt ordning. En stad borde först bygga upp ett pålitligt och tätt nät och sedan införa avgiftsfriheten stegvis, till exempel för dem under tjugofem, arbetslösa och pensionärer, innan den utvidgas till alla om ekonomin tillåter.\n\nSammanfattningsvis är jag övertygad om att gratis kollektivtrafik kan förändra våra resvanor, förutsatt att den är sista steget i en ambitiös politik och inte bara ett tomt löfte."
   }
  ]
 }

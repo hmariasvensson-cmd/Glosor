@@ -1311,7 +1311,7 @@ function renderStats(){
   const logs=S.log, wl=logs.filter(l=>!l.verb&&!l.cloze&&!l.kind), passes=wl.filter(l=>!l.extra), vl=logs.filter(l=>l.verb), cl=logs.filter(l=>l.cloze);
   if(!logs.length){
     app.innerHTML=`<section class="panel"><h2>Statistik</h2><p class="sub">Här ser du hur det går när du har kört ditt första pass: hur många ord du lärt dig, hur snabbt det går, om du kan orden åt båda hållen och vilka ord som behöver mer övning.</p>
-      <button class="btn" id="go1">Kör första passet</button></section>`;
+      <button class="btn" id="go1">Kör första passet</button></section>${statsLevel()}`;
     $("#go1").onclick=()=>setView("ova"); return;
   }
   const old=S.logOld||{dur:0,days:0,lastDay:""};
@@ -1368,6 +1368,7 @@ function renderStats(){
   </section>
 
   ${statsDaily()}
+  ${statsLevel()}
 
   <section class="panel">
     <h2>Hur fort det går</h2>

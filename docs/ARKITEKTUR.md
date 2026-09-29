@@ -79,6 +79,7 @@ Appens kod är `src/app.js` (språk, sparande, glosquiz och quizmotor), sedan fi
 | `60-grammar.js`, `61-gender.js` | Grammatikövningar, der/die/das och plural | `gram`, `gen`, `plu` |
 | `62-satsanalys.js` | Satsanalys med fransk terminologi (`content/satsanalys.json`, bara i kurser som har filen): funktionen eller satstypen för en markerad del `[[…]]` | `sats` |
 | `70-exam.js` | Provträning och provsimulering | `exam` |
+| `80-level.js` | Nivåmätaren "Var ligger jag?" i statistiken (`statsLevel`, `levelEstimate`): ordförråd över alla kurser i samma språk, grammatik och prov/Claudes bedömningar på GERS-skalan. Räknas ur befintliga fält, sparar inget | – |
 | `90-mix.js` | Dagens pass och den blandade rundan | `mix` |
 | `99-menu.js` | Menyn med alla övningar och statistiken för dem | – |
 

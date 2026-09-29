@@ -2,6 +2,17 @@
 
 Punkter som har flyttats från [`BACKLOG.md`](BACKLOG.md) när de byggdes. **Referens** anger backloggens rubrik och prioritet. **Commit** anger var ändringen finns i git. **Publicerat** anger versionen av artefakten på https://claude.ai/artifact/YBQv8j4qXQQLuPwLAWt5mP.
 
+## 2026-09-29 (publicerat som version 28)
+
+| Referens | Vad som byggdes | Commit |
+|---|---|---|
+| Språkprov · P2 *Kontrollera provformaten* | Formatet jämfört med provgivarnas officiella material (Goethe B2 Modellsatz 2025 och Durchführungsbestimmungen, B1 Modellsatz; France Éducation international: sujets démo och "Évolution des épreuves" 2024) och rättat. Goethe B2: Hören Teil 1 hörs en gång, Teil 2 och 4 två gånger, Teil 3 har 6 frågor, Lesen Teil 4 med rubrikerna som frågor, Teil 5 med § 1 som exempel, tider, "circa" i stället för "minst" (nytt fält `approxWords`), provets bedömningskriterier. DELF: inga Vrai/Faux i hörförståelsen, läsning Exercice 1 med 16 Oui/Non, tre läsövningar, B2 Exercice 3 (vem tycker vad) tillagd, uppspelningar. Allt dokumenterat med källor i `docs/provformat.md`. | se git log |
+| Språkprov · P2 *Fler provuppgifter* | Tyska 5: 16 → 43, Tyska 6: 15 → 43, Tyska 4 (Goethe B1): 15 → 51, Franska 3, Franska 4 och Franska I: 14–15 → 26 var. Minst 3 uppgifter per del i läsa och höra och 4 i skriva och tala. | se git log |
+| Språkprov · P2 *Nivåmätare* | Panelen "Var ligger jag?" i statistiken: en uppskattning på skalan A2–B1–B2 med osäkerhetsband, byggd av ordförråd (ord som eleven kan i alla kurser i samma språk, mot riktvärden efter Milton & Alexiou 2009), grammatik (senaste svaren per område) och prov (senaste resultaten per del och Claudes nivåbedömningar av texter). Visar "för lite data" och vad som drar ner mest. Räknas ur befintliga data, inget nytt sparas. | se git log |
+| Kurser · *granskning och videor* | 78 videor (3 per kapitel) i Franska 4, Tyska 6 och Franska I, alla kontrollerade med oEmbed. Franska I:s 148 transkriptioner och 148 satsanalyser granskade mot Wiktionnaire, Grevisse och Riegel: inget facit var fel, 17 tvetydiga felalternativ eller förklaringar rättade. | se git log |
+
+Testerna har 617 kontroller.
+
 ## 2026-09-28, del 7 (publicerat som version 27)
 
 | Referens | Vad som byggdes | Commit |

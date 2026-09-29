@@ -358,3 +358,22 @@ details.rule{margin-top:6px}
 .chrow.here{border-color:var(--green)}
 .chtop{display:flex;justify-content:space-between;gap:10px;font-size:.9rem}
 .chnum{font-variant-numeric:tabular-nums;color:var(--ink-2);flex:none}
+
+/* Nivåmätaren "Var ligger jag?" (src/kinds/80-level.js) */
+.lvnow{display:flex;flex-direction:column;gap:2px}
+.lvnow b{font-family:var(--serif);font-size:1.6rem;line-height:1.1;color:var(--ink)}
+.lvnow span{font-size:.85rem;color:var(--ink-2)}
+.lvscale{display:flex;flex-direction:column;gap:4px;padding-top:6px}
+.lvtrack{position:relative;height:10px;background:var(--grid);border-radius:999px}
+.lvtrack .lvtk{position:absolute;top:0;bottom:0;width:2px;margin-left:-1px;background:var(--surface)}
+.lvtrack .lvband{position:absolute;top:0;bottom:0;background:var(--c1);opacity:.35;border-radius:999px}
+.lvtrack .lvgoal{position:absolute;top:-5px;bottom:-5px;width:3px;margin-left:-1.5px;background:var(--ink);border-radius:2px}
+.lvtrack .lvdot{position:absolute;top:50%;width:14px;height:14px;border-radius:50%;background:var(--c2);border:2px solid var(--surface);transform:translate(-50%,-50%)}
+.lvtrack .lvdot.big{width:20px;height:20px;border-width:3px}
+.lvticks{position:relative;height:1.3em;font-size:.72rem;font-weight:700;color:var(--ink-2)}
+.lvticks span{position:absolute;transform:translateX(-50%)}
+.lvrow{display:flex;flex-direction:column;gap:6px;padding-top:4px}
+.lvrow .lvtrack{height:8px}
+.lvrow .meter-top span:last-child{text-align:right}
+.lvsw-band{background:var(--c1);opacity:.35}
+.lvsw-goal{background:var(--ink);width:3px!important}

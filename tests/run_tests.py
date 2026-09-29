@@ -1160,11 +1160,82 @@ const SA=[
 </script>"""
 
 
+# ---------------------------------------------------------------------------------------------------------
+# Nivåmätaren "Var ligger jag?" i statistiken (src/kinds/80-level.js, backlogg P2: Nivåmätare): tomt läge visar
+# "för lite data", många kända ord och bra provresultat placerar eleven högre, ordförrådet räknas över alla kurser i
+# samma språk (men inte andra språk), "Mest att vinna" pekar på den svagaste provdelen, sparat läge ändras inte,
+# ingen horisontell scroll i 400 px bredd, och panelen följer mörkt läge. Körs på en egen sida.
+# ---------------------------------------------------------------------------------------------------------
+SCENARIO_LEVEL = r"""<script>
+const out=[]; const q=s=>document.querySelector(s);
+const ok=(name,cond,info="")=>out.push((cond?"OK   ":"FEL  ")+name+(info?"  ("+info+")":""));
+// Headless Chrome ger minst ~500 px fönster, så sidan smalnas av till w px (400 och 320) och allt i panelen ska rymmas inom panelen
+const noScroll=()=>[400,320].every(w=>{ document.body.style.width=w+"px"; const p=q("#lvl");
+  const r=p?p.getBoundingClientRect():null, bad=p?[...p.querySelectorAll("*")].filter(e=>{const b=e.getBoundingClientRect(); return b.width&&(b.right>r.right+.5||b.left<r.left-.5);}):[];
+  const okw=document.documentElement.scrollWidth<=window.innerWidth&&(!p||(p.scrollWidth<=p.clientWidth&&r.width<=w&&!bad.length));
+  document.body.style.width=""; return okw; });
+const fill=(n,pre,s)=>{const w={}; for(let i=0;i<n;i++) w[pre+i]={s,due:9,lp:1}; return w;};
+function examRes(pctOf){ const e=EX(), t={}; e.parts.forEach(p=>{const k=e.tasks.find(x=>x.part===p.id); if(k) t[k.id]={pct:pctOf(p.id),best:pctOf(p.id),n:1,last:Date.now()};}); return {t,sims:[]}; }
+function gramRes(s){ const gi={}, per={}; Object.values(gramBank()).filter(x=>x.type==="gap"||x.type==="rw").forEach(x=>{ per[x.topic]=(per[x.topic]||0)+1; if(per[x.topic]<=6) gi[x.id]={s,last:Date.now()}; }); return gi; }
+const logOne=()=>[{p:1,d:Date.now(),dur:300,nNew:10,nRep:0,right:9,total:10,mcR:9,mcN:10,tyR:0,tyN:0,extra:false}];
+
+appReady().then(async()=>{ try{
+  useLang("de"); await until(()=>L.code==="de"&&L.base&&!sess,5000);
+  // 1. Tomt läge
+  S.w={}; S.log=[]; delete S.gi; delete S.gt; delete S.exam; delete S.fb;
+  setView("stats");
+  ok("nivå: panelen finns även utan pass", !!q("#lvl")&&q("#lvl").textContent.includes("Var ligger jag?"));
+  ok("nivå: tomt läge visar för lite data", levelEstimate().lv===null&&q("#lvl").textContent.includes("För lite data")&&q("#lvl").textContent.toLowerCase().includes("för lite data"), q("#lvl")&&q("#lvl").textContent.slice(0,160));
+  ok("nivå: inte ett betyg, källan anges", q("#lvl").textContent.includes("inte ett betyg")&&q("#lvl").textContent.includes("Milton & Alexiou 2009"));
+  ok("nivå: ingen horisontell scroll (tomt, 400 px)", noScroll(), document.documentElement.scrollWidth+" / "+window.innerWidth);
+  // 2. Svagt läge mot starkt läge
+  S.log=logOne(); S.w=fill(400,"x",4); S.gi=gramRes(0); S.exam=examRes(()=>20); S.fb={"w:a":{niva:"A2",d:Date.now()}};
+  const weak=levelEstimate();
+  S.w=fill(3800,"x",5); S.gi=gramRes(2); S.exam=examRes(()=>85); S.fb={"w:a":{niva:"B2",d:Date.now()}};
+  const strong=levelEstimate();
+  ok("nivå: svagt läge får en uppskattning", weak.lv!=null&&weak.voc.n===400&&weak.gram.lv!=null&&weak.exam.lv!=null, JSON.stringify([weak.lv,weak.voc.lv,weak.gram.lv,weak.exam.lv]));
+  ok("nivå: många kända ord och bra prov placeras högre", strong.lv!=null&&strong.lv>=weak.lv+1&&strong.lv>=3.5, (weak.lv||0).toFixed(2)+" → "+(strong.lv||0).toFixed(2));
+  ok("nivå: delindikatorerna var för sig", strong.voc.lv>weak.voc.lv&&strong.gram.lv>weak.gram.lv&&strong.exam.lv>weak.exam.lv);
+  const before=JSON.stringify(S), ls=localStorage.getItem(L.storageKey);
+  setView("stats");
+  ok("nivå: visas i statistiken med alla tre delar", ["Ordförråd","Grammatik","Prov och texter"].every(t=>q("#lvl").textContent.includes(t))&&!q("#lvl").textContent.includes("För lite data"), q("#lvl").textContent.slice(0,120));
+  ok("nivå: sparat läge ändras inte", JSON.stringify(S)===before&&localStorage.getItem(L.storageKey)===ls);
+  ok("nivå: ingen horisontell scroll (med data, 400 px)", noScroll(), document.documentElement.scrollWidth+" / "+q("#lvl").scrollWidth+" / "+q("#lvl").clientWidth);
+  // 3. Mest att vinna
+  S.exam=examRes(p=>p==="hoeren"?30:85); setView("stats");
+  ok("nivå: mest att vinna pekar på svagaste delen", q("#lvl .insight")&&q("#lvl .insight").textContent.includes("Mest att vinna: hörförståelse"), q("#lvl .insight")&&q("#lvl .insight").textContent);
+  // 4. Ordförrådet räknas över alla kurser i samma språk, men inte andra språk
+  const k4=LANGUAGES.de4.storageKey, k6=LANGUAGES.de6.storageKey, kfr=LANGUAGES.fr.storageKey;
+  const o4=localStorage.getItem(k4), o6=localStorage.getItem(k6), ofr=localStorage.getItem(kfr);
+  S.w={...fill(500,"x",4),...fill(100,"y",2)};
+  localStorage.setItem(k4,JSON.stringify({pass:3,w:fill(1000,"x",4),log:[]}));
+  localStorage.setItem(k6,JSON.stringify({pass:2,w:{z1:{s:6,due:9},z2:{s:3,due:9}},log:[]}));
+  localStorage.setItem(kfr,JSON.stringify({pass:2,w:fill(900,"f",5),log:[]}));
+  { const v=levelEstimate().voc;
+    ok("nivå: ordförrådet räknas över kursens språk (de4 + de + de6, samma ord en gång)", v.n===1001&&v.per.length===3, v.n+" "+JSON.stringify(v.per));
+    setView("stats"); ok("nivå: kurserna visas i förklaringen", q("#lvl").textContent.includes("Tyska 4")&&q("#lvl").textContent.includes("Tyska 6")); }
+  [[k4,o4],[k6,o6],[kfr,ofr]].forEach(([k,o])=>o===null?localStorage.removeItem(k):localStorage.setItem(k,o));
+  // 5. Mörkt läge och Franska 3
+  S.w=fill(3800,"x",5); setView("stats");
+  const lightBg=getComputedStyle(q("#lvl .lvtrack")).backgroundColor;
+  document.documentElement.dataset.theme="dark"; const darkBg=getComputedStyle(q("#lvl .lvtrack")).backgroundColor; delete document.documentElement.dataset.theme;
+  ok("nivå: mörkt läge", lightBg!==darkBg, lightBg+" / "+darkBg);
+  useLang("fr"); await until(()=>L.code==="fr"&&L.base&&!sess,5000); setView("stats");
+  ok("nivå: Franska 3 mot DELF B1", !!q("#lvl")&&q("#lvl").textContent.includes("DELF B1")&&noScroll(), q("#lvl")&&q("#lvl").querySelector(".sub").textContent);
+  ok("nivå: tolkar Claudes nivåer", lvNum("B1")===3&&Math.abs(lvNum("A2/B1")-2.5)<1e-9&&lvNum("B1+")>3&&lvNum("ingen")===null&&lvShort(3.5)==="B1+"&&lvShort(0.2)==="under A1");
+ }catch(e){ ok("undantag", false, e.message+" "+(e.stack||"").split("\n")[1]); }
+ ok("inga JavaScript-fel", !__err.length, __err.join(" ; "));
+ document.body.insertAdjacentHTML("beforeend","<pre id=out>"+out.join("\n").replace(/</g,"&lt;")+"</pre>");
+});
+</script>"""
+
+
 def main():
     text = run(SCENARIO) + "\n" + run(SCENARIO_DE) + "\n" + run(SCENARIO_FIXES) + "\n" + run(SCENARIO_SYNC, 30000) + "\n" + run_http(SCENARIO_HTTP)
     text += "\n" + run(SCENARIO_ARCH, 30000) + "\n" + test_build_locks()   # arkitektur, del 6
     text += "\n" + run(SCENARIO_KINDS, 60000)   # övningstyperna (src/kinds), alla kurser, två enheter, del 6
     text += "\n" + run(SCENARIO_IPA, 30000)   # transkription och satsanalys (fru)
+    text += "\n" + run(SCENARIO_LEVEL, 30000)   # nivåmätaren "Var ligger jag?" (P2: Nivåmätare)
     print(text)
     sys.exit(1 if "FEL  " in text else 0)
 

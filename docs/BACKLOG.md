@@ -29,10 +29,8 @@ Föräldern: "Vi vill inte ha för många övningar men vi vill ha övningar som
 
 Båda eleverna ska söka musikutbildning utomlands. Eleven i franska behöver visa **B1 i franska** (DELF B1) för Frankrike, och eleven i tyska behöver visa **B2 i tyska** för Tyskland. Musikhögskolorna godtar oftast Goethe-Zertifikat B2, telc B2 eller TestDaF, men kontrollera vad just deras skolor kräver. Betyg i kursen spelar mindre roll.
 
-- **P2: Kontrollera provformaten** mot provgivarnas egna exempelprov (Goethe Modellsatz B2, DELF B1 sujets démo): antal frågor per Teil/exercice, tider och exakt formulering av uppgifterna. Uppgifterna i appen är skrivna efter minnet av formatet.
-- **P2: Fler provuppgifter**, så att provsimuleringen inte upprepar sig (i dag 16 tyska och 14 franska uppgifter). Tyska 4 har ingen provträning, eftersom Goethe B2 är för svårt där. Ett B1-prov (Goethe B1) kan läggas till.
+- **P2: Provsimuleringen som hela provet:** i dag tas en uppgift per del, men provet har tre övningar per del (DELF) eller fyra till fem Teile (Goethe). Låt simuleringen ta en uppgift per övning/Teil, med provets tider. Några äldre texter har fel längd (fr-co-1 160 ord mot 250–300, fru-ce-1 till ce-4 cirka 500 ord mot 425–450), och fr4-co-4 är ett röstmeddelande i stället för en dialog. Faktauppgifter att se över med tiden: Venedigs inträdesavgift (de-hoe-10), valdeltagande (de6-le-4).
 - **P2: Muntlig förberedelse:** presentera sig själv och sin musik, med skuggning och Claude som samtalspartner (text).
-- **P2: Nivåmätare:** uppskatta var eleven ligger mot B1/B2 utifrån ordförråd, grammatikresultat och Claudes bedömningar, och visa det i statistiken.
 
 ## Repetition och inlärning
 
@@ -81,8 +79,8 @@ Emma pluggar på egen hand, utan kurs, lärare och lärobok. Tyskan bygger därf
   - Ordning: Italienska 3 (står som kommande i `languages/upcoming.json`), sedan de lägre stegen (1–2 i franska, 1–3 i tyska) och sist steg 7 och Franska 5.
   - Arbetssätt som fungerade för Franska 4 och Tyska 6: glosorna i två halvor av två agenter (med dubblettkontroll mot tidigare kurser och mot varandra), allt övrigt innehåll av en tredje. Modelltexterna i skrivuppgifterna ska skrivas **efter** ordlistan, annars saknar de kapitelord.
   - Innehållet är AI-skrivet och behöver granskas med stickprov, som de andra kurserna.
-- **P2: Franska I (universitet): granskning.** Allt AI-skrivet. Kontrollera särskilt IPA i transkriptionen (148) och satsanalysen, DELF B2-formatet (antal uppspelningar, antal övningar), siffror som åldras i exemplen (statsskuld, asylsökande, fattigdom, valresultat 2024–2026), citaten (Zola, Maupassant, Verlaine, Boileau, Baudelaire) mot originalen, och uttalsparen saule/sole, nuée/nouer, enfui/enfoui med en riktig röst. Kursen har inga videor.
-- **P2: Franska 4 och Tyska 6: granskning och videor.** Båda kurserna (2026-09-28) är AI-skrivna och har inga videor (`videos.json` är tom). Kontrollera särskilt uttalsparen cote/côte och Paul/pôle (fr4) och wanke/zanke, Suhle/Kuhle (de6) med en riktig röst, modalpartiklarna i Hitta felet (de6) och faktauppgifterna i kultur- och historietexterna. Franska 4 har musikteori bara i Franska 3; Tyska 6 har den bara i Tyska 5.
+- **P2: Franska I (universitet): granskning.** Allt AI-skrivet. IPA och satsanalys är granskade av AI (2026-09-29) men bör ses av en lärare. Kontrollera siffror som åldras i exemplen (statsskuld, asylsökande, fattigdom, valresultat 2024–2026), citaten (Zola, Maupassant, Verlaine, Boileau, Baudelaire) mot originalen, och uttalsparen saule/sole, nuée/nouer, enfui/enfoui med en riktig röst. 
+- **P2: Franska 4 och Tyska 6: granskning.** Båda kurserna (2026-09-28) är AI-skrivna (videor finns sedan 2026-09-29). Kontrollera särskilt uttalsparen cote/côte och Paul/pôle (fr4) och wanke/zanke, Suhle/Kuhle (de6) med en riktig röst, modalpartiklarna i Hitta felet (de6) och faktauppgifterna i kultur- och historietexterna. Franska 4 har musikteori bara i Franska 3; Tyska 6 har den bara i Tyska 5.
 
 ## Arkitektur (granskning 2026-09-28)
 
