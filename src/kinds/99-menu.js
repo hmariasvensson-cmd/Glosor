@@ -16,7 +16,7 @@ function exGroups(){
       c.reading&&g("rq","Läsa texter","Tryck på alla ord du inte kan och spara dem i Mina ord."),
       c.culture&&g("culture","Kultur","Kort fakta, en fråga och en jämförelse med Sverige.")]],
     ["gram","Grammatik","Verb, grammatikövningar och berättelser",[
-      ...verbGames().map(v=>`<button class="game" data-g="${v.id}"><span><b>Verb: ${esc(v.name)}</b><small>${esc(v.sub||"")}</small></span><span class="go" aria-hidden="true">›</span></button>`),
+      ...verbGames().map(v=>`<button class="game" data-g="${esc(v.id)}"><span><b>Verb: ${esc(v.name)}</b><small>${esc(v.sub||"")}</small></span><span class="go" aria-hidden="true">›</span></button>`),
       hasGrammar()&&g("gram","Grammatikövningar",GR().topics.slice(0,4).map(t=>t.name.toLowerCase()).join(", ")+" …"),
       (c.satsanalys||[]).length&&g("sats","Satsanalys","Vilken funktion har den understrukna delen? Sujet, COD, COI, subordonnée relative …"),
       c.stories&&g("story","Berättelser","Välj rätt tempus och bindeord i en berättelse.")]],
@@ -33,7 +33,7 @@ function exGroups(){
   return groups.map(([id,t,sub,items])=>({id,t,sub,items:items.filter(Boolean)})).filter(g=>g.items.length);
 }
 function gamesPanel(){
-  return `${planCard()}<section class="panel"><h2>Fler övningar</h2><div class="grpgrid">${exGroups().map(g=>`<button class="grp" data-grp="${g.id}">
+  return `${examSimCard()}${planCard()}<section class="panel"><h2>Fler övningar</h2><div class="grpgrid">${exGroups().map(g=>`<button class="grp" data-grp="${g.id}">
     <b>${g.t}</b><small>${g.sub}</small><span class="label">${g.items.length} ${g.items.length===1?"övning":"övningar"}</span></button>`).join("")}</div></section>`;
 }
 function openExGroup(id){
@@ -48,6 +48,9 @@ function wireGames(){
   app.querySelectorAll("[data-ex]").forEach(b=>b.onclick=()=>KINDS[b.dataset.ex].open());
   app.querySelectorAll("[data-g]").forEach(b=>b.onclick=()=>startVerbs(b.dataset.g));
   app.querySelectorAll("[data-grp]").forEach(b=>b.onclick=()=>openExGroup(b.dataset.grp));
+  // En pågående provsimulering (examSimCard, 70-exam.js)
+  if($("#simgo")) $("#simgo").onclick=simResume;
+  if($("#simdrop")) $("#simdrop").onclick=()=>{ simDrop(); renderStart(); };
 }
 
 /* ---------- Statistik för övningarna ---------- */

@@ -35,7 +35,7 @@ function rebuildWords(){
 }
 let XS={};
 const sentById=ref=>byId[ref]||XS[ref];
-const tatoebaNote=w=>w.tatoeba?`<p class="foot">Meningen kommer från <a href="https://tatoeba.org/sv/sentences/show/${w.tatoeba.id}" target="_blank" rel="noopener">Tatoeba #${w.tatoeba.id}</a>${w.tatoeba.by?` (${esc(w.tatoeba.by)})`:""}, CC BY 2.0 FR.</p>`:"";
+const tatoebaNote=w=>w.tatoeba?`<p class="foot">Meningen kommer från <a href="https://tatoeba.org/sv/sentences/show/${esc(w.tatoeba.id)}" target="_blank" rel="noopener">Tatoeba #${esc(w.tatoeba.id)}</a>${w.tatoeba.by?` (${esc(w.tatoeba.by)})`:""}, CC BY 2.0 FR.</p>`:"";
 const isMine=t=>(S.mine||[]).some(m=>m.t===t);
 function addMine(g,surface,line,text){
   S.mine=S.mine||[]; if(isMine(g.t)) return;
@@ -87,10 +87,10 @@ function bookPanel(){
   const i=cur?secs.indexOf(cur):-1, next=cur&&!left(cur.id)?secs.slice(i+1).find(s=>left(s.id)):null;
   return `<section class="panel book"><div class="meta"><span class="label">Boken</span><span>${esc(L.book.title)}</span></div>
     <div class="field"><span class="label">Vi läser nu</span><select id="chapter"><option value="">Inget särskilt kapitel</option>
-      ${secs.map(s=>`<option value="${s.id}" ${s.id===S.chapter?"selected":""}>${esc(s.name)} · ${progLabel([s.id])}</option>`).join("")}</select></div>
+      ${secs.map(s=>`<option value="${esc(s.id)}" ${s.id===S.chapter?"selected":""}>${esc(s.name)} · ${progLabel([s.id])}</option>`).join("")}</select></div>
     <p class="plan">${cur?(next?`Du har börjat på alla ord i ${esc(cur.name)}. Läser ni <b>${esc(next.name)}</b> nu?`
       :`Nya ord, texter och övningar tas först från <b>${esc(cur.name)}</b>.`):"Välj kapitlet ni läser i skolan, så kommer de orden först."}</p>
-    ${next?`<button class="btn ghost" id="nextch" data-ch="${next.id}">Byt till ${esc(next.name)}</button>`:""}</section>`;
+    ${next?`<button class="btn ghost" id="nextch" data-ch="${esc(next.id)}">Byt till ${esc(next.name)}</button>`:""}</section>`;
 }
 function wireBookPanel(){
   const sel=$("#chapter"); if(!sel) return;

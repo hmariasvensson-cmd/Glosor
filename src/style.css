@@ -380,3 +380,13 @@ details.rule{margin-top:6px}
 .lvrow .meter-top span:last-child{text-align:right}
 .lvsw-band{background:var(--c1);opacity:.35}
 .lvsw-goal{background:var(--ink);width:3px!important}
+/* Provträningens para ihop, lucktext och kortsvar (70-exam.js) */
+.exopts{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
+.exopts li{display:flex;gap:10px;align-items:baseline;border:1.5px solid var(--line);border-radius:12px;padding:10px 12px;min-width:0}
+.exopts li>div{min-width:0;overflow-wrap:anywhere}
+.exopts .k{font-size:.8rem;min-width:1.1em}
+.exsel{max-width:100%;text-overflow:ellipsis}
+.exsel.right,.exshort.right{border-color:var(--ok)} .exsel.wrong,.exshort.wrong{border-color:var(--pink)}
+.exgaps .tl{line-height:2.1;overflow-wrap:anywhere}
+.gapsel{display:inline-block;width:auto;max-width:100%;padding:3px 6px;margin:0 2px;font-size:.95em;vertical-align:baseline}
+.exshort{font-size:1.1rem;padding:10px 12px}

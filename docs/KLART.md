@@ -2,6 +2,21 @@
 
 Punkter som har flyttats från [`BACKLOG.md`](BACKLOG.md) när de byggdes. **Referens** anger backloggens rubrik och prioritet. **Commit** anger var ändringen finns i git. **Publicerat** anger versionen av artefakten på https://claude.ai/artifact/YBQv8j4qXQQLuPwLAWt5mP.
 
+## 2026-09-29, del 4 (publicerat som version 31)
+
+| Referens | Vad som byggdes | Commit |
+|---|---|---|
+| Arkitektur (granskning 2026-09-29) · P1 *Oescapad text från datafilerna i HTML* | `safeHtml` (vitlista b, i, em, strong, br, sup, sub, span med class) för ursprung och ordagrant, `esc` för all annan data (avsnitts-id, verbspelens id, Tatoeba-id, flikar, genus, accentknappar). `d.answer` är ren text i alla typer och escapas på ett ställe i quizmotorn (`answerHtml`; IPA använder `d.answerHtml`). Test `SCENARIO_ESC` med `<script>`, `<img onerror>` och `a < b` i ett ord. | se git log |
+| Arkitektur · P2 *index.html är 456 kB* | Verbtabellerna (`sv`, `tenses`, `notes`) flyttade från lang.js till `languages/<kod>/verbs.json` och kursens datafil (`verbTables`), med arvet ihopslaget av build.py; index.html 456 → 389 kB (med dagens övriga kod). Byggkontroller för tabeller i lang.js och okända fält i verbs.json. | se git log |
+| Språkprov · P2 *Nya provuppgiftstyper* | Para ihop (`match`), lucktext med flerval per lucka/Sprachbausteine (`gaps`, även med ordbank) och kortsvar (`short`, tål accenter/versaler/ß) i 70-exam.js, med simulering och nivåmätare; `sim: false` för extrauppgifter; byggkontroll `check_exam_task`. Exempel i fr2, it4, it7 och de7. | se git log |
+| Språkprov · P2 *Spara en pågående provsimulering* | `S.exam.simRun` sparas vid start, svar, inlämning och varje minut; kortet "Fortsätt provsimuleringen" på startsidan; klockan står still när appen är stängd. | se git log |
+| Nivåresearch · *täckning* | `tools/tackning.py` (och `build.py --tackning`) mäter andelen kända ord per text och kurs (kedjan bakåt, glosor, enkel lemmatisering) → `docs/tackning.md`. Täckningen höjd i fr1, fr2, frs4, frs5, de1–de3 (de3 läs 91 → 99 %), it1, it3, it4 med ca 330 nya grundord (encore, déjà, mehr, nur, sofort, obwohl, qui, quasi, subito …) och ca 460 nya glosor; några provtexter förenklade. | se git log |
+| Tyska · *grammatikluckor* | Tyska 4: futur I, präteritum, zu-infinitiv/um … zu, verb med preposition, genitiv (111 frågor). Tyska 5: futur I/II (23). Tyska 6: futur I/II med antagande, tillståndspassiv (45). `secs` på alla områden i de4 och de. | se git log |
+| Tyska 7 · *påfyllning* | Lästexter 8 → 16 (bl.a. E. T. A. Hoffmann och Stefan Zweig), skrivuppgifter 8 → 24, kultur och berättelser 4 → 8, hörtexter 8 → 12, ord 700 → 784. | se git log |
+| Franska 3 och Italienska 2 | Franska 3: 13 DELF A2-uppgifter som mellansteg i egna delar (nivå A2). Italienska 2: områdena piacere i dåtid, betonade pronomen, indefinita pronomen, pronomenets plats (80 frågor), ett CELI Impatto-prov (A1) och en fjärde fråga i alla lästexter. | se git log |
+
+Testerna har 1 492 kontroller (testet för mörkt läge sätter nu ljust läge uttryckligen, så det inte beror på datorns inställning).
+
 ## 2026-09-29, del 3 (publicerat som version 30)
 
 | Referens | Vad som byggdes | Commit |
@@ -90,7 +105,7 @@ Arkitekturpunkterna från granskningen 2026-09-28 (BACKLOG, *Arkitektur (granskn
 |---|---|---|
 | Kurser · P2 *Alla tre språken från steg 1 till steg 7*: **Franska 4** | Ny kurs `fr4` (steg 6, B1, DELF B1), utan lärobok, efter kursmallen: 1 045 ord i 8 kapitel (Études et avenir, Médias, Environnement, Arts et musique, Vivre ailleurs, Histoire et mémoire, Santé et sport, Éthique et francophonie) och 69 fraser för att argumentera, utan ord från Franska 3 eller Escalade. 9 grammatikområden med 268 frågor och regelsidor (subjonctif, si-satser, futur antérieur, lequel/auquel/duquel, indirekt tal, mise en relief, gérondif, passiv, bindeord), 16 hörtexter, 16 lästexter, 8 berättelser, 10 kulturtexter, 24 skrivuppgifter, 45 samtalsfraser, kapitelmål, uttal, 3 verbspel och 15 DELF B1-uppgifter. Egen sparnyckel `glosor-fr4-v1`. | se nedan |
 | Kurser · P2 *Alla tre språken från steg 1 till steg 7*: **Tyska 6** | Ny kurs `de6` (steg 6, B1 → B2, Goethe B2), med samma delar: 1 109 ord (Studium und Bewerbung, Wissenschaft, Politik und Geschichte, Literatur und Epochen, Arbeit, Musik und Bühne, Ethik, Stadt/Land/Migration) och 70 Redemittel, utan ord från Tyska 4 och 5. 10 grammatikområden med 309 frågor (Konjunktiv I och indirekt tal, Konjunktiv II i dåtid, passivomskrivningar, particip som attribut, nominalstil, Nomen-Verb-Verbindungen, genitivprepositioner, modalpartiklar, subjektiva modalverb, textbindning), 16 hörtexter, 14 lästexter, 8 berättelser, 9 kulturtexter, 24 skrivuppgifter (8 i Goethe B2-format), 45 fraser, kapitelmål, uttal, 3 verbspel och 15 Goethe B2-uppgifter. Tyska 5 föreslår Tyska 6 när den är klar. Egen sparnyckel `glosor-de6-v1`. | se nedan |
-| Önskemål från föräldern: *granska övningarna* | En genomgång av alla cirka 20 övningar mot forskningen om inlärning. Förslagen står i BACKLOG.md under "Färre men mer värdefulla övningar" och väntar på förälderns svar. | – |
+| Önskemål från föräldern: *granska övningarna* | En genomgång av alla cirka 20 övningar mot forskningen om inlärning. Förslagen står i BACKLOG.md under "Färre men mer värdefulla övningar" och väntar på förälderns svar. | se git log |
 
 Italienska 3 står nu som kommande kurs. "Hitta felet" hoppar över tempusbyten i franskt indirekt tal, eftersom de går att försvara i talspråk. Testerna har 185 kontroller.
 

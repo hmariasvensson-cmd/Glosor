@@ -16,8 +16,8 @@ Glosor har tre sorters data, och de hålls helt åtskilda.
 1. Läser varje kurs: `lang.js`, `grammar.json`, sedan `words.txt` och `book/kapNN/words.txt`, sedan `content/*.json` och `book/kapNN/content/*.json`. Filer med samma namn slås ihop, så att bokens `reading.json` hamnar bland kursens lästexter. `grammar-*.json` blir en gemensam frågebank.
 2. Kontrollerar ordlistan (format, dubbletter), grammatikfrågorna (luckor, felalternativ, artiklar och kasus för tyskan), att id:n är unika inom varje innehållstyp, `extends` (föräldern finns, ingen cirkel) och id-låsen (se nedan).
 3. Skriver
-   - `dist/index.html`: appen och alla kursers `lang.js` (cirka 380 kB med 8 kurser; build.py varnar över 450 kB, så håll stora tabeller som verb i lang.js små eller ärv dem),
-   - `dist/data/<kod>.json`: en fil per kurs med ord (`words`), innehåll (`content`), videor (`videos`) och grammatikens områden och regler (`grammar`), som appen hämtar först när kursen väljs,
+   - `dist/index.html`: appen och alla kursers `lang.js` (cirka 376 kB med 21 kurser; build.py varnar över 450 kB, så stora tabeller hör hemma i datafilen, som verbtabellerna i `verbs.json`),
+   - `dist/data/<kod>.json`: en fil per kurs med ord (`words`), innehåll (`content`), videor (`videos`) grammatikens områden och regler (`grammar`), studieplanen (`plan`) och verbtabellerna (`verbTables`), som appen hämtar först när kursen väljs,
    - `dist/preview.html`: allt inbakat i en fil (`INLINE_DATA`), för att öppna lokalt och för testerna.
 
 `DATA_VERSION` är `{<kod>: hash}`, ett hash per datafil, och läggs i adressen till just den kursens fil (`data/de.json?v=<hash>`). En ny version blandas aldrig med en gammal i webbläsarens cache, och en ändring i en kurs tvingar inte fram en ny hämtning av de andra.
@@ -34,6 +34,7 @@ En kurs kan ärva fält från en annan: `extends: "de"` och `inherit: ["connecto
 - Vanliga objekt slås ihop nyckel för nyckel, rekursivt; kursens egna värden vinner och förälderns ordning behålls. Listor, regex och funktioner tas hela från kursen själv om den har dem.
 - `{$append: [...]}` lägger till i förälderns lista (fr4:s bindeord), `{$remove: ["Konjunktiv I"]}` tar bort nycklar ur förälderns objekt (de4:s verbtabeller).
 - Resultatet är ett vanligt objekt (inga getters), så `L.verbs` är samma objekt vid varje åtkomst.
+- Verbtabellerna (`sv`, `tenses`, `notes`) ligger inte i lang.js utan i `languages/<kod>/verbs.json` och följer med datafilen som `verbTables`, så att index.html hålls liten. build.py slår ihop arvet för dem med samma regler (`merge_inherited`, `resolve_verbs`), t.ex. `{"tenses": {"$remove": ["Konjunktiv I"]}}` i `de4/verbs.json`. `addCourseData` lägger in dem i ett nytt `L.verbs`-objekt (`withVerbTables`) när kursen hämtas; före det har `L.verbs` bara `persons`, `prefix` och `games`, och när kursen släpps återställs lang.js-delen (`LANG_VERBS`).
 
 | Kurs | Ärver från | Fält |
 |---|---|---|
@@ -88,7 +89,7 @@ Appens kod är `src/app.js` (språk, sparande, glosquiz och quizmotor), sedan fi
 | `54-transkription.js` | Transkription till och från IPA (`content/transkription.json`, bara i kurser som har filen, t.ex. `fru`): välj IPA, välj ord och skriv med IPA-knapprad; rättningen bortser från mellanslag, syllabering och länkning. Format i `languages/fru/content/SPEC.md` | `ipa` |
 | `60-grammar.js`, `61-gender.js` | Grammatikövningar, der/die/das och plural | `gram`, `gen`, `plu` |
 | `62-satsanalys.js` | Satsanalys med fransk terminologi (`content/satsanalys.json`, bara i kurser som har filen): funktionen eller satstypen för en markerad del `[[…]]` | `sats` |
-| `70-exam.js` | Provträning och provsimulering | `exam` |
+| `70-exam.js` | Provträning och provsimulering. Uppgiftstyperna flerval, skriva, tala, para ihop (`match`), lucktext med flerval (`gaps`) och kortsvar (`short`), format i SPEC-kommentaren överst och i `docs/provformat.md`; `build.py` kontrollerar dem (`check_exam_task`) | `exam` |
 | `80-level.js` | Nivåmätaren "Var ligger jag?" i statistiken (`statsLevel`, `levelEstimate`): ordförråd över alla kurser i samma språk, grammatik och prov/Claudes bedömningar på GERS-skalan. Räknas ur befintliga fält, sparar inget | – |
 | `82-plan.js` | Studieplan vecka för vecka (`languages/<kod>/plan.json` → `L.plan`, kontrolleras av `check_plan` i build.py): kort på startsidan med aktuell vecka och hur många av veckans ord eleven kan, en sida med alla veckor (ord, grammatik, texter, provuppgifter) och startdatum i `S.plan` | `plan` |
 | `90-mix.js` | Dagens pass och den blandade rundan | `mix` |
@@ -152,7 +153,7 @@ Ett dokument i artefaktens db får vara **högst 256 KiB** (plattformens gräns,
 | `ipa`, `sa` | Transkription och satsanalys (universitetskursen): per id `{s, last, r, n}`. |
 | `tx`, `stb`, `st` | Läs- och hörtexter `{r, n, best, last}`, berättelsernas bästa resultat, berättelsernas luckor `{tempus, bindeord}`. |
 | `cu`, `wr`, `ut`, `mal`, `kt` | Klara kulturuppgifter och skrivuppgifter, bästa uttalsresultat, avbockade lärandemål (`"<id>\|<nr>"`), kapitelprov `{r, n, d, miss}`. |
-| `exam` | Provträning `{t: {<uppgift>: {pct, best, n, last}}, sims: [{d, parts, tasks, min}]}` (`tasks` = resultat per uppgift och `min` = minuter, i simuleringar från september 2026). |
+| `exam` | Provträning `{t: {<uppgift>: {pct, best, n, last}}, sims: [{d, parts, tasks, min}], simRun}` (`tasks` = resultat per uppgift och `min` = minuter, i simuleringar från september 2026). `simRun` = pågående provsimulering `{ids, i, res: {<uppgift>: {pct, r, n}}, ends: {<del>: tid}, start, seen, cur: {id, ans}, code}`, sparad efter varje steg och en gång i minuten så att den överlever en omladdning; när den återupptas flyttas `ends` och `start` fram med tiden sedan `seen` (klockan står still medan appen är stängd). Tas bort när simuleringen är klar eller avbruten. Saknas i äldre lägen. |
 | `drafts`, `fb` | Utkast och Claudes kommentarer per uppgift. |
 | `plan` | Studieplanen: `{start: "ÅÅÅÅ-MM-DD"}`, första dagen i vecka 1 (aktuell vecka räknas fram). Saknas i gamla lägen. |
 | `feedback`, `reports` | Tyck till-meddelanden och felrapporter som inte kunde skickas (högst 50). |

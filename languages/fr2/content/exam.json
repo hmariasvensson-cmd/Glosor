@@ -148,6 +148,156 @@
       ]
     },
     {
+      "id": "fr2-ce-5",
+      "part": "ce",
+      "teil": "Exercice 2",
+      "type": "match",
+      "title": "Des activités pour l'été",
+      "time": 8,
+      "instr": "Fem personer letar efter något att göra i sommar. Läs annonserna A–H. Vilken annons passar varje person? Välj en bokstav i listan. Tre annonser blir över.",
+      "opts": [
+        {
+          "fr": "Cours de guitare pour débutants. Le mercredi après-midi, à la Maison des jeunes. 10 € la séance.",
+          "sv": "Gitarrkurs för nybörjare. Onsdagseftermiddagar på fritidsgården. 10 € per gång."
+        },
+        {
+          "fr": "Club de natation : entraînement le samedi matin à la piscine municipale. Pour les 12–16 ans.",
+          "sv": "Simklubb: träning lördag förmiddag i kommunens simhall. För 12–16-åringar."
+        },
+        {
+          "fr": "Atelier de cuisine italienne : pizzas et pâtes ! Le jeudi, de 18 h à 20 h.",
+          "sv": "Kurs i italiensk matlagning: pizza och pasta! Torsdagar kl. 18–20."
+        },
+        {
+          "fr": "Balade à vélo en famille le dimanche : 20 km autour du lac. Apportez un pique-nique !",
+          "sv": "Cykeltur för familjer på söndagar: 20 km runt sjön. Ta med picknick!"
+        },
+        {
+          "fr": "Stage de théâtre pour les ados, du 5 au 9 juillet. Spectacle le dernier jour.",
+          "sv": "Teaterkurs för tonåringar 5–9 juli. Föreställning sista dagen."
+        },
+        {
+          "fr": "Bibliothèque : histoires pour les enfants de 4 à 7 ans, le mardi à 10 h.",
+          "sv": "Biblioteket: sagostund för barn 4–7 år, tisdagar kl. 10."
+        },
+        {
+          "fr": "Cours de dessin dans le parc, le vendredi matin. Le matériel est gratuit.",
+          "sv": "Teckningskurs i parken fredag förmiddag. Materialet är gratis."
+        },
+        {
+          "fr": "La chorale « Les Voix du Sud » cherche des chanteurs ! Répétition le lundi soir.",
+          "sv": "Kören Les Voix du Sud söker sångare! Repetition måndagkvällar."
+        }
+      ],
+      "items": [
+        {
+          "q": "Emma adore chanter. Elle est libre le lundi soir.",
+          "sv": "Emma älskar att sjunga. Hon är ledig måndagkvällar.",
+          "a": 7,
+          "why": "H: kören repeterar på måndagkvällar."
+        },
+        {
+          "q": "Lucas veut apprendre à jouer d'un instrument.",
+          "sv": "Lucas vill lära sig spela ett instrument.",
+          "a": 0,
+          "why": "A: gitarrkurs för nybörjare."
+        },
+        {
+          "q": "Chloé a 14 ans et elle aime nager.",
+          "sv": "Chloé är 14 år och tycker om att simma.",
+          "a": 1,
+          "why": "B: simklubb för 12–16-åringar."
+        },
+        {
+          "q": "La famille Martin aime faire du sport dehors le week-end.",
+          "sv": "Familjen Martin tycker om att idrotta utomhus på helgen.",
+          "a": 3,
+          "why": "D: cykeltur för familjer på söndagar."
+        },
+        {
+          "q": "Léo veut apprendre à faire des pizzas.",
+          "sv": "Léo vill lära sig göra pizza.",
+          "a": 2,
+          "why": "C: kurs i italiensk matlagning."
+        }
+      ]
+    },
+    {
+      "id": "fr2-ce-6",
+      "part": "ce",
+      "teil": "Exercice 3",
+      "type": "match",
+      "title": "Où est-ce qu'on lit ces messages ?",
+      "time": 7,
+      "instr": "Du läser fem korta skyltar och meddelanden. Var ser man dem? Välj en plats (A–H) för varje meddelande. Tre platser blir över.",
+      "opts": [
+        {
+          "fr": "à la gare",
+          "sv": "på järnvägsstationen"
+        },
+        {
+          "fr": "à la boulangerie",
+          "sv": "på bageriet"
+        },
+        {
+          "fr": "à la piscine",
+          "sv": "i simhallen"
+        },
+        {
+          "fr": "au cinéma",
+          "sv": "på bion"
+        },
+        {
+          "fr": "à la pharmacie",
+          "sv": "på apoteket"
+        },
+        {
+          "fr": "à l'école",
+          "sv": "i skolan"
+        },
+        {
+          "fr": "au musée",
+          "sv": "på museet"
+        },
+        {
+          "fr": "au supermarché",
+          "sv": "i mataffären"
+        }
+      ],
+      "items": [
+        {
+          "q": "Bonnet de bain obligatoire. Douche avant d'entrer dans l'eau.",
+          "sv": "Badmössa obligatorisk. Duscha innan du går i vattnet.",
+          "a": 2,
+          "why": "Badmössa och vatten: simhallen (C)."
+        },
+        {
+          "q": "Le train de 14 h 20 pour Marseille part du quai 4.",
+          "sv": "Tåget 14.20 till Marseille går från plattform 4.",
+          "a": 0,
+          "why": "Tåg och plattform: stationen (A)."
+        },
+        {
+          "q": "Film en version originale. Séance à 20 h 30.",
+          "sv": "Film med originalljud. Föreställning 20.30.",
+          "a": 3,
+          "why": "Film och föreställning: bion (D)."
+        },
+        {
+          "q": "Pain au chocolat : 1,20 €. Baguette : 1,30 €.",
+          "sv": "Chokladbröd 1,20 €. Baguette 1,30 €.",
+          "a": 1,
+          "why": "Bröd: bageriet (B)."
+        },
+        {
+          "q": "Entrée gratuite le premier dimanche du mois. Photos sans flash.",
+          "sv": "Gratis inträde första söndagen i månaden. Fotografera utan blixt.",
+          "a": 6,
+          "why": "Inträde och fotografering utan blixt: museet (G)."
+        }
+      ]
+    },
+    {
       "id": "fr2-ce-3",
       "part": "ce",
       "teil": "Exercice 3",

@@ -153,3 +153,27 @@ B2 (de, de6):
 B1 (de4):
 
 - Formatet stämde. Sprechen Teil 1 har nu fyra stödpunkter + ”…” som på provet, och kriterierna i Sprechen är provets (Teil 1 Interaktion, Teil 3 bara Erfüllung). Ordantalet visas som ”cirka”.
+
+## Uppgiftstyper i exam.json
+
+Varje uppgift i `tasks` har `id`, `part`, `teil`, `title`, `time` (minuter) och `instr`. Typen avgörs av fältet `type`, eller för de gamla uppgifterna av innehållet. Samma format står i SPEC-kommentaren överst i `src/kinds/70-exam.js`, och `build.py` (`check_exam_task`) stoppar bygget om en uppgift inte följer det.
+
+| Typ | Fält | Provuppgifter |
+|---|---|---|
+| flerval (utan `type`) | `lines`, `qs: [{q, opts, a, why}]` | nästan all läs- och hörförståelse |
+| skriva (utan `type`) | `task`, `minWords`, `model`, `criteria` | skrivdelarna |
+| tala (utan `type`) | `task`, `prep`, `phrases` | muntliga delar (ingår inte i simuleringen) |
+| `match`: para ihop | `items: [{q, sv, a, why}]`, `opts: [{fr, sv}]` (visas som A, B, C …), valfritt `none`, `reuse`, `lines` | DELF A1/A2 (annonser, skyltar), CELI 1 A.3, Goethe B1 Lesen Teil 3, B2 Lesen Teil 4 |
+| `gaps`: lucktext med flerval per lucka | `lines` med `{1}`, `{2}` … i `fr`, `gaps: [{opts, a, why}]`, eller `bank` (en ordlista för alla luckor) och `gaps: [{a, why}]` | telc Sprachbausteine Teil 1 (a–c per lucka) och Teil 2 (ordbank), CELI competenza linguistica |
+| `short`: kortsvar | `items: [{q, a: [godkända svar], why}]`, `maxWords` (standard 3), oftast `lines` + `plays` | TestDaF Hörverstehen, CELI, Goethe C1 Hören (anteckningar) |
+
+- **Para ihop.** `a` är index i `opts`, eller `-1` när inget alternativ passar och uppgiften har `none` (texten för valet "0", tom = "inget passar"; Goethe B1 Lesen Teil 3). Det ska finnas fler `opts` än `items`, så att några blir över. Utan `reuse: true` får varje alternativ vara facit högst en gång. Varje item väljs i en lista (`<select>`), så uppgiften går att göra med tangentbordet och får plats på 320 px.
+- **Lucktext.** Markörerna `{n}` ska komma i ordning och motsvara `gaps` (en per lucka). Luckorna visas som listor mitt i texten. Med `bank` får varje ord vara facit i högst en lucka.
+- **Kortsvar.** Rättningen struntar i versaler, accenter, ß/ss, skiljetecken och extra mellanslag, men stavningen i övrigt räknas. Skriv alla godkända varianter i `a`, även siffror och bokstäver (`"20 Minuten"`, `"zwanzig Minuten"`). Det första svaret visas som facit.
+- **Alla typer.** `lines` med `plays` (eller en hördel, `hoeren`/`co`) blir en höruppgift där texten visas först efter inlämningen. `sim: false` = extrauppgift utanför provets format (t.ex. telc-uppgifter i en Goethe-kurs): den finns i listan men tas inte med i provsimuleringen. Resultatet är andelen rätt av alla items, och sparas och räknas i simuleringen och nivåmätaren som flervalsuppgifterna.
+
+Exempel (oktober 2026): para ihop i `fr2` (`fr2-ce-5` annonser, `fr2-ce-6` skyltar) och `it4` (`it4-le-5` annonser, `it4-le-6` frågor och svar, teil A.3); lucktext i `it7` (`it7-ex-cl-4`, `-5`, competenza linguistica Prova 1) och `de7` (`de7-le-3` a–c per lucka, `de7-le-4` ordbank, telc Sprachbausteine, `sim: false`); kortsvar i `de7` (`de7-hoe-3`, `-4`, Hören Teil 3 som TestDaF Hörverstehen, hörs en respektive två gånger).
+
+### Pågående provsimulering
+
+Simuleringen sparas i `S.exam.simRun` efter varje steg, varje svar och en gång i minuten, så att den överlever en omladdning (hela provet tar upp till tre timmar). Startsidan och provträningen visar då "Fortsätt provsimuleringen" med uppgift och tid kvar. Klockan står still medan appen är stängd: när simuleringen återupptas fortsätter den med den tid som var kvar. En inlämnad uppgift räknas även om eleven laddar om innan hon eller han går vidare. `simRun` tas bort när simuleringen är klar eller avbruten.

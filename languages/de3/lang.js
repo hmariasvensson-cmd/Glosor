@@ -38,17 +38,7 @@ LANGUAGES.de3 = {
 
   // Samma verbtabeller som Tyska 5, men bara presens, perfekt och präteritum av sein, haben och modalverben
   verbs: {
-    tenses: {
-      $remove: ["Konjunktiv I", "Konjunktiv II"],
-      "Präteritum": {
-        $remove: ["werden", "fahren", "sprechen", "nehmen", "gehen", "denken", "arbeiten", "kommen", "finden", "bleiben",
-                  "schreiben", "sehen", "geben", "stehen", "wissen", "bringen"],
-        dürfen: ["durfte", "durftest", "durfte", "durften", "durftet", "durften"],
-        sollen: ["sollte", "solltest", "sollte", "sollten", "solltet", "sollten"],
-        mögen: ["mochte", "mochtest", "mochte", "mochten", "mochtet", "mochten"],
-        rule: "Sein, haben och modalverben används oftast i Präteritum, också i tal: ich war, ich hatte, ich musste, ich konnte, ich wollte. Modalverben tappar omljudet: können – konnte, müssen – musste, dürfen – durfte. Ich- och er/sie/es-formen är lika."
-      }
-    },
+    // Verbtabellerna (sv, tenses, notes) ligger i verbs.json, som build.py lägger i kursens datafil (ärvda tabeller slås ihop där).
     games: [
       {id: "pres", name: "Personböjning", sub: "Präsens: starka verb med vokalväxling och modalverb", tenses: ["Präsens"]},
       {id: "perf", name: "Perfekt", sub: "ich bin gefahren, ich habe geschrieben", tenses: ["Perfekt"]},

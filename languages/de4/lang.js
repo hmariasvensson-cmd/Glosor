@@ -38,7 +38,7 @@ LANGUAGES.de4 = {
 
   // Samma verbtabeller som Tyska 5, men utan Konjunktiv I och med egna verbspel
   verbs: {
-    tenses: {$remove: ["Konjunktiv I"]},
+    // Verbtabellerna (sv, tenses, notes) ligger i verbs.json, som build.py lägger i kursens datafil (ärvda tabeller slås ihop där).
     games: [
       {id: "pres", name: "Personböjning", sub: "Präsens: starka verb med vokalväxling och modalverb", tenses: ["Präsens"]},
       {id: "tempus", name: "Dåtid", sub: "Präteritum och Perfekt", tenses: ["Präteritum", "Perfekt"]},

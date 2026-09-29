@@ -3,12 +3,14 @@
     {"id": "k1", "name": "Indirekt tal (Konjunktiv I)", "sub": "Sie sagt, sie habe keine Zeit gehabt. Er fragt, ob …", "secs": ["s2", "s3"]},
     {"id": "k2verg", "name": "Konjunktiv II i dåtid", "sub": "hätte … gemacht, wäre … gegangen, hätte … machen müssen", "secs": ["s4", "s7"]},
     {"id": "passersatz", "name": "Passiversatz", "sub": "Das lässt sich lösen. Das ist machbar. Das ist zu klären.", "secs": ["s2", "s5"]},
+    {"id": "zustand", "name": "Tillståndspassiv", "sub": "Das Museum ist geschlossen. ist oder wird?", "secs": ["s2", "s5"]},
     {"id": "partattr", "name": "Utbyggda particip-attribut", "sub": "die von der Jury ausgewählten Stücke, die zu lösende Aufgabe", "secs": ["s2", "s4"]},
     {"id": "nominal", "name": "Nominalstil och verbalstil", "sub": "nachdem er angekommen war → nach seiner Ankunft", "secs": ["s1", "s5"]},
     {"id": "nvv", "name": "Nomen-Verb-Verbindungen", "sub": "eine Entscheidung treffen, in Frage kommen, zur Verfügung stehen", "secs": ["s1", "s5"]},
     {"id": "genprep", "name": "Prepositioner med genitiv", "sub": "aufgrund, infolge, hinsichtlich, innerhalb, trotz, wegen", "secs": ["s3", "s8"]},
     {"id": "partikel", "name": "Modalpartiklar", "sub": "doch, ja, eben, halt, wohl, mal, denn", "secs": ["s6", "sr"]},
     {"id": "modsubj", "name": "Modalverb som bedömning", "sub": "Er soll reich sein. Sie will es gewusst haben. Das dürfte stimmen.", "secs": ["s3", "s7"]},
+    {"id": "futur", "name": "Futur I och II", "sub": "Er wird krank sein. Sie wird es vergessen haben.", "secs": ["s2", "s3"]},
     {"id": "textbind", "name": "Konnektorer och textbindning", "sub": "während, wohingegen, folglich, sofern, indem, es sei denn", "secs": ["s7", "s8", "sr"]},
     {"id": "err", "name": "Hitta felet", "sub": "En mening har ett fel. Vilket ord?"}
   ],
@@ -53,6 +55,13 @@
     "tb-folge": "Följd: folglich, somit, sodass",
     "tb-konzess": "Medgivande: dennoch, obgleich, zwar",
     "tb-bedingung": "Villkor: sofern, falls, es sei denn",
-    "tb-mittel": "Sätt: indem, dadurch dass"
+    "tb-mittel": "Sätt: indem, dadurch dass",
+    "fu-1": "Futur I: förutsägelse och plan",
+    "fu-2": "Futur II: klart i framtiden",
+    "fu-verm": "Antagande om nuet: wird … sein",
+    "fu-verm2": "Antagande om det som hänt: wird … haben",
+    "zp-wahl": "Handling eller tillstånd: wird eller ist?",
+    "zp-sein": "sein + particip II",
+    "zp-zeit": "Tillstånd i dåtid: war + particip"
   }
 }

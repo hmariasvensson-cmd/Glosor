@@ -1,0 +1,651 @@
+{
+ "name": "CELI Impatto (A1)",
+ "level": "A1",
+ "pass": 50,
+ "note": "Övningar i samma format som CELI Impatto (A1, Università per Stranieri di Perugia), skrivna för appen. Inte officiellt material. På provet görs läsa och skriva under sammanlagt 1 h 15 min (här 35 + 15 + 25 minuter), och den muntliga delen tar 5–6 minuter inför en examinator. Man behöver ungefär hälften av poängen i den skriftliga och i den muntliga delen; resultatet är bara godkänt eller underkänt. På provet bygger läsuppgifterna på bilder och den muntliga delen börjar med att man visar att man förstår enkla frågor och uppmaningar; här beskrivs bilderna i ord.",
+ "parts": [
+  {
+   "id": "lettura",
+   "name": "Comprensione della lettura",
+   "sv": "Läsa",
+   "time": 35
+  },
+  {
+   "id": "completare",
+   "name": "Produzione scritta: completare un testo",
+   "sv": "Skriva: lucktext",
+   "time": 15
+  },
+  {
+   "id": "scrittura",
+   "name": "Produzione scritta: cartolina o messaggio",
+   "sv": "Skriva: vykort",
+   "time": 25
+  },
+  {
+   "id": "orale",
+   "name": "Produzione orale",
+   "sv": "Tala",
+   "time": 6
+  }
+ ],
+ "tasks": [
+  {
+   "id": "it2-le-1",
+   "part": "lettura",
+   "teil": "A.1",
+   "title": "Cartelli e avvisi",
+   "time": 10,
+   "instr": "Du läser fyra korta texter: skyltar och meddelanden. Välj rätt svar (a, b eller c) till varje text.",
+   "lines": [
+    {
+     "fr": "1. CHIUSO PER FERIE dal 5 al 25 agosto. Riapriamo lunedì 26.",
+     "sv": "1. STÄNGT FÖR SEMESTER 5–25 augusti. Vi öppnar igen måndag den 26:e."
+    },
+    {
+     "fr": "2. Biblioteca: vietato mangiare e bere nella sala di lettura.",
+     "sv": "2. Bibliotek: förbjudet att äta och dricka i läsesalen."
+    },
+    {
+     "fr": "3. Ciao Luca, sono in palestra. La cena è nel frigo: devi solo scaldarla! Mamma",
+     "sv": "3. Hej Luca, jag är på gymmet. Middagen står i kylen: du behöver bara värma den! Mamma"
+    },
+    {
+     "fr": "4. Treno per Firenze: partenza dal binario 7 alle 14.35.",
+     "sv": "4. Tåg till Florens: avgår från spår 7 klockan 14.35."
+    }
+   ],
+   "qs": [
+    {
+     "q": "Testo 1: il negozio…",
+     "opts": [
+      "è aperto ad agosto.",
+      "è chiuso per tre settimane.",
+      "chiude il 26 agosto."
+     ],
+     "a": 1,
+     "why": "« Chiuso per ferie dal 5 al 25 agosto »: ungefär tre veckor."
+    },
+    {
+     "q": "Testo 2: in biblioteca…",
+     "opts": [
+      "non puoi mangiare nella sala di lettura.",
+      "puoi comprare da bere.",
+      "c'è un bar."
+     ],
+     "a": 0,
+     "why": "« vietato mangiare e bere nella sala di lettura »."
+    },
+    {
+     "q": "Testo 3: dov'è la mamma?",
+     "opts": [
+      "A casa.",
+      "Al supermercato.",
+      "In palestra."
+     ],
+     "a": 2,
+     "why": "« sono in palestra »."
+    },
+    {
+     "q": "Testo 4: il treno per Firenze parte…",
+     "opts": [
+      "dal binario 14.",
+      "alle due e trentacinque del pomeriggio.",
+      "alle sette."
+     ],
+     "a": 1,
+     "why": "14.35 = två och trettiofem på eftermiddagen. Spåret är 7."
+    }
+   ]
+  },
+  {
+   "id": "it2-le-2",
+   "part": "lettura",
+   "teil": "A.2",
+   "title": "Un messaggio di Giulia",
+   "time": 15,
+   "instr": "Du läser ett meddelande. Är påståendena rätt (Vero) eller fel (Falso)? På provet hör varje påstående till en bild.",
+   "lines": [
+    {
+     "fr": "Ciao Emma! Come stai? Io sto benissimo. Sono a Roma con la mia classe per tre giorni.",
+     "sv": "Hej Emma! Hur mår du? Jag mår jättebra. Jag är i Rom med min klass i tre dagar."
+    },
+    {
+     "fr": "Dormiamo in un ostello vicino alla stazione. La mia camera è piccola, ma ha un balcone.",
+     "sv": "Vi sover på ett vandrarhem nära stationen. Mitt rum är litet, men det har en balkong."
+    },
+    {
+     "fr": "Oggi abbiamo visitato il Colosseo. Faceva molto caldo e ho bevuto tanta acqua!",
+     "sv": "I dag besökte vi Colosseum. Det var jättevarmt och jag drack massor av vatten!"
+    },
+    {
+     "fr": "Stasera mangiamo la pizza in una trattoria in Trastevere. Domani andiamo ai Musei Vaticani e poi torniamo a casa in treno.",
+     "sv": "I kväll äter vi pizza på en trattoria i Trastevere. I morgon går vi till Vatikanmuseerna och sedan åker vi hem med tåg."
+    },
+    {
+     "fr": "Ti porto un regalo! Un bacio, Giulia",
+     "sv": "Jag tar med en present till dig! Puss, Giulia"
+    }
+   ],
+   "qs": [
+    {
+     "q": "Giulia è a Roma con la sua famiglia.",
+     "opts": [
+      "Vero",
+      "Falso"
+     ],
+     "a": 1,
+     "why": "Hon är där « con la mia classe »."
+    },
+    {
+     "q": "Giulia resta a Roma tre giorni.",
+     "opts": [
+      "Vero",
+      "Falso"
+     ],
+     "a": 0,
+     "why": "« per tre giorni »."
+    },
+    {
+     "q": "L'ostello è vicino alla stazione.",
+     "opts": [
+      "Vero",
+      "Falso"
+     ],
+     "a": 0,
+     "why": "« un ostello vicino alla stazione »."
+    },
+    {
+     "q": "La camera di Giulia è grande.",
+     "opts": [
+      "Vero",
+      "Falso"
+     ],
+     "a": 1,
+     "why": "« La mia camera è piccola »."
+    },
+    {
+     "q": "Oggi faceva freddo.",
+     "opts": [
+      "Vero",
+      "Falso"
+     ],
+     "a": 1,
+     "why": "« Faceva molto caldo »."
+    },
+    {
+     "q": "Stasera la classe mangia la pizza.",
+     "opts": [
+      "Vero",
+      "Falso"
+     ],
+     "a": 0,
+     "why": "« Stasera mangiamo la pizza »."
+    },
+    {
+     "q": "Domani la classe torna a casa in aereo.",
+     "opts": [
+      "Vero",
+      "Falso"
+     ],
+     "a": 1,
+     "why": "De åker hem « in treno »."
+    },
+    {
+     "q": "Giulia porta un regalo a Emma.",
+     "opts": [
+      "Vero",
+      "Falso"
+     ],
+     "a": 0,
+     "why": "« Ti porto un regalo! »"
+    }
+   ]
+  },
+  {
+   "id": "it2-le-3",
+   "part": "lettura",
+   "teil": "A.2",
+   "title": "La giornata di Marco",
+   "time": 15,
+   "instr": "Du läser en text. Är påståendena rätt (Vero) eller fel (Falso)? På provet hör varje påstående till en bild.",
+   "lines": [
+    {
+     "fr": "Mi chiamo Marco e ho quindici anni. Abito a Torino con i miei genitori e mia sorella Anna.",
+     "sv": "Jag heter Marco och är femton år. Jag bor i Turin med mina föräldrar och min syster Anna."
+    },
+    {
+     "fr": "La mattina mi alzo alle sette e faccio colazione con latte e biscotti. Vado a scuola in bicicletta.",
+     "sv": "På morgonen går jag upp klockan sju och äter frukost med mjölk och kex. Jag cyklar till skolan."
+    },
+    {
+     "fr": "Il pomeriggio suono la chitarra e il martedì e il giovedì gioco a calcio.",
+     "sv": "På eftermiddagen spelar jag gitarr och på tisdagar och torsdagar spelar jag fotboll."
+    },
+    {
+     "fr": "La sera ceniamo tutti insieme alle otto. Dopo cena guardo un film o leggo un fumetto.",
+     "sv": "På kvällen äter vi middag alla tillsammans klockan åtta. Efter middagen tittar jag på en film eller läser en serietidning."
+    }
+   ],
+   "qs": [
+    {
+     "q": "Marco ha un fratello.",
+     "opts": [
+      "Vero",
+      "Falso"
+     ],
+     "a": 1,
+     "why": "Han har en syster: « mia sorella Anna »."
+    },
+    {
+     "q": "Marco si alza alle sette.",
+     "opts": [
+      "Vero",
+      "Falso"
+     ],
+     "a": 0,
+     "why": "« mi alzo alle sette »."
+    },
+    {
+     "q": "A colazione Marco beve il caffè.",
+     "opts": [
+      "Vero",
+      "Falso"
+     ],
+     "a": 1,
+     "why": "Han dricker « latte »."
+    },
+    {
+     "q": "Marco va a scuola in autobus.",
+     "opts": [
+      "Vero",
+      "Falso"
+     ],
+     "a": 1,
+     "why": "Han åker « in bicicletta »."
+    },
+    {
+     "q": "Marco suona la chitarra.",
+     "opts": [
+      "Vero",
+      "Falso"
+     ],
+     "a": 0,
+     "why": "« suono la chitarra »."
+    },
+    {
+     "q": "Marco gioca a calcio due volte alla settimana.",
+     "opts": [
+      "Vero",
+      "Falso"
+     ],
+     "a": 0,
+     "why": "« il martedì e il giovedì »."
+    },
+    {
+     "q": "La famiglia cena alle sette.",
+     "opts": [
+      "Vero",
+      "Falso"
+     ],
+     "a": 1,
+     "why": "« ceniamo tutti insieme alle otto »."
+    },
+    {
+     "q": "Dopo cena Marco a volte legge.",
+     "opts": [
+      "Vero",
+      "Falso"
+     ],
+     "a": 0,
+     "why": "« guardo un film o leggo un fumetto »."
+    }
+   ]
+  },
+  {
+   "id": "it2-sc-1",
+   "part": "completare",
+   "teil": "B.1",
+   "title": "Completa la cartolina",
+   "time": 15,
+   "instr": "Läs vykortet och välj det ord som passar i varje lucka (1–8).",
+   "lines": [
+    {
+     "fr": "Cara Sara,",
+     "sv": "Kära Sara,"
+    },
+    {
+     "fr": "sono a Venezia (1) ___ i miei genitori. La città è (2) ___ bella! Il nostro albergo è (3) ___ centro, vicino a Piazza San Marco.",
+     "sv": "jag är i Venedig med mina föräldrar. Staden är jättevacker! Vårt hotell ligger i centrum, nära Markusplatsen."
+    },
+    {
+     "fr": "Ogni giorno (4) ___ in giro in barca e mangiamo un gelato. Ieri (5) ___ visitato un museo di vetro a Murano.",
+     "sv": "Varje dag åker vi runt med båt och äter glass. I går besökte vi ett glasmuseum på Murano."
+    },
+    {
+     "fr": "Il tempo è bello e (6) ___ caldo. Torniamo a casa (7) ___ tre giorni. Ti (8) ___ tante foto!",
+     "sv": "Vädret är fint och det är varmt. Vi åker hem om tre dagar. Jag skickar massor av bilder till dig!"
+    },
+    {
+     "fr": "Un abbraccio, Elin",
+     "sv": "Kram, Elin"
+    }
+   ],
+   "qs": [
+    {
+     "q": "(1)",
+     "opts": [
+      "con",
+      "di",
+      "a"
+     ],
+     "a": 0,
+     "why": "Con i miei genitori = med mina föräldrar."
+    },
+    {
+     "q": "(2)",
+     "opts": [
+      "molta",
+      "molto",
+      "molti"
+     ],
+     "a": 1,
+     "why": "Framför ett adjektiv är molto ett adverb och böjs inte: molto bella."
+    },
+    {
+     "q": "(3)",
+     "opts": [
+      "al",
+      "in",
+      "nel"
+     ],
+     "a": 1,
+     "why": "In centro = i centrum, utan artikel."
+    },
+    {
+     "q": "(4)",
+     "opts": [
+      "andiamo",
+      "vanno",
+      "va"
+     ],
+     "a": 0,
+     "why": "Subjektet är vi (mangiamo): andiamo."
+    },
+    {
+     "q": "(5)",
+     "opts": [
+      "siamo",
+      "abbiamo",
+      "hanno"
+     ],
+     "a": 1,
+     "why": "Visitare tar avere, och det är vi: abbiamo visitato."
+    },
+    {
+     "q": "(6)",
+     "opts": [
+      "è",
+      "fa",
+      "ha"
+     ],
+     "a": 1,
+     "why": "Om vädret: fa caldo (det är varmt)."
+    },
+    {
+     "q": "(7)",
+     "opts": [
+      "tra",
+      "fa",
+      "da"
+     ],
+     "a": 0,
+     "why": "Tra tre giorni = om tre dagar (i framtiden). Tre giorni fa = för tre dagar sedan, da tre giorni = sedan tre dagar."
+    },
+    {
+     "q": "(8)",
+     "opts": [
+      "mando",
+      "mandi",
+      "manda"
+     ],
+     "a": 0,
+     "why": "Det är jag som skickar: io mando."
+    }
+   ]
+  },
+  {
+   "id": "it2-sc-2",
+   "part": "completare",
+   "teil": "B.1",
+   "title": "Completa il messaggio",
+   "time": 15,
+   "instr": "Läs meddelandet och välj det ord som passar i varje lucka (1–8).",
+   "lines": [
+    {
+     "fr": "Ciao Paolo!",
+     "sv": "Hej Paolo!"
+    },
+    {
+     "fr": "Domani è il mio compleanno e (1) ___ una festa a casa mia. Vuoi venire? La festa (2) ___ alle otto di sera.",
+     "sv": "I morgon fyller jag år och jag har en fest hemma hos mig. Vill du komma? Festen börjar klockan åtta på kvällen."
+    },
+    {
+     "fr": "Abito in via Garibaldi 12, (3) ___ terzo piano. Vengono anche Luca e (4) ___ sorella.",
+     "sv": "Jag bor på via Garibaldi 12, på tredje våningen. Luca och hans syster kommer också."
+    },
+    {
+     "fr": "Puoi portare (5) ___ bibite? Io preparo le pizze e mia madre fa (6) ___ torta al cioccolato.",
+     "sv": "Kan du ta med lite läsk? Jag gör pizzorna och min mamma gör en chokladtårta."
+    },
+    {
+     "fr": "La musica? (7) ___ penso io! (8) ___ domani!",
+     "sv": "Musiken? Den fixar jag! Vi ses i morgon!"
+    },
+    {
+     "fr": "Chiara",
+     "sv": "Chiara"
+    }
+   ],
+   "qs": [
+    {
+     "q": "(1)",
+     "opts": [
+      "faccio",
+      "fa",
+      "fai"
+     ],
+     "a": 0,
+     "why": "Det är jag som ordnar: io faccio una festa."
+    },
+    {
+     "q": "(2)",
+     "opts": [
+      "comincia",
+      "cominciano",
+      "comincio"
+     ],
+     "a": 0,
+     "why": "La festa är subjekt, tredje person singular: comincia."
+    },
+    {
+     "q": "(3)",
+     "opts": [
+      "in",
+      "al",
+      "a"
+     ],
+     "a": 1,
+     "why": "Al terzo piano = på tredje våningen (a + il)."
+    },
+    {
+     "q": "(4)",
+     "opts": [
+      "suo",
+      "sua",
+      "sue"
+     ],
+     "a": 1,
+     "why": "La sorella är femininum singular: sua sorella (utan artikel för familjemedlemmar i singular)."
+    },
+    {
+     "q": "(5)",
+     "opts": [
+      "qualche",
+      "delle",
+      "della"
+     ],
+     "a": 1,
+     "why": "Delle bibite = lite läsk (delningsartikel, femininum plural). Qualche kräver singular."
+    },
+    {
+     "q": "(6)",
+     "opts": [
+      "un",
+      "una",
+      "uno"
+     ],
+     "a": 1,
+     "why": "La torta är femininum: una torta."
+    },
+    {
+     "q": "(7)",
+     "opts": [
+      "Ci",
+      "Ne",
+      "Lo"
+     ],
+     "a": 0,
+     "why": "Pensare a qualcosa → ci: ci penso io = det fixar jag."
+    },
+    {
+     "q": "(8)",
+     "opts": [
+      "A",
+      "Da",
+      "Per"
+     ],
+     "a": 0,
+     "why": "A domani! = vi ses i morgon!"
+    }
+   ]
+  },
+  {
+   "id": "it2-sc-3",
+   "part": "scrittura",
+   "teil": "B.2",
+   "title": "Una cartolina dalle vacanze",
+   "time": 20,
+   "minWords": 15,
+   "criteria": [
+    "Adeguatezza al compito",
+    "Lessico",
+    "Grammatica e ortografia"
+   ],
+   "instr": "Skriv ett kort vykort till en kompis (tu). 15–20 ord.",
+   "task": "Sei in vacanza al mare in Italia. Scrivi una cartolina a un amico o a un'amica: dove sei, con chi, che tempo fa e che cosa fai. (15–20 parole)",
+   "model": "Ciao Marta! Sono a Rimini con la mia famiglia. Fa caldo e c'è il sole. Ogni giorno nuoto e mangio il gelato. Baci, Klara",
+   "modelSv": "Hej Marta! Jag är i Rimini med min familj. Det är varmt och soligt. Varje dag simmar jag och äter glass. Puss, Klara"
+  },
+  {
+   "id": "it2-sc-4",
+   "part": "scrittura",
+   "teil": "B.2",
+   "title": "Un messaggio a un amico",
+   "time": 20,
+   "minWords": 15,
+   "criteria": [
+    "Adeguatezza al compito",
+    "Lessico",
+    "Grammatica e ortografia"
+   ],
+   "instr": "Skriv ett kort meddelande till en kompis (tu). 15–20 ord.",
+   "task": "Sabato vuoi andare al cinema. Scrivi un messaggio a un amico: invitalo, di' quale film volete vedere, a che ora e dove vi incontrate. (15–20 parole)",
+   "model": "Ciao Luca! Vieni al cinema sabato? C'è un film comico alle otto. Ci vediamo davanti al cinema alle sette e mezza. Oskar",
+   "modelSv": "Hej Luca! Följer du med på bio på lördag? Det går en komedi klockan åtta. Vi ses utanför bion halv åtta. Oskar"
+  },
+  {
+   "id": "it2-or-1",
+   "part": "orale",
+   "teil": "Parte 1",
+   "title": "Presentarsi",
+   "prep": 0,
+   "time": 2,
+   "criteria": [
+    "Adeguatezza al compito",
+    "Interazione",
+    "Lessico",
+    "Grammatica",
+    "Pronuncia"
+   ],
+   "instr": "Presentera dig för examinatorn och svara på enkla frågor. På provet börjar samtalet utan förberedelse. Tala i ungefär två minuter.",
+   "task": "L'esaminatore ti fa alcune domande, per esempio:\n– Come ti chiami? Quanti anni hai?\n– Di dove sei? Dove abiti?\n– Com'è la tua famiglia?\n– Che cosa fai nel tempo libero?\n– Perché studi l'italiano?",
+   "phrases": [
+    "Mi chiamo … e ho … anni.",
+    "Sono svedese, abito a …",
+    "Nella mia famiglia siamo in …",
+    "Ho un fratello / una sorella.",
+    "Nel tempo libero mi piace …",
+    "Studio l'italiano perché …",
+    "Può ripetere, per favore?"
+   ],
+   "model": "Mi chiamo Elin e ho sedici anni. Sono svedese e abito a Uppsala, vicino a Stoccolma. Nella mia famiglia siamo in quattro: mia madre, mio padre, mio fratello e io. Nel tempo libero suono il violino e vado in piscina. Studio l'italiano perché mi piace l'Italia e l'anno prossimo vorrei andare a Firenze.",
+   "modelSv": "Jag heter Elin och är sexton år. Jag är svensk och bor i Uppsala, nära Stockholm. Vi är fyra i min familj: min mamma, min pappa, min bror och jag. På fritiden spelar jag fiol och går och simmar. Jag läser italienska eftersom jag gillar Italien och nästa år skulle jag vilja åka till Florens."
+  },
+  {
+   "id": "it2-or-2",
+   "part": "orale",
+   "teil": "Parte 2",
+   "title": "Descrivere una foto: al mercato",
+   "prep": 2,
+   "time": 2,
+   "criteria": [
+    "Adeguatezza al compito",
+    "Interazione",
+    "Lessico",
+    "Grammatica",
+    "Pronuncia"
+   ],
+   "instr": "På provet får du ett foto och berättar vad du ser, och svarar sedan på några enkla frågor. Här beskrivs fotot i ord. Tala i ungefär två minuter.",
+   "task": "Nella foto c'è un mercato all'aperto in una piazza. C'è il sole. Una signora anziana compra frutta: mele, arance e fragole. Un ragazzo con un cappello vende la verdura. A destra c'è un bambino con un gelato e un cane. Descrivi la foto: chi c'è, che cosa fanno, com'è il tempo. Poi rispondi: ti piace andare al mercato? Che cosa compri di solito?",
+   "phrases": [
+    "Nella foto c'è / ci sono …",
+    "A destra / a sinistra …",
+    "Una signora compra …",
+    "Il ragazzo porta …",
+    "Fa bel tempo, c'è il sole.",
+    "Mi piace / non mi piace …"
+   ],
+   "model": "Nella foto c'è un mercato in una piazza. Fa bel tempo e c'è il sole. Una signora anziana compra la frutta: ci sono mele, arance e fragole. Un ragazzo con un cappello vende la verdura. A destra c'è un bambino con un gelato e un cane piccolo. Sì, mi piace andare al mercato con mia madre. Di solito compriamo frutta e formaggio.",
+   "modelSv": "På bilden finns en marknad på ett torg. Det är fint väder och solen skiner. En äldre dam köper frukt: det finns äpplen, apelsiner och jordgubbar. En kille med hatt säljer grönsaker. Till höger finns ett barn med en glass och en liten hund. Ja, jag tycker om att gå på marknaden med min mamma. Vi brukar köpa frukt och ost."
+  },
+  {
+   "id": "it2-or-3",
+   "part": "orale",
+   "teil": "Parte 2",
+   "title": "Descrivere una foto: in famiglia",
+   "prep": 2,
+   "time": 2,
+   "criteria": [
+    "Adeguatezza al compito",
+    "Interazione",
+    "Lessico",
+    "Grammatica",
+    "Pronuncia"
+   ],
+   "instr": "På provet får du ett foto och berättar vad du ser, och svarar sedan på några enkla frågor. Här beskrivs fotot i ord. Tala i ungefär två minuter.",
+   "task": "Nella foto c'è una famiglia in cucina. Il padre cucina la pasta. La madre apre una bottiglia d'acqua. Due bambini apparecchiano la tavola e un gatto dorme sulla sedia. Fuori piove. Descrivi la foto. Poi rispondi: chi cucina a casa tua? Qual è il tuo piatto preferito?",
+   "phrases": [
+    "Nella foto vedo …",
+    "Il padre cucina …",
+    "I bambini apparecchiano …",
+    "Sulla sedia c'è …",
+    "Fuori piove.",
+    "A casa mia cucina …",
+    "Il mio piatto preferito è …"
+   ],
+   "model": "Nella foto vedo una famiglia in cucina. Il padre cucina la pasta e la madre apre una bottiglia d'acqua. Due bambini apparecchiano la tavola. Sulla sedia c'è un gatto che dorme. Fuori piove. A casa mia cucina di solito mia madre, ma il sabato cucino io. Il mio piatto preferito sono gli spaghetti al pomodoro.",
+   "modelSv": "På bilden ser jag en familj i ett kök. Pappan lagar pasta och mamman öppnar en flaska vatten. Två barn dukar bordet. På stolen ligger en katt och sover. Ute regnar det. Hemma hos mig brukar min mamma laga mat, men på lördagar lagar jag. Min favoriträtt är spaghetti med tomatsås."
+  }
+ ]
+}

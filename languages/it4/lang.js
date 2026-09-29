@@ -34,69 +34,13 @@ LANGUAGES.it4 = {
 
   // Verbtabellerna ärvs från Italienska 2; här läggs trapassato prossimo, futuro anteriore och congiuntivo presente till.
   verbs: {
+    // Verbtabellerna (sv, tenses, notes) ligger i verbs.json, som build.py lägger i kursens datafil (ärvda tabeller slås ihop där).
     games: [
       {id: "cong", name: "Congiuntivo presente", sub: "che io sia, abbia, faccia, vada, possa", tenses: ["congiuntivo presente"]},
       {id: "trap", name: "Trapassato prossimo", sub: "avevo mangiato, ero partito/partita", tenses: ["trapassato prossimo"]},
       {id: "futant", name: "Futuro anteriore", sub: "avrò finito, sarò arrivato/arrivata", tenses: ["futuro anteriore"]},
       {id: "cond", name: "Condizionale", sub: "vorrei, potrei, dovrei, sarei", tenses: ["condizionale"]},
       {id: "mix", name: "Alla tempus blandat", sub: "passato prossimo, imperfetto, futuro, trapassato", tenses: ["passato prossimo", "imperfetto", "futuro semplice", "trapassato prossimo"]}
-    ],
-    tenses: {
-      "congiuntivo presente": {
-        essere: ["sia", "sia", "sia", "siamo", "siate", "siano"],
-        avere: ["abbia", "abbia", "abbia", "abbiamo", "abbiate", "abbiano"],
-        fare: ["faccia", "faccia", "faccia", "facciamo", "facciate", "facciano"],
-        andare: ["vada", "vada", "vada", "andiamo", "andiate", "vadano"],
-        venire: ["venga", "venga", "venga", "veniamo", "veniate", "vengano"],
-        stare: ["stia", "stia", "stia", "stiamo", "stiate", "stiano"],
-        dire: ["dica", "dica", "dica", "diciamo", "diciate", "dicano"],
-        sapere: ["sappia", "sappia", "sappia", "sappiamo", "sappiate", "sappiano"],
-        volere: ["voglia", "voglia", "voglia", "vogliamo", "vogliate", "vogliano"],
-        potere: ["possa", "possa", "possa", "possiamo", "possiate", "possano"],
-        dovere: ["debba", "debba", "debba", "dobbiamo", "dobbiate", "debbano"],
-        parlare: ["parli", "parli", "parli", "parliamo", "parliate", "parlino"],
-        prendere: ["prenda", "prenda", "prenda", "prendiamo", "prendiate", "prendano"],
-        partire: ["parta", "parta", "parta", "partiamo", "partiate", "partano"],
-        finire: ["finisca", "finisca", "finisca", "finiamo", "finiate", "finiscano"],
-        capire: ["capisca", "capisca", "capisca", "capiamo", "capiate", "capiscano"],
-        rule: "Används efter uttryck för åsikt, vilja och nödvändighet: penso che, credo che, voglio che, bisogna che. -are får -i (parli), -ere och -ire får -a (prenda, parta). Io, tu och lui/lei har samma form, så man skriver ofta ut pronomenet: che tu sia. Noi-formen är som i presens; voi får -iate."
-      },
-      "trapassato prossimo": {
-        parlare: ["avevo parlato", "avevi parlato", "aveva parlato", "avevamo parlato", "avevate parlato", "avevano parlato"],
-        mangiare: ["avevo mangiato", "avevi mangiato", "aveva mangiato", "avevamo mangiato", "avevate mangiato", "avevano mangiato"],
-        finire: ["avevo finito", "avevi finito", "aveva finito", "avevamo finito", "avevate finito", "avevano finito"],
-        fare: ["avevo fatto", "avevi fatto", "aveva fatto", "avevamo fatto", "avevate fatto", "avevano fatto"],
-        dire: ["avevo detto", "avevi detto", "aveva detto", "avevamo detto", "avevate detto", "avevano detto"],
-        vedere: ["avevo visto", "avevi visto", "aveva visto", "avevamo visto", "avevate visto", "avevano visto"],
-        leggere: ["avevo letto", "avevi letto", "aveva letto", "avevamo letto", "avevate letto", "avevano letto"],
-        prendere: ["avevo preso", "avevi preso", "aveva preso", "avevamo preso", "avevate preso", "avevano preso"],
-        essere: ["ero stato/ero stata", "eri stato/eri stata", "era stato/era stata", "eravamo stati/eravamo state", "eravate stati/eravate state", "erano stati/erano state"],
-        andare: ["ero andato/ero andata", "eri andato/eri andata", "era andato/era andata", "eravamo andati/eravamo andate", "eravate andati/eravate andate", "erano andati/erano andate"],
-        partire: ["ero partito/ero partita", "eri partito/eri partita", "era partito/era partita", "eravamo partiti/eravamo partite", "eravate partiti/eravate partite", "erano partiti/erano partite"],
-        uscire: ["ero uscito/ero uscita", "eri uscito/eri uscita", "era uscito/era uscita", "eravamo usciti/eravamo uscite", "eravate usciti/eravate uscite", "erano usciti/erano uscite"],
-        rule: "Imperfetto av avere eller essere + particip: avevo mangiato, ero partito/partita. Används för något som hade hänt före en annan händelse i dåtid: Quando sono arrivato, il film era già cominciato. Samma val av hjälpverb och samma kongruens som i passato prossimo."
-      },
-      "futuro anteriore": {
-        finire: ["avrò finito", "avrai finito", "avrà finito", "avremo finito", "avrete finito", "avranno finito"],
-        fare: ["avrò fatto", "avrai fatto", "avrà fatto", "avremo fatto", "avrete fatto", "avranno fatto"],
-        mangiare: ["avrò mangiato", "avrai mangiato", "avrà mangiato", "avremo mangiato", "avrete mangiato", "avranno mangiato"],
-        leggere: ["avrò letto", "avrai letto", "avrà letto", "avremo letto", "avrete letto", "avranno letto"],
-        prendere: ["avrò preso", "avrai preso", "avrà preso", "avremo preso", "avrete preso", "avranno preso"],
-        arrivare: ["sarò arrivato/sarò arrivata", "sarai arrivato/sarai arrivata", "sarà arrivato/sarà arrivata", "saremo arrivati/saremo arrivate", "sarete arrivati/sarete arrivate", "saranno arrivati/saranno arrivate"],
-        partire: ["sarò partito/sarò partita", "sarai partito/sarai partita", "sarà partito/sarà partita", "saremo partiti/saremo partite", "sarete partiti/sarete partite", "saranno partiti/saranno partite"],
-        tornare: ["sarò tornato/sarò tornata", "sarai tornato/sarai tornata", "sarà tornato/sarà tornata", "saremo tornati/saremo tornate", "sarete tornati/sarete tornate", "saranno tornati/saranno tornate"],
-        rule: "Futuro av avere eller essere + particip: avrò finito, sarò arrivato/arrivata. Används för något som ska vara klart före en annan händelse i framtiden (Quando avrò finito la scuola, viaggerò) och för gissningar om det förflutna (Sarà già partito)."
-      }
-    },
-    notes: {
-      "congiuntivo presente|essere": "Helt oregelbundet: sia, siamo, siate, siano.",
-      "congiuntivo presente|avere": "Oregelbundet: abbia, abbiamo, abbiate, abbiano.",
-      "congiuntivo presente|andare": "Stammen från io vado: vada. Noi och voi: andiamo, andiate.",
-      "congiuntivo presente|venire": "Stammen från io vengo: venga, vengano.",
-      "congiuntivo presente|fare": "Stammen från io faccio: faccia.",
-      "congiuntivo presente|dovere": "Debba (även deva förekommer, men debba är vanligast).",
-      "trapassato prossimo|essere": "Essere tar essere som hjälpverb: ero stato/stata.",
-      "futuro anteriore|arrivare": "Rörelseverb tar essere, och participet böjs: sarà arrivata."
-    }
+    ]
   }
 };

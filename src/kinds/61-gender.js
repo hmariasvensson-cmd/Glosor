@@ -60,7 +60,7 @@ const pluMC=c=>{const n=gnById(c.ref), b=n.noun, uml=b.replace(/([aou])([^aou]*)
 const pluType=c=>{const n=gnById(c.ref);
   return{tab:"Plural",head:pluralHead(n),ask:"Skriv pluralen.",placeholder:"die …",accents:L.accents,
     check:v=>{const x=gnorm(v).replace(/^die /,""); return {r:!x?"empty":x===n.pl.toLowerCase()?"right":"wrong"};},
-    answer:"die "+esc(n.pl),explain:`<p class="ex-t" ${lang()}>${esc(n.w.t)}</p>`,say:"die "+n.pl}};
+    answer:"die "+n.pl,explain:`<p class="ex-t" ${lang()}>${esc(n.w.t)}</p>`,say:"die "+n.pl}};
 const gaAdd=(ref,k,ok)=>{S.ga=S.ga||{}; const x=S.ga[ref]||{g:0,p:0}; x[k]=ok?x[k]+1:0; x.last=Date.now(); S.ga[ref]=x;};
 const genRecap=ref=>{const n=gnById(ref); return n?n.w.t:"";};
 defineKind("gen",{name:"der, die, das",mc:genMC,restore:ref=>gnById(ref)?{}:null,effect:(ref,ok)=>gaAdd(ref,"g",ok),recap:genRecap,

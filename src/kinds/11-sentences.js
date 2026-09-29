@@ -29,7 +29,7 @@ defineKind("cloze",{name:"Meningar",
     ask:`${clozeHint(w)}. Skriv ordet som saknas.`, placeholder:"Skriv det som saknas", accents:L.accents,
     // Står artikeln redan före luckan (Die [Beziehung]) räknas svaret också rätt om eleven skriver den igen (die Beziehung)
     check:v=>({r:check(L.hintStrip&&!L.hintStrip.test(w.gap.ans)?v.trim().replace(new RegExp(L.hintStrip.source,"i"),""):v,[norm(w.gap.ans)])}),
-    answer:esc(w.gap.ans), explain:"", wrongCard:studyCard(w), say:w.exT, override:true, onAnswer:fillGap(w)}},
+    answer:w.gap.ans, explain:"", wrongCard:studyCard(w), say:w.exT, override:true, onAnswer:fillGap(w)}},
   restore:ref=>byId[ref]&&byId[ref].gap?{w:byId[ref]}:null,
   effect:(ref,ok)=>{const x=S.w[ref]; if(!x) return; x.clR=(x.clR||0)+(ok?1:0); x.clW=(x.clW||0)+(ok?0:1);},
   recap:ref=>byId[ref]?byId[ref].exT:"",
@@ -48,7 +48,7 @@ function startDict(){
 const dictType=c=>{const w=c.w;return{tab:"Diktamen",
   head:`<p class="q-prompt" style="font-size:1.3rem">Lyssna och skriv</p>${playBar()}`,
   ask:"Skriv hela meningen du hör. Du kan lyssna så många gånger du vill.",placeholder:"Skriv meningen här",accents:L.accents,
-  check:v=>compareTokens(v,w.exT),answer:esc(w.exT),explain:`<p class="ex-sv">${esc(w.exSv)}</p>${tatoebaNote(w)}`,wrongCard:studyCard(w)+tatoebaNote(w),
+  check:v=>compareTokens(v,w.exT),answer:w.exT,explain:`<p class="ex-sv">${esc(w.exSv)}</p>${tatoebaNote(w)}`,wrongCard:studyCard(w)+tatoebaNote(w),
   say:w.exT,wire:()=>wirePlay(r=>speak(w.exT,r)),autoplay:true}};
 // Andra meningar ur samma avsnitt som felalternativ, utan dubbletter (två ord kan ha samma exempelmening)
 const sameText=(a,b)=>tok(a).join(" ")===tok(b).join(" ");
@@ -78,7 +78,7 @@ function startTrans(){
 const transType=c=>{const w=c.w;return{tab:"Översätt",
   head:`<p class="q-prompt" style="font-size:1.35rem">${esc(w.exSv)}</p>`,
   ask:`Skriv meningen ${L.inLang}. Den innehåller <b ${lang()}>${esc(w.t)}</b>.`,placeholder:"Skriv meningen här",accents:L.accents,
-  check:v=>compareTokens(v,w.exT),selfGrade:true,answer:esc(w.exT),explain:tatoebaNote(w),wrongCard:studyCard(w)+tatoebaNote(w),say:w.exT}};
+  check:v=>compareTokens(v,w.exT),selfGrade:true,answer:w.exT,explain:tatoebaNote(w),wrongCard:studyCard(w)+tatoebaNote(w),say:w.exT}};
 const transMC=c=>{const w=c.w, others=otherSentences(w,3);
   return{tab:"Översätt",head:`<p class="q-prompt" style="font-size:1.35rem">${esc(w.exSv)}</p>`,ask:"Vilken är rätt översättning?",
     opts:shuffle([w,...others].map(x=>({label:x.exT,ok:x===w,lang:true}))),explain:"",wrongCard:studyCard(w),say:w.exT,sayOnAnswer:true}};
@@ -95,13 +95,13 @@ function startOrder(){
   const p=shuffle(sentencePool()).filter(orderable).slice(0,8);
   $("#tabs").hidden=true; sess=null; beginQuiz("order",p.map(orderItem),{againFn:["order"],label:"Ordföljd"});
 }
-const orderType=c=>{const w=c.w;return{tab:"Ordföljd",render:renderTiles,o:orderTokens(w.exT),w,answer:esc(w.exT),
+const orderType=c=>{const w=c.w;return{tab:"Ordföljd",render:renderTiles,o:orderTokens(w.exT),w,answer:w.exT,
   explain:`<p class="ex-sv">${esc(w.exSv)}</p>${tatoebaNote(w)}`,wrongCard:studyCard(w)+tatoebaNote(w),say:w.exT}};
 function renderTiles(d){
   const words=d.o.words; let order=shuffle(words.map((x,i)=>i));
   if(order.every((v,i)=>words[v]===words[i])) order=order.reverse();
   const built=[];
-  app.innerHTML=`<section class="panel"><span class="tab">${d.tab||"Ordföljd"}</span>${progressHead()}
+  app.innerHTML=`<section class="panel"><span class="tab">${esc(d.tab||"Ordföljd")}</span>${progressHead()}
     ${d.prompt||`<p class="q-prompt" style="font-size:1.25rem">${esc(d.w.exSv)}</p>`}
     <p class="q-ask">${d.ask||""} Tryck på orden i rätt ordning. Tryck på ett ord i meningen för att ta bort det.</p>
     <div class="built" id="built" ${lang()}></div><div class="tiles" id="tiles" ${lang()}></div>

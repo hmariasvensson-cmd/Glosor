@@ -1,12 +1,16 @@
 {
  "name": "DELF B1",
  "pass": 50,
- "note": "Övningar i provets stil, skrivna för appen. Inte officiellt material. För att klara DELF B1 krävs 50 av 100 poäng och minst 5 av 25 i varje del.",
+ "note": "Övningar i provets stil, skrivna för appen. Inte officiellt material. För att klara DELF B1 krävs 50 av 100 poäng och minst 5 av 25 i varje del. Delarna märkta DELF A2 är ett mellansteg i A2-provets format (fyra hör- och läsövningar, två korta texter på minst 60 ord, tre muntliga delar), för att öva provformen på kursens nivå innan B1.",
  "parts": [
   {"id":"co","name":"Compréhension de l'oral","sv":"Hörförståelse","time":25},
   {"id":"ce","name":"Compréhension des écrits","sv":"Läsförståelse","time":45},
   {"id":"pe","name":"Production écrite","sv":"Skriva","time":45},
-  {"id":"po","name":"Production orale","sv":"Tala","time":15}
+  {"id":"po","name":"Production orale","sv":"Tala","time":15},
+  {"id":"co-a2","name":"DELF A2 · Compréhension de l'oral","sv":"Hörförståelse A2","time":25,"level":"A2"},
+  {"id":"ce-a2","name":"DELF A2 · Compréhension des écrits","sv":"Läsförståelse A2","time":30,"level":"A2"},
+  {"id":"pe-a2","name":"DELF A2 · Production écrite","sv":"Skriva A2","time":45,"level":"A2"},
+  {"id":"po-a2","name":"DELF A2 · Production orale","sv":"Tala A2","time":8,"level":"A2"}
  ],
  "tasks": [
   {"id":"fr-co-1","part":"co","teil":"Exercice 1","title":"Une soirée au concert","time":8,"plays":2,
@@ -510,6 +514,171 @@
    "task":"Dégagez le thème soulevé par le document ci-dessous et présentez votre opinion sous la forme d'un petit exposé de 3 minutes environ. L'examinateur pourra vous poser quelques questions.\n\nL'année de césure séduit les jeunes\nDe plus en plus de jeunes Français décident de faire une pause d'un an entre le lycée et les études supérieures. Certains partent travailler à l'étranger, d'autres font du bénévolat ou un stage. Pour eux, c'est l'occasion de mieux se connaître et de choisir leur orientation avec plus de maturité. Mais beaucoup de parents s'inquiètent : ils ont peur que leurs enfants perdent le rythme des études et aient du mal à reprendre ensuite.",
    "phrases":["Ce texte présente …","Il s'agit de savoir si …","Les partisans de … pensent que …","En revanche, …","À mon avis, …","Je connais quelqu'un qui …","Cela dépend de …","En conclusion, …"],
    "model":"Ce texte présente un phénomène de plus en plus fréquent : l'année de césure. Il s'agit de faire une pause d'un an entre le lycée et les études supérieures, par exemple pour travailler, voyager ou faire du bénévolat. Le document montre les avantages pour les jeunes, mais aussi les inquiétudes des parents.\n\nÀ mon avis, une année de césure peut être une très bonne expérience, à condition d'avoir un projet. D'abord, à dix-huit ans, beaucoup de jeunes ne savent pas encore ce qu'ils veulent faire. Une année pour travailler ou voyager permet de découvrir ses intérêts et d'éviter de choisir des études au hasard. Ensuite, on devient plus autonome. Ma cousine, par exemple, a travaillé six mois dans un hôtel en Irlande. Elle a appris l'anglais et, quand elle est rentrée, elle savait exactement quelles études elle voulait faire.\n\nEn revanche, je comprends aussi les parents. Si on passe l'année à ne rien faire, on perd l'habitude de travailler. Pour un musicien comme moi, c'est encore plus vrai : si j'arrête de m'entraîner pendant un an, je perdrai mon niveau. Dans mon cas, je pourrais imaginer une année en France pour améliorer mon français, mais en continuant à jouer tous les jours.\n\nEn conclusion, je pense que l'année de césure est une bonne idée si elle est bien préparée et si elle a un objectif clair.",
-   "modelSv":"Texten presenterar ett allt vanligare fenomen: sabbatsåret. Det handlar om att ta ett års paus mellan gymnasiet och högre studier, till exempel för att jobba, resa eller göra volontärarbete. Texten visar fördelarna för unga, men också föräldrarnas oro.\n\nEnligt mig kan ett sabbatsår vara en mycket bra erfarenhet, förutsatt att man har en plan. För det första vet många artonåringar ännu inte vad de vill göra. Ett år med jobb eller resor gör att man kan upptäcka sina intressen och slipper välja utbildning på måfå. För det andra blir man mer självständig. Min kusin till exempel jobbade sex månader på ett hotell i Irland. Hon lärde sig engelska och när hon kom hem visste hon precis vad hon ville studera.\n\nÅ andra sidan förstår jag också föräldrarna. Om man tillbringar året med att inte göra någonting tappar man vanan att arbeta. För en musiker som jag gäller det ännu mer: om jag slutar öva i ett år tappar jag min nivå. I mitt fall skulle jag kunna tänka mig ett år i Frankrike för att förbättra min franska, men då fortsätter jag att spela varje dag.\n\nSammanfattningsvis tycker jag att ett sabbatsår är en bra idé om det är väl förberett och har ett tydligt mål."}
+   "modelSv":"Texten presenterar ett allt vanligare fenomen: sabbatsåret. Det handlar om att ta ett års paus mellan gymnasiet och högre studier, till exempel för att jobba, resa eller göra volontärarbete. Texten visar fördelarna för unga, men också föräldrarnas oro.\n\nEnligt mig kan ett sabbatsår vara en mycket bra erfarenhet, förutsatt att man har en plan. För det första vet många artonåringar ännu inte vad de vill göra. Ett år med jobb eller resor gör att man kan upptäcka sina intressen och slipper välja utbildning på måfå. För det andra blir man mer självständig. Min kusin till exempel jobbade sex månader på ett hotell i Irland. Hon lärde sig engelska och när hon kom hem visste hon precis vad hon ville studera.\n\nÅ andra sidan förstår jag också föräldrarna. Om man tillbringar året med att inte göra någonting tappar man vanan att arbeta. För en musiker som jag gäller det ännu mer: om jag slutar öva i ett år tappar jag min nivå. I mitt fall skulle jag kunna tänka mig ett år i Frankrike för att förbättra min franska, men då fortsätter jag att spela varje dag.\n\nSammanfattningsvis tycker jag att ett sabbatsår är en bra idé om det är väl förberett och har ett tydligt mål."},
+
+  {"id":"fr-a2-co-1","part":"co-a2","teil":"Exercice 1","level":"A2","title":"Messages sur le répondeur : la semaine de musique","time":6,"plays":2,
+   "instr":"Du hör tre korta meddelanden på en telefonsvarare. Läs frågorna först. Du hör varje meddelande två gånger. Välj rätt svar.",
+   "lines":[
+    {"fr":"Message 1. — Bonjour, c'est Madame Leroy, ta professeure de piano. Je suis malade cette semaine, donc le cours de mercredi est annulé. On se voit lundi prochain, à la même heure, dix-sept heures.","sv":"Meddelande 1. – Hej, det är Madame Leroy, din pianolärare. Jag är sjuk den här veckan, så lektionen på onsdag är inställd. Vi ses nästa måndag, samma tid, klockan sjutton."},
+    {"fr":"Message 2. — Salut, c'est Lucas ! Pour la répétition de l'orchestre samedi, n'oublie pas ta partition et un pupitre. On commence à dix heures, dans la salle 12, au deuxième étage.","sv":"Meddelande 2. – Hej, det är Lucas! Till orkesterrepetitionen på lördag, glöm inte dina noter och ett notställ. Vi börjar klockan tio, i sal 12, på andra våningen."},
+    {"fr":"Message 3. — Bonjour, ici le magasin Musique Plus. Votre violon est réparé. Vous pouvez venir le chercher à partir de jeudi. Le prix de la réparation est de quarante-cinq euros.","sv":"Meddelande 3. – Hej, det här är affären Musique Plus. Er fiol är lagad. Ni kan hämta den från och med torsdag. Reparationen kostar fyrtiofem euro."}
+   ],
+   "qs":[
+    {"q":"Message 1 : pourquoi le cours de mercredi est-il annulé ?","opts":["La salle est fermée.","La professeure est malade.","L'élève part en vacances."],"a":1,"why":"« Je suis malade cette semaine, donc le cours de mercredi est annulé »."},
+    {"q":"Message 1 : quand est le prochain cours ?","opts":["Lundi prochain à 17 heures.","Mercredi à 10 heures.","Jeudi à 17 heures."],"a":0,"why":"« On se voit lundi prochain, à la même heure, dix-sept heures »."},
+    {"q":"Message 2 : qu'est-ce qu'il faut apporter ?","opts":["Une chaise et un sandwich.","Un instrument neuf.","Une partition et un pupitre."],"a":2,"why":"« n'oublie pas ta partition et un pupitre »."},
+    {"q":"Message 2 : où a lieu la répétition ?","opts":["Dans la salle 12.","Au rez-de-chaussée.","Dans le magasin de musique."],"a":0,"why":"« dans la salle 12, au deuxième étage »."},
+    {"q":"Message 3 : combien coûte la réparation ?","opts":["15 euros.","45 euros.","55 euros."],"a":1,"why":"« quarante-cinq euros »."}
+   ]},
+
+  {"id":"fr-a2-co-2","part":"co-a2","teil":"Exercice 2","level":"A2","title":"Annonce à la radio : la Fête de la musique","time":6,"plays":2,
+   "instr":"Du hör ett kort radioinslag. Läs frågorna först. Du hör inslaget två gånger. Välj rätt svar.",
+   "lines":[
+    {"fr":"Le 21 juin, c'est la Fête de la musique ! Cette année, notre ville organise des concerts gratuits dans les rues et dans les parcs, de dix-huit heures à minuit.","sv":"Den 21 juni är det Fête de la musique! I år ordnar vår stad gratiskonserter på gatorna och i parkerna, från arton till midnatt."},
+    {"fr":"Tous les musiciens peuvent jouer : amateurs ou professionnels, jeunes ou moins jeunes. Pour avoir une place sur la grande scène de la place du marché, il faut s'inscrire à la mairie avant le 10 juin.","sv":"Alla musiker får spela: amatörer eller proffs, unga eller mindre unga. För att få en plats på den stora scenen på torget måste man anmäla sig på rådhuset före den 10 juni."},
+    {"fr":"Attention : ce soir-là, le centre-ville est fermé aux voitures. Prenez le tram, il circule toute la nuit !","sv":"Observera: den kvällen är centrum stängt för bilar. Ta spårvagnen, den går hela natten!"}
+   ],
+   "qs":[
+    {"q":"Combien coûtent les concerts ?","opts":["Ils sont gratuits.","Dix euros.","Le prix dépend de la scène."],"a":0,"why":"« des concerts gratuits »."},
+    {"q":"À quelle heure finissent les concerts ?","opts":["À dix-huit heures.","À vingt-deux heures.","À minuit."],"a":2,"why":"« de dix-huit heures à minuit »."},
+    {"q":"Qui peut jouer ?","opts":["Seulement les professionnels.","Tous les musiciens.","Seulement les jeunes."],"a":1,"why":"« Tous les musiciens peuvent jouer : amateurs ou professionnels »."},
+    {"q":"Pour jouer sur la grande scène, il faut…","opts":["s'inscrire à la mairie avant le 10 juin.","envoyer une vidéo à la radio.","arriver le 21 juin à 18 heures."],"a":0,"why":"« il faut s'inscrire à la mairie avant le 10 juin »."},
+    {"q":"Comment conseille-t-on d'aller au centre-ville ?","opts":["En voiture.","En tram.","À vélo."],"a":1,"why":"« le centre-ville est fermé aux voitures. Prenez le tram »."}
+   ]},
+
+  {"id":"fr-a2-co-3","part":"co-a2","teil":"Exercice 3","level":"A2","title":"À l'accueil de l'école de musique","time":7,"plays":2,
+   "instr":"Du hör ett samtal. Läs frågorna först. Du hör samtalet två gånger. Välj rätt svar.",
+   "lines":[
+    {"fr":"— Bonjour madame, je voudrais m'inscrire à un cours de guitare, s'il vous plaît.","sv":"– Hej, jag skulle vilja anmäla mig till en gitarrkurs, tack."},
+    {"fr":"— Bonjour ! Vous avez déjà joué de la guitare ?","sv":"– Hej! Har du spelat gitarr förut?"},
+    {"fr":"— Un peu, j'ai appris seule avec des vidéos, pendant deux ans. Mais je joue du piano depuis huit ans.","sv":"– Lite, jag har lärt mig själv med videor i två år. Men jag har spelat piano i åtta år."},
+    {"fr":"— D'accord. Alors je vous propose le cours de niveau moyen, le mardi de dix-huit heures à dix-neuf heures. C'est un petit groupe de cinq élèves.","sv":"– Okej. Då föreslår jag kursen på mellannivå, på tisdagar klockan arton till nitton. Det är en liten grupp med fem elever."},
+    {"fr":"— Parfait. C'est combien ?","sv":"– Perfekt. Vad kostar det?"},
+    {"fr":"— Cent vingt euros par trimestre. Et si vous n'avez pas de guitare, l'école peut vous en prêter une. Il me faut juste une photo et votre adresse mail.","sv":"– Hundratjugo euro per termin (trimester). Och om du inte har någon gitarr kan skolan låna ut en. Jag behöver bara ett foto och din mejladress."}
+   ],
+   "qs":[
+    {"q":"Que veut faire la jeune fille ?","opts":["Acheter une guitare.","S'inscrire à un cours de guitare.","Donner des cours de piano."],"a":1,"why":"« je voudrais m'inscrire à un cours de guitare »."},
+    {"q":"Comment a-t-elle appris la guitare ?","opts":["Seule, avec des vidéos.","Avec son père.","À l'école de musique."],"a":0,"why":"« j'ai appris seule avec des vidéos, pendant deux ans »."},
+    {"q":"Depuis combien de temps joue-t-elle du piano ?","opts":["Deux ans.","Cinq ans.","Huit ans."],"a":2,"why":"« je joue du piano depuis huit ans »."},
+    {"q":"Quand a lieu le cours ?","opts":["Le mardi soir.","Le mercredi matin.","Le samedi après-midi."],"a":0,"why":"« le mardi de dix-huit heures à dix-neuf heures »."},
+    {"q":"Qu'est-ce que l'école peut faire ?","opts":["Offrir le premier trimestre.","Prêter une guitare.","Prendre la photo."],"a":1,"why":"« l'école peut vous en prêter une »."}
+   ]},
+
+  {"id":"fr-a2-co-4","part":"co-a2","teil":"Exercice 4","level":"A2","title":"Témoignage : une chorale au lycée","time":7,"plays":2,
+   "instr":"Du hör ett längre radioinslag. Läs frågorna först. Du hör inslaget två gånger. Välj rätt svar.",
+   "lines":[
+    {"fr":"— Inès, tu as seize ans et tu chantes dans la chorale de ton lycée, à Rennes. Comment ça a commencé ?","sv":"– Inès, du är sexton år och sjunger i kören på ditt gymnasium i Rennes. Hur började det?"},
+    {"fr":"— L'année dernière, un nouveau professeur de musique est arrivé. Il a mis une affiche dans le couloir : « Tu aimes chanter ? Viens le jeudi à midi ! » Au début, on était six. Maintenant, on est quarante !","sv":"– Förra året kom en ny musiklärare. Han satte upp en affisch i korridoren: \"Gillar du att sjunga? Kom på torsdag klockan tolv!\" I början var vi sex. Nu är vi fyrtio!"},
+    {"fr":"— Qu'est-ce que vous chantez ?","sv":"– Vad sjunger ni?"},
+    {"fr":"— De tout : des chansons françaises, de la pop en anglais et même un chant africain. En mai, on a fait un concert pour les parents et on a gagné huit cents euros. Avec cet argent, on va partir chanter à Bruxelles au printemps. Pour moi, la chorale, c'est le meilleur moment de la semaine.","sv":"– Allt möjligt: franska sånger, pop på engelska och till och med en afrikansk sång. I maj gjorde vi en konsert för föräldrarna och fick in åttahundra euro. För de pengarna ska vi åka och sjunga i Bryssel i vår. För mig är kören veckans bästa stund."}
+   ],
+   "qs":[
+    {"q":"Qui a créé la chorale ?","opts":["Des élèves.","Un nouveau professeur de musique.","Les parents."],"a":1,"why":"« un nouveau professeur de musique est arrivé. Il a mis une affiche »."},
+    {"q":"Quand la chorale se retrouve-t-elle ?","opts":["Le jeudi à midi.","Le mercredi soir.","Le samedi matin."],"a":0,"why":"« Viens le jeudi à midi ! »"},
+    {"q":"Combien de choristes y a-t-il aujourd'hui ?","opts":["Six.","Seize.","Quarante."],"a":2,"why":"« Maintenant, on est quarante ! »"},
+    {"q":"Qu'est-ce que la chorale a fait en mai ?","opts":["Un voyage à Bruxelles.","Un concert pour les parents.","Un disque."],"a":1,"why":"« En mai, on a fait un concert pour les parents »."},
+    {"q":"À quoi va servir l'argent ?","opts":["À acheter un piano.","À payer le professeur.","À partir chanter à Bruxelles."],"a":2,"why":"« Avec cet argent, on va partir chanter à Bruxelles »."}
+   ]},
+
+  {"id":"fr-a2-ce-1","part":"ce-a2","teil":"Exercice 1","level":"A2","title":"Petites annonces : cours et stages de musique","time":7,
+   "instr":"Läs de korta texterna (annonser och meddelanden) och svara på frågorna. Välj rätt svar.",
+   "lines":[
+    {"fr":"A – Stage de jazz pour ados (14–18 ans), du 7 au 11 juillet, de 9 h à 16 h. Tous instruments. Déjeuner compris. 190 €.","sv":"A – Jazzkurs för tonåringar (14–18 år), 7–11 juli, klockan 9–16. Alla instrument. Lunch ingår. 190 €."},
+    {"fr":"B – Étudiante au conservatoire donne des cours de violon à domicile. Débutants acceptés. 20 € l'heure. Le soir et le week-end.","sv":"B – Konservatoriestudent ger fiollektioner i hemmet. Nybörjare välkomna. 20 € i timmen. Kvällar och helger."},
+    {"fr":"C – Chorale « Les Voix du Lac » cherche des chanteurs et des chanteuses. Pas besoin de lire la musique ! Répétition le lundi à 20 h. Gratuit.","sv":"C – Kören \"Les Voix du Lac\" söker sångare. Man behöver inte kunna läsa noter! Repetition på måndagar kl. 20. Gratis."}
+   ],
+   "qs":[
+    {"q":"Quelle annonce convient à quelqu'un qui ne veut pas payer ?","opts":["A","B","C"],"a":2,"why":"C: « Gratuit »."},
+    {"q":"Quelle annonce propose des cours chez l'élève ?","opts":["A","B","C"],"a":1,"why":"B: « cours de violon à domicile »."},
+    {"q":"Où peut-on manger à midi ?","opts":["A","B","C"],"a":0,"why":"A: « Déjeuner compris »."},
+    {"q":"Une personne de 25 ans qui joue du saxophone ne peut pas aller…","opts":["au stage A.","à la chorale C.","aux deux."],"a":0,"why":"Stage A är för 14–18 år."},
+    {"q":"Pour la chorale, il faut…","opts":["savoir lire la musique.","être libre le lundi soir.","avoir un instrument."],"a":1,"why":"« Répétition le lundi à 20 h »."}
+   ]},
+
+  {"id":"fr-a2-ce-2","part":"ce-a2","teil":"Exercice 2","level":"A2","title":"Un mail de la famille d'accueil","time":7,
+   "instr":"Läs meddelandet och svara på frågorna. Välj rätt svar.",
+   "lines":[
+    {"fr":"De : Famille Moreau  À : Maja  Objet : Ton séjour à Lyon","sv":"Från: Familjen Moreau  Till: Maja  Ärende: Din vistelse i Lyon"},
+    {"fr":"Chère Maja, nous sommes très contents de t'accueillir chez nous du 3 au 17 avril ! Notre maison est à dix minutes à pied du lycée. Tu auras ta propre chambre, à côté de celle de notre fille Léa, qui a quinze ans comme toi.","sv":"Kära Maja, vi är så glada att få ta emot dig hos oss 3–17 april! Vårt hus ligger tio minuter till fots från skolan. Du får ett eget rum, bredvid vår dotter Léas, som är femton år precis som du."},
+    {"fr":"Léa nous a dit que tu joues du violoncelle. Si tu veux, tu peux l'apporter : le mercredi après-midi, Léa va à l'orchestre des jeunes et tu peux venir avec elle. Nous avons aussi un vieux piano dans le salon.","sv":"Léa har berättat att du spelar cello. Om du vill kan du ta med den: på onsdagseftermiddagarna går Léa till ungdomsorkestern och du kan följa med henne. Vi har också ett gammalt piano i vardagsrummet."},
+    {"fr":"Est-ce que tu as des allergies ou des choses que tu ne manges pas ? Écris-nous avant la fin du mois. Nous viendrons te chercher à la gare Part-Dieu. À bientôt ! Sophie et Marc","sv":"Har du några allergier eller något du inte äter? Skriv till oss före slutet av månaden. Vi hämtar dig på stationen Part-Dieu. Vi ses snart! Sophie och Marc"}
+   ],
+   "qs":[
+    {"q":"Combien de temps Maja va-t-elle rester à Lyon ?","opts":["Un week-end.","Deux semaines.","Un mois."],"a":1,"why":"« du 3 au 17 avril »."},
+    {"q":"Où se trouve la maison ?","opts":["Près du lycée.","À côté de la gare.","À la campagne."],"a":0,"why":"« à dix minutes à pied du lycée »."},
+    {"q":"Qui est Léa ?","opts":["La professeure de musique.","Une amie de Maja en Suède.","La fille de la famille."],"a":2,"why":"« notre fille Léa »."},
+    {"q":"Qu'est-ce que Maja peut faire le mercredi ?","opts":["Aller à l'orchestre avec Léa.","Donner un concert.","Visiter la ville seule."],"a":0,"why":"« le mercredi après-midi, Léa va à l'orchestre des jeunes et tu peux venir avec elle »."},
+    {"q":"Qu'est-ce que la famille demande à Maja ?","opts":["Le prix du voyage.","Ce qu'elle ne mange pas.","L'adresse de son lycée."],"a":1,"why":"« Est-ce que tu as des allergies ou des choses que tu ne manges pas ? »"},
+    {"q":"Comment Maja va-t-elle arriver chez la famille ?","opts":["En taxi.","À pied depuis l'aéroport.","La famille vient la chercher à la gare."],"a":2,"why":"« Nous viendrons te chercher à la gare Part-Dieu »."}
+   ]},
+
+  {"id":"fr-a2-ce-3","part":"ce-a2","teil":"Exercice 3","level":"A2","title":"Article : des pianos dans la gare","time":8,
+   "instr":"Läs artikeln och svara på frågorna. Välj rätt svar.",
+   "lines":[
+    {"fr":"Depuis trois ans, il y a des pianos dans beaucoup de gares en France. Tout le monde peut s'asseoir et jouer, gratuitement. L'idée est simple : rendre l'attente du train plus agréable.","sv":"Sedan tre år finns det pianon på många tågstationer i Frankrike. Vem som helst får sätta sig och spela, gratis. Idén är enkel: att göra väntan på tåget trevligare."},
+    {"fr":"À la gare de Bordeaux, le piano est placé près des cafés. « Le matin, ce sont souvent des étudiants qui jouent avant les cours. Le soir, des voyageurs de tous les âges », explique Nadia, qui travaille au kiosque à journaux.","sv":"På stationen i Bordeaux står pianot nära kaféerna. \"På morgonen är det ofta studenter som spelar innan lektionerna. På kvällen resenärer i alla åldrar\", berättar Nadia, som jobbar i tidningskiosken."},
+    {"fr":"Certains musiciens sont devenus célèbres grâce à ces pianos : des voyageurs les filment et mettent les vidéos sur Internet. Un jeune pianiste de dix-sept ans a même été invité à jouer dans une émission de télévision.","sv":"Vissa musiker har blivit kända tack vare de här pianona: resenärer filmar dem och lägger ut videorna på nätet. En ung pianist på sjutton år blev till och med inbjuden att spela i ett tv-program."},
+    {"fr":"Mais il y a aussi des problèmes : les pianos coûtent cher à entretenir, et certains voyageurs trouvent qu'il y a trop de bruit. Pour cette raison, on ne peut plus jouer après vingt-deux heures.","sv":"Men det finns också problem: pianona är dyra att underhålla, och vissa resenärer tycker att det blir för mycket oväsen. Därför får man inte längre spela efter klockan tjugotvå."}
+   ],
+   "qs":[
+    {"q":"Pourquoi a-t-on mis des pianos dans les gares ?","opts":["Pour vendre des pianos.","Pour rendre l'attente plus agréable.","Pour organiser des concours."],"a":1,"why":"« rendre l'attente du train plus agréable »."},
+    {"q":"Pour jouer, il faut…","opts":["payer un euro.","s'inscrire au kiosque.","rien, c'est gratuit."],"a":2,"why":"« Tout le monde peut s'asseoir et jouer, gratuitement »."},
+    {"q":"Qui joue souvent le matin à Bordeaux ?","opts":["Des étudiants.","Des professeurs de piano.","Les employés de la gare."],"a":0,"why":"« Le matin, ce sont souvent des étudiants »."},
+    {"q":"Comment certains musiciens sont-ils devenus célèbres ?","opts":["Grâce à des vidéos sur Internet.","Grâce à un disque.","Grâce à un article de journal."],"a":0,"why":"« des voyageurs les filment et mettent les vidéos sur Internet »."},
+    {"q":"Quel est un problème des pianos ?","opts":["Ils sont trop petits.","Ils coûtent cher à entretenir.","Personne ne les utilise."],"a":1,"why":"« les pianos coûtent cher à entretenir »."},
+    {"q":"Depuis ces problèmes, …","opts":["on ne peut plus jouer après 22 heures.","les pianos sont fermés le week-end.","il faut jouer doucement."],"a":0,"why":"« on ne peut plus jouer après vingt-deux heures »."}
+   ]},
+
+  {"id":"fr-a2-ce-4","part":"ce-a2","teil":"Exercice 4","level":"A2","title":"Règlement de la salle de répétition","time":7,
+   "instr":"Läs texten (instruktioner eller regler) och svara på frågorna. Välj rätt svar.",
+   "lines":[
+    {"fr":"Salles de répétition de la Maison des jeunes – mode d'emploi","sv":"Ungdomsgårdens replokaler – så här gör du"},
+    {"fr":"Les salles sont ouvertes du lundi au samedi, de 14 h à 21 h. Il faut réserver sur notre site au moins 48 heures avant.","sv":"Lokalerna är öppna måndag till lördag, klockan 14–21. Man måste boka på vår webbplats minst 48 timmar i förväg."},
+    {"fr":"Une réservation dure deux heures au maximum. Si vous avez du retard de plus de vingt minutes, la salle est donnée à un autre groupe.","sv":"En bokning varar högst två timmar. Om ni är mer än tjugo minuter försenade går lokalen till en annan grupp."},
+    {"fr":"La batterie et les amplificateurs restent dans la salle. Vous apportez vos propres câbles et vos instruments.","sv":"Trumset och förstärkare står kvar i lokalen. Ni tar med egna sladdar och instrument."},
+    {"fr":"Il est interdit de manger dans les salles. Les boissons sont acceptées seulement dans des bouteilles fermées. À la fin, rendez la clé à l'accueil.","sv":"Det är förbjudet att äta i lokalerna. Drycker är tillåtna bara i flaskor med kork. När ni är klara, lämna nyckeln i receptionen."}
+   ],
+   "qs":[
+    {"q":"Quand est-ce que les salles sont fermées ?","opts":["Le samedi.","Le dimanche.","Le lundi."],"a":1,"why":"« ouvertes du lundi au samedi »."},
+    {"q":"Vous voulez répéter vendredi. Vous devez réserver…","opts":["au plus tard mercredi.","le jour même.","à l'accueil, sans réservation."],"a":0,"why":"« au moins 48 heures avant »."},
+    {"q":"Qu'est-ce qui se passe si vous arrivez avec 30 minutes de retard ?","opts":["Vous payez plus.","Vous perdez la salle.","Vous jouez 30 minutes de moins."],"a":1,"why":"« Si vous avez du retard de plus de vingt minutes, la salle est donnée à un autre groupe »."},
+    {"q":"Qu'est-ce que vous devez apporter ?","opts":["Une batterie.","Des amplificateurs.","Des câbles."],"a":2,"why":"« Vous apportez vos propres câbles et vos instruments »."},
+    {"q":"Qu'est-ce qui est permis dans la salle ?","opts":["Manger un sandwich.","Boire de l'eau dans une bouteille fermée.","Garder la clé."],"a":1,"why":"« Les boissons sont acceptées seulement dans des bouteilles fermées »."}
+   ]},
+
+  {"id":"fr-a2-pe-1","part":"pe-a2","teil":"Exercice 1","level":"A2","title":"Raconter un concert","time":22,"minWords":60,
+   "instr":"Berätta om en händelse du har varit med om och beskriv dina intryck. Skriv i dåtid (passé composé och imparfait). Minst 60 ord.",
+   "task":"Vous êtes allé(e) à un concert (ou vous avez joué dans un concert). Vous écrivez à un ami français pour lui raconter : où, quand, avec qui, ce qui s'est passé, et ce que vous avez pensé de cette soirée. (60 mots minimum)",
+   "criteria":["Respect de la consigne","Capacité à raconter et à décrire","Capacité à donner ses impressions","Lexique et orthographe","Morphosyntaxe","Cohérence et cohésion"],
+   "model":"Salut Hugo ! Samedi dernier, j'ai joué dans le concert de printemps de mon école de musique. Le concert a eu lieu dans une grande église, et il y avait environ deux cents personnes. J'étais très stressée avant de commencer, mes mains tremblaient ! Mais tout s'est bien passé. Nous avons joué une symphonie de Mozart. Après, ma famille m'a offert des fleurs. C'était une soirée magnifique et je suis très fière. Et toi, tu as joué récemment ? Bises, Alva",
+   "modelSv":"Hej Hugo! I lördags spelade jag på vårkonserten med min musikskola. Konserten hölls i en stor kyrka och det var ungefär tvåhundra personer där. Jag var jättenervös innan vi började, händerna darrade! Men allt gick bra. Vi spelade en symfoni av Mozart. Efteråt gav min familj mig blommor. Det var en fantastisk kväll och jag är väldigt stolt. Och du, har du spelat nyligen? Kram, Alva"},
+
+  {"id":"fr-a2-pe-2","part":"pe-a2","teil":"Exercice 2","level":"A2","title":"Répondre à une proposition","time":22,"minWords":60,
+   "instr":"Svara på ett meddelande: tacka, tacka ja eller nej med en förklaring och föreslå något. Anpassa tonen (tu till en kompis). Minst 60 ord.",
+   "task":"Vous recevez ce message de votre ami Théo : « Salut ! Je joue avec mon groupe dans un café le vendredi 8 mars à 20 h. Tu veux venir ? Après, on va manger une pizza ensemble. Et tu peux jouer une chanson avec nous si tu veux ! Théo » Vous répondez à Théo : vous le remerciez, vous acceptez ou vous refusez en expliquant pourquoi, et vous posez une question ou vous proposez quelque chose. (60 mots minimum)",
+   "criteria":["Respect de la consigne","Correction sociolinguistique","Capacité à interagir (inviter, remercier, accepter, refuser, s'excuser …)","Lexique et orthographe","Morphosyntaxe","Cohérence et cohésion"],
+   "model":"Salut Théo ! Merci beaucoup pour l'invitation, c'est super sympa. Je viens avec plaisir vendredi ! Je vais peut-être arriver un peu en retard, parce que j'ai un cours de piano jusqu'à dix-neuf heures trente. Pour la pizza, c'est parfait, j'adore ça. Et oui, j'aimerais bien jouer une chanson avec vous ! Quelle chanson tu proposes ? On pourrait répéter ensemble jeudi après les cours, chez moi ? À vendredi ! Oskar",
+   "modelSv":"Hej Théo! Tack så mycket för inbjudan, det är jättesnällt. Jag kommer gärna på fredag! Jag kanske kommer lite sent, eftersom jag har pianolektion till halv åtta. Pizzan låter perfekt, jag älskar det. Och ja, jag vill gärna spela en låt med er! Vilken låt föreslår du? Vi kanske kunde repetera tillsammans på torsdag efter skolan, hemma hos mig? Vi ses på fredag! Oskar"},
+
+  {"id":"fr-a2-po-1","part":"po-a2","teil":"Exercice 1","level":"A2","title":"Entretien dirigé : parlez de vous","time":2,"prep":0,
+   "instr":"Första delen är ett kort samtal om dig själv, utan förberedelse (ungefär 1–2 minuter). Examinatorn hälsar och ställer frågor om dig, din familj, dina intressen och din vardag.",
+   "task":"L'examinateur vous pose des questions, par exemple :\n– Comment vous appelez-vous ? Quel âge avez-vous ?\n– Où habitez-vous ? Avec qui ?\n– Quelle est votre journée typique ?\n– Vous faites de la musique ou du sport ?\n– Qu'est-ce que vous avez fait le week-end dernier ?",
+   "phrases":["Je m'appelle … et j'ai … ans.","J'habite à … avec …","D'habitude, je me lève à …","Je joue du … depuis …","Le week-end dernier, je suis allé(e) …","J'aime … parce que …"],
+   "model":"Je m'appelle Elin et j'ai seize ans. J'habite à Uppsala avec ma mère, mon beau-père et ma petite sœur. Je suis en première année de lycée. D'habitude, je me lève à sept heures et je vais au lycée à vélo. Je joue du violon depuis neuf ans et je chante dans une chorale. Le week-end dernier, je suis allée à un concert à Stockholm avec mes amies. C'était génial !",
+   "modelSv":"Jag heter Elin och är sexton år. Jag bor i Uppsala med min mamma, min styvpappa och min lillasyster. Jag går första året på gymnasiet. Vanligtvis går jag upp klockan sju och cyklar till skolan. Jag har spelat fiol i nio år och sjunger i en kör. I helgen var jag på en konsert i Stockholm med mina kompisar. Det var jättekul!"},
+
+  {"id":"fr-a2-po-2","part":"po-a2","teil":"Exercice 2","level":"A2","title":"Monologue suivi : votre instrument ou votre musique préférée","time":3,"prep":5,
+   "instr":"Andra delen är en kort monolog (ungefär 2 minuter) om ett vardagsämne. På provet drar du två ämnen och väljer ett, och förbereder dig tillsammans med del 3. Examinatorn kan ställa några frågor efteråt.",
+   "task":"Parlez de la musique dans votre vie. Quel instrument jouez-vous, ou quelle musique écoutez-vous ? Depuis quand ? Quand et où ? Pourquoi est-ce important pour vous ?",
+   "phrases":["Je joue du … depuis …","J'ai commencé quand j'avais … ans.","Je m'entraîne … fois par semaine.","Ce que j'aime, c'est …","Mon morceau préféré, c'est …","Plus tard, je voudrais …"],
+   "model":"Je joue du piano depuis dix ans. J'ai commencé quand j'avais six ans, parce que ma grand-mère avait un piano chez elle. Maintenant, je prends un cours par semaine et je m'entraîne presque tous les jours, environ une heure. Ce que j'aime, c'est que je peux oublier le stress de l'école. Mon morceau préféré, c'est un nocturne de Chopin. Plus tard, je voudrais étudier la musique en France.",
+   "modelSv":"Jag har spelat piano i tio år. Jag började när jag var sex, eftersom min farmor hade ett piano hemma. Nu har jag en lektion i veckan och övar nästan varje dag, ungefär en timme. Det jag gillar är att jag kan glömma skolstressen. Mitt favoritstycke är en nocturne av Chopin. Senare skulle jag vilja studera musik i Frankrike."},
+
+  {"id":"fr-a2-po-3","part":"po-a2","teil":"Exercice 3","level":"A2","title":"Exercice en interaction : acheter un billet de concert","time":3,"prep":5,
+   "instr":"Tredje delen är ett rollspel (3–4 minuter). Examinatorn spelar en roll. Du ska få information, ställa frågor och komma fram till en lösning. Var artig och använd vous.",
+   "task":"Vous êtes en France et vous voulez aller à un concert samedi soir avec un(e) ami(e). Vous allez au guichet de la salle de concert. Vous demandez les places libres, les prix (il y a peut-être un tarif étudiant), l'heure du début et vous achetez deux billets. L'examinateur joue le rôle de l'employé(e).",
+   "phrases":["Bonjour, il reste des places pour samedi ?","C'est combien, une place ?","Il y a un tarif réduit pour les jeunes ?","Le concert commence à quelle heure ?","Je voudrais deux places, s'il vous plaît.","Je peux payer par carte ?"],
+   "model":"— Bonjour madame, il reste des places pour le concert de samedi ?\n— Oui, il reste des places au balcon.\n— C'est combien, une place ?\n— Vingt-cinq euros.\n— Il y a un tarif réduit pour les jeunes ?\n— Oui, quinze euros pour les moins de vingt-six ans, avec une carte d'identité.\n— Super ! Le concert commence à quelle heure ?\n— À vingt heures trente. Les portes ouvrent à vingt heures.\n— Alors je voudrais deux places à tarif réduit, s'il vous plaît. Je peux payer par carte ?\n— Bien sûr. Ça fait trente euros.\n— Voilà. Merci beaucoup, bonne journée !",
+   "modelSv":"– Hej, finns det platser kvar till konserten på lördag?\n– Ja, det finns platser kvar på balkongen.\n– Vad kostar en biljett?\n– Tjugofem euro.\n– Finns det rabatt för unga?\n– Ja, femton euro för dem under tjugosex, med id-kort.\n– Toppen! Hur dags börjar konserten?\n– Halv nio. Dörrarna öppnar klockan åtta.\n– Då vill jag ha två biljetter med rabatt, tack. Kan jag betala med kort?\n– Självklart. Det blir trettio euro.\n– Varsågod. Tack så mycket, ha en bra dag!"}
  ]
 }

@@ -214,7 +214,7 @@ const gramType=c=>{const x=gramById(c.ref);
     return{tab:"Grammatik",render:renderTiles,o,w:{exSv:x.sv},
       prompt:x.ask?`<p class="q-prompt" style="font-size:1.2rem">${esc(x.q)}</p>`:`<p class="q-prompt" style="font-size:1.2rem" ${lang()}>${esc(x.q)}</p><p class="ex-sv">${esc(x.sv)}</p>`,
       ask:x.ask?esc(x.ask):`Sätt ihop meningarna med <b ${lang()}>${esc(x.cue)}</b>.`,
-      accept:[x.a,...(x.acc||[])].map(s=>tok(s).join(" ")),answer:esc(x.a),explain:gramExplain(x),say:x.a}; }
+      accept:[x.a,...(x.acc||[])].map(s=>tok(s).join(" ")),answer:x.a,explain:gramExplain(x),say:x.a}; }
   const acc=[x.ans,...(x.acc||[])].map(gnorm), multi=x.type!=="adj"&&x.p.gaps.length>1;
   return{tab:"Grammatik",head:gramHead(x),
     ask:x.type==="adj"?`Skriv adjektivet <b ${lang()}>${esc(x.stem)}</b> med rätt ändelse.`:multi?"Skriv orden som saknas, i ordning.":"Skriv det som saknas.",
@@ -226,7 +226,7 @@ const gramType=c=>{const x=gramById(c.ref);
       if(x.topic==="maj"||(x.alt||[]).some(a=>a.toLowerCase()===x.ans.toLowerCase())){ const e=s=>gapos(s).replace(/…/g," ").replace(/[.,!?;:]/g," ").replace(/\s+/g," ").trim();
         return {r:[x.ans,...(x.acc||[])].map(e).includes(e(v))?"right":"wrong"}; }
       return {r:acc.includes(n)||(x.type==="adj"&&n.replace(/^-/,"")===x.end)?"right":"wrong"};},
-    answer:esc(x.ans),explain:gramExplain(x),say:gramSay(x),onAnswer:fillGaps(x),alwaysAnswer:multi};
+    answer:x.ans,explain:gramExplain(x),say:gramSay(x),onAnswer:fillGaps(x),alwaysAnswer:multi};
 };
 const gramEffect=(ref,ok)=>{const x=gramById(ref); if(!x) return;
   const add=(o,k)=>{o[k]=o[k]||{r:0,n:0}; o[k].n++; if(ok) o[k].r++;};

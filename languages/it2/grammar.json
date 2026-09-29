@@ -14,6 +14,10 @@
     {"id": "stare-ger", "name": "Stare + gerundium", "sub": "sto mangiando, stavo dormendo"},
     {"id": "rel-che", "name": "Relativt che", "sub": "il ragazzo che conosco"},
     {"id": "tempo", "name": "Tidsuttryck", "sub": "fa, da, per, tra"},
+    {"id": "piac-pass", "name": "Piacere i dåtid", "sub": "mi è piaciuto, ti sono piaciute"},
+    {"id": "pron-ton", "name": "Betonade pronomen", "sub": "con me, per te, a me piace, anche a me"},
+    {"id": "indef", "name": "Nessuno, niente och ognuno", "sub": "Non c'è nessuno. Ognuno ha il suo. Ogni giorno."},
+    {"id": "pron-pos", "name": "Pronomenets plats", "sub": "devo farlo / lo devo fare, dimmi, non farlo"},
     {"id": "err", "name": "Hitta felet", "sub": "En mening har ett fel. Vilket ord?"}
   ],
   "rules": {
@@ -47,6 +51,15 @@
     "che": "Relativt che",
     "fa": "fa (för … sedan)",
     "da": "da (sedan)",
-    "tra": "tra/fra (om)"
+    "tra": "tra/fra (om)",
+    "pp-piacere": "Piacere i passato prossimo",
+    "piac-pron": "Piacere: vem tycker om?",
+    "ton-prep": "Betonat pronomen efter preposition",
+    "ton-enf": "Betonat pronomen för betoning (a me, anche io)",
+    "nessuno": "nessuno, nessun, niente",
+    "ognuno": "ognuno, ogni, tutti",
+    "qualche": "qualche + singular",
+    "pos-mod": "Pronomen med modalverb",
+    "pos-imp": "Pronomen med imperativ"
   }
 }

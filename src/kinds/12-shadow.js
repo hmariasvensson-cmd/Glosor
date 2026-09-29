@@ -19,7 +19,7 @@ function renderShadow(d){
     record(b.dataset.sh==="1"); sess.done++; snapRun(); nextQ(); });
 }
 defineKind("shadow",{name:"Skugga",
-  type:c=>({tab:"Skugga",render:renderShadow,w:c.w,answer:esc(c.w.exT),explain:"",say:c.w.exT}),
+  type:c=>({tab:"Skugga",render:renderShadow,w:c.w,answer:c.w.exT,explain:"",say:c.w.exT}),
   restore:ref=>sentById(ref)?{w:sentById(ref)}:null,
   recap:ref=>sentById(ref)?sentById(ref).exT:"",
   open:startShadow, again:startShadow});

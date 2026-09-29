@@ -187,6 +187,174 @@
    ]
   },
   {
+   "id": "de7-le-3",
+   "part": "lesen",
+   "teil": "telc: Sprachbausteine",
+   "type": "gaps",
+   "sim": false,
+   "title": "Anfrage wegen eines Übungsraums",
+   "time": 8,
+   "instr": "Sprachbausteine som i telc Deutsch B2 och C1 (ingår inte i Goethe-provet, därför inte i simuleringen). Läs mejlet och välj rätt ord i varje lucka (1–6).",
+   "lines": [
+    {
+     "fr": "Sehr geehrte Damen und Herren, {1} Ihrer Website habe ich gelesen, dass Sie im Wintersemester Übungsräume für Studierende der Musikhochschule vermieten.",
+     "sv": "Mina damer och herrar, på er webbplats har jag läst att ni hyr ut övningsrum till studenter vid musikhögskolan under vinterterminen."
+    },
+    {
+     "fr": "Ich studiere Klavier im dritten Semester und suche einen Raum, {2} ich auch abends üben kann.",
+     "sv": "Jag läser piano tredje terminen och söker ett rum där jag kan öva även på kvällarna."
+    },
+    {
+     "fr": "Könnten Sie mir bitte mitteilen, {3} die Räume mit einem Flügel ausgestattet sind und wie hoch die Miete ist?",
+     "sv": "Kan ni meddela mig om rummen har flygel och hur hög hyran är?"
+    },
+    {
+     "fr": "Außerdem wüsste ich gern, ob man die Räume kurzfristig buchen kann, {4} ein Konzert bevorsteht.",
+     "sv": "Jag skulle också vilja veta om man kan boka rummen med kort varsel när en konsert närmar sig."
+    },
+    {
+     "fr": "{5} ich keinen eigenen Flügel besitze, wäre ich Ihnen für eine baldige Antwort sehr dankbar.",
+     "sv": "Eftersom jag inte har någon egen flygel vore jag mycket tacksam för ett snart svar."
+    },
+    {
+     "fr": "Mit freundlichen {6} Jonas Berg",
+     "sv": "Med vänliga hälsningar Jonas Berg"
+    }
+   ],
+   "gaps": [
+    {
+     "opts": [
+      "Auf",
+      "In",
+      "An"
+     ],
+     "a": 0,
+     "why": "Auf einer Website (på en webbplats)."
+    },
+    {
+     "opts": [
+      "in dem",
+      "dem",
+      "der"
+     ],
+     "a": 0,
+     "why": "Der Raum → in dem ich üben kann (in + dativ)."
+    },
+    {
+     "opts": [
+      "ob",
+      "dass",
+      "wenn"
+     ],
+     "a": 0,
+     "why": "Indirekt ja/nej-fråga: ob."
+    },
+    {
+     "opts": [
+      "wenn",
+      "als",
+      "wann"
+     ],
+     "a": 0,
+     "why": "Upprepat eller framtida villkor: wenn. Als gäller en enstaka gång i det förflutna."
+    },
+    {
+     "opts": [
+      "Da",
+      "Denn",
+      "Trotzdem"
+     ],
+     "a": 0,
+     "why": "Da (eftersom) inleder en bisats med verbet sist. Denn och trotzdem kräver rak ordföljd."
+    },
+    {
+     "opts": [
+      "Grüßen",
+      "Gruß",
+      "Grüße"
+     ],
+     "a": 0,
+     "why": "Mit + dativ plural: mit freundlichen Grüßen."
+    }
+   ]
+  },
+  {
+   "id": "de7-le-4",
+   "part": "lesen",
+   "teil": "telc: Sprachbausteine",
+   "type": "gaps",
+   "sim": false,
+   "title": "Neues Probenzentrum eröffnet",
+   "time": 8,
+   "instr": "Sprachbausteine som i telc (del 2): välj ett ord ur listan för varje lucka (1–6). Varje ord passar högst en gång, och sex ord blir över. Ingår inte i Goethe-simuleringen.",
+   "lines": [
+    {
+     "fr": "Seit Anfang des Monats {1} die Studierenden der Musikhochschule ein neues Probenzentrum nutzen.",
+     "sv": "Sedan början av månaden kan musikhögskolans studenter använda ett nytt repetitionscenter."
+    },
+    {
+     "fr": "Das Gebäude, {2} früher eine Fabrik war, bietet nun zwanzig schallgedämmte Räume.",
+     "sv": "Byggnaden, som förr var en fabrik, har nu tjugo ljudisolerade rum."
+    },
+    {
+     "fr": "{3} der hohen Nachfrage ist das Zentrum täglich bis 23 Uhr geöffnet.",
+     "sv": "På grund av den stora efterfrågan är centret öppet till kl. 23 varje dag."
+    },
+    {
+     "fr": "Die Räume müssen online gebucht werden, und zwar spätestens zwei Tage {4}.",
+     "sv": "Rummen måste bokas på nätet, och det senast två dagar i förväg."
+    },
+    {
+     "fr": "Wer eine Buchung nicht absagt, {5} für eine Woche gesperrt.",
+     "sv": "Den som inte avbokar blir avstängd i en vecka."
+    },
+    {
+     "fr": "Die Hochschule hofft, dass sich die Situation für die Studierenden dadurch deutlich {6}.",
+     "sv": "Högskolan hoppas att situationen för studenterna därmed blir tydligt bättre."
+    }
+   ],
+   "bank": [
+    "können",
+    "das",
+    "wegen",
+    "vorher",
+    "wird",
+    "verbessert",
+    "trotz",
+    "dem",
+    "darf",
+    "nachher",
+    "werden",
+    "verbessern"
+   ],
+   "gaps": [
+    {
+     "a": 0,
+     "why": "Die Studierenden (plural) können … nutzen."
+    },
+    {
+     "a": 1,
+     "why": "Das Gebäude (neutrum), subjekt i relativsatsen: das."
+    },
+    {
+     "a": 2,
+     "why": "Wegen + genitiv: på grund av."
+    },
+    {
+     "a": 3,
+     "why": "Zwei Tage vorher = två dagar i förväg."
+    },
+    {
+     "a": 4,
+     "why": "Wer …, wird gesperrt: passiv, singular."
+    },
+    {
+     "a": 5,
+     "why": "Sich verbessern, singular (die Situation), verbet sist i dass-satsen."
+    }
+   ]
+  },
+  {
    "id": "de7-hoe-1",
    "part": "hoeren",
    "teil": "Teil 1",
@@ -340,6 +508,248 @@
      ],
      "a": 1,
      "why": "Schicken Sie mir bis nächsten Freitag eine Gliederung."
+    }
+   ]
+  },
+  {
+   "id": "de7-hoe-3",
+   "part": "hoeren",
+   "teil": "Teil 3",
+   "type": "short",
+   "maxWords": 3,
+   "title": "Im Studierendensekretariat",
+   "time": 10,
+   "plays": 1,
+   "instr": "Kortsvar som i TestDaF Hörverstehen: du hör ett samtal en gång. Läs frågorna först och svara med högst tre ord.",
+   "lines": [
+    {
+     "fr": "Student: Guten Tag, ich möchte mich für den Master Klavier bewerben. Welche Unterlagen brauche ich?",
+     "sv": "Studenten: God dag, jag vill söka till masterprogrammet i piano. Vilka handlingar behöver jag?"
+    },
+    {
+     "fr": "Mitarbeiterin: Sie brauchen Ihr Bachelorzeugnis, einen Lebenslauf und ein Motivationsschreiben.",
+     "sv": "Handläggaren: Du behöver ditt kandidatexamensbevis, ett cv och ett personligt brev."
+    },
+    {
+     "fr": "Student: Muss das Zeugnis übersetzt werden?",
+     "sv": "Studenten: Måste examensbeviset översättas?"
+    },
+    {
+     "fr": "Mitarbeiterin: Wenn es nicht auf Deutsch oder Englisch ist, brauchen wir eine beglaubigte Übersetzung.",
+     "sv": "Handläggaren: Om det inte är på tyska eller engelska behöver vi en bestyrkt översättning."
+    },
+    {
+     "fr": "Student: Und bis wann muss ich die Bewerbung abschicken?",
+     "sv": "Studenten: Och när måste jag skicka in ansökan?"
+    },
+    {
+     "fr": "Mitarbeiterin: Die Frist endet am fünfzehnten März. Die Aufnahmeprüfung findet dann im Mai statt.",
+     "sv": "Handläggaren: Sista dagen är den femtonde mars. Antagningsprovet är sedan i maj."
+    },
+    {
+     "fr": "Student: Wie lange dauert die Prüfung?",
+     "sv": "Studenten: Hur lång tid tar provet?"
+    },
+    {
+     "fr": "Mitarbeiterin: Sie spielen etwa zwanzig Minuten vor einer Kommission. Danach gibt es ein kurzes Gespräch.",
+     "sv": "Handläggaren: Du spelar ungefär tjugo minuter inför en jury. Efteråt blir det ett kort samtal."
+    },
+    {
+     "fr": "Student: Kostet die Bewerbung etwas?",
+     "sv": "Studenten: Kostar det något att söka?"
+    },
+    {
+     "fr": "Mitarbeiterin: Ja, die Gebühr beträgt fünfzig Euro. Das Geld überweisen Sie online.",
+     "sv": "Handläggaren: Ja, avgiften är femtio euro. Du betalar den på nätet."
+    },
+    {
+     "fr": "Student: Und wo kann ich am Prüfungstag noch üben?",
+     "sv": "Studenten: Och var kan jag öva på provdagen?"
+    },
+    {
+     "fr": "Mitarbeiterin: Im Erdgeschoss von Gebäude C. Den Schlüssel bekommen Sie beim Pförtner.",
+     "sv": "Handläggaren: På bottenvåningen i hus C. Nyckeln får du av vaktmästaren."
+    }
+   ],
+   "items": [
+    {
+     "q": "Was braucht man außer Zeugnis und Lebenslauf?",
+     "a": [
+      "Motivationsschreiben",
+      "ein Motivationsschreiben"
+     ]
+    },
+    {
+     "q": "Was braucht man, wenn das Zeugnis nicht auf Deutsch oder Englisch ist?",
+     "a": [
+      "beglaubigte Übersetzung",
+      "eine beglaubigte Übersetzung",
+      "Übersetzung",
+      "eine Übersetzung"
+     ]
+    },
+    {
+     "q": "Wann endet die Bewerbungsfrist?",
+     "a": [
+      "15. März",
+      "am 15. März",
+      "fünfzehnten März",
+      "am fünfzehnten März",
+      "15.3.",
+      "15.03.",
+      "15 März"
+     ]
+    },
+    {
+     "q": "In welchem Monat ist die Aufnahmeprüfung?",
+     "a": [
+      "Mai",
+      "im Mai"
+     ]
+    },
+    {
+     "q": "Wie lange spielt man bei der Prüfung?",
+     "a": [
+      "20 Minuten",
+      "zwanzig Minuten",
+      "etwa 20 Minuten",
+      "etwa zwanzig Minuten",
+      "ca. 20 Minuten",
+      "20 min"
+     ]
+    },
+    {
+     "q": "Wie hoch ist die Bewerbungsgebühr?",
+     "a": [
+      "50 Euro",
+      "fünfzig Euro",
+      "50 €",
+      "50€",
+      "50 EUR"
+     ]
+    },
+    {
+     "q": "Wo bekommt man den Schlüssel für den Übungsraum?",
+     "a": [
+      "beim Pförtner",
+      "Pförtner",
+      "vom Pförtner",
+      "bei dem Pförtner",
+      "an der Pforte"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "de7-hoe-4",
+   "part": "hoeren",
+   "teil": "Teil 3",
+   "type": "short",
+   "maxWords": 3,
+   "title": "Radiointerview: Lampenfieber",
+   "time": 10,
+   "plays": 2,
+   "instr": "Kortsvar som i TestDaF Hörverstehen: du hör en radiointervju två gånger. Läs frågorna först och svara med högst tre ord.",
+   "lines": [
+    {
+     "fr": "Moderator: Frau Dr. Lehmann, Sie erforschen seit zehn Jahren das Lampenfieber von Musikern. Wie verbreitet ist das Problem?",
+     "sv": "Programledaren: Dr. Lehmann, du har forskat om musikers rampfeber i tio år. Hur vanligt är problemet?"
+    },
+    {
+     "fr": "Lehmann: Sehr verbreitet. In unserer Studie mit achthundert Orchestermusikern sagten fast zwei Drittel, dass sie regelmäßig starkes Lampenfieber haben.",
+     "sv": "Lehmann: Mycket vanligt. I vår studie med åttahundra orkestermusiker sa nästan två tredjedelar att de regelbundet har stark rampfeber."
+    },
+    {
+     "fr": "Moderator: Welche Symptome sind am häufigsten?",
+     "sv": "Programledaren: Vilka symtom är vanligast?"
+    },
+    {
+     "fr": "Lehmann: Zitternde Hände und Herzrasen. Für Bläser ist außerdem ein trockener Mund ein großes Problem.",
+     "sv": "Lehmann: Darrande händer och hjärtklappning. För blåsare är dessutom muntorrhet ett stort problem."
+    },
+    {
+     "fr": "Moderator: Was hilft dagegen?",
+     "sv": "Programledaren: Vad hjälper mot det?"
+    },
+    {
+     "fr": "Lehmann: Am wirksamsten ist regelmäßiges Vorspielen vor Publikum, schon während des Studiums. Viele Hochschulen bieten deshalb inzwischen ein Auftrittstraining an.",
+     "sv": "Lehmann: Mest verkningsfullt är att regelbundet spela upp för publik, redan under utbildningen. Många högskolor erbjuder därför numera scenträning."
+    },
+    {
+     "fr": "Moderator: Und Medikamente?",
+     "sv": "Programledaren: Och mediciner?"
+    },
+    {
+     "fr": "Lehmann: Manche nehmen Betablocker. Davon rate ich ab, weil sie ohne ärztliche Kontrolle gefährlich sein können.",
+     "sv": "Lehmann: En del tar betablockerare. Det avråder jag från, eftersom de kan vara farliga utan läkarkontroll."
+    },
+    {
+     "fr": "Moderator: Was empfehlen Sie Studierenden konkret?",
+     "sv": "Programledaren: Vad rekommenderar du studenter konkret?"
+    },
+    {
+     "fr": "Lehmann: Atemübungen vor dem Auftritt. Und: Fehler akzeptieren. Das Publikum bemerkt die meisten gar nicht.",
+     "sv": "Lehmann: Andningsövningar före uppträdandet. Och: acceptera misstag. Publiken märker inte de flesta."
+    }
+   ],
+   "items": [
+    {
+     "q": "Wie viele Musiker haben an der Studie teilgenommen?",
+     "a": [
+      "800",
+      "achthundert",
+      "800 Musiker",
+      "800 Orchestermusiker",
+      "achthundert Orchestermusiker"
+     ]
+    },
+    {
+     "q": "Welches Symptom ist besonders für Bläser ein Problem?",
+     "a": [
+      "trockener Mund",
+      "ein trockener Mund",
+      "trockenen Mund",
+      "Mundtrockenheit"
+     ]
+    },
+    {
+     "q": "Was hilft laut Dr. Lehmann am besten?",
+     "a": [
+      "regelmäßiges Vorspielen",
+      "Vorspielen",
+      "Vorspielen vor Publikum",
+      "regelmäßig vorspielen",
+      "vor Publikum spielen"
+     ]
+    },
+    {
+     "q": "Was bieten viele Hochschulen inzwischen an?",
+     "a": [
+      "Auftrittstraining",
+      "ein Auftrittstraining",
+      "Auftrittstrainings"
+     ]
+    },
+    {
+     "q": "Welche Medikamente nehmen manche Musiker?",
+     "a": [
+      "Betablocker"
+     ]
+    },
+    {
+     "q": "Was sollen Studierende vor dem Auftritt machen?",
+     "a": [
+      "Atemübungen",
+      "Atemübungen machen"
+     ]
+    },
+    {
+     "q": "Was bemerkt das Publikum meistens nicht?",
+     "a": [
+      "Fehler",
+      "die Fehler",
+      "die meisten Fehler"
+     ]
     }
    ]
   },

@@ -1,7 +1,7 @@
 {
  "name": "CELI 1 (A2)",
  "pass": 60,
- "note": "Övningar i samma format som CELI 1 (Università per Stranieri di Perugia), skrivna för appen. Inte officiellt material. På provet görs läsförståelse och skrivande under sammanlagt två timmar, hörförståelsen tar 20 minuter och den muntliga delen ungefär tio minuter inför en examinator. Uppgiftstyper som bygger på bilder eller på att para ihop meningsdelar och frågor med svar (A.1, A.3, A.4) och luckfyllnad med egna ord (B.1) finns inte här ännu.",
+ "note": "Övningar i samma format som CELI 1 (Università per Stranieri di Perugia), skrivna för appen. Inte officiellt material. På provet görs läsförståelse och skrivande under sammanlagt två timmar, hörförståelsen tar 20 minuter och den muntliga delen ungefär tio minuter inför en examinator. Para ihop (personer med annonser, frågor med svar) tränas i A.3. Uppgiftstyper som bygger på bilder (A.1) och luckfyllnad med egna ord (B.1) finns inte här ännu.",
  "parts": [
   {
    "id": "lettura",
@@ -191,6 +191,194 @@
      ],
      "a": 1,
      "why": "«iscrizione obbligatoria»."
+    }
+   ],
+   "gloss": {
+    "causa": {
+     "t": "la causa",
+     "sv": "orsak",
+     "g": "f"
+    },
+    "affittasi": {
+     "t": "affittare",
+     "sv": "uthyres",
+     "g": ""
+    },
+    "comprese": {
+     "t": "compreso",
+     "sv": "inräknad, inklusive",
+     "g": ""
+    },
+    "annullato": {
+     "t": "annullare",
+     "sv": "ställa in",
+     "g": ""
+    },
+    "validi": {
+     "t": "valido",
+     "sv": "giltig",
+     "g": ""
+    },
+    "urgenze": {
+     "t": "l'urgenza",
+     "sv": "brådskande fall",
+     "g": "f"
+    },
+    "limitati": {
+     "t": "limitato",
+     "sv": "begränsad",
+     "g": ""
+    }
+   }
+  },
+  {
+   "id": "it4-le-5",
+   "part": "lettura",
+   "teil": "A.3",
+   "type": "match",
+   "title": "Chi cerca che cosa?",
+   "time": 10,
+   "instr": "Fem personer letar efter något. Läs annonserna A–H och välj den annons som passar varje person. Tre annonser blir över.",
+   "opts": [
+    {
+     "fr": "Corso di cucina toscana: il martedì sera, dalle 19 alle 21. Prezzo: 15 euro a lezione.",
+     "sv": "Kurs i toskansk matlagning: tisdagkvällar kl. 19–21. Pris: 15 euro per lektion."
+    },
+    {
+     "fr": "Palestra Forma: aperta tutti i giorni dalle 7 alle 22. Il primo mese è gratis per gli studenti.",
+     "sv": "Gymmet Forma: öppet alla dagar 7–22. Första månaden gratis för studenter."
+    },
+    {
+     "fr": "Cerco un ragazzo o una ragazza per portare a spasso il mio cane il pomeriggio. Tel. 333 452 1187.",
+     "sv": "Jag söker en kille eller tjej som kan rasta min hund på eftermiddagarna."
+    },
+    {
+     "fr": "Scuola di musica Arpeggio: lezioni di pianoforte per principianti, anche il sabato mattina.",
+     "sv": "Musikskolan Arpeggio: pianolektioner för nybörjare, även lördag förmiddag."
+    },
+    {
+     "fr": "Libreria Il Gufo: giovedì alle 18 incontro con la scrittrice Anna Neri. Ingresso libero.",
+     "sv": "Bokhandeln Il Gufo: torsdag kl. 18 träff med författaren Anna Neri. Fritt inträde."
+    },
+    {
+     "fr": "Noleggio biciclette: 8 euro al giorno, 40 euro alla settimana. Via Roma 12.",
+     "sv": "Cykeluthyrning: 8 euro per dag, 40 euro per vecka."
+    },
+    {
+     "fr": "Gita in barca sul lago domenica: partenza alle 9, ritorno alle 17. Pranzo incluso.",
+     "sv": "Båttur på sjön på söndag: avgång 9, hemkomst 17. Lunch ingår."
+    },
+    {
+     "fr": "Mercatino in piazza: vestiti, libri e dischi usati. Ogni prima domenica del mese.",
+     "sv": "Loppmarknad på torget: begagnade kläder, böcker och skivor. Första söndagen varje månad."
+    }
+   ],
+   "items": [
+    {
+     "q": "Marco vuole imparare a suonare uno strumento, ma lavora dal lunedì al venerdì.",
+     "sv": "Marco vill lära sig spela ett instrument, men han jobbar måndag till fredag.",
+     "a": 3,
+     "why": "D: pianolektioner, även på lördagar."
+    },
+    {
+     "q": "Giulia ama gli animali e cerca un piccolo lavoro.",
+     "sv": "Giulia älskar djur och söker ett litet jobb.",
+     "a": 2,
+     "why": "C: rasta en hund på eftermiddagarna."
+    },
+    {
+     "q": "Paolo vuole girare la città in bicicletta per una settimana.",
+     "sv": "Paolo vill åka runt i staden på cykel i en vecka.",
+     "a": 5,
+     "why": "F: cykeluthyrning, 40 euro per vecka."
+    },
+    {
+     "q": "Sara legge molto e vuole conoscere una scrittrice.",
+     "sv": "Sara läser mycket och vill träffa en författare.",
+     "a": 4,
+     "why": "E: träff med författaren i bokhandeln."
+    },
+    {
+     "q": "Luca cerca vestiti e dischi vecchi che costano poco.",
+     "sv": "Luca letar efter gamla kläder och skivor som kostar lite.",
+     "a": 7,
+     "why": "H: loppmarknad med begagnade kläder och skivor."
+    }
+   ]
+  },
+  {
+   "id": "it4-le-6",
+   "part": "lettura",
+   "teil": "A.3",
+   "type": "match",
+   "title": "Domande e risposte",
+   "time": 8,
+   "instr": "Para ihop varje fråga (1–6) med rätt svar (A–H). Två svar blir över.",
+   "opts": [
+    {
+     "fr": "Da due anni.",
+     "sv": "Sedan två år."
+    },
+    {
+     "fr": "In centro, vicino alla stazione.",
+     "sv": "I centrum, nära stationen."
+    },
+    {
+     "fr": "Alle dieci e un quarto, dal binario 5.",
+     "sv": "Kvart över tio, från spår 5."
+    },
+    {
+     "fr": "Mi dispiace, stasera non posso: devo studiare.",
+     "sv": "Tyvärr, i kväll kan jag inte: jag måste plugga."
+    },
+    {
+     "fr": "Dodici euro e cinquanta.",
+     "sv": "Tolv euro och femtio."
+    },
+    {
+     "fr": "Sì, ho un fratello e una sorella.",
+     "sv": "Ja, jag har en bror och en syster."
+    },
+    {
+     "fr": "Suono la chitarra e vado in piscina.",
+     "sv": "Jag spelar gitarr och går och simmar."
+    },
+    {
+     "fr": "Sono svedese, di Göteborg.",
+     "sv": "Jag är svensk, från Göteborg."
+    }
+   ],
+   "items": [
+    {
+     "q": "A che ora parte il treno per Firenze?",
+     "sv": "Hur dags går tåget till Florens?",
+     "a": 2
+    },
+    {
+     "q": "Quanto costa il biglietto?",
+     "sv": "Vad kostar biljetten?",
+     "a": 4
+    },
+    {
+     "q": "Di dove sei?",
+     "sv": "Var kommer du ifrån?",
+     "a": 7
+    },
+    {
+     "q": "Che cosa fai nel tempo libero?",
+     "sv": "Vad gör du på fritiden?",
+     "a": 6
+    },
+    {
+     "q": "Vuoi venire al cinema stasera?",
+     "sv": "Vill du följa med på bio i kväll?",
+     "a": 3
+    },
+    {
+     "q": "Da quanto tempo studi l'italiano?",
+     "sv": "Hur länge har du läst italienska?",
+     "a": 0,
+     "why": "Da quanto tempo …? – Da due anni (presens + da)."
     }
    ]
   },

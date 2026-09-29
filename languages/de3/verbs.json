@@ -1,0 +1,12 @@
+{
+  "tenses": {
+    "$remove": ["Konjunktiv I", "Konjunktiv II"],
+    "Präteritum": {
+      "$remove": ["werden", "fahren", "sprechen", "nehmen", "gehen", "denken", "arbeiten", "kommen", "finden", "bleiben", "schreiben", "sehen", "geben", "stehen", "wissen", "bringen"],
+      "dürfen": ["durfte", "durftest", "durfte", "durften", "durftet", "durften"],
+      "sollen": ["sollte", "solltest", "sollte", "sollten", "solltet", "sollten"],
+      "mögen": ["mochte", "mochtest", "mochte", "mochten", "mochtet", "mochten"],
+      "rule": "Sein, haben och modalverben används oftast i Präteritum, också i tal: ich war, ich hatte, ich musste, ich konnte, ich wollte. Modalverben tappar omljudet: können – konnte, müssen – musste, dürfen – durfte. Ich- och er/sie/es-formen är lika."
+    }
+  }
+}

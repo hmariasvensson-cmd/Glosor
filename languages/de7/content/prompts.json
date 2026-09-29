@@ -19,6 +19,42 @@
   "modelSv": "Exempeltext: ett formellt mejl som presenterar skribenten, räknar upp kurserna, frågar om tillgodoräknande och vilka handlingar som behövs och ber om svar före ett visst datum."
  },
  {
+  "id": "w-s1-zusammenfassung",
+  "sec": "s1",
+  "title": "Zusammenfassung: Bildung oder Ausbildung?",
+  "task": "Läs lästexten \"Essay: Bildung oder Ausbildung?\" i kapitel 1 och sammanfatta den på tyska (200–300 ord). Källa: ange titeln och att det är en essä. Stilnivå: neutral och saklig, ingen egen åsikt förrän i sista meningen. Använd Konjunktiv I eller II när du återger skribentens åsikter.",
+  "min": 200,
+  "max": 300,
+  "need": {
+   "connectors": 4,
+   "chapterWords": 3,
+   "tenses": [
+    "Präsens",
+    "Passiv"
+   ]
+  },
+  "model": "In dem Essay „Bildung oder Ausbildung?“ geht der Verfasser der Frage nach, welche Idee der Universität das heutige Studium in Deutschland prägt. Er stellt dabei zwei Modelle einander gegenüber.\n\nZunächst beschreibt er das Ideal Wilhelm von Humboldts, der 1810 an der Gründung der Berliner Universität beteiligt war. Nach dieser Vorstellung sollen Forschung und Lehre eine Einheit bilden, und das Ziel des Studiums ist nicht die Vorbereitung auf einen Beruf, sondern die Bildung des ganzen Menschen.\n\nDanach wird die Bologna-Reform von 1999 dargestellt. Durch sie wurden Bachelor und Master eingeführt, die Leistungen werden seither in Leistungspunkten gemessen, und fast jedes Pflichtmodul endet mit einer Prüfung. Kritiker meinen, das Studium sei dadurch verschult worden, während Befürworter betonen, die klare Struktur und die Prüfungsordnung erleichterten vielen Studierenden den Einstieg.\n\nAnschließend geht der Autor auf die Musikhochschulen ein. Einerseits sei die künstlerische Ausbildung dort schon immer stark verschult gewesen, andererseits lebe gerade im Einzelunterricht das Humboldtsche Ideal weiter.\n\nDer Verfasser kommt zu dem Schluss, dass man die beiden Modelle nicht gegeneinander ausspielen sollte. Entscheidend sei nicht die Struktur, sondern die Haltung, mit der man studiere. Wer die Studienordnung als Rahmen nutze und trotzdem neugierig bleibe, zum Beispiel eine Vorlesung in einem fremden Fach besuche oder mit einer Kommilitonin aus einem anderen Fach Kammermusik mache, verbinde beides.\n\nZusammenfassend lässt sich sagen, dass der Essay für ein Studium plädiert, das Orientierung bietet, aber Raum für Umwege lässt. Diese Position halte ich für überzeugend.",
+  "modelSv": "Exempel: källa och ämne först, sedan textens delar i ordning (Humboldt, Bologna, musikhögskolan, slutsatsen) med Konjunktiv I för skribentens åsikter, och egen bedömning bara i sista meningen."
+ },
+ {
+  "id": "w-s1-stellungnahme",
+  "sec": "s1",
+  "title": "Stellungnahme: Anwesenheitspflicht",
+  "task": "Er högskola diskuterar att införa närvaroplikt på alla föreläsningar. Skriv en Stellungnahme på tyska (200–350 ord) till studentrådets tidning. Källa: hänvisa till studieordningen (regelbundet deltagande i seminarier är redan krav). Stilnivå: formell. Ta ställning, ge minst två argument, bemöt ett motargument och avsluta med ett förslag.",
+  "min": 200,
+  "max": 350,
+  "need": {
+   "connectors": 5,
+   "chapterWords": 3,
+   "tenses": [
+    "Präsens",
+    "Konjunktiv II"
+   ]
+  },
+  "model": "Stellungnahme zur geplanten Anwesenheitspflicht in Vorlesungen\n\nDie Hochschulleitung erwägt, künftig in allen Vorlesungen eine Anwesenheitspflicht einzuführen. Nach der geltenden Studien- und Prüfungsordnung ist die regelmäßige Teilnahme bereits Voraussetzung für die Zulassung zu Prüfungen, allerdings nur in Seminaren und Übungen. Ich halte eine Ausweitung auf Vorlesungen für den falschen Weg.\n\nErstens unterscheiden sich Vorlesung und Seminar grundsätzlich. In einem Seminar lebt die Sitzung von Wortmeldungen, Referaten und Diskussionen, deshalb ist die Anwesenheit aller notwendig. Eine Vorlesung dagegen kann man auch mit einem Skript, einer Aufzeichnung oder den Folien nacharbeiten.\n\nZweitens ist der Studienalltag an einer Musikhochschule kaum planbar. Wer im Orchester einspringt, eine Probe hat oder für ein Probespiel übt, müsste sonst zwischen künstlerischer und theoretischer Ausbildung wählen. Das wäre gerade für engagierte Studierende ein Nachteil.\n\nMan könnte einwenden, dass viele Hörsäle schon nach wenigen Wochen halb leer sind und die Lehrenden darunter leiden. Das ist richtig. Dennoch löst eine Pflicht dieses Problem nicht, denn wer nur wegen einer Unterschrift kommt, hört selten aufmerksam zu. Sinnvoller wäre es, die Vorlesungen attraktiver zu machen, zum Beispiel durch kurze Aufgaben, die in der nächsten Sitzung besprochen werden.\n\nZusammenfassend bin ich der Meinung, dass die bestehende Regelung ausreicht. Ich schlage vor, dass der Studierendenrat gemeinsam mit den Lehrenden ein Konzept für lebendigere Vorlesungen entwickelt und die Hochschule auf eine allgemeine Anwesenheitspflicht verzichtet.",
+  "modelSv": "Exempel: rubrik, bakgrund med källa (studieordningen), tydlig ståndpunkt, två numrerade argument, ett bemött motargument och ett konkret förslag i slutet. Formell stil utan du-tilltal."
+ },
+ {
   "id": "w-s2-referat",
   "sec": "s2",
   "title": "Referat: en epok eller ett verk",
@@ -36,6 +72,44 @@
   },
   "model": "Im Folgenden möchte ich Ihnen die Violinsonate Nr. 1 in G-Dur von Johannes Brahms vorstellen. Zunächst gehe ich auf die Entstehungsgeschichte ein, anschließend auf die Form und die Harmonik, und abschließend auf die Rezeption des Werkes.\n\nDie Sonate entstand in den Sommern 1878 und 1879 im österreichischen Pörtschach am Wörthersee, wo Brahms gern seine Ferien verbrachte. Sie wurde im November 1879 in Bonn uraufgeführt. Brahms war damals bereits ein berühmter Komponist, hatte aber zuvor mehrere Violinsonaten vernichtet, weil er mit ihnen nicht zufrieden war.\n\nBesonders auffällig ist, dass alle drei Sätze thematisch miteinander verbunden sind. Das Finale zitiert nämlich die Melodie von Brahms' eigenem Lied „Regenlied“. Deshalb wird die Sonate oft auch Regenlied-Sonate genannt. Wie die Musikwissenschaftlerin Clara Voss betont, sei dieses Zitat mehr als ein technisches Mittel: Es verleihe dem ganzen Werk einen melancholischen, fast erinnernden Charakter.\n\nFür die Interpretation bedeutet das, dass man die Sätze nicht isoliert spielen sollte. Die Phrasierung muss sich am Gesang orientieren, und das Tempo darf nicht zu schnell sein, obwohl die Bezeichnung „Vivace ma non troppo“ lautet.\n\nZusammenfassend lässt sich festhalten, dass die Sonate zu den persönlichsten Kammermusikwerken von Brahms gehört. Sie wurde vom Publikum sofort begeistert aufgenommen und gehört bis heute zum Standardrepertoire. Vielen Dank für Ihre Aufmerksamkeit. Ich freue mich auf Ihre Fragen.",
   "modelSv": "Exempel på ett kort referat om ett verk med struktur, källa i Konjunktiv I och avslutning."
+ },
+ {
+  "id": "w-s2-eroerterung",
+  "sec": "s2",
+  "title": "Erörterung: Alte Instrumente für alte Musik?",
+  "task": "Skriv en Erörterung på tyska (200–350 ord, TestDaF-stil): Soll Musik des Barock nur auf historischen Instrumenten gespielt werden? Källa: du kan hänvisa till debatten om historisk uppförandepraxis (Aufführungspraxis). Stilnivå: saklig och formell. Väg för- och nackdelar och avsluta med din egen slutsats.",
+  "min": 200,
+  "max": 350,
+  "need": {
+   "connectors": 5,
+   "chapterWords": 3,
+   "tenses": [
+    "Präsens",
+    "Perfekt",
+    "Konjunktiv II"
+   ]
+  },
+  "model": "Seit den 1960er Jahren hat sich die historische Aufführungspraxis von einer Nischenbewegung zu einem festen Bestandteil des Konzertbetriebs entwickelt. Heute stellt sich die Frage, ob Musik des Barock überhaupt noch auf modernen Instrumenten gespielt werden sollte.\n\nFür eine Beschränkung auf historische Instrumente spricht zunächst die Werktreue. Ein Komponist wie Bach hat für Darmsaiten, Naturtrompeten und eine tiefere Stimmung geschrieben. Wer diese Klangwelt kennt, versteht besser, warum bestimmte Tempi und Artikulationen gewählt wurden. Außerdem hat die Arbeit mit Originalinstrumenten viele Werke neu entdecken lassen, die zuvor schwerfällig und langweilig klangen. Der Originalklang ist also nicht nur ein Museumseffekt, sondern oft ein Erkenntnisgewinn.\n\nAndererseits gibt es gewichtige Einwände. Wir können nie genau wissen, wie eine Aufführung im 18. Jahrhundert geklungen hat, denn die Überlieferung ist lückenhaft. Zudem hören wir heute mit anderen Ohren, sodass ein „authentisches“ Erlebnis ohnehin unmöglich ist. Nicht zuletzt würde ein Verbot moderne Orchester von einem großen Teil des Repertoires ausschließen, obwohl sie diese Musik jahrzehntelang lebendig gehalten haben.\n\nMeiner Meinung nach ist die Frage falsch gestellt. Entscheidend ist nicht das Instrument, sondern eine schlüssige Interpretation, die vom Wissen über die Entstehungszeit geprägt ist. Ein modernes Kammerorchester, das mit wenig Vibrato, leichten Bögen und durchsichtigem Klang spielt, kann Bach ebenso überzeugend gestalten wie ein Barockensemble.\n\nZusammenfassend würde ich daher für Vielfalt plädieren: Historische Instrumente bereichern das Musikleben, aber sie sollten keine Pflicht werden.",
+  "modelSv": "Exempel: inledning med bakgrund, argument för (Werktreue, Originalklang), argument emot (lückenhafte Überlieferung, moderna orkestrar), egen slutsats med motivering. Bindeord som zunächst, außerdem, andererseits, zudem, nicht zuletzt."
+ },
+ {
+  "id": "w-s2-bewerbung",
+  "sec": "s2",
+  "title": "Formellt brev: Bewerbung für eine Meisterklasse",
+  "task": "Du vill delta i en sommarmästarklass (Meisterklasse) hos en känd professor i Tyskland. Skriv ett formellt ansökningsbrev på tyska (200–300 ord) till arrangören. Källa: hänvisa till utlysningen på arrangörens webbplats. Stilnivå: formell (Sie, Sehr geehrte …, Mit freundlichen Grüßen). Presentera dig, motivera ansökan, nämn repertoaren och fråga om något praktiskt.",
+  "min": 200,
+  "max": 300,
+  "need": {
+   "connectors": 4,
+   "chapterWords": 3,
+   "tenses": [
+    "Präsens",
+    "Perfekt",
+    "Konjunktiv II"
+   ]
+  },
+  "model": "Sehr geehrte Damen und Herren,\n\nmit großem Interesse habe ich auf Ihrer Internetseite die Ausschreibung der Sommerakademie gelesen und möchte mich hiermit um einen Platz als aktive Teilnehmerin in der Meisterklasse Violine bewerben.\n\nMein Name ist Sara Lind, ich bin 19 Jahre alt und bereite mich zurzeit auf die Aufnahmeprüfungen an deutschen Musikhochschulen vor. Seit zwölf Jahren erhalte ich Geigenunterricht, in den letzten drei Jahren bei einer Dozentin der Musikhochschule Stockholm. Außerdem spiele ich im Jugendorchester und in einem Streichquartett.\n\nDie Meisterklasse interessiert mich besonders, weil ich mich intensiv mit der Aufführungspraxis des Barock beschäftige. Ich habe viele Mitschnitte Ihrer Dozentin gehört und bewundere ihre eigenwillige, aber immer schlüssige Lesart der Sonaten und Partiten von Bach. Deshalb würde ich gern von ihr lernen, wie man historisches Wissen mit einer persönlichen Klangvorstellung verbindet.\n\nFür den Kurs habe ich folgendes Programm vorbereitet: die Partita Nr. 2 d-Moll von Johann Sebastian Bach, den ersten Satz des Violinkonzerts von Jean Sibelius sowie eine Sonate von Wilhelm Stenhammar. Einen Mitschnitt meines letzten Konzerts sowie meinen Lebenslauf füge ich dieser E-Mail bei.\n\nDarüber hinaus hätte ich eine Frage: Gibt es die Möglichkeit, während der Akademie in einem Gästezimmer oder bei einer Gastfamilie zu wohnen? Falls ja, wäre ich Ihnen für nähere Informationen dankbar.\n\nIch würde mich sehr freuen, von Ihnen zu hören.\n\nMit freundlichen Grüßen\nSara Lind",
+  "modelSv": "Exempel: formell inledning med källa (utlysningen), presentation, motivering med kapitelord (Aufführungspraxis, Mitschnitt, Lesart, Klangvorstellung), repertoar, bilagor, en praktisk fråga i Konjunktiv II och formell hälsning."
  },
  {
   "id": "w-s3-grafik",
@@ -56,6 +130,42 @@
   "modelSv": "Exempel: inledning om vad diagrammet visar, huvudtrend med siffror, jämförelse och möjliga orsaker."
  },
  {
+  "id": "w-s3-zusammenfassung",
+  "sec": "s3",
+  "title": "Zusammenfassung einer Studie",
+  "task": "Sammanfatta lästexten \"Text mit Grafik: Auftrittsangst bei Musikstudierenden\" i kapitel 3 på tyska (200–300 ord), som i ett referat. Källa: ange att det är en enkät vid en musikhögskola. Stilnivå: vetenskaplig och neutral. Ta med metod, de viktigaste resultaten med siffror, begränsningarna och slutsatsen.",
+  "min": 200,
+  "max": 300,
+  "need": {
+   "connectors": 4,
+   "chapterWords": 3,
+   "tenses": [
+    "Präsens",
+    "Passiv"
+   ]
+  },
+  "model": "Der vorliegende Text berichtet über eine Befragung zur Auftrittsangst, die an einer mittelgroßen Musikhochschule durchgeführt wurde.\n\nZur Methode: Insgesamt wurden 412 Studierende angeschrieben, von denen 268 den Fragebogen vollständig ausfüllten. Die Teilnahme war anonym. Die Angst wurde auf einer Skala von 1 bis 5 erhoben, außerdem konnten die Befragten in offenen Fragen beschreiben, wann die Angst am stärksten ist.\n\nDie Befunde zeigen, dass 35 Prozent aller Befragten unter starker oder sehr starker Auftrittsangst leiden. Am höchsten ist der Anteil in den Instrumentalfächern mit 41 Prozent, am niedrigsten im Jazz und Pop mit 22 Prozent. Als Strategien werden vor allem Atemübungen und gründliches Üben genannt, während nur neun Prozent professionelle Beratung in Anspruch genommen haben. Zwölf Prozent nehmen gelegentlich Medikamente ohne ärztliche Verordnung.\n\nDie Autoren vermuten, dass die Unterschiede mit der Spielsituation zusammenhängen: Wer solistisch nach Noten spielt, erlebt Fehler stärker als Versagen. Sie betonen jedoch, dass diese Erklärung eine Hypothese sei, die mit den vorliegenden Daten nicht geprüft werden könne. Außerdem weisen sie auf Einschränkungen hin, denn die Ergebnisse beruhen auf Selbstauskünften und stammen nur von einer Hochschule, sodass die Übertragbarkeit fraglich ist.\n\nDaraus leiten die Autoren ab, dass Hochschulen Angebote wie Auftrittstraining und Beratung ausbauen sollten. Für künftige Forschung empfehlen sie eine Längsschnittstudie an mehreren Hochschulen.\n\nZusammenfassend liefert die Studie einen wichtigen Hinweis darauf, dass Auftrittsangst kein Randphänomen ist.",
+  "modelSv": "Exempel: referat i presens med tydliga delar (metod, resultat, tolkning, begränsningar, slutsats), siffror ur texten och kapitelord som Befragung, Befund, Fragebogen, Längsschnittstudie och Übertragbarkeit."
+ },
+ {
+  "id": "w-s3-stellungnahme",
+  "sec": "s3",
+  "title": "Stellungnahme: Offene Forschungsdaten",
+  "task": "Allt fler forskningsfinansiärer kräver att forskningsdata ska publiceras fritt (Open Data). Skriv en Stellungnahme på tyska (200–350 ord) för en studentblogg. Källa: hänvisa allmänt till kraven från forskningsfinansiärer. Stilnivå: formell men personlig. Ta ställning, ta hänsyn till forskningsetik och avsluta med en slutsats.",
+  "min": 200,
+  "max": 350,
+  "need": {
+   "connectors": 5,
+   "chapterWords": 3,
+   "tenses": [
+    "Präsens",
+    "Konjunktiv II"
+   ]
+  },
+  "model": "Sollten alle Forschungsdaten frei zugänglich sein?\n\nImmer mehr Förderorganisationen, die Drittmittel vergeben, verlangen von Forschenden, dass sie nicht nur ihre Ergebnisse, sondern auch die zugrunde liegenden Daten veröffentlichen. Ich halte diese Forderung grundsätzlich für richtig, allerdings mit wichtigen Einschränkungen.\n\nFür offene Daten spricht vor allem die Überprüfbarkeit. Wenn andere Forschende die Rohdaten einsehen können, lassen sich Fehler, verzerrte Auswertungen oder voreilige Schlüsse leichter entdecken. Zudem wird eine Replikation erst möglich, wenn man weiß, wie eine Erhebung genau durchgeführt wurde. Nicht zuletzt wurde die meiste Forschung mit öffentlichen Geldern finanziert, sodass die Gesellschaft ein Recht auf ihre Ergebnisse hat.\n\nAndererseits darf die Forschungsethik nicht vernachlässigt werden. Viele Studien arbeiten mit sensiblen Angaben, etwa über Gesundheit oder Einkommen. Selbst wenn die Daten anonymisiert werden, besteht bei kleinen Gruppen die Gefahr, dass einzelne Probanden wiedererkannt werden. Wer an einer Befragung teilnimmt, hat seine Einwilligung außerdem meist nur für einen bestimmten Zweck gegeben.\n\nMeiner Meinung nach wäre deshalb ein Mittelweg sinnvoll: Daten sollten grundsätzlich veröffentlicht werden, jedoch nur, wenn der Schutz der Teilnehmenden gewährleistet ist. In anderen Fällen könnten die Daten auf Anfrage für geprüfte Forschende zugänglich gemacht werden.\n\nZusammenfassend bin ich überzeugt, dass Offenheit die Wissenschaft glaubwürdiger macht. Sie darf aber nicht auf Kosten derjenigen gehen, ohne deren Mitwirkung es keine Daten gäbe.",
+  "modelSv": "Exempel: fråga som rubrik, källa och ståndpunkt i inledningen, argument för (Replikation, offentliga pengar) och emot (Forschungsethik, Einwilligung), en mellanväg i Konjunktiv II och en slutsats."
+ },
+ {
   "id": "w-s4-beschwerde",
   "sec": "s4",
   "title": "Formellt brev: klagomål till hyresvärden",
@@ -72,6 +182,44 @@
   },
   "model": "Sehr geehrte Frau Krüger,\n\nmit Bezug auf Ihr Schreiben vom 3. Mai, in dem Sie mich wegen Ruhestörung abmahnen, möchte ich hiermit Stellung nehmen.\n\nZunächst möchte ich betonen, dass ich die Beschwerde meines Nachbarn ernst nehme. Ich studiere Violine an der Musikhochschule und muss daher täglich mehrere Stunden üben. Allerdings übe ich werktags nur zwischen 10 und 12 Uhr sowie zwischen 16 und 19 Uhr, also ausschließlich außerhalb der Ruhezeiten, die in der Hausordnung festgelegt sind. Laut Mietvertrag ist das Musizieren in diesem Rahmen ausdrücklich erlaubt. Die Abmahnung halte ich deshalb für nicht gerechtfertigt.\n\nTrotzdem liegt mir viel an einem guten Verhältnis zu meinen Nachbarn. Um die Situation zu entschärfen, wäre ich bereit, beim Üben einen Dämpfer zu verwenden und am Wochenende nur in den Übezellen der Hochschule zu spielen. Außerdem könnte ich meinem Nachbarn einen Plan mit meinen Übezeiten geben, damit er sich darauf einstellen kann.\n\nIch würde mich freuen, wenn wir die Angelegenheit in einem persönlichen Gespräch klären könnten, gern auch gemeinsam mit meinem Nachbarn. Sollte ich bis zum 20. Mai nichts von Ihnen hören, werde ich mich telefonisch bei Ihnen melden.\n\nMit freundlichen Grüßen\nElin Berg",
   "modelSv": "Exempel på ett formellt brev: hänvisning till varningen, förklaring med hänvisning till reglerna, förslag på lösning och önskan om samtal."
+ },
+ {
+  "id": "w-s4-brief",
+  "sec": "s4",
+  "title": "Formellt brev till hyresvärden: övningstider",
+  "task": "Du har hyrt en lägenhet i Leipzig och ska studera piano. Enligt ordningsreglerna får man bara spela två timmar om dagen. Skriv ett formellt brev på tyska (200–300 ord) till hyresvärden. Källa: hänvisa till ordningsreglerna (Hausordnung, punkt 2) i hyresavtalet. Stilnivå: formell och artig. Be om en skriftlig överenskommelse och föreslå konkreta tider och åtgärder.",
+  "min": 200,
+  "max": 300,
+  "need": {
+   "connectors": 4,
+   "chapterWords": 3,
+   "tenses": [
+    "Präsens",
+    "Perfekt",
+    "Konjunktiv II"
+   ]
+  },
+  "model": "Sehr geehrter Herr Möller,\n\nseit dem 1. Oktober bin ich Mieterin der Wohnung im zweiten Obergeschoss links in der Karl-Heine-Straße 12. Ich studiere Klavier an der Hochschule für Musik und Theater Leipzig und wende mich heute mit einer Bitte an Sie.\n\nNach Punkt 2 der Hausordnung, die als Anlage Teil unseres Mietvertrags ist, ist das Musizieren außerhalb der Ruhezeiten zwei Stunden täglich gestattet. Für mein Studium reicht diese Zeit leider nicht aus, weil ich täglich mindestens vier Stunden üben muss. Da die Hausordnung für Studierende an Musikhochschulen ausdrücklich eine abweichende Regelung vorsieht, möchte ich Sie um eine entsprechende Vereinbarung bitten.\n\nIch schlage folgende Übezeiten vor: werktags von 9 bis 12 Uhr und von 16 bis 18 Uhr, an Samstagen höchstens zwei Stunden am Vormittag. Die Ruhezeit am Mittag sowie an Sonn- und Feiertagen würde ich selbstverständlich einhalten. Außerdem habe ich bereits einen Teppich und eine Dämmplatte unter das Klavier gelegt, und die Fenster bleiben beim Üben geschlossen. Falls es dennoch zu Beschwerden kommt, bin ich gern bereit, die Zeiten gemeinsam mit den Nachbarn anzupassen.\n\nIch wäre Ihnen sehr dankbar, wenn wir diese Regelung schriftlich festhalten könnten, zum Beispiel als Nebenabrede zum Mietvertrag. Für ein persönliches Gespräch stehe ich Ihnen jederzeit zur Verfügung.\n\nMit freundlichen Grüßen\nElin Berg",
+  "modelSv": "Exempel: formellt brev med adress i form av Sehr geehrter Herr …, hänvisning till Hausordnung och Mietvertrag som källa, tydlig begäran, konkreta tider och åtgärder, erbjudande om samtal och formell hälsning."
+ },
+ {
+  "id": "w-s4-eroerterung",
+  "sec": "s4",
+  "title": "Erörterung: Faire Vergütung beim Streaming",
+  "task": "Skriv en Erörterung på tyska (200–350 ord): Verdienen Musikerinnen und Musiker beim Streaming genug, und sollte der Staat eingreifen? Källa: hänvisa allmänt till debatten om upphovsrätt och ersättningar (Tantiemen, Verwertungsgesellschaften). Stilnivå: saklig och formell. Väg argumenten och avsluta med din slutsats.",
+  "min": 200,
+  "max": 350,
+  "need": {
+   "connectors": 5,
+   "chapterWords": 3,
+   "tenses": [
+    "Präsens",
+    "Perfekt",
+    "Konjunktiv II"
+   ]
+  },
+  "model": "Streaming hat die Art, wie wir Musik hören, in wenigen Jahren grundlegend verändert. Für wenige Euro im Monat steht fast die gesamte Musikgeschichte zur Verfügung. Umstritten ist jedoch, ob die Urheber und ausübenden Musikerinnen und Musiker dabei angemessen vergütet werden.\n\nAuf der einen Seite hat das Streaming die illegale Nutzung deutlich verringert. Während um das Jahr 2005 viele Menschen Musik ohne Lizenz herunterluden, zahlen heute Millionen für ein Abonnement. Außerdem können auch unbekannte Künstler ihre Aufnahmen ohne Plattenfirma weltweit veröffentlichen. Insofern ist Streaming nicht nur eine Gefahr, sondern auch eine Chance.\n\nAuf der anderen Seite erhalten die meisten Musiker für einen einzelnen Abruf nur Bruchteile eines Cents. Weil die Einnahmen nach Marktanteilen verteilt werden, profitieren vor allem sehr erfolgreiche Stars, während die große Mehrheit kaum etwas verdient. Besonders benachteiligt sind Studiomusiker, die oft nur einmal bezahlt werden, obwohl ihre Aufnahmen jahrelang genutzt werden. Zudem gelten für die klassische Musik mit ihren langen Werken dieselben Regeln wie für einen dreiminütigen Popsong.\n\nMeiner Meinung nach sollte der Gesetzgeber deshalb eingreifen. Denkbar wäre zum Beispiel ein gesetzlicher Anspruch auf eine angemessene Beteiligung, der über die Verwertungsgesellschaften durchgesetzt wird, ähnlich wie bei den Tantiemen im Radio. Ein solcher Anspruch dürfte nicht vertraglich ausgeschlossen werden.\n\nZusammenfassend lässt sich festhalten, dass Streaming viele Vorteile bietet, die Einnahmen aber ungerecht verteilt sind. Eine faire Vergütung wäre nicht nur im Interesse der Musiker, sondern auch der Hörerinnen und Hörer, die auf neue Musik angewiesen sind.",
+  "modelSv": "Exempel: inledning om frågan, argument för streaming (mindre piratkopiering, nya möjligheter), argument mot (låg ersättning, ojämn fördelning), eget förslag med Konjunktiv II och kapitelord (Urheber, Lizenz, Anspruch, Tantieme, Verwertungsgesellschaft)."
  },
  {
   "id": "w-s5-eroerterung",
@@ -93,6 +241,43 @@
   "modelSv": "Exempel på en Erörterung med inledning, argument för och emot, avvägning och slutsats."
  },
  {
+  "id": "w-s5-grafik",
+  "sec": "s5",
+  "title": "Grafikbeskrivning: Wie finanziert sich ein Orchester?",
+  "task": "Beskriv uppgifterna i en sammanhängande text på tyska (200–280 ord), som i TestDaF. Einnahmen eines städtischen Orchesters (in Prozent): 2015: öffentliche Zuschüsse 82, Kartenverkauf 14, Sponsoring und Spenden 4. 2025: öffentliche Zuschüsse 76, Kartenverkauf 15, Sponsoring und Spenden 9. Källa: ange att det är exempeluppgifter från orkesterns årsredovisning. Stilnivå: saklig. Beskriv, jämför och ge möjliga orsaker.",
+  "min": 200,
+  "max": 280,
+  "need": {
+   "connectors": 4,
+   "chapterWords": 3,
+   "tenses": [
+    "Präsens",
+    "Präteritum"
+   ]
+  },
+  "model": "Die Grafik, die auf Beispielangaben aus dem Jahresbericht eines städtischen Orchesters beruht, zeigt, wie sich die Einnahmen des Orchesters zwischen 2015 und 2025 zusammensetzen. Die Angaben sind in Prozent gemacht.\n\nAuffällig ist zunächst, dass die öffentliche Hand in beiden Jahren den weitaus größten Teil des Etats trägt. Im Jahr 2015 stammten 82 Prozent der Einnahmen aus öffentlichen Zuschüssen, zehn Jahre später waren es noch 76 Prozent. Der Anteil ist also um sechs Prozentpunkte gesunken.\n\nIm Gegensatz dazu hat sich der Anteil von Sponsoring und Spenden mehr als verdoppelt: Er stieg von 4 auf 9 Prozent. Der Kartenverkauf blieb dagegen nahezu stabil und erhöhte sich nur geringfügig von 14 auf 15 Prozent.\n\nFür diese Entwicklung gibt es mehrere mögliche Erklärungen. Einerseits dürften viele Kommunen wegen hoher Verschuldung Sparmaßnahmen im Kulturhaushalt beschlossen haben. Andererseits haben sich viele Orchester in den letzten Jahren gezielt um private Förderer bemüht, zum Beispiel durch Freundeskreise oder Kooperationen mit Unternehmen. Dass die Ticketeinnahmen kaum gestiegen sind, könnte daran liegen, dass Orchester ihre Preise niedrig halten, um die kulturelle Teilhabe breiter Bevölkerungsgruppen nicht zu gefährden.\n\nZusammenfassend lässt sich festhalten, dass das Orchester zwar weiterhin überwiegend öffentlich finanziert wird, private Mittel aber an Bedeutung gewinnen. Ob diese Entwicklung die Unabhängigkeit der Orchester langfristig gefährdet, bleibt eine offene Frage.",
+  "modelSv": "Exempel: inledning med källa och vad grafiken visar, huvudtrenden med siffror och Prozentpunkte, jämförelse med im Gegensatz dazu och dagegen, möjliga orsaker med dürften och könnte, sammanfattning."
+ },
+ {
+  "id": "w-s5-foerderantrag",
+  "sec": "s5",
+  "title": "Formellt brev: Förderantrag an eine Stiftung",
+  "task": "Du och tre kamrater har grundat en stråkkvartett och vill göra en konsertturné på landsbygden. Skriv ett formellt följebrev på tyska (200–320 ord) till en stiftelse som stöder unga musiker. Källa: hänvisa till stiftelsens förderrichtlinien (villkor). Stilnivå: formell. Beskriv projektet, målgruppen, kostnaderna, er egen insats och vad ni ansöker om.",
+  "min": 200,
+  "max": 320,
+  "need": {
+   "connectors": 4,
+   "chapterWords": 3,
+   "tenses": [
+    "Präsens",
+    "Perfekt",
+    "Konjunktiv II"
+   ]
+  },
+  "model": "Sehr geehrte Damen und Herren,\n\nhiermit reichen wir, das Nordlicht-Quartett, einen Förderantrag für unser Projekt „Kammermusik aufs Land“ ein. Nach Ihren Förderrichtlinien unterstützt Ihre Stiftung junge Ensembles, die klassische Musik neuen Zielgruppen zugänglich machen. Genau das ist das Ziel unseres Vorhabens.\n\nUnser Quartett besteht seit 2024 aus vier Studierenden der Musikhochschule Lübeck. Wir haben bereits mehrere Konzerte in Hamburg und Kiel gegeben und im vergangenen Jahr einen Kammermusikwettbewerb gewonnen.\n\nIm kommenden Sommer möchten wir zehn Konzerte in kleinen Gemeinden in Schleswig-Holstein geben, in denen es kaum ein kulturelles Angebot gibt. Die Konzerte sollen in Kirchen, Schulen und Gemeindehäusern stattfinden, der Eintritt soll frei sein. Außerdem planen wir an jedem Ort eine Probe, bei der Schulklassen zuhören und Fragen stellen können. Damit möchten wir nicht nur Erwachsene, sondern vor allem Kinder und Jugendliche erreichen.\n\nDie Gesamtkosten belaufen sich nach unserer Kalkulation auf 12 000 Euro, vor allem für Reisekosten, Unterkunft und Honorare. Einen Eigenanteil von 3 000 Euro bringen wir durch eine Crowdfunding-Kampagne und Spenden aus unserem Freundeskreis auf. Deshalb beantragen wir bei Ihrer Stiftung einen Zuschuss von 9 000 Euro, um die verbleibende Finanzierungslücke zu schließen.\n\nDen ausführlichen Projektplan, den Finanzplan sowie Aufnahmen unseres Quartetts finden Sie in der Anlage. Wir würden uns sehr freuen, wenn Sie unseren Antrag positiv prüfen würden, und stehen für Rückfragen jederzeit zur Verfügung.\n\nMit freundlichen Grüßen\nim Namen des Nordlicht-Quartetts\nSara Lind",
+  "modelSv": "Exempel: formellt följebrev med hänvisning till Förderrichtlinien som källa, presentation av ensemblen, projektet och målgruppen, kalkyl med Eigenanteil och Finanzierungslücke, tydlig begäran och formell avslutning."
+ },
+ {
   "id": "w-s6-leserbrief",
   "sec": "s6",
   "title": "Insändare: sänkt rösträttsålder",
@@ -109,6 +294,43 @@
   },
   "model": "Zu Ihrem Artikel „Wählen ab 16?“ vom 12. März\n\nMit großem Interesse habe ich Ihren Beitrag über die Senkung des Wahlalters gelesen. Als Achtzehnjährige, die gerade zum ersten Mal wählen durfte, möchte ich mich dazu äußern.\n\nIch halte eine Senkung des Wahlalters auf 16 Jahre bei der Bundestagswahl für überfällig. Erstens sind Jugendliche von vielen politischen Entscheidungen besonders lange betroffen, etwa beim Klimaschutz oder bei der Rente. Zweitens dürfen Sechzehnjährige in mehreren Bundesländern bereits bei Landtagswahlen abstimmen, und die Erfahrungen sind durchaus positiv. Drittens könnte ein früheres Wahlrecht der Politikverdrossenheit entgegenwirken, weil Schulen das Thema dann im Unterricht behandeln würden.\n\nZwar wird oft eingewandt, junge Menschen seien noch nicht reif genug und ließen sich leicht beeinflussen. Dem ist jedoch entgegenzuhalten, dass auch viele Erwachsene ihre Entscheidung nicht besonders gründlich treffen. Außerdem zeigen Studien, dass die Wahlbeteiligung höher ist, wenn Menschen zum ersten Mal wählen, solange sie noch zu Hause wohnen.\n\nAbschließend möchte ich betonen, dass eine Demokratie davon lebt, dass möglichst viele Menschen mitentscheiden. Deshalb sollte der Bundestag das Wahlalter senken.\n\nLea Andersson, Hamburg",
   "modelSv": "Exempel på en insändare med hänvisning till artikeln, tes, argument, bemött motargument och avslutning."
+ },
+ {
+  "id": "w-s6-stellungnahme",
+  "sec": "s6",
+  "title": "Stellungnahme: Wahlrecht ab 16",
+  "task": "I Tyskland diskuteras om rösträttsåldern i förbundsdagsvalet ska sänkas till 16 år (i Europaparlamentsvalet och i vissa delstater gäller det redan). Skriv en Stellungnahme på tyska (200–350 ord) till en debattsida. Källa: hänvisa till att flera delstater redan har rösträtt från 16 i lokala val. Stilnivå: formell. Ta ställning, ge argument, bemöt ett motargument.",
+  "min": 200,
+  "max": 350,
+  "need": {
+   "connectors": 5,
+   "chapterWords": 3,
+   "tenses": [
+    "Präsens",
+    "Perfekt",
+    "Konjunktiv II"
+   ]
+  },
+  "model": "Sollen 16-Jährige den Bundestag wählen dürfen?\n\nBei der Europawahl durften 2024 in Deutschland erstmals auch 16-Jährige wählen, und mehrere Länder haben das Wahlalter bei Kommunal- oder Landtagswahlen bereits gesenkt. Für die Bundestagswahl gilt dagegen weiterhin die Grenze von 18 Jahren. Ich bin der Meinung, dass sie ebenfalls gesenkt werden sollte.\n\nErstens betreffen viele politische Entscheidungen junge Menschen länger als jede andere Gruppe. Das gilt für die Klimapolitik ebenso wie für die Verschuldung oder die Renten. Wer die Folgen am längsten tragen muss, sollte auch mitentscheiden dürfen.\n\nZweitens zeigen die Erfahrungen aus Österreich, wo 16-Jährige schon seit 2007 bundesweit wählen dürfen, dass das Interesse an Politik durch das Wahlrecht eher wächst. Wer in der Schule über Wahlprogramme und die Sitzverteilung im Parlament spricht und kurz darauf selbst wählen darf, erlebt Demokratie nicht nur als Unterrichtsstoff.\n\nGegner der Reform argumentieren, 16-Jährige seien noch nicht reif genug und ließen sich leicht beeinflussen. Dem ist entgegenzuhalten, dass auch viele Erwachsene ihre Entscheidung spontan oder aufgrund von Werbung treffen. Die politische Reife lässt sich nicht an einem Geburtsdatum messen. Zudem wäre es widersprüchlich, Jugendlichen die Wahl des Europäischen Parlaments zuzutrauen, die des Bundestages aber nicht.\n\nZusammenfassend würde eine Senkung des Wahlalters die Teilhabe und die Bürgerbeteiligung junger Menschen stärken und die Demokratie insgesamt lebendiger machen. Die Politik sollte diesen Schritt deshalb nicht länger aufschieben, obwohl er im Bundestag bisher auf Widerstand stößt.",
+  "modelSv": "Exempel: fråga som rubrik, bakgrund med källa (Europawahl, delstater), ståndpunkt, två numrerade argument (ett med exempel från Österrike), ett bemött motargument med Dem ist entgegenzuhalten och en slutsats."
+ },
+ {
+  "id": "w-s6-grafik",
+  "sec": "s6",
+  "title": "Grafikbeskrivning: Wahlbeteiligung nach Alter",
+  "task": "Beskriv uppgifterna i en sammanhängande text på tyska (200–280 ord), som i TestDaF. Wahlbeteiligung bei einer Landtagswahl nach Altersgruppen (Beispielzahlen, in Prozent): 18–24 Jahre: 58, 25–34: 61, 35–44: 66, 45–59: 72, 60–69: 78, 70 und älter: 74. Gesamt: 69. Källa: ange att det är exempeluppgifter från ett statistiskt ämbetsverk. Stilnivå: saklig. Beskriv, jämför och ge möjliga orsaker.",
+  "min": 200,
+  "max": 280,
+  "need": {
+   "connectors": 4,
+   "chapterWords": 3,
+   "tenses": [
+    "Präsens",
+    "Konjunktiv II"
+   ]
+  },
+  "model": "Das Balkendiagramm, dem Beispielzahlen eines statistischen Landesamtes zugrunde liegen, stellt die Wahlbeteiligung bei einer Landtagswahl nach Altersgruppen dar. Die Angaben sind in Prozent gemacht.\n\nInsgesamt lag die Wahlbeteiligung bei 69 Prozent. Aus der Grafik geht hervor, dass sie mit dem Alter zunächst stetig steigt. Während bei den 18- bis 24-Jährigen nur 58 Prozent ihre Stimme abgaben, waren es bei den 45- bis 59-Jährigen bereits 72 Prozent. Den Höchststand erreicht die Gruppe der 60- bis 69-Jährigen mit 78 Prozent. Bei den über 70-Jährigen geht die Beteiligung dagegen wieder leicht auf 74 Prozent zurück.\n\nDer Abstand zwischen der jüngsten und der aktivsten Gruppe beträgt somit 20 Prozentpunkte. Im Vergleich zum Durchschnittswert liegen alle Gruppen unter 45 Jahren unter, alle älteren über dem Mittelwert.\n\nFür diese Unterschiede gibt es mehrere mögliche Ursachen. Junge Menschen ziehen häufiger um und sind deshalb weniger in ihrer Kommune verankert. Außerdem fühlen sie sich von der Landespolitik oft weniger angesprochen, weil Themen wie Renten in Wahlprogrammen mehr Raum einnehmen als Bildung oder Wohnen. Der leichte Rückgang bei den Ältesten könnte dagegen mit gesundheitlichen Einschränkungen zusammenhängen.\n\nZusammenfassend lässt sich festhalten, dass die politische Teilhabe stark vom Alter abhängt. Wenn die Parteien jüngere Wählerinnen und Wähler gewinnen wollen, müssten sie deren Themen stärker berücksichtigen.",
+  "modelSv": "Exempel: källa och vad diagrammet visar, totalen, trenden med siffror (Höchststand, Prozentpunkte, Mittelwert), jämförelse med während och dagegen, möjliga orsaker och en slutsats i Konjunktiv II."
  },
  {
   "id": "w-s7-rede",
@@ -129,6 +351,43 @@
   "modelSv": "Exempel på ett tal med anekdot, retoriska frågor, anafor, bemött invändning och en appell på slutet."
  },
  {
+  "id": "w-s7-eroerterung",
+  "sec": "s7",
+  "title": "Erörterung: Soziale Medien stärker regulieren?",
+  "task": "Skriv en Erörterung på tyska (200–350 ord, TestDaF-stil): Sollten soziale Medien gesetzlich verpflichtet werden, Desinformation schneller zu löschen? Källa: hänvisa allmänt till EU:s regler för digitala plattformar. Stilnivå: saklig och formell. Väg argumenten för och emot och ta ställning.",
+  "min": 200,
+  "max": 350,
+  "need": {
+   "connectors": 5,
+   "chapterWords": 3,
+   "tenses": [
+    "Präsens",
+    "Perfekt",
+    "Konjunktiv II"
+   ]
+  },
+  "model": "In den letzten Jahren ist die Kritik an sozialen Netzwerken deutlich gewachsen. Die Europäische Union hat deshalb Regeln beschlossen, nach denen große Plattformen gegen illegale Inhalte vorgehen und über ihre Algorithmen Rechenschaft ablegen müssen. Es stellt sich jedoch die Frage, ob Plattformen darüber hinaus verpflichtet werden sollten, auch Desinformation schneller zu löschen.\n\nFür eine solche Pflicht spricht zunächst die Reichweite der Netzwerke. Eine Falschmeldung kann innerhalb weniger Stunden Millionen Menschen erreichen, während ein Faktencheck oft erst Tage später erscheint. Außerdem verdienen die Plattformen an der Aufmerksamkeit, die gerade reißerische und polemische Beiträge erzeugen. Wer daran verdient, sollte auch Verantwortung übernehmen.\n\nAndererseits gibt es gewichtige Einwände. Die Grenze zwischen einer bewussten Lüge, einem Irrtum und einer umstrittenen Meinung ist nicht immer klar. Wenn Unternehmen unter Zeitdruck und bei drohenden Strafen entscheiden müssen, besteht die Gefahr, dass sie im Zweifel zu viel löschen. Damit wäre die Redefreiheit bedroht, und private Konzerne hätten eine Deutungshoheit, die ihnen nicht zusteht. Zudem lassen sich viele Beiträge nicht ohne Kenntnis des Zusammenhangs bewerten.\n\nMeiner Meinung nach ist eine allgemeine Löschpflicht für Desinformation daher nicht der richtige Weg. Sinnvoller wäre es, strafbare Inhalte wie Hetze konsequent zu entfernen, bei anderen Beiträgen aber auf Transparenz zu setzen, zum Beispiel durch Hinweise auf unabhängige Faktenchecks. Nicht zuletzt muss die Medienkompetenz in Schulen gestärkt werden.\n\nZusammenfassend lässt sich sagen, dass Regulierung notwendig ist, aber die Freiheit der Rede nicht einschränken darf.",
+  "modelSv": "Exempel: inledning med källa (EU:s regler) och frågan, argument för (Reichweite, ansvar), argument emot (Redefreiheit, Deutungshoheit), egen ståndpunkt med mellanväg och en slutsats."
+ },
+ {
+  "id": "w-s7-zusammenfassung",
+  "sec": "s7",
+  "title": "Zusammenfassung: Wie Desinformation wirkt",
+  "task": "Sammanfatta lästexten \"Sachtext: Wie Desinformation wirkt\" i kapitel 7 på tyska (200–300 ord). Källa: ange titeln och textsorten. Stilnivå: neutral och saklig. Ta med definitionen, orsakerna, de retoriska teknikerna och motmedlen, men inga egna åsikter.",
+  "min": 200,
+  "max": 300,
+  "need": {
+   "connectors": 4,
+   "chapterWords": 3,
+   "tenses": [
+    "Präsens",
+    "Passiv"
+   ]
+  },
+  "model": "Der Sachtext „Wie Desinformation wirkt und was man dagegen tun kann“ erklärt, warum sich falsche Nachrichten verbreiten und wie man sich vor ihnen schützen kann.\n\nZunächst weist der Text darauf hin, dass es Propaganda und Gerüchte schon immer gegeben hat. Neu seien jedoch die Geschwindigkeit der Verbreitung und die Möglichkeit, Inhalte gezielt bestimmten Gruppen anzuzeigen. Außerdem wird zwischen Fehlinformation, die ohne Absicht weitergegeben wird, und Desinformation, die bewusst gestreut wird, unterschieden.\n\nDanach werden drei Gründe genannt, warum Menschen falschen Nachrichten glauben: Wir akzeptieren eher, was unsere Überzeugungen bestätigt, eine Behauptung wirkt durch Wiederholung glaubwürdiger, und emotionale Inhalte verbreiten sich schneller als sachliche.\n\nAnschließend beschreibt der Text typische Techniken der Manipulation, zum Beispiel die falsche Alternative, Zitate, die aus dem Zusammenhang gerissen werden, und Unterstellungen in Form scheinbar neutraler Fragen. Besonders wirksam seien Bilder und Videos, die heute auch mit künstlicher Intelligenz gefälscht werden können. Zudem verstärken die Algorithmen der Plattformen mit ihrer enormen Reichweite möglicherweise die sogenannte Filterblase, in der man nur noch ähnliche Meinungen wahrnimmt.\n\nAls Gegenmittel nennt der Text neben Faktenchecks vor allem die Vorbeugung: Wer typische Techniken kennt, ist weniger anfällig. Im Alltag solle man prüfen, wer die Quelle ist, wann ein Beitrag veröffentlicht wurde und welches Gefühl er auslösen will.\n\nAbschließend betont der Text, dass eine freie Presse und eine informierte Öffentlichkeit Grundlagen der Demokratie seien und Medienkompetenz daher auf allen Bildungsstufen vermittelt werden müsse.",
+  "modelSv": "Exempel: källa och ämne i första meningen, textens delar i samma ordning (definition, orsaker, tekniker, motmedel, slutsats), Konjunktiv I för textens påståenden och passiv (wird … unterschieden, werden … genannt)."
+ },
+ {
   "id": "w-s8-eroerterung",
   "sec": "s8",
   "title": "Erörterung: minneskultur utan tidsvittnen",
@@ -146,5 +405,43 @@
   },
   "model": "In wenigen Jahren wird es keine Zeitzeugen des Nationalsozialismus mehr geben. Viele Schülerinnen und Schüler haben noch Überlebende getroffen, die von Verfolgung und Deportation erzählt haben. Wie kann die Erinnerung lebendig bleiben, wenn diese persönlichen Begegnungen nicht mehr möglich sind?\n\nEine erste Möglichkeit sind Besuche in Gedenkstätten. Wer das ehemalige Konzentrationslager Buchenwald besucht, begreift die Dimension der Verbrechen anders als im Klassenzimmer. Allerdings reicht ein einzelner Besuch nicht aus, wenn er nicht gut vorbereitet und nachbereitet wird.\n\nZweitens können digitale Medien helfen. Schon heute werden Interviews mit Zeitzeugen aufgezeichnet, sodass auch künftige Generationen ihre Stimmen hören können. Manche Projekte ermöglichen sogar Gespräche mit einer Aufnahme, die auf Fragen antwortet. Kritiker befürchten jedoch, dass die Erinnerung dadurch zu einem technischen Erlebnis wird.\n\nDrittens sind lokale Projekte wie die Stolpersteine besonders wirkungsvoll. Wenn Jugendliche selbst die Biographie einer Nachbarin recherchieren, die deportiert wurde, wird Geschichte konkret und persönlich. Auch Konzerte mit Musik verfolgter Komponisten können Erinnerung stiften.\n\nWägt man diese Möglichkeiten ab, so zeigt sich, dass keine allein ausreicht. Entscheidend ist, dass Erinnerung nicht nur verordnet, sondern selbst erarbeitet wird. Deshalb sollten Schulen vor allem lokale und eigene Projekte fördern, die durch Gedenkstättenbesuche und digitale Zeugnisse ergänzt werden.",
   "modelSv": "Exempel på en Erörterung med tre möjligheter, deras gränser och en slutsats."
+ },
+ {
+  "id": "w-s8-stellungnahme",
+  "sec": "s8",
+  "title": "Stellungnahme: Straßen umbenennen?",
+  "task": "I din tyska studentstad diskuterar kommunfullmäktige att byta namn på en gata som är uppkallad efter en kompositör som var aktiv nationalsocialist. Skriv en Stellungnahme på tyska (200–350 ord) till lokaltidningen. Källa: hänvisa till debatten i kommunfullmäktige (Stadtrat). Stilnivå: formell. Ta ställning, väg argument och föreslå en lösning.",
+  "min": 200,
+  "max": 350,
+  "need": {
+   "connectors": 5,
+   "chapterWords": 3,
+   "tenses": [
+    "Präsens",
+    "Perfekt",
+    "Konjunktiv II"
+   ]
+  },
+  "model": "Stellungnahme zur Umbenennung der Komponistenstraße\n\nDer Stadtrat berät in diesen Wochen darüber, ob die Straße, die nach einem Komponisten benannt ist, der in der NS-Zeit ein überzeugter Nationalsozialist war und an der Gleichschaltung des Musiklebens mitgewirkt hat, umbenannt werden soll. Ich spreche mich für eine Umbenennung aus.\n\nEin Straßenname ist keine neutrale Adresse, sondern eine Ehrung. Wer eine Straße nach einem Menschen benennt, stellt ihn der Öffentlichkeit als Vorbild vor. Das ist bei einem Mann, der verfolgte Kollegen verdrängt und die Ideologie der Machthaber unterstützt hat, nicht mehr vertretbar, auch wenn seine Musik künstlerischen Wert haben mag.\n\nGegner der Umbenennung argumentieren, man dürfe die Geschichte nicht einfach auslöschen. Außerdem sei eine neue Adresse für Anwohner und Geschäfte mit Kosten und Aufwand verbunden. Diese Einwände nehme ich ernst. Dennoch überzeugt mich das erste Argument nicht, denn gerade das Verschweigen hat die Aufarbeitung in Deutschland jahrzehntelang behindert. Eine Umbenennung, die öffentlich diskutiert und begründet wird, ist keine Auslöschung, sondern ein Teil der Erinnerungsarbeit.\n\nIch schlage deshalb vor, die Straße nach einer Musikerin zu benennen, die in der NS-Zeit verfolgt wurde oder emigrieren musste. Zugleich sollte eine Gedenktafel an den alten Namen erinnern und erklären, warum er geändert wurde. So würde die Geschichte nicht verdrängt, sondern sichtbar gemacht. Die Kosten für die Anwohner sollte die Stadt übernehmen.\n\nZusammenfassend bin ich überzeugt, dass eine Stadt mit ihren Straßennamen zeigt, welche Werte sie vertritt. Die Umbenennung wäre deshalb ein wichtiges Zeichen.",
+  "modelSv": "Exempel: rubrik, bakgrund med källa (Stadtrat), ståndpunkt, argument (gatunamn som hedersbetygelse), återgivna motargument i Konjunktiv I och bemötande, konkret förslag (nytt namn, Gedenktafel) och slutsats."
+ },
+ {
+  "id": "w-s8-brief",
+  "sec": "s8",
+  "title": "Formellt brev: Anfrage an eine Gedenkstätte",
+  "task": "Du vill göra frivilligtjänst (Freiwilligendienst) ett år i en minnesplats (Gedenkstätte) i Tyskland innan du börjar studera. Skriv ett formellt brev på tyska (200–300 ord). Källa: hänvisa till minnesplatsens information om frivilligtjänst på webbplatsen. Stilnivå: formell. Presentera dig, motivera, beskriv vad du kan bidra med och ställ frågor.",
+  "min": 200,
+  "max": 300,
+  "need": {
+   "connectors": 4,
+   "chapterWords": 3,
+   "tenses": [
+    "Präsens",
+    "Perfekt",
+    "Konjunktiv II"
+   ]
+  },
+  "model": "Sehr geehrte Damen und Herren,\n\nauf Ihrer Internetseite habe ich gelesen, dass Ihre Gedenkstätte jedes Jahr Freiwillige aus dem In- und Ausland aufnimmt. Ich möchte mich hiermit für einen Freiwilligendienst ab September des kommenden Jahres bewerben.\n\nIch heiße Elin Berg, bin 19 Jahre alt und habe im Juni in Göteborg Abitur gemacht. Nach dem Freiwilligendienst möchte ich in Deutschland Musik studieren. Deutsch lerne ich seit sechs Jahren, zurzeit auf dem Niveau B2.\n\nMein Interesse an der Zeitgeschichte ist in der Schule entstanden, als wir ein Zeitzeugengespräch mit einer Überlebenden geführt haben. Seitdem beschäftige ich mich besonders mit der Verfolgung von Musikerinnen und Musikern, deren Werke als „entartete Musik“ verboten wurden. Ich halte Erinnerungsarbeit für unverzichtbar, weil Antisemitismus und Rechtsextremismus auch heute wieder zunehmen.\n\nBei Ihnen könnte ich zum Beispiel Besuchergruppen aus Skandinavien betreuen, bei der Übersetzung von Materialien ins Schwedische helfen oder Gedenkfeiern musikalisch mitgestalten, da ich Geige spiele. Darüber hinaus bin ich bereit, mich in jede Aufgabe einzuarbeiten, die anfällt.\n\nIch hätte noch zwei Fragen: Wird für die Freiwilligen eine Unterkunft gestellt, und gibt es vor Beginn ein Seminar zur Vorbereitung? Falls Sie weitere Unterlagen benötigen, schicke ich sie Ihnen gern zu.\n\nÜber eine positive Antwort würde ich mich sehr freuen.\n\nMit freundlichen Grüßen\nElin Berg",
+  "modelSv": "Exempel: formellt brev med källa (webbplatsen), presentation, motivering med kapitelord (Zeitgeschichte, Zeitzeugengespräch, entartete Musik, Erinnerungsarbeit, Gedenkfeier), vad hon kan bidra med, frågor och formell hälsning."
  }
 ]

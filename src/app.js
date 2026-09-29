@@ -127,7 +127,8 @@ const MASTER=4, MAXDUE=40;   // MAXDUE = högst så många repetitioner per pass
      st         berättelsernas luckor {tempus, bindeord: {r, n}}
      cu, wr     kulturuppgifter och skrivuppgifter som är klara, per id
      ut         uttal: bästa procent per id                     mal  lärandemål som bockats av {"<id>|<nr>": tid}
-     kt         kapitelprov per avsnitt {r, n, d, miss}         exam provträning {t: {<uppgift>: {pct, best, n, last}}, sims: [...]}
+     kt         kapitelprov per avsnitt {r, n, d, miss}         exam provträning {t: {<uppgift>: {pct, best, n, last}}, sims: [...], simRun}
+                simRun = pågående provsimulering {ids, i, res, ends, start, seen, cur}, tas bort när den är klar (70-exam.js)
      drafts     utkast till texter per uppgift                  fb   Claudes kommentarer per uppgift
      feedback, reports   Tyck till-meddelanden och felrapporter som inte kunde skickas (högst 50)
    Nya fält läggs till här och i docs/ARKITEKTUR.md. Ett fält som byter form får en ny migrering i MIGRATIONS. */
@@ -536,7 +537,20 @@ function check(input,accepted,stripPron){
 /* ---------- Hjälpare ---------- */
 const $=s=>document.querySelector(s);
 const app=$("#app");
-const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+// Text från datafilerna läggs alltid in i sidan med esc (ren text) eller safeHtml (text med lite formatering).
+const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+/* Fält som får innehålla lite HTML (ursprung och ordagrant i words.txt, t.ex. <b>accentus</b>): bara taggarna
+   b, i, em, strong, br, sup, sub och span släpps igenom, utan andra attribut än class på span. Allt annat blir text,
+   så att "a < b" syns som det står och <script> eller <img onerror> aldrig körs. Entiteter som &nbsp; behålls. */
+const SAFE_TAG=/^<(\/?)(b|i|em|strong|br|sup|sub|span)\b([^<>]*)>$/i;
+function safeHtml(s){
+  return String(s??"").split(/(<[^<>]*>)/).map(p=>{
+    const m=p[0]==="<"&&p.match(SAFE_TAG);
+    if(!m) return esc(p).replace(/&amp;(#\d+|#x[0-9a-f]+|[a-z]+);/gi,"&$1;");
+    const tag=m[2].toLowerCase(), cls=!m[1]&&tag==="span"&&m[3].match(/(?:^|\s)class="([\w -]*)"/);
+    return m[1]?`</${tag}>`:`<${tag}${cls?` class="${cls[1]}"`:""}>`;
+  }).join("");
+}
 const SPK='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18.5 5.5a9 9 0 0 1 0 13"/></svg>';
 const PLAY='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>';
 function shuffle(a){a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
@@ -544,9 +558,9 @@ const secName=id=>(SECTIONS.find(s=>s.id===id)||{}).name||"";
 // Genusnamn om kursen inte har egna (genders i lang.js), så att en ny kurs fungerar med bara de fält den måste ha
 const GENDER_NAMES={m:"maskulinum",f:"femininum",n:"neutrum",pl:"plural",mpl:"mask. plural",fpl:"fem. plural",npl:"neutr. plural"};
 const genderName=g=>(L.genders||GENDER_NAMES)[g]||g;
-const gtag=g=>g?`<span class="tag ${g[0]}">${genderName(g)}</span>`:"";
-const accentKeys=list=>list?`<div class="accents">${String(list).split(" ").filter(Boolean).map(c=>`<button type="button" data-c="${c}">${c}</button>`).join("")}</div>`:"";
-const lang=()=>`lang="${L.htmlLang||L.code}"`;
+const gtag=g=>g?`<span class="tag ${esc(g[0])}">${esc(genderName(g))}</span>`:"";
+const accentKeys=list=>list?`<div class="accents">${String(list).split(" ").filter(Boolean).map(c=>`<button type="button" data-c="${esc(c)}">${esc(c)}</button>`).join("")}</div>`:"";
+const lang=()=>`lang="${esc(L.htmlLang||L.code)}"`;
 
 // Valfria avsnitt (L.elective, t.ex. musikteorin) tas bara med när eleven väljer dem själv
 const isElective=id=>!!(L.elective&&L.elective.test.test(id||""));
@@ -580,7 +594,7 @@ function renderStart(){
   const newW=pickNew(), due=dueWords();
   const learned=WORDS.filter(isLearned).length, mastered=WORDS.filter(isMastered).length;
   const secOpt=s=>{const n=WORDS.filter(w=>w.sec===s.id&&!isLearned(w)).length;
-    return `<option value="${s.id}" ${n?"":"disabled"}>${esc(s.name)} · ${progLabel([s.id])}</option>`;};
+    return `<option value="${esc(s.id)}" ${n?"":"disabled"}>${esc(s.name)} · ${progLabel([s.id])}</option>`;};
   const elSecs=SECTIONS.filter(s=>isElective(s.id)), bookSecs=SECTIONS.filter(s=>s.book&&!isElective(s.id)), otherSecs=SECTIONS.filter(s=>!s.book&&!isElective(s.id));
   const opts=`<option value="auto">${hasBook()?"Kapitlet ni läser, sedan resten":L.nextLabel||"Nästa ord i ordlistan"}</option>`+(bookSecs.length
     ?`<optgroup label="Boken: ${esc(L.book?L.book.title:"")}">${bookSecs.map(secOpt).join("")}</optgroup><optgroup label="Allmänt">${otherSecs.map(secOpt).join("")}</optgroup>`
@@ -944,7 +958,7 @@ function renderLearn(){
       <div><p class="ex-t" ${lang()}>${esc(w.exT)}</p><p class="ex-sv">${esc(w.exSv)}</p></div>
       <button class="speak sm" id="sp-e" aria-label="Läs upp meningen">${SPK}</button>
     </div>
-    ${litHtml(w)}<p class="ety"><span class="label">${L.etyLabel||"Ursprung"}</span><br>${w.ety}</p>
+    ${litHtml(w)}<p class="ety"><span class="label">${esc(L.etyLabel||"Ursprung")}</span><br>${safeHtml(w.ety)}</p>
     <div class="navrow">
       <button class="btn ghost" id="prev" ${sess.i?"":"disabled"}>Tillbaka</button>
       <button class="btn" id="next">${sess.i===n-1?"Till quizet":"Nästa ord"}</button>
@@ -1034,7 +1048,7 @@ const backMsg=(ok,back)=>!back?"":`<p id="back">${ok
   :"Det kommer tillbaka som flerval i slutet."}</p>`;
 
 function renderMC(d){
-  app.innerHTML=`<section class="panel">${d.tab?`<span class="tab">${d.tab}</span>`:""}${progressHead()}
+  app.innerHTML=`<section class="panel">${d.tab?`<span class="tab">${esc(d.tab)}</span>`:""}${progressHead()}
     ${d.head}
     <p class="q-ask">${d.ask}</p>
     <div class="opts">${d.opts.map((o,i)=>`<button class="opt" data-i="${i}"><span class="k">${i+1}</span><span ${o.lang?lang():""}>${esc(o.label)}</span></button>`).join("")}</div>
@@ -1059,7 +1073,7 @@ function answerMC(i){
   $("#nx").onclick=nextQ; $("#nx").focus();
 }
 function renderType(d){
-  app.innerHTML=`<section class="panel">${d.tab?`<span class="tab">${d.tab}</span>`:""}${progressHead()}
+  app.innerHTML=`<section class="panel">${d.tab?`<span class="tab">${esc(d.tab)}</span>`:""}${progressHead()}
     ${d.head}
     <p class="q-ask">${d.ask}</p>
     <form id="f" autocomplete="off"><input class="answer-in" id="ans" ${lang()} autocapitalize="off" autocorrect="off" spellcheck="false" placeholder="${d.placeholder}"></form>
@@ -1091,12 +1105,15 @@ function answerType(){
   if(d.selfGrade&&res.r!=="right"&&res.r!=="accent") return selfGrade(d,res,inp);
   showTypeResult(d,res,inp);
 }
+// Facit: d.answer är alltid ren text och escapas här, på ett ställe. En typ som vill visa facit med formatering
+// (t.ex. IPA i en egen stil) sätter dessutom d.answerHtml och ansvarar själv för att den är escapad.
+const answerHtml=d=>d.answerHtml!=null?d.answerHtml:esc(d.answer);
 // Svar som inte kan rättas automatiskt: eleven jämför med facit och bedömer själv
 function selfGrade(d,res,inp){
   sess.grading=true; try{inp.blur()}catch(e){}   // siffrorna 1–3 väljer Fel/Nästan/Rätt (tangenterna gäller inte i textrutan)
   $("#submit").hidden=true; const a=app.querySelector(".accents"); if(a) a.hidden=true;
   $("#fb").innerHTML=`<div class="feedback near"><strong>Jämför med facit</strong>
-    <p>Facit: <b ${lang()}>${d.answer}</b></p>${res.html||""}
+    <p>Facit: <b ${lang()}>${answerHtml(d)}</b></p>${res.html||""}
     <p>Hur nära var du? Små skillnader i ordval kan också vara rätt.</p>
     <div class="grade"><button type="button" class="btn ghost" data-gr="wrong">Fel</button><button type="button" class="btn ghost" data-gr="near">Nästan</button><button type="button" class="btn" data-gr="right">Rätt</button></div></div>`;
   speak(d.say);
@@ -1111,7 +1128,7 @@ function showTypeResult(d,res,inp){
   const msg=res.self?{right:"Bra!",near:"Nästan. Den kommer tillbaka så att du får öva mer.",wrong:"Den kommer tillbaka så att du får öva mer."}[res.self]
     :{right:"Rätt!",accent:"Rätt, men titta på accenterna.",near:d.nearMsg||"Nästan! Ett stavfel.",wrong:"Inte riktigt."}[r];
   $("#fb").innerHTML=`<div class="feedback ${r==="right"?"ok":r==="wrong"&&res.self!=="near"?"bad":"near"}"><strong>${msg}</strong>
-    ${(r==="right"&&!d.alwaysAnswer)||res.self?"":`<p>Rätt svar: <b ${lang()}>${d.answer}</b></p>`}${res.self?"":res.html||""}${backMsg(ok,back)}${!ok&&d.wrongCard?d.wrongCard:d.explain}
+    ${(r==="right"&&!d.alwaysAnswer)||res.self?"":`<p>Rätt svar: <b ${lang()}>${answerHtml(d)}</b></p>`}${res.self?"":res.html||""}${backMsg(ok,back)}${!ok&&d.wrongCard?d.wrongCard:d.explain}
     ${!ok&&d.override&&!res.self?`<button class="override" id="ovr">Jag hade rätt</button>`:""}${reportBtn()}</div>`;
   $("#submit").textContent="Nästa"; $("#submit").focus();
   if(d.onAnswer) d.onAnswer(ok);
@@ -1123,7 +1140,7 @@ function showTypeResult(d,res,inp){
 const reportBtn=()=>`<button type="button" class="override" data-report>Fel i frågan? Rapportera</button>`;
 async function sendReport(btn){
   const c=sess&&sess.cur, d=sess&&sess.d; if(!c||btn.disabled) return;
-  const r={lang:L.code,id:itemId(c),kind:c.k||sess.kind,t:c.t,answer:String((d&&d.answer)||"").replace(/<[^>]+>/g,""),d:Date.now(),pass:S.pass};
+  const r={lang:L.code,id:itemId(c),kind:c.k||sess.kind,t:c.t,answer:String((d&&d.answer)||""),d:Date.now(),pass:S.pass};
   btn.disabled=true; btn.textContent="Skickar …";
   let ok=false;
   if(CLOUD.db&&CLOUD.uid){ try{ await CLOUD.db.doc(`reports/${CLOUD.uid}/items/${r.d}`).set({...r,uid:CLOUD.uid}); ok=true; }catch(e){} }
@@ -1165,10 +1182,10 @@ const studyCard=w=>`<div class="recap">
     <button type="button" class="speak sm" data-say="${esc(w.t)}" aria-label="Läs upp ordet">${SPK}</button></div>
   <div class="example"><div><p class="ex-t" ${lang()}>${esc(w.exT)}</p><p class="ex-sv">${esc(w.exSv)}</p></div>
     <button type="button" class="speak sm" data-say="${esc(w.exT)}" aria-label="Läs upp meningen">${SPK}</button></div>
-  ${litHtml(w)}${w.ety?`<p class="ety"><span class="label">${L.etyLabel||"Ursprung"}</span><br>${w.ety}</p>`:""}
+  ${litHtml(w)}${w.ety?`<p class="ety"><span class="label">${esc(L.etyLabel||"Ursprung")}</span><br>${safeHtml(w.ety)}</p>`:""}
   ${memoBox(w)}</div>`;
 // Fraser och talesätt: vad varje ord betyder ordagrant (sjunde fältet i words.txt), t.ex. "avoir – ha · le cafard – kackerlackan"
-function litHtml(w){ return w.lit?`<p class="ety lit"><span class="label">Ordagrant</span><br>${w.lit}</p>`:""; }
+function litHtml(w){ return w.lit?`<p class="ety lit"><span class="label">Ordagrant</span><br>${safeHtml(w.lit)}</p>`:""; }
 // Egen minnesregel: visas om den finns, och kan skrivas för ord man ofta glömmer
 function memoBox(w){
   const x=ws(w.id)||{}, m=x.memo||"";
@@ -1229,7 +1246,7 @@ defineKind("words",{name:"Glosor",
   type:c=>{const w=c.w;return{
     head:`<p class="q-prompt">${esc(w.sv)}</p>`,
     ask:`Skriv ${L.inLang} ${w.g?`(${genderName(w.g)})`:""}`, placeholder:"Skriv här", accents:L.accents,
-    accepted:variants(w.t), answer:esc(w.t), explain:explain(w), wrongCard:studyCard(w), say:w.t, override:true}}});
+    accepted:variants(w.t), answer:w.t, explain:explain(w), wrongCard:studyCard(w), say:w.t, override:true}}});
 
 /* ---------- Pass klart: schemaläggning ---------- */
 function applyAnswer(x,id){
@@ -1490,7 +1507,7 @@ function renderStats(){
     ${tenses.length?tenses.map(k=>meter(k,S.vt[k].r,S.vt[k].n)).join("")+
       `<p class="plan">Per verb: ${Object.keys(S.vv).map(v=>`${v} ${pct(S.vv[v].r,S.vv[v].n)}%`).join(" · ")}</p>`
       :`<p class="plan">Du har inte kört verbträningen än.</p>`}
-    <div class="games">${verbGames().map(g=>`<button class="btn ghost" data-g="${g.id}">Kör ${esc(g.name.toLowerCase())}</button>`).join("")}</div>
+    <div class="games">${verbGames().map(g=>`<button class="btn ghost" data-g="${esc(g.id)}">Kör ${esc(g.name.toLowerCase())}</button>`).join("")}</div>
   </section>`:""}`;
   if($("#drill")) $("#drill").onclick=()=>{
     $("#tabs").hidden=true;
@@ -1513,10 +1530,19 @@ function renderStats(){
 /* Kursens ord och innehåll ligger i en egen fil, data/<kod>.json, som hämtas första gången kursen väljs.
    I preview.html (och testerna) är datan inbakad, och då startar kursen direkt. */
 const LOADING={};
-// Datafilen innehåller words, content, videos och grammar (områden och regler). DATA_VERSION har ett hash per kurs,
-// så att en ny version av en kurs inte tvingar fram en ny hämtning av de andra kursernas filer.
-const DATA_KEYS={};
-function addCourseData(code,d){ DATA_KEYS[code]=Object.keys(d); Object.assign(LANGUAGES[code],d); return LANGUAGES[code]; }
+// Datafilen innehåller words, content, videos, grammar (områden och regler), plan och verbTables. DATA_VERSION har ett
+// hash per kurs, så att en ny version av en kurs inte tvingar fram en ny hämtning av de andra kursernas filer.
+// verbTables = verbtabellerna {sv, tenses, notes} ur languages/<kod>/verbs.json, där build.py redan har slagit ihop arvet
+// (extends/inherit). De läggs till i L.verbs (persons, prefix och games från lang.js) som ett nytt objekt, så att en
+// förälder som delar samma verbs-objekt inte ändras. LANG_VERBS har kvar lang.js-delen tills kursen släpps.
+const DATA_KEYS={}, LANG_VERBS={};
+const withVerbTables=(verbs,tables)=>tables?Object.assign({},verbs,tables):verbs;
+function addCourseData(code,d){
+  const x=LANGUAGES[code], {verbTables,...rest}=d;
+  DATA_KEYS[code]=Object.keys(rest); Object.assign(x,rest);
+  if(verbTables){ if(!(code in LANG_VERBS)) LANG_VERBS[code]=x.verbs; x.verbs=withVerbTables(LANG_VERBS[code],verbTables); }
+  return x;
+}
 function loadCourse(code){
   if(INLINE_DATA[code]) return Promise.resolve(addCourseData(code,INLINE_DATA[code]));
   const v=(DATA_VERSION&&typeof DATA_VERSION==="object"?DATA_VERSION[code]:DATA_VERSION)||"";
@@ -1525,12 +1551,13 @@ function loadCourse(code){
     .catch(e=>{delete LOADING[code]; throw e;});
 }
 /* Minne: hämtade kurser ligger kvar så att det går snabbt att byta tillbaka, men högst KEEP_COURSES stycken.
-   Den kurs som varit oanvänd längst släpps (ord, innehåll, grammatik och det som räknats fram ur dem) och hämtas
+   Den kurs som varit oanvänd längst släpps (ord, innehåll, grammatik, verbtabeller och det som räknats fram ur dem) och hämtas
    igen om eleven väljer den. Framstegen påverkas inte: de ligger i localStorage och i molnet, inte i LANGUAGES. */
 const KEEP_COURSES=3, USED_COURSES=[];
 function releaseCourse(code){
   const x=LANGUAGES[code]; if(!x||x===L) return;
   (DATA_KEYS[code]||["words","content","videos","grammar"]).forEach(k=>{ delete x[k]; });
+  if(code in LANG_VERBS){ x.verbs=LANG_VERBS[code]; delete LANG_VERBS[code]; }
   delete x.base; Object.keys(x).filter(k=>k[0]==="_").forEach(k=>{ delete x[k]; });
   delete LOADING[code]; delete DATA_KEYS[code];
 }

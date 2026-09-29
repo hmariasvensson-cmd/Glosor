@@ -41,7 +41,7 @@ LANGUAGES.de2 = {
 
   // Samma verbtabeller som Tyska 5, men bara presens och perfekt
   verbs: {
-    tenses: {$remove: ["Präteritum", "Konjunktiv I", "Konjunktiv II"]},
+    // Verbtabellerna (sv, tenses, notes) ligger i verbs.json, som build.py lägger i kursens datafil (ärvda tabeller slås ihop där).
     games: [
       {id: "pres", name: "Personböjning", sub: "Präsens: starka verb med vokalväxling och modalverb", tenses: ["Präsens"]},
       {id: "perf", name: "Perfekt", sub: "habe gemacht, bin gefahren, habe verstanden", tenses: ["Perfekt"]},

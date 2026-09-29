@@ -21,7 +21,7 @@ defineKind("verbs",{name:"Verb",
       explain:`<p>Rätt svar: <b ${lang()}>${esc(x.full)}</b></p><p>${esc(ruleFor(x))}</p>`, say:x.full, sayOnAnswer:true}},
   type:c=>{const x=c.c;return{tab:"Verb", head:verbHead(x),
     ask:`<b>${esc(x.person)}</b> · ${esc(x.tense)}`, placeholder:"Skriv verbformen", accents:L.verbAccents||L.accents,
-    accepted:conjVariants(x), strip:true, answer:esc(x.full), alwaysAnswer:true, nearMsg:"Nästan!",
+    accepted:conjVariants(x), strip:true, answer:x.full, alwaysAnswer:true, nearMsg:"Nästan!",
     explain:`<p>${esc(ruleFor(x))}</p>`, say:x.full}},
   restore:ref=>CONJBY[ref]?{c:CONJBY[ref],w:{id:ref}}:null,
   effect:(ref,ok)=>{const c=CONJBY[ref]; if(!c) return;

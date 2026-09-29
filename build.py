@@ -225,6 +225,48 @@ def check_question(q, where):
     return []
 
 
+def check_exam_task(t, where):
+    """Provuppgifter med type (SPEC överst i src/kinds/70-exam.js): para ihop, lucktext med flerval och kortsvar."""
+    typ = t.get("type")
+    if typ is None:
+        return []
+    if typ not in ("match", "gaps", "short"):
+        return [f"{where}: okänd type {typ!r} (match, gaps eller short)"]
+    errors, items = [], t.get("items")
+    if typ in ("match", "short") and (not isinstance(items, list) or not items):
+        return [f"{where}: type {typ} behöver items"]
+    if typ == "match":
+        opts = t.get("opts")
+        if not isinstance(opts, list) or len(opts) < 2:
+            return [f"{where}: para ihop behöver opts (minst två)"]
+        for i, it in enumerate(items):
+            a = it.get("a")
+            ok = isinstance(a, int) and not isinstance(a, bool) and (0 <= a < len(opts) or (a == -1 and "none" in t))
+            if not it.get("q") or not ok:
+                errors.append(f"{where} rad {i + 1}: behöver q och a = index i opts (eller -1 när uppgiften har none)")
+        used = [it.get("a") for it in items if isinstance(it.get("a"), int) and it.get("a") >= 0]
+        if not t.get("reuse") and len(used) != len(set(used)):
+            errors.append(f"{where}: samma alternativ är facit flera gånger (sätt reuse: true om det är meningen)")
+    elif typ == "short":
+        for i, it in enumerate(items):
+            a = it.get("a")
+            if not it.get("q") or not isinstance(a, list) or not a or not all(isinstance(x, str) and x.strip() for x in a):
+                errors.append(f"{where} fråga {i + 1}: kortsvar behöver q och a = lista med godkända svar")
+    else:
+        gaps, bank = t.get("gaps"), t.get("bank")
+        text = " ".join(str(ln.get("fr", "")) for ln in t.get("lines") or [] if isinstance(ln, dict))
+        marks = [int(m) for m in re.findall(r"\{(\d+)\}", text)]
+        if not isinstance(gaps, list) or not gaps:
+            return [f"{where}: lucktexten behöver gaps"]
+        if marks != list(range(1, len(gaps) + 1)):
+            errors.append(f"{where}: markörerna {{1}}, {{2}} … i lines ska komma i ordning, en per lucka ({len(gaps)} luckor, markörer {marks})")
+        for i, g in enumerate(gaps):
+            errors += check_question({"opts": bank, "a": g.get("a")} if bank is not None else g, f"{where} lucka {i + 1}")
+        if bank is not None and len({g.get("a") for g in gaps}) != len(gaps):
+            errors.append(f"{where}: samma ord i listan (bank) är facit i flera luckor")
+    return errors
+
+
 def check_content(content, section_ids, where, has_book=True):
     """Kontrollerar innehållet: facit inom alternativen, att avsnitten (sec) finns i words.txt och att glosorna finns i texten."""
     errors, warnings = [], []
@@ -250,6 +292,7 @@ def check_content(content, section_ids, where, has_book=True):
         for t in exam.get("tasks", []):
             for i, q in enumerate(t.get("qs") or []):
                 errors += check_question(q, f"{where}/content/exam.json: {t.get('id')} fråga {i + 1}")
+            errors += check_exam_task(t, f"{where}/content/exam.json: {t.get('id')}")
     missing_book = set()
     for kind, items in content.items():
         if kind == "grammar" or not isinstance(items, list):
@@ -382,6 +425,37 @@ def has_field(confs, code, field, seen=()):
                 and has_field(confs, m.group(1), field, seen + (code,)))
 
 
+def merge_inherited(base, own):
+    """Samma regler som mergeInherited i src/app.js: objekt slås ihop nyckel för nyckel (kursens egna värden vinner,
+    förälderns ordning behålls), {"$append": [...]} lägger till i förälderns lista och {"$remove": [nycklar]} tar bort nycklar."""
+    if own is None:
+        return base
+    if isinstance(own, dict) and isinstance(own.get("$append"), list):
+        return (base if isinstance(base, list) else []) + own["$append"]
+    if not isinstance(own, dict) or not isinstance(base, dict):
+        return own
+    drop, out = set(own.get("$remove", [])), {}
+    for k, v in base.items():
+        if k not in drop:
+            out[k] = merge_inherited(v, own[k]) if k in own else v
+    for k, v in own.items():
+        if k != "$remove" and k not in out:
+            out[k] = v
+    return out
+
+
+def resolve_verbs(confs, own, code, seen=()):
+    """Verbtabellerna (languages/<kod>/verbs.json: sv, tenses, notes) med arvet inräknat. Ärver kursen "verbs"
+    (extends + inherit) slås förälderns tabeller ihop med kursens egna, med samma regler som inheritCourses i app.js
+    använder för resten av verbs (persons, prefix, games) i lang.js. Tabellerna följer med kursens datafil (verbTables)."""
+    conf = confs.get(code, "")
+    m = re.search(r'^\s*extends:\s*"([^"]+)"', conf, re.M)
+    inh = re.search(r'^\s*inherit:\s*\[([^\]]*)\]', conf, re.M)
+    if m and inh and '"verbs"' in inh.group(1) and m.group(1) in confs and m.group(1) not in seen:
+        return merge_inherited(resolve_verbs(confs, own, m.group(1), seen + (code,)), own.get(code))
+    return own.get(code)
+
+
 def check_extends(confs):
     """extends/inherit i lang.js: kursen som ärvs från ska finnas, inga cirklar, och storageKey ärvs aldrig."""
     errors, parent = [], {}
@@ -507,6 +581,7 @@ def main():
         sys.exit("Hittade inga språk i languages/")
 
     lang_js, all_errors, course_data, confs, lock_writes, lock_notes, keys = [], [], {}, {}, {}, [], {}
+    own_verbs = {}   # languages/<kod>/verbs.json
     for code in codes:
         words, n_words, section_ids, errors, warnings, origin = read_words(code)
         n_sections = len(section_ids)
@@ -562,6 +637,18 @@ def main():
                 grammar = json.loads(gfile.read_text(encoding="utf-8"))
             except json.JSONDecodeError as e:
                 all_errors.append(f"languages/{code}/grammar.json: {e}")
+        # Verbtabellerna (sv, tenses, notes) ligger i verbs.json och följer med datafilen (verbTables), inte index.html
+        vfile = LANG_DIR / code / "verbs.json"
+        if vfile.exists():
+            try:
+                own_verbs[code] = json.loads(vfile.read_text(encoding="utf-8"))
+                bad = [k for k in own_verbs[code] if k not in ("sv", "tenses", "notes")]
+                if bad:
+                    all_errors.append(f"languages/{code}/verbs.json: bara sv, tenses och notes (inte {', '.join(bad)})")
+            except (json.JSONDecodeError, TypeError) as e:
+                all_errors.append(f"languages/{code}/verbs.json: {e}")
+        if re.search(r"^\s*(tenses|notes)\s*:", conf, re.M):
+            all_errors.append(f"languages/{code}/lang.js: verbtabellerna (sv, tenses, notes) ska ligga i languages/{code}/verbs.json")
         if re.search(r"^\s*grammar\s*:", conf, re.M):
             all_errors.append(f"languages/{code}/lang.js: grammar ska ligga i languages/{code}/grammar.json")
         if content:
@@ -606,6 +693,16 @@ def main():
 
     all_errors += [f"storageKey '{k}' används av flera kurser: {', '.join(cs)}" for k, cs in keys.items() if len(cs) > 1]
     all_errors += check_extends(confs)
+    for code in codes:   # verbtabellerna med arvet inräknat, i kursens datafil
+        tables = resolve_verbs(confs, own_verbs, code)
+        if tables:
+            if not has_field(confs, code, "verbs"):
+                all_errors.append(f"languages/{code}/verbs.json: kursen har verbtabeller men inget verbs (persons, prefix, games) i lang.js")
+            elif not isinstance(tables.get("tenses"), dict) or not tables["tenses"]:
+                all_errors.append(f"languages/{code}/verbs.json: tenses saknas (egna eller ärvda)")
+            course_data[code]["verbTables"] = tables
+        elif has_field(confs, code, "verbs"):
+            all_errors.append(f"languages/{code}/lang.js: verbs utan verbtabeller (lägg sv, tenses och notes i languages/{code}/verbs.json eller ärv dem)")
     upcoming = []
     if (LANG_DIR / "upcoming.json").exists():
         try:
@@ -661,7 +758,7 @@ def main():
     (DIST / "preview.html").write_text(SKELETON_HEAD + preview + "\n</body></html>\n", encoding="utf-8")
     print(f"Klart: dist/index.html ({len(html.encode()) // 1024} kB) och dist/data/ ("
           + ", ".join(f"{c} {len(data_json[c].encode()) // 1024} kB" for c in codes) + ")")
-    # Sidan laddas på telefon: varna innan index.html eller en datafil växer förbi gränserna (2026-09-29: 356 kB, som mest 1 409 kB)
+    # Sidan laddas på telefon: varna innan index.html eller en datafil växer förbi gränserna (2026-09-29: 456 kB före och cirka 370 kB efter att verbtabellerna flyttats till datafilerna)
     if len(html.encode()) > MAX_PAGE_KB * 1024:
         print(f"Varning: dist/index.html är större än {MAX_PAGE_KB} kB; flytta data från lang.js till datafilen eller dela upp koden")
     for c in codes:
@@ -671,3 +768,6 @@ def main():
 
 if __name__ == "__main__":
     main()
+    if "--tackning" in sys.argv:   # valfritt: ordtäckningen i texterna -> docs/tackning.md (tools/tackning.py)
+        import subprocess
+        subprocess.run([sys.executable, str(ROOT / "tools" / "tackning.py")], check=False)

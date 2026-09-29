@@ -1,18 +1,19 @@
 {
   "topics": [
-    {"id": "adj", "name": "Adjektivändelser", "sub": "einen neuen Plan, mit dem neuen Plan …"},
-    {"id": "praep", "name": "Kasus efter preposition", "sub": "Wo? eller wohin? Dativ eller ackusativ."},
-    {"id": "bisatz", "name": "Bisatsordföljd", "sub": "Sätt ihop meningar med weil, deshalb och denn."},
-    {"id": "relativ", "name": "Relativsatser", "sub": "der Mann, mit dem ich spreche"},
-    {"id": "verbprep", "name": "Verb med preposition", "sub": "warten auf, sich freuen über – darauf, worauf"},
-    {"id": "konj", "name": "Konjunktiv", "sub": "Wenn ich Zeit hätte … och indirekt tal: Er sagt, er sei müde."},
-    {"id": "passiv", "name": "Passiv", "sub": "wird gebaut, wurde gebaut, muss gebaut werden"},
-    {"id": "zuinf", "name": "zu-infinitiv", "sub": "um … zu, damit, ohne … zu"},
-    {"id": "perfekt", "name": "Perfekt: haben eller sein?", "sub": "Ich bin eingeschlafen. Nachdem ich gegessen hatte …"},
-    {"id": "bindeord", "name": "Bindeord och ordföljd", "sub": "obwohl, trotzdem, deshalb, denn"},
-    {"id": "gen", "name": "Genitiv och n-deklination", "sub": "wegen des Streiks, trotz des Wetters, den Kollegen, Herrn Weber"},
-    {"id": "partizip", "name": "Particip som adjektiv", "sub": "die steigenden Preise, der seit Jahren geplante Umbau"},
-    {"id": "zweiteilig", "name": "Tvådelade bindeord", "sub": "sowohl … als auch, weder … noch, je … desto"},
+    {"id": "adj", "name": "Adjektivändelser", "sub": "einen neuen Plan, mit dem neuen Plan …", "secs": ["d1", "d6"]},
+    {"id": "praep", "name": "Kasus efter preposition", "sub": "Wo? eller wohin? Dativ eller ackusativ.", "secs": ["d2", "d8"]},
+    {"id": "bisatz", "name": "Bisatsordföljd", "sub": "Sätt ihop meningar med weil, deshalb och denn.", "secs": ["d1", "d5"]},
+    {"id": "relativ", "name": "Relativsatser", "sub": "der Mann, mit dem ich spreche", "secs": ["d2", "d6"]},
+    {"id": "verbprep", "name": "Verb med preposition", "sub": "warten auf, sich freuen über – darauf, worauf", "secs": ["d1", "d4", "d7", "dv"]},
+    {"id": "konj", "name": "Konjunktiv", "sub": "Wenn ich Zeit hätte … och indirekt tal: Er sagt, er sei müde.", "secs": ["d3", "d5", "d7"]},
+    {"id": "passiv", "name": "Passiv", "sub": "wird gebaut, wurde gebaut, muss gebaut werden", "secs": ["d4", "d5"]},
+    {"id": "zuinf", "name": "zu-infinitiv", "sub": "um … zu, damit, ohne … zu", "secs": ["d2", "d3"]},
+    {"id": "perfekt", "name": "Perfekt: haben eller sein?", "sub": "Ich bin eingeschlafen. Nachdem ich gegessen hatte …", "secs": ["d1", "d8"]},
+    {"id": "futur", "name": "Futur I och II", "sub": "Es wird teurer werden. Er wird es vergessen haben.", "secs": ["d2", "d4"]},
+    {"id": "bindeord", "name": "Bindeord och ordföljd", "sub": "obwohl, trotzdem, deshalb, denn", "secs": ["d5", "dr"]},
+    {"id": "gen", "name": "Genitiv och n-deklination", "sub": "wegen des Streiks, trotz des Wetters, den Kollegen, Herrn Weber", "secs": ["d6", "d7"]},
+    {"id": "partizip", "name": "Particip som adjektiv", "sub": "die steigenden Preise, der seit Jahren geplante Umbau", "secs": ["d5", "d7"]},
+    {"id": "zweiteilig", "name": "Tvådelade bindeord", "sub": "sowohl … als auch, weder … noch, je … desto", "secs": ["d5", "d8"]},
     {"id": "err", "name": "Hitta felet", "sub": "En mening har ett fel. Vilket ord?"}
   ],
   "rules": {
@@ -66,7 +67,11 @@
     "pz-rel": "Relativsats → particip",
     "zt-par": "sowohl, weder, entweder, nicht nur",
     "zt-kontrast": "zwar … aber, einerseits … andererseits",
-    "zt-je": "je … desto"
+    "zt-je": "je … desto",
+    "fu-1": "Futur I: plan och förutsägelse",
+    "fu-2": "Futur II: klart i framtiden",
+    "fu-verm": "Antagande om nuet: wird wohl …",
+    "fu-verm2": "Antagande om det som hänt: wird … haben"
   },
   "adj": {"adjectives": ["neu", "wichtig", "bekannt", "typisch", "groß", "aktuell", "gut"], "frames": {"nom": ["{A} {ADJ} {N} ist wichtig.", "Das ist {A} {ADJ} {N}."], "akk": ["Wir sprechen über {A} {ADJ} {N}.", "Es geht um {A} {ADJ} {N}."], "dat": ["Das hat mit {A} {ADJ} {N} zu tun.", "Wir beginnen mit {A} {ADJ} {N}."]}}
 }

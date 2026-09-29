@@ -57,7 +57,7 @@ const ipaMC=c=>{const [id,f]=c.ref.split("|"), x=ipaById(id);
     wire:()=>app.querySelectorAll(".opt span:last-child").forEach(s=>s.style.fontFamily="'Charis SIL','Doulos SIL','Gentium Plus','Lucida Grande','Segoe UI',sans-serif")};};
 const ipaType=c=>{const x=ipaById(c.ref.split("|")[0]);
   return{tab:"IPA",head:ipaHeadFr(x),ask:"Skriv transkriptionen i IPA.",placeholder:"/…/",accents:IPA_KEYS,
-    accepted:[x.ipa],check:v=>({r:ipaCheck(v,x)}),answer:ipaShow(x.ipa),explain:x.why?`<p>${rmark(x.why)}</p>`:"",say:x.fr,autoplay:true,override:true,
+    accepted:[x.ipa],check:v=>({r:ipaCheck(v,x)}),answer:x.ipa,answerHtml:ipaShow(x.ipa),explain:x.why?`<p>${rmark(x.why)}</p>`:"",say:x.fr,autoplay:true,override:true,
     wire:()=>{ const inp=$("#ans");
       if($("#sp")) $("#sp").onclick=()=>speak(x.fr);
       // Knapparna: tecken som ɑ̃ är två kodpunkter, så markören flyttas hela teckenlängden

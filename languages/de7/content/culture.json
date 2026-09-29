@@ -108,6 +108,65 @@
   "modelSv": "Exempelsvar."
  },
  {
+  "id": "c-s3-maxplanck",
+  "sec": "s3",
+  "title": "Die Max-Planck-Gesellschaft",
+  "lines": [
+   {
+    "fr": "Die Max-Planck-Gesellschaft wurde 1948 gegründet und ist nach dem Physiker Max Planck benannt, der 1918 den Nobelpreis erhielt.",
+    "sv": "Max-Planck-sällskapet grundades 1948 och är uppkallat efter fysikern Max Planck, som fick Nobelpriset 1918."
+   },
+   {
+    "fr": "Sie betreibt heute mehr als 80 Institute, an denen vor allem Grundlagenforschung betrieben wird, also Forschung ohne unmittelbaren praktischen Zweck.",
+    "sv": "I dag driver det över 80 institut där man främst bedriver grundforskning, alltså forskning utan omedelbart praktiskt syfte."
+   },
+   {
+    "fr": "Finanziert wird sie überwiegend von Bund und Ländern, sie ist aber als gemeinnütziger Verein organisiert und entscheidet selbst über ihre Forschungsthemen.",
+    "sv": "Det finansieras till största delen av förbundsstaten och delstaterna men är organiserat som en allmännyttig förening och bestämmer själv över sina forskningsämnen."
+   },
+   {
+    "fr": "Für Musikinteressierte besonders spannend ist das Max-Planck-Institut für empirische Ästhetik in Frankfurt am Main, das untersucht, wie Menschen Musik, Sprache und Kunst wahrnehmen. Es besitzt sogar einen eigenen Konzertsaal für Experimente mit Publikum.",
+    "sv": "För musikintresserade är Max-Planck-institutet för empirisk estetik i Frankfurt am Main särskilt spännande: det undersöker hur människor uppfattar musik, språk och konst. Det har till och med en egen konsertsal för experiment med publik."
+   }
+  ],
+  "gloss": {
+   "grundlagenforschung": {
+    "t": "die Grundlagenforschung",
+    "sv": "grundforskning",
+    "g": "f"
+   },
+   "überwiegend": {
+    "t": "überwiegend",
+    "sv": "övervägande, till största delen",
+    "g": ""
+   },
+   "wahrnehmen": {
+    "t": "wahrnehmen",
+    "sv": "uppfatta",
+    "g": ""
+   },
+   "gemeinnütziger": {
+    "t": "gemeinnützig",
+    "sv": "allmännyttig",
+    "g": ""
+   }
+  },
+  "q": {
+   "q": "Was wird an den Max-Planck-Instituten vor allem betrieben?",
+   "opts": [
+    "Angewandte Forschung für Unternehmen",
+    "Grundlagenforschung",
+    "Lehre für Studierende",
+    "Musikunterricht"
+   ],
+   "a": 1,
+   "why": "… an denen vor allem Grundlagenforschung betrieben wird."
+  },
+  "ask": "Und in Schweden? Skriv 2–3 meningar på tyska: vem finansierar forskning i Sverige, och finns det forskning om musik?",
+  "model": "In Schweden wird die Forschung vor allem an den Universitäten betrieben und zum großen Teil vom Staat finanziert, zum Beispiel über den Vetenskapsrådet. Außerdem gibt es private Stiftungen, die Forschung fördern. Musikforschung gibt es etwa an den Universitäten in Uppsala, Stockholm und Göteborg.",
+  "modelSv": "Exempelsvar."
+ },
+ {
   "id": "c-s4-gema",
   "sec": "s4",
   "title": "Die GEMA",
@@ -159,6 +218,188 @@
   },
   "ask": "Und in Schweden? Skriv 2–3 meningar på tyska: vad gör STIM, och vad tycker du om att man betalar för musik på offentliga platser?",
   "model": "In Schweden übernimmt STIM die gleiche Aufgabe wie die GEMA. Wer zum Beispiel in einem Café Musik spielt, muss eine Lizenz bezahlen. Ich finde das gerecht, denn Komponisten müssen von ihrer Arbeit leben können.",
+  "modelSv": "Exempelsvar."
+ },
+ {
+  "id": "c-s5-orchesterlandschaft",
+  "sec": "s5",
+  "title": "Die deutsche Orchesterlandschaft",
+  "lines": [
+   {
+    "fr": "In Deutschland gibt es rund 130 öffentlich finanzierte Berufsorchester, mehr als in jedem anderen Land der Welt.",
+    "sv": "I Tyskland finns omkring 130 offentligt finansierade yrkesorkestrar, fler än i något annat land i världen."
+   },
+   {
+    "fr": "Viele von ihnen sind Theaterorchester, die in Oper, Ballett und Konzerten spielen, auch in mittelgroßen Städten wie Coburg, Gera oder Detmold.",
+    "sv": "Många av dem är teaterorkestrar som spelar i opera, balett och konserter, även i medelstora städer som Coburg, Gera och Detmold."
+   },
+   {
+    "fr": "Diese Dichte hat historische Gründe: Bis 1871 bestand Deutschland aus zahlreichen Fürstentümern, und fast jeder Hof unterhielt eine eigene Hofkapelle und ein Theater.",
+    "sv": "Tätheten har historiska orsaker: fram till 1871 bestod Tyskland av en mängd furstendömen, och nästan varje hov höll sig med ett eget hovkapell och en teater."
+   },
+   {
+    "fr": "2014 wurde die deutsche Theater- und Orchesterlandschaft in das bundesweite Verzeichnis des immateriellen Kulturerbes der UNESCO-Kommission aufgenommen. Trotzdem wurden seit 1990 zahlreiche Orchester aus Kostengründen fusioniert oder aufgelöst.",
+    "sv": "2014 upptogs det tyska teater- och orkesterlandskapet i den tyska förteckningen över immateriellt kulturarv. Ändå har sedan 1990 ett stort antal orkestrar slagits samman eller lagts ned av kostnadsskäl."
+   }
+  ],
+  "gloss": {
+   "berufsorchester": {
+    "t": "das Berufsorchester",
+    "sv": "yrkesorkester",
+    "g": "n"
+   },
+   "fürstentümern": {
+    "t": "das Fürstentum",
+    "sv": "furstendöme",
+    "g": "n"
+   },
+   "hofkapelle": {
+    "t": "die Hofkapelle",
+    "sv": "hovkapell",
+    "g": "f"
+   },
+   "kulturerbes": {
+    "t": "das Kulturerbe",
+    "sv": "kulturarv",
+    "g": "n"
+   },
+   "fusioniert": {
+    "t": "fusionieren",
+    "sv": "slå samman",
+    "g": ""
+   }
+  },
+  "q": {
+   "q": "Warum gibt es in Deutschland so viele Orchester?",
+   "opts": [
+    "Weil die Karten sehr teuer sind",
+    "Weil fast jeder Fürstenhof früher eine eigene Kapelle hatte",
+    "Weil die UNESCO sie bezahlt",
+    "Weil es erst seit 1990 Orchester gibt"
+   ],
+   "a": 1,
+   "why": "Bis 1871 bestand Deutschland aus zahlreichen Fürstentümern, und fast jeder Hof unterhielt eine eigene Hofkapelle."
+  },
+  "ask": "Und in Schweden? Skriv 2–3 meningar på tyska: hur många professionella orkestrar känner du till i Sverige, och vem betalar dem?",
+  "model": "In Schweden gibt es deutlich weniger Berufsorchester, zum Beispiel die Königliche Hofkapelle in Stockholm, die Göteborger Symphoniker und das Sinfonieorchester des Schwedischen Rundfunks. Die meisten werden von den Regionen, den Städten oder dem Staat finanziert. Eine so dichte Orchesterlandschaft wie in Deutschland gibt es bei uns nicht, weil Schweden nie in viele kleine Fürstentümer geteilt war.",
+  "modelSv": "Exempelsvar."
+ },
+ {
+  "id": "c-s6-grundgesetz",
+  "sec": "s6",
+  "title": "Kunstfreiheit im Grundgesetz",
+  "lines": [
+   {
+    "fr": "Das Grundgesetz der Bundesrepublik Deutschland trat am 23. Mai 1949 in Kraft. Die ersten 19 Artikel enthalten die Grundrechte.",
+    "sv": "Förbundsrepubliken Tysklands grundlag trädde i kraft den 23 maj 1949. De första 19 artiklarna innehåller grundrättigheterna."
+   },
+   {
+    "fr": "In Artikel 5 Absatz 3 heißt es: „Kunst und Wissenschaft, Forschung und Lehre sind frei.“ Die Freiheit der Lehre, so der Artikel weiter, entbindet aber nicht von der Treue zur Verfassung.",
+    "sv": "I artikel 5 stycke 3 står det: \"Konst och vetenskap, forskning och undervisning är fria.\" Undervisningens frihet befriar dock, fortsätter artikeln, inte från troheten mot författningen."
+   },
+   {
+    "fr": "Die Kunstfreiheit gilt ohne Gesetzesvorbehalt, das heißt, sie darf nicht einfach durch ein Gesetz eingeschränkt werden. Grenzen findet sie nur in anderen Grundrechten, etwa im Persönlichkeitsrecht.",
+    "sv": "Konstens frihet gäller utan lagförbehåll, det vill säga den får inte begränsas bara genom en lag. Gränser har den bara i andra grundrättigheter, till exempel i personlighetsrätten."
+   },
+   {
+    "fr": "Diese starke Stellung ist eine Reaktion auf die NS-Zeit, in der Kunst gleichgeschaltet und als „entartet“ verfolgt wurde. Über Streitfälle entscheidet das Bundesverfassungsgericht in Karlsruhe.",
+    "sv": "Denna starka ställning är en reaktion på nazitiden, då konsten likriktades och förföljdes som \"entartet\". Tvister avgörs av författningsdomstolen i Karlsruhe."
+   }
+  ],
+  "gloss": {
+   "grundrechte": {
+    "t": "die Grundrechte",
+    "sv": "grundläggande rättigheter",
+    "g": "pl"
+   },
+   "entbindet": {
+    "t": "entbinden von",
+    "sv": "befria från",
+    "g": ""
+   },
+   "gesetzesvorbehalt": {
+    "t": "der Gesetzesvorbehalt",
+    "sv": "lagförbehåll",
+    "g": "m"
+   },
+   "persönlichkeitsrecht": {
+    "t": "das Persönlichkeitsrecht",
+    "sv": "personlighetsrätt",
+    "g": "n"
+   }
+  },
+  "q": {
+   "q": "Wo findet die Kunstfreiheit ihre Grenzen?",
+   "opts": [
+    "In jedem neuen Gesetz",
+    "In anderen Grundrechten",
+    "In der Meinung der Regierung",
+    "Sie hat keine Grenzen"
+   ],
+   "a": 1,
+   "why": "Grenzen findet sie nur in anderen Grundrechten, etwa im Persönlichkeitsrecht."
+  },
+  "ask": "Und in Schweden? Skriv 2–3 meningar på tyska: hur skyddas yttrandefrihet och konstnärlig frihet i Sverige?",
+  "model": "In Schweden gibt es vier Grundgesetze, darunter das Pressefreiheitsgesetz von 1766 und das Grundgesetz über die Meinungsfreiheit. Eine ausdrückliche Kunstfreiheit wie in Deutschland steht nicht in der Verfassung, aber die Meinungsfreiheit schützt auch künstlerische Äußerungen. Ein eigenes Verfassungsgericht wie in Karlsruhe gibt es bei uns nicht.",
+  "modelSv": "Exempelsvar."
+ },
+ {
+  "id": "c-s7-unwort",
+  "sec": "s7",
+  "title": "Das Unwort des Jahres",
+  "lines": [
+   {
+    "fr": "Seit 1991 wählt eine unabhängige Jury aus Sprachwissenschaftlerinnen, Sprachwissenschaftlern und einer Journalistin oder einem Journalisten jedes Jahr ein „Unwort des Jahres“.",
+    "sv": "Sedan 1991 väljer en oberoende jury av språkvetare och en journalist varje år ett \"Årets ovärdiga ord\"."
+   },
+   {
+    "fr": "Gesucht werden Wörter und Formulierungen aus der öffentlichen Sprache, die gegen die Menschenwürde verstoßen, diskriminieren oder Sachverhalte verschleiern.",
+    "sv": "Man söker ord och formuleringar från det offentliga språket som kränker människovärdet, diskriminerar eller döljer sakförhållanden."
+   },
+   {
+    "fr": "Vorschläge kann jeder einreichen; jedes Jahr gehen mehrere tausend Einsendungen ein. Die Entscheidung wird im Januar bekannt gegeben.",
+    "sv": "Förslag kan vem som helst skicka in; varje år kommer flera tusen bidrag in. Beslutet offentliggörs i januari."
+   },
+   {
+    "fr": "Die Aktion versteht sich als Sprachkritik: Sie will zeigen, wie Euphemismen und abwertende Begriffe unser Denken beeinflussen. Daneben wählt die Gesellschaft für deutsche Sprache in Wiesbaden seit 1977 ein „Wort des Jahres“.",
+    "sv": "Aktionen ser sig som språkkritik: den vill visa hur eufemismer och nedsättande begrepp påverkar vårt tänkande. Vid sidan av det väljer Gesellschaft für deutsche Sprache i Wiesbaden sedan 1977 ett \"Årets ord\"."
+   }
+  ],
+  "gloss": {
+   "menschenwürde": {
+    "t": "die Menschenwürde",
+    "sv": "människovärde",
+    "g": "f"
+   },
+   "verschleiern": {
+    "t": "verschleiern",
+    "sv": "beslöja, dölja",
+    "g": ""
+   },
+   "einsendungen": {
+    "t": "die Einsendung",
+    "sv": "inskickat bidrag",
+    "g": "f"
+   },
+   "abwertende": {
+    "t": "abwertend",
+    "sv": "nedsättande",
+    "g": ""
+   }
+  },
+  "q": {
+   "q": "Welche Wörter werden als „Unwort“ gesucht?",
+   "opts": [
+    "Besonders lange Wörter",
+    "Wörter, die diskriminieren oder Sachverhalte verschleiern",
+    "Neue Wörter aus dem Englischen",
+    "Wörter aus Dialekten"
+   ],
+   "a": 1,
+   "why": "… die gegen die Menschenwürde verstoßen, diskriminieren oder Sachverhalte verschleiern."
+  },
+  "ask": "Und in Schweden? Skriv 2–3 meningar på tyska: finns det något liknande i Sverige, till exempel en lista över nya ord?",
+  "model": "In Schweden veröffentlicht der Sprachrat, das Institut für Sprache und Folklore, zusammen mit der Zeitschrift Språktidningen jedes Jahr eine Liste neuer Wörter. Ein offizielles „Unwort des Jahres“ gibt es meines Wissens nicht. Trotzdem wird auch bei uns oft über Euphemismen in der Politik diskutiert.",
   "modelSv": "Exempelsvar."
  },
  {

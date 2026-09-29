@@ -1304,5 +1304,295 @@
     "tip": "Jämför: abito qui **da** due anni (bor fortfarande här) och ho abitato qui **per** due anni (bor inte här längre)."
    }
   ]
+ },
+ "piac-pass": {
+  "title": "Piacere i dåtid",
+  "intro": "Piacere betyder ordagrant ”behaga”: det man tycker om är subjekt, och den som tycker om står som indirekt objekt (mi, ti, gli …). I passato prossimo tar piacere alltid essere.",
+  "parts": [
+   {
+    "h": "Essere + piaciuto/a/i/e",
+    "t": "Participet böjs efter **det man tycker om**, inte efter personen som tycker om det.",
+    "table": {
+     "head": [
+      "det man tycker om",
+      "form",
+      "exempel"
+     ],
+     "rows": [
+      [
+       "mask. singular (il film)",
+       "è piaciuto",
+       "Mi è piaciuto il film."
+      ],
+      [
+       "fem. singular (la festa)",
+       "è piaciuta",
+       "Mi è piaciuta la festa."
+      ],
+      [
+       "mask. plural (i regali)",
+       "sono piaciuti",
+       "Mi sono piaciuti i regali."
+      ],
+      [
+       "fem. plural (le canzoni)",
+       "sono piaciute",
+       "Mi sono piaciute le canzoni."
+      ],
+      [
+       "infinitiv (ballare)",
+       "è piaciuto",
+       "Mi è piaciuto ballare."
+      ]
+     ]
+    },
+    "ex": [
+     {
+      "fr": "Ti **è piaciuta** la pizza?",
+      "sv": "Tyckte du om pizzan?"
+     },
+     {
+      "fr": "Ai miei genitori **sono piaciuti** i musei.",
+      "sv": "Mina föräldrar tyckte om museerna."
+     }
+    ]
+   },
+   {
+    "h": "Vem tycker om?",
+    "t": "Personen står som indirekt objekt: **mi, ti, gli, le, ci, vi, gli** (eller a me, a te, a Marco …). Verbet ändras inte efter personen.",
+    "ex": [
+     {
+      "fr": "**Gli** è piaciuto il concerto.",
+      "sv": "Han tyckte om konserten."
+     },
+     {
+      "fr": "**Le** è piaciuto il concerto.",
+      "sv": "Hon tyckte om konserten."
+     },
+     {
+      "fr": "**Ci** è piaciuto il concerto.",
+      "sv": "Vi tyckte om konserten."
+     }
+    ],
+    "tip": "Vanligt fel: ”ho piaciuto”. Piacere tar aldrig avere. Tänk ”filmen har behagat mig”: il film mi è piaciuto."
+   }
+  ]
+ },
+ "pron-ton": {
+  "title": "Betonade pronomen",
+  "intro": "De betonade pronomenen (me, te, lui, lei, noi, voi, loro) används efter prepositioner och när man vill betona eller jämföra.",
+  "parts": [
+   {
+    "h": "Formerna",
+    "table": {
+     "head": [
+      "",
+      "obetonat (före verbet)",
+      "betonat"
+     ],
+     "rows": [
+      [
+       "jag",
+       "mi",
+       "me"
+      ],
+      [
+       "du",
+       "ti",
+       "te"
+      ],
+      [
+       "han",
+       "lo / gli",
+       "lui"
+      ],
+      [
+       "hon",
+       "la / le",
+       "lei"
+      ],
+      [
+       "vi",
+       "ci",
+       "noi"
+      ],
+      [
+       "ni",
+       "vi",
+       "voi"
+      ],
+      [
+       "de",
+       "li, le / gli",
+       "loro"
+      ]
+     ]
+    },
+    "t": "Lui, lei, noi, voi och loro ser ut som subjektsformerna. Det är bara **me** och **te** som skiljer sig."
+   },
+   {
+    "h": "Efter preposition",
+    "t": "Efter **con, per, da, di, senza, tra, secondo** … kommer alltid det betonade pronomenet.",
+    "ex": [
+     {
+      "fr": "Vieni con **me**?",
+      "sv": "Följer du med mig?"
+     },
+     {
+      "fr": "Questo è per **te**.",
+      "sv": "Det här är till dig."
+     },
+     {
+      "fr": "Stasera vado da **lui**.",
+      "sv": "I kväll går jag hem till honom."
+     },
+     {
+      "fr": "Secondo **me** hai ragione.",
+      "sv": "Jag tycker att du har rätt."
+     }
+    ]
+   },
+   {
+    "h": "Betoning och korta svar",
+    "t": "Med piacere säger man **a me, a te, a lui …** när man vill betona eller jämföra. Korta svar: **anche a me** (jag också) och **neanche a me** (inte jag heller). Med vanliga verb heter det i stället **anche io**.",
+    "ex": [
+     {
+      "fr": "Mi piace il jazz. – Anche **a me**!",
+      "sv": "Jag gillar jazz. – Jag också!"
+     },
+     {
+      "fr": "Vado al mare. – Anche **io**!",
+      "sv": "Jag åker till havet. – Jag också!"
+     },
+     {
+      "fr": "**A me** piace il tè, **a lei** il caffè.",
+      "sv": "Jag gillar te, hon kaffe."
+     }
+    ],
+    "tip": "Säg inte ”con mi” eller ”per ti”. Efter preposition blir det alltid me och te."
+   }
+  ]
+ },
+ "indef": {
+  "title": "Nessuno, niente, ognuno och ogni",
+  "intro": "Obestämda pronomen säger hur många eller vilka: ingen, ingenting, var och en, varje, några.",
+  "parts": [
+   {
+    "h": "Nessuno och niente: dubbel negation",
+    "t": "**Nessuno** = ingen (personer), **niente** = ingenting (saker). Står ordet **efter** verbet måste **non** stå före verbet. Står nessuno **först** behövs inget non.",
+    "ex": [
+     {
+      "fr": "**Non** c'è **nessuno**.",
+      "sv": "Det är ingen här."
+     },
+     {
+      "fr": "**Nessuno** è venuto.",
+      "sv": "Ingen kom."
+     },
+     {
+      "fr": "**Non** ho mangiato **niente**.",
+      "sv": "Jag har inte ätit någonting."
+     }
+    ]
+   },
+   {
+    "h": "Nessun, nessuna framför substantiv",
+    "t": "Framför ett substantiv böjs nessuno som den obestämda artikeln: **nessun** amico (un amico), **nessuno** studente (uno studente), **nessuna** idea (una idea). Alltid singular.",
+    "ex": [
+     {
+      "fr": "Non ho **nessun** problema.",
+      "sv": "Jag har inga problem."
+     },
+     {
+      "fr": "Non ho **nessuna** voglia.",
+      "sv": "Jag har ingen lust alls."
+     }
+    ]
+   },
+   {
+    "h": "Ognuno, ogni och tutti",
+    "t": "**Ognuno** (var och en) står ensamt: ognuno di noi. **Ogni** (varje) står alltid framför ett substantiv i singular. **Tutti** (alla) tar artikel och plural. **Qualche** (några) följs också av singular.",
+    "ex": [
+     {
+      "fr": "**Ognuno** porta qualcosa.",
+      "sv": "Var och en tar med något."
+     },
+     {
+      "fr": "**Ogni** giorno studio un'ora.",
+      "sv": "Varje dag pluggar jag en timme."
+     },
+     {
+      "fr": "**Tutti i** giorni studio un'ora.",
+      "sv": "Alla dagar pluggar jag en timme."
+     },
+     {
+      "fr": "Ho **qualche** amico a Roma.",
+      "sv": "Jag har några vänner i Rom."
+     }
+    ],
+    "tip": "På svenska räcker en negation, men på italienska är dubbel negation rätt: non vedo nessuno, non faccio niente."
+   }
+  ]
+ },
+ "pron-pos": {
+  "title": "Pronomenets plats",
+  "intro": "Objektspronomen (lo, la, gli, mi …), ci och ne står oftast före det böjda verbet. Med infinitiv och jakande imperativ hängs de i stället på slutet av verbet.",
+  "parts": [
+   {
+    "h": "Med modalverb: två möjligheter",
+    "t": "Med **dovere, potere, volere** kan pronomenet stå **före modalverbet** eller hängas **på infinitiven** (infinitiven tappar sitt sista -e). Aldrig mitt emellan.",
+    "ex": [
+     {
+      "fr": "**Lo** devo fare. = Devo far**lo**.",
+      "sv": "Jag måste göra det."
+     },
+     {
+      "fr": "**Ti** posso aiutare? = Posso aiutar**ti**?",
+      "sv": "Kan jag hjälpa dig?"
+     },
+     {
+      "fr": "Dobbiamo alzar**ci** presto.",
+      "sv": "Vi måste gå upp tidigt."
+     }
+    ]
+   },
+   {
+    "h": "Med jakande imperativ",
+    "t": "Pronomenet skrivs **ihop** med imperativen (tu, noi, voi). Efter de korta formerna **di', da', fa', sta', va'** fördubblas konsonanten.",
+    "ex": [
+     {
+      "fr": "Ascolta**mi**!",
+      "sv": "Lyssna på mig!"
+     },
+     {
+      "fr": "Prendi**le**!",
+      "sv": "Ta dem!"
+     },
+     {
+      "fr": "Di**mm**i la verità!",
+      "sv": "Säg sanningen!"
+     },
+     {
+      "fr": "Fa**mm**i vedere!",
+      "sv": "Låt mig se!"
+     }
+    ]
+   },
+   {
+    "h": "Med nekad imperativ",
+    "t": "Nekad imperativ för tu = **non + infinitiv**. Pronomenet hängs på infinitiven eller står före den.",
+    "ex": [
+     {
+      "fr": "Non far**lo**! = Non **lo** fare!",
+      "sv": "Gör det inte!"
+     },
+     {
+      "fr": "Non dimenticar**mi**!",
+      "sv": "Glöm mig inte!"
+     }
+    ],
+    "tip": "Med Lei (artig form) hängs pronomenet aldrig på: Mi dica! Lo prenda!"
+   }
+  ]
  }
 }

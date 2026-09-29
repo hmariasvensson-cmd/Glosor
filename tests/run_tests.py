@@ -721,6 +721,8 @@ const ok=(name,cond,info="")=>out.push((cond?"OK   ":"FEL  ")+name+(info?"  ("+i
 const wait=ms=>new Promise(r=>setTimeout(r,ms));
 const canon=v=>JSON.stringify(v,(k,x)=>typeof x==="function"||x instanceof RegExp?String(x):x);
 const P="data/users/u_test/";
+// Verbtabellerna (sv, tenses, notes) ligger i datafilen (verbTables, arvet ihopslaget av build.py) och läggs till i L.verbs när kursen hämtas
+const VT=c=>withVerbTables(LANGUAGES[c].verbs,(INLINE_DATA[c]||{}).verbTables);
 // Förväntat per kurs, taget från versionen med getters (före extends)
 const TEXTS=["Ich habe gestern gearbeitet. Er war müde und hätte gern geschlafen.","Das Haus wird gebaut. Sie sagte, sie sei krank.",
   "Hier j'ai mangé une pomme. Il faisait beau. Je voudrais que tu sois là. Si j'avais su, je serais venu.","Je parlerais si je pouvais. Il faut qu'il finisse.",
@@ -729,7 +731,7 @@ const EXP={"de": {"games": ["pres", "tempus", "b2"], "tenses": ["Konjunktiv I", 
 setTimeout(async()=>{ try{
   // 1. Arv mellan kurser
   { const bad=[];
-    for(const [c,e] of Object.entries(EXP)){ const x=LANGUAGES[c], v=x.verbs;
+    for(const [c,e] of Object.entries(EXP)){ const x=LANGUAGES[c], v=VT(c);
       const conj=Object.values(v.tenses).reduce((a,t)=>a+Object.keys(t).filter(k=>k!=="rule").length*v.persons.length,0);
       if(canon((v.games||[]).map(g=>g.id))!==canon(e.games)) bad.push(c+" verbspel "+(v.games||[]).map(g=>g.id));
       if(canon(Object.keys(v.tenses).sort())!==canon(e.tenses)) bad.push(c+" tempus "+Object.keys(v.tenses));
@@ -741,18 +743,19 @@ setTimeout(async()=>{ try{
       if(x.verbs!==x.verbs) bad.push(c+" verbs är ett nytt objekt vid varje åtkomst"); }
     ok("arv: bindeord, tempusigenkänning, verbspel och verbtabeller som förut i alla kurser", !bad.length, bad.join(" | ")); }
   { const de=LANGUAGES.de, d4=LANGUAGES.de4, d6=LANGUAGES.de6, fr=LANGUAGES.fr, f4=LANGUAGES.fr4, i1=LANGUAGES.it1, i2=LANGUAGES.it2;
+    const [vde,vd4,vd6,vfr,vf4]=["de","de4","de6","fr","fr4"].map(VT);
     ok("arv: de4 och de6 delar bindeord och tempusigenkänning med de", d4.connectors===de.connectors&&d6.connectors===de.connectors&&d4.tenseCheck===de.tenseCheck&&d6.tenseCheck===de.tenseCheck);
     ok("arv: de4 har samma verbtabeller som de, utan Konjunktiv I och i samma ordning",
-      canon(Object.keys(d4.verbs.tenses))===canon(Object.keys(de.verbs.tenses).filter(t=>t!=="Konjunktiv I"))
-      &&Object.keys(d4.verbs.tenses).every(t=>d4.verbs.tenses[t]===de.verbs.tenses[t])&&d4.verbs.persons===de.verbs.persons&&d4.verbs.prefix===de.verbs.prefix&&d4.verbs.sv===de.verbs.sv
-      &&!!de.verbs.tenses["Konjunktiv I"], Object.keys(d4.verbs.tenses).join());
-    ok("arv: de6 har alla verbtabeller från de men egna verbspel", d6.verbs.tenses===de.verbs.tenses&&d6.verbs.games!==de.verbs.games&&d6.verbs.sv===de.verbs.sv);
+      canon(Object.keys(vd4.tenses))===canon(Object.keys(vde.tenses).filter(t=>t!=="Konjunktiv I"))
+      &&Object.keys(vd4.tenses).every(t=>canon(vd4.tenses[t])===canon(vde.tenses[t]))&&d4.verbs.persons===de.verbs.persons&&d4.verbs.prefix===de.verbs.prefix&&canon(vd4.sv)===canon(vde.sv)
+      &&!!vde.tenses["Konjunktiv I"], Object.keys(vd4.tenses).join());
+    ok("arv: de6 har alla verbtabeller från de men egna verbspel", canon(vd6.tenses)===canon(vde.tenses)&&d6.verbs.games!==de.verbs.games&&canon(vd6.sv)===canon(vde.sv));
     ok("arv: fr4 = bindeorden från fr plus egna, tempusigenkänning från fr plus conditionnel och subjonctif",
       canon(f4.connectors.slice(0,fr.connectors.length))===canon(fr.connectors)&&f4.connectors.length===fr.connectors.length+22
       &&canon(Object.keys(f4.tenseCheck))===canon([...Object.keys(fr.tenseCheck),"conditionnel","subjonctif"])
       &&Object.keys(fr.tenseCheck).every(k=>f4.tenseCheck[k]===fr.tenseCheck[k])
       &&f4.tenseCheck.conditionnel("Je parlerais volontiers.")&&!f4.tenseCheck.conditionnel("Il tirait la corde.")&&f4.tenseCheck.subjonctif("Il faut qu'il finisse.")
-      &&f4.verbs.tenses===fr.verbs.tenses, Object.keys(f4.tenseCheck).join());
+      &&canon(vf4.tenses)===canon(vfr.tenses), Object.keys(f4.tenseCheck).join());
     ok("arv: it2 hämtar artiklar, pronomen, elision, bindeord och tempusigenkänning från it1",
       ["articles","hintStrip","pronouns","elision","connectors","tenseCheck"].every(k=>i2[k]===i1[k])&&i2.verbs!==i1.verbs);
     ok("arv: fält som inte står i inherit ärvs inte", String(d6.nextCourse)!==String(LANGUAGES.de.nextCourse)&&d4.nextCourse==="de"&&d4.elective===undefined&&f4.book===undefined&&String(i2.nextCourse)!==String(i1.nextCourse)&&f4.storageKey==="glosor-fr4-v1");
@@ -908,7 +911,6 @@ const idle=()=>typeof CLOUD!=="undefined"&&CLOUD.ready&&!CLOUD.busy&&!CLOUD.atta
 const flush=async()=>{ for(let i=0;i<40&&(CLOUD.busy||Object.keys(CLOUD.pending).length);i++){ await cloudFlush(); await wait(()=>!CLOUD.busy,500); } };
 const P_=k=>"data/users/u_test/"+k;
 const canon=v=>JSON.stringify(v,(k,x)=>x&&typeof x==="object"&&!Array.isArray(x)?Object.keys(x).sort().reduce((o,k)=>(o[k]=x[k],o),{}):x);
-const unesc=s=>{const t=document.createElement("textarea"); t.innerHTML=String(s==null?"":s); return t.value;};
 const exClick=id=>{renderStart(); const g=exGroups().find(g=>g.items.some(h=>h.includes('data-ex="'+id+'"'))); openExGroup(g.id); const b=q('[data-ex="'+id+'"]'); b.click(); return b;};
 // Rätt svar på vilken fråga som helst, hämtat ur frågan själv (sess.d)
 function answerRight(){
@@ -916,7 +918,7 @@ function answerRight(){
   if(c.t==="mc"){ answerMC(d.opts.findIndex(o=>o.ok)); q("#nx").click(); return; }
   if(q("[data-sh]")){ q('[data-sh="1"]').click(); return; }
   if(d.render){ d.o.words.forEach(w=>{const b=[...document.querySelectorAll("[data-t]")].find(x=>x.textContent===w); if(b) b.click();}); q("#submit").click(); q("#submit").click(); return; }
-  q("#ans").value=d.accepted?d.accepted[0]:unesc(d.answer).replace(/ … /g," "); q("#submit").click();
+  q("#ans").value=d.accepted?d.accepted[0]:String(d.answer).replace(/ … /g," "); q("#submit").click();
   if(q("[data-gr]")) q('[data-gr="right"]').click();
   q("#submit").click();
 }
@@ -1222,6 +1224,7 @@ appReady().then(async()=>{ try{
   [[k4,o4],[k6,o6],[kfr,ofr]].forEach(([k,o])=>o===null?localStorage.removeItem(k):localStorage.setItem(k,o));
   // 5. Mörkt läge och Franska 3
   S.w=fill(3800,"x",5); setView("stats");
+  document.documentElement.dataset.theme="light";   // oberoende av datorns ljusa/mörka läge
   const lightBg=getComputedStyle(q("#lvl .lvtrack")).backgroundColor;
   document.documentElement.dataset.theme="dark"; const darkBg=getComputedStyle(q("#lvl .lvtrack")).backgroundColor; delete document.documentElement.dataset.theme;
   ok("nivå: mörkt läge", lightBg!==darkBg, lightBg+" / "+darkBg);
@@ -1248,7 +1251,7 @@ appReady().then(async()=>{ try{
   const keep=SAMPLE; SAMPLE={json:async()=>JSON.parse(JSON.stringify(crit))};
   for(const c of testCourses()){ useLang(c); await until(()=>L.code===c&&L.base&&!sess,5000);
     if(!hasExam()) continue;
-    const e=EX(), want=[]; e.tasks.forEach(t=>{ if(exKind(t)!=="speak"&&!want.includes(t.part+"|"+t.teil)) want.push(t.part+"|"+t.teil); });
+    const e=EX(), want=[]; e.tasks.forEach(t=>{ if(exKind(t)!=="speak"&&t.sim!==false&&!want.includes(t.part+"|"+t.teil)) want.push(t.part+"|"+t.teil); });
     S.exam={t:{},sims:[{d:Date.now()-86400000,parts:{[e.parts[0].id]:40}}]}; delete S.drafts; delete S.fb;
     openExam(); ok(c+": gammal simulering visas", q("#app").textContent.includes("Tidigare simuleringar")&&!/undefined|null|NaN/.test(q("#app").textContent));
     ok(c+": knappen säger hela provet", q("#sim").textContent.includes("hela provet")&&document.querySelectorAll("[data-simp]").length===e.parts.filter(p=>simPart(p.id)).length);
@@ -1261,14 +1264,14 @@ appReady().then(async()=>{ try{
       labels=labels&&q("#exclock").textContent.includes(p.sv)&&q("#app").textContent.includes("uppgift "+(EXSIM.i+1)+" av "+EXSIM.ids.length);
       if(EXSIM.i>0&&exTask(EXSIM.ids[EXSIM.i-1]).part===t.part) sameEnd=sameEnd&&end!=null;
       else sameEnd=sameEnd&&Math.abs(end-Date.now()-p.time*60000)<5000;
-      if(t.qs){ t.qs.forEach((x,i)=>q(`.exq[data-q="${i}"] [data-o="${i===0?(x.a+1)%x.opts.length:x.a}"]`).click()); q("#exdone").click(); q("#exnext").click(); }
+      if(exItems(t)){ exFill(t,true); q("#exnext").click(); }
       else { q("#xtext").value="Ein zwei drei vier fünf sechs sieben acht neun zehn elf zwölf dreizehn vierzehn fünfzehn sechzehn."; q("#exdone").click(); await until(()=>(S.exam.t[t.id]||{}).pct!=null); q("#exnext").click(); } }
     ok(c+": klockan gäller hela delen med provets tid", sameEnd&&labels);
     const s=S.exam.sims[S.exam.sims.length-1], parts=[...new Set(want.map(x=>x.split("|")[0]))];
     ok(c+": simuleringen sparas med alla delar och uppgifter", S.exam.sims.length===2&&JSON.stringify(Object.keys(s.parts))===JSON.stringify(parts)&&Object.keys(s.tasks).length===want.length, JSON.stringify(s));
     // Läsa/lyssna: ett fel per uppgift, delens resultat = rätt av alla frågor i delen
-    const mc=parts.filter(p=>e.tasks.some(t=>t.part===p&&t.qs)).every(p=>{ const ts=Object.keys(s.tasks).map(exTask).filter(t=>t.part===p);
-      const n=ts.reduce((a,t)=>a+t.qs.length,0); return s.parts[p]===exPct(n-ts.length,n); });
+    const mc=parts.filter(p=>e.tasks.some(t=>t.part===p&&exItems(t))).every(p=>{ const ts=Object.keys(s.tasks).map(exTask).filter(t=>t.part===p);
+      const n=ts.reduce((a,t)=>a+exItems(t),0); return s.parts[p]===exPct(n-ts.length,n); });
     ok(c+": delresultat av alla frågor i delen", mc, JSON.stringify(s.parts));
     ok(c+": skrivdelen bedömd", parts.filter(p=>e.tasks.some(t=>t.part===p&&t.minWords)).every(p=>s.parts[p]===80), JSON.stringify(s.parts));
     ok(c+": resultatsidan", q("#app").textContent.includes("Resultat av simuleringen")&&!/undefined|null|NaN/.test(q("#app").textContent));
@@ -1288,6 +1291,37 @@ appReady().then(async()=>{ try{
 # ---------------------------------------------------------------------------------------------------------
 # Buggjakt 2026-09-29 (app.js och src/kinds): ett regressionstest per rättad bugg.
 # ---------------------------------------------------------------------------------------------------------
+SCENARIO_ESC = r"""<script>
+const out=[]; const q=s=>document.querySelector(s);
+const ok=(name,cond,info="")=>out.push((cond?"OK   ":"FEL  ")+name+(info?"  ("+info+")":""));
+const wait=ms=>new Promise(r=>setTimeout(r,ms));
+appReady().then(async()=>{ try{
+  // P1 escaping: text från datafilerna (ursprung, ordagrant, exempel, facit) med farlig HTML och "<" som text
+  window.__xss=0;
+  const ety='<script>window.__xss=1<\/script><img src=x onerror="window.__xss=2"> a < b & c <b onclick="window.__xss=3">fet</b> <span class="k" onmouseover="window.__xss=4">sp</span>';
+  const line='a<b-ord|mindre än-ord|m|Ett [a<b-ord] med a < b <img src=x onerror="window.__xss=5">.|Svenska: a < b.|'+ety+'|<i>ordagrant</i> <img src=y onerror="window.__xss=6"> x < y';
+  const w=parseWords("#xss|XSS\n"+line).words[0]; w.sec=SECTIONS[0].id; WORDS.push(w); byId[w.id]=w;
+  const clean=()=>!q("#app img")&&!q("#app script")&&!q("#app [onclick]")&&!q("#app [onmouseover]")&&!q("#app [onerror]");
+  S.listenFirst=false; sess={newW:[w],due:[],i:0,kind:"words",extra:true,start:Date.now()}; renderLearn(); await wait(200);
+  const t=q("#app").textContent;
+  ok("escaping: nya ord visar ursprunget som text", t.includes("a < b & c")&&t.includes("x < y")&&t.includes("a<b-ord")&&t.includes("Ett a<b-ord med a < b")&&t.includes("Svenska: a < b."), t.slice(0,200));
+  ok("escaping: tillåten formatering i ursprunget (b, i, span med class) finns kvar", q("#app .ety b")&&q("#app .ety b").textContent==="fet"&&q("#app .lit i")&&q("#app .ety span.k"));
+  ok("escaping: ingen script, img eller onclick från datan i nya ord", clean()&&window.__xss===0, q("#app").innerHTML.slice(0,300));
+  beginQuiz("words",[{w,isNew:false,t:"type",canType:true}]); q("#ans").value="fel svar"; q("#submit").click(); await wait(200);
+  const fb=q("#fb").textContent;
+  ok("escaping: facit och lärokortet efter fel svar", fb.includes("Rätt svar: a<b-ord")&&fb.includes("a < b & c")&&q("#fb .ety b")&&clean()&&window.__xss===0, fb.slice(0,200));
+  ok("escaping: safeHtml släpper bara igenom vitlistan", safeHtml('<b onclick="x">t</b>')==="<b>t</b>"&&safeHtml("a < b")==="a &lt; b"&&safeHtml("&nbsp;x & y")==="&nbsp;x &amp; y"
+    &&safeHtml('<span class="k">x</span><span style="color:red">y</span>')==='<span class="k">x</span><span>y</span>'&&safeHtml("<a href=\"javascript:x\">l</a><br>")==='&lt;a href=&quot;javascript:x&quot;&gt;l&lt;/a&gt;<br>'
+    &&safeHtml(null)===""&&esc(undefined)==="", safeHtml('<a href="x">l</a>'));
+  quitSession(); WORDS.pop(); delete byId[w.id];
+ }catch(e){ ok("undantag", false, e.message+" "+e.stack); }
+ await wait(100);
+ ok("escaping: inget från datan kördes", window.__xss===0, window.__xss);
+ ok("inga JavaScript-fel", !__err.length, __err.join(" ; "));
+ document.body.insertAdjacentHTML("beforeend","<pre id=out>"+out.join("\n").replace(/</g,"&lt;")+"</pre>");
+});
+</script>"""
+
 SCENARIO_BUGHUNT = r"""<script>
 const out=[]; const q=s=>document.querySelector(s);
 const ok=(name,cond,info="")=>out.push((cond?"OK   ":"FEL  ")+name+(info?"  ("+info+")":""));
@@ -1418,6 +1452,16 @@ def test_build_checks():
         lj = t / "languages" / "de4" / "lang.js"
         broken(lj, lambda s: s.replace('inherit: ["connectors"', 'inherit: ["conectors"', 1), "arv: inherit med ett fält som föräldern saknar stoppar", "inherit 'conectors'")
         broken(lj, lambda s: s.replace('nextCourse: "de"', 'nextCourse: "xx"', 1), "bygge: nextCourse till en kurs som inte finns stoppar", "nextCourse 'xx'")
+        # Verbtabellerna ligger i verbs.json och följer med datafilen, med arvet ihopslaget (de4 ärver från de utan Konjunktiv I)
+        d4 = json.loads((t / "dist" / "data" / "de4.json").read_text(encoding="utf-8")).get("verbTables", {})
+        de = json.loads((t / "dist" / "data" / "de.json").read_text(encoding="utf-8")).get("verbTables", {})
+        page = (t / "dist" / "index.html").read_text(encoding="utf-8")
+        ok("verb: tabellerna ligger i datafilen med arvet ihopslaget, inte i index.html",
+           "Konjunktiv I" in de.get("tenses", {}) and "Konjunktiv I" not in d4.get("tenses", {}) and d4.get("sv") == de.get("sv")
+           and list(d4["tenses"]) == [k for k in de["tenses"] if k != "Konjunktiv I"] and '"Präsens": {' not in page and "Präsens: {" not in page)
+        broken(t / "languages" / "de" / "lang.js", lambda s: s.replace("  verbs: {", '  verbs: {\n    tenses: {"Präsens": {}},', 1),
+               "verb: tabeller i lang.js stoppar bygget", "ska ligga i languages/de/verbs.json")
+        broken(t / "languages" / "de" / "verbs.json", lambda s: s.replace('"tenses"', '"tenses2"', 1), "verb: okänt fält i verbs.json stoppar", "bara sv, tenses och notes")
         ok("bygge: går igenom igen", build().returncode == 0)
     return "\n".join(out)
 
@@ -1638,6 +1682,128 @@ def test_minimal_course():
     return "\n".join(out) + "\n" + text
 
 
+# ---------------------------------------------------------------------------------------------------------
+# Nya provuppgiftstyper (src/kinds/70-exam.js, backloggen): para ihop (type "match"), lucktext med flerval per lucka
+# (Sprachbausteine, "gaps") och kortsvar ("short"), med rättning, resultat, tangentbord och 320 px, samt den sparade
+# provsimuleringen S.exam.simRun: överlever omladdning, återupptas med den tid som var kvar, rensas när den är klar
+# eller avbruten, och gamla S.exam utan fältet fungerar. Kontrollerna i build.py (check_exam_task). Egen sida.
+# ---------------------------------------------------------------------------------------------------------
+EXFILL = r"""<script>
+// Svarar på en läs- eller höruppgift av valfri typ och lämnar in; wrong = första frågan/luckan fel
+window.exFill=(t,wrong)=>{ const q=s=>document.querySelector(s), k=exKind(t);
+  if(k==="mc") t.qs.forEach((x,i)=>q(`.exq[data-q="${i}"] [data-o="${i===0&&wrong?(x.a+1)%x.opts.length:x.a}"]`).click());
+  else [...document.querySelectorAll(".exsel,.exshort")].forEach(f=>{ const i=+f.dataset.i, w=k==="gaps"?t.gaps[i]:t.items[i], bad=wrong&&i===0;
+    f.value=k==="short"?(bad?"xyz":w.a[0]):String(bad?(w.a===0?1:0):w.a); f.dispatchEvent(new Event("change")); });
+  q("#exdone").click(); };
+</script>"""
+
+SCENARIO_EXAMTYPES = r"""<script>
+const out=[]; const q=s=>document.querySelector(s);
+const ok=(name,cond,info="")=>out.push((cond?"OK   ":"FEL  ")+name+(info?"  ("+info+")":""));
+const bad=()=>/undefined|null|NaN|\[object/.test(q("#app").textContent);
+appReady().then(async()=>{ try{
+  // Rättningen av kortsvar
+  ok("kortsvar: versaler, accenter, punkt och mellanslag spelar ingen roll", exShortOk({a:["beim Pförtner"]},"  BEIM  pfortner. ")&&exShortOk({a:["15. März"]},"15 marz")&&exShortOk({a:["la città"]},"La Citta"));
+  ok("kortsvar: fel ord och tomt svar är fel", !exShortOk({a:["beim Pförtner"]},"Pförtnerin")&&!exShortOk({a:["Mai"]},"")&&!exShortOk({a:["Mai"]},"Juni"));
+  ok("kortsvar: alla godkända varianter", exShortOk({a:["50 Euro","fünfzig Euro"]},"Fünfzig Euro"));
+  const want={fr2:"match",it4:"match",it7:"gaps",de7:"gaps"}, seen={};
+  for(const c of testCourses()){ useLang(c); await until(()=>L.code===c&&L.base&&!sess,5000);
+    if(!hasExam()) continue;
+    const ts=EX().tasks.filter(t=>EX_TYPES.includes(t.type));
+    for(const t of ts){ seen[c+"|"+t.type]=(seen[c+"|"+t.type]||0)+1;
+      delete S.exam; examTask(t.id); const n=exItems(t), fields=[...document.querySelectorAll(".exsel,.exshort")];
+      ok(c+": "+t.id+" ("+t.type+") visas med ett fält per item", n>0&&fields.length===n&&!bad(), fields.length+"/"+n);
+      // Tangentbord: vanliga formulärfält med etikett, i ordning
+      ok(c+": "+t.id+" går med tangentbordet", fields.every(f=>(f.tagName==="SELECT"||f.tagName==="INPUT")&&f.tabIndex>=0&&(f.labels&&f.labels.length||f.getAttribute("aria-label"))));
+      if(t.type==="short"){ fields[0].focus(); fields[0].dispatchEvent(new KeyboardEvent("keydown",{key:"Enter",bubbles:true})); ok(c+": "+t.id+" Enter går till nästa fält", document.activeElement===fields[1]); }
+      if(t.type==="match") ok(c+": "+t.id+" alternativen A–"+exLetter(t.opts.length-1)+" visas", document.querySelectorAll(".exopts li").length===t.opts.length&&fields[0].options.length===t.opts.length+1+(t.none!=null?1:0));
+      if(t.type==="gaps") ok(c+": "+t.id+" luckorna sitter i texten", document.querySelectorAll(".exgaps .tl select").length===n&&!/\{\d+\}/.test(q(".exgaps").textContent));
+      // 320 px: inget i uppgiften sticker ut åt sidan
+      document.documentElement.style.width="320px"; const W=document.documentElement.getBoundingClientRect().right+1;
+      const wide=[...app.querySelectorAll(".exopts li, .exq, .exgaps, select, input")].filter(e=>e.getBoundingClientRect().right>W);
+      ok(c+": "+t.id+" får plats på 320 px", !wide.length, wide.slice(0,3).map(e=>e.className+" "+Math.round(e.getBoundingClientRect().right)).join(", "));
+      document.documentElement.style.width="";
+      exFill(t,true);
+      const r=S.exam&&S.exam.t[t.id];
+      ok(c+": "+t.id+" rättas och sparas", r&&r.pct===exPct(n-1,n)&&document.querySelectorAll(".wrong").length===1&&document.querySelectorAll(".exsel.right,.exshort.right").length===n-1, JSON.stringify(r));
+      ok(c+": "+t.id+" visar resultat och facit", q("#exres").textContent.includes((n-1)+" av "+n+" rätt")&&q("#app").textContent.includes("Rätt:")&&!bad());
+      ok(c+": "+t.id+" loggas som provträning", S.log[S.log.length-1].kind==="exam"&&S.log[S.log.length-1].total===n);
+      q("#exnext").click(); ok(c+": "+t.id+" tillbaka till provträningen", !!q("[data-xt]"));
+    }
+    // Extrauppgifter (sim: false) finns i listan men inte i simuleringen
+    const extra=EX().tasks.filter(t=>t.sim===false);
+    if(extra.length){ openExam(); ok(c+": extrauppgifter i listan", extra.every(t=>q(`[data-xt="${t.id}"]`)));
+      let never=true; for(let k=0;k<15;k++){ never=never&&simPlan().every(id=>exTask(id).sim!==false); } ok(c+": extrauppgifter ingår inte i simuleringen", never); }
+  }
+  ok("exempeluppgifter: minst två av varje typ i rätt kurser", seen["fr2|match"]>=2&&seen["it4|match"]>=2&&seen["it7|gaps"]>=2&&seen["de7|gaps"]>=2&&seen["de7|short"]>=2, JSON.stringify(seen));
+  // Nivåmätaren räknar med de nya typerna
+  useLang("de7"); await until(()=>L.code==="de7"&&L.base,5000);
+  { delete S.exam; const t=EX().tasks.find(t=>t.type==="short"); examTask(t.id); exFill(t,false);
+    const x=levelExam(3).parts.find(p=>p.id===t.part); ok("nivåmätaren: kortsvar räknas i provdelen", x&&x.pct===100, JSON.stringify(x)); }
+
+  /* Sparad provsimulering (S.exam.simRun) */
+  useLang("it7"); await until(()=>L.code==="it7"&&L.base,5000);
+  const reload=()=>{ EXSIM=null; clearInterval(EXCLOCK); loadState(); };   // som en omladdning: S läses om från localStorage
+  S.exam={t:{},sims:[{d:Date.now()-864e5,parts:{lettura:40}}]}; save();
+  openExam(); ok("simRun: gammalt S.exam utan simRun fungerar", !q("#simrun")&&q("#app").textContent.includes("Tidigare simuleringar")&&!bad());
+  renderStart(); ok("simRun: inget kort på startsidan utan simulering", !q("#simrun"));
+  openExam(); q('[data-simp="competenza"]').click();
+  { const g=EX().tasks.find(t=>t.id==="it7-ex-cl-4"); EXSIM.ids=[g.id]; for(let k=0;k<2;k++) EXSIM.ids.push(...EX().tasks.filter(t=>t.part==="competenza"&&t.id!==g.id).slice(k,k+1).map(t=>t.id)); examTask(g.id); simStore(); }
+  const ids=[...EXSIM.ids], p0="competenza";
+  ok("simRun: sparas när simuleringen startar", S.exam.simRun&&JSON.stringify(S.exam.simRun.ids)===JSON.stringify(ids)&&S.exam.simRun.i===0&&!!JSON.parse(localStorage.getItem(L.storageKey)).exam.simRun);
+  { const f=q(".exsel"); f.value="2"; f.dispatchEvent(new Event("change")); }
+  ok("simRun: svaren i uppgiften sparas", JSON.parse(localStorage.getItem(L.storageKey)).exam.simRun.cur.ans["0"]==="2");
+  // Eleven stänger appen med 20 minuter kvar av delen och kommer tillbaka en timme senare
+  { const st=JSON.parse(localStorage.getItem(L.storageKey)), r=st.exam.simRun; r.seen=Date.now()-3600000; r.ends[p0]=r.seen+20*60000; r.start=r.seen-5*60000; localStorage.setItem(L.storageKey,JSON.stringify(st)); }
+  reload(); ok("simRun: finns kvar efter omladdning", !EXSIM&&S.exam.simRun&&S.exam.simRun.i===0);
+  renderStart(); ok("simRun: kort på startsidan", !!q("#simrun")&&q("#simrun").textContent.includes("20 minuter kvar")&&q("#simrun").textContent.includes("uppgift 1 av 3".replace("u","U")), q("#simrun")&&q("#simrun").textContent.replace(/\s+/g," ").slice(0,120));
+  q("#simgo").click();
+  ok("simRun: återupptas med den tid som var kvar", EXSIM&&Math.abs(EXSIM.ends[p0]-Date.now()-20*60000)<5000&&/1[89]:\d\d|20:00/.test(q("#exclock").textContent), q("#exclock").textContent);
+  ok("simRun: sparat svar är ifyllt", q(".exsel").value==="2");
+  ok("simRun: starttiden flyttas också", Math.abs(Date.now()-EXSIM.start-5*60000)<5000);
+  // Inlämnad men inte vidare till nästa: efter omladdning fortsätter den med nästa uppgift, resultatet finns kvar
+  exFill(exTask(ids[0]),false); reload(); openExam(); ok("simRun: kortet i provträningen", !!q("#simrun")); q("#simgo").click();
+  ok("simRun: inlämnad uppgift räknas och nästa visas", EXSIM&&EXSIM.i===1&&EXSIM.res[ids[0]]&&EXSIM.res[ids[0]].pct===100&&q("#app").textContent.includes("uppgift 2 av 3"));
+  // Resten av simuleringen: klar = simRun borta och simuleringen sparad
+  let g=0; while(EXSIM&&g++<10){ const t=exTask(EXSIM.ids[EXSIM.i]); exFill(t,false); q("#exnext").click(); }
+  ok("simRun: rensas när simuleringen är klar", !EXSIM&&!S.exam.simRun&&S.exam.sims.length===2&&S.exam.sims[1].parts[p0]===100&&!JSON.parse(localStorage.getItem(L.storageKey)).exam.simRun, JSON.stringify(S.exam.sims[1]));
+  // Avbruten: både knappen i uppgiften och på kortet
+  openExam(); q("#sim").click(); ok("simRun: ny simulering sparas", !!S.exam.simRun); q("#quit").click();
+  ok("simRun: rensas när den avbryts", !EXSIM&&!S.exam.simRun&&!q("#simrun"));
+  openExam(); q("#sim").click(); reload(); openExam(); q("#simdrop").click(); ok("simRun: avbryt på kortet", !S.exam.simRun&&!q("#simrun"));
+  // En sparad simulering med en uppgift som inte finns längre visas inte
+  S.exam.simRun={ids:["finns-inte"],i:0,res:{},ends:{},start:Date.now(),seen:Date.now()}; openExam(); ok("simRun: trasig sparad simulering ignoreras", !q("#simrun")&&!bad());
+  delete S.exam.simRun; save();
+ }catch(e){ ok("undantag", false, e.message+" "+(e.stack||"").split("\n")[1]); }
+ ok("inga JavaScript-fel", !__err.length, __err.join(" ; "));
+ document.body.insertAdjacentHTML("beforeend","<pre id=out>"+out.join("\n").replace(/</g,"&lt;")+"</pre>");
+});
+</script>"""
+
+
+def test_exam_task_checks():
+    """build.py: check_exam_task stoppar felaktiga uppgifter av de nya typerna."""
+    sys.path.insert(0, str(ROOT))
+    from build import check_exam_task
+    out = []
+    ok = lambda name, cond, info="": out.append(("OK   " if cond else "FEL  ") + name + (f"  ({info})" if info else ""))
+    m = {"type": "match", "opts": ["a", "b", "c"], "items": [{"q": "x", "a": 0}, {"q": "y", "a": 2}]}
+    ok("bygge: korrekt para ihop godkänns", check_exam_task(m, "t") == [])
+    ok("bygge: para ihop med facit utanför opts stoppar", check_exam_task({**m, "items": [{"q": "x", "a": 5}]}, "t") != [])
+    ok("bygge: para ihop med samma facit två gånger stoppar (utan reuse)", check_exam_task({**m, "items": [{"q": "x", "a": 1}, {"q": "y", "a": 1}]}, "t") != []
+       and check_exam_task({**m, "reuse": True, "items": [{"q": "x", "a": 1}, {"q": "y", "a": 1}]}, "t") == [])
+    ok("bygge: a = -1 kräver none", check_exam_task({**m, "items": [{"q": "x", "a": -1}]}, "t") != [] and check_exam_task({**m, "none": "", "items": [{"q": "x", "a": -1}]}, "t") == [])
+    g = {"type": "gaps", "lines": [{"fr": "a {1} b {2}"}], "gaps": [{"opts": ["x", "y"], "a": 0}, {"opts": ["x", "y"], "a": 1}]}
+    ok("bygge: korrekt lucktext godkänns", check_exam_task(g, "t") == [])
+    ok("bygge: lucktext där markörerna inte stämmer stoppar", check_exam_task({**g, "lines": [{"fr": "a {2} b {1}"}]}, "t") != [] and check_exam_task({**g, "lines": [{"fr": "a {1}"}]}, "t") != [])
+    ok("bygge: lucktext med bank", check_exam_task({**g, "bank": ["x", "y", "z"], "gaps": [{"a": 2}, {"a": 0}]}, "t") == []
+       and check_exam_task({**g, "bank": ["x", "y"], "gaps": [{"a": 1}, {"a": 1}]}, "t") != [])
+    ok("bygge: kortsvar utan godkända svar stoppar", check_exam_task({"type": "short", "items": [{"q": "x", "a": []}]}, "t") != []
+       and check_exam_task({"type": "short", "items": [{"q": "x", "a": ["y"]}]}, "t") == [])
+    ok("bygge: okänd type stoppar", check_exam_task({"type": "quiz"}, "t") != [])
+    return "\n".join(out)
+
+
 def main():
     text = run(SCENARIO) + "\n" + run(SCENARIO_DE) + "\n" + run(SCENARIO_FIXES) + "\n" + run(SCENARIO_SYNC, 30000) + "\n" + run_http(SCENARIO_HTTP)
     text += "\n" + run(SCENARIO_ARCH, 30000) + "\n" + test_build_locks()   # arkitektur, del 6
@@ -1646,8 +1812,10 @@ def main():
     text += "\n" + run(SCENARIO_IPA, 30000)   # transkription och satsanalys (fru)
     text += "\n" + run(SCENARIO_LEVEL, 30000)   # nivåmätaren "Var ligger jag?" (P2: Nivåmätare)
     text += "\n" + run(SCENARIO_PLAN, 30000)   # studieplanen (P2: Studieplan för självstudier)
-    text += "\n" + run(SCENARIO_EXAMSIM, 60000)   # provsimuleringen som hela provet (P2)
+    text += "\n" + run(SCENARIO_EXAMSIM, 60000, head=EXFILL)   # provsimuleringen som hela provet (P2)
+    text += "\n" + run(SCENARIO_EXAMTYPES, 60000, head=EXFILL) + "\n" + test_exam_task_checks()   # para ihop, lucktext, kortsvar, sparad simulering
     text += "\n" + run(SCENARIO_BUGHUNT, 30000)   # buggjakten 2026-09-29
+    text += "\n" + run(SCENARIO_ESC, 20000)   # escaping av text från datafilerna (arkitekturgranskningen, P1)
     text += "\n" + run(SCENARIO_LEVELPROMPT, 30000)   # nivåstyrd bedömning (A1–C1)
     text += "\n" + test_minimal_course()   # en ny, liten kurs (8 → 21 kurser)
     print(text)

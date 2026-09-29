@@ -42,7 +42,29 @@
   },
   "ask": "Und in Schweden? Skriv 2–3 meningar på tyska: hur åker du till skolan, och är bussarna och tågen punktliga där du bor?",
   "model": "Ich fahre jeden Tag mit dem Bus zur Schule. Die Fahrt dauert zwanzig Minuten. Im Winter hat der Bus oft Verspätung, weil es viel Schnee gibt.",
-  "modelSv": "Jag åker buss till skolan varje dag. Resan tar tjugo minuter. På vintern är bussen ofta försenad eftersom det är mycket snö."
+  "modelSv": "Jag åker buss till skolan varje dag. Resan tar tjugo minuter. På vintern är bussen ofta försenad eftersom det är mycket snö.",
+  "gloss": {
+   "fernzüge": {
+    "t": "der Fernzug (-züge)",
+    "sv": "fjärrtåg",
+    "g": "m"
+   },
+   "gilt": {
+    "t": "gelten",
+    "sv": "gälla, räknas som (es gilt)",
+    "g": ""
+   },
+   "regionalzüge": {
+    "t": "der Regionalzug (-züge)",
+    "sv": "regionaltåg",
+    "g": "m"
+   },
+   "billigeres": {
+    "t": "billig",
+    "sv": "billig (komparativ: billiger)",
+    "g": ""
+   }
+  }
  },
  {
   "id": "t3-c-ausbildung",
@@ -83,7 +105,34 @@
   },
   "ask": "Und in Schweden? Skriv 2–3 meningar på tyska: vilket yrke skulle du kunna tänka dig att lära dig på det här sättet, och varför?",
   "model": "Ich könnte mir eine Ausbildung als Tischler vorstellen, weil ich gern mit Holz arbeite. In Schweden lernt man einen Beruf meistens im Gymnasium. Ich finde es gut, dass man in Deutschland schon Geld verdient.",
-  "modelSv": "Jag skulle kunna tänka mig en utbildning till snickare, eftersom jag gillar att jobba med trä. I Sverige lär man sig ett yrke oftast på gymnasiet. Jag tycker det är bra att man redan tjänar pengar i Tyskland."
+  "modelSv": "Jag skulle kunna tänka mig en utbildning till snickare, eftersom jag gillar att jobba med trä. I Sverige lär man sig ett yrke oftast på gymnasiet. Jag tycker det är bra att man redan tjänar pengar i Tyskland.",
+  "gloss": {
+   "betrieb": {
+    "t": "der Betrieb (-e)",
+    "sv": "företag, arbetsplats",
+    "g": "m"
+   },
+   "berufsschule": {
+    "t": "die Berufsschule (-n)",
+    "sv": "yrkesskola",
+    "g": "f"
+   },
+   "ausbildungsberufe": {
+    "t": "der Ausbildungsberuf (-e)",
+    "sv": "yrke man lär sig genom lärlingsutbildning",
+    "g": "m"
+   },
+   "mechatronikerin": {
+    "t": "die Mechatronikerin (-nen)",
+    "sv": "mekatroniker (kvinna)",
+    "g": "f"
+   },
+   "friseurin": {
+    "t": "die Friseurin (-nen)",
+    "sv": "frisör (kvinna)",
+    "g": "f"
+   }
+  }
  },
  {
   "id": "t3-c-datenschutz",
@@ -124,7 +173,34 @@
   },
   "ask": "Und in Schweden? Skriv 2–3 meningar på tyska: betalar du med kort eller kontant, och vad delar du på nätet?",
   "model": "In Schweden bezahlen fast alle mit Karte oder mit dem Handy. Bargeld habe ich fast nie. Im Internet teile ich nur Fotos mit meinen Freunden, nicht öffentlich.",
-  "modelSv": "I Sverige betalar nästan alla med kort eller med mobilen. Kontanter har jag nästan aldrig. På nätet delar jag bara bilder med mina vänner, inte offentligt."
+  "modelSv": "I Sverige betalar nästan alla med kort eller med mobilen. Kontanter har jag nästan aldrig. På nätet delar jag bara bilder med mina vänner, inte offentligt.",
+  "gloss": {
+   "vorsichtig": {
+    "t": "vorsichtig",
+    "sv": "försiktig",
+    "g": ""
+   },
+   "nazizeit": {
+    "t": "die Nazizeit",
+    "sv": "nazisttiden (1933–1945)",
+    "g": "f"
+   },
+   "staat": {
+    "t": "der Staat (-en)",
+    "sv": "stat",
+    "g": "m"
+   },
+   "gesammelt": {
+    "t": "sammeln",
+    "sv": "samla",
+    "g": ""
+   },
+   "strenge": {
+    "t": "streng",
+    "sv": "sträng",
+    "g": ""
+   }
+  }
  },
  {
   "id": "t3-c-kur",
@@ -165,7 +241,24 @@
   },
   "ask": "Und in Schweden? Skriv 2–3 meningar på tyska: vad gör du för att koppla av när du är stressad?",
   "model": "Wenn ich gestresst bin, gehe ich im Wald spazieren oder höre Musik. Manchmal gehe ich auch in die Sauna. Eine Kur wie in Deutschland gibt es in Schweden nicht.",
-  "modelSv": "När jag är stressad går jag på promenad i skogen eller lyssnar på musik. Ibland går jag också i bastu. En kur som i Tyskland finns inte i Sverige."
+  "modelSv": "När jag är stressad går jag på promenad i skogen eller lyssnar på musik. Ibland går jag också i bastu. En kur som i Tyskland finns inte i Sverige.",
+  "gloss": {
+   "kur": {
+    "t": "die Kur (-en)",
+    "sv": "kur, kurvistelse",
+    "g": "f"
+   },
+   "erde": {
+    "t": "die Erde",
+    "sv": "jord, marken",
+    "g": "f"
+   },
+   "kaiserin": {
+    "t": "die Kaiserin (-nen)",
+    "sv": "kejsarinna",
+    "g": "f"
+   }
+  }
  },
  {
   "id": "t3-c-pfand",
@@ -206,7 +299,29 @@
   },
   "ask": "Und in Schweden? Skriv 2–3 meningar på tyska: hur sorterar ni soporna hemma, och pantar du flaskor?",
   "model": "Bei uns zu Hause trennen wir Papier, Plastik, Glas und Biomüll. Die Flaschen bringe ich in den Supermarkt. In Schweden gibt es auch Pfand, aber es ist nicht so viel wie in Deutschland.",
-  "modelSv": "Hemma hos oss sorterar vi papper, plast, glas och matavfall. Flaskorna lämnar jag i mataffären. I Sverige finns det också pant, men det är inte lika mycket som i Tyskland."
+  "modelSv": "Hemma hos oss sorterar vi papper, plast, glas och matavfall. Flaskorna lämnar jag i mataffären. I Sverige finns det också pant, men det är inte lika mycket som i Tyskland.",
+  "gloss": {
+   "sammeln": {
+    "t": "sammeln",
+    "sv": "samla",
+    "g": ""
+   },
+   "mülleimer": {
+    "t": "der Mülleimer (-)",
+    "sv": "soptunna, papperskorg",
+    "g": "m"
+   },
+   "werfen": {
+    "t": "werfen",
+    "sv": "kasta",
+    "g": ""
+   },
+   "hinein": {
+    "t": "hinein",
+    "sv": "in (dit in)",
+    "g": ""
+   }
+  }
  },
  {
   "id": "t3-c-kaffeehaus",
@@ -247,7 +362,29 @@
   },
   "ask": "Und in Schweden? Skriv 2–3 meningar på tyska: jämför det wienska kaffehuset med fikat i Sverige.",
   "model": "In Schweden trinken wir auch viel Kaffee, und wir machen gern „Fika“ mit Kuchen. Aber in einem schwedischen Café sitzt man meistens nicht so lange. Ein Glas Wasser bekommt man nicht automatisch.",
-  "modelSv": "I Sverige dricker vi också mycket kaffe, och vi fikar gärna med kaka. Men på ett svenskt kafé sitter man oftast inte så länge. Ett glas vatten får man inte automatiskt."
+  "modelSv": "I Sverige dricker vi också mycket kaffe, och vi fikar gärna med kaka. Men på ett svenskt kafé sitter man oftast inte så länge. Ett glas vatten får man inte automatiskt.",
+  "gloss": {
+   "kulturerbe": {
+    "t": "das Kulturerbe",
+    "sv": "kulturarv",
+    "g": "n"
+   },
+   "schriftsteller": {
+    "t": "der Schriftsteller (-)",
+    "sv": "författare",
+    "g": "m"
+   },
+   "diskutiert": {
+    "t": "diskutieren",
+    "sv": "diskutera",
+    "g": ""
+   },
+   "milchschaum": {
+    "t": "der Milchschaum",
+    "sv": "mjölkskum",
+    "g": "m"
+   }
+  }
  },
  {
   "id": "t3-c-schule",
@@ -288,7 +425,19 @@
   },
   "ask": "Und in Schweden? Skriv 2–3 meningar på tyska: vad är annorlunda i din skola jämfört med den tyska skolan?",
   "model": "In Schweden gehen alle Kinder neun Jahre zusammen in die Grundschule. Wir bekommen jeden Tag ein kostenloses Mittagessen. Unsere Noten gehen von A bis F.",
-  "modelSv": "I Sverige går alla barn nio år tillsammans i grundskolan. Vi får gratis lunch varje dag. Våra betyg går från A till F."
+  "modelSv": "I Sverige går alla barn nio år tillsammans i grundskolan. Vi får gratis lunch varje dag. Våra betyg går från A till F.",
+  "gloss": {
+   "schulform": {
+    "t": "die Schulform (-en)",
+    "sv": "skolform",
+    "g": "f"
+   },
+   "ungenügend": {
+    "t": "ungenügend",
+    "sv": "otillräcklig, underkänt",
+    "g": ""
+   }
+  }
  },
  {
   "id": "t3-c-dach",
@@ -329,6 +478,18 @@
   },
   "ask": "Und in Schweden? Skriv 2–3 meningar på tyska: finns det dialekter eller regionala ord i svenskan? Ge ett exempel.",
   "model": "Ja, in Schweden gibt es auch viele Dialekte. In Schonen spricht man ganz anders als in Stockholm. Zum Beispiel sagen viele im Süden „Tjena“, wenn sie sich begrüßen.",
-  "modelSv": "Ja, i Sverige finns det också många dialekter. I Skåne pratar man helt annorlunda än i Stockholm. Till exempel säger många i söder ”tjena” när de hälsar."
+  "modelSv": "Ja, i Sverige finns det också många dialekter. I Skåne pratar man helt annorlunda än i Stockholm. Till exempel säger många i söder ”tjena” när de hälsar.",
+  "gloss": {
+   "südtirol": {
+    "t": "Südtirol",
+    "sv": "Sydtyrolen (i norra Italien)",
+    "g": ""
+   },
+   "plurizentrisch": {
+    "t": "plurizentrisch",
+    "sv": "med flera centrum (om ett språk)",
+    "g": ""
+   }
+  }
  }
 ]

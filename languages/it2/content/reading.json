@@ -22,7 +22,8 @@
   "questions": [
    {"type": "helhet", "q": "Vad är det för slags text?", "opts": ["Ett brev till en lärare om matteprov", "En artikel om språkgymnasier i Italien", "Ett inlägg där Aurora presenterar sig och vill ha svar från läsarna", "En berättelse om ett bråk mellan två systrar"], "a": 2, "why": "Aurora berättar om sig själv, sin vän och sina intressen och avslutar med « Scrivetemi un commento »."},
    {"type": "detalj", "q": "Varför pratade Aurora och Bea inte med varandra på två veckor?", "opts": ["De hade bråkat om en dumhet", "Bea hade flyttat till Neapel", "Aurora hade för mycket att plugga", "Bea arbetade på hundhemmet"], "a": 0, "why": "« abbiamo litigato per una stupidaggine e non ci siamo parlate per due settimane »."},
-   {"type": "tolkning", "q": "Vilken egenskap förklarar Aurora med meningen « non cambio idea facilmente »?", "opts": ["Att hon är sällskaplig", "Att hon är nyfiken", "Att hon är generös", "Att hon är envis"], "a": 3, "why": "Meningen kommer direkt efter « un po' testarda » och förklarar vad hon menar: hon ändrar sig inte gärna."}
+   {"type": "tolkning", "q": "Vilken egenskap förklarar Aurora med meningen « non cambio idea facilmente »?", "opts": ["Att hon är sällskaplig", "Att hon är nyfiken", "Att hon är generös", "Att hon är envis"], "a": 3, "why": "Meningen kommer direkt efter « un po' testarda » och förklarar vad hon menar: hon ändrar sig inte gärna."},
+   {"type": "detalj", "q": "Vad gör Aurora på lördagsförmiddagarna?", "opts": ["Hon ritar serier", "Hon jobbar som volontär på ett hundhem", "Hon pluggar matte", "Hon träffar Bea på en glassbar"], "a": 1, "why": "« Il sabato mattina faccio volontariato in un canile ». Un canile är ett hundhem."}
   ],
   "gloss": {
    "nata": {"t": "nascere (nato)", "sv": "födas", "g": ""},
@@ -78,7 +79,8 @@
   "questions": [
    {"type": "helhet", "q": "Vad handlar texten om?", "opts": ["En fest som slutade med ett bråk", "En utflykt som inte gick som planerat men ändå blev rolig", "En cykeltävling runt en sjö", "En resa med tåg till havet"], "a": 1, "why": "Mycket går fel (tåget, regnet), men skribenten säger till slut att det var « la giornata più divertente del mese »."},
    {"type": "detalj", "q": "Varför missade skribenten tåget klockan nio?", "opts": ["Tåget var inställt på grund av regn", "Marta och Filippo kom för sent", "Han hade glömt cykeln hemma", "Han hade varit uppe sent och hörde inte väckarklockan"], "a": 3, "why": "Kvällen före var de på fest (« abbiamo fatto le ore piccole ») och på morgonen « non ho sentito la sveglia »."},
-   {"type": "tolkning", "q": "Hur tycker skribenten att dagen var?", "opts": ["Både en katastrof och jätterolig", "Bara tråkig och blöt", "Lugn och vilsam", "Bättre än han hade planerat, eftersom vädret var fint hela dagen"], "a": 0, "why": "Han kallar den « un disastro » men också « la giornata più divertente del mese » och säger « ho riso tutto il giorno »."}
+   {"type": "tolkning", "q": "Hur tycker skribenten att dagen var?", "opts": ["Både en katastrof och jätterolig", "Bara tråkig och blöt", "Lugn och vilsam", "Bättre än han hade planerat, eftersom vädret var fint hela dagen"], "a": 0, "why": "Han kallar den « un disastro » men också « la giornata più divertente del mese » och säger « ho riso tutto il giorno »."},
+   {"type": "detalj", "q": "Vad gjorde vännerna när det började regna?", "opts": ["De tog tåget hem direkt", "De gick in på ett kafé", "De gömde sig under ett träd", "De fortsatte att cykla"], "a": 2, "why": "« Ci siamo nascosti sotto un albero », men de kom ändå hem genomblöta."}
   ],
   "gloss": {
    "scorsa": {"t": "scorso, -a", "sv": "förra; domenica scorsa = i söndags", "g": ""},
@@ -133,7 +135,8 @@
   "questions": [
    {"type": "helhet", "q": "Vad handlar Sofias brev om?", "opts": ["Hennes semester i Apulien", "Hur man bokar ett rum på en bondgård", "En strejk på flygplatsen i Milano", "Hennes flytt till Lecce"], "a": 0, "why": "Hon berättar om resan dit, boendet, stranden, en guidad tur och en shoppingrunda."},
    {"type": "detalj", "q": "Varför blev flyget försenat?", "opts": ["Det var dåligt väder", "Familjen kom för sent till flygplatsen", "Det var strejk", "Planet var trasigt"], "a": 2, "why": "« il volo è decollato con due ore di ritardo per uno sciopero »."},
-   {"type": "tolkning", "q": "Vad menar Sofia med att Apulien är « il tacco dello stivale »?", "opts": ["Att regionen är känd för sina skor", "Att Italien på kartan liknar en stövel och Apulien ligger där klacken är", "Att det är jobbigt att gå där", "Att regionen ligger längst upp i norr"], "a": 1, "why": "Italien ser ut som en stövel på kartan, och Apulien ligger längst ut i sydost, där klacken (« il tacco ») sitter."}
+   {"type": "tolkning", "q": "Vad menar Sofia med att Apulien är « il tacco dello stivale »?", "opts": ["Att regionen är känd för sina skor", "Att Italien på kartan liknar en stövel och Apulien ligger där klacken är", "Att det är jobbigt att gå där", "Att regionen ligger längst upp i norr"], "a": 1, "why": "Italien ser ut som en stövel på kartan, och Apulien ligger längst ut i sydost, där klacken (« il tacco ») sitter."},
+   {"type": "detalj", "q": "Hur ska Sofia och hennes familj resa hem?", "opts": ["Med flyg från Brindisi", "Med den hyrda bilen", "Med buss till Milano", "Med tåg, en resa på nio timmar"], "a": 3, "why": "« sabato dobbiamo già tornare a casa, in treno: saranno nove ore di viaggio »."}
   ],
   "gloss": {
    "cara": {"t": "caro, -a", "sv": "kära (i brev)", "g": ""},
@@ -188,7 +191,8 @@
   "questions": [
    {"type": "helhet", "q": "Vad handlar texten om?", "opts": ["En pappa som klagar på att hans barn spelar för mycket", "En man som minns sin barndom och jämför med sina barns liv", "En lärarinna som berättar om sina elever", "En familj som flyttar från Milano till Trentino"], "a": 1, "why": "Nästan hela texten står i imperfetto och beskriver hur det var förr. I slutet jämför han med sina barn i dag."},
    {"type": "detalj", "q": "Varför lät mamman en liten lampa vara tänd?", "opts": ["Huset var kallt", "Brodern ville läsa på kvällen", "Sonen var mörkrädd", "Det fanns ingen lampa i köket"], "a": 2, "why": "« Avevo paura del buio, quindi la mamma lasciava sempre una piccola luce accesa »."},
-   {"type": "tolkning", "q": "Vad tycker skribenten om skillnaden mellan sin barndom och barnens?", "opts": ["Han ser fördelar med båda: han var friare, men barnen kan saker som han inte kunde", "Han tycker att hans egen barndom var tråkig", "Han tycker att barnen borde sluta använda surfplattan", "Han tycker att allt var bättre förr"], "a": 0, "why": "Han skriver « forse ero più libero, ma loro sanno fare tante cose che io non sapevo fare ». Han dömer inte, han jämför."}
+   {"type": "tolkning", "q": "Vad tycker skribenten om skillnaden mellan sin barndom och barnens?", "opts": ["Han ser fördelar med båda: han var friare, men barnen kan saker som han inte kunde", "Han tycker att hans egen barndom var tråkig", "Han tycker att barnen borde sluta använda surfplattan", "Han tycker att allt var bättre förr"], "a": 0, "why": "Han skriver « forse ero più libero, ma loro sanno fare tante cose che io non sapevo fare ». Han dömer inte, han jämför."},
+   {"type": "detalj", "q": "Vad hände efter att han hade brutit armen?", "opts": ["Han fick stanna hemma hela vintern", "Hans bror bar honom till skolan varje dag", "Alla kamraterna skrev sina namn på gipset", "Lärarinnan Rosa ringde till hans morföräldrar"], "a": 2, "why": "« dopo tutti i compagni hanno scritto il loro nome sul gesso »."}
   ],
   "gloss": {
    "paesino": {"t": "il paesino", "sv": "liten by", "g": "m"},
@@ -312,7 +316,8 @@
   "questions": [
    {"type": "helhet", "q": "Vad handlar texten om?", "opts": ["En volleybollmatch som laget vann", "En tjej som skadade knät under en match och vad som hände sedan", "En läkare som berättar om sitt arbete på akuten", "En tränare som ger råd om uppvärmning"], "a": 1, "why": "Hon beskriver fallet, besöket på akuten, läkarens råd och hur hon har det nu."},
    {"type": "detalj", "q": "Vad sa läkaren att hon skulle göra?", "opts": ["Operera knät", "Börja träna direkt igen", "Gå till sjukhuset varje dag", "Vila i två veckor och lägga på is tre gånger om dagen"], "a": 3, "why": "« Devi stare a riposo per due settimane e mettere il ghiaccio tre volte al giorno. »"},
-   {"type": "tolkning", "q": "Hur verkar hon må nu?", "opts": ["Hon är ledsen och vill sluta spela", "Hon är arg på tränaren", "Hon har lite tråkigt men ser fram emot att spela igen", "Hon har fortfarande jätteont och är orolig"], "a": 2, "why": "Hon skriver « Mi annoio un po' », men har serier och besök, och slutar med « Non vedo l'ora! » om att spela igen."}
+   {"type": "tolkning", "q": "Hur verkar hon må nu?", "opts": ["Hon är ledsen och vill sluta spela", "Hon är arg på tränaren", "Hon har lite tråkigt men ser fram emot att spela igen", "Hon har fortfarande jätteont och är orolig"], "a": 2, "why": "Hon skriver « Mi annoio un po' », men har serier och besök, och slutar med « Non vedo l'ora! » om att spela igen."},
+   {"type": "detalj", "q": "Varför fick de vänta i tre timmar på akuten?", "opts": ["Läkaren var på lunch", "Det fanns många patienter", "Röntgenapparaten var trasig", "Tränaren hittade inte sjukhuset"], "a": 1, "why": "« Abbiamo aspettato tre ore, perché c'erano tanti pazienti »."}
   ],
   "gloss": {
    "partita": {"t": "la partita", "sv": "match", "g": "f"},
@@ -429,7 +434,8 @@
   "questions": [
    {"type": "helhet", "q": "Vad handlar texten om?", "opts": ["Hur man skriver en bra jobbansökan", "Varför restaurangjobb är dåligt betalda", "Skribentens sommarjobb förra året och hans planer för framtiden", "En arkitekt som berättar om sitt yrke"], "a": 2, "why": "Första delen (passato prossimo och imperfetto) handlar om sommarjobbet, andra delen (futuro) om praktiken och universitetet."},
    {"type": "detalj", "q": "Vad köpte han för pengarna han tjänade?", "opts": ["En ny dator", "En resa till Venedig", "Nya kläder till jobbet", "Ingenting, han sparade dem"], "a": 0, "why": "« Con i soldi che ho guadagnato, ho comprato un computer nuovo »."},
-   {"type": "tolkning", "q": "Varför ska han göra praktik på ett arkitektkontor i år?", "opts": ["Han fick inte jobbet på restaurangen igen", "Kontoret betalar bättre än restaurangen", "Hans föräldrar tvingar honom", "Han vill bli arkitekt och vill lära sig mer om yrket"], "a": 3, "why": "Direkt efter meningen om praktiken förklarar han: « Infatti, da grande voglio diventare architetto »."}
+   {"type": "tolkning", "q": "Varför ska han göra praktik på ett arkitektkontor i år?", "opts": ["Han fick inte jobbet på restaurangen igen", "Kontoret betalar bättre än restaurangen", "Hans föräldrar tvingar honom", "Han vill bli arkitekt och vill lära sig mer om yrket"], "a": 3, "why": "Direkt efter meningen om praktiken förklarar han: « Infatti, da grande voglio diventare architetto »."},
+   {"type": "tolkning", "q": "Vad betyder frågan « avete un sogno nel cassetto? » i slutet?", "opts": ["Har ni haft en mardröm?", "Har ni en dröm som ni bär på och hoppas förverkliga?", "Minns ni något från när ni var små?", "Har ni sparat pengar till något?"], "a": 1, "why": "Ordagrant ”en dröm i lådan”: en önskan man har sparat men inte förverkligat än. Skribentens egen dröm är att bli arkitekt (« è il mio sogno »)."}
   ],
   "gloss": {
    "estivo": {"t": "il lavoro estivo", "sv": "sommarjobb", "g": ""},
@@ -788,6 +794,18 @@
     ],
     "a": 1,
     "why": "« Porta cenere e carbone ai bambini cattivoni ». I dag får många barn ”kol” av svart socker, som ett skämt."
+   },
+   {
+    "type": "tolkning",
+    "q": "Vad vill visan säga till barnen?",
+    "opts": [
+     "Att de ska vara snälla, annars får de kol i stället för godis",
+     "Att de inte ska gå ut på natten",
+     "Att de ska vara rädda om sina skor",
+     "Att Rom är den finaste staden"
+    ],
+    "a": 0,
+    "why": "Snälla barn (« belli e buoni ») får godis och presenter, stygga barn (« cattivoni ») får aska och kol. Visan uppmanar barnen att vara snälla."
    }
   ],
   "gloss": {
