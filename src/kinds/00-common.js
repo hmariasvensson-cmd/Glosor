@@ -23,7 +23,7 @@ const hasWord=(text,w)=>new RegExp("(^|[^\\p{L}])"+reEsc(apos(w))+"(?![\\p{L}])"
 // Ord som eleven sparar från texterna läggs som ett eget avsnitt och repeteras som vanliga glosor
 function rebuildWords(){
   const mine=(S.mine||[]).map(m=>({id:"mine:"+m.t,sec:"mine",t:m.t,sv:m.sv,g:m.g||"",exT:m.ex.replace(/[\[\]]/g,""),exSv:m.exSv||"",
-    ety:m.src?`Sparat från texten <b>${esc(m.src)}</b>.`:m.own?"Ett ord du har lagt till själv.":"",gap:m.ex?findGap(m.t,m.ex):null}));
+    ety:m.src?`Sparat från texten <b>${esc(m.src)}</b>${m.form?`, där det stod <i>${esc(m.form)}</i>`:""}.`:m.own?"Ett ord du har lagt till själv.":"",gap:m.ex?findGap(m.t,m.ex):null}));
   WORDS=[...L.base.words,...mine];
   SECTIONS=mine.length?[...L.base.sections,{id:"mine",name:"Mina ord"}]:L.base.sections.slice();
   byId=Object.fromEntries(WORDS.map(w=>[w.id,w]));
@@ -41,7 +41,7 @@ function addMine(g,surface,line,text){
   S.mine=S.mine||[]; if(isMine(g.t)) return;
   const t=tl(line), i=t.indexOf(surface);
   const ex=i<0?t:t.slice(0,i)+"["+surface+"]"+t.slice(i+surface.length);
-  S.mine.push({t:g.t,sv:g.sv,g:g.g||"",ex,exSv:line.sv||"",src:text.title});
+  S.mine.push({t:g.t,sv:g.sv,g:g.g||"",ex,exSv:line.sv||"",src:text.title,...(g.form?{form:g.form}:{})});   // form: böjd form i texten (03-lemma.js)
   rebuildWords(); save();
 }
 
@@ -78,12 +78,30 @@ function curSec(){
    Kapitel märkta #id|Namn|bok i words.txt kommer från elevens lärobok (L.book). Eleven väljer kapitlet
    klassen läser (S.chapter). Nya ord tas då först från det kapitlet, sedan från resten i ordning. */
 const hasBook=()=>SECTIONS.some(s=>s.book);
-// Avsnitt som hör till samma bokkapitel ("Kap 3 · …" och "Kap 3 · Fler ord ur kapitlet") räknas ihop
-const chapterKey=id=>{const s=SECTIONS.find(x=>x.id===id); const m=s&&s.book&&s.name.match(/^Kap\s*\d+/); return m?m[0]:id;};
+/* Kapitlet ett avsnitt hör till. Det enda stället som avgör det (kapitelprovet, kapitelkartan, "kapitlet ni läser",
+   målen och grammatiken använder det):
+   - k1, k1b, k1e och k1x hör alla till kapitel "k1" (id-mönstret, även utanför boken),
+   - ett bokavsnitt med ett annat id men namnet "Kap 3 · …" hör till "k3",
+   - annars är avsnittet sitt eget kapitel.
+   Nyckeln är nyckeln i S.kt (kapitelprovets resultat) och får därför inte ändras för befintliga avsnitt. */
+function chapterKey(id){
+  const m=/^k(\d+)[a-z]?$/.exec(id||""); if(m) return "k"+m[1];
+  const s=SECTIONS.find(x=>x.id===id), n=s&&s.book&&/^Kap\s*(\d+)/.exec(s.name); return n?"k"+n[1]:id;
+}
+const ktKey=chapterKey;   // det gamla namnet (kapitelprovet), används av testerna
 const sameChapter=(a,b)=>a===b||chapterKey(a)===chapterKey(b);
+// Kapitlen i avsnittens ordning: {id: chapterKey, name, ids: [avsnitt], book, words: [ord]}, bara kapitel med ord.
+// Namnet är det första avsnittets, utan " · Fler ord ur kapitlet". Räknas en gång per rendering.
+const chapters=()=>perRender("chapters",()=>{
+  const out=[], by={};
+  SECTIONS.forEach(s=>{ const k=chapterKey(s.id); let c=by[k];
+    if(!c){ c=by[k]={id:k,name:s.name.replace(/ · Fler ord ur kapitlet$/,""),ids:[],book:!!s.book,words:[]}; out.push(c); }
+    c.ids.push(s.id); c.words.push(...secWords(s.id)); });
+  return out.filter(c=>c.words.length);
+});
 function bookPanel(){
   const secs=SECTIONS.filter(s=>s.book), cur=secs.find(s=>s.id===S.chapter);
-  const left=id=>WORDS.filter(w=>w.sec===id&&!isLearned(w)).length;
+  const left=id=>secProg([id]).rest;
   const i=cur?secs.indexOf(cur):-1, next=cur&&!left(cur.id)?secs.slice(i+1).find(s=>left(s.id)):null;
   return `<section class="panel book"><div class="meta"><span class="label">Boken</span><span>${esc(L.book.title)}</span></div>
     <div class="field"><span class="label">Vi läser nu</span><select id="chapter"><option value="">Inget särskilt kapitel</option>
@@ -106,6 +124,36 @@ function sentencePool(min=6){
 const clozePool=()=>WORDS.filter(w=>w.gap&&isLearned(w));
 const tok=s=>s.toLowerCase().replace(/[’`´]/g,"'").replace(/[«»"“”!?.,;:…()\-–—]/g," ").replace(/\s+/g," ").trim().split(" ").filter(Boolean);
 
+/* ---------- Poäng per post och "svagast först" ----------
+   Fraser (S.ph), meningar (S.tr översätt, S.dc diktamen, S.od ordföljd), grammatik (S.gi), teori (S.te),
+   satsanalys (S.sa) och transkription (S.ipa) sparar {s, last, dd} per post: s = rätt i rad (0 efter ett fel),
+   last = senast övad (ms), dd = förfaller (midnatt, ms). Andra fält i posten (r, n) lämnas orörda.
+   dd kom 2026-09-30: en post utan dd (sparad före dess, eller missad senast) räknas som förfallen.
+   Efter rätt svar nummer s förfaller posten om SRS_DAYS[s-1] dagar, samma steg som orden i dagar (DAYS i app.js). */
+const SRS_DAYS=[1,3,7,20,45,90];
+function srsBump(rec,right,now){
+  now=now||Date.now(); const x=Object.assign({},rec||{}), s=right?(+x.s||0)+1:0;
+  x.s=s; x.last=now;
+  if(s) x.dd=addDays(now,SRS_DAYS[Math.min(s,SRS_DAYS.length)-1]); else delete x.dd;
+  return x;
+}
+// Förfallen: övad förut (har en post) och dd har passerat eller saknas. En post som aldrig övats är ny, inte förfallen.
+const srsDue=(rec,now)=>!!rec&&!(rec.dd>(now||Date.now()));
+// Antal förfallna i dag bland id:n (för övningarnas startsida)
+const srsDueCount=(tab,ids)=>{const now=Date.now(); return ids.filter(id=>srsDue((tab||{})[id],now)).length;};
+const srsDueNote=n=>n?` · ${n} att repetera i dag`:"";
+/* Sorterar items "svagast först": lägst s (eller o.key), sedan det som övades längst sedan, sedan slumpen.
+   field = namnet på fältet i S ("ph", "tr" …) eller en funktion item → post. o.id(item) ger postens id (standard item.id),
+   o.cap = högsta s som räknas (lika svaga över det), o.tie(a,b) = jämförelse mellan s och last.
+   o.due = tidsbaserad repetition: förfallna först (svagast först), sedan nya, sedan resten (svagast först). */
+function weakestFirst(items,field,o){
+  o=o||{}; const now=Date.now(), idOf=o.id||(x=>x.id);
+  const tab=typeof field==="function"?null:(S[field]=S[field]||{}), recOf=tab?x=>tab[idOf(x)]:field;
+  return items.map(x=>{const r=recOf(x), s=r&&+r.s||0;
+      return {x,k:o.key?o.key(x,r):o.cap!=null?Math.min(s,o.cap):s,l:r&&+r.last||0,g:o.due?(!r?1:srsDue(r,now)?0:2):0,z:Math.random()};})
+    .sort((a,b)=>a.g-b.g||a.k-b.k||(o.tie?o.tie(a.x,b.x):0)||a.l-b.l||a.z-b.z).map(e=>e.x);
+}
+
 // Jämför elevens mening med facit ord för ord (tål skiljetecken och versaler)
 function compareTokens(input,target){
   const a=tok(input), b=tok(target); if(!a.length) return {r:"empty"};
@@ -125,12 +173,13 @@ function compareTokens(input,target){
   return {r,html};
 }
 
-/* Uppläsning av flera repliker i rad, med olika röst eller tonhöjd för talare B */
+/* Uppläsning av flera repliker i rad, med olika röst eller tonhöjd för talare B.
+   Utan uppläsning i webbläsaren blir det medvetet tyst (se Uppläsning i app.js). */
 let seqId=0;
-function stopSpeech(){seqId++; try{speechSynthesis.cancel()}catch(e){}}
+function stopSpeech(){seqId++; try{speechSynthesis.cancel()}catch(e){ /* ingen uppläsning */ }}
 function speakSeq(lines,rate,onLine){
   stopSpeech(); if(!SOUND) return; const id=seqId;
-  let vs=[]; try{vs=speechSynthesis.getVoices().filter(v=>(v.lang||"").toLowerCase().startsWith(L.tts.slice(0,2)))}catch(e){}
+  let vs=[]; try{vs=speechSynthesis.getVoices().filter(v=>(v.lang||"").toLowerCase().startsWith(L.tts.slice(0,2)))}catch(e){ /* ingen uppläsning */ }
   const a=voice||vs[0]||null, b=vs.find(v=>v!==a)||a;
   let k=0;
   const next=()=>{
@@ -142,7 +191,7 @@ function speakSeq(lines,rate,onLine){
       const isB=ln.who==="B"; const v=isB?b:a; if(v) u.voice=v; u.pitch=isB&&b===a?1.3:1; u.rate=rate||baseRate();
       u.onend=()=>{k++; setTimeout(next,300)}; u.onerror=()=>{if(id===seqId){k++; setTimeout(next,300)}};
       speechSynthesis.speak(u);
-    }catch(e){}
+    }catch(e){ /* ingen uppläsning */ }
   };
   next();
 }
@@ -181,8 +230,11 @@ const listWord=t=>WORDS.find(w=>w.sec!=="mine"&&(w.t===t||variants(w.t).includes
 function wireGloss(text){
   const box=$("#gbox"); if(!box) return;
   const sel=new Map(), gloss=text.gloss||{};
-  // Ord utan glosa sparas som de står, med liten bokstav om språket inte skriver substantiv med stor (tyskan gör det)
-  const base=e=>{ if(e.g) return e.g.t; const t=L.elision?e.surface.replace(L.elision,""):e.surface; return L.nounCaps?t:t.toLowerCase(); };
+  // Ord utan glosa sparas i grundform om den finns i ordlistan eller verbtabellerna (lemmaOf, 03-lemma.js), annars som
+  // de står, med liten bokstav om språket inte skriver substantiv med stor (tyskan gör det)
+  const bare=e=>{ const t=L.elision?e.surface.replace(L.elision,""):e.surface; return L.nounCaps?t:t.toLowerCase(); };
+  const base=e=>e.g?e.g.t:e.lem?e.lem.t:bare(e);
+  const inflected=e=>!e.g&&!!e.lem&&lemmaKey(e.lem.t)!==lemmaKey(bare(e));   // "fährt (av fahren)"
   const status=e=>{ const t=base(e); if(isMine(t)) return "Finns redan i Mina ord"; const w=listWord(t);
     return w?(isLearned(w)?"Du övar redan på ordet":"Finns i ordlistan och kommer i quizet"):""; };
   const addable=()=>[...sel.values()].filter(e=>!status(e)&&e.sv.trim());
@@ -195,7 +247,7 @@ function wireGloss(text){
     box.classList.add("tray"); box.classList.toggle("mini",!!box.dataset.mini);
     box.innerHTML=`<div class="meta"><span class="label">Valda ord (${sel.size})</span><span><button type="button" class="override" id="minsel">${box.dataset.mini?"Visa listan":"Fäll ihop"}</button> · <button type="button" class="override" id="clrsel">Rensa</button></span></div>
       <ul class="picked">${[...sel.values()].map(e=>{const st=status(e);
-        return `<li data-pk="${esc(e.k)}"><span class="pw"><b ${lang()}>${esc(base(e))}</b> ${e.g?gtag(e.g.g):""}</span>
+        return `<li data-pk="${esc(e.k)}"><span class="pw">${inflected(e)?`<b ${lang()}>${esc(bare(e))}</b> <small class="lemof">(av <span ${lang()}>${esc(e.lem.t)}</span>)</small>`:`<b ${lang()}>${esc(base(e))}</b>`} ${e.g?gtag(e.g.g):e.lem?gtag(e.lem.g):""}</span>
         ${e.g?`<span class="psv">${esc(e.g.sv)}</span>`:`<input class="psv-in" data-sv="${esc(e.k)}" value="${esc(e.sv)}" placeholder="Skriv vad det betyder" ${st?"disabled":""}>`}
         <button type="button" class="speak xs" data-say="${esc(base(e))}" aria-label="Läs upp">${SPK}</button>
         <button type="button" class="unpick" data-unpick="${esc(e.k)}" aria-label="Ta bort ${esc(base(e))} från listan">×</button>
@@ -207,7 +259,7 @@ function wireGloss(text){
     $("#minsel").onclick=()=>{ if(box.dataset.mini) delete box.dataset.mini; else box.dataset.mini="1"; draw(); };
     $("#addsel").onclick=()=>{
       const list=addable(); if(!list.length) return;
-      list.forEach(e=>{ addMine({t:base(e),sv:e.sv.trim(),g:e.g?e.g.g:""},e.surface,text.lines[e.i],text); sel.delete(e.k); mark(e.k);
+      list.forEach(e=>{ addMine({t:base(e),sv:e.sv.trim(),g:e.g?e.g.g:e.lem?e.lem.g:"",form:inflected(e)?bare(e):""},e.surface,text.lines[e.i],text); sel.delete(e.k); mark(e.k);
         app.querySelectorAll(".tw").forEach(x=>{if(x.dataset.k===e.k) x.classList.add("saved");}); });
       draw();
       box.hidden=false; box.insertAdjacentHTML("afterbegin",`<p class="foot" id="addmsg">${list.length} ${list.length===1?"ord sparat":"ord sparade"} i Mina ord. De kommer med bland de nya orden i nästa pass.</p>`);
@@ -217,7 +269,9 @@ function wireGloss(text){
   app.querySelectorAll(".tw").forEach(el=>el.onclick=()=>{
     const k=el.dataset.k;
     if(sel.has(k)) sel.delete(k);
-    else { const g=gloss[k]||null; sel.set(k,{k,surface:el.textContent,i:+el.dataset.i,g,sv:g?g.sv:""}); }
+    else { const g=gloss[k]||null, e={k,surface:el.textContent,i:+el.dataset.i,g,sv:g?g.sv:""};
+      if(!g){ e.lem=lemmaOf(e.surface); if(e.lem) e.sv=e.lem.sv||""; }   // med elisionen: l'été är ett substantiv
+      sel.set(k,e); }
     mark(k); draw();
     const inp=box.querySelector(`[data-sv="${CSS.escape(k)}"]`); if(inp&&!inp.disabled) inp.focus({preventScroll:true});
   });
@@ -241,7 +295,7 @@ function copyText(el,msgEl){
 }
 // Lista att välja text/berättelse/uppgift från
 function pickerScreen(title,intro,items,onPick){
-  stopSpeech(); $("#tabs").hidden=true; sess=null; curView="ova";
+  stopSpeech(); $("#tabs").hidden=true; sess=null; curView="ova"; RETURN_TO=null;
   const cur=curSec();
   app.innerHTML=`<section class="panel"><h2>${esc(title)}</h2><p class="plan">${intro}</p>
     <div class="games">${items.map(it=>`<button class="game${it.sec===cur||it.here?" here":""}" data-pick="${esc(it.id)}"><span><b ${lang()}>${esc(it.title)}</b>
@@ -259,7 +313,7 @@ const resultHead=(label,right,total)=>`<span class="label">${esc(label)}</span>
    Kräver kapabiliteten "sample" (den som använder funktionen betalar med sin egen Claude-användning och
    godkänner det första gången). Kommentaren sparas i S.fb[nyckel] så att den finns kvar. */
 let SAMPLE=null;
-(async()=>{ try{ if(window.claude&&window.claude.use) SAMPLE=await window.claude.use("sample"); }catch(e){} })();
+(async()=>{ try{ if(window.claude&&window.claude.use) SAMPLE=await window.claude.use("sample"); }catch(e){ warnErr("Claudes kommentarer (sample) kunde inte startas",e); } })();
 /* Nivåstyrd bedömning: nivån tas från uppgiften, provet eller kursen (A1–C1), och elevbeskrivningen byggs av kursens fält.
    Målet (t.ex. musikstudier utomlands) nämns bara när kursen har fältet goal i lang.js. */
 // Första GERS-nivån i en text ("DELF A2" → "A2", "CELI 1 (A2)" → "A2"); last = sista ("A1 → A2" → "A2")
@@ -278,8 +332,10 @@ const LEVEL_GUIDE={
   C1:"C1: välstrukturerad, nyanserad text om komplexa ämnen med precist och idiomatiskt språk, varierad syntax och säker grammatik. Fel ska vara sällsynta."
 };
 const levelGuide=lv=>LEVEL_GUIDE[lv]||LEVEL_GUIDE.B1;
-// Minsta antal ord innan Claude kommenterar: 15, men lägre för korta uppgifter (formulär på A1: hälften av ordgränsen, minst 5)
-const minForFeedback=w=>w?Math.max(5,Math.min(15,Math.ceil(w/2))):15;
+// Minsta antal ord innan Claude kommenterar: FB_MIN_WORDS, men lägre för korta uppgifter (formulär på A1: hälften av
+// ordgränsen, minst FB_MIN_WORDS_SHORT)
+const FB_MIN_WORDS=15, FB_MIN_WORDS_SHORT=5;
+const minForFeedback=w=>w?Math.max(FB_MIN_WORDS_SHORT,Math.min(FB_MIN_WORDS,Math.ceil(w/2))):FB_MIN_WORDS;
 function feedbackPrompt(task,text,lv){
   lv=lv||courseLevel();
   const ex=L.exam?` Kursen tränar mot provet ${L.exam.name} (nivå ${L.exam.level}).`:"";
@@ -316,7 +372,8 @@ function renderFeedback(f){
 function wireFeedback(ta,key,task,opt){
   opt=opt||{}; const need=minForFeedback(opt.minWords);
   const btn=$("#fbbtn"), out=$("#fbout"); if(!btn||!out) return;
-  S.fb=S.fb||{}; out.innerHTML=renderFeedback(S.fb[key]);
+  const R=opt.render||renderFeedback;   // opt.render/prompt/stamp: Skriv en text använder provets bedömning (40-writing.js)
+  S.fb=S.fb||{}; out.innerHTML=R(S.fb[key]);
   let ctl=null;
   btn.onclick=async()=>{
     if(ctl){ ctl.abort(); return; }
@@ -325,23 +382,23 @@ function wireFeedback(ta,key,task,opt){
     if(!SAMPLE){ out.innerHTML=`<p class="foot">Kommentarer från Claude fungerar när appen är öppnad på claude.ai.</p>`; return; }
     ctl=new AbortController(); btn.textContent="Stoppa"; out.innerHTML=`<p class="foot">Claude läser din text … Det brukar ta 10–40 sekunder. Första gången frågar claude.ai om appen får använda Claude.</p>`;
     try{
-      const f=await SAMPLE.json(feedbackPrompt(task,text,opt.level),{signal:ctl.signal,cache:false});
+      const f=await SAMPLE.json(opt.prompt?opt.prompt(text):feedbackPrompt(task,text,opt.level),{signal:ctl.signal,cache:false});
       if(!f||typeof f!=="object") throw {code:"invalid_json"};
-      f.d=Date.now(); S.fb[key]=f; save(); out.innerHTML=renderFeedback(f);
+      f.d=Date.now(); if(opt.stamp) opt.stamp(f,text); S.fb[key]=f; save(); out.innerHTML=R(f);
     }catch(e){
       const msg={cancelled:"",not_granted:"Du har inte gett appen lov att använda Claude. Du kan ge lov nästa gång du öppnar sidan.",
         rate_limited:"Claude är upptagen eller så har du nått din gräns för användning. Försök igen om en stund.",
         session_expired:"Logga in på claude.ai igen och försök sedan en gång till.",invalid_json:"Svaret gick inte att läsa. Försök igen.",
         sampling_disabled:"Claude är inte tillgänglig för ditt konto.",not_declared:"Funktionen är inte påslagen i den här versionen av appen.",
         refused:"Claude kunde inte kommentera den här texten."}[e&&e.code];
-      out.innerHTML=renderFeedback(S.fb[key])+(msg===""?"":`<p class="foot">${esc(msg||"Något gick fel. Försök igen om en stund.")}</p>`);
+      out.innerHTML=R(S.fb[key])+(msg===""?"":`<p class="foot">${esc(msg||"Något gick fel. Försök igen om en stund.")}</p>`);
     }finally{ ctl=null; btn.textContent="Få kommentarer av Claude"; }
   };
 }
 
 /* ---------- Gemensam slutskärm för alla övningar utom glosquizet ---------- */
 function finishGeneric(){
-  const now=Date.now(), ids=Object.keys(sess.firstTry), dur=Math.min(3600,Math.round((now-sess.start)/1000)), by={};
+  const now=Date.now(), ids=Object.keys(sess.firstTry), dur=runSecs(sess.start,now), by={};
   ids.forEach(id=>{const i=id.indexOf(":"), k=id.slice(0,i), ref=id.slice(i+1), ok=!!sess.firstTry[id];
     (by[k]=by[k]||[]).push({ref,ok}); const K=KINDS[k]; if(K&&K.effect) K.effect(ref,ok);});
   Object.entries(by).forEach(([k,a])=>{
@@ -354,12 +411,12 @@ function finishGeneric(){
   const right=ids.filter(id=>sess.firstTry[id]).length, ctx=sess.ctx, againFn=sess.againFn, label=sess.label||"Övningen";
   const missed=ids.filter(id=>!sess.firstTry[id]).map(id=>{const i=id.indexOf(":"),k=id.slice(0,i);const K=KINDS[k]; return K&&K.recap?K.recap(id.slice(i+1)):""}).filter(Boolean);
   sess=null;
-  const A=ctx&&KINDS[ctx.type]; if(A&&A.after) return A.after(ctx,right,ids.length,missIds);
+  const A=ctx&&KINDS[ctx.type]; if(A&&A.after){ A.after(ctx,right,ids.length,missIds); return backHome(); }   // backHome: öppnad från planen
   app.innerHTML=`<section class="panel">${resultHead(`${label} klar`,right,ids.length)}
     ${missed.length?`<div class="field"><span class="label">Titta på de här en gång till</span><ul class="missed">${missed.map(m=>`<li><span ${lang()}>${esc(m)}</span><button type="button" class="speak xs" data-say="${esc(m)}" aria-label="Läs upp">${SPK}</button></li>`).join("")}</ul></div>`:""}
     <div class="navrow"><button class="btn ghost" id="home">Startsidan</button>${againFn?`<button class="btn" id="again">En runda till</button>`:""}</div>
     <button class="btn ghost" id="st">Se statistik</button></section>`;
   $("#home").onclick=renderStart; $("#st").onclick=()=>setView("stats");
   if(againFn) $("#again").onclick=()=>KINDS[againFn[0]].again(againFn[1]);
-  renderList();
+  renderList(); backHome();
 }

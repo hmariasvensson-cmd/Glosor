@@ -6,7 +6,10 @@
      grammatik  andel rätt senast eleven svarade på varje fråga (S.gi, s ≥ 1 = senaste svaret rätt) per område,
                 annars områdets totala {r, n} (S.gt). Områdets nivå = topic.level i grammar.json om den finns, annars kursens.
      prov       senaste resultaten per provdel (S.exam.t och S.exam.sims) mot godkäntgränsen, plus Claudes nivåbedömningar
-                av elevens texter (f.niva i S.fb)
+                av elevens texter (f.niva i S.fb). Varje resultat räknas mot sin egen nivå (uppgiftens level, delens
+                level, annars provets): ett godkänt DELF A2 i Franska 3 är belägg för A2, inte för B1. Delar på en
+                annan nivå än provets listas inte som "inte gjort än", och ett godkänt resultat under målnivån räknas
+                inte som det som "drar ner mest".
    Nivåerna räknas som tal: A1 = 1, A2 = 2, B1 = 3, B2 = 4, C1 = 5 (2.5 = mellan A2 och B1). */
 const LV_NAMES=["under A1","A1","A2","B1","B2","C1","C2"];
 const LV_MAP={A1:1,A2:2,B1:3,B2:4,C1:5,C2:6};
@@ -34,9 +37,14 @@ function vocabLevel(n){
 const VOC_NEXT={1:750,2:1500,3:2500,4:3500,5:4500};   // ungefär så många ord brukar nivån kräva (den lägre siffran)
 
 // Sparat läge för en annan kurs, bara för läsning (localStorage på den här enheten)
+// Tolkas bara om när texten i localStorage har ändrats (PEEK: {storageKey: {raw, st}}); resultatet får inte ändras.
+const PEEK={};
 function peekState(code){
   if(L&&code===L.code) return S;
-  try{ const x=JSON.parse(localStorage.getItem(LANGUAGES[code].storageKey)||"null"); return x&&typeof x==="object"?x:null; }catch(e){ return null; }
+  const k=LANGUAGES[code].storageKey;
+  try{ const raw=localStorage.getItem(k)||"null"; if(PEEK[k]&&PEEK[k].raw===raw) return PEEK[k].st;
+    const x=JSON.parse(raw), st=x&&typeof x==="object"?x:null; PEEK[k]={raw,st}; return st; }
+  catch(e){ return null; }   // privat läge eller trasig text: kursen räknas inte med (medvetet tyst)
 }
 
 function levelVocab(){
@@ -81,13 +89,18 @@ function levelExam(T){
   if(hasEx){
     const e=EX(), P=e.pass||60, st=S.exam&&typeof S.exam==="object"?S.exam:{}, tt=st.t||{}, sims=Array.isArray(st.sims)?st.sims:[];
     out.pass=P; out.examName=e.name;
+    // Nivån för en del och en uppgift (level i exam.json), annars provets
+    const PL=p=>lvNum(p&&p.level)||E, TL=(t,p)=>lvNum(t&&t.level)||PL(p);
+    // Ett resultat på nivån lv: godkänt = lv, annars proportionellt under
+    const at=(pct,lv)=>pct>=P?lv:lv-1+pct/P;
     (e.parts||[]).forEach(p=>{
-      const res=[];
-      (e.tasks||[]).filter(t=>t.part===p.id&&tt[t.id]&&tt[t.id].n).forEach(t=>res.push({pct:+tt[t.id].pct||0,when:tt[t.id].last||0}));
-      sims.forEach(s=>{ const v=s&&s.parts&&s.parts[p.id]; if(v!=null&&isFinite(+v)) res.push({pct:+v,when:s.d||0}); });
-      if(!res.length){ out.missing.push(p.sv||p.name); return; }
+      const res=[], pl=PL(p);
+      (e.tasks||[]).filter(t=>t.part===p.id&&tt[t.id]&&tt[t.id].n).forEach(t=>res.push({pct:+tt[t.id].pct||0,when:tt[t.id].last||0,lv:TL(t,p)}));
+      sims.forEach(s=>{ const v=s&&s.parts&&s.parts[p.id]; if(v!=null&&isFinite(+v)) res.push({pct:+v,when:s.d||0,lv:pl}); });
+      if(!res.length){ if(Math.abs(pl-E)<.01) out.missing.push(p.sv||p.name); return; }
       const rec=res.sort((a,b)=>b.when-a.when).slice(0,3), avg=Math.round(rec.reduce((a,x)=>a+x.pct,0)/rec.length);
-      out.parts.push({id:p.id,name:p.sv||p.name,pct:avg,last:rec[0].pct,n:res.length,lv:avg>=P?E:E-1+avg/P});
+      const lv=rec.reduce((a,x)=>a+at(x.pct,x.lv),0)/rec.length;
+      out.parts.push({id:p.id,name:p.sv||p.name,pct:avg,last:rec[0].pct,n:res.length,lv,plv:pl,below:pl<E-.01});
     });
   }
   const pts=out.parts.map(p=>p.lv).concat(out.claude?[out.claude.lv]:[]);
@@ -110,7 +123,8 @@ function levelEstimate(){
   if(voc.lv!=null) cand.push({lv:voc.lv,what:"ordförrådet",why:()=>{const nx=VOC_NEXT[Math.min(5,Math.floor(voc.lv)+1)];
     return `${nf(voc.n)} ord${nx?`, ${LV_NAMES[Math.min(5,Math.floor(voc.lv)+1)]} brukar kräva ungefär ${nf(nx)}`:""}`;}});
   if(gram.lv!=null){ const w=gram.topics.slice().sort((a,b)=>a.lv-b.lv)[0]; cand.push({lv:w.lv,what:"grammatik: "+w.name.toLowerCase(),why:()=>`${Math.round(100*w.acc)} % rätt`}); }
-  exam.parts.forEach(p=>cand.push({lv:p.lv,what:p.name.toLowerCase(),why:()=>`${p.pct} %, gränsen är ${exam.pass} %`}));
+  // En godkänd del under målnivån (DELF A2 när målet är B1) är inget att vinna på i provträningen
+  exam.parts.filter(p=>!p.below||p.pct<exam.pass).forEach(p=>cand.push({lv:p.lv,what:p.name.toLowerCase(),why:()=>`${p.pct} %, gränsen är ${exam.pass} %`}));
   const weak=cand.filter(c=>c.lv<T-.05).sort((a,b)=>a.lv-b.lv)[0]||null;
   return {T,lv,unc,few,voc,gram,exam,weak:weak?{what:weak.what,why:weak.why(),lv:weak.lv}:null,
     target:L.exam&&L.exam.name?L.exam.name:LV_NAMES[Math.round(T)]};
@@ -149,11 +163,13 @@ function statsLevel(){
     +(g.none?"":`Omkring 85 % rätt räknas som att du behärskar kursens grammatik (ungefär ${lvShort(g.G)}).${!g.few&&g.topics.length<g.total/2?" Du har övat mindre än hälften av områdena, så bilden är ofullständig.":""}`);
   const gramInfo=g.topics&&g.topics.length?`${Math.round(100*g.acc)} % rätt`:"";
 
-  const exParts=x.parts.map(p=>`${esc(p.name)} ${p.pct} %`).join(", ");
+  // Delar på en annan nivå än provets märks med nivån (om den inte redan står i namnet)
+  const exParts=x.parts.map(p=>{ const ln=LV_NAMES[Math.round(p.plv)]||""; return `${esc(p.name)}${p.plv!==x.E&&!String(p.name).includes(ln)?` (${ln})`:""} ${p.pct} %`; }).join(", ");
   const exExpl=(x.pass!=null
       ?(x.parts.length?`Senaste resultaten per del i provträningen: ${exParts} (gränsen för godkänt är ${x.pass} %). `:`Du har inte gjort någon uppgift i provträningen än. `)
         +(x.missing.length&&x.parts.length?`Inte gjort än: ${esc(x.missing.join(", ").toLowerCase())}. `:"")
       :"Kursen har ingen provträning. ")
+    +(x.parts.some(p=>p.below)?`Delar på en lägre nivå räknas mot sin egen nivå: ett godkänt resultat där visar den nivån, inte målet. `:"")
     +(x.claude?`Claudes bedömning av dina senaste ${x.claude.n===1?"text":x.claude.n+" texter"}: ungefär ${lvShort(x.claude.lv)}. `:"")
     +(x.few&&!x.none?"Det behövs resultat från minst två delar (eller en del och en bedömning av Claude). ":"");
 

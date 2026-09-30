@@ -419,6 +419,28 @@ appReady().then(async()=>{ try{
     pauseSession(); renderStart(); ok("rättelser: pausat dagens pass döljer panelen", !q("#daily")&&!!q("#run-go"));
     startDaily([],[]); q("#rcont").click(); ok("rättelser: Fortsätt i dagens pass räknas som dagens pass", sess&&sess.daily===true);
     quitSession(); S.dailyDay=keep; }
+  // Passläget (P2: Bräckligt passläge): en ny runda börjar alltid med ett nytt sess, och det som ska följa med står i opts
+  { delete S.runs; delete S.run;
+    sess={kind:"x",daily:true,gramMix:true,label:"gammal",ctx:{type:"x",id:"y"},game:{id:"g"},start:1};
+    const it=dictPool().slice(0,2).map(dictItem); beginQuiz("dict",it,{againFn:["dict"],label:"Diktamen"});
+    ok("passläge: ny runda tar inte med fält från förra sess", it.length&&sess&&sess.kind==="dict"&&!sess.daily&&!sess.gramMix&&!sess.ctx&&!sess.game&&sess.start>1&&sess.label==="Diktamen"&&S.run&&!S.run.daily,
+      JSON.stringify(sess&&{d:sess.daily,g:sess.gramMix,c:sess.ctx,s:sess.start}));
+    quitSession(); delete S.runs;
+    const nw=WORDS.filter(w=>!isLearned(w)).slice(0,2), du=WORDS.filter(isLearned).slice(0,1);
+    startSession(nw,du,{daily:true}); const t0=sess.start; let g=0; while(sess&&!sess.queue&&g++<10) q("#next").click();
+    ok("passläge: glosquizet behåller orden, starttiden och Dagens pass från lärokorten", sess&&sess.kind==="words"&&sess.daily===true&&sess.start===t0
+      &&sess.newW.length===2&&sess.due.length===1&&S.run&&S.run.daily===true&&!!S.runs.words);
+    quitSession(); delete S.runs;
+    startMix({type:"click"}); ok("passläge: startMix med en klickhändelse är en vanlig runda", sess&&sess.kind==="mix"&&sess.daily===false); quitSession(); delete S.runs;
+    KINDS.mix.again(); ok("passläge: En runda till i blandad runda är en vanlig runda", sess&&sess.kind==="mix"&&sess.daily===false); quitSession(); delete S.runs;
+    startMix({daily:true}); ok("passläge: startMix({daily:true}) hör till Dagens pass", sess&&sess.daily===true&&S.run.daily===true); quitSession(); delete S.runs;
+    if(hasGrammar()){ S.gt=S.gt||{}; const n0=()=>(S.gt.mix||{}).n||0;
+      startGram("mix"); ok("passläge: blandad grammatik har gramMix, även i S.run", sess&&sess.gramMix===true&&S.run.gramMix===true);
+      let a=n0(); KINDS.gram.effect(sess.cur.ref,true); ok("passläge: blandad grammatik räknas i S.gt.mix", n0()===a+1);
+      pauseSession(); S.run=S.runs["gram|mix"]; delete S.run.gramMix; resumeRun();
+      ok("passläge: en blandad grammatikrunda sparad utan gramMix känns igen", sess&&sess.gramMix===true); quitSession(); delete S.runs;
+      const t=GR().topics.map(x=>x.id).find(id=>id!=="mix"&&gramItems(id,1).length); startGram(t); a=n0(); if(sess&&sess.cur) KINDS.gram.effect(sess.cur.ref,true);
+      ok("passläge: ett vanligt grammatikområde räknas inte i S.gt.mix", sess&&!sess.gramMix&&n0()===a, t); quitSession(); delete S.runs; } }
   // 8. Skrivuppgift: flera tryck på Klar
   { openWriting(); q("[data-pick]").click(); const n0=S.log.length;
     q("#wtext").value="Hier, je suis allé au cinéma avec mes amis."; q("#wtext").dispatchEvent(new Event("input"));
@@ -445,11 +467,24 @@ appReady().then(async()=>{ try{
     q("#explay").click(); ok("rättelser: hörprov slår på ljudet", SOUND&&q("#plays").textContent.includes("Uppspelad 1")); openExam(); }
   // Alla kurser: Hitta felet, glosor, tempus i skrivuppgifterna
   for(const c of testCourses()){ useLang(c);
+    // Modelltexterna klarar sin egen checklista (ordgräns, bindeord, kapitelord, tempus) i varje kurs, inte bara fr, de, de4, it1, it2, fr4, de6 och fru
+    { const bad=(C().prompts||[]).map(p=>[p.id,writeChecks(p,p.model).filter(x=>!x.ok).map(x=>x.label).join(" / ")]).filter(x=>x[1]).map(x=>x.join(": "));
+      ok(`modelltexterna klarar checklistan: ${c}`, !bad.length, bad.slice(0,5).join(" | ")+(bad.length>5?` … (${bad.length})`:"")); }
     if(c==="fr4"){ const p={min:1,max:200,need:{connectors:2}}, a=writeChecks(p,"Il pleut, c’est pourquoi je reste, alors que tu sors.")[1];
       ok("rättelser: fr4 c’est pourquoi och alors que", a.ok&&a.label.includes("c'est pourquoi")&&a.label.includes("alors que")&&!/alors,|alors\)/.test(a.label), a.label);
       ok("rättelser: fr4 éclairait är inte conditionnel", !L.tenseCheck.conditionnel("La lune éclairait la rue.")&&L.tenseCheck.conditionnel("Je voudrais venir.")); }
     if(c==="de") ok("rättelser: usesWord der Lehrer", usesWord("Mein Lehrer ist nett.",{id:"x-t",t:"der Lehrer",g:"m"}));
     if(c==="it1") ok("rättelser: usesWord l'insalata och il libro", usesWord("Mangio un’insalata.",{id:"x-t",t:"l'insalata",g:"f"})&&usesWord("Leggo un libro.",{id:"x-t2",t:"il libro",g:"m"}));
+    // Kapitelord i checklistan: böjda former per språk och ordgräns (usesWord i 40-writing.js). [text, ord, genus, ska räknas]
+    { const KW={fr:[["Je suis dans le parc.","danser","",0],["J'aime danser.","dans","",0],["Nous dansons ce soir.","danser","",1],["Elle a dansé.","danser","",1],
+          ["La nourriture est bonne.","nourrir","",0],["Elle est lumineuse.","lumineux, -euse","",1],["Les chevaux courent.","le cheval","m",1],
+          ["Il achète du pain.","acheter","",1],["Je reprends le travail.","reprendre","",1],["Ils se sont levés tôt.","se lever","",1],["Il a obtenu son diplôme.","obtenir","",1]],
+        de:[["Ich stehe früh auf.","aufstehen","",1],["Ich stehe hier.","aufstehen","",0],["Es hat gestern geregnet.","regnen","",1],["Die Regierung ist neu.","regieren","",0],
+          ["Mit den Kindern spiele ich.","das Kind (-er)","n",1],["Das ist eine praktische Idee.","praktisch","",1],["Ich mache mir Sorgen.","sich Sorgen machen","",1]],
+        it2:[["Sono molto curiosa.","curioso","",1],["I tifosi cantano.","il tifoso","m",1],["Piatti tipici e feste tipiche.","tipico","",1],["Le spiagge sono belle.","la spiaggia","f",1],
+          ["Cerchiamo casa.","cercare","",1],["Raccontami tutto!","raccontare","",1],["Mi alzo alle sette.","alzarsi","",1],["Ho letto un libro.","leggere","",1],["Un pezzo musicale.","musicare","",0]]}[c];
+      if(KW){ const bad=KW.filter(([t,w,g,want],i)=>!!usesWord(t,{id:"x-kw"+i,t:w,g})!==!!want).map(([t,w,g,want])=>(want?"saknas ":"felaktigt ")+w+": "+t);
+        ok(`kapitelord i checklistan: ${c}: böjda former och ordgräns`, !bad.length, bad.join(" | ")); } }
     const glued=[], few=[]; let n=0;
     errBase().forEach(b=>errAlts(b).forEach(i=>{ n++; const x=errItem(`err|${b.id}|${i}`), bad=x.bad, pre=b.p.parts[0], post=b.p.parts[1];
       if((/\p{L}$/u.test(pre)&&/^\p{L}/u.test(bad))||(/\p{L}$/u.test(bad)&&/^\p{L}/u.test(post))||/'\s/.test(gapos(bad)+post.slice(0,1))) glued.push(x.wrongText);
@@ -681,7 +716,7 @@ setTimeout(async()=>{ try{
 </script>"""
 
 
-def run_http(scenario):
+def run_http(scenario, budget=8000):
     """Den publicerade sidan (utan inbakad data) via en lokal webbserver, så att data/<kod>.json hämtas som på riktigt."""
     import http.server, shutil, threading, functools, time
     sys.path.insert(0, str(ROOT))
@@ -698,7 +733,7 @@ def run_http(scenario):
         dump = t / "dump.html"
         with open(dump, "w") as fh:
             p = subprocess.Popen([CHROME, "--headless=new", "--disable-gpu", f"--user-data-dir={tmp}/c", "--window-size=400,900", "--dump-dom",
-                                  "--virtual-time-budget=8000", f"http://127.0.0.1:{srv.server_address[1]}/test.html"], stdout=fh, stderr=subprocess.DEVNULL)
+                                  f"--virtual-time-budget={budget}", f"http://127.0.0.1:{srv.server_address[1]}/test.html"], stdout=fh, stderr=subprocess.DEVNULL)
             for _ in range(120):
                 time.sleep(0.5)
                 if "</html>" in dump.read_text(encoding="utf-8", errors="replace") or p.poll() is not None:
@@ -758,7 +793,7 @@ setTimeout(async()=>{ try{
       &&canon(vf4.tenses)===canon(vfr.tenses), Object.keys(f4.tenseCheck).join());
     ok("arv: it2 hämtar artiklar, pronomen, elision, bindeord och tempusigenkänning från it1",
       ["articles","hintStrip","pronouns","elision","connectors","tenseCheck"].every(k=>i2[k]===i1[k])&&i2.verbs!==i1.verbs);
-    ok("arv: fält som inte står i inherit ärvs inte", String(d6.nextCourse)!==String(LANGUAGES.de.nextCourse)&&d4.nextCourse==="de"&&d4.elective===undefined&&f4.book===undefined&&String(i2.nextCourse)!==String(i1.nextCourse)&&f4.storageKey==="glosor-fr4-v1");
+    ok("arv: fält som inte står i inherit ärvs inte", String(d6.nextCourse)!==String(LANGUAGES.de.nextCourse)&&d4.nextCourse==="de"&&d6.elective===undefined&&f4.book===undefined&&String(i2.nextCourse)!==String(i1.nextCourse)&&f4.storageKey==="glosor-fr4-v1");
     const m=mergeInherited({a:[1],b:{x:1,y:2,z:3},c:1},{a:{$append:[2]},b:{$remove:["y"],z:9,w:4}});
     ok("arv: sammanslagningen ($append, $remove, egna fält vinner, förälderns ordning)", canon(m)===canon({a:[1,2],b:{x:1,z:9,w:4},c:1})&&canon(Object.keys(m.b))==='["x","z","w"]', canon(m)); }
 
@@ -776,7 +811,8 @@ setTimeout(async()=>{ try{
 
   // 3. DATA_VERSION per kurs
   ok("DATA_VERSION: ett hash per kurs", DATA_VERSION&&typeof DATA_VERSION==="object"&&Object.keys(LANGUAGES).every(c=>/^[0-9a-f]{10}$/.test(DATA_VERSION[c]))
-    &&new Set(Object.values(DATA_VERSION)).size===Object.keys(LANGUAGES).length, canon(DATA_VERSION));
+    &&new Set(Object.values(DATA_VERSION)).size===Object.keys(DATA_VERSION).length
+    &&Object.keys(DATA_VERSION).every(k=>k in LANGUAGES||(/-exam$/.test(k)&&k.slice(0,-5) in LANGUAGES)), canon(DATA_VERSION));   // även <kod>-exam (provfilen)
 
   // 4. Schemaversion och migreringar
   { ok("migreringar: MIGRATIONS[1] är migrateRetired och S.v är senaste versionen", MIGRATIONS[1]===migrateRetired&&S_VERSION===MIGRATIONS.length-1&&S.v===S_VERSION, S.v);
@@ -1015,7 +1051,7 @@ const allRight=n0=>{const l=logsSince(n0); return l.length>0&&l.every(e=>e.right
     // Varje övning i menyn
     const menu=exGroups().flatMap(g=>g.items.map(h=>(h.match(/data-ex="(\w+)"/)||[])[1]).filter(Boolean));
     ok(c+": varje knapp i menyn har en typ med open", menu.every(id=>KINDS[id]&&KINDS[id].open), menu.join());
-    const need=["ktest","dict","trans","order","shadow"].concat((C().listening||[]).length?["lq"]:[],(C().reading||[]).length?["rq"]:[],(C().stories||[]).length?["story"]:[],(C().phrases||[]).length?["phr"]:[],(C().prompts||[]).length?["write"]:[],hasGrammar()?["gram"]:[],(C().uttal||[]).length?["utt"]:[],hasExam()?["exam"]:[],(C().culture||[]).length?["culture"]:[]);
+    const need=["ktest","dict","trans","order","talk"].concat((C().listening||[]).length?["lq"]:[],(C().reading||[]).length?["rq"]:[],(C().stories||[]).length?["story"]:[],(C().phrases||[]).length?["phr"]:[],(C().prompts||[]).length?["write"]:[],hasGrammar()?["gram"]:[],(C().uttal||[]).length?["utt"]:[],hasExam()?["exam"]:[],(C().culture||[]).length?["culture"]:[]);
     ok(c+": alla övningar som kursen har innehåll för finns i menyn", need.every(k=>menu.includes(k)), need.filter(k=>!menu.includes(k)).join()+" · "+menu.length+" övningar");
     for(const id of menu){ const n0=S.log.length; let res=null, info="";
       try{
@@ -1029,6 +1065,8 @@ const allRight=n0=>{const l=logsSince(n0); return l.length>0&&l.every(e=>e.right
         else if(id==="culture"){ const cid=q("[data-pick]").dataset.pick; q("[data-pick]").click(); q(".opt").click(); q("#ctext").value="Test."; q("#done").click(); res=S.cu[cid]&&S.log[S.log.length-1].kind==="culture"; }
         else if(id==="write"){ const p=(C().prompts||[]).find(x=>x.id===q("[data-pick]").dataset.pick); q("[data-pick]").click(); q("#wtext").value=p.model||"Test test."; q("#wtext").dispatchEvent(new Event("input"));
           res=[...document.querySelectorAll("#checks li")].every(li=>li.classList.contains("ok")); q("#done").click(); res=res&&S.log[S.log.length-1].kind==="write"; }
+        else if(id==="talk"){ q("[data-talk]").click(); q("#ttext").value="un deux trois quatre cinq six sept huit neuf dix onze douze"; q("#ttext").dispatchEvent(new Event("input")); q("#tdone").click();
+          const e=S.log[S.log.length-1]; res=S.log.length===n0+1&&e.kind==="talk"&&e.words===12&&!!q("#twpm"); info=q("#twpm")&&q("#twpm").textContent+" ord/min"; openTalk(); res=res&&!!q('[data-ex="shadow"]'); renderStart(); }
         else if(id==="exam"){ const tm=EX().tasks.find(t=>t.qs), tw=EX().tasks.find(t=>t.minWords);
           examTask(tm.id); tm.qs.forEach((x,i)=>q(`.exq[data-q="${i}"] [data-o="${x.a}"]`).click()); q("#exdone").click();
           res=exState().t[tm.id].pct===100;
@@ -1251,7 +1289,8 @@ appReady().then(async()=>{ try{
   const keep=SAMPLE; SAMPLE={json:async()=>JSON.parse(JSON.stringify(crit))};
   for(const c of testCourses()){ useLang(c); await until(()=>L.code===c&&L.base&&!sess,5000);
     if(!hasExam()) continue;
-    const e=EX(), want=[]; e.tasks.forEach(t=>{ if(exKind(t)!=="speak"&&t.sim!==false&&!want.includes(t.part+"|"+t.teil)) want.push(t.part+"|"+t.teil); });
+    // Hela provet = provets huvudnivå (Franska 3: DELF B1 utan A2-delarna, som har en egen knapp)
+    const e=EX(), want=[], lv0=simLvs()[0]; e.tasks.forEach(t=>{ if(simTaskOk(t,lv0)&&!want.includes(t.part+"|"+t.teil)) want.push(t.part+"|"+t.teil); });
     S.exam={t:{},sims:[{d:Date.now()-86400000,parts:{[e.parts[0].id]:40}}]}; delete S.drafts; delete S.fb;
     openExam(); ok(c+": gammal simulering visas", q("#app").textContent.includes("Tidigare simuleringar")&&!/undefined|null|NaN/.test(q("#app").textContent));
     ok(c+": knappen säger hela provet", q("#sim").textContent.includes("hela provet")&&document.querySelectorAll("[data-simp]").length===e.parts.filter(p=>simPart(p.id)).length);
@@ -1344,6 +1383,309 @@ appReady().then(async()=>{ try{
  document.body.insertAdjacentHTML("beforeend","<pre id=out>"+out.join("\n").replace(/</g,"&lt;")+"</pre>");
 });
 </script>"""
+
+# ---------------------------------------------------------------------------------------------------------
+# Tidsbaserad repetition i fraser, meningar och grammatik (P3) och de gemensamma hjälpfunktionerna weakestFirst och
+# srsBump i 00-common.js (P2), 2026-09-30: poäng {s, last, dd}, förfallna först, sedan nya, sedan resten; gamla poster
+# {s, last} utan dd räknas som förfallna; antalet förfallna syns på övningarnas startsida. Körs på en egen sida.
+# ---------------------------------------------------------------------------------------------------------
+SCENARIO_SRS = r"""<script>
+const out=[]; const q=s=>document.querySelector(s);
+const ok=(name,cond,info="")=>out.push((cond?"OK   ":"FEL  ")+name+(info?"  ("+info+")":""));
+function answerRight(){
+  const c=sess.cur, d=sess.d;
+  if(c.t==="mc"){ answerMC(d.opts.findIndex(o=>o.ok)); q("#nx").click(); return; }
+  if(d.render){ d.o.words.forEach(w=>{const b=[...document.querySelectorAll("[data-t]")].find(x=>x.textContent===w&&x.tagName==="BUTTON"); if(b) b.click();}); q("#submit").click(); q("#submit").click(); return; }
+  q("#ans").value=d.accepted?d.accepted[0]:String(d.answer).replace(/ … /g," "); q("#submit").click();
+  if(q("[data-gr]")) q('[data-gr="right"]').click();
+  q("#submit").click();
+}
+const runAll=(n=200)=>{let g=0; while(sess&&sess.cur&&g++<n) answerRight();};
+const order=()=>[sess.cur,...sess.queue].map(c=>c.ref);
+appReady().then(async()=>{ try{
+  const day=864e5, now=Date.now(), past=now-day, future=addDays(now,5), fresh=()=>{S.runs={}; delete S.run; sess=null;};
+  // srsBump: steg i dagar som orden (1, 3, 7, 20, 45, 90), fel = s 0 och ingen dd, andra fält lämnas kvar
+  { const a=srsBump(undefined,true,now), b=srsBump({s:2,last:1},true,now), c=srsBump({s:5,last:1,dd:future,r:3,n:4},false,now), d=srsBump({s:9},true,now);
+    ok("srs: första rätt förfaller om 1 dag", a.s===1&&a.last===now&&a.dd===addDays(now,1), JSON.stringify(a));
+    ok("srs: gammal post {s,last} fortsätter (3:e rätt = 7 dagar)", b.s===3&&b.dd===addDays(now,7), JSON.stringify(b));
+    ok("srs: fel nollställer och tar bort dd, r och n kvar", c.s===0&&!("dd" in c)&&c.r===3&&c.n===4&&c.last===now, JSON.stringify(c));
+    ok("srs: högst 90 dagar", d.dd===addDays(now,90));
+    ok("srs: SRS_DAYS som orden i dagar", SRS_DAYS.join()==="1,3,7,20,45,90"&&DAYS.slice(2).join()==="3,7,20,45,90"); }
+  ok("srs: förfallen = övad och dd passerad eller saknas", !srsDue(undefined)&&srsDue({s:2,last:1})&&srsDue({s:1,dd:past})&&!srsDue({s:1,dd:future}));
+  // weakestFirst: förfallna (svagast först), nya, resten
+  { S.zz={a:{s:3,last:5,dd:past},b:{s:0,last:1,dd:future},d:{s:1,last:9}};
+    const it=["a","b","c","d"].map(id=>({id})), r=weakestFirst(it,"zz",{due:true}).map(x=>x.id).join("");
+    ok("weakestFirst: förfallna, nya, sedan resten", r==="dacb", r);
+    const w=weakestFirst(it,"zz").map(x=>x.id).join("");
+    ok("weakestFirst: utan due som förut (lägst s, sedan äldst)", w==="cbda"||w==="bcda", w);
+    ok("weakestFirst: cap räknar höga steg lika", weakestFirst([{id:"a"},{id:"d"}],"zz",{cap:0}).map(x=>x.id).join("")==="ad");
+    delete S.zz; }
+  // Fraser: förfallen fras först, sedan nya; ej förfallna sist
+  { const ph=C().phrases||[]; ok("fraser finns i kursen", ph.length>=4, ph.length);
+    S.ph={}; ph.forEach((p,i)=>{ if(i>0) S.ph[p.id]={s:2,last:now-i,dd:future}; });
+    S.ph[ph[3].id]={s:1,last:now-2*day};   // gammal post utan dd = förfallen
+    delete S.ph[ph[1].id];                    // ny
+    const ids=phraseItems(3).map(x=>x.ref);
+    ok("fraser: förfallen först, sedan nya", ids[0]===ph[3].id&&ids.slice(1).includes(ph[0].id)&&ids.slice(1).includes(ph[1].id), ids.join(","));
+    ok("fraser: förfallen gammal post skrivs", phraseItems(3).find(x=>x.ref===ph[3].id).t==="type");
+    ok("fraser: antal förfallna", phraseDue()===1, phraseDue());
+    fresh(); KINDS.phr.open(); const n=Object.keys(S.ph).length; runAll();
+    const x=S.ph[ph[3].id];
+    ok("fraser: rätt ger dd och högre s", x&&x.s===2&&x.dd===addDays(Date.now(),3), JSON.stringify(x));
+    ok("fraser: inga förfallna efter rundan", phraseDue()===0, phraseDue()); }
+  // Översätt: förfallna meningar först (sess-ordningen), gamla {s,last} räknas som förfallna
+  { fresh(); const pool=transPool(); ok("meningar: poolen finns", pool.length>=8, pool.length);
+    S.tr={}; pool.forEach(w=>S.tr[w.id]={s:3,last:now,dd:future});
+    const a=pool[pool.length-1].id, b=pool[2].id; S.tr[a]={s:4,last:now-5*day}; S.tr[b]={s:1,last:now-day,dd:past};
+    startTrans(); const o=order();
+    ok("översätt: de förfallna först, svagast först", o[0]===b&&o[1]===a, o.slice(0,3).join(" | "));
+    ok("översätt: antal förfallna", sentDue("tr",transPool())===2);
+    fresh(); }
+  // Diktamen och ordföljd: nya poster S.dc och S.od skrivs efter rundan
+  { delete S.dc; delete S.od; fresh(); startDict(); runAll();
+    const dc=S.dc||{}, k=Object.keys(dc);
+    ok("diktamen: poäng per mening med dd", k.length>0&&k.every(id=>dc[id].s===1&&dc[id].dd===addDays(Date.now(),1)), JSON.stringify(dc).slice(0,120));
+    fresh(); startOrder(); runAll();
+    const od=S.od||{};
+    ok("ordföljd: poäng per mening med dd", Object.keys(od).length>0&&Object.values(od).every(x=>x.dd>Date.now()), JSON.stringify(od).slice(0,120));
+    // Förfallen diktamen kommer med i nästa runda
+    const first=k[0]; dc[first].dd=past; fresh(); startDict();
+    ok("diktamen: förfallen mening kommer med", order().includes(first));
+    fresh(); }
+  // Grammatik: förfallna först, gamla {s,last} förfallna, rätt ger dd
+  if(hasGrammar()){ const bank=Object.values(gramBank()), tp=bank[0].topic, inT=bank.filter(x=>x.topic===tp);
+    S.gi={}; inT.forEach(x=>S.gi[x.id]={s:5,last:now,dd:future}); const d0=inT[inT.length-1].id; S.gi[d0]={s:5,last:now-day};
+    ok("grammatik: gammal post först", bankIds(tp,3)[0]===d0, bankIds(tp,3).join(","));
+    ok("grammatik: antal förfallna i området", gramDue(tp)===1, gramDue(tp));
+    const g=bank.find(x=>x.type==="gap"); gramEffect(g.id,true);
+    ok("grammatik: rätt ger dd", S.gi[g.id].dd>Date.now()&&S.gi[g.id].s>=1, JSON.stringify(S.gi[g.id]));
+    gramEffect(g.id,false); ok("grammatik: fel = förfallen", srsDue(S.gi[g.id])&&S.gi[g.id].s===0);
+    openGrammar(); const b=q("[data-due]");
+    ok("grammatik: väljaren visar antal att repetera i dag", b&&+b.dataset.due===gramDue(null)&&/att repetera i dag/.test(b.textContent), b&&b.textContent);
+  }
+  // Övningarnas startsida: antalet förfallna
+  { S.dc={}; const p=dictPool(); S.dc[p[0].id]={s:1,last:now}; S.dc[p[1].id]={s:1,last:now,dd:future};
+    S.ph={}; S.tr={}; S.od={}; openExGroup("words");
+    const t=(q('[data-ex="dict"]')||{}).textContent||"";
+    ok("startsida: diktamen visar 1 att repetera", /1 att repetera i dag/.test(t), t);
+    ok("startsida: inget antal när inget är förfallet", !/att repetera/.test(q('[data-ex="trans"]').textContent));
+    S.ph={[(C().phrases||[])[0].id]:{s:0,last:now}}; openExGroup("speak");
+    ok("startsida: fraser visar antalet", /1 att repetera i dag/.test(q('[data-ex="phr"]').textContent)); }
+  // Övriga typer: samma poäng som förut, r och n räknas fortfarande
+  { S.sa={x:{s:1,last:1,r:1,n:1}}; satsEffect("x",true); const s=S.sa.x;
+    ok("satsanalys: r, n och s räknas", s.s===2&&s.r===2&&s.n===2&&s.last>1, JSON.stringify(s));
+    S.te={}; teoriEffect("t1",false); ok("teori: fel ger s 0", S.te.t1.s===0&&S.te.t1.last>0); delete S.sa; delete S.te; }
+  renderStart();
+ }catch(e){ ok("undantag", false, e.message+" "+(e.stack||"").split("\n")[1]); }
+ ok("inga JavaScript-fel", !__err.length, __err.join(" ; "));
+ document.body.insertAdjacentHTML("beforeend","<pre id=out>"+out.join("\n").replace(/</g,"&lt;")+"</pre>");
+});
+</script>"""
+
+# ---------------------------------------------------------------------------------------------------------
+# Glosquizet i egen fil och nya ord (backloggen P2, 2026-09-30): glosquizet ligger i src/kinds/05-words.js och
+# fungerar som förut; nya ord kommer vanligast först inom avsnittet/kapitlet (L.freq från build.py, word_freq);
+# Franska 3 har det publika avsnittet "Vanliga ord" med ord som inte finns i fr, fr1 eller fr2; rätt på flerval räcker
+# bara till steg 2 (lär sig), skrivet rätt behövs för "kan", och ord med högre steg sänks inte. Körs på en egen sida.
+# ---------------------------------------------------------------------------------------------------------
+SCENARIO_WORDS = r"""<script>
+const out=[]; const q=s=>document.querySelector(s);
+const ok=(name,cond,info="")=>out.push((cond?"OK   ":"FEL  ")+name+(info?"  ("+info+")":""));
+appReady().then(async()=>{ try{
+  // 1. Glosquizet i 05-words.js: registrerat och spelbart som förut
+  ok("glosor: typen words är registrerad", !!(KINDS.words&&KINDS.words.name==="Glosor"&&KINDS.words.mc&&KINDS.words.type)&&!KIND_ERRORS.length, KIND_ERRORS.join());
+  ok("glosor: funktionerna finns", ["startSession","renderLearn","qType","startQuiz","mcOptions","memoBox","applyAnswer","tally","finishSession","litHtml"].every(f=>typeof window[f]==="function")
+    &&typeof explain==="function"&&typeof studyCard==="function");
+  { const n0=S.log.length, p0=S.pass; startSession(pickNew().slice(0,2),dueWords().slice(0,2));
+    ok("glosor: lärokortet visas", !!q("#next")&&!!q(".t-big"));
+    let g=0; while(sess&&!sess.queue&&g++<10) q("#next").click();
+    g=0; while(sess&&sess.cur&&g++<40){ const c=sess.cur;
+      if(c.t==="mc") q('[data-i="'+sess.d.opts.findIndex(o=>o.ok)+'"]').click();
+      else { q("#ans").value=c.w.t; q("#submit").click(); }
+      (q("#nx")||q("#submit")).click(); }
+    ok("glosor: passet går att spela klart", !sess&&S.log.length===n0+1&&S.pass===p0+1&&q("#app").textContent.includes("klart"), q("#app").textContent.slice(0,80)); }
+  renderStart();
+  // 2. Vanligast först: L.freq och ordningen i pickNew
+  const fq=L.freq||{};
+  ok("vanligast först: L.freq finns i kursens data", Object.keys(fq).length>100, Object.keys(fq).length);
+  const src0=S.src, ch0=S.chapter, nc0=S.newCount;
+  const sorted=a=>a.every((w,i)=>!i||(fq[a[i-1].id]||0)>=(fq[w.id]||0));
+  S.newCount=20; S.chapter="";
+  const secs=SECTIONS.filter(s=>s.id!=="mine"&&WORDS.filter(w=>w.sec===s.id&&!isLearned(w)).length>=5);
+  const bad=secs.filter(s=>{S.src=s.id; const p=pickNew(); return !p.length||!p.every(w=>w.sec===s.id)||!sorted(p);}).map(s=>s.id);
+  ok("vanligast först: inom varje valt avsnitt", secs.length>3&&!bad.length, bad.join());
+  S.src="vanliga"; const pv=pickNew();
+  ok("vanligast först: de vanligaste orden i Vanliga ord kommer först", pv.length===20&&(fq[pv[0].id]||0)>=Math.max(...WORDS.filter(w=>w.sec==="vanliga"&&!isLearned(w)).map(w=>fq[w.id]||0)), pv.slice(0,5).map(w=>w.id+":"+(fq[w.id]||0)).join());
+  S.src="auto"; const pa=pickNew();
+  ok("vanligast först: i auto kommer avsnitten fortfarande i ordning", pa.every((w,i)=>!i||SECTIONS.findIndex(s=>s.id===pa[i-1].sec)<=SECTIONS.findIndex(s=>s.id===w.sec)), pa.map(w=>w.sec).join());
+  { const k=SECTIONS.find(s=>s.book); if(k){ S.chapter=k.id; const pc=pickNew().filter(w=>w.sec!=="mine");
+    const ix=w=>SECTIONS.findIndex(s=>s.id===w.sec), bySec=[...new Set(pc.map(w=>w.sec))].map(s=>pc.filter(w=>w.sec===s));
+    ok("vanligast först: kapitlet ni läser kommer först, avsnitt för avsnitt och vanligast först inom avsnittet",
+      pc.length&&pc.every(w=>sameChapter(w.sec,k.id))&&pc.every((w,i)=>!i||ix(pc[i-1])<=ix(w))&&bySec.every(sorted), pc.slice(0,4).map(w=>w.id).join()); } }
+  S.src=src0; S.chapter=ch0; S.newCount=nc0;
+  // 3. Vanliga ord i Franska 3: publikt avsnitt, 80–120 ord, inga dubbletter mot fr, fr1 och fr2
+  { const sec=SECTIONS.find(s=>s.id==="vanliga"), vw=WORDS.filter(w=>w.sec==="vanliga");
+    ok("vanliga ord: avsnittet finns i Franska 3 och är inte bokens", L.code==="fr"&&!!sec&&sec.name==="Vanliga ord"&&!sec.book);
+    ok("vanliga ord: 80–120 ord med exempel och översättning", vw.length>=80&&vw.length<=120&&vw.every(w=>w.sv&&w.exT&&w.exSv&&w.gap), vw.length);
+    const other=new Set(["fr1","fr2"].flatMap(c=>INLINE_DATA[c]?parseWords(INLINE_DATA[c].words).words.map(w=>w.id):[]));
+    const dup=vw.filter(w=>other.has(w.id)).map(w=>w.id);
+    ok("vanliga ord: finns inte i Franska 1 och 2", other.size>500&&!dup.length, dup.join()); }
+  // 4. Bara skrivna svar ger "kan": flerval räcker till steg 2
+  { const t0=Date.now();
+    const a={s:0,due:0}; schedule(a,true,5,t0,"mc"); schedule(a,true,6,t0,"mc"); const a2=a.s; schedule(a,true,7,t0,"mc");
+    ok("kan: flerval tar ett ord upp till steg 2 men inte längre", a2===2&&a.s===2&&a.dd===addDays(t0,DAYS[2])&&!a.mp, JSON.stringify(a));
+    const b={s:3,due:0}; schedule(b,true,8,t0,"mc");
+    ok("kan: rätt flerval sänker inte steg 3", b.s===3&&b.dd===addDays(t0,DAYS[3]), JSON.stringify(b));
+    const c={s:5,due:0,mp:2,md:1}; schedule(c,true,9,t0,"mc");
+    ok("kan: rätt flerval sänker inte ett ord man redan kan", c.s===5&&c.mp===2, JSON.stringify(c));
+    const d={s:2,due:0}; schedule(d,true,10,t0,"type"); schedule(d,true,11,t0,"type");
+    ok("kan: skrivet rätt tar ordet till steg 4 (kan)", d.s===4&&d.mp===11, JSON.stringify(d));
+    const e={s:4,due:0}; schedule(e,false,12,t0,"mc");
+    ok("kan: fel på flerval ger steg 2 som förut", e.s===2&&e.lapses===1); }
+  // Hela passet: ett ord på steg 3 rätt med flerval stannar på 3, ett rätt skrivet går till 4
+  { const [w1,w2]=WORDS.filter(w=>w.sec!=="mine").slice(-2), p=S.pass;
+    S.w[w1.id]={s:3,due:0,f:"mc",lp:1}; S.w[w2.id]={s:3,due:0,f:"type",lp:1};
+    startSession([],[w1,w2]); sess.firstTry={[w1.id]:true,[w2.id]:true}; sess.firstType={[w1.id]:"mc",[w2.id]:"type"}; finishSession();
+    ok("kan: i passet stannar rätt flerval på steg 3, rätt skrivet blir kan", S.w[w1.id].s===3&&S.w[w2.id].s===4&&S.w[w2.id].mp===p&&S.w[w1.id].f==="type",
+      JSON.stringify([S.w[w1.id],S.w[w2.id]]));
+    ok("kan: passets slutskärm räknar bara det skrivna ordet som inlärt", q("#app").textContent.includes("1 ord är nu inlärda")); }
+  // Förklaringen på startsidan
+  S.mode="mix"; renderStart(); ok("kan: förklaring vid Anpassat", !!q("#mc-note")&&q("#mc-note").textContent.includes("skrivit"));
+  S.mode="mc"; renderStart(); ok("kan: förklaring vid Flerval", !!q("#mc-note"));
+  S.mode="type"; renderStart(); ok("kan: ingen förklaring vid Skriva", !q("#mc-note"));
+  S.mode="mix"; save();
+ }catch(e){ ok("undantag", false, e.message+" "+(e.stack||"").split("\n")[1]); }
+ ok("inga JavaScript-fel", !__err.length, __err.join(" ; "));
+ document.body.insertAdjacentHTML("beforeend","<pre id=out>"+out.join("\n").replace(/</g,"&lt;")+"</pre>");
+});
+</script>"""
+
+
+# ---------------------------------------------------------------------------------------------------------
+# Självbedömning i fyra steg och grundformen i Mina ord (backloggen P3, 2026-09-30): efter ett rätt skrivet ord i
+# glosquizet väljer eleven Igen/Svårt/Bra/Lätt (S.selfRate, av som standard; tangenterna 1–4, Enter/Nästa = Bra);
+# Svårt = samma steg, Lätt = två steg, Igen = fel; flerval räcker fortfarande bara till MC_MAX. Ord utan glosa som
+# sparas från en text får grundformen (lemmaOf i 03-lemma.js): fährt → fahren, belles → beau; befintliga Mina ord orörda.
+# ---------------------------------------------------------------------------------------------------------
+SCENARIO_SELFRATE = r"""<script>
+const out=[]; const q=s=>document.querySelector(s);
+const ok=(name,cond,info="")=>out.push((cond?"OK   ":"FEL  ")+name+(info?"  ("+info+")":""));
+const key=k=>document.body.dispatchEvent(new KeyboardEvent("keydown",{key:k,bubbles:true}));
+appReady().then(async()=>{ try{
+  // 1. schedule med bedömning
+  { const t0=Date.now(), a={s:2,due:0}, b={s:2,due:0}, c={s:2,due:0}, d={s:1,due:0}, e={s:5,due:0,mp:1};
+    schedule(a,true,5,t0,"type","hard"); schedule(b,true,5,t0,"type"); schedule(c,true,5,t0,"type","easy"); schedule(d,true,5,t0,"mc","easy"); schedule(e,false,5,t0,"type","easy");
+    ok("självbedömning: Svårt stannar på steget (kortare intervall än Bra)", a.s===2&&a.dd===addDays(t0,DAYS[2])&&b.s===3&&a.dd<b.dd, JSON.stringify([a,b]));
+    ok("självbedömning: Lätt hoppar ett steg längre och kan ge kan", c.s===4&&c.mp===5&&c.dd===addDays(t0,DAYS[4]), JSON.stringify(c));
+    ok("självbedömning: gäller inte flerval (MC_MAX) och inte fel svar", d.s===2&&e.s===2&&e.lapses===1, JSON.stringify([d,e])); }
+  // 2. Av som standard: inga knappar, och inställningen finns
+  const ws3=WORDS.filter(w=>w.sec!=="mine"&&!/[,=(]/.test(w.t)).slice(-6);
+  const play=(ans)=>{ const c=sess.cur; q("#ans").value=ans===false?"zzzq":c.w.t; q("#submit").click(); return c; };
+  S.mode="type"; ws3.forEach(w=>S.w[w.id]={s:2,due:0,f:"type",lp:1});
+  ok("självbedömning: av som standard", !S.selfRate);
+  startSession([],ws3.slice(0,1)); play(); ok("självbedömning: inga knappar när den är av", !q("[data-rate]")&&!!q("#submit"));
+  quitSession();
+  renderStart(); q("#setd").open=true; const sr=q('[data-sr="1"]');
+  ok("självbedömning: valet finns i Fler inställningar", !!sr&&q("#setd").textContent.includes("Bedöm själv hur svårt det var"));
+  sr.click(); ok("självbedömning: slås på i inställningarna", S.selfRate===true&&q('[data-sr="1"]').getAttribute("aria-pressed")==="true");
+  // 3. Ett pass med bedömningar: 4 = Lätt, Nästa = Bra, 2 = Svårt, 1 = Igen, fel svar = inga knappar
+  { const [w1,w2,w3,w4,w5]=ws3, p=S.pass; $("#tabs").hidden=true; beginQuiz("words",[w1,w2,w3,w4,w5].map(w=>({w,isNew:false,t:"type",canType:true})),{newW:[],due:[w1,w2,w3,w4,w5]});
+    let c=play(); const btns=[...app.querySelectorAll("[data-rate]")];
+    ok("självbedömning: fyra knappar efter rätt skrivet svar, Bra förvald", btns.map(b=>b.textContent).join()==="Igen,Svårt,Bra,Lätt"&&q('[data-rate="good"]').getAttribute("aria-pressed")==="true", btns.map(b=>b.textContent).join());
+    ok("självbedömning: Nästa-knappen finns kvar (Enter går vidare)", q("#submit").textContent==="Nästa"&&document.activeElement===q("#submit"));
+    key("4"); ok("självbedömning: tangenten 4 = Lätt och går vidare", sess.rate[c.w.id]==="easy"&&sess.cur.w.id!==c.w.id);
+    c=play(); q("#submit").click(); ok("självbedömning: Nästa = Bra (inget sparat)", !(c.w.id in sess.rate));
+    c=play(); key("2"); ok("självbedömning: tangenten 2 = Svårt", sess.rate[c.w.id]==="hard"&&S.run.rate&&S.run.rate[c.w.id]==="hard", JSON.stringify(S.run.rate));
+    // återuppta: bedömningarna följer med
+    const r0=JSON.stringify(sess.rate); resumeRun(); ok("självbedömning: sparas i S.run och följer med när passet fortsätts", JSON.stringify(sess.rate)===r0, r0);
+    c=play(); key("1");
+    ok("självbedömning: Igen räknas som fel och kommer tillbaka som flerval", sess.firstTry[c.w.id]===false&&sess.rate[c.w.id]==="again"&&[sess.cur,...sess.queue].some(x=>x.w.id===c.w.id&&x.t==="mc"&&x.again));
+    const cw=play(false); ok("självbedömning: inga knappar efter fel svar (Igen)", !q("[data-rate]")&&sess.firstTry[cw.w.id]===false);
+    q("#submit").click();
+    let g=0; while(sess&&sess.cur&&g++<20){ if(sess.cur.t==="mc"){ q('[data-i="'+sess.d.opts.findIndex(o=>o.ok)+'"]').click(); ok("självbedömning: inga knappar på flerval", !q("[data-rate]")); q("#nx").click(); } else { play(); q("#submit").click(); } }
+    const s=id=>S.w[id].s;
+    ok("självbedömning: schemat efter passet (Lätt 4, Bra 3, Svårt 2, Igen och fel 1)", !sess&&s(w1.id)===4&&s(w2.id)===3&&s(w3.id)===2&&s(w4.id)===1&&s(w5.id)===1&&S.w[w1.id].mp===p,
+      [w1,w2,w3,w4,w5].map(w=>s(w.id)).join()); }
+  // 4. Extraövning och nya ord
+  { const [w1]=ws3; beginQuiz("words",[{w:w1,isNew:false,t:"type",canType:true}],{newW:[],due:[w1],extra:true}); play();
+    ok("självbedömning: inga knappar i extraövningen", !q("[data-rate]")); quitSession();
+    const nw=WORDS.find(w=>w.sec!=="mine"&&!isLearned(w)&&!/[,=(]/.test(w.t)), p=S.pass;
+    beginQuiz("words",[{w:nw,isNew:true,t:"type",canType:true}],{newW:[nw],due:[]}); play(); key("4"); if(sess&&sess.cur) q("#submit").click();
+    ok("självbedömning: Lätt på ett nytt ord hoppar över nästa pass", S.w[nw.id]&&S.w[nw.id].s===1&&S.w[nw.id].due===p+INT[1], JSON.stringify(S.w[nw.id])); }
+  S.selfRate=false; S.mode="mix"; save();
+  // 5. Grundform: tyska
+  useLang("de");
+  const L1=t=>(lemmaOf(t)||{}).t;
+  ok("grundform: fährt → fahren, fuhr → fahren (verbtabellerna)", L1("fährt")==="fahren"&&L1("fuhr")==="fahren", L1("fährt")+" "+L1("fuhr"));
+  { const z=WORDS.find(w=>w.t==="der Zaun (Zäune)"), um=WORDS.find(w=>/^der Umweg/.test(w.t)), pe=WORDS.find(w=>/^der Pendler/.test(w.t));
+    ok("grundform: tysk plural ur ordlistan (Zäune, Umwege, Pendlern)", (!z||L1("Zäune")===z.t)&&(!um||L1("Umwege")===um.t)&&(!pe||L1("Pendlern")===pe.t)&&(z||um||pe), [L1("Zäune"),L1("Umwege"),L1("Pendlern")].join()); }
+  { const v=WORDS.find(w=>w.t==="streiken"), a=WORDS.find(w=>w.t==="riskant");
+    ok("grundform: tyska ändelser (streikten, riskanten, gestreikt)", (!v||L1("streikten")==="streiken"&&L1("gestreikt")==="streiken")&&(!a||L1("riskanten")==="riskant")&&(v||a), [L1("streikten"),L1("gestreikt"),L1("riskanten")].join()); }
+  ok("grundform: okända ord ger null, liten bokstav är inget substantiv (gefahren)", lemmaOf("xqzwkrt")===null&&lemmaOf("")===null&&L1("gefahren")==="fahren", L1("gefahren"));
+  // Spara från en text: ett verb som bara finns i verbtabellerna
+  { const pr=L.verbs.tenses["Präsens"], inf=Object.keys(pr).find(v=>!WORDS.some(w=>variants(w.t).includes(v))&&pr[v][2]&&!/\s|\//.test(pr[v][2])&&pr[v][2].toLowerCase()!==v);
+    const form=pr[inf][2], old={t:"xoldform",sv:"gammalt",g:"",ex:"Ein [xoldform] hier.",exSv:"",src:"T"};
+    S.mine=[old]; S.w["mine:xoldform"]={s:3,due:9,f:"type",lp:2}; rebuildWords();
+    const text={title:"Testtext",lines:[{fr:"Er "+form+" heute.",sv:"Han … i dag."}],gloss:{heute:{t:"heute",sv:"i dag"}}};
+    app.innerHTML=`<section class="panel">${tapText(text.lines,text.gloss)}<div id="gbox" hidden></div></section>`; wireGloss(text);
+    [...app.querySelectorAll(".tw")].find(x=>x.textContent===form).click();
+    const li=q(".picked li");
+    ok("grundform: listan visar den böjda formen och (av grundformen)", !!li&&li.textContent.includes(form)&&li.textContent.includes("(av "+inf+")")&&q("[data-sv]").value===(L.verbs.sv[inf]||""), li&&li.textContent.replace(/\s+/g," "));
+    if(!q("[data-sv]").value) q("[data-sv]").value="x", q("[data-sv]").dispatchEvent(new Event("input"));
+    q("#addsel").click(); const m=S.mine[S.mine.length-1];
+    ok("grundform: sparas i grundform med form", m.t===inf&&m.form===form&&m.ex.includes("["+form+"]")&&!!byId["mine:"+inf]&&byId["mine:"+inf].ety.includes(form), JSON.stringify(m));
+    ok("grundform: befintliga Mina ord och deras framsteg är orörda", S.mine[0].t==="xoldform"&&!S.mine[0].form&&S.w["mine:xoldform"].s===3&&!!byId["mine:xoldform"]);
+    // ett ord i ordlistan: visas som (av …) och läggs inte till en gång till
+    const um=WORDS.find(w=>w.t==="der Zaun (Zäune)");
+    if(um){ const t2={title:"T2",lines:[{fr:"Die Zäune sind hoch.",sv:""}],gloss:{hoch:{t:"hoch",sv:"hög"}}};
+      app.innerHTML=`<section class="panel">${tapText(t2.lines,t2.gloss)}<div id="gbox" hidden></div></section>`; wireGloss(t2);
+      [...app.querySelectorAll(".tw")].find(x=>x.textContent==="Zäune").click();
+      ok("grundform: böjd form av ett ord i ordlistan känns igen", q(".picked li").textContent.includes("(av der Zaun (Zäune))")&&!!q(".pst")&&q("#addsel").disabled, q(".picked li").textContent.replace(/\s+/g," ")); }
+    S.mine=[]; delete S.w["mine:xoldform"]; delete S.w["mine:"+inf]; rebuildWords(); save(); }
+  // 6. Grundform: franska, verbtabellerna och kedjan (Franska 1 hämtad)
+  useLang("fr");
+  ok("grundform: finissons → finir, parlaient → parler", L1("finissons")==="finir"&&L1("parlaient")==="parler", L1("finissons")+" "+L1("parlaient"));
+  useLang("fr1"); ok("grundform: belles → beau, belle (Franska 1)", L1("belles")==="beau, belle"&&L1("bel")==="beau, belle", L1("belles"));
+  useLang("fr"); { const cw=parseWords(LANGUAGES.fr1.words).words.find(w=>/^[a-zàâçéèêëîïôûù]{5,}$/.test(w.t)&&!/[sxe]$/.test(w.t)&&!WORDS.some(x=>variants(x.t).includes(w.t)));
+    ok("grundform: kedjan: ord ur en hämtad kurs i samma språk (Franska 1 i Franska 3)", !!cw&&L1(cw.t+"s")===cw.t&&L1("belles").startsWith("beau"), cw&&cw.t+" "+L1(cw.t+"s")); }
+  useLang("it1"); { const w=WORDS.find(x=>/^[a-z]+o$/.test(x.t)&&x.g==="m");
+    ok("grundform: italienska plural (…o → …i)", !w||L1(w.t.slice(0,-1)+"i")===w.t, w&&w.t+" "+L1(w.t.slice(0,-1)+"i")); }
+  // Regression: formen själv vinner om den finns i ordlistan (med eller utan artikel), och l'été blir aldrig être
+  useLang("it3"); ok("grundform: verso finns i ordlistan och förblir verso (inte versare)", WORDS.some(w=>w.t==="verso")&&L1("verso")==="verso", L1("verso"));
+  useLang("fr1"); ok("grundform: été och l'été → l'été i Franska 1 (inte être)", L1("été")==="l'été"&&L1("l'été")==="l'été", L1("été")+" "+L1("l'été"));
+  useLang("fr"); ok("grundform: l'été blir aldrig être (Franska 3), en artikel utesluter verbtabellerna", L1("l'été")!=="être"&&L1("l'parlé")!=="parler"&&L1("parlé")==="parler", L1("l'été")+" "+L1("l'parlé"));
+  { const text={title:"Été",lines:[{fr:"Pendant l'été, il fait chaud.",sv:""}],gloss:{chaud:{t:"chaud",sv:"varm"}}};
+    app.innerHTML=`<section class="panel">${tapText(text.lines,text.gloss)}<div id="gbox" hidden></div></section>`; wireGloss(text);
+    [...app.querySelectorAll(".tw")].find(x=>x.textContent==="l'été").click();
+    ok("grundform: l'été i en text visas inte som (av être)", !q(".picked li").textContent.includes("être"), q(".picked li").textContent.replace(/\s+/g," ")); }
+ }catch(e){ ok("undantag", false, e.message+" "+(e.stack||"").split("\n")[1]); }
+ ok("inga JavaScript-fel", !__err.length, __err.join(" ; "));
+ document.body.insertAdjacentHTML("beforeend","<pre id=out>"+out.join("\n").replace(/</g,"&lt;")+"</pre>");
+});
+</script>"""
+
+
+def test_words_build():
+    """build.py: word_freq räknar grundformen i kursens texter; glosquizet ligger i 05-words.js, inte i app.js."""
+    sys.path.insert(0, str(ROOT))
+    from build import word_freq
+    out = []
+    ok = lambda name, cond, info="": out.append(("OK   " if cond else "FEL  ") + name + (f"  ({info})" if info else ""))
+    words = "#a|A\nla vie|livet|f|La [vie] est belle.|x|y\nse lever|stiga upp||Je me lève.|x|y\ninfirmier, infirmière|x|m|Elle est infirmière.|x|y\nce qui me plaît, c'est|x||Ce qui me plaît, c'est la vie.|x|y\ndas Es|x|n|Es ist spät.|x|y\nrare|x||Rien.|x|y"
+    content = {"reading": [{"lines": [{"fr": "La vie, la vie ! Il faut se lever."}], "gloss": {"lève": {"t": "se lever"}}}],
+               "tatoeba": {"vie": [{"t": "vie vie vie vie"}]}, "stories": [{"text": "Une infirmière [vit|vie]."}]}
+    f = word_freq(words, content)
+    ok("vanligast först: word_freq räknar ord utan artikel och reflexivt pronomen", f.get("la vie") == 5 and f.get("se lever") == 2, f)
+    ok("vanligast först: former med komma räknas var för sig, fraser med komma som en fras", f.get("infirmier, infirmière") == 2 and f.get("ce qui me plaît, c'est") == 1, f)
+    ok("vanligast först: stor bokstav räknas bara med stor bokstav, ord som inte förekommer saknas", f.get("das Es") == 1 and "rare" not in f, f)
+    app = (ROOT / "src" / "app.js").read_text(encoding="utf-8")
+    words_js = (ROOT / "src" / "kinds" / "05-words.js").read_text(encoding="utf-8")
+    moved = ["function renderLearn", "function qType", "function startQuiz", "function mcOptions", "const explain=", "const studyCard=",
+             "function memoBox", 'defineKind("words"', "function applyAnswer", "function tally", "function finishSession"]
+    ok("glosor: glosquizet ligger i src/kinds/05-words.js och inte i app.js", all(m in words_js and m not in app for m in moved),
+       [m for m in moved if m in app or m not in words_js])
+    return "\n".join(out)
+
 
 SCENARIO_BUGHUNT = r"""<script>
 const out=[]; const q=s=>document.querySelector(s);
@@ -1438,6 +1780,117 @@ appReady().then(async()=>{ try{
 
 
 # ---------------------------------------------------------------------------------------------------------
+# Tala (src/kinds/45-tala.js, P2: Ny övning Tala och Muntlig förberedelse): 4/3/2 med klocka och ord per minut,
+# Claudes kommentarer efter varje runda (med en fejkad sample), samtal med Claude, utan sample, Skugga under Tala.
+# ---------------------------------------------------------------------------------------------------------
+SCENARIO_TALK = r"""<script>
+const out=[]; const q=s=>document.querySelector(s);
+const ok=(name,cond,info="")=>out.push((cond?"OK   ":"FEL  ")+name+(info?"  ("+info+")":""));
+const words=n=>Array.from({length:n},(_,i)=>["je","joue","du","piano","depuis","dix","ans","et","j'aime","la","musique"][i%11]).join(" ");
+const say=(sel,t)=>{ const el=q(sel); el.value=t; el.dispatchEvent(new Event("input")); };
+appReady().then(async()=>{ try{
+  const prompts=[]; let mode="ok";
+  const fake={json:async(p,o)=>{ prompts.push(p); if(mode==="fail") throw {code:"rate_limited"};
+    if(p.includes("Börja samtalet")) return {svar:"Bonjour ! Tu joues de quel instrument ?"};
+    if(p.includes("sista svar")) return {svar:"Merci, au revoir !",helhet:"Bra samtal.",bra:["Tydliga svar"],fel:[{citat:"le piano",rattat:"du piano",varfor:"jouer de"}],nasta:"Fler bindeord",niva:"A2"};
+    if(p.includes("samtalspartner")) return {svar:"Super ! Et depuis quand ?",fel_nu:[{citat:"je joue le piano",rattat:"je joue du piano",varfor:"jouer de + instrument"}]};
+    return {helhet:"Bra runda.",bra:["Tydligt"],fel:[],flyt:"Lugnt tempo.",nasta:"Säg mer.",niva:"A2"}; }};
+  const keep=SAMPLE; SAMPLE=fake;
+  // Menyn: Tala finns under Tala och skriva, Skugga har flyttats in i Tala (samma typ "shadow")
+  const grp=exGroups().find(g=>g.id==="speak"), ids=grp.items.map(h=>(h.match(/data-ex="(\w+)"/)||[])[1]);
+  ok("tala: knappen finns under Tala och skriva", ids.includes("talk")&&KINDS.talk.name==="Tala", ids.join());
+  ok("tala: Skugga finns inte längre direkt i menyn", !exGroups().some(g=>g.items.some(h=>h.includes('data-ex="shadow"'))));
+  openExGroup("speak"); q('[data-ex="talk"]').click();
+  const ts=talkTopics(), nsp=EX().tasks.filter(t=>exKind(t)==="speak").length;
+  ok("tala: ämnen från provets taluppgifter och skrivuppgifterna", ts.filter(t=>t.grp==="exam").length===nsp&&nsp>0&&ts.filter(t=>t.grp==="write").length===(C().prompts||[]).length, nsp+" tal, "+ts.length+" ämnen");
+  ok("tala: muntlig förberedelse (goal) med presentation och samtal", !!L.goal&&ts[0].id==="me"&&!!q('[data-talk="me"]')&&!!q('[data-chat="me"]')&&q("#app").textContent.includes("Presentera dig själv och din musik"));
+  ok("tala: alla val är knappar (tangentbord)", [...document.querySelectorAll("[data-talk],[data-chat],[data-ex]")].every(b=>b.tagName==="BUTTON"));
+  q('[data-ex="shadow"]').click(); ok("tala: Skugga startar från Tala", !!q("[data-sh]")&&sess&&sess.kind==="shadow"); pauseSession(); sess=null;
+
+  // 4/3/2 med kursens nivå (Franska 3 = A2: 2, 1,5 och 1 minut)
+  openTalk(); q('[data-talk="me"]').click();
+  ok("tala: A2 ger 2/1,5/1 minuter", q("#tclock").textContent==="2:00"&&TALK.mins.join()==="2,1.5,1", q("#tclock").textContent);
+  ok("tala: instruktion för diktering på iPad och telefon", /mikrofonen/.test(q(".howto").textContent)&&/iPad/.test(q(".howto").textContent)&&/Android/.test(q(".howto").textContent));
+  q("#tdone").click(); ok("tala: tom runda sparas inte", !S.talk||!S.talk.t||!S.talk.t.me);
+  const n0=S.log.length; q("#tstart").click(); ok("tala: klockan går", !!TALK.t0&&q("#tstart").hidden);
+  say("#ttext",words(30)); TALK.t0-=30000; q("#tdone").click();
+  let e=S.log[S.log.length-1];
+  ok("tala: runda 1 ger ord per minut och loggpost", S.log.length===n0+1&&e.kind==="talk"&&e.rounds===1&&e.words===30&&S.talk.t.me.wpm.length===1&&Math.abs(S.talk.t.me.wpm[0]-60)<=2&&q("#twpm").textContent==S.talk.t.me.wpm[0], JSON.stringify(e)+" "+JSON.stringify(S.talk.t.me));
+  await until(()=>q("#tfb")&&q("#tfb").textContent.includes("Flyt"),3000);
+  const p1=prompts[prompts.length-1];
+  ok("tala: Claude kommenterar rundan (flyt, fel, nivå)", q("#tfb").textContent.includes("Lugnt tempo")&&q("#tfb").textContent.includes("Bra runda")&&S.fb["tt:me"].r===1,q("#tfb").textContent.slice(0,100));
+  ok("tala: prompten gäller transkription, inte uttal, och har ord per minut", /transkription/.test(p1)&&/Uttalet går inte att bedöma/.test(p1)&&/ord per minut/.test(p1)&&p1.includes(words(30))&&p1.includes("runda 1 av 3"));
+  ok("tala: prompten är nivåstyrd med kursens elevbeskrivning och mål", p1.includes("nivå A2")&&p1.includes(LEVEL_GUIDE.A2)&&p1.includes(studentDesc())&&p1.includes(L.goal));
+  q("#tnext").click();
+  ok("tala: runda 2 är kortare och visar förra rundan", q("#tclock").textContent==="1:30"&&q("#app").textContent.includes("Det du sa i runda 1"), q("#tclock").textContent);
+  say("#ttext",words(36)); TALK.t0-=60000; q("#tdone").click();
+  e=S.log[S.log.length-1];
+  ok("tala: samma loggpost uppdateras", S.log.length===n0+1&&e.rounds===2&&e.words===66&&S.talk.t.me.wpm.length===2, JSON.stringify(e));
+  await until(()=>prompts.length>=2,3000); ok("tala: prompten i runda 2 jämför med förra rundan", /Förra rundan: \d+ ord per minut/.test(prompts[prompts.length-1]));
+  q("#tnext").click(); ok("tala: runda 3 är 1 minut", q("#tclock").textContent==="1:00");
+  // Tiden tar slut: ord som kommer efteråt räknas inte i ord per minut
+  q("#tstart").click(); say("#ttext",words(20)); TALK.t0-=70000;
+  await until(()=>q("#tclock").classList.contains("over"),2000);
+  ok("tala: klockan visar att tiden är slut", q("#tclock").textContent==="Tiden är slut", q("#tclock").textContent);
+  say("#ttext",words(50)); q("#tdone").click();
+  ok("tala: ord efter tiden räknas inte", S.talk.t.me.wpm[2]===20&&TALK.words[2]===20&&S.talk.t.me.wpm.length===3&&S.talk.t.me.n===1&&!!q("#tagain"), JSON.stringify(S.talk.t.me));
+  ok("tala: tabell med alla tre rundor", document.querySelectorAll("#app .tbl tr").length===4);
+  statsExercises(); ok("tala: statistiken visar talet", statsExercises().includes("Du har talat 1 gång")&&!/Tala · /.test(statsExercises()));
+  q("#tagain").click(); ok("tala: samma ämne igen börjar på runda 1", q("#tclock").textContent==="2:00"&&TALK.r===0);
+  // 320 px
+  document.documentElement.style.width="320px"; say("#ttext",words(3));
+  ok("tala: ryms på 320 px", q("#app").scrollWidth<=q("#app").clientWidth+1, q("#app").scrollWidth+" > "+q("#app").clientWidth);
+
+  // Samtal med Claude: 6 svar, följdfrågor, rättelser och sammanfattning
+  const c0=S.log.length; talkChat("me");
+  await until(()=>CHAT&&CHAT.msgs.length===1&&!CHAT.ctl,3000);
+  ok("samtal: Claude börjar på målspråket", CHAT.msgs[0].text.startsWith("Bonjour")&&q("#chat").textContent.includes("Bonjour")&&!!q('#chat [data-say]'));
+  for(let i=0;i<6;i++){ say("#cin","Je joue le piano depuis "+(i+2)+" ans et j'aime beaucoup la musique classique.");
+    if(i===0){ q("#cin").dispatchEvent(new KeyboardEvent("keydown",{key:"Enter",bubbles:true})); } else q("#csend").click();
+    await until(()=>CHAT&&!CHAT.ctl&&CHAT.msgs.length===2*i+3,3000); }
+  const pc=prompts.filter(p=>p.includes("samtalspartner")), last=pc[pc.length-1];
+  ok("samtal: 6 svar och 7 repliker från Claude", CHAT.msgs.filter(m=>m.who==="e").length===6&&CHAT.msgs.filter(m=>m.who==="c").length===7&&CHAT.done, CHAT.msgs.length);
+  ok("samtal: Enter skickar", CHAT.msgs[1].who==="e");
+  ok("samtal: följdfrågan har elevens svar i prompten", pc[2].includes("E: Je joue le piano depuis 2 ans")&&pc[2].includes("följdfråga")&&pc[2].includes("Elevens nivå: A2"));
+  ok("samtal: rättelser under elevens svar", document.querySelectorAll("#chat .fbfel li").length>=5&&q("#chat").textContent.includes("je joue du piano"));
+  ok("samtal: sammanfattning efter sista svaret", last.includes("sista svar")&&q("#cfb").textContent.includes("Bra samtal")&&q("#csend").disabled&&!!q("#cagain"));
+  e=S.log[S.log.length-1];
+  ok("samtal: sparas i S.talk och loggen", S.talk.c.me.n===1&&S.log.length===c0+1&&e.kind==="talk"&&e.chat===1&&e.words>60&&S.fb["tc:me"].helhet==="Bra samtal."&&!S.fb["c:me"],JSON.stringify(e));
+  ok("samtal: ryms på 320 px", q("#app").scrollWidth<=q("#app").clientWidth+1, q("#app").scrollWidth+" > "+q("#app").clientWidth);
+  document.documentElement.style.width="";
+  // Fel från Claude: elevens svar läggs tillbaka i fältet
+  talkChat("x:"+EX().tasks.find(t=>exKind(t)==="speak").id); await until(()=>CHAT&&CHAT.msgs.length===1&&!CHAT.ctl,3000);
+  mode="fail"; say("#cin","Bonjour, je suis prêt."); q("#csend").click(); await until(()=>CHAT&&!CHAT.ctl,3000);
+  ok("samtal: vid fel kommer svaret tillbaka", q("#cin").value==="Bonjour, je suis prêt."&&CHAT.msgs.length===1&&/gräns/.test(q("#cmsg").textContent), q("#cmsg").textContent);
+  mode="ok";
+  ok("samtal: provuppgiften har provets nivå", prompts[prompts.length-1].includes("Elevens nivå: "+examLevel(EX().tasks.find(t=>exKind(t)==="speak"))));
+
+  // Utan sample: klockan och ord per minut fungerar, men inga kommentarer och inget samtal
+  SAMPLE=null; const np=prompts.length;
+  talkRound("me",0); say("#ttext",words(20)); TALK.t0-=60000; q("#tdone").click();
+  ok("utan sample: ord per minut utan kommentarer", q("#twpm").textContent==="20"&&/claude\.ai/.test(q("#tfb").textContent)&&prompts.length===np, q("#tfb").textContent);
+  talkChat("me"); ok("utan sample: samtalet förklarar och går inte att skicka", q("#csend").disabled&&/claude\.ai/.test(q("#cmsg").textContent));
+  SAMPLE=fake;
+  openTalk(); q("#quit").click(); ok("tala: Tillbaka stänger", !TALK&&!CHAT);
+
+  // B1-kurs (Tyska 5): 4/3/2 minuter, utan goal-ämne i en kurs utan mål
+  useLang("de"); await until(()=>L.code==="de"&&L.base&&!sess,8000);
+  openTalk(); const t0=talkTopics()[0]; q('[data-talk="'+t0.id+'"]').click();
+  ok("de: B1 ger 4/3/2 minuter", talkLow(t0.lv)||q("#tclock").textContent==="4:00", t0.id+" "+t0.lv+" "+q("#tclock").textContent);
+  const nogoal=testCourses().find(c=>!LANGUAGES[c].goal);
+  if(nogoal){ useLang(nogoal); await until(()=>L.code===nogoal&&L.base&&!sess,8000);
+    ok(nogoal+": inget presentationsämne utan goal, men minst tre ämnen", !talkTopics().some(t=>t.id==="me")&&talkTopics().length>=3);
+    openTalk(); ok(nogoal+": Tala öppnas", !!q("[data-talk]")&&!q('[data-chat="me"]'));
+    const a1=talkTopics().find(t=>talkLow(t.lv)); if(a1){ talkRound(a1.id,0); ok(nogoal+": A-nivå ger kortare rundor", q("#tclock").textContent==="2:00"); } }
+  SAMPLE=keep;
+ }catch(e){ ok("undantag", false, e.message+" "+(e.stack||"").split("\n")[1]); }
+ ok("inga JavaScript-fel", !__err.length, __err.join(" ; "));
+ document.body.insertAdjacentHTML("beforeend","<pre id=out>"+out.join("\n").replace(/</g,"&lt;")+"</pre>");
+});
+</script>"""
+
+
+# ---------------------------------------------------------------------------------------------------------
 # Byggkontroller (arkitekturgranskning 2026-09-29): bygget går igenom utan den privata bokmappen, och stoppar när en
 # grammatikfråga pekar på ett område eller en regel som inte finns i grammar.json, när en regel i regler.json saknar
 # område, när inherit nämner ett fält som föräldern inte har och när nextCourse pekar på en kurs som inte finns.
@@ -1486,7 +1939,174 @@ def test_build_checks():
                "verb: tabeller i lang.js stoppar bygget", "ska ligga i languages/de/verbs.json")
         broken(t / "languages" / "de" / "verbs.json", lambda s: s.replace('"tenses"', '"tenses2"', 1), "verb: okänt fält i verbs.json stoppar", "bara sv, tenses och notes")
         ok("bygge: går igenom igen", build().returncode == 0)
+
+        # --- lang.js läses med en tokenizer (P3) och fälten per innehållstyp kontrolleras (P2), arkitekturgranskningen 2026-09-29 ---
+        def passes(path, change, name):
+            orig = path.read_text(encoding="utf-8")
+            path.write_text(change(orig), encoding="utf-8")
+            r = build()
+            path.write_text(orig, encoding="utf-8")
+            ok(name, r.returncode == 0, r.stdout[-300:] if r.returncode else "")
+        passes(lj, lambda s: s.replace('storageKey: "glosor-de4-v1"', "storageKey: 'glosor-de4-v1'", 1).replace('extends: "de"', "extends:\n    'de'", 1),
+               "lang.js: enkla citattecken och radbrytning i storageKey/extends går igenom (samma lås)")
+        broken(lj, lambda s: s.replace('nextCourse: "de"', "nextCourse: /* kommentar */ 'xx'", 1), "lang.js: nextCourse med enkla citattecken och kommentar kontrolleras", "nextCourse 'xx'")
+        broken(lj, lambda s: s.replace('storageKey: "glosor-de4-v1"', 'storageKey: "glosor-" + "de4-v1"', 1), "lang.js: storageKey som inte är en ren text stoppar", "ska vara en text inom citattecken")
+        broken(lj, lambda s: s.replace('extends: "de"', "extends: ['de']", 1), "lang.js: extends i fel form stoppar", "extends ska vara en kod")
+        broken(lj, lambda s: s.replace("LANGUAGES.de4 =", "LANGUAGES.de5 =", 1), "lang.js: LANGUAGES.<kod> ska vara mappens namn", "ska vara LANGUAGES.de4")
+        broken(lj, lambda s: s.replace('storageKey: "glosor-de4-v1"', 'storageKey: "glosor-de4-v1', 1), "lang.js: en sträng som inte slutar stoppar med radnummer", "strängen slutar aldrig")
+
+        def first(kind, change):   # ändrar första posten i de/content/<kind>.json
+            def f(s):
+                d = json.loads(s); change(d[0] if isinstance(d, list) else d); return json.dumps(d, ensure_ascii=False)
+            return f
+        dc = t / "languages" / "de" / "content"
+        items = {k: json.loads((dc / f"{k}.json").read_text(encoding="utf-8")) for k in ("listening", "stories", "prompts", "phrases")}
+        broken(dc / "listening.json", first("listening", lambda x: x.pop("questions")), "innehåll: hörtext utan questions stoppar (fil och id)",
+               f"de/content/listening.json: {items['listening'][0]['id']} saknar questions")
+        broken(dc / "reading.json", first("reading", lambda x: x["lines"][0].pop("fr")), "innehåll: lästext med en rad utan fr stoppar", "rad 1 saknar fr")
+        broken(dc / "stories.json", first("stories", lambda x: x["gaps"].pop()), "innehåll: berättelse med fler luckor än gaps stoppar",
+               f"{items['stories'][0]['id']} har {len(items['stories'][0]['gaps'])} luckor i text men {len(items['stories'][0]['gaps']) - 1} i gaps")
+        broken(dc / "prompts.json", first("prompts", lambda x: x["need"].update(tenses=["Plusquamperfekt"])), "innehåll: need.tenses som inte finns i tenseCheck stoppar", "'Plusquamperfekt', som inte finns i kursens tenseCheck")
+        broken(dc / "phrases.json", first("phrases", lambda x: x["alt"].append(x["fr"])), "innehåll: fras med sig själv bland felalternativen stoppar", "har frasen själv bland felalternativen")
+        broken(dc / "regler.json", first("regler", lambda d: next(iter(d.values()))["parts"].append({})), "innehåll: tom del i en regelsida stoppar", "är tom (behöver h, t, table eller ex)")
+        broken(dc / "exam.json", first("exam", lambda d: d["tasks"][0].update(part="finnsinte")), "innehåll: provuppgift med okänd part stoppar", "part 'finnsinte', som inte finns i parts")
+        passes(dc / "prompts.json", first("prompts", lambda x: x.update(model="Kurz.")), "innehåll: för kort modelltext ger bara en varning")
+        r = build()
+        ok("innehåll: bygget går igenom igen", r.returncode == 0)
+
+    # Tokenizern och kontrollerna direkt (utan bygge)
+    sys.path.insert(0, str(ROOT))
+    from build import parse_lang_js, js_object_keys, JSExpr, JSParseError, check_fields, found_connectors, js_tok
+    src = """/* kommentar med LANGUAGES.xx = { och "citat" */
+LANGUAGES.zz = {
+  name: 'Tyska', title: "Glosor", // två fält på en rad
+  storageKey:
+    "glosor-zz-v1",
+  re: /^(der|die|das) \\/"'/i, fn: t => /a,b/.test(t), url: "http://x.se/a", n: -3, ok: true,
+  list: ["a", 'b\\'c', `d`], $x: {$append: ["y"]},
+  tenseCheck: (() => { const w = "x"; return {"Präsens": t => true, 'Perfekt': t => /hat/.test(t)}; })(),
+};"""
+    d = parse_lang_js(src, "zz")
+    good = (d.get("name") == "Tyska" and d.get("storageKey") == "glosor-zz-v1" and d.get("url") == "http://x.se/a" and d.get("n") == -3
+            and d.get("ok") is True and d.get("list") == ["a", "b'c", "d"] and d.get("$x") == {"$append": ["y"]})
+    ok("lang.js-tokenizer: enkla citattecken, kommentarer, radbrytning och flera fält per rad", good, "" if good else repr(d)[:200])
+    ok("lang.js-tokenizer: regex och funktioner blir uttryck, tenseCheck-nycklar ur return {…}",
+       isinstance(d.get("re"), JSExpr) and isinstance(d.get("fn"), JSExpr) and js_object_keys(d["tenseCheck"]) == ["Präsens", "Perfekt"])
+    def fails(s, code="zz"):
+        try:
+            parse_lang_js(s, code)
+            return False
+        except JSParseError:
+            return True
+    ok("lang.js-tokenizer: fel form stoppar", fails('LANGUAGES.zz = {name: "x}') and fails("LANGUAGES.zz = {a: 1") and fails("var x = 1;") and fails('LANGUAGES.yy = {a: 1};'))
+    ok("bindeord räknas som i appen (längsta först, apostrof)", found_connectors("Même si c'est dur, d'abord je viens.", ["si", "même si", "d'abord"]) == ["même si", "d'abord"]
+       and js_tok("Bonjour, l’ami ! Ça va ?") == ["bonjour", "l'ami", "ça", "va"])
+    good = {"phrases": [{"id": "p1", "sit": "s", "fr": "Hallo", "alt": ["hallo", "Hallöchen"], "why": "w"}],
+            "uttal": [{"id": "u1", "title": "t", "pairs": [["a", "b"]]}],
+            "mal": [{"id": "m1", "sec": "k1", "goals": ["Jag kan"]}],
+            "prompts": [{"id": "w1", "sec": "", "title": "t", "task": "x", "min": 2, "max": 5, "model": "und dann ja", "need": {"connectors": 1, "tenses": ["Präsens"]}}]}
+    e, w = check_fields(good, "x", ["und", "dann"], {"Präsens"})
+    ok("innehåll: korrekta poster godkänns (tomt sec i en allmän skrivuppgift, versal skillnad i felalternativ)", not e and not w, "; ".join(e + w))
+    bad = {"uttal": [{"id": "u1", "title": "t", "pairs": [["a"]]}], "mal": [{"id": "m1", "sec": "k1", "goals": []}],
+           "stories": [{"id": "s1", "sec": "k1", "title": "t", "text": "Er [ging|geht|ging] weg.", "gaps": [{"cat": "tempus", "why": "w"}]}],
+           "satsanalys": [{"id": "a1", "sec": "k1", "lvl": 1, "t": "x", "fr": "[[a]]", "opts": ["a", "b"], "a": 0, "why": "w"}],
+           "prompts": [{"id": "w1", "sec": "k1", "title": "t", "task": "x", "min": 9, "max": 5, "model": "a"}]}
+    e, w = check_fields(bad, "x", [], set())
+    want = ["uttal.json: u1 ordpar 1", "mal.json: m1 saknar goals", "stories.json: s1 lucka 1", "satsanalys.json: a1 har t 'x'", "prompts.json: w1 har min 9 och max 5"]
+    missing = [x for x in want if not any(x in m for m in e)]
+    ok("innehåll: fel form ger fel med fil och id", not missing, "saknas: " + "; ".join(missing) if missing else "")
     return "\n".join(out)
+
+
+# ---------------------------------------------------------------------------------------------------------
+# Skriva på ett ställe (2026-09-30, backlogg P2: Slå ihop Skriv en text och provets skrivuppgifter): skrivsidan visar
+# kapitlets uppgifter och provets skrivuppgifter med filter, båda bedöms med samma prompt (writePrompt, nivå ur
+# LEVEL_GUIDE, 0–5 per kriterium) och sparas i samma format i S.fb, gamla kommentarer och utkast läses, och kortet
+# Veckans skrivuppgift på startsidan (7 dagar utan text, stängs för veckan i S.wrSkip, nytt fält).
+# ---------------------------------------------------------------------------------------------------------
+SCENARIO_WRITEHUB = r"""<script>
+const out=[]; const q=s=>document.querySelector(s), qa=s=>[...document.querySelectorAll(s)];
+const ok=(name,cond,info="")=>out.push((cond?"OK   ":"FEL  ")+name+(info?"  ("+info+")":""));
+const noScroll=sel=>[400,320].every(w=>{ document.body.style.width=w+"px"; const p=q(sel); if(!p){ document.body.style.width=""; return false; }
+  const r=p.getBoundingClientRect(), bad=[...p.querySelectorAll("*")].filter(e=>{const b=e.getBoundingClientRect(); return b.width&&(b.right>r.right+.5||b.left<r.left-.5);});
+  const okw=document.documentElement.scrollWidth<=window.innerWidth&&!bad.length; document.body.style.width=""; return okw; });
+appReady().then(async()=>{ try{
+  useLang("fr"); await until(()=>L.code==="fr"&&L.base&&!sess,5000);
+  const ps=C().prompts, xs=EX().tasks.filter(t=>exKind(t)==="write"), keep=SAMPLE;
+  ok("skriv: kursen har båda sorterna", ps.length>0&&xs.length>0, ps.length+" / "+xs.length);
+  // Sidan och filtret
+  S.wr={}; delete S.fb; S.drafts={}; WR_FILTER="all"; KINDS.write.open();
+  ok("skriv: sidan visar kapitlets uppgifter och provuppgifterna", qa("[data-pick]").length===ps.length&&qa("[data-pickx]").length===xs.length, qa("[data-pick]").length+" / "+qa("[data-pickx]").length);
+  ok("skriv: kapitlets uppgifter först (samma ordning som förut)", q("[data-pick]").dataset.pick===ps[0].id);
+  const lab=q("[data-pickx] small").textContent;
+  ok("skriv: provuppgiften är märkt med prov och tid", lab.startsWith("Provuppgift · DELF B1")&&/\d+ min/.test(lab), lab);
+  q('[data-wrf="exam"]').click(); ok("skriv: filtret Provet", !qa("[data-pick]").length&&qa("[data-pickx]").length===xs.length&&q('[data-wrf="exam"]').getAttribute("aria-pressed")==="true");
+  q('[data-wrf="sec"]').click(); ok("skriv: filtret Kapitlen", qa("[data-pick]").length===ps.length&&!qa("[data-pickx]").length);
+  S.wr[ps[0].id]={words:40,last:Date.now(),h:1}; exState().t[xs[0].id]={pct:60,best:60,n:1,last:Date.now()};
+  q('[data-wrf="todo"]').click(); ok("skriv: filtret Oskrivna", qa("[data-pick]").length===ps.length-1&&qa("[data-pickx]").length===xs.length-1&&!q(`[data-pick="${ps[0].id}"]`));
+  q('[data-wrf="all"]').click(); ok("skriv: ingen horisontell scroll (400 och 320 px)", noScroll("#wrlist"));
+  // Samma bedömning: en prompt-byggare för båda sorterna
+  let prompts=[]; SAMPLE={json:async p=>{prompts.push(p); return {kriterier:[{namn:"Uppgiften",poang:4,kommentar:"ok"},{namn:"Ordförråd",poang:3,kommentar:"ok"},{namn:"Grammatik",poang:2,kommentar:"ok"}],helhet:"Bra.",bra:["Tydlig"],fel:[{citat:"je suis allé",rattat:"je suis allée",varfor:"Kongruens"}],nasta:"Mer",niva:"A2"};}};
+  const p0=ps.find(p=>p.min<=30)||ps[0], txt="Hier je suis allé au cinéma avec mes amis et nous avons mangé une pizza. C'était super mais un peu cher. Demain je vais travailler.";
+  q(`[data-pick="${p0.id}"]`).click(); q("#wtext").value=txt; q("#wtext").dispatchEvent(new Event("input")); q("#fbbtn").click();
+  await until(()=>S.fb&&S.fb["w:"+p0.id],3000);
+  const fw=S.fb["w:"+p0.id], lvW=cefrOf(p0.level)||courseLevel();
+  ok("skriv: Skriv en text bedöms med kriterier 0–5 och nivån", prompts.length===1&&prompts[0].includes('"poang": 0-5')&&prompts[0].includes("5 poäng = helt på "+lvW+"-nivå")&&prompts[0].includes(LEVEL_GUIDE[lvW])&&prompts[0].includes(p0.task), prompts[0]&&prompts[0].slice(0,120));
+  ok("skriv: samma prompt-byggare som provet", prompts[0]===writePrompt(wrPromptOpt(p0),txt));
+  ok("skriv: sparformat i S.fb (d, lv, words, pct)", fw.d>0&&fw.lv===lvW&&fw.words===tok(txt).length&&fw.pct===60, JSON.stringify({d:fw.d,lv:fw.lv,words:fw.words,pct:fw.pct}));
+  ok("skriv: kriterierna och summan visas", q("#fbout").textContent.includes("Sammanlagt")&&q("#fbout").textContent.includes("60 %")&&q("#fbout").textContent.includes("je suis allée"));
+  // Provuppgift från skrivsidan: samma prompt, samma format, Tillbaka leder till skrivsidan
+  const x0=xs[xs.length-1]; S.drafts["x:"+x0.id]="Mon brouillon ancien"; q("#quit").click(); q(`[data-pickx="${x0.id}"]`).click();
+  ok("skriv: provuppgiften öppnas med klocka och gammalt utkast", !!q("#exclock")&&q("#xtext").value==="Mon brouillon ancien");
+  q("#xtext").value=txt+" "+txt+" "+txt+" "+txt; q("#xtext").dispatchEvent(new Event("input")); q("#exdone").click();
+  await until(()=>S.fb["x:"+x0.id],3000);
+  const fx=S.fb["x:"+x0.id], lvX=examLevel(x0);
+  ok("skriv: provets prompt kommer från samma byggare", prompts.length===2&&prompts[1]===writePrompt({exam:EX().name,lv:lvX,where:exPart(x0.part).name+(x0.teil?", "+x0.teil:""),task:x0.task,criteria:x0.criteria,speak:false,words:EX().approxWords?`Cirka ${x0.minWords} ord (en text med mindre än hälften så många ord ger 0 poäng på provet).`:`Minst ${x0.minWords} ord.`},q("#xtext").value.trim()));
+  ok("skriv: provets kommentar i samma format", fx.lv===lvX&&fx.pct===60&&fx.words>0&&exState().t[x0.id].pct===60, JSON.stringify({lv:fx.lv,pct:fx.pct}));
+  q("#quit").click(); ok("skriv: Tillbaka från provuppgiften leder till skrivsidan", !!q("#wrlist"));
+  examTask(x0.id); q("#quit").click(); ok("skriv: provuppgift från provträningen går tillbaka till provträningen", !q("#wrlist")&&!!q("#sim"));
+  SAMPLE=keep;
+  // Gamla format: kommentar utan kriterier, en sträng, och en gammal provkommentar utan pct/lv
+  S.fb["w:"+ps[1].id]={helhet:"Gammal kommentar",fel:[{citat:"le maison",rattat:"la maison",varfor:"Genus"}],niva:"A2",d:Date.now()-9e8};
+  S.drafts["w:"+ps[1].id]="Mon vieux texte";
+  openWriting(); q(`[data-pick="${ps[1].id}"]`).click();
+  ok("skriv: gammal kommentar och utkast visas", q("#fbout").textContent.includes("Gammal kommentar")&&q("#fbout").textContent.includes("la maison")&&q("#wtext").value==="Mon vieux texte");
+  S.fb["w:"+ps[1].id]="Gammal text som sträng"; q("#quit").click(); q(`[data-pick="${ps[1].id}"]`).click();
+  ok("skriv: kommentar som sträng visas", q("#fbout").textContent.includes("Gammal text som sträng"));
+  S.fb["x:"+x0.id]={kriterier:[{namn:"A",poang:5},{namn:"B",poang:0}],helhet:"Förr",d:1};
+  examTask(x0.id); ok("skriv: gammal provkommentar utan pct får summan", q("#exres").textContent.includes("Sammanlagt")&&q("#exres").textContent.includes("50 %")&&q("#exres").textContent.includes("Förr"), q("#exres").textContent.slice(0,100));
+  ok("skriv: fbNorm", fbNorm(null)===null&&fbNorm("")===null&&fbNorm("x").helhet==="x"&&fbNorm({kriterier:[{poang:5}]}).pct===100&&fbNorm({helhet:"h"}).pct==null);
+  // Veckans skrivuppgift
+  const old=Date.now()-8*864e5;
+  S.wr={}; S.fb={}; S.exam={t:{},sims:[]}; S.log=S.log.filter(e=>e.kind!=="write"); delete S.wrSkip; S.src=ps[0].sec||"auto"; renderStart();
+  const cur=curSec(), first=ps.find(p=>p.sec===cur);
+  ok("vecka: kortet visas när inget är skrivet", !!q("#wrnag")&&q("#wrnag").textContent.includes("Veckans skrivuppgift"));
+  ok("vecka: förslaget är nästa oskrivna uppgift i kapitlet", !!first&&q("#wrnag-go").dataset.wrn===first.id&&q("#wrnag-go").dataset.wrx==="0", cur+" "+(q("#wrnag-go")||{dataset:{}}).dataset.wrn);
+  ps.filter(p=>p.sec===cur).forEach(p=>S.wr[p.id]={words:50,last:old,h:1}); renderStart();
+  ok("vecka: skrivet för 8 dagar sedan ger kortet med antal dagar", !!q("#wrnag")&&q("#wrnag").textContent.includes("8 dagar"), q("#wrnag")&&q("#wrnag").textContent.slice(0,120));
+  ok("vecka: kapitlet klart ger en provuppgift", q("#wrnag-go").dataset.wrx==="1"&&xs.some(t=>t.id===q("#wrnag-go").dataset.wrn)&&q("#wrnag-go").textContent.includes("Provuppgift"));
+  q("#wrnag-go").click(); ok("vecka: förslaget öppnas", !!q("#xtext")&&!!q("#exclock")); q("#quit").click(); ok("vecka: Tillbaka till skrivsidan", !!q("#wrlist"));
+  S.wr[ps[0].id]={words:50,last:Date.now()-2*864e5,h:1}; renderStart(); ok("vecka: skrivet för 2 dagar sedan ger inget kort", !q("#wrnag"));
+  S.wr={}; S.fb={["x:"+x0.id]:{helhet:"x",d:Date.now()-864e5}}; renderStart(); ok("vecka: en bedömd provuppgift räknas som skriven", !q("#wrnag"));
+  S.fb={}; renderStart(); q("#wrnag-skip").click();
+  ok("vecka: stängt för veckan", !q("#wrnag")&&S.wrSkip===wrWeek(Date.now())&&/^\d{4}-\d\d-\d\d$/.test(S.wrSkip)&&new Date(S.wrSkip+"T12:00").getDay()===1, S.wrSkip);
+  ok("vecka: sparat i localStorage", JSON.parse(localStorage.getItem(L.storageKey)).wrSkip===S.wrSkip);
+  renderStart(); ok("vecka: stängt kort kommer inte tillbaka samma vecka", !q("#wrnag"));
+  S.wrSkip=wrWeek(Date.now()-7*864e5); renderStart(); ok("vecka: nästa vecka visas kortet igen", !!q("#wrnag"));
+  ok("vecka: ingen horisontell scroll (400 och 320 px)", noScroll("#wrnag"));
+  q("#wrnag-all").click(); ok("vecka: Välj en annan uppgift öppnar skrivsidan", !!q("#wrlist"));
+  const log=S.log; S.log=[]; renderStart(); ok("vecka: inget kort för en helt ny elev", !q("#wrnag")); S.log=log;
+  // Kurs utan prov: bara kapitlets uppgifter
+  const np=testCourses().find(c=>!LANGUAGES[c].exam&&c==="it3");   // it1 har CELI Impatto sedan 2026-09-30
+  if(np){ useLang(np); await until(()=>L.code===np&&L.base&&!sess,8000);
+    openWriting(); ok(np+": utan prov bara kapitlets uppgifter", qa("[data-pick]").length===(C().prompts||[]).length&&!qa("[data-pickx]").length&&!q('[data-wrf="exam"]'));
+    S.wr={}; delete S.wrSkip; S.log=S.log.length?S.log:[{kind:"words",d:Date.now()-864e5,dur:60,right:1,total:1}]; renderStart();
+    ok(np+": kortet föreslår en uppgift ur kapitlen", !!q("#wrnag")&&q("#wrnag-go").dataset.wrx==="0"); }
+ }catch(e){ ok("undantag", false, e.message+" "+(e.stack||"").split("\n")[1]); }
+ ok("inga JavaScript-fel", !__err.length, __err.join(" ; "));
+ document.body.insertAdjacentHTML("beforeend","<pre id=out>"+out.join("\n").replace(/</g,"&lt;")+"</pre>");
+});
+</script>"""
 
 
 # ---------------------------------------------------------------------------------------------------------
@@ -1549,7 +2169,7 @@ appReady().then(async()=>{ try{
   q("#plan-start").onchange({target:{value:""}}); ok("plan: startdatumet kan tas bort", planWeekIdx()===null&&S.plan&&!S.plan.start);
   // Gammalt läge utan plan, och kurs utan plan
   delete S.plan; renderStart(); ok("plan: läge utan S.plan fungerar", !!q("#plancard")&&planWeekIdx()===null);
-  useLang("fr"); await until(()=>L.code==="fr"&&L.base&&!sess,5000); renderStart();
+  useLang("it1"); await until(()=>L.code==="it1"&&L.base&&!sess,5000); renderStart();   // fr har en plan sedan P3: Studieplan
   ok("plan: kurs utan plan visar inget kort", !q("#plancard")&&!hasPlan());
   KINDS.plan.open(); ok("plan: öppna utan plan går till startsidan", !q("#planp"));
  }catch(e){ ok("undantag", false, e.message+" "+(e.stack||"").split("\n")[1]); }
@@ -1557,6 +2177,75 @@ appReady().then(async()=>{ try{
  document.body.insertAdjacentHTML("beforeend","<pre id=out>"+out.join("\n").replace(/</g,"&lt;")+"</pre>");
 });
 </script>"""
+
+
+# ---------------------------------------------------------------------------------------------------------
+# Studieplaner för fler kurser och Tillbaka till planen (backlogg P3: Studieplan): fr, frs4, frs5, fr4, de4 och de6 har
+# en plan på 18–20 veckor som täcker kursens alla ord (utom valbara avsnitt, t.ex. musikteorin) en gång, alla
+# grammatikområden, alla texter (utom bokens) och alla provuppgifter. En uppgift som öppnas i planen leder med Tillbaka,
+# Avbryt och slutskärmens knapp tillbaka till planen (openFrom/RETURN_TO i app.js); öppnad från sin lista som förut.
+# ---------------------------------------------------------------------------------------------------------
+PLAN_COURSES = ["de", "fr", "frs4", "frs5", "fr4", "de4", "de6"]
+SCENARIO_PLANS = r"""<script>
+const out=[]; const q=s=>document.querySelector(s);
+const ok=(name,cond,info="")=>out.push((cond?"OK   ":"FEL  ")+name+(info?"  ("+info+")":""));
+const PLAN_COURSES=__PLAN_COURSES__;
+const CK={lq:"listening",rq:"reading",write:"prompts",culture:"culture",story:"stories"};
+appReady().then(async()=>{ try{
+  for(const c of PLAN_COURSES){
+    useLang(c); await until(()=>L.code===c&&L.base&&!sess,8000);
+    const P=L.plan, n=P?P.weeks.length:0;
+    ok(c+": plan på 18–20 veckor med tips", !!P&&n>=18&&n<=20&&P.weeks.every(w=>w.id&&w.title&&w.tip), n);
+    if(!P) continue;
+    const bad=[]; P.weeks.forEach(w=>(w.do||[]).forEach(x=>{ const it=planItem(x); if(!it||!it.title||typeof it.go!=="function") bad.push(w.id+":"+x.k+":"+(x.id||"")); }));
+    ok(c+": varje uppgift i planen finns", !bad.length, bad.slice(0,8).join(", "));
+    const secs=L.base.sections.filter(s=>!isElective(s.id)).map(s=>s.id), inPlan=new Set(P.weeks.flatMap(w=>(w.words||[]).map(r=>r.sec)));
+    const all=P.weeks.flatMap(w=>planWords(w).map(x=>x.id)), uniq=new Set(all), want=L.base.words.filter(w=>secs.includes(w.sec));
+    ok(c+": alla ord (utom valbara avsnitt) i någon vecka, en gång", secs.every(s=>inPlan.has(s))&&all.length===uniq.size&&want.every(w=>uniq.has(w.id)),
+      uniq.size+" / "+want.length+" / "+all.length+" "+secs.filter(s=>!inPlan.has(s)).join());
+    ok(c+": inga valbara avsnitt i planen", ![...inPlan].some(isElective));
+    const topics=new Set(P.weeks.flatMap(w=>w.grammar||[]));
+    ok(c+": alla grammatikområden", GR().topics.every(t=>topics.has(t.id)), GR().topics.filter(t=>!topics.has(t.id)).map(t=>t.id).join());
+    const used=new Set(P.weeks.flatMap(w=>(w.do||[]).map(x=>x.k+"|"+(x.id||""))));
+    const miss=Object.entries(CK).flatMap(([k,ck])=>(C()[ck]||[]).filter(x=>!/^bok-/.test(x.id)&&!used.has(k+"|"+x.id)).map(x=>k+":"+x.id));
+    ok(c+": alla texter, skrivuppgifter, kultur och berättelser (utom bokens)", !miss.length, miss.slice(0,8).join(", "));
+    ok(c+": inga av bokens texter i planen", ![...used].some(u=>/\|bok-/.test(u)));
+    const exMiss=hasExam()?EX().tasks.filter(t=>!used.has("exam|"+t.id)).map(t=>t.id):[];
+    ok(c+": alla provuppgifter och en provsimulering", !exMiss.length&&(!hasExam()||used.has("examsim|")), exMiss.join());
+  }
+  // Tillbaka till planen (Tyska 4)
+  useLang("de4"); await until(()=>L.code==="de4"&&L.base&&!sess,8000);
+  delete S.plan; S.runs={}; delete S.run; renderStart();
+  const P=L.plan, find=k=>{ for(let i=0;i<P.weeks.length;i++){ const j=(P.weeks[i].do||[]).findIndex(x=>x.k===k); if(j>=0) return [i,j]; } };
+  const openItem=k=>{ const [i,j]=find(k); KINDS.plan.open(); const b=q(`[data-planitem="${i}|${j}"]`); b.click(); return i; };
+  const back=(k,sel)=>{ const i=openItem(k), opened=!q("#planp")&&(!sel||!!q(sel)); q("#quit").click();
+    return opened&&!!q("#planp")&&!!q(`.planwk[data-wk="${i}"][open]`); };
+  ok("tillbaka: hörförståelse → planen, veckan öppen", back("lq","#toq"));
+  ok("tillbaka: läsa → planen", back("rq","#toq"));
+  ok("tillbaka: skriva → planen", back("write","#wtext"));
+  ok("tillbaka: kultur → planen", back("culture"));
+  ok("tillbaka: provuppgift → planen", back("exam"));
+  ok("tillbaka: kapitelprov (Avbryt) → planen", back("ktest")); S.runs={}; delete S.run;
+  ok("tillbaka: berättelse (Avbryt) → planen", back("story")); S.runs={}; delete S.run;
+  { KINDS.plan.open(); q("[data-plangram]").click(); const inq=!!sess&&!!sess.cur; q("#quit").click();
+    ok("tillbaka: grammatik (Avbryt) → planen", inq&&!!q("#planp")); S.runs={}; delete S.run; }
+  // Hörförståelse: Till frågorna och sedan Avbryt → planen
+  { openItem("lq"); q("#toq").click(); const inq=!!sess; q("#quit").click(); ok("tillbaka: Avbryt i frågorna → planen", inq&&!!q("#planp")); S.runs={}; delete S.run; }
+  // Slutskärmen efter en berättelse och ett kapitelprov: knappen heter Till studieplanen och leder dit
+  { openItem("story"); sess.queue=[]; nextQ(); const h=q("#home");
+    ok("slutskärmen: Till studieplanen", !!h&&h.textContent==="Till studieplanen", h&&h.textContent); if(h) h.click(); ok("slutskärmen: leder till planen", !!q("#planp")); }
+  { openItem("ktest"); sess.queue=[]; nextQ(); const h=q("#kthome"); ok("kapitelprovets slutskärm: Till studieplanen", !!h&&h.textContent==="Till studieplanen"); h.click(); ok("kapitelprovet: leder till planen", !!q("#planp")); }
+  // Planens egen Tillbaka och vanliga vägar: som förut
+  q("#quit").click(); ok("planens Tillbaka → startsidan, RETURN_TO nollställd", !q("#planp")&&RETURN_TO===null);
+  KINDS.lq.open(); q("[data-pick]").click(); q("#quit").click(); ok("utan planen: Tillbaka från hörförståelse → listan", !q("#planp")&&!!q("[data-pick]")&&!q("#toq"));
+  KINDS.story.open(); q("[data-pick]").click(); sess.queue=[]; nextQ(); ok("utan planen: slutskärmen säger Startsidan", q("#home")&&q("#home").textContent==="Startsidan");
+  q("#home").click(); openWriting(); const x=q("[data-pickx]"); if(x){ x.click(); q("#quit").click(); ok("skrivsidan: provuppgift → Tillbaka till skrivsidan (som förut)", !!q("#wrlist")); }
+  renderStart(); S.runs={}; delete S.run; save();
+ }catch(e){ ok("undantag", false, e.message+" "+(e.stack||"").split("\n")[1]); }
+ ok("inga JavaScript-fel", !__err.length, __err.join(" ; "));
+ document.body.insertAdjacentHTML("beforeend","<pre id=out>"+out.join("\n").replace(/</g,"&lt;")+"</pre>");
+});
+</script>""".replace("__PLAN_COURSES__", "[" + ",".join(f'"{c}"' for c in PLAN_COURSES) + "]")
 
 
 # ---------------------------------------------------------------------------------------------------------
@@ -1715,6 +2404,7 @@ EXFILL = r"""<script>
 // Svarar på en läs- eller höruppgift av valfri typ och lämnar in; wrong = första frågan/luckan fel
 window.exFill=(t,wrong)=>{ const q=s=>document.querySelector(s), k=exKind(t);
   if(k==="mc") t.qs.forEach((x,i)=>q(`.exq[data-q="${i}"] [data-o="${i===0&&wrong?(x.a+1)%x.opts.length:x.a}"]`).click());
+  else if(k==="pick") t.items.forEach((w,i)=>q(`.expick[data-i="${i}"] input[value="${i===0&&wrong?(w.a+1)%w.opts.length:w.a}"]`).click());
   else [...document.querySelectorAll(".exsel,.exshort")].forEach(f=>{ const i=+f.dataset.i, w=k==="gaps"?t.gaps[i]:t.items[i], bad=wrong&&i===0;
     f.value=k==="short"?(bad?"xyz":w.a[0]):String(bad?(w.a===0?1:0):w.a); f.dispatchEvent(new Event("change")); });
   q("#exdone").click(); };
@@ -1732,7 +2422,7 @@ appReady().then(async()=>{ try{
   const want={fr2:"match",it4:"match",it7:"gaps",de7:"gaps"}, seen={};
   for(const c of testCourses()){ useLang(c); await until(()=>L.code===c&&L.base&&!sess,5000);
     if(!hasExam()) continue;
-    const ts=EX().tasks.filter(t=>EX_TYPES.includes(t.type));
+    const ts=EX().tasks.filter(t=>["match","gaps","short"].includes(t.type));   // bildval, grafik och tal på tid: SCENARIO_EXAMTYPES2
     for(const t of ts){ seen[c+"|"+t.type]=(seen[c+"|"+t.type]||0)+1;
       delete S.exam; examTask(t.id); const n=exItems(t), fields=[...document.querySelectorAll(".exsel,.exshort")];
       ok(c+": "+t.id+" ("+t.type+") visas med ett fält per item", n>0&&fields.length===n&&!bad(), fields.length+"/"+n);
@@ -1827,20 +2517,272 @@ def test_exam_task_checks():
     return "\n".join(out)
 
 
+# ---------------------------------------------------------------------------------------------------------
+# Provträning, fler typer och nivåer (src/kinds/70-exam.js och 80-level.js, backloggen "Fler provuppgiftstyper" och
+# "Provträning med två nivåer i samma kurs"): hela provet per nivå (Franska 3: DELF B1 och DELF A2), nivåmätaren räknar
+# varje del mot sin nivå, provets egen skala (DELF /25, TestDaF TDN 3–5), grafikbeskrivning (type "chart"), talat
+# svar på tid (type "timed" och tala med speak) och bildval (type "pick"). Kontrollerna i build.py. Egen sida.
+# ---------------------------------------------------------------------------------------------------------
+SCENARIO_EXAMTYPES2 = r"""<script>
+const out=[]; const q=s=>document.querySelector(s), qa=s=>[...document.querySelectorAll(s)];
+const ok=(name,cond,info="")=>out.push((cond?"OK   ":"FEL  ")+name+(info?"  ("+info+")":""));
+const bad=()=>/undefined|null|NaN|\[object/.test(q("#app").textContent);
+const crit={kriterier:[{namn:"A",poang:4},{namn:"B",poang:3},{namn:"C",poang:4},{namn:"D",poang:4}],helhet:"Gut.",niva:"B2"};
+let prompts=[]; const mock={json:async p=>{ prompts.push(p); return JSON.parse(JSON.stringify(crit)); }};
+// Inget i sidan sticker ut åt sidan på 320 px
+const fits=sel=>{ document.documentElement.style.width="320px"; const W=document.documentElement.getBoundingClientRect().right+1;
+  const wide=qa(sel).filter(e=>e.getBoundingClientRect().right>W); document.documentElement.style.width=""; return wide.map(e=>e.tagName+"."+(e.className.baseVal??e.className)); };
+const words="Die Grafik zeigt deutlich wie sich die Zahlen zwischen den Jahren verändert haben und warum das so ist meiner Meinung nach";
+appReady().then(async()=>{ try{
+  const keep=SAMPLE; SAMPLE=mock;
+  /* 1. Två nivåer i samma kurs (Franska 3) */
+  useLang("fr"); await until(()=>L.code==="fr"&&L.base&&!sess,5000);
+  ok("nivåer: Franska 3 har B1 och A2", JSON.stringify(simLvs())==='["B1","A2"]', JSON.stringify(simLvs()));
+  S.exam={t:{},sims:[]}; delete S.drafts; delete S.fb; openExam();
+  const a2=q('[data-simlv="A2"]');
+  ok("nivåer: en knapp för hela provet per nivå", q("#sim").textContent.includes("DELF B1 · hela provet")&&a2&&a2.textContent.includes("DELF A2 · hela provet")&&a2.textContent.includes("(100 minuter)"), a2&&a2.textContent);
+  q("#sim").click(); ok("nivåer: B1-simuleringen tar bara B1-uppgifter", EXSIM.lv==="B1"&&EXSIM.ids.every(id=>exTaskLv(exTask(id))==="B1"&&!exPart(exTask(id).part).level), EXSIM.ids.join(",")); q("#quit").click();
+  openExam(); q('[data-simlv="A2"]').click();
+  ok("nivåer: A2-simuleringen tar bara A2-delarna, en per övning", EXSIM&&EXSIM.lv==="A2"&&EXSIM.ids.length===EX().tasks.filter(t=>simTaskOk(t,"A2")).length&&EXSIM.ids.every(id=>/-a2$/.test(exTask(id).part)), EXSIM&&EXSIM.ids.join(","));
+  let g=0; while(EXSIM&&g++<20){ const t=exTask(EXSIM.ids[EXSIM.i]);
+    if(exItems(t)){ exFill(t,false); q("#exnext").click(); }
+    else { q("#xtext").value="J'habite à Stockholm avec ma famille et j'aime beaucoup la musique, surtout le piano et la guitare."; q("#exdone").click(); await until(()=>(S.exam.t[t.id]||{}).pct!=null); q("#exnext").click(); } }
+  const s2=S.exam.sims[S.exam.sims.length-1];
+  ok("nivåer: A2-simuleringen sparas med nivån och bara A2-delar", s2&&s2.lv==="A2"&&Object.keys(s2.parts).every(p=>/-a2$/.test(p)), JSON.stringify(s2));
+  ok("skala: simuleringens resultat i DELF-poäng", q("#app").textContent.includes("Resultat av simuleringen: DELF A2")&&q("#app").textContent.includes("/25 p")&&q("#app").textContent.includes("poäng i de här delarna")&&!bad(), q("#app").textContent.replace(/\s+/g," ").slice(0,300));
+  // Nivåmätaren: varje del mot sin nivå
+  S.exam={t:{},sims:[{d:Date.now(),parts:{"co-a2":90,"ce-a2":90,"co":30},tasks:{},lv:"A2"}]};
+  { const x=levelExam(3), pa=x.parts.filter(p=>/-a2$/.test(p.id)), pb=x.parts.find(p=>p.id==="co");
+    ok("nivåmätaren: godkänt DELF A2 ger belägg för A2, inte B1", pa.length===2&&pa.every(p=>Math.abs(p.lv-2)<.01), JSON.stringify(pa));
+    ok("nivåmätaren: B1-delen räknas mot B1", pb&&Math.abs(pb.lv-(2+30/50))<.01, JSON.stringify(pb));
+    ok("nivåmätaren: A2-delar listas inte som saknade B1-delar", !x.missing.some(m=>/A2/.test(m))&&x.missing.includes("Läsförståelse"), JSON.stringify(x.missing));
+    const e=levelEstimate(); ok("nivåmätaren: ett godkänt A2 är inte det som drar ner mest", !e.weak||!/a2/i.test(e.weak.what), e.weak&&e.weak.what);
+    setView("stats"); ok("nivåmätaren: A2-delarna visas och förklaras", q("#lvl").textContent.includes("Hörförståelse A2 90 %")&&q("#lvl").textContent.includes("räknas mot sin egen nivå"), q("#lvl").textContent.replace(/\s+/g," ").slice(0,400)); }
+  S.exam={t:{},sims:[]};
+  /* 2. Provets skala */
+  ok("skala: DELF och TDN", exScaleOf(null,"co")==="delf"&&exScaleText(50,"delf")==="12,5/25 p"&&exScaleText(100,"delf")==="25/25 p"
+    &&exTdn(85)==="TDN 5"&&exTdn(65)==="TDN 4"&&exTdn(45)==="TDN 3"&&exTdn(20)==="under TDN 3");
+  { const t=EX().tasks.find(t=>t.qs&&t.part==="ce"); examTask(t.id); exFill(t,false); ok("skala: DELF-uppgiftens resultat av 25", q("#exres").textContent.includes("100 % · 25/25 p"), q("#exres").textContent.slice(0,80)); }
+  /* 3. Grafikbeskrivning (de7) */
+  useLang("de7"); await until(()=>L.code==="de7"&&L.base&&!sess,5000);
+  const seen={}; const count=(c,k)=>seen[c+"|"+k]=(seen[c+"|"+k]||0)+1;
+  ok("skala: Goethe i procent, TestDaF-uppgifter i TDN", exScaleOf(EX().tasks.find(t=>t.qs))==="pct"&&EX().tasks.filter(t=>t.type==="chart"||t.type==="timed").every(t=>exScaleOf(t)==="tdn"));
+  for(const t of EX().tasks.filter(t=>t.type==="chart")){ count("de7","chart"); delete S.exam; delete S.fb; delete S.drafts; prompts=[];
+    examTask(t.id); const c=t.chart, svg=q("svg.chart"), marks=c.kind==="bar"?qa("svg.chart path").length:qa("svg.chart circle").length;
+    ok("grafik: "+t.id+" ritas som SVG ("+c.kind+")", svg&&svg.getAttribute("role")==="img"&&marks===c.labels.length*c.series.length&&!bad(), marks);
+    ok("grafik: "+t.id+" förklaring och tabell", qa(".exchart .legend span").length===(c.series.length>1?c.series.length:0)&&qa(".exchart table tr").length===c.labels.length+1&&q(".exchart figcaption").textContent.includes(c.title));
+    ok("grafik: "+t.id+" värden som tips", qa("svg.chart [data-tip]").length>=c.labels.length);
+    const mark=q(c.kind==="bar"?"svg.chart path":"svg.chart circle");
+    document.documentElement.dataset.theme="light"; const fl=getComputedStyle(mark).fill; document.documentElement.dataset.theme="dark"; const fd=getComputedStyle(mark).fill; delete document.documentElement.dataset.theme;
+    ok("grafik: "+t.id+" mörkt läge", fl&&fd&&fl!==fd, fl+" / "+fd);
+    const wide=fits(".exchart, .exchart *, .extask, textarea"); ok("grafik: "+t.id+" får plats på 320 px", !wide.length, wide.slice(0,3).join(", "));
+    ok("grafik: "+t.id+" ordantal 100–150", q("#xcount").textContent.includes("(100–150)"), q("#xcount").textContent);
+    q("#xtext").value=words; q("#xtext").dispatchEvent(new Event("input")); q("#exdone").click(); await until(()=>(S.exam&&S.exam.t[t.id]||{}).pct!=null);
+    ok("grafik: "+t.id+" bedöms av Claude med grafikens siffror och provets nivå", prompts.length===1&&prompts[0].includes(c.series[0].name+": "+c.labels[0]+" = "+c.series[0].values[0])&&prompts[0].includes("nivå C1")&&prompts[0].includes("100–150 ord"), prompts[0]&&prompts[0].slice(0,200));
+    ok("grafik: "+t.id+" resultat i TDN", S.exam.t[t.id].pct===75&&q("#exres").textContent.includes("TDN 4"), q("#exres").textContent.slice(0,120));
+  }
+  { let never=true; for(let k=0;k<10;k++) never=never&&simPlan().every(id=>!["chart","timed"].includes(exTask(id).type)); ok("grafik och tal på tid: ingår inte i simuleringen", never); }
+  /* 4. Talat svar på tid (de7) */
+  for(const t0 of EX().tasks.filter(t=>t.type==="timed")){ count("de7","timed"); delete S.exam; delete S.fb; delete S.drafts; prompts=[];
+    openExam(); ok("tal på tid: "+t0.id+" i listan med sekunder", q(`[data-xt="${t0.id}"]`).textContent.includes(exSecs(t0.prep)+" förberedelse + "+exSecs(t0.speak)+" tal"), q(`[data-xt="${t0.id}"]`).textContent.replace(/\s+/g," "));
+    const t={...t0}; EX().tasks.push(Object.assign(t,{id:"tmp-timed",prep:1,speak:1}));
+    examTask("tmp-timed"); ok("tal på tid: "+t0.id+" visar timern", !!q("#tstart")&&!q("#talk")&&q("#exclock").textContent.includes("Förberedelse 1 s")&&!bad());
+    q("#tstart").click(); ok("tal på tid: förberedelsen börjar", q("#tphase").dataset.phase==="prep"&&!q("#tskip").hidden);
+    await until(()=>q("#tphase").dataset.phase==="speak",4000); ok("tal på tid: taltiden börjar av sig själv", q("#tphase").dataset.phase==="speak"&&q("#exclock").textContent.includes("Taltid"));
+    await until(()=>q("#tphase").dataset.phase==="done",4000); ok("tal på tid: tiden tar slut", q("#tphase").dataset.phase==="done"&&!q("#tstart").hidden&&q("#tstart").textContent==="Börja om");
+    q("#tstart").click(); q("#tskip").click(); ok("tal på tid: hoppa över förberedelsen", q("#tphase").dataset.phase==="speak");
+    q("#xtext").value=words; q("#exdone").click(); await until(()=>(S.exam&&S.exam.t["tmp-timed"]||{}).pct!=null);
+    ok("tal på tid: "+t0.id+" kommentar av Claude, nivåstyrd och med tiderna", prompts.length===1&&prompts[0].includes("nivå C1")&&prompts[0].includes("1 s att tala")&&prompts[0].includes("muntlig")&&q("#exres").textContent.includes("TDN 4"), prompts[0]&&prompts[0].slice(0,160));
+    EX().tasks.splice(EX().tasks.indexOf(t),1); clearInterval(EXCLOCK); }
+  // En vanlig taluppgift kan få timern med speak (sekunder); utan speak är den som förut
+  { const sp=EX().tasks.find(t=>exKind(t)==="speak"); examTask(sp.id); ok("tal på tid: vanlig taluppgift utan speak som förut", !!q("#talk")&&!q("#tstart"));
+    const t={...sp,id:"tmp-speak",prep:30,speak:60}; EX().tasks.push(t); examTask(t.id);
+    ok("tal på tid: vanlig taluppgift med speak får timern", !!q("#tstart")&&!q("#talk")&&q("#app").textContent.includes("30 s att förbereda dig")&&exKind(t)==="speak");
+    EX().tasks.splice(EX().tasks.indexOf(t),1); clearInterval(EXCLOCK); }
+  /* 5. Bildval (fr1, it2) */
+  for(const c of ["fr1","it2"]){ useLang(c); await until(()=>L.code===c&&L.base&&!sess,5000);
+    for(const t of EX().tasks.filter(t=>t.type==="pick")){ count(c,"pick"); delete S.exam; examTask(t.id); const n=exItems(t);
+      const fs=qa(".expick");
+      ok(c+": "+t.id+" en grupp bilder per fråga", fs.length===n&&fs.every((f,i)=>f.querySelectorAll("input[type=radio]").length===t.items[i].opts.length)&&!bad(), fs.length+"/"+n);
+      ok(c+": "+t.id+" bilderna finns i uppsättningen", t.items.every(it=>it.opts.every(o=>EX_ICONS[o]))&&qa(".pickopt .ico").every(e=>e.textContent&&e.textContent!=="?"&&e.getAttribute("aria-label")));
+      ok(c+": "+t.id+" går med tangentbordet", qa(".expick input").every(i=>i.tabIndex>=0&&i.closest("label"))&&fs.every(f=>f.querySelector("legend")));
+      const wide=fits(".expick, .pickopt"); ok(c+": "+t.id+" får plats på 320 px", !wide.length, wide.slice(0,3).join(", "));
+      exFill(t,true); const r=S.exam&&S.exam.t[t.id];
+      ok(c+": "+t.id+" rättas och sparas", r&&r.pct===exPct(n-1,n)&&qa(".pickopt.right").length===n&&qa(".pickopt.wrong").length===1, JSON.stringify(r));
+      ok(c+": "+t.id+" visar facit och resultat", q("#app").textContent.includes("Rätt:")&&q("#exres").textContent.includes((n-1)+" av "+n+" rätt")&&!bad());
+      ok(c+": "+t.id+" loggas som provträning", S.log[S.log.length-1].kind==="exam"&&S.log[S.log.length-1].total===n);
+      if(t.plays) ok(c+": "+t.id+" hörtexten visas efter inlämningen", !q("#lines").hidden);
+    }
+    // Bildval i en sparad simulering: svaret sparas och läses tillbaka
+    { const t=EX().tasks.find(t=>t.type==="pick"&&simOk(t)); if(t){ EXSIM={ids:[t.id],i:0,res:{},ends:{},start:Date.now(),code:L.code}; examTask(t.id);
+      q('.expick[data-i="0"] input[value="1"]').click(); const saved=S.exam.simRun&&S.exam.simRun.cur&&S.exam.simRun.cur.ans["0"];
+      examTask(t.id); ok(c+": bildval i simuleringen sparar svaret", saved==="1"&&q('.expick[data-i="0"] input[value="1"]').checked&&q('.expick[data-i="0"] .pickopt.on'));
+      simDrop(); } }
+  }
+  ok("exempeluppgifter: två av varje ny typ", seen["fr1|pick"]>=2&&seen["it2|pick"]>=2&&seen["de7|chart"]>=2&&seen["de7|timed"]>=2, JSON.stringify(seen));
+  SAMPLE=keep;
+ }catch(e){ ok("undantag", false, e.message+" "+(e.stack||"").split("\n")[1]); }
+ ok("inga JavaScript-fel", !__err.length, __err.join(" ; "));
+ document.body.insertAdjacentHTML("beforeend","<pre id=out>"+out.join("\n").replace(/</g,"&lt;")+"</pre>");
+});
+</script>"""
+
+
+def test_exam_task_checks2():
+    """build.py: check_exam_task för bildval, grafik och tal på tid."""
+    sys.path.insert(0, str(ROOT))
+    from build import check_exam_task
+    out = []
+    ok = lambda name, cond, info="": out.append(("OK   " if cond else "FEL  ") + name + (f"  ({info})" if info else ""))
+    p = {"type": "pick", "items": [{"q": "x", "opts": ["sol", "regn", "kl8.30"], "a": 2}]}
+    ok("bygge: korrekt bildval godkänns", check_exam_task(p, "t") == [], check_exam_task(p, "t"))
+    ok("bygge: bildval med okänd bild stoppar", check_exam_task({**p, "items": [{"q": "x", "opts": ["sol", "enhörning"], "a": 0}]}, "t") != []
+       and check_exam_task({**p, "items": [{"q": "x", "opts": ["sol", "kl13"], "a": 0}]}, "t") != [])
+    ok("bygge: bildval med facit utanför stoppar", check_exam_task({**p, "items": [{"q": "x", "opts": ["sol", "regn"], "a": 2}]}, "t") != [])
+    ch = {"type": "chart", "task": "Beschreiben Sie", "minWords": 100, "maxWords": 150,
+          "chart": {"kind": "bar", "title": "T", "labels": ["a", "b"], "series": [{"name": "2015", "values": [1, 2]}]}}
+    ok("bygge: korrekt grafik godkänns", check_exam_task(ch, "t") == [], check_exam_task(ch, "t"))
+    ok("bygge: grafik med fel antal värden eller okänd kind stoppar", check_exam_task({**ch, "chart": {**ch["chart"], "series": [{"name": "x", "values": [1]}]}}, "t") != []
+       and check_exam_task({**ch, "chart": {**ch["chart"], "kind": "pie"}}, "t") != [])
+    ok("bygge: grafik med maxWords under minWords stoppar", check_exam_task({**ch, "maxWords": 50}, "t") != [])
+    tm = {"type": "timed", "task": "Sprechen Sie", "prep": 60, "speak": 90}
+    ok("bygge: korrekt tal på tid godkänns", check_exam_task(tm, "t") == [])
+    ok("bygge: tal på tid utan speak eller med minuter som text stoppar", check_exam_task({**tm, "speak": None}, "t") != [] and check_exam_task({**tm, "prep": "1"}, "t") != [])
+    ok("bygge: vanlig taluppgift med speak kontrolleras", check_exam_task({"task": "x", "prep": 30, "speak": 5}, "t") != [] and check_exam_task({"task": "x", "prep": 30, "speak": 60}, "t") == [])
+    ok("bygge: okänd skala stoppar", check_exam_task({"scale": "poäng"}, "t") != [] and check_exam_task({"scale": "tdn"}, "t") == [])
+    return "\n".join(out)
+
+
+# ---------------------------------------------------------------------------------------------------------
+# Provträningen hämtas vid behov och index.html under 420 kB (backloggen "P2: Datafilerna är stora för en telefon",
+# 2026-09-30): content.exam ligger i dist/data/<kod>-exam.json och kursens fil har bara ett index (split_exam i
+# build.py); ensureExam/examWait väntar in filen i provträningen, simuleringen, skrivsidans provuppgifter och Tala.
+# Startsidan, skrivsidans lista, nivåmätaren och planen klarar sig med indexet. Koden och stilen minifieras i bygget.
+# ---------------------------------------------------------------------------------------------------------
+SCENARIO_EXAMLAZY = r"""<script>
+const out=[]; const q=s=>document.querySelector(s), qa=s=>[...document.querySelectorAll(s)];
+const ok=(name,cond,info="")=>out.push((cond?"OK   ":"FEL  ")+name+(info?"  ("+info+")":""));
+const wait=(f,ms=6000)=>new Promise(r=>{const t0=Date.now();(function p(){let v=false;try{v=f()}catch(e){} if(v||Date.now()-t0>ms)r(v);else setTimeout(p,50)})()});
+const fetched=()=>performance.getEntriesByType("resource").map(e=>e.name).filter(n=>/-exam\.json/.test(n));
+const heavy=t=>["qs","lines","items","gaps","task","instr","model","criteria","chart","opts"].some(k=>k in t);
+const pick=async c=>{ q("#course").value=c; q("#course").dispatchEvent(new Event("change")); await wait(()=>L.code===c&&L.base); };
+setTimeout(async()=>{ try{
+  await wait(()=>L&&L.base&&WORDS&&WORDS.length);
+  if(!hasExam()) await pick("fr");
+  const c0=L.code;
+  ok("provindex: kursens fil har bara provets index", EX().lazy===true&&!examReady()&&hasExam()&&!EX().tasks.some(heavy)&&EX().tasks.every(t=>t.k), c0);
+  renderStart(); setView("stats");
+  const lv=levelEstimate();
+  ok("provindex: startsidan, statistiken och nivåmätaren hämtar inte provet", !fetched().length&&lv.exam&&lv.exam.examName===EX().name&&!__err.length, fetched().join());
+  openWriting(); const nw=EX().tasks.filter(t=>exKind(t)==="write").length;
+  ok("provindex: skrivsidan listar provets skrivuppgifter ur indexet", nw>0&&qa("[data-pickx]").length===nw&&!fetched().length, qa("[data-pickx]").length+" av "+nw);
+  if(L.plan){ openPlan(); ok("provindex: planen visas utan provfilen", !!q("#app .panel")&&!fetched().length&&!__err.length); }
+  // Offline: hämtningen misslyckas, ett vänligt meddelande och Försök igen
+  const f0=window.fetch; window.fetch=(u,...a)=>/-exam\.json/.test(String(u))?Promise.reject(new TypeError("Failed to fetch")):f0(u,...a);
+  openExam(); ok("provfil: provträningen visar att provet hämtas", !!q("#exwait")&&q("#app").textContent.includes("Hämtar provuppgifterna"));
+  await wait(()=>q("#exretry"));
+  ok("provfil: offline ger ett vänligt meddelande med Försök igen", !!q("#exretry")&&q("#app").textContent.includes("kunde inte hämtas")&&!examReady()&&!!q("#quit"));
+  window.fetch=f0; q("#exretry").click();
+  await wait(()=>q("[data-xt]"));
+  const f=fetched();
+  ok("provfil: Försök igen hämtar data/<kod>-exam.json (med hash) och öppnar provträningen", examReady()&&!EX().lazy&&qa("[data-xt]").length===EX().tasks.length&&f.length===1&&f[0].includes("data/"+c0+"-exam.json?v="+DATA_VERSION[c0+"-exam"]), f.join());
+  { const t=EX().tasks.find(t=>t.qs); examTask(t.id); ok("provfil: uppgiften visas med frågorna", qa(".exq").length===t.qs.length&&!!q("#exclock")); }
+  openExam(); ok("provfil: hämtas bara en gång", fetched().length===1&&!!q("[data-xt]"));
+  // En annan kurs: Tala väntar in provets taluppgifter
+  await pick("de");
+  ok("provfil: ny kurs börjar med indexet", !examReady()&&hasExam());
+  openTalk(); ok("tala: väntar på provfilen", !!q("#exwait"));
+  await wait(()=>q("[data-talk]"));
+  ok("tala: provets taluppgifter efter hämtningen", examReady()&&qa('[data-talk^="x:"]').length===EX().tasks.filter(t=>exKind(t)==="speak").length&&qa('[data-talk^="x:"]').length>0);
+  // Skrivsidans provuppgift (openFrom → examTask) i en kurs där provet inte är hämtat
+  await pick("de4");
+  openWriting(); q("[data-pickx]").click(); ok("skriv: provuppgiften väntar på provfilen", !!q("#exwait"));
+  await wait(()=>q("#xtext")); ok("skriv: provuppgiften öppnas med uppgiftstexten", !!q("#xtext")&&examReady());
+  // Tillbaka medan provet hämtas: ingen skärm dyker upp efteråt
+  await pick("de6");
+  openExam(); q("#quit").click(); await wait(()=>examReady());
+  await wait(()=>false,300);
+  ok("prov: Tillbaka under hämtningen stannar på startsidan", examReady()&&!q("[data-xt]")&&!q("#exwait"));
+  // Provsimuleringen från planen/listan: startExamSim väntar
+  await pick("de7");
+  startExamSim(); ok("simulering: väntar på provfilen", !!q("#exwait")&&!EXSIM);
+  await wait(()=>q("#exclock")); ok("simulering: startar efter hämtningen", !!EXSIM&&!!q("#exclock")&&examReady());
+  q("#quit").click();
+ }catch(e){ ok("undantag", false, e.message+" "+(e.stack||"").split("\n")[1]); }
+ ok("inga JavaScript-fel", !__err.length, __err.join(" ; "));
+ document.body.insertAdjacentHTML("beforeend","<pre id=out>"+out.join("\n").replace(/</g,"&lt;")+"</pre>");
+},300);
+</script>"""
+
+
+def test_exam_split():
+    """build.py: provet i egna filer, indexet i kursens fil, minifieringen och storleken på index.html."""
+    sys.path.insert(0, str(ROOT))
+    from build import split_exam, minify_js, minify_css, MAX_PAGE_KB
+    import json as _json
+    out = []
+    ok = lambda name, cond, info="": out.append(("OK   " if cond else "FEL  ") + name + (f"  ({info})" if info else ""))
+    data, page = ROOT / "dist" / "data", (ROOT / "dist" / "index.html").read_text(encoding="utf-8")
+    codes = sorted(p.stem for p in data.glob("*.json") if not p.stem.endswith("-exam"))
+    dv = _json.loads(re.search(r"const DATA_VERSION\s*=\s*(\{.*?\});", page).group(1))
+    bad = []
+    for c in codes:
+        ex = _json.loads((data / f"{c}.json").read_text(encoding="utf-8")).get("content", {}).get("exam")
+        src = ROOT / "languages" / c / "content" / "exam.json"
+        f = data / f"{c}-exam.json"
+        if not ex:
+            if f.exists():
+                bad.append(c + ": provfil utan prov")
+            continue
+        full = _json.loads(f.read_text(encoding="utf-8")) if f.exists() else None
+        if not full or not ex.get("lazy") or f"{c}-exam" not in dv:
+            bad.append(c + ": provfilen eller DATA_VERSION saknas")
+            continue
+        if [t["id"] for t in ex["tasks"]] != [t["id"] for t in full["tasks"]] or any(k in t for t in ex["tasks"] for k in ("qs", "lines", "items", "task")):
+            bad.append(c + ": indexet stämmer inte med provfilen")
+        if src.exists() and len(full["tasks"]) < len(_json.loads(src.read_text(encoding="utf-8")).get("tasks", [])):
+            bad.append(c + ": provfilen saknar uppgifter")
+    ok("provfil: varje kurs med prov har data/<kod>-exam.json, ett index och en egen hash", not bad and any((data / f"{c}-exam.json").exists() for c in codes), bad)
+    idx, full = split_exam({"name": "DELF B1", "pass": 50, "parts": [{"id": "ce"}], "tasks": [
+        {"id": "a", "part": "ce", "title": "A", "qs": [{"q": "?", "a": 0}], "lines": [{"fr": "x"}]},
+        {"id": "b", "part": "pe", "minWords": 160, "task": "Écris"}, {"id": "c", "part": "po", "task": "Parle", "prep": 10},
+        {"id": "d", "part": "ce", "type": "match", "items": []}]})
+    ok("provfil: split_exam räknar typen som exKind och behåller provets fält", [t["k"] for t in idx["tasks"]] == ["mc", "write", "speak", "match"]
+       and idx["lazy"] and idx["name"] == "DELF B1" and idx["parts"] == [{"id": "ce"}] and "qs" not in idx["tasks"][0] and full["tasks"][0]["qs"], idx)
+    js = 'const a=1 // kommentar\nconst s="// inte /* en kommentar */", t=`x ${a+`${`}`}`} // y`;\nlet r=/[/]\\/"/g, d=a/2/1\nreturn\nx\na = b\n++c\n/* block */ f(a - -1, a+ +1)'
+    m = minify_js(js)
+    ok("minifiering: strängar, mallsträngar och reguljära uttryck orörda, kommentarer borta", '"// inte /* en kommentar */"' in m and "`x ${a+`${`}`}`} // y`" in m
+       and "/[/]\\/\"/g" in m and "a/2/1" in m and "kommentar\n" not in m and "block" not in m, m)
+    ok("minifiering: radbrytningar som betyder något behålls", "return\nx" in m and "b\n++c" in m and "a- -1" in m and "a+ +1" in m, m)
+    ok("minifiering: CSS", minify_css('a > b , c { color : red ; content: "a  ;  b" } /* x */ .d :hover{width:calc(1px + 2px)}')
+       == 'a>b,c{color : red;content: "a  ;  b"}.d :hover{width:calc(1px + 2px)}', minify_css('a > b , c { color : red ; content: "a  ;  b" } /* x */ .d :hover{width:calc(1px + 2px)}'))
+    kb = len(page.encode()) / 1024
+    ok(f"storlek: dist/index.html under {MAX_PAGE_KB} kB", kb < MAX_PAGE_KB and MAX_PAGE_KB <= 420, f"{kb:.0f} kB")
+    return "\n".join(out)
+
+
 def main():
     text = run(SCENARIO) + "\n" + run(SCENARIO_DE) + "\n" + run(SCENARIO_FIXES) + "\n" + run(SCENARIO_SYNC, 30000) + "\n" + run_http(SCENARIO_HTTP)
+    text += "\n" + run_http(SCENARIO_EXAMLAZY, 60000) + "\n" + test_exam_split()   # provet hämtas vid behov, minifiering, storlek (P2)
     text += "\n" + run(SCENARIO_ARCH, 30000) + "\n" + test_build_locks()   # arkitektur, del 6
     text += "\n" + test_build_checks()   # byggkontroller, arkitekturgranskning 2026-09-29
     text += "\n" + run(SCENARIO_KINDS, 60000)   # övningstyperna (src/kinds), alla kurser, två enheter, del 6
     text += "\n" + run(SCENARIO_IPA, 30000)   # transkription och satsanalys (fru)
     text += "\n" + run(SCENARIO_LEVEL, 30000)   # nivåmätaren "Var ligger jag?" (P2: Nivåmätare)
     text += "\n" + run(SCENARIO_PLAN, 30000)   # studieplanen (P2: Studieplan för självstudier)
+    text += "\n" + run(SCENARIO_PLANS, 60000)   # planer för fler kurser, Tillbaka till planen (P3: Studieplan)
     text += "\n" + run(SCENARIO_EXAMSIM, 60000, head=EXFILL)   # provsimuleringen som hela provet (P2)
     text += "\n" + run(SCENARIO_EXAMTYPES, 60000, head=EXFILL) + "\n" + test_exam_task_checks()   # para ihop, lucktext, kortsvar, sparad simulering
+    text += "\n" + run(SCENARIO_EXAMTYPES2, 60000, head=EXFILL) + "\n" + test_exam_task_checks2()   # nivåer, skala, grafik, tal på tid, bildval
     text += "\n" + run(SCENARIO_BUGHUNT, 30000)   # buggjakten 2026-09-29
     text += "\n" + run(SCENARIO_STREAK, 20000)   # flamman för sviten (elevens önskemål)
+    text += "\n" + run(SCENARIO_SRS, 30000)   # tidsbaserad repetition i fraser, meningar och grammatik (P3), weakestFirst/srsBump (P2)
+    text += "\n" + run(SCENARIO_WORDS, 30000) + "\n" + test_words_build()   # glosquizet i 05-words.js, vanligast först, "kan" kräver skrivet svar
+    text += "\n" + run(SCENARIO_SELFRATE, 60000)   # självbedömning i fyra steg, grundformen i Mina ord (P3)
     text += "\n" + run(SCENARIO_ESC, 20000)   # escaping av text från datafilerna (arkitekturgranskningen, P1)
     text += "\n" + run(SCENARIO_LEVELPROMPT, 30000)   # nivåstyrd bedömning (A1–C1)
+    text += "\n" + run(SCENARIO_WRITEHUB, 30000)   # skriva på ett ställe, veckans skrivuppgift (P2)
+    text += "\n" + run(SCENARIO_TALK, 60000)   # Tala: 4/3/2, samtal med Claude och Skugga (P2: Ny övning Tala, Muntlig förberedelse)
     text += "\n" + test_minimal_course()   # en ny, liten kurs (8 → 21 kurser)
     print(text)
     sys.exit(1 if "FEL  " in text else 0)

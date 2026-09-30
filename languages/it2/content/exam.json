@@ -646,6 +646,40 @@
    ],
    "model": "Nella foto vedo una famiglia in cucina. Il padre cucina la pasta e la madre apre una bottiglia d'acqua. Due bambini apparecchiano la tavola. Sulla sedia c'è un gatto che dorme. Fuori piove. A casa mia cucina di solito mia madre, ma il sabato cucino io. Il mio piatto preferito sono gli spaghetti al pomodoro.",
    "modelSv": "På bilden ser jag en familj i ett kök. Pappan lagar pasta och mamman öppnar en flaska vatten. Två barn dukar bordet. På stolen ligger en katt och sover. Ute regnar det. Hemma hos mig brukar min mamma laga mat, men på lördagar lagar jag. Min favoriträtt är spaghetti med tomatsås."
+  },
+  {
+   "id": "it2-le-bild-1",
+   "part": "lettura",
+   "teil": "A.1",
+   "type": "pick",
+   "title": "Frasi e immagini",
+   "time": 8,
+   "instr": "Som på provet: läs meningarna och välj den bild som passar till varje mening.",
+   "items": [
+    {"q": "Oggi piove tutto il giorno.", "sv": "I dag regnar det hela dagen.", "opts": ["sol", "regn", "sno", "vind"], "a": 1, "why": "piove = det regnar."},
+    {"q": "Vado a scuola in bicicletta.", "sv": "Jag cyklar till skolan.", "opts": ["bil", "buss", "cykel", "tag"], "a": 2, "why": "la bicicletta = cykeln."},
+    {"q": "A pranzo mangio una pizza.", "sv": "Till lunch äter jag en pizza.", "opts": ["pasta", "pizza", "fisk", "sallad"], "a": 1},
+    {"q": "Il treno parte alle sette.", "sv": "Tåget går klockan sju.", "opts": ["kl7", "kl11", "kl7.30", "kl5"], "a": 0, "why": "alle sette = klockan sju (hel timme)."},
+    {"q": "La sera suono il pianoforte.", "sv": "På kvällen spelar jag piano.", "opts": ["gitarr", "piano", "fotboll", "bok"], "a": 1},
+    {"q": "Per colazione bevo un caffè.", "sv": "Till frukost dricker jag en kaffe.", "opts": ["te", "mjolk", "kaffe", "juice"], "a": 2}
+   ]
+  },
+  {
+   "id": "it2-le-bild-2",
+   "part": "lettura",
+   "teil": "A.1",
+   "type": "pick",
+   "title": "Cartelli",
+   "time": 8,
+   "instr": "Som på provet: du ser sex skyltar. Välj den bild som visar vad skylten betyder.",
+   "items": [
+    {"q": "VIETATO FUMARE", "sv": "RÖKNING FÖRBJUDEN", "opts": ["rokfritt", "parkering", "toalett", "info"], "a": 0, "why": "fumare = röka, vietato = förbjudet."},
+    {"q": "PARCHEGGIO", "sv": "PARKERING", "opts": ["hiss", "parkering", "forbud", "wifi"], "a": 1},
+    {"q": "FARMACIA", "sv": "APOTEK", "opts": ["sjukhus", "bank", "apotek", "post"], "a": 2, "why": "la farmacia = apoteket (sjukhuset heter l'ospedale)."},
+    {"q": "SPEGNERE IL CELLULARE", "sv": "STÄNG AV MOBILEN", "opts": ["wifi", "mobilfritt", "dator", "info"], "a": 1, "why": "spegnere = stänga av, il cellulare = mobilen."},
+    {"q": "INGRESSO VIETATO", "sv": "INGEN INGÅNG", "opts": ["forbud", "varning", "hund", "toalett"], "a": 0},
+    {"q": "ATTENZIONE: PAVIMENTO BAGNATO", "sv": "SE UPP: VÅTT GOLV", "opts": ["regn", "varning", "vatten", "info"], "a": 1, "why": "attenzione = se upp, en varning."}
+   ]
   }
  ]
 }

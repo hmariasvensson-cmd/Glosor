@@ -37,7 +37,7 @@ LANGUAGES.it1 = {
     "futuro": t => /(^|[^\p{L}])\p{L}+(rò|rai|rà|remo|rete|ranno)(?![\p{L}])/iu.test(t)
   },
 
-  // Grammatikövningar. Frågorna ligger i content/grammar-*.json (format i languages/de/content/GRAMMATIK-SPEC.md).
+  // Grammatikövningar. Frågorna ligger i content/grammar-*.json (format i docs/spec/grammatik.md, områdena i grammar.json).
   // Områden (topics; secs = kapitel där området kommer först) och regelnamn ligger i grammar.json, som build.py lägger i kursens datafil (L.grammar).
 
   verbs: {

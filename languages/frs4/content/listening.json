@@ -1610,6 +1610,16 @@
    },
    {
     "who": "B",
+    "fr": "Et le quartier, il est comment ? Il y a des commerces ?",
+    "sv": "Och området, hur är det? Finns det affärer?"
+   },
+   {
+    "who": "A",
+    "fr": "Oui, et il est très calme. Il y a une boulangerie et un supermarché en bas de la rue, et l'arrêt de tram est à deux minutes. Vous serez à la fac en un quart d'heure.",
+    "sv": "Ja, och det är väldigt lugnt. Det finns ett bageri och en mataffär längst ner på gatan, och spårvagnshållplatsen ligger två minuter bort. Du är på universitetet på en kvart."
+   },
+   {
+    "who": "B",
     "fr": "D'accord. Je suis étudiante, je vais commencer une licence à la fac en septembre. Est-ce que je peux recevoir les aides au logement ?",
     "sv": "Okej. Jag är student och ska börja på universitetet i september. Kan jag få bostadsbidrag?"
    },
@@ -1787,6 +1797,16 @@
    "dossier": {
     "t": "le dossier",
     "sv": "ansökningshandlingarna",
+    "g": "m"
+   },
+   "tram": {
+    "t": "le tram(way)",
+    "sv": "spårvagn",
+    "g": "m"
+   },
+   "commerces": {
+    "t": "le commerce",
+    "sv": "affär, butik",
     "g": "m"
    }
   }
@@ -2045,6 +2065,16 @@
     "sv": "Ett råd till unga som drömmer om att göra samma jobb?"
    },
    {
+    "who": "A",
+    "fr": "Combien de temps est-ce que tu passes sur une vidéo ?",
+    "sv": "Hur lång tid lägger du på en video?"
+   },
+   {
+    "who": "B",
+    "fr": "Beaucoup plus qu'on ne le croit ! Pour une vidéo d'une minute, il me faut parfois une journée entière : je cuisine, je filme, je fais le montage et j'écris le texte.",
+    "sv": "Mycket mer än man tror! För en video på en minut behöver jag ibland en hel dag: jag lagar maten, filmar, klipper och skriver texten."
+   },
+   {
     "who": "B",
     "fr": "Continuez vos études ! Les réseaux, ça peut s'arrêter du jour au lendemain.",
     "sv": "Fortsätt plugga! Sociala medier kan ta slut från en dag till en annan."
@@ -2194,6 +2224,11 @@
     "t": "du jour au lendemain",
     "sv": "från en dag till en annan",
     "g": "m"
+   },
+   "montage": {
+    "t": "le montage",
+    "sv": "klippning (av film)",
+    "g": "m"
    }
   }
  },
@@ -2236,6 +2271,16 @@
     "who": "A",
     "fr": "Alors on regarde si des médias fiables en parlent. Si aucun journal sérieux n'a publié l'information, il vaut mieux ne pas la partager.",
     "sv": "Då tittar man om pålitliga medier skriver om det. Om ingen seriös tidning har publicerat uppgiften är det bättre att inte dela den."
+   },
+   {
+    "who": "B",
+    "fr": "Mais parfois, même les journaux se trompent, non ?",
+    "sv": "Men ibland har väl till och med tidningarna fel?"
+   },
+   {
+    "who": "A",
+    "fr": "C'est vrai, ça arrive. Mais un journal sérieux publie une correction quand il fait une erreur. Sur les réseaux sociaux, en général, personne ne corrige rien.",
+    "sv": "Det stämmer, det händer. Men en seriös tidning publicerar en rättelse när den gör ett fel. På sociala medier rättar i allmänhet ingen någonting."
    },
    {
     "who": "C",
@@ -2397,6 +2442,16 @@
     "t": "retenir",
     "sv": "komma ihåg",
     "g": ""
+   },
+   "trompent": {
+    "t": "se tromper",
+    "sv": "ta fel, missta sig",
+    "g": ""
+   },
+   "correction": {
+    "t": "la correction",
+    "sv": "rättelse",
+    "g": "f"
    }
   }
  },
@@ -2649,6 +2704,16 @@
     "sv": "Och vilket råd skulle du ge våra unga lyssnare som drömmer om att skriva?"
    },
    {
+    "who": "A",
+    "fr": "Et comment avez-vous trouvé un éditeur ?",
+    "sv": "Och hur hittade ni ett förlag?"
+   },
+   {
+    "who": "B",
+    "fr": "J'ai envoyé mon manuscrit à quinze maisons d'édition. Douze ont dit non, deux n'ont jamais répondu, et une petite maison de Lyon a accepté. J'ai sauté de joie dans ma cuisine !",
+    "sv": "Jag skickade mitt manus till femton förlag. Tolv sa nej, två svarade aldrig, och ett litet förlag i Lyon tackade ja. Jag hoppade av glädje i köket!"
+   },
+   {
     "who": "B",
     "fr": "Lisez beaucoup, et écrivez un peu chaque jour, même dix minutes. Et n'ayez pas peur de montrer vos textes : la critique fait progresser.",
     "sv": "Läs mycket och skriv lite varje dag, även om det bara är tio minuter. Och var inte rädda för att visa era texter: kritik gör att man utvecklas."
@@ -2793,6 +2858,26 @@
     "t": "progresser",
     "sv": "utvecklas",
     "g": ""
+   },
+   "éditeur": {
+    "t": "l'éditeur",
+    "sv": "förläggare, förlag",
+    "g": "m"
+   },
+   "manuscrit": {
+    "t": "le manuscrit",
+    "sv": "manus",
+    "g": "m"
+   },
+   "édition": {
+    "t": "la maison d'édition",
+    "sv": "förlag",
+    "g": "f"
+   },
+   "sauté": {
+    "t": "sauter",
+    "sv": "hoppa",
+    "g": ""
    }
   }
  },
@@ -2840,6 +2925,16 @@
     "who": "B",
     "fr": "C'est ma fille qui m'a convaincue. En Suède, où elle a fait un échange, beaucoup de gens ont honte de prendre l'avion. Ils ont même un mot pour ça : « flygskam ».",
     "sv": "Det är min dotter som har övertygat mig. I Sverige, där hon var på utbyte, skäms många för att flyga. De har till och med ett ord för det: ”flygskam”."
+   },
+   {
+    "who": "A",
+    "fr": "Et les enfants, ils ne vont pas s'ennuyer pendant quatorze heures ?",
+    "sv": "Och barnen, kommer de inte att ha tråkigt i fjorton timmar?"
+   },
+   {
+    "who": "B",
+    "fr": "Non, on emporte des jeux de cartes et des livres. Et on a réservé une table au wagon-restaurant pour le dîner. Les enfants adorent regarder le paysage par la fenêtre.",
+    "sv": "Nej, vi tar med kortlekar och böcker. Och vi har bokat ett bord i restaurangvagnen till middagen. Barnen älskar att titta på landskapet genom fönstret."
    },
    {
     "who": "A",
@@ -2996,6 +3091,16 @@
     "t": "la carte postale",
     "sv": "vykortet",
     "g": "f"
+   },
+   "wagon-restaurant": {
+    "t": "le wagon-restaurant",
+    "sv": "restaurangvagn",
+    "g": "m"
+   },
+   "emporte": {
+    "t": "emporter",
+    "sv": "ta med sig",
+    "g": ""
    }
   }
  },

@@ -1231,8 +1231,8 @@
     "sv": "Varumärkena vet det mycket väl. De lägger allt mer pengar på samarbeten med influencers, som ofta själva är väldigt unga. De produkter som visas mest är leksaker, tv-spel, kläder och söt mat."
    },
    {
-    "fr": "La France a réagi. Depuis 2021, la publicité est interdite pendant les programmes pour enfants à la télévision publique. Et une loi de 2023 oblige les influenceurs à indiquer clairement quand une vidéo est sponsorisée. Mais sur internet, il reste difficile de contrôler tous les contenus.",
-    "sv": "Frankrike har reagerat. Sedan 2021 är reklam förbjuden under barnprogrammen i public service-tv. Och en lag från 2023 tvingar influencers att tydligt ange när en video är sponsrad. Men på internet är det fortfarande svårt att kontrollera allt innehåll."
+    "fr": "La France a réagi. Depuis 2018, la publicité est interdite pendant les programmes pour enfants à la télévision publique. Et une loi de 2023 oblige les influenceurs à indiquer clairement quand une vidéo est sponsorisée. Mais sur internet, il reste difficile de contrôler tous les contenus.",
+    "sv": "Frankrike har reagerat. Sedan 2018 är reklam förbjuden under barnprogrammen i public service-tv. Och en lag från 2023 tvingar influencers att tydligt ange när en video är sponsrad. Men på internet är det fortfarande svårt att kontrollera allt innehåll."
    },
    {
     "fr": "Pour Anne Moreau, l'interdiction ne suffit pas. « Il faut surtout apprendre aux enfants à reconnaître la publicité. Les parents peuvent regarder des vidéos avec eux et poser des questions simples : qui a payé cette vidéo ? Qu'est-ce qu'on veut te vendre ? » Certaines écoles proposent déjà des ateliers d'éducation aux médias dès l'âge de huit ans.",
@@ -1282,7 +1282,7 @@
    },
    {
     "type": "detalj",
-    "q": "Vad är förbjudet sedan 2021?",
+    "q": "Vad är förbjudet sedan 2018?",
     "opts": [
      "All reklam för godis",
      "Reklam under barnprogram i public service-tv",
@@ -1448,6 +1448,10 @@
    {
     "fr": "Les images sont magnifiques : la lumière du soir sur les marais salants, la mer grise un jour de tempête. La musique, discrète, accompagne bien les émotions sans les exagérer.",
     "sv": "Bilderna är fantastiska: kvällsljuset över saltängarna, det grå havet en stormig dag. Musiken är diskret och följer känslorna väl utan att överdriva dem."
+   },
+   {
+    "fr": "Le scénario évite aussi un piège : le grand-père n'est jamais ridicule. Les scènes où il oublie le prénom de son petit-fils sont tristes, mais elles laissent aussi de la place à l'humour.",
+    "sv": "Manuset undviker också en fälla: morfadern blir aldrig löjlig. Scenerna där han glömmer barnbarnets förnamn är sorgliga, men de lämnar också plats för humor."
    },
    {
     "fr": "Le film a quand même quelques défauts. Le début est un peu lent, et certains personnages secondaires, comme la mère de Tom, ne sont pas assez développés. La fin, en revanche, est très réussie : pas de larmes faciles, mais une émotion sincère.",
@@ -1632,6 +1636,21 @@
     "t": "la transmission",
     "sv": "överföringen, arvet",
     "g": "f"
+   },
+   "piège": {
+    "t": "le piège",
+    "sv": "fälla",
+    "g": "m"
+   },
+   "scénario": {
+    "t": "le scénario",
+    "sv": "manus",
+    "g": "m"
+   },
+   "ridicule": {
+    "t": "ridicule",
+    "sv": "löjlig",
+    "g": ""
    }
   }
  },
@@ -1655,6 +1674,10 @@
    {
     "fr": "Simone, c'était sa grand-mère. Lina a senti son cœur battre plus vite. L'enveloppe n'avait jamais été ouverte. Est-ce que sa grand-mère l'avait oubliée ? Ou est-ce qu'elle n'avait pas eu le courage de la lire ?",
     "sv": "Simone var hennes mormor. Lina kände hur hjärtat slog fortare. Kuvertet hade aldrig öppnats. Hade hennes mormor glömt bort det? Eller hade hon inte haft mod att läsa det?"
+   },
+   {
+    "fr": "Elle a retourné l'enveloppe plusieurs fois. L'écriture était fine et penchée, une écriture d'une autre époque. Il n'y avait ni timbre ni adresse, seulement ces quelques mots.",
+    "sv": "Hon vände på kuvertet flera gånger. Handstilen var fin och lutande, en handstil från en annan tid. Det fanns varken frimärke eller adress, bara de här få orden."
    },
    {
     "fr": "Elle est descendue dans la cuisine, où Simone préparait une soupe en écoutant la radio. « Mamie, tu sais ce que c'est ? »",
@@ -1825,6 +1848,21 @@
     "t": "cesser",
     "sv": "sluta, upphöra",
     "g": ""
+   },
+   "penchée": {
+    "t": "penché, -e",
+    "sv": "lutande",
+    "g": ""
+   },
+   "timbre": {
+    "t": "le timbre",
+    "sv": "frimärke",
+    "g": "m"
+   },
+   "écriture": {
+    "t": "l'écriture",
+    "sv": "handstil, skrift",
+    "g": "f"
    }
   }
  },
@@ -1846,8 +1884,12 @@
     "sv": "Vi började i Montréal. Staden är väldigt livlig, särskilt i juli, under jazzfestivalen. Alla pratar franska, men med en annan brytning och andra ord. Första dagen frågade en servitris om vi ville ha ”un breuvage”. Vi förstod ingenting! Det var helt enkelt en dryck."
    },
    {
-    "fr": "Ensuite, nous avons pris le bus jusqu'à la ville de Québec, la seule ville fortifiée d'Amérique du Nord. Avec ses petites rues et ses vieilles maisons en pierre, on se croirait en Bretagne.",
-    "sv": "Sedan tog vi bussen till staden Québec, den enda befästa staden i Nordamerika. Med sina små gator och gamla stenhus kunde man tro att man var i Bretagne."
+    "fr": "Ensuite, nous avons pris le bus jusqu'à la ville de Québec, la seule ville fortifiée au nord du Mexique. Avec ses petites rues et ses vieilles maisons en pierre, on se croirait en Bretagne.",
+    "sv": "Sedan tog vi bussen till staden Québec, den enda befästa staden norr om Mexiko. Med sina små gator och gamla stenhus kunde man tro att man var i Bretagne."
+   },
+   {
+    "fr": "Nous avons logé chez une famille québécoise grâce à un site d'échange. Le soir, ils nous ont appris quelques expressions : ici, on ne dit pas « faire du shopping » mais « magasiner », et un petit ami, c'est un « chum ».",
+    "sv": "Vi bodde hos en québeckisk familj via en utbytessajt. På kvällarna lärde de oss några uttryck: här säger man inte « faire du shopping » utan « magasiner », och en pojkvän är en « chum »."
    },
    {
     "fr": "La meilleure partie du voyage, c'était la côte, à Tadoussac. Nous avons dormi dans un camping au bord du fleuve Saint-Laurent. Le matin, depuis un petit bateau, nous avons vu des baleines ! Le guide nous a expliqué qu'elles viennent chaque été pour manger, mais que le trafic des bateaux et la pollution les menacent.",
@@ -1903,13 +1945,13 @@
     "type": "detalj",
     "q": "Vad är speciellt med staden Québec?",
     "opts": [
-     "Det är den enda befästa staden i Nordamerika",
+     "Det är den enda befästa staden norr om Mexiko",
      "Det är Kanadas huvudstad",
      "Den ligger i Bretagne",
      "Den har ingen gammal stad"
     ],
     "a": 0,
-    "why": "« la seule ville fortifiée d'Amérique du Nord »."
+    "why": "« la seule ville fortifiée au nord du Mexique »."
    },
    {
     "type": "detalj",
@@ -2025,6 +2067,21 @@
    "ravis": {
     "t": "ravi, -e",
     "sv": "jätteglad",
+    "g": ""
+   },
+   "magasiner": {
+    "t": "magasiner (québécois)",
+    "sv": "shoppa",
+    "g": ""
+   },
+   "chum": {
+    "t": "le chum (québécois)",
+    "sv": "pojkvän, kompis",
+    "g": "m"
+   },
+   "logé": {
+    "t": "loger",
+    "sv": "bo, övernatta",
     "g": ""
    }
   }

@@ -33,7 +33,7 @@ LANGUAGES.de3 = {
   storyIntro: "Läs berättelsen och välj rätt form i varje lucka: Perfekt eller Präteritum (war, hatte, konnte, musste …), och ett bindeord som passar ordföljden.",
   cultureIntro: "Läs en kort text om Tyskland, Österrike eller Schweiz, svara på en fråga och jämför med hur det är i Sverige.",
 
-  // Grammatikövningar. Frågorna ligger i content/grammar-*.json (se languages/de4/content/GRAMMATIK-SPEC.md).
+  // Grammatikövningar. Frågorna ligger i content/grammar-*.json (format i docs/spec/grammatik.md, områdena i grammar.json).
   // Områden (topics; secs = kapitel där området kommer först) och regelnamn ligger i grammar.json.
 
   // Samma verbtabeller som Tyska 5, men bara presens, perfekt och präteritum av sein, haben och modalverben

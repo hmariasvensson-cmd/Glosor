@@ -20,7 +20,7 @@ LANGUAGES.fr1 = {
   storyIntro: "Läs berättelsen och välj rätt form i varje lucka: rätt form av verbet i presens och ett litet ord som passar (et, mais, parce que …).",
   cultureIntro: "Läs en kort text om Frankrike eller den fransktalande världen, svara på en fråga och jämför med hur det är i Sverige.",
 
-  // Grammatikövningar. Frågorna ligger i content/grammar-*.json (format i languages/fr/content/GRAMMATIK-SPEC.md).
+  // Grammatikövningar. Frågorna ligger i content/grammar-*.json (format i docs/spec/grammatik.md, områdena i grammar.json).
   // Områden (topics; secs = kapitel där området kommer först) och regelnamn ligger i grammar.json.
 
   // Verbtabellerna från Franska 3, men bara présent, och fler vanliga verb på -er

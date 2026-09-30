@@ -121,7 +121,7 @@
    "instr": "Du läser fem korta texter. Välj det alternativ som passar bäst till varje text.",
    "lines": [
     {
-     "fr": "1. Treno regionale 3421 per Firenze: a causa di lavori sulla linea, oggi il treno parte dal binario 8 invece che dal binario 3.",
+     "fr": "1. Treno regionale 3421 per Firenze: per lavori sulla linea, oggi il treno parte dal binario 8 invece che dal binario 3.",
      "sv": "1. Regionaltåg 3421 till Florens: på grund av banarbeten avgår tåget i dag från spår 8 i stället för spår 3."
     },
     {
@@ -129,7 +129,7 @@
      "sv": "2. Möblerad etta uthyres nära universitetet, 450 euro i månaden, avgifter ingår. Endast studenter, inga djur."
     },
     {
-     "fr": "3. Ciao Giulia! Il concerto di sabato è stato annullato perché il cantante è malato. I biglietti sono validi per la nuova data, il 12 novembre. Baci, Anna",
+     "fr": "3. Ciao Giulia! Il concerto di sabato è stato cancellato perché il cantante è malato. I biglietti sono validi per la nuova data, il 12 novembre. Baci, Anna",
      "sv": "3. Hej Giulia! Konserten på lördag är inställd eftersom sångaren är sjuk. Biljetterna gäller för det nya datumet, 12 november. Puss, Anna"
     },
     {
@@ -137,7 +137,7 @@
      "sv": "4. Jourapotek: i natt har apoteket Centrale på piazza Garibaldi 5 öppet. Vid akuta fall ring 118."
     },
     {
-     "fr": "5. Corso di cucina tradizionale: impara a fare la pasta fresca con la nonna Rosa! Ogni giovedì alle 18. Posti limitati, iscrizione obbligatoria.",
+     "fr": "5. Corso di cucina tradizionale: impara a fare la pasta fresca con la nonna Rosa! Ogni giovedì alle 18. Pochi posti, iscrizione obbligatoria.",
      "sv": "5. Kurs i traditionell matlagning: lär dig göra färsk pasta med mormor Rosa! Varje torsdag kl. 18. Begränsat antal platser, anmälan krävs."
     }
    ],
@@ -873,8 +873,8 @@
    ],
    "instr": "Skriv ett personligt mejl till en kompis (tu). Skriv något om alla punkterna. Ungefär 80 ord.",
    "task": "Sei stato/stata alla festa di compleanno di un amico. La tua amica Giulia non è potuta venire.\n\nScrivi un'email a Giulia:\n– dove e quando era la festa\n– chi c'era e che cosa avete fatto\n– una cosa divertente che è successa\n– proponi di vedervi presto\n\n(circa 80 parole)",
-   "model": "Cara Giulia,\npeccato che sabato non c'eri! La festa di Marco era a casa sua, in giardino, e c'erano quasi trenta persone. Abbiamo mangiato la pizza, ballato e cantato fino a mezzanotte. La cosa più divertente? Il cane di Marco ha mangiato metà della torta quando nessuno guardava! Tutti ridevano, anche Marco. Ti ho fatto tante foto, te le mando stasera. Ci vediamo domenica per un gelato?\nUn abbraccio,\nElsa",
-   "modelSv": "Kära Giulia,\nsynd att du inte kom i lördags! Marcos fest var hemma hos honom, i trädgården, och det var nästan trettio personer där. Vi åt pizza, dansade och sjöng till midnatt. Det roligaste? Marcos hund åt upp halva tårtan när ingen tittade! Alla skrattade, även Marco. Jag har tagit massor av bilder åt dig, jag skickar dem i kväll. Ses vi på söndag för en glass?\nKram,\nElsa"
+   "model": "Cara Giulia,\npeccato che sabato non c'eri! La festa di Marco era a casa sua, in giardino, e c'erano quasi trenta persone. Abbiamo mangiato la pizza, ballato e cantato fino a mezzanotte. Marco ha ricevuto tanti regali, anche una chitarra nuova. La cosa più divertente? Il cane di Marco ha mangiato metà della torta quando nessuno guardava! Tutti ridevano, anche Marco. Ti ho fatto tante foto, te le mando stasera. Mi sei mancata molto! Ci vediamo domenica per un gelato in centro?\nUn abbraccio,\nElsa",
+   "modelSv": "Kära Giulia,\nsynd att du inte kom i lördags! Marcos fest var hemma hos honom, i trädgården, och det var nästan trettio personer där. Vi åt pizza, dansade och sjöng till midnatt. Marco fick massor av presenter, till och med en ny gitarr. Det roligaste? Marcos hund åt upp halva tårtan när ingen tittade! Alla skrattade, även Marco. Jag har tagit massor av bilder åt dig, jag skickar dem i kväll. Jag saknade dig mycket! Ses vi på söndag för en glass i stan?\nKram,\nElsa"
   },
   {
    "id": "it4-sc-2",
@@ -891,8 +891,8 @@
    ],
    "instr": "Skriv ett mejl till en värdfamilj som du inte känner (Lei eller voi). Skriv något om alla punkterna. Ungefär 80 ord.",
    "task": "A settembre passerai un mese in Italia presso una famiglia. Scrivi un'email alla famiglia Bianchi:\n– presentati\n– racconta che cosa ti piace fare nel tempo libero\n– chiedi informazioni sulla scuola o sulla città\n– ringrazia e saluta\n\n(circa 80 parole)",
-   "model": "Gentile famiglia Bianchi,\nmi chiamo Linnea, ho diciassette anni e abito a Göteborg, in Svezia. Studio italiano da quattro anni e sono molto contenta di venire da voi a settembre. Nel tempo libero suono il pianoforte, gioco a pallavolo e leggo molto. Vorrei sapere quanto tempo ci vuole per andare a scuola da casa vostra: posso andare a piedi o devo prendere l'autobus? Inoltre, c'è una piscina in città? Grazie mille per l'ospitalità.\nA presto,\nLinnea",
-   "modelSv": "Bästa familjen Bianchi,\njag heter Linnea, är sjutton år och bor i Göteborg i Sverige. Jag har läst italienska i fyra år och är väldigt glad att få komma till er i september. På fritiden spelar jag piano, spelar volleyboll och läser mycket. Jag skulle vilja veta hur lång tid det tar att ta sig till skolan från ert hus: kan jag gå eller måste jag ta bussen? Finns det dessutom en simhall i stan? Tusen tack för gästfriheten.\nVi hörs snart,\nLinnea"
+   "model": "Gentile famiglia Bianchi,\nmi chiamo Linnea, ho diciassette anni e abito a Göteborg, in Svezia. Studio italiano da quattro anni e sono molto contenta di venire da voi a settembre. Nel tempo libero suono il pianoforte, gioco a pallavolo e leggo molto. Mangio quasi tutto, ma non mi piacciono molto i funghi. Vorrei sapere quanto tempo ci vuole per andare a scuola da casa vostra: posso andare a piedi o devo prendere l'autobus? Inoltre, c'è una piscina in città? Grazie mille per l'ospitalità.\nA presto,\nLinnea",
+   "modelSv": "Bästa familjen Bianchi,\njag heter Linnea, är sjutton år och bor i Göteborg i Sverige. Jag har läst italienska i fyra år och är väldigt glad att få komma till er i september. På fritiden spelar jag piano, spelar volleyboll och läser mycket. Jag äter nästan allt, men jag gillar inte svamp så mycket. Jag skulle vilja veta hur lång tid det tar att ta sig till skolan från ert hus: kan jag gå eller måste jag ta bussen? Finns det dessutom en simhall i stan? Tusen tack för gästfriheten.\nVi hörs snart,\nLinnea"
   },
   {
    "id": "it4-sc-3",
@@ -909,8 +909,8 @@
    ],
    "instr": "Skriv en kort text till en italiensk skoltidning. Skriv något om alla punkterna. Ungefär 80 ord.",
    "task": "Il giornalino della scuola italiana con cui la tua classe fa uno scambio chiede: «Come passano il fine settimana i ragazzi nel tuo paese?»\n\nScrivi un breve testo:\n– che cosa fai di solito il sabato e la domenica\n– racconta lo scorso fine settimana\n– come sarebbe il tuo fine settimana ideale\n\n(circa 80 parole)",
-   "model": "In Svezia molti ragazzi il sabato lavorano qualche ora o fanno sport. Io di solito gioco a calcio la mattina e la sera esco con gli amici. La domenica invece resto a casa, studio e ceno con la famiglia. Lo scorso fine settimana, però, è stato speciale: siamo andati in campagna dai nonni e abbiamo raccolto le mele. Il mio fine settimana ideale? Un viaggio a Roma con le mie amiche, senza compiti e con tanto gelato!",
-   "modelSv": "I Sverige jobbar många ungdomar några timmar eller idrottar på lördagen. Jag brukar spela fotboll på förmiddagen och gå ut med kompisar på kvällen. På söndagen stannar jag däremot hemma, pluggar och äter middag med familjen. Förra helgen var dock speciell: vi åkte till mormor och morfar på landet och plockade äpplen. Min idealhelg? En resa till Rom med mina väninnor, utan läxor och med massor av glass!"
+   "model": "In Svezia molti ragazzi il sabato lavorano qualche ora o fanno sport. Io di solito gioco a calcio la mattina e la sera esco con gli amici. La domenica invece resto a casa, studio e ceno con la famiglia. A volte dopo cena guardiamo un film insieme. Lo scorso fine settimana, però, è stato speciale: siamo andati in campagna dai nonni e abbiamo raccolto le mele. Il mio fine settimana ideale? Un viaggio a Roma con le mie amiche, senza compiti e con tanto gelato!",
+   "modelSv": "I Sverige jobbar många ungdomar några timmar eller idrottar på lördagen. Jag brukar spela fotboll på förmiddagen och gå ut med kompisar på kvällen. På söndagen stannar jag däremot hemma, pluggar och äter middag med familjen. Ibland tittar vi på en film tillsammans efter middagen. Förra helgen var dock speciell: vi åkte till mormor och morfar på landet och plockade äpplen. Min idealhelg? En resa till Rom med mina väninnor, utan läxor och med massor av glass!"
   },
   {
    "id": "it4-sc-4",
@@ -927,8 +927,8 @@
    ],
    "instr": "Skriv ett mejl till din italienska lärare (Lei). Skriv något om alla punkterna. Ungefär 80 ord.",
    "task": "Sei stato/stata malato/malata e non sei potuto/potuta andare a scuola per tre giorni. Scrivi un'email alla tua insegnante di italiano, la professoressa Conti:\n– spiega perché sei stato/stata assente\n– chiedi quali compiti devi fare\n– chiedi se puoi fare la verifica un altro giorno\n– saluta in modo formale\n\n(circa 80 parole)",
-   "model": "Gentile professoressa Conti,\nLe scrivo perché da lunedì a mercoledì non sono venuta a scuola. Ho avuto la febbre alta e il medico mi ha detto di restare a letto. Adesso sto meglio e domani tornerò in classe. Potrebbe dirmi quali compiti devo fare per recuperare? Inoltre so che martedì c'è stata la verifica sul trapassato prossimo: sarebbe possibile farla un altro giorno, per esempio venerdì? La ringrazio molto per la comprensione.\nCordiali saluti,\nEmma Holm",
-   "modelSv": "Bästa professor Conti,\njag skriver till er eftersom jag inte var i skolan måndag till onsdag. Jag hade hög feber och läkaren sa att jag skulle stanna i sängen. Nu mår jag bättre och i morgon kommer jag tillbaka till klassen. Kan ni säga vilka uppgifter jag ska göra för att komma ikapp? Jag vet dessutom att det var prov på trapassato prossimo i tisdags: vore det möjligt att göra det en annan dag, till exempel på fredag? Tack så mycket för er förståelse.\nMed vänliga hälsningar,\nEmma Holm"
+   "model": "Gentile professoressa Conti,\nLe scrivo perché da lunedì a mercoledì non sono venuta a scuola. Ho avuto la febbre alta e il medico mi ha detto di restare a letto. Adesso sto meglio e domani tornerò in classe. Ho già chiesto gli appunti a una compagna di classe. Potrebbe dirmi quali compiti devo fare per recuperare? Inoltre so che martedì c'è stata la verifica sul trapassato prossimo: sarebbe possibile farla un altro giorno, per esempio venerdì? La ringrazio molto per la comprensione.\nCordiali saluti,\nEmma Holm",
+   "modelSv": "Bästa professor Conti,\njag skriver till er eftersom jag inte var i skolan måndag till onsdag. Jag hade hög feber och läkaren sa att jag skulle stanna i sängen. Nu mår jag bättre och i morgon kommer jag tillbaka till klassen. Jag har redan bett en klasskamrat om anteckningarna. Kan ni säga vilka uppgifter jag ska göra för att komma ikapp? Jag vet dessutom att det var prov på trapassato prossimo i tisdags: vore det möjligt att göra det en annan dag, till exempel på fredag? Tack så mycket för er förståelse.\nMed vänliga hälsningar,\nEmma Holm"
   },
   {
    "id": "it4-or-1",

@@ -6,9 +6,10 @@ function exGroups(){
   const groups=[
     ["words","Ord och meningar","Meningar, diktamen, översättning och ordföljd",[
       g("cloze","Meningar",n<4?"Lär dig några ord i quizet först.":"Fyll i luckan i en mening.",n<4),
-      g("dict","Diktamen","Lyssna på en mening och skriv den."),
-      g("trans","Översätt meningar",`Från svenska till ${lname}, hela meningar.`),
-      g("order","Ordföljd","Bygg meningen i rätt ordning."),
+      // srsDueNote: " · 3 att repetera i dag" (tidsbaserad repetition, 00-common.js)
+      g("dict","Diktamen","Lyssna på en mening och skriv den."+srsDueNote(sentDue("dc",dictPool()))),
+      g("trans","Översätt meningar",`Från svenska till ${lname}, hela meningar.`+srsDueNote(sentDue("tr",transPool()))),
+      g("order","Ordföljd","Bygg meningen i rätt ordning."+srsDueNote(sentDue("od",orderPool()))),
       g("ktest","Kapitelprov","Förhör dig på alla glosor i ett kapitel, och öva sedan på dem du missade."),
       L.genderGame&&g("gen",Object.values(L.genderGame).join(", "),"Rätt artikel och plural för substantiven.")]],
     ["texts","Lyssna och läsa","Hörförståelse, texter och kultur",[
@@ -17,18 +18,18 @@ function exGroups(){
       c.culture&&g("culture","Kultur","Kort fakta, en fråga och en jämförelse med Sverige.")]],
     ["gram","Grammatik","Verb, grammatikövningar och berättelser",[
       ...verbGames().map(v=>`<button class="game" data-g="${esc(v.id)}"><span><b>Verb: ${esc(v.name)}</b><small>${esc(v.sub||"")}</small></span><span class="go" aria-hidden="true">›</span></button>`),
-      hasGrammar()&&g("gram","Grammatikövningar",GR().topics.slice(0,4).map(t=>t.name.toLowerCase()).join(", ")+" …"),
+      hasGrammar()&&g("gram","Grammatikövningar",esc(GR().topics.slice(0,4).map(t=>t.name.toLowerCase()).join(", ")+" …")+srsDueNote(gramDue(null))),
       (c.satsanalys||[]).length&&g("sats","Satsanalys","Vilken funktion har den understrukna delen? Sujet, COD, COI, subordonnée relative …"),
       c.stories&&g("story","Berättelser","Välj rätt tempus och bindeord i en berättelse.")]],
     ...(hasExam()||(c.teori||[]).length?[["exam","Språkprov och teoriprov",hasExam()?`${esc(EX().name)}: provuppgifter och simulering`:"Musikteori på målspråket",[
       hasExam()&&g("exam",`Provträning: ${esc(EX().name)}`,"Uppgifter i provets format, med klocka, poäng och provsimulering."),
       (c.teori||[]).length&&g("teori","Teoriprovet: musikteori","Uppgifter som på det skriftliga teoriprovet vid antagningen, på "+lname+".")]]]:[]),
-    ["speak","Tala och skriva","Samtalsfraser, skugga och skrivuppgifter",[
-      c.phrases&&g("phr","Samtalsfraser","Vad man säger när man inte förstår, vill säga sin åsikt …"),
+    ["speak","Tala och skriva","Tala, samtalsfraser, skugga och skrivuppgifter",[
+      g("talk","Tala",L.goal?"4/3/2 med klocka och diktering, muntlig förberedelse, samtal med Claude och skugga.":"4/3/2 med klocka och diktering, samtal med Claude och skugga."),
+      c.phrases&&g("phr","Samtalsfraser","Vad man säger när man inte förstår, vill säga sin åsikt …"+srsDueNote(phraseDue())),
       (c.uttal||[]).length&&g("utt","Uttal: lyssna och välj","Ord som låter nästan lika. Vilket hör du?"),
       (c.transkription||[]).length&&g("ipa","Transkription (IPA)","Från franska till IPA och tillbaka: nasalvokaler, e caduc, liaison …"),
-      g("shadow","Skugga","Lyssna och säg meningen högt samtidigt, för uttal och rytm."),
-      c.prompts&&g("write","Skriv en text",L.selfStudy?"Skrivuppgift med checklista och exempeltext.":"Skrivuppgift med checklista, att skicka till läraren.")]]
+      c.prompts&&g("write","Skriv en text",(L.selfStudy?"Skrivuppgift med checklista och exempeltext.":"Skrivuppgift med checklista, att skicka till läraren.")+(wrExamTasks().length?" Även provets skrivuppgifter.":""))]]
   ];
   return groups.map(([id,t,sub,items])=>({id,t,sub,items:items.filter(Boolean)})).filter(g=>g.items.length);
 }
@@ -57,10 +58,11 @@ function wireGames(){
 function statsExercises(){
   const logs=S.log.filter(l=>l.kind); if(!logs.length) return "";
   const agg={}; logs.forEach(l=>{const a=agg[l.kind]=agg[l.kind]||{r:0,n:0,c:0,w:0}; a.r+=l.right||0; a.n+=l.total||0; a.c++; a.w+=l.words||0;});
-  const rows=Object.entries(agg).filter(([k])=>k!=="write").map(([k,a])=>meter(`${(KINDS[k]||{}).name||k} · ${a.c} ${a.c===1?"gång":"gånger"}`,a.r,a.n)).join("");
+  const rows=Object.entries(agg).filter(([k])=>k!=="write"&&k!=="talk").map(([k,a])=>meter(`${(KINDS[k]||{}).name||k} · ${a.c} ${a.c===1?"gång":"gånger"}`,a.r,a.n)).join("");
   const st=S.st||{}, t=st.tempus||{}, b=st.bindeord||{};
   return `<section class="panel"><h2>Övningar</h2>${rows}${ipaStats()}${satsStats()}
     ${t.n||b.n?`<p class="plan">I berättelserna: tempus ${pct(t.r,t.n)??"–"}% rätt, bindeord ${pct(b.r,b.n)??"–"}% rätt.</p>`:""}
+    ${agg.talk?`<p class="plan">Du har talat ${agg.talk.c} ${agg.talk.c===1?"gång":"gånger"}, sammanlagt ${agg.talk.w} ord${((S.talk||{}).t&&Object.keys(S.talk.t).length)?`, bäst ${Math.max(...Object.values(S.talk.t).map(x=>x.best||0))} ord per minut`:""}.</p>`:""}
     ${agg.write?`<p class="plan">Du har skrivit ${agg.write.c} ${agg.write.c===1?"text":"texter"}, sammanlagt ${agg.write.w} ord.</p>`:""}
     ${(S.mine||[]).length?`<p class="plan">${S.mine.length} ord sparade från texterna i Mina ord.</p>`:""}</section>`;
 }

@@ -53,6 +53,21 @@
     "who": "B",
     "fr": "Das klingt gemütlich!",
     "sv": "Det låter mysigt!"
+   },
+   {
+    "who": "A",
+    "fr": "Ja, das war es. Und am Abend hat mein Bruder für uns gekocht. Er hat Spaghetti gemacht.",
+    "sv": "Ja, det var det. Och på kvällen lagade min bror mat åt oss. Han gjorde spagetti."
+   },
+   {
+    "who": "B",
+    "fr": "Lecker! Hast du morgen Zeit? Wir können zusammen Hausaufgaben machen.",
+    "sv": "Gott! Har du tid i morgon? Vi kan göra läxorna tillsammans."
+   },
+   {
+    "who": "A",
+    "fr": "Gern, nach der Schule in der Bibliothek.",
+    "sv": "Gärna, efter skolan i biblioteket."
    }
   ],
   "questions": [
@@ -170,6 +185,11 @@
     "t": "zu",
     "sv": "till (personer och platser)",
     "g": ""
+   },
+   "spaghetti": {
+    "t": "die Spaghetti",
+    "sv": "spagetti",
+    "g": ""
    }
   }
  },
@@ -201,6 +221,10 @@
    {
     "fr": "Vielleicht kannst du dein neues Brettspiel mitnehmen? Das finde ich super.",
     "sv": "Kanske kan du ta med ditt nya brädspel? Det tycker jag är toppen."
+   },
+   {
+    "fr": "Sara hat gesagt, sie bringt Chips und Saft mit. Und wenn du willst, kannst du auch bei uns schlafen.",
+    "sv": "Sara har sagt att hon tar med chips och saft. Och om du vill kan du också sova hos oss."
    },
    {
     "fr": "Mein Vater kann dich um halb sieben abholen, denn es ist spät und dunkel, wenn wir fertig sind.",
@@ -1573,6 +1597,21 @@
     "who": "A",
     "fr": "Ich weiß nicht … vielleicht ein Buch oder Kinokarten.",
     "sv": "Jag vet inte … kanske en bok eller biobiljetter."
+   },
+   {
+    "who": "B",
+    "fr": "Gut, dann kaufe ich vielleicht Kinokarten. Wer kommt denn noch?",
+    "sv": "Bra, då köper jag kanske biobiljetter. Vem kommer mer?"
+   },
+   {
+    "who": "A",
+    "fr": "Meine Freunde aus der Klasse und meine Cousine aus Hamburg. Wir sind ungefähr fünfzehn Leute.",
+    "sv": "Mina kompisar från klassen och min kusin från Hamburg. Vi är ungefär femton personer."
+   },
+   {
+    "who": "B",
+    "fr": "Toll, ich freue mich schon! Bis Samstag!",
+    "sv": "Toppen, jag ser redan fram emot det! Vi ses på lördag!"
    }
   ],
   "questions": [
@@ -1705,6 +1744,11 @@
     "t": "zu",
     "sv": "till (personer och platser)",
     "g": ""
+   },
+   "freue": {
+    "t": "sich freuen",
+    "sv": "glädja sig, se fram emot",
+    "g": ""
    }
   }
  },
@@ -1736,6 +1780,10 @@
    {
     "fr": "Und noch eine Information: Wegen Bauarbeiten fährt am Wochenende zwischen Frankfurt und Mannheim kein Zug.",
     "sv": "Och ytterligare en information: på grund av byggarbeten går inget tåg mellan Frankfurt och Mannheim i helgen."
+   },
+   {
+    "fr": "Eine Information für Reisende nach Berlin: Der Zug um 15 Uhr 10 hat heute kein Restaurant. Getränke und Snacks bekommen Sie am Kiosk an Gleis 5.",
+    "sv": "Information till resenärer till Berlin: Tåget klockan 15.10 har ingen restaurangvagn i dag. Drycker och snacks får ni i kiosken vid spår 5."
    },
    {
     "fr": "Bitte nehmen Sie den Bus. Die Busse fahren vor dem Bahnhof ab, jede halbe Stunde.",
@@ -1871,6 +1919,11 @@
     "t": "nach",
     "sv": "till (länder och städer)",
     "g": ""
+   },
+   "getränke": {
+    "t": "das Getränk (-e)",
+    "sv": "dryck",
+    "g": "n"
    }
   }
  },
@@ -2127,6 +2180,16 @@
     "who": "B",
     "fr": "Ja, letzten Sommer in Stockholm. Die Stadt hat mir sehr gut gefallen!",
     "sv": "Ja, förra sommaren i Stockholm. Jag tyckte mycket om staden!"
+   },
+   {
+    "who": "A",
+    "fr": "Was hast du in Stockholm gemacht?",
+    "sv": "Vad gjorde du i Stockholm?"
+   },
+   {
+    "who": "B",
+    "fr": "Ich habe viele Museen besucht und bin mit dem Schiff auf die Inseln gefahren. Nur das Essen war sehr teuer!",
+    "sv": "Jag besökte många museer och åkte båt ut till öarna. Bara maten var väldigt dyr!"
    }
   ],
   "questions": [
@@ -2263,6 +2326,11 @@
    "zu": {
     "t": "zu",
     "sv": "till (personer och platser)",
+    "g": ""
+   },
+   "besucht": {
+    "t": "besuchen",
+    "sv": "besöka",
     "g": ""
    }
   }

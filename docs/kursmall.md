@@ -331,7 +331,7 @@ Förslag: `level` anger **kursens nivå enligt Skolverket (betyget E) och vart d
 
 ## 4. Plan för utfyllnad
 
-En rad per paket, i den ordning de bör göras. Varje innehållspaket följer formaten i kursens `content/SPEC.md` och `GRAMMATIK-SPEC.md`, ändrar inga befintliga id:n, och avslutas med `python3 build.py` och `python3 tests/run_tests.py`.
+En rad per paket, i den ordning de bör göras. Varje innehållspaket följer formaten i `docs/spec/` och kursens tillägg i `content/SPEC.md`, ändrar inga befintliga id:n, och avslutas med `python3 build.py` och `python3 tests/run_tests.py`.
 
 1. **de4-skriv:** 17 nya skrivuppgifter i `languages/de4/content/prompts.json`, 3 per kapitel t1–t8 (t2 och t3 först; kort/mellan/fri), 80–150 ord, med `need` och exempeltext.
 2. **de4-texter:** lästexter t1 (intervju) och t6 (reportage), berättelser t2 och t5, kulturtext t7 (`reading.json`, `stories.json`, `culture.json`).

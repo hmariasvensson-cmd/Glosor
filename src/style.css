@@ -234,6 +234,9 @@ details.more[open] summary{margin-bottom:10px}
 .foot .miss{color:var(--pink);text-decoration:underline wavy}
 .grade{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
 .grade .btn{padding:11px 8px}
+.rate{margin-top:12px;display:flex;flex-direction:column;gap:6px}
+.rate .grade{grid-template-columns:repeat(4,1fr)}
+.picked .lemof{font-family:var(--sans);font-size:.85rem;color:var(--ink-2)}
 .situation{background:var(--surface-2);border-radius:12px;padding:14px;font-size:1.1rem;font-weight:500;margin-top:10px}
 .built{min-height:56px;display:flex;flex-wrap:wrap;gap:6px;align-items:center;padding:10px;border:2px dashed var(--line);border-radius:12px}
 .built.right{border-style:solid;border-color:var(--ok)} .built.wrong{border-style:solid;border-color:var(--pink)}
@@ -390,9 +393,40 @@ details.rule{margin-top:6px}
 .exgaps .tl{line-height:2.1;overflow-wrap:anywhere}
 .gapsel{display:inline-block;width:auto;max-width:100%;padding:3px 6px;margin:0 2px;font-size:.95em;vertical-align:baseline}
 .exshort{font-size:1.1rem;padding:10px 12px}
+/* Provträningens bildval, grafik, tal på tid och provets skala (70-exam.js) */
+.expick{border:0;margin:0;padding:0;min-width:0}
+.expick legend{padding:0;margin-bottom:8px}
+.pickrow{display:flex;flex-wrap:wrap;gap:8px}
+.pickopt{position:relative;flex:1 1 60px;max-width:110px;min-width:0;display:flex;flex-direction:column;align-items:center;gap:2px;border:1.5px solid var(--line);background:var(--surface);border-radius:12px;padding:8px 4px;cursor:pointer}
+.pickopt input{position:absolute;opacity:0;width:1px;height:1px;margin:0;pointer-events:none}
+.pickopt .ico{font-size:2.1rem;line-height:1.15}
+.pickopt .k{font-size:.75rem;font-weight:700;color:var(--ink-2)}
+.pickopt.on{border-color:var(--navy);background:var(--m-soft)}
+.pickopt:focus-within{outline:2px solid var(--navy);outline-offset:2px}
+.pickopt.right{border-color:var(--ok);background:var(--ok-soft)}
+.pickopt.wrong{border-color:var(--pink);background:var(--pink-soft)}
+.expick:disabled .pickopt{cursor:default}
+.exchart{margin:0;display:flex;flex-direction:column;gap:8px;min-width:0}
+.exchart figcaption{font-family:var(--serif)}
+.exphase{margin:0;font-weight:600;font-size:1.05rem}
+.exphase[data-phase="speak"]{color:var(--green)}
+.exsc{color:var(--ink-2);font-weight:600;white-space:nowrap}
 /* Sviten: flamma uppe till höger (renderStreak i app.js). Urblekt tills dagens pass är gjort. */
 header.top{position:relative}
 .streak{position:absolute;top:2px;right:0;display:inline-flex;align-items:center;gap:3px;font-weight:700;font-size:.95rem;color:var(--ink);font-variant-numeric:tabular-nums}
 .streak svg{width:22px;height:22px}
 .streak.cold{opacity:.4;filter:grayscale(1)}
 header.top h1{padding-right:56px}
+/* Tala (src/kinds/45-tala.js): hur man dikterar och samtalet med Claude */
+ul.howto{margin:0;padding-left:1.2em;display:flex;flex-direction:column;gap:6px;font-size:.9rem;color:var(--ink-2)}
+ul.howto b{color:var(--ink)}
+.chat{display:flex;flex-direction:column;gap:8px}
+.chat:empty{display:none}
+.msg{position:relative;border-radius:12px;padding:8px 40px 10px 12px;max-width:92%;overflow-wrap:anywhere}
+.msg p{margin:2px 0 0}
+.msg.c{background:var(--m-soft);align-self:flex-start}
+.msg.e{background:var(--surface-2);align-self:flex-end;padding-right:12px}
+.msg .speak{position:absolute;top:6px;right:6px}
+.msg ul{margin:6px 0 0;padding-left:1.2em;font-size:.88rem}
+.msg del{color:var(--pink)}
+.msg ul b{color:var(--ok)}

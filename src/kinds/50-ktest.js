@@ -2,14 +2,8 @@
    Alla glosor i ett kapitel (alla avsnitt k3, k3b, k3x … räknas till kapitel 3), en gång var och utan omtag, som ett prov.
    Provet flyttar inte repetitionsschemat. Resultatet sparas i S.kt[kapitel] = {r, n, d, miss}, och efteråt kan man öva på
    de missade orden (då med omtag, som i quizet) tills alla sitter. */
-const ktKey=id=>{const m=/^k(\d+)[a-z]?$/.exec(id); return m?"k"+m[1]:id;};   // k1, k1b, k1e och k1x hör alla till kapitel 1
-function ktChapters(){
-  const out=[];
-  SECTIONS.forEach(s=>{const k=ktKey(s.id); let c=out.find(x=>x.id===k);
-    if(!c){c={id:k,name:s.name.replace(/ · Fler ord ur kapitlet$/,""),words:[]}; out.push(c);}
-    c.words.push(...WORDS.filter(w=>w.sec===s.id));});
-  return out.filter(c=>c.words.length>=4);
-}
+// Kapitlen (chapters och chapterKey i 00-common.js, samma som kapitelkartan) med minst fyra ord
+const ktChapters=()=>chapters().filter(c=>c.words.length>=4);
 const KT={mode:"type"};
 function openKtest(){
   $("#tabs").hidden=true; sess=null; S.kt=S.kt||{};

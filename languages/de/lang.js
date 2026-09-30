@@ -45,7 +45,7 @@ LANGUAGES.de = {
     "Passiv": t => /(^|[^\p{L}])(wird|werden|wurde|wurden|worden)(?![\p{L}])[^.!?]{0,80}[^\p{L}]ge\p{L}+(t|en)(?![\p{L}])/iu.test(t)
   },
 
-  // Grammatikövningar. Frågorna ligger i content/grammar-*.json (se content/GRAMMATIK-SPEC.md).
+  // Grammatikövningar. Frågorna ligger i content/grammar-*.json (format i docs/spec/grammatik.md, områdena i grammar.json).
   // Adjektivändelser skapas i programmet av ordlistans substantiv och tabellen i src/kinds/60-grammar.js.
   // Områden (topics; secs = kapitel där området kommer först) och regelnamn ligger i grammar.json, som build.py lägger i kursens datafil (L.grammar).
 

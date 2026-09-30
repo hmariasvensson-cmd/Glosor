@@ -1,7 +1,7 @@
 // Ordlista för Tyska 6 (Moderna språk 6, steg 6, B1.2 mot B2). Rader som börjar med // är kommentarer.
 // Kapitlen följer kursplanen för steg 6 och Goethe B2, inte en specifik lärobok. Ord som redan finns i Tyska 4 och Tyska 5 är inte med.
 //
-// Format, en rad per ord (se languages/de/SPEC-ordlista.md):
+// Format, en rad per ord (se docs/spec/ordlista.md):
 //   tyska|svenska|genus|exempel på tyska|exempel på svenska|kommentar|ordagrant
 // Ordets tyska form och avsnittets id används som nycklar för sparade framsteg, ändra dem inte i efterhand.
 #s1|Kap 1 · Studium und Bewerbung
@@ -138,6 +138,15 @@ das Aktenzeichen (-)|diarienummer, ärendenummer|n|Bitte geben Sie bei allen Rü
 die Rückfrage (-n)|följdfråga, förfrågan|f|Bei [Rückfragen] erreichen Sie mich unter der oben genannten Nummer.|Vid frågor når ni mig på numret ovan.|Formellt i brev. Verb: rückfragen, nachfragen (fråga igen).
 fällig|förfallen (till betalning), som ska göras||Der Semesterbeitrag ist bis spätestens 15. Juli [fällig].|Terminsavgiften ska vara betald senast den 15 juli.|Hör till fallen (falla). Jämför die Fälligkeit (förfallodag).
 zulassungsfrei|utan antagningsbegränsning||Musikwissenschaft ist an dieser Universität [zulassungsfrei], man kann sich einfach einschreiben.|Musikvetenskap har ingen antagningsbegränsning vid det här universitetet, man kan bara skriva in sig.|Motsats: zulassungsbeschränkt (med antagningsbegränsning). Hör till die Zulassung (antagning).
+die Bestätigung (-en)|bekräftelse|f|Nach der Anmeldung bekommen Sie eine [Bestätigung] per E-Mail.|Efter anmälan får du en bekräftelse via mejl.|Hör till verbet bestätigen (bekräfta).
+das Zertifikat (-e)|certifikat, intyg|n|Für die Bewerbung brauche ich ein [Zertifikat] über meine Deutschkenntnisse.|För ansökan behöver jag ett intyg om mina tyskkunskaper.|Jämför svenskans <b>certifikat</b>. Goethe-Zertifikat B2 = Goethe-institutets språkintyg.
+die Buchung (-en)|bokning|f|Die [Buchung] des Übungsraums ist nur online möglich.|Övningsrummet kan bara bokas på nätet.|Hör till verbet buchen (boka).
+frühestens|tidigast||Die Ergebnisse kommen [frühestens] im Juli.|Resultaten kommer tidigast i juli.|Motsatsen är spätestens (senast).
+anwesend|närvarande||Bei der Prüfung muss eine Lehrkraft [anwesend] sein.|Vid provet måste en lärare vara närvarande.|Motsatsen är abwesend (frånvarande). Substantivet är die Anwesenheit.
+abgeben|lämna in||Die Hausarbeit muss bis Freitag [abgegeben] werden.|Uppsatsen måste lämnas in senast på fredag.|Starkt verb: gibt ab, gab ab, hat abgegeben. Seine Stimme abgeben = rösta.
+die Abmeldung (-en)|avanmälan, avregistrering|f|Eine [Abmeldung] vom Kurs ist bis zwei Wochen vor Beginn kostenlos.|Man kan avanmäla sig från kursen utan kostnad fram till två veckor före start.|Motsatsen är die Anmeldung (anmälan). Verbet är sich abmelden.
+die Überschrift (-en)|rubrik|f|Lies zuerst die [Überschrift] und dann den ganzen Text.|Läs först rubriken och sedan hela texten.|Sammansatt av <b>über</b> (över) och <b>Schrift</b> (skrift).
+beantworten|besvara||Bitte [beantworten] Sie alle Fragen auf dem Formular.|Besvara alla frågor på formuläret.|Svagt verb, tar ackusativ: eine Frage beantworten. Jämför antworten auf + Akk.
 #s2|Kap 2 · Wissenschaft und Technik
 die Forschung (-en)|forskning|f|Die [Forschung] zu Hörschäden bei Musikern hat in den letzten Jahren zugenommen.|Forskningen om hörselskador hos musiker har ökat de senaste åren.|Hör till forschen (forska). Plural används om enskilda forskningsprojekt.
 forschen|forska||An diesem Institut [forschen] Wissenschaftler aus über dreißig Ländern.|Vid det här institutet forskar forskare från över trettio länder.|Svagt verb. forschen nach + Dat. = söka efter, forska om.
@@ -271,6 +280,19 @@ sich bewähren|visa sig hålla, stå provet||Die neue Software hat sich im Praxi
 zugänglich|tillgänglig||Die Forschungsergebnisse sollen für alle kostenlos [zugänglich] sein.|Forskningsresultaten ska vara fritt tillgängliga för alla.|Hör till der Zugang (tillgång). zugänglich machen = göra tillgänglig.
 die Nachvollziehbarkeit|spårbarhet, begriplighet|f|Für die [Nachvollziehbarkeit] müssen alle Rohdaten veröffentlicht werden.|För att resultaten ska kunna följas måste alla rådata publiceras.|Hör till nachvollziehbar (begriplig). Typiskt akademiskt ord.
 die Entwicklungsphase (-n)|utvecklingsfas|f|Das Programm befindet sich noch in der [Entwicklungsphase].|Programmet befinner sig fortfarande i utvecklingsfasen.|Sammansatt av <b>Entwicklung</b> (utveckling) och <b>Phase</b> (fas).
+die Nutzung (-en)|användning|f|Die [Nutzung] des Internets ist in der Bibliothek kostenlos.|Det är gratis att använda internet på biblioteket.|Hör till verbet nutzen (använda, utnyttja).
+das Konzept (-e)|koncept, plan|n|Für das neue Projekt brauchen wir ein klares [Konzept].|För det nya projektet behöver vi en tydlig plan.|Jämför svenskans <b>koncept</b>.
+die Form (-en)|form|f|Die Studie erscheint auch in gekürzter [Form].|Studien kommer också ut i förkortad form.|Jämför svenskans <b>form</b>. In Form sein = vara i form.
+entziffern|tyda, läsa (svårläst text)||Seine Handschrift kann ich kaum [entziffern].|Hans handstil kan jag knappt tyda.|Svagt verb. Hör till die Ziffer (siffra).
+zerlegen|ta isär, dela upp||Große Aufgaben sollte man in kleine Schritte [zerlegen].|Stora uppgifter bör man dela upp i små steg.|Svagt verb: zerlegte, hat zerlegt.
+das Geräusch (-e)|ljud, oljud|n|Nachts höre ich ein seltsames [Geräusch] in der Küche.|På natten hör jag ett konstigt ljud i köket.|Ett enskilt ljud. Der Lärm = oväsen, der Klang = klang.
+das Schriftzeichen (-)|skrivtecken|n|Das Chinesische hat Tausende von [Schriftzeichen].|Kinesiskan har tusentals skrivtecken.|Sammansatt av <b>Schrift</b> (skrift) och <b>Zeichen</b> (tecken).
+die Schrift (-en)|skrift, skriftsystem, handstil|f|Die lateinische [Schrift] hat sechsundzwanzig Buchstaben.|Det latinska alfabetet har tjugosex bokstäver.|Hör till verbet schreiben (skriva).
+aufwendig|påkostad, arbetskrävande||Die Herstellung von Büchern war früher sehr [aufwendig].|Att tillverka böcker var förr mycket arbetskrävande.|Stavas också aufwändig. Hör till der Aufwand (insats, kostnad).
+harmlos|ofarlig, harmlös||Die meisten Geräusche im Alltag sind [harmlos].|De flesta ljud i vardagen är ofarliga.|Motsatsen är gefährlich (farlig).
+speziell|speciell, särskild||Für laute Konzerte gibt es [spezielle] Ohrstöpsel.|För högljudda konserter finns det särskilda öronproppar.|Jämför svenskans <b>speciell</b>. Synonym: besonders.
+die Besonderheit (-en)|särdrag, egenhet|f|Eine [Besonderheit] des Ohrs ist, dass es nie schläft.|Ett särdrag hos örat är att det aldrig sover.|Hör till adjektivet besonders (särskild).
+erstaunlich|förvånansvärd, häpnadsväckande||Das Ergebnis der Studie ist [erstaunlich].|Studiens resultat är häpnadsväckande.|Hör till verbet erstaunen (förvåna).
 #s3|Kap 3 · Politik und Geschichte
 die Gewaltenteilung|maktdelning|f|Die [Gewaltenteilung] soll verhindern, dass eine einzige Institution zu viel Macht bekommt.|Maktdelningen ska förhindra att en enda institution får för mycket makt.|Sammansatt av <b>Gewalt</b> (här: statsmakt, inte våld) och <b>Teilung</b> (delning).
 die Legislative (-n)|lagstiftande makt|f|In Deutschland bilden Bundestag und Bundesrat gemeinsam die [Legislative].|I Tyskland utgör förbundsdagen och förbundsrådet tillsammans den lagstiftande makten.|Från latinets lex (lag). De tre makterna: Legislative, Exekutive, Judikative.
@@ -402,6 +424,12 @@ die Reform (-en)|reform|f|Die [Reform] des Wahlrechts soll den Bundestag verklei
 das Veto (-s)|veto|n|Ein einziges Land kann mit seinem [Veto] den ganzen Beschluss blockieren.|Ett enda land kan blockera hela beslutet med sitt veto.|Från latinets veto (jag förbjuder). Man legt ein Veto ein.
 die Einstimmigkeit|enhällighet|f|In der Außenpolitik gilt in der EU das Prinzip der [Einstimmigkeit].|I utrikespolitiken gäller i EU principen om enhällighet.|Hör till einstimmig (enhällig). Obs: einstimmig betyder också enstämmig i musik.
 der Rechtsruck|högersväng|m|Nach der Wahl sprachen viele Kommentatoren von einem deutlichen [Rechtsruck].|Efter valet talade många kommentatorer om en tydlig högersväng.|Sammansatt av <b>rechts</b> (höger) och <b>Ruck</b> (ryck).
+beschließen|besluta||Das Parlament hat ein neues Gesetz [beschlossen].|Parlamentet har beslutat om en ny lag.|Starkt verb: beschloss, hat beschlossen. Substantivet är der Beschluss (beslut).
+abstimmen|rösta||Am Sonntag wollen die Bürger über das neue Stadion [abstimmen].|På söndag ska medborgarna rösta om den nya arenan.|Svagt verb: stimmte ab, hat abgestimmt. Die Abstimmung = omröstning.
+sich versammeln|samlas||Tausende Menschen [versammelten] sich vor dem Rathaus.|Tusentals människor samlades framför rådhuset.|Svagt verb. Die Versammlung = möte, församling.
+zurückkehren|återvända||Nach dem Krieg sind viele Menschen in ihre Heimat [zurückgekehrt].|Efter kriget återvände många människor till sitt hemland.|Svagt verb med sein: ist zurückgekehrt. Die Rückkehr = återkomst.
+die Rückkehr|återkomst, återvändande|f|Nach seiner [Rückkehr] aus dem Ausland fand er schnell Arbeit.|Efter sin återkomst från utlandet fick han snabbt arbete.|Saknar plural. Hör till zurückkehren (återvända).
+die Presse|press|f|Die [Presse] hat ausführlich über den Skandal berichtet.|Pressen har rapporterat utförligt om skandalen.|Betyder också tryckpress. Die Pressefreiheit = pressfrihet.
 #s4|Kap 4 · Literatur und Epochen
 die Literaturepoche (-n)|litterär epok|f|Welcher [Literaturepoche] lässt sich dieses Gedicht aufgrund seiner Motive zuordnen?|Vilken litterär epok kan den här dikten hänföras till utifrån sina motiv?|Sammansatt av <b>Literatur</b> och <b>Epoche</b> (epok).
 die Strömung (-en)|strömning, riktning|f|Der Expressionismus war eine künstlerische [Strömung] zu Beginn des 20. Jahrhunderts.|Expressionismen var en konstnärlig strömning i början av 1900-talet.|Hör till strömen (strömma). Även om strömmar i vatten.
@@ -532,6 +560,11 @@ die Anekdote (-n)|anekdot|f|Der Lehrer erzählte eine lustige [Anekdote] über z
 die Autobiografie (-n)|självbiografi|f|In ihrer [Autobiografie] schreibt die Sängerin offen über ihre Kindheit.|I sin självbiografi skriver sångerskan öppet om sin barndom.|Från grekiskans autos (själv), bios (liv) och graphein (skriva).
 der Schreibstil (-e)|skrivstil, stil|m|Ihr [Schreibstil] ist klar, knapp und trotzdem sehr poetisch.|Hennes stil är klar, kortfattad och ändå mycket poetisk.|Sammansatt av <b>schreiben</b> (skriva) och <b>Stil</b> (stil).
 poetisch|poetisk||Selbst ihre Briefe sind in einer [poetischen] Sprache geschrieben.|Till och med hennes brev är skrivna på ett poetiskt språk.|Från grekiskans poiesis (skapande). Jämför die Poesie (poesi).
+formulieren|formulera||Kannst du deine Frage etwas genauer [formulieren]?|Kan du formulera din fråga lite mer exakt?|Svagt verb: formulierte, hat formuliert.
+heimlich|hemlig, i smyg||Als Kind hat sie nachts [heimlich] gelesen.|Som barn läste hon i smyg på nätterna.|Jämför svenskans <b>hemlig</b>. Das Geheimnis = hemligheten.
+zögern|tveka||Sie [zögerte] kurz, dann sagte sie ja.|Hon tvekade ett ögonblick, sedan sa hon ja.|Svagt verb. Ohne zu zögern = utan att tveka.
+die Träne (-n)|tår|f|Am Ende des Films hatte ich [Tränen] in den Augen.|I slutet av filmen hade jag tårar i ögonen.|In Tränen ausbrechen = brista i gråt.
+der Heimweg (-e)|hemväg|m|Auf dem [Heimweg] habe ich meinen Schlüssel verloren.|På hemvägen tappade jag min nyckel.|Sammansatt av <b>Heim</b> (hem) och <b>Weg</b> (väg).
 #s5|Kap 5 · Arbeit und Wirtschaft
 die Arbeitswelt|arbetslivet, arbetsvärlden|f|Die [Arbeitswelt] hat sich durch die Digitalisierung stark verändert.|Arbetslivet har förändrats kraftigt genom digitaliseringen.|Sammansatt av <b>Arbeit</b> (arbete) och <b>Welt</b> (värld). Används i singular.
 der Arbeitsvertrag (-verträge)|anställningsavtal|m|Lies deinen [Arbeitsvertrag] genau durch, bevor du ihn unterschreibst.|Läs ditt anställningsavtal noga innan du skriver under det.|Sammansatt av <b>Arbeit</b> (arbete) och <b>Vertrag</b> (avtal, kontrakt).
@@ -666,6 +699,12 @@ zurückerstatten|betala tillbaka, återbetala||Nach der Absage des Konzerts wird
 der Kundenservice|kundtjänst|m|Ich habe schon dreimal beim [Kundenservice] angerufen, aber niemand hilft mir.|Jag har redan ringt kundtjänst tre gånger, men ingen hjälper mig.|Också der Kundendienst. Av <b>Kunde</b> (kund) och engelskans service.
 der Verbraucherschutz|konsumentskydd|m|Der [Verbraucherschutz] warnt vor falschen Online-Shops mit extrem günstigen Preisen.|Konsumentskyddet varnar för falska nätbutiker med extremt låga priser.|Av <b>Verbraucher</b> (konsument) och <b>Schutz</b> (skydd).
 der Freihandel|frihandel|m|Befürworter des [Freihandels] versprechen mehr Wohlstand für alle.|Förespråkare för frihandel utlovar mer välstånd för alla.|Av <b>frei</b> (fri) och <b>Handel</b> (handel).
+profitieren|dra nytta, profitera||Von dem neuen Angebot [profitieren] vor allem Studierende.|Det är framför allt studenter som drar nytta av det nya erbjudandet.|Svagt verb. Konstruktion: von etwas (Dat.) profitieren.
+die Kollegin (-nen)|kollega (kvinna)|f|Meine [Kollegin] hat mir bei dem Projekt geholfen.|Min kollega hjälpte mig med projektet.|Man: der Kollege (-n), svag maskulin.
+der Profi (-s)|proffs|m|Diese Musiker sind echte [Profis].|De här musikerna är riktiga proffs.|Kort för Professional. Motsatsen är der Amateur.
+verwalten|förvalta, administrera||Die Stadt [verwaltet] das Gebäude selbst.|Staden förvaltar byggnaden själv.|Svagt verb. Die Verwaltung = förvaltning, administration.
+die Investition (-en)|investering|f|Das neue Konzerthaus ist eine teure [Investition].|Det nya konserthuset är en dyr investering.|Verbet är investieren (investera).
+der Bau (-ten)|bygge, byggnad|m|Der [Bau] der neuen Halle hat drei Jahre gedauert.|Bygget av den nya hallen tog tre år.|Hör till verbet bauen (bygga). Plural die Bauten = byggnader.
 #s6|Kap 6 · Musik und Bühne
 das Opernhaus (-häuser)|operahus|n|Das [Opernhaus] in Dresden gehört zu den schönsten in ganz Europa.|Operahuset i Dresden hör till de vackraste i hela Europa.|Av <b>Oper</b> (opera) och <b>Haus</b> (hus). I Tyskland finns över 80 operahus.
 die Spielzeit (-en)|spelår, säsong (på teater och opera)|f|In der neuen [Spielzeit] stehen drei Opern aus dem Barock auf dem Programm.|Under den nya säsongen står tre barockoperor på programmet.|Av <b>spielen</b> (spela) och <b>Zeit</b> (tid). Går oftast från september till juli.
@@ -795,6 +834,12 @@ das Stammpublikum|trogen publik, stampublik|n|Das kleine Jazzlokal hat ein treue
 die Ausstrahlung|utstrålning; sändning|f|Die Sängerin hat eine unglaubliche [Ausstrahlung] auf der Bühne.|Sångerskan har en otrolig utstrålning på scenen.|Av ausstrahlen (stråla ut; sända i radio eller tv). Betyder också tv-sändning.
 vermarkten|marknadsföra, kommersialisera||Heute müssen Musiker sich selbst über soziale Medien [vermarkten].|I dag måste musiker marknadsföra sig själva via sociala medier.|Svagt verb. Av der Markt (marknaden).
 die Selbstvermarktung|att marknadsföra sig själv|f|Für die [Selbstvermarktung] braucht eine Künstlerin heute eine eigene Website.|För att marknadsföra sig själv behöver en konstnär i dag en egen webbplats.|Av <b>selbst</b> (själv) och <b>Vermarktung</b> (marknadsföring).
+die Saison (-s)|säsong|f|In der neuen [Saison] spielt das Orchester fünf Opern.|Under den nya säsongen spelar orkestern fem operor.|Franskt lånord, uttalas på franskt vis med betoning på sista stavelsen.
+die Komponistin (-nen)|kompositör (kvinna)|f|Die [Komponistin] war bei der Premiere selbst im Saal.|Kompositören var själv i salen vid premiären.|Man: der Komponist (-en), svag maskulin.
+die Geigerin (-nen)|violinist, fiolspelare (kvinna)|f|Die junge [Geigerin] hat den Wettbewerb gewonnen.|Den unga violinisten vann tävlingen.|Man: der Geiger (-). Hör till die Geige (fiol).
+empfinden|känna, uppleva||Viele [empfinden] laute Musik als Stress.|Många upplever hög musik som stress.|Starkt verb: empfand, hat empfunden. Die Empfindung = förnimmelse, känsla.
+pfeifen|vissla, pipa||Nach dem Konzert [pfeift] es in meinen Ohren.|Efter konserten piper det i mina öron.|Starkt verb: pfiff, hat gepfiffen.
+berühren|röra, beröra||Die Musik hat mich sehr [berührt].|Musiken berörde mig mycket.|Svagt verb. Bokstavligt också: röra vid något.
 #s7|Kap 7 · Ethik und Philosophie
 die Ethik|etik|f|In der Schule haben wir in [Ethik] über Tierversuche diskutiert.|I skolan diskuterade vi djurförsök på etiklektionen.|I tyska skolor är Ethik ett ämne för den som inte läser religion.
 ethisch|etisk||Ist es [ethisch] vertretbar, Tiere für Kosmetik leiden zu lassen?|Är det etiskt försvarbart att låta djur lida för kosmetika?|Av die Ethik. Jämför moralisch (moralisk), som används mer om vardagligt beteende.
@@ -923,6 +968,15 @@ die Selbstverwirklichung|självförverkligande|f|Für viele junge Menschen ist [
 die Vergänglichkeit|förgänglighet|f|Viele Gedichte des Barock handeln von der [Vergänglichkeit] allen Lebens.|Många barockdikter handlar om förgängligheten hos allt liv.|Av vergänglich (förgänglig), från vergehen (förgå).
 sterblich|dödlig||Der Mensch ist [sterblich], und das macht jeden Moment so wertvoll.|Människan är dödlig, och det gör varje ögonblick så värdefullt.|Av sterben (dö). Motsats: unsterblich (odödlig). Obs. dödlig som i farlig heter tödlich.
 eine Pflicht erfüllen|uppfylla en plikt||Als Zeuge hat er nur seine [Pflicht] erfüllt, als er aussagte.|Som vittne uppfyllde han bara sin plikt när han vittnade.|Svagt verb: erfüllte, hat erfüllt.|<b>eine Pflicht</b> en plikt · <b>erfüllen</b> uppfylla → "uppfylla en plikt"
+umgekehrt|omvänt, tvärtom||Nicht der Mensch dient der Technik, sondern [umgekehrt].|Det är inte människan som tjänar tekniken, utan tvärtom.|Particip av umkehren (vända om).
+schlicht|enkel; helt enkelt||Das ist [schlicht] falsch.|Det är helt enkelt fel.|Som adjektiv: enkel, anspråkslös (ein schlichtes Kleid). Som adverb: helt enkelt.
+der Irrtum (-tümer)|misstag, villfarelse|m|Das war ein großer [Irrtum].|Det var ett stort misstag.|Hör till verbet sich irren (ta fel).
+neidisch|avundsjuk||Ich bin ein bisschen [neidisch] auf deinen Erfolg.|Jag är lite avundsjuk på din framgång.|Konstruktion: neidisch auf + Akk. Der Neid = avund.
+die Faulheit|lättja|f|Aufschieben hat oft nichts mit [Faulheit] zu tun.|Att skjuta upp saker har ofta ingenting med lättja att göra.|Saknar plural. Hör till faul (lat).
+die Ablenkung (-en)|distraktion|f|Das Handy ist die größte [Ablenkung] beim Lernen.|Mobilen är den största distraktionen när man pluggar.|Hör till verbet ablenken (distrahera).
+die Erleichterung (-en)|lättnad|f|Nach der Prüfung spürte ich große [Erleichterung].|Efter provet kände jag stor lättnad.|Hör till leicht (lätt) och erleichtern (underlätta).
+unangenehm|obehaglig, pinsam||Die Situation war mir sehr [unangenehm].|Situationen var mycket pinsam för mig.|Motsatsen är angenehm (behaglig).
+die Hürde (-n)|hinder|f|Die Sprache ist oft die größte [Hürde] im Ausland.|Språket är ofta det största hindret utomlands.|Egentligen häck i friidrott.
 #s8|Kap 8 · Stadt, Land, Migration
 die Urbanisierung|urbanisering|f|Die [Urbanisierung] hat im 19. Jahrhundert mit der Industrialisierung begonnen.|Urbaniseringen började under 1800-talet med industrialiseringen.|Från latinets urbs (stad). Synonym: die Verstädterung.
 die Großstadt (-städte)|storstad|f|In einer [Großstadt] wie Berlin ist nachts immer etwas los.|I en storstad som Berlin händer det alltid något på natten.|I Tyskland officiellt en stad med över 100 000 invånare.
@@ -1051,6 +1105,7 @@ die Aufnahmegesellschaft (-en)|mottagande samhälle|f|Integration ist eine Aufga
 die Diaspora|diaspora|f|Die armenische [Diaspora] lebt verstreut über die ganze Welt.|Den armeniska diasporan lever utspridd över hela världen.|Från grekiskans diaspora (spridning). Folkgrupp som bor utanför sitt ursprungsland.
 sesshaft|bofast||Nach Jahren auf Tournee möchte der Musiker endlich [sesshaft] werden.|Efter flera år på turné vill musikern äntligen bli bofast.|Av sitzen (sitta). Motsats: nomadisch (nomadisk).
 der digitale Nomade|digital nomad||Als [digitaler Nomade] arbeitet Jonas mal in Lissabon, mal in Bangkok.|Som digital nomad jobbar Jonas ibland i Lissabon, ibland i Bangkok.|Svag maskulin: den digitalen Nomaden. Adjektivet böjs.|<b>der digitale</b> den digitala · <b>Nomade</b> nomaden → "den digitala nomaden"
+stammen|härstamma, komma från||Meine Großeltern [stammen] aus der Türkei.|Mina morföräldrar kommer från Turkiet.|Svagt verb. Konstruktion: aus/von etwas (Dat.) stammen.
 #sr|Redemittel · Präsentieren und Diskutieren
 in meiner Präsentation geht es um|min presentation handlar om||[In meiner Präsentation geht es um] die Frage, ob Musikunterricht Pflicht sein sollte.|Min presentation handlar om frågan om musikundervisning borde vara obligatorisk.|Inledningsfras. es geht um + ackusativ.|<b>in</b> i · <b>meiner Präsentation</b> min presentation · <b>geht es um</b> går det om → "i min presentation går det om"
 das Thema meines Vortrags lautet|ämnet för mitt föredrag är||[Das Thema meines Vortrags lautet]: Soll man in der Stadt oder auf dem Land leben?|Ämnet för mitt föredrag är: Ska man bo i staden eller på landet?|Formellt. Lauten = lyda, ha ordalydelsen. Genitiv: meines Vortrags.|<b>das Thema</b> ämnet · <b>meines Vortrags</b> mitt föredrags · <b>lautet</b> lyder → "ämnet för mitt föredrag lyder"
@@ -1122,3 +1177,20 @@ im Anhang finden Sie|bifogat finner ni||[Im Anhang finden Sie] meinen Lebenslauf
 ich habe euren Beitrag mit Interesse gelesen|jag har läst ert inlägg med intresse||[Ich habe euren Beitrag mit Interesse gelesen] und möchte meine Meinung dazu sagen.|Jag har läst ert inlägg med intresse och vill säga vad jag tycker.|Inledning i ett Forumsbeitrag (Goethe B2 Schreiben, Teil 1). I forum används ofta du/ihr.|<b>ich habe</b> jag har · <b>euren Beitrag</b> ert inlägg · <b>mit Interesse</b> med intresse · <b>gelesen</b> läst → "jag har läst ert bidrag med intresse"
 was mich betrifft|vad mig beträffar||[Was mich betrifft], so wohne ich lieber in einer kleinen Stadt.|Vad mig beträffar bor jag hellre i en liten stad.|Följs ofta av so. Betreffen = beträffa, gälla.|<b>was</b> vad · <b>mich</b> mig · <b>betrifft</b> beträffar → "vad mig beträffar"
 ich kann mich … nur anschließen|jag kan bara instämma i …||[Ich kann mich der Meinung von Jonas nur anschließen], denn ich habe Ähnliches erlebt.|Jag kan bara instämma i Jonas åsikt, för jag har upplevt något liknande.|Sich anschließen + dativ = ansluta sig till, instämma i.|<b>ich kann mich</b> jag kan mig · <b>nur</b> bara · <b>anschließen</b> ansluta → "jag kan bara ansluta mig"
+sowie|samt, och||Wir brauchen Stühle, Tische [sowie] Getränke.|Vi behöver stolar, bord samt drycker.|Formellt ord för und. Används mest i skrift.
+hinterher|efteråt, bakom||[Hinterher] ist man immer klüger.|Efteråt är man alltid klokare.|Vardagligt. Synonym: danach, nachher.
+darunter|därunder, bland dem||Es kamen viele Gäste, [darunter] auch der Bürgermeister.|Det kom många gäster, bland dem även borgmästaren.|<b>da</b> där · <b>unter</b> under. Kan också betyda "under det".
+wofür|för vad, varför||[Wofür] brauchst du so viel Geld?|Vad behöver du så mycket pengar till?|Frågeord med för: wo + für. Före vokal: wor- (woran, worauf).
+heraus|ut (hit)||Komm doch [heraus], die Sonne scheint!|Kom ut, solen skiner!|Riktning mot den som talar. Ofta i partikelverb: herausfinden (ta reda på).
+hinein|in (dit)||Die Tür war offen, also ging ich [hinein].|Dörren var öppen, så jag gick in.|Riktning bort från den som talar. Motsatsen är heraus (ut).
+umso|desto||Je früher du anfängst, [umso] besser.|Ju tidigare du börjar, desto bättre.|Je … umso/desto = ju … desto.
+sozusagen|så att säga||Er ist [sozusagen] der Chef der Band.|Han är så att säga bandets chef.|Sammansatt av <b>so</b> (så), <b>zu</b> (att) och <b>sagen</b> (säga).
+gewissermaßen|på sätt och vis||Das Ohr ist [gewissermaßen] ein Warnsystem.|Örat är på sätt och vis ett varningssystem.|Formellt. Synonym: sozusagen.
+ebenso|lika, likaså||Die Aufgabe ist [ebenso] wichtig wie die Prüfung.|Uppgiften är lika viktig som provet.|Synonym: genauso.
+nahezu|nästan||[Nahezu] alle Studierenden haben einen Nebenjob.|Nästan alla studenter har ett extrajobb.|Formellt ord för fast (nästan).
+überraschend|överraskande||Das Ergebnis war für alle [überraschend].|Resultatet var överraskande för alla.|Particip av überraschen (överraska).
+entsprechend|motsvarande, i enlighet med||Die Preise wurden [entsprechend] erhöht.|Priserna höjdes i motsvarande grad.|Hör till verbet entsprechen (motsvara).
+rasch|snabb||Die neue Technik verbreitete sich [rasch] in ganz Europa.|Den nya tekniken spred sig snabbt i hela Europa.|Formellt eller litterärt ord för schnell.
+locker|avslappnad, lös||Bleib [locker], das wird schon!|Ta det lugnt, det ordnar sig!|Vardagligt: avslappnad. Också lös: eine lockere Schraube (en lös skruv).
+strikt|strikt, sträng||Die Regeln im Archiv sind sehr [strikt].|Reglerna i arkivet är mycket strikta.|Jämför svenskans <b>strikt</b>. Synonym: streng.
+passend|passande, lämplig||Ich suche ein [passendes] Geschenk für meine Mutter.|Jag letar efter en passande present till min mamma.|Particip av passen (passa).

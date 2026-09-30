@@ -18,11 +18,8 @@ function ipaCheck(input,x){
   const a=ipaNorm(input); return [x.ipa,...(x.ok||[])].some(v=>ipaNorm(v)===a)?"right":"wrong";
 }
 function ipaItems(topic,n){
-  S.ipa=S.ipa||{};
-  return (C().transkription||[]).filter(x=>!topic||x.topic===topic)
-    .map(x=>({x,st:S.ipa[x.id]||{s:0,last:0},r:Math.random()}))
-    .sort((a,b)=>Math.min(a.st.s,3)-Math.min(b.st.s,3)||a.st.last-b.st.last||a.r-b.r).slice(0,n)
-    .map(({x,st})=>{const f=["f","r","w"][Math.min(st.s,2)]; return {k:"ipa",id:`ipa:${x.id}|${f}`,ref:`${x.id}|${f}`,t:f==="w"?"type":"mc",canType:f==="w"};});
+  return weakestFirst((C().transkription||[]).filter(x=>!topic||x.topic===topic),"ipa",{cap:3}).slice(0,n)
+    .map(x=>{const f=["f","r","w"][Math.min((S.ipa[x.id]||{}).s||0,2)]; return {k:"ipa",id:`ipa:${x.id}|${f}`,ref:`${x.id}|${f}`,t:f==="w"?"type":"mc",canType:f==="w"};});
 }
 function openIpa(){
   S.ipa=S.ipa||{}; const all=C().transkription||[];
@@ -65,8 +62,8 @@ const ipaType=c=>{const x=ipaById(c.ref.split("|")[0]);
         const s=inp.selectionStart??inp.value.length, e=inp.selectionEnd??inp.value.length, ch=b.dataset.c;
         inp.value=inp.value.slice(0,s)+ch+inp.value.slice(e); inp.focus(); inp.setSelectionRange(s+ch.length,s+ch.length); }); }};};
 const ipaRestore=ref=>{const [id,f]=ref.split("|"), x=ipaById(id); return x&&["f","r","w"].includes(f)&&x.ipa&&(x.alt||[]).length?{}:null;};
-const ipaEffect=(ref,ok)=>{S.ipa=S.ipa||{}; const id=ref.split("|")[0], o=S.ipa[id]||{s:0,r:0,n:0};
-  S.ipa[id]={s:ok?o.s+1:0,last:Date.now(),r:(o.r||0)+(ok?1:0),n:(o.n||0)+1};};
+const ipaEffect=(ref,ok)=>{S.ipa=S.ipa||{}; const id=ref.split("|")[0], x=srsBump(S.ipa[id],ok);
+  x.r=(x.r||0)+(ok?1:0); x.n=(x.n||0)+1; S.ipa[id]=x;};
 const ipaRecap=ref=>{const x=ipaById(ref.split("|")[0]); return x?x.fr:"";};
 // Slutskärmen: de missade orden med transkription och uppläsning
 function ipaAfter(ctx,right,total,miss){

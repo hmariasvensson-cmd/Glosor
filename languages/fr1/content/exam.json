@@ -307,6 +307,55 @@
    "phrases": ["Bonjour madame / monsieur.", "Je voudrais …, s'il vous plaît.", "C'est combien, … ?", "Combien coûte … ?", "Vous avez … ?", "Ça fait combien ?", "Voilà dix euros.", "Merci, au revoir !"],
    "model": "— Bonjour madame.\n— Bonjour. Vous désirez ?\n— Je voudrais une baguette, s'il vous plaît. C'est combien, les croissants ?\n— Un euro vingt.\n— Alors, trois croissants, s'il vous plaît. Et vous avez des pains au chocolat ?\n— Oui, à un euro trente.\n— Deux pains au chocolat, s'il vous plaît. Ça fait combien ?\n— Ça fait sept euros trente.\n— Voilà dix euros.\n— Merci. Voilà votre monnaie : deux euros soixante-dix.\n— Merci, au revoir, madame !",
    "modelSv": "– Hej.\n– Hej. Vad får det vara?\n– Jag skulle vilja ha en baguette, tack. Hur mycket kostar croissanterna?\n– En euro och tjugo.\n– Då tar jag tre croissanter, tack. Och har ni chokladbröd?\n– Ja, för en euro och trettio.\n– Två chokladbröd, tack. Hur mycket blir det?\n– Det blir sju euro och trettio.\n– Varsågod, tio euro.\n– Tack. Här är din växel: två euro och sjuttio.\n– Tack, hej då!"
+  },
+  {
+   "id": "fr1-co-bild-1",
+   "part": "co",
+   "teil": "Exercice 4",
+   "type": "pick",
+   "title": "Cinq petits dialogues",
+   "time": 4,
+   "plays": 2,
+   "instr": "Du hör fem korta dialoger. Läs frågorna och titta på bilderna först. Du hör dialogerna två gånger. Välj rätt bild till varje dialog.",
+   "lines": [
+    {"fr": "— Tu prends ton parapluie ? — Oui, il pleut beaucoup ce matin.", "sv": "– Tar du ditt paraply? – Ja, det regnar mycket i morse."},
+    {"fr": "— Comment tu vas au collège ? — En bus. L'arrêt est devant chez moi.", "sv": "– Hur tar du dig till skolan? – Med buss. Hållplatsen ligger utanför mitt hus."},
+    {"fr": "— Le film commence à quelle heure ? — À huit heures et demie.", "sv": "– Vilken tid börjar filmen? – Halv nio."},
+    {"fr": "— Qu'est-ce que tu veux pour le petit-déjeuner ? — Un croissant, s'il te plaît.", "sv": "– Vad vill du ha till frukost? – En croissant, tack."},
+    {"fr": "— Pardon, où sont les toilettes ? — Au fond du couloir, à droite.", "sv": "– Ursäkta, var är toaletten? – Längst bort i korridoren, till höger."}
+   ],
+   "items": [
+    {"q": "Dialogue 1 : Quel temps fait-il ?", "sv": "Dialog 1: Hur är vädret?", "opts": ["sol", "regn", "sno", "vind"], "a": 1, "why": "« il pleut » = det regnar."},
+    {"q": "Dialogue 2 : Comment va-t-il au collège ?", "sv": "Dialog 2: Hur tar han sig till skolan?", "opts": ["cykel", "tag", "buss", "bil"], "a": 2, "why": "« en bus » = med buss."},
+    {"q": "Dialogue 3 : À quelle heure commence le film ?", "sv": "Dialog 3: Vilken tid börjar filmen?", "opts": ["kl8", "kl8.30", "kl9.30", "kl6.30"], "a": 1, "why": "« huit heures et demie » = 8.30, halv nio."},
+    {"q": "Dialogue 4 : Qu'est-ce qu'elle mange ?", "sv": "Dialog 4: Vad äter hon?", "opts": ["brod", "apple", "ost", "croissant"], "a": 3, "why": "« un croissant »."},
+    {"q": "Dialogue 5 : Qu'est-ce qu'il cherche ?", "sv": "Dialog 5: Vad letar han efter?", "opts": ["parkering", "toalett", "info", "hiss"], "a": 1, "why": "« les toilettes » = toaletten."}
+   ]
+  },
+  {
+   "id": "fr1-ce-bild-1",
+   "part": "ce",
+   "teil": "Exercice 1",
+   "type": "pick",
+   "title": "Une carte de Tom",
+   "time": 7,
+   "instr": "Du får ett kort från din kompis Tom. Läs kortet och svara på frågorna genom att välja rätt bild.",
+   "lines": [
+    {"fr": "Salut !", "sv": "Hej!"},
+    {"fr": "Samedi, on va à la plage avec ma famille. Tu viens avec nous ?", "sv": "På lördag åker vi till stranden med min familj. Följer du med?"},
+    {"fr": "On part en train à neuf heures.", "sv": "Vi åker tåg klockan nio."},
+    {"fr": "Il va faire beau et chaud. Apporte ton maillot de bain !", "sv": "Det blir fint och varmt väder. Ta med badkläder!"},
+    {"fr": "Pour le pique-nique, j'apporte du pain et du fromage. Toi, tu peux apporter des pommes ?", "sv": "Till picknicken tar jag med bröd och ost. Kan du ta med äpplen?"},
+    {"fr": "À samedi ! Tom", "sv": "Vi ses på lördag! Tom"}
+   ],
+   "items": [
+    {"q": "Où va Tom samedi ?", "sv": "Vart åker Tom på lördag?", "opts": ["berg", "strand", "museum", "bio"], "a": 1, "why": "« à la plage » = till stranden."},
+    {"q": "Comment part la famille ?", "sv": "Hur åker familjen?", "opts": ["bil", "buss", "tag", "flyg"], "a": 2, "why": "« en train » = med tåg."},
+    {"q": "À quelle heure ?", "sv": "Vilken tid?", "opts": ["kl9", "kl10", "kl9.30", "kl2"], "a": 0, "why": "« à neuf heures » = klockan nio."},
+    {"q": "Quel temps va-t-il faire ?", "sv": "Hur blir vädret?", "opts": ["regn", "sno", "sol", "molnigt"], "a": 2, "why": "« Il va faire beau et chaud. »"},
+    {"q": "Qu'est-ce que Tom apporte ?", "sv": "Vad tar Tom med sig?", "opts": ["fisk", "ost", "glass", "pizza"], "a": 1, "why": "« du pain et du fromage » = bröd och ost."},
+    {"q": "Qu'est-ce que tu apportes ?", "sv": "Vad ska du ta med?", "opts": ["kaffe", "tarta", "apple", "vatten"], "a": 2, "why": "« des pommes » = äpplen."}
+   ]
   }
  ]
 }

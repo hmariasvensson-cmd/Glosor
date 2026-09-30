@@ -61,7 +61,7 @@ async function sendTyckTill(){
   if(SAMPLE){
     btn.textContent="Läser …";
     try{ const r=await SAMPLE.json(clarifyPrompt(TT.kind,text),{cache:false});
-      if(r&&r.tydligt===false&&Array.isArray(r.fragor)) qs=r.fragor.filter(q=>typeof q==="string"&&q.trim()).slice(0,3); }catch(e){}
+      if(r&&r.tydligt===false&&Array.isArray(r.fragor)) qs=r.fragor.filter(q=>typeof q==="string"&&q.trim()).slice(0,3); }catch(e){ warnErr("Claudes följdfrågor i Tyck till gick inte, skickar utan",e); }
   }
   // Har eleven bytt flik medan Claude läste skickas meddelandet utan frågor, så att det inte går förlorat
   if(!qs.length||curView!=="fb"||!document.body.contains(btn)||!document.body.contains(msg)) return saveTyckTill(text,[]);
@@ -81,8 +81,8 @@ async function saveTyckTill(text,qa){
   if(btn){ btn.disabled=true; btn.textContent="Skickar …"; }
   const f={kind:TT.kind,text:text.slice(0,2000),qa,lang:L.code,course:L.course||L.name,t:Date.now(),status:"ny",reply:""};
   let ok=false;
-  if(CLOUD.db&&CLOUD.uid){ try{ await CLOUD.db.doc(`feedback/${CLOUD.uid}/msgs/${f.t}`).set({...f,uid:CLOUD.uid}); ok=true; }catch(e){} }
-  if(!ok){ S.feedback=(S.feedback||[]).slice(-49); S.feedback.push(f); save(); }
+  if(CLOUD.db&&CLOUD.uid){ try{ await CLOUD.db.doc(`feedback/${CLOUD.uid}/msgs/${f.t}`).set({...f,uid:CLOUD.uid}); ok=true; }catch(e){ warnErr("Tyck till kunde inte skickas, sparas till senare",e); } }
+  if(!ok){ S.feedback=(S.feedback||[]).slice(-(UNSENT_MAX-1)); S.feedback.push(f); save(); }
   TT.text=""; const ta=$("#fbtext"); if(ta) ta.value="";
   const b2=$("#fbsend"), m2=$("#fbmsg");
   if(b2){ b2.disabled=false; b2.textContent="Skicka"; b2.onclick=sendTyckTill; }

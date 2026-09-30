@@ -45,7 +45,7 @@ LANGUAGES.fru = {
     };
   })(),
 
-  // Grammatikövningar. Frågorna ligger i content/grammar-*.json (format i languages/fr/content/GRAMMATIK-SPEC.md).
+  // Grammatikövningar. Frågorna ligger i content/grammar-*.json (format i docs/spec/grammatik.md, områdena i grammar.json).
   // Områden (topics; secs = kapitel där området kommer först) och regelnamn ligger i grammar.json, som build.py lägger i kursens datafil (L.grammar).
 
   // Verbtabellerna från Franska 3 plus passé simple (att känna igen i litterära texter), med spel för universitetsnivå

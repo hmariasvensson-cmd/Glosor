@@ -85,7 +85,7 @@ Förslag på kod `it2`. Genomgående: berätta om det som hänt, jämföra förr
 
 ## Grammatikprogression (luckövningar)
 
-Upplägget följer `languages/de/content/GRAMMATIK-SPEC.md`: `topic` = ämne i menyn, `rule` = delregel för statistik och förklaring.
+Upplägget följer `docs/spec/grammatik.md`: `topic` = ämne i menyn, `rule` = delregel för statistik och förklaring.
 
 ### Italienska 1
 

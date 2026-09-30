@@ -32,7 +32,7 @@ LANGUAGES.de7 = {
   storyIntro: "Läs berättelsen och välj rätt form i varje lucka: rätt tempus (Präteritum, Plusquamperfekt, Konjunktiv I eller II, passiv) och ett bindeord som passar både betydelsen och ordföljden.",
   cultureIntro: "Läs en text om Tyskland, Österrike eller Schweiz, svara på en fråga och jämför med hur det är i Sverige.",
 
-  // Grammatikövningar. Frågorna ligger i content/grammar-*.json (se languages/de/content/GRAMMATIK-SPEC.md och content/SPEC.md).
+  // Grammatikövningar. Frågorna ligger i content/grammar-*.json (format i docs/spec/grammatik.md, områdena i grammar.json).
   // Områden (topics; secs = kapitel där området kommer först) och regelnamn ligger i grammar.json (L.grammar).
 
   // Samma verbtabeller som Tyska 5; verbspelen blandar alla tempus och båda konjunktiverna, som i längre texter

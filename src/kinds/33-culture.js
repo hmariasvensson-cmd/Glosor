@@ -35,8 +35,8 @@ function cultureScreen(id){
   ta.oninput=()=>{clearTimeout(tm); tm=setTimeout(()=>{S.drafts[dk]=ta.value; save();},800);};
   $("#copy").onclick=()=>copyText(ta,$("#cmsg"));
   $("#done").onclick=()=>{ S.drafts[dk]=ta.value; S.cu[id]={q:!!qok,words:tok(ta.value).length,last:Date.now()};
-    S.log.push({kind:"culture",d:Date.now(),dur:Math.min(3600,Math.round((Date.now()-start)/1000)),right:qok?1:0,total:1}); save(); boardPush(); openCulture(); };
-  $("#quit").onclick=()=>{stopSpeech();openCulture()};
+    S.log.push({kind:"culture",d:Date.now(),dur:runSecs(start),right:qok?1:0,total:1}); save(); boardPush(); backTo(openCulture)(); };
+  $("#quit").onclick=backTo(openCulture);
   window.scrollTo(0,0);
 }
 defineKind("culture",{name:"Kultur",open:openCulture});

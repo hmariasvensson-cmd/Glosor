@@ -118,17 +118,20 @@ function errIds(k){
 /* ---------- Välja frågor ---------- */
 const ruleStat=r=>(S.gr||{})[r]||{r:0,n:0};
 const ruleWeak=r=>{const x=ruleStat(r); return x.n?1-x.r/x.n:.5;};
-// Frågor man inte har sett eller missade senast kommer först, och regler man ofta missar väger tyngre
-function bankIds(topic,k){
-  S.gi=S.gi||{};
+/* Tidsbaserad repetition (S.gi[id] = {s, last, dd}, srsBump i 00-common.js): förfallna frågor först (även de man
+   missade senast), sedan frågor man inte har sett, sedan resten. Inom varje grupp svagast först, och regler man ofta
+   missar väger tyngre. */
+function bankPool(topic){
   // Bokens övningar: när eleven läser ett kapitel tas bara det kapitlets övningar (fältet kap kommer från mappen book/kapNN)
   const ch=S.chapter&&+((chapterKey(S.chapter).match(/\d+/)||[])[0]);
   const hasCh=topic==="bok"&&ch&&Object.values(gramBank()).some(y=>y.topic==="bok"&&y.kap===ch);
   const inCh=x=>!hasCh||x.kap===ch;
-  return Object.values(gramBank()).filter(x=>(!topic||x.topic===topic)&&inCh(x))
-    .map(x=>{const st=S.gi[x.id]||{s:0,last:0}; return {id:x.id,key:st.s-ruleWeak(x.rule)+Math.random()*.8,last:st.last};})
-    .sort((a,b)=>a.key-b.key||a.last-b.last).slice(0,k).map(x=>x.id);
+  return Object.values(gramBank()).filter(x=>(!topic||x.topic===topic)&&inCh(x));
 }
+function bankIds(topic,k){
+  return weakestFirst(bankPool(topic),"gi",{due:true,key:(x,st)=>(st&&+st.s||0)-ruleWeak(x.rule)+Math.random()*.8}).slice(0,k).map(x=>x.id);
+}
+const gramDue=topic=>srsDueCount(S.gi,bankPool(topic).map(x=>x.id));
 function gramQ(gid){
   const x=gramById(gid); if(!x) return null;
   let t="mc";
@@ -153,7 +156,7 @@ const chapterTopics=()=>S.chapter&&hasGrammar()?GR().topics.filter(t=>(t.secs||[
 const topicName=id=>id==="mix"?"Blandad grammatik":((GR().topics.find(t=>t.id===id)||{}).name||"Grammatik");
 function startGram(topic){
   const items=gramItems(topic,10); if(!items.length) return openGrammar();
-  $("#tabs").hidden=true; sess=null; beginQuiz("gram",items,{againFn:["gram",topic],label:topicName(topic)});
+  $("#tabs").hidden=true; sess=null; beginQuiz("gram",items,{againFn:["gram",topic],label:topicName(topic),gramMix:topic==="mix"});
 }
 /* Regelsidor: content/regler.json = {<topic>: {title, intro, parts: [{h, t, ex: [{fr, sv}], table: {head, rows}, tip}]}}.
    Visas innan övningarna och går att öppna efter varje svar. **fetstil** i texterna blir <b>. */
@@ -177,9 +180,12 @@ function gramRules(id){
 }
 function openGrammar(){
   const gt=S.gt||{}, bank=Object.values(gramBank());
-  const status=id=>{const x=gt[id]; return x&&x.n?`${pct(x.r,x.n)} % rätt av ${x.n}`:"";};
+  // Status: andel rätt och hur många frågor som ska repeteras i dag (gramDue)
+  const status=id=>{const x=gt[id], n=gramDue(id==="mix"?null:id);
+    return ((x&&x.n?`${pct(x.r,x.n)} % rätt av ${x.n}`:"")+srsDueNote(n)).replace(/^ · /,"");};
+  const due=gramDue(null);
   const topics=GR().topics.filter(t=>t.id==="adj"?GR().adj&&adjNouns().length:t.id==="err"?errBase().length:bank.some(x=>x.topic===t.id));
-  pickerScreen("Grammatik","Välj ett område. Frågor du missar och regler du ofta missar kommer tillbaka oftare. Blandad grammatik tar lite av allt.",
+  pickerScreen("Grammatik",`Välj ett område. Frågor du klarar kommer tillbaka efter 1, 3, 7, 20, 45 och 90 dagar, och frågor du missar redan nästa gång. Blandad grammatik tar lite av allt.${due?` <b data-due="${due}">${due} ${due===1?"fråga":"frågor"} att repetera i dag.</b>`:""}`,
     [{id:"mix",title:"Blandad grammatik",status:status("mix")},...topics.map(t=>({id:t.id,title:t.name,status:status(t.id),here:chapterTopics().includes(t.id)}))]
       .sort((a,b)=>(b.here?1:0)-(a.here?1:0)),id=>RULES()[id]?gramRules(id):startGram(id));
   // Undertexter under ämnena
@@ -231,8 +237,8 @@ const gramType=c=>{const x=gramById(c.ref);
 const gramEffect=(ref,ok)=>{const x=gramById(ref); if(!x) return;
   const add=(o,k)=>{o[k]=o[k]||{r:0,n:0}; o[k].n++; if(ok) o[k].r++;};
   S.gr=S.gr||{}; S.gt=S.gt||{}; add(S.gr,x.rule); add(S.gt,x.topic);
-  if(sess&&sess.againFn&&sess.againFn[1]==="mix") add(S.gt,"mix");
-  if(x.type==="gap"||x.type==="rw"){S.gi=S.gi||{}; const st=S.gi[ref]||{s:0}; S.gi[ref]={s:ok?st.s+1:0,last:Date.now()};}
+  if(sess&&sess.gramMix) add(S.gt,"mix");   // blandad grammatik (startGram("mix")), inte den blandade rundan
+  if(x.type==="gap"||x.type==="rw"){S.gi=S.gi||{}; S.gi[ref]=srsBump(S.gi[ref],ok);}
 };
 defineKind("gram",{name:"Grammatik",mc:gramMC,type:gramType,restore:ref=>gramById(ref)?{}:null,effect:gramEffect,
   recap:ref=>{const x=gramById(ref); return x?gramSay(x):"";},open:openGrammar,again:startGram});

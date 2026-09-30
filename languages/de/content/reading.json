@@ -32,6 +32,8 @@
       {"type": "tolkning", "q": "Vad menar Jana med sista delen av texten om vad familj betyder?", "opts": ["Att bara släktingar är riktig familj", "Att hon vill flytta hemifrån snart", "Att det som gör en familj är att man kan lita på varandra, inte släktskap", "Att hon saknar sin gamla familj"], "a": 2, "why": "Hon skriver att familj inte betyder „dass alle dasselbe Blut haben, sondern dass man sich aufeinander verlassen kann“."}
     ],
     "gloss": {
+      "kleinere": {"t": "klein, kleiner", "sv": "liten, mindre", "g": ""},
+      "jüngeren": {"t": "jung, jünger", "sv": "ung, yngre", "g": ""},
       "scheiden": {"t": "sich scheiden lassen", "sv": "skilja sig", "g": ""},
       "scheidung": {"t": "die Scheidung", "sv": "skilsmässa", "g": "f"},
       "gemerkt": {"t": "merken", "sv": "märka", "g": ""},
@@ -95,6 +97,7 @@
       {"type": "tolkning", "q": "Vad är budskapet i Mehmets råd till eleverna?", "opts": ["Att alla borde välja yrkesutbildning", "Att det är okej att pröva sig fram och ändra väg", "Att man aldrig ska hoppa av något", "Att praktik är slöseri med tid"], "a": 1, "why": "Han säger „Ein Umweg ist keine Niederlage, sondern eine Erfahrung“ – att byta spår är inget misslyckande."}
     ],
     "gloss": {
+      "dritten": {"t": "der, die, das dritte", "sv": "tredje", "g": ""},
       "abitur": {"t": "das Abitur", "sv": "studentexamen", "g": "n"},
       "ausbildung": {"t": "die Ausbildung", "sv": "yrkesutbildning", "g": "f"},
       "mechatroniker": {"t": "der Mechatroniker", "sv": "mekatroniker (tekniker inom mekanik och elektronik)", "g": "m"},
@@ -161,6 +164,7 @@
       {"type": "tolkning", "q": "Vad menar skribenten med att den som tänker efter „ist schon ein Teil der Lösung“?", "opts": ["Att man bör bli journalist", "Att problemet är löst om alla slutar använda sociala medier", "Att varje person kan bidra till att stoppa spridningen genom att inte dela direkt", "Att det räcker att faktagranskarna gör sitt jobb"], "a": 2, "why": "Falska nyheter sprids när många delar dem snabbt. Om man tänker efter innan man „weiterleitet“, bryts kedjan."}
     ],
     "gloss": {
+      "autor": {"t": "der Autor (-en)", "sv": "författare", "g": "m"},
       "beiträgen": {"t": "der Beitrag (Beiträge)", "sv": "inlägg", "g": "m"},
       "sozialen": {"t": "die sozialen Medien", "sv": "sociala medier", "g": ""},
       "weiterwischen": {"t": "weiterwischen", "sv": "svepa vidare", "g": ""},
@@ -224,6 +228,7 @@
       {"type": "tolkning", "q": "Hur argumenterar Lina?", "opts": ["Hon använder bara känsloargument", "Hon blandar egna erfarenheter, fakta och förslag och tar upp motargument", "Hon förolämpar dem som tycker annorlunda", "Hon upprepar samma argument flera gånger"], "a": 1, "why": "Hon berättar om sin olycka, ger exemplet Köpenhamn, tar upp affärsinnehavarnas oro och äldres behov och föreslår konkreta åtgärder."}
     ],
     "gloss": {
+      "günstigere": {"t": "günstig, günstiger", "sv": "billig, billigare", "g": ""},
       "geehrte": {"t": "Sehr geehrte Damen und Herren", "sv": "Mina damer och herrar (brevhälsning)", "g": ""},
       "innenstadt": {"t": "die Innenstadt", "sv": "innerstad, centrum", "g": "f"},
       "sperren": {"t": "sperren", "sv": "spärra av, stänga", "g": ""},
@@ -285,6 +290,7 @@
       {"type": "tolkning", "q": "Vilken är den viktigaste lärdomen för skribenten?", "opts": ["Att politik är för tråkigt för unga", "Att byråkrati alltid stoppar bra idéer", "Att man kan påverka även utan rösträtt om man engagerar sig", "Att man bör vänta tills man är vuxen"], "a": 2, "why": "Hen skriver „Vor allem habe ich aber gelernt, dass man auch ohne Wahlrecht etwas verändern kann, wenn man sich engagiert“."}
     ],
     "gloss": {
+      "frustriert": {"t": "frustriert", "sv": "frustrerad", "g": ""},
       "jugendgemeinderat": {"t": "der Jugendgemeinderat", "sv": "ungdomsfullmäktige", "g": "m"},
       "kandidiert": {"t": "kandidieren", "sv": "kandidera, ställa upp i val", "g": ""},
       "erwartet": {"t": "erwarten", "sv": "vänta; förvänta sig", "g": ""},
@@ -349,6 +355,11 @@
       {"type": "tolkning", "q": "Vilken kritik framför recensenten?", "opts": ["Att handlingen ibland är lite orealistisk, men att det inte stör särskilt mycket", "Att språket är för svårt för unga", "Att boken är för lång och långrandig", "Att slutet är förutsägbart"], "a": 0, "why": "Det står „Die Handlung ist zwar manchmal etwas unrealistisch, aber das stört beim Lesen kaum“."}
     ],
     "gloss": {
+      "vierzehnjährigen": {"t": "vierzehnjährig", "sv": "fjortonårig", "g": ""},
+      "villa": {"t": "die Villa (Villen)", "sv": "villa", "g": "f"},
+      "walachei": {"t": "die Walachei", "sv": "Valakiet (landskap i Rumänien; vardagligt: långt ute i ingenstans)", "g": "f"},
+      "zueinander": {"t": "zueinander", "sv": "till varandra, för varandra", "g": ""},
+      "unrealistisch": {"t": "unrealistisch", "sv": "orealistisk", "g": ""},
       "schullektüre": {"t": "die Schullektüre", "sv": "skollitteratur, läsning i skolan", "g": "f"},
       "roman": {"t": "der Roman", "sv": "roman", "g": "m"},
       "erschienen": {"t": "erscheinen", "sv": "komma ut, publiceras", "g": ""},
@@ -479,6 +490,8 @@
       {"type": "tolkning", "q": "Vilken helhetsbild ger skribenten av resan?", "opts": ["Mycket positiv, trots språksvårigheter och höga priser", "Mest negativ på grund av priserna", "Neutral – hen vill inte åka tillbaka", "Negativ, eftersom hen inte förstod någon"], "a": 0, "why": "Hen nämner problem med språket och priserna men avslutar med „Trotzdem möchte ich unbedingt wiederkommen“."}
     ],
     "gloss": {
+      "berner": {"t": "der Berner (-)", "sv": "bernare, person från Bern", "g": "m"},
+      "fließt": {"t": "fließen", "sv": "rinna, flyta", "g": ""},
       "gastfamilie": {"t": "die Gastfamilie", "sv": "värdfamilj", "g": "f"},
       "verbracht": {"t": "verbringen", "sv": "tillbringa", "g": ""},
       "erlebnissen": {"t": "das Erlebnis (-se)", "sv": "upplevelse", "g": "n"},
@@ -659,6 +672,11 @@
       }
     ],
     "gloss": {
+      "lachend": {"t": "lachen", "sv": "skratta (lachend = skrattande)", "g": ""},
+      "klopfte": {"t": "klopfen", "sv": "knacka", "g": ""},
+      "anzusehen": {"t": "ansehen", "sv": "titta på", "g": ""},
+      "all": {"t": "all", "sv": "all, alla (all die … = alla de …)", "g": ""},
+      "unwichtig": {"t": "unwichtig", "sv": "oviktig", "g": ""},
       "koffer": {
         "t": "der Koffer (-)",
         "sv": "resväska",
@@ -965,6 +983,7 @@
       }
     ],
     "gloss": {
+      "formulieren": {"t": "formulieren", "sv": "formulera", "g": ""},
       "chatbots": {
         "t": "der Chatbot (-s)",
         "sv": "chattbot",
@@ -1272,6 +1291,7 @@
       }
     ],
     "gloss": {
+      "hinein": {"t": "hinein", "sv": "in (dit in)", "g": ""},
       "lagerhalle": {
         "t": "die Lagerhalle (-n)",
         "sv": "lagerhall",
@@ -1580,6 +1600,11 @@
       }
     ],
     "gloss": {
+      "siebzehnjährige": {"t": "siebzehnjährig", "sv": "sjuttonårig", "g": ""},
+      "mittelteil": {"t": "der Mittelteil (-e)", "sv": "mittdel", "g": "m"},
+      "tempi": {"t": "das Tempo (Tempi)", "sv": "tempo", "g": "n"},
+      "dunkle": {"t": "dunkel", "sv": "mörk", "g": ""},
+      "profis": {"t": "der Profi (-s)", "sv": "proffs", "g": "m"},
       "ausverkauften": {
         "t": "ausverkauft",
         "sv": "utsåld",
@@ -2157,6 +2182,10 @@
       }
     ],
     "gloss": {
+      "wohl": {"t": "wohl", "sv": "väl, tryggt", "g": ""},
+      "erlenkönig": {"t": "der Erlenkönig", "sv": "älvkungen (= der Erlkönig)", "g": "m"},
+      "feiner": {"t": "fein", "sv": "fin", "g": ""},
+      "not": {"t": "die Not", "sv": "nöd (mit Mühe und Not = med nöd och näppe)", "g": "f"},
       "reitet": {
         "t": "reiten",
         "sv": "rida",
@@ -2458,6 +2487,7 @@
       }
     ],
     "gloss": {
+      "her": {"t": "hin und her", "sv": "fram och tillbaka", "g": ""},
       "herr": {
         "t": "der Herr",
         "sv": "Herren, Gud",

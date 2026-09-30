@@ -30,7 +30,7 @@ LANGUAGES.frs4 = {
       .some(m => !/^(vrais|(tir|attir|retir|admir|respir|inspir|soupir|vir|désir|éclair|dur|assur|rassur|jur|mesur|figur|murmur|demeur|pleur|cour|parcour|secour|mour|ouvr|couvr|découvr|offr|souffr)(ais|ait|ions|iez|aient))$|ér(ais|ait|ions|iez|aient)$/i.test(m.replace(/^[^\p{L}]+/u, "")))
   },
 
-  // Grammatikövningar. Frågorna ligger i content/grammar-*.json (format i languages/fr/content/GRAMMATIK-SPEC.md).
+  // Grammatikövningar. Frågorna ligger i content/grammar-*.json (format i docs/spec/grammatik.md, områdena i grammar.json).
   // Områden (topics; secs = kapitel där området kommer först) och regelnamn ligger i grammar.json.
 
   // Samma verbtabeller som Franska 3, med spel för steg 4

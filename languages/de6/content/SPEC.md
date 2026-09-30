@@ -15,7 +15,7 @@ Kapitel-id och teman:
 
 Enligt kursmallen (`docs/kursmall.md`, steg 6): hörtexter 250–350 ord, lästexter 350–550 ord, 6–8 frågor per text, skrivuppgifter 150–250 ord med struktur (inledning, avslutning), 4–5 uppgifter med litteratur, dramatik, film eller musik (författare och epok). Texttyper som tillkommer i steg 6: debatt, föredrag, formellt brev eller ansökan, dramatik, äldre litteratur.
 
-Formatet och reglerna är desamma som för Tyska 5: se `languages/de/content/SPEC.md`, `languages/de/content/GRAMMATIK-SPEC.md` och exemplen i `languages/de/content/*.json`. Fältet med tysk text heter `fr`. I `prompts.json` räknas bindeord mot listan i `languages/de/lang.js`, och `need.tenses` får bara innehålla `Präsens`, `Perfekt`, `Präteritum`, `Konjunktiv II` och `Passiv`.
+Formaten står i `docs/spec/` (allmänna regler i `docs/spec/allmant.md`, grammatiken i `docs/spec/grammatik.md`); det som gäller alla tyska kurser står i `languages/de/content/SPEC.md`, och exempel finns i `languages/de/content/*.json`. Fältet med tysk text heter `fr`. I `prompts.json` räknas bindeord mot listan i `languages/de/lang.js`, och `need.tenses` får bara innehålla `Präsens`, `Perfekt`, `Präteritum`, `Konjunktiv II` och `Passiv`.
 
 Grammatikområdena i Tyska 6 (topic och rule står i `languages/de6/grammar.json`):
 

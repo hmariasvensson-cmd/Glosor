@@ -591,7 +591,7 @@
   "q": "Ich [hatte] Kopfweh und bin zu Hause geblieben.",
   "alt": [
    "war",
-   "habe",
+   "hattest",
    "hat"
   ],
   "why": "Präteritum av haben: ich hatte.",
@@ -605,7 +605,7 @@
   "alt": [
    "war",
    "hattest",
-   "bist"
+   "wart"
   ],
   "why": "Du → warst.",
   "sv": "Var var du i helgen?"
@@ -618,7 +618,7 @@
   "alt": [
    "waren",
    "hatte",
-   "haben"
+   "hattet"
   ],
   "why": "Wir → hatten.",
   "sv": "Vi hade jättekul på festen."
@@ -850,11 +850,11 @@
   "rule": "mv-val",
   "q": "Der Arzt sagt, ich [soll] viel trinken.",
   "alt": [
-   "darf",
+   "willst",
    "will",
    "mag"
   ],
-  "why": "Någon annan säger åt en: sollen.",
+  "why": "Någon annan säger åt en: sollen. (Darf skulle betyda att läkaren tillåter det.)",
   "sv": "Läkaren säger att jag ska dricka mycket."
  },
  {
@@ -874,27 +874,27 @@
   "id": "modal-020",
   "topic": "modal",
   "rule": "mv-val",
-  "q": "Mama, [darf] ich heute zu Lisa gehen?",
+  "q": "Mama, [darf] ich heute zu Lisa gehen? – Ja, das erlaube ich dir.",
   "alt": [
    "muss",
    "soll",
    "will"
   ],
   "why": "Be om lov: dürfen.",
-  "sv": "Mamma, får jag gå till Lisa i dag?"
+  "sv": "Mamma, får jag gå till Lisa i dag? – Ja, det får du."
  },
  {
   "id": "modal-021",
   "topic": "modal",
   "rule": "mv-val",
-  "q": "Tim [will] Pilot werden.",
+  "q": "Tim [will] Pilot werden. Das ist sein großer Traum.",
   "alt": [
    "darf",
    "soll",
    "muss nicht"
   ],
   "why": "En egen önskan eller plan: wollen.",
-  "sv": "Tim vill bli pilot."
+  "sv": "Tim vill bli pilot. Det är hans stora dröm."
  },
  {
   "id": "modal-022",
@@ -1203,7 +1203,7 @@
   "alt": [
    "Seit",
    "Bei",
-   "Von"
+   "Zu"
   ],
   "why": "Nach = efter (tid).",
   "sv": "Efter skolan går jag hem."
@@ -1397,7 +1397,7 @@
   "q": "[Vor] einer Woche war es noch warm.",
   "alt": [
    "Seit",
-   "Nach",
+   "Um",
    "In"
   ],
   "why": "Vor = för … sedan.",
@@ -1410,8 +1410,8 @@
   "q": "[In] zwei Wochen haben wir Ferien.",
   "alt": [
    "Vor",
-   "Seit",
-   "Nach"
+   "Um",
+   "Am"
   ],
   "why": "In + tid = om (i framtiden).",
   "sv": "Om två veckor har vi lov."
@@ -1422,7 +1422,7 @@
   "rule": "zp-seit",
   "q": "[Nach] dem Regen kommt die Sonne.",
   "alt": [
-   "Vor",
+   "Um",
    "Seit",
    "In"
   ],
@@ -1450,7 +1450,7 @@
   "alt": [
    "seit",
    "in",
-   "nach"
+   "am"
   ],
   "why": "Vor + dativ = för … sedan.",
   "sv": "Vi var i Österrike för två år sedan."
@@ -1947,7 +1947,7 @@
    "unsere"
   ],
   "why": "Schmecken + dativ.",
-  "sv": "Pizzan smakar oss mycket bra."
+  "sv": "Vi tycker att pizzan är jättegod."
  },
  {
   "id": "datpron-014",
@@ -2254,11 +2254,11 @@
   "rule": "op-an",
   "q": "Im Sommer fahren wir [ans] Meer.",
   "alt": [
-   "zum",
+   "bei",
    "ins",
    "nach"
   ],
-  "why": "Till vatten: an + ackusativ, an das → ans.",
+  "why": "Till vatten: an + ackusativ, an das → ans. (I vardagligt tal går också zum Meer.)",
   "sv": "I sommar åker vi till havet."
  },
  {
@@ -2293,7 +2293,7 @@
   "rule": "op-an",
   "q": "Wir wandern [in] den Bergen.",
   "alt": [
-   "auf",
+   "zu",
    "an",
    "nach"
   ],
@@ -2320,7 +2320,7 @@
   "q": "Wir gehen heute [ins] Museum.",
   "alt": [
    "im",
-   "zum",
+   "am",
    "nach"
   ],
   "why": "Vart (in i en byggnad): in das → ins.",

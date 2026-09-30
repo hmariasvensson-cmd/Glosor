@@ -25,12 +25,21 @@ function inheritCourses(langs){
   Object.keys(langs).forEach(resolve);
 }
 inheritCourses(LANGUAGES);
+/* Fel som appen klarar sig förbi (molnet, Claude, localStorage som är fullt) skrivs i konsolen med sammanhang, så att de
+   syns vid felsökning och i testerna. Där ett fel är väntat och ofarligt (localStorage i privat läge, uppläsning som
+   webbläsaren saknar, fokus på en ruta som redan är borta) står det en kommentar vid catch i stället. */
+const warnErr=(where,e)=>{ try{ console.warn("Glosor: "+where,e); }catch(_){ /* ingen konsol */ } };
+// Gränser som används på flera ställen
+const LOG_MAX=1000;       // S.log kapas här; äldre poster sammanfattas i S.logOld (foldLog)
+const MAX_RUN_SEC=3600;   // längsta tid (s) som räknas för en runda i loggen (dur), om appen har legat öppen
+const UNSENT_MAX=50;      // Tyck till-meddelanden och felrapporter som väntar på att skickas (S.feedback, S.reports)
+const runSecs=(start,now=Date.now())=>Math.min(MAX_RUN_SEC,Math.round((now-start)/1000));   // loggens dur för en runda som började start
 const LANG_KEY = "glosor-sprak";
 const ONLY_KEY = "glosor-bara";   // om man bara vill se en kurs (sparas bara i den här webbläsaren)
 const onlyCourse=()=>{try{return localStorage.getItem(ONLY_KEY)||""}catch(e){return ""}};
 // "Bara tyska" visar bara kurserna i samma språk som den sparade kursen (Tyska 4 och Tyska 5), och döljer väljaren om bara en är kvar
 const sameLang=(a,b)=>!!LANGUAGES[a]&&!!LANGUAGES[b]&&LANGUAGES[a].name===LANGUAGES[b].name;
-function setOnly(code){ try{ if(code) localStorage.setItem(ONLY_KEY,code); else localStorage.removeItem(ONLY_KEY); }catch(e){} fillCourses(); }
+function setOnly(code){ try{ if(code) localStorage.setItem(ONLY_KEY,code); else localStorage.removeItem(ONLY_KEY); }catch(e){ /* privat läge: valet gäller bara nu */ } fillCourses(); }
 // Steg: 1–7 (Moderna språk 1–7) eller "U" (universitet), fältet step i lang.js och upcoming.json.
 // En universitetskurs kan ange stepAs (t.ex. 7 för Franska I): då står "motsvarar steg 7" i stället för "universitet"
 const stepNum=s=>s==="U"?8:(+s||9);
@@ -112,30 +121,42 @@ const MASTER=4, MAXDUE=40;   // MAXDUE = högst så många repetitioner per pass
      newCount   antal nya ord per pass (0, 10, 15, 20)          mode  "mix" | "mc" | "type"
      src        "auto" eller avsnitts-id att lära nya ord från  chapter  bokkapitlet man läser (avsnitts-id)
      slow, listenFirst, goal   uppläsning långsam, lyssna först på nya ord, veckomål i minuter
+     selfRate   true = eleven bedömer själv (Igen/Svårt/Bra/Lätt) efter rätt skrivet ord i glosquizet; saknas = av (05-words.js)
      log        [{p, d, dur, nNew, nRep, right, total, mcR, mcN, tyR, tyN, extra, kind, game, words}], högst 1 000 poster
+                (kind "talk" har också wpm och rounds (4/3/2) eller chat: 1 (samtal med Claude))
      logOld     {dur, days, lastDay, n}: sammanfattning av poster som kapats bort ur log (foldLog)
      nLog       antal loggposter någonsin (poängen i molnet jämför den)
-     run        pågående pass (snapRun), runs {<övning>: pass} ett påbörjat pass per övning (runKey)
+     run        pågående pass (snapRun), runs {<övning>: pass} ett påbörjat pass per övning (runKey); ett glospass kan ha
+                rate {<ord-id>: "again"|"hard"|"easy"}, elevens bedömningar (Bra står inte med)
      dailyDay   dag då Dagens pass senast gjordes klart
      vt, vv     verbträning per tempus och per verb {r, n}
-     mine       egna ord [{t, sv, g, ex, exSv, …}]
-     gi, gr, gt grammatik: per fråga {s, last}, per regel och per område {r, n}
+     mine       egna ord [{t, sv, g, ex, exSv, src, own, form}]; form = den böjda formen i texten när ordet sparades i
+                grundform (03-lemma.js), t.ex. {t: "fahren", form: "fährt"}. Äldre ord saknar form och står som de sparades
+     gi, gr, gt grammatik: per fråga {s, last, dd}, per regel och per område {r, n}
      ga         der/die/das och plural per ord-id {g, p, last}
-     tr, ph, te översätta meningar, fraser, musikteori: per id {s, last}
-     ipa, sa    transkription och satsanalys (universitetskursen): per id {s, last, r, n}
+     tr, ph, te översätta meningar, fraser, musikteori: per id {s, last, dd}
+     dc, od     diktamen och ordföljd: per menings-id {s, last, dd}
+                (s = rätt i rad, last = senast övad, dd = förfaller (ms); utan dd = förfallen. srsBump i 00-common.js)
+     ipa, sa    transkription och satsanalys (universitetskursen): per id {s, last, dd, r, n}
      tx         läs- och hörtexter per id {r, n, best, last}    stb  berättelser: bästa antal rätt per id
      st         berättelsernas luckor {tempus, bindeord: {r, n}}
      cu, wr     kulturuppgifter och skrivuppgifter som är klara, per id
      ut         uttal: bästa procent per id                     mal  lärandemål som bockats av {"<id>|<nr>": tid}
      kt         kapitelprov per avsnitt {r, n, d, miss}         exam provträning {t: {<uppgift>: {pct, best, n, last}}, sims: [...], simRun}
                 simRun = pågående provsimulering {ids, i, res, ends, start, seen, cur}, tas bort när den är klar (70-exam.js)
-     drafts     utkast till texter per uppgift                  fb   Claudes kommentarer per uppgift
+     drafts     utkast till texter per uppgift ("w:<id>" Skriv en text, "x:<id>" provet, "c:<id>" kultur)
+     fb         Claudes kommentarer per uppgift (samma nycklar): {d, lv, words, pct, kriterier, helhet, bra, fel, nasta, niva, prov},
+                äldre saknar lv, words, pct och (Skriv en text) kriterier, se fbNorm i 40-writing.js.
+                Tala: "tt:<ämne>" senaste 4/3/2-kommentaren {d, r, helhet, bra, fel, flyt, nasta, niva}, "tc:<ämne>" samtalet
+     talk       Tala (45-tala.js): {t: {<ämne>: {n, last, wpm: [ord/min per runda], best}}, c: {<ämne>: {n, last}}};
+                ämne = "me" (presentation), "x:<provuppgift>", "w:<skrivuppgift>" eller "g:<n>". Saknas tills eleven talat
+     wrSkip     måndagen ("ÅÅÅÅ-MM-DD") i veckan då kortet Veckans skrivuppgift stängdes; saknas = inte stängt (40-writing.js)
      feedback, reports   Tyck till-meddelanden och felrapporter som inte kunde skickas (högst 50)
    Nya fält läggs till här och i docs/ARKITEKTUR.md. Ett fält som byter form får en ny migrering i MIGRATIONS. */
 let S;
 function loadState(){
   S={pass:1,w:{},newCount:15,src:"auto",mode:"mix",log:[],vt:{},vv:{}};
-  try{Object.assign(S,JSON.parse(localStorage.getItem(L.storageKey)||"{}"))}catch(e){}
+  try{Object.assign(S,JSON.parse(localStorage.getItem(L.storageKey)||"{}"))}catch(e){ warnErr("sparat läge kunde inte läsas ("+L.storageKey+")",e); }
   normState();
 }
 /* Numrerade migreringar: MIGRATIONS[n] gör om ett läge från version n-1 till version n och körs en gång per läge.
@@ -240,7 +261,7 @@ async function cloudPrune(key,parts,olds){
     const cur=await docFor(key).get(), d=cur&&cur.exists?(cur.data()||{}):null;
     if(d&&sameParts(d.parts,parts))
       for(const n of gone){ const ref=docFor(key+"~"+n); if(typeof ref.delete!=="function") break; await ref.delete(); done.push(n); }
-  }catch(e){}
+  }catch(e){ warnErr("gamla molnbitar kunde inte raderas, försöker igen nästa gång ("+key+")",e); }
   const left=gone.filter(n=>!done.includes(n));
   if(left.length) CLOUD.stale[key]=Object.fromEntries(left.map(n=>[n,1])); else delete CLOUD.stale[key];
   return done;
@@ -326,7 +347,7 @@ async function cloudInit(){
     CLOUD.db=db; CLOUD.uid=uid; CLOUD.user=user;
     boardSubscribe();
     if(L&&L.base) await cloudAttach();   // annars kopplas lagringen när kursens data har hämtats (useLang)
-  }catch(e){}
+  }catch(e){ warnErr("claude.ai-lagringen kunde inte startas, försöker igen (cloudRetry)",e); }
   finally{ CLOUD.initing=false; }
 }
 // Gick starten eller hämtningen inte (dåligt nät, appen i bakgrunden)? Försök igen när appen syns eller nätet är tillbaka.
@@ -342,7 +363,7 @@ window.addEventListener("pagehide",()=>cloudFlush());
 // bara om när den visas, så att eleven inte kastas ut från topplistan, Tyck till eller en resultatskärm.
 function takeState(state,t){
   S=JSON.parse(JSON.stringify(state)); if(!(S.t>=t)) S.t=+t||S.t; normState(); rebuildWords();
-  try{localStorage.setItem(L.storageKey,JSON.stringify(S))}catch(e){}
+  try{localStorage.setItem(L.storageKey,JSON.stringify(S))}catch(e){ warnErr("molnläget kunde inte sparas i webbläsaren ("+L.storageKey+")",e); }
 }
 function adopt(state,key,old,t){
   if(!L||(key&&key!==L.storageKey)) return false;
@@ -366,7 +387,7 @@ async function onRemote(key,s){   // ett nytt läge från en annan enhet
   const d=s.data()||{};
   if(!d.parts&&!d.state) return;
   if(!remoteWins(d.parts?d.score:score(d.state),docT(d),S)) return;
-  let r; try{ r=d.parts?await cloudRead(key,s):{state:d.state,t:d.t||0,old:true}; }catch(e){ return; }
+  let r; try{ r=d.parts?await cloudRead(key,s):{state:d.state,t:d.t||0,old:true}; }catch(e){ warnErr("molnläget kunde inte läsas ("+key+")",e); return; }
   if(r&&r.bad&&key===L.storageKey){ cloudBad(key,r); return; }
   if(!r||r.bad||key!==L.storageKey) return;
   if(r.parts) CLOUD.known[key]=r.parts; delete CLOUD.bad[key];
@@ -396,7 +417,7 @@ async function cloudAttach(){   // vid start och vid byte av kurs
   CLOUD.ready=true; setSaveNote();
   if(push) cloudSave(true);
   boardPush();
-  CLOUD.unsub=docFor(key).onSnapshot(s=>{onRemote(key,s)},()=>{});
+  CLOUD.unsub=docFor(key).onSnapshot(s=>{onRemote(key,s)},e=>warnErr("bevakningen av molnläget avbröts ("+key+")",e));
 }
 // En kö per kurs: byter eleven kurs medan något väntar sparas båda
 function cloudSave(now){
@@ -430,14 +451,14 @@ async function cloudFlush(){
    lp/ld = lärt i pass/datum, mp/md = kan sedan pass/datum */
 function save(){
   S.t=Math.max(Date.now(),(S.t||0)+1); S.nLog=nLogOf(S);   // alltid senare än läget vi utgick från, även om en annan enhets klocka går före
-  if(S.log.length>1000) foldLog();   // håller dokumentet under lagringsgränsen
-  try{localStorage.setItem(L.storageKey,JSON.stringify(S))}catch(e){}
+  if(S.log.length>LOG_MAX) foldLog();   // håller dokumentet under lagringsgränsen
+  try{localStorage.setItem(L.storageKey,JSON.stringify(S))}catch(e){ warnErr("kunde inte spara i webbläsaren (fullt eller privat läge), bara i molnet",e); }
   cloudSave();
   renderStreak();
 }
 // De äldsta loggposterna sammanfattas i S.logOld, så att total tid och antal dagar finns kvar
 function foldLog(){
-  const cut=S.log.length-1000, o=S.logOld||{dur:0,days:0,lastDay:""};
+  const cut=S.log.length-LOG_MAX, o=S.logOld||{dur:0,days:0,lastDay:""};
   o.n=(+o.n||0)+cut;   // antal sammanfattade poster (för S.nLog)
   S.log.slice(0,cut).forEach(l=>{o.dur+=l.dur||0; const k=new Date(l.d).toDateString(); if(k!==o.lastDay){o.days++; o.lastDay=k;}});
   S.logOld=o; S.log=S.log.slice(cut);
@@ -450,32 +471,40 @@ const isLeech=w=>{const x=w&&ws(w.id); if(!x) return false; const err=(x.mcW||0)
   return (x.lapses||0)>=3||(err>=5&&err/(err+(x.mcR||0)+(x.tyR||0))>.4);};
 const dueWords=()=>WORDS.filter(w=>{const x=ws(w.id);return x&&isDue(x)})
   .sort((a,b)=>(ws(a.id).s>=MASTER)-(ws(b.id).s>=MASTER)||ws(a.id).due-ws(b.id).due).slice(0,MAXDUE);
-/* Rätt: ett steg upp. Fel: ett steg ned, och ett ord man kunde går tillbaka till steg 2. */
-function schedule(x,ok,p,now){
-  if(ok){ x.s=Math.min(x.s+1,INT.length-1); if(x.s>=MASTER&&!x.mp){x.mp=p;x.md=now;} }
+/* Rätt: ett steg upp. Fel: ett steg ned, och ett ord man kunde går tillbaka till steg 2.
+   t = frågeformen ("mc" eller "type"). Rätt på flerval räcker bara upp till steg MC_MAX (2, lär sig): ett ord räknas
+   som "kan" först när man har skrivit det rätt. Ett ord som redan har högre steg sänks inte av ett rätt flerval.
+   g = elevens egen bedömning efter ett rätt skrivet svar (S.selfRate, 05-words.js): "hard" (Svårt) = stannar på
+   samma steg (kortare intervall än Bra), "easy" (Lätt) = två steg upp. Utan g (Bra) ett steg; gäller inte flerval. */
+const MC_MAX=2;
+function schedule(x,ok,p,now,t,g){
+  const up=t==="mc"?1:g==="hard"?0:g==="easy"?2:1;
+  if(ok){ x.s=Math.min(x.s+up,INT.length-1,t==="mc"?Math.max(x.s,MC_MAX):INT.length-1); if(x.s>=MASTER&&!x.mp){x.mp=p;x.md=now;} }
   else { x.s=x.s>=MASTER?2:Math.max(0,x.s-1); delete x.mp; delete x.md; x.lapses=(x.lapses||0)+1; }
   x.due=p+INT[x.s];
   if(DAYS[x.s]) x.dd=addDays(now,DAYS[x.s]); else delete x.dd;
 }
 
-/* ---------- Uppläsning ---------- */
+/* ---------- Uppläsning ----------
+   Uppläsningen (speechSynthesis) saknas eller kastar fel i en del webbläsare och i testerna. Då blir det bara tyst,
+   medvetet utan varning: appen fungerar utan ljud, och en varning per ord skulle dränka konsolen. */
 let voice=null;
 function pickVoice(){try{
   const vs=speechSynthesis.getVoices(), code=L.tts.replace("-","[-_]"), base=L.tts.split("-")[0];
   voice=vs.find(v=>new RegExp("^"+code,"i").test(v.lang))||vs.find(v=>new RegExp("^"+base,"i").test(v.lang))||null;
-}catch(e){}}
-try{speechSynthesis.onvoiceschanged=pickVoice}catch(e){}
+}catch(e){ /* ingen uppläsning, se ovan */ }}
+try{speechSynthesis.onvoiceschanged=pickVoice}catch(e){ /* ingen uppläsning */ }
 const cleanSay=t=>t.replace(/\(.*?\)/g,"").replace(/,\s*-\w+/g,"").replace(/[…«»\[\]]/g,"").replace(/\//g,", ");
 const baseRate=()=>S&&S.slow?.7:.9;
 // Ljud av/på (knappen i sidhuvudet). Gäller alla kurser och sparas i webbläsaren.
 const SOUND_KEY="glosor-ljud";
 let SOUND=(()=>{try{return localStorage.getItem(SOUND_KEY)!=="av"}catch(e){return true}})();
-function setSound(on){ SOUND=on; try{localStorage.setItem(SOUND_KEY,on?"på":"av")}catch(e){}
-  if(!on) try{speechSynthesis.cancel()}catch(e){}
+function setSound(on){ SOUND=on; try{localStorage.setItem(SOUND_KEY,on?"på":"av")}catch(e){ /* privat läge: gäller bara nu */ }
+  if(!on) try{speechSynthesis.cancel()}catch(e){ /* ingen uppläsning */ }
   const b=document.querySelector("#sound"); if(b){ b.setAttribute("aria-pressed",String(!on)); b.textContent=on?"Ljud på":"Ljud av"; } }
 function speak(t,rate){if(!SOUND)return;try{
   speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(cleanSay(t));u.lang=L.tts;if(voice)u.voice=voice;u.rate=rate||baseRate();speechSynthesis.speak(u);
-}catch(e){}}
+}catch(e){ /* ingen uppläsning */ }}
 
 /* ---------- Rättning ---------- */
 const deacc=s=>s.normalize("NFD").replace(/[̀-ͯ]/g,"").replace(/œ/g,"oe").replace(/æ/g,"ae").replace(/ß/g,"ss");
@@ -566,10 +595,33 @@ const lang=()=>`lang="${esc(L.htmlLang||L.code)}"`;
 // Valfria avsnitt (L.elective, t.ex. musikteorin) tas bara med när eleven väljer dem själv
 const isElective=id=>!!(L.elective&&L.elective.test.test(id||""));
 const coreWords=()=>WORDS.filter(w=>!isElective(w.sec));
-function pickNew(){
-  // Egna ord från texterna först, sedan kapitlet klassen läser (om boken finns), sedan resten i ordning
-  const rank=w=>w.sec==="mine"?0:S.chapter&&sameChapter(w.sec,S.chapter)?1:2;
-  const fresh=WORDS.filter(w=>!isLearned(w)).sort((a,b)=>rank(a)-rank(b));
+
+/* ---------- Samma uträkning en gång per rendering ----------
+   Startsidan och statistiken frågar efter samma sak från flera paneler (nya ord via curSec i målen, kapitelkartan,
+   skrivförslaget; framsteg per avsnitt i rullistorna och kapitelkartan). inRender(fn) kör fn med en tom cache, och
+   perRender(namn, f) räknar då f bara en gång. Utanför en rendering räknas f varje gång, så att inget blir inaktuellt
+   när S ändras. Cachen gäller bara medan sidan byggs, inte i klickhändelserna. */
+let RCACHE=null;
+function inRender(fn){ if(RCACHE) return fn(); RCACHE=new Map(); try{ return fn(); } finally{ RCACHE=null; } }
+const perRender=(k,f)=>{ if(!RCACHE) return f(); if(!RCACHE.has(k)) RCACHE.set(k,f()); return RCACHE.get(k); };
+// Orden per avsnitt ({avsnitts-id: [ord]}), räknas om när WORDS byts (rebuildWords)
+let SEC_IX={words:null,by:{}};
+function secWords(id){
+  if(SEC_IX.words!==WORDS){ const by={}; WORDS.forEach(w=>(by[w.sec]=by[w.sec]||[]).push(w)); SEC_IX={words:WORDS,by}; }
+  return SEC_IX.by[id]||[];
+}
+function pickNew(){ return perRender("pickNew",pickNewNow); }
+function pickNewNow(){
+  // Egna ord från texterna först, sedan kapitlet klassen läser (om boken finns), sedan resten avsnitt för avsnitt.
+  // Inom varje avsnitt (även kapitlets, k2, k2b …) kommer de vanligaste orden först: L.freq = hur ofta ordet står i
+  // kursens egna texter (räknas av build.py, word_freq), vid lika i ordlistans ordning.
+  const inCh=new Set(S.chapter?SECTIONS.filter(s=>sameChapter(s.id,S.chapter)).map(s=>s.id).concat(S.chapter):[]);
+  const rk={}; SECTIONS.forEach(s=>rk[s.id]=s.id==="mine"?0:inCh.has(s.id)?1:2);
+  const rank=w=>rk[w.sec]??(w.sec==="mine"?0:inCh.has(w.sec)?1:2);
+  const fq=L.freq||{}, secIx={}, pos=new Map();
+  SECTIONS.forEach((s,i)=>secIx[s.id]=i); WORDS.forEach((w,i)=>pos.set(w,i));
+  const fresh=WORDS.filter(w=>!isLearned(w)).sort((a,b)=>rank(a)-rank(b)||(rank(a)?secIx[a.sec]-secIx[b.sec]:0)
+    ||(fq[b.id]||0)-(fq[a.id]||0)||pos.get(a)-pos.get(b));
   const pool=S.src==="auto"?fresh.filter(w=>!isElective(w.sec)):fresh.filter(w=>w.sec===S.src);
   return pool.slice(0,S.newCount);
 }
@@ -589,13 +641,16 @@ function nextPanel(){
 function renderStart(){
   renderStreak();
   document.body.classList.remove("has-tray");
-  sess=null;
+  sess=null; RETURN_TO=null;
   applyDeferred(false);   // ett molnläge som kom mitt i ett pass
   curView="ova";
   $("#tabs").hidden=false; tabSel("ova");
-  const newW=pickNew(), due=dueWords();
-  const learned=WORDS.filter(isLearned).length, mastered=WORDS.filter(isMastered).length;
-  const secOpt=s=>{const n=WORDS.filter(w=>w.sec===s.id&&!isLearned(w)).length;
+  // Som inRender (se pickNew), utan att flytta in sidan i en funktion: cachen gäller tills app.innerHTML är satt
+  let newW, due; const top=!RCACHE; if(top) RCACHE=new Map();
+  try{
+  newW=pickNew(); due=dueWords();
+  const {learned,mastered}=wordCounts();
+  const secOpt=s=>{const n=secProg([s.id]).rest;
     return `<option value="${esc(s.id)}" ${n?"":"disabled"}>${esc(s.name)} · ${progLabel([s.id])}</option>`;};
   const elSecs=SECTIONS.filter(s=>isElective(s.id)), bookSecs=SECTIONS.filter(s=>s.book&&!isElective(s.id)), otherSecs=SECTIONS.filter(s=>!s.book&&!isElective(s.id));
   const opts=`<option value="auto">${hasBook()?"Kapitlet ni läser, sedan resten":L.nextLabel||"Nästa ord i ordlistan"}</option>`+(bookSecs.length
@@ -610,6 +665,7 @@ function renderStart(){
     <div class="navrow"><button class="btn ghost" data-wdrop="${esc(k)}">Släng</button><button class="btn" data-wgo="${esc(k)}">Fortsätt</button></div></section>`).join("")}
   ${hasBook()?bookPanel():""}
   ${goalsPanel()}
+  ${writeNagPanel()}
   ${nextPanel()}
   <section class="panel">
     <div class="meta"><span class="label">Pass ${S.pass}</span></div>
@@ -626,7 +682,8 @@ function renderStart(){
       <div class="seg" role="group" aria-label="Frågetyp">
         <button data-m="mix" aria-pressed="${S.mode==="mix"}">Anpassat</button>
         <button data-m="mc" aria-pressed="${S.mode==="mc"}">Flerval</button>
-        <button data-m="type" aria-pressed="${S.mode==="type"}">Skriva</button></div></div>
+        <button data-m="type" aria-pressed="${S.mode==="type"}">Skriva</button></div>
+      ${S.mode==="type"?"":`<p class="foot" id="mc-note">Ett ord räknas som <b>kan</b> först när du har skrivit det rätt. Flerval räcker till <b>lär sig</b>.</p>`}</div>
     <details class="more settings" id="setd" ${SET_OPEN?"open":""}><summary>Fler inställningar</summary>
     <div class="row2b">
       <div class="field"><span class="label">Uppläsning</span>
@@ -634,6 +691,9 @@ function renderStart(){
       <div class="field"><span class="label">Nya ord</span>
         <div class="seg" role="group" aria-label="Nya ord"><button data-lf="0" aria-pressed="${!S.listenFirst}">Visa direkt</button><button data-lf="1" aria-pressed="${!!S.listenFirst}">Lyssna först</button></div></div>
     </div>
+    <div class="field"><span class="label">Bedöm själv hur svårt det var</span>
+      <div class="seg" role="group" aria-label="Bedöm själv hur svårt det var"><button data-sr="0" aria-pressed="${!S.selfRate}">Av</button><button data-sr="1" aria-pressed="${!!S.selfRate}">På</button></div>
+      <p class="foot">Efter ett rätt skrivet ord i glosquizet väljer du Igen, Svårt, Bra eller Lätt (tangenterna 1–4; Enter eller mellanslag = Bra). Svårt kommer tillbaka tidigare, Lätt senare.</p></div>
     ${Object.keys(LANGUAGES).length>1?`<div class="field"><span class="label">Kurser</span>
       <div class="seg" role="group" aria-label="Kurser"><button data-only="0" aria-pressed="${!onlyCourse()}">Visa alla</button><button data-only="1" aria-pressed="${sameLang(onlyCourse(),L.code)}">Bara ${esc(L.name.toLowerCase())}</button></div></div>`:""}
     <div class="field"><span class="label">Veckomål</span>
@@ -649,14 +709,16 @@ function renderStart(){
   </section>
   ${gamesPanel()}
   ${videosPanel(S.src!=="auto"?S.src:(newW[0]||WORDS.filter(isLearned).pop()||WORDS[0]||{}).sec)}`;
+  } finally{ if(top) RCACHE=null; }
   $("#src").value=S.src; if(!$("#src").selectedOptions[0]||$("#src").selectedOptions[0].disabled){S.src="auto";$("#src").value="auto"}
   $("#src").onchange=e=>{S.src=e.target.value;save();renderStart()};
-  wireBookPanel(); wireChapterMap();
+  wireBookPanel(); wireChapterMap(); wireWriteNag();
   app.querySelectorAll("[data-nextc]").forEach(b=>b.onclick=()=>useLang(b.dataset.nextc));
   app.querySelectorAll("[data-n]").forEach(b=>b.onclick=()=>{S.newCount=+b.dataset.n;save();renderStart()});
   app.querySelectorAll("[data-m]").forEach(b=>b.onclick=()=>{S.mode=b.dataset.m;save();renderStart()});
   app.querySelectorAll("[data-slow]").forEach(b=>b.onclick=()=>{S.slow=b.dataset.slow==="1";save();renderStart()});
   app.querySelectorAll("[data-lf]").forEach(b=>b.onclick=()=>{S.listenFirst=b.dataset.lf==="1";save();renderStart()});
+  app.querySelectorAll("[data-sr]").forEach(b=>b.onclick=()=>{S.selfRate=b.dataset.sr==="1";save();renderStart()});
   $("#setd").ontoggle=()=>{SET_OPEN=$("#setd").open};
   app.querySelectorAll("[data-only]").forEach(b=>b.onclick=()=>{setOnly(b.dataset.only==="1"?L.code:"");renderStart()});
   app.querySelectorAll("[data-goal]").forEach(b=>b.onclick=()=>{S.goal=+b.dataset.goal;save();boardPush();renderStart()});
@@ -688,22 +750,19 @@ function videosPanel(secId){
    Används i rullistorna (text) och i kapitelkartan under "Nya ord från" (staplar). "Kan" = steg 4 eller mer,
    "på väg" = påbörjat, "kvar" = inte påbörjat. */
 function secProg(ids){
-  const ws_=WORDS.filter(w=>ids.includes(w.sec)), k=ws_.filter(isMastered).length, l=ws_.filter(isLearned).length;
-  return {tot:ws_.length,k,v:l-k,rest:ws_.length-l,pct:ws_.length?Math.round(100*l/ws_.length):0};
+  let tot=0,k=0,l=0;
+  ids.forEach(id=>{ const c=perRender("sec:"+id,()=>{ const ws_=secWords(id); return {tot:ws_.length,k:ws_.filter(isMastered).length,l:ws_.filter(isLearned).length}; });
+    tot+=c.tot; k+=c.k; l+=c.l; });
+  return {tot,k,v:l-k,rest:tot-l,pct:tot?Math.round(100*l/tot):0};
 }
+// Antal påbörjade och kunna ord i hela kursen (startsidan, myStats)
+const wordCounts=()=>perRender("wc",()=>{ let learned=0,mastered=0; WORDS.forEach(w=>{ if(isLearned(w)){ learned++; if(isMastered(w)) mastered++; } }); return {learned,mastered}; });
 const bar5=p=>"▰".repeat(Math.round(p/20))+"▱".repeat(5-Math.round(p/20));
 function progLabel(ids){ const p=secProg(ids);
   return p.rest?`${bar5(p.pct)} ${p.pct} % (${p.rest} ord kvar)`:`✓ klart${p.k<p.tot?` (${p.tot-p.k} ord på väg)`:""}`; }
-// Kapitlen i ordning, med avsnitten som hör ihop (k3, k3b, k3x) samlade
-function chapterGroups(){
-  const out=[];
-  SECTIONS.filter(s=>s.id!=="mine").forEach(s=>{const k=(typeof ktKey==="function"?ktKey(s.id):s.id);
-    let c=out.find(x=>x.id===k); if(!c){c={id:k,name:s.name.replace(/ · Fler ord ur kapitlet$/,""),ids:[],book:!!s.book}; out.push(c);} c.ids.push(s.id);});
-  return out.filter(c=>WORDS.some(w=>c.ids.includes(w.sec)));
-}
 let CHMAP_OPEN=false;
 function chapterMap(){
-  const all=chapterGroups(); if(all.length<2) return "";
+  const all=chapters().filter(c=>c.id!=="mine"); if(all.length<2) return "";   // kapitlen i ordning (00-common.js), utan Mina ord
   const cur=hasBook()&&S.chapter?S.chapter:(S.src!=="auto"?S.src:curSec());
   // Valfria avsnitt visas sist och räknas inte in i "x av y kapitel klara"
   const gs=all.filter(g=>!isElective(g.ids[0])), el=all.filter(g=>isElective(g.ids[0]));
@@ -719,8 +778,8 @@ function chapterMap(){
 function wireChapterMap(){
   const d=$("#chmap"); if(!d) return; d.ontoggle=()=>{CHMAP_OPEN=d.open};
   d.querySelectorAll("[data-chmap]").forEach(b=>b.onclick=()=>{
-    const g=chapterGroups().find(x=>x.id===b.dataset.chmap); if(!g) return;
-    const first=g.ids.find(id=>WORDS.some(w=>w.sec===id&&!isLearned(w)))||g.ids[0];
+    const g=chapters().find(x=>x.id===b.dataset.chmap&&x.id!=="mine"); if(!g) return;
+    const first=g.ids.find(id=>secWords(id).some(w=>!isLearned(w)))||g.ids[0];
     if(g.book){ S.chapter=g.ids[0]; S.src="auto"; } else S.src=first;
     save(); renderStart(); const m=$("#chmap"); if(m) m.scrollIntoView({block:"nearest"}); });
 }
@@ -788,29 +847,29 @@ function renderStreak(){
   el.innerHTML=`<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#F27A1A" d="M12 2c1 3.5-1.5 5.2-2.8 7.1C7.7 11.3 7 13 7 15a5 5 0 0 0 10 0c0-2.6-1.3-4.3-2.3-5.6-.3 1.5-1 2.4-2 2.8.6-3.4-.2-7.1-.7-10.2z"/><path fill="#FFC53D" d="M12 21a3 3 0 0 1-3-3c0-1.6 1.1-2.7 2-3.8.2 1 .8 1.6 1.5 1.8-.1-.9.2-1.9.8-2.6.9 1.2 1.7 2.5 1.7 4.6a3 3 0 0 1-3 3z"/></svg>${n}`;
 }
 function streakAlive(last){const d=new Date();if(dayKey(last)===dayKey(d))return true;d.setDate(d.getDate()-1);return dayKey(last)===dayKey(d)}
+const HIST_WEEKS=6;   // veckorna bakåt i topplistans historik (hist)
+// Veckans siffror för topplistan och veckomålet. Går igenom loggen en gång: veckostarterna b[0] = den här veckan,
+// b[1] = förra veckan … b[HIST_WEEKS], och varje post läggs i sin vecka.
 function myStats(){
-  const w0=weekStart(Date.now()), wk=S.log.filter(l=>l.d>=w0), days=new Set(S.log.map(l=>dayKey(l.d)));
+  const w0=weekStart(Date.now()), b=[w0]; for(let i=0;i<HIST_WEEKS;i++) b.push(weekStart(b[i]-3*864e5));
+  const sec=b.map(()=>0), q=b.map(()=>0), days=new Set(), wkDays=new Set();
+  S.log.forEach(l=>{ const k=dayKey(l.d); days.add(k);
+    if(l.d>=w0){ wkDays.add(k); sec[0]+=l.dur||0; q[0]+=l.total||0; return; }
+    for(let i=1;i<b.length;i++) if(l.d>=b[i]){ sec[i]+=l.dur||0; q[i]+=l.total||0; break; } });
   let streak=0; const d=new Date(); d.setHours(12,0,0,0); if(!days.has(dayKey(d))) d.setDate(d.getDate()-1);
   while(days.has(dayKey(d))){streak++; d.setDate(d.getDate()-1)}
-  const pw=weekStart(w0-3*864e5), pk=S.log.filter(l=>l.d>=pw&&l.d<w0);   // förra veckan
-  return {week:w0, min:Math.round(wk.reduce((a,l)=>a+(l.dur||0),0)/60), q:wk.reduce((a,l)=>a+(l.total||0),0), goal:S.goal||0,
-    prev:{week:pw, min:Math.round(pk.reduce((a,l)=>a+(l.dur||0),0)/60), q:pk.reduce((a,l)=>a+(l.total||0),0)},
-    hist:weekHistory(w0),
-    days:new Set(wk.map(l=>dayKey(l.d))).size, streak, last:S.log.length?S.log[S.log.length-1].d:0,
-    learned:WORDS.filter(isLearned).length, mastered:WORDS.filter(isMastered).length};
-}
-// Minuter per vecka de sex senaste hela veckorna: {veckostart: minuter}
-function weekHistory(w0){
-  const out={}; let w=w0;
-  for(let i=0;i<6;i++){ const p=weekStart(w-3*864e5), m=Math.round(S.log.filter(l=>l.d>=p&&l.d<w).reduce((a,l)=>a+(l.dur||0),0)/60); if(m) out[p]=m; w=p; }
-  return out;
+  // hist: minuter per vecka de sex senaste hela veckorna, {veckostart: minuter}, bara veckor med minuter
+  const min=i=>Math.round(sec[i]/60), hist={}; for(let i=1;i<b.length;i++) if(min(i)) hist[b[i]]=min(i);
+  const {learned,mastered}=wordCounts();
+  return {week:w0, min:min(0), q:q[0], goal:S.goal||0, prev:{week:b[1], min:min(1), q:q[1]}, hist,
+    days:wkDays.size, streak, last:S.log.length?S.log[S.log.length-1].d:0, learned, mastered};
 }
 function boardSubscribe(){
   if(!CLOUD.db||BOARD.unsub) return;
   BOARD.unsub=CLOUD.db.collection("board").onSnapshot(s=>{
     BOARD.docs={}; s.docs.forEach(d=>{if(d.exists)BOARD.docs[d.id]=d.data()}); boardKeepMine();
     if(curView==="board"&&!sess) renderBoard();
-  },()=>{});
+  },e=>warnErr("topplistan kunde inte bevakas",e));
 }
 /* Väntande uppdateringar samlas per kurs, så att ett kursbyte inte tappar den förra kursens siffror.
    Ger ett löfte om true när det är sparat, false om det inte gick. */
@@ -858,7 +917,7 @@ async function renderBoard(){
     });
     return r;
   }).sort((a,b)=>b.min-a.min||b.q-a.q||b.streak-a.streak);
-  let ps={}; try{ps=await CLOUD.user.profiles(rows.map(r=>r.id))}catch(e){}
+  let ps={}; try{ps=await CLOUD.user.profiles(rows.map(r=>r.id))}catch(e){ warnErr("namnen i topplistan kunde inte hämtas",e); }
   if(curView!=="board"||sess) return;
   const mine=obj(BOARD.docs[CLOUD.uid]);
   const nameOf=r=>r.nick||(ps[r.id]&&ps[r.id].name)||"Någon";
@@ -893,6 +952,14 @@ async function renderBoard(){
 
 /* ---------- Pass: lära ---------- */
 let sess=null, curView="ova", SET_OPEN=false;
+/* Tillbaka till sidan man kom ifrån: en övning som öppnas från en annan sida än sin egen lista (studieplanen, en
+   provuppgift från skrivsidan) öppnas med openFrom(sida, öppna, etikett). Då leder Tillbaka i övningen (backTo(listan)),
+   Avbryt i ett pass (pauseSession) och slutskärmens Startsidan-knapp (backHome, med etiketten) dit i stället.
+   Nollställs på startsidan och på övningarnas listor (pickerScreen, openWriting, openExam). */
+let RETURN_TO=null, RETURN_LABEL="";
+function openFrom(page,go,label){ RETURN_TO=page; RETURN_LABEL=label||"Tillbaka"; go(); }
+const backTo=fb=>()=>{ stopSpeech(); (RETURN_TO||fb)(); };
+function backHome(){ const f=RETURN_TO, b=f&&app.querySelector("#home,#kthome"); if(b){ b.textContent=RETURN_LABEL; b.onclick=()=>{ stopSpeech(); f(); }; } }
 
 /* Ett pågående pass sparas efter varje svar, så att det går att fortsätta om appen stängs */
 function snapRun(){
@@ -903,7 +970,8 @@ function snapRun(){
     newW:(sess.newW||[]).map(w=>w.id),due:(sess.due||[]).map(w=>w.id),extra:!!sess.extra,game:sess.game?sess.game.id:null,
     queue:sess.queue?[...pending,...sess.queue].map(it):null,total:sess.total||0,done:sess.done||0,
     firstTry:sess.firstTry||{},firstType:sess.firstType||{},tries:sess.tries||{},start:sess.start,
-    ctx:sess.ctx||null,againFn:sess.againFn||null,label:sess.label||"",daily:!!sess.daily};
+    ...(sess.rate&&Object.keys(sess.rate).length?{rate:sess.rate}:{}),
+    ctx:sess.ctx||null,againFn:sess.againFn||null,label:sess.label||"",daily:!!sess.daily,gramMix:!!sess.gramMix};
   const k=runKey(sess); if(k){ S.runs=S.runs||{}; S.runs[k]=S.run; }
   save();
 }
@@ -913,7 +981,7 @@ const runKey=r=>!r?null:r.kind==="words"?(r.extra?"words|extra":"words"):(r.agai
 function dropRun(r){ const k=runKey(r); if(k&&S.runs) delete S.runs[k]; }
 function quitSession(){ dropRun(S.run); sess=null; delete S.run; save(); renderStart(); }
 // Avbryt mitt i en övning: rundan sparas och kan fortsättas senare
-function pauseSession(){ stopSpeech(); sess=null; renderStart(); }
+function pauseSession(){ stopSpeech(); sess=null; (RETURN_TO||renderStart)(); }
 function runLabel(r){
   if(r.label) return `${r.label}, ${r.done} av ${r.total} frågor klara.`;
   if(r.kind==="verbs"){const g=verbGames().find(x=>x.id===r.game);return `Verb: ${g?g.name:""}, ${r.done} av ${r.total} frågor klara.`}
@@ -930,63 +998,15 @@ function resumeRun(){
   };
   $("#tabs").hidden=true;
   sess={kind:r.kind,i:r.i,newW:r.newW.map(id=>byId[id]).filter(Boolean),due:r.due.map(id=>byId[id]).filter(Boolean),extra:r.extra,start:r.start||Date.now(),
-    ctx:r.ctx||null,againFn:r.againFn||null,label:r.label||"",daily:!!r.daily};
+    ctx:r.ctx||null,againFn:r.againFn||null,label:r.label||"",daily:!!r.daily,
+    // gramMix finns i S.run sedan 2026-09-30; en blandad grammatikrunda sparad före det känns igen på againFn
+    gramMix:!!r.gramMix||(r.kind==="gram"&&!!r.againFn&&r.againFn[1]==="mix")};
   if(r.kind==="verbs"){const g=verbGames().find(x=>x.id===r.game)||verbGames()[0]; Object.assign(sess,{game:g,tenses:g.tenses});}
   if(r.learn){ if(!sess.newW.length) return quitSession(); sess.i=Math.min(sess.i,sess.newW.length-1); return renderLearn(); }
-  Object.assign(sess,{queue:(r.queue||[]).map(item).filter(Boolean),total:r.total,done:r.done,firstTry:r.firstTry||{},firstType:r.firstType||{},tries:r.tries||{}});
+  Object.assign(sess,{queue:(r.queue||[]).map(item).filter(Boolean),total:r.total,done:r.done,firstTry:r.firstTry||{},firstType:r.firstType||{},tries:r.tries||{},rate:r.rate||{}});
   nextQ();
 }
-function startSession(newW,due){
-  $("#tabs").hidden=true;
-  sess={newW,due,i:0,kind:"words",start:Date.now()};
-  if(newW.length) renderLearn(); else startQuiz();
-}
-function renderLearn(){
-  const w=sess.newW[sess.i], n=sess.newW.length;
-  sess.shown=sess.shown||{};
-  if(S.listenFirst&&!sess.shown[sess.i]){   // lyssna först: bara ljud tills eleven vill se ordet
-    app.innerHTML=`<section class="panel">
-      <div class="meta"><span>Nya ord · ${esc(secName(w.sec))}</span><span>${sess.i+1} / ${n}</span></div>
-      <div class="bar"><i style="width:${(sess.i/n)*100}%"></i></div>
-      <p class="q-ask">Lyssna på ordet och meningen. Försök uppfatta vad som sägs innan du tittar.</p>
-      <div class="listen"><button class="btn ghost" id="lw">${PLAY} Ordet</button><button class="btn ghost" id="le">${PLAY} Meningen</button><button class="btn ghost" id="ls">Långsamt</button></div>
-      <button class="btn" id="show">Visa ordet</button></section>
-      <button class="quit" id="quit">Avbryt passet</button>`;
-    $("#lw").onclick=()=>speak(w.t); $("#le").onclick=()=>speak(w.exT); $("#ls").onclick=()=>speak(w.exT,.6);
-    $("#show").onclick=()=>{sess.shown[sess.i]=true;renderLearn()};
-    $("#quit").onclick=pauseSession; snapRun(); speak(w.t); return;
-  }
-  app.innerHTML=`
-  <section class="panel">
-    <div class="meta"><span>Nya ord · ${esc(secName(w.sec))}</span><span>${sess.i+1} / ${n}</span></div>
-    <div class="bar"><i style="width:${(sess.i/n)*100}%"></i></div>
-    <div class="word">
-      <div style="display:flex;flex-direction:column;gap:6px">
-        <p class="t-big" ${lang()}>${esc(w.t)}</p>
-        <p class="sv-big">${esc(w.sv)}</p>
-        <div class="tags">${gtag(w.g)}</div>
-      </div>
-      <button class="speak" id="sp-w" aria-label="Läs upp ordet">${SPK}</button>
-    </div>
-    <div class="example">
-      <div><p class="ex-t" ${lang()}>${esc(w.exT)}</p><p class="ex-sv">${esc(w.exSv)}</p></div>
-      <button class="speak sm" id="sp-e" aria-label="Läs upp meningen">${SPK}</button>
-    </div>
-    ${litHtml(w)}<p class="ety"><span class="label">${esc(L.etyLabel||"Ursprung")}</span><br>${safeHtml(w.ety)}</p>
-    <div class="navrow">
-      <button class="btn ghost" id="prev" ${sess.i?"":"disabled"}>Tillbaka</button>
-      <button class="btn" id="next">${sess.i===n-1?"Till quizet":"Nästa ord"}</button>
-    </div>
-    <p class="kbd-hint">Tangentbord: mellanslag eller Enter = nästa, ← = tillbaka. I quizet: siffrorna väljer svar och Enter går vidare.</p>
-  </section>
-  <button class="quit" id="quit">Avbryt passet</button>`;
-  $("#sp-w").onclick=()=>speak(w.t); $("#sp-e").onclick=()=>speak(w.exT);
-  $("#prev").onclick=()=>{sess.i--;renderLearn()};
-  $("#next").onclick=()=>{if(sess.i<n-1){sess.i++;renderLearn()}else startQuiz()};
-  $("#quit").onclick=pauseSession;
-  snapRun();
-  if(!S.listenFirst) speak(w.t);
-}
+/* Glosquizet (startSession, renderLearn, startQuiz, finishSession …) ligger i src/kinds/05-words.js */
 
 /* ---------- Quizmotor (ord, verb och meningar) ----------
    Varje fråga är flerval (t:"mc") eller skriva (t:"type").
@@ -994,6 +1014,10 @@ function renderLearn(){
    Rätt på det flervalet: tillbaka som skrivfråga igen, om frågan var en skrivfråga från början (canType).
    Bara första svaret per ord räknas för repetitionsschemat och statistiken. */
 const MAX_AGAIN=4;   // max antal extra frågor per ord och övning
+/* beginQuiz(typ, frågor, opts) startar en ny runda med ett nytt sess. Allt som rundan ska ha med sig står i opts:
+   label, ctx, againFn, daily (rundan hör till Dagens pass), gramMix (blandad grammatik, räknas i S.gt.mix),
+   game/tenses (verben), och för glosquizet newW, due, i, extra och start (från lärokorten, se startQuiz).
+   fresh = börja om fast det finns en påbörjad runda. Inget tas med från ett tidigare sess. */
 function beginQuiz(kind,items,extra){
   const k=runKey({kind,...(extra||{})}), old=kind!=="words"&&k&&S.runs&&S.runs[k];
   if(old&&!(extra&&extra.fresh)&&old.done<old.total){
@@ -1004,24 +1028,18 @@ function beginQuiz(kind,items,extra){
       <button class="quit" id="quit">Tillbaka</button>`;
     $("#rcont").onclick=()=>{S.run=old; resumeRun();};
     $("#rnew").onclick=()=>{delete S.runs[k]; beginQuiz(kind,items,{...extra,fresh:true});};
-    $("#quit").onclick=renderStart; return;
+    $("#quit").onclick=backTo(renderStart); return;
   }
   if(!items.length){   // t.ex. diktamen eller ordföljd innan eleven har lärt sig några ord: ingen tom "0/0 klar"
     sess=null; $("#tabs").hidden=true;
     app.innerHTML=`<section class="panel"><h2>${esc((extra&&extra.label)||"Övningen")}</h2>
       <p class="plan" id="empty">Det finns inga frågor här än. Lär dig några ord i glosquizet först, så kommer det meningar och frågor att öva på.</p></section>
       <button class="quit" id="quit">Tillbaka</button>`;
-    $("#quit").onclick=renderStart; return;
+    $("#quit").onclick=backTo(renderStart); return;
   }
-  sess=Object.assign(sess||{},{kind,queue:items,total:items.length,done:0,firstTry:{},firstType:{},tries:{}},extra||{});
-  sess.start=sess.start||Date.now();
+  const {fresh,...opts}=extra||{};
+  sess={...opts,kind,queue:items,total:items.length,done:0,firstTry:{},firstType:{},tries:{},start:opts.start||Date.now(),daily:!!opts.daily,gramMix:!!opts.gramMix};
   nextQ();
-}
-function qType(w,isNew){ if(S.mode==="mc")return"mc"; if(S.mode==="type")return"type"; return isNew?"mc":((ws(w.id)||{}).f||"mc"); }
-function startQuiz(){
-  const items=[...sess.newW.map(w=>({w,isNew:true,t:qType(w,true)})),...sess.due.map(w=>({w,isNew:false,t:qType(w,false)}))]
-    .map(q=>({...q,canType:q.t==="type"}));
-  beginQuiz("words",shuffle(items));
 }
 function nextQ(){
   sess.cur=sess.queue.shift();
@@ -1101,7 +1119,7 @@ function renderType(d){
   if(d.autoplay) speak(d.say);
 }
 function wireTyping(onSubmit){
-  const inp=$("#ans"); setTimeout(()=>{try{inp.focus()}catch(e){}},50);
+  const inp=$("#ans"); setTimeout(()=>{try{inp.focus()}catch(e){ /* rutan kan redan vara borta */ }},50);
   // Medan eleven bedömer sig själv (selfGrade) går Enter inte vidare, annars hoppas frågan över utan att räknas
   $("#f").onsubmit=e=>{e.preventDefault(); if(sess.grading) return; if(!sess.answered) onSubmit(); else nextQ();};
   const hideAcc=()=>{if(sess&&sess.answered){const a=app.querySelector(".accents");if(a)a.hidden=true}};
@@ -1124,7 +1142,7 @@ function answerType(){
 const answerHtml=d=>d.answerHtml!=null?d.answerHtml:esc(d.answer);
 // Svar som inte kan rättas automatiskt: eleven jämför med facit och bedömer själv
 function selfGrade(d,res,inp){
-  sess.grading=true; try{inp.blur()}catch(e){}   // siffrorna 1–3 väljer Fel/Nästan/Rätt (tangenterna gäller inte i textrutan)
+  sess.grading=true; try{inp.blur()}catch(e){ /* rutan kan redan vara borta */ }   // siffrorna 1–3 väljer Fel/Nästan/Rätt (tangenterna gäller inte i textrutan)
   $("#submit").hidden=true; const a=app.querySelector(".accents"); if(a) a.hidden=true;
   $("#fb").innerHTML=`<div class="feedback near"><strong>Jämför med facit</strong>
     <p>Facit: <b ${lang()}>${answerHtml(d)}</b></p>${res.html||""}
@@ -1157,12 +1175,13 @@ async function sendReport(btn){
   const r={lang:L.code,id:itemId(c),kind:c.k||sess.kind,t:c.t,answer:String((d&&d.answer)||""),d:Date.now(),pass:S.pass};
   btn.disabled=true; btn.textContent="Skickar …";
   let ok=false;
-  if(CLOUD.db&&CLOUD.uid){ try{ await CLOUD.db.doc(`reports/${CLOUD.uid}/items/${r.d}`).set({...r,uid:CLOUD.uid}); ok=true; }catch(e){} }
-  if(!ok){ S.reports=(S.reports||[]).slice(-49); S.reports.push(r); save(); }
+  if(CLOUD.db&&CLOUD.uid){ try{ await CLOUD.db.doc(`reports/${CLOUD.uid}/items/${r.d}`).set({...r,uid:CLOUD.uid}); ok=true; }catch(e){ warnErr("felrapporten kunde inte skickas, sparas till senare",e); } }
+  if(!ok){ S.reports=(S.reports||[]).slice(-(UNSENT_MAX-1)); S.reports.push(r); save(); }
   btn.textContent="Tack! Frågan är rapporterad och blir kontrollerad.";
 }
 document.addEventListener("click",e=>{const b=e.target.closest&&e.target.closest("[data-report]"); if(b) sendReport(b);});
-/* Tangentbordet: siffror väljer svar i flerval (och Fel/Nästan/Rätt vid självbedömning), mellanslag eller
+/* Tangentbordet: siffror väljer svar i flerval (och Fel/Nästan/Rätt vid självbedömning, Igen/Svårt/Bra/Lätt i
+   glosquizet när S.selfRate är på), mellanslag eller
    Enter går till nästa ord när man lär sig nya ord, pilarna bläddrar, och Enter går alltid vidare efter ett svar. */
 document.addEventListener("keydown",e=>{
   const tg=e.target&&e.target.matches?e.target:document.body;
@@ -1171,7 +1190,7 @@ document.addEventListener("keydown",e=>{
   const n=+e.key;
   if(n>=1&&n<=9){
     if(sess&&sess.cur&&sess.d&&sess.cur.t==="mc"&&!sess.answered&&n<=sess.d.opts.length){ e.preventDefault(); answerMC(n-1); return; }
-    const gr=app.querySelectorAll("[data-gr],[data-sh]"); if(gr[n-1]){ e.preventDefault(); gr[n-1].click(); return; }
+    const gr=app.querySelectorAll("[data-gr],[data-sh],[data-rate]"); if(gr[n-1]){ e.preventDefault(); gr[n-1].click(); return; }
     return;
   }
   const onBtn=tg.matches("button,a,summary");
@@ -1181,41 +1200,10 @@ document.addEventListener("keydown",e=>{
   if(e.key==="Enter"&&!onBtn) click("#next")||click("#show")||click("#nx")||(sess&&sess.answered&&click("#submit"))||click("#exnext");
 });
 
-/* Glosquizets frågor (flerval och skriva) och kortet som visas efter ett fel svar */
-function mcOptions(w){
-  const same=shuffle(WORDS.filter(x=>x.sec===w.sec&&x.sv!==w.sv));
-  const other=shuffle(WORDS.filter(x=>x.sec!==w.sec&&x.sv!==w.sv));
-  const picks=[];
-  for(const x of same.concat(other)){ if(picks.length>=4)break; if(!picks.some(p=>p.sv===x.sv)) picks.push(x); }
-  return shuffle([w,...picks]);
-}
-const explain=w=>`<p class="ex-t" ${lang()}>${esc(w.exT)}</p><p class="ex-sv">${esc(w.exSv)}</p>${(ws(w.id)||{}).memo?`<p class="foot">Din minnesregel: ${esc(ws(w.id).memo)}</p>`:""}`;
-// Lärokortet igen efter ett fel svar: ord, översättning, genus, exempel med uppläsning och ursprung
-const studyCard=w=>`<div class="recap">
-  <div class="word" style="padding-top:0"><div><p class="recap-t" ${lang()}>${esc(w.t)}</p><p class="recap-sv">${esc(w.sv)}</p><div class="tags">${gtag(w.g)}</div></div>
-    <button type="button" class="speak sm" data-say="${esc(w.t)}" aria-label="Läs upp ordet">${SPK}</button></div>
-  <div class="example"><div><p class="ex-t" ${lang()}>${esc(w.exT)}</p><p class="ex-sv">${esc(w.exSv)}</p></div>
-    <button type="button" class="speak sm" data-say="${esc(w.exT)}" aria-label="Läs upp meningen">${SPK}</button></div>
-  ${litHtml(w)}${w.ety?`<p class="ety"><span class="label">${esc(L.etyLabel||"Ursprung")}</span><br>${safeHtml(w.ety)}</p>`:""}
-  ${memoBox(w)}</div>`;
-// Fraser och talesätt: vad varje ord betyder ordagrant (sjunde fältet i words.txt), t.ex. "avoir – ha · le cafard – kackerlackan"
-function litHtml(w){ return w.lit?`<p class="ety lit"><span class="label">Ordagrant</span><br>${safeHtml(w.lit)}</p>`:""; }
-// Egen minnesregel: visas om den finns, och kan skrivas för ord man ofta glömmer
-function memoBox(w){
-  const x=ws(w.id)||{}, m=x.memo||"";
-  if(!m&&!isLeech(w)) return "";
-  return `<div class="memo"><span class="label">${m?"Din minnesregel":"Svårt ord"}</span>
-    ${m?`<p class="ety">${esc(m)}</p>`:`<p class="ety">Det här ordet har du glömt flera gånger. Hitta på en egen minnesregel, till exempel en bild, ett ord det låter som eller en mening om något du själv har varit med om.</p>`}
-    ${ws(w.id)?`<form class="memof" data-memo="${esc(w.id)}" autocomplete="off"><input class="search" maxlength="160" placeholder="${m?"Ändra din minnesregel":"Skriv din minnesregel"}" value="${esc(m)}"><button class="btn ghost" style="width:auto">Spara</button></form>`:""}</div>`;
-}
-document.addEventListener("submit",e=>{const f=e.target.closest&&e.target.closest("[data-memo]"); if(!f) return; e.preventDefault();
-  const x=ws(f.dataset.memo); if(!x) return; const v=f.querySelector("input").value.trim();
-  if(v) x.memo=v.slice(0,160); else delete x.memo; save();
-  f.outerHTML=`<p class="foot">Sparat. Minnesregeln visas nästa gång ordet kommer.</p>`;});
 document.addEventListener("click",e=>{const b=e.target.closest&&e.target.closest("[data-say]"); if(b) speak(b.dataset.say);});
 /* ---------- Övningstyperna: ett register ----------
-   Varje typ av fråga eller övning registrerar sig med defineKind(namn, {...}): glosquizet här nedanför, alla andra
-   i src/kinds/*.js. Quizmotorn slår upp typen i KINDS med frågans k (eller passets kind). Fälten (alla valfria utom name):
+   Varje typ av fråga eller övning registrerar sig med defineKind(namn, {...}) i src/kinds/*.js
+   (glosquizet i 05-words.js). Quizmotorn slår upp typen i KINDS med frågans k (eller passets kind). Fälten (alla valfria utom name):
      name     namnet i statistiken
      mc       c => flervalsfrågan {head, ask, opts, explain, …} (se renderMC)
      type     c => skrivfrågan {head, ask, accepted | check, answer, …}, eller {render} för en egen vy (se renderType)
@@ -1249,65 +1237,14 @@ const kindView=f=>new Proxy({},{get:(_,n)=>KINDS[n]?KINDS[n][f]:undefined,has:(_
 const MC=kindView("mc"), TYPE=kindView("type"), RESTORE=kindView("restore"), EFFECT=kindView("effect"), RECAP=kindView("recap"),
   AFTER=kindView("after"), AGAIN=kindView("again"), KIND_NAMES=kindView("name");
 
-/* Glosquizet: ord → betydelse (flerval) och betydelse → ord (skriva) */
-defineKind("words",{name:"Glosor",
-  mc:c=>{const w=c.w;return{
-    head:`<div class="word"><p class="q-prompt" ${lang()}>${esc(w.t)}</p><button class="speak" id="sp" aria-label="Läs upp">${SPK}</button></div>`,
-    ask:"Vad betyder det?",
-    opts:mcOptions(w).map(o=>({label:o.sv,ok:o.id===w.id})),
-    wrongCard:studyCard(w),
-    explain:explain(w), say:w.t, sayOnShow:true}},
-  type:c=>{const w=c.w;return{
-    head:`<p class="q-prompt">${esc(w.sv)}</p>`,
-    ask:`Skriv ${L.inLang} ${w.g?`(${genderName(w.g)})`:""}`, placeholder:"Skriv här", accents:L.accents,
-    accepted:variants(w.t), answer:w.t, explain:explain(w), wrongCard:studyCard(w), say:w.t, override:true}}});
-
-/* ---------- Pass klart: schemaläggning ---------- */
-function applyAnswer(x,id){
-  const t=sess.firstType[id]||"mc", ok=sess.firstTry[id]!==false;
-  x.mcR=x.mcR||0;x.mcW=x.mcW||0;x.tyR=x.tyR||0;x.tyW=x.tyW||0;
-  if(t==="mc"){ ok?x.mcR++:x.mcW++; if(ok) x.f="type"; else x.f="mc"; }
-  else { ok?x.tyR++:x.tyW++; x.f = ok?"type":"mc"; }
-  return {t,ok};
-}
-function tally(E,r){ if(r.ok)E.right++; if(r.t==="mc"){E.mcN++; if(r.ok)E.mcR++;} else {E.tyN++; if(r.ok)E.tyR++;} }
-function finishSession(){
-  const p=S.pass, now=Date.now();
-  const extra=!!sess.extra;
-  const ids=[...sess.newW,...sess.due].map(w=>w.id);
-  const E={p,d:now,dur:Math.min(3600,Math.round((now-sess.start)/1000)),nNew:sess.newW.length,nRep:sess.due.length,right:0,total:ids.length,mcR:0,mcN:0,tyR:0,tyN:0,extra};
-  sess.newW.forEach(w=>{const x={s:0,due:p+INT[0],lp:p,ld:now}; const r=applyAnswer(x,w.id); S.w[w.id]=x; tally(E,r);});
-  let newlyMastered=0;
-  sess.due.forEach(w=>{
-    const x=S.w[w.id]; const r=applyAnswer(x,w.id); tally(E,r);
-    if(extra) return;               // extraövning flyttar inte schemat
-    const was=x.s; schedule(x,r.ok,p,now); if(r.ok&&was<MASTER&&x.s>=MASTER) newlyMastered++;
-  });
-  S.log.push(E); if(!extra) S.pass++; dropRun(sess); delete S.run; save();
-  const right=ids.filter(id=>sess.firstTry[id]!==false).length;
-  const missed=ids.filter(id=>sess.firstTry[id]===false).map(id=>byId[id]);
-  const mastered=extra?0:newlyMastered;
-  app.innerHTML=`<section class="panel">
-    <span class="label">${extra?"Extraövning klar":`Pass ${p} klart`}</span>
-    <div style="display:flex;align-items:baseline;gap:10px"><span class="big">${right}/${ids.length}</span><span class="sub">rätt på första försöket</span></div>
-    <p class="plan">${extra?"Extraövningen påverkar inte när orden kommer tillbaka, men den räknas i statistiken.":""}${sess.newW.length?`De ${sess.newW.length} nya orden kommer tillbaka i nästa pass.`:""}
-      ${mastered?` ${mastered} ord är nu inlärda. De kommer tillbaka då och då, med allt längre mellanrum.`:""}
-      ${missed.length&&!extra?" Orden du missade flyttas ned ett steg och kommer tillbaka snart.":""}</p>
-    ${missed.length?`<div class="field"><span class="label">Öva lite extra på</span><ul class="missed">${missed.map(w=>`<li><span class="t" ${lang()}>${esc(w.t)}</span><span class="sv">${esc(w.sv)}</span></li>`).join("")}</ul></div>`:""}
-    ${sess.daily?`<button class="btn" id="mix">Fortsätt dagens pass: blandade övningar</button>`:""}
-    <div class="navrow"><button class="btn ghost" id="st">Statistik</button><button class="btn ${sess.daily?"ghost":""}" id="home">Till startsidan</button></div></section>`;
-  const daily=sess.daily; if(daily){ S.dailyDay=dayKey(Date.now()); save(); }
-  sess=null; boardPush(); $("#home").onclick=renderStart; $("#st").onclick=()=>setView("stats"); renderList();
-  if(daily) $("#mix").onclick=startMix;
-}
-
-/* Verbträning (startVerbs) och meningar (startCloze) finns i src/kinds/10-verbs.js och 11-sentences.js */
+/* Glosquizet (startSession, renderLearn, finishSession …) finns i src/kinds/05-words.js, verbträning (startVerbs) och
+   meningar (startCloze) i src/kinds/10-verbs.js och 11-sentences.js */
 /* ---------- Ordlista ---------- */
 /* Prognos: hur många ord som ska repeteras i nästa pass och de kommande dagarna */
 function statsForecast(){
   const t0=Date.now(), xs=WORDS.map(w=>ws(w.id)).filter(Boolean);
   const rows=[{l:"nästa",n:xs.filter(isDue).length}];
-  for(let i=1;i<=6;i++) rows.push({l:i===1?"i morgon":"+"+i+" d",n:xs.filter(x=>x.dd&&x.dd>=addDays(t0,i)&&x.dd<addDays(t0,i+1)).length});
+  for(let i=1;i<=6;i++){ const a=addDays(t0,i), b=addDays(t0,i+1); rows.push({l:i===1?"i morgon":"+"+i+" d",n:xs.filter(x=>x.dd&&x.dd>=a&&x.dd<b).length}); }
   const soon=xs.filter(x=>!x.dd&&x.due>S.pass).length;
   if(!rows.some(r=>r.n)&&!soon) return "";
   const max=Math.max(...rows.map(r=>r.n),1);
@@ -1444,7 +1381,7 @@ function renderStats(){
     .filter(h=>h.err>0).sort((a,b)=>b.err-a.err||(b.err/b.tot)-(a.err/a.tot)).slice(0,10);
 
   // Avsnitt
-  const secRows=SECTIONS.map(s=>{const ws_=WORDS.filter(w=>w.sec===s.id);const k=ws_.filter(isMastered).length,l=ws_.filter(isLearned).length;
+  const secRows=SECTIONS.map(s=>{const ws_=secWords(s.id);const k=ws_.filter(isMastered).length,l=ws_.filter(isLearned).length;
     let r=0,n=0;ws_.filter(isLearned).forEach(w=>{const x=ws(w.id);r+=(x.mcR||0)+(x.tyR||0);n+=(x.mcR||0)+(x.mcW||0)+(x.tyR||0)+(x.tyW||0)});
     return {s,tot:ws_.length,k,v:l-k,rest:ws_.length-l,acc:pct(r,n)}});
 
@@ -1555,14 +1492,33 @@ function addCourseData(code,d){
   const x=LANGUAGES[code], {verbTables,...rest}=d;
   DATA_KEYS[code]=Object.keys(rest); Object.assign(x,rest);
   if(verbTables){ if(!(code in LANG_VERBS)) LANG_VERBS[code]=x.verbs; x.verbs=withVerbTables(LANG_VERBS[code],verbTables); }
+  if(INLINE_DATA[code+"-exam"]) addExamData(code,INLINE_DATA[code+"-exam"]);   // preview.html: provet är inbakat
   return x;
+}
+// Hämtar data/<namn>.json (namn = kod eller <kod>-exam) med filens hash ur DATA_VERSION; samma hämtning delas av alla som väntar
+function fetchData(name){
+  const v=(DATA_VERSION&&typeof DATA_VERSION==="object"?DATA_VERSION[name]:DATA_VERSION)||"";
+  return LOADING[name]=LOADING[name]||fetch(`data/${name}.json?v=${v}`).then(r=>{if(!r.ok) throw new Error(r.status); return r.json();})
+    .catch(e=>{delete LOADING[name]; throw e;});
 }
 function loadCourse(code){
   if(INLINE_DATA[code]) return Promise.resolve(addCourseData(code,INLINE_DATA[code]));
-  const v=(DATA_VERSION&&typeof DATA_VERSION==="object"?DATA_VERSION[code]:DATA_VERSION)||"";
-  return LOADING[code]=LOADING[code]||fetch(`data/${code}.json?v=${v}`).then(r=>{if(!r.ok) throw new Error(r.status); return r.json();})
-    .then(d=>addCourseData(code,d))
-    .catch(e=>{delete LOADING[code]; throw e;});
+  return fetchData(code).then(d=>addCourseData(code,d));
+}
+/* Provträningen (content.exam) ligger i en egen fil, data/<kod>-exam.json, som hämtas först när något behöver provets
+   uppgifter (ensureExam). Kursens datafil har bara ett index: content.exam = {lazy: true, name, level, pass, parts, …,
+   tasks: [{id, part, teil, title, level, type, k, minWords, maxWords, time, prep, speak, sim}]} (k = exKind, räknad av
+   build.py), så att startsidan, menyn, skrivsidans lista, nivåmätaren och planen kan visas direkt. Texter, frågor och
+   facit (lines, qs, items, task …) finns först när ensureExam() är klar; examReady() säger om de finns. */
+const examReady=()=>{ const e=L&&L.content&&L.content.exam; return !e||!e.lazy; };
+function addExamData(code,d){
+  const c=LANGUAGES[code].content; if(c&&c.exam&&c.exam.lazy) c.exam=d;
+  return d;
+}
+function ensureExam(){
+  const code=L.code; if(examReady()) return Promise.resolve(L.content.exam);
+  if(INLINE_DATA[code+"-exam"]) return Promise.resolve(addExamData(code,INLINE_DATA[code+"-exam"]));
+  return fetchData(code+"-exam").then(d=>addExamData(code,d));
 }
 /* Minne: hämtade kurser ligger kvar så att det går snabbt att byta tillbaka, men högst KEEP_COURSES stycken.
    Den kurs som varit oanvänd längst släpps (ord, innehåll, grammatik, verbtabeller och det som räknats fram ur dem) och hämtas
@@ -1573,7 +1529,7 @@ function releaseCourse(code){
   (DATA_KEYS[code]||["words","content","videos","grammar"]).forEach(k=>{ delete x[k]; });
   if(code in LANG_VERBS){ x.verbs=LANG_VERBS[code]; delete LANG_VERBS[code]; }
   delete x.base; Object.keys(x).filter(k=>k[0]==="_").forEach(k=>{ delete x[k]; });
-  delete LOADING[code]; delete DATA_KEYS[code];
+  delete LOADING[code]; delete LOADING[code+"-exam"]; delete DATA_KEYS[code];
 }
 function trimCourses(code){
   const i=USED_COURSES.indexOf(code); if(i>=0) USED_COURSES.splice(i,1); USED_COURSES.push(code);
@@ -1590,7 +1546,7 @@ function useLang(code){
   WANT_LANG=code;
   if(LANGUAGES[code].words==null&&INLINE_DATA[code]&&!LOADING[code]) addCourseData(code,INLINE_DATA[code]);   // preview.html: datan är inbakad
   if(LANGUAGES[code].words==null){
-    try{ $("#course").value=code; }catch(e){}
+    try{ $("#course").value=code; }catch(e){ /* väljaren finns inte (t.ex. bara en kurs) */ }
     app.innerHTML=`<section class="panel"><p class="plan">Hämtar ${esc(LANGUAGES[code].course||LANGUAGES[code].name)} …</p></section>`;
     loadCourse(code).then(()=>{ if(WANT_LANG===code) useLang(code); }).catch(()=>{
       if(WANT_LANG!==code) return;
@@ -1604,7 +1560,7 @@ function useLang(code){
   CONJBY=Object.fromEntries(CONJ.map(c=>[c.verb+"|"+c.tense+"|"+c.person,c]));
   cloudFlush();
   loadState(); rebuildWords(); sess=null; pickVoice();
-  try{localStorage.setItem(LANG_KEY,code)}catch(e){}
+  try{localStorage.setItem(LANG_KEY,code)}catch(e){ /* privat läge: kursvalet sparas inte */ }
   $("#title").textContent=L.title;
   $("#search").value="";
   $("#search").placeholder=`Sök ${L.inLang} eller svenska`;

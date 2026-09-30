@@ -1,7 +1,7 @@
 // Ordlista för Tyska 7 (Moderna språk 7, steg 7, B2.1 mot C1). Rader som börjar med // är kommentarer.
 // Kapitlen följer kursplanen för steg 7, TestDaF och Goethe C1, inte en specifik lärobok. Ingen rad har exakt samma ord-id som i Tyska 4, 5 eller 6 (närliggande former kan förekomma).
 //
-// Format, en rad per ord (se languages/de/SPEC-ordlista.md):
+// Format, en rad per ord (se docs/spec/ordlista.md):
 //   tyska|svenska|genus|exempel på tyska|exempel på svenska|kommentar|ordagrant
 // Ordets tyska form och avsnittets id används som nycklar för sparade framsteg, ändra dem inte i efterhand.
 #s1|Kap 1 · Studieren in Deutschland
@@ -75,7 +75,7 @@ die Herausgeberin (-nen)|redaktör, utgivare (kvinna)|f|Die [Herausgeberin] des 
 wissenschaftliches Arbeiten|vetenskapligt skrivande|n|Im ersten Semester gibt es einen Kurs zum [wissenschaftlichen] Arbeiten.|Första terminen finns en kurs i vetenskapligt skrivande.|Nominaliserad infinitiv, därför neutrum.
 der Studienalltag|studievardag|m|Der [Studienalltag] an einer Musikhochschule besteht vor allem aus Üben.|Studievardagen på en musikhögskola består framför allt av övning.|<b>der Alltag</b> = vardag.
 der Studienaufenthalt (-e)|studievistelse|m|Ein [Studienaufenthalt] im Ausland wird mit Erasmus gefördert.|En studievistelse utomlands får stöd från Erasmus.|<b>der Aufenthalt</b> = vistelse.
-die Partnerhochschule (-n)|partnerhögskola|f|Stockholm ist eine [Partnerhochschule] der Musikhochschule in Köln.|Stockholm är partnerhögskola till musikhögskolan i Köln.|Utbytesstudenter slipper ofta antagningsprov.
+die Partnerhochschule (-n)|partnerhögskola|f|Die Musikhochschule in Stockholm ist eine [Partnerhochschule] unserer Hochschule.|Musikhögskolan i Stockholm är partnerhögskola till vår högskola.|Utbytesstudenter slipper ofta antagningsprov.
 das Learning Agreement (-s)|studieplan för utbytesstudier|n|Vor der Abreise muss das [Learning] Agreement unterschrieben sein.|Före avresan måste studieplanen vara underskriven.|Engelskt uttryck även på tyska universitet. Luckan gäller första ordet.
 die Kommilitonin (-nen)|studiekamrat (kvinna)|f|Eine [Kommilitonin] hat mir ihre Notizen geliehen.|En studiekamrat lånade mig sina anteckningar.|Man: der Kommilitone (svag maskulin). Från latinets <b>commilito</b> (vapenbroder).
 das Studentenwerk (-e)|studentservice (bostäder, mensa, stöd)|n|Das [Studentenwerk] vermittelt günstige Zimmer in Wohnheimen.|Studentservicen förmedlar billiga rum i studenthem.|Kallas numera ofta Studierendenwerk.

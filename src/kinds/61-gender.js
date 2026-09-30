@@ -29,10 +29,10 @@ function startGender(){
   S.ga=S.ga||{};
   // Ord man redan övar på först, sedan resten av kapitlet man är på
   const sec=curSec(), pool=genderNouns().filter(n=>isLearned(n.w)||n.w.sec===sec);
-  const pick=pool.map(n=>({n,st:S.ga[n.w.id]||{g:0,p:0,last:0},r:Math.random()}))
-    .sort((a,b)=>(a.st.g+a.st.p)-(b.st.g+b.st.p)||a.st.last-b.st.last||a.r-b.r).slice(0,10);
+  // Svagast först: poängen är g+p (S.ga[id] = {g, p, last})
+  const pick=weakestFirst(pool,"ga",{id:n=>n.w.id,key:(n,st)=>st?(st.g||0)+(st.p||0):0}).slice(0,10);
   const items=[];
-  pick.forEach(({n,st})=>{
+  pick.forEach(n=>{const st=S.ga[n.w.id]||{g:0,p:0};
     items.push({k:"gen",id:"gen:"+n.w.id,ref:n.w.id,t:"mc",canType:false});
     if(n.pl) items.push({k:"plu",id:"plu:"+n.w.id,ref:n.w.id,t:st.p>=1?"type":"mc",canType:true});
   });

@@ -68,14 +68,14 @@
 "id": "modsubj-001",
 "topic": "modsubj",
 "rule": "msu-sollen",
-"q": "Der Dirigent [soll] schon mit sechs Jahren komponiert haben.",
+"q": "Laut seiner Biografie [soll] der Dirigent schon mit sechs Jahren komponiert haben.",
 "alt": [
 "will",
-"muss",
-"darf"
+"darf",
+"sollen"
 ],
 "why": "sollen = det sägs att (man påstår det om honom). will skulle betyda att han själv påstår det.",
-"sv": "Dirigenten ska ha komponerat redan vid sex års ålder."
+"sv": "Enligt hans biografi ska dirigenten ha komponerat redan vid sex års ålder."
 },
 {
 "id": "modsubj-002",
@@ -122,9 +122,9 @@
 "rule": "msu-grad",
 "q": "Das [kann] nicht stimmen, die Zahl ist viel zu hoch.",
 "alt": [
-"soll",
 "will",
-"möchte"
+"möchte",
+"kannst"
 ],
 "why": "kann nicht = det är omöjligt, talaren är säker på att något är fel.",
 "sv": "Det kan inte stämma, siffran är alldeles för hög."
@@ -266,7 +266,7 @@
 "q": "Wir [hätten] die Karten früher kaufen sollen.",
 "alt": [
 "haben",
-"hatten",
+"hätte",
 "würden"
 ],
 "why": "hätte + infinitiv + sollen = borde ha.",
@@ -304,7 +304,7 @@
 "rule": "mpf-k2",
 "q": "Das Orchester [hätte] nicht so schnell spielen dürfen.",
 "alt": [
-"hatte",
+"hätten",
 "hat",
 "wäre"
 ],
@@ -369,9 +369,9 @@
 "rule": "msu-sollen",
 "q": "Die Sängerin [soll] den Vertrag schon unterschrieben haben.",
 "alt": [
-"will",
-"möchte",
-"darf"
+"sollen",
+"darf",
+"sollt"
 ],
 "why": "sollen = det sägs (andra påstår det).",
 "sv": "Sångerskan ska redan ha skrivit under kontraktet."
@@ -383,8 +383,8 @@
 "q": "Das neue Konzerthaus [soll] eine hervorragende Akustik haben.",
 "alt": [
 "will",
-"muss",
-"mag"
+"darf",
+"möchte"
 ],
 "why": "sollen: man säger att …",
 "sv": "Det nya konserthuset sägs ha en utmärkt akustik."
@@ -406,14 +406,14 @@
 "id": "modsubj-009",
 "topic": "modsubj",
 "rule": "msu-wollen",
-"q": "Er [will] das Stück in nur einer Nacht komponiert haben.",
+"q": "Er [will] das Stück in nur einer Nacht komponiert haben – das behauptet jedenfalls er selbst.",
 "alt": [
 "soll",
-"muss",
-"kann"
+"darf",
+"wollt"
 ],
 "why": "wollen = påstår sig själv.",
-"sv": "Han påstår att han komponerade stycket på bara en natt."
+"sv": "Han påstår sig ha komponerat stycket på bara en natt – det är i alla fall vad han själv säger."
 },
 {
 "id": "modsubj-010",
@@ -421,7 +421,7 @@
 "rule": "msu-wollen",
 "q": "Niemand [will] den Unfall gesehen haben.",
 "alt": [
-"soll",
+"wollen",
 "muss",
 "darf"
 ],
@@ -473,7 +473,7 @@
 "rule": "msu-grad",
 "q": "Die Reparatur [dürfte] etwa 300 Euro kosten.",
 "alt": [
-"darf",
+"dürften",
 "durfte",
 "will"
 ],
@@ -566,7 +566,7 @@
 "alt": [
 "will",
 "darf",
-"mag"
+"möchte"
 ],
 "why": "sollen: enligt uppgift.",
 "sv": "Beethoven ska ofta ha sjungit högt när han komponerade."

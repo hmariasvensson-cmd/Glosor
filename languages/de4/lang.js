@@ -15,7 +15,8 @@ LANGUAGES.de4 = {
   storageKey: "glosor-de4-v1", // ÄNDRA ALDRIG: sparade framsteg ligger under den här nyckeln
   extends: "de",               // fälten i inherit hämtas från Tyska 5 och slås ihop med fälten här (egna fält vinner)
   inherit: ["connectors", "tenseCheck", "verbs"],
-  nextCourse: "de",            // kursen man går vidare till när den här är klar
+  elective: {test: /^mt\d$/, label: "Musikteori · bara när du väljer det"},   // musikteorin (mt1–mt7) är ett valbart område, som i Tyska 5
+  nextCourse: "de",          // kursen man går vidare till när den här är klar
 
   accents: "ä ö ü ß",
   verbAccents: "ä ö ü ß",
@@ -33,7 +34,7 @@ LANGUAGES.de4 = {
   storyIntro: "Läs berättelsen och välj rätt form i varje lucka: rätt verbform i Präteritum eller Perfekt, och ett bindeord som passar ordföljden.",
   cultureIntro: "Läs en kort text om Tyskland, Österrike eller Schweiz, svara på en fråga och jämför med hur det är i Sverige.",
 
-  // Grammatikövningar. Frågorna ligger i content/grammar-*.json (se content/GRAMMATIK-SPEC.md).
+  // Grammatikövningar. Frågorna ligger i content/grammar-*.json (format i docs/spec/grammatik.md, områdena i grammar.json).
   // Områden (topics; secs = kapitel där området kommer först) och regelnamn ligger i grammar.json, som build.py lägger i kursens datafil (L.grammar).
 
   // Samma verbtabeller som Tyska 5, men utan Konjunktiv I och med egna verbspel

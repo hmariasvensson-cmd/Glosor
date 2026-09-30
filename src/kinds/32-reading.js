@@ -15,6 +15,6 @@ function readIntro(id){
     <button class="btn" id="toq">Till frågorna</button></section>
     <button class="quit" id="quit">Tillbaka</button>`;
   wirePlay(r=>speakSeq(t.lines,r,highlightLine)); $("#stop").onclick=stopSpeech; wireGloss(t); wireSvToggle();
-  $("#toq").onclick=()=>{stopSpeech(); startTextQs("rq",id)}; $("#quit").onclick=()=>{stopSpeech();openReading()};
+  $("#toq").onclick=()=>{stopSpeech(); startTextQs("rq",id)}; $("#quit").onclick=backTo(openReading);
 }
 defineKind("rq",{name:"Läsförståelse",mc:textQ,restore:ref=>textQById("rq",ref)?{}:null,after:textAfter,open:openReading});

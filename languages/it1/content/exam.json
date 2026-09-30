@@ -1,0 +1,508 @@
+{
+ "name": "CELI Impatto (A1)",
+ "level": "A1",
+ "pass": 50,
+ "note": "Ett kort övningsprov i samma format som CELI Impatto (A1, Università per Stranieri di Perugia), skrivet för appen och anpassat till Italienska 1. Inte officiellt material. På provet görs läsa och skriva under sammanlagt 1 h 15 min, och den muntliga delen tar 5–6 minuter inför en examinator. Man behöver ungefär hälften av poängen i den skriftliga och i den muntliga delen; resultatet är bara godkänt eller underkänt. Fler uppgifter finns i Italienska 2.",
+ "parts": [
+  {
+   "id": "lettura",
+   "name": "Comprensione della lettura",
+   "sv": "Läsa",
+   "time": 25
+  },
+  {
+   "id": "completare",
+   "name": "Produzione scritta: completare un testo",
+   "sv": "Skriva: lucktext",
+   "time": 15
+  },
+  {
+   "id": "scrittura",
+   "name": "Produzione scritta: cartolina o messaggio",
+   "sv": "Skriva: meddelande",
+   "time": 20
+  },
+  {
+   "id": "orale",
+   "name": "Produzione orale",
+   "sv": "Tala",
+   "time": 6
+  }
+ ],
+ "tasks": [
+  {
+   "id": "it1-le-1",
+   "part": "lettura",
+   "teil": "A.1",
+   "title": "Piccoli testi",
+   "time": 10,
+   "instr": "Du läser fyra korta texter. Välj rätt svar (a, b eller c) till varje text.",
+   "lines": [
+    {
+     "fr": "1. BAR CENTRALE – Aperto tutti i giorni dalle 7 alle 20. Domenica chiuso.",
+     "sv": "1. BAR CENTRALE – Öppet alla dagar 7–20. Söndag stängt."
+    },
+    {
+     "fr": "2. Ciao Sara! Sono a casa di Marco. Torno alle sei. Papà",
+     "sv": "2. Hej Sara! Jag är hemma hos Marco. Jag kommer tillbaka klockan sex. Pappa"
+    },
+    {
+     "fr": "3. Menù del giorno: pasta al pomodoro, insalata, acqua. 12 euro.",
+     "sv": "3. Dagens meny: pasta med tomatsås, sallad, vatten. 12 euro."
+    },
+    {
+     "fr": "4. Lezione di italiano: il lunedì e il giovedì, aula 3, ore 16.",
+     "sv": "4. Italienskalektion: måndagar och torsdagar, sal 3, klockan 16."
+    }
+   ],
+   "qs": [
+    {
+     "q": "Testo 1: il bar…",
+     "opts": [
+      "è aperto la domenica.",
+      "chiude alle otto di sera.",
+      "apre alle nove."
+     ],
+     "a": 1,
+     "why": "« dalle 7 alle 20 »: 20 = otto di sera. Domenica chiuso = stängt på söndag."
+    },
+    {
+     "q": "Testo 2: dov'è il papà?",
+     "opts": [
+      "A casa.",
+      "A scuola.",
+      "A casa di Marco."
+     ],
+     "a": 2,
+     "why": "« Sono a casa di Marco »."
+    },
+    {
+     "q": "Testo 3: il menù del giorno…",
+     "opts": [
+      "costa dodici euro.",
+      "ha la pizza.",
+      "ha il vino."
+     ],
+     "a": 0,
+     "why": "12 = dodici."
+    },
+    {
+     "q": "Testo 4: la lezione di italiano è…",
+     "opts": [
+      "il martedì.",
+      "due volte alla settimana.",
+      "la mattina."
+     ],
+     "a": 1,
+     "why": "Il lunedì e il giovedì = två gånger i veckan. Ore 16 är på eftermiddagen."
+    }
+   ]
+  },
+  {
+   "id": "it1-le-2",
+   "part": "lettura",
+   "teil": "A.2",
+   "title": "Mi presento",
+   "time": 10,
+   "instr": "Du läser ett mejl. Är påståendena rätt (Vero) eller fel (Falso)? På provet hör varje påstående till en bild.",
+   "lines": [
+    {
+     "fr": "Ciao! Mi chiamo Chiara e ho quattordici anni. Sono italiana, di Bologna.",
+     "sv": "Hej! Jag heter Chiara och är fjorton år. Jag är italienska, från Bologna."
+    },
+    {
+     "fr": "Abito in un appartamento in centro con mia madre e mio fratello Luca.",
+     "sv": "Jag bor i en lägenhet i centrum med min mamma och min bror Luca."
+    },
+    {
+     "fr": "Luca ha dieci anni e ha un gatto nero, Nerone.",
+     "sv": "Luca är tio år och har en svart katt, Nerone."
+    },
+    {
+     "fr": "La mattina vado a scuola a piedi. La mia materia preferita è l'inglese.",
+     "sv": "På morgonen går jag till skolan. Mitt favoritämne är engelska."
+    },
+    {
+     "fr": "Il sabato gioco a pallavolo e la sera guardo un film. E tu? Scrivimi! Chiara",
+     "sv": "På lördagarna spelar jag volleyboll och på kvällen tittar jag på en film. Och du? Skriv till mig! Chiara"
+    }
+   ],
+   "qs": [
+    {
+     "q": "Chiara ha quattordici anni.",
+     "opts": [
+      "Vero",
+      "Falso"
+     ],
+     "a": 0,
+     "why": "« ho quattordici anni »."
+    },
+    {
+     "q": "Chiara abita in una casa in campagna.",
+     "opts": [
+      "Vero",
+      "Falso"
+     ],
+     "a": 1,
+     "why": "Hon bor « in un appartamento in centro »."
+    },
+    {
+     "q": "Chiara ha un fratello.",
+     "opts": [
+      "Vero",
+      "Falso"
+     ],
+     "a": 0,
+     "why": "« mio fratello Luca »."
+    },
+    {
+     "q": "Il gatto è bianco.",
+     "opts": [
+      "Vero",
+      "Falso"
+     ],
+     "a": 1,
+     "why": "« un gatto nero » = en svart katt."
+    },
+    {
+     "q": "Chiara va a scuola in autobus.",
+     "opts": [
+      "Vero",
+      "Falso"
+     ],
+     "a": 1,
+     "why": "« a piedi » = till fots."
+    },
+    {
+     "q": "Il sabato Chiara gioca a pallavolo.",
+     "opts": [
+      "Vero",
+      "Falso"
+     ],
+     "a": 0,
+     "why": "« Il sabato gioco a pallavolo »."
+    }
+   ]
+  },
+  {
+   "id": "it1-le-bild-1",
+   "part": "lettura",
+   "teil": "A.1",
+   "type": "pick",
+   "title": "Frasi e immagini",
+   "time": 5,
+   "instr": "Som på provet: läs meningarna och välj den bild som passar till varje mening.",
+   "items": [
+    {
+     "q": "Oggi fa bel tempo e c'è il sole.",
+     "sv": "I dag är det fint väder och solen skiner.",
+     "opts": [
+      "sol",
+      "regn",
+      "sno",
+      "vind"
+     ],
+     "a": 0,
+     "why": "il sole = solen."
+    },
+    {
+     "q": "Vado in centro in autobus.",
+     "sv": "Jag åker in till centrum med buss.",
+     "opts": [
+      "bil",
+      "buss",
+      "cykel",
+      "tag"
+     ],
+     "a": 1,
+     "why": "l'autobus = bussen."
+    },
+    {
+     "q": "Per cena mangio il pesce.",
+     "sv": "Till middag äter jag fisk.",
+     "opts": [
+      "pasta",
+      "pizza",
+      "fisk",
+      "sallad"
+     ],
+     "a": 2,
+     "why": "il pesce = fisken."
+    },
+    {
+     "q": "Scusi, dov'è la farmacia?",
+     "sv": "Ursäkta, var ligger apoteket?",
+     "opts": [
+      "sjukhus",
+      "bank",
+      "apotek",
+      "post"
+     ],
+     "a": 2,
+     "why": "la farmacia = apoteket."
+    }
+   ]
+  },
+  {
+   "id": "it1-sc-1",
+   "part": "completare",
+   "teil": "B.1",
+   "title": "Completa il messaggio",
+   "time": 8,
+   "instr": "Läs meddelandet och välj det ord som passar i varje lucka (1–6).",
+   "lines": [
+    {
+     "fr": "Ciao Anna!",
+     "sv": "Hej Anna!"
+    },
+    {
+     "fr": "Come stai? Io (1) ___ bene. Oggi è sabato e (2) ___ al mare con la mia famiglia.",
+     "sv": "Hur mår du? Jag mår bra. I dag är det lördag och jag åker till havet med min familj."
+    },
+    {
+     "fr": "Mia sorella (3) ___ sedici anni e porta (4) ___ amica, Giulia. Noi (5) ___ la pizza in un ristorante vicino alla spiaggia.",
+     "sv": "Min syster är sexton år och tar med en kompis, Giulia. Vi äter pizza på en restaurang nära stranden."
+    },
+    {
+     "fr": "Domenica (6) ___ anche tu? Un bacio, Marta",
+     "sv": "Kommer du också på söndag? Puss, Marta"
+    }
+   ],
+   "qs": [
+    {
+     "q": "(1)",
+     "opts": [
+      "sto",
+      "sta",
+      "sono"
+     ],
+     "a": 0,
+     "why": "Stare bene = må bra: io sto."
+    },
+    {
+     "q": "(2)",
+     "opts": [
+      "vado",
+      "va",
+      "andiamo"
+     ],
+     "a": 0,
+     "why": "Subjektet är jag (io): vado."
+    },
+    {
+     "q": "(3)",
+     "opts": [
+      "è",
+      "ha",
+      "fa"
+     ],
+     "a": 1,
+     "why": "Ålder med avere: ha sedici anni."
+    },
+    {
+     "q": "(4)",
+     "opts": [
+      "un",
+      "una",
+      "un'"
+     ],
+     "a": 2,
+     "why": "Amica är femininum och börjar på vokal: un'amica."
+    },
+    {
+     "q": "(5)",
+     "opts": [
+      "mangiano",
+      "mangio",
+      "mangiamo"
+     ],
+     "a": 2,
+     "why": "Noi → mangiamo."
+    },
+    {
+     "q": "(6)",
+     "opts": [
+      "vieni",
+      "viene",
+      "vengo"
+     ],
+     "a": 0,
+     "why": "Subjektet är du (tu): vieni."
+    }
+   ]
+  },
+  {
+   "id": "it1-sc-2",
+   "part": "completare",
+   "teil": "B.1",
+   "title": "Completa la presentazione",
+   "time": 8,
+   "instr": "Läs texten och välj det ord som passar i varje lucka (1–6).",
+   "lines": [
+    {
+     "fr": "Mi (1) ___ Erik e sono svedese. Abito (2) ___ Göteborg.",
+     "sv": "Jag heter Erik och är svensk. Jag bor i Göteborg."
+    },
+    {
+     "fr": "Ho (3) ___ fratello e due sorelle. (4) ___ mio cane si chiama Bruno.",
+     "sv": "Jag har en bror och två systrar. Min hund heter Bruno."
+    },
+    {
+     "fr": "A scuola studio l'italiano (5) ___ l'inglese. Nel tempo libero (6) ___ la chitarra.",
+     "sv": "I skolan läser jag italienska och engelska. På fritiden spelar jag gitarr."
+    }
+   ],
+   "qs": [
+    {
+     "q": "(1)",
+     "opts": [
+      "chiamo",
+      "chiama",
+      "chiami"
+     ],
+     "a": 0,
+     "why": "Mi chiamo = jag heter."
+    },
+    {
+     "q": "(2)",
+     "opts": [
+      "in",
+      "a",
+      "di"
+     ],
+     "a": 1,
+     "why": "Före en stad: a (abito a Roma, a Göteborg)."
+    },
+    {
+     "q": "(3)",
+     "opts": [
+      "uno",
+      "una",
+      "un"
+     ],
+     "a": 2,
+     "why": "Fratello är maskulinum och börjar på konsonant: un fratello."
+    },
+    {
+     "q": "(4)",
+     "opts": [
+      "La",
+      "Il",
+      "Lo"
+     ],
+     "a": 1,
+     "why": "Cane är maskulinum: il mio cane (artikeln står framför possessivet)."
+    },
+    {
+     "q": "(5)",
+     "opts": [
+      "e",
+      "è",
+      "o"
+     ],
+     "a": 0,
+     "why": "e = och. è = är."
+    },
+    {
+     "q": "(6)",
+     "opts": [
+      "gioco",
+      "suono",
+      "faccio"
+     ],
+     "a": 1,
+     "why": "Om instrument: suonare (suono la chitarra). Giocare används om spel och sport."
+    }
+   ]
+  },
+  {
+   "id": "it1-sc-3",
+   "part": "scrittura",
+   "teil": "B.2",
+   "title": "Un messaggio a un'amica",
+   "time": 10,
+   "minWords": 10,
+   "criteria": [
+    "Adeguatezza al compito",
+    "Lessico",
+    "Grammatica e ortografia"
+   ],
+   "instr": "Skriv ett kort meddelande till en kompis (tu). 10–15 ord.",
+   "task": "Sei al bar con i tuoi amici. Scrivi un messaggio a un'amica: dove sei, con chi e che cosa mangi o bevi. (10–15 parole)",
+   "model": "Ciao Giulia! Sono al bar in centro con Luca e Sara. Bevo un cappuccino e mangio un cornetto. Vieni? Elsa",
+   "modelSv": "Hej Giulia! Jag är på kaféet i centrum med Luca och Sara. Jag dricker en cappuccino och äter en croissant. Kommer du? Elsa"
+  },
+  {
+   "id": "it1-sc-4",
+   "part": "scrittura",
+   "teil": "B.2",
+   "title": "Mi presento",
+   "time": 10,
+   "minWords": 10,
+   "criteria": [
+    "Adeguatezza al compito",
+    "Lessico",
+    "Grammatica e ortografia"
+   ],
+   "instr": "Skriv några meningar om dig själv till en ny kompis i en italiensk skola. 10–15 ord.",
+   "task": "Scrivi a un nuovo compagno di classe italiano: come ti chiami, quanti anni hai, dove abiti e che cosa ti piace fare. (10–15 parole)",
+   "model": "Ciao! Mi chiamo Adam, ho quindici anni e abito a Malmö. Mi piace giocare a calcio e ascoltare la musica.",
+   "modelSv": "Hej! Jag heter Adam, är femton år och bor i Malmö. Jag tycker om att spela fotboll och lyssna på musik."
+  },
+  {
+   "id": "it1-or-1",
+   "part": "orale",
+   "teil": "Parte 1",
+   "title": "Presentarsi",
+   "prep": 0,
+   "time": 2,
+   "criteria": [
+    "Adeguatezza al compito",
+    "Interazione",
+    "Lessico",
+    "Grammatica",
+    "Pronuncia"
+   ],
+   "instr": "Presentera dig för examinatorn och svara på enkla frågor. På provet börjar samtalet utan förberedelse. Tala i ungefär två minuter.",
+   "task": "L'esaminatore ti fa alcune domande, per esempio:\n– Come ti chiami? Come si scrive?\n– Quanti anni hai?\n– Di dove sei? Dove abiti?\n– Hai fratelli o sorelle?\n– Che cosa ti piace fare?",
+   "phrases": [
+    "Mi chiamo … Si scrive …",
+    "Ho … anni.",
+    "Sono svedese, abito a …",
+    "Ho un fratello / una sorella.",
+    "Non ho fratelli.",
+    "Mi piace …",
+    "Può ripetere, per favore?"
+   ],
+   "model": "Mi chiamo Klara, si scrive K-L-A-R-A. Ho quindici anni. Sono svedese e abito a Västerås. Ho una sorella, si chiama Ida e ha dodici anni. Mi piace la musica: suono il pianoforte. Mi piace anche la pizza!",
+   "modelSv": "Jag heter Klara, det stavas K-L-A-R-A. Jag är femton år. Jag är svensk och bor i Västerås. Jag har en syster, hon heter Ida och är tolv år. Jag gillar musik: jag spelar piano. Jag gillar också pizza!"
+  },
+  {
+   "id": "it1-or-2",
+   "part": "orale",
+   "teil": "Parte 2",
+   "title": "Descrivere una foto: al bar",
+   "prep": 2,
+   "time": 2,
+   "criteria": [
+    "Adeguatezza al compito",
+    "Interazione",
+    "Lessico",
+    "Grammatica",
+    "Pronuncia"
+   ],
+   "instr": "På provet får du ett foto och berättar vad du ser, och svarar sedan på några enkla frågor. Här beskrivs fotot i ord. Tala i ungefär två minuter.",
+   "task": "Nella foto c'è un bar in una piazza. Due ragazze sono a un tavolo: una beve un'aranciata, l'altra mangia un gelato. Un cameriere porta due caffè. C'è il sole e fa caldo. Descrivi la foto: chi c'è, che cosa fanno, com'è il tempo. Poi rispondi: che cosa prendi di solito al bar?",
+   "phrases": [
+    "Nella foto c'è / ci sono …",
+    "Una ragazza beve …",
+    "L'altra mangia …",
+    "Il cameriere porta …",
+    "C'è il sole, fa caldo.",
+    "Di solito prendo …"
+   ],
+   "model": "Nella foto c'è un bar in una piazza. Ci sono due ragazze a un tavolo. Una ragazza beve un'aranciata e l'altra mangia un gelato. Il cameriere porta due caffè. C'è il sole e fa caldo. Di solito al bar prendo una cioccolata calda e un cornetto.",
+   "modelSv": "På fotot finns ett kafé på ett torg. Två tjejer sitter vid ett bord. Den ena dricker en apelsinläsk och den andra äter en glass. Servitören kommer med två kaffe. Solen skiner och det är varmt. Oftast tar jag en varm choklad och en croissant på kaféet."
+  }
+ ]
+}

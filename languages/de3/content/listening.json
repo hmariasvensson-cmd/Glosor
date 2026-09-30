@@ -58,6 +58,26 @@
     "who": "A",
     "fr": "Mit Karte, bitte.",
     "sv": "Med kort, tack."
+   },
+   {
+    "who": "B",
+    "fr": "Hier ist Ihre Fahrkarte. Sie können sie auch in der App speichern.",
+    "sv": "Här är din biljett. Du kan också spara den i appen."
+   },
+   {
+    "who": "A",
+    "fr": "Danke! Und wenn ich von Salzburg weiter nach Hallstatt fahren will?",
+    "sv": "Tack! Och om jag vill åka vidare från Salzburg till Hallstatt?"
+   },
+   {
+    "who": "B",
+    "fr": "Dann nehmen Sie in Salzburg den Bus. Der fährt jede Stunde vor dem Bahnhof ab.",
+    "sv": "Då tar du bussen i Salzburg. Den går varje timme utanför stationen."
+   },
+   {
+    "who": "A",
+    "fr": "Perfekt. Vielen Dank und einen schönen Tag noch!",
+    "sv": "Perfekt. Tack så mycket och ha en fin dag!"
    }
   ],
   "questions": [
@@ -121,7 +141,19 @@
     "a": 1,
     "why": "„Am Wochenende sind die Züge oft sehr voll.“"
    }
-  ]
+  ],
+  "gloss": {
+   "speichern": {
+    "t": "speichern",
+    "sv": "spara",
+    "g": ""
+   },
+   "reservieren": {
+    "t": "reservieren",
+    "sv": "boka, reservera",
+    "g": ""
+   }
+  }
  },
  {
   "id": "t3-l-t1b",
@@ -139,6 +171,11 @@
     "sv": "Resenärer till Hannover kan också ta regionaltåget 14.20 från spår 7. Biljetterna gäller i det tåget."
    },
    {
+    "who": "N",
+    "fr": "Wir informieren Sie, sobald wir mehr wissen. Und bitte beachten Sie: Auf Gleis 6 fährt gleich ein Zug ohne Halt durch. Bleiben Sie bitte hinter der weißen Linie.",
+    "sv": "Vi informerar er så snart vi vet mer. Och observera: På spår 6 kommer strax ett tåg som inte stannar. Stå kvar bakom den vita linjen."
+   },
+   {
     "who": "A",
     "fr": "Hallo Mama, ich bin's, Jonas. Ich stehe gerade am Bahnhof in Kassel. Mein Zug hat leider eine halbe Stunde Verspätung. Ich komme also nicht um fünf, sondern erst um halb sechs in Hamburg an.",
     "sv": "Hej mamma, det är jag, Jonas. Jag står på stationen i Kassel just nu. Mitt tåg är tyvärr en halvtimme försenat. Jag kommer alltså inte fram till Hamburg klockan fem, utan först halv sex."
@@ -147,6 +184,11 @@
     "who": "A",
     "fr": "Kannst du mich trotzdem vom Bahnhof abholen? Mein Koffer ist ziemlich schwer, und mit der S-Bahn muss ich zweimal umsteigen.",
     "sv": "Kan du hämta mig på stationen ändå? Min resväska är ganska tung, och med pendeltåget måste jag byta två gånger."
+   },
+   {
+    "who": "A",
+    "fr": "Bei Oma habe ich übrigens sehr viel gegessen, du musst also nicht für mich kochen. Aber sie hat dir einen Kuchen mitgegeben!",
+    "sv": "Hos mormor har jag förresten ätit jättemycket, så du behöver inte laga mat åt mig. Men hon har skickat med en kaka till dig!"
    },
    {
     "who": "A",
@@ -215,7 +257,24 @@
     "a": 2,
     "why": "„warte ich einfach am Haupteingang“."
    }
-  ]
+  ],
+  "gloss": {
+   "sobald": {
+    "t": "sobald",
+    "sv": "så snart",
+    "g": ""
+   },
+   "halt": {
+    "t": "der Halt",
+    "sv": "uppehåll, stopp",
+    "g": "m"
+   },
+   "übrigens": {
+    "t": "übrigens",
+    "sv": "förresten",
+    "g": ""
+   }
+  }
  },
  {
   "id": "t3-l-t2a",
@@ -251,6 +310,21 @@
     "who": "B",
     "fr": "Von acht bis vier. Das war anstrengend, weil ich um sechs aufstehen musste. Aber die Arbeit war sehr abwechslungsreich.",
     "sv": "Från åtta till fyra. Det var ansträngande, eftersom jag var tvungen att gå upp klockan sex. Men jobbet var väldigt omväxlande."
+   },
+   {
+    "who": "A",
+    "fr": "Und was hast du in der Mittagspause gemacht?",
+    "sv": "Och vad gjorde du på lunchrasten?"
+   },
+   {
+    "who": "B",
+    "fr": "Ich habe mit den anderen in der Küche gegessen. Die Tierärztin hat viel von ihrem Studium erzählt. Sie hat sechs Jahre studiert!",
+    "sv": "Jag åt med de andra i köket. Veterinären berättade mycket om sina studier. Hon har pluggat i sex år!"
+   },
+   {
+    "who": "A",
+    "fr": "Wow, das ist aber lang.",
+    "sv": "Oj, det är ju länge."
    },
    {
     "who": "A",
@@ -353,6 +427,16 @@
    },
    {
     "who": "N",
+    "fr": "Auch Emma, 17, hat einen Ferienjob. Sie arbeitet in einem Café am See.",
+    "sv": "Emma, 17, har också ett sommarjobb. Hon jobbar på ett kafé vid sjön."
+   },
+   {
+    "who": "B",
+    "fr": "Ich serviere Kaffee und Kuchen und mache die Tische sauber. Am Wochenende ist es sehr stressig, aber die Gäste geben oft Trinkgeld. Ich spare das Geld für den Führerschein.",
+    "sv": "Jag serverar kaffe och kaka och torkar borden. På helgerna är det väldigt stressigt, men gästerna ger ofta dricks. Jag sparar pengarna till körkortet."
+   },
+   {
+    "who": "N",
     "fr": "Unser Tipp: Sucht früh! Die besten Ferienjobs sind schon im März weg.",
     "sv": "Vårt tips: Börja leta tidigt! De bästa sommarjobben är borta redan i mars."
    }
@@ -418,7 +502,24 @@
     "a": 1,
     "why": "„Sucht früh! Die besten Ferienjobs sind schon im März weg.“"
    }
-  ]
+  ],
+  "gloss": {
+   "serviere": {
+    "t": "servieren",
+    "sv": "servera",
+    "g": ""
+   },
+   "spare": {
+    "t": "sparen",
+    "sv": "spara (pengar)",
+    "g": ""
+   },
+   "trinkgeld": {
+    "t": "das Trinkgeld",
+    "sv": "dricks",
+    "g": "n"
+   }
+  }
  },
  {
   "id": "t3-l-t3a",
@@ -464,6 +565,26 @@
     "who": "B",
     "fr": "Okay, wir können es eine Woche probieren. Aber nur, wenn du beim Essen auch nicht mehr die Nachrichten liest!",
     "sv": "Okej, vi kan prova i en vecka. Men bara om du inte heller läser nyheterna vid maten!"
+   },
+   {
+    "who": "A",
+    "fr": "Abgemacht! Und am Wochenende machen wir einen Ausflug, ganz ohne Handy.",
+    "sv": "Överenskommet! Och i helgen gör vi en utflykt, helt utan mobil."
+   },
+   {
+    "who": "B",
+    "fr": "Ohne Handy? Und wie machen wir dann Fotos?",
+    "sv": "Utan mobil? Och hur tar vi bilder då?"
+   },
+   {
+    "who": "A",
+    "fr": "Mit meiner alten Kamera. Die funktioniert noch!",
+    "sv": "Med min gamla kamera. Den fungerar fortfarande!"
+   },
+   {
+    "who": "B",
+    "fr": "Na gut. Aber jetzt essen wir, ich habe nämlich Hunger!",
+    "sv": "Okej då. Men nu äter vi, jag är nämligen hungrig!"
    }
   ],
   "questions": [
@@ -527,7 +648,19 @@
     "a": 1,
     "why": "„nur, wenn du beim Essen auch nicht mehr die Nachrichten liest“."
    }
-  ]
+  ],
+  "gloss": {
+   "funktioniert": {
+    "t": "funktionieren",
+    "sv": "fungera",
+    "g": ""
+   },
+   "abgemacht": {
+    "t": "abgemacht",
+    "sv": "överenskommet",
+    "g": ""
+   }
+  }
  },
  {
   "id": "t3-l-t3b",
@@ -553,6 +686,11 @@
     "who": "N",
     "fr": "Und drittens: Am Donnerstag kommt eine Polizistin in die Aula. Sie spricht über Mobbing im Internet und darüber, was man tun kann, wenn man Hilfe braucht. Alle Klassen ab Klasse 7 nehmen teil.",
     "sv": "Och för det tredje: På torsdag kommer en polis till aulan. Hon pratar om mobbning på nätet och om vad man kan göra om man behöver hjälp. Alla klasser från årskurs 7 deltar."
+   },
+   {
+    "who": "N",
+    "fr": "Zum Schluss noch eine gute Nachricht: Unsere Schülerzeitung hat den ersten Preis in ganz Bayern gewonnen! Die Redaktion sucht jetzt neue Mitglieder. Wer gern schreibt, fotografiert oder Videos macht, kann jeden Mittwoch um 14 Uhr in Raum 204 kommen. Das war's für heute. Schönes Wochenende!",
+    "sv": "Till sist en glad nyhet: Vår skoltidning har vunnit första pris i hela Bayern! Redaktionen söker nu nya medlemmar. Den som gillar att skriva, fotografera eller göra videor kan komma till sal 204 varje onsdag klockan 14. Det var allt för i dag. Trevlig helg!"
    }
   ],
   "questions": [
@@ -616,7 +754,29 @@
     "a": 1,
     "why": "„kommt eine Polizistin in die Aula“."
    }
-  ]
+  ],
+  "gloss": {
+   "schluss": {
+    "t": "der Schluss",
+    "sv": "slut; zum Schluss = till sist",
+    "g": "m"
+   },
+   "gewonnen": {
+    "t": "gewinnen, gewann, gewonnen",
+    "sv": "vinna",
+    "g": ""
+   },
+   "mitglieder": {
+    "t": "das Mitglied (-er)",
+    "sv": "medlem",
+    "g": "n"
+   },
+   "redaktion": {
+    "t": "die Redaktion (-en)",
+    "sv": "redaktion",
+    "g": "f"
+   }
+  }
  },
  {
   "id": "t3-l-t4a",
@@ -657,6 +817,21 @@
     "who": "A",
     "fr": "Nein, das ist ein Virus, da helfen Antibiotika nicht. Sie müssen sich ausruhen und viel trinken, am besten Tee mit Honig. Ich schreibe Ihnen ein Rezept für einen Hustensaft. Bleiben Sie bis Freitag zu Hause.",
     "sv": "Nej, det är ett virus, då hjälper inte antibiotika. Ni måste vila och dricka mycket, helst te med honung. Jag skriver ut ett recept på hostmedicin. Stanna hemma till fredag."
+   },
+   {
+    "who": "B",
+    "fr": "Darf ich trotzdem zum Training gehen? Am Sonntag haben wir ein wichtiges Spiel.",
+    "sv": "Får jag gå på träningen ändå? På söndag har vi en viktig match."
+   },
+   {
+    "who": "A",
+    "fr": "Nein, auf keinen Fall. Mit Fieber sollten Sie keinen Sport machen, das ist gefährlich für das Herz. Warten Sie, bis Sie ein paar Tage gesund sind.",
+    "sv": "Nej, absolut inte. Med feber ska du inte idrotta, det är farligt för hjärtat. Vänta tills du har varit frisk några dagar."
+   },
+   {
+    "who": "B",
+    "fr": "Schade. Na gut.",
+    "sv": "Synd. Okej då."
    },
    {
     "who": "B",
@@ -730,7 +905,19 @@
     "a": 2,
     "why": "„die bekommen Sie gleich an der Rezeption“."
    }
-  ]
+  ],
+  "gloss": {
+   "herz": {
+    "t": "das Herz (-en)",
+    "sv": "hjärta",
+    "g": "n"
+   },
+   "schade": {
+    "t": "schade",
+    "sv": "synd",
+    "g": ""
+   }
+  }
  },
  {
   "id": "t3-l-t4b",
@@ -756,6 +943,16 @@
     "who": "B",
     "fr": "Drittens: Reden Sie darüber. Viele denken, dass sie mit ihren Sorgen allein sind. Aber es hilft, mit Freunden, den Eltern oder einer Beratung in der Schule zu sprechen.",
     "sv": "För det tredje: prata om det. Många tror att de är ensamma med sina bekymmer. Men det hjälper att prata med vänner, föräldrarna eller skolans kurator."
+   },
+   {
+    "who": "B",
+    "fr": "Und noch ein Extra-Tipp: Machen Sie einen Plan. Lernen Sie nicht alles am letzten Abend, sondern jeden Tag ein bisschen. Und legen Sie das Handy beim Lernen in ein anderes Zimmer.",
+    "sv": "Och ett extratips: Gör en plan. Plugga inte allt sista kvällen utan lite varje dag. Och lägg mobilen i ett annat rum när du pluggar."
+   },
+   {
+    "who": "N",
+    "fr": "Das klingt einfach, ist aber oft ganz schön schwer!",
+    "sv": "Det låter enkelt, men är ofta ganska svårt!"
    },
    {
     "who": "N",
@@ -850,6 +1047,11 @@
     "who": "N",
     "fr": "Am Mittwoch wird es überall kühler. Im Norden gibt es morgens Nebel. Wer wandern möchte, sollte am besten schon morgen früh losgehen.",
     "sv": "På onsdag blir det svalare överallt. I norr blir det dimma på morgonen. Den som vill vandra bör helst gå i väg redan i morgon bitti."
+   },
+   {
+    "who": "N",
+    "fr": "Zum Schluss ein Blick aufs Wochenende: Am Samstag und Sonntag wird es wieder sonnig und warm, mit bis zu 25 Grad. Das ist perfektes Wetter für einen Ausflug an den See. Vergessen Sie die Sonnencreme nicht! Das war das Wetter, und jetzt kommt Musik.",
+    "sv": "Till sist en blick på helgen: På lördag och söndag blir det soligt och varmt igen, upp till 25 grader. Det är perfekt väder för en utflykt till sjön. Glöm inte solkrämen! Det var vädret, och nu blir det musik."
    }
   ],
   "questions": [
@@ -913,7 +1115,19 @@
     "a": 0,
     "why": "„Am Mittwoch wird es überall kühler. Im Norden gibt es morgens Nebel.“"
    }
-  ]
+  ],
+  "gloss": {
+   "schluss": {
+    "t": "der Schluss",
+    "sv": "slut; zum Schluss = till sist",
+    "g": "m"
+   },
+   "sonnig": {
+    "t": "sonnig",
+    "sv": "solig",
+    "g": ""
+   }
+  }
  },
  {
   "id": "t3-l-t5b",
@@ -959,6 +1173,26 @@
     "who": "B",
     "fr": "Okay, ich glaube, ich mache mir eine Liste!",
     "sv": "Okej, jag tror jag gör en lista!"
+   },
+   {
+    "who": "A",
+    "fr": "Gute Idee. Ich hänge dir eine an den Kühlschrank.",
+    "sv": "Bra idé. Jag sätter upp en på kylskåpet åt dig."
+   },
+   {
+    "who": "B",
+    "fr": "Danke! Und wer bringt den Müll nach unten?",
+    "sv": "Tack! Och vem bär ner soporna?"
+   },
+   {
+    "who": "A",
+    "fr": "Das machen wir abwechselnd. Diese Woche bist du dran!",
+    "sv": "Det gör vi varannan gång. Den här veckan är det din tur!"
+   },
+   {
+    "who": "B",
+    "fr": "Na toll …",
+    "sv": "Jättekul …"
    }
   ],
   "questions": [
@@ -1048,6 +1282,16 @@
     "t": "die Ecke (-n)",
     "sv": "hörn",
     "g": "f"
+   },
+   "abwechselnd": {
+    "t": "abwechselnd",
+    "sv": "varannan gång, turvis",
+    "g": ""
+   },
+   "dran": {
+    "t": "dran sein",
+    "sv": "stå på tur",
+    "g": ""
    }
   }
  },
@@ -1100,6 +1344,21 @@
     "who": "A",
     "fr": "Der ist doch sowieso auf Deutsch! Also, wir treffen uns um zwei am Park.",
     "sv": "Den är ju på tyska ändå! Alltså, vi ses klockan två vid parken."
+   },
+   {
+    "who": "B",
+    "fr": "Ach ja, stimmt! Aber die Österreicher sprechen manchmal schnell und mit Dialekt.",
+    "sv": "Just det, det stämmer! Men österrikarna pratar ibland snabbt och på dialekt."
+   },
+   {
+    "who": "A",
+    "fr": "Dann sehen wir ihn eben mit Untertiteln. Und nach dem Kino essen wir noch eine Pizza?",
+    "sv": "Då ser vi den med undertexter. Och efter bion äter vi en pizza?"
+   },
+   {
+    "who": "B",
+    "fr": "Klar. Ich lade dich ein, du hast ja den ganzen Plan gemacht!",
+    "sv": "Klart. Jag bjuder, du har ju gjort hela planen!"
    }
   ],
   "questions": [
@@ -1163,7 +1422,19 @@
     "a": 0,
     "why": "„Der ist doch sowieso auf Deutsch!“"
    }
-  ]
+  ],
+  "gloss": {
+   "untertiteln": {
+    "t": "der Untertitel (-)",
+    "sv": "undertext",
+    "g": "m"
+   },
+   "eben": {
+    "t": "eben",
+    "sv": "helt enkelt, då",
+    "g": ""
+   }
+  }
  },
  {
   "id": "t3-l-t6b",
@@ -1189,6 +1460,11 @@
     "who": "B",
     "fr": "Die Aufnahmeprüfung an der Hochschule war sehr schwer. Ich musste drei Stücke vorspielen und war total nervös. Aber es hat geklappt!",
     "sv": "Antagningsprovet till högskolan var väldigt svårt. Jag var tvungen att spela tre stycken och var jättenervös. Men det gick!"
+   },
+   {
+    "who": "B",
+    "fr": "An der Hochschule spiele ich nicht nur klassische Musik. Mit Freunden habe ich eine Band gegründet, wir spielen Folk und Pop. Das macht mir viel Spaß, weil wir unsere eigenen Lieder schreiben.",
+    "sv": "På musikhögskolan spelar jag inte bara klassisk musik. Med kompisar har jag startat ett band, vi spelar folk och pop. Det är jättekul, eftersom vi skriver våra egna låtar."
    },
    {
     "who": "B",
@@ -1268,6 +1544,16 @@
     "t": "die Staatsoper",
     "sv": "statsopera (operahuset i Wien)",
     "g": "f"
+   },
+   "gegründet": {
+    "t": "gründen",
+    "sv": "grunda, starta",
+    "g": ""
+   },
+   "lieder": {
+    "t": "das Lied (-er)",
+    "sv": "sång, låt",
+    "g": "n"
    }
   }
  },
@@ -1315,6 +1601,26 @@
     "who": "B",
     "fr": "Das stimmt. Vielleicht frage ich mal bei der Berufsberatung, welche Möglichkeiten es noch gibt.",
     "sv": "Det stämmer. Jag kanske frågar på studie- och yrkesvägledningen vilka fler möjligheter det finns."
+   },
+   {
+    "who": "A",
+    "fr": "Gute Idee. Ich war letzte Woche dort. Die Beraterin hat mir viele Tipps gegeben.",
+    "sv": "Bra idé. Jag var där förra veckan. Vägledaren gav mig många tips."
+   },
+   {
+    "who": "B",
+    "fr": "Braucht man dafür einen Termin?",
+    "sv": "Behöver man boka en tid för det?"
+   },
+   {
+    "who": "A",
+    "fr": "Ja, aber das geht online ganz schnell. Und es kostet nichts.",
+    "sv": "Ja, men det går jättesnabbt på nätet. Och det kostar ingenting."
+   },
+   {
+    "who": "B",
+    "fr": "Super, dann mache ich heute noch einen Termin.",
+    "sv": "Toppen, då bokar jag en tid redan i dag."
    }
   ],
   "questions": [
@@ -1378,7 +1684,14 @@
     "a": 1,
     "why": "„Vielleicht frage ich mal bei der Berufsberatung“."
    }
-  ]
+  ],
+  "gloss": {
+   "beraterin": {
+    "t": "die Beraterin (-nen)",
+    "sv": "rådgivare, vägledare",
+    "g": "f"
+   }
+  }
  },
  {
   "id": "t3-l-t7b",
@@ -1402,8 +1715,18 @@
    },
    {
     "who": "N",
+    "fr": "Für den Austausch gibt es auch ein Stipendium. Die Schule bezahlt einen Teil der Reise, wenn die Familie nicht genug Geld hat. Das Formular bekommen Sie im Sekretariat.",
+    "sv": "För utbytet finns det också ett stipendium. Skolan betalar en del av resan om familjen inte har tillräckligt med pengar. Blanketten får ni på expeditionen."
+   },
+   {
+    "who": "N",
     "fr": "Bitte bringen Sie Ihr Zeugnis vom letzten Halbjahr mit. Wer am Dienstag keine Zeit hat, kann einen Termin bei Frau Schulz machen. Sie ist montags und mittwochs von acht bis zwölf Uhr im Büro.",
     "sv": "Ta med betyget från förra terminen. Den som inte har tid på tisdag kan boka en tid hos fru Schulz. Hon är på kontoret måndagar och onsdagar klockan åtta till tolv."
+   },
+   {
+    "who": "N",
+    "fr": "Wir freuen uns auf Ihren Besuch. Bei Fragen schreiben Sie uns bitte eine E-Mail. Die Adresse finden Sie auf der Webseite der Schule.",
+    "sv": "Vi ser fram emot ert besök. Om ni har frågor, skicka ett mejl till oss. Adressen finns på skolans webbplats."
    }
   ],
   "questions": [
@@ -1467,7 +1790,19 @@
     "a": 1,
     "why": "„montags und mittwochs von acht bis zwölf Uhr“."
    }
-  ]
+  ],
+  "gloss": {
+   "formular": {
+    "t": "das Formular (-e)",
+    "sv": "blankett",
+    "g": "n"
+   },
+   "sekretariat": {
+    "t": "das Sekretariat (-e)",
+    "sv": "expedition, kansli",
+    "g": "n"
+   }
+  }
  },
  {
   "id": "t3-l-t8a",
@@ -1508,6 +1843,16 @@
     "who": "A",
     "fr": "Ich finde die Dialekte toll. Aber ich bin froh, dass es Hochdeutsch gibt!",
     "sv": "Jag tycker att dialekterna är jättehäftiga. Men jag är glad att det finns högtyska!"
+   },
+   {
+    "who": "B",
+    "fr": "Ich auch. Weißt du, was man in Hamburg sagt? „Moin“ – und das sogar am Abend!",
+    "sv": "Jag också. Vet du vad man säger i Hamburg? ”Moin” – till och med på kvällen!"
+   },
+   {
+    "who": "A",
+    "fr": "Echt? Und in Berlin sagen viele „ick“ statt „ich“. Nächsten Sommer fahre ich nach Hamburg, dann höre ich es selbst.",
+    "sv": "Seriöst? Och i Berlin säger många ”ick” i stället för ”ich”. Nästa sommar åker jag till Hamburg, då får jag höra det själv."
    }
   ],
   "questions": [
@@ -1571,7 +1916,14 @@
     "a": 1,
     "why": "„wenn sie kommen und wenn sie gehen“."
    }
-  ]
+  ],
+  "gloss": {
+   "ick": {
+    "t": "ick (berlinska)",
+    "sv": "jag (= ich)",
+    "g": ""
+   }
+  }
  },
  {
   "id": "t3-l-t8b",
@@ -1585,8 +1937,13 @@
    },
    {
     "who": "N",
-    "fr": "Von 1961 bis 1989 war Berlin eine geteilte Stadt. Die Menschen in Ost-Berlin durften nicht in den Westen reisen. Viele Familien konnten sich jahrelang nicht besuchen.",
-    "sv": "Från 1961 till 1989 var Berlin en delad stad. Människorna i Östberlin fick inte resa till väst. Många familjer kunde inte hälsa på varandra på flera år."
+    "fr": "Von 1961 bis 1989 teilte eine Mauer die Stadt. Die Menschen in Ost-Berlin durften nicht in den Westen reisen. Viele Familien konnten sich jahrelang nicht besuchen.",
+    "sv": "Från 1961 till 1989 delade en mur staden. Människorna i Östberlin fick inte resa till väst. Många familjer kunde inte hälsa på varandra på flera år."
+   },
+   {
+    "who": "N",
+    "fr": "Warum hat man die Mauer gebaut? Nach dem Krieg sind sehr viele Menschen aus dem Osten in den Westen gegangen, besonders junge Leute. Die Regierung der DDR wollte das stoppen. An der Mauer sind mindestens 140 Menschen gestorben.",
+    "sv": "Varför byggde man muren? Efter kriget flyttade väldigt många människor från öst till väst, särskilt unga. DDR:s regering ville stoppa det. Vid muren dog minst 140 människor."
    },
    {
     "who": "N",
@@ -1660,6 +2017,23 @@
     "a": 1,
     "why": "„Sie haben jetzt zwanzig Minuten Zeit für Fotos.“"
    }
-  ]
+  ],
+  "gloss": {
+   "krieg": {
+    "t": "der Krieg (-e)",
+    "sv": "krig",
+    "g": "m"
+   },
+   "regierung": {
+    "t": "die Regierung (-en)",
+    "sv": "regering",
+    "g": "f"
+   },
+   "mindestens": {
+    "t": "mindestens",
+    "sv": "minst",
+    "g": ""
+   }
+  }
  }
 ]

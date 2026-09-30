@@ -4,7 +4,7 @@ Franska 6 motsvarar Moderna språk 6 (steg 6, GERS B1.2; i Gy25 fördjupning, ni
 
 Kapitel-id: q1 Études et avenir, q2 Médias et réseaux, q3 Environnement et société, q4 Arts, musique et spectacle, q5 Vivre et travailler ailleurs, q6 Histoire et mémoire, q7 Santé, sport et bien-être, q8 Éthique et francophonie, qr Expressions · Débattre et argumenter.
 
-Formatet och reglerna är desamma som för Franska 3: se `languages/fr/content/SPEC.md`, `languages/fr/content/GRAMMATIK-SPEC.md` och exemplen i `languages/fr/content/*.json`. Observera:
+Formaten står i `docs/spec/` (allmänna regler i `docs/spec/allmant.md`, grammatiken i `docs/spec/grammatik.md`); Franska 3:s tillägg i `languages/fr/content/SPEC.md` och exemplen i `languages/fr/content/*.json`. Observera:
 
 - Grammatikområdena och regel-id:n står i `languages/fr4/grammar.json` (`topics` och `rules`). Varje område har en egen fil, `grammar-<område>.json`, med id-prefixet `<område>-`. Alla regler ingår i "Hitta felet", så felalternativen måste vara entydigt fel.
 - `prompts.json`: `need.tenses` får innehålla `"présent"`, `"passé composé"`, `"imparfait"`, `"futur proche"`, `"conditionnel"` och `"subjonctif"` (se `tenseCheck` i `lang.js`). `need.connectors` räknar bindeorden i `connectors` i `lang.js` (Franska 3:s lista plus bindeord för argumentation). Skrivlängd 150–250 ord för de längre uppgifterna.

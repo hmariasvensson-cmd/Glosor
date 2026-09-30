@@ -14,11 +14,11 @@ function openSats(){
     id=>startSats(id==="*"?null:id));
 }
 function startSats(grp){
-  grp=grp&&grp!=="*"?grp:null; S.sa=S.sa||{};
-  // Det man inte kan eller inte sett först, lätt före svårt; rundan visas från lätt till svårt
-  const items=(C().satsanalys||[]).filter(x=>!grp||x.t===grp).map(x=>({x,st:S.sa[x.id]||{s:0,last:0},r:Math.random()}))
-    .sort((a,b)=>Math.min(a.st.s,2)-Math.min(b.st.s,2)||(a.x.lvl||1)-(b.x.lvl||1)||a.st.last-b.st.last||a.r-b.r).slice(0,10)
-    .sort((a,b)=>(a.x.lvl||1)-(b.x.lvl||1)||a.r-b.r).map(({x})=>({k:"sats",id:"sats:"+x.id,ref:x.id,t:"mc"}));
+  grp=grp&&grp!=="*"?grp:null;
+  // Det man inte kan eller inte sett först, lätt före svårt; rundan visas från lätt till svårt (slumpat inom varje nivå)
+  const lvl=x=>x.lvl||1;
+  const items=shuffle(weakestFirst((C().satsanalys||[]).filter(x=>!grp||x.t===grp),"sa",{cap:2,tie:(a,b)=>lvl(a)-lvl(b)}).slice(0,10))
+    .sort((a,b)=>lvl(a)-lvl(b)).map(x=>({k:"sats",id:"sats:"+x.id,ref:x.id,t:"mc"}));
   if(!items.length) return renderStart();
   $("#tabs").hidden=true; sess=null;
   beginQuiz("sats",items,{againFn:["sats",grp||"*"],label:grp?`Satsanalys: ${SATS_GROUPS[grp]}`:"Satsanalys"});
@@ -29,7 +29,7 @@ const satsMC=c=>{const x=satsById(c.ref);
     ask:x.t==="prop"?"Vilken sorts sats är den understrukna delen?":"Vilken funktion har den understrukna delen?",
     opts:x.opts.map((o,j)=>({label:o,ok:j===x.a,lang:true})),
     explain:x.why?`<p>${rmark(x.why)}</p>`:"",say:x.fr.replace(/\[\[|\]\]/g,"")};};
-const satsEffect=(ref,ok)=>{S.sa=S.sa||{}; const o=S.sa[ref]||{s:0,r:0,n:0}; S.sa[ref]={s:ok?o.s+1:0,last:Date.now(),r:(o.r||0)+(ok?1:0),n:(o.n||0)+1};};
+const satsEffect=(ref,ok)=>{S.sa=S.sa||{}; const x=srsBump(S.sa[ref],ok); x.r=(x.r||0)+(ok?1:0); x.n=(x.n||0)+1; S.sa[ref]=x;};
 const satsRecap=ref=>{const x=satsById(ref); return x?`${satsPart(x)}: ${x.opts[x.a]}`:"";};
 // Statistiken: andel rätt för satsdelar och satstyper
 function satsStats(){

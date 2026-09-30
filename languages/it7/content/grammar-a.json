@@ -265,7 +265,7 @@
   "rule": "rem-uso",
   "q": "Dante [morì] a Ravenna nel 1321.",
   "alt": [
-   "è morto",
+   "morse",
    "moriva",
    "morirà"
   ],
@@ -291,7 +291,7 @@
   "rule": "rem-uso",
   "q": "Da bambino Leopardi [trascorreva] ore nella biblioteca del padre.",
   "alt": [
-   "trascorse",
+   "trascorrerà",
    "trascorrette",
    "trascorsero"
   ],
@@ -330,9 +330,9 @@
   "rule": "cong-ind",
   "q": "Non so se Marco [sia] già partito.",
   "alt": [
-   "è",
-   "sarà",
-   "fosse"
+   "abbia",
+   "sii",
+   "siano"
   ],
   "why": "Indirekt fråga efter non so se: congiuntivo i formell stil. Huvudsatsen i presens → congiuntivo presente/passato.",
   "sv": "Jag vet inte om Marco redan har åkt."
@@ -343,9 +343,9 @@
   "rule": "cong-ind",
   "q": "Mi chiedo che cosa [pensino] davvero gli elettori.",
   "alt": [
-   "pensano",
-   "pensassero",
-   "penserebbero"
+   "pensi",
+   "pensando",
+   "pensate"
   ],
   "why": "Mi chiedo + indirekt fråga: congiuntivo presente (pensino). I tal hörs också indikativ, men i skrift föredras congiuntivo.",
   "sv": "Jag undrar vad väljarna egentligen tycker."
@@ -370,7 +370,7 @@
   "q": "Non capivo perché lei [fosse] così arrabbiata.",
   "alt": [
    "sia",
-   "era stata",
+   "sia stata",
    "sarà"
   ],
   "why": "Non capivo perché + congiuntivo imperfetto (samtidighet i dåtid).",
@@ -382,9 +382,9 @@
   "rule": "cong-ind",
   "q": "Nessuno sa dove [si trovi] il manoscritto originale.",
   "alt": [
-   "si trova",
-   "si trovasse",
-   "si troverebbe"
+   "si trovino",
+   "si trovasti",
+   "si trovi stato"
   ],
   "why": "Nessuno sa dove: indirekt fråga med tvivel → congiuntivo presente.",
   "sv": "Ingen vet var originalmanuskriptet finns."
@@ -395,9 +395,9 @@
   "rule": "cong-ind",
   "q": "Gli studiosi discutono se la lettera [sia] autentica.",
   "alt": [
-   "è",
-   "fosse",
-   "sarebbe"
+   "sono",
+   "fossero",
+   "sii"
   ],
   "why": "Discutere se + indirekt fråga: congiuntivo presente i formell text.",
   "sv": "Forskarna diskuterar om brevet är äkta."
@@ -434,9 +434,9 @@
   "rule": "cong-ind",
   "q": "Vorrei sapere come [abbiate] ottenuto questi dati.",
   "alt": [
-   "avete",
-   "aveste",
-   "avrete"
+   "avrete",
+   "abbiate avuto",
+   "aviate"
   ],
   "why": "Vorrei sapere + indirekt fråga om något redan gjort: congiuntivo passato (abbiate ottenuto).",
   "sv": "Jag skulle vilja veta hur ni har fått fram de här uppgifterna."
@@ -447,9 +447,9 @@
   "rule": "cong-ind",
   "q": "Mi domando se non [sia] meglio aspettare.",
   "alt": [
-   "è",
-   "era",
-   "fossi"
+   "siano",
+   "fossi",
+   "sarò"
   ],
   "why": "Mi domando se: congiuntivo presente (sia). Fossi är fel person och tid.",
   "sv": "Jag undrar om det inte är bättre att vänta."
@@ -486,9 +486,9 @@
   "rule": "cong-sup",
   "q": "È l'unica persona che mi [capisca] davvero.",
   "alt": [
-   "capisce",
-   "capiva",
-   "capirà"
+   "capisse",
+   "capiscano",
+   "capiresti"
   ],
   "why": "L'unico/l'unica che + congiuntivo, som efter superlativ.",
   "sv": "Hon är den enda som verkligen förstår mig."
@@ -499,12 +499,15 @@
   "rule": "cong-sup",
   "q": "Il primo che [arrivi] in ritardo paga il caffè a tutti.",
   "alt": [
-   "arriva",
+   "arrivino",
    "arrivasse",
    "arriverebbe"
   ],
-  "why": "Il primo che, l'ultimo che, il solo che tar ofta congiuntivo.",
-  "sv": "Den förste som kommer för sent bjuder alla på kaffe."
+  "why": "Il primo che, l'ultimo che, il solo che tar ofta congiuntivo (arrivi). I vardagligt tal går indikativ (arriva) också bra.",
+  "sv": "Den förste som kommer för sent bjuder alla på kaffe.",
+  "acc": [
+   "arriva"
+  ]
  },
  {
   "id": "congsub-015",
@@ -538,9 +541,9 @@
   "rule": "cong-sup",
   "q": "Non c'è nessuno che [sappia] rispondere.",
   "alt": [
-   "sa",
    "sapeva",
-   "saprà"
+   "sappiano",
+   "sapesse"
   ],
   "why": "Non c'è nessuno che + congiuntivo: det nekade gör relativsatsen hypotetisk.",
   "sv": "Det finns ingen som kan svara."
@@ -549,14 +552,14 @@
   "id": "congsub-018",
   "topic": "congsub",
   "rule": "cong-sup",
-  "q": "È la sinfonia meno eseguita che Rossini [abbia] scritto.",
+  "q": "È l'opera meno eseguita che Rossini [abbia] scritto.",
   "alt": [
-   "ha",
+   "abbiano",
    "aveva",
    "ebbe"
   ],
   "why": "Även efter meno + adjektiv (negativ superlativ) används congiuntivo.",
-  "sv": "Det är den minst framförda symfoni som Rossini har skrivit."
+  "sv": "Det är den minst spelade opera som Rossini har skrivit."
  },
  {
   "id": "congsub-019",
@@ -1440,7 +1443,7 @@
    "burocratura"
   ],
   "why": "-ese kan bilda namn på jargonger: burocratese, politichese, sindacalese.",
-  "sv": "Byråkraternas språk är byråkratsvenskan."
+  "sv": "Det språk som byråkrater använder kallas burocratese (byråkratiska)."
  },
  {
   "id": "discorso-001",

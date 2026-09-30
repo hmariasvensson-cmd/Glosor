@@ -4,7 +4,7 @@
 // tillagda sist i varje kapitel: en nybörjarkurs måste ha grundorden, och eleven repeterar dem i Tyska 4.
 // Orden är valda efter frekvens (DeReWo, IDS Mannheim, CC BY-NC, bara använd för urvalet) och tema.
 //
-// Format, en rad per ord (se languages/de/SPEC-ordlista.md):
+// Format, en rad per ord (se docs/spec/ordlista.md):
 //   tyska|svenska|genus|exempel på tyska|exempel på svenska|kommentar|ordagrant (valfritt, för fraser)
 // Ordets tyska form och avsnittets id används som nycklar för sparade framsteg, ändra dem inte i efterhand.
 #e1|Kap 1 · Hallo!
@@ -49,7 +49,7 @@ zwei|två||Ich habe [zwei] Schwestern.|Jag har två systrar.|Uttalas med ts-ljud
 drei|tre||Ich habe [drei] Brüder.|Jag har tre bröder.|Jämför svenskans <b>tre</b> och engelskans <b>three</b>.
 vier|fyra||Ich habe [vier] Bücher.|Jag har fyra böcker.|Uttalas "fir". Jämför svenskans <b>fyra</b>.
 fünf|fem||Das Kind ist [fünf] Jahre alt.|Barnet är fem år gammalt.|Jämför svenskans <b>fem</b> och engelskans <b>five</b>.
-sechs|sex||Wir haben [sechs] Stunden Schule.|Vi har sex timmar skola.|Uttalas "sex". Jämför svenskans <b>sex</b>.
+sechs|sex||Wir haben [sechs] Stunden Schule.|Vi har sex timmar skola.|Uttalas ungefär "zeks", med tonande s i början. Jämför svenskans <b>sex</b>.
 sieben|sju||Die Woche hat [sieben] Tage.|Veckan har sju dagar.|Jämför engelskans <b>seven</b>.
 acht|åtta||Der Test beginnt um [acht].|Provet börjar klockan åtta.|Jämför svenskans <b>åtta</b> och engelskans <b>eight</b>.
 neun|nio||Meine Schwester ist [neun].|Min syster är nio.|Uttalas med oj-ljud: "nojn". Jämför engelskans <b>nine</b>.
@@ -76,7 +76,7 @@ eins|ett (räkneordet)||Eins, zwei, drei – los! Ich habe nur [eins].|Ett, två
 die Nachricht (-en)|meddelande, sms; nyhet|f|Ich schreibe dir eine [Nachricht].|Jag skickar ett meddelande till dig.|Plural: die Nachrichten. Om tv och radio betyder die Nachrichten nyheterna.
 nur|bara, endast||Ich spreche [nur] ein bisschen Deutsch.|Jag pratar bara lite tyska.|Ett av de vanligaste orden i tyskan. Jämför nicht nur … sondern auch (inte bara … utan också).
 #e2|Kap 2 · Familie und Freunde
-die Familie (-n)|familj|f|Meine [Familie] ist groß.|Min familj är stor.|Plural: die Familien. Uttalas "fa-MI-li-e".
+die Familie (-n)|familj|f|Meine [Familie] ist groß.|Min familj är stor.|Plural: die Familien. Uttalas "fa-MI-lje", med tre stavelser.
 die Mutter (Mütter)|mamma, mor|f|Meine [Mutter] heißt Karin.|Min mamma heter Karin.|Plural med omljud: die Mütter. Jämför svenskans <b>moder</b> och engelskans <b>mother</b>.
 der Vater (Väter)|pappa, far|m|Mein [Vater] kommt aus Deutschland.|Min pappa kommer från Tyskland.|Plural med omljud: die Väter. Jämför svenskans <b>fader</b> och engelskans <b>father</b>.
 die Eltern|föräldrar|pl|Meine [Eltern] wohnen in Stockholm.|Mina föräldrar bor i Stockholm.|Finns bara i plural. Jämför svenskans <b>äldre</b>.
@@ -261,7 +261,7 @@ erst|först, inte förrän||Ich schlafe [erst] um elf Uhr.|Jag sover inte förr�
 wann|när||[Wann] beginnt die Schule?|När börjar skolan?|Frågeord om tid. Jämför engelskans <b>when</b>.
 um|klockan, vid (om tid)||Die Schule beginnt [um] acht Uhr.|Skolan börjar klockan åtta.|Används före klockslag: um acht Uhr (klockan åtta). Um wie viel Uhr? betyder hur dags?
 der Januar|januari|m|Im [Januar] ist es kalt.|I januari är det kallt.|Månaderna är maskulina och har i regel ingen plural. Im Januar betyder i januari.
-der Februar|februari|m|Im [Februar] ist viel Schnee.|I februari är det mycket snö.|Månaderna är maskulina. Im Februar betyder i februari.
+der Februar|februari|m|Im [Februar] liegt viel Schnee.|I februari ligger det mycket snö.|Månaderna är maskulina. Im Februar betyder i februari.
 der März|mars|m|Im [März] ist mein Test.|I mars är mitt prov.|Obs omljudet: März.
 der April|april|m|Im [April] bin ich sechzehn.|I april fyller jag sexton.|Månaderna är maskulina: der April.
 der Mai|maj|m|Im [Mai] ist es warm.|I maj är det varmt.|Uttalas "maj".
@@ -445,8 +445,8 @@ das Kinderzimmer (-)|barnrum, rum|n|Mein [Kinderzimmer] ist klein.|Mitt rum är 
 die Tür (-en)|dörr|f|Die [Tür] ist links.|Dörren är till vänster.|Jämför engelskans <b>door</b> och svenskans <b>dörr</b>.
 das Fenster (-)|fönster|n|Das [Fenster] ist groß.|Fönstret är stort.|Jämför svenskans <b>fönster</b>.
 die Wand (Wände)|vägg|f|Das Bild ist an der [Wand].|Tavlan sitter på väggen.|Plural med omljud: Wände. Obs. die. Används om väggar både inne och ute.
-der Stock|våning|m|Wir wohnen im dritten [Stock].|Vi bor på tredje våningen.|Im ersten Stock = en trappa upp.
-die Etage (-n)|våning|f|Mein Zimmer ist in der ersten [Etage].|Mitt rum är på första våningen.|Uttalas som på franska: e-ta-sche.
+der Stock|våning|m|Wir wohnen im dritten [Stock].|Vi bor tre trappor upp.|Im ersten Stock = en trappa upp.
+die Etage (-n)|våning|f|Mein Zimmer ist in der ersten [Etage].|Mitt rum ligger en trappa upp.|Uttalas som på franska: e-ta-sche. Obs: die erste Etage är våningen ovanför bottenvåningen (das Erdgeschoss).
 das Bett (-en)|säng|n|Das [Bett] ist neu.|Sängen är ny.|Jämför engelskans <b>bed</b>. Ins Bett gehen = gå och lägga sig.
 die Lampe (-n)|lampa|f|Die [Lampe] ist neu.|Lampan är ny.|Jämför svenskans <b>lampa</b>.
 der Spiegel (-)|spegel|m|Der [Spiegel] ist an der Wand.|Spegeln sitter på väggen.|Jämför svenskans <b>spegel</b>.

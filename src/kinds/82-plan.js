@@ -5,9 +5,13 @@
    som läggs till sist i ett avsnitt bara flyttar gränsen lite. do: k = lq, rq, write, culture, story, exam (id i
    respektive innehållsfil), ktest (id = avsnitt) eller examsim (hel provsimulering). build.py kontrollerar hänvisningarna.
    Sparat: S.plan = {start: "ÅÅÅÅ-MM-DD"}, första dagen i vecka 1. Aktuell vecka räknas fram ur startdatumet och dagens datum.
-   Inget annat i S ändras av planen (utom S.src när eleven väljer "Ta nya ord från veckans avsnitt"). */
+   Inget annat i S ändras av planen (utom S.src när eleven väljer "Ta nya ord från veckans avsnitt").
+   Tillbaka: uppgifter och grammatik öppnas med openFrom(openPlan, …) (app.js), så att Tillbaka, Avbryt och slutskärmens
+   knapp ("Till studieplanen") leder hit och inte till övningens lista. */
 const hasPlan=()=>!!(L&&L.plan&&Array.isArray(L.plan.weeks)&&L.plan.weeks.length);
 const PLAN_DAY=864e5;
+let PLAN_OPEN=null;   // veckan där eleven senast öppnade en uppgift: den är öppen när eleven kommer tillbaka
+const PLAN_BACK="Till studieplanen";   // etiketten på slutskärmens knapp när uppgiften öppnats från planen
 function planDate(s){ const m=/^(\d{4})-(\d\d)-(\d\d)$/.exec(String(s||"")); return m?new Date(+m[1],m[2]-1,+m[3]):null; }
 const planIso=d=>`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,"0")}-${String(d.getDate()).padStart(2,"0")}`;
 const planToday=()=>{ const d=new Date(); return new Date(d.getFullYear(),d.getMonth(),d.getDate()); };
@@ -58,7 +62,7 @@ function planWeekHtml(wk,i,cur){
   const gt=S.gt||{}, topics=(hasGrammar()?GR().topics:[]).filter(t=>(wk.grammar||[]).includes(t.id));
   const nDone=items.filter(([,it])=>it.done).length;
   const head=[`Vecka ${i+1}`,planDates(i),i===cur?"denna vecka":""].filter(Boolean).join(" · ");
-  return `<details class="more planwk" data-wk="${i}" ${i===cur?"open":""} style="border-top:1px solid var(--line,#e5e2d9);padding-top:10px;margin-top:10px">
+  return `<details class="more planwk" data-wk="${i}" ${i===cur||i===PLAN_OPEN?"open":""} style="border-top:1px solid var(--line,#e5e2d9);padding-top:10px;margin-top:10px">
     <summary><b>${esc(head)}</b><br><span ${lang()}>${esc(wk.title)}</span><br><small>${pr.n?`${pr.known} av ${pr.n} ord kan du`:"Inga nya ord"}${items.length?` · ${nDone} av ${items.length} uppgifter klara`:""}</small></summary>
     ${pr.n?`<p class="foot">Ord: ${esc((wk.words||[]).map(planRange).join(", "))}. Du har börjat på ${pr.started} och kan ${pr.known} av ${pr.n}.</p>${planBar(pr.known,pr.n)}
       <button type="button" class="btn ghost" data-plansrc="${esc(wk.words[0].sec)}">Ta nya ord från ${esc(planRange({sec:wk.words[0].sec}))}</button>`:""}
@@ -72,6 +76,7 @@ function planWeekHtml(wk,i,cur){
 
 function openPlan(){
   if(!hasPlan()) return renderStart();
+  if(RETURN_TO!==openPlan) PLAN_OPEN=null;   // öppnad från startsidan, inte på väg tillbaka från en uppgift
   stopSpeech(); $("#tabs").hidden=true; sess=null;
   const P=L.plan, n=P.weeks.length, cur=planWeekIdx(), st=planStart();
   const status=cur===null?"Välj när du började (eller vilken vecka du är på), så visas veckan du ska vara på."
@@ -92,11 +97,13 @@ function openPlan(){
     const mon=new Date(t.getFullYear(),t.getMonth(),t.getDate()-((t.getDay()+6)%7)-7*(+e.target.value));
     planSetStart(planIso(mon)); openPlan(); };
   app.querySelectorAll("[data-plansrc]").forEach(b=>b.onclick=()=>{ S.src=b.dataset.plansrc; save(); renderStart(); });
-  app.querySelectorAll("[data-plangram]").forEach(b=>b.onclick=()=>startGram(b.dataset.plangram));
+  // Uppgifterna öppnas med openFrom (app.js): Tillbaka, Avbryt och slutskärmens knapp leder tillbaka hit
+  app.querySelectorAll("[data-plangram]").forEach(b=>b.onclick=()=>{ PLAN_OPEN=+b.closest(".planwk").dataset.wk; openFrom(openPlan,()=>startGram(b.dataset.plangram),PLAN_BACK); });
   app.querySelectorAll("[data-planitem]").forEach(b=>b.onclick=()=>{ const [i,j]=b.dataset.planitem.split("|").map(Number);
-    const it=planItem(P.weeks[i].do[j]); if(it) it.go(); });
+    const it=planItem(P.weeks[i].do[j]); PLAN_OPEN=i; if(it) openFrom(openPlan,it.go,PLAN_BACK); });
   $("#quit").onclick=renderStart;
-  const open=app.querySelector(".planwk[open]"); if(open&&cur>0) open.scrollIntoView({block:"start"}); else window.scrollTo(0,0);
+  const open=app.querySelector(PLAN_OPEN!=null?`.planwk[data-wk="${PLAN_OPEN}"]`:".planwk[open]");
+  if(open&&(cur>0||PLAN_OPEN!=null)) open.scrollIntoView({block:"start"}); else window.scrollTo(0,0);
 }
 // Kortet på startsidan (ovanför Fler övningar): aktuell vecka och hur många av veckans ord eleven kan
 function planCard(){

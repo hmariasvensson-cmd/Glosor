@@ -7,10 +7,12 @@
 Läser src/ och languages/<kod>/ och skriver:
   dist/index.html        sidan som publiceras till artefaktlänken (appen och kursinställningarna)
   dist/data/<kod>.json   varje kurs ord och innehåll, publiceras bredvid sidan och hämtas när kursen väljs
+  dist/data/<kod>-exam.json  kursens provträning, hämtas först när provet behövs (bara kurser med exam.json)
   dist/preview.html      samma sida med datan inbakad och ett komplett HTML-skal, för att öppna lokalt och för testerna
 
 och kontrollerar/uppdaterar id-låsen languages/<kod>/ids.lock (och book/ids.lock för bokens id), se lock_ids.
 """
+import collections
 import datetime
 import hashlib
 import json
@@ -25,7 +27,142 @@ DIST = ROOT / "dist"
 # Språk som ska ligga först i väljaren. Det första är standard för den som öppnar sidan första gången.
 ORDER = ["fr"]
 GENDERS = {"", "m", "f", "n", "mpl", "fpl", "npl", "pl"}
-MAX_PAGE_KB, MAX_DATA_KB = 450, 1600   # varningsgränser för storleken (okomprimerat), se slutet av main
+MAX_PAGE_KB, MAX_DATA_KB = 420, 1600   # varningsgränser för storleken (okomprimerat), se slutet av main
+
+# Provets index i kursens datafil (split_exam): de fält per uppgift som listor, startsidan, nivåmätaren och planen läser
+EXAM_INDEX_FIELDS = ["id", "part", "teil", "title", "level", "type", "minWords", "maxWords", "time", "prep", "speak", "sim", "scale"]
+EXAM_TYPES = ["match", "gaps", "short", "pick", "chart", "timed"]   # samma som EX_TYPES i src/kinds/70-exam.js
+
+
+def split_exam(ex):
+    """Delar content.exam i (index, hela provet). Indexet ligger kvar i kursens datafil: provets fält utom tasks,
+    lazy: true och tasks med bara EXAM_INDEX_FIELDS plus k (typen som exKind i 70-exam.js räknar fram).
+    Hela provet blir dist/data/<kod>-exam.json och ersätter indexet när appen hämtat det (ensureExam)."""
+    def kind(t):
+        return t["type"] if t.get("type") in EXAM_TYPES else "mc" if t.get("qs") else "write" if t.get("minWords") else "speak"
+    index = {k: v for k, v in ex.items() if k != "tasks"}
+    index["lazy"] = True
+    index["tasks"] = [{**{k: t[k] for k in EXAM_INDEX_FIELDS if k in t}, "k": kind(t)} for t in ex["tasks"]]
+    return index, ex
+
+
+JS_ID = re.compile(r"[A-Za-z0-9_$\u0080-￿]")
+JS_REGEX_AFTER = {"return", "typeof", "case", "do", "else", "in", "of", "new", "delete", "void", "throw", "instanceof", "yield", "await"}
+JS_SPACE = " \t\r\n\f\v ﻿"
+
+
+def minify_js(src):
+    """Tar bort kommentarer och onödiga blanktecken i JavaScript. Strängar, mallsträngar (även ${…} i flera nivåer)
+    och reguljära uttryck lämnas orörda. En radbrytning blir kvar där den kan betyda något (automatiska semikolon),
+    och tas bara bort efter { ( [ , ; eller före ) ] } , ;. Två ord eller två av + - / skiljs alltid åt, så
+    beteendet ändras inte. Stoppar (JSParseError) på en sträng, kommentar eller ett reguljärt uttryck som inte slutar."""
+    out, i, n = [], 0, len(src)
+    ws, last, last_word = None, "", ""   # väntande blanktecken (None, " ", "\n"); sista tecknet och ordet som skrivits
+    stack = []                           # öppna {: True = ${ i en mallsträng, False = vanlig klammer
+    line = lambda p: src.count("\n", 0, p) + 1
+    idch = lambda ch: bool(JS_ID.match(ch))
+
+    def emit(tok, word=""):
+        nonlocal ws, last, last_word
+        if ws is not None and out:
+            a, b = out[-1][-1], tok[0]
+            b_id = idch(b) or (b == "." and tok[1:2].isdigit())
+            if ws == "\n" and not (a in "{([,;" or b in ")]},;"):
+                out.append("\n")
+            elif (idch(a) and b_id) or (a in "+-/" and b in "+-/"):
+                out.append(" ")
+        ws = None
+        out.append(tok)
+        last, last_word = tok[-1], word
+
+    def template(j):   # från efter ` eller } till och med ` (False) eller ${ (True)
+        while j < n:
+            if src[j] == "\\":
+                j += 2
+            elif src[j] == "`":
+                return j + 1, False
+            elif src.startswith("${", j):
+                return j + 2, True
+            else:
+                j += 1
+        raise JSParseError("en mallsträng slutar aldrig")
+
+    while i < n:
+        c = src[i]
+        if c in JS_SPACE:
+            j = i
+            while j < n and src[j] in JS_SPACE:
+                j += 1
+            ws = "\n" if "\n" in src[i:j] or ws == "\n" else " "
+            i = j
+        elif src.startswith("//", i):
+            j = src.find("\n", i)
+            i = n if j < 0 else j
+            ws = ws or " "
+        elif src.startswith("/*", i):
+            j = src.find("*/", i + 2)
+            if j < 0:
+                raise JSParseError(f"rad {line(i)}: kommentaren /* slutar aldrig")
+            ws = "\n" if "\n" in src[i:j] or ws == "\n" else " "
+            i = j + 2
+        elif c in "'\"":
+            j = i + 1
+            while j < n and src[j] != c:
+                if src[j] == "\n":
+                    raise JSParseError(f"rad {line(i)}: strängen slutar aldrig")
+                j += 2 if src[j] == "\\" else 1
+            emit(src[i:j + 1])
+            i = j + 1
+        elif c == "`" or (c == "}" and stack and stack[-1]):   # mallsträng, eller den fortsätter efter ${…}
+            if c == "}":
+                stack.pop()
+            j, more = template(i + 1)
+            emit(src[i:j])
+            if more:
+                stack.append(True)
+            i = j
+        elif c == "/" and (not out or (last_word in JS_REGEX_AFTER if last_word else not (idch(last) or last in ")]}\"'`"))):
+            j, cls = i + 1, False   # reguljärt uttryck (inte division): efter en operator, ( , = : [ ! & | ? { } ; eller return …
+            while j < n and (cls or src[j] != "/"):
+                if src[j] == "\n":
+                    raise JSParseError(f"rad {line(i)}: det reguljära uttrycket slutar aldrig")
+                if src[j] == "\\":
+                    j += 1
+                elif src[j] == "[":
+                    cls = True
+                elif src[j] == "]":
+                    cls = False
+                j += 1
+            j += 1
+            while j < n and idch(src[j]):   # flaggor
+                j += 1
+            emit(src[i:j])
+            i = j
+        elif idch(c) or (c == "." and src[i + 1:i + 2].isdigit()):
+            m = re.match(r"(?:0[xXbBoO][0-9a-fA-F_]+n?|(?:\d[\d_]*\.?[\d_]*|\.\d[\d_]*)(?:[eE][+-]?\d+)?n?)", src[i:i + 64]) if (c.isdigit() or c == ".") else None
+            j = i + len(m.group(0)) if m else i
+            while not m and j < n and idch(src[j]):
+                j += 1
+            emit(src[i:j], "" if m else src[i:j])
+            i = j
+        else:
+            if c == "{":
+                stack.append(False)
+            elif c == "}" and stack:
+                stack.pop()
+            emit(c)
+            i += 1
+    return "".join(out)
+
+
+def minify_css(src):
+    """Tar bort kommentarer och onödiga blanktecken i CSS. Strängar lämnas orörda; blanktecken tas bara bort runt
+    { } ; , > (aldrig runt : eller + -, där "a :hover" och calc(a + b) behöver dem)."""
+    parts = re.split(r"(\"(?:\\.|[^\"\\\n])*\"|'(?:\\.|[^'\\\n])*')", re.sub(r"/\*.*?\*/", " ", src, flags=re.S))
+    for k in range(0, len(parts), 2):   # jämna index = utanför strängar
+        p = re.sub(r"\s+", " ", parts[k])
+        parts[k] = re.sub(r" ?([{};,>]) ?", r"\1", p).replace(";}", "}")
+    return "".join(parts).strip()
 
 # Samma skal som artefakttjänsten lägger runt sidan vid publicering (används bara för preview.html)
 SKELETON_HEAD = '<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>\n'
@@ -93,7 +230,7 @@ def read_words(code):
     return "\n".join(lines), n_words, section_ids, errors, warnings, origin
 
 
-# Artiklar och relativpronomen för att kontrollera de tyska grammatikfrågorna (se GRAMMATIK-SPEC.md)
+# Artiklar och relativpronomen för att kontrollera de tyska grammatikfrågorna (se docs/spec/grammatik.md)
 DEF = {"nom": {"m": "der", "f": "die", "n": "das", "pl": "die"}, "akk": {"m": "den", "f": "die", "n": "das", "pl": "die"},
        "dat": {"m": "dem", "f": "der", "n": "dem", "pl": "den"}, "gen": {"m": "des", "f": "der", "n": "des", "pl": "der"}}
 EIN = {"nom": {"m": "", "f": "e", "n": "", "pl": "e"}, "akk": {"m": "en", "f": "e", "n": "", "pl": "e"},
@@ -149,7 +286,8 @@ def check_plan(plan, section_ids, content, grammar, where):
                 warnings.append(f"{where}: {i} pekar på {k} {ref}, som inte finns (visas inte)")
             used.add((k, ref))
     for k, s in have.items():
-        miss = sorted(r for r in s if r and (k, r) not in used)
+        # bokens texter (id bok-…, privata, bara lokalt) ska inte stå i den publika planen
+        miss = sorted(r for r in s if r and (k, r) not in used and not str(r).startswith("bok-"))
         if miss:
             warnings.append(f"{where}: {PLAN_KINDS[k]} som inte är med i planen: {', '.join(miss)}")
     return errors, warnings
@@ -225,16 +363,97 @@ def check_question(q, where):
     return []
 
 
+EXAM_TYPES = ("match", "gaps", "short", "pick", "chart", "timed")
+_EXAM_ICONS = None
+
+
+def exam_icons():
+    """Nycklarna i bilduppsättningen EX_ICONS i src/kinds/70-exam.js (bildval, type "pick")."""
+    global _EXAM_ICONS
+    if _EXAM_ICONS is None:
+        src = (pathlib.Path(__file__).resolve().parent / "src" / "kinds" / "70-exam.js").read_text(encoding="utf-8")
+        m = re.search(r"const EX_ICONS=\{(.*?)\n\};", src, re.S)
+        _EXAM_ICONS = set(re.findall(r"([A-Za-z_]\w*):\[", m.group(1))) if m else set()
+    return _EXAM_ICONS
+
+
+def is_exam_icon(key, icons):
+    # Klockslagen skapas i en slinga i 70-exam.js: kl1 … kl12 och kl1.30 … kl12.30
+    return isinstance(key, str) and (key in icons or re.fullmatch(r"kl(1[0-2]|[1-9])(\.30)?", key) is not None)
+
+
+def check_timed(t, where):
+    """Talat svar på tid: prep (0–1800) och speak (10–1800) i hela sekunder."""
+    prep, speak = t.get("prep", 0), t.get("speak")
+    ok = lambda v, lo: isinstance(v, int) and not isinstance(v, bool) and lo <= v <= 1800
+    if not ok(prep, 0) or not ok(speak, 10):
+        return [f"{where}: prep och speak ska vara sekunder (prep 0–1800, speak 10–1800), fick prep={prep!r} speak={speak!r}"]
+    return []
+
+
+def check_chart(t, where):
+    """Grafikbeskrivning: chart {kind bar/line, title, labels, series [{name, values}] (1–3)}, task, minWords (maxWords)."""
+    c, errors = t.get("chart"), []
+    if not isinstance(c, dict):
+        return [f"{where}: grafikuppgiften behöver chart"]
+    labels, series = c.get("labels"), c.get("series")
+    if c.get("kind") not in ("bar", "line"):
+        errors.append(f"{where}: chart.kind ska vara bar eller line")
+    if not c.get("title"):
+        errors.append(f"{where}: chart.title saknas")
+    if not isinstance(labels, list) or not labels or not all(isinstance(x, str) and x for x in labels):
+        errors.append(f"{where}: chart.labels ska vara en lista med text")
+        labels = []
+    if not isinstance(series, list) or not 1 <= len(series) <= 3:
+        errors.append(f"{where}: chart.series ska ha 1–3 serier")
+        series = []
+    for s in series:
+        vals = s.get("values") if isinstance(s, dict) else None
+        if not isinstance(s, dict) or not s.get("name") or not isinstance(vals, list) or len(vals) != len(labels) \
+                or not all(isinstance(v, (int, float)) and not isinstance(v, bool) and v >= 0 for v in vals):
+            errors.append(f"{where}: varje serie behöver name och lika många värden (≥ 0) som labels")
+    mn, mx = t.get("minWords"), t.get("maxWords")
+    if not str(t.get("task") or "").strip() or not isinstance(mn, int) or mn < 1 or (mx is not None and (not isinstance(mx, int) or mx < mn)):
+        errors.append(f"{where}: grafikuppgiften behöver task och minWords (och maxWords ≥ minWords)")
+    return errors
+
+
 def check_exam_task(t, where):
-    """Provuppgifter med type (SPEC överst i src/kinds/70-exam.js): para ihop, lucktext med flerval och kortsvar."""
+    """Provuppgifter med type (SPEC överst i src/kinds/70-exam.js): para ihop, lucktext, kortsvar, bildval, grafik och tal på tid."""
     typ = t.get("type")
+    errors = []
+    if t.get("scale") is not None and t.get("scale") not in ("delf", "tdn", "pct"):
+        errors.append(f"{where}: okänd scale {t.get('scale')!r} (delf, tdn eller pct)")
     if typ is None:
-        return []
-    if typ not in ("match", "gaps", "short"):
-        return [f"{where}: okänd type {typ!r} (match, gaps eller short)"]
-    errors, items = [], t.get("items")
-    if typ in ("match", "short") and (not isinstance(items, list) or not items):
-        return [f"{where}: type {typ} behöver items"]
+        if "speak" in t:   # vanlig taluppgift med timer: prep och speak i sekunder
+            errors += check_timed(t, where)
+        return errors
+    if typ not in EXAM_TYPES:
+        return [f"{where}: okänd type {typ!r} ({', '.join(EXAM_TYPES)})"]
+    items = t.get("items")
+    if typ in ("match", "short", "pick") and (not isinstance(items, list) or not items):
+        return errors + [f"{where}: type {typ} behöver items"]
+    if typ == "timed":
+        if not str(t.get("task") or "").strip():
+            errors.append(f"{where}: talat svar på tid behöver task")
+        return errors + check_timed(t, where)
+    if typ == "chart":
+        return errors + check_chart(t, where)
+    if typ == "pick":
+        icons = exam_icons()
+        for i, it in enumerate(items):
+            opts, a = it.get("opts"), it.get("a")
+            if not it.get("q") or not isinstance(opts, list) or len(opts) < 2:
+                errors.append(f"{where} fråga {i + 1}: bildval behöver q och minst två opts")
+                continue
+            bad = [o for o in opts if not is_exam_icon(o, icons)]
+            if bad:
+                errors.append(f"{where} fråga {i + 1}: okända bilder {bad} (se EX_ICONS i src/kinds/70-exam.js)")
+            if len(set(map(str, opts))) != len(opts):
+                errors.append(f"{where} fråga {i + 1}: samma bild två gånger bland alternativen")
+            if not isinstance(a, int) or isinstance(a, bool) or not 0 <= a < len(opts):
+                errors.append(f"{where} fråga {i + 1}: facit a={a!r} finns inte bland de {len(opts)} bilderna")
+        return errors
     if typ == "match":
         opts = t.get("opts")
         if not isinstance(opts, list) or len(opts) < 2:
@@ -313,6 +532,240 @@ def check_content(content, section_ids, where, has_book=True):
             for k in (t.get("gloss") or {}):
                 if k not in keys:
                     errors.append(f"{where}/content/{kind}.json: {t.get('id')} har glosan '{k}', men ordet finns inte i texten (nyckeln ska vara ordet med små bokstäver, utan l'/d' …)")
+    return errors, warnings
+
+
+# ---------------------------------------------------------------------------------------------------------
+# Fälten per innehållstyp, så som appen läser dem (src/kinds/*.js; formaten i docs/spec/). Ett fält som saknas
+# syns annars först som ett fel i appen. CONTENT_FIELDS: typ -> {fält: typ i Python}; str-fält får inte vara tomma.
+# Resten (texternas rader, luckorna i berättelserna, skrivuppgifternas krav …) kontrolleras i check_fields.
+# ---------------------------------------------------------------------------------------------------------
+TEXT_FIELDS = {"id": str, "sec": str, "title": str, "lines": list, "questions": list}
+CONTENT_FIELDS = {
+    "listening": TEXT_FIELDS,
+    "reading": TEXT_FIELDS,
+    "culture": {"id": str, "sec": str, "title": str, "lines": list, "q": dict, "ask": str, "model": str},
+    "stories": {"id": str, "sec": str, "title": str, "text": str, "gaps": list},
+    "phrases": {"id": str, "sit": str, "fr": str, "alt": list, "why": str},
+    "prompts": {"id": str, "title": str, "task": str, "min": int, "max": int, "model": str},
+    "mal": {"id": str, "sec": str, "goals": list},
+    "uttal": {"id": str, "title": str, "pairs": list},
+    "teori": {"id": str, "sec": str, "q": str, "opts": list, "why": str},
+    "transkription": {"id": str, "sec": str, "topic": str, "fr": str, "ipa": str, "alt": list, "why": str},
+    "satsanalys": {"id": str, "sec": str, "lvl": int, "t": str, "fr": str, "opts": list, "why": str},
+}
+OPTIONAL_FIELDS = {"sec": str, "gloss": dict, "sv": str, "modelSv": str, "tip": str, "need": dict, "level": str, "ok": list, "cat": str}
+STORY_CATS = {"tempus", "bindeord"}   # gaps[].cat i stories.json (21-stories.js räknar allt utom bindeord som tempus)
+SATS_TYPES = {"fn", "prop"}   # SATS_GROUPS i 62-satsanalys.js
+QUESTION_TYPES = {None, "helhet", "detalj", "tolkning"}   # questions[].type i hör- och lästexter (textQ i 30-texts.js)
+
+
+def js_tok(s):
+    """Orden i en text som appen räknar dem (tok i src/kinds/00-common.js)."""
+    s = re.sub(r"[’`´]", "'", str(s).lower())
+    return re.sub(r"[«»\"“”!?.,;:…()\-–—]", " ", s).split()
+
+
+def found_connectors(text, connectors):
+    """Bindeorden i texten som foundConnectors i src/kinds/40-writing.js: på varje ställe räknas bara det längsta."""
+    text, hits = re.sub(r"[’`´]", "'", str(text)), []
+    for c in connectors:
+        if not isinstance(c, str) or not c:
+            continue
+        pat = r"(?<![^\W\d_])(?=(" + re.escape(re.sub(r"[’`´]", "'", c)) + r")(?![^\W\d_]))"
+        hits += [(m.start(), m.start() + len(m.group(1)), c) for m in re.finditer(pat, text, re.I)]
+    hits.sort(key=lambda h: (-(h[1] - h[0]), h[0]))
+    taken, found = [], set()
+    for i, j, c in hits:
+        if not any(i < b and a < j for a, b in taken):
+            taken.append((i, j))
+            found.add(c)
+    return [c for c in connectors if c in found]
+
+
+def need_fields(x, fields):
+    """Fel för fält som saknas, har fel typ eller är tomma."""
+    out = []
+    for k, t in fields.items():
+        v = x.get(k)
+        if v is None or v == "" or v == [] or v == {}:
+            out.append(f"saknar {k}")
+        elif not isinstance(v, t) or (t is int and isinstance(v, bool)):
+            out.append(f"{k} ska vara {'text' if t is str else 'ett heltal' if t is int else 'en lista' if t is list else 'ett objekt'}")
+    for k, t in OPTIONAL_FIELDS.items():
+        if k in x and k not in fields and x[k] is not None and not isinstance(x[k], t):
+            out.append(f"{k} ska vara {'text' if t is str else 'en lista' if t is list else 'ett objekt'}")
+    return out
+
+
+def check_lines(lines, sv=True):
+    """lines = [{who?, fr, sv}]: texten på målspråket (tl) och översättningen (tapText med sv)."""
+    bad = [i + 1 for i, ln in enumerate(lines) if not isinstance(ln, dict) or not isinstance(ln.get("fr"), str) or not ln["fr"].strip()
+           or (sv and not isinstance(ln.get("sv"), str))]
+    return [f"rad {', '.join(map(str, bad[:5]))} saknar fr" + (" eller sv" if sv else "")] if bad else []
+
+
+def check_fields(content, where, connectors=None, tenses=None):
+    """Kontrollerar att varje post i content har de fält appen läser (CONTENT_FIELDS), och formen på det som
+    appen räknar med: texternas rader och frågor, berättelsernas luckor, frasernas felalternativ, uttalets ordpar,
+    målen, regelsidorna och provuppgifterna. Skrivuppgifternas modelltext ska klara uppgiftens egna krav
+    (ordgränserna och need.connectors), och need.tenses ska finnas i kursens tenseCheck (connectors och tenses
+    med arvet inräknat; None = hoppa över). Returnerar (fel, varningar)."""
+    errors, warnings = [], []
+    for kind, fields in CONTENT_FIELDS.items():
+        items = content.get(kind)
+        if items is None:
+            continue
+        f = f"{where}/content/{kind}.json"
+        if not isinstance(items, list):
+            errors.append(f"{f}: ska vara en lista")
+            continue
+        other = {}   # berättelseluckor med annan cat än tempus/bindeord
+        for n, x in enumerate(items):
+            if not isinstance(x, dict):
+                errors.append(f"{f}: post {n + 1} ska vara ett objekt")
+                continue
+            i = x.get("id") or f"post {n + 1}"
+            err = lambda msg: errors.append(f"{f}: {i} {msg}")
+            for msg in need_fields(x, fields):
+                err(msg)
+            if kind in ("listening", "reading", "culture") and isinstance(x.get("lines"), list):
+                for msg in check_lines(x["lines"]):
+                    err(msg)
+            if kind in ("listening", "reading") and isinstance(x.get("questions"), list):
+                for k, q in enumerate(x["questions"]):
+                    if not isinstance(q, dict) or not isinstance(q.get("q"), str) or not q["q"].strip():
+                        err(f"fråga {k + 1} saknar q")
+                    elif q.get("type") not in QUESTION_TYPES:
+                        other.setdefault(("type", q.get("type")), []).append(f"{i}:{k + 1}")
+            if kind == "culture" and isinstance(x.get("q"), dict) and not x["q"].get("q"):
+                err("saknar frågan q.q")
+            if kind == "stories" and isinstance(x.get("text"), str) and isinstance(x.get("gaps"), list):
+                inner = GAP.findall(x["text"])
+                if x["text"].count("[") != x["text"].count("]") or x["text"].count("[") != len(inner):
+                    err("har en hakparentes som inte går jämnt ut i text")
+                if not inner:
+                    err("saknar luckor [rätt|fel|fel] i text")
+                if len(inner) != len(x["gaps"]):
+                    err(f"har {len(inner)} luckor i text men {len(x['gaps'])} i gaps (en post i gaps per lucka, i samma ordning)")
+                for k, g in enumerate(inner):
+                    opts = [o.strip() for o in g.split("|")]
+                    if len(opts) < 2 or not all(opts) or len(set(opts)) != len(opts):
+                        err(f"lucka {k + 1} [{g}] ska ha rätt svar först och minst ett annat, olika alternativ, åtskilda av |")
+                for k, g in enumerate(x["gaps"]):
+                    if not isinstance(g, dict) or not g.get("cat") or not g.get("why"):
+                        err(f"gaps[{k}] behöver cat ({' eller '.join(sorted(STORY_CATS))}) och why")
+                    elif g["cat"] not in STORY_CATS:
+                        other.setdefault(g["cat"], []).append(f"{i}[{k}]")
+            if kind == "phrases" and isinstance(x.get("alt"), list) and isinstance(x.get("fr"), str):
+                if not all(isinstance(a, str) and a.strip() for a in x["alt"]):
+                    err("alt ska vara en lista med felalternativ (text)")
+                elif x["fr"].strip() in {a.strip() for a in x["alt"]}:
+                    err("har frasen själv bland felalternativen (alt)")
+            if kind == "mal" and isinstance(x.get("goals"), list) and not all(isinstance(g, str) and g.strip() for g in x["goals"]):
+                err("goals ska vara en lista med mål (text)")
+            if kind == "uttal" and isinstance(x.get("pairs"), list):
+                bad = [k + 1 for k, p in enumerate(x["pairs"]) if not isinstance(p, list) or len(p) < 2
+                       or not all(isinstance(w, str) and w.strip() for w in p) or len(set(p)) != len(p)]
+                if bad:
+                    err(f"ordpar {', '.join(map(str, bad[:5]))} ska vara listor med minst två olika ord")
+            if kind == "satsanalys" and x.get("t") not in SATS_TYPES:
+                err(f"har t {x.get('t')!r} (ska vara {' eller '.join(sorted(SATS_TYPES))})")
+            if kind == "prompts" and isinstance(x.get("min"), int) and isinstance(x.get("max"), int):
+                errors_w, warns_w = check_prompt(x, connectors, tenses)
+                errors += [f"{f}: {i} {m}" for m in errors_w]
+                warnings += [f"{f}: {i} {m}" for m in warns_w]
+        for cat, where_ in other.items():
+            some = f"{', '.join(where_[:3])}{' …' if len(where_) > 3 else ''}"
+            if isinstance(cat, tuple):
+                warnings.append(f"{f}: type '{cat[1]}' i {len(where_)} frågor ({some}) visas utan etikett (30-texts.js känner bara till helhet, detalj och tolkning)")
+            else:
+                warnings.append(f"{f}: cat '{cat}' i {len(where_)} luckor ({some}) räknas som tempus i statistiken (21-stories.js känner bara till {' och '.join(sorted(STORY_CATS))})")
+    regler = content.get("regler")
+    if regler is not None:
+        f = f"{where}/content/regler.json"
+        if not isinstance(regler, dict):
+            errors.append(f"{f}: ska vara ett objekt {{<område>: {{title, intro, parts}}}}")
+        else:
+            for topic, r in regler.items():
+                if not isinstance(r, dict) or not isinstance(r.get("title"), str) or not r["title"] or not isinstance(r.get("parts"), list) or not r["parts"]:
+                    errors.append(f"{f}: {topic} behöver title och parts")
+                    continue
+                for k, p in enumerate(r["parts"]):
+                    if not isinstance(p, dict) or not any(p.get(a) for a in ("h", "t", "table", "ex")):
+                        errors.append(f"{f}: {topic} del {k + 1} är tom (behöver h, t, table eller ex)")
+                        continue
+                    if "ex" in p and (not isinstance(p["ex"], list) or not all(isinstance(e, dict) and isinstance(e.get("fr"), str) and e["fr"] for e in p["ex"])):
+                        errors.append(f"{f}: {topic} del {k + 1}: ex ska vara en lista med {{fr, sv}}")
+                    tb = p.get("table")
+                    if tb is not None and (not isinstance(tb, dict) or not isinstance(tb.get("rows"), list)
+                                           or not all(isinstance(row, list) for row in tb["rows"]) or not isinstance(tb.get("head", []), list)):
+                        errors.append(f"{f}: {topic} del {k + 1}: table ska vara {{head: [...], rows: [[...], ...]}}")
+    exam = content.get("exam")
+    if exam is not None:
+        f = f"{where}/content/exam.json"
+        if not isinstance(exam, dict) or not isinstance(exam.get("tasks"), list) or not isinstance(exam.get("parts"), list):
+            errors.append(f"{f}: ska vara ett objekt med parts och tasks")
+        else:
+            parts = {p.get("id") for p in exam["parts"] if isinstance(p, dict)}
+            for n, p in enumerate(exam["parts"]):
+                if not isinstance(p, dict) or not p.get("id") or not p.get("name"):
+                    errors.append(f"{f}: del {n + 1} i parts behöver id och name")
+            for n, t in enumerate(exam["tasks"]):
+                if not isinstance(t, dict):
+                    errors.append(f"{f}: uppgift {n + 1} ska vara ett objekt")
+                    continue
+                i = t.get("id") or f"uppgift {n + 1}"
+                for k in ("id", "part", "title", "instr"):
+                    if not isinstance(t.get(k), str) or not t[k]:
+                        errors.append(f"{f}: {i} saknar {k}")
+                if t.get("part") and t["part"] not in parts:
+                    errors.append(f"{f}: {i} har part '{t['part']}', som inte finns i parts")
+                if t.get("lines") is not None:
+                    if not isinstance(t["lines"], list):
+                        errors.append(f"{f}: {i} lines ska vara en lista")
+                    else:
+                        errors += [f"{f}: {i} {m}" for m in check_lines(t["lines"], sv=False)]
+                kind = t.get("type") or ("mc" if t.get("qs") else "write" if t.get("minWords") else "speak")
+                if kind == "mc" and not all(isinstance(q, dict) and q.get("q") for q in t["qs"]):
+                    errors.append(f"{f}: {i} har en fråga i qs utan q")
+                if kind in ("write", "speak") and not t.get("task"):
+                    errors.append(f"{f}: {i} ({'skriva' if kind == 'write' else 'tala'}) saknar task")
+                if kind == "write" and isinstance(t.get("model"), str) and isinstance(t.get("minWords"), int):
+                    n_w = len(js_tok(t["model"]))
+                    if n_w < t["minWords"]:
+                        warnings.append(f"{f}: {i} har en modelltext på {n_w} ord, men minWords är {t['minWords']}")
+    return errors, warnings
+
+
+def check_prompt(p, connectors, tenses):
+    """En skrivuppgift: min ≤ max, need = {connectors, chapterWords, tenses}, och modelltexten klarar ordgränserna
+    och antalet bindeord (samma räkning som checklistan i 40-writing.js). Returnerar (fel, varningar).
+    need.chapterWords kontrolleras inte här: böjningsreglerna per språk (usesWord i 40-writing.js) finns bara i JS,
+    och att modelltexterna har sina kapitelord kontrolleras av tests/run_tests.py ("modelltexterna klarar checklistan")."""
+    errors, warnings = [], []
+    lo, hi, need = p["min"], p["max"], p.get("need") or {}
+    if not 0 < lo <= hi:
+        errors.append(f"har min {lo} och max {hi} (ska vara 0 < min ≤ max)")
+    for k in ("connectors", "chapterWords"):
+        if k in need and (not isinstance(need[k], int) or isinstance(need[k], bool) or need[k] < 0):
+            errors.append(f"need.{k} ska vara ett heltal")
+    ts = need.get("tenses", [])
+    if not isinstance(ts, list) or not all(isinstance(t, str) for t in ts):
+        errors.append("need.tenses ska vara en lista med tempusnamn")
+    elif tenses is not None:
+        for t in ts:
+            if t not in tenses:
+                errors.append(f"har need.tenses '{t}', som inte finns i kursens tenseCheck (appen hoppar över det; finns: {', '.join(sorted(tenses)) or 'inget'})")
+    model = p.get("model") or ""
+    n = len(js_tok(model))
+    if not lo <= n <= hi:
+        warnings.append(f"har en modelltext på {n} ord, utanför uppgiftens {lo}–{hi}")
+    want = need.get("connectors")
+    if isinstance(want, int) and want and connectors is not None:
+        got = found_connectors(model, connectors)
+        if len(got) < want:
+            warnings.append(f"har en modelltext med {len(got)} bindeord ({', '.join(got) or 'inga'}), men need.connectors är {want}")
     return errors, warnings
 
 
@@ -414,15 +867,269 @@ def lock_ids(code, storage_key, ids, allowed):
     return errors, notes, writes
 
 
+# ---------------------------------------------------------------------------------------------------------
+# lang.js läses med en liten tokenizer i stället för reguljära uttryck, så att enkla citattecken, kommentarer,
+# radbrytningar och flera fält på en rad fungerar. parse_lang_js ger kursobjektet som en dict: rena literaler
+# (strängar, tal, true/false/null, listor och objekt av sådana) blir Python-värden, allt annat (regex, funktioner,
+# uttryck som tenseCheck: (() => {…})()) blir JSExpr med källtexten. Bara det som build.py behöver läses.
+# ---------------------------------------------------------------------------------------------------------
+class JSParseError(Exception):
+    pass
+
+
+class JSExpr:
+    """Ett värde i lang.js som inte är en ren literal (regex, funktion, uttryck). raw = källtexten."""
+    def __init__(self, raw, toks=()):
+        self.raw, self.toks = raw, list(toks)
+
+    def __repr__(self):
+        return f"JSExpr({self.raw[:40]!r})"
+
+
+JS_REGEX_AFTER = set("(,=:[!&|?{};+-*%<>~^")   # efter de här tecknen är / början på ett reguljärt uttryck, inte division
+JS_REGEX_WORDS = {"return", "typeof", "case", "in", "of", "new", "delete", "void", "throw", "else", "do"}
+JS_ESC = {"n": "\n", "t": "\t", "r": "\r", "b": "\b", "f": "\f", "v": "\v", "0": "\0"}
+
+
+def js_tokens(src):
+    """Delar JavaScript i token (typ, värde, start, slut). Typer: str, tmpl, num, name, regex, punct.
+    Kommentarer och blanktecken hoppas över. Stoppar (JSParseError) på en sträng, en kommentar eller ett
+    reguljärt uttryck som aldrig slutar."""
+    toks, i, n = [], 0, len(src)
+    line = lambda p: src.count("\n", 0, p) + 1
+    while i < n:
+        c = src[i]
+        if c.isspace():
+            i += 1
+        elif src.startswith("//", i):
+            j = src.find("\n", i)
+            i = n if j < 0 else j
+        elif src.startswith("/*", i):
+            j = src.find("*/", i + 2)
+            if j < 0:
+                raise JSParseError(f"rad {line(i)}: kommentaren /* slutar aldrig")
+            i = j + 2
+        elif c in "'\"":
+            out, j = [], i + 1
+            while True:
+                if j >= n or src[j] == "\n":
+                    raise JSParseError(f"rad {line(i)}: strängen slutar aldrig")
+                if src[j] == c:
+                    break
+                if src[j] == "\\":
+                    e = src[j + 1:j + 2]
+                    if e == "u":
+                        m = re.match(r"\{([0-9a-fA-F]+)\}|([0-9a-fA-F]{4})", src[j + 2:])
+                        out.append(chr(int(m.group(1) or m.group(2), 16)) if m else "u")
+                        j += 2 + (len(m.group(0)) if m else 0)
+                        continue
+                    if e == "x" and re.match(r"[0-9a-fA-F]{2}", src[j + 2:j + 4]):
+                        out.append(chr(int(src[j + 2:j + 4], 16)))
+                        j += 4
+                        continue
+                    if e != "\n":   # \ + radbrytning fortsätter strängen på nästa rad
+                        out.append(JS_ESC.get(e, e))
+                    j += 2
+                    continue
+                out.append(src[j])
+                j += 1
+            toks.append(("str", "".join(out), i, j + 1))
+            i = j + 1
+        elif c == "`":   # mallsträng; med ${…} blir den ett uttryck
+            j, depth = i + 1, 0
+            while j < n and not (src[j] == "`" and depth == 0):
+                if src[j] == "\\":
+                    j += 1
+                elif src.startswith("${", j):
+                    depth += 1
+                    j += 1
+                elif src[j] == "}" and depth:
+                    depth -= 1
+                j += 1
+            if j >= n:
+                raise JSParseError(f"rad {line(i)}: mallsträngen slutar aldrig")
+            body = src[i + 1:j]
+            toks.append(("tmpl" if "${" in body else "str", body, i, j + 1))
+            i = j + 1
+        elif c.isdigit() or (c == "." and src[i + 1:i + 2].isdigit()):
+            m = re.match(r"0[xX][0-9a-fA-F]+|(\d+\.?\d*|\.\d+)([eE][+-]?\d+)?", src[i:])
+            toks.append(("num", m.group(0), i, i + len(m.group(0))))
+            i += len(m.group(0))
+        elif c == "$" or c == "_" or c.isalpha():
+            m = re.match(r"[\w$]+", src[i:])
+            toks.append(("name", m.group(0), i, i + len(m.group(0))))
+            i += len(m.group(0))
+        elif c == "/" and (not toks or (toks[-1][0] == "punct" and toks[-1][1] in JS_REGEX_AFTER)
+                           or (toks[-1][0] == "name" and toks[-1][1] in JS_REGEX_WORDS)):
+            j, cls = i + 1, False
+            while True:
+                if j >= n or src[j] == "\n":
+                    raise JSParseError(f"rad {line(i)}: det reguljära uttrycket slutar aldrig")
+                if src[j] == "\\":
+                    j += 2
+                    continue
+                if src[j] == "[":
+                    cls = True
+                elif src[j] == "]":
+                    cls = False
+                elif src[j] == "/" and not cls:
+                    break
+                j += 1
+            m = re.match(r"[a-z]*", src[j + 1:])
+            toks.append(("regex", src[i:j + 1 + len(m.group(0))], i, j + 1 + len(m.group(0))))
+            i = j + 1 + len(m.group(0))
+        else:
+            toks.append(("punct", c, i, i + 1))
+            i += 1
+    return toks
+
+
+def js_skip_expr(toks, i):
+    """Index efter ett uttryck som börjar vid i: fram till , ; eller en stängande parentes på samma nivå."""
+    depth, pairs = 0, {"(": ")", "[": "]", "{": "}"}
+    while i < len(toks):
+        t, v = toks[i][0], toks[i][1]
+        if t == "punct" and v in pairs:
+            depth += 1
+        elif t == "punct" and v in ")]}":
+            if depth == 0:
+                return i
+            depth -= 1
+        elif t == "punct" and v in ",;" and depth == 0:
+            return i
+        i += 1
+    if depth:
+        raise JSParseError("parenteserna går inte jämnt ut")
+    return i
+
+
+def js_value(src, toks, i):
+    """(värde, nästa index) för värdet som börjar vid toks[i]."""
+    start = i
+    end_ok = lambda k: k >= len(toks) or (toks[k][0] == "punct" and toks[k][1] in ",;)]}")
+    if i >= len(toks):
+        raise JSParseError("värde saknas i slutet av filen")
+    t, v = toks[i][0], toks[i][1]
+    val, simple = None, True
+    if t == "punct" and v == "{":
+        val, i = {}, i + 1
+        while not (toks[i][0] == "punct" and toks[i][1] == "}"):
+            kt, kv = toks[i][0], toks[i][1]
+            if kt not in ("name", "str", "num") or i + 1 >= len(toks) or toks[i + 1][1] != ":" or toks[i + 1][0] != "punct":
+                simple = False   # metod, ...spridning eller [beräknad] nyckel: objektet blir ett uttryck
+                break
+            val[kv], i = js_value(src, toks, i + 2)
+            if toks[i][0] == "punct" and toks[i][1] == ",":
+                i += 1
+            elif not (toks[i][0] == "punct" and toks[i][1] == "}"):
+                raise JSParseError(f"rad {src.count(chr(10), 0, toks[i][2]) + 1}: väntade , eller }} efter {kv}")
+        if simple:
+            i += 1
+    elif t == "punct" and v == "[":
+        val, i = [], i + 1
+        while not (toks[i][0] == "punct" and toks[i][1] == "]"):
+            x, i = js_value(src, toks, i)
+            val.append(x)
+            if toks[i][0] == "punct" and toks[i][1] == ",":
+                i += 1
+            elif not (toks[i][0] == "punct" and toks[i][1] == "]"):
+                simple = False
+                break
+        if simple:
+            i += 1
+    elif t == "str":
+        val, i = v, i + 1
+    elif t == "num" or (t == "punct" and v == "-" and i + 1 < len(toks) and toks[i + 1][0] == "num"):
+        neg = t == "punct"
+        s = toks[i + neg][1]
+        val = int(s, 16) if s[:2].lower() == "0x" else float(s) if re.search(r"[.eE]", s) else int(s)
+        val, i = (-val if neg else val), i + 1 + neg
+    elif t == "name" and v in ("true", "false", "null", "undefined"):
+        val, i = {"true": True, "false": False}.get(v), i + 1
+    else:
+        simple = False
+    if simple and end_ok(i):
+        return val, i
+    end = js_skip_expr(toks, start)
+    return JSExpr(src[toks[start][2]:toks[end - 1][3]], toks[start:end]), end
+
+
+def parse_lang_js(src, code=None):
+    """Kursobjektet i lang.js (LANGUAGES.<kod> = {…}) som en dict. Stoppar (JSParseError) om filen inte går att läsa
+    eller om koden efter LANGUAGES. inte är mappens namn."""
+    toks = js_tokens(src)
+    for i in range(len(toks) - 3):
+        if toks[i][:2] != ("name", "LANGUAGES"):
+            continue
+        if toks[i + 1][1] == "." and toks[i + 2][0] == "name":
+            name, j = toks[i + 2][1], i + 3
+        elif toks[i + 1][1] == "[" and toks[i + 2][0] == "str" and toks[i + 3][1] == "]":
+            name, j = toks[i + 2][1], i + 4
+        else:
+            continue
+        if j + 1 < len(toks) and toks[j][1] == "=" and toks[j + 1][1] == "{":
+            if code is not None and name != code:
+                raise JSParseError(f"LANGUAGES.{name} ska vara LANGUAGES.{code} (samma som mappens namn)")
+            try:
+                val, _ = js_value(src, toks, j + 1)
+            except IndexError:
+                raise JSParseError("filen slutar mitt i kursobjektet (saknas en } eller ]?)") from None
+            if not isinstance(val, dict):
+                raise JSParseError("kursobjektet går inte att läsa (bara fält av typen namn: värde)")
+            return val
+    raise JSParseError(f"hittar inte LANGUAGES.{code or '<kod>'} = {{…}}")
+
+
+def js_object_keys(value):
+    """Nycklarna i ett objekt i lang.js: en dict, eller ett uttryck som slutar med return {…} (som tenseCheck i fr4)."""
+    if isinstance(value, dict):
+        return [k for k in value if k != "$remove"]
+    if isinstance(value, JSExpr):
+        toks = value.toks
+        for i in range(len(toks) - 1, 0, -1):
+            if toks[i - 1][:2] == ("name", "return") and toks[i][1] == "{":
+                try:
+                    v, _ = js_value(value.raw, [(a, b, s - toks[0][2], e - toks[0][2]) for a, b, s, e in toks[i:]], 0)
+                except (IndexError, JSParseError):
+                    return []
+                return list(v) if isinstance(v, dict) else []
+    return []
+
+
+def conf_parent(conf):
+    """(förälder, [ärvda fält]) ur extends och inherit, eller (None, [])."""
+    ext, inh = conf.get("extends"), conf.get("inherit")
+    return (ext if isinstance(ext, str) else None), ([f for f in inh if isinstance(f, str)] if isinstance(inh, list) else [])
+
+
 def has_field(confs, code, field, seen=()):
     """Kursen har fältet i sin lang.js, eller ärver det (extends + inherit) från en kurs som har det."""
-    conf = confs.get(code, "")
-    if re.search(rf'^\s*{re.escape(field)}\s*:', conf, re.M):
+    conf = confs.get(code) or {}
+    if field in conf:
         return True
-    m = re.search(r'^\s*extends:\s*"([^"]+)"', conf, re.M)
-    inh = re.search(r'^\s*inherit:\s*\[([^\]]*)\]', conf, re.M)
-    return bool(m and inh and m.group(1) not in seen and f'"{field}"' in inh.group(1)
-                and has_field(confs, m.group(1), field, seen + (code,)))
+    parent, inherit = conf_parent(conf)
+    return bool(parent and parent not in seen and field in inherit and has_field(confs, parent, field, seen + (code,)))
+
+
+def resolve_field(confs, code, field, seen=()):
+    """Fältet med arvet inräknat (samma regler som inheritCourses i app.js, för rena literaler som connectors)."""
+    conf = confs.get(code) or {}
+    parent, inherit = conf_parent(conf)
+    if parent and field in inherit and parent in confs and parent not in seen:
+        return merge_inherited(resolve_field(confs, parent, field, seen + (code,)), conf.get(field))
+    return conf.get(field)
+
+
+def tense_names(confs, code, seen=()):
+    """Namnen i tenseCheck (egna och ärvda): need.tenses i skrivuppgifterna måste finnas här, annars hoppar appen över dem."""
+    conf = confs.get(code) or {}
+    own = conf.get("tenseCheck")
+    names = set(js_object_keys(own))
+    parent, inherit = conf_parent(conf)
+    if parent and "tenseCheck" in inherit and parent in confs and parent not in seen:
+        drop = set(own.get("$remove", [])) if isinstance(own, dict) else set()
+        names |= tense_names(confs, parent, seen + (code,)) - drop
+    return names
 
 
 def merge_inherited(base, own):
@@ -448,11 +1155,10 @@ def resolve_verbs(confs, own, code, seen=()):
     """Verbtabellerna (languages/<kod>/verbs.json: sv, tenses, notes) med arvet inräknat. Ärver kursen "verbs"
     (extends + inherit) slås förälderns tabeller ihop med kursens egna, med samma regler som inheritCourses i app.js
     använder för resten av verbs (persons, prefix, games) i lang.js. Tabellerna följer med kursens datafil (verbTables)."""
-    conf = confs.get(code, "")
-    m = re.search(r'^\s*extends:\s*"([^"]+)"', conf, re.M)
-    inh = re.search(r'^\s*inherit:\s*\[([^\]]*)\]', conf, re.M)
-    if m and inh and '"verbs"' in inh.group(1) and m.group(1) in confs and m.group(1) not in seen:
-        return merge_inherited(resolve_verbs(confs, own, m.group(1), seen + (code,)), own.get(code))
+    conf = confs.get(code) or {}
+    parent, inherit = conf_parent(conf)
+    if parent and "verbs" in inherit and parent in confs and parent not in seen:
+        return merge_inherited(resolve_verbs(confs, own, parent, seen + (code,)), own.get(code))
     return own.get(code)
 
 
@@ -460,27 +1166,36 @@ def check_extends(confs):
     """extends/inherit i lang.js: kursen som ärvs från ska finnas, inga cirklar, och storageKey ärvs aldrig."""
     errors, parent = [], {}
     for code, conf in confs.items():
-        m = re.search(r'^\s*extends:\s*"([^"]+)"', conf, re.M)
-        inh = re.search(r'^\s*inherit:\s*\[([^\]]*)\]', conf, re.M)
-        if m:
-            parent[code] = m.group(1)
-            if m.group(1) not in confs:
-                errors.append(f"languages/{code}/lang.js: extends '{m.group(1)}' finns inte")
-            if not inh:
+        ext, inh = conf.get("extends"), conf.get("inherit")
+        # Ett extends/inherit/nextCourse i en form som build.py inte kan läsa skulle annars tyst hoppa över kontrollerna
+        if ext is not None and not isinstance(ext, str):
+            errors.append(f"languages/{code}/lang.js: extends ska vara en kod inom citattecken, t.ex. extends: \"de\"")
+            ext = None
+        if inh is not None and (not isinstance(inh, list) or not all(isinstance(f, str) for f in inh)):
+            errors.append(f"languages/{code}/lang.js: inherit ska vara en lista med fältnamn inom citattecken")
+            inh = None
+        if ext:
+            parent[code] = ext
+            if ext not in confs:
+                errors.append(f"languages/{code}/lang.js: extends '{ext}' finns inte")
+            if inh is None:
                 errors.append(f"languages/{code}/lang.js: extends utan inherit (lista fälten som ska ärvas)")
-        elif inh:
+        elif inh is not None:
             errors.append(f"languages/{code}/lang.js: inherit utan extends")
-        if inh and re.search(r'"(storageKey|code|words|content|videos|grammar)"', inh.group(1)):
+        if inh and set(inh) & {"storageKey", "code", "words", "content", "videos", "grammar"}:
             errors.append(f"languages/{code}/lang.js: storageKey, words, content, videos och grammar kan inte ärvas")
         # Ett fält i inherit som föräldern inte har (t.ex. ett stavfel) skulle annars tyst bli tomt i webbläsaren
         # Föräldern kan i sin tur ha ärvt fältet (it3 → it2 → it1), så kedjan följs
-        if m and inh and m.group(1) in confs:
-            for f in re.findall(r'"([^"]+)"', inh.group(1)):
-                if not has_field(confs, m.group(1), f):
-                    errors.append(f"languages/{code}/lang.js: inherit '{f}' finns inte i languages/{m.group(1)}/lang.js")
+        if ext and inh and ext in confs:
+            for f in inh:
+                if not has_field(confs, ext, f):
+                    errors.append(f"languages/{code}/lang.js: inherit '{f}' finns inte i languages/{ext}/lang.js")
         # nextCourse: en kod ("de6") eller en lista med koder (["fr5", "fru"]); varje kurs måste finnas
-        nxt = re.search(r'^\s*nextCourse:\s*("[^"]*"|\[[^\]]*\])', conf, re.M)
-        for n in re.findall(r'"([^"]*)"', nxt.group(1)) if nxt else []:
+        nxt = conf.get("nextCourse")
+        if nxt is not None and not (isinstance(nxt, str) or (isinstance(nxt, list) and all(isinstance(n, str) for n in nxt))):
+            errors.append(f"languages/{code}/lang.js: nextCourse ska vara en kod eller en lista med koder inom citattecken")
+            nxt = None
+        for n in [nxt] if isinstance(nxt, str) else nxt or []:
             if n not in confs:
                 errors.append(f"languages/{code}/lang.js: nextCourse '{n}' finns inte")
             elif n == code:
@@ -540,12 +1255,12 @@ def check_steps(confs, upcoming):
     for code, conf in confs.items():
         # Fält som varje kurs måste ha (resten är valfria och har standardvärden i appen)
         for f in ("name", "title", "course", "inLang", "tts"):
-            if not re.search(rf'^\s*{f}\s*:\s*"[^"]+"', conf, re.M):
-                errors.append(f"languages/{code}/lang.js: {f} saknas")
-        m = re.search(r'^\s*step:\s*("[^"]*"|\d+)', conf, re.M)
-        lv = re.search(r'^\s*level:\s*"([^"]*)"', conf, re.M)
-        step = None if not m else (m.group(1).strip('"') if m.group(1).startswith('"') else int(m.group(1)))
-        one(f"languages/{code}/lang.js", step, lv.group(1) if lv else "")
+            if not isinstance(conf.get(f), str) or not conf[f]:
+                errors.append(f"languages/{code}/lang.js: {f} saknas" + (" (ska vara en text inom citattecken)" if f in conf else ""))
+        step, lv = conf.get("step"), conf.get("level")
+        if isinstance(step, JSExpr) or isinstance(step, bool) or isinstance(step, float):
+            step = repr(step.raw if isinstance(step, JSExpr) else step)
+        one(f"languages/{code}/lang.js", step, lv if isinstance(lv, str) else "")
     seen = set()
     for i, u in enumerate(upcoming if isinstance(upcoming, list) else []):
         where = f"languages/upcoming.json: {u.get('code') or i + 1}" if isinstance(u, dict) else f"languages/upcoming.json: {i + 1}"
@@ -561,6 +1276,71 @@ def check_steps(confs, upcoming):
     if not isinstance(upcoming, list):
         errors.append("languages/upcoming.json: ska vara en lista")
     return errors, warnings
+
+
+# Hur vanligt varje ord är i kursens egna texter, för ordningen på nya ord (pickNew i app.js: vanligast först inom
+# avsnittet). Texten är exempelmeningarna i words.txt och målspråksfälten i content (fr, model, text och ordlistans
+# grundformer gloss.t), utan tatoeba.json. Ordet räknas utan parentes och inledande artikel eller reflexivt pronomen
+# ("la vie" -> "vie", "se lever" -> "lever"); står flera former (a, b = c) räknas den vanligaste. Böjda former räknas
+# inte (bara grundformen), så verb får lägre tal än de förtjänar. Resultatet {ord-id: antal} (bara antal > 0) följer
+# med kursens datafil som freq.
+FREQ_KEYS = {"fr", "model", "text"}
+FREQ_LEAD = {"le", "la", "les", "l", "un", "une", "des", "se", "s", "der", "die", "das", "den", "dem", "ein", "eine",
+             "sich", "il", "lo", "gli", "i", "uno", "una", "si"}
+
+
+def freq_norm(s, lower=True):
+    s = (s.lower() if lower else s).replace("’", "'").replace("œ", "oe").replace("æ", "ae").replace("Œ", "Oe")
+    return " ".join(re.findall(r"[^\W\d_]+", s))
+
+
+def word_freq(words, content):
+    texts = []
+
+    def walk(x, key=None, in_gloss=False):
+        if isinstance(x, dict):
+            for k, v in x.items():
+                if in_gloss and isinstance(v, dict):
+                    texts.append(str(v.get("t", "")))
+                else:
+                    walk(v, k, k == "gloss")
+        elif isinstance(x, list):
+            for v in x:
+                walk(v, key)
+        elif isinstance(x, str) and key in FREQ_KEYS:
+            texts.append(x)
+    walk({k: v for k, v in content.items() if k != "tatoeba"})
+    ids = []
+    for line in words.split("\n"):
+        if line.startswith("#"):
+            continue
+        f = line.split("|")
+        ids.append(f[0])
+        if len(f) > 3:
+            texts.append(f[3].replace("[", "").replace("]", ""))
+    corpus_cs = " " + " \n ".join(freq_norm(t, False) for t in texts) + " "
+    corpus = corpus_cs.lower()
+    out = {}
+    for wid in ids:
+        base = re.sub(r"\(.*?\)|\[.*?\]", " ", wid)
+        if "…" in base:   # "ne … jamais": den längsta delen
+            base = max(base.split("…"), key=len)
+        parts = []
+        for alt in re.split(r"[=/]", base):
+            bits = [b.strip() for b in alt.split(",") if b.strip() and not b.strip().startswith("-")]
+            # "infirmier, infirmière" är två former, men "ce qui me plaît, c'est" är en fras
+            parts += bits if all(len(freq_norm(b).split()) <= 2 for b in bits) else [alt]
+        best = 0
+        for part in parts:
+            toks = freq_norm(part, False).split()
+            if len(toks) > 1 and toks[0].lower() in FREQ_LEAD:
+                toks = toks[1:]
+            if toks:   # med stor bokstav (tyska substantiv) räknas bara samma skrivning: "das Es" inte "es"
+                key = " " + " ".join(toks) + " "
+                best = max(best, (corpus_cs if key != key.lower() else corpus).count(key))
+        if best:
+            out[wid] = best
+    return out
 
 
 def js_string(value):
@@ -592,7 +1372,11 @@ def main():
         if "</script" in conf.lower():
             all_errors.append(f"languages/{code}/lang.js: får inte innehålla </script")
         js = conf.strip()
-        confs[code] = conf
+        try:
+            confs[code] = parse_lang_js(conf, code)
+        except JSParseError as e:
+            all_errors.append(f"languages/{code}/lang.js: kan inte läsas: {e}")
+            confs[code] = {}
         cdata = {"words": words}
         content, found = {}, {}
         # Innehåll från boken (book/content, privat mapp) läggs till efter det allmänna innehållet
@@ -620,15 +1404,13 @@ def main():
                 content.setdefault(f.stem, {}).update(data)
         for k, v in content.items():   # id:n måste vara unika inom varje innehållstyp, även mellan boken och det allmänna
             if isinstance(v, list):
-                ids = [x.get("id") for x in v if isinstance(x, dict) and x.get("id")]
-                all_errors += [f"languages/{code}: {k} har id {i} flera gånger" for i in sorted({i for i in ids if ids.count(i) > 1}) if k != "grammar"]
+                ids = collections.Counter(str(x.get("id")) for x in v if isinstance(x, dict) and x.get("id"))
+                f = "grammar-*.json" if k == "grammar" else f"{k}.json"
+                all_errors += [f"languages/{code}/content/{f}: id {i} finns flera gånger" for i in sorted(i for i, n in ids.items() if n > 1)]
         errs, warns = check_content(content, section_ids, f"languages/{code}", (LANG_DIR / code / "book").exists())
         all_errors += errs
         for w in warns:
             print("Varning:", w)
-        if "grammar" in content:
-            ids = [x.get("id") for x in content["grammar"]]
-            all_errors += [f"languages/{code}/content/grammar-*.json: id {i} finns flera gånger" for i in sorted({i for i in ids if ids.count(i) > 1})]
         # Grammatikens områden och regler (grammar.json) följer med kursens datafil, inte index.html
         grammar = None
         gfile = LANG_DIR / code / "grammar.json"
@@ -647,10 +1429,12 @@ def main():
                     all_errors.append(f"languages/{code}/verbs.json: bara sv, tenses och notes (inte {', '.join(bad)})")
             except (json.JSONDecodeError, TypeError) as e:
                 all_errors.append(f"languages/{code}/verbs.json: {e}")
-        if re.search(r"^\s*(tenses|notes)\s*:", conf, re.M):
+        verbs_conf = confs[code].get("verbs")
+        if {"tenses", "notes"} & (set(confs[code]) | set(verbs_conf if isinstance(verbs_conf, dict) else {})):
             all_errors.append(f"languages/{code}/lang.js: verbtabellerna (sv, tenses, notes) ska ligga i languages/{code}/verbs.json")
-        if re.search(r"^\s*grammar\s*:", conf, re.M):
+        if "grammar" in confs[code]:
             all_errors.append(f"languages/{code}/lang.js: grammar ska ligga i languages/{code}/grammar.json")
+        cdata["freq"] = word_freq(words, content)   # ordningen på nya ord, se word_freq
         if content:
             cdata["content"] = content
             print(f"{code}: innehåll " + ", ".join(f"{k} {len(v)}" for k, v in content.items()))
@@ -676,12 +1460,12 @@ def main():
             except json.JSONDecodeError as e:
                 all_errors.append(f"languages/{code}/plan.json: {e}")
         all_errors += check_grammar_refs(content, grammar, section_ids, f"languages/{code}", (LANG_DIR / code / "book").exists())
-        m = re.search(r'^\s*storageKey:\s*"([^"]+)"', conf, re.M)
-        if not m:
-            all_errors.append(f"languages/{code}/lang.js: storageKey saknas")
+        skey = confs[code].get("storageKey")
+        if not isinstance(skey, str) or not skey:
+            all_errors.append(f"languages/{code}/lang.js: storageKey saknas" + (" (ska vara en text inom citattecken)" if "storageKey" in confs[code] else ""))
         else:
-            keys.setdefault(m.group(1), []).append(code)
-            errs, notes, writes = lock_ids(code, m.group(1), collect_ids(origin, found, grammar), allowed.get(code, set()))
+            keys.setdefault(skey, []).append(code)
+            errs, notes, writes = lock_ids(code, skey, collect_ids(origin, found, grammar), allowed.get(code, set()))
             all_errors += errs
             lock_notes += notes
             lock_writes.update(writes)
@@ -693,6 +1477,13 @@ def main():
 
     all_errors += [f"storageKey '{k}' används av flera kurser: {', '.join(cs)}" for k, cs in keys.items() if len(cs) > 1]
     all_errors += check_extends(confs)
+    for code in codes:   # fälten per innehållstyp; skrivuppgifterna mot kursens bindeord och tenseCheck (med arvet)
+        conns = resolve_field(confs, code, "connectors")
+        errs, warns = check_fields(course_data[code].get("content", {}), f"languages/{code}",
+                                   conns if isinstance(conns, list) else [], tense_names(confs, code))
+        all_errors += errs
+        for w in warns:
+            print("Varning:", w)
     for code in codes:   # verbtabellerna med arvet inräknat, i kursens datafil
         tables = resolve_verbs(confs, own_verbs, code)
         if tables:
@@ -723,45 +1514,58 @@ def main():
 
     title = "Glosor"
     if len(codes) == 1:
-        m = re.search(r'title:\s*"([^"]+)"', (LANG_DIR / codes[0] / "lang.js").read_text(encoding="utf-8"))
-        title = m.group(1) if m else title
+        title = confs[codes[0]].get("title") if isinstance(confs[codes[0]].get("title"), str) else title
 
     # Kursernas data blir egna filer (dist/data/<kod>.json) som appen hämtar när kursen väljs.
     # DATA_VERSION har ett hash per kurs, som ändras när just den kursens data ändras, så att webbläsaren
     # inte använder en gammal fil och inte hämtar de andra kursernas filer i onödan.
+    # Provträningen (content.exam) blir en egen fil, dist/data/<kod>-exam.json, som appen hämtar först när den
+    # behövs (ensureExam i app.js); kursens fil får bara indexet (split_exam). Nyckeln i DATA_VERSION är "<kod>-exam".
+    for c in codes:
+        ex = course_data[c].get("content", {}).get("exam")
+        if isinstance(ex, dict) and ex.get("tasks"):
+            course_data[c]["content"]["exam"], full = split_exam(ex)
+            course_data[f"{c}-exam"] = full
     data_json = {c: json.dumps(d, ensure_ascii=False, separators=(",", ":")) for c, d in course_data.items()}
-    dataversion = {c: hashlib.sha1(data_json[c].encode()).hexdigest()[:10] for c in codes}
+    dataversion = {c: hashlib.sha1(data_json[c].encode()).hexdigest()[:10] for c in data_json}
     page = (ROOT / "src" / "page.html").read_text(encoding="utf-8")
+    # Koden och stilen minifieras (kommentarer och blanktecken, se minify_js), så att index.html hålls liten.
+    # python3 build.py --no-minify ger läsbar kod, t.ex. för att felsöka med radnummer.
+    mini = "--no-minify" not in sys.argv
+    mjs, mcss = (minify_js, minify_css) if mini else (str, str)
     parts = {
         "TITLE": title,
-        "STYLE": (ROOT / "src" / "style.css").read_text(encoding="utf-8").strip(),
-        "LANGUAGES": "\n".join(lang_js),
+        "STYLE": mcss((ROOT / "src" / "style.css").read_text(encoding="utf-8").strip()),
+        "LANGUAGES": mjs("\n".join(lang_js)),
         # src/kinds/*.js (en fil per övningstyp) i namnordning, mellan app.js och feedback.js
-        "APP": "\n".join(f.read_text(encoding="utf-8").strip() for f in [ROOT / "src" / "app.js", *sorted((ROOT / "src" / "kinds").glob("*.js")), ROOT / "src" / "feedback.js", ROOT / "src" / "main.js"]),
+        "APP": mjs("\n".join(f.read_text(encoding="utf-8").strip() for f in [ROOT / "src" / "app.js", *sorted((ROOT / "src" / "kinds").glob("*.js")), ROOT / "src" / "feedback.js", ROOT / "src" / "main.js"])),
         "BUILT": datetime.datetime.now().strftime("%Y-%m-%d %H:%M"),
         "DATAVERSION": js_string(dataversion),
         "UPCOMING": js_string([u for u in upcoming if u.get("code") not in confs]),
     }
     html = re.sub(r"\{\{(\w+)\}\}", lambda m: parts[m.group(1)], page)
     # preview.html har datan inbakad, så att den går att öppna direkt från disken och i testerna
-    safe = {c: data_json[c].replace("</", "<\\/") for c in codes}
-    inline = "\n".join(f"INLINE_DATA.{c} = {safe[c]};" for c in codes)
+    safe = {c: data_json[c].replace("</", "<\\/") for c in data_json}
+    inline = "\n".join(f"INLINE_DATA[{json.dumps(c)}] = {safe[c]};" for c in data_json)
     preview = re.sub(r"\{\{(\w+)\}\}", lambda m: parts[m.group(1)] + ("\n" + inline if m.group(1) == "LANGUAGES" else ""), page)
 
     DIST.mkdir(exist_ok=True)
     (DIST / "data").mkdir(exist_ok=True)
     for old in (DIST / "data").glob("*.json"):
         old.unlink()
-    for c in codes:
+    for c in data_json:
         (DIST / "data" / f"{c}.json").write_text(data_json[c], encoding="utf-8")
     (DIST / "index.html").write_text(html, encoding="utf-8")
     (DIST / "preview.html").write_text(SKELETON_HEAD + preview + "\n</body></html>\n", encoding="utf-8")
+    kb = lambda c: len(data_json[c].encode()) // 1024
     print(f"Klart: dist/index.html ({len(html.encode()) // 1024} kB) och dist/data/ ("
-          + ", ".join(f"{c} {len(data_json[c].encode()) // 1024} kB" for c in codes) + ")")
-    # Sidan laddas på telefon: varna innan index.html eller en datafil växer förbi gränserna (2026-09-29: 456 kB före och cirka 370 kB efter att verbtabellerna flyttats till datafilerna)
+          + ", ".join(f"{c} {kb(c)} kB" + (f" + prov {kb(c + '-exam')} kB" if c + "-exam" in data_json else "") for c in codes) + ")")
+    print(f"Publicera med alla {len(data_json)} filer i dist/data/ i files (även *-exam.json), se docs/ARKITEKTUR.md")
+    # Sidan laddas på telefon: varna innan index.html eller en datafil växer förbi gränserna (2026-09-29: 456 kB före och cirka 370 kB
+    # efter att verbtabellerna flyttats till datafilerna; 2026-09-30: 478 kB före och cirka 360 kB efter minifieringen)
     if len(html.encode()) > MAX_PAGE_KB * 1024:
         print(f"Varning: dist/index.html är större än {MAX_PAGE_KB} kB; flytta data från lang.js till datafilen eller dela upp koden")
-    for c in codes:
+    for c in data_json:
         if len(data_json[c].encode()) > MAX_DATA_KB * 1024:
             print(f"Varning: dist/data/{c}.json är större än {MAX_DATA_KB} kB; överväg att hämta prov- eller textdelen separat")
 

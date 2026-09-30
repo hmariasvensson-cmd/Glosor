@@ -1,8 +1,8 @@
 // Ordlista för Tyska 4 (B1). Rader som börjar med // är kommentarer.
 // Kapitlen följer kursplanen för Moderna språk 4 (Gy25: fortsättning, nivå 2) och vanliga teman i vardagen,
-// inte en specifik lärobok. Kurs för repetition före Tyska 5. Ord som redan finns i Tyska 5 är inte med.
+// inte en specifik lärobok. Kurs för repetition före Tyska 5. Ord som redan finns i Tyska 5 är i regel inte med; några mycket vanliga ord som Tyska 4:s texter använder (t.ex. übrigens, nötig, zufrieden) finns i båda.
 //
-// Format, en rad per ord (se SPEC-ordlista.md):
+// Format, en rad per ord (se docs/spec/ordlista.md):
 //   tyska|svenska|genus|exempel på tyska|exempel på svenska|kommentar
 // Ordets tyska form och avsnittets id används som nycklar för sparade framsteg, ändra dem inte i efterhand.
 #t1|Kap 1 · Alltag und Freizeit
@@ -87,6 +87,14 @@ die Sprachnachricht (-en)|röstmeddelande|f|Ich schicke dir gleich eine [Sprachn
 zurückrufen|ringa tillbaka||Kann ich dich in zehn Minuten [zurückrufen]?|Kan jag ringa tillbaka till dig om tio minuter?|Starkt verb: rief zurück, hat zurückgerufen. Obs. ackusativ: ich rufe dich zurück (jag ringer upp dig).
 stressig|stressig||Die Woche vor den Ferien ist immer total [stressig].|Veckan före lovet är alltid jättestressig.|Bildat av der Stress (stress). Jämför svenskans <b>stressig</b>.
 morgens|på morgonen, på morgnarna||[Morgens] trinke ich immer ein Glas Wasser.|På morgonen dricker jag alltid ett glas vatten.|Skrivs med liten bokstav, precis som abends (på kvällen) och nachts (på natten).
+bevor|innan, före (bisats)||[Bevor] ich zur Schule gehe, frühstücke ich schnell.|Innan jag går till skolan äter jag snabbt frukost.|Bisatsinledare: verbet står sist. Jämför prepositionen vor (före): vor dem Frühstück.
+inzwischen|under tiden, vid det här laget||Ich wohne [inzwischen] seit zwei Jahren in Berlin.|Jag har bott i Berlin i två år vid det här laget.|Adverb. Betyder både "under tiden" och "numera, vid det här laget".
+gemeinsam|gemensam, tillsammans||Am Wochenende kochen wir oft [gemeinsam].|På helgerna lagar vi ofta mat tillsammans.|Kan vara både adjektiv (ein gemeinsames Hobby, en gemensam hobby) och adverb.
+einzig|enda||Du bist der [einzige] Mensch, der das weiß.|Du är den enda människan som vet det.|Böjs som ett adjektiv: der einzige, eine einzige, das Einzige.
+dabei|samtidigt, med (där)||Ich höre Musik und singe [dabei] laut mit.|Jag lyssnar på musik och sjunger högt med samtidigt.|Betyder också "med, närvarande": Ich war auch dabei (jag var också med).|<b>da</b> där · <b>bei</b> vid, hos → "därvid"
+der Schluss (Schlüsse)|slut|m|Am [Schluss] des Films haben alle geweint.|I slutet av filmen grät alla.|Zum Schluss = till sist. Hör till verbet schließen (stänga, avsluta).
+reichen|räcka||Zwei Pizzas [reichen] für uns vier.|Två pizzor räcker för oss fyra.|Svagt verb. Das reicht! = Nu räcker det!
+verpassen|missa||Beeil dich, sonst [verpassen] wir den Bus!|Skynda dig, annars missar vi bussen!|Svagt verb: verpasste, hat verpasst.
 #t2|Kap 2 · Wohnen und Zusammenleben
 die Wohnung (-en)|lägenhet, bostad|f|Wir suchen eine größere [Wohnung] in der Stadt.|Vi letar efter en större lägenhet i stan.|Hör till verbet wohnen (bo).
 das Einfamilienhaus (-häuser)|villa, enfamiljshus|n|Wir wohnen in einem [Einfamilienhaus] mit Garten.|Vi bor i en villa med trädgård.|Sammansatt av <b>Einfamilien-</b> (enfamiljs-) och <b>Haus</b> (hus).
@@ -173,6 +181,11 @@ streichen|måla (väggar)||Am Wochenende [streichen] wir mein Zimmer blau.|I hel
 der Lärm|oväsen, buller|m|Wegen des [Lärms] von der Straße kann ich nicht schlafen.|På grund av bullret från gatan kan jag inte sova.|Saknar plural. Adjektivet är laut (högljudd).
 die Besichtigung (-en)|visning (av bostad), besök|f|Die [Besichtigung] der Wohnung ist am Montag um 18 Uhr.|Visningen av lägenheten är på måndag klockan 18.|Hör till besichtigen (titta på, bese).
 der Quadratmeter (-)|kvadratmeter|m|Das Zimmer hat nur zwölf [Quadratmeter].|Rummet är bara tolv kvadratmeter.|Förkortas qm eller m². Jämför svenskans <b>kvadratmeter</b>.
+das Geschirr|disk, porslin|n|Nach dem Essen spüle ich das [Geschirr].|Efter maten diskar jag.|Saknar plural. Geschirr spülen = diska.
+die Ruhe|lugn, tystnad, ro|f|Nach zehn Uhr abends brauchen die Nachbarn ihre [Ruhe].|Efter klockan tio på kvällen behöver grannarna lugn och ro.|Saknar plural. Lass mich in Ruhe! (Låt mig vara!)
+bieten|erbjuda, bjuda på||Die neue Wohnung [bietet] viel Platz für die ganze Familie.|Den nya lägenheten erbjuder mycket plats för hela familjen.|Starkt verb: bot, hat geboten. Jämför anbieten (erbjuda).
+die Reparatur (-en)|reparation|f|Die [Reparatur] der Waschmaschine hat hundert Euro gekostet.|Reparationen av tvättmaskinen kostade hundra euro.|Verbet är reparieren (reparera).
+sortieren|sortera||Wir [sortieren] den Müll in drei verschiedene Tonnen.|Vi sorterar soporna i tre olika tunnor.|Svagt verb: sortierte, hat sortiert. Verb på -ieren får inget ge- i perfekt.
 #t3|Kap 3 · Essen, Einkaufen und Geld
 das Gemüse|grönsaker|n|Ich esse jeden Tag viel Obst und [Gemüse].|Jag äter mycket frukt och grönsaker varje dag.|Singular på tyska men motsvarar svenskans plural grönsaker.
 das Obst|frukt|n|Auf dem Markt kaufen wir frisches [Obst].|På torget köper vi färsk frukt.|Saknar plural. En enskild frukt heter die Frucht (frukt) eller man nämner sorten.
@@ -259,6 +272,14 @@ leihen|låna (ut)||Kannst du mir bis morgen zehn Euro [leihen]?|Kan du låna mig
 der Mantel (Mäntel)|kappa, rock|m|Im Winter brauche ich einen warmen [Mantel].|På vintern behöver jag en varm kappa.|Jämför svenskans <b>mantel</b>. En kortare jacka heter die Jacke (jacka).
 der Verkäufer (-)|försäljare, expedit|m|Der [Verkäufer] hat mir eine kleinere Größe gebracht.|Expediten gav mig en mindre storlek.|Hör till verkaufen (sälja). Kvinna: die Verkäuferin (expedit).
 stimmt so|det är jämnt, behåll växeln||Das macht 18 Euro. – Hier sind 20, [stimmt so].|Det blir 18 euro. – Här är 20, behåll växeln.|Så ger man dricks i Tyskland: man säger summan man vill betala eller stimmt so.|<b>stimmt</b> stämmer · <b>so</b> så → "det stämmer så"
+insgesamt|sammanlagt, totalt||Das macht [insgesamt] vierzig Euro, bitte.|Det blir sammanlagt fyrtio euro, tack.|Adverb. Sammansatt av <b>ins</b> (i det) och <b>gesamt</b> (hel, total).
+mindestens|minst||Ein gutes Fahrrad kostet [mindestens] dreihundert Euro.|En bra cykel kostar minst trehundra euro.|Motsatsen är höchstens (högst).
+höchstens|högst, som mest||Ich habe [höchstens] noch zehn Euro im Portemonnaie.|Jag har högst tio euro kvar i plånboken.|Motsatsen är mindestens (minst). Bildat av hoch (hög).
+zufrieden|nöjd||Mit dem Essen im Restaurant waren alle sehr [zufrieden].|Alla var mycket nöjda med maten på restaurangen.|Konstruktion: mit etwas zufrieden sein (vara nöjd med något).
+die Erdbeere (-n)|jordgubbe|f|Im Sommer esse ich am liebsten frische [Erdbeeren].|På sommaren äter jag helst färska jordgubbar.|Sammansatt av <b>Erde</b> (jord) och <b>Beere</b> (bär).
+die Bedienung (-en)|servering, servitör, servitris|f|Die [Bedienung] in diesem Café ist sehr freundlich.|Personalen på det här kaféet är mycket vänlig.|Hör till verbet bedienen (servera, betjäna). Kan syfta både på servicen och på personen.
+der Grund (Gründe)|anledning, skäl; grund|m|Aus welchem [Grund] bist du so spät?|Av vilken anledning är du så sen?|Aus diesem Grund = av det skälet. Jämför bindeordet weil (eftersom).
+rund|rund; ungefär||Das Konzert dauert [rund] zwei Stunden.|Konserten varar ungefär två timmar.|Framför tal betyder rund ungefär, omkring.
 #t4|Kap 4 · Reisen und Verkehr
 die Reise (-n)|resa|f|Die [Reise] nach Wien hat zehn Stunden gedauert.|Resan till Wien tog tio timmar.|Gute Reise! = Trevlig resa!
 reisen|resa||Im Sommer möchte ich mit dem Zug durch Europa [reisen].|I sommar vill jag resa genom Europa med tåg.|Svagt verb, perfekt med sein: ist gereist.
@@ -341,6 +362,13 @@ die Rezeption (-en)|reception|f|Den Schlüssel bekommen Sie an der [Rezeption].|
 das Zelt (-e)|tält|n|Im Sommer schlafen wir auf dem Campingplatz im [Zelt].|På sommaren sover vi i tält på campingen.|Man säger ein Zelt aufbauen (slå upp ett tält). Verbet zelten betyder tälta.
 wandern|vandra||In den Ferien [wandern] wir in den Alpen.|På lovet vandrar vi i Alperna.|Svagt verb, perfekt med sein: ist gewandert. Substantivet är die Wanderung (vandring).
 der Reiseführer (-)|reseguide (bok eller person)|m|Im [Reiseführer] stehen viele Tipps für Wien.|I reseguiden står det många tips om Wien.|Sammansatt av <b>Reise</b> (resa) och <b>Führer</b> (ledare, guide).
+vorne|fram, framme, längst fram||Im Bus sitze ich am liebsten ganz [vorne].|På bussen sitter jag helst längst fram.|Motsatsen är hinten (bak). I talspråk ofta vorn.
+dahinter|bakom (det)||Da ist der Bahnhof, und das Hotel liegt direkt [dahinter].|Där är stationen, och hotellet ligger precis bakom.|<b>da</b> där · <b>hinter</b> bakom. Motsatsen är davor (framför det).
+vorsichtig|försiktig||Fahr bitte [vorsichtig], die Straße ist glatt.|Kör försiktigt, vägen är hal.|Substantivet är die Vorsicht (försiktighet). Vorsicht! = Se upp!
+glatt|hal, slät||Im Winter sind die Straßen oft [glatt].|På vintern är vägarna ofta hala.|Kan också betyda slät: glatte Haare (slätt hår).
+die Störung (-en)|störning, fel|f|Wegen einer technischen [Störung] fährt der Zug heute nicht.|På grund av ett tekniskt fel går tåget inte i dag.|Hör till verbet stören (störa).
+die Änderung (-en)|ändring|f|Es gibt eine [Änderung] im Fahrplan.|Det finns en ändring i tidtabellen.|Hör till verbet ändern (ändra).
+die Innenstadt (-städte)|centrum, innerstad|f|In der [Innenstadt] gibt es viele Geschäfte und Cafés.|I centrum finns det många affärer och kaféer.|Sammansatt av <b>innen</b> (inne) och <b>Stadt</b> (stad).
 #t5|Kap 5 · Schule, Sprachen und Zukunft
 der Unterricht|undervisning, lektioner|m|Der [Unterricht] beginnt jeden Morgen um acht Uhr.|Undervisningen börjar varje morgon klockan åtta.|Saknar i regel plural. Om en enskild lektion säger man die Stunde.
 die Schulstunde (-n)|lektion|f|Eine [Schulstunde] dauert in Deutschland meistens 45 Minuten.|En lektion varar oftast 45 minuter i Tyskland.|I vardagligt tal säger man oftast bara die Stunde.
@@ -425,6 +453,19 @@ der Austauschschüler (-)|utbyteselev|m|Wir haben dieses Jahr zwei [Austauschsch
 die Sprachreise (-n)|språkresa|f|Im Sommer mache ich eine [Sprachreise] nach Malta.|I sommar åker jag på språkresa till Malta.|Sammansatt av <b>Sprache</b> (språk) och <b>Reise</b> (resa).
 der Stoff (-e)|stoff, (läro)stoff; tyg|m|Für die Klausur müssen wir viel [Stoff] wiederholen.|Inför provet måste vi repetera mycket stoff.|Betyder också tyg: ein Kleid aus Stoff (en klänning av tyg).
 fehlen|vara frånvarande; saknas||Tom [fehlt] heute, er ist krank.|Tom är frånvarande i dag, han är sjuk.|Svagt verb. Du fehlst mir betyder jag saknar dig (du fattas mig).
+die Vorbereitung (-en)|förberedelse|f|Die [Vorbereitung] auf die Prüfung dauert drei Wochen.|Förberedelserna inför provet tar tre veckor.|Hör till verbet vorbereiten (förbereda). Konstruktion: die Vorbereitung auf + Akk.
+die Erfahrung (-en)|erfarenhet|f|Ich habe schon viel [Erfahrung] mit Kindern.|Jag har redan mycket erfarenhet av barn.|Hör till verbet erfahren (få veta, uppleva).
+nötig|nödvändig, som behövs||Für den Kurs sind keine Vorkenntnisse [nötig].|Det behövs inga förkunskaper för kursen.|Synonym: notwendig. Jämför svenskans <b>nödig</b>.
+die Bewerbung (-en)|ansökan|f|Ich schicke meine [Bewerbung] per E-Mail.|Jag skickar min ansökan per mejl.|Hör till verbet sich bewerben (söka, t.ex. ett jobb).
+sich konzentrieren|koncentrera sig||Bei so viel Lärm kann ich mich nicht [konzentrieren].|Med så mycket oväsen kan jag inte koncentrera mig.|Svagt verb. Konstruktion: sich auf etwas (Akk.) konzentrieren.
+freiwillig|frivillig||Der Chor ist [freiwillig], aber fast alle machen mit.|Kören är frivillig, men nästan alla är med.|Sammansatt av <b>frei</b> (fri) och <b>Wille</b> (vilja).
+die Lehrkraft (-kräfte)|lärare|f|Jede [Lehrkraft] hat eine eigene E-Mail-Adresse.|Varje lärare har en egen mejladress.|Formellt ord som gäller både kvinnor och män. Alltid femininum.
+beraten|ge råd||Die Lehrerin [berät] uns bei der Wahl der Kurse.|Läraren ger oss råd när vi ska välja kurser.|Starkt verb: berät, beriet, hat beraten. Substantivet är die Beratung (rådgivning).
+die Liste (-n)|lista|f|Schreib deinen Namen bitte auf die [Liste].|Skriv ditt namn på listan.|Jämför svenskans <b>lista</b>. Die Warteliste = väntelista.
+das Semester (-)|termin (på universitet)|n|Im nächsten [Semester] möchte ich in Wien studieren.|Nästa termin vill jag studera i Wien.|Används om högskolans terminer. I skolan heter det das Halbjahr.
+gültig|giltig||Ist dein Pass noch [gültig]?|Är ditt pass fortfarande giltigt?|Motsatsen är ungültig (ogiltig).
+der Lohn (Löhne)|lön|m|Im Sommerjob bekomme ich zwölf Euro [Lohn] pro Stunde.|På sommarjobbet får jag tolv euro i lön per timme.|Synonym: das Gehalt (månadslön).
+empfehlen|rekommendera||Kannst du mir ein gutes Buch [empfehlen]?|Kan du rekommendera en bra bok?|Starkt verb: empfiehlt, empfahl, hat empfohlen. Substantivet är die Empfehlung.
 #t6|Kap 6 · Musik, Sport und Hobbys
 das Instrument (-e)|instrument|n|Spielst du ein [Instrument]?|Spelar du något instrument?|Man säger ein Instrument spielen (spela ett instrument).
 das Klavier (-e)|piano|n|Ich spiele seit zehn Jahren [Klavier].|Jag har spelat piano i tio år.|Man spelar instrument utan artikel: Klavier spielen (spela piano), Geige spielen (spela fiol).
@@ -515,6 +556,18 @@ joggen|jogga||Ich gehe zweimal pro Woche im Park [joggen].|Jag joggar i parken t
 klettern|klättra||Am Wochenende gehen wir in der Halle [klettern].|I helgen ska vi klättra i klätterhallen.|Svagt verb, perfekt med sein om rörelse: ist geklettert.
 Ski fahren|åka skidor||Im Winter [fahren] wir in Österreich Ski.|På vintern åker vi skidor i Österrike.|Starkt verb: fuhr Ski, ist Ski gefahren. Kan också skrivas Ski laufen (åka skidor).|<b>Ski</b> skidor · <b>fahren</b> åka → "åka skidor"
 der Anfänger (-)|nybörjare|m|Ich bin noch [Anfänger] und spiele erst seit drei Monaten Gitarre.|Jag är fortfarande nybörjare och har bara spelat gitarr i tre månader.|Hör till anfangen (börja). Kvinna: die Anfängerin (nybörjare).
+das Ziel (-e)|mål|n|Mein [Ziel] ist es, an einer Musikhochschule zu studieren.|Mitt mål är att studera vid en musikhögskola.|Även mål i en resa: das Reiseziel (resmål).
+der Verein (-e)|förening, klubb|m|Ich spiele seit fünf Jahren Fußball in einem [Verein].|Jag har spelat fotboll i en klubb i fem år.|Mycket vanligt i Tyskland: der Sportverein, der Musikverein.
+die Bewegung (-en)|rörelse, motion|f|Jeden Tag ein bisschen [Bewegung] ist gut für die Gesundheit.|Lite motion varje dag är bra för hälsan.|Hör till verbet sich bewegen (röra sig).
+sich bewegen|röra sig||Nach dem langen Sitzen muss ich mich ein bisschen [bewegen].|Efter det långa sittandet måste jag röra lite på mig.|Svagt verb: bewegte sich, hat sich bewegt.
+die Saite (-n)|sträng (på instrument)|f|An meiner Gitarre ist eine [Saite] gerissen.|En sträng har gått av på min gitarr.|Uttalas som die Seite (sidan), men stavas med ai.
+das Solo (-s)|solo|n|Im Konzert spielt sie ein [Solo] auf der Geige.|På konserten spelar hon ett solo på fiolen.|Plural också Soli i musiksammanhang.
+der Verstärker (-)|förstärkare|m|Die E-Gitarre braucht einen [Verstärker].|Elgitarren behöver en förstärkare.|Hör till verbet verstärken (förstärka).
+die Harfe (-n)|harpa|f|Sie spielt [Harfe] im Schulorchester.|Hon spelar harpa i skolorkestern.|Jämför svenskans <b>harpa</b>.
+die Pauke (-n)|puka|f|Der Schlagzeuger spielt im Orchester auch die [Pauke].|Slagverkaren spelar också puka i orkestern.|Jämför svenskans <b>puka</b>.
+der Flügel (-)|flygel; vinge|m|Im Konzertsaal steht ein großer schwarzer [Flügel].|I konsertsalen står en stor svart flygel.|Betyder också vinge. Das Klavier är ett vanligt piano.
+die Trommel (-n)|trumma|f|Mein kleiner Bruder spielt den ganzen Tag [Trommel].|Min lillebror spelar trumma hela dagen.|Verbet är trommeln (trumma). Das Schlagzeug = trumset.
+der Veranstalter (-)|arrangör|m|Der [Veranstalter] hat das Konzert leider abgesagt.|Arrangören har tyvärr ställt in konserten.|Hör till verbet veranstalten (arrangera). Kvinna: die Veranstalterin.
 #t7|Kap 7 · Körper und Gesundheit
 der Kopf (Köpfe)|huvud|m|Mir tut der [Kopf] weh.|Jag har ont i huvudet.|Obs. omljud i plural: die Köpfe.
 das Gesicht (-er)|ansikte|n|Sie hatte ein freundliches [Gesicht].|Hon hade ett vänligt ansikte.|Hör till verbet sehen (se).
@@ -591,6 +644,7 @@ die Überweisung (-en)|remiss; banköverföring|f|Für den Facharzt brauchen Sie
 der Nacken (-)|nacke|m|Vom Geigespielen habe ich oft Schmerzen im [Nacken].|Av fiolspelandet har jag ofta ont i nacken.|Jämför svenskans <b>nacke</b>.
 der Muskelkater|träningsvärk|m|Nach dem Training hatte ich drei Tage [Muskelkater].|Efter träningen hade jag träningsvärk i tre dagar.|Saknar plural. Sammansatt av <b>Muskel</b> (muskel) och <b>Kater</b> (hankatt; även bakfylla).
 schlucken|svälja||Die Tablette ist so groß, ich kann sie kaum [schlucken].|Tabletten är så stor att jag knappt kan svälja den.|Svagt verb. Halsschmerzen beim Schlucken betyder ont i halsen när man sväljer.
+das Attest (-e)|läkarintyg|n|Wenn du krank bist, brauchst du ein [Attest] vom Arzt.|Om du är sjuk behöver du ett läkarintyg.|Formellt ord. Vardagligt: die Krankschreibung (sjukskrivning).
 #t8|Kap 8 · Feste, Feiern und Jahreszeiten
 das Fest (-e)|fest, högtid|n|Weihnachten ist das wichtigste [Fest] in unserer Familie.|Julen är den viktigaste högtiden i vår familj.|Jämför svenskans <b>fest</b>. Används ofta om högtider.
 die Feier (-n)|fest, firande|f|Die [Feier] fand im Garten statt.|Festen hölls i trädgården.|Hör till verbet feiern (fira).
@@ -670,6 +724,9 @@ die Bescherung|julklappsutdelningen|f|Bei uns ist die [Bescherung] am Heiligaben
 der Gutschein (-e)|presentkort|m|Ich habe einen [Gutschein] für einen Buchladen bekommen.|Jag har fått ett presentkort till en bokhandel.|Sammansatt av <b>gut</b> (god, bra) och <b>Schein</b> (sedel, lapp).
 der Blumenstrauß (-sträuße)|blombukett|m|Zum Muttertag schenke ich Mama einen [Blumenstrauß].|På mors dag ger jag mamma en blombukett.|Sammansatt av <b>Blume</b> (blomma) och <b>Strauß</b> (bukett).
 anzünden|tända||Am ersten Advent [zünden] wir die erste Kerze an.|På första advent tänder vi det första ljuset.|Svagt verb: zündete an, hat angezündet.
+die Überraschung (-en)|överraskning|f|Die Party war eine große [Überraschung] für sie.|Festen var en stor överraskning för henne.|Hör till verbet überraschen (överraska).
+die Freude (-n)|glädje|f|Das Geschenk hat mir große [Freude] gemacht.|Presenten gjorde mig mycket glad.|Jemandem eine Freude machen = glädja någon.
+gespannt|spänd, nyfiken||Ich bin schon [gespannt], was ich zum Geburtstag bekomme.|Jag är redan spänd på vad jag får i födelsedagspresent.|Konstruktion: auf etwas (Akk.) gespannt sein (vara spänd på något).
 #tr|Redemittel · Im Gespräch
 ich finde|jag tycker||[Ich finde], das ist eine gute Idee.|Jag tycker att det är en bra idé.|Används för att säga sin åsikt. Jämför svenskans <b>jag finner</b>.|<b>ich</b> jag · <b>finde</b> finner, hittar → "jag finner"
 ich glaube schon|jag tror det||Kommt sie heute? – [Ich glaube schon].|Kommer hon i dag? – Jag tror det.|Schon (redan) förstärker och betyder här ungefär ja.|<b>ich</b> jag · <b>glaube</b> tror · <b>schon</b> redan → "jag tror redan"
@@ -725,3 +782,205 @@ viel Spaß|ha så kul||[Viel Spaß] beim Konzert heute Abend!|Ha så kul på kon
 zum Beispiel|till exempel||Ich spiele mehrere Instrumente, [zum Beispiel] Klavier und Geige.|Jag spelar flera instrument, till exempel piano och fiol.|Förkortas z. B.|<b>zum</b> till (det) · <b>Beispiel</b> exempel → "till exemplet"
 ich meine|jag menar||[Ich meine], wir sollten mehr üben.|Jag menar att vi borde öva mer.|Används för att förtydliga eller rätta sig själv.
 na ja|nja, tja||Hat dir der Film gefallen? – [Na ja], es ging so.|Tyckte du om filmen? – Tja, den var sådär.|Uttrycker tvekan eller att man inte är helt nöjd.|<b>na</b> nå · <b>ja</b> ja → "nå ja"
+übrigens|förresten||[Übrigens], hast du morgen Zeit?|Förresten, har du tid i morgon?|Används för att byta ämne eller lägga till något.
+ehrlich|ärlig||[Ehrlich] gesagt habe ich keine Lust.|Ärligt talat har jag ingen lust.|Ehrlich gesagt = ärligt talat. Substantivet är die Ehrlichkeit (ärlighet).
+darum|därför||Ich war krank, [darum] bin ich nicht gekommen.|Jag var sjuk, därför kom jag inte.|Synonym till deshalb. Omvänd ordföljd efter darum: darum bin ich …
+sowieso|ändå, i alla fall||Das macht nichts, ich wollte [sowieso] zu Hause bleiben.|Det gör ingenting, jag ville ändå stanna hemma.|Vardagligt. Synonym: ohnehin.
+bestimmt|säkert, bestämd||Das schaffst du [bestimmt]!|Det klarar du säkert!|Som adverb: säkert. Som adjektiv: bestämd, viss (ein bestimmter Tag, en viss dag).
+komisch|konstig, rolig||Das ist [komisch], er antwortet nicht.|Det är konstigt, han svarar inte.|Betyder oftast konstig, men också komisk, rolig.
+einverstanden|överens, med på det||Wir gehen um acht. Bist du [einverstanden]?|Vi går klockan åtta. Är du med på det?|Mit etwas einverstanden sein = gå med på något.
+solche|sådana||[Solche] Schuhe möchte ich auch haben.|Sådana skor vill jag också ha.|Böjs som dieser: solcher, solches, solchen. Singular: so ein (en sådan).
+eher|snarare, hellre||Ich bin [eher] müde als krank.|Jag är snarare trött än sjuk.|Komparativ av bald (snart), men betyder oftast snarare.
+völlig|helt, fullständigt||Das ist [völlig] egal.|Det spelar ingen som helst roll.|Förstärker: völlig richtig (helt rätt). Synonym: total, ganz.
+unbedingt|absolut, till varje pris||Diesen Film musst du [unbedingt] sehen!|Den här filmen måste du absolut se!|Förstärker ett önskemål eller ett råd.
+schrecklich|hemsk, förfärlig||Das Wetter war gestern [schrecklich].|Vädret var hemskt i går.|Hör till der Schreck (skräck). Synonym: furchtbar.
+furchtbar|förfärlig, hemsk||Ich habe [furchtbare] Kopfschmerzen.|Jag har förfärlig huvudvärk.|Hör till die Furcht (fruktan). Förstärker också: furchtbar nett (hemskt snäll).
+verzweifelt|förtvivlad||Er suchte [verzweifelt] seinen Schlüssel.|Han letade förtvivlat efter sin nyckel.|Hör till die Verzweiflung (förtvivlan).
+der Blick (-e)|blick, utsikt|m|Vom Balkon hat man einen tollen [Blick] auf die Berge.|Från balkongen har man en fantastisk utsikt över bergen.|Auf den ersten Blick = vid första anblicken.
+böse|arg, elak||Bist du mir noch [böse]?|Är du fortfarande arg på mig?|Jemandem böse sein = vara arg på någon.
+#mt1|Musikteori · Noter och notskrift
+die Notenschrift|notskrift|f|Die moderne [Notenschrift] hat sich seit dem 17. Jahrhundert kaum verändert.|Den moderna notskriften har knappt förändrats sedan 1600-talet.|Sammansatt av <b>Noten</b> 'noter' och <b>Schrift</b> 'skrift'. Saknar plural.
+das Notensystem (-e)|notsystem|n|Die fünf Linien des [Notensystems] zählt man von unten nach oben.|De fem linjerna i notsystemet räknas nerifrån och upp.|Kallas även Liniensystem. I provinstruktioner ofta bara das System: "in das obere System" (i det övre systemet).
+die Notenlinie (-n)|notlinje|f|Das g' steht im Violinschlüssel auf der zweiten [Notenlinie].|G1 står i G-klaven på andra notlinjen.|Linjerna räknas nerifrån: die erste Linie är den nedersta.
+der Zwischenraum (-räume)|mellanrum (mellan notlinjer)|m|Das f' steht im ersten [Zwischenraum] des Violinschlüssels.|F1 står i första mellanrummet i G-klaven.|Sammansatt av <b>zwischen</b> 'mellan' och <b>Raum</b> 'rum'.
+die Hilfslinie (-n)|hjälplinje|f|Das eingestrichene c steht im Violinschlüssel auf einer [Hilfslinie] unter dem System.|Ettstrukna c står i G-klaven på en hjälplinje under systemet.|<b>Hilfe</b> 'hjälp' + <b>Linie</b> 'linje'.
+der Notenkopf (-köpfe)|nothuvud|m|Bei der halben Note ist der [Notenkopf] hohl, bei der Viertelnote ausgefüllt.|På halvnoten är nothuvudet ihåligt, på fjärdedelsnoten ifyllt.|<b>Kopf</b> 'huvud'.
+der Notenhals (-hälse)|notskaft|m|Liegt die Note über der Mittellinie, zeigt der [Notenhals] nach unten.|Om noten ligger ovanför mittlinjen pekar notskaftet nedåt.|<b>Hals</b> 'hals'. Tyskan säger alltså "nothals" där svenskan säger notskaft.
+der Notenschlüssel (-)|klav|m|Achten Sie bei jeder Aufgabe auf den [Notenschlüssel].|Var uppmärksam på klaven i varje uppgift.|<b>Schlüssel</b> 'nyckel': klaven är nyckeln till hur noterna ska läsas. Ofta bara der Schlüssel.
+der Violinschlüssel (-)|G-klav, diskantklav|m|Die Melodie ist im [Violinschlüssel] notiert.|Melodin är noterad i G-klav.|Kallas även G-Schlüssel. <b>Violine</b> 'fiol'.
+der Bassschlüssel (-)|F-klav, basklav|m|Die linke Hand spielt im [Bassschlüssel].|Vänster hand spelar i basklav.|Kallas även F-Schlüssel. Tre s i rad: Bass + Schlüssel.
+der Stammton (-töne)|stamton|m|Die sieben [Stammtöne] heißen c, d, e, f, g, a, h.|De sju stamtonerna heter c, d, e, f, g, a, h.|Stamtonerna är tonerna utan förtecken, de vita tangenterna.
+das H|H (tonen h)|n|Im Deutschen heißt der Ton zwischen A und C [H], nicht B.|På tyska heter tonen mellan A och C H, inte B.|Som på svenska: tyskan skiljer mellan H och B. På engelska heter H 'B'. Tonnamn är neutrum: das H, das Fis.
+das B|B (h sänkt ett halvt tonsteg)|n|Ein h mit einem b davor heißt im Deutschen [B].|Ett h med ett b framför heter B på tyska.|Samma som på svenska, men engelskans B är tyskans H. B-Dur = svenska B-dur (engelska B flat major).
+das Cis|ciss|n|Im A-Dur-Dreiklang ist das [Cis] die große Terz.|I A-durtreklangen är ciss den stora tersen.|Kors ger ändelsen -is: c → cis. Svenskan stavar med dubbel-s (ciss), tyskan med ett s. Stor bokstav när tonnamnet står som substantiv.
+das Fis|fiss|n|G-Dur hat nur ein Vorzeichen, das [Fis].|G-dur har bara ett förtecken, fiss.|Kors ger ändelsen -is: f → fis.
+das Es|ess|n|Im c-Moll-Dreiklang ist das [Es] die kleine Terz.|I c-molltreklangen är ess den lilla tersen.|B ger ändelsen -es, men e blir bara Es (inte "Ees") och a blir As. Obs. es är också pronomenet 'det'.
+das As|ass|n|As-Dur beginnt mit dem Ton [As].|As-dur börjar på tonen ass.|A med b-förtecken. Svenskan stavar ass, tyskan As.
+das eingestrichene c|ettstrukna c (c1)|n|Das [eingestrichene c] liegt ungefähr in der Mitte der Klaviatur.|Ettstrukna c ligger ungefär mitt på klaviaturen.|Skrivs c' eller c1. <b>Strich</b> 'streck' (jämför svenska ettstruken).
+die Tonhöhe (-n)|tonhöjd|f|Notieren Sie nur die [Tonhöhen], nicht den Rhythmus.|Notera bara tonhöjderna, inte rytmen.|Ur UdK Berlins provexempel. <b>hoch</b> 'hög' → Höhe 'höjd'.
+das Vorzeichen (-)|förtecken|n|Wie viele [Vorzeichen] hat E-Dur?|Hur många förtecken har E-dur?|<b>vor</b> 'före' + <b>Zeichen</b> 'tecken'. Används om både fasta och tillfälliga förtecken.
+das Kreuz (-e)|kors, höjningstecken (♯)|n|Das [Kreuz] erhöht einen Ton um einen Halbton.|Korset höjer en ton ett halvt tonsteg.|Grundbetydelse 'kors'. Tonnamnet får ändelsen -is: c → cis.
+das Erniedrigungszeichen (-)|b, sänkningstecken (♭)|n|Das [Erniedrigungszeichen] heißt im Alltag einfach "b".|Sänkningstecknet heter till vardags helt enkelt "b".|<b>erniedrigen</b> 'sänka' (av niedrig 'låg'). Tonnamnet får ändelsen -es: d → des. Motsatsen heter Erhöhungszeichen (höjningstecken).
+das Auflösungszeichen (-)|återställningstecken (♮)|n|Das [Auflösungszeichen] hebt ein Kreuz oder ein b wieder auf.|Återställningstecknet upphäver ett kors eller ett b.|<b>auflösen</b> 'lösa upp'. Kallas även Quadrat eller Auflöser.
+der Taktstrich (-e)|taktstreck|m|Ein Versetzungszeichen gilt nur bis zum nächsten [Taktstrich].|Ett tillfälligt förtecken gäller bara till nästa taktstreck.|<b>Strich</b> 'streck'.
+der Schlussstrich (-e)|slutstreck|m|Mit dem [Schlussstrich] endet das Stück.|Med slutstrecket slutar stycket.|Tre s i rad: Schluss + Strich. Bildligt: einen Schlussstrich ziehen (dra ett streck över något).
+das Wiederholungszeichen (-)|repristecken|n|Am [Wiederholungszeichen] springt man zurück zum Anfang.|Vid repristecknet hoppar man tillbaka till början.|<b>wiederholen</b> 'upprepa'.
+die Fermate (-n)|fermat|f|Auf der [Fermate] hält der Chor den Ton länger aus.|På fermaten håller kören ut tonen längre.|Av italienskans <b>fermata</b> 'uppehåll, hållplats'. I koraler markerar fermaten radslut.
+#mt2|Musikteori · Notvärden, pauser och takt
+der Notenwert (-e)|notvärde|m|Ordnen Sie die [Notenwerte] von lang nach kurz.|Ordna notvärdena från långt till kort.|<b>Wert</b> 'värde'.
+die ganze Note (-n)|helnot|f|Eine [ganze Note] dauert im Viervierteltakt einen ganzen Takt.|En helnot varar en hel takt i fyrafjärdedelstakt.|Tyskan räknar notvärden som bråk precis som svenskan: ganze, halbe, Viertel-, Achtel-, Sechzehntelnote.
+die halbe Note (-n)|halvnot|f|Eine [halbe Note] entspricht zwei Viertelnoten.|En halvnot motsvarar två fjärdedelsnoter.|I tal ofta bara eine Halbe.
+die Viertelnote (-n)|fjärdedelsnot|f|Im Dreivierteltakt passen drei [Viertelnoten] in einen Takt.|I tretakt ryms tre fjärdedelsnoter i en takt.|I tal ofta bara eine Viertel (även ein Viertel).
+die Achtelnote (-n)|åttondelsnot|f|Zwei [Achtelnoten] werden meist mit einem Balken verbunden.|Två åttondelsnoter binds oftast ihop med en balk.|I tal ofta bara ein Achtel eller eine Achtel.
+die Sechzehntelnote (-n)|sextondelsnot|f|Eine [Sechzehntelnote] hat zwei Fähnchen.|En sextondelsnot har två flaggor.|I tal ofta bara ein Sechzehntel. Nästa värde: Zweiunddreißigstelnote (trettiotvåondel).
+die ganze Pause (-n)|helpaus|f|Die [ganze Pause] hängt an der vierten Linie.|Helpausen hänger under fjärde linjen.|Pausernas namn följer notvärdena: ganze, halbe, Viertel-, Achtel-, Sechzehntelpause.
+die halbe Pause (-n)|halvpaus|f|Die [halbe Pause] liegt auf der dritten Linie.|Halvpausen ligger på tredje linjen.|Minnesregel: die ganze Pause hängt, die halbe liegt.
+die Viertelpause (-n)|fjärdedelspaus|f|Nach der [Viertelpause] setzt die Melodie auf der Zwei ein.|Efter fjärdedelspausen sätter melodin in på tvåan.|<b>Viertel</b> 'fjärdedel'.
+die Achtelpause (-n)|åttondelspaus|f|Das Thema beginnt nach einer [Achtelpause].|Temat börjar efter en åttondelspaus.|<b>Achtel</b> 'åttondel'.
+der Haltebogen (-bögen)|bindebåge (mellan två lika toner)|m|Der [Haltebogen] verbindet zwei gleiche Töne zu einem langen Ton.|Bindebågen förenar två lika toner till en lång ton.|<b>halten</b> 'hålla' + <b>Bogen</b> 'båge'. Även Überbindung.
+die Punktierung (-en)|punktering|f|Rhythmusdiktat, einschließlich [Punktierungen], Synkopen und Triolen.|Rytmdiktat, inklusive punkteringar, synkoper och trioler.|Ur Weimars kravlista.
+punktiert|punkterad||Eine [punktierte] halbe Note dauert drei Viertel.|En punkterad halvnot varar tre fjärdedelar.|Punkten förlänger noten med hälften av dess värde. Doppelt punktiert = dubbelpunkterad.
+die Triole (-n)|triol|f|Drei Achtel in der Zeit von zwei: das ist eine [Triole].|Tre åttondelar på två åttondelars tid: det är en triol.|Av italienskans <b>tre</b> 'tre'. Achteltriole = åttondelstriol.
+die Taktart (-en)|taktart|f|Bestimmen Sie die folgenden [Taktarten].|Bestäm följande taktarter.|Ur Karlsruhes provexempel. <b>Takt</b> 'takt' + <b>Art</b> 'sort'.
+der Viervierteltakt|fyrafjärdedelstakt (4/4)|m|Der [Viervierteltakt] wird oft mit einem C bezeichnet.|Fyrafjärdedelstakten betecknas ofta med ett C.|Taktarter läses som tal + nämnare: vier Viertel. Skrivs också 4/4-Takt.
+der Dreivierteltakt|tretakt (3/4)|m|Walzer und Menuette stehen im [Dreivierteltakt].|Valser och menuetter går i tretakt.|Skrivs också 3/4-Takt.
+der Zweivierteltakt|tvåfjärdedelstakt (2/4)|m|Viele Märsche stehen im [Zweivierteltakt].|Många marscher går i tvåfjärdedelstakt.|Skrivs också 2/4-Takt.
+der Sechsachteltakt|sexåttondelstakt (6/8)|m|Der [Sechsachteltakt] wird meist in zwei Schlägen gezählt.|Sexåttondelstakten räknas oftast i två slag.|Sammansatt taktart: två grupper om tre åttondelar.
+die Zählzeit (-en)|taktslag, slag|f|Der Dreivierteltakt hat drei [Zählzeiten].|Tretakten har tre taktslag.|<b>zählen</b> 'räkna' + <b>Zeit</b> 'tid'.
+der Schlag (Schläge)|slag|m|Die Melodie beginnt auf dem dritten [Schlag] des Taktes.|Melodin börjar på taktens tredje slag.|Hör till schlagen 'slå'. Schläge pro Minute = slag per minut.
+die Betonung (-en)|betoning|f|Im Viervierteltakt liegt die stärkste [Betonung] auf der Eins.|I fyrafjärdedelstakt ligger den starkaste betoningen på ettan.|Hör till betonen 'betona'.
+der Auftakt (-e)|upptakt|m|Das Lied beginnt mit einem [Auftakt].|Sången börjar med en upptakt.|<b>auf</b> 'upp' + <b>Takt</b>. Används också bildligt: der Auftakt = början, startskott.
+die Synkope (-n)|synkop|f|Eine [Synkope] betont eine eigentlich unbetonte Zählzeit.|En synkop betonar ett egentligen obetonat taktslag.|Av grekiskans <b>synkopē</b> 'sammanklippning'. Uttalas med betoning på första stavelsen: SYN-ko-pe.
+im Takt bleiben|hålla takten||Beim Rhythmusdiktat ist es wichtig, [im Takt zu bleiben].|Vid rytmdiktat är det viktigt att hålla takten.|Motsats: aus dem Takt kommen (komma ur takt).|<b>im</b> i · <b>Takt</b> takt · <b>bleiben</b> stanna → "stanna i takten"
+den Takt schlagen|slå takt||Der Dirigent [schlägt den Takt] mit der rechten Hand.|Dirigenten slår takt med höger hand.|Schlagen är starkt verb: schlug, hat geschlagen.|<b>den Takt</b> takten · <b>schlagen</b> slå → "slå takten"
+mitzählen|räkna med, räkna i huvudet||Beim Rhythmusdiktat sollte man leise [mitzählen].|Vid rytmdiktat bör man räkna tyst med.|Delbart verb: zählte mit, hat mitgezählt.
+#mt3|Musikteori · Intervall och skalor
+das Intervall (-e)|intervall|n|Welches [Intervall] hörst du, eine Quarte oder eine Quinte?|Vilket intervall hör du, en kvart eller en kvint?|Latin <b>intervallum</b> 'mellanrum'. Obs. neutrum.
+die Prime (-n)|prim|f|Zwei gleiche Töne bilden eine reine [Prime].|Två lika toner bildar en ren prim.|Av latinets <b>prima</b> 'den första'. Även die Prim. Intervallnamnen är latinska ordningstal.
+die Sekunde (-n)|sekund (intervall)|f|Von c nach d ist es eine große [Sekunde].|Från c till d är det en stor sekund.|Av latinets <b>secunda</b> 'den andra'. Samma ord som tidsenheten sekund.
+die Terz (-en)|ters|f|Ein Dreiklang besteht aus zwei übereinander geschichteten [Terzen].|En treklang består av två staplade terser.|Av latinets <b>tertia</b> 'den tredje'.
+die Quarte (-n)|kvart|f|Viele Volkslieder beginnen mit einer aufsteigenden [Quarte].|Många folkvisor börjar med en stigande kvart.|Av latinets <b>quarta</b> 'den fjärde'. Även die Quart.
+die Quinte (-n)|kvint|f|Die Saiten der Geige sind in [Quinten] gestimmt.|Fiolens strängar är stämda i kvinter.|Av latinets <b>quinta</b> 'den femte'. Även die Quint.
+die Sexte (-n)|sext|f|Von e nach c ist es eine kleine [Sexte].|Från e till c är det en liten sext.|Av latinets <b>sexta</b> 'den sjätte'. Även die Sext.
+die Septime (-n)|septim|f|Der Dominantseptakkord enthält eine kleine [Septime].|Dominantseptimackordet innehåller en liten septim.|Av latinets <b>septima</b> 'den sjunde'. Även die Septe.
+die Oktave (-n)|oktav|f|Die Melodie springt eine [Oktave] nach oben.|Melodin hoppar en oktav uppåt.|Av latinets <b>octava</b> 'den åttonde'.
+die kleine Terz (-en)|liten ters|f|Der Molldreiklang hat unten eine [kleine Terz].|Molltreklangen har en liten ters nederst.|Tre halvtonsteg.
+die große Terz (-en)|stor ters|f|Der Durdreiklang hat unten eine [große Terz].|Durtreklangen har en stor ters nederst.|Fyra halvtonsteg.
+die reine Quinte (-n)|ren kvint|f|Eine [reine Quinte] umfasst dreieinhalb Ganztöne.|En ren kvint omfattar tre och ett halvt heltonsteg.|Rein = ren. Prim, kvart, kvint och oktav är rena (inte stora eller små). I Folkwangs prov räcker siffran: 5 = ren kvint.
+der Halbton (-töne)|halvt tonsteg, halvton|m|Zwischen h und c liegt nur ein [Halbton].|Mellan h och c ligger bara ett halvt tonsteg.|<b>halb</b> 'halv' + <b>Ton</b> 'ton'.
+der Ganzton (-töne)|helt tonsteg, helton|m|Eine Durtonleiter besteht aus fünf [Ganztönen] und zwei Halbtönen.|En durskala består av fem heltonsteg och två halvtonsteg.|<b>ganz</b> 'hel'.
+die Durtonleiter (-n)|durskala|f|In der [Durtonleiter] liegen die Halbtöne zwischen der 3. und 4. sowie der 7. und 8. Stufe.|I durskalan ligger halvtonstegen mellan steg 3 och 4 samt 7 och 8.|Tyskan skriver Dur med stor bokstav: C-Dur (svenska C-dur).
+die Molltonleiter (-n)|mollskala|f|Es gibt drei Formen der [Molltonleiter]: rein, harmonisch und melodisch.|Det finns tre former av mollskalan: ren, harmonisk och melodisk.|Molltonarter skrivs med liten bokstav: a-Moll (svenska a-moll).
+das Dur|dur|n|Das Stück wechselt am Ende von Moll nach [Dur].|Stycket växlar i slutet från moll till dur.|Av latinets <b>durus</b> 'hård' (det "hårda" h). Obs. neutrum.
+das Moll|moll|n|Das Thema erscheint in der Reprise in [Moll].|Temat kommer i reprisen i moll.|Av latinets <b>mollis</b> 'mjuk' (det "mjuka" b). Obs. neutrum.
+die Tonart (-en)|tonart|f|Das Stück steht in der [Tonart] d-Moll.|Stycket går i tonarten d-moll.|Man säger in einer Tonart stehen (gå i en tonart). Dur = dur, Moll = moll.
+die Paralleltonart (-en)|parallelltonart|f|Die [Paralleltonart] von C-Dur ist a-Moll.|Parallelltonarten till C-dur är a-moll.|Samma förtecken, grundtonen en liten ters lägre. Engelskans relative key.
+der Quintenzirkel|kvintcirkeln|m|Im [Quintenzirkel] kommt mit jeder Quinte aufwärts ein Kreuz dazu.|I kvintcirkeln tillkommer ett kors för varje kvint uppåt.|<b>Zirkel</b> 'cirkel, passare'. Obs. Quinten + Zirkel.
+die chromatische Tonleiter (-n)|kromatisk skala|f|Die [chromatische Tonleiter] besteht nur aus Halbtönen.|Den kromatiska skalan består bara av halvtonsteg.|Av grekiskans <b>chrōma</b> 'färg'.
+der Grundton (-töne)|grundton|m|Die Tonleiter beginnt und endet auf dem [Grundton].|Skalan börjar och slutar på grundtonen.|Även om ackordets grundton.
+der Leitton (-töne)|ledton|m|Der [Leitton] strebt einen Halbton aufwärts zum Grundton.|Ledtonen strävar ett halvt tonsteg uppåt mot grundtonen.|<b>leiten</b> 'leda'. I dur sjunde steget.
+aufsteigend|stigande, uppåtgående||Schreiben Sie die Tonleiter [aufsteigend] und absteigend.|Skriv skalan uppåt och nedåt.|Motsats: absteigend (fallande). Hör till steigen 'stiga'.
+absteigend|fallande, nedåtgående||Das Thema beginnt mit einer [absteigenden] Terz.|Temat börjar med en fallande ters.|<b>ab</b> 'ned' + <b>steigen</b> 'stiga'.
+die Konsonanz (-en)|konsonans|f|Terzen und Sexten gelten als unvollkommene [Konsonanzen].|Terser och sexter räknas som ofullkomliga konsonanser.|Av latinets <b>consonare</b> 'klinga tillsammans'. Vollkommene Konsonanzen: prim, oktav, kvint.
+die Dissonanz (-en)|dissonans|f|Eine [Dissonanz] muss nach den Regeln aufgelöst werden.|En dissonans måste lösas upp enligt reglerna.|Av latinets <b>dissonare</b> 'klinga olika'.
+#mt4|Musikteori · Ackord
+der Akkord (-e)|ackord|m|Kannst du diesen [Akkord] auf der Gitarre greifen?|Kan du ta det här ackordet på gitarr?|Obs. maskulinum på tyska. Im Akkord arbeiten betyder arbeta på ackord.
+der Dreiklang (-klänge)|treklang|m|Spiel bitte einen [Dreiklang] in C-Dur.|Spela en treklang i C-dur, tack.|Sammansatt av <b>drei</b> (tre) och <b>Klang</b> (klang).
+der Durdreiklang (-klänge)|durtreklang|m|Ein [Durdreiklang] besteht aus einer großen und einer kleinen Terz.|En durtreklang består av en stor och en liten ters.|Förkortas d i Folkwangs prov. Även Dur-Dreiklang.
+der Molldreiklang (-klänge)|molltreklang|m|Der [Molldreiklang] auf a heißt a–c–e.|Molltreklangen på a heter a–c–e.|Förkortas m.
+der verminderte Dreiklang (-klänge)|förminskad treklang|m|Auf der siebten Stufe in Dur steht ein [verminderter Dreiklang].|På sjunde steget i dur står en förminskad treklang.|Två små terser. Förkortas v.
+die Grundstellung (-en)|grundläge, grundform|f|Der Dreiklang steht in [Grundstellung]: der Grundton liegt im Bass.|Treklangen står i grundläge: grundtonen ligger i basen.|<b>Stellung</b> 'ställning, position'.
+die Umkehrung (-en)|omvändning|f|Bestimmen Sie Klangtyp und [Umkehrung] der gekennzeichneten Akkorde.|Bestäm ackordtyp och omvändning för de markerade ackorden.|Ur Folkwangs provexempel. Hör till umkehren 'vända om'.
+der Septakkord (-e)|septimackord|m|Ein [Septakkord] hat vier verschiedene Töne.|Ett septimackord har fyra olika toner.|Obs. tyskan säger Sept-, inte Septim-.
+die Stufe (-n)|(skal)steg|f|Die Dominante steht auf der fünften [Stufe].|Dominanten står på femte steget.|Grundbetydelse 'trappsteg, nivå'.
+die Tonika (Toniken)|tonika (T)|f|Die Kadenz beginnt und endet auf der [Tonika].|Kadensen börjar och slutar på tonikan.|I moll med liten bokstav: t.
+die Subdominante (-n)|subdominant (S)|f|Die [Subdominante] liegt eine Quinte unter der Tonika.|Subdominanten ligger en kvint under tonikan.|Latin <b>sub</b> 'under'. Mollsubdominant: s.
+die Dominante (-n)|dominant (D)|f|Die [Dominante] führt mit dem Leitton zurück zur Tonika.|Dominanten leder med ledtonen tillbaka till tonikan.|Av latinets <b>dominans</b> 'härskande'.
+die Kadenz (-en)|kadens|f|Notieren Sie eine vollständige [Kadenz] in d-Moll.|Skriv en fullständig kadens i d-moll.|Av latinets <b>cadere</b> 'falla'. Obs. i en solokonsert betyder Kadenz också solistens kadens.
+der Ganzschluss (-schlüsse)|helkadens, fullständig kadens|m|Der [Ganzschluss] endet mit der Folge Dominante–Tonika.|Helkadensen slutar med följden dominant–tonika.|<b>ganz</b> 'hel' + <b>Schluss</b> 'slut'. Även authentischer Schluss.
+der Halbschluss (-schlüsse)|halvkadens|m|Der Vordersatz endet mit einem [Halbschluss] auf der Dominante.|Försatsen slutar med en halvkadens på dominanten.|<b>halb</b> 'halv'.
+die Harmonielehre|harmonilära|f|In der [Harmonielehre] lernt man, wie Akkorde miteinander verbunden werden.|I harmoniläran lär man sig hur ackord förbinds med varandra.|Sammansatt av <b>Harmonie</b> (harmoni) och <b>Lehre</b> (lära).
+die Begleitung (-en)|ackompanjemang|f|Für die [Begleitung] stellt die Hochschule einen Pianisten.|Högskolan står för en pianist till ackompanjemanget.|Hör till begleiten (följa, ackompanjera). Mit Klavierbegleitung = med pianoackompanjemang.
+#mt5|Musikteori · Tempo och dynamik
+die Dynamik|dynamik|f|Achte mehr auf die [Dynamik], also auf laut und leise!|Tänk mer på dynamiken, alltså starkt och svagt!|Från grekiskans <b>dynamis</b> 'kraft'. Saknar plural.
+die Lautstärke (-n)|ljudstyrka|f|Die [Lautstärke] wird mit Zeichen wie p und f angegeben.|Ljudstyrkan anges med tecken som p och f.|<b>laut</b> 'högljudd' + <b>Stärke</b> 'styrka'.
+piano|piano, svagt (p)||Der Anfang ist [piano] zu spielen.|Början ska spelas piano.|Italienska <b>piano</b> 'svagt, lugnt'. Obs. das Piano = piano (instrumentet).
+pianissimo|pianissimo, mycket svagt (pp)||Die letzten Takte verklingen [pianissimo].|De sista takterna klingar ut pianissimo.|Italiensk superlativ av piano.
+mezzoforte|mezzoforte, halvstarkt (mf)||Das Thema beginnt [mezzoforte].|Temat börjar mezzoforte.|Italienska <b>mezzo</b> 'halv' + <b>forte</b> 'stark'.
+forte|forte, starkt (f)||Der Chor setzt [forte] ein.|Kören sätter in forte.|Italienska <b>forte</b> 'stark'.
+fortissimo|fortissimo, mycket starkt (ff)||Das Orchester spielt den Schluss [fortissimo].|Orkestern spelar slutet fortissimo.|Italiensk superlativ av forte.
+crescendo|crescendo, växande||Hier soll die Musik [crescendo] zum Höhepunkt führen.|Här ska musiken leda crescendo fram till höjdpunkten.|Italienska <b>crescere</b> 'växa'. Förkortas cresc. Tyska: lauter werden.
+decrescendo|decrescendo, avtagande||Nach dem Höhepunkt folgt ein langes [decrescendo].|Efter höjdpunkten följer ett långt decrescendo.|Italienska <b>decrescere</b> 'avta'. Förkortas decresc.
+diminuendo|diminuendo, avtagande||Spielen Sie die Phrase [diminuendo] bis zum Ende.|Spela frasen diminuendo till slutet.|Italienska <b>diminuire</b> 'minska'. Förkortas dim.
+lauter werden|bli starkare||Die Melodie soll allmählich [lauter werden].|Melodin ska gradvis bli starkare.|Tyska motsvarigheten till crescendo. Motsats: leiser werden.|<b>lauter</b> högre · <b>werden</b> bli → "bli högre"
+leiser werden|bli svagare||Am Ende des Satzes soll das Orchester [leiser werden].|I slutet av satsen ska orkestern bli svagare.|Tyska motsvarigheten till decrescendo.|<b>leiser</b> tystare · <b>werden</b> bli → "bli tystare"
+staccato|staccato, kort, avstött||Die Achtel werden [staccato] gespielt.|Åttondelarna spelas staccato.|Italienska <b>staccare</b> 'lösgöra'. Tyska: gestoßen, abgestoßen.
+legato|legato, bundet||Spielen Sie die Melodie [legato].|Spela melodin legato.|Italienska <b>legare</b> 'binda'. Tyska: gebunden.
+gebunden|bundet (legato)||Die Sechzehntel werden paarweise [gebunden] gespielt.|Sextondelarna spelas bundet parvis.|Perfekt particip av binden 'binda'.
+der Triller (-)|drill|m|Der [Triller] beginnt im Barock meist mit der oberen Nebennote.|Drillen börjar under barocken oftast med den övre hjälptonen.|Förkortas tr. Jämför svenskans drill.
+das Tempo (-s)|tempo|n|Du spielst den Anfang in einem zu schnellen [Tempo].|Du spelar början i för snabbt tempo.|Italienska <b>tempo</b> 'tid'. I musiktexter ofta pluralen Tempi.
+die Tempobezeichnung (-en)|tempobeteckning|f|"Allegro" ist die häufigste [Tempobezeichnung] für schnelle Sätze.|"Allegro" är den vanligaste tempobeteckningen för snabba satser.|<b>Bezeichnung</b> 'beteckning'.
+largo|largo, mycket långsamt||Der langsame Satz ist [largo] überschrieben.|Den långsamma satsen har rubriken largo.|Italienska <b>largo</b> 'bred'.
+adagio|adagio, långsamt||Die Einleitung ist [adagio] zu spielen.|Inledningen ska spelas adagio.|Italienska <b>ad agio</b> 'i lugn och ro'. Das Adagio = en långsam sats.
+andante|andante, gående||Das Thema erklingt im Tempo [andante].|Temat klingar i tempo andante.|Italienska <b>andare</b> 'gå'. Andantino = lite rörligare än andante.
+moderato|moderato, måttligt||Die Etüde ist [moderato] bezeichnet.|Etyden är betecknad moderato.|Italienska <b>moderato</b> 'måttlig'. Tyska: mäßig.
+allegro|allegro, snabbt||Der erste Satz steht im Tempo [allegro].|Första satsen går i tempo allegro.|Italienska <b>allegro</b> 'glad'. Allegretto = lite lugnare. Allegro con brio = snabbt med glöd.
+presto|presto, mycket snabbt||Das Finale ist [presto] zu spielen.|Finalen ska spelas presto.|Italienska <b>presto</b> 'snart, snabbt'.
+ritardando|ritardando, saktande||Vor dem Schluss wird es [ritardando] langsamer.|Före slutet saktar musiken in, ritardando.|Italienska <b>ritardare</b> 'fördröja'. Förkortas rit. Tyska: langsamer werden.
+accelerando|accelerando, påskyndande||In der Coda soll das Tempo [accelerando] schneller werden.|I codan ska tempot bli snabbare, accelerando.|Italienska <b>accelerare</b> 'påskynda'. Förkortas accel.
+a tempo|a tempo, i ursprungligt tempo||Nach dem Ritardando geht es [a tempo] weiter.|Efter ritardandot fortsätter det a tempo.|Italienska 'i tempot'.|<b>a</b> i · <b>tempo</b> tempo → "i tempot"
+langsam|långsamt||Der zweite Satz ist [langsam] und ausdrucksvoll.|Andra satsen är långsam och uttrycksfull.|Tysk tempobeteckning. Langsamer werden = sakta in.
+lebhaft|livligt||Schumann schreibt oft "[lebhaft]" statt "allegro".|Schumann skriver ofta "livligt" i stället för "allegro".|<b>leben</b> 'leva' + -haft.
+ausdrucksvoll|uttrycksfullt||Spielen Sie die Melodie [ausdrucksvoll].|Spela melodin uttrycksfullt.|Motsvarar italienskans espressivo. <b>Ausdruck</b> 'uttryck'.
+dolce|dolce, mjukt, ljuvt||Das Seitenthema ist [dolce] bezeichnet.|Sidotemat är betecknat dolce.|Italienska <b>dolce</b> 'söt, ljuv'.
+die Metronomangabe (-n)|metronomangivelse|f|Die [Metronomangabe] lautet: Viertel = 60.|Metronomangivelsen lyder: fjärdedel = 60.|<b>Angabe</b> 'angivelse, uppgift'.
+#mt6|Musikteori · Instrument och besättning
+das Streichinstrument (-e)|stråkinstrument|n|Die Bratsche ist ein [Streichinstrument] mit einem warmen Klang.|Altfiolen är ett stråkinstrument med varm klang.|Hör till streichen (stryka).
+das Blasinstrument (-e)|blåsinstrument|n|Das Horn gilt als schwieriges [Blasinstrument].|Valthornet anses vara ett svårt blåsinstrument.|Hör till blasen (blåsa), starkt verb: blies, hat geblasen.
+die Holzbläser|träblåsare|pl|Zu den [Holzbläsern] gehören Flöte, Oboe, Klarinette und Fagott.|Till träblåsarna hör flöjt, oboe, klarinett och fagott.|<b>Holz</b> 'trä' + <b>Bläser</b> 'blåsare'.
+die Blechbläser|bleckblåsare|pl|Die [Blechbläser] spielen im Finale sehr laut.|Bleckblåsarna spelar mycket starkt i finalen.|<b>Blech</b> 'bleck, plåt'.
+die Streicher|stråkar, stråkmusiker|pl|Die [Streicher] spielen pizzicato.|Stråkarna spelar pizzicato.|Hör till streichen 'stryka'.
+das Schlagwerk|slagverk|n|Pauken gehören zum [Schlagwerk] des Orchesters.|Pukor hör till orkesterns slagverk.|Skiljs från das Schlagzeug (trumset, slagverk).
+der Bogen (-)|stråke; båge|m|Sie hält den [Bogen] sehr locker.|Hon håller stråken väldigt löst.|Betyder också båge. I södra Tyskland och Österrike är pluralen Bögen.
+pizzicato|pizzicato, knäppt||Die Streicher spielen [pizzicato].|Stråkarna spelar pizzicato.|Italienska <b>pizzicare</b> 'nypa'. Motsats: arco (med stråke).
+das Pedal (-e)|pedal|n|Beim Klavier wird das [Pedal] mit dem Zeichen "Ped." angegeben.|På piano anges pedalen med tecknet "Ped.".|Av latinets <b>pes</b> 'fot'.
+die Stimmlage (-n)|röstläge, stämma|f|Meine [Stimmlage] ist Mezzosopran.|Mitt röstläge är mezzosopran.|Sammansatt av <b>Stimme</b> (röst, stämma) och <b>Lage</b> (läge). De vanligaste: Sopran, Alt, Tenor, Bass.
+der Sopran (-e)|sopran|m|Im [Sopran] liegt die Choralmelodie.|I sopranen ligger koralmelodin.|De fyra stämmorna: Sopran, Alt, Tenor, Bass. Alla maskulina.
+der Bass (Bässe)|bas|m|Der [Bass] macht in der Kadenz große Sprünge.|Basen gör stora språng i kadensen.|Beachten Sie "die typische Führung des Basses" (UdK Berlin).
+das Streichquartett (-e)|stråkkvartett|n|Haydn gilt als Vater des [Streichquartetts].|Haydn anses vara stråkkvartettens fader.|<b>streichen</b> 'stryka'.
+die Sinfonie (-n)|symfoni|f|Eine klassische [Sinfonie] hat meistens vier Sätze.|En klassisk symfoni har oftast fyra satser.|Även Symphonie. Das Sinfonieorchester = symfoniorkester.
+die Partitur (-en)|partitur|f|Der Dirigent studiert die [Partitur] schon seit Wochen.|Dirigenten har studerat partituret i flera veckor.|Obs. femininum. En enskild musikers noter kallas die Stimme (stämman).
+das Ensemble (-s)|ensemble|n|Sie spielt in einem [Ensemble] für Neue Musik.|Hon spelar i en ensemble för samtida musik.|Från franskans <b>ensemble</b> 'tillsammans'. Uttalas på franskt sätt.
+dirigieren|dirigera||Wer wird das Abschlusskonzert [dirigieren]?|Vem ska dirigera avslutningskonserten?|Svagt verb utan ge- i perfekt: hat dirigiert.
+die Besetzung (-en)|besättning (instrument eller roller)|f|Das Stück ist für eine ungewöhnliche [Besetzung] geschrieben: Harfe und Tuba.|Stycket är skrivet för en ovanlig besättning: harpa och tuba.|Anger vilka instrument eller sångare som medverkar. Jämför svenskans <b>besättning</b>.
+das Orchester (-)|orkester|n|Das [Orchester] stimmt vor dem Konzert auf das a' der Oboe.|Orkestern stämmer före konserten efter oboens a1.|Uttalas med k-ljud: [orˈkɛstɐ]. Obs. neutrum på tyska (das Orchester) men en orkester på svenska.
+der Dirigent (-en)|dirigent|m|Der [Dirigent] gibt mit dem Taktstock den Einsatz.|Dirigenten ger insatsen med taktpinnen.|Svagt maskulinum: den, dem, des Dirigenten. Verbet är dirigieren (dirigera).
+die Violine (-n)|violin, fiol|f|In der Partitur steht [Violine] I und Violine II.|I partituret står violin I och violin II.|I vardagen säger man oftast die Geige; die Violine är den formella termen i noter och partitur.
+die Oboe (-n)|oboe|f|Die [Oboe] gibt dem Orchester den Stimmton a'.|Oboen ger orkestern stämtonen a1.|Från franskans <b>hautbois</b> 'högt trä'. Uttalas [oˈboːə], tre stavelser.
+das Fagott (-e)|fagott|n|Das [Fagott] ist das tiefste Holzblasinstrument im Orchester.|Fagotten är det djupaste träblåsinstrumentet i orkestern.|Neutrum på tyska (das Fagott), men en fagott på svenska. Från italienskans <b>fagotto</b> 'knippe'.
+das Horn (Hörner)|valthorn, horn|n|Das [Horn] ist in F gestimmt und klingt eine Quinte tiefer als notiert.|Valthornet står i F och klingar en kvint lägre än det noterade.|I orkestern betyder das Horn valthorn (även das Waldhorn). Som på svenska kan ordet också betyda djurets horn.
+die Posaune (-n)|trombon, basun|f|Die [Posaune] liest meistens im Bassschlüssel.|Trombonen läser oftast i basklav.|Samma ord som svenskans basun. Lånat via franskan från latinets <b>bucina</b> 'signalhorn'.
+die Tuba (Tuben)|tuba|f|Die [Tuba] spielt die tiefste Stimme der Blechbläser.|Tuban spelar den djupaste stämman bland bleckblåsarna.|Latin <b>tuba</b> 'trumpet'. Plural Tuben.
+die Blockflöte (-n)|blockflöjt|f|Viele Kinder lernen zuerst [Blockflöte] und dann ein anderes Instrument.|Många barn lär sig blockflöjt först och sedan ett annat instrument.|<b>Block</b> 'kloss' (träklossen i munstycket) och <b>Flöte</b> 'flöjt'.
+die Orgel (-n)|orgel|f|Bach schrieb viele Werke für die [Orgel].|Bach skrev många verk för orgel.|Av grekiskans <b>organon</b> 'verktyg'. Den som spelar heter der Organist.
+das Saxofon (-e)|saxofon|n|Das [Saxofon] ist aus Metall, gehört aber zu den Holzblasinstrumenten.|Saxofonen är av metall men hör till träblåsinstrumenten.|Stavas också Saxophon. Uppkallad efter uppfinnaren Adolphe <b>Sax</b>.
+der Tenor (Tenöre)|tenor|m|Der [Tenor] ist die höchste Männerstimme im Chor.|Tenoren är den högsta mansstämman i kören.|Betoning på andra stavelsen: [teˈnoːɐ̯]. Plural Tenöre.
+der Alt (-e)|alt|m|Im Chor singe ich [Alt], weil meine Stimme ziemlich tief ist.|I kören sjunger jag alt, eftersom min röst är ganska djup.|Av latinets <b>altus</b> 'hög': ursprungligen stämman över tenoren. Maskulinum: der Alt, men die Altistin (altsångerskan).
+#mt7|Musikteori · Uppgifter och gehör
+die Musiktheorie|musikteori|f|In [Musiktheorie] war ich in der Schule immer gut.|I musikteori var jag alltid bra i skolan.|Saknar plural. Vid tyska musikhögskolor heter ämnet ofta också Tonsatz (satslära).
+die Gehörbildung|gehörsträning|f|In der [Gehörbildung] müssen wir Intervalle und Akkorde erkennen.|I gehörsträningen måste vi känna igen intervall och ackord.|Sammansatt av <b>Gehör</b> (gehör) och <b>Bildung</b> (utbildning, utveckling). Ingår i nästan alla antagningsprov.
+das Gehör|gehör, hörsel|n|Sie hat ein ausgezeichnetes [Gehör].|Hon har ett utmärkt gehör.|Hör till hören (höra). Das absolute Gehör = absolut gehör.
+Bestimmen Sie die folgenden Intervalle|Bestäm följande intervall||[Bestimmen Sie die folgenden Intervalle] und tragen Sie die Lösung in die Kästchen ein.|Bestäm följande intervall och skriv lösningen i rutorna.|Vanligaste provinstruktionen. Artigt imperativ: verb + Sie först i satsen.|<b>bestimmen</b> bestämma · <b>Sie</b> ni · <b>die folgenden</b> de följande · <b>Intervalle</b> intervall
+Benennen Sie die folgenden Akkorde|Benämn följande ackord||[Benennen Sie die folgenden Akkorde] mit Grundton und Klangtyp.|Benämn följande ackord med grundton och ackordtyp.|Ur Karlsruhes provexempel. Benennen = namnge, benämna (av Name 'namn').|<b>benennen</b> benämna · <b>Sie</b> ni · <b>die folgenden</b> de följande · <b>Akkorde</b> ackord
+Ergänzen Sie die fehlenden Noten|Fyll i de noter som saknas||[Ergänzen Sie die fehlenden Noten]. Notieren Sie nur die Tonhöhen.|Fyll i de noter som saknas. Notera bara tonhöjderna.|Ur UdK Berlins provexempel. Ergänzen = komplettera, fylla i.|<b>ergänzen</b> komplettera · <b>Sie</b> ni · <b>die fehlenden</b> de saknade · <b>Noten</b> noterna
+Notieren Sie|Notera, skriv ned||[Notieren Sie] die gespielte Melodie im Violinschlüssel.|Skriv ned den spelade melodin i G-klav.|Svagt verb utan ge- i perfekt: hat notiert.|<b>notieren</b> notera · <b>Sie</b> ni
+Kreuzen Sie an|Kryssa i||Welche Umkehrung hören Sie? [Kreuzen Sie an].|Vilken omvändning hör ni? Kryssa i.|Ankreuzen = kryssa i. Delbart: an hamnar sist.|<b>kreuzen</b> kryssa · <b>Sie</b> ni · <b>an</b> på → "kryssa på"
+das Hörbeispiel (-e)|hörexempel, ljudexempel|n|Jedes [Hörbeispiel] wird zweimal gespielt.|Varje hörexempel spelas två gånger.|Förkortas HB i UdK Berlins prov.
+das Melodiediktat (-e)|melodidiktat|n|Das [Melodiediktat] hat die Schwierigkeit eines klassischen Sinfoniethemas.|Melodidiktatet har samma svårighetsgrad som ett klassiskt symfonitema.|Ur Weimars kravlista. Av latinets <b>dictare</b> 'diktera'.
+das Rhythmusdiktat (-e)|rytmdiktat|n|Beim [Rhythmusdiktat] notieren Sie nur den Rhythmus.|Vid rytmdiktatet noterar ni bara rytmen.|Weimar: "Rhythmusdiktat, einschließlich Punktierungen, Synkopen, Überbindungen und Triolen".
+vom Blatt singen|sjunga a prima vista||In der mündlichen Prüfung müssen Sie eine kurze Melodie [vom Blatt singen].|I det muntliga provet måste ni sjunga en kort melodi a prima vista.|Jämför vom Blatt spielen (spela a prima vista).|<b>vom</b> från · <b>Blatt</b> bladet · <b>singen</b> sjunga → "sjunga från bladet"
+nachsingen|sjunga efter||Sie sollen die gespielte Melodie [nachsingen].|Ni ska sjunga efter den spelade melodin.|Delbart verb: sang nach, hat nachgesungen. Nachspielen = spela efter.
+aufwärts|uppåt||Die Melodie bewegt sich stufenweise [aufwärts].|Melodin rör sig stegvis uppåt.|Motsats: abwärts (nedåt).
+abwärts|nedåt||Die Septime wird [abwärts] aufgelöst.|Septimen löses upp nedåt.|<b>ab</b> 'ned' + -wärts '-åt'.
+stufenweise|stegvis||Die Oberstimme bewegt sich meist [stufenweise].|Överstämman rör sig oftast stegvis.|Även schrittweise. Motsats: sprunghaft (med språng).
+der Sprung (Sprünge)|språng (intervallsprång)|m|Nach einem großen [Sprung] folgt meist eine Gegenbewegung.|Efter ett stort språng följer oftast en motrörelse.|Hör till springen 'hoppa'.

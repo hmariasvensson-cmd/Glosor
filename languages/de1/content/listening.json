@@ -31,6 +31,26 @@
    },
    {
     "who": "B",
+    "fr": "Warum wohnst du in Berlin?",
+    "sv": "Varför bor du i Berlin?"
+   },
+   {
+    "who": "A",
+    "fr": "Meine Mutter arbeitet hier. Und ich gehe hier in die Schule.",
+    "sv": "Min mamma jobbar här. Och jag går i skolan här."
+   },
+   {
+    "who": "B",
+    "fr": "Und wie findest du Berlin?",
+    "sv": "Och vad tycker du om Berlin?"
+   },
+   {
+    "who": "A",
+    "fr": "Super! Berlin ist groß und sehr interessant.",
+    "sv": "Jättebra! Berlin är stort och väldigt intressant."
+   },
+   {
+    "who": "B",
     "fr": "Wie alt bist du?",
     "sv": "Hur gammal är du?"
    },
@@ -109,6 +129,11 @@
    "jetzt": {
     "t": "jetzt",
     "sv": "nu",
+    "g": ""
+   },
+   "warum": {
+    "t": "warum",
+    "sv": "varför",
     "g": ""
    }
   }
@@ -234,6 +259,11 @@
    },
    {
     "who": "Frau Schmidt",
+    "fr": "Wir treffen uns um acht Uhr vor der Bibliothek.",
+    "sv": "Vi träffas klockan åtta utanför biblioteket."
+   },
+   {
+    "who": "Frau Schmidt",
     "fr": "Bitte bringt ein Buch, ein Heft und einen Stift mit.",
     "sv": "Ta med en bok, ett häfte och en penna."
    },
@@ -246,6 +276,11 @@
     "who": "Frau Schmidt",
     "fr": "Und noch etwas: Der Test ist nicht am Montag, sondern am Mittwoch.",
     "sv": "Och en sak till: Provet är inte på måndag utan på onsdag."
+   },
+   {
+    "who": "Frau Schmidt",
+    "fr": "Lernt bitte die Wörter von Kapitel drei. Das ist wichtig für den Test.",
+    "sv": "Lär er orden i kapitel tre. Det är viktigt för provet."
    },
    {
     "who": "Frau Schmidt",
@@ -363,6 +398,26 @@
    },
    {
     "who": "Emma",
+    "fr": "Gute Idee! Kommt Max auch?",
+    "sv": "Bra idé! Kommer Max också?"
+   },
+   {
+    "who": "Lukas",
+    "fr": "Nein, Max hat keine Zeit. Er besucht seine Oma.",
+    "sv": "Nej, Max har inte tid. Han hälsar på sin mormor."
+   },
+   {
+    "who": "Emma",
+    "fr": "Schade. Wo treffen wir uns?",
+    "sv": "Synd. Var ska vi träffas?"
+   },
+   {
+    "who": "Lukas",
+    "fr": "Vor dem Park, an der Bushaltestelle.",
+    "sv": "Utanför parken, vid busshållplatsen."
+   },
+   {
+    "who": "Emma",
     "fr": "Super! Und am Sonntag arbeite ich. Bis Samstag!",
     "sv": "Toppen! Och på söndag jobbar jag. Vi ses på lördag!"
    }
@@ -417,6 +472,16 @@
     "t": "lange",
     "sv": "länge",
     "g": ""
+   },
+   "besucht": {
+    "t": "besuchen",
+    "sv": "besöka, hälsa på",
+    "g": ""
+   },
+   "schade": {
+    "t": "schade",
+    "sv": "synd",
+    "g": ""
    }
   }
  },
@@ -469,6 +534,26 @@
     "who": "Nora",
     "fr": "Oh ja, mit Schokolade!",
     "sv": "Åh ja, med choklad!"
+   },
+   {
+    "who": "Kellnerin",
+    "fr": "Schmeckt es Ihnen?",
+    "sv": "Smakar det bra?"
+   },
+   {
+    "who": "Nora",
+    "fr": "Ja, die Pizza ist sehr lecker!",
+    "sv": "Ja, pizzan är jättegod!"
+   },
+   {
+    "who": "Herr Berg",
+    "fr": "Der Fisch auch, danke. Und die Rechnung, bitte.",
+    "sv": "Fisken också, tack. Och notan, tack."
+   },
+   {
+    "who": "Kellnerin",
+    "fr": "Das macht zusammen dreißig Euro.",
+    "sv": "Det blir trettio euro tillsammans."
    }
   ],
   "questions": [
@@ -506,7 +591,18 @@
     "why": "”Ich esse kein Fleisch.”"
    }
   ],
-  "gloss": {}
+  "gloss": {
+   "schmeckt": {
+    "t": "schmecken",
+    "sv": "smaka",
+    "g": ""
+   },
+   "rechnung": {
+    "t": "die Rechnung (-en)",
+    "sv": "nota, räkning",
+    "g": "f"
+   }
+  }
  },
  {
   "id": "de1-l-e6",
@@ -552,6 +648,21 @@
     "who": "Alva",
     "fr": "Ja, natürlich! Wir fahren in die Berge. Da ist viel Schnee.",
     "sv": "Ja, självklart! Vi åker till bergen. Där finns det mycket snö."
+   },
+   {
+    "who": "Ben",
+    "fr": "Ich fahre nicht gern Ski. Der Schnee ist mir zu kalt!",
+    "sv": "Jag gillar inte att åka skidor. Snön är för kall för mig!"
+   },
+   {
+    "who": "Alva",
+    "fr": "Und im Sommer? Was machst du dann?",
+    "sv": "Och på sommaren? Vad gör du då?"
+   },
+   {
+    "who": "Ben",
+    "fr": "Im Sommer schwimme ich gern im See.",
+    "sv": "På sommaren simmar jag gärna i sjön."
    }
   ],
   "questions": [
@@ -659,6 +770,16 @@
    },
    {
     "who": "Oma",
+    "fr": "Und wo machst du deine Hausaufgaben?",
+    "sv": "Och var gör du dina läxor?"
+   },
+   {
+    "who": "Paul",
+    "fr": "Am Tisch am Fenster. Da ist es ruhig.",
+    "sv": "Vid bordet vid fönstret. Där är det lugnt."
+   },
+   {
+    "who": "Oma",
     "fr": "Und ist es sauber?",
     "sv": "Och är det städat?"
    },
@@ -728,6 +849,11 @@
     "t": "na",
     "sv": "nå, nja",
     "g": ""
+   },
+   "ruhig": {
+    "t": "ruhig",
+    "sv": "lugn, tyst",
+    "g": ""
    }
   }
  },
@@ -775,6 +901,16 @@
     "who": "Frau",
     "fr": "Ja, am Marktplatz, gegenüber vom Rathaus.",
     "sv": "Ja, vid torget, mittemot rådhuset."
+   },
+   {
+    "who": "Tourist",
+    "fr": "Und wann ist das Museum offen?",
+    "sv": "Och när har museet öppet?"
+   },
+   {
+    "who": "Frau",
+    "fr": "Von zehn bis sechs Uhr. Aber am Montag ist es geschlossen.",
+    "sv": "Från tio till sex. Men på måndag är det stängt."
    },
    {
     "who": "Tourist",

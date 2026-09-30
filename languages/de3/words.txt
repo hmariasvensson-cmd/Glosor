@@ -3,13 +3,13 @@
 // Ordvalet blandar temaord och vanliga ord ur DeReWo (IDS Mannheim, CC BY-NC; bara använd för att välja ord).
 // Ord som redan finns i Tyska 4, 5 och 6 är inte med.
 //
-// Format, en rad per ord (se languages/de4/SPEC-ordlista.md):
+// Format, en rad per ord (se docs/spec/ordlista.md):
 //   tyska|svenska|genus|exempel på tyska|exempel på svenska|kommentar|ordagrant (för fraser)
 // Ordets tyska form och avsnittets id används som nycklar för sparade framsteg, ändra dem inte i efterhand.
 #t1|Kap 1 · Reisen und Verkehr
 der Verkehr|trafik|m|In der Stadt gibt es morgens viel [Verkehr].|I stan är det mycket trafik på morgonen.|Används nästan bara i singular. Der Straßenverkehr = vägtrafiken.
 öffentlich|offentlig, allmän||Ich fahre meistens mit [öffentlichen] Verkehrsmitteln.|Jag åker oftast kollektivt.|Jämför die Öffentlichkeit (offentligheten).
-die Linie (-n)|linje|f|Du musst die [Linie] 5 bis zum Marktplatz nehmen.|Du måste ta linje 5 till torget.|Uttalas med fyra stavelser: Li-ni-e.
+die Linie (-n)|linje|f|Du musst die [Linie] 5 bis zum Marktplatz nehmen.|Du måste ta linje 5 till torget.|Uttalas nästan som svenska linje: LI-nje (ie efter n uttalas je).
 direkt|direkt||Der Zug fährt [direkt] nach Berlin, ohne Umsteigen.|Tåget går direkt till Berlin, utan byte.|Kan också betyda "precis": direkt neben der Tür.
 die Strecke (-n)|sträcka|f|Die [Strecke] von Hamburg nach Berlin ist schön.|Sträckan mellan Hamburg och Berlin är fin.|Jämför svenskans "sträcka".
 der Führerschein (-e)|körkort|m|Meine Schwester macht gerade den [Führerschein].|Min syster tar körkort just nu.|Av führen (föra) och der Schein (intyg).
@@ -704,7 +704,7 @@ schweizerisch|schweizisk||Das [schweizerische] Hochdeutsch klingt anders.|Den sc
 europäisch|europeisk||Deutsch ist eine wichtige [europäische] Sprache.|Tyska är ett viktigt europeiskt språk.|Europa = Europa.
 die EU|EU|f|Österreich ist seit 1995 in der [EU].|Österrike har varit med i EU sedan 1995.|Die Europäische Union. Schweiz är inte med.
 Bayern|Bayern|n|In [Bayern] trägt man zu Festen oft Tracht.|I Bayern bär man ofta folkdräkt på fester.|Tysklands största delstat. Adjektiv: bayerisch.
-bayerisch|bayersk||Er spricht mit einem [bayerischen] Akzent.|Han pratar med bayersk brytning.|Das Bairisch = den bayerska dialekten.
+bayerisch|bayersk||Er spricht mit einem [bayerischen] Akzent.|Han pratar med bayersk brytning.|Bairisch (das Bairische) = den bayerska dialekten.
 norddeutsch|nordtysk||„Moin“ ist ein [norddeutscher] Gruß.|"Moin" är en nordtysk hälsning.|Motsats: süddeutsch.
 süddeutsch|sydtysk||Im [süddeutschen] Raum sagt man „Grüß Gott“.|I södra Tyskland säger man "Grüß Gott".|Av Süd (syd) och deutsch.
 verschieden|olika||In jeder Region gibt es [verschiedene] Wörter für Brötchen.|I varje region finns det olika ord för småfranska.|Synonym: unterschiedlich.

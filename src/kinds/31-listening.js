@@ -12,6 +12,6 @@ function listenIntro(id){
     <button class="btn" id="toq">Till frågorna</button></section>
     <button class="quit" id="quit">Tillbaka</button>`;
   wirePlay(r=>speakSeq(t.lines,r)); $("#stop").onclick=stopSpeech;
-  $("#toq").onclick=()=>{stopSpeech(); startTextQs("lq",id)}; $("#quit").onclick=openListening;
+  $("#toq").onclick=()=>{stopSpeech(); startTextQs("lq",id)}; $("#quit").onclick=backTo(openListening);
 }
 defineKind("lq",{name:"Hörförståelse",mc:textQ,restore:ref=>textQById("lq",ref)?{}:null,after:textAfter,open:openListening});

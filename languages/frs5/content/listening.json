@@ -132,7 +132,7 @@
     "why": "« j'ai gagné assez d'argent pour m'acheter une nouvelle guitare »."
    },
    {
-    "type": "slutsats",
+    "type": "tolkning",
     "q": "Varför sparar Inès pengar?",
     "opts": [
      "För att köpa ett kafé",
@@ -290,7 +290,7 @@
     "why": "« les journées sont plus longues et plus intenses »."
    },
    {
-    "type": "slutsats",
+    "type": "tolkning",
     "q": "Vad tycker Karim i dag om sitt beslut?",
     "opts": [
      "Han ångrar det",
@@ -453,7 +453,7 @@
     "why": "« personne ne vérifie si on a fait le travail. Il faut être autonome »."
    },
    {
-    "type": "slutsats",
+    "type": "tolkning",
     "q": "Hur känner Elsa inför sitt beslut att åka?",
     "opts": [
      "Hon ångrar det",
@@ -764,7 +764,7 @@
     "why": "« L'application écoute l'élève jouer, puis elle lui indique s'il joue juste et en rythme »."
    },
    {
-    "type": "slutsats",
+    "type": "tolkning",
     "q": "Vilket problem är olöst enligt forskaren?",
     "opts": [
      "Upphovsrätten när en algoritm lärt sig av artisters låtar",
@@ -861,6 +861,16 @@
    },
    {
     "who": "A",
+    "fr": "Et pour éviter ce genre de problème à l'avenir, vous avez des conseils ?",
+    "sv": "Och har ni några råd för att undvika den sortens problem i framtiden?"
+   },
+   {
+    "who": "B",
+    "fr": "Oui : vérifiez de temps en temps quelles applications utilisent la localisation, et ne laissez pas votre téléphone charger toute la nuit. Une batterie dure plus longtemps si on la garde entre vingt et quatre-vingts pour cent.",
+    "sv": "Ja: kontrollera då och då vilka appar som använder platstjänsten, och låt inte telefonen ladda hela natten. Ett batteri håller längre om man håller det mellan tjugo och åttio procent."
+   },
+   {
+    "who": "A",
     "fr": "Merci beaucoup ! J'avais peur de devoir en acheter un nouveau.",
     "sv": "Tack så mycket! Jag var rädd att jag skulle behöva köpa en ny."
    }
@@ -927,7 +937,7 @@
     "why": "« On l'enverra en réparation, et on vous prêtera un téléphone pendant ce temps »."
    },
    {
-    "type": "slutsats",
+    "type": "tolkning",
     "q": "Hur känner sig kunden i slutet?",
     "opts": [
      "Arg",
@@ -964,6 +974,11 @@
     "t": "la localisation",
     "sv": "platstjänster, positionering",
     "g": "f"
+   },
+   "charger": {
+    "t": "charger",
+    "sv": "ladda",
+    "g": ""
    }
   }
  },
@@ -1085,7 +1100,7 @@
     "why": "« quatre secondes pour inspirer, six secondes pour expirer »."
    },
    {
-    "type": "slutsats",
+    "type": "tolkning",
     "q": "Vad är läkarens inställning till scenskräck?",
     "opts": [
      "Det är en farlig sjukdom",
@@ -1396,7 +1411,7 @@
     "why": "« on dit « essencerie » pour une station-service »."
    },
    {
-    "type": "slutsats",
+    "type": "tolkning",
     "q": "Vad menar Awa med att franskan inte längre bara tillhör Frankrike?",
     "opts": [
      "Att franskan håller på att dö ut",
@@ -1473,6 +1488,21 @@
    },
    {
     "who": "A",
+    "fr": "Et à l'école, vous avez aussi vos propres mots ?",
+    "sv": "Och i skolan, har ni också egna ord?"
+   },
+   {
+    "who": "B",
+    "fr": "Bien sûr. Chez nous, un élève qui ne va pas en cours ne « sèche » pas, il « brosse ». Mais les notes sont sur vingt, comme en France.",
+    "sv": "Självklart. Hos oss är det inte så att en elev som inte går på lektionen « sèche », utan hen « brosse ». Men betygen är på en tjugogradig skala, som i Frankrike."
+   },
+   {
+    "who": "A",
+    "fr": "Au moins une chose en commun !",
+    "sv": "Äntligen något gemensamt!"
+   },
+   {
+    "who": "A",
     "fr": "Il y a d'autres pièges ?",
     "sv": "Finns det andra fällor?"
    },
@@ -1544,7 +1574,7 @@
     "why": "« il est arrivé à vingt heures, et on avait déjà mangé depuis longtemps »."
    },
    {
-    "type": "slutsats",
+    "type": "tolkning",
     "q": "Vad tycker den belgiska talaren om missförstånden?",
     "opts": [
      "De är farliga",
@@ -1580,6 +1610,16 @@
    "avouez-le": {
     "t": "avouer",
     "sv": "erkänna",
+    "g": ""
+   },
+   "sèche": {
+    "t": "sécher un cours",
+    "sv": "skolka från en lektion",
+    "g": ""
+   },
+   "brosse": {
+    "t": "brosser un cours (belgiska)",
+    "sv": "skolka från en lektion",
     "g": ""
    }
   }
@@ -1628,6 +1668,16 @@
     "who": "C",
     "fr": "Moi, je déteste les fins ouvertes ! J'ai besoin de savoir ce qui se passe.",
     "sv": "Jag avskyr öppna slut! Jag behöver veta vad som händer."
+   },
+   {
+    "who": "A",
+    "fr": "Et le style ? Moi, j'ai trouvé les phrases très courtes, presque comme de la poésie.",
+    "sv": "Och stilen? Jag tyckte att meningarna var väldigt korta, nästan som poesi."
+   },
+   {
+    "who": "B",
+    "fr": "Oui, c'est ce qui m'a plu. Et chaque chapitre commence par une description du temps qu'il fait, comme dans un journal intime.",
+    "sv": "Ja, det var det jag gillade. Och varje kapitel börjar med en beskrivning av vädret, som i en dagbok."
    },
    {
     "who": "A",
@@ -1702,7 +1752,7 @@
     "why": "« Si j'avais deviné que le grand-père était le coupable »."
    },
    {
-    "type": "slutsats",
+    "type": "tolkning",
     "q": "Vad föreslår A till nästa gång?",
     "opts": [
      "Att läsa en deckare",
@@ -1743,6 +1793,11 @@
    "déçue": {
     "t": "déçu, -e",
     "sv": "besviken",
+    "g": ""
+   },
+   "intime": {
+    "t": "le journal intime",
+    "sv": "dagbok",
     "g": ""
    }
   }
@@ -1791,6 +1846,16 @@
     "who": "B",
     "fr": "Parce que je dessine depuis toute petite ! Et le dessin permet de montrer des émotions sans mots. Par exemple, pour les souvenirs de l'Algérie, j'ai utilisé des couleurs chaudes, et pour l'arrivée en France, du gris et du bleu.",
     "sv": "För att jag har tecknat sedan jag var liten! Och teckningen gör det möjligt att visa känslor utan ord. Till exempel använde jag varma färger för minnena från Algeriet och grått och blått för ankomsten till Frankrike."
+   },
+   {
+    "who": "A",
+    "fr": "Combien de temps avez-vous travaillé sur ce livre ?",
+    "sv": "Hur länge arbetade ni med den här boken?"
+   },
+   {
+    "who": "B",
+    "fr": "Presque quatre ans. J'ai d'abord lu toutes les lettres, puis j'ai interviewé ma grand-tante, qui vit encore à Marseille. Ensuite, j'ai dessiné plus de deux cents pages.",
+    "sv": "Nästan fyra år. Först läste jag alla breven, sedan intervjuade jag min gammelmoster, som fortfarande bor i Marseille. Sedan tecknade jag över tvåhundra sidor."
    },
    {
     "who": "A",
@@ -1902,6 +1967,11 @@
     "t": "dessiner",
     "sv": "teckna",
     "g": ""
+   },
+   "grand-tante": {
+    "t": "la grand-tante",
+    "sv": "gammelmoster, gammelfaster",
+    "g": "f"
    }
   }
  },
@@ -2255,6 +2325,21 @@
     "who": "B",
     "fr": "Comme cette platine ! Profitez bien de vos disques.",
     "sv": "Som den här skivspelaren! Njut av era skivor."
+   },
+   {
+    "who": "A",
+    "fr": "Merci ! Au fait, cette guitare, là-bas, elle est à vendre aussi ?",
+    "sv": "Tack! Förresten, gitarren där borta, är den också till salu?"
+   },
+   {
+    "who": "B",
+    "fr": "Oui, quinze euros. Mais je vous préviens : il manque deux cordes.",
+    "sv": "Ja, femton euro. Men jag varnar er: det fattas två strängar."
+   },
+   {
+    "who": "A",
+    "fr": "Tant pis, je la prends. Mon frère sait changer les cordes, et des cordes neuves, ça ne coûte presque rien.",
+    "sv": "Det gör inget, jag tar den. Min bror kan byta strängar, och nya strängar kostar nästan ingenting."
    }
   ],
   "questions": [
@@ -2319,7 +2404,7 @@
     "why": "« Mes vêtements viennent de friperies »."
    },
    {
-    "type": "slutsats",
+    "type": "tolkning",
     "q": "Vad tycker kunden om att köpa begagnat?",
     "opts": [
      "Det är tråkigt",
@@ -2355,6 +2440,16 @@
    "chiner": {
     "t": "chiner",
     "sv": "fynda (på loppis)",
+    "g": ""
+   },
+   "cordes": {
+    "t": "la corde",
+    "sv": "sträng",
+    "g": "f"
+   },
+   "préviens": {
+    "t": "prévenir",
+    "sv": "varna, förvarna",
     "g": ""
    }
   }
@@ -2393,6 +2488,16 @@
     "who": "B",
     "fr": "Certains produits en vrac sont plus chers, mais on gaspille moins, parce qu'on achète juste la quantité dont on a besoin. Au final, on dépense à peu près la même chose.",
     "sv": "Vissa lösviktsvaror är dyrare, men vi slösar mindre, eftersom vi köper precis den mängd vi behöver. I slutändan gör vi av med ungefär lika mycket."
+   },
+   {
+    "who": "A",
+    "fr": "Et les enfants, ils ont joué le jeu ?",
+    "sv": "Och barnen, har de hängt med?"
+   },
+   {
+    "who": "B",
+    "fr": "Au début, ils râlaient, surtout pour les goûters : plus de biscuits en petits paquets ! Mais maintenant, ils font des gâteaux avec moi le dimanche, et ils en sont très fiers.",
+    "sv": "I början gnällde de, särskilt om mellanmålen: inga fler kex i småpaket! Men nu bakar de kakor med mig på söndagarna, och det är de väldigt stolta över."
    },
    {
     "who": "A",
@@ -2467,7 +2572,7 @@
     "why": "« Au final, on dépense à peu près la même chose »."
    },
    {
-    "type": "slutsats",
+    "type": "tolkning",
     "q": "Vad ska familjen göra efter utmaningen?",
     "opts": [
      "Sluta helt",
@@ -2514,6 +2619,16 @@
     "t": "la poubelle",
     "sv": "soptunna",
     "g": "f"
+   },
+   "râlaient": {
+    "t": "râler",
+    "sv": "gnälla, klaga",
+    "g": ""
+   },
+   "goûters": {
+    "t": "le goûter",
+    "sv": "mellanmål",
+    "g": "m"
    }
   }
  }

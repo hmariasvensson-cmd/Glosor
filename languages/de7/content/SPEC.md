@@ -15,7 +15,7 @@ Kapitel-id och teman:
 
 Enligt kursmallen (`docs/kursmall.md`, steg 7): hörtexter 300–600 ord (föreläsningsutdrag, radiodebatt, seminarium), lästexter 450–800 ord (vetenskaplig text, kommentar, avtalsutdrag, essä, text med grafik beskriven i ord), 8 frågor per text, skrivuppgifter 200–350 ord med källa och stilnivå (Erörterung, Zusammenfassung, grafikbeskrivning, formellt brev), 4–5 uppgifter med litteratur i olika genrer och retorik.
 
-Formatet och reglerna är desamma som för Tyska 5 och 6: se `languages/de/content/SPEC.md`, `languages/de/content/GRAMMATIK-SPEC.md` och exemplen i `languages/de6/content/*.json`. Fältet med tysk text heter `fr`. I `prompts.json` räknas bindeord mot listan i `languages/de/lang.js`, och `need.tenses` får bara innehålla `Präsens`, `Perfekt`, `Präteritum`, `Konjunktiv II` och `Passiv`.
+Formaten står i `docs/spec/` (allmänna regler i `docs/spec/allmant.md`, grammatiken i `docs/spec/grammatik.md`); det som gäller alla tyska kurser står i `languages/de/content/SPEC.md`, och exempel finns i `languages/de6/content/*.json`. Fältet med tysk text heter `fr`. I `prompts.json` räknas bindeord mot listan i `languages/de/lang.js`, och `need.tenses` får bara innehålla `Präsens`, `Perfekt`, `Präteritum`, `Konjunktiv II` och `Passiv`.
 
 Citat ur litteratur får bara komma från författare som dog före 1956 (fri text i Tyskland 70 år efter dödsåret), t.ex. Kafka (d. 1924), Rilke (d. 1926), Schnitzler (d. 1931), Zweig (d. 1942), Th. Mann (d. 1955), Heine (d. 1856), Büchner (d. 1837). Brecht (d. 1956) och senare är inte fria.
 

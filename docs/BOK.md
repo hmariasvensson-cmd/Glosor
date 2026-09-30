@@ -27,7 +27,7 @@ De franska kapitlen k1–k3 och aller låg i ordlistan innan det här upplägget
 1. Fota sidorna: glosorna, texten och gärna övningarna. Rakt ovanifrån och i bra ljus räcker.
 2. Dra in bilderna i Claude Code och skriv till exempel "Escalade kapitel 4, sidorna 52–61".
 3. Claude
-   - läser av glosorna och skriver dem till `book/kapNN/words.txt` under `#k4|Kap 4 · <titel>|bok`, med exempelmeningar och kommentarer i samma format som resten (se `languages/fr/content/SPEC.md`)
+   - läser av glosorna och skriver dem till `book/kapNN/words.txt` under `#k4|Kap 4 · <titel>|bok`, med exempelmeningar och kommentarer i samma format som resten (se `docs/spec/ordlista.md`)
    - sparar fotona i `book/kapNN/foton/`, för in sidorna i `book/sidor.json` och bokens egna texter och övningar i `book/kapNN/content/` enligt `book/SPEC-bok.md` och `book/README.md` (också privata): texterna som lästexter med glosor och frågor, bokens öppna frågor och skrivuppgifter som skrivuppgifter med Claudes kommentarer, och översättnings- och luckövningar under Grammatik → Bokens övningar
    - skriver *egna* övningar på kapitlets tema: luckmeningar, en hörtext, en lästext med frågor, en berättelse och en skrivuppgift, med kapitlets ord och grammatik. Egna övningar läggs i `content/` (publikt).
    - kör `build.py` och testerna och publicerar.

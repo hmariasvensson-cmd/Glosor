@@ -2,6 +2,22 @@
 
 Punkter som har flyttats från [`BACKLOG.md`](BACKLOG.md) när de byggdes. **Referens** anger backloggens rubrik och prioritet. **Commit** anger var ändringen finns i git. **Publicerat** anger versionen av artefakten på https://claude.ai/artifact/YBQv8j4qXQQLuPwLAWt5mP.
 
+## 2026-09-30, del 2 (publicerat som version 33)
+
+| Referens | Vad som byggdes | Commit |
+|---|---|---|
+| Övningar · P2 *Ny övning Tala* + Språkprov · P2 *Muntlig förberedelse* | `45-tala.js` (typ `talk`): 4/3/2 med timer (kortare på A1/A2), diktering via tangentbordet, ord per minut, Claudes nivåstyrda kommentar per runda, "Presentera dig själv och din musik" (kurser med `goal`), samtal med Claude på målspråket (6 repliker + kommentar), Skugga flyttad hit. `S.talk`, `S.fb["tt:…"/"tc:…"]`. | se git log |
+| Övningar · P2 *Slå ihop Skriv en text och provets skrivuppgifter* | En bedömning (`writePrompt`, `fbStamp`, `renderWriteFb`) för båda, kriterier och poäng 0–5; skrivsidan visar kapitlets och provets uppgifter med filter; kortet "Veckans skrivuppgift" efter 7 dagar utan text (`S.wrSkip`). | se git log |
+| Övningar · P2 *Ordning på nya ord* + *Bara skrivna svar gör "kan"* | Glosquizet flyttat till `05-words.js`; `pickNew` tar vanligaste först inom avsnittet (`freq` räknas av build.py ur kursens texter); avsnittet "Vanliga ord" (104 ord) i Franska 3; flerval räcker till steg 2 (`MC_MAX`), bara rätt skrivet svar ger "kan". | se git log |
+| Repetition · P3 *Självbedömning i fyra steg* + *Mina ord: grundform* | Val "Bedöm själv hur svårt det var" (av som standard): Igen/Svårt/Bra/Lätt efter rätt skrivet svar, Enter = Bra. `03-lemma.js`: sparade ord får grundformen (fährt → fahren) när den finns i ordlistan eller verbtabellerna; ett ord som finns i ordlistan vinner alltid. | se git log |
+| Repetition · P3 *Tidsbaserad repetition även i fraser, meningar och grammatik* + Arkitektur · P2 *Gemensamma hjälpfunktioner* | `srsBump`, `weakestFirst`, `srsDue` i 00-common.js; fraser, översätt, diktamen, ordföljd och grammatik repeteras efter 1, 3, 7, 20, 45, 90 dagar (förfallna → nya → resten); "N att repetera i dag" på knapparna. Nya fält `S.dc`, `S.od`. | se git log |
+| Språkprov · *två nivåer, skala, nya uppgiftstyper* | Franska 3: simulering per nivå (DELF B1 / A2), nivåmätaren räknar varje del mot sin nivå; provets egen skala (DELF /25, TestDaF TDN, annars %); nya typer `chart` (grafik som SVG + text), `timed` (förberedelse- och taltid), `pick` (bildval med emoji). Italienska 1 fick CELI Impatto. | se git log |
+| Arkitektur | Provet laddas vid behov (`<kod>-exam.json`, `ensureExam`), minifiering i bygget (`--no-minify`), index.html 470 → 364 kB; startsidan 3–5 gånger snabbare (en uträkning per rendering); `beginQuiz` börjar alltid rent; ett kapitelbegrepp (`chapterKey`, `chapters()`); `warnErr` i stället för tomma catch; namngivna konstanter; build.py läser lang.js med en tokenizer och kontrollerar innehållets fält per typ (`check_fields`); specfilerna samlade i `docs/spec/`. | se git log |
+| Innehåll | Täckning ≥ 95 % hör / ≥ 97 % läs i nästan alla kurser (tools/tackning.py förbättrat för oregelbundna former); Tyska 5 +429 ord (B2-ordförråd); texter förlängda i de1–de3, frs4, frs5 (+16 lästexter); 67 modelltexter klarar sin checklista i alla kurser (nytt test); ca 7 500 Tatoeba-meningar för tyska och fler för franska/italienska (`tools/tatoeba.py`); studieplaner för fr, frs4, frs5, fr4, de4, de6 (`tools/plan.py`), Tillbaka leder till planen; musikteori i Tyska 4 (179 termer, 59 uppgifter) och 58 nya i Tyska 5; språkmedveten kapitelordskontroll (`usesWord`). | se git log |
+| Granskning | Nya kurser (fr1, fr2, frs4, frs5, de1–de3, it3–it7, de7): ca 160 tvetydiga grammatikfrågor rättade, sakfel (Loreley, reklamförbud 2018, Québec, McDonald's i Rom, Deledda 1926/1927, Casals svit nr 2, Orfeo, Inferno 34 sånger), tyska våningar, citat kontrollerade. Franska musiktermer kontrollerade (6 rättelser). | se git log |
+
+Testerna har 1 941 kontroller.
+
 ## 2026-09-30 (publicerat som version 32)
 
 | Referens | Vad som byggdes | Commit |

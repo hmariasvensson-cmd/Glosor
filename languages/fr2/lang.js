@@ -25,7 +25,7 @@ LANGUAGES.fr2 = {
   storyIntro: "Läs berättelsen och välj rätt form i varje lucka: presens, futur proche, passé composé eller imperativ, och rätt bindeord.",
   cultureIntro: "Läs en kort text om Frankrike eller den fransktalande världen, svara på en fråga och jämför med hur det är i Sverige.",
 
-  // Grammatikövningar. Frågorna ligger i content/grammar-*.json (format i languages/fr/content/GRAMMATIK-SPEC.md).
+  // Grammatikövningar. Frågorna ligger i content/grammar-*.json (format i docs/spec/grammatik.md, områdena i grammar.json).
   // Områden (topics; secs = kapitel där området kommer först) och regelnamn ligger i grammar.json.
 
   // Samma verbtabeller som Franska 3, med spel för steg 2

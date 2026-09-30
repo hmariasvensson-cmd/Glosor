@@ -41,8 +41,16 @@ defineKind("cloze",{name:"Meningar",
 const dictItem=w=>({k:"dict",id:"dict:"+w.id,ref:w.id,w,t:"type",canType:true});
 // Meningar ur ordlistan eller från Tatoeba (sentById)
 const sentRestore=ref=>sentById(ref)?{w:sentById(ref)}:null, sentRecap=ref=>sentById(ref)?sentById(ref).exT:"";
+/* Diktamen, översätt och ordföljd har var sin poäng per mening, {s, last, dd} (srsBump i 00-common.js):
+   S.dc (diktamen), S.tr (översätt), S.od (ordföljd). Förfallna meningar först, sedan nya, sedan resten svagast först. */
+// Antal ord per mening, sparat per text: startsidan räknar poolerna (och det som förfaller) vid varje ritning
+const memoText=f=>{const m=new Map(); return s=>{ let v=m.get(s); if(v===undefined){ v=f(s); m.set(s,v); } return v; };};
+const tokCount=memoText(s=>tok(s||"").length), orderCount=memoText(s=>orderTokens(s||"").words.length);
+const dictPool=()=>perRender("dictPool",()=>sentencePool().filter(w=>tokCount(w.exT)>=3));
+const transPool=dictPool, orderPool=()=>perRender("orderPool",()=>sentencePool().filter(orderable));
+const sentDue=(field,pool)=>srsDueCount(S[field],pool.map(w=>w.id));
 function startDict(){
-  const p=shuffle(sentencePool()).filter(w=>tok(w.exT).length>=3).slice(0,8);
+  const p=shuffle(weakestFirst(dictPool(),"dc",{due:true}).slice(0,8));
   $("#tabs").hidden=true; sess=null; beginQuiz("dict",p.map(dictItem),{againFn:["dict"],label:"Diktamen"});
 }
 const dictType=c=>{const w=c.w;return{tab:"Diktamen",
@@ -65,14 +73,13 @@ const dictMC=c=>{const w=c.w, others=otherSentences(w,3);
     opts:shuffle([w,...others].map(x=>({label:x.exT,ok:x===w,lang:true}))),
     explain:`<p class="ex-sv">${esc(w.exSv)}</p>`,wrongCard:studyCard(w),say:w.exT,sayOnShow:true,wire:()=>wirePlay(r=>speak(w.exT,r))}};
 defineKind("dict",{name:"Diktamen",mc:dictMC,type:dictType,restore:sentRestore,recap:sentRecap,
-  effect:(ref,ok)=>{const x=S.w[ref]; if(x){x.dcR=(x.dcR||0)+(ok?1:0); x.dcW=(x.dcW||0)+(ok?0:1);}},
+  effect:(ref,ok)=>{const x=S.w[ref]; if(x){x.dcR=(x.dcR||0)+(ok?1:0); x.dcW=(x.dcW||0)+(ok?0:1);}
+    S.dc=S.dc||{}; S.dc[ref]=srsBump(S.dc[ref],ok);},
   open:startDict, again:startDict});
 
 /* ---------- Översätt hela meningar ---------- */
 function startTrans(){
-  S.tr=S.tr||{};
-  const p=sentencePool().filter(w=>tok(w.exT).length>=3).map(w=>({w,s:(S.tr[w.id]||{}).s||0,l:(S.tr[w.id]||{}).last||0,r:Math.random()}))
-    .sort((a,b)=>a.s-b.s||a.l-b.l||a.r-b.r).slice(0,6).map(x=>({k:"trans",id:"trans:"+x.w.id,ref:x.w.id,w:x.w,t:"type",canType:true}));
+  const p=weakestFirst(transPool(),"tr",{due:true}).slice(0,6).map(w=>({k:"trans",id:"trans:"+w.id,ref:w.id,w,t:"type",canType:true}));
   $("#tabs").hidden=true; sess=null; beginQuiz("trans",p,{againFn:["trans"],label:"Översätt meningar"});
 }
 const transType=c=>{const w=c.w;return{tab:"Översätt",
@@ -83,16 +90,16 @@ const transMC=c=>{const w=c.w, others=otherSentences(w,3);
   return{tab:"Översätt",head:`<p class="q-prompt" style="font-size:1.35rem">${esc(w.exSv)}</p>`,ask:"Vilken är rätt översättning?",
     opts:shuffle([w,...others].map(x=>({label:x.exT,ok:x===w,lang:true}))),explain:"",wrongCard:studyCard(w),say:w.exT,sayOnAnswer:true}};
 defineKind("trans",{name:"Översätt meningar",mc:transMC,type:transType,restore:sentRestore,recap:sentRecap,
-  effect:(ref,ok)=>{S.tr=S.tr||{}; const x=S.tr[ref]||{s:0}; S.tr[ref]={s:ok?x.s+1:0,last:Date.now()};},
+  effect:(ref,ok)=>{S.tr=S.tr||{}; S.tr[ref]=srsBump(S.tr[ref],ok);},
   open:startTrans, again:startTrans});
 
 /* ---------- Ordföljd med brickor ---------- */
 const orderTokens=s=>{const t=s.replace(/[«»"“”]/g,"").replace(/\s+/g," ").trim(), m=t.match(/^(.*?)\s*([.!?…]+)?$/);
   return {words:m[1].split(" ").filter(Boolean),end:m[2]||""};};
 const orderItem=w=>({k:"order",id:"order:"+w.id,ref:w.id,w,t:"type",canType:true});
-const orderable=w=>{const n=orderTokens(w.exT).words.length; return n>=4&&n<=12;};
+const orderable=w=>{const n=orderCount(w.exT); return n>=4&&n<=12;};
 function startOrder(){
-  const p=shuffle(sentencePool()).filter(orderable).slice(0,8);
+  const p=shuffle(weakestFirst(orderPool(),"od",{due:true}).slice(0,8));
   $("#tabs").hidden=true; sess=null; beginQuiz("order",p.map(orderItem),{againFn:["order"],label:"Ordföljd"});
 }
 const orderType=c=>{const w=c.w;return{tab:"Ordföljd",render:renderTiles,o:orderTokens(w.exT),w,answer:w.exT,
@@ -131,4 +138,5 @@ const orderMC=c=>{const w=c.w, o=orderTokens(w.exT), right=o.words.join(" "), al
   return{tab:"Ordföljd",head:`<p class="q-prompt" style="font-size:1.25rem">${esc(w.exSv)}</p>`,ask:"Vilken mening har rätt ordföljd?",
     opts:shuffle([right,...alts].map(s=>({label:s+o.end,ok:s===right,lang:true}))),explain:"",wrongCard:studyCard(w),say:w.exT,sayOnAnswer:true}};
 defineKind("order",{name:"Ordföljd",mc:orderMC,type:orderType,restore:sentRestore,recap:sentRecap,
+  effect:(ref,ok)=>{S.od=S.od||{}; S.od[ref]=srsBump(S.od[ref],ok);},
   open:startOrder, again:startOrder});

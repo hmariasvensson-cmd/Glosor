@@ -8,9 +8,16 @@
 
 Kända ord i en kurs = orden i kursens words.txt (och book/words.txt) + alla tidigare kurser i kedjan
 (nextCourse följs baklänges) + grammatikord (artiklar, pronomen, prepositioner, konjunktioner, hjälpverb)
-+ bindeorden i lang.js + textens egna glosor (gloss) + namn, siffror och internationella ord.
++ bindeorden i lang.js (med arv: extends/inherit och {$append}) + textens egna glosor (gloss; bara i hör-, läs- och
+kulturtexter, där appen visar dem, inte i berättelser och prov) + namn, siffror och internationella ord.
 Böjningar hanteras med en enkel lemmatisering per språk (ändelser, ge-particip, omljud, elision,
-oregelbundna former ur verbtabellerna i lang.js) och tyska sammansättningar av två kända ord räknas som kända.
+oregelbundna former ur verbtabellerna i lang.js, languages/<kod>/verbs.json och datafilens verbTables) och tyska
+sammansättningar av två kända ord räknas som kända. Oregelbundna former: tyska starka verb baklänges via avljud
+(getrunken, geschienen, verloren, gilt, rief, sprich), superlativ (schönste) och en lista (beste, mehr, nimm);
+franska oregelbundna stammar (appris, promis, savais, voyait, suffit, connaissais, pourrait); italienska passato
+remoto (parlò, prese, scrisse, fu), enklitiska pronomen (vederti, fermarmi, dimmi), -issimo, oregelbundet futurum
+(vorrei, verrò), stamväxling (riesco, tiene) och oregelbunden plural (uomini, uova). Ett italienskt ord i words.txt som
+qualcosa/qualcuno räknas som känt även när det står i en fras.
 Namn = ord med stor bokstav mitt i meningen (på tyska: ord med stor bokstav som också står i den svenska
 översättningen) och förkortningar. Internationella ord = ord som finns nästan likadant i den svenska översättningen.
 
@@ -23,7 +30,7 @@ import collections, json, pathlib, re, sys, unicodedata
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 LANG_DIR = ROOT / "languages"
 OUT = ROOT / "docs" / "tackning.md"
-DATE = "2026-09-29"
+DATE = "2026-09-30"
 LIMIT = {"hör": 0.95, "läs": 0.98}
 LISTEN_PARTS = {"co", "hoeren", "ascolto"}
 READ_PARTS = {"ce", "lesen", "lettura"}
@@ -84,6 +91,57 @@ EXTRA_FORMS = {
            "messo": "mettere", "scritto": "scrivere", "letto": "leggere", "nato": "nascere", "nata": "nascere",
            "morto": "morire", "venuto": "venire", "rimasto": "rimanere", "vissuto": "vivere", "aperto": "aprire"},
 }
+EXTRA_FORMS["de"].update({"beste": "gut", "besten": "gut", "bester": "gut", "bestes": "gut", "besser": "gut", "bessere": "gut",
+    "besseren": "gut", "meisten": "viel", "meiste": "viel", "mehr": "viel", "lieber": "gern", "liebsten": "gern",
+    "höher": "hoch", "höchste": "hoch", "höchsten": "hoch", "nächste": "nah", "nächsten": "nah", "näher": "nah",
+    "nimm": "nehmen", "gib": "geben", "iss": "essen", "lies": "lesen", "sieh": "sehen", "hilf": "helfen", "sprich": "sprechen",
+    "wirf": "werfen", "vergiss": "vergessen", "tritt": "treten", "ging": "gehen", "gingen": "gehen", "stand": "stehen",
+    "standen": "stehen", "tat": "tun", "taten": "tun", "brachte": "bringen", "brachten": "bringen", "wusste": "wissen",
+    "wussten": "wissen", "gewusst": "wissen", "kannte": "kennen", "gekannt": "kennen", "nannte": "nennen", "genannt": "nennen",
+    "rannte": "rennen", "gerannt": "rennen", "dachte": "denken", "dachten": "denken", "gesessen": "sitzen", "saßen": "sitzen",
+    "hingen": "hängen", "hing": "hängen", "gezogen": "ziehen", "zog": "ziehen", "zogen": "ziehen", "erschrak": "erschrecken"})
+EXTRA_FORMS["fr"].update({"meilleur": "bon", "meilleure": "bon", "meilleurs": "bon", "meilleures": "bon", "mieux": "bien",
+    "pire": "mauvais", "moindre": "petit", "sois": "être", "soyez": "être", "soyons": "être", "aie": "avoir", "ayez": "avoir",
+    "sache": "savoir", "sachez": "savoir", "veuillez": "vouloir", "va": "aller", "vas": "aller", "allons": "aller",
+    "fut": "être", "furent": "être", "eut": "avoir", "eurent": "avoir", "fit": "faire", "firent": "faire", "vint": "venir",
+    "vinrent": "venir", "dut": "devoir", "put": "pouvoir", "sut": "savoir", "vit": "voir", "virent": "voir", "prit": "prendre",
+    "mit": "mettre", "naquit": "naître", "mourut": "mourir", "vécut": "vivre", "connut": "connaître", "voulut": "vouloir"})
+EXTRA_FORMS["it"].update({
+    # passato remoto (oregelbundet)
+    "fu": "essere", "furono": "essere", "fui": "essere", "fosti": "essere", "ebbe": "avere", "ebbero": "avere", "ebbi": "avere",
+    "fece": "fare", "fecero": "fare", "feci": "fare", "disse": "dire", "dissero": "dire", "dissi": "dire", "vide": "vedere",
+    "videro": "vedere", "vidi": "vedere", "venne": "venire", "vennero": "venire", "venni": "venire", "nacque": "nascere",
+    "nacquero": "nascere", "nacqui": "nascere", "diede": "dare", "diedero": "dare", "dette": "dare", "detti": "dare",
+    "stette": "stare", "stettero": "stare", "volle": "volere", "vollero": "volere", "seppe": "sapere", "seppero": "sapere",
+    "conobbe": "conoscere", "conobbero": "conoscere", "conobbi": "conoscere", "piacque": "piacere", "piacquero": "piacere",
+    "tenne": "tenere", "tennero": "tenere", "ruppe": "rompere", "cadde": "cadere", "caddero": "cadere", "morì": "morire",
+    "morirono": "morire", "bevve": "bere", "apparve": "apparire", "divenne": "divenire", "rimase": "rimanere",
+    "rimasero": "rimanere", "mise": "mettere", "misero": "mettere", "misi": "mettere", "trasse": "trarre", "condusse": "condurre",
+    "produsse": "produrre", "tradusse": "tradurre", "introdusse": "introdurre", "scelse": "scegliere", "scelsero": "scegliere",
+    "tolse": "togliere", "raccolse": "raccogliere", "accolse": "accogliere", "mosse": "muovere", "nacque": "nascere",
+    "crebbe": "crescere", "crebbero": "crescere", "cresciuto": "crescere", "cresciuta": "crescere", "piovve": "piovere",
+    "visse": "vivere", "vissero": "vivere", "vinse": "vincere", "vinsero": "vincere", "pianse": "piangere", "spense": "spegnere",
+    "giunse": "giungere", "giunsero": "giungere", "raggiunse": "raggiungere", "dipinse": "dipingere", "spinse": "spingere",
+    # oregelbundna particip och former
+    "bevuto": "bere", "beve": "bere", "bevo": "bere", "bevono": "bere", "chiesto": "chiedere", "risposto": "rispondere",
+    "deciso": "decidere", "successo": "succedere", "scelto": "scegliere", "tolto": "togliere", "corso": "correre",
+    "perso": "perdere", "offerto": "offrire", "sofferto": "soffrire", "coperto": "coprire", "scoperto": "scoprire",
+    "vinto": "vincere", "spento": "spegnere", "acceso": "accendere", "chiuso": "chiudere", "sceso": "scendere",
+    "speso": "spendere", "reso": "rendere", "rotto": "rompere", "tradotto": "tradurre", "prodotto": "produrre",
+    "condotto": "condurre", "dipinto": "dipingere", "giunto": "giungere", "raggiunto": "raggiungere", "mosso": "muovere",
+    "nascosto": "nascondere", "posto": "porre", "proposto": "proporre", "composto": "comporre", "esposto": "esporre",
+    "discusso": "discutere", "espresso": "esprimere", "compreso": "comprendere", "sorpreso": "sorprendere", "diviso": "dividere",
+    "ucciso": "uccidere", "vale": "valere", "valgono": "valere", "valso": "valere", "parso": "parere", "pare": "parere",
+    "dimmi": "dire", "dammi": "dare", "fammi": "fare", "dillo": "dire", "fallo": "fare", "vattene": "andare", "stammi": "stare",
+    "dai": "dare", "dà": "dare", "danno": "dare", "stai": "stare", "sta": "stare", "stanno": "stare",
+    # oregelbunden plural och komparation
+    "uomini": "uomo", "uova": "uovo", "dita": "dito", "mani": "mano", "braccia": "braccio", "ginocchia": "ginocchio",
+    "labbra": "labbro", "ossa": "osso", "paia": "paio", "mura": "muro", "lenzuola": "lenzuolo", "centinaia": "centinaio",
+    "migliaia": "migliaio", "dei": "dio", "buoi": "bue", "ali": "ala", "armi": "arma", "templi": "tempio",
+    "migliore": "buono", "migliori": "buono", "ottimo": "buono", "ottima": "buono", "ottimi": "buono", "meglio": "bene",
+    "peggiore": "cattivo", "peggio": "male", "maggiore": "grande", "maggiori": "grande", "massimo": "grande",
+    "minore": "piccolo", "minori": "piccolo", "minimo": "piccolo", "pessimo": "cattivo"})
+
 FUNCTION["de"] += " können kann kannst könnt konnte konnten könnte könnten müssen muss musst müsst musste mussten müsste wollen will willst wollt wollte wollten dürfen darf darfst dürft durfte durften dürfte sollen soll sollst sollt sollte sollten mögen mag magst möchte möchtest möchten mochte"
 FUNCTION["de"] += " ab pro per oh okay ok hi ah äh hm na tja"   # prepositioner och interjektioner
 FUNCTION["fr"] += " ci là-bas oh ah allô ok bah euh hein"
@@ -103,10 +161,11 @@ SUFFIXES = {
         erai eras era erons erez eront erais erait erions eraient rai ras ra rons rez ront rais rait rions riez raient
         issons issez issent issais issait issaient isse issant ant ante ants antes ment ement eux euse euses ive ives if ifs
         ienne iennes ien iens elle elles aux ale ales al âmes âtes èrent a as ât""".split(), key=len, reverse=True),
-    "de": sorted("""e en em er es n s st t et est te ten tet test ter ern ens nen sten""".split(), key=len, reverse=True),
+    "de": sorted("""e en em er es n s st t et est te ten tet test ter ern ens nen sten ste ster stes stem este esten ester estem""".split(), key=len, reverse=True),
     "it": sorted("""o a i e are ere ire ato ata ati ate uto uta uti ute ito ita iti ite iamo ano ono ava avo avano
         avamo evo eva evano ivo iva ivano erò erà eremo eranno erei erebbe erebbero irò irà isco isce iscono isci ando endo
-        ante anti ente enti mente rsi rlo rla rli rle rne si lo la li le ne ci""".split(), key=len, reverse=True),
+        ante anti ente enti mente rsi rlo rla rli rle rne si lo la li le ne ci ò ì ai asti ammo aste arono ei é
+        ete ii etti ette erono ettero isti immo iste irono issimo issima issimi issime errò errà errebbe errebbero""".split(), key=len, reverse=True),
 }
 DE_PREFIXES = sorted("""ab an auf aus bei durch ein fest fort her hin los mit nach vor weg weiter zu zurück zusammen über um
     unter wieder""".split(), key=len, reverse=True)
@@ -189,7 +248,7 @@ def variants(entry):
             base.append(alt.strip())
     for b in base:
         toks = [t.lower() for t in WORD_RE.findall(b)]
-        toks = [t for t in toks if t not in {"sich", "qn", "qc", "qch", "etw", "jdn", "jdm", "jds", "qualcuno", "qualcosa", "qlc", "qlcu"}]
+        toks = [t for t in toks if t not in {"sich", "qn", "qc", "qch", "etw", "jdn", "jdm", "jds", "qlc", "qlcu", "qc.", "qd"}]
         if not toks:
             continue
         out.add(" ".join(toks))
@@ -213,37 +272,261 @@ def load_words(code):
     return words
 
 
+def _add_forms(forms, lang, verb, strings):
+    for s in strings:
+        if not isinstance(s, str):
+            continue
+        toks = re.split(r"\s+", s.strip())
+        for tok in re.split(r"/", toks[-1]) + (toks[:-1] if len(toks) > 1 and not (lang == "de") else []):
+            for t in {re.sub(r"\([^)]*\)", "", tok), tok.replace("(", "").replace(")", "")}:
+                t = t.strip("'’!?.,").lower()
+                if "'" in t:                             # j'ai, l'ho, m'hai: bara delen efter apostrofen
+                    t = t.split("'")[-1]
+                if t and t not in FUNCTION_SETS[lang] and t not in AUX[lang]:
+                    forms.setdefault(t, verb.lower())
+        if lang == "de" and len(toks) > 1:              # 'rufe an', 'bin gefahren': även sista ordet före partikeln
+            t = toks[-2].strip("'’!?.,").lower()
+            if toks[-1].lower() in DE_PARTICLES and t not in AUX[lang]:
+                forms.setdefault(t, verb.lower())
+
+
+DE_PARTICLES = {"ab", "an", "auf", "aus", "bei", "ein", "fest", "fort", "her", "hin", "los", "mit", "nach", "vor", "weg",
+                "weiter", "zu", "zurück", "zusammen", "um", "wieder", "kennen", "statt", "teil"}
+
+
+def verb_tables(code):
+    """Verbtabellerna för en kurs: languages/<kod>/verbs.json och datafilens verbTables (dist/data/<kod>.json)."""
+    out = []
+    f = LANG_DIR / code / "verbs.json"
+    if f.exists():
+        out.append(json.loads(f.read_text(encoding="utf-8")))
+    d = ROOT / "dist" / "data" / f"{code}.json"
+    if d.exists():
+        try:
+            vt = json.loads(d.read_text(encoding="utf-8")).get("verbTables")
+            if isinstance(vt, dict):
+                out.append(vt)
+        except (ValueError, OSError):
+            pass
+    return out
+
+
 def load_verb_forms(lang, codes):
-    """Former ur verbtabellerna i lang.js (alla kurser i språket): form -> infinitiv."""
+    """Former ur verbtabellerna (lang.js, verbs.json och datafilens verbTables, alla kurser i språket): form -> infinitiv."""
     forms = dict(EXTRA_FORMS.get(lang, {}))
     for c in codes:
         if lang_of(c) != lang:
             continue
         for verb, body in re.findall(r"([^\W\d_]+):\s*\[((?:\s*\"[^\"]*\"\s*,?)+)\]", read_conf(c)):
-            for s in re.findall(r'"([^"]*)"', body):
-                toks = re.split(r"\s+", s.strip())
-                for tok in re.split(r"/", toks[-1]) + (toks[:-1] if len(toks) > 1 and not (lang == "de") else []):
-                    for t in {re.sub(r"\([^)]*\)", "", tok), tok.replace("(", "").replace(")", "")}:
-                        t = t.strip("'’").lower()
-                        if t and t not in FUNCTION_SETS[lang] and t not in AUX[lang]:
-                            forms.setdefault(t, verb.lower())
+            _add_forms(forms, lang, verb, re.findall(r'"([^"]*)"', body))
+        for vt in verb_tables(c):
+            for tense in (vt.get("tenses") or {}).values():
+                if not isinstance(tense, dict):
+                    continue
+                for verb, fl in tense.items():
+                    if isinstance(fl, list) and re.fullmatch(r"[^\W\d_]+(?:[ -][^\W\d_]+)*", verb):
+                        _add_forms(forms, lang, verb.split()[-1] if lang != "de" else verb.split()[0], fl)
     return forms
 
 
-def load_connectors(code):
-    m = re.search(r"^\s*connectors:\s*\[(.*?)\]", read_conf(code), re.M | re.S)
+def _conf_list(conf, field):
+    """Listan i fältet (även {$append: [...]}) och om den ska läggas till förälderns (True) eller ersätta den."""
+    m = re.search(r"^\s*" + field + r":\s*(\{\s*\$append:\s*)?\[(.*?)\]", conf, re.M | re.S)
+    if not m:
+        return None, False
+    return re.findall(r'"([^"]*)"', m.group(2)), bool(m.group(1))
+
+
+def load_verbs(code):
+    """Verb i words.txt: ett ord med liten bokstav som slutar på -en/-n (tyska), -er/-ir/-re (franska), -are/-ere/-ire (italienska)."""
+    ends = {"de": ("en", "ern", "eln"), "fr": ("er", "ir", "re", "oir"), "it": ("are", "ere", "ire", "rre", "arsi", "ersi", "irsi")}[lang_of(code)]
     out = set()
-    if m:
-        for s in re.findall(r'"([^"]*)"', m.group(1)):
-            out |= variants(s)
+    for f in word_files(code):
+        for line in f.read_text(encoding="utf-8").splitlines():
+            e = line.split("|")[0].strip()
+            e = re.sub(r"^(sich|se|s'|si)\s+", "", re.sub(r"\([^)]*\)", "", e)).strip()
+            if re.fullmatch(r"[a-zäöüßàâçéèêëîïôûùœ]+", e) and e.endswith(ends):
+                out.add(e)
+    return out
+
+
+def load_connectors(code, seen=None):
+    """Bindeorden i lang.js, med arv: extends + inherit: ["connectors"] och {$append: [...]}."""
+    seen = seen or set()
+    seen.add(code)
+    conf = read_conf(code)
+    own, append = _conf_list(conf, "connectors")
+    out = set()
+    ext = re.search(r'^\s*extends:\s*"([^"]+)"', conf, re.M)
+    inh = re.search(r"^\s*inherit:\s*\[([^\]]*)\]", conf, re.M)
+    if ext and inh and '"connectors"' in inh.group(1) and (own is None or append) and ext.group(1) not in seen \
+            and (LANG_DIR / ext.group(1) / "lang.js").exists():
+        out |= load_connectors(ext.group(1), seen)
+    for s in own or []:
+        out |= variants(s)
+    return out
+
+
+
+# ---------- oregelbundna former: kandidater utöver ändelserna ----------
+
+VOW = "aeiouäöü"
+# Omvänd avljudsserie: vokalen i particip/preteritum/presens -> vokalen i infinitiven
+DE_ABLAUT = {"u": ["i", "a", "ei"], "o": ["e", "ie", "ü", "i", "ö"], "ie": ["ei", "a", "u", "au", "e"], "i": ["e", "ei", "a", "ie"],
+             "a": ["e", "i", "ie", "o"], "ä": ["a"], "ü": ["u"], "e": ["e"], "a_": ["a"], "ei": ["ei"], "au": ["au"]}
+DE_INSEP = ("be", "ver", "ent", "er", "zer", "emp", "miss")
+
+
+def de_strong(w):
+    """Tyska starka former: getrunken -> trinken, geschienen -> scheinen, sprich -> sprechen, verloren -> verlieren,
+    gilt -> gelten, begann -> beginnen, bekam -> bekommen, rief -> rufen. Ger (prefix, infinitiv-kandidat).
+    Bara particip (ge-…-en), former med oskiljbart prefix och enstaviga former (preteritum, imperativ, presens du/er)."""
+    bases = {("", w)}
+    for p in DE_PREFIXES + list(DE_INSEP):
+        if w.startswith(p) and len(w) - len(p) >= 3:
+            bases.add((p, w[len(p):]))
+    out = set()
+    for p, x in bases:
+        part = x.startswith("ge") and x.endswith("en") and len(x) > 5
+        if part:
+            x = x[2:]
+        elif p == "" and len(re.findall("[" + VOW + "]+", re.sub("(en|e|st|t)$", "", x))) != 1:
+            continue                                   # utan prefix: bara enstaviga stammar (rief, gilt, trug, sprich)
+        stems = {x}
+        if part or p:
+            for suf in ("en", "n", "e", "t", "st", "est", "et", "te", "ten"):
+                if x.endswith(suf) and len(x) - len(suf) >= 2:
+                    stems.add(x[: -len(suf)])
+        else:                                          # enstavig form: vilka vokaler som passar med ändelsen
+            for suf in ("en", "t", "st", "est"):
+                if x.endswith(suf) and len(x) - len(suf) >= 2:
+                    stems.add((x[: -len(suf)], suf))
+            stems = {(y, "") if isinstance(y, str) else y for y in stems}
+        for st in stems:
+            if isinstance(st, tuple):
+                st, suf = st
+                m = re.search(r"([" + VOW + r"]+)[^" + VOW + r"]*$", st)
+                if not m or (suf == "en" and m.group(1) not in ("a", "ie", "o", "u", "i")) or \
+                        (suf in ("t", "st", "est") and m.group(1) not in ("i", "ie", "ä")):
+                    continue
+            m = re.search(r"([" + VOW + r"]+)([^" + VOW + r"]*)$", st)
+            if not m or len(re.findall("[" + VOW + "]+", st)) != 1 and not p:
+                continue
+            head, v, cons = st[: m.start()], m.group(1), m.group(2)
+            for nv in DE_ABLAUT.get(v, []) + ([v] if part or p else []):
+                conss = {cons, cons.replace("ß", "ss"), cons.replace("ss", "ß")}
+                if nv in ("ei", "ie") and len(cons) == 2 and cons[0] == cons[1]:
+                    conss.add(cons[0])                 # geritten -> reiten, gegriffen -> greifen
+                if nv in ("ei", "ie") and cons.endswith("tt"):
+                    conss.add(cons[:-2] + "d")         # geschnitten -> schneiden
+                if nv in ("e", "o") and len(cons) == 1:
+                    conss.add(cons + cons)             # kam -> kommen
+                if cons.startswith("h") and nv == "e":
+                    conss.add(cons[1:])                # nahm -> nehmen
+                if v == "ie" and cons.endswith("h") and nv == "e":
+                    conss.add(cons)                    # sieht -> sehen, empfiehlt -> empfehlen
+                for c2 in conss:
+                    base = head + nv + c2
+                    out |= {(p, base + "en"), (p, base + "n")}
+    return out
+
+
+FR_STEMS = [("pris", "prendre"), ("prise", "prendre"), ("pren", "prendre"), ("prenn", "prendre"), ("prend", "prendre"),
+            ("mis", "mettre"), ("mise", "mettre"), ("met", "mettre"), ("mett", "mettre"), ("venu", "venir"), ("vien", "venir"),
+            ("vienn", "venir"), ("ven", "venir"), ("vînt", "venir"), ("tenu", "tenir"), ("tien", "tenir"), ("tienn", "tenir"),
+            ("ten", "tenir"), ("naiss", "naître"), ("nu", "naître"), ("naît", "naître"), ("nai", "naître"), ("duis", "duire"),
+            ("duit", "duire"), ("crit", "crire"), ("criv", "crire"), ("cri", "crire"), ("voy", "voir"), ("vu", "voir"),
+            ("voi", "voir"), ("sav", "savoir"), ("sach", "savoir"), ("sai", "savoir"), ("pouv", "pouvoir"), ("peuv", "pouvoir"),
+            ("peu", "pouvoir"), ("voul", "vouloir"), ("veul", "vouloir"), ("veu", "vouloir"), ("dev", "devoir"),
+            ("doiv", "devoir"), ("doi", "devoir"), ("fais", "faire"), ("fai", "faire"), ("ouvert", "ouvrir"), ("ouvr", "ouvrir"),
+            ("offert", "offrir"), ("offr", "offrir"), ("couvert", "couvrir"), ("çu", "cevoir"), ("çoi", "cevoir"),
+            ("çoiv", "cevoir"), ("cev", "cevoir"), ("suff", "suffire"), ("suffi", "suffire"), ("dis", "dire"), ("di", "dire"),
+            ("lis", "lire"), ("lu", "lire"), ("li", "lire"), ("dor", "dormir"), ("dorm", "dormir"), ("sor", "sortir"),
+            ("sort", "sortir"), ("par", "partir"), ("sen", "sentir"), ("sent", "sentir"), ("ser", "servir"), ("serv", "servir"),
+            ("vécu", "vivre"), ("viv", "vivre"), ("vi", "vivre"), ("bu", "boire"), ("buv", "boire"), ("boiv", "boire"),
+            ("boi", "boire"), ("cru", "croire"), ("croy", "croire"), ("croi", "croire"), ("plu", "plaire"), ("plais", "plaire"),
+            ("plai", "plaire"), ("peign", "peindre"), ("pein", "peindre"), ("joign", "joindre"), ("join", "joindre"),
+            ("craign", "craindre"), ("crain", "craindre"), ("connaiss", "connaître"), ("connu", "connaître"),
+            ("paraiss", "paraître"), ("paru", "paraître"), ("parai", "paraître"), ("mour", "mourir"), ("meur", "mourir"),
+            ("meurt", "mourir"), ("cour", "courir"), ("couru", "courir"), ("court", "courir"), ("vain", "vaincre"),
+            ("vainqu", "vaincre"), ("suiv", "suivre"), ("sui", "suivre"), ("suivi", "suivre"), ("résol", "résoudre"),
+            ("résolu", "résoudre"), ("fall", "falloir"), ("vaill", "valoir"), ("val", "valoir"), ("vau", "valoir"),
+            ("assi", "asseoir"), ("assis", "asseoir"), ("appel", "appeler"), ("appell", "appeler"), ("jett", "jeter"),
+            ("envoi", "envoyer"), ("enverr", "envoyer"), ("ser", "être"), ("aur", "avoir"), ("ir", "aller"), ("fer", "faire"),
+            ("pourr", "pouvoir"), ("voudr", "vouloir"), ("devr", "devoir"), ("saur", "savoir"), ("viendr", "venir"),
+            ("tiendr", "tenir"), ("verr", "voir"), ("faudr", "falloir"), ("vaudr", "valoir"), ("courr", "courir"),
+            ("mourr", "mourir"), ("recevr", "recevoir")]
+FR_ENDS = sorted("""s t e es ent ons ez ais ait aient ions iez ai as a ont it is ît îmes îtes irent ant ue ues us ie ies ra ras rai
+    ront rez rons rais rait raient rions riez""".split(), key=len, reverse=True)
+
+
+def fr_irregular(w):
+    """Franska oregelbundna former: appris -> apprendre, savais -> savoir, voyait -> voir, suffit -> suffire,
+    promis -> promettre, connaissais -> connaître, dort -> dormir, pourrait -> pouvoir."""
+    rests = {w} | {w[: -len(e)] for e in FR_ENDS if w.endswith(e) and len(w) > len(e)}
+    out = set()
+    for r in rests:
+        for st, inf in FR_STEMS:
+            if r.endswith(st) and (len(st) >= 4 or len(r) - len(st) <= 4):
+                out.add(r[: -len(st)] + inf)
+                if st in ("ser", "aur", "ir", "fer") and r != st:
+                    out.discard(r[: -len(st)] + inf)
+    return out
+
+
+IT_CLITICS = sorted("""mi ti ci vi si lo la li le ne gli glielo gliela glieli gliele gliene melo mela meli mele mene telo tela
+    teli tele tene celo cela celi cele cene selo sela seli sele sene velo vela veli vele vene""".split(), key=len, reverse=True)
+IT_REMOTO_CONS = {"ss": ["v", "gg", "c", "tt", "", "d"], "s": ["d", "nd", "n", "tt", "r", "c", "g", "gn", "gli", "nder"],
+                  "ls": ["gli", "lg"], "ns": ["nc", "ng", "gn", "nd"], "bb": ["", "sc", "v"], "pp": ["p", "mp"],
+                  "nn": ["n"], "ll": ["l"], "cqu": ["sc", "c"], "qu": ["c"], "rs": ["r", "rd"]}
+IT_STEM_ALT = [("iesc", "iusc"), ("esc", "usc"), ("tien", "ten"), ("teng", "ten"), ("vien", "ven"), ("veng", "ven"),
+               ("sied", "sed"), ("muoi", "mor"), ("muor", "mor"), ("vuol", "vol"), ("rimang", "riman"), ("pong", "pon"),
+               ("salg", "sal"), ("scelg", "scegl"), ("tolg", "togl"), ("valg", "val"), ("appai", "appar")]
+IT_FUT = sorted("ò ai à emo ete anno ei esti ebbe emmo este ebbero".split(), key=len, reverse=True)
+
+
+def it_irregular(w):
+    """Italienska: enklitiska pronomen (vederti, fermarmi, dicendolo, guardalo), oregelbundet futurum och
+    condizionale (vorrei, potrà, verrò, rimarrebbe) och starkt passato remoto (prese, scrisse, decise, lesse)."""
+    out = set()
+    for cl in IT_CLITICS:                       # vederti -> vedere, fermarmi -> fermare, dirgli -> dire
+        if w.endswith(cl) and len(w) - len(cl) >= 3:
+            r = w[: -len(cl)]
+            if r.endswith("r"):
+                out |= {r + "e", r + "re"}
+            elif r.endswith(("ando", "endo")):
+                out |= {r[:-4] + "are", r[:-4] + "ere", r[:-4] + "ire", r[:-4] + "re"}
+            else:
+                out |= {r, r + "re", r[:-1] + "are", r[:-1] + "ere", r[:-1] + "ire"}
+                if len(r) >= 2 and r[-1] == r[-2]:     # dimmi, fallo
+                    out.add(r[:-1] + "re")
+            for c2 in list(out):
+                if c2.endswith("rre"):
+                    pass
+    for e in IT_FUT:                            # vorrei -> volere, potrà -> potere, verrò -> venire
+        if w.endswith(e) and len(w) - len(e) >= 3:
+            r = w[: -len(e)]
+            if r.endswith("rr"):
+                out |= {r[:-2] + "lere", r[:-2] + "nere", r[:-2] + "nire", r[:-2] + "re", r[:-1] + "e"}
+            elif r.endswith("r"):
+                out |= {r[:-1] + "ere", r[:-1] + "are", r[:-1] + "ire", r + "e"}
+    for e in ("e", "ero", "i"):                 # prese -> prendere, scrisse -> scrivere, decisero -> decidere
+        if w.endswith(e) and len(w) - len(e) >= 3:
+            r = w[: -len(e)]
+            for cons, subs in IT_REMOTO_CONS.items():
+                if r.endswith(cons):
+                    for sub in subs:
+                        b = r[: -len(cons)] + sub
+                        out |= {b + "ere", b + "ire", b + "re", b + "iere"}
     return out
 
 
 # ---------- lemmatisering ----------
 
 class Lexicon:
-    def __init__(self, lang, known, forms):
+    def __init__(self, lang, known, forms, verbs=None):
         self.lang = lang
+        self.verbs = set(verbs or ()) | set(forms.values())
         self.known = set(known) | FUNCTION_SETS[lang]
         if lang == "it":                          # occuparsi -> occupare, så att occupata hittas
             self.known |= {k[:-3] + "re" for k in known if k.endswith("rsi")}
@@ -293,7 +576,7 @@ class Lexicon:
                 c |= {re.sub(r"è(\w+)$", r"e\1", w), re.sub(r"ette?s?$", "eter", w), w.replace("ç", "c")}
         return c
 
-    def lemma(self, w):
+    def lemma(self, w, irregular=True):
         """Kända lemmat för w, eller None."""
         if w in self.known:
             return w
@@ -304,6 +587,30 @@ class Lexicon:
                 return c
             if c in self.forms and self.forms[c] in self.known:
                 return self.forms[c]
+        irr = () if not irregular else de_strong(w) if self.lang == "de" else fr_irregular(w) if self.lang == "fr" else it_irregular(w)
+        for c in irr:
+            if self.lang == "de":
+                p, c = c
+                if p + c in self.known and (p + c in self.verbs or c in self.verbs):
+                    return p + c
+                if not p and c in self.known and c in self.verbs:
+                    return c
+                continue
+            if len(c) >= 4 and c in self.known:
+                return c
+            if c in self.forms and self.forms[c] in self.known:
+                return self.forms[c]
+            if self.lang == "it" and c.endswith(("are", "ere", "ire", "rre")) and c in self.verbs \
+                    and self.lemma(c, False):
+                return c
+        if self.lang == "it":                       # riesco -> riuscire, tiene -> tenere, siede -> sedere
+            for a, b in IT_STEM_ALT:
+                i = w.find(a)
+                if i >= 0 and irregular:
+                    alt = w[:i] + b + w[i + len(a):]
+                    for c in self.candidates(alt):
+                        if c in self.known and c.endswith(("are", "ere", "ire", "rre")):
+                            return c
         if deaccent(w) in self.plain:
             return w
         s = self.stem(w)
@@ -317,11 +624,11 @@ class Lexicon:
             return False
         for i in range(3, len(w) - 2):
             head, tail = w[:i], w[i:]
-            if len(tail) < 3 or not self.lemma(tail):
+            if len(tail) < 3 or not self.lemma(tail, False):
                 continue
             for h in (head, head[:-1] if head.endswith("s") else None, head[:-1] if head.endswith("n") else None,
                       head + "e", head + "en"):
-                if h and len(h) >= 3 and (self.lemma(h) or self.compound(h)):
+                if h and len(h) >= 3 and (self.lemma(h, False) or self.compound(h)):
                     return True
         return False
 
@@ -342,7 +649,7 @@ def texts(code):
             out.append((kind, name, x["id"], x.get("title", ""), [(l.get("fr", ""), l.get("sv", "")) for l in x.get("lines", [])], x.get("gloss") or {}))
     for x in load("stories") or []:
         t = re.sub(r"\[([^|\]]*)(\|[^\]]*)?\]", r"\1", x.get("text", ""))
-        out.append(("läs", "stories", x["id"], x.get("title", ""), [(t, x.get("sv", ""))], x.get("gloss") or {}))
+        out.append(("läs", "stories", x["id"], x.get("title", ""), [(t, x.get("sv", ""))], {}))   # appen visar inga glosor här
     ex = load("exam")
     if isinstance(ex, dict):
         for t in ex.get("tasks", []):
@@ -350,7 +657,7 @@ def texts(code):
                 continue
             kind = "hör" if t.get("part") in LISTEN_PARTS else "läs" if t.get("part") in READ_PARTS else None
             if kind:
-                out.append((kind, "exam", t["id"], t.get("title", ""), [(l.get("fr", ""), l.get("sv", "")) for l in t["lines"]], t.get("gloss") or {}))
+                out.append((kind, "exam", t["id"], t.get("title", ""), [(l.get("fr", ""), l.get("sv", "")) for l in t["lines"]], {}))   # provet visar inga glosor
     return out
 
 
@@ -450,7 +757,10 @@ def run(selected=None, write=True, show=None):
         known = set(words[c]) | load_connectors(c)
         for p in chain[c]:
             known |= words[p]
-        lex = Lexicon(lang, known, forms[lang])
+        verbs = set(load_verbs(c))
+        for p in chain[c]:
+            verbs |= load_verbs(p)
+        lex = Lexicon(lang, known, forms[lang], verbs)
         rows = []
         for kind, typ, tid, title, lines, gloss in texts(c):
             if show and tid != show:
@@ -497,7 +807,7 @@ def make_report(results, order):
     out = [f"# Ordtäckning i kursernas texter", "",
            f"Genererad {DATE} med `python3 tools/tackning.py` (eller `python3 build.py --tackning`). Skriv inte i filen för hand; kör om verktyget.", "",
            "Täckning = andel löpande ord i texten som eleven kan förväntas känna till: kursens ord + alla tidigare kurser i kedjan "
-           "(`nextCourse` baklänges) + grammatikord och bindeord + textens glosor (`gloss`) + namn, siffror och internationella ord. "
+           "(`nextCourse` baklänges) + grammatikord och bindeord (med arv) + textens glosor (`gloss`, bara i hör-, läs- och kulturtexter där appen visar dem; inte i berättelser och prov) + namn, siffror och internationella ord. "
            "Böjningsformer hanteras med en enkel lemmatisering (se kommentaren i `tools/tackning.py`), så siffrorna är en uppskattning. "
            "Gränserna kommer från `docs/nivaer.md` 3.2: **hörtexter minst 95 %**, **lästexter minst 98 %** (lästexter = reading, stories, culture och provets läsdel; hörtexter = listening och provets hördel).", "",
            "Observera att kursens *alla* ord räknas som kända i alla kursens texter, även ord från senare kapitel.", "",

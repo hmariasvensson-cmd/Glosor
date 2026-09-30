@@ -33,7 +33,7 @@ LANGUAGES.de6 = {
   storyIntro: "Läs berättelsen och välj rätt form i varje lucka: rätt tempus (Präteritum, Plusquamperfekt, Konjunktiv I eller II) och ett bindeord som passar både betydelsen och ordföljden.",
   cultureIntro: "Läs en text om Tyskland, Österrike eller Schweiz, svara på en fråga och jämför med hur det är i Sverige.",
 
-  // Grammatikövningar. Frågorna ligger i content/grammar-*.json (se languages/de/content/GRAMMATIK-SPEC.md och content/SPEC.md).
+  // Grammatikövningar. Frågorna ligger i content/grammar-*.json (format i docs/spec/grammatik.md, områdena i grammar.json).
   // Områdena bygger vidare på Tyska 5 och upprepar inte dess områden rakt av.
   // Områden (topics; secs = kapitel där området kommer först) och regelnamn ligger i grammar.json, som build.py lägger i kursens datafil (L.grammar).
 
