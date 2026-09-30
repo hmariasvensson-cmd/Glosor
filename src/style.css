@@ -390,3 +390,9 @@ details.rule{margin-top:6px}
 .exgaps .tl{line-height:2.1;overflow-wrap:anywhere}
 .gapsel{display:inline-block;width:auto;max-width:100%;padding:3px 6px;margin:0 2px;font-size:.95em;vertical-align:baseline}
 .exshort{font-size:1.1rem;padding:10px 12px}
+/* Sviten: flamma uppe till höger (renderStreak i app.js). Urblekt tills dagens pass är gjort. */
+header.top{position:relative}
+.streak{position:absolute;top:2px;right:0;display:inline-flex;align-items:center;gap:3px;font-weight:700;font-size:.95rem;color:var(--ink);font-variant-numeric:tabular-nums}
+.streak svg{width:22px;height:22px}
+.streak.cold{opacity:.4;filter:grayscale(1)}
+header.top h1{padding-right:56px}

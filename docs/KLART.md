@@ -2,6 +2,14 @@
 
 Punkter som har flyttats från [`BACKLOG.md`](BACKLOG.md) när de byggdes. **Referens** anger backloggens rubrik och prioritet. **Commit** anger var ändringen finns i git. **Publicerat** anger versionen av artefakten på https://claude.ai/artifact/YBQv8j4qXQQLuPwLAWt5mP.
 
+## 2026-09-30 (publicerat som version 32)
+
+| Referens | Vad som byggdes | Commit |
+|---|---|---|
+| Tyck till från eleven (2026-09-30) *Flamma för sviten* | En flamma uppe till höger i sidhuvudet med antal dagar i rad (samma räkning som statistiken, per kurs). Urblekt tills dagens första pass är gjort, tänds direkt när passet sparas (`renderStreak` anropas från `save` och `renderStart`), dold utan svit. Test `SCENARIO_STREAK`. | se git log |
+
+Testerna har 1 499 kontroller.
+
 ## 2026-09-29, del 4 (publicerat som version 31)
 
 | Referens | Vad som byggdes | Commit |

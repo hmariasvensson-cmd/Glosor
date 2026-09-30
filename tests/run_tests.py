@@ -1322,6 +1322,29 @@ appReady().then(async()=>{ try{
 });
 </script>"""
 
+# Flamman i sidhuvudet (elevens önskemål 2026-09-30): dold utan svit, urblekt utan dagens pass, tänd med dagens pass
+SCENARIO_STREAK = r"""<script>
+const out=[]; const q=s=>document.querySelector(s);
+const ok=(name,cond,info="")=>out.push((cond?"OK   ":"FEL  ")+name+(info?"  ("+info+")":""));
+appReady().then(async()=>{ try{
+  const day=864e5, now=Date.now(), el=()=>q("#streak");
+  S.log=[]; renderStart();
+  ok("flamma: dold utan svit", el()&&el().hidden);
+  S.log=[{kind:"quiz",d:now-2*day,total:5,dur:60},{kind:"quiz",d:now-day,total:5,dur:60}]; renderStart();
+  ok("flamma: syns med svit från i går", !el().hidden&&el().textContent.trim()==="2", el().textContent);
+  ok("flamma: urblekt när dagens pass inte är gjort", el().classList.contains("cold"));
+  S.log.push({kind:"quiz",d:now,total:5,dur:60}); renderStart();
+  ok("flamma: tänd efter dagens pass", !el().classList.contains("cold")&&el().textContent.trim()==="3", el().textContent);
+  S.log=[{kind:"quiz",d:now-3*day,total:5,dur:60}]; renderStart();
+  ok("flamma: bruten svit visas inte", el().hidden);
+  document.body.style.width="320px"; renderStart(); S.log.push({kind:"quiz",d:now,total:5,dur:60}); renderStart();
+  ok("flamma: ingen horisontell scroll i 320 px", document.documentElement.scrollWidth<=document.documentElement.clientWidth+1);
+ }catch(e){ ok("undantag", false, e.message+" "+(e.stack||"").split("\n")[1]); }
+ ok("inga JavaScript-fel", !__err.length, __err.join(" ; "));
+ document.body.insertAdjacentHTML("beforeend","<pre id=out>"+out.join("\n").replace(/</g,"&lt;")+"</pre>");
+});
+</script>"""
+
 SCENARIO_BUGHUNT = r"""<script>
 const out=[]; const q=s=>document.querySelector(s);
 const ok=(name,cond,info="")=>out.push((cond?"OK   ":"FEL  ")+name+(info?"  ("+info+")":""));
@@ -1815,6 +1838,7 @@ def main():
     text += "\n" + run(SCENARIO_EXAMSIM, 60000, head=EXFILL)   # provsimuleringen som hela provet (P2)
     text += "\n" + run(SCENARIO_EXAMTYPES, 60000, head=EXFILL) + "\n" + test_exam_task_checks()   # para ihop, lucktext, kortsvar, sparad simulering
     text += "\n" + run(SCENARIO_BUGHUNT, 30000)   # buggjakten 2026-09-29
+    text += "\n" + run(SCENARIO_STREAK, 20000)   # flamman för sviten (elevens önskemål)
     text += "\n" + run(SCENARIO_ESC, 20000)   # escaping av text från datafilerna (arkitekturgranskningen, P1)
     text += "\n" + run(SCENARIO_LEVELPROMPT, 30000)   # nivåstyrd bedömning (A1–C1)
     text += "\n" + test_minimal_course()   # en ny, liten kurs (8 → 21 kurser)

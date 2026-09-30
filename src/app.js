@@ -433,6 +433,7 @@ function save(){
   if(S.log.length>1000) foldLog();   // håller dokumentet under lagringsgränsen
   try{localStorage.setItem(L.storageKey,JSON.stringify(S))}catch(e){}
   cloudSave();
+  renderStreak();
 }
 // De äldsta loggposterna sammanfattas i S.logOld, så att total tid och antal dagar finns kvar
 function foldLog(){
@@ -586,6 +587,7 @@ function nextPanel(){
       :`<button class="btn" id="nextc" data-nextc="${esc(nextCourses()[0])}">Gå till ${esc(names[0])}</button>`}</section>`;
 }
 function renderStart(){
+  renderStreak();
   document.body.classList.remove("has-tray");
   sess=null;
   applyDeferred(false);   // ett molnläge som kom mitt i ett pass
@@ -773,6 +775,18 @@ function weekStart(ts){const d=new Date(ts);d.setHours(0,0,0,0);d.setDate(d.getD
 const dayKey=ts=>new Date(ts).toDateString();
 function isoWeek(d){ const t=new Date(Date.UTC(d.getFullYear(),d.getMonth(),d.getDate())); const day=t.getUTCDay()||7;
   t.setUTCDate(t.getUTCDate()+4-day); const y0=new Date(Date.UTC(t.getUTCFullYear(),0,1)); return Math.ceil(((t-y0)/864e5+1)/7); }
+// Flamman i sidhuvudet: antal dagar i rad (samma som statistiken). Urblekt om dagens pass inte är gjort, dold utan svit.
+function renderStreak(){
+  const el=document.querySelector("#streak"); if(!el) return;
+  const days=new Set(S.log.map(l=>dayKey(l.d))), d=new Date(); d.setHours(12,0,0,0);
+  const today=days.has(dayKey(d)); if(!today) d.setDate(d.getDate()-1);
+  let n=0; while(days.has(dayKey(d))){n++; d.setDate(d.getDate()-1)}   // samma räkning som myStats
+  el.hidden=!n; if(!n) return;
+  el.classList.toggle("cold",!today);
+  el.title=today?`${n} dagar i rad`:`${n} dagar i rad – gör ett pass i dag för att hålla flamman vid liv`;
+  el.setAttribute("aria-label",el.title);
+  el.innerHTML=`<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#F27A1A" d="M12 2c1 3.5-1.5 5.2-2.8 7.1C7.7 11.3 7 13 7 15a5 5 0 0 0 10 0c0-2.6-1.3-4.3-2.3-5.6-.3 1.5-1 2.4-2 2.8.6-3.4-.2-7.1-.7-10.2z"/><path fill="#FFC53D" d="M12 21a3 3 0 0 1-3-3c0-1.6 1.1-2.7 2-3.8.2 1 .8 1.6 1.5 1.8-.1-.9.2-1.9.8-2.6.9 1.2 1.7 2.5 1.7 4.6a3 3 0 0 1-3 3z"/></svg>${n}`;
+}
 function streakAlive(last){const d=new Date();if(dayKey(last)===dayKey(d))return true;d.setDate(d.getDate()-1);return dayKey(last)===dayKey(d)}
 function myStats(){
   const w0=weekStart(Date.now()), wk=S.log.filter(l=>l.d>=w0), days=new Set(S.log.map(l=>dayKey(l.d)));
