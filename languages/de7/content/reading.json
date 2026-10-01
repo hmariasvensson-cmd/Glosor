@@ -148,14 +148,14 @@
    },
    {
     "type": "detalj",
-    "q": "Vad krävs för att få skriva provet i ett seminariemodul?",
+    "q": "Vad krävs för att få skriva provet i en seminariemodul?",
     "opts": [
      "Att man har betalat terminsavgiften",
-     "Att man inte har missat mer än två tillfällen",
      "Att man har hållit ett föredrag",
+     "Att man inte har missat mer än två tillfällen",
      "Att man har läst musikteori"
     ],
-    "a": 1,
+    "a": 2,
     "why": "§ 7 (3): regelmäßige Teilnahme … wenn nicht mehr als zwei Sitzungen versäumt wurden."
    },
    {
@@ -175,23 +175,23 @@
     "q": "Maja har fått 2,7 på en godkänd tenta och vill höja betyget. Vad gäller?",
     "opts": [
      "Hon får göra om provet nästa termin",
-     "Hon får inte göra om provet",
      "Hon måste ansöka hos examensnämnden",
+     "Hon får inte göra om provet",
      "Hon får göra om det om hon har läkarintyg"
     ],
-    "a": 1,
-    "why": "§ 9 (2): En bestandene Prüfung kann nicht zur Notenverbesserung wiederholt werden."
+    "a": 2,
+    "why": "§ 9 (2): Eine bestandene Prüfung kann nicht zur Notenverbesserung wiederholt werden."
    },
    {
     "type": "detalj",
     "q": "Vad händer om man är sjuk på provdagen men inte visar upp läkarintyg?",
     "opts": [
-     "Provet flyttas automatiskt",
      "Provet räknas som underkänt",
+     "Provet flyttas automatiskt",
      "Man får en varning",
      "Ingenting"
     ],
-    "a": 1,
+    "a": 0,
     "why": "§ 9 (3): Andernfalls gilt die Prüfung als nicht bestanden."
    },
    {
@@ -199,11 +199,11 @@
     "q": "Vad betyder \"sofern keine wesentlichen Unterschiede … bestehen\" i § 14?",
     "opts": [
      "Kurser från utlandet tillgodoräknas aldrig",
-     "Kurser tillgodoräknas om innehållet i stort sett motsvarar kraven",
      "Man måste alltid göra om alla kurser",
-     "Bara kurser från Tyskland räknas"
+     "Bara kurser från Tyskland räknas",
+     "Kurser tillgodoräknas om innehållet i stort sett motsvarar kraven"
     ],
-    "a": 1,
+    "a": 3,
     "why": "sofern = såvida; tillgodoräknande sker när det inte finns väsentliga skillnader."
    },
    {
@@ -211,11 +211,11 @@
     "q": "Hur lång tid har man som mest på sig för en hemuppsats om man får förlängning?",
     "opts": [
      "Sex veckor",
-     "Åtta veckor",
      "Tio veckor",
-     "Fyra veckor"
+     "Fyra veckor",
+     "Åtta veckor"
     ],
-    "a": 1,
+    "a": 3,
     "why": "Skrivtiden är sex veckor, och examensnämnden kan bevilja högst två veckors förlängning (§ 8)."
    }
   ],
@@ -379,11 +379,11 @@
     "q": "Vad är det för slags text?",
     "opts": [
      "En studieordning",
-     "En essä som resonerar om två idéer om utbildning",
      "Ett reportage om ett universitet i Berlin",
+     "En essä som resonerar om två idéer om utbildning",
      "En annons för en musikhögskola"
     ],
-    "a": 1,
+    "a": 2,
     "why": "Texten väger två synsätt mot varandra och avslutar med skribentens egen hållning, typiskt för en essä."
    },
    {
@@ -391,11 +391,11 @@
     "q": "Vad var Humboldts mål med universitetet?",
     "opts": [
      "Att förbereda för ett bestämt yrke",
-     "Hela människans bildning",
      "Att korta studietiden",
-     "Att göra utbildningar jämförbara i Europa"
+     "Att göra utbildningar jämförbara i Europa",
+     "Hela människans bildning"
     ],
-    "a": 1,
+    "a": 3,
     "why": "Ziel war nicht die Vorbereitung auf einen bestimmten Beruf, sondern die Bildung des ganzen Menschen."
    },
    {
@@ -403,47 +403,47 @@
     "q": "Hur många stater beslutade först om Bolognareformen?",
     "opts": [
      "12",
-     "29",
      "47",
+     "29",
      "Alla EU-länder"
     ],
-    "a": 1,
+    "a": 2,
     "why": "… die 1999 von zunächst 29 europäischen Staaten beschlossen wurde."
    },
    {
     "type": "detalj",
     "q": "Vad kritiseras reformen för?",
     "opts": [
-     "Att den gjort studierna skollika",
      "Att den tagit bort proven",
+     "Att den gjort studierna skollika",
      "Att den gjort studierna dyrare",
      "Att den förbjudit byte av land"
     ],
-    "a": 0,
+    "a": 1,
     "why": "Kritiker werfen der Reform vor, sie habe das Studium verschult."
    },
    {
     "type": "detalj",
     "q": "Vilket argument har förespråkarna?",
     "opts": [
-     "Strukturen har gjort det lättare för studenter från icke-akademiska familjer",
      "Studenterna får mer tid för omvägar",
+     "Strukturen har gjort det lättare för studenter från icke-akademiska familjer",
      "Professorerna tjänar mer",
      "Proven har blivit lättare"
     ],
-    "a": 0,
+    "a": 1,
     "why": "… dass gerade die klare Struktur vielen Studierenden aus nichtakademischen Familien den Einstieg erleichtert habe."
    },
    {
     "type": "tolkning",
     "q": "Varför är musikhögskolan ett särskilt fall enligt skribenten?",
     "opts": [
-     "Den har inga prov alls",
      "Den är både skollik och nära Humboldts ideal",
+     "Den har inga prov alls",
      "Den följer inte Bolognareformen",
      "Den har bara föreläsningar"
     ],
-    "a": 1,
+    "a": 0,
     "why": "Einerseits … verschult … Andererseits war gerade hier das Ideal … immer lebendig."
    },
    {
@@ -451,23 +451,23 @@
     "q": "Vad menar skribenten är avgörande?",
     "opts": [
      "Strukturen i studieordningen",
-     "Den hållning man studerar med",
      "Antalet poäng",
+     "Den hållning man studerar med",
      "Hur snabbt man tar examen"
     ],
-    "a": 1,
+    "a": 2,
     "why": "Entscheidend ist wohl weniger die Struktur als die Haltung, mit der man studiert."
    },
    {
     "type": "tolkning",
     "q": "Vad hade Humboldt enligt texten motsatt sig?",
     "opts": [
-     "Prov över huvud taget",
      "Idén att en utbildning är lyckad om den blir klar snabbt",
+     "Prov över huvud taget",
      "Enskild undervisning",
      "Att staten betalar för vetenskapen"
     ],
-    "a": 1,
+    "a": 0,
     "why": "Wogegen er sich gewehrt hätte, ist die Vorstellung, dass ein Studium dann erfolgreich sei, wenn es möglichst schnell abgeschlossen werde."
    }
   ],
@@ -572,8 +572,8 @@
     "sv": "Den unga dirigenten Mira Albrecht hade minskat orkestern till drygt sextio musiker och lät stråkarna spela med sparsamt vibrato – ett beslut som stöder sig på rön från den historiska uppförandepraxisen."
    },
    {
-    "fr": "Brahms selbst, so ist aus Briefen überliefert, bevorzugte ein Orchester dieser Größe; die üppigen Besetzungen des 20. Jahrhunderts hätte er vermutlich als fremd empfunden.",
-    "sv": "Brahms själv föredrog, enligt vad som finns bevarat i brev, en orkester av den storleken; 1900-talets yppiga besättningar hade han förmodligen upplevt som främmande."
+    "fr": "Brahms selbst schätzte, wie überliefert ist, besonders die Meininger Hofkapelle, ein Orchester von ähnlicher Größe; die üppigen Besetzungen des 20. Jahrhunderts hätte er vermutlich als fremd empfunden.",
+    "sv": "Brahms själv uppskattade, enligt vad som är känt, särskilt hovkapellet i Meiningen, en orkester av liknande storlek; 1900-talets yppiga besättningar hade han förmodligen upplevt som främmande."
    },
    {
     "fr": "Das Ergebnis war verblüffend. In der Exposition des ersten Satzes der vierten Sinfonie traten Nebenstimmen hervor, die sonst im Gesamtklang untergehen. Die Holzbläser wirkten nicht wie Farbtupfer, sondern wie gleichberechtigte Partner in einem großen Kammermusikgespräch.",
@@ -602,11 +602,11 @@
     "q": "Vilken är recensentens övergripande bedömning?",
     "opts": [
      "Mycket negativ",
-     "Övervägande positiv, med viss kritik",
      "Neutral utan värdering",
-     "Positiv bara till publiken"
+     "Positiv bara till publiken",
+     "Övervägande positiv, med viss kritik"
     ],
-    "a": 1,
+    "a": 3,
     "why": "Hon kallar konserten något av det mest spännande under säsongen, men kritiserar tempot i långsamma satsen."
    },
    {
@@ -614,11 +614,11 @@
     "q": "Vad hade dirigenten gjort med orkestern?",
     "opts": [
      "Utökat den till över hundra musiker",
-     "Minskat den till drygt sextio musiker",
      "Bytt ut alla stråkar mot blåsare",
+     "Minskat den till drygt sextio musiker",
      "Spelat utan stråkar"
     ],
-    "a": 1,
+    "a": 2,
     "why": "Sie hatte das Orchester auf gut sechzig Musikerinnen und Musiker verkleinert."
    },
    {
@@ -627,34 +627,34 @@
     "opts": [
      "Av ekonomiska skäl",
      "För att salen var liten",
-     "Enligt brev föredrog Brahms en sådan orkester",
+     "Brahms uppskattade särskilt en orkester av liknande storlek",
      "För att musiker var sjuka"
     ],
     "a": 2,
-    "why": "Brahms selbst, so ist aus Briefen überliefert, bevorzugte ein Orchester dieser Größe."
+    "why": "Brahms selbst schätzte, wie überliefert ist, besonders die Meininger Hofkapelle, ein Orchester von ähnlicher Größe."
    },
    {
     "type": "detalj",
     "q": "Vad hördes tydligare i första satsen?",
     "opts": [
      "Pukorna",
-     "Bistämmorna",
      "Publiken",
-     "Solisten"
+     "Solisten",
+     "Bistämmorna"
     ],
-    "a": 1,
+    "a": 3,
     "why": "traten Nebenstimmen hervor, die sonst im Gesamtklang untergehen."
    },
    {
     "type": "detalj",
     "q": "Vad kritiserar recensenten?",
     "opts": [
-     "Att finalen var för lång",
      "Att tempot i den långsamma satsen var för snabbt",
+     "Att finalen var för lång",
      "Att orkestern spelade falskt",
      "Att programmet var för kort"
     ],
-    "a": 1,
+    "a": 0,
     "why": "Im langsamen Satz wählte Albrecht Tempi, die so zügig waren …"
    },
    {
@@ -673,12 +673,12 @@
     "type": "tolkning",
     "q": "Vad visar tystnaden efter slutackordet enligt recensenten?",
     "opts": [
-     "Att publiken var uttråkad",
      "Att publiken var gripen",
+     "Att publiken var uttråkad",
      "Att konserten var slut för tidigt",
      "Att någon hade somnat"
     ],
-    "a": 1,
+    "a": 0,
     "why": "ein seltenes Zeichen der Ergriffenheit."
    },
    {
@@ -686,11 +686,11 @@
     "q": "Vad menar recensenten med att verktroheten är \"eine Frage des Geschmacks\"?",
     "opts": [
      "Att tolkningen objektivt är fel",
-     "Att det är en smaksak om man anser den trogen verket",
      "Att Brahms hade dålig smak",
-     "Att kritiker alltid har rätt"
+     "Att kritiker alltid har rätt",
+     "Att det är en smaksak om man anser den trogen verket"
     ],
-    "a": 1,
+    "a": 3,
     "why": "ist letztlich eine Frage des Geschmacks = är i slutänden en smaksak."
    },
    {
@@ -857,11 +857,11 @@
     "q": "Vad handlar texten om?",
     "opts": [
      "En modern recension av en Beethovenkonsert",
-     "En berömd recension från 1810 och dess betydelse",
      "Beethovens liv i Wien",
+     "En berömd recension från 1810 och dess betydelse",
      "Hoffmanns kusliga berättelser"
     ],
-    "a": 1,
+    "a": 2,
     "why": "Texten presenterar Hoffmanns recension av femte symfonin och vad den betytt för musikkritiken."
    },
    {
@@ -880,12 +880,12 @@
     "type": "detalj",
     "q": "Vilken konst är enligt Hoffmann den mest romantiska?",
     "opts": [
-     "Diktkonsten",
      "Musiken",
+     "Diktkonsten",
      "Måleriet",
      "Teatern"
     ],
-    "a": 1,
+    "a": 0,
     "why": "… die romantischste aller Künste … (om musiken)."
    },
    {
@@ -893,11 +893,11 @@
     "q": "Vad tyckte många lärde på 1700-talet om instrumentalmusik?",
     "opts": [
      "Att den var den högsta konsten",
-     "Att den bara var behaglig underhållning",
      "Att den var farlig",
-     "Att den borde förbjudas"
+     "Att den borde förbjudas",
+     "Att den bara var behaglig underhållning"
     ],
-    "a": 1,
+    "a": 3,
     "why": "Viele Gelehrte hatten die Instrumentalmusik für eine bloß angenehme Unterhaltung gehalten."
    },
    {
@@ -905,11 +905,11 @@
     "q": "Vad består större delen av recensionen av?",
     "opts": [
      "Hoffmanns minnen",
-     "En noggrann analys med notexempel",
      "Kritik av Haydn",
-     "En berättelse"
+     "En berättelse",
+     "En noggrann analys med notexempel"
     ],
-    "a": 1,
+    "a": 3,
     "why": "Der größte Teil seines Textes ist eine genaue Analyse mit Notenbeispielen."
    },
    {
@@ -928,12 +928,12 @@
     "type": "tolkning",
     "q": "Vad gjorde recensionen till en förebild?",
     "opts": [
-     "Att den var anonym",
      "Att den förenade entusiasm och noggrann iakttagelse",
+     "Att den var anonym",
      "Att den var kort",
      "Att den var skriven av en jurist"
     ],
-    "a": 1,
+    "a": 0,
     "why": "Diese Verbindung von Begeisterung und genauer Beobachtung machte die Rezension zu einem Muster."
    },
    {
@@ -941,11 +941,11 @@
     "q": "Vad menar texten med sista meningen?",
     "opts": [
      "Att dagens publik läser Hoffmann",
-     "Att vårt sätt att lyssna tyst och koncentrerat går tillbaka på romantikens ideal",
      "Att konsertsalar byggdes av Hoffmann",
+     "Att vårt sätt att lyssna tyst och koncentrerat går tillbaka på romantikens ideal",
      "Att publiken borde prata mer"
     ],
-    "a": 1,
+    "a": 2,
     "why": "Wer heute … still sitzt und ganz zuhört, folgt … einem Ideal, an dessen Entstehung Hoffmann beteiligt war."
    }
   ],
@@ -1043,8 +1043,8 @@
   "title": "Macht Musik schlau? Was eine neue Studie wirklich zeigt",
   "lines": [
    {
-    "fr": "„Musikunterricht macht Kinder intelligenter“ – Schlagzeilen wie diese tauchen regelmäßig auf. Eine im vergangenen Jahr veröffentlichte Metaanalyse, die die Ergebnisse von 54 Studien mit insgesamt über 6 000 Kindern zusammenfasst, kommt jedoch zu einem nüchterneren Befund.",
-    "sv": "\"Musikundervisning gör barn intelligentare\" – rubriker som den här dyker upp regelbundet. En metaanalys som publicerades förra året och som sammanfattar resultaten från 54 studier med sammanlagt över 6 000 barn kommer dock fram till ett nyktrare resultat."
+    "fr": "„Musikunterricht macht Kinder intelligenter“ – Schlagzeilen wie diese tauchen regelmäßig auf. Eine viel beachtete Metaanalyse, die die Ergebnisse von 54 Studien mit insgesamt über 6 000 Kindern zusammenfasst, kommt jedoch zu einem nüchterneren Befund.",
+    "sv": "\"Musikundervisning gör barn intelligentare\" – rubriker som den här dyker upp regelbundet. En uppmärksammad metaanalys som sammanfattar resultaten från 54 studier med sammanlagt över 6 000 barn kommer dock fram till ett nyktrare resultat."
    },
    {
     "fr": "Zwar schneiden Kinder, die ein Instrument lernen, in Intelligenztests im Durchschnitt etwas besser ab als Gleichaltrige ohne Musikunterricht. Betrachtet man jedoch nur Studien mit einer echten Kontrollgruppe, in denen die Kinder zufällig auf die Gruppen verteilt wurden, schrumpft der Effekt auf nahezu null.",
@@ -1084,24 +1084,24 @@
     "type": "helhet",
     "q": "Vad är textens huvudbudskap?",
     "opts": [
-     "Musik gör barn betydligt intelligentare",
      "Musik och intelligens hänger ihop, men musiken är troligen inte orsaken",
+     "Musik gör barn betydligt intelligentare",
      "Musikundervisning bör avskaffas",
      "Intelligenstester är meningslösa"
     ],
-    "a": 1,
+    "a": 0,
     "why": "Sambandet är vermutlich kein kausaler; intelligentare barn väljer oftare ett instrument."
    },
    {
     "type": "detalj",
     "q": "Hur många studier sammanfattar metaanalysen?",
     "opts": [
-     "23",
      "54",
+     "23",
      "600",
      "6 000"
     ],
-    "a": 1,
+    "a": 0,
     "why": "die Ergebnisse von 54 Studien."
    },
    {
@@ -1109,23 +1109,23 @@
     "q": "Vad händer med effekten i studier med slumpmässig kontrollgrupp?",
     "opts": [
      "Den blir större",
-     "Den krymper till nästan noll",
      "Den blir negativ",
-     "Den går inte att mäta"
+     "Den går inte att mäta",
+     "Den krymper till nästan noll"
     ],
-    "a": 1,
+    "a": 3,
     "why": "schrumpft der Effekt auf nahezu null."
    },
    {
     "type": "detalj",
     "q": "Vilken felkälla nämns?",
     "opts": [
-     "Att testen var för svåra",
      "Att familjer som väljer musikundervisning skiljer sig från andra familjer",
+     "Att testen var för svåra",
      "Att barnen fuskade",
      "Att forskarna var musiker"
     ],
-    "a": 1,
+    "a": 0,
     "why": "Familien … unterscheiden sich in vielen Merkmalen von anderen Familien."
    },
    {
@@ -1145,35 +1145,35 @@
     "q": "Vilka positiva effekter anser författarna är väl belagda?",
     "opts": [
      "Bättre matematikbetyg",
-     "Gehör, finmotorik och socialt samarbete",
      "Högre inkomst senare i livet",
+     "Gehör, finmotorik och socialt samarbete",
      "Bättre minne för siffror"
     ],
-    "a": 1,
+    "a": 2,
     "why": "Positive Wirkungen auf das Gehör, die Feinmotorik und die soziale Zusammenarbeit."
    },
    {
     "type": "tolkning",
-    "q": "Varför står några verb i texten i Konjunktiv I (sei, wählten, lasse)?",
+    "q": "Varför står några verb i texten i konjunktiv (sei, seien, lasse, wählten)?",
     "opts": [
-     "För att det är önskningar",
      "För att texten refererar vad forskarna säger",
+     "För att det är önskningar",
      "För att det är framtid",
      "För att det är dåtid"
     ],
-    "a": 1,
-    "why": "Konjunktiv I markerar referat av forskarnas åsikt."
+    "a": 0,
+    "why": "Konjunktiv I (och Konjunktiv II som ersättning, wählten) markerar referat av forskarnas åsikt."
    },
    {
     "type": "tolkning",
     "q": "Vilket argument för musikundervisning tycker skribenten är bäst?",
     "opts": [
      "Högre intelligens",
-     "Kulturell delaktighet",
      "Bättre betyg i matematik",
+     "Kulturell delaktighet",
      "Lägre kostnader"
     ],
-    "a": 1,
+    "a": 2,
     "why": "Wer ihn dagegen mit kultureller Teilhabe begründet, hat die besseren Argumente."
    },
    {
@@ -1181,11 +1181,11 @@
     "q": "Vad vet man enligt texten om äldre som börjar spela ett instrument?",
     "opts": [
      "Det är bevisat att musik förbättrar minnet hos äldre",
-     "Effekten är större än hos barn",
      "Några små studier visar förbättringar, men det är oklart om det beror på musiken",
+     "Effekten är större än hos barn",
      "Äldre kan inte längre lära sig ett instrument"
     ],
-    "a": 2,
+    "a": 1,
     "why": "Mindre studier har sett förbättringar, men „Ob die Wirkung auf der Musik selbst beruht oder einfach darauf, überhaupt etwas Neues zu lernen, ist … ungeklärt.“"
    }
   ],
@@ -1341,23 +1341,23 @@
     "q": "Vilken sorts text är det här?",
     "opts": [
      "En kommentar",
-     "En vetenskaplig rapport med metod, resultat och diskussion",
      "En recension",
-     "Ett avtal"
+     "Ett avtal",
+     "En vetenskaplig rapport med metod, resultat och diskussion"
     ],
-    "a": 1,
+    "a": 3,
     "why": "Rubrikerna Methode, Ergebnisse och Diskussion är typiska för en vetenskaplig text."
    },
    {
     "type": "detalj",
     "q": "Hur stor var svarsfrekvensen?",
     "opts": [
-     "41 procent",
      "65 procent",
+     "41 procent",
      "35 procent",
      "268 procent"
     ],
-    "a": 1,
+    "a": 0,
     "why": "Das entspricht einer Rücklaufquote von 65 Prozent."
    },
    {
@@ -1377,23 +1377,23 @@
     "q": "Vilken strategi nämndes oftast?",
     "opts": [
      "Mental träning",
-     "Andningsövningar",
      "Professionell rådgivning",
+     "Andningsövningar",
      "Läkemedel"
     ],
-    "a": 1,
+    "a": 2,
     "why": "Am häufigsten genannt wurden Atemübungen (58 Prozent)."
    },
    {
     "type": "detalj",
     "q": "Hur många hade sökt professionell rådgivning?",
     "opts": [
-     "9 procent",
      "12 procent",
      "31 procent",
+     "9 procent",
      "54 procent"
     ],
-    "a": 0,
+    "a": 2,
     "why": "… eine professionelle Beratung hatten nur 9 Prozent in Anspruch genommen."
    },
    {
@@ -1401,23 +1401,23 @@
     "q": "Hur förklaras den lägre andelen inom jazz?",
     "opts": [
      "Jazzstudenter övar mer",
-     "Improvisation hör till stilen, så fel upplevs mindre som misslyckanden",
      "Jazzstudenter spelar aldrig solo",
+     "Improvisation hör till stilen, så fel upplevs mindre som misslyckanden",
      "Det finns färre jazzstudenter"
     ],
-    "a": 1,
+    "a": 2,
     "why": "Im Jazz dagegen gehört die Improvisation zum Stil, sodass ein Fehler weniger als Versagen erlebt wird."
    },
    {
     "type": "tolkning",
     "q": "Varför kallar författarna förklaringen en hypotes?",
     "opts": [
-     "Den är redan bevisad",
      "Den kan inte prövas med uppgifterna som finns",
+     "Den är redan bevisad",
      "Den kommer från en annan studie",
      "Studenterna har föreslagit den"
     ],
-    "a": 1,
+    "a": 0,
     "why": "… eine Hypothese, die mit den vorliegenden Daten nicht überprüft werden kann."
    },
    {
@@ -1526,7 +1526,7 @@
     "sv": "Avtal om medverkan i en konsert"
    },
    {
-    "fr": "zwischen der Kulturverein Lindenau e. V. (im Folgenden „Veranstalter“) und Frau Elin Berg, Violine (im Folgenden „Künstlerin“)",
+    "fr": "zwischen dem Kulturverein Lindenau e. V. (im Folgenden „Veranstalter“) und Frau Elin Berg, Violine (im Folgenden „Künstlerin“)",
     "sv": "mellan Kulturverein Lindenau e. V. (nedan \"arrangören\") och Elin Berg, violin (nedan \"artisten\")"
    },
    {
@@ -1592,11 +1592,11 @@
     "q": "När ska arvodet betalas?",
     "opts": [
      "Före konserten",
-     "Inom 14 dagar efter konserten och efter faktura",
      "Vid slutet av året",
-     "Direkt efter generalrepetitionen"
+     "Direkt efter generalrepetitionen",
+     "Inom 14 dagar efter konserten och efter faktura"
     ],
-    "a": 1,
+    "a": 3,
     "why": "§ 2: innerhalb von 14 Tagen nach dem Konzert und nach Eingang einer ordnungsgemäßen Rechnung."
    },
    {
@@ -1604,11 +1604,11 @@
     "q": "Hur mycket får hon högst i resekostnader?",
     "opts": [
      "Ingenting",
-     "250 euro",
      "600 euro",
-     "1 200 euro"
+     "1 200 euro",
+     "250 euro"
     ],
-    "a": 1,
+    "a": 3,
     "why": "Reisekosten … bis zu einer Höhe von 250 Euro."
    },
    {
@@ -1628,11 +1628,11 @@
     "q": "Arrangören ställer in konserten tio dagar före på grund av dålig biljettförsäljning. Vad får Elin?",
     "opts": [
      "Ingenting",
-     "600 euro",
      "1 200 euro",
+     "600 euro",
      "250 euro"
     ],
-    "a": 1,
+    "a": 2,
     "why": "Senare än 30 dagar före → 50 procent av 1 200 euro = 600 euro. Dålig försäljning är inte force majeure."
    },
    {
@@ -1640,11 +1640,11 @@
     "q": "Vad händer om Elin blir sjuk och har läkarintyg?",
     "opts": [
      "Hon måste betala en ersättare",
-     "Det räknas som viktigt skäl",
      "Hon förlorar rätten till framtida konserter",
+     "Det räknas som viktigt skäl",
      "Hon måste spela ändå"
     ],
-    "a": 1,
+    "a": 2,
     "why": "Eine Erkrankung gilt als wichtiger Grund, sofern sie durch ein ärztliches Attest nachgewiesen wird."
    },
    {
@@ -1652,35 +1652,35 @@
     "q": "Vad krävs för att konserten ska få spelas in?",
     "opts": [
      "Ingenting",
-     "Artistens skriftliga samtycke i förväg",
      "En avgift till GEMA",
+     "Artistens skriftliga samtycke i förväg",
      "Publikens tillstånd"
     ],
-    "a": 1,
+    "a": 2,
     "why": "§ 5: bedürfen der vorherigen schriftlichen Zustimmung der Künstlerin."
    },
    {
     "type": "tolkning",
-    "q": "Elin och arrangören kommer muntligt överens om en extra programpunkt. Gäller det?",
+    "q": "Elin och arrangören kommer muntligt överens om en extra programpunkt. Vad säger avtalet om sådana ändringar?",
     "opts": [
-     "Ja, muntliga avtal gäller alltid",
-     "Nej, ändringar kräver skriftlig form",
-     "Ja, om det finns vittnen",
-     "Bara om domstolen i Leipzig godkänner"
+     "Muntliga avtal gäller alltid",
+     "De gäller om det finns vittnen",
+     "Domstolen i Leipzig måste godkänna dem",
+     "Ändringar kräver skriftlig form"
     ],
-    "a": 1,
+    "a": 3,
     "why": "§ 10: Änderungen und Ergänzungen bedürfen der Schriftform."
    },
    {
     "type": "detalj",
     "q": "Vem betalar avgiften till Künstlersozialkasse?",
     "opts": [
-     "Artisten",
      "Arrangören",
+     "Artisten",
      "Hälften var",
      "Ingen, den ingår i arvodet"
     ],
-    "a": 1,
+    "a": 0,
     "why": "„Die Abgabe an die Künstlersozialkasse trägt der Veranstalter.“ (§ 9)"
    }
   ],
@@ -1887,11 +1887,11 @@
     "q": "Vilken sorts text är det?",
     "opts": [
      "En annons för en lägenhet",
-     "Utdrag ur ett hyresavtal med ordningsregler",
      "Ett brev från en granne",
+     "Utdrag ur ett hyresavtal med ordningsregler",
      "En dom från en domstol"
     ],
-    "a": 1,
+    "a": 2,
     "why": "Paragraferna och rubriken Mietvertrag über Wohnraum visar att det är ett avtal."
    },
    {
@@ -1935,23 +1935,23 @@
     "q": "Hur säger hyresgästen upp avtalet?",
     "opts": [
      "Muntligt med en månads varsel",
-     "Skriftligt med tre månaders uppsägningstid",
      "Per sms",
+     "Skriftligt med tre månaders uppsägningstid",
      "Det går inte att säga upp"
     ],
-    "a": 1,
+    "a": 2,
     "why": "… mit einer Frist von drei Monaten … Die Kündigung bedarf der Schriftform."
    },
    {
     "type": "detalj",
     "q": "När får man inte spela på en söndag?",
     "opts": [
-     "Bara 13–15",
      "Hela dagen",
+     "Bara 13–15",
      "Bara efter 22",
      "Man får spela hela dagen"
     ],
-    "a": 1,
+    "a": 0,
     "why": "An Sonn- und Feiertagen gilt die Ruhezeit ganztägig."
    },
    {
@@ -2105,8 +2105,8 @@
     "sv": "Ett exempel visar storleksordningen. I en medelstor stad som måste minska sin budget med fyra miljoner euro står flera institutioner på listan på en gång: musikskolan, stadsbiblioteket och ungdomsorkestern. Tillsammans kostar de omkring 1,5 miljoner euro om året, alltså mindre än en procent av hela budgeten. Besparingen skulle märkas, men den skulle på intet sätt undanröja underskottet. Samtidigt skulle verksamheter som flera tusen människor använder varje vecka försvinna i ett slag. Och biblioteket är för många äldre den enda plats där de regelbundet träffar andra."
    },
    {
-    "fr": "Diese Rechnung greift jedoch zu kurz. Erstens verschweigt sie die sogenannte Umwegrentabilität: Besucher übernachten in Hotels, essen in Restaurants und kaufen in der Innenstadt ein. Studien aus mehreren Städten kommen zu dem Ergebnis, dass jeder Euro Kulturförderung ein Vielfaches an regionaler Wertschöpfung auslöst.",
-    "sv": "Den kalkylen är dock för kortsiktig. För det första förtiger den den så kallade indirekta lönsamheten: besökare övernattar på hotell, äter på restauranger och handlar i centrum. Studier från flera städer kommer fram till att varje euro i kulturstöd utlöser ett mångfaldigt förädlingsvärde i regionen."
+    "fr": "Die Rechnung der Sparer greift jedoch zu kurz. Erstens verschweigt sie die sogenannte Umwegrentabilität: Besucher übernachten in Hotels, essen in Restaurants und kaufen in der Innenstadt ein. Studien aus mehreren Städten kommen zu dem Ergebnis, dass jeder Euro Kulturförderung ein Vielfaches an regionaler Wertschöpfung auslöst.",
+    "sv": "Spararnas kalkyl är dock för kortsiktig. För det första förtiger den den så kallade indirekta lönsamheten: besökare övernattar på hotell, äter på restauranger och handlar i centrum. Studier från flera städer kommer fram till att varje euro i kulturstöd utlöser ett mångfaldigt förädlingsvärde i regionen."
    },
    {
     "fr": "Zweitens ist ein lebendiges Kulturangebot ein harter Standortfaktor. Unternehmen, die Fachkräfte gewinnen wollen, fragen nicht nur nach Gewerbeflächen, sondern auch danach, ob es für die Kinder ihrer Mitarbeiter eine Musikschule gibt.",
@@ -2118,7 +2118,7 @@
    },
    {
     "fr": "Drittens – und das ist der wichtigste Punkt – lässt sich der Wert von Kultur nicht in Euro ausdrücken. Ein Jugendorchester, in dem Kinder aus zwanzig Nationen gemeinsam musizieren, leistet für den gesellschaftlichen Zusammenhalt mehr als manches teure Integrationsprogramm.",
-    "sv": "För det tredje – och det är den viktigaste punkten – kan kulturens värde inte uttryckas i euro. En ungdomsorkester där barn från tjugo nationer musicerar tillsammans gör mer för den sociala sammanhållningen än mången dyrt integrationsprogram."
+    "sv": "För det tredje – och det är den viktigaste punkten – kan kulturens värde inte uttryckas i euro. En ungdomsorkester där barn från tjugo nationer musicerar tillsammans gör mer för den sociala sammanhållningen än många dyra integrationsprogram."
    },
    {
     "fr": "Das heißt nicht, dass Kultureinrichtungen sich jeder Kritik entziehen dürfen. Wer öffentliche Gelder erhält, muss Rechenschaft ablegen und sich fragen, warum so wenige junge Menschen und so wenige Menschen mit geringem Einkommen den Weg in den Konzertsaal finden. Günstige Tickets für Schüler, Konzerte in Stadtteilen und Kooperationen mit Schulen wären ein Anfang. Auch private Stiftungen und Fonds können helfen, Lücken zu schließen; die öffentliche Verantwortung ersetzen dürfen sie aber nicht.",
@@ -2147,11 +2147,11 @@
     "q": "Varför drabbas kulturen först vid sparande?",
     "opts": [
      "För att den är dyrast",
-     "För att den hör till kommunernas frivilliga åtaganden",
      "För att publiken är liten",
-     "För att EU kräver det"
+     "För att EU kräver det",
+     "För att den hör till kommunernas frivilliga åtaganden"
     ],
-    "a": 1,
+    "a": 3,
     "why": "gehören zu den sogenannten freiwilligen Leistungen."
    },
    {
@@ -2171,23 +2171,23 @@
     "q": "Vad menas med Umwegrentabilität i texten?",
     "opts": [
      "Att biljetterna ger vinst",
-     "Att besökare spenderar pengar på hotell, restauranger och handel",
      "Att orkestrar sparar på resor",
-     "Att staden får skatt från musikerna"
+     "Att staden får skatt från musikerna",
+     "Att besökare spenderar pengar på hotell, restauranger och handel"
     ],
-    "a": 1,
+    "a": 3,
     "why": "Besucher übernachten in Hotels, essen in Restaurants und kaufen … ein."
    },
    {
     "type": "detalj",
     "q": "Vad frågar företag efter enligt texten?",
     "opts": [
-     "Billig el",
      "Om det finns en musikskola för barnen",
+     "Billig el",
      "Om orkestern spelar pop",
      "Om det finns ett operahus med 2 000 platser"
     ],
-    "a": 1,
+    "a": 0,
     "why": "… ob es für die Kinder ihrer Mitarbeiter eine Musikschule gibt."
    },
    {
@@ -2219,23 +2219,23 @@
     "q": "Vilken texttyp är detta?",
     "opts": [
      "Nyhetsnotis",
-     "Kommentar (åsiktstext)",
      "Avtal",
+     "Kommentar (åsiktstext)",
      "Recension"
     ],
-    "a": 1,
+    "a": 2,
     "why": "Texten argumenterar för en tydlig åsikt och har rubriken Kommentar."
    },
    {
     "type": "detalj",
     "q": "Hur stor del av budgeten kostar de tre institutionerna i exemplet tillsammans?",
     "opts": [
-     "Fyra miljoner euro",
      "Mindre än en procent",
+     "Fyra miljoner euro",
      "En tredjedel",
      "Hälften av underskottet"
     ],
-    "a": 1,
+    "a": 0,
     "why": "„Zusammen kosten sie rund 1,5 Millionen Euro im Jahr, also weniger als ein Prozent des gesamten Haushaltsplans.“"
    }
   ],
@@ -2399,11 +2399,11 @@
     "q": "Vad är syftet med texten?",
     "opts": [
      "Att göra reklam för ett orkesterjobb",
-     "Att ge praktisk information till blivande frilansmusiker",
      "Att kritisera skattesystemet",
-     "Att berätta om en musikers liv"
+     "Att berätta om en musikers liv",
+     "Att ge praktisk information till blivande frilansmusiker"
     ],
-    "a": 1,
+    "a": 3,
     "why": "Dieser Ratgeber gibt einen ersten Überblick über die wichtigsten Pflichten und Möglichkeiten."
    },
    {
@@ -2411,11 +2411,11 @@
     "q": "Vad behöver en frilansmusiker INTE göra enligt texten?",
     "opts": [
      "Meddela skattekontoret",
-     "Registrera en näringsverksamhet",
      "Lämna inkomstdeklaration",
+     "Registrera en näringsverksamhet",
      "Ange skattenumret på fakturor"
     ],
-    "a": 1,
+    "a": 2,
     "why": "Man muss kein Gewerbe anmelden und zahlt keine Gewerbesteuer."
    },
    {
@@ -2423,11 +2423,11 @@
     "q": "Vad beskattas?",
     "opts": [
      "Alla intäkter",
-     "Vinsten, dvs. intäkter minus kostnader",
      "Bara arvoden från orkestrar",
-     "Instrumentets värde"
+     "Instrumentets värde",
+     "Vinsten, dvs. intäkter minus kostnader"
     ],
-    "a": 1,
+    "a": 3,
     "why": "Versteuert wird der Gewinn, also die Einnahmen abzüglich der Betriebsausgaben."
    },
    {
@@ -2435,11 +2435,11 @@
     "q": "Vad räknas INTE som exempel på verksamhetskostnad i texten?",
     "opts": [
      "Noter",
-     "Strängar",
      "Hyran för den egna bostaden",
+     "Strängar",
      "Resor till konserter"
     ],
-    "a": 2,
+    "a": 1,
     "why": "Texten nämner Noten, Saiten, Fahrtkosten, en del av instrumentet och försäkringar, inte bostadshyran."
    },
    {
@@ -2447,23 +2447,23 @@
     "q": "Hur mycket av avgifterna betalar de som är försäkrade genom KSK?",
     "opts": [
      "Inget",
-     "Ungefär hälften",
      "Allt",
+     "Ungefär hälften",
      "En fjärdedel"
     ],
-    "a": 1,
+    "a": 2,
     "why": "Die Versicherten zahlen nur etwa die Hälfte der Beiträge."
    },
    {
     "type": "detalj",
     "q": "Vem betalar den konstnärssociala avgiften?",
     "opts": [
-     "Musikerna själva",
      "Företag som anlitar konstnärer",
+     "Musikerna själva",
      "Publiken",
      "Musikhögskolorna"
     ],
-    "a": 1,
+    "a": 0,
     "why": "… die Unternehmen zahlen, wenn sie künstlerische Leistungen in Anspruch nehmen."
    },
    {
@@ -2482,12 +2482,12 @@
     "type": "tolkning",
     "q": "Vilken hållning har texten till frilanslivet?",
     "opts": [
-     "Enbart negativ",
      "Balanserad: frihet men också krav",
+     "Enbart negativ",
      "Enbart positiv",
      "Den tar inte ställning alls och ger inga råd"
     ],
-    "a": 1,
+    "a": 0,
     "why": "Die Freiberuflichkeit bietet Freiheit, verlangt aber auch unternehmerisches Denken."
    }
   ],
@@ -2608,8 +2608,8 @@
     "sv": "För att skillnaderna mellan rika och fattigare delstater inte ska bli för stora finns det dessutom en ekonomisk utjämning. Delstater med höga skatteintäkter som Bayern eller Baden-Württemberg lämnar ifrån sig en del av dem, och delstater med svagare ekonomi får extra medel. Även det här systemet är omstritt: givarländerna klagar regelbundet över att de måste betala för andras politik, och Bayern har flera gånger gått till författningsdomstolen. Sedan 2020 sker utjämningen visserligen enligt ett nytt förfarande, men grundprincipen har knappt ändrats."
    },
    {
-    "fr": "Der Bund ist dennoch nicht völlig machtlos. Über die Beauftragte oder den Beauftragten der Bundesregierung für Kultur und Medien fördert er Einrichtungen von nationaler Bedeutung, etwa Gedenkstätten oder große Festivals. Ein eigenes Kulturministerium des Bundes gibt es jedoch bis heute nicht – ein Umstand, der Besucher aus zentralistischen Staaten wie Frankreich oft überrascht. Dieses Amt wurde übrigens erst 1998 geschaffen.",
-    "sv": "Förbundsstaten är ändå inte helt maktlös. Genom förbundsregeringens kulturombud stöder den institutioner av nationell betydelse, till exempel minnesplatser eller stora festivaler. Något eget federalt kulturdepartement finns dock än i dag inte – en omständighet som ofta förvånar besökare från centralstyrda stater som Frankrike. Det ämbetet inrättades för övrigt först 1998."
+    "fr": "Der Bund ist dennoch nicht völlig machtlos. Über die Beauftragte oder den Beauftragten der Bundesregierung für Kultur und Medien fördert er Einrichtungen von nationaler Bedeutung, etwa Gedenkstätten oder große Festivals. Ein eigenes Kulturministerium des Bundes gibt es jedoch bis heute nicht – ein Umstand, der Besucher aus zentralistischen Staaten wie Frankreich oft überrascht. Das Amt der oder des Kulturbeauftragten wurde übrigens erst 1998 geschaffen.",
+    "sv": "Förbundsstaten är ändå inte helt maktlös. Genom förbundsregeringens kulturombud stöder den institutioner av nationell betydelse, till exempel minnesplatser eller stora festivaler. Något eget federalt kulturdepartement finns dock än i dag inte – en omständighet som ofta förvånar besökare från centralstyrda stater som Frankrike. Ämbetet som kulturombud inrättades för övrigt först 1998."
    }
   ],
   "questions": [
@@ -2618,11 +2618,11 @@
     "q": "Vad handlar texten om?",
     "opts": [
      "Tysklands utrikespolitik",
-     "Hur federalismen påverkar utbildning och kultur",
      "Hur man söker till en musikskola",
+     "Hur federalismen påverkar utbildning och kultur",
      "Skillnader mellan Sverige och Frankrike"
     ],
-    "a": 1,
+    "a": 2,
     "why": "Texten förklarar delstaternas ansvar för utbildning och kultur och följderna."
    },
    {
@@ -2643,10 +2643,10 @@
     "opts": [
      "Högskolelagar",
      "Terminsbiljetter",
-     "Skollov",
-     "Valuta"
+     "Valuta",
+     "Skollov"
     ],
-    "a": 3,
+    "a": 2,
     "why": "Valuta är gemensam; de andra nämns."
    },
    {
@@ -2678,11 +2678,11 @@
     "q": "Varför står förespråkarnas och kritikernas argument i Konjunktiv I (sei, habe, führe)?",
     "opts": [
      "För att de är önskningar",
-     "För att texten återger andras åsikter",
      "För att de är framtid",
-     "För att de är frågor"
+     "För att de är frågor",
+     "För att texten återger andras åsikter"
     ],
-    "a": 1,
+    "a": 3,
     "why": "Konjunktiv I markerar referat."
    },
    {
@@ -2701,24 +2701,24 @@
     "type": "detalj",
     "q": "Vad förvånar ofta besökare från Frankrike?",
     "opts": [
-     "Att det finns sexton orkestrar",
      "Att det inte finns något federalt kulturdepartement",
+     "Att det finns sexton orkestrar",
      "Att studier är gratis",
      "Att det finns två röster i valet"
     ],
-    "a": 1,
+    "a": 0,
     "why": "Ein eigenes Kulturministerium des Bundes gibt es jedoch bis heute nicht."
    },
    {
     "type": "detalj",
     "q": "Vad finns sedan några år för att göra studentexamen mer jämförbar?",
     "opts": [
-     "En gemensam bank av provuppgifter",
      "Ett nationellt utbildningsdepartement",
      "Samma läroplan i alla delstater",
+     "En gemensam bank av provuppgifter",
      "En central examensnämnd i Berlin"
     ],
-    "a": 0,
+    "a": 2,
     "why": "„Seit einigen Jahren gibt es deshalb einen gemeinsamen Pool von Prüfungsaufgaben, aus dem sich die Länder bedienen können.“"
    }
   ],
@@ -2844,7 +2844,7 @@
    },
    {
     "fr": "Kulturelle Bildung ist kein Luxus, den man sich in guten Jahren leistet und in schlechten streicht. Sie gehört zur Grundversorgung einer demokratischen Gesellschaft, die allen Kindern die gleichen Möglichkeiten eröffnen will. Die Stadträte, die in diesen Wochen abstimmen, sollten das bedenken.",
-    "sv": "Kulturell bildning är ingen lyx som man unnar sig under goda år och stryker under dåliga. Den hör till grundutbudet i ett demokratiskt samhälle som vill ge alla barn samma möjligheter. De kommunfullmäktige som röstar i dessa veckor borde tänka på det."
+    "sv": "Kulturell bildning är ingen lyx som man unnar sig under goda år och stryker under dåliga. Den hör till grundutbudet i ett demokratiskt samhälle som vill ge alla barn samma möjligheter. De fullmäktigeledamöter som röstar i dessa veckor borde tänka på det."
    },
    {
     "fr": "Denn eines ist sicher: Was heute an der Musikschule gespart wird, lässt sich später nur mit großem Aufwand wieder aufbauen. Lehrkräfte, die entlassen werden, wandern ab, und Kinder, die heute kein Instrument lernen, holen das als Erwachsene nur selten nach.",
@@ -2856,12 +2856,12 @@
     "type": "helhet",
     "q": "Vilken är skribentens huvudtes?",
     "opts": [
-     "Musikskolor bör läggas ned",
      "Nedskärningar i musikskolan ökar den sociala ojämlikheten och bör undvikas",
+     "Musikskolor bör läggas ned",
      "Musiklektioner ska vara dyra",
      "Kommunerna har för mycket pengar"
     ],
-    "a": 1,
+    "a": 0,
     "why": "Gesellschaftspolitisch ist es ein Fehler … Jede Gebührenerhöhung verschärft diese Ungleichheit."
    },
    {
@@ -2881,11 +2881,11 @@
     "q": "Vad beror det på att vissa barn inte får musikundervisning, förutom pengar?",
     "opts": [
      "Att de inte är musikaliska",
-     "Att föräldrarna måste veta hur man får plats, följa barnet och se till att det övas",
      "Att skolan förbjuder det",
+     "Att föräldrarna måste veta hur man får plats, följa barnet och se till att det övas",
      "Att det finns för många musikskolor"
     ],
-    "a": 1,
+    "a": 2,
     "why": "… dass man wissen muss, wie man einen Platz … bekommt, dass jemand das Kind … bringt und … darauf achtet, dass geübt wird."
    },
    {
@@ -2905,11 +2905,11 @@
     "q": "Vilket motargument tar skribenten upp?",
     "opts": [
      "Att barn inte vill spela",
-     "Att kommunerna inte har några pengar",
      "Att musik är ohälsosamt",
-     "Att lärarna tjänar för mycket"
+     "Att lärarna tjänar för mycket",
+     "Att kommunerna inte har några pengar"
     ],
-    "a": 1,
+    "a": 3,
     "why": "Man wird einwenden, dass die Kommunen schlicht kein Geld haben."
    },
    {
@@ -2917,23 +2917,23 @@
     "q": "Vad är ett av de goda exemplen?",
     "opts": [
      "Högre avgifter för alla",
-     "Avgifter graderade efter föräldrarnas inkomst",
      "Att stänga musikskolan på sommaren",
+     "Avgifter graderade efter föräldrarnas inkomst",
      "Att bara undervisa i piano"
     ],
-    "a": 1,
+    "a": 2,
     "why": "Andere haben die Gebühren nach dem Einkommen der Eltern gestaffelt."
    },
    {
     "type": "tolkning",
     "q": "Vad menas med \"Sonntagsreden\"?",
     "opts": [
-     "Tal i kyrkan",
      "Fina ord i högtidliga sammanhang utan handling bakom",
+     "Tal i kyrkan",
      "Radioprogram på söndagar",
      "Tal från barnen"
     ],
-    "a": 1,
+    "a": 0,
     "why": "Uttrycket kritiserar politiker som bara talar vackert om lika möjligheter utan att investera."
    },
    {
@@ -2941,11 +2941,11 @@
     "q": "Vilken stil präglar texten?",
     "opts": [
      "Neutral och opartisk",
-     "Argumenterande och värderande, med tydlig adressat",
      "Juridisk",
-     "Berättande i dåtid"
+     "Berättande i dåtid",
+     "Argumenterande och värderande, med tydlig adressat"
     ],
-    "a": 1,
+    "a": 3,
     "why": "En kommentar tar ställning; slutet vänder sig direkt till kommunfullmäktige."
    }
   ],
@@ -3085,23 +3085,23 @@
     "q": "Vad är det här för text?",
     "opts": [
      "Ett tal",
-     "En analys av ett tal",
      "En nyhetsartikel om en orkester",
+     "En analys av ett tal",
      "Ett brev till kommunen"
     ],
-    "a": 1,
+    "a": 2,
     "why": "Die folgende Analyse bezieht sich auf die Eröffnungsrede …"
    },
    {
     "type": "detalj",
     "q": "Hur börjar talaren sitt tal?",
     "opts": [
-     "Med statistik",
      "Med en personlig anekdot",
+     "Med statistik",
      "Med ett citat av Goethe",
      "Med en retorisk fråga"
     ],
-    "a": 1,
+    "a": 0,
     "why": "nicht mit Zahlen, sondern mit einer Anekdote."
    },
    {
@@ -3110,10 +3110,10 @@
     "opts": [
      "Logos",
      "Pathos",
-     "Ethos",
-     "Klimax"
+     "Klimax",
+     "Ethos"
     ],
-    "a": 2,
+    "a": 3,
     "why": "… persönliche Glaubwürdigkeit … spricht man vom Ethos."
    },
    {
@@ -3145,11 +3145,11 @@
     "q": "Varför föregriper hon invändningar?",
     "opts": [
      "För att förlänga talet",
-     "För att verka kompromissvillig och öka sin övertygelsekraft",
      "För att hon håller med motståndarna",
-     "För att hon vill bli politiker"
+     "För att hon vill bli politiker",
+     "För att verka kompromissvillig och öka sin övertygelsekraft"
     ],
-    "a": 1,
+    "a": 3,
     "why": "Dadurch wirkt sie nicht polemisch, sondern kompromissbereit."
    },
    {
@@ -3168,12 +3168,12 @@
     "type": "detalj",
     "q": "Hur slutar talet?",
     "opts": [
-     "Med en siffra",
      "Med ett musiksolo",
+     "Med en siffra",
      "Med ett skämt",
      "Med en fråga till publiken"
     ],
-    "a": 1,
+    "a": 0,
     "why": "lässt ein Mitglied des Orchesters ein kurzes Solo spielen."
    },
    {
@@ -3181,11 +3181,11 @@
     "q": "Varför var kvällstidningen tvungen att trycka en rättelse?",
     "opts": [
      "Den hade angett fel datum för talet",
-     "Dess rubrik gav en förvrängd bild av talets ton",
      "Den hade citerat fel talare",
-     "Den hade publicerat talet utan tillstånd"
+     "Den hade publicerat talet utan tillstånd",
+     "Dess rubrik gav en förvrängd bild av talets ton"
     ],
-    "a": 1,
+    "a": 3,
     "why": "Rubriken „Studentin droht der Stadt“ var „eine Darstellung, die den Ton der Rede verfälschte“."
    }
   ],
@@ -3314,7 +3314,7 @@
    },
    {
     "fr": "Eine wichtige Rolle spielen außerdem die Algorithmen der Plattformen. Sie zeigen Nutzerinnen und Nutzern bevorzugt Inhalte, die viele Reaktionen hervorrufen, weil die Plattformen an der Aufmerksamkeit verdienen. Ob ein Beitrag wahr ist, spielt für diese Auswahl zunächst keine Rolle. Auf diese Weise können sogenannte Filterblasen entstehen, in denen man immer wieder auf ähnliche Meinungen stößt und abweichende Positionen kaum noch wahrnimmt. Wie stark dieser Effekt tatsächlich ist, wird in der Forschung allerdings kontrovers diskutiert.",
-    "sv": "En viktig roll spelar dessutom plattformarnas algoritmer. De visar helst användarna innehåll som väcker många reaktioner, eftersom plattformarna tjänar på uppmärksamheten. Om ett inlägg är sant spelar till att börja med ingen roll för urvalet. På så sätt kan så kallade filterbubblor uppstå, där man gång på gång stöter på liknande åsikter och knappt längre uppfattar avvikande ståndpunkter. Hur stark denna effekt faktiskt är diskuteras dock kontroversiellt inom forskningen."
+    "sv": "En viktig roll spelar dessutom plattformarnas algoritmer. De visar helst användarna innehåll som väcker många reaktioner, eftersom plattformarna tjänar på uppmärksamheten. Om ett inlägg är sant spelar till att börja med ingen roll för urvalet. På så sätt kan så kallade filterbubblor uppstå, där man gång på gång stöter på liknande åsikter och knappt längre uppfattar avvikande ståndpunkter. Hur stark denna effekt faktiskt är är dock omstritt inom forskningen."
    },
    {
     "fr": "Was kann man dagegen tun? Faktenprüfung durch Redaktionen ist wichtig, erreicht aber oft nicht dieselben Menschen wie die ursprüngliche Falschmeldung. Viele Fachleute setzen deshalb auf Vorbeugung. In Studien hat sich gezeigt, dass Menschen weniger anfällig für Manipulation sind, wenn sie vorher über typische Techniken aufgeklärt worden sind. Man spricht von einer Art „Impfung“ gegen Desinformation.",
@@ -3334,24 +3334,24 @@
     "type": "helhet",
     "q": "Vad är textens huvudsyfte?",
     "opts": [
-     "Att underhålla",
      "Att förklara hur desinformation fungerar och hur man kan skydda sig",
+     "Att underhålla",
      "Att kritisera en viss politiker",
      "Att berätta om internets historia"
     ],
-    "a": 1,
+    "a": 0,
     "why": "Rubriken och uppbyggnaden: orsaker, tekniker och motmedel."
    },
    {
     "type": "detalj",
     "q": "Vad skiljer desinformation från felinformation?",
     "opts": [
-     "Desinformation sprids medvetet för att vilseleda",
      "Desinformation är alltid sann",
      "Felinformation sprids bara i tidningar",
+     "Desinformation sprids medvetet för att vilseleda",
      "Det finns ingen skillnad"
     ],
-    "a": 0,
+    "a": 2,
     "why": "… Desinformation, die bewusst gestreut wird, um zu täuschen oder zu schaden."
    },
    {
@@ -3359,11 +3359,11 @@
     "q": "Vad är bekräftelsefelet?",
     "opts": [
      "Att vi glömmer information",
-     "Att vi hellre godtar information som bekräftar det vi redan tror",
      "Att vi inte litar på någon",
+     "Att vi hellre godtar information som bekräftar det vi redan tror",
      "Att vi läser för snabbt"
     ],
-    "a": 1,
+    "a": 2,
     "why": "… eher zu akzeptieren, wenn sie unsere bestehenden Überzeugungen bestätigen."
    },
    {
@@ -3371,11 +3371,11 @@
     "q": "Vilket innehåll sprids snabbast?",
     "opts": [
      "Sakliga framställningar",
-     "Innehåll som väcker starka känslor",
      "Långa texter",
+     "Innehåll som väcker starka känslor",
      "Vetenskapliga artiklar"
     ],
-    "a": 1,
+    "a": 2,
     "why": "Inhalte, die starke Gefühle wie Empörung oder Angst auslösen, [verbreiten sich] schneller."
    },
    {
@@ -3383,11 +3383,11 @@
     "q": "Vad innebär \"det falska alternativet\"?",
     "opts": [
      "Att man ljuger om siffror",
-     "Att man bara visar två möjligheter fast det finns många",
      "Att man citerar korrekt",
+     "Att man bara visar två möjligheter fast det finns många",
      "Att man ställer många frågor"
     ],
-    "a": 1,
+    "a": 2,
     "why": "… bei der nur zwei Möglichkeiten dargestellt werden, obwohl es viele gibt."
    },
    {
@@ -3395,11 +3395,11 @@
     "q": "Varför räcker inte faktagranskning?",
     "opts": [
      "Den är för dyr",
-     "Den når ofta inte samma människor som det falska meddelandet",
      "Den är alltid fel",
-     "Den är förbjuden"
+     "Den är förbjuden",
+     "Den når ofta inte samma människor som det falska meddelandet"
     ],
-    "a": 1,
+    "a": 3,
     "why": "… erreicht aber oft nicht dieselben Menschen wie die ursprüngliche Falschmeldung."
    },
    {
@@ -3407,11 +3407,11 @@
     "q": "Vad menas med \"Impfung\" gegen Desinformation?",
     "opts": [
      "En medicin",
-     "Att man i förväg lär sig känna igen manipulationstekniker",
      "Att man slutar använda internet",
-     "Att staten förbjuder falska nyheter"
+     "Att staten förbjuder falska nyheter",
+     "Att man i förväg lär sig känna igen manipulationstekniker"
     ],
-    "a": 1,
+    "a": 3,
     "why": "… weniger anfällig …, wenn sie vorher über typische Techniken aufgeklärt worden sind."
    },
    {
@@ -3419,11 +3419,11 @@
     "q": "Varför nämner texten frågan \"Welches Gefühl will dieser Beitrag bei mir auslösen?\" som särskilt viktig?",
     "opts": [
      "För att känslor alltid är fel",
-     "För att desinformation ofta spelar på starka känslor",
      "För att man ska dela mer",
-     "För att bilder saknar känslor"
+     "För att bilder saknar känslor",
+     "För att desinformation ofta spelar på starka känslor"
     ],
-    "a": 1,
+    "a": 3,
     "why": "Tidigare i texten: innehåll som väcker starka känslor sprids snabbare."
    }
   ],
@@ -3530,8 +3530,8 @@
     "sv": "Den som går genom tyska städer stöter gång på gång på små mässingsplattor i trottoaren, knappt större än en gatsten. På dem står namn, födelseår och öden: \"Här bodde Ruth Levi, född 1921, deporterad 1942, mördad i Auschwitz.\""
    },
    {
-    "fr": "Die Stolpersteine sind ein Projekt des Künstlers Gunter Demnig, der 1992 den ersten Stein verlegte. Inzwischen liegen über 100 000 Steine in mehr als zwanzig Ländern Europas; das Projekt gilt als das größte dezentrale Mahnmal der Welt.",
-    "sv": "Snubbelstenarna är ett projekt av konstnären Gunter Demnig, som lade den första stenen 1992. I dag ligger över 100 000 stenar i fler än tjugo europeiska länder; projektet räknas som världens största decentraliserade minnesmärke."
+    "fr": "Die Stolpersteine sind ein Projekt des Künstlers Gunter Demnig, der es 1992 ins Leben rief. Inzwischen liegen über 100 000 Steine in mehr als zwanzig Ländern Europas; das Projekt gilt als das größte dezentrale Mahnmal der Welt.",
+    "sv": "Snubbelstenarna är ett projekt av konstnären Gunter Demnig, som startade det 1992. I dag ligger över 100 000 stenar i fler än tjugo europeiska länder; projektet räknas som världens största decentraliserade minnesmärke."
    },
    {
     "fr": "Die Idee ist einfach und gerade deshalb wirkungsvoll. Die Steine erinnern nicht an einem zentralen Ort an die Millionen Opfer des Nationalsozialismus, sondern dort, wo einzelne Menschen gelebt haben: vor ihrer letzten frei gewählten Wohnung. Aus einer abstrakten Zahl wird so eine Nachbarin, ein Schüler, ein Geiger aus dem städtischen Orchester.",
@@ -3539,7 +3539,7 @@
    },
    {
     "fr": "Oft recherchieren Schulklassen oder Bürgerinitiativen die Biographien, bevor ein Stein verlegt wird. Sie durchsuchen Archive, schreiben an Angehörige im Ausland und laden Nachfahren zur Verlegung ein. Diese Erinnerungsarbeit ist mindestens so wichtig wie der Stein selbst.",
-    "sv": "Ofta forskar skolklasser eller medborgarinitiativ fram biografierna innan en sten läggs. De söker i arkiv, skriver till anhöriga utomlands och bjuder in ättlingar till nedläggningen. Det här minnesarbetet är minst lika viktigt som själva stenen."
+    "sv": "Ofta forskar skolklasser eller medborgarinitiativ fram biografierna innan en sten läggs. De söker i arkiv, skriver till anhöriga utomlands och bjuder in ättlingar till läggningen av stenen. Det här minnesarbetet är minst lika viktigt som själva stenen."
    },
    {
     "fr": "Eine Verlegung folgt meist einem festen Ablauf. Demnig oder ein Mitglied seines Teams öffnet den Gehweg, setzt den Stein ein und verschließt die Stelle wieder. Währenddessen lesen Jugendliche die Biographie vor, manchmal spielt jemand ein Stück auf der Geige oder der Klarinette, und Angehörige aus Israel, den USA oder Großbritannien sprechen ein paar Worte. Nach der Zeremonie bleiben oft Blumen und Kerzen neben dem frisch verlegten Stein zurück. Finanziert wird jeder Stein durch eine Patenschaft von rund 120 Euro, die Privatpersonen, Schulen oder Vereine übernehmen.",
@@ -3564,16 +3564,16 @@
     "q": "Vad handlar texten om?",
     "opts": [
      "Ett nytt museum i Berlin",
-     "Snubbelstenarna som minnesprojekt och debatten om dem",
      "Hur man lägger gatsten",
+     "Snubbelstenarna som minnesprojekt och debatten om dem",
      "En konstnärs liv"
     ],
-    "a": 1,
+    "a": 2,
     "why": "Texten beskriver projektet, idén, arbetet och kritiken."
    },
    {
     "type": "detalj",
-    "q": "När lades den första stenen?",
+    "q": "När startade projektet?",
     "opts": [
      "1945",
      "1992",
@@ -3581,18 +3581,18 @@
      "2012"
     ],
     "a": 1,
-    "why": "der 1992 den ersten Stein verlegte."
+    "why": "… der es 1992 ins Leben rief."
    },
    {
     "type": "detalj",
     "q": "Var ligger stenarna?",
     "opts": [
      "På kyrkogårdar",
-     "Utanför offrens sista frivilligt valda bostad",
      "Bara i Berlin",
-     "I museer"
+     "I museer",
+     "Utanför offrens sista frivilligt valda bostad"
     ],
-    "a": 1,
+    "a": 3,
     "why": "vor ihrer letzten frei gewählten Wohnung."
    },
    {
@@ -3623,12 +3623,12 @@
     "type": "detalj",
     "q": "Varför tillät München länge inga stenar?",
     "opts": [
-     "För att de var för dyra",
      "För att man ansåg det ovärdigt att trampa på namnen",
+     "För att de var för dyra",
      "För att de störde trafiken",
      "För att konstnären inte ville"
     ],
-    "a": 1,
+    "a": 0,
     "why": "… als unwürdig empfand, dass Passanten auf die Namen der Ermordeten treten."
    },
    {
@@ -3636,11 +3636,11 @@
     "q": "Vilket motargument har förespråkarna?",
     "opts": [
      "Att stenarna är billiga",
-     "Att man måste buga sig för att läsa namnet",
      "Att turister gillar dem",
+     "Att man måste buga sig för att läsa namnet",
      "Att de är lätta att putsa"
     ],
-    "a": 1,
+    "a": 2,
     "why": "wer den Namen lesen wolle, müsse sich verbeugen."
    },
    {
@@ -3648,11 +3648,11 @@
     "q": "Vad visar det att grannar putsar stenarna?",
     "opts": [
      "Att staden inte sköter dem",
-     "Att många ser minnet som sin egen uppgift",
      "Att stenarna är smutsiga",
-     "Att det är en tradition från 1800-talet"
+     "Att det är en tradition från 1800-talet",
+     "Att många ser minnet som sin egen uppgift"
     ],
-    "a": 1,
+    "a": 3,
     "why": "… die Erinnerung als eigene Aufgabe begreifen."
    },
    {
@@ -3796,7 +3796,7 @@
    },
    {
     "fr": "Als historische Quelle ist das Buch mit Vorsicht zu lesen. Zweig schrieb im Exil, ohne Zugang zu seinen Tagebüchern und Briefen, und aus der Perspektive eines Mannes, der alles verloren hatte. Die Vorkriegszeit erscheint deshalb in einem Licht, das die sozialen Konflikte jener Jahre, etwa die Armut der Arbeiter oder den zunehmenden Antisemitismus in der Wiener Politik, eher am Rande behandelt. Historikerinnen und Historiker haben darauf hingewiesen, dass die „Sicherheit“ nur für einen kleinen Teil der Bevölkerung galt.",
-    "sv": "Som historisk källa ska boken läsas med försiktighet. Zweig skrev i exil, utan tillgång till sina dagböcker och brev, och ur perspektivet hos en man som hade förlorat allt. Förkrigstiden framstår därför i ett ljus som snarast behandlar den tidens sociala konflikter, till exempel arbetarnas fattigdom eller den tilltagande antisemitismen i Wiens politik, i marginalen. Historiker har påpekat att \"tryggheten\" bara gällde en liten del av befolkningen."
+    "sv": "Som historisk källa ska boken läsas med försiktighet. Zweig skrev i exil, utan tillgång till sina dagböcker och brev, och ur perspektivet hos en man som hade förlorat allt. Förkrigstiden framställs därför på ett sätt där den tidens sociala konflikter, till exempel arbetarnas fattigdom eller den tilltagande antisemitismen i Wiens politik, snarast hamnar i marginalen. Historiker har påpekat att \"tryggheten\" bara gällde en liten del av befolkningen."
    },
    {
     "fr": "Dennoch ist „Die Welt von Gestern“ ein wichtiges Dokument der Erinnerungskultur. Es zeigt nicht nur, was verloren ging, sondern auch, wie schnell eine scheinbar stabile Gesellschaft zerbrechen kann. Viele Leserinnen und Leser verstehen das Buch deshalb heute als Warnung und zugleich als Bekenntnis zu einem geeinten, friedlichen Europa, von dem Zweig sein Leben lang träumte.",
@@ -3808,12 +3808,12 @@
     "type": "helhet",
     "q": "Vad presenterar texten?",
     "opts": [
-     "En roman om första världskriget",
      "Stefan Zweigs memoarer och hur man kan läsa dem",
+     "En roman om första världskriget",
      "En biografi om Lotte Zweig",
      "En resehandbok om Wien"
     ],
-    "a": 1,
+    "a": 0,
     "why": "Texten presenterar Die Welt von Gestern, citerar den och diskuterar den som källa."
    },
    {
@@ -3821,11 +3821,11 @@
     "q": "Var kom boken ut första gången?",
     "opts": [
      "I Wien",
-     "I Stockholm",
      "I New York",
-     "I Petrópolis"
+     "I Petrópolis",
+     "I Stockholm"
     ],
-    "a": 1,
+    "a": 3,
     "why": "Das Buch erschien noch im selben Jahr in Stockholm."
    },
    {
@@ -3833,11 +3833,11 @@
     "q": "Varför lämnade Zweig Österrike 1934?",
     "opts": [
      "Han fick ett jobb i London",
-     "Som jude och pacifist hotades han, och hans böcker förbjöds",
      "Han ville bli brasiliansk medborgare",
-     "Han var sjuk"
+     "Han var sjuk",
+     "Som jude och pacifist hotades han, och hans böcker förbjöds"
     ],
-    "a": 1,
+    "a": 3,
     "why": "Nach 1933 wurden seine Bücher … verbrannt und verboten; als Jude und überzeugter Pazifist verließ er 1934 Österreich."
    },
    {
@@ -3845,11 +3845,11 @@
     "q": "Hur beskriver Zweig tiden före första världskriget?",
     "opts": [
      "Som krisens tid",
-     "Som trygghetens gyllene tidsålder",
      "Som en fattig tid",
-     "Som en revolutionär tid"
+     "Som en revolutionär tid",
+     "Som trygghetens gyllene tidsålder"
     ],
-    "a": 1,
+    "a": 3,
     "why": "… es war das goldene Zeitalter der Sicherheit."
    },
    {
@@ -3857,23 +3857,23 @@
     "q": "Vad intresserade Wiens borgerskap sig enligt Zweig mest för?",
     "opts": [
      "Politik",
-     "Opera och teater",
      "Sport",
-     "Handel"
+     "Handel",
+     "Opera och teater"
     ],
-    "a": 1,
+    "a": 3,
     "why": "… habe sich weniger für Politik als für die Oper und das Burgtheater interessiert."
    },
    {
     "type": "tolkning",
     "q": "Varför ska boken läsas med försiktighet som historisk källa?",
     "opts": [
-     "Zweig ljög medvetet",
      "Han skrev ur minnet i exil och tonade ned sociala konflikter",
+     "Zweig ljög medvetet",
      "Boken är en roman",
      "Den är översatt"
     ],
-    "a": 1,
+    "a": 0,
     "why": "… ohne Zugang zu seinen Tagebüchern und Briefen … die sozialen Konflikte … eher am Rande."
    },
    {
@@ -3881,23 +3881,23 @@
     "q": "Vad visade sig om \"tryggheten\"?",
     "opts": [
      "Att den gällde hela befolkningen",
-     "Att den var bedräglig och bara gällde en liten del av befolkningen",
      "Att den varade till 1942",
-     "Att den var Zweigs uppfinning"
+     "Att den var Zweigs uppfinning",
+     "Att den var bedräglig och bara gällde en liten del av befolkningen"
     ],
-    "a": 1,
+    "a": 3,
     "why": "Gerade diese Sicherheit erwies sich als trügerisch … nur für einen kleinen Teil der Bevölkerung galt."
    },
    {
     "type": "tolkning",
     "q": "Hur läses boken ofta i dag?",
     "opts": [
-     "Som en humoristisk roman",
      "Som en varning och en bekännelse till ett enat, fredligt Europa",
+     "Som en humoristisk roman",
      "Som en handbok för resor",
      "Som en politisk partiskrift"
     ],
-    "a": 1,
+    "a": 0,
     "why": "… als Warnung und zugleich als Bekenntnis zu einem geeinten, friedlichen Europa."
    }
   ],

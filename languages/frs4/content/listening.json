@@ -45,6 +45,11 @@
     "sv": "Du har rätt. Om hon ser att jag har planerat allt kommer hon att tvivla mindre."
    },
    {
+    "who": "B",
+    "fr": "Et puis, après un an à l'étranger, je serai plus indépendante. Je saurai faire mes courses, payer un loyer, me débrouiller seule. Ça aussi, c'est important pour l'avenir, non ?",
+    "sv": "Och efter ett år utomlands blir jag mer självständig. Jag kommer att kunna handla, betala hyra och klara mig själv. Det är också viktigt för framtiden, eller hur?"
+   },
+   {
     "who": "A",
     "fr": "Et toi, tu sais que moi, je vais faire un BTS en commerce ? J'ai reçu la réponse hier.",
     "sv": "Och du, vet du att jag ska gå en yrkesutbildning inom handel? Jag fick svaret i går."
@@ -53,11 +58,6 @@
     "who": "B",
     "fr": "Félicitations ! Tu dois être fier. On fête ça samedi ?",
     "sv": "Grattis! Du måste vara stolt. Ska vi fira det på lördag?"
-   },
-   {
-    "who": "B",
-    "fr": "Et puis, après un an à l'étranger, je serai plus indépendante. Je saurai faire mes courses, payer un loyer, me débrouiller seule. Ça aussi, c'est important pour l'avenir, non ?",
-    "sv": "Och efter ett år utomlands blir jag mer självständig. Jag kommer att kunna handla, betala hyra och klara mig själv. Det är också viktigt för framtiden, eller hur?"
    },
    {
     "who": "A",
@@ -259,8 +259,8 @@
    },
    {
     "who": "A",
-    "fr": "Merci beaucoup, madame. Je vous l'envoie ce soir.",
-    "sv": "Tack så mycket. Jag skickar det i kväll."
+    "fr": "Merci beaucoup, madame. Je vous les envoie ce soir.",
+    "sv": "Tack så mycket. Jag skickar dem i kväll."
    }
   ],
   "questions": [
@@ -462,13 +462,13 @@
    },
    {
     "who": "A",
-    "fr": "Et Théo, alors ? Qu'est-ce qu'il a dit ?",
-    "sv": "Och Théo då? Vad sa han?"
+    "fr": "Tu sais, moi aussi, je me suis disputée avec ma meilleure amie l'année dernière. On ne s'est pas parlé pendant un mois, et finalement c'était un malentendu. Depuis, on se dit toujours les choses directement.",
+    "sv": "Du vet, jag grälade också med min bästa vän förra året. Vi pratade inte med varandra på en månad, och till slut var det ett missförstånd. Sedan dess säger vi alltid saker direkt till varandra."
    },
    {
     "who": "A",
-    "fr": "Tu sais, moi aussi, je me suis disputée avec ma meilleure amie l'année dernière. On ne s'est pas parlé pendant un mois, et finalement c'était un malentendu. Depuis, on se dit toujours les choses directement.",
-    "sv": "Du vet, jag grälade också med min bästa vän förra året. Vi pratade inte med varandra på en månad, och till slut var det ett missförstånd. Sedan dess säger vi alltid saker direkt till varandra."
+    "fr": "Et Théo, alors ? Qu'est-ce qu'il a dit ?",
+    "sv": "Och Théo då? Vad sa han?"
    },
    {
     "who": "B",
@@ -649,14 +649,14 @@
     "sv": "I dag kommer jag väldigt bra överens med dem. Vi delar till och med våra serier! Och Noé älskar jag. När jag åker till min pappa gråter han."
    },
    {
-    "who": "A",
-    "fr": "Qu'est-ce que tu conseillerais aux jeunes qui vivent la même chose ?",
-    "sv": "Vad skulle du råda unga som går igenom samma sak?"
-   },
-   {
     "who": "B",
     "fr": "Le plus dur, c'est l'organisation. Mes affaires sont dans deux maisons, et j'oublie toujours quelque chose : mon chargeur, mes livres, mon maillot de foot… Mais maintenant, j'ai deux brosses à dents et deux chargeurs !",
     "sv": "Det svåraste är att få ihop det. Mina saker finns i två hus, och jag glömmer alltid något: laddaren, böckerna, fotbollströjan … Men nu har jag två tandborstar och två laddare!"
+   },
+   {
+    "who": "A",
+    "fr": "Qu'est-ce que tu conseillerais aux jeunes qui vivent la même chose ?",
+    "sv": "Vad skulle du råda unga som går igenom samma sak?"
    },
    {
     "who": "B",
@@ -1030,14 +1030,14 @@
     "sv": "Min moster har varit volontär länge. Hon föreslog att jag skulle följa med en gång, och jag fick lust att fortsätta. Jag känner mig till nytta och jag har träffat fantastiska människor."
    },
    {
-    "who": "A",
-    "fr": "Ils cherchent encore des bénévoles ?",
-    "sv": "Söker de fler volontärer?"
-   },
-   {
     "who": "B",
     "fr": "La semaine dernière, une dame âgée m'a raconté qu'elle avait été infirmière pendant quarante ans. Avec sa petite retraite, elle n'arrive plus à payer son loyer et ses repas. Ça m'a vraiment touché.",
     "sv": "Förra veckan berättade en äldre dam för mig att hon hade varit sjuksköterska i fyrtio år. Med sin lilla pension klarar hon inte längre att betala både hyra och mat. Det berörde mig verkligen."
+   },
+   {
+    "who": "A",
+    "fr": "Ils cherchent encore des bénévoles ?",
+    "sv": "Söker de fler volontärer?"
    },
    {
     "who": "B",
@@ -1214,11 +1214,6 @@
    },
    {
     "who": "A",
-    "fr": "Et si tu devais choisir ?",
-    "sv": "Och om du var tvungen att välja?"
-   },
-   {
-    "who": "A",
     "fr": "Et le jour de Noël, qu'est-ce que vous faites en Suède ? Ici, on reste en famille, on finit les restes du réveillon et on fait une longue promenade.",
     "sv": "Och på juldagen, vad gör ni i Sverige? Här är vi med familjen, äter upp resterna från julaftonsmiddagen och tar en lång promenad."
    },
@@ -1226,6 +1221,11 @@
     "who": "B",
     "fr": "Nous aussi, c'est un jour calme. Certains vont à l'église très tôt le matin, mais chez moi, on dort longtemps !",
     "sv": "Hos oss är det också en lugn dag. En del går i kyrkan väldigt tidigt på morgonen, men hemma hos mig sover vi länge!"
+   },
+   {
+    "who": "A",
+    "fr": "Et si tu devais choisir ?",
+    "sv": "Och om du var tvungen att välja?"
    },
    {
     "who": "B",
@@ -1398,12 +1398,17 @@
    {
     "who": "B",
     "fr": "Oui, beaucoup ! Après la mairie, les voitures klaxonnent dans toute la ville. Et Samir est d'origine algérienne, donc on mélange les deux cultures : il y aura de la musique raï et des pâtisseries orientales à côté de la pièce montée.",
-    "sv": "Ja, många! Efter rådhuset tutar bilarna i hela stan. Och Samir har algeriskt ursprung, så vi blandar de två kulturerna: det blir raïmusik och orientaliska bakverk bredvid gräddtårtan."
+    "sv": "Ja, många! Efter rådhuset tutar bilarna i hela stan. Och Samir har algeriskt ursprung, så vi blandar de två kulturerna: det blir raïmusik och orientaliska bakverk bredvid den traditionella bröllopstårtan."
    },
    {
     "who": "A",
     "fr": "La pièce montée ?",
     "sv": "Pièce montée?"
+   },
+   {
+    "who": "B",
+    "fr": "C'est un grand gâteau traditionnel, fait de petits choux à la crème.",
+    "sv": "Det är en stor traditionell tårta gjord av små petit-chouer med kräm."
    },
    {
     "who": "A",
@@ -1412,13 +1417,8 @@
    },
    {
     "who": "B",
-    "fr": "De voir mes deux familles ensemble. Ma mère parle avec la grand-mère de Samir depuis une heure, et elles ne se connaissaient pas avant !",
-    "sv": "Att se mina två familjer tillsammans. Min mamma har pratat med Samirs mormor i en timme, och de kände inte varandra förut!"
-   },
-   {
-    "who": "B",
-    "fr": "C'est un grand gâteau traditionnel, fait de petits choux à la crème. Ah, excusez-moi, les mariés arrivent !",
-    "sv": "Det är en stor traditionell tårta gjord av små petit-chouer med kräm. Oj, ursäkta mig, brudparet kommer!"
+    "fr": "De voir les deux familles ensemble. Ma mère parle avec la grand-mère de Samir depuis une heure, et elles ne se connaissaient pas avant ! Ah, excusez-moi, les mariés arrivent !",
+    "sv": "Att se båda familjerna tillsammans. Min mamma har pratat med Samirs mormor i en timme, och de kände inte varandra förut! Oj, ursäkta mig, brudparet kommer!"
    }
   ],
   "questions": [
@@ -2004,7 +2004,7 @@
    },
    "manquent": {
     "t": "manquer à",
-    "sv": "saknas av",
+    "sv": "fattas, saknas (för någon)",
     "g": ""
    },
    "regrettez": {
@@ -2061,11 +2061,6 @@
    },
    {
     "who": "A",
-    "fr": "Un conseil pour les jeunes qui rêvent de faire ton métier ?",
-    "sv": "Ett råd till unga som drömmer om att göra samma jobb?"
-   },
-   {
-    "who": "A",
     "fr": "Combien de temps est-ce que tu passes sur une vidéo ?",
     "sv": "Hur lång tid lägger du på en video?"
    },
@@ -2073,6 +2068,11 @@
     "who": "B",
     "fr": "Beaucoup plus qu'on ne le croit ! Pour une vidéo d'une minute, il me faut parfois une journée entière : je cuisine, je filme, je fais le montage et j'écris le texte.",
     "sv": "Mycket mer än man tror! För en video på en minut behöver jag ibland en hel dag: jag lagar maten, filmar, klipper och skriver texten."
+   },
+   {
+    "who": "A",
+    "fr": "Un conseil pour les jeunes qui rêvent de faire ton métier ?",
+    "sv": "Ett råd till unga som drömmer om att göra samma jobb?"
    },
    {
     "who": "B",
@@ -2284,7 +2284,7 @@
    },
    {
     "who": "C",
-    "fr": "Mais pourquoi les gens créent des fausses informations ?",
+    "fr": "Mais pourquoi les gens créent de fausses informations ?",
     "sv": "Men varför skapar folk falska nyheter?"
    },
    {
@@ -2700,18 +2700,18 @@
    },
    {
     "who": "A",
-    "fr": "Et quel conseil donneriez-vous à nos jeunes auditeurs qui rêvent d'écrire ?",
-    "sv": "Och vilket råd skulle du ge våra unga lyssnare som drömmer om att skriva?"
-   },
-   {
-    "who": "A",
     "fr": "Et comment avez-vous trouvé un éditeur ?",
-    "sv": "Och hur hittade ni ett förlag?"
+    "sv": "Och hur hittade du ett förlag?"
    },
    {
     "who": "B",
     "fr": "J'ai envoyé mon manuscrit à quinze maisons d'édition. Douze ont dit non, deux n'ont jamais répondu, et une petite maison de Lyon a accepté. J'ai sauté de joie dans ma cuisine !",
     "sv": "Jag skickade mitt manus till femton förlag. Tolv sa nej, två svarade aldrig, och ett litet förlag i Lyon tackade ja. Jag hoppade av glädje i köket!"
+   },
+   {
+    "who": "A",
+    "fr": "Et quel conseil donneriez-vous à nos jeunes auditeurs qui rêvent d'écrire ?",
+    "sv": "Och vilket råd skulle du ge våra unga lyssnare som drömmer om att skriva?"
    },
    {
     "who": "B",
@@ -2903,8 +2903,8 @@
    },
    {
     "who": "B",
-    "fr": "Un peu, oui : quatorze heures depuis Paris. Mais on dort dans une couchette, et le matin, on se réveille en Italie. Pour moi, ça fait partie du voyage.",
-    "sv": "Lite, ja: fjorton timmar från Paris. Men vi sover i en liggvagn, och på morgonen vaknar vi i Italien. För mig är det en del av resan."
+    "fr": "Un peu, oui : quatorze heures en tout. Mais on dort dans une couchette, et le matin, on se réveille en Italie. Pour moi, ça fait partie du voyage.",
+    "sv": "Lite, ja: fjorton timmar totalt. Men vi sover i en liggvagn, och på morgonen vaknar vi i Italien. För mig är det en del av resan."
    },
    {
     "who": "A",
@@ -2975,7 +2975,7 @@
      "Fyrtio timmar"
     ],
     "a": 1,
-    "why": "« quatorze heures depuis Paris »."
+    "why": "« quatorze heures en tout »."
    },
    {
     "type": "detalj",
@@ -3151,11 +3151,6 @@
    },
    {
     "who": "A",
-    "fr": "Que diriez-vous à nos auditeurs ?",
-    "sv": "Vad skulle du säga till våra lyssnare?"
-   },
-   {
-    "who": "A",
     "fr": "Et les jeunes du quartier participent aussi ?",
     "sv": "Och är ungdomarna i kvarteret också med?"
    },
@@ -3163,6 +3158,11 @@
     "who": "B",
     "fr": "Oui, de plus en plus. Aujourd'hui, il y a même une classe de collège avec son professeur de sciences.",
     "sv": "Ja, allt fler. I dag är till och med en högstadieklass här med sin NO-lärare."
+   },
+   {
+    "who": "A",
+    "fr": "Que diriez-vous à nos auditeurs ?",
+    "sv": "Vad skulle du säga till våra lyssnare?"
    },
    {
     "who": "B",

@@ -7,9 +7,9 @@
   "alt": [
    "son",
    "ses",
-   "leur"
+   "leurs"
   ],
-  "why": "Famille är femininum singular, alltså sa. Son/sa/ses rättar sig efter det ägda, inte efter ägaren.",
+  "why": "Famille är femininum singular, alltså sa. Son/sa/ses rättar sig efter det ägda, inte efter ägaren, och leurs kräver ett ägt i plural.",
   "sv": "Aminata bor i Paris, men hennes familj stannade kvar i Dakar."
  },
  {
@@ -20,9 +20,9 @@
   "alt": [
    "sa",
    "ses",
-   "leur"
+   "leurs"
   ],
-  "why": "Livre är maskulinum singular, alltså son. Ses används bara om det ägda står i plural.",
+  "why": "Livre är maskulinum singular, alltså son. Ses och leurs används bara om det ägda står i plural.",
   "sv": "Karim glömde sin bok i skolbiblioteket."
  },
  {
@@ -32,10 +32,10 @@
   "q": "Léa et Tom, vous avez [votre] billet de train ?",
   "alt": [
    "vos",
-   "leur",
-   "notre"
+   "ta",
+   "vôtre"
   ],
-  "why": "Ni (vous) äger, och varje person har ett billet i singular: votre. Vos används när det ägda står i plural.",
+  "why": "Ni (vous) äger, och billet står i singular: votre. Vos används när det ägda står i plural, och le vôtre är ett pronomen som inte kan stå före ett substantiv.",
   "sv": "Léa och Tom, har ni er tågbiljett?"
  },
  {
@@ -45,10 +45,10 @@
   "q": "Mes parents adorent [leur] nouvelle maison à Nice.",
   "alt": [
    "leurs",
-   "sa",
-   "son"
+   "son",
+   "ses"
   ],
-  "why": "Flera ägare (mes parents) och ett ägt (une maison): leur. Leurs används när det ägda står i plural, sa/son när ägaren är en person.",
+  "why": "Flera ägare (mes parents) och ett ägt (une maison): leur. Leurs och ses kräver ett ägt i plural, och son passar inte före nouvelle (femininum, konsonant).",
   "sv": "Mina föräldrar älskar sitt nya hus i Nice."
  },
  {
@@ -58,10 +58,10 @@
   "q": "Nous allons présenter [notre] projet sur le Sénégal demain.",
   "alt": [
    "nos",
-   "votre",
-   "leur"
+   "nôtre",
+   "leurs"
   ],
-  "why": "Vi äger ett projekt i singular: notre. Nos används bara framför plural.",
+  "why": "Vi äger ett projekt i singular: notre. Nos används bara framför plural, och le nôtre är ett pronomen utan substantiv efter sig.",
   "sv": "Vi ska presentera vårt projekt om Senegal i morgon."
  },
  {
@@ -72,10 +72,10 @@
   "alt": [
    "ton",
    "tes",
-   "sa"
+   "te"
   ],
-  "why": "Valise är femininum singular och börjar på konsonant, alltså ta. Sa betyder hans/hennes, inte din.",
-  "sv": "Kan du låna mig din resväska till resan?"
+  "why": "Valise är femininum singular och börjar på konsonant, alltså ta. Ton används framför maskulinum eller vokal, tes framför plural.",
+  "sv": "Kan du låna ut din resväska till mig inför resan?"
  },
  {
   "id": "poss-007",
@@ -85,7 +85,7 @@
   "alt": [
    "sa",
    "ses",
-   "leur"
+   "leurs"
   ],
   "why": "Père är maskulinum, alltså son, fast ägaren (Monique) är en kvinna. Possessivet rättar sig efter det ägda.",
   "sv": "Monique vann tävlingen tack vare sin pappa."
@@ -98,9 +98,9 @@
   "alt": [
    "son",
    "ses",
-   "leur"
+   "leurs"
   ],
-  "why": "Directrice är femininum singular, alltså sa, fast ägaren är en man.",
+  "why": "Directrice är femininum singular, alltså sa, fast ägaren är en man. Son passar inte före en konsonant i femininum, och ses och leurs kräver plural.",
   "sv": "Skidläraren pratar med sin chef."
  },
  {
@@ -110,10 +110,10 @@
   "q": "Les élèves ont rendu [leur] devoir au professeur.",
   "alt": [
    "leurs",
-   "son",
+   "sa",
    "ses"
   ],
-  "why": "Flera ägare (les élèves) och devoir i singular: leur. Med leurs skulle devoir också behöva stå i plural (leurs devoirs).",
+  "why": "Flera ägare (les élèves) och devoir i singular: leur. Med leurs skulle devoir också behöva stå i plural (leurs devoirs). Sa och ses passar inte till ett maskulint ord i singular.",
   "sv": "Eleverna lämnade in sin läxa till läraren."
  },
  {
@@ -124,7 +124,7 @@
   "alt": [
    "ma",
    "mes",
-   "son"
+   "me"
   ],
   "why": "Téléphone är maskulinum singular: mon. Ma används för femininum och mes för plural.",
   "sv": "Jag letar efter min telefon överallt!"
@@ -137,7 +137,7 @@
   "alt": [
    "sa",
    "ses",
-   "leur"
+   "leurs"
   ],
   "why": "Pays är maskulinum singular (le pays), alltså son. Pays slutar på -s men är inte plural här.",
   "sv": "Senghor skrev många dikter om sitt land, Senegal."
@@ -149,10 +149,10 @@
   "q": "Ils vivent en France, mais [leur] cœur est en Afrique.",
   "alt": [
    "leurs",
-   "son",
-   "sa"
+   "sa",
+   "ses"
   ],
-  "why": "Flera ägare (ils) och cœur i singular: leur. Son/sa används bara när ägaren är en person.",
+  "why": "Flera ägare (ils) och cœur i singular: leur. Leurs och ses kräver plural, och sa passar inte till ett maskulint ord.",
   "sv": "De bor i Frankrike, men deras hjärta finns i Afrika."
  },
  {
@@ -163,9 +163,9 @@
   "alt": [
    "sa",
    "son",
-   "leurs"
+   "leur"
   ],
-  "why": "Chansons står i plural, alltså ses. Leurs används bara när ägarna är flera.",
+  "why": "Chansons står i plural, alltså ses. Sa och son används bara framför singular, och leur kräver både flera ägare och ett ägt i singular.",
   "sv": "Youssou N'Dour sjunger ofta på wolof i sina låtar."
  },
  {
@@ -175,10 +175,10 @@
   "q": "Nous avons invité [nos] amis sénégalais au restaurant.",
   "alt": [
    "notre",
-   "vos",
-   "leurs"
+   "nôtres",
+   "leur"
   ],
-  "why": "Vi äger, och amis står i plural: nos. Notre används bara framför singular.",
+  "why": "Vi äger, och amis står i plural: nos. Notre används bara framför singular, och les nôtres är ett pronomen utan substantiv efter sig.",
   "sv": "Vi bjöd våra senegalesiska vänner på restaurang."
  },
  {
@@ -188,10 +188,10 @@
   "q": "Les grands-parents de Fatou racontent [leurs] souvenirs de Dakar.",
   "alt": [
    "leur",
-   "ses",
-   "sa"
+   "sa",
+   "son"
   ],
-  "why": "Flera ägare (les grands-parents) och flera minnen (souvenirs): leurs. Leur används när det ägda står i singular.",
+  "why": "Flera ägare (les grands-parents) och flera minnen (souvenirs): leurs. Leur, sa och son används när det ägda står i singular.",
   "sv": "Fatous morföräldrar berättar om sina minnen från Dakar."
  },
  {
@@ -202,9 +202,9 @@
   "alt": [
    "ta",
    "ton",
-   "ses"
+   "te"
   ],
-  "why": "Chaussures står i plural: tes, oavsett genus. Ses betyder hans/hennes.",
+  "why": "Chaussures står i plural: tes, oavsett genus. Ta och ton används bara framför singular.",
   "sv": "Har du lagt dina pjäxor i väskan?"
  },
  {
@@ -214,10 +214,10 @@
   "q": "Madame, vous avez [vos] papiers pour l'entretien ?",
   "alt": [
    "votre",
-   "nos",
-   "leurs"
+   "leur",
+   "sa"
   ],
-  "why": "Man säger vous till kvinnan, och papiers står i plural: vos. Votre används framför singular.",
+  "why": "Man säger vous till kvinnan, och papiers står i plural: vos. Votre, leur och sa används framför singular.",
   "sv": "Har ni era papper till intervjun?"
  },
  {
@@ -228,7 +228,7 @@
   "alt": [
    "ma",
    "mon",
-   "ses"
+   "me"
   ],
   "why": "Livres står i plural: mes. Mon och ma används bara framför singular.",
   "sv": "Jag lämnade mina böcker hos min mormor."
@@ -241,9 +241,9 @@
   "alt": [
    "son",
    "sa",
-   "leurs"
+   "leur"
   ],
-  "why": "En ägare (Aminata) och flera föräldrar: ses. Leurs skulle betyda att ägarna är flera.",
+  "why": "En ägare (Aminata) och flera föräldrar: ses. Son och sa används framför singular, och leur kräver flera ägare och ett ägt i singular.",
   "sv": "Aminata skickar bilder till sina föräldrar varje vecka."
  },
  {
@@ -253,10 +253,10 @@
   "q": "Les deux sœurs parlent souvent de [leurs] racines africaines.",
   "alt": [
    "leur",
-   "ses",
-   "sa"
+   "sa",
+   "son"
   ],
-  "why": "Flera ägare (les deux sœurs) och racines i plural: leurs. Ses används när ägaren är en person.",
+  "why": "Flera ägare (les deux sœurs) och racines i plural: leurs. Leur, sa och son används när det ägda står i singular.",
   "sv": "De två systrarna pratar ofta om sina afrikanska rötter."
  },
  {
@@ -266,10 +266,10 @@
   "q": "Nous avons enfin fini [nos] examens !",
   "alt": [
    "notre",
-   "vos",
-   "leurs"
+   "nôtres",
+   "leur"
   ],
-  "why": "Vi äger, och examens står i plural: nos. Vos betyder era.",
+  "why": "Vi äger, och examens står i plural: nos. Notre används framför singular, och les nôtres är ett pronomen.",
   "sv": "Vi är äntligen klara med våra prov!"
  },
  {
@@ -280,9 +280,9 @@
   "alt": [
    "sa",
    "son",
-   "leurs"
+   "leur"
   ],
-  "why": "Qualités står i plural: ses, oavsett genus. Leurs används när ägarna är flera.",
+  "why": "Qualités står i plural: ses, oavsett genus. Sa, son och leur används framför singular.",
   "sv": "Under intervjun presenterade hon sina goda sidor."
  },
  {
@@ -815,7 +815,7 @@
    "Afrique"
   ],
   "why": "Une Africaine = en afrikansk kvinna, en person. Därför stor bokstav.",
-  "sv": "Aminata är en afrikanska som bor i Frankrike."
+  "sv": "Aminata är en afrikansk kvinna som bor i Frankrike."
  },
  {
   "id": "maj-004",
@@ -851,7 +851,7 @@
    "Algérie"
   ],
   "why": "Une Algérienne är en person, så stor bokstav. Algérien är maskulinum och passar inte efter une.",
-  "sv": "I Marseille träffade hon en jättetrevlig algeriska."
+  "sv": "I Marseille träffade hon en jättetrevlig algerisk kvinna."
  },
  {
   "id": "maj-007",

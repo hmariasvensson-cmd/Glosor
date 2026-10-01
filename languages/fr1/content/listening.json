@@ -101,7 +101,7 @@
       {"who": "B", "fr": "Oh non ! Mon livre est à la maison. Et mes cahiers aussi !", "sv": "Åh nej! Min bok är hemma. Och mina skrivhäften också!"},
       {"who": "A", "fr": "Tiens, voilà mon livre. J'ai maths demain.", "sv": "Här, ta min bok. Jag har matte i morgon."},
       {"who": "B", "fr": "Merci, tu es sympa ! Où est la salle douze ?", "sv": "Tack, vad snäll du är! Var är sal tolv?"},
-      {"who": "A", "fr": "Au premier étage, à côté de la bibliothèque.", "sv": "På första våningen, bredvid biblioteket."},
+      {"who": "A", "fr": "Au premier étage, à côté de la bibliothèque.", "sv": "En trappa upp, bredvid biblioteket."},
       {"who": "B", "fr": "Merci ! À midi, on mange ensemble à la cantine ?", "sv": "Tack! Ska vi äta tillsammans i matsalen vid tolv?"},
       {"who": "A", "fr": "D'accord ! À tout à l'heure !", "sv": "Okej! Vi ses sen!"}
     ],
@@ -109,7 +109,7 @@
       {"type": "helhet", "q": "Var och när äger samtalet rum?", "opts": ["I skolan, mellan två lektioner", "Hemma, en kväll", "I matsalen, vid lunch", "På biblioteket, efter skolan"], "a": 0, "why": "De pratar om vilken lektion de har nu, och de ska äta lunch tillsammans senare."},
       {"type": "detalj", "q": "Vilket ämne har Nina nu?", "opts": ["Engelska", "Historia", "Musik", "Matte"], "a": 3, "why": "Nina säger: « J'ai maths avec monsieur Martin »."},
       {"type": "detalj", "q": "Vad har Nina glömt hemma?", "opts": ["Sin pennväska", "Sin mattebok och sina skrivhäften", "Sin mobil", "Sin engelskbok"], "a": 1, "why": "« Mon livre est à la maison. Et mes cahiers aussi ! »"},
-      {"type": "detalj", "q": "Var ligger sal tolv?", "opts": ["Bredvid matsalen", "På bottenvåningen", "På första våningen, bredvid biblioteket", "Mittemot biblioteket"], "a": 2, "why": "« Au premier étage, à côté de la bibliothèque »."}
+      {"type": "detalj", "q": "Var ligger sal tolv?", "opts": ["Bredvid matsalen", "På bottenvåningen", "En trappa upp, bredvid biblioteket", "Mittemot biblioteket"], "a": 2, "why": "« Au premier étage, à côté de la bibliothèque ». Le premier étage är en trappa upp, inte bottenvåningen."}
     ],
     "gloss": {
       "maintenant": {"t": "maintenant", "sv": "nu", "g": ""},

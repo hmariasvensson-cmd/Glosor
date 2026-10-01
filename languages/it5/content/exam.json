@@ -126,11 +126,11 @@
    "instr": "Läs artikeln och välj rätt svar.",
    "lines": [
     {
-     "fr": "Da quest'anno in alcuni licei di Milano e Torino gli studenti possono usare un chatbot durante le lezioni di italiano e di storia. Il progetto, finanziato dal Ministero, viene seguito da un gruppo di ricercatori dell'Università di Pavia.",
-     "sv": "Från och med i år får eleverna på några gymnasier i Milano och Turin använda en chattbot på lektionerna i italienska och historia. Projektet, som finansieras av departementet, följs av en forskargrupp från universitetet i Pavia."
+     "fr": "Da quest'anno in alcuni licei di Milano e Torino gli studenti possono usare un chatbot durante le lezioni di italiano e di storia. Il progetto, finanziato dal Ministero, viene seguito da un gruppo di ricercatori universitari.",
+     "sv": "Från och med i år får eleverna på några gymnasier i Milano och Turin använda en chattbot på lektionerna i italienska och historia. Projektet, som finansieras av departementet, följs av en grupp universitetsforskare."
     },
     {
-     "fr": "«Non vogliamo che l'intelligenza artificiale scriva i temi al posto dei ragazzi», spiega la professoressa Rinaldi. «Vogliamo che impari a fare domande migliori.» Gli studenti, per esempio, chiedono al programma di spiegare un testo di Verga con parole semplici e poi devono verificare le informazioni sui libri.",
+     "fr": "«Non vogliamo che l'intelligenza artificiale scriva i temi al posto dei ragazzi», spiega la professoressa Rinaldi. «Vogliamo che i ragazzi imparino a fare domande migliori.» Gli studenti, per esempio, chiedono al programma di spiegare un testo di Verga con parole semplici e poi devono verificare le informazioni sui libri.",
      "sv": "»Vi vill inte att AI ska skriva uppsatserna i stället för eleverna», förklarar läraren Rinaldi. »Vi vill att de ska lära sig att ställa bättre frågor.» Eleverna ber till exempel programmet förklara en text av Verga med enkla ord och måste sedan kontrollera uppgifterna i böckerna."
     },
     {
@@ -147,7 +147,7 @@
       "Gli studenti stessi."
      ],
      "a": 1,
-     "why": "«viene seguito da un gruppo di ricercatori dell'Università di Pavia»."
+     "why": "«viene seguito da un gruppo di ricercatori universitari»."
     },
     {
      "q": "Qual è lo scopo del progetto secondo la professoressa?",
@@ -157,7 +157,7 @@
       "Sostituire i libri."
      ],
      "a": 1,
-     "why": "«Vogliamo che impari a fare domande migliori»."
+     "why": "«Vogliamo che i ragazzi imparino a fare domande migliori»."
     },
     {
      "q": "Dopo aver usato il chatbot, gli studenti devono…",
@@ -200,8 +200,8 @@
    "instr": "Läs texten. Är påståendena sanna (Vero) eller falska (Falso)?",
    "lines": [
     {
-     "fr": "Ogni anno in Italia vengono buttati circa quattro milioni di tonnellate di cibo. Secondo una recente indagine, la maggior parte dello spreco non avviene nei ristoranti o nei supermercati, ma nelle case: ogni famiglia butta in media mezzo chilo di cibo alla settimana.",
-     "sv": "Varje år slängs ungefär fyra miljoner ton mat i Italien. Enligt en ny undersökning sker det mesta av svinnet inte på restauranger eller i butiker, utan i hemmen: varje familj slänger i genomsnitt ett halvt kilo mat i veckan."
+     "fr": "Ogni anno in Italia vengono buttati circa quattro milioni di tonnellate di cibo. Secondo una recente indagine, la maggior parte dello spreco non avviene nei ristoranti o nei supermercati, ma nelle case: ogni persona butta in media circa mezzo chilo di cibo alla settimana.",
+     "sv": "Varje år slängs ungefär fyra miljoner ton mat i Italien. Enligt en ny undersökning sker det mesta av svinnet inte på restauranger eller i butiker, utan i hemmen: varje person slänger i genomsnitt ungefär ett halvt kilo mat i veckan."
     },
     {
      "fr": "I prodotti buttati più spesso sono il pane, la frutta e la verdura fresca. Molti consumatori confondono la data di scadenza con la dicitura «da consumarsi preferibilmente entro», che indica solo che il prodotto potrebbe perdere un po' di sapore.",
@@ -282,8 +282,8 @@
    "instr": "Läs brevet och välj det ord som passar i varje lucka (1–8).",
    "lines": [
     {
-     "fr": "Cara Giulia, ti scrivo da Buenos Aires, dove sono arrivato (1) ___ tre settimane. Il viaggio in nave è stato lunghissimo, ma (2) ___ la stanchezza sto bene. Ho trovato lavoro in un panificio (3) ___ proprietario è di Genova come noi. Lavoro di notte, perciò di giorno (4) ___ riposa poco.",
-     "sv": "Kära Giulia, jag skriver till dig från Buenos Aires, dit jag kom för tre veckor sedan. Båtresan var väldigt lång, men trots tröttheten mår jag bra. Jag har fått jobb på ett bageri vars ägare är från Genua som vi. Jag jobbar på natten, så på dagen vilar man lite."
+     "fr": "Cara Giulia, ti scrivo da Buenos Aires, dove vivo (1) ___ tre settimane. Il viaggio in nave è stato lunghissimo, ma (2) ___ la stanchezza sto bene. Ho trovato lavoro in un panificio (3) ___ proprietario è di Genova come noi. Lavoro di notte, perciò di giorno (4) ___ riposa poco.",
+     "sv": "Kära Giulia, jag skriver till dig från Buenos Aires, där jag har bott i tre veckor. Båtresan var väldigt lång, men trots tröttheten mår jag bra. Jag har fått jobb på ett bageri vars ägare är från Genua som vi. Jag jobbar på natten, så på dagen vilar man lite."
     },
     {
      "fr": "Spero che tu e la mamma (5) ___ bene. Vorrei che mi (6) ___ presto, anche solo due righe. Se (7) ___ più soldi, vi manderei subito il biglietto per venire qui. Il padrone mi ha detto che a primavera mi (8) ___ lo stipendio. Un abbraccio, tuo fratello Pietro.",
@@ -299,7 +299,7 @@
       "tra"
      ],
      "a": 0,
-     "why": "Sono arrivato da tre settimane: sedan tre veckor (han är fortfarande kvar)."
+     "why": "Vivo qui da tre settimane: presens + da = i/sedan tre veckor (han bor fortfarande där)."
     },
     {
      "q": "(2)",
@@ -365,7 +365,7 @@
      "q": "(8)",
      "opts": [
       "avrebbe aumentato",
-      "aumenterà",
+      "aumenti",
       "aumentasse"
      ],
      "a": 0,
@@ -424,7 +424,7 @@
     "Lessico",
     "Grammatica"
    ],
-   "model": "Gentile Segreteria,\n\nmi chiamo Erik Holm, ho diciotto anni e frequento l'ultimo anno di liceo in Svezia. Le scrivo in riferimento ai corsi estivi pubblicati sul vostro sito. Studio italiano da cinque anni e vorrei migliorarlo, affinché possa iscrivermi a un conservatorio in Italia.\n\nVorrei sapere quando cominciano i corsi di luglio e se l'università offre un alloggio per gli studenti. Inoltre, le sarei grato se potesse spiegarmi come si fa domanda per la borsa di studio. Allego il mio curriculum e una lettera del mio insegnante.\n\nResto in attesa di una sua risposta.\n\nDistinti saluti,\nErik Holm",
+   "model": "Gentile Segreteria,\n\nmi chiamo Erik Holm, ho diciotto anni e frequento l'ultimo anno di liceo in Svezia. Le scrivo in riferimento ai corsi estivi pubblicati sul vostro sito. Studio italiano da cinque anni e vorrei migliorarlo per potermi iscrivere a un conservatorio in Italia.\n\nVorrei sapere quando cominciano i corsi di luglio e se l'università offre un alloggio per gli studenti. Inoltre, le sarei grato se potesse spiegarmi come si fa domanda per la borsa di studio. Allego il mio curriculum e una lettera del mio insegnante.\n\nResto in attesa di una sua risposta.\n\nDistinti saluti,\nErik Holm",
    "modelSv": "Till studentexpeditionen,\n\njag heter Erik Holm, är arton år och går sista året på gymnasiet i Sverige. Jag skriver angående sommarkurserna på er webbplats. Jag har läst italienska i fem år och vill bli bättre, så att jag kan söka till ett konservatorium i Italien.\n\nJag skulle vilja veta när kurserna i juli börjar och om universitetet erbjuder boende för studenter. Jag vore också tacksam om ni kunde förklara hur man söker stipendiet. Jag bifogar mitt CV och ett brev från min lärare.\n\nJag ser fram emot ert svar.\n\nMed vänliga hälsningar,\nErik Holm"
   },
   {
@@ -459,8 +459,8 @@
      "sv": "Meddelande 1. God dag, det här är expeditionen på konservatoriet i Bologna. Jag ringer till Karlsson. Din provspelning har flyttats från tisdag till torsdag, fortfarande klockan tio. Vi ber dig ta med noterna i två exemplar, ett till nämnden. Tack."
     },
     {
-     "fr": "Messaggio 2. Ciao Marco, sono Luisa. Ho parlato con il proprietario dell'appartamento: ha detto che l'affitto sarebbe rimasto uguale, ma che le bollette andranno pagate a parte. Richiamami stasera dopo le otto, così decidiamo.",
-     "sv": "Meddelande 2. Hej Marco, det är Luisa. Jag har pratat med hyresvärden: han sa att hyran skulle vara densamma, men att räkningarna ska betalas separat. Ring upp mig i kväll efter åtta, så bestämmer vi."
+     "fr": "Messaggio 2. Ciao Marco, sono Luisa. Ho parlato con il proprietario dell'appartamento: ha detto che l'affitto resterà uguale, ma che le bollette andranno pagate a parte. Richiamami stasera dopo le otto, così decidiamo.",
+     "sv": "Meddelande 2. Hej Marco, det är Luisa. Jag har pratat med hyresvärden: han sa att hyran blir densamma, men att räkningarna ska betalas separat. Ring upp mig i kväll efter åtta, så bestämmer vi."
     },
     {
      "fr": "Messaggio 3. Salve, qui è lo studio del dottor Ferri. Gli esami del sangue sono pronti. Può passare a ritirarli da lunedì a venerdì, dalle nove all'una. Si ricordi di portare la tessera sanitaria.",
@@ -496,7 +496,7 @@
       "L'affitto non cambia, ma le bollette si pagano a parte."
      ],
      "a": 2,
-     "why": "«l'affitto sarebbe rimasto uguale, ma … le bollette andranno pagate a parte»."
+     "why": "«l'affitto resterà uguale, ma … le bollette andranno pagate a parte»."
     },
     {
      "q": "Messaggio 2: quando deve richiamare Marco?",
@@ -645,8 +645,8 @@
      "sv": "Text 2. Älskar ni opera? På lördag kväll ges Aida på Arenan i Verona. Studentbiljetterna kostar tjugo euro och måste köpas senast på torsdag."
     },
     {
-     "fr": "Testo 3. Il museo dell'emigrazione di Genova resterà chiuso per lavori fino a marzo. Nel frattempo le visite guidate si faranno online, ogni mercoledì alle diciotto.",
-     "sv": "Text 3. Emigrationsmuseet i Genua är stängt för renovering till mars. Under tiden hålls guidade visningar på nätet varje onsdag kl. 18."
+     "fr": "Testo 3. Il museo dell'emigrazione della città resterà chiuso per lavori fino a marzo. Nel frattempo le visite guidate si faranno online, ogni mercoledì alle diciotto.",
+     "sv": "Text 3. Stadens emigrationsmuseum är stängt för renovering till mars. Under tiden hålls guidade visningar på nätet varje onsdag kl. 18."
     },
     {
      "fr": "Testo 4. Domani al mercato contadino di piazza Verdi i produttori locali regaleranno la frutta invenduta a chi porta una borsa riutilizzabile.",

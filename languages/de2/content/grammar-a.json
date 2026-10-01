@@ -31,7 +31,7 @@
   "rule": "tr-pres",
   "q": "Kommst du am Samstag [mit]?",
   "alt": [
-   "an",
+   "ein",
    "zu",
    "ab"
   ],
@@ -72,7 +72,7 @@
   "alt": [
    "an",
    "zu",
-   "ab"
+   "mit"
   ],
   "why": "Aufräumen = städa. Prefixet auf står sist.",
   "sv": "På lördag städar jag mitt rum."
@@ -150,7 +150,7 @@
   "alt": [
    "schlafen aus",
    "ausschlafen wir",
-   "schlafen"
+   "ausgeschlafen"
   ],
   "why": "Wollen + infinitiv: ausschlafen står ihop sist.",
   "sv": "Vi vill sova länge på söndag."
@@ -683,7 +683,7 @@
   "alt": [
    "möchten",
    "möchtest",
-   "mag"
+   "möchtet"
   ],
   "why": "Ich möchte = jag skulle vilja.",
   "sv": "Jag skulle vilja prova jackan."
@@ -718,14 +718,14 @@
   "id": "modal-008",
   "topic": "modal",
   "rule": "mv-form",
-  "q": "Was [möchtest] du trinken?",
+  "q": "Was [möchtest] du am Wochenende machen?",
   "alt": [
    "möchte",
    "möchtet",
-   "magst trinken"
+   "möchten"
   ],
   "why": "Du → möchtest.",
-  "sv": "Vad vill du dricka?"
+  "sv": "Vad vill du göra i helgen?"
  },
  {
   "id": "modal-009",
@@ -809,40 +809,40 @@
   "id": "modal-015",
   "topic": "modal",
   "rule": "mv-val",
-  "q": "Es ist schon spät, ich [muss] nach Hause.",
+  "q": "Es ist schon spät und meine Eltern warten. Ich [muss] jetzt nach Hause.",
   "alt": [
-   "darf",
-   "möchte gern",
-   "kann nicht"
+   "darf nicht",
+   "kann nicht",
+   "soll nicht"
   ],
-  "why": "Något nödvändigt: müssen.",
-  "sv": "Det är redan sent, jag måste hem."
+  "why": "Något nödvändigt: müssen. Föräldrarna väntar, så darf nicht, kann nicht och soll nicht passar inte.",
+  "sv": "Det är redan sent och mina föräldrar väntar. Jag måste gå hem nu."
  },
  {
   "id": "modal-016",
   "topic": "modal",
   "rule": "mv-val",
-  "q": "Die Jacke ist zu teuer, ich [kann] sie nicht kaufen.",
+  "q": "Die Jacke ist zu teuer. Ich habe nur 20 Euro, ich [kann] sie nicht kaufen.",
   "alt": [
-   "muss",
-   "soll",
-   "darf gern"
+   "darf gern",
+   "möchte gern",
+   "will gern"
   ],
-  "why": "Att inte ha möjlighet: nicht können.",
-  "sv": "Jackan är för dyr, jag kan inte köpa den."
+  "why": "Att inte ha möjlighet: nicht können. Gern passar inte ihop med nicht här.",
+  "sv": "Jackan är för dyr. Jag har bara 20 euro, jag kan inte köpa den."
  },
  {
   "id": "modal-017",
   "topic": "modal",
   "rule": "mv-val",
-  "q": "Im Museum [darf] man nicht essen.",
+  "q": "Im Museum steht: „Essen verboten!“ Hier [darf] man nicht essen.",
   "alt": [
-   "muss",
+   "kann gern",
    "will",
    "möchte"
   ],
   "why": "Förbud: nicht dürfen = inte få.",
-  "sv": "På museet får man inte äta."
+  "sv": "På museet står det: ”Förbjudet att äta!” Här får man inte äta."
  },
  {
   "id": "modal-018",
@@ -889,7 +889,7 @@
   "rule": "mv-val",
   "q": "Tim [will] Pilot werden. Das ist sein großer Traum.",
   "alt": [
-   "darf",
+   "muss",
    "soll",
    "muss nicht"
   ],
@@ -1164,7 +1164,7 @@
   "alt": [
    "von",
    "bei",
-   "nach"
+   "zu"
   ],
   "why": "Aus = från (land, stad).",
   "sv": "Jag kommer från Sverige."
@@ -1176,7 +1176,7 @@
   "q": "Am Wochenende war ich [bei] meinen Großeltern.",
   "alt": [
    "zu",
-   "mit",
+   "von",
    "nach"
   ],
   "why": "Bei = hos.",
@@ -1255,7 +1255,7 @@
   "alt": [
    "Im",
    "Um",
-   "Zum"
+   "In"
   ],
   "why": "Am Wochenende = i helgen.",
   "sv": "I helgen åker vi bort."
@@ -1385,7 +1385,7 @@
   "alt": [
    "vor",
    "für",
-   "in"
+   "um"
   ],
   "why": "Seit: har pågått och pågår fortfarande.",
   "sv": "Det har regnat i tre dagar."
@@ -1515,7 +1515,7 @@
   "alt": [
    "Trinkst",
    "Trinken",
-   "Trinkt"
+   "Trinkst du"
   ],
   "why": "Du trinkst → trink!",
   "sv": "Drick mycket te!"
@@ -1563,14 +1563,14 @@
   "id": "imperativ-006",
   "topic": "imperativ",
   "rule": "imp-du",
-  "q": "[Sei] vorsichtig!",
+  "q": "Tim, [sei] vorsichtig!",
   "alt": [
-   "Bist",
-   "Seid",
-   "Sein"
+   "bist",
+   "seid",
+   "sein"
   ],
   "why": "Sein är oregelbundet: sei! (du).",
-  "sv": "Var försiktig!"
+  "sv": "Tim, var försiktig!"
  },
  {
   "id": "imperativ-007",
@@ -1591,7 +1591,7 @@
   "rule": "imp-du",
   "q": "[Iss] mehr Obst!",
   "alt": [
-   "Esst",
+   "Essen",
    "Isst",
    "Ess"
   ],
@@ -1615,27 +1615,27 @@
   "id": "imperativ-010",
   "topic": "imperativ",
   "rule": "imp-ihr",
-  "q": "[Seid] bitte leise!",
+  "q": "Kinder, [seid] bitte leise!",
   "alt": [
-   "Sei",
-   "Sind",
-   "Seien"
+   "sei",
+   "sind",
+   "seien"
   ],
   "why": "Ihr → seid!",
-  "sv": "Var tysta!"
+  "sv": "Barn, var tysta!"
  },
  {
   "id": "imperativ-011",
   "topic": "imperativ",
   "rule": "imp-ihr",
-  "q": "[Macht] das Fenster zu!",
+  "q": "Kinder, [macht] bitte das Fenster zu!",
   "alt": [
-   "Mach",
-   "Machen",
-   "Machst"
+   "mach",
+   "machen",
+   "machst"
   ],
   "why": "Ihr macht → macht!",
-  "sv": "Stäng fönstret!"
+  "sv": "Barn, stäng fönstret!"
  },
  {
   "id": "imperativ-012",
@@ -1643,7 +1643,7 @@
   "rule": "imp-ihr",
   "q": "[Nehmt] eure Jacken mit!",
   "alt": [
-   "Nimm",
+   "Nehme",
    "Nehmen",
    "Nimmt"
   ],
@@ -1749,7 +1749,7 @@
   "alt": [
    "an",
    "zu",
-   "ein"
+   "mit"
   ],
   "why": "Aufräumen → räumt … auf!",
   "sv": "Städa ert rum!"
@@ -1773,7 +1773,7 @@
   "rule": "imp-tr",
   "q": "Komm doch [mit]!",
   "alt": [
-   "an",
+   "ein",
    "ab",
    "zu"
   ],
@@ -1784,14 +1784,14 @@
   "id": "datpron-001",
   "topic": "datpron",
   "rule": "dp-form",
-  "q": "Kannst du [mir] helfen?",
+  "q": "Kannst du [mir] morgen helfen?",
   "alt": [
    "mich",
    "ich",
    "mein"
   ],
   "why": "Helfen tar dativ: mir.",
-  "sv": "Kan du hjälpa mig?"
+  "sv": "Kan du hjälpa mig i morgon?"
  },
  {
   "id": "datpron-002",
@@ -2035,7 +2035,7 @@
   "alt": [
    "schlecht",
    "krank",
-   "leid"
+   "kalt"
   ],
   "why": "Weh tun + dativ: Mir tut … weh.",
   "sv": "Jag har ont i huvudet."
@@ -2204,7 +2204,7 @@
   "alt": [
    "zu",
    "nach",
-   "mit"
+   "an"
   ],
   "why": "Hos en person: bei + dativ.",
   "sv": "Jag sover över hos min mormor."
@@ -2252,14 +2252,14 @@
   "id": "ortprep-013",
   "topic": "ortprep",
   "rule": "op-an",
-  "q": "Im Sommer fahren wir [ans] Meer.",
+  "q": "Nächste Woche fahren wir [ans] Meer.",
   "alt": [
    "bei",
-   "ins",
+   "im",
    "nach"
   ],
   "why": "Till vatten: an + ackusativ, an das → ans. (I vardagligt tal går också zum Meer.)",
-  "sv": "I sommar åker vi till havet."
+  "sv": "Nästa vecka åker vi till havet."
  },
  {
   "id": "ortprep-014",
@@ -2293,8 +2293,8 @@
   "rule": "op-an",
   "q": "Wir wandern [in] den Bergen.",
   "alt": [
-   "zu",
-   "an",
+   "im",
+   "aus",
    "nach"
   ],
   "why": "In den Bergen = i bergen.",
@@ -2330,27 +2330,27 @@
   "id": "ortprep-019",
   "topic": "ortprep",
   "rule": "op-aus",
-  "q": "Ich komme [aus] Schweden.",
+  "q": "Meine Freundin kommt [aus] Norwegen.",
   "alt": [
    "von",
-   "nach",
-   "bei"
+   "bei",
+   "zu"
   ],
   "why": "Ursprung (land, stad): aus.",
-  "sv": "Jag kommer från Sverige."
+  "sv": "Min kompis kommer från Norge."
  },
  {
   "id": "ortprep-020",
   "topic": "ortprep",
   "rule": "op-aus",
-  "q": "Mozart kommt [aus] Salzburg.",
+  "q": "Meine Lehrerin kommt [aus] Salzburg.",
   "alt": [
-   "von",
-   "nach",
-   "zu"
+   "bei",
+   "zu",
+   "an"
   ],
   "why": "Aus + stad.",
-  "sv": "Mozart kommer från Salzburg."
+  "sv": "Min lärare kommer från Salzburg."
  },
  {
   "id": "ortprep-021",
@@ -2359,7 +2359,7 @@
   "q": "Ich komme gerade [vom] Arzt.",
   "alt": [
    "aus dem",
-   "zum",
+   "von",
    "beim"
   ],
   "why": "Från en person: von dem → vom.",
@@ -2386,7 +2386,7 @@
   "alt": [
    "aus",
    "bei",
-   "zu"
+   "nach"
   ],
   "why": "Från en person: von.",
   "sv": "Vi kommer precis från min moster."

@@ -16,7 +16,7 @@ function textQ(c){
     head:k==="lq"?playBar(`<button type="button" class="btn ghost" id="stop">Stoppa</button>`)
       :`<details class="more"><summary>Visa texten igen</summary><div class="reading">${tapText(t.lines,null)}</div></details>`,
     ask:`${kind?`<span class="label">${kind}</span><br>`:""}<b>${esc(q.q)}</b>`,
-    opts:q.opts.map((o,j)=>({label:o,ok:j===q.a})),explain:q.why?`<p>${esc(q.why)}</p>`:"",
+    opts:optOrder(q.opts).map(j=>({label:q.opts[j],ok:j===q.a})),explain:q.why?`<p>${esc(q.why)}</p>`:"",
     wire:k==="lq"?()=>{wirePlay(r=>speakSeq(t.lines,r)); $("#stop").onclick=stopSpeech;}:null};
 }
 function textAfter(ctx,right,total){

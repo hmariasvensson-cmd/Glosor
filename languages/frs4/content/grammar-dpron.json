@@ -68,66 +68,66 @@
   "id": "dpron-006",
   "topic": "dpron",
   "rule": "dpron-lui",
-  "q": "Le livre ? Je [le lui] ai rendu hier.",
+  "q": "Le livre de Paul ? Je [le lui] ai rendu hier.",
   "alt": [
    "lui le",
    "le leur",
-   "l'y"
+   "lui l'"
   ],
   "why": "Le/la/les kommer FÖRE lui/leur: je le lui ai rendu.",
-  "sv": "Boken? Jag lämnade tillbaka den till honom i går."
+  "sv": "Pauls bok? Jag lämnade tillbaka den till honom i går."
  },
  {
   "id": "dpron-007",
   "topic": "dpron",
   "rule": "dpron-lui",
-  "q": "Les clés ? Elle [les leur] a données.",
+  "q": "Tes parents veulent les clés ? Elle [les leur] a déjà données.",
   "alt": [
    "leur les",
    "les lui",
    "leurs les"
   ],
   "why": "Les före leur: elle les leur a données. Leur tar aldrig -s som pronomen.",
-  "sv": "Nycklarna? Hon gav dem till dem."
+  "sv": "Vill dina föräldrar ha nycklarna? Hon har redan gett dem till dem."
  },
  {
   "id": "dpron-008",
   "topic": "dpron",
   "rule": "dpron-lui",
-  "q": "La vérité ? Il ne [la lui] a pas dite.",
+  "q": "Sa mère connaît la vérité ? Non, il ne [la lui] a pas dite.",
   "alt": [
    "lui la",
    "la leur",
    "le lui"
   ],
   "why": "La före lui. Participet böjs efter la (dite).",
-  "sv": "Sanningen? Han sa den inte till henne."
+  "sv": "Vet hans mamma sanningen? Nej, han har inte sagt den till henne."
  },
  {
   "id": "dpron-009",
   "topic": "dpron",
   "rule": "dpron-lui",
-  "q": "Ces fleurs, on [les lui] offre pour son anniversaire.",
+  "q": "C'est l'anniversaire de Marie : ces fleurs, on [les lui] offre ce soir.",
   "alt": [
    "lui les",
    "les leur",
    "leur les"
   ],
   "why": "Les före lui: on les lui offre.",
-  "sv": "De här blommorna ger vi henne på hennes födelsedag."
+  "sv": "Det är Maries födelsedag: de här blommorna ger vi henne i kväll."
  },
  {
   "id": "dpron-010",
   "topic": "dpron",
   "rule": "dpron-lui",
-  "q": "Le message ? Je [le leur] ai envoyé ce matin.",
+  "q": "Le message pour tes parents ? Je [le leur] ai envoyé ce matin.",
   "alt": [
    "leur le",
    "le lui",
    "les leur"
   ],
   "why": "Le före leur (till dem): je le leur ai envoyé.",
-  "sv": "Meddelandet? Jag skickade det till dem i morse."
+  "sv": "Meddelandet till dina föräldrar? Jag skickade det till dem i morse."
  },
  {
   "id": "dpron-011",
@@ -276,13 +276,13 @@
   "id": "dpron-022",
   "topic": "dpron",
   "rule": "dpron-imper",
-  "q": "Les billets ? Rendez-[les-leur], s'il vous plaît.",
+  "q": "Les billets de ces enfants ? Rendez-[les-leur], s'il vous plaît.",
   "alt": [
    "leur-les",
    "les-lui",
    "leurs-les"
   ],
   "why": "Jakande imperativ: les-leur.",
-  "sv": "Biljetterna? Ge tillbaka dem till dem, tack."
+  "sv": "De här barnens biljetter? Ge tillbaka dem till dem, tack."
  }
 ]

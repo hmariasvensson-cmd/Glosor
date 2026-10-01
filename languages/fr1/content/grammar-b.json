@@ -805,11 +805,11 @@
   "id": "neg-012",
   "topic": "neg",
   "rule": "neg-de",
-  "q": "Je n'ai pas [d'] ordinateur.",
+  "q": "Je n'ai pas [d'ordinateur].",
   "alt": [
-   "de",
-   "un",
-   "d'un"
+   "de ordinateur",
+   "un ordinateur",
+   "d'un ordinateur"
   ],
   "why": "Pas de blir pas d' framför vokal: pas d'ordinateur.",
   "sv": "Jag har ingen dator."
@@ -831,11 +831,11 @@
   "id": "neg-014",
   "topic": "neg",
   "rule": "neg-de",
-  "q": "Je n'ai pas [d'] argent.",
+  "q": "Je n'ai pas [d'argent].",
   "alt": [
-   "de",
-   "de l'",
-   "du"
+   "de argent",
+   "de l'argent",
+   "du argent"
   ],
   "why": "Pas de blir pas d' framför vokal: pas d'argent.",
   "sv": "Jag har inga pengar."
@@ -1374,7 +1374,7 @@
   "q": "[Il y a] un problème ?",
   "alt": [
    "Il est",
-   "Il a",
+   "Il y est",
    "Est"
   ],
   "why": "Finns det ett problem? = Il y a un problème ?",
@@ -1413,7 +1413,7 @@
   "q": "[Il y a] un chat sous le lit !",
   "alt": [
    "Il est",
-   "Il a",
+   "Il y est",
    "Est"
   ],
   "why": "Det är/finns en katt = il y a un chat.",
@@ -1478,8 +1478,8 @@
   "q": "Il [n'y a] pas de métro dans ma ville.",
   "alt": [
    "y a",
-   "n'a",
-   "ne y a"
+   "ne y a",
+   "n'y as"
   ],
   "why": "Nekat blir det il n'y a pas. Ne blir n' framför y.",
   "sv": "Det finns ingen tunnelbana i min stad."
@@ -1505,7 +1505,7 @@
   "alt": [
    "Il n'y pas a",
    "Il ne y a pas",
-   "Il n'a pas"
+   "Il n'y a"
   ],
   "why": "Ne blir n' framför y, och pas kommer efter a: il n'y a pas.",
   "sv": "Det finns ingen bio i min by."
@@ -1514,11 +1514,11 @@
   "id": "ilya-017",
   "topic": "ilya",
   "rule": "ilya-neg",
-  "q": "Il n'y a pas [d'] eau dans la bouteille.",
+  "q": "Il n'y a pas [d'eau] dans la bouteille.",
   "alt": [
-   "de",
-   "de l'",
-   "du"
+   "de eau",
+   "de l'eau",
+   "du eau"
   ],
   "why": "Pas de blir pas d' framför vokal: pas d'eau.",
   "sv": "Det finns inget vatten i flaskan."
@@ -1556,8 +1556,8 @@
   "q": "Il [n'y a] pas de bus le dimanche.",
   "alt": [
    "y a",
-   "n'a",
-   "ne y a"
+   "ne y a",
+   "n'y as"
   ],
   "why": "Det finns inte = il n'y a pas. Glöm inte n' framför y.",
   "sv": "Det går inga bussar på söndagar."
@@ -1609,7 +1609,7 @@
   "alt": [
    "il n'y pas a",
    "il ne y a pas",
-   "il n'est pas"
+   "il n'y a"
   ],
   "why": "Det finns inte = il n'y a pas. Ne blir n' framför y, och pas kommer efter a.",
   "sv": "I dag är det ingen sol."

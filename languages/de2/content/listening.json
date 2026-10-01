@@ -109,7 +109,7 @@
    },
    {
     "type": "helhet",
-    "q": "Vad gjorde flickan i helgen?",
+    "q": "Vad gjorde Jonas kompis i helgen?",
     "opts": [
      "Hon var på bio",
      "Hon hälsade på sin mormor",
@@ -168,7 +168,7 @@
    },
    "ihr": {
     "t": "ihr",
-    "sv": "henne (dativ)",
+    "sv": "ni",
     "g": ""
    },
    "lange": {
@@ -182,8 +182,8 @@
     "g": "f"
    },
    "zu": {
-    "t": "zu",
-    "sv": "till (personer och platser)",
+    "t": "zu Hause",
+    "sv": "hemma",
     "g": ""
    },
    "spaghetti": {
@@ -227,8 +227,8 @@
     "sv": "Sara har sagt att hon tar med chips och saft. Och om du vill kan du också sova hos oss."
    },
    {
-    "fr": "Mein Vater kann dich um halb sieben abholen, denn es ist spät und dunkel, wenn wir fertig sind.",
-    "sv": "Min pappa kan hämta dig halv sju, för det är sent och mörkt när vi är klara."
+    "fr": "Mein Vater kann dich um halb sieben abholen. Du musst also nicht mit dem Bus fahren.",
+    "sv": "Min pappa kan hämta dig halv sju. Du behöver alltså inte åka buss."
    },
    {
     "fr": "Ruf mich bitte heute noch zurück oder schick mir eine Nachricht. Tschüss!",
@@ -262,12 +262,12 @@
    },
    {
     "type": "detalj",
-    "q": "Vad ska Mia ta med sig?",
+    "q": "Vad föreslår Paul att Mia kan ta med?",
     "opts": [
      "Pizza",
      "Chips",
-     "Sitt nya brädspel, om hon vill",
-     "Ingenting alls"
+     "Sitt nya brädspel",
+     "Saft"
     ],
     "a": 2,
     "why": "„Vielleicht kannst du dein neues Brettspiel mitnehmen?“"
@@ -291,11 +291,6 @@
     "sv": "telefon",
     "g": "n"
    },
-   "fertig": {
-    "t": "fertig",
-    "sv": "klar",
-    "g": ""
-   },
    "vielleicht": {
     "t": "vielleicht",
     "sv": "kanske",
@@ -307,8 +302,8 @@
     "g": ""
    },
    "an": {
-    "t": "an",
-    "sv": "vid, till (vatten)",
+    "t": "anfangen",
+    "sv": "börja",
     "g": ""
    },
    "bei": {
@@ -332,8 +327,8 @@
     "g": ""
    },
    "schick": {
-    "t": "schick",
-    "sv": "snygg, elegant",
+    "t": "schicken",
+    "sv": "skicka",
     "g": ""
    },
    "spieleabend": {
@@ -511,13 +506,8 @@
     "g": "f"
    },
    "ihnen": {
-    "t": "ihnen",
-    "sv": "dem (dativ)",
-    "g": ""
-   },
-   "in": {
-    "t": "in",
-    "sv": "i, till (länder med artikel)",
+    "t": "Ihnen",
+    "sv": "er (artigt, dativ)",
     "g": ""
    },
    "mir": {
@@ -695,8 +685,8 @@
     "g": ""
    },
    "aus": {
-    "t": "aus",
-    "sv": "från, ur",
+    "t": "ausgeben",
+    "sv": "lägga ut (pengar)",
     "g": ""
    },
    "bequem": {
@@ -869,11 +859,6 @@
     "sv": "på, upp på",
     "g": ""
    },
-   "bei": {
-    "t": "bei",
-    "sv": "hos",
-    "g": ""
-   },
    "glatteis": {
     "t": "das Glatteis",
     "sv": "halka, is på vägen",
@@ -883,11 +868,6 @@
     "t": "der Grad (-)",
     "sv": "grad",
     "g": "m"
-   },
-   "in": {
-    "t": "in",
-    "sv": "i, till (länder med artikel)",
-    "g": ""
    },
    "kühl": {
     "t": "kühl",
@@ -950,8 +930,8 @@
     "g": ""
    },
    "zu": {
-    "t": "zu",
-    "sv": "till (personer och platser)",
+    "t": "bis zu",
+    "sv": "upp till",
     "g": ""
    }
   }
@@ -1104,8 +1084,8 @@
     "g": "m"
    },
    "auf": {
-    "t": "auf",
-    "sv": "på, upp på",
+    "t": "aufmachen",
+    "sv": "öppna",
     "g": ""
    },
    "aus": {
@@ -1124,8 +1104,8 @@
     "g": "m"
    },
    "ihnen": {
-    "t": "ihnen",
-    "sv": "dem (dativ)",
+    "t": "Ihnen",
+    "sv": "er (artigt, dativ)",
     "g": ""
    },
    "kopfweh": {
@@ -1182,7 +1162,7 @@
    },
    {
     "who": "A",
-    "fr": "Schreib ihr nicht nur. Sprich mit ihr! Sag ihr, dass es dir leid tut.",
+    "fr": "Schreib ihr nicht nur. Sprich mit ihr! Sag ihr, dass es dir leidtut.",
     "sv": "Skriv inte bara till henne. Prata med henne! Säg att du är ledsen."
    },
    {
@@ -1236,7 +1216,7 @@
      "Att fråga Lukas"
     ],
     "a": 2,
-    "why": "„Sprich mit ihr! Sag ihr, dass es dir leid tut.“"
+    "why": "„Sprich mit ihr! Sag ihr, dass es dir leidtut.“"
    },
    {
     "type": "detalj",
@@ -1293,13 +1273,13 @@
     "g": ""
    },
    "an": {
-    "t": "an",
-    "sv": "vid, till (vatten)",
+    "t": "anrufen",
+    "sv": "ringa",
     "g": ""
    },
    "aus": {
-    "t": "aus",
-    "sv": "från, ur",
+    "t": "aussehen",
+    "sv": "se ut",
     "g": ""
    },
    "dir": {
@@ -1309,7 +1289,7 @@
    },
    "ihr": {
     "t": "ihr",
-    "sv": "henne (dativ)",
+    "sv": "henne (dativ); ni",
     "g": ""
    },
    "lieb": {
@@ -1486,11 +1466,6 @@
     "sv": "bråk",
     "g": "m"
    },
-   "bei": {
-    "t": "bei",
-    "sv": "hos",
-    "g": ""
-   },
    "dein": {
     "t": "dein",
     "sv": "din, ditt",
@@ -1498,17 +1473,12 @@
    },
    "euch": {
     "t": "euch",
-    "sv": "er (du-form plural)",
+    "sv": "er; varandra",
     "g": ""
    },
    "ihr": {
     "t": "ihr",
-    "sv": "henne (dativ)",
-    "g": ""
-   },
-   "in": {
-    "t": "in",
-    "sv": "i, till (länder med artikel)",
+    "sv": "ni",
     "g": ""
    },
    "mir": {
@@ -1528,12 +1498,12 @@
    },
    "uns": {
     "t": "uns",
-    "sv": "oss",
+    "sv": "oss; varandra",
     "g": ""
    },
    "zu": {
-    "t": "zu",
-    "sv": "till (personer och platser)",
+    "t": "zuhören",
+    "sv": "lyssna på",
     "g": ""
    }
   }
@@ -1560,8 +1530,8 @@
    },
    {
     "who": "B",
-    "fr": "Oh, toll! Herzlichen Glückwunsch schon mal! Wann und wo ist die Party?",
-    "sv": "Åh, kul! Grattis i förväg! När och var är festen?"
+    "fr": "Oh, toll! Aber ich gratuliere dir erst am Samstag – vorher bringt das Unglück! Wann und wo ist die Party?",
+    "sv": "Åh, kul! Men jag gratulerar dig inte förrän på lördag – innan dess betyder det otur! När och var är festen?"
    },
    {
     "who": "A",
@@ -1720,11 +1690,6 @@
     "sv": "dig (dativ)",
     "g": ""
    },
-   "glückwunsch": {
-    "t": "der Glückwunsch (-wünsche)",
-    "sv": "gratulation, lyckönskning",
-    "g": "m"
-   },
    "lichterkette": {
     "t": "die Lichterkette (-n)",
     "sv": "ljusslinga",
@@ -1749,6 +1714,16 @@
     "t": "sich freuen",
     "sv": "glädja sig, se fram emot",
     "g": ""
+   },
+   "gratuliere": {
+    "t": "gratulieren",
+    "sv": "gratulera",
+    "g": ""
+   },
+   "unglück": {
+    "t": "das Unglück",
+    "sv": "olycka, otur",
+    "g": "n"
    }
   }
  },
@@ -1782,12 +1757,12 @@
     "sv": "Och ytterligare en information: på grund av byggarbeten går inget tåg mellan Frankfurt och Mannheim i helgen."
    },
    {
-    "fr": "Eine Information für Reisende nach Berlin: Der Zug um 15 Uhr 10 hat heute kein Restaurant. Getränke und Snacks bekommen Sie am Kiosk an Gleis 5.",
-    "sv": "Information till resenärer till Berlin: Tåget klockan 15.10 har ingen restaurangvagn i dag. Drycker och snacks får ni i kiosken vid spår 5."
-   },
-   {
     "fr": "Bitte nehmen Sie den Bus. Die Busse fahren vor dem Bahnhof ab, jede halbe Stunde.",
     "sv": "Var god ta bussen. Bussarna avgår framför stationen, varje halvtimme."
+   },
+   {
+    "fr": "Eine Information für Reisende nach Berlin: Der Zug um 15 Uhr 10 hat heute kein Restaurant. Getränke und Snacks bekommen Sie am Kiosk an Gleis 5.",
+    "sv": "Information till resenärer till Berlin: Tåget klockan 15.10 har ingen restaurangvagn i dag. Drycker och snacks får ni i kiosken vid spår 5."
    },
    {
     "fr": "Wir wünschen Ihnen eine gute Reise.",
@@ -1901,18 +1876,13 @@
     "g": ""
    },
    "ihnen": {
-    "t": "ihnen",
-    "sv": "dem (dativ)",
+    "t": "Ihnen",
+    "sv": "er (artigt, dativ)",
     "g": ""
    },
    "ihr": {
-    "t": "ihr",
-    "sv": "henne (dativ)",
-    "g": ""
-   },
-   "in": {
-    "t": "in",
-    "sv": "i, till (länder med artikel)",
+    "t": "Ihr",
+    "sv": "er, ert (artigt)",
     "g": ""
    },
    "nach": {
@@ -1980,7 +1950,7 @@
    {
     "who": "B",
     "fr": "Fisch, Fisch, Fisch! Und jeden Abend ein Eis. Aber am letzten Tag hatte ich einen Sonnenbrand.",
-    "sv": "Fisk, fisk, fisk! Och en glass varje kväll. Men den sista dagen blev jag solbränd."
+    "sv": "Fisk, fisk, fisk! Och en glass varje kväll. Men den sista dagen brände jag mig i solen."
    }
   ],
   "questions": [
@@ -2101,12 +2071,7 @@
    },
    "ihr": {
     "t": "ihr",
-    "sv": "henne (dativ)",
-    "g": ""
-   },
-   "in": {
-    "t": "in",
-    "sv": "i, till (länder med artikel)",
+    "sv": "ni",
     "g": ""
    },
    "nach": {
@@ -2298,11 +2263,6 @@
     "sv": "tycka om, gilla",
     "g": ""
    },
-   "in": {
-    "t": "in",
-    "sv": "i, till (länder med artikel)",
-    "g": ""
-   },
    "italienisch": {
     "t": "Italienisch",
     "sv": "italienska",
@@ -2324,8 +2284,8 @@
     "g": ""
    },
    "zu": {
-    "t": "zu",
-    "sv": "till (personer och platser)",
+    "t": "zu Hause",
+    "sv": "hemma",
     "g": ""
    },
    "besucht": {

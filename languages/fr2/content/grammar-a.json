@@ -1291,11 +1291,11 @@
   "rule": "mod-inf",
   "q": "C'est obligatoire : tous les passagers [doivent] montrer leur billet.",
   "alt": [
-   "veulent",
-   "peuvent",
-   "doit"
+   "doit",
+   "devons",
+   "devent"
   ],
-  "why": "Obligatoire betyder att man måste: devoir. Vouloir = vilja och pouvoir = kunna/få.",
+  "why": "Obligatoire betyder att man måste: devoir. Tous les passagers = ils, alltså doivent. Devent finns inte.",
   "sv": "Det är obligatoriskt: alla passagerare måste visa sin biljett."
  },
  {
@@ -1304,11 +1304,11 @@
   "rule": "mod-inf",
   "q": "Désolé, je ne [peux] pas venir, je travaille samedi.",
   "alt": [
-   "dois",
    "peut",
-   "pouvons"
+   "pouvons",
+   "peuvent"
   ],
-  "why": "Jag jobbar, så jag har inte möjlighet: pouvoir. Je ne dois pas venir betyder jag får inte komma.",
+  "why": "Je → peux (med -x). Peut hör till il/elle, pouvons till nous och peuvent till ils/elles. Jag jobbar, så jag har inte möjlighet: pouvoir.",
   "sv": "Tyvärr, jag kan inte komma, jag jobbar på lördag."
  },
  {
@@ -1317,9 +1317,9 @@
   "rule": "refl-pres",
   "q": "Le matin, je [me] lève à sept heures.",
   "alt": [
-   "te",
+   "moi",
    "se",
-   "nous"
+   "ma"
   ],
   "why": "Reflexiva pronomen följer subjektet: je me, tu te, il se. Som svenskans jag lägger mig.",
   "sv": "På morgonen går jag upp klockan sju."
@@ -1330,9 +1330,9 @@
   "rule": "refl-pres",
   "q": "Tu [te] couches tard le samedi ?",
   "alt": [
-   "me",
    "se",
-   "toi"
+   "toi",
+   "ton"
   ],
   "why": "Tu te couches. Toi används inte före verbet.",
   "sv": "Lägger du dig sent på lördagar?"
@@ -1343,9 +1343,9 @@
   "rule": "refl-pres",
   "q": "Elle [se] brosse les dents après le repas.",
   "alt": [
-   "me",
-   "te",
-   "elle"
+   "elle",
+   "sa",
+   "ce"
   ],
   "why": "Il/elle se, som svenskans sig.",
   "sv": "Hon borstar tänderna efter maten."
@@ -1357,7 +1357,7 @@
   "q": "Nous [nous] reposons après le long voyage.",
   "alt": [
    "se",
-   "vous",
+   "nos",
    "me"
   ],
   "why": "Nous nous reposons: nous två gånger. Se är bara för il/elle/ils.",
@@ -1370,7 +1370,7 @@
   "q": "Vous [vous] promenez au bord de la mer ?",
   "alt": [
    "se",
-   "nous",
+   "vos",
    "te"
   ],
   "why": "Vous vous promenez.",
@@ -1382,9 +1382,9 @@
   "rule": "refl-pres",
   "q": "Mes frères [se] disputent tout le temps.",
   "alt": [
-   "nous",
    "leur",
-   "les"
+   "eux",
+   "ses"
   ],
   "why": "Ils se disputent. Se används i både singular och plural.",
   "sv": "Mina bröder bråkar hela tiden."
@@ -1449,7 +1449,7 @@
   "alt": [
    "se entend",
    "s'entendent",
-   "nous entend"
+   "s'entendons"
   ],
   "why": "On böjs som il: on s'entend. Se blir s' före vokal.",
   "sv": "Mina kompisar och jag kommer jättebra överens."
@@ -1474,8 +1474,8 @@
   "q": "Je vais [me] reposer ce week-end.",
   "alt": [
    "se",
-   "te",
-   "moi"
+   "moi",
+   "ma"
   ],
   "why": "Med infinitiv passar pronomenet ändå till subjektet: je vais me reposer.",
   "sv": "Jag ska vila i helgen."
@@ -1487,8 +1487,8 @@
   "q": "Tu vas [te] coucher tôt ce soir ?",
   "alt": [
    "se",
-   "me",
-   "toi"
+   "toi",
+   "ton"
   ],
   "why": "Tu vas te coucher. Pronomenet står direkt före infinitiven.",
   "sv": "Ska du lägga dig tidigt i kväll?"
@@ -1500,8 +1500,8 @@
   "q": "Nous devons [nous] lever à six heures demain.",
   "alt": [
    "se",
-   "vous",
-   "me"
+   "nos",
+   "notre"
   ],
   "why": "Nous devons nous lever: pronomenet följer nous, inte infinitiven se lever.",
   "sv": "Vi måste gå upp klockan sex i morgon."
@@ -1513,8 +1513,8 @@
   "q": "Vous allez [vous] promener dans le parc ?",
   "alt": [
    "se",
-   "nous",
-   "te"
+   "vos",
+   "leur"
   ],
   "why": "Vous allez vous promener.",
   "sv": "Ska ni promenera i parken?"
@@ -1525,9 +1525,9 @@
   "rule": "refl-inf",
   "q": "Elle veut [se] maquiller avant la fête.",
   "alt": [
-   "me",
    "elle",
-   "te"
+   "sa",
+   "soi"
   ],
   "why": "Elle veut se maquiller.",
   "sv": "Hon vill sminka sig före festen."
@@ -1539,8 +1539,8 @@
   "q": "Mon oncle et ma tante vont [se] marier en juin.",
   "alt": [
    "leur",
-   "nous",
-   "les"
+   "eux",
+   "lui"
   ],
   "why": "Ils vont se marier. Se är reflexivt för både singular och plural.",
   "sv": "Min morbror och min moster ska gifta sig i juni."

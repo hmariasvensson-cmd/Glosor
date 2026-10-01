@@ -39,7 +39,7 @@
    "title": "Un message de ton professeur",
    "time": 4,
    "plays": 2,
-   "instr": "Du hör ett röstmeddelande från din franska lärare, Monsieur Martin. Läs frågorna först. Du hör meddelandet två gånger. Välj rätt svar på varje fråga.",
+   "instr": "Du hör ett röstmeddelande från din fransklärare, monsieur Martin. Läs frågorna först. Du hör meddelandet två gånger. Välj rätt svar på varje fråga.",
    "lines": [
     {"fr": "Bonjour, c'est Monsieur Martin, le professeur de français.", "sv": "Hej, det är Monsieur Martin, franskläraren."},
     {"fr": "Demain, mardi, il n'y a pas de cours à neuf heures.", "sv": "I morgon, tisdag, är det ingen lektion klockan nio."},
@@ -85,13 +85,13 @@
    "instr": "Du hör ett utrop i ett varuhus. Läs frågorna först. Du hör utropet två gånger. Välj rätt svar på varje fråga.",
    "lines": [
     {"fr": "Bonjour à tous et bienvenue au magasin Mode Plus !", "sv": "Hej allihop och välkomna till Mode Plus!"},
-    {"fr": "Aujourd'hui, les tee-shirts sont à cinq euros.", "sv": "I dag kostar t-shirtarna fem euro."},
+    {"fr": "Aujourd'hui, les t-shirts sont à cinq euros.", "sv": "I dag kostar t-shirtarna fem euro."},
     {"fr": "Les jeans noirs sont à vingt-cinq euros.", "sv": "De svarta jeansen kostar tjugofem euro."},
-    {"fr": "Le rayon des chaussures est au premier étage.", "sv": "Skoavdelningen ligger på första våningen."},
+    {"fr": "Le rayon des chaussures est au premier étage.", "sv": "Skoavdelningen ligger en trappa upp."},
     {"fr": "Attention : le magasin ferme à dix-neuf heures. Merci !", "sv": "Observera: affären stänger klockan nitton. Tack!"}
    ],
    "qs": [
-    {"q": "Combien coûte un tee-shirt ?", "opts": ["5 euros.", "15 euros.", "25 euros."], "a": 0, "why": "« Aujourd'hui, les tee-shirts sont à cinq euros »."},
+    {"q": "Combien coûte un t-shirt ?", "opts": ["5 euros.", "15 euros.", "25 euros."], "a": 0, "why": "« Aujourd'hui, les t-shirts sont à cinq euros »."},
     {"q": "De quelle couleur sont les jeans ?", "opts": ["Bleus.", "Blancs.", "Noirs."], "a": 2, "why": "« Les jeans noirs sont à vingt-cinq euros »."},
     {"q": "Où sont les chaussures ?", "opts": ["Au rez-de-chaussée.", "Au premier étage.", "Au deuxième étage."], "a": 1, "why": "« Le rayon des chaussures est au premier étage »."},
     {"q": "À quelle heure le magasin ferme ?", "opts": ["À 17 heures.", "À 19 heures.", "À 20 heures."], "a": 1, "why": "« Le magasin ferme à dix-neuf heures »."}

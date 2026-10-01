@@ -117,14 +117,14 @@
   "id": "praep-007",
   "topic": "praep",
   "rule": "wechsel-dat",
-  "q": "Das Bild hängt [über dem] Sofa.",
+  "q": "Die Lampe hängt [über dem] Sofa.",
   "alt": [
    "über das",
    "übers",
    "über den"
   ],
   "why": "Hängen utan objekt = var något sitter: dativ. Das Sofa: über dem.",
-  "sv": "Tavlan hänger ovanför soffan.",
+  "sv": "Lampan hänger ovanför soffan.",
   "meta": {
    "prep": "über",
    "case": "dat",
@@ -463,9 +463,9 @@
   "alt": [
    "bin",
    "ist",
-   "wäre"
+   "warst"
   ],
-  "why": "Präteritum av sein, ich-form: war. Bin är presens, wäre konjunktiv.",
+  "why": "Präteritum av sein, ich-form: war. Bin är presens.",
   "sv": "Som barn var jag ofta hos mormor."
  },
  {
@@ -748,7 +748,7 @@
   "q": "Ich komme heute nicht, [weil] ich krank bin.",
   "alt": [
    "dass",
-   "wenn",
+   "ob",
    "denn"
   ],
   "why": "Orsak (eftersom) och verbet sist: weil. Denn ger rak ordföljd.",
@@ -774,7 +774,7 @@
   "q": "[Weil] es regnet, fahren wir mit dem Bus.",
   "alt": [
    "Dass",
-   "Wenn",
+   "Ob",
    "Denn"
   ],
   "why": "Orsak: weil. Bisatsen står först, så huvudsatsen börjar med verbet (fahren).",
@@ -853,7 +853,7 @@
   "alt": [
    "weil",
    "ob",
-   "wenn"
+   "denn"
   ],
   "why": "Es ist wichtig, dass … = det är viktigt att …",
   "sv": "Det är viktigt att man inte delar sitt lösenord."
@@ -888,14 +888,14 @@
   "id": "nebensatz-012",
   "topic": "nebensatz",
   "rule": "ns-dass",
-  "q": "Ich hoffe, [dass] du bald wieder gesund bist.",
+  "q": "Ich hoffe, [dass] du morgen zur Party kommst.",
   "alt": [
    "weil",
    "wenn",
    "ob"
   ],
   "why": "Hoffen, dass = hoppas att.",
-  "sv": "Jag hoppas att du snart är frisk igen."
+  "sv": "Jag hoppas att du kommer på festen i morgon."
  },
  {
   "id": "nebensatz-013",
@@ -903,9 +903,9 @@
   "rule": "ns-dass",
   "q": "Er sagt, [dass] er morgen keine Zeit hat.",
   "alt": [
-   "ob",
+   "denn",
    "weil",
-   "wenn"
+   "als"
   ],
   "why": "Sagen, dass = säga att.",
   "sv": "Han säger att han inte har tid i morgon."
@@ -918,7 +918,7 @@
   "alt": [
    "weil",
    "ob",
-   "wenn"
+   "denn"
   ],
   "why": "Schade, dass … = synd att …",
   "sv": "Synd att du inte kan följa med!"
@@ -1007,7 +1007,7 @@
   "rule": "ns-dass",
   "q": "Ich weiß, [dass] Rauchen ungesund ist.",
   "alt": [
-   "ob",
+   "denn",
    "wenn",
    "weil"
   ],
@@ -1216,14 +1216,14 @@
   "id": "reflexiv-002",
   "topic": "reflexiv",
   "rule": "refl-akk",
-  "q": "Hast du [dich] schon erkältet?",
+  "q": "Hast du [dich] erkältet? Du hustest so viel.",
   "alt": [
    "dir",
    "sich",
    "mich"
   ],
   "why": "Sich erkälten, du-form: dich.",
-  "sv": "Har du redan blivit förkyld?"
+  "sv": "Har du blivit förkyld? Du hostar så mycket."
  },
  {
   "id": "reflexiv-003",
@@ -1233,7 +1233,7 @@
   "alt": [
    "sein",
    "ihm",
-   "mich"
+   "er"
   ],
   "why": "Tredje person: sich (aldrig ihn i reflexiv betydelse).",
   "sv": "Han skadade sig när han spelade fotboll."
@@ -1255,14 +1255,14 @@
   "id": "reflexiv-005",
   "topic": "reflexiv",
   "rule": "refl-akk",
-  "q": "Habt ihr [euch] im Urlaub gut erholt?",
+  "q": "Habt ihr [euch] in den Ferien gut erholt?",
   "alt": [
    "uns",
    "sich",
    "ihr"
   ],
   "why": "Ihr-form: euch.",
-  "sv": "Återhämtade ni er bra på semestern?"
+  "sv": "Återhämtade ni er bra på lovet?"
  },
  {
   "id": "reflexiv-006",
@@ -1285,7 +1285,7 @@
   "alt": [
    "dir",
    "sich",
-   "mich"
+   "du"
   ],
   "why": "Imperativ du-form: dich.",
   "sv": "Lägg dig och vila!"
@@ -1307,14 +1307,14 @@
   "id": "reflexiv-009",
   "topic": "reflexiv",
   "rule": "refl-akk",
-  "q": "Interessierst du [dich] für Politik?",
+  "q": "Interessierst du [dich] für Musik?",
   "alt": [
    "dir",
    "sich",
    "du"
   ],
   "why": "Sich interessieren für, du: dich.",
-  "sv": "Är du intresserad av politik?"
+  "sv": "Är du intresserad av musik?"
  },
  {
   "id": "reflexiv-010",
@@ -1359,14 +1359,14 @@
   "id": "reflexiv-013",
   "topic": "reflexiv",
   "rule": "refl-akk",
-  "q": "Wir treffen [uns] um acht am Bahnhof.",
+  "q": "Wir treffen [uns] morgen um zehn im Café.",
   "alt": [
    "sich",
    "unser",
    "wir"
   ],
   "why": "Sich treffen = träffas, wir: uns.",
-  "sv": "Vi ses klockan åtta på stationen."
+  "sv": "Vi ses i morgon klockan tio på kaféet."
  },
  {
   "id": "reflexiv-014",
@@ -1480,7 +1480,7 @@
   "alt": [
    "sein",
    "ihn",
-   "ihr"
+   "er"
   ],
   "why": "Tredje person: sich, också i dativ.",
   "sv": "Han har skadat armen."
@@ -1541,14 +1541,14 @@
   "id": "komp-005",
   "topic": "komp",
   "rule": "komp",
-  "q": "Ich trinke [lieber] Tee als Kaffee.",
+  "q": "Ich trinke [lieber] Saft als Cola.",
   "alt": [
    "gerner",
    "am liebsten",
    "mehr gern"
   ],
   "why": "Gern är oregelbundet: lieber, am liebsten.",
-  "sv": "Jag dricker hellre te än kaffe."
+  "sv": "Jag dricker hellre juice än cola."
  },
  {
   "id": "komp-006",
@@ -1593,27 +1593,27 @@
   "id": "komp-009",
   "topic": "komp",
   "rule": "komp",
-  "q": "Mein Bruder ist zwei Jahre [älter] als ich.",
+  "q": "Meine Schwester ist drei Jahre [älter] als ich.",
   "alt": [
    "alter",
    "am ältesten",
    "älteste"
   ],
   "why": "Komparativ av alt med omljud: älter.",
-  "sv": "Min bror är två år äldre än jag."
+  "sv": "Min syster är tre år äldre än jag."
  },
  {
   "id": "komp-010",
   "topic": "komp",
   "rule": "sup",
-  "q": "Der Bodensee ist der [größte] See in Deutschland.",
+  "q": "Berlin ist die [größte] Stadt in Deutschland.",
   "alt": [
    "größer",
    "am größten",
    "großeste"
   ],
-  "why": "Superlativ framför ett substantiv: der größte + adjektivändelse.",
-  "sv": "Bodensjön är den största sjön i Tyskland."
+  "why": "Superlativ framför ett substantiv: die größte + adjektivändelse.",
+  "sv": "Berlin är den största staden i Tyskland."
  },
  {
   "id": "komp-011",
@@ -1660,7 +1660,7 @@
   "rule": "sup",
   "q": "Das war der [schönste] Tag im ganzen Urlaub.",
   "alt": [
-   "schönere",
+   "schönstere",
    "am schönsten",
    "schönster"
   ],
@@ -1687,7 +1687,7 @@
   "q": "Die [beste] Idee hatte Lisa.",
   "alt": [
    "besste",
-   "bessere",
+   "bestere",
    "gutste"
   ],
   "why": "Gut – besser – best-: die beste Idee.",
@@ -1779,7 +1779,7 @@
   "alt": [
    "dass",
    "wenn",
-   "wo"
+   "weil"
   ],
   "why": "Ja/nej-fråga som bisats: ob (om). Wenn = om i villkor.",
   "sv": "Vet du om tåget är i tid?"
@@ -1804,7 +1804,7 @@
   "q": "Kannst du mir sagen, [ob] es hier WLAN gibt?",
   "alt": [
    "wenn",
-   "dass",
+   "was",
    "weil"
   ],
   "why": "Ja/nej-fråga: ob.",
@@ -1814,14 +1814,14 @@
   "id": "indirekt-004",
   "topic": "indirekt",
   "rule": "ind-ob",
-  "q": "Der Lehrer fragt, [ob] wir die Hausaufgaben gemacht haben.",
+  "q": "Die Lehrerin fragt, [ob] wir das Buch gelesen haben.",
   "alt": [
    "dass",
-   "wenn",
+   "denn",
    "weil"
   ],
   "why": "Indirekt ja/nej-fråga: ob, verbet sist.",
-  "sv": "Läraren frågar om vi har gjort läxorna."
+  "sv": "Läraren frågar om vi har läst boken."
  },
  {
   "id": "indirekt-005",
@@ -1831,7 +1831,7 @@
   "alt": [
    "wenn",
    "dass",
-   "was"
+   "weil"
   ],
   "why": "Om (ja eller nej): ob.",
   "sv": "Jag vet inte än om jag vill studera."
@@ -1933,7 +1933,7 @@
   "rule": "ind-w",
   "q": "Weißt du, [wer] das Lied singt?",
   "alt": [
-   "ob",
+   "weil",
    "dass",
    "wen"
   ],
@@ -1946,7 +1946,7 @@
   "rule": "ind-w",
   "q": "Ich möchte wissen, [wie viel] das Ticket kostet.",
   "alt": [
-   "ob",
+   "weil",
    "dass",
    "wie"
   ],
@@ -1959,11 +1959,11 @@
   "rule": "ind-w",
   "q": "Hast du eine Ahnung, [wohin] wir fahren?",
   "alt": [
-   "ob",
-   "wo",
-   "dass"
+   "weil",
+   "wer",
+   "denn"
   ],
-  "why": "Wohin = vart (riktning). Wo = var (plats).",
+  "why": "Wohin = vart (riktning).",
   "sv": "Har du någon aning om vart vi åker?"
  },
  {
@@ -1973,8 +1973,8 @@
   "q": "Sag mir, [woher] du kommst.",
   "alt": [
    "wo",
-   "ob",
-   "wohin"
+   "weil",
+   "wer"
   ],
   "why": "Woher = varifrån.",
   "sv": "Säg varifrån du kommer."
@@ -1985,9 +1985,9 @@
   "rule": "ind-w",
   "q": "Die Ärztin fragt, [seit wann] ich Fieber habe.",
   "alt": [
-   "ob",
-   "weil",
-   "dass"
+   "seit wenn",
+   "seit",
+   "weil"
   ],
   "why": "Seit wann = sedan när.",
   "sv": "Läkaren frågar sedan när jag har haft feber."
@@ -1999,7 +1999,7 @@
   "q": "Ich verstehe nicht, [warum] das Handy nicht funktioniert.",
   "alt": [
    "ob",
-   "dass",
+   "wer",
    "wenn"
   ],
   "why": "Warum = varför.",
@@ -2022,7 +2022,7 @@
   "id": "indirekt-020",
   "topic": "indirekt",
   "rule": "ind-verb",
-  "q": "Ich frage mich, ob ich die Prüfung bestanden [habe].",
+  "q": "Ich frage mich, ob ich den Test bestanden [habe].",
   "alt": [
    "hat",
    "bin",

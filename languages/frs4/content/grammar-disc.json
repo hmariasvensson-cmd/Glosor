@@ -19,10 +19,10 @@
   "q": "Ma mère dit que je [dois] ranger ma chambre.",
   "alt": [
    "dois de",
-   "devrais pas",
+   "doive",
    "doit"
   ],
-  "why": "Je-form: que je dois. I presens byts inte tempus.",
+  "why": "Je-form: que je dois. Efter dire que står indikativ, inte subjonctif, och i presens byts inte tempus.",
   "sv": "Min mamma säger att jag måste städa mitt rum."
  },
  {
@@ -45,7 +45,7 @@
   "q": "« Je suis fatigué. » → Il dit qu'il [est] fatigué.",
   "alt": [
    "suis",
-   "était pas",
+   "es",
    "sont"
   ],
   "why": "Jag → han: je suis blir il est.",
@@ -175,8 +175,8 @@
   "q": "Je ne sais pas [pourquoi] elle est partie.",
   "alt": [
    "ce que",
-   "si",
-   "qu'"
+   "quoi",
+   "qui"
   ],
   "why": "Frågeordet pourquoi står kvar.",
   "sv": "Jag vet inte varför hon gick."
@@ -198,14 +198,14 @@
   "id": "disc-016",
   "topic": "disc",
   "rule": "disc-pron",
-  "q": "« J'aime ton pull. » → Elle dit qu'elle aime [mon] pull.",
+  "q": "« J'aime ton pull », me dit Léa. → Léa dit qu'elle aime [mon] pull.",
   "alt": [
    "ton",
    "son",
    "ma"
   ],
-  "why": "Hon talar till mig: ton → mon.",
-  "sv": "Hon säger att hon gillar min tröja."
+  "why": "Léa talar till mig om min tröja: ton → mon när jag återger det.",
+  "sv": "Léa säger att hon gillar min tröja."
  },
  {
   "id": "disc-017",
@@ -266,7 +266,7 @@
   "q": "« Ne parlez pas ! » → Le prof nous demande de [ne pas parler].",
   "alt": [
    "ne parler pas",
-   "pas parler",
+   "parler pas",
    "ne parlez pas"
   ],
   "why": "Nekad infinitiv: ne pas står tillsammans före infinitiven.",

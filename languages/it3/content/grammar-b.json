@@ -621,14 +621,14 @@
   "id": "comp-001",
   "topic": "comp",
   "rule": "comp-piu",
-  "q": "Roma è più grande [di] Firenze.",
+  "q": "La Sicilia è più grande [di] Malta.",
   "alt": [
    "che",
    "come",
    "del"
   ],
-  "why": "När man jämför två namn eller substantiv används di: più grande di Firenze.",
-  "sv": "Rom är större än Florens."
+  "why": "När man jämför två namn eller substantiv används di: più grande di Malta.",
+  "sv": "Sicilien är större än Malta."
  },
  {
   "id": "comp-002",
@@ -744,11 +744,11 @@
   "rule": "comp-irr",
   "q": "Questo appartamento è [migliore] di quello vecchio.",
   "alt": [
-   "meglio",
    "più migliore",
-   "più bene"
+   "più bene",
+   "migliori"
   ],
-  "why": "Migliore = bättre, adjektiv (beskriver appartamento). Meglio är adverb, och più migliore är dubbelt.",
+  "why": "Migliore = bättre, adjektiv som beskriver appartamento (singular). Più migliore är dubbelt, più bene säger man inte och migliori är plural.",
   "sv": "Den här lägenheten är bättre än den gamla."
  },
  {
@@ -770,11 +770,11 @@
   "rule": "comp-irr",
   "q": "Il traffico oggi è [peggiore] di ieri.",
   "alt": [
-   "peggio",
    "più peggiore",
-   "più cattivo"
+   "più cattivo",
+   "peggiori"
   ],
-  "why": "Peggiore = sämre/värre, adjektiv (beskriver traffico). Peggio är adverb, och più peggiore är dubbelt.",
+  "why": "Peggiore = sämre/värre, adjektiv (beskriver traffico). Più peggiore är dubbelt, och peggiori är plural.",
   "sv": "Trafiken i dag är värre än i går."
  },
  {
@@ -809,11 +809,11 @@
   "rule": "comp-irr",
   "q": "I mezzi pubblici di Milano sono [migliori] di quelli della mia città.",
   "alt": [
-   "meglio",
+   "più meglio",
    "migliore",
    "più migliori"
   ],
-  "why": "Migliori är adjektiv i plural och beskriver mezzi. Meglio är adverb och böjs aldrig.",
+  "why": "Migliori är adjektiv i plural och beskriver mezzi. Migliore är singular, och più migliori/più meglio är dubbla komparativer.",
   "sv": "Kollektivtrafiken i Milano är bättre än den i min stad."
  },
  {
@@ -836,10 +836,10 @@
   "q": "Oggi sto [peggio] di ieri: ho ancora la febbre.",
   "alt": [
    "peggiore",
-   "più male",
+   "più peggio",
    "peggiori"
   ],
-  "why": "Stare + adverb: sto peggio = jag mår sämre. Peggiore är adjektiv.",
+  "why": "Stare + adverb: sto peggio = jag mår sämre. Peggiore är adjektiv, och più peggio är dubbelt.",
   "sv": "I dag mår jag sämre än i går: jag har fortfarande feber."
  },
  {
@@ -965,14 +965,14 @@
   "id": "cond-002",
   "topic": "cond",
   "rule": "cond-forme",
-  "q": "Noi [andremmo] volentieri al mare, ma piove.",
+  "q": "Noi [andremmo] volentieri in montagna, ma fa troppo freddo.",
   "alt": [
    "andrebbero",
    "anderemmo",
    "andaremmo"
   ],
   "why": "Andare har kort stam i condizionale: andr-. Noi andremmo, med dubbelt m.",
-  "sv": "Vi skulle gärna åka till havet, men det regnar."
+  "sv": "Vi skulle gärna åka till bergen, men det är för kallt."
  },
  {
   "id": "cond-003",
@@ -1190,7 +1190,7 @@
   "alt": [
    "piacerei",
    "piacerebbero",
-   "piacerà"
+   "piacciono"
   ],
   "why": "Mi piacerebbe = jag skulle vilja. Det som behagar är en infinitiv (fare), så verbet står i singular.",
   "sv": "Jag skulle vilja göra en resa till Japan."

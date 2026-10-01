@@ -312,7 +312,7 @@ function examMC(t){
     ${exSource(t,exLines(t))}
   </section>
   <section class="panel"><div class="exqs">${t.qs.map((q,i)=>`<div class="exq" data-q="${i}"><p class="q-ask"><b>${i+1}.</b> <span ${lang()}>${esc(q.q)}</span></p>
-    <div class="opts">${q.opts.map((o,j)=>`<button class="opt" data-o="${j}"><span class="k">${String.fromCharCode(97+j)}</span><span ${lang()}>${esc(o)}</span></button>`).join("")}</div><div class="exwhy"></div></div>`).join("")}</div>
+    <div class="opts">${optOrder(q.opts).map((j,n)=>`<button class="opt" data-o="${j}"><span class="k">${String.fromCharCode(97+n)}</span><span ${lang()}>${esc(q.opts[j])}</span></button>`).join("")}</div><div class="exwhy"></div></div>`).join("")}</div>
     <button class="btn" id="exdone">Lämna in</button><div id="exres"></div></section>${exQuit()}`;
   exClock(t.time||10,"Tid kvar"); exWireListen(t);
   app.querySelectorAll(".exq").forEach(qe=>qe.querySelectorAll(".opt").forEach(b=>{
@@ -322,7 +322,7 @@ function examMC(t){
   $("#exdone").onclick=()=>{
     stopSpeech(); clearInterval(EXCLOCK); $("#exdone").disabled=true;
     let r=0; t.qs.forEach((q,i)=>{ const qe=app.querySelector(`.exq[data-q="${i}"]`), a=ans[i], ok=a===q.a; if(ok) r++;
-      qe.querySelectorAll(".opt").forEach((x,j)=>{x.disabled=true; x.classList.remove("on"); if(j===q.a)x.classList.add("right"); else if(j===a)x.classList.add("wrong");});
+      qe.querySelectorAll(".opt").forEach(x=>{const j=+x.dataset.o; x.disabled=true; x.classList.remove("on"); if(j===q.a)x.classList.add("right"); else if(j===a)x.classList.add("wrong");});
       qe.querySelector(".exwhy").innerHTML=q.why?`<p class="foot">${esc(q.why)}</p>`:""; });
     exResult(t,r,t.qs.length,start);
   };

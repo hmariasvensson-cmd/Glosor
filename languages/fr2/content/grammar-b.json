@@ -251,8 +251,8 @@
   "q": "Ce gâteau est [meilleur] que le gâteau du supermarché.",
   "alt": [
    "plus bon",
-   "mieux",
-   "meilleure"
+   "meilleure",
+   "plus meilleur"
   ],
   "why": "Bon blir meilleur i komparativ, aldrig plus bon. Gâteau är maskulinum, så inget -e.",
   "sv": "Den här kakan är godare än kakan från affären."
@@ -277,7 +277,7 @@
   "q": "Les croissants de cette boulangerie sont [meilleurs] que les croissants du supermarché.",
   "alt": [
    "meilleur",
-   "mieux",
+   "plus meilleurs",
    "plus bons"
   ],
   "why": "Om substantiv (croissants) används meilleur, som böjs: meilleurs i maskulinum plural.",
@@ -303,7 +303,7 @@
   "q": "La pizza de ce restaurant est [meilleure] que la pizza de la cantine.",
   "alt": [
    "meilleur",
-   "mieux",
+   "plus meilleure",
    "plus bonne"
   ],
   "why": "Bonne blir meilleure. La pizza är femininum, så det behövs -e.",
@@ -329,7 +329,7 @@
   "q": "Le temps est [meilleur] en juin qu'en avril.",
   "alt": [
    "meilleure",
-   "mieux",
+   "plus meilleur",
    "plus bon"
   ],
   "why": "Le temps är ett maskulint substantiv, så bon blir meilleur.",
@@ -358,7 +358,7 @@
   "alt": [
    "de la",
    "des",
-   "le"
+   "de"
   ],
   "why": "Café är maskulinum och en odefinierad mängd, så det blir du. På svenska säger man bara kaffe.",
   "sv": "På morgonen dricker jag kaffe."
@@ -371,7 +371,7 @@
   "alt": [
    "du",
    "des",
-   "la"
+   "de"
   ],
   "why": "Farine är femininum och en mängd, så de la. Svenskan har ingen artikel här.",
   "sv": "Till kakan behövs det mjöl och socker."
@@ -410,7 +410,7 @@
   "alt": [
    "de la",
    "des",
-   "le"
+   "de"
   ],
   "why": "Jus är maskulinum och en mängd, så du.",
   "sv": "Till festen köpte vi apelsinjuice och chips."
@@ -423,7 +423,7 @@
   "alt": [
    "du",
    "des",
-   "la"
+   "de"
   ],
   "why": "Neige är femininum: de la neige (snö, en mängd).",
   "sv": "På vintern finns det snö i Alperna."
@@ -475,7 +475,7 @@
   "alt": [
    "de la",
    "des",
-   "le"
+   "de"
   ],
   "why": "Riz är maskulinum och en mängd, så du.",
   "sv": "I Senegal äter man ofta ris med fisk."
@@ -539,7 +539,7 @@
   "q": "Il ne fait pas beau et il n'y a pas [de] soleil aujourd'hui.",
   "alt": [
    "du",
-   "le",
+   "de la",
    "des"
   ],
   "why": "Il y a du soleil blir il n'y a pas de soleil i negation.",
@@ -552,8 +552,8 @@
   "q": "Tu as des chips pour la fête ? – Non, je n'ai pas [de] chips.",
   "alt": [
    "des",
-   "les",
-   "du"
+   "du",
+   "de la"
   ],
   "why": "Även des blir de efter negation.",
   "sv": "Har du chips till festen? – Nej, jag har inga chips."
@@ -578,8 +578,8 @@
   "q": "On n'a pas acheté [de] fleurs pour l'anniversaire de maman.",
   "alt": [
    "des",
-   "les",
-   "du"
+   "du",
+   "de la"
   ],
   "why": "Negationen gäller även i passé composé: des fleurs blir pas de fleurs.",
   "sv": "Vi köpte inga blommor till mammas födelsedag."
@@ -686,7 +686,7 @@
    "Ces"
   ],
   "why": "Train är maskulinum och börjar med konsonant, så ce.",
-  "sv": "Tåget går till Marseille."
+  "sv": "Det här tåget går till Marseille."
  },
  {
   "id": "dem-002",
@@ -1033,10 +1033,10 @@
   "q": "C'est l'anniversaire de Sara. Ce cadeau est pour [elle].",
   "alt": [
    "la",
-   "lui",
-   "sa"
+   "sa",
+   "son"
   ],
-  "why": "Efter pour används betonad form. Elle = henne. Lui efter preposition betyder honom.",
+  "why": "Efter pour används betonad form: pour elle = till henne. La och sa står aldrig efter en preposition.",
   "sv": "Det är Saras födelsedag. Den här presenten är till henne."
  },
  {
@@ -1084,9 +1084,9 @@
   "rule": "pton-prep",
   "q": "Mes amies sont au Maroc en ce moment. Je pense souvent à [elles].",
   "alt": [
-   "eux",
    "leur",
-   "les"
+   "les",
+   "ils"
   ],
   "why": "Efter à används betonad form. Amies är bara tjejer, så elles. Eux gäller killar eller en blandad grupp.",
   "sv": "Mina väninnor är i Marocko just nu. Jag tänker ofta på dem."
@@ -1112,7 +1112,7 @@
   "alt": [
    "ils",
    "leur",
-   "elles"
+   "leurs"
   ],
   "why": "Efter avec används betonad form. Paul och Tom är killar, så eux.",
   "sv": "Paul och Tom är mina bästa vänner. Jag gör allt med dem."
@@ -1162,7 +1162,7 @@
   "rule": "pton-cest",
   "q": "Tu vois les filles là-bas ? Ce sont [elles], mes cousines de Genève.",
   "alt": [
-   "eux",
+   "leur",
    "ils",
    "les"
   ],
@@ -1202,8 +1202,8 @@
   "q": "Qui a téléphoné ? – C'est [elle], ta sœur.",
   "alt": [
    "la",
-   "lui",
-   "sa"
+   "sa",
+   "se"
   ],
   "why": "Efter c'est används betonad form: c'est elle = det är hon.",
   "sv": "Vem ringde? – Det är hon, din syster."
@@ -1320,7 +1320,7 @@
   "alt": [
    "en",
    "au",
-   "dans"
+   "à la"
   ],
   "why": "Före städer används à, både för i och till.",
   "sv": "I sommar åker jag till Paris med min familj."
@@ -1333,7 +1333,7 @@
   "alt": [
    "au",
    "en",
-   "dans"
+   "à la"
   ],
   "why": "Före städer används à: à Montréal.",
   "sv": "Min farbror bor i Montréal."

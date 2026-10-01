@@ -4,10 +4,12 @@
    repetitionsschemat (applyAnswer, schedule i app.js) och loggen (finishSession). Vilka ord som är nya (pickNew)
    och vilka som ska repeteras (dueWords) avgörs i app.js. */
 
-/* Passet: nya ord först (lärokort), sedan quizet. o.daily: passet hör till Dagens pass. */
+/* Passet: nya ord först (lärokort), sedan quizet. o.daily: passet hör till Dagens pass. o.dp (gruppernas id) och
+   o.mixIn (frågor av andra typer som blandas in i quizet): ett kort pass i Dagens pass (startDaily i 90-mix.js). */
 function startSession(newW,due,o){
   $("#tabs").hidden=true;
   sess={newW,due,i:0,kind:"words",start:Date.now(),daily:!!(o&&o.daily)};
+  if(o&&o.dp) Object.assign(sess,{dp:o.dp,mixIn:o.mixIn||[],label:"Dagens pass"});
   if(newW.length) renderLearn(); else startQuiz();
 }
 function renderLearn(){
@@ -61,7 +63,8 @@ function startQuiz(){
   const items=[...sess.newW.map(w=>({w,isNew:true,t:qType(w,true)})),...sess.due.map(w=>({w,isNew:false,t:qType(w,false)}))]
     .map(q=>({...q,canType:q.t==="type"}));
   // Quizet är en ny runda (nytt sess i beginQuiz); från lärokorten följer bara det här med
-  const {newW,due,i,extra,daily,start}=sess;
+  const {newW,due,i,extra,daily,start,dp,label}=sess;
+  if(dp) return beginQuiz("words",passInterleave(items,sess.mixIn||[]),{newW,due,i,extra,daily,start,dp,label});   // Dagens pass
   beginQuiz("words",shuffle(items),{newW,due,i,extra,daily,start});
 }
 
@@ -148,9 +151,13 @@ function applyAnswer(x,id){
 function tally(E,r){ if(r.ok)E.right++; if(r.t==="mc"){E.mcN++; if(r.ok)E.mcR++;} else {E.tyN++; if(r.ok)E.tyR++;} }
 function finishSession(){
   const p=S.pass, now=Date.now();
-  const extra=!!sess.extra;
+  const extra=!!sess.extra, dp=!!sess.dp;
   const ids=[...sess.newW,...sess.due].map(w=>w.id);
-  const E={p,d:now,dur:runSecs(sess.start,now),nNew:sess.newW.length,nRep:sess.due.length,right:0,total:ids.length,mcR:0,mcN:0,tyR:0,tyN:0,extra};
+  // Dagens pass: frågorna av andra typer (fraser, grammatik, verb …) räknas som i finishGeneric, och tiden delas efter antal frågor
+  const wid=new Set(ids), other=dp?Object.keys(sess.firstTry).filter(id=>!wid.has(id)):[];
+  const dur=runSecs(sess.start,now), part=n=>Math.round(dur*n/Math.max(1,ids.length+other.length));
+  const E={p,d:now,dur:other.length?part(ids.length):dur,nNew:sess.newW.length,nRep:sess.due.length,right:0,total:ids.length,mcR:0,mcN:0,tyR:0,tyN:0,extra};
+  if(dp) E.dp=1;
   const rate=id=>{const r=(sess.rate||{})[id]; return r==="hard"||r==="easy"?r:undefined;};
   sess.newW.forEach(w=>{const x={s:0,due:p+INT[0],lp:p,ld:now}; const r=applyAnswer(x,w.id); S.w[w.id]=x; tally(E,r);
     if(!extra&&r.ok&&r.t==="type"&&rate(w.id)==="easy"){ x.s=1; x.due=p+INT[1]; }});   // Lätt: ett nytt ord hoppar över nästa pass
@@ -160,20 +167,25 @@ function finishSession(){
     if(extra) return;               // extraövning flyttar inte schemat
     const was=x.s; schedule(x,r.ok,p,now,r.t,r.ok&&r.t==="type"?rate(w.id):undefined); if(r.ok&&was<MASTER&&x.s>=MASTER) newlyMastered++;
   });
-  S.log.push(E); if(!extra) S.pass++; dropRun(sess); delete S.run; save();
-  const right=ids.filter(id=>sess.firstTry[id]!==false).length;
+  // Ett pass i Dagens pass utan glosor (inget att repetera, inga nya ord) räknas inte som glospass
+  if(ids.length||!dp){ S.log.push(E); if(!extra) S.pass++; }
+  if(other.length) kindsDone(other,part(other.length),now,{dp:1});
+  const daily=sess.daily; if(daily) S.dailyDay=dayKey(now);
+  dropRun(sess); delete S.run; save();
+  const right=ids.filter(id=>sess.firstTry[id]!==false).length+other.filter(id=>sess.firstTry[id]).length, total=ids.length+other.length;
   const missed=ids.filter(id=>sess.firstTry[id]===false).map(id=>byId[id]);
-  const mastered=extra?0:newlyMastered;
+  const recap=other.filter(id=>!sess.firstTry[id]).map(id=>{const i=id.indexOf(":"), K=KINDS[id.slice(0,i)]; return K&&K.recap?K.recap(id.slice(i+1)):"";}).filter(Boolean);
+  const mastered=extra?0:newlyMastered, n=dp?passesToday():0;
   app.innerHTML=`<section class="panel">
-    <span class="label">${extra?"Extraövning klar":`Pass ${p} klart`}</span>
-    <div style="display:flex;align-items:baseline;gap:10px"><span class="big">${right}/${ids.length}</span><span class="sub">rätt på första försöket</span></div>
+    <span class="label">${extra?"Extraövning klar":dp?`Pass ${n} i dag klart`:`Pass ${p} klart`}</span>
+    <div style="display:flex;align-items:baseline;gap:10px"><span class="big">${right}/${total}</span><span class="sub">rätt på första försöket</span></div>
     <p class="plan">${extra?"Extraövningen påverkar inte när orden kommer tillbaka, men den räknas i statistiken.":""}${sess.newW.length?`De ${sess.newW.length} nya orden kommer tillbaka i nästa pass.`:""}
       ${mastered?` ${mastered} ord är nu inlärda. De kommer tillbaka då och då, med allt längre mellanrum.`:""}
       ${missed.length&&!extra?" Orden du missade flyttas ned ett steg och kommer tillbaka snart.":""}</p>
     ${missed.length?`<div class="field"><span class="label">Öva lite extra på</span><ul class="missed">${missed.map(w=>`<li><span class="t" ${lang()}>${esc(w.t)}</span><span class="sv">${esc(w.sv)}</span></li>`).join("")}</ul></div>`:""}
-    ${sess.daily?`<button class="btn" id="mix">Fortsätt dagens pass: blandade övningar</button>`:""}
-    <div class="navrow"><button class="btn ghost" id="st">Statistik</button><button class="btn ${sess.daily?"ghost":""}" id="home">Till startsidan</button></div></section>`;
-  const daily=sess.daily; if(daily){ S.dailyDay=dayKey(Date.now()); save(); }
+    ${recap.length?`<div class="field"><span class="label">Titta på de här en gång till</span><ul class="missed">${recap.map(m=>`<li><span ${lang()}>${esc(m)}</span><button type="button" class="speak xs" data-say="${esc(m)}" aria-label="Läs upp">${SPK}</button></li>`).join("")}</ul></div>`:""}
+    ${dp?dailyAfter(n):""}
+    <div class="navrow"><button class="btn ghost" id="st">Statistik</button><button class="btn ${dp?"ghost":""}" id="home">Till startsidan</button></div></section>`;
   sess=null; boardPush(); $("#home").onclick=renderStart; $("#st").onclick=()=>setView("stats"); renderList();
-  if(daily) $("#mix").onclick=()=>startMix();   // Dagens pass räknas redan som gjort (dailyDay), så rundan är en vanlig blandad runda
+  if(dp) wireDailyAfter(n);
 }

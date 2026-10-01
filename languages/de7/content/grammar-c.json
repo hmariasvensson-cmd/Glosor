@@ -44,11 +44,11 @@
 "rule": "pa-zustand",
 "q": "Die Bibliothek [ist] sonntags geschlossen.",
 "alt": [
-"wird",
-"wurde",
+"werden",
+"hat",
 "worden"
 ],
-"why": "Zustandspassiv (tillstånd): sein + particip II. Wird geschlossen skulle beskriva handlingen att stänga.",
+"why": "Zustandspassiv (tillstånd): sein + particip II. Wird geschlossen skulle beskriva själva handlingen att stänga.",
 "sv": "Biblioteket är stängt på söndagar."
 },
 {
@@ -83,7 +83,7 @@
 "rule": "pe-seinzu",
 "q": "Der Antrag ist bis zum 15. Juli [einzureichen].",
 "alt": [
-"eingereicht",
+"einreichend",
 "einreichen",
 "zu einreichen"
 ],
@@ -148,7 +148,7 @@
 "rule": "pa-tempus",
 "q": "Das Werk [wurde] 1905 in Dresden uraufgeführt.",
 "alt": [
-"wird",
+"werden",
 "worden",
 "würde"
 ],
@@ -161,7 +161,7 @@
 "rule": "pa-tempus",
 "q": "Der Saal [wird] zurzeit renoviert.",
 "alt": [
-"ist",
+"werden",
 "wurde",
 "worden"
 ],
@@ -214,7 +214,7 @@
 "q": "Die Anmeldung muss bis Freitag abgeschickt [werden].",
 "alt": [
 "worden",
-"sein",
+"wurden",
 "geworden"
 ],
 "why": "Passiv med modalverb: muss + particip + werden.",
@@ -231,7 +231,7 @@
 "müssen worden"
 ],
 "why": "Perfekt av passiv med modalverb: hat … verschoben werden müssen (dubbel infinitiv).",
-"sv": "Provet har måst flyttas på grund av sjukdom."
+"sv": "Provet fick flyttas på grund av sjukdom."
 },
 {
 "id": "passiv-013",
@@ -239,8 +239,8 @@
 "rule": "pa-modal",
 "q": "Das Problem [hätte] früher erkannt werden können.",
 "alt": [
-"hatte",
-"hat",
+"hättest",
+"hätten",
 "wäre"
 ],
 "why": "Konjunktiv II dåtid, passiv med modalverb: hätte … erkannt werden können.",
@@ -253,7 +253,7 @@
 "q": "Die Noten dürfen nicht kopiert [werden].",
 "alt": [
 "worden",
-"sein",
+"wurden",
 "geworden"
 ],
 "why": "Förbud i passiv: dürfen nicht + particip + werden.",
@@ -441,7 +441,7 @@
 "alt": [
 "um",
 "für",
-"ge"
+"dazu"
 ],
 "why": "sein + zu + infinitiv = kunde knappt uthärdas.",
 "sv": "Bullret gick knappt att uthärda."
@@ -514,7 +514,10 @@
 "reparsam"
 ],
 "why": "Lånord: reparabel = går att reparera (också reparierbar).",
-"sv": "Skadan går tyvärr inte att reparera."
+"sv": "Skadan går tyvärr inte att reparera.",
+"acc": [
+"reparierbar"
+]
 },
 {
 "id": "passersatz-016",
@@ -550,7 +553,7 @@
 "alt": [
 "Rede",
 "Wort",
-"Diskussion kommen"
+"Gespräch"
 ],
 "why": "zur Sprache kommen = tas upp (passiv betydelse).",
 "sv": "Frågan tas upp i morgon."
@@ -665,7 +668,7 @@
 "rule": "pat-zu",
 "q": "Die bis Freitag [einzureichenden] Unterlagen liegen bereit.",
 "alt": [
-"eingereichten",
+"einzureichende",
 "einreichenden",
 "zu einreichenden"
 ],
@@ -753,7 +756,7 @@
 "alt": [
 "anhaltende",
 "anhaltend",
-"angehaltenen"
+"anhaltendes"
 ],
 "why": "Genitiv maskulinum efter des: -en. Particip I (pågående).",
 "sv": "Trots det ihållande regnet hölls konserten utomhus."

@@ -44,9 +44,9 @@
 "rule": "mpf-k2",
 "q": "Du [hättest] dich früher bewerben sollen.",
 "alt": [
-"hast",
-"hattest",
-"würdest"
+"hätte",
+"hättet",
+"wärst"
 ],
 "why": "Konjunktiv II i dåtid med modalverb: hätte + infinitiv + sollen. Det uttrycker att något borde ha gjorts.",
 "sv": "Du borde ha sökt tidigare."
@@ -57,11 +57,11 @@
 "rule": "mpf-lassen",
 "q": "Er hat seine Geige in Cremona reparieren [lassen].",
 "alt": [
-"gelassen",
+"ließe",
 "ließ",
 "lässt"
 ],
-"why": "lassen med infinitiv beter sig som ett modalverb: hat … reparieren lassen (dubbel infinitiv).",
+"why": "lassen med infinitiv beter sig som ett modalverb: hat … reparieren lassen (dubbel infinitiv). Formen gelassen hörs ibland i talspråk men är inte standard.",
 "sv": "Han har låtit reparera sin fiol i Cremona."
 },
 {
@@ -70,22 +70,22 @@
 "rule": "msu-sollen",
 "q": "Laut seiner Biografie [soll] der Dirigent schon mit sechs Jahren komponiert haben.",
 "alt": [
-"will",
-"darf",
+"sollt",
+"sollst",
 "sollen"
 ],
-"why": "sollen = det sägs att (man påstår det om honom). will skulle betyda att han själv påstår det.",
+"why": "sollen = det sägs att (källan är biografin, inte han själv). will skulle betyda att han själv påstår det.",
 "sv": "Enligt hans biografi ska dirigenten ha komponerat redan vid sex års ålder."
 },
 {
 "id": "modsubj-002",
 "topic": "modsubj",
 "rule": "msu-wollen",
-"q": "Der Minister [will] von dem Plan nichts gewusst haben.",
+"q": "Der Minister [will] von dem Plan nichts gewusst haben – so behauptet er jedenfalls.",
 "alt": [
 "soll",
-"muss",
-"kann"
+"wollen",
+"willst"
 ],
 "why": "wollen = påstår sig själv. Ministern hävdar att han inte visste något (men man tvivlar).",
 "sv": "Ministern påstår att han inte visste något om planen."
@@ -97,10 +97,10 @@
 "q": "Die Zahlen [dürften] im nächsten Jahr weiter steigen.",
 "alt": [
 "durften",
-"dürfen",
+"dürftet",
 "darften"
 ],
-"why": "dürfte (Konjunktiv II) = troligen, sannolikt. Presens dürfen skulle betyda tillåtelse.",
+"why": "dürfte (Konjunktiv II) = troligen, sannolikt. Indikativ dürfen/durften skulle handla om tillåtelse.",
 "sv": "Siffrorna kommer sannolikt att fortsätta stiga nästa år."
 },
 {
@@ -122,7 +122,7 @@
 "rule": "msu-grad",
 "q": "Das [kann] nicht stimmen, die Zahl ist viel zu hoch.",
 "alt": [
-"will",
+"könnt",
 "möchte",
 "kannst"
 ],
@@ -185,14 +185,14 @@
 "id": "modperf-010",
 "topic": "modperf",
 "rule": "mpf-perf",
-"q": "Ich habe die Aufgabe nicht [gekonnt].",
+"q": "Die Vokabeln habe ich gestern noch nicht [gekonnt].",
 "alt": [
 "können",
 "konnten",
 "gekönnt"
 ],
 "why": "Utan annat verb används modalverbets vanliga particip: gekonnt.",
-"sv": "Jag klarade inte uppgiften."
+"sv": "Glosorna kunde jag inte i går."
 },
 {
 "id": "modperf-011",
@@ -265,9 +265,9 @@
 "rule": "mpf-k2",
 "q": "Wir [hätten] die Karten früher kaufen sollen.",
 "alt": [
-"haben",
 "hätte",
-"würden"
+"hättet",
+"wären"
 ],
 "why": "hätte + infinitiv + sollen = borde ha.",
 "sv": "Vi borde ha köpt biljetterna tidigare."
@@ -305,7 +305,7 @@
 "q": "Das Orchester [hätte] nicht so schnell spielen dürfen.",
 "alt": [
 "hätten",
-"hat",
+"hättet",
 "wäre"
 ],
 "why": "Kritik i efterhand: hätte … nicht … dürfen = borde inte ha.",
@@ -321,8 +321,11 @@
 "gehören",
 "hört"
 ],
-"why": "hören + infinitiv får dubbel infinitiv i perfekt: habe … singen hören.",
-"sv": "Jag har hört sångerskan sjunga i kyrkan."
+"why": "hören + infinitiv får oftast dubbel infinitiv i perfekt: habe … singen hören (singen gehört går också).",
+"sv": "Jag har hört sångerskan sjunga i kyrkan.",
+"acc": [
+"gehört"
+]
 },
 {
 "id": "modperf-021",
@@ -330,7 +333,7 @@
 "rule": "mpf-lassen",
 "q": "Sie hat sich die Noten aus Wien schicken [lassen].",
 "alt": [
-"gelassen",
+"ließe",
 "ließ",
 "lässt"
 ],
@@ -360,8 +363,11 @@
 "sahen",
 "sehend"
 ],
-"why": "sehen + infinitiv: haben … kommen sehen.",
-"sv": "Vi såg honom komma."
+"why": "sehen + infinitiv: haben … kommen sehen (kommen gesehen går också).",
+"sv": "Vi såg honom komma.",
+"acc": [
+"gesehen"
+]
 },
 {
 "id": "modsubj-006",
@@ -370,7 +376,7 @@
 "q": "Die Sängerin [soll] den Vertrag schon unterschrieben haben.",
 "alt": [
 "sollen",
-"darf",
+"sollst",
 "sollt"
 ],
 "why": "sollen = det sägs (andra påstår det).",
@@ -382,11 +388,11 @@
 "rule": "msu-sollen",
 "q": "Das neue Konzerthaus [soll] eine hervorragende Akustik haben.",
 "alt": [
-"will",
-"darf",
-"möchte"
+"sollen",
+"sollt",
+"sollst"
 ],
-"why": "sollen: man säger att …",
+"why": "sollen: man säger att … (subjektet das Konzerthaus är tredje person singular: soll).",
 "sv": "Det nya konserthuset sägs ha en utmärkt akustik."
 },
 {
@@ -396,17 +402,17 @@
 "q": "Laut Zeitung [sollen] mehrere Stellen gestrichen werden.",
 "alt": [
 "wollen",
-"müssen",
-"dürfen"
+"soll",
+"sollt"
 ],
-"why": "Rykte eller uppgift från annan källa: sollen.",
+"why": "Rykte eller uppgift från annan källa: sollen, i plural eftersom subjektet är mehrere Stellen.",
 "sv": "Enligt tidningen ska flera tjänster dras in."
 },
 {
 "id": "modsubj-009",
 "topic": "modsubj",
 "rule": "msu-wollen",
-"q": "Er [will] das Stück in nur einer Nacht komponiert haben – das behauptet jedenfalls er selbst.",
+"q": "Er [will] das Stück in nur einer Nacht komponiert haben – das behauptet er jedenfalls selbst.",
 "alt": [
 "soll",
 "darf",
@@ -422,10 +428,10 @@
 "q": "Niemand [will] den Unfall gesehen haben.",
 "alt": [
 "wollen",
-"muss",
-"darf"
+"willst",
+"wollt"
 ],
-"why": "wollen: ingen påstår sig ha sett olyckan.",
+"why": "wollen: ingen påstår sig ha sett olyckan. Niemand tar verbet i singular.",
 "sv": "Ingen säger sig ha sett olyckan."
 },
 {
@@ -447,11 +453,11 @@
 "rule": "msu-grad",
 "q": "Er hat den ganzen Tag geprobt, er [muss] müde sein.",
 "alt": [
-"soll",
-"will",
-"darf"
+"musst",
+"müssen",
+"gemusst"
 ],
-"why": "muss = talaren är nästan säker (slutsats).",
+"why": "muss = talaren är nästan säker (slutsats). Subjektet er kräver muss.",
 "sv": "Han har repeterat hela dagen, han måste vara trött."
 },
 {
@@ -460,12 +466,15 @@
 "rule": "msu-grad",
 "q": "Das [könnte] ein Fehler in der Partitur sein.",
 "alt": [
-"sollte",
-"wollte",
-"durfte"
+"könntest",
+"könnten",
+"wollte"
 ],
-"why": "könnte = möjligen (låg säkerhet).",
-"sv": "Det kan vara ett fel i partituret."
+"why": "könnte = möjligen (låg säkerhet); kann går också. Subjektet das kräver singular.",
+"sv": "Det skulle kunna vara ett fel i partituret.",
+"acc": [
+"kann"
+]
 },
 {
 "id": "modsubj-014",
@@ -474,7 +483,7 @@
 "q": "Die Reparatur [dürfte] etwa 300 Euro kosten.",
 "alt": [
 "dürften",
-"durfte",
+"dürftet",
 "will"
 ],
 "why": "dürfte = troligen (ganska säker).",
@@ -484,14 +493,14 @@
 "id": "modsubj-015",
 "topic": "modsubj",
 "rule": "msu-grad",
-"q": "Sie [kann] nicht die Komponistin sein, sie wurde erst 1990 geboren.",
+"q": "Sie [kann] nicht die Komponistin sein – das Stück entstand lange vor ihrer Geburt.",
 "alt": [
-"will",
-"soll",
-"möchte"
+"kannst",
+"können",
+"könnt"
 ],
-"why": "kann nicht = omöjligt.",
-"sv": "Hon kan inte vara tonsättaren, hon föddes först 1990."
+"why": "kann nicht = omöjligt: talaren är säker på att det inte stämmer.",
+"sv": "Hon kan inte vara tonsättaren – stycket kom till långt före hennes födelse."
 },
 {
 "id": "modsubj-016",
@@ -500,8 +509,8 @@
 "q": "Es [mag] sein, dass die Methode funktioniert, aber sie ist teuer.",
 "alt": [
 "will",
-"soll",
-"darf"
+"magst",
+"mögt"
 ],
 "why": "mag sein = det må vara (medgivande).",
 "sv": "Det må vara att metoden fungerar, men den är dyr."
@@ -540,7 +549,7 @@
 "alt": [
 "sein",
 "war",
-"geworden"
+"worden"
 ],
 "why": "Perfektinfinitiv av sein: gewesen sein.",
 "sv": "Tonsättaren ska ha varit mycket fattig."
@@ -562,13 +571,13 @@
 "id": "modsubj-021",
 "topic": "modsubj",
 "rule": "msu-sollen",
-"q": "Beethoven [soll] beim Komponieren oft laut gesungen haben.",
+"q": "Zeitgenossen zufolge [soll] Beethoven beim Komponieren oft laut gesungen haben.",
 "alt": [
-"will",
-"darf",
-"möchte"
+"sollen",
+"sollst",
+"will"
 ],
-"why": "sollen: enligt uppgift.",
-"sv": "Beethoven ska ofta ha sjungit högt när han komponerade."
+"why": "sollen: enligt uppgift från andra (samtida). will skulle betyda att han själv påstod det.",
+"sv": "Enligt samtida ska Beethoven ofta ha sjungit högt när han komponerade."
 }
 ]

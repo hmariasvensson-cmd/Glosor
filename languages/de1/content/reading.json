@@ -37,7 +37,7 @@
     "sv": "Jag söker en kompis i Sverige."
    },
    {
-    "fr": "Wir schreiben zusammen auf Deutsch oder auf Englisch. Das ist gut für die Schule!",
+    "fr": "Wir schreiben uns auf Deutsch oder auf Englisch. Das ist gut für die Schule!",
     "sv": "Vi skriver till varandra på tyska eller på engelska. Det är bra för skolan!"
    },
    {
@@ -548,8 +548,8 @@
     "sv": "Lördag kl. 20: konsert på teatern – musik från Sverige och Norge."
    },
    {
-    "fr": "Sonntag, 11 Uhr: Das Museum ist heute frei. Es gibt ein Video über die Stadt.",
-    "sv": "Söndag kl. 11: Museet är gratis i dag. Det finns en video om staden."
+    "fr": "Sonntag, 11 Uhr: Heute ist der Eintritt im Museum frei. Es gibt ein Video über die Stadt.",
+    "sv": "Söndag kl. 11: I dag är det gratis inträde på museet. Det finns en video om staden."
    },
    {
     "fr": "Sonntag, 15 Uhr: Im Zoo gibt es heute viele Tiere und Spiele für Kinder.",
@@ -596,7 +596,7 @@
      "Det är öppet på natten"
     ],
     "a": 0,
-    "why": "Museet är ”frei” och på söndag blir det regn: ”da ist es warm und trocken”."
+    "why": "Inträdet är ”frei” och på söndag blir det regn: ”da ist es warm und trocken”."
    }
   ],
   "gloss": {
@@ -654,6 +654,11 @@
     "t": "ab",
     "sv": "från",
     "g": ""
+   },
+   "eintritt": {
+    "t": "der Eintritt",
+    "sv": "inträde",
+    "g": "m"
    }
   }
  },
@@ -687,8 +692,8 @@
     "sv": "På nedervåningen finns ett kök med mikrovågsugn. Du kan laga mat här."
    },
    {
-    "fr": "Wir brauchen eine Person, sauber und nett, vielleicht einen Studenten oder eine Studentin.",
-    "sv": "Vi behöver en person som är städad och trevlig, kanske en student."
+    "fr": "Wir suchen eine Person, sauber und nett, vielleicht einen Studenten oder eine Studentin.",
+    "sv": "Vi söker en person som är städad och trevlig, kanske en student."
    },
    {
     "fr": "Hast du Fragen? Schreib eine E-Mail an familie.gruber@beispiel.at.",
@@ -705,7 +710,7 @@
      "En beskrivning av en skola"
     ],
     "a": 0,
-    "why": "”Zimmer in Wien frei” och ”Wir brauchen eine Person”."
+    "why": "”Zimmer in Wien frei” och ”Wir suchen eine Person”."
    },
    {
     "type": "detalj",
@@ -724,7 +729,7 @@
     "opts": [
      "Rummet är stort och mörkt",
      "Rummet har två fönster",
-     "Rummet har egen kök"
+     "Rummet har eget kök"
     ],
     "a": 1,
     "why": "”Es hat zwei Fenster.”"
@@ -898,8 +903,8 @@
   "title": "Lied: Alle meine Entchen",
   "lines": [
    {
-    "fr": "Ein altes Kinderlied aus Deutschland. Man singt es seit etwa 200 Jahren. Du findest die Melodie leicht im Internet.",
-    "sv": "En gammal barnvisa från Tyskland. Man har sjungit den i ungefär 200 år. Melodin hittar du lätt på nätet."
+    "fr": "Ein altes Kinderlied aus Deutschland. Man singt es seit über hundert Jahren. Du findest die Melodie leicht im Internet.",
+    "sv": "En gammal barnvisa från Tyskland. Man har sjungit den i över hundra år. Melodin hittar du lätt på nätet."
    },
    {
     "fr": "Alle meine Entchen schwimmen auf dem See, schwimmen auf dem See,",
@@ -955,11 +960,6 @@
     "t": "das Kinderlied",
     "sv": "barnvisa",
     "g": "n"
-   },
-   "etwa": {
-    "t": "etwa",
-    "sv": "ungefär",
-    "g": ""
    },
    "melodie": {
     "t": "die Melodie",

@@ -35,7 +35,7 @@
 "Forschungenergebnisse",
 "Forschensergebnisse"
 ],
-"why": "Efter -ung kommer alltid fog-s i sammansättningar: Forschung + s + Ergebnisse.",
+"why": "Efter -ung kommer (nästan) alltid fog-s i sammansättningar: Forschung + s + Ergebnisse.",
 "sv": "Forskningsresultaten publiceras på hösten."
 },
 {
@@ -71,7 +71,7 @@
 "q": "Gestern hat [sich] die Professorin bei mir gemeldet.",
 "alt": [
 "mich",
-"sie",
+"ihm",
 "ihr"
 ],
 "why": "Reflexivpronomenet sich står gärna tidigt i mittfältet, före substantivsubjektet.",
@@ -97,7 +97,7 @@
 "q": "Die Forscher behaupten, sie [hätten] neue Belege gefunden.",
 "alt": [
 "habe",
-"hatten",
+"hättest",
 "hättet"
 ],
 "why": "Konjunktiv I av haben i plural (sie haben) ser ut som indikativ, därför används Konjunktiv II: hätten.",
@@ -263,14 +263,14 @@
 "id": "wortbild-014",
 "topic": "wortbild",
 "rule": "wb-adj",
-"q": "Ihr Spiel war [fehlerlos].",
+"q": "Ihr Spiel war [fehlerlos], kein einziger Ton war falsch.",
 "alt": [
 "fehlerbar",
 "fehlerhaft",
 "fehlersam"
 ],
 "why": "-los = utan: fehlerlos = felfri. fehlerhaft betyder tvärtom felaktig.",
-"sv": "Hennes spel var felfritt."
+"sv": "Hennes spel var felfritt, inte en enda ton var fel."
 },
 {
 "id": "wortbild-015",
@@ -382,11 +382,11 @@
 "rule": "mf-pron",
 "q": "Ich habe [dem Dirigenten die Partitur] gegeben.",
 "alt": [
-"die Partitur dem Dirigenten",
 "den Dirigenten die Partitur",
-"dem Dirigent die Partitur"
+"dem Dirigent die Partitur",
+"der Dirigent die Partitur"
 ],
-"why": "Två substantiv: dativ före ackusativ (normal ordföljd).",
+"why": "Två substantiv: normalt dativ före ackusativ. Dirigent är svag maskulin: dem Dirigenten.",
 "sv": "Jag har gett dirigenten partituret."
 },
 {
@@ -408,8 +408,7 @@
 "rule": "mf-tekamolo",
 "q": "Wir fahren [morgen mit dem Zug] nach Leipzig.",
 "alt": [
-"mit dem Zug morgen",
-"nach mit dem Zug morgen",
+"mit dem morgen Zug",
 "mit morgen dem Zug"
 ],
 "why": "Tid (morgen) före sätt (mit dem Zug) före plats (nach Leipzig).",
@@ -426,7 +425,7 @@
 "wegen den Prüfung"
 ],
 "why": "wegen + genitiv: wegen der Prüfung. Orsaken står före plats i mittfältet.",
-"sv": "Hon har arbetat nätterna i biblioteket på grund av provet."
+"sv": "Hon har arbetat på nätterna i biblioteket på grund av provet."
 },
 {
 "id": "mittelfeld-010",
@@ -434,9 +433,8 @@
 "rule": "mf-tekamolo",
 "q": "Er ist [trotz des Regens zu Fuß] zur Hochschule gegangen.",
 "alt": [
-"zu Fuß trotz des Regens zur",
-"zur trotz des Regens zu Fuß",
-"zu Fuß zur trotz des Regens"
+"zu Fuß des Regens trotz",
+"trotz zu Fuß des Regens"
 ],
 "why": "Orsak/medgivande (trotz des Regens) före sätt (zu Fuß) före plats.",
 "sv": "Han gick till högskolan till fots trots regnet."
@@ -445,11 +443,11 @@
 "id": "mittelfeld-011",
 "topic": "mittelfeld",
 "rule": "mf-nicht",
-"q": "Ich habe das Buch [nicht] gelesen.",
+"q": "Ich habe [das Buch nicht] gelesen.",
 "alt": [
-"nicht das Buch",
-"gelesen nicht",
-"das nicht Buch"
+"das nicht Buch",
+"nicht Buch das",
+"Buch das nicht"
 ],
 "why": "Vid satsnegation står nicht efter det bestämda objektet, före verbet sist.",
 "sv": "Jag har inte läst boken."
@@ -458,11 +456,10 @@
 "id": "mittelfeld-012",
 "topic": "mittelfeld",
 "rule": "mf-nicht",
-"q": "Sie wohnt [nicht] in Berlin, sondern in Potsdam.",
+"q": "Sie wohnt [nicht in Berlin], sondern in Potsdam.",
 "alt": [
-"Berlin nicht",
-"in nicht",
-"wohnt nicht"
+"in Berlin nicht",
+"in nicht Berlin"
 ],
 "why": "nicht före det som negeras (in Berlin) när sondern följer.",
 "sv": "Hon bor inte i Berlin utan i Potsdam."
@@ -471,11 +468,10 @@
 "id": "mittelfeld-013",
 "topic": "mittelfeld",
 "rule": "mf-nicht",
-"q": "Er hat die Professorin gestern [nicht] angerufen.",
+"q": "Er hat [die Professorin gestern nicht] angerufen.",
 "alt": [
-"nicht gestern die",
-"nicht die",
-"angerufen nicht"
+"nicht die Professorin gestern",
+"die nicht Professorin gestern"
 ],
 "why": "nicht står sent i mittfältet, efter objekt och tidsadverb, före particip.",
 "sv": "Han ringde inte professorn i går."
@@ -484,11 +480,10 @@
 "id": "mittelfeld-014",
 "topic": "mittelfeld",
 "rule": "mf-nicht",
-"q": "Wir sind [nicht] mit dem Auto gekommen.",
+"q": "Wir sind [nicht mit dem Auto] gekommen.",
 "alt": [
-"mit nicht dem",
-"gekommen nicht",
-"dem nicht Auto"
+"mit dem nicht Auto",
+"mit nicht dem Auto"
 ],
 "why": "nicht före prepositionsfras som hör nära verbet (mit dem Auto).",
 "sv": "Vi kom inte med bil."
@@ -525,9 +520,9 @@
 "rule": "mf-reflex",
 "q": "Ich weiß, dass [sich] die Situation bald ändert.",
 "alt": [
-"sie",
-"ihr",
-"ihm"
+"ihm",
+"dir",
+"mir"
 ],
 "why": "I bisats: sich tidigt, före substantivsubjektet.",
 "sv": "Jag vet att situationen snart ändras."
@@ -552,8 +547,7 @@
 "q": "Das Orchester probt [jeden Morgen konzentriert im großen Saal].",
 "alt": [
 "im großen Saal konzentriert jeden Morgen",
-"konzentriert im großen Saal jeden Morgen",
-"im großen Saal jeden Morgen konzentriert"
+"konzentriert im großen Saal jeden Morgen"
 ],
 "why": "Tid – sätt – plats.",
 "sv": "Orkestern repeterar koncentrerat i stora salen varje morgon."
@@ -562,11 +556,11 @@
 "id": "mittelfeld-020",
 "topic": "mittelfeld",
 "rule": "mf-nicht",
-"q": "Das ist [nicht] richtig.",
+"q": "Das ist [nicht richtig].",
 "alt": [
 "richtig nicht",
-"nichts",
-"kein"
+"nichts richtig",
+"kein richtig"
 ],
 "why": "nicht före predikativt adjektiv.",
 "sv": "Det är inte rätt."
@@ -603,11 +597,11 @@
 "rule": "kr-rede",
 "q": "Die Intendantin sagte, man [könne] die Preise nicht senken.",
 "alt": [
-"kann",
-"konnte",
-"können"
+"können",
+"könnt",
+"könnten"
 ],
-"why": "Konjunktiv I av können: man könne.",
+"why": "Konjunktiv I av können: man könne (tredje person singular).",
 "sv": "Intendenten sa att man inte kan sänka priserna."
 },
 {
@@ -643,7 +637,7 @@
 "q": "Die Studierenden sagen, sie [hätten] zu wenig Übezeit.",
 "alt": [
 "habe",
-"hatten",
+"hättest",
 "hättet"
 ],
 "why": "Konj. I sie haben = indikativ → ersätts med Konj. II hätten.",
@@ -655,11 +649,11 @@
 "rule": "kr-ersatz",
 "q": "Die Forscher meinen, sie [würden] die Daten bald veröffentlichen.",
 "alt": [
-"werden",
+"würdest",
 "wurden",
 "wird"
 ],
-"why": "Konj. I sie werden = indikativ → würden.",
+"why": "Konj. I sie werden = indikativ → ersätts med Konj. II würden.",
 "sv": "Forskarna menar att de snart ska publicera uppgifterna."
 },
 {
@@ -669,7 +663,7 @@
 "q": "Die Musiker erklärten, sie [müssten] mehr verdienen.",
 "alt": [
 "müsse",
-"mussten",
+"müsstet",
 "musst"
 ],
 "why": "Konj. I sie müssen = indikativ → Konj. II müssten.",
@@ -682,7 +676,7 @@
 "q": "Die Zeitung berichtet, das Konzert [sei] ausverkauft gewesen.",
 "alt": [
 "seien",
-"war",
+"sein",
 "habe"
 ],
 "why": "Dåtid i Konj. I med sein: sei … gewesen.",
@@ -707,9 +701,9 @@
 "rule": "kr-verg",
 "q": "Die Autoren schreiben, sie [hätten] 500 Personen befragt.",
 "alt": [
-"haben",
-"hatten",
-"habe"
+"habe",
+"hättet",
+"hättest"
 ],
 "why": "Dåtid plural: hätten (ersättning, eftersom haben = indikativ) + particip.",
 "sv": "Författarna skriver att de har intervjuat 500 personer."
@@ -718,14 +712,14 @@
 "id": "k1ref-016",
 "topic": "k1ref",
 "rule": "kr-einl",
-"q": "[Laut] einer neuen Studie hört jeder Dritte täglich klassische Musik.",
+"q": "[Laut] einer neuen Studie hört jeder Zehnte täglich klassische Musik.",
 "alt": [
 "Zufolge",
 "Gemäß von",
 "Nach dem"
 ],
 "why": "laut står före substantivet (dativ eller genitiv).",
-"sv": "Enligt en ny studie lyssnar var tredje person på klassisk musik dagligen."
+"sv": "Enligt en ny studie lyssnar var tionde person på klassisk musik dagligen."
 },
 {
 "id": "k1ref-017",
@@ -759,7 +753,7 @@
 "rule": "kr-einl",
 "q": "[Nach] Ansicht der Expertin ist die Reform überfällig.",
 "alt": [
-"Laut der",
+"Bei",
 "Zufolge",
 "Gemäß von"
 ],

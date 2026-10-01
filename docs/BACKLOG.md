@@ -10,11 +10,12 @@ Underlag finns i `docs/ovningsforslag.md` (franska), `docs/ovningsforslag-tyska.
 
 ## Färre men mer värdefulla övningar (granskning 2026-09-28)
 
+Beslut 2026-10-01: menyn behålls som den är (inga färre menyval). Granskningen görs av AI-agenter, inte av människor (föräldern: "Det funkar inte att få en människa att göra det").
+
 Föräldern: "Vi vill inte ha för många övningar men vi vill ha övningar som är så värdefulla som möjligt." Granskningen jämförde alla cirka 20 övningar med forskningen om inlärning (testeffekt, utspridd repetition, egen produktion, begriplig input, återkoppling). Slutsats: Dagens pass är nästan bara drill, lyssning, läsning, tal och skrivande ingår inte, och flera övningar gör samma sak med samma meningar.
 
-- **P1 (föräldern har inte bestämt sig än): Dagens pass som ett enda flöde:** glosor 6–7 min, fraser och meningar 3, grammatik 3 (tyska även der/die/das), hör- eller lästext varannan dag 4–5, tal 1–2. Klart först när allt är gjort. Provdatum i inställningarna ändrar viktningen (fler provuppgifter och färre nya ord närmare provet, inga nya ord de sista två veckorna). `dailyPanel`, `startDaily`, `startMix`, `finishSession`.
+- **P1 (beslut 2026-10-01: korta pass, flera per dag, "på tunnelbanan, på rasten"; byggs nu): Dagens pass som ett flöde:** glosor 6–7 min, fraser och meningar 3, grammatik 3 (tyska även der/die/das), hör- eller lästext varannan dag 4–5, tal 1–2. Klart först när allt är gjort. Provdatum i inställningarna ändrar viktningen (fler provuppgifter och färre nya ord närmare provet, inga nya ord de sista två veckorna). `dailyPanel`, `startDaily`, `startMix`, `finishSession`.
 - **P1 (föräldern har inte bestämt sig än): Tyska: dölj genus i skrivfrågan** (`TYPE.words` visar "(maskulinum)"), så att eleven själv måste minnas der/die/das. Visa genus efter svaret.
-- **P2 (vänta, föräldern 2026-09-28): Färre menyval (cirka 20 → 11):** Meningar, Diktamen och Översätt blir en övning som går från lucka till översättning till diktamen. Ordföljd tas bort som egen övning (behövs kvar för grammatikens `rw`-frågor). Verbspelen blir ett. Kultur in i Läsa, Berättelser in i Grammatik, Uttal göms under Tala. **Fråga föräldern innan något tas bort.**
 ## Språkprov (det verkliga målet)
 
 - **P2: Musikteori i fler kurser och granskning:** musikteoriord och teoriprov finns i Franska 3 och Tyska 5. Termer att kontrollera med en musiklärare: franska omvändningsnamn (sixte sensible, accord de triton), cadence parfaite/imparfaite, tyska Gegenklang och verkürzter Dominantseptakkord. Fler uppgifter finns i generatorn (57 tyska till).
@@ -90,7 +91,16 @@ Granskning av `src/app.js`, `src/kinds/`, arvet i `lang.js`, `build.py`, testern
 - **P3: TDN-gränserna** (80/60/40 %) är uppskattningar, inte TestDaF:s egna.
 - **P3: Planerna genereras av `tools/plan.py`** — kör om när en kurs får nya avsnitt eller texter (bygget varnar).
 
+## Öppet efter 2026-10-01 (version 36)
+
+- **P2: Fel i ord-id** (hittade av granskningen, kan inte rättas utan att framstegen för ordet försvinner — förslag: byt id och lägg en migrering som flyttar `S.w[gammalt]` till `S.w[nytt]`, så att framstegen följer med): fr «prendre la retraite» (sa), «manquer de rien» (ne), «sois (être) en sûr» (sois-en sûr); fr4 «nocif, -ve»; frs5 «administratif/facultatif/radioactif, -ve», «anxieux/contagieux/ennuyeux, -se»; frs4 «savoir-faire» utan artikel; it4 «la privacy domestica»; it6 «lo spettabile», «la repubblica di Salò», «la Dolce Vita», «i Promessi sposi»; it7 «l'illuminismo», «l'umanesimo»; de7 «Dritte», «der Erstsemester» (das). Dubbletter: fr2 «le coucher de/du soleil», it2 «la mezzanotte»/«in bocca al lupo» (finns i it1), it3 «già» (it1), de/de6 «die Überschrift», 58 ord i både de1 och de3 m.fl.
+- **P2: `tools/tatoeba.py` matchar för löst:** tyska partikelverb utan partikel (zurückrufen → "rief mich an"), homografer (die Sage/sage, Leid/leider, Steuer), franska (la cour/cours, s'appeler/appeler, audition = hörsel), italienska delsträngar (salutare/salute, pesare/pesce). Granskarna tog bort ca 250 felkopplade meningar; resten finns kvar. Rätta verktyget innan det körs om (annars kommer de tillbaka). Meningarnas id är `<ord>#<n>` (inte låsta).
+- **P3: Uttalspar med samma stavning** (it3 pèsca/pésca, àncora/ancòra) fungerar bara om rösten läser accenterna — lyssna igenom.
+- **P3: Format:** de1 hör-/lästexternas frågor har 3 alternativ (specen 4); de3 berättelser saknar `sv`; it3, it4, frs4, frs5 saknar `content/SPEC.md`; tenseCheck i it5 ger falska träffar för congiuntivo imperfetto (classe, passi, interesse).
+
 ## Öppet efter 2026-10-01 (version 35)
+
+Granskningspunkterna nedan är avgjorda av granskningsagenterna 2026-10-01 (version 36).
 
 - **P2: Granskning av det nya (AI-skrivet):** fr: `nombre-022/024` (klockan, felalternativ bara fel mot den svenska meningen), 1990-reformens bindestreck, `dem-002` "ce héros", `tid-005/016/020`, `proche-002`; fr4 `style-004/016/019/023`, `nomi`-felformerna (entraînage, enregistrage, lançage), `nomi-022`; omskrivna provtexter fr-ce-3/4/5, fr-co-6, frs5-ce-3. de7: sakuppgifter (snubbelstenar ca 120 €, BGH 2018 om övningstider, Künstlersozialkasse 3 900 €, kulturombud 1998, Leipzig 9 okt), "das Budget gebe nicht mehr her". it: "sono acceduto", ho/è scorso, applaudo/applaudisco, Viva V.E.R.D.I., Basile, Unesco 2023, Fenice 2003.
 - **P3: Berättelser och provtexter under täckningsgränsen** (appen visar inga glosor där): it1-berättelserna (chiedere, rispondere, arrivare, sapere kommer först i it2/it3), it2 j2/j7 och it2-le-1, it3 k1/k5, de7 s-s6. Skriv om med kända ord.

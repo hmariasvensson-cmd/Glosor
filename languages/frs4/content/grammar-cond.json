@@ -45,7 +45,7 @@
   "q": "Ils [prendraient] le train si c'était moins cher.",
   "alt": [
    "prendront",
-   "prenaient",
+   "prendrions",
    "prendrait"
   ],
   "why": "Prendre → prendr- + -aient. Prendront är futur.",
@@ -57,11 +57,11 @@
   "rule": "cond-form",
   "q": "Tu [mangerais] avec nous ce soir ?",
   "alt": [
-   "mangeras",
-   "mangeais",
-   "mangerait"
+   "mangerai",
+   "mangerait",
+   "mangeriez"
   ],
-  "why": "Tu-formen i conditionnel slutar på -ais: tu mangerais.",
+  "why": "Tu-formen i conditionnel slutar på -ais: tu mangerais. Mangerai är futur (je), mangerait är il-formen.",
   "sv": "Skulle du äta med oss i kväll?"
  },
  {
@@ -70,11 +70,11 @@
   "rule": "cond-irr",
   "q": "Ce [serait] génial de partir ensemble !",
   "alt": [
-   "sera",
+   "seraient",
    "était",
    "serais"
   ],
-  "why": "Être har stammen ser-: ce serait.",
+  "why": "Être har stammen ser-: ce serait. Ce + était skrivs c'était, och serais/seraient är fel person.",
   "sv": "Det skulle vara jättekul att åka tillsammans!"
  },
  {
@@ -96,8 +96,8 @@
   "rule": "cond-irr",
   "q": "On [pourrait] aller au cinéma demain.",
   "alt": [
-   "pourra",
-   "pouvait",
+   "pourait",
+   "pourrais",
    "pourrions"
   ],
   "why": "Pouvoir → pourr- med två r: on pourrait.",
@@ -109,11 +109,11 @@
   "rule": "cond-irr",
   "q": "Elle [ferait] n'importe quoi pour son frère.",
   "alt": [
-   "fera",
-   "faisait",
-   "ferais"
+   "ferais",
+   "fairait",
+   "feraient"
   ],
-  "why": "Faire → fer-: elle ferait.",
+  "why": "Faire → fer-: elle ferait. Stammen är inte fair-.",
   "sv": "Hon skulle göra vad som helst för sin bror."
  },
  {
@@ -122,11 +122,11 @@
   "rule": "cond-irr",
   "q": "Vous [viendriez] avec nous en Bretagne ?",
   "alt": [
-   "viendrez",
-   "veniez",
-   "viendrais"
+   "veniriez",
+   "viendrais",
+   "viendrions"
   ],
-  "why": "Venir → viendr-: vous viendriez.",
+  "why": "Venir → viendr-: vous viendriez. Veniriez finns inte.",
   "sv": "Skulle ni följa med oss till Bretagne?"
  },
  {
@@ -136,24 +136,24 @@
   "q": "Nous [irions] à la plage s'il faisait beau.",
   "alt": [
    "irons",
-   "allions",
+   "allerions",
    "irait"
   ],
-  "why": "Aller → ir-: nous irions.",
+  "why": "Aller → ir-: nous irions. Efter si + imparfait kommer conditionnel, inte futur (irons).",
   "sv": "Vi skulle gå till stranden om det var fint väder."
  },
  {
   "id": "cond-012",
   "topic": "cond",
   "rule": "cond-irr",
-  "q": "Il [faudrait] partir plus tôt.",
+  "q": "Si on voulait arriver à l'heure, il [faudrait] partir plus tôt.",
   "alt": [
    "faudra",
-   "fallait",
-   "faudrais"
+   "faudrais",
+   "fauderait"
   ],
-  "why": "Il faut → il faudrait (det skulle behövas).",
-  "sv": "Vi borde åka tidigare."
+  "why": "Il faut → il faudrait (det skulle behövas). Efter si + imparfait kommer conditionnel, inte futur (faudra).",
+  "sv": "Om vi ville komma i tid skulle vi behöva åka tidigare."
  },
  {
   "id": "cond-013",
@@ -162,7 +162,7 @@
   "q": "Je [saurais] quoi dire si j'étais préparé.",
   "alt": [
    "saurai",
-   "savais",
+   "saverais",
    "saurait"
   ],
   "why": "Savoir → saur-: je saurais.",
@@ -174,11 +174,11 @@
   "rule": "cond-poli",
   "q": "Je [voudrais] un billet pour Lyon, s'il vous plaît.",
   "alt": [
-   "veux bien",
    "voudrai",
-   "voulais pas"
+   "voudrait",
+   "voulerais"
   ],
-  "why": "Artig beställning: je voudrais. Voudrai (futur) låter som ett konstigt löfte.",
+  "why": "Artig beställning: je voudrais. Voudrai (futur) låter som ett konstigt löfte, och stammen är voudr-.",
   "sv": "Jag skulle vilja ha en biljett till Lyon, tack."
  },
  {
@@ -187,11 +187,11 @@
   "rule": "cond-poli",
   "q": "[Pourriez]-vous répéter, s'il vous plaît ?",
   "alt": [
-   "Pourrez",
+   "Pouriez",
    "Pouvais",
    "Pourrions"
   ],
-  "why": "Artig fråga med vous: pourriez-vous.",
+  "why": "Artig fråga med vous: pourriez-vous, med två r.",
   "sv": "Skulle ni kunna upprepa, tack?"
  },
  {
@@ -201,8 +201,8 @@
   "q": "J'[aimerais] bien travailler à l'étranger.",
   "alt": [
    "aimerai",
-   "aimais",
-   "aimerait"
+   "aimerait",
+   "aimeraient"
   ],
   "why": "Önskan: j'aimerais.",
   "sv": "Jag skulle gärna vilja jobba utomlands."
@@ -214,8 +214,8 @@
   "q": "Ça te [dirait] de venir au concert ?",
   "alt": [
    "dira",
-   "disait",
-   "dirais"
+   "dirais",
+   "diraient"
   ],
   "why": "Ça te dirait … ? = Har du lust …? Subjektet är ça, alltså il-form: dirait.",
   "sv": "Har du lust att följa med på konserten?"
@@ -226,11 +226,11 @@
   "rule": "cond-poli",
   "q": "Est-ce que vous [auriez] une chambre libre ?",
   "alt": [
-   "aurez",
-   "aviez",
+   "avriez",
+   "auraient",
    "aurions"
   ],
-  "why": "Artig fråga: vous auriez.",
+  "why": "Artig fråga: vous auriez (avoir → aur-).",
   "sv": "Skulle ni ha ett ledigt rum?"
  },
  {
@@ -239,9 +239,9 @@
   "rule": "cond-conseil",
   "q": "Tu [devrais] parler à tes parents.",
   "alt": [
-   "devras",
-   "devais",
-   "devrait"
+   "devrait",
+   "devrai",
+   "devrez"
   ],
   "why": "Råd: tu devrais (du borde).",
   "sv": "Du borde prata med dina föräldrar."
@@ -252,9 +252,9 @@
   "rule": "cond-conseil",
   "q": "Vous [devriez] réserver avant l'été.",
   "alt": [
-   "devrez",
-   "deviez",
-   "devrions"
+   "devrions",
+   "devraient",
+   "devrais"
   ],
   "why": "Råd till vous: vous devriez.",
   "sv": "Ni borde boka före sommaren."
@@ -278,11 +278,11 @@
   "rule": "cond-conseil",
   "q": "Il [vaudrait] mieux prendre le train.",
   "alt": [
-   "vaudra",
-   "valait",
-   "vaudrais"
+   "vaudrais",
+   "vaudraient",
+   "valerait"
   ],
-  "why": "Il vaut mieux → il vaudrait mieux, ett mjukare råd.",
+  "why": "Il vaut mieux → il vaudrait mieux, ett mjukare råd. Stammen är vaudr-.",
   "sv": "Det vore bättre att ta tåget."
  }
 ]

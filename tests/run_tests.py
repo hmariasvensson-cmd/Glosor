@@ -329,12 +329,9 @@ appReady().then(async()=>{ try{
   sess=null; loadState(); rebuildWords(); renderStart(); q("#run-go").click();
   ok("blandad runda fortsätter", sess&&sess.done===done, sess&&sess.done+" vs "+done); runAll();
 
-  // Dagens pass: glosor först, sedan knapp till blandad runda
-  renderStart(); q("#daily").click(); while(sess&&!sess.queue) q("#next").click(); runAll();
-  ok("dagens pass erbjuder blandad runda", !!q("#mix")); q("#mix").click(); runAll();
-
-  renderStart(); ok("dagens pass försvinner när det är gjort", !q("#daily"));
-  { const k=S.dailyDay; S.dailyDay="igår"; renderStart(); ok("dagens pass kommer tillbaka nästa dag", !!q("#daily")); S.dailyDay=k; }
+  // Dagens pass: ett kort pass i ett flöde, och knappen finns kvar efter passet (flera pass per dag, se SCENARIO_PASS)
+  renderStart(); q("#daily").click(); ok("dagens pass är ett flöde med glosor och andra frågor", sess&&sess.kind==="words"&&!!sess.dp&&sess.mixIn.length>0); quitSession();
+  renderStart(); ok("dagens pass finns kvar", !!q("#daily"));
   startDict(); answerRight(); q("#quit").click(); ok("avbruten övning sparas", S.runs&&S.runs["dict"]&&S.runs["dict"].done===1, JSON.stringify(Object.keys(S.runs||{})));
   startDict(); ok("fortsätt eller börja om", !!q("#rcont")&&!!q("#rnew")); q("#rcont").click(); ok("fortsätter där man slutade", sess&&sess.done===1); runAll();
   ok("klar övning glöms", !S.runs["dict"]);
@@ -420,15 +417,13 @@ appReady().then(async()=>{ try{
   { const x=Object.values(XS)[0]; ok("rättelser: skugga med Tatoeba-mening återställs", x&&KINDS.shadow.restore(x.id).w===x&&KINDS.shadow.recap(x.id)===x.exT); }
   ok("rättelser: saknade frågor ger null", KINDS.lq.restore("finns-inte:0")===null&&KINDS.rq.restore(((C().reading||[])[0]||{}).id+":99")===null&&KINDS.story.restore("x:0")===null&&KINDS.utt.restore("x|0|0")===null&&KINDS.utt.recap("x|9|9")==="");
   // 4. Dagens pass efter Avbryt
-  { const keep=S.dailyDay; delete S.dailyDay;
+  { delete S.runs; delete S.run;
     startDict(); q("#quit").click(); renderStart();
     ok("rättelser: dagens pass syns när en annan övning är pausad", !!q("#daily")&&!!q("#run-go"));
-    delete S.runs; delete S.run; startMix(); pauseSession();
-    startDaily([],[]); ok("rättelser: dagens pass frågar om den påbörjade rundan", !!q("#rnew")); q("#rnew").click();
-    ok("rättelser: Börja om i dagens pass räknas som dagens pass", sess&&sess.daily===true&&S.run&&S.run.daily===true);
-    pauseSession(); renderStart(); ok("rättelser: pausat dagens pass döljer panelen", !q("#daily")&&!!q("#run-go"));
-    startDaily([],[]); q("#rcont").click(); ok("rättelser: Fortsätt i dagens pass räknas som dagens pass", sess&&sess.daily===true);
-    quitSession(); S.dailyDay=keep; }
+    startDaily(); ok("rättelser: dagens pass hör till Dagens pass, även i S.run", sess&&sess.daily===true&&!!sess.dp&&S.run&&S.run.daily===true);
+    pauseSession(); renderStart(); ok("rättelser: pausat dagens pass erbjuds i panelen", !!q("#daily-go")&&!!q("#daily")&&!!S.runs.dict);
+    q("#daily-go").click(); ok("rättelser: Fortsätt i dagens pass räknas som dagens pass", sess&&sess.daily===true&&!!sess.dp);
+    quitSession(); delete S.runs; }
   // Passläget (P2: Bräckligt passläge): en ny runda börjar alltid med ett nytt sess, och det som ska följa med står i opts
   { delete S.runs; delete S.run;
     sess={kind:"x",daily:true,gramMix:true,label:"gammal",ctx:{type:"x",id:"y"},game:{id:"g"},start:1};
@@ -815,7 +810,7 @@ setTimeout(async()=>{ try{
     ok("grammatik: finns när kursen är hämtad", L.code==="de4"&&L.grammar&&L.grammar.topics.length>=9&&L.grammar.rules["pf-sein"]&&L.grammar.adj&&hasGrammar());
     { const keep=S.gt, t=L.grammar.topics.find(t=>t.id!=="adj"); S.gt={[t.id]:{r:1,n:2}};
       ok("grammatik: statistiken visar områdena", statsGrammar().includes(t.name), t.name); S.gt=keep; }
-    ok("grammatik: Dagens pass nämner grammatik", dailyPanel([],[]).includes("grammatik"));
+    ok("grammatik: Dagens pass har grammatik i turordningen", passOrder().some(g=>g.id==="gram")&&passName(PASS_GROUPS.find(g=>g.id==="gram")).includes("grammatik"));
     if(S.runs) delete S.runs.mix; startMix(true);
     ok("grammatik: Dagens pass har grammatikfrågor", !!sess&&[sess.cur,...sess.queue].some(x=>x.k==="gram")); quitSession(); }
 
@@ -1397,6 +1392,103 @@ appReady().then(async()=>{ try{
   const r=tb().getBoundingClientRect();
   ok("tillbaka uppe: syns kvar högst upp efter skrollning", window.scrollY>100&&r.top>=0&&r.top<30&&r.width<200, "scrollY "+window.scrollY+", top "+Math.round(r.top)+", bredd "+Math.round(r.width));
   window.scrollTo(0,0);
+  // Svarsalternativen blandas (facit stod ofta på plats 2), utom två alternativ och korta etiketter (A, B, C)
+  const same=a=>a.every((x,i)=>x===i), perm=a=>a.slice().sort().join()===a.map((_,i)=>i).join();
+  ok("alternativ: två behåller ordningen", same(optOrder(["Richtig","Falsch"])));
+  ok("alternativ: annonsbokstäver behåller ordningen", same(optOrder(["A","B","C","D"])));
+  let moved=false; for(let n=0;n<30;n++){ const o=optOrder(["un chat","un chien","une souris","un oiseau"]); if(!perm(o)) moved=null; if(!same(o)) moved=moved===null?null:true; }
+  ok("alternativ: fyra långa blandas och alla finns kvar", moved===true);
+ }catch(e){ ok("undantag", false, e.message+" "+(e.stack||"").split("\n")[1]); }
+ ok("inga JavaScript-fel", !__err.length, __err.join(" ; "));
+ document.body.insertAdjacentHTML("beforeend","<pre id=out>"+out.join("\n").replace(/</g,"&lt;")+"</pre>");
+});
+</script>"""
+
+# Dagens pass som korta pass, flera om dagen (föräldern 2026-10-01): längd, blandning, rotation, räknaren, fortsätta, provdatum
+SCENARIO_PASS = r"""<script>
+const out=[]; const q=s=>document.querySelector(s);
+const ok=(name,cond,info="")=>out.push((cond?"OK   ":"FEL  ")+name+(info?"  ("+info+")":""));
+const tick=()=>new Promise(r=>setTimeout(r,0));
+// Svarar rätt på frågan som visas, oavsett typ (flerval, skriva, brickor, självbedömning)
+const ans=()=>{ const c=sess.cur, d=sess.d;
+  if(c.t==="mc"){ answerMC(d.opts.findIndex(o=>o.ok)); q("#nx").click(); return; }
+  if(d.render){ d.o.words.forEach(w=>[...document.querySelectorAll("[data-t]")].find(x=>x.textContent===w&&!x.disabled).click()); q("#submit").click(); if(sess&&sess.answered) q("#submit").click(); return; }
+  q("#ans").value=String(d.answer||"x"); q("#submit").click(); const g=q('[data-gr="right"]'); if(g) g.click(); if(sess&&sess.answered) q("#submit").click(); };
+const toQuiz=()=>{ let g=0; while(sess&&!sess.queue&&g++<20) q("#next").click(); };
+const runPass=()=>{ toQuiz(); let g=0; while(sess&&g++<120) ans(); };
+// Ungefärlig tid per fråga (s), som PASS_T i 90-mix.js
+const T={phr:12,cloze:15,gram:15,gen:6,plu:10,verbs:12,dict:25,order:25};
+const est=s=>[sess.cur,...sess.queue].reduce((a,c)=>a+(c.k?T[c.k]||15:c.isNew?PASS_T.new:c.t==="type"?PASS_T.type:PASS_T.mc),0);
+const noWide=()=>document.documentElement.scrollWidth<=document.documentElement.clientWidth+1;
+appReady().then(async()=>{ try{
+  document.documentElement.dataset.theme="light"; renderStart();
+  ok("pass: panelen har Starta pass", !!q("#daily")&&q("#daily").textContent.includes("Starta pass")&&!q("#daily-go"));
+  ok("pass: inga pass i dag än", passesToday()===0&&!q("#passn").textContent.includes("Pass "), q("#passn").textContent);
+  // Pass 1: ett flöde med glosor och andra typer, ungefär fem minuter
+  q("#daily").click(); const g1=sess.dp.slice(), nNew=sess.newW.length, nDue=sess.due.length; toQuiz();
+  const all=[sess.cur,...sess.queue], ks=new Set(all.map(c=>c.k||"words")), e1=est();
+  ok("pass: 15–22 frågor", sess.total>=15&&sess.total<=22, sess.total+" frågor, "+nNew+" nya, "+nDue+" repetitioner");
+  ok("pass: ungefär fem minuter", e1>=200&&e1<=360, e1+" s");
+  ok("pass: glosorna är med (nya och repetitioner)", nNew>0&&nDue>0&&all.filter(c=>!c.k).length===nNew+nDue);
+  ok("pass: blandat med minst två andra typer", ks.size>=3, [...ks].join());
+  ok("pass: två grupper", g1.length===2, g1.join());
+  ok("pass: glosorna är utspridda i flödet", all.slice(0,Math.ceil(all.length/2)).some(c=>c.k)&&all.slice(Math.ceil(all.length/2)).some(c=>!c.k));
+  ok("pass: ett sammanhängande quiz", sess.kind==="words"&&!!q(".meta")&&q(".meta").textContent.includes("Dagens pass"));
+  document.body.style.width="320px"; await tick(); ok("pass: ingen horisontell scroll i 320 px (fråga)", noWide()); document.body.style.width="";
+  // Avbrutet pass: Tillbaka uppe till vänster pausar, startsidan erbjuder att fortsätta, även efter omladdning
+  ans(); ans(); const done=sess.done; q("#topback").click(); await tick();
+  ok("pass: Tillbaka uppe pausar och sparar", !sess&&S.runs&&S.runs[PASS_KEY]&&S.runs[PASS_KEY].done===done&&!!S.runs[PASS_KEY].dp, done);
+  ok("pass: startsidan erbjuder att fortsätta", !!q("#daily-go")&&!!q("#daily")&&!q("#run-go")&&q(".daily").textContent.includes(done+" av"), q(".daily").textContent.slice(0,200));
+  flushLocal(); sess=null; loadState(); rebuildWords(); renderStart();
+  ok("pass: finns kvar efter omladdning", !!q("#daily-go"));
+  q("#daily-go").click(); ok("pass: fortsätter där det slutade", sess&&sess.done===done&&String(sess.dp)===String(g1)&&sess.queue.some(c=>c.k), sess&&sess.done);
+  runPass();
+  ok("pass: klart, räknas som pass 1 i dag", !sess&&passesToday()===1&&q("#app").textContent.includes("Pass 1 i dag klart"), q("#app").textContent.slice(0,80));
+  ok("pass: ett pass till direkt", !!q("#again"));
+  ok("pass: inga påbörjade kvar", !(S.runs||{})[PASS_KEY]&&!S.run);
+  { const ps=S.log.filter(e=>e.dp); ok("pass: loggen har dp och samma tid", ps.length>=3&&new Set(ps.map(e=>e.d)).size===1&&ps.some(e=>e.nRep>0)&&ps.some(e=>e.kind||e.verb||e.cloze), JSON.stringify(ps.map(e=>e.kind||(e.verb?"verb":e.cloze?"cloze":"glosor")))); }
+  ok("pass: dagens text efter vartannat pass", !!q("#dtext"));
+  renderStart(); ok("pass: panelen räknar pass i dag", q("#passn").textContent.includes("Pass 2 i dag")&&q("#passn").textContent.includes("1 pass"), q("#passn").textContent);
+  ok("pass: Starta pass finns kvar", !!q("#daily"));
+  document.body.style.width="320px"; await tick(); ok("pass: ingen horisontell scroll i 320 px (startsidan)", noWide()); document.body.style.width="";
+  // Pass 2: gruppen som inte var med kommer först
+  q("#daily").click(); const g2=sess.dp.slice(); const miss=PASS_GROUPS.map(g=>g.id).find(id=>!g1.includes(id));
+  ok("pass: rotation mellan pass 1 och 2", g2[0]===miss&&g2.length===2&&String(g2)!==String(g1), g1.join()+" → "+g2.join());
+  runPass(); ok("pass: pass 2 i dag", passesToday()===2&&!q("#dtext")&&!!q("#again"));
+  q("#again").click(); const g3=sess.dp.slice();
+  ok("pass: pass 3 tar det som inte var med i pass 2", !g2.includes(g3[0]), g2.join()+" → "+g3.join());
+  // Avbrutet under lärokorten: frågorna som ska blandas in sparas också
+  quitSession(); S.newCount=10; startDaily();
+  if(sess.newW.length){ q("#next").click(); q("#quit").click(); const r=S.runs[PASS_KEY];
+    ok("pass: pausat under lärokorten sparar inblandade frågor", r&&r.learn&&r.mixIn&&r.mixIn.length>0&&r.i===1, r&&JSON.stringify({l:r.learn,m:(r.mixIn||[]).length}));
+    renderStart(); ok("pass: panelen visar lärokorten", q(".daily").textContent.includes("du var på ord 2"));
+    q("#daily-go").click(); ok("pass: fortsätter på samma lärokort", sess&&!sess.queue&&sess.i===1);
+    toQuiz(); ok("pass: quizet får de inblandade frågorna", sess&&sess.queue&&[sess.cur,...sess.queue].some(c=>c.k)); }
+  else ok("pass: nya ord finns", false);
+  // Starta ett nytt pass när ett är pausat: det gamla slängs
+  ans(); q("#quit").click(); const old=S.runs[PASS_KEY].done; renderStart(); q("#daily").click();
+  ok("pass: nytt pass ersätter det pausade", old>=1&&sess&&!sess.done&&(S.runs[PASS_KEY].done||0)===0, old); quitSession();
+  // Provdatum
+  renderStart(); ok("prov: fält för provdatum", !!q("#examdate"));
+  const iso=n=>planIso(new Date(planToday().getTime()+n*864e5+36e5));
+  const nNew0=passWords().newW.length;
+  q("#examdate").value=iso(30); q("#examdate").dispatchEvent(new Event("change"));
+  ok("prov: sparas i S", S.examDate===iso(30)&&examDaysLeft()===30, S.examDate+" "+examDaysLeft());
+  ok("prov: färre nya ord sex veckor före", passWords().newW.length<nNew0&&passWords().newW.length>0, nNew0+" → "+passWords().newW.length);
+  ok("prov: visas i panelen", q("#examnote")&&q("#examnote").textContent.includes("Provet om 30 dagar"));
+  { const t=dailyExamTask(); ok("prov: en provuppgift efter passet", !!t&&["mc","match","gaps","short","pick"].includes(exKind(t)), t&&t.id);
+    startDaily(); runPass(); ok("prov: knappen efter passet", !!q("#dexam"));
+    q("#dexam").click(); await until(()=>!!q("#app")&&!q("#exwait"),8000); ok("prov: uppgiften öppnas (hämtas vid behov)", examReady()&&!!q("#quit"), q("#app").textContent.slice(0,80));
+    q("#quit").click(); ok("prov: tillbaka till startsidan", !q("#tabs").hidden&&!!q("#daily")); }
+  S.examDate=iso(10); ok("prov: inga nya ord två veckor före", passWords().newW.length===0&&examPhase()===2);
+  S.examDate=iso(-3); ok("prov: efter provet som vanligt", examPhase()===0&&passWords().newW.length>=3, passWords().newW.length);
+  renderStart(); q("#examdate").value=""; q("#examdate").dispatchEvent(new Event("change")); ok("prov: datumet går att ta bort", !("examDate" in S));
+  // Tyska: der/die/das i grammatikgruppen
+  useLang("de"); await appReady();
+  { const it=PASS_GROUPS.find(g=>g.id==="gram").items(), k=new Set(it.map(c=>c.k));
+    ok("tyska: grammatikgruppen har grammatik och der/die/das", k.has("gram")&&k.has("gen")&&it.length===4, [...k].join()); }
+  renderStart(); ok("tyska: panelen", !!q("#daily")); startDaily(); runPass(); ok("tyska: ett helt pass", !sess&&passesToday()===1);
+  useLang("fr"); await appReady();
  }catch(e){ ok("undantag", false, e.message+" "+(e.stack||"").split("\n")[1]); }
  ok("inga JavaScript-fel", !__err.length, __err.join(" ; "));
  document.body.insertAdjacentHTML("beforeend","<pre id=out>"+out.join("\n").replace(/</g,"&lt;")+"</pre>");
@@ -2917,6 +3009,7 @@ def main():
     text += "\n" + run(SCENARIO_BUGHUNT, 30000)   # buggjakten 2026-09-29
     text += "\n" + run(SCENARIO_STREAK, 20000)   # flamman för sviten (elevens önskemål)
     text += "\n" + run(SCENARIO_TOPBACK, 20000)   # Tillbaka uppe till vänster (elevens önskemål)
+    text += "\n" + run(SCENARIO_PASS, 60000)   # Dagens pass: korta pass, flera om dagen (föräldern 2026-10-01)
     text += "\n" + run(SCENARIO_SRS, 30000)   # tidsbaserad repetition i fraser, meningar och grammatik (P3), weakestFirst/srsBump (P2)
     text += "\n" + run(SCENARIO_WORDS, 30000) + "\n" + test_words_build()   # glosquizet i 05-words.js, vanligast först, "kan" kräver skrivet svar
     text += "\n" + run(SCENARIO_SELFRATE, 60000)   # självbedömning i fyra steg, grundformen i Mina ord (P3)

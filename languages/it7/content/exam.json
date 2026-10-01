@@ -187,7 +187,7 @@
      "why": "«sullo schermo tendiamo a leggere il testo velocemente»."
     },
     {
-     "q": "Che cosa è «curioso» nei risultati?",
+     "q": "Che cosa è «strano» nei risultati?",
      "opts": [
       "I giovani leggono di più",
       "Chi preferisce lo schermo non capisce meglio",
@@ -351,8 +351,8 @@
    "instr": "Läs texten och välj det ord eller den form som passar i varje lucka (1–6).",
    "lines": [
     {
-     "fr": "Gentile segreteria, vi scrivo per chiedere informazioni sul corso di laurea in Musicologia. Vorrei sapere se (1) ___ possibile iscriversi anche con un diploma straniero e quali documenti (2) ___ presentare.",
-     "sv": "Bästa studentexpedition, jag skriver för att fråga om programmet i musikvetenskap. Jag skulle vilja veta om det är möjligt att skriva in sig med ett utländskt examensbevis och vilka handlingar man måste lämna in."
+     "fr": "Gentile segreteria, vi scrivo per chiedere informazioni sul corso di laurea in Musicologia. Vorrei sapere se (1) ___ possibile iscriversi anche con un diploma straniero e quali documenti (2) ___ necessari.",
+     "sv": "Bästa studentexpedition, jag skriver för att fråga om programmet i musikvetenskap. Jag skulle vilja veta om det är möjligt att skriva in sig med ett utländskt examensbevis och vilka handlingar som krävs."
     },
     {
      "fr": "(3) ___ letto il vostro sito, non ho capito se sia richiesta una certificazione linguistica. (4) ___ fosse necessaria, potrei sostenere il CELI 3 a dicembre.",
@@ -368,9 +368,9 @@
      "q": "(1)",
      "opts": [
       "sia",
-      "è stato",
-      "fosse",
-      "sarà"
+      "siano",
+      "sono",
+      "sarei"
      ],
      "a": 0,
      "why": "Indirekt fråga efter vorrei sapere se: congiuntivo presente (sia)."
@@ -378,13 +378,13 @@
     {
      "q": "(2)",
      "opts": [
-      "bisogna",
-      "occorra",
-      "occorre",
-      "servano"
+      "sia",
+      "siano",
+      "fosse",
+      "è stato"
      ],
-     "a": 3,
-     "why": "Quali documenti … servano: plural, congiuntivo i indirekt fråga."
+     "a": 1,
+     "why": "Indirekt fråga: quali documenti siano necessari (plural, congiuntivo presente)."
     },
     {
      "q": "(3)",
@@ -400,13 +400,13 @@
     {
      "q": "(4)",
      "opts": [
-      "Se",
+      "Benché",
       "Qualora",
       "Quando",
       "Perché"
      ],
      "a": 1,
-     "why": "Qualora + congiuntivo imperfetto (fosse) i formell stil. Se fungerar också i talspråk, men qualora är det formella valet här."
+     "why": "Qualora + congiuntivo imperfetto (fosse) = om, i händelse av att, i formell stil."
     },
     {
      "q": "(5)",
@@ -480,7 +480,7 @@
      "q": "(3)",
      "opts": [
       "trasferì",
-      "trasferiva",
+      "trasferirà",
       "trasferisse",
       "trasferita"
      ],
@@ -502,7 +502,7 @@
      "q": "(5)",
      "opts": [
       "vinse",
-      "vinceva",
+      "vincette",
       "vincé",
       "ha vinto stato"
      ],
@@ -512,9 +512,9 @@
     {
      "q": "(6)",
      "opts": [
-      "è",
+      "siano",
       "sia",
-      "fosse",
+      "abbia",
       "sarebbe"
      ],
      "a": 1,
@@ -558,7 +558,7 @@
     {
      "q": "(2) SOSTENERE",
      "opts": [
-      "sostenuta",
+      "sostenevole",
       "sostenibile",
       "sostenente",
       "sostegnosa"
@@ -615,7 +615,7 @@
      "opts": [
       "credente",
       "credibile",
-      "creduto",
+      "credevole",
       "credulo"
      ],
      "a": 1,
@@ -671,7 +671,7 @@
       "un",
       "uno",
       "una",
-      "dei"
+      "degli"
      ],
      "a": 0,
      "why": "Bis är maskulint: un bis."
@@ -680,7 +680,7 @@
      "opts": [
       "avrei invitato",
       "avessi invitato",
-      "invitavo",
+      "invitassi",
       "inviterò"
      ],
      "a": 0,
@@ -689,7 +689,7 @@
     {
      "opts": [
       "sarà",
-      "sia",
+      "fu",
       "fosse",
       "sarebbe stato"
      ],
@@ -1037,7 +1037,7 @@
    "prep": 5,
    "time": 4,
    "instr": "Läs texten (i provet ges en kort text), sammanfatta den muntligt och ge din åsikt. Använd en text ur kapitlet Culture, t.ex. om Galilei eller Verdi.",
-   "task": "Riassumi con parole tue il testo «Verdi, voce di una nazione»: chi era Verdi, perché la sua musica divenne un simbolo e che cosa successe al suo funerale. Poi di' che cosa ne pensi: la musica può avere un ruolo politico?",
+   "task": "Riassumi con parole tue il testo «Verdi, voce di una nazione»: chi era Verdi, perché la sua musica divenne un simbolo e che cosa successe dopo la sua morte. Poi di' che cosa ne pensi: la musica può avere un ruolo politico?",
    "phrases": [
     "Il testo parla di …",
     "L'autore mette in luce …",

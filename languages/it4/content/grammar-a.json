@@ -7,7 +7,7 @@
   "alt": [
    "l'ho visto",
    "ho vista",
-   "la ho vista"
+   "l'ho viste"
   ],
   "why": "Direkt objekt före passato prossimo: lo/la blir l', och participet böjs efter objektet (la → vista).",
   "sv": "Har du sett Giulia? Ja, jag såg henne i går."
@@ -148,7 +148,7 @@
   "rule": "tempi",
   "q": "Da bambino [giocavo] sempre a calcio.",
   "alt": [
-   "ho giocato",
+   "giocassi",
    "giocherò",
    "gioco"
   ],
@@ -226,11 +226,11 @@
   "rule": "tempi",
   "q": "Ti [piacerebbe] venire con noi?",
   "alt": [
-   "piacerà",
+   "piacerei",
    "piaceva",
    "piace"
   ],
-  "why": "Artig fråga: condizionale.",
+  "why": "Artig fråga: condizionale. Det som behagar är venire (infinitiv), så verbet står i tredje person singular, inte piacerei.",
   "sv": "Skulle du vilja följa med oss?"
  },
  {
@@ -422,10 +422,10 @@
   "q": "Dove ho messo le chiavi? Le [avrò lasciate] in macchina.",
   "alt": [
    "lascerò",
-   "ho lasciate",
+   "avrò lasciato",
    "lasciavo"
   ],
-  "why": "Gissning om det förflutna. Participet böjs efter le: lasciate.",
+  "why": "Gissning om det förflutna med futuro anteriore. Participet böjs efter le (le chiavi): avrò lasciate, inte avrò lasciato.",
   "sv": "Var har jag lagt nycklarna? Jag har nog lämnat dem i bilen."
  },
  {
@@ -434,7 +434,7 @@
   "rule": "fa-ipotesi",
   "q": "Il treno non è ancora arrivato. [Avrà avuto] un problema.",
   "alt": [
-   "Avrà",
+   "Avesse avuto",
    "Abbia avuto",
    "Aveva avuto"
   ],
@@ -461,7 +461,7 @@
   "q": "Domani a quest'ora [avremo finito] gli esami!",
   "alt": [
    "finissimo",
-   "abbiamo finito",
+   "finiremmo",
    "finivamo"
   ],
   "why": "Något som är klart vid en viss tid i framtiden.",
@@ -523,14 +523,14 @@
   "id": "it4-se-reale-001",
   "topic": "se-reale",
   "rule": "se-pres",
-  "q": "Se [piove], restiamo a casa.",
+  "q": "Se [piove], giochiamo in palestra.",
   "alt": [
    "pioverebbe",
    "piovesse",
    "pioveva"
   ],
   "why": "Verklig om-sats om nuet: se + presens, presens i huvudsatsen.",
-  "sv": "Om det regnar stannar vi hemma."
+  "sv": "Om det regnar spelar vi i gymnastiksalen."
  },
  {
   "id": "it4-se-reale-002",
@@ -616,7 +616,7 @@
   "rule": "se-imp",
   "q": "Se hai bisogno di aiuto, [chiamami]!",
   "alt": [
-   "mi chiami",
+   "chiamimi",
    "chiamarmi",
    "chiameresti"
   ],
@@ -629,7 +629,7 @@
   "rule": "se-imp",
   "q": "Se vedi Luca, [digli] di chiamarmi.",
   "alt": [
-   "gli dici",
+   "diglie",
    "dillo",
    "dirgli"
   ],
@@ -642,7 +642,7 @@
   "rule": "se-imp",
   "q": "Se non ti senti bene, [resta] a casa!",
   "alt": [
-   "resti",
+   "resteresti",
    "restare",
    "restassi"
   ],
@@ -709,7 +709,7 @@
   "alt": [
    "sapessi",
    "sapresti",
-   "sapevi"
+   "sappia"
   ],
   "why": "Se + presens: om du vet det (och det tror jag).",
   "sv": "Om du vet det, varför säger du det inte till mig?"
@@ -787,9 +787,9 @@
   "alt": [
    "è",
    "era",
-   "sarà"
+   "siano"
   ],
-  "why": "Efter penso che följer congiuntivo: essere → sia.",
+  "why": "Efter penso che följer congiuntivo: essere → sia. Siano är plural.",
   "sv": "Jag tror att Marco är hemma."
  },
  {
@@ -799,10 +799,10 @@
   "q": "Credo che loro [abbiano] ragione.",
   "alt": [
    "hanno",
-   "avessero",
-   "avranno"
+   "abbia",
+   "avete"
   ],
-  "why": "Congiuntivo av avere, loro: abbiano.",
+  "why": "Congiuntivo av avere, loro: abbiano. Abbia är singular och avete är voi i indikativ.",
   "sv": "Jag tror att de har rätt."
  },
  {
@@ -865,7 +865,7 @@
   "alt": [
    "prende",
    "prendere",
-   "prenderà"
+   "prendi"
   ],
   "why": "-ere-verb får -a i congiuntivo: prenda.",
   "sv": "Jag tror att hon tar åttatåget."
@@ -891,7 +891,7 @@
   "alt": [
    "può",
    "potere",
-   "potrà"
+   "possano"
   ],
   "why": "Congiuntivo av potere: possa.",
   "sv": "Jag tror inte att Paolo kan komma."
@@ -916,8 +916,8 @@
   "q": "Credo che l'italiano [sia] una lingua bellissima.",
   "alt": [
    "è stato",
-   "sarà",
-   "sarebbe"
+   "siano",
+   "essere"
   ],
   "why": "Credo che uttrycker åsikt: congiuntivo sia.",
   "sv": "Jag tycker att italienska är ett jättevackert språk."
@@ -1069,14 +1069,14 @@
   "id": "it4-congiuntivo-023",
   "topic": "congiuntivo",
   "rule": "cong-o-ind",
-  "q": "Penso di [avere] ragione.",
+  "q": "Spero di [avere] tempo domani.",
   "alt": [
    "che abbia",
    "abbia",
    "ho"
   ],
-  "why": "Samma subjekt: penso di + infinitiv.",
-  "sv": "Jag tror att jag har rätt."
+  "why": "Samma subjekt i båda leden: spero di + infinitiv, inte congiuntivo.",
+  "sv": "Jag hoppas att jag har tid i morgon."
  },
  {
   "id": "it4-congiuntivo-024",
@@ -1111,7 +1111,7 @@
   "q": "In Italia a Natale [si mangia] il panettone.",
   "alt": [
    "si mangiano",
-   "mangia",
+   "se mangia",
    "si mangiare"
   ],
   "why": "Si passivante: verbet står i singular när subjektet (il panettone) är singular.",
@@ -1124,7 +1124,7 @@
   "q": "A Capodanno [si mangiano] le lenticchie.",
   "alt": [
    "si mangia",
-   "mangiano",
+   "se mangiano",
    "si mangiato"
   ],
   "why": "Le lenticchie är plural, så verbet står i plural: si mangiano.",
@@ -1137,7 +1137,7 @@
   "q": "In questo negozio [si vendono] libri usati.",
   "alt": [
    "si vende",
-   "vendono",
+   "se vendono",
    "si venduto"
   ],
   "why": "Libri är plural: si vendono.",
@@ -1150,7 +1150,7 @@
   "q": "Da qui [si vede] il mare.",
   "alt": [
    "si vedono",
-   "vede",
+   "se vede",
    "si visto"
   ],
   "why": "Il mare är singular: si vede.",
@@ -1163,7 +1163,7 @@
   "q": "Da qui [si vedono] le montagne.",
   "alt": [
    "si vede",
-   "vedono",
+   "se vedono",
    "si visti"
   ],
   "why": "Le montagne är plural: si vedono.",
@@ -1176,7 +1176,7 @@
   "q": "Come [si dice] 'lagom' in italiano?",
   "alt": [
    "si dicono",
-   "dice",
+   "se dice",
    "si detto"
   ],
   "why": "Si + tredje person singular: si dice.",
@@ -1189,7 +1189,7 @@
   "q": "A Venezia [si usano] molto le maschere a Carnevale.",
   "alt": [
    "si usa",
-   "usano",
+   "se usano",
    "si usato"
   ],
   "why": "Le maschere är plural: si usano.",
@@ -1202,7 +1202,7 @@
   "q": "In Svezia [si festeggia] Santa Lucia il 13 dicembre.",
   "alt": [
    "si festeggiano",
-   "festeggia",
+   "se festeggia",
    "si festeggiare"
   ],
   "why": "Santa Lucia är singular: si festeggia.",
@@ -1215,7 +1215,7 @@
   "q": "Per la festa [si preparano] dolci tradizionali.",
   "alt": [
    "si prepara",
-   "preparano",
+   "se preparano",
    "si preparato"
   ],
   "why": "Dolci är plural: si preparano.",
@@ -1228,7 +1228,7 @@
   "q": "In quel ristorante [si paga] poco.",
   "alt": [
    "si pagano",
-   "paga",
+   "se paga",
    "si pagato"
   ],
   "why": "Utan subjekt (opersonligt): tredje person singular.",
@@ -1241,7 +1241,7 @@
   "q": "D'estate [si va] al mare.",
   "alt": [
    "si vanno",
-   "va",
+   "se va",
    "si andare"
   ],
   "why": "Si opersonligt med verb utan objekt: alltid singular.",
@@ -1254,7 +1254,7 @@
   "q": "In montagna [si sta] bene anche ad agosto.",
   "alt": [
    "si stanno",
-   "sta",
+   "se sta",
    "si stato"
   ],
   "why": "Si opersonligt: si sta.",
@@ -1267,7 +1267,7 @@
   "q": "Qui [si parlano] tre lingue.",
   "alt": [
    "si parla",
-   "parlano",
+   "se parlano",
    "si parlato"
   ],
   "why": "Tre lingue är plural: si parlano.",
@@ -1280,7 +1280,7 @@
   "q": "Qui [si parla] italiano.",
   "alt": [
    "si parlano",
-   "parla",
+   "se parla",
    "si parlato"
   ],
   "why": "Italiano är singular: si parla.",
@@ -1306,7 +1306,7 @@
   "q": "A Pasqua [si regala] l'uovo di cioccolato.",
   "alt": [
    "si regalano",
-   "regala",
+   "se regala",
    "si regalato"
   ],
   "why": "L'uovo är singular: si regala.",
@@ -1319,7 +1319,7 @@
   "q": "Il 2 novembre [si portano] fiori al cimitero.",
   "alt": [
    "si porta",
-   "portano",
+   "se portano",
    "si portato"
   ],
   "why": "Fiori är plural: si portano.",
@@ -1345,7 +1345,7 @@
   "q": "In Sicilia [si produce] molto vino.",
   "alt": [
    "si producono",
-   "produce",
+   "se produce",
    "si prodotto"
   ],
   "why": "Vino är singular: si produce.",
@@ -1358,7 +1358,7 @@
   "q": "Oggi [si comprano] molti regali online.",
   "alt": [
    "si compra",
-   "comprano",
+   "se comprano",
    "si comprato"
   ],
   "why": "Regali är plural: si comprano.",
@@ -1410,10 +1410,10 @@
   "q": "Chi ti ha regalato questa borsa? [Me l'ha] regalata mia madre.",
   "alt": [
    "Mi l'ha",
-   "Me la ha",
+   "Me l'hanno",
    "Te l'ha"
   ],
-  "why": "Mi + la = me la, och la blir l' framför ha.",
+  "why": "Mi + la = me la, och la blir l' framför ha. Subjektet mia madre är singular, så ha och inte hanno.",
   "sv": "Vem gav dig den här väskan? Min mamma gav mig den."
  },
  {
@@ -1618,7 +1618,7 @@
   "q": "Ti hanno spiegato l'esercizio? No, non [me l'hanno] spiegato.",
   "alt": [
    "mi l'hanno",
-   "me lo hanno",
+   "me li hanno",
    "te l'hanno"
   ],
   "why": "Mi + lo = me lo, framför hanno: me l'hanno.",
@@ -1669,7 +1669,7 @@
   "rule": "trap-forme",
   "q": "Non avevo fame perché [avevo già mangiato].",
   "alt": [
-   "ho già mangiato",
+   "avevo già mangiata",
    "mangiavo già",
    "avrò già mangiato"
   ],
@@ -1708,9 +1708,9 @@
   "rule": "trap-forme",
   "q": "Non l'ho riconosciuta: non l'[avevo] mai vista prima.",
   "alt": [
-   "ho",
-   "avrò",
-   "avessi"
+   "abbia",
+   "avessi",
+   "averò"
   ],
   "why": "Trapassato: avevo + particip. Hon hade aldrig setts förut.",
   "sv": "Jag kände inte igen henne: jag hade aldrig sett henne förut."
@@ -1773,7 +1773,7 @@
   "rule": "trap-uso",
   "q": "Luca mi ha detto che [aveva perso] il portafoglio.",
   "alt": [
-   "perde",
+   "perdesse",
    "perderà",
    "ha perso che"
   ],
@@ -1787,7 +1787,7 @@
   "q": "Quando siamo arrivati alla stazione, il treno [era già partito].",
   "alt": [
    "partiva",
-   "è partito",
+   "è già partito",
    "partirà"
   ],
   "why": "Tåget gick före vår ankomst: trapassato.",
@@ -1866,7 +1866,7 @@
   "alt": [
    "siete conosciuti",
    "avevate conosciuto",
-   "conoscevate"
+   "sareste conosciuti"
   ],
   "why": "Conoscersi (reflexivt, träffas första gången) tar essere.",
   "sv": "Jag visste inte att ni hade träffats i Spanien."
@@ -1891,7 +1891,7 @@
   "q": "Quando ho acceso la TV, la partita [era già finita].",
   "alt": [
    "finiva",
-   "è finita",
+   "è già finita",
    "aveva finita"
   ],
   "why": "Finire om något som tar slut tar essere.",
@@ -1955,7 +1955,7 @@
   "rule": "rel-quello",
   "q": "Non capisco [quello che] dici.",
   "alt": [
-   "che",
+   "il che",
    "chi",
    "cui"
   ],
@@ -2111,7 +2111,7 @@
   "rule": "rel-quello",
   "q": "Mi ha detto [quello che] pensava.",
   "alt": [
-   "che",
+   "il che",
    "chi",
    "cui"
   ],
@@ -2447,14 +2447,14 @@
   "id": "it4-imp-lei-004",
   "topic": "imp-lei",
   "rule": "lei-forme",
-  "q": "Per il museo, [giri] a destra.",
+  "q": "Per il museo, signora, [giri] a destra.",
   "alt": [
    "gira",
    "girate",
    "girare"
   ],
   "why": "-are-verb får -i med Lei: giri.",
-  "sv": "Till museet svänger ni till höger."
+  "sv": "Till museet svänger ni till höger, frun."
  },
  {
   "id": "it4-imp-lei-005",
@@ -2473,72 +2473,72 @@
   "id": "it4-imp-lei-006",
   "topic": "imp-lei",
   "rule": "lei-forme",
-  "q": "[Faccia] attenzione, il pavimento è bagnato.",
+  "q": "Signora, [faccia] attenzione, il pavimento è bagnato.",
   "alt": [
-   "Fai",
-   "Fate",
-   "Fare"
+   "fai",
+   "fate",
+   "fare"
   ],
   "why": "Fare → faccia med Lei.",
-  "sv": "Var försiktig, golvet är vått."
+  "sv": "Var försiktig, frun, golvet är vått."
  },
  {
   "id": "it4-imp-lei-007",
   "topic": "imp-lei",
   "rule": "lei-forme",
-  "q": "[Abbia] pazienza, arrivo subito.",
+  "q": "Signor Bianchi, [abbia] pazienza, arrivo subito.",
   "alt": [
-   "Abbi",
-   "Abbiate",
-   "Avere"
+   "abbi",
+   "abbiate",
+   "avere"
   ],
   "why": "Avere → abbia med Lei.",
-  "sv": "Ha tålamod, jag kommer strax."
+  "sv": "Ha tålamod, herr Bianchi, jag kommer strax."
  },
  {
   "id": "it4-imp-lei-008",
   "topic": "imp-lei",
   "rule": "lei-forme",
-  "q": "[Vada] sempre dritto e poi a sinistra.",
+  "q": "Scusi, per il centro? – [Vada] sempre dritto e poi a sinistra.",
   "alt": [
    "Vai",
    "Andate",
    "Andare"
   ],
   "why": "Andare → vada med Lei.",
-  "sv": "Gå rakt fram och sedan till vänster."
+  "sv": "Ursäkta, hur kommer jag till centrum? – Gå rakt fram och sedan till vänster."
  },
  {
   "id": "it4-imp-lei-009",
   "topic": "imp-lei",
   "rule": "lei-forme",
-  "q": "[Finisca] pure di mangiare, non c'è fretta.",
+  "q": "Signora, [finisca] pure di mangiare, non c'è fretta.",
   "alt": [
-   "Finisci",
-   "Finite",
-   "Finire"
+   "finisci",
+   "finite",
+   "finire"
   ],
   "why": "-isc-verb: finisca med Lei.",
-  "sv": "Ät färdigt i lugn och ro, det är ingen brådska."
+  "sv": "Ät färdigt i lugn och ro, frun, det är ingen brådska."
  },
  {
   "id": "it4-imp-lei-010",
   "topic": "imp-lei",
   "rule": "lei-pron",
-  "q": "Buongiorno, [mi dica]!",
+  "q": "Buongiorno, signora, [mi dica]!",
   "alt": [
    "dimmi",
    "mi dici",
    "ditemi"
   ],
   "why": "Med Lei står pronomenet före verbet: mi dica. Med tu hängs det på: dimmi.",
-  "sv": "God dag, vad kan jag hjälpa till med?"
+  "sv": "God dag, frun, vad kan jag hjälpa till med?"
  },
  {
   "id": "it4-imp-lei-011",
   "topic": "imp-lei",
   "rule": "lei-pron",
-  "q": "Prego, [si accomodi].",
+  "q": "Prego, signore, [si accomodi].",
   "alt": [
    "accomodati",
    "si accomoda",
@@ -2551,14 +2551,14 @@
   "id": "it4-imp-lei-012",
   "topic": "imp-lei",
   "rule": "lei-pron",
-  "q": "Ecco il modulo: [lo compili] e me lo riporti.",
+  "q": "Ecco il modulo, signora: [lo compili] e me lo riporti.",
   "alt": [
    "compilalo",
    "lo compila",
    "compilatelo"
   ],
   "why": "Med Lei: pronomen före verbet, lo compili.",
-  "sv": "Här är blanketten: fyll i den och lämna tillbaka den till mig."
+  "sv": "Här är blanketten, frun: fyll i den och lämna tillbaka den till mig."
  },
  {
   "id": "it4-imp-lei-013",
@@ -2577,7 +2577,7 @@
   "id": "it4-imp-lei-014",
   "topic": "imp-lei",
   "rule": "lei-pron",
-  "q": "Il passaporto, per favore. [Me lo dia].",
+  "q": "Signore, il passaporto, per favore. [Me lo dia].",
   "alt": [
    "Dammelo",
    "Me lo dà",
@@ -2590,27 +2590,27 @@
   "id": "it4-imp-lei-015",
   "topic": "imp-lei",
   "rule": "lei-pron",
-  "q": "[Si ricordi] di prendere le pastiglie.",
+  "q": "Signor Rossi, [si ricordi] di prendere le pastiglie.",
   "alt": [
-   "Ricordati",
-   "Si ricorda",
-   "Ricordatevi"
+   "ricordati",
+   "si ricorda",
+   "ricordatevi"
   ],
   "why": "Ricordarsi med Lei: si ricordi.",
-  "sv": "Kom ihåg att ta tabletterna."
+  "sv": "Herr Rossi, kom ihåg att ta tabletterna."
  },
  {
   "id": "it4-imp-lei-016",
   "topic": "imp-lei",
   "rule": "lei-neg",
-  "q": "[Non si preoccupi], non è niente di grave.",
+  "q": "[Non si preoccupi], signora, non è niente di grave.",
   "alt": [
    "Non preoccuparti",
    "Non si preoccupa",
    "Non preoccupatevi"
   ],
   "why": "Nekad imperativ med Lei: non + Lei-formen.",
-  "sv": "Oroa er inte, det är inget allvarligt."
+  "sv": "Oroa er inte, frun, det är inget allvarligt."
  },
  {
   "id": "it4-imp-lei-017",
@@ -2629,40 +2629,40 @@
   "id": "it4-imp-lei-018",
   "topic": "imp-lei",
   "rule": "lei-neg",
-  "q": "[Non dimentichi] l'ombrello!",
+  "q": "Signora, [non dimentichi] l'ombrello!",
   "alt": [
-   "Non dimenticare",
-   "Non dimentica",
-   "Non dimenticate"
+   "non dimenticare",
+   "non dimentica",
+   "non dimenticate"
   ],
   "why": "Non + Lei-formen: non dimentichi (h för k-ljudet).",
-  "sv": "Glöm inte paraplyet!"
+  "sv": "Glöm inte paraplyet, frun!"
  },
  {
   "id": "it4-imp-lei-019",
   "topic": "imp-lei",
   "rule": "lei-forme",
-  "q": "[Scusi], che ore sono?",
+  "q": "[Scusi], signora, che ore sono?",
   "alt": [
    "Scusa",
    "Scusate",
    "Scusare"
   ],
   "why": "Scusare med Lei: scusi.",
-  "sv": "Ursäkta, vad är klockan?"
+  "sv": "Ursäkta, frun, vad är klockan?"
  },
  {
   "id": "it4-imp-lei-020",
   "topic": "imp-lei",
   "rule": "lei-pron",
-  "q": "Il dottore arriva subito, [si sieda] qui.",
+  "q": "Il dottore arriva subito, signora: [si sieda] qui.",
   "alt": [
    "siediti",
    "si siede",
    "sedetevi"
   ],
   "why": "Sedersi med Lei: si sieda.",
-  "sv": "Doktorn kommer strax, sätt er här."
+  "sv": "Doktorn kommer strax, frun: sätt er här."
  },
  {
   "id": "it4-pron-verbi-001",
@@ -2710,7 +2710,7 @@
   "q": "[Andiamocene], questo film è noioso!",
   "alt": [
    "Andiamoci",
-   "Andiamo",
+   "Andiamocine",
    "Andiamone"
   ],
   "why": "Imperativ noi av andarsene: andiamocene.",
@@ -2737,7 +2737,7 @@
   "alt": [
    "ci faccio",
    "ce lo faccio",
-   "la faccio"
+   "ce ne faccio"
   ],
   "why": "Farcela = klara det: ce la faccio.",
   "sv": "Det är för svårt, jag klarar det inte!"
@@ -2763,7 +2763,7 @@
   "alt": [
    "ce l'ho fatto",
    "ce lo ho fatto",
-   "l'ho fatta"
+   "ce l'ho fatti"
   ],
   "why": "Farcela i passato prossimo: ce l'ho fatta (participet får -a efter la).",
   "sv": "Till slut klarade jag det: jag fullföljde maratonloppet!"
@@ -2919,7 +2919,7 @@
   "alt": [
    "ce l'ha fatto",
    "ce lo ha fatto",
-   "l'ha fatta"
+   "ce l'ha fatti"
   ],
   "why": "Farcela: ce l'ha fatta (participet på -a).",
   "sv": "Provet var svårt, men Sara klarade det."

@@ -70,11 +70,11 @@
   "rule": "ppi-sfondo",
   "q": "Quando siamo arrivati a Venezia, [faceva] molto freddo.",
   "alt": [
-   "ha fatto",
+   "facevano",
    "fa",
    "farà"
   ],
-  "why": "Vädret beskriver bakgrunden till händelsen (vi kom fram), så det står i imperfetto.",
+  "why": "Vädret beskriver bakgrunden till händelsen (vi kom fram), så det står i imperfetto. Facevano är plural, men fa freddo har inget subjekt i plural.",
   "sv": "När vi kom fram till Venedig var det väldigt kallt."
  },
  {
@@ -109,11 +109,11 @@
   "rule": "ppi-sfondo",
   "q": "Il treno era pieno e tutti i passeggeri [sembravano] stanchi.",
   "alt": [
-   "sono sembrati",
+   "sembravamo",
    "sembrava",
    "sembrano"
   ],
-  "why": "Beskrivning av hur folk såg ut står i imperfetto. Subjektet är plural (i passeggeri), så inte sembrava.",
+  "why": "Beskrivning av hur folk såg ut står i imperfetto. Subjektet är i passeggeri (de), så inte sembrava (han/hon) eller sembravamo (vi).",
   "sv": "Tåget var fullt och alla passagerare verkade trötta."
  },
  {
@@ -122,11 +122,11 @@
   "rule": "ppi-sfondo",
   "q": "Quando ero piccola, [avevo] i capelli lunghissimi.",
   "alt": [
-   "ho avuto",
+   "avrò",
    "ho",
    "avevi"
   ],
-  "why": "Hur någon såg ut förr är en beskrivning: imperfetto. Avevi är du-form.",
+  "why": "Hur någon såg ut förr är en beskrivning: imperfetto. Avevi är du-form, och avrò och ho passar inte med quando ero piccola.",
   "sv": "När jag var liten hade jag jättelångt hår."
  },
  {
@@ -135,11 +135,11 @@
   "rule": "ppi-abitudine",
   "q": "Da bambino [andavo] ogni estate dai nonni in Calabria.",
   "alt": [
-   "sono andato",
+   "andrei",
    "vado",
    "andrò"
   ],
-  "why": "Något man brukade göra förr (ogni estate, da bambino) står i imperfetto.",
+  "why": "Något man brukade göra förr (ogni estate, da bambino) står i imperfetto. Presens, futuro och condizionale passar inte i en mening om barndomen.",
   "sv": "Som barn åkte jag varje sommar till mormor och morfar i Kalabrien."
  },
  {
@@ -148,11 +148,11 @@
   "rule": "ppi-abitudine",
   "q": "Alle medie [prendevamo] sempre l'autobus delle sette e mezza.",
   "alt": [
-   "abbiamo preso",
+   "prenderemo",
    "prendiamo",
    "prendevano"
   ],
-  "why": "En vana förr (alle medie, sempre) uttrycks med imperfetto. Subjektet är noi.",
+  "why": "En vana förr (alle medie, sempre) uttrycks med imperfetto. Subjektet är noi, så inte prendevano (de).",
   "sv": "På högstadiet tog vi alltid bussen halv åtta."
  },
  {
@@ -174,7 +174,7 @@
   "rule": "ppi-abitudine",
   "q": "Quando era giovane, mio nonno [ascoltava] la radio tutte le sere.",
   "alt": [
-   "ha ascoltato",
+   "ascolterà",
    "ascolta",
    "ascoltavo"
   ],
@@ -187,11 +187,11 @@
   "rule": "ppi-abitudine",
   "q": "Da piccole, io e mia sorella [giocavamo] sempre sulla spiaggia fino a tardi.",
   "alt": [
-   "abbiamo giocato",
+   "giocheremo",
    "giochiamo",
    "giocavano"
   ],
-  "why": "Något man alltid gjorde som liten är en vana: imperfetto. Io e mia sorella = noi.",
+  "why": "Något man alltid gjorde som liten är en vana: imperfetto. Io e mia sorella = noi, så inte giocavano.",
   "sv": "När vi var små lekte jag och min syster alltid på stranden till sent."
  },
  {
@@ -226,11 +226,11 @@
   "rule": "ppi-mentre",
   "q": "Mentre [camminavamo] nel bosco, abbiamo visto un cervo.",
   "alt": [
-   "abbiamo camminato",
+   "cammineremo",
    "camminiamo",
    "camminavano"
   ],
-  "why": "Det som pågick när något hände står i imperfetto, särskilt efter mentre.",
+  "why": "Det som pågick när något hände står i imperfetto, särskilt efter mentre. Subjektet är noi, så inte camminavano.",
   "sv": "Medan vi gick i skogen såg vi en hjort."
  },
  {
@@ -475,7 +475,7 @@
    "io",
    "me"
   ],
-  "why": "Piacere har a + person, så svaret blir anche a me. Anche io är fel eftersom man inte 'gillar' med io i italienskan.",
+  "why": "Med piacere är den som gillar något indirekt objekt (a me), så svaret blir anche a me. Anche io hörs i talspråk men räknas som fel.",
   "sv": "Jag gillar jazz väldigt mycket. – Jag med!"
  },
  {
@@ -1199,7 +1199,10 @@
    "farelo"
   ],
   "why": "Negativ imperativ för tu är non + infinitiv. Pronomenet hängs på (non farlo) eller står före (non lo fare).",
-  "sv": "Gör det inte, det är farligt!"
+  "sv": "Gör det inte, det är farligt!",
+  "acc": [
+   "lo fare"
+  ]
  },
  {
   "id": "pron-pos-017",
@@ -1212,7 +1215,10 @@
    "usarelo"
   ],
   "why": "I negativ imperativ (non + infinitiv) står pronomenet före infinitiven eller hängs på: non lo usare / non usarlo.",
-  "sv": "Mobilen? Använd den inte under lektionen!"
+  "sv": "Mobilen? Använd den inte under lektionen!",
+  "acc": [
+   "usarlo"
+  ]
  },
  {
   "id": "pron-pos-018",
@@ -1262,9 +1268,9 @@
   "alt": [
    "Dami",
    "Darmi",
-   "Mi dai"
+   "Da mi"
   ],
-  "why": "Da' + mi blir dammi med dubbelt m.",
+  "why": "Da' + mi blir dammi med dubbelt m, och det skrivs ihop.",
   "sv": "Ge mig ditt nummer, så skriver jag till dig."
  },
  {
@@ -1300,10 +1306,10 @@
   "q": "Il compito è facile: [fallo] adesso e poi esci.",
   "alt": [
    "falo",
-   "lo fai",
+   "fa lo",
    "farlo"
   ],
-  "why": "Fa' + lo blir fallo med dubbelt l.",
+  "why": "Fa' + lo blir fallo med dubbelt l, ihopskrivet.",
   "sv": "Uppgiften är lätt: gör den nu och gå ut sen."
  },
  {

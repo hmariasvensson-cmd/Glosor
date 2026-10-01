@@ -110,10 +110,10 @@
     "type": "tolkning",
     "q": "Hur reagerade skribenten på förseningen till slut?",
     "opts": [
-     "Hon åkte hem",
-     "Hon gjorde det bästa av situationen och tittade på stan",
-     "Hon klagade hos konduktören",
-     "Hon tog en taxi"
+     "Åkte hem",
+     "Gjorde det bästa av situationen och tittade på stan",
+     "Klagade hos konduktören",
+     "Tog en taxi"
     ],
     "a": 1,
     "why": "„dann haben wir einfach die Altstadt besichtigt und ein Eis gegessen“."
@@ -630,8 +630,8 @@
     "sv": "Schwarzwald ligger i sydvästra Tyskland, i förbundslandet Baden-Württemberg. Det är ungefär 160 kilometer långt och Tysklands största lågfjällsområde."
    },
    {
-    "fr": "Seinen Namen hat er von den dunklen Tannen. Schon die Römer fanden den dichten Wald so dunkel, dass sie ihn „schwarz“ nannten.",
-    "sv": "Namnet kommer från de mörka granarna. Redan romarna tyckte att den täta skogen var så mörk att de kallade den \"svart\"."
+    "fr": "Seinen Namen hat er von den dunklen Tannen. Der Wald ist so dicht und dunkel, dass die Menschen ihn schon im Mittelalter „schwarz“ nannten.",
+    "sv": "Namnet kommer från de mörka granarna. Skogen är så tät och mörk att människorna kallade den \"svart\" redan på medeltiden."
    },
    {
     "fr": "Der höchste Berg ist der Feldberg mit 1.493 Metern. Im Winter kann man dort Ski fahren, im Sommer wandern viele Touristen auf den Wegen durch den Wald und an den Seen vorbei.",
@@ -697,7 +697,7 @@
      "Efter en familj som hette Schwarz"
     ],
     "a": 1,
-    "why": "„von den dunklen Tannen … so dunkel, dass sie ihn schwarz nannten“."
+    "why": "„Seinen Namen hat er von den dunklen Tannen … so dicht und dunkel, dass die Menschen ihn … „schwarz“ nannten.“"
    },
    {
     "type": "detalj",
@@ -751,11 +751,6 @@
     "t": "dunkel",
     "sv": "mörk",
     "g": ""
-   },
-   "römer": {
-    "t": "der Römer (-)",
-    "sv": "romare",
-    "g": "m"
    },
    "nannten": {
     "t": "nennen",
@@ -821,6 +816,11 @@
     "t": "aushalten",
     "sv": "stå ut med, tåla",
     "g": ""
+   },
+   "mittelalter": {
+    "t": "das Mittelalter",
+    "sv": "medeltiden",
+    "g": "n"
    }
   }
  },
@@ -1351,7 +1351,7 @@
    },
    {
     "fr": "Viele liebe Grüße, dein Jonas",
-    "sv": "Många kärleksfulla hälsningar, din Jonas"
+    "sv": "Många varma hälsningar, din Jonas"
    }
   ],
   "questions": [
@@ -2002,7 +2002,7 @@
     "sv": "Köln – Över 300 elever från tolv skolor städade Rhens strand i lördags. Aktionen ”Ren Rhen” äger rum varje vår."
    },
    {
-    "fr": "Mit Handschuhen und großen Säcken sind die Jugendliche fünf Stunden lang am Fluss entlanggelaufen. Das Ergebnis: fast zwei Tonnen Müll! Die Helfer haben vor allem Plastikflaschen, Dosen und Verpackungen von Fast Food gefunden. Aber es gab auch Überraschungen: ein altes Fahrrad, zwei Autoreifen und sogar einen Kühlschrank.",
+    "fr": "Mit Handschuhen und großen Säcken sind die Jugendlichen fünf Stunden lang am Fluss entlanggelaufen. Das Ergebnis: fast zwei Tonnen Müll! Die Helfer haben vor allem Plastikflaschen, Dosen und Verpackungen von Fast Food gefunden. Aber es gab auch Überraschungen: ein altes Fahrrad, zwei Autoreifen und sogar einen Kühlschrank.",
     "sv": "Med handskar och stora säckar gick ungdomarna längs floden i fem timmar. Resultatet: nästan två ton skräp! Hjälparna hittade framför allt plastflaskor, burkar och förpackningar från snabbmat. Men det fanns också överraskningar: en gammal cykel, två bildäck och till och med ett kylskåp."
    },
    {
@@ -2361,7 +2361,7 @@
    },
    {
     "fr": "Antwort von Selin, 22: Ich habe nach dem Abi eine Ausbildung als Hotelfachfrau gemacht. Das waren drei Jahre, und ich habe von Anfang an Geld verdient. Ich habe in der Küche, an der Rezeption und im Restaurant gearbeitet. Heute arbeite ich in einem Hotel in Wien und liebe meinen Job. Mein Tipp: Mach ein Praktikum, bevor du dich entscheidest!",
-    "sv": "Svar från Selin, 22: Efter studenten gick jag en yrkesutbildning till hotellreceptionist. Den var tre år, och jag tjänade pengar från början. Jag jobbade i köket, i receptionen och i restaurangen. I dag jobbar jag på ett hotell i Wien och älskar mitt jobb. Mitt tips: Gör en praktik innan du bestämmer dig!"
+    "sv": "Svar från Selin, 22: Efter studenten gick jag en yrkesutbildning inom hotell (Hotelfachfrau). Den var tre år, och jag tjänade pengar från början. Jag jobbade i köket, i receptionen och i restaurangen. I dag jobbar jag på ett hotell i Wien och älskar mitt jobb. Mitt tips: Gör en praktik innan du bestämmer dig!"
    },
    {
     "fr": "Antwort von Max, 24: Bei mir war es anders. Ich habe Physik studiert, weil mich Naturwissenschaften schon immer interessiert haben. Das Studium war schwer, und ich hatte wenig Geld. Aber jetzt habe ich einen spannenden Job in der Forschung. Für manche Berufe muss man einfach studieren, zum Beispiel als Arzt oder Lehrer.",

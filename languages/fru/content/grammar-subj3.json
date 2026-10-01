@@ -71,10 +71,10 @@
   "q": "Y a-t-il quelqu'un dans ce bureau qui [sache] remplir une déclaration d'impôts ?",
   "alt": [
    "saches",
-   "saura",
+   "savent",
    "sachent"
   ],
-  "why": "Relativsatsen beskriver en person som man inte vet om den finns. Då står verbet i subjonctif: quelqu'un qui sache. (Indikativ, qui sait, går också i talspråk men förutsätter att personen finns.) Saches är andra person singular och sachent plural, men subjektet qui syftar på quelqu'un (tredje person singular).",
+  "why": "Relativsatsen beskriver en person som man inte vet om den finns. Då står verbet i vårdad franska i subjonctif: quelqu'un qui sache. (Indikativ, qui sait eller qui saura, går också men förutsätter mer att personen finns.) Saches är andra person singular, och savent och sachent är plural, men qui syftar på quelqu'un (tredje person singular).",
   "sv": "Finns det någon på det här kontoret som kan fylla i en deklaration?"
  },
  {
@@ -83,11 +83,11 @@
   "rule": "subj3-rel",
   "q": "Dans ce quartier, il n'y a aucune crèche qui [puisse] accueillir les enfants avant sept heures.",
   "alt": [
-   "peut",
-   "pourra",
+   "puisses",
+   "pouvoir",
    "puissent"
   ],
-  "why": "När huvudsatsen förnekar att något finns (il n'y a aucune … qui, je ne connais personne qui) står relativsatsen i subjonctif: qui puisse. Aucune crèche är singular, så puissent blir fel.",
+  "why": "När huvudsatsen förnekar att något finns (il n'y a aucune … qui, je ne connais personne qui) står relativsatsen normalt i subjonctif: qui puisse. (Indikativ, qui peut, hörs i talspråk.) Aucune crèche är tredje person singular, så puisses och puissent blir fel, och efter qui krävs en böjd verbform.",
   "sv": "I det här området finns det ingen förskola som kan ta emot barnen före klockan sju."
  },
  {
@@ -96,11 +96,11 @@
   "rule": "subj3-rel",
   "q": "Je ne connais personne dans ma promo qui [ait] trouvé un stage rémunéré.",
   "alt": [
-   "a",
-   "avait",
-   "aie"
+   "aie",
+   "aies",
+   "aient"
   ],
-  "why": "Je ne connais personne qui … förnekar att en sådan person finns, och då står relativsatsen i subjonctif. Här är det subjonctif passé: qui ait trouvé. Aie hör till je.",
+  "why": "Je ne connais personne qui … förnekar att en sådan person finns, och då står relativsatsen normalt i subjonctif, här subjonctif passé: qui ait trouvé. (Indikativ, qui a trouvé, hörs i talspråk.) Personne är tredje person singular: aie hör till je, aies till tu och aient är plural.",
   "sv": "Jag känner ingen i min årskurs som har fått en betald praktikplats."
  },
  {
@@ -109,11 +109,11 @@
   "rule": "subj3-rel",
   "q": "Existe-t-il un seul emploi à temps partiel qui [permette] de payer un loyer parisien ?",
   "alt": [
-   "permet",
-   "permettra",
+   "permettes",
+   "permettre",
    "permettent"
   ],
-  "why": "Frågan ifrågasätter att ett sådant jobb finns, så relativsatsen får subjonctif: qui permette. Permettent är plural.",
+  "why": "Frågan ifrågasätter att ett sådant jobb finns, så relativsatsen får i vårdad franska subjonctif: qui permette. (Indikativ, qui permet, är också möjligt men mindre vårdat.) Permettes hör till tu, permettent är plural, och efter qui krävs en böjd verbform.",
   "sv": "Finns det ett enda deltidsjobb som räcker till en hyra i Paris?"
  },
  {
@@ -122,11 +122,11 @@
   "rule": "subj3-rel",
   "q": "Je cherche un studio qui [soit] proche du conservatoire, mais je n'en ai pas encore trouvé.",
   "alt": [
-   "est",
+   "sois",
    "était",
    "être"
   ],
-  "why": "Studion är önskad men ännu inte hittad, så egenskapen är hypotetisk: un studio qui soit proche. Med indikativ (qui est) skulle man mena en bestämd studio som man redan vet finns.",
+  "why": "Studion är önskad men ännu inte hittad, så egenskapen är hypotetisk: un studio qui soit proche. Med indikativ (qui est) skulle man mena en bestämd studio som man redan vet finns. Sois hör till je/tu, och était passar inte med en studio man fortfarande letar efter.",
   "sv": "Jag letar efter en etta som ligger nära konservatoriet, men jag har inte hittat någon än."
  },
  {
@@ -200,11 +200,11 @@
   "rule": "subj3-doute",
   "q": "Les syndicats doutent que la réforme [fasse] baisser le chômage des jeunes.",
   "alt": [
-   "fait",
-   "fera",
-   "faire"
+   "fassent",
+   "faire",
+   "fasses"
   ],
-  "why": "Douter que (tvivla på att) kräver subjonctif: qu'elle fasse. Observera skillnaden mot se douter que (misstänka, ana), som tar indikativ.",
+  "why": "Douter que (tvivla på att) kräver subjonctif: qu'elle fasse. Subjektet la réforme är tredje person singular, så fassent och fasses blir fel. Observera skillnaden mot se douter que (misstänka, ana), som tar indikativ.",
   "sv": "Facken tvivlar på att reformen kommer att minska ungdomsarbetslösheten."
  },
  {
@@ -213,11 +213,11 @@
   "rule": "subj3-doute",
   "q": "Je ne pense pas que les inégalités entre les banlieues et les centres-villes [soient] une fatalité.",
   "alt": [
-   "sont",
-   "seront",
-   "soit"
+   "soit",
+   "être",
+   "sois"
   ],
-  "why": "Je pense que tar indikativ, men nekat (je ne pense pas que) uttrycker tvivel och följs av subjonctif: qu'elles soient. Subjektet les inégalités är plural, så soit blir fel.",
+  "why": "Je pense que tar indikativ, men nekat (je ne pense pas que) uttrycker tvivel och följs i vårdad franska av subjonctif: qu'elles soient. Subjektet les inégalités är plural, så soit och sois blir fel.",
   "sv": "Jag tror inte att ojämlikheten mellan förorterna och stadskärnorna är ofrånkomlig."
  },
  {
@@ -226,11 +226,11 @@
   "rule": "subj3-doute",
   "q": "Il est peu probable que le gouvernement [revienne] sur cette décision.",
   "alt": [
-   "revient",
-   "reviendra",
+   "reviennes",
+   "revenir",
    "reviennent"
   ],
-  "why": "Il est probable que tar indikativ, men il est peu probable que (det är föga troligt att) uttrycker tvivel och kräver subjonctif: qu'il revienne.",
+  "why": "Il est probable que tar indikativ, men il est peu probable que (det är föga troligt att) uttrycker tvivel och tar subjonctif: qu'il revienne. Le gouvernement är tredje person singular, så reviennes och reviennent blir fel.",
   "sv": "Det är föga troligt att regeringen ändrar sig i den frågan."
  },
  {
@@ -251,11 +251,11 @@
   "rule": "subj3-doute",
   "q": "Il n'est pas certain que la ville [puisse] tenir ses objectifs de réduction des émissions.",
   "alt": [
-   "peut",
-   "pourra",
+   "puisses",
+   "pouvoir",
    "puissent"
   ],
-  "why": "Il est certain que tar indikativ, men nekat (il n'est pas certain que) uttrycker osäkerhet och kräver subjonctif: qu'elle puisse. La ville är singular.",
+  "why": "Il est certain que tar indikativ, men nekat (il n'est pas certain que) uttrycker osäkerhet och tar subjonctif: qu'elle puisse. La ville är tredje person singular, så puisses och puissent blir fel.",
   "sv": "Det är inte säkert att staden kan nå sina mål för utsläppsminskningar."
  },
  {
@@ -277,11 +277,11 @@
   "rule": "subj3-passe",
   "q": "Je suis soulagée que ma sœur [ait fini] ses études avant la crise.",
   "alt": [
-   "a fini",
-   "avait fini",
+   "aies fini",
+   "aient fini",
    "aie fini"
   ],
-  "why": "Être soulagé que (vara lättad över att) kräver subjonctif. Studierna är redan avslutade, så det blir subjonctif passé: avoir i subjonctif + participe passé, qu'elle ait fini.",
+  "why": "Être soulagé que (vara lättad över att) kräver subjonctif. Studierna är redan avslutade, så det blir subjonctif passé: avoir i subjonctif + participe passé, qu'elle ait fini. Aie och aies hör till je och tu, aient är plural.",
   "sv": "Jag är lättad över att min syster hann avsluta sina studier före krisen."
  },
  {
@@ -290,11 +290,11 @@
   "rule": "subj3-passe",
   "q": "Il est dommage que tant de jeunes diplômés [soient partis] à l'étranger faute de postes en France.",
   "alt": [
-   "sont partis",
+   "soit partis",
    "aient partis",
    "soient parti"
   ],
-  "why": "Il est dommage que kräver subjonctif. Partir tar être, så subjonctif passé blir qu'ils soient partis, med kongruens i plural. Avoir fungerar inte med partir.",
+  "why": "Il est dommage que kräver subjonctif. Partir tar être, så subjonctif passé blir qu'ils soient partis, med verbet i plural och kongruens i participet. Avoir fungerar inte med partir.",
   "sv": "Det är synd att så många nyutexaminerade har flyttat utomlands i brist på tjänster i Frankrike."
  },
  {
@@ -303,11 +303,11 @@
   "rule": "subj3-passe",
   "q": "Le professeur attendra que tous les candidats [aient rendu] leur copie avant de commenter le sujet.",
   "alt": [
-   "ont rendu",
-   "auront rendu",
+   "aies rendu",
+   "ait rendu",
    "aient rendus"
   ],
-  "why": "Attendre que (vänta tills) kräver subjonctif. Inlämningen ska vara avslutad först, så det blir subjonctif passé: qu'ils aient rendu. Med avoir böjs participet inte efter subjektet.",
+  "why": "Attendre que (vänta tills) kräver subjonctif. Inlämningen ska vara avslutad först, så det blir subjonctif passé: qu'ils aient rendu. Subjektet är plural (ait och aies är singular), och med avoir böjs participet inte efter subjektet.",
   "sv": "Läraren väntar tills alla kandidater har lämnat in sina skrivningar innan han kommenterar uppgiften."
  },
  {
@@ -316,7 +316,7 @@
   "rule": "subj3-passe",
   "q": "Il est possible que la mairie [se soit trompée] dans ses calculs.",
   "alt": [
-   "s'est trompée",
+   "se soient trompés",
    "s'ait trompée",
    "se soit trompé"
   ],
@@ -329,11 +329,11 @@
   "rule": "subj3-ind",
   "q": "Les résultats sont publiés en ligne après que le jury [a terminé] ses délibérations.",
   "alt": [
-   "ait terminé",
    "aie terminé",
-   "soit terminé"
+   "soit terminé",
+   "ont terminé"
   ],
-  "why": "Après que (efter att) står för något som faktiskt har hänt och tar enligt normen indikativ: après qu'il a terminé. Subjonctif hörs ofta i talad franska, men räknas som fel i skrift. Jämför avant que, som alltid tar subjonctif.",
+  "why": "Après que (efter att) står för något som faktiskt har hänt och tar enligt normen indikativ: après qu'il a terminé. Subjonctif (après qu'il ait terminé) är mycket vanligt, även i tidningar, men underkänns av Académie française och i tentor. Le jury är singular, så ont blir fel, och terminer tar avoir. Jämför avant que, som alltid tar subjonctif.",
   "sv": "Resultaten publiceras på nätet efter att juryn har avslutat sina överläggningar."
  },
  {
@@ -342,11 +342,11 @@
   "rule": "subj3-ind",
   "q": "Il est probable que la ministre [sera] candidate aux prochaines élections.",
   "alt": [
-   "soit",
    "soient",
-   "être"
+   "être",
+   "serons"
   ],
-  "why": "Il est probable que (det är troligt att) uttrycker hög sannolikhet och tar indikativ: elle sera. Det är il est possible que och il est peu probable que som tar subjonctif.",
+  "why": "Il est probable que (det är troligt att) uttrycker hög sannolikhet och tar normalt indikativ: elle sera. Det är il est possible que och il est peu probable que som tar subjonctif. La ministre är singular, så soient och serons blir fel.",
   "sv": "Det är troligt att ministern kandiderar i nästa val."
  },
  {
@@ -368,11 +368,11 @@
   "rule": "subj3-ind",
   "q": "Il me semble que les transports en commun [sont] plus fiables qu'avant.",
   "alt": [
-   "soient",
+   "est",
    "soit",
    "être"
   ],
-  "why": "Il me semble que (jag tycker att, jag har intrycket att) uttrycker en personlig åsikt, som je pense que, och tar indikativ. Utan me (il semble que) blir det i stället subjonctif.",
+  "why": "Il me semble que (jag tycker att, jag har intrycket att) uttrycker en personlig åsikt, som je pense que, och tar indikativ. Subjektet les transports en commun är plural: sont. Utan me (il semble que) blir det i stället subjonctif.",
   "sv": "Jag tycker att kollektivtrafiken är pålitligare än förut."
  },
  {

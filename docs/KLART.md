@@ -2,6 +2,14 @@
 
 Punkter som har flyttats från [`BACKLOG.md`](BACKLOG.md) när de byggdes. **Referens** anger backloggens rubrik och prioritet. **Commit** anger var ändringen finns i git. **Publicerat** anger versionen av artefakten på https://claude.ai/artifact/YBQv8j4qXQQLuPwLAWt5mP.
 
+## 2026-10-01, del 3 (publicerat som version 36)
+
+| Referens | Vad som byggdes | Commit |
+|---|---|---|
+| Färre övningar · P1 *Dagens pass som ett flöde* (beslut 2026-10-01: korta pass, flera per dag) | Pass på ca 5 min (ca 20 frågor) i ett flöde: förfallna och nya glosor (högst 10 + 5, inom ca 150 s) blandade med två av tre grupper (fraser/meningar, grammatik + der/die/das, verb/diktamen/ordföljd) som roterar (`PASS_GROUPS`, `passOrder`). "Pass N i dag – kör ett till", inget lås; loggposter får `dp: 1`. Avbrutet pass sparas i `S.runs["words|pass"]` och kan fortsättas. Efter varannat pass förslag på dagens text. Valfritt provdatum (`S.examDate`): sista sex veckorna hälften så många nya ord och en provuppgift efter passet, sista två veckorna inga nya ord. | se git log |
+| Granskning (beslut 2026-10-01: AI-agenter granskar, inte människor) | 15 agenter granskade alla 21 kurser rad för rad mot språkens regler (genus, böjning, kasus, accenter, prepositioner, ordföljd, översättningar, sakuppgifter, upphovsrätt) och rättade i källfilerna utan att ändra id: ca 2 000 rättelser, flest felalternativ som också var korrekta (Hitta felet), sedan sakfel (t.ex. bokbålen 1933, Jugend musiziert, WHO-rekommendationen, CELI-gränsen 60 %), översättningar ("på fjärde våningen" → "fyra trappor upp"), uttalspar som var homofoner, upphovsrätt (Max Frisch, MLK, Calvino borttagna). Backloggens alla tveksamma fall avgjorda. | se git log |
+| Granskningen · svarsalternativ | Facit stod oftast på plats 2 i texternas och provets flerval; `optOrder` blandar visningsordningen (inte vid två alternativ eller bokstavsetiketter). `ERR_SKIP` utökad med regler där felalternativ kan vara talspråkligt korrekta (it: cisi, cpa-fut, di-pass, trap-uso, ppi-*, fa-uso/ipotesi, cong-ind, cong-sup, se-parl; de: kr-rede, mf-tekamolo, mp-*, mv-val). | se git log |
+
 ## 2026-10-01, del 2 (publicerat som version 35)
 
 | Referens | Vad som byggdes | Commit |

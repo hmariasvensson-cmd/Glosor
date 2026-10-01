@@ -7,7 +7,7 @@
    {
     "who": "Dozentin",
     "fr": "Guten Morgen, meine Damen und Herren, und herzlich willkommen zur ersten Sitzung unserer Einführung in das wissenschaftliche Arbeiten. Heute möchte ich Ihnen zunächst einen Überblick über den Ablauf des Semesters geben und anschließend auf die Frage eingehen, was eine Hausarbeit eigentlich von einem Aufsatz in der Schule unterscheidet.",
-    "sv": "God morgon, mina damer och herrar, och välkomna till första tillfället i vår introduktion till vetenskapligt arbete. I dag vill jag först ge en översikt över terminens upplägg och sedan gå in på frågan vad en hemuppsats egentligen skiljer sig från en uppsats i skolan."
+    "sv": "God morgon, mina damer och herrar, och välkomna till första tillfället i vår introduktion till vetenskapligt arbete. I dag vill jag först ge en översikt över terminens upplägg och sedan gå in på frågan vad som egentligen skiljer en hemuppsats från en uppsats i skolan."
    },
    {
     "who": "Dozentin",
@@ -45,24 +45,24 @@
     "type": "helhet",
     "q": "Vad handlar föreläsningen främst om?",
     "opts": [
-     "Mozarts operor",
      "Vad som kännetecknar en hemuppsats",
+     "Mozarts operor",
      "Hur man söker till universitetet",
      "Hur lärplattformen fungerar"
     ],
-    "a": 1,
-    "why": "Hon ger en översikt och går in på vad en Hausarbeit skiljer sig från en skoluppsats."
+    "a": 0,
+    "why": "Hon ger en översikt och går in på vad som skiljer en Hausarbeit från en skoluppsats."
    },
    {
     "type": "detalj",
     "q": "När hålls kursen?",
     "opts": [
      "Varje måndag",
-     "Varje tisdag",
      "Varannan vecka",
+     "Varje tisdag",
      "På helgerna"
     ],
-    "a": 1,
+    "a": 2,
     "why": "Die Veranstaltung findet jeden Dienstag statt."
    },
    {
@@ -94,11 +94,11 @@
     "q": "Vad behövs för att redogöra för forskningsläget?",
     "opts": [
      "Bara Wikipedia",
-     "Facklitteratur i facktidskrifter och antologier",
      "Intervjuer",
+     "Facklitteratur i facktidskrifter och antologier",
      "Egna experiment"
     ],
-    "a": 1,
+    "a": 2,
     "why": "Sie brauchen Fachliteratur, also Aufsätze in Fachzeitschriften und Sammelbänden."
    },
    {
@@ -118,23 +118,23 @@
     "q": "Vad frågar studenten om?",
     "opts": [
      "Om man får skriva på engelska",
-     "Om reglerna gäller även för text omformulerad med AI",
      "När tentan är",
-     "Var bilderna finns"
+     "Var bilderna finns",
+     "Om reglerna gäller även för text omformulerad med AI"
     ],
-    "a": 1,
+    "a": 3,
     "why": "Gilt das auch, wenn man einen Text mit künstlicher Intelligenz umformuliert?"
    },
    {
     "type": "detalj",
     "q": "Vad råder läraren studenterna att göra om de är osäkra?",
     "opts": [
-     "Läsa Wikipedia",
      "Fråga på hennes mottagningstid",
+     "Läsa Wikipedia",
      "Skriva till rektorn",
      "Strunta i reglerna"
     ],
-    "a": 1,
+    "a": 0,
     "why": "Im Zweifel fragen Sie bitte in meiner Sprechstunde nach."
    }
   ],
@@ -368,22 +368,22 @@
     "opts": [
      "Hennes professor är emot resan",
      "Hon har inte tillräckligt med pengar",
-     "Hon vet inte om kurserna kommer att tillgodoräknas",
-     "Ansökningstiden har inte börjat"
+     "Ansökningstiden har inte börjat",
+     "Hon vet inte om kurserna kommer att tillgodoräknas"
     ],
-    "a": 2,
+    "a": 3,
     "why": "„… weil ich nicht weiß, ob mir die Kurse hier angerechnet werden.“"
    },
    {
     "type": "detalj",
     "q": "Vad skrivs in i ett Learning Agreement?",
     "opts": [
-     "Vilka kurser hon läser i Wien och vilka moduler de ersätter",
      "Hur mycket hyra hon betalar i Wien",
      "Vilka betyg hon har fått hittills",
-     "Vilken lärare hon ska ha i Wien"
+     "Vilken lärare hon ska ha i Wien",
+     "Vilka kurser hon läser i Wien och vilka moduler de ersätter"
     ],
-    "a": 0,
+    "a": 3,
     "why": "„Darin wird festgehalten, welche Kurse Sie an der Gasthochschule belegen und welche Module unserer Studienordnung diese Kurse ersetzen.“"
    },
    {
@@ -392,10 +392,10 @@
     "opts": [
      "Professorn i Wien",
      "Studierådgivaren ensam",
-     "Sara själv",
-     "Examensnämnden, efter rådgivarens rekommendation"
+     "Examensnämnden, efter rådgivarens rekommendation",
+     "Sara själv"
     ],
-    "a": 3,
+    "a": 2,
     "why": "„Der Prüfungsausschuss, auf der Grundlage meiner Empfehlung.“"
    },
    {
@@ -426,12 +426,12 @@
     "type": "detalj",
     "q": "Vad kan Sara göra om en hemuppsats inte blir klar i tid?",
     "opts": [
-     "Ansöka om förlängd tid, men stämma av det i förväg",
      "Skriva uppsatsen i Wien i stället",
+     "Ansöka om förlängd tid, men stämma av det i förväg",
      "Hoppa över seminariet",
      "Göra en muntlig tenta i stället"
     ],
-    "a": 0,
+    "a": 1,
     "why": "„… können Sie eine Fristverlängerung beantragen. Sprechen Sie das aber bitte vorher mit den Lehrenden ab …“"
    },
    {
@@ -439,11 +439,11 @@
     "q": "Varför nämner rådgivaren portvakten?",
     "opts": [
      "Han hjälper till att hitta ett studentrum",
-     "På vissa skolor får man bara nycklarna till övningsrummen hos honom vid vissa tider",
      "Han ansvarar för introduktionsveckan",
-     "Han räknar om betygen"
+     "Han räknar om betygen",
+     "På vissa skolor får man bara nycklarna till övningsrummen hos honom vid vissa tider"
     ],
-    "a": 1,
+    "a": 3,
     "why": "„An manchen Häusern bekommt man die Schlüssel für die Übungsräume nur beim Pförtner und nur zu bestimmten Zeiten.“"
    }
   ]
@@ -461,7 +461,7 @@
    {
     "who": "Jonas",
     "fr": "Ja. Meine These lautet, dass es keine werktreue Interpretation geben kann, weil wir nicht wissen, wie Bach die Suiten gehört hat. Das Autograph ist verloren; wir haben nur Abschriften, zum Beispiel von Anna Magdalena Bach, und die widersprechen sich bei vielen Bögen.",
-    "sv": "Ja. Min tes är att det inte kan finnas någon verktrogen tolkning, eftersom vi inte vet hur Bach hörde sviterna. Originalmanuskriptet har gått förlorat; vi har bara avskrifter, till exempel av Anna Magdalena Bach, och de motsäger varandra i många stråkbågar."
+    "sv": "Ja. Min tes är att det inte kan finnas någon verktrogen tolkning, eftersom vi inte vet hur Bach hörde sviterna. Originalmanuskriptet har gått förlorat; vi har bara avskrifter, till exempel av Anna Magdalena Bach, och de motsäger varandra i stråkföringen på många ställen."
    },
    {
     "who": "Lea",
@@ -491,7 +491,7 @@
    {
     "who": "Lea",
     "fr": "Darf ich noch etwas zur Aufnahme von 2019 sagen? Die Cellistin spielt auf Darmsaiten und mit einem Barockbogen. Für mich klingt das gar nicht museal, sondern sehr lebendig, gerade weil die Tänze rhythmisch viel deutlicher werden. Man hört plötzlich, dass eine Gigue ein schneller Tanz ist.",
-    "sv": "Får jag säga något mer om inspelningen från 2019? Cellisten spelar på tarmsträngar och med en barockstråke. För mig låter det inte alls museialt utan mycket levande, just för att danserna blir mycket tydligare rytmiskt. Man hör plötsligt att en gigue är en snabb dans."
+    "sv": "Får jag säga något mer om inspelningen från 2019? Cellisten spelar på tarmsträngar och med en barockstråke. För mig låter det inte alls musealt utan mycket levande, just för att danserna blir mycket tydligare rytmiskt. Man hör plötsligt att en gigue är en snabb dans."
    },
    {
     "who": "Jonas",
@@ -510,11 +510,11 @@
     "q": "Vad diskuterar seminariet?",
     "opts": [
      "Hur man stämmer en cello",
-     "Vad verktrohet i en tolkning innebär",
      "Bachs biografi",
-     "Hur man spelar in en cd"
+     "Hur man spelar in en cd",
+     "Vad verktrohet i en tolkning innebär"
     ],
-    "a": 1,
+    "a": 3,
     "why": "Frågan är hur verktrogen en tolkning måste vara."
    },
    {
@@ -533,48 +533,48 @@
     "type": "detalj",
     "q": "Varför vet vi inte exakt hur Bach ville ha det?",
     "opts": [
-     "Han skrev aldrig ner sviterna",
      "Originalmanuskriptet har gått förlorat och avskrifterna motsäger varandra",
+     "Han skrev aldrig ner sviterna",
      "Han spelade inte cello",
      "Noterna är på latin"
     ],
-    "a": 1,
+    "a": 0,
     "why": "Das Autograph ist verloren … die widersprechen sich."
    },
    {
     "type": "detalj",
     "q": "Vad ger enligt Lea en ram?",
     "opts": [
-     "Publikens smak",
      "Uppförandepraxisen",
+     "Publikens smak",
      "Skivbolaget",
      "Läraren"
     ],
-    "a": 1,
+    "a": 0,
     "why": "Die Aufführungspraxis gibt uns einen Rahmen."
    },
    {
     "type": "detalj",
     "q": "Hur beskriver Jonas inspelningen från 1936?",
     "opts": [
-     "Stel och långsam",
      "Romantisk och fri",
+     "Stel och långsam",
      "Historiskt informerad",
      "Misslyckad"
     ],
-    "a": 1,
+    "a": 0,
     "why": "Die Aufnahme von 1936 ist romantisch und frei."
    },
    {
     "type": "tolkning",
     "q": "Hur definierar Lea verktrohet?",
     "opts": [
-     "Att hitta den enda rätta versionen",
      "Att kunna motivera sina val med källorna",
+     "Att hitta den enda rätta versionen",
      "Att spela exakt som 1936",
      "Att spela utan känsla"
     ],
-    "a": 1,
+    "a": 0,
     "why": "… die Entscheidungen … mit den Quellen begründen zu können."
    },
    {
@@ -582,11 +582,11 @@
     "q": "Vad vill Jonas lägga till?",
     "opts": [
      "Att tempot ska vara snabbt",
-     "Att det personliga uttrycket får spela en roll",
      "Att man ska spela utan noter",
-     "Att man ska använda metronom"
+     "Att man ska använda metronom",
+     "Att det personliga uttrycket får spela en roll"
     ],
-    "a": 1,
+    "a": 3,
     "why": "dass auch der persönliche Ausdruck eine Rolle spielen darf."
    },
    {
@@ -594,11 +594,11 @@
     "q": "Vad ska studenterna göra till nästa gång?",
     "opts": [
      "Spela in sviten",
-     "Läsa en uppsats om autenticitet",
      "Skriva en hemuppsats",
-     "Besöka ett arkiv"
+     "Besöka ett arkiv",
+     "Läsa en uppsats om autenticitet"
     ],
-    "a": 1,
+    "a": 3,
     "why": "lesen Sie bitte den Aufsatz von Richard Taruskin über Authentizität."
    }
   ],
@@ -707,23 +707,23 @@
     "q": "Vad handlar föreläsningen om?",
     "opts": [
      "Mozarts liv",
-     "Sonatformen och hur man analyserar den",
      "Hur man skriver en hemuppsats",
-     "Beethovens symfonier i allmänhet"
+     "Beethovens symfonier i allmänhet",
+     "Sonatformen och hur man analyserar den"
     ],
-    "a": 1,
+    "a": 3,
     "why": "Föreläsaren förklarar sonatformens delar och ger råd för analysen."
    },
    {
     "type": "detalj",
     "q": "Var finns sonatformen enligt föreläsaren?",
     "opts": [
-     "Bara i pianosonater",
      "I första satsen i nästan alla symfonier, kvartetter och konserter från klassicismen",
+     "Bara i pianosonater",
      "Bara i operor",
      "I barockens fugor"
     ],
-    "a": 1,
+    "a": 0,
     "why": "Die Form findet sich im ersten Satz fast aller Sinfonien, Streichquartette und Konzerte der Klassik."
    },
    {
@@ -731,11 +731,11 @@
     "q": "I vilken tonart står det andra temat i expositionen i ett durstycke?",
     "opts": [
      "I grundtonarten",
-     "Som regel i dominanten",
      "I moll",
-     "I subdominanten"
+     "I subdominanten",
+     "Som regel i dominanten"
     ],
-    "a": 1,
+    "a": 3,
     "why": "… in Dur-Stücken in der Regel in der Dominante."
    },
    {
@@ -743,11 +743,11 @@
     "q": "Vad händer i genomföringen?",
     "opts": [
      "Temana upprepas exakt",
-     "Temana styckas upp, kombineras och förs genom avlägsna tonarter",
      "Ett helt nytt stycke börjar",
+     "Temana styckas upp, kombineras och förs genom avlägsna tonarter",
      "Musiken tystnar"
     ],
-    "a": 1,
+    "a": 2,
     "why": "Hier werden die Themen zerlegt, kombiniert und durch entfernte Tonarten geführt."
    },
    {
@@ -768,10 +768,10 @@
     "opts": [
      "Mozart",
      "Haydn",
-     "Musikteoretiker på 1800-talet, t.ex. A. B. Marx",
-     "Beethoven"
+     "Beethoven",
+     "Musikteoretiker på 1800-talet, t.ex. A. B. Marx"
     ],
-    "a": 2,
+    "a": 3,
     "why": "Er wurde erst im 19. Jahrhundert von Musiktheoretikern wie Adolf Bernhard Marx geprägt."
    },
    {
@@ -929,11 +929,11 @@
     "q": "Vad handlar debatten om?",
     "opts": [
      "Hur man lär sig ett instrument",
-     "Hur tillförlitliga studier om musik är och hur de rapporteras",
      "Mozarts liv",
+     "Hur tillförlitliga studier om musik är och hur de rapporteras",
      "Hur man blir journalist"
     ],
-    "a": 1,
+    "a": 2,
     "why": "Man diskuterar rubriker om musikstudier och hur man känner igen en bra studie."
    },
    {
@@ -941,11 +941,11 @@
     "q": "Vilket resultat anser Weber är väl belagt?",
     "opts": [
      "Att Mozart gör en smart",
-     "Att gemensam sång minskar stress",
      "Att musik botar sjukdomar",
-     "Att hörlurar skadar hörseln"
+     "Att hörlurar skadar hörseln",
+     "Att gemensam sång minskar stress"
     ],
-    "a": 1,
+    "a": 3,
     "why": "Dass gemeinsames Singen Stress reduziert, ist mehrfach belegt worden."
    },
    {
@@ -965,11 +965,11 @@
     "q": "Var står enligt Klein ofta redan en tillspetsad formulering?",
     "opts": [
      "I facktidskriften",
-     "I universitetets pressmeddelande",
      "I rubriken på radion",
-     "I kursboken"
+     "I kursboken",
+     "I universitetets pressmeddelande"
     ],
-    "a": 1,
+    "a": 3,
     "why": "Oft steht in der Pressemitteilung der Universität schon eine zugespitzte Formulierung."
    },
    {
@@ -978,22 +978,22 @@
     "opts": [
      "Urvalets storlek",
      "Kontrollgrupp med slumpmässig fördelning",
-     "Replikering",
-     "Forskarens ålder"
+     "Forskarens ålder",
+     "Replikering"
     ],
-    "a": 3,
+    "a": 2,
     "why": "Hon nämner stickprov, kontrollgrupp och replikering."
    },
    {
     "type": "detalj",
     "q": "Vad lägger Klein till?",
     "opts": [
-     "Vem som har finansierat studien",
      "Hur lång studien är",
      "Vilket språk den är skriven på",
+     "Vem som har finansierat studien",
      "Var forskarna bor"
     ],
-    "a": 0,
+    "a": 2,
     "why": "Wer hat die Studie finanziert?"
    },
    {
@@ -1001,23 +1001,23 @@
     "q": "Hur ställer sig Weber till externa medel (Drittmittel)?",
     "opts": [
      "Hon anser att de alltid är problematiska",
-     "Hon anser att man inte generellt ska misstänkliggöra dem, men att öppenhet är avgörande",
      "Hon vill förbjuda dem",
-     "Hon nämner dem inte"
+     "Hon nämner dem inte",
+     "Hon anser att man inte generellt ska misstänkliggöra dem, men att öppenhet är avgörande"
     ],
-    "a": 1,
+    "a": 3,
     "why": "… nicht pauschal verdächtigen … Entscheidend ist Transparenz."
    },
    {
     "type": "tolkning",
     "q": "Vilken attityd har Klein till sin egen yrkesgrupp?",
     "opts": [
-     "Helt okritisk",
      "Både försvarande och kritisk",
+     "Helt okritisk",
      "Fientlig",
      "Likgiltig"
     ],
-    "a": 1,
+    "a": 0,
     "why": "Da muss ich uns Journalisten ein bisschen in Schutz nehmen, aber auch kritisieren."
    }
   ],
@@ -1077,7 +1077,7 @@
    {
     "who": "Professorin",
     "fr": "Guten Tag, heute geht es um einen der häufigsten Fehler bei der Interpretation empirischer Daten, und zwar nicht nur in Zeitungsartikeln, sondern leider auch in Hausarbeiten. Ich beginne mit einem Beispiel.",
-    "sv": "God dag, i dag handlar det om ett av de vanligaste felen vid tolkning av empiriska data, och det inte bara i tidningsartiklar utan tyvärr också i hemuppsatser. Jag börjar med ett exempel."
+    "sv": "God dag, i dag handlar det om ett av de vanligaste felen vid tolkning av empiriska data, och inte bara i tidningsartiklar utan tyvärr också i hemuppsatser. Jag börjar med ett exempel."
    },
    {
     "who": "Professorin",
@@ -1101,7 +1101,7 @@
    },
    {
     "who": "Professorin",
-    "fr": "Wie kann man Kausalität also überhaupt nachweisen? Der Goldstandard ist das randomisierte Experiment. Man teilt die Probanden nach dem Zufallsprinzip in eine Versuchsgruppe und eine Kontrollgruppe ein. Nur die Versuchsgruppe erhält zum Beispiel ein Jahr lang Musikunterricht. Weil die Gruppen zufällig gebildet wurden, unterscheiden sie sich im Durchschnitt nicht beim Hintergrund. Ein Unterschied am Ende lässt sich dann auf den Unterricht zurückführen.",
+    "fr": "Wie kann man Kausalität also überhaupt nachweisen? Der Goldstandard ist das randomisierte Experiment. Man teilt die Probanden nach dem Zufallsprinzip in eine Versuchsgruppe und eine Kontrollgruppe ein. Nur die Versuchsgruppe erhält zum Beispiel ein Jahr lang Musikunterricht. Weil die Gruppen zufällig gebildet wurden, unterscheiden sie sich im Durchschnitt nicht hinsichtlich ihres Hintergrunds. Ein Unterschied am Ende lässt sich dann auf den Unterricht zurückführen.",
     "sv": "Hur kan man då över huvud taget påvisa kausalitet? Guldstandarden är det randomiserade experimentet. Man delar in försökspersonerna slumpmässigt i en försöksgrupp och en kontrollgrupp. Bara försöksgruppen får till exempel musikundervisning under ett år. Eftersom grupperna bildades slumpmässigt skiljer de sig i genomsnitt inte åt i bakgrund. En skillnad i slutet kan då härledas till undervisningen."
    },
    {
@@ -1121,11 +1121,11 @@
     "q": "Vad är föreläsningens huvudbudskap?",
     "opts": [
      "Musik gör barn smartare",
-     "Ett statistiskt samband bevisar inte ett orsakssamband",
      "Matematik är viktigare än musik",
-     "Experiment är onödiga"
+     "Experiment är onödiga",
+     "Ett statistiskt samband bevisar inte ett orsakssamband"
     ],
-    "a": 1,
+    "a": 3,
     "why": "Rubriken och slutsatsen: Korrelation ist nicht Kausalität."
    },
    {
@@ -1133,23 +1133,23 @@
     "q": "Vilken rubrik nämns som exempel?",
     "opts": [
      "Mathe macht musikalisch!",
-     "Musik macht klug!",
      "Kinder hören zu wenig Musik",
+     "Musik macht klug!",
      "Noten werden besser"
     ],
-    "a": 1,
+    "a": 2,
     "why": "Die Schlagzeile … lautet: „Musik macht klug!“"
    },
    {
     "type": "detalj",
     "q": "Vilken förklaring föreslår studenten?",
     "opts": [
-     "Musiken tränar hjärnan",
      "Föräldrarnas ekonomi påverkar både musik och skolresultat",
+     "Musiken tränar hjärnan",
      "Barnen övar för mycket",
      "Lärarna är bättre"
     ],
-    "a": 1,
+    "a": 0,
     "why": "Wer Geld für Instrumentalunterricht hat, kann vielleicht auch Nachhilfe bezahlen."
    },
    {
@@ -1157,23 +1157,23 @@
     "q": "Vad kallar professorn studentens förklaring?",
     "opts": [
      "Omvänd kausalitet",
-     "En tredjevariabel",
      "En nollhypotes",
+     "En tredjevariabel",
      "En metaanalys"
     ],
-    "a": 1,
+    "a": 2,
     "why": "Sie haben gerade eine sogenannte Drittvariable beschrieben."
    },
    {
     "type": "detalj",
     "q": "Vad innebär omvänd kausalitet i exemplet?",
     "opts": [
-     "Barn med lätt för att lära sig stannar längre i musikundervisningen",
      "Musiken gör matematiken sämre",
      "Föräldrarna spelar instrument",
-     "Lärare ger högre betyg till musiker"
+     "Lärare ger högre betyg till musiker",
+     "Barn med lätt för att lära sig stannar längre i musikundervisningen"
     ],
-    "a": 0,
+    "a": 3,
     "why": "Vielleicht bleiben gerade Kinder, denen das Lernen leichtfällt, länger beim Instrumentalunterricht."
    },
    {
@@ -1181,23 +1181,23 @@
     "q": "Varför är det randomiserade experimentet \"guldstandarden\"?",
     "opts": [
      "Det är billigast",
-     "Grupperna skiljer sig i genomsnitt inte åt i bakgrund, så skillnader kan härledas till behandlingen",
      "Det behöver inga försökspersoner",
-     "Det ger alltid stora effekter"
+     "Det ger alltid stora effekter",
+     "Grupperna skiljer sig i genomsnitt inte åt i bakgrund, så skillnader kan härledas till behandlingen"
     ],
-    "a": 1,
-    "why": "Weil die Gruppen zufällig gebildet wurden, unterscheiden sie sich im Durchschnitt nicht beim Hintergrund."
+    "a": 3,
+    "why": "Weil die Gruppen zufällig gebildet wurden, unterscheiden sie sich im Durchschnitt nicht hinsichtlich ihres Hintergrunds."
    },
    {
     "type": "detalj",
     "q": "Hur ser effekterna ut i experiment jämfört med observationsstudier?",
     "opts": [
      "Större",
-     "Oftast betydligt mindre, ibland borta",
      "Exakt lika",
+     "Oftast betydligt mindre, ibland borta",
      "Man kan inte jämföra"
     ],
-    "a": 1,
+    "a": 2,
     "why": "… meist deutlich kleiner als in reinen Beobachtungsstudien, manchmal verschwinden sie ganz."
    },
    {
@@ -1205,11 +1205,11 @@
     "q": "Vilken formulering rekommenderar professorn när man bara mätt ett samband?",
     "opts": [
      "X führt zu Y",
-     "X geht mit Y einher",
      "X verursacht Y",
+     "X geht mit Y einher",
      "X beweist Y"
     ],
-    "a": 1,
+    "a": 2,
     "why": "Formulieren Sie stattdessen: „X geht mit Y einher.“"
    }
   ],
@@ -1288,8 +1288,8 @@
   "lines": [
    {
     "who": "Beraterin",
-    "fr": "Rechtsberatung der Deutschen Orchestervereinigung, Schneider, guten Tag.",
-    "sv": "Orkesterförbundets juridiska rådgivning, Schneider, god dag."
+    "fr": "Rechtsberatung des Musikerverbands, Schneider, guten Tag.",
+    "sv": "Musikerförbundets juridiska rådgivning, Schneider, god dag."
    },
    {
     "who": "Musiker",
@@ -1339,17 +1339,17 @@
    {
     "who": "Beraterin",
     "fr": "Bei 800 Euro meistens nicht, es sei denn, Sie haben eine Rechtsschutzversicherung. Viel wichtiger ist, dass Sie in Zukunft vorsorgen. Lassen Sie sich bei neuen Veranstaltern eine Anzahlung geben, oder vereinbaren Sie im Vertrag eine Ausfallgage für den Fall einer Absage. Und schreiben Sie in jeden Vertrag, bis wann das Honorar gezahlt werden muss, dann gibt es später keinen Streit darüber.",
-    "sv": "När det gäller 800 euro oftast inte, om ni inte har en rättsskyddsförsäkring. Mycket viktigare är att ni förebygger i framtiden. Be nya arrangörer om en handpenning, eller kom överens om ett ersättningsgage i avtalet ifall konserten ställs in. Och skriv i varje avtal när arvodet ska vara betalt, så blir det inget bråk om det senare."
+    "sv": "När det gäller 800 euro oftast inte, om du inte har en rättsskyddsförsäkring. Mycket viktigare är att du förebygger i framtiden. Be nya arrangörer om en handpenning, eller kom överens om ett ersättningsgage i avtalet ifall konserten ställs in. Och skriv i varje avtal när arvodet ska vara betalt, så blir det inget bråk om det senare."
    },
    {
     "who": "Musiker",
     "fr": "Das mache ich. Vielen Dank, Sie haben mir sehr geholfen.",
-    "sv": "Det ska jag göra. Tack så mycket, ni har hjälpt mig mycket."
+    "sv": "Det ska jag göra. Tack så mycket, du har hjälpt mig mycket."
    },
    {
     "who": "Beraterin",
     "fr": "Gern geschehen. Melden Sie sich wieder, wenn der Veranstalter nicht reagiert.",
-    "sv": "Varsågod. Hör av er igen om arrangören inte reagerar."
+    "sv": "Varsågod. Hör av dig igen om arrangören inte reagerar."
    }
   ],
   "questions": [
@@ -1370,35 +1370,35 @@
     "q": "Vilket skäl anger arrangören?",
     "opts": [
      "Musikern kom för sent",
-     "För få sålda biljetter",
      "Konserten ställdes in",
-     "Musikern spelade dåligt"
+     "Musikern spelade dåligt",
+     "För få sålda biljetter"
     ],
-    "a": 1,
+    "a": 3,
     "why": "weil angeblich zu wenige Karten verkauft wurden."
    },
    {
     "type": "detalj",
     "q": "Vad står i avtalet?",
     "opts": [
-     "En andel av biljettintäkterna",
      "Ett fast arvode på 800 euro",
+     "En andel av biljettintäkterna",
      "Inget arvode",
      "Ett arvode på 400 euro"
     ],
-    "a": 1,
+    "a": 0,
     "why": "mit einem festen Honorar von 800 Euro."
    },
    {
     "type": "tolkning",
     "q": "Vem bär den ekonomiska risken enligt rådgivaren?",
     "opts": [
-     "Musikern",
      "Arrangören",
+     "Musikern",
      "Publiken",
      "Facket"
     ],
-    "a": 1,
+    "a": 0,
     "why": "Das wirtschaftliche Risiko trägt der Veranstalter."
    },
    {
@@ -1406,23 +1406,23 @@
     "q": "Vad ska musikern göra först?",
     "opts": [
      "Gå till domstol",
-     "Skriva ett krav med en frist på två veckor",
      "Ringa polisen",
-     "Vänta i tre år"
+     "Vänta i tre år",
+     "Skriva ett krav med en frist på två veckor"
     ],
-    "a": 1,
+    "a": 3,
     "why": "… eine Mahnung … eine Frist von zwei Wochen."
    },
    {
     "type": "detalj",
     "q": "Vad kan han göra om inget händer?",
     "opts": [
-     "Ansöka om betalningsföreläggande",
      "Säga upp avtalet retroaktivt",
      "Kräva dubbelt arvode",
+     "Ansöka om betalningsföreläggande",
      "Ingenting"
     ],
-    "a": 0,
+    "a": 2,
     "why": "… ein gerichtliches Mahnverfahren einleiten."
    },
    {
@@ -1431,10 +1431,10 @@
     "opts": [
      "Efter två veckor",
      "Efter ett år",
-     "Efter tre år från slutet av året",
-     "Aldrig"
+     "Aldrig",
+     "Efter tre år från slutet av året"
     ],
-    "a": 2,
+    "a": 3,
     "why": "… verjähren in der Regel erst nach drei Jahren, gerechnet ab Ende des Jahres."
    },
    {
@@ -1442,11 +1442,11 @@
     "q": "Vad ska han spara?",
     "opts": [
      "Bara avtalet",
-     "Avtalet, fakturan och mejlen",
      "Konsertprogrammet",
+     "Avtalet, fakturan och mejlen",
      "Biljetterna"
     ],
-    "a": 1,
+    "a": 2,
     "why": "den Vertrag, Ihre Rechnung und die E-Mails."
    }
   ],
@@ -1511,7 +1511,7 @@
    {
     "who": "Moderator",
     "fr": "Willkommen beim „Ratgeber Recht“. Unser Thema heute: Musik in der Mietwohnung. Wie viel darf man üben, und was können Nachbarn dagegen tun? Im Studio ist die Rechtsanwältin Dr. Kerstin Vogel. Unser erster Anrufer ist Jonas, er studiert Trompete. Jonas, was ist Ihr Problem?",
-    "sv": "Välkomna till ”Juridisk rådgivning”. Vårt ämne i dag: musik i hyreslägenheten. Hur mycket får man öva, och vad kan grannarna göra åt det? I studion finns advokaten Kerstin Vogel. Vår första lyssnare som ringer in är Jonas, som studerar trumpet. Jonas, vad är ert problem?"
+    "sv": "Välkomna till ”Juridisk rådgivning”. Vårt ämne i dag: musik i hyreslägenheten. Hur mycket får man öva, och vad kan grannarna göra åt det? I studion finns advokaten Kerstin Vogel. Vår första lyssnare som ringer in är Jonas, som studerar trumpet. Jonas, vad är ditt problem?"
    },
    {
     "who": "Jonas",
@@ -1531,7 +1531,7 @@
    {
     "who": "Vogel",
     "fr": "Das wäre für einen Musikstudenten eine sehr starke Beschränkung. Schauen Sie zuerst in Ihren Mietvertrag und in die Hausordnung, die meistens als Anlage beigefügt ist. Steht dort nichts Konkretes, gilt die genannte Orientierung. Eine Kündigung wegen Ruhestörung ist nur bei erheblichen und wiederholten Verstößen möglich, und vorher müsste der Vermieter Sie abmahnen.",
-    "sv": "Det vore en mycket kraftig begränsning för en musikstudent. Titta först i ert hyresavtal och i ordningsreglerna, som oftast är bifogade som bilaga. Står det inget konkret där gäller den riktlinje jag nämnde. En uppsägning på grund av störande ljud är bara möjlig vid betydande och upprepade överträdelser, och dessförinnan måste hyresvärden ge er en skriftlig varning."
+    "sv": "Det vore en mycket kraftig begränsning för en musikstudent. Titta först i ditt hyresavtal och i ordningsreglerna, som oftast är bifogade som bilaga. Står det inget konkret där gäller den riktlinje jag nämnde. En uppsägning på grund av störande ljud är bara möjlig vid betydande och upprepade överträdelser, och dessförinnan måste hyresvärden ge dig en formell varning."
    },
    {
     "who": "Moderator",
@@ -1541,7 +1541,7 @@
    {
     "who": "Vogel",
     "fr": "Reden, bevor es eskaliert. Sprechen Sie mit den Nachbarn, vereinbaren Sie feste Übezeiten und halten Sie diese dann auch ein. Ein Dämpfer für die Trompete hilft ebenfalls. Manche Musiker lassen sich auch eine schallgedämmte Übekabine einbauen. Für den Einbau brauchen Sie aber die vorherige Zustimmung des Vermieters, und beim Auszug müssen Sie den ursprünglichen Zustand wiederherstellen.",
-    "sv": "Prata innan det trappas upp. Tala med grannarna, kom överens om fasta övningstider och håll er sedan till dem. En sordin till trumpeten hjälper också. En del musiker låter också bygga in en ljudisolerad övningshytt. Men för installationen behöver ni hyresvärdens godkännande i förväg, och när ni flyttar ut måste ni återställa det ursprungliga skicket."
+    "sv": "Prata innan det trappas upp. Tala med grannarna, kom överens om fasta övningstider och håll dig sedan till dem. En sordin till trumpeten hjälper också. En del musiker låter också bygga in en ljudisolerad övningshytt. Men för installationen behöver du hyresvärdens godkännande i förväg, och när du flyttar ut måste du återställa det ursprungliga skicket."
    },
    {
     "who": "Moderator",
@@ -1687,11 +1687,11 @@
     "q": "Vad handlar programmet om?",
     "opts": [
      "Hur man hittar en billig hyreslägenhet",
-     "Vilka regler som gäller för att öva musik i en hyreslägenhet",
      "Hur man bygger en studio hemma",
-     "Hur man blir antagen till en musikhögskola"
+     "Hur man blir antagen till en musikhögskola",
+     "Vilka regler som gäller för att öva musik i en hyreslägenhet"
     ],
-    "a": 1,
+    "a": 3,
     "why": "„Unser Thema heute: Musik in der Mietwohnung. Wie viel darf man üben …?“"
    },
    {
@@ -1699,47 +1699,47 @@
     "q": "Vad har hyresvärden skrivit till Jonas?",
     "opts": [
      "Att han måste flytta direkt",
-     "Att han inte får öva alls längre",
      "Att han i fortsättningen bara får spela en timme om dagen",
+     "Att han inte får öva alls längre",
      "Att hyran höjs"
     ],
-    "a": 2,
+    "a": 1,
     "why": "„… dass ich in Zukunft nur noch eine Stunde am Tag spielen dürfe. Sonst drohe mir die Kündigung.“"
    },
    {
     "type": "detalj",
     "q": "Vad slog förbundsdomstolen fast 2018?",
     "opts": [
-     "Att musicerande i den egna bostaden hör till normal användning",
      "Att yrkesmusiker måste öva i en lokal",
      "Att grannar får förbjuda musik helt",
+     "Att musicerande i den egna bostaden hör till normal användning",
      "Att man bara får öva på helgerna"
     ],
-    "a": 0,
+    "a": 2,
     "why": "„… dass das Musizieren in der eigenen Wohnung zur normalen Nutzung gehört, auch für Berufsmusiker.“"
    },
    {
     "type": "detalj",
     "q": "Vilken grov riktlinje nämner advokaten för vardagar?",
     "opts": [
+     "Två till tre timmar",
      "En timme",
      "Fyra till fem timmar",
-     "Hur mycket som helst före klockan 22",
-     "Två till tre timmar"
+     "Hur mycket som helst före klockan 22"
     ],
-    "a": 3,
+    "a": 0,
     "why": "„… zwei bis drei Stunden an Werktagen und ein bis zwei Stunden an Sonn- und Feiertagen …“"
    },
    {
     "type": "detalj",
     "q": "Vad måste hyresvärden göra innan han kan säga upp Jonas?",
     "opts": [
-     "Ringa polisen",
      "Ge honom en formell varning",
+     "Ringa polisen",
      "Höja hyran",
      "Fråga alla grannar"
     ],
-    "a": 1,
+    "a": 0,
     "why": "„… und vorher müsste der Vermieter Sie abmahnen.“ En Abmahnung är en formell varning."
    },
    {
@@ -1748,10 +1748,10 @@
     "opts": [
      "Grannarnas underskrift",
      "Ett tillstånd från staden",
-     "Hyresvärdens godkännande i förväg",
-     "Ingenting, det är alltid tillåtet"
+     "Ingenting, det är alltid tillåtet",
+     "Hyresvärdens godkännande i förväg"
     ],
-    "a": 2,
+    "a": 3,
     "why": "„Für den Einbau brauchen Sie aber die vorherige Zustimmung des Vermieters …“"
    },
    {
@@ -1772,10 +1772,10 @@
     "opts": [
      "Grannar med hundar",
      "Deposition vid utflyttning",
-     "Uppsägning på grund av eget behov",
-     "Hyreshöjningar"
+     "Hyreshöjningar",
+     "Uppsägning på grund av eget behov"
     ],
-    "a": 3,
+    "a": 2,
     "why": "„… unserem zweiten Thema: Was tun bei einer Mieterhöhung?“"
    }
   ]
@@ -1818,7 +1818,7 @@
    {
     "who": "Moderatorin",
     "fr": "Wie kalkulieren Sie eigentlich Ihre Gagen?",
-    "sv": "Hur räknar ni egentligen fram era gage?"
+    "sv": "Hur räknar du egentligen fram dina gage?"
    },
    {
     "who": "Hartmann",
@@ -1851,24 +1851,24 @@
     "type": "helhet",
     "q": "Vad handlar intervjun om?",
     "opts": [
-     "Hur man blir operastjärna",
      "Vardag och ekonomi för en frilansande sångerska",
+     "Hur man blir operastjärna",
      "En ny lag om arvoden",
      "Sångteknik"
     ],
-    "a": 1,
+    "a": 0,
     "why": "Hon berättar om inkomster, organisation, försäkring och råd."
    },
    {
     "type": "detalj",
     "q": "Hur stor del av inkomsten kommer från konserter?",
     "opts": [
-     "En fjärdedel",
      "Ungefär hälften",
+     "En fjärdedel",
      "Tre fjärdedelar",
      "Nästan allt"
     ],
-    "a": 1,
+    "a": 0,
     "why": "Ungefähr die Hälfte meines Einkommens stammt aus Konzerten."
    },
    {
@@ -1876,11 +1876,11 @@
     "q": "Vad tjänar hon en fjärdedel på?",
     "opts": [
      "Inspelningar",
-     "Sånglektioner",
      "Körledning",
+     "Sånglektioner",
      "Stipendier"
     ],
-    "a": 1,
+    "a": 2,
     "why": "Ein Viertel verdiene ich mit Gesangsunterricht."
    },
    {
@@ -1888,23 +1888,23 @@
     "q": "När har hon minst konserter?",
     "opts": [
      "I december",
-     "I augusti",
      "Vid påsk",
-     "I maj"
+     "I maj",
+     "I augusti"
     ],
-    "a": 1,
+    "a": 3,
     "why": "im August fast keines."
    },
    {
     "type": "detalj",
     "q": "Vad är fördelen med Künstlersozialkasse?",
     "opts": [
-     "Hon slipper betala skatt",
      "Hon betalar bara ungefär hälften av försäkringsavgifterna",
+     "Hon slipper betala skatt",
      "Hon får gratis konserter",
      "Hon får lön vid sjukdom"
     ],
-    "a": 1,
+    "a": 0,
     "why": "Ich zahle nur etwa die Hälfte der Beiträge."
    },
    {
@@ -1912,35 +1912,35 @@
     "q": "Vad händer om hon är sjuk före en konsert?",
     "opts": [
      "Hon får fullt arvode",
-     "Hon förlorar arvodet",
      "Försäkringen betalar arvodet",
+     "Hon förlorar arvodet",
      "Konserten flyttas alltid"
     ],
-    "a": 1,
+    "a": 2,
     "why": "… bekomme ich im Krankheitsfall kein Honorar."
    },
    {
     "type": "detalj",
     "q": "Vilket råd ger hon INTE?",
     "opts": [
+     "Skaffa en fast tjänst först",
      "Bygga upp reserver",
      "Lära sig bokföring",
-     "Bygga upp ett nätverk",
-     "Skaffa en fast tjänst först"
+     "Bygga upp ett nätverk"
     ],
-    "a": 3,
+    "a": 0,
     "why": "De tre andra nämns uttryckligen."
    },
    {
     "type": "tolkning",
     "q": "Varför fortsätter hon som frilans trots nackdelarna?",
     "opts": [
-     "För pengarnas skull",
      "För friheten att själv bestämma vad hon sjunger",
+     "För pengarnas skull",
      "För att hon inte hittar fast jobb",
      "För att hon slipper deklarera"
     ],
-    "a": 1,
+    "a": 0,
     "why": "Die Freiheit, selbst zu entscheiden, was ich singe, möchte ich … nicht mehr hergeben."
    }
   ],
@@ -2003,6 +2003,11 @@
    "verhandle": {
     "t": "verhandeln",
     "sv": "förhandla",
+    "g": ""
+   },
+   "hergeben": {
+    "t": "hergeben",
+    "sv": "lämna ifrån sig, ge upp",
     "g": ""
    }
   }
@@ -2069,11 +2074,11 @@
     "q": "Vad handlar diskussionen om?",
     "opts": [
      "En ny teaterpjäs",
-     "Hur teatern ska finansieras när staden måste spara",
      "Biljettpriser i USA",
-     "Restauranger i staden"
+     "Restauranger i staden",
+     "Hur teatern ska finansieras när staden måste spara"
     ],
-    "a": 1,
+    "a": 3,
     "why": "Staden måste spara två miljoner, och en nedskärning för teatern diskuteras."
    },
    {
@@ -2081,11 +2086,11 @@
     "q": "Varför är det svårt att spara på obligatoriska uppgifter?",
     "opts": [
      "De är för små",
-     "Skolor, sociala bidrag och gator är lagstadgade",
      "De betalas av delstaten",
-     "De är redan privatiserade"
+     "De är redan privatiserade",
+     "Skolor, sociala bidrag och gator är lagstadgade"
     ],
-    "a": 1,
+    "a": 3,
     "why": "… ein Großteil unseres Haushalts besteht aus Pflichtaufgaben … Dort können wir kaum sparen."
    },
    {
@@ -2105,11 +2110,11 @@
     "q": "Vad menar Brandt med Umwegrentabilität?",
     "opts": [
      "Att teatern går med vinst",
-     "Att pengarna delvis kommer tillbaka via besökarnas utgifter i staden",
      "Att teatern sparar på resor",
+     "Att pengarna delvis kommer tillbaka via besökarnas utgifter i staden",
      "Att biljetterna blir dyrare"
     ],
-    "a": 1,
+    "a": 2,
     "why": "Die übernachten hier, essen in Restaurants, kaufen ein … fließt zu einem guten Teil zurück."
    },
    {
@@ -2129,23 +2134,23 @@
     "q": "Hur stor del av teaterns budget täcker sponsringen?",
     "opts": [
      "Ungefär hälften",
-     "Kanske tre procent",
      "Tolv procent",
-     "Inget alls"
+     "Inget alls",
+     "Kanske tre procent"
     ],
-    "a": 1,
+    "a": 3,
     "why": "… deckt es vielleicht drei Prozent unseres Etats."
    },
    {
     "type": "tolkning",
     "q": "Varför är Brandt skeptisk till mer privata pengar?",
     "opts": [
-     "Han vill inte att företag påverkar repertoaren",
      "Han tycker att sponsorer betalar för mycket",
+     "Han vill inte att företag påverkar repertoaren",
      "Det är förbjudet i Tyskland",
      "Publiken skulle protestera"
     ],
-    "a": 0,
+    "a": 1,
     "why": "Außerdem möchte ich nicht, dass ein Unternehmen mitentscheidet, welches Stück wir spielen."
    },
    {
@@ -2153,11 +2158,11 @@
     "q": "Vad kommer de två överens om i slutet?",
     "opts": [
      "Att teatern ska stängas",
-     "Att delstaten och grannkretsarna borde betala mer",
      "Att biljetterna ska bli gratis",
-     "Att sponsringen ska fördubblas"
+     "Att sponsringen ska fördubblas",
+     "Att delstaten och grannkretsarna borde betala mer"
     ],
-    "a": 1,
+    "a": 3,
     "why": "Engel föreslår att Land och Nachbarkreise deltar, och Brandt skulle genast stödja det."
    }
   ],
@@ -2241,7 +2246,7 @@
    },
    {
     "who": "Sprecher",
-    "fr": "Der Landesverband der Musikschulen begrüßte das Gesetz. Seit Jahren klagten die Schulen über lange Wartelisten und befristete Verträge für Lehrkräfte. Mit dem Gesetz könne man endlich langfristig planen, sagte die Vorsitzende des Verbandes. Nach Angaben des Verbandes warten bundesweit Zehntausende Kinder auf einen Platz an einer Musikschule.",
+    "fr": "Der Landesverband der Musikschulen begrüßte das Gesetz. Seit Jahren klagen die Schulen über lange Wartelisten und befristete Verträge für Lehrkräfte. Mit dem Gesetz könne man endlich langfristig planen, sagte die Vorsitzende des Verbandes. Nach Angaben des Verbandes warten bundesweit Zehntausende Kinder auf einen Platz an einer Musikschule.",
     "sv": "Delstatens musikskoleförbund välkomnade lagen. I åratal har skolorna klagat över långa köer och tidsbegränsade anställningar för lärarna. Med lagen kan man äntligen planera långsiktigt, sade förbundets ordförande. Enligt förbundet väntar tiotusentals barn i hela Tyskland på en plats i en musikskola."
    },
    {
@@ -2252,7 +2257,7 @@
    {
     "who": "Kommentatorin",
     "fr": "Viele Städte sind hoch verschuldet. Wenn sie nun mehr für Kultur ausgeben müssen, fehlt das Geld womöglich bei Schulen oder im Nahverkehr. Das Land hätte einen Fonds einrichten sollen, aus dem ärmere Kommunen unterstützt werden. Stattdessen droht jetzt ein jahrelanger Rechtsstreit, und die Musikschulen, denen das Gesetz helfen soll, warten weiter.",
-    "sv": "Många städer är hårt skuldsatta. Om de nu måste lägga mer på kultur saknas pengarna kanske för skolor eller kollektivtrafik. Delstaten borde ha inrättat en fond som stöder fattigare kommuner. I stället hotar nu en årslång rättstvist, och musikskolorna som lagen ska hjälpa får fortsätta vänta."
+    "sv": "Många städer är hårt skuldsatta. Om de nu måste lägga mer på kultur saknas pengarna kanske för skolor eller kollektivtrafik. Delstaten borde ha inrättat en fond som stöder fattigare kommuner. I stället hotar nu en rättstvist som kan pågå i flera år, och musikskolorna som lagen ska hjälpa får fortsätta vänta."
    },
    {
     "who": "Kommentatorin",
@@ -2266,11 +2271,11 @@
     "q": "Vad handlar inslaget om?",
     "opts": [
      "En ny skattelag",
-     "En ny lag som gör kultur till obligatorisk kommunal uppgift",
      "Ett val till lantdagen",
-     "En strejk vid musikskolor"
+     "En strejk vid musikskolor",
+     "En ny lag som gör kultur till obligatorisk kommunal uppgift"
     ],
-    "a": 1,
+    "a": 3,
     "why": "Kulturfördergesetz: Kultur wird … zu einer Pflichtaufgabe."
    },
    {
@@ -2290,23 +2295,23 @@
     "q": "Vad säger kulturministern att institutionerna får?",
     "opts": [
      "Mer publik",
-     "Planeringstrygghet",
      "Lägre hyror",
+     "Planeringstrygghet",
      "Nya byggnader"
     ],
-    "a": 1,
+    "a": 2,
     "why": "erhielten endlich Planungssicherheit."
    },
    {
     "type": "detalj",
     "q": "Vad kritiserar oppositionen?",
     "opts": [
-     "Att lagen är för dyr för delstaten",
      "Att lagen ingriper i kommunernas självstyre",
+     "Att lagen är för dyr för delstaten",
      "Att lagen kom för sent",
      "Att lagen gynnar privata teatrar"
     ],
-    "a": 1,
+    "a": 0,
     "why": "das Gesetz greife in die Selbstverwaltung der Kommunen ein."
    },
    {
@@ -2314,11 +2319,11 @@
     "q": "Vad överväger städernas förbund?",
     "opts": [
      "En strejk",
-     "En talan i författningsdomstolen",
      "En folkomröstning",
-     "Att lämna förbundet"
+     "Att lämna förbundet",
+     "En talan i författningsdomstolen"
     ],
-    "a": 1,
+    "a": 3,
     "why": "man prüfe eine Klage vor dem Verfassungsgericht."
    },
    {
@@ -2326,23 +2331,23 @@
     "q": "Hur sammanfattar kommentatorn lagen?",
     "opts": [
      "Perfekt",
-     "Välment men dåligt gjord",
      "Onödig",
-     "Olaglig"
+     "Olaglig",
+     "Välment men dåligt gjord"
     ],
-    "a": 1,
+    "a": 3,
     "why": "Das Gesetz ist gut gemeint, aber schlecht gemacht."
    },
    {
     "type": "detalj",
     "q": "Vad borde delstaten ha gjort enligt kommentatorn?",
     "opts": [
-     "Avskaffat musikskolorna",
      "Inrättat en fond för fattigare kommuner",
+     "Avskaffat musikskolorna",
      "Sänkt skatterna",
      "Väntat med lagen"
     ],
-    "a": 1,
+    "a": 0,
     "why": "Das Land hätte einen Fonds einrichten sollen."
    },
    {
@@ -2350,11 +2355,11 @@
     "q": "Varför står oppositionens och städernas uttalanden i Konjunktiv I?",
     "opts": [
      "För att de är önskningar",
-     "För att nyheten återger vad andra sagt",
      "För att de är framtid",
+     "För att nyheten återger vad andra sagt",
      "För att de är frågor"
     ],
-    "a": 1,
+    "a": 2,
     "why": "Indirekt tal i nyheter."
    }
   ],
@@ -2428,7 +2433,7 @@
   "lines": [
    {
     "who": "Bürgermeisterin",
-    "fr": "Liebe Bürgerinnen und Bürger, ich freue mich über die große Beteiligung heute Abend. Sie wissen, warum wir hier sind: Die Stadt muss im Haushaltsplan für das nächste Jahr 1,8 Millionen Euro einsparen. Der Gemeinderat hat die Verwaltung beauftragt, alle freiwilligen Leistungen zu prüfen, und auf der Liste steht auch die Musikschule. Entschieden ist noch nichts. Heute wollen wir Ihre Meinung hören.",
+    "fr": "Liebe Bürgerinnen und Bürger, ich freue mich über die große Beteiligung heute Abend. Sie wissen, warum wir hier sind: Die Stadt muss im Haushaltsplan für das nächste Jahr 1,8 Millionen Euro einsparen. Der Stadtrat hat die Verwaltung beauftragt, alle freiwilligen Leistungen zu prüfen, und auf der Liste steht auch die Musikschule. Entschieden ist noch nichts. Heute wollen wir Ihre Meinung hören.",
     "sv": "Kära medborgare, jag är glad över det stora deltagandet i kväll. Ni vet varför vi är här: staden måste spara 1,8 miljoner euro i budgeten för nästa år. Kommunfullmäktige har gett förvaltningen i uppdrag att granska alla frivilliga åtaganden, och på listan står även musikskolan. Ingenting är bestämt än. I kväll vill vi höra er åsikt."
    },
    {
@@ -2442,8 +2447,8 @@
     "sv": "Jag är ensamstående och har två barn. Utan rabatten för behövande familjer skulle mina barn inte kunna lära sig ett instrument, för privatlärare kostar dubbelt så mycket. Om musikskolan stänger är det bara de barn vars föräldrar har råd som lär sig ett instrument. För mig är det en social orättvisa."
    },
    {
-    "who": "Gemeinderat",
-    "fr": "Ich verstehe diese Sorge sehr gut. Aber ich muss auch sagen: Wir im Gemeinderat haben eine Verantwortung für den ganzen Haushalt. Wenn wir bei der Musikschule nicht sparen, müssen wir bei den Kitas oder bei der Sanierung der Schulen sparen. Das will in diesem Raum sicher auch niemand. Die Frage ist also nicht, ob wir sparen, sondern wo.",
+    "who": "Stadtrat",
+    "fr": "Ich verstehe diese Sorge sehr gut. Aber ich muss auch sagen: Wir im Stadtrat haben eine Verantwortung für den ganzen Haushalt. Wenn wir bei der Musikschule nicht sparen, müssen wir bei den Kitas oder bei der Sanierung der Schulen sparen. Das will in diesem Raum sicher auch niemand. Die Frage ist also nicht, ob wir sparen, sondern wo.",
     "sv": "Jag förstår den oron mycket väl. Men jag måste också säga: vi i kommunfullmäktige har ansvar för hela budgeten. Om vi inte sparar på musikskolan måste vi spara på förskolorna eller på renoveringen av skolorna. Det vill säkert ingen i det här rummet heller. Frågan är alltså inte om vi ska spara, utan var."
    },
    {
@@ -2453,17 +2458,17 @@
    },
    {
     "who": "Bürgermeisterin",
-    "fr": "Danke für diesen Beitrag. Ich möchte Ihnen noch ein Verfahren vorschlagen. Bevor der Gemeinderat entscheidet, wollen wir einen Bürgerrat einberufen. Zwanzig Einwohnerinnen und Einwohner werden im Losverfahren ausgewählt und erarbeiten in drei Sitzungen eine Empfehlung, wo die Stadt sparen soll.",
+    "fr": "Danke für diesen Beitrag. Ich möchte Ihnen noch ein Verfahren vorschlagen. Bevor der Stadtrat entscheidet, wollen wir einen Bürgerrat einberufen. Zwanzig Einwohnerinnen und Einwohner werden im Losverfahren ausgewählt und erarbeiten in drei Sitzungen eine Empfehlung, wo die Stadt sparen soll.",
     "sv": "Tack för det inlägget. Jag vill också föreslå er ett tillvägagångssätt. Innan kommunfullmäktige beslutar vill vi kalla till ett medborgarråd. Tjugo invånare väljs ut genom lottning och arbetar under tre möten fram en rekommendation om var staden ska spara."
    },
    {
-    "who": "Gemeinderat",
-    "fr": "Ich halte das für eine gute Idee, solange klar ist, dass am Ende der Gemeinderat entscheidet. Ein Bürgerrat kann beraten, aber er ist nicht gewählt.",
+    "who": "Stadtrat",
+    "fr": "Ich halte das für eine gute Idee, solange klar ist, dass am Ende der Stadtrat entscheidet. Ein Bürgerrat kann beraten, aber er ist nicht gewählt.",
     "sv": "Jag tycker att det är en bra idé, så länge det är klart att det är kommunfullmäktige som beslutar till slut. Ett medborgarråd kan ge råd, men det är inte valt."
    },
    {
     "who": "Bürgermeisterin",
-    "fr": "Selbstverständlich. Über den Vorschlag stimmt der Gemeinderat in seiner nächsten Sitzung ab. Ich danke Ihnen allen für die sachliche Diskussion.",
+    "fr": "Selbstverständlich. Über den Vorschlag stimmt der Stadtrat in seiner nächsten Sitzung ab. Ich danke Ihnen allen für die sachliche Diskussion.",
     "sv": "Självklart. Kommunfullmäktige röstar om förslaget vid sitt nästa sammanträde. Jag tackar er alla för den sakliga diskussionen."
    }
   ],
@@ -2478,9 +2483,9 @@
     "sv": "budget",
     "g": "m"
    },
-   "gemeinderat": {
-    "t": "der Gemeinderat",
-    "sv": "kommunfullmäktige",
+   "stadtrat": {
+    "t": "der Stadtrat",
+    "sv": "stadsfullmäktige; ledamot",
     "g": "m"
    },
    "beauftragt": {
@@ -2569,12 +2574,12 @@
     "type": "helhet",
     "q": "Varför hålls medborgarmötet?",
     "opts": [
-     "Staden ska bygga en ny musikskola",
      "Staden måste spara och musikskolan kan läggas ned",
+     "Staden ska bygga en ny musikskola",
      "Musikskolan firar sitt jubileum",
      "Det ska väljas en ny borgmästare"
     ],
-    "a": 1,
+    "a": 0,
     "why": "Staden måste spara 1,8 miljoner euro, och musikskolan står på listan över frivilliga åtaganden som granskas."
    },
    {
@@ -2583,10 +2588,10 @@
     "opts": [
      "1 200",
      "400",
-     "300",
-     "20"
+     "20",
+     "300"
     ],
-    "a": 2,
+    "a": 3,
     "why": "„… und 300 weitere stehen auf der Warteliste.“"
    },
    {
@@ -2617,12 +2622,12 @@
     "type": "detalj",
     "q": "Vad påpekar kommunpolitikern?",
     "opts": [
-     "Att musikskolan är för dyr i jämförelse med andra städer",
      "Att man annars måste spara på förskolor eller skolrenoveringar",
+     "Att musikskolan är för dyr i jämförelse med andra städer",
      "Att delstaten borde betala allt",
      "Att barnen kan lära sig musik i skolan"
     ],
-    "a": 1,
+    "a": 0,
     "why": "„Wenn wir bei der Musikschule nicht sparen, müssen wir bei den Kitas oder bei der Sanierung der Schulen sparen.“"
    },
    {
@@ -2641,12 +2646,12 @@
     "type": "detalj",
     "q": "Hur utses medlemmarna i medborgarrådet?",
     "opts": [
+     "Genom lottning",
      "De väljs av kommunfullmäktige",
      "De anmäler sig själva",
-     "Genom lottning",
      "Musikskolan utser dem"
     ],
-    "a": 2,
+    "a": 0,
     "why": "„Zwanzig Einwohnerinnen und Einwohner werden im Losverfahren ausgewählt …“"
    },
    {
@@ -2655,11 +2660,11 @@
     "opts": [
      "Det är för dyrt",
      "Det tar för lång tid",
-     "Medlemmarna förstår inte budgeten",
-     "Det kan ge råd, men det är inte valt, så beslutet måste ligga hos fullmäktige"
+     "Det kan ge råd, men det är inte valt, så beslutet måste ligga hos fullmäktige",
+     "Medlemmarna förstår inte budgeten"
     ],
-    "a": 3,
-    "why": "„… solange klar ist, dass am Ende der Gemeinderat entscheidet. Ein Bürgerrat kann beraten, aber er ist nicht gewählt.“"
+    "a": 2,
+    "why": "„… solange klar ist, dass am Ende der Stadtrat entscheidet. Ein Bürgerrat kann beraten, aber er ist nicht gewählt.“"
    }
   ]
  },
@@ -2722,11 +2727,11 @@
     "q": "Vilket är det vanligaste felet enligt talaren?",
     "opts": [
      "Att tala för fort",
-     "Att skriva en text och läsa upp den",
      "Att inte ha någon publik",
+     "Att skriva en text och läsa upp den",
      "Att använda bilder"
     ],
-    "a": 1,
+    "a": 2,
     "why": "Die meisten schreiben einen Text und lesen ihn vor."
    },
    {
@@ -2734,11 +2739,11 @@
     "q": "Vad behöver talat språk?",
     "opts": [
      "Längre meningar",
-     "Kortare meningar, upprepningar och hörbar struktur",
      "Fler främmande ord",
-     "Inga upprepningar"
+     "Inga upprepningar",
+     "Kortare meningar, upprepningar och hörbar struktur"
     ],
-    "a": 1,
+    "a": 3,
     "why": "kürzere Sätze, mehr Wiederholungen und eine klare Struktur."
    },
    {
@@ -2746,11 +2751,11 @@
     "q": "Vad betyder logos?",
     "opts": [
      "Trovärdighet",
-     "Sakliga argument",
      "Känslor",
+     "Sakliga argument",
      "Pauser"
     ],
-    "a": 1,
+    "a": 2,
     "why": "Logos, die sachlichen Argumente."
    },
    {
@@ -2758,11 +2763,11 @@
     "q": "Varför ska man kombinera ethos, logos och pathos?",
     "opts": [
      "För att det är lag",
-     "För att bara siffror tråkar ut och bara känslor verkar manipulativa",
      "För att det blir kortare",
+     "För att bara siffror tråkar ut och bara känslor verkar manipulativa",
      "För att Aristoteles krävde det"
     ],
-    "a": 1,
+    "a": 2,
     "why": "Nur Zahlen langweilen, nur Gefühle wirken manipulativ."
    },
    {
@@ -2782,11 +2787,11 @@
     "q": "Hur lång tid avgör om publiken lyssnar?",
     "opts": [
      "Tre sekunder",
-     "De första trettio sekunderna",
      "Tre minuter",
+     "De första trettio sekunderna",
      "Hela talet"
     ],
-    "a": 1,
+    "a": 2,
     "why": "Die ersten dreißig Sekunden entscheiden."
    },
    {
@@ -2794,11 +2799,11 @@
     "q": "Varför nämner talaren musiker på slutet?",
     "opts": [
      "För att de är dåliga talare",
-     "För att de vet att pausen hör till verket",
      "För att de talar för fort",
-     "För att de inte behöver tala"
+     "För att de inte behöver tala",
+     "För att de vet att pausen hör till verket"
     ],
-    "a": 1,
+    "a": 3,
     "why": "Auch in der Musik gehört die Pause zum Werk."
    }
   ],
@@ -2862,8 +2867,8 @@
   "lines": [
    {
     "who": "Dozentin",
-    "fr": "Wir haben uns ja alle die Rede angesehen, die unsere Kommilitonin vorbereitet hat. Heute analysieren wir sie gemeinsam. Beginnen wir mit dem Aufbau. Was ist Ihnen aufgefallen?",
-    "sv": "Vi har ju alla tittat på talet som vår studiekamrat har förberett. I dag analyserar vi det tillsammans. Vi börjar med uppbyggnaden. Vad lade ni märke till?"
+    "fr": "Wir haben uns ja alle die Rede angesehen, die unsere Kommilitonin letzte Woche gehalten hat. Heute analysieren wir sie gemeinsam. Beginnen wir mit dem Aufbau. Was ist Ihnen aufgefallen?",
+    "sv": "Vi har ju alla tittat på talet som vår studiekamrat höll förra veckan. I dag analyserar vi det tillsammans. Vi börjar med uppbyggnaden. Vad lade ni märke till?"
    },
    {
     "who": "Tim",
@@ -2906,48 +2911,48 @@
     "type": "helhet",
     "q": "Vad gör deltagarna i seminariet?",
     "opts": [
-     "Håller själva ett tal",
      "Analyserar ett tal som en studiekamrat har hållit",
+     "Håller själva ett tal",
      "Diskuterar en konsert",
      "Läser en roman"
     ],
-    "a": 1,
+    "a": 0,
     "why": "Heute analysieren wir sie gemeinsam."
    },
    {
     "type": "detalj",
     "q": "Hur börjar talet?",
     "opts": [
-     "Med en hälsning till studiekamraterna",
      "Med en retorisk fråga",
-     "Med en statistik",
+     "Med en hälsning till studiekamraterna",
+     "Med statistik",
      "Med ett citat"
     ],
-    "a": 1,
+    "a": 0,
     "why": "… sondern mit einer Frage: „Wann haben Sie zuletzt ein Konzert besucht …?“"
    },
    {
     "type": "detalj",
     "q": "Vilken verkan har inledningen enligt läraren?",
     "opts": [
-     "Den skapar närhet till publiken",
      "Den gör publiken arg",
      "Den är för lång",
+     "Den skapar närhet till publiken",
      "Den förvirrar"
     ],
-    "a": 0,
+    "a": 2,
     "why": "Sie schafft Nähe zum Publikum."
    },
    {
     "type": "detalj",
     "q": "Vilket stilmedel nämner Nora?",
     "opts": [
-     "Eufemism",
      "Anafor",
+     "Eufemism",
      "Ironi",
      "Metafor"
     ],
-    "a": 1,
+    "a": 0,
     "why": "Besonders wirkungsvoll fand ich die Anapher am Ende."
    },
    {
@@ -2955,11 +2960,11 @@
     "q": "Vad kritiserar Tim?",
     "opts": [
      "Att talet var för kort",
-     "Ett generaliserande påstående utan belägg",
      "Att hon talade för fort",
-     "Att hon använde humor"
+     "Att hon använde humor",
+     "Ett generaliserande påstående utan belägg"
     ],
-    "a": 1,
+    "a": 3,
     "why": "Das ist ziemlich pauschal. Ein Beleg wäre da hilfreich gewesen."
    },
    {
@@ -2967,35 +2972,35 @@
     "q": "Vilken invändning nämnde talaren inte?",
     "opts": [
      "Att unga inte gillar klassisk musik",
-     "Att nya konsertformat är dyrare",
      "Att konserter är för långa",
+     "Att nya konsertformat är dyrare",
      "Att musiker tjänar för lite"
     ],
-    "a": 1,
+    "a": 2,
     "why": "… nämlich dass neue Konzertformate teurer sind."
    },
    {
     "type": "tolkning",
     "q": "Varför bör man själv ta upp invändningar enligt Nora?",
     "opts": [
-     "För att tala längre",
      "För att verka mer trovärdig",
+     "För att tala längre",
      "För att förvirra motståndaren",
      "För att undvika frågor"
     ],
-    "a": 1,
+    "a": 0,
     "why": "Wenn man den Einwand selbst anspricht und entkräftet, wirkt man glaubwürdiger."
    },
    {
     "type": "detalj",
     "q": "Vad hade enligt läraren ökat talets övertygelsekraft?",
     "opts": [
-     "Mer ögonkontakt",
      "Fler siffror",
      "Längre inledning",
+     "Mer ögonkontakt",
      "Mer humor"
     ],
-    "a": 0,
+    "a": 2,
     "why": "Mehr Blickkontakt hätte ihre Überzeugungskraft sicher erhöht."
    }
   ],
@@ -3135,12 +3140,12 @@
     "type": "detalj",
     "q": "Vad bestämde Reichsmusikkammer?",
     "opts": [
-     "Biljettpriserna",
      "Vem som fick musicera yrkesmässigt",
+     "Biljettpriserna",
      "Vilka instrument som var tillåtna",
      "Konserttiderna"
     ],
-    "a": 1,
+    "a": 0,
     "why": "… entschied darüber, wer überhaupt noch beruflich musizieren durfte."
    },
    {
@@ -3148,23 +3153,23 @@
     "q": "Vart flydde många först?",
     "opts": [
      "Till USA",
-     "Till Paris, Wien eller Prag",
      "Till Sverige",
-     "Till Ryssland"
+     "Till Ryssland",
+     "Till Paris, Wien eller Prag"
     ],
-    "a": 1,
+    "a": 3,
     "why": "viele zunächst nach Paris, Wien oder Prag."
    },
    {
     "type": "detalj",
     "q": "Vad gjorde Schönberg från 1936?",
     "opts": [
-     "Skrev musikaler på Broadway",
      "Undervisade vid universitetet i Los Angeles",
+     "Skrev musikaler på Broadway",
      "Dirigerade i London",
      "Återvände till Berlin"
     ],
-    "a": 1,
+    "a": 0,
     "why": "Arnold Schönberg etwa unterrichtete ab 1936 an der Universität von Kalifornien in Los Angeles."
    },
    {
@@ -3172,11 +3177,11 @@
     "q": "Vad innebar exilen för de flesta enligt talaren?",
     "opts": [
      "En ny början i frihet",
-     "Framför allt förlust",
      "Rikedom",
-     "Berömmelse"
+     "Berömmelse",
+     "Framför allt förlust"
     ],
-    "a": 1,
+    "a": 3,
     "why": "… keinen Neuanfang in Freiheit, sondern vor allem Verlust."
    },
    {
@@ -3184,11 +3189,11 @@
     "q": "Vad hände med Viktor Ullmann?",
     "opts": [
      "Han emigrerade till USA",
-     "Han skrev en opera i Theresienstadt och mördades 1944 i Auschwitz",
      "Han återvände till Prag efter kriget",
+     "Han skrev en opera i Theresienstadt och mördades 1944 i Auschwitz",
      "Han blev pianolärare i London"
     ],
-    "a": 1,
+    "a": 2,
     "why": "… im Lager Theresienstadt noch eine Oper schrieb, bevor er 1944 in Auschwitz umgebracht wurde."
    },
    {
@@ -3197,10 +3202,10 @@
     "opts": [
      "Sedan 1945",
      "Sedan 1960-talet",
-     "Sedan 1990-talet",
-     "Sedan 2020"
+     "Sedan 2020",
+     "Sedan 1990-talet"
     ],
-    "a": 2,
+    "a": 3,
     "why": "Erst seit den 1990er-Jahren …"
    },
    {
@@ -3208,11 +3213,11 @@
     "q": "Vad vill talaren att publiken ska göra?",
     "opts": [
      "Sluta spela gammal musik",
-     "Ta med verk av förföljda tonsättare på sina program",
      "Skriva en uppsats",
-     "Besöka Los Angeles"
+     "Besöka Los Angeles",
+     "Ta med verk av förföljda tonsättare på sina program"
     ],
-    "a": 1,
+    "a": 3,
     "why": "Wenn Sie ein Werk von Ullmann … ins Programm nehmen …"
    }
   ],
@@ -3480,23 +3485,23 @@
     "q": "Vad hade två av hennes studiekamrater gjort på sommaren 1989?",
     "opts": [
      "Gått med i medborgarrättsrörelsen",
-     "Lämnat DDR via Ungern",
      "Blivit gripna av Stasi",
-     "Börjat spela i Gewandhausorkestern"
+     "Börjat spela i Gewandhausorkestern",
+     "Lämnat DDR via Ungern"
     ],
-    "a": 1,
+    "a": 3,
     "why": "„Im Sommer hatten Tausende die DDR über Ungarn verlassen, auch zwei Kommilitonen aus meinem Jahrgang.“"
    },
    {
     "type": "detalj",
     "q": "Hur började protesterna enligt henne?",
     "opts": [
+     "Med fredsbönerna i Nikolaikirche",
      "Med en konsert i Gewandhaus",
      "Med en strejk på universitetet",
-     "Med fredsbönerna i Nikolaikirche",
      "Med ett tal av Kurt Masur"
     ],
-    "a": 2,
+    "a": 0,
     "why": "„Es begann mit den Friedensgebeten in der Nikolaikirche …“"
    },
    {
@@ -3504,35 +3509,35 @@
     "q": "Vilket rykte hade man hört före den 9 oktober?",
     "opts": [
      "Att muren skulle öppnas",
+     "Att sjukhusen skulle ha extra blodkonserver i beredskap",
      "Att Masur skulle hålla tal",
-     "Att demonstrationen var förbjuden",
-     "Att sjukhusen skulle ha extra blodkonserver i beredskap"
+     "Att demonstrationen var förbjuden"
     ],
-    "a": 3,
+    "a": 1,
     "why": "„Die Krankenhäuser sollten zusätzliche Blutkonserven bereithalten, das hatten wir gehört.“"
    },
    {
     "type": "detalj",
     "q": "Ungefär hur många demonstrerade den 9 oktober?",
     "opts": [
-     "Sjuttiotusen",
      "Sjutusen",
+     "Sjuttiotusen",
      "Sjuhundra",
      "En miljon"
     ],
-    "a": 0,
+    "a": 1,
     "why": "„Wir waren ungefähr siebzigtausend Menschen …“"
    },
    {
     "type": "detalj",
     "q": "Vad gjorde Kurt Masur?",
     "opts": [
-     "Han dirigerade en konsert på torget",
      "Han formulerade ett upprop tillsammans med andra som lästes upp i högtalarna",
+     "Han dirigerade en konsert på torget",
      "Han lämnade DDR",
      "Han förhandlade med polisen i Berlin"
     ],
-    "a": 1,
+    "a": 0,
     "why": "„Er hatte zusammen mit fünf anderen Leipzigern einen Aufruf formuliert, der am Abend über die Lautsprecher in der Stadt verlesen wurde.“"
    },
    {
@@ -3553,10 +3558,10 @@
     "opts": [
      "Att hon hade fått ett stipendium",
      "Att hennes mamma hade skyddat henne",
-     "Att hennes professor hade varit i Väst",
-     "Att en väninna hade rapporterat om henne"
+     "Att en väninna hade rapporterat om henne",
+     "Att hennes professor hade varit i Väst"
     ],
-    "a": 3,
+    "a": 2,
     "why": "„… und erfahren, dass eine Freundin über mich berichtet hat.“"
    }
   ]

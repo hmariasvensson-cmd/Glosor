@@ -6,8 +6,8 @@
 "q": "[Nach] Abschluss des Studiums möchte sie in einem Orchester spielen.",
 "alt": [
 "Nachdem",
-"Seit",
-"Während dem"
+"Nachher",
+"Danach"
 ],
 "why": "Nominalstil: nachdem-bisatsen blir preposition + substantiv, nach + dativ. Nachdem är en subjunktion och kräver en bisats.",
 "sv": "Efter avslutade studier vill hon spela i en orkester."
@@ -55,14 +55,14 @@
 "id": "nomverb-005",
 "topic": "nomverb",
 "rule": "nv-fvg",
-"q": "Die Frage wurde im Seminar lange [zur] Diskussion gestellt.",
+"q": "Die Frage wurde im Seminar [zur] Diskussion gestellt.",
 "alt": [
 "in die",
 "auf die",
 "an der"
 ],
 "why": "Fast uttryck (Funktionsverbgefüge): etwas zur Diskussion stellen = ta upp till diskussion.",
-"sv": "Frågan togs länge upp till diskussion på seminariet."
+"sv": "Frågan togs upp till diskussion på seminariet."
 },
 {
 "id": "nomverb-006",
@@ -140,7 +140,7 @@
 "rule": "f2-vermutung",
 "q": "Er ist nicht gekommen. Er [wird] den Zug verpasst haben.",
 "alt": [
-"würde",
+"hat",
 "wurde",
 "worden"
 ],
@@ -294,14 +294,14 @@
 "id": "nomverb-018",
 "topic": "nomverb",
 "rule": "nv-fvg",
-"q": "Die Ergebnisse wurden in einer Fachzeitschrift zur [Verfügung] gestellt.",
+"q": "Die Daten werden allen Forschenden zur [Verfügung] gestellt.",
 "alt": [
 "Verfassung",
 "Verteilung",
 "Vorstellung"
 ],
 "why": "zur Verfügung stellen = ställa till förfogande.",
-"sv": "Resultaten ställdes till förfogande i en facktidskrift."
+"sv": "Uppgifterna ställs till alla forskares förfogande."
 },
 {
 "id": "nomverb-019",
@@ -309,9 +309,9 @@
 "rule": "nv-fvg",
 "q": "Die neue Methode hat in vielen Orchestern [Anwendung] gefunden.",
 "alt": [
-"Anwendungen",
+"die Anwendung",
 "Anwenden",
-"Verwendung gefunden"
+"Benutzung"
 ],
 "why": "Anwendung finden = användas (fast uttryck, singular utan artikel).",
 "sv": "Den nya metoden har börjat användas i många orkestrar."
@@ -371,7 +371,7 @@
 "rule": "f2-zukunft",
 "q": "Bis zum Konzert [werden] wir das Stück mindestens zwanzigmal geprobt haben.",
 "alt": [
-"würden",
+"wären",
 "wurden",
 "haben"
 ],
@@ -398,7 +398,7 @@
 "q": "Wenn du zurückkommst, [werde] ich die Hausarbeit fertig geschrieben haben.",
 "alt": [
 "wurde",
-"würde",
+"habe",
 "bin"
 ],
 "why": "Futur II med ich: werde … geschrieben haben.",
@@ -447,14 +447,14 @@
 "id": "fut2-012",
 "topic": "fut2",
 "rule": "f2-bildung",
-"q": "Nächste Woche werde ich den Vertrag [unterschrieben haben].",
+"q": "Bis Montag werde ich den Vertrag [unterschrieben haben].",
 "alt": [
 "unterschreiben haben",
 "geunterschrieben haben",
 "unterschrieben sein"
 ],
 "why": "Oskiljbart prefix: unterschrieben utan ge-, perfekt med haben.",
-"sv": "Nästa vecka kommer jag att ha skrivit under avtalet."
+"sv": "Till måndag kommer jag att ha skrivit under avtalet."
 },
 {
 "id": "fut2-013",
@@ -463,7 +463,7 @@
 "q": "Das Licht ist aus. Sie [werden] schon ins Bett gegangen sein.",
 "alt": [
 "wurden",
-"würden",
+"haben",
 "sind"
 ],
 "why": "Futur II som förmodan om det förflutna: sie werden … gegangen sein = de har nog gått och lagt sig.",
@@ -503,7 +503,7 @@
 "alt": [
 "wurde",
 "hat",
-"würde"
+"ist"
 ],
 "why": "Förmodan om något som har hänt: es wird … geregnet haben.",
 "sv": "Gatorna är våta. Det har nog regnat i natt."
@@ -516,7 +516,7 @@
 "alt": [
 "sein",
 "war",
-"geworden"
+"worden"
 ],
 "why": "Futur II av sein: wird … gewesen sein.",
 "sv": "Hon kom inte till repetitionen. Hon var nog sjuk."
@@ -527,11 +527,11 @@
 "rule": "f2-zukunft",
 "q": "Wenn das Semester beginnt, [wird] die Renovierung abgeschlossen sein.",
 "alt": [
-"würde",
+"hat",
 "wurde",
 "ist geworden"
 ],
-"why": "Här Futur II med Zustandspassiv: wird … abgeschlossen sein (framtida tillstånd).",
+"why": "Framtida tillstånd: wird … abgeschlossen sein (Zustandspassiv i futur). Betydelsen ligger nära Futur II: renoveringen är klar då.",
 "sv": "När terminen börjar kommer renoveringen att vara avslutad."
 },
 {

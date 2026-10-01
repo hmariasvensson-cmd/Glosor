@@ -17,8 +17,8 @@
     "sv": "Snabbköp, varuhus och klädaffärer öppnar först på måndagen igen."
    },
    {
-    "fr": "Nur Bäckereien, Tankstellen und Geschäfte in großen Bahnhöfen dürfen offen sein.",
-    "sv": "Bara bagerier, bensinstationer och affärer på stora stationer får ha öppet."
+    "fr": "Nur wenige Geschäfte dürfen offen sein, zum Beispiel Bäckereien, Tankstellen und Geschäfte in großen Bahnhöfen.",
+    "sv": "Bara några få affärer får ha öppet, till exempel bagerier, bensinstationer och affärer på stora stationer."
    },
    {
     "fr": "Von Montag bis Samstag sind viele Supermärkte bis 20 oder 22 Uhr geöffnet.",
@@ -84,8 +84,8 @@
     "g": ""
    },
    "auf": {
-    "t": "auf",
-    "sv": "på, upp på",
+    "t": "aufmachen",
+    "sv": "öppna",
     "g": ""
    },
    "geschlossen": {
@@ -98,11 +98,6 @@
     "sv": "öppen (om affär)",
     "g": ""
    },
-   "in": {
-    "t": "in",
-    "sv": "i, till (länder med artikel)",
-    "g": ""
-   },
    "paar": {
     "t": "das Paar (-e)",
     "sv": "par",
@@ -110,12 +105,12 @@
    },
    "zu": {
     "t": "zu",
-    "sv": "till (personer och platser)",
+    "sv": "stängd",
     "g": ""
    }
   },
   "q": {
-   "q": "Vilka affärer får ha öppet på söndagar?",
+   "q": "Vilka affärer får till exempel ha öppet på söndagar?",
    "opts": [
     "Alla snabbköp",
     "Bagerier, bensinstationer och affärer på stora stationer",
@@ -123,7 +118,7 @@
     "Varuhus"
    ],
    "a": 1,
-   "why": "„Nur Bäckereien, Tankstellen und Geschäfte in großen Bahnhöfen dürfen offen sein.“"
+   "why": "„Nur wenige Geschäfte dürfen offen sein, zum Beispiel Bäckereien, Tankstellen und Geschäfte in großen Bahnhöfen.“"
   },
   "ask": "Und in Schweden? Skriv 2–3 meningar på tyska: När är affärerna öppna i Sverige? Handlar du på söndagar?",
   "model": "In Schweden sind viele Geschäfte auch am Sonntag geöffnet. Ich kaufe manchmal am Sonntag im Supermarkt ein. Ich finde das praktisch.",
@@ -222,11 +217,6 @@
     "t": "der Grad (-)",
     "sv": "grad",
     "g": "m"
-   },
-   "in": {
-    "t": "in",
-    "sv": "i, till (länder med artikel)",
-    "g": ""
    },
    "lange": {
     "t": "lange",
@@ -353,11 +343,6 @@
     "sv": "ungdom",
     "g": "m"
    },
-   "an": {
-    "t": "an",
-    "sv": "vid, till (vatten)",
-    "g": ""
-   },
    "bei": {
     "t": "bei",
     "sv": "hos",
@@ -371,11 +356,6 @@
    "ihm": {
     "t": "ihm",
     "sv": "honom (dativ)",
-    "g": ""
-   },
-   "in": {
-    "t": "in",
-    "sv": "i, till (länder med artikel)",
     "g": ""
    },
    "krankmeldung": {
@@ -498,11 +478,6 @@
     "sv": "ungdom",
     "g": "m"
    },
-   "in": {
-    "t": "in",
-    "sv": "i, till (länder med artikel)",
-    "g": ""
-   },
    "uns": {
     "t": "uns",
     "sv": "oss",
@@ -535,8 +510,8 @@
   "title": "Karneval, Fasching, Fastnacht",
   "lines": [
    {
-    "fr": "Im Februar feiert man in vielen Städten die „fünfte Jahreszeit“.",
-    "sv": "I februari firar man ”den femte årstiden” i många städer."
+    "fr": "Im Februar oder Anfang März feiert man in vielen Städten die „fünfte Jahreszeit“.",
+    "sv": "I februari eller början av mars firar man ”den femte årstiden” i många städer."
    },
    {
     "fr": "In Köln heißt das Fest Karneval, in Bayern und Österreich Fasching und in Mainz und Basel Fastnacht.",
@@ -623,11 +598,6 @@
     "t": "die Fastnacht",
     "sv": "karneval (sydvästtysk)",
     "g": "f"
-   },
-   "in": {
-    "t": "in",
-    "sv": "i, till (länder med artikel)",
-    "g": ""
    },
    "million": {
     "t": "die Million (-en)",
@@ -774,11 +744,6 @@
     "sv": "på, upp på",
     "g": ""
    },
-   "in": {
-    "t": "in",
-    "sv": "i, till (länder med artikel)",
-    "g": ""
-   },
    "kinderpunsch": {
     "t": "der Kinderpunsch",
     "sv": "julglögg utan alkohol",
@@ -907,11 +872,6 @@
    "brasilien": {
     "t": "Brasilien",
     "sv": "Brasilien",
-    "g": ""
-   },
-   "in": {
-    "t": "in",
-    "sv": "i, till (länder med artikel)",
     "g": ""
    },
    "italien": {

@@ -122,12 +122,15 @@ const MASTER=4, MAXDUE=40;   // MAXDUE = högst så många repetitioner per pass
      slow, listenFirst, goal   uppläsning långsam, lyssna först på nya ord, veckomål i minuter
      selfRate   true = eleven bedömer själv (Igen/Svårt/Bra/Lätt) efter rätt skrivet ord i glosquizet; saknas = av (05-words.js)
      log        [{p, d, dur, nNew, nRep, right, total, mcR, mcN, tyR, tyN, extra, kind, game, words}], högst 1 000 poster
-                (kind "talk" har också wpm och rounds (4/3/2) eller chat: 1 (samtal med Claude))
+                (kind "talk" har också wpm och rounds (4/3/2) eller chat: 1 (samtal med Claude); poster från ett
+                pass i Dagens pass har dp: 1 och samma d, valfritt fält från oktober 2026)
      logOld     {dur, days, lastDay, n}: sammanfattning av poster som kapats bort ur log (foldLog)
      nLog       antal loggposter någonsin (poängen i molnet jämför den)
      run        pågående pass (snapRun), runs {<övning>: pass} ett påbörjat pass per övning (runKey); ett glospass kan ha
-                rate {<ord-id>: "again"|"hard"|"easy"}, elevens bedömningar (Bra står inte med)
-     dailyDay   dag då Dagens pass senast gjordes klart
+                rate {<ord-id>: "again"|"hard"|"easy"}, elevens bedömningar (Bra står inte med). Dagens pass ("words|pass")
+                har dp (gruppernas id) och under lärokorten mixIn (frågorna som blandas in i quizet), 90-mix.js
+     dailyDay   dag då Dagens pass senast gjordes klart (antalet pass i dag räknas ur loggposterna med dp: 1)
+     examDate   provdatum "ÅÅÅÅ-MM-DD", valfritt; styr Dagens pass de sista sex veckorna (90-mix.js)
      vt, vv     verbträning per tempus och per verb {r, n}
      mine       egna ord [{t, sv, g, ex, exSv, src, own, form}]; form = den böjda formen i texten när ordet sparades i
                 grundform (03-lemma.js), t.ex. {t: "fahren", form: "fährt"}. Äldre ord saknar form och står som de sparades
@@ -628,6 +631,9 @@ function safeHtml(s){
 const SPK='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18.5 5.5a9 9 0 0 1 0 13"/></svg>';
 const PLAY='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>';
 function shuffle(a){a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
+// Visningsordning för svarsalternativ (index i opts): blandad, eftersom facit i datafilerna ofta står på samma plats.
+// Två alternativ (Richtig/Falsch, Vrai/Faux) och korta etiketter (A, B, C för annonser) behåller sin ordning.
+const optOrder=opts=>{const ix=opts.map((_,j)=>j); return opts.length>2&&opts.every(o=>String(o).trim().length>2)?shuffle(ix):ix;};
 /* Fyller out (ny lista om den saknas) till n element ur a, i slumpad ordning, med dem som klarar ok(x, out), utan att
    blanda eller kopiera hela listan: Fisher–Yates som stannar när out är full (bytena sparas i en Map). Samma fördelning
    som att gå igenom shuffle(a); ok får se det som redan valts (för att välja bort dubbletter). */
@@ -710,10 +716,10 @@ function renderStart(){
     :otherSecs.map(secOpt).join(""))+(elSecs.length?`<optgroup label="${esc(L.elective.label)}">${elSecs.map(secOpt).join("")}</optgroup>`:"");
   const nothing=!newW.length&&!due.length;
   app.innerHTML=`
-  ${(S.run&&S.run.daily)||S.dailyDay===dayKey(Date.now())?"":dailyPanel(newW,due)}
-  ${S.run?`<section class="panel"><h2>Fortsätt där du slutade</h2><p class="plan">${esc(runLabel(S.run))}</p>
+  ${dailyPanel()}
+  ${S.run&&runKey(S.run)!==PASS_KEY?`<section class="panel"><h2>Fortsätt där du slutade</h2><p class="plan">${esc(runLabel(S.run))}</p>
     <div class="navrow"><button class="btn ghost" id="run-drop">Släng</button><button class="btn" id="run-go">Fortsätt</button></div></section>`:""}
-  ${Object.entries(S.runs||{}).filter(([k,r])=>k.startsWith("words")&&r&&k!==runKey(S.run)).map(([k,r])=>`<section class="panel"><h2>Fortsätt glospasset</h2><p class="plan">${esc(runLabel(r))}</p>
+  ${Object.entries(S.runs||{}).filter(([k,r])=>k.startsWith("words")&&k!==PASS_KEY&&r&&k!==runKey(S.run)).map(([k,r])=>`<section class="panel"><h2>Fortsätt glospasset</h2><p class="plan">${esc(runLabel(r))}</p>
     <div class="navrow"><button class="btn ghost" data-wdrop="${esc(k)}">Släng</button><button class="btn" data-wgo="${esc(k)}">Fortsätt</button></div></section>`).join("")}
   ${hasBook()?bookPanel():""}
   ${goalsPanel()}
@@ -750,6 +756,9 @@ function renderStart(){
       <div class="seg" role="group" aria-label="Kurser"><button data-only="0" aria-pressed="${!onlyCourse()}">Visa alla</button><button data-only="1" aria-pressed="${sameLang(onlyCourse(),L.code)}">Bara ${esc(L.name.toLowerCase())}</button></div></div>`:""}
     <div class="field"><span class="label">Veckomål</span>
       <div class="seg" role="group" aria-label="Veckomål">${[0,60,90,120,150].map(n=>`<button data-goal="${n}" aria-pressed="${(S.goal||0)===n}">${n?n+" min":"Inget"}</button>`).join("")}</div></div>
+    ${L.exam||hasExam()?`<div class="field"><label class="label" for="examdate">Provdatum${L.exam?` (${esc(L.exam.name)})`:""}</label>
+      <input type="date" id="examdate" class="answer-in" value="${esc(planDate(S.examDate)?S.examDate:"")}">
+      <p class="foot">Valfritt. De sista sex veckorna före provet blir det färre nya ord i Dagens pass och en provuppgift efter passet, de sista två veckorna inga nya ord alls.</p></div>`:""}
     ${L.courseGy25?`<div class="field"><span class="label">Läroplan</span>
       <div class="seg" role="group" aria-label="Läroplan"><button data-gy="0" aria-pressed="${!S.gy25}">Gy11 (${esc(L.course)})</button><button data-gy="1" aria-pressed="${!!S.gy25}">Gy25</button></div>
       <p class="foot">Gy25 gäller den som började gymnasiet efter 1 juli 2025. Där heter kursen ${esc(L.courseGy25)}.</p></div>`:""}
@@ -775,9 +784,10 @@ function renderStart(){
   app.querySelectorAll("[data-only]").forEach(b=>b.onclick=()=>{setOnly(b.dataset.only==="1"?L.code:"");renderStart()});
   app.querySelectorAll("[data-goal]").forEach(b=>b.onclick=()=>{S.goal=+b.dataset.goal;save();boardPush();renderStart()});
   app.querySelectorAll("[data-gy]").forEach(b=>b.onclick=()=>{S.gy25=b.dataset.gy==="1";save();$("#coursechip").textContent=courseChip();renderStart()});
-  if($("#daily")) $("#daily").onclick=()=>startDaily(newW,due);
+  wireDaily();
   $("#go").onclick=()=>startSession(newW,due);
-  if(S.run){ $("#run-go").onclick=resumeRun; $("#run-drop").onclick=quitSession; }
+  if($("#run-go")){ $("#run-go").onclick=resumeRun; $("#run-drop").onclick=quitSession; }
+  if($("#examdate")) $("#examdate").onchange=e=>{ const v=e.target.value; if(planDate(v)) S.examDate=v; else delete S.examDate; save(); renderStart(); };
   app.querySelectorAll("[data-wgo]").forEach(b=>b.onclick=()=>{S.run=S.runs[b.dataset.wgo]; resumeRun();});
   app.querySelectorAll("[data-wdrop]").forEach(b=>b.onclick=()=>{delete S.runs[b.dataset.wdrop]; save(); renderStart();});
   wireGames();
@@ -1023,22 +1033,25 @@ function snapRun(){
     queue:sess.queue?[...pending,...sess.queue].map(it):null,total:sess.total||0,done:sess.done||0,
     firstTry:sess.firstTry||{},firstType:sess.firstType||{},tries:sess.tries||{},start:sess.start,
     ...(sess.rate&&Object.keys(sess.rate).length?{rate:sess.rate}:{}),
-    ctx:sess.ctx||null,againFn:sess.againFn||null,label:sess.label||"",daily:!!sess.daily,gramMix:!!sess.gramMix};
+    ctx:sess.ctx||null,againFn:sess.againFn||null,label:sess.label||"",daily:!!sess.daily,gramMix:!!sess.gramMix,
+    // Dagens pass: gruppernas id, och under lärokorten frågorna som ska blandas in i quizet
+    ...(sess.dp?{dp:sess.dp}:{}),...(sess.dp&&!sess.queue?{mixIn:(sess.mixIn||[]).map(it)}:{})};
   const k=runKey(sess); if(k){ S.runs=S.runs||{}; S.runs[k]=S.run; }
   save(true);   // localStorage inom LOCAL_WAIT ms (och alltid när sidan döljs), se save
 }
 // Varje övning har sin egen påbörjade runda, så man kan välja att fortsätta eller börja om när man öppnar den igen.
 // Glospasset har också en egen plats ("words", extraövningen "words|extra"), så att det finns kvar efter en annan övning.
-const runKey=r=>!r?null:r.kind==="words"?(r.extra?"words|extra":"words"):(r.againFn?r.againFn.join("|"):r.kind+"|"+((r.ctx&&r.ctx.id)||""));
+// Dagens pass (dp, 90-mix.js) har platsen "words|pass", så att det inte krockar med glospasset.
+const runKey=r=>!r?null:r.kind==="words"?(r.extra?"words|extra":r.dp?"words|pass":"words"):(r.againFn?r.againFn.join("|"):r.kind+"|"+((r.ctx&&r.ctx.id)||""));
 function dropRun(r){ const k=runKey(r); if(k&&S.runs) delete S.runs[k]; }
 function quitSession(){ dropRun(S.run); sess=null; delete S.run; save(); renderStart(); }
 // Avbryt mitt i en övning: rundan sparas och kan fortsättas senare
 function pauseSession(){ stopSpeech(); sess=null; (RETURN_TO||renderStart)(); }
 function runLabel(r){
+  if(r.learn) return `${r.dp?"Dagens pass: nya ord":"Nya ord"}, du var på ord ${r.i+1} av ${r.newW.length}.`;
   if(r.label) return `${r.label}, ${r.done} av ${r.total} frågor klara.`;
   if(r.kind==="verbs"){const g=verbGames().find(x=>x.id===r.game);return `Verb: ${g?g.name:""}, ${r.done} av ${r.total} frågor klara.`}
   if(r.kind==="cloze") return `Meningar, ${r.done} av ${r.total} klara.`;
-  if(r.learn) return `Nya ord, du var på ord ${r.i+1} av ${r.newW.length}.`;
   return `${r.extra?"Extraövning":`Pass ${S.pass}`}, ${r.done} av ${r.total} frågor klara.`;
 }
 function resumeRun(){
@@ -1054,7 +1067,8 @@ function resumeRun(){
     // gramMix finns i S.run sedan 2026-09-30; en blandad grammatikrunda sparad före det känns igen på againFn
     gramMix:!!r.gramMix||(r.kind==="gram"&&!!r.againFn&&r.againFn[1]==="mix")};
   if(r.kind==="verbs"){const g=verbGames().find(x=>x.id===r.game)||verbGames()[0]; Object.assign(sess,{game:g,tenses:g.tenses});}
-  if(r.learn){ if(!sess.newW.length) return quitSession(); sess.i=Math.min(sess.i,sess.newW.length-1); return renderLearn(); }
+  if(r.dp) Object.assign(sess,{dp:r.dp,mixIn:(r.mixIn||[]).map(item).filter(Boolean)});   // Dagens pass (90-mix.js)
+  if(r.learn){ if(!sess.newW.length) return sess.dp?startQuiz():quitSession(); sess.i=Math.min(sess.i,sess.newW.length-1); return renderLearn(); }
   Object.assign(sess,{queue:(r.queue||[]).map(item).filter(Boolean),total:r.total,done:r.done,firstTry:r.firstTry||{},firstType:r.firstType||{},tries:r.tries||{},rate:r.rate||{}});
   nextQ();
 }
@@ -1106,7 +1120,7 @@ function progressHead(){
   const c=sess.cur;
   const pill=(c.again?'<span class="pill again">igen</span>':c.isNew===undefined?"":c.isNew?'<span class="pill new">nytt ord</span>':'<span class="pill rep">repetition</span>')
     +(c.isNew===false&&isLeech(c.w)?' <span class="pill again">svårt ord</span>':"");
-  return `<div class="meta"><span>Quiz ${pill}</span><span>${Math.min(sess.done+1,sess.total)} / ${sess.total}</span></div>
+  return `<div class="meta"><span>${sess.dp?"Dagens pass":"Quiz"} ${pill}</span><span>${Math.min(sess.done+1,sess.total)} / ${sess.total}</span></div>
     <div class="bar"><i style="width:${(sess.done/sess.total)*100}%"></i></div>`;
 }
 const quitBtn=()=>`<button class="quit" id="quit">${sess.kind==="words"?"Avbryt passet":"Avbryt"}</button>`;

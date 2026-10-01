@@ -135,9 +135,9 @@
 "rule": "ci-uso",
 "q": "Magari [potessi] studiare a Firenze!",
 "alt": [
-"posso",
-"potrei",
-"possa"
+"potei",
+"potuto",
+"possi"
 ],
 "why": "Magari + congiuntivo imperfetto uttrycker en önskan som kanske inte går i uppfyllelse.",
 "sv": "Om jag ändå kunde studera i Florens!"
@@ -161,9 +161,12 @@
 "rule": "ci-uso",
 "q": "Non sapevo chi [fosse] l'autore di quel romanzo.",
 "alt": [
-"è",
+"sarebbe",
 "sia",
 "sarà"
+],
+"acc": [
+"era"
 ],
 "why": "Indirekt fråga efter dåtid i formellt språk: congiuntivo imperfetto.",
 "sv": "Jag visste inte vem som var författaren till den romanen."
@@ -188,7 +191,7 @@
 "q": "Cercavano un candidato che [parlasse] tre lingue.",
 "alt": [
 "parla",
-"parlava",
+"parlerebbe",
 "parli"
 ],
 "why": "Relativsats om något man söker men inte vet om det finns → congiuntivo, i dåtid imperfetto.",
@@ -280,7 +283,10 @@
 "alt": [
 "sia partito",
 "avesse partito",
-"partisse"
+"partirebbe"
+],
+"acc": [
+"era partito"
 ],
 "why": "Handlingen (att åka) skedde före 'non sapevo' → congiuntivo trapassato. Partire tar essere.",
 "sv": "Jag visste inte att Luca hade åkt."
@@ -305,7 +311,7 @@
 "q": "Mi dispiaceva che non [foste venuti] alla festa.",
 "alt": [
 "siate venuti",
-"veniste",
+"verreste",
 "eravate venuti"
 ],
 "why": "Känsla i dåtid (mi dispiaceva) om något som redan hade hänt → congiuntivo trapassato.",
@@ -345,7 +351,7 @@
 "alt": [
 "abbia studiato",
 "aveva studiato",
-"studiasse"
+"studierebbe"
 ],
 "why": "Benché + congiuntivo; studerandet skedde före provet → trapassato.",
 "sv": "Fast han hade pluggat mycket klarade han inte provet."
@@ -393,14 +399,14 @@
 "id": "congtrap-011",
 "topic": "congtrap",
 "rule": "ct",
-"q": "Credevo che l'avessero già [assunta].",
+"q": "La nuova segretaria? Credevo che l'avessero già [assunta].",
 "alt": [
 "assunto",
 "assumere",
 "assumendo"
 ],
 "why": "Med avere + direkt objektspronomen (l' = henne) böjs participet: assunta.",
-"sv": "Jag trodde att de redan hade anställt henne."
+"sv": "Den nya sekreteraren? Jag trodde att de redan hade anställt henne."
 },
 {
 "id": "congtrap-012",
@@ -422,8 +428,11 @@
 "q": "Nessuno sapeva dove [fossero andati] i ragazzi.",
 "alt": [
 "siano andati",
-"andavano",
-"andassero"
+"avessero andato",
+"fossero andato"
+],
+"acc": [
+"erano andati"
 ],
 "why": "Indirekt fråga i dåtid om något tidigare → congiuntivo trapassato.",
 "sv": "Ingen visste vart pojkarna hade gått."
@@ -448,7 +457,7 @@
 "q": "Non credevo che Manzoni [avesse riscritto] il romanzo tre volte.",
 "alt": [
 "abbia riscritto",
-"riscrivesse",
+"riscriverebbe",
 "aveva riscritto"
 ],
 "why": "Non credevo + tidigare handling → congiuntivo trapassato.",
@@ -477,6 +486,9 @@
 "finiamo",
 "avremmo finito"
 ],
+"acc": [
+"finissimo"
+],
 "why": "Prima che + congiuntivo. Formellt och ovanligt, men möjligt med trapassato.",
 "sv": "Innan vi hade pratat färdigt gick han därifrån."
 },
@@ -502,6 +514,9 @@
 "sia mai passato",
 "passava mai",
 "passerebbe mai"
+],
+"acc": [
+"passasse mai"
 ],
 "why": "Sembrava che + tidigare → trapassato. Passare (om tid) tar essere.",
 "sv": "Det verkade som om tiden aldrig hade gått."
@@ -542,6 +557,9 @@
 "sia piovuto",
 "piovuto"
 ],
+"acc": [
+"pioverà"
+],
 "why": "Presens + samtidig/framtida handling → congiuntivo presente (eller futuro: pioverà).",
 "sv": "Jag tror att det regnar i morgon."
 },
@@ -552,7 +570,7 @@
 "q": "Pensavo che domani [sarebbe piovuto].",
 "alt": [
 "piova",
-"piovesse",
+"pioverebbe",
 "pioverà"
 ],
 "why": "Huvudsats i dåtid + framtid i dåtid → condizionale passato.",
@@ -679,14 +697,17 @@
 "id": "consec-013",
 "topic": "consec",
 "rule": "cons-pres",
-"q": "Non so se Giulia [sia] d'accordo.",
+"q": "In questo momento non so se Giulia [sia] d'accordo.",
 "alt": [
-"fosse",
 "fosse stata",
-"sarebbe stata"
+"fu",
+"è stata"
 ],
-"why": "Non so se (presens) + samtidighet → congiuntivo presente (eller indikativ i tal).",
-"sv": "Jag vet inte om Giulia håller med."
+"acc": [
+"è"
+],
+"why": "Non so se (presens) + samtidighet nu → congiuntivo presente (indikativ går i tal).",
+"sv": "Just nu vet jag inte om Giulia håller med."
 },
 {
 "id": "consec-014",
@@ -697,6 +718,9 @@
 "sia",
 "sarà",
 "è stata"
+],
+"acc": [
+"era"
 ],
 "why": "Non sapevo (dåtid) + samtidighet → congiuntivo imperfetto.",
 "sv": "Jag visste inte om Giulia höll med."
@@ -757,14 +781,14 @@
 "id": "consec-019",
 "topic": "consec",
 "rule": "cons-pres",
-"q": "Dubito che loro [abbiano capito] la domanda.",
+"q": "Dubito che ieri loro [abbiano capito] la domanda.",
 "alt": [
-"avessero capito",
-"capissero",
-"capiranno"
+"capiscano",
+"capiranno",
+"capirebbero"
 ],
 "why": "Dubito (presens) + tidigare → congiuntivo passato.",
-"sv": "Jag tvivlar på att de förstod frågan."
+"sv": "Jag tvivlar på att de förstod frågan i går."
 },
 {
 "id": "consec-020",
@@ -878,7 +902,7 @@
 "alt": [
 "sapessi",
 "avrei saputo",
-"sapevo"
+"saprei"
 ],
 "why": "Overklig dåtid: se + congiuntivo trapassato. (I talspråk hörs se lo sapevo, te lo dicevo.)",
 "sv": "Om jag hade vetat det hade jag sagt det till dig."
@@ -1149,7 +1173,7 @@
 "rule": "ip-mix",
 "q": "Se tu fossi più ordinato, non [avresti perso] le chiavi.",
 "alt": [
-"perderesti",
+"avessi perso",
 "perdessi",
 "hai perso"
 ],
@@ -1201,7 +1225,7 @@
 "rule": "ip-mix",
 "q": "Se avessero votato tutti, il risultato [sarebbe stato] diverso.",
 "alt": [
-"sarebbe",
+"sarà",
 "fosse stato",
 "era"
 ],
@@ -1361,6 +1385,9 @@
 "venire con me",
 "vada"
 ],
+"acc": [
+"venire"
+],
 "why": "Imperativ blir di + infinitiv. Venire blir ofta andare när platsen ändras, och me blir lui.",
 "sv": "Han sa åt mig att följa med honom."
 },
@@ -1383,8 +1410,8 @@
 "rule": "ind-pron",
 "q": "\"Questo libro è mio.\" → Disse che [quel] libro era suo.",
 "alt": [
-"questo",
-"codesto",
+"quello",
+"quella",
 "il suo"
 ],
 "why": "Questo blir quello när man återger i efterhand, och mio blir suo.",
@@ -1396,9 +1423,9 @@
 "rule": "ind-pron",
 "q": "\"Ci vediamo qui domani.\" → Disse che ci saremmo visti [lì] il giorno dopo.",
 "alt": [
-"qui",
-"qua",
-"oggi"
+"oggi",
+"ieri",
+"domani"
 ],
 "why": "Qui blir lì, domani blir il giorno dopo.",
 "sv": "Han sa att vi skulle ses där dagen därpå."
@@ -1409,9 +1436,9 @@
 "rule": "ind-tempo",
 "q": "\"Ieri ho visto Paolo.\" → Mi raccontò che [il giorno prima] aveva visto Paolo.",
 "alt": [
-"ieri",
 "domani",
-"il giorno dopo"
+"il giorno dopo",
+"l'indomani"
 ],
 "why": "Ieri blir il giorno prima.",
 "sv": "Hon berättade att hon hade sett Paolo dagen innan."
@@ -1426,6 +1453,9 @@
 "abiterò",
 "abiterei"
 ],
+"acc": [
+"abitavo"
+],
 "why": "Indirekt fråga efter dåtid: congiuntivo imperfetto (formellt) eller imperfetto indikativ.",
 "sv": "Hon frågade var jag bodde."
 },
@@ -1439,6 +1469,9 @@
 "finirei",
 "abbia finito"
 ],
+"acc": [
+"avevo finito"
+],
 "why": "Passato prossimo i frågan → congiuntivo trapassato (eller trapassato indikativ).",
 "sv": "Han frågade om jag var klar."
 },
@@ -1448,9 +1481,9 @@
 "rule": "ind-pron",
 "q": "\"Ti chiamo stasera.\" → Mi promise che mi avrebbe chiamato [quella sera].",
 "alt": [
-"stasera",
-"questa sera",
-"domani sera"
+"quel sera",
+"quella stasera",
+"quelle sera"
 ],
 "why": "Stasera blir quella sera.",
 "sv": "Han lovade att ringa mig den kvällen."
@@ -1461,7 +1494,7 @@
 "rule": "ind-tempo",
 "q": "\"Studio italiano da due anni.\" → Disse che [studiava] italiano da due anni.",
 "alt": [
-"studia",
+"studiasse",
 "ha studiato",
 "studierebbe"
 ],
@@ -1475,7 +1508,7 @@
 "q": "\"Andavo spesso al mare.\" → Raccontò che [andava] spesso al mare.",
 "alt": [
 "andasse",
-"era andato",
+"andrà",
 "andrebbe"
 ],
 "why": "Imperfetto förblir imperfetto i indirekt tal.",
@@ -1514,7 +1547,7 @@
 "q": "\"La riunione è finita.\" → Il segretario annunciò che la riunione [era finita].",
 "alt": [
 "è finita",
-"finiva",
+"finisse",
 "finirebbe"
 ],
 "why": "Passato prossimo blir trapassato prossimo.",
@@ -1526,9 +1559,12 @@
 "rule": "ind-tempo",
 "q": "\"Arriverò quando avrò finito.\" → Disse che sarebbe arrivato quando [avesse finito].",
 "alt": [
-"avrà finito",
 "finisce",
-"finirebbe"
+"finirebbe",
+"finendo"
+],
+"acc": [
+"avrebbe finito"
 ],
 "why": "Futuro anteriore blir congiuntivo trapassato (eller condizionale passato) efter dåtid.",
 "sv": "Han sa att han skulle komma när han var klar."
@@ -1552,9 +1588,9 @@
 "rule": "ind-tempo",
 "q": "\"Il film comincia alle nove.\" → Mi disse che il film [cominciava] alle nove.",
 "alt": [
-"comincia stato",
-"cominciasse stato",
-"comincerà"
+"cominciasse",
+"comincerebbe",
+"fosse cominciato"
 ],
 "why": "Presens blir imperfetto.",
 "sv": "Hon sa att filmen började klockan nio."
@@ -1619,7 +1655,7 @@
 "alt": [
 "scrivé",
 "scrivette",
-"scriveva"
+"scrise"
 ],
 "why": "Scrivere: scrissi, scrisse, scrissero.",
 "sv": "Leopardi skrev L'infinito 1819."
@@ -1648,7 +1684,7 @@
 "ebbero"
 ],
 "why": "Avere: ebbi, avesti, ebbe, avemmo, aveste, ebbero.",
-"sv": "Manzoni fick ett långt liv."
+"sv": "Manzoni hade ett långt liv."
 },
 {
 "id": "remoto-008",
@@ -1657,7 +1693,7 @@
 "q": "\"Non ti aspettavo\", [disse] la madre.",
 "alt": [
 "dicé",
-"diceva",
+"dicette",
 "dissero"
 ],
 "why": "Dire: dissi, dicesti, disse, dicemmo, diceste, dissero.",
@@ -1671,7 +1707,7 @@
 "alt": [
 "vedé",
 "vedette",
-"vedeva stato"
+"vedde"
 ],
 "why": "Vedere: vidi, vide, videro.",
 "sv": "När kungen såg folkmassan blev han rädd."
@@ -1696,7 +1732,7 @@
 "q": "Io [parlai] con il direttore il giorno seguente.",
 "alt": [
 "parlò",
-"parlavo",
+"parlei",
 "parlasti"
 ],
 "why": "-are i io: -ai.",
@@ -1722,7 +1758,7 @@
 "q": "Giotto [dipinse] la cappella degli Scrovegni.",
 "alt": [
 "dipingé",
-"dipingeva",
+"dipingette",
 "dipinsero"
 ],
 "why": "Dipingere: dipinsi, dipinse, dipinsero.",
@@ -1761,7 +1797,7 @@
 "q": "Dante [morì] in esilio a Ravenna nel 1321.",
 "alt": [
 "morse",
-"moriva",
+"morette",
 "morirono"
 ],
 "why": "Morire är regelbundet i passato remoto: morì.",
@@ -1774,7 +1810,7 @@
 "q": "Noi [arrivammo] a Roma di notte.",
 "alt": [
 "arrivarono",
-"arrivavamo",
+"arrivassimo",
 "arrivaste"
 ],
 "why": "-are i noi: -ammo.",
@@ -1788,7 +1824,7 @@
 "alt": [
 "sceglierono",
 "scelse",
-"sceglievano"
+"scelserono"
 ],
 "why": "Scegliere: scelsi, scelse, scelsero.",
 "sv": "Väljarna valde republiken."
@@ -1877,7 +1913,7 @@
 "rule": "ger",
 "q": "[Leggendo] il giornale, ho scoperto la notizia.",
 "alt": [
-"Letto",
+"Leggente",
 "Leggere",
 "A leggere stato"
 ],
@@ -2025,7 +2061,7 @@
 "Essendo laureatasi"
 ],
 "why": "Reflexiva verb: essendosi + particip.",
-"sv": "Eftersom hon tog examen i juli började hon arbeta i september."
+"sv": "Efter att ha tagit examen i juli började hon arbeta i september."
 },
 {
 "id": "gerund-017",
@@ -2085,7 +2121,7 @@
 "rule": "part",
 "q": "[Finito] il lavoro, andammo a cena.",
 "alt": [
-"Finendo",
+"Finiti",
 "Finire",
 "Finita"
 ],
@@ -2112,7 +2148,7 @@
 "q": "[Letta] la lettera, la strappò.",
 "alt": [
 "Letto",
-"Leggendo",
+"Letti",
 "Lette"
 ],
 "why": "Participet böjs efter objektet la lettera (fem. sg.): letta.",
@@ -2125,7 +2161,7 @@
 "q": "[Terminate] le lezioni, gli studenti uscirono.",
 "alt": [
 "Terminato",
-"Terminando",
+"Terminata",
 "Terminati"
 ],
 "why": "Le lezioni är fem. plural → terminate.",
@@ -2151,7 +2187,7 @@
 "q": "[Uscita] di casa, si accorse di aver dimenticato le chiavi.",
 "alt": [
 "Uscito",
-"Uscendo",
+"Uscite",
 "Usciti"
 ],
 "why": "Uscire tar essere; subjektet är en kvinna → uscita.",
@@ -2163,8 +2199,8 @@
 "rule": "part",
 "q": "[Visti] i risultati, il governo cambiò strategia.",
 "alt": [
-"Visto",
-"Vedendo",
+"Vista",
+"Vedente",
 "Viste"
 ],
 "why": "I risultati (mask. pl.) → visti.",
@@ -2190,7 +2226,7 @@
 "q": "[Compiuti] diciotto anni, poté votare.",
 "alt": [
 "Compiuto",
-"Compiendo",
+"Compiuta",
 "Compiute"
 ],
 "why": "Diciotto anni (mask. pl.) → compiuti.",
@@ -2203,7 +2239,7 @@
 "q": "[Ottenuta] la borsa di studio, partì per Bologna.",
 "alt": [
 "Ottenuto",
-"Ottenendo",
+"Ottenuti",
 "Ottenute"
 ],
 "why": "La borsa di studio (fem. sg.) → ottenuta.",
@@ -2216,7 +2252,7 @@
 "q": "[Scritte] le ultime pagine, Manzoni pubblicò il romanzo.",
 "alt": [
 "Scritto",
-"Scrivendo",
+"Scritta",
 "Scritti"
 ],
 "why": "Le ultime pagine (fem. pl.) → scritte.",
@@ -2229,7 +2265,7 @@
 "q": "[Morto] il padre, il figlio ereditò la bottega.",
 "alt": [
 "Morta",
-"Morendo",
+"Morte",
 "Morti"
 ],
 "why": "Il padre (mask. sg.) → morto.",
@@ -2255,7 +2291,7 @@
 "q": "[Partiti] gli ospiti, riordinammo la casa.",
 "alt": [
 "Partito",
-"Partendo",
+"Partita",
 "Partite"
 ],
 "why": "Gli ospiti (mask. pl.) → partiti.",
@@ -2268,7 +2304,7 @@
 "q": "[Raggiunto] l'accordo, i sindacati sospesero lo sciopero.",
 "alt": [
 "Raggiunta",
-"Raggiungendo",
+"Raggiunte",
 "Raggiunti"
 ],
 "why": "L'accordo (mask. sg.) → raggiunto.",
@@ -2281,7 +2317,7 @@
 "q": "[Superato] l'esame, festeggiò con gli amici.",
 "alt": [
 "Superata stata",
-"Superando",
+"Superata",
 "Superati"
 ],
 "why": "L'esame (mask. sg.) → superato.",
@@ -2294,7 +2330,7 @@
 "q": "[Tornata] dall'Erasmus, Sara parlava italiano benissimo.",
 "alt": [
 "Tornato",
-"Tornando",
+"Tornate",
 "Tornati"
 ],
 "why": "Tornare tar essere; Sara → tornata.",
@@ -2307,7 +2343,7 @@
 "q": "[Firmato] il contratto, iniziò subito a lavorare.",
 "alt": [
 "Firmata",
-"Firmando",
+"Firmate",
 "Firmati"
 ],
 "why": "Il contratto (mask. sg.) → firmato.",
@@ -2320,7 +2356,7 @@
 "q": "[Spente] le luci, cominciò il film.",
 "alt": [
 "Spento",
-"Spegnendo",
+"Spenta",
 "Spenti"
 ],
 "why": "Le luci (fem. pl.) → spente.",
@@ -2333,7 +2369,7 @@
 "q": "[Fatta] la spesa, tornammo a casa.",
 "alt": [
 "Fatto",
-"Facendo",
+"Fatti",
 "Fatte"
 ],
 "why": "La spesa (fem. sg.) → fatta.",
@@ -2345,7 +2381,7 @@
 "rule": "fare-inf",
 "q": "Ho [fatto] riparare la macchina.",
 "alt": [
-"lasciato",
+"dato",
 "reso",
 "messo"
 ],
@@ -2371,8 +2407,8 @@
 "rule": "lasciare-inf",
 "q": "[Lasciami] finire, per favore!",
 "alt": [
-"Fammi",
-"Fallo",
+"Lasciarmi",
+"Lasciandomi",
 "Lasciamene"
 ],
 "why": "Lasciare + infinitiv = tillåta. Imperativ + pronomen: lasciami.",
@@ -2384,7 +2420,7 @@
 "rule": "lasciare-inf",
 "q": "I miei genitori non mi [lasciano] uscire dopo mezzanotte.",
 "alt": [
-"fanno",
+"mettono",
 "rendono",
 "danno"
 ],
@@ -2410,7 +2446,7 @@
 "rule": "fare-inf",
 "q": "Il film mi ha [fatto] piangere.",
 "alt": [
-"lasciato",
+"dato",
 "reso",
 "messo"
 ],
@@ -2553,7 +2589,7 @@
 "rule": "lasciare-inf",
 "q": "I bambini [lasciavano] cadere le briciole dappertutto.",
 "alt": [
-"facevano",
+"davano",
 "rendevano",
 "mettevano"
 ],
@@ -2670,11 +2706,11 @@
 "rule": "form",
 "q": "Con la presente [desidero] candidarmi per il posto di assistente.",
 "alt": [
-"voglio proprio",
+"desideri",
 "vorrò",
 "desiderassi"
 ],
-"why": "Desidero är formellt och neutralt; voglio proprio låter krävande.",
+"why": "Desidero (presens, io) är formellt och neutralt.",
 "sv": "Härmed vill jag söka tjänsten som assistent."
 },
 {
@@ -2683,9 +2719,9 @@
 "rule": "form",
 "q": "In allegato [trova] il mio curriculum vitae.",
 "alt": [
-"trovi tu",
-"trovate stato",
-"troverai"
+"trovasse",
+"trovato",
+"trovando"
 ],
 "why": "Lei-form: (Lei) trova.",
 "sv": "Bifogat finner ni mitt cv."
@@ -2696,8 +2732,8 @@
 "rule": "form",
 "q": "Mi [permetta] di presentarmi.",
 "alt": [
-"permetti",
-"permette",
+"permesso",
+"permettere",
 "permettesse"
 ],
 "why": "Imperativ i Lei-form = congiuntivo presente: mi permetta.",
@@ -2709,9 +2745,9 @@
 "rule": "form",
 "q": "[Si accomodi], prego.",
 "alt": [
-"Accomodati",
-"Si accomoda",
-"Accomodarsi"
+"Accomodarsi",
+"Si accomodano",
+"Ti accomodi"
 ],
 "why": "Imperativ med Lei: si accomodi.",
 "sv": "Var så god och sitt."
@@ -2722,11 +2758,15 @@
 "rule": "form",
 "q": "Vorrei sapere se [fosse] possibile fissare un appuntamento.",
 "alt": [
-"è stato",
 "fossi",
-"sia stato"
+"fossero",
+"sarei"
 ],
-"why": "Vorrei sapere se + congiuntivo imperfetto, mycket artigt.",
+"acc": [
+"sarebbe",
+"è"
+],
+"why": "Vorrei sapere se + congiuntivo imperfetto är mycket artigt; sarebbe och è går också.",
 "sv": "Jag undrar om det vore möjligt att boka ett möte."
 },
 {
@@ -2740,7 +2780,7 @@
 "ringraziassi"
 ],
 "why": "Jag tackar er: (io) La ringrazio.",
-"sv": "Jag tackar er på förhand för er tillmötesgående."
+"sv": "Jag tackar er på förhand för ert tillmötesgående."
 },
 {
 "id": "formale-012",
@@ -2774,9 +2814,9 @@
 "rule": "form",
 "q": "Colgo l'occasione per [porgerLe] i miei più cordiali saluti.",
 "alt": [
-"porgerti",
 "porgerla",
-"porgergli"
+"porgendoLe",
+"porgerLi"
 ],
 "why": "Porgere a Lei → porgerLe (indirekt objekt, formellt).",
 "sv": "Jag passar på att framföra mina vänligaste hälsningar."
@@ -2787,7 +2827,7 @@
 "rule": "form",
 "q": "La [prego] di comunicarmi la data del colloquio.",
 "alt": [
-"prega",
+"pregasse",
 "preghi",
 "pregherei tu"
 ],
@@ -2813,9 +2853,9 @@
 "rule": "form",
 "q": "Non [esiti] a contattarmi.",
 "alt": [
-"esitare",
-"esita",
-"esitasse"
+"esitando",
+"esitasse",
+"esitato"
 ],
 "why": "Negativ imperativ i Lei-form: non esiti.",
 "sv": "Tveka inte att kontakta mig."
@@ -2839,9 +2879,9 @@
 "rule": "form",
 "q": "Ci [scusiamo] per il ritardo nella risposta.",
 "alt": [
-"scusate",
-"scusano",
-"scusi"
+"scusato",
+"scusiate",
+"scusassimo"
 ],
 "why": "Vi ber om ursäkt: ci scusiamo.",
 "sv": "Vi ber om ursäkt för det sena svaret."
@@ -2852,9 +2892,9 @@
 "rule": "form",
 "q": "[Voglia] gradire i nostri più distinti saluti.",
 "alt": [
-"Vuole",
-"Vuoi",
-"Volesse"
+"Volendo",
+"Voglio",
+"Volle"
 ],
 "why": "Voglia + infinitiv är en mycket formell imperativ (Lei).",
 "sv": "Vänligen motta våra bästa hälsningar."
@@ -2945,7 +2985,7 @@
 "alt": [
 "perciò",
 "dunque",
-"sebbene"
+"pertanto"
 ],
 "why": "Affinché = för att (syfte) + congiuntivo.",
 "sv": "Jag pluggar mycket för att mina föräldrar ska vara stolta."
@@ -3099,7 +3139,7 @@
 "rule": "conn",
 "q": "[Inoltre], il progetto rispetta l'ambiente.",
 "alt": [
-"Invece",
+"Purché",
 "Eppure",
 "Anzi"
 ],

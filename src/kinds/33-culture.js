@@ -15,7 +15,7 @@ function cultureScreen(id){
     <div class="reading">${tapText(c.lines,c.gloss,{sv:true})}</div><div class="glossbox" id="gbox" hidden></div>
     <button type="button" class="btn ghost" id="svt">Visa svensk översättning</button></section>
   <section class="panel"><p class="q-ask"><b>${esc(c.q.q)}</b></p>
-    <div class="opts">${c.q.opts.map((o,i)=>`<button class="opt" data-i="${i}"><span class="k">${i+1}</span><span>${esc(o)}</span></button>`).join("")}</div><div id="fb"></div></section>
+    <div class="opts">${optOrder(c.q.opts).map((i,n)=>`<button class="opt" data-i="${i}"><span class="k">${n+1}</span><span>${esc(c.q.opts[i])}</span></button>`).join("")}</div><div id="fb"></div></section>
   <section class="panel"><h2>Och i Sverige?</h2><p class="plan">${esc(c.ask)}</p>
     <textarea class="answer-in wtext" id="ctext" rows="4" ${lang()} autocapitalize="sentences" spellcheck="false" placeholder="Skriv här">${esc(S.drafts[dk]||"")}</textarea>
     ${accentKeys(L.accents)}
@@ -27,7 +27,7 @@ function cultureScreen(id){
   wirePlay(r=>speakSeq(c.lines,r,highlightLine)); wireGloss(c); wireSvToggle();
   app.querySelectorAll(".opt").forEach(b=>b.onclick=()=>{
     if(qok!==null) return; const i=+b.dataset.i; qok=i===c.q.a;
-    app.querySelectorAll(".opt").forEach((x,k)=>{x.disabled=true; if(k===c.q.a)x.classList.add("right"); else if(k===i)x.classList.add("wrong");});
+    app.querySelectorAll(".opt").forEach(x=>{const k=+x.dataset.i; x.disabled=true; if(k===c.q.a)x.classList.add("right"); else if(k===i)x.classList.add("wrong");});
     $("#fb").innerHTML=`<div class="feedback ${qok?"ok":"bad"}"><strong>${qok?"Rätt!":"Inte riktigt."}</strong><p>${esc(c.q.why||"")}</p></div>`;
   });
   const ta=$("#ctext"); let tm=null; wireAccents(ta);

@@ -409,15 +409,22 @@ function wireFeedback(ta,key,task,opt){
 }
 
 /* ---------- Gemensam slutskärm för alla övningar utom glosquizet ---------- */
-function finishGeneric(){
-  const now=Date.now(), ids=Object.keys(sess.firstTry), dur=runSecs(sess.start,now), by={};
+/* Första svaret på frågorna ids ("<typ>:<ref>") förs in: typens effect, och en loggpost per typ med sin del av
+   tiden dur. mark = fält som läggs i varje post (Dagens pass: {dp: 1}). Används av finishGeneric och finishSession. */
+function kindsDone(ids,dur,now,mark){
+  const by={};
   ids.forEach(id=>{const i=id.indexOf(":"), k=id.slice(0,i), ref=id.slice(i+1), ok=!!sess.firstTry[id];
     (by[k]=by[k]||[]).push({ref,ok}); const K=KINDS[k]; if(K&&K.effect) K.effect(ref,ok);});
   Object.entries(by).forEach(([k,a])=>{
     const e={d:now,dur:Math.round(dur*a.length/Math.max(1,ids.length)),right:a.filter(x=>x.ok).length,total:a.length};
     const K=KINDS[k]; if(K&&K.log) K.log(e,sess); else e.kind=k;   // verb och meningar har egna fält i loggen
+    if(mark) Object.assign(e,mark);
     S.log.push(e);
   });
+}
+function finishGeneric(){
+  const now=Date.now(), ids=Object.keys(sess.firstTry), dur=runSecs(sess.start,now);
+  kindsDone(ids,dur,now);
   dropRun(sess); delete S.run; if(sess.daily) S.dailyDay=dayKey(Date.now()); save(); boardPush();
   const missIds=ids.filter(id=>!sess.firstTry[id]).map(id=>id.slice(id.indexOf(":")+1));
   const right=ids.filter(id=>sess.firstTry[id]).length, ctx=sess.ctx, againFn=sess.againFn, label=sess.label||"Övningen";

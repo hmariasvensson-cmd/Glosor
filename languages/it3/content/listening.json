@@ -741,7 +741,7 @@
    {
     "who": "A",
     "fr": "Buongiorno, si accomodi. Lei è Elin, vero?",
-    "sv": "God morgon, slå dig ner. Du är Elin, eller hur?"
+    "sv": "God morgon, varsågod och sitt. Ni är Elin, eller hur?"
    },
    {
     "who": "B",
@@ -751,7 +751,7 @@
    {
     "who": "A",
     "fr": "Allora, Elin, perché vuole lavorare nella nostra gelateria quest'estate?",
-    "sv": "Nå, Elin, varför vill du jobba i vår glassbar i sommar?"
+    "sv": "Nå, Elin, varför vill ni jobba i vår glassbar i sommar?"
    },
    {
     "who": "B",
@@ -761,7 +761,7 @@
    {
     "who": "A",
     "fr": "Benissimo. Il lavoro non è facile: si comincia alle due del pomeriggio e si finisce a mezzanotte. Per Lei va bene?",
-    "sv": "Mycket bra. Jobbet är inte lätt: man börjar klockan två på eftermiddagen och slutar vid midnatt. Går det bra för dig?"
+    "sv": "Mycket bra. Jobbet är inte lätt: man börjar klockan två på eftermiddagen och slutar vid midnatt. Går det bra för er?"
    },
    {
     "who": "B",
@@ -771,7 +771,7 @@
    {
     "who": "A",
     "fr": "Lavorerà insieme a Paolo, il nostro ragazzo più esperto. Con lui imparerà tutto in pochi giorni.",
-    "sv": "Du kommer att jobba ihop med Paolo, vår mest erfarna kille. Med honom lär du dig allt på några dagar."
+    "sv": "Ni kommer att jobba ihop med Paolo, vår mest erfarna kille. Med honom lär ni er allt på några dagar."
    },
    {
     "who": "B",
@@ -801,7 +801,7 @@
    {
     "who": "A",
     "fr": "Ottocento euro al mese, più le mance. Può cominciare il primo luglio?",
-    "sv": "Åttahundra euro i månaden, plus dricks. Kan du börja den första juli?"
+    "sv": "Åttahundra euro i månaden, plus dricks. Kan ni börja den första juli?"
    },
    {
     "who": "B",
@@ -1608,10 +1608,10 @@
     "type": "tolkning",
     "q": "Vad menar läkaren med « Al posto Suo … comprerei »?",
     "opts": [
-     "Hon ska köpa skor åt honom",
-     "Hon ger ett råd: i hans ställe skulle hon köpa nya skor",
-     "Hon har redan köpt skor",
-     "Hon tycker att skorna är för dyra"
+     "Han ska köpa skor åt Andrea",
+     "Han ger ett råd: i Andreas ställe skulle han köpa nya skor",
+     "Han har redan köpt skor",
+     "Han tycker att skorna är för dyra"
     ],
     "a": 1,
     "why": "Al posto Suo + condizionale = ett artigt råd."
@@ -2761,7 +2761,7 @@
    {
     "who": "A",
     "fr": "Va bene, a domani!",
-    "sv": "Okej, vi ses i morgon!"
+    "sv": "Kom och titta på den då. Jag är säker på att ni kommer att gilla den. Kan ni komma förbi i morgon klockan fem?"
    }
   ],
   "questions": [
@@ -3206,8 +3206,8 @@
   "lines": [
    {
     "who": "A",
-    "fr": "Benvenuti alla Galleria degli Uffizi. Siete nella sala quindici, la sala in cui si trovano le prime opere di Leonardo da Vinci.",
-    "sv": "Välkomna till Uffizierna. Ni är i sal femton, salen där Leonardo da Vincis första verk finns."
+    "fr": "Benvenuti alla Galleria degli Uffizi. Siete nella sala di Leonardo da Vinci, la sala in cui si trovano le sue prime opere.",
+    "sv": "Välkomna till Uffizierna. Ni är i Leonardo da Vincis sal, salen där hans första verk finns."
    },
    {
     "who": "A",
@@ -3474,8 +3474,8 @@
    },
    {
     "who": "B",
-    "fr": "Promesso. Le mie labbra sono sigillate.",
-    "sv": "Jag lovar. Mina läppar är förseglade."
+    "fr": "Promesso. Acqua in bocca!",
+    "sv": "Jag lovar. Jag säger inte ett ord!"
    }
   ],
   "questions": [
@@ -3628,16 +3628,6 @@
     "sv": "lova",
     "g": ""
    },
-   "labbra": {
-    "t": "le labbra",
-    "sv": "läppar",
-    "g": "fpl"
-   },
-   "sigillate": {
-    "t": "sigillato",
-    "sv": "förseglad",
-    "g": ""
-   },
    "pause": {
     "t": "la pausa",
     "sv": "paus, rast",
@@ -3656,6 +3646,11 @@
    "chiacchieriamo": {
     "t": "chiacchierare",
     "sv": "prata, småprata",
+    "g": ""
+   },
+   "bocca": {
+    "t": "acqua in bocca!",
+    "sv": "jag säger inget (ordagrant: vatten i munnen)",
     "g": ""
    }
   }

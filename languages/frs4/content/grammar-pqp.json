@@ -18,11 +18,11 @@
   "rule": "pqp-avoir",
   "q": "Elle m'a rendu le livre que je lui [avais prêté].",
   "alt": [
-   "ai prêté",
+   "avais prêtée",
    "prêtais",
    "étais prêté"
   ],
-  "why": "Utlåningen skedde före återlämnandet, så plus-que-parfait: j'avais prêté. Prêter tar avoir.",
+  "why": "Utlåningen skedde före återlämnandet, så plus-que-parfait: j'avais prêté. Prêter tar avoir, och participet böjs efter que = le livre (maskulinum): prêté.",
   "sv": "Hon gav tillbaka boken som jag hade lånat ut till henne."
  },
  {
@@ -57,11 +57,11 @@
   "rule": "pqp-avoir",
   "q": "Tu [avais oublié] tes clés, alors tu as dû attendre dehors.",
   "alt": [
-   "as oublié",
+   "avais oubliées",
    "oubliais",
    "étais oublié"
   ],
-  "why": "Glömskan kom före väntan: plus-que-parfait tu avais oublié.",
+  "why": "Glömskan kom före väntan: plus-que-parfait tu avais oublié. Objektet tes clés står efter verbet, så participet böjs inte.",
   "sv": "Du hade glömt dina nycklar, så du fick vänta ute."
  },
  {
@@ -83,7 +83,7 @@
   "rule": "pqp-avoir",
   "q": "Elle a raté l'examen : elle n'[avait] pas assez révisé.",
   "alt": [
-   "a",
+   "avais",
    "était",
    "aura"
   ],
@@ -107,14 +107,14 @@
   "id": "pqp-009",
   "topic": "pqp",
   "rule": "pqp-etre",
-  "q": "Ma sœur [était née] deux ans avant moi.",
+  "q": "En 2010, mes parents ont déménagé ; ma sœur [était née] l'année précédente.",
   "alt": [
    "avait né",
    "est née",
    "naissait"
   ],
-  "why": "Naître tar être: elle était née, med -e för femininum.",
-  "sv": "Min syster hade fötts två år före mig."
+  "why": "Födelsen ligger före flytten: plus-que-parfait. Naître tar être: elle était née, med -e för femininum.",
+  "sv": "År 2010 flyttade mina föräldrar; min syster hade fötts året innan."
  },
  {
   "id": "pqp-010",
@@ -123,10 +123,10 @@
   "q": "Nous nous [étions] rencontrés à une fête chez Paul.",
   "alt": [
    "avions",
-   "sommes",
-   "serions"
+   "avons",
+   "étaient"
   ],
-  "why": "Reflexiva verb tar alltid être: nous nous étions rencontrés.",
+  "why": "Reflexiva verb tar alltid être: nous nous étions rencontrés (imparfait av être + particip).",
   "sv": "Vi hade träffats på en fest hos Paul."
  },
  {
@@ -136,10 +136,10 @@
   "q": "Elle était triste parce que son chat [était mort].",
   "alt": [
    "avait mort",
-   "mourait",
-   "est mort"
+   "avait mouru",
+   "était morte"
   ],
-  "why": "Mourir tar être: il était mort.",
+  "why": "Mourir tar être: il était mort. Particip mort, och chat är maskulinum.",
   "sv": "Hon var ledsen eftersom hennes katt hade dött."
  },
  {
@@ -163,7 +163,7 @@
   "alt": [
    "s'avaient couchés",
    "se sont couché",
-   "se couchaient pas"
+   "s'étaient couché"
   ],
   "why": "Reflexivt verb: se + être i imparfait + particip med kongruens: ils s'étaient couchés.",
   "sv": "Barnen hade gått och lagt sig tidigt den kvällen."
@@ -175,7 +175,6 @@
   "q": "Je suis retourné dans le village où j'[étais né].",
   "alt": [
    "avais né",
-   "suis né",
    "naissais"
   ],
   "why": "Naître tar être. Födelsen ligger före återbesöket: j'étais né.",
@@ -187,11 +186,11 @@
   "rule": "pqp-recit",
   "q": "Hier, j'ai enfin vu le film dont tu m'[avais parlé].",
   "alt": [
-   "as parlé",
-   "parlais",
-   "parleras"
+   "avais parlée",
+   "étais parlé",
+   "avait parlé"
   ],
-  "why": "Du pratade om filmen före i går: plus-que-parfait.",
+  "why": "Du pratade om filmen före i går: plus-que-parfait med avoir, tu m'avais parlé. Dont ger ingen kongruens: parlé.",
   "sv": "I går såg jag äntligen filmen som du hade pratat om."
  },
  {
@@ -200,7 +199,7 @@
   "rule": "pqp-recit",
   "q": "Le professeur a rendu les copies que nous [avions écrites] la semaine précédente.",
   "alt": [
-   "écrivions",
+   "avions écrit",
    "avons écrit",
    "écrirons"
   ],
@@ -213,25 +212,25 @@
   "rule": "pqp-recit",
   "q": "Il m'a dit merci pour le cadeau que je lui [avais envoyé].",
   "alt": [
-   "envoyais",
-   "ai envoyé",
-   "enverrais"
+   "avais envoyée",
+   "avait envoyé",
+   "étais envoyé"
   ],
-  "why": "Presenten skickades före tacket: plus-que-parfait.",
+  "why": "Presenten skickades före tacket: plus-que-parfait med avoir. Que = le cadeau (maskulinum), så envoyé.",
   "sv": "Han tackade mig för presenten som jag hade skickat honom."
  },
  {
   "id": "pqp-018",
   "topic": "pqp",
   "rule": "pqp-recit",
-  "q": "Quand la police est arrivée, le voleur [avait disparu].",
+  "q": "Quand la police est arrivée, le voleur [avait disparu] depuis longtemps.",
   "alt": [
    "a disparu",
    "disparaissait",
    "disparaîtra"
   ],
   "why": "Tjuven var redan borta när polisen kom: plus-que-parfait.",
-  "sv": "När polisen kom hade tjuven försvunnit."
+  "sv": "När polisen kom hade tjuven för länge sedan försvunnit."
  },
  {
   "id": "pqp-019",
@@ -240,10 +239,10 @@
   "q": "Je n'ai pas reconnu Léa : elle [avait changé] de coiffure.",
   "alt": [
    "change",
-   "a changé",
+   "avait changée",
    "changera"
   ],
-  "why": "Förändringen hade skett före mötet: avait changé.",
+  "why": "Förändringen hade skett före mötet: avait changé. Changer de coiffure har inget direkt objekt, så participet böjs inte.",
   "sv": "Jag kände inte igen Léa: hon hade bytt frisyr."
  },
  {
@@ -252,11 +251,11 @@
   "rule": "pqp-recit",
   "q": "Nous étions contents parce que nous [avions gagné] le match.",
   "alt": [
-   "gagnions",
+   "avions gagnés",
    "gagnerons",
-   "avons gagné"
+   "étions gagné"
   ],
-  "why": "Segern kom före glädjen: plus-que-parfait.",
+  "why": "Segern kom före glädjen: plus-que-parfait med avoir, nous avions gagné. Objektet le match står efter, så ingen kongruens.",
   "sv": "Vi var glada eftersom vi hade vunnit matchen."
  },
  {
@@ -265,11 +264,11 @@
   "rule": "pqp-recit",
   "q": "Après la fête, on a trouvé le portable que Julie [avait perdu].",
   "alt": [
-   "perdait",
+   "avait perdue",
    "perdra",
-   "a perdu"
+   "était perdu"
   ],
-  "why": "Julie tappade mobilen före fyndet: avait perdu.",
+  "why": "Julie tappade mobilen före fyndet: avait perdu. Que = le portable (maskulinum), så perdu.",
   "sv": "Efter festen hittade vi mobilen som Julie hade tappat."
  },
  {
@@ -278,11 +277,11 @@
   "rule": "pqp-recit",
   "q": "Le jour du mariage, il pleuvait. Heureusement, ils [avaient loué] une grande tente.",
   "alt": [
-   "louaient",
+   "avaient louée",
    "loueront",
-   "ont loué"
+   "étaient loués"
   ],
-  "why": "Tältet var hyrt i förväg: plus-que-parfait.",
+  "why": "Tältet var hyrt i förväg: plus-que-parfait med avoir. Objektet une grande tente står efter, så louer böjs inte.",
   "sv": "På bröllopsdagen regnade det. Som tur var hade de hyrt ett stort tält."
  }
 ]

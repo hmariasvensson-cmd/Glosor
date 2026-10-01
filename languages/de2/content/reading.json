@@ -158,11 +158,6 @@
     "sv": "fotbollsmatch",
     "g": "n"
    },
-   "in": {
-    "t": "in",
-    "sv": "i, till (länder med artikel)",
-    "g": ""
-   },
    "lange": {
     "t": "lange",
     "sv": "länge",
@@ -174,8 +169,8 @@
     "g": ""
    },
    "nach": {
-    "t": "nach",
-    "sv": "till (länder och städer)",
+    "t": "nach Hause",
+    "sv": "hem",
     "g": ""
    },
    "nass": {
@@ -353,8 +348,8 @@
     "g": ""
    },
    "auf": {
-    "t": "auf",
-    "sv": "på, upp på",
+    "t": "sich freuen auf",
+    "sv": "se fram emot",
     "g": ""
    },
    "bar": {
@@ -408,8 +403,8 @@
     "g": ""
    },
    "zu": {
-    "t": "zu",
-    "sv": "till (personer och platser)",
+    "t": "bis zu",
+    "sv": "upp till",
     "g": ""
    },
    "öffnungszeiten": {
@@ -443,7 +438,7 @@
    },
    {
     "fr": "Am Sonntag bleibt es sonnig und warm. Aber am Abend kommen Wolken, und in der Nacht gibt es Gewitter mit Blitz und Donner.",
-    "sv": "På söndagen fortsätter det att vara soligt och varmt. Men på kvällen kommer moln, och i natt blir det åska med blixtar."
+    "sv": "På söndagen fortsätter det att vara soligt och varmt. Men på kvällen kommer moln, och under natten blir det åskväder med blixt och dunder."
    },
    {
     "fr": "Tipps bei Hitze: Trinken Sie viel Wasser. Vergessen Sie die Sonnencreme nicht. Bleiben Sie mittags drinnen, denn dann ist die Sonne am stärksten.",
@@ -570,7 +565,7 @@
    },
    "bei": {
     "t": "bei",
-    "sv": "hos",
+    "sv": "vid, när det är",
     "g": ""
    },
    "blitz": {
@@ -603,14 +598,9 @@
     "sv": "hetta, värme",
     "g": "f"
    },
-   "in": {
-    "t": "in",
-    "sv": "i, till (länder med artikel)",
-    "g": ""
-   },
    "nach": {
     "t": "nach",
-    "sv": "till (länder och städer)",
+    "sv": "efter",
     "g": ""
    },
    "nächste": {
@@ -629,8 +619,8 @@
     "g": "f"
    },
    "zu": {
-    "t": "zu",
-    "sv": "till (personer och platser)",
+    "t": "bis zu",
+    "sv": "upp till",
     "g": ""
    },
    "innenstadt": {
@@ -683,8 +673,8 @@
     "sv": "Har du feber över 39 grader eller mår du inte bättre efter tre dagar? Gå då till läkaren."
    },
    {
-    "fr": "Neu bei uns: Mückenspray für den Sommer und Tests für Zecken. Fragen Sie unsere Apothekerin!",
-    "sv": "Nytt hos oss: myggspray för sommaren och tester för fästingar. Fråga vår apotekare!"
+    "fr": "Neu bei uns: Mückenspray für den Sommer und Zeckenzangen. Fragen Sie unsere Apothekerin!",
+    "sv": "Nytt hos oss: myggspray för sommaren och fästingplockare. Fråga vår apotekare!"
    },
    {
     "fr": "Wir wünschen Ihnen gute Besserung!",
@@ -812,24 +802,19 @@
     "sv": "läkare",
     "g": "m"
    },
-   "an": {
-    "t": "an",
-    "sv": "vid, till (vatten)",
-    "g": ""
-   },
    "apothekerin": {
     "t": "die Apothekerin (-nen)",
     "sv": "apotekare (kvinna)",
     "g": "f"
    },
    "aus": {
-    "t": "aus",
-    "sv": "från, ur",
+    "t": "sich ausruhen",
+    "sv": "vila sig",
     "g": ""
    },
    "bei": {
     "t": "bei",
-    "sv": "hos",
+    "sv": "vid, mot; hos",
     "g": ""
    },
    "fühlen": {
@@ -843,18 +828,13 @@
     "g": "m"
    },
    "ihnen": {
-    "t": "ihnen",
-    "sv": "dem (dativ)",
-    "g": ""
-   },
-   "in": {
-    "t": "in",
-    "sv": "i, till (länder med artikel)",
+    "t": "Ihnen",
+    "sv": "er (artigt, dativ)",
     "g": ""
    },
    "nach": {
     "t": "nach",
-    "sv": "till (länder och städer)",
+    "sv": "efter",
     "g": ""
    },
    "nasenspray": {
@@ -878,14 +858,19 @@
     "g": ""
    },
    "zu": {
-    "t": "zu",
-    "sv": "till (personer och platser)",
+    "t": "zu Hause",
+    "sv": "hemma",
     "g": ""
    },
    "öffnungszeiten": {
     "t": "die Öffnungszeiten (pl)",
     "sv": "öppettider",
     "g": "pl"
+   },
+   "zeckenzangen": {
+    "t": "die Zeckenzange (-n)",
+    "sv": "fästingplockare",
+    "g": "f"
    }
   }
  },
@@ -1058,7 +1043,7 @@
    },
    "uns": {
     "t": "uns",
-    "sv": "oss",
+    "sv": "oss; varandra",
     "g": ""
    }
   }
@@ -1216,13 +1201,13 @@
     "g": ""
    },
    "an": {
-    "t": "an",
-    "sv": "vid, till (vatten)",
+    "t": "sich anziehen",
+    "sv": "klä på sig",
     "g": ""
    },
    "auf": {
     "t": "auf",
-    "sv": "på, upp på",
+    "sv": "på; sich freuen auf = se fram emot",
     "g": ""
    },
    "basteln": {
@@ -1236,8 +1221,8 @@
     "g": "m"
    },
    "ihr": {
-    "t": "ihr",
-    "sv": "henne (dativ)",
+    "t": "Ihr",
+    "sv": "er, ert (artigt)",
     "g": ""
    },
    "kinderpunsch": {
@@ -1252,7 +1237,7 @@
    },
    "nach": {
     "t": "nach",
-    "sv": "till (länder och städer)",
+    "sv": "efter",
     "g": ""
    },
    "sonnenschein": {
@@ -1422,7 +1407,7 @@
    },
    "an": {
     "t": "an",
-    "sv": "vid, till (vatten)",
+    "sv": "ankomst (i tidtabell)",
     "g": ""
    },
    "auf": {
@@ -1433,11 +1418,6 @@
    "danach": {
     "t": "danach",
     "sv": "efter det, sedan",
-    "g": ""
-   },
-   "in": {
-    "t": "in",
-    "sv": "i, till (länder med artikel)",
     "g": ""
    },
    "rückfahrt": {
@@ -1641,11 +1621,6 @@
     "t": "das Goethe-Institut (-e)",
     "sv": "Goethe-institutet",
     "g": "n"
-   },
-   "in": {
-    "t": "in",
-    "sv": "i, till (länder med artikel)",
-    "g": ""
    },
    "italien": {
     "t": "Italien",

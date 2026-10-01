@@ -1,13 +1,13 @@
 {
  "name": "Goethe-Zertifikat C1 (och TestDaF)",
  "pass": 60,
- "note": "Övningar i provets stil, skrivna för appen. Inte officiellt material. Goethe C1 har fyra moduler: Lesen (65 min), Hören (ca 40 min), Schreiben (80 min) och Sprechen (ca 15 min i par). Varje modul är godkänd från 60 procent. Några uppgifter följer TestDaF (argumenterande text och grafikbeskrivning).",
+ "note": "Övningar i provets stil, skrivna för appen. Inte officiellt material. Goethe C1 har fyra moduler: Lesen (70 min), Hören (ca 40 min), Schreiben (80 min) och Sprechen (ca 15 min i par). Varje modul är godkänd från 60 procent. Några uppgifter följer TestDaF (argumenterande text och grafikbeskrivning).",
  "parts": [
   {
    "id": "lesen",
    "name": "Lesen",
    "sv": "Läsa",
-   "time": 65
+   "time": 70
   },
   {
    "id": "hoeren",
@@ -265,7 +265,7 @@
       "Trotzdem"
      ],
      "a": 0,
-     "why": "Da (eftersom) inleder en bisats med verbet sist. Denn och trotzdem kräver rak ordföljd."
+     "why": "Da (eftersom) inleder en bisats med verbet sist. Denn kräver rak ordföljd i en huvudsats och trotzdem omvänd ordföljd."
     },
     {
      "opts": [
@@ -377,7 +377,7 @@
     },
     {
      "fr": "Heute gibt es Stimmen, die diese Strenge kritisieren. Sie argumentieren, sie schrecke junge Menschen ab. Einige Orchester experimentieren deshalb mit lockeren Formaten, in denen Applaus zwischen den Sätzen ausdrücklich erlaubt ist.",
-     "sv": "I dag finns röster som kritiserar den här stränghet. De hävdar att den skrämmer bort unga människor. Några orkestrar experimenterar därför med friare format där applåd mellan satserna uttryckligen är tillåten."
+     "sv": "I dag finns röster som kritiserar den här strängheten. De hävdar att den skrämmer bort unga människor. Några orkestrar experimenterar därför med friare format där applåd mellan satserna uttryckligen är tillåten."
     }
    ],
    "qs": [
@@ -866,7 +866,7 @@
    },
    "task": "Beschreiben Sie die Grafik: Wie kommen Studierende zur Hochschule, und was hat sich zwischen 2015 und 2025 verändert? Vergleichen Sie die Verkehrsmittel und nennen Sie mögliche Gründe für die Veränderungen. Schreiben Sie 100–150 Wörter.",
    "criteria": ["Beschreibung der Grafik", "Vergleich und Gründe", "Kohärenz", "Wortschatz und Strukturen"],
-   "model": "Die Grafik zeigt, mit welchen Verkehrsmitteln Studierende 2015 und 2025 zur Hochschule kamen. Am häufigsten werden in beiden Jahren Bus und Bahn genutzt: Ihr Anteil ist von 41 auf 45 Prozent leicht gestiegen. Deutlich zugenommen hat das Fahrrad, nämlich von 24 auf 31 Prozent. Beim Auto ist dagegen ein starker Rückgang zu beobachten: Während 2015 noch ein Viertel der Studierenden mit dem Auto fuhr, waren es 2025 nur noch 14 Prozent. Der Anteil derjenigen, die zu Fuß gehen, ist mit 10 Prozent gleich geblieben. Für diese Entwicklung gibt es mehrere mögliche Gründe. Zum einen sind Semestertickets für Bus und Bahn günstig, zum anderen bauen viele Städte ihre Radwege aus. Außerdem sind Parkplätze an Hochschulen knapp und teuer geworden. Nicht zuletzt spielt vermutlich auch der Klimaschutz für junge Menschen eine größere Rolle.",
+   "model": "Die Grafik zeigt, mit welchen Verkehrsmitteln Studierende 2015 und 2025 zur Hochschule kamen. Am häufigsten wurden in beiden Jahren Bus und Bahn genutzt: Ihr Anteil ist von 41 auf 45 Prozent leicht gestiegen. Deutlich zugenommen hat das Fahrrad, nämlich von 24 auf 31 Prozent. Beim Auto ist dagegen ein starker Rückgang zu beobachten: Während 2015 noch ein Viertel der Studierenden mit dem Auto fuhr, waren es 2025 nur noch 14 Prozent. Der Anteil derjenigen, die zu Fuß gehen, ist mit 10 Prozent gleich geblieben. Für diese Entwicklung gibt es mehrere mögliche Gründe. Zum einen sind Semestertickets für Bus und Bahn günstig, zum anderen bauen viele Städte ihre Radwege aus. Außerdem sind Parkplätze an Hochschulen knapp und teuer geworden. Nicht zuletzt spielt vermutlich auch der Klimaschutz für junge Menschen eine größere Rolle.",
    "modelSv": "Grafiken visar med vilka färdmedel studenter tog sig till högskolan 2015 och 2025. Buss och tåg är vanligast båda åren och har ökat något, från 41 till 45 procent. Cykeln har ökat tydligt, från 24 till 31 procent. Bilen har däremot minskat kraftigt, från en fjärdedel till 14 procent. Andelen som går är oförändrad, 10 procent. Möjliga skäl: billiga terminskort, fler cykelbanor, dyra och få parkeringsplatser och att klimatet är viktigare för unga."
   },
   {

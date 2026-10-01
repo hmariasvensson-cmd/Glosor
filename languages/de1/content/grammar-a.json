@@ -302,7 +302,7 @@
 "id": "sein-haben-024",
 "topic": "sein-haben",
 "rule": "sein-haben",
-"q": "Ihr [habt] einen Test heute.",
+"q": "Ihr [habt] heute einen Test.",
 "alt": [
 "seid",
 "haben",
@@ -562,14 +562,14 @@
 "id": "pres-020",
 "topic": "pres",
 "rule": "reg-e",
-"q": "Sie [findet] den Film super.",
+"q": "Lisa [findet] den Film super.",
 "alt": [
 "findt",
 "finden",
 "findest"
 ],
-"why": "Stammen slutar på d: sie findet.",
-"sv": "Hon tycker att filmen är toppen."
+"why": "Stammen slutar på d: Lisa (sie) findet.",
+"sv": "Lisa tycker att filmen är toppen."
 },
 {
 "id": "pres-021",
@@ -666,14 +666,14 @@
 "id": "fragen-004",
 "topic": "fragen",
 "rule": "w-frage",
-"q": "[Was] machst du heute?",
+"q": "[Was] machst du am Wochenende?",
 "alt": [
 "Wer",
 "Wo",
 "Wie"
 ],
 "why": "Was = vad (en sak eller aktivitet).",
-"sv": "Vad gör du i dag?"
+"sv": "Vad gör du i helgen?"
 },
 {
 "id": "fragen-005",
@@ -744,14 +744,14 @@
 "id": "fragen-010",
 "topic": "fragen",
 "rule": "w-frage",
-"q": "[Wo] ist die Post?",
+"q": "[Wo] ist die Post? – Neben der Bank.",
 "alt": [
 "Wohin",
 "Woher",
 "Wann"
 ],
 "why": "Wo = var något finns.",
-"sv": "Var ligger posten?"
+"sv": "Var ligger posten? – Bredvid banken."
 },
 {
 "id": "fragen-011",
@@ -1082,14 +1082,14 @@
 "id": "genus-016",
 "topic": "genus",
 "rule": "gen-indef",
-"q": "Das ist [eine] Idee!",
+"q": "Das ist [eine] gute Idee!",
 "alt": [
 "ein",
 "einen",
 "eines"
 ],
 "why": "Idee är femininum → eine.",
-"sv": "Det är en idé!"
+"sv": "Det är en bra idé!"
 },
 {
 "id": "genus-017",
@@ -1173,14 +1173,14 @@
 "id": "poss-001",
 "topic": "poss",
 "rule": "poss-nom",
-"q": "Das ist [mein] Bruder.",
+"q": "Das ist [mein] Onkel Peter.",
 "alt": [
 "meine",
 "meinen",
 "mir"
 ],
-"why": "Bruder är maskulinum → mein (som ein).",
-"sv": "Det är min bror."
+"why": "Onkel är maskulinum → mein (som ein).",
+"sv": "Det här är min morbror Peter."
 },
 {
 "id": "poss-002",
@@ -1292,11 +1292,11 @@
 "rule": "poss-wer",
 "q": "Lukas hat eine Schwester. [Seine] Schwester heißt Anna.",
 "alt": [
-"Ihre",
-"Meine",
-"Sein"
+"Sein",
+"Seinen",
+"Seiner"
 ],
-"why": "Lukas är en han → sein. Schwester är femininum → seine.",
+"why": "Lukas är en han → sein-. Schwester är femininum → seine.",
 "sv": "Lukas har en syster. Hans syster heter Anna."
 },
 {
@@ -1318,9 +1318,9 @@
 "rule": "poss-wer",
 "q": "Herr Weber und [seine] Frau wohnen hier.",
 "alt": [
-"ihre",
+"sein",
 "seiner",
-"sein"
+"seinen"
 ],
 "why": "Herr Weber är en han → sein-; Frau är femininum → seine.",
 "sv": "Herr Weber och hans fru bor här."
@@ -1346,7 +1346,7 @@
 "alt": [
 "seine",
 "ihr",
-"unsere"
+"ihren"
 ],
 "why": "Tom und Ben = de → ihr-. Oma är femininum → ihre.",
 "sv": "Tom och Ben hälsar på sin mormor."
@@ -1394,14 +1394,14 @@
 "id": "poss-018",
 "topic": "poss",
 "rule": "poss-akk",
-"q": "Ich zeige dir [mein] Zimmer.",
+"q": "Ich zeige dir [mein] Fahrrad.",
 "alt": [
 "meinen",
 "meine",
 "meiner"
 ],
-"why": "Zimmer är neutrum: mein även i ackusativ.",
-"sv": "Jag visar dig mitt rum."
+"why": "Fahrrad är neutrum: mein även i ackusativ.",
+"sv": "Jag visar dig min cykel."
 },
 {
 "id": "poss-019",
@@ -1472,7 +1472,7 @@
 "id": "plural-003",
 "topic": "plural",
 "rule": "pl-s",
-"q": "Wir haben drei [Tests] heute.",
+"q": "Wir haben heute drei [Tests].",
 "alt": [
 "Teste",
 "Test",
@@ -1918,7 +1918,7 @@
 "alt": [
 "keine",
 "kein",
-"nicht"
+"keines"
 ],
 "why": "Kaffee (der) utan artikel → keinen i ackusativ.",
 "sv": "Han dricker inte kaffe."
@@ -1970,7 +1970,7 @@
 "alt": [
 "keinen",
 "keine",
-"nicht"
+"keines"
 ],
 "why": "Fleisch (das) utan artikel → kein.",
 "sv": "Jag äter inte kött."
@@ -2007,9 +2007,9 @@
 "rule": "kein",
 "q": "Er ist [kein] Lehrer.",
 "alt": [
-"nicht",
 "keinen",
-"keine"
+"keine",
+"keiner"
 ],
 "why": "Ein Lehrer → kein Lehrer (nominativ efter ist).",
 "sv": "Han är ingen lärare."
@@ -2500,14 +2500,14 @@
 "id": "akk-013",
 "topic": "akk",
 "rule": "akk-def",
-"q": "Ich finde [das] Buch super.",
+"q": "Ich finde [das] Foto toll.",
 "alt": [
 "den",
 "der",
 "dem"
 ],
 "why": "Neutrum: das även i ackusativ.",
-"sv": "Jag tycker att boken är toppen."
+"sv": "Jag tycker att fotot är jättebra."
 },
 {
 "id": "akk-014",
@@ -2565,14 +2565,14 @@
 "id": "akk-018",
 "topic": "akk",
 "rule": "akk-nom",
-"q": "Das ist [ein] Hund.",
+"q": "Das ist [ein] Apfel.",
 "alt": [
 "einen",
 "eine",
 "einem"
 ],
 "why": "Efter sein (ist) står nominativ, inte ackusativ → ein.",
-"sv": "Det är en hund."
+"sv": "Det är ett äpple."
 },
 {
 "id": "akk-019",
@@ -2879,9 +2879,9 @@
 "rule": "moegen",
 "q": "Ich [mag] Schokolade.",
 "alt": [
-"möchte",
 "mögen",
-"magst"
+"magst",
+"mögt"
 ],
 "why": "Mögen: ich mag = jag tycker om.",
 "sv": "Jag tycker om choklad."
@@ -2894,7 +2894,7 @@
 "alt": [
 "Mag",
 "Mögt",
-"Möchtest"
+"Mögen"
 ],
 "why": "Mögen: du magst.",
 "sv": "Tycker du om katter?"
@@ -2905,7 +2905,7 @@
 "rule": "moegen",
 "q": "Ich [möchte] ein Wasser, bitte.",
 "alt": [
-"mag",
+"möchtet",
 "möchtest",
 "möchten"
 ],
@@ -2919,8 +2919,8 @@
 "q": "Was [möchtest] du trinken?",
 "alt": [
 "möchte",
-"magst",
-"möchtet"
+"möchtet",
+"möchten"
 ],
 "why": "Du → möchtest.",
 "sv": "Vad vill du dricka?"
@@ -2933,7 +2933,7 @@
 "alt": [
 "möchtet",
 "möchtest",
-"mag"
+"möchten"
 ],
 "why": "Er → möchte (samma form som ich).",
 "sv": "Han skulle vilja ha ett te."

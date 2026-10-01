@@ -5,7 +5,7 @@
   "rule": "rem-reg",
   "q": "Nel 1861 Vittorio Emanuele II [diventò] re d'Italia.",
   "alt": [
-   "diventava",
+   "diventé",
    "diventì",
    "è diventando"
   ],
@@ -18,7 +18,7 @@
   "rule": "rem-reg",
   "q": "I Mille [partirono] da Quarto nel maggio 1860.",
   "alt": [
-   "partivano",
+   "partirsero",
    "partettero",
    "partarono"
   ],
@@ -32,7 +32,7 @@
   "q": "Dopo la battaglia i soldati [tornarono] a casa.",
   "alt": [
    "tornerono",
-   "tornavano",
+   "tornirono",
    "tornorono"
   ],
   "why": "-are-verb, loro: -arono (tornarono).",
@@ -45,7 +45,7 @@
   "q": "Pirandello [nacque] ad Agrigento nel 1867.",
   "alt": [
    "nascé",
-   "nasceva",
+   "nascì",
    "nascette"
   ],
   "why": "Nascere är oregelbundet: nacqui, nacque, nacquero.",
@@ -58,7 +58,7 @@
   "q": "Italo Svevo [scrisse] La coscienza di Zeno nel 1923.",
   "alt": [
    "scrivé",
-   "scriveva",
+   "scrisso",
    "scrivette"
   ],
   "why": "Scrivere: scrissi, scrisse, scrissero (1-3-3-mönstret).",
@@ -72,7 +72,7 @@
   "alt": [
    "avé",
    "avette",
-   "aveva avuto"
+   "ebbi"
   ],
   "why": "Avere i passato remoto: ebbi, avesti, ebbe, avemmo, aveste, ebbero.",
   "sv": "Grazia Deledda fick Nobelpriset 1926."
@@ -83,7 +83,7 @@
   "rule": "rem-irr",
   "q": "Quando lo vide, la ragazza [fu] presa dal panico.",
   "alt": [
-   "era stata",
+   "fue",
    "fui",
    "fosse"
   ],
@@ -97,7 +97,7 @@
   "q": "Verdi [compose] il Nabucco a ventotto anni.",
   "alt": [
    "componé",
-   "componeva",
+   "compuse",
    "composse"
   ],
   "why": "Comporre böjs som porre: composi, compose, composero.",
@@ -110,7 +110,7 @@
   "q": "Il vecchio [disse] poche parole e se ne andò.",
   "alt": [
    "dicé",
-   "diceva",
+   "dicette",
    "dissé"
   ],
   "why": "Dire: dissi, dicesti, disse, dicemmo, diceste, dissero.",
@@ -136,7 +136,7 @@
   "q": "Galileo [fece] le sue osservazioni con un telescopio.",
   "alt": [
    "facette",
-   "faceva",
+   "fecette",
    "fecé"
   ],
   "why": "Fare: feci, facesti, fece, facemmo, faceste, fecero.",
@@ -149,7 +149,7 @@
   "q": "Nel 1946 gli italiani [scelsero] la repubblica.",
   "alt": [
    "sceglierono",
-   "sceglievano",
+   "scegliettero",
    "scelserono"
   ],
   "why": "Scegliere: scelsi, scelse, scelsero.",
@@ -189,7 +189,7 @@
   "alt": [
    "fossimo",
    "fumimo",
-   "eravamo stati"
+   "fossimo stati"
   ],
   "why": "Essere, noi: fummo. Fossimo är congiuntivo imperfetto.",
   "sv": "Vi var de första som kom fram."
@@ -202,7 +202,7 @@
   "alt": [
    "volé",
    "volse",
-   "voleva"
+   "vollò"
   ],
   "why": "Volere: volli, volle, vollero.",
   "sv": "Kungen ville träffa målaren."
@@ -215,7 +215,7 @@
   "alt": [
    "sapé",
    "sapette",
-   "sapeva"
+   "sappe"
   ],
   "why": "Sapere: seppi, seppe, seppero. Passato remoto av sapere betyder ofta 'fick veta'.",
   "sv": "När hon fick veta nyheten brast hon i gråt."
@@ -227,7 +227,7 @@
   "q": "Caravaggio [morì] nel 1610 a Porto Ercole.",
   "alt": [
    "morse",
-   "moriva",
+   "morii",
    "morette"
   ],
   "why": "Morire är regelbundet i passato remoto: morii, morì, morirono.",
@@ -240,7 +240,7 @@
   "q": "Il pubblico [rimase] in silenzio fino alla fine.",
   "alt": [
    "rimanette",
-   "rimaneva",
+   "rimanse",
    "rimanì"
   ],
   "why": "Rimanere: rimasi, rimase, rimasero.",
@@ -254,7 +254,7 @@
   "alt": [
    "costrusse",
    "costruette",
-   "costruiva"
+   "costruirono"
   ],
   "why": "Costruire är regelbundet (-ire): costruii, costruì, costruirono.",
   "sv": "Stradivari byggde mer än tusen instrument."
@@ -266,7 +266,7 @@
   "q": "Dante [morì] a Ravenna nel 1321.",
   "alt": [
    "morse",
-   "moriva",
+   "morisse",
    "morirà"
   ],
   "why": "I en biografi om det avlägsna förflutna används passato remoto för en avslutad händelse.",
@@ -304,11 +304,15 @@
   "rule": "trap-rem",
   "q": "Dopo che [ebbe finito] di parlare, il ministro lasciò la sala.",
   "alt": [
-   "aveva finito",
-   "finì",
-   "ha finito"
+   "ha finito",
+   "avrà finito",
+   "finirebbe"
   ],
-  "why": "Trapassato remoto (ebbe + particip) används efter dopo che, appena, quando när huvudsatsen står i passato remoto.",
+  "acc": [
+   "aveva finito",
+   "finì"
+  ],
+  "why": "Efter dopo che, appena, quando kan man använda trapassato remoto (ebbe + particip) när huvudsatsen står i passato remoto. Aveva finito och finì är också korrekta.",
   "sv": "När ministern hade talat färdigt lämnade han salen."
  },
  {
@@ -317,9 +321,13 @@
   "rule": "trap-rem",
   "q": "Appena [fu arrivato] a Roma, cercò un alloggio.",
   "alt": [
-   "era arrivato",
+   "sarà arrivato",
    "arrivava",
    "è arrivato"
+  ],
+  "acc": [
+   "arrivò",
+   "era arrivato"
   ],
   "why": "Appena + trapassato remoto, huvudsatsen i passato remoto (cercò). Arrivare tar essere: fu arrivato.",
   "sv": "Så snart han hade kommit till Rom letade han efter ett boende."
@@ -334,6 +342,9 @@
    "sii",
    "siano"
   ],
+  "acc": [
+   "è"
+  ],
   "why": "Indirekt fråga efter non so se: congiuntivo i formell stil. Huvudsatsen i presens → congiuntivo presente/passato.",
   "sv": "Jag vet inte om Marco redan har åkt."
  },
@@ -347,6 +358,9 @@
    "pensando",
    "pensate"
   ],
+  "acc": [
+   "pensano"
+  ],
   "why": "Mi chiedo + indirekt fråga: congiuntivo presente (pensino). I tal hörs också indikativ, men i skrift föredras congiuntivo.",
   "sv": "Jag undrar vad väljarna egentligen tycker."
  },
@@ -357,8 +371,11 @@
   "q": "Il professore ci domandò chi [avesse] scritto la relazione.",
   "alt": [
    "abbia",
-   "aveva",
+   "avessi",
    "ha"
+  ],
+  "acc": [
+   "aveva"
   ],
   "why": "Huvudsatsen i dåtid (domandò) → congiuntivo imperfetto eller trapassato: avesse scritto.",
   "sv": "Professorn frågade oss vem som hade skrivit rapporten."
@@ -373,6 +390,9 @@
    "sia stata",
    "sarà"
   ],
+  "acc": [
+   "era"
+  ],
   "why": "Non capivo perché + congiuntivo imperfetto (samtidighet i dåtid).",
   "sv": "Jag förstod inte varför hon var så arg."
  },
@@ -385,6 +405,9 @@
    "si trovino",
    "si trovasti",
    "si trovi stato"
+  ],
+  "acc": [
+   "si trova"
   ],
   "why": "Nessuno sa dove: indirekt fråga med tvivel → congiuntivo presente.",
   "sv": "Ingen vet var originalmanuskriptet finns."
@@ -399,6 +422,9 @@
    "fossero",
    "sii"
   ],
+  "acc": [
+   "è"
+  ],
   "why": "Discutere se + indirekt fråga: congiuntivo presente i formell text.",
   "sv": "Forskarna diskuterar om brevet är äkta."
  },
@@ -408,9 +434,9 @@
   "rule": "cong-ind",
   "q": "Ti ho chiesto quando [saresti arrivato], non perché.",
   "alt": [
-   "arrivi",
-   "arriverai",
-   "sei arrivato"
+   "arriveresti",
+   "arrivando",
+   "arrivato"
   ],
   "why": "Framtid i det förflutna i en indirekt fråga: condizionale passato (saresti arrivato).",
   "sv": "Jag frågade dig när du skulle komma, inte varför."
@@ -425,6 +451,9 @@
    "debba",
    "dovrà"
   ],
+  "acc": [
+   "doveva"
+  ],
   "why": "Non era chiaro + indirekt fråga i dåtid → congiuntivo imperfetto (dovesse).",
   "sv": "Det var oklart vem som skulle betala kostnaderna."
  },
@@ -434,9 +463,12 @@
   "rule": "cong-ind",
   "q": "Vorrei sapere come [abbiate] ottenuto questi dati.",
   "alt": [
-   "avrete",
+   "aviate",
    "abbiate avuto",
-   "aviate"
+   "abbiano avuto"
+  ],
+  "acc": [
+   "avete"
   ],
   "why": "Vorrei sapere + indirekt fråga om något redan gjort: congiuntivo passato (abbiate ottenuto).",
   "sv": "Jag skulle vilja veta hur ni har fått fram de här uppgifterna."
@@ -451,6 +483,9 @@
    "fossi",
    "sarò"
   ],
+  "acc": [
+   "è"
+  ],
   "why": "Mi domando se: congiuntivo presente (sia). Fossi är fel person och tid.",
   "sv": "Jag undrar om det inte är bättre att vänta."
  },
@@ -460,9 +495,12 @@
   "rule": "cong-sup",
   "q": "È il libro più bello che io [abbia] mai letto.",
   "alt": [
-   "ho",
+   "abbi",
    "avevo",
    "avrò"
+  ],
+  "acc": [
+   "ho"
   ],
   "why": "Efter superlativ + che används congiuntivo: il più bello che abbia mai letto.",
   "sv": "Det är den vackraste bok jag någonsin har läst."
@@ -473,8 +511,8 @@
   "rule": "cong-sup",
   "q": "Era la città più affascinante che [avessimo] mai visitato.",
   "alt": [
-   "abbiamo",
-   "avevamo",
+   "abbiate",
+   "avremmo",
    "abbiamo avuto"
   ],
   "why": "Superlativ i dåtid (era) → congiuntivo trapassato: avessimo visitato.",
@@ -489,6 +527,9 @@
    "capisse",
    "capiscano",
    "capiresti"
+  ],
+  "acc": [
+   "capisce"
   ],
   "why": "L'unico/l'unica che + congiuntivo, som efter superlativ.",
   "sv": "Hon är den enda som verkligen förstår mig."
@@ -515,9 +556,9 @@
   "rule": "cong-sup",
   "q": "Fu la decisione più difficile che [avesse] mai preso.",
   "alt": [
-   "abbia",
-   "aveva",
-   "ebbe"
+   "ebbe",
+   "avrebbe",
+   "avesse avuto"
   ],
   "why": "Superlativ i passato remoto → congiuntivo trapassato.",
   "sv": "Det var det svåraste beslut han någonsin hade fattat."
@@ -528,9 +569,12 @@
   "rule": "cong-sup",
   "q": "Cerco un appartamento che [abbia] due camere e un balcone.",
   "alt": [
-   "ha",
+   "abbiano",
    "avrebbe",
    "avesse"
+  ],
+  "acc": [
+   "ha"
   ],
   "why": "Relativsats om något man söker men inte vet om det finns: congiuntivo.",
   "sv": "Jag söker en lägenhet som har två rum och en balkong."
@@ -545,6 +589,9 @@
    "sappiano",
    "sapesse"
   ],
+  "acc": [
+   "sa"
+  ],
   "why": "Non c'è nessuno che + congiuntivo: det nekade gör relativsatsen hypotetisk.",
   "sv": "Det finns ingen som kan svara."
  },
@@ -558,6 +605,9 @@
    "aveva",
    "ebbe"
   ],
+  "acc": [
+   "ha"
+  ],
   "why": "Även efter meno + adjektiv (negativ superlativ) används congiuntivo.",
   "sv": "Det är den minst spelade opera som Rossini har skrivit."
  },
@@ -569,6 +619,9 @@
   "alt": [
    "vuole",
    "volesse",
+   "vorrebbe"
+  ],
+  "acc": [
    "vorrà"
   ],
   "why": "Chiunque (vem som än) tar congiuntivo.",
@@ -581,7 +634,7 @@
   "q": "Qualunque cosa tu [dica], non cambierò idea.",
   "alt": [
    "dici",
-   "dirai",
+   "diresti",
    "dicessi"
   ],
   "why": "Qualunque cosa + congiuntivo.",
@@ -814,7 +867,7 @@
   "rule": "se-parl",
   "q": "Se ci [fossimo organizzati] meglio, non avremmo perso il treno.",
   "alt": [
-   "organizzavamo",
+   "fossimo organizzato",
    "saremmo organizzati",
    "siamo organizzati"
   ],
@@ -827,7 +880,7 @@
   "rule": "se-parl",
   "q": "Magari [avessi] più tempo per leggere!",
   "alt": [
-   "ho",
+   "abbi",
    "abbia",
    "avrei"
   ],
@@ -840,7 +893,7 @@
   "rule": "se-parl",
   "q": "Se [avessi studiato] di più, ora saprei rispondere.",
   "alt": [
-   "studiavo",
+   "studiato",
    "avrei studiato",
    "studierei"
   ],
@@ -919,7 +972,7 @@
   "q": "Penso di [avere] ragione.",
   "alt": [
    "che ho",
-   "che abbia",
+   "che avere",
    "avendo"
   ],
   "why": "Samma subjekt i båda satserna → di + infinito i stället för che + congiuntivo.",
@@ -971,7 +1024,7 @@
   "q": "[Leggendo] i giornali, ci si fa un'idea della situazione.",
   "alt": [
    "Letto",
-   "A leggere",
+   "Leggente",
    "Lettura"
   ],
   "why": "Gerundio för medel eller sätt: genom att läsa.",
@@ -996,7 +1049,7 @@
   "rule": "impl-ger",
   "q": "[Avendo finito] gli esami, partì per le vacanze.",
   "alt": [
-   "Finendo",
+   "Avuto finito",
    "Finito avendo",
    "Aver finito"
   ],
@@ -1035,7 +1088,7 @@
   "rule": "impl-ger",
   "q": "[Essendo arrivati] tardi, trovammo la porta chiusa.",
   "alt": [
-   "Arrivando",
+   "Avendo arrivati",
    "Stati arrivati",
    "Arrivato"
   ],
@@ -1049,7 +1102,7 @@
   "q": "[Finita] la lezione, gli studenti uscirono.",
   "alt": [
    "Finito",
-   "Finendo",
+   "Finiti",
    "Finire"
   ],
   "why": "Particip som bisats (participio assoluto): participet böjs efter substantivet (la lezione → finita).",
@@ -1062,7 +1115,7 @@
   "q": "[Letti] i documenti, il giudice emise la sentenza.",
   "alt": [
    "Letto",
-   "Leggendo",
+   "Letta",
    "Lette"
   ],
   "why": "Participio assoluto böjs efter objektet: i documenti → letti.",
@@ -1075,7 +1128,7 @@
   "q": "[Arrivata] a Roma, la delegazione incontrò il Presidente.",
   "alt": [
    "Arrivato",
-   "Arrivando",
+   "Arrivate",
    "Arrivati"
   ],
   "why": "Med essere-verb böjs participet efter subjektet: la delegazione → arrivata.",
@@ -1101,7 +1154,7 @@
   "q": "[Approvata] la legge, il governo si dimise.",
   "alt": [
    "Approvato",
-   "Approvando",
+   "Approvate",
    "Approvati"
   ],
   "why": "Participio assoluto: la legge (f) → approvata.",
@@ -1113,8 +1166,8 @@
   "rule": "impl-part",
   "q": "[Considerati] i costi, abbiamo rinunciato al progetto.",
   "alt": [
-   "Considerato",
-   "Considerando",
+   "Considerata",
+   "Considerante",
    "Considerate"
   ],
   "why": "I costi (m pl) → considerati.",
@@ -1410,33 +1463,33 @@
   "id": "ordbild-020",
   "topic": "ordbild",
   "rule": "ob-pref",
-  "q": "Fare qualcosa in modo troppo semplice è [ipersemplificare].",
+  "q": "Un bambino troppo attivo è [iperattivo].",
   "alt": [
-   "iposemplificare",
-   "disemplificare",
-   "risemplificare"
+   "ipoattivo",
+   "disattivo",
+   "riattivo"
   ],
-  "why": "Iper- = över, för mycket; ipo- = under, för lite.",
-  "sv": "Att göra något alltför enkelt är att översimplifiera."
+  "why": "Iper- = över, för mycket (iperattivo, ipertensione); ipo- = under, för lite (ipotermia).",
+  "sv": "Ett barn som är alltför aktivt är hyperaktivt."
  },
  {
   "id": "ordbild-021",
   "topic": "ordbild",
   "rule": "ob-pref",
-  "q": "Un'azione che va oltre i confini nazionali è [sovranazionale].",
+  "q": "Un'organizzazione che sta al di sopra degli Stati nazionali è [sovranazionale].",
   "alt": [
    "sottonazionale",
    "internazionalità",
    "antinazionale"
   ],
   "why": "Sovra- = över: sovranazionale (överstatlig).",
-  "sv": "Något som går över nationsgränserna är överstatligt."
+  "sv": "En organisation som står över nationalstaterna är överstatlig."
  },
  {
   "id": "ordbild-022",
   "topic": "ordbild",
   "rule": "ob-suff",
-  "q": "Il sistema di parole usato dai burocrati è il [burocratese].",
+  "q": "Il linguaggio usato dai burocrati è il [burocratese].",
   "alt": [
    "burocratismo",
    "burocratità",
@@ -1605,14 +1658,14 @@
   "id": "discorso-013",
   "topic": "discorso",
   "rule": "dm-org",
-  "q": "[Infine], vorrei ringraziare tutti voi.",
+  "q": "E [infine], vorrei ringraziare tutti voi.",
   "alt": [
    "Innanzitutto",
    "Anzitutto",
    "Dapprima"
   ],
   "why": "Infine = slutligen, avslutar en uppräkning.",
-  "sv": "Slutligen vill jag tacka er alla."
+  "sv": "Och slutligen vill jag tacka er alla."
  },
  {
   "id": "discorso-014",
@@ -1750,8 +1803,8 @@
   "rule": "reg-form",
   "q": "Formellt: La [ringrazio] per la sua cortese risposta.",
   "alt": [
-   "ringrazi",
-   "ringraziamo",
+   "ringraziando",
+   "ringraziassi",
    "ti ringrazio"
   ],
   "why": "Artighetsformen Lei: La ringrazio (jag tackar er). Ti är du-form.",
@@ -1764,7 +1817,7 @@
   "q": "Formellt: [Resto] in attesa di un suo cortese riscontro.",
   "alt": [
    "Aspetto",
-   "Sto",
+   "Vado",
    "Faccio"
   ],
   "why": "Fast avslutningsfras i formella brev: Resto in attesa di un suo cortese riscontro.",
