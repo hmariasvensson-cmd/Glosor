@@ -2,6 +2,12 @@
 
 Punkter som har flyttats från [`BACKLOG.md`](BACKLOG.md) när de byggdes. **Referens** anger backloggens rubrik och prioritet. **Commit** anger var ändringen finns i git. **Publicerat** anger versionen av artefakten på https://claude.ai/artifact/YBQv8j4qXQQLuPwLAWt5mP.
 
+## 2026-10-01 (publicerat som version 34)
+
+| Referens | Vad som byggdes | Commit |
+|---|---|---|
+| Tyck till · elevens önskemål 2026-09-30 (*Tillbaka-knapp som alltid syns*) | Knappen "← Tillbaka" (`#topback`) ligger klistrig uppe till vänster på alla sidor utom startsidan och flikvyerna (syns när `#tabs` är dold). Den trycker på sidans egen knapp (`#quit`, `#back`, `#home`, `#kthome`), så ett pass pausas och sparas som vanligt. Test `SCENARIO_TOPBACK`. | se git log |
+
 ## 2026-09-30, del 2 (publicerat som version 33)
 
 | Referens | Vad som byggdes | Commit |

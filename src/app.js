@@ -567,6 +567,15 @@ function check(input,accepted,stripPron){
 /* ---------- Hjälpare ---------- */
 const $=s=>document.querySelector(s);
 const app=$("#app");
+/* Tillbaka uppe till vänster (elevens önskemål 2026-09-30): syns när flikarna är dolda, alltså på alla sidor utom
+   startsidan och flikvyerna, och trycker på sidans egen knapp längst ner, så att ett pass sparas som vanligt. */
+const TOPBACK=["#quit","#back","#home","#kthome"];
+$("#topback").onclick=()=>{
+  const b=TOPBACK.map(id=>app.querySelector("button"+id)).find(b=>b&&!b.disabled);
+  if(b) b.click(); else { stopSpeech(); renderStart(); }
+  window.scrollTo(0,0);
+};
+new MutationObserver(()=>{ $("#topback").hidden=!$("#tabs").hidden; }).observe($("#tabs"),{attributes:true,attributeFilter:["hidden"]});
 // Text från datafilerna läggs alltid in i sidan med esc (ren text) eller safeHtml (text med lite formatering).
 const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 /* Fält som får innehålla lite HTML (ursprung och ordagrant i words.txt, t.ex. <b>accentus</b>): bara taggarna

@@ -1362,6 +1362,37 @@ appReady().then(async()=>{ try{
 </script>"""
 
 # Flamman i sidhuvudet (elevens önskemål 2026-09-30): dold utan svit, urblekt utan dagens pass, tänd med dagens pass
+SCENARIO_TOPBACK = r"""<script>
+const out=[]; const q=s=>document.querySelector(s);
+const ok=(name,cond,info="")=>out.push((cond?"OK   ":"FEL  ")+name+(info?"  ("+info+")":""));
+const tick=()=>new Promise(r=>setTimeout(r,0));
+appReady().then(async()=>{ try{
+  const tb=()=>q("#topback");
+  renderStart(); await tick();
+  ok("tillbaka uppe: dold på startsidan", tb().hidden);
+  openGrammar(); await tick();
+  ok("tillbaka uppe: syns på en undersida", !tb().hidden);
+  tb().click(); await tick();
+  ok("tillbaka uppe: leder till startsidan", !q("#tabs").hidden&&tb().hidden&&!!q("#src"));
+  startSession(pickNew().slice(0,3),[]); startQuiz(); await tick();
+  ok("tillbaka uppe: syns i ett pass", !tb().hidden&&!!sess);
+  tb().click(); await tick();
+  ok("tillbaka uppe: pausar passet som sidans egen knapp", !sess&&!q("#tabs").hidden&&!!(S.run||Object.keys(S.runs||{}).length));
+  q("#tab-stats").click(); await tick();
+  ok("tillbaka uppe: dold i flikvyerna", tb().hidden);
+  renderStart(); openListening(); await tick();
+  const st=getComputedStyle(tb());
+  ok("tillbaka uppe: klistrig överst", st.position==="sticky");
+  openGrammar(); window.scrollTo(0,600); await tick();
+  const r=tb().getBoundingClientRect();
+  ok("tillbaka uppe: syns kvar högst upp efter skrollning", window.scrollY>100&&r.top>=0&&r.top<30&&r.width<200, "scrollY "+window.scrollY+", top "+Math.round(r.top)+", bredd "+Math.round(r.width));
+  window.scrollTo(0,0);
+ }catch(e){ ok("undantag", false, e.message+" "+(e.stack||"").split("\n")[1]); }
+ ok("inga JavaScript-fel", !__err.length, __err.join(" ; "));
+ document.body.insertAdjacentHTML("beforeend","<pre id=out>"+out.join("\n").replace(/</g,"&lt;")+"</pre>");
+});
+</script>"""
+
 SCENARIO_STREAK = r"""<script>
 const out=[]; const q=s=>document.querySelector(s);
 const ok=(name,cond,info="")=>out.push((cond?"OK   ":"FEL  ")+name+(info?"  ("+info+")":""));
@@ -2776,6 +2807,7 @@ def main():
     text += "\n" + run(SCENARIO_EXAMTYPES2, 60000, head=EXFILL) + "\n" + test_exam_task_checks2()   # nivåer, skala, grafik, tal på tid, bildval
     text += "\n" + run(SCENARIO_BUGHUNT, 30000)   # buggjakten 2026-09-29
     text += "\n" + run(SCENARIO_STREAK, 20000)   # flamman för sviten (elevens önskemål)
+    text += "\n" + run(SCENARIO_TOPBACK, 20000)   # Tillbaka uppe till vänster (elevens önskemål)
     text += "\n" + run(SCENARIO_SRS, 30000)   # tidsbaserad repetition i fraser, meningar och grammatik (P3), weakestFirst/srsBump (P2)
     text += "\n" + run(SCENARIO_WORDS, 30000) + "\n" + test_words_build()   # glosquizet i 05-words.js, vanligast först, "kan" kräver skrivet svar
     text += "\n" + run(SCENARIO_SELFRATE, 60000)   # självbedömning i fyra steg, grundformen i Mina ord (P3)
