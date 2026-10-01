@@ -30,25 +30,18 @@ Båda eleverna ska söka musikutbildning utomlands. Eleven i franska behöver vi
 
 ## Italienska 1 och 2
 
-- **P2: Granskning av italienskan** (1 067 ord, 527 grammatikfrågor, regler och texter, allt AI-skrivet) av en lärare eller italiensktalande, åtminstone ett stickprov.
-
 ## Tyska 4 (B1)
-
-- **P2: Granskning av innehållet i Tyska 4** (551 ord, 270 grammatikfrågor och alla texter är AI-skrivna). Stickprov av en tysktalande, särskilt siffrorna i kulturtexterna.
 
 ## Tyska (Tyska 5, mot B2)
 
 Emma pluggar på egen hand, utan kurs, lärare och lärobok. Tyskan bygger därför helt på kursplanen och det allmänna spåret.
 
 
-- **P2: Granskning av grammatikfrågorna** (390 tyska, 322 franska) av en lärare eller modersmålstalare, åtminstone ett stickprov på 10 %. Gå också igenom elevernas rapporter i `reports/<uid>/items` (läs dem med ArtifactData) och rätta i källfilerna.
 - **P3: Verbdata från Wiktionary/kaikki** i stället för handskrivna verbtabeller.
 
 ## Franska (Franska 3, mot A och B1)
 
 - **P3: Fler verb i verbspelen**, datadrivet (verbecc, LGPL-3.0).
-- **P3: Granskning av innehållet** (hörtexter, lästexter, berättelser, fraser, kultur) av läraren eller en fransktalande. Allt är AI-skrivet och har bara kontrollerats med stickprov.
-
 ## Kurser och nivåer
 
 - **P2: Resten av kursmallen** (`docs/kursmall.md`, avsnitt 4). Byggt: paket 1–8, 10 och 13–16 samt nivåerna. Kvar:
@@ -57,14 +50,12 @@ Emma pluggar på egen hand, utan kurs, lärare och lärobok. Tyskan bygger därf
 - **P1: Fler sidor ur Escalade.** Inlagda: s. 8–69, 98–131, 148–153, 182–191 och minigrammatiken s. 196–199 och 202–237 (se `languages/fr/book/sidor.json`). Saknas: s. 70–97, 132–147, 154–181, 192–195 och 200–201. Fota också om s. 101, där högerkanten saknas. Kapitelnumret för s. 148–153 (antaget kap 10) och s. 182–191 och titeln på kap 6 behöver bekräftas.
 - **P2: Säkerhetskopiera bokmappen** till ett privat repo på GitHub (`languages/fr/book/` är redan ett eget lokalt git-repo). Kräver att föräldern godkänner att ett privat repo skapas.
 - **P3: Välja bok per elev**, om flera elever med olika böcker ska använda samma kurs.
-- **P2: De nya kurserna (2026-09-29): fyll på och granska.** Allt AI-skrivet och bara testat maskinellt. Textlängder, glosor och ordantal är åtgärdade 2026-10-01 (se KLART.md, version 35). Överlapp mellan kurser är tillåtet men kan minskas (se "Öppet efter 2026-10-01"). Kör en frekvenstäckningsmätning (DeReWo/Lexique/De Mauro). Videor: A1-förrådet saknar skola och kläder (fr1 e3, e7), B2-förrådet musik (it7), juridik (de7 s4, it7).
+- **P2: De nya kurserna (2026-09-29): fyll på.** Granskade av AI-agenter 2026-10-01. Textlängder, glosor och ordantal är åtgärdade 2026-10-01 (se KLART.md, version 35). Överlapp mellan kurser är tillåtet men kan minskas (se "Öppet efter 2026-10-01"). Kör en frekvenstäckningsmätning (DeReWo/Lexique/De Mauro). Videor: A1-förrådet saknar skola och kläder (fr1 e3, e7), B2-förrådet musik (it7), juridik (de7 s4, it7).
   - Varje kurs får en egen mapp i `languages/` och en egen `storageKey`. Bygg efter kursmallen (`docs/kursmall.md`) och Skolverkets centrala innehåll för steget. Nivån ungefär enligt Skolverket: steg 1 A1.1, 2 A1.2, 3 A2.1, 4 A2.2, 5 B1.1, 6 B1.2, 7 B2.1.
   - Varje kurs ska bygga vidare på den förra utan att orden överlappar, och ha `nextCourse` till nästa steg.
   - Ordning: Italienska 3 (står som kommande i `languages/upcoming.json`), sedan de lägre stegen (1–2 i franska, 1–3 i tyska) och sist steg 7 och Franska 5.
   - Arbetssätt som fungerade för Franska 6 (fr4) och Tyska 6: glosorna i två halvor av två agenter (med dubblettkontroll mot tidigare kurser och mot varandra), allt övrigt innehåll av en tredje. Modelltexterna i skrivuppgifterna ska skrivas **efter** ordlistan, annars saknar de kapitelord.
   - Innehållet är AI-skrivet och behöver granskas med stickprov, som de andra kurserna.
-- **P2: Franska I (universitet): granskning.** Allt AI-skrivet. IPA och satsanalys är granskade av AI (2026-09-29) men bör ses av en lärare. Kontrollera siffror som åldras i exemplen (statsskuld, asylsökande, fattigdom, valresultat 2024–2026), citaten (Zola, Maupassant, Verlaine, Boileau, Baudelaire) mot originalen, och uttalsparen saule/sole, nuée/nouer, enfui/enfoui med en riktig röst. AI-granskning 2026-09-29 (se KLART.md): ord från rad 636, grammatik, hörtexter, kultur och 12 av 16 lästexter; kvar: words.txt rad 1–635 (om den delen inte hann klart), lästexterna r-u7-classicisme, r-u8-bd, r-u8-langue och r-u7-verlaine utöver dikten. Normfrågor att avgöra: inv-017, subj3-007–009, subj3-026. Ordposter: Dorine "suivante", l'arriviste/l'éditorialiste genus, le voisement "tonalitet". Barthes "écriture blanche" (död 1980) i r-u6-etranger: begrepp, inte citat — bekräfta.
-- **P2: Franska 6 (fr4) och Tyska 6: granskning.** Båda kurserna (2026-09-28) är AI-skrivna (videor finns sedan 2026-09-29). Kontrollera särskilt uttalsparen cote/côte och Paul/pôle (fr4) och wanke/zanke, Suhle/Kuhle (de6) med en riktig röst, modalpartiklarna i Hitta felet (de6) och faktauppgifterna i kultur- och historietexterna. Franska 4 har musikteori bara i Franska 3; Tyska 6 har den bara i Tyska 5. AI-granskning 2026-09-29 gjord (se KLART.md). Kvar för modersmålstalare: fr4 "nocif, -ve" i ord-id:t (borde vara -ive, kräver id-lås), sakuppgifter om dödshjälp i Frankrike (lag 2025–2026), «L'État, c'est moi», fr4 subj2-028/029, pass-028, disc-018; de6 k1-008/k1-012 (indikativ i indirekt tal räknas som fel), p34 dativ/ackusativ, s-s2 kabelkontrollen; de4 konj-007/029, passiv-024, t4-p23; de passiv-040; pantbelopp i c-d4-pfand. Skriv- och taluppgifternas modelltexter i exam.json är bara översiktligt granskade.
 - **P2: Franska: brister från nivågranskningen** (`docs/nivaer-franska.md`, avsnitt 4; beslutet om nivåerna är genomfört 2026-09-29):
   - **Franska 3 (`fr`) saknar DELF A2 som mellansteg.** Provträningen är DELF B1, två steg över kursen (provtexterna 260–385 ord mot kursens snitt 154–177). Lägg till DELF A2-uppgifter som egen övningsnivå (eller hänvisa till Franska 4, `frs4`, som har DELF A2). Kräver A2-varianten av provformatet i `70-exam.js` (`parts` co 25 / ce 30 / pe 45 / po 8 min), samma motor behövs för DELF A1 i Franska 1–2.
   - **Franska 3: inget avsnitt med vanliga ord** utanför boken och musikteorin (bara `fm`). Kontrollera hela kedjan mot de 2 000 vanligaste lemmana (Lonsdale och Le Bras eller Lexique 3) och fyll luckorna.
@@ -87,7 +78,6 @@ Granskning av `src/app.js`, `src/kinds/`, arvet i `lang.js`, `build.py`, testern
 
 ## Öppet efter 2026-09-30 (version 33)
 
-- **P2: Granskning av modersmålstalare / lärare** (alla nya kurser AI-skrivna): gränsfall som rapporterats — fr: genus för Hanouka/Halloween, accord-016 (en), imparfait/passé composé i några luckor; de: "Die Fähre [war|ist]", de7 modsubj-013/015; it: particip efter *ne*, indikativ i vardagsspråk, "ipersemplificare", Pirandello-repliken i it6 h5. Musikteori (fr): cadence parfaite/imparfaite (tonika i sopran?), *mordant*, stavningen *appogiature* (ord-id), växeldominant = V/V.
 - **P3: TDN-gränserna** (80/60/40 %) är uppskattningar, inte TestDaF:s egna.
 - **P3: Planerna genereras av `tools/plan.py`** — kör om när en kurs får nya avsnitt eller texter (bygget varnar).
 
@@ -102,7 +92,6 @@ Granskning av `src/app.js`, `src/kinds/`, arvet i `lang.js`, `build.py`, testern
 
 Granskningspunkterna nedan är avgjorda av granskningsagenterna 2026-10-01 (version 36).
 
-- **P2: Granskning av det nya (AI-skrivet):** fr: `nombre-022/024` (klockan, felalternativ bara fel mot den svenska meningen), 1990-reformens bindestreck, `dem-002` "ce héros", `tid-005/016/020`, `proche-002`; fr4 `style-004/016/019/023`, `nomi`-felformerna (entraînage, enregistrage, lançage), `nomi-022`; omskrivna provtexter fr-ce-3/4/5, fr-co-6, frs5-ce-3. de7: sakuppgifter (snubbelstenar ca 120 €, BGH 2018 om övningstider, Künstlersozialkasse 3 900 €, kulturombud 1998, Leipzig 9 okt), "das Budget gebe nicht mehr her". it: "sono acceduto", ho/è scorso, applaudo/applaudisco, Viva V.E.R.D.I., Basile, Unesco 2023, Fenice 2003.
 - **P3: Berättelser och provtexter under täckningsgränsen** (appen visar inga glosor där): it1-berättelserna (chiedere, rispondere, arrivare, sapere kommer först i it2/it3), it2 j2/j7 och it2-le-1, it3 k1/k5, de7 s-s6. Skriv om med kända ord.
 - **P3: `tools/tackning.py` känner inte igen** zu-infinitiv av delbara verb, -in-former, komparativ och dessen/diejenigen (tyska), så siffrorna är något för låga.
 - **P3: Dubbletter:** frs5 och fr4 delar 245 ord (förslag: ta bort ur frs5, inte fr4, listan i agentens arbetsfil); "die Überschrift (-en)" finns i både de och de6; it5–it6 sju ord; il Parlamento/il parlamento. Ändra bara med `ids.removed` och förälderns godkännande.
