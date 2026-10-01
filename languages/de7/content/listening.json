@@ -36,8 +36,8 @@
    },
    {
     "who": "Dozentin",
-    "fr": "Eine sehr gute Frage. Ja, das gilt auch dann. Die Regeln dazu sind in der Prüfungsordnung festgelegt, und wir werden in der vierten Sitzung ausführlich darüber sprechen. Für heute halte ich fest: Im Zweifel fragen Sie bitte in meiner Sprechstunde nach.",
-    "sv": "En mycket bra fråga. Ja, det gäller även då. Reglerna för det är fastställda i examensordningen, och vi kommer att tala utförligt om det vid fjärde tillfället. För i dag konstaterar jag: fråga gärna på min mottagningstid om ni är osäkra."
+    "fr": "Eine sehr gute Frage. Ja, das gilt auch dann. Die Regeln dazu sind in der Prüfungsordnung festgelegt, und wir werden in der vierten Sitzung ausführlich darüber sprechen. Für heute halte ich fest: Im Zweifel fragen Sie bitte in meiner Sprechstunde nach. Und noch ein praktischer Rat zum Schluss: Notieren Sie sich schon beim Lesen sorgfältig, woher jede Formulierung stammt, mit Autor, Titel und Seitenzahl. Wer erst am Ende nach den Seitenzahlen sucht, verliert unnötig Zeit. Ob Sie Fußnoten oder Angaben in Klammern verwenden, ist weniger wichtig, als dass Sie ein System einheitlich durchhalten.",
+    "sv": "En mycket bra fråga. Ja, det gäller även då. Reglerna för det är fastställda i examensordningen, och vi kommer att tala utförligt om det vid fjärde tillfället. För i dag konstaterar jag: fråga gärna på min mottagningstid om ni är osäkra. Och ett praktiskt råd till sist: anteckna redan när ni läser noga varifrån varje formulering kommer, med författare, titel och sidnummer. Den som letar efter sidnumren först i slutet förlorar onödig tid. Om ni använder fotnoter eller hänvisningar inom parentes är mindre viktigt än att ni konsekvent håller fast vid ett system."
    }
   ],
   "questions": [
@@ -183,8 +183,270 @@
     "t": "einhaken",
     "sv": "flika in",
     "g": ""
+   },
+   "klammern": {
+    "t": "die Klammer",
+    "sv": "parentes",
+    "g": "f"
+   },
+   "durchhalten": {
+    "t": "durchhalten",
+    "sv": "hålla fast vid",
+    "g": ""
    }
   }
+ },
+ {
+  "id": "l-s1-beratung",
+  "sec": "s1",
+  "title": "Studienberatung: Ein Auslandssemester planen",
+  "lines": [
+   {
+    "who": "Beraterin",
+    "fr": "Guten Tag, kommen Sie herein. Sie hatten mir geschrieben, dass Sie im nächsten Wintersemester ins Ausland gehen möchten. Wohin soll es denn gehen?",
+    "sv": "God dag, kom in. Ni skrev till mig att ni vill åka utomlands nästa vintertermin. Vart ska ni då?"
+   },
+   {
+    "who": "Sara",
+    "fr": "Nach Wien, an die Musikuniversität. Mein Professor hat dort Kontakte, und er meint, dass mir ein Semester bei einer anderen Lehrerin guttun würde. Ich habe mich aber noch nicht beworben, weil ich nicht weiß, ob mir die Kurse hier angerechnet werden.",
+    "sv": "Till Wien, till musikuniversitetet. Min professor har kontakter där, och han tycker att en termin hos en annan lärare skulle göra mig gott. Men jag har inte sökt än, eftersom jag inte vet om kurserna kommer att tillgodoräknas här."
+   },
+   {
+    "who": "Beraterin",
+    "fr": "Das ist die wichtigste Frage, und es ist gut, dass Sie sie jetzt stellen und nicht erst hinterher. Für die Anrechnung schließen Sie vor der Abreise ein sogenanntes Learning Agreement ab. Darin wird festgehalten, welche Kurse Sie an der Gasthochschule belegen und welche Module unserer Studienordnung diese Kurse ersetzen.",
+    "sv": "Det är den viktigaste frågan, och det är bra att ni ställer den nu och inte först efteråt. För tillgodoräknandet sluter ni före avresan ett så kallat Learning Agreement. Där skrivs det in vilka kurser ni läser på värdhögskolan och vilka moduler i vår studieordning de kurserna ersätter."
+   },
+   {
+    "who": "Sara",
+    "fr": "Und wer entscheidet darüber?",
+    "sv": "Och vem beslutar om det?"
+   },
+   {
+    "who": "Beraterin",
+    "fr": "Der Prüfungsausschuss, auf der Grundlage meiner Empfehlung. Beim künstlerischen Hauptfach ist das meistens unproblematisch. Schwieriger wird es bei Pflichtveranstaltungen wie Musiktheorie oder Gehörbildung, weil die Inhalte in Wien anders aufgebaut sind. Da müssen wir die Beschreibungen der Kurse genau vergleichen.",
+    "sv": "Examensnämnden, på grundval av min rekommendation. När det gäller det konstnärliga huvudämnet är det oftast inget problem. Svårare blir det med obligatoriska moment som musikteori eller gehörslära, eftersom innehållet är upplagt på ett annat sätt i Wien. Där måste vi jämföra kursbeskrivningarna noga."
+   },
+   {
+    "who": "Sara",
+    "fr": "Was passiert mit meinen Noten? In Österreich gibt es doch ein anderes System.",
+    "sv": "Vad händer med mina betyg? I Österrike finns det ju ett annat system."
+   },
+   {
+    "who": "Beraterin",
+    "fr": "Richtig. An den österreichischen Universitäten gibt es nur ganze Noten von Eins bis Fünf, ohne Zwischenstufen wie 1,3 oder 2,7. Die Noten werden nach einer festen Tabelle in unser System umgerechnet. Das klingt kompliziert, ist aber reine Routine.",
+    "sv": "Det stämmer. På de österrikiska universiteten finns det bara hela betyg från ett till fem, utan mellansteg som 1,3 eller 2,7. Betygen räknas om till vårt system enligt en fast tabell. Det låter komplicerat, men det är ren rutin."
+   },
+   {
+    "who": "Sara",
+    "fr": "Und wenn ich eine Hausarbeit für ein Seminar hier nicht rechtzeitig schaffe, weil ich in Wien so viel zu tun habe?",
+    "sv": "Och om jag inte hinner klart med en hemuppsats till ett seminarium här i tid, eftersom jag har så mycket att göra i Wien?"
+   },
+   {
+    "who": "Beraterin",
+    "fr": "Das ist ein häufiges Problem. In diesem Fall können Sie eine Fristverlängerung beantragen. Sprechen Sie das aber bitte vorher mit den Lehrenden ab und nicht erst in der letzten Woche. Seit ich diese Beratung mache, habe ich gelernt: Die meisten Schwierigkeiten entstehen, weil Studierende zu spät fragen.",
+    "sv": "Det är ett vanligt problem. I så fall kan ni ansöka om förlängd tid. Men stäm av det med lärarna i förväg, och inte först sista veckan. Sedan jag började med den här rådgivningen har jag lärt mig att de flesta svårigheter uppstår för att studenter frågar för sent."
+   },
+   {
+    "who": "Beraterin",
+    "fr": "Noch etwas Praktisches: Kümmern Sie sich früh um eine Unterkunft, denn die Studentenwohnheime in Wien sind schnell voll. Und informieren Sie sich in der Orientierungswoche der Gasthochschule, wo Sie üben können. An manchen Häusern bekommt man die Schlüssel für die Übungsräume nur beim Pförtner und nur zu bestimmten Zeiten.",
+    "sv": "En praktisk sak till: ta hand om boendet tidigt, för studenthemmen i Wien blir snabbt fulla. Och ta reda på under värdhögskolans introduktionsvecka var ni kan öva. På vissa skolor får man nycklarna till övningsrummen bara hos portvakten och bara vid vissa tider."
+   },
+   {
+    "who": "Sara",
+    "fr": "Vielen Dank, das hilft mir sehr. Dann schreibe ich heute noch meinem Professor und frage, welche Kurse er mir in Wien empfiehlt.",
+    "sv": "Tack så mycket, det hjälper mig mycket. Då skriver jag till min professor redan i dag och frågar vilka kurser han rekommenderar i Wien."
+   }
+  ],
+  "gloss": {
+   "herein": {
+    "t": "herein",
+    "sv": "in (hit)",
+    "g": ""
+   },
+   "guttun": {
+    "t": "guttun (+ Dat.)",
+    "sv": "göra gott",
+    "g": ""
+   },
+   "angerechnet": {
+    "t": "anrechnen",
+    "sv": "tillgodoräkna",
+    "g": ""
+   },
+   "anrechnung": {
+    "t": "die Anrechnung",
+    "sv": "tillgodoräknande",
+    "g": "f"
+   },
+   "festgehalten": {
+    "t": "festhalten",
+    "sv": "skriva in, fastställa",
+    "g": ""
+   },
+   "gasthochschule": {
+    "t": "die Gasthochschule",
+    "sv": "värdhögskola",
+    "g": "f"
+   },
+   "belegen": {
+    "t": "belegen",
+    "sv": "läsa, ta (en kurs)",
+    "g": ""
+   },
+   "prüfungsausschuss": {
+    "t": "der Prüfungsausschuss",
+    "sv": "examensnämnd",
+    "g": "m"
+   },
+   "unproblematisch": {
+    "t": "unproblematisch",
+    "sv": "oproblematisk",
+    "g": ""
+   },
+   "pflichtveranstaltungen": {
+    "t": "die Pflichtveranstaltung",
+    "sv": "obligatoriskt kursmoment",
+    "g": "f"
+   },
+   "gehörbildung": {
+    "t": "die Gehörbildung",
+    "sv": "gehörslära",
+    "g": "f"
+   },
+   "zwischenstufen": {
+    "t": "die Zwischenstufe",
+    "sv": "mellansteg",
+    "g": "f"
+   },
+   "umgerechnet": {
+    "t": "umrechnen",
+    "sv": "räkna om",
+    "g": ""
+   },
+   "routine": {
+    "t": "die Routine",
+    "sv": "rutin",
+    "g": "f"
+   },
+   "fristverlängerung": {
+    "t": "die Fristverlängerung",
+    "sv": "förlängd tidsfrist",
+    "g": "f"
+   },
+   "unterkunft": {
+    "t": "die Unterkunft",
+    "sv": "boende, logi",
+    "g": "f"
+   },
+   "orientierungswoche": {
+    "t": "die Orientierungswoche",
+    "sv": "introduktionsvecka",
+    "g": "f"
+   },
+   "pförtner": {
+    "t": "der Pförtner",
+    "sv": "portvakt",
+    "g": "m"
+   }
+  },
+  "questions": [
+   {
+    "type": "helhet",
+    "q": "Vad handlar samtalet om?",
+    "opts": [
+     "Hur man söker till en musikhögskola i Tyskland",
+     "Hur Sara planerar en utbytestermin",
+     "Hur man byter huvudinstrument",
+     "Hur man hittar ett studentrum i Leipzig"
+    ],
+    "a": 1,
+    "why": "Sara vill åka till Wien nästa vintertermin, och rådgivaren går igenom tillgodoräknande, betyg, tidsfrister och praktiska frågor."
+   },
+   {
+    "type": "detalj",
+    "q": "Varför har Sara inte sökt ännu?",
+    "opts": [
+     "Hennes professor är emot resan",
+     "Hon har inte tillräckligt med pengar",
+     "Hon vet inte om kurserna kommer att tillgodoräknas",
+     "Ansökningstiden har inte börjat"
+    ],
+    "a": 2,
+    "why": "„… weil ich nicht weiß, ob mir die Kurse hier angerechnet werden.“"
+   },
+   {
+    "type": "detalj",
+    "q": "Vad skrivs in i ett Learning Agreement?",
+    "opts": [
+     "Vilka kurser hon läser i Wien och vilka moduler de ersätter",
+     "Hur mycket hyra hon betalar i Wien",
+     "Vilka betyg hon har fått hittills",
+     "Vilken lärare hon ska ha i Wien"
+    ],
+    "a": 0,
+    "why": "„Darin wird festgehalten, welche Kurse Sie an der Gasthochschule belegen und welche Module unserer Studienordnung diese Kurse ersetzen.“"
+   },
+   {
+    "type": "detalj",
+    "q": "Vem beslutar om tillgodoräknandet?",
+    "opts": [
+     "Professorn i Wien",
+     "Studierådgivaren ensam",
+     "Sara själv",
+     "Examensnämnden, efter rådgivarens rekommendation"
+    ],
+    "a": 3,
+    "why": "„Der Prüfungsausschuss, auf der Grundlage meiner Empfehlung.“"
+   },
+   {
+    "type": "detalj",
+    "q": "Vilka kurser är svårare att få tillgodoräknade?",
+    "opts": [
+     "Det konstnärliga huvudämnet",
+     "Obligatoriska moment som musikteori och gehörslära",
+     "Språkkurser i tyska",
+     "Kammarmusik"
+    ],
+    "a": 1,
+    "why": "Huvudämnet är oftast inget problem, men vid Pflichtveranstaltungen som Musiktheorie och Gehörbildung är innehållet upplagt på ett annat sätt."
+   },
+   {
+    "type": "detalj",
+    "q": "Hur skiljer sig de österrikiska universitetsbetygen enligt rådgivaren?",
+    "opts": [
+     "Fem är det bästa betyget",
+     "Det finns bara godkänt och underkänt",
+     "Det finns bara hela betyg från ett till fem",
+     "Betygen sätts med bokstäver"
+    ],
+    "a": 2,
+    "why": "„… nur ganze Noten von Eins bis Fünf, ohne Zwischenstufen wie 1,3 oder 2,7.“"
+   },
+   {
+    "type": "detalj",
+    "q": "Vad kan Sara göra om en hemuppsats inte blir klar i tid?",
+    "opts": [
+     "Ansöka om förlängd tid, men stämma av det i förväg",
+     "Skriva uppsatsen i Wien i stället",
+     "Hoppa över seminariet",
+     "Göra en muntlig tenta i stället"
+    ],
+    "a": 0,
+    "why": "„… können Sie eine Fristverlängerung beantragen. Sprechen Sie das aber bitte vorher mit den Lehrenden ab …“"
+   },
+   {
+    "type": "tolkning",
+    "q": "Varför nämner rådgivaren portvakten?",
+    "opts": [
+     "Han hjälper till att hitta ett studentrum",
+     "På vissa skolor får man bara nycklarna till övningsrummen hos honom vid vissa tider",
+     "Han ansvarar för introduktionsveckan",
+     "Han räknar om betygen"
+    ],
+    "a": 1,
+    "why": "„An manchen Häusern bekommt man die Schlüssel für die Übungsräume nur beim Pförtner und nur zu bestimmten Zeiten.“"
+   }
+  ]
  },
  {
   "id": "l-s2-seminar",
@@ -225,6 +487,16 @@
     "who": "Jonas",
     "fr": "Teilweise. Ich würde nur ergänzen, dass auch der persönliche Ausdruck eine Rolle spielen darf. Sonst klingen am Ende alle Aufnahmen gleich.",
     "sv": "Delvis. Jag skulle bara vilja lägga till att även det personliga uttrycket får spela en roll. Annars låter till slut alla inspelningar likadant."
+   },
+   {
+    "who": "Lea",
+    "fr": "Darf ich noch etwas zur Aufnahme von 2019 sagen? Die Cellistin spielt auf Darmsaiten und mit einem Barockbogen. Für mich klingt das gar nicht museal, sondern sehr lebendig, gerade weil die Tänze rhythmisch viel deutlicher werden. Man hört plötzlich, dass eine Gigue ein schneller Tanz ist.",
+    "sv": "Får jag säga något mer om inspelningen från 2019? Cellisten spelar på tarmsträngar och med en barockstråke. För mig låter det inte alls museialt utan mycket levande, just för att danserna blir mycket tydligare rytmiskt. Man hör plötsligt att en gigue är en snabb dans."
+   },
+   {
+    "who": "Jonas",
+    "fr": "Das bestreite ich gar nicht. Mich irritiert nur, wenn solche Aufnahmen mit dem Etikett „authentisch“ verkauft werden. Authentizität ist für mich eher ein Werbewort als ein wissenschaftlicher Begriff.",
+    "sv": "Det säger jag inte emot. Det som stör mig är bara när sådana inspelningar säljs med etiketten ”autentisk”. Autenticitet är för mig snarare ett reklamord än ett vetenskapligt begrepp."
    },
    {
     "who": "Dozent",
@@ -370,6 +642,21 @@
     "t": "der Semesterapparat",
     "sv": "kurslitteratur i biblioteket",
     "g": "m"
+   },
+   "barockbogen": {
+    "t": "der Barockbogen",
+    "sv": "barockstråke",
+    "g": "m"
+   },
+   "museal": {
+    "t": "museal",
+    "sv": "museal, dammig",
+    "g": ""
+   },
+   "etikett": {
+    "t": "das Etikett",
+    "sv": "etikett",
+    "g": "n"
    }
   }
  },
@@ -614,6 +901,26 @@
     "who": "Weber",
     "fr": "Das stimmt, obwohl man Drittmittel nicht pauschal verdächtigen sollte. Ohne sie gäbe es viele Projekte gar nicht. Entscheidend ist Transparenz.",
     "sv": "Det stämmer, även om man inte generellt bör misstänkliggöra externa medel. Utan dem skulle många projekt inte finnas alls. Det avgörande är öppenhet."
+   },
+   {
+    "who": "Moderator",
+    "fr": "Zum Schluss eine Frage an Sie beide: Welche Schlagzeile würden Sie sich wünschen?",
+    "sv": "Till sist en fråga till er båda: Vilken rubrik skulle ni önska er?"
+   },
+   {
+    "who": "Klein",
+    "fr": "Vielleicht: „Kleine Studie deutet auf möglichen Zusammenhang hin – weitere Forschung nötig.“ Das verkauft sich natürlich schlecht. Aber es wäre ehrlich, und auf lange Sicht würde es auch das Vertrauen in den Wissenschaftsjournalismus stärken.",
+    "sv": "Kanske: ”Liten studie tyder på möjligt samband – mer forskning behövs.” Det säljer förstås dåligt. Men det vore ärligt, och på lång sikt skulle det också stärka förtroendet för vetenskapsjournalistiken."
+   },
+   {
+    "who": "Weber",
+    "fr": "Und ich wünsche mir, dass auch über Studien berichtet wird, die keinen Effekt gefunden haben. Wenn nur positive Ergebnisse veröffentlicht werden, entsteht eine Verzerrung, und am Ende glauben alle an Wirkungen, die es gar nicht gibt.",
+    "sv": "Och jag önskar att man också rapporterar om studier som inte har hittat någon effekt. Om bara positiva resultat publiceras uppstår en snedvridning, och till slut tror alla på effekter som inte alls finns."
+   },
+   {
+    "who": "Moderator",
+    "fr": "Frau Weber, Herr Klein, vielen Dank für das Gespräch.",
+    "sv": "Anna Weber, Tobias Klein, tack så mycket för samtalet."
    }
   ],
   "questions": [
@@ -754,6 +1061,11 @@
     "t": "die Drittmittel",
     "sv": "externa forskningsmedel",
     "g": "pl"
+   },
+   "verzerrung": {
+    "t": "die Verzerrung",
+    "sv": "snedvridning",
+    "g": "f"
    }
   }
  },
@@ -796,6 +1108,11 @@
     "who": "Professorin",
     "fr": "Interessanterweise sind die Effekte in solchen Experimenten meist deutlich kleiner als in reinen Beobachtungsstudien, manchmal verschwinden sie ganz. Das ist kein Argument gegen Musikunterricht, er hat ja genug Wert an sich. Es ist aber ein Argument für Vorsicht bei der Formulierung. Schreiben Sie in Ihren Arbeiten also bitte nicht „X führt zu Y“, wenn Sie nur einen Zusammenhang gemessen haben. Formulieren Sie stattdessen: „X geht mit Y einher.“",
     "sv": "Intressant nog är effekterna i sådana experiment oftast betydligt mindre än i rena observationsstudier, ibland försvinner de helt. Det är inget argument mot musikundervisning, den har ju tillräckligt värde i sig. Men det är ett argument för försiktighet i formuleringarna. Skriv alltså inte \"X leder till Y\" i era arbeten om ni bara har mätt ett samband. Formulera er i stället: \"X går hand i hand med Y.\""
+   },
+   {
+    "who": "Professorin",
+    "fr": "Für die Übung am Donnerstag suchen Sie sich bitte einen Zeitungsartikel über eine Studie aus und prüfen Sie, ob dort Korrelation und Kausalität sauber getrennt werden. Bringen Sie den Artikel bitte ausgedruckt mit.",
+    "sv": "Till övningen på torsdag ska ni välja ut en tidningsartikel om en studie och granska om korrelation och kausalitet hålls tydligt isär där. Ta med artikeln utskriven."
    }
   ],
   "questions": [
@@ -1013,6 +1330,26 @@
     "who": "Beraterin",
     "fr": "Nicht übermäßig. Solche Ansprüche verjähren in der Regel erst nach drei Jahren, gerechnet ab Ende des Jahres, in dem sie entstanden sind. Aber je früher Sie handeln, desto besser. Und bewahren Sie bitte alle Unterlagen auf: den Vertrag, Ihre Rechnung und die E-Mails.",
     "sv": "Inte överdrivet. Sådana anspråk preskriberas i regel först efter tre år, räknat från slutet av det år då de uppstod. Men ju tidigare du agerar, desto bättre. Och spara alla handlingar: avtalet, din faktura och mejlen."
+   },
+   {
+    "who": "Musiker",
+    "fr": "Lohnt es sich, gleich einen Anwalt einzuschalten?",
+    "sv": "Lönar det sig att koppla in en advokat direkt?"
+   },
+   {
+    "who": "Beraterin",
+    "fr": "Bei 800 Euro meistens nicht, es sei denn, Sie haben eine Rechtsschutzversicherung. Viel wichtiger ist, dass Sie in Zukunft vorsorgen. Lassen Sie sich bei neuen Veranstaltern eine Anzahlung geben, oder vereinbaren Sie im Vertrag eine Ausfallgage für den Fall einer Absage. Und schreiben Sie in jeden Vertrag, bis wann das Honorar gezahlt werden muss, dann gibt es später keinen Streit darüber.",
+    "sv": "När det gäller 800 euro oftast inte, om ni inte har en rättsskyddsförsäkring. Mycket viktigare är att ni förebygger i framtiden. Be nya arrangörer om en handpenning, eller kom överens om ett ersättningsgage i avtalet ifall konserten ställs in. Och skriv i varje avtal när arvodet ska vara betalt, så blir det inget bråk om det senare."
+   },
+   {
+    "who": "Musiker",
+    "fr": "Das mache ich. Vielen Dank, Sie haben mir sehr geholfen.",
+    "sv": "Det ska jag göra. Tack så mycket, ni har hjälpt mig mycket."
+   },
+   {
+    "who": "Beraterin",
+    "fr": "Gern geschehen. Melden Sie sich wieder, wenn der Veranstalter nicht reagiert.",
+    "sv": "Varsågod. Hör av er igen om arrangören inte reagerar."
    }
   ],
   "questions": [
@@ -1148,8 +1485,300 @@
     "t": "die Unterlagen",
     "sv": "handlingar",
     "g": "pl"
+   },
+   "einzuschalten": {
+    "t": "einschalten",
+    "sv": "koppla in",
+    "g": ""
+   },
+   "rechtsschutzversicherung": {
+    "t": "die Rechtsschutzversicherung",
+    "sv": "rättsskyddsförsäkring",
+    "g": "f"
+   },
+   "anzahlung": {
+    "t": "die Anzahlung",
+    "sv": "handpenning",
+    "g": "f"
    }
   }
+ },
+ {
+  "id": "l-s4-ratgeber",
+  "sec": "s4",
+  "title": "Radio-Ratgeber Recht: Üben in der Mietwohnung",
+  "lines": [
+   {
+    "who": "Moderator",
+    "fr": "Willkommen beim „Ratgeber Recht“. Unser Thema heute: Musik in der Mietwohnung. Wie viel darf man üben, und was können Nachbarn dagegen tun? Im Studio ist die Rechtsanwältin Dr. Kerstin Vogel. Unser erster Anrufer ist Jonas, er studiert Trompete. Jonas, was ist Ihr Problem?",
+    "sv": "Välkomna till ”Juridisk rådgivning”. Vårt ämne i dag: musik i hyreslägenheten. Hur mycket får man öva, och vad kan grannarna göra åt det? I studion finns advokaten Kerstin Vogel. Vår första lyssnare som ringer in är Jonas, som studerar trumpet. Jonas, vad är ert problem?"
+   },
+   {
+    "who": "Jonas",
+    "fr": "Ich übe jeden Tag etwa drei Stunden zu Hause. Jetzt hat mir der Vermieter geschrieben, dass sich Nachbarn beschwert hätten und dass ich in Zukunft nur noch eine Stunde am Tag spielen dürfe. Sonst drohe mir die Kündigung. Darf er das?",
+    "sv": "Jag övar ungefär tre timmar om dagen hemma. Nu har hyresvärden skrivit till mig att grannar har klagat och att jag i fortsättningen bara får spela en timme om dagen. Annars hotar en uppsägning. Får han göra så?"
+   },
+   {
+    "who": "Vogel",
+    "fr": "Ein völliges Verbot wäre auf jeden Fall unwirksam. Der Bundesgerichtshof hat 2018 in einem Streit zwischen Nachbarn klargestellt, dass das Musizieren in der eigenen Wohnung zur normalen Nutzung gehört, auch für Berufsmusiker. Gleichzeitig haben die Nachbarn ein Recht auf Ruhe. Die Gerichte suchen deshalb einen Ausgleich. Als grobe Orientierung gelten zwei bis drei Stunden an Werktagen und ein bis zwei Stunden an Sonn- und Feiertagen, natürlich außerhalb der Ruhezeiten.",
+    "sv": "Ett totalt förbud skulle i alla fall vara ogiltigt. Förbundsdomstolen slog 2018 fast i en tvist mellan grannar att musicerande i den egna bostaden hör till normal användning, även för yrkesmusiker. Samtidigt har grannarna rätt till lugn och ro. Domstolarna söker därför en avvägning. Som grov riktlinje gäller två till tre timmar på vardagar och en till två timmar på sön- och helgdagar, förstås utanför vilotiderna."
+   },
+   {
+    "who": "Jonas",
+    "fr": "Und eine Stunde, wie der Vermieter es will?",
+    "sv": "Och en timme, som hyresvärden vill?"
+   },
+   {
+    "who": "Vogel",
+    "fr": "Das wäre für einen Musikstudenten eine sehr starke Beschränkung. Schauen Sie zuerst in Ihren Mietvertrag und in die Hausordnung, die meistens als Anlage beigefügt ist. Steht dort nichts Konkretes, gilt die genannte Orientierung. Eine Kündigung wegen Ruhestörung ist nur bei erheblichen und wiederholten Verstößen möglich, und vorher müsste der Vermieter Sie abmahnen.",
+    "sv": "Det vore en mycket kraftig begränsning för en musikstudent. Titta först i ert hyresavtal och i ordningsreglerna, som oftast är bifogade som bilaga. Står det inget konkret där gäller den riktlinje jag nämnde. En uppsägning på grund av störande ljud är bara möjlig vid betydande och upprepade överträdelser, och dessförinnan måste hyresvärden ge er en skriftlig varning."
+   },
+   {
+    "who": "Moderator",
+    "fr": "Was kann Jonas selbst tun, um den Streit zu entschärfen?",
+    "sv": "Vad kan Jonas själv göra för att dämpa konflikten?"
+   },
+   {
+    "who": "Vogel",
+    "fr": "Reden, bevor es eskaliert. Sprechen Sie mit den Nachbarn, vereinbaren Sie feste Übezeiten und halten Sie diese dann auch ein. Ein Dämpfer für die Trompete hilft ebenfalls. Manche Musiker lassen sich auch eine schallgedämmte Übekabine einbauen. Für den Einbau brauchen Sie aber die vorherige Zustimmung des Vermieters, und beim Auszug müssen Sie den ursprünglichen Zustand wiederherstellen.",
+    "sv": "Prata innan det trappas upp. Tala med grannarna, kom överens om fasta övningstider och håll er sedan till dem. En sordin till trumpeten hjälper också. En del musiker låter också bygga in en ljudisolerad övningshytt. Men för installationen behöver ni hyresvärdens godkännande i förväg, och när ni flyttar ut måste ni återställa det ursprungliga skicket."
+   },
+   {
+    "who": "Moderator",
+    "fr": "Wir haben eine zweite Anruferin. Frau Becker, Sie wohnen unter einer Pianistin?",
+    "sv": "Vi har en andra lyssnare på linjen. Fru Becker, ni bor under en pianist?"
+   },
+   {
+    "who": "Becker",
+    "fr": "Ja, und ich arbeite nachts im Krankenhaus. Wenn ich tagsüber schlafen will, spielt sie stundenlang. Ich habe schon überlegt, die Miete zu mindern.",
+    "sv": "Ja, och jag arbetar nätter på sjukhuset. När jag vill sova på dagen spelar hon i timmar. Jag har redan funderat på att sätta ned hyran."
+   },
+   {
+    "who": "Vogel",
+    "fr": "Das verstehe ich gut, aber eine Mietminderung ist riskant, wenn sich die Nachbarin an die üblichen Zeiten hält. Sie mindern ja gegenüber Ihrem Vermieter, nicht gegenüber der Pianistin. Wenn ein Gericht später sagt, die Minderung sei unberechtigt gewesen, müssen Sie nachzahlen und riskieren im schlimmsten Fall sogar eine Kündigung. Besser ist auch hier ein Gespräch, eventuell mit Hilfe einer Schlichtungsstelle.",
+    "sv": "Det förstår jag mycket väl, men en hyresreduktion är riskabel om grannen håller sig till de vanliga tiderna. Ni sätter ju ned hyran gentemot er hyresvärd, inte gentemot pianisten. Om en domstol senare säger att reduktionen var oberättigad måste ni betala i efterhand och riskerar i värsta fall till och med en uppsägning. Bättre är även här ett samtal, eventuellt med hjälp av en medlingsinstans."
+   },
+   {
+    "who": "Moderator",
+    "fr": "Frau Dr. Vogel, vielen Dank. Nach den Nachrichten geht es weiter mit unserem zweiten Thema: Was tun bei einer Mieterhöhung?",
+    "sv": "Kerstin Vogel, tack så mycket. Efter nyheterna fortsätter vi med vårt andra ämne: Vad gör man vid en hyreshöjning?"
+   }
+  ],
+  "gloss": {
+   "unwirksam": {
+    "t": "unwirksam",
+    "sv": "ogiltig",
+    "g": ""
+   },
+   "bundesgerichtshof": {
+    "t": "der Bundesgerichtshof",
+    "sv": "förbundsdomstolen (högsta instans i civilmål)",
+    "g": "m"
+   },
+   "ruhezeiten": {
+    "t": "die Ruhezeit",
+    "sv": "vilotid",
+    "g": "f"
+   },
+   "beschränkung": {
+    "t": "die Beschränkung",
+    "sv": "begränsning",
+    "g": "f"
+   },
+   "hausordnung": {
+    "t": "die Hausordnung",
+    "sv": "ordningsregler för huset",
+    "g": "f"
+   },
+   "anlage": {
+    "t": "die Anlage",
+    "sv": "bilaga",
+    "g": "f"
+   },
+   "ruhestörung": {
+    "t": "die Ruhestörung",
+    "sv": "störande buller",
+    "g": "f"
+   },
+   "verstößen": {
+    "t": "der Verstoß",
+    "sv": "överträdelse",
+    "g": "m"
+   },
+   "abmahnen": {
+    "t": "abmahnen",
+    "sv": "ge en formell varning",
+    "g": ""
+   },
+   "entschärfen": {
+    "t": "entschärfen",
+    "sv": "dämpa, desarmera",
+    "g": ""
+   },
+   "eskaliert": {
+    "t": "eskalieren",
+    "sv": "trappas upp",
+    "g": ""
+   },
+   "dämpfer": {
+    "t": "der Dämpfer",
+    "sv": "sordin",
+    "g": "m"
+   },
+   "übekabine": {
+    "t": "die Übekabine",
+    "sv": "övningshytt",
+    "g": "f"
+   },
+   "einbau": {
+    "t": "der Einbau",
+    "sv": "installation",
+    "g": "m"
+   },
+   "ursprünglichen": {
+    "t": "ursprünglich",
+    "sv": "ursprunglig",
+    "g": ""
+   },
+   "wiederherstellen": {
+    "t": "wiederherstellen",
+    "sv": "återställa",
+    "g": ""
+   },
+   "anruferin": {
+    "t": "die Anruferin",
+    "sv": "kvinna som ringer in",
+    "g": "f"
+   },
+   "mindern": {
+    "t": "mindern",
+    "sv": "sätta ned (hyran)",
+    "g": ""
+   },
+   "minderung": {
+    "t": "die Minderung",
+    "sv": "nedsättning, reduktion",
+    "g": "f"
+   },
+   "unberechtigt": {
+    "t": "unberechtigt",
+    "sv": "oberättigad",
+    "g": ""
+   },
+   "riskieren": {
+    "t": "riskieren",
+    "sv": "riskera",
+    "g": ""
+   },
+   "schlichtungsstelle": {
+    "t": "die Schlichtungsstelle",
+    "sv": "medlingsinstans",
+    "g": "f"
+   },
+   "mieterhöhung": {
+    "t": "die Mieterhöhung",
+    "sv": "hyreshöjning",
+    "g": "f"
+   }
+  },
+  "questions": [
+   {
+    "type": "helhet",
+    "q": "Vad handlar programmet om?",
+    "opts": [
+     "Hur man hittar en billig hyreslägenhet",
+     "Vilka regler som gäller för att öva musik i en hyreslägenhet",
+     "Hur man bygger en studio hemma",
+     "Hur man blir antagen till en musikhögskola"
+    ],
+    "a": 1,
+    "why": "„Unser Thema heute: Musik in der Mietwohnung. Wie viel darf man üben …?“"
+   },
+   {
+    "type": "detalj",
+    "q": "Vad har hyresvärden skrivit till Jonas?",
+    "opts": [
+     "Att han måste flytta direkt",
+     "Att han inte får öva alls längre",
+     "Att han i fortsättningen bara får spela en timme om dagen",
+     "Att hyran höjs"
+    ],
+    "a": 2,
+    "why": "„… dass ich in Zukunft nur noch eine Stunde am Tag spielen dürfe. Sonst drohe mir die Kündigung.“"
+   },
+   {
+    "type": "detalj",
+    "q": "Vad slog förbundsdomstolen fast 2018?",
+    "opts": [
+     "Att musicerande i den egna bostaden hör till normal användning",
+     "Att yrkesmusiker måste öva i en lokal",
+     "Att grannar får förbjuda musik helt",
+     "Att man bara får öva på helgerna"
+    ],
+    "a": 0,
+    "why": "„… dass das Musizieren in der eigenen Wohnung zur normalen Nutzung gehört, auch für Berufsmusiker.“"
+   },
+   {
+    "type": "detalj",
+    "q": "Vilken grov riktlinje nämner advokaten för vardagar?",
+    "opts": [
+     "En timme",
+     "Fyra till fem timmar",
+     "Hur mycket som helst före klockan 22",
+     "Två till tre timmar"
+    ],
+    "a": 3,
+    "why": "„… zwei bis drei Stunden an Werktagen und ein bis zwei Stunden an Sonn- und Feiertagen …“"
+   },
+   {
+    "type": "detalj",
+    "q": "Vad måste hyresvärden göra innan han kan säga upp Jonas?",
+    "opts": [
+     "Ringa polisen",
+     "Ge honom en formell varning",
+     "Höja hyran",
+     "Fråga alla grannar"
+    ],
+    "a": 1,
+    "why": "„… und vorher müsste der Vermieter Sie abmahnen.“ En Abmahnung är en formell varning."
+   },
+   {
+    "type": "detalj",
+    "q": "Vad krävs för att bygga in en ljudisolerad övningshytt?",
+    "opts": [
+     "Grannarnas underskrift",
+     "Ett tillstånd från staden",
+     "Hyresvärdens godkännande i förväg",
+     "Ingenting, det är alltid tillåtet"
+    ],
+    "a": 2,
+    "why": "„Für den Einbau brauchen Sie aber die vorherige Zustimmung des Vermieters …“"
+   },
+   {
+    "type": "tolkning",
+    "q": "Varför avråder advokaten fru Becker från att sätta ned hyran?",
+    "opts": [
+     "Hon kan behöva betala i efterhand och riskerar uppsägning om reduktionen var oberättigad",
+     "Pianisten kan stämma henne",
+     "Hyresreduktion är förbjuden i Tyskland",
+     "Hon arbetar på natten och har därför inga rättigheter"
+    ],
+    "a": 0,
+    "why": "„Wenn ein Gericht später sagt, die Minderung sei unberechtigt gewesen, müssen Sie nachzahlen und riskieren im schlimmsten Fall sogar eine Kündigung.“"
+   },
+   {
+    "type": "detalj",
+    "q": "Vad handlar programmets nästa del om?",
+    "opts": [
+     "Grannar med hundar",
+     "Deposition vid utflyttning",
+     "Uppsägning på grund av eget behov",
+     "Hyreshöjningar"
+    ],
+    "a": 3,
+    "why": "„… unserem zweiten Thema: Was tun bei einer Mieterhöhung?“"
+   }
+  ]
  },
  {
   "id": "l-s5-interview",
@@ -1185,6 +1814,26 @@
     "who": "Hartmann",
     "fr": "Über die Künstlersozialkasse. Das ist ein großer Vorteil in Deutschland: Ich zahle nur etwa die Hälfte der Beiträge zur Kranken-, Pflege- und Rentenversicherung, den Rest übernehmen der Staat und die Auftraggeber. Allerdings bekomme ich im Krankheitsfall kein Honorar. Wenn ich vor einem Konzert erkältet bin, verliere ich also Geld.",
     "sv": "Via konstnärernas socialförsäkringskassa. Det är en stor fördel i Tyskland: jag betalar bara ungefär hälften av avgifterna till sjuk-, vård- och pensionsförsäkringen, resten står staten och uppdragsgivarna för. Men vid sjukdom får jag inget arvode. Om jag är förkyld före en konsert förlorar jag alltså pengar."
+   },
+   {
+    "who": "Moderatorin",
+    "fr": "Wie kalkulieren Sie eigentlich Ihre Gagen?",
+    "sv": "Hur räknar ni egentligen fram era gage?"
+   },
+   {
+    "who": "Hartmann",
+    "fr": "Viele Anfängerinnen rechnen nur den Konzertabend. Aber zu einem Oratorium gehören Wochen der Vorbereitung, dazu Proben, die Anfahrt und oft eine Übernachtung. Ich orientiere mich an den Empfehlungen der Berufsverbände und berechne für Proben am Wochenende einen Zuschlag. Das Honorar muss am Ende auch die Zeit abdecken, in der niemand sieht, dass ich arbeite.",
+    "sv": "Många nybörjare räknar bara konsertkvällen. Men till ett oratorium hör veckor av förberedelser, och dessutom repetitioner, resan dit och ofta en övernattning. Jag utgår från yrkesförbundens rekommendationer och tar ut ett tillägg för repetitioner på helgen. Arvodet måste till slut också täcka den tid då ingen ser att jag arbetar."
+   },
+   {
+    "who": "Moderatorin",
+    "fr": "Und wenn ein Veranstalter sagt, das Budget gebe nicht mehr her?",
+    "sv": "Och om en arrangör säger att budgeten inte räcker till mer?"
+   },
+   {
+    "who": "Hartmann",
+    "fr": "Dann verhandle ich, und manchmal sage ich auch ab. Das fällt mir schwer, aber wer zu billig singt, macht die Preise für alle kaputt. Wir Freiberufler sind keine Konkurrenten, wir sitzen alle im selben Boot.",
+    "sv": "Då förhandlar jag, och ibland tackar jag också nej. Det är svårt för mig, men den som sjunger för billigt förstör priserna för alla. Vi frilansare är inga konkurrenter, vi sitter alla i samma båt."
    },
    {
     "who": "Moderatorin",
@@ -1330,6 +1979,31 @@
     "t": "die Buchführung",
     "sv": "bokföring",
     "g": "f"
+   },
+   "kalkulieren": {
+    "t": "kalkulieren",
+    "sv": "räkna fram, kalkylera",
+    "g": ""
+   },
+   "orientiere": {
+    "t": "sich orientieren an (+ Dat.)",
+    "sv": "utgå från",
+    "g": ""
+   },
+   "zuschlag": {
+    "t": "der Zuschlag",
+    "sv": "tillägg",
+    "g": "m"
+   },
+   "her": {
+    "t": "hergeben",
+    "sv": "räcka till (nicht mehr hergeben)",
+    "g": ""
+   },
+   "verhandle": {
+    "t": "verhandeln",
+    "sv": "förhandla",
+    "g": ""
    }
   }
  },
@@ -1382,6 +2056,11 @@
     "who": "Brandt",
     "fr": "Das wäre in der Tat ein Weg, den ich sofort unterstützen würde.",
     "sv": "Det vore verkligen en väg som jag genast skulle stödja."
+   },
+   {
+    "who": "Moderatorin",
+    "fr": "Damit sind wir am Ende unserer Diskussion. Ob der Stadtrat dem Vorschlag folgt, entscheidet sich in der Haushaltssitzung im Dezember. Ich danke Ihnen beiden und Ihnen im Publikum für Ihre Fragen.",
+    "sv": "Därmed är vi i slutet av vår diskussion. Om stadsfullmäktige följer förslaget avgörs vid budgetsammanträdet i december. Jag tackar er båda, och er i publiken för era frågor."
    }
   ],
   "questions": [
@@ -1552,13 +2231,18 @@
   "lines": [
    {
     "who": "Sprecher",
-    "fr": "Der Landtag hat gestern nach einer hitzigen Debatte das neue Kulturfördergesetz verabschiedet. Das Gesetz verpflichtet die Kommunen erstmals, einen Mindestanteil ihres Haushalts für Kultur auszugeben. Kultur wird damit von einer freiwilligen Leistung zu einer Pflichtaufgabe.",
-    "sv": "Lantdagen antog i går efter en hetsig debatt den nya lagen om kulturstöd. Lagen förpliktar för första gången kommunerna att lägga en minsta andel av sin budget på kultur. Kultur blir därmed ett obligatoriskt i stället för ett frivilligt åtagande."
+    "fr": "Der Landtag hat gestern nach einer hitzigen Debatte das neue Kulturfördergesetz verabschiedet. Das Gesetz verpflichtet die Kommunen erstmals, einen Mindestanteil ihres Haushalts für Kultur auszugeben. Kultur wird damit von einer freiwilligen Leistung zu einer Pflichtaufgabe. Für das Gesetz stimmten die Regierungsfraktionen, die Opposition stimmte dagegen, bei zwei Enthaltungen. Es soll am 1. Januar in Kraft treten.",
+    "sv": "Lantdagen antog i går efter en hetsig debatt den nya lagen om kulturstöd. Lagen förpliktar för första gången kommunerna att lägga en minsta andel av sin budget på kultur. Kultur blir därmed ett obligatoriskt i stället för ett frivilligt åtagande. Regeringspartierna röstade för lagen och oppositionen emot, och två ledamöter lade ned sina röster. Den ska träda i kraft den 1 januari."
    },
    {
     "who": "Sprecher",
     "fr": "Die Kulturministerin sprach von einem historischen Tag. Musikschulen, Bibliotheken und Theater erhielten endlich Planungssicherheit. Die Opposition kritisierte dagegen, das Gesetz greife in die Selbstverwaltung der Kommunen ein. Der Städtetag erklärte, ohne zusätzliche Mittel des Landes sei das Gesetz nicht umsetzbar; man prüfe eine Klage vor dem Verfassungsgericht.",
     "sv": "Kulturministern talade om en historisk dag. Musikskolor, bibliotek och teatrar skulle äntligen få planeringstrygghet. Oppositionen kritiserade däremot att lagen ingriper i kommunernas självstyre. Städernas förbund förklarade att lagen inte går att genomföra utan extra medel från delstaten; man överväger en talan i författningsdomstolen."
+   },
+   {
+    "who": "Sprecher",
+    "fr": "Der Landesverband der Musikschulen begrüßte das Gesetz. Seit Jahren klagten die Schulen über lange Wartelisten und befristete Verträge für Lehrkräfte. Mit dem Gesetz könne man endlich langfristig planen, sagte die Vorsitzende des Verbandes. Nach Angaben des Verbandes warten bundesweit Zehntausende Kinder auf einen Platz an einer Musikschule.",
+    "sv": "Delstatens musikskoleförbund välkomnade lagen. I åratal har skolorna klagat över långa köer och tidsbegränsade anställningar för lärarna. Med lagen kan man äntligen planera långsiktigt, sade förbundets ordförande. Enligt förbundet väntar tiotusentals barn i hela Tyskland på en plats i en musikskola."
    },
    {
     "who": "Kommentatorin",
@@ -1569,6 +2253,11 @@
     "who": "Kommentatorin",
     "fr": "Viele Städte sind hoch verschuldet. Wenn sie nun mehr für Kultur ausgeben müssen, fehlt das Geld womöglich bei Schulen oder im Nahverkehr. Das Land hätte einen Fonds einrichten sollen, aus dem ärmere Kommunen unterstützt werden. Stattdessen droht jetzt ein jahrelanger Rechtsstreit, und die Musikschulen, denen das Gesetz helfen soll, warten weiter.",
     "sv": "Många städer är hårt skuldsatta. Om de nu måste lägga mer på kultur saknas pengarna kanske för skolor eller kollektivtrafik. Delstaten borde ha inrättat en fond som stöder fattigare kommuner. I stället hotar nu en årslång rättstvist, och musikskolorna som lagen ska hjälpa får fortsätta vänta."
+   },
+   {
+    "who": "Kommentatorin",
+    "fr": "Bleibt eine grundsätzliche Frage: Wie viel darf ein Land den Städten überhaupt vorschreiben? Der Föderalismus lebt davon, dass Entscheidungen dort getroffen werden, wo die Menschen ihre Folgen spüren. Ein Mindestanteil für Kultur mag sinnvoll sein; einheitliche Vorgaben für eine Großstadt und ein Dorf mit 800 Einwohnern sind es kaum. Hier hätte das Land mehr Vertrauen in seine Kommunen zeigen sollen.",
+    "sv": "Kvar står en principiell fråga: hur mycket får en delstat över huvud taget föreskriva för städerna? Federalismen bygger på att beslut fattas där människorna känner av följderna. En minsta andel för kultur må vara rimlig; enhetliga föreskrifter för en storstad och en by med 800 invånare är det knappast. Här borde delstaten ha visat mer förtroende för sina kommuner."
    }
   ],
   "questions": [
@@ -1704,8 +2393,275 @@
     "t": "der Rechtsstreit",
     "sv": "rättstvist",
     "g": "m"
+   },
+   "enthaltungen": {
+    "t": "die Enthaltung",
+    "sv": "nedlagd röst",
+    "g": "f"
+   },
+   "wartelisten": {
+    "t": "die Warteliste",
+    "sv": "kö, väntelista",
+    "g": "f"
+   },
+   "befristete": {
+    "t": "befristet",
+    "sv": "tidsbegränsad",
+    "g": ""
+   },
+   "vorschreiben": {
+    "t": "vorschreiben",
+    "sv": "föreskriva",
+    "g": ""
+   },
+   "vorgaben": {
+    "t": "die Vorgabe",
+    "sv": "föreskrift, krav",
+    "g": "f"
    }
   }
+ },
+ {
+  "id": "l-s6-versammlung",
+  "sec": "s6",
+  "title": "Bürgerversammlung: Muss die Musikschule schließen?",
+  "lines": [
+   {
+    "who": "Bürgermeisterin",
+    "fr": "Liebe Bürgerinnen und Bürger, ich freue mich über die große Beteiligung heute Abend. Sie wissen, warum wir hier sind: Die Stadt muss im Haushaltsplan für das nächste Jahr 1,8 Millionen Euro einsparen. Der Gemeinderat hat die Verwaltung beauftragt, alle freiwilligen Leistungen zu prüfen, und auf der Liste steht auch die Musikschule. Entschieden ist noch nichts. Heute wollen wir Ihre Meinung hören.",
+    "sv": "Kära medborgare, jag är glad över det stora deltagandet i kväll. Ni vet varför vi är här: staden måste spara 1,8 miljoner euro i budgeten för nästa år. Kommunfullmäktige har gett förvaltningen i uppdrag att granska alla frivilliga åtaganden, och på listan står även musikskolan. Ingenting är bestämt än. I kväll vill vi höra er åsikt."
+   },
+   {
+    "who": "Schulleiter",
+    "fr": "Vielen Dank. Ich möchte zunächst ein paar Zahlen nennen. Unsere Musikschule unterrichtet 1 200 Kinder und Jugendliche, und 300 weitere stehen auf der Warteliste. Die Stadt bezuschusst uns mit 400 000 Euro im Jahr, den Rest finanzieren wir über Gebühren und Zuschüsse des Landes. Wenn die Stadt ihren Anteil streicht, droht uns nicht eine Kürzung, sondern die Schließung.",
+    "sv": "Tack så mycket. Jag vill först nämna några siffror. Vår musikskola undervisar 1 200 barn och ungdomar, och ytterligare 300 står i kö. Staden ger oss ett bidrag på 400 000 euro om året, resten finansierar vi med avgifter och bidrag från delstaten. Om staden stryker sin andel hotas vi inte av en nedskärning utan av nedläggning."
+   },
+   {
+    "who": "Mutter",
+    "fr": "Ich bin alleinerziehend und habe zwei Kinder. Ohne die Ermäßigung für bedürftige Familien könnten meine Kinder kein Instrument lernen, denn private Lehrer kosten das Doppelte. Wenn die Musikschule schließt, lernen nur noch die Kinder ein Instrument, deren Eltern es sich leisten können. Das ist für mich eine soziale Ungerechtigkeit.",
+    "sv": "Jag är ensamstående och har två barn. Utan rabatten för behövande familjer skulle mina barn inte kunna lära sig ett instrument, för privatlärare kostar dubbelt så mycket. Om musikskolan stänger är det bara de barn vars föräldrar har råd som lär sig ett instrument. För mig är det en social orättvisa."
+   },
+   {
+    "who": "Gemeinderat",
+    "fr": "Ich verstehe diese Sorge sehr gut. Aber ich muss auch sagen: Wir im Gemeinderat haben eine Verantwortung für den ganzen Haushalt. Wenn wir bei der Musikschule nicht sparen, müssen wir bei den Kitas oder bei der Sanierung der Schulen sparen. Das will in diesem Raum sicher auch niemand. Die Frage ist also nicht, ob wir sparen, sondern wo.",
+    "sv": "Jag förstår den oron mycket väl. Men jag måste också säga: vi i kommunfullmäktige har ansvar för hela budgeten. Om vi inte sparar på musikskolan måste vi spara på förskolorna eller på renoveringen av skolorna. Det vill säkert ingen i det här rummet heller. Frågan är alltså inte om vi ska spara, utan var."
+   },
+   {
+    "who": "Schülerin",
+    "fr": "Darf ich auch etwas sagen? Ich bin sechzehn und spiele seit acht Jahren Cello im Jugendorchester. Dort habe ich Freundinnen gefunden, die ich sonst nie kennengelernt hätte, aus ganz anderen Stadtteilen und Familien. Solche Begegnungen gibt es sonst kaum. Ich finde, das sollte man nicht nur in Euro rechnen.",
+    "sv": "Får jag också säga något? Jag är sexton och har spelat cello i ungdomsorkestern i åtta år. Där har jag hittat vänner som jag annars aldrig hade lärt känna, från helt andra stadsdelar och familjer. Sådana möten finns annars knappt. Jag tycker att man inte bara borde räkna sådant i euro."
+   },
+   {
+    "who": "Bürgermeisterin",
+    "fr": "Danke für diesen Beitrag. Ich möchte Ihnen noch ein Verfahren vorschlagen. Bevor der Gemeinderat entscheidet, wollen wir einen Bürgerrat einberufen. Zwanzig Einwohnerinnen und Einwohner werden im Losverfahren ausgewählt und erarbeiten in drei Sitzungen eine Empfehlung, wo die Stadt sparen soll.",
+    "sv": "Tack för det inlägget. Jag vill också föreslå er ett tillvägagångssätt. Innan kommunfullmäktige beslutar vill vi kalla till ett medborgarråd. Tjugo invånare väljs ut genom lottning och arbetar under tre möten fram en rekommendation om var staden ska spara."
+   },
+   {
+    "who": "Gemeinderat",
+    "fr": "Ich halte das für eine gute Idee, solange klar ist, dass am Ende der Gemeinderat entscheidet. Ein Bürgerrat kann beraten, aber er ist nicht gewählt.",
+    "sv": "Jag tycker att det är en bra idé, så länge det är klart att det är kommunfullmäktige som beslutar till slut. Ett medborgarråd kan ge råd, men det är inte valt."
+   },
+   {
+    "who": "Bürgermeisterin",
+    "fr": "Selbstverständlich. Über den Vorschlag stimmt der Gemeinderat in seiner nächsten Sitzung ab. Ich danke Ihnen allen für die sachliche Diskussion.",
+    "sv": "Självklart. Kommunfullmäktige röstar om förslaget vid sitt nästa sammanträde. Jag tackar er alla för den sakliga diskussionen."
+   }
+  ],
+  "gloss": {
+   "beteiligung": {
+    "t": "die Beteiligung",
+    "sv": "deltagande",
+    "g": "f"
+   },
+   "haushaltsplan": {
+    "t": "der Haushaltsplan",
+    "sv": "budget",
+    "g": "m"
+   },
+   "gemeinderat": {
+    "t": "der Gemeinderat",
+    "sv": "kommunfullmäktige",
+    "g": "m"
+   },
+   "beauftragt": {
+    "t": "beauftragen",
+    "sv": "ge i uppdrag",
+    "g": ""
+   },
+   "freiwilligen": {
+    "t": "freiwillig",
+    "sv": "frivillig",
+    "g": ""
+   },
+   "warteliste": {
+    "t": "die Warteliste",
+    "sv": "kö, väntelista",
+    "g": "f"
+   },
+   "bezuschusst": {
+    "t": "bezuschussen",
+    "sv": "ge bidrag till",
+    "g": ""
+   },
+   "schließung": {
+    "t": "die Schließung",
+    "sv": "nedläggning",
+    "g": "f"
+   },
+   "alleinerziehend": {
+    "t": "alleinerziehend",
+    "sv": "ensamstående (med barn)",
+    "g": ""
+   },
+   "ermäßigung": {
+    "t": "die Ermäßigung",
+    "sv": "rabatt",
+    "g": "f"
+   },
+   "bedürftige": {
+    "t": "bedürftig",
+    "sv": "behövande",
+    "g": ""
+   },
+   "ungerechtigkeit": {
+    "t": "die Ungerechtigkeit",
+    "sv": "orättvisa",
+    "g": "f"
+   },
+   "sanierung": {
+    "t": "die Sanierung",
+    "sv": "renovering",
+    "g": "f"
+   },
+   "begegnungen": {
+    "t": "die Begegnung",
+    "sv": "möte",
+    "g": "f"
+   },
+   "bürgerrat": {
+    "t": "der Bürgerrat",
+    "sv": "medborgarråd",
+    "g": "m"
+   },
+   "einberufen": {
+    "t": "einberufen",
+    "sv": "sammankalla",
+    "g": ""
+   },
+   "losverfahren": {
+    "t": "das Losverfahren",
+    "sv": "lottning",
+    "g": "n"
+   },
+   "erarbeiten": {
+    "t": "erarbeiten",
+    "sv": "arbeta fram",
+    "g": ""
+   },
+   "sachliche": {
+    "t": "sachlich",
+    "sv": "saklig",
+    "g": ""
+   }
+  },
+  "questions": [
+   {
+    "type": "helhet",
+    "q": "Varför hålls medborgarmötet?",
+    "opts": [
+     "Staden ska bygga en ny musikskola",
+     "Staden måste spara och musikskolan kan läggas ned",
+     "Musikskolan firar sitt jubileum",
+     "Det ska väljas en ny borgmästare"
+    ],
+    "a": 1,
+    "why": "Staden måste spara 1,8 miljoner euro, och musikskolan står på listan över frivilliga åtaganden som granskas."
+   },
+   {
+    "type": "detalj",
+    "q": "Hur många barn och ungdomar står i kö till musikskolan?",
+    "opts": [
+     "1 200",
+     "400",
+     "300",
+     "20"
+    ],
+    "a": 2,
+    "why": "„… und 300 weitere stehen auf der Warteliste.“"
+   },
+   {
+    "type": "tolkning",
+    "q": "Vad menar rektorn med att det inte är en nedskärning utan en nedläggning som hotar?",
+    "opts": [
+     "Att skolan inte kan överleva utan stadens bidrag",
+     "Att lärarna kommer att gå i strejk",
+     "Att delstaten redan har dragit in sitt bidrag",
+     "Att skolan ska slås ihop med en annan"
+    ],
+    "a": 0,
+    "why": "Staden står för 400 000 euro; „Wenn die Stadt ihren Anteil streicht, droht uns nicht eine Kürzung, sondern die Schließung.“"
+   },
+   {
+    "type": "detalj",
+    "q": "Varför är musikskolan viktig för mamman?",
+    "opts": [
+     "Hon arbetar själv där",
+     "Hennes barn spelar i ungdomsorkestern",
+     "Den ligger nära hennes hem",
+     "Familjen får rabatt som behövande, och privatlärare är dubbelt så dyra"
+    ],
+    "a": 3,
+    "why": "„Ohne die Ermäßigung für bedürftige Familien könnten meine Kinder kein Instrument lernen, denn private Lehrer kosten das Doppelte.“"
+   },
+   {
+    "type": "detalj",
+    "q": "Vad påpekar kommunpolitikern?",
+    "opts": [
+     "Att musikskolan är för dyr i jämförelse med andra städer",
+     "Att man annars måste spara på förskolor eller skolrenoveringar",
+     "Att delstaten borde betala allt",
+     "Att barnen kan lära sig musik i skolan"
+    ],
+    "a": 1,
+    "why": "„Wenn wir bei der Musikschule nicht sparen, müssen wir bei den Kitas oder bei der Sanierung der Schulen sparen.“"
+   },
+   {
+    "type": "detalj",
+    "q": "Vad lyfter eleven fram?",
+    "opts": [
+     "Möten med människor från andra stadsdelar och familjer",
+     "Att hon vill bli yrkesmusiker",
+     "Att lektionerna är för dyra",
+     "Att orkestern behöver nya instrument"
+    ],
+    "a": 0,
+    "why": "„… Freundinnen …, aus ganz anderen Stadtteilen und Familien. Solche Begegnungen gibt es sonst kaum.“"
+   },
+   {
+    "type": "detalj",
+    "q": "Hur utses medlemmarna i medborgarrådet?",
+    "opts": [
+     "De väljs av kommunfullmäktige",
+     "De anmäler sig själva",
+     "Genom lottning",
+     "Musikskolan utser dem"
+    ],
+    "a": 2,
+    "why": "„Zwanzig Einwohnerinnen und Einwohner werden im Losverfahren ausgewählt …“"
+   },
+   {
+    "type": "tolkning",
+    "q": "Vilken invändning har kommunpolitikern mot medborgarrådet?",
+    "opts": [
+     "Det är för dyrt",
+     "Det tar för lång tid",
+     "Medlemmarna förstår inte budgeten",
+     "Det kan ge råd, men det är inte valt, så beslutet måste ligga hos fullmäktige"
+    ],
+    "a": 3,
+    "why": "„… solange klar ist, dass am Ende der Gemeinderat entscheidet. Ein Bürgerrat kann beraten, aber er ist nicht gewählt.“"
+   }
+  ]
  },
  {
   "id": "l-s7-vortrag",
@@ -1731,6 +2687,16 @@
     "who": "Referentin",
     "fr": "Ein Tipp für den Einstieg: Beginnen Sie nie mit „Ich möchte heute über … sprechen“. Beginnen Sie mit einer Frage, einer überraschenden Zahl oder einer kurzen Geschichte. Die ersten dreißig Sekunden entscheiden, ob man Ihnen zuhört.",
     "sv": "Ett tips för inledningen: börja aldrig med \"Jag vill i dag tala om …\". Börja med en fråga, en överraskande siffra eller en kort berättelse. De första trettio sekunderna avgör om man lyssnar på er."
+   },
+   {
+    "who": "Referentin",
+    "fr": "Nun zu den Stilmitteln. Sie müssen keine lange Liste auswendig lernen, aber drei sollten Sie kennen. Die Wiederholung, etwa als Anapher, gibt Ihrer Rede einen Rhythmus. Die Steigerung führt das Publikum Schritt für Schritt zum Höhepunkt. Und die rhetorische Frage bezieht die Zuhörer ein, ohne dass sie antworten müssen. Vorsicht dagegen mit Floskeln wie „Ich denke, dass man vielleicht sagen kann …“. Sie kosten Zeit und schwächen Ihre Aussage.",
+    "sv": "Nu till stilmedlen. Ni behöver inte lära er en lång lista utantill, men tre bör ni känna till. Upprepningen, till exempel som anafor, ger talet en rytm. Stegringen leder publiken steg för steg fram till höjdpunkten. Och den retoriska frågan involverar åhörarna utan att de behöver svara. Akta er däremot för floskler som ”Jag tror att man kanske kan säga …”. De tar tid och försvagar ert budskap."
+   },
+   {
+    "who": "Referentin",
+    "fr": "Viele von Ihnen kennen Herzrasen vor einem Vorspiel. Vor einer Rede ist es nicht anders. Üben Sie die ersten Sätze deshalb so lange, bis Sie sie im Schlaf können; der Rest kommt dann fast von allein.",
+    "sv": "Många av er känner till hjärtklappning före en provspelning. Före ett tal är det likadant. Öva därför in de första meningarna tills ni kan dem i sömnen; resten kommer då nästan av sig själv."
    },
    {
     "who": "Referentin",
@@ -1866,6 +2832,26 @@
     "t": "wirkungsvoll",
     "sv": "verkningsfull",
     "g": ""
+   },
+   "anapher": {
+    "t": "die Anapher",
+    "sv": "anafor",
+    "g": "f"
+   },
+   "steigerung": {
+    "t": "die Steigerung",
+    "sv": "stegring",
+    "g": "f"
+   },
+   "floskeln": {
+    "t": "die Floskel",
+    "sv": "floskel",
+    "g": "f"
+   },
+   "herzrasen": {
+    "t": "das Herzrasen",
+    "sv": "hjärtklappning",
+    "g": "n"
    }
   }
  },
@@ -1891,8 +2877,8 @@
    },
    {
     "who": "Nora",
-    "fr": "Im Hauptteil gibt es drei Argumente, und jedes wird mit einem Beispiel untermauert. Besonders wirkungsvoll fand ich die Anapher am Ende: „Wir brauchen Konzerte, die überraschen. Wir brauchen Konzerte, die einladen. Wir brauchen Konzerte, die für alle da sind.“ Das prägt sich ein.",
-    "sv": "I huvuddelen finns tre argument, och vart och ett underbyggs med ett exempel. Särskilt verkningsfull tyckte jag att anaforen i slutet var: \"Vi behöver konserter som överraskar. Vi behöver konserter som bjuder in. Vi behöver konserter som finns till för alla.\" Det fastnar."
+    "fr": "Im Hauptteil gibt es drei Argumente, und jedes wird mit einem Beispiel untermauert. Besonders wirkungsvoll fand ich die Anapher am Ende: „Wir brauchen Konzerte, die überraschen. Wir brauchen Konzerte, die einladen. Wir brauchen Konzerte, die für alle da sind.“ Das prägt sich ein. Und ganz zum Schluss kam nur noch ein kurzer Satz: „Neue Konzerte, neues Publikum.“ Eine Ellipse, kurz und einprägsam, fast wie ein Slogan.",
+    "sv": "I huvuddelen finns tre argument, och vart och ett underbyggs med ett exempel. Särskilt verkningsfull tyckte jag att anaforen i slutet var: \"Vi behöver konserter som överraskar. Vi behöver konserter som bjuder in. Vi behöver konserter som finns till för alla.\" Det fastnar. Och allra sist kom bara en kort mening: ”Nya konserter, ny publik.” En ellips, kort och lätt att minnas, nästan som en slogan."
    },
    {
     "who": "Dozentin",
@@ -1911,8 +2897,8 @@
    },
    {
     "who": "Dozentin",
-    "fr": "Genau das ist der Punkt. In der Rhetorik spricht man von der Vorwegnahme von Einwänden. Und noch etwas zur Körpersprache: Sie hat fast die ganze Zeit auf ihr Manuskript geschaut. Mehr Blickkontakt hätte ihre Überzeugungskraft sicher erhöht. Insgesamt aber eine gelungene Rede. Für nächste Woche schreiben Sie bitte selbst eine kurze Rede von drei Minuten, in der Sie mindestens einen Einwand vorwegnehmen.",
-    "sv": "Det är precis poängen. Inom retoriken talar man om att föregripa invändningar. Och en sak till om kroppsspråket: hon tittade nästan hela tiden i sitt manus. Mer ögonkontakt hade säkert ökat hennes övertygelsekraft. Men på det hela taget ett lyckat tal. Till nästa vecka skriver ni själva ett kort tal på tre minuter där ni föregriper minst en invändning."
+    "fr": "Genau das ist der Punkt. In der Rhetorik spricht man von der Vorwegnahme von Einwänden. Und noch etwas zur Körpersprache: Sie hat fast die ganze Zeit auf ihr Manuskript geschaut. Mehr Blickkontakt hätte ihre Überzeugungskraft sicher erhöht. Insgesamt aber eine gelungene Rede. Für nächste Woche schreiben Sie bitte selbst eine kurze Rede von drei Minuten, in der Sie mindestens einen Einwand vorwegnehmen. Achten Sie dabei auch auf Ihre Formulierungen: lieber kurze, klare Sätze als lange Schachtelsätze.",
+    "sv": "Det är precis poängen. Inom retoriken talar man om att föregripa invändningar. Och en sak till om kroppsspråket: hon tittade nästan hela tiden i sitt manus. Mer ögonkontakt hade säkert ökat hennes övertygelsekraft. Men på det hela taget ett lyckat tal. Till nästa vecka skriver ni själva ett kort tal på tre minuter där ni föregriper minst en invändning. Tänk då också på era formuleringar: hellre korta, tydliga meningar än långa, inkapslade meningar."
    }
   ],
   "questions": [
@@ -2078,6 +3064,21 @@
     "t": "die Überzeugungskraft",
     "sv": "övertygelsekraft",
     "g": "f"
+   },
+   "ellipse": {
+    "t": "die Ellipse",
+    "sv": "ellips (stilmedel)",
+    "g": "f"
+   },
+   "einprägsam": {
+    "t": "einprägsam",
+    "sv": "lätt att minnas",
+    "g": ""
+   },
+   "schachtelsätze": {
+    "t": "der Schachtelsatz",
+    "sv": "lång, inkapslad mening",
+    "g": "m"
    }
   }
  },
@@ -2090,6 +3091,11 @@
     "who": "Referent",
     "fr": "Meine Damen und Herren, als die Nationalsozialisten 1933 die Macht übernahmen, begann für viele Musikerinnen und Musiker eine Zeit der Verfolgung. Jüdische Orchestermitglieder wurden entlassen, Werke jüdischer Komponisten durften nicht mehr aufgeführt werden, und die sogenannte Reichsmusikkammer entschied darüber, wer überhaupt noch beruflich musizieren durfte.",
     "sv": "Mina damer och herrar, när nazisterna tog makten 1933 började en tid av förföljelse för många musiker. Judiska orkestermedlemmar avskedades, verk av judiska tonsättare fick inte längre framföras, och den så kallade rikskammaren för musik bestämde vem som överhuvudtaget fick musicera yrkesmässigt."
+   },
+   {
+    "who": "Referent",
+    "fr": "Einen propagandistischen Höhepunkt erreichte diese Politik 1938 mit der Ausstellung „Entartete Musik“ in Düsseldorf. Dort wurden Werke jüdischer Komponisten, aber auch Jazz und atonale Musik als „undeutsch“ verhöhnt. Das Plakat zeigte einen schwarzen Saxophonisten mit einem Davidstern, eine Karikatur, die rassistische und antisemitische Hetze miteinander verband. Wer in dieser Ausstellung vorkam, war verfemt.",
+    "sv": "En propagandistisk höjdpunkt nådde den här politiken 1938 med utställningen ”Entartete Musik” (degenererad musik) i Düsseldorf. Där hånades verk av judiska tonsättare, men också jazz och atonal musik, som ”otyska”. Affischen visade en svart saxofonist med en davidsstjärna, en karikatyr som förenade rasistisk och antisemitisk hets. Den som förekom i utställningen var bannlyst."
    },
    {
     "who": "Referent",
@@ -2245,7 +3251,314 @@
     "t": "die Verantwortung",
     "sv": "ansvar",
     "g": "f"
+   },
+   "entartete": {
+    "t": "entartet",
+    "sv": "degenererad (nazistiskt ord)",
+    "g": ""
+   },
+   "undeutsch": {
+    "t": "undeutsch",
+    "sv": "otysk (nazistiskt ord)",
+    "g": ""
+   },
+   "verhöhnt": {
+    "t": "verhöhnen",
+    "sv": "håna",
+    "g": ""
+   },
+   "plakat": {
+    "t": "das Plakat",
+    "sv": "affisch",
+    "g": "n"
+   },
+   "hetze": {
+    "t": "die Hetze",
+    "sv": "hets",
+    "g": "f"
+   },
+   "verfemt": {
+    "t": "verfemt",
+    "sv": "bannlyst",
+    "g": ""
    }
   }
+ },
+ {
+  "id": "l-s8-zeitzeugin",
+  "sec": "s8",
+  "title": "Interview: Eine Geigerin erinnert sich an den Herbst 1989",
+  "lines": [
+   {
+    "who": "Moderator",
+    "fr": "Frau Reinhardt, Sie haben 1989 in Leipzig Geige studiert. Wie haben Sie die Stimmung im Herbst damals erlebt?",
+    "sv": "Fru Reinhardt, ni studerade fiol i Leipzig 1989. Hur upplevde ni stämningen den hösten?"
+   },
+   {
+    "who": "Reinhardt",
+    "fr": "Es war eine Mischung aus Angst und Aufbruch. Im Sommer hatten Tausende die DDR über Ungarn verlassen, auch zwei Kommilitonen aus meinem Jahrgang. Republikflucht war ja eine Straftat, und wer blieb, fragte sich: Gehen oder bleiben und etwas verändern? Ich wollte bleiben, aber ich wollte nicht mehr schweigen.",
+    "sv": "Det var en blandning av rädsla och uppbrott. På sommaren hade tusentals lämnat DDR via Ungern, också två studiekamrater från min årskurs. Republikflykt var ju ett brott, och den som stannade frågade sig: ska jag gå eller stanna och förändra något? Jag ville stanna, men jag ville inte tiga längre."
+   },
+   {
+    "who": "Moderator",
+    "fr": "Sie waren bei den Montagsdemonstrationen dabei.",
+    "sv": "Ni var med på måndagsdemonstrationerna."
+   },
+   {
+    "who": "Reinhardt",
+    "fr": "Ja. Es begann mit den Friedensgebeten in der Nikolaikirche, die es schon seit Anfang der Achtzigerjahre gab. Dort traf sich die Bürgerrechtsbewegung, zuerst nur ein kleiner Kreis. Im September 1989 kamen plötzlich Tausende, und nach dem Gebet zogen sie über den Ring durch die Innenstadt.",
+    "sv": "Ja. Det började med fredsbönerna i Nikolaikirche, som hade funnits sedan början av åttiotalet. Där träffades medborgarrättsrörelsen, först bara en liten krets. I september 1989 kom det plötsligt tusentals, och efter bönen tågade de längs ringleden genom innerstaden."
+   },
+   {
+    "who": "Moderator",
+    "fr": "Und dann kam der 9. Oktober.",
+    "sv": "Och sedan kom den 9 oktober."
+   },
+   {
+    "who": "Reinhardt",
+    "fr": "Daran denke ich bis heute. Es gab Gerüchte, dass die Staatsmacht mit Gewalt eingreifen würde. Die Krankenhäuser sollten zusätzliche Blutkonserven bereithalten, das hatten wir gehört. Meine Mutter hat mich angefleht, zu Hause zu bleiben. Ich bin trotzdem gegangen. Wir waren ungefähr siebzigtausend Menschen, und wir riefen „Keine Gewalt!“ und „Wir sind das Volk!“.",
+    "sv": "Det tänker jag på än i dag. Det fanns rykten om att statsmakten skulle ingripa med våld. Sjukhusen skulle ha extra blodkonserver i beredskap, det hade vi hört. Min mamma bönföll mig att stanna hemma. Jag gick ändå. Vi var ungefär sjuttiotusen människor, och vi ropade ”Inget våld!” och ”Vi är folket!”."
+   },
+   {
+    "who": "Moderator",
+    "fr": "Welche Rolle spielte dabei Kurt Masur, der damalige Gewandhauskapellmeister?",
+    "sv": "Vilken roll spelade Kurt Masur, Gewandhausorkesterns dåvarande chefdirigent?"
+   },
+   {
+    "who": "Reinhardt",
+    "fr": "Eine sehr wichtige. Er hatte zusammen mit fünf anderen Leipzigern einen Aufruf formuliert, der am Abend über die Lautsprecher in der Stadt verlesen wurde. Darin hieß es, man brauche einen freien Meinungsaustausch, und alle wurden um Besonnenheit gebeten, damit ein friedlicher Dialog möglich werde. Für uns Musikstudenten war es unglaublich, dass ausgerechnet der Chef unseres berühmtesten Orchesters sich so öffentlich äußerte.",
+    "sv": "En mycket viktig. Han hade tillsammans med fem andra Leipzigbor formulerat ett upprop som lästes upp i högtalarna i staden på kvällen. Där stod det att man behövde ett fritt meningsutbyte, och alla ombads att vara besinningsfulla så att en fredlig dialog skulle bli möjlig. För oss musikstudenter var det otroligt att just chefen för vår mest berömda orkester uttalade sig så offentligt."
+   },
+   {
+    "who": "Moderator",
+    "fr": "Und es blieb friedlich.",
+    "sv": "Och det förblev fredligt."
+   },
+   {
+    "who": "Reinhardt",
+    "fr": "Ja. Die Polizei hat nicht eingegriffen, und das war, glaube ich, der eigentliche Wendepunkt. Danach wussten alle: Sie trauen sich nicht mehr. Einen Monat später fiel in Berlin die Mauer.",
+    "sv": "Ja. Polisen ingrep inte, och det var, tror jag, den egentliga vändpunkten. Efter det visste alla: de vågar inte längre. En månad senare föll muren i Berlin."
+   },
+   {
+    "who": "Moderator",
+    "fr": "Was wünschen Sie sich heute, wenn Sie mit jungen Menschen über diese Zeit sprechen?",
+    "sv": "Vad önskar ni er i dag när ni pratar med unga människor om den här tiden?"
+   },
+   {
+    "who": "Reinhardt",
+    "fr": "Dass sie begreifen, wie wenig selbstverständlich Freiheit ist. Viele kennen die DDR nur aus Filmen. Ich habe vor einigen Jahren meine Stasi-Akte im Archiv gelesen und erfahren, dass eine Freundin über mich berichtet hat. Das war bitter. Aber ich finde es richtig, dass jeder seine Akte einsehen kann. Erinnerung braucht Wahrheit, auch wenn sie wehtut.",
+    "sv": "Att de förstår hur lite självklar frihet är. Många känner bara till DDR från filmer. För några år sedan läste jag min Stasi-akt i arkivet och fick veta att en väninna hade rapporterat om mig. Det var bittert. Men jag tycker att det är rätt att alla kan läsa sin akt. Minnet behöver sanning, även när den gör ont."
+   }
+  ],
+  "gloss": {
+   "aufbruch": {
+    "t": "der Aufbruch",
+    "sv": "uppbrott, nystart",
+    "g": "m"
+   },
+   "jahrgang": {
+    "t": "der Jahrgang",
+    "sv": "årskurs, årgång",
+    "g": "m"
+   },
+   "republikflucht": {
+    "t": "die Republikflucht",
+    "sv": "republikflykt (flykt från DDR)",
+    "g": "f"
+   },
+   "straftat": {
+    "t": "die Straftat",
+    "sv": "brott",
+    "g": "f"
+   },
+   "friedensgebeten": {
+    "t": "das Friedensgebet",
+    "sv": "fredsbön",
+    "g": "n"
+   },
+   "achtzigerjahre": {
+    "t": "die Achtzigerjahre",
+    "sv": "åttiotalet",
+    "g": "pl"
+   },
+   "bürgerrechtsbewegung": {
+    "t": "die Bürgerrechtsbewegung",
+    "sv": "medborgarrättsrörelse",
+    "g": "f"
+   },
+   "kreis": {
+    "t": "der Kreis",
+    "sv": "krets",
+    "g": "m"
+   },
+   "gerüchte": {
+    "t": "das Gerücht",
+    "sv": "rykte",
+    "g": "n"
+   },
+   "staatsmacht": {
+    "t": "die Staatsmacht",
+    "sv": "statsmakt",
+    "g": "f"
+   },
+   "blutkonserven": {
+    "t": "die Blutkonserve",
+    "sv": "blodkonserv",
+    "g": "f"
+   },
+   "bereithalten": {
+    "t": "bereithalten",
+    "sv": "ha i beredskap",
+    "g": ""
+   },
+   "angefleht": {
+    "t": "anflehen",
+    "sv": "bönfalla",
+    "g": ""
+   },
+   "gewandhauskapellmeister": {
+    "t": "der Gewandhauskapellmeister",
+    "sv": "chefdirigent för Gewandhausorkestern",
+    "g": "m"
+   },
+   "aufruf": {
+    "t": "der Aufruf",
+    "sv": "upprop",
+    "g": "m"
+   },
+   "verlesen": {
+    "t": "verlesen",
+    "sv": "läsa upp",
+    "g": ""
+   },
+   "besonnenheit": {
+    "t": "die Besonnenheit",
+    "sv": "besinning, lugn",
+    "g": "f"
+   },
+   "wendepunkt": {
+    "t": "der Wendepunkt",
+    "sv": "vändpunkt",
+    "g": "m"
+   },
+   "fiel": {
+    "t": "fallen",
+    "sv": "falla",
+    "g": ""
+   },
+   "begreifen": {
+    "t": "begreifen",
+    "sv": "begripa",
+    "g": ""
+   },
+   "stasi-akte": {
+    "t": "die Stasi-Akte",
+    "sv": "akt hos Stasi (DDR:s säkerhetstjänst)",
+    "g": "f"
+   },
+   "einsehen": {
+    "t": "einsehen",
+    "sv": "ta del av, läsa",
+    "g": ""
+   }
+  },
+  "questions": [
+   {
+    "type": "helhet",
+    "q": "Vad handlar intervjun om?",
+    "opts": [
+     "En kvinnas minnen av hösten 1989 i Leipzig",
+     "Gewandhausorkesterns historia",
+     "Hur man studerar fiol i DDR",
+     "Murens byggande 1961"
+    ],
+    "a": 0,
+    "why": "Fru Reinhardt berättar om flykten via Ungern, måndagsdemonstrationerna och den 9 oktober 1989 i Leipzig."
+   },
+   {
+    "type": "detalj",
+    "q": "Vad hade två av hennes studiekamrater gjort på sommaren 1989?",
+    "opts": [
+     "Gått med i medborgarrättsrörelsen",
+     "Lämnat DDR via Ungern",
+     "Blivit gripna av Stasi",
+     "Börjat spela i Gewandhausorkestern"
+    ],
+    "a": 1,
+    "why": "„Im Sommer hatten Tausende die DDR über Ungarn verlassen, auch zwei Kommilitonen aus meinem Jahrgang.“"
+   },
+   {
+    "type": "detalj",
+    "q": "Hur började protesterna enligt henne?",
+    "opts": [
+     "Med en konsert i Gewandhaus",
+     "Med en strejk på universitetet",
+     "Med fredsbönerna i Nikolaikirche",
+     "Med ett tal av Kurt Masur"
+    ],
+    "a": 2,
+    "why": "„Es begann mit den Friedensgebeten in der Nikolaikirche …“"
+   },
+   {
+    "type": "detalj",
+    "q": "Vilket rykte hade man hört före den 9 oktober?",
+    "opts": [
+     "Att muren skulle öppnas",
+     "Att Masur skulle hålla tal",
+     "Att demonstrationen var förbjuden",
+     "Att sjukhusen skulle ha extra blodkonserver i beredskap"
+    ],
+    "a": 3,
+    "why": "„Die Krankenhäuser sollten zusätzliche Blutkonserven bereithalten, das hatten wir gehört.“"
+   },
+   {
+    "type": "detalj",
+    "q": "Ungefär hur många demonstrerade den 9 oktober?",
+    "opts": [
+     "Sjuttiotusen",
+     "Sjutusen",
+     "Sjuhundra",
+     "En miljon"
+    ],
+    "a": 0,
+    "why": "„Wir waren ungefähr siebzigtausend Menschen …“"
+   },
+   {
+    "type": "detalj",
+    "q": "Vad gjorde Kurt Masur?",
+    "opts": [
+     "Han dirigerade en konsert på torget",
+     "Han formulerade ett upprop tillsammans med andra som lästes upp i högtalarna",
+     "Han lämnade DDR",
+     "Han förhandlade med polisen i Berlin"
+    ],
+    "a": 1,
+    "why": "„Er hatte zusammen mit fünf anderen Leipzigern einen Aufruf formuliert, der am Abend über die Lautsprecher in der Stadt verlesen wurde.“"
+   },
+   {
+    "type": "tolkning",
+    "q": "Varför var den 9 oktober en vändpunkt enligt henne?",
+    "opts": [
+     "För att muren föll samma dag",
+     "För att Masur blev politiker",
+     "För att statsmakten inte ingrep och alla förstod att den inte längre vågade",
+     "För att demonstranterna använde våld"
+    ],
+    "a": 2,
+    "why": "„Die Polizei hat nicht eingegriffen … Danach wussten alle: Sie trauen sich nicht mehr.“"
+   },
+   {
+    "type": "detalj",
+    "q": "Vad fick hon veta när hon läste sin Stasi-akt?",
+    "opts": [
+     "Att hon hade fått ett stipendium",
+     "Att hennes mamma hade skyddat henne",
+     "Att hennes professor hade varit i Väst",
+     "Att en väninna hade rapporterat om henne"
+    ],
+    "a": 3,
+    "why": "„… und erfahren, dass eine Freundin über mich berichtet hat.“"
+   }
+  ]
  }
 ]

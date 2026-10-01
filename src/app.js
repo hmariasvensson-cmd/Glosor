@@ -106,9 +106,8 @@ const ruleFor=c=>((L.verbs.notes||{})[c.tense+"|"+c.verb])||c.rule;
    x.due (pass) räknas fortfarande ut, för ord från före dagschemat och för statistiken. */
 const INT=[1,3,7,20,40,80,160];
 const DAYS=[0,0,3,7,20,45,90];
-const DAY=864e5;
-const dayStart=ts=>{const d=new Date(ts); d.setHours(0,0,0,0); return d.getTime();};
-// Midnatt n kalenderdagar efter ts. Inte dayStart+n*DAY, som blir en timme fel över sommartidsskiftet.
+const DAY=864e5;   // ett dygn i ms (40-writing.js)
+// Midnatt n kalenderdagar efter ts. Inte midnatt+n*DAY, som blir en timme fel över sommartidsskiftet.
 const addDays=(ts,n)=>{const d=new Date(ts); d.setHours(0,0,0,0); d.setDate(d.getDate()+n); return d.getTime();};
 const isDue=x=>x.dd?x.dd<=Date.now():x.due<=S.pass;
 const MASTER=4, MAXDUE=40;   // MAXDUE = högst så många repetitioner per pass, resten väntar till nästa
@@ -155,6 +154,7 @@ const MASTER=4, MAXDUE=40;   // MAXDUE = högst så många repetitioner per pass
    Nya fält läggs till här och i docs/ARKITEKTUR.md. Ett fält som byter form får en ny migrering i MIGRATIONS. */
 let S;
 function loadState(){
+  flushLocal();   // en väntande skrivning (save(true)) först, så att läget som läses är det senaste
   S={pass:1,w:{},newCount:15,src:"auto",mode:"mix",log:[],vt:{},vv:{}};
   try{Object.assign(S,JSON.parse(localStorage.getItem(L.storageKey)||"{}"))}catch(e){ warnErr("sparat läge kunde inte läsas ("+L.storageKey+")",e); }
   normState();
@@ -208,33 +208,48 @@ function hash(s){let a=0x811c9dc5,b=0x9747b28c;for(let i=0;i<s.length;i++){const
   return (a>>>0).toString(36)+"-"+(b>>>0).toString(36)+"-"+s.length.toString(36)}
 const bucketOf=id=>{let h=0x811c9dc5;for(let i=0;i<id.length;i++)h=Math.imul(h^id.charCodeAt(i),16777619);return h>>>0};
 const sleep=ms=>new Promise(r=>setTimeout(r,ms));
-// Delar upp ett läge i huvuddel och bitar
+// Storlek i byte, men utan att koda texten när den säkert ryms (högst 3 byte per UTF-16-tecken)
+const fitsIn=(j,max)=>j.length*3<=max||bytes(j)<=max;
+/* Delar upp ett läge i huvuddel och bitar. Varje bit serialiseras en gång: parts[namn] = JSON-texten, som både mäts,
+   hashas (rev) och skrivs (cloudWrite gör om den till data först när biten ska skrivas). Läget kopieras alltså inte i
+   förväg: texterna är en ögonblicksbild av S när sparningen börjar, även om eleven svarar medan molnet skriver. */
 function cloudSplit(st){
   const head={...st}, parts={}; delete head.w; delete head.log;
   const w=st.w||{}, ids=Object.keys(w).sort();
-  let n=Math.max(1,Math.ceil(ids.length/W_PER_PART)), b;
-  for(;;n++){ b=Array.from({length:n},()=>({})); ids.forEach(id=>{b[bucketOf(id)%n][id]=w[id]});
-    if(n>=200||b.every(x=>bytes(JSON.stringify(x))<=PART_MAX)) break; }
-  b.forEach((x,i)=>{parts["w"+i]=x});
-  let cur=[], sz=2, k=0; const next=()=>{parts[k?"log"+k:"log"]=cur; k++; cur=[]; sz=2;};
-  (st.log||[]).forEach(e=>{const s=bytes(JSON.stringify(e))+1; if(cur.length&&sz+s>PART_MAX) next(); cur.push(e); sz+=s;});
-  if(cur.length||!k) next();
-  let hs=bytes(JSON.stringify(head));
+  let n=Math.max(1,Math.ceil(ids.length/W_PER_PART)), js;
+  for(;;n++){ const b=Array.from({length:n},()=>({})); ids.forEach(id=>{b[bucketOf(id)%n][id]=w[id]});
+    js=b.map(x=>JSON.stringify(x));
+    if(n>=200||js.every(j=>fitsIn(j,PART_MAX))) break; }
+  js.forEach((j,i)=>{parts["w"+i]=j});
+  // Loggen: oftast ryms hela i en bit; annars delas den per post som förut
+  const log=st.log||[], lj=JSON.stringify(log);
+  if(fitsIn(lj,PART_MAX)) parts.log=lj;
+  else { let cur=[], sz=2, k=0; const next=()=>{parts[k?"log"+k:"log"]="["+cur.join(",")+"]"; k++; cur=[]; sz=2;};
+    log.forEach(e=>{const j=JSON.stringify(e), s=bytes(j)+1; if(cur.length&&sz+s>PART_MAX) next(); cur.push(j); sz+=s;});
+    if(cur.length||!k) next(); }
+  let hj=JSON.stringify(head), hs=bytes(hj);
   if(hs>HEAD_MAX){
-    const ks=Object.keys(head).filter(k=>/^[A-Za-z0-9_]+$/.test(k)&&head[k]!==undefined).map(k=>[k,bytes(JSON.stringify(head[k]))]).sort((x,y)=>y[1]-x[1]);
-    for(const [k,s] of ks){ if(hs<=HEAD_MAX) break; parts["f."+k]=head[k]; delete head[k]; hs-=s; }
+    const ks=Object.keys(head).filter(k=>/^[A-Za-z0-9_]+$/.test(k)&&head[k]!==undefined).map(k=>[k,JSON.stringify(head[k])]).map(([k,j])=>[k,j,bytes(j)]).sort((x,y)=>y[2]-x[2]);
+    for(const [k,j,s] of ks){ if(hs<=HEAD_MAX) break; parts["f."+k]=j; delete head[k]; hs-=s; }
+    hj=JSON.stringify(head);
   }
-  return {head,parts};
+  return {head:JSON.parse(hj),parts};
 }
-function cloudDocs(st){
+// Senaste rev per bit ({"<storageKey>~<bit>": {j, rev}}): en bit vars text inte har ändrats hashas inte om
+const REV_CACHE=new Map();
+function cloudDocs(st,key){
   const {head,parts}=cloudSplit(st), docs={}, revs={};
-  Object.entries(parts).forEach(([n,data])=>{const j=JSON.stringify(data), rev=hash(j); revs[n]=rev; docs[n]={rev,data,size:bytes(j)+rev.length+24};});
+  Object.entries(parts).forEach(([n,j])=>{
+    const ck=(key||"")+"~"+n, c0=REV_CACHE.get(ck), c=c0&&c0.j===j?c0:{j,rev:hash(j),size:bytes(j)};
+    if(key) REV_CACHE.set(ck,c);
+    revs[n]=c.rev; docs[n]={rev:c.rev,j,size:c.size+c.rev.length+24};});
+  if(key) [...REV_CACHE.keys()].forEach(k=>{ if(k.startsWith(key+"~")&&!(k.slice(key.length+1) in parts)) REV_CACHE.delete(k); });
   const main={v:2,head,score:score(st),parts:revs,t:st.t||Date.now()};
   return {main,docs,size:bytes(JSON.stringify(main))};
 }
 const sameParts=(a,b)=>!!a&&!!b&&Object.keys(a).length===Object.keys(b).length&&Object.keys(a).every(k=>a[k]===b[k]);
 async function cloudWrite(key,st){
-  const {main,docs,size}=cloudDocs(st);
+  const {main,docs,size}=cloudDocs(st,key);   // synkront, före första await: en ögonblicksbild av st
   const big=Object.keys(docs).filter(n=>docs[n].size>DOC_MAX); if(size>DOC_MAX) big.push("huvud");
   if(big.length){ const e=new Error("för stort: "+big.join(", ")); e.code="too_big"; throw e; }
   // Har någon annan enhet sparat sedan sist? Är den längre kommen skriver vi inte över, och vi litar bara på
@@ -244,7 +259,7 @@ async function cloudWrite(key,st){
   if(!CLOUD.force[key]&&d&&(d.parts||d.state)&&remoteWins(d.parts?d.score:score(d.state),docT(d),st)) return {skipped:true,snap:cur};
   const known=d&&d.parts&&sameParts(d.parts,CLOUD.known[key])?CLOUD.known[key]:null;
   CLOUD.known[key]=null;
-  for(const [n,x] of Object.entries(docs)) if(!known||known[n]!==x.rev) await docFor(key+"~"+n).set({rev:x.rev,data:x.data});
+  for(const [n,x] of Object.entries(docs)) if(!known||known[n]!==x.rev) await docFor(key+"~"+n).set({rev:x.rev,data:JSON.parse(x.j)});
   await docFor(key).set(main);
   CLOUD.known[key]=main.parts; delete CLOUD.force[key];
   await cloudPrune(key,main.parts,[d&&d.parts,known,CLOUD.stale[key]]);
@@ -362,6 +377,7 @@ window.addEventListener("pagehide",()=>cloudFlush());
 // Byter till molnets läge. Mitt i ett pass väntar vi tills passet är slut (applyDeferred), och startsidan ritas
 // bara om när den visas, så att eleven inte kastas ut från topplistan, Tyck till eller en resultatskärm.
 function takeState(state,t){
+  flushLocal();   // en väntande skrivning av det gamla läget får inte skriva över molnläget efteråt
   S=JSON.parse(JSON.stringify(state)); if(!(S.t>=t)) S.t=+t||S.t; normState(); rebuildWords();
   try{localStorage.setItem(L.storageKey,JSON.stringify(S))}catch(e){ warnErr("molnläget kunde inte sparas i webbläsaren ("+L.storageKey+")",e); }
 }
@@ -431,7 +447,8 @@ async function cloudFlush(){
   clearTimeout(CLOUD.timer);
   if(CLOUD.busy||!CLOUD.db) return;
   const key=Object.keys(CLOUD.pending)[0]; if(!key) return;
-  const st=JSON.parse(JSON.stringify(CLOUD.pending[key])); delete CLOUD.pending[key];
+  // Ingen kopia behövs: cloudWrite serialiserar läget innan den väntar på nätet (cloudDocs)
+  const st=CLOUD.pending[key]; delete CLOUD.pending[key];
   CLOUD.busy=true; let wait=300;
   try{
     const r=await cloudWrite(key,st);
@@ -449,10 +466,28 @@ async function cloudFlush(){
 /* Per ord: s = steg (0–3, 4 = kan), due = pass då ordet ska repeteras, f = frågeform (mc/type),
    mcR/mcW = rätt/fel på flerval, tyR/tyW = rätt/fel på skriva, clR/clW = rätt/fel i meningar,
    lp/ld = lärt i pass/datum, mp/md = kan sedan pass/datum */
-function save(){
+/* soon = true (snapRun, två gånger per fråga): skrivningen till localStorage väntar LOCAL_WAIT ms, så att en hel
+   JSON.stringify(S) inte görs vid varje svar. Den väntande skrivningen görs alltid: vid nästa vanliga save(), när sidan
+   döljs eller stängs (visibilitychange, pagehide, beforeunload), före loadState (kursbyte) och i takeState. LOCAL_PENDING
+   håller kursens nyckel och läge, så att ett kursbyte under väntan skriver rätt läge till rätt kurs. */
+const LOCAL_WAIT=300;
+let LOCAL_PENDING=null, LOCAL_TIMER=null;
+function writeLocal(key,st){
+  try{localStorage.setItem(key,JSON.stringify(st))}catch(e){ warnErr("kunde inte spara i webbläsaren (fullt eller privat läge), bara i molnet",e); }
+}
+function flushLocal(){
+  clearTimeout(LOCAL_TIMER); LOCAL_TIMER=null;
+  const p=LOCAL_PENDING; LOCAL_PENDING=null; if(p) writeLocal(p.key,p.st);
+}
+document.addEventListener("visibilitychange",()=>{ if(document.visibilityState==="hidden") flushLocal(); });
+window.addEventListener("pagehide",flushLocal);
+window.addEventListener("beforeunload",flushLocal);
+function save(soon){
   S.t=Math.max(Date.now(),(S.t||0)+1); S.nLog=nLogOf(S);   // alltid senare än läget vi utgick från, även om en annan enhets klocka går före
   if(S.log.length>LOG_MAX) foldLog();   // håller dokumentet under lagringsgränsen
-  try{localStorage.setItem(L.storageKey,JSON.stringify(S))}catch(e){ warnErr("kunde inte spara i webbläsaren (fullt eller privat läge), bara i molnet",e); }
+  if(LOCAL_PENDING&&LOCAL_PENDING.key!==L.storageKey) flushLocal();   // en annan kurs väntar: skriv den först
+  if(soon===true){ LOCAL_PENDING={key:L.storageKey,st:S}; if(!LOCAL_TIMER) LOCAL_TIMER=setTimeout(flushLocal,LOCAL_WAIT); }
+  else { clearTimeout(LOCAL_TIMER); LOCAL_TIMER=null; LOCAL_PENDING=null; writeLocal(L.storageKey,S); }
   cloudSave();
   renderStreak();
 }
@@ -593,6 +628,14 @@ function safeHtml(s){
 const SPK='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18.5 5.5a9 9 0 0 1 0 13"/></svg>';
 const PLAY='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>';
 function shuffle(a){a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
+/* Fyller out (ny lista om den saknas) till n element ur a, i slumpad ordning, med dem som klarar ok(x, out), utan att
+   blanda eller kopiera hela listan: Fisher–Yates som stannar när out är full (bytena sparas i en Map). Samma fördelning
+   som att gå igenom shuffle(a); ok får se det som redan valts (för att välja bort dubbletter). */
+function pickSome(a,n,ok,out=[]){
+  const moved=new Map(), at=k=>moved.has(k)?moved.get(k):a[k];
+  for(let i=a.length-1;i>=0&&out.length<n;i--){ const j=Math.floor(Math.random()*(i+1)), x=at(j); moved.set(j,at(i)); if(ok(x,out)) out.push(x); }
+  return out;
+}
 const secName=id=>(SECTIONS.find(s=>s.id===id)||{}).name||"";
 // Genusnamn om kursen inte har egna (genders i lang.js), så att en ny kurs fungerar med bara de fält den måste ha
 const GENDER_NAMES={m:"maskulinum",f:"femininum",n:"neutrum",pl:"plural",mpl:"mask. plural",fpl:"fem. plural",npl:"neutr. plural"};
@@ -982,7 +1025,7 @@ function snapRun(){
     ...(sess.rate&&Object.keys(sess.rate).length?{rate:sess.rate}:{}),
     ctx:sess.ctx||null,againFn:sess.againFn||null,label:sess.label||"",daily:!!sess.daily,gramMix:!!sess.gramMix};
   const k=runKey(sess); if(k){ S.runs=S.runs||{}; S.runs[k]=S.run; }
-  save();
+  save(true);   // localStorage inom LOCAL_WAIT ms (och alltid när sidan döljs), se save
 }
 // Varje övning har sin egen påbörjade runda, så man kan välja att fortsätta eller börja om när man öppnar den igen.
 // Glospasset har också en egen plats ("words", extraövningen "words|extra"), så att det finns kvar efter en annan övning.
@@ -1238,18 +1281,10 @@ function defineKind(name,def){
   });
   return k;
 }
-// MC, TYPE, RESTORE … som före registret: vyer över KINDS, bara för läsning (MC.dict är KINDS.dict.mc)
-const kindView=f=>new Proxy({},{get:(_,n)=>KINDS[n]?KINDS[n][f]:undefined,has:(_,n)=>!!(KINDS[n]&&KINDS[n][f]),
-  ownKeys:()=>Object.keys(KINDS).filter(n=>KINDS[n][f]),
-  getOwnPropertyDescriptor:(_,n)=>KINDS[n]&&KINDS[n][f]?{value:KINDS[n][f],enumerable:true,configurable:true}:undefined,
-  set:(_,n)=>{KIND_ERRORS.push(`${f}.${String(n)} sattes direkt, använd defineKind`); return true;}});
-const MC=kindView("mc"), TYPE=kindView("type"), RESTORE=kindView("restore"), EFFECT=kindView("effect"), RECAP=kindView("recap"),
-  AFTER=kindView("after"), AGAIN=kindView("again"), KIND_NAMES=kindView("name");
 
 /* Glosquizet (startSession, renderLearn, finishSession …) finns i src/kinds/05-words.js, verbträning (startVerbs) och
    meningar (startCloze) i src/kinds/10-verbs.js och 11-sentences.js */
-/* ---------- Ordlista ---------- */
-/* Prognos: hur många ord som ska repeteras i nästa pass och de kommande dagarna */
+/* Statistiken: prognos över hur många ord som ska repeteras i nästa pass och de kommande dagarna */
 function statsForecast(){
   const t0=Date.now(), xs=WORDS.map(w=>ws(w.id)).filter(Boolean);
   const rows=[{l:"nästa",n:xs.filter(isDue).length}];
@@ -1262,6 +1297,7 @@ function statsForecast(){
     <p class="plan">Nya ord kommer tillbaka nästa pass och sedan efter tre pass${soon?` (${soon} ord väntar på det)`:""}. Därefter efter 3, 7 och 20 dagar, och ord du kan efter 45 och 90 dagar. Högst ${MAXDUE} repetitioner per pass, resten väntar till passet efter.</p></section>`;
 }
 const courseName=()=>S&&S.gy25&&L.courseGy25?L.courseGy25:(L.course||L.name);
+/* ---------- Ordlista ---------- */
 function renderList(){
   const q=($("#search").value||"").toLowerCase().trim();
   $("#list-count").textContent=`${WORDS.length} ord`;

@@ -73,7 +73,6 @@ function curSec(){
   const n=pickNew()[0]; if(n) return n.sec;
   const l=WORDS.filter(isLearned).pop(); return (l||WORDS[0]||{}).sec;
 }
-// Meningar att öva på: exempelmeningarna för ord man har börjat lära sig, annars kapitlet man är på
 /* ---------- Boken ----------
    Kapitel märkta #id|Namn|bok i words.txt kommer från elevens lärobok (L.book). Eleven väljer kapitlet
    klassen läser (S.chapter). Nya ord tas då först från det kapitlet, sedan från resten i ordning. */
@@ -88,7 +87,6 @@ function chapterKey(id){
   const m=/^k(\d+)[a-z]?$/.exec(id||""); if(m) return "k"+m[1];
   const s=SECTIONS.find(x=>x.id===id), n=s&&s.book&&/^Kap\s*(\d+)/.exec(s.name); return n?"k"+n[1]:id;
 }
-const ktKey=chapterKey;   // det gamla namnet (kapitelprovet), används av testerna
 const sameChapter=(a,b)=>a===b||chapterKey(a)===chapterKey(b);
 // Kapitlen i avsnittens ordning: {id: chapterKey, name, ids: [avsnitt], book, words: [ord]}, bara kapitel med ord.
 // Namnet är det första avsnittets, utan " · Fler ord ur kapitlet". Räknas en gång per rendering.
@@ -116,6 +114,8 @@ function wireBookPanel(){
   if($("#nextch")) $("#nextch").onclick=()=>{S.chapter=$("#nextch").dataset.ch; save(); renderStart();};
 }
 
+/* ---------- Meningspoolen ---------- */
+// Meningar att öva på: exempelmeningarna för ord man har börjat lära sig, annars kapitlet man är på
 function sentencePool(min=6){
   let p=WORDS.filter(isLearned);
   if(p.length<min){const s=curSec(); p=[...p,...WORDS.filter(w=>w.sec===s&&!p.includes(w))];}
@@ -224,12 +224,22 @@ function tapText(lines,gloss,o={}){
     ${o.sv?`<p class="tl-sv" hidden>${esc(ln.sv||"")}</p>`:""}`).join("");
 }
 // Ordet i ordlistan som en glosa eller ett uppslag motsvarar (om det finns)
-const listWord=t=>WORDS.find(w=>w.sec!=="mine"&&(w.t===t||variants(w.t).includes(norm(t))));
+// Samma svar som WORDS.find(w=>w.sec!=="mine"&&(w.t===t||variants(w.t).includes(norm(t)))), men med ett uppslag
+// (form → första ordets plats) som byggs en gång per ordlista och kurs, i stället för variants() över hela listan per anrop.
+let LISTW={words:null,lang:null,t:null,v:null};
+function listWord(t){
+  if(LISTW.words!==WORDS||LISTW.lang!==L){ const byT=new Map(), byV=new Map();
+    WORDS.forEach((w,i)=>{ if(w.sec==="mine") return; if(!byT.has(w.t)) byT.set(w.t,i); variants(w.t).forEach(v=>{ if(!byV.has(v)) byV.set(v,i); }); });
+    LISTW={words:WORDS,lang:L,t:byT,v:byV}; }
+  const a=LISTW.t.get(t), b=LISTW.v.get(norm(t)), i=a===undefined?b:b===undefined?a:Math.min(a,b);
+  return i===undefined?undefined:WORDS[i];
+}
 /* Tryck på ord för att välja dem, tryck igen för att ta bort markeringen. De valda orden samlas i en
    lista under texten, där man kan se dem, skriva betydelsen för ord utan glosa och lägga till alla i Mina ord. */
 function wireGloss(text){
   const box=$("#gbox"); if(!box) return;
   const sel=new Map(), gloss=text.gloss||{};
+  ensureLemmaAll();   // hela språkets grundformer (03-lemma.js), hämtas medan eleven läser
   // Ord utan glosa sparas i grundform om den finns i ordlistan eller verbtabellerna (lemmaOf, 03-lemma.js), annars som
   // de står, med liten bokstav om språket inte skriver substantiv med stor (tyskan gör det)
   const bare=e=>{ const t=L.elision?e.surface.replace(L.elision,""):e.surface; return L.nounCaps?t:t.toLowerCase(); };
@@ -270,7 +280,9 @@ function wireGloss(text){
     const k=el.dataset.k;
     if(sel.has(k)) sel.delete(k);
     else { const g=gloss[k]||null, e={k,surface:el.textContent,i:+el.dataset.i,g,sv:g?g.sv:""};
-      if(!g){ e.lem=lemmaOf(e.surface); if(e.lem) e.sv=e.lem.sv||""; }   // med elisionen: l'été är ett substantiv
+      if(!g){ e.lem=lemmaOf(e.surface); if(e.lem) e.sv=e.lem.sv||"";   // med elisionen: l'été är ett substantiv
+        // Kom språkets grundformer först nu (hämtningen pågick)? Slå upp ordet igen, om eleven inte har skrivit något
+        if(!e.lem) ensureLemmaAll().then(a=>{ if(!a||sel.get(k)!==e||e.lem||e.sv) return; e.lem=lemmaOf(e.surface); if(e.lem){ e.sv=e.lem.sv||""; draw(); } }); }
       sel.set(k,e); }
     mark(k); draw();
     const inp=box.querySelector(`[data-sv="${CSS.escape(k)}"]`); if(inp&&!inp.disabled) inp.focus({preventScroll:true});
@@ -298,7 +310,7 @@ function pickerScreen(title,intro,items,onPick){
   stopSpeech(); $("#tabs").hidden=true; sess=null; curView="ova"; RETURN_TO=null;
   const cur=curSec();
   app.innerHTML=`<section class="panel"><h2>${esc(title)}</h2><p class="plan">${intro}</p>
-    <div class="games">${items.map(it=>`<button class="game${it.sec===cur||it.here?" here":""}" data-pick="${esc(it.id)}"><span><b ${lang()}>${esc(it.title)}</b>
+    <div class="games">${items.map(it=>`<button class="game${it.sec===cur||it.here?" here":""}" data-pick="${esc(it.id)}"><span><b ${lang()}>${esc(it.title)}</b>${it.tag?`<span class="tag n pvtag">${esc(it.tag)}</span>`:""}
       <small>${esc([it.sec?secName(it.sec):"",it.sec===cur||it.here?"ditt kapitel just nu":"",it.status||""].filter(Boolean).join(" · "))}</small></span>
       <span class="go" aria-hidden="true">${it.status?"✓":"›"}</span></button>`).join("")}</div></section>
     <button class="quit" id="quit">Tillbaka</button>`;

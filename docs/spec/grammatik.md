@@ -4,7 +4,9 @@ Allmänna regler: [allmant.md](allmant.md). Regelsidorna: [regler.md](regler.md)
 
 ## grammar.json
 
-`{"topics": [{"id", "name", "secs": [avsnitt där området kommer först], …}], "rules": {<rule>: "namn"}}`, för tyskan också `adj`. Områdes-id och regelnamn låses i `ids.lock`. build.py stoppar om en fråga har ett `topic` eller `rule` som inte finns här, eller om `secs` pekar på ett avsnitt som inte finns.
+`{"topics": [{"id", "name", "sub", "secs": [avsnitt där området kommer först], "preview": "<kurskod>"}], "rules": {<rule>: "namn"}}`, för tyskan också `adj`. Områdes-id och regelnamn låses i `ids.lock`. build.py stoppar om en fråga har ett `topic` eller `rule` som inte finns här, om `secs` pekar på ett avsnitt som inte finns, eller om `preview` inte är en kurs som finns.
+
+- `preview` (valfri): området ligger egentligen över kursens nivå och övas mer i en senare kurs, t.ex. `"preview": "frs4"` i Franska 3. Listan visar då etiketten "Förhandsvisning – övas mer i Franska 4" (kursens `course` i lang.js), området sorteras sist och regelsidan säger att det är bra att känna igen redan nu. Frågorna är med i Blandad grammatik som vanligt. Lägg inte `secs` på ett område med `preview`.
 
 ## Meningsbankerna: content/grammar-*.json
 

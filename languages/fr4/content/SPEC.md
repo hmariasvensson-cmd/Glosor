@@ -6,7 +6,7 @@ Kapitel-id: q1 Études et avenir, q2 Médias et réseaux, q3 Environnement et so
 
 Formaten står i `docs/spec/` (allmänna regler i `docs/spec/allmant.md`, grammatiken i `docs/spec/grammatik.md`); Franska 3:s tillägg i `languages/fr/content/SPEC.md` och exemplen i `languages/fr/content/*.json`. Observera:
 
-- Grammatikområdena och regel-id:n står i `languages/fr4/grammar.json` (`topics` och `rules`). Varje område har en egen fil, `grammar-<område>.json`, med id-prefixet `<område>-`. Alla regler ingår i "Hitta felet", så felalternativen måste vara entydigt fel.
+- Grammatikområdena och regel-id:n står i `languages/fr4/grammar.json` (`topics` och `rules`). Varje område har en egen fil, `grammar-<område>.json`, med id-prefixet `<område>-`. Alla regler ingår i "Hitta felet", så felalternativen måste vara entydigt fel. Undantag: `style-reg` (vardagligt eller formellt ord, där felalternativen är korrekt talspråk) står i `ERR_SKIP` i `src/kinds/60-grammar.js`.
 - `prompts.json`: `need.tenses` får innehålla `"présent"`, `"passé composé"`, `"imparfait"`, `"futur proche"`, `"conditionnel"` och `"subjonctif"` (se `tenseCheck` i `lang.js`). `need.connectors` räknar bindeorden i `connectors` i `lang.js` (Franska 3:s lista plus bindeord för argumentation). Skrivlängd 150–250 ord för de längre uppgifterna.
 - Litteratur, sång och film: skriv aldrig av texter vars upphovsperson lever eller dog för mindre än 70 år sedan. Äldre verk (Molière, Hugo, Baudelaire …) får citeras kort.
 - `exam.json`: DELF B1 i samma format som `languages/fr/content/exam.json`, med id:n `fr4-…`.

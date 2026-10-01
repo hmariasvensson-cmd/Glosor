@@ -15,11 +15,9 @@ Föräldern: "Vi vill inte ha för många övningar men vi vill ha övningar som
 - **P1 (föräldern har inte bestämt sig än): Dagens pass som ett enda flöde:** glosor 6–7 min, fraser och meningar 3, grammatik 3 (tyska även der/die/das), hör- eller lästext varannan dag 4–5, tal 1–2. Klart först när allt är gjort. Provdatum i inställningarna ändrar viktningen (fler provuppgifter och färre nya ord närmare provet, inga nya ord de sista två veckorna). `dailyPanel`, `startDaily`, `startMix`, `finishSession`.
 - **P1 (föräldern har inte bestämt sig än): Tyska: dölj genus i skrivfrågan** (`TYPE.words` visar "(maskulinum)"), så att eleven själv måste minnas der/die/das. Visa genus efter svaret.
 - **P2 (vänta, föräldern 2026-09-28): Färre menyval (cirka 20 → 11):** Meningar, Diktamen och Översätt blir en övning som går från lucka till översättning till diktamen. Ordföljd tas bort som egen övning (behövs kvar för grammatikens `rw`-frågor). Verbspelen blir ett. Kultur in i Läsa, Berättelser in i Grammatik, Uttal göms under Tala. **Fråga föräldern innan något tas bort.**
-- **P3: Äkta ljud:** veckans tips med nyheter i långsam takt (RFI Journal en français facile, DW Langsam gesprochene Nachrichten) att läsa medan man lyssnar.
-
 ## Språkprov (det verkliga målet)
 
-- **P2: Musikteori i fler kurser och granskning:** musikteoriord och teoriprov finns i Franska 3 och Tyska 5. Termer att kontrollera med en musiklärare: franska omvändningsnamn (sixte sensible, accord de triton), cadence parfaite/imparfaite, tyska Gegenklang och verkürzter Dominantseptakkord. Tyska 4 kan få en lättare variant. Fler uppgifter finns i generatorn (57 tyska till).
+- **P2: Musikteori i fler kurser och granskning:** musikteoriord och teoriprov finns i Franska 3 och Tyska 5. Termer att kontrollera med en musiklärare: franska omvändningsnamn (sixte sensible, accord de triton), cadence parfaite/imparfaite, tyska Gegenklang och verkürzter Dominantseptakkord. Fler uppgifter finns i generatorn (57 tyska till).
 
 
 Båda eleverna ska söka musikutbildning utomlands. Eleven i franska behöver visa **B1 i franska** (DELF B1) för Frankrike, och eleven i tyska behöver visa **B2 i tyska** för Tyskland. Musikhögskolorna godtar oftast Goethe-Zertifikat B2, telc B2 eller TestDaF, men kontrollera vad just deras skolor kräver. Betyg i kursen spelar mindre roll.
@@ -55,12 +53,10 @@ Emma pluggar på egen hand, utan kurs, lärare och lärobok. Tyskan bygger därf
 - **P2: Resten av kursmallen** (`docs/kursmall.md`, avsnitt 4). Byggt: paket 1–8, 10 och 13–16 samt nivåerna. Kvar:
   - Paket 9 (grammatiken kopplad till kapitel) gör bara nytta i kurser med lärobok, så det väntar.
   - Lyssna igenom uttalsövningarna med en riktig röst. Vissa par kan låta lika i vissa webbläsare, till exempel é/è i franska och enkelt/dubbelt s i italienska. Sällsynta ord bör bytas ut.
-- **P3: Fler grammatikområden ur bokens minigrammatik:** prepositioner för tid och plats, räkneord och klockan, oregelbundna verb i presens (verbspelen täcker en del), demonstrativa pronomen, quel/lequel, tout, gérondif och passiv form. Minigrammatiken s. 200–201 och sidorna före s. 194 saknas.
-
 - **P1: Fler sidor ur Escalade.** Inlagda: s. 8–69, 98–131, 148–153, 182–191 och minigrammatiken s. 196–199 och 202–237 (se `languages/fr/book/sidor.json`). Saknas: s. 70–97, 132–147, 154–181, 192–195 och 200–201. Fota också om s. 101, där högerkanten saknas. Kapitelnumret för s. 148–153 (antaget kap 10) och s. 182–191 och titeln på kap 6 behöver bekräftas.
 - **P2: Säkerhetskopiera bokmappen** till ett privat repo på GitHub (`languages/fr/book/` är redan ett eget lokalt git-repo). Kräver att föräldern godkänner att ett privat repo skapas.
 - **P3: Välja bok per elev**, om flera elever med olika böcker ska använda samma kurs.
-- **P2: De nya kurserna (2026-09-29): fyll på och granska.** Allt AI-skrivet och bara testat maskinellt. Kvar enligt rapporterna: kortare texter än specen i de1–de3, it3, it5, frs5 (hör- och lästexter), 1 lästext per kapitel i de7 och frs5, de7 har 8 skrivuppgifter och 4 kultur/berättelser, it4 saknar glosor i texterna, ordantal under spec i de7 (700) och it5–it7 (ca 900–980). Överlapp mellan kurser är tillåtet men kan minskas (t.ex. frs5 och fr4 delar 245 ord, de2 och de3 några, it4–it6 sju). Kör en frekvenstäckningsmätning (DeReWo/Lexique/De Mauro). Videor: A1-förrådet saknar skola och kläder (fr1 e3, e7), B2-förrådet musik (it7), juridik (de7 s4, it7).
+- **P2: De nya kurserna (2026-09-29): fyll på och granska.** Allt AI-skrivet och bara testat maskinellt. Textlängder, glosor och ordantal är åtgärdade 2026-10-01 (se KLART.md, version 35). Överlapp mellan kurser är tillåtet men kan minskas (se "Öppet efter 2026-10-01"). Kör en frekvenstäckningsmätning (DeReWo/Lexique/De Mauro). Videor: A1-förrådet saknar skola och kläder (fr1 e3, e7), B2-förrådet musik (it7), juridik (de7 s4, it7).
   - Varje kurs får en egen mapp i `languages/` och en egen `storageKey`. Bygg efter kursmallen (`docs/kursmall.md`) och Skolverkets centrala innehåll för steget. Nivån ungefär enligt Skolverket: steg 1 A1.1, 2 A1.2, 3 A2.1, 4 A2.2, 5 B1.1, 6 B1.2, 7 B2.1.
   - Varje kurs ska bygga vidare på den förra utan att orden överlappar, och ha `nextCourse` till nästa steg.
   - Ordning: Italienska 3 (står som kommande i `languages/upcoming.json`), sedan de lägre stegen (1–2 i franska, 1–3 i tyska) och sist steg 7 och Franska 5.
@@ -71,19 +67,12 @@ Emma pluggar på egen hand, utan kurs, lärare och lärobok. Tyskan bygger därf
 - **P2: Franska: brister från nivågranskningen** (`docs/nivaer-franska.md`, avsnitt 4; beslutet om nivåerna är genomfört 2026-09-29):
   - **Franska 3 (`fr`) saknar DELF A2 som mellansteg.** Provträningen är DELF B1, två steg över kursen (provtexterna 260–385 ord mot kursens snitt 154–177). Lägg till DELF A2-uppgifter som egen övningsnivå (eller hänvisa till Franska 4, `frs4`, som har DELF A2). Kräver A2-varianten av provformatet i `70-exam.js` (`parts` co 25 / ce 30 / pe 45 / po 8 min), samma motor behövs för DELF A1 i Franska 1–2.
   - **Franska 3: inget avsnitt med vanliga ord** utanför boken och musikteorin (bara `fm`). Kontrollera hela kedjan mot de 2 000 vanligaste lemmana (Lonsdale och Le Bras eller Lexique 3) och fyll luckorna.
-  - **Franska 3: `subj` och `si` (och `rel`, `comp`, `quest`, `cond`, `imper`) saknar kapitel** (`secs: null`). Märk `subj` och `si` som förhandsvisning nu när Franska 4 och 5 finns. Saknas som egna områden: *depuis / il y a / pendant* och *venir de / être en train de*.
-  - **Franska 6 (`fr4`): grammatik från steg 4–5 som inte övas i kedjan före fr4** förrän `frs4`/`frs5` är klara: dubbla pronomen, participets kongruens med avoir, verb + à/de + infinitiv (finns bara i `fru`: `pronord`, `accord`, `prepinf`). Kontrollera att frs4 och frs5 täcker dem.
-  - **Franska 6 (`fr4`): äldre texter (Hugo, Molière) med passé simple** bör länka till det nya området `psimp` eller undvika passé simple. Nominalisering (början) och formell stil saknar eget område på steg 6.
   - **Franska 6 (`fr4`): ordmängden** 1 045 ord mot målet 1 000–1 200 per steg; tillsammans med frs4/frs5 ska kedjan nå ca 3 000 ord. Dubblettkontroll mellan frs4/frs5 och fr4 behövs (överlapp är godkänt av föräldern, men bör hållas litet).
-  - **Franska I (`fru`): några DALF C1-lika uppgifter** (sammanfattning av två texter) om kursen ska leda mot universitetets krav.
   - **Franska I (`fru`): de nya områdena `nomin` och `conces`** (2026-09-29) är AI-skrivna; `nomin-reg` och `nomin-titre` är undantagna från Hitta felet. Granska stilnivåexemplen (familier/soutenu) med en fransktalande.
 
 ## Arkitektur (granskning 2026-09-29)
 
 Granskning av `src/app.js`, `src/kinds/`, arvet i `lang.js`, `build.py`, testerna och kursmapparna. Punkterna från granskningen 2026-09-28 är byggda (se KLART.md, 2026-09-28 del 6). Rättat direkt 2026-09-29, bara i build.py och testerna: bygget gick inte igenom utan den privata bokmappen (`check_content` stoppade på `sec: "k4"` …, nu en varning), nya kontroller i `check_grammar_refs` (grammatikfrågans `topic`/`rule` finns i grammar.json, områdenas `secs` finns i words.txt, nycklarna i regler.json är områden) och i `check_extends` (varje fält i `inherit` finns hos föräldern, `nextCourse` finns), ett begripligt fel när en bokfil är lista och kursens objekt (eller tvärtom), och storleksvarningar (`MAX_PAGE_KB`, `MAX_DATA_KB`). Testerna finns i `test_build_checks` i `tests/run_tests.py`.
-
-- **P3: Död kod:** `DAY` och `dayStart` (app.js, bara en kommentar nämner dem), vyn `EFFECT`, och `MC`, `TYPE`, `RESTORE`, `RECAP`, `AFTER`, `AGAIN` och `KIND_NAMES`, som bara testerna använder (skriv om testerna till `KINDS[...]` och ta bort vyerna). Kontrollerna `typeof X==="function"` för `ktKey`, `sameChapter`, `genderNouns`, `hasGrammar` och `hasExam` är alltid sanna eftersom allt byggs till ett skript. Gamla rubrikkommentarer i 00-common.js ("Meningar att öva på") och app.js ("Ordlista" ovanför `statsForecast`).
-- **P3: Sparning vid varje svar:** `snapRun` → `save()` gör `JSON.stringify` på hela `S`, och `cloudDocs` hashar om alla bitar vid varje sparning. Spara `S.run` separat eller vänta några hundra ms, och hasha bara bitar som ändrats. `mcOptions` och flervalet i `cloze` blandar hela `WORDS` två gånger per fråga, och `listWord` kör `variants()` över hela ordlistan vid varje ritning.
 
 ## Konton, sparande och topplista
 
@@ -98,9 +87,14 @@ Granskning av `src/app.js`, `src/kinds/`, arvet i `lang.js`, `build.py`, testern
 ## Öppet efter 2026-09-30 (version 33)
 
 - **P2: Granskning av modersmålstalare / lärare** (alla nya kurser AI-skrivna): gränsfall som rapporterats — fr: genus för Hanouka/Halloween, accord-016 (en), imparfait/passé composé i några luckor; de: "Die Fähre [war|ist]", de7 modsubj-013/015; it: particip efter *ne*, indikativ i vardagsspråk, "ipersemplificare", Pirandello-repliken i it6 h5. Musikteori (fr): cadence parfaite/imparfaite (tonika i sopran?), *mordant*, stavningen *appogiature* (ord-id), växeldominant = V/V.
-- **P3: Täckning, rester:** några provtexter i fr (fr-ce-3/4/5/9, fr-co-6) och de (de-le-2, de-le-10) ligger 89–96 %; verktyget ger enstaka falska träffar (tyska avljud). Ord som glosats i flera de-texter bör bli kursord (Damen, wohl, hinein …).
 - **P3: TDN-gränserna** (80/60/40 %) är uppskattningar, inte TestDaF:s egna.
-- **P3: Mina ord i en kurs hittar bara grundformer i kurser som redan är hämtade** (it2 "verso" → versare om it3 inte har öppnats).
-- **P3: Död kod:** `typeof sameChapter==="function"` i 51-goals.js, `DAY` m.m.; `ktestd`/`ktest` i kapitelprovet.
 - **P3: Planerna genereras av `tools/plan.py`** — kör om när en kurs får nya avsnitt eller texter (bygget varnar).
 
+## Öppet efter 2026-10-01 (version 35)
+
+- **P2: Granskning av det nya (AI-skrivet):** fr: `nombre-022/024` (klockan, felalternativ bara fel mot den svenska meningen), 1990-reformens bindestreck, `dem-002` "ce héros", `tid-005/016/020`, `proche-002`; fr4 `style-004/016/019/023`, `nomi`-felformerna (entraînage, enregistrage, lançage), `nomi-022`; omskrivna provtexter fr-ce-3/4/5, fr-co-6, frs5-ce-3. de7: sakuppgifter (snubbelstenar ca 120 €, BGH 2018 om övningstider, Künstlersozialkasse 3 900 €, kulturombud 1998, Leipzig 9 okt), "das Budget gebe nicht mehr her". it: "sono acceduto", ho/è scorso, applaudo/applaudisco, Viva V.E.R.D.I., Basile, Unesco 2023, Fenice 2003.
+- **P3: Berättelser och provtexter under täckningsgränsen** (appen visar inga glosor där): it1-berättelserna (chiedere, rispondere, arrivare, sapere kommer först i it2/it3), it2 j2/j7 och it2-le-1, it3 k1/k5, de7 s-s6. Skriv om med kända ord.
+- **P3: `tools/tackning.py` känner inte igen** zu-infinitiv av delbara verb, -in-former, komparativ och dessen/diejenigen (tyska), så siffrorna är något för låga.
+- **P3: Dubbletter:** frs5 och fr4 delar 245 ord (förslag: ta bort ur frs5, inte fr4, listan i agentens arbetsfil); "die Überschrift (-en)" finns i både de och de6; it5–it6 sju ord; il Parlamento/il parlamento. Ändra bara med `ids.removed` och förälderns godkännande.
+- **P3: Franska ord som saknas i hela kedjan:** déranger, électrique.
+- **P3: accord-009** (frs5) har distraktorn "pri", som inte är en fransk form — kontrollera om det är meningen.

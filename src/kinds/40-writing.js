@@ -21,7 +21,7 @@
 let WR_FILTER="all";   // filtret på skrivsidan: all, sec (kapitlens), exam (provets), todo (inte skrivna)
 
 // Provets skrivuppgifter (inte tala, inte kortsvar)
-const wrExamTasks=()=>typeof hasExam==="function"&&hasExam()?EX().tasks.filter(t=>exKind(t)==="write"):[];
+const wrExamTasks=()=>hasExam()?EX().tasks.filter(t=>exKind(t)==="write"):[];
 const wrExamLabel=t=>{ const e=EX(), lv=examLevel(t);
   return ["Provuppgift",e.name+(cefrOf(e.name)===lv?"":` (${lv})`),t.time?`${t.time} min`:""].filter(Boolean).join(" · "); };
 // Är uppgiften skriven? Kapitlets: Klar tryckt. Provets: bedömd eller inlämnad.
@@ -226,7 +226,7 @@ function wfMatchers(w){
   const bases=new Set();
   variants(w.t).forEach(v=>{ let b=stripArt(apos(v).toLowerCase(),L.hintStrip); (L.articles||[]).forEach(re=>{b=stripArt(b,re);});
     b=b.replace(/^(se |s'|sich |si )/,"").replace(/[.,!?¿¡;:…]/g," ").replace(/\s+/g," ").trim(); if(b) bases.add(b); });
-  const pl=typeof genderNouns==="function"&&L.genderGame?(genderNouns().find(n=>n.w.id===w.id)||{}).pl:null;
+  const pl=L.genderGame?(genderNouns().find(n=>n.w.id===w.id)||{}).pl:null;
   if(pl){ const re=bnd([pl,pl+"n"].map(x=>x.toLowerCase()).filter(x=>x.length>2)); if(re) ms.push({re,need:[]}); }
   bases.forEach(b=>{ const toks=b.split(" ");
     if(toks.length===1){ const x=tokForms(toks[0],true), re=bnd(x.f.filter(f=>f.length>2)); if(re) ms.push({re,need:[]});

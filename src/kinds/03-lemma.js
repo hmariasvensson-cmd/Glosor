@@ -1,7 +1,7 @@
 /* ---------- Grundformen till böjda former (Mina ord) ----------
-   Ett ord som eleven sparar från en text utan glosa sparas i grundform när grundformen finns i kursens ordlista, i en
-   redan hämtad kurs i samma språk (kedjan, t.ex. Franska 1 om den har öppnats; andra kurser hämtas inte för det här)
-   eller i verbtabellerna (L.verbs): "fährt" → "fahren", "belles" → "beau, belle". Former i verbtabellerna slås upp
+   Ett ord som eleven sparar från en text utan glosa sparas i grundform när grundformen finns i kursens ordlista, i någon
+   annan kurs i samma språk (kedjan: data/lemma-<språk>.json, se ensureLemmaAll; innan den har hämtats bara redan
+   hämtade kurser) eller i verbtabellerna (L.verbs): "fährt" → "fahren", "belles" → "beau, belle". Former i verbtabellerna slås upp
    direkt, tyska pluraler tas ur ordlistans "(-en)", "(-gänge)", "(Zäune)", och annars prövas enkla ändelseregler per
    språk (plural, femininum, komparation, verbändelser). En regel räknas bara om resultatet finns i ordlistan eller
    verbtabellerna, så ett ord som inte känns igen sparas som det står, som förut.
@@ -45,15 +45,33 @@ function dePlural(t){
   if(x.length>=3) for(let k=0;k<=n.length-2;k++) if(fold(x).startsWith(fold(n.slice(k)))) return n.slice(0,k)+x;   // "-gänge": sista ledet byts
   return n+x;
 }
+/* Hela språkets ord: data/lemma-<språk>.json (build.py, lemma_files) = {words: [[ord, svenska, genus], …]} för alla
+   kurser i samma språk, så att grundformen hittas även i en kurs i kedjan som inte har öppnats (it2 "verso" → verso ur
+   it3, inte versare). Filen hämtas första gången lemmaIndex behövs (wireGloss ber om den när en text visas). Tills den
+   har kommit, eller om den inte går att hämta (offline), används kursen, hämtade kurser och verbtabellerna som förut;
+   ett misslyckat försök görs om tidigast efter LEMMA_RETRY ms. */
+const LEMMA_ALL={}, LEMMA_FAIL={}, LEMMA_RETRY=60000;
+function ensureLemmaAll(){
+  const lg=lemmaLang(), name="lemma-"+lg;
+  if(LEMMA_ALL[lg]) return Promise.resolve(LEMMA_ALL[lg]);
+  if(INLINE_DATA[name]) return Promise.resolve(LEMMA_ALL[lg]=INLINE_DATA[name].words||[]);   // preview.html
+  if(!DATA_VERSION||typeof DATA_VERSION!=="object"||!DATA_VERSION[name]||Date.now()-(LEMMA_FAIL[lg]||0)<LEMMA_RETRY) return Promise.resolve(null);
+  return fetchData(name).then(d=>LEMMA_ALL[lg]=(d&&d.words)||[])
+    .catch(e=>{ LEMMA_FAIL[lg]=Date.now(); warnErr("grundformerna ("+name+") kunde inte hämtas, bara kursens ord används",e); return null; });
+}
 function lemmaIndex(){
-  const others=Object.keys(LANGUAGES).filter(c=>c!==L.code&&sameLang(c,L.code)&&LANGUAGES[c].words!=null);
-  const sig=L.code+"|"+WORDS.length+"|"+others.join();
+  const lg=lemmaLang(); if(!LEMMA_ALL[lg]) ensureLemmaAll();   // i preview.html finns filen direkt, annars hämtas den
+  const all=LEMMA_ALL[lg];
+  // Med hela språkets fil behövs inte de hämtade kurserna (de finns i filen)
+  const others=all?[]:Object.keys(LANGUAGES).filter(c=>c!==L.code&&sameLang(c,L.code)&&LANGUAGES[c].words!=null);
+  const sig=L.code+"|"+WORDS.length+"|"+others.join()+"|"+(all?all.length:"-");
   if(LEMMA&&LEMMA.sig===sig) return LEMMA;
   const words=new Map(), forms=new Map(), infs=new Map(), de=lemmaLang()==="de";
   const addW=w=>{ variants(w.t).forEach(v=>{const k=lemmaKey(v); if(k&&!words.has(k)) words.set(k,w);});
     if(de&&w.g){ const p=dePlural(w.t); if(p){ [p,/[ns]$/.test(p)?p:p+"n"].forEach(k=>{if(!words.has(k)) words.set(k,w);}); } } };
   WORDS.filter(w=>w.sec!=="mine").forEach(addW);
   others.forEach(c=>{ const x=LANGUAGES[c]; try{ (x.base||parseWords(x.words)).words.forEach(addW); }catch(e){} });
+  if(all) all.forEach(([t,sv,g])=>addW({t,sv:sv||"",g:g||""}));   // kursens egna ord står först och vinner
   const vb=L.verbs||{}, sv=vb.sv||{};
   Object.values(vb.tenses||{}).forEach(tt=>Object.entries(tt||{}).forEach(([inf,fs])=>{
     infs.set(inf.toLowerCase(),inf);

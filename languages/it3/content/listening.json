@@ -26,6 +26,26 @@
    },
    {
     "who": "A",
+    "fr": "E il cibo com'era?",
+    "sv": "Och maten, hur var den?"
+   },
+   {
+    "who": "B",
+    "fr": "Buonissimo! La signora della masseria preparava le orecchiette fatte in casa, e la sera mangiavamo pesce fresco al porto. Costava poco, molto meno che in Svezia.",
+    "sv": "Jättegod! Damen på masserian gjorde hemgjorda orecchiette, och på kvällen åt vi färsk fisk i hamnen. Det kostade lite, mycket mindre än i Sverige."
+   },
+   {
+    "who": "A",
+    "fr": "Avete fatto il bagno tutti i giorni?",
+    "sv": "Badade ni varje dag?"
+   },
+   {
+    "who": "B",
+    "fr": "Quasi. Un giorno c'era troppo vento, allora abbiamo noleggiato delle biciclette e abbiamo girato per i paesini vicini.",
+    "sv": "Nästan. En dag blåste det för mycket, så vi hyrde cyklar och åkte runt i byarna i närheten."
+   },
+   {
+    "who": "A",
     "fr": "Che bello! E cosa avete visitato?",
     "sv": "Vad fint! Och vad besökte ni?"
    },
@@ -115,6 +135,18 @@
     ],
     "a": 1,
     "why": "« Lui conosceva mio nonno … Non lo sapevo. » Hon visste inte att morfar kom därifrån."
+   },
+   {
+    "type": "detalj",
+    "q": "Vad gjorde de den dagen det blåste för mycket?",
+    "opts": [
+     "Stannade på masserian hela dagen",
+     "Tog färjan till Grekland",
+     "Hyrde cyklar och åkte runt i byarna",
+     "Gick på museum i Lecce"
+    ],
+    "a": 2,
+    "why": "« abbiamo noleggiato delle biciclette e abbiamo girato per i paesini vicini »."
    }
   ],
   "gloss": {
@@ -212,6 +244,21 @@
     "t": "portare",
     "sv": "ta med",
     "g": ""
+   },
+   "orecchiette": {
+    "t": "le orecchiette",
+    "sv": "orecchiette (öronformad pasta från Apulien)",
+    "g": "pl"
+   },
+   "noleggiato": {
+    "t": "noleggiare",
+    "sv": "hyra",
+    "g": ""
+   },
+   "paesini": {
+    "t": "il paesino",
+    "sv": "liten by",
+    "g": "m"
    }
   }
  },
@@ -244,6 +291,16 @@
     "who": "A",
     "fr": "Adesso aspettiamo l'autobus per San Teodoro, dove abbiamo prenotato il campeggio.",
     "sv": "Nu väntar vi på bussen till San Teodoro, där vi har bokat campingen."
+   },
+   {
+    "who": "A",
+    "fr": "Il campeggio è a cinque minuti a piedi dalla spiaggia. Restiamo lì una settimana, poi andiamo a Cagliari dalla zia Anna, come avevamo deciso.",
+    "sv": "Campingen ligger fem minuters promenad från stranden. Vi stannar där en vecka, sedan åker vi till moster Anna i Cagliari, som vi hade bestämt."
+   },
+   {
+    "who": "A",
+    "fr": "Ho già fatto tantissime foto: te le mando appena trovo una connessione, perché qui il telefono non prende bene.",
+    "sv": "Jag har redan tagit jättemånga bilder: jag skickar dem till dig så fort jag hittar en uppkoppling, för här har telefonen dålig täckning."
    },
    {
     "who": "A",
@@ -316,6 +373,18 @@
     ],
     "a": 0,
     "why": "Ne syftar på caricabatterie: jag köper en (laddare) här."
+   },
+   {
+    "type": "detalj",
+    "q": "Vad ska Luca och Marco göra efter en vecka på campingen?",
+    "opts": [
+     "Åka hem till Livorno",
+     "Åka till moster Anna i Cagliari",
+     "Ta färjan till Korsika",
+     "Hyra en lägenhet i Olbia"
+    ],
+    "a": 1,
+    "why": "« poi andiamo a Cagliari dalla zia Anna »."
    }
   ],
   "gloss": {
@@ -403,6 +472,21 @@
     "t": "il bacio",
     "sv": "puss, kyss",
     "g": "m"
+   },
+   "connessione": {
+    "t": "la connessione",
+    "sv": "uppkoppling",
+    "g": "f"
+   },
+   "prende": {
+    "t": "prendere",
+    "sv": "(om mobilen) ha täckning",
+    "g": ""
+   },
+   "piedi": {
+    "t": "a piedi",
+    "sv": "till fots",
+    "g": ""
    }
   }
  },
@@ -420,6 +504,16 @@
     "who": "B",
     "fr": "Credo di sì. Mi iscriverò a medicina a Padova. E tu?",
     "sv": "Jag tror det. Jag ska söka till läkarlinjen i Padova. Och du?"
+   },
+   {
+    "who": "A",
+    "fr": "Medicina? Ma sono sei anni di studio, più la specializzazione!",
+    "sv": "Medicin? Men det är sex års studier, plus specialiseringen!"
+   },
+   {
+    "who": "B",
+    "fr": "Lo so, ma è il mio sogno da quando ero piccola. Mia madre fa l'infermiera e mi raccontava sempre del suo lavoro in ospedale. E poi a Padova abita mia cugina, quindi all'inizio starò da lei.",
+    "sv": "Jag vet, men det har varit min dröm sedan jag var liten. Min mamma är sjuksköterska och berättade alltid om sitt jobb på sjukhuset. Och så bor min kusin i Padua, så i början ska jag bo hos henne."
    },
    {
     "who": "A",
@@ -522,6 +616,18 @@
     ],
     "a": 1,
     "why": "Futuro används här som gissning om nuet: hon är nog hemma."
+   },
+   {
+    "type": "detalj",
+    "q": "Var ska Sofia bo i början i Padua?",
+    "opts": [
+     "I en studentkorridor",
+     "Hos sin kusin",
+     "Hos sin moster",
+     "I en egen lägenhet"
+    ],
+    "a": 1,
+    "why": "« a Padova abita mia cugina, quindi all'inizio starò da lei »."
    }
   ],
   "gloss": {
@@ -604,6 +710,26 @@
     "t": "il coraggio",
     "sv": "mod",
     "g": "m"
+   },
+   "specializzazione": {
+    "t": "la specializzazione",
+    "sv": "specialisering (läkarens vidareutbildning)",
+    "g": "f"
+   },
+   "infermiera": {
+    "t": "l'infermiera",
+    "sv": "sjuksköterska",
+    "g": "f"
+   },
+   "starò": {
+    "t": "stare",
+    "sv": "bo, vara (futuro: jag ska bo)",
+    "g": ""
+   },
+   "sogno": {
+    "t": "il sogno",
+    "sv": "dröm",
+    "g": "m"
    }
   }
  },
@@ -646,6 +772,26 @@
     "who": "A",
     "fr": "Lavorerà insieme a Paolo, il nostro ragazzo più esperto. Con lui imparerà tutto in pochi giorni.",
     "sv": "Du kommer att jobba ihop med Paolo, vår mest erfarna kille. Med honom lär du dig allt på några dagar."
+   },
+   {
+    "who": "B",
+    "fr": "Devo portare dei documenti?",
+    "sv": "Måste jag ta med några papper?"
+   },
+   {
+    "who": "A",
+    "fr": "Sì, una copia della carta d'identità e il codice fiscale. Se non ce l'ha ancora, può chiederlo all'Agenzia delle Entrate: è gratis e ci vuole poco.",
+    "sv": "Ja, en kopia av id-kortet och skattenumret. Om ni inte har det än kan ni be om det hos Skatteverket: det är gratis och går fort."
+   },
+   {
+    "who": "B",
+    "fr": "D'accordo. E devo avere una divisa?",
+    "sv": "Okej. Och måste jag ha uniform?"
+   },
+   {
+    "who": "A",
+    "fr": "La maglietta con il nome della gelateria gliela diamo noi. Lei deve portare solo pantaloni neri e scarpe comode.",
+    "sv": "T-shirten med glassbarens namn får ni av oss. Ni behöver bara ha svarta byxor och bekväma skor."
    },
    {
     "who": "B",
@@ -723,6 +869,18 @@
     ],
     "a": 1,
     "why": "I en anställningsintervju är man ofta formell, därför « si accomodi », « per Lei va bene? »."
+   },
+   {
+    "type": "detalj",
+    "q": "Vad måste Elin själv ha på sig på jobbet?",
+    "opts": [
+     "En vit skjorta",
+     "En T-shirt med sitt namn",
+     "Ett förkläde hon köper själv",
+     "Svarta byxor och bekväma skor"
+    ],
+    "a": 3,
+    "why": "« Lei deve portare solo pantaloni neri e scarpe comode » – T-shirten får hon av glassbaren."
    }
   ],
   "gloss": {
@@ -795,6 +953,36 @@
     "t": "l'estate",
     "sv": "sommar",
     "g": "f"
+   },
+   "copia": {
+    "t": "la copia",
+    "sv": "kopia",
+    "g": "f"
+   },
+   "fiscale": {
+    "t": "il codice fiscale",
+    "sv": "skattenummer (ungefär som personnummer)",
+    "g": "m"
+   },
+   "divisa": {
+    "t": "la divisa",
+    "sv": "uniform",
+    "g": "f"
+   },
+   "gliela": {
+    "t": "gliela",
+    "sv": "den åt er (gli + la)",
+    "g": ""
+   },
+   "comode": {
+    "t": "comodo",
+    "sv": "bekväm",
+    "g": ""
+   },
+   "documenti": {
+    "t": "il documento",
+    "sv": "dokument, papper (id-handling)",
+    "g": "m"
    }
   }
  },
@@ -820,6 +1008,11 @@
    },
    {
     "who": "A",
+    "fr": "Gli aerei invece partono quasi normalmente, ma all'aeroporto di Bergamo alcuni voli sono in ritardo di due o tre ore. Chi deve partire oggi dovrebbe controllare il sito della compagnia prima di uscire di casa.",
+    "sv": "Flygen avgår däremot nästan som vanligt, men på flygplatsen i Bergamo är några flyg två eller tre timmar försenade. Den som ska resa i dag borde kolla flygbolagets webbplats innan hen går hemifrån."
+   },
+   {
+    "who": "A",
     "fr": "Passiamo alla cultura. A Firenze si è aperta ieri una mostra dedicata a Leonardo da Vinci. Nel primo giorno l'hanno visitata più di tremila persone.",
     "sv": "Vi går över till kultur. I Florens öppnade i går en utställning om Leonardo da Vinci. Den första dagen besöktes den av över tretusen personer."
    },
@@ -827,6 +1020,11 @@
     "who": "A",
     "fr": "Si possono vedere disegni, macchine e appunti originali. I biglietti si comprano online.",
     "sv": "Man kan se teckningar, maskiner och originalanteckningar. Biljetterna köper man på nätet."
+   },
+   {
+    "who": "A",
+    "fr": "La mostra resterà aperta fino alla fine di maggio, tutti i giorni tranne il lunedì. Per gli studenti l'ingresso costa cinque euro.",
+    "sv": "Utställningen är öppen till slutet av maj, alla dagar utom måndag. För studenter kostar inträdet fem euro."
    },
    {
     "who": "A",
@@ -911,6 +1109,18 @@
     ],
     "a": 1,
     "why": "L' = la mostra (utställningen). Därför slutar participet på -a: visitata."
+   },
+   {
+    "type": "detalj",
+    "q": "När är utställningen stängd?",
+    "opts": [
+     "På måndagar",
+     "På söndagar",
+     "Hela maj",
+     "På kvällarna"
+    ],
+    "a": 0,
+    "why": "« tutti i giorni tranne il lunedì » – alla dagar utom måndag."
    }
   ],
   "gloss": {
@@ -998,6 +1208,36 @@
     "t": "tardo",
     "sv": "sen",
     "g": ""
+   },
+   "aerei": {
+    "t": "l'aereo",
+    "sv": "flygplan",
+    "g": "m"
+   },
+   "voli": {
+    "t": "il volo",
+    "sv": "flyg, flygning",
+    "g": "m"
+   },
+   "ritardo": {
+    "t": "in ritardo",
+    "sv": "försenad",
+    "g": ""
+   },
+   "compagnia": {
+    "t": "la compagnia aerea",
+    "sv": "flygbolag",
+    "g": "f"
+   },
+   "tranne": {
+    "t": "tranne",
+    "sv": "utom",
+    "g": ""
+   },
+   "ingresso": {
+    "t": "l'ingresso",
+    "sv": "inträde, entré",
+    "g": "m"
    }
   }
  },
@@ -1048,8 +1288,18 @@
    },
    {
     "who": "A",
-    "fr": "Che peccato! Io l'avevo già mandata a mia madre.",
-    "sv": "Vad synd! Jag hade redan skickat den till min mamma."
+    "fr": "Ma come facevi a saperlo?",
+    "sv": "Men hur kunde du veta det?"
+   },
+   {
+    "who": "B",
+    "fr": "Ho fatto una ricerca per immagini: carichi la foto e il sito ti mostra dove è stata pubblicata la prima volta. È facilissimo. Ce l'ha spiegato la prof di italiano l'anno scorso.",
+    "sv": "Jag gjorde en bildsökning: man laddar upp bilden och sidan visar var den publicerades första gången. Det är jättelätt. Italienskläraren förklarade det för oss förra året."
+   },
+   {
+    "who": "A",
+    "fr": "Che peccato! Io l'avevo già mandata a mia madre. La prossima volta controllo anch'io, prima di condividere qualcosa.",
+    "sv": "Vad synd! Jag hade redan skickat den till min mamma. Nästa gång kollar jag också innan jag delar något."
    },
    {
     "who": "B",
@@ -1117,6 +1367,18 @@
     ],
     "a": 1,
     "why": "Ett direkt objektspronomen före avere gör att participet böjs: la notizia → l'hai letta."
+   },
+   {
+    "type": "detalj",
+    "q": "Hur kontrollerade den andra personen bilden?",
+    "opts": [
+     "Ringde till ministeriet",
+     "Gjorde en bildsökning på nätet",
+     "Frågade sin mamma",
+     "Läste en tidning"
+    ],
+    "a": 1,
+    "why": "« Ho fatto una ricerca per immagini »."
    }
   ],
   "gloss": {
@@ -1189,6 +1451,31 @@
     "t": "subito",
     "sv": "genast",
     "g": ""
+   },
+   "ricerca": {
+    "t": "la ricerca",
+    "sv": "sökning",
+    "g": "f"
+   },
+   "immagini": {
+    "t": "l'immagine",
+    "sv": "bild",
+    "g": "f"
+   },
+   "carichi": {
+    "t": "caricare",
+    "sv": "ladda upp",
+    "g": ""
+   },
+   "pubblicata": {
+    "t": "pubblicare",
+    "sv": "publicera",
+    "g": ""
+   },
+   "condividere": {
+    "t": "condividere",
+    "sv": "dela (på nätet)",
+    "g": ""
    }
   }
  },
@@ -1206,6 +1493,16 @@
     "who": "B",
     "fr": "Domenica scorsa ho corso una mezza maratona. Mentre correvo, al quindicesimo chilometro, ho sentito un dolore forte al ginocchio.",
     "sv": "I söndags sprang jag ett halvmaraton. Medan jag sprang, vid femtonde kilometern, kände jag en stark smärta i knät."
+   },
+   {
+    "who": "A",
+    "fr": "E adesso le fa ancora male?",
+    "sv": "Och gör det fortfarande ont nu?"
+   },
+   {
+    "who": "B",
+    "fr": "Sì, soprattutto quando salgo le scale. E la mattina il ginocchio è un po' gonfio.",
+    "sv": "Ja, särskilt när jag går uppför trappor. Och på morgonen är knät lite svullet."
    },
    {
     "who": "A",
@@ -1246,6 +1543,16 @@
     "who": "B",
     "fr": "Ha ragione. Le compro domani.",
     "sv": "Du har rätt. Jag köper dem i morgon."
+   },
+   {
+    "who": "A",
+    "fr": "Bene. E se tra una settimana le fa ancora male, torni da me: faremo una radiografia.",
+    "sv": "Bra. Och om det fortfarande gör ont om en vecka, kom tillbaka till mig: då gör vi en röntgen."
+   },
+   {
+    "who": "B",
+    "fr": "Grazie, dottore. Arrivederci.",
+    "sv": "Tack, doktorn. Adjö."
    }
   ],
   "questions": [
@@ -1308,6 +1615,18 @@
     ],
     "a": 1,
     "why": "Al posto Suo + condizionale = ett artigt råd."
+   },
+   {
+    "type": "detalj",
+    "q": "När gör knät mest ont?",
+    "opts": [
+     "När Andrea simmar",
+     "När Andrea sover",
+     "När Andrea går uppför trappor",
+     "När Andrea sitter still"
+    ],
+    "a": 2,
+    "why": "« soprattutto quando salgo le scale »."
    }
   ],
   "gloss": {
@@ -1390,6 +1709,26 @@
     "t": "al posto Suo",
     "sv": "i ert ställe",
     "g": ""
+   },
+   "salgo": {
+    "t": "salire",
+    "sv": "gå upp(för)",
+    "g": ""
+   },
+   "scale": {
+    "t": "le scale",
+    "sv": "trappa",
+    "g": "pl"
+   },
+   "gonfio": {
+    "t": "gonfio",
+    "sv": "svullen",
+    "g": ""
+   },
+   "radiografia": {
+    "t": "la radiografia",
+    "sv": "röntgen",
+    "g": "f"
    }
   }
  },
@@ -1427,6 +1766,11 @@
     "who": "A",
     "fr": "E infine: andate a letto sempre alla stessa ora, anche nel fine settimana.",
     "sv": "Och till sist: gå och lägg er alltid vid samma tid, även på helgen."
+   },
+   {
+    "who": "A",
+    "fr": "Un'ultima cosa: la camera deve essere buia e fresca, tra i diciotto e i venti gradi. E se non riuscite ad addormentarvi dopo mezz'ora, alzatevi e leggete un libro di carta per qualche minuto. Poi tornate a letto.",
+    "sv": "En sista sak: rummet ska vara mörkt och svalt, mellan arton och tjugo grader. Och om ni inte lyckas somna efter en halvtimme, gå upp och läs en pappersbok några minuter. Gå sedan tillbaka till sängen."
    },
    {
     "who": "A",
@@ -1494,6 +1838,18 @@
     ],
     "a": 1,
     "why": "I imperativ för voi hänger pronomenet ihop med verbet: bevete + le = bevetele, även nekat."
+   },
+   {
+    "type": "detalj",
+    "q": "Vad ska man göra om man inte somnar efter en halvtimme?",
+    "opts": [
+     "Gå upp och läsa en pappersbok en stund",
+     "Titta på mobilen en stund",
+     "Dricka ett glas mjölk",
+     "Träna lite"
+    ],
+    "a": 0,
+    "why": "« alzatevi e leggete un libro di carta per qualche minuto »."
    }
   ],
   "gloss": {
@@ -1571,6 +1927,31 @@
     "t": "provarci",
     "sv": "försöka",
     "g": ""
+   },
+   "buia": {
+    "t": "buio",
+    "sv": "mörk",
+    "g": ""
+   },
+   "fresca": {
+    "t": "fresco",
+    "sv": "sval",
+    "g": ""
+   },
+   "gradi": {
+    "t": "il grado",
+    "sv": "grad",
+    "g": "m"
+   },
+   "addormentarvi": {
+    "t": "addormentarsi",
+    "sv": "somna",
+    "g": ""
+   },
+   "alzatevi": {
+    "t": "alzarsi",
+    "sv": "gå upp, resa sig",
+    "g": ""
    }
   }
  },
@@ -1603,6 +1984,11 @@
     "who": "A",
     "fr": "La guida ci ha spiegato che nel parco vivono anche lupi e orsi, ma è difficile vederli perché hanno paura delle persone.",
     "sv": "Guiden förklarade för oss att det också lever vargar och björnar i parken, men att det är svårt att se dem eftersom de är rädda för människor."
+   },
+   {
+    "who": "A",
+    "fr": "Ci ha detto anche che d'inverno, quando c'è la neve, si vedono spesso le loro tracce vicino ai paesi.",
+    "sv": "Han berättade också att man på vintern, när det ligger snö, ofta ser deras spår nära byarna."
    },
    {
     "who": "A",
@@ -1687,6 +2073,18 @@
     ],
     "a": 2,
     "why": "« più di cento chili di rifiuti »."
+   },
+   {
+    "type": "detalj",
+    "q": "Vad kan man ofta se på vintern enligt guiden?",
+    "opts": [
+     "Vargar och björnar mitt i byarna",
+     "Många turister i parken",
+     "Hjortar vid sjön",
+     "Djurens spår nära byarna"
+    ],
+    "a": 3,
+    "why": "« d'inverno … si vedono spesso le loro tracce vicino ai paesi »."
    }
   ],
   "gloss": {
@@ -1789,6 +2187,11 @@
     "t": "il bosco",
     "sv": "skog",
     "g": "m"
+   },
+   "tracce": {
+    "t": "la traccia",
+    "sv": "spår",
+    "g": "f"
    }
   }
  },
@@ -1846,6 +2249,16 @@
     "who": "B",
     "fr": "È vero! Avevo messo una scatola di pizza nella carta, ma era sporca d'olio. Quella va nell'indifferenziata.",
     "sv": "Det är sant! Jag hade lagt en pizzakartong i pappret, men den var smutsig av olja. Den ska i restavfallet."
+   },
+   {
+    "who": "A",
+    "fr": "E i vestiti vecchi? Anche quelli si buttano?",
+    "sv": "Och gamla kläder? Slänger man dem också?"
+   },
+   {
+    "who": "B",
+    "fr": "No, quelli si portano nei contenitori gialli vicino alla chiesa. Se sono ancora in buono stato, li danno a chi ne ha bisogno.",
+    "sv": "Nej, dem lämnar man i de gula behållarna vid kyrkan. Om de fortfarande är i gott skick ger man dem till dem som behöver dem."
    }
   ],
   "questions": [
@@ -1908,6 +2321,18 @@
     ],
     "a": 0,
     "why": "Vergogna = skam. Det var pinsamt att få en lapp om att hon sorterat fel."
+   },
+   {
+    "type": "detalj",
+    "q": "Vad gör man med gamla kläder i Treviso?",
+    "opts": [
+     "Slänger dem i den bruna tunnan",
+     "Säljer dem på marknaden",
+     "Lämnar dem i behållare vid kyrkan",
+     "Bränner dem"
+    ],
+    "a": 2,
+    "why": "« quelli si portano nei contenitori gialli vicino alla chiesa »."
    }
   ],
   "gloss": {
@@ -2005,6 +2430,16 @@
     "t": "l'indifferenziata",
     "sv": "restavfall",
     "g": "f"
+   },
+   "contenitori": {
+    "t": "il contenitore",
+    "sv": "behållare",
+    "g": "m"
+   },
+   "stato": {
+    "t": "lo stato",
+    "sv": "skick, tillstånd",
+    "g": "m"
    }
   }
  },
@@ -2042,6 +2477,16 @@
     "who": "B",
     "fr": "Sì, a volte. In paese la vita è più lenta e più tranquilla. Tutti si conoscono e ci si aiuta. Qui invece non conosco nemmeno i miei vicini.",
     "sv": "Ja, ibland. I byn är livet långsammare och lugnare. Alla känner varandra och man hjälper varandra. Här känner jag inte ens mina grannar."
+   },
+   {
+    "who": "A",
+    "fr": "E come passi il fine settimana?",
+    "sv": "Och hur tillbringar du helgerna?"
+   },
+   {
+    "who": "B",
+    "fr": "Spesso torno in paese dai miei. Prendo il treno il venerdì sera e il sabato vado a camminare in montagna con mio padre. La domenica sera, però, sono contento di tornare in città.",
+    "sv": "Jag åker ofta hem till byn, till mina föräldrar. Jag tar tåget på fredagskvällen och på lördagen går jag i bergen med min pappa. På söndagskvällen är jag ändå glad att komma tillbaka till stan."
    },
    {
     "who": "A",
@@ -2131,6 +2576,18 @@
     ],
     "a": 0,
     "why": "Si vive meglio (adverb) men i mezzi pubblici sono migliori (adjektiv, plural)."
+   },
+   {
+    "type": "detalj",
+    "q": "Vad gör Luca ofta på helgerna?",
+    "opts": [
+     "Åker hem till föräldrarna i byn",
+     "Går på konserter i Milano",
+     "Arbetar extra",
+     "Hälsar på sin syster i Rom"
+    ],
+    "a": 0,
+    "why": "« Spesso torno in paese dai miei »."
    }
   ],
   "gloss": {
@@ -2273,6 +2730,26 @@
    },
    {
     "who": "A",
+    "fr": "Il riscaldamento è autonomo?",
+    "sv": "Har lägenheten egen uppvärmning?"
+   },
+   {
+    "who": "B",
+    "fr": "Sì, quindi lo accende quando vuole. E la cucina è nuova: l'abbiamo rifatta l'anno scorso, con la lavastoviglie.",
+    "sv": "Ja, så ni sätter på den när ni vill. Och köket är nytt: vi gjorde om det förra året, med diskmaskin."
+   },
+   {
+    "who": "A",
+    "fr": "Si possono tenere animali? Ho un gatto.",
+    "sv": "Får man ha djur? Jag har en katt."
+   },
+   {
+    "who": "B",
+    "fr": "Un gatto sì, nessun problema.",
+    "sv": "En katt går bra, inga problem."
+   },
+   {
+    "who": "A",
     "fr": "Un po' caro per me… L'appartamento che ho visto ieri costava meno, ma era più lontano e più piccolo.",
     "sv": "Lite dyrt för mig … Lägenheten jag såg i går kostade mindre, men den låg längre bort och var mindre."
    },
@@ -2347,6 +2824,18 @@
     ],
     "a": 0,
     "why": "« costava meno, ma era più lontano e più piccolo »."
+   },
+   {
+    "type": "detalj",
+    "q": "Får man ha djur i lägenheten?",
+    "opts": [
+     "Nej, inga djur alls",
+     "Bara fiskar",
+     "Bara om man betalar mer",
+     "Ja, en katt går bra"
+    ],
+    "a": 3,
+    "why": "« Un gatto sì, nessun problema »."
    }
   ],
   "gloss": {
@@ -2444,6 +2933,26 @@
     "t": "lontano",
     "sv": "långt bort",
     "g": ""
+   },
+   "riscaldamento": {
+    "t": "il riscaldamento",
+    "sv": "uppvärmning",
+    "g": "m"
+   },
+   "autonomo": {
+    "t": "autonomo",
+    "sv": "egen (om uppvärmning: inte gemensam för huset)",
+    "g": ""
+   },
+   "rifatta": {
+    "t": "rifare",
+    "sv": "göra om, renovera",
+    "g": ""
+   },
+   "lavastoviglie": {
+    "t": "la lavastoviglie",
+    "sv": "diskmaskin",
+    "g": "f"
    }
   }
  },
@@ -2481,6 +2990,16 @@
     "who": "B",
     "fr": "In terza fila, vicinissimi al palco. Il posto in cui eravamo era perfetto. Alla fine il chitarrista ha lanciato il suo plettro e l'ho preso io!",
     "sv": "På tredje raden, jättenära scenen. Platsen där vi stod var perfekt. På slutet kastade gitarristen sitt plektrum och det var jag som fångade det!"
+   },
+   {
+    "who": "A",
+    "fr": "Davvero? Fammelo vedere! Io non ho mai preso niente a un concerto.",
+    "sv": "Verkligen? Visa mig! Jag har aldrig fångat något på en konsert."
+   },
+   {
+    "who": "B",
+    "fr": "Eccolo, è rosso, con il nome del gruppo. Lo tengo nel portafoglio, mi porta fortuna. E alla fine tutto il pubblico ha cantato l'ultima canzone insieme al gruppo: avevo la pelle d'oca!",
+    "sv": "Här är det, det är rött, med bandets namn. Jag har det i plånboken, det ger mig tur. Och på slutet sjöng hela publiken den sista låten tillsammans med bandet: jag fick gåshud!"
    },
    {
     "who": "A",
@@ -2563,6 +3082,18 @@
     ],
     "a": 0,
     "why": "Med piacere och essere följer participet det som man gillar: la seconda parte → piaciuta, il concerto → piaciuto."
+   },
+   {
+    "type": "detalj",
+    "q": "Vad hände i slutet av konserten?",
+    "opts": [
+     "Sångaren blev sjuk",
+     "Hela publiken sjöng den sista låten med bandet",
+     "Ljuset slocknade",
+     "Bandet spelade en ny låt"
+    ],
+    "a": 1,
+    "why": "« tutto il pubblico ha cantato l'ultima canzone insieme al gruppo »."
    }
   ],
   "gloss": {
@@ -2645,6 +3176,26 @@
     "t": "valere la pena",
     "sv": "vara värt det",
     "g": ""
+   },
+   "fammelo": {
+    "t": "fare vedere",
+    "sv": "visa (fammelo vedere = visa mig det)",
+    "g": ""
+   },
+   "portafoglio": {
+    "t": "il portafoglio",
+    "sv": "plånbok",
+    "g": "m"
+   },
+   "pubblico": {
+    "t": "il pubblico",
+    "sv": "publik",
+    "g": "m"
+   },
+   "pelle": {
+    "t": "avere la pelle d'oca",
+    "sv": "få gåshud (ordagrant: ha gåshud)",
+    "g": ""
    }
   }
  },
@@ -2672,6 +3223,11 @@
     "who": "A",
     "fr": "Guardate anche il paesaggio dietro le figure. È un paesaggio di montagne e di acqua, che sembra quasi un sogno.",
     "sv": "Titta också på landskapet bakom figurerna. Det är ett landskap med berg och vatten, som nästan ser ut som en dröm."
+   },
+   {
+    "who": "A",
+    "fr": "Leonardo ha lasciato molte opere incomplete: lavorava lentamente e cambiava spesso idea.",
+    "sv": "Leonardo lämnade många verk ofullbordade: han arbetade långsamt och ändrade sig ofta."
    },
    {
     "who": "A",
@@ -2744,6 +3300,18 @@
     ],
     "a": 0,
     "why": "In cui = i vilken, där. Efter en preposition använder man cui, inte che."
+   },
+   {
+    "type": "detalj",
+    "q": "Varför lämnade Leonardo många verk ofullbordade?",
+    "opts": [
+     "Han hade inte råd med färg",
+     "Han blev sjuk",
+     "Hans lärare förbjöd honom",
+     "Han arbetade långsamt och ändrade sig ofta"
+    ],
+    "a": 3,
+    "why": "« lavorava lentamente e cambiava spesso idea »."
    }
   ],
   "gloss": {
@@ -2836,6 +3404,11 @@
     "t": "premere",
     "sv": "trycka",
     "g": ""
+   },
+   "incomplete": {
+    "t": "incompleto",
+    "sv": "ofullbordad",
+    "g": ""
    }
   }
  },
@@ -2868,6 +3441,16 @@
     "who": "A",
     "fr": "È sempre gentile. Ieri, mentre stavo per uscire, mi ha chiesto se volevo un passaggio a casa. Ma forse è gentile con tutti.",
     "sv": "Han är alltid snäll. I går, när jag precis skulle gå, frågade han om jag ville ha skjuts hem. Men han kanske är snäll mot alla."
+   },
+   {
+    "who": "B",
+    "fr": "E a teatro com'è? Parlate tanto?",
+    "sv": "Och på teatern, hur är det? Pratar ni mycket?"
+   },
+   {
+    "who": "A",
+    "fr": "Sì, nelle pause chiacchieriamo sempre. La settimana scorsa mi ha fatto ridere tantissimo: ha imitato la nostra insegnante, che è molto severa. E poi ascoltiamo la stessa musica.",
+    "sv": "Ja, på rasterna pratar vi alltid. Förra veckan fick han mig att skratta jättemycket: han härmade vår lärare, som är väldigt sträng. Och så lyssnar vi på samma musik."
    },
    {
     "who": "B",
@@ -2955,6 +3538,18 @@
     ],
     "a": 1,
     "why": "Stare per + infinitiv = ska precis, är på väg att."
+   },
+   {
+    "type": "detalj",
+    "q": "Vad gjorde Tommaso förra veckan?",
+    "opts": [
+     "Härmade deras stränga lärare",
+     "Bjöd henne på glass",
+     "Kom för sent till lektionen",
+     "Sjöng en sång för henne"
+    ],
+    "a": 0,
+    "why": "« ha imitato la nostra insegnante, che è molto severa »."
    }
   ],
   "gloss": {
@@ -3042,6 +3637,26 @@
     "t": "sigillato",
     "sv": "förseglad",
     "g": ""
+   },
+   "pause": {
+    "t": "la pausa",
+    "sv": "paus, rast",
+    "g": "f"
+   },
+   "imitato": {
+    "t": "imitare",
+    "sv": "härma",
+    "g": ""
+   },
+   "severa": {
+    "t": "severo",
+    "sv": "sträng",
+    "g": ""
+   },
+   "chiacchieriamo": {
+    "t": "chiacchierare",
+    "sv": "prata, småprata",
+    "g": ""
    }
   }
  },
@@ -3069,6 +3684,11 @@
     "who": "A",
     "fr": "Siamo amiche da dieci anni e non voglio perdere la nostra amicizia per una stupidaggine.",
     "sv": "Vi har varit vänner i tio år och jag vill inte förlora vår vänskap på grund av en dumhet."
+   },
+   {
+    "who": "A",
+    "fr": "Ti ricordi quando ci siamo conosciute in prima elementare? Io avevo dimenticato i pastelli e tu mi hai prestato i tuoi. Da quel giorno siamo state sempre insieme, nei momenti belli e in quelli brutti.",
+    "sv": "Minns du när vi träffades i första klass? Jag hade glömt mina kritor och du lånade mig dina. Sedan den dagen har vi alltid varit tillsammans, i fina stunder och i svåra."
    },
    {
     "who": "A",
@@ -3146,6 +3766,18 @@
     ],
     "a": 0,
     "why": "« Vorrei vederti per parlare con calma … al solito bar in piazza? »"
+   },
+   {
+    "type": "detalj",
+    "q": "Hur blev Ilaria och Sara vänner?",
+    "opts": [
+     "På en fest i lördags",
+     "De spelade i samma lag",
+     "Sara lånade ut sina kritor i första klass",
+     "Marco presenterade dem"
+    ],
+    "a": 2,
+    "why": "« Io avevo dimenticato i pastelli e tu mi hai prestato i tuoi »."
    }
   ],
   "gloss": {
@@ -3222,6 +3854,31 @@
    "stia": {
     "t": "stare (congiuntivo)",
     "sv": "må",
+    "g": ""
+   },
+   "elementare": {
+    "t": "la scuola elementare",
+    "sv": "lågstadiet (prima elementare = första klass)",
+    "g": "f"
+   },
+   "pastelli": {
+    "t": "il pastello",
+    "sv": "färgkrita",
+    "g": "m"
+   },
+   "prestato": {
+    "t": "prestare",
+    "sv": "låna ut",
+    "g": ""
+   },
+   "momenti": {
+    "t": "il momento",
+    "sv": "stund, ögonblick",
+    "g": "m"
+   },
+   "conosciute": {
+    "t": "conoscersi",
+    "sv": "lära känna varandra, träffas",
     "g": ""
    }
   }

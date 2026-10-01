@@ -2,6 +2,19 @@
 
 Punkter som har flyttats från [`BACKLOG.md`](BACKLOG.md) när de byggdes. **Referens** anger backloggens rubrik och prioritet. **Commit** anger var ändringen finns i git. **Publicerat** anger versionen av artefakten på https://claude.ai/artifact/YBQv8j4qXQQLuPwLAWt5mP.
 
+## 2026-10-01, del 2 (publicerat som version 35)
+
+| Referens | Vad som byggdes | Commit |
+|---|---|---|
+| Arkitektur · P3 *Död kod* | Borttaget: `dayStart`, `kindView` och vyerna `MC`, `TYPE`, `RESTORE`, `EFFECT`, `RECAP`, `AFTER`, `AGAIN`, `KIND_NAMES` (testerna använder `KINDS[...]`), `ktKey`, alltid sanna `typeof`-kontroller. `DAY` och `ktestd` är kvar (används; `ktestd` är en nyckel i sparat läge). Rubrikkommentarerna flyttade. | se git log |
+| Arkitektur · P3 *Sparning vid varje svar* | `save(true)` från `snapRun` skriver localStorage efter 300 ms (`LOCAL_WAIT`, `flushLocal` vid dold/stängd sida, kursbyte och molnläge); `cloudSplit` serialiserar varje bit en gång och `REV_CACHE` återanvänder hashen; `pickSome` (delvis blandning) i flervalet; uppslagstabell i `listWord`. Ca 15 ms → 6 ms per fråga (Tyska 5, 2 200 ord). | se git log |
+| Öppet v33 · P3 *Mina ord: grundform i ohämtade kurser* | build.py skriver `dist/data/lemma-<språk>.json` (alla ord i språket); `03-lemma.js` hämtar filen när en text öppnas (`ensureLemmaAll`), kursens egna ord vinner. **Publicera med 44 filer.** | se git log |
+| Färre övningar · P3 *Äkta ljud* | `46-akta-ljud.js`: kortet "Veckans äkta ljud" på Tala och Hörförståelse, bara länkar: RFI Journal en français facile (fr, steg 4+), DW Langsam gesprochene Nachrichten (de, steg 5+), News in Slow Italian (it, steg 4+). | se git log |
+| Franska · P2 *Franska 3: subj/si utan kapitel, depuis/il y a, venir de* + P3 *minigrammatikens områden* | Fältet `preview: "<kurs>"` på grammatikområden (etikett "Förhandsvisning – övas mer i Franska 4", sorteras sist); `subj`, `si` → frs4, nya `ger` → frs5. Sju nya områden i fr, 168 frågor: `tid` (depuis/il y a/pendant/dans/en), `proche` (venir de/en train de/aller + inf), `nombre` (tal, datum, klockan), `dem`, `quel`, `tout`, `ger`. Passiv hoppas över (finns i frs5). | se git log |
+| Franska · P2 *Franska 6: steg 4–5-grammatik, passé simple, nominalisering, formell stil* | Kontrollerat: `dpron`, `prepinf` (frs4) och `accord` (frs5) finns; fr4:s äldre texter använder inte passé simple. Nya områden i fr4: `nomi` (25) och `style` (25). | se git log |
+| Franska · P2 *Franska I: DALF C1-lika uppgifter* | Tre syntesuppgifter (`fru-pe-syn-1..3`, två texter + syntes ~220 ord, `sim:false`, C1). | se git log |
+| Kurser · P2 *De nya kurserna: fyll på* + Öppet v33 · P3 *Täckning, rester* | Tyska 7: ord 784 → 1 000, 4 nya hörtexter, 11 hörtexter och 8 lästexter förlängda, täckning 99 %. Tyska 5: 7 ofta glosade ord blev kursord (wohl, Dame, spüren …); provtexterna de-le-2/10 ≥ 99 %. Franska 5: 7 texter höjda, 0 av 54 under gränsen; Franska 3:s provtexter fr-ce-3/4/5/9 och fr-co-6 96–99 %. Italienska: it3 och it5 texter förlängda till specen, it4 fick ca 280 glosor, it5–it7 1 050–1 070 ord, 48 saknade grundord i it1–it3. de1–de3 och frs5 hade redan rätt textlängd. | se git log |
+
 ## 2026-10-01 (publicerat som version 34)
 
 | Referens | Vad som byggdes | Commit |

@@ -19,9 +19,11 @@ function startCloze(){
   beginQuiz("cloze",shuffle(q),{againFn:["cloze"],label:"Meningar"});
 }
 defineKind("cloze",{name:"Meningar",
-  mc:c=>{const w=c.w, a=norm(w.gap.ans), seen=new Set([a]), picks=[];
-    const others=[...shuffle(WORDS.filter(x=>x.gap&&x.sec===w.sec)),...shuffle(WORDS.filter(x=>x.gap&&x.sec!==w.sec))];
-    for(const x of others){ if(picks.length>=4)break; const k=norm(x.gap.ans); if(!seen.has(k)){seen.add(k);picks.push(x.gap.ans)} }
+  mc:c=>{const w=c.w, a=norm(w.gap.ans), seen=new Set([a]);
+    // Felalternativ ur samma avsnitt först, sedan ur resten; pickSome blandar bara så långt det behövs
+    const ok=x=>{ if(!x.gap) return false; const k=norm(x.gap.ans); if(seen.has(k)) return false; seen.add(k); return true; };
+    const ws_=pickSome(secWords(w.sec),4,ok); if(ws_.length<4) pickSome(WORDS,4,x=>x.sec!==w.sec&&ok(x),ws_);
+    const picks=ws_.map(x=>x.gap.ans);
     return{tab:"Mening", head:clozeHead(w), ask:`Vilket ord passar i luckan? ${clozeHint(w)}.`,
       opts:shuffle([{label:w.gap.ans,ok:true,lang:true},...picks.map(p=>({label:p,ok:false,lang:true}))]),
       explain:"", wrongCard:studyCard(w), say:w.exT, sayOnAnswer:true, onAnswer:fillGap(w)}},
@@ -61,12 +63,7 @@ const dictType=c=>{const w=c.w;return{tab:"Diktamen",
 // Andra meningar ur samma avsnitt som felalternativ, utan dubbletter (två ord kan ha samma exempelmening)
 const sameText=(a,b)=>tok(a).join(" ")===tok(b).join(" ");
 function otherSentences(w,n){
-  const out=[];
-  for(const x of shuffle(WORDS.filter(x=>x!==w&&x.sec===w.sec&&x.exT))){
-    if(out.length>=n) break;
-    if(!sameText(x.exT,w.exT)&&!out.some(o=>sameText(o.exT,x.exT))) out.push(x);
-  }
-  return out;
+  return pickSome(secWords(w.sec),n,(x,out)=>x!==w&&!!x.exT&&!sameText(x.exT,w.exT)&&!out.some(o=>sameText(o.exT,x.exT)));
 }
 const dictMC=c=>{const w=c.w, others=otherSentences(w,3);
   return{tab:"Diktamen",head:playBar(),ask:"Vilken mening hörde du?",

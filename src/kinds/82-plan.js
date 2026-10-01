@@ -38,7 +38,7 @@ function planProgress(wk){
 const planRange=r=>{ const s=SECTIONS.find(x=>x.id===r.sec), nm=s?s.name:r.sec; return (r.of||1)>1?`${nm} (del ${r.part} av ${r.of})`:nm; };
 // Ett innehåll i planen: titel, klart eller inte, och hur det öppnas
 function planItem(x){
-  const c=C(), f=(k,id)=>(c[k]||[]).find(y=>y.id===id), ex=typeof hasExam==="function"&&hasExam()?EX():null;
+  const c=C(), f=(k,id)=>(c[k]||[]).find(y=>y.id===id), ex=hasExam()?EX():null;
   switch(x.k){
     case "lq": { const t=f("listening",x.id); return t&&{label:"Hörförståelse",title:t.title,done:!!(S.tx&&S.tx[x.id]),go:()=>listenIntro(x.id)}; }
     case "rq": { const t=f("reading",x.id); return t&&{label:"Läsa",title:t.title,done:!!(S.tx&&S.tx[x.id]),go:()=>readIntro(x.id)}; }

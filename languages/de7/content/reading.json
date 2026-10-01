@@ -17,6 +17,22 @@
     "sv": "(2) Arbetsinsatsen för hela utbildningen är 240 poäng; en poäng motsvarar en arbetsinsats på 30 timmar."
    },
    {
+    "fr": "§ 5 Zulassung",
+    "sv": "§ 5 Antagning"
+   },
+   {
+    "fr": "(1) Voraussetzung für die Zulassung ist neben der Hochschulzugangsberechtigung das Bestehen einer Eignungsprüfung im künstlerischen Hauptfach. Bei besonderer künstlerischer Begabung kann von der Hochschulzugangsberechtigung abgesehen werden.",
+    "sv": "(1) Förutsättning för antagning är, utöver behörighet för högskolestudier, att man klarar ett lämplighetsprov i det konstnärliga huvudämnet. Vid särskild konstnärlig begåvning kan man bortse från kravet på behörighet."
+   },
+   {
+    "fr": "(2) Bewerberinnen und Bewerber, deren Muttersprache nicht Deutsch ist, weisen spätestens bei der Immatrikulation Deutschkenntnisse auf dem Niveau B2 nach.",
+    "sv": "(2) Sökande vars modersmål inte är tyska ska senast vid inskrivningen styrka kunskaper i tyska på nivå B2."
+   },
+   {
+    "fr": "(3) Die Eignungsprüfung kann einmal wiederholt werden.",
+    "sv": "(3) Lämplighetsprovet får göras om en gång."
+   },
+   {
     "fr": "§ 7 Module und Prüfungsleistungen",
     "sv": "§ 7 Moduler och examinationer"
    },
@@ -31,6 +47,18 @@
    {
     "fr": "(3) Die regelmäßige Teilnahme an Seminaren und Übungen ist Voraussetzung für die Zulassung zur Prüfung. Als regelmäßig gilt die Teilnahme, wenn nicht mehr als zwei Sitzungen versäumt wurden.",
     "sv": "(3) Regelbundet deltagande i seminarier och övningar är en förutsättning för att få skriva provet. Deltagandet räknas som regelbundet om man inte har missat mer än två tillfällen."
+   },
+   {
+    "fr": "§ 8 Hausarbeiten",
+    "sv": "§ 8 Hemuppsatser"
+   },
+   {
+    "fr": "(1) Die Bearbeitungszeit für eine Hausarbeit beträgt sechs Wochen. Auf begründeten Antrag kann der Prüfungsausschuss eine Fristverlängerung von höchstens zwei Wochen gewähren.",
+    "sv": "(1) Tiden för att skriva en hemuppsats är sex veckor. Efter motiverad ansökan kan examensnämnden bevilja en förlängning med högst två veckor."
+   },
+   {
+    "fr": "(2) Mit der Hausarbeit ist eine schriftliche Erklärung abzugeben, dass die Arbeit selbstständig verfasst wurde und keine anderen als die angegebenen Quellen und Hilfsmittel benutzt wurden. Dies gilt auch für Texte, die mit Hilfe künstlicher Intelligenz erstellt oder umformuliert wurden.",
+    "sv": "(2) Tillsammans med hemuppsatsen ska man lämna en skriftlig försäkran om att arbetet har skrivits självständigt och att inga andra källor och hjälpmedel än de angivna har använts. Detta gäller även texter som har skapats eller formulerats om med hjälp av artificiell intelligens."
    },
    {
     "fr": "§ 9 Wiederholung von Prüfungen",
@@ -55,6 +83,22 @@
    {
     "fr": "Macht eine Studierende glaubhaft, dass sie wegen einer chronischen Erkrankung oder Behinderung nicht in der Lage ist, eine Prüfung in der vorgesehenen Form abzulegen, kann ihr der Prüfungsausschuss gestatten, gleichwertige Leistungen in einer anderen Form zu erbringen. Der Antrag ist spätestens vier Wochen vor der Prüfung zu stellen.",
     "sv": "Om en student gör troligt att hon på grund av en kronisk sjukdom eller funktionsnedsättning inte kan göra ett prov i den föreskrivna formen, kan examensnämnden tillåta henne att fullgöra likvärdiga prestationer i en annan form. Ansökan ska lämnas senast fyra veckor före provet."
+   },
+   {
+    "fr": "§ 13 Studienaufenthalte im Ausland",
+    "sv": "§ 13 Studievistelser utomlands"
+   },
+   {
+    "fr": "(1) Ein Studienaufenthalt an einer ausländischen Gasthochschule wird empfohlen. Vor Beginn des Aufenthalts ist mit der Studienberatung schriftlich festzuhalten, welche Module angerechnet werden sollen.",
+    "sv": "(1) En studievistelse vid en utländsk värdhögskola rekommenderas. Innan vistelsen börjar ska det skriftligen fastställas tillsammans med studievägledningen vilka moduler som ska tillgodoräknas."
+   },
+   {
+    "fr": "(2) Noten, die nach einem anderen System vergeben wurden, werden in das deutsche Notensystem umgerechnet. Ist eine Umrechnung nicht möglich, wird die Leistung mit dem Vermerk „bestanden“ angerechnet.",
+    "sv": "(2) Betyg som har satts enligt ett annat system räknas om till det tyska betygssystemet. Om en omräkning inte är möjlig tillgodoräknas prestationen med anteckningen ”godkänd”."
+   },
+   {
+    "fr": "(3) Für die Dauer des Auslandsaufenthalts kann ein Urlaubssemester beantragt werden; in diesem Fall wird das Semester nicht auf die Regelstudienzeit angerechnet.",
+    "sv": "(3) För utlandsvistelsen kan man ansöka om en ledig termin; i så fall räknas terminen inte in i den normala studietiden."
    },
    {
     "fr": "§ 14 Anerkennung von Leistungen",
@@ -161,6 +205,18 @@
     ],
     "a": 1,
     "why": "sofern = såvida; tillgodoräknande sker när det inte finns väsentliga skillnader."
+   },
+   {
+    "type": "tolkning",
+    "q": "Hur lång tid har man som mest på sig för en hemuppsats om man får förlängning?",
+    "opts": [
+     "Sex veckor",
+     "Åtta veckor",
+     "Tio veckor",
+     "Fyra veckor"
+    ],
+    "a": 1,
+    "why": "Skrivtiden är sex veckor, och examensnämnden kan bevilja högst två veckors förlängning (§ 8)."
    }
   ],
   "gloss": {
@@ -203,6 +259,71 @@
     "t": "der Prüfungsausschuss",
     "sv": "examensnämnd",
     "g": "m"
+   },
+   "eignungsprüfung": {
+    "t": "die Eignungsprüfung",
+    "sv": "lämplighetsprov",
+    "g": "f"
+   },
+   "begabung": {
+    "t": "die Begabung",
+    "sv": "begåvning",
+    "g": "f"
+   },
+   "abgesehen": {
+    "t": "absehen von",
+    "sv": "bortse från",
+    "g": ""
+   },
+   "bearbeitungszeit": {
+    "t": "die Bearbeitungszeit",
+    "sv": "skrivtid",
+    "g": "f"
+   },
+   "gewähren": {
+    "t": "gewähren",
+    "sv": "bevilja",
+    "g": ""
+   },
+   "abzugeben": {
+    "t": "abgeben",
+    "sv": "lämna in",
+    "g": ""
+   },
+   "verfasst": {
+    "t": "verfassen",
+    "sv": "författa, skriva",
+    "g": ""
+   },
+   "hilfsmittel": {
+    "t": "das Hilfsmittel",
+    "sv": "hjälpmedel",
+    "g": "n"
+   },
+   "erstellt": {
+    "t": "erstellen",
+    "sv": "skapa, framställa",
+    "g": ""
+   },
+   "gasthochschule": {
+    "t": "die Gasthochschule",
+    "sv": "värdhögskola",
+    "g": "f"
+   },
+   "umrechnung": {
+    "t": "die Umrechnung",
+    "sv": "omräkning",
+    "g": "f"
+   },
+   "vermerk": {
+    "t": "der Vermerk",
+    "sv": "anteckning",
+    "g": "m"
+   },
+   "urlaubssemester": {
+    "t": "das Urlaubssemester",
+    "sv": "ledig termin",
+    "g": "n"
    }
   }
  },
@@ -443,6 +564,10 @@
     "sv": "Den som kom till den utsålda filharmonin på söndagskvällen väntade sig Brahms som man känner honom: bred, mättad, tung. Det man i stället fick höra var en tolkning som nog irriterade en del abonnenter men som ändå hör till det mest spännande man fått uppleva den här säsongen."
    },
    {
+    "fr": "Den ersten Teil des Abends bestritt die norwegische Geigerin Ingrid Solheim mit dem Violinkonzert. Sie spielte auf Darmsaiten, was ihrem Ton eine warme, leicht raue Farbe gab, die anfangs ungewohnt klang, mit der Zeit aber immer mehr überzeugte. Besonders im Adagio, das mit der berühmten Melodie der Oboe beginnt, fand sie zu einem intimen, fast andächtigen Ausdruck. In der Kadenz des ersten Satzes – sie wählte die von Joseph Joachim, dem Freund und Berater des Komponisten – zeigte sie eine technische Souveränität, die nie zum Selbstzweck wurde. Das Publikum applaudierte so begeistert, dass sie eine Zugabe spielte: eine Sarabande von Bach, schlicht und ohne jedes Pathos.",
+    "sv": "Kvällens första del stod den norska violinisten Ingrid Solheim för, med violinkonserten. Hon spelade på tarmsträngar, vilket gav hennes ton en varm, lätt sträv färg som först lät ovan men som övertygade mer och mer. Särskilt i adagiot, som börjar med den berömda oboemelodin, nådde hon ett intimt, nästan andäktigt uttryck. I kadensen i första satsen – hon valde Joseph Joachims, tonsättarens vän och rådgivare – visade hon en teknisk suveränitet som aldrig blev ett självändamål. Publiken applåderade så entusiastiskt att hon spelade ett extranummer: en sarabande av Bach, enkel och helt utan patos."
+   },
+   {
     "fr": "Die junge Dirigentin Mira Albrecht hatte das Orchester auf gut sechzig Musikerinnen und Musiker verkleinert und ließ die Streicher mit sparsamem Vibrato spielen – eine Entscheidung, die sich auf Erkenntnisse der historischen Aufführungspraxis stützt.",
     "sv": "Den unga dirigenten Mira Albrecht hade minskat orkestern till drygt sextio musiker och lät stråkarna spela med sparsamt vibrato – ett beslut som stöder sig på rön från den historiska uppförandepraxisen."
    },
@@ -461,6 +586,10 @@
    {
     "fr": "Umso eindrucksvoller geriet das Finale, eine Passacaglia über ein Thema aus acht Takten, das dreißigmal variiert wird. Albrecht baute die Spannung mit einer Konsequenz auf, die keinen Moment beliebig wirkte. Als nach der letzten Variation der Schlussakkord verklang, blieb es einige Sekunden still im Saal – ein seltenes Zeichen der Ergriffenheit.",
     "sv": "Desto mer imponerande blev finalen, en passacaglia över ett tema på åtta takter som varieras trettio gånger. Albrecht byggde upp spänningen med en konsekvens som inte i något ögonblick verkade godtycklig. När slutackordet klingade ut efter sista variationen blev det tyst i salen några sekunder – ett sällsynt tecken på gripenhet."
+   },
+   {
+    "fr": "Die Debatte um solche Interpretationen wird seit Jahren mit großer Leidenschaft geführt. Kritiker werfen der historischen Aufführungspraxis vor, sie verspreche eine Authentizität, die es gar nicht geben könne: Niemand wisse genau, wie ein Orchester im Jahr 1885 tatsächlich geklungen habe, und unsere Ohren seien ohnehin andere als die des damaligen Publikums. Befürworter halten dagegen, es gehe nicht um ein Museum, sondern darum, die Partitur von späteren Gewohnheiten zu befreien. Albrechts Abend lieferte für beide Positionen Argumente – und gerade darin lag sein Reiz.",
+    "sv": "Debatten om sådana tolkningar har förts med stor passion i många år. Kritiker anklagar den historiska uppförandepraxisen för att utlova en autenticitet som inte alls kan finnas: ingen vet exakt hur en orkester faktiskt lät år 1885, och våra öron är ändå andra än den dåtida publikens. Förespråkare invänder att det inte handlar om ett museum utan om att befria partituret från senare vanor. Albrechts kväll gav argument åt båda sidor – och just däri låg dess tjusning."
    },
    {
     "fr": "Ob man diese schlanke, fast asketische Lesart für werktreu hält, ist letztlich eine Frage des Geschmacks. Dass sie neue Perspektiven auf ein scheinbar bekanntes Werk eröffnet, lässt sich jedoch kaum bestreiten. Man darf gespannt sein, wie Albrecht im Frühjahr die zweite Sinfonie deuten wird.",
@@ -563,6 +692,18 @@
     ],
     "a": 1,
     "why": "ist letztlich eine Frage des Geschmacks = är i slutänden en smaksak."
+   },
+   {
+    "type": "detalj",
+    "q": "Vilket extranummer spelade solisten?",
+    "opts": [
+     "En kadens av Joachim",
+     "Ett adagio av Brahms",
+     "En sarabande av Bach",
+     "En passacaglia"
+    ],
+    "a": 2,
+    "why": "„… dass sie eine Zugabe spielte: eine Sarabande von Bach …“"
    }
   ],
   "gloss": {
@@ -605,6 +746,66 @@
     "t": "werktreu",
     "sv": "verktrogen",
     "g": ""
+   },
+   "bestritt": {
+    "t": "bestreiten",
+    "sv": "stå för (ett program); bestrida",
+    "g": ""
+   },
+   "norwegische": {
+    "t": "norwegisch",
+    "sv": "norsk",
+    "g": ""
+   },
+   "darmsaiten": {
+    "t": "die Darmsaite",
+    "sv": "tarmsträng",
+    "g": "f"
+   },
+   "raue": {
+    "t": "rau",
+    "sv": "sträv, rå",
+    "g": ""
+   },
+   "ungewohnt": {
+    "t": "ungewohnt",
+    "sv": "ovan",
+    "g": ""
+   },
+   "andächtigen": {
+    "t": "andächtig",
+    "sv": "andäktig",
+    "g": ""
+   },
+   "kadenz": {
+    "t": "die Kadenz",
+    "sv": "kadens",
+    "g": "f"
+   },
+   "selbstzweck": {
+    "t": "der Selbstzweck",
+    "sv": "självändamål",
+    "g": "m"
+   },
+   "zugabe": {
+    "t": "die Zugabe",
+    "sv": "extranummer",
+    "g": "f"
+   },
+   "authentizität": {
+    "t": "die Authentizität",
+    "sv": "autenticitet, äkthet",
+    "g": "f"
+   },
+   "gewohnheiten": {
+    "t": "die Gewohnheit",
+    "sv": "vana",
+    "g": "f"
+   },
+   "reiz": {
+    "t": "der Reiz",
+    "sv": "tjusning",
+    "g": "m"
    }
   }
  },
@@ -854,6 +1055,10 @@
     "sv": "Hur kan man förklara den här motsägelsen? Författarna pekar på en känd felkälla: familjer som skickar sina barn på fiollektioner skiljer sig i många avseenden från andra familjer. Föräldrarna har oftare högskoleexamen, inkomsten är högre och det finns fler böcker i hushållet."
    },
    {
+    "fr": "Außerdem gibt es weitere Störfaktoren. In vielen Untersuchungen wussten die Kinder und ihre Eltern, dass sie an einer Musikstudie teilnahmen, und auch die Testleiter kannten die Zugehörigkeit zu den Gruppen. Ein solches Wissen kann die Ergebnisse verzerren, ähnlich wie ein Placebo in der Medizin: Wer erwartet, dass eine Maßnahme wirkt, strengt sich womöglich mehr an. Die Autoren fordern deshalb, dass künftige Studien zumindest die Testleiter darüber im Unklaren lassen, welches Kind zu welcher Gruppe gehört. In der Medizin ist ein solches Vorgehen seit Langem Standard.",
+    "sv": "Dessutom finns det fler störfaktorer. I många undersökningar visste barnen och deras föräldrar att de deltog i en musikstudie, och även testledarna visste vilken grupp barnen tillhörde. Sådan kunskap kan snedvrida resultaten, ungefär som placebo inom medicinen: den som förväntar sig att en åtgärd fungerar anstränger sig kanske mer. Författarna kräver därför att framtida studier åtminstone ska hålla testledarna ovetande om vilket barn som hör till vilken grupp. Inom medicinen har ett sådant tillvägagångssätt länge varit standard."
+   },
+   {
     "fr": "Der Zusammenhang zwischen Musik und Intelligenz sei daher, so die Forscher, vermutlich kein kausaler. Vielmehr wählten intelligentere Kinder aus bildungsnahen Familien häufiger ein Instrument.",
     "sv": "Sambandet mellan musik och intelligens är därför, enligt forskarna, förmodligen inte ett orsakssamband. Det är snarare så att intelligentare barn från studievana familjer oftare väljer ett instrument."
    },
@@ -866,8 +1071,12 @@
     "sv": "Betyder det att musikundervisning är meningslös? Inte alls, betonar författarna. Positiva effekter på gehöret, finmotoriken och det sociala samarbetet i ensemblen är väl belagda. Dessutom kan musikens värde inte bara mätas efter om den leder till bättre prestationer inom andra områden."
    },
    {
-    "fr": "Für die Bildungspolitik bedeutet das: Wer Musikunterricht mit dem Versprechen höherer Intelligenz begründet, steht auf wackligen Füßen. Wer ihn dagegen mit kultureller Teilhabe begründet, hat die besseren Argumente.",
-    "sv": "För utbildningspolitiken betyder det: den som motiverar musikundervisning med löftet om högre intelligens står på vacklande fötter. Den som i stället motiverar den med kulturell delaktighet har de bättre argumenten."
+    "fr": "Interessant ist ein zweiter Befund, der in der öffentlichen Debatte kaum vorkommt. Bei älteren Menschen, die erst im Ruhestand ein Instrument erlernen, beobachteten mehrere kleinere Studien Verbesserungen des Gedächtnisses und der Aufmerksamkeit. Auch hier ist die Datenlage allerdings wacklig: Die Stichproben sind klein, und oft fehlt eine aktive Kontrollgruppe, die zum Beispiel einen Sprachkurs besucht. Ob die Wirkung auf der Musik selbst beruht oder einfach darauf, überhaupt etwas Neues zu lernen, ist daher bislang ungeklärt. Hier sehen die Autoren den größten Bedarf an weiterer Forschung.",
+    "sv": "Intressant är ett andra resultat som knappt förekommer i den offentliga debatten. Hos äldre människor som lär sig ett instrument först som pensionärer har flera mindre studier observerat förbättringar av minnet och uppmärksamheten. Men även här är dataläget ostadigt: urvalen är små, och ofta saknas en aktiv kontrollgrupp som till exempel går en språkkurs. Om effekten beror på musiken själv eller helt enkelt på att man över huvud taget lär sig något nytt är därför ännu oklart. Här ser författarna det största behovet av mer forskning."
+   },
+   {
+    "fr": "Für die Bildungspolitik bedeutet das: Wer Musikunterricht mit dem Versprechen höherer Intelligenz begründet, steht auf wackligen Füßen. Wer ihn dagegen mit kultureller Teilhabe begründet, hat die besseren Argumente. Und wer jede Übungsstunde nur als Investition in künftige Testergebnisse betrachtet, hat ohnehin nicht verstanden, warum Menschen seit Jahrtausenden Musik machen.",
+    "sv": "För utbildningspolitiken betyder det: den som motiverar musikundervisning med löftet om högre intelligens står på vacklande fötter. Den som i stället motiverar den med kulturell delaktighet har de bättre argumenten. Och den som bara ser varje övningstimme som en investering i framtida testresultat har ändå inte förstått varför människor har gjort musik i årtusenden."
    }
   ],
   "questions": [
@@ -966,6 +1175,18 @@
     ],
     "a": 1,
     "why": "Wer ihn dagegen mit kultureller Teilhabe begründet, hat die besseren Argumente."
+   },
+   {
+    "type": "detalj",
+    "q": "Vad vet man enligt texten om äldre som börjar spela ett instrument?",
+    "opts": [
+     "Det är bevisat att musik förbättrar minnet hos äldre",
+     "Effekten är större än hos barn",
+     "Några små studier visar förbättringar, men det är oklart om det beror på musiken",
+     "Äldre kan inte längre lära sig ett instrument"
+    ],
+    "a": 2,
+    "why": "Mindre studier har sett förbättringar, men „Ob die Wirkung auf der Musik selbst beruht oder einfach darauf, überhaupt etwas Neues zu lernen, ist … ungeklärt.“"
    }
   ],
   "gloss": {
@@ -1008,6 +1229,51 @@
     "t": "die Teilhabe",
     "sv": "delaktighet",
     "g": "f"
+   },
+   "störfaktoren": {
+    "t": "der Störfaktor",
+    "sv": "störfaktor",
+    "g": "m"
+   },
+   "testleiter": {
+    "t": "der Testleiter",
+    "sv": "testledare",
+    "g": "m"
+   },
+   "zugehörigkeit": {
+    "t": "die Zugehörigkeit",
+    "sv": "tillhörighet",
+    "g": "f"
+   },
+   "verzerren": {
+    "t": "verzerren",
+    "sv": "snedvrida",
+    "g": ""
+   },
+   "placebo": {
+    "t": "das Placebo",
+    "sv": "placebo",
+    "g": "n"
+   },
+   "ruhestand": {
+    "t": "der Ruhestand",
+    "sv": "pension",
+    "g": "m"
+   },
+   "erlernen": {
+    "t": "erlernen",
+    "sv": "lära sig",
+    "g": ""
+   },
+   "ungeklärt": {
+    "t": "ungeklärt",
+    "sv": "oklar, ouppklarad",
+    "g": ""
+   },
+   "bedarf": {
+    "t": "der Bedarf",
+    "sv": "behov",
+    "g": "m"
    }
   }
  },
@@ -1264,36 +1530,48 @@
     "sv": "mellan Kulturverein Lindenau e. V. (nedan \"arrangören\") och Elin Berg, violin (nedan \"artisten\")"
    },
    {
-    "fr": "§ 1 Gegenstand des Vertrages: Die Künstlerin wirkt am 14. März im Kammerkonzert „Nordlichter“ als Solistin mit. Das Programm ist in Anlage 1 festgelegt; Änderungen bedürfen der Zustimmung beider Vertragsparteien.",
-    "sv": "§ 1 Avtalets föremål: Artisten medverkar som solist i kammarkonserten \"Nordlichter\" den 14 mars. Programmet är fastställt i bilaga 1; ändringar kräver båda avtalsparternas samtycke."
+    "fr": "§ 1 Gegenstand des Vertrages: Die Künstlerin wirkt am 14. März im Kammerkonzert „Nordlichter“ als Solistin mit. Das Programm ist in Anlage 1 festgelegt; Änderungen bedürfen der Zustimmung beider Vertragsparteien. Das Konzert findet im Kulturhaus Lindenau statt und beginnt um 19.30 Uhr.",
+    "sv": "§ 1 Avtalets föremål: Artisten medverkar som solist i kammarkonserten \"Nordlichter\" den 14 mars. Programmet är fastställt i bilaga 1; ändringar kräver båda avtalsparternas samtycke. Konserten äger rum i Kulturhaus Lindenau och börjar klockan 19.30."
    },
    {
-    "fr": "§ 2 Honorar: Die Künstlerin erhält ein Honorar von 1 200 Euro. Das Honorar ist innerhalb von 14 Tagen nach dem Konzert und nach Eingang einer ordnungsgemäßen Rechnung fällig. Reisekosten werden gegen Beleg bis zu einer Höhe von 250 Euro erstattet.",
-    "sv": "§ 2 Arvode: Artisten får ett arvode på 1 200 euro. Arvodet förfaller till betalning inom 14 dagar efter konserten och efter att en korrekt faktura har kommit in. Resekostnader ersätts mot kvitto upp till 250 euro."
+    "fr": "§ 2 Honorar: Die Künstlerin erhält ein Honorar von 1 200 Euro. Das Honorar ist innerhalb von 14 Tagen nach dem Konzert und nach Eingang einer ordnungsgemäßen Rechnung fällig. Reisekosten werden gegen Beleg bis zu einer Höhe von 250 Euro erstattet. Die Rechnung muss die Steuernummer der Künstlerin enthalten.",
+    "sv": "§ 2 Arvode: Artisten får ett arvode på 1 200 euro. Arvodet förfaller till betalning inom 14 dagar efter konserten och efter att en korrekt faktura har kommit in. Resekostnader ersätts mot kvitto upp till 250 euro. Fakturan måste innehålla artistens skattenummer."
    },
    {
-    "fr": "§ 3 Proben: Die Künstlerin verpflichtet sich, an der Generalprobe am Konzerttag teilzunehmen. Für zusätzliche Proben wird kein gesondertes Honorar gezahlt.",
-    "sv": "§ 3 Repetitioner: Artisten förbinder sig att delta i generalrepetitionen på konsertdagen. För extra repetitioner betalas inget särskilt arvode."
+    "fr": "§ 3 Proben: Die Künstlerin verpflichtet sich, an der Generalprobe am Konzerttag teilzunehmen. Für zusätzliche Proben wird kein gesondertes Honorar gezahlt. Die Generalprobe beginnt um 15 Uhr; der genaue Ablauf wird der Künstlerin spätestens eine Woche vorher mitgeteilt.",
+    "sv": "§ 3 Repetitioner: Artisten förbinder sig att delta i generalrepetitionen på konsertdagen. För extra repetitioner betalas inget särskilt arvode. Generalrepetitionen börjar klockan 15; det exakta schemat meddelas artisten senast en vecka i förväg."
    },
    {
     "fr": "§ 4 Ausfall: Sagt der Veranstalter das Konzert später als 30 Tage vor dem Termin ab, erhält die Künstlerin eine Ausfallgage in Höhe von 50 Prozent des Honorars. Bei Absage aufgrund höherer Gewalt entfällt dieser Anspruch.",
     "sv": "§ 4 Inställd konsert: Om arrangören ställer in konserten senare än 30 dagar före datumet får artisten en ersättning på 50 procent av arvodet. Vid återbud på grund av force majeure bortfaller detta anspråk."
    },
    {
-    "fr": "Sagt die Künstlerin ohne wichtigen Grund ab, hat sie die Kosten für eine Ersatzbesetzung zu tragen. Eine Erkrankung gilt als wichtiger Grund, sofern sie durch ein ärztliches Attest nachgewiesen wird.",
-    "sv": "Om artisten lämnar återbud utan viktigt skäl ska hon stå för kostnaderna för en ersättare. En sjukdom räknas som viktigt skäl om den styrks med läkarintyg."
+    "fr": "Sagt die Künstlerin ohne wichtigen Grund ab, hat sie die Kosten für eine Ersatzbesetzung zu tragen. Eine Erkrankung gilt als wichtiger Grund, sofern sie durch ein ärztliches Attest nachgewiesen wird. Die Künstlerin hat den Veranstalter in einem solchen Fall unverzüglich zu informieren.",
+    "sv": "Om artisten lämnar återbud utan viktigt skäl ska hon stå för kostnaderna för en ersättare. En sjukdom räknas som viktigt skäl om den styrks med läkarintyg. Artisten ska i ett sådant fall omedelbart informera arrangören."
    },
    {
-    "fr": "§ 5 Aufnahmen: Ton- und Bildaufnahmen des Konzerts bedürfen der vorherigen schriftlichen Zustimmung der Künstlerin. Eine Übertragung im Rundfunk wird gesondert vergütet.",
-    "sv": "§ 5 Inspelningar: Ljud- och bildupptagningar av konserten kräver artistens skriftliga samtycke i förväg. En radiosändning ersätts separat."
+    "fr": "§ 5 Aufnahmen: Ton- und Bildaufnahmen des Konzerts bedürfen der vorherigen schriftlichen Zustimmung der Künstlerin. Eine Übertragung im Rundfunk wird gesondert vergütet. Für Mitschnitte, die ausschließlich zu Archivzwecken angefertigt werden, ist keine gesonderte Vergütung vorgesehen.",
+    "sv": "§ 5 Inspelningar: Ljud- och bildupptagningar av konserten kräver artistens skriftliga samtycke i förväg. En radiosändning ersätts separat. För inspelningar som enbart görs för arkivändamål utgår ingen särskild ersättning."
    },
    {
-    "fr": "§ 6 Haftung: Für Schäden an Instrumenten der Künstlerin haftet der Veranstalter nur bei Vorsatz oder grober Fahrlässigkeit.",
-    "sv": "§ 6 Ansvar: För skador på artistens instrument ansvarar arrangören bara vid uppsåt eller grov oaktsamhet."
+    "fr": "§ 6 Haftung: Für Schäden an Instrumenten der Künstlerin haftet der Veranstalter nur bei Vorsatz oder grober Fahrlässigkeit. Der Künstlerin wird empfohlen, für ihr Instrument eine eigene Versicherung abzuschließen.",
+    "sv": "§ 6 Ansvar: För skador på artistens instrument ansvarar arrangören bara vid uppsåt eller grov oaktsamhet. Artisten rekommenderas att teckna en egen försäkring för sitt instrument."
    },
    {
-    "fr": "§ 7 Schlussbestimmungen: Mündliche Nebenabreden bestehen nicht. Änderungen und Ergänzungen bedürfen der Schriftform. Gerichtsstand ist Leipzig.",
-    "sv": "§ 7 Slutbestämmelser: Muntliga tilläggsavtal finns inte. Ändringar och tillägg kräver skriftlig form. Behörig domstol är Leipzig."
+    "fr": "§ 7 Unterkunft und Verpflegung: Der Veranstalter stellt der Künstlerin für die Nacht vor und die Nacht nach dem Konzert ein Einzelzimmer in einem Hotel in der Nähe des Konzertortes zur Verfügung. Am Konzerttag erhält sie eine Verpflegungspauschale von 30 Euro. Die Kosten der Anfahrt sind mit der Erstattung nach § 2 abgegolten. Wünsche zur Lage des Zimmers, etwa wegen des Übens, sind dem Veranstalter rechtzeitig mitzuteilen.",
+    "sv": "§ 7 Logi och kost: Arrangören ställer ett enkelrum på ett hotell nära konsertlokalen till artistens förfogande natten före och natten efter konserten. På konsertdagen får hon ett traktamente på 30 euro. Kostnaderna för resan dit täcks av ersättningen enligt § 2. Önskemål om rummets läge, till exempel för att kunna öva, ska meddelas arrangören i god tid."
+   },
+   {
+    "fr": "§ 8 Werbung: Der Veranstalter darf Name, Foto und Biografie der Künstlerin für die Werbung verwenden. Die Künstlerin stellt hierfür spätestens sechs Wochen vor dem Konzert geeignetes Material zur Verfügung. Änderungen an der Biografie bedürfen ihrer Zustimmung. Eine Weitergabe an Dritte zu anderen Zwecken ist ohne ihre Zustimmung nicht gestattet.",
+    "sv": "§ 8 Marknadsföring: Arrangören får använda artistens namn, foto och biografi i marknadsföringen. Artisten tillhandahåller lämpligt material för detta senast sex veckor före konserten. Ändringar i biografin kräver hennes samtycke. Att lämna det vidare till tredje part för andra ändamål är inte tillåtet utan hennes samtycke."
+   },
+   {
+    "fr": "§ 9 Steuern und Abgaben: Die Künstlerin ist für die Versteuerung des Honorars selbst verantwortlich. Die Abgabe an die Künstlersozialkasse trägt der Veranstalter.",
+    "sv": "§ 9 Skatter och avgifter: Artisten ansvarar själv för att betala skatt på arvodet. Avgiften till Künstlersozialkasse betalas av arrangören."
+   },
+   {
+    "fr": "§ 10 Schlussbestimmungen: Mündliche Nebenabreden bestehen nicht. Änderungen und Ergänzungen bedürfen der Schriftform. Gerichtsstand ist Leipzig. Sollte eine Bestimmung dieses Vertrages unwirksam sein, bleibt die Wirksamkeit der übrigen Bestimmungen unberührt.",
+    "sv": "§ 10 Slutbestämmelser: Muntliga tilläggsavtal finns inte. Ändringar och tillägg kräver skriftlig form. Behörig domstol är Leipzig. Om en bestämmelse i detta avtal skulle vara ogiltig påverkas inte giltigheten hos de övriga bestämmelserna."
    }
   ],
   "questions": [
@@ -1391,7 +1669,19 @@
      "Bara om domstolen i Leipzig godkänner"
     ],
     "a": 1,
-    "why": "§ 7: Änderungen und Ergänzungen bedürfen der Schriftform."
+    "why": "§ 10: Änderungen und Ergänzungen bedürfen der Schriftform."
+   },
+   {
+    "type": "detalj",
+    "q": "Vem betalar avgiften till Künstlersozialkasse?",
+    "opts": [
+     "Artisten",
+     "Arrangören",
+     "Hälften var",
+     "Ingen, den ingår i arvodet"
+    ],
+    "a": 1,
+    "why": "„Die Abgabe an die Künstlersozialkasse trägt der Veranstalter.“ (§ 9)"
    }
   ],
   "gloss": {
@@ -1444,6 +1734,56 @@
     "t": "der Gerichtsstand",
     "sv": "behörig domstol",
     "g": "m"
+   },
+   "verpflegung": {
+    "t": "die Verpflegung",
+    "sv": "kost, mat",
+    "g": "f"
+   },
+   "verpflegungspauschale": {
+    "t": "die Verpflegungspauschale",
+    "sv": "traktamente",
+    "g": "f"
+   },
+   "abgegolten": {
+    "t": "abgelten",
+    "sv": "täcka, ersätta",
+    "g": ""
+   },
+   "dritte": {
+    "t": "Dritte",
+    "sv": "tredje part",
+    "g": "pl"
+   },
+   "versteuerung": {
+    "t": "die Versteuerung",
+    "sv": "beskattning",
+    "g": "f"
+   },
+   "abgabe": {
+    "t": "die Abgabe",
+    "sv": "avgift",
+    "g": "f"
+   },
+   "mitschnitte": {
+    "t": "der Mitschnitt",
+    "sv": "inspelning (live)",
+    "g": "m"
+   },
+   "erstattung": {
+    "t": "die Erstattung",
+    "sv": "ersättning, återbetalning",
+    "g": "f"
+   },
+   "bestimmung": {
+    "t": "die Bestimmung",
+    "sv": "bestämmelse",
+    "g": "f"
+   },
+   "unberührt": {
+    "t": "unberührt",
+    "sv": "opåverkad",
+    "g": ""
    }
   }
  },
@@ -1729,6 +2069,21 @@
     "t": "angemessen",
     "sv": "skälig",
     "g": ""
+   },
+   "bestehend": {
+    "t": "bestehen aus (+ Dat.)",
+    "sv": "bestå av",
+    "g": ""
+   },
+   "renoviertem": {
+    "t": "renoviert",
+    "sv": "renoverad",
+    "g": ""
+   },
+   "schallschutzkabine": {
+    "t": "die Schallschutzkabine",
+    "sv": "ljudisolerad hytt",
+    "g": "f"
    }
   }
  },
@@ -1746,6 +2101,10 @@
     "sv": "Sparivrarnas argument låter till en början rimliga. Varje operabiljett, räknar de ut, subventioneras med långt över hundra euro av skattepengar, och det mest för en äldre publik med goda inkomster. Varför, frågar de, ska kassörskan i snabbköpet vara med och betala tandläkarens abonnemang?"
    },
    {
+    "fr": "Ein Beispiel macht die Größenordnung deutlich. In einer mittelgroßen Stadt, die ihren Haushalt um vier Millionen Euro entlasten muss, stehen gleich mehrere Einrichtungen auf der Liste: die Musikschule, die Stadtbibliothek und das Jugendorchester. Zusammen kosten sie rund 1,5 Millionen Euro im Jahr, also weniger als ein Prozent des gesamten Haushaltsplans. Die Einsparung wäre spürbar, doch sie würde das Defizit keineswegs beseitigen. Gleichzeitig würden mit einem Schlag Angebote verschwinden, die jede Woche mehrere tausend Menschen nutzen. Und die Bibliothek ist für viele ältere Menschen der einzige Ort, an dem sie regelmäßig andere treffen.",
+    "sv": "Ett exempel visar storleksordningen. I en medelstor stad som måste minska sin budget med fyra miljoner euro står flera institutioner på listan på en gång: musikskolan, stadsbiblioteket och ungdomsorkestern. Tillsammans kostar de omkring 1,5 miljoner euro om året, alltså mindre än en procent av hela budgeten. Besparingen skulle märkas, men den skulle på intet sätt undanröja underskottet. Samtidigt skulle verksamheter som flera tusen människor använder varje vecka försvinna i ett slag. Och biblioteket är för många äldre den enda plats där de regelbundet träffar andra."
+   },
+   {
     "fr": "Diese Rechnung greift jedoch zu kurz. Erstens verschweigt sie die sogenannte Umwegrentabilität: Besucher übernachten in Hotels, essen in Restaurants und kaufen in der Innenstadt ein. Studien aus mehreren Städten kommen zu dem Ergebnis, dass jeder Euro Kulturförderung ein Vielfaches an regionaler Wertschöpfung auslöst.",
     "sv": "Den kalkylen är dock för kortsiktig. För det första förtiger den den så kallade indirekta lönsamheten: besökare övernattar på hotell, äter på restauranger och handlar i centrum. Studier från flera städer kommer fram till att varje euro i kulturstöd utlöser ett mångfaldigt förädlingsvärde i regionen."
    },
@@ -1754,12 +2113,16 @@
     "sv": "För det andra är ett levande kulturutbud en hård etableringsfaktor. Företag som vill rekrytera kvalificerad personal frågar inte bara efter lokaler utan också efter om det finns en musikskola för medarbetarnas barn."
    },
    {
+    "fr": "Selbst nüchterne Ökonomen, die sonst eher zur Sparsamkeit raten, kommen hier zu einem klaren Ergebnis. Die Einnahmen aus dem Kartenverkauf decken zwar nur einen kleinen Teil der Kosten, doch eine Stadt ohne Kulturangebot verliert an Anziehungskraft, für junge Familien ebenso wie für Studierende. Wer heute bei der Musikschule spart, zahlt morgen womöglich mit einer schrumpfenden Bevölkerung und sinkenden Steuereinnahmen.",
+    "sv": "Till och med nyktra ekonomer, som annars hellre råder till sparsamhet, kommer här fram till ett tydligt resultat. Intäkterna från biljettförsäljningen täcker visserligen bara en liten del av kostnaderna, men en stad utan kulturutbud förlorar i attraktionskraft, för unga familjer lika väl som för studenter. Den som sparar på musikskolan i dag betalar kanske i morgon med en krympande befolkning och sjunkande skatteintäkter."
+   },
+   {
     "fr": "Drittens – und das ist der wichtigste Punkt – lässt sich der Wert von Kultur nicht in Euro ausdrücken. Ein Jugendorchester, in dem Kinder aus zwanzig Nationen gemeinsam musizieren, leistet für den gesellschaftlichen Zusammenhalt mehr als manches teure Integrationsprogramm.",
     "sv": "För det tredje – och det är den viktigaste punkten – kan kulturens värde inte uttryckas i euro. En ungdomsorkester där barn från tjugo nationer musicerar tillsammans gör mer för den sociala sammanhållningen än mången dyrt integrationsprogram."
    },
    {
-    "fr": "Das heißt nicht, dass Kultureinrichtungen sich jeder Kritik entziehen dürfen. Wer öffentliche Gelder erhält, muss Rechenschaft ablegen und sich fragen, warum so wenige junge Menschen und so wenige Menschen mit geringem Einkommen den Weg in den Konzertsaal finden. Günstige Tickets für Schüler, Konzerte in Stadtteilen und Kooperationen mit Schulen wären ein Anfang.",
-    "sv": "Det betyder inte att kulturinstitutioner får undandra sig all kritik. Den som får offentliga medel måste stå till svars och fråga sig varför så få unga och så få människor med låg inkomst hittar till konsertsalen. Billiga biljetter för elever, konserter i stadsdelarna och samarbeten med skolor vore en början."
+    "fr": "Das heißt nicht, dass Kultureinrichtungen sich jeder Kritik entziehen dürfen. Wer öffentliche Gelder erhält, muss Rechenschaft ablegen und sich fragen, warum so wenige junge Menschen und so wenige Menschen mit geringem Einkommen den Weg in den Konzertsaal finden. Günstige Tickets für Schüler, Konzerte in Stadtteilen und Kooperationen mit Schulen wären ein Anfang. Auch private Stiftungen und Fonds können helfen, Lücken zu schließen; die öffentliche Verantwortung ersetzen dürfen sie aber nicht.",
+    "sv": "Det betyder inte att kulturinstitutioner får undandra sig all kritik. Den som får offentliga medel måste stå till svars och fråga sig varför så få unga och så få människor med låg inkomst hittar till konsertsalen. Billiga biljetter för elever, konserter i stadsdelarna och samarbeten med skolor vore en början. Även privata stiftelser och fonder kan hjälpa till att täppa till luckor, men de får inte ersätta det offentliga ansvaret."
    },
    {
     "fr": "Kürzungen dagegen sind kurzsichtig. Ein Orchester, das einmal aufgelöst wurde, lässt sich nicht per Beschluss wiederbeleben. Kultur ist keine Subvention, die man in guten Zeiten gewährt und in schlechten streicht. Sie ist eine Investition in die Zukunft einer Stadt.",
@@ -1862,6 +2225,18 @@
     ],
     "a": 1,
     "why": "Texten argumenterar för en tydlig åsikt och har rubriken Kommentar."
+   },
+   {
+    "type": "detalj",
+    "q": "Hur stor del av budgeten kostar de tre institutionerna i exemplet tillsammans?",
+    "opts": [
+     "Fyra miljoner euro",
+     "Mindre än en procent",
+     "En tredjedel",
+     "Hälften av underskottet"
+    ],
+    "a": 1,
+    "why": "„Zusammen kosten sie rund 1,5 Millionen Euro im Jahr, also weniger als ein Prozent des gesamten Haushaltsplans.“"
    }
   ],
   "gloss": {
@@ -1904,6 +2279,51 @@
     "t": "kurzsichtig",
     "sv": "kortsiktig, närsynt",
     "g": ""
+   },
+   "größenordnung": {
+    "t": "die Größenordnung",
+    "sv": "storleksordning",
+    "g": "f"
+   },
+   "entlasten": {
+    "t": "entlasten",
+    "sv": "avlasta, minska",
+    "g": ""
+   },
+   "einsparung": {
+    "t": "die Einsparung",
+    "sv": "besparing",
+    "g": "f"
+   },
+   "ökonomen": {
+    "t": "der Ökonom",
+    "sv": "ekonom",
+    "g": "m"
+   },
+   "sparsamkeit": {
+    "t": "die Sparsamkeit",
+    "sv": "sparsamhet",
+    "g": "f"
+   },
+   "anziehungskraft": {
+    "t": "die Anziehungskraft",
+    "sv": "attraktionskraft",
+    "g": "f"
+   },
+   "schrumpfenden": {
+    "t": "schrumpfen",
+    "sv": "krympa",
+    "g": ""
+   },
+   "fonds": {
+    "t": "der Fonds",
+    "sv": "fond",
+    "g": "m"
+   },
+   "lücken": {
+    "t": "die Lücke",
+    "sv": "lucka",
+    "g": "f"
    }
   }
  },
@@ -2172,16 +2592,24 @@
     "sv": "För en student från Sverige får det mycket praktiska följder. Högskolelagarna skiljer sig från delstat till delstat, likaså terminsbiljetterna, reglerna för studieavgifter och till och med skollovet. Musikskolor drivs mest av kommunerna, men får mycket olika bidrag beroende på delstat."
    },
    {
-    "fr": "Kritiker bemängeln, dass der Föderalismus zu einem Flickenteppich führe. Ein Kind in Bayern habe andere Bildungschancen als eines in Bremen, und Reformen dauerten oft Jahre, weil sich sechzehn Kultusminister einigen müssten. Tatsächlich werden viele Fragen in der Kultusministerkonferenz beraten, deren Beschlüsse lange Zeit einstimmig gefasst werden mussten.",
-    "sv": "Kritiker anmärker att federalismen leder till ett lapptäcke. Ett barn i Bayern har andra utbildningsmöjligheter än ett i Bremen, och reformer tar ofta år eftersom sexton kultusministrar måste enas. Många frågor behandlas faktiskt i kultusministerkonferensen, vars beslut länge måste fattas enhälligt."
+    "fr": "Besonders heftig wird über das Bildungswesen gestritten. Weil jedes Land eigene Lehrpläne und Prüfungen hat, ist ein Abitur aus Hamburg nicht ohne Weiteres mit einem Abitur aus Sachsen vergleichbar. Seit einigen Jahren gibt es deshalb einen gemeinsamen Pool von Prüfungsaufgaben, aus dem sich die Länder bedienen können. Viele Eltern und Lehrkräfte fordern jedoch einheitlichere Regeln, etwa bei der Zahl der Schuljahre bis zum Abitur oder bei der Bewertung.",
+    "sv": "Särskilt hett är grälet om utbildningsväsendet. Eftersom varje delstat har egna läroplaner och prov går en studentexamen från Hamburg inte utan vidare att jämföra med en från Sachsen. Sedan några år finns det därför en gemensam bank av provuppgifter som delstaterna kan hämta ur. Många föräldrar och lärare kräver ändå mer enhetliga regler, till exempel om antalet skolår fram till studentexamen eller om bedömningen."
+   },
+   {
+    "fr": "Kritiker bemängeln, dass der Föderalismus zu einem Flickenteppich führe. Ein Kind in Bayern habe andere Bildungschancen als eines in Bremen, und Reformen dauerten oft Jahre, weil sich sechzehn Kultusminister einigen müssten. Tatsächlich werden viele Fragen in der Kultusministerkonferenz beraten, deren Beschlüsse lange Zeit einstimmig gefasst werden mussten. Wer mit Kindern von einem Land in ein anderes zieht, erlebt das ganz konkret, wenn die Kinder plötzlich in Fächern geprüft werden, die sie an der alten Schule nie hatten.",
+    "sv": "Kritiker anmärker att federalismen leder till ett lapptäcke. Ett barn i Bayern har andra utbildningsmöjligheter än ett i Bremen, och reformer tar ofta år eftersom sexton kultusministrar måste enas. Många frågor behandlas faktiskt i kultusministerkonferensen, vars beslut länge måste fattas enhälligt. Den som flyttar med barn från en delstat till en annan upplever det mycket konkret när barnen plötsligt prövas i ämnen som de aldrig har haft i den gamla skolan."
    },
    {
     "fr": "Befürworter halten dagegen, dass gerade die Vielfalt eine Stärke sei. Deutschland habe mehr Theater und Orchester als jedes andere Land der Welt, und das liege auch daran, dass jede Landeshauptstadt und viele frühere Residenzstädte ihr eigenes Kulturleben pflegten. Zudem könnten Länder voneinander lernen, wenn ein Modell sich bewährt.",
     "sv": "Förespråkarna invänder att just mångfalden är en styrka. Tyskland har fler teatrar och orkestrar än något annat land i världen, och det beror också på att varje delstatshuvudstad och många tidigare residensstäder vårdar sitt eget kulturliv. Dessutom kan delstaterna lära av varandra när en modell visar sig fungera."
    },
    {
-    "fr": "Der Bund ist dennoch nicht völlig machtlos. Über die Beauftragte für Kultur und Medien fördert er Einrichtungen von nationaler Bedeutung, etwa Gedenkstätten oder große Festivals. Ein eigenes Kulturministerium des Bundes gibt es jedoch bis heute nicht – ein Umstand, der Besucher aus zentralistischen Staaten wie Frankreich oft überrascht.",
-    "sv": "Förbundsstaten är ändå inte helt maktlös. Genom kulturkommissionären stöder den institutioner av nationell betydelse, till exempel minnesplatser eller stora festivaler. Något eget federalt kulturdepartement finns dock än i dag inte – en omständighet som ofta förvånar besökare från centralstyrda stater som Frankrike."
+    "fr": "Damit die Unterschiede zwischen reichen und ärmeren Ländern nicht zu groß werden, gibt es außerdem einen finanziellen Ausgleich. Länder mit hohen Steuereinnahmen wie Bayern oder Baden-Württemberg geben einen Teil davon ab, finanzschwächere Länder erhalten zusätzliche Mittel. Auch dieses System ist umstritten: Die Geberländer klagen regelmäßig, sie müssten für die Politik anderer bezahlen, und Bayern ist mehrfach vor das Bundesverfassungsgericht gezogen. Seit 2020 läuft der Ausgleich zwar über ein neues Verfahren, am Grundprinzip hat sich aber wenig geändert.",
+    "sv": "För att skillnaderna mellan rika och fattigare delstater inte ska bli för stora finns det dessutom en ekonomisk utjämning. Delstater med höga skatteintäkter som Bayern eller Baden-Württemberg lämnar ifrån sig en del av dem, och delstater med svagare ekonomi får extra medel. Även det här systemet är omstritt: givarländerna klagar regelbundet över att de måste betala för andras politik, och Bayern har flera gånger gått till författningsdomstolen. Sedan 2020 sker utjämningen visserligen enligt ett nytt förfarande, men grundprincipen har knappt ändrats."
+   },
+   {
+    "fr": "Der Bund ist dennoch nicht völlig machtlos. Über die Beauftragte oder den Beauftragten der Bundesregierung für Kultur und Medien fördert er Einrichtungen von nationaler Bedeutung, etwa Gedenkstätten oder große Festivals. Ein eigenes Kulturministerium des Bundes gibt es jedoch bis heute nicht – ein Umstand, der Besucher aus zentralistischen Staaten wie Frankreich oft überrascht. Dieses Amt wurde übrigens erst 1998 geschaffen.",
+    "sv": "Förbundsstaten är ändå inte helt maktlös. Genom förbundsregeringens kulturombud stöder den institutioner av nationell betydelse, till exempel minnesplatser eller stora festivaler. Något eget federalt kulturdepartement finns dock än i dag inte – en omständighet som ofta förvånar besökare från centralstyrda stater som Frankrike. Det ämbetet inrättades för övrigt först 1998."
    }
   ],
   "questions": [
@@ -2280,6 +2708,18 @@
     ],
     "a": 1,
     "why": "Ein eigenes Kulturministerium des Bundes gibt es jedoch bis heute nicht."
+   },
+   {
+    "type": "detalj",
+    "q": "Vad finns sedan några år för att göra studentexamen mer jämförbar?",
+    "opts": [
+     "En gemensam bank av provuppgifter",
+     "Ett nationellt utbildningsdepartement",
+     "Samma läroplan i alla delstater",
+     "En central examensnämnd i Berlin"
+    ],
+    "a": 0,
+    "why": "„Seit einigen Jahren gibt es deshalb einen gemeinsamen Pool von Prüfungsaufgaben, aus dem sich die Länder bedienen können.“"
    }
   ],
   "gloss": {
@@ -2317,6 +2757,51 @@
     "t": "sich bewähren",
     "sv": "visa sig fungera",
     "g": ""
+   },
+   "bildungswesen": {
+    "t": "das Bildungswesen",
+    "sv": "utbildningsväsende",
+    "g": "n"
+   },
+   "lehrpläne": {
+    "t": "der Lehrplan",
+    "sv": "läroplan",
+    "g": "m"
+   },
+   "pool": {
+    "t": "der Pool",
+    "sv": "pool, gemensam bank",
+    "g": "m"
+   },
+   "einheitlichere": {
+    "t": "einheitlich",
+    "sv": "enhetlig",
+    "g": ""
+   },
+   "ausgleich": {
+    "t": "der Ausgleich",
+    "sv": "utjämning",
+    "g": "m"
+   },
+   "ärmeren": {
+    "t": "arm",
+    "sv": "fattig",
+    "g": ""
+   },
+   "finanzschwächere": {
+    "t": "finanzschwach",
+    "sv": "ekonomiskt svag",
+    "g": ""
+   },
+   "geberländer": {
+    "t": "das Geberland",
+    "sv": "givarland",
+    "g": "n"
+   },
+   "bundesverfassungsgericht": {
+    "t": "das Bundesverfassungsgericht",
+    "sv": "författningsdomstolen",
+    "g": "n"
    }
   }
  },
@@ -2582,8 +3067,16 @@
     "sv": "Anmärkningsvärt är att hon föregriper möjliga invändningar. Hon medger att staden faktiskt måste spara och föreslår att man i stället slimmar förvaltningen. Därigenom verkar hon inte polemisk utan kompromissvillig – ett grepp som tydligt ökar talets övertygelsekraft."
    },
    {
+    "fr": "Sprachlich bleibt die Rednerin bewusst einfach. Sie verwendet kurze Sätze, kaum Fremdwörter und spricht das Publikum direkt an. Man versteht sie auch ohne Vorwissen. An einigen Stellen arbeitet sie mit Ellipsen wie „Weniger Orchester, weniger Zukunft“, die wie Slogans wirken und sich leicht wiederholen lassen. Übertreibungen vermeidet sie weitgehend. Nur einmal spricht sie von einer „kulturellen Wüste“ – eine Hyperbel, die die Gegenseite später dankbar aufgreift.",
+    "sv": "Språkligt håller sig talaren medvetet enkel. Hon använder korta meningar, knappt några främmande ord och vänder sig direkt till publiken. Man förstår henne även utan förkunskaper. På några ställen arbetar hon med ellipser som ”Färre orkestrar, mindre framtid”, som verkar som slagord och lätt kan upprepas. Överdrifter undviker hon i stort sett. Bara en gång talar hon om en ”kulturell öken” – en hyperbol som motsidan senare tacksamt plockar upp."
+   },
+   {
     "fr": "Im Schluss appelliert sie an das Gefühl (Pathos): Sie bittet alle, einen Moment still zu sein, und lässt ein Mitglied des Orchesters ein kurzes Solo spielen. Die Rede endet also nicht mit Worten, sondern mit Musik – ein wirkungsvoller Abschluss, der das Anliegen besser vermittelt als jede weitere Zahl.",
     "sv": "I avslutningen vädjar hon till känslan (pathos): hon ber alla att vara tysta en stund och låter en medlem i orkestern spela ett kort solo. Talet slutar alltså inte med ord utan med musik – ett verkningsfullt slut som förmedlar budskapet bättre än någon ytterligare siffra."
+   },
+   {
+    "fr": "Die Wirkung der Rede lässt sich auch an den Reaktionen ablesen. Ein Video wurde in den sozialen Medien tausendfach geteilt, und die Lokalzeitung druckte die Rede am nächsten Tag vollständig ab. Eine Boulevardzeitung machte daraus allerdings die Schlagzeile „Studentin droht der Stadt“ – eine Darstellung, die den Ton der Rede verfälschte und die Zeitung später zu einer Richtigstellung zwang. Der Stadtrat hat die Entscheidung über die Schließung inzwischen auf das nächste Jahr verschoben. Insgesamt zeigt die Rede, wie wirkungsvoll sich Ethos, Logos und Pathos verbinden lassen und dass eine überzeugende Rede nicht lang sein muss.",
+    "sv": "Talets verkan syns också i reaktionerna. En video delades tusentals gånger i sociala medier, och lokaltidningen tryckte hela talet nästa dag. En kvällstidning gjorde dock rubriken ”Studentska hotar staden” av det – en framställning som förvrängde talets ton och som senare tvingade tidningen till en rättelse. Stadsfullmäktige har nu skjutit upp beslutet om nedläggningen till nästa år. Sammantaget visar talet hur verkningsfullt ethos, logos och pathos kan förenas, och att ett övertygande tal inte behöver vara långt."
    }
   ],
   "questions": [
@@ -2682,6 +3175,18 @@
     ],
     "a": 1,
     "why": "lässt ein Mitglied des Orchesters ein kurzes Solo spielen."
+   },
+   {
+    "type": "tolkning",
+    "q": "Varför var kvällstidningen tvungen att trycka en rättelse?",
+    "opts": [
+     "Den hade angett fel datum för talet",
+     "Dess rubrik gav en förvrängd bild av talets ton",
+     "Den hade citerat fel talare",
+     "Den hade publicerat talet utan tillstånd"
+    ],
+    "a": 1,
+    "why": "Rubriken „Studentin droht der Stadt“ var „eine Darstellung, die den Ton der Rede verfälschte“."
    }
   ],
   "gloss": {
@@ -2729,6 +3234,56 @@
     "t": "appellieren",
     "sv": "vädja",
     "g": ""
+   },
+   "rednerin": {
+    "t": "die Rednerin",
+    "sv": "talare (kvinna)",
+    "g": "f"
+   },
+   "neunjährige": {
+    "t": "neunjährig",
+    "sv": "nioårig",
+    "g": ""
+   },
+   "ellipsen": {
+    "t": "die Ellipse",
+    "sv": "ellips (stilmedel)",
+    "g": "f"
+   },
+   "slogans": {
+    "t": "der Slogan",
+    "sv": "slogan, slagord",
+    "g": "m"
+   },
+   "hyperbel": {
+    "t": "die Hyperbel",
+    "sv": "hyperbol, överdrift",
+    "g": "f"
+   },
+   "aufgreift": {
+    "t": "aufgreifen",
+    "sv": "plocka upp, ta upp",
+    "g": ""
+   },
+   "ablesen": {
+    "t": "ablesen",
+    "sv": "avläsa",
+    "g": ""
+   },
+   "boulevardzeitung": {
+    "t": "die Boulevardzeitung",
+    "sv": "kvällstidning",
+    "g": "f"
+   },
+   "verfälschte": {
+    "t": "verfälschen",
+    "sv": "förvränga",
+    "g": ""
+   },
+   "richtigstellung": {
+    "t": "die Richtigstellung",
+    "sv": "rättelse",
+    "g": "f"
    }
   }
  },
@@ -2987,12 +3542,20 @@
     "sv": "Ofta forskar skolklasser eller medborgarinitiativ fram biografierna innan en sten läggs. De söker i arkiv, skriver till anhöriga utomlands och bjuder in ättlingar till nedläggningen. Det här minnesarbetet är minst lika viktigt som själva stenen."
    },
    {
-    "fr": "Unumstritten ist das Projekt allerdings nicht. Die Stadt München erlaubte lange keine Stolpersteine auf öffentlichem Grund, weil unter anderem die damalige Präsidentin der Israelitischen Kultusgemeinde es als unwürdig empfand, dass Passanten auf die Namen der Ermordeten treten. Befürworter entgegnen, wer den Namen lesen wolle, müsse sich verbeugen – eine Geste des Respekts.",
-    "sv": "Projektet är dock inte oomstritt. Staden München tillät länge inga snubbelstenar på offentlig mark, bland annat eftersom den dåvarande ordföranden för den judiska församlingen ansåg det ovärdigt att förbipasserande trampar på de mördades namn. Förespråkare invänder att den som vill läsa namnet måste buga sig – en gest av respekt."
+    "fr": "Eine Verlegung folgt meist einem festen Ablauf. Demnig oder ein Mitglied seines Teams öffnet den Gehweg, setzt den Stein ein und verschließt die Stelle wieder. Währenddessen lesen Jugendliche die Biographie vor, manchmal spielt jemand ein Stück auf der Geige oder der Klarinette, und Angehörige aus Israel, den USA oder Großbritannien sprechen ein paar Worte. Nach der Zeremonie bleiben oft Blumen und Kerzen neben dem frisch verlegten Stein zurück. Finanziert wird jeder Stein durch eine Patenschaft von rund 120 Euro, die Privatpersonen, Schulen oder Vereine übernehmen.",
+    "sv": "En läggning följer oftast ett fast förlopp. Demnig eller någon i hans team öppnar trottoaren, sätter in stenen och sluter till stället igen. Under tiden läser ungdomar upp biografin, ibland spelar någon ett stycke på fiol eller klarinett, och anhöriga från Israel, USA eller Storbritannien säger några ord. Efter ceremonin ligger ofta blommor och ljus kvar bredvid den nylagda stenen. Varje sten finansieras genom ett fadderskap på omkring 120 euro, som privatpersoner, skolor eller föreningar tar på sig."
    },
    {
-    "fr": "Der Streit zeigt, dass Erinnerungskultur nie abgeschlossen ist. Sie muss immer wieder neu verhandelt werden, gerade jetzt, da die letzten Zeitzeugen sterben. Dass die Steine regelmäßig von Anwohnern geputzt werden, oft am 9. November, dem Jahrestag der Pogromnacht, zeigt allerdings, dass viele Menschen die Erinnerung als eigene Aufgabe begreifen.",
-    "sv": "Striden visar att minneskulturen aldrig är avslutad. Den måste förhandlas på nytt om och om igen, särskilt nu när de sista tidsvittnena dör. Att stenarna regelbundet putsas av grannar, ofta den 9 november, på årsdagen av pogromnatten, visar dock att många människor ser minnet som sin egen uppgift."
+    "fr": "Dass das Projekt so viele Menschen anspricht, hat auch mit der Geschichte der Erinnerung in Deutschland zu tun. In den ersten Jahrzehnten nach Kriegsende herrschte in der Bundesrepublik eher Verdrängung: Über die Mitschuld vieler Mitläufer wurde in den Familien kaum gesprochen, und die Namen der Opfer verschwanden aus dem Gedächtnis der Städte. Erst seit den Achtzigerjahren entstanden vielerorts Initiativen, die nach den verschwundenen Nachbarn fragten. Oft waren es Geschichtswerkstätten, Kirchengemeinden oder Schülergruppen, die in Archiven nach Spuren suchten. Die Stolpersteine knüpfen an diese Bewegung von unten an.",
+    "sv": "Att projektet tilltalar så många människor har också att göra med minnets historia i Tyskland. Under de första årtiondena efter krigsslutet rådde i Förbundsrepubliken snarare förträngning: om många medlöpares medskuld talades det knappt i familjerna, och offrens namn försvann ur städernas minne. Först från åttiotalet uppstod det på många håll initiativ som frågade efter de försvunna grannarna. Ofta var det lokalhistoriska föreningar, kyrkoförsamlingar eller elevgrupper som letade efter spår i arkiven. Snubbelstenarna knyter an till den här rörelsen underifrån."
+   },
+   {
+    "fr": "Unumstritten ist das Projekt allerdings nicht. Die Stadt München erlaubte lange keine Stolpersteine auf öffentlichem Grund, weil unter anderem die damalige Präsidentin der Israelitischen Kultusgemeinde es als unwürdig empfand, dass Passanten auf die Namen der Ermordeten treten. Seit 2018 setzt die Stadt stattdessen auf sogenannte Erinnerungszeichen an Hauswänden. Befürworter entgegnen, wer den Namen lesen wolle, müsse sich verbeugen – eine Geste des Respekts.",
+    "sv": "Projektet är dock inte oomstritt. Staden München tillät länge inga snubbelstenar på offentlig mark, bland annat eftersom den dåvarande ordföranden för den judiska församlingen ansåg det ovärdigt att förbipasserande trampar på de mördades namn. Sedan 2018 satsar staden i stället på så kallade minnestecken på husväggar. Förespråkare invänder att den som vill läsa namnet måste buga sig – en gest av respekt."
+   },
+   {
+    "fr": "Der Streit zeigt, dass Erinnerungskultur nie abgeschlossen ist. Sie muss immer wieder neu verhandelt werden, gerade jetzt, da die letzten Zeitzeugen sterben. Dass die Steine regelmäßig von Anwohnern geputzt werden, oft am 9. November, dem Jahrestag der Pogromnacht, zeigt allerdings, dass viele Menschen die Erinnerung als eigene Aufgabe begreifen. Und jedes Jahr werden neue Steine verlegt, oft auf Anregung von Angehörigen.",
+    "sv": "Striden visar att minneskulturen aldrig är avslutad. Den måste förhandlas på nytt om och om igen, särskilt nu när de sista tidsvittnena dör. Att stenarna regelbundet putsas av grannar, ofta den 9 november, på årsdagen av pogromnatten, visar dock att många människor ser minnet som sin egen uppgift. Och varje år läggs nya stenar, ofta på initiativ av anhöriga."
    }
   ],
   "questions": [
@@ -3091,6 +3654,18 @@
     ],
     "a": 1,
     "why": "… die Erinnerung als eigene Aufgabe begreifen."
+   },
+   {
+    "type": "detalj",
+    "q": "Hur finansieras en snubbelsten?",
+    "opts": [
+     "Av staden där stenen ligger",
+     "Av förbundsregeringen",
+     "Genom ett fadderskap på omkring 120 euro",
+     "Av konstnären själv"
+    ],
+    "a": 2,
+    "why": "„Finanziert wird jeder Stein durch eine Patenschaft von rund 120 Euro …“"
    }
   ],
   "gloss": {
@@ -3132,6 +3707,56 @@
    "pogromnacht": {
     "t": "die Pogromnacht",
     "sv": "pogromnatten",
+    "g": "f"
+   },
+   "jg": {
+    "t": "Jg. (der Jahrgang)",
+    "sv": "årgång, född år",
+    "g": ""
+   },
+   "verschließt": {
+    "t": "verschließen",
+    "sv": "stänga till, försluta",
+    "g": ""
+   },
+   "zeremonie": {
+    "t": "die Zeremonie",
+    "sv": "ceremoni",
+    "g": "f"
+   },
+   "patenschaft": {
+    "t": "die Patenschaft",
+    "sv": "fadderskap",
+    "g": "f"
+   },
+   "verdrängung": {
+    "t": "die Verdrängung",
+    "sv": "förträngning",
+    "g": "f"
+   },
+   "mitläufer": {
+    "t": "der Mitläufer",
+    "sv": "medlöpare",
+    "g": "m"
+   },
+   "geschichtswerkstätten": {
+    "t": "die Geschichtswerkstatt",
+    "sv": "lokalhistorisk förening",
+    "g": "f"
+   },
+   "präsidentin": {
+    "t": "die Präsidentin",
+    "sv": "ordförande (kvinna)",
+    "g": "f"
+   },
+   "erinnerungszeichen": {
+    "t": "das Erinnerungszeichen",
+    "sv": "minnestecken",
+    "g": "n"
+   },
+   "anregung": {
+    "t": "die Anregung",
+    "sv": "initiativ, förslag",
     "g": "f"
    }
   }

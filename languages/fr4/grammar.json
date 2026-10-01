@@ -12,6 +12,8 @@
     {"id": "condp", "name": "Conditionnel passé", "sub": "j'aurais dû, elle serait venue, selon la police, il aurait fui", "secs": ["q1", "q2"]},
     {"id": "subjp", "name": "Subjonctif passé", "sub": "Je suis content que tu sois venu. Le meilleur film que j'aie vu.", "secs": ["q7", "q8"]},
     {"id": "psimp", "name": "Passé simple: känna igen", "sub": "Il fut, il fit, il vint. Elle entra et regarda. Ils partirent.", "secs": ["q6", "q4"]},
+    {"id": "nomi", "name": "Nominalisering (början)", "sub": "organiser → l'organisation, partir → le départ, libre → la liberté", "secs": ["q3", "q2"]},
+    {"id": "style", "name": "Formell stil", "sub": "Je vous prie d'agréer … Pourriez-vous … Je recherche un emploi.", "secs": ["q1", "q5"]},
     {"id": "err", "name": "Hitta felet", "sub": "En mening har ett fel. Vilket ord?"}
   ],
   "rules": {
@@ -75,6 +77,16 @@
     "psimp-irr": "Passé simple: oregelbundna verb (fut, eut, fit, vit, vint)",
     "psimp-er": "Passé simple: verb på -er (il parla, ils parlèrent)",
     "psimp-ir": "Passé simple: verb på -ir och -re (il finit, il répondit)",
-    "psimp-pers": "Passé simple: singular eller plural"
+    "psimp-pers": "Passé simple: singular eller plural",
+    "nomi-tion": "Verb → substantiv på -tion, -sion",
+    "nomi-ment": "Verb → substantiv på -ment",
+    "nomi-court": "Korta substantiv: le départ, la vente",
+    "nomi-adj": "Adjektiv → substantiv: -té, -esse, -eur, -ence",
+    "nomi-phrase": "Bisats → preposition + substantiv",
+    "style-lettre": "Inledning och avslutning i formella brev",
+    "style-vous": "Vous, votre, vos genom hela brevet",
+    "style-cond": "Artig fråga och önskan: conditionnel och inversion",
+    "style-tour": "Fasta fraser i formella brev",
+    "style-reg": "Vardagligt eller formellt ord"
   }
 }

@@ -40,6 +40,15 @@ Meningarna ska vara naturlig och korrekt franska på nivå A2/B1, med vardagliga
 | `pton` | 25 | `pton-prep`, `pton-comp`, `pton-cest`, `pton-bet`, `pton-a` | Betonade pronomen: moi, toi, lui, elle, nous, vous, eux, elles. |
 | `imper` | 25 | `imp-form`, `imp-irr`, `imp-neg`, `imp-pron`, `imp-negpron` | Imperativ, även nekad och med pronomen. `imp-negpron` är rw. |
 | `refl` | 20 | `refl-pres`, `refl-inf`, `refl-neg`, `refl-sens` | Reflexiva verb i presens, med infinitiv och negation, och verb som är reflexiva på franska men inte på svenska. |
+| `tid` | 29 | `tid-depuis`, `tid-ilya`, `tid-pendant`, `tid-dans`, `tid-en` | Tidsuttryck: depuis + presens (även ça fait … que), il y a + passé composé, pendant/pendant que, dans (om) och en (på, månader, årtal, årstider, au printemps). |
+| `proche` | 23 | `venir-de`, `en-train`, `fut-proche` | Nära tid: välj mellan venir de, être en train de och aller + infinitiv efter signalorden, även i imparfait (venait de, étais en train de, allais). Reglerna delas med `pqp` och `fut`. |
+| `nombre` | 28 | `nb-tal`, `nb-date`, `nb-heure` | Tal 70–99, -s på vingt och cent, mille, vingt et un/une; ordningstal och datum (le premier, le onze); klockan (et quart, et demie, moins le quart, halv åtta = sept heures et demie). Svaret framgår av siffrorna i `sv`. |
+| `dem` | 24 | `dem-adj`, `dem-pron`, `dem-ci` | ce/cet/cette/ces (cet + vokal, ce héros), celui/celle/ceux/celles + de/qui/que, celui-ci/celui-là. |
+| `quel` | 22 | `quel-q`, `quel-excl`, `lequel` | quel i frågor (även quel est …), i utrop och lequel/laquelle/lesquels/lesquelles. |
+| `tout` | 22 | `tout-adj`, `tout-pron`, `tout-expr` | tout/toute/tous/toutes framför substantiv, ensamt (tout = allt, tous = allihop) och fasta uttryck. |
+| `ger` | 20 | `ger-form`, `ger-irr`, `ger-sens` | Förhandsvisning (`"preview": "frs5"`): gérondif, bildning, étant/ayant/sachant och betydelsen (samtidigt, genom att). |
+
+`subj` och `si` har `"preview": "frs4"` och `ger` har `"preview": "frs5"` i grammar.json: de ligger över nivån och visas sist med etiketten "Förhandsvisning – övas mer i Franska 4/5" (se `docs/spec/grammatik.md`). Passiv form finns inte i Franska 3; den övas i Franska 5 (`frs5`, området `pass`).
 
 För `rw` gäller samma regel som i tyskan: `a`, `acc` och `alt` ska bestå av exakt samma ord. Vid inversion skrivs bindestrecket som i vanlig franska (`Où habites-tu ?`). Programmet delar orden vid mellanslag, så `habites-tu` blir en bricka.
 

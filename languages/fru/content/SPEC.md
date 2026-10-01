@@ -34,7 +34,7 @@ Formaten står i `docs/spec/` (allmänna regler i `docs/spec/allmant.md`, en fil
 - `phrases.json`: 45 fraser för akademiska och formella situationer (seminarium, föredrag, mejl till lärare, muntlig tenta).
 - `mal.json`: kapitelmål formulerade som förväntade studieresultat ("Studenten ska kunna …" i jagform, som i de andra kurserna: "Jag kan …").
 - `uttal.json`: ett fonetikmoment per kapitel, med ordpar som webbläsarens franska röster uttalar tydligt olika.
-- `exam.json`: DELF B2 i samma format som `languages/fr4/content/exam.json`, med id:n `fru-…`.
+- `exam.json`: DELF B2 i samma format som `languages/fr4/content/exam.json`, med id:n `fru-…`. Extrauppgifterna `fru-pe-syn-1` … `-3` är DALF C1-lika synteser (`level: "C1"`, `sim: false`, 200–240 ord): två egna texter på 250–350 ord står i `task` efter instruktionen, eftersom skrivvyn visar `task` men inte `lines`, och Claude får då texterna i bedömningen.
 - `prompts.json` (skrivuppgifter: résumé, textkommentar, formellt brev, argumenterande text) skrivs efter ordlistan.
 - `transkription.json` och `satsanalys.json` hör till egna övningstyper, med format i `docs/spec/transkription.md` och `docs/spec/satsanalys.md`.
 - Inga verkliga personnamn på studenter. Fakta i kultur- och historietexter ska gå att kontrollera.

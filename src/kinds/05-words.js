@@ -66,11 +66,11 @@ function startQuiz(){
 }
 
 /* Glosquizets frågor (flerval och skriva) och kortet som visas efter ett fel svar */
+// Felalternativ: fyra ord med olika betydelse, först ur samma avsnitt, sedan ur resten (pickSome blandar bara så långt det behövs)
 function mcOptions(w){
-  const same=shuffle(WORDS.filter(x=>x.sec===w.sec&&x.sv!==w.sv));
-  const other=shuffle(WORDS.filter(x=>x.sec!==w.sec&&x.sv!==w.sv));
-  const picks=[];
-  for(const x of same.concat(other)){ if(picks.length>=4)break; if(!picks.some(p=>p.sv===x.sv)) picks.push(x); }
+  const ok=(x,picks)=>x.sv!==w.sv&&!picks.some(p=>p.sv===x.sv);
+  const picks=pickSome(secWords(w.sec),4,ok);
+  if(picks.length<4) pickSome(WORDS,4,(x,p)=>x.sec!==w.sec&&ok(x,p),picks);
   return shuffle([w,...picks]);
 }
 const explain=w=>`<p class="ex-t" ${lang()}>${esc(w.exT)}</p><p class="ex-sv">${esc(w.exSv)}</p>${(ws(w.id)||{}).memo?`<p class="foot">Din minnesregel: ${esc(ws(w.id).memo)}</p>`:""}`;

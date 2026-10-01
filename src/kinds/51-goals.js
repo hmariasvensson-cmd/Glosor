@@ -3,7 +3,7 @@
    Visas på startsidan för avsnittet man är på. Eleven bockar av det hon eller han kan (S.mal["<id>|<nr>"] = tid).
    VIKTIGT: nyckeln är målets plats i listan. Nya mål ska läggas SIST i goals, och mål får inte flyttas eller tas bort
    ur mitten (skriv hellre om texten på samma plats), annars hamnar elevens bockar på fel mål. Ändra inte id. */
-const malFor=sec=>(C().mal||[]).find(m=>m.sec===sec)||(C().mal||[]).find(m=>typeof sameChapter==="function"&&SECTIONS.some(s=>s.id===m.sec)&&sameChapter(m.sec,sec));
+const malFor=sec=>(C().mal||[]).find(m=>m.sec===sec)||(C().mal||[]).find(m=>SECTIONS.some(s=>s.id===m.sec)&&sameChapter(m.sec,sec));
 function goalsPanel(){
   const sec=curSec(), m=sec&&malFor(sec); if(!m) return "";
   S.mal=S.mal||{}; const done=m.goals.filter((g,i)=>S.mal[m.id+"|"+i]).length;

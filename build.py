@@ -8,6 +8,7 @@ Läser src/ och languages/<kod>/ och skriver:
   dist/index.html        sidan som publiceras till artefaktlänken (appen och kursinställningarna)
   dist/data/<kod>.json   varje kurs ord och innehåll, publiceras bredvid sidan och hämtas när kursen väljs
   dist/data/<kod>-exam.json  kursens provträning, hämtas först när provet behövs (bara kurser med exam.json)
+  dist/data/lemma-<språk>.json  alla kursers ord i ett språk (grundformer till Mina ord), hämtas när eleven trycker på ord i en text
   dist/preview.html      samma sida med datan inbakad och ett komplett HTML-skal, för att öppna lokalt och för testerna
 
 och kontrollerar/uppdaterar id-låsen languages/<kod>/ids.lock (och book/ids.lock för bokens id), se lock_ids.
@@ -46,7 +47,35 @@ def split_exam(ex):
     return index, ex
 
 
-JS_ID = re.compile(r"[A-Za-z0-9_$\u0080-￿]")
+def lemma_lang(code, conf):
+    """Språket för grundformerna: de två första bokstäverna i tts ("de-DE" → "de"), som lemmaLang() i 03-lemma.js."""
+    return str(conf.get("tts") or code)[:2].lower()
+
+
+def lemma_files(codes, confs, course_data):
+    """{"lemma-<språk>": {"words": [[ord, svenska, genus], …]}}: alla kursers ord i samma språk, i kursernas ordning och
+    utan dubbletter (första förekomsten vinner). Bara de fält lemmaOf behöver; exempel och ursprung står i kursfilerna."""
+    out = {}
+    for c in codes:
+        words = course_data.get(c, {}).get("words")
+        if not isinstance(words, str):
+            continue
+        lst = out.setdefault(f"lemma-{lemma_lang(c, confs[c])}", {"words": [], "_seen": set()})
+        for line in words.split("\n"):
+            line = line.strip()
+            if not line or line.startswith("#"):
+                continue
+            f = line.split("|")
+            if f[0] in lst["_seen"]:
+                continue
+            lst["_seen"].add(f[0])
+            lst["words"].append([f[0], f[1] if len(f) > 1 else "", f[2] if len(f) > 2 else ""])
+    for v in out.values():
+        del v["_seen"]
+    return out
+
+
+JS_ID =re.compile(r"[A-Za-z0-9_$\u0080-￿]")
 JS_REGEX_AFTER = {"return", "typeof", "case", "do", "else", "in", "of", "new", "delete", "void", "throw", "instanceof", "yield", "await"}
 JS_SPACE = " \t\r\n\f\v ﻿"
 
@@ -1228,6 +1257,10 @@ def check_grammar_refs(content, grammar, section_ids, where, has_book):
         for s in (t.get("secs") or []) if isinstance(t, dict) else []:
             if s not in section_ids and has_book:   # utan den privata bokmappen saknas bokens kapitel (k4 …)
                 errors.append(f"{where}/grammar.json: området {t.get('id')} har secs '{s}', som inte finns i words.txt")
+        # preview: "<kurskod>" = förhandsvisning av ett område som övas mer i en senare kurs (src/kinds/60-grammar.js)
+        p = t.get("preview") if isinstance(t, dict) else None
+        if p is not None and not (isinstance(p, str) and p and (LANG_DIR / p / "lang.js").exists()):
+            errors.append(f"{where}/grammar.json: området {t.get('id')} har preview '{p}', som inte är en kurs")
     regler = content.get("regler")
     if isinstance(regler, dict):
         errors += [f"{where}/content/regler.json: '{k}' är inget område i grammar.json" for k in regler if k not in topics]
@@ -1526,6 +1559,11 @@ def main():
         if isinstance(ex, dict) and ex.get("tasks"):
             course_data[c]["content"]["exam"], full = split_exam(ex)
             course_data[f"{c}-exam"] = full
+    # Grundformerna för Mina ord (lemmaOf i src/kinds/03-lemma.js): alla kursers ord i samma språk, en fil per språk,
+    # dist/data/lemma-<språk>.json (lemma_files). Appen hämtar den först när eleven trycker på ord i en text, så att en
+    # böjd form känns igen även om grundformen bara finns i en kurs i kedjan som inte har öppnats. Nyckeln i
+    # DATA_VERSION är "lemma-<språk>". Kursernas egna filer ändras inte.
+    course_data.update(lemma_files(codes, confs, course_data))
     data_json = {c: json.dumps(d, ensure_ascii=False, separators=(",", ":")) for c, d in course_data.items()}
     dataversion = {c: hashlib.sha1(data_json[c].encode()).hexdigest()[:10] for c in data_json}
     page = (ROOT / "src" / "page.html").read_text(encoding="utf-8")
@@ -1559,8 +1597,9 @@ def main():
     (DIST / "preview.html").write_text(SKELETON_HEAD + preview + "\n</body></html>\n", encoding="utf-8")
     kb = lambda c: len(data_json[c].encode()) // 1024
     print(f"Klart: dist/index.html ({len(html.encode()) // 1024} kB) och dist/data/ ("
-          + ", ".join(f"{c} {kb(c)} kB" + (f" + prov {kb(c + '-exam')} kB" if c + "-exam" in data_json else "") for c in codes) + ")")
-    print(f"Publicera med alla {len(data_json)} filer i dist/data/ i files (även *-exam.json), se docs/ARKITEKTUR.md")
+          + ", ".join(f"{c} {kb(c)} kB" + (f" + prov {kb(c + '-exam')} kB" if c + "-exam" in data_json else "") for c in codes)
+          + "; grundformer " + ", ".join(f"{c} {kb(c)} kB" for c in data_json if c.startswith("lemma-")) + ")")
+    print(f"Publicera med alla {len(data_json)} filer i dist/data/ i files (även *-exam.json och lemma-*.json), se docs/ARKITEKTUR.md")
     # Sidan laddas på telefon: varna innan index.html eller en datafil växer förbi gränserna (2026-09-29: 456 kB före och cirka 370 kB
     # efter att verbtabellerna flyttats till datafilerna; 2026-09-30: 478 kB före och cirka 360 kB efter minifieringen)
     if len(html.encode()) > MAX_PAGE_KB * 1024:

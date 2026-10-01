@@ -120,9 +120,9 @@ Stämmer:
 Brister:
 
 - **Namnet.** "Franska 4" är i skolan steg 4 (A2.2). Kursen är steg 6. Eleven som läser Franska 4 i skolan får en app-kurs två steg för svår, och steg 4–5 hoppas över i kedjan. `docs/KLART.md` (rad om nivåer) säger fortfarande "Franska 4 A2 → B1", vilket inte stämmer med `lang.js`.
-- **Saknas mellan `fr` och `fr4`:** dubbla pronomen, participets kongruens med avoir, verb + à/de + infinitiv och subjonctif i grundfallen som eget område. De finns bara i `fru` (`pronord`, `accord`, `prepinf`) och i `fr` som förhandsvisning.
+- **Mellan `fr` och `fr4` (löst 2026-10-01):** dubbla pronomen (`dpron`) och verb + à/de + infinitiv (`prepinf`) finns i `frs4`, participets kongruens med avoir (`accord`) i `frs5`. `subj` och `si` i `fr` är märkta som förhandsvisning (`preview: "frs4"`).
 - Conditionnel passé och subjonctif passé har inget eget område (de ingår i `hyp` och `subj2`). Det räcker, men regelsidorna bör nämna dem uttryckligen.
-- *Passé simple* att känna igen (steg 6, äldre litteratur) finns bara i `fru`. Äldre texter i `fr4` (Hugo, Molière) bör antingen undvika passé simple eller ha en förklaring.
+- *Passé simple* att känna igen finns i `fr4` (`psimp`, kapitel q4 och q6) och i `fru`. Äldre texter i `fr4` (Hugo, Molière) använder inte passé simple (kontrollerat 2026-10-01).
 
 ### 4.3 Franska I (`fru`)
 

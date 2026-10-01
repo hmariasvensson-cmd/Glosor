@@ -83,7 +83,7 @@ function adjIds(k){
 // eller där vardagsspråket godtar alternativet (indikativ i indirekt tal), tas inte med
 // Franskans tempusval (imparfait/passé composé, plus-que-parfait, futur/presens) och artighetsformer går ofta att försvara
 // i talspråk, så de passar inte heller som "Hitta felet"
-const ERR_SKIP=["rel-nom","rel-akk","k1-rede","tps-bakgrund","tps-vana","tps-handelse","tps-avbrott","tps-signal","pqp-avoir","pqp-etre","cond-poli","cond-rai","fut-reg","disc-imp","disc-pqp","disc-cond","disc-tps","nomin-reg","nomin-titre","dm-agg","dm-avv","dm-caus","dm-org","dm-parl","dm-rif","ob-pref","ob-suff","reg-form","reg-inf","reg-lex"];
+const ERR_SKIP=["rel-nom","rel-akk","k1-rede","tps-bakgrund","tps-vana","tps-handelse","tps-avbrott","tps-signal","pqp-avoir","pqp-etre","cond-poli","cond-rai","fut-reg","disc-imp","disc-pqp","disc-cond","disc-tps","nomin-reg","nomin-titre","style-reg","dm-agg","dm-avv","dm-caus","dm-org","dm-parl","dm-rif","ob-pref","ob-suff","reg-form","reg-inf","reg-lex"];
 // Felalternativ som går att sätta in i luckan: inga med flera delar, och när luckan sitter ihop med ett ord
 // ("[parce qu']il", "Je [t']aime", "[L']estate") bara alternativ som slutar med apostrof, så att orden inte klistras ihop
 // ("malgréil", "Je teaime", "Ilestate"). Meningen måste också ha minst 3 andra ord att välja mellan.
@@ -154,6 +154,10 @@ function gramItems(topic,k){
 // Grammatikområden som hör till kapitlet eleven läser (secs i grammar.json)
 const chapterTopics=()=>S.chapter&&hasGrammar()?GR().topics.filter(t=>(t.secs||[]).some(s=>sameChapter(s,S.chapter))).map(t=>t.id):[];
 const topicName=id=>id==="mix"?"Blandad grammatik":((GR().topics.find(t=>t.id===id)||{}).name||"Grammatik");
+// Förhandsvisning: preview: "<kurskod>" i grammar.json märker ett område som egentligen hör till en senare kurs.
+// Det får en etikett, sorteras sist i listan och regelsidan säger var det övas mer.
+const topicPreview=id=>{const t=GR().topics.find(x=>x.id===id); const c=t&&t.preview;
+  return c?`Förhandsvisning – övas mer i ${(LANGUAGES[c]||{}).course||c}`:"";};
 function startGram(topic){
   const items=gramItems(topic,10); if(!items.length) return openGrammar();
   $("#tabs").hidden=true; sess=null; beginQuiz("gram",items,{againFn:["gram",topic],label:topicName(topic),gramMix:topic==="mix"});
@@ -173,6 +177,7 @@ function gramRules(id){
   const r=RULES()[id]; if(!r) return startGram(id);
   stopSpeech(); $("#tabs").hidden=true; sess=null;
   app.innerHTML=`<section class="panel"><span class="tab">Regel</span><h2>${esc(r.title||topicName(id))}</h2>
+    ${topicPreview(id)?`<p class="plan"><span class="tag n">${esc(topicPreview(id))}</span> Det är bra att känna igen redan nu.</p>`:""}
     <button class="btn" id="rgo">Öva: ${esc(topicName(id))}</button>${ruleHtml(r)}
     <button class="btn" id="rgo2">Starta övningarna</button></section><button class="quit" id="quit">Tillbaka</button>`;
   $("#rgo").onclick=$("#rgo2").onclick=()=>startGram(id); $("#quit").onclick=openGrammar;
@@ -186,8 +191,8 @@ function openGrammar(){
   const due=gramDue(null);
   const topics=GR().topics.filter(t=>t.id==="adj"?GR().adj&&adjNouns().length:t.id==="err"?errBase().length:bank.some(x=>x.topic===t.id));
   pickerScreen("Grammatik",`Välj ett område. Frågor du klarar kommer tillbaka efter 1, 3, 7, 20, 45 och 90 dagar, och frågor du missar redan nästa gång. Blandad grammatik tar lite av allt.${due?` <b data-due="${due}">${due} ${due===1?"fråga":"frågor"} att repetera i dag.</b>`:""}`,
-    [{id:"mix",title:"Blandad grammatik",status:status("mix")},...topics.map(t=>({id:t.id,title:t.name,status:status(t.id),here:chapterTopics().includes(t.id)}))]
-      .sort((a,b)=>(b.here?1:0)-(a.here?1:0)),id=>RULES()[id]?gramRules(id):startGram(id));
+    [{id:"mix",title:"Blandad grammatik",status:status("mix")},...topics.map(t=>({id:t.id,title:t.name,status:status(t.id),here:chapterTopics().includes(t.id),tag:topicPreview(t.id)}))]
+      .sort((a,b)=>(a.here?0:a.tag?2:1)-(b.here?0:b.tag?2:1)),id=>RULES()[id]?gramRules(id):startGram(id));
   // Undertexter under ämnena
   app.querySelectorAll("[data-pick]").forEach(b=>{const t=GR().topics.find(x=>x.id===b.dataset.pick); const sm=b.querySelector("small");
     if(t&&t.sub&&sm&&!sm.textContent) sm.textContent=t.sub;});

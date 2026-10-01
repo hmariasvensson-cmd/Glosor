@@ -1,0 +1,365 @@
+[
+ {
+  "id": "style-001",
+  "topic": "style",
+  "rule": "style-lettre",
+  "q": "Je vous prie d'[agréer], Madame, Monsieur, l'expression de mes salutations distinguées.",
+  "alt": [
+   "agréé",
+   "agréez",
+   "agréable"
+  ],
+  "why": "Efter prier de kommer infinitiv: je vous prie d'agréer. Agréé är particip, agréez imperativ och agréable ett adjektiv.",
+  "sv": "Med vänliga hälsningar (ordagrant: Jag ber er, fru/herr, att ta emot uttrycket för mina utmärkta hälsningar)."
+ },
+ {
+  "id": "style-002",
+  "topic": "style",
+  "rule": "style-lettre",
+  "q": "[Veuillez] agréer, Madame, l'expression de mes sentiments respectueux.",
+  "alt": [
+   "Voulez",
+   "Veuillent",
+   "Vouliez"
+  ],
+  "why": "Veuillez är en mycket artig imperativ av vouloir (var vänlig och …), som används i fasta fraser. Voulez agréer går inte.",
+  "sv": "Med vördsamma hälsningar (ordagrant: Var vänlig och ta emot, fru, uttrycket för mina respektfulla känslor)."
+ },
+ {
+  "id": "style-003",
+  "topic": "style",
+  "rule": "style-lettre",
+  "q": "Je vous [remercie] par avance de l'attention que vous porterez à ma candidature.",
+  "alt": [
+   "remercies",
+   "remercier",
+   "remercié"
+  ],
+  "why": "Subjektet är je: je remercie. Je vous remercie par avance = tack på förhand, en vanlig avslutning.",
+  "sv": "Jag tackar på förhand för den uppmärksamhet ni ägnar min ansökan."
+ },
+ {
+  "id": "style-004",
+  "topic": "style",
+  "rule": "style-vous",
+  "q": "Dans l'attente de [votre] réponse, je vous prie d'agréer, Monsieur, mes salutations distinguées.",
+  "alt": [
+   "ta",
+   "vos",
+   "votres"
+  ],
+  "why": "Brevet säger vous, så det heter votre (en sak). Vos är plural, och ta hör till tu.",
+  "sv": "I väntan på ert svar ber jag er, herr …, att ta emot mina vänliga hälsningar."
+ },
+ {
+  "id": "style-005",
+  "topic": "style",
+  "rule": "style-vous",
+  "q": "Monsieur, je vous remercie pour [votre] message du 3 mars.",
+  "alt": [
+   "ton",
+   "vos",
+   "votres"
+  ],
+  "why": "Den man skriver till är vous: votre message. Ton blandar in tu, och vos är plural.",
+  "sv": "Tack för ert meddelande av den 3 mars."
+ },
+ {
+  "id": "style-006",
+  "topic": "style",
+  "rule": "style-vous",
+  "q": "Madame, j'ai bien reçu [vos] deux courriels et je vous en remercie.",
+  "alt": [
+   "votre",
+   "tes",
+   "vôtres"
+  ],
+  "why": "Två mejl är plural: vos. Votre är singular, tes hör till tu, och les vôtres är ett pronomen som står utan substantiv.",
+  "sv": "Jag har tagit emot era två mejl och tackar er för dem."
+ },
+ {
+  "id": "style-007",
+  "topic": "style",
+  "rule": "style-vous",
+  "q": "Comme vous me l'avez conseillé, j'ai contacté [votre] collègue du service des inscriptions.",
+  "alt": [
+   "ta",
+   "vos",
+   "ton"
+  ],
+  "why": "Vous genom hela meningen: votre collègue. Ta och ton blandar in tu, och vos är plural.",
+  "sv": "Som ni rådde mig har jag kontaktat er kollega på antagningskansliet."
+ },
+ {
+  "id": "style-008",
+  "topic": "style",
+  "rule": "style-cond",
+  "q": "[Pourriez-vous] m'indiquer les horaires d'ouverture du secrétariat ?",
+  "alt": [
+   "Pourrais-vous",
+   "Pouvriez-vous",
+   "Pourriez-tu"
+  ],
+  "acc": [
+   "Pouvez-vous"
+  ],
+  "why": "Conditionnel av pouvoir med vous: pourriez-vous. Pourrais hör till je/tu, och stammen är pourr-, inte pouvr-.",
+  "sv": "Skulle ni kunna tala om när kansliet har öppet?"
+ },
+ {
+  "id": "style-009",
+  "topic": "style",
+  "rule": "style-cond",
+  "q": "Je [souhaiterais] obtenir des informations sur les conditions d'admission.",
+  "alt": [
+   "souhaiterait",
+   "souhaiterions",
+   "souhaiteriez"
+  ],
+  "acc": [
+   "voudrais",
+   "aimerais"
+  ],
+  "why": "Conditionnel för en artig önskan, med je: je souhaiterais. -ait är il/elle, -ions nous och -iez vous.",
+  "sv": "Jag skulle vilja få information om antagningsvillkoren."
+ },
+ {
+  "id": "style-010",
+  "topic": "style",
+  "rule": "style-cond",
+  "q": "Nous [aimerions] savoir si le stage est rémunéré.",
+  "alt": [
+   "aimerait",
+   "aimeriez",
+   "aimerais"
+  ],
+  "acc": [
+   "voudrions"
+  ],
+  "why": "Nous + conditionnel: nous aimerions. Artigare än nous voulons.",
+  "sv": "Vi skulle vilja veta om praktiken är betald."
+ },
+ {
+  "id": "style-011",
+  "topic": "style",
+  "rule": "style-cond",
+  "q": "[Serait-il] possible de reporter l'entretien à la semaine prochaine ?",
+  "alt": [
+   "Serait-t-il",
+   "Serais-il",
+   "Seraient-il"
+  ],
+  "acc": [
+   "Est-il"
+  ],
+  "why": "Inversion: serait-il. Verbet slutar redan på -t, så inget extra -t- behövs (jfr a-t-il). Il kräver serait, inte serais eller seraient.",
+  "sv": "Skulle det vara möjligt att skjuta upp intervjun till nästa vecka?"
+ },
+ {
+  "id": "style-012",
+  "topic": "style",
+  "rule": "style-cond",
+  "q": "[Pouvez-vous] me confirmer la date de l'audition ?",
+  "alt": [
+   "Peux-vous",
+   "Pouvez-tu",
+   "Vous-pouvez"
+  ],
+  "acc": [
+   "Pourriez-vous"
+  ],
+  "why": "Inversion med vous: pouvez-vous, med bindestreck. Peux hör till je/tu, och i inversion står verbet först.",
+  "sv": "Kan ni bekräfta datumet för provspelningen?"
+ },
+ {
+  "id": "style-013",
+  "topic": "style",
+  "rule": "style-tour",
+  "q": "Je me permets de vous [écrire] afin d'obtenir des renseignements sur vos cours d'été.",
+  "alt": [
+   "écris",
+   "écrit",
+   "écrivant"
+  ],
+  "why": "Se permettre de + infinitiv: je me permets de vous écrire, en artig inledning.",
+  "sv": "Jag tar mig friheten att skriva till er för att få information om era sommarkurser."
+ },
+ {
+  "id": "style-014",
+  "topic": "style",
+  "rule": "style-tour",
+  "q": "Je vous serais [reconnaissant] de bien vouloir m'envoyer le formulaire.",
+  "alt": [
+   "reconnaissance",
+   "reconnu",
+   "reconnaître"
+  ],
+  "acc": [
+   "reconnaissante",
+   "obligé",
+   "obligée"
+  ],
+  "why": "Je vous serais reconnaissant(e) de … = jag vore tacksam om … Adjektivet följer den som skriver: reconnaissant för en man, reconnaissante för en kvinna.",
+  "sv": "Jag vore tacksam om ni ville skicka mig blanketten."
+ },
+ {
+  "id": "style-015",
+  "topic": "style",
+  "rule": "style-tour",
+  "q": "Je vous serais reconnaissant de bien [vouloir] me répondre avant la fin du mois.",
+  "alt": [
+   "voulu",
+   "veuillez",
+   "voulez"
+  ],
+  "why": "Bien vouloir + infinitiv (vara vänlig och …). Efter de står infinitiv: de bien vouloir.",
+  "sv": "Jag vore tacksam om ni ville svara mig före slutet av månaden."
+ },
+ {
+  "id": "style-016",
+  "topic": "style",
+  "rule": "style-tour",
+  "q": "Vous trouverez [ci-joint] mon curriculum vitae et une lettre de recommandation.",
+  "alt": [
+   "si-joint",
+   "ici-joint",
+   "ci-joignant"
+  ],
+  "acc": [
+   "ci-inclus"
+  ],
+  "why": "Ci-joint = bifogat. Det stavas med ci (här) och skrivs ihop med bindestreck.",
+  "sv": "Bifogat finner ni mitt CV och ett rekommendationsbrev."
+ },
+ {
+  "id": "style-017",
+  "topic": "style",
+  "rule": "style-tour",
+  "q": "Si vous avez des questions, n'hésitez pas à [me contacter].",
+  "alt": [
+   "contacter moi",
+   "me contactez",
+   "contactez-moi"
+  ],
+  "why": "Efter hésiter à kommer infinitiv, och pronomenet står före: à me contacter. Contactez-moi är imperativ och kan inte stå efter à.",
+  "sv": "Om ni har frågor, tveka inte att kontakta mig."
+ },
+ {
+  "id": "style-018",
+  "topic": "style",
+  "rule": "style-tour",
+  "q": "Je vous écris [au sujet de] votre annonce parue sur le site de l'université.",
+  "alt": [
+   "au sujet du",
+   "à sujet de",
+   "au sujet"
+  ],
+  "acc": [
+   "à propos de",
+   "concernant"
+  ],
+  "why": "Den fasta frasen är au sujet de (angående). Du = de + le och kan inte stå före votre.",
+  "sv": "Jag skriver till er angående er annons på universitetets webbplats."
+ },
+ {
+  "id": "style-019",
+  "topic": "style",
+  "rule": "style-tour",
+  "q": "[À la suite de] notre conversation téléphonique, je vous confirme ma participation au stage.",
+  "alt": [
+   "À la suite du",
+   "À suite de",
+   "À la suite"
+  ],
+  "acc": [
+   "Après"
+  ],
+  "why": "À la suite de = efter, med anledning av. Du = de + le och kan inte stå före notre. (Suite à är vanligt men anses mindre korrekt i formella brev.)",
+  "sv": "Efter vårt telefonsamtal bekräftar jag härmed mitt deltagande i praktiken."
+ },
+ {
+  "id": "style-020",
+  "topic": "style",
+  "rule": "style-reg",
+  "q": "Familier : « Je cherche un boulot pour l'été. » → Formel : « Je recherche un [emploi] pour l'été. »",
+  "alt": [
+   "boulot",
+   "job",
+   "taf"
+  ],
+  "acc": [
+   "travail"
+  ],
+  "why": "Un emploi är det formella ordet för jobb. Boulot, job och taf är vardagliga.",
+  "sv": "Jag söker ett arbete för sommaren."
+ },
+ {
+  "id": "style-021",
+  "topic": "style",
+  "rule": "style-reg",
+  "q": "Familier : « Les gosses adorent ce prof. » → Formel : « Les [enfants] adorent ce professeur. »",
+  "alt": [
+   "gosses",
+   "mômes",
+   "gamins"
+  ],
+  "why": "Les enfants är neutralt och formellt. Gosses, mômes och gamins är vardagliga.",
+  "sv": "Barnen älskar den här läraren."
+ },
+ {
+  "id": "style-022",
+  "topic": "style",
+  "rule": "style-reg",
+  "q": "Familier : « Il y a plein de monde. » → Formel : « Il y a [beaucoup de] monde. »",
+  "alt": [
+   "plein de",
+   "un max de",
+   "des tas de"
+  ],
+  "why": "Beaucoup de passar i all skrift. Plein de, un max de och des tas de är talspråk.",
+  "sv": "Det är mycket folk."
+ },
+ {
+  "id": "style-023",
+  "topic": "style",
+  "rule": "style-reg",
+  "q": "Familier : « On a bouffé au resto. » → Formel : « Nous avons [mangé] au restaurant. »",
+  "alt": [
+   "bouffé",
+   "becté",
+   "graillé"
+  ],
+  "acc": [
+   "déjeuné",
+   "dîné"
+  ],
+  "why": "Manger är det neutrala ordet. Bouffer, becter och grailler är slang.",
+  "sv": "Vi åt på restaurang."
+ },
+ {
+  "id": "style-024",
+  "topic": "style",
+  "rule": "style-reg",
+  "q": "Familier : « Ça coûte trop cher. » → Formel : « [Cela] coûte trop cher. »",
+  "alt": [
+   "Ça",
+   "Ç'a",
+   "Ce"
+  ],
+  "why": "I formell skrift skriver man cela i stället för ça. Ce kan inte stå ensamt som subjekt till coûter.",
+  "sv": "Det kostar för mycket."
+ },
+ {
+  "id": "style-025",
+  "topic": "style",
+  "rule": "style-reg",
+  "q": "Familier : « On vous attend à 9 heures. » → Formel : « [Nous] vous attendons à 9 heures. »",
+  "alt": [
+   "On",
+   "Ils",
+   "Vous"
+  ],
+  "why": "I formella brev skriver man nous i stället för on (vi). Verbet attendons visar att subjektet är nous.",
+  "sv": "Vi väntar på er klockan 9."
+ }
+]

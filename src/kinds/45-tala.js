@@ -22,7 +22,7 @@ function talkTopics(){
   if(L.goal) out.push({id:"me",grp:"me",title:"Presentera dig själv och din musik",lv:courseLevel(),
     task:"Berätta vem du är: namn, ålder, var du bor och vad du gör. Berätta sedan om din musik: vilket instrument du spelar eller om du sjunger, hur länge, vad du helst spelar, vem du ser upp till och varför du vill studera musik utomlands.",
     instr:"Så börjar ofta den muntliga delen av språkprovet, och så presenterar du dig vid en antagning. Säg det högt tills det går lätt."});
-  if(typeof hasExam==="function"&&hasExam()) EX().tasks.filter(t=>exKind(t)==="speak").forEach(t=>out.push({id:"x:"+t.id,grp:"exam",title:t.title,
+  if(hasExam()) EX().tasks.filter(t=>exKind(t)==="speak").forEach(t=>out.push({id:"x:"+t.id,grp:"exam",title:t.title,
     task:t.task||"",instr:t.instr||"",lv:examLevel(t),tl:true,sub:[exPart(t.part).sv,t.teil].filter(Boolean).join(", ")}));
   (c.prompts||[]).forEach(p=>out.push({id:"w:"+p.id,grp:"write",title:p.title,task:p.task||"",lv:cefrOf(p.level)||courseLevel(),sec:p.sec}));
   if(out.length<3) [["g:1","Min vardag","Berätta om en vanlig dag: när du går upp, vad du gör i skolan eller på jobbet, och vad du gör på kvällen."],
@@ -55,7 +55,7 @@ function openTalk(){
     <p class="plan">Välj ett ämne och tala om det <b>tre gånger</b>, i ${m} minuter (4/3/2-metoden). Varje gång säger du ungefär samma sak på kortare tid, så att det går allt lättare. Du dikterar med tangentbordets mikrofon, och appen räknar ord per minut. ${SAMPLE?"Efter varje runda kommenterar Claude det du sa.":""}</p>
     ${grp("exam",hasExam()?`Provets taluppgifter (${esc(EX().name)})`:"Provets taluppgifter")}${grp("write","Skrivuppgifternas teman")}${grp("gen","Ämnen")}
     <h3 class="label">Uttal och rytm</h3><div class="games"><button class="game" data-ex="shadow"><span><b>Skugga</b><small>Lyssna och säg meningen högt samtidigt, för uttal och rytm.</small></span><span class="go" aria-hidden="true">›</span></button></div>
-    </section><button class="quit" id="quit">Tillbaka</button>`;
+    </section>${realAudioPanel()}<button class="quit" id="quit">Tillbaka</button>`;
   app.querySelectorAll("[data-talk]").forEach(b=>b.onclick=()=>talkRound(b.dataset.talk,0));
   app.querySelectorAll("[data-chat]").forEach(b=>b.onclick=()=>talkChat(b.dataset.chat));
   app.querySelector('[data-ex="shadow"]').onclick=()=>KINDS.shadow.open();

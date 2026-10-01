@@ -58,7 +58,7 @@ function levelVocab(){
 }
 
 function levelGrammar(T){
-  if(typeof hasGrammar!=="function"||!hasGrammar()) return {key:"gram",name:"Grammatik",none:true,few:true,lv:null};
+  if(!hasGrammar()) return {key:"gram",name:"Grammatik",none:true,few:true,lv:null};
   const gr=GR(), bank=gramBank(), gi=S.gi||{}, gt=S.gt||{}, up=lvTop(L.level)||T;
   const G=up+(T>up?.5:0);   // kursens grammatik går mot provets nivå
   const by={};
@@ -85,7 +85,7 @@ function levelExam(T){
   const fb=Object.values(S.fb||{}).filter(f=>f&&typeof f==="object"&&lvNum(f.niva)!=null).sort((a,b)=>(b.d||0)-(a.d||0)).slice(0,5);
   if(fb.length){ const v=fb.map(f=>lvNum(f.niva)).sort((a,b)=>a-b), m=v.length%2?v[(v.length-1)/2]:(v[v.length/2-1]+v[v.length/2])/2;
     out.claude={n:fb.length,lv:m,last:String(fb[0].niva).slice(0,12)}; }
-  const hasEx=typeof hasExam==="function"&&hasExam();
+  const hasEx=hasExam();
   if(hasEx){
     const e=EX(), P=e.pass||60, st=S.exam&&typeof S.exam==="object"?S.exam:{}, tt=st.t||{}, sims=Array.isArray(st.sims)?st.sims:[];
     out.pass=P; out.examName=e.name;

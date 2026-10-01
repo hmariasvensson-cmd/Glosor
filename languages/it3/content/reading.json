@@ -49,6 +49,18 @@
     "sv": "Jag åkte en timme senare och kom fram till Neapel utan problem."
    },
    {
+    "fr": "Mia zia mi aspettava alla stazione con un cartello con il mio nome, come all'aeroporto.",
+    "sv": "Min moster väntade på mig på stationen med en skylt med mitt namn, som på flygplatsen."
+   },
+   {
+    "fr": "Le ho raccontato tutto e lei ha riso: «Benvenuta in Italia! Qui i treni sono spesso in ritardo, ma il tuo, per una volta, era puntuale».",
+    "sv": "Jag berättade allt för henne och hon skrattade: ”Välkommen till Italien! Här är tågen ofta försenade, men ditt var för en gångs skull i tid.”"
+   },
+   {
+    "fr": "Quella sera abbiamo mangiato una vera pizza napoletana, la migliore della mia vita.",
+    "sv": "Den kvällen åt vi en riktig napolitansk pizza, den bästa i mitt liv."
+   },
+   {
     "fr": "Da quel giorno, quando vedo un turista in difficoltà in stazione, mi fermo sempre ad aiutarlo.",
     "sv": "Sedan den dagen stannar jag alltid och hjälper när jag ser en turist i knipa på en station."
    }
@@ -125,6 +137,18 @@
     ],
     "a": 1,
     "why": "« quando vedo un turista in difficoltà in stazione, mi fermo sempre ad aiutarlo »."
+   },
+   {
+    "type": "tolkning",
+    "q": "Varför skrattade mostern?",
+    "opts": [
+     "Berättaren hade tagit fel tåg",
+     "Berättaren hade glömt väskan",
+     "Tåget som berättaren missade hade för en gångs skull gått i tid",
+     "Skylten hade fel namn"
+    ],
+    "a": 2,
+    "why": "« i treni sono spesso in ritardo, ma il tuo, per una volta, era puntuale »."
    }
   ],
   "gloss": {
@@ -232,6 +256,26 @@
     "t": "fermarsi",
     "sv": "stanna",
     "g": ""
+   },
+   "cartello": {
+    "t": "il cartello",
+    "sv": "skylt",
+    "g": "m"
+   },
+   "riso": {
+    "t": "ridere",
+    "sv": "skratta (ha riso = skrattade)",
+    "g": ""
+   },
+   "puntuale": {
+    "t": "puntuale",
+    "sv": "punktlig, i tid",
+    "g": ""
+   },
+   "ritardo": {
+    "t": "in ritardo",
+    "sv": "försenad",
+    "g": ""
    }
   }
  },
@@ -259,6 +303,18 @@
    {
     "fr": "Per fortuna i miei compagni sono gentilissimi. Con loro faccio i compiti e il sabato usciamo insieme.",
     "sv": "Som tur är är mina klasskamrater jättesnälla. Med dem gör jag läxorna och på lördagarna går vi ut tillsammans."
+   },
+   {
+    "fr": "Anche la famiglia che mi ospita è fantastica. Abito con i signori Rossi e i loro due figli: Pietro, che ha quattordici anni, e la piccola Anna.",
+    "sv": "Familjen jag bor hos är också fantastisk. Jag bor med familjen Rossi och deras två barn: Pietro, som är fjorton, och lilla Anna."
+   },
+   {
+    "fr": "La domenica pranziamo tutti insieme dai nonni e restiamo a tavola almeno tre ore!",
+    "sv": "På söndagarna äter vi lunch tillsammans hos farföräldrarna och sitter vid bordet minst tre timmar!"
+   },
+   {
+    "fr": "All'inizio non ero abituata a mangiare così tanto: primo, secondo, contorno, frutta e dolce. Adesso, però, non posso più farne a meno.",
+    "sv": "I början var jag inte van att äta så mycket: förrätt, huvudrätt, tillbehör, frukt och efterrätt. Men nu kan jag inte vara utan det."
    },
    {
     "fr": "La mia migliore amica qui si chiama Bianca. Per lei la Svezia è un paese magico, con la neve e l'aurora boreale. Le ho promesso che verrà a trovarmi a Natale.",
@@ -337,6 +393,18 @@
     ],
     "a": 0,
     "why": "Esagerare = överdriva. Hon är blygsam om sin italienska."
+   },
+   {
+    "type": "detalj",
+    "q": "Vad gör värdfamiljen på söndagarna?",
+    "opts": [
+     "Äter lunch hos farföräldrarna",
+     "Åker till havet",
+     "Går på konsert",
+     "Lagar mat åt grannarna"
+    ],
+    "a": 0,
+    "why": "« La domenica pranziamo tutti insieme dai nonni »."
    }
   ],
   "gloss": {
@@ -439,6 +507,31 @@
     "t": "il commento",
     "sv": "kommentar",
     "g": "m"
+   },
+   "ospita": {
+    "t": "ospitare",
+    "sv": "ha som gäst, ta emot",
+    "g": ""
+   },
+   "pranziamo": {
+    "t": "pranzare",
+    "sv": "äta lunch",
+    "g": ""
+   },
+   "abituata": {
+    "t": "abituato",
+    "sv": "van",
+    "g": ""
+   },
+   "contorno": {
+    "t": "il contorno",
+    "sv": "tillbehör (grönsaker till huvudrätten)",
+    "g": "m"
+   },
+   "farne": {
+    "t": "fare a meno di",
+    "sv": "klara sig utan (farne a meno = vara utan det)",
+    "g": ""
    }
   }
  },
@@ -488,8 +581,20 @@
     "sv": "Även skolans rektor berömde dem inför alla elever."
    },
    {
+    "fr": "«Sono orgogliosa di loro», ha detto. «A scuola parliamo spesso di rispetto e di onestà, ma loro hanno fatto di più: hanno dimostrato con i fatti cosa significano queste parole».",
+    "sv": "”Jag är stolt över dem”, sa hon. ”I skolan pratar vi ofta om respekt och ärlighet, men de har gjort mer: de har visat i handling vad de orden betyder.”"
+   },
+   {
     "fr": "Sui social la notizia è stata condivisa migliaia di volte. Si leggono commenti come: «Questi ragazzi ci danno speranza».",
     "sv": "På sociala medier har nyheten delats tusentals gånger. Man läser kommentarer som: «De här ungdomarna ger oss hopp»."
+   },
+   {
+    "fr": "I tre amici, però, restano modesti. «Abbiamo fatto solo quello che era giusto», dice Matteo. «Tutti dovrebbero fare lo stesso».",
+    "sv": "De tre vännerna är ändå blygsamma. ”Vi gjorde bara det som var rätt”, säger Matteo. ”Alla borde göra likadant.”"
+   },
+   {
+    "fr": "E il signore? Ha promesso di andare a vederli giocare a calcio sabato prossimo.",
+    "sv": "Och mannen? Han har lovat att gå och titta på dem när de spelar fotboll nästa lördag."
    }
   ],
   "questions": [
@@ -564,6 +669,18 @@
     ],
     "a": 0,
     "why": "Il portafoglio är maskulinum singular, därför riportato."
+   },
+   {
+    "type": "detalj",
+    "q": "Vad säger Matteo om det de gjorde?",
+    "opts": [
+     "Att de hoppas på en belöning",
+     "Att de först ville behålla pengarna",
+     "Att polisen hjälpte dem",
+     "Att de bara gjorde det som var rätt"
+    ],
+    "a": 3,
+    "why": "« Abbiamo fatto solo quello che era giusto »."
    }
   ],
   "gloss": {
@@ -681,6 +798,41 @@
     "t": "la speranza",
     "sv": "hopp",
     "g": "f"
+   },
+   "orgogliosa": {
+    "t": "orgoglioso",
+    "sv": "stolt",
+    "g": ""
+   },
+   "rispetto": {
+    "t": "il rispetto",
+    "sv": "respekt",
+    "g": "m"
+   },
+   "onestà": {
+    "t": "l'onestà",
+    "sv": "ärlighet",
+    "g": "f"
+   },
+   "dimostrato": {
+    "t": "dimostrare",
+    "sv": "visa, bevisa",
+    "g": ""
+   },
+   "fatti": {
+    "t": "il fatto",
+    "sv": "handling, faktum (con i fatti = i handling)",
+    "g": "m"
+   },
+   "modesti": {
+    "t": "modesto",
+    "sv": "blygsam",
+    "g": ""
+   },
+   "giusto": {
+    "t": "giusto",
+    "sv": "rätt, riktig",
+    "g": ""
    }
   }
  },
@@ -720,6 +872,18 @@
    {
     "fr": "Adesso, dopo tre mesi, riesco a correre cinque chilometri senza fermarmi, e dormo molto meglio.",
     "sv": "Nu, efter tre månader, klarar jag av att springa fem kilometer utan att stanna, och jag sover mycket bättre."
+   },
+   {
+    "fr": "Ho cambiato anche altre abitudini: la sera vado a letto prima, bevo più acqua e mangio meno dolci.",
+    "sv": "Jag har ändrat andra vanor också: på kvällen går jag och lägger mig tidigare, jag dricker mer vatten och äter mindre sötsaker."
+   },
+   {
+    "fr": "Mia madre non ci crede. «Chi sei? Dov'è mia figlia?», mi chiede ridendo.",
+    "sv": "Min mamma tror inte att det är sant. ”Vem är du? Var är min dotter?” frågar hon och skrattar."
+   },
+   {
+    "fr": "Una volta alla settimana corro con un gruppo del quartiere. Siamo di tutte le età: c'è anche un signore di settant'anni che corre più veloce di me!",
+    "sv": "En gång i veckan springer jag med en grupp i stadsdelen. Vi är i alla åldrar: det finns till och med en sjuttioårig man som springer snabbare än jag!"
    },
    {
     "fr": "A maggio parteciperò alla mia prima gara, una corsa di beneficenza nel parco. Perché non la fai anche tu? Potremmo allenarci insieme online, con un'app!",
@@ -794,6 +958,18 @@
     ],
     "a": 0,
     "why": "« Perché non la fai anche tu? Potremmo allenarci insieme online »."
+   },
+   {
+    "type": "detalj",
+    "q": "Vem i löpargruppen överraskar Sofia?",
+    "opts": [
+     "En tjej som har sprungit maraton",
+     "En sjuttioårig man som springer snabbare än hon",
+     "Hennes mamma",
+     "Hennes gamla idrottslärare"
+    ],
+    "a": 1,
+    "why": "« c'è anche un signore di settant'anni che corre più veloce di me »."
    }
   ],
   "gloss": {
@@ -906,6 +1082,31 @@
     "t": "fermarsi",
     "sv": "stanna, sluta",
     "g": ""
+   },
+   "abitudini": {
+    "t": "l'abitudine",
+    "sv": "vana",
+    "g": "f"
+   },
+   "dolci": {
+    "t": "il dolce",
+    "sv": "sötsak, efterrätt",
+    "g": "m"
+   },
+   "ridendo": {
+    "t": "ridere",
+    "sv": "skratta (ridendo = skrattande)",
+    "g": ""
+   },
+   "quartiere": {
+    "t": "il quartiere",
+    "sv": "stadsdel, kvarter",
+    "g": "m"
+   },
+   "veloce": {
+    "t": "veloce",
+    "sv": "snabb",
+    "g": ""
    }
   }
  },
@@ -941,6 +1142,18 @@
    {
     "fr": "Anche i turisti sembrano contenti. «Qui il mare è pulitissimo, e si vede che ognuno fa la sua parte», dice una signora di Torino.",
     "sv": "Även turisterna verkar nöjda. «Här är havet jätterent, och man ser att var och en gör sin del», säger en kvinna från Turin."
+   },
+   {
+    "fr": "Non tutti, però, sono convinti. Un pescatore del paese spiega che gran parte della plastica arriva dal mare, portata dalle onde.",
+    "sv": "Alla är dock inte övertygade. En fiskare i byn förklarar att en stor del av plasten kommer från havet, buren av vågorna."
+   },
+   {
+    "fr": "«Possiamo pulire le spiagge ogni giorno, ma se il problema non si risolve in tutto il Mediterraneo, la plastica tornerà sempre».",
+    "sv": "”Vi kan städa stränderna varje dag, men om problemet inte löses i hela Medelhavet kommer plasten alltid tillbaka.”"
+   },
+   {
+    "fr": "Gli studenti hanno già una risposta: a settembre scriveranno alle scuole di altri paesi della costa per organizzare una grande giornata di pulizia tutti insieme.",
+    "sv": "Eleverna har redan ett svar: i september ska de skriva till skolor i andra orter längs kusten för att ordna en stor städdag allihop tillsammans."
    },
    {
     "fr": "Il sindaco ha annunciato che l'anno prossimo il comune metterà dei distributori d'acqua gratuiti sul lungomare, così nessuno dovrà comprare bottiglie.",
@@ -1011,6 +1224,18 @@
     ],
     "a": 0,
     "why": "Ognuno = var och en. Alla hjälper till."
+   },
+   {
+    "type": "detalj",
+    "q": "Vad menar fiskaren?",
+    "opts": [
+     "Att plasten mest kommer från turisterna",
+     "Att stränderna redan är rena",
+     "Att problemet måste lösas i hela Medelhavet",
+     "Att förbudet är för strängt"
+    ],
+    "a": 2,
+    "why": "« se il problema non si risolve in tutto il Mediterraneo, la plastica tornerà sempre »."
    }
   ],
   "gloss": {
@@ -1118,6 +1343,36 @@
     "t": "qualche",
     "sv": "några, någon",
     "g": ""
+   },
+   "convinti": {
+    "t": "convinto",
+    "sv": "övertygad",
+    "g": ""
+   },
+   "pescatore": {
+    "t": "il pescatore",
+    "sv": "fiskare",
+    "g": "m"
+   },
+   "gran": {
+    "t": "gran parte",
+    "sv": "en stor del",
+    "g": ""
+   },
+   "onde": {
+    "t": "l'onda",
+    "sv": "våg",
+    "g": "f"
+   },
+   "risolve": {
+    "t": "risolvere",
+    "sv": "lösa",
+    "g": ""
+   },
+   "costa": {
+    "t": "la costa",
+    "sv": "kust",
+    "g": "f"
    }
   }
  },
@@ -1149,6 +1404,10 @@
    {
     "fr": "LUNA99: Giulia, un consiglio: chiedi ai tuoi genitori se potrai andare in città in treno ogni tanto. E cerca qualche attività nel paese, magari una squadra o un coro.",
     "sv": "LUNA99: Giulia, ett råd: fråga dina föräldrar om du kan åka in till stan med tåg ibland. Och leta efter någon aktivitet i byn, kanske ett lag eller en kör."
+   },
+   {
+    "fr": "SARA_RM: Io vivo a Roma, ma i miei nonni abitano in un paesino in Umbria e ogni estate passo un mese da loro. Le prime due settimane mi annoio, poi scopro sempre qualcosa di nuovo: la festa del paese, i tramonti dalla collina, le serate in piazza con i ragazzi del posto. Forse il segreto è avere un po' di pazienza.",
+    "sv": "SARA_RM: Jag bor i Rom, men mina morföräldrar bor i en liten by i Umbrien och varje sommar är jag en månad hos dem. De första två veckorna har jag tråkigt, sedan upptäcker jag alltid något nytt: byfesten, solnedgångarna från kullen, kvällarna på torget med ungdomarna på orten. Hemligheten kanske är att ha lite tålamod."
    },
    {
     "fr": "GIULIA_17: Grazie a tutti, mi avete aiutato molto. Forse non sarà così terribile come pensavo!",
@@ -1227,6 +1486,18 @@
     ],
     "a": 0,
     "why": "« Forse non sarà così terribile come pensavo! »"
+   },
+   {
+    "type": "tolkning",
+    "q": "Vilket råd ger Sara indirekt till Giulia?",
+    "opts": [
+     "Att flytta tillbaka till stan så fort som möjligt",
+     "Att ha tålamod, för man upptäcker nya saker efter ett tag",
+     "Att stanna inne och studera",
+     "Att bara åka till byn på sommaren"
+    ],
+    "a": 1,
+    "why": "« Forse il segreto è avere un po' di pazienza » – efter två veckor upptäcker hon alltid något nytt."
    }
   ],
   "gloss": {
@@ -1334,6 +1605,46 @@
     "t": "terribile",
     "sv": "hemsk",
     "g": ""
+   },
+   "annoio": {
+    "t": "annoiarsi",
+    "sv": "ha tråkigt",
+    "g": ""
+   },
+   "scopro": {
+    "t": "scoprire",
+    "sv": "upptäcka",
+    "g": ""
+   },
+   "tramonti": {
+    "t": "il tramonto",
+    "sv": "solnedgång",
+    "g": "m"
+   },
+   "collina": {
+    "t": "la collina",
+    "sv": "kulle",
+    "g": "f"
+   },
+   "serate": {
+    "t": "la serata",
+    "sv": "kväll (som man tillbringar)",
+    "g": "f"
+   },
+   "posto": {
+    "t": "del posto",
+    "sv": "från orten, lokal",
+    "g": ""
+   },
+   "segreto": {
+    "t": "il segreto",
+    "sv": "hemlighet",
+    "g": "m"
+   },
+   "pazienza": {
+    "t": "la pazienza",
+    "sv": "tålamod",
+    "g": "f"
    }
   }
  },
@@ -1369,6 +1680,14 @@
    {
     "fr": "Dopo sono arrivate le opere di cui tutti conoscono almeno una melodia: Rigoletto, La traviata, Aida.",
     "sv": "Sedan kom operorna som alla känner till åtminstone en melodi ur: Rigoletto, La traviata, Aida."
+   },
+   {
+    "fr": "Verdi è importante anche per la storia d'Italia. Negli anni del Risorgimento, quando gli italiani lottavano per l'unità del paese, sui muri si leggeva spesso «Viva VERDI».",
+    "sv": "Verdi är viktig också för Italiens historia. Under Risorgimento, när italienarna kämpade för landets enande, kunde man ofta läsa ”Viva VERDI” på väggarna."
+   },
+   {
+    "fr": "Si racconta che non era solo un omaggio al compositore: le lettere del suo nome significavano anche «Viva Vittorio Emanuele Re D'Italia».",
+    "sv": "Det berättas att det inte bara var en hyllning till kompositören: bokstäverna i hans namn betydde också ”Leve Viktor Emanuel, Italiens kung”."
    },
    {
     "fr": "Da vecchio Verdi ha fatto costruire a Milano una casa di riposo per musicisti anziani e poveri, che esiste ancora oggi.",
@@ -1455,6 +1774,18 @@
     ],
     "a": 0,
     "why": "Di cui = ur vilka, som … ur. Cui används efter preposition."
+   },
+   {
+    "type": "detalj",
+    "q": "Vad betydde « Viva VERDI » också, enligt berättelsen?",
+    "opts": [
+     "Leve operan",
+     "Leve Viktor Emanuel, Italiens kung",
+     "Leve Milano",
+     "Leve konservatoriet"
+    ],
+    "a": 1,
+    "why": "« le lettere del suo nome significavano anche «Viva Vittorio Emanuele Re D'Italia» »."
    }
   ],
   "gloss": {
@@ -1567,6 +1898,31 @@
     "t": "il nome",
     "sv": "namn",
     "g": "m"
+   },
+   "lottavano": {
+    "t": "lottare",
+    "sv": "kämpa",
+    "g": ""
+   },
+   "unità": {
+    "t": "l'unità",
+    "sv": "enhet, enande",
+    "g": "f"
+   },
+   "muri": {
+    "t": "il muro",
+    "sv": "mur, vägg",
+    "g": "m"
+   },
+   "omaggio": {
+    "t": "l'omaggio",
+    "sv": "hyllning",
+    "g": "m"
+   },
+   "re": {
+    "t": "il re",
+    "sv": "kung",
+    "g": "m"
    }
   }
  },
@@ -1606,6 +1962,18 @@
    {
     "fr": "Mentre leggevo, la nonna aveva gli occhi lucidi. Il nonno è morto dieci anni fa, ma lei tiene ancora quelle lettere come un tesoro.",
     "sv": "Medan jag läste hade mormor tårar i ögonen. Morfar dog för tio år sedan, men hon vårdar fortfarande de där breven som en skatt."
+   },
+   {
+    "fr": "La nonna mi ha raccontato anche la fine della storia. Nel 1968 il nonno è tornato con i soldi che aveva risparmiato, e un anno dopo si sono sposati nella chiesa del paese.",
+    "sv": "Mormor berättade också slutet på historien. År 1968 kom morfar tillbaka med pengarna han hade sparat, och ett år senare gifte de sig i byns kyrka."
+   },
+   {
+    "fr": "Con quei soldi hanno costruito la casa dove lei abita ancora oggi.",
+    "sv": "Med de pengarna byggde de huset där hon fortfarande bor i dag."
+   },
+   {
+    "fr": "«Ogni mattone di questa casa è una lettera», mi ha detto. E io ho capito che non parlava solo di muri.",
+    "sv": "”Varje tegelsten i det här huset är ett brev”, sa hon till mig. Och jag förstod att hon inte bara pratade om väggar."
    },
    {
     "fr": "Quella sera ho pensato ai messaggi che mando ogni giorno. Li cancello dopo una settimana. Chissà se qualcuno, tra cinquant'anni, leggerà le mie parole d'amore.",
@@ -1684,6 +2052,18 @@
     ],
     "a": 0,
     "why": "Ne = av dem (le lettere). Participet böjs efter lettera: letta."
+   },
+   {
+    "type": "detalj",
+    "q": "Vad gjorde morfar och mormor med pengarna han hade sparat?",
+    "opts": [
+     "Köpte en bil",
+     "Reste till Tyskland",
+     "Byggde huset där mormor fortfarande bor",
+     "Öppnade en restaurang"
+    ],
+    "a": 2,
+    "why": "« Con quei soldi hanno costruito la casa dove lei abita ancora oggi »."
    }
   ],
   "gloss": {
@@ -1780,6 +2160,31 @@
    "amore": {
     "t": "l'amore",
     "sv": "kärlek",
+    "g": "m"
+   },
+   "risparmiato": {
+    "t": "risparmiare",
+    "sv": "spara (pengar)",
+    "g": ""
+   },
+   "sposati": {
+    "t": "sposarsi",
+    "sv": "gifta sig",
+    "g": ""
+   },
+   "costruito": {
+    "t": "costruire",
+    "sv": "bygga",
+    "g": ""
+   },
+   "mattone": {
+    "t": "il mattone",
+    "sv": "tegelsten",
+    "g": "m"
+   },
+   "muri": {
+    "t": "il muro",
+    "sv": "mur, vägg",
     "g": "m"
    }
   }

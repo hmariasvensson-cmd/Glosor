@@ -36,8 +36,18 @@
    },
    {
     "who": "A",
-    "fr": "Benissimo. Le devo dire che il periodo di prova dura tre mesi e che all'inizio lo stipendio non è altissimo. È un problema per lei?",
-    "sv": "Utmärkt. Jag måste säga att provanställningen är tre månader och att lönen i början inte är särskilt hög. Är det ett problem för er?"
+    "fr": "E come si vede tra cinque anni?",
+    "sv": "Och var ser ni er själv om fem år?"
+   },
+   {
+    "who": "B",
+    "fr": "Mi piacerebbe coordinare un piccolo gruppo e seguire i progetti con i clienti scandinavi. Per questo vorrei anche fare un corso di gestione dei progetti, se l'azienda lo permette.",
+    "sv": "Jag skulle vilja leda en liten grupp och sköta projekten med de skandinaviska kunderna. Därför skulle jag också vilja gå en kurs i projektledning, om företaget tillåter det."
+   },
+   {
+    "who": "A",
+    "fr": "Benissimo. Da noi la formazione è molto importante: ogni dipendente ha diritto a quaranta ore di corsi pagati all'anno. Le devo dire però che il periodo di prova dura tre mesi e che all'inizio lo stipendio non è altissimo. È un problema per lei?",
+    "sv": "Utmärkt. Hos oss är fortbildning mycket viktigt: varje anställd har rätt till fyrtio timmars betalda kurser om året. Men jag måste säga att provanställningen är tre månader och att lönen i början inte är särskilt hög. Är det ett problem för er?"
    },
    {
     "who": "B",
@@ -137,6 +147,18 @@
     ],
     "a": 1,
     "why": "«le daremo una risposta entro venerdì»."
+   },
+   {
+    "type": "detalj",
+    "q": "Vad har varje anställd rätt till?",
+    "opts": [
+     "En extra semestervecka",
+     "Fyrtio timmars betalda kurser om året",
+     "Distansarbete hela veckan",
+     "En högre lön efter provtiden"
+    ],
+    "a": 1,
+    "why": "« ogni dipendente ha diritto a quaranta ore di corsi pagati all'anno »."
    }
   ],
   "gloss": {
@@ -169,6 +191,31 @@
     "t": "lo stipendio",
     "sv": "lön",
     "g": "m"
+   },
+   "coordinare": {
+    "t": "coordinare",
+    "sv": "samordna, leda",
+    "g": ""
+   },
+   "gestione": {
+    "t": "la gestione",
+    "sv": "ledning, hantering",
+    "g": "f"
+   },
+   "formazione": {
+    "t": "la formazione",
+    "sv": "fortbildning, utbildning",
+    "g": "f"
+   },
+   "dipendente": {
+    "t": "il/la dipendente",
+    "sv": "anställd",
+    "g": ""
+   },
+   "diritto": {
+    "t": "avere diritto a",
+    "sv": "ha rätt till",
+    "g": ""
    }
   }
  },
@@ -206,6 +253,16 @@
     "who": "B",
     "fr": "No, per fortuna. Posso frequentare il conservatorio di pomeriggio, a patto che i miei voti al liceo restino buoni. Sarà faticoso, lo so.",
     "sv": "Nej, som tur är. Jag kan gå på konservatoriet på eftermiddagarna, förutsatt att mina betyg på gymnasiet förblir bra. Det blir slitigt, jag vet."
+   },
+   {
+    "who": "A",
+    "fr": "E come fai a studiare il violoncello con tutti i compiti del liceo?",
+    "sv": "Och hur hinner du öva cello med alla läxor från gymnasiet?"
+   },
+   {
+    "who": "B",
+    "fr": "Mi organizzo. Mi alzo alle sei e suono un'ora prima di andare a scuola. Per fortuna i vicini non si sono mai lamentati! Il pomeriggio faccio i compiti in treno, mentre vado al conservatorio.",
+    "sv": "Jag planerar. Jag går upp klockan sex och spelar en timme innan jag går till skolan. Som tur är har grannarna aldrig klagat! På eftermiddagen gör jag läxorna på tåget, på väg till konservatoriet."
    },
    {
     "who": "A",
@@ -310,6 +367,18 @@
     ],
     "a": 1,
     "why": "Giulia ger honom ett förmanande råd, och han svarar skämtsamt."
+   },
+   {
+    "type": "detalj",
+    "q": "När övar Matteo på cellon?",
+    "opts": [
+     "På tåget till konservatoriet",
+     "Sent på kvällen",
+     "En timme på morgonen före skolan",
+     "Bara på helgerna"
+    ],
+    "a": 2,
+    "why": "« Mi alzo alle sei e suono un'ora prima di andare a scuola » – läxorna gör han på tåget."
    }
   ],
   "gloss": {
@@ -347,6 +416,16 @@
     "t": "l'ISEE",
     "sv": "intyg om familjens ekonomi",
     "g": "m"
+   },
+   "organizzo": {
+    "t": "organizzarsi",
+    "sv": "planera sin tid, organisera sig",
+    "g": ""
+   },
+   "lamentati": {
+    "t": "lamentarsi",
+    "sv": "klaga",
+    "g": ""
    }
   }
  },
@@ -384,6 +463,16 @@
     "who": "B",
     "fr": "Poco, circa cinquanta euro. È stato finanziato dall'Unione Europea, perciò i piccoli produttori lo possono avere gratis per il primo anno.",
     "sv": "Lite, ungefär femtio euro. Den har finansierats av EU, så de små producenterna kan få den gratis första året."
+   },
+   {
+    "who": "A",
+    "fr": "E gli agricoltori come hanno reagito?",
+    "sv": "Och hur reagerade bönderna?"
+   },
+   {
+    "who": "B",
+    "fr": "All'inizio erano scettici, soprattutto i più anziani, che da sempre decidono a occhio quando irrigare. Ma quando hanno visto che la bolletta dell'acqua era più bassa, molti hanno cambiato idea.",
+    "sv": "I början var de skeptiska, särskilt de äldre, som alltid har bestämt på känn när de ska vattna. Men när de såg att vattenräkningen blev lägre ändrade många sig."
    },
    {
     "who": "A",
@@ -478,6 +567,18 @@
     ],
     "a": 1,
     "why": "«credo che anche qui si possa fare buona ricerca»."
+   },
+   {
+    "type": "detalj",
+    "q": "Varför ändrade många av de äldre bönderna åsikt?",
+    "opts": [
+     "Vattenräkningen blev lägre",
+     "Sensorn var gratis för alltid",
+     "Deras barn övertalade dem",
+     "Det kom en ny lag"
+    ],
+    "a": 0,
+    "why": "« quando hanno visto che la bolletta dell'acqua era più bassa, molti hanno cambiato idea »."
    }
   ],
   "gloss": {
@@ -510,6 +611,31 @@
     "t": "la connessione",
     "sv": "uppkoppling",
     "g": "f"
+   },
+   "reagito": {
+    "t": "reagire",
+    "sv": "reagera",
+    "g": ""
+   },
+   "scettici": {
+    "t": "scettico",
+    "sv": "skeptisk",
+    "g": ""
+   },
+   "occhio": {
+    "t": "a occhio",
+    "sv": "på känn, efter ögonmått",
+    "g": ""
+   },
+   "bolletta": {
+    "t": "la bolletta",
+    "sv": "räkning (för el, vatten, gas)",
+    "g": "f"
+   },
+   "agricoltori": {
+    "t": "l'agricoltore",
+    "sv": "bonde, jordbrukare",
+    "g": "m"
    }
   }
  },
@@ -545,8 +671,18 @@
    },
    {
     "who": "B",
-    "fr": "Ecco, forse il problema è proprio questo. Se bevessi meno caffè, dormiresti meglio. Ti consiglio di non berne dopo le due del pomeriggio.",
-    "sv": "Där kanske problemet ligger. Om du drack mindre kaffe skulle du sova bättre. Jag råder dig att inte dricka något efter två på eftermiddagen."
+    "fr": "Ecco, forse il problema è proprio questo. Se bevessi meno caffè, dormiresti meglio. Ti consiglio di non berne dopo le due del pomeriggio. E come mangi in questo periodo? Fai colazione?",
+    "sv": "Där kanske problemet ligger. Om du drack mindre kaffe skulle du sova bättre. Jag råder dig att inte dricka något efter två på eftermiddagen. Och hur äter du nu för tiden? Äter du frukost?"
+   },
+   {
+    "who": "A",
+    "fr": "Non sempre. La mattina non ho fame, quindi esco con un caffè e basta. A pranzo mangio un panino davanti al computer, e la sera ho una fame da lupi.",
+    "sv": "Inte alltid. På morgonen är jag inte hungrig, så jag går hemifrån med bara en kaffe. Till lunch äter jag en smörgås framför datorn, och på kvällen är jag hungrig som en varg."
+   },
+   {
+    "who": "B",
+    "fr": "Anche questo conta. Una colazione vera e una cena leggera ti aiuterebbero a dormire meglio.",
+    "sv": "Det spelar också roll. En riktig frukost och en lätt middag skulle hjälpa dig att sova bättre."
    },
    {
     "who": "A",
@@ -646,6 +782,18 @@
     ],
     "a": 1,
     "why": "«lo stress dell'esame è normale … c'è lo sportello d'ascolto»."
+   },
+   {
+    "type": "detalj",
+    "q": "Vad äter Luca till frukost?",
+    "opts": [
+     "En smörgås framför datorn",
+     "Ingenting alls",
+     "Bara en kaffe",
+     "En stor frukost med familjen"
+    ],
+    "a": 2,
+    "why": "« La mattina non ho fame, quindi esco con un caffè e basta »."
    }
   ],
   "gloss": {
@@ -677,6 +825,21 @@
    "ansioso": {
     "t": "ansioso",
     "sv": "orolig, ängslig",
+    "g": ""
+   },
+   "lupi": {
+    "t": "avere una fame da lupi",
+    "sv": "vara hungrig som en varg",
+    "g": ""
+   },
+   "conta": {
+    "t": "contare",
+    "sv": "spela roll, räknas",
+    "g": ""
+   },
+   "leggera": {
+    "t": "leggero",
+    "sv": "lätt",
     "g": ""
    }
   }
@@ -725,6 +888,16 @@
     "who": "B",
     "fr": "Noi lo raggiungemmo nel 1956. Io avevo sei anni e non parlavo una parola di francese. A scuola mi sentivo spaesata, ma i bambini imparano in fretta.",
     "sv": "Vi flyttade efter honom 1956. Jag var sex år och kunde inte ett ord franska. I skolan kände jag mig vilsen, men barn lär sig snabbt."
+   },
+   {
+    "who": "A",
+    "fr": "E dove abitavate?",
+    "sv": "Och var bodde ni?"
+   },
+   {
+    "who": "B",
+    "fr": "In una baracca vicino alla miniera, con altre famiglie italiane. D'inverno faceva un freddo terribile. Ma la domenica le donne cucinavano insieme e gli uomini giocavano a carte: sembrava un piccolo paese siciliano.",
+    "sv": "I en barack nära gruvan, med andra italienska familjer. På vintern var det fruktansvärt kallt. Men på söndagarna lagade kvinnorna mat tillsammans och männen spelade kort: det var som en liten siciliansk by."
    },
    {
     "who": "A",
@@ -819,6 +992,18 @@
     ],
     "a": 1,
     "why": "«Vorrei portarla a scuola per il progetto»."
+   },
+   {
+    "type": "tolkning",
+    "q": "Vad menar mormor med « sembrava un piccolo paese siciliano »?",
+    "opts": [
+     "Att barackerna låg på Sicilien",
+     "Att de italienska familjerna levde tillsammans som hemma",
+     "Att belgarna talade siciliansk dialekt",
+     "Att det var lika varmt som på Sicilien"
+    ],
+    "a": 1,
+    "why": "På söndagarna lagade kvinnorna mat ihop och männen spelade kort, som i en by hemma."
    }
   ],
   "gloss": {
@@ -861,6 +1046,26 @@
     "t": "la polvere",
     "sv": "damm",
     "g": "f"
+   },
+   "baracca": {
+    "t": "la baracca",
+    "sv": "barack, skjul",
+    "g": "f"
+   },
+   "miniera": {
+    "t": "la miniera",
+    "sv": "gruva",
+    "g": "f"
+   },
+   "carte": {
+    "t": "giocare a carte",
+    "sv": "spela kort",
+    "g": ""
+   },
+   "ammalò": {
+    "t": "ammalarsi",
+    "sv": "bli sjuk (passato remoto)",
+    "g": ""
    }
   }
  },
@@ -898,6 +1103,16 @@
     "who": "B",
     "fr": "Questo è vero, e il tema della maschera funziona anche oggi, con i social. Tutti mostriamo una faccia diversa online.",
     "sv": "Det stämmer, och temat med masken fungerar även i dag, med sociala medier. Vi visar alla ett annat ansikte på nätet."
+   },
+   {
+    "who": "A",
+    "fr": "E la musica? A me è piaciuta moltissimo, soprattutto il tema che torna alla fine.",
+    "sv": "Och musiken? Jag tyckte jättemycket om den, särskilt temat som kommer tillbaka på slutet."
+   },
+   {
+    "who": "B",
+    "fr": "Sì, la colonna sonora è riuscita. È di un giovane compositore siciliano, mi pare. L'ho già cercata su internet per riascoltarla.",
+    "sv": "Ja, filmmusiken är lyckad. Den är skriven av en ung siciliansk kompositör, tror jag. Jag har redan letat upp den på nätet för att lyssna på den igen."
    },
    {
     "who": "A",
@@ -987,6 +1202,18 @@
     ],
     "a": 0,
     "why": "«se non avessi letto il libro, forse gli darei otto»."
+   },
+   {
+    "type": "detalj",
+    "q": "Vad är båda vännerna överens om?",
+    "opts": [
+     "Att filmmusiken är lyckad",
+     "Att andra halvan är för lång",
+     "Att filmen borde utspela sig på Sicilien",
+     "Att boken är tråkig"
+    ],
+    "a": 0,
+    "why": "A gillar temat och B säger « la colonna sonora è riuscita »."
    }
   ],
   "gloss": {
@@ -1024,6 +1251,26 @@
     "t": "la maschera",
     "sv": "mask",
     "g": "f"
+   },
+   "colonna": {
+    "t": "la colonna sonora",
+    "sv": "filmmusik, soundtrack",
+    "g": "f"
+   },
+   "riuscita": {
+    "t": "riuscito",
+    "sv": "lyckad",
+    "g": ""
+   },
+   "riascoltarla": {
+    "t": "riascoltare",
+    "sv": "lyssna på igen",
+    "g": ""
+   },
+   "coraggiosa": {
+    "t": "coraggioso",
+    "sv": "modig",
+    "g": ""
    }
   }
  },
@@ -1051,6 +1298,16 @@
     "who": "B",
     "fr": "Allora è fortunata: stasera canta un soprano la cui voce è famosa in tutto il mondo. Io vengo ogni estate da quarant'anni.",
     "sv": "Då har ni tur: i kväll sjunger en sopran vars röst är känd i hela världen. Jag har kommit hit varje sommar i fyrtio år."
+   },
+   {
+    "who": "A",
+    "fr": "E lei è appassionato di opera da sempre?",
+    "sv": "Och har ni alltid varit operaälskare?"
+   },
+   {
+    "who": "B",
+    "fr": "Da bambino. Mio padre faceva il falegname qui a Verona e lavorava per l'Arena: costruiva le scenografie. Mi portava con sé alle prove, e io mi nascondevo dietro le colonne di cartone per ascoltare i cantanti.",
+    "sv": "Sedan jag var liten. Min pappa var snickare här i Verona och arbetade åt Arenan: han byggde kulisserna. Han tog med mig på repetitionerna, och jag gömde mig bakom papppelarna för att lyssna på sångarna."
    },
    {
     "who": "A",
@@ -1084,8 +1341,13 @@
    },
    {
     "who": "A",
-    "fr": "Molto gentile, grazie!",
-    "sv": "Mycket vänligt, tack!"
+    "fr": "Molto gentile, grazie! Studio al conservatorio di Stoccolma, ma quest'estate faccio un corso di perfezionamento qui a Verona. Il mio sogno è cantare un giorno su questo palco.",
+    "sv": "Mycket vänligt, tack! Jag studerar vid musikhögskolan i Stockholm, men i sommar går jag en mästarkurs här i Verona. Min dröm är att en dag sjunga på den här scenen."
+   },
+   {
+    "who": "B",
+    "fr": "Chissà, forse tra qualche anno sarò qui ad applaudirla!",
+    "sv": "Vem vet, om några år kanske jag sitter här och applåderar er!"
    }
   ],
   "questions": [
@@ -1160,6 +1422,18 @@
     ],
     "a": 2,
     "why": "«Due, di venti minuti»."
+   },
+   {
+    "type": "detalj",
+    "q": "Vad arbetade B:s pappa med?",
+    "opts": [
+     "Han sjöng i kören",
+     "Han sålde biljetter",
+     "Han dirigerade orkestern",
+     "Han byggde kulisser för Arenan"
+    ],
+    "a": 3,
+    "why": "« faceva il falegname … costruiva le scenografie »."
    }
   ],
   "gloss": {
@@ -1192,6 +1466,51 @@
     "t": "l'intervallo",
     "sv": "paus",
     "g": "m"
+   },
+   "falegname": {
+    "t": "il falegname",
+    "sv": "snickare",
+    "g": "m"
+   },
+   "scenografie": {
+    "t": "la scenografia",
+    "sv": "scenografi, kulisser",
+    "g": "f"
+   },
+   "prove": {
+    "t": "la prova",
+    "sv": "repetition (teater, opera)",
+    "g": "f"
+   },
+   "nascondevo": {
+    "t": "nascondersi",
+    "sv": "gömma sig",
+    "g": ""
+   },
+   "colonne": {
+    "t": "la colonna",
+    "sv": "pelare",
+    "g": "f"
+   },
+   "cartone": {
+    "t": "il cartone",
+    "sv": "kartong, papp",
+    "g": "m"
+   },
+   "perfezionamento": {
+    "t": "il corso di perfezionamento",
+    "sv": "mästarkurs, fördjupningskurs",
+    "g": "m"
+   },
+   "palco": {
+    "t": "il palco",
+    "sv": "scen",
+    "g": "m"
+   },
+   "applaudirla": {
+    "t": "applaudire",
+    "sv": "applådera",
+    "g": ""
    }
   }
  },
@@ -1242,8 +1561,18 @@
    },
    {
     "who": "A",
-    "fr": "Ha ragione. Mi dia un chilo di mele e un vasetto di marmellata.",
-    "sv": "Ni har rätt. Ge mig ett kilo äpplen och en burk marmelad."
+    "fr": "E come fate a vendere tutto prima che vada a male?",
+    "sv": "Och hur gör ni för att sälja allt innan det blir dåligt?"
+   },
+   {
+    "who": "B",
+    "fr": "Quello che non vendiamo il sabato lo portiamo alla mensa della parrocchia. Prima lo buttavamo, ora non sprechiamo quasi niente. E con la frutta troppo matura mia moglie fa le torte e le crostate che vede lì sul banco.",
+    "sv": "Det vi inte säljer på lördagen lämnar vi till församlingens soppkök. Förut slängde vi det, nu slösar vi nästan ingenting. Och av frukten som är för mogen bakar min fru kakorna och pajerna som ni ser där på disken."
+   },
+   {
+    "who": "A",
+    "fr": "Ha ragione. Mi dia un chilo di mele, un vasetto di marmellata e una fetta di torta, per il viaggio.",
+    "sv": "Ni har rätt. Ge mig ett kilo äpplen, en burk marmelad och en bit kaka, till resan."
    },
    {
     "who": "B",
@@ -1323,6 +1652,18 @@
     ],
     "a": 0,
     "why": "«sono un po' ammaccate, ma buonissime»."
+   },
+   {
+    "type": "detalj",
+    "q": "Vad gör de med det som inte blir sålt på lördagen?",
+    "opts": [
+     "Slänger det",
+     "Ger det till församlingens soppkök",
+     "Säljer det billigare på söndagen",
+     "Ger det till grisarna"
+    ],
+    "a": 1,
+    "why": "« lo portiamo alla mensa della parrocchia »."
    }
   ],
   "gloss": {
@@ -1355,6 +1696,46 @@
     "t": "ammaccato",
     "sv": "stött, med stötskador",
     "g": ""
+   },
+   "male": {
+    "t": "andare a male",
+    "sv": "bli dålig, förstöras (om mat)",
+    "g": ""
+   },
+   "mensa": {
+    "t": "la mensa",
+    "sv": "matsal; här soppkök",
+    "g": "f"
+   },
+   "parrocchia": {
+    "t": "la parrocchia",
+    "sv": "församling",
+    "g": "f"
+   },
+   "sprechiamo": {
+    "t": "sprecare",
+    "sv": "slösa",
+    "g": ""
+   },
+   "matura": {
+    "t": "maturo",
+    "sv": "mogen",
+    "g": ""
+   },
+   "fetta": {
+    "t": "la fetta",
+    "sv": "skiva, bit",
+    "g": "f"
+   },
+   "zucche": {
+    "t": "la zucca",
+    "sv": "pumpa",
+    "g": "f"
+   },
+   "fragole": {
+    "t": "la fragola",
+    "sv": "jordgubbe",
+    "g": "f"
    }
   }
  },
@@ -1377,6 +1758,11 @@
     "who": "A",
     "fr": "Il ministro del lavoro ha dichiarato che il governo presenterà una riforma entro l'estate. Secondo il ministro, bisogna che le aziende assumano più giovani con contratti stabili. L'opposizione, invece, pensa che la riforma arrivi troppo tardi.",
     "sv": "Arbetsmarknadsministern har sagt att regeringen lägger fram en reform före sommaren. Enligt ministern måste företagen anställa fler unga med fasta kontrakt. Oppositionen anser däremot att reformen kommer för sent."
+   },
+   {
+    "who": "A",
+    "fr": "Nel frattempo continua a crescere il numero di giovani che lasciano l'Italia: secondo un nuovo studio, ogni anno decine di migliaia di ragazzi tra i diciotto e i trentaquattro anni si trasferiscono all'estero, soprattutto in Germania, nel Regno Unito e in Svizzera. Molti di loro sono laureati.",
+    "sv": "Samtidigt fortsätter antalet unga som lämnar Italien att öka: enligt en ny studie flyttar tiotusentals unga mellan arton och trettiofyra år utomlands varje år, framför allt till Tyskland, Storbritannien och Schweiz. Många av dem har en universitetsexamen."
    },
    {
     "who": "A",
@@ -1461,6 +1847,18 @@
     ],
     "a": 2,
     "why": "«circa ottocento ingegneri e tecnici»."
+   },
+   {
+    "type": "detalj",
+    "q": "Vad säger studien om de unga som flyttar utomlands?",
+    "opts": [
+     "De flesta flyttar till Frankrike",
+     "Antalet minskar",
+     "Många av dem har en universitetsexamen",
+     "De kommer alla tillbaka efter ett år"
+    ],
+    "a": 2,
+    "why": "« Molti di loro sono laureati »."
    }
   ],
   "gloss": {
@@ -1502,6 +1900,31 @@
    "assunti": {
     "t": "assumere (assunto)",
     "sv": "anställa",
+    "g": ""
+   },
+   "frattempo": {
+    "t": "nel frattempo",
+    "sv": "under tiden, samtidigt",
+    "g": ""
+   },
+   "decine": {
+    "t": "la decina",
+    "sv": "tiotal (decine di migliaia = tiotusentals)",
+    "g": "f"
+   },
+   "laureati": {
+    "t": "il laureato",
+    "sv": "person med universitetsexamen",
+    "g": "m"
+   },
+   "automobilistica": {
+    "t": "automobilistico",
+    "sv": "bil-",
+    "g": ""
+   },
+   "stabili": {
+    "t": "stabile",
+    "sv": "fast, stabil",
     "g": ""
    }
   }
@@ -1565,6 +1988,16 @@
     "who": "A",
     "fr": "Si figuri. Un consiglio: l'aggiornamento del software viene installato automaticamente di notte, quindi non spenga la stampante la sera.",
     "sv": "Ingen orsak. Ett råd: programuppdateringen installeras automatiskt på natten, så stäng inte av skrivaren på kvällen."
+   },
+   {
+    "who": "B",
+    "fr": "Ah, un'ultima domanda: le cartucce originali costano tantissimo. Posso usare quelle compatibili?",
+    "sv": "Ah, en sista fråga: originalpatronerna är jättedyra. Kan jag använda kompatibla?"
+   },
+   {
+    "who": "A",
+    "fr": "Può farlo, ma la garanzia copre solo i danni causati con le cartucce originali. In ogni caso, si ricordi di riciclare quelle vuote: le può riportare in qualsiasi negozio di elettronica. Così non finiscono nella spazzatura.",
+    "sv": "Det kan ni, men garantin täcker bara skador som orsakats med originalpatroner. Kom i alla fall ihåg att återvinna de tomma: ni kan lämna tillbaka dem i vilken elektronikaffär som helst. Då hamnar de inte i soporna."
    }
   ],
   "questions": [
@@ -1639,6 +2072,18 @@
     ],
     "a": 1,
     "why": "«l'aggiornamento … viene installato automaticamente di notte»."
+   },
+   {
+    "type": "detalj",
+    "q": "Vad säger teknikern om kompatibla patroner?",
+    "opts": [
+     "Att de är förbjudna",
+     "Att de fungerar bättre",
+     "Att garantin bara täcker skador med originalpatroner",
+     "Att de måste köpas i deras webbutik"
+    ],
+    "a": 2,
+    "why": "« la garanzia copre solo i danni causati con le cartucce originali »."
    }
   ],
   "gloss": {
@@ -1711,6 +2156,36 @@
     "t": "spegnere",
     "sv": "stänga av",
     "g": ""
+   },
+   "cartucce": {
+    "t": "la cartuccia",
+    "sv": "bläckpatron",
+    "g": "f"
+   },
+   "compatibili": {
+    "t": "compatibile",
+    "sv": "kompatibel (från annan tillverkare)",
+    "g": ""
+   },
+   "garanzia": {
+    "t": "la garanzia",
+    "sv": "garanti",
+    "g": "f"
+   },
+   "copre": {
+    "t": "coprire",
+    "sv": "täcka",
+    "g": ""
+   },
+   "danni": {
+    "t": "il danno",
+    "sv": "skada",
+    "g": "m"
+   },
+   "vuote": {
+    "t": "vuoto",
+    "sv": "tom",
+    "g": ""
    }
   }
  },
@@ -1748,6 +2223,16 @@
     "who": "B",
     "fr": "Non esattamente. L'UNESCO lo considera una lingua da proteggere, ma in Italia non è una lingua ufficiale. Secondo me andrebbe insegnato a scuola, almeno come materia facoltativa, prima che i giovani lo dimentichino.",
     "sv": "Inte exakt. Unesco anser att det är ett språk som bör skyddas, men i Italien är det inte ett officiellt språk. Jag tycker att det borde läras ut i skolan, åtminstone som valfritt ämne, innan de unga glömmer det."
+   },
+   {
+    "who": "A",
+    "fr": "Ma il napoletano ha anche una tradizione scritta, giusto?",
+    "sv": "Men napolitanskan har också en skriftlig tradition, eller hur?"
+   },
+   {
+    "who": "B",
+    "fr": "Certo, e antichissima! Ci sono poesie, commedie e soprattutto canzoni. Nel Seicento Giambattista Basile scrisse in napoletano una raccolta di fiabe, con versioni antiche di Cenerentola e del Gatto con gli stivali.",
+    "sv": "Absolut, och mycket gammal! Det finns dikter, komedier och framför allt sånger. På 1600-talet skrev Giambattista Basile en sagosamling på napolitanska, med tidiga versioner av Askungen och Mästerkatten i stövlar."
    },
    {
     "who": "A",
@@ -1832,6 +2317,18 @@
     ],
     "a": 1,
     "why": "«La cantava mia nonna mentre cucinava»."
+   },
+   {
+    "type": "detalj",
+    "q": "Vad skrev Giambattista Basile på napolitanska?",
+    "opts": [
+     "En samling sagor",
+     "Den första italienska ordboken",
+     "Texten till »'O sole mio«",
+     "En opera"
+    ],
+    "a": 0,
+    "why": "« scrisse in napoletano una raccolta di fiabe »."
    }
   ],
   "gloss": {
@@ -1869,6 +2366,31 @@
     "t": "facoltativo",
     "sv": "valfri",
     "g": ""
+   },
+   "commedie": {
+    "t": "la commedia",
+    "sv": "komedi, pjäs",
+    "g": "f"
+   },
+   "seicento": {
+    "t": "il Seicento",
+    "sv": "1600-talet",
+    "g": "m"
+   },
+   "raccolta": {
+    "t": "la raccolta",
+    "sv": "samling",
+    "g": "f"
+   },
+   "fiabe": {
+    "t": "la fiaba",
+    "sv": "saga",
+    "g": "f"
+   },
+   "stivali": {
+    "t": "lo stivale",
+    "sv": "stövel",
+    "g": "m"
    }
   }
  },
@@ -1906,6 +2428,16 @@
     "who": "B",
     "fr": "Esatto! All'inizio i miei figli si lamentavano, ma ci si abitua. D'inverno mangiamo cavoli, zucche e arance. E poi la contadina ci ha insegnato ricette che non conoscevamo.",
     "sv": "Precis! I början klagade mina barn, men man vänjer sig. På vintern äter vi kål, pumpa och apelsiner. Och bonden har lärt oss recept som vi inte kände till."
+   },
+   {
+    "who": "A",
+    "fr": "E adesso i bambini mangiano la verdura?",
+    "sv": "Och äter barnen grönsaker nu?"
+   },
+   {
+    "who": "B",
+    "fr": "Più di prima, perché l'estate scorsa siamo andati tutti in campagna dalla contadina a raccogliere fagioli e pomodori. Quando i ragazzi vedono da dove viene il cibo, lo rispettano di più. E il più piccolo adesso vuole fare l'orto sul balcone di casa!",
+    "sv": "Mer än förut, för i somras åkte vi allihop ut på landet till bonden och plockade bönor och tomater. När barnen ser var maten kommer ifrån respekterar de den mer. Den minsta vill nu ha en grönsaksodling på balkongen!"
    },
    {
     "who": "A",
@@ -1995,6 +2527,18 @@
     ],
     "a": 0,
     "why": "«basta avvisare entro lunedì»."
+   },
+   {
+    "type": "tolkning",
+    "q": "Varför äter barnen mer grönsaker nu, enligt Chiara?",
+    "opts": [
+     "De får godis som belöning",
+     "De har sett var maten kommer ifrån",
+     "Grönsakerna är billigare",
+     "Skolan har förbjudit kött"
+    ],
+    "a": 1,
+    "why": "« Quando i ragazzi vedono da dove viene il cibo, lo rispettano di più »."
    }
   ],
   "gloss": {
@@ -2037,6 +2581,31 @@
     "t": "avvisare",
     "sv": "meddela",
     "g": ""
+   },
+   "fagioli": {
+    "t": "il fagiolo",
+    "sv": "böna",
+    "g": "m"
+   },
+   "rispettano": {
+    "t": "rispettare",
+    "sv": "respektera",
+    "g": ""
+   },
+   "orto": {
+    "t": "l'orto",
+    "sv": "köksträdgård, grönsaksland",
+    "g": "m"
+   },
+   "raccogliere": {
+    "t": "raccogliere",
+    "sv": "plocka, skörda",
+    "g": ""
+   },
+   "zucche": {
+    "t": "la zucca",
+    "sv": "pumpa",
+    "g": "f"
    }
   }
  }

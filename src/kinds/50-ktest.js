@@ -41,6 +41,8 @@ function ktestAfter(ctx,right,total,miss){
   window.scrollTo(0,0); renderList();
 }
 // Frågorna är glosquizets (KINDS.words). Övningen på de missade orden har sess.kind "ktestd", men frågorna har k "ktest".
+// "ktestd" är ingen egen typ men behövs: det skiljer övningens sparade pass (S.runs "ktestd|<kapitel>") och loggposter
+// från själva provets, och finns i elevernas sparade data.
 defineKind("ktest",{name:"Kapitelprov",
   mc:c=>({...KINDS.words.mc(c),tab:"Kapitelprov"}),
   type:c=>({...KINDS.words.type(c),tab:"Kapitelprov"}),

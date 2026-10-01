@@ -1,4 +1,5 @@
-GRAM = {"fr": {"imper": 8, "rel": 13, "cond": 15, "si": 16, "subj": 17, "err": 18}}
+GRAM = {"fr": {"imper": 8, "rel": 13, "cond": 15, "si": 16, "subj": 17, "err": 18,
+               "tid": 2, "quel": 3, "proche": 5, "nombre": 7, "dem": 11, "tout": 14, "ger": 17}}
 for c in ["frs4", "frs5", "fr4", "de4", "de6"]: GRAM[c] = {"err": 17}
 
 TITLES = {"fr": "Studieplan för Franska 3", "frs4": "Studieplan för Franska 4", "frs5": "Studieplan för Franska 5",

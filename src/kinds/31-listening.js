@@ -2,6 +2,7 @@
 function openListening(){
   pickerScreen("Hörförståelse","Lyssna på en dialog eller berättelse utan att se texten. Svara på frågorna, och läs sedan texten medan du lyssnar igen.",
     (C().listening||[]).map(t=>({id:t.id,title:t.title,sec:t.sec,status:txStatus(t.id)})),listenIntro);
+  const p=realAudioPanel(); if(p) $("#quit").insertAdjacentHTML("beforebegin",p);   // Veckans äkta ljud (46-akta-ljud.js)
 }
 function listenIntro(id){
   const t=textById("lq",id); stopSpeech(); $("#tabs").hidden=true; sess=null;
