@@ -2,6 +2,15 @@
 
 Punkter som har flyttats från [`BACKLOG.md`](BACKLOG.md) när de byggdes. **Referens** anger backloggens rubrik och prioritet. **Commit** anger var ändringen finns i git. **Publicerat** anger versionen av artefakten på https://claude.ai/artifact/YBQv8j4qXQQLuPwLAWt5mP.
 
+## 2026-10-02, del 2 (publicerat som version 38)
+
+| Referens | Vad som byggdes | Commit |
+|---|---|---|
+| Granskning, andra omgången (föräldern 2026-10-02) | Tre agenter kontrollerade varje ändring från första granskningen (ca 3 200 ändringar): 0,3–0,8 % var fel och rättades (bl.a. CELI Impatto 50 % = 8/16 + 8/16, Wurzel/root, en fransk brevfras, uttalsparet baro/barro). Tre agenter löste varje uppgift i Franska 3, Tyska 4 och Tyska 5 utan facit (ca 7 600 frågor): 0 fel facit, 76 rättelser (felalternativ som fungerar i talspråk, saknade `acc`, genus-tvetydiga luckor). Max Frisch-citatet i de6 är ett referat (Frisch död 1991). | se git log |
+| Öppet v36 · P3 *Format* + *tenseCheck i it5* + *nivåmätaren* + *täckningsverktyget* | de1: fjärde svarsalternativ i alla 52 textfrågor; de3: `sv` i berättelserna; SPEC.md för it3, it4, frs4, frs5. tenseCheck säkrare i it, fr och de (`SCENARIO_TENSE`). `ID_RENAMES` i index.html så att `peekState` gör id-bytena. `tools/tackning.py` känner igen zu-infinitiv, -in-former, komparativ, feminina former och fler elisioner. | se git log |
+| Öppet v36 · P3 *Berättelser under täckningsgränsen* + *déranger/électrique* | it1-berättelserna, it2 j2/j7, it2-le-1 och it3 k1/k5 omskrivna med kända ord (99–100 %). «déranger» och «électrique» i frs4. 93 genus-tvetydiga luckor i fr/it-ordlistorna entydiga. | se git log |
+| Granskning · synonymer som felalternativ | `alsoRight` (00-common.js) och `SV_SYN`: flervalet visar inte längre synonymer (trotzdem/dennoch, deshalb/aus diesem Grund, pourtant/néanmoins, perciò/quindi) eller andra former av samma ord som fel svar (`SCENARIO_SYNONYM`). | se git log |
+
 ## 2026-10-02 (publicerat som version 37)
 
 | Referens | Vad som byggdes | Commit |

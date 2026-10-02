@@ -71,7 +71,8 @@ function startQuiz(){
 /* Glosquizets frågor (flerval och skriva) och kortet som visas efter ett fel svar */
 // Felalternativ: fyra ord med olika betydelse, först ur samma avsnitt, sedan ur resten (pickSome blandar bara så långt det behövs)
 function mcOptions(w){
-  const ok=(x,picks)=>x.sv!==w.sv&&!picks.some(p=>p.sv===x.sv);
+  // Inte samma betydelse som rätt svar eller ett annat alternativ (synonymer, alsoRight i 00-common.js)
+  const ok=(x,picks)=>!alsoRight(x,w)&&!picks.some(p=>p.sv===x.sv||svOverlap(p.sv,x.sv));
   const picks=pickSome(secWords(w.sec),4,ok);
   if(picks.length<4) pickSome(WORDS,4,(x,p)=>x.sec!==w.sec&&ok(x,p),picks);
   return shuffle([w,...picks]);

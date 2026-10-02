@@ -30,12 +30,26 @@ LANGUAGES.it1 = {
   // Bindeord som räknas i skrivchecklistan (e och o är för vanliga för att räknas)
   connectors: ["ma","perché","poi","dopo","quando","anche","però","allora","quindi","prima","infine","secondo me","per esempio",
     "invece","mentre","così","siccome","dunque","inoltre","purtroppo","di solito","alla fine"],
-  tenseCheck: {
-    "presente": t => t.trim().length > 0,
-    "passato prossimo": t => /(^|[^\p{L}])(ho|hai|ha|abbiamo|avete|hanno|sono|sei|è|siamo|siete)\s+(\p{L}+(ato|ata|ati|ate|uto|uta|uti|ute|ito|ita|iti|ite)|fatto|detto|preso|messo|visto|scritto|letto|stato|venuto|nato|morto|chiesto|risposto|chiuso|aperto|bevuto|vissuto|rimasto|speso|scelto|corso|perso)(?![\p{L}])/iu.test(t),
-    "imperfetto": t => /(^|[^\p{L}])(\p{L}+(avo|avi|ava|avamo|avate|avano|evo|evi|eva|evamo|evate|evano|ivo|ivi|iva|ivamo|ivate|ivano)|ero|eri|era|eravamo|eravate|erano)(?![\p{L}])/iu.test(t),
-    "futuro": t => /(^|[^\p{L}])\p{L}+(rò|rai|rà|remo|rete|ranno)(?![\p{L}])/iu.test(t)
-  },
+  // Tempusigenkänningen går ord för ord. Ändelsen räcker inte: bravo, motivo, arrivo, devo och scrivo slutar som imperfetto,
+  // però, parete och supremo som futuro, och entrò och imparai är passato remoto. Därför krävs en verbstam före ändelsen
+  // (minst två bokstäver före -avo/-evo/-ivo; futuro har -erò/-irò eller en kort stam som andrò, potrò, vorrò), och vanliga
+  // ord som ändå passar står i undantagen. Ärvs av it2–it7; testas i tests/run_tests.py (tempusigenkänning, italienska).
+  tenseCheck: (() => {
+    const words = t => t.match(/\p{L}+/gu) || [];
+    const imp = /^(\p{L}{2,}(av|ev|iv)|(d|st)av)(o|i|a|amo|ate|ano)$/iu;
+    const notImp = new RegExp("(at|tt|ut|it|ot|et|s|x|oc)iv([oai]|ate)$|^(arr|der|colt|pr|ol|ul|arch|geng|incent|prevent|f?est|sport|congiunt)iv(o|i|a|e|ano|ate)$"
+      + "|^(s?chi|br|s?gr|aggr|tr|sc|ott|sl|ric)av(o|i|a|e|ano|ate)$|^(br|tr|sv|medio|sol?li|rili|alli|bassorili|sol|ril|all|prel)ev(o|i|a|ano|ate)$"
+      + "|^(de|i|tra|pre|ri)?scriv(o|i|a|ano|ate)$|(at|et|it)evi$", "iu");
+    // Futuro: -erò/-irò … och de korta stammarna (andrò, avrò, potrò, saprò, vorrò, darò); inte passato remoto (girò, operò)
+    const fut = /(er|ir|vr|rr|dr|[aeiou]tr|[aeiou]pr)(ò|ai|à|emo|ete|anno)$|^(ri|dis|contraf|sod)?(d|f|s|st)ar(ò|ai|à|emo|ete|anno)$/iu;
+    const notFut = /^((ri|at)?tir|gir|(i|a|re|so|tra)spir|ammir|sper|disper|oper|super|consider|liber|gener|alter|esager|toller|cooper)(ò|ai)$|^(però|supremo|operai)$/iu;
+    return {
+      "presente": t => t.trim().length > 0,
+      "passato prossimo": t => /(^|[^\p{L}])(ho|hai|ha|abbiamo|avete|hanno|sono|sei|è|siamo|siete)\s+(\p{L}+(ato|ata|ati|ate|uto|uta|uti|ute|ito|ita|iti|ite)|fatto|detto|preso|messo|visto|scritto|letto|stato|venuto|nato|morto|chiesto|risposto|chiuso|aperto|bevuto|vissuto|rimasto|speso|scelto|corso|perso)(?![\p{L}])/iu.test(t),
+      "imperfetto": t => words(t).some(w => /^(ero|eri|era|eravamo|eravate|erano)$/i.test(w) || (imp.test(w) && !notImp.test(w))),
+      "futuro": t => words(t).some(w => fut.test(w) && !notFut.test(w))
+    };
+  })(),
 
   // Grammatikövningar. Frågorna ligger i content/grammar-*.json (format i docs/spec/grammatik.md, områdena i grammar.json).
   // Områden (topics; secs = kapitel där området kommer först) och regelnamn ligger i grammar.json, som build.py lägger i kursens datafil (L.grammar).

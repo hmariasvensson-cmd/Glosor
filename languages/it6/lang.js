@@ -30,12 +30,35 @@ LANGUAGES.it6 = {
     "in primo luogo", "in secondo luogo", "innanzitutto", "in conclusione", "in realtà", "insomma", "a mio parere",
     "al contrario", "d'altra parte", "in effetti", "di conseguenza", "anzi", "eppure", "qualora", "visto che", "poiché"]},
 
-  // Tempusigenkänning i skrivuppgifterna: som i Italienska 1 och 2, plus condizionale, congiuntivo och passato remoto
-  tenseCheck: {
-    "condizionale": t => /(^|[^\p{L}])\p{L}+(rei|resti|rebbe|remmo|reste|rebbero)(?![\p{L}])/iu.test(t),
-    "congiuntivo": t => /(^|[^\p{L}])(sia|siano|abbia|abbiano|faccia|vada|venga|possa|debba|voglia|sappia|stia|dica|fossi|fosse|fossimo|fossero|avessi|avesse|avessimo|avessero|\p{L}+(assi|asse|assimo|assero|essi|esse|essimo|essero|issi|isse|issimo|issero))(?![\p{L}])/iu.test(t),
-    "passato remoto": t => /(^|[^\p{L}])(fu|furono|ebbe|ebbero|fece|fecero|disse|dissero|nacque|morì|scrisse|scrissero|venne|vennero|\p{L}+(ò|òno|ettero|irono|arono|erono|é))(?![\p{L}])/iu.test(t)
-  },
+  // Tempusigenkänning i skrivuppgifterna: som i Italienska 1 och 2, plus condizionale, congiuntivo och passato remoto.
+  // Ord för ord med en verbstam före ändelsen; condizionale och congiuntivo som i it5/lang.js (undantagen förklaras där).
+  // Passato remoto: vanliga starka former (fu, ebbe, disse, nacque …) och -ò/-arono/-erono/-irono/-ettero/-ì med en stam,
+  // men inte futuro (andrò, farò, parlerò), però, può, ciò, così och veckodagarna; -é och -ette bara för verb på -ere
+  // (credé, dovette), inte perché, trentatré, biciclette, diciassette och permette. Testas i tests/run_tests.py.
+  tenseCheck: (() => {
+    const words = t => t.match(/\p{L}+/gu) || [];
+    const cond = /(er|ir|vr|rr|dr|[aeiou]tr|[aeiou]pr)(ei|esti|ebbe|emmo|este|ebbero)$|^(ri|dis|contraf|sod)?(d|f|s|st)ar(ei|esti|ebbe|emmo|este|ebbero)$/iu;
+    const notCond = /^(aerei|arresti)$|corremmo$/iu;
+    const congW = /^(sia|siano|siate|abbia|abbiano|abbiate|vada|vadano|venga|vengano|possa|possano|debba|debbano|vogliano|sappia|sappiano|stia|stiano|dica|dicano|facciano|fossi|fosse|fossimo|fossero|dessi|desse|dessimo|dessero|stessimo|stessero)$/iu;
+    const congNoun = /^(voglia|faccia)$/iu, nounBefore = /^(ho|hai|ha|abbiamo|avete|hanno|avevo|aveva|la|una|di|della|nella|sulla|in|poca|tanta|molta|nessuna|senza|mia|tua|sua)$/iu;
+    const congImp = /^\p{L}{2,}[aei]ss(i|e|imo|ero)$/iu;
+    const notCong = new RegExp("^(cla|ripa|sorpa|compa|mata|sinta|ipota|rila|(in|s)?gra|(ab|s)?ba|(am|s)?ma|(in|s)?ca|(pro|pre|per|am|com|ri|tras|dis|im|scom|o|s)me)ss[ie]$"
+      + "|(press|ccess|ocess|gress|pless|nness|teress|ssess|ntess|oress|ipess|uchess)[ie]$|^(stess|spess|abiss|ecliss)"
+      + "|(scr|vv|onv|dd)iss(i|e|ero)$|^(riv|pred|bened|maled)iss|^(ri)?elesse$", "iu");
+    const verbIssimo = /^(fin|cap|dorm|part|ven|usc|sent|prefer|apr|offr|segu|serv|riusc|mor|sal|un|pul|sped|costru|scopr|sugger|vest)issimo$/iu;
+    // Futuro som it1/lang.js, så att andrò och farò inte räknas som passato remoto
+    const fut = /(er|ir|vr|rr|dr|[aeiou]tr|[aeiou]pr)(ò|ai|à|emo|ete|anno)$|^(ri|dis|contraf|sod)?(d|f|s|st)ar(ò|ai|à|emo|ete|anno)$/iu;
+    const notFut = /^((ri|at)?tir|gir|(i|a|re|so|tra)spir|ammir|sper|disper|oper|super|consider|liber|gener|alter|esager|toller|cooper)(ò|ai)$|^(però|supremo|operai)$/iu;
+    const prW = /^(fu|furono|fui|ebbe|ebbero|ebbi|fece|fecero|feci|disse|dissero|dissi|nacque|nacquero|nacqui|scrisse|scrissero|scrissi|venne|vennero|venni|decise|decisero|prese|presero|vide|videro|vidi|volle|vollero|volli|seppe|seppero|seppi|visse|vissero|vissi|mise|misero|misi|rimase|rimasero|rimasi|diede|diedero|diedi|chiese|chiesero|chiesi|rispose|risposero|risposi|conobbe|conobbero|conobbi|lesse|lessero|scelse|scelsero|vinse|vinsero|perse|persero|morì|morirono)$/iu;
+    const prEnd = /^\p{L}{2,}(ò|arono|erono|irono|ettero|ì)$|(cred|vend|ricev|pot|batt|tem|god|perd|ced|ripet|esist|insist|resist)é$|^(st|d|dov|ricev|sed|cred|perd|tem|god|ced|conced|batt|abbatt|esist|insist|resist|pot|vend|ripet)ette$/iu;
+    const notPr = /^(però|può|ciò|perciò|falò|casinò|oblò|comò|rococò|ridò|ahò|niccolò|nicolò|bordò|mazzarò|così|costì|colì|lunedì|martedì|mercoledì|giovedì|venerdì|buondì|mezzodì|tassì|colibrì|pipì|forlì|bensì|funiculì|salò)$/iu;
+    return {
+      "condizionale": t => words(t).some(w => cond.test(w) && !notCond.test(w)),
+      "congiuntivo": t => words(t).some((w, i, ws) => congW.test(w) || (congNoun.test(w) && !nounBefore.test(ws[i - 1] || ""))
+        || (congImp.test(w) && !notCong.test(w) && (!/issimo$/i.test(w) || verbIssimo.test(w)))),
+      "passato remoto": t => words(t).some(w => prW.test(w) || (prEnd.test(w) && !notPr.test(w) && !(fut.test(w) && !notFut.test(w))))
+    };
+  })(),
 
   storyIntro: "Läs berättelsen och välj rätt form i varje lucka: passato remoto, congiuntivo imperfetto eller trapassato, rätt form i om-satsen och ett sambandsord som passar.",
   cultureIntro: "Läs en text om Italien, svara på en fråga och jämför med hur det är i Sverige.",

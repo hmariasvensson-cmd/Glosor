@@ -23,8 +23,8 @@
     "id": "it1-s-i4",
     "sec": "i4",
     "title": "Un lunedì difficile",
-    "gloss": {"ancora": {"t": "ancora", "sv": "fortfarande, än", "g": ""}, "corre": {"t": "correre", "sv": "springa", "g": ""}, "arriva": {"t": "arrivare", "sv": "komma fram", "g": ""}, "ritardo": {"t": "il ritardo", "sv": "försening (in ritardo = sen)", "g": "m"}},
-    "text": "È lunedì. La sveglia suona alle sette, [ma|perché|quindi] Marco non [si alza|mi alzo|si alzano]. Dorme ancora dieci minuti. [Poi|Perché|Anche] guarda l'ora: sono le sette e mezza! Marco [si lava|ti lavi|si lavano] in due minuti e [si veste|mi vesto|vi vestite] in fretta. Non [fa|faccio|fanno] colazione, [perché|ma|poi] non ha tempo. [Corre|Corro|Corrono] alla fermata, ma l'autobus non c'è. [Allora|Perché|Anche] Marco [va|vado|vanno] a scuola a piedi. Arriva alle otto e un quarto. Il professore [dice|dico|dicono]: «Marco, sei in ritardo!» Che giornata!",
+    "gloss": {"ancora": {"t": "ancora", "sv": "fortfarande, än", "g": ""}},
+    "text": "È lunedì. La sveglia suona alle sette, [ma|perché|quindi] Marco non [si alza|mi alzo|si alzano]. Dorme ancora dieci minuti. [Poi|Perché|Anche] guarda l'ora: sono le sette e mezza! Marco [si lava|ti lavi|si lavano] in due minuti e [si veste|mi vesto|vi vestite] in fretta. Non [fa|faccio|fanno] colazione, [perché|ma|poi] non ha tempo. [Esce|Esco|Escono] di casa, ma alla fermata l'autobus non c'è. [Allora|Perché|Anche] Marco [va|vado|vanno] a scuola a piedi. Entra in classe alle otto e un quarto. Il professore [dice|dico|dicono]: «Buongiorno, Marco! Che ore sono?» Che giornata!",
     "gaps": [
       {"cat": "bindeord", "why": "Ma = men: väckarklockan ringer, men Marco går inte upp. Det är en motsats."},
       {"cat": "tempus", "why": "Alzarsi är reflexivt, och det handlar om Marco (lui): si alza. Mi alzo = jag går upp."},
@@ -33,19 +33,18 @@
       {"cat": "tempus", "why": "Vestirsi är reflexivt och slutar på -ire. Lui-formen är si veste."},
       {"cat": "tempus", "why": "Fare är oregelbundet. Lui-formen är fa: non fa colazione."},
       {"cat": "bindeord", "why": "Perché = därför att: förklarar varför han inte äter frukost."},
-      {"cat": "tempus", "why": "Correre är ett -ere-verb. Lui-formen slutar på -e: corre."},
+      {"cat": "tempus", "why": "Uscire är oregelbundet: esco, esci, esce. Lui-formen är esce: Marco esce di casa."},
       {"cat": "bindeord", "why": "Allora = så, då: att han går är en följd av att bussen inte kommer."},
       {"cat": "tempus", "why": "Andare är oregelbundet: vado, vai, va. Lui-formen är va."},
       {"cat": "tempus", "why": "Dire är oregelbundet: dico, dici, dice. Läraren (lui) dice."}
     ],
-    "sv": "Det är måndag. Väckarklockan ringer klockan sju, men Marco går inte upp. Han sover tio minuter till. Sedan tittar han på klockan: den är halv åtta! Marco tvättar sig på två minuter och klär på sig i all hast. Han äter inte frukost, för han har inte tid. Han springer till hållplatsen, men bussen är inte där. Så Marco går till skolan. Han kommer fram kvart över åtta. Läraren säger: ”Marco, du är sen!” Vilken dag!"
+    "sv": "Det är måndag. Väckarklockan ringer klockan sju, men Marco går inte upp. Han sover tio minuter till. Sedan tittar han på klockan: den är halv åtta! Marco tvättar sig på två minuter och klär på sig i all hast. Han äter inte frukost, för han har inte tid. Han går hemifrån, men vid hållplatsen finns ingen buss. Så Marco går till skolan. Han kommer in i klassrummet kvart över åtta. Läraren säger: ”God morgon, Marco! Vad är klockan?” Vilken dag!"
   },
   {
     "id": "it1-s-i5",
     "sec": "i5",
     "title": "Una pizza per tutti",
-    "gloss": {"chiede": {"t": "chiedere", "sv": "fråga, be om", "g": ""}},
-    "text": "Stasera Giulia e i suoi amici [vanno|va|andiamo] in pizzeria. Il cameriere [porta|porto|portano] il menù. Giulia [vuole|voglio|vogliono] una pizza margherita, [ma|perché|quando] Paolo preferisce la pizza con il prosciutto. «Io [sono|è|siamo] vegetariano», dice Tommaso, «[quindi|ma|mentre] prendo una pizza con le verdure.» «E che cosa [bevete|beviamo|bevono]?» chiede il cameriere. «Tre bottiglie d'acqua, per favore!» [Dopo|Perché|Ma] la pizza, i ragazzi [prendono|prende|prendiamo] un gelato. Alla fine Paolo [chiede|chiedo|chiedono] il conto: sono trenta euro. [Allora|Perché|Mentre] ognuno paga dieci euro.",
+    "text": "Stasera Giulia e i suoi amici [vanno|va|andiamo] in pizzeria. Il cameriere [porta|porto|portano] il menù. Giulia [vuole|voglio|vogliono] una pizza margherita, [ma|perché|quando] Paolo preferisce la pizza con il prosciutto. «Io [sono|è|siamo] vegetariano», dice Tommaso, «[quindi|ma|mentre] prendo una pizza con le verdure.» «E che cosa [bevete|beviamo|bevono]?» dice il cameriere. «Tre bottiglie d'acqua, per favore!» [Dopo|Perché|Ma] la pizza, i ragazzi [prendono|prende|prendiamo] un gelato. Alla fine Paolo [guarda|guardo|guardano] il conto: sono trenta euro. [Allora|Perché|Mentre] ognuno paga dieci euro.",
     "gaps": [
       {"cat": "tempus", "why": "Subjektet är Giulia e i suoi amici, alltså flera personer (loro). Andare är oregelbundet: loro vanno."},
       {"cat": "tempus", "why": "Il cameriere är en person (lui). Portare är ett -are-verb: lui porta."},
@@ -56,17 +55,17 @@
       {"cat": "tempus", "why": "Servitören talar till alla (voi). Bere är oregelbundet med stammen bev-: voi bevete."},
       {"cat": "bindeord", "why": "Dopo = efter: glassen kommer efter pizzan."},
       {"cat": "tempus", "why": "I ragazzi är flera personer (loro). Prendere är ett -ere-verb: loro prendono."},
-      {"cat": "tempus", "why": "Paolo (lui) chiede. Chiedere är ett -ere-verb: lui-formen slutar på -e."},
+      {"cat": "tempus", "why": "Paolo (lui) guarda. Guardare är ett -are-verb: lui-formen slutar på -a."},
       {"cat": "bindeord", "why": "Allora = så, då: att var och en betalar tio euro är en följd av att notan är trettio euro för tre personer."}
     ],
-    "sv": "I kväll går Giulia och hennes kompisar till en pizzeria. Servitören kommer med menyn. Giulia vill ha en pizza margherita, men Paolo föredrar pizza med skinka. ”Jag är vegetarian”, säger Tommaso, ”så jag tar en pizza med grönsaker.” ”Och vad dricker ni?” frågar servitören. ”Tre flaskor vatten, tack!” Efter pizzan tar ungdomarna en glass. Till sist ber Paolo om notan: det blir trettio euro. Så var och en betalar tio euro."
+    "sv": "I kväll går Giulia och hennes kompisar till en pizzeria. Servitören kommer med menyn. Giulia vill ha en pizza margherita, men Paolo föredrar pizza med skinka. ”Jag är vegetarian”, säger Tommaso, ”så jag tar en pizza med grönsaker.” ”Och vad dricker ni?” säger servitören. ”Tre flaskor vatten, tack!” Efter pizzan tar ungdomarna en glass. Till sist tittar Paolo på notan: det blir trettio euro. Så var och en betalar tio euro."
   },
   {
     "id": "it1-s-i8",
     "sec": "i8",
     "title": "Il compleanno di Sofia",
-    "gloss": {"festa": {"t": "la festa", "sv": "fest", "g": "f"}, "arrivano": {"t": "arrivare", "sv": "komma fram", "g": ""}, "gridano": {"t": "gridare", "sv": "ropa, skrika", "g": ""}, "apre": {"t": "aprire", "sv": "öppna", "g": ""}, "regali": {"t": "il regalo", "sv": "present", "g": "m"}, "chiede": {"t": "chiedere", "sv": "fråga, be om", "g": ""}, "risponde": {"t": "rispondere", "sv": "svara", "g": ""}},
-    "text": "Oggi è il dieci marzo ed è il compleanno di Sofia. Fuori [piove|piovo|piovono] e [fa|fanno|faccio] freddo, [ma|perché|quindi] Sofia è contenta: stasera c'è una festa a casa sua. Prima [va|vai|vado] in centro con sua madre, perché [vuole|vuoi|voglio] un vestito nuovo. Nel negozio Sofia [prova|provo|provano] un vestito rosso e un vestito verde. «Il rosso ti sta bene!» [dice|dici|dicono] la madre. [Poi|Perché|Ma] comprano anche delle scarpe nere. La sera arrivano gli amici. «Buon compleanno!» [gridano|grida|gridiamo] tutti. Sofia apre i regali: un libro, una sciarpa e un ombrello. «Un ombrello?» chiede Sofia. «Sì, [perché|ma|quindi] a marzo piove spesso!» risponde la nonna.",
+    "gloss": {"festa": {"t": "la festa", "sv": "fest", "g": "f"}, "apre": {"t": "aprire", "sv": "öppna", "g": ""}, "regali": {"t": "il regalo", "sv": "present", "g": "m"}},
+    "text": "Oggi è il dieci marzo ed è il compleanno di Sofia. Fuori [piove|piovo|piovono] e [fa|fanno|faccio] freddo, [ma|perché|quindi] Sofia è contenta: stasera c'è una festa a casa sua. Prima [va|vai|vado] in centro con sua madre, perché [vuole|vuoi|voglio] un vestito nuovo. Nel negozio Sofia [prova|provo|provano] un vestito rosso e un vestito verde. «Il rosso ti sta bene!» [dice|dici|dicono] la madre. [Poi|Perché|Ma] comprano anche delle scarpe nere. La sera vengono gli amici. «Buon compleanno!» [cantano|canta|cantiamo] tutti. Sofia apre i regali: un libro, una sciarpa e un ombrello. «Un ombrello?» dice Sofia. «Sì, [perché|ma|quindi] a marzo piove spesso!» dice la nonna.",
     "gaps": [
       {"cat": "tempus", "why": "Piovere (regna) används bara i tredje person singular: piove = det regnar."},
       {"cat": "tempus", "why": "Om vädret säger man fa freddo, fa caldo. Fare står i tredje person singular: fa."},
@@ -76,17 +75,16 @@
       {"cat": "tempus", "why": "Provare är ett -are-verb. Sofia (lei) prova."},
       {"cat": "tempus", "why": "Dire är oregelbundet: dico, dici, dice. La madre (lei) dice."},
       {"cat": "bindeord", "why": "Poi = sedan: nästa sak de gör i affären."},
-      {"cat": "tempus", "why": "Tutti = alla, alltså flera personer (loro). Gridare är ett -are-verb: loro gridano."},
+      {"cat": "tempus", "why": "Tutti = alla, alltså flera personer (loro). Cantare är ett -are-verb: loro cantano."},
       {"cat": "bindeord", "why": "Perché = därför att: mormor förklarar varför hon ger ett paraply."}
     ],
-    "sv": "I dag är det den tionde mars och det är Sofias födelsedag. Ute regnar det och det är kallt, men Sofia är glad: i kväll är det fest hemma hos henne. Först åker hon in till centrum med sin mamma, eftersom hon vill ha en ny klänning. I affären provar Sofia en röd klänning och en grön klänning. ”Den röda klär dig!” säger mamman. Sedan köper de också ett par svarta skor. På kvällen kommer kompisarna. ”Grattis på födelsedagen!” ropar alla. Sofia öppnar presenterna: en bok, en halsduk och ett paraply. ”Ett paraply?” frågar Sofia. ”Ja, för i mars regnar det ofta!” svarar mormor."
+    "sv": "I dag är det den tionde mars och det är Sofias födelsedag. Ute regnar det och det är kallt, men Sofia är glad: i kväll är det fest hemma hos henne. Först åker hon in till centrum med sin mamma, eftersom hon vill ha en ny klänning. I affären provar Sofia en röd klänning och en grön klänning. ”Den röda klär dig!” säger mamman. Sedan köper de också ett par svarta skor. På kvällen kommer kompisarna. ”Grattis på födelsedagen!” sjunger alla. Sofia öppnar presenterna: en bok, en halsduk och ett paraply. ”Ett paraply?” säger Sofia. ”Ja, för i mars regnar det ofta!” säger mormor."
   },
 {
   "id": "it1-s-i1",
   "sec": "i1",
-  "title": "Il primo giorno di corso",
-  "gloss": {"corso": {"t": "il corso", "sv": "kurs", "g": "m"}, "chiede": {"t": "chiedere", "sv": "fråga, be om", "g": ""}, "pronti": {"t": "pronto", "sv": "redo, färdig", "g": ""}},
-  "text": "Oggi Erik [è|sono|ha] a Bologna per un corso di italiano. [Viene|Vengo|Vieni] dalla Svezia e [ha|è|hanno] diciassette anni. In classe c'è [una|un|uno] ragazza con gli occhiali. «Ciao! Come [ti chiami|si chiama|mi chiamo]?» chiede Erik. «Mi chiamo Ana e [sono|sei|è] spagnola. E tu, di dove sei?» «Sono svedese, [ma|perché|quando] adesso abito [a|in|di] Roma con mio padre.» «Davvero? Allora parli [anche|ma|poi] italiano!» «Sì, un po'. Parlo anche inglese e tedesco, [perché|ma|poi] mia madre è di Berlino.» Il professore entra: «Buongiorno, ragazzi! [Siete|Sono|Siamo] pronti?»",
+  "title": "Il primo giorno di lezione",
+  "text": "Oggi Erik [è|sono|ha] a Bologna per due settimane di lezioni di italiano. [Viene|Vengo|Vieni] dalla Svezia e [ha|è|hanno] diciassette anni. In classe c'è [una|un|uno] ragazza con gli occhiali. «Ciao! Come [ti chiami|si chiama|mi chiamo]?» dice Erik. «Mi chiamo Ana e [sono|sei|è] spagnola. E tu, di dove sei?» «Sono svedese, [ma|perché|quando] adesso abito [a|in|di] Roma con mio padre.» «Davvero? Allora parli [anche|ma|poi] italiano!» «Sì, un po'. Parlo anche inglese e tedesco, [perché|ma|poi] mia madre è di Berlino.» Il professore entra: «Buongiorno, ragazzi! [Siete|Sono|Siamo] tutti qui?»",
   "gaps": [
     {
       "cat": "tempus",
@@ -130,10 +128,10 @@
     },
     {
       "cat": "tempus",
-      "why": "Läraren pratar till hela klassen (voi): siete pronti? Siamo är noi och sono är loro."
+      "why": "Läraren pratar till hela klassen (voi): siete tutti qui? Siamo är noi och sono är loro."
     }
   ],
-  "sv": "I dag är Erik i Bologna på en kurs i italienska. Han kommer från Sverige och är sjutton år. I klassrummet finns en tjej med glasögon. ”Hej! Vad heter du?” frågar Erik. ”Jag heter Ana och är spanska. Och du, var kommer du ifrån?” ”Jag är svensk, men nu bor jag i Rom med min pappa.” ”Verkligen? Då pratar du italienska också!” ”Ja, lite. Jag pratar också engelska och tyska, för min mamma är från Berlin.” Läraren kommer in: ”God morgon, allihop! Är ni redo?”"
+  "sv": "I dag är Erik i Bologna för att gå på lektioner i italienska i två veckor. Han kommer från Sverige och är sjutton år. I klassrummet finns en tjej med glasögon. ”Hej! Vad heter du?” säger Erik. ”Jag heter Ana och är spanska. Och du, var kommer du ifrån?” ”Jag är svensk, men nu bor jag i Rom med min pappa.” ”Verkligen? Då pratar du italienska också!” ”Ja, lite. Jag pratar också engelska och tyska, för min mamma är från Berlin.” Läraren kommer in: ”God morgon, allihop! Är alla här?”"
 },
 {
   "id": "it1-s-i3",
@@ -192,8 +190,7 @@
   "id": "it1-s-i6",
   "sec": "i6",
   "title": "Dov'è la gelateria?",
-  "gloss": {"sa": {"t": "sapere", "sv": "veta, kunna", "g": ""}, "chiede": {"t": "chiedere", "sv": "fråga, be om", "g": ""}, "verso": {"t": "verso", "sv": "mot, åt ... till", "g": ""}, "arrivano": {"t": "arrivare", "sv": "komma fram", "g": ""}, "risponde": {"t": "rispondere", "sv": "svara", "g": ""}, "altra": {"t": "altro", "sv": "annan", "g": ""}},
-  "text": "Sara e Tom [sono|siamo|è] a Firenze. Tom [vuole|voglio|vogliono] un gelato, ma non sa dov'è la gelateria. Sara chiede a un signore: «Scusi, c'è una gelateria qui vicino?» «Sì, [c'è|ci sono|è] una gelateria molto buona [in|di|con] Piazza della Signoria. Andate dritto, poi [girate|gira|giriamo] a sinistra [al|alla|allo] semaforo.» «È lontano?» «No, a piedi [sono|siamo|ha] cinque minuti.» I ragazzi [attraversano|attraversa|attraversate] la strada e vanno verso la piazza. [Quando|Ma|Perché] arrivano, la gelateria è chiusa! «Che peccato!» dice Tom. «Non importa», risponde Sara, «[perché|quando|mentre] c'è un'altra gelateria accanto al duomo.»",
+  "text": "Sara e Tom [sono|siamo|è] a Firenze. Tom [vuole|voglio|vogliono] un gelato, ma dov'è la gelateria? Sara parla con un signore: «Scusi, c'è una gelateria qui vicino?» «Sì, [c'è|ci sono|è] una gelateria molto buona [in|di|con] Piazza della Signoria. Andate dritto, poi [girate|gira|giriamo] a sinistra [al|alla|allo] semaforo.» «È lontano?» «No, a piedi [sono|siamo|ha] cinque minuti.» I ragazzi [attraversano|attraversa|attraversate] la strada e vanno in piazza. [Quando|Ma|Perché] sono lì, la gelateria è chiusa! «Che peccato!» dice Tom. «Non importa», dice Sara, «[perché|quando|mentre] c'è anche una gelateria accanto al duomo.»",
   "gaps": [
     {
       "cat": "tempus",
@@ -229,14 +226,14 @@
     },
     {
       "cat": "bindeord",
-      "why": "Quando = när: säger vad som händer när de kommer fram."
+      "why": "Quando = när: säger vad som händer när de är framme vid torget."
     },
     {
       "cat": "bindeord",
       "why": "Perché = därför att: förklarar varför det inte gör något."
     }
   ],
-  "sv": "Sara och Tom är i Florens. Tom vill ha en glass, men han vet inte var glassbaren ligger. Sara frågar en herre: ”Ursäkta, finns det en glassbar här i närheten?” ”Ja, det finns en väldigt god glassbar på Piazza della Signoria. Gå rakt fram och sväng sedan vänster vid trafikljuset.” ”Är det långt?” ”Nej, till fots tar det fem minuter.” De går över gatan och går mot torget. När de kommer fram är glassbaren stängd! ”Vad synd!” säger Tom. ”Det gör inget”, svarar Sara, ”för det finns en annan glassbar bredvid domkyrkan.”"
+  "sv": "Sara och Tom är i Florens. Tom vill ha en glass, men var ligger glassbaren? Sara pratar med en herre: ”Ursäkta, finns det en glassbar här i närheten?” ”Ja, det finns en väldigt god glassbar på Piazza della Signoria. Gå rakt fram och sväng sedan vänster vid trafikljuset.” ”Är det långt?” ”Nej, till fots tar det fem minuter.” De går över gatan och går till torget. När de är där är glassbaren stängd! ”Vad synd!” säger Tom. ”Det gör inget”, säger Sara, ”för det finns en glassbar bredvid domkyrkan också.”"
 },
 {
   "id": "it1-s-i7",

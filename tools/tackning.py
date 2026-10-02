@@ -16,7 +16,12 @@ sammansättningar av två kända ord räknas som kända. Oregelbundna former: ty
 (getrunken, geschienen, verloren, gilt, rief, sprich), superlativ (schönste) och en lista (beste, mehr, nimm);
 franska oregelbundna stammar (appris, promis, savais, voyait, suffit, connaissais, pourrait); italienska passato
 remoto (parlò, prese, scrisse, fu), enklitiska pronomen (vederti, fermarmi, dimmi), -issimo, oregelbundet futurum
-(vorrei, verrò), stamväxling (riesco, tiene) och oregelbunden plural (uomini, uova). Ett italienskt ord i words.txt som
+(vorrei, verrò), stamväxling (riesco, tiene) och oregelbunden plural (uomini, uova). Dessutom (Lexicon.other_form,
+bara när grundformen finns exakt bland de kända orden): tyska zu-infinitiv av delbara verb (anzubieten, festzuhalten),
+feminina på -in/-innen av kända substantiv (Mitarbeiterin, Kollegin, Stadtplanerin) och komparativ (größeren, ärmere,
+teurer); franska och italienska feminina (chanteuse, entière, actuelle, attrice, studentessa). Tyska relativ- och
+demonstrativpronomen (dessen, diejenigen, derselbe) och pronominaladverb (dafür, woran) är grammatikord, och elisionen
+täcker fler former (quelqu'un, gliel'ho, senz'altro). Ett italienskt ord i words.txt som
 qualcosa/qualcuno räknas som känt även när det står i en fras.
 Namn = ord med stor bokstav mitt i meningen (på tyska: ord med stor bokstav som också står i den svenska
 översättningen) och förkortningar. Internationella ord = ord som finns nästan likadant i den svenska översättningen.
@@ -30,7 +35,7 @@ import collections, json, pathlib, re, sys, unicodedata
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 LANG_DIR = ROOT / "languages"
 OUT = ROOT / "docs" / "tackning.md"
-DATE = "2026-09-30"
+DATE = "2026-10-02"
 LIMIT = {"hör": 0.95, "läs": 0.98}
 LISTEN_PARTS = {"co", "hoeren", "ascolto"}
 READ_PARTS = {"ce", "lesen", "lettura"}
@@ -144,6 +149,15 @@ EXTRA_FORMS["it"].update({
 
 FUNCTION["de"] += " können kann kannst könnt konnte konnten könnte könnten müssen muss musst müsst musste mussten müsste wollen will willst wollt wollte wollten dürfen darf darfst dürft durfte durften dürfte sollen soll sollst sollt sollte sollten mögen mag magst möchte möchtest möchten mochte"
 FUNCTION["de"] += " ab pro per oh okay ok hi ah äh hm na tja"   # prepositioner och interjektioner
+# Relativ- och demonstrativpronomen, obestämda pronomen och pronominaladverb (da-/wo-/hin-/her-): grammatikord (2026-10-02)
+FUNCTION["de"] += """ dessen deren denen derer derjenige diejenige dasjenige diejenigen derjenigen denjenigen demjenigen desjenigen
+    derselbe dieselbe dasselbe dieselben denselben demselben derselben desselben jemand jemanden jemandem niemand niemanden
+    niemandem irgendwer irgendwas irgendwo irgendwie irgendwann irgendein irgendeine irgendeinen irgendeinem irgendeiner
+    solch solche solcher solches solchen solchem manch manche mancher manches manchen manchem beide beiden beides einander
+    dabei dafür dagegen daher dahin damit danach daneben daran darauf daraus darin darüber darum darunter davon davor dazu
+    dazwischen dadurch dran drauf draus drin drum hierher hinein heraus herum herein hinaus hinauf dar wobei wofür wogegen
+    woher wohin womit wonach woran worauf woraus worin worüber worum wovon wozu wodurch andere anderen anderer anderes anderem"""
+FUNCTION["it"] += " primo prima primi prime secondo seconda terzo terza quarto quarta quinto quinta sesto sesta settimo ottavo nono decimo"
 FUNCTION["fr"] += " ci là-bas oh ah allô ok bah euh hein"
 FUNCTION["it"] += " oh ah ok beh boh eh"
 AUX = {
@@ -154,8 +168,23 @@ AUX = {
 for _l in AUX:
     FUNCTION[_l] += " " + " ".join(AUX[_l])
 FUNCTION_SETS = {l: set(v.split()) for l, v in FUNCTION.items()}
-ELISION = {"fr": {"l", "d", "j", "m", "t", "s", "n", "c", "qu", "jusqu", "lorsqu", "puisqu", "quoiqu", "presqu"},
-           "it": {"l", "un", "d", "c", "dell", "dall", "nell", "sull", "all", "quest", "quell", "mezz", "com", "dov", "anch", "tutt", "po"}}
+ELISION = {"fr": {"l", "d", "j", "m", "t", "s", "n", "c", "qu", "jusqu", "lorsqu", "puisqu", "quoiqu", "presqu", "quelqu", "entr"},
+           "it": {"l", "un", "d", "c", "dell", "dall", "nell", "sull", "all", "quest", "quell", "mezz", "com", "dov", "anch", "tutt", "po",
+                  "coll", "dev", "senz", "cos", "v", "m", "t", "s", "n", "ch", "quand", "bell", "grand", "quant", "nessun", "ciascun",
+                  "buon", "gliel", "sant"}}
+# Feminina och former med annan ändelse än grundformen (ändelse i texten, ändelse i words.txt), efter att plural-s tagits bort.
+# Räknas bara när grundformen finns exakt bland de kända orden (2026-10-02).
+FEM = {
+    "fr": [("euse", "eur"), ("euse", "eux"), ("rice", "eur"), ("ère", "er"), ("elle", "el"), ("elle", "eau"), ("eille", "eil"),
+           ("onne", "on"), ("enne", "en"), ("ive", "if"), ("ouse", "oux"), ("ousse", "oux"), ("ouce", "oux"),
+           ("ieille", "ieux"), ("olle", "ou"), ("anche", "anc"), ("aîche", "ais"), ("èche", "ec"), ("ongue", "ong"),
+           ("ecque", "ec"), ("ique", "ic"), ("aux", "al"), ("eaux", "eau")],   # inte -ette/-et (navette, cachette) eller -ille/-il
+    "it": [("trice", "tore"), ("trici", "tori"), ("trici", "tore"), ("essa", "e"), ("esse", "e"), ("essa", "a"), ("esse", "a")],
+}
+# Tyska: zu-infinitiv av delbara verb (anzubieten -> anbieten), komparativ (größeren -> groß) och feminina på -in/-innen
+DE_ZU = sorted("""ab an auf aus bei dar durch ein fest fort her hin los mit nach vor weg weiter zu zurück zusammen um wieder
+    kennen statt teil frei dran heraus herum hinein vorbei zurecht wiederher""".split(), key=len, reverse=True)
+DE_COMP = sorted("er ere eren erem erer eres".split(), key=len, reverse=True)
 SUFFIXES = {
     "fr": sorted("""s x e es ée ées é és i ie is it its ies u ue us ues er ir re ons ez ent ais ait aient ions iez
         erai eras era erons erez eront erais erait erions eraient rai ras ra rons rez ront rais rait rions riez raient
@@ -171,9 +200,9 @@ DE_PREFIXES = sorted("""ab an auf aus bei durch ein fest fort her hin los mit na
     unter wieder""".split(), key=len, reverse=True)
 # Räkneord (lärs via grammatiken): tjugotal, hundratal, ordningstal
 NUMERAL = {
-    "fr": re.compile(r"^(un|deux|trois|quatre|cinq|six|sept|huit|neuf|dix|onze|douze|treize|quatorze|quinze|seize|vingt|trente|quarante|cinquante|soixante|cent|mille|et|-)+(s|ième|ièmes|aine|aines)?$"),
-    "de": re.compile(r"^(ein|eins|zwei|drei|vier|fünf|sechs|sieben|sieb|acht|neun|zehn|elf|zwölf|zwanzig|dreißig|und|zig|hundert|tausend)+(te|ten|ter|tes|tem|ste|sten|stel)?$"),
-    "it": re.compile(r"^(uno|un|due|tre|tré|quattro|cinque|sei|sette|otto|nove|dieci|undici|dodici|tredici|quattordici|quindici|sedici|diciassette|diciotto|diciannove|venti|vent|trenta|trent|quaranta|quarant|cinquanta|cinquant|sessanta|sessant|settanta|settant|ottanta|ottant|novanta|novant|cento|cent|mille|mila|milioni|milione)+(esimo|esima|esimi|esime)?$"),
+    "fr": re.compile(r"^(un|deux|trois|quatre|cinq|six|sept|huit|neuf|dix|onze|douze|treize|quatorze|quinze|seize|vingt|trente|quarante|cinquante|soixante|cent|mille|et|-|quatr|cinqu|neuv|onz|douz|treiz|quatorz|quinz|seiz|trent|quarant|cinquant|soixant)+(s|ième|ièmes|aine|aines)?$"),
+    "de": re.compile(r"^(ein|eins|zwei|drei|vier|fünf|sechs|sieben|sieb|acht|neun|zehn|elf|zwölf|zwanzig|dreißig|und|zig|hundert|tausend|sech|dritt|erst|siebt)+(te|ten|ter|tes|tem|ste|sten|stel|er|erjahre|erjahren)?$"),
+    "it": re.compile(r"^(uno|un|due|tre|tré|quattro|cinque|sei|sette|otto|nove|dieci|undici|dodici|tredici|quattordici|quindici|sedici|diciassette|diciotto|diciannove|venti|vent|trenta|trent|quaranta|quarant|cinquanta|cinquant|sessanta|sessant|settanta|settant|ottanta|ottant|novanta|novant|cento|cent|mille|mila|milioni|milione|undic|dodic|tredic|quattordic|quindic|sedic|diciassett|diciott|diciannov)+(esimo|esima|esimi|esime)?$"),
 }
 UMLAUT = str.maketrans("äöü", "aou")
 WORD_RE = re.compile(r"[^\W_]+(?:['’][^\W\d_]+)*(?:-[^\W\d_]+)*|\d+(?:[.,:]\d+)*")
@@ -270,6 +299,17 @@ def load_words(code):
                 continue
             words |= variants(s.split("|")[0])
     return words
+
+
+def load_nouns(code):
+    """Tyska substantiv i words.txt (der/die/das …): grundformen för -in/-innen (Mitarbeiterin) och inte för komparativ."""
+    out = set()
+    for f in word_files(code):
+        for line in f.read_text(encoding="utf-8").splitlines():
+            m = re.match(r"\s*(der|die|das)\s+([^\W\d_]+)", line.split("|")[0])
+            if m:
+                out.add(m.group(2).lower())
+    return out
 
 
 def _add_forms(forms, lang, verb, strings):
@@ -524,8 +564,9 @@ def it_irregular(w):
 # ---------- lemmatisering ----------
 
 class Lexicon:
-    def __init__(self, lang, known, forms, verbs=None):
+    def __init__(self, lang, known, forms, verbs=None, nouns=None):
         self.lang = lang
+        self.nouns = set(nouns or ())
         self.verbs = set(verbs or ()) | set(forms.values())
         self.known = set(known) | FUNCTION_SETS[lang]
         if lang == "it":                          # occuparsi -> occupare, så att occupata hittas
@@ -611,11 +652,52 @@ class Lexicon:
                     for c in self.candidates(alt):
                         if c in self.known and c.endswith(("are", "ere", "ire", "rre")):
                             return c
+        other = self.other_form(w)
+        if other:
+            return other
         if deaccent(w) in self.plain:
             return w
         s = self.stem(w)
         if len(s) >= 4 and s in self.stems:
             return s
+        return None
+
+    def other_form(self, w):
+        """Former som ändelserna inte täcker (2026-10-02). Bara när grundformen finns exakt bland de kända orden:
+        tyska zu-infinitiv av delbara verb (anzubieten -> anbieten, kennenzulernen -> kennenlernen), feminina på -in/-innen
+        av kända substantiv (Mitarbeiterin -> Mitarbeiter, Kollegin -> Kollege, Ärztin -> Arzt) och komparativ av kända ord
+        som inte är substantiv (größeren -> groß, ärmere -> arm, teurer -> teuer, dunklere -> dunkel); franska och
+        italienska feminina (chanteuse -> chanteur, entière -> entier, attrice -> attore, studentessa -> studente)."""
+        L, K = self.lang, self.known
+        if L == "de":
+            for p in DE_ZU:                                   # anzubieten, festzuhalten
+                if w.startswith(p + "zu") and len(w) - len(p) - 2 >= 4 and w.endswith(("en", "ern", "eln")):
+                    inf = p + w[len(p) + 2:]
+                    if inf in K or (inf in self.forms and self.forms[inf] in K):
+                        return inf
+            for suf in ("innen", "in"):                       # Mitarbeiterin, Studentinnen, Ärztin, Kollegin
+                if w.endswith(suf) and len(w) - len(suf) >= 3:
+                    b = w[: -len(suf)]
+                    for x in (b, b + "e", b.translate(UMLAUT)):
+                        if x in self.nouns and x in K:
+                            return x
+                    if self.compound(b):                      # Stadtplanerin = Stadt + Planer
+                        return b
+                    break
+            for suf in DE_COMP:                               # größeren, ärmere, teurer, kürzerer
+                if w.endswith(suf) and len(w) - len(suf) >= 2:
+                    b = w[: -len(suf)]
+                    for x in {b, b.translate(UMLAUT), b[:-1] + "er" if b.endswith("r") else b, b[:-1] + "el" if b.endswith("l") else b,
+                              b[:-1] + "ch" if b.endswith("h") else b}:
+                        if len(x) >= 3 and x in K and x not in self.nouns and x not in self.verbs:
+                            return x
+            return None
+        for fem, masc in FEM.get(L, ()):
+            for x in {w, w[:-1] if w.endswith(("s", "x")) and L == "fr" else w}:
+                if x.endswith(fem) and len(x) - len(fem) >= 2:
+                    b = x[: -len(fem)] + masc
+                    if b in K:
+                        return b
         return None
 
     def compound(self, w):
@@ -760,7 +842,10 @@ def run(selected=None, write=True, show=None):
         verbs = set(load_verbs(c))
         for p in chain[c]:
             verbs |= load_verbs(p)
-        lex = Lexicon(lang, known, forms[lang], verbs)
+        nouns = set(load_nouns(c)) if lang == "de" else set()
+        for p in chain[c]:
+            nouns |= load_nouns(p) if lang == "de" else set()
+        lex = Lexicon(lang, known, forms[lang], verbs, nouns)
         rows = []
         for kind, typ, tid, title, lines, gloss in texts(c):
             if show and tid != show:

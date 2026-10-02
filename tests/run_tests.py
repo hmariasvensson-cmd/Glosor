@@ -751,6 +751,95 @@ def run_http(scenario, budget=8000):
 
 
 # ---------------------------------------------------------------------------------------------------------
+# Tempusigenkänningen (tenseCheck i lang.js, skrivchecklistan) utan falska träffar på vanliga ord (BACKLOG P3,
+# 2026-10-02): congiuntivo imperfetto (classe, passi, interesse, promesse, stessi), passato remoto (però, andrò,
+# biciclette), imperfetto (devo, bravo, motivo), futuro (però, entrò), franska passé composé (c'est aussi, il y a du)
+# och tyska Perfekt/Passiv (gegen, erst, substantiv, ich werde … gehen). Meningar som ska ge träff står i yes.
+# ---------------------------------------------------------------------------------------------------------
+SCENARIO_TENSE = r"""<script>
+const out=[]; const ok=(name,cond,info="")=>out.push((cond?"OK   ":"FEL  ")+name+(info?"  ("+info+")":""));
+const T={
+  "it1|imperfetto": {yes:["Da bambino giocavo sempre.","Dormivamo poco.","Faceva freddo.","Era tardi.","Lo dicevano tutti."],
+    no:["Devo scrivere.","Arrivo subito.","Il bravo studente è molto attivo.","Il congiuntivo è un motivo.","Scrivo una lettera.","Vivo a Roma, le chiavi sono sul divano."]},
+  "it1|futuro": {yes:["Domani andrò a Roma.","Parleremo domani.","Sarà bello.","Potrai venire?","Lo farò."],
+    no:["Però è vero.","La parete è bianca.","Entrò nella stanza.","Imparò l'italiano.","Un interprete supremo."]},
+  "it3|condizionale": {yes:["Vorrei un caffè.","Parlerei con lui.","Sarebbe bello.","Potresti aiutarmi?"], no:["Gli aerei e gli ebrei.","Mi presti la penna?","L'economia crebbe."]},
+  "it5|congiuntivo": {yes:["Se avessi tempo, verrei.","Pensavo che parlasse italiano.","Vorrei che tu finissi presto.","Spero che tu stia bene.","Credo che sia vero.","Se fossimo ricchi …"],
+    no:["La classe è grande.","Facciamo due passi.","Ho un grande interesse per la musica.","Le promesse sono le stesse, e loro stessi lo sanno.","Era bellissimo, anzi moltissimo.",
+        "Il processo e i progressi.","Manzoni scrisse un romanzo.","Ho voglia di un gelato.","Le tasse sono alte.","Un caffè, per favore."]},
+  "it6|passato remoto": {yes:["Nel 1861 l'Italia diventò un regno.","Verdi nacque nel 1813.","I soldati arrivarono tardi.","Dovette partire.","Finì il lavoro.","Credé alla storia."],
+    no:["Però può darsi.","Domani andrò a Roma e farò la spesa.","Perché?","Ho diciassette biciclette.","Lunedì è così.","Lui permette tutto.","Ciò è vero, perciò resto."]},
+  "fr|passé composé": {yes:["Je n'ai pas mangé.","Il est déjà parti.","J'ai fini.","Elle a vu le film.","On s'est bien amusés et nous avons beaucoup ri.",
+      "J'ai mangé.","Elle est allée au cinéma.","Nous nous sommes levés tôt.","Il a pris le train.","Ils ont dû partir.","Tu as vu ?","Elle est née en 2008."],
+    no:["C'est aussi vrai.","Il y a du pain.","Il est petit et beau.","C'est magnifique.","Il a peu de temps.","C'est pourquoi je reste ici.","Il y a trois chats."]},
+  "fr|futur proche": {yes:["Je vais manger.","Le nombre va encore augmenter.","Je ne vais pas rester."], no:["Ça va encore.","Il va contre le vent.","Ça va bien."]},
+  "fr4|subjonctif": {yes:["Il faut qu'il vienne.","Je veux que tu sois là."], no:["Je vais à Vienne.","Il habite près de Vienne."]},
+  "de|Perfekt": {yes:["Ich habe gestern gearbeitet.","Ich weiß, dass du es gesehen hast.","Wir sind nach Berlin gefahren.","Sie hat Musik studiert.","Er hat es vergessen."],
+    no:["Ich bin gegen den Krieg.","Ich bin erst 16.","Er ist sehr bekannt.","Das ist eine Gesellschaft mit vielen Erfahrungen.","Ich habe keine Lust, das zu bezahlen.",
+        "Ich habe Zeit, dir etwas anzubieten.","Es ist Zeit für mich zu gehen.","Wer verreist, hat viele Möglichkeiten.","Er ist einer der bekanntesten Geiger."]},
+  "de|Passiv": {yes:["Die Stadt wurde zerstört.","Ich weiß, dass die Schule geschlossen wird.","Das Fahren wurde verboten.","Das Haus wird gebaut.","Die Musik wird oft finanziert."],
+    no:["Ich werde morgen nach Berlin gehen.","Es wird keine Zeitzeugen mehr geben.","Wenn es dunkel wird, beginnt das Feuerwerk.","Es wird ihr gelingen.","Er wird das Spiel verlieren."]}
+};
+appReady().then(()=>{ try{
+  document.documentElement.dataset.theme="light";   // oberoende av datorns ljusa/mörka läge
+  for(const [key,{yes,no}] of Object.entries(T)){ const [c,t]=key.split("|"), f=(LANGUAGES[c].tenseCheck||{})[t];
+    const bad=f?[...yes.filter(s=>!f(s)).map(s=>"saknas: "+s),...no.filter(s=>f(s)).map(s=>"falsk träff: "+s)]:["finns inte"];
+    ok(`tempusigenkänning: ${c} ${t}`, !bad.length, bad.join(" | ")); }
+  // Samma kod i it5, it6 och it7 (condizionale och congiuntivo), it6 och it7 (passato remoto); it2–it7 ärver imperfetto och futuro från it1
+  { const tc=c=>LANGUAGES[c].tenseCheck, S=[...T["it5|congiuntivo"].yes,...T["it5|congiuntivo"].no,...T["it3|condizionale"].yes,...T["it3|condizionale"].no], P=[...T["it6|passato remoto"].yes,...T["it6|passato remoto"].no];
+    const same=(a,b,k,xs)=>xs.every(s=>!!tc(a)[k](s)===!!tc(b)[k](s));
+    ok("tempusigenkänning: it5, it6 och it7 ger samma svar", ["it6","it7"].every(c=>same("it5",c,"congiuntivo",S)&&same("it5",c,"condizionale",S)&&same("it3",c,"condizionale",S))&&same("it6","it7","passato remoto",P)
+      &&["it2","it3","it4","it5","it6","it7"].every(c=>tc(c).imperfetto===tc("it1").imperfetto&&tc(c).futuro===tc("it1").futuro)); }
+ }catch(e){ ok("undantag", false, e.message+" "+(e.stack||"").split("\n")[1]); }
+ ok("inga JavaScript-fel", !__err.length, __err.join(" ; "));
+ document.body.insertAdjacentHTML("beforeend","<pre id=out>"+out.join("\n").replace(/</g,"&lt;")+"</pre>");
+});
+</script>"""
+
+
+# ---------------------------------------------------------------------------------------------------------
+# Flervalet i Meningar (luckan) och glosquizet visar inte synonymer eller andra former av samma ord som "fel"
+# (trotzdem/dennoch, weil/da, daher/deshalb, pourtant/néanmoins, però/tuttavia), 2026-10-02. alsoRight i 00-common.js.
+# ---------------------------------------------------------------------------------------------------------
+SCENARIO_SYNONYM = r"""<script>
+const out=[]; const ok=(name,cond,info="")=>out.push((cond?"OK   ":"FEL  ")+name+(info?"  ("+info+")":""));
+appReady().then(async()=>{ try{
+  document.documentElement.dataset.theme="light";   // oberoende av datorns ljusa/mörka läge
+  useLang("de"); await until(()=>L.code==="de"&&WORDS.length&&!sess);   // tyska artiklar i norm (das Haus/die Häuser)
+  // Ordlistornas egna översättningar
+  const W=(t,sv)=>({t,sv});
+  const same=[["trotzdem","ändå","dennoch","ändå, likväl"],["weil","eftersom, därför att","da","eftersom (känd orsak)"],["daher","därför","deshalb","därför"],
+    ["deshalb","därför","aus diesem Grund","av den anledningen"],["also","alltså, så","somit","alltså, därmed"],["jedoch","dock, emellertid","cependant","emellertid, dock"],
+    ["pourtant","ändå","néanmoins","likväl, ändå"],["c'est pourquoi","det är därför","perciò","därför"],["però","men, dock","tuttavia","dock, ändå"],
+    ["perciò","därför","quindi","alltså, därför"],["siccome","eftersom","poiché","eftersom"],["gehen","gå","gehst","du går"],["das Haus (¨-er)","hus","die Häuser","husen"]];
+  const bad1=same.filter(([a,sa,b,sb])=>!alsoRight(W(a,sa),W(b,sb))||!alsoRight(W(b,sb),W(a,sa))).map(x=>x[0]+"/"+x[2]);
+  ok("synonymer: samma betydelse eller samma ord räknas som också rätt", !bad1.length, bad1.join(", "));
+  const diff=[["aber","men","weil","eftersom, därför att"],["weil","eftersom","wenn","när, om"],["der Tag (-e)","dag","das Tal (¨-er)","dal"],
+    ["von","av","wegen","på grund av"],["trotzdem","ändå","deshalb","därför"],["mais","men","donc","alltså"]];
+  const bad2=diff.filter(([a,sa,b,sb])=>alsoRight(W(a,sa),W(b,sb))).map(x=>x[0]+"/"+x[2]);
+  ok("synonymer: olika ord är fortfarande felalternativ", !bad2.length, bad2.join(", "));
+  // Tyska 5: luckan och glosquizet för trotzdem, weil och deshalb
+  const find=t=>WORDS.find(w=>w.t===t&&w.gap);
+  const pairs=[["trotzdem","dennoch"],["weil","da"],["deshalb","daher"],["deshalb","deswegen"]].filter(([a,b])=>find(a)&&WORDS.some(w=>w.t===b));
+  const bad3=[];
+  for(const [a,b] of pairs){ const w=find(a), x=WORDS.find(y=>y.t===b);
+    for(let i=0;i<40;i++){
+      const d=KINDS.cloze.mc({w}); if(d.opts.some(o=>!o.ok&&x.gap&&norm(o.label)===norm(x.gap.ans))) bad3.push("luckan "+a+": "+b);
+      if(mcOptions(w).some(o=>o!==w&&o.t===b)) bad3.push("glosquizet "+a+": "+b);
+      const wrong=d.opts.filter(o=>!o.ok).map(o=>WORDS.find(y=>y.gap&&norm(y.gap.ans)===norm(o.label))).filter(Boolean);
+      if(wrong.some(y=>alsoRight(y,w))) bad3.push("luckan "+a+": synonym"); } }
+  ok("synonymer: trotzdem/dennoch, weil/da, deshalb/daher visas inte som fel i Tyska 5", pairs.length>=2&&!bad3.length, pairs.length+" par; "+[...new Set(bad3)].join(", "));
+  // Fortfarande fyra felalternativ i alla frågor
+  const few=WORDS.filter(w=>w.gap).slice(0,150).filter(w=>KINDS.cloze.mc({w}).opts.length<5||mcOptions(w).length<5).map(w=>w.t);
+  ok("synonymer: luckan och glosquizet har fortfarande fem alternativ", !few.length, few.slice(0,5).join(", "));
+ }catch(e){ ok("undantag", false, e.message+" "+(e.stack||"").split("\n")[1]); }
+ ok("inga JavaScript-fel", !__err.length, __err.join(" ; "));
+ document.body.insertAdjacentHTML("beforeend","<pre id=out>"+out.join("\n").replace(/</g,"&lt;")+"</pre>");
+});
+</script>"""
+
+
+# ---------------------------------------------------------------------------------------------------------
 # Arkitektur (2026-09-28, del 6): arv mellan kurser (extends), grammatikens områden i datafilen, DATA_VERSION
 # per kurs, schemaversion S.v och MIGRATIONS, minne (högst KEEP_COURSES hämtade kurser), gamla molnbitar
 # raderas. Körs på en egen sida. Id-låsen i build.py testas i test_build_locks() nedan.
@@ -1045,6 +1134,14 @@ appReady().then(async()=>{ try{
     const w=Object.keys(__remote).filter(k=>k.startsWith(K+"~w")).map(k=>__remote[k].data).reduce((a,d)=>Object.assign(a,d),{});
     ok("id-byten (fr2): det sammanslagna läget skrivs ändå till molnet", !w[A]&&w[B]&&w[B].s===5&&__remote[K].score[2]===2, Object.keys(w).join());
     useLang("fr"); await until(()=>L.code==="fr"&&CLOUD.ready&&!CLOUD.attaching); }
+  // 4. Nivåmätaren läser fr2:s läge (kursen inte öppen) med id-bytena i index.html (ID_RENAMES), utan att skriva det (BACKLOG P3)
+  { const [A,B]=Object.entries(ID_RENAMES.fr2||{})[0]||[], k2=LANGUAGES.fr2.storageKey;
+    ok("id-byten: index.html har alla kursers id-byten", !!A&&canon(ID_RENAMES.fr)===canon(L.renames)&&!ID_RENAMES.de, Object.keys(ID_RENAMES).join());
+    const raw=JSON.stringify({pass:3,w:{[A]:{s:5,due:9},[B]:{s:4,due:8},"le flocon":{s:4,due:7}},log:[]});
+    localStorage.setItem(k2,raw); const st=peekState("fr2"), per=levelVocab().per.find(p=>p.code==="fr2");
+    ok("id-byten: nivåmätaren flyttar id:na i en kopia av en annan kurs läge", L.code==="fr"&&!!st&&!st.w[A]&&st.w[B]&&st.w[B].s===5&&per&&per.k===2, canon(st&&st.w)+" "+canon(per));
+    ok("id-byten: nivåmätaren skriver inte den andra kursens läge", localStorage.getItem(k2)===raw&&peekState("fr2")===st);
+    localStorage.removeItem(k2); }
  }catch(e){ ok("undantag", false, e.message+" "+(e.stack||"").split("\n")[1]); }
  ok("inga JavaScript-fel", !__err.length, __err.join(" ; "));
  document.body.insertAdjacentHTML("beforeend","<pre id=out>"+out.join("\n").replace(/</g,"&lt;")+"</pre>");
@@ -3239,6 +3336,8 @@ def main():
     text = run(SCENARIO) + "\n" + run(SCENARIO_DE) + "\n" + run(SCENARIO_FIXES) + "\n" + run(SCENARIO_SYNC, 30000) + "\n" + run_http(SCENARIO_HTTP)
     text += "\n" + run_http(SCENARIO_EXAMLAZY, 60000) + "\n" + test_exam_split()   # provet hämtas vid behov, minifiering, storlek (P2)
     text += "\n" + run(SCENARIO_ARCH, 30000) + "\n" + test_build_locks()   # arkitektur, del 6
+    text += "\n" + run(SCENARIO_TENSE, 20000)   # tempusigenkänningen utan falska träffar (P3, 2026-10-02)
+    text += "\n" + run(SCENARIO_SYNONYM, 30000)   # inga synonymer som felalternativ i flervalet (2026-10-02)
     text += "\n" + run(SCENARIO_RENAME, 30000) + "\n" + test_build_renames()   # ord-id som bytt namn, framstegen följer med (2026-10-01)
     text += "\n" + test_tatoeba()   # tools/tatoeba.py: skärpt matchning och kontrolläget (2026-10-01)
     text += "\n" + test_build_checks()   # byggkontroller, arkitekturgranskning 2026-09-29

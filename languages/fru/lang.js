@@ -38,7 +38,7 @@ LANGUAGES.fru = {
     const notCond = /^(vrais|(tir|attir|retir|admir|respir|inspir|expir|soupir|transpir|conspir|vir|chavir|délir|désir|éclair|dur|assur|rassur|jur|mesur|figur|murmur|demeur|satur|tortur|captur|pleur|cour|parcour|secour|mour|ouvr|couvr|découvr|offr|souffr)(ais|ait|ions|iez|aient))$|ér(ais|ait|ions|iez|aient)$/i;
     return {
       "conditionnel": t => (t.match(cond) || []).some(m => !notCond.test(m.replace(/^[^\p{L}]+/u, ""))),
-      "subjonctif": t => new RegExp(b + "(sois|soit|soient|soyons|soyez|aie|aies|ait|ayons|ayez|aient|fass\\p{L}*|puiss\\p{L}*|aill(e|es|ent)|sach(e|es|ions|iez|ent)|veuill\\p{L}*|vienn(e|es|ent)|prenn(e|es|ent)|doiv(e|es|ent))" + w, "iu").test(t)
+      "subjonctif": t => new RegExp(b + "(sois|soit|soient|soyons|soyez|aie|aies|ait|ayons|ayez|aient|fass\\p{L}*|puiss\\p{L}*|aill(e|es|ent)|sach(e|es|ions|iez|ent)|veuill\\p{L}*|(?<!(à|de)\\s)vienn(e|es|ent)|prenn(e|es|ent)|doiv(e|es|ent))" + w, "iu").test(t)
         || new RegExp(b + "(que|qu')\\s*(je|j'|tu|il|elle|on|nous|vous|ils|elles)\\s*\\p{L}+(isse|isses|issent|ions|iez)" + w, "iu").test(t),
       // Tredje person av de vanligaste verben i passé simple, och pluraländelserna -èrent/-irent/-urent/-inrent
       "passé simple": t => new RegExp(b + "(fut|furent|eut|eurent|fit|firent|vint|vinrent|prit|prirent|put|purent|dut|durent|sut|surent|voulut|voulurent|naquit|mourut|parut|mit|mirent|vit|virent|\\p{L}{2,}(èrent|irent|urent))" + w, "iu").test(t)

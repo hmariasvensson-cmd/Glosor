@@ -34,7 +34,10 @@ LANGUAGES.fr = {
     "quand","pendant que","après","avant de","comme","aussi","en plus","d'un côté","de l'autre côté","par exemple","à mon avis","bref","même si","si"],
   // Enkel igenkänning av tempus i elevens text (för checklistan, inte för rättning)
   tenseCheck: {
-    "passé composé": t => /(^|[^\p{L}])(ai|as|a|avons|avez|ont|suis|es|est|sommes|êtes|sont)\s+(\p{L}+(é|ée|és|ées|i|ie|is|ies|u|ue|us|ues|it|ert|ort))(?![\p{L}])/iu.test(t),
+    // Hjälpverbet, ev. ett eller två adverb (je n'ai pas mangé, il est déjà parti) och ett particip. Ord som slutar som ett
+    // particip men inte är det räknas inte: c'est aussi, c'est vrai, il y a du, c'est petit, il est beau, il a peu, magnifique.
+    "passé composé": t => [...t.matchAll(/(^|[^\p{L}])(ai|as|a|avons|avez|ont|suis|es|est|sommes|êtes|sont)((\s+(pas|plus|jamais|rien|déjà|aussi|bien|beaucoup|toujours|souvent|encore|vraiment|enfin|même|tout|trop|mal|presque|longtemps)){0,2})\s+(\p{L}+(é|ée|és|ées|i|ie|is|ies|u|ue|us|ues|û|it|ert|ort))(?![\p{L}])/giu)]
+      .some(m => !/^(aussi|ainsi|ici|parmi|si|ni|midi|lundi|mardi|mercredi|jeudi|vendredi|samedi|joli|jolie|ami|amie|envie|vie|pluie|compagnie|folie|série|plus|vous|nous|tous|dessus|dessous|jus|bus|virus|campus|bonus|refus|paris|avis|souris|tapis|au|tu|du|qu|gratuit|huit|petit|nuit|lit|fruit|bruit|esprit|crédit|appétit|circuit|profit|fort|vert|tort|port|désert|concert|transport|effort|sport|confort)$|(ai|oi)s?$|ui$|oit$|.(eu|au)$|(que|ques|gue|gues)$|(erie|gie|phie)$/i.test(m[6])),
     // -ais/-ait/-aient: alla ord utom vanliga ord som inte är imparfait (mais, français, je connais, il fait …),
     // conditionnel (je parlerais, je voudrais) och presens av verb på -ayer/-oyer/-uyer (ils essaient, ils paient).
     // -ions/-iez räknas bara efter nous/vous ("nous parlions"), och inte presens av verb på -ier (nous étudions).
@@ -44,7 +47,10 @@ LANGUAGES.fr = {
       || (t.match(/(^|[^\p{L}])(nous|vous)\s+(\p{L}{2,}(ions|iez))(?![\p{L}])/giu)||[])
         .some(m => !/^(étud|oubl|remerc|appréc|vérif|cop|cr|sk|conf|mar|pr|env|sour|r|pl|publ|expéd|modif|identif|justif|simplif|qualif|assoc|négoc|var|sacrif|certif|rel|photograph|l|n|suppl|all|inject)i(ons|ez)$/i
           .test(m.replace(/^[^\p{L}]*(nous|vous)\s+/iu, ""))),
-    "futur proche": t => /(^|[^\p{L}])(vais|vas|va|allons|allez|vont)\s+\p{L}+(er|ir|re)(?![\p{L}])/iu.test(t),
+    // Ev. adverb före infinitiven (va encore augmenter, ne vais pas rester), men inte ça va encore, il va contre, ils vont
+    // notre … (ord på -er/-ir/-re som inte är infinitiv)
+    "futur proche": t => [...t.matchAll(/(^|[^\p{L}])(vais|vas|va|allons|allez|vont)((\s+(pas|plus|jamais|encore|bientôt|aussi|bien|vraiment|enfin|même|tout|sûrement|certainement|probablement|peut-être|sans doute|donc|alors)){0,2})\s+(\p{L}+(er|ir|re))(?![\p{L}])/giu)]
+      .some(m => !/^(encore|entre|contre|notre|votre|autre|hier|super|dernier|premier|cher|mer|hiver|soir|plaisir|désir|loisir|cuir|avenir)$/i.test(m[6])),
     "présent": t => t.trim().length > 0
   },
 

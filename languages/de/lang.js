@@ -37,13 +37,32 @@ LANGUAGES.de = {
     "deshalb","deswegen","daher","außerdem","zudem","darüber hinaus","sondern","während","wenn","falls","nachdem","bevor",
     "sodass","einerseits","andererseits","zum Beispiel","meiner Meinung nach","im Gegensatz","nicht nur","zusammenfassend"],
   // Enkel igenkänning av tempus i elevens text (för checklistan, inte för rättning)
-  tenseCheck: {
+  // Perfekt och Passiv: hjälpverbet och ett particip i samma mening, efter hjälpverbet (inom 80 tecken) eller precis före
+  // (…, dass ich es gesehen habe; …, wenn es finanziert wird). Particip skrivs med liten bokstav (Gesellschaft, Gedanken och
+  // Erfahrungen är substantiv), och ord som ser ut som particip räknas inte: gegen, erst, geht, beiden, bekannt, bereit,
+  // un- (ungerecht), infinitiv (ich werde … gehen, angeben) och zu-infinitiv (zu bezahlen, anzubieten). Passiv tar inte
+  // be-/ver-/er-ord på -en, eftersom de oftast är infinitiv i futurum (wird … verlieren). Testas i tests/run_tests.py.
+  tenseCheck: (() => {
+    const notPart = new RegExp("^(gegen|dagegen|entgegen|geht|angeht|erst|erste|ersten|erster|erstes|überhaupt|beide|beiden|eigenen|bereit|bewusst|ernst|beste|besten|besseren|bestimmt|bestimmten|bekannt|berühmt|beliebt|begabt|erwachsen|verwandt|befreundet|verschieden|verschiedenen|vergangenen|sogenannten|gemeinsamen|gesetzlichen|insgesamt|übermorgen|kompliziert|gezielt|gegenteiligen|bekommt|besteht|entscheidet|gehörten|genießen|gehören|gelten|geschehen|gelingen|gestehen|gebrauchen|gewöhnen|gestalten|genehmigen|gefährden|gedenken|gewinnen)$"
+      + "|^(ab|an|auf|aus|bei|ein|fest|her|hin|mit|nach|vor|weg|zu|zurück|zusammen|um|durch|weiter|vorbei|heraus|hinaus)?(gehen|geben)$|^un(?!ter)|sten$", "u");   // -sten: superlativ (bekanntesten)
+    const zuInf = /^(ab|an|auf|aus|bei|ein|fest|her|hin|los|mit|nach|vor|weg|zu|zurück|zusammen|entgegen|teil|statt|frei|kennen|dar|um|durch|wieder)zu\p{Ll}+en$/u;
+    // Finns hjälpverbet (aux, ett ord) och ett ord som klarar ok efter det (inom 80 tecken) eller precis före, i samma sats
+    // (meningen delad vid . ! ? , ; : och tankstreck, så att "Wer verreist, hat …" och "wird, beginnt …" inte räknas)?
+    const near = (aux, ok) => t => t.split(/[.!?,;:–—]/).some(s => {
+      const ws = [...s.matchAll(/\p{L}+/gu)], good = i => i >= 0 && i < ws.length && ok(ws[i][0]) && !notPart.test(ws[i][0])
+        && !zuInf.test(ws[i][0]) && !(i > 0 && ws[i - 1][0] === "zu");
+      return ws.some((a, i) => aux.test(a[0]) && (good(i - 1) || ws.some((w, j) => j > i && w.index - a.index - a[0].length <= 81 && good(j)))); });
+    const part = /^(\p{Ll}*ge\p{Ll}+(t|en)|\p{Ll}+iert|(ver|be|er|ent|zer|über)\p{Ll}+(t|en))$/u;
+    return {
     "Präsens": t => t.trim().length > 0,
-    "Perfekt": t => /(^|[^\p{L}])(habe|hast|hat|haben|habt|bin|bist|ist|sind|seid)(?![\p{L}])[^.!?]{0,80}[^\p{L}](\p{L}*ge\p{L}+(t|en)|\p{L}+iert|(ver|be|er|ent|zer|über)\p{L}+(t|en))(?![\p{L}])/iu.test(t),
+    "Perfekt": near(/^(habe|hast|hat|haben|habt|bin|bist|ist|sind|seid)$/i, w => part.test(w)),
     "Präteritum": t => /(^|[^\p{L}])(war|warst|waren|wart|hatte|hatten|hattest|ging|gingen|kam|kamen|wurde|wurden|machte|machten|sagte|sagten|fuhr|fuhren|sah|sahen|gab|gaben|nahm|nahmen|dachte|dachten|konnte|konnten|musste|mussten|wollte|wollten|durfte|durften|fand|fanden|lebte|lebten|wohnte|wohnten|arbeitete|arbeiteten)(?![\p{L}])/iu.test(t),
     "Konjunktiv II": t => /(^|[^\p{L}])(würde|würdest|würden|würdet|hätte|hättest|hätten|wäre|wärst|wären|könnte|könnten|müsste|müssten|dürfte|sollte|sollten)(?![\p{L}])/iu.test(t),
-    "Passiv": t => /(^|[^\p{L}])(wird|werden|wurde|wurden|worden)(?![\p{L}])[^.!?]{0,80}[^\p{L}]ge\p{L}+(t|en)(?![\p{L}])/iu.test(t)
-  },
+    // Passiv: be-/ver-/er-ord på -en bara för vanliga starka particip (verboten, beschrieben), annars är de oftast infinitiv
+    "Passiv": near(/^(wird|werden|wurde|wurden|worden)$/i, w => /^(\p{Ll}*ge\p{Ll}+(t|en)|\p{Ll}+iert|(ver|be|er|ent|zer|über)\p{Ll}+t)$/u.test(w)
+      || /^(ver|be|er|ent|zer|über|emp)\p{Ll}*(boten|loren|standen|schrieben|schieden|schienen|schoben|gonnen|sprochen|troffen|funden|bunden|glichen|fohlen|zogen|nommen|worfen|wiesen|blieben|stiegen)$/u.test(w))
+    };
+  })(),
 
   // Grammatikövningar. Frågorna ligger i content/grammar-*.json (format i docs/spec/grammatik.md, områdena i grammar.json).
   // Adjektivändelser skapas i programmet av ordlistans substantiv och tabellen i src/kinds/60-grammar.js.

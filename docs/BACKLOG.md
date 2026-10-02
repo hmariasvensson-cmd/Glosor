@@ -80,20 +80,18 @@ Granskning av `src/app.js`, `src/kinds/`, arvet i `lang.js`, `build.py`, testern
 - **P3: TDN-gränserna** (80/60/40 %) är uppskattningar, inte TestDaF:s egna.
 - **P3: Planerna genereras av `tools/plan.py`** — kör om när en kurs får nya avsnitt eller texter (bygget varnar).
 
+## Öppet efter 2026-10-02 (version 38)
+
+- **P3: Texter under täckningsmålet** (95 % hör, 97 % läs, efter förbättrade tackning.py): ca 50 texter, mest provtexter i fr1, frs4, fr, fru (fr1-ce-3 81 %, frs4-ce-1/8 89 %), några i de4, de6, fr2, it2, it3 — se `docs/tackning.md`. Provtexter visar inga glosor, så skriv om med kända ord eller lägg orden i kursen.
+- **P3: Regelsidor saknas** för `rel` och `stare-per` (it3) och `pron-verbi` (it4).
+- **P3: Uttalspar med samma stavning** (it3 pèsca/pésca, àncora/ancòra) fungerar bara om rösten läser accenterna.
+
 ## Öppet efter 2026-10-01 (version 36)
 
 - **P3: Dubbletter mellan kurser** (godkänt överlapp, inget att göra): it2/it1 «la mezzanotte», «in bocca al lupo»; it3/it1 «già»; de/de6 «die Überschrift»; 58 ord i både de1 och de3 m.fl.
-- **P3: Nivåmätaren** (`peekState`) läser andra kursers sparade lägen utan id-byten tills kursen har öppnats.
-
-- **P3: Uttalspar med samma stavning** (it3 pèsca/pésca, àncora/ancòra) fungerar bara om rösten läser accenterna — lyssna igenom.
-- **P3: Format:** de1 hör-/lästexternas frågor har 3 alternativ (specen 4); de3 berättelser saknar `sv`; it3, it4, frs4, frs5 saknar `content/SPEC.md`; tenseCheck i it5 ger falska träffar för congiuntivo imperfetto (classe, passi, interesse).
-
 ## Öppet efter 2026-10-01 (version 35)
 
 Granskningspunkterna nedan är avgjorda av granskningsagenterna 2026-10-01 (version 36).
 
-- **P3: Berättelser och provtexter under täckningsgränsen** (appen visar inga glosor där): it1-berättelserna (chiedere, rispondere, arrivare, sapere kommer först i it2/it3), it2 j2/j7 och it2-le-1, it3 k1/k5, de7 s-s6. Skriv om med kända ord.
-- **P3: `tools/tackning.py` känner inte igen** zu-infinitiv av delbara verb, -in-former, komparativ och dessen/diejenigen (tyska), så siffrorna är något för låga.
 - **P3: Dubbletter:** frs5 och fr4 delar 245 ord (förslag: ta bort ur frs5, inte fr4, listan i agentens arbetsfil); "die Überschrift (-en)" finns i både de och de6; it5–it6 sju ord; il Parlamento/il parlamento. Ändra bara med `ids.removed` och förälderns godkännande.
-- **P3: Franska ord som saknas i hela kedjan:** déranger, électrique.
 - **P3: accord-009** (frs5) har distraktorn "pri", som inte är en fransk form — kontrollera om det är meningen.

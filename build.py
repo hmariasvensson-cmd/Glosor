@@ -1655,6 +1655,9 @@ def main():
         "BUILT": datetime.datetime.now().strftime("%Y-%m-%d %H:%M"),
         "DATAVERSION": js_string(dataversion),
         "UPCOMING": js_string([u for u in upcoming if u.get("code") not in confs]),
+        # Alla kursers id-byten (samma som renames i datafilerna, ett par kB): nivåmätaren läser andra kursers sparade
+        # lägen utan att hämta deras datafiler och flyttar id:na i en kopia (peekState i src/kinds/80-level.js)
+        "RENAMES": js_string({c: course_data[c]["renames"] for c in codes if course_data[c].get("renames")}),
     }
     html = re.sub(r"\{\{(\w+)\}\}", lambda m: parts[m.group(1)], page)
     # preview.html har datan inbakad, så att den går att öppna direkt från disken och i testerna

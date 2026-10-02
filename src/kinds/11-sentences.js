@@ -20,8 +20,9 @@ function startCloze(){
 }
 defineKind("cloze",{name:"Meningar",
   mc:c=>{const w=c.w, a=norm(w.gap.ans), seen=new Set([a]);
-    // Felalternativ ur samma avsnitt först, sedan ur resten; pickSome blandar bara så långt det behövs
-    const ok=x=>{ if(!x.gap) return false; const k=norm(x.gap.ans); if(seen.has(k)) return false; seen.add(k); return true; };
+    // Felalternativ ur samma avsnitt först, sedan ur resten; pickSome blandar bara så långt det behövs.
+    // Inte synonymer eller andra former av samma ord, som också skulle passa i luckan (alsoRight i 00-common.js)
+    const ok=x=>{ if(!x.gap) return false; const k=norm(x.gap.ans); if(seen.has(k)||alsoRight(x,w)||sameWordForm(x.gap.ans,w.gap.ans)) return false; seen.add(k); return true; };
     const ws_=pickSome(secWords(w.sec),4,ok); if(ws_.length<4) pickSome(WORDS,4,x=>x.sec!==w.sec&&ok(x),ws_);
     const picks=ws_.map(x=>x.gap.ans);
     return{tab:"Mening", head:clozeHead(w), ask:`Vilket ord passar i luckan? ${clozeHint(w)}.`,

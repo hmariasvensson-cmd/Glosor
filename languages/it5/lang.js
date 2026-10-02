@@ -29,11 +29,29 @@ LANGUAGES.it5 = {
     "affinché", "prima che", "a patto che", "senza che", "nonostante", "dal momento che", "da una parte", "dall'altra",
     "prima di tutto", "in conclusione", "per questo", "in realtà", "innanzitutto", "in primo luogo", "insomma", "a mio parere"]},
 
-  // Tempusigenkänning i skrivuppgifterna: som i Italienska 1 och 2, plus condizionale och congiuntivo
-  tenseCheck: {
-    "condizionale": t => /(^|[^\p{L}])\p{L}+(rei|resti|rebbe|remmo|reste|rebbero)(?![\p{L}])/iu.test(t),
-    "congiuntivo": t => /(^|[^\p{L}])(sia|siano|siate|abbia|abbiano|faccia|facciano|vada|vadano|venga|vengano|possa|possano|debba|voglia|sappia|stia|dica|\p{L}+(assi|asse|assimo|assero|essi|esse|essimo|essero|issi|isse|issimo|issero)|fossi|fosse|fossimo|fossero)(?![\p{L}])/iu.test(t)
-  },
+  // Tempusigenkänning i skrivuppgifterna: som i Italienska 1 och 2, plus condizionale och congiuntivo.
+  // Ord för ord med en verbstam före ändelsen, se it1/lang.js. Congiuntivo imperfetto (parlassi, avesse, finissero) kräver
+  // minst två bokstäver före -assi/-essi/-issi …, och ord som slutar likadant står i undantagen: classe, passi, tasse,
+  // interesse, promesse, processi, stessi, studentesse, superlativ (bellissimo; -issimo räknas bara för vanliga verb på -ire)
+  // och passato remoto (scrisse, visse, disse). Voglia och faccia efter ho, la, una … är substantiv (ho voglia di, la faccia).
+  // Samma kod i it6 och it7 (som också har passato remoto); testas i tests/run_tests.py (tempusigenkänning, italienska).
+  tenseCheck: (() => {
+    const words = t => t.match(/\p{L}+/gu) || [];
+    const cond = /(er|ir|vr|rr|dr|[aeiou]tr|[aeiou]pr)(ei|esti|ebbe|emmo|este|ebbero)$|^(ri|dis|contraf|sod)?(d|f|s|st)ar(ei|esti|ebbe|emmo|este|ebbero)$/iu;
+    const notCond = /^(aerei|arresti)$|corremmo$/iu;
+    const congW = /^(sia|siano|siate|abbia|abbiano|abbiate|vada|vadano|venga|vengano|possa|possano|debba|debbano|vogliano|sappia|sappiano|stia|stiano|dica|dicano|facciano|fossi|fosse|fossimo|fossero|dessi|desse|dessimo|dessero|stessimo|stessero)$/iu;
+    const congNoun = /^(voglia|faccia)$/iu, nounBefore = /^(ho|hai|ha|abbiamo|avete|hanno|avevo|aveva|la|una|di|della|nella|sulla|in|poca|tanta|molta|nessuna|senza|mia|tua|sua)$/iu;
+    const congImp = /^\p{L}{2,}[aei]ss(i|e|imo|ero)$/iu;
+    const notCong = new RegExp("^(cla|ripa|sorpa|compa|mata|sinta|ipota|rila|(in|s)?gra|(ab|s)?ba|(am|s)?ma|(in|s)?ca|(pro|pre|per|am|com|ri|tras|dis|im|scom|o|s)me)ss[ie]$"
+      + "|(press|ccess|ocess|gress|pless|nness|teress|ssess|ntess|oress|ipess|uchess)[ie]$|^(stess|spess|abiss|ecliss)"
+      + "|(scr|vv|onv|dd)iss(i|e|ero)$|^(riv|pred|bened|maled)iss|^(ri)?elesse$", "iu");
+    const verbIssimo = /^(fin|cap|dorm|part|ven|usc|sent|prefer|apr|offr|segu|serv|riusc|mor|sal|un|pul|sped|costru|scopr|sugger|vest)issimo$/iu;
+    return {
+      "condizionale": t => words(t).some(w => cond.test(w) && !notCond.test(w)),
+      "congiuntivo": t => words(t).some((w, i, ws) => congW.test(w) || (congNoun.test(w) && !nounBefore.test(ws[i - 1] || ""))
+        || (congImp.test(w) && !notCong.test(w) && (!/issimo$/i.test(w) || verbIssimo.test(w))))
+    };
+  })(),
 
   storyIntro: "Läs berättelsen och välj rätt form i varje lucka: congiuntivo eller indikativ, condizionale, passiv, och ett sambandsord som passar.",
   cultureIntro: "Läs en text om Italien, svara på en fråga och jämför med hur det är i Sverige.",

@@ -28,8 +28,10 @@ LANGUAGES.it3 = {
   // Bindeord i skrivchecklistan: Italienska 1:s lista plus några nya för att diskutera och berätta sammanhängande
   connectors: {$append: ["anche se", "infatti", "comunque", "cioè", "insomma", "per questo", "a mio parere", "prima di tutto"]},
   // Tempusigenkänning: som i Italienska 1 och 2, plus condizionale (vorrei, dovresti, sarebbe …)
+  // Ord för ord med verbstam före ändelsen (parlerei, vorrei, potrei, sarei), inte aerei och arresti; se it1/lang.js
   tenseCheck: {
-    "condizionale": t => /(^|[^\p{L}])\p{L}+(rei|resti|rebbe|remmo|reste|rebbero)(?![\p{L}])/iu.test(t)
+    "condizionale": t => (t.match(/\p{L}+/gu) || []).some(w => /(er|ir|vr|rr|dr|[aeiou]tr|[aeiou]pr)(ei|esti|ebbe|emmo|este|ebbero)$|^(ri|dis|contraf|sod)?(d|f|s|st)ar(ei|esti|ebbe|emmo|este|ebbero)$/iu.test(w)
+      && !/^(aerei|arresti)$|corremmo$/iu.test(w))
   },
 
   // Områden (topics; secs = kapitel där området kommer först) och regelnamn ligger i grammar.json, som build.py lägger i kursens datafil (L.grammar).

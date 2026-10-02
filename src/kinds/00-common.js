@@ -19,6 +19,37 @@ const reEsc=s=>s.replace(/[.*+?^${}()|[\]\\]/g,"\\$&");
 const apos=s=>String(s||"").replace(/[’`´]/g,"'");
 const hasWord=(text,w)=>new RegExp("(^|[^\\p{L}])"+reEsc(apos(w))+"(?![\\p{L}])","iu").test(apos(text));
 
+/* ---------- Felalternativ som också är rätt (flervalet i glosquizet och i Meningar) ----------
+   Ett felalternativ får inte passa lika bra som det rätta: synonymer (trotzdem/dennoch: båda "ändå", weil/da: båda
+   "eftersom", daher/deshalb: båda "därför") och en annan form av samma ord (gehe/gehst, das Spiel/spiel).
+   svMeanings delar det svenska fältet på , ; / och "eller", tar bort parenteser och inledande en/ett/att/sig, och två
+   ord överlappar när en betydelse är densamma, eller när en betydelse är ett enda ord som står som eget ord i en kort
+   betydelse hos det andra ("därför" och "det är därför"). SV_SYN har några svenska synonymgrupper för bindeord, där
+   ordlistorna översätter olika (deshalb "därför", aus diesem Grund "av den anledningen"). */
+const SV_SYN=[["därför","av den anledningen","av det skälet","därav"],["ändå","likväl","trots det","trots detta"],
+  ["eftersom","därför att"],["alltså","således","följaktligen"],["dock","emellertid"]];
+function svMeanings(sv){
+  return String(sv||"").toLowerCase().replace(/\([^)]*\)|\[[^\]]*\]/g," ").split(/[,;/]|\s+eller\s+/)
+    .map(s=>s.replace(/[.!?…"„“”«»:]/g," ").replace(/\s+/g," ").trim().replace(/^(en|ett|att|sig|något|någon) /,"").trim()).filter(Boolean)
+    .map(m=>{ const g=SV_SYN.find(g=>g.includes(m)); return g?g[0]:m; });
+}
+function svOverlap(a,b){
+  const A=svMeanings(a), B=svMeanings(b), words=m=>m.split(" ");
+  const inShort=(x,y)=>!x.includes(" ")&&x.length>=4&&words(y).length<=3&&words(y).includes(x);   // inte "av" i "på grund av"
+  return A.some(x=>B.some(y=>x===y||inShort(x,y)||inShort(y,x)));
+}
+// Två former av samma ord: samma grundform (variants) eller samma början på nästan hela ordet (gehe/gehst, Haus/Häuser),
+// men inte weil/wenn eller Tag/Tal
+function sameWordForm(a,b){
+  const clean=s=>{ s=norm(String(s||"").replace(/\(.*?\)/g,"")); return L.hintStrip?s.replace(L.hintStrip,""):s; };   // utan artikel (das Haus)
+  const A=clean(a), B=clean(b); if(!A||!B) return false; if(A===B) return true;
+  if(A.includes(" ")||B.includes(" ")) return false;
+  const x=deacc(A), y=deacc(B); let k=0; while(k<x.length&&k<y.length&&x[k]===y[k]) k++;
+  return k>=Math.max(3,Math.min(x.length,y.length)-2);
+}
+// Passar ordet x lika bra som w (synonym eller samma ord)? Används för att sålla felalternativen.
+const alsoRight=(x,w)=>x===w||svOverlap(x.sv,w.sv)||variants(x.t).some(v=>variants(w.t).includes(v))||sameWordForm(x.t,w.t);
+
 /* ---------- Ordlistan med Mina ord ---------- */
 // Ord som eleven sparar från texterna läggs som ett eget avsnitt och repeteras som vanliga glosor
 function rebuildWords(){

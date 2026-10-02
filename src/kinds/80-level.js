@@ -38,12 +38,16 @@ const VOC_NEXT={1:750,2:1500,3:2500,4:3500,5:4500};   // ungefär så många ord
 
 // Sparat läge för en annan kurs, bara för läsning (localStorage på den här enheten)
 // Tolkas bara om när texten i localStorage har ändrats (PEEK: {storageKey: {raw, st}}); resultatet får inte ändras.
+// Kursens id-byten (ID_RENAMES i index.html, samma som datafilens renames) görs på den inlästa kopian, så att ett ord
+// som bytt id räknas en gång även innan kursen har öppnats; localStorage skrivs inte (det gör loadState när kursen öppnas).
 const PEEK={};
 function peekState(code){
   if(L&&code===L.code) return S;
   const k=LANGUAGES[code].storageKey;
   try{ const raw=localStorage.getItem(k)||"null"; if(PEEK[k]&&PEEK[k].raw===raw) return PEEK[k].st;
-    const x=JSON.parse(raw), st=x&&typeof x==="object"?x:null; PEEK[k]={raw,st}; return st; }
+    const x=JSON.parse(raw), st=x&&typeof x==="object"?x:null;
+    if(st&&typeof ID_RENAMES==="object"&&ID_RENAMES) applyRenames(st,ID_RENAMES[code]);
+    PEEK[k]={raw,st}; return st; }
   catch(e){ return null; }   // privat läge eller trasig text: kursen räknas inte med (medvetet tyst)
 }
 
