@@ -938,6 +938,248 @@ def test_build_locks():
 
 
 # ---------------------------------------------------------------------------------------------------------
+# Ord-id som bytt namn (2026-10-01, föräldern: "ja fixa det"): languages/<kod>/ids.renamed, L.renames och applyRenames.
+# Elevens framsteg följer med till det nya id:t: Franska 3 (fr, eleven som övar varje dag) med steg, repetitionsdatum,
+# meningspoäng, pågående runda, kapitelprov, Mina ord och osänd felrapport på de gamla id:na, från localStorage och från
+# molnet (gammalt och nytt molnformat); sammanslagning av två id i fr2 (le coucher de/du soleil); att köra två gånger
+# ändrar inget; en äldre molnkopia med gamla id vinner inte felaktigt. Byggkontrollerna i test_build_renames().
+# ---------------------------------------------------------------------------------------------------------
+SCENARIO_RENAME = r"""<script>
+const out=[]; const q=s=>document.querySelector(s);
+const ok=(name,cond,info="")=>out.push((cond?"OK   ":"FEL  ")+name+(info?"  ("+info+")":""));
+const canon=v=>JSON.stringify(v,(k,x)=>x&&typeof x==="object"&&!Array.isArray(x)?Object.keys(x).sort().reduce((o,k)=>(o[k]=x[k],o),{}):x);
+const clone=v=>JSON.parse(JSON.stringify(v));
+const P="data/users/u_test/";
+const flush=async()=>{ for(let i=0;i<40&&(CLOUD.busy||Object.keys(CLOUD.pending).length);i++){ await cloudFlush(); await new Promise(r=>setTimeout(r,20)); } };
+const OLD="prendre la retraite", NEW="prendre sa retraite", OLD2="sois (être) en sûr", NEW2="sois-en sûr", MOLD="manquer de rien", MNEW="ne manquer de rien";
+const day=864e5, t0=Date.now();
+// Franska 3-elevens läge med de gamla id:na: steg, repetitionsdatum, meningspoäng, pågående glospass och diktamen,
+// kapitelprov, Mina ord och en osänd felrapport. Övriga ord ska vara orörda.
+function oldFr(){ const st=student();
+  st.w[OLD]={s:5,due:40,dd:t0+20*day,f:"type",lp:2,ld:t0-30*day,mp:9,md:t0-5*day,mcR:3,mcW:1,tyR:4,tyW:0,clR:2,clW:1,lapses:1};
+  st.w[OLD2]={s:1,due:7,f:"mc",lp:4,ld:t0-2*day,mcR:1,mcW:1};
+  st.mine=[{t:MOLD,sv:"inte sakna något",g:"",ex:"je ne [manque de rien]",exSv:"",src:"Texten"}]; st.w["mine:"+MOLD]={s:2,due:6,lp:4};
+  st.dc={[OLD]:{s:2,last:t0-day,dd:t0+3*day},[OLD+"#1"]:{s:1,last:t0-day,dd:t0+day}}; st.od={[OLD]:{s:1,last:t0-day}}; st.tr={[OLD2]:{s:3,last:t0-day,dd:t0+7*day}};
+  st.kt={k1:{r:8,n:10,d:t0-day,miss:[OLD,"désigner"]}};
+  const run={kind:"words",learn:false,i:0,newW:[OLD2],due:[OLD,"désigner"],extra:false,game:null,
+    queue:[{id:undefined,ref:OLD,w:OLD,t:"type",isNew:false,again:false,canType:true},{k:"cloze",id:"cloze:"+OLD,ref:OLD,w:OLD,t:"type",canType:true},
+      {ref:"désigner",w:"désigner",t:"mc"}],total:5,done:2,firstTry:{[OLD2]:false,["cloze:"+OLD]:true},firstType:{[OLD2]:"mc"},tries:{[OLD2]:1},
+    rate:{[OLD2]:"hard"},start:t0-60000,ctx:null,againFn:null,label:"",daily:false,gramMix:false};
+  st.run=run; st.runs={words:clone(run),dict:{kind:"dict",learn:false,i:0,newW:[],due:[],queue:[{k:"dict",id:"dict:"+OLD+"#1",ref:OLD+"#1",w:OLD+"#1",t:"type",canType:true}],
+    total:3,done:1,firstTry:{["dict:"+OLD+"#1"]:false},firstType:{},tries:{},ctx:null,againFn:["dict"],label:"Diktamen"}};
+  st.reports=[{lang:"fr",id:"cloze:"+OLD,kind:"cloze",t:"type",answer:"x",d:t0,pass:5}];
+  st.v=S_VERSION; st.t=t0; return st; }   // senaste schemaversionen: flytten är ingen numrerad migrering
+const others=st=>canon(Object.fromEntries(Object.entries(st.w).filter(([k])=>![OLD,NEW,OLD2,NEW2,"mine:"+MOLD,"mine:"+MNEW].includes(k))));
+function checkFr(st,name){
+  const bad=[];
+  if(st.w[OLD]||st.w[OLD2]||st.w["mine:"+MOLD]) bad.push("gamla id finns kvar i w");
+  const x=st.w[NEW]||{}; if(x.s!==5||x.dd!==t0+20*day||x.mcR!==3||x.tyR!==4||x.mp!==9) bad.push("steg/dd/svar "+canon(x));
+  if(!st.w[NEW2]||st.w[NEW2].s!==1) bad.push("andra ordet");
+  if(!st.w["mine:"+MNEW]||st.w["mine:"+MNEW].s!==2||!(st.mine||[]).some(m=>m.t===MNEW)||(st.mine||[]).some(m=>m.t===MOLD)) bad.push("Mina ord");
+  if(!st.dc[NEW]||st.dc[NEW].s!==2||!st.dc[NEW+"#1"]||st.dc[OLD]||st.od[OLD]||!st.od[NEW]||!st.tr[NEW2]||st.tr[OLD2]) bad.push("meningspoäng "+canon([st.dc,st.od,st.tr]));
+  if(canon(st.kt.k1.miss)!==canon([NEW,"désigner"])) bad.push("kapitelprov "+canon(st.kt.k1.miss));
+  const r=st.run||{}; if(canon(r.newW)!==canon([NEW2])||r.due[0]!==NEW||r.queue[0].ref!==NEW||r.queue[0].w!==NEW||r.queue[1].id!=="cloze:"+NEW
+    ||r.firstTry[NEW2]!==false||r.firstTry["cloze:"+NEW]!==true||r.firstTry[OLD2]!==undefined||r.firstType[NEW2]!=="mc"||r.tries[NEW2]!==1||r.rate[NEW2]!=="hard") bad.push("pågående pass "+canon(r));
+  const d=(st.runs||{}).dict||{}; if(d.queue[0].ref!==NEW+"#1"||d.queue[0].id!=="dict:"+NEW+"#1"||d.firstTry["dict:"+NEW+"#1"]!==false||st.runs.words.due[0]!==NEW) bad.push("sparade rundor");
+  if(st.reports[0].id!=="cloze:"+NEW) bad.push("felrapport");
+  if(st.pass!==5||st.log.length!==1) bad.push("pass/logg");
+  ok(name, !bad.length, bad.join(" | "));
+}
+appReady().then(async()=>{ try{
+  document.documentElement.dataset.theme="light";   // oberoende av datorns ljusa/mörka läge
+  ok("id-byten: fr:s datafil har renames", L.code==="fr"&&L.renames&&L.renames[OLD]===NEW&&L.renames[OLD2]===NEW2&&L.renames[MOLD]===MNEW&&!!byId[NEW]&&!byId[OLD], canon(L.renames));
+  // 1. localStorage med de gamla id:na (eleven öppnar appen efter uppdateringen)
+  { await flush(); const st=oldFr(), ref=others(st); localStorage.setItem(L.storageKey,JSON.stringify(st)); loadState(); rebuildWords();
+    checkFr(S,"id-byten (fr): sparat läge i webbläsaren flyttas till de nya id:na");
+    ok("id-byten (fr): övriga ord är orörda", others(S)===ref);
+    const ls=JSON.parse(localStorage.getItem(L.storageKey));
+    ok("id-byten (fr): det flyttade läget sparas direkt i webbläsaren", !!ls.w[NEW]&&!ls.w[OLD]&&ls.run.due[0]===NEW);
+    const a=canon(S); ok("id-byten: att köra flytten två gånger ändrar inget", applyRenames(S,L.renames)===0&&canon(S)===a);
+    S.runs={words:S.runs.words}; delete S.run; renderStart(); const b=q('[data-wgo="words"]'); if(b) b.click();
+    ok("id-byten (fr): det pågående glospasset fortsätter med det nya id:t", !!sess&&sess.kind==="words"&&sess.queue.some(x=>x.w&&x.w.id===NEW)&&sess.newW[0]&&sess.newW[0].id===NEW2,
+      sess?sess.queue.map(x=>x.w&&x.w.id).join():"inget pass");
+    pauseSession(); }
+  // 2. Molnet (ny enhet, tom localStorage): gammalt format {state} och nytt uppdelat format med gamla id
+  for(const fmt of ["gammalt","nytt"]){
+    await flush(); const K=P+L.storageKey; Object.keys(__remote).filter(k=>k.startsWith(K)).forEach(k=>delete __remote[k]);
+    const st=oldFr(); st.pass=9; st.t=Date.now()+1000;
+    if(fmt==="gammalt") __remote[K]={state:st,t:st.t}; else await cloudWrite(L.storageKey,st);   // som en äldre version av appen skrev det
+    localStorage.clear(); loadState(); await cloudAttach(); await flush();
+    const x=clone(S); x.pass=5; checkFr(x,"id-byten (fr): molnläge i "+fmt+" format med gamla id flyttas");
+    const w=Object.keys(__remote).filter(k=>k.startsWith(K+"~w")).map(k=>__remote[k].data).reduce((a,d)=>Object.assign(a,d),{});
+    ok("id-byten (fr): det flyttade läget sparas i molnet ("+fmt+" format)", S.pass===9&&!!__remote[K].parts&&!!w[NEW]&&!w[OLD]&&!w[OLD2]&&((__remote[K].head||{}).run||{}).due[0]===NEW, Object.keys(w).filter(k=>/retraite|sûr/.test(k)).join());
+  }
+  // 3. En äldre kopia med gamla id från en annan enhet (onSnapshot) vinner inte, och en nyare flyttas när den tas emot
+  { await flush(); const old=oldFr(); old.pass=S.pass; old.nLog=S.nLog; old.log=clone(S.log); old.t=S.t-5000;
+    const fake=st=>({exists:true,metadata:{hasPendingWrites:false},data:()=>({state:st,t:st.t})});
+    const oc=clone(old); applyRenames(oc,L.renames);
+    ok("id-byten: en kopia med gamla id räknas med de nya id:na", score(old)[2]===Object.keys(oc.w).length&&cmpArr(score(old),score(S))===0, canon([score(old),score(S)]));
+    const before=canon(S.w); S.w[NEW].s=6; save(); await flush(); const mine=canon(S.w);
+    await onRemote(L.storageKey,fake(old));
+    ok("id-byten: en äldre molnkopia med gamla id vinner inte", canon(S.w)===mine&&S.w[NEW].s===6&&!S.w[OLD], S.w[NEW]&&S.w[NEW].s);
+    const newer=clone(old); newer.pass=S.pass+1; newer.t=Date.now()+5000; await onRemote(L.storageKey,fake(newer));
+    ok("id-byten: en nyare molnkopia med gamla id tas emot och flyttas", S.pass===newer.pass&&!S.w[OLD]&&S.w[NEW]&&S.w[NEW].s===5, S.pass+" "+canon(S.w[NEW])); await flush(); }
+  // Borttagna Tatoeba-meningar står som null (tools/tatoeba.py --check --fix): de andra behåller sitt index
+  { const tb=(L.content.tatoeba||{})["sentir"]||[], w=byId["sentir"]||{};
+    ok("Tatoeba: en borttagen mening (null) hoppas över och de andra behåller index", tb[1]===null&&!!tb[2]&&(w.extra||[]).map(x=>x.id).join()==="sentir#0,sentir#2"&&!XS["sentir#1"]&&XS["sentir#2"].exT===tb[2].t,
+      (w.extra||[]).map(x=>x.id).join()); }
+  // 4. Sammanslagning (fr2: le coucher de soleil → le coucher du soleil): den post som kommit längst behålls
+  { useLang("fr2"); await until(()=>L.code==="fr2"&&CLOUD.ready&&!CLOUD.attaching); await flush();
+    const A="le coucher de soleil", B="le coucher du soleil", K=P+L.storageKey;
+    ok("id-byten (fr2): två id för samma ord slås ihop", L.renames&&L.renames[A]===B&&!!byId[B]&&!byId[A]);
+    const st={pass:4,newCount:10,src:"auto",mode:"mix",vt:{},vv:{},log:[{p:1,d:t0,dur:60,right:1,total:1}],t:t0,
+      w:{[A]:{s:5,due:30,dd:t0+40*day,f:"type",lp:1,ld:t0-50*day,mcR:3,tyR:2,lapses:0},[B]:{s:2,due:6,dd:t0+3*day,f:"mc",lp:2,ld:t0-20*day,mcR:1,mcW:2,lapses:1},"le flocon":{s:1,due:5}},
+      dc:{[A]:{s:1,last:t0-day,dd:t0+day},[B]:{s:3,last:t0-2*day,dd:t0+7*day}},od:{[A]:{s:2,last:t0}},
+      run:{kind:"words",learn:false,i:0,newW:[],due:[A,B],queue:[{ref:A,w:A,t:"mc"},{ref:B,w:B,t:"type"}],total:2,done:0,firstTry:{[A]:false,[B]:true},firstType:{},tries:{}}};
+    localStorage.setItem(L.storageKey,JSON.stringify(st)); loadState(); rebuildWords();
+    const x=S.w[B]||{};
+    ok("id-byten (fr2): sammanslagningen behåller den post som kommit längst", !S.w[A]&&x.s===5&&x.dd===t0+40*day&&x.mcR===4&&x.mcW===2&&x.tyR===2&&x.lapses===1&&x.ld===t0-50*day&&S.w["le flocon"].s===1, canon(x));
+    ok("id-byten (fr2): meningspoängen slås ihop (bäst behålls)", !S.dc[A]&&S.dc[B].s===3&&S.od[B]&&S.od[B].s===2&&!S.od[A], canon([S.dc,S.od]));
+    ok("id-byten (fr2): pågående pass efter sammanslagning", canon(S.run.due)===canon([B])&&S.run.firstTry[B]===false&&S.run.firstTry[A]===undefined&&S.run.queue.every(x=>x.w===B), canon(S.run));
+    const a=canon(S); ok("id-byten (fr2): att köra två gånger ändrar inget", applyRenames(S,L.renames)===0&&canon(S)===a);
+    // Molnet har en äldre kopia (samma pass och loggposter) där båda id:na finns: fler ord räknat rått, men inte efter bytet
+    const cloudSt=clone(st); Object.keys(__remote).filter(k=>k.startsWith(K)).forEach(k=>delete __remote[k]);
+    const R=L.renames; L.renames=null; await cloudWrite(L.storageKey,cloudSt); L.renames=R;
+    ok("id-byten (fr2): molnets huvuddokument räknar båda id:na", __remote[K].score[2]===3&&score(S)[2]===2, canon(__remote[K].score));
+    S.t=Math.max(S.t||0,cloudSt.t)+1; cloudSave(true); await flush();
+    const w=Object.keys(__remote).filter(k=>k.startsWith(K+"~w")).map(k=>__remote[k].data).reduce((a,d)=>Object.assign(a,d),{});
+    ok("id-byten (fr2): det sammanslagna läget skrivs ändå till molnet", !w[A]&&w[B]&&w[B].s===5&&__remote[K].score[2]===2, Object.keys(w).join());
+    useLang("fr"); await until(()=>L.code==="fr"&&CLOUD.ready&&!CLOUD.attaching); }
+ }catch(e){ ok("undantag", false, e.message+" "+(e.stack||"").split("\n")[1]); }
+ ok("inga JavaScript-fel", !__err.length, __err.join(" ; "));
+ document.body.insertAdjacentHTML("beforeend","<pre id=out>"+out.join("\n").replace(/</g,"&lt;")+"</pre>");
+});
+</script>"""
+
+
+def test_build_renames():
+    """ids.renamed i build.py, i en kopia av projektet: ett byte godkänns och låset uppdateras, byte till ett befintligt id
+    (sammanslagning), byte till ett id som inte finns och ett gammalt id som finns kvar stoppar bygget, renames i datafilen."""
+    import json, shutil
+    out = []
+    ok = lambda name, cond, info="": out.append(("OK   " if cond else "FEL  ") + name + (f"  ({info})" if info else ""))
+    with tempfile.TemporaryDirectory() as tmp:
+        t = pathlib.Path(tmp) / "g"
+        shutil.copytree(ROOT, t, ignore=shutil.ignore_patterns(".git", "dist", "book", "*.jpg", "*.jpeg", "*.png", "*.heic", "*.pdf"))
+        build = lambda: subprocess.run([sys.executable, str(t / "build.py")], capture_output=True, text=True)
+        lock = lambda: json.loads((t / "languages" / "de" / "ids.lock").read_text(encoding="utf-8"))["ord"]
+        data = lambda: json.loads((t / "dist" / "data" / "de.json").read_text(encoding="utf-8"))
+        words = t / "languages" / "de" / "words.txt"
+        ren = t / "languages" / "de" / "ids.renamed"
+        orig = words.read_text(encoding="utf-8")
+        ids = [ln.split("|")[0] for ln in orig.splitlines() if ln and not ln.startswith(("#", "//")) and "|" in ln]
+        a, b = ids[3], ids[4]
+        r = build()
+        ok("id-byten: bygget går igenom i kopian", r.returncode == 0, r.stdout[-300:] if r.returncode else "")
+        # 1. Byte: raden får ett nytt id och en rad i ids.renamed
+        words.write_text("\n".join(("Testbyte|" + ln.split("|", 1)[1]) if ln.startswith(a + "|") else ln for ln in orig.splitlines()) + "\n", encoding="utf-8")
+        r0 = build()
+        ok("id-byten: utan ids.renamed stoppar bytet bygget", r0.returncode != 0 and a in r0.stdout)
+        ren.write_text(f"// test\nord|{a}|Testbyte\n", encoding="utf-8")
+        r = build()
+        ok("id-byten: ett byte i ids.renamed godkänns och låset uppdateras (gammalt bort, nytt in)",
+           r.returncode == 0 and a not in lock() and "Testbyte" in lock() and "heter nu 'Testbyte'" in r.stdout, r.stdout[-300:] if r.returncode else "")
+        ok("id-byten: datafilen har renames {gammalt: nytt}", data().get("renames") == {a: "Testbyte"})
+        r = build()
+        ok("id-byten: bygget går igenom igen med ids.renamed kvar (renames finns kvar i datafilen)", r.returncode == 0 and data().get("renames") == {a: "Testbyte"} and "Testbyte" in lock())
+        # Kedja: Testbyte → Testbyte2 ger a → Testbyte2 och Testbyte → Testbyte2
+        words.write_text(words.read_text(encoding="utf-8").replace("\nTestbyte|", "\nTestbyte2|"), encoding="utf-8")
+        ren.write_text(f"ord|{a}|Testbyte\nord|Testbyte|Testbyte2\n", encoding="utf-8")
+        r = build()
+        good = r.returncode == 0 and data().get("renames") == {a: "Testbyte2", "Testbyte": "Testbyte2"} and "Testbyte" not in lock() and "Testbyte2" in lock()
+        ok("id-byten: en kedja av byten löses upp", good, "" if good else r.stdout[-300:])
+        # 2. Sammanslagning: b tas bort och byter namn till ett id som redan finns
+        words.write_text("\n".join(ln for ln in words.read_text(encoding="utf-8").splitlines() if not ln.startswith(b + "|")) + "\n", encoding="utf-8")
+        ren.write_text(f"ord|{a}|Testbyte\nord|Testbyte|Testbyte2\nord|{b}|Testbyte2\n", encoding="utf-8")
+        r = build()
+        ok("id-byten: byte till ett befintligt id slår ihop dem", r.returncode == 0 and b not in lock() and "sammanslaget" in r.stdout and data()["renames"].get(b) == "Testbyte2",
+           r.stdout[-300:] if r.returncode else "")
+        # 3. Fel: det nya id:t finns inte, det gamla finns kvar, felaktig rad, cirkel
+        ren.write_text(f"ord|{a}|Testbyte\nord|Testbyte|Testbyte2\nord|{b}|Finns inte alls\n", encoding="utf-8")
+        r = build()
+        bad = lambda r, *want: r.returncode == 0 or not all(w in r.stdout for w in want)
+        ok("id-byten: byte till ett id som inte finns stoppar bygget", not bad(r, "'Finns inte alls' finns inte i kursen"), r.stdout[-200:] if bad(r, "'Finns inte alls'") else "")
+        ren.write_text(f"ord|{a}|Testbyte\nord|Testbyte|Testbyte2\nord|{b}|Testbyte2\nord|{ids[5]}|Testbyte2\n", encoding="utf-8")
+        r = build()
+        ok("id-byten: ett gammalt id som finns kvar i kursen stoppar bygget", not bad(r, "finns fortfarande i kursen"), r.stdout[-200:] if bad(r, "finns fortfarande i kursen") else "")
+        ren.write_text(f"ord|{a}|Testbyte\nord|Testbyte|Testbyte2\nord|{b}|Testbyte2\ninnehåll/reading|x|y\nord|bara två\n", encoding="utf-8")
+        r = build()
+        ok("id-byten: andra typer än ord och felaktiga rader stoppar bygget", not bad(r, "kan inte byta namn", "<typ>|<gammalt id>|<nytt id>"), r.stdout[-200:] if bad(r, "kan inte byta namn", "<typ>|<gammalt id>|<nytt id>") else "")
+        ren.write_text(f"ord|{a}|Testbyte\nord|Testbyte|Testbyte2\nord|{b}|Testbyte2\nord|X1|X2\nord|X2|X1\n", encoding="utf-8")
+        r = build()
+        ok("id-byten: en cirkel stoppar bygget", not bad(r, "cirkel"), r.stdout[-200:] if bad(r, "cirkel") else "")
+    # De riktiga kurserna: varje rad i ids.renamed har sitt nya id i kursen, och låsen har inga gamla id kvar
+    bad = []
+    for d in sorted((ROOT / "languages").iterdir()):
+        f = d / "ids.renamed"
+        if not f.exists():
+            continue
+        lk = json.loads((d / "ids.lock").read_text(encoding="utf-8")).get("ord", [])
+        dd = json.loads((ROOT / "dist" / "data" / f"{d.name}.json").read_text(encoding="utf-8"))
+        for ln in f.read_text(encoding="utf-8").splitlines():
+            if ln.strip() and not ln.startswith("//"):
+                _, o, n = ln.split("|")
+                if o in lk or n not in lk or dd.get("renames", {}).get(o) != n:
+                    bad.append(f"{d.name}: {o} → {n}")
+    ok("id-byten: kursernas ids.renamed stämmer med låsen och datafilerna", not bad, ", ".join(bad))
+    return "\n".join(out)
+
+
+def test_tatoeba():
+    """tools/tatoeba.py (skärpt 2026-10-01): exemplen ur granskningen matchas inte längre, riktiga träffar gör det, och
+    kontrolläget hittar inga felkopplade meningar kvar i kursernas tatoeba.json (borttagna står som null)."""
+    import json, io, contextlib
+    sys.path.insert(0, str(ROOT / "tools"))
+    import tatoeba as T
+    out = []
+    ok = lambda name, cond, info="": out.append(("OK   " if cond else "FEL  ") + name + (f"  ({info})" if info else ""))
+    for lang in ("de", "fr", "it"):
+        T.lower_words(lang, T.course_sentences(lang))
+    def has(lang, line, sent):
+        f = line.split("|")
+        p = T.parse_word(lang, f)
+        return T.contains(lang, p, sent, T.is_noun(f, p))
+    cases = [  # (språk, words.txt-rad, mening, ska matcha)
+        ("de", "zurückrufen|ringa tillbaka||x|x|Starkt verb: rief zurück, hat zurückgerufen", "Sie rief mich aus Tokio an.", False),
+        ("de", "zurückrufen|ringa tillbaka||x|x|Starkt verb: rief zurück, hat zurückgerufen", "Sie rief mich gestern zurück.", True),
+        ("de", "aufwachsen|växa upp||x|x|Starkt verb: wuchs auf, ist aufgewachsen", "Geld wächst nicht auf Bäumen.", False),
+        ("de", "aufwachsen|växa upp||x|x|Starkt verb: wuchs auf, ist aufgewachsen", "Er wuchs in Berlin auf.", True),
+        ("de", "aufwachsen|växa upp||x|x|Starkt verb: wuchs auf, ist aufgewachsen", "Ich bin auf dem Land aufgewachsen.", True),
+        ("de", "ausrutschen|halka||x|x|", "Tom rutschte aus und fiel hin.", True),
+        ("de", "die Sage (-n)|sägen|f|x|x|", "Sage mir die Wahrheit.", False),
+        ("de", "das Leid|lidande|n|x|x|", "Leider kann ich nicht kommen.", False),
+        ("de", "der Koch (Köche)|kock|m|x|x|", "Sein größtes Hobby ist Kochen.", False),
+        ("de", "der Koch (Köche)|kock|m|x|x|", "Der Koch kocht gut.", True),
+        ("fr", "s'appeler|heta||x|x|", "Je peux appeler Tom.", False),
+        ("fr", "s'appeler|heta||x|x|", "Je m'appelle Marie.", True),
+        ("fr", "se casser|gå sönder||x|x|", "Il s'est cassé le cou.", True),
+        ("fr", "le cours|lektionen|m|x|x|", "Ne cours pas !", False),
+        ("fr", "le cours|lektionen|m|x|x|", "Le cours commence à huit heures.", True),
+        ("fr", "la cour|gården|f|x|x|", "J'ai pris un cours d'art.", False),
+        ("fr", "la cour|gården|f|x|x|", "Les enfants jouent dans la cour.", True),
+        ("fr", "courir|springa||x|x|", "Je viens faire les courses avec toi.", False),
+        ("fr", "le suédois|svenska|m|x|x|", "Parlait-elle suédois ?", True),
+        ("it", "salutare|hälsa||x|x|", "La salute è importante.", False),
+        ("it", "salutare|hälsa||x|x|", "Ti saluto con affetto.", True),
+        ("it", "pesare|väga||x|x|", "Il pesce è fresco.", False),
+        ("it", "crescere|växa||x|x|", "Sono cresciuto in una famiglia povera.", True),
+    ]
+    bad = [f"{l}: {w.split('|')[0]} / {s} → {not want}" for l, w, s, want in cases if has(l, w, s) != want]
+    ok("Tatoeba: partikelverb, homografer, reflexiva verb, substantiv och verb, hela ord (exemplen ur granskningen)", not bad, " | ".join(bad))
+    ok("Tatoeba: homografer får inga nya meningar", T.is_homograph("de", ["die Steuer (-n)", "skatt", "f"]) and T.is_homograph("fr", ["l'audition", "x", "f"]) and not T.is_homograph("de", ["der Koch (Köche)", "kock", "m"]))
+    buf = io.StringIO()
+    with contextlib.redirect_stdout(buf), contextlib.redirect_stderr(io.StringIO()):
+        left = {c: T.check(c) for c in ("de", "de1", "de2", "de3", "de4", "de6", "fr", "fr1", "fr2", "it1", "it2", "it3")}
+    clean = all(b == 0 for b, _ in left.values())
+    ok("Tatoeba: inga felkopplade meningar kvar i kursernas tatoeba.json (--check)", clean, "" if clean else buf.getvalue()[:300])
+    # pick behåller null på sin plats och fyller aldrig den platsen: nya meningar läggs sist
+    old = {"parler": [{"t": "Il parle vite.", "sv": "x", "id": 1, "by": ""}, None]}
+    got = T.pick("fr", [["parler", "tala", "", "x", "x", ""]], [(5, "Nous parlons beaucoup ensemble ce soir.", "", ["Vi pratar mycket."], True)], old)
+    ok("Tatoeba: null står kvar, nya meningar läggs sist", got["parler"][1] is None and len(got["parler"]) == 3 and got["parler"][2]["id"] == 5, "" if got["parler"][1:2] == [None] else json.dumps(got, ensure_ascii=False))
+    return "\n".join(out)
+
+
+# ---------------------------------------------------------------------------------------------------------
 # Övningstyperna (src/kinds/, 2026-09-28 del 6): registret (defineKind), att fråge-id och S.runs-nycklar är
 # oförändrade, tl() för fältet .fr, komma i facit i alla kurser, synk mellan två enheter mot samma låtsaslagring,
 # och alla kurser (Object.keys(LANGUAGES)) genomspelade: glosquiz, blandad runda, verb, alla övningar i menyn
@@ -2997,6 +3239,8 @@ def main():
     text = run(SCENARIO) + "\n" + run(SCENARIO_DE) + "\n" + run(SCENARIO_FIXES) + "\n" + run(SCENARIO_SYNC, 30000) + "\n" + run_http(SCENARIO_HTTP)
     text += "\n" + run_http(SCENARIO_EXAMLAZY, 60000) + "\n" + test_exam_split()   # provet hämtas vid behov, minifiering, storlek (P2)
     text += "\n" + run(SCENARIO_ARCH, 30000) + "\n" + test_build_locks()   # arkitektur, del 6
+    text += "\n" + run(SCENARIO_RENAME, 30000) + "\n" + test_build_renames()   # ord-id som bytt namn, framstegen följer med (2026-10-01)
+    text += "\n" + test_tatoeba()   # tools/tatoeba.py: skärpt matchning och kontrolläget (2026-10-01)
     text += "\n" + test_build_checks()   # byggkontroller, arkitekturgranskning 2026-09-29
     text += "\n" + run(SCENARIO_KINDS, 60000)   # övningstyperna (src/kinds), alla kurser, två enheter, del 6
     text += "\n" + run(SCENARIO_IPA, 30000)   # transkription och satsanalys (fru)

@@ -2,6 +2,13 @@
 
 Punkter som har flyttats från [`BACKLOG.md`](BACKLOG.md) när de byggdes. **Referens** anger backloggens rubrik och prioritet. **Commit** anger var ändringen finns i git. **Publicerat** anger versionen av artefakten på https://claude.ai/artifact/YBQv8j4qXQQLuPwLAWt5mP.
 
+## 2026-10-02 (publicerat som version 37)
+
+| Referens | Vad som byggdes | Commit |
+|---|---|---|
+| Öppet v36 · P2 *Fel i ord-id* (föräldern godkände 2026-10-01) | `languages/<kod>/ids.renamed` (`ord|gammalt|nytt`); build.py godkänner bytet i låset och lägger `renames` i datafilen; `applyRenames` i app.js flyttar elevens framsteg vid varje inläsning (lokalt och moln): `S.w`, `S.ga`, `S.dc`/`S.od`/`S.tr` (även Tatoeba-id), Mina ord, kapitelprov, sparade rundor, felrapporter; sammanslagning behåller det bästa. 22 id rättade: fr «prendre sa retraite», «ne manquer de rien», «sois-en sûr»; fr4 «nocif, -ive»; frs5 -ive/-euse (6); frs4 «le savoir-faire»; fr2 «le coucher du soleil» (sammanslaget); it4 «lo spazio personale», «il prestito linguistico»; it6 «spettabile», «la Repubblica di Salò», «I promessi sposi», «La dolce vita»; it7 «l'Illuminismo», «l'Umanesimo»; de7 «die Dritten», «das Erstsemester». | se git log |
+| Öppet v36 · P2 *tools/tatoeba.py matchar för löst* | Partikel krävs för tyska delbara verb, versal för substantiv, homografer hoppas över, franska reflexiva verb kräver pronomen, substantiv/verb skiljs åt, italienska verb matchar bara verbändelser. `--check` och `--fix`; felkopplade meningar blir `null` på sin plats så att `<ord>#<n>` inte flyttas. 261 meningar borttagna. | se git log |
+
 ## 2026-10-01, del 3 (publicerat som version 36)
 
 | Referens | Vad som byggdes | Commit |

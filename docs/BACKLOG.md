@@ -82,8 +82,9 @@ Granskning av `src/app.js`, `src/kinds/`, arvet i `lang.js`, `build.py`, testern
 
 ## Öppet efter 2026-10-01 (version 36)
 
-- **P2: Fel i ord-id** (hittade av granskningen, kan inte rättas utan att framstegen för ordet försvinner — förslag: byt id och lägg en migrering som flyttar `S.w[gammalt]` till `S.w[nytt]`, så att framstegen följer med): fr «prendre la retraite» (sa), «manquer de rien» (ne), «sois (être) en sûr» (sois-en sûr); fr4 «nocif, -ve»; frs5 «administratif/facultatif/radioactif, -ve», «anxieux/contagieux/ennuyeux, -se»; frs4 «savoir-faire» utan artikel; it4 «la privacy domestica»; it6 «lo spettabile», «la repubblica di Salò», «la Dolce Vita», «i Promessi sposi»; it7 «l'illuminismo», «l'umanesimo»; de7 «Dritte», «der Erstsemester» (das). Dubbletter: fr2 «le coucher de/du soleil», it2 «la mezzanotte»/«in bocca al lupo» (finns i it1), it3 «già» (it1), de/de6 «die Überschrift», 58 ord i både de1 och de3 m.fl.
-- **P2: `tools/tatoeba.py` matchar för löst:** tyska partikelverb utan partikel (zurückrufen → "rief mich an"), homografer (die Sage/sage, Leid/leider, Steuer), franska (la cour/cours, s'appeler/appeler, audition = hörsel), italienska delsträngar (salutare/salute, pesare/pesce). Granskarna tog bort ca 250 felkopplade meningar; resten finns kvar. Rätta verktyget innan det körs om (annars kommer de tillbaka). Meningarnas id är `<ord>#<n>` (inte låsta).
+- **P3: Dubbletter mellan kurser** (godkänt överlapp, inget att göra): it2/it1 «la mezzanotte», «in bocca al lupo»; it3/it1 «già»; de/de6 «die Überschrift»; 58 ord i både de1 och de3 m.fl.
+- **P3: Nivåmätaren** (`peekState`) läser andra kursers sparade lägen utan id-byten tills kursen har öppnats.
+
 - **P3: Uttalspar med samma stavning** (it3 pèsca/pésca, àncora/ancòra) fungerar bara om rösten läser accenterna — lyssna igenom.
 - **P3: Format:** de1 hör-/lästexternas frågor har 3 alternativ (specen 4); de3 berättelser saknar `sv`; it3, it4, frs4, frs5 saknar `content/SPEC.md`; tenseCheck i it5 ger falska träffar för congiuntivo imperfetto (classe, passi, interesse).
 

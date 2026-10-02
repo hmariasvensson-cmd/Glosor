@@ -29,9 +29,10 @@ function rebuildWords(){
   byId=Object.fromEntries(WORDS.map(w=>[w.id,w]));
   // Extra exempelmeningar från Tatoeba (content/tatoeba.json): egna "ord" med id "<ord-id>#<n>" som bara
   // används i meningsövningarna (diktamen, översätt, ordföljd). Glosquizet påverkas inte.
+  // En borttagen mening står kvar som null (tools/tatoeba.py --check --fix), så att de andra behåller sitt index n.
   XS={}; const tb=C().tatoeba||{};
-  WORDS.forEach(w=>{ w.extra=(tb[w.id]||[]).map((x,i)=>{const o={...w,id:w.id+"#"+i,base:w.id,exT:x.t,exSv:x.sv,gap:null,
-    tatoeba:{id:x.id,by:x.by}}; XS[o.id]=o; return o;}); });
+  WORDS.forEach(w=>{ w.extra=(tb[w.id]||[]).map((x,i)=>{ if(!x||!x.t) return null; const o={...w,id:w.id+"#"+i,base:w.id,exT:x.t,exSv:x.sv,gap:null,
+    tatoeba:{id:x.id,by:x.by}}; XS[o.id]=o; return o;}).filter(Boolean); });
 }
 let XS={};
 const sentById=ref=>byId[ref]||XS[ref];

@@ -12,6 +12,8 @@ Läser src/ och languages/<kod>/ och skriver:
   dist/preview.html      samma sida med datan inbakad och ett komplett HTML-skal, för att öppna lokalt och för testerna
 
 och kontrollerar/uppdaterar id-låsen languages/<kod>/ids.lock (och book/ids.lock för bokens id), se lock_ids.
+Ett ord-id som byter namn står i languages/<kod>/ids.renamed (read_renamed); datafilen får renames och appen flyttar
+elevernas framsteg till det nya id:t (applyRenames i src/app.js).
 """
 import collections
 import datetime
@@ -850,9 +852,72 @@ def read_removed(path):
     return {ln.strip() for ln in path.read_text(encoding="utf-8").splitlines() if ln.strip() and not ln.strip().startswith("//")}
 
 
-def lock_ids(code, storage_key, ids, allowed):
-    """Jämför kursens id med låsen. Returnerar (fel, meddelanden, {sökväg: nytt innehåll})."""
+# Id som bytt namn: languages/<kod>/ids.renamed (incheckad, book/ids.renamed för bokens ord) med rader
+# <typ>|<gammalt id>|<nytt id>, t.ex. ord|prendre la retraite|prendre sa retraite. Ett låst id som försvunnit men står
+# som gammalt id godkänns om det nya finns i kursen; låset uppdateras (det gamla bort, det nya in). Finns det nya redan
+# sedan förut slås de två ihop. Kursens datafil får renames = {gammalt: nytt} (kedjor a → b → c upplösta), och appen
+# flyttar elevernas framsteg till det nya id:t varje gång ett läge läses in (applyRenames i src/app.js). Raderna ska
+# ligga kvar för alltid: en elev som inte öppnat kursen sedan bytet har fortfarande det gamla id:t i sitt sparade läge.
+# Bara ord stöds (appen flyttar bara ord-id).
+RENAME_TYPES = ("ord",)
+
+
+def read_renamed(code):
+    """({typ: {gammalt: nytt}} med kedjor upplösta, fel). Läser ids.renamed och book/ids.renamed."""
+    d = LANG_DIR / code
+    errors, out = [], {}
+    for path in [d / "ids.renamed", d / "book" / "ids.renamed"]:
+        if not path.exists():
+            continue
+        for no, ln in enumerate(path.read_text(encoding="utf-8").splitlines(), 1):
+            s = ln.strip()
+            if not s or s.startswith("//"):
+                continue
+            where = f"{path.relative_to(ROOT)}:{no}"
+            parts = s.split("|")
+            if len(parts) != 3 or not all(x.strip() for x in parts):
+                errors.append(f"{where}: raden ska vara <typ>|<gammalt id>|<nytt id>")
+                continue
+            typ, old, new = (x.strip() for x in parts)
+            if typ not in RENAME_TYPES:
+                errors.append(f"{where}: typen '{typ}' kan inte byta namn (bara {', '.join(RENAME_TYPES)}; appen flyttar bara ord-id)")
+            elif old == new:
+                errors.append(f"{where}: det gamla och det nya id:t är samma")
+            elif old in out.get(typ, {}) and out[typ][old] != new:
+                errors.append(f"{where}: '{old}' byter redan namn till '{out[typ][old]}'")
+            else:
+                out.setdefault(typ, {})[old] = new
+    for typ, m in out.items():   # kedjor: a → b och b → c blir a → c och b → c
+        for old in list(m):
+            seen, new = {old}, m[old]
+            while new in m:
+                if new in seen:
+                    errors.append(f"languages/{code}/ids.renamed: {typ} '{old}' byter namn i en cirkel")
+                    break
+                seen.add(new)
+                new = m[new]
+            m[old] = new
+    return out, errors
+
+
+def check_renamed(code, renamed, ids):
+    """Det nya id:t måste finnas i kursen och det gamla får inte finnas kvar (då skulle framstegen flyttas från ett ord som finns)."""
+    errors = []
+    for typ, m in renamed.items():
+        have = ids.get(typ, {})
+        for old, new in m.items():
+            if old in have:
+                errors.append(f"languages/{code}/ids.renamed: {typ} '{old}' finns fortfarande i kursen; ta bort det gamla eller raden i ids.renamed")
+            if new not in have:
+                errors.append(f"languages/{code}/ids.renamed: {typ} '{old}' byter namn till '{new}', men '{new}' finns inte i kursen")
+    return errors
+
+
+def lock_ids(code, storage_key, ids, allowed, renamed=None):
+    """Jämför kursens id med låsen. Returnerar (fel, meddelanden, {sökväg: nytt innehåll}).
+    renamed = {typ: {gammalt: nytt}} ur ids.renamed (read_renamed): ett gammalt id som försvunnit godkänns när det nya finns."""
     errors, notes, writes = [], [], {}
+    renamed = renamed or {}
     d = LANG_DIR / code
     has_book = (d / "book").exists()
     allowed = allowed | read_removed(d / "ids.removed") | (read_removed(d / "book" / "ids.removed") if has_book else set())
@@ -873,6 +938,10 @@ def lock_ids(code, storage_key, ids, allowed):
             for i in (old or {}).get(typ, []):
                 if i in have:
                     kept.append(i)
+                elif i in renamed.get(typ, {}) and renamed[typ][i] in have:
+                    nu = renamed[typ][i]
+                    merged = nu in (old or {}).get(typ, []) or any(nu in (read_lock(p) or {}).get(typ, []) for p, _ in locks)
+                    notes.append(f"{rel}: {typ} '{i}' heter nu '{nu}'" + (" (sammanslaget med ett befintligt id)" if merged else "") + ", framstegen flyttas (ids.renamed)")
                 elif ok_removed(typ, i):
                     notes.append(f"{rel}: {typ} '{i}' är borttaget (godkänt)")
                 else:
@@ -1498,7 +1567,13 @@ def main():
             all_errors.append(f"languages/{code}/lang.js: storageKey saknas" + (" (ska vara en text inom citattecken)" if "storageKey" in confs[code] else ""))
         else:
             keys.setdefault(skey, []).append(code)
-            errs, notes, writes = lock_ids(code, skey, collect_ids(origin, found, grammar), allowed.get(code, set()))
+            renamed, errs = read_renamed(code)
+            all_errors += errs
+            cids = collect_ids(origin, found, grammar)
+            all_errors += check_renamed(code, renamed, cids)
+            if renamed.get("ord"):   # appen flyttar framstegen (applyRenames i src/app.js)
+                cdata["renames"] = dict(sorted(renamed["ord"].items()))
+            errs, notes, writes = lock_ids(code, skey, cids, allowed.get(code, set()), renamed)
             all_errors += errs
             lock_notes += notes
             lock_writes.update(writes)

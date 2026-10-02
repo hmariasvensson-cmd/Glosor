@@ -154,13 +154,15 @@ const MASTER=4, MAXDUE=40;   // MAXDUE = högst så många repetitioner per pass
                 ämne = "me" (presentation), "x:<provuppgift>", "w:<skrivuppgift>" eller "g:<n>". Saknas tills eleven talat
      wrSkip     måndagen ("ÅÅÅÅ-MM-DD") i veckan då kortet Veckans skrivuppgift stängdes; saknas = inte stängt (40-writing.js)
      feedback, reports   Tyck till-meddelanden och felrapporter som inte kunde skickas (högst 50)
-   Nya fält läggs till här och i docs/ARKITEKTUR.md. Ett fält som byter form får en ny migrering i MIGRATIONS. */
+   Nya fält läggs till här och i docs/ARKITEKTUR.md. Ett fält som byter form får en ny migrering i MIGRATIONS.
+   Ord-id som bytt namn (languages/<kod>/ids.renamed) flyttas i alla fälten ovan av applyRenames vid varje inläsning. */
 let S;
 function loadState(){
   flushLocal();   // en väntande skrivning (save(true)) först, så att läget som läses är det senaste
   S={pass:1,w:{},newCount:15,src:"auto",mode:"mix",log:[],vt:{},vv:{}};
   try{Object.assign(S,JSON.parse(localStorage.getItem(L.storageKey)||"{}"))}catch(e){ warnErr("sparat läge kunde inte läsas ("+L.storageKey+")",e); }
-  normState();
+  // Ord-id som bytt namn (applyRenames) sparas direkt i webbläsaren; molnet får det flyttade läget i cloudAttach
+  if(normState()) try{localStorage.setItem(L.storageKey,JSON.stringify(S))}catch(e){ warnErr("läget med flyttade ord-id kunde inte sparas ("+L.storageKey+")",e); }
 }
 /* Numrerade migreringar: MIGRATIONS[n] gör om ett läge från version n-1 till version n och körs en gång per läge.
    Lägg alltid till nya sist, ändra aldrig ordningen, och låt dem tåla fält som saknas. */
@@ -169,11 +171,13 @@ const MIGRATIONS=[
   migrateRetired    // 1: ord med det gamla "kan för alltid" (due=1e9) får ett riktigt repetitionsdatum
 ];
 const S_VERSION=MIGRATIONS.length-1;
+// Returnerar antalet flyttade ord-id (applyRenames), så att den som läser in läget kan spara det flyttade läget
 function normState(){
   if(!Array.isArray(S.log))S.log=[]; S.w=S.w||{}; S.vt=S.vt||{}; S.vv=S.vv||{}; S.nLog=nLogOf(S);
   const v=Number.isInteger(S.v)&&S.v>0?S.v:0;
   for(let i=v+1;i<MIGRATIONS.length;i++) MIGRATIONS[i](S);
   S.v=Math.max(v,S_VERSION);   // ett läge från en nyare version av appen behåller sitt nummer
+  return applyRenames(S,L&&L.renames);
 }
 /* Migrering 1. Förr fick inlärda ord due=1e9 och kom aldrig tillbaka. Ge dem ett riktigt repetitionsdatum,
    utspritt över kommande pass så att de inte kommer alla på en gång. */
@@ -181,6 +185,72 @@ function migrateRetired(S){
   const old=Object.entries(S.w).filter(([,x])=>x&&x.due>=1e9).sort((a,b)=>(a[1].mp||0)-(b[1].mp||0));
   old.forEach(([,x],i)=>{ x.s=Math.max(x.s,MASTER); x.due=Math.max((x.mp||S.pass)+INT[MASTER],S.pass+1+Math.floor(i/8)); });
 }
+
+/* ---------- Ord som bytt id ----------
+   Ett ord-id som var fel (t.ex. "prendre la retraite") rättas med en rad ord|<gammalt>|<nytt> i languages/<kod>/ids.renamed.
+   build.py lägger kursens byten i datafilen som L.renames = {<gammalt>: <nytt>} (kedjor redan upplösta), och applyRenames
+   flyttar allt som är nycklat på det gamla id:t till det nya varje gång ett läge läses in (loadState, takeState: molnet,
+   en annan enhet, ett lagat molnläge). Ingen numrerad migrering: listan växer när fler id rättas, och ett läge (eller en
+   molnkopia från en annan enhet) som redan har den senaste schemaversionen måste ändå flyttas. Funktionen är idempotent:
+   när inget gammalt id finns kvar ändras ingenting.
+   Platserna där ord-id förekommer: S.w, S.ga (der/die/das), S.dc, S.od och S.tr (diktamen, ordföljd, översätt; även
+   Tatoeba-meningarnas "<ord-id>#<n>"), S.mine (Mina ord: t och därmed id "mine:<t>" i S.w), S.kt[kapitel].miss,
+   S.run och varje S.runs[…] (newW, due, queue och mixIn: id/ref/w, firstTry, firstType, tries, rate) och osända
+   felrapporter (S.reports[].id). Fråge-id "<typ>:<ref>" flyttas på ref. Loggen och S.fb har inga ord-id.
+   Finns både det gamla och det nya (två id slås ihop) behålls den post som kommit längst (mergeW, mergeSrs, mergeGa),
+   så att ingenting går förlorat. Returnerar antalet flyttade id. */
+const hasOwn=(o,k)=>Object.prototype.hasOwnProperty.call(o,k);
+function renameId(id,R){
+  if(typeof id!=="string") return id;
+  if(hasOwn(R,id)) return R[id];
+  const h=id.match(/^(.*)#(\d+)$/); if(h&&hasOwn(R,h[1])) return R[h[1]]+"#"+h[2];   // Tatoeba-mening
+  const c=id.indexOf(":");   // fråge-id "<typ>:<ref>" och Mina ord "mine:<t>"
+  if(c>0){ const ref=id.slice(c+1), r=renameId(ref,R); if(r!==ref) return id.slice(0,c+1)+r; }
+  return id;
+}
+// Glosans post: den som kommit längst (steg, sedan dd/due) vinner; antalet svar och nedflyttningar läggs ihop
+function mergeW(a,b){
+  if(!a||typeof a!=="object") return b; if(!b||typeof b!=="object") return a;
+  const rank=x=>[+x.s||0,+x.dd||0,+x.due||0], ra=rank(a), rb=rank(b);
+  const win=cmpArr(ra,rb)>=0?a:b, lose=win===a?b:a, x={...lose,...win};
+  ["mcR","mcW","tyR","tyW","clR","clW","lapses"].forEach(k=>{ if(a[k]!=null||b[k]!=null) x[k]=(+a[k]||0)+(+b[k]||0); });
+  ["lp","ld"].forEach(k=>{ const v=[a[k],b[k]].filter(n=>n!=null); if(v.length) x[k]=Math.min(...v); });
+  return x;
+}
+// {s, last, dd} (diktamen, ordföljd, översätt): flest rätt i rad, sedan senast förfallodag, vinner
+function mergeSrs(a,b){
+  if(!a||typeof a!=="object") return b; if(!b||typeof b!=="object") return a;
+  const win=cmpArr([+a.s||0,+a.dd||0,+a.last||0],[+b.s||0,+b.dd||0,+b.last||0])>=0?a:b;
+  return {...(win===a?b:a),...win,last:Math.max(+a.last||0,+b.last||0)};
+}
+const mergeGa=(a,b)=>!a||typeof a!=="object"?b:!b||typeof b!=="object"?a:{...a,...b,g:Math.max(+a.g||0,+b.g||0),p:Math.max(+a.p||0,+b.p||0),last:Math.max(+a.last||0,+b.last||0)};
+function applyRenames(st,R){
+  if(!st||!R||typeof R!=="object"||!Object.keys(R).length) return 0;
+  let n=0;
+  const id=x=>{ const y=renameId(x,R); if(y!==x) n++; return y; };
+  // Ett objekt nycklat på id: flytta nycklarna, slå ihop med merge om det nya redan finns
+  const keys=(o,merge)=>{ if(!o||typeof o!=="object"||Array.isArray(o)) return o;
+    for(const k of Object.keys(o)){ const k2=renameId(k,R); if(k2===k) continue;
+      n++; o[k2]=hasOwn(o,k2)&&merge?merge(o[k2],o[k]):hasOwn(o,k2)?o[k2]:o[k]; delete o[k]; }
+    return o; };
+  // Mina ord: ett ord som sparats med det gamla id:t får det nya (finns det nya redan behålls det)
+  if(Array.isArray(st.mine)){
+    const seen=new Set();
+    st.mine=st.mine.filter(m=>{ if(!m||typeof m.t!=="string") return true; const t=id(m.t); m.t=t; if(seen.has(t)) return false; seen.add(t); return true; });
+  }
+  keys(st.w,mergeW); keys(st.ga,mergeGa); ["dc","od","tr"].forEach(f=>keys(st[f],mergeSrs));
+  if(st.kt&&typeof st.kt==="object") Object.values(st.kt).forEach(k=>{ if(k&&Array.isArray(k.miss)) k.miss=[...new Set(k.miss.map(id))]; });
+  const item=q=>{ if(q&&typeof q==="object"){ ["id","ref","w"].forEach(f=>{ if(typeof q[f]==="string") q[f]=id(q[f]); }); } return q; };
+  const run=r=>{ if(!r||typeof r!=="object") return;
+    ["newW","due"].forEach(f=>{ if(Array.isArray(r[f])) r[f]=[...new Set(r[f].map(id))]; });
+    ["queue","mixIn"].forEach(f=>{ if(Array.isArray(r[f])) r[f].forEach(item); });
+    keys(r.firstTry,(a,b)=>a===false||b===false?false:a); keys(r.firstType); keys(r.tries,(a,b)=>Math.max(+a||0,+b||0)); keys(r.rate); };
+  run(st.run); if(st.runs&&typeof st.runs==="object") Object.values(st.runs).forEach(run);
+  if(Array.isArray(st.reports)) st.reports.forEach(item);
+  return n;
+}
+// Har ett läge (t.ex. molnets) ord-id som ska flyttas? Då ska det flyttade läget sparas tillbaka.
+const needsRenames=st=>{ const R=L&&L.renames; return !!R&&!!st&&applyRenames(JSON.parse(JSON.stringify({w:st.w,ga:st.ga,dc:st.dc,od:st.od,tr:st.tr,mine:st.mine,kt:st.kt,run:st.run,runs:st.runs})),R)>0; };
 
 /* ---------- Sparat på claude.ai ----------
    Framstegen sparas i webbläsaren (hela S i localStorage) och i privata dokument per person och kurs på claude.ai.
@@ -200,7 +270,11 @@ const CLOUD={db:null,uid:null,user:null,ready:false,busy:false,pending:{},timer:
 const DOC_MAX=256*1024-256, PART_MAX=200*1024, HEAD_MAX=160*1024, W_PER_PART=700;
 // Antal loggposter någonsin. Loggen kapas vid 1 000 (foldLog), så räknaren S.nLog behövs för att jämföra.
 const nLogOf=s=>Math.max(+(s&&s.nLog)||0,(+((s&&s.logOld)||{}).n||0)+(((s&&s.log)||[]).length));
-const score=s=>[(s&&s.pass)||0,nLogOf(s),Object.keys((s&&s.w)||{}).length];
+// Antal ord räknas med kursens id-byten (L.renames), så att ett läge där två id slagits ihop inte förlorar mot en äldre
+// kopia med båda id:na (applyRenames). Huvuddokumentets score från en äldre sparning kan fortfarande räkna båda, se cloudWrite.
+const nWords=s=>{ const w=(s&&s.w)||{}, R=L&&L.renames, ks=Object.keys(w);
+  return R&&Object.keys(R).length?new Set(ks.map(k=>renameId(k,R))).size:ks.length; };
+const score=s=>[(s&&s.pass)||0,nLogOf(s),nWords(s)];
 function cmpArr(x,y){x=Array.isArray(x)?x:[];y=Array.isArray(y)?y:[];for(let i=0;i<3;i++){const d=(+x[i]||0)-(+y[i]||0);if(d)return d}return 0}
 function cmpScore(a,b){return cmpArr(score(a),score(b))}
 // Vinner molnets version över den lokala? Längst kommen vinner, vid lika poäng den som sparades senast.
@@ -259,7 +333,12 @@ async function cloudWrite(key,st){
   // bitarna vi redan har skrivit om huvuddokumentet fortfarande är vårt.
   const cur=await docFor(key).get(), d=cur&&cur.exists?(cur.data()||{}):null;
   // force: vi har just lagat ett molnläge vars bitar inte stämde (cloudBad), då skrivs allt om även om poängen är lika
-  if(!CLOUD.force[key]&&d&&(d.parts||d.state)&&remoteWins(d.parts?d.score:score(d.state),docT(d),st)) return {skipped:true,snap:cur};
+  if(!CLOUD.force[key]&&d&&(d.parts||d.state)&&remoteWins(d.parts?d.score:score(d.state),docT(d),st)){
+    // Vinner molnet bara på antalet ord (samma pass och loggposter) kan det vara en äldre kopia där två ord-id ännu inte
+    // slagits ihop (applyRenames): läs hela läget och jämför med id-bytena inräknade, annars skrivs det flyttade läget aldrig
+    const rs=d.parts?d.score:score(d.state), r=Array.isArray(rs)&&cmpArr([rs[0],rs[1],0],[score(st)[0],score(st)[1],0])===0?await cloudRead(key,cur):null;
+    if(!r||r.bad||remoteWins(score(r.state),r.t,st)) return {skipped:true,snap:cur};
+  }
   const known=d&&d.parts&&sameParts(d.parts,CLOUD.known[key])?CLOUD.known[key]:null;
   CLOUD.known[key]=null;
   for(const [n,x] of Object.entries(docs)) if(!known||known[n]!==x.rev) await docFor(key+"~"+n).set({rev:x.rev,data:JSON.parse(x.j)});
@@ -381,23 +460,24 @@ window.addEventListener("pagehide",()=>cloudFlush());
 // bara om när den visas, så att eleven inte kastas ut från topplistan, Tyck till eller en resultatskärm.
 function takeState(state,t){
   flushLocal();   // en väntande skrivning av det gamla läget får inte skriva över molnläget efteråt
-  S=JSON.parse(JSON.stringify(state)); if(!(S.t>=t)) S.t=+t||S.t; normState(); rebuildWords();
+  S=JSON.parse(JSON.stringify(state)); if(!(S.t>=t)) S.t=+t||S.t; const moved=normState(); rebuildWords();
   try{localStorage.setItem(L.storageKey,JSON.stringify(S))}catch(e){ warnErr("molnläget kunde inte sparas i webbläsaren ("+L.storageKey+")",e); }
+  return moved;   // antal flyttade ord-id: då ska det flyttade läget också sparas i molnet
 }
 function adopt(state,key,old,t){
   if(!L||(key&&key!==L.storageKey)) return false;
   key=L.storageKey;
   if(sess){ CLOUD.deferred={key,state,old,t}; return "later"; }
-  CLOUD.deferred=null; takeState(state,t);
+  CLOUD.deferred=null; const moved=takeState(state,t);
   if(curView==="ova"&&app.querySelector("#src")) renderStart(); else if(curView==="stats") renderStats();
-  if(old) cloudSave(true);   // skriv om i det nya formatet
+  if(old||moved) cloudSave(true);   // skriv om i det nya formatet, eller med ord-id som bytt namn (applyRenames)
   return true;
 }
 function applyDeferred(render){
   const d=CLOUD.deferred; if(!d||sess) return;
   CLOUD.deferred=null;
   if(!L||d.key!==L.storageKey) return;
-  if(remoteWins(score(d.state),Math.max(+d.t||0,d.state.t||0),S)){ if(render===false){ takeState(d.state,d.t); if(d.old) cloudSave(true); } else adopt(d.state,d.key,d.old,d.t); }
+  if(remoteWins(score(d.state),Math.max(+d.t||0,d.state.t||0),S)){ if(render===false){ if(takeState(d.state,d.t)||d.old) cloudSave(true); } else adopt(d.state,d.key,d.old,d.t); }
   else cloudSave(true);   // passet som just blev klart gjorde det lokala läget längre kommet
 }
 setInterval(()=>applyDeferred(),2000);
@@ -423,6 +503,7 @@ async function cloudAttach(){   // vid start och vid byte av kurs
   CLOUD.attaching=false;
   if(!got){ setTimeout(cloudRetry,20000); return; }   // försöker också igen vid visibilitychange/online
   let push=!r;
+  const moved=!!r&&!r.bad&&needsRenames(r.state);   // molnkopian har gamla ord-id: spara det flyttade läget (applyRenames)
   if(r&&r.bad){
     if(cmpArr(r.score,score(S))>0){   // går inte att läsa helt just nu, och är längre kommet: vänta, efter tre försök laga
       const a=cloudBad(key,r); if(!a){ setTimeout(cloudRetry,15000); return; }
@@ -430,8 +511,8 @@ async function cloudAttach(){   // vid start och vid byte av kurs
     } else { CLOUD.known[key]=null; push=true; }   // vårt läge är minst lika långt: skriv alla bitar på nytt
   } else if(r){
     CLOUD.known[key]=r.parts||null; delete CLOUD.bad[key];
-    if(remoteWins(score(r.state),r.t,S)){ if(adopt(r.state,key,false,r.t)===true) push=!!r.old; }
-    else push=cmpScore(r.state,S)<0||(S.t||0)>(r.t||0)||!!r.old;
+    if(remoteWins(score(r.state),r.t,S)){ if(adopt(r.state,key,false,r.t)===true) push=!!r.old||moved; }
+    else push=cmpScore(r.state,S)<0||(S.t||0)>(r.t||0)||!!r.old||moved;
   }
   CLOUD.ready=true; setSaveNote();
   if(push) cloudSave(true);

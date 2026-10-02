@@ -46,6 +46,8 @@ Ta aldrig bort rader ur låset för hand. Är en borttagning verkligen meningen 
 
 eller en rad `<typ>|<id>` i `languages/<kod>/ids.removed` (`book/ids.removed` för bokens id). Id:t tas då bort ur låset.
 
+Ett felaktigt ord-id rättas utan att framstegen försvinner med en rad `ord|<gammalt id>|<nytt id>` i `languages/<kod>/ids.renamed`: låset uppdateras, datafilen får `renames` och appen flyttar elevernas framsteg till det nya id:t (`applyRenames`, se `docs/ARKITEKTUR.md`). Ta aldrig bort en rad ur `ids.renamed`.
+
 ## Struktur
 
 Översikt över var data ligger: `docs/ARKITEKTUR.md`.
