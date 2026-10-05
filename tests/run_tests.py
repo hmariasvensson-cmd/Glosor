@@ -242,8 +242,8 @@ appReady().then(async()=>{ try{
       &&q('[data-pick="subj"] .pvtag').textContent.endsWith("Franska 4")&&!q('[data-pick="pron"] .pvtag'), (q('[data-pick="subj"] .pvtag')||{}).textContent);
     ok("förhandsvisning: sorteras sist", pv.every(i=>ids.indexOf(i)>lastPlain)&&ids[0]==="mix", ids.join());
     ok("förhandsvisning: undertexten visas ändå", q('[data-pick="subj"] small').textContent===GR().topics.find(t=>t.id==="subj").sub);
-    gramRules("subj"); ok("förhandsvisning: regelsidan säger var det övas mer", q("#app").textContent.includes("Förhandsvisning – övas mer i Franska 4"));
-    gramRules("pron"); ok("förhandsvisning: inte på vanliga regelsidor", !q("#app").textContent.includes("Förhandsvisning")); renderStart(); }
+    gramIntro("subj"); ok("förhandsvisning: regelsidan säger var det övas mer", q("#app").textContent.includes("Förhandsvisning – övas mer i Franska 4"));
+    gramIntro("pron"); ok("förhandsvisning: inte på vanliga regelsidor", !q("#app").textContent.includes("Förhandsvisning")); renderStart(); }
   { const bad=(C().prompts||[]).filter(p=>!writeChecks(p,p.model).every(c=>c.ok)).map(p=>p.id+": "+writeChecks(p,p.model).filter(c=>!c.ok).map(c=>c.label).join("; "));
     ok("franska: modelltexterna klarar checklistan", !bad.length, bad.join(" | ")); }
   ok("övningsgrupper", document.querySelectorAll("[data-grp]").length===5, document.querySelectorAll("[data-grp]").length);
@@ -2444,6 +2444,8 @@ def test_build_checks():
         broken(dc / "prompts.json", first("prompts", lambda x: x["need"].update(tenses=["Plusquamperfekt"])), "innehåll: need.tenses som inte finns i tenseCheck stoppar", "'Plusquamperfekt', som inte finns i kursens tenseCheck")
         broken(dc / "phrases.json", first("phrases", lambda x: x["alt"].append(x["fr"])), "innehåll: fras med sig själv bland felalternativen stoppar", "har frasen själv bland felalternativen")
         broken(dc / "regler.json", first("regler", lambda d: next(iter(d.values()))["parts"].append({})), "innehåll: tom del i en regelsida stoppar", "är tom (behöver h, t, table eller ex)")
+        broken(dc / "regler.json", first("regler", lambda d: next(iter(d.values())).update(kort=5)), "innehåll: kort i fel form stoppar", "kort ska vara en sträng")
+        passes(dc / "regler.json", first("regler", lambda d: next(iter(d.values())).update(kort=["Rad ett med **fet**", "Rad två"])), "innehåll: kort som lista går igenom")
         broken(dc / "exam.json", first("exam", lambda d: d["tasks"][0].update(part="finnsinte")), "innehåll: provuppgift med okänd part stoppar", "part 'finnsinte', som inte finns i parts")
         passes(dc / "prompts.json", first("prompts", lambda x: x.update(model="Kurz.")), "innehåll: för kort modelltext ger bara en varning")
         r = build()
@@ -2632,7 +2634,8 @@ appReady().then(async()=>{ try{
   ok("plan: Ta nya ord från veckans avsnitt sätter S.src", S.src===P.weeks[2].words[0].sec, S.src); S.src=src; save();
   q("#plancard").click(); q('.planwk[open] [data-planitem]').click();
   ok("plan: en uppgift öppnas från planen", !q("#planp"));
-  renderStart(); q("#plancard").click(); q('.planwk[open] [data-plangram]').click();
+  renderStart(); q("#plancard").click(); const pg=q('.planwk[open] [data-plangram]').dataset.plangram; q('.planwk[open] [data-plangram]').click();
+  ok("plan: grammatiken börjar med regeln i korthet", RULES()[pg]?!!q("#rintro"):!q("#rintro"), pg); if(q("#rgo")) q("#rgo").click();
   ok("plan: grammatiken öppnas från planen", !!sess&&!!sess.cur); pauseSession&&pauseSession(); S.runs={}; delete S.run;
   // Startdatum i framtiden och efter sista veckan
   renderStart(); q("#plancard").click(); const d=q("#plan-start"), f=new Date(Date.now()+10*864e5);
@@ -2702,7 +2705,7 @@ appReady().then(async()=>{ try{
   ok("tillbaka: provuppgift → planen", back("exam"));
   ok("tillbaka: kapitelprov (Avbryt) → planen", back("ktest")); S.runs={}; delete S.run;
   ok("tillbaka: berättelse (Avbryt) → planen", back("story")); S.runs={}; delete S.run;
-  { KINDS.plan.open(); q("[data-plangram]").click(); const inq=!!sess&&!!sess.cur; q("#quit").click();
+  { KINDS.plan.open(); q("[data-plangram]").click(); if(q("#rgo")) q("#rgo").click(); const inq=!!sess&&!!sess.cur; q("#quit").click();
     ok("tillbaka: grammatik (Avbryt) → planen", inq&&!!q("#planp")); S.runs={}; delete S.run; }
   // Hörförståelse: Till frågorna och sedan Avbryt → planen
   { openItem("lq"); q("#toq").click(); const inq=!!sess; q("#quit").click(); ok("tillbaka: Avbryt i frågorna → planen", inq&&!!q("#planp")); S.runs={}; delete S.run; }
@@ -3332,6 +3335,110 @@ setTimeout(async()=>{ try{
 </script>"""
 
 
+# ---------------------------------------------------------------------------------------------------------
+# Regeln i korthet (elevens önskemål, Oscar 2026-10-03): varje pass med ett område börjar med en kort regelruta (kort,
+# fallback intro, hela regeln i en utfällning) från menyn, studieplanen och En runda till, och knappen Regeln syns
+# ovanför frågan hela tiden (även före svaret, i blandade pass för frågans område) utan att ta fokus. 320 px, mörkt läge.
+# ---------------------------------------------------------------------------------------------------------
+SCENARIO_RULEBOX = r"""<script>
+const out=[]; const q=s=>document.querySelector(s), qa=s=>[...document.querySelectorAll(s)];
+const ok=(name,cond,info="")=>out.push((cond?"OK   ":"FEL  ")+name+(info?"  ("+info+")":""));
+const tick=(ms=0)=>new Promise(r=>setTimeout(r,ms));
+const key=k=>document.body.dispatchEvent(new KeyboardEvent("keydown",{key:k,bubbles:true,cancelable:true}));
+const noWide=()=>document.documentElement.scrollWidth<=document.documentElement.clientWidth+1;
+const inPanel=sel=>{ const p=q(".panel"), e=q(sel); if(!p||!e) return false; const r=p.getBoundingClientRect(), b=e.getBoundingClientRect(); return b.right<=r.right+.5&&b.left>=r.left-.5; };
+// Tryck på utfällningen som på en pekskärm: fokus flyttas till summary men ska läggas tillbaka
+const tapRule=async()=>{ const sm=q(".rulebox summary"); sm.dispatchEvent(new PointerEvent("pointerdown",{bubbles:true}));
+  const md=new MouseEvent("mousedown",{bubbles:true,cancelable:true}); sm.dispatchEvent(md); sm.focus(); sm.click(); await tick(5); return md.defaultPrevented; };
+appReady().then(async()=>{ try{
+  document.documentElement.dataset.theme="light";
+  useLang("fr"); await until(()=>L.code==="fr"&&L.base&&!sess,5000); S.runs={}; delete S.run;
+  const R=RULES(), T="pc", r=R[T], k0=r.kort;
+  ok("regel: området har en regelsida", !!r&&!!r.intro, Object.keys(R).length);
+  // kort används (sträng med \n, **fetstil**), och listform
+  r.kort="Rad ett med **avoir**\nRad två\nRad tre";
+  openGrammar(); q(`[data-pick="${T}"]`).click();
+  ok("regel: menyn visar regeln i korthet", !!q("#rintro")&&q("#rintro h2").textContent==="Regeln i korthet: "+(r.title||topicName(T)), q("#app").textContent.slice(0,80));
+  ok("regel: kort används med fetstil", qa("#rintro ul.rkort li").length===3&&q("#rintro .rkort b").textContent==="avoir");
+  ok("regel: hela regeln finns i en stängd utfällning", !!q("#rintro details.rfull")&&!q("#rintro details.rfull").open&&q("#rintro details.rfull .rpart")!==null);
+  ok("regel: knappen Starta", q("#rgo").textContent==="Starta");
+  r.kort=["Första raden","Andra **raden**"]; gramIntro(T); ok("regel: kort som lista", qa("#rintro ul.rkort li").length===2&&q("#rintro .rkort b").textContent==="raden");
+  delete r.kort; gramIntro(T);
+  ok("regel: utan kort visas intro", q("#rintro .rkort").textContent.replace(/\s+/g," ").trim()===r.intro.replace(/\*\*/g,"").replace(/\s+/g," ").trim(), (q("#rintro .rkort")||{}).textContent);
+  { const fake={title:"x",parts:[{h:"h"},{t:"Andra delens **text**"}]}; ok("regel: utan kort och intro visas första delens text", ruleShort(fake).join()==="Andra delens **text**"); }
+  if(k0!==undefined) r.kort=k0;
+  ok("regel: Tillbaka från rutan till menyn", (q("#quit").click(),!!q('[data-pick="mix"]')));
+  // I passet: knappen Regeln före svaret
+  gramIntro(T); q("#rgo").click();
+  ok("regel: passet startar från rutan", !!sess&&sess.kind==="gram"&&!sess.answered);
+  ok("regel: knappen Regeln finns innan man svarat", !!q(".rulebox")&&q(".rulebox").dataset.rule===T&&!q(".rulebox").open&&q(".rulebox summary").textContent.startsWith("Regeln"));
+  ok("regel: utfällningen har kort och hela regeln", !!q(".rulebox .rkort")&&!!q(".rulebox details.rfull .rpart"));
+  // Flerval: siffran svarar och Enter går vidare, även med regeln öppen och efter ett tryck på den
+  if(sess.cur.t!=="mc"){ sess.cur.t="mc"; sess.d=KINDS.gram.mc(sess.cur); renderMC(sess.d); }
+  const md=await tapRule(); ok("regel: tryck öppnar utfällningen utan att ta fokus med musen", q(".rulebox").open&&md);
+  const d0=sess.done; key("1"); ok("regel: siffran svarar med regeln öppen", sess.answered&&sess.done===d0+1);
+  await tapRule(); ok("regel: fokus ligger kvar på Nästa", document.activeElement===q("#nx"), document.activeElement&&document.activeElement.outerHTML.slice(0,40));
+  const c0=sess.cur; key("Enter"); ok("regel: Enter går till nästa fråga", sess&&sess.cur!==c0&&!sess.answered);
+  // Skrivfråga: fokus i svarsrutan, Enter (submit) rättar och Enter går vidare
+  sess.cur.t="type"; sess.d=KINDS.gram.type(sess.cur); if(sess.d.render){ sess.cur=sess.queue.find(c=>{const x=gramById(c.ref); return x&&x.type!=="rw"&&x.type!=="err";})||sess.cur; sess.cur.t="type"; sess.d=KINDS.gram.type(sess.cur); }
+  (sess.d.render||renderType)(sess.d); await tick(60);
+  ok("regel: knappen Regeln i skrivfrågan", !!q(".rulebox"));
+  if(q("#ans")){ q("#ans").focus(); await tapRule(); ok("regel: fokus ligger kvar i svarsrutan", document.activeElement===q("#ans"));
+    q("#ans").value="xyz"; q("#f").requestSubmit(); ok("regel: Enter i svarsrutan rättar", sess.answered);
+    const c1=sess.cur; key("Enter"); ok("regel: Enter efter svaret går vidare", sess&&sess.cur!==c1); }
+  // 320 px och mörkt läge, med allt utfällt
+  document.documentElement.dataset.theme="dark"; await tick();
+  q(".rulebox").open=true; q(".rulebox details.rfull").open=true; document.body.style.width="320px"; await tick();
+  ok("regel: ingen horisontell scroll i 320 px (passet)", noWide()&&inPanel(".rulebox")&&inPanel(".rulebox summary"));
+  const sc=getComputedStyle(q(".rulebox summary")).color, bg=getComputedStyle(q(".rulebox")).backgroundColor;
+  ok("regel: mörkt läge", sc==="rgb(143, 168, 240)"&&bg==="rgb(30, 39, 69)", sc+" / "+bg);
+  document.documentElement.dataset.theme="light"; await tick();
+  ok("regel: ljust läge", getComputedStyle(q(".rulebox summary")).color==="rgb(30, 60, 140)");
+  gramIntro("tps"); if(q("#rintro")){ q("#rintro details.rfull").open=true; await tick(); ok("regel: ingen horisontell scroll i 320 px (rutan)", noWide()&&inPanel("#rgo")); }
+  document.body.style.width="";
+  // En runda till: rutan igen
+  S.runs={}; delete S.run; gramIntro(T); q("#rgo").click(); sess.queue=[]; sess.cur=null; nextQ();
+  ok("regel: slutskärmen har En runda till", !!q("#again")); q("#again").click();
+  ok("regel: En runda till visar regeln i korthet", !!q("#rintro")&&q("#rintro h2").textContent.includes(r.title||topicName(T)));
+  // Påbörjad runda: direkt till Fortsätt/Börja om, regeln finns i passet
+  q("#rgo").click(); pauseSession(); gramIntro(T);
+  ok("regel: påbörjad runda hoppar över rutan", !q("#rintro")&&!!q("#rcont")); q("#rcont").click(); ok("regel: fortsatt pass har knappen Regeln", !!q(".rulebox")); quitSession();
+  // Studieplanen: samma ruta, Tillbaka till planen
+  S.runs={}; delete S.run;
+  if(L.plan){ KINDS.plan.open(); const b=qa("[data-plangram]").find(x=>R[x.dataset.plangram]);
+    if(b){ const id=b.dataset.plangram; b.click(); ok("regel: studieplanen visar regeln i korthet", !!q("#rintro")&&q("#rintro h2").textContent.includes(R[id].title||topicName(id)));
+      q("#quit").click(); ok("regel: Tillbaka från rutan leder till planen", !!q("#planp"));
+      KINDS.plan.open(); qa("[data-plangram]").find(x=>x.dataset.plangram===id).click(); q("#rgo").click();
+      ok("regel: planens pass har knappen Regeln", !!sess&&q(".rulebox")&&q(".rulebox").dataset.rule===id);
+      q("#quit").click(); ok("regel: Avbryt leder till planen", !!q("#planp")); S.runs={}; delete S.run; }
+    else ok("regel: studieplanen har grammatik med regel", false); }
+  else ok("regel: franskan har en studieplan", false);
+  // Blandad grammatik: regeln för frågans eget område
+  { startGram("mix"); let n=0, bad=[];
+    while(sess&&n++<12){ const x=gramById(sess.cur.ref), id=ruleTopic(x), b=q(".rulebox");
+      if(R[id]?!(b&&b.dataset.rule===id):!!b) bad.push(sess.cur.ref+"→"+(b&&b.dataset.rule));
+      if(x.type==="err") ok("regel: Hitta felet visar regeln för frågans område", !R[x.rtopic]||(b&&b.dataset.rule===x.rtopic), x.rtopic);
+      sess.cur.t="mc"; sess.d=KINDS.gram.mc(sess.cur); renderMC(sess.d); answerMC(0); sess.queue=sess.queue.filter(c=>!c.again); nextQ(); }
+    ok("regel: blandad grammatik visar regeln för frågans område", !bad.length, bad.join()); sess=null; S.runs={}; delete S.run; }
+  // Bokens övningar: ingen regelsida, ingen ruta
+  ok("regel: bok har ingen regelsida och ingen knapp", !R.bok&&gramRuleBox({topic:"bok"})==="");
+  gramIntro("bok"); ok("regel: bok visar ingen ruta", !q("#rintro")); sess=null; S.runs={}; delete S.run;
+  // Dagens pass: en grammatikfråga har knappen Regeln innan svaret
+  { renderStart(); startDaily(); let g=0; while(sess&&!sess.queue&&g++<20) q("#next").click();
+    let gq=sess.queue.find(c=>c.k==="gram"&&R[ruleTopic(gramById(c.ref))]);
+    const natural=!!gq; if(!gq) gq=gramItems("mix",10).find(c=>R[ruleTopic(gramById(c.ref))]);
+    sess.queue=[gq,...sess.queue.filter(c=>c!==gq)]; nextQ();
+    const id=ruleTopic(gramById(gq.ref));
+    ok("regel: Dagens pass har knappen Regeln för grammatikfrågan", sess.dp&&!sess.answered&&!!q(".rulebox")&&q(".rulebox").dataset.rule===id, (natural?"":"inlagd fråga, ")+id);
+    if(sess.cur.t==="mc"){ key("1"); ok("regel: Dagens pass, siffran svarar", sess.answered); const c=sess.cur; key("Enter"); ok("regel: Dagens pass, Enter går vidare", sess.cur!==c); }
+    pauseSession(); S.runs={}; delete S.run; }
+ }catch(e){ ok("undantag", false, e.message+" "+(e.stack||"").split("\n")[1]); }
+ ok("inga JavaScript-fel", !__err.length, __err.join(" ; "));
+ document.body.insertAdjacentHTML("beforeend","<pre id=out>"+out.join("\n").replace(/</g,"&lt;")+"</pre>");
+});
+</script>"""
+
+
 def main():
     text = run(SCENARIO) + "\n" + run(SCENARIO_DE) + "\n" + run(SCENARIO_FIXES) + "\n" + run(SCENARIO_SYNC, 30000) + "\n" + run_http(SCENARIO_HTTP)
     text += "\n" + run_http(SCENARIO_EXAMLAZY, 60000) + "\n" + test_exam_split()   # provet hämtas vid behov, minifiering, storlek (P2)
@@ -3361,6 +3468,7 @@ def main():
     text += "\n" + run(SCENARIO_WRITEHUB, 30000)   # skriva på ett ställe, veckans skrivuppgift (P2)
     text += "\n" + run(SCENARIO_TALK, 60000)   # Tala: 4/3/2, samtal med Claude och Skugga (P2: Ny övning Tala, Muntlig förberedelse)
     text += "\n" + run(SCENARIO_KOD, 60000) + "\n" + run_http(SCENARIO_LEMMAHTTP)   # död kod, sparning, flerval, grundformer, äkta ljud (P3)
+    text += "\n" + run(SCENARIO_RULEBOX, 30000)   # regeln i korthet före och under grammatikpassen (Oscar 2026-10-03)
     text += "\n" + test_minimal_course()   # en ny, liten kurs (8 → 21 kurser)
     print(text)
     sys.exit(1 if "FEL  " in text else 0)

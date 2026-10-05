@@ -348,6 +348,13 @@ b.pass{color:var(--ok)} b.fail{color:var(--pink)}
 .rtip{background:var(--amber-soft);border-radius:10px;padding:10px 12px}
 .rtbl td,.rtbl th{text-align:left!important}
 details.rule{margin-top:6px}
+/* Regeln i korthet (början av passet) och knappen Regeln ovanför frågan */
+.rkort{margin:0;line-height:1.55;overflow-wrap:anywhere}
+ul.rkort{padding-left:1.1em;display:flex;flex-direction:column;gap:4px}
+details.rulebox{align-self:flex-start;max-width:100%;min-width:0;border:1.5px solid var(--line);border-radius:12px;padding:5px 12px;background:var(--surface-2);font-size:.92rem}
+details.rulebox[open]{align-self:stretch;display:flex;flex-direction:column;gap:8px;padding-bottom:10px}
+details.rulebox>summary{cursor:pointer;font-weight:600;font-size:.84rem;color:var(--navy);overflow-wrap:anywhere}
+details.rulebox .rtbl{font-size:.88rem}
 .soundbtn{border:1.5px solid var(--line);background:var(--surface);border-radius:999px;padding:5px 12px;font-size:.8rem;font-weight:600;color:var(--ink)}
 .soundbtn[aria-pressed="true"]{background:var(--pink-soft);color:var(--pink);border-color:var(--pink)}
 .fbq{display:flex;flex-direction:column;gap:10px;color:var(--ink)}

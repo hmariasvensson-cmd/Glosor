@@ -2,6 +2,7 @@
  "pqp": {
   "title": "Plus-que-parfait",
   "intro": "Plus-que-parfait motsvarar svenskans \"hade gjort\". Du använder det när du berättar i dåtid och vill visa att något hände ännu tidigare.",
+  "kort":["Plus-que-parfait = hade gjort: **avoir/être** i imparfait + particip: **j'avais parlé, elle était partie**.","Samma verb som tar être i passé composé tar être här, och participet böjs likadant.","Visar det som hände före berättelsens tidpunkt: **Quand je suis arrivé, le film avait commencé.**"],
   "parts": [
    {"h": "Så bildar du det", "t": "**Avoir eller être i imparfait + perfekt particip.** Samma verb som tar être i passé composé tar être här, och participet böjs på samma sätt.",
     "table": {"head": ["", "parler (avoir)", "partir (être)"], "rows": [["je", "j'avais parlé", "j'étais parti(e)"], ["tu", "tu avais parlé", "tu étais parti(e)"], ["il/elle", "il avait parlé", "elle était partie"], ["nous", "nous avions parlé", "nous étions parti(e)s"], ["vous", "vous aviez parlé", "vous étiez parti(e)(s)"], ["ils/elles", "ils avaient parlé", "elles étaient parties"]]},
@@ -14,6 +15,7 @@
  "cond": {
   "title": "Conditionnel présent",
   "intro": "Conditionnel motsvarar \"skulle\" på svenska. Du använder det för att vara artig, önska, ge råd och tala om något som inte är verkligt.",
+  "kort":["Conditionnel = skulle: futurstammen + **-ais, -ais, -ait, -ions, -iez, -aient**: **je parlerais**.","Oregelbundna stammar som i futur: **ir-, fer-, pourr-, voudr-, devr-, viendr-, saur-, verr-, faudr-**.","Artigt och råd: **Pourriez-vous m'aider ?** **Tu devrais dormir plus.**","Skriv -ais när du menar skulle: **je parlerais** (inte futur **je parlerai**)."],
   "parts": [
    {"h": "Bildning: futurstam + imparfaitändelser", "t": "Ta samma stam som i futur (**parler-, finir-, prendr-**) och lägg till imparfaitens ändelser **-ais, -ais, -ait, -ions, -iez, -aient**.",
     "table": {"head": ["", "parler", "être", "avoir"], "rows": [["je", "parlerais", "serais", "aurais"], ["tu", "parlerais", "serais", "aurais"], ["il/elle", "parlerait", "serait", "aurait"], ["nous", "parlerions", "serions", "aurions"], ["vous", "parleriez", "seriez", "auriez"], ["ils/elles", "parleraient", "seraient", "auraient"]]},
@@ -28,6 +30,7 @@
  "si": {
   "title": "Si-satser",
   "intro": "Si betyder \"om\". Vilket tempus som står efter si bestämmer tempus i huvudsatsen.",
+  "kort":["Möjligt: **si + présent → futur/présent/imperativ**: **Si tu viens, on ira au cinéma.**","Tänkt: **si + imparfait → conditionnel**: **Si j'avais le temps, je voyagerais.**","Aldrig futur eller conditionnel efter si: ”si j'aurais” är fel.","Si blir s' bara före il/ils: **s'il pleut**, men **si elle vient**."],
   "parts": [
    {"h": "Möjligt villkor: si + présent", "t": "Om villkoret är möjligt står si-satsen i **présent**, och huvudsatsen i **futur**, présent eller imperativ.",
     "ex": [{"fr": "Si tu **viens**, on **ira** au cinéma.", "sv": "Om du kommer går vi på bio."}, {"fr": "Si tu **as** faim, **mange** !", "sv": "Om du är hungrig, ät!"}]},
@@ -41,6 +44,7 @@
  "dpron": {
   "title": "Dubbla pronomen",
   "intro": "När ett verb har både ett direkt och ett indirekt objekt kan båda bytas mot pronomen. Då följer de en fast ordning före verbet.",
+  "kort":["Ordning före verbet: **me/te/nous/vous → le/la/les → lui/leur → y → en**.","**Il me le donne.** **Je le lui ai dit.** **Il y en a trois.**","I passé composé före hjälpverbet, med infinitiv före infinitiven: **Je vais te la prêter.**","Jakad imperativ: efter verbet, le/la/les först: **donne-le-moi**. Nekad: **ne me le donne pas**."],
   "parts": [
    {"h": "Ordningen före verbet", "t": "**me/te/nous/vous → le/la/les → lui/leur → y → en**",
     "table": {"head": ["1", "2", "3", "4", "5"], "rows": [["me, te, nous, vous", "le, la, les", "lui, leur", "y", "en"]]},
@@ -55,6 +59,7 @@
  "rel2": {
   "title": "Dont, ce qui, ce que",
   "intro": "Qui, que och où kan du redan. Nu kommer dont (\"som … om/av\", \"vars\") och ce qui/ce que (\"det som\", \"vad\").",
+  "kort":["**dont** ersätter de + något: **le livre dont j'ai besoin** (avoir besoin de).","dont kan också betyda vars: **une actrice dont j'admire le talent**.","**ce qui** = det som (subjekt, verb följer): **Ce qui me plaît, c'est la musique.**","**ce que** = det som/vad (objekt, subjekt följer): **Je ne sais pas ce qu'il veut.**"],
   "parts": [
    {"h": "Dont", "t": "Dont ersätter **de + något**. Använd det efter verb och uttryck som tar de: *parler de, avoir besoin de, se souvenir de, rêver de, être fier de*. Dont kan också betyda **vars**.",
     "ex": [{"fr": "Le film **dont** je parle.", "sv": "Filmen som jag pratar om."}, {"fr": "Le livre **dont** j'ai besoin.", "sv": "Boken som jag behöver."}, {"fr": "Une actrice **dont** j'admire le talent.", "sv": "En skådespelerska vars talang jag beundrar."}]},
@@ -66,6 +71,7 @@
  "prepinf": {
   "title": "Verb + à/de + infinitiv",
   "intro": "När ett verb följs av en infinitiv står det ibland de, ibland à och ibland ingenting. Det måste man lära sig med verbet.",
+  "kort":["Verb + **de**: décider, essayer, oublier, arrêter, finir: **J'ai décidé de partir.**","Verb + **à**: commencer, réussir, apprendre, aider, continuer: **Il apprend à conduire.**","Ingen preposition efter aimer, préférer, vouloir, pouvoir, devoir, savoir, espérer, aller: **J'espère trouver un stage.**","Lär dig verbet med prepositionen: **décider de, commencer à**."],
   "parts": [
    {"h": "Verb + de", "t": "Vanligast. Till exempel **décider, essayer, oublier, arrêter, finir, rêver, avoir envie, permettre à qn, conseiller à qn, demander à qn**.",
     "ex": [{"fr": "J'ai décidé **de** partir.", "sv": "Jag har bestämt mig för att åka."}, {"fr": "N'oublie pas **d'**appeler.", "sv": "Glöm inte att ringa."}]},
@@ -79,6 +85,7 @@
  "disc": {
   "title": "Indirekt tal i presens",
   "intro": "Med indirekt tal återger du vad någon säger eller frågar. När inledningsverbet står i presens (il dit, elle demande) byts inte tempus.",
+  "kort":["Med inledningsverb i presens byts inte tempus, bara pronomen: **Il dit qu'il est malade.**","Ja/nej-fråga → **si**: **Il demande si tu viens.**","qu'est-ce que → **ce que**, qu'est-ce qui → **ce qui**, och rak ordföljd: **Il demande où tu habites.**","Uppmaning → **dire de** + infinitiv: **Elle me dit de ranger ma chambre.**"],
   "parts": [
    {"h": "Påståenden: dire que", "t": "**Il dit que …** Byt pronomen och possessiva så att de passar den som berättar.",
     "ex": [{"fr": "« Je suis malade. » → Il dit **qu'il est** malade.", "sv": "Han säger att han är sjuk."}, {"fr": "« J'aime ton pull. » → Elle dit qu'elle aime **mon** pull.", "sv": "Hon säger att hon gillar min tröja."}]},
@@ -92,6 +99,7 @@
  "subj": {
   "title": "Il faut que + subjonctif",
   "intro": "Subjonctif är ett modus som används efter vissa uttryck. Det vanligaste är il faut que (man måste, det behövs att).",
+  "kort":["Ils-formen i presens − -ent + **-e, -es, -e, -ions, -iez, -ent**: **que je finisse, que je prenne**.","Oregelbundna: **sois, aie, aille, fasse, puisse, sache**.","Utan särskilt subjekt: **il faut + infinitiv** (**Il faut recycler.**); med subjekt: **Il faut que tu recycles.**","**Il ne faut pas que tu …** = du får inte."],
   "parts": [
    {"h": "Bildning", "t": "Ta **ils**-formen i presens, stryk **-ent** och lägg till **-e, -es, -e, -ions, -iez, -ent**. Nous och vous ser ut som i imparfait.",
     "table": {"head": ["", "parler (ils parlent)", "finir (ils finissent)", "prendre (ils prennent)"], "rows": [["que je", "parle", "finisse", "prenne"], ["que tu", "parles", "finisses", "prennes"], ["qu'il/elle", "parle", "finisse", "prenne"], ["que nous", "parlions", "finissions", "prenions"], ["que vous", "parliez", "finissiez", "preniez"], ["qu'ils/elles", "parlent", "finissent", "prennent"]]}},
@@ -105,6 +113,7 @@
  "conn": {
   "title": "Sambandsord",
   "intro": "Sambandsord binder ihop meningar och visar hur tankarna hänger ihop: orsak, följd, motsats och ordning.",
+  "kort":["Orsak: **parce que, comme** (först i meningen), **car**, **grâce à / à cause de** + substantiv: **Comme il pleuvait, on est restés.**","Följd: **donc, alors, c'est pourquoi**.","Motsats: **mais, pourtant, par contre, même si, alors que**: **Il a révisé. Pourtant, il a raté.**","Ordning: **d'abord, ensuite, puis, enfin**."],
   "parts": [
    {"h": "Orsak", "t": "**parce que** (eftersom, därför att), **comme** (eftersom, först i meningen), **puisque** (eftersom ju), **car** (för), **à cause de / grâce à + substantiv** (på grund av / tack vare).",
     "ex": [{"fr": "**Comme** il pleuvait, on est restés.", "sv": "Eftersom det regnade stannade vi."}, {"fr": "**Grâce à** toi, j'ai réussi.", "sv": "Tack vare dig lyckades jag."}]},

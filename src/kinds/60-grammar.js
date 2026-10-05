@@ -106,7 +106,7 @@ function errItem(id){
   // Distraktorerna är andra ord ur meningen, skrivna som de står i den
   const others=errOthers(b,bad);
   const surface=w=>{const m=wrongText.match(new RegExp("(^|[^\\p{L}])("+reEsc(w)+")(?![\\p{L}])","iu")); return m?m[2]:w;};
-  return {id,topic:"err",rule:b.rule,type:"err",bad,wrongText,rightText,
+  return {id,topic:"err",rtopic:b.topic,rule:b.rule,type:"err",bad,wrongText,rightText,
     opts:shuffle([{label:bad,ok:true,lang:true},...shuffle(others).slice(0,3).map(w=>({label:surface(w),ok:false,lang:true}))]),
     why:b.why,sv:b.sv};
 }
@@ -162,8 +162,9 @@ function startGram(topic){
   const items=gramItems(topic,10); if(!items.length) return openGrammar();
   $("#tabs").hidden=true; sess=null; beginQuiz("gram",items,{againFn:["gram",topic],label:topicName(topic),gramMix:topic==="mix"});
 }
-/* Regelsidor: content/regler.json = {<topic>: {title, intro, parts: [{h, t, ex: [{fr, sv}], table: {head, rows}, tip}]}}.
-   Visas innan övningarna och går att öppna efter varje svar. **fetstil** i texterna blir <b>. */
+/* Regelsidor: content/regler.json = {<topic>: {title, kort, intro, parts: [{h, t, ex: [{fr, sv}], table: {head, rows}, tip}]}}.
+   **fetstil** i texterna blir <b>. Varje pass med ett enda område börjar med "Regeln i korthet" (gramIntro: kort,
+   hela regeln i en utfällning och Starta), och under passet finns knappen Regeln ovanför varje fråga (gramRuleBox). */
 const RULES=()=>C().regler||{};
 const rmark=s=>esc(s||"").replace(/\*\*(.+?)\*\*/g,"<b>$1</b>").replace(/\n/g,"<br>");
 function ruleHtml(r){
@@ -173,16 +174,41 @@ function ruleHtml(r){
     ${(p.ex||[]).length?`<ul class="rex">${p.ex.map(e=>`<li><span class="ex-t" ${lang()}>${rmark(tl(e))}</span>${e.sv?`<br><span class="ex-sv">${esc(e.sv)}</span>`:""}</li>`).join("")}</ul>`:""}
     ${p.tip?`<p class="rtip">${rmark(p.tip)}</p>`:""}</div>`).join("")}`;
 }
-function gramRules(id){
+// Regeln i korthet: kort (2–5 rader, en sträng med \n eller en lista). Saknas kort tas intro, annars första delens t.
+const ruleShort=r=>{const k=(Array.isArray(r.kort)?r.kort.length:r.kort)?r.kort:r.intro||((r.parts||[]).find(p=>p.t)||{}).t||"";
+  return (Array.isArray(k)?k:String(k).split("\n")).map(x=>String(x||"").trim()).filter(Boolean);};
+const ruleShortHtml=r=>{const xs=ruleShort(r);
+  return xs.length>1?`<ul class="rkort">${xs.map(x=>`<li>${rmark(x)}</li>`).join("")}</ul>`:xs.length?`<p class="rkort">${rmark(xs[0])}</p>`:"";};
+const ruleFull=r=>`<details class="more rule rfull"><summary>Läs hela regeln</summary>${ruleHtml(r)}</details>`;
+// Början av passet (menyn, studieplanen och En runda till). Områden utan regelsida (Blandad grammatik, Hitta felet,
+// Bokens övningar) startar direkt, och en påbörjad runda går direkt till frågan Fortsätt/Börja om (regeln finns i passet).
+function gramIntro(id){
   const r=RULES()[id]; if(!r) return startGram(id);
+  const old=(S.runs||{})[runKey({kind:"gram",againFn:["gram",id]})];
+  if(old&&old.done<old.total) return startGram(id);
   stopSpeech(); $("#tabs").hidden=true; sess=null;
-  app.innerHTML=`<section class="panel"><span class="tab">Regel</span><h2>${esc(r.title||topicName(id))}</h2>
+  app.innerHTML=`<section class="panel rintro" id="rintro"><span class="tab">Regel</span><h2>Regeln i korthet: ${esc(r.title||topicName(id))}</h2>
     ${topicPreview(id)?`<p class="plan"><span class="tag n">${esc(topicPreview(id))}</span> Det är bra att känna igen redan nu.</p>`:""}
-    <button class="btn" id="rgo">Öva: ${esc(topicName(id))}</button>${ruleHtml(r)}
-    <button class="btn" id="rgo2">Starta övningarna</button></section><button class="quit" id="quit">Tillbaka</button>`;
-  $("#rgo").onclick=$("#rgo2").onclick=()=>startGram(id); $("#quit").onclick=openGrammar;
-  window.scrollTo(0,0);
+    ${ruleShortHtml(r)}${ruleFull(r)}
+    <button class="btn" id="rgo">Starta</button></section><button class="quit" id="quit">Tillbaka</button>`;
+  $("#rgo").onclick=()=>startGram(id); $("#quit").onclick=backTo(openGrammar);
+  window.scrollTo(0,0); try{$("#rgo").focus({preventScroll:true})}catch(e){ /* fokus är inte viktigt */ }
 }
+/* Knappen Regeln i passet: syns hela tiden, även innan man svarat, med regeln för frågans eget område (i blandade pass
+   alltså den aktuella frågans). Hitta felet visar regeln för frågan som felet sattes in i (rtopic). */
+const ruleTopic=x=>x.rtopic||x.topic;
+function gramRuleBox(x){
+  const id=ruleTopic(x), r=RULES()[id]; if(!r) return "";
+  return `<details class="rulebox" data-rule="${esc(id)}"><summary>Regeln: ${esc(r.title||topicName(id))}</summary>${ruleShortHtml(r)}${ruleFull(r)}</details>`;
+}
+// Utfällningen får inte ta fokus från svarsrutan eller Nästa-knappen, så att Enter, mellanslag och siffror fungerar som förut:
+// mousedown tar inte fokus, och skulle fokus ändå flytta (pekskärm) läggs det tillbaka efter klicket
+let RULE_FOCUS=null;
+const onRuleSummary=e=>e.target&&e.target.closest&&e.target.closest(".rulebox summary");
+document.addEventListener("pointerdown",e=>{ if(onRuleSummary(e)) RULE_FOCUS=document.activeElement; });
+document.addEventListener("mousedown",e=>{ if(onRuleSummary(e)) e.preventDefault(); });
+document.addEventListener("click",e=>{ if(!onRuleSummary(e)) return; const f=RULE_FOCUS; RULE_FOCUS=null;
+  if(f&&f!==document.body&&f.isConnected&&document.activeElement!==f) setTimeout(()=>{try{f.focus({preventScroll:true})}catch(_){ /* borta */ }},0); });
 function openGrammar(){
   const gt=S.gt||{}, bank=Object.values(gramBank());
   // Status: andel rätt och hur många frågor som ska repeteras i dag (gramDue)
@@ -192,7 +218,7 @@ function openGrammar(){
   const topics=GR().topics.filter(t=>t.id==="adj"?GR().adj&&adjNouns().length:t.id==="err"?errBase().length:bank.some(x=>x.topic===t.id));
   pickerScreen("Grammatik",`Välj ett område. Frågor du klarar kommer tillbaka efter 1, 3, 7, 20, 45 och 90 dagar, och frågor du missar redan nästa gång. Blandad grammatik tar lite av allt.${due?` <b data-due="${due}">${due} ${due===1?"fråga":"frågor"} att repetera i dag.</b>`:""}`,
     [{id:"mix",title:"Blandad grammatik",status:status("mix")},...topics.map(t=>({id:t.id,title:t.name,status:status(t.id),here:chapterTopics().includes(t.id),tag:topicPreview(t.id)}))]
-      .sort((a,b)=>(a.here?0:a.tag?2:1)-(b.here?0:b.tag?2:1)),id=>RULES()[id]?gramRules(id):startGram(id));
+      .sort((a,b)=>(a.here?0:a.tag?2:1)-(b.here?0:b.tag?2:1)),gramIntro);
   // Undertexter under ämnena
   app.querySelectorAll("[data-pick]").forEach(b=>{const t=GR().topics.find(x=>x.id===b.dataset.pick); const sm=b.querySelector("small");
     if(t&&t.sub&&sm&&!sm.textContent) sm.textContent=t.sub;});
@@ -209,7 +235,11 @@ const gramExplain=x=>`${x.rightText?`<p class="ex-t" ${lang()}>${esc(x.rightText
   <p class="foot">${esc((GR().rules||{})[x.rule]||"")}</p>
   ${RULES()[x.topic]?`<details class="more rule"><summary>Läs regeln: ${esc(RULES()[x.topic].title||topicName(x.topic))}</summary>${ruleHtml(RULES()[x.topic])}</details>`:""}`;
 const gramSay=x=>x.type==="rw"?x.a:x.type==="err"?x.rightText:gfill(x.p,x.p.gaps);
-const gramMC=c=>{const x=gramById(c.ref);
+// Regelknappen läggs först i frågan (head, eller prompt i brickvyn)
+const withRule=(x,d)=>{const b=gramRuleBox(x); if(b){ if(d.render) d.prompt=b+(d.prompt||""); else d.head=b+(d.head||""); } return d;};
+const gramMC=c=>withRule(gramById(c.ref),gramMC0(c));
+const gramType=c=>withRule(gramById(c.ref),gramType0(c));
+const gramMC0=c=>{const x=gramById(c.ref);
   if(x.type==="err") return{tab:"Hitta felet",head:gramHead(x),ask:"Ett ord i meningen är fel. Vilket?",opts:x.opts,
     explain:gramExplain(x),say:gramSay(x),sayOnAnswer:true};
   // rw med "ask" (t.ex. bokens översättningsövningar): q är en svensk mening och ask instruktionen
@@ -220,7 +250,7 @@ const gramMC=c=>{const x=gramById(c.ref);
     opts:shuffle([{label:x.ans,ok:true,lang:true},...shuffle(x.alt).slice(0,4).map(a=>({label:a,ok:false,lang:true}))]),
     explain:gramExplain(x),say:gramSay(x),sayOnAnswer:true,onAnswer:fillGaps(x)};
 };
-const gramType=c=>{const x=gramById(c.ref);
+const gramType0=c=>{const x=gramById(c.ref);
   if(x.type==="rw"){ const o=orderTokens(x.a); o.words=o.words.map(w=>w.replace(/,$/,""));
     return{tab:"Grammatik",render:renderTiles,o,w:{exSv:x.sv},
       prompt:x.ask?`<p class="q-prompt" style="font-size:1.2rem">${esc(x.q)}</p>`:`<p class="q-prompt" style="font-size:1.2rem" ${lang()}>${esc(x.q)}</p><p class="ex-sv">${esc(x.sv)}</p>`,
@@ -246,7 +276,7 @@ const gramEffect=(ref,ok)=>{const x=gramById(ref); if(!x) return;
   if(x.type==="gap"||x.type==="rw"){S.gi=S.gi||{}; S.gi[ref]=srsBump(S.gi[ref],ok);}
 };
 defineKind("gram",{name:"Grammatik",mc:gramMC,type:gramType,restore:ref=>gramById(ref)?{}:null,effect:gramEffect,
-  recap:ref=>{const x=gramById(ref); return x?gramSay(x):"";},open:openGrammar,again:startGram});
+  recap:ref=>{const x=gramById(ref); return x?gramSay(x):"";},open:openGrammar,again:gramIntro});
 
 /* Statistik: träffsäkerhet per ämne och de regler man missar mest */
 function statsGrammar(){

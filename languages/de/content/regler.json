@@ -2,6 +2,7 @@
 "adj": {
   "title": "Adjektivändelser",
   "intro": "När ett adjektiv står framför ett substantiv får det en ändelse. Vilken ändelse det blir beror på vilken artikel som står före (der, ein eller ingen alls), på kasus och på genus. Grundregeln: någon i gruppen måste visa kasus och genus. Gör artikeln det, räcker det att adjektivet får -e eller -en.",
+  "kort":["Efter der/die/das (dieser, jeder): bara **-e** eller **-en**: **der neue Plan, den aktuellen Konflikt, mit der neuen Regel**.","Efter ein, kein, mein: när ein saknar ändelse visar adjektivet genus: **ein typischer Fehler, ein wichtiges Thema**.","Utan artikel får adjektivet nästan samma ändelse som der-ordet: **guter Kaffee, kaltes Wasser, mit großem Interesse**.","I dativ efter en artikel nästan alltid -en: **mit einem kurzen Text**."],
   "parts": [
     {"h": "Efter der/die/das (bestämd artikel)",
      "t": "Efter der, die, das och ord som böjs likadant (dieser, jeder, welcher, alle) visar artikeln redan allt. Adjektivet får då bara **-e** eller **-en**.\n**-e** i nominativ singular och i ackusativ femininum och neutrum. **-en** i alla andra fall: ackusativ maskulinum, hela dativ, hela genitiv och hela plural.",
@@ -47,6 +48,7 @@
 "praep": {
   "title": "Kasus efter preposition",
   "intro": "På tyska styr varje preposition ett visst kasus. Vissa tar alltid dativ, vissa alltid ackusativ och några genitiv. Nio prepositioner, Wechselpräpositionen, tar dativ eller ackusativ beroende på om det handlar om plats eller riktning.",
+  "kort":["Alltid dativ: **aus, bei, mit, nach, seit, von, zu, gegenüber**: **Ich gehe zum Training.**","Alltid ackusativ: **durch, für, gegen, ohne, um, bis**: **gegen den Klimawandel**.","Wechselpräpositionen: **Wo?** → dativ, **Wohin?** → ackusativ: **Das Handy liegt auf dem Tisch.** / **Ich lege das Buch auf den Tisch.**","Genitiv: **wegen, trotz, während, statt, innerhalb, außerhalb**: **Wegen des Streiks fahren keine Züge.**"],
   "parts": [
     {"h": "Artiklarna i dativ och ackusativ",
      "t": "Här är de former du behöver. Lägg märke till att bara maskulinum skiljer sig mellan nominativ och ackusativ, medan dativ är annorlunda i alla genus.",
@@ -86,6 +88,7 @@
 "bisatz": {
   "title": "Bisatsordföljd",
   "intro": "Det tyska verbet är noga med sin plats. I en huvudsats står det böjda verbet på plats två, i en bisats står det sist. Vilket ord som binder ihop meningarna avgör vilken ordföljd som gäller. Det finns fyra typer att hålla isär.",
+  "kort":["Efter subjunktion (weil, dass, ob, wenn, obwohl, nachdem …) står det böjda verbet sist: **…, weil ich zu wenig geschlafen habe.**","Efter adverb (deshalb, trotzdem, sonst, danach) kommer verbet direkt: **…, deshalb möchte ich Informatik studieren.**","Efter ADUSO (aber, denn, und, sondern, oder) vanlig ordföljd: **…, denn die Busfahrer streiken heute.**","Bisatsen först: verb, komma, verb: **Wenn ich mehr Zeit habe, engagiere ich mich.**"],
   "parts": [
     {"h": "Subjunktion: verbet sist",
      "t": "Efter en subjunktion blir det en bisats, och där hamnar det böjda verbet **sist**. Har du ett hjälpverb (haben, sein, werden, ett modalverb) är det hjälpverbet som hamnar allra sist.\nVanliga subjunktioner: **weil, dass, ob, wenn, als, obwohl, bevor, nachdem, während, damit, bis, seit**.",
@@ -115,6 +118,7 @@
 "relativ": {
   "title": "Relativsatser",
   "intro": "En relativsats beskriver ett substantiv närmare: der Mann, der neben mir wohnt. På svenska räcker \"som\", men på tyska måste relativpronomenet böjas. Relativsatsen är en bisats, så verbet står sist, och den har alltid komma runt sig.",
+  "kort":["Genus från ordet, kasus från rollen i relativsatsen; verbet sist: **Der Film, den wir gesehen haben, war spannend.**","Avvikande former: **denen** (dativ plural), **dessen/deren** (genitiv): **Die Kinder, denen wir Nachhilfe geben, …**","Prepositionen står först: **der Stuhl, auf dem du sitzt**.","**dessen/deren** = vars: **Die Autorin, deren Roman wir lesen, …**; **was** efter alles, nichts, das Beste; **wo** efter plats."],
   "parts": [
     {"h": "Genus från substantivet, kasus från bisatsen",
      "t": "Två frågor ger rätt pronomen:\n1. Vilket **genus och numerus** har ordet som beskrivs? Det avgör kolumnen.\n2. Vilken **roll** har pronomenet i relativsatsen? Subjekt = nominativ, direkt objekt = ackusativ, efter dativverb (helfen, gehören, danken, vertrauen …) = dativ. Det avgör raden.\nPronomenen ser nästan ut som bestämd artikel. Undantagen är fetade.",
@@ -150,6 +154,7 @@
 "verbprep": {
   "title": "Verb med preposition",
   "intro": "Många tyska verb har en fast preposition, precis som svenska \"vänta på\" eller \"tänka på\". Prepositionen är ofta en annan än på svenska, så verbet och prepositionen behöver läras in tillsammans, gärna med kasus.",
+  "kort":["Lär dig verbet med preposition och kasus: **warten auf** (ack.), **sich interessieren für**, **teilnehmen an** (dat.), **Angst haben vor** (dat.).","**sich freuen auf** = se fram emot, **sich freuen über** = bli glad för något som hänt.","Om sak: **da(r)** + preposition: **Ich freue mich darauf.** Om person: **Ich warte auf ihn.**","Frågor: **Worauf wartest du?** (sak) – **Auf wen wartest du?** (person)"],
   "parts": [
     {"h": "Vanliga verb och deras prepositioner",
      "t": "De flesta verb med **auf, über, an** (i abstrakt betydelse) tar **ackusativ**. Verb med **mit, von, zu, nach, bei** tar dativ, eftersom de prepositionerna alltid gör det. Verb med **vor** tar också dativ (Angst haben vor).",
@@ -193,6 +198,7 @@
 "konj": {
   "title": "Konjunktiv",
   "intro": "Konjunktiv II används för det som inte är verkligt: önskningar, drömmar, villkor och artiga frågor (svenska \"skulle\", \"vore\", \"hade\"). Konjunktiv I används främst i nyheter och texter för att återge vad någon annan har sagt.",
+  "kort":["Konjunktiv II: **wäre, hätte, könnte, müsste** eller **würde** + infinitiv; skriftformer: **gäbe, käme, wüsste**.","Overkligt villkor: **Wenn ich mehr Zeit hätte, würde ich öfter Sport machen.**","Dåtid: **hätte/wäre** + particip: **Wenn ich das gewusst hätte, wäre ich gekommen.**","Konjunktiv I i nyheter: **er sei, er habe, er könne**: **Der Minister erklärte, die Lage sei unter Kontrolle.**"],
   "parts": [
     {"h": "Former i Konjunktiv II",
      "t": "Konjunktiv II bildas av preteritum, ofta med omljud: war → **wäre**, hatte → **hätte**, konnte → **könnte**. De flesta andra verb använder **würde + infinitiv**. Några starka verb har egna former som är vanliga i skrift: **gäbe, käme, ginge, wüsste**.",
@@ -236,6 +242,7 @@
 "passiv": {
   "title": "Passiv",
   "intro": "I passiv står handlingen i centrum, inte den som gör den: Das Haus wird gebaut (huset byggs). På tyska bildas passiv med **werden + particip II**. Det är werden som böjs i tempus, participet står sist.",
+  "kort":["Passiv = **werden** + particip II sist: **Das Rathaus wird renoviert.** **Die Mauer wurde 1961 gebaut.**","Perfekt med sein + **worden** (inte geworden): **Die Brücke ist gebaut worden.**","Med modalverb: particip + **werden** sist: **Die Schule muss renoviert werden.**","Tillstånd = **sein** + particip: **Die Tür ist abgeschlossen.** Utföraren med **von** + dativ."],
   "parts": [
     {"h": "Passiv i olika tempus",
      "t": "Bara werden ändras. Participet (gebaut) står alltid kvar i slutet. Böj werden efter subjektet: das Haus **wird**, die Häuser **werden**.",
@@ -269,6 +276,7 @@
 "zuinf": {
   "title": "zu-infinitiv",
   "intro": "Tyskans zu motsvarar ofta svenskans \"att\" framför ett verb. Infinitiven med zu står sist i satsen. Dessutom finns tre fasta konstruktioner: um … zu (för att), ohne … zu (utan att) och statt … zu (i stället för att). Och när subjekten skiljer sig använder man damit.",
+  "kort":["**zu** + infinitiv sist: **Ich habe vor, im Sommer in einem Café zu arbeiten.** Inget zu efter modalverb och werden.","Partikelverb i ett ord: **aufzustehen, anzurufen**.","**um … zu** = för att (samma subjekt): **…, um Medizin zu studieren.** Olika subjekt: **damit**.","**ohne … zu** = utan att, **statt … zu** = i stället för att: **Er ist gegangen, ohne sich zu verabschieden.**"],
   "parts": [
     {"h": "Infinitiv med zu",
      "t": "Efter många verb och uttryck (vorhaben, vergessen, versuchen, erlauben, Lust haben, Zeit haben, es ist leicht/schwer …) kommer **zu + infinitiv** sist i meningen.\nVid partikelverb hamnar zu **mellan** partikeln och verbet, i ett ord: auf**zu**stehen, an**zu**rufen, mit**zu**helfen.\n**Inget zu** efter modalverb (können, müssen, wollen …) och efter werden.",
@@ -298,6 +306,7 @@
 "perfekt": {
   "title": "Perfekt: haben eller sein?",
   "intro": "Perfekt bildas med hjälpverbet haben eller sein + particip II. De flesta verb tar haben, men verb som beskriver förflyttning eller förändring tar sein. På svenska heter det alltid \"har\", så det här måste man tänka på.",
+  "kort":["**sein** vid förflyttning och förändring utan objekt samt sein, bleiben, passieren: **Wir sind nach Salzburg gefahren.**","**haben** med ackusativobjekt, reflexiva verb och övriga: **Mein Vater hat mich gefahren.** **Ich habe schlecht geschlafen.**","Pluskvamperfekt = **hatte/war** + particip: **Nachdem ich gegessen hatte, ging ich spazieren.**"],
   "parts": [
     {"h": "sein: förflyttning och förändring",
      "t": "**sein** används när verbet saknar objekt och beskriver:\n• en **förflyttning** från ett ställe till ett annat: gehen, fahren, fliegen, kommen, laufen, ziehen (flytta), reisen\n• en **förändring av tillstånd**: werden, einschlafen, aufstehen, aufwachen, sterben, wachsen\n• och dessutom: **sein, bleiben, passieren, geschehen**.",
@@ -325,6 +334,7 @@
 "bindeord": {
   "title": "Bindeord och ordföljd",
   "intro": "Bindeord visar hur idéer hänger ihop: orsak, motsats, följd eller tillägg. Många betyder ungefär samma sak men ger olika ordföljd. För att välja rätt behöver du veta både betydelsen och vilken typ av ord det är.",
+  "kort":["**weil** (verb sist), **denn** (vanlig ordföljd), **nämlich** (inne i satsen): **Er hatte nämlich keine Berufserfahrung.**","**obwohl** (verb sist) och **trotzdem** (verb direkt efter): **Es war eiskalt. Trotzdem sind wir geschwommen.**","**sondern** = utan, efter nekad sats: **kein Problem der Jugend, sondern der ganzen Gesellschaft**.","Följd och tillägg: **deshalb, sodass, so … dass, außerdem**; par: **sowohl … als auch, weder … noch**."],
   "parts": [
     {"h": "Orsak: weil, denn, nämlich",
      "t": "**weil** (subjunktion, verbet sist) och **denn** (konjunktion, vanlig ordföljd) betyder båda \"eftersom/för\". denn kan inte stå först i en mening. **nämlich** står inne i satsen, efter verbet, och förklarar det som just sagts.",
@@ -363,6 +373,7 @@
 "gen": {
  "title": "Genitiv och n-deklination",
  "intro": "Genitiv visar att något hör till något annat, ungefär som svenskans -s: die Qualität des Unterrichts (undervisningens kvalitet). I vardagligt tal byts genitiv ofta mot von + dativ, men i skrift och på B2-provet förväntas genitiv, särskilt efter prepositioner som wegen och trotz. Hit hör också n-deklinationen: en grupp maskulina substantiv som får -n eller -en i alla former utom nominativ singular.",
+ "kort":["Genitiv m/n: **des/eines** + **-s/-es**, f/pl: **der**: **die Qualität des Unterrichts, am Ende der Probe**.","Namn: **-s** utan apostrof: **Beethovens Sinfonie**.","**wegen, aufgrund, trotz, während, statt, innerhalb** + genitiv: **Trotz des schlechten Wetters fand das Konzert statt.**","n-deklination: **-n/-en** utom i nominativ singular: **den Kollegen, dem Studenten, Herrn Weber**."],
  "parts": [
   {
    "h": "Genitivets artiklar och ändelser",
@@ -490,6 +501,7 @@
 "partizip": {
  "title": "Particip som adjektiv",
  "intro": "På tyska kan ett particip stå framför ett substantiv och böjas som ett vanligt adjektiv: die steigenden Preise, das gelesene Buch. Det är mycket vanligt i tidningar och i B2-provets lästexter, ofta som långa utbyggda attribut som motsvarar en hel relativsats.",
+ "kort":["Partizip I = infinitiv + **-d**, något pågår: **die steigenden Mieten**.","Partizip II = något är gjort: **die renovierte Stadthalle, eine gebrauchte Gitarre**.","Utbyggt attribut: tillägg mellan artikel och particip: **der seit Jahren geplante Umbau**.","Participet får alltid adjektivändelse: **die steigenden Preise**, aldrig ”die steigend Preise”."],
  "parts": [
   {
    "h": "Partizip I: något pågår",
@@ -588,6 +600,7 @@
 "zweiteilig": {
  "title": "Tvådelade bindeord",
  "intro": "Tvådelade bindeord binder ihop två led som hör ihop: både … och, varken … eller, ju … desto. De är vanliga när man argumenterar och gör texten mer varierad, både i skrivuppgiften och den muntliga delen av B2-provet. Svårigheterna är att hålla ihop rätt par och att få ordföljden rätt.",
+ "kort":["**sowohl … als auch, nicht nur … sondern auch, weder … noch, entweder … oder**: **Er hat weder Zeit noch Geld.**","**entweder** före subjektet eller med verbet direkt efter: **Entweder fahren wir mit dem Zug, oder wir nehmen den Bus.**","**zwar … aber**, **einerseits … andererseits**: **Die Stadt ist zwar schön, aber die Mieten sind hoch.**","**je** + komparativ (verb sist), **desto/umso** + komparativ (verb direkt efter): **Je mehr man übt, desto sicherer spielt man.**"],
  "parts": [
   {
    "h": "Par som binder ihop satsdelar",
@@ -703,6 +716,7 @@
  "futur": {
   "title": "Futur I och II",
   "intro": "Futur I (werden + infinitiv) används för planer, löften och förutsägelser, till exempel om klimatet eller om vad du ska göra efter studenten. Futur II visar att något är klart vid en tidpunkt i framtiden. Båda kan också uttrycka en gissning: Er wird wohl krank sein.",
+  "kort":["Futur I = **werden** + infinitiv sist: **In Zukunft werden mehr Menschen im Homeoffice arbeiten.**","Futur II = werden + particip + **haben/sein**: **Bis Ende des Jahres werde ich alle Bewerbungen abgeschickt haben.**","Gissning med wohl/schon: **Er wird wohl beim Training sein.** **Sie wird den Termin vergessen haben.**"],
   "parts": [
    {
     "h": "Futur I: werden + infinitiv",

@@ -2,6 +2,14 @@
 
 Punkter som har flyttats från [`BACKLOG.md`](BACKLOG.md) när de byggdes. **Referens** anger backloggens rubrik och prioritet. **Commit** anger var ändringen finns i git. **Publicerat** anger versionen av artefakten på https://claude.ai/artifact/YBQv8j4qXQQLuPwLAWt5mP.
 
+## 2026-10-05 (publicerat som version 39)
+
+| Referens | Vad som byggdes | Commit |
+|---|---|---|
+| Tyck till från eleven (2026-10-03) *Regeln i början av grammatikpasset* | Varje pass med ett område börjar med rutan "Regeln i korthet" (`gramIntro` i 60-grammar.js, ersätter den långa regelsidan) med utfällbar hela regel, från grammatikmenyn, studieplanen och "En runda till". Knappen "Regeln" ovanför varje grammatikfråga, även före svaret och i blandade pass (Dagens pass, blandad runda) för frågans område. Nytt fält `kort` (2–5 rader med exempel) i alla 259 områden i 21 kurser; build.py kontrollerar formen. `SCENARIO_RULEBOX`. | se git log |
+
+Testerna har 2 136 kontroller.
+
 ## 2026-10-02, del 2 (publicerat som version 38)
 
 | Referens | Vad som byggdes | Commit |

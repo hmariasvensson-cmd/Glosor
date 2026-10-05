@@ -98,7 +98,7 @@ function openPlan(){
     planSetStart(planIso(mon)); openPlan(); };
   app.querySelectorAll("[data-plansrc]").forEach(b=>b.onclick=()=>{ S.src=b.dataset.plansrc; save(); renderStart(); });
   // Uppgifterna öppnas med openFrom (app.js): Tillbaka, Avbryt och slutskärmens knapp leder tillbaka hit
-  app.querySelectorAll("[data-plangram]").forEach(b=>b.onclick=()=>{ PLAN_OPEN=+b.closest(".planwk").dataset.wk; openFrom(openPlan,()=>startGram(b.dataset.plangram),PLAN_BACK); });
+  app.querySelectorAll("[data-plangram]").forEach(b=>b.onclick=()=>{ PLAN_OPEN=+b.closest(".planwk").dataset.wk; openFrom(openPlan,()=>gramIntro(b.dataset.plangram),PLAN_BACK); });
   app.querySelectorAll("[data-planitem]").forEach(b=>b.onclick=()=>{ const [i,j]=b.dataset.planitem.split("|").map(Number);
     const it=planItem(P.weeks[i].do[j]); PLAN_OPEN=i; if(it) openFrom(openPlan,it.go,PLAN_BACK); });
   $("#quit").onclick=renderStart;

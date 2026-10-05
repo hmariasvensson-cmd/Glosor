@@ -722,6 +722,13 @@ def check_fields(content, where, connectors=None, tenses=None):
                 if not isinstance(r, dict) or not isinstance(r.get("title"), str) or not r["title"] or not isinstance(r.get("parts"), list) or not r["parts"]:
                     errors.append(f"{f}: {topic} behöver title och parts")
                     continue
+                kort = r.get("kort")
+                if kort is not None:
+                    lines = kort.split("\n") if isinstance(kort, str) else kort
+                    if not isinstance(lines, list) or not all(isinstance(x, str) for x in lines) or not any(x.strip() for x in lines):
+                        errors.append(f"{f}: {topic}: kort ska vara en sträng (rader med \\n) eller en lista med strängar")
+                    elif len([x for x in lines if x.strip()]) > 6:
+                        warnings.append(f"{f}: {topic}: kort har {len([x for x in lines if x.strip()])} rader (2–5 är lagom)")
                 for k, p in enumerate(r["parts"]):
                     if not isinstance(p, dict) or not any(p.get(a) for a in ("h", "t", "table", "ex")):
                         errors.append(f"{f}: {topic} del {k + 1} är tom (behöver h, t, table eller ex)")

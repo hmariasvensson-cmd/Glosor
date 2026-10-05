@@ -2,6 +2,7 @@
 "adj": {
   "title": "Adjektivändelser",
   "intro": "Ett adjektiv framför ett substantiv får en ändelse. Den beror på artikeln före, på kasus och på genus.",
+  "kort":["Efter der/die/das bara **-e** eller **-en**: **der alte Rucksack, den kleinen Schlüssel, mit dem neuen Fahrrad**.","**-e** i nominativ och i ackusativ f/n, **-en** i övrigt (ack. maskulinum, dativ, plural).","Efter ein visar adjektivet genus: **ein neuer Rucksack, ein schönes Haus**.","I dativ alltid -en: **mit einer guten Freundin**."],
   "parts": [
     {"h": "Efter der/die/das",
      "t": "Efter der, die, das (och dieser, jeder) får adjektivet bara **-e** eller **-en**.\n**-e** i nominativ och i ackusativ femininum och neutrum. **-en** i alla andra fall: ackusativ maskulinum, hela dativ och plural.",
@@ -27,6 +28,7 @@
 "praep": {
   "title": "Prepositioner och kasus",
   "intro": "Varje preposition styr ett kasus. Vissa tar alltid dativ, vissa alltid ackusativ, och några tar dativ eller ackusativ beroende på om det handlar om plats eller riktning.",
+  "kort":["Alltid dativ: **aus, bei, mit, nach, seit, von, zu**: **mit dem Bus**.","Alltid ackusativ: **durch, für, gegen, ohne, um**: **für meinen Opa**.","in, an, auf, über, unter, vor, hinter, neben, zwischen: **Wo?** → dativ, **Wohin?** → ackusativ: **im Kühlschrank / in den Kühlschrank**.","**liegen, stehen, sitzen** → dativ; **legen, stellen, setzen** → ackusativ."],
   "parts": [
     {"h": "Artiklarna",
      "table": {"head": ["", "maskulinum", "femininum", "neutrum", "plural"],
@@ -55,6 +57,7 @@
 "perfekt": {
   "title": "Perfekt och Präteritum",
   "intro": "När man pratar om det som hänt använder man oftast perfekt: haben eller sein + particip II. För sein, haben och modalverben används i stället oftast preteritum.",
+  "kort":["Perfekt = **haben/sein** + particip II: **Ich habe zwei Brötchen gegessen.**","**sein** vid förflyttning och förändring samt sein och bleiben: **Mein Cousin ist nach Berlin gezogen.**","Har verbet ett objekt blir det haben, även fahren: **Meine Mutter hat uns gefahren.**","sein, haben och modalverb oftast i präteritum: **war, hatte, konnte, musste, durfte**."],
   "parts": [
     {"h": "Perfekt med sein",
      "t": "**sein** används för verb som betyder **förflyttning** (gehen, fahren, fliegen, kommen, ziehen) eller **förändring** (aufstehen, einschlafen, werden), och för **sein** och **bleiben**.",
@@ -85,6 +88,7 @@
 "nebensatz": {
   "title": "als, wenn, dass, ob",
   "intro": "Svenska \"när\" och \"om\" har flera översättningar på tyska. Här väljer du rätt subjunktion. Efter alla de här orden står verbet sist.",
+  "kort":["**als** = en gång i dåtid: **Als ich zehn war, sind wir nach Hamburg gezogen.**","**wenn** = flera gånger, framtid eller villkor: **Immer wenn es regnet, bleibe ich zu Hause.** **wann** i frågor.","**dass** = att, **ob** = om (huruvida): **Der Lehrer fragt, ob wir die Hausaufgaben gemacht haben.**","**weil** = eftersom, **obwohl** = fast, **damit** = så att – verbet sist: **…, obwohl das Wasser kalt ist.**"],
   "parts": [
     {"h": "als, wenn eller wann?",
      "t": "**als** = när, om **en enda gång** i dåtid.\n**wenn** = när, om något som händer **flera gånger** (immer wenn) eller i **framtiden**. wenn kan också betyda \"om\" (villkor).\n**wann** = när, i **frågor** (även indirekta: Ich weiß nicht, wann …).",
@@ -108,6 +112,7 @@
 "bisatz": {
   "title": "Ordföljd",
   "intro": "I en huvudsats står verbet på plats två. I en bisats står det sist. Ordet som binder ihop två meningar avgör vilken ordföljd det blir.",
+  "kort":["Efter **weil, dass, ob, wenn, als, obwohl** står verbet sist: **…, weil ich Fieber habe.**","Efter **deshalb, trotzdem, dann, sonst** kommer verbet direkt: **Es regnet, deshalb bleiben wir zu Hause.**","Efter **und, aber, oder, denn, sondern**: vanlig ordföljd: **…, denn ich habe keine Zeit.**","Bisatsen först: verb, komma, verb: **Wenn ich Zeit habe, helfe ich dir.**"],
   "parts": [
     {"h": "Subjunktion: verbet sist",
      "t": "Efter **weil, dass, ob, wenn, als, obwohl** står det böjda verbet **sist**.",
@@ -133,6 +138,7 @@
 "relativ": {
   "title": "Relativsatser",
   "intro": "En relativsats beskriver ett substantiv, som svenskans \"som\". På tyska böjs relativpronomenet, och verbet står sist.",
+  "kort":["Relativpronomenet tar genus från ordet och kasus från rollen i satsen; verbet sist: **Der Junge, der neben mir sitzt, …**","Objekt → ackusativ: **Der Pullover, den ich gekauft habe, …**; dativverb → dativ: **Die Frau, der ich geholfen habe, …**","Dativ plural = **denen**: **Die Kinder, denen der Film gefallen hat, …**","Prepositionen står före pronomenet: **die Freundin, mit der ich nach Italien fahre**."],
   "parts": [
     {"h": "Vilket pronomen?",
      "t": "**Genus** tar du från ordet som beskrivs. **Kasus** tar du från rollen i relativsatsen: subjekt = nominativ, objekt = ackusativ, efter dativverb (helfen, geben, gefallen) = dativ.",
@@ -155,6 +161,7 @@
 "reflexiv": {
   "title": "Reflexiva verb",
   "intro": "Reflexiva verb har ett pronomen som syftar tillbaka på subjektet, som svenskans \"jag tvättar mig\". Många tyska verb är reflexiva fast de inte är det på svenska, till exempel sich freuen (glädjas) och sich beeilen (skynda sig).",
+  "kort":["Reflexivpronomen i ackusativ: **mich, dich, sich, uns, euch, sich**: **Ich freue mich auf die Ferien.**","Många är reflexiva bara på tyska: **sich freuen, sich beeilen**: **Beeil dich!**","Finns ett annat objekt står pronomenet i dativ, **mir/dir**: **Ich wasche mir die Hände.**"],
   "parts": [
     {"h": "Ackusativ: mich, dich, sich",
      "t": "Oftast står reflexivpronomenet i **ackusativ**. Det liknar svenskan: mig, dig, sig, oss, er, sig.",
@@ -175,6 +182,7 @@
 "konj": {
   "title": "Konjunktiv II",
   "intro": "Konjunktiv II används för artiga frågor, önskningar, råd och sådant som inte är verkligt. Det motsvarar svenskans \"skulle\", \"vore\" och \"hade\".",
+  "kort":["Konjunktiv II = preteritum med omljud: **hätte, wäre, könnte, würde**; sollen: **sollte**.","Artigt: **Ich hätte gern ein Glas Apfelsaft.** **Könnten Sie mir das Salz geben?**","Overkligt villkor: **Wenn ich mehr Geld hätte, würde ich ein neues Handy kaufen.**","Råd: **Du solltest früher ins Bett gehen.** **An deiner Stelle würde ich …**"],
   "parts": [
     {"h": "De viktigaste formerna",
      "t": "Konjunktiv II ser ut som preteritum men med omljud: hatte → **hätte**, war → **wäre**, konnte → **könnte**, wurde → **würde**. **sollte** har inget omljud. Andra verb: **würde + infinitiv**.",
@@ -205,6 +213,7 @@
 "passiv": {
   "title": "Passiv",
   "intro": "Passiv används när det viktiga är vad som händer, inte vem som gör det: Das Essen wird gekocht (maten lagas). Man bildar det med **werden + particip II**.",
+  "kort":["Passiv = **werden** + particip II sist: **In der Schweiz werden vier Sprachen gesprochen.**","Presens: **wird** (sg), **werden** (pl).","Preteritum: **wurde/wurden**: **Unser Haus wurde vor hundert Jahren gebaut.**","**wurde** = passiv dåtid, **würde** = skulle."],
   "parts": [
     {"h": "Passiv i presens: wird/werden",
      "t": "Böj werden efter subjektet: singular **wird**, plural **werden**. Participet står sist.",
@@ -224,6 +233,7 @@
 "komp": {
   "title": "Jämförelser",
   "intro": "Som på svenska jämför man med komparativ (större) och superlativ (störst). Ändelserna är -er och -(e)st.",
+  "kort":["Komparativ **-er**, ofta med omljud: **älter, größer, wärmer**; oregelbundna: **besser, lieber, mehr, höher**.","Superlativ efter verbet: **am + -sten**: **Musik mag ich am liebsten.**","Före substantiv: artikel + **-ste**: **der höchste Berg Deutschlands**.","än = **als**, lika … som = **so/genauso … wie**: **Mein Zimmer ist genauso groß wie deins.**"],
   "parts": [
     {"h": "Komparativ: -er",
      "t": "Lägg till **-er**. Många korta adjektiv får omljud: alt → **älter**, groß → **größer**, lang → **länger**, warm → **wärmer**. Några är oregelbundna: gut → **besser**, gern → **lieber**, viel → **mehr**, hoch → **höher**.",
@@ -250,6 +260,7 @@
  "futur": {
   "title": "Futur I: werden + infinitiv",
   "intro": "Futur I bildas med werden + infinitiv och betyder kommer att eller ska. Ofta räcker presens med ett tidsord (Morgen fahre ich nach Wien), men för planer, löften och förutsägelser är Futur I vanligt.",
+  "kort":["Futur I = **werden** på plats 2 + infinitiv sist: **Morgen wird es regnen.**","Former: **ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden**.","I bisats står werden sist: **…, dass es morgen nicht regnen wird.**","Utan infinitiv betyder werden bli: **Es wird schon dunkel.**"],
   "parts": [
    {
     "h": "Formen: werden + infinitiv sist",
@@ -339,6 +350,7 @@
  "praet": {
   "title": "Präteritum: berättande dåtid",
   "intro": "I tal använder man mest perfekt, men i berättelser, sagor och tidningstexter står verben ofta i preteritum. Här övar du fler verb än war, hatte och musste.",
+  "kort":["Svaga verb: stam + **-te**: **ich spielte, wir wohnten** (ich och er lika).","Starka verb byter vokal och får aldrig -te (inte ”gehte”): **ging, kam, fuhr, sah, las, aß, schrieb, fand**.","Blandade: ny vokal och -te: **dachte, brachte, wusste, kannte**."],
   "parts": [
    {
     "h": "Svaga verb: -te",
@@ -470,6 +482,7 @@
  "zuinf": {
   "title": "zu-infinitiv och um … zu",
   "intro": "Där svenskan säger att + infinitiv säger tyskan zu + infinitiv, och infinitiven står sist. För att heter um … zu.",
+  "kort":["Efter många verb och uttryck: **zu** + infinitiv sist: **Hast du Lust, ins Kino zu gehen?**","Delbara verb: zu i mitten: **anzurufen, aufzustehen**.","Inget zu efter modalverb, werden och gehen: **Ich muss Hausaufgaben machen.**","För att = **um … zu**, aldrig für: **Ich spare Geld, um mir ein Fahrrad zu kaufen.**"],
   "parts": [
    {
     "h": "zu + infinitiv sist",
@@ -537,6 +550,7 @@
  "gen": {
   "title": "Genitiv",
   "intro": "Genitiv visar vem något tillhör (bilen som är pappas) och används efter några prepositioner, till exempel wegen. I tal ersätts genitiv ofta med von + dativ, men i texter möter man den hela tiden.",
+  "kort":["Genitiv: **des/eines** + -s (m, n), **der** (f, pl), efter det som ägs: **das Auto meines Vaters**.","**am Ende der Straße, die Farbe des Hauses**.","Namn: bara **-s**, ingen apostrof: **Annas Gitarre**. I tal ofta **von** + dativ.","**wegen, trotz, während** + genitiv: **Wegen des Streiks fährt kein Zug.**"],
   "parts": [
    {
     "h": "Artiklarna i genitiv",
@@ -619,6 +633,7 @@
  "verbprep": {
   "title": "Verb med preposition",
   "intro": "Många verb hör ihop med en bestämd preposition, och den är ofta en annan än på svenska: warten auf (vänta på), sich interessieren für (vara intresserad av). Lär dig verbet och prepositionen tillsammans.",
+  "kort":["Lär dig verbet med prepositionen: **warten auf, sich interessieren für, denken an, teilnehmen an, träumen von**.","Prepositionen styr kasus: **Ich warte auf den Bus.** **Wir nehmen an einem Wettbewerb teil.**","Om saker: **da(r)** + preposition: **Ich freue mich darauf.**","Fråga om sak: **Worauf wartest du?**; om person: **Auf wen wartest du?**"],
   "parts": [
    {
     "h": "Vanliga verb och deras preposition",
