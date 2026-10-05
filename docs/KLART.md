@@ -2,6 +2,18 @@
 
 Punkter som har flyttats från [`BACKLOG.md`](BACKLOG.md) när de byggdes. **Referens** anger backloggens rubrik och prioritet. **Commit** anger var ändringen finns i git. **Publicerat** anger versionen av artefakten på https://claude.ai/artifact/YBQv8j4qXQQLuPwLAWt5mP.
 
+## 2026-10-05, del 2 (publicerat som version 40)
+
+| Referens | Vad som byggdes | Commit |
+|---|---|---|
+| Kurser · P2 *Frekvenstäckningsmätning* och Franska · P2 *inget avsnitt med vanliga ord* | Nytt verktyg `tools/frekvens.py` (rapport i `docs/frekvens.md`) mäter hur stor del av språkets 1 000 och 2 000 vanligaste lemman kedjan har täckt vid varje steg. Listor i `tools/data/` (Lexique 3.83 CC BY-SA, DeReWo 2012 CC BY-NC, Kelly CC BY-NC-SA). 929 nya vanliga ord i 13 kurser, varav 221 i Franska 3 (nytt avsnitt `vanliga2` "Vanliga ord 2" utanför boken, plus violoncelle och flûte i `fm`). Täckning av topp 1000: Franska 3 68,6 → 80,9 %, slutet av franska kedjan 85,9 → 99,3 %, tyska 94,4 → 99,6 %, italienska 82,5 → 96,5 %. `plan.py` lägger de nya avsnitten i kapitelveckorna. | se git log |
+| Öppet efter v38 · P3 *Texter under täckningsmålet* | 105 texter i alla tre språken skrivna om med kända ord (eller med glosor där appen visar dem): 0 texter under målet enligt `tools/tackning.py`. Frågor, alternativ och svenska översättningar kontrollerade mot ändrad text; inga id ändrade, inget bokmaterial rört. | se git log |
+| Kurser · P2 *Videor* | 135 nya videor (id kontrollerade med YouTube oEmbed): skola och kläder i Franska 1, juridik i Tyska 7 och Italienska 7, musik i Italienska 7, musikteori i Franska 3, Tyska 4 och Tyska 5, fraser i alla kurser. Alla kapitel har minst en video. Fel: `de2/videos.json` var en lista i stället för ett objekt, så Tyska 2:s 26 videor visades aldrig; rättat. | se git log |
+
+## 2026-10-05, städning av backloggen
+
+Punkter som redan var gjorda men stod kvar i backloggen: *Dagens pass som ett flöde* (byggt, se ovan under "Färre övningar"), *Franska 3 saknar DELF A2 som mellansteg* (13 DELF A2-uppgifter finns), *Regelsidor saknas* för `rel`, `stare-per` (it3) och `pron-verbi` (it4) (finns), *accord-009* (distraktorn "pri" är redan utbytt mot "prit" med förklaring).
+
 ## 2026-10-05 (publicerat som version 39)
 
 | Referens | Vad som byggdes | Commit |

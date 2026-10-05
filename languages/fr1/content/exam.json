@@ -66,7 +66,7 @@
     {"fr": "Le train pour Lyon part à dix heures vingt, voie 3.", "sv": "Tåget till Lyon avgår klockan tio och tjugo från spår 3."},
     {"fr": "Le train a quinze minutes de retard.", "sv": "Tåget är femton minuter försenat."},
     {"fr": "Le café de la gare est ouvert. Il est à côté de la voie 1.", "sv": "Stationens kafé är öppet. Det ligger bredvid spår 1."},
-    {"fr": "Merci et bon voyage !", "sv": "Tack och trevlig resa!"}
+    {"fr": "Merci et bonne journée !", "sv": "Tack och ha en trevlig dag!"}
    ],
    "qs": [
     {"q": "Le train va où ?", "opts": ["À Paris.", "À Lyon.", "À Lille."], "a": 1, "why": "« Le train pour Lyon … »"},
@@ -84,16 +84,16 @@
    "plays": 2,
    "instr": "Du hör ett utrop i ett varuhus. Läs frågorna först. Du hör utropet två gånger. Välj rätt svar på varje fråga.",
    "lines": [
-    {"fr": "Bonjour à tous et bienvenue au magasin Mode Plus !", "sv": "Hej allihop och välkomna till Mode Plus!"},
-    {"fr": "Aujourd'hui, les t-shirts sont à cinq euros.", "sv": "I dag kostar t-shirtarna fem euro."},
+    {"fr": "Bonjour à tous, ici le magasin Mode Plus !", "sv": "Hej allihop, det här är Mode Plus!"},
+    {"fr": "Aujourd'hui, les pulls sont à cinq euros.", "sv": "I dag kostar tröjorna fem euro."},
     {"fr": "Les jeans noirs sont à vingt-cinq euros.", "sv": "De svarta jeansen kostar tjugofem euro."},
-    {"fr": "Le rayon des chaussures est au premier étage.", "sv": "Skoavdelningen ligger en trappa upp."},
+    {"fr": "Les chaussures sont à gauche, à côté de la porte.", "sv": "Skorna finns till vänster, bredvid dörren."},
     {"fr": "Attention : le magasin ferme à dix-neuf heures. Merci !", "sv": "Observera: affären stänger klockan nitton. Tack!"}
    ],
    "qs": [
-    {"q": "Combien coûte un t-shirt ?", "opts": ["5 euros.", "15 euros.", "25 euros."], "a": 0, "why": "« Aujourd'hui, les t-shirts sont à cinq euros »."},
+    {"q": "Combien coûte un pull ?", "opts": ["5 euros.", "15 euros.", "25 euros."], "a": 0, "why": "« Aujourd'hui, les pulls sont à cinq euros »."},
     {"q": "De quelle couleur sont les jeans ?", "opts": ["Bleus.", "Blancs.", "Noirs."], "a": 2, "why": "« Les jeans noirs sont à vingt-cinq euros »."},
-    {"q": "Où sont les chaussures ?", "opts": ["Au rez-de-chaussée.", "Au premier étage.", "Au deuxième étage."], "a": 1, "why": "« Le rayon des chaussures est au premier étage »."},
+    {"q": "Où sont les chaussures ?", "opts": ["À droite, derrière les jeans.", "À gauche, à côté de la porte.", "Devant le magasin."], "a": 1, "why": "« Les chaussures sont à gauche, à côté de la porte »."},
     {"q": "À quelle heure le magasin ferme ?", "opts": ["À 17 heures.", "À 19 heures.", "À 20 heures."], "a": 1, "why": "« Le magasin ferme à dix-neuf heures »."}
    ]
   },
@@ -106,15 +106,15 @@
    "plays": 2,
    "instr": "Du hör fyra korta samtal på ett kafé. Läs frågorna först. Du hör samtalen två gånger. Välj rätt svar på varje fråga.",
    "lines": [
-    {"fr": "Dialogue 1. — Bonjour, vous désirez ? — Un chocolat chaud, s'il vous plaît.", "sv": "Samtal 1. – Hej, vad får det vara? – En varm choklad, tack."},
-    {"fr": "Dialogue 2. — C'est combien, le croissant ? — Un euro vingt.", "sv": "Samtal 2. – Hur mycket kostar croissanten? – En euro och tjugo cent."},
-    {"fr": "Dialogue 3. — Excusez-moi, où sont les toilettes ? — Au fond, à gauche.", "sv": "Samtal 3. – Ursäkta, var är toaletten? – Längst in, till vänster."},
-    {"fr": "Dialogue 4. — Tu aimes le thé ? — Non, je n'aime pas le thé. Je préfère le jus d'orange.", "sv": "Samtal 4. – Tycker du om te? – Nej, jag tycker inte om te. Jag föredrar apelsinjuice."}
+    {"fr": "Dialogue 1. — Bonjour, vous désirez ? — Un chocolat chaud, s'il vous plaît.", "sv": "Dialog 1. – Hej, vad får det vara? – En varm choklad, tack."},
+    {"fr": "Dialogue 2. — C'est combien, le croissant ? — Un euro vingt.", "sv": "Dialog 2. – Hur mycket kostar croissanten? – En euro och tjugo cent."},
+    {"fr": "Dialogue 3. — Excusez-moi, où sont les toilettes ? — À gauche, à côté de la porte.", "sv": "Dialog 3. – Ursäkta, var är toaletten? – Till vänster, bredvid dörren."},
+    {"fr": "Dialogue 4. — Tu aimes le thé ? — Non, je n'aime pas le thé. Je préfère le jus d'orange.", "sv": "Dialog 4. – Tycker du om te? – Nej, jag tycker inte om te. Jag föredrar apelsinjuice."}
    ],
    "qs": [
     {"q": "Dialogue 1. La personne veut boire…", "opts": ["un café.", "un chocolat chaud.", "un coca."], "a": 1, "why": "« Un chocolat chaud, s'il vous plaît »."},
     {"q": "Dialogue 2. Le croissant coûte…", "opts": ["1,20 euro.", "2 euros.", "1 euro."], "a": 0, "why": "« Un euro vingt » = 1,20 euro."},
-    {"q": "Dialogue 3. Les toilettes sont…", "opts": ["à droite.", "à côté de la porte.", "au fond, à gauche."], "a": 2, "why": "« Au fond, à gauche »."},
+    {"q": "Dialogue 3. Les toilettes sont…", "opts": ["à droite, à côté de la porte.", "devant le café.", "à gauche, à côté de la porte."], "a": 2, "why": "« À gauche, à côté de la porte »."},
     {"q": "Dialogue 4. La personne préfère…", "opts": ["le thé.", "le jus d'orange.", "l'eau."], "a": 1, "why": "« Je n'aime pas le thé. Je préfère le jus d'orange »."}
    ]
   },
@@ -153,14 +153,14 @@
     {"fr": "Dimanche, je vais au parc avec ma sœur Emma.", "sv": "På söndag går jag till parken med min syster Emma."},
     {"fr": "On joue au football et on mange des sandwichs.", "sv": "Vi spelar fotboll och äter smörgåsar."},
     {"fr": "Tu viens avec nous ?", "sv": "Följer du med?"},
-    {"fr": "Le rendez-vous est à onze heures, devant la piscine.", "sv": "Vi träffas klockan elva framför simhallen."},
+    {"fr": "Viens devant la piscine à onze heures.", "sv": "Kom och möt oss framför simhallen klockan elva."},
     {"fr": "Il fait beau, mais apporte une casquette !", "sv": "Det är fint väder, men ta med en keps!"},
     {"fr": "À dimanche, Hugo", "sv": "Vi ses på söndag, Hugo"}
    ],
    "qs": [
     {"q": "Emma est…", "opts": ["la mère de Hugo.", "la sœur de Hugo.", "la professeure de Hugo."], "a": 1, "why": "« avec ma sœur Emma »."},
     {"q": "Au parc, Hugo et Emma…", "opts": ["jouent au football.", "font du vélo.", "jouent au tennis."], "a": 0, "why": "« On joue au football et on mange des sandwichs »."},
-    {"q": "Où est le rendez-vous ?", "opts": ["Devant le parc.", "Chez Hugo.", "Devant la piscine."], "a": 2, "why": "« Le rendez-vous est à onze heures, devant la piscine »."},
+    {"q": "Où est-ce que tu vas à onze heures ?", "opts": ["Devant le parc.", "Chez Hugo.", "Devant la piscine."], "a": 2, "why": "« Viens devant la piscine à onze heures »."},
     {"q": "Qu'est-ce que vous apportez ?", "opts": ["Un ballon.", "Une casquette.", "Un maillot de bain."], "a": 1, "why": "« apporte une casquette ! »"}
    ]
   },
@@ -168,21 +168,21 @@
    "id": "fr1-ce-3",
    "part": "ce",
    "teil": "Exercice 3",
-   "title": "La recette des crêpes",
+   "title": "La salade de fruits de Léa",
    "time": 7,
-   "instr": "Du läser ett recept på pannkakor. Läs receptet och frågorna. Välj rätt svar på varje fråga.",
+   "instr": "Du läser ett recept på fruktsallad. Läs receptet och frågorna. Välj rätt svar på varje fråga.",
    "lines": [
-    {"fr": "Les crêpes (pour 4 personnes)", "sv": "Crêpes (för 4 personer)"},
-    {"fr": "Il faut : 250 grammes de farine, 3 œufs, un demi-litre de lait, un peu de sucre.", "sv": "Du behöver: 250 gram mjöl, 3 ägg, en halv liter mjölk, lite socker."},
-    {"fr": "1. Mettez la farine et le sucre dans un grand bol.", "sv": "1. Häll mjölet och sockret i en stor skål."},
-    {"fr": "2. Ajoutez les œufs et le lait.", "sv": "2. Tillsätt äggen och mjölken."},
+    {"fr": "La salade de fruits de Léa (pour 4 personnes)", "sv": "Léas fruktsallad (för 4 personer)"},
+    {"fr": "Prenez : 3 pommes, 2 oranges, un peu de sucre et un verre de jus d'orange.", "sv": "Ta: 3 äpplen, 2 apelsiner, lite socker och ett glas apelsinjuice."},
+    {"fr": "1. Mettez les pommes et les oranges dans une grande assiette.", "sv": "1. Lägg äpplena och apelsinerna på en stor tallrik."},
+    {"fr": "2. Mettez le sucre et le jus d'orange sur les fruits.", "sv": "2. Häll sockret och apelsinjuicen över frukten."},
     {"fr": "3. Attendez une heure.", "sv": "3. Vänta en timme."},
-    {"fr": "4. Faites cuire les crêpes dans une poêle chaude.", "sv": "4. Stek pannkakorna i en het stekpanna."},
-    {"fr": "Mangez les crêpes avec du chocolat ou de la confiture. Bon appétit !", "sv": "Ät pannkakorna med choklad eller sylt. Smaklig måltid!"}
+    {"fr": "4. Prenez une petite assiette pour chaque personne.", "sv": "4. Ta en liten tallrik till varje person."},
+    {"fr": "Mangez la salade avec de la glace ou du chocolat. Bon appétit !", "sv": "Ät salladen med glass eller choklad. Smaklig måltid!"}
    ],
    "qs": [
-    {"q": "Combien d'œufs faut-il ?", "opts": ["2.", "3.", "4."], "a": 1, "why": "« 3 œufs ». 4 är antalet personer."},
-    {"q": "Qu'est-ce qu'on met d'abord dans le bol ?", "opts": ["Le lait et les œufs.", "Le chocolat.", "La farine et le sucre."], "a": 2, "why": "Steg 1: « Mettez la farine et le sucre dans un grand bol »."},
+    {"q": "Combien de pommes faut-il ?", "opts": ["2.", "3.", "4."], "a": 1, "why": "« 3 pommes ». 2 är antalet apelsiner och 4 antalet personer."},
+    {"q": "Qu'est-ce qu'on met d'abord dans la grande assiette ?", "opts": ["Le sucre et le jus d'orange.", "Le chocolat.", "Les pommes et les oranges."], "a": 2, "why": "Steg 1: « Mettez les pommes et les oranges dans une grande assiette ». Sockret och juicen kommer i steg 2."},
     {"q": "Combien de temps faut-il attendre ?", "opts": ["Une heure.", "Dix minutes.", "Une demi-heure."], "a": 0, "why": "Steg 3: « Attendez une heure »."}
    ]
   },
@@ -218,13 +218,13 @@
    "lines": [
     {"fr": "Cinéma Le Soleil – programme de la semaine", "sv": "Biografen Le Soleil – veckans program"},
     {"fr": "Le Petit Chat (film pour enfants) : mercredi et samedi, 14 h.", "sv": "Den lilla katten (barnfilm): onsdag och lördag, 14."},
-    {"fr": "Vacances à Nice (comédie) : vendredi et samedi, 18 h.", "sv": "Semester i Nice (komedi): fredag och lördag, 18."},
+    {"fr": "Comédie : Vacances à Nice, vendredi et samedi, 18 h.", "sv": "Komedi: Semester i Nice (Vacances à Nice), fredag och lördag, 18."},
     {"fr": "La Nuit noire (film d'horreur, 16 ans et plus) : samedi, 22 h.", "sv": "Den svarta natten (skräckfilm, från 16 år): lördag, 22."},
     {"fr": "Prix : 9 euros. Moins de 14 ans : 5 euros.", "sv": "Pris: 9 euro. Under 14 år: 5 euro."},
     {"fr": "Le cinéma est fermé le lundi.", "sv": "Biografen är stängd på måndagar."}
    ],
    "qs": [
-    {"q": "Quel film est une comédie ?", "opts": ["Le Petit Chat.", "La Nuit noire.", "Vacances à Nice."], "a": 2, "why": "« Vacances à Nice (comédie) »."},
+    {"q": "Quel film est une comédie ?", "opts": ["Le Petit Chat.", "La Nuit noire.", "Vacances à Nice."], "a": 2, "why": "« Comédie : Vacances à Nice »."},
     {"q": "Vous avez 12 ans. Le billet coûte…", "opts": ["5 euros.", "9 euros.", "12 euros."], "a": 0, "why": "« Moins de 14 ans : 5 euros »."},
     {"q": "Quel jour le cinéma est fermé ?", "opts": ["Le dimanche.", "Le lundi.", "Le mercredi."], "a": 1, "why": "« Le cinéma est fermé le lundi »."},
     {"q": "À quelle heure est le film d'horreur ?", "opts": ["À 22 heures.", "À 18 heures.", "À 16 heures."], "a": 0, "why": "« La Nuit noire … samedi, 22 h ». 16 är åldersgränsen."}
@@ -321,8 +321,8 @@
     {"fr": "— Tu prends ton parapluie ? — Oui, il pleut beaucoup ce matin.", "sv": "– Tar du ditt paraply? – Ja, det regnar mycket i morse."},
     {"fr": "— Comment tu vas au collège ? — En bus. L'arrêt est devant chez moi.", "sv": "– Hur tar du dig till skolan? – Med buss. Hållplatsen ligger utanför mitt hus."},
     {"fr": "— Le film commence à quelle heure ? — À huit heures et demie.", "sv": "– Vilken tid börjar filmen? – Halv nio."},
-    {"fr": "— Qu'est-ce que tu veux pour le petit-déjeuner ? — Un croissant, s'il te plaît.", "sv": "– Vad vill du ha till frukost? – En croissant, tack."},
-    {"fr": "— Pardon, où sont les toilettes ? — Au fond du couloir, à droite.", "sv": "– Ursäkta, var är toaletten? – Längst bort i korridoren, till höger."}
+    {"fr": "— Tu voudrais quoi pour le petit-déjeuner ? — Un croissant, s'il te plaît.", "sv": "– Vad vill du ha till frukost? – En croissant, tack."},
+    {"fr": "— Pardon, où sont les toilettes ? — Là-bas, à droite, à côté de la porte.", "sv": "– Ursäkta, var är toaletten? – Där borta, till höger, bredvid dörren."}
    ],
    "items": [
     {"q": "Dialogue 1 : Quel temps fait-il ?", "sv": "Dialog 1: Hur är vädret?", "opts": ["sol", "regn", "sno", "vind"], "a": 1, "why": "« il pleut » = det regnar."},
@@ -343,9 +343,9 @@
    "lines": [
     {"fr": "Salut !", "sv": "Hej!"},
     {"fr": "Samedi, on va à la plage avec ma famille. Tu viens avec nous ?", "sv": "På lördag åker vi till stranden med min familj. Följer du med?"},
-    {"fr": "On part en train à neuf heures.", "sv": "Vi åker tåg klockan nio."},
+    {"fr": "On prend le train à neuf heures.", "sv": "Vi tar tåget klockan nio."},
     {"fr": "Il va faire beau et chaud. Apporte ton maillot de bain !", "sv": "Det blir fint och varmt väder. Ta med badkläder!"},
-    {"fr": "Pour le pique-nique, j'apporte du pain et du fromage. Toi, tu peux apporter des pommes ?", "sv": "Till picknicken tar jag med bröd och ost. Kan du ta med äpplen?"},
+    {"fr": "Pour le déjeuner, j'apporte du pain et du fromage. Toi, tu peux apporter des pommes ?", "sv": "Till lunchen tar jag med bröd och ost. Kan du ta med äpplen?"},
     {"fr": "À samedi ! Tom", "sv": "Vi ses på lördag! Tom"}
    ],
    "items": [

@@ -93,14 +93,14 @@
         {"fr": "Venez au camping Les Pins, au bord du lac d'Annecy !", "sv": "Kom till campingen Les Pins vid sjön i Annecy!"},
         {"fr": "Chez nous, il y a une grande piscine, des vélos et des cours de kayak.", "sv": "Hos oss finns en stor pool, cyklar och kajakkurser."},
         {"fr": "Le camping est ouvert d'avril à septembre.", "sv": "Campingen har öppet från april till september."},
-        {"fr": "En juin, les enfants de moins de dix ans ne paient pas !", "sv": "I juni betalar barn under tio år ingenting!"},
-        {"fr": "Réservez sur notre site : campinglespins.fr.", "sv": "Boka på vår webbplats: campinglespins.fr."}
+        {"fr": "En juin, c'est gratuit pour les enfants de moins de dix ans !", "sv": "I juni är det gratis för barn under tio år!"},
+        {"fr": "Réservez vite sur notre site !", "sv": "Boka snabbt på vår webbplats!"}
       ],
       "qs": [
         {"q": "Le camping est…", "opts": ["à la mer.", "à côté d'un lac.", "en ville."], "a": 1, "why": "« au bord du lac d'Annecy »."},
         {"q": "Au camping, on peut…", "opts": ["faire du kayak.", "faire du ski.", "faire du cheval."], "a": 0, "why": "« des cours de kayak »."},
         {"q": "Le camping est fermé en…", "opts": ["mai.", "juillet.", "décembre."], "a": 2, "why": "Campingen har öppet « d'avril à septembre », så i december är det stängt."},
-        {"q": "En juin, qui ne paie pas ?", "opts": ["Les grands-parents.", "Les enfants de moins de dix ans.", "Les étudiants."], "a": 1, "why": "« En juin, les enfants de moins de dix ans ne paient pas ! »"}
+        {"q": "En juin, qui ne paie pas ?", "opts": ["Les grands-parents.", "Les enfants de moins de dix ans.", "Les étudiants."], "a": 1, "why": "« En juin, c'est gratuit pour les enfants de moins de dix ans ! »"}
       ]
     },
     {
@@ -114,15 +114,15 @@
         {"fr": "Bonjour Elsa,", "sv": "Hej Elsa,"},
         {"fr": "Ce soir, je rentre tard du travail, vers vingt heures.", "sv": "I kväll kommer jag hem sent från jobbet, runt klockan åtta."},
         {"fr": "Paul est chez son copain Théo et il va dormir chez lui.", "sv": "Paul är hos sin kompis Théo och ska sova över där."},
-        {"fr": "Il y a une quiche dans le frigo pour toi : dix minutes au four.", "sv": "Det finns en paj i kylskåpet till dig: tio minuter i ugnen."},
+        {"fr": "Il y a des lasagnes dans le frigo pour toi : dix minutes au four.", "sv": "Det finns lasagne i kylskåpet till dig: tio minuter i ugnen."},
         {"fr": "Tu peux donner à manger au chat, s'il te plaît ?", "sv": "Kan du ge katten mat, tack?"},
         {"fr": "Et n'oublie pas : demain, on part à la mer à sept heures !", "sv": "Och glöm inte: i morgon åker vi till havet klockan sju!"},
-        {"fr": "Bisous, Nathalie", "sv": "Kram, Nathalie"}
+        {"fr": "Bises, Nathalie", "sv": "Kram, Nathalie"}
       ],
       "qs": [
         {"q": "Nathalie rentre à quelle heure ?", "opts": ["Vers 18 heures.", "Vers 20 heures.", "Vers 7 heures."], "a": 1, "why": "« je rentre tard du travail, vers vingt heures »."},
         {"q": "Où est Paul ce soir ?", "opts": ["Chez un ami.", "À la mer.", "Au travail."], "a": 0, "why": "« Paul est chez son copain Théo »."},
-        {"q": "Qu'est-ce qu'Elsa va manger ?", "opts": ["Une pizza.", "Une quiche.", "Une salade."], "a": 1, "why": "« Il y a une quiche dans le frigo pour toi »."},
+        {"q": "Qu'est-ce qu'Elsa va manger ?", "opts": ["Une pizza.", "Des lasagnes.", "Une salade."], "a": 1, "why": "« Il y a des lasagnes dans le frigo pour toi »."},
         {"q": "Qu'est-ce qu'Elsa doit faire ?", "opts": ["Promener le chien.", "Faire les courses.", "Donner à manger au chat."], "a": 2, "why": "« Tu peux donner à manger au chat, s'il te plaît ? »"},
         {"q": "Demain matin, la famille…", "opts": ["part à la mer.", "va au travail.", "va chez Théo."], "a": 0, "why": "« demain, on part à la mer à sept heures ! »"}
       ]
@@ -137,13 +137,13 @@
       "lines": [
         {"fr": "A – Cours de surf à Biarritz. Pour les jeunes de 12 à 17 ans. Du lundi au vendredi, de 9 h à 12 h. Prix : 150 € la semaine. Il faut savoir nager !", "sv": "A – Surfkurs i Biarritz. För unga mellan 12 och 17 år. Måndag till fredag, 9–12. Pris: 150 € i veckan. Man måste kunna simma!"},
         {"fr": "B – Atelier de cuisine à Lyon. Apprenez à faire des crêpes et des gâteaux. Le samedi après-midi. Prix : 30 € par atelier.", "sv": "B – Matlagningskurs i Lyon. Lär dig göra crêpes och kakor. Lördagseftermiddagar. Pris: 30 € per tillfälle."},
-        {"fr": "C – Randonnée dans les Alpes. Trois jours à pied avec un guide, nuits au refuge. Pour les jeunes à partir de 15 ans. Prix : 200 €, repas compris.", "sv": "C – Vandring i Alperna. Tre dagar till fots med guide, nätter i fjällstuga. För unga från 15 år. Pris: 200 €, måltider ingår."}
+        {"fr": "C – Randonnée dans les Alpes. Trois jours à pied avec un guide, nuits dans une petite maison de montagne. Pour les jeunes à partir de 15 ans. Prix : 200 €, repas compris.", "sv": "C – Vandring i Alperna. Tre dagar till fots med guide, nätter i en liten stuga i bergen. För unga från 15 år. Pris: 200 €, måltider ingår."}
       ],
       "qs": [
         {"q": "Pour faire du surf, il faut…", "opts": ["avoir 18 ans.", "savoir nager.", "avoir sa planche."], "a": 1, "why": "« Il faut savoir nager ! »"},
         {"q": "L'atelier de cuisine a lieu…", "opts": ["le samedi.", "le lundi matin.", "tous les jours."], "a": 0, "why": "« Le samedi après-midi. »"},
         {"q": "Quelle activité est la moins chère ?", "opts": ["Le surf.", "La randonnée.", "L'atelier de cuisine."], "a": 2, "why": "Matlagningskursen kostar 30 €, surfen 150 € och vandringen 200 €."},
-        {"q": "Pendant la randonnée, on dort…", "opts": ["à l'hôtel.", "dans un refuge.", "chez des familles."], "a": 1, "why": "« nuits au refuge »."},
+        {"q": "Pendant la randonnée, on dort…", "opts": ["à l'hôtel.", "dans une petite maison.", "chez des familles."], "a": 1, "why": "« nuits dans une petite maison de montagne »."},
         {"q": "Tu as 14 ans. Quelle activité n'est pas possible pour toi ?", "opts": ["Le surf.", "L'atelier de cuisine.", "La randonnée."], "a": 2, "why": "Vandringen är « pour les jeunes à partir de 15 ans »."}
       ]
     },
@@ -306,7 +306,7 @@
       "instr": "Du ser den här affischen på ett apotek. Läs den och svara på frågorna.",
       "lines": [
         {"fr": "La grippe arrive ! Protégez-vous !", "sv": "Influensan kommer! Skydda er!"},
-        {"fr": "Lavez-vous les mains souvent, avec de l'eau et du savon.", "sv": "Tvätta händerna ofta, med vatten och tvål."},
+        {"fr": "Lavez-vous les mains souvent, surtout avant de manger.", "sv": "Tvätta händerna ofta, särskilt innan ni äter."},
         {"fr": "Toussez dans votre coude.", "sv": "Hosta i armvecket."},
         {"fr": "Vous avez de la fièvre ? Restez à la maison et buvez beaucoup d'eau.", "sv": "Har ni feber? Stanna hemma och drick mycket vatten."},
         {"fr": "Après trois jours de fièvre, appelez votre médecin.", "sv": "Efter tre dagar med feber, ring er läkare."},

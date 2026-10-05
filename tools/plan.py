@@ -14,35 +14,41 @@ def load(c):
         elif line.strip() and cur: cnt[cur] += 1
     return d, secs, cnt
 
+VSEC = {"hv", "tv", "sv"}   # avsnittet med vanliga ord (tools/frekvens.py), utspritt som uttrycksavsnittet
+
+
 def std_weeks(secs, rsec):
-    """8 kapitel à 2 veckor, uttryck/redemittel utspritt (en del per kapitel), sedan 2 veckor repetition och prov."""
-    chaps = [s for s in secs if s[0] != rsec and not re.match(r"^mt\d$", s[0])]
+    """8 kapitel à 2 veckor, uttryck/redemittel utspritt (en del per kapitel), vanliga ord (VSEC) likaså i kapitlets
+    andra vecka, sedan 2 veckor repetition och prov."""
+    vsec = next((s for s, _ in secs if s in VSEC), None)
+    chaps = [s for s in secs if s[0] not in (rsec, vsec) and not re.match(r"^mt\d$", s[0])]
     W = []
     for n, (sid, name) in enumerate(chaps):
         for part in (1, 2):
             words = [{"sec": sid, "part": part, "of": 2}]
             if part == 1: words.append({"sec": rsec, "part": n + 1, "of": len(chaps)})
+            if part == 2 and vsec: words.append({"sec": vsec, "part": n + 1, "of": len(chaps)})
             W.append({"title": f"{name} (del {part})", "words": words, "chap": sid, "last": part == 2})
     return W
 
-FR_WEEKS = [  # Franska 3: bokens kapitel (id), publika avsnitt vanliga och fm utspridda
+FR_WEEKS = [  # Franska 3: bokens kapitel (id), publika avsnitt vanliga, vanliga2 och fm utspridda
     ("Kap 1 · Vie et loisirs", [("k1",1,1),("vanliga",1,4)], "k1", False),
-    ("Kap 1 · Zinédine et Zlatan, Ma vie au soleil", [("k1e",1,1),("k1b",1,1)], "k1", False),
+    ("Kap 1 · Zinédine et Zlatan, Ma vie au soleil", [("k1e",1,1),("k1b",1,1),("vanliga2",1,8)], "k1", False),
     ("Kap 1 · fler ord ur kapitlet", [("k1x",1,1),("vanliga",2,4)], "k1", True),
-    ("Kap 2 · Arrivée à Paris, Le métro de Paris", [("k2",1,1),("k2b",1,1)], "k2", False),
-    ("Kap 2 · Aux Champs-Élysées och fler ord", [("k2c",1,1),("k2x",1,1)], "k2", True),
+    ("Kap 2 · Arrivée à Paris, Le métro de Paris", [("k2",1,1),("k2b",1,1),("vanliga2",2,8)], "k2", False),
+    ("Kap 2 · Aux Champs-Élysées och fler ord", [("k2c",1,1),("k2x",1,1),("vanliga2",3,8)], "k2", True),
     ("Kap 3 · Trouver un travail", [("k3",1,1),("vanliga",3,4)], "k3", False),
-    ("Kap 3 · fler ord, och aller-gruppen", [("k3x",1,1),("aller",1,1)], "k3", True),
+    ("Kap 3 · fler ord, och aller-gruppen", [("k3x",1,1),("aller",1,1),("vanliga2",4,8)], "k3", True),
     ("Kap 4 (del 1)", [("k4",1,2),("fm",1,4)], "k4", False),
     ("Kap 4 (del 2)", [("k4",2,2),("vanliga",4,4)], "k4", True),
     ("Kap 5 och 6", [("k5",1,1),("k6",1,1),("fm",2,4)], "k6", True),
-    ("Kap 7 (del 1)", [("k7",1,2)], "k7", False),
+    ("Kap 7 (del 1)", [("k7",1,2),("vanliga2",5,8)], "k7", False),
     ("Kap 7 (del 2)", [("k7",2,2),("fm",3,4)], "k7", True),
-    ("Kap 8 (del 1)", [("k8",1,1)], "k8", False),
-    ("Kap 8 (del 2)", [("k8x",1,1)], "k8", True),
+    ("Kap 8 (del 1)", [("k8",1,1),("vanliga2",6,8)], "k8", False),
+    ("Kap 8 (del 2)", [("k8x",1,1),("vanliga2",7,8)], "k8", True),
     ("Kap 10", [("k10",1,1)], "k10", True),
     ("Kap 12 (del 1)", [("k12",1,2),("fm",4,4)], "k12", False),
-    ("Kap 12 (del 2)", [("k12",2,2)], "k12", True),
+    ("Kap 12 (del 2)", [("k12",2,2),("vanliga2",8,8)], "k12", True),
 ]
 RSEC = {"hr", "vr", "qr", "tr", "sr"}
 FR_KT = {"k1":"k1","k2":"k2","k3":"k3","k4":"k4","k6":"k5","k7":"k7","k8":"k8","k10":"k10","k12":"k12"}
