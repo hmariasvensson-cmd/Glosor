@@ -13,7 +13,11 @@
     "manger": "äta",
     "commencer": "börja",
     "acheter": "köpa",
-    "préférer": "föredra"
+    "préférer": "föredra",
+    "téléphoner": "ringa",
+    "dessiner": "rita, teckna",
+    "étudier": "studera, plugga",
+    "visiter": "besöka (en plats)"
   },
   "tenses": {
     "$remove": ["imparfait", "passé composé", "plus-que-parfait", "futur simple", "conditionnel", "subjonctif"],
@@ -31,7 +35,13 @@
       "manger": ["mange", "manges", "mange", "mangeons", "mangez", "mangent"],
       "commencer": ["commence", "commences", "commence", "commençons", "commencez", "commencent"],
       "acheter": ["achète", "achètes", "achète", "achetons", "achetez", "achètent"],
-      "préférer": ["préfère", "préfères", "préfère", "préférons", "préférez", "préfèrent"]
+      "préférer": ["préfère", "préfères", "préfère", "préférons", "préférez", "préfèrent"],
+      "téléphoner": ["téléphone", "téléphones", "téléphone", "téléphonons", "téléphonez", "téléphonent"],
+      "dessiner": ["dessine", "dessines", "dessine", "dessinons", "dessinez", "dessinent"],
+      "étudier": ["étudie", "étudies", "étudie", "étudions", "étudiez", "étudient"],
+      "visiter": ["visite", "visites", "visite", "visitons", "visitez", "visitent"],
+      "$remove": ["savoir", "appeler", "revenir", "devenir", "dormir", "sourire", "emmener", "découvrir", "avancer", "amener", "enlever", "mentir", "protéger", "éteindre", "ranger", "soutenir", "peser", "rompre", "nettoyer", "échanger", "voyager", "sécher", "traduire", "déménager", "geler", "cueillir", "célébrer", "suivre", "croire", "partir", "connaître", "mourir", "sentir", "tenir", "vivre", "ouvrir", "rire", "servir", "envoyer", "rappeler", "reprendre", "recevoir", "suffire", "reconnaître", "permettre", "répéter", "mener", "craindre", "couvrir", "retenir", "obliger", "arranger", "détruire", "recommencer", "diriger", "placer", "s'asseoir", "s'inquiéter", "se promener", "se taire"],
+      "s'habiller": ["m'habille", "t'habilles", "s'habille", "nous habillons", "vous habillez", "s'habillent"]
     }
   },
   "notes": {

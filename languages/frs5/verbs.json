@@ -1,0 +1,25 @@
+{
+  "tenses": {
+    "plus-que-parfait": {
+      "$remove": ["apparaître", "atteindre", "obtenir", "s'installer", "se soulever"]
+    },
+    "passé composé": {
+      "$remove": ["apparaître", "atteindre", "obtenir", "s'installer", "se soulever"]
+    },
+    "imparfait": {
+      "$remove": ["apparaître", "atteindre", "obtenir", "juger", "menacer"]
+    },
+    "conditionnel": {
+      "$remove": ["obtenir", "se soulever"]
+    },
+    "subjonctif": {
+      "$remove": ["apparaître", "atteindre", "obtenir", "considérer", "libérer", "récupérer", "se soulever"]
+    },
+    "présent": {
+      "$remove": ["voir", "aimer", "trouver", "regarder", "mettre", "arriver", "demander", "rester", "sortir", "comprendre", "chercher", "essayer", "jouer", "commencer", "porter", "écouter", "oublier", "manger", "répondre", "travailler", "écrire", "lire", "apprendre", "boire", "tourner", "payer", "continuer", "acheter", "expliquer", "courir", "apporter", "préférer", "choisir", "chanter", "traverser", "adorer", "danser", "détester", "commander", "coûter", "nager", "savoir", "appeler", "revenir", "devenir", "dormir", "sourire", "emmener", "découvrir", "avancer", "amener", "enlever", "mentir", "protéger", "éteindre", "ranger", "soutenir", "peser", "rompre", "nettoyer", "échanger", "voyager", "sécher", "traduire", "déménager", "geler", "cueillir", "célébrer", "suivre", "croire", "partir", "connaître", "mourir", "sentir", "tenir", "vivre", "ouvrir", "rire", "servir", "envoyer", "rappeler", "reprendre", "recevoir", "suffire", "reconnaître", "permettre", "répéter", "mener", "craindre", "couvrir", "retenir", "obliger", "arranger", "détruire", "recommencer", "diriger", "placer", "s'appeler", "se lever", "habiter", "s'asseoir", "s'inquiéter", "se promener", "se taire"]
+    },
+    "futur simple": {
+      "$remove": ["savoir", "voir", "suivre", "passer", "croire", "aimer", "penser", "trouver", "regarder", "laisser", "donner", "mettre", "attendre", "arriver", "demander", "rester", "appeler", "partir", "connaître", "sortir", "comprendre", "arrêter", "entendre", "mourir", "sentir", "tenir", "chercher", "revenir", "tuer", "vivre", "devenir", "essayer", "perdre", "envoyer", "rappeler", "acheter", "recevoir", "courir", "emmener", "amener", "enlever", "mener", "retenir", "soutenir", "peser", "nettoyer", "geler", "jeter", "maintenir", "élever", "prévenir", "obtenir", "se regarder", "s'appeler", "se rendre", "s'asseoir", "se lever", "se promener", "se soulever"]
+    }
+  }
+}

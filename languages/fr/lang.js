@@ -62,7 +62,8 @@ LANGUAGES.fr = {
     persons: ["je", "tu", "il/elle", "nous", "vous", "ils/elles"],
     // Pronomen som skrivs framför verbformen (je blir j' framför vokal, subjonctif får que framför)
     prefix: (i, form, persons, tense) => {
-      const p = (i === 0 && /^[aeéêiou]/.test(form)) ? "j'" : persons[i] + " ";
+      // j' framför vokal och stumt h (j'habite), men inte framför aspirerat h (je hais, je hurle)
+      const p = (i === 0 && (/^[aeéèêëiîïoôuûâàyæœ]/.test(form) || (/^h/.test(form) && !/^h(ai|aï|url|eurt|iss|ach|arc|auss|ât|ant|asard|alet|och|u[aeéèio]|enn|ériss)/.test(form)))) ? "j'" : persons[i] + " ";
       return tense === "subjonctif" ? (/^[aeiou]/.test(p) ? "qu'" : "que ") + p : p;
     },
 

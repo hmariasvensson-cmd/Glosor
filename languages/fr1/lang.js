@@ -30,8 +30,8 @@ LANGUAGES.fr1 = {
       {id: "pres-irr", name: "Être, avoir, aller, faire", sub: "je suis, tu as, il va, nous faisons", tenses: ["présent"], verbs: ["être", "avoir", "aller", "faire"]},
       {id: "pres-er", name: "Verb på -er", sub: "je parle, tu aimes, nous habitons", tenses: ["présent"],
         verbs: ["parler", "aimer", "habiter", "jouer", "regarder", "écouter", "travailler", "chercher", "arriver", "adorer", "détester", "manger", "commencer", "acheter", "préférer"]},
-      {id: "pres-alla", name: "Alla verb i kursen", sub: "Présent: blandat", tenses: ["présent"],
-        verbs: ["être", "avoir", "aller", "faire", "parler", "aimer", "habiter", "jouer", "regarder", "écouter", "travailler", "manger", "acheter", "préférer"]}
+      // Utan verblista: alla verb i kursens tabell (fler vanliga verb ur tools/verbdata.py)
+      {id: "pres-alla", name: "Alla verb i kursen", sub: "Présent: blandat", tenses: ["présent"]}
     ]
   }
 };

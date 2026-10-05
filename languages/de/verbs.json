@@ -38,7 +38,12 @@
     "verstehen": "förstå",
     "aufstehen": "gå upp, stiga upp",
     "einschlafen": "somna",
-    "studieren": "studera"
+    "studieren": "studera",
+    "sagen": "säga",
+    "machen": "göra",
+    "liegen": "ligga",
+    "stellen": "ställa",
+    "zeigen": "visa"
   },
   "tenses": {
     "Präsens": {
@@ -69,7 +74,16 @@
       "empfehlen": ["empfehle", "empfiehlst", "empfiehlt", "empfehlen", "empfehlt", "empfehlen"],
       "sollen": ["soll", "sollst", "soll", "sollen", "sollt", "sollen"],
       "mögen": ["mag", "magst", "mag", "mögen", "mögt", "mögen"],
-      "rule": "Starka verb byter ofta vokal i du och er/sie/es: fahren – du fährst, sprechen – du sprichst. Wir och sie/Sie har alltid infinitivformen."
+      "rule": "Starka verb byter ofta vokal i du och er/sie/es: fahren – du fährst, sprechen – du sprichst. Wir och sie/Sie har alltid infinitivformen.",
+      "sagen": ["sage", "sagst", "sagt", "sagen", "sagt", "sagen"],
+      "kommen": ["komme", "kommst", "kommt", "kommen", "kommt", "kommen"],
+      "gehen": ["gehe", "gehst", "geht", "gehen", "geht", "gehen"],
+      "machen": ["mache", "machst", "macht", "machen", "macht", "machen"],
+      "finden": ["finde", "findest", "findet", "finden", "findet", "finden"],
+      "bleiben": ["bleibe", "bleibst", "bleibt", "bleiben", "bleibt", "bleiben"],
+      "liegen": ["liege", "liegst", "liegt", "liegen", "liegt", "liegen"],
+      "stellen": ["stelle", "stellst", "stellt", "stellen", "stellt", "stellen"],
+      "zeigen": ["zeige", "zeigst", "zeigt", "zeigen", "zeigt", "zeigen"]
     },
     "Präteritum": {
       "sein": ["war", "warst", "war", "waren", "wart", "waren"],
@@ -93,7 +107,16 @@
       "bringen": ["brachte", "brachtest", "brachte", "brachten", "brachtet", "brachten"],
       "müssen": ["musste", "musstest", "musste", "mussten", "musstet", "mussten"],
       "wollen": ["wollte", "wolltest", "wollte", "wollten", "wolltet", "wollten"],
-      "rule": "Svaga verb: stam + -te (arbeitete). Starka verb byter vokal och har ingen ändelse i ich och er/sie/es: ich fuhr, er nahm."
+      "rule": "Svaga verb: stam + -te (arbeitete). Starka verb byter vokal och har ingen ändelse i ich och er/sie/es: ich fuhr, er nahm.",
+      "sollen": ["sollte", "solltest", "sollte", "sollten", "solltet", "sollten"],
+      "sagen": ["sagte", "sagtest", "sagte", "sagten", "sagtet", "sagten"],
+      "machen": ["machte", "machtest", "machte", "machten", "machtet", "machten"],
+      "lassen": ["ließ", "ließest/ließt", "ließ", "ließen", "ließt", "ließen"],
+      "liegen": ["lag", "lagst", "lag", "lagen", "lagt", "lagen"],
+      "stellen": ["stellte", "stelltest", "stellte", "stellten", "stelltet", "stellten"],
+      "zeigen": ["zeigte", "zeigtest", "zeigte", "zeigten", "zeigtet", "zeigten"],
+      "dürfen": ["durfte", "durftest", "durfte", "durften", "durftet", "durften"],
+      "halten": ["hielt", "hieltest/hieltst", "hielt", "hielten", "hieltet", "hielten"]
     },
     "Perfekt": {
       "fahren": ["bin gefahren", "bist gefahren", "ist gefahren", "sind gefahren", "seid gefahren", "sind gefahren"],
@@ -113,7 +136,24 @@
       "aufstehen": ["bin aufgestanden", "bist aufgestanden", "ist aufgestanden", "sind aufgestanden", "seid aufgestanden", "sind aufgestanden"],
       "einschlafen": ["bin eingeschlafen", "bist eingeschlafen", "ist eingeschlafen", "sind eingeschlafen", "seid eingeschlafen", "sind eingeschlafen"],
       "studieren": ["habe studiert", "hast studiert", "hat studiert", "haben studiert", "habt studiert", "haben studiert"],
-      "rule": "Haben eller sein i presens + perfekt particip. Verb som betyder förflyttning eller förändring (fahren, gehen) och bleiben tar sein."
+      "rule": "Haben eller sein i presens + perfekt particip. Verb som betyder förflyttning eller förändring (fahren, gehen) och bleiben tar sein.",
+      "haben": ["habe gehabt", "hast gehabt", "hat gehabt", "haben gehabt", "habt gehabt", "haben gehabt"],
+      "können": ["habe gekonnt", "hast gekonnt", "hat gekonnt", "haben gekonnt", "habt gekonnt", "haben gekonnt"],
+      "sollen": ["habe gesollt", "hast gesollt", "hat gesollt", "haben gesollt", "habt gesollt", "haben gesollt"],
+      "müssen": ["habe gemusst", "hast gemusst", "hat gemusst", "haben gemusst", "habt gemusst", "haben gemusst"],
+      "geben": ["habe gegeben", "hast gegeben", "hat gegeben", "haben gegeben", "habt gegeben", "haben gegeben"],
+      "sagen": ["habe gesagt", "hast gesagt", "hat gesagt", "haben gesagt", "habt gesagt", "haben gesagt"],
+      "wollen": ["habe gewollt", "hast gewollt", "hat gewollt", "haben gewollt", "habt gewollt", "haben gewollt"],
+      "machen": ["habe gemacht", "hast gemacht", "hat gemacht", "haben gemacht", "habt gemacht", "haben gemacht"],
+      "stehen": ["habe gestanden", "hast gestanden", "hat gestanden", "haben gestanden", "habt gestanden", "haben gestanden"],
+      "sehen": ["habe gesehen", "hast gesehen", "hat gesehen", "haben gesehen", "habt gesehen", "haben gesehen"],
+      "finden": ["habe gefunden", "hast gefunden", "hat gefunden", "haben gefunden", "habt gefunden", "haben gefunden"],
+      "lassen": ["habe gelassen", "hast gelassen", "hat gelassen", "haben gelassen", "habt gelassen", "haben gelassen"],
+      "liegen": ["habe gelegen", "hast gelegen", "hat gelegen", "haben gelegen", "habt gelegen", "haben gelegen"],
+      "stellen": ["habe gestellt", "hast gestellt", "hat gestellt", "haben gestellt", "habt gestellt", "haben gestellt"],
+      "zeigen": ["habe gezeigt", "hast gezeigt", "hat gezeigt", "haben gezeigt", "habt gezeigt", "haben gezeigt"],
+      "dürfen": ["habe gedurft", "hast gedurft", "hat gedurft", "haben gedurft", "habt gedurft", "haben gedurft"],
+      "halten": ["habe gehalten", "hast gehalten", "hat gehalten", "haben gehalten", "habt gehalten", "haben gehalten"]
     },
     "Konjunktiv II": {
       "sein": ["wäre", "wärst/wärest", "wäre", "wären", "wärt/wäret", "wären"],
@@ -126,7 +166,16 @@
       "kommen": ["käme", "kämest/kämst", "käme", "kämen", "kämet/kämt", "kämen"],
       "dürfen": ["dürfte", "dürftest", "dürfte", "dürften", "dürftet", "dürften"],
       "sollen": ["sollte", "solltest", "sollte", "sollten", "solltet", "sollten"],
-      "rule": "Konjunktiv II uttrycker önskningar, artighet och villkor: Wenn ich Zeit hätte, würde ich kommen. Bildas av preteritum med omljud: hatte – hätte."
+      "rule": "Konjunktiv II uttrycker önskningar, artighet och villkor: Wenn ich Zeit hätte, würde ich kommen. Bildas av preteritum med omljud: hatte – hätte.",
+      "gehen": ["ginge", "gingest/gingst", "ginge", "gingen", "ginget/gingt", "gingen"],
+      "stehen": ["stände/stünde", "ständest/stündest", "stände/stünde", "ständen/stünden", "ständet/stündet", "ständen/stünden"],
+      "sehen": ["sähe", "sähest/sähst", "sähe", "sähen", "sähet/säht", "sähen"],
+      "finden": ["fände", "fändest", "fände", "fänden", "fändet", "fänden"],
+      "lassen": ["ließe", "ließest/ließt", "ließe", "ließen", "ließet/ließt", "ließen"],
+      "bleiben": ["bliebe", "bliebest/bliebst", "bliebe", "blieben", "bliebet/bliebt", "blieben"],
+      "liegen": ["läge", "lägest/lägst", "läge", "lägen", "läget/lägt", "lägen"],
+      "nehmen": ["nähme", "nähmest/nähmst", "nähme", "nähmen", "nähmet/nähmt", "nähmen"],
+      "halten": ["hielte", "hieltest", "hielte", "hielten", "hieltet", "hielten"]
     },
     "Konjunktiv I": {
       "sein": ["sei", "seiest/seist", "sei", "seien", "seiet", "seien"],
@@ -137,7 +186,22 @@
       "wollen": ["wolle", "wollest", "wolle", "wollen", "wollet", "wollen"],
       "geben": ["gebe", "gebest", "gebe", "geben", "gebet", "geben"],
       "kommen": ["komme", "kommest", "komme", "kommen", "kommet", "kommen"],
-      "rule": "Konjunktiv I används i indirekt tal, särskilt i nyheter: Sie sagt, sie habe keine Zeit. Stammen från infinitivet + -e, -est, -e, -en, -et, -en. Oftast behövs bara er/sie/es-formen."
+      "rule": "Konjunktiv I används i indirekt tal, särskilt i nyheter: Sie sagt, sie habe keine Zeit. Stammen från infinitivet + -e, -est, -e, -en, -et, -en. Oftast behövs bara er/sie/es-formen.",
+      "sollen": ["solle", "sollest", "solle", "sollen", "sollet", "sollen"],
+      "sagen": ["sage", "sagest", "sage", "sagen", "saget", "sagen"],
+      "gehen": ["gehe", "gehest", "gehe", "gehen", "gehet", "gehen"],
+      "machen": ["mache", "machest", "mache", "machen", "machet", "machen"],
+      "stehen": ["stehe", "stehest", "stehe", "stehen", "stehet", "stehen"],
+      "sehen": ["sehe", "sehest", "sehe", "sehen", "sehet", "sehen"],
+      "finden": ["finde", "findest", "finde", "finden", "findet", "finden"],
+      "lassen": ["lasse", "lassest", "lasse", "lassen", "lasset", "lassen"],
+      "bleiben": ["bleibe", "bleibest", "bleibe", "bleiben", "bleibet", "bleiben"],
+      "liegen": ["liege", "liegest", "liege", "liegen", "lieget", "liegen"],
+      "stellen": ["stelle", "stellest", "stelle", "stellen", "stellet", "stellen"],
+      "nehmen": ["nehme", "nehmest", "nehme", "nehmen", "nehmet", "nehmen"],
+      "zeigen": ["zeige", "zeigest", "zeige", "zeigen", "zeiget", "zeigen"],
+      "dürfen": ["dürfe", "dürfest", "dürfe", "dürfen", "dürfet", "dürfen"],
+      "halten": ["halte", "haltest", "halte", "halten", "haltet", "halten"]
     }
   },
   "notes": {

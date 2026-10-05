@@ -64,7 +64,8 @@ LANGUAGES.it1 = {
     games: [
       {id: "pres-reg", name: "Regelbundna verb", sub: "parlo, prendi, dorme, finisco", tenses: ["presente"], verbs: ["parlare", "abitare", "lavorare", "studiare", "mangiare", "cercare", "pagare", "prendere", "leggere", "scrivere", "vedere", "vivere", "dormire", "partire", "sentire", "aprire", "finire", "capire", "preferire"]},
       {id: "pres-irr", name: "Oregelbundna verb", sub: "sono, ho, faccio, vado, vengo", tenses: ["presente"], verbs: ["essere", "avere", "fare", "andare", "venire", "stare", "uscire", "dare", "dire", "bere", "sapere", "rimanere"]},
-      {id: "pres-mod-rifl", name: "Modala och reflexiva verb", sub: "voglio, posso, devo, mi alzo, ti chiami", tenses: ["presente"], verbs: ["volere", "potere", "dovere", "chiamarsi", "alzarsi", "svegliarsi", "lavarsi", "vestirsi", "divertirsi"]}
+      {id: "pres-mod-rifl", name: "Modala och reflexiva verb", sub: "voglio, posso, devo, mi alzo, ti chiami", tenses: ["presente"], verbs: ["volere", "potere", "dovere", "chiamarsi", "alzarsi", "svegliarsi", "lavarsi", "vestirsi", "divertirsi"]},
+      {id: "pres-alla", name: "Alla verb i presens", sub: "blandat: regelbundna, oregelbundna och reflexiva", tenses: ["presente"]}
     ]
   }
 };

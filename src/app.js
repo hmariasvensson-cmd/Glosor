@@ -675,8 +675,10 @@ function conjVariants(c){
 function lev(a,b){const m=a.length,n=b.length;const d=Array.from({length:m+1},(_,i)=>[i]);for(let j=1;j<=n;j++)d[0][j]=j;
   for(let i=1;i<=m;i++)for(let j=1;j<=n;j++)d[i][j]=Math.min(d[i-1][j]+1,d[i][j-1]+1,d[i-1][j-1]+(a[i-1]===b[j-1]?0:1));return d[m][n]}
 function check(input,accepted,stripPron){
-  let a=norm(input); if(stripPron&&L.pronouns) a=a.replace(L.pronouns,"");
+  const raw=norm(input); let a=raw; if(stripPron&&L.pronouns) a=a.replace(L.pronouns,"");
   if(!a) return "empty";
+  // Reflexiva verb: svaret börjar själv med nous/vous (nous levons efter visat "nous"), så prova också utan strykning
+  if(a!==raw&&accepted.includes(raw)) return "right";
   if(accepted.includes(a)||accepted.some(x=>noSz(x)===noSz(a))) return "right";
   if(accepted.some(x=>deacc(x)===deacc(a))) return "accent";
   if(accepted.some(x=>x.length>4&&lev(deacc(x),deacc(a))<=1)) return "near";

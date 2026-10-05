@@ -2,6 +2,15 @@
 
 Punkter som har flyttats från [`BACKLOG.md`](BACKLOG.md) när de byggdes. **Referens** anger backloggens rubrik och prioritet. **Commit** anger var ändringen finns i git. **Publicerat** anger versionen av artefakten på https://claude.ai/artifact/YBQv8j4qXQQLuPwLAWt5mP.
 
+## 2026-10-05, del 3 (publicerat som version 41)
+
+| Referens | Vad som byggdes | Commit |
+|---|---|---|
+| Tyska · P3 *Verbdata från Wiktionary/kaikki* och Franska · P3 *Fler verb i verbspelen* | Nytt verktyg `tools/verbdata.py` (`extract`, `check`, `apply`) hämtar böjningar ur kaikki.org (engelska Wiktionary, CC BY-SA 4.0), komprimerat i `tools/data/verbs-{fr,de,it}.json`. Verbspelen i alla 21 kurser har fått fler verb (t.ex. Franska 3 14 → 161, Tyska 4 39 → 132, Italienska 2 51 → 196); bara oregelbundna verb i tempus som redan övats, vanliga regelbundna i nya tempus. Alla handskrivna former stämmer med Wiktionary. Franska 1 "Alla verb i kursen" och ny "Alla verb i presens" i Italienska 1 tar alla kursens verb. Rättat: reflexiva verb med nous/vous ("nous levons" efter visat "nous") rättades som fel (`check` provar nu också utan att stryka pronomenet), och j' framför stumt h (j'habite, men je hais). "est allé/allée" → "est allé(e)". | se git log |
+| Språkprov · P2 *Musikteori i fler kurser och granskning* | Teoriprovet: Franska 3 100 → 164 uppgifter, Tyska 5 158 → 164 (Tyska 4 har 59). Termerna kontrollerade mot källor (fr.wikipedia, Université de Montréal, de.wikipedia): omvändningsnamnen, cadence parfaite/imparfaite (franskt bruk: imparfaite = V–I med omvändning, inte engelskans imperfect cadence) och Gegenklang/verkürzter Dominantseptakkord var rätt; förklaringar förtydligade. 10 nya musikord i Franska 3 (mt4, mt5). Någon generator med "57 tyska till" finns inte (uppgifterna var redan inlagda). | se git log |
+| Öppet efter v40 · *Stickprov på de 929 nya vanliga orden* och Franska I · *granska nomin och conces* | Alla 929 ord granskade: 29 rättelser (mest exempelmeningar och svenska), inga dubbletter, inga id ändrade. fru: nomin-021 omskriven så att frågan prövar stilnivå, inte grammatik; conces korrekt. | se git log |
+| Kurser · *Videor* | 79 videor till: alla avsnitt har minst tre, även de nya avsnitten med vanliga ord. | se git log |
+
 ## 2026-10-05, del 2 (publicerat som version 40)
 
 | Referens | Vad som byggdes | Commit |

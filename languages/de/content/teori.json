@@ -1509,7 +1509,7 @@
    "h–d–f"
   ],
   "a": 3,
-  "why": "G7 (g–h–d–f) utan grundton g = **h–d–f**. Det låter som en förminskad treklang och skrivs med genomstruket D (Đ7)."
+  "why": "G7 (g–h–d–f) utan grundton g = **h–d–f**. Det låter som en förminskad treklang och skrivs med genomstruket D (Đ7, förenklat Dv)."
  },
  {
   "id": "mt4-37",
@@ -1523,7 +1523,7 @@
    "As-Dur"
   ],
   "a": 1,
-  "why": "Gegenklang (ledtonsväxelklang) i dur = molltreklangen en stor ters upp: **e-Moll** (e–g–h). Samma ackord kan också tolkas som Dp. a-Moll är Tp."
+  "why": "**Gegenklang** (W. Maler; hos Riemann Leittonwechselklang, hos Distler Gegenparallele) i dur = molltreklangen en stor ters upp: **e-Moll** (e–g–h). Samma ackord kan också tolkas som Dp. a-Moll är Tp."
  },
  {
   "id": "mt4-38",
@@ -1580,6 +1580,48 @@
   ],
   "a": 3,
   "why": "Subdominant till tonika = **Plagalschluss** (plagal kadens). Ganzschluss är D–T."
+ },
+ {
+  "id": "mt4-42",
+  "sec": "mt4",
+  "q": "Der **Gegenklang** der Tonika (tG) in **a-Moll** ist …",
+  "sv": "Tonikans Gegenklang (tG) i a-moll är …",
+  "opts": [
+   "E-Dur",
+   "d-Moll",
+   "F-Dur",
+   "C-Dur"
+  ],
+  "a": 2,
+  "why": "I moll ligger Gegenklang en stor ters **under** tonikan och är en durtreklang: **F-Dur** (f–a–c). Samma ackord kan också tolkas som sP. C-Dur är tP."
+ },
+ {
+  "id": "mt4-43",
+  "sec": "mt4",
+  "q": "Mit welchem Funktionssymbol bezeichnet man den **verkürzten Dominantseptakkord**?",
+  "sv": "Med vilken funktionssymbol betecknar man dominantseptimackordet utan grundton?",
+  "opts": [
+   "(D7)",
+   "durchgestrichenes D mit 7 (Đ7)",
+   "DD7",
+   "D mit 9"
+  ],
+  "a": 1,
+  "why": "En utelämnad grundton markeras med en genomstruken funktionsbokstav: **Đ7** (förenklat också Dv). DD7 = dubbeldominant, (D7) = bidominant."
+ },
+ {
+  "id": "mt4-44",
+  "sec": "mt4",
+  "q": "Der **e-Moll**-Dreiklang in **C-Dur** kann als Gegenklang der Tonika (Tg) oder als … gedeutet werden.",
+  "sv": "e-molltreklangen i C-dur kan tolkas som tonikans Gegenklang (Tg) eller som …",
+  "opts": [
+   "Tonikaparallele (Tp)",
+   "Dominantparallele (Dp)",
+   "Subdominantparallele (Sp)",
+   "Doppeldominante (DD)"
+  ],
+  "a": 1,
+  "why": "e-Moll är parallell till dominanten G-Dur: **Dp**. Vilken tolkning som gäller avgörs av sammanhanget (följer den T eller D?)."
  },
  {
   "id": "mt5-01",
@@ -2210,5 +2252,47 @@
   ],
   "a": 1,
   "why": "**Akkorddiktat**: lyssna på ackord och skriv ned/bestäm dem (t.ex. klangtyp och omvändning)."
+ },
+ {
+  "id": "mt7-14",
+  "sec": "mt7",
+  "q": "**»Bezeichnen Sie die Akkorde mit Funktionssymbolen.«** Sie sollen …",
+  "sv": "\"Bezeichnen Sie die Akkorde mit Funktionssymbolen.\" Ni ska …",
+  "opts": [
+   "T, S, D, Tp usw. unter die Akkorde schreiben",
+   "die Akkorde transponieren",
+   "die Akkorde nachsingen",
+   "die Akkorde vom Blatt spielen"
+  ],
+  "a": 0,
+  "why": "**Bezeichnen** = beteckna: skriv funktionssymbolerna (T, S, D, Tp …) under ackorden."
+ },
+ {
+  "id": "mt7-15",
+  "sec": "mt7",
+  "q": "**»Ergänzen Sie die fehlenden Taktstriche.«** Sie sollen …",
+  "sv": "\"Ergänzen Sie die fehlenden Taktstriche.\" Ni ska …",
+  "opts": [
+   "die Noten verlängern",
+   "die Pausen streichen",
+   "die fehlenden Taktstriche eintragen",
+   "die Taktart ändern"
+  ],
+  "a": 2,
+  "why": "**Ergänzen** = komplettera, fylla i det som fattas: här taktstrecken."
+ },
+ {
+  "id": "mt7-16",
+  "sec": "mt7",
+  "q": "Ein Intervall wird **»simultan«** gespielt. Das heißt, …",
+  "sv": "Ett intervall spelas \"simultant\". Det betyder att …",
+  "opts": [
+   "das Intervall wird abwärts gespielt",
+   "die beiden Töne erklingen gleichzeitig",
+   "das Intervall wird zweimal gespielt",
+   "die beiden Töne erklingen nacheinander"
+  ],
+  "a": 1,
+  "why": "**simultan** = samtidigt (harmoniskt intervall). sukzessiv = efter varandra."
  }
 ]

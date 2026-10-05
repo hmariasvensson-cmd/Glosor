@@ -16,7 +16,6 @@ Föräldern: "Vi vill inte ha för många övningar men vi vill ha övningar som
 
 ## Språkprov (det verkliga målet)
 
-- **P2: Musikteori i fler kurser och granskning:** musikteoriord och teoriprov finns i Franska 3 och Tyska 5. Termer att kontrollera med en musiklärare: franska omvändningsnamn (sixte sensible, accord de triton), cadence parfaite/imparfaite, tyska Gegenklang och verkürzter Dominantseptakkord. Fler uppgifter finns i generatorn (57 tyska till).
 
 
 Båda eleverna ska söka musikutbildning utomlands. Eleven i franska behöver visa **B1 i franska** (DELF B1) för Frankrike, och eleven i tyska behöver visa **B2 i tyska** för Tyskland. Musikhögskolorna godtar oftast Goethe-Zertifikat B2, telc B2 eller TestDaF, men kontrollera vad just deras skolor kräver. Betyg i kursen spelar mindre roll.
@@ -35,11 +34,9 @@ Båda eleverna ska söka musikutbildning utomlands. Eleven i franska behöver vi
 Emma pluggar på egen hand, utan kurs, lärare och lärobok. Tyskan bygger därför helt på kursplanen och det allmänna spåret.
 
 
-- **P3: Verbdata från Wiktionary/kaikki** i stället för handskrivna verbtabeller.
 
 ## Franska (Franska 3, mot A och B1)
 
-- **P3: Fler verb i verbspelen**, datadrivet (verbecc, LGPL-3.0).
 ## Kurser och nivåer
 
 - **P2: Resten av kursmallen** (`docs/kursmall.md`, avsnitt 4). Byggt: paket 1–8, 10 och 13–16 samt nivåerna. Kvar:
@@ -48,7 +45,7 @@ Emma pluggar på egen hand, utan kurs, lärare och lärobok. Tyskan bygger därf
 - **P1: Fler sidor ur Escalade.** Inlagda: s. 8–69, 98–131, 148–153, 182–191 och minigrammatiken s. 196–199 och 202–237 (se `languages/fr/book/sidor.json`). Saknas: s. 70–97, 132–147, 154–181, 192–195 och 200–201. Fota också om s. 101, där högerkanten saknas. Kapitelnumret för s. 148–153 (antaget kap 10) och s. 182–191 och titeln på kap 6 behöver bekräftas.
 - **P2: Säkerhetskopiera bokmappen** till ett privat repo på GitHub (`languages/fr/book/` är redan ett eget lokalt git-repo). Kräver att föräldern godkänner att ett privat repo skapas.
 - **P3: Välja bok per elev**, om flera elever med olika böcker ska använda samma kurs.
-- **P2: De nya kurserna (2026-09-29): fyll på.** Granskade av AI-agenter 2026-10-01. Textlängder, glosor och ordantal är åtgärdade 2026-10-01 (se KLART.md, version 35). Överlapp mellan kurser är tillåtet men kan minskas (se "Öppet efter 2026-10-01"). Frekvenstäckning och videor gjorda 2026-10-05 (se KLART.md, version 40); tunna videoavsnitt (2 videor) och de `dg` utan video finns kvar.
+- **P2: De nya kurserna (2026-09-29): fyll på.** Granskade av AI-agenter 2026-10-01. Textlängder, glosor och ordantal är åtgärdade 2026-10-01 (se KLART.md, version 35). Överlapp mellan kurser är tillåtet men kan minskas (se "Öppet efter 2026-10-01"). Frekvenstäckning och videor gjorda 2026-10-05 (version 40–41).
   - Varje kurs får en egen mapp i `languages/` och en egen `storageKey`. Bygg efter kursmallen (`docs/kursmall.md`) och Skolverkets centrala innehåll för steget. Nivån ungefär enligt Skolverket: steg 1 A1.1, 2 A1.2, 3 A2.1, 4 A2.2, 5 B1.1, 6 B1.2, 7 B2.1.
   - Varje kurs ska bygga vidare på den förra utan att orden överlappar, och ha `nextCourse` till nästa steg.
   - Ordning: Italienska 3 (står som kommande i `languages/upcoming.json`), sedan de lägre stegen (1–2 i franska, 1–3 i tyska) och sist steg 7 och Franska 5.
@@ -92,5 +89,6 @@ Granskningspunkterna nedan är avgjorda av granskningsagenterna 2026-10-01 (vers
 
 ## Öppet efter 2026-10-05 (version 40)
 
-- **P3: Stickprov på de 929 nya vanliga orden** (AI-skrivna översättningar och exempel), särskilt B1/B2-orden i de6 (unterliegen, indes, freilich).
 - **P3: Kvar i frekvenslistorna** (`docs/frekvens.md`): Franska 3 når 80,9 % av topp 1000; A1-orden ligger i fr1/fr2, som eleven i Franska 3 inte ser. Kan läggas till i `vanliga2` om överlapp önskas.
+- **P3: Musikteori i Tyska 4** (59 uppgifter, A2–B1) kan byggas ut. Termerna kan fortfarande kontrolleras med en musiklärare.
+- **P3: Verbspelen väljer verb slumpvis ur hela tabellen**; vanliga oregelbundna verb kunde viktas upp (`verbItems`). Tyska 5:s datafil är nära storleksgränsen (1 593 av 1 600 kB).
