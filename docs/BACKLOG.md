@@ -90,5 +90,5 @@ Granskningspunkterna nedan är avgjorda av granskningsagenterna 2026-10-01 (vers
 ## Öppet efter 2026-10-05 (version 40)
 
 - **P3: Kvar i frekvenslistorna** (`docs/frekvens.md`): Franska 3 når 80,9 % av topp 1000; A1-orden ligger i fr1/fr2, som eleven i Franska 3 inte ser. Kan läggas till i `vanliga2` om överlapp önskas.
-- **P3: Musikteori i Tyska 4** (59 uppgifter, A2–B1) kan byggas ut. Termerna kan fortfarande kontrolleras med en musiklärare.
-- **P3: Verbspelen väljer verb slumpvis ur hela tabellen**; vanliga oregelbundna verb kunde viktas upp (`verbItems`). Tyska 5:s datafil är nära storleksgränsen (1 593 av 1 600 kB).
+- **P3: Musiktermerna** kan fortfarande kontrolleras med en musiklärare (franska 3, Tyska 4, Tyska 5).
+- **P3: Tyska 5:s datafil** är 1 593 kB, nära varningsgränsen `MAX_DATA_KB` (1 600 kB, en egen varning, ingen teknisk gräns). Största delen är Tatoeba-meningarna (294 kB); de kan hämtas separat som provfilen (`ensureExam`) om filen växer mer, men meningsövningarna, Dagens pass och återupptagna pass måste då vänta på dem.

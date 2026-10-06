@@ -220,6 +220,9 @@ appReady().then(async()=>{ try{
     ok("verb: subjonctif med que", f("avoir","subjonctif",0)==="que j'aie"&&f("avoir","subjonctif",2)==="qu'il/elle ait"&&f("parler","futur simple",3)==="nous parlerons", f("avoir","subjonctif",0)+" | "+f("avoir","subjonctif",2));
     ok("verb: que je tas bort vid rättning", check("que je fasse",["fasse"],true)==="right");
     ok("verb: reflexiva med nous/vous i svaret rättas", check("nous levons",["nous levons"],true)==="right"&&check("nous nous levons",["nous levons"],true)==="right"&&check("vous êtes levé(e)(s)",["vous êtes levé(e)(s)"],true)==="right"&&check("levons",["nous levons"],true)!=="right");
+    { const g={tenses:["présent"]}, top=Object.keys(L.verbs.tenses["présent"]).filter(k=>k!=="rule").slice(0,12), all=Object.keys(L.verbs.tenses["présent"]).filter(k=>k!=="rule").length;
+      let hit=0, tot=0; for(let i=0;i<40;i++) verbItems(g,12).forEach(x=>{ tot++; if(top.includes(x.c.verb)) hit++; });
+      ok("verb: vanliga verb (först i tabellen) kommer oftare", hit/tot>2*12/all && verbItems(g,12).length===12, Math.round(100*hit/tot)+" % av frågorna ur de 12 första av "+all+" verb"); }
     const pf=(f,t)=>L.verbs.prefix(0,f,L.verbs.persons,t);
     ok("verb: j' framför vokal och stumt h, je framför aspirerat h", pf("habite")==="j'" && pf("hésite")==="j'" && pf("aime")==="j'" && pf("hais")==="je " && pf("hurle")==="je " && pf("parle")==="je " && pf("habite","subjonctif")==="que j'", [pf("habite"),pf("hais"),pf("habite","subjonctif")].join("|")); }
   ok("kurs och nivå visas", q("#coursechip").textContent.includes("Franska 3"), q("#coursechip").textContent);

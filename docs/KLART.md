@@ -2,6 +2,13 @@
 
 Punkter som har flyttats från [`BACKLOG.md`](BACKLOG.md) när de byggdes. **Referens** anger backloggens rubrik och prioritet. **Commit** anger var ändringen finns i git. **Publicerat** anger versionen av artefakten på https://claude.ai/artifact/YBQv8j4qXQQLuPwLAWt5mP.
 
+## 2026-10-06 (publicerat som version 42)
+
+| Referens | Vad som byggdes | Commit |
+|---|---|---|
+| Öppet efter v41 · *Verbspelen väljer verb slumpvis* | Viktat urval i `verbItems` (`verbRank`, `verbWeight`, `verbPick` i 10-verbs.js): verb tidigt i tempusets tabell (kärnverben först, sedan i frekvensordning) och verb eleven ofta svarar fel på (`S.vv`) kommer oftare. I Franska 3 kommer ca 35 % av frågorna från de 12 första av 117 verb i présent (tidigare ca 10 %). Test. | se git log |
+| Öppet efter v41 · *Musikteori i Tyska 4* | Teoriprovet i Tyska 4: 59 → 133 uppgifter på A2–B1-nivå (notnamn, klaver, intervall, tonarter, kvintcirkeln, ackord, funktionsteori, kadenser, instrument, provinstruktioner). 16 nya musikord i mt-avsnitten. | se git log |
+
 ## 2026-10-05, del 3 (publicerat som version 41)
 
 | Referens | Vad som byggdes | Commit |

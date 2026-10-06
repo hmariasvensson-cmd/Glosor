@@ -112,6 +112,132 @@
   "why": "c' står på en **Hilfslinie** (hjälplinje) under notsystemet. Första linjen är e', första mellanrummet f'."
  },
  {
+  "id": "mt1-09",
+  "sec": "mt1",
+  "q": "Der Ton **c**, um einen Halbton erhöht, heißt …",
+  "sv": "Tonen c höjd ett halvt tonsteg heter …",
+  "opts": [
+   "Ces",
+   "Des",
+   "His",
+   "Cis"
+  ],
+  "a": 3,
+  "why": "Höjning = ändelsen **-is**: c → **Cis** (svenska ciss). Ces är c sänkt, His är h höjt."
+ },
+ {
+  "id": "mt1-10",
+  "sec": "mt1",
+  "q": "Der Ton **e**, um einen Halbton erniedrigt, heißt …",
+  "sv": "Tonen e sänkt ett halvt tonsteg heter …",
+  "opts": [
+   "Fes",
+   "Ees",
+   "Eis",
+   "Es"
+  ],
+  "a": 3,
+  "why": "e sänkt heter **Es** (svenska ess), inte »Ees«. På samma sätt blir a sänkt **As**. Eis är e höjt."
+ },
+ {
+  "id": "mt1-11",
+  "sec": "mt1",
+  "q": "**Cis** und **Des** klingen auf dem Klavier gleich (dieselbe Taste). Solche Töne sind …",
+  "sv": "Ciss och dess låter likadant på pianot (samma tangent). Sådana toner är …",
+  "opts": [
+   "Leittöne",
+   "Stammtöne",
+   "enharmonisch gleich",
+   "Grundtöne"
+  ],
+  "a": 2,
+  "why": "Samma tangent men olika namn = **enharmonisch gleich** (enharmoniskt lika), t.ex. Cis = Des, Fis = Ges."
+ },
+ {
+  "id": "mt1-12",
+  "sec": "mt1",
+  "q": "Welcher Ton ist **enharmonisch gleich** mit **Gis**?",
+  "sv": "Vilken ton är enharmoniskt lika med giss?",
+  "opts": [
+   "Ges",
+   "As",
+   "Ais",
+   "A"
+  ],
+  "a": 1,
+  "why": "g höjt och a sänkt är samma tangent: Gis = **As**. Ges = Fis, Ais = B."
+ },
+ {
+  "id": "mt1-13",
+  "sec": "mt1",
+  "q": "Welcher Schlüssel heißt auch **F-Schlüssel**?",
+  "sv": "Vilken klav kallas också F-klav?",
+  "opts": [
+   "der Altschlüssel",
+   "der Violinschlüssel",
+   "der Sopranschlüssel",
+   "der Bassschlüssel"
+  ],
+  "a": 3,
+  "why": "F-klaven = **Bassschlüssel** (basklav). Klavens två punkter omger fjärde linjen, där lilla f står."
+ },
+ {
+  "id": "mt1-14",
+  "sec": "mt1",
+  "q": "Im Bassschlüssel: Welcher Ton steht auf der **vierten** Linie (von unten)?",
+  "sv": "I basklav: vilken ton står på fjärde linjen (nerifrån)?",
+  "opts": [
+   "das kleine d",
+   "das große G",
+   "das kleine f",
+   "das kleine a"
+  ],
+  "a": 2,
+  "why": "Linjerna i basklav nerifrån: G–H–d–f–a. Fjärde linjen = **lilla f**, därför heter klaven F-klav."
+ },
+ {
+  "id": "mt1-15",
+  "sec": "mt1",
+  "q": "Im Violinschlüssel: Welcher Ton steht im **dritten Zwischenraum** (von unten)?",
+  "sv": "I G-klav: vilken ton står i tredje mellanrummet (nerifrån)?",
+  "opts": [
+   "a'",
+   "e''",
+   "c''",
+   "h'"
+  ],
+  "a": 2,
+  "why": "Mellanrummen i G-klav nerifrån: f'–a'–c''–e''. Tredje mellanrummet = **c''** (tvåstrukna c)."
+ },
+ {
+  "id": "mt1-16",
+  "sec": "mt1",
+  "q": "Ein **Versetzungszeichen** (z. B. ♯) direkt vor einer Note gilt …",
+  "sv": "Ett tillfälligt förtecken (t.ex. ♯) direkt framför en not gäller …",
+  "opts": [
+   "für das ganze Stück",
+   "nur für diese eine Note",
+   "für diesen Ton bis zum Ende des Taktes",
+   "bis zum nächsten Schlussstrich"
+  ],
+  "a": 2,
+  "why": "Ett tillfälligt förtecken (**Versetzungszeichen**) gäller samma ton **till nästa taktstreck**. Förtecknen vid klaven (Vorzeichen) gäller hela stycket."
+ },
+ {
+  "id": "mt1-17",
+  "sec": "mt1",
+  "q": "Das **c** in der Mitte der Klaviatur (auf einer Hilfslinie zwischen Violin- und Bassschlüssel) heißt …",
+  "sv": "C:et mitt på klaviaturen (på en hjälplinje mellan G-klav och basklav) heter …",
+  "opts": [
+   "das große C",
+   "das eingestrichene c (c')",
+   "das zweigestrichene c (c'')",
+   "das kleine c"
+  ],
+  "a": 1,
+  "why": "Mitt-c:et är **eingestrichenes c** (c', ettstrukna c). En oktav lägre: lilla c, en oktav högre: c''."
+ },
+ {
   "id": "mt2-01",
   "sec": "mt2",
   "q": "Wie viele **Viertelnoten** dauert eine **ganze Note**?",
@@ -236,6 +362,132 @@
   ],
   "a": 2,
   "why": "6/8 = 2 × 3 åttondelar: **Sechsachteltakt**, två slag i punkterade fjärdedelar. 3/4 har också sex åttondelar, men i tre slag."
+ },
+ {
+  "id": "mt2-10",
+  "sec": "mt2",
+  "q": "Wie viele **Achtelnoten** dauert eine **halbe Note**?",
+  "sv": "Hur många åttondelsnoter är en halvnot?",
+  "opts": [
+   "zwei",
+   "vier",
+   "acht",
+   "drei"
+  ],
+  "a": 1,
+  "why": "Halbe Note = 2 Viertel = **4 Achtel**."
+ },
+ {
+  "id": "mt2-11",
+  "sec": "mt2",
+  "q": "Wie viele **Sechzehntelnoten** dauert eine **Viertelnote**?",
+  "sv": "Hur många sextondelsnoter är en fjärdedelsnot?",
+  "opts": [
+   "sechs",
+   "acht",
+   "zwei",
+   "vier"
+  ],
+  "a": 3,
+  "why": "Viertel = 2 Achtel = **4 Sechzehntel**."
+ },
+ {
+  "id": "mt2-12",
+  "sec": "mt2",
+  "q": "Ein kleiner Balken, der **unter** der vierten Notenlinie **hängt**, ist …",
+  "sv": "Ett litet block som hänger under fjärde notlinjen är …",
+  "opts": [
+   "die Viertelpause",
+   "die halbe Pause",
+   "die Achtelpause",
+   "die ganze Pause"
+  ],
+  "a": 3,
+  "why": "**Ganze Pause** hänger under fjärde linjen. Halvpausen ser likadan ut men **ligger** på tredje linjen."
+ },
+ {
+  "id": "mt2-13",
+  "sec": "mt2",
+  "q": "Was bedeutet die Taktangabe **3/4**?",
+  "sv": "Vad betyder taktbeteckningen 3/4?",
+  "opts": [
+   "drei Viertelnoten pro Takt",
+   "vier Schläge mit je drei Achteln",
+   "drei Takte mit je vier Vierteln",
+   "drei halbe Noten pro Takt"
+  ],
+  "a": 0,
+  "why": "Övre siffran = antal slag, nedre = notvärdet (4 = fjärdedel): **drei Viertel pro Takt**."
+ },
+ {
+  "id": "mt2-14",
+  "sec": "mt2",
+  "q": "Das Zeichen **C** als Taktangabe bedeutet …",
+  "sv": "Tecknet C som taktbeteckning betyder …",
+  "opts": [
+   "Zweivierteltakt (2/4)",
+   "Sechsachteltakt (6/8)",
+   "Viervierteltakt (4/4)",
+   "Dreivierteltakt (3/4)"
+  ],
+  "a": 2,
+  "why": "**C** = 4/4-takt (Viervierteltakt). Ett genomstruket C betyder 2/2 (alla breve)."
+ },
+ {
+  "id": "mt2-15",
+  "sec": "mt2",
+  "q": "Eine **punktierte Achtelnote** und eine **Sechzehntelnote** dauern zusammen …",
+  "sv": "En punkterad åttondel och en sextondel är tillsammans …",
+  "opts": [
+   "eine Achtelnote",
+   "drei Achtelnoten",
+   "eine Viertelnote",
+   "eine halbe Note"
+  ],
+  "a": 2,
+  "why": "Punkterad åttondel = 3 sextondelar, + 1 sextondel = 4 sextondelar = **eine Viertelnote**."
+ },
+ {
+  "id": "mt2-16",
+  "sec": "mt2",
+  "q": "Im **2/4-Takt** stehen schon eine Viertelnote und eine Achtelnote. Was fehlt noch?",
+  "sv": "I 2/4-takt står redan en fjärdedel och en åttondel. Vad saknas?",
+  "opts": [
+   "eine Sechzehntelnote",
+   "eine Achtelnote",
+   "eine halbe Note",
+   "eine Viertelnote"
+  ],
+  "a": 1,
+  "why": "Takten rymmer 2 fjärdedelar = 4 åttondelar. 2 + 1 = 3 åttondelar, alltså saknas **eine Achtelnote**."
+ },
+ {
+  "id": "mt2-17",
+  "sec": "mt2",
+  "q": "Eine Betonung auf einer **leichten** Zählzeit, oft mit einem Haltebogen, heißt …",
+  "sv": "En betoning på ett lätt taktslag, ofta med bindebåge, heter …",
+  "opts": [
+   "Auftakt",
+   "Synkope",
+   "Triole",
+   "Fermate"
+  ],
+  "a": 1,
+  "why": "**Synkope** (synkop): betoningen flyttas från det tunga till ett lätt slag."
+ },
+ {
+  "id": "mt2-18",
+  "sec": "mt2",
+  "q": "Die **Fermate** (𝄐) über einer Note bedeutet …",
+  "sv": "Fermaten (𝄐) över en not betyder …",
+  "opts": [
+   "Der Ton wird lauter.",
+   "Der Takt wird wiederholt.",
+   "Der Ton wird länger ausgehalten.",
+   "Der Ton wird kurz gespielt."
+  ],
+  "a": 2,
+  "why": "**Fermate** = fermat: tonen hålls ut längre än notvärdet, ungefär så länge musikern eller dirigenten vill."
  },
  {
   "id": "mt3-01",
@@ -420,6 +672,272 @@
   "why": "Varje steg är en ren kvint uppåt och ett kors till: C → **G** → D → A … Åt andra hållet: F, B, Es …"
  },
  {
+  "id": "mt3-14",
+  "sec": "mt3",
+  "q": "Bestimmen Sie das Intervall **e–f** (aufwärts).",
+  "sv": "Bestäm intervallet e–f (uppåt).",
+  "opts": [
+   "reine Prime",
+   "kleine Terz",
+   "kleine Sekunde",
+   "große Sekunde"
+  ],
+  "a": 2,
+  "why": "Två tonnamn och bara 1 halvton = **kleine Sekunde** (liten sekund). c–d är en stor sekund (2 halvtoner)."
+ },
+ {
+  "id": "mt3-15",
+  "sec": "mt3",
+  "q": "Bestimmen Sie das Intervall **c–f** (aufwärts).",
+  "sv": "Bestäm intervallet c–f (uppåt).",
+  "opts": [
+   "große Terz",
+   "reine Quinte",
+   "übermäßige Quarte",
+   "reine Quarte"
+  ],
+  "a": 3,
+  "why": "Fyra tonnamn (c, d, e, f) och 5 halvtoner = **reine Quarte** (ren kvart)."
+ },
+ {
+  "id": "mt3-16",
+  "sec": "mt3",
+  "q": "Bestimmen Sie das Intervall **h–f'** (aufwärts).",
+  "sv": "Bestäm intervallet h–f1 (uppåt).",
+  "opts": [
+   "kleine Sexte",
+   "verminderte Quinte",
+   "reine Quinte",
+   "übermäßige Quarte"
+  ],
+  "a": 1,
+  "why": "Fem tonnamn (h, c, d, e, f) = en kvint, men bara 6 halvtoner (en mindre än ren kvint): **verminderte Quinte** (förminskad kvint). Den låter som en överstigande kvart, men namnet räknas efter tonnamnen."
+ },
+ {
+  "id": "mt3-17",
+  "sec": "mt3",
+  "q": "Bestimmen Sie das Intervall **c–h** (aufwärts).",
+  "sv": "Bestäm intervallet c–h (uppåt).",
+  "opts": [
+   "große Sexte",
+   "kleine Septime",
+   "große Septime",
+   "Oktave"
+  ],
+  "a": 2,
+  "why": "Sju tonnamn och 11 halvtoner = **große Septime** (stor septim), en halvton under oktaven. c–b vore en liten septim."
+ },
+ {
+  "id": "mt3-18",
+  "sec": "mt3",
+  "q": "Bestimmen Sie das Intervall **d–c'** (aufwärts).",
+  "sv": "Bestäm intervallet d–c1 (uppåt).",
+  "opts": [
+   "kleine Septime",
+   "Oktave",
+   "große Septime",
+   "große Sexte"
+  ],
+  "a": 0,
+  "why": "Sju tonnamn (d … c) och 10 halvtoner = **kleine Septime** (liten septim). d–cis' vore en stor septim."
+ },
+ {
+  "id": "mt3-19",
+  "sec": "mt3",
+  "q": "Bestimmen Sie das Intervall **e–c'** (aufwärts).",
+  "sv": "Bestäm intervallet e–c1 (uppåt).",
+  "opts": [
+   "kleine Septime",
+   "kleine Sexte",
+   "große Sexte",
+   "reine Quinte"
+  ],
+  "a": 1,
+  "why": "Sex tonnamn (e … c) och 8 halvtoner = **kleine Sexte** (liten sext). e–cis' vore en stor sext."
+ },
+ {
+  "id": "mt3-20",
+  "sec": "mt3",
+  "q": "Bestimmen Sie das Intervall **c–es** (aufwärts).",
+  "sv": "Bestäm intervallet c–ess (uppåt).",
+  "opts": [
+   "große Terz",
+   "kleine Terz",
+   "große Sekunde",
+   "übermäßige Sekunde"
+  ],
+  "a": 1,
+  "why": "Tre tonnamn (c, d, e) och 3 halvtoner = **kleine Terz**. c–dis låter likadant men är en överstigande sekund, eftersom det bara är två tonnamn."
+ },
+ {
+  "id": "mt3-21",
+  "sec": "mt3",
+  "q": "Bestimmen Sie das Intervall **c–gis** (aufwärts).",
+  "sv": "Bestäm intervallet c–giss (uppåt).",
+  "opts": [
+   "große Sexte",
+   "übermäßige Quinte",
+   "kleine Sexte",
+   "reine Quinte"
+  ],
+  "a": 1,
+  "why": "Fem tonnamn (c … g) = en kvint, men 8 halvtoner (en mer än ren kvint): **übermäßige Quinte** (överstigande kvint). c–as låter likadant men är en liten sext."
+ },
+ {
+  "id": "mt3-22",
+  "sec": "mt3",
+  "q": "Die **Umkehrung** einer **großen Terz** ist eine …",
+  "sv": "Omvändningen av en stor ters är en …",
+  "opts": [
+   "reine Quarte",
+   "kleine Sexte",
+   "kleine Terz",
+   "große Sexte"
+  ],
+  "a": 1,
+  "why": "Vid omvändning blir summan 9 (ters 3 → sext 6), och stor blir liten: c–e → e–c' = **kleine Sexte**. Rena intervall förblir rena."
+ },
+ {
+  "id": "mt3-23",
+  "sec": "mt3",
+  "q": "Welche Dur-Tonart hat **zwei ♭** (b und es)?",
+  "sv": "Vilken durtonart har två b-förtecken (b och ess)?",
+  "opts": [
+   "Es-Dur",
+   "F-Dur",
+   "As-Dur",
+   "B-Dur"
+  ],
+  "a": 3,
+  "why": "**B-Dur** har b och es. F-Dur har ett ♭, Es-Dur tre, As-Dur fyra."
+ },
+ {
+  "id": "mt3-24",
+  "sec": "mt3",
+  "q": "Welche Dur-Tonart hat **vier Kreuze** (fis, cis, gis, dis)?",
+  "sv": "Vilken durtonart har fyra kors (fiss, ciss, giss, diss)?",
+  "opts": [
+   "E-Dur",
+   "D-Dur",
+   "H-Dur",
+   "A-Dur"
+  ],
+  "a": 0,
+  "why": "**E-Dur** har fyra kors. Tips: sista korset (dis) är ledtonen, grundtonen ligger en halvton över: e. A-Dur har tre, H-Dur fem."
+ },
+ {
+  "id": "mt3-25",
+  "sec": "mt3",
+  "q": "Welche Dur-Tonart hat **drei ♭** (b, es, as)?",
+  "sv": "Vilken durtonart har tre b-förtecken (b, ess, ass)?",
+  "opts": [
+   "B-Dur",
+   "As-Dur",
+   "Es-Dur",
+   "Des-Dur"
+  ],
+  "a": 2,
+  "why": "**Es-Dur**. Tips: det näst sista b-förtecknet är grundtonen (b, **es**, as → Es-Dur)."
+ },
+ {
+  "id": "mt3-26",
+  "sec": "mt3",
+  "q": "In welcher **Reihenfolge** stehen die Kreuze als Vorzeichen?",
+  "sv": "I vilken ordning står korsen som förtecken?",
+  "opts": [
+   "fis – cis – gis – dis",
+   "cis – fis – gis – dis",
+   "fis – cis – dis – gis",
+   "fis – gis – cis – dis"
+  ],
+  "a": 0,
+  "why": "Korsen kommer i kvintavstånd: **fis – cis – gis – dis** – ais – eis – his. b-förtecknen i omvänd ordning: b – es – as – des …"
+ },
+ {
+  "id": "mt3-27",
+  "sec": "mt3",
+  "q": "Die **Paralleltonart** von **F-Dur** ist …",
+  "sv": "Parallelltonarten till F-dur är …",
+  "opts": [
+   "d-Moll",
+   "f-Moll",
+   "a-Moll",
+   "g-Moll"
+  ],
+  "a": 0,
+  "why": "En liten ters under f är d: **d-Moll**, också med ett ♭ (b). f-Moll är varianttonarten."
+ },
+ {
+  "id": "mt3-28",
+  "sec": "mt3",
+  "q": "Die **Varianttonart** von **D-Dur** ist …",
+  "sv": "Varianttonarten till D-dur är …",
+  "opts": [
+   "A-Dur",
+   "fis-Moll",
+   "h-Moll",
+   "d-Moll"
+  ],
+  "a": 3,
+  "why": "**Varianttonart** = samma grundton, andra tonsläktet: D-Dur ↔ **d-Moll**. h-Moll är parallelltonarten (samma förtecken)."
+ },
+ {
+  "id": "mt3-29",
+  "sec": "mt3",
+  "q": "Welcher Ton wird im **harmonischen e-Moll** erhöht?",
+  "sv": "Vilken ton höjs i harmonisk e-moll?",
+  "opts": [
+   "f → fis",
+   "d → dis",
+   "c → cis",
+   "g → gis"
+  ],
+  "a": 1,
+  "why": "I harmonisk moll höjs sjunde steget så att det blir en ledton: i e-moll **d → dis**. fis finns redan i förtecknet."
+ },
+ {
+  "id": "mt3-30",
+  "sec": "mt3",
+  "q": "Im **melodischen a-Moll** werden **aufwärts** … erhöht.",
+  "sv": "I melodisk a-moll höjs uppåt …",
+  "opts": [
+   "nur g (gis)",
+   "f und g (fis, gis)",
+   "c und f (cis, fis)",
+   "d und g (dis, gis)"
+  ],
+  "a": 1,
+  "why": "Melodisk moll höjer steg 6 och 7 uppåt: **fis und gis**. Nedåt används vanligen ren moll (g, f)."
+ },
+ {
+  "id": "mt3-31",
+  "sec": "mt3",
+  "q": "Im **Quintenzirkel** folgt auf **F-Dur** in Richtung der ♭-Tonarten …",
+  "sv": "I kvintcirkeln kommer efter F-dur, åt b-tonarternas håll …",
+  "opts": [
+   "C-Dur",
+   "B-Dur",
+   "Es-Dur",
+   "D-Dur"
+  ],
+  "a": 1,
+  "why": "Åt b-hållet går man en ren kvint nedåt (eller kvart uppåt) och får ett ♭ till: C → F → **B** → Es → As …"
+ },
+ {
+  "id": "mt3-32",
+  "sec": "mt3",
+  "q": "Welcher Ton ist in **G-Dur** der **Leitton**?",
+  "sv": "Vilken ton är ledton i G-dur?",
+  "opts": [
+   "f",
+   "e",
+   "fis",
+   "a"
+  ],
+  "a": 2,
+  "why": "Ledtonen är sjunde steget, en halvton under grundtonen: **fis** leder upp till g. Därför har G-Dur ett kors."
+ },
+ {
   "id": "mt4-01",
   "sec": "mt4",
   "q": "Ein Dreiklang mit **großer Terz unten** und **kleiner Terz oben** ist ein …",
@@ -546,6 +1064,244 @@
   "why": "Slut på dominanten = **Halbschluss** (halvkadens). Slut D–T = Ganzschluss."
  },
  {
+  "id": "mt4-10",
+  "sec": "mt4",
+  "q": "Der Akkord **f–a–c** ist ein …",
+  "sv": "Ackordet f–a–c är en …",
+  "opts": [
+   "verminderter Dreiklang",
+   "Durdreiklang",
+   "Molldreiklang",
+   "übermäßiger Dreiklang"
+  ],
+  "a": 1,
+  "why": "f–a är en stor ters, a–c en liten ters: **Durdreiklang** (F-Dur)."
+ },
+ {
+  "id": "mt4-11",
+  "sec": "mt4",
+  "q": "Der Akkord **es–g–h** ist ein …",
+  "sv": "Ackordet ess–g–h är en …",
+  "opts": [
+   "übermäßiger Dreiklang",
+   "Durdreiklang",
+   "verminderter Dreiklang",
+   "Molldreiklang"
+  ],
+  "a": 0,
+  "why": "es–g och g–h är båda stora terser (4 halvtoner): **übermäßiger Dreiklang** (överstigande treklang). Es-Dur vore es–g–b."
+ },
+ {
+  "id": "mt4-12",
+  "sec": "mt4",
+  "q": "Welche Töne hat der **d-Moll-Dreiklang**?",
+  "sv": "Vilka toner har d-molltreklangen?",
+  "opts": [
+   "d–fis–a",
+   "d–f–as",
+   "d–g–a",
+   "d–f–a"
+  ],
+  "a": 3,
+  "why": "Grundton d, liten ters **f**, ren kvint a. d–fis–a är D-Dur."
+ },
+ {
+  "id": "mt4-13",
+  "sec": "mt4",
+  "q": "Ein Dreiklang mit der **Terz im Bass** heißt …",
+  "sv": "En treklang med tersen i basen heter …",
+  "opts": [
+   "Septakkord",
+   "Sextakkord",
+   "Quartsextakkord",
+   "Grundstellung"
+  ],
+  "a": 1,
+  "why": "Första omvändningen: över basen (tersen) ligger en ters och en sext, därför **Sextakkord** (t.ex. e–g–c')."
+ },
+ {
+  "id": "mt4-14",
+  "sec": "mt4",
+  "q": "Ein Dreiklang mit der **Quinte im Bass** heißt …",
+  "sv": "En treklang med kvinten i basen heter …",
+  "opts": [
+   "Sextakkord",
+   "Quartsextakkord",
+   "Grundstellung",
+   "Septakkord"
+  ],
+  "a": 1,
+  "why": "Andra omvändningen: över basen (kvinten) ligger en kvart och en sext, därför **Quartsextakkord** (t.ex. g–c'–e')."
+ },
+ {
+  "id": "mt4-15",
+  "sec": "mt4",
+  "q": "Der F-Dur-Dreiklang **c–f–a** (Bass c) steht in der …",
+  "sv": "F-durtreklangen c–f–a (bas c) står i …",
+  "opts": [
+   "2. Umkehrung (Quartsextakkord)",
+   "Grundstellung",
+   "1. Umkehrung (Sextakkord)",
+   "3. Umkehrung"
+  ],
+  "a": 0,
+  "why": "F-Dur = f–a–c. Kvinten **c** ligger i basen: **2. Umkehrung** (Quartsextakkord). c–f är en kvart, c–a en sext."
+ },
+ {
+  "id": "mt4-16",
+  "sec": "mt4",
+  "q": "Die drei **Hauptfunktionen** in der Funktionstheorie heißen …",
+  "sv": "De tre huvudfunktionerna i funktionsteorin heter …",
+  "opts": [
+   "Dur, Moll, vermindert",
+   "Tonika, Subdominante, Dominante",
+   "Grundton, Terz, Quinte",
+   "Tonika, Tonikaparallele, Dominante"
+  ],
+  "a": 1,
+  "why": "Huvudfunktionerna är **T, S och D**, treklangerna på steg I, IV och V. Parallellerna (Tp, Sp, Dp) är bifunktioner."
+ },
+ {
+  "id": "mt4-17",
+  "sec": "mt4",
+  "q": "In **G-Dur**: Welcher Akkord ist die **Dominante** (D)?",
+  "sv": "I G-dur: vilket ackord är dominanten (D)?",
+  "opts": [
+   "C-Dur",
+   "d-Moll",
+   "D-Dur",
+   "A-Dur"
+  ],
+  "a": 2,
+  "why": "Dominanten står på femte steget: g–a–h–c–**d** → **D-Dur** (d–fis–a). C-Dur är subdominanten."
+ },
+ {
+  "id": "mt4-18",
+  "sec": "mt4",
+  "q": "In **B-Dur**: Welcher Akkord ist die **Tonikaparallele** (Tp)?",
+  "sv": "I B-dur: vilket ackord är tonikaparallellen (Tp)?",
+  "opts": [
+   "b-Moll",
+   "c-Moll",
+   "g-Moll",
+   "d-Moll"
+  ],
+  "a": 2,
+  "why": "Parallellen ligger en liten ters under: b → g, alltså **g-Moll** (g–b–d), steg VI. c-Moll är Sp, d-Moll är Dp."
+ },
+ {
+  "id": "mt4-19",
+  "sec": "mt4",
+  "q": "In **D-Dur**: Welcher Akkord ist die **Subdominantparallele** (Sp)?",
+  "sv": "I D-dur: vilket ackord är subdominantparallellen (Sp)?",
+  "opts": [
+   "e-Moll",
+   "fis-Moll",
+   "h-Moll",
+   "G-Dur"
+  ],
+  "a": 0,
+  "why": "Subdominanten är G-Dur; en liten ters under g ligger e: **e-Moll** (steg II). h-Moll är Tp, fis-Moll Dp."
+ },
+ {
+  "id": "mt4-20",
+  "sec": "mt4",
+  "q": "In **C-Dur**: Welcher Akkord ist die **Dominantparallele** (Dp)?",
+  "sv": "I C-dur: vilket ackord är dominantparallellen (Dp)?",
+  "opts": [
+   "h-Moll",
+   "a-Moll",
+   "e-Moll",
+   "d-Moll"
+  ],
+  "a": 2,
+  "why": "Dominanten är G-Dur; en liten ters under g ligger e: **e-Moll** (steg III). a-Moll är Tp, d-Moll Sp."
+ },
+ {
+  "id": "mt4-21",
+  "sec": "mt4",
+  "q": "Welche Funktion hat der **g-Moll**-Dreiklang in **F-Dur**?",
+  "sv": "Vilken funktion har g-molltreklangen i F-dur?",
+  "opts": [
+   "Tonikaparallele (Tp)",
+   "Dominante (D)",
+   "Dominantparallele (Dp)",
+   "Subdominantparallele (Sp)"
+  ],
+  "a": 3,
+  "why": "I F-Dur: S = B-Dur, och en liten ters under b ligger g: g-Moll = **Sp** (steg II). Tp = d-Moll, Dp = a-Moll."
+ },
+ {
+  "id": "mt4-22",
+  "sec": "mt4",
+  "q": "Der **Dominantseptakkord** (D7) in **C-Dur** besteht aus den Tönen …",
+  "sv": "Dominantseptimackordet (D7) i C-dur består av tonerna …",
+  "opts": [
+   "g–h–d–f",
+   "c–e–g–b",
+   "g–b–d–f",
+   "g–h–d–fis"
+  ],
+  "a": 0,
+  "why": "Dominanttreklangen g–h–d plus en liten septim **f**: g–h–d–f. Med fis vore septimen stor."
+ },
+ {
+  "id": "mt4-23",
+  "sec": "mt4",
+  "q": "Der **Dominantseptakkord** löst sich normalerweise auf in die …",
+  "sv": "Dominantseptimackordet löses normalt upp till …",
+  "opts": [
+   "Dominante",
+   "Subdominante",
+   "Tonika",
+   "Subdominantparallele"
+  ],
+  "a": 2,
+  "why": "D7 → **T**: i C-Dur går g–h–d–f till c–e–g. Ledtonen h går upp till c, septimen f går ned till e."
+ },
+ {
+  "id": "mt4-24",
+  "sec": "mt4",
+  "q": "In **a-Moll** ist die Dominante meistens **E-Dur** und nicht e-Moll. Warum?",
+  "sv": "I a-moll är dominanten oftast E-dur och inte e-moll. Varför?",
+  "opts": [
+   "Man braucht den Leitton gis.",
+   "E-Dur hat weniger Vorzeichen.",
+   "Moll-Akkorde sind verboten.",
+   "e-Moll ist die Tonikaparallele."
+  ],
+  "a": 0,
+  "why": "Dominantens ters är tonartens sjunde steg. Med **gis** (harmonisk moll) blir den en ledton, en halvton under a."
+ },
+ {
+  "id": "mt4-25",
+  "sec": "mt4",
+  "q": "In C-Dur folgt auf G-Dur nicht C-Dur, sondern **a-Moll**. Diesen Schluss nennt man …",
+  "sv": "I C-dur följs G-dur inte av C-dur utan av a-moll. Detta slut kallas …",
+  "opts": [
+   "Trugschluss",
+   "Ganzschluss",
+   "Plagalschluss",
+   "Halbschluss"
+  ],
+  "a": 0,
+  "why": "D → Tp i stället för D → T: **Trugschluss** (bedräglig kadens). Örat väntar sig tonikan men »luras«."
+ },
+ {
+  "id": "mt4-26",
+  "sec": "mt4",
+  "q": "Der Schluss **Subdominante – Tonika** (S–T) heißt …",
+  "sv": "Slutet subdominant – tonika (S–T) heter …",
+  "opts": [
+   "Auftakt",
+   "Halbschluss",
+   "Trugschluss",
+   "Plagalschluss"
+  ],
+  "a": 3,
+  "why": "S–T = **Plagalschluss** (plagal kadens), t.ex. F-Dur → C-Dur. Slutet D–T kallas authentischer Ganzschluss."
+ },
+ {
   "id": "mt5-01",
   "sec": "mt5",
   "q": "Was bedeutet **»piano«** (p)?",
@@ -658,6 +1414,104 @@
   "why": "En **Metronomangabe**: 120 fjärdedelar (slag) per minut, alltså två slag per sekund."
  },
  {
+  "id": "mt5-09",
+  "sec": "mt5",
+  "q": "Was bedeutet **ff** (fortissimo)?",
+  "sv": "Vad betyder ff (fortissimo)?",
+  "opts": [
+   "sehr leise",
+   "sehr laut",
+   "halb laut",
+   "lauter werden"
+  ],
+  "a": 1,
+  "why": "**fortissimo** = mycket starkt, sehr laut. pp (pianissimo) = sehr leise."
+ },
+ {
+  "id": "mt5-10",
+  "sec": "mt5",
+  "q": "Was bedeutet **mf** (mezzoforte)?",
+  "sv": "Vad betyder mf (mezzoforte)?",
+  "opts": [
+   "leiser werden",
+   "sehr leise",
+   "halb laut",
+   "sehr laut"
+  ],
+  "a": 2,
+  "why": "mezzo = halv: **mezzoforte** = halvstarkt, halb laut. Det ligger mellan piano och forte."
+ },
+ {
+  "id": "mt5-11",
+  "sec": "mt5",
+  "q": "**»legato«** bedeutet …",
+  "sv": "legato betyder …",
+  "opts": [
+   "kurz, abgestoßen",
+   "langsamer werden",
+   "sehr laut",
+   "gebunden"
+  ],
+  "a": 3,
+  "why": "**legato** = bundet, tonerna går över i varandra utan avbrott. Motsatsen är staccato."
+ },
+ {
+  "id": "mt5-12",
+  "sec": "mt5",
+  "q": "Welche Reihe geht von **langsam** nach **schnell**?",
+  "sv": "Vilken rad går från långsamt till snabbt?",
+  "opts": [
+   "allegro – adagio – andante – presto",
+   "adagio – andante – allegro – presto",
+   "presto – allegro – andante – adagio",
+   "andante – adagio – presto – allegro"
+  ],
+  "a": 1,
+  "why": "Från långsamt till snabbt: **adagio – andante – allegro – presto**. Den sista raden går åt motsatt håll."
+ },
+ {
+  "id": "mt5-13",
+  "sec": "mt5",
+  "q": "**»a tempo«** bedeutet …",
+  "sv": "a tempo betyder …",
+  "opts": [
+   "wieder im alten Tempo",
+   "schneller werden",
+   "sehr langsam",
+   "frei, ohne Takt"
+  ],
+  "a": 0,
+  "why": "**a tempo** = tillbaka till det ursprungliga tempot, t.ex. efter ett ritardando."
+ },
+ {
+  "id": "mt5-14",
+  "sec": "mt5",
+  "q": "**»accelerando«** (accel.) bedeutet …",
+  "sv": "accelerando (accel.) betyder …",
+  "opts": [
+   "langsamer werden",
+   "lauter werden",
+   "leiser werden",
+   "schneller werden"
+  ],
+  "a": 3,
+  "why": "**accelerando** = påskynda, schneller werden (jämför accelerera). Motsatsen är ritardando."
+ },
+ {
+  "id": "mt5-15",
+  "sec": "mt5",
+  "q": "**»moderato«** bedeutet …",
+  "sv": "moderato betyder …",
+  "opts": [
+   "sehr langsam",
+   "immer leiser",
+   "sehr schnell",
+   "mäßig (nicht zu schnell, nicht zu langsam)"
+  ],
+  "a": 3,
+  "why": "**moderato** = måttligt, mäßig. Det ligger ungefär mellan andante och allegro."
+ },
+ {
   "id": "mt6-01",
   "sec": "mt6",
   "q": "Welches Instrument gehört zu den **Blechbläsern**?",
@@ -756,6 +1610,90 @@
   "why": "**Partitur** = partitur. Besetzung = besättning (vilka instrument som spelar)."
  },
  {
+  "id": "mt6-08",
+  "sec": "mt6",
+  "q": "Welches Instrument ist ein **Streichinstrument**?",
+  "sv": "Vilket instrument är ett stråkinstrument?",
+  "opts": [
+   "die Bratsche",
+   "die Klarinette",
+   "die Posaune",
+   "die Harfe"
+  ],
+  "a": 0,
+  "why": "**Bratsche** (altfiol, viola) spelas med stråke. Harfan knäpps (Zupfinstrument), klarinett är träblås, trombon bleckblås."
+ },
+ {
+  "id": "mt6-09",
+  "sec": "mt6",
+  "q": "Welches ist das **tiefste** Streichinstrument im Orchester?",
+  "sv": "Vilket är det djupaste stråkinstrumentet i orkestern?",
+  "opts": [
+   "das Violoncello",
+   "die Violine",
+   "die Bratsche",
+   "der Kontrabass"
+  ],
+  "a": 3,
+  "why": "Från högst till lägst: Violine – Bratsche – Violoncello – **Kontrabass**."
+ },
+ {
+  "id": "mt6-10",
+  "sec": "mt6",
+  "q": "Die **Klarinette** gehört zu den …",
+  "sv": "Klarinetten hör till …",
+  "opts": [
+   "Holzbläsern",
+   "Schlaginstrumenten",
+   "Blechbläsern",
+   "Streichern"
+  ],
+  "a": 0,
+  "why": "Klarinetten har ett rörblad av vass och hör till **Holzbläser** (träblåsare), liksom oboe, fagott och flöjt."
+ },
+ {
+  "id": "mt6-11",
+  "sec": "mt6",
+  "q": "Die **Pauke** ist ein …",
+  "sv": "Pukan är ett …",
+  "opts": [
+   "Blechblasinstrument",
+   "Schlaginstrument",
+   "Tasteninstrument",
+   "Streichinstrument"
+  ],
+  "a": 1,
+  "why": "**Pauke** (puka) hör till slagverket (Schlagwerk). Till skillnad från de flesta trummor kan den stämmas på en bestämd ton."
+ },
+ {
+  "id": "mt6-12",
+  "sec": "mt6",
+  "q": "Die tiefste **Männerstimme** im Chor heißt …",
+  "sv": "Den djupaste mansstämman i kören heter …",
+  "opts": [
+   "Tenor",
+   "Alt",
+   "Bass",
+   "Sopran"
+  ],
+  "a": 2,
+  "why": "Kör från högst: Sopran – Alt – Tenor – **Bass**. Tenor är den högre mansstämman."
+ },
+ {
+  "id": "mt6-13",
+  "sec": "mt6",
+  "q": "Die **Bratsche** liest meistens im …",
+  "sv": "Altfiolen läser oftast i …",
+  "opts": [
+   "Bassschlüssel",
+   "Violinschlüssel",
+   "Tenorschlüssel",
+   "Altschlüssel"
+  ],
+  "a": 3,
+  "why": "Bratschen läser i **Altschlüssel** (altklav, en C-klav: c' står på mittlinjen). I höga partier används ibland G-klav."
+ },
+ {
   "id": "mt7-01",
   "sec": "mt7",
   "q": "**»Bestimmen Sie die folgenden Intervalle.«** Sie sollen die Intervalle …",
@@ -824,5 +1762,103 @@
   ],
   "a": 1,
   "why": "**notieren** = skriva ned i noter."
+ },
+ {
+  "id": "mt7-06",
+  "sec": "mt7",
+  "q": "**»Bilden Sie von d aus eine kleine Terz aufwärts.«** Welcher Ton ist richtig?",
+  "sv": "»Bilda från d en liten ters uppåt.« Vilken ton är rätt?",
+  "opts": [
+   "fis",
+   "g",
+   "e",
+   "f"
+  ],
+  "a": 3,
+  "why": "**bilden** = bilda, skriva intervallet själv. d–f = tre tonnamn och 3 halvtoner, en liten ters. d–fis vore en stor ters."
+ },
+ {
+  "id": "mt7-07",
+  "sec": "mt7",
+  "q": "**»Bilden Sie von a aus eine reine Quinte aufwärts.«** Welcher Ton ist richtig?",
+  "sv": "»Bilda från a en ren kvint uppåt.« Vilken ton är rätt?",
+  "opts": [
+   "es'",
+   "e'",
+   "f'",
+   "d'"
+  ],
+  "a": 1,
+  "why": "a–h–c–d–e: fem tonnamn och 7 halvtoner = ren kvint → **e'**."
+ },
+ {
+  "id": "mt7-08",
+  "sec": "mt7",
+  "q": "**»Benennen Sie die folgenden Akkorde.«** Was tun Sie?",
+  "sv": "»Benämn följande ackord.« Vad gör ni?",
+  "opts": [
+   "Sie spielen die Akkorde auf dem Klavier.",
+   "Sie singen die Akkorde.",
+   "Sie schreiben die Akkorde in Noten auf.",
+   "Sie schreiben den Namen jedes Akkords auf (z. B. »F-Dur«)."
+  ],
+  "a": 3,
+  "why": "**benennen** = ge namn åt, benämna. Att själv skriva ackorden i noter heter »Notieren Sie …« eller »Bilden Sie …«."
+ },
+ {
+  "id": "mt7-09",
+  "sec": "mt7",
+  "q": "**»Ergänzen Sie die fehlenden Noten.«** Sie sollen …",
+  "sv": "»Fyll i de noter som saknas.« Ni ska …",
+  "opts": [
+   "die Noten laut vorlesen",
+   "die Noten zählen",
+   "alle Noten wegstreichen",
+   "die Noten, die fehlen, dazuschreiben"
+  ],
+  "a": 3,
+  "why": "**ergänzen** = komplettera, fylla i; **fehlend** = saknad."
+ },
+ {
+  "id": "mt7-10",
+  "sec": "mt7",
+  "q": "Das Hörbeispiel wird **zweimal vorgespielt**. Das heißt: …",
+  "sv": "Hörexemplet spelas upp två gånger. Det betyder: …",
+  "opts": [
+   "Sie hören es zwei Mal.",
+   "Sie spielen es zwei Mal.",
+   "Sie hören es nur einmal.",
+   "Sie singen es zwei Mal nach."
+  ],
+  "a": 0,
+  "why": "**vorspielen** = spela upp (för någon). Ni lyssnar alltså **två gånger**."
+ },
+ {
+  "id": "mt7-11",
+  "sec": "mt7",
+  "q": "**»Transponieren Sie die Melodie eine große Sekunde höher.«** Eine Melodie in C-Dur steht dann in …",
+  "sv": "»Transponera melodin en stor sekund uppåt.« En melodi i C-dur står då i …",
+  "opts": [
+   "D-Dur",
+   "Des-Dur",
+   "E-Dur",
+   "G-Dur"
+  ],
+  "a": 0,
+  "why": "**transponieren** = flytta till en annan tonhöjd. En stor sekund över c är d: **D-Dur** (två kors). Des-Dur vore en liten sekund högre."
+ },
+ {
+  "id": "mt7-12",
+  "sec": "mt7",
+  "q": "In der Prüfung sind **keine Hilfsmittel erlaubt**. Das heißt: …",
+  "sv": "På provet är inga hjälpmedel tillåtna. Det betyder: …",
+  "opts": [
+   "Sie dürfen Ihre Lehrerin fragen.",
+   "Sie dürfen eine Tabelle mitbringen.",
+   "Sie dürfen kein Klavier, Handy oder Buch benutzen.",
+   "Sie dürfen das Klavier benutzen."
+  ],
+  "a": 2,
+  "why": "**Hilfsmittel** = hjälpmedel; **erlaubt** = tillåten. Inga instrument, telefoner eller tabeller får användas."
  }
 ]
