@@ -208,6 +208,24 @@ appReady().then(async()=>{ try{
       ok("musikteori: eget val i rullistan", [...q("#src").querySelectorAll("optgroup")].some(g=>g.label.includes("Musikteori")&&g.querySelector('option[value="mt1"]')));
       S.src="mt1"; ok("musikteori: kommer när man väljer den", pickNew().length>0&&pickNew().every(w=>w.sec==="mt1"));
       S.src="auto"; S.newCount=n0; renderStart(); }
+    // Valbara avsnitt i listform (elective: [{test, label}, …]): Grundord från Franska 1–2 är en egen grupp i Franska 3
+    { const n0=S.newCount; S.newCount=5000; renderStart();
+      ok("valbart i listform: två grupper", Array.isArray(L.elective)&&electives().length===2&&isElective("mt1")&&isElective("grund")&&!isElective("vanliga")&&!isElective("k1"));
+      ok("grundord: avsnittet finns med ord", secWords("grund").length>=250&&secWords("grund").length<=400, secWords("grund").length);
+      ok("grundord: kommer inte som nästa ord (inte heller i Dagens pass)", pickNew().length>0&&!pickNew().some(w=>w.sec==="grund"||isElective(w.sec)));
+      ok("grundord: inte med i ord för nästa kurs", !coreWords().some(w=>w.sec==="grund")&&coreWords().length===WORDS.length-WORDS.filter(w=>isElective(w.sec)).length);
+      const gr=[...q("#src").querySelectorAll("optgroup")], gi=gr.findIndex(g=>g.label.includes("Grundord från Franska 1–2")), mi=gr.findIndex(g=>g.label.includes("Musikteori"));
+      ok("grundord: egen grupp i rullistan, efter musikteorin", gi>mi&&mi>=0&&!!gr[gi].querySelector('option[value="grund"]')&&!gr[mi].querySelector('option[value="grund"]')&&!gr[gi].querySelector('option[value="mt1"]'), gr.map(g=>g.label).join(" / "));
+      const m=q("#chmap"), rows=[...m.querySelectorAll("[data-chmap]")].map(b=>b.dataset.chmap), heads=[...m.querySelectorAll(".vsec")].map(h=>h.textContent);
+      const core=chapters().filter(c=>c.id!=="mine"&&!isElective(c.ids[0])).length;
+      ok("grundord: sist i kapitelkartan med egen rubrik", rows[rows.length-1]==="grund"&&heads.length===2&&heads[1].includes("Grundord")&&heads[0].includes("Musikteori"), rows.slice(-3).join()+" | "+heads.join(" / "));
+      ok("grundord: räknas inte i x av y kapitel klara", m.querySelector("summary").textContent.includes(" av "+core+" kapitel klara"), m.querySelector("summary").textContent);
+      S.src="grund"; ok("grundord: kommer när man väljer dem", pickNew().length>0&&pickNew().every(w=>w.sec==="grund"));
+      S.src="auto";
+      // Det gamla formatet med ett enda objekt (som i de och de4) fungerar fortfarande
+      const el0=L.elective; L.elective={test:/^mt\d$/,label:"Bara musikteori"}; renderStart();
+      ok("valbart som ett objekt: fungerar som förut", electives().length===1&&isElective("mt2")&&!isElective("grund")&&[...q("#src").querySelectorAll("optgroup")].some(g=>g.label==="Bara musikteori"&&g.querySelector('option[value="mt1"]'))&&pickNew().some(w=>w.sec==="grund"));
+      L.elective=el0; S.newCount=n0; renderStart(); }
     setView("stats"); { const wide=[...document.querySelectorAll("#app *")].filter(e=>e.getBoundingClientRect().right>document.documentElement.clientWidth+1).slice(0,3).map(e=>e.tagName+"."+e.className);
     ok("statistik: inget sticker ut åt sidan", !wide.length, wide.join(", ")+" bredd "+document.documentElement.clientWidth); }
   ok("statistik: dag för dag", q("#app").textContent.includes("Dag för dag")&&!!q('[aria-label="Minuter per dag de senaste 28 dagarna"]')); setView("ova"); }
@@ -283,8 +301,8 @@ appReady().then(async()=>{ try{
     tw.click(); ok("ett tryck till tar bort markeringen", !tw.classList.contains("sel")&&q("#gbox").hidden);
     // ett ord med glosa som inte redan finns
     for(const gl of document.querySelectorAll(".tw.gl")){ gl.click(); if(!q("#addsel").disabled) break; gl.click(); }
-    // ett ord utan glosa: betydelsen skrivs själv
-    const plain=[...document.querySelectorAll(".tw:not(.gl)")].find(x=>x.textContent.length>4&&!listWord(x.textContent)); plain.click();
+    // ett ord utan glosa: betydelsen skrivs själv (varken ordet eller dess grundform finns i ordlistan)
+    const plain=[...document.querySelectorAll(".tw:not(.gl)")].find(x=>{ const lm=lemmaOf(x.textContent); return x.textContent.length>4&&!listWord(x.textContent)&&!(lm&&listWord(lm.t)); }); plain.click();
     ok("valda ord listas under texten", document.querySelectorAll(".picked li").length===2);
     const inp=q(".psv-in:not([disabled])"); inp.value="testbetydelse"; inp.dispatchEvent(new Event("input"));
     ok("knappen räknar orden", q("#addsel").textContent.includes("2 ord"), q("#addsel").textContent);
@@ -1834,6 +1852,14 @@ appReady().then(async()=>{ try{
   S.examDate=iso(10); ok("prov: inga nya ord två veckor före", passWords().newW.length===0&&examPhase()===2);
   S.examDate=iso(-3); ok("prov: efter provet som vanligt", examPhase()===0&&passWords().newW.length>=3, passWords().newW.length);
   renderStart(); q("#examdate").value=""; q("#examdate").dispatchEvent(new Event("change")); ok("prov: datumet går att ta bort", !("examDate" in S));
+  // Lång repetitionskö: fler repetitioner per pass, nya ord finns kvar, knapp för en extra repetitionsrunda
+  { const keep=JSON.stringify(S.w), past=Date.now()-2*864e5; let k=0;
+    WORDS.slice(0,90).forEach(w=>{ S.w[w.id]={...(S.w[w.id]||{}),s:2,dd:past,due:0}; k++; });
+    const pw=passWords(); ok("repetition: lång kö ger fler repetitioner per pass", dueCount()>60&&pw.due.length===20, dueCount()+" väntar, "+pw.due.length+" i passet");
+    ok("repetition: nya ord kommer ändå", pw.newW.length>=Math.min(S.newCount||0,3), pw.newW.length);
+    renderStart(); ok("repetition: påminnelse och knapp på startsidan", !!q("#reviewhint")&&q("#reviewhint").textContent.includes("väntar på repetition")&&!!q("#review-go"));
+    q("#review-go").click(); ok("repetition: extra runda med bara repetition", sess&&sess.newW.length===0&&sess.due.length===20, sess&&sess.due.length); quitSession();
+    S.w=JSON.parse(keep); renderStart(); ok("repetition: ingen påminnelse med kort kö", !q("#reviewhint")); }
   // Tyska: der/die/das i grammatikgruppen
   useLang("de"); await appReady();
   { const it=PASS_GROUPS.find(g=>g.id==="gram").items(), k=new Set(it.map(c=>c.k));
@@ -2489,6 +2515,28 @@ LANGUAGES.zz = {
         except JSParseError:
             return True
     ok("lang.js-tokenizer: fel form stoppar", fails('LANGUAGES.zz = {name: "x}') and fails("LANGUAGES.zz = {a: 1") and fails("var x = 1;") and fails('LANGUAGES.yy = {a: 1};'))
+    # Valbara avsnitt (elective): ett objekt eller en lista, i listans ordning; fel form stoppar
+    from build import elective_groups
+    one = elective_groups(parse_lang_js('LANGUAGES.zz = {elective: {test: /^mt\\d$/, label: "Musikteori"}};', "zz"))
+    two = elective_groups(parse_lang_js('LANGUAGES.zz = {elective: [{test: /^mt\\d$/, label: "A"}, {test: /^grund$/i, label: "B"},]};', "zz"))
+    ok("elective: ett objekt och en lista med grupper", [l for _, l in one] == ["Musikteori"] and bool(one[0][0].search("mt3")) and not one[0][0].search("mtx")
+       and [l for _, l in two] == ["A", "B"] and bool(two[1][0].search("GRUND")) and elective_groups({}) == [])
+    def el_fails(s):
+        try:
+            elective_groups(parse_lang_js("LANGUAGES.zz = {elective: " + s + "};", "zz"))
+            return False
+        except JSParseError:
+            return True
+    ok("elective: fel form stoppar", el_fails('{test: "^mt", label: "x"}') and el_fails('{test: /^mt/}') and el_fails('[{test: /^mt/, label: "x"}, "y"]') and el_fails('"mt"'))
+    # Studieplanen (tools/plan.py) tar inte med valbara avsnitt, i någon av formerna
+    sys.path.insert(0, str(ROOT / "tools"))
+    import plan as PL
+    PL.ROOT = ROOT   # plan.py läser annars sys.argv[1] som repo
+    secs = [("k1", "Kap 1"), ("mt1", "Musikteori"), ("grund", "Grundord"), ("k2", "Kap 2"), ("hr", "Redemittel")]
+    chaps = {w["chap"] for w in PL.std_weeks(secs, "hr", [rx for rx, _ in two])}
+    ok("studieplan: valbara avsnitt kommer inte med", chaps == {"k1", "k2"} and {w["chap"] for w in PL.std_weeks(secs, "hr")} == {"k1", "mt1", "grund", "k2"}, repr(chaps))
+    ok("studieplan: läser elective ur lang.js (fr: musikteori och grundord)", [bool(rx.search("mt1")) or bool(rx.search("grund")) for rx in PL.electives("fr")] == [True, True]
+       and any(rx.search("grund") for rx in PL.electives("fr")) and not any(rx.search("k1") for rx in PL.electives("fr")))
     ok("bindeord räknas som i appen (längsta först, apostrof)", found_connectors("Même si c'est dur, d'abord je viens.", ["si", "même si", "d'abord"]) == ["même si", "d'abord"]
        and js_tok("Bonjour, l’ami ! Ça va ?") == ["bonjour", "l'ami", "ça", "va"])
     good = {"phrases": [{"id": "p1", "sit": "s", "fr": "Hallo", "alt": ["hallo", "Hallöchen"], "why": "w"}],

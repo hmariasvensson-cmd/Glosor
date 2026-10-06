@@ -2,6 +2,14 @@
 
 Punkter som har flyttats från [`BACKLOG.md`](BACKLOG.md) när de byggdes. **Referens** anger backloggens rubrik och prioritet. **Commit** anger var ändringen finns i git. **Publicerat** anger versionen av artefakten på https://claude.ai/artifact/YBQv8j4qXQQLuPwLAWt5mP.
 
+## 2026-10-06, del 3 (publicerat som version 44)
+
+| Referens | Vad som byggdes | Commit |
+|---|---|---|
+| Förälderns beslut 2026-10-06 *Lång repetitionskö* ("de nya orden måste med, men bra om de gamla kommer också") | Dagens pass tar fler repetitioner när många ord väntar (`passDueCap`: 10, 15 över 25, 20 över 60) och minst tre nya ord (`PASS_NEW_MIN`). Över 40 väntande ord visar startsidan hur många som väntar, påminner om att skriva svaren och har knappen "Repetera 20 ord" (bara repetition). Test. | se git log |
+| Kvar i frekvenslistorna · *A1-orden i fr1/fr2* (förälderns beslut: valfritt avsnitt) | Nytt valfritt avsnitt `grund` "Grundord från Franska 1–2" i Franska 3 med 388 ord (247 ur fr1, 141 ur fr2) som inte fanns i kursen, vanligast först, plus veckodagar, månader, räkneord och klassrumsfraser. `elective` i lang.js kan nu vara en lista med flera grupper (`electives`, `electiveOf` i app.js, `elective_groups` i build.py, plan.py läser grupperna). Tester. | se git log |
+| Kursmallen · *Lyssna igenom uttalsövningarna* och P3 *Uttalspar med samma stavning* | Uttalsövningarna i alla 21 kurser omarbetade: par som webbläsarens röst inte skiljer på (et/est, mes/mais, pèsca/pésca, àncora/ancòra, ho/o) och sällsynta ord utbytta mot vanliga par med tydlig skillnad (thé/tête, mes/mère, il a été/il était, Staat/Stadt, Miete/Mitte, parlo/parlò, papa/papà). Samma id, samma antal par. Inte kontrollerat med riktig röst. | se git log |
+
 ## 2026-10-06, del 2 (publicerat som version 43)
 
 | Referens | Vad som byggdes | Commit |

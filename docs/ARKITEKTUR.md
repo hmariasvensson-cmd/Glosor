@@ -51,6 +51,15 @@ En kurs kan ärva fält från en annan: `extends: "de"` och `inherit: ["connecto
 | fru | fr | `accents`, `verbAccents`, `articles`, `pronouns`, `genders`, `elision`, `connectors` (+37 egna), `tenseCheck` (+conditionnel, subjonctif, passé simple), `verbs` (+passé simple, egna spel) |
 | it2 | it1 | `articles`, `hintStrip`, `pronouns`, `elision`, `connectors`, `tenseCheck` |
 
+### Valbara avsnitt (`elective`)
+
+`elective` i `lang.js` pekar ut avsnitt som eleven bara får genom att välja dem själv under "Nya ord från". Formen är ett objekt `{test: /^mt\d$/, label: "Musikteori · bara när du väljer det"}` (de, de4) eller en lista med sådana, en grupp per post (fr: musikteorin `mt1`–`mt7` och `grund`, "Grundord från Franska 1–2", ett urval av de vanligaste orden ur Franska 1–2 för den som inte gått de kurserna i appen). `electives()`, `electiveOf(id)` och `isElective(id)` i app.js läser båda formerna.
+
+- Valbara avsnitt kommer aldrig av sig själva: `pickNew` (och därmed "Nästa ord i ordlistan"/"Kapitlet ni läser" och de nya orden i Dagens pass) tar bara ord därifrån när `S.src` är just det avsnittet.
+- I rullistan "Nya ord från" får varje grupp en egen `<optgroup>` med gruppens `label`, sist och i listans ordning. I kapitelkartan visas grupperna sist, var och en under sin rubrik, och de räknas inte i "x av y kapitel klara". Förslaget att gå vidare till nästa kurs räknar bara de andra orden (`coreWords`).
+- Studieplanen tar inte med dem: `tools/plan.py` läser `elective` med `elective_groups` i build.py (Franska 3 har en egen veckolista, `FR_WEEKS`, utan dem), och testet kontrollerar att inget valbart avsnitt står i någon plan.
+- build.py kontrollerar formen (`elective_groups`: `test` ska vara en regex och `label` en text, annars stoppar bygget) och varnar om en grupp inte träffar något avsnitt. `elective` ärvs inte.
+
 ### Kursdata i minnet
 
 Appen har högst `KEEP_COURSES` (3) kurser hämtade samtidigt. När eleven byter kurs och fler är hämtade släpps den som varit oanvänd längst: fälten från datafilen, `base` och uträknade listor (`_…`). Kursens inställningar från `lang.js` finns kvar, och datan hämtas igen om kursen väljs. Framstegen ligger i localStorage och i molnet och påverkas inte.

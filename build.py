@@ -1185,6 +1185,26 @@ def parse_lang_js(src, code=None):
     raise JSParseError(f"hittar inte LANGUAGES.{code or '<kod>'} = {{…}}")
 
 
+def elective_groups(conf):
+    """De valbara avsnitten i lang.js (elective): ett objekt {test: /regex/, label: "…"} eller en lista med sådana.
+    Ger [(regex, label)] med regexen som Python-mönster (tools/plan.py använder det också), i listans ordning.
+    Stoppar (JSParseError) om formen är fel, så att ett stavfel inte tyst gör ett valbart avsnitt obligatoriskt."""
+    el = conf.get("elective")
+    if el is None:
+        return []
+    out = []
+    for e in el if isinstance(el, list) else [el]:
+        t = e.get("test") if isinstance(e, dict) else None
+        m = re.fullmatch(r"/(.*)/([a-z]*)", t.raw.strip()) if isinstance(t, JSExpr) else None
+        if not m or not isinstance(e.get("label"), str) or not e["label"].strip():
+            raise JSParseError("elective ska vara {test: /regex/, label: \"…\"} eller en lista med sådana")
+        try:
+            out.append((re.compile(m.group(1), re.I if "i" in m.group(2) else 0), e["label"]))
+        except re.error as x:
+            raise JSParseError(f"elective: regexen {t.raw} går inte att läsa ({x})") from None
+    return out
+
+
 def js_object_keys(value):
     """Nycklarna i ett objekt i lang.js: en dict, eller ett uttryck som slutar med return {…} (som tenseCheck i fr4)."""
     if isinstance(value, dict):
@@ -1486,6 +1506,13 @@ def main():
         except JSParseError as e:
             all_errors.append(f"languages/{code}/lang.js: kan inte läsas: {e}")
             confs[code] = {}
+        # Valbara avsnitt (elective): rätt form, och varje grupp ska träffa minst ett avsnitt
+        try:
+            for rx, label in elective_groups(confs[code]):
+                if not any(rx.search(s) for s in section_ids):
+                    print(f"Varning: languages/{code}/lang.js: elective '{label}' träffar inget avsnitt i words.txt")
+        except JSParseError as e:
+            all_errors.append(f"languages/{code}/lang.js: {e}")
         cdata = {"words": words}
         content, found = {}, {}
         # Innehåll från boken (book/content, privat mapp) läggs till efter det allmänna innehållet

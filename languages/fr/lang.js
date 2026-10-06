@@ -14,8 +14,12 @@ LANGUAGES.fr = {
   tts: "fr-FR",               // röst för uppläsning
   storageKey: "franska-glosor-v2", // ÄNDRA ALDRIG: sparade framsteg ligger under den här nyckeln
   nextCourse: "frs4",         // kursen man går vidare till när den här är klar (Franska 4, steg 4)
-  // Valfria avsnitt: ord härifrån kommer bara när eleven själv väljer avsnittet under "Nya ord från"
-  elective: {test: /^mt\d$/, label: "Musikteori · bara när du väljer det"},
+  // Valfria avsnitt: ord härifrån kommer bara när eleven själv väljer avsnittet under "Nya ord från".
+  // En lista = flera grupper, var och en med egen rubrik (i den ordningen, sist i rullistan och kapitelkartan).
+  elective: [
+    {test: /^mt\d$/, label: "Musikteori · bara när du väljer det"},
+    {test: /^grund$/, label: "Grundord från Franska 1–2 · bara när du väljer det"},   // för den som inte gått Franska 1–2 i appen
+  ],
 
   accents: "é è ê à â ç ô î û ù ë ï œ",
   verbAccents: "é è ê à â ç ô î û",

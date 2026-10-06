@@ -41,9 +41,9 @@ Emma pluggar på egen hand, utan kurs, lärare och lärobok. Tyskan bygger därf
 
 - **P2: Resten av kursmallen** (`docs/kursmall.md`, avsnitt 4). Byggt: paket 1–8, 10 och 13–16 samt nivåerna. Kvar:
   - Paket 9 (grammatiken kopplad till kapitel) gör bara nytta i kurser med lärobok, så det väntar.
-  - Lyssna igenom uttalsövningarna med en riktig röst. Vissa par kan låta lika i vissa webbläsare, till exempel é/è i franska och enkelt/dubbelt s i italienska. Sällsynta ord bör bytas ut.
+  - Uttalsövningarna är omarbetade 2026-10-06 (version 44). Kvar: lyssna med en riktig röst, först franska notre/nôtre, pomme/paume, pot/pote och italienska -emo/-emmo.
 - **P1: Fler sidor ur Escalade.** Inlagda: s. 8–69, 98–131, 148–153, 182–191 och minigrammatiken s. 196–199 och 202–237 (se `languages/fr/book/sidor.json`). Saknas: s. 70–97, 132–147, 154–181, 192–195 och 200–201. Fota också om s. 101, där högerkanten saknas. Kapitelnumret för s. 148–153 (antaget kap 10) och s. 182–191 och titeln på kap 6 behöver bekräftas.
-- **P2: Säkerhetskopiera bokmappen** till ett privat repo på GitHub (`languages/fr/book/` är redan ett eget lokalt git-repo). Kräver att föräldern godkänner att ett privat repo skapas.
+- **P2: Säkerhetskopiera bokmappen** till ett privat repo på GitHub (`languages/fr/book/` är redan ett eget lokalt git-repo). Godkänt av föräldern 2026-10-06; väntar på att hon skapar det tomma privata repot `Glosor-bok` (gh finns inte på datorn), sedan `git remote add origin git@github.com:hmariasvensson-cmd/Glosor-bok.git` och push.
 - **P3: Välja bok per elev**, om flera elever med olika böcker ska använda samma kurs.
 - **P2: De nya kurserna (2026-09-29): fyll på.** Granskade av AI-agenter 2026-10-01. Textlängder, glosor och ordantal är åtgärdade 2026-10-01 (se KLART.md, version 35). Överlapp mellan kurser är tillåtet men kan minskas (se "Öppet efter 2026-10-01"). Frekvenstäckning och videor gjorda 2026-10-05 (version 40–41).
   - Varje kurs får en egen mapp i `languages/` och en egen `storageKey`. Bygg efter kursmallen (`docs/kursmall.md`) och Skolverkets centrala innehåll för steget. Nivån ungefär enligt Skolverket: steg 1 A1.1, 2 A1.2, 3 A2.1, 4 A2.2, 5 B1.1, 6 B1.2, 7 B2.1.
@@ -52,8 +52,8 @@ Emma pluggar på egen hand, utan kurs, lärare och lärobok. Tyskan bygger därf
   - Arbetssätt som fungerade för Franska 6 (fr4) och Tyska 6: glosorna i två halvor av två agenter (med dubblettkontroll mot tidigare kurser och mot varandra), allt övrigt innehåll av en tredje. Modelltexterna i skrivuppgifterna ska skrivas **efter** ordlistan, annars saknar de kapitelord.
   - Innehållet är AI-skrivet och behöver granskas med stickprov, som de andra kurserna.
 - **P2: Franska: brister från nivågranskningen** (`docs/nivaer-franska.md`, avsnitt 4; beslutet om nivåerna är genomfört 2026-09-29):
-  - **Franska 6 (`fr4`): ordmängden** 1 045 ord mot målet 1 000–1 200 per steg; tillsammans med frs4/frs5 ska kedjan nå ca 3 000 ord. Dubblettkontroll mellan frs4/frs5 och fr4 behövs (överlapp är godkänt av föräldern, men bör hållas litet).
-  - **Franska I (`fru`): de nya områdena `nomin` och `conces`** (2026-09-29) är AI-skrivna; `nomin-reg` och `nomin-titre` är undantagna från Hitta felet. Granska stilnivåexemplen (familier/soutenu) med en fransktalande.
+  - **Franska 6 (`fr4`): dubbletter** med frs4/frs5 (245 ord delas med frs5, se "Öppet efter 2026-10-01 (version 35)"). Ordmängden är inom målet (1 045 ord, 1 000–1 200), och kedjan har nått över 3 000 ord efter de vanliga orden 2026-10-05.
+  - **Franska I (`fru`): `nomin` och `conces`** är granskade av AI-agent 2026-10-05 (nomin-021 omskriven). Kvar bara om möjligt: stilnivåexemplen (familier/soutenu) med en fransktalande.
 
 ## Arkitektur (granskning 2026-09-29)
 
@@ -74,7 +74,6 @@ Granskning av `src/app.js`, `src/kinds/`, arvet i `lang.js`, `build.py`, testern
 
 ## Öppet efter 2026-10-02 (version 38)
 
-- **P3: Uttalspar med samma stavning** (it3 pèsca/pésca, àncora/ancòra) fungerar bara om rösten läser accenterna.
 
 ## Öppet efter 2026-10-01 (version 36)
 
@@ -87,7 +86,6 @@ Granskningspunkterna nedan är avgjorda av granskningsagenterna 2026-10-01 (vers
 
 ## Öppet efter 2026-10-05 (version 40)
 
-- **P3: Kvar i frekvenslistorna** (`docs/frekvens.md`): Franska 3 når 80,9 % av topp 1000; A1-orden ligger i fr1/fr2, som eleven i Franska 3 inte ser. Kan läggas till i `vanliga2` om överlapp önskas.
 - **P3: Musiktermerna** kan fortfarande kontrolleras med en musiklärare (franska 3, Tyska 4, Tyska 5).
 - **P3: Tyska 5:s datafil** är 1 593 kB, nära varningsgränsen `MAX_DATA_KB` (1 600 kB, en egen varning, ingen teknisk gräns). Största delen är Tatoeba-meningarna (294 kB); de kan hämtas separat som provfilen (`ensureExam`) om filen växer mer, men meningsövningarna, Dagens pass och återupptagna pass måste då vänta på dem.
 - **P3: Sidans storlek:** `dist/index.html` är 415 kB, nära varningsgränsen `MAX_PAGE_KB` (420 kB) efter profiler och föräldravy.

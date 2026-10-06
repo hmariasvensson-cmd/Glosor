@@ -865,8 +865,11 @@ const gtag=g=>g?`<span class="tag ${esc(g[0])}">${esc(genderName(g))}</span>`:""
 const accentKeys=list=>list?`<div class="accents">${String(list).split(" ").filter(Boolean).map(c=>`<button type="button" data-c="${esc(c)}">${esc(c)}</button>`).join("")}</div>`:"";
 const lang=()=>`lang="${esc(L.htmlLang||L.code)}"`;
 
-// Valfria avsnitt (L.elective, t.ex. musikteorin) tas bara med när eleven väljer dem själv
-const isElective=id=>!!(L.elective&&L.elective.test.test(id||""));
+// Valfria avsnitt (L.elective, t.ex. musikteorin) tas bara med när eleven väljer dem själv. L.elective är ett objekt
+// {test: /regex/, label} eller en lista med sådana (en grupp per post, med egen rubrik, i listans ordning).
+const electives=()=>L.elective?[].concat(L.elective).filter(e=>e&&e.test):[];
+const electiveOf=id=>electives().find(e=>e.test.test(id||""));
+const isElective=id=>!!electiveOf(id);
 const coreWords=()=>WORDS.filter(w=>!isElective(w.sec));
 
 /* ---------- Samma uträkning en gång per rendering ----------
@@ -925,10 +928,11 @@ function renderStart(){
   const {learned,mastered}=wordCounts();
   const secOpt=s=>{const n=secProg([s.id]).rest;
     return `<option value="${esc(s.id)}" ${n?"":"disabled"}>${esc(s.name)} · ${progLabel([s.id])}</option>`;};
-  const elSecs=SECTIONS.filter(s=>isElective(s.id)), bookSecs=SECTIONS.filter(s=>s.book&&!isElective(s.id)), otherSecs=SECTIONS.filter(s=>!s.book&&!isElective(s.id));
+  const bookSecs=SECTIONS.filter(s=>s.book&&!isElective(s.id)), otherSecs=SECTIONS.filter(s=>!s.book&&!isElective(s.id));
   const opts=`<option value="auto">${hasBook()?"Kapitlet ni läser, sedan resten":L.nextLabel||"Nästa ord i ordlistan"}</option>`+(bookSecs.length
     ?`<optgroup label="Boken: ${esc(L.book?L.book.title:"")}">${bookSecs.map(secOpt).join("")}</optgroup><optgroup label="Allmänt">${otherSecs.map(secOpt).join("")}</optgroup>`
-    :otherSecs.map(secOpt).join(""))+(elSecs.length?`<optgroup label="${esc(L.elective.label)}">${elSecs.map(secOpt).join("")}</optgroup>`:"");
+    :otherSecs.map(secOpt).join(""))+electives().map(e=>{ const ss=SECTIONS.filter(s=>electiveOf(s.id)===e);
+      return ss.length?`<optgroup label="${esc(e.label||"")}">${ss.map(secOpt).join("")}</optgroup>`:""; }).join("");
   const nothing=!newW.length&&!due.length;
   app.innerHTML=`
   ${dailyPanel()}
@@ -1073,13 +1077,14 @@ let CHMAP_OPEN=false;
 function chapterMap(){
   const all=chapters().filter(c=>c.id!=="mine"); if(all.length<2) return "";   // kapitlen i ordning (00-common.js), utan Mina ord
   const cur=hasBook()&&S.chapter?S.chapter:(S.src!=="auto"?S.src:curSec());
-  // Valfria avsnitt visas sist och räknas inte in i "x av y kapitel klara"
-  const gs=all.filter(g=>!isElective(g.ids[0])), el=all.filter(g=>isElective(g.ids[0]));
+  // Valfria avsnitt visas sist, grupp för grupp med gruppens rubrik, och räknas inte in i "x av y kapitel klara"
+  const gs=all.filter(g=>!isElective(g.ids[0])), el=electives().flatMap(e=>all.filter(g=>electiveOf(g.ids[0])===e));
   const done=gs.filter(g=>!secProg(g.ids).rest).length;
   return `<details class="more chmap" id="chmap" ${CHMAP_OPEN?"open":""}><summary>Hur långt har jag kommit? ${done} av ${gs.length} kapitel klara</summary>
     <div class="legend"><span><i class="sw" style="background:var(--c2)"></i>Kan</span><span><i class="sw" style="background:var(--c1)"></i>På väg</span><span><i class="sw" style="background:var(--grid)"></i>Kvar</span></div>
     <div class="chlist">${[...gs,...el].map((g,i)=>{const p=secProg(g.ids), here=g.ids.includes(cur);
-      return (el.length&&i===gs.length?`<div class="vsec">${esc(L.elective.label)}</div>`:"")+`<button type="button" class="chrow${here?" here":""}" data-chmap="${esc(g.id)}" aria-label="${esc(g.name)}: ${p.k} kan, ${p.v} på väg, ${p.rest} kvar. Välj kapitlet.">
+      const e=i>=gs.length&&electiveOf(g.ids[0]), first=e&&(i===gs.length||electiveOf([...gs,...el][i-1].ids[0])!==e);
+      return (first?`<div class="vsec">${esc(e.label||"")}</div>`:"")+`<button type="button" class="chrow${here?" here":""}" data-chmap="${esc(g.id)}" aria-label="${esc(g.name)}: ${p.k} kan, ${p.v} på väg, ${p.rest} kvar. Välj kapitlet.">
         <span class="chtop"><span class="chname">${esc(g.name)}${here?' <span class="pill new">nu</span>':""}</span><span class="chnum">${p.rest?p.pct+" %":"✓"}</span></span>
         <span class="track" data-tip="${esc(g.name)}: ${p.k} kan, ${p.v} på väg, ${p.rest} kvar av ${p.tot}">${p.k?`<i style="width:${100*p.k/p.tot}%;background:var(--c2)"></i>`:""}${p.v?`<i style="width:${100*p.v/p.tot}%;background:var(--c1)"></i>`:""}</span></button>`;}).join("")}</div>
     <p class="foot">Tryck på ett kapitel för att ta nya ord därifrån.</p></details>`;

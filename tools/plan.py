@@ -3,6 +3,12 @@ import json, sys, collections, re
 from pathlib import Path
 from plan_tips import TIPS, GRAM, TITLES, INTRO
 ROOT = Path(sys.argv[1]) if len(sys.argv) > 1 else Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+import build as B   # noqa: E402  parse_lang_js, elective_groups
+
+def electives(c):
+    """Valbara avsnitt (elective i lang.js, ett objekt eller en lista): [regex]. De kommer aldrig med i veckoplanen."""
+    return [rx for rx, _ in B.elective_groups(B.parse_lang_js((ROOT / "languages" / c / "lang.js").read_text(encoding="utf-8"), c))]
 
 def load(c):
     d = json.load(open(ROOT / "dist/data" / f"{c}.json"))
@@ -17,11 +23,11 @@ def load(c):
 VSEC = {"hv", "tv", "sv"}   # avsnittet med vanliga ord (tools/frekvens.py), utspritt som uttrycksavsnittet
 
 
-def std_weeks(secs, rsec):
+def std_weeks(secs, rsec, elective=()):
     """8 kapitel à 2 veckor, uttryck/redemittel utspritt (en del per kapitel), vanliga ord (VSEC) likaså i kapitlets
-    andra vecka, sedan 2 veckor repetition och prov."""
+    andra vecka, sedan 2 veckor repetition och prov. Valbara avsnitt (elective, t.ex. musikteorin) tas inte med."""
     vsec = next((s for s, _ in secs if s in VSEC), None)
-    chaps = [s for s in secs if s[0] not in (rsec, vsec) and not re.match(r"^mt\d$", s[0])]
+    chaps = [s for s in secs if s[0] not in (rsec, vsec) and not any(rx.search(s[0]) for rx in elective)]
     W = []
     for n, (sid, name) in enumerate(chaps):
         for part in (1, 2):
@@ -60,7 +66,7 @@ def build(c):
         W = [{"title": t, "words": [{"sec": s, "part": p, "of": o} for s, p, o in ws], "chap": ch, "last": last} for t, ws, ch, last in FR_WEEKS]
     else:
         rsec = [s for s, _ in secs if s.endswith("r") and len(s) == 2][0]
-        W = std_weeks(secs, rsec)
+        W = std_weeks(secs, rsec, electives(c))
     W += [{"title": "Repetition och provträning", "words": [], "chap": None, "last": False},
           {"title": "Provsimulering och repetition", "words": [], "chap": None, "last": False}]
     N = len(W)

@@ -12,6 +12,12 @@
    efter passet, de sista två veckorna inga nya ord. En kort text (läsa eller lyssna) föreslås efter vartannat pass. */
 const PASS_KEY="words|pass";
 const PASS_NEW=5, PASS_DUE=10, PASS_WORD_SEC=150;   // högst 5 nya ord och 10 repetitioner, glosorna ungefär halva passet (150 s av 300)
+/* Lång repetitionskö (föräldern 2026-10-06: "de nya orden måste med, men bra om de gamla kommer också"): fler
+   repetitioner per pass när många ord väntar, utan att de nya orden försvinner (minst PASS_NEW_MIN), och en knapp
+   för en extra repetitionsrunda på startsidan (REVIEW_HINT, REVIEW_RUN). */
+const PASS_NEW_MIN=3, REVIEW_HINT=40, REVIEW_RUN=20;
+const dueCount=()=>WORDS.reduce((a,w)=>{ const x=ws(w.id); return a+(x&&isDue(x)?1:0); },0);
+const passDueCap=n=>n>60?20:n>25?15:PASS_DUE;
 // Ungefärlig tid per fråga i sekunder: ett nytt ord = lärokort och fråga
 const PASS_T={new:20,mc:8,type:12};
 const gNouns=()=>L.genderGame?genderNouns():[];
@@ -66,8 +72,8 @@ function examPhase(){ const n=examDaysLeft(); return n==null||n<0?0:n<=14?2:n<=4
 // Glosorna i nästa pass: alla förfallna först (högst PASS_DUE), nya ord så länge det finns tid (högst PASS_NEW)
 function passWords(){
   const ph=examPhase(); let cap=Math.min(S.newCount||0,PASS_NEW); if(ph===1) cap=Math.ceil(cap/2); if(ph===2) cap=0;
-  const due=dueWords().slice(0,PASS_DUE), tDue=due.reduce((a,w)=>a+(qType(w,false)==="type"?PASS_T.type:PASS_T.mc),0);
-  const n=Math.min(cap,Math.max(Math.min(cap,2),Math.floor((PASS_WORD_SEC-tDue)/PASS_T.new)));
+  const due=dueWords().slice(0,passDueCap(dueCount())), tDue=due.reduce((a,w)=>a+(qType(w,false)==="type"?PASS_T.type:PASS_T.mc),0);
+  const n=Math.min(cap,Math.max(Math.min(cap,PASS_NEW_MIN),Math.floor((PASS_WORD_SEC-tDue)/PASS_T.new)));
   const newW=pickNew().slice(0,n);
   return {newW,due,sec:newW.length*PASS_T.new+tDue};
 }
@@ -77,6 +83,7 @@ const andList=a=>a.length>1?a.slice(0,-1).join(", ")+" och "+a[a.length-1]:a[0]|
 function dailyPanel(){
   const goal=S.goal||0, min=goal?myStats().min:0, n=passesToday(), pr=S.runs&&S.runs[PASS_KEY];
   const {newW,due,sec}=passWords(), gs=passGroups(sec), days=examDaysLeft(), ph=examPhase();
+  const nd=dueCount();
   const words=[newW.length?`${newW.length} nya ord`:"",due.length?`${due.length} ${due.length===1?"repetition":"repetitioner"}`:""].filter(Boolean);
   const what=words.length?andList(words)+(gs.length?" blandat med "+gs.map(passName).join(", "):""):gs.map(passName).join(", ");
   return `<section class="panel daily"><h2>Dagens pass</h2>
@@ -86,11 +93,14 @@ function dailyPanel(){
     ${what&&!pr?`<p class="plan">Nästa pass: ${esc(what)}. Övningarna turas om från pass till pass.</p>`:""}
     ${days!=null&&days>=0?`<p class="foot" id="examnote">Provet om ${days} ${days===1?"dag":"dagar"}.${ph===2?" Inga nya ord nu, bara repetition och provuppgifter.":ph===1?" Färre nya ord och en provuppgift efter passet.":""}</p>`:""}
     ${pr?`<p class="plan">Du har ett påbörjat pass: ${esc(runLabel(pr))}</p><button class="btn" id="daily-go">Fortsätt passet</button>`:""}
-    <button class="btn${pr?" ghost":""}" id="daily">${pr?"Starta ett nytt pass":"Starta pass"}</button></section>`;
+    <button class="btn${pr?" ghost":""}" id="daily">${pr?"Starta ett nytt pass":"Starta pass"}</button>
+    ${nd>=REVIEW_HINT?`<p class="plan" id="reviewhint"><b>${nd} ord väntar på repetition.</b> Dagens pass tar ${due.length} åt gången, och nya ord kommer som vanligt. Vill du komma ikapp snabbare kan du köra en extra runda med bara repetition. Skriv svaren när du kan: ett ord räknas som "kan" först när du har skrivit det rätt några gånger.</p>
+      <button class="btn ghost" id="review-go">Repetera ${Math.min(nd,REVIEW_RUN)} ord</button>`:""}</section>`;
 }
 function wireDaily(){
   if($("#daily")) $("#daily").onclick=()=>startDaily();
   if($("#daily-go")) $("#daily-go").onclick=()=>{ S.run=S.runs[PASS_KEY]; resumeRun(); };
+  if($("#review-go")) $("#review-go").onclick=()=>startSession([],dueWords().slice(0,REVIEW_RUN));
 }
 // Ett nytt pass (ett påbörjat pass slängs). Argumenten från den gamla versionen (nya ord, repetitioner) används inte.
 function startDaily(){
