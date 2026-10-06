@@ -2,6 +2,12 @@
 
 Punkter som har flyttats från [`BACKLOG.md`](BACKLOG.md) när de byggdes. **Referens** anger backloggens rubrik och prioritet. **Commit** anger var ändringen finns i git. **Publicerat** anger versionen av artefakten på https://claude.ai/artifact/YBQv8j4qXQQLuPwLAWt5mP.
 
+## 2026-10-06, del 4 (publicerat som version 45)
+
+| Referens | Vad som byggdes | Commit |
+|---|---|---|
+| Tyck till från eleven (2026-10-06) *Välja hur många ord man repeterar, och kunna repetera alla* | "Repetitioner per pass" under Antal nya ord: 10, 20, 40 eller Alla (`S.dueMax`, 0 = alla; utan val som förut `MAXDUE` 40, `dueMax()` i app.js). Under knapparna står hur många ord som ska repeteras nu. Knappen Repetera i Dagens pass följer valet ("Repetera alla N ord"). Tester. | se git log |
+
 ## 2026-10-06, del 3 (publicerat som version 44)
 
 | Referens | Vad som byggdes | Commit |

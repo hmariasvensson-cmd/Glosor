@@ -168,6 +168,10 @@ const DAY=864e5;   // ett dygn i ms (40-writing.js)
 const addDays=(ts,n)=>{const d=new Date(ts); d.setHours(0,0,0,0); d.setDate(d.getDate()+n); return d.getTime();};
 const isDue=x=>x.dd?x.dd<=Date.now():x.due<=S.pass;
 const MASTER=4, MAXDUE=40;   // MAXDUE = högst så många repetitioner per pass, resten väntar till nästa
+// Elevens val (önskemål 2026-10-06): S.dueMax = antal repetitioner per glospass (10, 20, 40) eller 0 = alla som
+// ska repeteras; utan val MAXDUE. Gäller glospasset och knappen Repetera på startsidan, inte Dagens pass.
+const DUE_CHOICES=[10,20,40,0];
+const dueMax=()=>S.dueMax===0?Infinity:(S.dueMax>0?S.dueMax:MAXDUE);
 /* S: det sparade läget för den valda kursen. Hela S ligger i localStorage under L.storageKey, och i molnet uppdelat
    (se "Sparat på claude.ai" nedan och docs/ARKITEKTUR.md, där samma lista finns som tabell). Fält:
      v          schemaversion = index i MIGRATIONS. Lägen utan v (från före 2026-09-28) räknas som version 0.
@@ -175,6 +179,7 @@ const MASTER=4, MAXDUE=40;   // MAXDUE = högst så många repetitioner per pass
      t          tid för senaste sparningen (ms), ökar alltid, även om en annan enhets klocka går före
      w          {<ord-id>: {s, due, dd, f, lp, ld, mp, md, lapses, mcR, mcW, tyR, tyW, clR, clW}}, se save() och schedule()
      newCount   antal nya ord per pass (0, 10, 15, 20)          mode  "mix" | "mc" | "type"
+     dueMax     valfritt: repetitioner per glospass (10, 20, 40; 0 = alla som ska repeteras), saknas = MAXDUE
      src        "auto" eller avsnitts-id att lära nya ord från  chapter  bokkapitlet man läser (avsnitts-id)
      slow, listenFirst, goal   uppläsning långsam, lyssna först på nya ord, veckomål i minuter
      selfRate   true = eleven bedömer själv (Igen/Svårt/Bra/Lätt) efter rätt skrivet ord i glosquizet; saknas = av (05-words.js)
@@ -721,7 +726,7 @@ const isMastered=w=>ws(w.id)&&ws(w.id).s>=4;
 const isLeech=w=>{const x=w&&ws(w.id); if(!x) return false; const err=(x.mcW||0)+(x.tyW||0);
   return (x.lapses||0)>=3||(err>=5&&err/(err+(x.mcR||0)+(x.tyR||0))>.4);};
 const dueWords=()=>WORDS.filter(w=>{const x=ws(w.id);return x&&isDue(x)})
-  .sort((a,b)=>(ws(a.id).s>=MASTER)-(ws(b.id).s>=MASTER)||ws(a.id).due-ws(b.id).due).slice(0,MAXDUE);
+  .sort((a,b)=>(ws(a.id).s>=MASTER)-(ws(b.id).s>=MASTER)||ws(a.id).due-ws(b.id).due).slice(0,dueMax());
 /* Rätt: ett steg upp. Fel: ett steg ned, och ett ord man kunde går tillbaka till steg 2.
    t = frågeformen ("mc" eller "type"). Rätt på flerval räcker bara upp till steg MC_MAX (2, lär sig): ett ord räknas
    som "kan" först när man har skrivit det rätt. Ett ord som redan har högre steg sänks inte av ett rätt flerval.
@@ -955,6 +960,9 @@ function renderStart(){
     ${chapterMap()}
     <div class="field"><span class="label">Antal nya ord</span>
       <div class="seg" role="group" aria-label="Antal nya ord">${[0,10,15,20].map(n=>`<button data-n="${n}" aria-pressed="${S.newCount===n}">${n||"Inga"}</button>`).join("")}</div></div>
+    <div class="field"><span class="label">Repetitioner per pass</span>
+      <div class="seg" role="group" aria-label="Repetitioner per pass">${DUE_CHOICES.map(n=>`<button data-dm="${n}" aria-pressed="${(S.dueMax==null?MAXDUE:S.dueMax)===n}">${n||"Alla"}</button>`).join("")}</div>
+      <p class="foot" id="due-note">${dueCount()} ord ska repeteras nu.${S.dueMax===0?" Passet tar alla.":` Passet tar högst ${dueMax()}, resten kommer i nästa pass.`}</p></div>
     <div class="field"><span class="label">Quizet</span>
       <div class="seg" role="group" aria-label="Frågetyp">
         <button data-m="mix" aria-pressed="${S.mode==="mix"}">Anpassat</button>
@@ -996,6 +1004,7 @@ function renderStart(){
   wireBookPanel(); wireChapterMap(); wireWriteNag();
   app.querySelectorAll("[data-nextc]").forEach(b=>b.onclick=()=>useLang(b.dataset.nextc));
   app.querySelectorAll("[data-n]").forEach(b=>b.onclick=()=>{S.newCount=+b.dataset.n;save();renderStart()});
+  app.querySelectorAll("[data-dm]").forEach(b=>b.onclick=()=>{S.dueMax=+b.dataset.dm;save();renderStart()});
   app.querySelectorAll("[data-m]").forEach(b=>b.onclick=()=>{S.mode=b.dataset.m;save();renderStart()});
   app.querySelectorAll("[data-slow]").forEach(b=>b.onclick=()=>{S.slow=b.dataset.slow==="1";save();renderStart()});
   app.querySelectorAll("[data-lf]").forEach(b=>b.onclick=()=>{S.listenFirst=b.dataset.lf==="1";save();renderStart()});
@@ -1581,7 +1590,7 @@ function statsForecast(){
   const max=Math.max(...rows.map(r=>r.n),1);
   return `<section class="panel"><h2>Kommande repetitioner</h2>
     <div class="fc">${rows.map(r=>`<div class="fc-col"><span class="fc-n">${r.n}</span><span class="fc-bar" style="height:${Math.round(4+56*r.n/max)}px"></span><span class="fc-l">${r.l}</span></div>`).join("")}</div>
-    <p class="plan">Nya ord kommer tillbaka nästa pass och sedan efter tre pass${soon?` (${soon} ord väntar på det)`:""}. Därefter efter 3, 7 och 20 dagar, och ord du kan efter 45 och 90 dagar. Högst ${MAXDUE} repetitioner per pass, resten väntar till passet efter.</p></section>`;
+    <p class="plan">Nya ord kommer tillbaka nästa pass och sedan efter tre pass${soon?` (${soon} ord väntar på det)`:""}. Därefter efter 3, 7 och 20 dagar, och ord du kan efter 45 och 90 dagar. ${S.dueMax===0?"Glospasset tar alla ord som ska repeteras.":`Högst ${dueMax()} repetitioner per glospass (välj antal under Repetitioner per pass), resten väntar till passet efter.`}</p></section>`;
 }
 const courseName=()=>S&&S.gy25&&L.courseGy25?L.courseGy25:(L.course||L.name);
 /* ---------- Ordlista ---------- */

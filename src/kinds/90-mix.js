@@ -18,6 +18,8 @@ const PASS_NEW=5, PASS_DUE=10, PASS_WORD_SEC=150;   // högst 5 nya ord och 10 r
 const PASS_NEW_MIN=3, REVIEW_HINT=40, REVIEW_RUN=20;
 const dueCount=()=>WORDS.reduce((a,w)=>{ const x=ws(w.id); return a+(x&&isDue(x)?1:0); },0);
 const passDueCap=n=>n>60?20:n>25?15:PASS_DUE;
+// Knappen Repetera: elevens val (S.dueMax, 0 = alla) eller REVIEW_RUN
+const reviewRun=()=>S.dueMax===0?Infinity:(S.dueMax>0?S.dueMax:REVIEW_RUN);
 // Ungefärlig tid per fråga i sekunder: ett nytt ord = lärokort och fråga
 const PASS_T={new:20,mc:8,type:12};
 const gNouns=()=>L.genderGame?genderNouns():[];
@@ -95,12 +97,12 @@ function dailyPanel(){
     ${pr?`<p class="plan">Du har ett påbörjat pass: ${esc(runLabel(pr))}</p><button class="btn" id="daily-go">Fortsätt passet</button>`:""}
     <button class="btn${pr?" ghost":""}" id="daily">${pr?"Starta ett nytt pass":"Starta pass"}</button>
     ${nd>=REVIEW_HINT?`<p class="plan" id="reviewhint"><b>${nd} ord väntar på repetition.</b> Dagens pass tar ${due.length} åt gången, och nya ord kommer som vanligt. Vill du komma ikapp snabbare kan du köra en extra runda med bara repetition. Skriv svaren när du kan: ett ord räknas som "kan" först när du har skrivit det rätt några gånger.</p>
-      <button class="btn ghost" id="review-go">Repetera ${Math.min(nd,REVIEW_RUN)} ord</button>`:""}</section>`;
+      <button class="btn ghost" id="review-go">${reviewRun()>=nd?`Repetera alla ${nd} ord`:`Repetera ${reviewRun()} ord`}</button>`:""}</section>`;
 }
 function wireDaily(){
   if($("#daily")) $("#daily").onclick=()=>startDaily();
   if($("#daily-go")) $("#daily-go").onclick=()=>{ S.run=S.runs[PASS_KEY]; resumeRun(); };
-  if($("#review-go")) $("#review-go").onclick=()=>startSession([],dueWords().slice(0,REVIEW_RUN));
+  if($("#review-go")) $("#review-go").onclick=()=>startSession([],dueWords().slice(0,reviewRun()));
 }
 // Ett nytt pass (ett påbörjat pass slängs). Argumenten från den gamla versionen (nya ord, repetitioner) används inte.
 function startDaily(){

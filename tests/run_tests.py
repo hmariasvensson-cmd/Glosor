@@ -1859,6 +1859,13 @@ appReady().then(async()=>{ try{
     ok("repetition: nya ord kommer ändå", pw.newW.length>=Math.min(S.newCount||0,3), pw.newW.length);
     renderStart(); ok("repetition: påminnelse och knapp på startsidan", !!q("#reviewhint")&&q("#reviewhint").textContent.includes("väntar på repetition")&&!!q("#review-go"));
     q("#review-go").click(); ok("repetition: extra runda med bara repetition", sess&&sess.newW.length===0&&sess.due.length===20, sess&&sess.due.length); quitSession();
+    // Elevens val: antal repetitioner per pass och Alla (önskemål 2026-10-06)
+    ok("repetition: val av antal under glosorna", app.querySelectorAll("[data-dm]").length===4&&!!q("#due-note"));
+    q('[data-dm="10"]').click(); ok("repetition: 10 per pass", S.dueMax===10&&dueWords().length===10&&q('[data-dm="10"]').getAttribute("aria-pressed")==="true");
+    q('[data-dm="0"]').click(); ok("repetition: Alla tar alla som ska repeteras", S.dueMax===0&&dueWords().length===dueCount()&&dueCount()>40, dueWords().length+" av "+dueCount());
+    ok("repetition: knappen repeterar alla", q("#review-go").textContent.includes("alla "+dueCount()), q("#review-go").textContent);
+    q("#review-go").click(); ok("repetition: runda med alla", sess&&sess.due.length===dueCount(), sess&&sess.due.length); quitSession();
+    delete S.dueMax; renderStart();
     S.w=JSON.parse(keep); renderStart(); ok("repetition: ingen påminnelse med kort kö", !q("#reviewhint")); }
   // Tyska: der/die/das i grammatikgruppen
   useLang("de"); await appReady();
