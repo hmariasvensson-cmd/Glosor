@@ -36,7 +36,7 @@ window.__fbPrompt="";
 const mockSample=Object.assign(async()=>({text:"x"}),{json:async p=>{if(p.includes("samla in önskemål")) return p.includes("otydligt")?{tydligt:false,fragor:["Menar du ljudet?","Gäller det alla övningar?"]}:{tydligt:true,fragor:[]};
   if(p.includes("bedömare")) return {kriterier:[{namn:"A",poang:4,kommentar:"ok"},{namn:"B",poang:3,kommentar:"ok"}],helhet:"Godkänt.",fel:[]};
   window.__fbPrompt=p; return {helhet:"Bra jobbat.",bra:["Tydlig start"],fel:[{citat:"je suis allé",rattat:"je suis allée",varfor:"Kongruens"}],nasta:"Fler bindeord",niva:"A2+",prov:"Nästan B1"};}});
-window.claude={use:async n=>n==="sample"?mockSample:n==="db"?mockDb:n==="user"?{id:async()=>"u_test",profiles:async ids=>Object.fromEntries(ids.map(i=>[i,{name:""}]))}:null};
+window.claude={use:async n=>n==="sample"?mockSample:n==="db"?mockDb:n==="user"?{id:async()=>"u_test",isOwner:async()=>!!window.__owner,profiles:async ids=>Object.fromEntries(ids.map(i=>[i,{name:""}]))}:null};
 try{speechSynthesis.speak=()=>{}}catch(e){}
 </script>"""
 
@@ -3452,6 +3452,101 @@ appReady().then(async()=>{ try{
 </script>"""
 
 
+# Vem övar? (profiler) och Föräldravyn (backloggen "Konton, sparande och topplista", P2 och P3): standardprofilen behåller
+# kursens storageKey, andra profiler får <storageKey>@<id>, byte spärras under ett pass, topplistan har en rad per profil,
+# sammanfattningen summary/<uid> skrivs, och föräldravyn syns bara för ägaren.
+SCENARIO_PROFILES = r"""<script>
+const out=[]; const q=s=>document.querySelector(s);
+const ok=(name,cond,info="")=>out.push((cond?"OK   ":"FEL  ")+name+(info?"  ("+info+")":""));
+const wait=(c,ms=3000)=>typeof c==="number"?new Promise(r=>setTimeout(r,c)):until(c,ms);
+const P="data/users/u_test/";
+const flush=async()=>{ for(let i=0;i<40&&(CLOUD.busy||Object.keys(CLOUD.pending).length);i++){ await cloudFlush(); await wait(20); } };
+const runDict=()=>{ startDict(); let g=0; while(sess&&g++<80){ const c=sess.cur;
+  if(c.t==="mc"){answerMC(sess.d.opts.findIndex(o=>o.ok)); q("#nx").click();} else {q("#ans").value=c.w.exT; q("#submit").click(); q("#submit").click();} } };
+appReady().then(async()=>{ try{
+  // 1. En enda profil: allt som förut
+  ok("profil: med en profil syns inget namn i rubriken och inget sparas", q("#profchip").hidden&&!localStorage.getItem("glosor-profiles")&&!__remote[P+"profiles"]);
+  ok("profil: standardprofilen har kursens egen nyckel", L.storageKey==="franska-glosor-v2"&&LANGUAGES.de.storageKey==="glosor-de-v1"&&LANGUAGES.de.baseKey==="glosor-de-v1");
+  renderStart(); ok("profil: Vem övar? ligger under Fler inställningar", !!q("#setd #profsec")&&!q("[data-prof]")&&q("#profsec").textContent.includes(PROF_DEFAULT));
+  ok("profil: inget profiles-fält i topplistan med en profil", !__remote["board/u_test"]||!("profiles" in __remote["board/u_test"]));
+  await flush(); const pass0=S.pass, w0=JSON.stringify(S.w);
+  // 2. Lägga till och byta
+  q("#profadd").value="Anna"; q("#profaddf").dispatchEvent(new Event("submit",{cancelable:true}));
+  const anna=PROF.list.find(p=>p.name==="Anna")||{};
+  ok("profil: läggs till utan att byta", /^[a-z0-9]{6}$/.test(anna.id||"")&&PROF.cur===""&&!q("#profchip").hidden&&q("#profchip").textContent==="Övar: Jag", q("#profchip").textContent);
+  ok("profil: dubblettnamn avvisas", profAdd("anna")===null&&profLive().length===2);
+  await wait(()=>!!__remote[P+"profiles"]);
+  ok("profil: listan speglas till molnet (privat dokument)", ((__remote[P+"profiles"]||{}).list||[]).some(p=>p.id===anna.id&&p.name==="Anna"));
+  ok("profil: localStorage har listan och vem som övar", JSON.parse(localStorage.getItem("glosor-profiles")).cur==="");
+  const mainDoc=JSON.stringify(__remote[P+"franska-glosor-v2"]), mainLocal=localStorage.getItem("franska-glosor-v2");
+  q('[data-prof="'+anna.id+'"]').click(); await appReady();
+  ok("profil: byte ger <storageKey>@<id> i alla kurser", PROF.cur===anna.id&&L.storageKey==="franska-glosor-v2@"+anna.id&&LANGUAGES.de.storageKey==="glosor-de-v1@"+anna.id, L.storageKey);
+  ok("profil: den nya profilen börjar från början", S.pass===1&&!Object.keys(S.w).length, S.pass);
+  ok("profil: rubriken visar vem som övar", q("#profchip").textContent==="Övar: Anna"&&!!q("#setd[open] #profsec"));
+  // 3. Ett pass i Annas profil, och inget byte mitt i passet
+  startDict(); const blocked=profSwitch("")===false&&PROF.cur===anna.id&&!!sess&&L.storageKey.endsWith("@"+anna.id);
+  ok("profil: byte spärras medan ett pass pågår", blocked);
+  { let g=0; while(sess&&g++<80){ const c=sess.cur; if(c.t==="mc"){answerMC(sess.d.opts.findIndex(o=>o.ok)); q("#nx").click();} else {q("#ans").value=c.w.exT; q("#submit").click(); q("#submit").click();} } }
+  await flush();
+  const ak=P+"franska-glosor-v2@"+anna.id;
+  ok("profil: Annas framsteg sparas under egen nyckel lokalt och i molnet", !!__remote[ak]&&__remote[ak].v===2&&!!__remote[ak+"~log"]&&JSON.parse(localStorage.getItem("franska-glosor-v2@"+anna.id)).log.length===1);
+  ok("profil: standardprofilens läge är orört", JSON.stringify(__remote[P+"franska-glosor-v2"])===mainDoc&&localStorage.getItem("franska-glosor-v2")===mainLocal);
+  // 4. Topplistan: en rad per konto och profil
+  await wait(()=>{ const b=__remote["board/u_test"]; return b&&b.profiles&&b.profiles[anna.id]&&b.profiles[anna.id].langs&&b.profiles[anna.id].langs.fr; });
+  const b=__remote["board/u_test"]||{};
+  ok("topplista: Anna under profiles, standardprofilen överst som förut", ((b.profiles||{})[anna.id]||{}).name==="Anna"&&!!b.langs&&!!b.langs.fr&&typeof b.nick==="string", JSON.stringify(Object.keys(b)));
+  setView("board"); await wait(()=>document.querySelectorAll(".brow").length>=2);
+  { const rows=[...document.querySelectorAll(".brow")].map(r=>r.querySelector(".who b").textContent);
+    ok("topplista: båda profilerna visas, Anna markerad som du", rows.includes("Anna (du)")&&rows.includes("Någon")&&document.querySelectorAll(".brow.me").length===1, rows.join(" | ")); }
+  q("#nick").value="Annis"; q("#nickf").dispatchEvent(new Event("submit",{cancelable:true})); await wait(()=>((q("#nickmsg")||{}).textContent||"")==="Sparat.");
+  ok("topplista: namnet sparas för profilen, inte överst", __remote["board/u_test"].profiles[anna.id].nick==="Annis"&&__remote["board/u_test"].nick===b.nick);
+  ok("föräldravy: ingen knapp för den som inte äger appen", !q("#parentgo"));
+  // 5. Sammanfattningen till föräldern
+  await wait(()=>{ const x=__remote["summary/u_test"]; return x&&x.profiles&&x.profiles[anna.id]&&x.profiles[anna.id].courses&&x.profiles[anna.id].courses.fr; });
+  { const x=__remote["summary/u_test"]||{}, a=((x.profiles||{})[anna.id]||{}), c=(a.courses||{}).fr||{};
+    const fields=["course","level","words","min7","min30","q7","q30","days14","active14","streak","last","goal","week","writing"];
+    ok("sammanfattning: summary/<uid> med profilens namn och fälten per kurs", x.v===1&&a.name==="Anna"&&fields.every(f=>f in c)&&c.days14.length===14&&c.active14===1&&c.q7>0&&c.words.n===WORDS.length, fields.filter(f=>!(f in c)).join()+" "+JSON.stringify(c));
+    ok("sammanfattning: standardprofilen under \"_\"", !!(x.profiles||{})._&&!!x.profiles._.courses.fr&&x.profiles._.courses.fr.words.started===Object.keys(JSON.parse(w0)).length);
+    ok("sammanfattning: liten", new TextEncoder().encode(JSON.stringify(x)).length<20000, new TextEncoder().encode(JSON.stringify(x)).length); }
+  // 6. Tyck till får profilens namn
+  setView("fb"); TT.kind="wish"; await saveTyckTill("Hej från Anna",[]);
+  { const f=Object.entries(__remote).find(([k,v])=>k.startsWith("feedback/u_test/msgs/")&&v.text==="Hej från Anna");
+    ok("tyck till: profilens namn följer med", f&&f[1].profile==="Anna"); }
+  ok("tyck till: eleven ser vad föräldern ser", !!q("#fbshare")&&q("#fbshare").textContent.includes("sammanfattning"));
+  // 7. Tillbaka till standardprofilen, byta namn och ta bort med bekräftelse på sidan
+  setView("ova"); ok("profil: tillbaka till standardprofilen", profSwitch("")); await appReady();
+  ok("profil: standardprofilens framsteg finns kvar", L.storageKey==="franska-glosor-v2"&&S.pass===pass0&&JSON.stringify(S.w)===w0, S.pass);
+  ok("profil: standardprofilen kan byta namn", profRename("","Förälder")&&profName("")==="Förälder"&&q("#profchip").textContent==="Övar: Förälder");
+  SET_OPEN=true; renderStart(); q('[data-profrm="'+anna.id+'"]').click();
+  ok("profil: borttagning bekräftas på sidan", !!q(".profconfirm")&&PROF.list.some(p=>p.id===anna.id&&!p.gone));
+  q('[data-profrmok="'+anna.id+'"]').click();
+  ok("profil: borttagen ur listan, framstegen ligger kvar", !profMulti()&&q("#profchip").hidden&&!!localStorage.getItem("franska-glosor-v2@"+anna.id)&&!!__remote[ak]);
+  ok("profil: samma namn igen ger samma id och framstegen tillbaka", profAdd("Anna")===anna.id&&profSwitch(anna.id)&&S.log.length===1);
+  profSwitch("");
+  // 8. Listan från en annan enhet slås ihop per id (senast ändrad vinner)
+  { const t=Date.now()+10; const ch=profMerge([{id:"bo1234",name:"Bo",t},{id:anna.id,name:"Anna B",t}]);
+    ok("profil: listor slås ihop per id", ch&&profName("bo1234")==="Bo"&&profName(anna.id)==="Anna B"&&!profMerge([{id:anna.id,name:"Gammal",t:1}])); }
+  // 9. Föräldravyn för ägaren
+  window.__owner=true; CLOUD.owner=await CLOUD.user.isOwner();
+  const now=Date.now(), d14=[0,0,0,0,0,0,0,0,0,0,12,0,30,5];
+  __remote["summary/u_kid"]={v:1,t:now,profiles:{_:{name:"Jag",courses:{de:{course:"Tyska 5",level:"B1",words:{n:900,started:300,known:120,due:14},min7:47,min30:120,q7:80,q30:300,days14:d14,active14:3,streak:2,last:now,goal:60,week:35,writing:4,
+      exam:{name:"Goethe B2",pass:60,parts:[{id:"lesen",sv:"Läsa"},{id:"hoeren",sv:"Lyssna"}],sims:[{d:now,parts:{lesen:72,hoeren:41}}]},gram:[{name:"Passiv",pct:40,n:10}],plan:{week:3,of:12,title:"Vecka 3",known:5,n:20,next:"Vecka 4"}}}},
+    xy9876:{name:"<b id=x1>Bo</b>",courses:{fr:{course:"Franska 3",words:{started:10,known:2,due:1},days14:"<i id=x2>",last:now-3*864e5}}}}};
+  setView("board"); await wait(()=>!!q("#parentgo"));
+  ok("föräldravy: knappen syns för ägaren", !!q("#parentgo")); q("#parentgo").click(); await wait(()=>document.querySelectorAll(".pcard").length>=2);
+  { const t=q("#app").textContent, cards=document.querySelectorAll(".pcard");
+    ok("föräldravy: ett kort per konto och profil, namn eller Elev", cards.length>=3&&t.includes("Elev")&&t.includes("<b id=x1>Bo</b>")&&!q("#x1,#x2"), cards.length);
+    ok("föräldravy: siffror, staplar, prov mot gränsen, grammatik och studieplan", t.includes("Tyska 5")&&q(".spark")&&q(".spark").querySelectorAll("rect").length===14
+      &&!!q(".pexam b.pass")&&!!q(".pexam b.fail")&&t.includes("Passiv (40 %)")&&t.includes("vecka 3 av 12")&&t.includes("Senast aktiv i dag"), t.slice(0,120));
+    ok("föräldravy: Annas sammanfattning finns med", t.includes("Anna")); }
+  q("#parentback").click(); ok("föräldravy: tillbaka till topplistan", curView==="board");
+ }catch(e){ ok("undantag", false, e.message+" "+(e.stack||"").split("\n")[1]); }
+ ok("inga JavaScript-fel", !__err.length, __err.join(" ; "));
+ document.body.insertAdjacentHTML("beforeend","<pre id=out>"+out.join("\n").replace(/</g,"&lt;")+"</pre>");
+});
+</script>"""
+
+
 def main():
     text = run(SCENARIO) + "\n" + run(SCENARIO_DE) + "\n" + run(SCENARIO_FIXES) + "\n" + run(SCENARIO_SYNC, 30000) + "\n" + run_http(SCENARIO_HTTP)
     text += "\n" + run_http(SCENARIO_EXAMLAZY, 60000) + "\n" + test_exam_split()   # provet hämtas vid behov, minifiering, storlek (P2)
@@ -3482,6 +3577,7 @@ def main():
     text += "\n" + run(SCENARIO_TALK, 60000)   # Tala: 4/3/2, samtal med Claude och Skugga (P2: Ny övning Tala, Muntlig förberedelse)
     text += "\n" + run(SCENARIO_KOD, 60000) + "\n" + run_http(SCENARIO_LEMMAHTTP)   # död kod, sparning, flerval, grundformer, äkta ljud (P3)
     text += "\n" + run(SCENARIO_RULEBOX, 30000)   # regeln i korthet före och under grammatikpassen (Oscar 2026-10-03)
+    text += "\n" + run(SCENARIO_PROFILES, 60000)   # Vem övar? och Föräldravyn (P2/P3 Konton, sparande och topplista)
     text += "\n" + test_minimal_course()   # en ny, liten kurs (8 → 21 kurser)
     print(text)
     sys.exit(1 if "FEL  " in text else 0)

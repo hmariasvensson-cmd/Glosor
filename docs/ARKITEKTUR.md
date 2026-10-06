@@ -7,7 +7,7 @@ Glosor har tre sorters data, och de hålls helt åtskilda.
 | **Kod** | `src/` (app.js, `kinds/*.js` med en fil per övningstyp, feedback.js, main.js, page.html, style.css), `build.py`, `tests/` | Claude | Ja |
 | **Kursinnehåll** | `languages/<kod>/`: `lang.js` (inställningar), `grammar.json` (grammatikområden och regler), `words.txt`, `content/*.json`, `videos.json`, `ids.lock` (id-låset) | Claude (AI-skrivet, eget material) | Ja |
 | **Bokmaterial** | `languages/<kod>/book/kapNN/` (foton, `words.txt`, `content/*.json`), `book/sidor.json` och `book/ids.lock` | Claude, från foton som föräldern skickar | **Nej** (`.gitignore`, eget lokalt git-repo) |
-| **Elevernas data** | Artefaktens db: `data/users/<uid>/<storageKey>` (framsteg, privat för eleven), `board/<uid>` (topplista), `feedback/<uid>/msgs/<tid>` (Tyck till) och `reports/<uid>/items/<tid>` (fel i frågor), privata för eleven och läsbara för ägaren. Kopia av framstegen i elevens webbläsare (localStorage). | Eleverna, via appen | Nej |
+| **Elevernas data** | Artefaktens db: `data/users/<uid>/<storageKey>` (framsteg, privat för eleven), `data/users/<uid>/profiles` (Vem övar?, privat), `board/<uid>` (topplista), `feedback/<uid>/msgs/<tid>` (Tyck till), `reports/<uid>/items/<tid>` (fel i frågor) och `summary/<uid>` (sammanfattningen till föräldern), de tre sista privata för eleven och läsbara för ägaren. Kopia av framstegen i elevens webbläsare (localStorage). | Eleverna, via appen | Nej |
 
 ## Från källor till app
 
@@ -103,6 +103,7 @@ Appens kod är `src/app.js` (språk, sparande, quizmotor och register), sedan fi
 | `80-level.js` | Nivåmätaren "Var ligger jag?" i statistiken (`statsLevel`, `levelEstimate`): ordförråd över alla kurser i samma språk, grammatik och prov/Claudes bedömningar på GERS-skalan. Räknas ur befintliga fält, sparar inget | – |
 | `82-plan.js` | Studieplan vecka för vecka (`languages/<kod>/plan.json` → `L.plan`, kontrolleras av `check_plan` i build.py): kort på startsidan med aktuell vecka och hur många av veckans ord eleven kan, en sida med alla veckor (ord, grammatik, texter, provuppgifter) och startdatum i `S.plan`. Planer finns för de, fr (bara publika texter; bokens kapitel-id för orden), frs4, frs5, fr4, de4 och de6. Uppgifterna öppnas med `openFrom(openPlan, …)` (app.js): `RETURN_TO` gör att Tillbaka (`backTo(listan)`), Avbryt (`pauseSession`) och slutskärmens knapp (`backHome`, "Till studieplanen") leder tillbaka till planen i stället för till övningens lista; den nollställs på startsidan och på listorna (`pickerScreen`, `openWriting`, `openExam`). Skrivsidans provuppgifter använder samma mekanism | `plan` |
 | `90-mix.js` | Dagens pass och den blandade rundan, se **Dagens pass** nedan | `mix` |
+| `95-parent.js` | Sammanfattningen till föräldern (`summaryOf`, `summaryPush`, `summaryFlush` → `summary/<uid>`) och Föräldravyn (`renderParent`, bara för ägaren), se **Föräldravyn** nedan | – |
 | `99-menu.js` | Menyn med alla övningar och statistiken för dem | – |
 
 Glosquizet (`words`) registreras i `05-words.js`. `defineKind(namn, {name, mc, type, restore, effect, recap, after, again, open, log})` fyller i registret `KINDS` (fälten beskrivs i kommentaren i app.js). Quizmotorn slår upp frågans typ i registret: `k` i frågan, annars passets `kind`. Läs registret direkt (`KINDS.dict.mc`, `KINDS.gram.type`); de gamla vyerna `MC`, `TYPE`, `RESTORE` … togs bort i oktober 2026. Fel i en registrering stoppar inte appen men hamnar i `KIND_ERRORS`, och testet `SCENARIO_KINDS` i `tests/run_tests.py` kontrollerar att listan är tom och att varje typ har det den behöver (namn, frågor eller `open`, `restore` om frågorna kan pausas, `recap` eller `after`).
@@ -149,7 +150,41 @@ Ett dokument i artefaktens db får vara **högst 256 KiB** (plattformens gräns,
 - Varje bit serialiseras en gång per sparning (`cloudSplit` ger JSON-texten, som mäts, hashas och skrivs), synkront innan något väntar på nätet, så att läget inte behöver kopieras i förväg. `rev` för en bit vars text är oförändrad tas ur `REV_CACHE`.
 - I webbläsaren skriver `save()` direkt, men `save(true)` (från `snapRun`, efter varje svar) väntar `LOCAL_WAIT` (300 ms). Den väntande skrivningen görs alltid: vid nästa vanliga `save()`, när sidan döljs eller stängs (`visibilitychange`, `pagehide`, `beforeunload`), i `loadState` (kursbyte) och i `takeState` (`flushLocal`).
 - Sparningar köas per kurs (`CLOUD.pending[storageKey]`), så att ett kursbyte inte slänger den förra kursens sparning. Går anslutningen inte vid start försöker appen igen när den syns igen (`visibilitychange`) eller när nätet är tillbaka (`online`).
-- Varje elev har cirka 6 dokument per kurs. Artefaktens db rymmer högst 5 000 dokument totalt.
+- Med profiler (se **Vem övar?**) är nyckeln `<storageKey>@<profil-id>` för alla profiler utom standardprofilen, så dokumenten heter t.ex. `data/users/<uid>/glosor-de-v1@k3x9qa` och `…@k3x9qa~w0`. `@` är tillåtet i db-sökvägar (bokstäver, siffror och `_ - . ~ : @ +`), och ingen kod delar nyckeln på `@`; `~` skiljer bitarna från huvuddokumentet och finns aldrig i ett profil-id.
+- Varje elev har cirka 6 dokument per kurs. Artefaktens db rymmer högst 5 000 dokument totalt. Varje extra profil som övar på en kurs lägger till lika många.
+
+## Vem övar? (profiler)
+
+Flera personer kan öva på samma claude.ai-konto och samma enhet (backloggen P2, oktober 2026). Koden ligger i `src/app.js` (avsnittet "Vem övar?" efter `setOnly`, molndelen efter `cloudFlush`, panelen `profPanel`/`wireProf` efter `videosPanel`).
+
+- **Listan:** `PROF = {list: [{id, name, t, gone}], cur}`. I localStorage under `glosor-profiles` (hela, även `cur`) och i molnet `data/users/<uid>/profiles` = `{list, t}` (privat som framstegen). `cur`, vem som övar, gäller bara enheten. Listorna slås ihop per id; den post som har senast `t` vinner (`profMerge`), även en borttagning. Molndokumentet skrivs bara när den lokala listan har något och skiljer sig (`profSubscribe`, `profCloudSave`), så en elev som aldrig lägger till någon skriver ingenting nytt.
+- **Standardprofilen** har id `""` och är läget som fanns före profilerna. Den använder exakt `storageKey` lokalt och i molnet: ingen migrering. Namnet är "Jag" tills det byts (posten `{id: "", name}` i listan).
+- **Andra profiler** har ett id av a–z och 0–9 (sex tecken, `profNewId`) och nyckeln `<storageKey>@<id>`. `profKeys()` sparar kursens egen nyckel i `baseKey` och sätter `storageKey` i alla kurser i `LANGUAGES` när sidan startar och vid varje byte, så att all kod som läser `L.storageKey` (sparande, molnet, nivåmätarens `peekState`) läser rätt profil utan att ändras.
+- **Byte** (`profSwitch`): bara när inget pass pågår (`sess`), annars `false`. Den väntande lokala skrivningen (`flushLocal`, `LOCAL_PENDING.key`) och molnets kö (`CLOUD.pending[nyckel]`, `cloudFlush`) har kvar den gamla nyckeln och skrivs dit; ett väntande molnläge (`CLOUD.deferred`) slängs. Sedan byts nycklarna, läget läses in direkt för den valda kursen (`loadState`, så att `S` aldrig hör till en annan profil än nyckeln) och `useLang` kopplar molnet till den nya nyckeln (`cloudAttach`: nytt `CLOUD.seq`, den gamla bevakningen avslutas).
+- **Kursvalet** minns per profil och enhet: `glosor-sprak` för standardprofilen (som förut), `glosor-sprak@<id>` för de andra (`langKey`). "Bara tyska" (`glosor-bara`) och ljudet gäller enheten.
+- **Ta bort** tar bara bort profilen ur listan (`gone: true`), aldrig framstegen. Läggs samma namn till igen får profilen sitt gamla id och sina framsteg tillbaka. Standardprofilen kan inte tas bort, bara byta namn. Borttagningen bekräftas på sidan (ingen `confirm()`). Tas den valda profilen bort på en annan enhet byts den här till standardprofilen när inget pass pågår (`profChanged`).
+- **Sidan:** "Vem övar?" under Fler inställningar (lista, Byt namn, Ta bort, Lägg till; med flera profiler också knappar för att byta). Med flera profiler visar rubriken "Övar: <namn>" (`#profchip`, `profChip`), som leder till inställningen. Med en profil ser rubriken ut som förut.
+- **Tyck till och felrapporter** får fältet `profile` (profilens namn) när kontot har flera profiler (`profField`).
+
+## Topplistan
+
+`board/<uid>` = `{nick, langs: {<kod>: {week, min, q, days, streak, last, learned, mastered, goal, prev, hist}}, t}` för standardprofilen, som förut. Andra profiler skriver i samma dokument (regeln `board/{self}`) under `profiles: {<profil-id>: {nick, name, langs}}`; fältet finns bara när någon annan profil har övat. `boardPush` samlar väntande siffror per profil och kurs (`BOARD.pend[profil][kurs]`, `BOARD.nick[profil]`), och `boardFlush` läser dokumentet, slår ihop och skriver allt på en gång. `renderBoard` visar en rad per konto och profil (namn: `nick`, för en profil annars `name`, för standardprofilen annars kontots namn via `user.profiles`). `boardKeepMine` gäller hela dokumentet (jämför `t`), så det fungerar som förut. En äldre version av appen som skriver dokumentet tappar `profiles`; det kommer tillbaka nästa gång profilen övar.
+
+## Föräldravyn
+
+Framstegen i `data/users/…` är privata även för ägaren, så varje elevs app skriver en sammanfattning (backloggen P3, `src/kinds/95-parent.js`):
+
+    summary/<uid> = {v: 1, t, profiles: {<"_" = standardprofilen, annars profil-id>: {name, t, courses: {<kod>: {
+      course, level, t, words: {n, started, known, due}, min7, min30, q7, q30, days14: [minuter per dag, äldst först],
+      active14, streak, last, goal, week, writing,
+      exam: {name, pass, parts: [{id, sv}], sims: [{d, parts: {<del>: pct}, lv}]},   (de tre senaste simuleringarna)
+      gram: [{name, pct, n}],                                                       (de tre svagaste områdena, minst 3 svar)
+      plan: {week, of, title, known, n, next}}}}}}                                  (aktuell vecka i studieplanen)
+
+- Reglerna: `{"path": "summary", "read": "admin", "write": "admin"}` och `{"path": "summary/{self}", "read": "interact", "write": "interact"}`.
+- Skrivs av `summaryPush` (anropas från `boardPush`: efter varje avslutat pass, när kursen kopplas till molnet vid start och kursbyte, när veckomålet ändras) med 1,5 s fördröjning; `summaryFlush` läser dokumentet och byter bara den egna profilens kurs. En kurs utan övning skrivs inte. Dokumentet är några kB (gräns i koden 200 KiB).
+- Vyn: knappen Öppna föräldravyn längst ned under Topplista, bara när `user.isOwner()` är sant (`CLOUD.owner`, läses i `cloudInit`). `renderParent` bevakar samlingen `summary` och visar ett kort per konto och profil (namnet via `user.profiles` vid varje rendering, "Elev" om det saknas, profilens namn för andra profiler), per kurs: ord, minuter, staplar för 14 dagar (inline SVG, temafärgerna), provsimuleringar mot provets gräns (`pass`), svagaste grammatik, skrivuppgifter, studieplanen och "senast aktiv". Inget går att ändra.
+- Eleverna ser under Tyck till vad som delas (`#fbshare`). Det finns inget sätt att stänga av delningen.
 
 ## Regler som skyddar elevernas framsteg
 
@@ -195,6 +230,8 @@ Ett dokument i artefaktens db får vara **högst 256 KiB** (plattformens gräns,
 | `wrSkip` | Måndagen (`"ÅÅÅÅ-MM-DD"`) i veckan då eleven stängde kortet Veckans skrivuppgift; kortet visas igen från nästa måndag. Kortet visas när eleven inte har skrivit någon text (Skriv en text eller provuppgift) på 7 dagar. Saknas i gamla lägen (= inte stängt). |
 | `plan` | Studieplanen: `{start: "ÅÅÅÅ-MM-DD"}`, första dagen i vecka 1 (aktuell vecka räknas fram). Saknas i gamla lägen. |
 | `feedback`, `reports` | Tyck till-meddelanden och felrapporter som inte kunde skickas (högst 50). |
+
+Med profiler (Vem övar?) har varje profil ett eget `S` per kurs, under `<storageKey>@<profil-id>`; formatet är detsamma.
 
 **Migreringar.** `normState` kör `MIGRATIONS[n]` för varje version n som är högre än lägets `v` och sätter sedan `v` till senaste versionen. Nya migreringar läggs alltid sist; en gammal ändras aldrig. Ett läge från en nyare version av appen behåller sitt nummer.
 

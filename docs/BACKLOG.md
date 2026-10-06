@@ -62,8 +62,6 @@ Granskning av `src/app.js`, `src/kinds/`, arvet i `lang.js`, `build.py`, testern
 ## Konton, sparande och topplista
 
 - **P1: Bjud in eleven och flickvännen** som Redigerare via e-post i Dela-menyn, med egna claude.ai-konton. Görs av föräldern. Kontrollera att gratiskonton fungerar, vilket inte är testat.
-- **P2: Flera personer på samma konto.** Behövs bara om två personer övar på *samma* språk med samma claude.ai-konto. Lägg då till en profilväljare ("Vem övar?").
-- **P3: En föräldravy** där föräldern kan se barnens framsteg. Privata framsteg syns inte ens för ägaren, så det kräver att eleven själv delar en sammanfattning, som topplistan redan gör delvis.
 
 ## Arbetssätt
 
@@ -92,3 +90,4 @@ Granskningspunkterna nedan är avgjorda av granskningsagenterna 2026-10-01 (vers
 - **P3: Kvar i frekvenslistorna** (`docs/frekvens.md`): Franska 3 når 80,9 % av topp 1000; A1-orden ligger i fr1/fr2, som eleven i Franska 3 inte ser. Kan läggas till i `vanliga2` om överlapp önskas.
 - **P3: Musiktermerna** kan fortfarande kontrolleras med en musiklärare (franska 3, Tyska 4, Tyska 5).
 - **P3: Tyska 5:s datafil** är 1 593 kB, nära varningsgränsen `MAX_DATA_KB` (1 600 kB, en egen varning, ingen teknisk gräns). Största delen är Tatoeba-meningarna (294 kB); de kan hämtas separat som provfilen (`ensureExam`) om filen växer mer, men meningsövningarna, Dagens pass och återupptagna pass måste då vänta på dem.
+- **P3: Sidans storlek:** `dist/index.html` är 415 kB, nära varningsgränsen `MAX_PAGE_KB` (420 kB) efter profiler och föräldravy.

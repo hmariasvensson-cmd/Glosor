@@ -32,7 +32,7 @@ function cultureScreen(id){
   });
   const ta=$("#ctext"); let tm=null; wireAccents(ta);
   wireFeedback(ta,dk,`${c.ask} (Kort svar, några meningar, efter att ha läst en text om "${c.title}".)`);
-  ta.oninput=()=>{clearTimeout(tm); tm=setTimeout(()=>{S.drafts[dk]=ta.value; save();},800);};
+  const st=S; ta.oninput=()=>{clearTimeout(tm); tm=setTimeout(()=>{ if(S!==st) return; (S.drafts=S.drafts||{})[dk]=ta.value; save();},800);};   // inte i en annan kurs eller profil
   $("#copy").onclick=()=>copyText(ta,$("#cmsg"));
   $("#done").onclick=()=>{ S.drafts[dk]=ta.value; S.cu[id]={q:!!qok,words:tok(ta.value).length,last:Date.now()};
     S.log.push({kind:"culture",d:Date.now(),dur:runSecs(start),right:qok?1:0,total:1}); save(); boardPush(); backTo(openCulture)(); };

@@ -40,6 +40,63 @@ const onlyCourse=()=>{try{return localStorage.getItem(ONLY_KEY)||""}catch(e){ret
 // "Bara tyska" visar bara kurserna i samma språk som den sparade kursen (Tyska 4 och Tyska 5), och döljer väljaren om bara en är kvar
 const sameLang=(a,b)=>!!LANGUAGES[a]&&!!LANGUAGES[b]&&LANGUAGES[a].name===LANGUAGES[b].name;
 function setOnly(code){ try{ if(code) localStorage.setItem(ONLY_KEY,code); else localStorage.removeItem(ONLY_KEY); }catch(e){ /* privat läge: valet gäller bara nu */ } fillCourses(); }
+/* ---------- Vem övar? (profiler) ----------
+   Flera personer kan öva på samma claude.ai-konto och samma enhet. Profillistan {list: [{id, name, t, gone}], cur} ligger
+   i localStorage (PROF_KEY) och list speglas till molnet i data/users/<uid>/profiles (privat, som framstegen), så att en
+   annan enhet med samma konto ser profilerna. cur (vem som övar nu) gäller bara den här enheten.
+   Standardprofilen har id "" och är det läge som fanns före profilerna: den använder exakt kursens storageKey, lokalt och
+   i molnet, så ingenting flyttas. En annan profil använder <storageKey>@<id> (id: a–z och 0–9). Kursens egen nyckel finns
+   kvar i baseKey, och storageKey i alla kurser byts när profilen byts (profKeys), så att all kod som läser
+   L.storageKey (och nivåmätarens peekState) läser rätt profil. "~" används av molnets bitar och aldrig i id:t.
+   En borttagen profil får gone: true (så att den inte kommer tillbaka från en annan enhet); framstegen raderas aldrig,
+   och läggs samma namn till igen får den sitt gamla id och sina framsteg tillbaka. Två listor slås ihop per id, den
+   post som ändrats senast (t) vinner. Kursvalet minns per profil: LANG_KEY för standardprofilen, LANG_KEY@<id> annars.
+   Med bara en profil skrivs PROF_KEY aldrig och sidan ser ut som förut. */
+const PROF_KEY="glosor-profiles", PROF_DEFAULT="Jag", PROF_ID=/^[a-z0-9]{1,12}$/;
+const PROF={list:[],cur:"",unsub:null,busy:false,again:false,edit:null,confirm:null,msg:""};
+const profNameOk=s=>String(s==null?"":s).replace(/\s+/g," ").trim().slice(0,24);
+function profClean(l){
+  const out=[], seen=new Set();
+  (Array.isArray(l)?l:[]).forEach(p=>{ if(!p||typeof p!=="object") return; const id=p.id===""?"":String(p.id||"");
+    if((id&&!PROF_ID.test(id))||seen.has(id)) return; seen.add(id);
+    out.push({id,name:profNameOk(p.name),t:+p.t||0,...(p.gone&&id?{gone:true}:{})}); });
+  return out;
+}
+function profRead(){
+  try{ const x=JSON.parse(localStorage.getItem(PROF_KEY)||"null");
+    if(x&&typeof x==="object"){ PROF.list=profClean(x.list); PROF.cur=typeof x.cur==="string"&&PROF_ID.test(x.cur)?x.cur:""; } }
+  catch(e){ /* privat läge eller trasig text: bara standardprofilen */ }
+  if(PROF.cur&&!profLive().some(p=>p.id===PROF.cur)) PROF.cur="";
+}
+function profWriteLocal(){ try{ localStorage.setItem(PROF_KEY,JSON.stringify({list:PROF.list,cur:PROF.cur})); }catch(e){ warnErr("profilerna kunde inte sparas i webbläsaren",e); } }
+// Profilerna som syns: standardprofilen först, sedan de andra i den ordning de lades till
+function profLive(){
+  const d=PROF.list.find(p=>p.id==="");
+  return [{id:"",name:(d&&d.name)||PROF_DEFAULT},...PROF.list.filter(p=>p.id&&!p.gone).map(p=>({id:p.id,name:p.name||"Namnlös"}))];
+}
+const profMulti=()=>profLive().length>1;
+const profName=(id=PROF.cur)=>(profLive().find(p=>p.id===id)||{}).name||PROF_DEFAULT;
+// Fältet profile i Tyck till och felrapporter, bara när kontot har flera profiler
+const profField=()=>PROF.cur||profMulti()?{profile:profName()}:{};
+const langKey=()=>PROF.cur?LANG_KEY+"@"+PROF.cur:LANG_KEY;
+function profKeys(){
+  const sfx=PROF.cur?"@"+PROF.cur:"";
+  Object.values(LANGUAGES).forEach(x=>{ if(x.baseKey==null) x.baseKey=x.storageKey; x.storageKey=x.baseKey+sfx; });
+}
+// Slår ihop en lista (från molnet) med den lokala: per id vinner den post som ändrats senast. true om något ändrades.
+function profMerge(list){
+  let ch=false;
+  profClean(list).forEach(p=>{ const i=PROF.list.findIndex(x=>x.id===p.id);
+    if(i<0){ PROF.list.push(p); ch=true; }
+    else if(p.t>PROF.list[i].t){ PROF.list[i]=p; ch=true; } });
+  return ch;
+}
+function profNewId(){
+  const abc="abcdefghijklmnopqrstuvwxyz0123456789";
+  for(;;){ let s=""; for(let i=0;i<6;i++) s+=abc[Math.floor(Math.random()*abc.length)];
+    if(!PROF.list.some(p=>p.id===s)) return s; }
+}
+profRead(); profKeys();
 // Steg: 1–7 (Moderna språk 1–7) eller "U" (universitet), fältet step i lang.js och upcoming.json.
 // En universitetskurs kan ange stepAs (t.ex. 7 för Franska I): då står "motsvarar steg 7" i stället för "universitet"
 const stepNum=s=>s==="U"?8:(+s||9);
@@ -266,7 +323,7 @@ const needsRenames=st=>{ const R=L&&L.renames; return !!R&&!!st&&applyRenames(JS
    Vid start vinner den version som kommit längst (pass, antal loggposter någonsin, antal ord; vid lika den senaste),
    så att en enhet med tomt minne aldrig skriver över framsteg som gjorts på en annan. */
 const CLOUD={db:null,uid:null,user:null,ready:false,busy:false,pending:{},timer:null,unsub:null,known:{},stale:{},deferred:null,
-  dead:false,noWrite:false,initing:false,attaching:false,seq:0,warn:"",bad:{},force:{}};
+  dead:false,noWrite:false,initing:false,attaching:false,seq:0,warn:"",bad:{},force:{},owner:false};
 const DOC_MAX=256*1024-256, PART_MAX=200*1024, HEAD_MAX=160*1024, W_PER_PART=700;
 // Antal loggposter någonsin. Loggen kapas vid 1 000 (foldLog), så räknaren S.nLog behövs för att jämföra.
 const nLogOf=s=>Math.max(+(s&&s.nLog)||0,(+((s&&s.logOld)||{}).n||0)+(((s&&s.log)||[]).length));
@@ -442,7 +499,8 @@ async function cloudInit(){
     if(!db||!user) return;
     const uid=await user.id(); if(!uid) return;
     CLOUD.db=db; CLOUD.uid=uid; CLOUD.user=user;
-    boardSubscribe();
+    try{ CLOUD.owner=typeof user.isOwner==="function"&&(await user.isOwner())===true; }catch(e){ CLOUD.owner=false; }   // Föräldravyn
+    boardSubscribe(); profSubscribe();
     if(L&&L.base) await cloudAttach();   // annars kopplas lagringen när kursens data har hämtats (useLang)
   }catch(e){ warnErr("claude.ai-lagringen kunde inte startas, försöker igen (cloudRetry)",e); }
   finally{ CLOUD.initing=false; }
@@ -547,6 +605,80 @@ async function cloudFlush(){
   CLOUD.busy=false;
   if(Object.keys(CLOUD.pending).length) CLOUD.timer=setTimeout(cloudFlush,wait);
 }
+/* Profilerna i molnet: data/users/<uid>/profiles = {list, t}. Slås ihop med den lokala listan (profMerge) när dokumentet
+   kommer eller ändras, och skrivs tillbaka bara om det skiljer sig. Finns inget dokument och ingen lokal lista skrivs
+   ingenting (en elev utan profiler märker inget). */
+const profDoc=()=>CLOUD.db.doc(`data/users/${CLOUD.uid}/profiles`);
+const profCanon=l=>JSON.stringify(profClean(l).sort((a,b)=>a.id<b.id?-1:a.id>b.id?1:0));
+function profSubscribe(){
+  if(!CLOUD.db||!CLOUD.uid||PROF.unsub) return;
+  try{ PROF.unsub=profDoc().onSnapshot(s=>{
+    if(s&&s.metadata&&s.metadata.hasPendingWrites) return;
+    const d=s&&s.exists?(s.data()||{}):null;
+    if(d&&profMerge(d.list)){ profWriteLocal(); profChanged(); }
+    if(PROF.list.length&&(!d||profCanon(d.list)!==profCanon(PROF.list))) profCloudSave();
+  },e=>warnErr("bevakningen av profilerna avbröts",e)); }catch(e){ warnErr("profilerna kunde inte bevakas",e); }
+}
+async function profCloudSave(){
+  if(!CLOUD.db||!CLOUD.uid) return;
+  if(PROF.busy){ PROF.again=true; return; }
+  PROF.busy=true;
+  try{ await profDoc().set({list:profClean(PROF.list),t:Date.now()}); }catch(e){ warnErr("profilerna kunde inte sparas på claude.ai",e); }
+  PROF.busy=false;
+  if(PROF.again){ PROF.again=false; profCloudSave(); }
+}
+// Efter en ändring av listan: är den valda profilen borttagen (på en annan enhet) byts den till standardprofilen
+function profChanged(){
+  if(PROF.cur&&!profLive().some(p=>p.id===PROF.cur)&&!sess) profSwitch("");
+  profChip();
+  if(curView==="ova"&&!sess&&app.querySelector("#profsec")) renderStart();
+}
+function profChip(){
+  const b=document.querySelector("#profchip"); if(!b) return;
+  const m=profMulti(); b.hidden=!m; if(m){ b.textContent="Övar: "+profName(); b.title="Vem övar? Byt under Fler inställningar."; }
+}
+/* Byter profil. Bara när inget pass pågår (som en runda som annars kunde skrivas in i fel profil). Den väntande lokala
+   skrivningen och molnets kö har kvar den gamla nyckeln (LOCAL_PENDING.key, CLOUD.pending[nyckel]) och skrivs dit;
+   cloudAttach (via useLang) slutar bevaka den gamla nyckeln (CLOUD.seq, CLOUD.unsub) och läser den nya. */
+function profSwitch(id){
+  if(sess) return false;
+  id=id||"";
+  if(id===PROF.cur) return true;
+  if(id&&!profLive().some(p=>p.id===id)) return false;
+  flushLocal(); cloudFlush(); CLOUD.deferred=null;
+  PROF.cur=id; PROF.edit=PROF.confirm=null; profWriteLocal(); profKeys();
+  let code=L?L.code:Object.keys(LANGUAGES)[0];
+  try{ const c=localStorage.getItem(langKey()); if(c&&LANGUAGES[c]) code=c; }catch(e){ /* privat läge: samma kurs */ }
+  // Läget byts direkt för den kurs som är vald, så att S aldrig hör till en annan profil än nyckeln (även medan en
+  // annan kurs hämtas)
+  if(L&&L.base){ loadState(); rebuildWords(); if(code!==L.code) cloudAttach(); }
+  useLang(code); profChip();
+  return true;
+}
+function profAdd(name){
+  name=profNameOk(name); if(!name) return null;
+  const same=p=>p.name.toLowerCase()===name.toLowerCase();
+  if(profLive().some(same)) return null;
+  const old=PROF.list.find(p=>p.id&&p.gone&&same(p));   // samma namn igen: samma id, framstegen finns kvar
+  if(old){ delete old.gone; old.name=name; old.t=Date.now(); }
+  else PROF.list.push({id:profNewId(),name,t:Date.now()});
+  profSaved(); return old?old.id:PROF.list[PROF.list.length-1].id;
+}
+function profRename(id,name){
+  name=profNameOk(name); if(!name) return false;
+  if(profLive().some(p=>p.id!==id&&p.name.toLowerCase()===name.toLowerCase())) return false;
+  let p=PROF.list.find(x=>x.id===id);
+  if(!p){ if(id!=="") return false; p={id:"",name,t:0}; PROF.list.unshift(p); }
+  p.name=name; p.t=Date.now(); profSaved(); if(id===PROF.cur||id==="") boardPush(); return true;
+}
+// Tar bara bort profilen ur listan; framstegen (localStorage och molnet) ligger kvar
+function profRemove(id){
+  if(!id||sess) return false;
+  const p=PROF.list.find(x=>x.id===id); if(!p) return false;
+  if(id===PROF.cur&&!profSwitch("")) return false;
+  p.gone=true; p.t=Date.now(); profSaved(); return true;
+}
+function profSaved(){ profWriteLocal(); profCloudSave(); profChip(); }
 /* Per ord: s = steg (0–3, 4 = kan), due = pass då ordet ska repeteras, f = frågeform (mc/type),
    mcR/mcW = rätt/fel på flerval, tyR/tyW = rätt/fel på skriva, clR/clW = rätt/fel i meningar,
    lp/ld = lärt i pass/datum, mp/md = kan sedan pass/datum */
@@ -845,6 +977,7 @@ function renderStart(){
     ${L.courseGy25?`<div class="field"><span class="label">Läroplan</span>
       <div class="seg" role="group" aria-label="Läroplan"><button data-gy="0" aria-pressed="${!S.gy25}">Gy11 (${esc(L.course)})</button><button data-gy="1" aria-pressed="${!!S.gy25}">Gy25</button></div>
       <p class="foot">Gy25 gäller den som började gymnasiet efter 1 juli 2025. Där heter kursen ${esc(L.courseGy25)}.</p></div>`:""}
+    ${profPanel()}
     </details>
     <p class="plan">${nothing?"Inget att öva just nu. Välj ett annat avsnitt eller fler nya ord."
       :`Du lär dig <b>${newW.length} nya ord</b> och repeterar <b>${due.length}</b>. Quizet får ${newW.length+due.length} frågor.`}
@@ -863,11 +996,11 @@ function renderStart(){
   app.querySelectorAll("[data-slow]").forEach(b=>b.onclick=()=>{S.slow=b.dataset.slow==="1";save();renderStart()});
   app.querySelectorAll("[data-lf]").forEach(b=>b.onclick=()=>{S.listenFirst=b.dataset.lf==="1";save();renderStart()});
   app.querySelectorAll("[data-sr]").forEach(b=>b.onclick=()=>{S.selfRate=b.dataset.sr==="1";save();renderStart()});
-  $("#setd").ontoggle=()=>{SET_OPEN=$("#setd").open};
+  { const sd=$("#setd"); sd.ontoggle=()=>{SET_OPEN=sd.open}; }
   app.querySelectorAll("[data-only]").forEach(b=>b.onclick=()=>{setOnly(b.dataset.only==="1"?L.code:"");renderStart()});
   app.querySelectorAll("[data-goal]").forEach(b=>b.onclick=()=>{S.goal=+b.dataset.goal;save();boardPush();renderStart()});
   app.querySelectorAll("[data-gy]").forEach(b=>b.onclick=()=>{S.gy25=b.dataset.gy==="1";save();$("#coursechip").textContent=courseChip();renderStart()});
-  wireDaily();
+  wireDaily(); wireProf();
   $("#go").onclick=()=>startSession(newW,due);
   if($("#run-go")){ $("#run-go").onclick=resumeRun; $("#run-drop").onclick=quitSession; }
   if($("#examdate")) $("#examdate").onchange=e=>{ const v=e.target.value; if(planDate(v)) S.examDate=v; else delete S.examDate; save(); renderStart(); };
@@ -889,6 +1022,37 @@ function videosPanel(secId){
     <details class="more" ${cur?"":"open"}><summary>${cur?"Klipp till alla kapitel":"Visa klippen"}</summary>
       ${secs.filter(s=>s.id!==cur).map(s=>`<div class="vsec">${esc(s.name)}</div><ul class="vids">${V[s.id].map(vidItem).join("")}</ul>`).join("")}
     </details></section>`;
+}
+
+/* "Vem övar?" under Fler inställningar: byta, lägga till, byta namn och ta bort (bekräftas på sidan). Med en enda profil
+   finns bara listan med standardprofilen och rutan för att lägga till; rubriken visar inget namn. */
+function profPanel(){
+  const live=profLive(), multi=live.length>1;
+  const row=p=>PROF.edit===p.id
+    ?`<form class="profedit" data-profform="${esc(p.id)}" autocomplete="off"><input class="search" id="profname" maxlength="24" value="${esc(p.name)}" aria-label="Nytt namn"><button class="btn" style="width:auto">Spara</button><button type="button" class="btn ghost" style="width:auto" data-profcancel>Avbryt</button></form>`
+    :PROF.confirm===p.id
+    ?`<div class="profconfirm" role="alert"><p class="plan">Ta bort <b>${esc(p.name)}</b> ur listan? Framstegen raderas inte. Lägger du till samma namn igen kommer de tillbaka.</p>
+      <div class="navrow"><button type="button" class="btn ghost" data-profcancel>Avbryt</button><button type="button" class="btn" data-profrmok="${esc(p.id)}">Ta bort</button></div></div>`
+    :`<div class="profrow"><span><b>${esc(p.name)}</b>${p.id===PROF.cur&&multi?' <span class="pill new">övar nu</span>':""}</span>
+      <span class="profbtns"><button type="button" class="override" data-profren="${esc(p.id)}">Byt namn</button>${p.id?`<button type="button" class="override" data-profrm="${esc(p.id)}">Ta bort</button>`:""}</span></div>`;
+  return `<div class="field" id="profsec"><span class="label">Vem övar?</span>
+    ${multi?`<div class="seg" role="group" aria-label="Vem övar?">${live.map(p=>`<button data-prof="${esc(p.id)}" aria-pressed="${p.id===PROF.cur}">${esc(p.name)}</button>`).join("")}</div>`:""}
+    <div class="proflist">${live.map(row).join("")}</div>
+    <form class="profadd" id="profaddf" autocomplete="off"><input class="search" id="profadd" maxlength="24" placeholder="Namn" aria-label="Namn på den som ska läggas till"><button class="btn ghost" style="width:auto">Lägg till</button></form>
+    <p class="foot" id="profmsg">${esc(PROF.msg||(multi?"Var och en har egna framsteg i alla kurser. Namnet syns i topplistan.":"Övar flera på samma konto? Lägg till en person, så får var och en egna framsteg."))}</p></div>`;
+}
+function wireProf(){
+  const box=$("#profsec"); if(!box) return;
+  const again=msg=>{ PROF.msg=msg||""; SET_OPEN=true; renderStart(); PROF.msg=""; const b=$("#profsec"); if(b) b.scrollIntoView({block:"nearest"}); };
+  box.querySelectorAll("[data-prof]").forEach(b=>b.onclick=()=>{ SET_OPEN=true; const ok=profSwitch(b.dataset.prof); if(curView==="ova"&&!sess) again(ok?"":"Avsluta passet först."); });
+  box.querySelectorAll("[data-profren]").forEach(b=>b.onclick=()=>{ PROF.edit=b.dataset.profren; PROF.confirm=null; again(); const i=$("#profname"); if(i) i.focus(); });
+  box.querySelectorAll("[data-profrm]").forEach(b=>b.onclick=()=>{ PROF.confirm=b.dataset.profrm; PROF.edit=null; again(); });
+  box.querySelectorAll("[data-profcancel]").forEach(b=>b.onclick=()=>{ PROF.edit=PROF.confirm=null; again(); });
+  box.querySelectorAll("[data-profrmok]").forEach(b=>b.onclick=()=>{ const id=b.dataset.profrmok, n=profName(id); PROF.confirm=null; const ok=profRemove(id); again(ok?`${n} är borttagen ur listan.`:"Det gick inte att ta bort just nu."); });
+  box.querySelectorAll("[data-profform]").forEach(f=>f.onsubmit=e=>{ e.preventDefault(); const ok=profRename(f.dataset.profform,$("#profname").value);
+    if(ok) PROF.edit=null; again(ok?"Sparat.":"Skriv ett namn som inte redan finns."); });
+  $("#profaddf").onsubmit=e=>{ e.preventDefault(); const name=profNameOk($("#profadd").value), id=profAdd(name);
+    again(id?`${name} är tillagd. Tryck på namnet ovan när ${name} ska öva.`:"Skriv ett namn som inte redan finns."); };
 }
 
 /* ---------- Hur långt man har kommit i varje kapitel ----------
@@ -973,7 +1137,7 @@ function statsDaily(){
 /* ---------- Topplista ----------
    Varje person skriver en sammanfattning per språk i board/<sitt id> (bara den egna går att ändra).
    Alla som har tillgång till programmet ser allas sammanfattningar. */
-const BOARD={docs:{},mine:null,unsub:null,timer:null,pend:{},nick:undefined,wait:[],busy:false,msg:""};
+const BOARD={docs:{},mine:null,unsub:null,timer:null,pend:{},nick:{},wait:[],busy:false,msg:""};   // pend och nick per profil-id ("" = standardprofilen)
 function boardKeepMine(){ const u=CLOUD.uid, m=BOARD.mine; if(m&&(!BOARD.docs[u]||(BOARD.docs[u].t||0)<m.t)) BOARD.docs[u]=m; }
 function weekStart(ts){const d=new Date(ts);d.setHours(0,0,0,0);d.setDate(d.getDate()-((d.getDay()+6)%7));return d.getTime()}
 const dayKey=ts=>new Date(ts).toDateString();
@@ -1016,31 +1180,44 @@ function boardSubscribe(){
     if(curView==="board"&&!sess) renderBoard();
   },e=>warnErr("topplistan kunde inte bevakas",e));
 }
-/* Väntande uppdateringar samlas per kurs, så att ett kursbyte inte tappar den förra kursens siffror.
+/* Väntande uppdateringar samlas per profil och kurs (BOARD.pend[profil][kurs]), så att ett kursbyte eller profilbyte inte
+   tappar de förra siffrorna. Standardprofilen skriver som förut överst i dokumentet ({nick, langs, t}); andra profiler
+   skriver i samma dokument under profiles: {<id>: {nick, name, langs}} (name = profilens namn, visas om nick saknas).
    Ger ett löfte om true när det är sparat, false om det inte gick. */
 function boardPush(nick){
   if(!CLOUD.db||!CLOUD.uid||!L) return Promise.resolve(false);
-  BOARD.pend[L.code]=myStats(); if(nick!==undefined) BOARD.nick=nick;
+  const p=PROF.cur; BOARD.pend[p]={...(BOARD.pend[p]||{}),[L.code]:myStats()}; if(nick!==undefined) BOARD.nick[p]=nick;
+  summaryPush();
   return new Promise(res=>{ BOARD.wait.push(res); clearTimeout(BOARD.timer); BOARD.timer=setTimeout(boardFlush,nick!==undefined?0:1000); });
 }
+const boardObj=v=>v&&typeof v==="object"&&!Array.isArray(v)?v:{};
 async function boardFlush(){
   clearTimeout(BOARD.timer);
   if(BOARD.busy) return;   // körs igen när den pågående är klar
-  const pend=BOARD.pend, nick=BOARD.nick, wait=BOARD.wait;
-  BOARD.pend={}; BOARD.nick=undefined; BOARD.wait=[];
-  if(!Object.keys(pend).length&&nick===undefined){ wait.forEach(f=>f(true)); return; }
+  const pend=BOARD.pend, nicks=BOARD.nick, wait=BOARD.wait;
+  BOARD.pend={}; BOARD.nick={}; BOARD.wait=[];
+  if(!Object.keys(pend).length&&!Object.keys(nicks).length){ wait.forEach(f=>f(true)); return; }
   BOARD.busy=true; let ok=false;
   try{
     const ref=CLOUD.db.doc("board/"+CLOUD.uid), cur=await ref.get(), old=(cur.exists&&cur.data())||{};
-    const langs=old.langs&&typeof old.langs==="object"?old.langs:{};
-    const body={nick:nick!==undefined?nick:(typeof old.nick==="string"?old.nick:""), langs:{...langs,...pend}, t:Date.now()};
+    const nickOf=(x,p)=>p in nicks?nicks[p]:(typeof x.nick==="string"?x.nick:"");
+    const body={nick:nickOf(old,""), langs:{...boardObj(old.langs),...(pend[""]||{})}, t:Date.now()};
+    const profs={};
+    Object.entries(boardObj(old.profiles)).forEach(([p,x])=>{ if(PROF_ID.test(p)&&x&&typeof x==="object") profs[p]=x; });
+    new Set([...Object.keys(pend),...Object.keys(nicks)].filter(Boolean)).forEach(p=>{ const x=boardObj(profs[p]);
+      profs[p]={...x,nick:nickOf(x,p),langs:{...boardObj(x.langs),...(pend[p]||{})}}; });
+    profLive().forEach(p=>{ if(p.id&&profs[p.id]) profs[p.id].name=p.name; });   // namnbyten följer med
+    if(Object.keys(profs).length) body.profiles=profs;   // utan profiler ser dokumentet ut som förut
     await ref.set(body); BOARD.mine=body; boardKeepMine(); ok=true;
-  }catch(e){ BOARD.pend={...pend,...BOARD.pend}; }   // försöker igen vid nästa uppdatering
+  }catch(e){   // försöker igen vid nästa uppdatering
+    Object.entries(pend).forEach(([p,x])=>{ BOARD.pend[p]={...x,...(BOARD.pend[p]||{})}; });
+    BOARD.nick={...nicks,...BOARD.nick}; }
   BOARD.busy=false; wait.forEach(f=>f(ok));
   if(ok&&curView==="board"&&!sess) renderBoard();
   if(BOARD.wait.length) BOARD.timer=setTimeout(boardFlush,300);
 }
 async function renderBoard(){
+  curView="board";
   if(!CLOUD.db||!CLOUD.uid){
     app.innerHTML=`<section class="panel"><h2>Topplista</h2><p class="plan">Topplistan fungerar när du är inloggad på claude.ai och har fått tillgång till glosprogrammet. Då sparas också alla dina framsteg på ditt konto.</p></section>`;
     return;
@@ -1049,8 +1226,12 @@ async function renderBoard(){
   // Allt här kommer från andras dokument: bara tal (num) och text genom esc()
   const num=v=>{const x=+v; return Number.isFinite(x)?x:0;}, obj=v=>v&&typeof v==="object"?v:{};
   const nickOf=d=>typeof d.nick==="string"?d.nick.trim().slice(0,24):"";
-  const rows=Object.entries(BOARD.docs).map(([id,d])=>{
-    d=obj(d); const r={id,nick:nickOf(d),min:0,q:0,days:0,streak:0,langs:[],prev:0,goals:[]};
+  // En rad per konto och profil: standardprofilen överst i dokumentet, de andra under profiles
+  const parts=[];
+  Object.entries(BOARD.docs).forEach(([uid,d])=>{ d=obj(d); parts.push({key:uid,uid,pid:"",d});
+    Object.entries(obj(d.profiles)).forEach(([pid,x])=>{ if(PROF_ID.test(pid)&&x&&typeof x==="object") parts.push({key:uid+"@"+pid,uid,pid,d:x}); }); });
+  const rows=parts.map(({key,uid,pid,d})=>{
+    const r={key,id:uid,pid,nick:nickOf(d),pname:pid&&typeof d.name==="string"?d.name.trim().slice(0,24):"",min:0,q:0,days:0,streak:0,langs:[],prev:0,goals:[]};
     Object.entries(obj(d.langs)).forEach(([k,x])=>{
       if(!x||typeof x!=="object") return;
       const wk=num(x.week);
@@ -1061,38 +1242,42 @@ async function renderBoard(){
       r.langs.push(String((LANGUAGES[k]||{}).course||(LANGUAGES[k]||{}).name||k));
     });
     return r;
-  }).sort((a,b)=>b.min-a.min||b.q-a.q||b.streak-a.streak);
-  let ps={}; try{ps=await CLOUD.user.profiles(rows.map(r=>r.id))}catch(e){ warnErr("namnen i topplistan kunde inte hämtas",e); }
+  }).filter(r=>!r.pid||r.langs.length).sort((a,b)=>b.min-a.min||b.q-a.q||b.streak-a.streak);
+  let ps={}; try{ps=await CLOUD.user.profiles([...new Set(rows.map(r=>r.id))])}catch(e){ warnErr("namnen i topplistan kunde inte hämtas",e); }
   if(curView!=="board"||sess) return;
-  const mine=obj(BOARD.docs[CLOUD.uid]);
-  const nameOf=r=>r.nick||(ps[r.id]&&ps[r.id].name)||"Någon";
+  const me=r=>r.id===CLOUD.uid&&r.pid===PROF.cur;
+  const mineDoc=obj(BOARD.docs[CLOUD.uid]), mine=PROF.cur?obj(obj(mineDoc.profiles)[PROF.cur]):mineDoc;
+  const nameOf=r=>r.nick||(r.pid?r.pname:(ps[r.id]&&ps[r.id].name))||"Någon";
+  const byKey={}; rows.forEach(r=>{byKey[r.key]=r;});
   const win=rows.filter(r=>r.prev>0).sort((a,b)=>b.prev-a.prev)[0];
   // Tidigare veckors vinnare, från varje persons veckohistorik (alla språk ihop)
   const byWeek={};
-  Object.entries(BOARD.docs).forEach(([id,d])=>Object.values(obj(obj(d).langs)).forEach(x=>Object.entries(obj(obj(x).hist)).forEach(([wk,m])=>{
-    if(!Number.isFinite(+wk)||+wk>=pw||!num(m)) return; const o=byWeek[+wk]=byWeek[+wk]||{}; o[id]=(o[id]||0)+num(m);})));
+  parts.forEach(({key,d})=>Object.values(obj(obj(d).langs)).forEach(x=>Object.entries(obj(obj(x).hist)).forEach(([wk,m])=>{
+    if(!Number.isFinite(+wk)||+wk>=pw||!num(m)) return; const o=byWeek[+wk]=byWeek[+wk]||{}; o[key]=(o[key]||0)+num(m);})));
   const hist=Object.keys(byWeek).map(Number).sort((a,b)=>b-a).slice(0,5).map(wk=>{
-    const [id,m]=Object.entries(byWeek[wk]).sort((a,b)=>b[1]-a[1])[0]; return {wk,id,m};});
+    const [key,m]=Object.entries(byWeek[wk]).sort((a,b)=>b[1]-a[1])[0]; return {wk,key,m};});
   const wkLabel=wk=>{const d=new Date(wk); return `v. ${isoWeek(d)}`;};
   app.innerHTML=`<section class="panel"><h2>Topplista den här veckan</h2>
     <p class="plan">Minuter och frågor sedan måndag, i alla språk. Dagar i rad räknas om man övar varje dag.</p>
     ${win?`<p class="winner">Förra veckan vann <b>${esc(nameOf(win))}</b> med ${esc(win.prev)} minuter.</p>`:""}
-    ${rows.length?`<ol class="board">${rows.map((r,i)=>`<li class="brow${r.id===CLOUD.uid?" me":""}">
+    ${rows.length?`<ol class="board">${rows.map((r,i)=>`<li class="brow${me(r)?" me":""}">
       <span class="rank">${i+1}</span>
-      <span class="who"><b>${esc(nameOf(r))}${r.id===CLOUD.uid?" (du)":""}</b><small>${esc(r.langs.join(", "))}${r.goals.length&&r.goals.every(Boolean)?" · veckomålet klart ✓":""}</small></span>
+      <span class="who"><b>${esc(nameOf(r))}${me(r)?" (du)":""}</b><small>${esc(r.langs.join(", "))}${r.goals.length&&r.goals.every(Boolean)?" · veckomålet klart ✓":""}</small></span>
       <span class="num"><b>${esc(r.min)}</b><small>min</small></span>
       <span class="num"><b>${esc(r.q)}</b><small>frågor</small></span>
       <span class="num"><b>${esc(r.streak)}</b><small>dagar i rad</small></span></li>`).join("")}</ol>`
       :`<p class="plan">Ingen har övat än den här veckan.</p>`}
   </section>
-  ${hist.length?`<section class="panel"><h2>Tidigare veckor</h2><ul class="missed">${hist.map(h=>`<li><span>${esc(wkLabel(h.wk))}</span><span><b>${esc(nameOf({id:h.id,nick:nickOf(obj(BOARD.docs[h.id]))}))}</b> · ${esc(h.m)} min</span></li>`).join("")}</ul></section>`:""}
-  <section class="panel"><h2>Ditt namn i topplistan</h2>
+  ${hist.length?`<section class="panel"><h2>Tidigare veckor</h2><ul class="missed">${hist.map(h=>`<li><span>${esc(wkLabel(h.wk))}</span><span><b>${esc(byKey[h.key]?nameOf(byKey[h.key]):"Någon")}</b> · ${esc(h.m)} min</span></li>`).join("")}</ul></section>`:""}
+  <section class="panel"><h2>Ditt namn i topplistan${profMulti()?` (${esc(profName())})`:""}</h2>
     <form id="nickf" class="nick" autocomplete="off"><input class="search" id="nick" maxlength="24" placeholder="Till exempel Kalle" value="${esc(nickOf(mine))}"><button class="btn" style="width:auto">Spara</button></form>
-    <p class="foot" id="nickmsg">${esc(BOARD.msg||"Namnet syns för alla som har tillgång till glosprogrammet.")}</p></section>`;
+    <p class="foot" id="nickmsg">${esc(BOARD.msg||"Namnet syns för alla som har tillgång till glosprogrammet.")}</p></section>
+  ${CLOUD.owner?`<section class="panel"><h2>Föräldravy</h2><p class="plan">Se en sammanfattning av hur det går för var och en som övar.</p><button class="btn ghost" id="parentgo">Öppna föräldravyn</button></section>`:""}`;
   // "Sparat." bara när sparningen faktiskt gick
   $("#nickf").onsubmit=e=>{e.preventDefault(); $("#nickmsg").textContent="Sparar …";
     boardPush($("#nick").value.trim().slice(0,24)).then(ok=>{ BOARD.msg=ok?"Sparat.":"Namnet kunde inte sparas. Kontrollera att du är inloggad och försök igen.";
       const m=$("#nickmsg"); if(m) m.textContent=BOARD.msg; });};
+  if($("#parentgo")) $("#parentgo").onclick=()=>{ renderParent(); window.scrollTo(0,0); };
 }
 
 /* ---------- Pass: lära ---------- */
@@ -1321,7 +1506,7 @@ function showTypeResult(d,res,inp){
 const reportBtn=()=>`<button type="button" class="override" data-report>Fel i frågan? Rapportera</button>`;
 async function sendReport(btn){
   const c=sess&&sess.cur, d=sess&&sess.d; if(!c||btn.disabled) return;
-  const r={lang:L.code,id:itemId(c),kind:c.k||sess.kind,t:c.t,answer:String((d&&d.answer)||""),d:Date.now(),pass:S.pass};
+  const r={lang:L.code,id:itemId(c),kind:c.k||sess.kind,t:c.t,answer:String((d&&d.answer)||""),d:Date.now(),pass:S.pass,...profField()};
   btn.disabled=true; btn.textContent="Skickar …";
   let ok=false;
   if(CLOUD.db&&CLOUD.uid){ try{ await CLOUD.db.doc(`reports/${CLOUD.uid}/items/${r.d}`).set({...r,uid:CLOUD.uid}); ok=true; }catch(e){ warnErr("felrapporten kunde inte skickas, sparas till senare",e); } }
@@ -1432,6 +1617,8 @@ $("#tab-ova").onclick=()=>setView("ova");
 $("#tab-stats").onclick=()=>setView("stats");
 $("#tab-board").onclick=()=>setView("board");
 $("#tab-fb").onclick=()=>setView("fb");
+// Namnet på den som övar (bara med flera profiler): leder till Vem övar? under Fler inställningar, inte mitt i ett pass
+$("#profchip").onclick=()=>{ if(sess||!L) return; SET_OPEN=true; setView("ova"); const b=$("#profsec"); if(b) b.scrollIntoView({block:"center"}); };
 
 /* ---------- Statistik ---------- */
 const pct=(r,n)=>n?Math.round(100*r/n):null;
@@ -1702,12 +1889,12 @@ function useLang(code){
   CONJBY=Object.fromEntries(CONJ.map(c=>[c.verb+"|"+c.tense+"|"+c.person,c]));
   cloudFlush();
   loadState(); rebuildWords(); sess=null; pickVoice();
-  try{localStorage.setItem(LANG_KEY,code)}catch(e){ /* privat läge: kursvalet sparas inte */ }
+  try{localStorage.setItem(langKey(),code)}catch(e){ /* privat läge: kursvalet sparas inte */ }
   $("#title").textContent=L.title;
   $("#search").value="";
   $("#search").placeholder=`Sök ${L.inLang} eller svenska`;
   $("#course").value=code;
-  $("#coursechip").textContent=courseChip();
+  $("#coursechip").textContent=courseChip(); profChip();
   setView("ova");
   setSaveNote();
   cloudAttach();

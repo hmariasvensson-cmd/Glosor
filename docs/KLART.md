@@ -2,6 +2,13 @@
 
 Punkter som har flyttats från [`BACKLOG.md`](BACKLOG.md) när de byggdes. **Referens** anger backloggens rubrik och prioritet. **Commit** anger var ändringen finns i git. **Publicerat** anger versionen av artefakten på https://claude.ai/artifact/YBQv8j4qXQQLuPwLAWt5mP.
 
+## 2026-10-06, del 2 (publicerat som version 43)
+
+| Referens | Vad som byggdes | Commit |
+|---|---|---|
+| Konton · P2 *Flera personer på samma konto* | "Vem övar?" under Fler inställningar: lägg till, byt namn, ta bort (bara ur listan, framstegen finns kvar) och byt profil (bara när inget pass pågår, `profSwitch`). Standardprofilen använder kursens `storageKey` oförändrad; andra profiler `<storageKey>@<id>` lokalt och i molnet (`profKeys`). Listan i `glosor-profiles` och `data/users/<uid>/profiles`. Med flera profiler syns "Övar: <namn>" vid kurschipet, topplistan visar en rad per profil (`profiles` i `board/<uid>`) och Tyck till/felrapporter får `profile`. Med en profil ser allt ut som förut. Rättat på vägen: utkastet i kulturuppgifterna kunde sparas i fel kurs efter byte. `SCENARIO_PROFILES`. | se git log |
+| Konton · P3 *Föräldravy* | Varje elevs app skriver `summary/<uid>` (ord påbörjade/kan/att repetera, minuter och frågor 7 och 30 dagar, minuter per dag i 14 dagar, svit, veckomål, skrivuppgifter, de tre senaste provsimuleringarna, svagaste grammatiken, studieplanens vecka; `src/kinds/95-parent.js`). Bara ägaren ser "Öppna föräldravyn" under Topplista, med ett kort per elev och kurs och ett stapeldiagram över 14 dagar. Nya db-regler: `summary` läses bara av ägaren, `summary/{self}` skrivs av eleven själv (kontrollerat: en elev ser inga sammanfattningar). Eleverna ser under Tyck till vad som delas. | se git log |
+
 ## 2026-10-06 (publicerat som version 42)
 
 | Referens | Vad som byggdes | Commit |

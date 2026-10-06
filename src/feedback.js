@@ -24,6 +24,7 @@ async function renderTyckTill(){
     <textarea class="answer-in fbtext" id="fbtext" rows="5" maxlength="2000" placeholder="Till exempel: Jag skulle vilja kunna öva på …">${esc(TT.text)}</textarea>
     <button class="btn" id="fbsend">Skicka</button>
     <p class="foot" id="fbmsg">${cloud?"":"Du är inte inloggad, så meddelandet sparas bara i den här webbläsaren."}</p>
+    ${cloud?`<p class="foot" id="fbshare">Föräldern (ägaren av appen) ser en sammanfattning av dina framsteg: hur många ord du övar på, kan och ska repetera, minuter och frågor de senaste 7 och 30 dagarna och per dag de senaste två veckorna, dagar i rad, när du senast övade, veckomålet, resultaten i provsimuleringarna, de tre svagaste grammatikområdena, antal skrivuppgifter och veckan i studieplanen. Dina svar och texter ingår inte.</p>`:""}
   </section>
   <section class="panel"><h2>Det du har skrivit</h2><div id="fblist"><p class="plan">Hämtar …</p></div></section>`;
   app.querySelectorAll("[data-fbk]").forEach(b=>b.onclick=()=>{TT.kind=b.dataset.fbk;
@@ -37,7 +38,7 @@ async function showTyckTill(){
   const list=(await loadTyckTill()).sort((a,b)=>(b.t||0)-(a.t||0));
   const box=$("#fblist"); if(curView!=="fb"||!box) return;
   box.innerHTML=list.length?`<ul class="fblist">${list.map(f=>`<li>
-      <div class="meta"><span class="label">${esc(FB_KINDS[f.kind]||"Annat")} · ${new Date(f.t).toLocaleDateString("sv-SE")}${f.course?` · ${esc(f.course)}`:""}</span>
+      <div class="meta"><span class="label">${esc(FB_KINDS[f.kind]||"Annat")} · ${new Date(f.t).toLocaleDateString("sv-SE")}${f.course?` · ${esc(f.course)}`:""}${f.profile&&profMulti()?` · ${esc(f.profile)}`:""}</span>
         <span class="fbst fb-${esc(f.status||"ny")}">${esc(FB_STATUS[f.status]||FB_STATUS.ny)}</span></div>
       <p>${esc(f.text)}</p>${(f.qa||[]).map(x=>`<p class="foot">${esc(x.q)} <b>${esc(x.a)}</b></p>`).join("")}${f.reply?`<p class="fbreply"><b>Svar:</b> ${esc(f.reply)}</p>`:""}</li>`).join("")}</ul>`
     :`<p class="plan">Inget än.</p>`;
@@ -79,7 +80,7 @@ async function sendTyckTill(){
 async function saveTyckTill(text,qa){
   const btn=$("#fbsend"), msg=$("#fbmsg");   // kan saknas om eleven har bytt flik
   if(btn){ btn.disabled=true; btn.textContent="Skickar …"; }
-  const f={kind:TT.kind,text:text.slice(0,2000),qa,lang:L.code,course:L.course||L.name,t:Date.now(),status:"ny",reply:""};
+  const f={kind:TT.kind,text:text.slice(0,2000),qa,lang:L.code,course:L.course||L.name,t:Date.now(),status:"ny",reply:"",...profField()};
   let ok=false;
   if(CLOUD.db&&CLOUD.uid){ try{ await CLOUD.db.doc(`feedback/${CLOUD.uid}/msgs/${f.t}`).set({...f,uid:CLOUD.uid}); ok=true; }catch(e){ warnErr("Tyck till kunde inte skickas, sparas till senare",e); } }
   if(!ok){ S.feedback=(S.feedback||[]).slice(-(UNSENT_MAX-1)); S.feedback.push(f); save(); }

@@ -440,3 +440,17 @@ ul.howto b{color:var(--ink)}
 .msg ul{margin:6px 0 0;padding-left:1.2em;font-size:.88rem}
 .msg del{color:var(--pink)}
 .msg ul b{color:var(--ok)}
+/* Vem övar? (profiler) och Föräldravyn */
+.profchip{font-size:.8rem;font-weight:700;letter-spacing:.04em;background:var(--m-soft);color:var(--m);border:1.5px solid var(--m);padding:4px 10px;border-radius:999px}
+.proflist{display:flex;flex-direction:column;gap:6px}
+.profrow{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:8px 10px;background:var(--surface-2);border-radius:10px}
+.profbtns{display:flex;gap:12px}
+.profedit,.profadd{display:flex;gap:8px;align-items:center}
+.profedit .search,.profadd .search{flex:1;min-width:0}
+.profconfirm{display:flex;flex-direction:column;gap:8px;padding:10px;border:1.5px solid var(--pink);border-radius:10px}
+.pcard h2 small{font-weight:400;color:var(--ink-2);font-size:.85rem}
+.pcourse{display:flex;flex-direction:column;gap:8px;border-top:1px solid var(--line);padding-top:12px}
+.pcourse h3{margin:0;font-size:1rem}
+.spark{width:100%;height:auto;display:block}
+.spark text{fill:var(--ink-2);font-family:var(--sans);font-size:11px}
+.pexam{font-size:.88rem}
