@@ -2,6 +2,12 @@
 
 Punkter som har flyttats från [`BACKLOG.md`](BACKLOG.md) när de byggdes. **Referens** anger backloggens rubrik och prioritet. **Commit** anger var ändringen finns i git. **Publicerat** anger versionen av artefakten på https://claude.ai/artifact/YBQv8j4qXQQLuPwLAWt5mP.
 
+## 2026-10-08 (publicerat som version 46)
+
+| Referens | Vad som byggdes | Commit |
+|---|---|---|
+| Felrapport från eleven (2026-10-05) *être dessiné, -e* | Kontrollerat: ordet och meningen stämmer; översättningen förtydligad till "vara utformad, vara ritad (som)". Rapporten fick `status`/`reply`. Felrapporter saknar `status` när de skickas, så de missades när bara `status: "ny"` söktes; rutinen i CLAUDE.md är ändrad. | se git log |
+
 ## 2026-10-06, del 4 (publicerat som version 45)
 
 | Referens | Vad som byggdes | Commit |
