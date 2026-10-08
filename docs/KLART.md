@@ -2,6 +2,12 @@
 
 Punkter som har flyttats från [`BACKLOG.md`](BACKLOG.md) när de byggdes. **Referens** anger backloggens rubrik och prioritet. **Commit** anger var ändringen finns i git. **Publicerat** anger versionen av artefakten på https://claude.ai/artifact/YBQv8j4qXQQLuPwLAWt5mP.
 
+## 2026-10-08, del 2 (publicerat som version 47)
+
+| Referens | Vad som byggdes | Commit |
+|---|---|---|
+| Förälderns önskemål 2026-10-08 *En ruta med förslag på vad eleven ska repetera* | Rutan "Förslag att repetera" på startsidan under Dagens pass (`src/kinds/84-suggest.js`), "utöver veckans glosförhör och det ni jobbar med i skolan": högst fyra förslag ur elevens egna resultat, var och en en knapp som startar övningen: väntande repetitioner (minst 20), de svåraste orden (`isLeech`, minst 3), det svagaste grammatikområdet (under 75 % efter minst 5 frågor, börjar med regeln) och kapitelprovet med lägst resultat (under 80 %, övar de missade orden). Syns inte för en ny elev eller när inget förslag finns. Tester. | se git log |
+
 ## 2026-10-08 (publicerat som version 46)
 
 | Referens | Vad som byggdes | Commit |

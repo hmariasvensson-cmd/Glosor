@@ -251,3 +251,7 @@ Med profiler (Vem övar?) har varje profil ett eget `S` per kurs, under `<storag
 Ord-id som bytt namn flyttas inte av en migrering utan av `applyRenames` vid varje inläsning, se Regler som skyddar elevernas framsteg.
 
 **Molnformatet** (se ovan): huvuddokumentet `{v: 2, head, score, parts, t}` (där `v: 2` är molnformatets version, inte `S.v`), bitarna `{rev, data}`. Gamla dokument `{state, t}` läses fortfarande.
+
+## Förslag att repetera
+
+`src/kinds/84-suggest.js`: `suggestPanel()` på startsidan (efter `dailyPanel`) och `suggestions()`, högst fyra förslag ur `S`: väntande repetitioner (`dueCount` ≥ `SUG_DUE`), svåra ord (`isLeech`, ≥ `SUG_LEECH`), svagaste grammatik (`S.gt`, under `SUG_GRAM_PCT` efter `SUG_GRAM_N` frågor, öppnar `gramIntro`) och kapitelprov (`S.kt`, under `SUG_KT_PCT`, `startKtest(id, miss)`). Inget sparas.

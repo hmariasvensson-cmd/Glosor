@@ -1866,6 +1866,15 @@ appReady().then(async()=>{ try{
     ok("repetition: knappen repeterar alla", q("#review-go").textContent.includes("alla "+dueCount()), q("#review-go").textContent);
     q("#review-go").click(); ok("repetition: runda med alla", sess&&sess.due.length===dueCount(), sess&&sess.due.length); quitSession();
     delete S.dueMax; renderStart();
+    // Förslag att repetera (förälderns önskemål 2026-10-08)
+    { const gtKeep=JSON.stringify(S.gt||{}), tp=GR().topics[0];
+      S.gt=S.gt||{}; S.gt[tp.id]={r:3,n:10}; WORDS.slice(0,4).forEach(w=>{ S.w[w.id].lapses=4; });
+      renderStart(); const ids=[...app.querySelectorAll("[data-sug]")].map(b=>b.dataset.sug);
+      ok("förslag: rutan visas med repetition, svåra ord och grammatik", !!q("#suggest")&&q("#suggest").textContent.includes("Utöver veckans glosförhör")&&ids.includes("due")&&ids.includes("leech")&&ids.includes("gram"), ids.join());
+      q('[data-sug="leech"]').click(); ok("förslag: svåra ord startar en runda", sess&&sess.newW.length===0&&sess.due.length>=4, sess&&sess.due.length); quitSession();
+      renderStart(); q('[data-sug="gram"]').click(); ok("förslag: grammatiken börjar med regeln", !!q("#rintro")||!!sess, tp.id);
+      if(sess) quitSession();
+      S.gt=JSON.parse(gtKeep); WORDS.slice(0,4).forEach(w=>{ delete S.w[w.id].lapses; }); renderStart(); }
     S.w=JSON.parse(keep); renderStart(); ok("repetition: ingen påminnelse med kort kö", !q("#reviewhint")); }
   // Tyska: der/die/das i grammatikgruppen
   useLang("de"); await appReady();

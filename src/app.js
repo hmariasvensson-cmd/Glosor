@@ -941,6 +941,7 @@ function renderStart(){
   const nothing=!newW.length&&!due.length;
   app.innerHTML=`
   ${dailyPanel()}
+  ${suggestPanel()}
   ${S.run&&runKey(S.run)!==PASS_KEY?`<section class="panel"><h2>Fortsätt där du slutade</h2><p class="plan">${esc(runLabel(S.run))}</p>
     <div class="navrow"><button class="btn ghost" id="run-drop">Släng</button><button class="btn" id="run-go">Fortsätt</button></div></section>`:""}
   ${Object.entries(S.runs||{}).filter(([k,r])=>k.startsWith("words")&&k!==PASS_KEY&&r&&k!==runKey(S.run)).map(([k,r])=>`<section class="panel"><h2>Fortsätt glospasset</h2><p class="plan">${esc(runLabel(r))}</p>
@@ -1001,7 +1002,7 @@ function renderStart(){
   } finally{ if(top) RCACHE=null; }
   $("#src").value=S.src; if(!$("#src").selectedOptions[0]||$("#src").selectedOptions[0].disabled){S.src="auto";$("#src").value="auto"}
   $("#src").onchange=e=>{S.src=e.target.value;save();renderStart()};
-  wireBookPanel(); wireChapterMap(); wireWriteNag();
+  wireBookPanel(); wireChapterMap(); wireWriteNag(); wireSuggest();
   app.querySelectorAll("[data-nextc]").forEach(b=>b.onclick=()=>useLang(b.dataset.nextc));
   app.querySelectorAll("[data-n]").forEach(b=>b.onclick=()=>{S.newCount=+b.dataset.n;save();renderStart()});
   app.querySelectorAll("[data-dm]").forEach(b=>b.onclick=()=>{S.dueMax=+b.dataset.dm;save();renderStart()});
