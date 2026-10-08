@@ -2,6 +2,12 @@
 
 Punkter som har flyttats från [`BACKLOG.md`](BACKLOG.md) när de byggdes. **Referens** anger backloggens rubrik och prioritet. **Commit** anger var ändringen finns i git. **Publicerat** anger versionen av artefakten på https://claude.ai/artifact/YBQv8j4qXQQLuPwLAWt5mP.
 
+## 2026-10-08, del 3 (publicerat som version 48)
+
+| Referens | Vad som byggdes | Commit |
+|---|---|---|
+| Kurser · P1 *Fler sidor ur Escalade* | Sidorna 70–93 och 132–147 inlagda (bokens privata repo): kapitel 5 klart (s. 68–83), kapitel 6 "Lire et vivre" (s. 84–93, plus 98–99 sedan tidigare), nytt kapitel 9 "Êtes-vous superstitieux ?" (s. 132–145), början av kapitel 10 "Prendre position" (s. 146–147). Ord, bokens texter, frågor, skrivuppgifter och Bokens övningar i book/; sång och dikter inte avskrivna. Egna övningar på temana (lästext, hörtext, berättelse, skrivuppgift, mål) i content/, grammatikområdena kopplade till kapitlen, studieplanen har veckan "Kap 9 och 10". | se git log |
+
 ## 2026-10-08, del 2 (publicerat som version 47)
 
 | Referens | Vad som byggdes | Commit |

@@ -30,7 +30,7 @@ TIPS = {
   "Imparfait för bakgrund och vanor, passé composé för det som hände. Gör kapitelprovet för kapitel 7.",
   "Qui, que, où, dont binder ihop meningar. Frågor och futur: öva att fråga om framtidsplaner.",
   "Repetera kapitel 8 och gör kapitelprovet. Skriv några meningar om vad du ska göra i sommar.",
-  "Conditionnel för önskemål och artiga frågor: je voudrais, tu pourrais.",
+  "Conditionnel för önskemål och artiga frågor: je voudrais, tu pourrais. Två kapitel den här veckan: 9 och 10.",
   "Si-satser: si + presens → futur, si + imparfait → conditionnel.",
   "Subjonctif efter il faut que och je veux que. Avsluta kapitel 12 med kapitelprovet.",
   "Hitta felet blandar allt. Gå igenom orden du har svårt för och provträna på delarna du tycker är svårast.",

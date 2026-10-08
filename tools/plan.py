@@ -52,7 +52,7 @@ FR_WEEKS = [  # Franska 3: bokens kapitel (id), publika avsnitt vanliga, vanliga
     ("Kap 7 (del 2)", [("k7",2,2),("fm",3,4)], "k7", True),
     ("Kap 8 (del 1)", [("k8",1,1),("vanliga2",6,8)], "k8", False),
     ("Kap 8 (del 2)", [("k8x",1,1),("vanliga2",7,8)], "k8", True),
-    ("Kap 10", [("k10",1,1)], "k10", True),
+    ("Kap 9 och 10", [("k9",1,1),("k10",1,1)], "k10", True),
     ("Kap 12 (del 1)", [("k12",1,2),("fm",4,4)], "k12", False),
     ("Kap 12 (del 2)", [("k12",2,2),("vanliga2",8,8)], "k12", True),
 ]
