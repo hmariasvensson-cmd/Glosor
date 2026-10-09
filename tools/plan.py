@@ -53,11 +53,11 @@ FR_WEEKS = [  # Franska 3: bokens kapitel (id), publika avsnitt vanliga, vanliga
     ("Kap 8 (del 1)", [("k8",1,1),("vanliga2",6,8)], "k8", False),
     ("Kap 8 (del 2)", [("k8x",1,1),("vanliga2",7,8)], "k8", True),
     ("Kap 9 och 10", [("k9",1,1),("k10",1,1)], "k10", True),
-    ("Kap 12 (del 1)", [("k12",1,2),("fm",4,4)], "k12", False),
+    ("Kap 11 och kap 12 (del 1)", [("k11",1,1),("k12",1,2),("fm",4,4)], "k11", True),
     ("Kap 12 (del 2)", [("k12",2,2),("vanliga2",8,8)], "k12", True),
 ]
 RSEC = {"hr", "vr", "qr", "tr", "sr"}
-FR_KT = {"k1":"k1","k2":"k2","k3":"k3","k4":"k4","k6":"k5","k7":"k7","k8":"k8","k10":"k10","k12":"k12"}
+FR_KT = {"k1":"k1","k2":"k2","k3":"k3","k4":"k4","k6":"k5","k7":"k7","k8":"k8","k10":"k10","k11":"k11","k12":"k12"}
 
 def build(c):
     d, secs, cnt = load(c)

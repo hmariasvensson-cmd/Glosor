@@ -2,6 +2,12 @@
 
 Punkter som har flyttats från [`BACKLOG.md`](BACKLOG.md) när de byggdes. **Referens** anger backloggens rubrik och prioritet. **Commit** anger var ändringen finns i git. **Publicerat** anger versionen av artefakten på https://claude.ai/artifact/YBQv8j4qXQQLuPwLAWt5mP.
 
+## 2026-10-09 (publicerat som version 49)
+
+| Referens | Vad som byggdes | Commit |
+|---|---|---|
+| Kurser · P1 *Fler sidor ur Escalade* | Sidorna 94–97 och 154–181 inlagda (bokens privata repo): kapitel 6 klart (s. 84–99), kapitel 10 klart (s. 146–161), nytt kapitel 11 "Bien manger" (s. 162–175), början av kapitel 12 "L'amour impossible" (s. 176–181; 182–191 fanns). Sångtexter (Renan Luce, HK et les Saltimbanks) och Prévert-raderna inte avskrivna. Egna övningar för k11 och k12, grammatik kopplad (impératif k11, démonstratifs och adjektiv k12), studieplanens vecka 16 "Kap 11 och kap 12 (del 1)". | se git log |
+
 ## 2026-10-08, del 3 (publicerat som version 48)
 
 | Referens | Vad som byggdes | Commit |

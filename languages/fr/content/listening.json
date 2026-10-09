@@ -4421,5 +4421,365 @@
     "why": "« C'est vendredi 13 aujourd'hui, c'est pour ça. » – « Tu es superstitieuse ? » – « Pas du tout ! »"
    }
   ]
+ },
+ {
+  "id": "l-k11-1",
+  "sec": "k11",
+  "title": "Au restaurant",
+  "lines": [
+   {
+    "who": "A",
+    "fr": "Bonsoir, vous avez choisi ?",
+    "sv": "God kväll, har ni bestämt er?"
+   },
+   {
+    "who": "B",
+    "fr": "Oui. Comme entrée, je voudrais la soupe à l'oignon, s'il vous plaît.",
+    "sv": "Ja. Till förrätt skulle jag vilja ha löksoppan, tack."
+   },
+   {
+    "who": "A",
+    "fr": "Très bien. Et comme plat principal ?",
+    "sv": "Mycket bra. Och till huvudrätt?"
+   },
+   {
+    "who": "B",
+    "fr": "Le bifteck-frites. Mais dites-moi, il est servi avec une sauce ?",
+    "sv": "Biff med pommes frites. Men säg mig, serveras den med sås?"
+   },
+   {
+    "who": "A",
+    "fr": "Oui, une sauce au poivre. Elle est un peu forte.",
+    "sv": "Ja, en pepparsås. Den är lite stark."
+   },
+   {
+    "who": "B",
+    "fr": "Alors sans sauce, s'il vous plaît. Je suis allergique au poivre.",
+    "sv": "Då utan sås, tack. Jag är allergisk mot peppar."
+   },
+   {
+    "who": "A",
+    "fr": "Pas de problème. Et pour vous, mademoiselle ?",
+    "sv": "Inga problem. Och till er, mademoiselle?"
+   },
+   {
+    "who": "C",
+    "fr": "Moi, je ne mange pas de viande. Qu'est-ce que vous me conseillez ?",
+    "sv": "Jag äter inte kött. Vad rekommenderar ni?"
+   },
+   {
+    "who": "A",
+    "fr": "Prenez le gratin de légumes, il est délicieux. C'est la spécialité du chef.",
+    "sv": "Ta grönsaksgratängen, den är utsökt. Det är kockens specialitet."
+   },
+   {
+    "who": "C",
+    "fr": "D'accord, je le prends. Et apportez-nous une carafe d'eau, s'il vous plaît.",
+    "sv": "Okej, jag tar den. Och kan ni ta med en karaff vatten, tack."
+   },
+   {
+    "who": "A",
+    "fr": "Bien sûr. Et comme dessert ? La mousse au chocolat est maison.",
+    "sv": "Självklart. Och till efterrätt? Chokladmoussen är hemgjord."
+   },
+   {
+    "who": "B",
+    "fr": "Pas pour moi, merci. Mais toi, Julie, tu en veux ?",
+    "sv": "Inte för mig, tack. Men du, Julie, vill du ha?"
+   },
+   {
+    "who": "C",
+    "fr": "Oui, avec plaisir ! Le chocolat, c'est mon point faible.",
+    "sv": "Ja, gärna! Choklad är min svaghet."
+   }
+  ],
+  "gloss": {
+   "choisi": {
+    "t": "choisir",
+    "sv": "välja",
+    "g": ""
+   },
+   "oignon": {
+    "t": "l'oignon",
+    "sv": "lök",
+    "g": "m"
+   },
+   "bifteck-frites": {
+    "t": "le bifteck-frites",
+    "sv": "biff med pommes frites",
+    "g": "m"
+   },
+   "sauce": {
+    "t": "la sauce",
+    "sv": "sås",
+    "g": "f"
+   },
+   "poivre": {
+    "t": "le poivre",
+    "sv": "peppar",
+    "g": "m"
+   },
+   "allergique": {
+    "t": "allergique à",
+    "sv": "allergisk mot",
+    "g": ""
+   },
+   "viande": {
+    "t": "la viande",
+    "sv": "kött",
+    "g": "f"
+   },
+   "conseillez": {
+    "t": "conseiller",
+    "sv": "rekommendera, ge råd",
+    "g": ""
+   },
+   "gratin": {
+    "t": "le gratin",
+    "sv": "gratäng",
+    "g": "m"
+   },
+   "spécialité": {
+    "t": "la spécialité",
+    "sv": "specialitet",
+    "g": "f"
+   },
+   "carafe": {
+    "t": "la carafe",
+    "sv": "karaff",
+    "g": "f"
+   },
+   "maison": {
+    "t": "maison",
+    "sv": "hemgjord (om mat)",
+    "g": ""
+   },
+   "faible": {
+    "t": "le point faible",
+    "sv": "svaghet",
+    "g": "m"
+   }
+  },
+  "questions": [
+   {
+    "type": "helhet",
+    "q": "Var utspelar sig samtalet?",
+    "opts": [
+     "På en restaurang",
+     "Hemma hos en familj",
+     "I en mataffär",
+     "På en skola"
+    ],
+    "a": 0,
+    "why": "En servitör tar emot beställningen."
+   },
+   {
+    "type": "detalj",
+    "q": "Varför vill mannen ha biffen utan sås?",
+    "opts": [
+     "Han tycker inte om sås",
+     "Han är allergisk mot peppar",
+     "Såsen är för dyr",
+     "Den är kall"
+    ],
+    "a": 1,
+    "why": "« Je suis allergique au poivre. »"
+   },
+   {
+    "type": "detalj",
+    "q": "Vad beställer Julie till huvudrätt?",
+    "opts": [
+     "Biff",
+     "Grönsaksgratäng",
+     "Löksoppa",
+     "Fisk"
+    ],
+    "a": 1,
+    "why": "Servitören säger « Prenez le gratin de légumes » och hon svarar « je le prends »."
+   },
+   {
+    "type": "detalj",
+    "q": "Vem tar efterrätt?",
+    "opts": [
+     "Ingen",
+     "Bara Julie",
+     "Bara mannen",
+     "Båda"
+    ],
+    "a": 1,
+    "why": "Mannen säger « Pas pour moi », Julie säger « Oui, avec plaisir ! »"
+   },
+   {
+    "type": "tolkning",
+    "q": "Vad betyder « apportez-nous une carafe d'eau »?",
+    "opts": [
+     "Ta med en karaff vatten till oss",
+     "Vi tar med en karaff vatten",
+     "Drick en karaff vatten",
+     "Vi behöver inget vatten"
+    ],
+    "a": 0,
+    "why": "Imperativ i vous-form med pronomenet nous efter verbet: apportez-nous."
+   }
+  ]
+ },
+ {
+  "id": "l-k12-1",
+  "sec": "k12",
+  "title": "Tu as vu le film ?",
+  "lines": [
+   {
+    "who": "A",
+    "fr": "Salut Malik ! Tu fais quoi ce soir ?",
+    "sv": "Hej Malik! Vad gör du i kväll?"
+   },
+   {
+    "who": "B",
+    "fr": "Je vais voir la comédie musicale « Notre-Dame de Paris ». Ma sœur a deux billets.",
+    "sv": "Jag ska se musikalen ”Notre-Dame de Paris”. Min syster har två biljetter."
+   },
+   {
+    "who": "A",
+    "fr": "Ah, cette histoire est tellement triste ! Tu la connais ?",
+    "sv": "Åh, den historien är så sorglig! Känner du till den?"
+   },
+   {
+    "who": "B",
+    "fr": "Un peu. J'ai vu le dessin animé quand j'étais petit. Le bossu, c'est Quasimodo, c'est ça ?",
+    "sv": "Lite grann. Jag såg den tecknade filmen när jag var liten. Puckelryggen är Quasimodo, eller hur?"
+   },
+   {
+    "who": "A",
+    "fr": "Oui. Mais attention, dans le roman, la fin n'est pas du tout la même que dans le film de Disney.",
+    "sv": "Ja. Men akta dig, i romanen är slutet inte alls detsamma som i Disneyfilmen."
+   },
+   {
+    "who": "B",
+    "fr": "Ah bon ? Ne me dis pas la fin !",
+    "sv": "Jaså? Berätta inte slutet för mig!"
+   },
+   {
+    "who": "A",
+    "fr": "D'accord. Je te dis seulement que ce n'est pas une belle fin. C'est un amour impossible.",
+    "sv": "Okej. Jag säger bara att det inte är ett lyckligt slut. Det är en omöjlig kärlek."
+   },
+   {
+    "who": "B",
+    "fr": "Tu m'as fait peur ! Et la musique, elle est bien ?",
+    "sv": "Nu skrämde du mig! Och musiken, är den bra?"
+   },
+   {
+    "who": "A",
+    "fr": "Oui, les chansons sont très belles. Ma mère écoutait ce vieil album tous les jours quand j'étais petite.",
+    "sv": "Ja, sångerna är jättefina. Min mamma lyssnade på det där gamla albumet varje dag när jag var liten."
+   },
+   {
+    "who": "B",
+    "fr": "Super. Cette fois, je vais bien écouter les paroles.",
+    "sv": "Toppen. Den här gången ska jag lyssna noga på texterna."
+   },
+   {
+    "who": "A",
+    "fr": "Et après, tu me racontes tout, d'accord ?",
+    "sv": "Och efteråt berättar du allt för mig, okej?"
+   }
+  ],
+  "gloss": {
+   "comédie": {
+    "t": "la comédie musicale",
+    "sv": "musikal",
+    "g": "f"
+   },
+   "billets": {
+    "t": "le billet",
+    "sv": "biljett",
+    "g": "m"
+   },
+   "tellement": {
+    "t": "tellement",
+    "sv": "så, så pass",
+    "g": ""
+   },
+   "dessin": {
+    "t": "le dessin animé",
+    "sv": "tecknad film",
+    "g": "m"
+   },
+   "bossu": {
+    "t": "le bossu",
+    "sv": "puckelrygg",
+    "g": "m"
+   },
+   "roman": {
+    "t": "le roman",
+    "sv": "roman",
+    "g": "m"
+   },
+   "impossible": {
+    "t": "impossible",
+    "sv": "omöjlig",
+    "g": ""
+   },
+   "album": {
+    "t": "l'album",
+    "sv": "album",
+    "g": "m"
+   },
+   "paroles": {
+    "t": "les paroles",
+    "sv": "sångtext",
+    "g": "fpl"
+   }
+  },
+  "questions": [
+   {
+    "type": "helhet",
+    "q": "Vad pratar Malik och hans kompis om?",
+    "opts": [
+     "En musikal om Notre-Dame de Paris som Malik ska se",
+     "En resa till Paris",
+     "En bok som de läser i skolan",
+     "Ett prov i musik"
+    ],
+    "a": 0,
+    "why": "Malik ska se musikalen ”Notre-Dame de Paris” i kväll."
+   },
+   {
+    "type": "detalj",
+    "q": "Hur känner Malik till historien?",
+    "opts": [
+     "Han har läst romanen",
+     "Han såg den tecknade filmen som liten",
+     "Hans syster berättade den",
+     "Han känner inte till den alls"
+    ],
+    "a": 1,
+    "why": "« J'ai vu le dessin animé quand j'étais petit. »"
+   },
+   {
+    "type": "detalj",
+    "q": "Varför vill Malik inte höra slutet?",
+    "opts": [
+     "Han känner redan till det",
+     "Han vill bli överraskad",
+     "Han tycker inte om sorgliga historier",
+     "Han har ingen tid"
+    ],
+    "a": 1,
+    "why": "« Ne me dis pas la fin ! »"
+   },
+   {
+    "type": "tolkning",
+    "q": "Vad betyder « ce vieil album »?",
+    "opts": [
+     "Det där nya albumet",
+     "Det där gamla albumet",
+     "Det där vackra albumet",
+     "Det där långa albumet"
+    ],
+    "a": 1,
+    "why": "Vieil = vieux före ett maskulint ord som börjar på vokal."
+   }
+  ]
  }
 ]
