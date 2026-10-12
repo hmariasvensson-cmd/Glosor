@@ -47,6 +47,7 @@ Meningarna ska vara naturlig och korrekt franska på nivå A2/B1, med vardagliga
 | `quel` | 22 | `quel-q`, `quel-excl`, `lequel` | quel i frågor (även quel est …), i utrop och lequel/laquelle/lesquels/lesquelles. |
 | `tout` | 22 | `tout-adj`, `tout-pron`, `tout-expr` | tout/toute/tous/toutes framför substantiv, ensamt (tout = allt, tous = allihop) och fasta uttryck. |
 | `ger` | 20 | `ger-form`, `ger-irr`, `ger-sens` | Förhandsvisning (`"preview": "frs5"`): gérondif, bildning, étant/ayant/sachant och betydelsen (samtidigt, genom att). |
+| `adv` | 39 | `adv-ment`, `adv-emment`, `adv-court`, `adv-place`, `adj-apres`, `adj-avant` | Adverb på -ment (femininform + -ment, vrai → vraiment), -amment/-emment/-ément, bien/mal/vite/beaucoup, adverbets plats (efter det böjda verbet, j'ai bien dormi; `adv-place` är rw) och adjektivens placering (färg, nationalitet, form, religion och particip efter; beau, petit, gros, bon … före). |
 
 `subj` och `si` har `"preview": "frs4"` och `ger` har `"preview": "frs5"` i grammar.json: de ligger över nivån och visas sist med etiketten "Förhandsvisning – övas mer i Franska 4/5" (se `docs/spec/grammatik.md`). Passiv form finns inte i Franska 3; den övas i Franska 5 (`frs5`, området `pass`).
 

@@ -2,6 +2,11 @@
 
 Punkter som har flyttats från [`BACKLOG.md`](BACKLOG.md) när de byggdes. **Referens** anger backloggens rubrik och prioritet. **Commit** anger var ändringen finns i git. **Publicerat** anger versionen av artefakten på https://claude.ai/artifact/YBQv8j4qXQQLuPwLAWt5mP.
 
+## 2026-10-12 (publicerat som version 50)
+
+- **Escalade: minigrammatiken s. 200–201** (backloggen P1, fler sidor ur boken) är fotad och inlagd i den privata bokmappen. Nu saknas bara s. 192–193.
+- **Nytt grammatikområde i Franska 3: `adv`, "Adverb och adjektivens placering"** (boken, minigrammatik avsnitt 8–9). Adverb på -ment, -amment/-emment och -ément, vanliga korta adverb och var adverbet står, adjektiv före och efter substantivet. 39 frågor och regeltext med egna exempel. Fristående område utan `secs`, lagt i vecka 7 i studieplanen bredvid `nombre`; inga veckor flyttade.
+
 ## 2026-10-09 (publicerat som version 49)
 
 | Referens | Vad som byggdes | Commit |
