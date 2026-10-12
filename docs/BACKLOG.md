@@ -48,7 +48,7 @@ Emma pluggar på egen hand, utan kurs, lärare och lärobok. Tyskan bygger därf
 - **P2: De nya kurserna (2026-09-29): fyll på.** Granskade av AI-agenter 2026-10-01. Textlängder, glosor och ordantal är åtgärdade 2026-10-01 (se KLART.md, version 35). Överlapp mellan kurser är tillåtet men kan minskas (se "Öppet efter 2026-10-01"). Frekvenstäckning och videor gjorda 2026-10-05 (version 40–41).
   - Varje kurs får en egen mapp i `languages/` och en egen `storageKey`. Bygg efter kursmallen (`docs/kursmall.md`) och Skolverkets centrala innehåll för steget. Nivån ungefär enligt Skolverket: steg 1 A1.1, 2 A1.2, 3 A2.1, 4 A2.2, 5 B1.1, 6 B1.2, 7 B2.1.
   - Varje kurs ska bygga vidare på den förra utan att orden överlappar, och ha `nextCourse` till nästa steg.
-  - Ordning: Italienska 3 (står som kommande i `languages/upcoming.json`), sedan de lägre stegen (1–2 i franska, 1–3 i tyska) och sist steg 7 och Franska 5.
+  - Alla planerade kurser finns nu (`languages/upcoming.json` är tom, kontrollerat 2026-10-12). Kvar är bara påfyllning och stickprov.
   - Arbetssätt som fungerade för Franska 6 (fr4) och Tyska 6: glosorna i två halvor av två agenter (med dubblettkontroll mot tidigare kurser och mot varandra), allt övrigt innehåll av en tredje. Modelltexterna i skrivuppgifterna ska skrivas **efter** ordlistan, annars saknar de kapitelord.
   - Innehållet är AI-skrivet och behöver granskas med stickprov, som de andra kurserna.
 - **P2: Franska: brister från nivågranskningen** (`docs/nivaer-franska.md`, avsnitt 4; beslutet om nivåerna är genomfört 2026-09-29):
@@ -88,5 +88,5 @@ Granskningspunkterna nedan är avgjorda av granskningsagenterna 2026-10-01 (vers
 
 - **P3: Musiktermerna** kan fortfarande kontrolleras med en musiklärare (franska 3, Tyska 4, Tyska 5).
 - **P3: Tyska 5:s datafil** är 1 593 kB, nära varningsgränsen `MAX_DATA_KB` (1 600 kB, en egen varning, ingen teknisk gräns). Största delen är Tatoeba-meningarna (294 kB); de kan hämtas separat som provfilen (`ensureExam`) om filen växer mer, men meningsövningarna, Dagens pass och återupptagna pass måste då vänta på dem.
-- **P3: Sidans storlek:** `dist/index.html` är 415 kB, nära varningsgränsen `MAX_PAGE_KB` (420 kB) efter profiler och föräldravy.
-- **P3: Franska 3:s datafil** är över 1 600 kB (varning) efter kapitel 5, 6 och 9. Kan delas upp som provfilen om den växer mer.
+- **P3: Sidans storlek:** `dist/index.html` är 419 kB (2026-10-12), precis under varningsgränsen `MAX_PAGE_KB` (420 kB). Nästa större funktion ger varning; gränsen är vår egen (okomprimerat), ingen teknisk gräns.
+- **P3: Franska 3:s datafil** är 1 921 kB (2026-10-12, varning), varav texter och övningar 1 398 kB, efter kapitel 5–12. Kan delas upp som provfilen om den växer mer.
