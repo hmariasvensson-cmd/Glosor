@@ -124,8 +124,10 @@ function passInterleave(a,b){
 // Efter passet: en kort text att läsa eller lyssna på (oläst, i kapitlet eleven är på, kortast först)
 function dailyText(){
   const c=C(), sec=curSec(), tx=S.tx||{};
-  const all=[...(c.reading||[]).map(t=>({k:"rq",t})),...(c.listening||[]).map(t=>({k:"lq",t}))].filter(x=>(x.t.questions||[]).length);
-  const len=x=>(x.t.lines||[]).reduce((a,l)=>a+tl(l).length,0), here=x=>sameChapter(x.t.sec,sec)?0:1;
+  // Före ensureTexts finns bara indexet: nq = antal frågor, len = antal tecken (split_texts i build.py)
+  const nq=t=>t.questions?t.questions.length:+t.nq||0, len=x=>x.t.lines?x.t.lines.reduce((a,l)=>a+tl(l).length,0):+x.t.len||0;
+  const all=[...(c.reading||[]).map(t=>({k:"rq",t})),...(c.listening||[]).map(t=>({k:"lq",t}))].filter(x=>nq(x.t));
+  const here=x=>sameChapter(x.t.sec,sec)?0:1;
   return all.sort((a,b)=>(!!tx[a.t.id])-(!!tx[b.t.id])||here(a)-here(b)||((tx[a.t.id]||{}).last||0)-((tx[b.t.id]||{}).last||0)||len(a)-len(b))[0]||null;
 }
 // Provuppgift efter passet när provet närmar sig: en som rättas direkt, högst 20 minuter, den som gjorts för längst sedan.

@@ -4,6 +4,7 @@ function openReading(){
     (C().reading||[]).map(t=>({id:t.id,title:t.title,sec:t.sec,status:txStatus(t.id)})),readIntro);
 }
 function readIntro(id){
+  if(textsWait(()=>readIntro(id),"Läsa")) return;   // texten och frågorna ligger i data/<kod>-texts.json (ensureTexts)
   const t=textById("rq",id); stopSpeech(); $("#tabs").hidden=true; sess=null;
   app.innerHTML=`<section class="panel"><span class="tab">Läsa</span><span class="label">${esc(secName(t.sec))}</span>
     <h2 ${lang()}>${esc(t.title)}</h2>

@@ -5,6 +5,7 @@ function openListening(){
   const p=realAudioPanel(); if(p) $("#quit").insertAdjacentHTML("beforebegin",p);   // Veckans äkta ljud (46-akta-ljud.js)
 }
 function listenIntro(id){
+  if(textsWait(()=>listenIntro(id),"Lyssna")) return;   // texten och frågorna ligger i data/<kod>-texts.json (ensureTexts)
   const t=textById("lq",id); stopSpeech(); $("#tabs").hidden=true; sess=null;
   app.innerHTML=`<section class="panel"><span class="tab">Lyssna</span><span class="label">${esc(secName(t.sec))}</span>
     <h2 ${lang()}>${esc(t.title)}</h2>

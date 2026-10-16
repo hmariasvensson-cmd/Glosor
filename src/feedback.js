@@ -1,7 +1,9 @@
 /* ---------- Tyck till: eleven skriver önskemål, vad som är krångligt eller vad som är fel ----------
    Meddelandena sparas i feedback/<uid>/msgs/<tid> i artefaktens db (bara eleven själv och föräldern kan läsa dem, se reglerna i CLAUDE.md). Claude läser dem med ArtifactData, för in dem i
    docs/BACKLOG.md och skriver status och svar (fälten status och reply) i samma dokument. Eleven ser dem här.
-   Utan inloggning sparas meddelandet bara i den här webbläsaren (S.feedback). */
+   Utan inloggning sparas meddelandet bara i den här webbläsaren (S.feedback).
+   Koden hämtas först när fliken öppnas (data/code-tycktill.js, se lazyRun i app.js). */
+// @lazy tycktill
 const FB_KINDS={wish:"Önskemål",hard:"Krångligt",bug:"Något är fel",other:"Annat"};
 const FB_STATUS={ny:"Skickat, inte läst än",last:"Läst",backlogg:"Tillagt i backloggen",byggt:"Byggt",nej:"Inte just nu"};
 const TT={kind:"wish",text:"",mine:null};

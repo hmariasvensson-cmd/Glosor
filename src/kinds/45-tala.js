@@ -10,7 +10,9 @@
    Sparat: S.talk = {t: {<ämne>: {n, last, wpm: [ord/min per runda senast], best}}, c: {<ämne>: {n, last}}},
    Claudes senaste kommentar per ämne i S.fb["tt:<ämne>"] (4/3/2, med r = rundan) och S.fb["tc:<ämne>"] (samtalet; inte "c:",
    som är kulturens), och loggposter med kind "talk": {d, dur, right: 0, total: 0, words, wpm, rounds} eller {…, words, chat: 1}.
-   Skugga (12-shadow.js, typen "shadow") öppnas härifrån. */
+   Skugga (12-shadow.js, typen "shadow") öppnas härifrån.
+   Koden hämtas först när Tala öppnas (data/code-tala.js, se lazyRun i app.js); bara defineKind står utanför. */
+// @lazy tala
 const talkState=()=>{ S.talk=S.talk||{}; S.talk.t=S.talk.t||{}; S.talk.c=S.talk.c||{}; return S.talk; };
 const TALK_TURNS=6;   // elevens svar i ett samtal med Claude
 const talkLow=lv=>/^A/.test(lv||"");
@@ -291,4 +293,5 @@ function talkChat(id){
   ta.onkeydown=e=>{ if(e.key==="Enter"&&!e.shiftKey&&!e.isComposing){ e.preventDefault(); send.click(); } };
   ask(); window.scrollTo(0,0);
 }
+// @lazy-end
 defineKind("talk",{name:"Tala",open:openTalk});

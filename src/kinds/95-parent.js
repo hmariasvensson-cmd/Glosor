@@ -62,6 +62,8 @@ async function summaryFlush(){
   if(SUM.again||Object.keys(SUM.pend).length){ SUM.again=false; SUM.timer=setTimeout(summaryFlush,3000); }
 }
 
+// Föräldravyn hämtas först när ägaren öppnar den (data/code-parent.js, se lazyRun i app.js); sammanfattningen ovan skrivs alltid
+// @lazy parent
 /* Föräldravyn: ett kort per konto och profil med siffror per kurs. Bara läsning. Allt kommer från elevernas dokument,
    så bara tal (num) och text genom esc(). Namn: user.profiles(ids) vid varje rendering, "Elev" om namnet saknas, och
    profilens namn för andra profiler än standardprofilen. */

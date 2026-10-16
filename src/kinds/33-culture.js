@@ -7,6 +7,7 @@ function openCulture(){
     (C().culture||[]).map(c=>({id:c.id,title:c.title,sec:c.sec,status:S.cu[c.id]?"klar":""})),cultureScreen);
 }
 function cultureScreen(id){
+  if(textsWait(()=>cultureScreen(id),"Kultur")) return;   // texten ligger i data/<kod>-texts.json (ensureTexts)
   const c=(C().culture||[]).find(x=>x.id===id); S.drafts=S.drafts||{}; S.cu=S.cu||{};
   const dk="c:"+id, start=Date.now(); let qok=null;
   $("#tabs").hidden=true; sess=null;

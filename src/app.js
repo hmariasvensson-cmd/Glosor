@@ -1337,8 +1337,12 @@ function runLabel(r){
   if(r.kind==="cloze") return `Meningar, ${r.done} av ${r.total} klara.`;
   return `${r.extra?"Extraövning":`Pass ${S.pass}`}, ${r.done} av ${r.total} frågor klara.`;
 }
+// Övningstyper vars frågor står i texterna (data/<kod>-texts.json): ett påbörjat pass med sådana frågor väntar in filen
+const TEXT_KINDS=["lq","rq"];
+const runKinds=r=>[r.kind,...[...(r.queue||[]),...(r.mixIn||[])].map(q=>q&&q.k)].filter(Boolean);
 function resumeRun(){
   const r=S.run; if(!r) return;
+  if(!textsReady()&&runKinds(r).some(k=>TEXT_KINDS.includes(k))&&textsWait(()=>{ S.run=r; resumeRun(); })) return;
   const item=q=>{
     const k=q.k||r.kind;
     const K=KINDS[k]; if(K&&K.restore){const x=K.restore(q.ref); return x?{...q,...x,k}:null}
@@ -1837,6 +1841,7 @@ function addCourseData(code,d){
   DATA_KEYS[code]=Object.keys(rest); Object.assign(x,rest);
   if(verbTables){ if(!(code in LANG_VERBS)) LANG_VERBS[code]=x.verbs; x.verbs=withVerbTables(LANG_VERBS[code],verbTables); }
   if(INLINE_DATA[code+"-exam"]) addExamData(code,INLINE_DATA[code+"-exam"]);   // preview.html: provet är inbakat
+  if(INLINE_DATA[code+"-texts"]) addTextsData(code,INLINE_DATA[code+"-texts"]);   // och texterna
   return x;
 }
 // Hämtar data/<namn>.json (namn = kod eller <kod>-exam) med filens hash ur DATA_VERSION; samma hämtning delas av alla som väntar
@@ -1864,6 +1869,68 @@ function ensureExam(){
   if(INLINE_DATA[code+"-exam"]) return Promise.resolve(addExamData(code,INLINE_DATA[code+"-exam"]));
   return fetchData(code+"-exam").then(d=>addExamData(code,d));
 }
+/* Läs- och hörtexterna och kulturtexterna (content.reading, listening, culture) ligger i en egen fil, data/<kod>-texts.json
+   (split_texts och LAZY_TEXTS i build.py), som hämtas första gången en text öppnas (ensureTexts). Kursens datafil har ett
+   index: content.lazyTexts = [typerna i filen] och per text alla fält utom de tunga (lines, gloss, questions; i kulturen
+   också q, ask, model, modelSv) plus nq (antal frågor) och len (antal tecken på målspråket). Listorna, menyn, planen och
+   Dagens pass (dailyText) läser bara indexet. Det som behöver texten börjar med textsWait (30-texts.js): readIntro,
+   listenIntro, cultureScreen och resumeRun (ett påbörjat pass med frågor till en text). textsReady() säger om de finns. */
+const textsReady=()=>{ const c=L&&L.content; return !c||!c.lazyTexts; };
+function addTextsData(code,d){
+  const c=LANGUAGES[code].content; if(!c||!c.lazyTexts) return c;
+  c.lazyTexts.forEach(k=>{ if(Array.isArray(d[k])) c[k]=d[k]; }); delete c.lazyTexts;
+  return c;
+}
+function ensureTexts(){
+  const code=L.code; if(textsReady()) return Promise.resolve(L.content);
+  if(INLINE_DATA[code+"-texts"]) return Promise.resolve(addTextsData(code,INLINE_DATA[code+"-texts"]));
+  return fetchData(code+"-texts").then(d=>addTextsData(code,d));
+}
+/* dataWait(o, fn): väntar in något som hämtas vid behov (texterna, en kodfil). Är det redan hämtat (o.ready()) returneras
+   false och anroparen fortsätter; annars visas "Hämtar <o.what> …", fn körs när det kommit (om eleven fortfarande väntar
+   på samma skärm och kurs) och true returneras. Går hämtningen inte (offline) visas ett meddelande med Försök igen och
+   Tillbaka. o.load() ger ett Promise; o.tab = etiketten överst; o.tabs: true låter flikarna stå kvar (Tyck till). Som
+   examWait (70-exam.js) men med id lzwait och lzretry. */
+let DWAIT=0;
+function dataWait(o,fn){
+  if(o.ready()) return false;
+  const code=L.code, n=++DWAIT, back=RETURN_TO||(o.tabs?()=>setView("ova"):renderStart);
+  const page=body=>{ app.innerHTML=`<section class="panel" id="lzwait">${o.tab?`<span class="tab">${esc(o.tab)}</span>`:""}${body}</section><button class="quit" id="quit">Tillbaka</button>`;
+    $("#quit").onclick=()=>{ DWAIT++; back(); }; };
+  const here=()=>n===DWAIT&&L.code===code&&!!$("#lzwait");
+  stopSpeech(); if(!o.tabs){ $("#tabs").hidden=true; sess=null; }
+  page(`<p class="plan">Hämtar ${esc(o.what)} …</p>`);
+  o.load().then(()=>{ if(here()) fn(); }).catch(()=>{ if(!here()) return;
+    page(`<h2>${esc(o.what[0].toUpperCase()+o.what.slice(1))} kunde inte hämtas</h2><p class="plan">Kontrollera internetanslutningen och försök igen. Övningarna som redan är hämtade fungerar som vanligt.</p><button class="btn" id="lzretry">Försök igen</button>`);
+    $("#lzretry").onclick=()=>{ if(!dataWait(o,fn)) fn(); }; });
+  return true;
+}
+const textsWait=(fn,tab)=>dataWait({what:"texterna",tab,ready:textsReady,load:ensureTexts},fn);
+/* Sällan använd kod (Tala, Tyck till, Föräldravyn) står i källfilerna mellan "// @lazy <namn>" och "// @lazy-end" och
+   blir data/code-<namn>.js (split_lazy_code i build.py). I index.html finns i stället en stubbe för varje funktion som
+   annan kod anropar: function openTalk(...a){return lazyRun("tala",()=>openTalk(...a));}. lazyRun hämtar filen med en
+   <script>-tagg (loadCode, hash ur DATA_VERSION["code-<namn>"]); filens funktioner ersätter stubbarna, och sista raden
+   lazyDone("<namn>") säger att den kördes till slutet. I preview.html (och testerna) finns all kod från början. */
+const LAZY_OK={};
+function lazyDone(m){ LAZY_OK[m]=true; }
+function loadCode(m){
+  if(LAZY_OK[m]) return Promise.resolve();
+  const k="code-"+m, v=(DATA_VERSION&&typeof DATA_VERSION==="object"?DATA_VERSION[k]:DATA_VERSION)||"";
+  return LOADING[k]=LOADING[k]||new Promise((ok,fail)=>{
+    const s=document.createElement("script"); s.src=`data/${k}.js?v=${v}`;
+    s.onload=()=>LAZY_OK[m]?ok():fail(new Error(k+" kördes inte till slutet"));
+    /* Reserv om sidans säkerhetsregler stoppar <script src>: hämta filen med fetch (egna filer får hämtas) och kör den inbäddad. */
+    s.onerror=()=>{ s.remove();
+      fetch(`data/${k}.js?v=${v}`).then(r=>{ if(!r.ok) throw 0; return r.text(); }).then(t=>{
+        const i=document.createElement("script"); i.textContent=t; document.head.appendChild(i);
+        LAZY_OK[m]?ok():fail(new Error(k+" kördes inte till slutet")); }).catch(()=>fail(new Error(k+" kunde inte hämtas"))); };
+    document.head.appendChild(s);
+  }).catch(e=>{ delete LOADING[k]; throw e; });
+}
+function lazyRun(m,fn){
+  if(LAZY_OK[m]) return fn();
+  if(!dataWait({what:"den här delen av appen",tabs:!$("#tabs").hidden,ready:()=>!!LAZY_OK[m],load:()=>loadCode(m)},fn)) return fn();
+}
 /* Minne: hämtade kurser ligger kvar så att det går snabbt att byta tillbaka, men högst KEEP_COURSES stycken.
    Den kurs som varit oanvänd längst släpps (ord, innehåll, grammatik, verbtabeller och det som räknats fram ur dem) och hämtas
    igen om eleven väljer den. Framstegen påverkas inte: de ligger i localStorage och i molnet, inte i LANGUAGES. */
@@ -1873,7 +1940,7 @@ function releaseCourse(code){
   (DATA_KEYS[code]||["words","content","videos","grammar"]).forEach(k=>{ delete x[k]; });
   if(code in LANG_VERBS){ x.verbs=LANG_VERBS[code]; delete LANG_VERBS[code]; }
   delete x.base; Object.keys(x).filter(k=>k[0]==="_").forEach(k=>{ delete x[k]; });
-  delete LOADING[code]; delete LOADING[code+"-exam"]; delete DATA_KEYS[code];
+  delete LOADING[code]; delete LOADING[code+"-exam"]; delete LOADING[code+"-texts"]; delete DATA_KEYS[code];
 }
 function trimCourses(code){
   const i=USED_COURSES.indexOf(code); if(i>=0) USED_COURSES.splice(i,1); USED_COURSES.push(code);

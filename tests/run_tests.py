@@ -754,7 +754,8 @@ def run_http(scenario, budget=8000):
         t = pathlib.Path(tmp)
         shutil.copytree(ROOT / "dist" / "data", t / "data")
         page = SKELETON_HEAD + (ROOT / "dist" / "index.html").read_text(encoding="utf-8") + "\n</body></html>\n"
-        seed = "<script>window.__err=[];window.onerror=(m,s,l,c)=>{__err.push(m+' @'+l)};localStorage.clear();</script>"
+        # sessionStorage "keep": en scenario som laddar om sidan (SCENARIO_TEXTLAZY) behåller det sparade läget
+        seed = "<script>window.__err=[];window.onerror=(m,s,l,c)=>{__err.push(m+' @'+l)};if(!sessionStorage.getItem('keep'))localStorage.clear();</script>"
         (t / "test.html").write_text(page.replace("<title>", seed + "<title>", 1).replace("</body></html>", scenario + "</body></html>"), encoding="utf-8")
         srv = http.server.ThreadingHTTPServer(("127.0.0.1", 0), functools.partial(http.server.SimpleHTTPRequestHandler, directory=tmp))
         srv.RequestHandlerClass.log_message = lambda *a: None
@@ -936,7 +937,7 @@ setTimeout(async()=>{ try{
   // 3. DATA_VERSION per kurs
   ok("DATA_VERSION: ett hash per kurs", DATA_VERSION&&typeof DATA_VERSION==="object"&&Object.keys(LANGUAGES).every(c=>/^[0-9a-f]{10}$/.test(DATA_VERSION[c]))
     &&new Set(Object.values(DATA_VERSION)).size===Object.keys(DATA_VERSION).length
-    &&Object.keys(DATA_VERSION).every(k=>k in LANGUAGES||(/-exam$/.test(k)&&k.slice(0,-5) in LANGUAGES)||/^lemma-[a-z]{2}$/.test(k)), canon(DATA_VERSION));   // även <kod>-exam (provfilen) och lemma-<språk> (grundformerna)
+    &&Object.keys(DATA_VERSION).every(k=>k in LANGUAGES||(/-exam$/.test(k)&&k.slice(0,-5) in LANGUAGES)||(/-texts$/.test(k)&&k.slice(0,-6) in LANGUAGES)||/^lemma-[a-z]{2}$/.test(k)||/^code-[a-z0-9]+$/.test(k)), canon(DATA_VERSION));   // även <kod>-exam, <kod>-texts och code-<namn> (provfilen) och lemma-<språk> (grundformerna)
 
   // 4. Schemaversion och migreringar
   { ok("migreringar: MIGRATIONS[1] är migrateRetired och S.v är senaste versionen", MIGRATIONS[1]===migrateRetired&&S_VERSION===MIGRATIONS.length-1&&S.v===S_VERSION, S.v);
@@ -1051,8 +1052,9 @@ def test_build_locks():
     ok("grammatik: områden och regler ligger i data/de.json", de.get("grammar", {}).get("topics") and de["grammar"].get("rules") and de["grammar"].get("adj"))
     m = re.search(r"const DATA_VERSION = (\{[^}]*\})", html)
     dv = json.loads(m.group(1)) if m else {}
-    wrong = [c for c in dv if dv[c] != hashlib.sha1((ROOT / "dist" / "data" / f"{c}.json").read_bytes()).hexdigest()[:10]]
-    ok("DATA_VERSION: varje kurs har sitt eget hash av sin datafil", dv and not wrong and set(dv) == {p.stem for p in (ROOT / "dist" / "data").glob("*.json")}, ", ".join(wrong))
+    dfile = lambda c: ROOT / "dist" / "data" / (f"{c}.js" if c.startswith("code-") else f"{c}.json")   # kodmodulerna är .js
+    wrong = [c for c in dv if not dfile(c).exists() or dv[c] != hashlib.sha1(dfile(c).read_bytes()).hexdigest()[:10]]
+    ok("DATA_VERSION: varje kurs har sitt eget hash av sin datafil", dv and not wrong and set(dv) == {p.stem for p in (ROOT / "dist" / "data").glob("*.js*")}, ", ".join(wrong))
     return "\n".join(out)
 
 
@@ -3250,6 +3252,7 @@ setTimeout(async()=>{ try{
   // En annan kurs: Tala väntar in provets taluppgifter
   await pick("de");
   ok("provfil: ny kurs börjar med indexet", !examReady()&&hasExam());
+  await loadCode("tala");   // Talas kod (data/code-tala.js) först, så att det är provfilen som väntas in
   openTalk(); ok("tala: väntar på provfilen", !!q("#exwait"));
   await wait(()=>q("[data-talk]"));
   ok("tala: provets taluppgifter efter hämtningen", examReady()&&qa('[data-talk^="x:"]').length===EX().tasks.filter(t=>exKind(t)==="speak").length&&qa('[data-talk^="x:"]').length>0);
@@ -3272,6 +3275,154 @@ setTimeout(async()=>{ try{
  document.body.insertAdjacentHTML("beforeend","<pre id=out>"+out.join("\n").replace(/</g,"&lt;")+"</pre>");
 },300);
 </script>"""
+
+
+# ---------------------------------------------------------------------------------------------------------
+# Texterna och sällan använd kod hämtas vid behov (2026-10-16): content.reading, listening och culture ligger i
+# dist/data/<kod>-texts.json (split_texts i build.py) och kursens fil har ett index; Tala, Tyck till och Föräldravyn
+# ligger i dist/data/code-<namn>.js (split_lazy_code) och index.html har stubbar. Listorna, Dagens pass och planen
+# klarar sig med indexet; en text, ett påbörjat pass efter omladdning och de lata skärmarna väntar in filen.
+# ---------------------------------------------------------------------------------------------------------
+SCENARIO_TEXTLAZY = r"""<script>
+const out=JSON.parse(sessionStorage.getItem("out")||"[]"); const q=s=>document.querySelector(s), qa=s=>[...document.querySelectorAll(s)];
+const ok=(name,cond,info="")=>out.push((cond?"OK   ":"FEL  ")+name+(info?"  ("+info+")":""));
+const wait=(f,ms=6000)=>new Promise(r=>{const t0=Date.now();(function p(){let v=false;try{v=f()}catch(e){} if(v||Date.now()-t0>ms)r(v);else setTimeout(p,50)})()});
+const fetched=re=>performance.getEntriesByType("resource").map(e=>e.name).filter(n=>re.test(n));
+const heavy=t=>["lines","gloss","questions","q","ask","model","modelSv"].some(k=>k in t);
+const pick=async c=>{ q("#course").value=c; q("#course").dispatchEvent(new Event("change")); await wait(()=>L.code===c&&L.base); };
+const done=()=>{ sessionStorage.clear(); ok("inga JavaScript-fel", !__err.length, __err.join(" ; "));
+  document.body.insertAdjacentHTML("beforeend","<pre id=out>"+out.join("\n").replace(/</g,"&lt;")+"</pre>"); };
+setTimeout(async()=>{ try{
+  await wait(()=>L&&L.base&&WORDS&&WORDS.length);
+  if(sessionStorage.getItem("phase")==="2"){
+    // Efter omladdningen: texterna är inte hämtade, men det påbörjade passet går att fortsätta
+    const r=S.run;
+    ok("återupptaget pass: läget efter omladdningen har passet, texterna är inte hämtade", L.code==="fr"&&!!r&&r.kind==="rq"&&r.done===1&&!textsReady()&&!fetched(/-texts\.json/).length, JSON.stringify(r&&{k:r.kind,d:r.done}));
+    renderStart(); q("#run-go").click();
+    ok("återupptaget pass: väntar på texterna", !!q("#lzwait")&&q("#app").textContent.includes("Hämtar texterna"));
+    await wait(()=>q(".opt"));
+    ok("återupptaget pass: fortsätter med rätt fråga efter hämtningen", textsReady()&&!!sess&&sess.kind==="rq"&&sess.done===1&&sess.total===r.total&&sess.cur.ref===r.queue[0].ref&&!!q(".opt"), sess&&sess.cur&&sess.cur.ref);
+    while(sess&&sess.cur){ answerMC(sess.d.opts.findIndex(o=>o.ok)); const b=q("#nx"); if(!b) break; b.click(); }
+    ok("återupptaget pass: kan spelas klart", !sess||!sess.cur, sess&&sess.done+"/"+sess.total);
+    // Dagens pass i en annan kurs: hämtar inte texterna
+    await pick("de");
+    startDaily(); ok("Dagens pass: startar utan textfilen", !!sess&&sess.dp&&!textsReady()&&!q("#lzwait")&&!fetched(/de-texts\.json/).length);
+    pauseSession();
+    ok("Dagens pass: dagens text väljs ur indexet", !!dailyText()&&!fetched(/de-texts\.json/).length&&!textsReady());
+    // Kultur i en kurs där texterna inte är hämtade
+    if((C().culture||[]).length){ const c0=C().culture[0]; cultureScreen(c0.id); ok("kultur: väntar på texterna", !!q("#lzwait"));
+      await wait(()=>q(".reading")); ok("kultur: texten och frågan visas efter hämtningen", textsReady()&&!!q(".reading")&&!!q(".opt")&&q("#app").textContent.includes(C().culture[0].q.q)); }
+    // Sällan använd kod: stubbar i index.html, filen hämtas när skärmen öppnas
+    ok("kod: Tala, Tyck till och Föräldravyn är inte hämtade", !LAZY_OK.tala&&!LAZY_OK.tycktill&&!LAZY_OK.parent&&typeof talkChat==="undefined"&&typeof sendTyckTill==="undefined"&&String(openTalk).includes("lazyRun")&&KINDS.talk.open===openTalk);
+    const ce=document.createElement;
+    document.createElement=function(t){ const e=ce.call(document,t); if(String(t).toLowerCase()==="script"){ const d=Object.getOwnPropertyDescriptor(HTMLScriptElement.prototype,"src");
+      Object.defineProperty(e,"src",{set(v){ d.set.call(e,String(v).replace("code-","saknas-")); },get(){ return d.get.call(e); }}); } return e; };
+    setView("fb"); ok("kod: Tyck till visar att den hämtas, flikarna kvar", !!q("#lzwait")&&!q("#tabs").hidden);
+    await wait(()=>q("#lzretry"));
+    ok("kod: offline ger Försök igen", !!q("#lzretry")&&q("#app").textContent.includes("kunde inte hämtas")&&!LAZY_OK.tycktill);
+    document.createElement=ce; q("#lzretry").click();
+    await wait(()=>q("#fbtext"));
+    ok("kod: Tyck till öppnas efter Försök igen", LAZY_OK.tycktill&&!!q("#fbtext")&&curView==="fb"&&typeof sendTyckTill==="function"&&!String(renderTyckTill).includes("lazyRun"));
+    const fc=fetched(/code-tycktill\.js/);
+    ok("kod: data/code-<namn>.js hämtas med hash", fc.length===1&&fc[0].includes("data/code-tycktill.js?v="+DATA_VERSION["code-tycktill"]), fc.join());
+    setView("ova"); KINDS.talk.open(); ok("kod: Tala visar att den hämtas", !!q("#lzwait"));
+    await wait(()=>q("[data-talk]"),10000);
+    ok("kod: Tala öppnas (efter provfilen)", LAZY_OK.tala&&!!q("[data-talk]")&&typeof talkChat==="function"&&!String(openTalk).includes("lazyRun"));
+    q("[data-talk]").click(); ok("kod: Tala fungerar", !!q("#ttext"));
+    renderParent(); await wait(()=>LAZY_OK.parent&&!q("#lzwait"));
+    ok("kod: Föräldravyn hämtas (utan ägare: topplistan)", LAZY_OK.parent&&typeof pCourse==="function"&&!q("#lzwait"));
+    return done();
+  }
+  // Fas 1: kursens fil har bara textindexet
+  if(L.code!=="fr") await pick("fr");
+  const c=C();
+  ok("textindex: kursens fil har bara indexet", Array.isArray(c.lazyTexts)&&c.lazyTexts.includes("reading")&&!textsReady()&&c.reading.length>10&&!c.reading.some(heavy)&&c.reading.every(t=>t.id&&t.title&&t.nq>0&&t.len>0), c.lazyTexts);
+  renderStart(); setView("stats"); setView("ova");
+  openReading(); const nr=c.reading.length;
+  ok("textindex: startsidan, statistiken och listan hämtar inte texterna", qa("[data-pick]").length===nr&&!fetched(/-texts\.json/).length&&!__err.length, qa("[data-pick]").length+" av "+nr);
+  if(L.plan){ openPlan(); ok("textindex: planen visas utan textfilen", !!q("#app .panel")&&!fetched(/-texts\.json/).length&&!__err.length); }
+  ok("textindex: dagens text väljs ur indexet", !!dailyText()&&!fetched(/-texts\.json/).length);
+  const f0=window.fetch; window.fetch=(u,...a)=>/-texts\.json/.test(String(u))?Promise.reject(new TypeError("Failed to fetch")):f0(u,...a);
+  const t=c.reading.find(t=>t.nq>=2);
+  readIntro(t.id); ok("lästext: visar att texterna hämtas", !!q("#lzwait")&&q("#app").textContent.includes("Hämtar texterna"));
+  await wait(()=>q("#lzretry"));
+  ok("lästext: offline ger ett vänligt meddelande med Försök igen", !!q("#lzretry")&&q("#app").textContent.includes("kunde inte hämtas")&&!textsReady()&&!!q("#quit"));
+  window.fetch=f0; q("#lzretry").click();
+  await wait(()=>q(".reading"));
+  const full=C().reading.find(x=>x.id===t.id), f=fetched(/-texts\.json/);
+  ok("lästext: öppnas med texten efter hämtningen", textsReady()&&!C().lazyTexts&&!!full.lines&&q(".reading").textContent.includes(tl(full.lines[0]).slice(0,20))&&full.questions.length===t.nq);
+  ok("lästext: data/<kod>-texts.json hämtas en gång, med hash", f.length===1&&f[0].includes("data/fr-texts.json?v="+DATA_VERSION["fr-texts"]), f.join());
+  q("#toq").click(); ok("lästext: frågorna", !!sess&&sess.kind==="rq"&&!!q(".opt"));
+  answerMC(sess.d.opts.findIndex(o=>o.ok)); q("#nx").click();
+  ok("lästext: påbörjat pass sparat", !!S.run&&S.run.kind==="rq"&&S.run.done===1);
+  pauseSession(); window.dispatchEvent(new Event("pagehide"));
+  openListening(); if(C().listening.length){ listenIntro(C().listening[0].id); ok("hörtext: öppnas direkt när texterna är hämtade", !q("#lzwait")&&!!q("#toq")&&fetched(/-texts\.json/).length===1); }
+  sessionStorage.setItem("keep","1"); sessionStorage.setItem("phase","2"); sessionStorage.setItem("out",JSON.stringify(out));
+  if(__err.length) return done();
+  location.reload();
+ }catch(e){ ok("undantag", false, e.message+" "+(e.stack||"").split("\n")[1]); done(); }
+},300);
+</script>"""
+
+
+def test_texts_split():
+    """build.py: texterna i egna filer (split_texts), indexet i kursens fil, kodmodulerna (split_lazy_code) och storleken."""
+    sys.path.insert(0, str(ROOT))
+    from build import split_texts, split_lazy_code, LAZY_TEXTS, MAX_DATA_KB
+    import json as _json
+    out = []
+    ok = lambda name, cond, info="": out.append(("OK   " if cond else "FEL  ") + name + (f"  ({info})" if info else ""))
+    data, page = ROOT / "dist" / "data", (ROOT / "dist" / "index.html").read_text(encoding="utf-8")
+    preview = (ROOT / "dist" / "preview.html").read_text(encoding="utf-8")
+    dv = _json.loads(re.search(r"const DATA_VERSION\s*=\s*(\{.*?\});", page).group(1))
+    codes = sorted(p.parent.name for p in (ROOT / "languages").glob("*/lang.js"))
+    bad, n = [], 0
+    for c in codes:
+        d = _json.loads((data / f"{c}.json").read_text(encoding="utf-8"))
+        cont, f = d.get("content", {}), data / f"{c}-texts.json"
+        types = [k for k in LAZY_TEXTS if cont.get(k)]
+        if not types:
+            if f.exists():
+                bad.append(c + ": textfil utan texter")
+            continue
+        n += 1
+        full = _json.loads(f.read_text(encoding="utf-8")) if f.exists() else None
+        if not full or cont.get("lazyTexts") != types or f"{c}-texts" not in dv:
+            bad.append(c + ": textfilen, lazyTexts eller DATA_VERSION saknas")
+            continue
+        for k in types:
+            if [t["id"] for t in cont[k]] != [t["id"] for t in full[k]] or any(h in t for t in cont[k] for h in LAZY_TEXTS[k]):
+                bad.append(f"{c}: indexet för {k} stämmer inte med textfilen")
+            if any(t.get("nq", 0) != len(x.get("questions", [])) for t, x in zip(cont[k], full[k]) if "questions" in x):
+                bad.append(f"{c}: nq i {k} stämmer inte")
+        if len((data / f"{c}.json").read_bytes()) > MAX_DATA_KB * 1024:
+            bad.append(f"{c}: datafilen är större än {MAX_DATA_KB} kB")
+    ok("texter: varje kurs med texter har data/<kod>-texts.json, ett index och en egen hash, och datafilerna under gränsen", not bad and n >= 15, bad)
+    idx, tx = split_texts({"reading": [{"id": "a", "sec": "k1", "title": "A", "lines": [{"fr": "Bonjour", "sv": "Hej"}, {"fr": "Salut"}], "gloss": {}, "questions": [{"q": "?"}]}],
+                           "culture": [{"id": "c", "title": "C", "lines": [], "q": {"q": "?"}, "ask": "x", "model": "m"}], "phrases": [{"id": "p"}]})
+    ok("texter: split_texts ger index med nq och len och lämnar annat innehåll", idx["reading"] == [{"id": "a", "sec": "k1", "title": "A", "nq": 1, "len": 12}]
+       and idx["culture"] == [{"id": "c", "title": "C", "len": 0}] and idx["phrases"] == [{"id": "p"}] and idx["lazyTexts"] == ["reading", "culture"]
+       and tx["reading"][0]["questions"] and "listening" not in tx, idx)
+    ok("texter: utan texter ingen textfil", split_texts({"phrases": [{"id": "p"}]}) == ({"phrases": [{"id": "p"}]}, None))
+    # Kodmodulerna
+    files = {p.stem: p.read_text(encoding="utf-8") for p in data.glob("code-*.js")}
+    want = {"code-tala": "talkChat", "code-tycktill": "sendTyckTill", "code-parent": "pCourse"}
+    ok("kod: Tala, Tyck till och Föräldravyn i egna filer med hash, inte i index.html men i preview.html",
+       all(k in files and files[k].rstrip().endswith(f'lazyDone("{k[5:]}");') and k in dv and f"function {fn}(" in files[k]
+           and f"function {fn}(" not in page and f"function {fn}(" in preview for k, fn in want.items()), sorted(files))
+    ok("kod: index.html har stubbar för det som anropas utifrån", all(f'function {f}(...a){{return lazyRun("{m}",()=>{f}(...a));}}' in page
+       for f, m in [("openTalk", "tala"), ("renderTyckTill", "tycktill"), ("renderParent", "parent")]) and 'return lazyRun("' not in preview)
+    pg, pv, mods, errs = split_lazy_code([("a.js", "const A=1;\nfunction f(){ return g()+A; }\n// @lazy m\nconst B=2, C=3;\nfunction g(){ return h()+B; }\nfunction h(){ return 1; }\n// @lazy-end\nf();"),
+                                          ("b.js", "// @lazy m\nfunction k(){ return C; }")])
+    ok("kod: split_lazy_code ger stubbar för funktioner som används utanför, modulens kod och preview i ordning",
+       not errs and 'function g(...a){return lazyRun("m",()=>g(...a));}' in pg and "function h(" not in pg and "B=2" not in pg and "f();" in pg
+       and mods["m"].endswith('lazyDone("m");') and "function k()" in mods["m"] and "B=2" in mods["m"]
+       and pv.index("function h()") < pv.index("f();") < pv.index("function k()") < pv.index('lazyDone("m")') and pv.count("lazyDone") == 1, (pg, errs))
+    errs2 = split_lazy_code([("a.js", "x(B, y);\n// @lazy m\nlet A=1, B=2;\ndefineKind('q',{});")])[3]
+    errs3 = split_lazy_code([("a.js", "f(C);\n// @lazy m\nconst C=g(1, D=2), E=3;")])[3]
+    ok("kod: en const/let som används utanför modulen och defineKind i modulen stoppar bygget", len(errs2) == 2 and "B" in errs2[0] and "defineKind" in errs2[1]
+       and len(errs3) == 1 and "C" in errs3[0] and "D" not in errs3[0], errs2 + errs3)
+    return "\n".join(out)
 
 
 def test_exam_split():
@@ -3614,6 +3765,7 @@ appReady().then(async()=>{ try{
 def main():
     text = run(SCENARIO) + "\n" + run(SCENARIO_DE) + "\n" + run(SCENARIO_FIXES) + "\n" + run(SCENARIO_SYNC, 30000) + "\n" + run_http(SCENARIO_HTTP)
     text += "\n" + run_http(SCENARIO_EXAMLAZY, 60000) + "\n" + test_exam_split()   # provet hämtas vid behov, minifiering, storlek (P2)
+    text += "\n" + run_http(SCENARIO_TEXTLAZY, 60000) + "\n" + test_texts_split()   # texterna och sällan använd kod hämtas vid behov
     text += "\n" + run(SCENARIO_ARCH, 30000) + "\n" + test_build_locks()   # arkitektur, del 6
     text += "\n" + run(SCENARIO_TENSE, 20000)   # tempusigenkänningen utan falska träffar (P3, 2026-10-02)
     text += "\n" + run(SCENARIO_SYNONYM, 30000)   # inga synonymer som felalternativ i flervalet (2026-10-02)

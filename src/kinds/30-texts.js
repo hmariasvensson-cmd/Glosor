@@ -1,6 +1,7 @@
 /* ---------- Hörförståelse och läsförståelse: det som båda delar ----------
    content/listening.json och content/reading.json = [{id, sec, title, lines: [{who, fr, sv}], gloss, questions: [{q, opts, a, type, why}]}]
-   (fr = texten på målspråket, se tl). Fråge-id "lq:<id>:<nr>" och "rq:<id>:<nr>". Sparat: S.tx[id] = {r, n, best, last}. */
+   (fr = texten på målspråket, se tl). Fråge-id "lq:<id>:<nr>" och "rq:<id>:<nr>". Sparat: S.tx[id] = {r, n, best, last}.
+   lines, gloss och questions finns först när ensureTexts (app.js) är klar; listorna läser bara indexet (id, sec, title). */
 const textById=(k,id)=>(C()[k==="lq"?"listening":"reading"]||[]).find(t=>t.id===id);
 const txStatus=id=>{const o=(S.tx||{})[id]; return o?`${o.best}/${o.n} rätt`:"";};
 function startTextQs(k,id){

@@ -8,6 +8,8 @@ Läser src/ och languages/<kod>/ och skriver:
   dist/index.html        sidan som publiceras till artefaktlänken (appen och kursinställningarna)
   dist/data/<kod>.json   varje kurs ord och innehåll, publiceras bredvid sidan och hämtas när kursen väljs
   dist/data/<kod>-exam.json  kursens provträning, hämtas först när provet behövs (bara kurser med exam.json)
+  dist/data/<kod>-texts.json  läs- och hörtexterna och kulturtexterna, hämtas första gången en text öppnas (split_texts)
+  dist/data/code-<namn>.js  sällan använd kod (// @lazy <namn> i src/), hämtas när skärmen öppnas (split_lazy_code)
   dist/data/lemma-<språk>.json  alla kursers ord i ett språk (grundformer till Mina ord), hämtas när eleven trycker på ord i en text
   dist/preview.html      samma sida med datan inbakad och ett komplett HTML-skal, för att öppna lokalt och för testerna
 
@@ -49,6 +51,39 @@ def split_exam(ex):
     return index, ex
 
 
+# Texterna i en egen fil (split_texts): de tunga fälten per innehållstyp, som bara behövs när en text öppnas.
+# Kursens datafil får ett index med resten av fälten (id, sec, title, kap, page …) plus nq (antal frågor) och
+# len (antal tecken på målspråket), så att listorna, Dagens pass (dailyText), planen och menyn klarar sig utan filen.
+# Hela posterna blir dist/data/<kod>-texts.json och ersätter indexet när appen hämtat den (ensureTexts i src/app.js).
+LAZY_TEXTS = {
+    "reading": ["lines", "gloss", "questions"],
+    "listening": ["lines", "gloss", "questions"],
+    "culture": ["lines", "gloss", "q", "ask", "model", "modelSv"],
+}
+
+
+def split_texts(content):
+    """Delar kursens content i (content med index, texterna) enligt LAZY_TEXTS. content ändras inte. Utan någon av
+    typerna blir texterna None och content oförändrat. Indexet har lazyTexts: [typerna i filen]."""
+    types = [k for k in LAZY_TEXTS if isinstance(content.get(k), list) and content[k]]
+    if not types:
+        return content, None
+    out, texts = dict(content), {}
+    for k in types:
+        heavy = LAZY_TEXTS[k]
+        def index(t):
+            x = {f: v for f, v in t.items() if f not in heavy}
+            if isinstance(t.get("questions"), list):
+                x["nq"] = len(t["questions"])
+            if isinstance(t.get("lines"), list):
+                x["len"] = sum(len(str(l.get("fr", ""))) for l in t["lines"] if isinstance(l, dict))
+            return x
+        out[k] = [index(t) for t in content[k]]
+        texts[k] = content[k]
+    out["lazyTexts"] = types
+    return out, texts
+
+
 def lemma_lang(code, conf):
     """Språket för grundformerna: de två första bokstäverna i tts ("de-DE" → "de"), som lemmaLang() i 03-lemma.js."""
     return str(conf.get("tts") or code)[:2].lower()
@@ -82,11 +117,12 @@ JS_REGEX_AFTER = {"return", "typeof", "case", "do", "else", "in", "of", "new", "
 JS_SPACE = " \t\r\n\f\v ﻿"
 
 
-def minify_js(src):
+def minify_js(src, words=None):
     """Tar bort kommentarer och onödiga blanktecken i JavaScript. Strängar, mallsträngar (även ${…} i flera nivåer)
     och reguljära uttryck lämnas orörda. En radbrytning blir kvar där den kan betyda något (automatiska semikolon),
     och tas bara bort efter { ( [ , ; eller före ) ] } , ;. Två ord eller två av + - / skiljs alltid åt, så
-    beteendet ändras inte. Stoppar (JSParseError) på en sträng, kommentar eller ett reguljärt uttryck som inte slutar."""
+    beteendet ändras inte. Stoppar (JSParseError) på en sträng, kommentar eller ett reguljärt uttryck som inte slutar.
+    words: en mängd som får alla ord (namn) i koden utanför strängar och kommentarer (även i ${…}), se split_lazy_code."""
     out, i, n = [], 0, len(src)
     ws, last, last_word = None, "", ""   # väntande blanktecken (None, " ", "\n"); sista tecknet och ordet som skrivits
     stack = []                           # öppna {: True = ${ i en mallsträng, False = vanlig klammer
@@ -105,6 +141,8 @@ def minify_js(src):
         ws = None
         out.append(tok)
         last, last_word = tok[-1], word
+        if word and words is not None:
+            words.add(word)
 
     def template(j):   # från efter ` eller } till och med ` (False) eller ${ (True)
         while j < n:
@@ -184,6 +222,100 @@ def minify_js(src):
             emit(c)
             i += 1
     return "".join(out)
+
+
+LAZY_START, LAZY_END = "// @lazy ", "// @lazy-end"
+JS_DECL = re.compile(r"^(?:async\s+)?function(?:\s*\*\s*|\s+)([A-Za-z_$][\w$]*)|^(?:const|let|var)\s+([A-Za-z_$][\w$]*)", re.M)
+JS_MORE_DECL = re.compile(r"\s*([A-Za-z_$][\w$]*)\s*=")
+
+
+def more_decls(line):
+    """Fler namn i en deklaration på en rad (let a=1, b=2): namnen efter ett kommatecken utanför parenteser, klamrar
+    och strängar. Raden slutar vid ett ; utanför dem. Bara för kontrollen i split_lazy_code."""
+    out, depth, i, n = [], 0, 0, len(line)
+    while i < n:
+        c = line[i]
+        if c in "'\"`":
+            j = i + 1
+            while j < n and line[j] != c:
+                j += 2 if line[j] == "\\" else 1
+            i = j + 1
+            continue
+        if c in "([{":
+            depth += 1
+        elif c in ")]}":
+            depth -= 1
+        elif c == ";" and depth == 0:
+            break
+        elif c == "," and depth == 0:
+            m = JS_MORE_DECL.match(line, i + 1)
+            if m:
+                out.append(m.group(1))
+        i += 1
+    return out
+
+
+def split_lazy_code(sources):
+    """Sällan använd kod hämtas först när den behövs. I källfilerna står den mellan en rad "// @lazy <namn>" och
+    "// @lazy-end" (eller filens slut); flera delar med samma namn blir en modul. Ger (sidans kod, preview-kod,
+    {namn: modulens kod}, fel):
+      - sidans kod (index.html): allt utom modulerna, och i stället för varje modul en stubbe per funktion som annan kod
+        (sidan eller en annan modul) använder: function f(...a){return lazyRun("<namn>",()=>f(...a));}. lazyRun (app.js)
+        hämtar data/code-<namn>.js med en <script>-tagg; dess funktioner ersätter stubbarna (samma globala namn).
+      - preview-koden (preview.html och testerna): allt i ordning, som förut, med lazyDone("<namn>") efter modulens sista del.
+      - modulens kod slutar med lazyDone("<namn>"), så att lazyRun vet att filen kördes till slutet.
+    Modulens namn på översta nivån läses ur rader som börjar i kolumn 0 (function, async function, const, let, var).
+    Fel: en const/let i modulen som annan kod använder (kan inte ersättas av en stubbe), och defineKind i en modul
+    (registret måste vara komplett när sidan startar). Stubbens returvärde är inte funktionens, så bara funktioner som
+    öppnar en skärm (openTalk, renderTyckTill, renderParent) passar."""
+    segs, errors = [], []
+    for name, text in sources:
+        mod, buf = None, []
+        for line in text.split("\n"):
+            st = line.strip()
+            if st.startswith(LAZY_END) or st.startswith(LAZY_START):
+                segs.append((mod, "\n".join(buf)))
+                buf = []
+                mod = None if st.startswith(LAZY_END) else st[len(LAZY_START):].split()[0]
+                if mod is not None and not re.fullmatch(r"[a-z0-9]+", mod):
+                    errors.append(f"{name}: modulnamnet i '{st}' ska vara a–z och 0–9")
+                continue
+            buf.append(line)
+        segs.append((mod, "\n".join(buf)))
+    mods = list(dict.fromkeys(m for m, _ in segs if m))
+    code = {m: "\n".join(t for mm, t in segs if mm == m) for m in mods}
+    def words_of(t):
+        w = set()
+        minify_js(t, w)
+        return w
+    eager_words = words_of("\n".join(t for m, t in segs if m is None))
+    mod_words = {m: words_of(code[m]) for m in mods}
+    stubs = {}
+    for m in mods:
+        funcs, others = [], []
+        for d in JS_DECL.finditer(code[m]):
+            if d.group(1):
+                funcs.append(d.group(1))
+            else:
+                others.append(d.group(2))
+                others += more_decls(code[m][d.start():].split("\n", 1)[0])   # let a=1, b=2
+        used = eager_words.union(*[mod_words[o] for o in mods if o != m])
+        bad = sorted(set(others) & used)
+        if bad:
+            errors.append(f"modulen {m} (// @lazy {m}): {', '.join(bad)} används utanför modulen men är inte en funktion; flytta dem före // @lazy")
+        if re.search(r"(?<![\w$.])defineKind\s*\(", code[m]):
+            errors.append(f"modulen {m} (// @lazy {m}): defineKind måste stå utanför modulen")
+        stubs[m] = "\n".join(f'function {f}(...a){{return lazyRun("{m}",()=>{f}(...a));}}' for f in dict.fromkeys(funcs) if f in used)
+    page, seen = [], set()
+    for m, t in segs:
+        if m is None:
+            page.append(t)
+        elif m not in seen:
+            seen.add(m)
+            page.append(stubs[m])
+    last = {m: i for i, (m, _) in enumerate(segs) if m}
+    preview = "\n".join(t + (f'\nlazyDone("{m}");' if m and last[m] == i else "") for i, (m, t) in enumerate(segs))
+    return "\n".join(page), preview, {m: code[m] + f'\nlazyDone("{m}");' for m in mods}, errors
 
 
 def minify_css(src):
@@ -1668,24 +1800,39 @@ def main():
         if isinstance(ex, dict) and ex.get("tasks"):
             course_data[c]["content"]["exam"], full = split_exam(ex)
             course_data[f"{c}-exam"] = full
+    # Läs- och hörtexterna och kulturtexterna (LAZY_TEXTS) blir dist/data/<kod>-texts.json, som appen hämtar första gången
+    # en text öppnas (ensureTexts i app.js); kursens fil får ett index (split_texts). Nyckeln i DATA_VERSION är "<kod>-texts".
+    for c in codes:
+        idx, texts = split_texts(course_data[c].get("content", {}))
+        if texts:
+            course_data[c]["content"] = idx
+            course_data[f"{c}-texts"] = texts
     # Grundformerna för Mina ord (lemmaOf i src/kinds/03-lemma.js): alla kursers ord i samma språk, en fil per språk,
     # dist/data/lemma-<språk>.json (lemma_files). Appen hämtar den först när eleven trycker på ord i en text, så att en
     # böjd form känns igen även om grundformen bara finns i en kurs i kedjan som inte har öppnats. Nyckeln i
     # DATA_VERSION är "lemma-<språk>". Kursernas egna filer ändras inte.
     course_data.update(lemma_files(codes, confs, course_data))
     data_json = {c: json.dumps(d, ensure_ascii=False, separators=(",", ":")) for c, d in course_data.items()}
-    dataversion = {c: hashlib.sha1(data_json[c].encode()).hexdigest()[:10] for c in data_json}
     page = (ROOT / "src" / "page.html").read_text(encoding="utf-8")
     # Koden och stilen minifieras (kommentarer och blanktecken, se minify_js), så att index.html hålls liten.
     # python3 build.py --no-minify ger läsbar kod, t.ex. för att felsöka med radnummer.
     mini = "--no-minify" not in sys.argv
     mjs, mcss = (minify_js, minify_css) if mini else (str, str)
+    # Sällan använd kod (// @lazy <namn> i källfilerna) blir dist/data/code-<namn>.js, som appen hämtar när den behövs
+    # (lazyRun i app.js); preview.html har all kod som förut. Nyckeln i DATA_VERSION är "code-<namn>".
+    app_files = [ROOT / "src" / "app.js", *sorted((ROOT / "src" / "kinds").glob("*.js")), ROOT / "src" / "feedback.js", ROOT / "src" / "main.js"]
+    app_page, app_preview, lazy_code, errs = split_lazy_code([(str(f.relative_to(ROOT)), f.read_text(encoding="utf-8").strip()) for f in app_files])
+    if errs:
+        print("\nBygget avbröts:", *errs, sep="\n  ")
+        sys.exit(1)
+    code_files = {f"code-{m}": mjs(t) for m, t in lazy_code.items()}
+    dataversion = {c: hashlib.sha1(t.encode()).hexdigest()[:10] for c, t in {**data_json, **code_files}.items()}
     parts = {
         "TITLE": title,
         "STYLE": mcss((ROOT / "src" / "style.css").read_text(encoding="utf-8").strip()),
         "LANGUAGES": mjs("\n".join(lang_js)),
-        # src/kinds/*.js (en fil per övningstyp) i namnordning, mellan app.js och feedback.js
-        "APP": mjs("\n".join(f.read_text(encoding="utf-8").strip() for f in [ROOT / "src" / "app.js", *sorted((ROOT / "src" / "kinds").glob("*.js")), ROOT / "src" / "feedback.js", ROOT / "src" / "main.js"])),
+        # src/kinds/*.js (en fil per övningstyp) i namnordning, mellan app.js och feedback.js; utan modulerna (split_lazy_code)
+        "APP": mjs(app_page),
         "BUILT": datetime.datetime.now().strftime("%Y-%m-%d %H:%M"),
         "DATAVERSION": js_string(dataversion),
         "UPCOMING": js_string([u for u in upcoming if u.get("code") not in confs]),
@@ -1697,28 +1844,33 @@ def main():
     # preview.html har datan inbakad, så att den går att öppna direkt från disken och i testerna
     safe = {c: data_json[c].replace("</", "<\\/") for c in data_json}
     inline = "\n".join(f"INLINE_DATA[{json.dumps(c)}] = {safe[c]};" for c in data_json)
-    preview = re.sub(r"\{\{(\w+)\}\}", lambda m: parts[m.group(1)] + ("\n" + inline if m.group(1) == "LANGUAGES" else ""), page)
+    parts_preview = {**parts, "APP": mjs(app_preview)}
+    preview = re.sub(r"\{\{(\w+)\}\}", lambda m: parts_preview[m.group(1)] + ("\n" + inline if m.group(1) == "LANGUAGES" else ""), page)
 
     DIST.mkdir(exist_ok=True)
     (DIST / "data").mkdir(exist_ok=True)
-    for old in (DIST / "data").glob("*.json"):
+    for old in [*(DIST / "data").glob("*.json"), *(DIST / "data").glob("*.js")]:
         old.unlink()
     for c in data_json:
         (DIST / "data" / f"{c}.json").write_text(data_json[c], encoding="utf-8")
+    for c in code_files:
+        (DIST / "data" / f"{c}.js").write_text(code_files[c], encoding="utf-8")
     (DIST / "index.html").write_text(html, encoding="utf-8")
     (DIST / "preview.html").write_text(SKELETON_HEAD + preview + "\n</body></html>\n", encoding="utf-8")
     kb = lambda c: len(data_json[c].encode()) // 1024
     print(f"Klart: dist/index.html ({len(html.encode()) // 1024} kB) och dist/data/ ("
-          + ", ".join(f"{c} {kb(c)} kB" + (f" + prov {kb(c + '-exam')} kB" if c + "-exam" in data_json else "") for c in codes)
-          + "; grundformer " + ", ".join(f"{c} {kb(c)} kB" for c in data_json if c.startswith("lemma-")) + ")")
-    print(f"Publicera med alla {len(data_json)} filer i dist/data/ i files (även *-exam.json och lemma-*.json), se docs/ARKITEKTUR.md")
+          + ", ".join(f"{c} {kb(c)} kB" + (f" + prov {kb(c + '-exam')} kB" if c + "-exam" in data_json else "")
+                      + (f" + texter {kb(c + '-texts')} kB" if c + "-texts" in data_json else "") for c in codes)
+          + "; grundformer " + ", ".join(f"{c} {kb(c)} kB" for c in data_json if c.startswith("lemma-"))
+          + "; kod " + ", ".join(f"{c} {len(t.encode()) // 1024} kB" for c, t in code_files.items()) + ")")
+    print(f"Publicera med alla {len(data_json) + len(code_files)} filer i dist/data/ i files (även *-exam.json, *-texts.json, lemma-*.json och code-*.js), se docs/ARKITEKTUR.md")
     # Sidan laddas på telefon: varna innan index.html eller en datafil växer förbi gränserna (2026-09-29: 456 kB före och cirka 370 kB
     # efter att verbtabellerna flyttats till datafilerna; 2026-09-30: 478 kB före och cirka 360 kB efter minifieringen)
     if len(html.encode()) > MAX_PAGE_KB * 1024:
         print(f"Varning: dist/index.html är större än {MAX_PAGE_KB} kB; flytta data från lang.js till datafilen eller dela upp koden")
     for c in data_json:
         if len(data_json[c].encode()) > MAX_DATA_KB * 1024:
-            print(f"Varning: dist/data/{c}.json är större än {MAX_DATA_KB} kB; överväg att hämta prov- eller textdelen separat")
+            print(f"Varning: dist/data/{c}.json är större än {MAX_DATA_KB} kB; överväg att flytta fler tunga innehållstyper till textfilen (LAZY_TEXTS)")
 
 
 if __name__ == "__main__":
