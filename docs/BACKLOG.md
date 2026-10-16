@@ -87,6 +87,3 @@ Granskningspunkterna nedan är avgjorda av granskningsagenterna 2026-10-01 (vers
 ## Öppet efter 2026-10-05 (version 40)
 
 - **P3: Musiktermerna** kan fortfarande kontrolleras med en musiklärare (franska 3, Tyska 4, Tyska 5).
-- **P3: Tyska 5:s datafil** är 1 593 kB, nära varningsgränsen `MAX_DATA_KB` (1 600 kB, en egen varning, ingen teknisk gräns). Största delen är Tatoeba-meningarna (294 kB); de kan hämtas separat som provfilen (`ensureExam`) om filen växer mer, men meningsövningarna, Dagens pass och återupptagna pass måste då vänta på dem.
-- **P3: Sidans storlek:** `dist/index.html` är 419 kB (2026-10-12), precis under varningsgränsen `MAX_PAGE_KB` (420 kB). Nästa större funktion ger varning; gränsen är vår egen (okomprimerat), ingen teknisk gräns.
-- **P3: Franska 3:s datafil** är 1 921 kB (2026-10-12, varning), varav texter och övningar 1 398 kB, efter kapitel 5–12. Kan delas upp som provfilen om den växer mer.

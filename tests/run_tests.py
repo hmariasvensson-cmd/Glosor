@@ -3322,10 +3322,11 @@ setTimeout(async()=>{ try{
     const ce=document.createElement;
     document.createElement=function(t){ const e=ce.call(document,t); if(String(t).toLowerCase()==="script"){ const d=Object.getOwnPropertyDescriptor(HTMLScriptElement.prototype,"src");
       Object.defineProperty(e,"src",{set(v){ d.set.call(e,String(v).replace("code-","saknas-")); },get(){ return d.get.call(e); }}); } return e; };
+    const cf=window.fetch; window.fetch=(u,...x)=>/code-/.test(String(u))?Promise.reject(new TypeError("Failed to fetch")):cf(u,...x);
     setView("fb"); ok("kod: Tyck till visar att den hämtas, flikarna kvar", !!q("#lzwait")&&!q("#tabs").hidden);
     await wait(()=>q("#lzretry"));
     ok("kod: offline ger Försök igen", !!q("#lzretry")&&q("#app").textContent.includes("kunde inte hämtas")&&!LAZY_OK.tycktill);
-    document.createElement=ce; q("#lzretry").click();
+    document.createElement=ce; window.fetch=cf; q("#lzretry").click();
     await wait(()=>q("#fbtext"));
     ok("kod: Tyck till öppnas efter Försök igen", LAZY_OK.tycktill&&!!q("#fbtext")&&curView==="fb"&&typeof sendTyckTill==="function"&&!String(renderTyckTill).includes("lazyRun"));
     const fc=fetched(/code-tycktill\.js/);
@@ -3334,7 +3335,12 @@ setTimeout(async()=>{ try{
     await wait(()=>q("[data-talk]"),10000);
     ok("kod: Tala öppnas (efter provfilen)", LAZY_OK.tala&&!!q("[data-talk]")&&typeof talkChat==="function"&&!String(openTalk).includes("lazyRun"));
     q("[data-talk]").click(); ok("kod: Tala fungerar", !!q("#ttext"));
+    // Reserv: om sidans säkerhetsregler stoppar <script src> hämtas koden med fetch och körs inbäddad
+    document.createElement=function(t){ const e=ce.call(document,t); if(String(t).toLowerCase()==="script"){ const d=Object.getOwnPropertyDescriptor(HTMLScriptElement.prototype,"src");
+      Object.defineProperty(e,"src",{set(v){ d.set.call(e,String(v).replace("code-","saknas-")); },get(){ return d.get.call(e); }}); } return e; };
     renderParent(); await wait(()=>LAZY_OK.parent&&!q("#lzwait"));
+    document.createElement=ce;
+    ok("kod: blockerat <script src> laddas via fetch", LAZY_OK.parent&&fetched(/code-parent\.js/).length>=1);
     ok("kod: Föräldravyn hämtas (utan ägare: topplistan)", LAZY_OK.parent&&typeof pCourse==="function"&&!q("#lzwait"));
     return done();
   }

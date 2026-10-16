@@ -2,6 +2,13 @@
 
 Punkter som har flyttats från [`BACKLOG.md`](BACKLOG.md) när de byggdes. **Referens** anger backloggens rubrik och prioritet. **Commit** anger var ändringen finns i git. **Publicerat** anger versionen av artefakten på https://claude.ai/artifact/YBQv8j4qXQQLuPwLAWt5mP.
 
+## 2026-10-16 (publicerat som version 51)
+
+- **Texterna hämtas vid behov** (backloggen P3, datafilernas storlek). Läs-, hör- och kulturtexterna ligger i `dist/data/<kod>-texts.json` och hämtas när en text öppnas eller ett påbörjat pass med textfrågor fortsätts (`ensureTexts`, `LAZY_TEXTS`/`split_texts` i build.py). Franska 3:s datafil 1937 → 1470 kB, alla kurser 20–35 % mindre.
+- **Sällan använd kod hämtas vid behov** (backloggen P3, sidans storlek): Tala, Tyck till och föräldravyns visning ligger i `dist/data/code-*.js` (`// @lazy`-markeringar, `split_lazy_code`, `loadCode`/`lazyRun`), med reserv via fetch om `<script src>` stoppas. `index.html` 419 → 389 kB.
+- **Italienska 3: provträning CELI 1 (A2)**, 17 uppgifter (läsa, lyssna, lucktext, skriva, tala). Stickprovsgranskning av 40 ord och 16 uppgifter: en tvetydig lucka i berättelsen it3-s-k2 rättad.
+- Publiceras nu med 69 filer i `dist/data/`. Testerna: 2259 OK.
+
 ## 2026-10-12 (publicerat som version 50)
 
 - **Escalade: minigrammatiken s. 200–201** (backloggen P1, fler sidor ur boken) är fotad och inlagd i den privata bokmappen. Nu saknas bara s. 192–193.
