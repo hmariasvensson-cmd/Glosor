@@ -1,0 +1,384 @@
+{
+ "name": "CELI 1 (A2)",
+ "level": "A2",
+ "pass": 60,
+ "note": "Övningar i samma format som CELI 1 (A2, Università per Stranieri di Perugia), skrivna för appen med Italienska 3:s ord. Inte officiellt material. CELI 1 är samma prov som Italienska 4 tränar mot; här är texterna lite kortare och håller sig till kursens teman (resor, skola och jobb, nyheter, hälsa, miljö, stad och land, musik, känslor). På provet görs läsförståelse och skrivande under sammanlagt två timmar, hörförståelsen tar 20 minuter och den muntliga delen ungefär tio minuter inför en examinator. Lucktexten (B.1) är en egen del här, som i Italienska 2, så att den rättas direkt och skrivdelen bara innehåller texter som Claude bedömer. På provet bygger A.1 på bilder; här är bilderna emoji och den muntliga bilduppgiften beskrivs i ord.",
+ "parts": [
+  {"id": "lettura", "name": "Comprensione della lettura", "sv": "Läsa", "time": 60},
+  {"id": "ascolto", "name": "Comprensione dell'ascolto", "sv": "Lyssna", "time": 20},
+  {"id": "completare", "name": "Produzione scritta: completare un testo", "sv": "Skriva: lucktext", "time": 15},
+  {"id": "scrittura", "name": "Produzione di testi scritti", "sv": "Skriva", "time": 45},
+  {"id": "orale", "name": "Produzione orale", "sv": "Tala", "time": 10}
+ ],
+ "approxWords": true,
+ "tasks": [
+  {
+   "id": "it3-le-1",
+   "part": "lettura",
+   "teil": "A.1",
+   "type": "pick",
+   "title": "Frasi e immagini",
+   "time": 8,
+   "instr": "Läs meningarna och välj den bild som passar till varje mening.",
+   "items": [
+    {"q": "Domani andiamo al mare: porta l'ombrellone e il costume!", "sv": "I morgon åker vi till havet: ta med parasollet och baddräkten!", "opts": ["berg", "strand", "skola", "museum"], "a": 1, "why": "«al mare … l'ombrellone» = till havet, stranden."},
+    {"q": "Il treno per Napoli parte dal binario 4 tra dieci minuti.", "sv": "Tåget till Neapel avgår från spår 4 om tio minuter.", "opts": ["buss", "flyg", "tag", "bat"], "a": 2, "why": "«il treno … dal binario 4» = tåget från spår 4."},
+    {"q": "Stasera ci sarà un temporale: meglio restare a casa.", "sv": "I kväll blir det åskväder: bäst att stanna hemma.", "opts": ["sol", "aska", "sno", "vind"], "a": 1, "why": "Il temporale = åskväder."},
+    {"q": "Ho mal di gola, passo in farmacia prima di cena.", "sv": "Jag har ont i halsen, jag går förbi apoteket före middagen.", "opts": ["bank", "post", "apotek", "hotell"], "a": 2, "why": "La farmacia = apoteket."},
+    {"q": "Mio fratello suona il pianoforte da quando aveva sei anni.", "sv": "Min bror har spelat piano sedan han var sex år.", "opts": ["gitarr", "piano", "fotboll", "bok"], "a": 1, "why": "Il pianoforte = piano."},
+    {"q": "La lezione di yoga comincia alle nove e mezza.", "sv": "Yogalektionen börjar halv tio.", "opts": ["kl9", "kl10.30", "kl9.30", "kl7.30"], "a": 2, "why": "«alle nove e mezza» = 9.30, halv tio."}
+   ]
+  },
+  {
+   "id": "it3-le-2",
+   "part": "lettura",
+   "teil": "A.2",
+   "title": "Avvisi e messaggi",
+   "time": 12,
+   "instr": "Du läser fem korta texter: meddelanden och annonser. Välj det alternativ som passar bäst till varje text.",
+   "lines": [
+    {"fr": "1. TRAGHETTI PER LA SARDEGNA – A causa del vento forte, oggi il traghetto delle 15 per Olbia non parte. I passeggeri possono partire con la nave delle 22 senza pagare di più.", "sv": "1. FÄRJOR TILL SARDINIEN – På grund av den hårda vinden avgår inte färjan kl. 15 till Olbia i dag. Passagerarna kan resa med båten kl. 22 utan att betala mer."},
+    {"fr": "2. Liceo Galilei – Gli studenti dell'ultimo anno che vogliono fare pratica in un'azienda durante l'estate devono consegnare il modulo in segreteria entro il 15 maggio.", "sv": "2. Liceo Galilei – Elever i sista årskursen som vill göra praktik på ett företag under sommaren måste lämna in blanketten på expeditionen senast 15 maj."},
+    {"fr": "3. Comune di Valverde – Raccolta differenziata: da gennaio la plastica e il vetro si buttano insieme nel cestino blu. La carta va sempre nel cestino giallo.", "sv": "3. Valverde kommun – Sopsortering: från januari slängs plast och glas tillsammans i den blå tunnan. Papper ska som förut i den gula tunnan."},
+    {"fr": "4. Cercasi bagnino per la spiaggia «Lido Azzurro», da giugno a settembre. È necessario saper nuotare molto bene. Paga buona, giorno libero il lunedì.", "sv": "4. Livräddare sökes till stranden «Lido Azzurro», juni till september. Man måste kunna simma mycket bra. Bra lön, ledig dag på måndagar."},
+    {"fr": "5. Ciao ragazzi! Domenica la partita di pallavolo è alle 10 e non nel pomeriggio, perché dopo pranzo il campo è occupato. Ci vediamo davanti allo spogliatoio alle nove e mezza. L'allenatore", "sv": "5. Hej allihop! På söndag är volleybollmatchen kl. 10 och inte på eftermiddagen, eftersom planen är upptagen efter lunch. Vi ses utanför omklädningsrummet halv tio. Tränaren"}
+   ],
+   "qs": [
+    {"q": "Testo 1: Che cosa possono fare i passeggeri del traghetto delle 15?", "opts": ["Partire la sera allo stesso prezzo", "Avere indietro i soldi", "Partire domani mattina"], "a": 0, "why": "«possono partire con la nave delle 22 senza pagare di più»."},
+    {"q": "Testo 2: Che cosa devono fare gli studenti che vogliono fare pratica?", "opts": ["Trovare un'azienda da soli", "Parlare con il preside", "Consegnare un modulo entro metà maggio"], "a": 2, "why": "«devono consegnare il modulo … entro il 15 maggio»."},
+    {"q": "Testo 3: Dove si butta il vetro da gennaio?", "opts": ["Nel cestino giallo", "Insieme alla plastica", "Insieme alla carta"], "a": 1, "why": "«la plastica e il vetro si buttano insieme nel cestino blu»."},
+    {"q": "Testo 4: Che cosa serve per questo lavoro?", "opts": ["Saper nuotare bene", "Avere la patente", "Lavorare anche il lunedì"], "a": 0, "why": "«È necessario saper nuotare molto bene»."},
+    {"q": "Testo 5: A che ora devono arrivare i giocatori?", "opts": ["Alle 10", "Alle 9.30", "Dopo pranzo"], "a": 1, "why": "«Ci vediamo … alle nove e mezza»; matchen börjar kl. 10."}
+   ],
+   "gloss": {
+    "modulo": {"t": "il modulo", "sv": "blankett", "g": "m"},
+    "segreteria": {"t": "la segreteria", "sv": "expedition, kansli", "g": "f"},
+    "entro": {"t": "entro", "sv": "senast, inom", "g": ""}
+   }
+  },
+  {
+   "id": "it3-le-3",
+   "part": "lettura",
+   "teil": "A.3",
+   "type": "match",
+   "title": "Chi cerca che cosa?",
+   "time": 10,
+   "instr": "Fem personer letar efter något. Läs annonserna A–H och välj den annons som passar varje person. Tre annonser blir över.",
+   "opts": [
+    {"fr": "Corso di fotografia in un borgo medievale: tre giorni a giugno con un fotografo famoso. Porta la tua macchina fotografica!", "sv": "Fotokurs i en medeltida by: tre dagar i juni med en känd fotograf. Ta med din kamera!"},
+    {"fr": "Il coro dei giovani cerca nuove voci, anche senza esperienza. Le prove sono il mercoledì sera.", "sv": "Ungdomskören söker nya röster, även utan erfarenhet. Repetitionerna är på onsdagskvällar."},
+    {"fr": "Affittasi monolocale in centro storico, a due passi dalla stazione. 500 euro al mese, bollette comprese.", "sv": "Etta uthyres i gamla stan, ett stenkast från stationen. 500 euro i månaden, räkningar ingår."},
+    {"fr": "Escursione sul vulcano con una guida: partenza alle 6, ritorno alle 14. Sono necessarie scarpe da montagna.", "sv": "Vulkanutflykt med guide: avfärd kl. 6, åter kl. 14. Kängor krävs."},
+    {"fr": "Cerchiamo volontari per pulire la spiaggia dalla plastica, sabato mattina. Guanti e sacchi li portiamo noi.", "sv": "Vi söker volontärer som vill rensa stranden från plast, lördag förmiddag. Handskar och säckar tar vi med."},
+    {"fr": "Museo d'arte contemporanea: ogni giovedì sera l'ingresso è gratis per i giovani sotto i 25 anni.", "sv": "Museet för samtidskonst: varje torsdagskväll är det gratis inträde för unga under 25 år."},
+    {"fr": "Lezioni private di matematica e fisica per studenti del liceo, anche online. La prima lezione è gratis.", "sv": "Privatlektioner i matematik och fysik för gymnasieelever, även på nätet. Första lektionen är gratis."},
+    {"fr": "Palestra in periferia: corsi di yoga e ginnastica per chi ha poco tempo, anche alle 7 di mattina.", "sv": "Gym i förorten: kurser i yoga och gymnastik för den som har ont om tid, även kl. 7 på morgonen."}
+   ],
+   "items": [
+    {"q": "Giulia vuole fare qualcosa di utile per l'ambiente nel fine settimana.", "sv": "Giulia vill göra något nyttigt för miljön i helgen.", "a": 4, "why": "E: rensa stranden från plast på lördag."},
+    {"q": "Paolo ama cantare, ma non ha mai studiato musica.", "sv": "Paolo älskar att sjunga, men han har aldrig studerat musik.", "a": 1, "why": "B: kören söker röster, även utan erfarenhet."},
+    {"q": "Sara vuole vedere quadri moderni, ma ha pochi soldi.", "sv": "Sara vill se modern konst, men hon har ont om pengar.", "a": 5, "why": "F: gratis inträde på torsdagskvällar för unga."},
+    {"q": "Luca deve fare la maturità e va male in fisica.", "sv": "Luca ska ta studenten och går dåligt i fysik.", "a": 6, "why": "G: privatlektioner i matematik och fysik."},
+    {"q": "Marta cerca una casa piccola vicino ai treni.", "sv": "Marta letar efter en liten bostad nära tågen.", "a": 2, "why": "C: en etta nära stationen."}
+   ]
+  },
+  {
+   "id": "it3-le-4",
+   "part": "lettura",
+   "teil": "A.2",
+   "title": "Un'email dalla Sicilia",
+   "time": 15,
+   "instr": "Läs mejlet och välj rätt svar på frågorna.",
+   "lines": [
+    {"fr": "Cara Anna,", "sv": "Kära Anna,"},
+    {"fr": "ti scrivo dalla Sicilia, dove sono in vacanza con i miei genitori da una settimana. Siamo partiti da Napoli con il traghetto e il viaggio è durato tutta la notte, ma io ho dormito benissimo.", "sv": "jag skriver till dig från Sicilien, där jag har varit på semester med mina föräldrar i en vecka. Vi åkte från Neapel med färjan och resan tog hela natten, men jag sov jättebra."},
+    {"fr": "I primi giorni siamo stati a Palermo. La città era piena di turisti e faceva un caldo incredibile, ma il centro storico è stupendo e il cibo è buonissimo: ho mangiato gli arancini ogni giorno!", "sv": "De första dagarna var vi i Palermo. Staden var full av turister och det var otroligt varmt, men gamla stan är fantastisk och maten är jättegod: jag åt arancini varje dag!"},
+    {"fr": "Poi abbiamo affittato una macchina e abbiamo fatto il giro dell'isola. Mio padre guidava, mia madre leggeva la guida e io facevo le foto dal finestrino.", "sv": "Sedan hyrde vi en bil och åkte runt ön. Pappa körde, mamma läste guideboken och jag tog bilder genom bilfönstret."},
+    {"fr": "Mercoledì siamo saliti sull'Etna con una guida. Siamo partiti alle sei di mattina, quando faceva ancora freddo, e abbiamo camminato per tre ore su un sentiero di pietre nere. Dall'alto il panorama era meraviglioso: si vedeva tutto il mare.", "sv": "I onsdags gick vi upp på Etna med en guide. Vi gav oss av klockan sex på morgonen, när det fortfarande var kallt, och gick i tre timmar på en stig av svarta stenar. Uppifrån var utsikten underbar: man såg hela havet."},
+    {"fr": "L'unico problema? Il secondo giorno ho perso il cellulare in spiaggia, per questo ti scrivo dal computer della pensione.", "sv": "Det enda problemet? Andra dagen tappade jag mobilen på stranden, därför skriver jag från pensionatets dator."},
+    {"fr": "Torniamo a casa sabato, in aereo. Quando arrivo ti chiamo e ti mostro le foto. Credimi, ne vale la pena: l'anno prossimo devi venire anche tu!", "sv": "Vi åker hem på lördag, med flyg. När jag kommer hem ringer jag dig och visar bilderna. Tro mig, det är värt det: nästa år måste du också följa med!"},
+    {"fr": "Un abbraccio, Elsa", "sv": "Kram, Elsa"}
+   ],
+   "qs": [
+    {"q": "Come è arrivata Elsa in Sicilia?", "opts": ["In aereo", "In traghetto", "In treno"], "a": 1, "why": "«Siamo partiti da Napoli con il traghetto»."},
+    {"q": "Com'era Palermo?", "opts": ["Tranquilla e fresca", "Affollata e molto calda", "Brutta ma economica"], "a": 1, "why": "«piena di turisti e faceva un caldo incredibile»."},
+    {"q": "Chi guidava la macchina?", "opts": ["Elsa", "La madre", "Il padre"], "a": 2, "why": "«Mio padre guidava»."},
+    {"q": "Quando è cominciata l'escursione sull'Etna?", "opts": ["Molto presto la mattina", "Nel pomeriggio", "Di sera, quando faceva freddo"], "a": 0, "why": "«Siamo partiti alle sei di mattina»."},
+    {"q": "Perché Elsa scrive dal computer della pensione?", "opts": ["Perché non ha più il cellulare", "Perché in spiaggia non c'è internet", "Perché Anna non ha il telefono"], "a": 0, "why": "«ho perso il cellulare in spiaggia, per questo …»."},
+    {"q": "Che cosa propone Elsa ad Anna?", "opts": ["Di andare all'aeroporto sabato", "Di venire in Sicilia l'anno prossimo", "Di comprarle un cellulare nuovo"], "a": 1, "why": "«l'anno prossimo devi venire anche tu»."}
+   ],
+   "gloss": {
+    "arancini": {"t": "l'arancino", "sv": "friterad risboll (siciliansk specialitet)", "g": "m"},
+    "giro": {"t": "il giro", "sv": "tur, runda (fare il giro di = åka runt)", "g": "m"}
+   }
+  },
+  {
+   "id": "it3-le-5",
+   "part": "lettura",
+   "teil": "A.2",
+   "title": "Forum: città o campagna?",
+   "time": 15,
+   "instr": "Läs de tre inläggen i ett forum och välj rätt svar på frågorna.",
+   "lines": [
+    {"fr": "Chiara, 17 anni: Io abito in un condominio in periferia, a Milano. La mattina prendo il tram e in mezz'ora sono a scuola. Mi piace la città perché c'è sempre qualcosa da fare: concerti, mostre, cinema. Però il traffico e lo smog mi danno fastidio, e d'estate in città fa un caldo terribile.", "sv": "Chiara, 17 år: Jag bor i ett hyreshus i förorten, i Milano. På morgonen tar jag spårvagnen och på en halvtimme är jag i skolan. Jag gillar staden för att det alltid finns något att göra: konserter, utställningar, bio. Men trafiken och smogen stör mig, och på sommaren är det fruktansvärt varmt i stan."},
+    {"fr": "Matteo, 19 anni: Due anni fa abbiamo traslocato da Roma in un piccolo borgo in Umbria. All'inizio era difficile: non conoscevo nessuno e l'autobus per la città passava solo tre volte al giorno. Adesso ho la patente, ho tanti amici e aiuto mio zio nell'orto. Non tornerei mai a Roma!", "sv": "Matteo, 19 år: För två år sedan flyttade vi från Rom till en liten by i Umbrien. I början var det svårt: jag kände ingen och bussen till stan gick bara tre gånger om dagen. Nu har jag körkort, jag har massor av vänner och jag hjälper min farbror i grönsakslandet. Jag skulle aldrig flytta tillbaka till Rom!"},
+    {"fr": "Sofia, 18 anni: Secondo me la soluzione migliore è vivere fuori città, ma non troppo lontano. Io abito in un paese a venti minuti da Napoli: abbiamo il giardino, è tranquillo e posso andare in città in treno quando voglio. L'unico problema è che l'ultimo treno parte alle undici, quindi la sera devo sempre tornare presto.", "sv": "Sofia, 18 år: Jag tycker att det bästa är att bo utanför stan, men inte för långt bort. Jag bor i en liten ort tjugo minuter från Neapel: vi har trädgård, det är lugnt och jag kan åka in till stan med tåg när jag vill. Det enda problemet är att sista tåget går klockan elva, så på kvällarna måste jag alltid åka hem tidigt."}
+   ],
+   "qs": [
+    {"q": "Che cosa non piace a Chiara della città?", "opts": ["Che ci sono poche cose da fare", "Il traffico e lo smog", "Che la scuola è lontana"], "a": 1, "why": "«il traffico e lo smog mi danno fastidio»."},
+    {"q": "Come va a scuola Chiara?", "opts": ["In tram", "In macchina", "A piedi"], "a": 0, "why": "«La mattina prendo il tram»."},
+    {"q": "Com'era la vita di Matteo nel borgo all'inizio?", "opts": ["Facile e divertente", "Difficile, perché non conosceva nessuno", "Uguale a Roma"], "a": 1, "why": "«All'inizio era difficile: non conoscevo nessuno»."},
+    {"q": "Che cosa pensa adesso Matteo?", "opts": ["Vuole tornare a Roma", "Sta bene nel borgo", "Vuole lavorare in città"], "a": 1, "why": "«Non tornerei mai a Roma!»"},
+    {"q": "Qual è il problema di Sofia?", "opts": ["Non ha il giardino", "Dopo le undici non ci sono più treni", "Il paese è troppo rumoroso"], "a": 1, "why": "«l'ultimo treno parte alle undici»."}
+   ]
+  },
+  {
+   "id": "it3-as-1",
+   "part": "ascolto",
+   "teil": "C.1",
+   "title": "Brevi dialoghi",
+   "time": 5,
+   "plays": 2,
+   "instr": "Du hör sex korta dialoger två gånger. Är påståendet rätt (Vero) eller fel (Falso)?",
+   "lines": [
+    {"fr": "Dialogo 1. – Pronto, studio medico. – Buongiorno, vorrei un appuntamento con il dottore. Ho mal di schiena da tre giorni. – Domani alle undici va bene? – Perfetto, grazie.", "sv": "Dialog 1. – Hallå, läkarmottagningen. – God dag, jag skulle vilja ha en tid hos doktorn. Jag har haft ont i ryggen i tre dagar. – Går det bra i morgon klockan elva? – Perfekt, tack."},
+    {"fr": "Dialogo 2. – Hai visto il telegiornale ieri sera? – No, ero alla partita. Che cosa è successo? – C'è stato un terremoto in Calabria, ma per fortuna nessuno si è fatto male.", "sv": "Dialog 2. – Såg du nyheterna på tv i går kväll? – Nej, jag var på matchen. Vad har hänt? – Det var en jordbävning i Kalabrien, men som tur var skadades ingen."},
+    {"fr": "Dialogo 3. – Allora, com'è andato il colloquio? – Benissimo! Comincio lunedì in un bar vicino alla spiaggia, sei ore al giorno. – Complimenti!", "sv": "Dialog 3. – Nå, hur gick anställningsintervjun? – Jättebra! Jag börjar på måndag på ett kafé nära stranden, sex timmar om dagen. – Grattis!"},
+    {"fr": "Dialogo 4. – Che cosa facciamo sabato sera? Andiamo al concerto in piazza? – Mi piacerebbe, ma ho le prove con il coro fino alle dieci. – Allora ci vediamo dopo!", "sv": "Dialog 4. – Vad gör vi på lördag kväll? Ska vi gå på konserten på torget? – Gärna, men jag har körrepetition till klockan tio. – Då ses vi efteråt!"},
+    {"fr": "Dialogo 5. – Scusi, questo autobus va al centro storico? – No, deve prendere il 12. La fermata è dall'altra parte della strada.", "sv": "Dialog 5. – Ursäkta, går den här bussen till gamla stan? – Nej, ni måste ta tolvan. Hållplatsen är på andra sidan gatan."},
+    {"fr": "Dialogo 6. – Perché sei così arrabbiata? – Marco ha raccontato a tutti il mio segreto! – Dai, parlagli. Forse è stato solo un malinteso.", "sv": "Dialog 6. – Varför är du så arg? – Marco har berättat min hemlighet för alla! – Kom igen, prata med honom. Det kanske bara var ett missförstånd."}
+   ],
+   "qs": [
+    {"q": "Dialogo 1: La persona ha mal di schiena da una settimana.", "opts": ["Vero", "Falso"], "a": 1, "why": "«da tre giorni» = i tre dagar."},
+    {"q": "Dialogo 2: Nel terremoto nessuno si è fatto male.", "opts": ["Vero", "Falso"], "a": 0, "why": "«per fortuna nessuno si è fatto male»."},
+    {"q": "Dialogo 3: Il ragazzo ha trovato un lavoro.", "opts": ["Vero", "Falso"], "a": 0, "why": "«Comincio lunedì in un bar»."},
+    {"q": "Dialogo 4: La ragazza è libera tutta la sera.", "opts": ["Vero", "Falso"], "a": 1, "why": "Hon har körrepetition till klockan tio."},
+    {"q": "Dialogo 5: Il signore deve andare dall'altra parte della strada.", "opts": ["Vero", "Falso"], "a": 0, "why": "«La fermata è dall'altra parte della strada»."},
+    {"q": "Dialogo 6: L'amica consiglia di non parlare più con Marco.", "opts": ["Vero", "Falso"], "a": 1, "why": "Hon säger tvärtom: «parlagli» = prata med honom."}
+   ]
+  },
+  {
+   "id": "it3-as-2",
+   "part": "ascolto",
+   "teil": "C.2",
+   "title": "Annunci e messaggi",
+   "time": 5,
+   "plays": 2,
+   "instr": "Du hör fem korta meddelanden två gånger. Välj rätt svar på varje fråga.",
+   "lines": [
+    {"fr": "1. Annuncio in stazione: Attenzione! Il treno regionale per Firenze delle otto e quaranta partirà con venti minuti di ritardo dal binario sei. Ci scusiamo per il disagio.", "sv": "1. Utrop på stationen: Observera! Regionaltåget till Florens kl. 8.40 avgår tjugo minuter försenat från spår sex. Vi ber om ursäkt för besväret."},
+    {"fr": "2. Messaggio in segreteria: Ciao Giulia, sono Paola. Domani non posso venire a correre con te, ho la febbre. Ci sentiamo venerdì, va bene? Un bacio!", "sv": "2. Meddelande på telefonsvararen: Hej Giulia, det är Paola. I morgon kan jag inte följa med och springa, jag har feber. Vi hörs på fredag, okej? Puss!"},
+    {"fr": "3. Annuncio al museo: Gentili visitatori, il museo chiude tra quindici minuti. Vi preghiamo di andare verso l'uscita. Domani la sala degli affreschi sarà aperta dalle nove.", "sv": "3. Utrop på museet: Bästa besökare, museet stänger om femton minuter. Vi ber er gå mot utgången. I morgon är freskosalen öppen från klockan nio."},
+    {"fr": "4. Alla radio: E adesso le previsioni del tempo per il fine settimana. Sabato al nord pioverà a dirotto, mentre al sud ci sarà il sole, con temperature fino a trenta gradi. Domenica il tempo migliorerà anche al nord.", "sv": "4. På radion: Och nu väderprognosen för helgen. På lördag ösregnar det i norr, medan det blir sol i söder med temperaturer upp till trettio grader. På söndag blir vädret bättre även i norr."},
+    {"fr": "5. Messaggio: Ciao, sono il tuo vicino di casa del terzo piano. Stasera faccio una festa per il mio compleanno: scusa in anticipo per il rumore! Se vuoi, vieni anche tu.", "sv": "5. Meddelande: Hej, det är din granne på tredje våningen. I kväll har jag fest för min födelsedag: förlåt i förväg för ljudet! Kom gärna du också om du vill."}
+   ],
+   "qs": [
+    {"q": "1. A che ora partirà il treno?", "opts": ["Alle 8.40", "Alle 9.00", "Alle 9.20"], "a": 1, "why": "8.40 + tjugo minuter = 9.00."},
+    {"q": "2. Perché Paola non va a correre?", "opts": ["Deve lavorare", "Ha la febbre", "Si è fatta male alla caviglia"], "a": 1, "why": "«ho la febbre»."},
+    {"q": "3. Che cosa devono fare i visitatori?", "opts": ["Comprare il biglietto per domani", "Andare verso l'uscita", "Visitare subito gli affreschi"], "a": 1, "why": "«Vi preghiamo di andare verso l'uscita»."},
+    {"q": "4. Che tempo farà sabato al nord?", "opts": ["Ci sarà il sole", "Pioverà molto", "Farà trenta gradi"], "a": 1, "why": "«pioverà a dirotto» = det kommer att ösregna."},
+    {"q": "5. Perché il vicino lascia il messaggio?", "opts": ["Per lamentarsi del rumore", "Per chiedere aiuto con il trasloco", "Per scusarsi e invitare alla festa"], "a": 2, "why": "«scusa in anticipo per il rumore … vieni anche tu»."}
+   ]
+  },
+  {
+   "id": "it3-as-3",
+   "part": "ascolto",
+   "teil": "C.3",
+   "title": "Cinque persone parlano di sport e salute",
+   "time": 5,
+   "plays": 2,
+   "instr": "Du hör fem korta monologer två gånger. Sägs det här i texterna (Sì) eller inte (No)?",
+   "lines": [
+    {"fr": "Luca: Prima giocavo a calcio tre volte alla settimana, ma l'anno scorso mi sono fatto male al ginocchio. Adesso nuoto in piscina: è meno pericoloso e mi rilassa.", "sv": "Luca: Förut spelade jag fotboll tre gånger i veckan, men förra året skadade jag knät. Nu simmar jag i simhallen: det är mindre farligt och jag slappnar av."},
+    {"fr": "Giulia: Da quando lavoro in ufficio dormo poco e sono sempre stanca. Il medico mi ha detto di fare una passeggiata ogni giorno e di bere meno caffè.", "sv": "Giulia: Sedan jag började jobba på kontor sover jag lite och är alltid trött. Läkaren sa att jag ska ta en promenad varje dag och dricka mindre kaffe."},
+    {"fr": "Ahmed: Domenica correrò la mia prima maratona, a Roma. Mi alleno da sei mesi e sono un po' nervoso, ma voglio arrivare al traguardo.", "sv": "Ahmed: På söndag springer jag mitt första maraton, i Rom. Jag har tränat i sex månader och är lite nervös, men jag vill gå i mål."},
+    {"fr": "Sara: Non mi piace fare sport da sola. Per questo gioco a pallavolo con due amiche: ci divertiamo tantissimo e dopo andiamo a mangiare una pizza.", "sv": "Sara: Jag tycker inte om att träna ensam. Därför spelar jag volleyboll med två kompisar: vi har jättekul och efteråt går vi och äter pizza."},
+    {"fr": "Davide: Ho smesso di fumare due mesi fa. È stato difficile, ma adesso salgo le scale senza avere il fiatone.", "sv": "Davide: Jag slutade röka för två månader sedan. Det var svårt, men nu går jag uppför trapporna utan att bli andfådd."}
+   ],
+   "qs": [
+    {"q": "Luca gioca ancora a calcio.", "opts": ["Sì", "No"], "a": 1, "why": "«Prima giocavo a calcio … Adesso nuoto»."},
+    {"q": "Il medico ha dato dei consigli a Giulia.", "opts": ["Sì", "No"], "a": 0, "why": "«Il medico mi ha detto di fare una passeggiata … e di bere meno caffè»."},
+    {"q": "Ahmed ha già corso molte maratone.", "opts": ["Sì", "No"], "a": 1, "why": "«la mia prima maratona»."},
+    {"q": "Sara fa sport con le amiche.", "opts": ["Sì", "No"], "a": 0, "why": "«gioco a pallavolo con due amiche»."},
+    {"q": "Davide fuma ancora qualche sigaretta.", "opts": ["Sì", "No"], "a": 1, "why": "«Ho smesso di fumare due mesi fa»."}
+   ]
+  },
+  {
+   "id": "it3-as-4",
+   "part": "ascolto",
+   "teil": "C.2",
+   "title": "Una notizia alla radio",
+   "time": 5,
+   "plays": 2,
+   "instr": "Du hör ett nyhetsinslag på radion två gånger. Välj rätt svar på frågorna.",
+   "lines": [
+    {"fr": "Buongiorno e benvenuti al giornale radio delle otto. Ieri mattina più di trecento ragazzi delle scuole di Pescara hanno pulito la spiaggia della città.", "sv": "God morgon och välkomna till radionyheterna klockan åtta. I går förmiddag rensade mer än trehundra ungdomar från skolorna i Pescara stadens strand."},
+    {"fr": "L'iniziativa è stata organizzata da un gruppo di studenti del liceo scientifico, che hanno avuto l'idea dopo aver visto un video sui social.", "sv": "Initiativet organiserades av en grupp elever från naturvetenskapliga gymnasiet, som fick idén efter att ha sett ett klipp i sociala medier."},
+    {"fr": "In quattro ore i ragazzi hanno raccolto più di cinquecento chili di rifiuti: soprattutto bottiglie di plastica, ma anche vetro, sigarette e una vecchia bicicletta.", "sv": "På fyra timmar samlade ungdomarna in mer än femhundra kilo skräp: mest plastflaskor, men också glas, cigaretter och en gammal cykel."},
+    {"fr": "«Non pensavamo di trovare così tanta spazzatura», ha detto Martina, una delle organizzatrici. «La spiaggia sembrava pulita, ma la plastica era sotto la sabbia.»", "sv": "«Vi trodde inte att vi skulle hitta så mycket skräp», sa Martina, en av arrangörerna. «Stranden såg ren ut, men plasten låg under sanden.»"},
+    {"fr": "Il sindaco ha ringraziato i ragazzi e ha annunciato che da luglio sulla spiaggia ci saranno nuovi cestini per la raccolta differenziata. I ragazzi vogliono ripetere l'iniziativa a settembre, prima dell'inizio della scuola. E ora passiamo allo sport.", "sv": "Borgmästaren tackade ungdomarna och meddelade att det från juli kommer att finnas nya sopkärl för sortering på stranden. Ungdomarna vill upprepa initiativet i september, innan skolan börjar. Och nu går vi över till sporten."}
+   ],
+   "qs": [
+    {"q": "Chi ha pulito la spiaggia?", "opts": ["I dipendenti del comune", "Ragazzi delle scuole", "I turisti"], "a": 1, "why": "«più di trecento ragazzi delle scuole»."},
+    {"q": "Come è nata l'idea?", "opts": ["Da un video sui social", "Dal sindaco", "Da un programma alla televisione"], "a": 0, "why": "«dopo aver visto un video sui social»."},
+    {"q": "Che cosa hanno trovato soprattutto?", "opts": ["Vetro", "Bottiglie di plastica", "Biciclette"], "a": 1, "why": "«soprattutto bottiglie di plastica»."},
+    {"q": "Perché Martina era sorpresa?", "opts": ["Perché la spiaggia sembrava pulita", "Perché sono venuti pochi ragazzi", "Perché pioveva"], "a": 0, "why": "«La spiaggia sembrava pulita, ma la plastica era sotto la sabbia»."},
+    {"q": "Che cosa farà il comune?", "opts": ["Chiuderà la spiaggia", "Metterà nuovi cestini", "Pagherà i ragazzi"], "a": 1, "why": "«da luglio sulla spiaggia ci saranno nuovi cestini»."},
+    {"q": "Quando vogliono pulire di nuovo la spiaggia i ragazzi?", "opts": ["A luglio", "A settembre", "L'anno prossimo"], "a": 1, "why": "«vogliono ripetere l'iniziativa a settembre»."}
+   ]
+  },
+  {
+   "id": "it3-sc-1",
+   "part": "completare",
+   "teil": "B.1",
+   "title": "Completa il blog: il primo giorno di lavoro",
+   "time": 15,
+   "instr": "Läs blogginlägget och välj det ord som passar i varje lucka (1–8).",
+   "lines": [
+    {"fr": "Ciao a tutti!", "sv": "Hej allihop!"},
+    {"fr": "Ieri (1) ___ a lavorare in una gelateria al mare. (2) ___ molto nervosa, perché non avevo mai lavorato prima.", "sv": "I går började jag jobba på en glassbar vid havet. Jag var väldigt nervös, eftersom jag aldrig hade jobbat förut."},
+    {"fr": "Il capo mi ha spiegato tutto con pazienza e mi ha dato una maglietta rossa: (3) ___ devo mettere ogni giorno.", "sv": "Chefen förklarade allt med tålamod och gav mig en röd t-shirt: den måste jag ha på mig varje dag."},
+    {"fr": "La mattina c'era poca gente, ma nel pomeriggio la gelateria era (4) ___ di turisti. Ho servito più di cento clienti!", "sv": "På förmiddagen var det lite folk, men på eftermiddagen var glassbaren full av turister. Jag serverade mer än hundra kunder!"},
+    {"fr": "Una signora voleva un gelato al pistacchio, ma io (5) ___ ho dato un gelato alla menta. Per fortuna lei ha riso.", "sv": "En dam ville ha en pistageglass, men jag gav henne en mintglass. Som tur var skrattade hon."},
+    {"fr": "La gelateria è (6) ___ vicina a casa mia, quindi ci vado in bicicletta.", "sv": "Glassbaren ligger ganska nära mitt hem, så jag cyklar dit."},
+    {"fr": "Sono stanca, ma contenta. Domani (7) ___ dalle otto alle quattro, perché la sera (8) ___ un concerto in piazza e voglio andarci!", "sv": "Jag är trött men glad. I morgon jobbar jag från åtta till fyra, för på kvällen är det en konsert på torget och dit vill jag gå!"},
+    {"fr": "Alla prossima, Elsa", "sv": "Hörs nästa gång, Elsa"}
+   ],
+   "qs": [
+    {"q": "(1)", "opts": ["sono cominciata", "ho cominciato", "cominciavo"], "a": 1, "why": "Cominciare a + infinitiv tar avere när det är en person som börjar: ho cominciato. En enstaka händelse i går = passato prossimo."},
+    {"q": "(2)", "opts": ["Avevo", "Facevo", "Ero"], "a": 2, "why": "Essere + adjektiv: ero nervosa (en känsla i bakgrunden = imperfetto)."},
+    {"q": "(3)", "opts": ["la", "lo", "le"], "a": 0, "why": "La maglietta är femininum singular: la devo mettere."},
+    {"q": "(4)", "opts": ["pieno", "piena", "piene"], "a": 1, "why": "Adjektivet böjs efter la gelateria (fem. singular): piena di turisti."},
+    {"q": "(5)", "opts": ["le", "la", "gli"], "a": 0, "why": "Dare a una signora → indirekt objekt, femininum: le ho dato."},
+    {"q": "(6)", "opts": ["molta", "abbastanza", "troppa"], "a": 1, "why": "Framför ett adjektiv behövs ett adverb som inte böjs: abbastanza vicina. Molta och troppa är böjda adjektiv."},
+    {"q": "(7)", "opts": ["ho lavorato", "lavoravo", "lavorerò"], "a": 2, "why": "Domani → framtid: lavorerò."},
+    {"q": "(8)", "opts": ["ci sono", "c'è", "è"], "a": 1, "why": "Det finns en konsert (singular): c'è un concerto."}
+   ]
+  },
+  {
+   "id": "it3-sc-2",
+   "part": "scrittura",
+   "teil": "B.2",
+   "title": "Email a un amico: le vacanze",
+   "time": 25,
+   "minWords": 80,
+   "criteria": ["Adeguatezza al compito", "Coerenza e coesione", "Lessico", "Grammatica"],
+   "instr": "Skriv ett personligt mejl till en kompis (tu). Skriv något om alla punkterna och använd dåtid. Ungefär 80 ord.",
+   "task": "Sei appena tornato/tornata da un viaggio. Il tuo amico italiano Marco ti chiede com'è andata.\n\nScrivi un'email a Marco:\n– dove sei andato/andata, con chi e come avete viaggiato\n– com'era il posto e com'era il tempo\n– una cosa che hai fatto e che ti è piaciuta molto\n– una cosa che è andata male\n\n(circa 80 parole)",
+   "model": "Caro Marco,\nsono tornata ieri da una settimana a Lisbona con mia sorella. Siamo partite in aereo da Stoccolma e abbiamo dormito in una piccola pensione nel centro storico. La città era bellissima, con tante strade strette e colorate, e faceva caldo ma non troppo. La cosa più bella? Un concerto di fado in un ristorante: la cantante aveva una voce da brividi! Purtroppo l'ultimo giorno ho perso la macchina fotografica sul tram, con tutte le foto. Che peccato! La prossima volta vieni anche tu?\nUn abbraccio,\nElsa",
+   "modelSv": "Kära Marco,\njag kom hem i går från en vecka i Lissabon med min syster. Vi flög från Stockholm och bodde på ett litet pensionat i gamla stan. Staden var jättevacker, med massor av smala, färgglada gator, och det var varmt men inte för varmt. Det bästa? En fadokonsert på en restaurang: sångerskan hade en röst som gav gåshud! Tyvärr tappade jag kameran på spårvagnen sista dagen, med alla bilderna. Vilken otur! Följer du med nästa gång?\nKram,\nElsa"
+  },
+  {
+   "id": "it3-sc-3",
+   "part": "scrittura",
+   "teil": "B.2",
+   "title": "Nel forum: città o campagna?",
+   "time": 25,
+   "minWords": 80,
+   "criteria": ["Adeguatezza al compito", "Coerenza e coesione", "Lessico", "Grammatica"],
+   "instr": "Skriv ett inlägg i ett italienskt forum. Skriv något om alla punkterna och säg vad du tycker. Ungefär 80 ord.",
+   "task": "In un forum per giovani la domanda della settimana è: «È meglio vivere in città o in campagna?»\n\nScrivi un messaggio per il forum:\n– dove abiti e com'è la tua zona\n– che cosa ti piace e che cosa non ti piace\n– dove vorresti vivere in futuro e perché\n\n(circa 80 parole)",
+   "model": "Ciao a tutti! Io abito in un piccolo paese vicino a Uppsala, in mezzo al verde. È molto tranquillo e sicuro, e d'estate faccio il bagno nel lago con i miei amici. Però non c'è quasi niente da fare la sera e l'autobus per la città passa solo ogni ora. Per questo a volte mi annoio. Secondo me la campagna è perfetta per i bambini, ma per i giovani è meglio la città. In futuro vorrei vivere a Stoccolma, perché ci sono più concerti, musei e possibilità di lavoro.",
+   "modelSv": "Hej allihop! Jag bor i en liten ort nära Uppsala, mitt i det gröna. Det är väldigt lugnt och tryggt, och på sommaren badar jag i sjön med mina kompisar. Men det finns nästan ingenting att göra på kvällarna och bussen till stan går bara en gång i timmen. Därför har jag ibland tråkigt. Jag tycker att landet är perfekt för barn, men för unga är staden bättre. I framtiden skulle jag vilja bo i Stockholm, för där finns det fler konserter, museer och jobbmöjligheter."
+  },
+  {
+   "id": "it3-sc-4",
+   "part": "scrittura",
+   "teil": "B.2",
+   "title": "Email per un lavoro estivo",
+   "time": 25,
+   "minWords": 80,
+   "criteria": ["Adeguatezza al compito", "Coerenza e coesione", "Lessico", "Grammatica"],
+   "instr": "Skriv ett formellt mejl (Lei) som svar på en annons. Skriv något om alla punkterna. Ungefär 80 ord.",
+   "task": "Hai letto questo annuncio: «Hotel Bellavista, sul Lago di Garda, cerca ragazzi e ragazze per luglio e agosto: lavoro alla reception e nel ristorante. Scrivere al direttore, signor Ferri.»\n\nScrivi un'email al signor Ferri:\n– presentati e spiega perché scrivi\n– racconta che esperienza di lavoro hai e quali lingue parli\n– spiega perché questo lavoro ti interessa\n– chiedi informazioni sull'orario o sulla paga\n\n(circa 80 parole)",
+   "model": "Gentile signor Ferri,\nmi chiamo Elsa Berg, ho diciotto anni e sono una studentessa svedese. Le scrivo perché ho letto il Suo annuncio per il lavoro estivo. L'anno scorso ho lavorato per due mesi in una gelateria, quindi sono abituata a servire i clienti. Parlo svedese, inglese e un po' di italiano, che studio da tre anni. Questo lavoro mi interessa perché vorrei migliorare il mio italiano e conoscere persone nuove. Potrebbe dirmi quante ore al giorno si lavora e se è possibile dormire in hotel?\nCordiali saluti,\nElsa Berg",
+   "modelSv": "Bäste herr Ferri,\njag heter Elsa Berg, är arton år och en svensk elev. Jag skriver eftersom jag har läst er annons om sommarjobbet. Förra året jobbade jag i två månader på en glassbar, så jag är van vid att betjäna kunder. Jag talar svenska, engelska och lite italienska, som jag har läst i tre år. Jobbet intresserar mig eftersom jag vill förbättra min italienska och lära känna nya människor. Skulle ni kunna berätta hur många timmar om dagen man jobbar och om det går att bo på hotellet?\nMed vänliga hälsningar,\nElsa Berg"
+  },
+  {
+   "id": "it3-or-1",
+   "part": "orale",
+   "teil": "Parte 1",
+   "title": "Presentarsi",
+   "prep": 0,
+   "time": 3,
+   "criteria": ["Adeguatezza al compito", "Interazione", "Lessico", "Grammatica", "Pronuncia"],
+   "instr": "Presentera dig för examinatorn och svara på frågorna. På provet börjar samtalet utan förberedelse. Tala i ungefär tre minuter.",
+   "task": "L'esaminatore ti chiede:\n– Come ti chiami? Di dove sei? Dove abiti?\n– Che scuola frequenti? Quali materie ti piacciono?\n– Che cosa fai nel tempo libero? Fai sport o suoni uno strumento?\n– Dove sei stato/stata l'estate scorsa?\n– Perché studi l'italiano?\n– Che cosa farai dopo la scuola?",
+   "phrases": [
+    "Mi chiamo … e abito a …",
+    "Frequento il liceo / l'ultimo anno di …",
+    "La mia materia preferita è … perché …",
+    "Nel tempo libero … / Da tre anni suono …",
+    "L'estate scorsa sono andato/andata a …",
+    "Dopo la scuola vorrei … / Penso che farò …",
+    "Scusi, può ripetere la domanda?"
+   ],
+   "model": "Mi chiamo Elsa, ho diciassette anni e abito a Västerås, una città a cento chilometri da Stoccolma. Frequento il secondo anno di liceo e studio musica. La mia materia preferita è la storia, perché il professore spiega molto bene. Nel tempo libero canto in un coro e due volte alla settimana vado in palestra. L'estate scorsa sono andata in Toscana con la mia famiglia: abbiamo affittato una casa in campagna e ho mangiato benissimo. Studio l'italiano perché amo l'opera e vorrei capire i testi. Dopo la scuola vorrei studiare canto, magari in Italia.",
+   "modelSv": "Jag heter Elsa, är sjutton år och bor i Västerås, en stad tio mil från Stockholm. Jag går andra året på gymnasiet och läser musik. Mitt favoritämne är historia, för läraren förklarar väldigt bra. På fritiden sjunger jag i en kör och två gånger i veckan går jag till gymmet. Förra sommaren åkte jag till Toscana med min familj: vi hyrde ett hus på landet och jag åt jättegott. Jag läser italienska för att jag älskar opera och vill förstå texterna. Efter skolan skulle jag vilja studera sång, kanske i Italien."
+  },
+  {
+   "id": "it3-or-2",
+   "part": "orale",
+   "teil": "Parte 2",
+   "title": "Descrivere una situazione: la gita in montagna",
+   "prep": 10,
+   "time": 3,
+   "criteria": ["Adeguatezza al compito", "Interazione", "Lessico", "Grammatica", "Pronuncia"],
+   "instr": "På provet får du en bild eller en bildserie att beskriva. Här beskrivs situationen i ord: berätta vad som hände, i dåtid, som om du såg bilderna. Du har tio minuter att förbereda dig.",
+   "task": "Una gita in montagna in quattro momenti:\n1. La mattina presto quattro amici partono con gli zaini; c'è il sole.\n2. Camminano su un sentiero nel bosco; una ragazza fa una foto a una farfalla.\n3. In cima mangiano i panini e guardano il panorama.\n4. Arriva un temporale: corrono verso un piccolo rifugio, bagnati ma contenti.\n\nRacconta che cosa è successo.",
+   "phrases": [
+    "Nella prima immagine si vede …",
+    "All'inizio … / La mattina presto …",
+    "Poi / Dopo / Mentre …",
+    "Purtroppo … / Per fortuna …",
+    "Alla fine …",
+    "Secondo me … perché …"
+   ],
+   "model": "Un sabato d'estate quattro amici hanno deciso di fare una gita in montagna. Sono partiti la mattina presto con gli zaini sulle spalle. C'era il sole e faceva già caldo. Prima hanno camminato su un sentiero nel bosco. Mentre gli altri parlavano, una ragazza ha fatto una foto a una farfalla bellissima. Verso mezzogiorno sono arrivati in cima: hanno mangiato i panini e hanno guardato il panorama, che era stupendo. Ma all'improvviso è arrivato un temporale! Sono corsi verso un piccolo rifugio e sono arrivati tutti bagnati, ma ridevano. Secondo me è stata una giornata indimenticabile.",
+   "modelSv": "En lördag på sommaren bestämde sig fyra kompisar för att göra en utflykt i bergen. De gav sig av tidigt på morgonen med ryggsäckarna på ryggen. Solen sken och det var redan varmt. Först gick de på en stig i skogen. Medan de andra pratade fotograferade en tjej en jättevacker fjäril. Vid lunchtid kom de upp på toppen: de åt sina smörgåsar och tittade på utsikten, som var fantastisk. Men plötsligt kom ett åskväder! De sprang mot en liten stuga och kom fram helt blöta, men de skrattade. Jag tror att det blev en oförglömlig dag."
+  },
+  {
+   "id": "it3-or-3",
+   "part": "orale",
+   "teil": "Parte 3",
+   "title": "Role play: dal medico",
+   "prep": 10,
+   "time": 3,
+   "criteria": ["Adeguatezza al compito", "Interazione", "Lessico", "Grammatica", "Pronuncia"],
+   "instr": "Rollspel: examinatorn spelar läkaren. Använd Lei. Du har tio minuter att förbereda dig (föreställ dig läkarens repliker när du övar ensam).",
+   "task": "Sei in Italia per uno scambio. Ieri hai giocato a tennis e oggi ti fa male la caviglia. Vai dal medico.\n– Saluta e spiega che cosa è successo e dove ti fa male.\n– Rispondi alle domande del medico.\n– Chiedi se puoi fare sport la settimana prossima.\n– Chiedi che cosa devi fare e se devi prendere una medicina.\n– Ringrazia e saluta.",
+   "phrases": [
+    "Buongiorno, dottore. Ieri …",
+    "Mi fa male la caviglia / il ginocchio.",
+    "È successo mentre …",
+    "Posso giocare / fare sport la settimana prossima?",
+    "Che cosa mi consiglia?",
+    "Devo prendere una medicina?",
+    "Grazie mille, arrivederci."
+   ],
+   "model": "A: Buongiorno, si accomodi. Che cosa è successo?\nB: Buongiorno, dottore. Ieri pomeriggio giocavo a tennis e sono caduta. Adesso mi fa molto male la caviglia destra.\nA: Riesce a camminare?\nB: Sì, ma piano, e stanotte non ho dormito bene per il dolore.\nA: Vediamo… Non è grave, ma deve riposare per qualche giorno e mettere il ghiaccio.\nB: Posso giocare la settimana prossima? Abbiamo un torneo.\nA: Meglio di no. Aspetti almeno dieci giorni.\nB: Peccato! Devo prendere una medicina?\nA: Se ha dolore, prenda una pastiglia la sera.\nB: Va bene. Grazie mille, arrivederci.",
+   "modelSv": "A: God dag, sätt er. Vad har hänt?\nB: God dag, doktorn. I går eftermiddag spelade jag tennis och föll. Nu gör högra fotleden väldigt ont.\nA: Kan ni gå?\nB: Ja, men långsamt, och i natt sov jag dåligt på grund av smärtan.\nA: Låt oss se … Det är inte allvarligt, men ni måste vila några dagar och lägga på is.\nB: Får jag spela nästa vecka? Vi har en turnering.\nA: Helst inte. Vänta minst tio dagar.\nB: Synd! Måste jag ta någon medicin?\nA: Om det gör ont, ta en tablett på kvällen.\nB: Okej. Tack så mycket, hej då."
+  },
+  {
+   "id": "it3-or-4",
+   "part": "orale",
+   "teil": "Parte 3",
+   "title": "Role play: alla biglietteria della stazione",
+   "prep": 10,
+   "time": 3,
+   "criteria": ["Adeguatezza al compito", "Interazione", "Lessico", "Grammatica", "Pronuncia"],
+   "instr": "Rollspel: examinatorn spelar personen i biljettluckan. Använd Lei. Du har tio minuter att förbereda dig (föreställ dig biljettförsäljarens repliker när du övar ensam).",
+   "task": "Sei a Bologna e hai perso il treno per Venezia delle 10. Vai alla biglietteria.\n– Saluta e spiega il problema.\n– Chiedi a che ora parte il prossimo treno e da quale binario.\n– Chiedi se puoi usare il tuo biglietto o se devi pagare di più.\n– Chiedi quanto dura il viaggio.\n– Ringrazia e saluta.",
+   "phrases": [
+    "Buongiorno, ho perso il treno delle …",
+    "A che ora parte il prossimo treno per …?",
+    "Da quale binario parte?",
+    "Posso usare questo biglietto?",
+    "Quanto dura il viaggio?",
+    "Grazie, è stato molto gentile."
+   ],
+   "model": "A: Buongiorno, mi dica.\nB: Buongiorno. Ho perso il treno per Venezia delle dieci, perché il mio autobus era in ritardo.\nA: Ha il biglietto?\nB: Sì, eccolo. A che ora parte il prossimo treno?\nA: Alle dieci e quaranta, dal binario cinque.\nB: Posso usare questo biglietto o devo comprarne un altro?\nA: Con questo biglietto deve pagare cinque euro in più.\nB: Va bene. Quanto dura il viaggio?\nA: Un'ora e mezza, arriva a mezzogiorno e dieci.\nB: Perfetto. Grazie, è stato molto gentile. Arrivederci!",
+   "modelSv": "A: God dag, vad kan jag hjälpa till med?\nB: God dag. Jag har missat tåget till Venedig klockan tio, eftersom min buss var försenad.\nA: Har ni biljetten?\nB: Ja, här är den. När går nästa tåg?\nA: Tjugo i elva, från spår fem.\nB: Kan jag använda den här biljetten eller måste jag köpa en ny?\nA: Med den här biljetten får ni betala fem euro extra.\nB: Okej. Hur lång tid tar resan?\nA: En och en halv timme, ni är framme tio över tolv.\nB: Perfekt. Tack, det var väldigt vänligt. Hej då!"
+  }
+ ]
+}
