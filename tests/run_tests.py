@@ -2650,12 +2650,17 @@ appReady().then(async()=>{ try{
   ok("vecka: ingen horisontell scroll (400 och 320 px)", noScroll("#wrnag"));
   q("#wrnag-all").click(); ok("vecka: Välj en annan uppgift öppnar skrivsidan", !!q("#wrlist"));
   const log=S.log; S.log=[]; renderStart(); ok("vecka: inget kort för en helt ny elev", !q("#wrnag")); S.log=log;
-  // Kurs utan prov: bara kapitlets uppgifter
-  const np=testCourses().find(c=>!LANGUAGES[c].exam&&c==="it3");   // it1 har CELI Impatto sedan 2026-09-30
+  // Kurs utan prov: bara kapitlets uppgifter. Alla kurser har prov sedan it3 fick CELI 1 (2026-10-16), så provet
+  // tas bort ur it3:s innehåll under testet och läggs tillbaka efteråt.
+  const np=testCourses().find(c=>c==="it3");
   if(np){ useLang(np); await until(()=>L.code===np&&L.base&&!sess,8000);
+    const ex0=C().exam; delete C().exam;
+    try{
+    ok(np+": provet är borttaget under testet", !hasExam()&&!wrExamTasks().length);
     openWriting(); ok(np+": utan prov bara kapitlets uppgifter", qa("[data-pick]").length===(C().prompts||[]).length&&!qa("[data-pickx]").length&&!q('[data-wrf="exam"]'));
     S.wr={}; delete S.wrSkip; S.log=S.log.length?S.log:[{kind:"words",d:Date.now()-864e5,dur:60,right:1,total:1}]; renderStart();
-    ok(np+": kortet föreslår en uppgift ur kapitlen", !!q("#wrnag")&&q("#wrnag-go").dataset.wrx==="0"); }
+    ok(np+": kortet föreslår en uppgift ur kapitlen", !!q("#wrnag")&&q("#wrnag-go").dataset.wrx==="0");
+    } finally { C().exam=ex0; } }
  }catch(e){ ok("undantag", false, e.message+" "+(e.stack||"").split("\n")[1]); }
  ok("inga JavaScript-fel", !__err.length, __err.join(" ; "));
  document.body.insertAdjacentHTML("beforeend","<pre id=out>"+out.join("\n").replace(/</g,"&lt;")+"</pre>");

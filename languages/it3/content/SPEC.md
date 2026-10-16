@@ -33,8 +33,9 @@ Ungefär 80–110 ord per kapitel (A2, exempelmeningar 5–12 ord) och 60–65 f
 | `mal.json` | 9 (`mal-<kap>`, även `mal-kr`) | kapitelmål i jagform |
 | `uttal.json` | 8 moment (`sec` k1–k7, två i k2) | ordpar och Skugga |
 | `videos.json` | 16 (två per kapitel) | kontrollerade med oEmbed |
+| `exam.json` | 17 uppgifter, id `it3-le-N`, `it3-as-N`, `it3-sc-N`, `it3-or-N` | CELI 1 (A2) i fyra delar: `lettura` (5: bildval A.1, flerval A.2, para ihop A.3), `ascolto` (4, uppläses med talsyntes), `completare` (1 lucktext, B.1), `scrittura` (3 mejl/inlägg, B.2, cirka 80 ord), `orale` (4); format i `docs/spec/prov.md` |
 
-Kursen har inget språkprov (`exam.json`); provträningen börjar i Italienska 4 (CELI 1).
+Provträningen (`exam.json`) följer CELI 1 (A2, Università per Stranieri di Perugia), samma prov som Italienska 4 tränar mot, eftersom steg 3 är A2.1 och CELI Impatto (A1, Italienska 2) ligger under kursens nivå. Texterna är kortare än i it4 och byggda på kursens ord och teman. Provet står bara i `exam.json`, inte som `exam` i `lang.js` (som i it1 och it2): kursens mål i väljaren är fortfarande steget, och provmålet CELI 1 anges först i Italienska 4.
 
 - `prompts.json`: `need.tenses` får innehålla `"presente"`, `"passato prossimo"`, `"imperfetto"`, `"futuro"` och `"condizionale"` (`tenseCheck` i `languages/it3/lang.js` lägger till condizionale till det som ärvs). `need.connectors` (2 för korta, 3 för längre uppgifter) räknar bindeorden i `connectors` (Italienska 1:s lista plus de som läggs till i `lang.js`).
 - `stories.json`: `gaps[i].cat` är `"tempus"` (passato prossimo eller imperfetto, essere eller avere, futuro, condizionale, pronomen) eller `"bindeord"`.
