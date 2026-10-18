@@ -7,11 +7,11 @@ const ktChapters=()=>chapters().filter(c=>c.words.length>=4);
 const KT={mode:"type"};
 function openKtest(){
   $("#tabs").hidden=true; sess=null; S.kt=S.kt||{};
-  const chs=ktChapters();
+  const chs=ktChapters(); if(isMono()) KT.mode="mc";   // mono (Högskoleprovet ORD): bara flerval
   app.innerHTML=`<section class="panel"><h2>Kapitelprov</h2>
     <p class="plan">Välj ett kapitel. Du får alla glosor en gång, i blandad ordning, och ser resultatet i slutet. Sedan kan du öva på de ord du missade. Provet ändrar inte när orden kommer tillbaka i passen.</p>
     <div class="field"><span class="label">Svara genom att</span>
-      <div class="seg" role="group" aria-label="Svarssätt"><button data-ktm="type" aria-pressed="${KT.mode==="type"}">Skriva ${esc(L.inLang)}</button><button data-ktm="mc" aria-pressed="${KT.mode==="mc"}">Flerval</button></div></div>
+      <div class="seg" role="group" aria-label="Svarssätt">${isMono()?"":`<button data-ktm="type" aria-pressed="${KT.mode==="type"}">Skriva ${esc(L.inLang)}</button>`}<button data-ktm="mc" aria-pressed="${KT.mode==="mc"}">Flerval</button></div></div>
     <div class="games">${chs.map(c=>{const r=S.kt[c.id];
       return `<button class="game" data-kt="${esc(c.id)}"><span><b>${esc(c.name)}</b><small>${c.words.length} ord${r?` · senast ${r.r}/${r.n} rätt (${new Date(r.d).toLocaleDateString("sv-SE")})`:""}</small></span><span class="go" aria-hidden="true">›</span></button>`}).join("")}</div></section>
     <button class="quit" id="quit">Tillbaka</button>`;

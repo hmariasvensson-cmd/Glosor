@@ -1,10 +1,13 @@
 /* ---------- Startsidans panel med alla övningar ---------- */
 // Övningarna i grupper. Startsidan visar en knapp per grupp, och varje grupp öppnas på en egen sida.
 function exGroups(){
-  const c=C(), n=clozePool().length, lname=L.name.toLowerCase();
-  const g=(id,title,sub,dis)=>`<button class="game" data-ex="${id}" ${dis?"disabled":""}><span><b>${title}</b><small>${sub}</small></span><span class="go" aria-hidden="true">›</span></button>`;
+  const c=C(), n=clozePool().length, lname=L.name.toLowerCase(), mono=isMono();
+  // mono (Högskoleprovet ORD): inga övningar där svaret är ett främmande ord eller tal (diktamen, översätt, ordföljd, Tala)
+  const g=(id,title,sub,dis)=>mono&&["dict","trans","order","talk"].includes(id)?"":`<button class="game" data-ex="${id}" ${dis?"disabled":""}><span><b>${title}</b><small>${sub}</small></span><span class="go" aria-hidden="true">›</span></button>`;
   const groups=[
-    ["words","Ord och meningar","Meningar, diktamen, översättning och ordföljd",[
+    ...(isHp()?[["hp","Högskoleprovet","Provpass ORD med klocka och resultat",[
+      g("hpprov","Provpass ORD","Tio ord som på provet, med valfri tid och facit efteråt.")]]]:[]),
+    ["words",mono?"Ord och kapitelprov":"Ord och meningar","Meningar, diktamen, översättning och ordföljd",[
       g("cloze","Meningar",n<4?"Lär dig några ord i quizet först.":"Fyll i luckan i en mening.",n<4),
       // srsDueNote: " · 3 att repetera i dag" (tidsbaserad repetition, 00-common.js)
       g("dict","Diktamen","Lyssna på en mening och skriv den."+srsDueNote(sentDue("dc",dictPool()))),

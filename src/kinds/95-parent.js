@@ -33,6 +33,7 @@ function summaryOf(){
     const g=GR().topics.filter(t=>gt[t.id]&&gt[t.id].n>=3).map(t=>({name:t.name,pct:pct(gt[t.id].r,gt[t.id].n),n:gt[t.id].n}))
       .sort((a,b)=>a.pct-b.pct).slice(0,3);
     if(g.length) out.gram=g; }
+  const hp=isHp()&&hpBoard(); if(hp) out.hp=hp;   // Högskoleprovet ORD: provpassen {n, best, last, of, d}
   if(hasPlan()){ const i=planWeekIdx(), W=L.plan.weeks;
     if(i!=null&&i>=0&&i<W.length){ const p=planProgress(W[i]); out.plan={week:i+1,of:W.length,title:W[i].title||"",known:p.known,n:p.n,next:(W[i+1]||{}).title||""}; } }
   return out;
@@ -111,6 +112,7 @@ function pCourse(code,c){
       <div class="tblwrap"><table class="tbl"><tr><th>Datum</th>${exParts.map(p=>`<th>${esc(p.sv||p.id)}</th>`).join("")}</tr>
       ${sims.map(s=>`<tr><td>${esc(new Date(pNum(s.d)).toLocaleDateString("sv-SE"))}${s.lv?` (${esc(s.lv)})`:""}</td>${exParts.map(p=>`<td>${tag(o(s.parts)[p.id])}</td>`).join("")}</tr>`).join("")}</table></div></div>`:""}
     ${gram.length?`<p class="plan">Svagast i grammatik: ${gram.map(g=>`${esc(g.name)} (${esc(pNum(g.pct))} %)`).join(", ")}.</p>`:""}
+    ${o(c.hp).n?`<p class="plan" data-hp>Provpass ORD: ${esc(pNum(o(c.hp).n))} st, bästa ${esc(pNum(o(c.hp).best))}/${esc(pNum(o(c.hp).of)||10)}, senaste ${esc(pNum(o(c.hp).last))}/${esc(pNum(o(c.hp).of)||10)}.</p>`:""}
     <p class="plan">Skrivuppgifter klara: ${esc(pNum(c.writing))}.${plan?` Studieplan: vecka ${esc(pNum(plan.week))} av ${esc(pNum(plan.of))}${plan.title?` (${esc(plan.title)})`:""}, ${esc(pNum(plan.known))} av ${esc(pNum(plan.n))} av veckans ord kan.${plan.next?` Nästa vecka: ${esc(plan.next)}.`:""}`:""}</p></div>`;
 }
 async function renderParent(){

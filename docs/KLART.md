@@ -2,6 +2,10 @@
 
 Punkter som har flyttats från [`BACKLOG.md`](BACKLOG.md) när de byggdes. **Referens** anger backloggens rubrik och prioritet. **Commit** anger var ändringen finns i git. **Publicerat** anger versionen av artefakten på https://claude.ai/artifact/YBQv8j4qXQQLuPwLAWt5mP.
 
+## 2026-10-18 (inte publicerat än)
+
+- **Grunden till Högskoleprovet ORD** (kurs `hp`, storageKey `glosor-hp-v1`), som ska ersätta HP-akuten. Fälten `mono: true` och `kind: "hp"` i lang.js styr: svenska → svenska, ingen uppläsning, ordklass i stället för genus, flerval med fem alternativ A–E (flerval räcker till "kan" bara i hp), Provpass ORD med 10 ord och valfri tid 3–5 min (`S.hp`, lat kodmodul `code-hp.js`), statistikpanelen "Så förbättras du", egen topplista för provpass (`langs.hp.hp` i board) och provpassen i föräldravyn. Ordlistan ligger i den privata, gitignorerade `languages/hp/book/`; kursen visas som kommande tills orden finns. Testerna: 2381 OK.
+
 ## 2026-10-16 (publicerat som version 51)
 
 - **Texterna hämtas vid behov** (backloggen P3, datafilernas storlek). Läs-, hör- och kulturtexterna ligger i `dist/data/<kod>-texts.json` och hämtas när en text öppnas eller ett påbörjat pass med textfrågor fortsätts (`ensureTexts`, `LAZY_TEXTS`/`split_texts` i build.py). Franska 3:s datafil 1937 → 1470 kB, alla kurser 20–35 % mindre.

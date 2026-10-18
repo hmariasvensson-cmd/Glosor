@@ -16,6 +16,12 @@ En rad per ord, sex eller sju fält åtskilda av `|`:
 - **Ordagrant** (valfritt sjunde fält): ordagrann översättning, gärna för fraser.
 - Förbjudet: `|` utom som avgränsare, backtick, fler hakparenteser än luckan, radbrytning inne i en rad, tomma fält utom genus (och de valfria sista fälten). build.py stoppar på format, antal fält, okänt genus, dubbletter och fel antal luckor.
 
+## Kurser på ett språk (`mono: true`, Högskoleprovet ORD)
+
+    ord|betydelse|ordklass|exempelmening med [ordet]||förklaring|ordagrant
+
+2–7 fält (tomma fält på slutet kan utelämnas). Betydelsen är det rätta svaret i flervalet, kort som ett svarsalternativ. Ordklass: `subst`, `verb`, `adj`, `adv`, `uttr`, `prep`, `konj`, `pron`, `räkn`, `interj`, `part` eller tomt. Femte fältet är tomt. Högskoleprovets ord ligger i den privata `languages/hp/book/words.txt`, se `languages/hp/book/README.md`.
+
 ## Per språk
 
 - **Tyska:** substantiv med bestämd artikel och plural inom parentes: `die Umwelt`, `der Bahnhof (-höfe)`, `die Erfahrung (-en)`. Verb i infinitiv, reflexiva med sich, styrning inom parentes: `sich beschweren (über + Akk.)`. Skriv inte ", dass" eller ", ob" i uppslagsformen. Delbara verb: skriv exempelmeningen så att verbet står samlat (bisats, perfekt, infinitiv). Starka och oregelbundna verb har alltid stamformerna först i kommentaren (`Starkt verb: nahm, hat genommen.`). Korrekt genus, plural, kasus och ß.

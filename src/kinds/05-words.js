@@ -43,7 +43,7 @@ function renderLearn(){
       <div><p class="ex-t" ${lang()}>${esc(w.exT)}</p><p class="ex-sv">${esc(w.exSv)}</p></div>
       <button class="speak sm" id="sp-e" aria-label="Läs upp meningen">${SPK}</button>
     </div>
-    ${litHtml(w)}<p class="ety"><span class="label">${esc(L.etyLabel||"Ursprung")}</span><br>${safeHtml(w.ety)}</p>
+    ${litHtml(w)}${w.ety?`<p class="ety"><span class="label">${esc(L.etyLabel||"Ursprung")}</span><br>${safeHtml(w.ety)}</p>`:""}
     <div class="navrow">
       <button class="btn ghost" id="prev" ${sess.i?"":"disabled"}>Tillbaka</button>
       <button class="btn" id="next">${sess.i===n-1?"Till quizet":"Nästa ord"}</button>
@@ -58,7 +58,7 @@ function renderLearn(){
   snapRun();
   if(!S.listenFirst) speak(w.t);
 }
-function qType(w,isNew){ if(S.mode==="mc")return"mc"; if(S.mode==="type")return"type"; return isNew?"mc":((ws(w.id)||{}).f||"mc"); }
+function qType(w,isNew){ if(S.mode==="mc"||isMono())return"mc"; if(S.mode==="type")return"type"; return isNew?"mc":((ws(w.id)||{}).f||"mc"); }
 function startQuiz(){
   const items=[...sess.newW.map(w=>({w,isNew:true,t:qType(w,true)})),...sess.due.map(w=>({w,isNew:false,t:qType(w,false)}))]
     .map(q=>({...q,canType:q.t==="type"}));
@@ -103,7 +103,8 @@ document.addEventListener("submit",e=>{const f=e.target.closest&&e.target.closes
 
 /* Glosquizet: ord → betydelse (flerval) och betydelse → ord (skriva) */
 defineKind("words",{name:"Glosor",
-  mc:c=>{const w=c.w;return{
+  mc:c=>{if(isHp()) return hpMC(c);   // Högskoleprovet ORD: fem alternativ A–E (06-hp.js)
+    const w=c.w;return{
     head:`<div class="word"><p class="q-prompt" ${lang()}>${esc(w.t)}</p><button class="speak" id="sp" aria-label="Läs upp">${SPK}</button></div>`,
     ask:"Vad betyder det?",
     opts:mcOptions(w).map(o=>({label:o.sv,ok:o.id===w.id})),

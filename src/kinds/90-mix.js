@@ -96,7 +96,7 @@ function dailyPanel(){
     ${days!=null&&days>=0?`<p class="foot" id="examnote">Provet om ${days} ${days===1?"dag":"dagar"}.${ph===2?" Inga nya ord nu, bara repetition och provuppgifter.":ph===1?" Färre nya ord och en provuppgift efter passet.":""}</p>`:""}
     ${pr?`<p class="plan">Du har ett påbörjat pass: ${esc(runLabel(pr))}</p><button class="btn" id="daily-go">Fortsätt passet</button>`:""}
     <button class="btn${pr?" ghost":""}" id="daily">${pr?"Starta ett nytt pass":"Starta pass"}</button>
-    ${nd>=REVIEW_HINT?`<p class="plan" id="reviewhint"><b>${nd} ord väntar på repetition.</b> Dagens pass tar ${due.length} åt gången, och nya ord kommer som vanligt. Vill du komma ikapp snabbare kan du köra en extra runda med bara repetition. Skriv svaren när du kan: ett ord räknas som "kan" först när du har skrivit det rätt några gånger.</p>
+    ${nd>=REVIEW_HINT?`<p class="plan" id="reviewhint"><b>${nd} ord väntar på repetition.</b> Dagens pass tar ${due.length} åt gången, och nya ord kommer som vanligt. Vill du komma ikapp snabbare kan du köra en extra runda med bara repetition.${isMono()?"":` Skriv svaren när du kan: ett ord räknas som "kan" först när du har skrivit det rätt några gånger.`}</p>
       <button class="btn ghost" id="review-go">${reviewRun()>=nd?`Repetera alla ${nd} ord`:`Repetera ${reviewRun()} ord`}</button>`:""}</section>`;
 }
 function wireDaily(){

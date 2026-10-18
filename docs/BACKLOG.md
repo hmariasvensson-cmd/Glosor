@@ -39,6 +39,8 @@ Emma pluggar på egen hand, utan kurs, lärare och lärobok. Tyskan bygger därf
 
 ## Kurser och nivåer
 
+- **P1: Högskoleprovet ORD (`hp`): ordlistan från 259 foton.** Grunden är byggd 2026-10-18 (HP-format med fem alternativ, provpass ORD, förbättringsstatistik, topplista; se KLART.md). Föräldern skickar 259 foton med den kompletta ordlistan; bara de orden ska användas. Fyll i den privata `languages/hp/book/words.txt` (format i `languages/hp/book/README.md`), lägg fotona i `book/foton/`, bygg, checka in `languages/hp/ids.lock` och `book/ids.lock`, stickprova felalternativen och publicera med `data/hp.json` och `data/code-hp.js`. Ersätter HP-akuten för eleven.
+
 - **P2: Resten av kursmallen** (`docs/kursmall.md`, avsnitt 4). Byggt: paket 1–8, 10 och 13–16 samt nivåerna. Kvar:
   - Paket 9 (grammatiken kopplad till kapitel) gör bara nytta i kurser med lärobok, så det väntar.
   - Uttalsövningarna är omarbetade 2026-10-06 (version 44). Kvar: lyssna med en riktig röst, först franska notre/nôtre, pomme/paume, pot/pote och italienska -emo/-emmo.

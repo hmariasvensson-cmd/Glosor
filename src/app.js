@@ -141,9 +141,10 @@ function parseWords(raw){
   raw.trim().split("\n").forEach(l=>{
     l=l.trim(); if(!l) return;
     if(l[0]==="#"){const [id,name,src]=l.slice(1).split("|"); sec={id,name,book:src==="bok"}; sections.push(sec); return;}
-    const [t,sv,g,exRaw,exSv,ety,lit]=l.split("|");
+    const [t,sv,g,ex0,exSv,ety,lit]=l.split("|");
     if(seen.has(t)) return; seen.add(t);
-    words.push({id:t,sec:sec.id,t,sv,g:g||"",exT:exRaw.replace(/[\[\]]/g,""),exSv,ety,lit:lit||"",gap:findGap(t,exRaw)});
+    const exRaw=ex0||"";   // kurser på ett språk (mono) kan sakna exempel
+    words.push({id:t,sec:sec.id,t,sv:sv||"",g:g||"",exT:exRaw.replace(/[\[\]]/g,""),exSv:exSv||"",ety:ety||"",lit:lit||"",gap:exRaw?findGap(t,exRaw):null});
   });
   return {sections,words};
 }
@@ -216,6 +217,8 @@ const dueMax=()=>S.dueMax===0?Infinity:(S.dueMax>0?S.dueMax:MAXDUE);
                 ämne = "me" (presentation), "x:<provuppgift>", "w:<skrivuppgift>" eller "g:<n>". Saknas tills eleven talat
      wrSkip     måndagen ("ÅÅÅÅ-MM-DD") i veckan då kortet Veckans skrivuppgift stängdes; saknas = inte stängt (40-writing.js)
      feedback, reports   Tyck till-meddelanden och felrapporter som inte kunde skickas (högst 50)
+     hp         Högskoleprovet ORD (kind "hp", 06-hp.js): {lim, prov: [{d, r, n, s, lim, ids, miss}], run}; lim = vald tid (s),
+                prov = provpassen (högst 100), run = pågående provpass {ids, opts, ans, i, used, lim, seen}. Saknas tills eleven gjort ett
    Nya fält läggs till här och i docs/ARKITEKTUR.md. Ett fält som byter form får en ny migrering i MIGRATIONS.
    Ord-id som bytt namn (languages/<kod>/ids.renamed) flyttas i alla fälten ovan av applyRenames vid varje inläsning. */
 let S;
@@ -731,11 +734,13 @@ const dueWords=()=>WORDS.filter(w=>{const x=ws(w.id);return x&&isDue(x)})
    t = frågeformen ("mc" eller "type"). Rätt på flerval räcker bara upp till steg MC_MAX (2, lär sig): ett ord räknas
    som "kan" först när man har skrivit det rätt. Ett ord som redan har högre steg sänks inte av ett rätt flerval.
    g = elevens egen bedömning efter ett rätt skrivet svar (S.selfRate, 05-words.js): "hard" (Svårt) = stannar på
-   samma steg (kortare intervall än Bra), "easy" (Lätt) = två steg upp. Utan g (Bra) ett steg; gäller inte flerval. */
+   samma steg (kortare intervall än Bra), "easy" (Lätt) = två steg upp. Utan g (Bra) ett steg; gäller inte flerval.
+   Undantag: i en kurs på ett språk (mono: true, Högskoleprovet ORD) är flerval den enda frågeformen, och där räcker
+   ett rätt flerval hela vägen till "kan". Språkkurserna påverkas inte. */
 const MC_MAX=2;
 function schedule(x,ok,p,now,t,g){
-  const up=t==="mc"?1:g==="hard"?0:g==="easy"?2:1;
-  if(ok){ x.s=Math.min(x.s+up,INT.length-1,t==="mc"?Math.max(x.s,MC_MAX):INT.length-1); if(x.s>=MASTER&&!x.mp){x.mp=p;x.md=now;} }
+  const up=t==="mc"?1:g==="hard"?0:g==="easy"?2:1, cap=t==="mc"&&!(L&&L.mono)?Math.max(x.s,MC_MAX):INT.length-1;
+  if(ok){ x.s=Math.min(x.s+up,INT.length-1,cap); if(x.s>=MASTER&&!x.mp){x.mp=p;x.md=now;} }
   else { x.s=x.s>=MASTER?2:Math.max(0,x.s-1); delete x.mp; delete x.md; x.lapses=(x.lapses||0)+1; }
   x.due=p+INT[x.s];
   if(DAYS[x.s]) x.dd=addDays(now,DAYS[x.s]); else delete x.dd;
@@ -758,7 +763,7 @@ let SOUND=(()=>{try{return localStorage.getItem(SOUND_KEY)!=="av"}catch(e){retur
 function setSound(on){ SOUND=on; try{localStorage.setItem(SOUND_KEY,on?"på":"av")}catch(e){ /* privat läge: gäller bara nu */ }
   if(!on) try{speechSynthesis.cancel()}catch(e){ /* ingen uppläsning */ }
   const b=document.querySelector("#sound"); if(b){ b.setAttribute("aria-pressed",String(!on)); b.textContent=on?"Ljud på":"Ljud av"; } }
-function speak(t,rate){if(!SOUND)return;try{
+function speak(t,rate){if(!SOUND||(L&&L.mono))return;try{
   speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(cleanSay(t));u.lang=L.tts;if(voice)u.voice=voice;u.rate=rate||baseRate();speechSynthesis.speak(u);
 }catch(e){ /* ingen uppläsning */ }}
 
@@ -940,6 +945,7 @@ function renderStart(){
       return ss.length?`<optgroup label="${esc(e.label||"")}">${ss.map(secOpt).join("")}</optgroup>`:""; }).join("");
   const nothing=!newW.length&&!due.length;
   app.innerHTML=`
+  ${isHp()?hpPanel():""}
   ${dailyPanel()}
   ${suggestPanel()}
   ${S.run&&runKey(S.run)!==PASS_KEY?`<section class="panel"><h2>Fortsätt där du slutade</h2><p class="plan">${esc(runLabel(S.run))}</p>
@@ -964,14 +970,14 @@ function renderStart(){
     <div class="field"><span class="label">Repetitioner per pass</span>
       <div class="seg" role="group" aria-label="Repetitioner per pass">${DUE_CHOICES.map(n=>`<button data-dm="${n}" aria-pressed="${(S.dueMax==null?MAXDUE:S.dueMax)===n}">${n||"Alla"}</button>`).join("")}</div>
       <p class="foot" id="due-note">${dueCount()} ord ska repeteras nu.${S.dueMax===0?" Passet tar alla.":` Passet tar högst ${dueMax()}, resten kommer i nästa pass.`}</p></div>
-    <div class="field"><span class="label">Quizet</span>
+    ${L.mono?"":`<div class="field"><span class="label">Quizet</span>
       <div class="seg" role="group" aria-label="Frågetyp">
         <button data-m="mix" aria-pressed="${S.mode==="mix"}">Anpassat</button>
         <button data-m="mc" aria-pressed="${S.mode==="mc"}">Flerval</button>
         <button data-m="type" aria-pressed="${S.mode==="type"}">Skriva</button></div>
-      ${S.mode==="type"?"":`<p class="foot" id="mc-note">Ett ord räknas som <b>kan</b> först när du har skrivit det rätt. Flerval räcker till <b>lär sig</b>.</p>`}</div>
+      ${S.mode==="type"?"":`<p class="foot" id="mc-note">Ett ord räknas som <b>kan</b> först när du har skrivit det rätt. Flerval räcker till <b>lär sig</b>.</p>`}</div>`}
     <details class="more settings" id="setd" ${SET_OPEN?"open":""}><summary>Fler inställningar</summary>
-    <div class="row2b">
+    ${L.mono?"":`<div class="row2b">
       <div class="field"><span class="label">Uppläsning</span>
         <div class="seg" role="group" aria-label="Uppläsning"><button data-slow="0" aria-pressed="${!S.slow}">Normal</button><button data-slow="1" aria-pressed="${!!S.slow}">Långsam</button></div></div>
       <div class="field"><span class="label">Nya ord</span>
@@ -979,7 +985,7 @@ function renderStart(){
     </div>
     <div class="field"><span class="label">Bedöm själv hur svårt det var</span>
       <div class="seg" role="group" aria-label="Bedöm själv hur svårt det var"><button data-sr="0" aria-pressed="${!S.selfRate}">Av</button><button data-sr="1" aria-pressed="${!!S.selfRate}">På</button></div>
-      <p class="foot">Efter ett rätt skrivet ord i glosquizet väljer du Igen, Svårt, Bra eller Lätt (tangenterna 1–4; Enter eller mellanslag = Bra). Svårt kommer tillbaka tidigare, Lätt senare.</p></div>
+      <p class="foot">Efter ett rätt skrivet ord i glosquizet väljer du Igen, Svårt, Bra eller Lätt (tangenterna 1–4; Enter eller mellanslag = Bra). Svårt kommer tillbaka tidigare, Lätt senare.</p></div>`}
     ${Object.keys(LANGUAGES).length>1?`<div class="field"><span class="label">Kurser</span>
       <div class="seg" role="group" aria-label="Kurser"><button data-only="0" aria-pressed="${!onlyCourse()}">Visa alla</button><button data-only="1" aria-pressed="${sameLang(onlyCourse(),L.code)}">Bara ${esc(L.name.toLowerCase())}</button></div></div>`:""}
     <div class="field"><span class="label">Veckomål</span>
@@ -994,7 +1000,7 @@ function renderStart(){
     </details>
     <p class="plan">${nothing?"Inget att öva just nu. Välj ett annat avsnitt eller fler nya ord."
       :`Du lär dig <b>${newW.length} nya ord</b> och repeterar <b>${due.length}</b>. Quizet får ${newW.length+due.length} frågor.`}
-      ${S.mode==="mix"&&!nothing?` ${(()=>{const t=due.filter(w=>ws(w.id).f==="type").length;return `${newW.length+due.length-t} frågor med flerval och ${t} där du skriver ${L.inLang}.`})()} Klarar du flerval blir det skriva nästa gång. Missar du när du skriver blir det flerval igen.`:""}</p>
+      ${S.mode==="mix"&&!nothing&&!L.mono?` ${(()=>{const t=due.filter(w=>ws(w.id).f==="type").length;return `${newW.length+due.length-t} frågor med flerval och ${t} där du skriver ${L.inLang}.`})()} Klarar du flerval blir det skriva nästa gång. Missar du när du skriver blir det flerval igen.`:""}</p>
     <button class="btn ${S.run?"":"ghost"}" id="go" ${nothing?"disabled":""}>${newW.length?"Bara glosorna: börja med de nya orden":"Bara glosorna: starta quizet"}</button>
   </section>
   ${gamesPanel()}
@@ -1014,7 +1020,7 @@ function renderStart(){
   app.querySelectorAll("[data-only]").forEach(b=>b.onclick=()=>{setOnly(b.dataset.only==="1"?L.code:"");renderStart()});
   app.querySelectorAll("[data-goal]").forEach(b=>b.onclick=()=>{S.goal=+b.dataset.goal;save();boardPush();renderStart()});
   app.querySelectorAll("[data-gy]").forEach(b=>b.onclick=()=>{S.gy25=b.dataset.gy==="1";save();$("#coursechip").textContent=courseChip();renderStart()});
-  wireDaily(); wireProf();
+  wireDaily(); wireProf(); wireHpPanel();
   $("#go").onclick=()=>startSession(newW,due);
   if($("#run-go")){ $("#run-go").onclick=resumeRun; $("#run-drop").onclick=quitSession; }
   if($("#examdate")) $("#examdate").onchange=e=>{ const v=e.target.value; if(planDate(v)) S.examDate=v; else delete S.examDate; save(); renderStart(); };
@@ -1185,8 +1191,10 @@ function myStats(){
   // hist: minuter per vecka de sex senaste hela veckorna, {veckostart: minuter}, bara veckor med minuter
   const min=i=>Math.round(sec[i]/60), hist={}; for(let i=1;i<b.length;i++) if(min(i)) hist[b[i]]=min(i);
   const {learned,mastered}=wordCounts();
-  return {week:w0, min:min(0), q:q[0], goal:S.goal||0, prev:{week:b[1], min:min(1), q:q[1]}, hist,
+  const out={week:w0, min:min(0), q:q[0], goal:S.goal||0, prev:{week:b[1], min:min(1), q:q[1]}, hist,
     days:wkDays.size, streak, last:S.log.length?S.log[S.log.length-1].d:0, learned, mastered};
+  const hp=isHp()&&hpBoard(); if(hp) out.hp=hp;   // Högskoleprovet ORD: provpassen {n, best, last, of, d} (06-hp.js), nytt fält
+  return out;
 }
 function boardSubscribe(){
   if(!CLOUD.db||BOARD.unsub) return;
@@ -1272,6 +1280,10 @@ async function renderBoard(){
   const hist=Object.keys(byWeek).map(Number).sort((a,b)=>b-a).slice(0,5).map(wk=>{
     const [key,m]=Object.entries(byWeek[wk]).sort((a,b)=>b[1]-a[1])[0]; return {wk,key,m};});
   const wkLabel=wk=>{const d=new Date(wk); return `v. ${isoWeek(d)}`;};
+  // Provpass ORD (Högskoleprovet): bästa och senaste resultat ur langs.<kod>.hp, för kurser med kind "hp"
+  const hpRows=[]; parts.forEach(({key,d})=>Object.entries(obj(obj(d).langs)).forEach(([k,x])=>{ const h=obj(obj(x).hp);
+    if((LANGUAGES[k]||{}).kind==="hp"&&num(h.n)&&byKey[key]) hpRows.push({r:byKey[key],best:num(h.best),last:num(h.last),of:num(h.of)||10,n:num(h.n)}); }));
+  hpRows.sort((a,b)=>b.best-a.best||b.last-a.last);
   app.innerHTML=`<section class="panel"><h2>Topplista den här veckan</h2>
     <p class="plan">Minuter och frågor sedan måndag, i alla språk. Dagar i rad räknas om man övar varje dag.</p>
     ${win?`<p class="winner">Förra veckan vann <b>${esc(nameOf(win))}</b> med ${esc(win.prev)} minuter.</p>`:""}
@@ -1283,6 +1295,9 @@ async function renderBoard(){
       <span class="num"><b>${esc(r.streak)}</b><small>dagar i rad</small></span></li>`).join("")}</ol>`
       :`<p class="plan">Ingen har övat än den här veckan.</p>`}
   </section>
+  ${hpRows.length?`<section class="panel" id="hpboard"><h2>Provpass ORD</h2><p class="plan">Bästa och senaste resultat på provpassen i Högskoleprovet ORD.</p>
+    <ol class="board">${hpRows.map((h,i)=>`<li class="brow${me(h.r)?" me":""}"><span class="rank">${i+1}</span><span class="who"><b>${esc(nameOf(h.r))}${me(h.r)?" (du)":""}</b><small>${esc(h.n)} provpass</small></span>
+      <span class="num"><b>${esc(h.best)}/${esc(h.of)}</b><small>bästa</small></span><span class="num"><b>${esc(h.last)}/${esc(h.of)}</b><small>senaste</small></span></li>`).join("")}</ol></section>`:""}
   ${hist.length?`<section class="panel"><h2>Tidigare veckor</h2><ul class="missed">${hist.map(h=>`<li><span>${esc(wkLabel(h.wk))}</span><span><b>${esc(byKey[h.key]?nameOf(byKey[h.key]):"Någon")}</b> · ${esc(h.m)} min</span></li>`).join("")}</ul></section>`:""}
   <section class="panel"><h2>Ditt namn i topplistan${profMulti()?` (${esc(profName())})`:""}</h2>
     <form id="nickf" class="nick" autocomplete="off"><input class="search" id="nick" maxlength="24" placeholder="Till exempel Kalle" value="${esc(nickOf(mine))}"><button class="btn" style="width:auto">Spara</button></form>
@@ -1436,7 +1451,7 @@ function renderMC(d){
   app.innerHTML=`<section class="panel">${d.tab?`<span class="tab">${esc(d.tab)}</span>`:""}${progressHead()}
     ${d.head}
     <p class="q-ask">${d.ask}</p>
-    <div class="opts">${d.opts.map((o,i)=>`<button class="opt" data-i="${i}"><span class="k">${i+1}</span><span ${o.lang?lang():""}>${esc(o.label)}</span></button>`).join("")}</div>
+    <div class="opts">${d.opts.map((o,i)=>`<button class="opt" data-i="${i}"><span class="k">${d.letters?"ABCDEFGHI"[i]:i+1}</span><span ${o.lang?lang():""}>${esc(o.label)}</span></button>`).join("")}</div>
     <div id="fb"></div></section>
     ${quitBtn()}`;
   if($("#sp")) $("#sp").onclick=()=>speak(d.say);
@@ -1540,6 +1555,9 @@ document.addEventListener("keydown",e=>{
   const tg=e.target&&e.target.matches?e.target:document.body;
   if(e.ctrlKey||e.metaKey||e.altKey||tg.matches("input,textarea,select")) return;
   const click=sel=>{const b=app.querySelector(sel); if(b&&!b.disabled&&!b.hidden&&b.offsetParent!==null){e.preventDefault(); b.click(); return true;} return false;};
+  // Flerval med bokstäver (HP-formatet, d.letters): A–E väljer också
+  const li=e.key.length===1?"abcdefghi".indexOf(e.key.toLowerCase()):-1;
+  if(li>=0&&sess&&sess.cur&&sess.d&&sess.d.letters&&sess.cur.t==="mc"&&!sess.answered&&li<sess.d.opts.length){ e.preventDefault(); answerMC(li); return; }
   const n=+e.key;
   if(n>=1&&n<=9){
     if(sess&&sess.cur&&sess.d&&sess.cur.t==="mc"&&!sess.answered&&n<=sess.d.opts.length){ e.preventDefault(); answerMC(n-1); return; }
@@ -1691,7 +1709,7 @@ function renderStats(){
   const logs=S.log, wl=logs.filter(l=>!l.verb&&!l.cloze&&!l.kind), passes=wl.filter(l=>!l.extra), vl=logs.filter(l=>l.verb), cl=logs.filter(l=>l.cloze);
   if(!logs.length){
     app.innerHTML=`<section class="panel"><h2>Statistik</h2><p class="sub">Här ser du hur det går när du har kört ditt första pass: hur många ord du lärt dig, hur snabbt det går, om du kan orden åt båda hållen och vilka ord som behöver mer övning.</p>
-      <button class="btn" id="go1">Kör första passet</button></section>${statsLevel()}`;
+      <button class="btn" id="go1">Kör första passet</button></section>${L.mono?"":statsLevel()}`;
     $("#go1").onclick=()=>setView("ova"); return;
   }
   const old=S.logOld||{dur:0,days:0,lastDay:""};
@@ -1747,8 +1765,9 @@ function renderStats(){
     <p class="plan">Du har övat ${days} ${days===1?"dag":"dagar"}${extraRuns?` och ${extraRuns}`:""}${logs.some(l=>l.kind)?` och gjort ${logs.filter(l=>l.kind).length} andra övningar`:""}. <b>${mastered.length}</b> ord räknas som inlärda.</p>
   </section>
 
+  ${isHp()?hpStatsPanel():""}
   ${statsDaily()}
-  ${statsLevel()}
+  ${L.mono?"":statsLevel()}
 
   <section class="panel">
     <h2>Hur fort det går</h2>
@@ -1763,14 +1782,14 @@ function renderStats(){
     <p class="foot">Ett ord räknas som inlärt när du har klarat det i fyra repetitioner i rad (nästa pass, efter 3 pass, efter 3 dagar och efter 7 dagar). Därför dröjer den gröna linjen.</p>`:""}
   </section>
 
-  <section class="panel">
+  ${L.mono?"":`<section class="panel">
     <h2>Åt vilket håll kan du orden?</h2>
     ${meter(`Förstå: ${L.name.toLowerCase()} → svenska (flerval)`,mcR,mcN,"var(--c1)")}
     ${meter(`Skriva: svenska → ${L.name.toLowerCase()}`,tyR,tyN,"var(--c2)")}
     ${meter("Använda: fylla i meningar",clR,clN,"var(--c2)")}
     ${dirInsight?`<p class="insight">${dirInsight}</p>`:""}
     <p class="plan">Just nu övar du <b>${onMc}</b> ord med flerval och <b>${onTy}</b> ord där du skriver själv.</p>
-  </section>
+  </section>`}
 
   ${recent.length?`<section class="panel">
     <h2>Rätt direkt, pass för pass</h2>
@@ -1813,6 +1832,7 @@ function renderStats(){
     sess={newW:[],due:hard.map(h=>h.w),i:0,kind:"words",extra:true,start:Date.now()}; startQuiz();
   };
   app.querySelectorAll("[data-g]").forEach(b=>b.onclick=()=>startVerbs(b.dataset.g));
+  wireHpStats();
 }
 
 /* ---------- Tooltip ---------- */
@@ -1974,7 +1994,8 @@ function useLang(code){
   try{localStorage.setItem(langKey(),code)}catch(e){ /* privat läge: kursvalet sparas inte */ }
   $("#title").textContent=L.title;
   $("#search").value="";
-  $("#search").placeholder=`Sök ${L.inLang} eller svenska`;
+  $("#search").placeholder=L.mono?"Sök ord eller betydelse":`Sök ${L.inLang} eller svenska`;
+  document.body.classList.toggle("mono",!!L.mono);   // mono: inga uppläsningsknappar (style.css)
   $("#course").value=code;
   $("#coursechip").textContent=courseChip(); profChip();
   setView("ova");

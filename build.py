@@ -32,6 +32,10 @@ DIST = ROOT / "dist"
 # Språk som ska ligga först i väljaren. Det första är standard för den som öppnar sidan första gången.
 ORDER = ["fr"]
 GENDERS = {"", "m", "f", "n", "mpl", "fpl", "npl", "pl"}
+# Kurser på ett språk (mono: true i lang.js, t.ex. Högskoleprovet ORD, kind "hp"): ordet och betydelsen är på samma språk.
+# Ordlistan får då 2–7 fält (ord|betydelse|ordklass|exempel||förklaring, resten fylls ut till sex fält), och tredje fältet
+# är ordklassen i stället för genus. Distraktorerna i HP-flervalet tas helst ur samma ordklass (06-hp.js).
+WORD_CLASSES = {"", "subst", "verb", "adj", "adv", "uttr", "prep", "konj", "pron", "räkn", "interj", "part"}
 MAX_PAGE_KB, MAX_DATA_KB = 420, 1600   # varningsgränser för storleken (okomprimerat), se slutet av main
 
 # Provets index i kursens datafil (split_exam): de fält per uppgift som listor, startsidan, nivåmätaren och planen läser
@@ -95,7 +99,7 @@ def lemma_files(codes, confs, course_data):
     out = {}
     for c in codes:
         words = course_data.get(c, {}).get("words")
-        if not isinstance(words, str):
+        if not isinstance(words, str) or confs[c].get("mono") is True:   # svenska ord behöver ingen grundformsfil
             continue
         lst = out.setdefault(f"lemma-{lemma_lang(c, confs[c])}", {"words": [], "_seen": set()})
         for line in words.split("\n"):
@@ -339,8 +343,9 @@ def book_files(code, pattern):
     return sorted(book.glob(pattern)) + sorted(f for f in book.glob("*/" + pattern))
 
 
-def read_words(code):
-    """Läser words.txt (och book/words.txt om den finns), tar bort kommentarer och kontrollerar varje rad."""
+def read_words(code, mono=False):
+    """Läser words.txt (och book/words.txt om den finns), tar bort kommentarer och kontrollerar varje rad.
+    mono (kurser på ett språk, se WORD_CLASSES): 2–7 fält, utfyllda till sex, och ordklass i stället för genus."""
     errors, warnings = [], []
     lines, seen, section_ids = [], set(), set()
     origin = {"ord": {}, "avsnitt": {}}   # id -> True om det kommer från den privata bokmappen
@@ -375,13 +380,20 @@ def read_words(code):
         fields = s.split("|")
         if section is None:
             errors.append(f"{where}: ordet ligger före första avsnittet (#id|Namn)")
-        if len(fields) not in (6, 7):
+        if mono and 2 <= len(fields) < 6:   # ord|betydelse räcker; appen läser alltid sex fält
+            fields += [""] * (6 - len(fields))
+            s = "|".join(fields)
+        if mono and len(fields) not in (6, 7):
+            errors.append(f"{where}: {len(fields)} fält, ska vara 2–7 (ord|betydelse|ordklass|exempel||förklaring|ordagrant)")
+        elif len(fields) not in (6, 7):
             errors.append(f"{where}: {len(fields)} fält, ska vara 6 eller 7 (ord|svenska|genus|exempel|exempel sv|ursprung|ordagrant)")
         else:
             word, sv, g = fields[0], fields[1], fields[2]
             if not word or not sv:
                 errors.append(f"{where}: ordet eller den svenska översättningen saknas")
-            if g not in GENDERS:
+            if mono and g not in WORD_CLASSES:
+                errors.append(f"{where}: okänd ordklass '{g}' (tillåtna: {', '.join(sorted(x for x in WORD_CLASSES if x))} eller tomt)")
+            elif not mono and g not in GENDERS:
                 errors.append(f"{where}: okänt genus '{g}' (tillåtna: {', '.join(sorted(x for x in GENDERS if x))})")
             # Ord-id är ordet självt, så en dubblett skulle dela framsteg med det första ordet: bygget stoppas
             if word in seen:
@@ -1500,6 +1512,17 @@ def check_grammar_refs(content, grammar, section_ids, where, has_book):
 STEP_LEVEL = {1: "A1", 2: "A1", 3: "A2", 4: "A2", 5: "B1", 6: "B1", 7: "B2"}
 
 
+def read_upcoming(errors):
+    """languages/upcoming.json (kommande kurser), [] om filen saknas; fel läggs i errors."""
+    if not (LANG_DIR / "upcoming.json").exists():
+        return []
+    try:
+        return json.loads((LANG_DIR / "upcoming.json").read_text(encoding="utf-8"))
+    except json.JSONDecodeError as e:
+        errors.append(f"languages/upcoming.json: {e}")
+        return []
+
+
 def check_steps(confs, upcoming):
     """step och level i lang.js och upcoming.json: step är 1–7 eller "U", level börjar på stegets GERS-nivå
     (t.ex. steg 4: "A2 → B1"). Kommande kurser har kod, språk, namn och steg, och en kod som redan är byggd ger en varning."""
@@ -1518,6 +1541,8 @@ def check_steps(confs, upcoming):
         for f in ("name", "title", "course", "inLang", "tts"):
             if not isinstance(conf.get(f), str) or not conf[f]:
                 errors.append(f"languages/{code}/lang.js: {f} saknas" + (" (ska vara en text inom citattecken)" if f in conf else ""))
+        if conf.get("mono") is True:   # en kurs på ett språk (Högskoleprovet ORD) har inget steg i Moderna språk
+            continue
         step, lv = conf.get("step"), conf.get("level")
         if isinstance(step, JSExpr) or isinstance(step, bool) or isinstance(step, float):
             step = repr(step.raw if isinstance(step, JSExpr) else step)
@@ -1528,11 +1553,12 @@ def check_steps(confs, upcoming):
         if not isinstance(u, dict) or not all(u.get(k) for k in ("code", "name", "course")):
             errors.append(f"{where}: varje kommande kurs behöver code, name (språket, som i lang.js) och course")
             continue
-        one(where, u.get("step"), u.get("level"))
+        if not u.get("mono"):
+            one(where, u.get("step"), u.get("level"))
         if u["code"] in seen:
             errors.append(f"{where}: koden finns två gånger")
         seen.add(u["code"])
-        if u["code"] in confs:
+        if u["code"] in confs and not u.get("untilWords"):   # untilWords: raden behövs i kopior utan bokmappen
             warnings.append(f"{where}: kursen finns redan i languages/{u['code']}/ och visas inte som kommande; ta bort raden")
     if not isinstance(upcoming, list):
         errors.append("languages/upcoming.json: ska vara en lista")
@@ -1623,21 +1649,37 @@ def main():
 
     lang_js, all_errors, course_data, confs, lock_writes, lock_notes, keys = [], [], {}, {}, {}, [], {}
     own_verbs = {}   # languages/<kod>/verbs.json
-    for code in codes:
-        words, n_words, section_ids, errors, warnings, origin = read_words(code)
+    upcoming = read_upcoming(all_errors)
+    waiting = {u.get("code") for u in upcoming if isinstance(u, dict) and u.get("untilWords")}
+    for code in list(codes):
+        conf = (LANG_DIR / code / "lang.js").read_text(encoding="utf-8")
+        try:
+            parsed = parse_lang_js(conf, code)
+        except JSParseError as e:
+            all_errors.append(f"languages/{code}/lang.js: kan inte läsas: {e}")
+            parsed = {}
+        mono = parsed.get("mono") is True
+        if "kind" in parsed and parsed.get("kind") not in ("hp",):
+            all_errors.append(f"languages/{code}/lang.js: okänd kind {parsed.get('kind')!r} (bara \"hp\" finns)")
+        if parsed.get("kind") == "hp" and not mono:
+            all_errors.append(f"languages/{code}/lang.js: kind \"hp\" kräver mono: true (ord och betydelse på svenska)")
+        if "mono" in parsed and not isinstance(parsed.get("mono"), bool):
+            all_errors.append(f"languages/{code}/lang.js: mono ska vara true eller false")
+        words, n_words, section_ids, errors, warnings, origin = read_words(code, mono)
+        # En kurs vars ord inte finns än (t.ex. Högskoleprovet ORD, där orden ligger i den privata mappen book/) och som
+        # står i upcoming.json med "untilWords": true byggs inte: den visas som kommande, och inget id-lås skrivs.
+        if not n_words and not errors and code in waiting:
+            print(f"{code}: inga ord än (languages/{code}/book/ saknas eller är tom), visas som kommande kurs")
+            codes.remove(code)
+            continue
         n_sections = len(section_ids)
         all_errors += errors
         for w in warnings:
             print("Varning:", w)
-        conf = (LANG_DIR / code / "lang.js").read_text(encoding="utf-8")
         if "</script" in conf.lower():
             all_errors.append(f"languages/{code}/lang.js: får inte innehålla </script")
         js = conf.strip()
-        try:
-            confs[code] = parse_lang_js(conf, code)
-        except JSParseError as e:
-            all_errors.append(f"languages/{code}/lang.js: kan inte läsas: {e}")
-            confs[code] = {}
+        confs[code] = parsed
         # Valbara avsnitt (elective): rätt form, och varje grupp ska träffa minst ett avsnitt
         try:
             for rx, label in elective_groups(confs[code]):
@@ -1768,12 +1810,6 @@ def main():
             course_data[code]["verbTables"] = tables
         elif has_field(confs, code, "verbs"):
             all_errors.append(f"languages/{code}/lang.js: verbs utan verbtabeller (lägg sv, tenses och notes i languages/{code}/verbs.json eller ärv dem)")
-    upcoming = []
-    if (LANG_DIR / "upcoming.json").exists():
-        try:
-            upcoming = json.loads((LANG_DIR / "upcoming.json").read_text(encoding="utf-8"))
-        except json.JSONDecodeError as e:
-            all_errors.append(f"languages/upcoming.json: {e}")
     errs, warns = check_steps(confs, upcoming)
     all_errors += errs
     for w in warns:

@@ -49,8 +49,9 @@ const sentRestore=ref=>sentById(ref)?{w:sentById(ref)}:null, sentRecap=ref=>sent
 // Antal ord per mening, sparat per text: startsidan räknar poolerna (och det som förfaller) vid varje ritning
 const memoText=f=>{const m=new Map(); return s=>{ let v=m.get(s); if(v===undefined){ v=f(s); m.set(s,v); } return v; };};
 const tokCount=memoText(s=>tok(s||"").length), orderCount=memoText(s=>orderTokens(s||"").words.length);
-const dictPool=()=>perRender("dictPool",()=>sentencePool().filter(w=>tokCount(w.exT)>=3));
-const transPool=dictPool, orderPool=()=>perRender("orderPool",()=>sentencePool().filter(orderable));
+// En kurs på ett språk (mono: true, Högskoleprovet ORD) har ingen diktamen, översättning eller ordföljd
+const dictPool=()=>isMono()?[]:perRender("dictPool",()=>sentencePool().filter(w=>tokCount(w.exT)>=3));
+const transPool=dictPool, orderPool=()=>isMono()?[]:perRender("orderPool",()=>sentencePool().filter(orderable));
 const sentDue=(field,pool)=>srsDueCount(S[field],pool.map(w=>w.id));
 function startDict(){
   const p=shuffle(weakestFirst(dictPool(),"dc",{due:true}).slice(0,8));

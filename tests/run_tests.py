@@ -244,7 +244,7 @@ appReady().then(async()=>{ try{
     const pf=(f,t)=>L.verbs.prefix(0,f,L.verbs.persons,t);
     ok("verb: j' framför vokal och stumt h, je framför aspirerat h", pf("habite")==="j'" && pf("hésite")==="j'" && pf("aime")==="j'" && pf("hais")==="je " && pf("hurle")==="je " && pf("parle")==="je " && pf("habite","subjonctif")==="que j'", [pf("habite"),pf("hais"),pf("habite","subjonctif")].join("|")); }
   ok("kurs och nivå visas", q("#coursechip").textContent.includes("Franska 3"), q("#coursechip").textContent);
-  { const soon=UPCOMING.filter(u=>!LANGUAGES[u.code]); ok("kommande kurser går inte att välja", soon.every(u=>[...q("#course").options].some(o=>o.disabled&&o.text.startsWith(u.course+" · ")&&o.text.endsWith("kommer"))), soon.length+" kommande"); }
+  { const soon=UPCOMING.filter(u=>!LANGUAGES[u.code]); ok("kommande kurser går inte att välja", soon.every(u=>[...q("#course").options].some(o=>o.disabled&&(o.text.startsWith(u.course+" · ")||o.text===u.course+" – kommer")&&o.text.endsWith("kommer"))), soon.length+" kommande"); }
   ok("dagens pass finns", !!q("#daily"));
   ok("bokpanel med kapitel", !!q("#chapter")&&q(".book").textContent.includes("Escalade"));
   q("#chapter").value="k2"; q("#chapter").dispatchEvent(new Event("change"));
@@ -998,7 +998,8 @@ def test_build_locks():
         lock = lambda c: json.loads((t / "languages" / c / "ids.lock").read_text(encoding="utf-8"))
         r = build()
         ok("id-lås: bygget går igenom med låsen som de är", r.returncode == 0, "" if r.returncode == 0 else r.stdout[-300:])
-        for c in [p.name for p in (t / "languages").iterdir() if (p / "lang.js").exists()]:
+        # Kurser på ett språk (mono, hp) har orden i den privata bokmappen och testas i test_hp_course
+        for c in [p.name for p in (t / "languages").iterdir() if (p / "lang.js").exists() and "mono: true" not in (p / "lang.js").read_text(encoding="utf-8")]:
             d = lock(c)
             ok(f"id-lås: {c} har ett lås med storageKey och ord", d.get("storageKey") and len(d.get("ord", [])) > 100 and "innehåll/grammar" in d)
         # Bokens id ligger bara i book/ids.lock
@@ -1422,12 +1423,12 @@ const allRight=n0=>{const l=logsSince(n0); return l.length>0&&l.every(e=>e.right
     // Blandad runda och verb
     { const n0=S.log.length; startMix(); const ks=[...new Set([sess.cur,...sess.queue].map(x=>x.k))];
       const reg=[sess.cur,...sess.queue].every(x=>KINDS[x.k]&&(x.t==="mc"?KINDS[x.k].mc:KINDS[x.k].type)); runAll();
-      ok(c+": blandad runda", !sess&&reg&&ks.length>=3&&allRight(n0), ks.join()+" · "+firstRight(n0)); }
+      ok(c+": blandad runda", !sess&&reg&&ks.length>=(L.mono?1:3)&&allRight(n0), ks.join()+" · "+firstRight(n0)); }   // mono (hp): bara meningar
     for(const g of verbGames().slice(0,1)){ const n0=S.log.length; startVerbs(g.id); runAll(); ok(c+": verb ("+g.name+")", !sess&&S.log[S.log.length-1].verb&&allRight(n0), firstRight(n0)); }
     // Varje övning i menyn
     const menu=exGroups().flatMap(g=>g.items.map(h=>(h.match(/data-ex="(\w+)"/)||[])[1]).filter(Boolean));
     ok(c+": varje knapp i menyn har en typ med open", menu.every(id=>KINDS[id]&&KINDS[id].open), menu.join());
-    const need=["ktest","dict","trans","order","talk"].concat((C().listening||[]).length?["lq"]:[],(C().reading||[]).length?["rq"]:[],(C().stories||[]).length?["story"]:[],(C().phrases||[]).length?["phr"]:[],(C().prompts||[]).length?["write"]:[],hasGrammar()?["gram"]:[],(C().uttal||[]).length?["utt"]:[],hasExam()?["exam"]:[],(C().culture||[]).length?["culture"]:[]);
+    const need=["ktest"].concat(L.mono?(L.kind==="hp"?["hpprov"]:[]):["dict","trans","order","talk"],(C().listening||[]).length?["lq"]:[],(C().reading||[]).length?["rq"]:[],(C().stories||[]).length?["story"]:[],(C().phrases||[]).length?["phr"]:[],(C().prompts||[]).length?["write"]:[],hasGrammar()?["gram"]:[],(C().uttal||[]).length?["utt"]:[],hasExam()?["exam"]:[],(C().culture||[]).length?["culture"]:[]);
     ok(c+": alla övningar som kursen har innehåll för finns i menyn", need.every(k=>menu.includes(k)), need.filter(k=>!menu.includes(k)).join()+" · "+menu.length+" övningar");
     for(const id of menu){ const n0=S.log.length; let res=null, info="";
       try{
@@ -1436,6 +1437,8 @@ const allRight=n0=>{const l=logsSince(n0); return l.length>0&&l.every(e=>e.right
           res=!sess&&S.tx&&S.tx[tid]&&S.tx[tid].best===S.tx[tid].n&&!!q("#more"); info=tid; }
         else if(id==="story"){ const sid=q("[data-pick]").dataset.pick; q("[data-pick]").click(); runAll(); res=!sess&&S.stb[sid]===parseStory(storyById(sid)).gaps.length&&!!q("#more"); info=sid; }
         else if(id==="utt"){ q('[data-pick="*"]').click(); runAll(); res=!sess&&q("#app").textContent.includes("Uttal klart")&&allRight(n0); }
+        else if(id==="hpprov"){ const p0=hpProvs().length; q("#hpnew").click(); hpRun().ids.forEach((wid,i)=>{ hpGo(i); q('[data-hpo="'+hpRun().opts[i].indexOf(wid)+'"]').click(); }); q("#hpdone").click();
+          const pp=hpProvs()[hpProvs().length-1]; res=hpProvs().length===p0+1&&pp.r===pp.n&&S.log[S.log.length-1].kind==="hpprov"&&!!q("#hpres"); info=pp&&pp.r+"/"+pp.n; }
         else if(id==="ktest"){ q('[data-ktm="mc"]').click(); const kid=q("[data-kt]").dataset.kt; q("[data-kt]").click(); runAll(); res=!sess&&S.kt[kid]&&S.kt[kid].r===S.kt[kid].n; info=kid+" "+(S.kt[kid]&&S.kt[kid].n)+" ord"; }
         else if(id==="gram"){ q('[data-pick="mix"]').click(); runAll(); res=!sess&&S.gt.mix&&S.gt.mix.n>0&&allRight(n0); info=firstRight(n0); }
         else if(id==="culture"){ const cid=q("[data-pick]").dataset.pick; q("[data-pick]").click(); q(".opt").click(); q("#ctext").value="Test."; q("#done").click(); res=S.cu[cid]&&S.log[S.log.length-1].kind==="culture"; }
@@ -2961,6 +2964,189 @@ def test_minimal_course():
 
 
 # ---------------------------------------------------------------------------------------------------------
+# Högskoleprovet ORD (languages/hp, kind "hp", mono: true, src/kinds/06-hp.js). Orden ligger i den privata mappen
+# languages/hp/book/ och saknas i repot, så testet bygger kursen i en temporär kopia med egna testord (HP_TEST_WORDS,
+# egenskrivna, inte ur ordlistan). Kontrollerar: bygget utan bokmappen (kursen står som kommande, inget id-lås, ingen
+# datafil), bygget med orden, fem alternativ A–E, att flerval räcker till "kan" bara i hp, att inget främmande språk
+# behövs (ingen uppläsning, diktamen, översättning, ordföljd eller Tala), provpasset (10 frågor, resultat, historik,
+# klocka, paus), statistikvyn, topplistan, föräldravyn och att looparna "alla kurser" går igenom utan JavaScript-fel.
+# ---------------------------------------------------------------------------------------------------------
+HP_TEST_WORDS = """// Testord för tests/run_tests.py (egenskrivna, HP-liknande; inte ur den riktiga ordlistan)
+#t1|Testord A–K
+ambivalent|kluven, tvehågsen|adj|Hon var [ambivalent] inför flytten.||Av latin ambi 'båda' och valere 'vara värd'.
+bagatell|småsak|subst|Det är bara en [bagatell].||
+diskret|försiktig, ej påfallande|adj|Han gjorde en [diskret] gest.||
+eftertrakta|åtrå, önska sig|verb|Jobbet är mycket [eftertraktat].||
+eklatant|uppenbar, slående|adj|Ett [eklatant] misstag.||
+fientlig|ovänlig, avogt inställd|adj|De möttes av en [fientlig] stämning.||
+fräsch|ny och ren|adj|Rummet kändes [fräscht].||
+försumbar|obetydlig|adj|Skillnaden är [försumbar].||
+gemytlig|trivsam, hemtrevlig|adj|En [gemytlig] stämning.||
+hämma|bromsa, hindra|verb|Kylan [hämmar] tillväxten.||
+idog|flitig, arbetsam|adj|En [idog] student.||
+jäkta|stressa|verb|Vi behöver inte [jäkta].||
+kategorisk|bestämd, utan undantag|adj|Hon gav ett [kategoriskt] nej.||
+kurant|lättsåld|adj|En [kurant] vara.||
+#t2|Testord L–Ö
+labil|instabil, ostadig|adj|Läget är [labilt].||
+marginell|mycket liten|adj|En [marginell] förändring.||
+nonchalant|likgiltig, vårdslös|adj|Han svarade [nonchalant].||
+obsolet|föråldrad|adj|Tekniken är [obsolet].||
+pejla|undersöka, ta reda på|verb|Vi får [pejla] läget.||
+plausibel|trolig, rimlig|adj|En [plausibel] förklaring.||
+reducera|minska|verb|Vi måste [reducera] kostnaderna.||
+skepsis|tvivel|subst|Förslaget möttes med [skepsis].||
+stagnera|stanna av|verb|Ekonomin har [stagnerat].||
+tvetydig|dubbeltydig|adj|Ett [tvetydigt] svar.||
+undanröja|ta bort|verb|Hindren måste [undanröjas].||
+vederhäftig|pålitlig, saklig|adj|En [vederhäftig] källa.||
+vidlyftig|omfattande, utförlig|adj|En [vidlyftig] plan.||
+åtnjuta|ha förmån av|verb|De [åtnjuter] stort förtroende.||
+ändamålsenlig|praktisk, lämplig|adj|En [ändamålsenlig] lokal.||
+överskådlig|lätt att få grepp om|adj|En [överskådlig] tabell.
+i görligaste mån|så långt det går|uttr
+"""
+SCENARIO_HP = r"""<script>
+const out=[]; const q=s=>document.querySelector(s);
+const ok=(name,cond,info="")=>out.push((cond?"OK   ":"FEL  ")+name+(info?"  ("+info+")":""));
+const key=k=>document.dispatchEvent(new KeyboardEvent("keydown",{key:k,bubbles:true}));
+appReady().then(async()=>{ try{
+  const opt=[...q("#course").options].find(o=>o.value==="hp");
+  ok("hp: finns i väljaren under Svenska och går att välja", !!opt&&!opt.disabled&&opt.parentNode.label==="Svenska"&&opt.text==="Högskoleprovet ORD", opt&&opt.text);
+  ok("hp: kommande-raden visas inte när kursen finns", ![...q("#course").options].some(o=>o.disabled&&o.text.includes("Högskoleprovet")));
+  let spoke=0; try{ speechSynthesis.speak=()=>{spoke++}; }catch(e){}
+  useLang("hp"); await until(()=>L.code==="hp"&&L.base&&!sess,5000);
+  ok("hp: vald, 31 testord, mono och kind hp", L.code==="hp"&&WORDS.length===31&&L.mono===true&&L.kind==="hp", WORDS.length);
+  ok("hp: ordet utan exempel får inga tomma fält", byId["i görligaste mån"].sv==="så långt det går"&&byId["i görligaste mån"].exT===""&&byId["i görligaste mån"].gap===null);
+  const txt=q("#app").textContent;
+  ok("hp: startsidan har introt om ORD och provpasset", !!q("#hppanel")&&txt.includes("fem svarsalternativ")&&!!q("#hpgo"));
+  ok("hp: startsidan utan frågeform, uppläsning och skriv-texter", !q("[data-m]")&&!q("[data-slow]")&&!q("[data-sr]")&&!txt.includes("skriver på svenska")&&!/undefined|NaN/.test(txt));
+  ok("hp: ingen uppläsning (mono)", document.body.classList.contains("mono")&&(speak("test"),spoke===0)&&$("#search").placeholder==="Sök ord eller betydelse");
+  // Övningarna: inget som kräver ett främmande språk
+  const menu=exGroups().flatMap(g=>g.items.map(h=>(h.match(/data-ex="(\w+)"/)||[])[1]).filter(Boolean));
+  ok("hp: menyn utan diktamen, översätt, ordföljd och Tala, med Provpass ORD", !["dict","trans","order","talk","gen","verbs"].some(k=>menu.includes(k))&&menu.includes("hpprov")&&menu.includes("ktest"), menu.join());
+  ok("hp: inga pooler för diktamen, översättning och ordföljd", dictPool().length===0&&transPool().length===0&&orderPool().length===0&&!L.verbs&&!L.genderGame&&!hasGrammar()&&!hasExam());
+  // Glosquizet: HP-formatet
+  S.newCount=10; S.mode="mix"; startSession(pickNew().slice(0,5),[]); while(sess&&!sess.queue) q("#next").click();
+  const d=sess.d, labels=d.opts.map(o=>o.label), right=d.opts.filter(o=>o.ok);
+  ok("hp: flerval med fem alternativ, ett rätt, inga dubbletter", sess.cur.t==="mc"&&d.opts.length===5&&right.length===1&&new Set(labels).size===5&&right[0].label===sess.cur.w.sv, labels.join(" | "));
+  ok("hp: bokstäverna A–E och ordet i fetstil", [...document.querySelectorAll(".opt .k")].map(x=>x.textContent).join("")==="ABCDE"&&q(".hpword b").textContent===sess.cur.w.t);
+  const w0=sess.cur.w, cls=d.opts.filter(o=>!o.ok).map(o=>WORDS.find(w=>w.sv===o.label)).filter(Boolean);
+  ok("hp: felalternativen är andra ords betydelser, helst samma ordklass", cls.length===4&&cls.filter(x=>x.g===w0.g).length>=3, w0.g+": "+cls.map(x=>x.g).join());
+  { const ri=d.opts.findIndex(o=>o.ok); key("ABCDE"[ri].toLowerCase());
+    ok("hp: tangenten A–E svarar, förklaringen visas", sess.answered&&!!q(".opt.right")&&q("#fb").textContent.includes(w0.sv)&&(!w0.ety||q("#fb").textContent.includes("Förklaring"))); }
+  { let g=0; while(sess&&g++<40){ if(!sess.answered) answerMC(sess.d.opts.findIndex(o=>o.ok)); q("#nx").click(); } }
+  ok("hp: glospasset klart", !sess&&S.log.length>0, S.log.length);
+  // Repetitionsschemat: flerval räcker till "kan" i hp, men inte i språkkurserna
+  { const x={s:3,due:1}; schedule(x,true,S.pass,Date.now(),"mc"); const keep=L; L=LANGUAGES.fr; const y={s:3,due:1}; schedule(y,true,1,Date.now(),"mc"); L=keep;
+    ok("hp: rätt flerval tar ordet till kan (steg 4); i franska stannar det på steg 3", x.s===4&&!!x.mp&&y.s===3, x.s+" / "+y.s); }
+  ok("hp: frågeformen är alltid flerval", qType(w0,false)==="mc"&&(S.mode="type",qType(w0,false))==="mc"); S.mode="mix";
+  // Provpass ORD
+  renderStart(); q("#hpgo").click();
+  ok("hp: provpassets startsida med tidsval", !!q("#hpstart")&&document.querySelectorAll("[data-hplim]").length===4);
+  q('[data-hplim="180"]').click(); q("#hpnew").click();
+  let r=hpRun();
+  ok("hp: provpass med 10 olika ord och fem alternativ var", r&&r.ids.length===10&&new Set(r.ids).size===10&&r.opts.every((o,i)=>o.length===5&&new Set(o).size===5&&o.includes(r.ids[i]))&&r.lim===180, r&&r.ids.length);
+  ok("hp: provpasset visar klocka, bokstäver och uppgifternas nummer", !!q("#hpq")&&/kvar$/.test(q("#hpclock").textContent)&&document.querySelectorAll("[data-hpi]").length===10&&q(".opt .k").textContent==="A");
+  r.ids.forEach((wid,i)=>{ if(i===9) return; hpGo(i); const ri=r.opts[i].indexOf(wid); q('[data-hpo="'+(i<7?ri:(ri+1)%5)+'"]').click(); });
+  hpGo(0); key(String(r.opts[0].indexOf(r.ids[0])+1));   // siffran väljer också (samma svar)
+  ok("hp: svaren sparas i S.hp.run, inget facit före inlämning", r.ans.filter(a=>a>=0).length===9&&!q(".opt.right")&&!q(".opt.wrong"));
+  q("#hpdone").click();
+  const p1=hpProvs()[0], lg=S.log[S.log.length-1];
+  ok("hp: resultat 7/10 (två fel, en obesvarad)", !!q("#hpres")&&q("#hpres .big").textContent==="7/10"&&q("#hpres").textContent.includes("Obesvarad"), q("#hpres")&&q("#hpres .big").textContent);
+  ok("hp: historiken i S.hp.prov", hpProvs().length===1&&p1.r===7&&p1.n===10&&p1.lim===180&&p1.miss.length===3&&p1.ids.length===10&&!S.hp.run, JSON.stringify(p1).slice(0,120));
+  ok("hp: provpasset loggas (kind hpprov)", lg.kind==="hpprov"&&lg.right===7&&lg.total===10&&KINDS.hpprov.name==="Provpass ORD");
+  q("#hpdrill").click(); ok("hp: öva på de missade orden startar ett glospass", !!sess&&sess.kind==="words"&&sess.newW.length+sess.due.length===3); pauseSession();
+  // Tiden tar slut: lämnas in automatiskt
+  openHpProv(); q('[data-hplim="240"]').click(); q("#hpnew").click(); r=hpRun(); hpGo(0); q('[data-hpo="'+r.opts[0].indexOf(r.ids[0])+'"]').click();
+  r.used=300; hpQ();
+  ok("hp: när tiden är slut lämnas provpasset in", !!q("#hpres")&&q("#hpres").textContent.includes("tiden är slut")&&hpProvs().length===2&&hpProvs()[1].r===1&&hpProvs()[1].s===240, hpProvs().length);
+  // Paus och fortsätt (även efter omladdning)
+  openHpProv(); q('[data-hplim="0"]').click(); q("#hpnew").click(); r=hpRun();
+  [0,1].forEach(i=>{ hpGo(i); q('[data-hpo="'+r.opts[i].indexOf(r.ids[i])+'"]').click(); });
+  ok("hp: utan tid visar förfluten tid", !/kvar/.test(q("#hpclock").textContent)&&/^\d+:\d\d$/.test(q("#hpclock").textContent));
+  q("#quit").click(); save(); loadState(); rebuildWords(); renderStart();
+  ok("hp: påbörjat provpass överlever omladdning och kan fortsättas", !!S.hp.run&&S.hp.run.ans.filter(a=>a>=0).length===2&&q("#hpgo").textContent.includes("2 av 10"), q("#hpgo").textContent);
+  q("#hpgo").click(); q("#hpcont").click(); ok("hp: fortsätter på samma provpass", !!q("#hpq")&&hpRun().ids.join()===r.ids.join());
+  q("#hpdone").click(); ok("hp: tre provpass i historiken", hpProvs().length===3&&hpProvs()[2].r===2);
+  // Statistiken
+  setView("stats");
+  const st=q("#hpstats"), sv=st?st.querySelectorAll("svg.chart"):[];
+  ok("hp: statistikvyn visar provpass, andel kan-ord och övade ord per vecka", !!st&&sv.length===3&&st.textContent.includes("Provpass ORD")&&st.textContent.includes("Andel ord du kan")&&st.textContent.includes("Övade ord per vecka"));
+  ok("hp: ett värde och en tooltip per provpass", sv[0]&&sv[0].querySelectorAll("circle").length===3&&[...sv[0].querySelectorAll("circle title")].map(t=>t.textContent).every(t=>/\d+ av 10 rätt/.test(t))&&[...sv[0].querySelectorAll("text")].some(t=>t.textContent==="7"));
+  ok("hp: statistiken utan undefined, NaN och språkriktningar", !/undefined|NaN/.test(q("#app").textContent)&&!q("#app").textContent.includes("Åt vilket håll")&&!q("#app").textContent.includes("Var ligger jag"));
+  // Topplistan och föräldravyn
+  const ms=myStats(); ok("hp: topplistans siffror har provpassen", ms.hp&&ms.hp.n===3&&ms.hp.best===7&&ms.hp.last===2&&ms.hp.of===10&&"week" in ms&&"mastered" in ms, JSON.stringify(ms.hp));
+  await boardPush(); setView("board"); await until(()=>!!q("#hpboard"),3000);
+  ok("hp: topplistan visar Provpass ORD", !!q("#hpboard")&&q("#hpboard").textContent.includes("7/10")&&q("#hpboard").textContent.includes("2/10"));
+  const bd=__remote["board/u_test"]; ok("hp: board-dokumentet har hp under langs.hp, övriga fält som förut", bd&&bd.langs.hp&&bd.langs.hp.hp.best===7&&typeof bd.langs.hp.min==="number"&&bd.langs.fr&&!bd.langs.fr.hp);
+  ok("hp: sammanfattningen till föräldern har provpassen", summaryOf().hp&&summaryOf().hp.best===7);
+  summaryPush(); await summaryFlush(); window.__owner=true; CLOUD.owner=true; renderParent(); await until(()=>!!q("[data-hp]"),3000);
+  ok("hp: föräldravyn visar provpassen", !!q("[data-hp]")&&q("[data-hp]").textContent.includes("bästa 7/10"), q("[data-hp]")?q("[data-hp]").textContent:JSON.stringify((((__remote["summary/u_test"]||{}).profiles||{})._||{}).courses||{}).slice(0,300)+" "+curView+" "+q("#app").textContent.slice(0,200));
+  setView("ova");
+ }catch(e){ ok("undantag", false, e.message+" "+(e.stack||"").split("\n")[1]); }
+ ok("inga JavaScript-fel", !__err.length, __err.join(" ; "));
+ document.body.insertAdjacentHTML("beforeend","<pre id=out>"+out.join("\n").replace(/</g,"&lt;")+"</pre>");
+});
+</script>"""
+
+
+def test_hp_course():
+    import shutil
+    out = []
+    ok = lambda name, cond, info="": out.append(("OK   " if cond else "FEL  ") + name + (f"  ({info})" if info else ""))
+    with tempfile.TemporaryDirectory() as tmp:
+        t = pathlib.Path(tmp) / "g"
+        keep = FIXTURE_COURSES + ["hp"]
+        skip = lambda d, names: [n for n in names if pathlib.Path(d) == ROOT / "languages" and (ROOT / "languages" / n).is_dir() and n not in keep]
+        ign = shutil.ignore_patterns(".git", "dist", "book", "*.jpg", "*.jpeg", "*.png", "*.heic", "*.pdf")
+        shutil.copytree(ROOT, t, ignore=lambda d, names: set(ign(d, names)) | set(skip(d, names)))
+        for lj in (t / "languages").glob("*/lang.js"):   # nextCourse till kurser som inte följde med (som i test_minimal_course)
+            src = lj.read_text(encoding="utf-8")
+            m = re.search(r'^\s*nextCourse:\s*("[^"]*"|\[[^\]]*\]),?[^\n]*\n', src, re.M)
+            if m and any(c not in keep for c in re.findall(r'"([^"]+)"', m.group(1))):
+                lj.write_text(src[:m.start()] + "\n" + src[m.end():], encoding="utf-8")
+        for gj in (t / "languages").glob("*/grammar.json"):
+            src = gj.read_text(encoding="utf-8")
+            gj.write_text(re.sub(r',\s*"preview":\s*"([^"]+)"', lambda m: "" if m.group(1) not in keep else m.group(0), src), encoding="utf-8")
+        build = lambda: subprocess.run([sys.executable, str(t / "build.py")], capture_output=True, text=True)
+        hp = t / "languages" / "hp"
+        # 1. Utan bokmappen: bygget går igenom och kursen står som kommande
+        r = build()
+        page = (t / "dist" / "index.html").read_text(encoding="utf-8") if r.returncode == 0 else ""
+        ok("hp utan languages/hp/book/: bygget går igenom", r.returncode == 0, r.stdout[-400:] if r.returncode else "")
+        ok("hp utan bokmappen: ingen datafil, inget id-lås, kursen står som kommande", not (t / "dist" / "data" / "hp.json").exists() and not (hp / "ids.lock").exists()
+           and "inga ord än" in r.stdout and '"code":"hp"' in page.replace(" ", "") and "LANGUAGES.hp" not in page and "kursen finns redan" not in r.stdout)
+        ok("hp: den publika words.txt har inga ord", all(not l.strip() or l.startswith("//") for l in (ROOT / "languages" / "hp" / "words.txt").read_text(encoding="utf-8").splitlines()))
+        ok("hp: ingen grundformsfil för svenska, HP-koden är en egen kodmodul", not (t / "dist" / "data" / "lemma-sv.json").exists() and (t / "dist" / "data" / "code-hp.js").exists()
+           and "function openHpProv(...a){return lazyRun" in page)
+        # 2. Med testorden i bokmappen
+        (hp / "book").mkdir()
+        (hp / "book" / "words.txt").write_text(HP_TEST_WORDS, encoding="utf-8")
+        r = build()
+        ok("hp med testord: bygget går igenom utan varning om kommande kurs", r.returncode == 0 and "kursen finns redan" not in r.stdout, "" if r.returncode == 0 else r.stdout[-400:])
+        if r.returncode:
+            return "\n".join(out)
+        import json
+        lock = json.loads((hp / "ids.lock").read_text(encoding="utf-8")) if (hp / "ids.lock").exists() else {}
+        block = json.loads((hp / "book" / "ids.lock").read_text(encoding="utf-8")) if (hp / "book" / "ids.lock").exists() else {}
+        ok("hp: storageKey låses i det publika låset, orden bara i bokens lås", lock.get("storageKey") == "glosor-hp-v1" and not lock.get("ord") and "ambivalent" in block.get("ord", []), str(lock)[:200])
+        # Fel i ordfilen stoppar bygget: okänd ordklass och för få fält
+        good = (hp / "book" / "words.txt").read_text(encoding="utf-8")
+        (hp / "book" / "words.txt").write_text(good + "felord|fel|genus\nbaraord\n", encoding="utf-8")
+        r2 = build()
+        (hp / "book" / "words.txt").write_text(good, encoding="utf-8")
+        ok("hp: okänd ordklass och rad utan betydelse stoppar bygget", r2.returncode != 0 and "okänd ordklass 'genus'" in r2.stdout and "1 fält, ska vara 2–7" in r2.stdout, "" if r2.returncode else r2.stdout[-300:])
+        r = build()
+        head = '<script>window.COURSES_UNDER_TEST=["hp"];</script>'
+        text = run(SCENARIO_HP, 30000, root=t)
+        for name, sc, budget in [("rättelser", SCENARIO_FIXES, 5000), ("övningar", SCENARIO_KINDS, 60000)]:
+            res = run(sc, budget, root=t, head=head)
+            text += "\n" + "\n".join(l[:5] + "hp (" + name + "): " + l[5:] if l[:5] in ("OK   ", "FEL  ") else l for l in res.splitlines())
+    return "\n".join(out) + "\n" + text
+
+
+# ---------------------------------------------------------------------------------------------------------
 # Nya provuppgiftstyper (src/kinds/70-exam.js, backloggen): para ihop (type "match"), lucktext med flerval per lucka
 # (Sprachbausteine, "gaps") och kortsvar ("short"), med rättning, resultat, tangentbord och 320 px, samt den sparade
 # provsimuleringen S.exam.simRun: överlever omladdning, återupptas med den tid som var kvar, rensas när den är klar
@@ -3386,7 +3572,8 @@ def test_texts_split():
     data, page = ROOT / "dist" / "data", (ROOT / "dist" / "index.html").read_text(encoding="utf-8")
     preview = (ROOT / "dist" / "preview.html").read_text(encoding="utf-8")
     dv = _json.loads(re.search(r"const DATA_VERSION\s*=\s*(\{.*?\});", page).group(1))
-    codes = sorted(p.parent.name for p in (ROOT / "languages").glob("*/lang.js"))
+    # Bara byggda kurser (en kurs utan ord som väntar i upcoming.json, t.ex. hp utan bokmappen, har ingen datafil)
+    codes = sorted(p.parent.name for p in (ROOT / "languages").glob("*/lang.js") if (data / f"{p.parent.name}.json").exists())
     bad, n = [], 0
     for c in codes:
         d = _json.loads((data / f"{c}.json").read_text(encoding="utf-8"))
@@ -3806,6 +3993,7 @@ def main():
     text += "\n" + run(SCENARIO_RULEBOX, 30000)   # regeln i korthet före och under grammatikpassen (Oscar 2026-10-03)
     text += "\n" + run(SCENARIO_PROFILES, 60000)   # Vem övar? och Föräldravyn (P2/P3 Konton, sparande och topplista)
     text += "\n" + test_minimal_course()   # en ny, liten kurs (8 → 21 kurser)
+    text += "\n" + test_hp_course()   # Högskoleprovet ORD med testord (ordlistan är privat)
     print(text)
     sys.exit(1 if "FEL  " in text else 0)
 

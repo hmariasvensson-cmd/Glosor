@@ -1,0 +1,9 @@
+// Högskoleprovet ORD. Orden kommer från en upphovsrättsskyddad ordlista och ligger INTE här, utan i den privata mappen
+// languages/hp/book/words.txt (gitignorerad, eget lokalt git-repo), se languages/hp/book/README.md. Den här filen får
+// bara ha kommentarer.
+//
+// Format (mono: true i lang.js, 2–7 fält, tomma fält på slutet kan utelämnas):
+//   ord|betydelse|ordklass|exempelmening med [ordet]||förklaring|ordagrant
+// Betydelsen är det rätta svaret i flervalet; de fyra felalternativen tas ur andra ords betydelser (helst samma ordklass).
+// Ordklass: subst, verb, adj, adv, uttr, prep, konj, pron, räkn, interj, part eller tomt.
+// Avsnitt: #id|Namn. Ord-id (första fältet) och avsnitts-id ändras aldrig (framstegen hänger på dem).
