@@ -2,7 +2,11 @@
 
 Punkter som har flyttats från [`BACKLOG.md`](BACKLOG.md) när de byggdes. **Referens** anger backloggens rubrik och prioritet. **Commit** anger var ändringen finns i git. **Publicerat** anger versionen av artefakten på https://claude.ai/artifact/YBQv8j4qXQQLuPwLAWt5mP.
 
-## 2026-10-18 (inte publicerat än)
+## 2026-10-18, del 2 (publicerat som version 52)
+
+- **Högskoleprovet ORD med hela ordlistan** (backloggen P1). 4134 ord från de 259 skärmbilderna av ordlistan i HP-akuten, i 42 avsnitt om 100 ord (den privata `languages/hp/book/words.txt`, bara ord och betydelse). 98 skärmbilder som inte blivit inskrivna lästes in med textigenkänning (macOS Vision, rubrik och betydelse skilda åt på textens färg) och jämfördes med listan. 15 avklippta betydelser kompletterade. Id-låsen `languages/hp/ids.lock` och `book/ids.lock` skapade. Flervalet tar aldrig ett felalternativ med samma betydelse (276 betydelser delas av flera ord). Utan exempelmeningar finns ingen blandad runda i hp; testet tar hänsyn till det. Publiceras med 71 filer i `dist/data/`. Testerna: 2397 OK.
+
+## 2026-10-18 (publicerat som version 52)
 
 - **Grunden till Högskoleprovet ORD** (kurs `hp`, storageKey `glosor-hp-v1`), som ska ersätta HP-akuten. Fälten `mono: true` och `kind: "hp"` i lang.js styr: svenska → svenska, ingen uppläsning, ordklass i stället för genus, flerval med fem alternativ A–E (flerval räcker till "kan" bara i hp), Provpass ORD med 10 ord och valfri tid 3–5 min (`S.hp`, lat kodmodul `code-hp.js`), statistikpanelen "Så förbättras du", egen topplista för provpass (`langs.hp.hp` i board) och provpassen i föräldravyn. Ordlistan ligger i den privata, gitignorerade `languages/hp/book/`; kursen visas som kommande tills orden finns. Testerna: 2381 OK.
 

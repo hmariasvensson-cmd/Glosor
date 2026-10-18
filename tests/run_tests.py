@@ -1421,9 +1421,11 @@ const allRight=n0=>{const l=logsSince(n0); return l.length>0&&l.every(e=>e.right
     { const n0=S.log.length, nw=pickNew().slice(0,8), du=dueWords().slice(0,4); startSession(nw,du); while(sess&&!sess.queue) q("#next").click(); runAll();
       const e=S.log[S.log.length-1]; ok(c+": glosquiz", !sess&&S.log.length===n0+1&&e.nNew===nw.length&&e.right===e.total&&e.total===nw.length+du.length, e&&(e.right+"/"+e.total)); }
     // Blandad runda och verb
-    { const n0=S.log.length; startMix(); const ks=[...new Set([sess.cur,...sess.queue].map(x=>x.k))];
+    { const n0=S.log.length; startMix();
+      if(!sess){ ok(c+": blandad runda saknas bara när kursen inte har meningar (hp utan exempel)", L.mono&&!clozePool().length); } else {
+      const ks=[...new Set([sess.cur,...sess.queue].map(x=>x.k))];
       const reg=[sess.cur,...sess.queue].every(x=>KINDS[x.k]&&(x.t==="mc"?KINDS[x.k].mc:KINDS[x.k].type)); runAll();
-      ok(c+": blandad runda", !sess&&reg&&ks.length>=(L.mono?1:3)&&allRight(n0), ks.join()+" · "+firstRight(n0)); }   // mono (hp): bara meningar
+      ok(c+": blandad runda", !sess&&reg&&ks.length>=(L.mono?1:3)&&allRight(n0), ks.join()+" · "+firstRight(n0)); } }   // mono (hp): bara meningar
     for(const g of verbGames().slice(0,1)){ const n0=S.log.length; startVerbs(g.id); runAll(); ok(c+": verb ("+g.name+")", !sess&&S.log[S.log.length-1].verb&&allRight(n0), firstRight(n0)); }
     // Varje övning i menyn
     const menu=exGroups().flatMap(g=>g.items.map(h=>(h.match(/data-ex="(\w+)"/)||[])[1]).filter(Boolean));
@@ -3111,6 +3113,7 @@ def test_hp_course():
             gj.write_text(re.sub(r',\s*"preview":\s*"([^"]+)"', lambda m: "" if m.group(1) not in keep else m.group(0), src), encoding="utf-8")
         build = lambda: subprocess.run([sys.executable, str(t / "build.py")], capture_output=True, text=True)
         hp = t / "languages" / "hp"
+        (hp / "ids.lock").unlink(missing_ok=True)   # id-låset i repot hör till de riktiga orden; testet bygger utan bokmappen
         # 1. Utan bokmappen: bygget går igenom och kursen står som kommande
         r = build()
         page = (t / "dist" / "index.html").read_text(encoding="utf-8") if r.returncode == 0 else ""

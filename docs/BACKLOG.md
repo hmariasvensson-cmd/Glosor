@@ -39,7 +39,7 @@ Emma pluggar på egen hand, utan kurs, lärare och lärobok. Tyskan bygger därf
 
 ## Kurser och nivåer
 
-- **P1: Högskoleprovet ORD (`hp`): ordlistan från 259 foton.** Grunden är byggd 2026-10-18 (HP-format med fem alternativ, provpass ORD, förbättringsstatistik, topplista; se KLART.md). Föräldern skickar 259 foton med den kompletta ordlistan; bara de orden ska användas. Fyll i den privata `languages/hp/book/words.txt` (format i `languages/hp/book/README.md`), lägg fotona i `book/foton/`, bygg, checka in `languages/hp/ids.lock` och `book/ids.lock`, stickprova felalternativen och publicera med `data/hp.json` och `data/code-hp.js`. Ersätter HP-akuten för eleven.
+- **P3: Högskoleprovet ORD: exempelmeningar och ordklass.** Ordlistan (4134 ord, version 52) har bara ord och betydelse. Exempelmeningar skulle ge övningen Meningar och den blandade rundan i hp (knappen Meningar står nu som avstängd), och ordklass skulle ge felalternativ ur samma ordklass. Bara egna meningar, inget kopierat.
 
 - **P2: Resten av kursmallen** (`docs/kursmall.md`, avsnitt 4). Byggt: paket 1–8, 10 och 13–16 samt nivåerna. Kvar:
   - Paket 9 (grammatiken kopplad till kapitel) gör bara nytta i kurser med lärobok, så det väntar.
