@@ -3027,6 +3027,26 @@ appReady().then(async()=>{ try{
   // Övningarna: inget som kräver ett främmande språk
   const menu=exGroups().flatMap(g=>g.items.map(h=>(h.match(/data-ex="(\w+)"/)||[])[1]).filter(Boolean));
   ok("hp: menyn utan diktamen, översätt, ordföljd och Tala, med Provpass ORD", !["dict","trans","order","talk","gen","verbs"].some(k=>menu.includes(k))&&menu.includes("hpprov")&&menu.includes("ktest"), menu.join());
+  // Ordplanen fram till nästa högskoleprov (83-wordplan.js)
+  { const iso=d=>planIso(d), day=n=>{const d=planToday(); d.setDate(d.getDate()+n); return d;};
+    const d0=L.examDates, n0=S.newCount, e0=S.examDate, lg0=S.log.slice(); delete S.examDate;
+    L.examDates=[iso(day(-3)),iso(day(100)),iso(day(300))]; renderStart();
+    const p=wordPlan();
+    ok("ordplan: hp står på Plan från början och räknar mot nästa provdag", S.newCount===WP_PLAN&&S.wpOn===1&&p&&p.days===100&&p.learnDays===100-WP_BUFFER, p&&JSON.stringify({d:p.days,l:p.learnDays}));
+    ok("ordplan: orden delas jämnt på dagarna före de två repetitionsveckorna", p.left===31&&p.perDay===Math.ceil(31/86)&&newCountNow()===p.todayLeft&&pickNew().length===p.todayLeft, p.perDay+" "+newCountNow());
+    ok("ordplan: nedräkningen och Plan-knappen syns på startsidan", !!q("#wordplan")&&q("#wordplan").textContent.includes("100 dagar kvar")&&q("#wordplan").textContent.includes("31 av 31 ord")&&!!q('[data-n="-1"][aria-pressed="true"]')&&!/undefined|NaN/.test(q("#wordplan").textContent));
+    L.examDates=[iso(day(20))]; const pa=wordPlan(); S.log.push({p:S.pass,d:Date.now(),nNew:0});
+    ok("ordplan: 20 dagar kvar ger 31 ord på 6 dagar", pa.perDay===6&&pa.todayLeft===6&&passWords().newW.length===6, pa.perDay+" "+passWords().newW.length);
+    const w0=JSON.stringify(S.w); WORDS.slice(0,6).forEach(w=>S.w[w.id]={s:1,due:S.pass+1}); S.log.push({p:S.pass,d:Date.now(),nNew:6}); const pb=wordPlan();
+    ok("ordplan: dagens kvot är klar efter 6 nya ord, och kvoten ändras inte under dagen", pb.perDay===6&&pb.todayLeft===0&&newCountNow()===0&&passWords().newW.length===0);
+    S.log.push({p:S.pass,d:Date.now()-2*864e5,nNew:9}); ok("ordplan: gårdagens ord räknas inte till i dag", wordPlan().today===6);
+    L.examDates=[iso(day(10))]; renderStart();
+    ok("ordplan: under två veckor kvar blir det inga nya ord, bara repetition", newCountNow()===0&&passWords().newW.length===0&&q("#wordplan").textContent.includes("mindre än två veckor"));
+    S.examDate=iso(day(50)); ok("ordplan: elevens eget provdatum går före listan", wordPlan().days===50);
+    S.examDate=iso(day(-1)); ok("ordplan: ett passerat eget datum ignoreras", wordPlan().days===10);
+    L.examDates=[iso(day(-5))]; delete S.examDate; renderStart(); ok("ordplan: utan kommande provdag ingen nedräkning", !wordPlan()&&!q("#wordplan")&&newCountNow()===0);
+    S.newCount=10; ok("ordplan: ett eget antal nya ord gäller som förut", newCountNow()===10);
+    L.examDates=d0; S.newCount=n0; S.log=lg0; S.w=JSON.parse(w0); if(e0) S.examDate=e0; renderStart(); }
   ok("hp: inga pooler för diktamen, översättning och ordföljd", dictPool().length===0&&transPool().length===0&&orderPool().length===0&&!L.verbs&&!L.genderGame&&!hasGrammar()&&!hasExam());
   // Glosquizet: HP-formatet
   S.newCount=10; S.mode="mix"; startSession(pickNew().slice(0,5),[]); while(sess&&!sess.queue) q("#next").click();

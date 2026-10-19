@@ -18,5 +18,9 @@ LANGUAGES.hp = {
   genders: {subst: "substantiv", verb: "verb", adj: "adjektiv", adv: "adverb", uttr: "uttryck", prep: "preposition",
     konj: "konjunktion", pron: "pronomen", "räkn": "räkneord", interj: "interjektion", part: "partikel"},
   nextLabel: "Nästa ord i ordlistan",
+  // Provdagarna (UHR, kontrollerat 2026-10-18): ordplanen räknar mot nästa datum efter i dag (83-wordplan.js).
+  // Lägg till nya datum när UHR publicerar dem; utan kommande datum visas ingen nedräkning.
+  examDates: ["2027-04-10", "2027-10-24"],
+  examName: "högskoleprovet",
   storageKey: "glosor-hp-v1",    // ÄNDRA ALDRIG: sparade framsteg ligger under den här nyckeln
 };

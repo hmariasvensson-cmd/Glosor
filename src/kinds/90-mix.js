@@ -68,12 +68,15 @@ function passesToday(){
   return ds.size||(S.dailyDay===t?1:0);   // dailyDay: Dagens pass gjort med en äldre version i dag
 }
 // Dagar kvar till provet (S.examDate), null utan datum. planDate/planToday i 82-plan.js.
-function examDaysLeft(){ const d=planDate(S.examDate); return d?Math.round((d-planToday())/864e5):null; }
+// Kurser med ordplan (L.examDates, 83-wordplan.js) räknar mot nästa provdag även utan eget datum
+function examDaysLeft(){ const d=hasWordPlan()?wpExamDate():planDate(S.examDate); return d?Math.round((d-planToday())/864e5):null; }
 // 0 = vanligt, 1 = högst sex veckor kvar (hälften så många nya ord, provuppgift), 2 = högst två veckor (inga nya ord)
 function examPhase(){ const n=examDaysLeft(); return n==null||n<0?0:n<=14?2:n<=42?1:0; }
 // Glosorna i nästa pass: alla förfallna först (högst PASS_DUE), nya ord så länge det finns tid (högst PASS_NEW)
 function passWords(){
-  const ph=examPhase(); let cap=Math.min(S.newCount||0,PASS_NEW); if(ph===1) cap=Math.ceil(cap/2); if(ph===2) cap=0;
+  // Med ordplanen (S.newCount = WP_PLAN) tar passet upp till dubbelt så många nya ord, och sex veckor före provet halveras
+  // de inte: planen har redan räknat med de två sista veckorna för repetition
+  const plan=S.newCount===WP_PLAN, ph=examPhase(); let cap=Math.min(newCountNow(),plan?2*PASS_NEW:PASS_NEW); if(ph===1&&!plan) cap=Math.ceil(cap/2); if(ph===2) cap=0;
   const due=dueWords().slice(0,passDueCap(dueCount())), tDue=due.reduce((a,w)=>a+(qType(w,false)==="type"?PASS_T.type:PASS_T.mc),0);
   const n=Math.min(cap,Math.max(Math.min(cap,PASS_NEW_MIN),Math.floor((PASS_WORD_SEC-tDue)/PASS_T.new)));
   const newW=pickNew().slice(0,n);

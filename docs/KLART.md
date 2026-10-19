@@ -2,6 +2,11 @@
 
 Punkter som har flyttats från [`BACKLOG.md`](BACKLOG.md) när de byggdes. **Referens** anger backloggens rubrik och prioritet. **Commit** anger var ändringen finns i git. **Publicerat** anger versionen av artefakten på https://claude.ai/artifact/YBQv8j4qXQQLuPwLAWt5mP.
 
+## 2026-10-19 (publicerat som version 53)
+
+- **Högskoleprovet ORD: nedräkning och ordplan** (föräldern 2026-10-18). Ny fil `src/kinds/83-wordplan.js`. Kurser med `examDates` i lang.js (hp: 10 april och 24 oktober 2027, examName "högskoleprovet") visar en ruta "Nedräkning" på startsidan: dagar kvar till nästa provdag, ord kvar och hur många nya ord om dagen som behövs för att hinna alla ord två veckor före provet (`WP_BUFFER`; de sista två veckorna är för repetition och ger inga nya ord). Kvoten räknas om varje dag på morgonens läge, så en missad dag fördelas på resten. Antal nya ord har valet **Plan** (`S.newCount = -1`, `WP_PLAN`), som hp får från början (`S.wpOn`); passen tar då dagens återstående kvot (`newCountNow`, högst 10 nya per Dagens pass). Elevens eget provdatum (`S.examDate`) går före listan. 12 nya tester.
+- **Högskoleprovet ORD: ordklass och egna exempelmeningar till alla 4134 ord** (backloggen P3). Skrivna av sju AI-agenter, kontrollerade med skript (ord och betydelse oförändrade, giltig ordklass, en lucka per mening, betydelsen inte ordagrant i meningen). Ger övningen Meningar och den blandade rundan i hp, och felalternativ ur samma ordklass. `ostulat` rättat till `postulat|grundsats` (textigenkänningen tappade första bokstaven; framstegen flyttas med `book/ids.renamed`). Testerna: 2408 OK.
+
 ## 2026-10-18, del 2 (publicerat som version 52)
 
 - **Högskoleprovet ORD med hela ordlistan** (backloggen P1). 4134 ord från de 259 skärmbilderna av ordlistan i HP-akuten, i 42 avsnitt om 100 ord (den privata `languages/hp/book/words.txt`, bara ord och betydelse). 98 skärmbilder som inte blivit inskrivna lästes in med textigenkänning (macOS Vision, rubrik och betydelse skilda åt på textens färg) och jämfördes med listan. 15 avklippta betydelser kompletterade. Id-låsen `languages/hp/ids.lock` och `book/ids.lock` skapade. Flervalet tar aldrig ett felalternativ med samma betydelse (276 betydelser delas av flera ord). Utan exempelmeningar finns ingen blandad runda i hp; testet tar hänsyn till det. Publiceras med 71 filer i `dist/data/`. Testerna: 2397 OK.

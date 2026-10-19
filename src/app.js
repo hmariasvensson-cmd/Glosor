@@ -179,7 +179,8 @@ const dueMax=()=>S.dueMax===0?Infinity:(S.dueMax>0?S.dueMax:MAXDUE);
      pass       numret på nästa glospass (börjar på 1, ökar efter varje glospass som inte är extra)
      t          tid för senaste sparningen (ms), ökar alltid, även om en annan enhets klocka går före
      w          {<ord-id>: {s, due, dd, f, lp, ld, mp, md, lapses, mcR, mcW, tyR, tyW, clR, clW}}, se save() och schedule()
-     newCount   antal nya ord per pass (0, 10, 15, 20)          mode  "mix" | "mc" | "type"
+     newCount   antal nya ord per pass (0, 10, 15, 20; -1 = enligt ordplanen, WP_PLAN i 83-wordplan.js)
+     wpOn       1 när ordplanens standardval (Plan) har satts en gång (bara kurser med L.examDates)          mode  "mix" | "mc" | "type"
      dueMax     valfritt: repetitioner per glospass (10, 20, 40; 0 = alla som ska repeteras), saknas = MAXDUE
      src        "auto" eller avsnitts-id att lära nya ord från  chapter  bokkapitlet man läser (avsnitts-id)
      slow, listenFirst, goal   uppläsning långsam, lyssna först på nya ord, veckomål i minuter
@@ -242,6 +243,9 @@ function normState(){
   const v=Number.isInteger(S.v)&&S.v>0?S.v:0;
   for(let i=v+1;i<MIGRATIONS.length;i++) MIGRATIONS[i](S);
   S.v=Math.max(v,S_VERSION);   // ett läge från en nyare version av appen behåller sitt nummer
+  // Kurser med ordplan (Högskoleprovet ORD, 83-wordplan.js): Antal nya ord står på Plan från början (en gång per läge,
+  // och bara om eleven inte har valt något annat än standardvärdet)
+  if(typeof hasWordPlan==="function"&&hasWordPlan()&&!S.wpOn){ if(S.newCount===15) S.newCount=WP_PLAN; S.wpOn=1; }
   return applyRenames(S,L&&L.renames);
 }
 /* Migrering 1. Förr fick inlärda ord due=1e9 och kom aldrig tillbaka. Ge dem ett riktigt repetitionsdatum,
@@ -909,7 +913,7 @@ function pickNewNow(){
   const fresh=WORDS.filter(w=>!isLearned(w)).sort((a,b)=>rank(a)-rank(b)||(rank(a)?secIx[a.sec]-secIx[b.sec]:0)
     ||(fq[b.id]||0)-(fq[a.id]||0)||pos.get(a)-pos.get(b));
   const pool=S.src==="auto"?fresh.filter(w=>!isElective(w.sec)):fresh.filter(w=>w.sec===S.src);
-  return pool.slice(0,S.newCount);
+  return pool.slice(0,newCountNow());   // newCountNow: elevens val, eller dagens kvot i ordplanen (83-wordplan.js)
 }
 
 /* ---------- Startsida ---------- */
@@ -953,6 +957,7 @@ function renderStart(){
   ${Object.entries(S.runs||{}).filter(([k,r])=>k.startsWith("words")&&k!==PASS_KEY&&r&&k!==runKey(S.run)).map(([k,r])=>`<section class="panel"><h2>Fortsätt glospasset</h2><p class="plan">${esc(runLabel(r))}</p>
     <div class="navrow"><button class="btn ghost" data-wdrop="${esc(k)}">Släng</button><button class="btn" data-wgo="${esc(k)}">Fortsätt</button></div></section>`).join("")}
   ${hasBook()?bookPanel():""}
+  ${wordPlanPanel()}
   ${goalsPanel()}
   ${writeNagPanel()}
   ${nextPanel()}
@@ -966,7 +971,7 @@ function renderStart(){
     <div class="field"><span class="label">Nya ord från</span><select id="src">${opts}</select></div>
     ${chapterMap()}
     <div class="field"><span class="label">Antal nya ord</span>
-      <div class="seg" role="group" aria-label="Antal nya ord">${[0,10,15,20].map(n=>`<button data-n="${n}" aria-pressed="${S.newCount===n}">${n||"Inga"}</button>`).join("")}</div></div>
+      <div class="seg" role="group" aria-label="Antal nya ord">${(hasWordPlan()?[WP_PLAN,0,10,15,20]:[0,10,15,20]).map(n=>`<button data-n="${n}" aria-pressed="${S.newCount===n}">${n===WP_PLAN?"Plan":n||"Inga"}</button>`).join("")}</div>${S.newCount===WP_PLAN?`<p class="foot">Plan: dagens nya ord enligt nedräkningen (${newCountNow()} kvar i dag).</p>`:""}</div>
     <div class="field"><span class="label">Repetitioner per pass</span>
       <div class="seg" role="group" aria-label="Repetitioner per pass">${DUE_CHOICES.map(n=>`<button data-dm="${n}" aria-pressed="${(S.dueMax==null?MAXDUE:S.dueMax)===n}">${n||"Alla"}</button>`).join("")}</div>
       <p class="foot" id="due-note">${dueCount()} ord ska repeteras nu.${S.dueMax===0?" Passet tar alla.":` Passet tar högst ${dueMax()}, resten kommer i nästa pass.`}</p></div>
