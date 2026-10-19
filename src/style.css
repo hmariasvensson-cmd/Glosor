@@ -465,3 +465,10 @@ body.mono .speak{display:none}
 .hplist li{flex-direction:column;align-items:flex-start;gap:2px}
 .hpres.bad .t{color:var(--pink)}
 .hpres.ok .t{color:var(--ok)}
+
+/* Högskoleprovet MEK, LÄS och ELF (07-hpverbal.js) */
+.mek{font-size:1.08rem;line-height:1.7}
+.mekgap{min-width:4.5em}
+.hpread p{margin:0 0 .8em}
+table.hpv{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+table.hpv th,table.hpv td{text-align:left;padding:6px 8px;border-bottom:1px solid var(--line)}

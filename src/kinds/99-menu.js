@@ -5,8 +5,11 @@ function exGroups(){
   // mono (Högskoleprovet ORD): inga övningar där svaret är ett främmande ord eller tal (diktamen, översätt, ordföljd, Tala)
   const g=(id,title,sub,dis)=>mono&&["dict","trans","order","talk"].includes(id)?"":`<button class="game" data-ex="${id}" ${dis?"disabled":""}><span><b>${title}</b><small>${sub}</small></span><span class="go" aria-hidden="true">›</span></button>`;
   const groups=[
-    ...(isHp()?[["hp","Högskoleprovet","Provpass ORD med klocka och resultat",[
-      g("hpprov","Provpass ORD","Tio ord som på provet, med valfri tid och facit efteråt.")]]]:[]),
+    ...(isHp()?[["hp","Högskoleprovet","Provpass ORD, MEK, LÄS och ELF",[
+      g("hpprov","Provpass ORD","Tio ord som på provet, med valfri tid och facit efteråt."),
+      (c.mek||[]).length&&g("mek","MEK: meningskomplettering","Välj de ord som passar bäst i luckorna."),
+      (c.las||[]).length&&g("las","LÄS: svensk läsförståelse","Sakprosatexter med frågor som på provet."),
+      (c.elf||[]).length&&g("elf","ELF: engelsk läsförståelse","Texter på engelska med frågor som på provet.")]]]:[]),
     ["words",mono?"Ord och kapitelprov":"Ord och meningar","Meningar, diktamen, översättning och ordföljd",[
       g("cloze","Meningar",n<4?"Lär dig några ord i quizet först.":"Fyll i luckan i en mening.",n<4),
       // srsDueNote: " · 3 att repetera i dag" (tidsbaserad repetition, 00-common.js)

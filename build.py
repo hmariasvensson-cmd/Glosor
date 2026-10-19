@@ -63,6 +63,8 @@ LAZY_TEXTS = {
     "reading": ["lines", "gloss", "questions"],
     "listening": ["lines", "gloss", "questions"],
     "culture": ["lines", "gloss", "q", "ask", "model", "modelSv"],
+    "las": ["text", "questions"],   # Högskoleprovet LÄS och ELF (07-hpverbal.js)
+    "elf": ["text", "questions"],
 }
 
 
@@ -681,6 +683,22 @@ def check_content(content, section_ids, where, has_book=True):
         alt = x.get("alt")
         if not x.get("fr") or not x.get("ipa") or not isinstance(alt, list) or len(alt) < 3 or x.get("ipa") in alt or len(set(alt)) != len(alt):
             errors.append(f"{where}/content/transkription.json: {x.get('id')} behöver fr, ipa och minst tre olika alt som inte är facit")
+    # Högskoleprovet MEK (07-hpverbal.js): fyra alternativ, lika många delar (" – ") som luckor (___) i texten
+    for x in content.get("mek", []):
+        errors += check_question(x, f"{where}/content/mek.json: {x.get('id')}")
+        n = str(x.get("text", "")).count("___")
+        if not n or not isinstance(x.get("opts"), list) or len(x["opts"]) != 4 or any(len(str(o).split(" – ")) != n for o in x["opts"]):
+            errors.append(f"{where}/content/mek.json: {x.get('id')} ska ha minst en lucka ___ och fyra alternativ med lika många delar (åtskilda av ' – ') som luckor")
+    # Högskoleprovet LÄS och ELF: titel, stycken och frågor med fyra alternativ
+    for kind in ("las", "elf"):
+        for t in content.get(kind, []):
+            if not t.get("title") or not isinstance(t.get("text"), list) or not t["text"] or not isinstance(t.get("questions"), list) or not t["questions"]:
+                errors.append(f"{where}/content/{kind}.json: {t.get('id')} behöver title, text (lista med stycken) och questions")
+                continue
+            for i, q in enumerate(t["questions"]):
+                errors += check_question(q, f"{where}/content/{kind}.json: {t.get('id')} fråga {i + 1}")
+                if len(q.get("opts") or []) != 4:
+                    errors.append(f"{where}/content/{kind}.json: {t.get('id')} fråga {i + 1} ska ha fyra alternativ")
     exam = content.get("exam")
     if isinstance(exam, dict):
         for t in exam.get("tasks", []):

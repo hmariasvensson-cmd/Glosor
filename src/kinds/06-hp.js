@@ -97,6 +97,7 @@ function hpStatsPanel(){
     <h3>Övade ord per vecka</h3>
     ${hpChart({labels:weeks.map(k=>"v. "+isoWeek(new Date(k.w))),values:qs,bar:true,aria:"Övade ord per vecka",
       tips:weeks.map((k,i)=>`Vecka ${isoWeek(new Date(k.w))}: ${qs[i]} övade ord`)})}
+    ${typeof hpVerbalStats==="function"?hpVerbalStats():""}
     <p class="foot">Ett ord räknas som kan när du har haft rätt i fyra repetitioner i rad (nästa pass, efter 3 pass, efter 3 och efter 7 dagar).</p>
     <button class="btn ghost" id="hpstatgo">Gör ett provpass</button></section>`;
 }

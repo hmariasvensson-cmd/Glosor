@@ -39,7 +39,7 @@ Emma pluggar på egen hand, utan kurs, lärare och lärobok. Tyskan bygger därf
 
 ## Kurser och nivåer
 
-- **P2: Högskoleprovet, resten av den verbala delen** (föräldern 2026-10-19: "Finns det mera saker man behöver öva på inför hp. Bara den verbala delen."). Den verbala delen har fyra delprov: ORD (byggt), LÄS (svensk läsförståelse), MEK (meningskomplettering) och ELF (engelsk läsförståelse). Förslag: MEK med egna meningar och HP-orden, LÄS och ELF med egna texter och frågor i provets format. Inga riktiga provuppgifter kopieras. Väntar på förälderns val.
+- **P3: Högskoleprovet MEK, LÄS och ELF: mer innehåll och provpass.** Version 54 har 120 MEK, 12 LÄS och 14 ELF. Fler uppgifter, och gärna ett provpass för hela den verbala delen (ORD, LÄS, MEK, ELF, 40 uppgifter på 55 minuter) med resultat i topplistan. Stickprova innehållet.
 - **P3: Högskoleprovet ORD: nya provdatum.** `examDates` i `languages/hp/lang.js` har datum till och med 24 oktober 2027; lägg till nya när UHR publicerar dem.
 
 - **P2: Resten av kursmallen** (`docs/kursmall.md`, avsnitt 4). Byggt: paket 1–8, 10 och 13–16 samt nivåerna. Kvar:

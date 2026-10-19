@@ -1430,12 +1430,12 @@ const allRight=n0=>{const l=logsSince(n0); return l.length>0&&l.every(e=>e.right
     // Varje övning i menyn
     const menu=exGroups().flatMap(g=>g.items.map(h=>(h.match(/data-ex="(\w+)"/)||[])[1]).filter(Boolean));
     ok(c+": varje knapp i menyn har en typ med open", menu.every(id=>KINDS[id]&&KINDS[id].open), menu.join());
-    const need=["ktest"].concat(L.mono?(L.kind==="hp"?["hpprov"]:[]):["dict","trans","order","talk"],(C().listening||[]).length?["lq"]:[],(C().reading||[]).length?["rq"]:[],(C().stories||[]).length?["story"]:[],(C().phrases||[]).length?["phr"]:[],(C().prompts||[]).length?["write"]:[],hasGrammar()?["gram"]:[],(C().uttal||[]).length?["utt"]:[],hasExam()?["exam"]:[],(C().culture||[]).length?["culture"]:[]);
+    const need=["ktest"].concat(L.mono?(L.kind==="hp"?["hpprov"]:[]):["dict","trans","order","talk"],(C().listening||[]).length?["lq"]:[],(C().reading||[]).length?["rq"]:[],(C().stories||[]).length?["story"]:[],(C().phrases||[]).length?["phr"]:[],(C().prompts||[]).length?["write"]:[],hasGrammar()?["gram"]:[],(C().uttal||[]).length?["utt"]:[],hasExam()?["exam"]:[],(C().culture||[]).length?["culture"]:[],L.kind==="hp"?["mek","las","elf"].filter(k=>(C()[k]||[]).length):[]);
     ok(c+": alla övningar som kursen har innehåll för finns i menyn", need.every(k=>menu.includes(k)), need.filter(k=>!menu.includes(k)).join()+" · "+menu.length+" övningar");
     for(const id of menu){ const n0=S.log.length; let res=null, info="";
       try{
         const btn=exClick(id); if(btn.disabled){ ok(c+": "+KINDS[id].name+" (avstängd, för få inlärda ord)", true); continue; }
-        if(id==="lq"||id==="rq"){ const tid=q("[data-pick]").dataset.pick; q("[data-pick]").click(); q("#toq").click(); runAll();
+        if(["lq","rq","las","elf"].includes(id)){ const tid=q("[data-pick]").dataset.pick; q("[data-pick]").click(); q("#toq").click(); runAll();
           res=!sess&&S.tx&&S.tx[tid]&&S.tx[tid].best===S.tx[tid].n&&!!q("#more"); info=tid; }
         else if(id==="story"){ const sid=q("[data-pick]").dataset.pick; q("[data-pick]").click(); runAll(); res=!sess&&S.stb[sid]===parseStory(storyById(sid)).gaps.length&&!!q("#more"); info=sid; }
         else if(id==="utt"){ q('[data-pick="*"]').click(); runAll(); res=!sess&&q("#app").textContent.includes("Uttal klart")&&allRight(n0); }
@@ -3054,7 +3054,7 @@ appReady().then(async()=>{ try{
   ok("hp: flerval med fem alternativ, ett rätt, inga dubbletter", sess.cur.t==="mc"&&d.opts.length===5&&right.length===1&&new Set(labels).size===5&&right[0].label===sess.cur.w.sv, labels.join(" | "));
   ok("hp: bokstäverna A–E och ordet i fetstil", [...document.querySelectorAll(".opt .k")].map(x=>x.textContent).join("")==="ABCDE"&&q(".hpword b").textContent===sess.cur.w.t);
   const w0=sess.cur.w, cls=d.opts.filter(o=>!o.ok).map(o=>WORDS.find(w=>w.sv===o.label)).filter(Boolean);
-  ok("hp: felalternativen är andra ords betydelser, helst samma ordklass", cls.length===4&&cls.filter(x=>x.g===w0.g).length>=3, w0.g+": "+cls.map(x=>x.g).join());
+  ok("hp: felalternativen är andra ords betydelser, helst samma ordklass", cls.length===4&&cls.filter(x=>x.g===w0.g).length>=Math.min(3,WORDS.filter(x=>x!==w0&&x.g===w0.g).length), w0.g+": "+cls.map(x=>x.g).join());
   { const ri=d.opts.findIndex(o=>o.ok); key("ABCDE"[ri].toLowerCase());
     ok("hp: tangenten A–E svarar, förklaringen visas", sess.answered&&!!q(".opt.right")&&q("#fb").textContent.includes(w0.sv)&&(!w0.ety||q("#fb").textContent.includes("Förklaring"))); }
   { let g=0; while(sess&&g++<40){ if(!sess.answered) answerMC(sess.d.opts.findIndex(o=>o.ok)); q("#nx").click(); } }
