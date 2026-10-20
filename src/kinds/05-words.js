@@ -43,7 +43,7 @@ function renderLearn(){
       <div><p class="ex-t" ${lang()}>${esc(w.exT)}</p><p class="ex-sv">${esc(w.exSv)}</p></div>
       <button class="speak sm" id="sp-e" aria-label="Läs upp meningen">${SPK}</button>
     </div>
-    ${litHtml(w)}${w.ety?`<p class="ety"><span class="label">${esc(L.etyLabel||"Ursprung")}</span><br>${safeHtml(w.ety)}</p>`:""}
+    ${litHtml(w)}${w.ety?`<p class="ety"><span class="label">${esc(L.etyLabel||"Ursprung")}</span><br>${safeHtml(w.ety)}</p>`:""}${rotHtml(w)}
     <div class="navrow">
       <button class="btn ghost" id="prev" ${sess.i?"":"disabled"}>Tillbaka</button>
       <button class="btn" id="next">${sess.i===n-1?"Till quizet":"Nästa ord"}</button>
@@ -70,10 +70,47 @@ function startQuiz(){
 
 /* Glosquizets frågor (flerval och skriva) och kortet som visas efter ett fel svar */
 // Felalternativ: fyra ord med olika betydelse, först ur samma avsnitt, sedan ur resten (pickSome blandar bara så långt det behövs)
+/* Luriga svarsalternativ (elevens önskemål 2026-10-19: "så svårt som möjligt att gissa rätt"), i alla kurser:
+   1. Felsvaren i nionde fältet i words.txt (w.lur, "fel;fel;fel"), skrivna för just det ordet: betydelsen av ett ord
+      som låter likt, en felaktig gissning ur ordets delar, eller något som hör ihop med rätt betydelse. De blir
+      alternativ {id: "<ord>~<nr>", sv, lure: true} (optById slår upp dem, t.ex. i sparade provpass i 06-hp.js).
+   2. lookAlikes: andra ord i kursen som stavas nästan likadant (få bokstäver skiljer, eller samma början), med sin
+      betydelse. Former av samma ord räknas inte (alsoRight).
+   trickyPicks tar högst två av varje sort, så att alternativen blandas; resten fylls som förut. */
+const LURE_SEP="~";
+const lureOptions=w=>String(w.lur||"").split(";").map(x=>x.trim()).filter(Boolean).map((sv,i)=>({id:w.id+LURE_SEP+i,sv,lure:true,g:w.g,sec:w.sec}));
+function optById(id){
+  if(byId[id]) return byId[id];
+  const k=String(id).lastIndexOf(LURE_SEP), w=k>0&&byId[String(id).slice(0,k)];
+  return w?lureOptions(w)[+String(id).slice(k+1)]||null:null;
+}
+// Fel för w: ett felsvar får inte betyda detsamma, ett ord får inte vara en synonym eller en form av w
+const notRight=(x,w)=>x.lure?norm(x.sv)!==norm(w.sv)&&!svOverlap(x.sv,w.sv):!alsoRight(x,w);
+const formKey=t=>{ let s=norm(String(t||"").replace(/\(.*?\)/g," ")); if(L.hintStrip) s=s.replace(L.hintStrip,""); return deacc(s).replace(/[^a-z]/g,""); };
+let LOOK=new Map(), LOOK_W=null;
+function lookAlikes(w){
+  if(LOOK_W!==WORDS){ LOOK=new Map(); LOOK_W=WORDS; }
+  if(LOOK.has(w.id)) return LOOK.get(w.id);
+  const a=formKey(w.t), out=[];
+  if(a.length>=3) for(const x of WORDS){
+    if(x===w||!x.sv||x.sec==="mine") continue;
+    const b=formKey(x.t); if(!b||b===a||Math.abs(a.length-b.length)>3) continue;
+    const m=Math.min(a.length,b.length); let pre=0; while(pre<m&&a[pre]===b[pre]) pre++;
+    const d=lev(a,b), s=d<=Math.max(1,Math.floor(m/4))?d:pre>=4&&pre>=m*.6?2+m-pre:-1;
+    if(s>=0&&!alsoRight(x,w)) out.push({x,s:s+(w.g&&x.g===w.g?0:.5)});
+  }
+  const r=out.sort((p,q)=>p.s-q.s).slice(0,8).map(o=>o.x); LOOK.set(w.id,r); return r;
+}
+function trickyPicks(w,ok,picks=[]){
+  for(const x of shuffle(lureOptions(w))){ if(picks.length>=2) break; if(ok(x,picks)) picks.push(x); }
+  let n=0; for(const x of shuffle(lookAlikes(w).slice(0,4))){ if(n>=2) break; if(ok(x,picks)){ picks.push(x); n++; } }
+  return picks;
+}
 function mcOptions(w){
   // Inte samma betydelse som rätt svar eller ett annat alternativ (synonymer, alsoRight i 00-common.js)
-  const ok=(x,picks)=>!alsoRight(x,w)&&!picks.some(p=>p.sv===x.sv||svOverlap(p.sv,x.sv));
-  const picks=pickSome(secWords(w.sec),4,ok);
+  const ok=(x,picks)=>notRight(x,w)&&!picks.some(p=>p.sv===x.sv||svOverlap(p.sv,x.sv));
+  const picks=trickyPicks(w,ok);
+  pickSome(secWords(w.sec),4,ok,picks);
   if(picks.length<4) pickSome(WORDS,4,(x,p)=>x.sec!==w.sec&&ok(x,p),picks);
   return shuffle([w,...picks]);
 }
@@ -84,9 +121,11 @@ const studyCard=w=>`<div class="recap">
     <button type="button" class="speak sm" data-say="${esc(w.t)}" aria-label="Läs upp ordet">${SPK}</button></div>
   <div class="example"><div><p class="ex-t" ${lang()}>${esc(w.exT)}</p><p class="ex-sv">${esc(w.exSv)}</p></div>
     <button type="button" class="speak sm" data-say="${esc(w.exT)}" aria-label="Läs upp meningen">${SPK}</button></div>
-  ${litHtml(w)}${w.ety?`<p class="ety"><span class="label">${esc(L.etyLabel||"Ursprung")}</span><br>${safeHtml(w.ety)}</p>`:""}
+  ${litHtml(w)}${w.ety?`<p class="ety"><span class="label">${esc(L.etyLabel||"Ursprung")}</span><br>${safeHtml(w.ety)}</p>`:""}${rotHtml(w)}
   ${memoBox(w)}</div>`;
 // Fraser och talesätt: vad varje ord betyder ordagrant (sjunde fältet i words.txt), t.ex. "avoir – ha · le cafard – kackerlackan"
+// Ord med samma rot (åttonde fältet), t.ex. "postulera 'påstå utan bevis' · postulering 'antagande'"
+function rotHtml(w){ return w.rot?`<p class="ety rot"><span class="label">Samma rot</span><br>${esc(w.rot)}</p>`:""; }
 function litHtml(w){ return w.lit?`<p class="ety lit"><span class="label">Ordagrant</span><br>${safeHtml(w.lit)}</p>`:""; }
 // Egen minnesregel: visas om den finns, och kan skrivas för ord man ofta glömmer
 function memoBox(w){

@@ -141,10 +141,10 @@ function parseWords(raw){
   raw.trim().split("\n").forEach(l=>{
     l=l.trim(); if(!l) return;
     if(l[0]==="#"){const [id,name,src]=l.slice(1).split("|"); sec={id,name,book:src==="bok"}; sections.push(sec); return;}
-    const [t,sv,g,ex0,exSv,ety,lit]=l.split("|");
+    const [t,sv,g,ex0,exSv,ety,lit,rot,lur]=l.split("|");   // rot = samma rot, lur = luriga felsvar (05-words.js)
     if(seen.has(t)) return; seen.add(t);
     const exRaw=ex0||"";   // kurser på ett språk (mono) kan sakna exempel
-    words.push({id:t,sec:sec.id,t,sv:sv||"",g:g||"",exT:exRaw.replace(/[\[\]]/g,""),exSv:exSv||"",ety:ety||"",lit:lit||"",gap:exRaw?findGap(t,exRaw):null});
+    words.push({id:t,sec:sec.id,t,sv:sv||"",g:g||"",exT:exRaw.replace(/[\[\]]/g,""),exSv:exSv||"",ety:ety||"",lit:lit||"",rot:rot||"",lur:lur||"",gap:exRaw?findGap(t,exRaw):null});
   });
   return {sections,words};
 }
@@ -169,9 +169,26 @@ const DAY=864e5;   // ett dygn i ms (40-writing.js)
 const addDays=(ts,n)=>{const d=new Date(ts); d.setHours(0,0,0,0); d.setDate(d.getDate()+n); return d.getTime();};
 const isDue=x=>x.dd?x.dd<=Date.now():x.due<=S.pass;
 const MASTER=4, MAXDUE=40;   // MAXDUE = högst så många repetitioner per pass, resten väntar till nästa
-// Elevens val (önskemål 2026-10-06): S.dueMax = antal repetitioner per glospass (10, 20, 40) eller 0 = alla som
+// Elevens val (önskemål 2026-10-06): S.dueMax = antal repetitioner per glospass (1–DUE_SLIDE, reglaget) eller 0 = alla som
 // ska repeteras; utan val MAXDUE. Gäller glospasset och knappen Repetera på startsidan, inte Dagens pass.
-const DUE_CHOICES=[10,20,40,0];
+const DUE_CHOICES=[10,20,40,0];   // de gamla knapparna; nu ett reglage 1–DUE_SLIDE och knappen Alla (0)
+const NEW_SLIDE=200, DUE_SLIDE=200;
+/* Reglage för exakt antal (elevens önskemål 2026-10-19: "enklare att välja EXAKT antal ord, gärna en slide"): ett
+   skjutreglage och en sifferruta som följer varandra. Värdet sparas när man släpper reglaget eller lämnar rutan
+   (onSet), inte medan man drar. zero = texten när värdet är 0 (t.ex. "Inga"). wireCount kopplar det. */
+function countSlider(key,label,val,max,min=0){
+  const v=Math.max(min,Math.min(max,Math.round(val)||0));
+  return `<div class="slide"><input type="range" data-cs="${key}" min="${min}" max="${max}" value="${v}" aria-label="${esc(label)}">
+    <input type="number" class="slnum" data-csn="${key}" min="${min}" max="${max}" value="${v}" inputmode="numeric" aria-label="${esc(label)}, antal"></div>`;
+}
+function wireCount(key,onSet){
+  const r=app.querySelector(`[data-cs="${key}"]`), n=app.querySelector(`[data-csn="${key}"]`); if(!r||!n) return;
+  const clamp=x=>Math.max(+r.min,Math.min(+r.max,Math.round(+x)||0));
+  r.oninput=()=>{ n.value=r.value; }; r.onchange=()=>onSet(clamp(r.value));
+  n.oninput=()=>{ if(n.value!=="") r.value=clamp(n.value); };
+  n.onchange=()=>{ const v=clamp(n.value); n.value=r.value=v; onSet(v); };
+  n.onkeydown=e=>{ if(e.key==="Enter"){ e.preventDefault(); n.blur(); } };
+}
 const dueMax=()=>S.dueMax===0?Infinity:(S.dueMax>0?S.dueMax:MAXDUE);
 /* S: det sparade läget för den valda kursen. Hela S ligger i localStorage under L.storageKey, och i molnet uppdelat
    (se "Sparat på claude.ai" nedan och docs/ARKITEKTUR.md, där samma lista finns som tabell). Fält:
@@ -179,9 +196,9 @@ const dueMax=()=>S.dueMax===0?Infinity:(S.dueMax>0?S.dueMax:MAXDUE);
      pass       numret på nästa glospass (börjar på 1, ökar efter varje glospass som inte är extra)
      t          tid för senaste sparningen (ms), ökar alltid, även om en annan enhets klocka går före
      w          {<ord-id>: {s, due, dd, f, lp, ld, mp, md, lapses, mcR, mcW, tyR, tyW, clR, clW}}, se save() och schedule()
-     newCount   antal nya ord per pass (0, 10, 15, 20; -1 = enligt ordplanen, WP_PLAN i 83-wordplan.js)
+     newCount   antal nya ord per pass (0–NEW_SLIDE, reglaget; -1 = enligt ordplanen, WP_PLAN i 83-wordplan.js)
      wpOn       1 när ordplanens standardval (Plan) har satts en gång (bara kurser med L.examDates)          mode  "mix" | "mc" | "type"
-     dueMax     valfritt: repetitioner per glospass (10, 20, 40; 0 = alla som ska repeteras), saknas = MAXDUE
+     dueMax     valfritt: repetitioner per glospass (1–DUE_SLIDE; 0 = alla som ska repeteras), saknas = MAXDUE
      src        "auto" eller avsnitts-id att lära nya ord från  chapter  bokkapitlet man läser (avsnitts-id)
      slow, listenFirst, goal   uppläsning långsam, lyssna först på nya ord, veckomål i minuter
      selfRate   true = eleven bedömer själv (Igen/Svårt/Bra/Lätt) efter rätt skrivet ord i glosquizet; saknas = av (05-words.js)
@@ -971,9 +988,12 @@ function renderStart(){
     <div class="field"><span class="label">Nya ord från</span><select id="src">${opts}</select></div>
     ${chapterMap()}
     <div class="field"><span class="label">Antal nya ord</span>
-      <div class="seg" role="group" aria-label="Antal nya ord">${(hasWordPlan()?[WP_PLAN,0,10,15,20]:[0,10,15,20]).map(n=>`<button data-n="${n}" aria-pressed="${S.newCount===n}">${n===WP_PLAN?"Plan":n||"Inga"}</button>`).join("")}</div>${S.newCount===WP_PLAN?`<p class="foot">Plan: dagens nya ord enligt nedräkningen (${newCountNow()} kvar i dag).</p>`:""}</div>
+      ${hasWordPlan()?`<div class="seg" role="group" aria-label="Nya ord enligt plan"><button data-n="${WP_PLAN}" aria-pressed="${S.newCount===WP_PLAN}">Plan</button><button data-n="own" aria-pressed="${S.newCount!==WP_PLAN}">Eget antal</button></div>`:""}
+      ${countSlider("n","Antal nya ord",newCountNow(),Math.max(20,Math.min(NEW_SLIDE,WORDS.filter(w=>!isLearned(w)).length)))}
+      <p class="foot">${S.newCount===WP_PLAN?`Plan: dagens nya ord enligt nedräkningen (${newCountNow()} kvar i dag). Dra i reglaget för att välja eget antal.`:newCountNow()?`${newCountNow()} nya ord per pass.`:"Inga nya ord, bara repetition."}</p></div>
     <div class="field"><span class="label">Repetitioner per pass</span>
-      <div class="seg" role="group" aria-label="Repetitioner per pass">${DUE_CHOICES.map(n=>`<button data-dm="${n}" aria-pressed="${(S.dueMax==null?MAXDUE:S.dueMax)===n}">${n||"Alla"}</button>`).join("")}</div>
+      <div class="seg" role="group" aria-label="Repetitioner per pass"><button data-dm="0" aria-pressed="${S.dueMax===0}">Alla</button><button data-dm="own" aria-pressed="${S.dueMax!==0}">Högst</button></div>
+      ${S.dueMax===0?"":countSlider("dm","Repetitioner per pass",dueMax(),DUE_SLIDE,1)}
       <p class="foot" id="due-note">${dueCount()} ord ska repeteras nu.${S.dueMax===0?" Passet tar alla.":` Passet tar högst ${dueMax()}, resten kommer i nästa pass.`}</p></div>
     ${L.mono?"":`<div class="field"><span class="label">Quizet</span>
       <div class="seg" role="group" aria-label="Frågetyp">
@@ -1015,8 +1035,10 @@ function renderStart(){
   $("#src").onchange=e=>{S.src=e.target.value;save();renderStart()};
   wireBookPanel(); wireChapterMap(); wireWriteNag(); wireSuggest();
   app.querySelectorAll("[data-nextc]").forEach(b=>b.onclick=()=>useLang(b.dataset.nextc));
-  app.querySelectorAll("[data-n]").forEach(b=>b.onclick=()=>{S.newCount=+b.dataset.n;save();renderStart()});
-  app.querySelectorAll("[data-dm]").forEach(b=>b.onclick=()=>{S.dueMax=+b.dataset.dm;save();renderStart()});
+  app.querySelectorAll("[data-n]").forEach(b=>b.onclick=()=>{S.newCount=b.dataset.n==="own"?(S.newCount===WP_PLAN?newCountNow():S.newCount):+b.dataset.n;save();renderStart()});
+  app.querySelectorAll("[data-dm]").forEach(b=>b.onclick=()=>{S.dueMax=b.dataset.dm==="own"?(S.dueMax===0?MAXDUE:S.dueMax):+b.dataset.dm;save();renderStart()});
+  wireCount("n",v=>{S.newCount=v;save();renderStart()});
+  wireCount("dm",v=>{S.dueMax=v;save();renderStart()});
   app.querySelectorAll("[data-m]").forEach(b=>b.onclick=()=>{S.mode=b.dataset.m;save();renderStart()});
   app.querySelectorAll("[data-slow]").forEach(b=>b.onclick=()=>{S.slow=b.dataset.slow==="1";save();renderStart()});
   app.querySelectorAll("[data-lf]").forEach(b=>b.onclick=()=>{S.listenFirst=b.dataset.lf==="1";save();renderStart()});

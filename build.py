@@ -385,11 +385,19 @@ def read_words(code, mono=False):
         if mono and 2 <= len(fields) < 6:   # ord|betydelse räcker; appen läser alltid sex fält
             fields += [""] * (6 - len(fields))
             s = "|".join(fields)
-        if mono and len(fields) not in (6, 7):
-            errors.append(f"{where}: {len(fields)} fält, ska vara 2–7 (ord|betydelse|ordklass|exempel||förklaring|ordagrant)")
-        elif len(fields) not in (6, 7):
-            errors.append(f"{where}: {len(fields)} fält, ska vara 6 eller 7 (ord|svenska|genus|exempel|exempel sv|ursprung|ordagrant)")
+        # Fält 8 och 9 (oktober 2026, elevens önskemål): samma rot ("ord 'betydelse' · ord 'betydelse'") och luriga
+        # felsvar i flervalet ("fel;fel;fel", lureOptions i 05-words.js). Båda får vara tomma.
+        if mono and not 6 <= len(fields) <= 9:
+            errors.append(f"{where}: {len(fields)} fält, ska vara 2–9 (ord|betydelse|ordklass|exempel||förklaring|ordagrant|samma rot|felsvar)")
+        elif not 6 <= len(fields) <= 9:
+            errors.append(f"{where}: {len(fields)} fält, ska vara 6–9 (ord|svenska|genus|exempel|exempel sv|ursprung|ordagrant|samma rot|felsvar)")
         else:
+            if len(fields) > 8 and fields[8].strip():
+                lures = [x.strip() for x in fields[8].split(";")]
+                if any(not x for x in lures):
+                    errors.append(f"{where}: tomt felsvar i nionde fältet (skilj felsvaren åt med ;)")
+                elif any(x.lower() == fields[1].strip().lower() for x in lures) or len({x.lower() for x in lures}) < len(lures):
+                    errors.append(f"{where}: felsvaren i nionde fältet får inte vara rätt svar eller samma två gånger")
             word, sv, g = fields[0], fields[1], fields[2]
             if not word or not sv:
                 errors.append(f"{where}: ordet eller den svenska översättningen saknas")

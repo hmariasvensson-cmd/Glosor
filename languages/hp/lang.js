@@ -13,7 +13,7 @@ LANGUAGES.hp = {
   inLang: "på svenska",
   tts: "sv-SE",
   htmlLang: "sv",
-  etyLabel: "Förklaring",
+  etyLabel: "Ursprung",
   // Tredje fältet i words.txt är ordklassen (WORD_CLASSES i build.py); namnen visas på kortet
   genders: {subst: "substantiv", verb: "verb", adj: "adjektiv", adv: "adverb", uttr: "uttryck", prep: "preposition",
     konj: "konjunktion", pron: "pronomen", "räkn": "räkneord", interj: "interjektion", part: "partikel"},

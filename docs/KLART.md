@@ -2,6 +2,10 @@
 
 Punkter som har flyttats från [`BACKLOG.md`](BACKLOG.md) när de byggdes. **Referens** anger backloggens rubrik och prioritet. **Commit** anger var ändringen finns i git. **Publicerat** anger versionen av artefakten på https://claude.ai/artifact/YBQv8j4qXQQLuPwLAWt5mP.
 
+## 2026-10-20 (publicerat som version 55)
+
+- **Luriga svarsalternativ, exakt antal och mer om varje ord** (elevens önskemål 2026-10-19, "Tyck till", gäller alla kurser). (1) Flervalet tar först felsvar skrivna för ordet (nytt nionde fält i `words.txt`) och ord ur kursen som stavas nästan likadant (`trickyPicks`, `lookAlikes`, `lureOptions` i 05-words.js). Alla 4134 HP-ord har tre felsvar. (2) Reglage och sifferruta för Antal nya ord, Repetitioner per pass och antal ord i Kapitelprov (`countSlider`). (3) Ursprung och ord med samma rot (nytt åttonde fält) för HP-orden, skrivna av åtta AI-agenter; ursprunget är tomt där agenten var osäker (605 ord). Visas i lärokortet, efter fel svar och i hp-förklaringen. hp.json 421 → 808 kB. Testerna: 2427 OK.
+
 ## 2026-10-19, del 2 (publicerat som version 54)
 
 - **Högskoleprovet: MEK, LÄS och ELF** (backloggen P2, föräldern 2026-10-19). Ny fil `src/kinds/07-hpverbal.js` med tre övningar i gruppen Högskoleprovet: MEK (meningskomplettering, `content/mek.json`, 120 uppgifter med 1–3 luckor och fyra alternativ, rundor om 10 där aldrig gjorda och missade kommer först, `S.mek`), LÄS (12 sakprosatexter med 4 frågor, `content/las.json`) och ELF (14 engelska texter, korta, mellanlånga och långa, 40 frågor, `content/elf.json`). Texterna hämtas vid behov (`LAZY_TEXTS`, ny datafil `hp-texts.json`), resultaten i `S.tx` och en tabell i "Så förbättras du". Allt innehåll är egenskrivet av AI-agenter, inga provuppgifter kopierade; drygt hälften av MEK-uppgifterna använder ord ur ordlistan. Bygget kontrollerar luckor, alternativ och facit (`check_content`). Publiceras med 72 filer i `dist/data/`. Testerna: 2414 OK.

@@ -18,19 +18,20 @@ const HP_TIMES=[0,180,240,300];   // provpassets tid: utan tid, 3, 4 eller 5 min
 const hpState=()=>{ S.hp=S.hp&&typeof S.hp==="object"?S.hp:{}; if(!Array.isArray(S.hp.prov)) S.hp.prov=[]; return S.hp; };
 const hpProvs=()=>(S&&S.hp&&Array.isArray(S.hp.prov))?S.hp.prov:[];
 
-/* Fem alternativ: rätt betydelse och fyra andra ords betydelser. Helst samma ordklass (w.g) och ungefär samma längd,
+/* Fem alternativ: rätt betydelse och fyra felaktiga: luriga först (trickyPicks), sedan andra ords betydelser i samma ordklass (w.g) och ungefär samma längd,
    aldrig en synonym eller en betydelse som överlappar (alsoRight, svOverlap i 00-common.js) och aldrig två lika. */
 function hpOptions(w,n=HP_N){
   const L0=(w.sv||"").length;
   const score=x=>(w.g&&x.g===w.g?0:w.g&&x.g?2:1)+Math.min(2,Math.abs((x.sv||"").length-L0)/Math.max(6,L0))+Math.random()*.8;
-  const ok=(x,picks)=>x!==w&&!!x.sv&&x.sec!=="mine"&&norm(x.sv)!==norm(w.sv)&&!alsoRight(x,w)
+  const ok=(x,picks)=>!!x.sv&&x.sec!=="mine"&&norm(x.sv)!==norm(w.sv)&&notRight(x,w)
     &&!picks.some(p=>norm(p.sv)===norm(x.sv)||svOverlap(p.sv,x.sv));
-  const cands=WORDS.map(x=>({x,s:score(x)})).sort((a,b)=>a.s-b.s), picks=[];
+  // Först de luriga (felsvaren för ordet och ord som stavas likt, trickyPicks i 05-words.js), sedan samma ordklass och längd
+  const picks=trickyPicks(w,ok), cands=WORDS.map(x=>({x,s:score(x)})).sort((a,b)=>a.s-b.s);
   for(const {x} of cands){ if(picks.length>=n-1) break; if(ok(x,picks)) picks.push(x); }
   return shuffle([w,...picks]);
 }
-// Ordets förklaring efter svaret: rätt betydelse, exempelmeningen och förklaringen (sjätte fältet)
-const hpExplain=w=>`<p class="hpans"><b>${esc(w.t)}</b> = ${esc(w.sv)}</p>${w.exT?`<p class="ex-t">${esc(w.exT)}</p>`:""}${w.ety?`<p class="ety"><span class="label">${esc(L.etyLabel||"Förklaring")}</span><br>${safeHtml(w.ety)}</p>`:""}`;
+// Ordets förklaring efter svaret: rätt betydelse, exempelmeningen, ursprunget (sjätte fältet) och samma rot (åttonde)
+const hpExplain=w=>`<p class="hpans"><b>${esc(w.t)}</b> = ${esc(w.sv)}</p>${w.exT?`<p class="ex-t">${esc(w.exT)}</p>`:""}${w.ety?`<p class="ety"><span class="label">${esc(L.etyLabel||"Ursprung")}</span><br>${safeHtml(w.ety)}</p>`:""}${rotHtml(w)}`;
 // HP-flervalet i glosquizet och kapitelprovet (KINDS.words.mc i 05-words.js frågar isHp())
 function hpMC(c){
   const w=c.w;
@@ -149,7 +150,7 @@ const hpLeft=r=>r.lim?Math.max(0,Math.ceil(r.lim-r.used)):null;
 const hpFmt=s=>`${Math.floor(s/60)}:${String(Math.floor(s%60)).padStart(2,"0")}`;
 function hpQ(){
   const r=hpRun(); if(!r) return openHpProv();
-  if(r.ids.some(id=>!byId[id])||r.opts.some(o=>o.some(id=>!byId[id]))){ delete S.hp.run; save(); return openHpProv(); }   // ordlistan har ändrats
+  if(r.ids.some(id=>!byId[id])||r.opts.some(o=>o.some(id=>!optById(id)))){ delete S.hp.run; save(); return openHpProv(); }   // ordlistan har ändrats
   hpClock(r); if(r.lim&&hpLeft(r)<=0) return hpDone(true);
   const i=r.i, w=byId[r.ids[i]], n=r.ids.length;
   $("#tabs").hidden=true;
@@ -158,7 +159,7 @@ function hpQ(){
     <div class="bar"><i style="width:${100*r.ans.filter(a=>a>=0).length/n}%"></i></div>
     <p class="q-prompt hpword"><b>${esc(w.t)}</b></p>
     <p class="q-ask">Vilket alternativ betyder ungefär detsamma som ordet i fetstil?</p>
-    <div class="opts">${r.opts[i].map((id,k)=>`<button class="opt${r.ans[i]===k?" sel":""}" data-hpo="${k}" aria-pressed="${r.ans[i]===k}"><span class="k">${HP_LETTERS[k]}</span><span>${esc(byId[id].sv)}</span></button>`).join("")}</div>
+    <div class="opts">${r.opts[i].map((id,k)=>`<button class="opt${r.ans[i]===k?" sel":""}" data-hpo="${k}" aria-pressed="${r.ans[i]===k}"><span class="k">${HP_LETTERS[k]}</span><span>${esc(optById(id).sv)}</span></button>`).join("")}</div>
     <div class="hpnav" aria-label="Uppgifterna">${r.ids.map((_,k)=>`<button type="button" data-hpi="${k}" class="${k===i?"cur ":""}${r.ans[k]>=0?"done":""}" aria-label="Uppgift ${k+1}${r.ans[k]>=0?", besvarad":""}">${k+1}</button>`).join("")}</div>
     <div class="navrow"><button class="btn ghost" id="hpprev" ${i?"":"disabled"}>Föregående</button>${i<n-1?`<button class="btn ghost" id="hpnext">Nästa</button>`:""}</div>
     <button class="btn" id="hpdone">Lämna in${r.ans.some(a=>a<0)?` (${r.ans.filter(a=>a<0).length} obesvarade)`:""}</button></section>
@@ -195,7 +196,7 @@ function hpDone(timeUp){
   S.log.push({d:now,dur:Math.min(MAX_RUN_SEC,s),right,total:n,kind:"hpprov"});
   delete h.run; save(); boardPush();
   const rows=r.ids.map((id,i)=>{ const w=byId[id], a=r.ans[i]; return `<li class="hpres ${ok[i]?"ok":"bad"}"><span class="t"><b>${esc(w.t)}</b> ${ok[i]?"✓":"✗"}</span>
-    <span class="sv">${ok[i]?esc(w.sv):`${a>=0?`Du svarade ${HP_LETTERS[a]}: ${esc(byId[r.opts[i][a]].sv)}. `:"Obesvarad. "}Rätt: ${HP_LETTERS[r.opts[i].indexOf(id)]}: <b>${esc(w.sv)}</b>`}</span>
+    <span class="sv">${ok[i]?esc(w.sv):`${a>=0?`Du svarade ${HP_LETTERS[a]}: ${esc(optById(r.opts[i][a]).sv)}. `:"Obesvarad. "}Rätt: ${HP_LETTERS[r.opts[i].indexOf(id)]}: <b>${esc(w.sv)}</b>`}</span>
     ${w.exT||w.ety?`<span class="foot">${w.exT?esc(w.exT):""}${w.exT&&w.ety?" · ":""}${w.ety?safeHtml(w.ety):""}</span>`:""}</li>`; }).join("");
   const diff=prev?right-prev.r:null;
   app.innerHTML=`<section class="panel" id="hpres"><span class="label">Provpass ORD${timeUp?" · tiden är slut":""}</span>

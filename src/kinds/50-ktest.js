@@ -4,7 +4,7 @@
    de missade orden (då med omtag, som i quizet) tills alla sitter. */
 // Kapitlen (chapters och chapterKey i 00-common.js, samma som kapitelkartan) med minst fyra ord
 const ktChapters=()=>chapters().filter(c=>c.words.length>=4);
-const KT={mode:"type"};
+const KT={mode:"type",n:0};   // n = antal ord i provet (reglaget; 0 = alla i kapitlet), gäller tills sidan laddas om
 function openKtest(){
   $("#tabs").hidden=true; sess=null; S.kt=S.kt||{};
   const chs=ktChapters(); if(isMono()) KT.mode="mc";   // mono (Högskoleprovet ORD): bara flerval
@@ -12,17 +12,23 @@ function openKtest(){
     <p class="plan">Välj ett kapitel. Du får alla glosor en gång, i blandad ordning, och ser resultatet i slutet. Sedan kan du öva på de ord du missade. Provet ändrar inte när orden kommer tillbaka i passen.</p>
     <div class="field"><span class="label">Svara genom att</span>
       <div class="seg" role="group" aria-label="Svarssätt">${isMono()?"":`<button data-ktm="type" aria-pressed="${KT.mode==="type"}">Skriva ${esc(L.inLang)}</button>`}<button data-ktm="mc" aria-pressed="${KT.mode==="mc"}">Flerval</button></div></div>
+    <div class="field"><span class="label">Antal ord</span>
+      <div class="seg" role="group" aria-label="Antal ord"><button data-ktn="0" aria-pressed="${!KT.n}">Alla i kapitlet</button><button data-ktn="own" aria-pressed="${!!KT.n}">Välj antal</button></div>
+      ${KT.n?countSlider("kt","Antal ord i provet",KT.n,Math.max(4,...chs.map(c=>c.words.length)),1):""}
+      ${KT.n?`<p class="foot">Kapitel med färre ord ger alla. Orden väljs slumpvis.</p>`:""}</div>
     <div class="games">${chs.map(c=>{const r=S.kt[c.id];
       return `<button class="game" data-kt="${esc(c.id)}"><span><b>${esc(c.name)}</b><small>${c.words.length} ord${r?` · senast ${r.r}/${r.n} rätt (${new Date(r.d).toLocaleDateString("sv-SE")})`:""}</small></span><span class="go" aria-hidden="true">›</span></button>`}).join("")}</div></section>
     <button class="quit" id="quit">Tillbaka</button>`;
   app.querySelectorAll("[data-ktm]").forEach(b=>b.onclick=()=>{KT.mode=b.dataset.ktm;
     app.querySelectorAll("[data-ktm]").forEach(x=>x.setAttribute("aria-pressed",x===b));});
   app.querySelectorAll("[data-kt]").forEach(b=>b.onclick=()=>startKtest(b.dataset.kt));
+  app.querySelectorAll("[data-ktn]").forEach(b=>b.onclick=()=>{ KT.n=b.dataset.ktn==="own"?(KT.n||20):0; openKtest(); });
+  wireCount("kt",v=>{ KT.n=v; });
   $("#quit").onclick=renderStart; window.scrollTo(0,0);
 }
 function startKtest(cid,only){
   const c=ktChapters().find(x=>x.id===cid); if(!c) return openKtest();
-  const words=only?c.words.filter(w=>only.includes(w.id)):c.words, drill=!!only;
+  const words=only?c.words.filter(w=>only.includes(w.id)):KT.n?shuffle(c.words).slice(0,KT.n):c.words, drill=!!only;
   const q=shuffle(words).map(w=>({k:"ktest",id:"ktest:"+w.id,w,t:drill?"mc":KT.mode,canType:true,noRetry:!drill}));
   sess=null; $("#tabs").hidden=true;
   beginQuiz(drill?"ktestd":"ktest",q,{label:drill?`Öva: ${c.name}`:`Kapitelprov: ${c.name}`,ctx:{type:"ktest",id:cid,drill}});

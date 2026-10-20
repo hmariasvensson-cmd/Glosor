@@ -472,3 +472,8 @@ body.mono .speak{display:none}
 .hpread p{margin:0 0 .8em}
 table.hpv{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
 table.hpv th,table.hpv td{text-align:left;padding:6px 8px;border-bottom:1px solid var(--line)}
+/* Reglage för exakt antal (countSlider i app.js) */
+.slide{display:flex;align-items:center;gap:12px;margin-top:8px}
+.slide input[type=range]{flex:1;min-width:0;accent-color:var(--navy);height:28px}
+.slide .slnum{width:4.5em;padding:7px 8px;border:1.5px solid var(--line);border-radius:10px;background:var(--surface);color:inherit;font:inherit;font-variant-numeric:tabular-nums;text-align:center}
+.ety.rot{white-space:normal}

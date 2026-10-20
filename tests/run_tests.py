@@ -178,6 +178,11 @@ appReady().then(async()=>{ try{
     const before=JSON.stringify(S.w[c0.words[0].id]||null);
     exClick("ktest"); q('[data-ktm="mc"]').click(); q('[data-kt="'+c0.id+'"]').click();
     ok("kapitelprov: alla ord en gång", sess&&sess.total===c0.words.length&&sess.queue.every(x=>x.noRetry), sess&&sess.total);
+    { const s0=sess; quitSession(); exClick("ktest"); q('[data-ktn="own"]').click(); const r=q('[data-cs="kt"]');
+      r.value="3"; r.dispatchEvent(new Event("change")); q('[data-ktm="mc"]').click(); q('[data-kt="'+c0.id+'"]').click();
+      ok("kapitelprov: reglaget ger exakt antal ord", KT.n===3&&sess&&sess.total===3&&sess.queue.every(x=>c0.words.some(w=>w.id===x.w.id)), sess&&sess.total);
+      quitSession(); exClick("ktest"); q('[data-ktn="0"]').click(); ok("kapitelprov: Alla i kapitlet igen", KT.n===0&&!q('[data-cs="kt"]'));
+      q('[data-ktm="mc"]').click(); q('[data-kt="'+c0.id+'"]').click(); }
     document.dispatchEvent(new KeyboardEvent("keydown",{key:"1",bubbles:true})); const ans=sess.answered, i0=sess.done;
     document.dispatchEvent(new KeyboardEvent("keydown",{key:"Enter",bubbles:true}));
     ok("tangentbord: siffra svarar, Enter går vidare", ans&&!sess.answered&&i0===1);
@@ -1867,12 +1872,20 @@ appReady().then(async()=>{ try{
     renderStart(); ok("repetition: påminnelse och knapp på startsidan", !!q("#reviewhint")&&q("#reviewhint").textContent.includes("väntar på repetition")&&!!q("#review-go"));
     q("#review-go").click(); ok("repetition: extra runda med bara repetition", sess&&sess.newW.length===0&&sess.due.length===20, sess&&sess.due.length); quitSession();
     // Elevens val: antal repetitioner per pass och Alla (önskemål 2026-10-06)
-    ok("repetition: val av antal under glosorna", app.querySelectorAll("[data-dm]").length===4&&!!q("#due-note"));
-    q('[data-dm="10"]').click(); ok("repetition: 10 per pass", S.dueMax===10&&dueWords().length===10&&q('[data-dm="10"]').getAttribute("aria-pressed")==="true");
+    ok("repetition: val av antal under glosorna (Alla, Högst och reglaget)", app.querySelectorAll("[data-dm]").length===2&&!!q('[data-cs="dm"]')&&!!q('[data-csn="dm"]')&&!!q("#due-note"));
+    { const r=q('[data-cs="dm"]'); r.value="13"; r.dispatchEvent(new Event("input")); const n0=q('[data-csn="dm"]').value; r.dispatchEvent(new Event("change"));
+      ok("repetition: reglaget ger exakt 13 per pass", n0==="13"&&S.dueMax===13&&dueWords().length===13&&q('[data-cs="dm"]').value==="13", S.dueMax+" "+dueWords().length); }
+    { const n=q('[data-csn="dm"]'); n.value="7"; n.dispatchEvent(new Event("change")); ok("repetition: sifferrutan ger exakt 7", S.dueMax===7&&dueWords().length===7);
+      const n2=q('[data-csn="dm"]'); n2.value="9999"; n2.dispatchEvent(new Event("change")); ok("repetition: sifferrutan stannar vid högsta värdet", S.dueMax===DUE_SLIDE, S.dueMax); }
     q('[data-dm="0"]').click(); ok("repetition: Alla tar alla som ska repeteras", S.dueMax===0&&dueWords().length===dueCount()&&dueCount()>40, dueWords().length+" av "+dueCount());
     ok("repetition: knappen repeterar alla", q("#review-go").textContent.includes("alla "+dueCount()), q("#review-go").textContent);
     q("#review-go").click(); ok("repetition: runda med alla", sess&&sess.due.length===dueCount(), sess&&sess.due.length); quitSession();
     delete S.dueMax; renderStart();
+    // Reglaget för antal nya ord (önskemål 2026-10-19)
+    { const n0=S.newCount, r=q('[data-cs="n"]'); ok("nya ord: reglage och sifferruta", !!r&&!!q('[data-csn="n"]')&&+r.max>=20);
+      r.value="7"; r.dispatchEvent(new Event("change")); ok("nya ord: reglaget ger exakt 7", S.newCount===7&&newCountNow()===7&&pickNew().length===7&&q('[data-csn="n"]').value==="7", S.newCount+" "+pickNew().length);
+      const n=q('[data-csn="n"]'); n.value="0"; n.dispatchEvent(new Event("change")); ok("nya ord: 0 ger inga nya ord", S.newCount===0&&pickNew().length===0);
+      S.newCount=n0; renderStart(); }
     // Förslag att repetera (förälderns önskemål 2026-10-08)
     { const gtKeep=JSON.stringify(S.gt||{}), tp=GR().topics[0];
       S.gt=S.gt||{}; S.gt[tp.id]={r:3,n:10}; WORDS.slice(0,4).forEach(w=>{ S.w[w.id].lapses=4; });
@@ -3053,10 +3066,10 @@ appReady().then(async()=>{ try{
   const d=sess.d, labels=d.opts.map(o=>o.label), right=d.opts.filter(o=>o.ok);
   ok("hp: flerval med fem alternativ, ett rätt, inga dubbletter", sess.cur.t==="mc"&&d.opts.length===5&&right.length===1&&new Set(labels).size===5&&right[0].label===sess.cur.w.sv, labels.join(" | "));
   ok("hp: bokstäverna A–E och ordet i fetstil", [...document.querySelectorAll(".opt .k")].map(x=>x.textContent).join("")==="ABCDE"&&q(".hpword b").textContent===sess.cur.w.t);
-  const w0=sess.cur.w, cls=d.opts.filter(o=>!o.ok).map(o=>WORDS.find(w=>w.sv===o.label)).filter(Boolean);
-  ok("hp: felalternativen är andra ords betydelser, helst samma ordklass", cls.length===4&&cls.filter(x=>x.g===w0.g).length>=Math.min(3,WORDS.filter(x=>x!==w0&&x.g===w0.g).length), w0.g+": "+cls.map(x=>x.g).join());
+  const w0=sess.cur.w, lures=lureOptions(w0).map(x=>x.sv), wrong=d.opts.filter(o=>!o.ok), cls=wrong.filter(o=>!lures.includes(o.label)).map(o=>WORDS.find(w=>w.sv===o.label)).filter(Boolean);
+  ok("hp: felalternativen är felsvar för ordet eller andra ords betydelser, helst samma ordklass", wrong.length===4&&cls.length+wrong.filter(o=>lures.includes(o.label)).length===4&&cls.filter(x=>x.g===w0.g).length>=Math.min(cls.length-2,WORDS.filter(x=>x!==w0&&x.g===w0.g).length), w0.g+": "+cls.map(x=>x.g).join());
   { const ri=d.opts.findIndex(o=>o.ok); key("ABCDE"[ri].toLowerCase());
-    ok("hp: tangenten A–E svarar, förklaringen visas", sess.answered&&!!q(".opt.right")&&q("#fb").textContent.includes(w0.sv)&&(!w0.ety||q("#fb").textContent.includes("Förklaring"))); }
+    ok("hp: tangenten A–E svarar, förklaringen visas", sess.answered&&!!q(".opt.right")&&q("#fb").textContent.includes(w0.sv)&&(!w0.ety||q("#fb").textContent.includes("Ursprung"))); }
   { let g=0; while(sess&&g++<40){ if(!sess.answered) answerMC(sess.d.opts.findIndex(o=>o.ok)); q("#nx").click(); } }
   ok("hp: glospasset klart", !sess&&S.log.length>0, S.log.length);
   // Repetitionsschemat: flerval räcker till "kan" i hp, men inte i språkkurserna
@@ -3156,10 +3169,10 @@ def test_hp_course():
         ok("hp: storageKey låses i det publika låset, orden bara i bokens lås", lock.get("storageKey") == "glosor-hp-v1" and not lock.get("ord") and "ambivalent" in block.get("ord", []), str(lock)[:200])
         # Fel i ordfilen stoppar bygget: okänd ordklass och för få fält
         good = (hp / "book" / "words.txt").read_text(encoding="utf-8")
-        (hp / "book" / "words.txt").write_text(good + "felord|fel|genus\nbaraord\n", encoding="utf-8")
+        (hp / "book" / "words.txt").write_text(good + "felord|fel|genus\nbaraord\nlurord|rätt|subst||||||a;rätt;b\n", encoding="utf-8")
         r2 = build()
         (hp / "book" / "words.txt").write_text(good, encoding="utf-8")
-        ok("hp: okänd ordklass och rad utan betydelse stoppar bygget", r2.returncode != 0 and "okänd ordklass 'genus'" in r2.stdout and "1 fält, ska vara 2–7" in r2.stdout, "" if r2.returncode else r2.stdout[-300:])
+        ok("hp: okänd ordklass, rad utan betydelse och ett felsvar som är rätt svar stoppar bygget", r2.returncode != 0 and "okänd ordklass 'genus'" in r2.stdout and "1 fält, ska vara 2–9" in r2.stdout and "får inte vara rätt svar" in r2.stdout, "" if r2.returncode else r2.stdout[-300:])
         r = build()
         head = '<script>window.COURSES_UNDER_TEST=["hp"];</script>'
         text = run(SCENARIO_HP, 30000, root=t)
@@ -3736,8 +3749,20 @@ appReady().then(async()=>{ try{
   { const w=WORDS.find(x=>x.sec!=="mine"); let bad=0;
     for(let i=0;i<200;i++){ const o=mcOptions(w), sv=o.map(x=>x.sv); if(o.length!==5||!o.includes(w)||new Set(sv).size!==5) bad++; }
     ok("mcOptions: fem alternativ, rätt ord med, alla betydelser olika", !bad, bad);
-    const few=WORDS.filter(x=>x.sec===w.sec&&x.sv!==w.sv).length, other=Array.from({length:100},()=>mcOptions(w)).flat().filter(x=>x.sec!==w.sec).length;
-    ok("mcOptions: samma avsnitt först, andra avsnitt bara när det behövs", few>=4?other===0:other>0, few+" "+other);
+    const few=WORDS.filter(x=>x.sec===w.sec&&x.sv!==w.sv).length, other=Array.from({length:100},()=>mcOptions(w)).flat().filter(x=>x.sec!==w.sec&&!lookAlikes(w).includes(x)).length;
+    ok("mcOptions: samma avsnitt först, andra avsnitt bara när det behövs (eller när de stavas likt)", few>=4?other===0:other>0, few+" "+other);
+    // Luriga alternativ (önskemål 2026-10-19): felsvaren i nionde fältet och ord som stavas likt
+    { const l0=w.lur; w.lur="fel ett;fel två;fel tre"; let bad=0, n=0;
+      for(let i=0;i<60;i++){ const o=mcOptions(w), k=o.filter(x=>x.lure).length; n+=k; if(o.length!==5||!o.includes(w)||k!==2||new Set(o.map(x=>x.sv)).size!==5) bad++; }
+      ok("luriga: två av felsvaren kommer med i varje fråga, aldrig två lika", !bad&&n===120, bad+" "+n);
+      ok("luriga: optById hittar ord och felsvar", optById(w.id)===w&&optById(w.id+"~1").sv==="fel två"&&optById(w.id+"~9")===null&&optById("finns-inte~0")===null);
+      const d=KINDS.words.mc({w}); ok("luriga: felsvaren räknas som fel", d.opts.filter(o=>o.ok).length===1&&d.opts.find(o=>o.ok).label===w.sv);
+      w.lur="fel ett;"+w.sv+";fel tre"; ok("luriga: ett felsvar som är rätt svar tas inte med", Array.from({length:30},()=>mcOptions(w)).every(o=>o.filter(x=>x.sv===w.sv).length===1));
+      w.lur=l0; }
+    { const ws=WORDS.filter(x=>x.sec!=="mine").slice(0,150), la=ws.map(x=>[x,lookAlikes(x)]);
+      ok("luriga: ord som stavas likt hittas, aldrig samma ord eller en form av det", la.some(([,l])=>l.length)&&la.every(([x,l])=>l.every(y=>y!==x&&!alsoRight(y,x))), la.filter(([,l])=>l.length).length);
+      const [x,l]=la.find(([,l])=>l.length), seen=Array.from({length:40},()=>mcOptions(x)).flat();
+      ok("luriga: ett ord som stavas likt kommer med bland alternativen", seen.some(y=>l.includes(y)), x.t+": "+l.map(y=>y.t).join()); }
     const cw=WORDS.find(x=>x.gap); let bad2=0;
     for(let i=0;i<100;i++){ const d=KINDS.cloze.mc({w:cw}), l=d.opts.map(o=>norm(o.label)); if(new Set(l).size!==l.length||d.opts.filter(o=>o.ok).length!==1||l.length<2) bad2++; }
     ok("meningar: flervalet har unika alternativ och ett rätt", !bad2, bad2);

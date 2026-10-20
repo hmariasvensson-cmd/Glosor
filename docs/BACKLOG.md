@@ -40,6 +40,7 @@ Emma pluggar på egen hand, utan kurs, lärare och lärobok. Tyskan bygger därf
 ## Kurser och nivåer
 
 - **P3: Högskoleprovet MEK, LÄS och ELF: mer innehåll och provpass.** Version 54 har 120 MEK, 12 LÄS och 14 ELF. Fler uppgifter, och gärna ett provpass för hela den verbala delen (ORD, LÄS, MEK, ELF, 40 uppgifter på 55 minuter) med resultat i topplistan. Stickprova innehållet.
+- **P2: Felsvar och samma rot i språkkurserna** (elevens önskemål 2026-10-19 gäller alla kurser). Version 55 har koden i alla kurser och innehållet för Högskoleprovet ORD; i språkkurserna kommer hittills bara ord som stavas likt. Skriv fält 8 (samma rot) och 9 (felsvar) med AI-agenter, först Franska 3 (Oscars kurs) och sedan övriga kurser. Ursprung saknas för 605 HP-ord. Stickprova felsvaren (inget får vara rätt), t.ex. `vråk` har betydelsen 'spricka i isen' i ordlistan (vanligen en rovfågel; hålet i isen heter vak), kontrollera mot källan.
 - **P3: Högskoleprovet ORD: nya provdatum.** `examDates` i `languages/hp/lang.js` har datum till och med 24 oktober 2027; lägg till nya när UHR publicerar dem.
 
 - **P2: Resten av kursmallen** (`docs/kursmall.md`, avsnitt 4). Byggt: paket 1–8, 10 och 13–16 samt nivåerna. Kvar:
