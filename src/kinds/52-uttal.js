@@ -31,4 +31,4 @@ function uttAfter(ctx,right,total,miss){
     <div class="navrow"><button class="btn ghost" id="home">Startsidan</button><button class="btn" id="again">En runda till</button></div></section>`;
   $("#home").onclick=renderStart; $("#again").onclick=()=>startUttal(ctx.id==="*"?null:ctx.id); renderList();
 }
-defineKind("utt",{name:"Uttal",mc:uttMC,restore:ref=>uttRecap(ref)?{}:null,recap:uttRecap,after:uttAfter,open:openUttal});
+defineKind("utt",{name:"Uttal",listen:true,mc:uttMC,restore:ref=>uttRecap(ref)?{}:null,recap:uttRecap,after:uttAfter,open:openUttal});

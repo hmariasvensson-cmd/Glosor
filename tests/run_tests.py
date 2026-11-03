@@ -174,6 +174,35 @@ appReady().then(async()=>{ try{
     schedule(x,true,10,now); const b=x.s===2&&x.dd===addDays(now,3)&&!isDue(x);
     schedule(x,true,11,now); const c=x.s===3&&x.dd===addDays(now,7); schedule(x,true,12,now); const d=x.s===4&&x.dd===addDays(now,20);
     x.dd=Date.now()-1; ok("schema: nästa pass, 3 pass, sedan 3, 7 och 20 dagar", a&&b&&c&&d&&isDue(x), JSON.stringify(x)); }
+  // Verbtabeller (önskemål 2026-11-03): ett verb man kan blir en tabell där man fyller i ett tempus
+  { const vs=vtVerbs(); ok("verbtabell: verb i ordlistan som finns i verbtabellerna", vs.length>0&&vs.every(x=>CONJ.some(c=>c.verb===x.verb)), vs.length);
+    const x=vs[0], keepW=JSON.stringify(S.w[x.w.id]||null), keepT=JSON.stringify(S.vtab||null), nLog=S.log.length;
+    delete S.vtab; S.w[x.w.id]={s:3,due:0}; ok("verbtabell: inte förrän verbet kan", !vtReady().some(y=>y.verb===x.verb));
+    S.w[x.w.id]={s:4,due:1e9}; const nx=vtNext(), t0=vtTarget(x.verb);
+    ok("verbtabell: verbet kommer när det kan, med första tempuset", vtReady().some(y=>y.verb===x.verb)&&nx&&t0===vtTenses(x.verb)[0], nx&&nx.verb+" "+t0);
+    openVtab(x.verb,t0); const ins=[...document.querySelectorAll(".vtin")], cells=vtCells(x.verb,t0);
+    ok("verbtabell: sex rader, en kolumn att fylla i och tempusen som kolumner", ins.length===L.verbs.persons.length&&document.querySelectorAll("table.vtab thead th").length===vtCols(x.verb,t0).length+1&&!!q("th.on"));
+    ins.forEach((inp,i)=>inp.value=i===1?"fel":i===0&&!cells[0].form.includes("/")?cells[0].full:cells[i].form.split("/")[0]); q("#vtcheck").click();
+    const st=S.vtab[x.verb][t0];
+    ok("verbtabell: rättas ruta för ruta (pronomenet får stå med), fel ruta visar rätt form", st.r===ins.length-1&&st.n===1&&document.querySelectorAll("td.bad").length===1&&q("td.bad .vtfix").textContent.includes(cells[1].form.split("/")[0]), JSON.stringify(st));
+    ok("verbtabell: loggas och räknas i verbstatistiken", S.log.length===nLog+1&&lastLog().kind==="vtab"&&lastLog().total===ins.length&&(S.vv[x.verb]||{}).n>=ins.length);
+    ok("verbtabell: med fel kommer samma tempus igen", vtNext()&&vtNext().verb===x.verb&&!!q("#vtagain"));
+    q("#vtagain").click(); [...document.querySelectorAll(".vtin")].forEach((inp,i)=>inp.value=cells[i].form.split("/")[0]); q("#vtcheck").click();
+    ok("verbtabell: alla rätt, nästa gång ett annat tempus", S.vtab[x.verb][t0].r===ins.length&&(vtTenses(x.verb).length<2||vtTarget(x.verb)!==t0), vtTarget(x.verb));
+    ok("verbtabell: knappen efter Dagens pass och i menyn", dailyAfter(1).includes("dvtab")===!!vtNext()&&exGroups().some(g=>g.items.some(h=>h.includes('data-ex="vtab"'))));
+    exClick("vtab"); ok("verbtabell: listan visar verben man kan", !!q('[data-pick="'+x.verb+'"]'));
+    q('[data-pick="'+x.verb+'"]').click(); ok("verbtabell: listan öppnar tabellen", document.querySelectorAll(".vtin").length===ins.length);
+    S.w[x.w.id]=JSON.parse(keepW); if(!S.w[x.w.id]) delete S.w[x.w.id]; S.vtab=JSON.parse(keepT); if(!S.vtab) delete S.vtab; renderStart(); }
+  ok("hitta felet: bara den del som skiljer visas (du tous → tous, rapport tout-021)", errCore("du tous","du tout")==="tous"&&errCore("de tout","du tout")==="de"&&errCore("tous","tout")==="tous"&&errCore("toute à l'heure","tout à l'heure")==="toute"&&errCore("à","au")==="à");
+  // Hoppa över en hörövning (önskemål 2026-10-27)
+  { const dp=dictPool(); if(dp.length){ const items=[dictItem(dp[0]),...(dp[1]?[dictItem(dp[1])]:[]),clozeItem(clozePool()[0])];
+      $("#tabs").hidden=true; sess=null; beginQuiz("mix",items,{label:"test"}); const t0=sess.total, id0=itemId(sess.cur);
+      ok("hörövning: knappen Hoppa över finns på diktamen", !!q("#skiplisten"));
+      q("#skiplisten").click(); ok("hörövning: frågan hoppas över utan att räknas", sess.total===t0-1&&!(id0 in sess.firstTry)&&itemId(sess.cur)!==id0, sess.total+" "+t0);
+      ok("hörövning: nästa hörövning får en egen knapp", (sess.cur.k==="dict")===!!q("#skiplisten"));
+      while(sess&&sess.cur&&sess.cur.k==="dict") q("#skiplisten").click();
+      ok("hörövning: andra frågor har ingen knapp", sess&&!q("#skiplisten"));
+      runAll(); ok("hörövning: rundan blir klar och loggas", !sess&&lastLog().total===1, JSON.stringify(lastLog())); renderStart(); } }
   { const ch=ktChapters(), c0=ch[0]; ok("kapitelprov: kapitlen samlar alla avsnitt", ch.length>=3&&!ch.some(c=>/x$/.test(c.id))&&c0.words.length>=4, ch.map(c=>c.id).join(","));
     const before=JSON.stringify(S.w[c0.words[0].id]||null);
     exClick("ktest"); q('[data-ktm="mc"]').click(); q('[data-kt="'+c0.id+'"]').click();
@@ -1435,7 +1464,7 @@ const allRight=n0=>{const l=logsSince(n0); return l.length>0&&l.every(e=>e.right
     // Varje övning i menyn
     const menu=exGroups().flatMap(g=>g.items.map(h=>(h.match(/data-ex="(\w+)"/)||[])[1]).filter(Boolean));
     ok(c+": varje knapp i menyn har en typ med open", menu.every(id=>KINDS[id]&&KINDS[id].open), menu.join());
-    const need=["ktest"].concat(L.mono?(L.kind==="hp"?["hpprov"]:[]):["dict","trans","order","talk"],(C().listening||[]).length?["lq"]:[],(C().reading||[]).length?["rq"]:[],(C().stories||[]).length?["story"]:[],(C().phrases||[]).length?["phr"]:[],(C().prompts||[]).length?["write"]:[],hasGrammar()?["gram"]:[],(C().uttal||[]).length?["utt"]:[],hasExam()?["exam"]:[],(C().culture||[]).length?["culture"]:[],L.kind==="hp"?["mek","las","elf"].filter(k=>(C()[k]||[]).length):[]);
+    const need=["ktest"].concat(L.mono?(L.kind==="hp"?["hpprov"]:[]):["dict","trans","order","talk"],(C().listening||[]).length?["lq"]:[],(C().reading||[]).length?["rq"]:[],(C().stories||[]).length?["story"]:[],(C().phrases||[]).length?["phr"]:[],(C().prompts||[]).length?["write"]:[],hasGrammar()?["gram"]:[],(C().uttal||[]).length?["utt"]:[],hasExam()?["exam"]:[],(C().culture||[]).length?["culture"]:[],L.kind==="hp"?["mek","las","elf"].filter(k=>(C()[k]||[]).length):[],L.verbs&&!L.mono&&vtVerbs().length?["vtab"]:[]);
     ok(c+": alla övningar som kursen har innehåll för finns i menyn", need.every(k=>menu.includes(k)), need.filter(k=>!menu.includes(k)).join()+" · "+menu.length+" övningar");
     for(const id of menu){ const n0=S.log.length; let res=null, info="";
       try{
@@ -1446,6 +1475,9 @@ const allRight=n0=>{const l=logsSince(n0); return l.length>0&&l.every(e=>e.right
         else if(id==="utt"){ q('[data-pick="*"]').click(); runAll(); res=!sess&&q("#app").textContent.includes("Uttal klart")&&allRight(n0); }
         else if(id==="hpprov"){ const p0=hpProvs().length; q("#hpnew").click(); hpRun().ids.forEach((wid,i)=>{ hpGo(i); q('[data-hpo="'+hpRun().opts[i].indexOf(wid)+'"]').click(); }); q("#hpdone").click();
           const pp=hpProvs()[hpProvs().length-1]; res=hpProvs().length===p0+1&&pp.r===pp.n&&S.log[S.log.length-1].kind==="hpprov"&&!!q("#hpres"); info=pp&&pp.r+"/"+pp.n; }
+        else if(id==="vtab"){ const x=vtVerbs()[0]; S.w[x.w.id]={...(S.w[x.w.id]||{}),s:4,due:1e9}; exClick("vtab"); const b=q('[data-pick="'+x.verb+'"]'); b.click();
+          const t=vtTarget(x.verb), cs=vtCells(x.verb,t); [...document.querySelectorAll(".vtin")].forEach((inp,i)=>inp.value=cs[i].form.split("/")[0]); q("#vtcheck").click();
+          res=!!b&&S.vtab[x.verb][t].r===cs.length; info=x.verb+" "+t; }
         else if(id==="ktest"){ q('[data-ktm="mc"]').click(); const kid=q("[data-kt]").dataset.kt; q("[data-kt]").click(); runAll(); res=!sess&&S.kt[kid]&&S.kt[kid].r===S.kt[kid].n; info=kid+" "+(S.kt[kid]&&S.kt[kid].n)+" ord"; }
         else if(id==="gram"){ q('[data-pick="mix"]').click(); runAll(); res=!sess&&S.gt.mix&&S.gt.mix.n>0&&allRight(n0); info=firstRight(n0); }
         else if(id==="culture"){ const cid=q("[data-pick]").dataset.pick; q("[data-pick]").click(); q(".opt").click(); q("#ctext").value="Test."; q("#done").click(); res=S.cu[cid]&&S.log[S.log.length-1].kind==="culture"; }
@@ -3032,6 +3064,8 @@ appReady().then(async()=>{ try{
   let spoke=0; try{ speechSynthesis.speak=()=>{spoke++}; }catch(e){}
   useLang("hp"); await until(()=>L.code==="hp"&&L.base&&!sess,5000);
   ok("hp: vald, 31 testord, mono och kind hp", L.code==="hp"&&WORDS.length===31&&L.mono===true&&L.kind==="hp", WORDS.length);
+  { const raw=parseWords(L.words); ok("hp: ordlistan baklänges (önskemål 2026-10-20), samma id", L.reverse===true&&SECTIONS[0].id===raw.sections[raw.sections.length-1].id&&L.base.words[0].id===raw.words[raw.words.length-1].id&&L.base.words.length===raw.words.length&&raw.words.every(w=>byId[w.id]), SECTIONS.map(x=>x.id).join());
+    const nw=pickNew(); ok("hp: nya ord kommer från slutet av ordlistan", !nw.length||nw[0].sec===SECTIONS.find(x=>secWords(x.id).some(w=>!isLearned(w))).id, nw.map(w=>w.sec).slice(0,3).join()); }
   ok("hp: ordet utan exempel får inga tomma fält", byId["i görligaste mån"].sv==="så långt det går"&&byId["i görligaste mån"].exT===""&&byId["i görligaste mån"].gap===null);
   const txt=q("#app").textContent;
   ok("hp: startsidan har introt om ORD och provpasset", !!q("#hppanel")&&txt.includes("fem svarsalternativ")&&!!q("#hpgo"));

@@ -148,6 +148,14 @@ function parseWords(raw){
   });
   return {sections,words};
 }
+// L.reverse (hp, elevens önskemål 2026-10-20: "tvärtom från det som det är nu, då jag har övat in dem en gång redan i just
+// denna ordning"): avsnitten och orden i omvänd ordning, så att nya ord kommer från slutet av ordlistan. Bara ordningen
+// ändras; id:n och framsteg är desamma.
+function reverseOrder(b){
+  if(!L.reverse) return b;
+  const pos=new Map(b.sections.map((s,i)=>[s.id,i])), n=b.sections.length;
+  return {sections:b.sections.slice().reverse(), words:b.words.map((w,i)=>({w,i})).sort((x,y)=>(n-pos.get(x.w.sec))-(n-pos.get(y.w.sec))||y.i-x.i).map(x=>x.w)};
+}
 function buildConj(vb){
   const out=[]; if(!vb) return out;
   Object.entries(vb.tenses).forEach(([tense,o])=>Object.keys(o).filter(k=>k!=="rule").forEach(verb=>o[verb].forEach((f,i)=>{
@@ -225,6 +233,7 @@ const dueMax=()=>S.dueMax===0?Infinity:(S.dueMax>0?S.dueMax:MAXDUE);
      st         berättelsernas luckor {tempus, bindeord: {r, n}}
      cu, wr     kulturuppgifter och skrivuppgifter som är klara, per id
      ut         uttal: bästa procent per id                     mal  lärandemål som bockats av {"<id>|<nr>": tid}
+     vtab       verbtabellerna {<verb>: {<tempus>: {r, n, last}}} (12-verbtab.js; saknas tills eleven gjort en)
      kt         kapitelprov per avsnitt {r, n, d, miss}         exam provträning {t: {<uppgift>: {pct, best, n, last}}, sims: [...], simRun}
                 simRun = pågående provsimulering {ids, i, res, ends, start, seen, cur}, tas bort när den är klar (70-exam.js)
      drafts     utkast till texter per uppgift ("w:<id>" Skriv en text, "x:<id>" provet, "c:<id>" kultur)
@@ -1443,7 +1452,21 @@ function nextQ(){
   const K=KINDS[sess.cur.k||sess.kind], d=(sess.cur.t==="mc"?K.mc:K.type)(sess.cur);
   sess.d=d;
   if(sess.cur.t==="mc") renderMC(d); else if(d.render) d.render(d); else renderType(d);
+  if(K.listen) skipListenBtn();
   snapRun();
+}
+/* Hoppa över en hörövning (elevens önskemål 2026-10-27: "om man inte har möjlighet att göra just hörövningarna för det
+   passet"). Typer med listen: true i defineKind (diktamen, hörförståelse, uttal) får knappen innan svaret. Frågan tas
+   bort ur rundan utan att räknas som rätt eller fel (inget i firstTry, ingen effekt på schemat), och passet räknas som
+   vanligt i statistiken och topplistan. Bara en fråga i taget; nästa hörövning i passet får en egen knapp. */
+function skipListenBtn(){
+  const q=$("#quit"); if(!q||$("#skiplisten")) return;
+  q.insertAdjacentHTML("beforebegin",`<button class="btn ghost" id="skiplisten">Hoppa över hörövningen</button>`);
+  $("#skiplisten").onclick=skipListen;
+}
+function skipListen(){
+  if(!sess||!sess.cur||sess.answered) return;
+  stopSpeech(); sess.total=Math.max(sess.done,sess.total-1); sess.skipped=(sess.skipped||0)+1; nextQ();
 }
 function progressHead(){
   const c=sess.cur;
@@ -1613,16 +1636,17 @@ document.addEventListener("click",e=>{const b=e.target.closest&&e.target.closest
      again    (arg) => "En runda till" (passets againFn = [namn, arg])
      open     () => öppnar övningen från menyn (knappen data-ex="<namn>")
      log      (e, sess) => egna fält i loggposten; utan log får posten kind: namn
+     listen   true = frågan bygger på ljud; knappen "Hoppa över hörövningen" (skipListen) visas innan svaret
    Fråge-id är "<typ>:<ref>", så att typerna kan blandas i Dagens pass. Namnen är nycklar i sparade pass (S.run,
    S.runs) och i loggen, så de får inte bytas. */
-const KINDS={}, KIND_FIELDS=["name","mc","type","restore","effect","recap","after","again","open","log"], KIND_ERRORS=[];
+const KINDS={}, KIND_FIELDS=["name","mc","type","restore","effect","recap","after","again","open","log","listen"], KIND_ERRORS=[];
 function defineKind(name,def){
   // Fel här stoppar inte appen (eleverna ska kunna öva ändå), men testerna kräver att KIND_ERRORS är tom
   const k=KINDS[name]||(KINDS[name]={});
   Object.keys(def).forEach(f=>{
     if(!KIND_FIELDS.includes(f)) KIND_ERRORS.push(`${name}: okänt fält ${f}`);
     else if(f in k) KIND_ERRORS.push(`${name}: ${f} finns redan`);
-    else if(f==="name"?typeof def[f]!=="string":typeof def[f]!=="function") KIND_ERRORS.push(`${name}: ${f} har fel typ`);
+    else if(f==="name"?typeof def[f]!=="string":f==="listen"?typeof def[f]!=="boolean":typeof def[f]!=="function") KIND_ERRORS.push(`${name}: ${f} har fel typ`);
     else k[f]=def[f];
   });
   return k;
@@ -2013,7 +2037,7 @@ function useLang(code){
     return;
   }
   L=LANGUAGES[code]; L.code=code;
-  L.base=L.base||parseWords(L.words);
+  L.base=L.base||reverseOrder(parseWords(L.words));
   CONJ=buildConj(L.verbs);
   CONJBY=Object.fromEntries(CONJ.map(c=>[c.verb+"|"+c.tense+"|"+c.person,c]));
   cloudFlush();

@@ -71,7 +71,7 @@ const dictMC=c=>{const w=c.w, others=otherSentences(w,3);
   return{tab:"Diktamen",head:playBar(),ask:"Vilken mening hörde du?",
     opts:shuffle([w,...others].map(x=>({label:x.exT,ok:x===w,lang:true}))),
     explain:`<p class="ex-sv">${esc(w.exSv)}</p>`,wrongCard:studyCard(w),say:w.exT,sayOnShow:true,wire:()=>wirePlay(r=>speak(w.exT,r))}};
-defineKind("dict",{name:"Diktamen",mc:dictMC,type:dictType,restore:sentRestore,recap:sentRecap,
+defineKind("dict",{name:"Diktamen",listen:true,mc:dictMC,type:dictType,restore:sentRestore,recap:sentRecap,
   effect:(ref,ok)=>{const x=S.w[ref]; if(x){x.dcR=(x.dcR||0)+(ok?1:0); x.dcW=(x.dcW||0)+(ok?0:1);}
     S.dc=S.dc||{}; S.dc[ref]=srsBump(S.dc[ref],ok);},
   open:startDict, again:startDict});

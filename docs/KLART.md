@@ -2,6 +2,13 @@
 
 Punkter som har flyttats från [`BACKLOG.md`](BACKLOG.md) när de byggdes. **Referens** anger backloggens rubrik och prioritet. **Commit** anger var ändringen finns i git. **Publicerat** anger versionen av artefakten på https://claude.ai/artifact/YBQv8j4qXQQLuPwLAWt5mP.
 
+## 2026-11-03 (publicerat som version 56)
+
+- **Verbtabeller** (elevens önskemål 2026-11-03, Franska 3, gäller alla kurser med verb). Ny fil `src/kinds/12-verbtab.js`, typ `vtab`. När ett verb i ordlistan har nått "kan" och finns i verbtabellerna fyller eleven i ett tempus i en tabell med pronomenen som rader; tempus eleven har övat visas som stöd (högst fyra kolumner). Tempus i verbspelens ordning, det minst gjorda först; fel ger samma tempus igen. Knapp efter Dagens pass (`dailyAfter`) och Grammatik → Verbtabeller. Sparat i `S.vtab[verb][tempus] = {r, n, last}` (nytt fält), rutorna räknas i `S.vv`, loggas som `vtab`.
+- **Hoppa över en hörövning** (elevens önskemål 2026-10-27, Tyska 4). Typer med `listen: true` (diktamen, hörförståelse, uttal) får knappen "Hoppa över hörövningen" innan svaret (`skipListen` i app.js); frågan räknas varken rätt eller fel och passet räknas som vanligt. Nytt fält `listen` i `defineKind`.
+- **Högskoleprovet ORD baklänges** (elevens önskemål 2026-10-20). `reverse: true` i hp:s lang.js vänder avsnitten och orden (`reverseOrder` i app.js), så nya ord kommer från slutet; id och framsteg oförändrade.
+- **Hitta felet visar bara felet** (felrapport tout-021): `errCore` tar bort ord som är lika i fel och rätt svar ("du tous" → "tous"), så att alternativet inte avslöjas av att det har två ord. Felrapporterna p37 och transitera kontrollerade, inget fel hittat. Testerna: 2467 OK.
+
 ## 2026-10-20 (publicerat som version 55)
 
 - **Luriga svarsalternativ, exakt antal och mer om varje ord** (elevens önskemål 2026-10-19, "Tyck till", gäller alla kurser). (1) Flervalet tar först felsvar skrivna för ordet (nytt nionde fält i `words.txt`) och ord ur kursen som stavas nästan likadant (`trickyPicks`, `lookAlikes`, `lureOptions` i 05-words.js). Alla 4134 HP-ord har tre felsvar. (2) Reglage och sifferruta för Antal nya ord, Repetitioner per pass och antal ord i Kapitelprov (`countSlider`). (3) Ursprung och ord med samma rot (nytt åttonde fält) för HP-orden, skrivna av åtta AI-agenter; ursprunget är tomt där agenten var osäker (605 ord). Visas i lärokortet, efter fel svar och i hp-förklaringen. hp.json 421 → 808 kB. Testerna: 2427 OK.

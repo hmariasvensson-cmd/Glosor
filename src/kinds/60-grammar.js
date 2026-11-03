@@ -107,8 +107,16 @@ function errItem(id){
   const others=errOthers(b,bad);
   const surface=w=>{const m=wrongText.match(new RegExp("(^|[^\\p{L}])("+reEsc(w)+")(?![\\p{L}])","iu")); return m?m[2]:w;};
   return {id,topic:"err",rtopic:b.topic,rule:b.rule,type:"err",bad,wrongText,rightText,
-    opts:shuffle([{label:bad,ok:true,lang:true},...shuffle(others).slice(0,3).map(w=>({label:surface(w),ok:false,lang:true}))]),
+    opts:shuffle([{label:errCore(bad,b.p.gaps[0]),ok:true,lang:true},...shuffle(others).slice(0,3).map(w=>({label:surface(w),ok:false,lang:true}))]),
     why:b.why,sv:b.sv};
+}
+// Bara den del av felet som skiljer sig från rätt svar: "du tous" (rätt "du tout") visas som "tous", annars avslöjar
+// ett alternativ med två ord svaret när de andra alternativen är ett ord var (elevens rapport 2026-10-20, tout-021)
+function errCore(bad,right){
+  const a=String(bad).split(/\s+/), b=String(right).split(/\s+/), eq=(x,y)=>x.toLowerCase()===y.toLowerCase();
+  let i=0; while(i<a.length-1&&i<b.length&&eq(a[i],b[i])) i++;
+  let j=0; while(j<a.length-1-i&&j<b.length-i&&eq(a[a.length-1-j],b[b.length-1-j])) j++;
+  return a.slice(i,a.length-j).join(" ")||bad;
 }
 function errIds(k){
   return shuffle(errBase()).slice(0,k).map(b=>{const ok=errAlts(b);

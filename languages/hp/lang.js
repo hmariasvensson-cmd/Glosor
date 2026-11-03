@@ -22,5 +22,6 @@ LANGUAGES.hp = {
   // Lägg till nya datum när UHR publicerar dem; utan kommande datum visas ingen nedräkning.
   examDates: ["2027-04-10", "2027-10-24"],
   examName: "högskoleprovet",
+  reverse: true,                 // ordlistan baklänges: nya ord från slutet (elevens önskemål 2026-10-20, reverseOrder i app.js)
   storageKey: "glosor-hp-v1",    // ÄNDRA ALDRIG: sparade framsteg ligger under den här nyckeln
 };

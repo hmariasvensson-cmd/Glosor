@@ -16,4 +16,4 @@ function listenIntro(id){
   wirePlay(r=>speakSeq(t.lines,r)); $("#stop").onclick=stopSpeech;
   $("#toq").onclick=()=>{stopSpeech(); startTextQs("lq",id)}; $("#quit").onclick=backTo(openListening);
 }
-defineKind("lq",{name:"Hörförståelse",mc:textQ,restore:ref=>textQById("lq",ref)?{}:null,after:textAfter,open:openListening});
+defineKind("lq",{name:"Hörförståelse",listen:true,mc:textQ,restore:ref=>textQById("lq",ref)?{}:null,after:textAfter,open:openListening});

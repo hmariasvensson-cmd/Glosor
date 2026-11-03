@@ -142,14 +142,16 @@ function dailyExamTask(){
 }
 // Knapparna efter passet (finishSession): ett pass till, dagens text varannan gång, provuppgiften
 function dailyAfter(n){
-  const t=n%2?dailyText():null, x=dailyExamTask();
+  const t=n%2?dailyText():null, x=dailyExamTask(), v=typeof vtNext==="function"?vtNext():null;   // verbtabellen (12-verbtab.js)
   return `<button class="btn" id="again">Kör ett pass till</button>
+    ${v?`<button class="btn ghost" id="dvtab">Verbtabell: ${esc(v.verb)} · ${esc(v.t)}</button>`:""}
     ${x?`<button class="btn ghost" id="dexam">Provuppgift: ${esc(x.title)} (${(+x.time||0)||"några"} min)</button>`:""}
     ${t?`<button class="btn ghost" id="dtext">${t.k==="lq"?"Lyssna på dagens text":"Läs dagens text"}: ${esc(t.t.title)}</button>`:""}`;
 }
 function wireDailyAfter(n){
   const t=n%2?dailyText():null, x=dailyExamTask();
   if($("#again")) $("#again").onclick=()=>startDaily();
+  if($("#dvtab")){ const v=vtNext(); $("#dvtab").onclick=()=>openVtab(v.verb,v.t,renderStart); }
   if(t&&$("#dtext")) $("#dtext").onclick=()=>openFrom(renderStart,()=>(t.k==="lq"?listenIntro:readIntro)(t.t.id),"Till startsidan");
   if(x&&$("#dexam")) $("#dexam").onclick=()=>openFrom(renderStart,()=>examTask(x.id),"Till startsidan");
 }

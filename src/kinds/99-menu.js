@@ -24,6 +24,7 @@ function exGroups(){
       c.culture&&g("culture","Kultur","Kort fakta, en fråga och en jämförelse med Sverige.")]],
     ["gram","Grammatik","Verb, grammatikövningar och berättelser",[
       ...verbGames().map(v=>`<button class="game" data-g="${esc(v.id)}"><span><b>Verb: ${esc(v.name)}</b><small>${esc(v.sub||"")}</small></span><span class="go" aria-hidden="true">›</span></button>`),
+      L.verbs&&!mono&&vtVerbs().length&&g("vtab","Verbtabeller",vtReady().length?`Fyll i ett tempus för verben du kan (${vtReady().length} verb)`:"Verben du kan i glosorna, som tabell med pronomen och tempus"),
       hasGrammar()&&g("gram","Grammatikövningar",esc(GR().topics.slice(0,4).map(t=>t.name.toLowerCase()).join(", ")+" …")+srsDueNote(gramDue(null))),
       (c.satsanalys||[]).length&&g("sats","Satsanalys","Vilken funktion har den understrukna delen? Sujet, COD, COI, subordonnée relative …"),
       c.stories&&g("story","Berättelser","Välj rätt tempus och bindeord i en berättelse.")]],
