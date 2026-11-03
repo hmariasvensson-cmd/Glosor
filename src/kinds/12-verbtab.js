@@ -35,6 +35,8 @@ function vtCols(v,t){
   sup=sup.slice(0,VT_COLS-1);
   return all.filter(x=>x===t||sup.includes(x));
 }
+// Skärmarna hämtas först när en tabell öppnas (data/code-vtab.js, lazyRun i app.js)
+// @lazy vtab
 function openVtabList(){
   const xs=vtReady();
   pickerScreen("Verbtabeller",xs.length
@@ -85,4 +87,5 @@ function vtGrade(v,t,ins,start){
   if($("#vtnext")) $("#vtnext").onclick=()=>openVtab(nx.verb,nx.t);
   if($("#vtlist")) $("#vtlist").onclick=openVtabList;
 }
+// @lazy-end
 defineKind("vtab",{name:"Verbtabell",open:openVtabList});

@@ -32,6 +32,7 @@ function exGroups(){
       hasExam()&&g("exam",`Provträning: ${esc(EX().name)}`,"Uppgifter i provets format, med klocka, poäng och provsimulering."),
       (c.teori||[]).length&&g("teori","Teoriprovet: musikteori","Uppgifter som på det skriftliga teoriprovet vid antagningen, på "+lname+".")]]]:[]),
     ["speak","Tala och skriva","Tala, samtalsfraser, skugga och skrivuppgifter",[
+      (c.intervju||[]).length&&g("iv","Antagningsintervjun på franska","Juryns frågor vid antagningen till sång, egna svar med Claudes kommentarer och övningsintervju."),
       g("talk","Tala",L.goal?"4/3/2 med klocka och diktering, muntlig förberedelse, samtal med Claude och skugga.":"4/3/2 med klocka och diktering, samtal med Claude och skugga."),
       c.phrases&&g("phr","Samtalsfraser","Vad man säger när man inte förstår, vill säga sin åsikt …"+srsDueNote(phraseDue())),
       (c.uttal||[]).length&&g("utt","Uttal: lyssna och välj","Ord som låter nästan lika. Vilket hör du?"),

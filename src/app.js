@@ -233,6 +233,8 @@ const dueMax=()=>S.dueMax===0?Infinity:(S.dueMax>0?S.dueMax:MAXDUE);
      st         berättelsernas luckor {tempus, bindeord: {r, n}}
      cu, wr     kulturuppgifter och skrivuppgifter som är klara, per id
      ut         uttal: bästa procent per id                     mal  lärandemål som bockats av {"<id>|<nr>": tid}
+     prep       Mot målet: {iv, d1, d2, h} (datum ÅÅÅÅ-MM-DD och lektionstimmar i veckan, 84-prep.js)
+     iv         intervjun: {a: {<fråga>: {t, d}}, school} (46-intervju.js)
      vtab       verbtabellerna {<verb>: {<tempus>: {r, n, last}}} (12-verbtab.js; saknas tills eleven gjort en)
      kt         kapitelprov per avsnitt {r, n, d, miss}         exam provträning {t: {<uppgift>: {pct, best, n, last}}, sims: [...], simRun}
                 simRun = pågående provsimulering {ids, i, res, ends, start, seen, cur}, tas bort när den är klar (70-exam.js)
@@ -984,6 +986,7 @@ function renderStart(){
     <div class="navrow"><button class="btn ghost" data-wdrop="${esc(k)}">Släng</button><button class="btn" data-wgo="${esc(k)}">Fortsätt</button></div></section>`).join("")}
   ${hasBook()?bookPanel():""}
   ${wordPlanPanel()}
+  ${prepPanel()}
   ${goalsPanel()}
   ${writeNagPanel()}
   ${nextPanel()}
@@ -1042,7 +1045,7 @@ function renderStart(){
   } finally{ if(top) RCACHE=null; }
   $("#src").value=S.src; if(!$("#src").selectedOptions[0]||$("#src").selectedOptions[0].disabled){S.src="auto";$("#src").value="auto"}
   $("#src").onchange=e=>{S.src=e.target.value;save();renderStart()};
-  wireBookPanel(); wireChapterMap(); wireWriteNag(); wireSuggest();
+  wireBookPanel(); wireChapterMap(); wireWriteNag(); wireSuggest(); wirePrep();
   app.querySelectorAll("[data-nextc]").forEach(b=>b.onclick=()=>useLang(b.dataset.nextc));
   app.querySelectorAll("[data-n]").forEach(b=>b.onclick=()=>{S.newCount=b.dataset.n==="own"?(S.newCount===WP_PLAN?newCountNow():S.newCount):+b.dataset.n;save();renderStart()});
   app.querySelectorAll("[data-dm]").forEach(b=>b.onclick=()=>{S.dueMax=b.dataset.dm==="own"?(S.dueMax===0?MAXDUE:S.dueMax):+b.dataset.dm;save();renderStart()});

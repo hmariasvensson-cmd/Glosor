@@ -40,6 +40,15 @@ defineKind("mek",{name:"MEK",
 const hpvTexts=k=>C()[k]||[];
 const hpvText=(k,id)=>hpvTexts(k).find(t=>t.id===id);
 const hpvBody=(k,t)=>`<div class="reading hpread" lang="${HPV[k].lang}">${(t.text||[]).map(p=>`<p>${esc(p)}</p>`).join("")}</div>`;
+const hpvQ=(k,ref)=>{ const [id,i]=ref.split(":"), t=hpvText(k,id), q=t&&(t.questions||[])[+i]; return q&&Array.isArray(q.opts)?{t,q}:null; };
+function hpvMC(c){
+  const {t,q}=hpvQ(c.k,c.ref), v=HPV[c.k];
+  return {tab:v.name, head:`<details class="more" open><summary>Texten: ${esc(t.title)}</summary>${hpvBody(c.k,t)}</details>`,
+    ask:`<b lang="${v.lang}">${esc(q.q)}</b>`, letters:true,
+    opts:q.opts.map((o,j)=>({label:o,ok:j===q.a})), explain:q.why?`<p>${esc(q.why)}</p>`:""};
+}
+// Skärmarna (väljaren, texten och resultatet) ligger i HP-kursens kodmodul (data/code-hp.js, lazyRun i app.js)
+// @lazy hp
 function openHpv(k){
   const v=HPV[k];
   pickerScreen(`${v.name}: ${v.title}`,k==="las"
@@ -61,13 +70,6 @@ function startHpvQs(k,id){
   const items=t.questions.map((q,i)=>({k,id:`${k}:${id}:${i}`,ref:`${id}:${i}`,t:"mc",noRetry:true}));
   sess=null; beginQuiz(k,items,{ctx:{type:k,id},label:`${HPV[k].name}: ${t.title}`});
 }
-const hpvQ=(k,ref)=>{ const [id,i]=ref.split(":"), t=hpvText(k,id), q=t&&(t.questions||[])[+i]; return q&&Array.isArray(q.opts)?{t,q}:null; };
-function hpvMC(c){
-  const {t,q}=hpvQ(c.k,c.ref), v=HPV[c.k];
-  return {tab:v.name, head:`<details class="more" open><summary>Texten: ${esc(t.title)}</summary>${hpvBody(c.k,t)}</details>`,
-    ask:`<b lang="${v.lang}">${esc(q.q)}</b>`, letters:true,
-    opts:q.opts.map((o,j)=>({label:o,ok:j===q.a})), explain:q.why?`<p>${esc(q.why)}</p>`:""};
-}
 function hpvAfter(ctx,right,total){
   const k=ctx.type, t=hpvText(k,ctx.id); if(!t) return renderStart(); S.tx=S.tx||{}; const o=S.tx[ctx.id]||{};
   S.tx[ctx.id]={r:right,n:total,best:Math.max(o.best||0,right),last:Date.now()}; save();
@@ -77,6 +79,7 @@ function hpvAfter(ctx,right,total){
     <div class="navrow"><button class="btn ghost" id="home">Startsidan</button><button class="btn" id="more">Fler texter</button></div></section>`;
   $("#home").onclick=renderStart; $("#more").onclick=()=>openHpv(k); window.scrollTo(0,0);
 }
+// @lazy-end
 ["las","elf"].forEach(k=>defineKind(k,{name:HPV[k].name,mc:hpvMC,restore:ref=>hpvQ(k,ref)?{}:null,after:hpvAfter,open:()=>openHpv(k),
   recap:ref=>{ const x=hpvQ(k,ref); return x?x.q.q:""; }}));
 

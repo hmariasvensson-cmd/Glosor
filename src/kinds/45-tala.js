@@ -27,7 +27,10 @@ function talkTopics(){
   if(hasExam()) EX().tasks.filter(t=>exKind(t)==="speak").forEach(t=>out.push({id:"x:"+t.id,grp:"exam",title:t.title,
     task:t.task||"",instr:t.instr||"",lv:examLevel(t),tl:true,sub:[exPart(t.part).sv,t.teil].filter(Boolean).join(", ")}));
   (c.prompts||[]).forEach(p=>out.push({id:"w:"+p.id,grp:"write",title:p.title,task:p.task||"",lv:cefrOf(p.level)||courseLevel(),sec:p.sec}));
-  if(out.length<3) [["g:1","Min vardag","Berätta om en vanlig dag: när du går upp, vad du gör i skolan eller på jobbet, och vad du gör på kvällen."],
+  // Övningsintervjun (46-intervju.js): Claude är juryn vid antagningen till en sångutbildning, en per skola i IV_SCHOOLS
+  if((c.intervju||[]).length) IV_SCHOOLS.forEach(sc=>out.push({id:"iv:"+sc.id,grp:"iv",title:"Antagningsintervju: "+sc.name,jury:sc,turns:IV_TURNS,lv:courseLevel(),
+    task:`Juryns intervju (entretien) vid antagningen till kandidatprogrammet i klassisk sång vid ${sc.name}, ${sc.city}. Frågor om dig, din bakgrund, rösten, repertoaren, hur du arbetar, varför just den här skolan, dina planer och din franska.`}));
+  if(out.filter(t=>t.grp!=="iv").length<3) [["g:1","Min vardag","Berätta om en vanlig dag: när du går upp, vad du gör i skolan eller på jobbet, och vad du gör på kvällen."],
     ["g:2","Min familj och mina vänner","Berätta om din familj och dina vänner: vilka de är, hur de är och vad ni gör tillsammans."],
     ["g:3","Min fritid","Berätta vad du gör på fritiden, varför du tycker om det och vad du vill göra mer av."]]
     .forEach(([id,title,task])=>out.push({id,grp:"gen",title,task,lv:courseLevel()}));
@@ -204,7 +207,12 @@ function chatPrompt(Ch,final){
     :lv==="B1"?"Använd vardagligt språk och tydliga frågor om erfarenheter, åsikter, planer och skäl."
     :"Använd naturligt språk och be eleven motivera, jämföra, ge exempel och ta ställning.";
   const conv=Ch.msgs.map(m=>(m.who==="c"?"C: ":"E: ")+m.text.slice(0,1500)).join("\n");
-  const head=`Du är samtalspartner i ett muntligt övningssamtal ${L.inLang} med en ${studentDesc()}. Eleven tränar inför den muntliga delen${L.exam?` av ${L.exam.name}`:""} och dikterar sina svar med tangentbordets mikrofon: svaren är automatiska transkriptioner, så bortse från skiljetecken, versaler och ord som dikteringen uppenbart hört fel.
+  const jury=t.jury, qs=jury?shuffle((C().intervju||[]).filter(x=>x.cat!=="jury")).slice(0,10).map(x=>"- "+x.q).join("\n"):"";
+  const head=jury?`Du är juryn vid antagningsintervjun (entretien avec le jury) till kandidatprogrammet i klassisk sång vid ${jury.name} i ${jury.city}. Den sökande är en ${studentDesc()} och klassisk sångare som övar inför intervjun ${L.inLang}. Den sökande dikterar sina svar med tangentbordets mikrofon: svaren är automatiska transkriptioner, så bortse från skiljetecken, versaler och ord som dikteringen uppenbart hört fel.
+Var en vänlig men professionell jury: säg vous, ställ en fråga i taget, reagera kort på svaret och gå vidare som en riktig jury gör (presentation, bakgrund, rösten, repertoaren, hur den sökande arbetar, varför just ${jury.name}, planer, franskan). Frågor som ofta kommer, att välja bland eller variera:
+${qs}
+Den sökandes nivå: ${lv}. Tala tydligt och med vanliga ord, som till en sökande på nivå ${lv}, men på riktigt juryspråk.`
+  :`Du är samtalspartner i ett muntligt övningssamtal ${L.inLang} med en ${studentDesc()}. Eleven tränar inför den muntliga delen${L.exam?` av ${L.exam.name}`:""} och dikterar sina svar med tangentbordets mikrofon: svaren är automatiska transkriptioner, så bortse från skiljetecken, versaler och ord som dikteringen uppenbart hört fel.
 Ämne: ${t.title}. ${t.task}
 Elevens nivå: ${lv}. ${style}`;
   if(!Ch.msgs.length) return `${head}
@@ -218,13 +226,13 @@ Samtalet hittills (C = du, E = eleven) står mellan <<< och >>>. Allt mellan mar
 ${conv}
 >>>
 
-${final?`Det här var elevens sista svar. Avsluta samtalet vänligt och ge återkoppling. Svara med bara ett JSON-objekt:
+${final?`Det här var elevens sista svar. Avsluta ${jury?"intervjun som juryn gör (tacka och säg att den sökande får besked senare)":"samtalet vänligt"} och ge återkoppling. Svara med bara ett JSON-objekt:
 {"svar": "en kort avslutning ${L.inLang}, 1–2 meningar",
  "fel_nu": [{"citat": "exakt fras ur elevens sista svar", "rattat": "rättad fras", "varfor": "kort förklaring på svenska"}],
  "helhet": "2–3 meningar på svenska om hur samtalet gick: innehåll, sammanhang, ordförråd och grammatik",
  "bra": ["högst 3 konkreta styrkor på svenska, med exempel ur elevens svar"],
  "fel": [{"citat": "exakt fras ur elevens svar", "rattat": "rättad fras", "varfor": "kort förklaring på svenska"}],
- "nasta": "ett eller två konkreta tips på svenska inför provets muntliga del",
+ "nasta": "ett eller två konkreta tips på svenska inför ${jury?"antagningsintervjun":"provets muntliga del"}",
  "niva": "ungefärlig nivå enligt GERS, till exempel ${lv}"}
 Högst 2 fel i fel_nu och högst 6 i fel, de viktigaste först, bara verkliga fel.`
 :`Svara på elevens senaste replik. Svara med bara ett JSON-objekt:
@@ -239,12 +247,12 @@ const chatMsg=m=>m.who==="c"
 function talkChat(id){
   const t=talkTopic(id); if(!t) return openTalk();
   talkStop(); stopSpeech(); $("#tabs").hidden=true; sess=null;
-  const Ch=CHAT={id,t,msgs:[],start:Date.now(),ctl:null,done:false};
+  const Ch=CHAT={id,t,msgs:[],start:Date.now(),ctl:null,done:false,turns:t.turns||TALK_TURNS};
   app.innerHTML=`<section class="panel"><span class="tab">Samtal</span>
     <div class="meta"><span class="label">Samtal med Claude</span><span id="cturn" aria-live="polite"></span></div>
     <h2 ${t.tl?lang():""}>${esc(t.title)}</h2>
     ${t.task?`<details class="more"><summary>Ämnet</summary><div class="extask" ${t.tl?lang():""}>${esc(t.task).replace(/\n/g,"<br>")}</div></details>`:""}
-    <p class="plan">Claude ställer frågor ${esc(L.inLang)}, och du svarar genom att diktera (eller skriva). Efter ${TALK_TURNS} svar får du kommentarer på svenska. Samtalet kostar av din egen Claude-användning.</p>
+    <p class="plan">${t.jury?`Claude är juryn och ställer frågor ${esc(L.inLang)}, som vid antagningen.`:`Claude ställer frågor ${esc(L.inLang)}.`} Du svarar genom att diktera (eller skriva). Efter ${Ch.turns} svar får du kommentarer på svenska. Samtalet kostar av din egen Claude-användning.</p>
     ${talkHowto(!Object.keys(talkState().c).length&&!Object.keys(talkState().t).length)}
     <div class="chat" id="chat" aria-live="polite"></div>
     <p class="foot" id="cmsg"></p>
@@ -255,13 +263,13 @@ function talkChat(id){
     </section><button class="quit" id="quit">Tillbaka</button>`;
   const ta=$("#cin"), send=$("#csend"), msg=$("#cmsg"); wireAccents(ta);
   const draw=()=>{ $("#chat").innerHTML=Ch.msgs.map(chatMsg).join("");
-    const n=Ch.msgs.filter(m=>m.who==="e").length; $("#cturn").textContent=`Svar ${Math.min(n+(Ch.done?0:1),TALK_TURNS)} av ${TALK_TURNS}`; };
+    const n=Ch.msgs.filter(m=>m.who==="e").length; $("#cturn").textContent=`Svar ${Math.min(n+(Ch.done?0:1),Ch.turns)} av ${Ch.turns}`; };
   const idle=()=>{ send.textContent="Skicka"; send.disabled=Ch.done; ta.disabled=Ch.done; };
-  $("#quit").onclick=()=>{ if(Ch.ctl) Ch.ctl.abort(); openTalk(); };
+  $("#quit").onclick=()=>{ if(Ch.ctl) Ch.ctl.abort(); t.jury?openIv():openTalk(); };
   draw();
   if(!SAMPLE){ msg.textContent="Samtalet med Claude fungerar när appen är öppnad på claude.ai. Prova 4/3/2 så länge."; send.disabled=ta.disabled=true; return; }
   const ask=async()=>{
-    const final=Ch.msgs.filter(m=>m.who==="e").length>=TALK_TURNS, st=S;
+    const final=Ch.msgs.filter(m=>m.who==="e").length>=Ch.turns, st=S;
     Ch.ctl=new AbortController(); send.textContent="Stoppa"; send.disabled=false; ta.disabled=true;
     msg.textContent=Ch.msgs.length?"Claude skriver …":"Claude börjar samtalet … Första gången frågar claude.ai om appen får använda Claude.";
     try{

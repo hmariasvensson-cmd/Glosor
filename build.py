@@ -754,8 +754,9 @@ CONTENT_FIELDS = {
     "teori": {"id": str, "sec": str, "q": str, "opts": list, "why": str},
     "transkription": {"id": str, "sec": str, "topic": str, "fr": str, "ipa": str, "alt": list, "why": str},
     "satsanalys": {"id": str, "sec": str, "lvl": int, "t": str, "fr": str, "opts": list, "why": str},
+    "intervju": {"id": str, "cat": str, "q": str, "sv": str, "tips": str, "phrases": list, "model": str},   # 46-intervju.js
 }
-OPTIONAL_FIELDS = {"sec": str, "gloss": dict, "sv": str, "modelSv": str, "tip": str, "need": dict, "level": str, "ok": list, "cat": str}
+OPTIONAL_FIELDS = {"sec": str, "gloss": dict, "sv": str, "modelSv": str, "tip": str, "need": dict, "level": str, "ok": list, "cat": str, "follow": list}
 STORY_CATS = {"tempus", "bindeord"}   # gaps[].cat i stories.json (21-stories.js räknar allt utom bindeord som tempus)
 SATS_TYPES = {"fn", "prop"}   # SATS_GROUPS i 62-satsanalys.js
 QUESTION_TYPES = {None, "helhet", "detalj", "tolkning"}   # questions[].type i hör- och lästexter (textQ i 30-texts.js)

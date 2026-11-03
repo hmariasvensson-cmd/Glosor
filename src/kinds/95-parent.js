@@ -6,7 +6,9 @@
      course, level, t, words: {n, started, known, due}, min7, min30, q7, q30, days14 (minuter per dag, äldst först, i dag
      sist), active14 (dagar med någon övning av de 14), streak, last, goal, week (minuter den här veckan), writing (klara skrivuppgifter),
      exam: {name, pass, parts: [{id, sv}], sims: [{d, parts: {<del>: pct}, lv}]} (de tre senaste simuleringarna),
-     gram: [{name, pct, n}] (de tre svagaste grammatikområdena), plan: {week, of, title, known, n, next}.
+     gram: [{name, pct, n}] (de tre svagaste grammatikområdena), plan: {week, of, title, known, n, next},
+     prep: {lv, goal, appH, h, ms: [{id, name, date, days, proj, status, needW}], parts: [{sv, pts}], tot, iv: {done, n}, week: {ok, n, phase}}
+     (Mot målet, prepSummary i 84-prep.js; bara när eleven har lagt in datum).
    Skrivs med en fördröjning (som topplistan) från boardPush: efter varje avslutat pass, när kursen kopplas till molnet
    (start och kursbyte) och när veckomålet ändras. En kurs utan övning skrivs inte. Andra kurser och profiler i
    dokumentet ligger kvar som de var. Föräldravyn (renderParent) visas bara för ägaren (CLOUD.owner = user.isOwner()). */
@@ -33,6 +35,7 @@ function summaryOf(){
     const g=GR().topics.filter(t=>gt[t.id]&&gt[t.id].n>=3).map(t=>({name:t.name,pct:pct(gt[t.id].r,gt[t.id].n),n:gt[t.id].n}))
       .sort((a,b)=>a.pct-b.pct).slice(0,3);
     if(g.length) out.gram=g; }
+  const pr=prepSummary(); if(pr) out.prep=pr;   // Mot målet: nivå, datum, prognos och veckans plan (84-prep.js)
   const hp=isHp()&&hpBoard(); if(hp) out.hp=hp;   // Högskoleprovet ORD: provpassen {n, best, last, of, d}
   if(hasPlan()){ const i=planWeekIdx(), W=L.plan.weeks;
     if(i!=null&&i>=0&&i<W.length){ const p=planProgress(W[i]); out.plan={week:i+1,of:W.length,title:W[i].title||"",known:p.known,n:p.n,next:(W[i+1]||{}).title||""}; } }
@@ -91,6 +94,17 @@ function pSpark(days){
   g+=`<text x="2" y="${H-2}">för 14 dagar sedan</text><text x="${W-2}" y="${H-2}" text-anchor="end">i dag</text>`;
   return `<svg class="spark" viewBox="0 0 ${W} ${H}" role="img" aria-label="Minuter per dag de senaste 14 dagarna: ${esc(v.join(", "))}">${g}</svg>`;
 }
+// Mot målet (84-prep.js): nivå nu, varje datum med prognos, provdelarna och veckans plan. Allt är elevens egen data, så
+// varje fält escapas och kontrolleras.
+const PREP_TXT={ok:"rätt spår",near:"nära, behöver öka lite",far:"behöver mer tid"};
+function pPrep(x){
+  if(!x||typeof x!=="object"||!Array.isArray(x.ms)||!x.ms.length) return "";
+  const ms=x.ms.filter(m=>m&&typeof m==="object"), parts=(Array.isArray(x.parts)?x.parts:[]).filter(p=>p&&typeof p==="object");
+  const w=x.week&&typeof x.week==="object"?x.week:null, iv=x.iv&&typeof x.iv==="object"?x.iv:null;
+  return `<div class="pexam" data-prep><span class="label">Mot målet · nu ungefär ${esc(String(x.lv||"?"))}${x.goal?`, mål ${esc(String(x.goal))}`:""}</span>
+    <ul class="prepms">${ms.map(m=>`<li><span><b>${esc(String(m.name||""))}</b><small>${esc(String(m.date||""))} · ${esc(pNum(m.days))} dagar · med nuvarande takt ungefär ${esc(String(m.proj||"?"))}${m.status!=="ok"&&pNum(m.needW)?`; behöver ungefär ${esc(String(m.needW).replace(".",","))} h i veckan`:""}</small></span><span class="prepst ${m.status==="ok"?"ok":m.status==="near"?"near":"far"}">${esc(PREP_TXT[m.status]||"")}</span></li>`).join("")}</ul>
+    <p class="plan">${parts.length?`Provdelarna: ${parts.map(p=>`${esc(String(p.sv||""))} ${p.pts==null?"inte gjord":esc(pNum(p.pts))+"/25"}`).join(", ")}${x.tot!=null?` (ungefär ${esc(pNum(x.tot))}/100)`:""}. `:""}Övar ${esc(String(x.appH==null?"?":x.appH).replace(".",","))} h i veckan i appen${pNum(x.h)?` och ${esc(String(x.h).replace(".",","))} h på lektioner`:""}.${iv?` Intervjufrågor med eget svar: ${esc(pNum(iv.done))} av ${esc(pNum(iv.n))}.`:""}${w?` Veckans plan (${esc(String(w.phase||""))}): ${esc(pNum(w.ok))} av ${esc(pNum(w.n))} klara.`:""}</p></div>`;
+}
 function pCourse(code,c){
   const o=v=>v&&typeof v==="object"?v:{}, w=o(c.words), ex=o(c.exam), pass=pNum(ex.pass);
   const name=String(c.course||(LANGUAGES[code]||{}).course||code);
@@ -111,6 +125,7 @@ function pCourse(code,c){
     ${sims.length&&exParts.length?`<div class="pexam"><span class="label">Provsimulering${ex.name?` · ${esc(ex.name)}`:""}${pass?` · godkänt från ${esc(pass)} %`:""}</span>
       <div class="tblwrap"><table class="tbl"><tr><th>Datum</th>${exParts.map(p=>`<th>${esc(p.sv||p.id)}</th>`).join("")}</tr>
       ${sims.map(s=>`<tr><td>${esc(new Date(pNum(s.d)).toLocaleDateString("sv-SE"))}${s.lv?` (${esc(s.lv)})`:""}</td>${exParts.map(p=>`<td>${tag(o(s.parts)[p.id])}</td>`).join("")}</tr>`).join("")}</table></div></div>`:""}
+    ${pPrep(c.prep)}
     ${gram.length?`<p class="plan">Svagast i grammatik: ${gram.map(g=>`${esc(g.name)} (${esc(pNum(g.pct))} %)`).join(", ")}.</p>`:""}
     ${o(c.hp).n?`<p class="plan" data-hp>Provpass ORD: ${esc(pNum(o(c.hp).n))} st, bästa ${esc(pNum(o(c.hp).best))}/${esc(pNum(o(c.hp).of)||10)}, senaste ${esc(pNum(o(c.hp).last))}/${esc(pNum(o(c.hp).of)||10)}.</p>`:""}
     <p class="plan">Skrivuppgifter klara: ${esc(pNum(c.writing))}.${plan?` Studieplan: vecka ${esc(pNum(plan.week))} av ${esc(pNum(plan.of))}${plan.title?` (${esc(plan.title)})`:""}, ${esc(pNum(plan.known))} av ${esc(pNum(plan.n))} av veckans ord kan.${plan.next?` Nästa vecka: ${esc(plan.next)}.`:""}`:""}</p></div>`;

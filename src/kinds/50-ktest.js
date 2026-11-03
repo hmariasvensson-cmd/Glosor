@@ -5,6 +5,8 @@
 // Kapitlen (chapters och chapterKey i 00-common.js, samma som kapitelkartan) med minst fyra ord
 const ktChapters=()=>chapters().filter(c=>c.words.length>=4);
 const KT={mode:"type",n:0};   // n = antal ord i provet (reglaget; 0 = alla i kapitlet), gäller tills sidan laddas om
+// Skärmarna hämtas först när kapitelprovet öppnas (data/code-ktest.js, lazyRun i app.js)
+// @lazy ktest
 function openKtest(){
   $("#tabs").hidden=true; sess=null; S.kt=S.kt||{};
   const chs=ktChapters(); if(isMono()) KT.mode="mc";   // mono (Högskoleprovet ORD): bara flerval
@@ -49,6 +51,7 @@ function ktestAfter(ctx,right,total,miss){
 // Frågorna är glosquizets (KINDS.words). Övningen på de missade orden har sess.kind "ktestd", men frågorna har k "ktest".
 // "ktestd" är ingen egen typ men behövs: det skiljer övningens sparade pass (S.runs "ktestd|<kapitel>") och loggposter
 // från själva provets, och finns i elevernas sparade data.
+// @lazy-end
 defineKind("ktest",{name:"Kapitelprov",
   mc:c=>({...KINDS.words.mc(c),tab:"Kapitelprov"}),
   type:c=>({...KINDS.words.type(c),tab:"Kapitelprov"}),

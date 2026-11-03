@@ -1464,7 +1464,7 @@ const allRight=n0=>{const l=logsSince(n0); return l.length>0&&l.every(e=>e.right
     // Varje övning i menyn
     const menu=exGroups().flatMap(g=>g.items.map(h=>(h.match(/data-ex="(\w+)"/)||[])[1]).filter(Boolean));
     ok(c+": varje knapp i menyn har en typ med open", menu.every(id=>KINDS[id]&&KINDS[id].open), menu.join());
-    const need=["ktest"].concat(L.mono?(L.kind==="hp"?["hpprov"]:[]):["dict","trans","order","talk"],(C().listening||[]).length?["lq"]:[],(C().reading||[]).length?["rq"]:[],(C().stories||[]).length?["story"]:[],(C().phrases||[]).length?["phr"]:[],(C().prompts||[]).length?["write"]:[],hasGrammar()?["gram"]:[],(C().uttal||[]).length?["utt"]:[],hasExam()?["exam"]:[],(C().culture||[]).length?["culture"]:[],L.kind==="hp"?["mek","las","elf"].filter(k=>(C()[k]||[]).length):[],L.verbs&&!L.mono&&vtVerbs().length?["vtab"]:[]);
+    const need=["ktest"].concat(L.mono?(L.kind==="hp"?["hpprov"]:[]):["dict","trans","order","talk"],(C().listening||[]).length?["lq"]:[],(C().reading||[]).length?["rq"]:[],(C().stories||[]).length?["story"]:[],(C().phrases||[]).length?["phr"]:[],(C().prompts||[]).length?["write"]:[],hasGrammar()?["gram"]:[],(C().uttal||[]).length?["utt"]:[],hasExam()?["exam"]:[],(C().culture||[]).length?["culture"]:[],L.kind==="hp"?["mek","las","elf"].filter(k=>(C()[k]||[]).length):[],L.verbs&&!L.mono&&vtVerbs().length?["vtab"]:[],(C().intervju||[]).length?["iv"]:[]);
     ok(c+": alla övningar som kursen har innehåll för finns i menyn", need.every(k=>menu.includes(k)), need.filter(k=>!menu.includes(k)).join()+" · "+menu.length+" övningar");
     for(const id of menu){ const n0=S.log.length; let res=null, info="";
       try{
@@ -1475,6 +1475,7 @@ const allRight=n0=>{const l=logsSince(n0); return l.length>0&&l.every(e=>e.right
         else if(id==="utt"){ q('[data-pick="*"]').click(); runAll(); res=!sess&&q("#app").textContent.includes("Uttal klart")&&allRight(n0); }
         else if(id==="hpprov"){ const p0=hpProvs().length; q("#hpnew").click(); hpRun().ids.forEach((wid,i)=>{ hpGo(i); q('[data-hpo="'+hpRun().opts[i].indexOf(wid)+'"]').click(); }); q("#hpdone").click();
           const pp=hpProvs()[hpProvs().length-1]; res=hpProvs().length===p0+1&&pp.r===pp.n&&S.log[S.log.length-1].kind==="hpprov"&&!!q("#hpres"); info=pp&&pp.r+"/"+pp.n; }
+        else if(id==="iv"){ q("[data-iv]").click(); q("#ivin").value="Bonjour, je suis chanteur et je chante depuis cinq ans."; q("#ivsave").click(); res=S.log.length===n0+1&&S.log[S.log.length-1].kind==="iv"; info=ivList().length+" frågor"; }
         else if(id==="vtab"){ const x=vtVerbs()[0]; S.w[x.w.id]={...(S.w[x.w.id]||{}),s:4,due:1e9}; exClick("vtab"); const b=q('[data-pick="'+x.verb+'"]'); b.click();
           const t=vtTarget(x.verb), cs=vtCells(x.verb,t); [...document.querySelectorAll(".vtin")].forEach((inp,i)=>inp.value=cs[i].form.split("/")[0]); q("#vtcheck").click();
           res=!!b&&S.vtab[x.verb][t].r===cs.length; info=x.verb+" "+t; }
@@ -1686,6 +1687,45 @@ appReady().then(async()=>{ try{
   ok("nivå: mörkt läge", lightBg!==darkBg, lightBg+" / "+darkBg);
   useLang("fr"); await until(()=>L.code==="fr"&&L.base&&!sess,5000); setView("stats");
   ok("nivå: Franska 3 mot DELF B1", !!q("#lvl")&&q("#lvl").textContent.includes("DELF B1")&&noScroll(), q("#lvl")&&q("#lvl").querySelector(".sub").textContent);
+  // 6. Mot målet (84-prep.js) och intervjun (46-intervju.js), Franska 3
+  { await ensureExam(); const keep=JSON.stringify({prep:S.prep||null,iv:S.iv||null,exam:S.exam||null,log:S.log,w:S.w});
+    const iso=n=>{const d=new Date(+planToday()+n*864e5); return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0");};
+    delete S.prep; delete S.iv; S.w={}; S.log=[]; delete S.exam; renderStart();
+    ok("mot målet: utan datum ber panelen om datum", hasPrep()&&!!q("#prep")&&q("#prep").textContent.includes("Lägg in datum"));
+    S.prep={iv:iso(90),d1:iso(130),d2:iso(190),h:2};
+    S.log=Array.from({length:20},(_,i)=>({d:Date.now()-i*864e5,dur:1800,right:5,total:10,dp:1}));
+    S.exam=examRes(p=>p==="co"?60:p==="ce"?40:30);
+    const f=prepForecast();
+    ok("mot målet: datumen i ordning och takten ur loggen", f.ms.map(m=>m.id).join()==="iv,d1,d2"&&Math.abs(f.pace.app-20*1800/3600/4)<.01&&Math.abs(f.pace.tot-f.pace.app-2)<1e-9, JSON.stringify(f.pace));
+    ok("mot målet: provdelarna i poäng av 25 (bara B1-delarna)", f.parts.length===4&&f.parts.find(p=>p.id==="co").pts===15&&f.parts.find(p=>p.id==="ce").pts===10&&f.known===4&&f.tot===15+10+8+8, JSON.stringify(f.parts));
+    ok("mot målet: prognosen växer med tiden och har en status", f.ms[2].proj>f.ms[1].proj&&f.ms[1].proj>f.ms[0].proj&&f.ms.every(m=>PREP_ST[m.status]));
+    S.prep.h=20; ok("mot målet: fler timmar i veckan ger bättre prognos", prepForecast().ms[1].proj>f.ms[1].proj); S.prep.h=2;
+    renderStart(); ok("mot målet: panelen på startsidan visar datum och status", q("#prep").textContent.includes("Intervjun")&&document.querySelectorAll("#prep .prepst").length===3);
+    const ph=prepPhase(prepMilestones()), wk=prepWeek(ph), ws=prepWeekStart();
+    ok("mot målet: fas 1 före intervjun, veckans pass räknas", ph.id===1&&wk[0].done===S.log.filter(l=>l.d>=ws).length&&wk.some(x=>x.go==="iv"), JSON.stringify(wk.map(x=>[x.t,x.done,x.n])));
+    S.prep.iv=iso(-1); ok("mot målet: efter intervjun fas 2 med provuppgifter", prepPhase(prepMilestones()).id===2&&prepWeek(prepPhase(prepMilestones())).some(x=>/en per del/.test(x.t))); S.prep.iv=iso(90);
+    openPrep(); ok("mot målet: sidan med datum, nivå, prognos och veckans plan", !!q("#prep-iv")&&!!q("#prep-d1")&&q("#app").textContent.includes("Hinner du?")&&q("#app").textContent.includes("Var du ligger nu")&&document.querySelectorAll(".prepwk li").length===wk.length);
+    q("#prep-d2").value=iso(200); q("#prep-d2").dispatchEvent(new Event("change")); ok("mot målet: ett ändrat datum sparas", S.prep.d2===iso(200));
+    q("#prep-h").value="3.5"; q("#prep-h").dispatchEvent(new Event("change")); ok("mot målet: lektionstimmarna sparas", S.prep.h===3.5);
+    const sm=prepSummary(); ok("mot målet: sammanfattningen till föräldern", sm&&sm.ms.length===3&&sm.lv&&sm.week.n===wk.length&&sm.iv&&sm.iv.n===ivList().length&&summaryOf().prep&&summaryOf().prep.ms.length===3, JSON.stringify(sm).slice(0,200));
+    const ph2=pPrep(sm); ok("föräldravyn: Mot målet med datum, status och provdelar", ph2.includes("Mot målet")&&ph2.includes("Intervjun")&&ph2.includes("/25")&&pPrep({ms:[]})===""&&pPrep(null)==="");
+    ok("föräldravyn: elevens text escapas", !pPrep({lv:"<b>x</b>",ms:[{name:"<img src=x>",status:"ok",days:1}]}).includes("<img"));
+    S.prep={d1:iso(-3)}; ok("mot målet: passerade datum räknas inte", prepMilestones().length===0&&!prepSummary());
+    // Intervjun
+    ok("intervju: frågorna finns, med kategori, översättning och exempelsvar", ivList().length>=40&&ivList().every(x=>x.q&&x.sv&&x.model&&x.tips&&IV_CATS[x.cat]&&Array.isArray(x.phrases)), ivList().length);
+    ok("intervju: i menyn under Tala och skriva", exGroups().some(g=>g.items.some(h=>h.includes('data-ex="iv"'))));
+    openIv(); ok("intervju: sidan med fyra skolor och alla frågor", document.querySelectorAll("[data-ivs]").length===4&&document.querySelectorAll("[data-iv]").length===ivList().length);
+    q('[data-ivs="hem"]').click(); ok("intervju: vald skola sparas", S.iv.school==="hem"&&q('[data-ivs="hem"]').getAttribute("aria-pressed")==="true");
+    const x0=ivList()[0], n0=S.log.length; q('[data-iv="'+x0.id+'"]').click();
+    ok("intervju: frågan med fraser, exempelsvar och svarsruta", !!q("#ivin")&&q("#app").textContent.includes(x0.q)&&q("#app").textContent.includes("Exempelsvar")&&document.querySelectorAll(".ivph li").length===x0.phrases.length);
+    q("#ivin").value="Je m'appelle Jean et je chante depuis dix ans dans un chœur."; q("#ivsave").click();
+    ok("intervju: eget svar sparas och loggas", S.iv.a[x0.id].t.startsWith("Je m'appelle")&&S.log.length===n0+1&&S.log[S.log.length-1].kind==="iv"&&ivDone()===1);
+    q("#ivsave").click(); ok("intervju: samma svar sparas inte två gånger", S.log.length===n0+1&&q("#ivmsg").textContent.includes("Inget nytt"));
+    q("#ivnext").click(); ok("intervju: nästa fråga", q("#app").textContent.includes(ivList()[1].q));
+    const jt=talkTopic("iv:hem"); ok("intervju: övningsintervju med Claude som jury", jt&&jt.jury.id==="hem"&&jt.turns===IV_TURNS&&chatPrompt({t:jt,msgs:[]},false).includes("juryn vid antagningsintervjun")&&chatPrompt({t:jt,msgs:[{who:"c",text:"Bonjour"},{who:"e",text:"Bonjour"}]},true).includes("antagningsintervjun"));
+    ok("intervju: Claudes kommentar på svaret", ivPrompt(x0,"Je chante.").includes(x0.q)&&ivPrompt(x0,"Je chante.").includes('"battre"')&&ivPrompt(x0,"Je chante.").includes("HEM Genève"));
+    S.fb=S.fb||{}; S.fb["iv:"+x0.id]={niva:"B1",d:Date.now(),helhet:"Bra"}; ok("intervju: Claudes nivå räknas i nivåmätaren", levelEstimate().exam.claude&&levelEstimate().exam.claude.n>=1); delete S.fb["iv:"+x0.id];
+    const k=JSON.parse(keep); ["prep","iv","exam"].forEach(f=>{ if(k[f]==null) delete S[f]; else S[f]=k[f]; }); S.log=k.log; S.w=k.w; renderStart(); }
   ok("nivå: tolkar Claudes nivåer", lvNum("B1")===3&&Math.abs(lvNum("A2/B1")-2.5)<1e-9&&lvNum("B1+")>3&&lvNum("ingen")===null&&lvShort(3.5)==="B1+"&&lvShort(0.2)==="under A1");
  }catch(e){ ok("undantag", false, e.message+" "+(e.stack||"").split("\n")[1]); }
  ok("inga JavaScript-fel", !__err.length, __err.join(" ; "));
@@ -3674,10 +3714,11 @@ def test_texts_split():
     ok("texter: utan texter ingen textfil", split_texts({"phrases": [{"id": "p"}]}) == ({"phrases": [{"id": "p"}]}, None))
     # Kodmodulerna
     files = {p.stem: p.read_text(encoding="utf-8") for p in data.glob("code-*.js")}
-    want = {"code-tala": "talkChat", "code-tycktill": "sendTyckTill", "code-parent": "pCourse"}
-    ok("kod: Tala, Tyck till och Föräldravyn i egna filer med hash, inte i index.html men i preview.html",
+    want = {"code-tala": "talkChat", "code-tycktill": "sendTyckTill", "code-parent": "pCourse", "code-prep": "openPrep", "code-vtab": "openVtab", "code-ktest": "startKtest"}
+    ok("kod: Tala, Tyck till, Föräldravyn, Mot målet, verbtabellerna och kapitelprovet i egna filer med hash, inte i index.html men i preview.html",
        all(k in files and files[k].rstrip().endswith(f'lazyDone("{k[5:]}");') and k in dv and f"function {fn}(" in files[k]
-           and f"function {fn}(" not in page and f"function {fn}(" in preview for k, fn in want.items()), sorted(files))
+           and page.count(f"function {fn}(") == page.count(f'function {fn}(...a){{return lazyRun("{k[5:]}"') and f"function {fn}(" in preview
+           for k, fn in want.items()), sorted(files))   # i index.html bara som stubbe (för funktioner som anropas utifrån)
     ok("kod: index.html har stubbar för det som anropas utifrån", all(f'function {f}(...a){{return lazyRun("{m}",()=>{f}(...a));}}' in page
        for f, m in [("openTalk", "tala"), ("renderTyckTill", "tycktill"), ("renderParent", "parent")]) and 'return lazyRun("' not in preview)
     pg, pv, mods, errs = split_lazy_code([("a.js", "const A=1;\nfunction f(){ return g()+A; }\n// @lazy m\nconst B=2, C=3;\nfunction g(){ return h()+B; }\nfunction h(){ return 1; }\n// @lazy-end\nf();"),
