@@ -2,6 +2,10 @@
 
 Punkter som har flyttats från [`BACKLOG.md`](BACKLOG.md) när de byggdes. **Referens** anger backloggens rubrik och prioritet. **Commit** anger var ändringen finns i git. **Publicerat** anger versionen av artefakten på https://claude.ai/artifact/YBQv8j4qXQQLuPwLAWt5mP.
 
+## 2026-11-03, del 4 (publicerat som version 59)
+
+- **Nivån mot B1 och B2 i föräldravyn** (föräldern 2026-11-03). Sammanfattningens `prep` får nivån som tal (`x`), målet (`T`) och skolornas högsta krav (`top`); `summaryFlush` lägger till en punkt per dag i `prep.hist` (högst 120, `prepHist`). Föräldravyn visar en stapel från A1 med nivån nu, målet och skolornas krav (`pLvBar`) och en kurva över nivån (`pLvHist`); stilarna läggs in av föräldravyns kodmodul. Testerna: 2500 OK.
+
 ## 2026-11-03, del 3 (publicerat som version 58)
 
 - **Skolornas språkkrav i Mot målet** (föräldern 2026-11-03). Nytt innehåll `content/skolor.json` (`CONTENT_FIELDS["skolor"]`): skola, krav (GERS, sång för sig), när nivån ska visas, ungefärligt datum (`by`), godkända prov, ansökan och länk. Mot målet jämför nivån nu och prognosen till `by` med varje skola (`prepSchoolRows`), även utan egna datum; startsidan visar det högsta kravet, föräldravyn alla skolor. Franska 3: CNSMD Paris och Lyon (B1 senast 30 juni 2027), HEM Genève (B1), HEMU Lausanne (B2). Tyska 4 och Tyska 5: DKDM, NMH, KMH och KMH Edsberg (inget krav på tyska), HfM Hanns Eisler Berlin (B2.2 vid inskrivning), HMT Leipzig (B1, sång B2, redan vid provet maj–juni 2027) och HMT München (B1 vid inskrivning). Underlag med källor i `docs/antagning-sang-franska.md` och `docs/antagning-tyska-norden.md`. Intervjufrågornas tips och exempelsvar hämtas med texterna (fr.json 1571 → 1480 kB). Uttalets och kapitelprovets skärmar i `code-ovningar.js`. Testerna: 2498 OK.

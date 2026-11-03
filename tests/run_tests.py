@@ -1709,6 +1709,10 @@ appReady().then(async()=>{ try{
     q("#prep-h").value="3.5"; q("#prep-h").dispatchEvent(new Event("change")); ok("mot målet: lektionstimmarna sparas", S.prep.h===3.5);
     const sm=prepSummary(); ok("mot målet: sammanfattningen till föräldern", sm&&sm.ms.length===3&&sm.lv&&sm.week.n===wk.length&&sm.iv&&sm.iv.n===ivList().length&&summaryOf().prep&&summaryOf().prep.ms.length===3, JSON.stringify(sm).slice(0,200));
     const ph2=pPrep(sm); ok("föräldravyn: Mot målet med datum, status och provdelar", ph2.includes("Mot målet")&&ph2.includes("Intervjun")&&ph2.includes("/25")&&pPrep({ms:[]})===""&&pPrep(null)==="");
+    { const h1=prepHist(null,{x:2.4}), h2=prepHist({hist:[{d:"2026-10-01",x:2.1},...h1]},{x:2.6});
+      ok("föräldravyn: nivån sparas en gång per dag i historiken", h1.length===1&&h2.length===2&&h2[1].x===2.6&&prepHist({hist:Array.from({length:200},(_,i)=>({d:"2026-01-"+i,x:2}))},{x:3}).length===PREP_HIST);
+      const html=pPrep({...sm,x:2.6,T:3,top:4,hist:[{d:"2026-10-01",x:2.2},{d:"2026-11-01",x:2.6}]});
+      ok("föräldravyn: stapel mot målet och kurva över nivån", html.includes("plvtrack")&&html.includes("plvreq")&&html.includes("<polyline")&&html.includes("B2")&&pPrep({...sm,hist:[]}).includes("minst två dagar")); }
     ok("föräldravyn: elevens text escapas", !pPrep({lv:"<b>x</b>",ms:[{name:"<img src=x>",status:"ok",days:1}]}).includes("<img"));
     S.prep={d1:iso(-3)}; ok("mot målet: passerade datum räknas inte, skolorna finns kvar", prepMilestones().length===0&&prepSummary()&&!prepSummary().ms.length&&prepSummary().schools.length===prepSchools().length);
     { const rows=prepSchoolRows(prepForecast()); ok("skolor: kraven jämförs med nivån", prepSchools().length>=4&&rows.every(r=>r.none||PREP_ST[r.status])&&rows.some(r=>r.level==="B2"), JSON.stringify(rows.map(r=>[r.id,r.level,r.status])));

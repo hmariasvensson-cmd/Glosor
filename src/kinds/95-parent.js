@@ -8,7 +8,8 @@
      exam: {name, pass, parts: [{id, sv}], sims: [{d, parts: {<del>: pct}, lv}]} (de tre senaste simuleringarna),
      gram: [{name, pct, n}] (de tre svagaste grammatikområdena), plan: {week, of, title, known, n, next},
      prep: {lv, goal, appH, h, ms: [{id, name, date, days, proj, status, needW}], parts: [{sv, pts}], tot, iv: {done, n}, week: {ok, n, phase},
-     schools: [{name, prio, level, when, status, proj}]}
+     schools: [{name, prio, level, when, status, proj}], x (nivån som tal), T (målet), top (skolornas högsta krav),
+     hist: [{d, x}] (nivån per dag, prepHist; läggs till i summaryFlush ur dokumentets förra version)}
      (Mot målet, prepSummary i 84-prep.js; när eleven har lagt in datum eller kursen har skolor).
    Skrivs med en fördröjning (som topplistan) från boardPush: efter varje avslutat pass, när kursen kopplas till molnet
    (start och kursbyte) och när veckomålet ändras. En kurs utan övning skrivs inte. Andra kurser och profiler i
@@ -48,6 +49,16 @@ function summaryPush(){
   const k=sumKey(PROF.cur); SUM.pend[k]={...(SUM.pend[k]||{}),[L.code]:summaryOf()};
   clearTimeout(SUM.timer); SUM.timer=setTimeout(summaryFlush,1500);
 }
+// Nivån över tid i föräldravyn: en punkt per dag {d: "ÅÅÅÅ-MM-DD", x: nivå}, de senaste PREP_HIST dagarna med en
+// sammanfattning. Historiken finns bara i sammanfattningen (inte i S) och följer med från förra versionen av dokumentet.
+const PREP_HIST=120;
+function prepHist(old,cur){
+  const h=(old&&Array.isArray(old.hist)?old.hist:[]).filter(p=>p&&typeof p.d==="string"&&Number.isFinite(+p.x)).slice(-PREP_HIST);
+  if(!Number.isFinite(+cur.x)) return h;
+  const d=dayIso(Date.now()), last=h[h.length-1];
+  if(last&&last.d===d) last.x=+cur.x; else h.push({d,x:+cur.x});
+  return h.slice(-PREP_HIST);
+}
 async function summaryFlush(){
   clearTimeout(SUM.timer);
   if(SUM.busy){ SUM.again=true; return; }
@@ -57,7 +68,9 @@ async function summaryFlush(){
   try{
     const ref=CLOUD.db.doc("summary/"+CLOUD.uid), cur=await ref.get(), old=(cur&&cur.exists&&cur.data())||{};
     const profs={}; Object.entries(boardObj(old.profiles)).forEach(([k,x])=>{ if((k==="_"||PROF_ID.test(k))&&x&&typeof x==="object") profs[k]=x; });
-    Object.entries(pend).forEach(([k,c])=>{ const x=boardObj(profs[k]); profs[k]={...x,t:Date.now(),courses:{...boardObj(x.courses),...c}}; });
+    Object.entries(pend).forEach(([k,c])=>{ const x=boardObj(profs[k]), oc=boardObj(x.courses);
+      Object.entries(c).forEach(([code,cs])=>{ if(cs&&cs.prep) cs.prep.hist=prepHist(boardObj(oc[code]).prep,cs.prep); });
+      profs[k]={...x,t:Date.now(),courses:{...oc,...c}}; });
     profLive().forEach(p=>{ const k=sumKey(p.id); if(profs[k]) profs[k].name=p.name; });
     const body={v:1,t:Date.now(),profiles:profs};
     if(bytes(JSON.stringify(body))>SUM_MAX) warnErr("sammanfattningen till föräldern blev för stor och skrevs inte",new Error("för stor"));
@@ -98,6 +111,32 @@ function pSpark(days){
 // Mot målet (84-prep.js): nivå nu, varje datum med prognos, provdelarna och veckans plan. Allt är elevens egen data, så
 // varje fält escapas och kontrolleras.
 const PREP_TXT={ok:"rätt spår",near:"nära, behöver öka lite",far:"behöver mer tid"};
+// Stilarna för stapeln och kurvan läggs in när föräldravyn visar dem (de behövs inte på sidan annars)
+const P_LV_CSS=`.plvbar{margin:8px 0 4px}.plvtrack{position:relative;height:12px;border-radius:999px;background:var(--surface-2);border:1px solid var(--line)}.plvtrack i{position:absolute;left:0;top:0;bottom:0;border-radius:999px;background:var(--navy)}.plvtick{position:absolute;top:-3px;bottom:-3px;width:1px;background:var(--ink-2)}.plvtick.goal{width:3px;margin-left:-1px;background:var(--ink)}.plvreq{position:absolute;top:-5px;bottom:-5px;width:3px;margin-left:-1px;background:var(--pink)}.plvlabels{position:relative;height:18px;font-size:.75rem;color:var(--ink-2)}.plvlabels span{position:absolute;transform:translateX(-50%);white-space:nowrap}.plvlabels span:first-child{transform:none} .plvlabels span:last-child{transform:translateX(-100%)}svg.plvhist{width:100%;max-width:420px;height:auto;display:block}svg.plvhist polyline{stroke:var(--navy);stroke-width:2}svg.plvhist circle{fill:var(--navy);stroke:var(--surface);stroke-width:2}svg.plvhist .gl{stroke:var(--line);stroke-width:1}svg.plvhist text{font-size:10px;fill:var(--ink-2)}`;
+function pLvStyle(){ if(!document.getElementById("plvcss")) document.head.insertAdjacentHTML("beforeend",`<style id="plvcss">${P_LV_CSS}</style>`); }
+// Stapel från A1 till målet (eller skolornas högsta krav): var eleven ligger nu och strecken för B1 och B2
+function pLvBar(x){
+  const v=+x.x; if(!Number.isFinite(v)) return ""; pLvStyle();
+  const hi=Math.max(3,Math.ceil(Math.max(+x.T||3,+x.top||0))), lo=1, pc=n=>Math.max(0,Math.min(100,100*(n-lo)/(hi-lo)));
+  const ticks=[]; for(let n=lo;n<=hi;n++) ticks.push(n);
+  return `<div class="plvbar" role="img" aria-label="Nivå ungefär ${esc(String(x.lv||""))} på skalan A1 till ${esc(LV_NAMES[hi]||"")}">
+    <div class="plvtrack"><i style="width:${pc(v).toFixed(1)}%"></i>${ticks.map(n=>`<span class="plvtick${n===Math.round(+x.T)?" goal":""}" style="left:${pc(n).toFixed(1)}%"></span>`).join("")}${Number.isFinite(+x.top)&&+x.top>0?`<span class="plvreq" style="left:${pc(+x.top).toFixed(1)}%"></span>`:""}</div>
+    <div class="plvlabels">${ticks.map(n=>`<span style="left:${pc(n).toFixed(1)}%">${esc(LV_NAMES[n]||"")}</span>`).join("")}</div>
+    <p class="foot">Stapeln: nivån nu. Tjockt streck: målet (${esc(String(x.goal||""))}).${Number.isFinite(+x.top)&&+x.top>0?` Rött streck: skolornas högsta krav (${esc(lvShort(+x.top))}).`:""}</p></div>`;
+}
+// Nivån över tid (prep.hist): en linje med en punkt per dag
+function pLvHist(x){
+  const h=(Array.isArray(x.hist)?x.hist:[]).filter(p=>p&&typeof p.d==="string"&&Number.isFinite(+p.x));
+  if(h.length<2) return `<p class="foot">Kurvan över nivån visas när det finns sammanfattningar från minst två dagar.</p>`;
+  const W=300,H=80,pad=18, xs=h.map(p=>+new Date(p.d)), t0=Math.min(...xs), t1=Math.max(...xs)||t0+1, vs=h.map(p=>+p.x);
+  const lo=Math.floor(Math.min(...vs)*2)/2, hi=Math.max(lo+.5,Math.ceil(Math.max(...vs)*2)/2);
+  const X=t=>pad+(W-2*pad)*(t-t0)/Math.max(1,t1-t0), Y=v=>H-pad-(H-2*pad)*(v-lo)/(hi-lo);
+  const pts=h.map((p,i)=>`${X(xs[i]).toFixed(1)},${Y(vs[i]).toFixed(1)}`).join(" ");
+  return `<svg class="plvhist" viewBox="0 0 ${W} ${H}" role="img" aria-label="Nivån över tid, från ${esc(h[0].d)} till ${esc(h[h.length-1].d)}">
+    <line class="gl" x1="${pad}" x2="${W-pad}" y1="${Y(lo)}" y2="${Y(lo)}"/><line class="gl" x1="${pad}" x2="${W-pad}" y1="${Y(hi)}" y2="${Y(hi)}"/>
+    <text x="2" y="${Y(hi)+4}">${esc(lvShort(hi))}</text><text x="2" y="${Y(lo)+4}">${esc(lvShort(lo))}</text>
+    <polyline points="${pts}" fill="none"/>${h.map((p,i)=>`<circle cx="${X(xs[i]).toFixed(1)}" cy="${Y(vs[i]).toFixed(1)}" r="3"><title>${esc(p.d)}: ${esc(lvShort(vs[i]))}</title></circle>`).join("")}</svg>`;
+}
 function pPrep(x){
   if(!x||typeof x!=="object") return "";
   const ms=(Array.isArray(x.ms)?x.ms:[]).filter(m=>m&&typeof m==="object"), sc=(Array.isArray(x.schools)?x.schools:[]).filter(m=>m&&typeof m==="object");
@@ -105,6 +144,7 @@ function pPrep(x){
   const parts=(Array.isArray(x.parts)?x.parts:[]).filter(p=>p&&typeof p==="object");
   const w=x.week&&typeof x.week==="object"?x.week:null, iv=x.iv&&typeof x.iv==="object"?x.iv:null;
   return `<div class="pexam" data-prep><span class="label">Mot målet · nu ungefär ${esc(String(x.lv||"?"))}${x.goal?`, mål ${esc(String(x.goal))}`:""}</span>
+    ${pLvBar(x)}${pLvHist(x)}
     ${ms.length?`<ul class="prepms">${ms.map(m=>`<li><span><b>${esc(String(m.name||""))}</b><small>${esc(String(m.date||""))} · ${esc(pNum(m.days))} dagar · med nuvarande takt ungefär ${esc(String(m.proj||"?"))}${m.status!=="ok"&&pNum(m.needW)?`; behöver ungefär ${esc(String(m.needW).replace(".",","))} h i veckan`:""}</small></span><span class="prepst ${m.status==="ok"?"ok":m.status==="near"?"near":"far"}">${esc(PREP_TXT[m.status]||"")}</span></li>`).join("")}</ul>`:""}
     ${sc.length?`<p class="plan" data-schools>Skolornas krav: ${sc.map(r=>`${esc(String(r.name||""))} ${r.status==="none"?"inget krav":`${esc(String(r.level||""))} (${esc(PREP_TXT[r.status]||"")})`}`).join(", ")}.</p>`:""}
     <p class="plan">${parts.length?`Provdelarna: ${parts.map(p=>`${esc(String(p.sv||""))} ${p.pts==null?"inte gjord":esc(pNum(p.pts))+"/25"}`).join(", ")}${x.tot!=null?` (ungefär ${esc(pNum(x.tot))}/100)`:""}. `:""}Övar ${esc(String(x.appH==null?"?":x.appH).replace(".",","))} h i veckan i appen${pNum(x.h)?` och ${esc(String(x.h).replace(".",","))} h på lektioner`:""}.${iv?` Intervjufrågor med eget svar: ${esc(pNum(iv.done))} av ${esc(pNum(iv.n))}.`:""}${w?` Veckans plan (${esc(String(w.phase||""))}): ${esc(pNum(w.ok))} av ${esc(pNum(w.n))} klara.`:""}</p></div>`;

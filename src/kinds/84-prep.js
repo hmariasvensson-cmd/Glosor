@@ -191,7 +191,8 @@ function prepSummary(){
   const ms=prepMilestones(); if(!ms.length&&!prepSchools().length) return null;
   const f=prepForecast(), ph=ms.length?prepPhase(ms):null, wk=ph?prepWeek(ph):[];
   const sc=prepSchoolRows(f).map(r=>({name:r.name,prio:r.prio||0,level:r.level||"",when:r.when||"",status:r.none?"none":r.status,proj:r.none?"":lvShort(r.proj)}));
-  return {lv:lvShort(f.base.lv),goal:LV_NAMES[Math.round(f.T)]||"",appH:Math.round(f.pace.app*10)/10,h:f.pace.h,
+  const need=prepSchools().map(x=>lvNum(x.level)).filter(Boolean);
+  return {lv:lvShort(f.base.lv),x:Math.round(f.base.lv*100)/100,T:f.T,top:need.length?Math.max(...need):null,goal:LV_NAMES[Math.round(f.T)]||"",appH:Math.round(f.pace.app*10)/10,h:f.pace.h,
     ms:f.ms.map(m=>({id:m.id,name:m.name,date:m.date,days:m.days,proj:lvShort(m.proj),status:m.status,needW:m.needW})),
     parts:f.parts.map(p=>({sv:p.sv,pts:p.pts})),tot:f.known===f.parts.length?f.tot:null,
     iv:hasIv()?{done:ivDone(),n:ivList().length}:null,week:ph?{ok:wk.filter(x=>x.ok).length,n:wk.length,phase:ph.name}:null,
