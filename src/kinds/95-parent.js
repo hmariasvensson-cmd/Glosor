@@ -7,8 +7,9 @@
      sist), active14 (dagar med någon övning av de 14), streak, last, goal, week (minuter den här veckan), writing (klara skrivuppgifter),
      exam: {name, pass, parts: [{id, sv}], sims: [{d, parts: {<del>: pct}, lv}]} (de tre senaste simuleringarna),
      gram: [{name, pct, n}] (de tre svagaste grammatikområdena), plan: {week, of, title, known, n, next},
-     prep: {lv, goal, appH, h, ms: [{id, name, date, days, proj, status, needW}], parts: [{sv, pts}], tot, iv: {done, n}, week: {ok, n, phase}}
-     (Mot målet, prepSummary i 84-prep.js; bara när eleven har lagt in datum).
+     prep: {lv, goal, appH, h, ms: [{id, name, date, days, proj, status, needW}], parts: [{sv, pts}], tot, iv: {done, n}, week: {ok, n, phase},
+     schools: [{name, prio, level, when, status, proj}]}
+     (Mot målet, prepSummary i 84-prep.js; när eleven har lagt in datum eller kursen har skolor).
    Skrivs med en fördröjning (som topplistan) från boardPush: efter varje avslutat pass, när kursen kopplas till molnet
    (start och kursbyte) och när veckomålet ändras. En kurs utan övning skrivs inte. Andra kurser och profiler i
    dokumentet ligger kvar som de var. Föräldravyn (renderParent) visas bara för ägaren (CLOUD.owner = user.isOwner()). */
@@ -98,11 +99,14 @@ function pSpark(days){
 // varje fält escapas och kontrolleras.
 const PREP_TXT={ok:"rätt spår",near:"nära, behöver öka lite",far:"behöver mer tid"};
 function pPrep(x){
-  if(!x||typeof x!=="object"||!Array.isArray(x.ms)||!x.ms.length) return "";
-  const ms=x.ms.filter(m=>m&&typeof m==="object"), parts=(Array.isArray(x.parts)?x.parts:[]).filter(p=>p&&typeof p==="object");
+  if(!x||typeof x!=="object") return "";
+  const ms=(Array.isArray(x.ms)?x.ms:[]).filter(m=>m&&typeof m==="object"), sc=(Array.isArray(x.schools)?x.schools:[]).filter(m=>m&&typeof m==="object");
+  if(!ms.length&&!sc.length) return "";
+  const parts=(Array.isArray(x.parts)?x.parts:[]).filter(p=>p&&typeof p==="object");
   const w=x.week&&typeof x.week==="object"?x.week:null, iv=x.iv&&typeof x.iv==="object"?x.iv:null;
   return `<div class="pexam" data-prep><span class="label">Mot målet · nu ungefär ${esc(String(x.lv||"?"))}${x.goal?`, mål ${esc(String(x.goal))}`:""}</span>
-    <ul class="prepms">${ms.map(m=>`<li><span><b>${esc(String(m.name||""))}</b><small>${esc(String(m.date||""))} · ${esc(pNum(m.days))} dagar · med nuvarande takt ungefär ${esc(String(m.proj||"?"))}${m.status!=="ok"&&pNum(m.needW)?`; behöver ungefär ${esc(String(m.needW).replace(".",","))} h i veckan`:""}</small></span><span class="prepst ${m.status==="ok"?"ok":m.status==="near"?"near":"far"}">${esc(PREP_TXT[m.status]||"")}</span></li>`).join("")}</ul>
+    ${ms.length?`<ul class="prepms">${ms.map(m=>`<li><span><b>${esc(String(m.name||""))}</b><small>${esc(String(m.date||""))} · ${esc(pNum(m.days))} dagar · med nuvarande takt ungefär ${esc(String(m.proj||"?"))}${m.status!=="ok"&&pNum(m.needW)?`; behöver ungefär ${esc(String(m.needW).replace(".",","))} h i veckan`:""}</small></span><span class="prepst ${m.status==="ok"?"ok":m.status==="near"?"near":"far"}">${esc(PREP_TXT[m.status]||"")}</span></li>`).join("")}</ul>`:""}
+    ${sc.length?`<p class="plan" data-schools>Skolornas krav: ${sc.map(r=>`${esc(String(r.name||""))} ${r.status==="none"?"inget krav":`${esc(String(r.level||""))} (${esc(PREP_TXT[r.status]||"")})`}`).join(", ")}.</p>`:""}
     <p class="plan">${parts.length?`Provdelarna: ${parts.map(p=>`${esc(String(p.sv||""))} ${p.pts==null?"inte gjord":esc(pNum(p.pts))+"/25"}`).join(", ")}${x.tot!=null?` (ungefär ${esc(pNum(x.tot))}/100)`:""}. `:""}Övar ${esc(String(x.appH==null?"?":x.appH).replace(".",","))} h i veckan i appen${pNum(x.h)?` och ${esc(String(x.h).replace(".",","))} h på lektioner`:""}.${iv?` Intervjufrågor med eget svar: ${esc(pNum(iv.done))} av ${esc(pNum(iv.n))}.`:""}${w?` Veckans plan (${esc(String(w.phase||""))}): ${esc(pNum(w.ok))} av ${esc(pNum(w.n))} klara.`:""}</p></div>`;
 }
 function pCourse(code,c){

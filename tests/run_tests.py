@@ -1710,8 +1710,13 @@ appReady().then(async()=>{ try{
     const sm=prepSummary(); ok("mot målet: sammanfattningen till föräldern", sm&&sm.ms.length===3&&sm.lv&&sm.week.n===wk.length&&sm.iv&&sm.iv.n===ivList().length&&summaryOf().prep&&summaryOf().prep.ms.length===3, JSON.stringify(sm).slice(0,200));
     const ph2=pPrep(sm); ok("föräldravyn: Mot målet med datum, status och provdelar", ph2.includes("Mot målet")&&ph2.includes("Intervjun")&&ph2.includes("/25")&&pPrep({ms:[]})===""&&pPrep(null)==="");
     ok("föräldravyn: elevens text escapas", !pPrep({lv:"<b>x</b>",ms:[{name:"<img src=x>",status:"ok",days:1}]}).includes("<img"));
-    S.prep={d1:iso(-3)}; ok("mot målet: passerade datum räknas inte", prepMilestones().length===0&&!prepSummary());
+    S.prep={d1:iso(-3)}; ok("mot målet: passerade datum räknas inte, skolorna finns kvar", prepMilestones().length===0&&prepSummary()&&!prepSummary().ms.length&&prepSummary().schools.length===prepSchools().length);
+    { const rows=prepSchoolRows(prepForecast()); ok("skolor: kraven jämförs med nivån", prepSchools().length>=4&&rows.every(r=>r.none||PREP_ST[r.status])&&rows.some(r=>r.level==="B2"), JSON.stringify(rows.map(r=>[r.id,r.level,r.status])));
+      S.prep={}; renderStart(); ok("skolor: panelen visar kraven även utan datum, med skolans egen nivå", q("#prep").textContent.includes("Skolornas krav")&&q("#prep").textContent.includes("upp till B2"));
+      openPrep(); ok("skolor: sidan listar skolorna med status", document.querySelectorAll(".prepms .prepst").length>=prepSchools().length&&q("#app").textContent.includes("HEMU Lausanne"));
+      ok("föräldravyn: skolornas krav", pPrep(prepSummary()).includes("Skolornas krav")); }
     // Intervjun
+    await ensureTexts();
     ok("intervju: frågorna finns, med kategori, översättning och exempelsvar", ivList().length>=40&&ivList().every(x=>x.q&&x.sv&&x.model&&x.tips&&IV_CATS[x.cat]&&Array.isArray(x.phrases)), ivList().length);
     ok("intervju: i menyn under Tala och skriva", exGroups().some(g=>g.items.some(h=>h.includes('data-ex="iv"'))));
     openIv(); ok("intervju: sidan med fyra skolor och alla frågor", document.querySelectorAll("[data-ivs]").length===4&&document.querySelectorAll("[data-iv]").length===ivList().length);
@@ -3714,7 +3719,7 @@ def test_texts_split():
     ok("texter: utan texter ingen textfil", split_texts({"phrases": [{"id": "p"}]}) == ({"phrases": [{"id": "p"}]}, None))
     # Kodmodulerna
     files = {p.stem: p.read_text(encoding="utf-8") for p in data.glob("code-*.js")}
-    want = {"code-tala": "talkChat", "code-tycktill": "sendTyckTill", "code-parent": "pCourse", "code-prep": "openPrep", "code-vtab": "openVtab", "code-ktest": "startKtest"}
+    want = {"code-tala": "talkChat", "code-tycktill": "sendTyckTill", "code-parent": "pCourse", "code-prep": "openPrep", "code-vtab": "openVtab", "code-ovningar": "startKtest"}
     ok("kod: Tala, Tyck till, Föräldravyn, Mot målet, verbtabellerna och kapitelprovet i egna filer med hash, inte i index.html men i preview.html",
        all(k in files and files[k].rstrip().endswith(f'lazyDone("{k[5:]}");') and k in dv and f"function {fn}(" in files[k]
            and page.count(f"function {fn}(") == page.count(f'function {fn}(...a){{return lazyRun("{k[5:]}"') and f"function {fn}(" in preview

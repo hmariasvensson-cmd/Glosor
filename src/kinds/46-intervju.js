@@ -1,7 +1,8 @@
 /* ---------- Intervjun: antagningsintervjun på franska (föräldern 2026-11-03) ----------
    Förberedelse inför juryns intervju (entretien) vid antagningen till kandidatprogrammen i klassisk sång vid CNSMD Paris,
    CNSMD Lyon, HEM Genève och HEMU Lausanne. Bara kurser med content/intervju.json (Franska 3).
-   intervju.json = [{id, cat, q, sv, tips, phrases: [{fr, sv}], model, modelSv, follow?: [fråga]}]: juryns fråga, tips om
+   intervju.json = [{id, cat, q, sv, tips, phrases: [{fr, sv}], model, modelSv, follow?: [fråga]}] (tips och
+   framåt hämtas med texterna, LAZY_TEXTS i build.py): juryns fråga, tips om
    vad juryn vill höra, fraser och ett exempelsvar med [platser] att fylla i med det egna. Allt är skrivet för appen.
    Eleven skriver eller dikterar sitt eget svar (S.iv.a[id] = {t, d}) och kan få Claudes kommentarer (sample), som
    sparas i S.fb["iv:<id>"] (med niva, så att nivåmätaren i 80-level.js räknar med dem). Övningsintervjun är ett samtal
@@ -58,6 +59,7 @@ function openIv(){
   $("#quit").onclick=renderStart; window.scrollTo(0,0);
 }
 function ivQuestion(id){
+  if(textsWait(()=>ivQuestion(id),"intervjufrågorna")) return;   // tips, fraser och exempelsvar ligger i textfilen (LAZY_TEXTS)
   const xs=ivList(), i=xs.findIndex(x=>x.id===id), x=xs[i]; if(!x) return openIv();
   talkStop(); stopSpeech();
   const st=ivState(), mine=(st.a[id]||{}).t||"", fb=(S.fb||{})["iv:"+id], start=Date.now();

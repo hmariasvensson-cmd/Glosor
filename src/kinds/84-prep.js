@@ -11,7 +11,8 @@
    150–200 timmar). Elevens takt = minuter i appen de senaste 28 dagarna (S.log) plus h. Nivån vid datumet = nivån nu +
    timmar fram till dess / PREP_H. Grovt och tydligt märkt som en uppskattning.
    Planen: tre faser (fram till intervjun, fram till första provet, fram till andra provet) med en checklista för veckan
-   (prepWeek) som räknas ur loggen, S.iv, S.talk och S.exam. Sammanfattningen till föräldern får fältet prep (prepSummary). */
+   (prepWeek) som räknas ur loggen, S.iv, S.talk och S.exam. Sammanfattningen till föräldern får fältet prep (prepSummary).
+   Skolornas språkkrav (content/skolor.json, prepSchoolRows) jämförs med nivån och prognosen, även utan datum. */
 const PREP_H=180, PREP_PARTS=["co","ce","pe","po"];
 const hasPrep=()=>!!(L&&L.goal&&L.exam&&hasExam());
 const prepState=()=>{ S.prep=S.prep&&typeof S.prep==="object"?S.prep:{}; return S.prep; };
@@ -56,6 +57,15 @@ function prepForecast(){
     return {...m,days,weeks:Math.round(w),goal,proj,needH:Math.round(need),needW:Math.round(needW*10)/10,status}; });
   return {est,T,base,pace,parts,known:known.length,tot,ms};
 }
+// Skolornas språkkrav (content/skolor.json): [{id, name, city, prio, level, levelVoice?, when, by?, certs?, apply?, note?, url}].
+// level = GERS-nivån som krävs ("inget" = inget krav på kursens språk), by = ungefär när nivån ska vara klar (ÅÅÅÅ-MM-DD).
+// Prognosen till by räknas som för datumen ovan; utan by jämförs nivån nu.
+const prepSchools=()=>C().skolor||[];
+function prepSchoolRows(f){
+  return prepSchools().map(s=>{ const need=lvNum(s.level); if(!need) return {...s,none:true};
+    const days=s.by?prepDays(s.by):null, proj=days!=null&&days>0?f.base.lv+f.pace.tot*days/7/PREP_H:f.base.lv;
+    return {...s,need,days,proj,status:proj>=need-.05?"ok":proj>=need-.3?"near":"far"}; });
+}
 const PREP_ST={ok:["Rätt spår","ok"],near:["Nära, öka lite","near"],far:["Behöver mer tid","far"]};
 const prepFmtH=h=>String(Math.round(h*10)/10).replace(".",",");
 // Veckans start (måndag) och faserna
@@ -88,6 +98,26 @@ function prepWeek(ph){
   items.forEach(x=>x.ok=x.done>=x.n);
   return items;
 }
+// Panelen på startsidan
+function prepPanel(){
+  try{
+    if(!hasPrep()) return "";
+    const p=prepState(), ms=prepMilestones();
+    const sch=prepSchools().filter(x=>lvNum(x.level)), top=sch.length?sch.slice().sort((a,b)=>lvNum(b.level)-lvNum(a.level))[0].level:"";
+    const schLine=sch.length?`<p class="foot">Skolornas krav på ${esc(L.name.toLowerCase())}: upp till ${esc(top)} (${sch.length} ${sch.length===1?"skola":"skolor"}). Du ligger nu på ungefär ${esc(lvShort(prepLevel(levelEstimate()).lv))}.</p>`:"";
+    if(!ms.length) return `<section class="panel" id="prep"><div class="meta"><span class="label">Mot målet</span></div>${schLine}
+      <p class="plan">Lägg in datumen för ${hasIv()?"antagningsintervjun och ":""}${esc(L.exam.name)}, så räknar appen ut var du ligger, om du hinner och vad du ska göra varje vecka.</p>
+      <button class="btn ghost" id="prepopen">Lägg in datum</button></section>`;
+    const f=prepForecast(), ph=prepPhase(ms), wk=prepWeek(ph), ok=wk.filter(x=>x.ok).length;
+    return `<section class="panel" id="prep"><div class="meta"><span class="label">Mot målet</span><span>nu ungefär ${esc(lvShort(f.base.lv))}</span></div>
+      <ul class="prepms">${f.ms.map(m=>`<li><span><b>${esc(m.name)}</b><small>${esc(prepWhen(m.date))} · ${m.days} dagar</small></span><span class="prepst ${PREP_ST[m.status][1]}">${PREP_ST[m.status][0]}</span></li>`).join("")}</ul>
+      ${schLine}<p class="foot">${esc(ph.name)}. Den här veckan: ${ok} av ${wk.length} klara.</p>
+      <button class="btn ghost" id="prepopen">Planen och prognosen</button></section>`;
+  }catch(e){ warnErr("panelen Mot målet kunde inte visas",e); return ""; }
+}
+function wirePrep(){ if($("#prepopen")) $("#prepopen").onclick=()=>openFrom(renderStart,openPrep,"Till startsidan"); }
+// Sidan med datum, nivå, prognos och veckans plan hämtas först när den öppnas (data/code-prep.js, lazyRun i app.js)
+// @lazy prep
 function prepGo(k){
   if(k==="daily") return startDaily();
   if(k==="iv") return KINDS.iv.open();
@@ -95,24 +125,6 @@ function prepGo(k){
   if(k==="talk") return KINDS.talk.open();
   return KINDS.exam.open();
 }
-// Panelen på startsidan
-function prepPanel(){
-  try{
-    if(!hasPrep()) return "";
-    const p=prepState(), ms=prepMilestones();
-    if(!ms.length) return `<section class="panel" id="prep"><div class="meta"><span class="label">Mot målet</span></div>
-      <p class="plan">Lägg in datumen för ${hasIv()?"antagningsintervjun och ":""}${esc(L.exam.name)}, så räknar appen ut var du ligger, om du hinner och vad du ska göra varje vecka.</p>
-      <button class="btn ghost" id="prepopen">Lägg in datum</button></section>`;
-    const f=prepForecast(), ph=prepPhase(ms), wk=prepWeek(ph), ok=wk.filter(x=>x.ok).length;
-    return `<section class="panel" id="prep"><div class="meta"><span class="label">Mot målet</span><span>nu ungefär ${esc(lvShort(f.base.lv))}</span></div>
-      <ul class="prepms">${f.ms.map(m=>`<li><span><b>${esc(m.name)}</b><small>${esc(prepWhen(m.date))} · ${m.days} dagar</small></span><span class="prepst ${PREP_ST[m.status][1]}">${PREP_ST[m.status][0]}</span></li>`).join("")}</ul>
-      <p class="foot">${esc(ph.name)}. Den här veckan: ${ok} av ${wk.length} klara.</p>
-      <button class="btn ghost" id="prepopen">Planen och prognosen</button></section>`;
-  }catch(e){ warnErr("panelen Mot målet kunde inte visas",e); return ""; }
-}
-function wirePrep(){ if($("#prepopen")) $("#prepopen").onclick=()=>openFrom(renderStart,openPrep,"Till startsidan"); }
-// Sidan med datum, nivå, prognos och veckans plan hämtas först när den öppnas (data/code-prep.js, lazyRun i app.js)
-// @lazy prep
 function openPrep(){
   if(examWait(openPrep)) return;
   stopSpeech(); $("#tabs").hidden=true; sess=null;
@@ -134,6 +146,7 @@ function openPrep(){
     <p class="plan">Ungefär <b>${esc(lvShort(f.base.lv))}</b>${f.base.src==="course"?" (kursens nivå; gör några provuppgifter och grammatikövningar för en egen uppskattning)":""}. Målet är ${esc(LV_NAMES[Math.round(f.T)])}. ${f.est.few?"Uppskattningen bygger på lite data än så länge.":""}</p>
     <div class="vtwrap"><table class="hpv"><tbody>${pr}<tr><th>Ordförråd</th><td>${nf(voc.n)} ord du kan skriva</td><td>${esc(L.exam.name)} brukar kräva ungefär ${nf(vocNeed)}</td></tr>${f.est.gram.lv!=null?`<tr><th>Grammatik</th><td>${Math.round(100*(f.est.gram.acc||0))} % rätt</td><td>ungefär ${esc(lvShort(f.est.gram.lv))}</td></tr>`:""}</tbody></table></div>
     <p class="foot">${f.known===f.parts.length?`Provet just nu: ungefär <b>${f.tot}/100</b> (gränsen är 50, och minst 5 av 25 i varje del).`:`Gör minst en provuppgift i varje del för en prognos av poängen (${f.known} av ${f.parts.length} delar gjorda).`}${f.est.weak?` Det som drar ner mest: ${esc(f.est.weak.what)} (${esc(f.est.weak.why)}).`:""}</p></section>
+    ${prepSchools().length?prepSchoolsHtml(f):""}
     ${ms.length?`<section class="panel"><span class="label">Hinner du?</span>
     <p class="plan">Du övar ungefär <b>${prepFmtH(f.pace.app)} timmar i veckan</b> i appen${f.pace.h?` och ${prepFmtH(f.pace.h)} timmar på lektioner`:""}. Från en nivå till nästa brukar det behövas ungefär ${PREP_H} timmar (Cambridges riktvärde 150–200 timmar från A2 till B1).</p>
     <ul class="prepms">${ms.map(m=>`<li><span><b>${esc(m.name)}</b><small>${esc(prepWhen(m.date))} · ${m.weeks} veckor kvar · med din takt ungefär ${esc(lvShort(m.proj))}${m.status==="ok"?"":`; för ${esc(LV_NAMES[Math.round(m.goal)]||lvShort(m.goal))} behövs ungefär ${prepFmtH(m.needW)} timmar i veckan`}</small></span><span class="prepst ${PREP_ST[m.status][1]}">${PREP_ST[m.status][0]}</span></li>`).join("")}</ul>
@@ -147,6 +160,17 @@ function openPrep(){
   $("#prep-h").onchange=()=>set("h",Math.max(0,Math.min(20,+$("#prep-h").value||0)));
   app.querySelectorAll("[data-prepgo]").forEach(b=>b.onclick=()=>openFrom(openPrep,()=>prepGo(wk[+b.dataset.prepgo].go),"Till planen"));
   $("#quit").onclick=backTo(renderStart); window.scrollTo(0,0);
+}
+function prepSchoolsHtml(f){
+  const rows=prepSchoolRows(f).sort((a,b)=>(a.prio||9)-(b.prio||9)||(b.need||0)-(a.need||0));
+  const head=p=>p===1?"Vill helst söka":p===2?"Funderar på":"Skolorna";
+  let lastP=null;
+  return `<section class="panel"><span class="label">Skolornas krav på ${esc(L.name.toLowerCase())}</span>
+    <p class="plan">Du ligger nu på ungefär <b>${esc(lvShort(f.base.lv))}</b>. Prognosen till varje skola räknas med din takt nu (${prepFmtH(f.pace.tot)} timmar i veckan).</p>
+    <ul class="prepms">${rows.map(r=>{ const h=r.prio!==lastP?`<li class="prephead"><span class="label">${head(r.prio)}</span></li>`:""; lastP=r.prio;
+      return h+`<li><span><b>${esc(r.name)}</b><small>${r.none?`Inget krav på ${esc(L.name.toLowerCase())}`:`${esc(r.level)}${r.levelVoice&&r.levelVoice!==r.level?` (sång: ${esc(r.levelVoice)})`:""} · ${esc(r.when||"")}${r.days!=null&&r.days>0?` · med din takt ungefär ${esc(lvShort(r.proj))}`:""}`}</small>
+        <details class="more"><summary>Mer om ${esc(r.name)}</summary>${[r.certs&&`Godkända prov: ${r.certs}`,r.apply&&`Ansökan och prov: ${r.apply}`,r.note].filter(Boolean).map(t=>`<p class="foot">${esc(t)}</p>`).join("")}<p class="foot"><a href="${esc(r.url||"#")}" target="_blank" rel="noopener">Skolans sida</a>. Kraven ändras varje år, så kontrollera alltid där.</p></details></span>
+        ${r.none?`<span class="prepst ok">Inget krav</span>`:`<span class="prepst ${PREP_ST[r.status][1]}">${PREP_ST[r.status][0]}</span>`}</li>`; }).join("")}</ul></section>`;
 }
 // Råd för fasen: vad som ger mest just nu
 function prepAdvice(f,ph){
@@ -164,10 +188,12 @@ function prepAdvice(f,ph){
 // Till föräldravyn (summaryOf i 95-parent.js)
 function prepSummary(){
   if(!hasPrep()) return null;
-  const ms=prepMilestones(); if(!ms.length) return null;
-  const f=prepForecast(), ph=prepPhase(ms), wk=prepWeek(ph);
+  const ms=prepMilestones(); if(!ms.length&&!prepSchools().length) return null;
+  const f=prepForecast(), ph=ms.length?prepPhase(ms):null, wk=ph?prepWeek(ph):[];
+  const sc=prepSchoolRows(f).map(r=>({name:r.name,prio:r.prio||0,level:r.level||"",when:r.when||"",status:r.none?"none":r.status,proj:r.none?"":lvShort(r.proj)}));
   return {lv:lvShort(f.base.lv),goal:LV_NAMES[Math.round(f.T)]||"",appH:Math.round(f.pace.app*10)/10,h:f.pace.h,
     ms:f.ms.map(m=>({id:m.id,name:m.name,date:m.date,days:m.days,proj:lvShort(m.proj),status:m.status,needW:m.needW})),
     parts:f.parts.map(p=>({sv:p.sv,pts:p.pts})),tot:f.known===f.parts.length?f.tot:null,
-    iv:hasIv()?{done:ivDone(),n:ivList().length}:null,week:{ok:wk.filter(x=>x.ok).length,n:wk.length,phase:ph.name}};
+    iv:hasIv()?{done:ivDone(),n:ivList().length}:null,week:ph?{ok:wk.filter(x=>x.ok).length,n:wk.length,phase:ph.name}:null,
+    ...(sc.length?{schools:sc}:{})};
 }

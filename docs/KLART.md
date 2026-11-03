@@ -2,11 +2,15 @@
 
 Punkter som har flyttats från [`BACKLOG.md`](BACKLOG.md) när de byggdes. **Referens** anger backloggens rubrik och prioritet. **Commit** anger var ändringen finns i git. **Publicerat** anger versionen av artefakten på https://claude.ai/artifact/YBQv8j4qXQQLuPwLAWt5mP.
 
+## 2026-11-03, del 3 (publicerat som version 58)
+
+- **Skolornas språkkrav i Mot målet** (föräldern 2026-11-03). Nytt innehåll `content/skolor.json` (`CONTENT_FIELDS["skolor"]`): skola, krav (GERS, sång för sig), när nivån ska visas, ungefärligt datum (`by`), godkända prov, ansökan och länk. Mot målet jämför nivån nu och prognosen till `by` med varje skola (`prepSchoolRows`), även utan egna datum; startsidan visar det högsta kravet, föräldravyn alla skolor. Franska 3: CNSMD Paris och Lyon (B1 senast 30 juni 2027), HEM Genève (B1), HEMU Lausanne (B2). Tyska 4 och Tyska 5: DKDM, NMH, KMH och KMH Edsberg (inget krav på tyska), HfM Hanns Eisler Berlin (B2.2 vid inskrivning), HMT Leipzig (B1, sång B2, redan vid provet maj–juni 2027) och HMT München (B1 vid inskrivning). Underlag med källor i `docs/antagning-sang-franska.md` och `docs/antagning-tyska-norden.md`. Intervjufrågornas tips och exempelsvar hämtas med texterna (fr.json 1571 → 1480 kB). Uttalets och kapitelprovets skärmar i `code-ovningar.js`. Testerna: 2498 OK.
+
 ## 2026-11-03, del 2 (publicerat som version 57)
 
 - **Mot målet: nivå, prognos och plan inför intervjun och språkprovet** (föräldern 2026-11-03). Ny fil `src/kinds/84-prep.js` (sidan i kodmodulen `code-prep.js`). Kurser med `goal` och prov: eleven lägger in datum för antagningsintervjun och två provtillfällen och lektionstimmar i veckan (`S.prep`, nytt fält). Startsidan visar nedräkning och status per datum (Rätt spår / Nära / Behöver mer tid), sidan visar nivån nu (nivåmätaren, färdigheterna), provdelarna i poäng av 25, takten i appen, prognosen per datum (riktvärde 180 timmar per GERS-nivå, Cambridge 150–200 h A2→B1), timmar i veckan som behövs, och veckans checklista i tre faser (fram till intervjun, första provet, andra provet). Föräldravyn visar samma sak (`prep` i summary, `pPrep`). DELF i Sverige 2026 som anvisning (`exam.sessionNote` i fr/lang.js).
 - **Antagningsintervjun på franska** (föräldern 2026-11-03). Ny fil `src/kinds/46-intervju.js` (typ `iv`, i Talas kodmodul) och `languages/fr/content/intervju.json`: 52 juryfrågor i tio kategorier med tips, fraser, exempelsvar med [platser] att fylla i och följdfrågor, skrivna av AI-agent. Egna svar (`S.iv`, nytt fält) med Claudes kommentar och förbättrad version (`S.fb["iv:<id>"]`, räknas i nivåmätaren). Övningsintervju med Claude som jury för CNSMD Paris, CNSMD Lyon, HEM Genève eller HEMU Lausanne (`jury`-läge i `chatPrompt`, 8 frågor). Uppgifter om antagningen ur skolornas sidor i `IV_INFO`; underlaget i `docs/antagning-sang-franska.md`.
-- Sidan under 420 kB: verbtabellens, kapitelprovets, LÄS/ELF:s skärmar och Mot målet-sidan hämtas vid behov (`code-vtab.js`, `code-ktest.js`, `code-hp.js`, `code-prep.js`). Publiceras med 75 filer i `dist/data/`. Testerna: 2494 OK.
+- Sidan under 420 kB: verbtabellens, kapitelprovets, LÄS/ELF:s skärmar och Mot målet-sidan hämtas vid behov (`code-vtab.js`, `code-ovningar.js`, `code-hp.js`, `code-prep.js`). Publiceras med 75 filer i `dist/data/`. Testerna: 2494 OK.
 
 ## 2026-11-03 (publicerat som version 56)
 

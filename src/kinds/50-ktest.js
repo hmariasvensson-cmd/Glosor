@@ -5,8 +5,8 @@
 // Kapitlen (chapters och chapterKey i 00-common.js, samma som kapitelkartan) med minst fyra ord
 const ktChapters=()=>chapters().filter(c=>c.words.length>=4);
 const KT={mode:"type",n:0};   // n = antal ord i provet (reglaget; 0 = alla i kapitlet), gäller tills sidan laddas om
-// Skärmarna hämtas först när kapitelprovet öppnas (data/code-ktest.js, lazyRun i app.js)
-// @lazy ktest
+// Skärmarna hämtas först när kapitelprovet öppnas (data/code-ovningar.js, lazyRun i app.js)
+// @lazy ovningar
 function openKtest(){
   $("#tabs").hidden=true; sess=null; S.kt=S.kt||{};
   const chs=ktChapters(); if(isMono()) KT.mode="mc";   // mono (Högskoleprovet ORD): bara flerval
