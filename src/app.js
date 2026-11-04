@@ -171,7 +171,9 @@ const ruleFor=c=>((L.verbs.notes||{})[c.tense+"|"+c.verb])||c.rule;
    Steg 0 och 1 räknas i pass (nästa pass, om 3 pass), från steg 2 i dagar (3, 7, 20, 45, 90 dagar) och sparas i x.dd.
    x.due (pass) räknas fortfarande ut, för ord från före dagschemat och för statistiken. */
 const INT=[1,3,7,20,40,80,160];
-const DAYS=[0,0,3,7,20,45,90];
+// Dagar till nästa repetition per steg (elevens önskemål 2026-11-03, för alla): nytt eller omstartat ord 1 dag, sedan 3 dagar,
+// 7 dagar och 3 veckor; ord man kan (steg 4+) 45, 90 och 180 dagar. INT (pass) används bara för gamla ord utan dd.
+const DAYS=[1,3,7,21,45,90,180];
 const DAY=864e5;   // ett dygn i ms (40-writing.js)
 // Midnatt n kalenderdagar efter ts. Inte midnatt+n*DAY, som blir en timme fel över sommartidsskiftet.
 const addDays=(ts,n)=>{const d=new Date(ts); d.setHours(0,0,0,0); d.setDate(d.getDate()+n); return d.getTime();};
@@ -209,7 +211,7 @@ const dueMax=()=>S.dueMax===0?Infinity:(S.dueMax>0?S.dueMax:MAXDUE);
      dueMax     valfritt: repetitioner per glospass (1–DUE_SLIDE; 0 = alla som ska repeteras), saknas = MAXDUE
      src        "auto" eller avsnitts-id att lära nya ord från  chapter  bokkapitlet man läser (avsnitts-id)
      slow, listenFirst, goal   uppläsning långsam, lyssna först på nya ord, veckomål i minuter
-     selfRate   true = eleven bedömer själv (Igen/Svårt/Bra/Lätt) efter rätt skrivet ord i glosquizet; saknas = av (05-words.js)
+     selfRate   (används inte sedan november 2026: valen efter ett rätt svar visas alltid, rateBox i 05-words.js)
      log        [{p, d, dur, nNew, nRep, right, total, mcR, mcN, tyR, tyN, extra, kind, game, words}], högst 1 000 poster
                 (kind "talk" har också wpm och rounds (4/3/2) eller chat: 1 (samtal med Claude); poster från ett
                 pass i Dagens pass har dp: 1 och samma d, valfritt fält från oktober 2026)
@@ -762,20 +764,25 @@ const isLeech=w=>{const x=w&&ws(w.id); if(!x) return false; const err=(x.mcW||0)
   return (x.lapses||0)>=3||(err>=5&&err/(err+(x.mcR||0)+(x.tyR||0))>.4);};
 const dueWords=()=>WORDS.filter(w=>{const x=ws(w.id);return x&&isDue(x)})
   .sort((a,b)=>(ws(a.id).s>=MASTER)-(ws(b.id).s>=MASTER)||ws(a.id).due-ws(b.id).due).slice(0,dueMax());
-/* Rätt: ett steg upp. Fel: ett steg ned, och ett ord man kunde går tillbaka till steg 2.
+/* Rätt: ett steg upp. Fel: börjar om från steg 0 (kommer tillbaka nästa dag; elevens önskemål 2026-11-03).
    t = frågeformen ("mc" eller "type"). Rätt på flerval räcker bara upp till steg MC_MAX (2, lär sig): ett ord räknas
    som "kan" först när man har skrivit det rätt. Ett ord som redan har högre steg sänks inte av ett rätt flerval.
-   g = elevens egen bedömning efter ett rätt skrivet svar (S.selfRate, 05-words.js): "hard" (Svårt) = stannar på
-   samma steg (kortare intervall än Bra), "easy" (Lätt) = två steg upp. Utan g (Bra) ett steg; gäller inte flerval.
+   g = elevens val efter ett rätt svar (rateBox i 05-words.js): "stay" (Stanna kvar) = samma steg, "back" (Ett steg
+   tillbaka), "reset" (Börja om) = steg 0. Utan g (Fortsätt enligt plan) ett steg upp. "hard" och "easy" (den gamla
+   självbedömningen) betyder samma steg respektive två steg upp.
    Undantag: i en kurs på ett språk (mono: true, Högskoleprovet ORD) är flerval den enda frågeformen, och där räcker
    ett rätt flerval hela vägen till "kan". Språkkurserna påverkas inte. */
 const MC_MAX=2;
 function schedule(x,ok,p,now,t,g){
-  const up=t==="mc"?1:g==="hard"?0:g==="easy"?2:1, cap=t==="mc"&&!(L&&L.mono)?Math.max(x.s,MC_MAX):INT.length-1;
-  if(ok){ x.s=Math.min(x.s+up,INT.length-1,cap); if(x.s>=MASTER&&!x.mp){x.mp=p;x.md=now;} }
-  else { x.s=x.s>=MASTER?2:Math.max(0,x.s-1); delete x.mp; delete x.md; x.lapses=(x.lapses||0)+1; }
-  x.due=p+INT[x.s];
-  if(DAYS[x.s]) x.dd=addDays(now,DAYS[x.s]); else delete x.dd;
+  const cap=t==="mc"&&!(L&&L.mono)?Math.max(x.s,MC_MAX):INT.length-1;
+  if(ok){
+    if(g==="reset") x.s=0;
+    else if(g==="back") x.s=Math.max(0,x.s-1);
+    else x.s=Math.min(x.s+(g==="stay"||g==="hard"?0:g==="easy"?2:1),INT.length-1,cap);
+    if(x.s>=MASTER){ if(!x.mp){x.mp=p;x.md=now;} } else { delete x.mp; delete x.md; }
+  }
+  else { x.s=0; delete x.mp; delete x.md; x.lapses=(x.lapses||0)+1; }
+  x.due=p+INT[x.s]; x.dd=addDays(now,DAYS[x.s]);
 }
 
 /* ---------- Uppläsning ----------
@@ -977,6 +984,7 @@ function renderStart(){
       return ss.length?`<optgroup label="${esc(e.label||"")}">${ss.map(secOpt).join("")}</optgroup>`:""; }).join("");
   const nothing=!newW.length&&!due.length;
   app.innerHTML=`
+  ${prepPanel()}
   ${isHp()?hpPanel():""}
   ${dailyPanel()}
   ${suggestPanel()}
@@ -986,7 +994,6 @@ function renderStart(){
     <div class="navrow"><button class="btn ghost" data-wdrop="${esc(k)}">Släng</button><button class="btn" data-wgo="${esc(k)}">Fortsätt</button></div></section>`).join("")}
   ${hasBook()?bookPanel():""}
   ${wordPlanPanel()}
-  ${prepPanel()}
   ${goalsPanel()}
   ${writeNagPanel()}
   ${nextPanel()}
@@ -1020,9 +1027,7 @@ function renderStart(){
       <div class="field"><span class="label">Nya ord</span>
         <div class="seg" role="group" aria-label="Nya ord"><button data-lf="0" aria-pressed="${!S.listenFirst}">Visa direkt</button><button data-lf="1" aria-pressed="${!!S.listenFirst}">Lyssna först</button></div></div>
     </div>
-    <div class="field"><span class="label">Bedöm själv hur svårt det var</span>
-      <div class="seg" role="group" aria-label="Bedöm själv hur svårt det var"><button data-sr="0" aria-pressed="${!S.selfRate}">Av</button><button data-sr="1" aria-pressed="${!!S.selfRate}">På</button></div>
-      <p class="foot">Efter ett rätt skrivet ord i glosquizet väljer du Igen, Svårt, Bra eller Lätt (tangenterna 1–4; Enter eller mellanslag = Bra). Svårt kommer tillbaka tidigare, Lätt senare.</p></div>`}
+`}
     ${Object.keys(LANGUAGES).length>1?`<div class="field"><span class="label">Kurser</span>
       <div class="seg" role="group" aria-label="Kurser"><button data-only="0" aria-pressed="${!onlyCourse()}">Visa alla</button><button data-only="1" aria-pressed="${sameLang(onlyCourse(),L.code)}">Bara ${esc(L.name.toLowerCase())}</button></div></div>`:""}
     <div class="field"><span class="label">Veckomål</span>
@@ -1054,7 +1059,6 @@ function renderStart(){
   app.querySelectorAll("[data-m]").forEach(b=>b.onclick=()=>{S.mode=b.dataset.m;save();renderStart()});
   app.querySelectorAll("[data-slow]").forEach(b=>b.onclick=()=>{S.slow=b.dataset.slow==="1";save();renderStart()});
   app.querySelectorAll("[data-lf]").forEach(b=>b.onclick=()=>{S.listenFirst=b.dataset.lf==="1";save();renderStart()});
-  app.querySelectorAll("[data-sr]").forEach(b=>b.onclick=()=>{S.selfRate=b.dataset.sr==="1";save();renderStart()});
   { const sd=$("#setd"); sd.ontoggle=()=>{SET_OPEN=sd.open}; }
   app.querySelectorAll("[data-only]").forEach(b=>b.onclick=()=>{setOnly(b.dataset.only==="1"?L.code:"");renderStart()});
   app.querySelectorAll("[data-goal]").forEach(b=>b.onclick=()=>{S.goal=+b.dataset.goal;save();boardPush();renderStart()});
@@ -1420,7 +1424,9 @@ function resumeRun(){
    Fel svar: frågan kommer tillbaka som flerval i slutet av övningen.
    Rätt på det flervalet: tillbaka som skrivfråga igen, om frågan var en skrivfråga från början (canType).
    Bara första svaret per ord räknas för repetitionsschemat och statistiken. */
-const MAX_AGAIN=4;   // max antal extra frågor per ord och övning
+// Högst så många extra frågor per ord och övning: MAX_AGAIN för att gå från flerval till skriva, MAX_WRONG efter fel svar
+// (ett fel ord kommer tillbaka tills det blir rätt; förut slutade det efter fyra, elevens felrapport 2026-11-03)
+const MAX_AGAIN=4, MAX_WRONG=10;
 /* beginQuiz(typ, frågor, opts) startar en ny runda med ett nytt sess. Allt som rundan ska ha med sig står i opts:
    label, ctx, againFn, daily (rundan hör till Dagens pass), gramMix (blandad grammatik, räknas i S.gt.mix),
    game/tenses (verben), och för glosquizet newW, due, i, extra och start (från lärokorten, se startQuiz).
@@ -1484,7 +1490,7 @@ function record(ok){
   const c=sess.cur, id=itemId(c);
   if(!(id in sess.firstTry)){ sess.firstTry[id]=ok; sess.firstType[id]=c.t; }
   const next=c.noRetry?null:!ok?"mc":(c.again&&c.t==="mc"&&c.canType)?"type":null;
-  if(next&&(sess.tries[id]||0)<MAX_AGAIN){
+  if(next&&(sess.tries[id]||0)<(ok?MAX_AGAIN:MAX_WRONG)){
     sess.tries[id]=(sess.tries[id]||0)+1; sess.queue.push({...c,t:next,again:true}); sess.total++;
     return next;
   }
@@ -1496,7 +1502,7 @@ function unrecord(){ // "Jag hade rätt"
   const k=sess.queue.findIndex(q=>itemId(q)===id);
   if(k>=0){sess.queue.splice(k,1);sess.total--;}
 }
-const backMsg=(ok,back)=>!back?"":`<p id="back">${ok
+const backMsg=(ok,back)=>!back?(!ok&&sess&&sess.cur&&!sess.cur.noRetry?`<p id="back">Den har kommit många gånger nu, så den kommer tillbaka nästa gång i stället.</p>`:""):`<p id="back">${ok
   ?"Bra! Nu kommer det tillbaka som skrivfråga i slutet."
   :"Det kommer tillbaka som flerval i slutet."}</p>`;
 
@@ -1601,8 +1607,8 @@ async function sendReport(btn){
   btn.textContent="Tack! Frågan är rapporterad och blir kontrollerad.";
 }
 document.addEventListener("click",e=>{const b=e.target.closest&&e.target.closest("[data-report]"); if(b) sendReport(b);});
-/* Tangentbordet: siffror väljer svar i flerval (och Fel/Nästan/Rätt vid självbedömning, Igen/Svårt/Bra/Lätt i
-   glosquizet när S.selfRate är på), mellanslag eller
+/* Tangentbordet: siffror väljer svar i flerval (och Fel/Nästan/Rätt vid självbedömning, och de fyra valen för när
+   ordet kommer tillbaka i glosquizet), mellanslag eller
    Enter går till nästa ord när man lär sig nya ord, pilarna bläddrar, och Enter går alltid vidare efter ett svar. */
 document.addEventListener("keydown",e=>{
   const tg=e.target&&e.target.matches?e.target:document.body;
@@ -1667,7 +1673,7 @@ function statsForecast(){
   const max=Math.max(...rows.map(r=>r.n),1);
   return `<section class="panel"><h2>Kommande repetitioner</h2>
     <div class="fc">${rows.map(r=>`<div class="fc-col"><span class="fc-n">${r.n}</span><span class="fc-bar" style="height:${Math.round(4+56*r.n/max)}px"></span><span class="fc-l">${r.l}</span></div>`).join("")}</div>
-    <p class="plan">Nya ord kommer tillbaka nästa pass och sedan efter tre pass${soon?` (${soon} ord väntar på det)`:""}. Därefter efter 3, 7 och 20 dagar, och ord du kan efter 45 och 90 dagar. ${S.dueMax===0?"Glospasset tar alla ord som ska repeteras.":`Högst ${dueMax()} repetitioner per glospass (välj antal under Repetitioner per pass), resten väntar till passet efter.`}</p></section>`;
+    <p class="plan">Nya ord kommer tillbaka nästa dag${soon?` (${soon} ord väntar på det)`:""}, sedan efter 3 dagar, 7 dagar och 3 veckor, och ord du kan efter 45, 90 och 180 dagar. Fel svar börjar om från en dag. Efter ett rätt svar kan du välja att stanna kvar, gå ett steg tillbaka eller börja om. ${S.dueMax===0?"Glospasset tar alla ord som ska repeteras.":`Högst ${dueMax()} repetitioner per glospass (välj antal under Repetitioner per pass), resten väntar till passet efter.`}</p></section>`;
 }
 const courseName=()=>S&&S.gy25&&L.courseGy25?L.courseGy25:(L.course||L.name);
 /* ---------- Ordlista ---------- */

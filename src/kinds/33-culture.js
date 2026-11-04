@@ -1,6 +1,8 @@
 /* ---------- Kultur ----------
    content/culture.json = [{id, sec, title, lines, gloss, q: {q, opts, a, why}, ask, model, modelSv}]. Ingen quiz, en egen sida.
    Sparat: S.cu[id] = {q, words, last}, utkastet i S.drafts["c:<id>"] och en loggpost med kind "culture". */
+// Skärmarna hämtas först när kulturen öppnas (data/code-ovningar.js, lazyRun i app.js)
+// @lazy ovningar
 function openCulture(){
   S.cu=S.cu||{};
   pickerScreen("Kultur",L.cultureIntro||"Läs en kort text, svara på en fråga och jämför med hur det är i Sverige.",
@@ -40,4 +42,5 @@ function cultureScreen(id){
   $("#quit").onclick=backTo(openCulture);
   window.scrollTo(0,0);
 }
+// @lazy-end
 defineKind("culture",{name:"Kultur",open:openCulture});

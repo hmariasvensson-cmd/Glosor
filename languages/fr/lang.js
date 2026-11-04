@@ -66,6 +66,8 @@ LANGUAGES.fr = {
   verbs: {
     // Verbtabellerna (sv, tenses, notes) ligger i verbs.json, som build.py lägger i kursens datafil (ärvda tabeller slås ihop där).
     persons: ["je", "tu", "il/elle", "nous", "vous", "ils/elles"],
+    // Verbtabellernas ordning (12-verbtab.js): nästa tempus låses upp när hela kolumnen är rätt
+    tabOrder: ["présent", "passé composé", "imparfait", "futur simple", "plus-que-parfait", "conditionnel", "subjonctif"],
     // Pronomen som skrivs framför verbformen (je blir j' framför vokal, subjonctif får que framför)
     prefix: (i, form, persons, tense) => {
       // j' framför vokal och stumt h (j'habite), men inte framför aspirerat h (je hais, je hurle)

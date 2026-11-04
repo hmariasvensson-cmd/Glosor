@@ -2,6 +2,14 @@
 
 Punkter som har flyttats från [`BACKLOG.md`](BACKLOG.md) när de byggdes. **Referens** anger backloggens rubrik och prioritet. **Commit** anger var ändringen finns i git. **Publicerat** anger versionen av artefakten på https://claude.ai/artifact/YBQv8j4qXQQLuPwLAWt5mP.
 
+## 2026-11-04 (publicerat som version 60)
+
+- **Fel ord kommer tillbaka tills det blir rätt** (elevens felrapport 2026-11-03: "ibland får jag inte göra om ord som jag råkat göra fel på"). Efter fem fel i samma pass slutade ordet komma tillbaka (`MAX_AGAIN` = 4). Nu gäller `MAX_WRONG` = 10 för fel svar; når ordet taket står det att det kommer nästa gång.
+- **Nytt repetitionsschema för alla** (elevens önskemål 2026-11-03, föräldern: alla). `DAYS` = 1, 3, 7, 21, 45, 90, 180 dagar; nya ord kommer tillbaka nästa dag och fel svar börjar om (steg 0, en dag). Efter varje rätt svar visas när ordet kommer tillbaka och valen Fortsätt enligt plan / Stanna kvar / Ett steg tillbaka / Börja om (`rateBox`, tangenterna 1–4), även på flerval och i HP. Självbedömningen (`S.selfRate`) är borttagen. `SRS_DAYS` (fraser, grammatik) följer med: 1, 3, 7, 21, 45, 90.
+- **Verbtabellerna i Dagens pass** (elevens önskemål 2026-11-04). En tabell per pass när ett verb man kan har ett tempus kvar (`vtItem`, `renderVtabQ`, typen `vtab` med `type`/`restore`). Ett tempus i taget i ordningen `L.verbs.tabOrder` (Franska 3: présent, passé composé, imparfait, futur simple, plus-que-parfait, conditionnel, subjonctif); nästa låses upp när hela kolumnen var rätt i samma försök, och klara verb kommer tillbaka efter `VT_REP_DAYS` (21) dagar.
+- **Dagens uppdrag** överst på startsidan (föräldern 2026-11-04: "supertydligt"). Målet som ligger närmast (eget datum eller den skola eleven helst vill till med närmast krav), en stapel från A1 till målet, minuter i dag mot det som behövs, och tre saker att göra i dag med knappar: Dagens pass, den svagaste provdelen och fasens uppgift (intervjufrågor före intervjun, annars skrivuppgift eller Tala), som bockas av ur loggen (`prepGoal`, `prepToday`, `prepPanel`).
+- Sidan 405 kB: skrivsidan och skrivskärmen (`code-skriv.js`) och kulturens skärmar (`code-ovningar.js`) hämtas vid behov. Publiceras med 76 filer i `dist/data/`.
+
 ## 2026-11-03, del 4 (publicerat som version 59)
 
 - **Nivån mot B1 och B2 i föräldravyn** (föräldern 2026-11-03). Sammanfattningens `prep` får nivån som tal (`x`), målet (`T`) och skolornas högsta krav (`top`); `summaryFlush` lägger till en punkt per dag i `prep.hist` (högst 120, `prepHist`). Föräldravyn visar en stapel från A1 med nivån nu, målet och skolornas krav (`pLvBar`) och en kurva över nivån (`pLvHist`); stilarna läggs in av föräldravyns kodmodul. Testerna: 2500 OK.

@@ -162,7 +162,7 @@ const tok=s=>s.toLowerCase().replace(/[’`´]/g,"'").replace(/[«»"“”!?.,;
    last = senast övad (ms), dd = förfaller (midnatt, ms). Andra fält i posten (r, n) lämnas orörda.
    dd kom 2026-09-30: en post utan dd (sparad före dess, eller missad senast) räknas som förfallen.
    Efter rätt svar nummer s förfaller posten om SRS_DAYS[s-1] dagar, samma steg som orden i dagar (DAYS i app.js). */
-const SRS_DAYS=[1,3,7,20,45,90];
+const SRS_DAYS=[1,3,7,21,45,90];
 function srsBump(rec,right,now){
   now=now||Date.now(); const x=Object.assign({},rec||{}), s=right?(+x.s||0)+1:0;
   x.s=s; x.last=now;

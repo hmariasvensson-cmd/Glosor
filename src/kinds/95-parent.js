@@ -111,12 +111,9 @@ function pSpark(days){
 // Mot målet (84-prep.js): nivå nu, varje datum med prognos, provdelarna och veckans plan. Allt är elevens egen data, så
 // varje fält escapas och kontrolleras.
 const PREP_TXT={ok:"rätt spår",near:"nära, behöver öka lite",far:"behöver mer tid"};
-// Stilarna för stapeln och kurvan läggs in när föräldravyn visar dem (de behövs inte på sidan annars)
-const P_LV_CSS=`.plvbar{margin:8px 0 4px}.plvtrack{position:relative;height:12px;border-radius:999px;background:var(--surface-2);border:1px solid var(--line)}.plvtrack i{position:absolute;left:0;top:0;bottom:0;border-radius:999px;background:var(--navy)}.plvtick{position:absolute;top:-3px;bottom:-3px;width:1px;background:var(--ink-2)}.plvtick.goal{width:3px;margin-left:-1px;background:var(--ink)}.plvreq{position:absolute;top:-5px;bottom:-5px;width:3px;margin-left:-1px;background:var(--pink)}.plvlabels{position:relative;height:18px;font-size:.75rem;color:var(--ink-2)}.plvlabels span{position:absolute;transform:translateX(-50%);white-space:nowrap}.plvlabels span:first-child{transform:none} .plvlabels span:last-child{transform:translateX(-100%)}svg.plvhist{width:100%;max-width:420px;height:auto;display:block}svg.plvhist polyline{stroke:var(--navy);stroke-width:2}svg.plvhist circle{fill:var(--navy);stroke:var(--surface);stroke-width:2}svg.plvhist .gl{stroke:var(--line);stroke-width:1}svg.plvhist text{font-size:10px;fill:var(--ink-2)}`;
-function pLvStyle(){ if(!document.getElementById("plvcss")) document.head.insertAdjacentHTML("beforeend",`<style id="plvcss">${P_LV_CSS}</style>`); }
 // Stapel från A1 till målet (eller skolornas högsta krav): var eleven ligger nu och strecken för B1 och B2
 function pLvBar(x){
-  const v=+x.x; if(!Number.isFinite(v)) return ""; pLvStyle();
+  const v=+x.x; if(!Number.isFinite(v)) return "";
   const hi=Math.max(3,Math.ceil(Math.max(+x.T||3,+x.top||0))), lo=1, pc=n=>Math.max(0,Math.min(100,100*(n-lo)/(hi-lo)));
   const ticks=[]; for(let n=lo;n<=hi;n++) ticks.push(n);
   return `<div class="plvbar" role="img" aria-label="Nivå ungefär ${esc(String(x.lv||""))} på skalan A1 till ${esc(LV_NAMES[hi]||"")}">

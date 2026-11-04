@@ -36,7 +36,7 @@ const hpExplain=w=>`<p class="hpans"><b>${esc(w.t)}</b> = ${esc(w.sv)}</p>${w.ex
 function hpMC(c){
   const w=c.w;
   return {head:`<p class="q-prompt hpword"><b>${esc(w.t)}</b></p>`, ask:"Vilket alternativ betyder ungefär detsamma som ordet i fetstil?",
-    letters:true, opts:hpOptions(w).map(o=>({label:o.sv,ok:o.id===w.id})), explain:hpExplain(w),
+    letters:true, opts:hpOptions(w).map(o=>({label:o.sv,ok:o.id===w.id})), explain:hpExplain(w), onAnswer:rateBox,
     wrongCard:`<div class="recap">${hpExplain(w)}${memoBox(w)}</div>`};
 }
 

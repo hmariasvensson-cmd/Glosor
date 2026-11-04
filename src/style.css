@@ -237,7 +237,8 @@ details.more[open] summary{margin-bottom:10px}
 .grade{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
 .grade .btn{padding:11px 8px}
 .rate{margin-top:12px;display:flex;flex-direction:column;gap:6px}
-.rate .grade{grid-template-columns:repeat(4,1fr)}
+.rate .grade{grid-template-columns:repeat(2,1fr)}
+.rate .grade .btn{display:flex;flex-direction:column;gap:2px;line-height:1.2}.rate .grade small{font-weight:400;font-size:.78rem;opacity:.8}
 .picked .lemof{font-family:var(--sans);font-size:.85rem;color:var(--ink-2)}
 .situation{background:var(--surface-2);border-radius:12px;padding:14px;font-size:1.1rem;font-weight:500;margin-top:10px}
 .built{min-height:56px;display:flex;flex-wrap:wrap;gap:6px;align-items:center;padding:10px;border:2px dashed var(--line);border-radius:12px}
@@ -502,3 +503,20 @@ table.vtab .vtfix{display:block;margin-top:3px;font-weight:600;color:var(--pink)
 .prepwk small{color:var(--ink-2);margin-left:6px}
 .ivph{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px}
 .prepms li.prephead{border:0;padding:6px 0 0}
+
+/* Nivåstapeln (Dagens uppdrag i 84-prep.js och föräldravyn) och kurvan (föräldravyn) */
+.plvbar{margin:8px 0 4px}
+.plvtrack{position:relative;height:12px;border-radius:999px;background:var(--surface-2);border:1px solid var(--line)}
+.plvtrack i{position:absolute;left:0;top:0;bottom:0;border-radius:999px;background:var(--navy)}
+.plvtick{position:absolute;top:-3px;bottom:-3px;width:1px;background:var(--ink-2)}
+.plvtick.goal{width:3px;margin-left:-1px;background:var(--ink)}
+.plvreq{position:absolute;top:-5px;bottom:-5px;width:3px;margin-left:-1px;background:var(--pink)}
+.plvlabels{position:relative;height:18px;font-size:.75rem;color:var(--ink-2)}
+.plvlabels span{position:absolute;transform:translateX(-50%);white-space:nowrap}
+.plvlabels span:first-child{transform:none}
+ .plvlabels span:last-child{transform:translateX(-100%)}
+svg.plvhist{width:100%;max-width:420px;height:auto;display:block}
+svg.plvhist polyline{stroke:var(--navy);stroke-width:2}
+svg.plvhist circle{fill:var(--navy);stroke:var(--surface);stroke-width:2}
+svg.plvhist .gl{stroke:var(--line);stroke-width:1}
+svg.plvhist text{font-size:10px;fill:var(--ink-2)}

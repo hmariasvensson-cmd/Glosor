@@ -116,6 +116,8 @@ function startDaily(){
   // En grupp utan frågor (t.ex. inga meningar än) hoppas över, och nästa grupp tar dess plats
   const want=passGroups(sec).length;
   passOrder().forEach(g=>{ if(gs.length>=want) return; const it=g.items(); if(it.length){ gs.push(g.id); mixIn=mixIn.concat(it); } });
+  // Verbtabellen (12-verbtab.js): en per pass när ett verb man kan har ett tempus kvar eller ska repeteras
+  const vt=typeof vtNext==="function"&&L.verbs&&!isMono()?vtNext():null; if(vt) mixIn=mixIn.concat([vtItem(vt)]);
   startSession(newW,due,{daily:true,dp:gs.length?gs:["words"],mixIn});
 }
 // Glosorna och de andra frågorna jämnt blandade, så att passet växlar mellan typerna

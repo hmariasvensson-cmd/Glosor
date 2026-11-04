@@ -166,14 +166,13 @@ const lastLog=()=>S.log[S.log.length-1];
 appReady().then(async()=>{ try{
   ok("molnets framsteg hämtas", S.pass===5);
   ok("pensionerat ord får ett repetitionsdatum", S.w["ancien mot"].due<1e9 && S.w["ancien mot"].s===4, JSON.stringify(S.w["ancien mot"]));
-  { const x={s:3,due:0}; schedule(x,true,10,now); const k=x.s===4&&x.due===10+INT[4]&&x.mp===10;
-    schedule(x,true,50,now); const k2=x.s===5&&x.due===50+INT[5];
-    schedule(x,false,60,now); ok("schema: upp ett steg vid rätt, kan-ord tillbaka till steg 2 vid fel", k&&k2&&x.s===2&&!x.mp&&x.lapses===1, JSON.stringify(x));
-    const y={s:1,due:0}; schedule(y,false,5,now); ok("schema: fel på steg 1 ger steg 0", y.s===0&&y.due===6); }
-  { const x={s:0,due:0}; schedule(x,true,7,now); const a=x.s===1&&x.due===10&&!x.dd;
-    schedule(x,true,10,now); const b=x.s===2&&x.dd===addDays(now,3)&&!isDue(x);
-    schedule(x,true,11,now); const c=x.s===3&&x.dd===addDays(now,7); schedule(x,true,12,now); const d=x.s===4&&x.dd===addDays(now,20);
-    x.dd=Date.now()-1; ok("schema: nästa pass, 3 pass, sedan 3, 7 och 20 dagar", a&&b&&c&&d&&isDue(x), JSON.stringify(x)); }
+  { const x={s:3,due:0}; schedule(x,true,10,now); const k=x.s===4&&x.mp===10&&x.dd===addDays(now,45);
+    schedule(x,true,50,now); const k2=x.s===5&&x.dd===addDays(now,90);
+    schedule(x,false,60,now); ok("schema: upp ett steg vid rätt, fel börjar om (en dag)", k&&k2&&x.s===0&&!x.mp&&x.lapses===1&&x.dd===addDays(now,1), JSON.stringify(x)); }
+  { const x={s:0,due:0,dd:addDays(now,1)}; schedule(x,true,7,now); const a=x.s===1&&x.dd===addDays(now,3)&&!isDue(x);
+    schedule(x,true,10,now); const b=x.s===2&&x.dd===addDays(now,7); schedule(x,true,11,now); const c=x.s===3&&x.dd===addDays(now,21);
+    schedule(x,true,12,now); const d=x.s===4&&x.dd===addDays(now,45);
+    x.dd=Date.now()-1; ok("schema: 1 dag, 3 dagar, 7 dagar, 3 veckor, sedan 45 dagar (kan)", a&&b&&c&&d&&isDue(x)&&DAYS.join()==="1,3,7,21,45,90,180", JSON.stringify(x)); }
   // Verbtabeller (önskemål 2026-11-03): ett verb man kan blir en tabell där man fyller i ett tempus
   { const vs=vtVerbs(); ok("verbtabell: verb i ordlistan som finns i verbtabellerna", vs.length>0&&vs.every(x=>CONJ.some(c=>c.verb===x.verb)), vs.length);
     const x=vs[0], keepW=JSON.stringify(S.w[x.w.id]||null), keepT=JSON.stringify(S.vtab||null), nLog=S.log.length;
@@ -189,6 +188,21 @@ appReady().then(async()=>{ try{
     ok("verbtabell: med fel kommer samma tempus igen", vtNext()&&vtNext().verb===x.verb&&!!q("#vtagain"));
     q("#vtagain").click(); [...document.querySelectorAll(".vtin")].forEach((inp,i)=>inp.value=cells[i].form.split("/")[0]); q("#vtcheck").click();
     ok("verbtabell: alla rätt, nästa gång ett annat tempus", S.vtab[x.verb][t0].r===ins.length&&(vtTenses(x.verb).length<2||vtTarget(x.verb)!==t0), vtTarget(x.verb));
+    { const ts=vtTenses(x.verb), P=L.verbs.persons.length;
+      ok("verbtabell: nästa tempus i ordning efter helt rätt kolumn", ts.length<2||vtTarget(x.verb)===ts[1], vtTarget(x.verb));
+      if(ts.length>1){ S.vtab[x.verb][ts[1]]={r:P-2,n:1,last:Date.now()}; ok("verbtabell: fel i kolumnen ger samma tempus igen (inte nästa)", vtTarget(x.verb)===ts[1]&&vtNext()&&vtNext().t===ts[1]); }
+      ok("verbtabell: tidigare klarade tempus visas som stöd", ts.length<2||vtCols(x.verb,ts[1]).includes(ts[0]));
+      ts.forEach(t=>S.vtab[x.verb][t]={r:P,n:1,last:Date.now()}); ok("verbtabell: helt klart verb kommer inte direkt igen", vtDone(x.verb)&&!(vtNext()&&vtNext().verb===x.verb));
+      ts.forEach(t=>S.vtab[x.verb][t].last=Date.now()-(VT_REP_DAYS+2)*864e5); const rp=vtNext();
+      ok("verbtabell: klart verb kommer tillbaka som repetition efter några veckor", rp&&rp.verb===x.verb&&rp.rep);
+      // Som fråga i Dagens pass
+      startDaily(); ok("verbtabell: följer med i Dagens pass", sess&&(sess.mixIn||[]).some(i=>i.k==="vtab"), JSON.stringify((sess.mixIn||[]).map(i=>i.k))); quitSession();
+      const it=vtItem(rp), n0=S.vtab[x.verb][rp.t].n; $("#tabs").hidden=true; sess=null; beginQuiz("mix",[it],{label:"test"});
+      const qi=[...document.querySelectorAll(".vtin")], cs=vtCells(x.verb,rp.t);
+      ok("verbtabell: tabellen i quizet", qi.length===P&&!!q("#vtcheck")&&!!q("#quit"));
+      qi.forEach((inp,i)=>inp.value=cs[i].form.split("/")[0]); q("#vtcheck").click();
+      ok("verbtabell: rättas i quizet och räknas som rätt", S.vtab[x.verb][rp.t].n===n0+1&&S.vtab[x.verb][rp.t].r===P&&sess.firstTry[it.id]===true&&!!q("#nx"));
+      q("#nx").click(); ok("verbtabell: rundan blir klar", !sess); renderStart(); }
     ok("verbtabell: knappen efter Dagens pass och i menyn", dailyAfter(1).includes("dvtab")===!!vtNext()&&exGroups().some(g=>g.items.some(h=>h.includes('data-ex="vtab"'))));
     exClick("vtab"); ok("verbtabell: listan visar verben man kan", !!q('[data-pick="'+x.verb+'"]'));
     q('[data-pick="'+x.verb+'"]').click(); ok("verbtabell: listan öppnar tabellen", document.querySelectorAll(".vtin").length===ins.length);
@@ -717,7 +731,7 @@ appReady().then(async()=>{ try{
   // 12. Sommartid
   { const x={s:1,due:0}; schedule(x,true,9,new Date(2026,9,24,21,0).getTime());
     const y={s:1,due:0}; schedule(y,true,9,new Date(2027,2,26,21,0).getTime());
-    ok("sommartid: förfallodagen räknas i kalenderdagar", x.dd===new Date(2026,9,27).getTime()&&y.dd===new Date(2027,2,29).getTime(), new Date(x.dd)+" / "+new Date(y.dd)); }
+    ok("sommartid: förfallodagen räknas i kalenderdagar", x.dd===new Date(2026,9,31).getTime()&&y.dd===new Date(2027,3,2).getTime(), new Date(x.dd)+" / "+new Date(y.dd)); }
 
   // 13. Tyck till
   { setView("fb"); q("#fbtext").value="Det här är otydligt A"; q("#fbtext").dispatchEvent(new Event("input")); q("#fbsend").click(); setView("ova");
@@ -1691,7 +1705,7 @@ appReady().then(async()=>{ try{
   { await ensureExam(); const keep=JSON.stringify({prep:S.prep||null,iv:S.iv||null,exam:S.exam||null,log:S.log,w:S.w});
     const iso=n=>{const d=new Date(+planToday()+n*864e5); return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0");};
     delete S.prep; delete S.iv; S.w={}; S.log=[]; delete S.exam; renderStart();
-    ok("mot målet: utan datum ber panelen om datum", hasPrep()&&!!q("#prep")&&q("#prep").textContent.includes("Lägg in datum"));
+    ok("dagens uppdrag: utan datum gäller den skola med närmast krav", hasPrep()&&!!q("#prep")&&q("#prep").textContent.includes("B1 till HEM Genève"), q("#prep")&&q("#prep").textContent.replace(/\s+/g," ").slice(0,160));
     S.prep={iv:iso(90),d1:iso(130),d2:iso(190),h:2};
     S.log=Array.from({length:20},(_,i)=>({d:Date.now()-i*864e5,dur:1800,right:5,total:10,dp:1}));
     S.exam=examRes(p=>p==="co"?60:p==="ce"?40:30);
@@ -1700,7 +1714,8 @@ appReady().then(async()=>{ try{
     ok("mot målet: provdelarna i poäng av 25 (bara B1-delarna)", f.parts.length===4&&f.parts.find(p=>p.id==="co").pts===15&&f.parts.find(p=>p.id==="ce").pts===10&&f.known===4&&f.tot===15+10+8+8, JSON.stringify(f.parts));
     ok("mot målet: prognosen växer med tiden och har en status", f.ms[2].proj>f.ms[1].proj&&f.ms[1].proj>f.ms[0].proj&&f.ms.every(m=>PREP_ST[m.status]));
     S.prep.h=20; ok("mot målet: fler timmar i veckan ger bättre prognos", prepForecast().ms[1].proj>f.ms[1].proj); S.prep.h=2;
-    renderStart(); ok("mot målet: panelen på startsidan visar datum och status", q("#prep").textContent.includes("Intervjun")&&document.querySelectorAll("#prep .prepst").length===3);
+    renderStart(); ok("dagens uppdrag: överst på startsidan med mål, stapel och tre saker att göra", app.firstElementChild&&app.firstElementChild.id==="prep"&&q("#prep").textContent.includes("Dagens uppdrag")&&!!q("#prep .plvtrack")&&document.querySelectorAll("#prep [data-prepday]").length===3&&q("#prep").textContent.includes("minuter"), q("#prep")&&q("#prep").textContent.replace(/\s+/g," ").slice(0,200));
+    { const td=prepToday(prepForecast(),prepPhase(prepMilestones())); ok("dagens uppdrag: Dagens pass, svagaste provdelen och intervjufrågor före intervjun", td.items[0].go==="daily"&&td.items[0].ok===S.log.some(l=>l.dp&&l.d>=+planToday())&&td.items[1].go==="exam"&&/skriva|tala/.test(td.items[1].t)&&td.items[1].t.includes("8/25")&&td.items[2].go==="iv", JSON.stringify(td.items.map(x=>[x.t,x.ok]))); }
     const ph=prepPhase(prepMilestones()), wk=prepWeek(ph), ws=prepWeekStart();
     ok("mot målet: fas 1 före intervjun, veckans pass räknas", ph.id===1&&wk[0].done===S.log.filter(l=>l.d>=ws).length&&wk.some(x=>x.go==="iv"), JSON.stringify(wk.map(x=>[x.t,x.done,x.n])));
     S.prep.iv=iso(-1); ok("mot målet: efter intervjun fas 2 med provuppgifter", prepPhase(prepMilestones()).id===2&&prepWeek(prepPhase(prepMilestones())).some(x=>/en per del/.test(x.t))); S.prep.iv=iso(90);
@@ -1716,7 +1731,7 @@ appReady().then(async()=>{ try{
     ok("föräldravyn: elevens text escapas", !pPrep({lv:"<b>x</b>",ms:[{name:"<img src=x>",status:"ok",days:1}]}).includes("<img"));
     S.prep={d1:iso(-3)}; ok("mot målet: passerade datum räknas inte, skolorna finns kvar", prepMilestones().length===0&&prepSummary()&&!prepSummary().ms.length&&prepSummary().schools.length===prepSchools().length);
     { const rows=prepSchoolRows(prepForecast()); ok("skolor: kraven jämförs med nivån", prepSchools().length>=4&&rows.every(r=>r.none||PREP_ST[r.status])&&rows.some(r=>r.level==="B2"), JSON.stringify(rows.map(r=>[r.id,r.level,r.status])));
-      S.prep={}; renderStart(); ok("skolor: panelen visar kraven även utan datum, med skolans egen nivå", q("#prep").textContent.includes("Skolornas krav")&&q("#prep").textContent.includes("upp till B2"));
+      S.prep={}; renderStart(); ok("skolor: Dagens uppdrag visar skolans krav även utan datum", q("#prep").textContent.includes("Dagens uppdrag")&&q("#prep").textContent.includes("till HEM Genève")&&!!q("#prep .plvtrack"));
       openPrep(); ok("skolor: sidan listar skolorna med status", document.querySelectorAll(".prepms .prepst").length>=prepSchools().length&&q("#app").textContent.includes("HEMU Lausanne"));
       ok("föräldravyn: skolornas krav", pPrep(prepSummary()).includes("Skolornas krav")); }
     // Intervjun
@@ -2037,7 +2052,7 @@ appReady().then(async()=>{ try{
     ok("srs: gammal post {s,last} fortsätter (3:e rätt = 7 dagar)", b.s===3&&b.dd===addDays(now,7), JSON.stringify(b));
     ok("srs: fel nollställer och tar bort dd, r och n kvar", c.s===0&&!("dd" in c)&&c.r===3&&c.n===4&&c.last===now, JSON.stringify(c));
     ok("srs: högst 90 dagar", d.dd===addDays(now,90));
-    ok("srs: SRS_DAYS som orden i dagar", SRS_DAYS.join()==="1,3,7,20,45,90"&&DAYS.slice(2).join()==="3,7,20,45,90"); }
+    ok("srs: SRS_DAYS som orden i dagar", SRS_DAYS.join()==="1,3,7,21,45,90"&&DAYS.slice(0,6).join()===SRS_DAYS.join()); }
   ok("srs: förfallen = övad och dd passerad eller saknas", !srsDue(undefined)&&srsDue({s:2,last:1})&&srsDue({s:1,dd:past})&&!srsDue({s:1,dd:future}));
   // weakestFirst: förfallna (svagast först), nya, resten
   { S.zz={a:{s:3,last:5,dd:past},b:{s:0,last:1,dd:future},d:{s:1,last:9}};
@@ -2168,7 +2183,7 @@ appReady().then(async()=>{ try{
     const d={s:2,due:0}; schedule(d,true,10,t0,"type"); schedule(d,true,11,t0,"type");
     ok("kan: skrivet rätt tar ordet till steg 4 (kan)", d.s===4&&d.mp===11, JSON.stringify(d));
     const e={s:4,due:0}; schedule(e,false,12,t0,"mc");
-    ok("kan: fel på flerval ger steg 2 som förut", e.s===2&&e.lapses===1); }
+    ok("kan: fel på flerval börjar om (steg 0, önskemål 2026-11-03)", e.s===0&&e.lapses===1); }
   // Hela passet: ett ord på steg 3 rätt med flerval stannar på 3, ett rätt skrivet går till 4
   { const [w1,w2]=WORDS.filter(w=>w.sec!=="mine").slice(-2), p=S.pass;
     S.w[w1.id]={s:3,due:0,f:"mc",lp:1}; S.w[w2.id]={s:3,due:0,f:"type",lp:1};
@@ -2189,9 +2204,9 @@ appReady().then(async()=>{ try{
 
 
 # ---------------------------------------------------------------------------------------------------------
-# Självbedömning i fyra steg och grundformen i Mina ord (backloggen P3, 2026-09-30): efter ett rätt skrivet ord i
-# glosquizet väljer eleven Igen/Svårt/Bra/Lätt (S.selfRate, av som standard; tangenterna 1–4, Enter/Nästa = Bra);
-# Svårt = samma steg, Lätt = två steg, Igen = fel; flerval räcker fortfarande bara till MC_MAX. Ord utan glosa som
+# Valen efter ett rätt svar (önskemål 2026-11-03, ersätter självbedömningen från 2026-09-30): när ordet kommer tillbaka
+# och Fortsätt enligt plan / Stanna kvar / Ett steg tillbaka / Börja om (tangenterna 1–4, Enter/Nästa = fortsätt);
+# flerval räcker fortfarande bara till MC_MAX. Ord utan glosa som
 # sparas från en text får grundformen (lemmaOf i 03-lemma.js): fährt → fahren, belles → beau; befintliga Mina ord orörda.
 # ---------------------------------------------------------------------------------------------------------
 SCENARIO_SELFRATE = r"""<script>
@@ -2199,47 +2214,45 @@ const out=[]; const q=s=>document.querySelector(s);
 const ok=(name,cond,info="")=>out.push((cond?"OK   ":"FEL  ")+name+(info?"  ("+info+")":""));
 const key=k=>document.body.dispatchEvent(new KeyboardEvent("keydown",{key:k,bubbles:true}));
 appReady().then(async()=>{ try{
-  // 1. schedule med bedömning
-  { const t0=Date.now(), a={s:2,due:0}, b={s:2,due:0}, c={s:2,due:0}, d={s:1,due:0}, e={s:5,due:0,mp:1};
-    schedule(a,true,5,t0,"type","hard"); schedule(b,true,5,t0,"type"); schedule(c,true,5,t0,"type","easy"); schedule(d,true,5,t0,"mc","easy"); schedule(e,false,5,t0,"type","easy");
-    ok("självbedömning: Svårt stannar på steget (kortare intervall än Bra)", a.s===2&&a.dd===addDays(t0,DAYS[2])&&b.s===3&&a.dd<b.dd, JSON.stringify([a,b]));
-    ok("självbedömning: Lätt hoppar ett steg längre och kan ge kan", c.s===4&&c.mp===5&&c.dd===addDays(t0,DAYS[4]), JSON.stringify(c));
-    ok("självbedömning: gäller inte flerval (MC_MAX) och inte fel svar", d.s===2&&e.s===2&&e.lapses===1, JSON.stringify([d,e])); }
-  // 2. Av som standard: inga knappar, och inställningen finns
+  // 1. schedule med valen efter ett rätt svar (önskemål 2026-11-03)
+  { const t0=Date.now(), f=g=>{ const x={s:2,due:0}; schedule(x,true,5,t0,"type",g); return x; };
+    const pl=f(), st=f("stay"), bk=f("back"), rs=f("reset"), mc={s:2,due:0}, wr={s:5,due:0,mp:1};
+    schedule(mc,true,5,t0,"mc"); schedule(wr,false,5,t0,"type","stay");
+    ok("valen: fortsätt (3 veckor), stanna kvar (7 dagar), ett steg tillbaka (3 dagar), börja om (1 dag)", pl.s===3&&pl.dd===addDays(t0,21)&&st.s===2&&st.dd===addDays(t0,7)&&bk.s===1&&bk.dd===addDays(t0,3)&&rs.s===0&&rs.dd===addDays(t0,1), JSON.stringify([pl,st,bk,rs].map(x=>x.s)));
+    ok("valen: flerval räcker fortfarande bara till MC_MAX, och fel börjar alltid om", mc.s===2&&wr.s===0&&wr.lapses===1&&!wr.mp, JSON.stringify([mc,wr]));
+    const km={s:4,due:0,mp:2}; schedule(km,true,9,t0,"type","back"); ok("valen: ett steg tillbaka från kan tar bort kan", km.s===3&&!km.mp); }
+  // 2. Rutan efter ett rätt svar
   const ws3=WORDS.filter(w=>w.sec!=="mine"&&!/[,=(]/.test(w.t)).slice(-6);
   const play=(ans)=>{ const c=sess.cur; q("#ans").value=ans===false?"zzzq":c.w.t; q("#submit").click(); return c; };
   S.mode="type"; ws3.forEach(w=>S.w[w.id]={s:2,due:0,f:"type",lp:1});
-  ok("självbedömning: av som standard", !S.selfRate);
-  startSession([],ws3.slice(0,1)); play(); ok("självbedömning: inga knappar när den är av", !q("[data-rate]")&&!!q("#submit"));
-  quitSession();
-  renderStart(); q("#setd").open=true; const sr=q('[data-sr="1"]');
-  ok("självbedömning: valet finns i Fler inställningar", !!sr&&q("#setd").textContent.includes("Bedöm själv hur svårt det var"));
-  sr.click(); ok("självbedömning: slås på i inställningarna", S.selfRate===true&&q('[data-sr="1"]').getAttribute("aria-pressed")==="true");
-  // 3. Ett pass med bedömningar: 4 = Lätt, Nästa = Bra, 2 = Svårt, 1 = Igen, fel svar = inga knappar
+  renderStart(); ok("valen: ingen inställning behövs (gamla Bedöm själv borta)", !q('[data-sr]'));
+  // Ett pass: Nästa = fortsätt, 2 = stanna kvar, 3 = tillbaka, 4 = börja om, fel svar = inga val
   { const [w1,w2,w3,w4,w5]=ws3, p=S.pass; $("#tabs").hidden=true; beginQuiz("words",[w1,w2,w3,w4,w5].map(w=>({w,isNew:false,t:"type",canType:true})),{newW:[],due:[w1,w2,w3,w4,w5]});
     let c=play(); const btns=[...app.querySelectorAll("[data-rate]")];
-    ok("självbedömning: fyra knappar efter rätt skrivet svar, Bra förvald", btns.map(b=>b.textContent).join()==="Igen,Svårt,Bra,Lätt"&&q('[data-rate="good"]').getAttribute("aria-pressed")==="true", btns.map(b=>b.textContent).join());
-    ok("självbedömning: Nästa-knappen finns kvar (Enter går vidare)", q("#submit").textContent==="Nästa"&&document.activeElement===q("#submit"));
-    key("4"); ok("självbedömning: tangenten 4 = Lätt och går vidare", sess.rate[c.w.id]==="easy"&&sess.cur.w.id!==c.w.id);
-    c=play(); q("#submit").click(); ok("självbedömning: Nästa = Bra (inget sparat)", !(c.w.id in sess.rate));
-    c=play(); key("2"); ok("självbedömning: tangenten 2 = Svårt", sess.rate[c.w.id]==="hard"&&S.run.rate&&S.run.rate[c.w.id]==="hard", JSON.stringify(S.run.rate));
-    // återuppta: bedömningarna följer med
-    const r0=JSON.stringify(sess.rate); resumeRun(); ok("självbedömning: sparas i S.run och följer med när passet fortsätts", JSON.stringify(sess.rate)===r0, r0);
-    c=play(); key("1");
-    ok("självbedömning: Igen räknas som fel och kommer tillbaka som flerval", sess.firstTry[c.w.id]===false&&sess.rate[c.w.id]==="again"&&[sess.cur,...sess.queue].some(x=>x.w.id===c.w.id&&x.t==="mc"&&x.again));
-    const cw=play(false); ok("självbedömning: inga knappar efter fel svar (Igen)", !q("[data-rate]")&&sess.firstTry[cw.w.id]===false);
+    ok("valen: fyra knappar efter rätt svar, fortsätt förvald, med när ordet kommer tillbaka", btns.length===4&&btns[0].textContent.startsWith("Fortsätt enligt plan")&&btns[0].textContent.includes("om 3 veckor")&&btns[1].textContent.includes("om 7 dagar")&&btns[3].textContent.includes("i morgon")&&q('[data-rate="plan"]').getAttribute("aria-pressed")==="true"&&q("#rate .label").textContent.includes("Kommer tillbaka om 3 veckor"), btns.map(b=>b.textContent).join(" | "));
+    ok("valen: Nästa-knappen finns kvar (Enter går vidare)", q("#submit").textContent==="Nästa"&&document.activeElement===q("#submit"));
+    q("#submit").click(); ok("valen: Nästa = fortsätt enligt plan (inget sparat)", !(c.w.id in (sess.rate||{})));
+    c=play(); key("2"); ok("valen: tangenten 2 = stanna kvar och går vidare", sess.rate[c.w.id]==="stay"&&sess.cur.w.id!==c.w.id&&S.run.rate&&S.run.rate[c.w.id]==="stay");
+    const r0=JSON.stringify(sess.rate); resumeRun(); ok("valen: sparas i S.run och följer med när passet fortsätts", JSON.stringify(sess.rate)===r0, r0);
+    c=play(); key("3"); ok("valen: tangenten 3 = ett steg tillbaka", sess.rate[c.w.id]==="back");
+    c=play(); key("4"); ok("valen: tangenten 4 = börja om", sess.rate[c.w.id]==="reset");
+    const cw=play(false); ok("valen: inga val efter fel svar", !q("[data-rate]")&&sess.firstTry[cw.w.id]===false);
     q("#submit").click();
-    let g=0; while(sess&&sess.cur&&g++<20){ if(sess.cur.t==="mc"){ q('[data-i="'+sess.d.opts.findIndex(o=>o.ok)+'"]').click(); ok("självbedömning: inga knappar på flerval", !q("[data-rate]")); q("#nx").click(); } else { play(); q("#submit").click(); } }
+    let g=0; while(sess&&sess.cur&&g++<20){ if(sess.cur.t==="mc"){ q('[data-i="'+sess.d.opts.findIndex(o=>o.ok)+'"]').click(); q("#nx").click(); } else { play(); q("#submit").click(); } }
     const s=id=>S.w[id].s;
-    ok("självbedömning: schemat efter passet (Lätt 4, Bra 3, Svårt 2, Igen och fel 1)", !sess&&s(w1.id)===4&&s(w2.id)===3&&s(w3.id)===2&&s(w4.id)===1&&s(w5.id)===1&&S.w[w1.id].mp===p,
+    ok("valen: schemat efter passet (fortsätt 3, stanna 2, tillbaka 1, börja om 0, fel 0)", !sess&&s(w1.id)===3&&s(w2.id)===2&&s(w3.id)===1&&s(w4.id)===0&&s(w5.id)===0&&S.w[w1.id].dd===addDays(Date.now(),21),
       [w1,w2,w3,w4,w5].map(w=>s(w.id)).join()); }
+  // Flerval visar också valen
+  { const w=ws3[5]; S.w[w.id]={s:1,due:0,lp:1}; $("#tabs").hidden=true; beginQuiz("words",[{w,isNew:false,t:"mc",canType:false}],{newW:[],due:[w]});
+    q('[data-i="'+sess.d.opts.findIndex(o=>o.ok)+'"]').click(); ok("valen: visas också efter rätt flerval", app.querySelectorAll("[data-rate]").length===4); quitSession(); }
   // 4. Extraövning och nya ord
   { const [w1]=ws3; beginQuiz("words",[{w:w1,isNew:false,t:"type",canType:true}],{newW:[],due:[w1],extra:true}); play();
-    ok("självbedömning: inga knappar i extraövningen", !q("[data-rate]")); quitSession();
-    const nw=WORDS.find(w=>w.sec!=="mine"&&!isLearned(w)&&!/[,=(]/.test(w.t)), p=S.pass;
-    beginQuiz("words",[{w:nw,isNew:true,t:"type",canType:true}],{newW:[nw],due:[]}); play(); key("4"); if(sess&&sess.cur) q("#submit").click();
-    ok("självbedömning: Lätt på ett nytt ord hoppar över nästa pass", S.w[nw.id]&&S.w[nw.id].s===1&&S.w[nw.id].due===p+INT[1], JSON.stringify(S.w[nw.id])); }
-  S.selfRate=false; S.mode="mix"; save();
+    ok("valen: inga i extraövningen", !q("[data-rate]")&&!q("#rate")); quitSession();
+    const nw=WORDS.find(w=>w.sec!=="mine"&&!isLearned(w)&&!/[,=(]/.test(w.t));
+    beginQuiz("words",[{w:nw,isNew:true,t:"type",canType:true}],{newW:[nw],due:[]}); play();
+    ok("valen: ett nytt ord visar bara att det kommer tillbaka i morgon", q("#rate")&&q("#rate").textContent.includes("i morgon")&&!q("[data-rate]")); q("#submit").click();
+    ok("valen: ett nytt ord kommer tillbaka nästa dag", S.w[nw.id]&&S.w[nw.id].s===0&&S.w[nw.id].dd===addDays(Date.now(),1), JSON.stringify(S.w[nw.id])); }
+  S.mode="mix"; save();
   // 5. Grundform: tyska
   useLang("de");
   const L1=t=>(lemmaOf(t)||{}).t;
@@ -3545,7 +3558,7 @@ setTimeout(async()=>{ try{
   renderStart(); setView("stats");
   const lv=levelEstimate();
   ok("provindex: startsidan, statistiken och nivåmätaren hämtar inte provet", !fetched().length&&lv.exam&&lv.exam.examName===EX().name&&!__err.length, fetched().join());
-  openWriting(); const nw=EX().tasks.filter(t=>exKind(t)==="write").length;
+  await loadCode("skriv"); openWriting(); const nw=EX().tasks.filter(t=>exKind(t)==="write").length;   // skrivsidan är en kodmodul
   ok("provindex: skrivsidan listar provets skrivuppgifter ur indexet", nw>0&&qa("[data-pickx]").length===nw&&!fetched().length, qa("[data-pickx]").length+" av "+nw);
   if(L.plan){ openPlan(); ok("provindex: planen visas utan provfilen", !!q("#app .panel")&&!fetched().length&&!__err.length); }
   // Offline: hämtningen misslyckas, ett vänligt meddelande och Försök igen
@@ -3723,7 +3736,7 @@ def test_texts_split():
     ok("texter: utan texter ingen textfil", split_texts({"phrases": [{"id": "p"}]}) == ({"phrases": [{"id": "p"}]}, None))
     # Kodmodulerna
     files = {p.stem: p.read_text(encoding="utf-8") for p in data.glob("code-*.js")}
-    want = {"code-tala": "talkChat", "code-tycktill": "sendTyckTill", "code-parent": "pCourse", "code-prep": "openPrep", "code-vtab": "openVtab", "code-ovningar": "startKtest"}
+    want = {"code-tala": "talkChat", "code-tycktill": "sendTyckTill", "code-parent": "pCourse", "code-prep": "openPrep", "code-vtab": "openVtab", "code-ovningar": "startKtest", "code-skriv": "writeScreen"}
     ok("kod: Tala, Tyck till, Föräldravyn, Mot målet, verbtabellerna och kapitelprovet i egna filer med hash, inte i index.html men i preview.html",
        all(k in files and files[k].rstrip().endswith(f'lazyDone("{k[5:]}");') and k in dv and f"function {fn}(" in files[k]
            and page.count(f"function {fn}(") == page.count(f'function {fn}(...a){{return lazyRun("{k[5:]}"') and f"function {fn}(" in preview

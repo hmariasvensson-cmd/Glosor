@@ -98,24 +98,55 @@ function prepWeek(ph){
   items.forEach(x=>x.ok=x.done>=x.n);
   return items;
 }
+/* Dagens uppdrag (föräldern 2026-11-04: "supertydligt vad de måste göra för att klara kraven"): överst på startsidan.
+   Målet som ligger närmast (ett eget datum eller den skola med högst krav som eleven helst vill till), var eleven ligger
+   (stapel från A1 till målet), minuter i dag mot det som behövs, och tre saker att göra i dag: Dagens pass, den svagaste
+   provdelen och fasens uppgift (intervjufrågor före intervjun, annars en skrivuppgift eller Tala). Bockas av ur loggen. */
+function prepGoal(f){
+  const late=f.ms.find(m=>m.status!=="ok")||f.ms[0];
+  if(late) return {name:late.name.charAt(0).toLowerCase()+late.name.slice(1),when:prepWhen(late.date),days:late.days,lv:lvShort(late.goal),x:late.goal,needW:late.status==="ok"?0:late.needW,status:late.status};
+  const sc=prepSchoolRows(f).filter(r=>!r.none).sort((a,b)=>(a.prio||9)-(b.prio||9)||((a.days>0?a.days:1e9)-(b.days>0?b.days:1e9))||b.need-a.need)[0];   // helst-skolorna, närmast datum först
+  if(!sc) return null;
+  const w=sc.days>0?sc.days/7:null, need=Math.max(0,(sc.need-f.base.lv)*PREP_H);
+  return {name:sc.name,when:sc.when,days:sc.days>0?sc.days:null,lv:sc.level,x:sc.need,needW:w&&sc.status!=="ok"?Math.round(need/w*10)/10:0,status:sc.status};
+}
+function prepToday(f,ph){
+  const t0=+planToday(), log=(S.log||[]).filter(l=>l&&+l.d>=t0), tt=((S.exam||{}).t)||{}, tasks=EX().tasks||[];
+  const out=[{t:"Dagens pass",ok:log.some(l=>l.dp),go:"daily"}];
+  const low=f.parts.slice().sort((a,b)=>(a.pts==null?-1:a.pts)-(b.pts==null?-1:b.pts))[0];
+  if(low) out.push({t:`Provuppgift: ${low.sv.toLowerCase()}${low.pts==null?" (inte gjord än)":` (${low.pts}/25)`}`,ok:tasks.some(x=>x.part===low.id&&tt[x.id]&&+tt[x.id].last>=t0),go:"exam"});
+  const ivA=Object.values(((S.iv||{}).a)||{});
+  if(ph&&ph.id===1&&hasIv()) out.push({t:"Två intervjufrågor: skriv ditt svar och få Claudes kommentar",ok:ivA.filter(a=>a&&+a.d>=t0).length>=2,go:"iv"});
+  else if(f.parts.find(p=>p.id==="pe"&&(p.pts==null||p.pts<13))) out.push({t:"En skrivuppgift med Claudes kommentar",ok:log.some(l=>l.kind==="write"),go:"write"});
+  else out.push({t:"Tala 4/3/2 eller samtal med Claude",ok:log.some(l=>l.kind==="talk"),go:"talk"});
+  return {items:out,min:Math.round(log.reduce((a,l)=>a+(+l.dur||0),0)/60)};
+}
+const prepBar=(lv,goal)=>{ const hi=Math.max(3,Math.ceil(goal||3)), pc=n=>Math.max(0,Math.min(100,100*(n-1)/(hi-1))), ts=[];
+  for(let n=1;n<=hi;n++) ts.push(n);
+  return `<div class="plvbar" role="img" aria-label="Nivå ungefär ${esc(lvShort(lv))}, målet ${esc(lvShort(goal||hi))}"><div class="plvtrack"><i style="width:${pc(lv).toFixed(1)}%"></i>${ts.map(n=>`<span class="plvtick" style="left:${pc(n).toFixed(1)}%"></span>`).join("")}<span class="plvtick goal" style="left:${pc(goal||hi).toFixed(1)}%"></span></div>
+    <div class="plvlabels">${ts.map(n=>`<span style="left:${pc(n).toFixed(1)}%">${esc(LV_NAMES[n]||"")}</span>`).join("")}</div></div>`; };
 // Panelen på startsidan
 function prepPanel(){
   try{
     if(!hasPrep()) return "";
-    const p=prepState(), ms=prepMilestones();
-    const sch=prepSchools().filter(x=>lvNum(x.level)), top=sch.length?sch.slice().sort((a,b)=>lvNum(b.level)-lvNum(a.level))[0].level:"";
-    const schLine=sch.length?`<p class="foot">Skolornas krav på ${esc(L.name.toLowerCase())}: upp till ${esc(top)} (${sch.length} ${sch.length===1?"skola":"skolor"}). Du ligger nu på ungefär ${esc(lvShort(prepLevel(levelEstimate()).lv))}.</p>`:"";
-    if(!ms.length) return `<section class="panel" id="prep"><div class="meta"><span class="label">Mot målet</span></div>${schLine}
-      <p class="plan">Lägg in datumen för ${hasIv()?"antagningsintervjun och ":""}${esc(L.exam.name)}, så räknar appen ut var du ligger, om du hinner och vad du ska göra varje vecka.</p>
+    const ms=prepMilestones(), f=prepForecast(), g=prepGoal(f);
+    if(!g) return `<section class="panel" id="prep"><div class="meta"><span class="label">Dagens uppdrag</span></div>
+      <p class="plan">Lägg in datumen för ${hasIv()?"antagningsintervjun och ":""}${esc(L.exam.name)}, så räknar appen ut var du ligger, om du hinner och vad du ska göra varje dag.</p>
       <button class="btn ghost" id="prepopen">Lägg in datum</button></section>`;
-    const f=prepForecast(), ph=prepPhase(ms), wk=prepWeek(ph), ok=wk.filter(x=>x.ok).length;
-    return `<section class="panel" id="prep"><div class="meta"><span class="label">Mot målet</span><span>nu ungefär ${esc(lvShort(f.base.lv))}</span></div>
-      <ul class="prepms">${f.ms.map(m=>`<li><span><b>${esc(m.name)}</b><small>${esc(prepWhen(m.date))} · ${m.days} dagar</small></span><span class="prepst ${PREP_ST[m.status][1]}">${PREP_ST[m.status][0]}</span></li>`).join("")}</ul>
-      ${schLine}<p class="foot">${esc(ph.name)}. Den här veckan: ${ok} av ${wk.length} klara.</p>
+    const ph=ms.length?prepPhase(ms):null, td=prepToday(f,ph), dayMin=Math.max(20,Math.ceil((g.needW||f.pace.tot)*60/7/5)*5), done=td.items.filter(x=>x.ok).length;
+    return `<section class="panel" id="prep"><div class="meta"><span class="label">Dagens uppdrag</span><span class="prepst ${PREP_ST[g.status][1]}">${PREP_ST[g.status][0]}</span></div>
+      <p class="plan">Målet: <b>${esc(g.lv)} till ${esc(g.name)}</b>${g.days!=null?` (${g.days} dagar kvar)`:""}${g.when&&g.days==null?` (${esc(g.when)})`:""}. Du ligger på ungefär <b>${esc(lvShort(f.base.lv))}</b>.</p>
+      ${prepBar(f.base.lv,g.x||f.T)}
+      <ul class="prepwk">${td.items.map((x,i)=>`<li class="${x.ok?"ok":""}"><button type="button" class="goal-ck" data-prepday="${i}"><span class="box" aria-hidden="true">${x.ok?"✓":""}</span><span>${esc(x.t)}</span></button></li>`).join("")}</ul>
+      <p class="foot">I dag: ${td.min} av ${dayMin} minuter${g.needW?` (för att hinna behövs ungefär ${prepFmtH(g.needW)} timmar i veckan)`:""}. ${done===td.items.length?"Dagens uppdrag är klart!":""}</p>
       <button class="btn ghost" id="prepopen">Planen och prognosen</button></section>`;
-  }catch(e){ warnErr("panelen Mot målet kunde inte visas",e); return ""; }
+  }catch(e){ warnErr("Dagens uppdrag kunde inte visas",e); return ""; }
 }
-function wirePrep(){ if($("#prepopen")) $("#prepopen").onclick=()=>openFrom(renderStart,openPrep,"Till startsidan"); }
+function wirePrep(){
+  if($("#prepopen")) $("#prepopen").onclick=()=>openFrom(renderStart,openPrep,"Till startsidan");
+  const its=app.querySelector("[data-prepday]")?prepToday(prepForecast(),prepMilestones().length?prepPhase(prepMilestones()):null).items:[];
+  app.querySelectorAll("[data-prepday]").forEach(b=>b.onclick=()=>{ const x=its[+b.dataset.prepday]; if(x) openFrom(renderStart,()=>prepGo(x.go),"Till startsidan"); });
+}
 // Sidan med datum, nivå, prognos och veckans plan hämtas först när den öppnas (data/code-prep.js, lazyRun i app.js)
 // @lazy prep
 function prepGo(k){

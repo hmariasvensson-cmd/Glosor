@@ -146,7 +146,7 @@ defineKind("words",{name:"Glosor",
     const w=c.w;return{
     head:`<div class="word"><p class="q-prompt" ${lang()}>${esc(w.t)}</p><button class="speak" id="sp" aria-label="Läs upp">${SPK}</button></div>`,
     ask:"Vad betyder det?",
-    opts:mcOptions(w).map(o=>({label:o.sv,ok:o.id===w.id})),
+    opts:mcOptions(w).map(o=>({label:o.sv,ok:o.id===w.id})), onAnswer:rateBox,
     wrongCard:studyCard(w),
     explain:explain(w), say:w.t, sayOnShow:true}},
   type:c=>{const w=c.w;return{
@@ -154,30 +154,32 @@ defineKind("words",{name:"Glosor",
     ask:`Skriv ${L.inLang} ${w.g?`(${genderName(w.g)})`:""}`, placeholder:"Skriv här", accents:L.accents,
     accepted:variants(w.t), answer:w.t, explain:explain(w), wrongCard:studyCard(w), say:w.t, override:true, onAnswer:rateBox}}});
 
-/* Självbedömning i fyra steg (S.selfRate, av som standard): efter ett rätt skrivet svar på första försöket väljer
-   eleven Igen/Svårt/Bra/Lätt (tangenterna 1–4). Bra är förvalt, så Enter, mellanslag och Nästa går vidare som
-   vanligt. Fel svar är alltid Igen. Bedömningen sparas i sess.rate (och S.run.rate) och används av schedule i
-   finishSession: Svårt = samma steg (kommer tillbaka tidigare), Lätt = två steg upp. Igen räknas som fel svar.
-   Bara skrivna svar kan bedömas, så flerval räcker fortfarande bara till steg MC_MAX. Extraövningen visar inga knappar
-   (den flyttar inte schemat). */
-const RATES=[["again","Igen"],["hard","Svårt"],["good","Bra"],["easy","Lätt"]];
+/* När ordet kommer tillbaka (elevens önskemål 2026-11-03, alla kurser): efter ett rätt svar på första försöket visas när
+   ordet kommer tillbaka och fyra val: Fortsätt enligt plan (förvalt, ett steg upp), Stanna kvar (samma mellanrum), Ett
+   steg tillbaka och Börja om (en dag). Tangenterna 1–4; Enter, mellanslag och Nästa = Fortsätt enligt plan. Valet sparas
+   i sess.rate (och S.run.rate) och används av schedule i finishSession. Nya ord kommer alltid tillbaka nästa dag, så där
+   visas bara det. Extraövningen visar inget (den flyttar inte schemat). */
+const RATES=[["plan","Fortsätt enligt plan"],["stay","Stanna kvar"],["back","Ett steg tillbaka"],["reset","Börja om"]];
+const daysTxt=n=>n===1?"i morgon":n>=14&&n%7===0?`om ${n/7} veckor`:`om ${n} dagar`;
+const dateTxt=n=>new Date(addDays(Date.now(),n)).toLocaleDateString("sv-SE",{weekday:"long",day:"numeric",month:"long"});
+// Dagar till nästa gång om eleven väljer g (samma uträkning som schedule, på en kopia)
+function rateDays(x,t,g){ const y={...x}; schedule(y,true,S.pass,Date.now(),t,g==="plan"?undefined:g); return DAYS[y.s]; }
 function rateBox(ok){
-  const c=sess&&sess.cur; if(!ok||!S.selfRate||!c||sess.kind!=="words"||sess.extra||c.again||c.t!=="type"||(c.k&&c.k!=="words")) return;
+  const c=sess&&sess.cur; if(!ok||!c||sess.kind!=="words"||sess.extra||c.again||(c.k&&c.k!=="words")||!c.w) return;
   const id=itemId(c), fb=app.querySelector("#fb .feedback"); if(!fb||sess.firstTry[id]!==true) return;
+  const x=ws(c.w.id);
+  if(c.isNew||!x){ fb.insertAdjacentHTML("beforeend",`<p class="foot nextback" id="rate">Nytt ord: kommer tillbaka ${daysTxt(DAYS[0])}.</p>`); return; }
   sess.rate=sess.rate||{};
-  fb.insertAdjacentHTML("beforeend",`<div class="rate" id="rate"><span class="label">Hur svårt var det?</span>
-    <div class="grade">${RATES.map(([k,n])=>`<button type="button" class="btn ${k==="good"?"":"ghost"}" data-rate="${k}" aria-pressed="${k==="good"}">${n}</button>`).join("")}</div>
-    <p class="foot">Tangenterna 1–4. Bra är förvalt: Enter eller Nästa går vidare.</p></div>`);
+  const opts=RATES.map(([k,n])=>({k,n,d:rateDays(x,c.t,k)}));
+  fb.insertAdjacentHTML("beforeend",`<div class="rate" id="rate"><span class="label">Kommer tillbaka ${esc(daysTxt(opts[0].d))} (${esc(dateTxt(opts[0].d))})</span>
+    <div class="grade">${opts.map(o=>`<button type="button" class="btn ${o.k==="plan"?"":"ghost"}" data-rate="${o.k}" aria-pressed="${o.k==="plan"}">${esc(o.n)}<small>${esc(daysTxt(o.d))}</small></button>`).join("")}</div>
+    <p class="foot">Tangenterna 1–4. Fortsätt enligt plan är förvalt: Enter eller Nästa går vidare.</p></div>`);
   fb.querySelectorAll("[data-rate]").forEach(b=>b.onclick=()=>rateWord(b.dataset.rate));
 }
 function rateWord(k){
   const c=sess&&sess.cur; if(!c||!sess.answered) return;
   const id=itemId(c); sess.rate=sess.rate||{};
-  if(k==="good") delete sess.rate[id]; else sess.rate[id]=k;
-  if(k==="again"){   // "Jag chansade": räknas som fel och kommer tillbaka som flerval, som ett fel svar
-    sess.firstTry[id]=false;
-    if(!sess.queue.some(q=>itemId(q)===id)&&(sess.tries[id]||0)<MAX_AGAIN){ sess.tries[id]=(sess.tries[id]||0)+1; sess.queue.push({...c,t:"mc",again:true}); sess.total++; }
-  }
+  if(k==="plan") delete sess.rate[id]; else sess.rate[id]=k;
   nextQ();
 }
 
@@ -199,14 +201,14 @@ function finishSession(){
   const dur=runSecs(sess.start,now), part=n=>Math.round(dur*n/Math.max(1,ids.length+other.length));
   const E={p,d:now,dur:other.length?part(ids.length):dur,nNew:sess.newW.length,nRep:sess.due.length,right:0,total:ids.length,mcR:0,mcN:0,tyR:0,tyN:0,extra};
   if(dp) E.dp=1;
-  const rate=id=>{const r=(sess.rate||{})[id]; return r==="hard"||r==="easy"?r:undefined;};
-  sess.newW.forEach(w=>{const x={s:0,due:p+INT[0],lp:p,ld:now}; const r=applyAnswer(x,w.id); S.w[w.id]=x; tally(E,r);
-    if(!extra&&r.ok&&r.t==="type"&&rate(w.id)==="easy"){ x.s=1; x.due=p+INT[1]; }});   // Lätt: ett nytt ord hoppar över nästa pass
+  const rate=id=>{const r=(sess.rate||{})[id]; return ["stay","back","reset","hard","easy"].includes(r)?r:undefined;};
+  // Ett nytt ord kommer tillbaka nästa dag (DAYS[0]), rätt eller fel
+  sess.newW.forEach(w=>{const x={s:0,due:p+INT[0],dd:addDays(now,DAYS[0]),lp:p,ld:now}; const r=applyAnswer(x,w.id); S.w[w.id]=x; tally(E,r);});
   let newlyMastered=0;
   sess.due.forEach(w=>{
     const x=S.w[w.id]; const r=applyAnswer(x,w.id); tally(E,r);
     if(extra) return;               // extraövning flyttar inte schemat
-    const was=x.s; schedule(x,r.ok,p,now,r.t,r.ok&&r.t==="type"?rate(w.id):undefined); if(r.ok&&was<MASTER&&x.s>=MASTER) newlyMastered++;
+    const was=x.s; schedule(x,r.ok,p,now,r.t,r.ok?rate(w.id):undefined); if(r.ok&&was<MASTER&&x.s>=MASTER) newlyMastered++;
   });
   // Ett pass i Dagens pass utan glosor (inget att repetera, inga nya ord) räknas inte som glospass
   if(ids.length||!dp){ S.log.push(E); if(!extra) S.pass++; }

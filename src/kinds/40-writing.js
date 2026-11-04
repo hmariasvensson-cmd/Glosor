@@ -28,6 +28,8 @@ const wrExamLabel=t=>{ const e=EX(), lv=examLevel(t);
 const wrDone=id=>!!(S.wr&&S.wr[id]);
 const wrExamDone=id=>!!((S.exam&&S.exam.t&&S.exam.t[id])||(S.fb&&S.fb["x:"+id]));
 
+// Skrivsidan och skrivskärmen hämtas först när de öppnas (data/code-skriv.js, lazyRun i app.js)
+// @lazy skriv
 function openWriting(){
   stopSpeech(); $("#tabs").hidden=true; sess=null; curView="ova"; RETURN_TO=null;
   S.wr=S.wr||{}; S.fb=S.fb||{}; S.drafts=S.drafts||{};
@@ -61,6 +63,7 @@ function writeExam(id){ openFrom(openWriting,()=>examTask(id),"Till skrivsidan")
 
 /* ---------- Claudes bedömning, gemensam för Skriv en text och provets skrivuppgifter ----------
    o = {lv, task, words (ordgränsen som text), exam (provets namn, bara i provet), where (del och Teil), criteria, speak} */
+// @lazy-end
 const WR_CRITERIA=lv=>/^A/.test(lv)?["Uppgiften","Ordförråd","Grammatik och stavning"]:["Uppgiften","Sammanhang","Ordförråd","Grammatik"];
 function writePrompt(o,text){
   const lv=o.lv||courseLevel(), low=lv==="A1"||lv==="A2", crit=(o.criteria&&o.criteria.length?o.criteria:WR_CRITERIA(lv));
@@ -128,6 +131,7 @@ function renderWriteFb(f,pass){
    ("modelltexterna klarar checklistan" och "kapitelord i checklistan" i tests/run_tests.py).
    Artikeln tas bara bort när den står som ett eget ord (följd av mellanslag eller apostrof), så att
    "der Lehrer" blir "Lehrer" och inte "hrer", och "insalata" inte blir "nsalata". */
+// @lazy skriv
 const stripArt=(s,re)=>{const m=re&&s.match(re); return m&&/[\s']$/.test(m[0])?s.slice(m[0].length):s;};
 const wfLang=()=>String(L.htmlLang||L.tts||L.code||"").slice(0,2).toLowerCase();
 const WF_PRON=new Set("me m te t se s nous vous mich dich sich uns euch mir dir mi ti si ci vi".split(" "));
@@ -305,6 +309,7 @@ function writeScreen(id){
 
 /* ---------- Veckans skrivuppgift (kort på startsidan) ---------- */
 // Senaste gången eleven skrev en text: Klar i Skriv en text, en bedömd/inlämnad provuppgift eller en kommentar av Claude
+// @lazy-end
 function lastWritten(){
   const xs=new Set(wrExamTasks().map(t=>t.id)), ts=[0];
   Object.values(S.wr||{}).forEach(w=>ts.push(+(w&&w.last)||0));
