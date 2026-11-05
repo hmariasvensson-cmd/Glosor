@@ -4105,6 +4105,35 @@ appReady().then(async()=>{ try{
 </script>"""
 
 
+# Senast övade kursen: appen startar i den, och molnet tar med den till en annan enhet (Maria 2026-11-05)
+LAST_HEAD_CLOUD = r"""<script>__remote["data/users/u_test/senast"]={code:"de4",t:Date.now()-60000};</script>"""
+LAST_HEAD_LOCAL = r"""<script>window.__lastLocal=true; __remote["data/users/u_test/senast"]={code:"de4",t:Date.now()-60000};
+localStorage.setItem("glosor-senast",JSON.stringify({code:"hp",t:Date.now()-1000})); localStorage.setItem("glosor-sprak","fr");</script>"""
+SCENARIO_LAST = r"""<script>
+const out=[]; const q=s=>document.querySelector(s);
+const ok=(name,cond,info="")=>out.push((cond?"OK   ":"FEL  ")+name+(info?"  ("+info+")":""));
+(async()=>{ try{
+  const local=!!window.__lastLocal;
+  await until(()=>L&&L.code===(local?"hp":"de4")); await appReady();
+  if(local){
+    ok("senaste kursen: den lokala (nyare) går före molnet och senast öppnade", L.code==="hp", L.code);
+  } else {
+    ok("senaste kursen: molnets kurs öppnas på en ny enhet", L.code==="de4", L.code);
+    ok("senaste kursen: sparas lokalt efter molnet", JSON.parse(localStorage.getItem("glosor-senast")).code==="de4");
+    useLang("fr"); await appReady(); save();
+    ok("senaste kursen: bara öppna en kurs ändrar inte senast övade", JSON.parse(localStorage.getItem("glosor-senast")).code==="de4");
+    S.log.push({kind:"dict",d:Date.now(),dur:30,right:1,total:1}); save();
+    await until(()=>(__remote["data/users/u_test/senast"]||{}).code==="fr",2000);
+    ok("senaste kursen: en övning sparar kursen lokalt", JSON.parse(localStorage.getItem("glosor-senast")).code==="fr");
+    ok("senaste kursen: och i molnet", (__remote["data/users/u_test/senast"]||{}).code==="fr", JSON.stringify(__remote["data/users/u_test/senast"]));
+  }
+ }catch(e){ ok("undantag", false, e.message+" "+(e.stack||"").split("\n")[1]); }
+ ok("inga JavaScript-fel", !__err.length, __err.join(" ; "));
+ document.body.insertAdjacentHTML("beforeend","<pre id=out>"+out.join("\n").replace(/</g,"&lt;")+"</pre>");
+})();
+</script>"""
+
+
 def main():
     text = run(SCENARIO) + "\n" + run(SCENARIO_DE) + "\n" + run(SCENARIO_FIXES) + "\n" + run(SCENARIO_SYNC, 30000) + "\n" + run_http(SCENARIO_HTTP)
     text += "\n" + run_http(SCENARIO_EXAMLAZY, 60000) + "\n" + test_exam_split()   # provet hämtas vid behov, minifiering, storlek (P2)
@@ -4136,6 +4165,7 @@ def main():
     text += "\n" + run(SCENARIO_TALK, 60000)   # Tala: 4/3/2, samtal med Claude och Skugga (P2: Ny övning Tala, Muntlig förberedelse)
     text += "\n" + run(SCENARIO_KOD, 60000) + "\n" + run_http(SCENARIO_LEMMAHTTP)   # död kod, sparning, flerval, grundformer, äkta ljud (P3)
     text += "\n" + run(SCENARIO_RULEBOX, 30000)   # regeln i korthet före och under grammatikpassen (Oscar 2026-10-03)
+    text += "\n" + run(SCENARIO_LAST, 30000, head=LAST_HEAD_CLOUD) + "\n" + run(SCENARIO_LAST, 30000, head=LAST_HEAD_LOCAL)   # senast övade kursen (Maria 2026-11-05)
     text += "\n" + run(SCENARIO_PROFILES, 60000)   # Vem övar? och Föräldravyn (P2/P3 Konton, sparande och topplista)
     text += "\n" + test_minimal_course()   # en ny, liten kurs (8 → 21 kurser)
     text += "\n" + test_hp_course()   # Högskoleprovet ORD med testord (ordlistan är privat)

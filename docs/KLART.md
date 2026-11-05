@@ -2,6 +2,10 @@
 
 Punkter som har flyttats från [`BACKLOG.md`](BACKLOG.md) när de byggdes. **Referens** anger backloggens rubrik och prioritet. **Commit** anger var ändringen finns i git. **Publicerat** anger versionen av artefakten på https://claude.ai/artifact/YBQv8j4qXQQLuPwLAWt5mP.
 
+## 2026-11-05 (publicerat som version 61)
+
+- **Appen öppnar den kurs man övade i senast** (föräldern 2026-11-05). Inte bara den man öppnade senast, och även på en ny enhet: kursen sparas lokalt (`glosor-senast`) och i molnet (`data/users/<uid>/senast`) när en övning loggas, och vid start vinner den nyaste (`lastMark`, `lastLocal`, `lastCloud` i app.js). Byter eleven kurs själv innan molnet svarat byts den inte tillbaka. Testerna: 2514 OK.
+
 ## 2026-11-04 (publicerat som version 60)
 
 - **Fel ord kommer tillbaka tills det blir rätt** (elevens felrapport 2026-11-03: "ibland får jag inte göra om ord som jag råkat göra fel på"). Efter fem fel i samma pass slutade ordet komma tillbaka (`MAX_AGAIN` = 4). Nu gäller `MAX_WRONG` = 10 för fel svar; når ordet taket står det att det kommer nästa gång.

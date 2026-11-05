@@ -97,6 +97,36 @@ function profNewId(){
     if(!PROF.list.some(p=>p.id===s)) return s; }
 }
 profRead(); profKeys();
+/* Senaste kursen man övade i (en ny loggpost, inte bara öppnade): {code, t} lokalt (LAST_KEY, per profil) och i molnet
+   (data/users/<uid>/senast, per profil), så att appen startar i den kursen, även på en annan enhet. Molnet vinner bara
+   om det är nyare än det lokala och eleven inte själv har bytt kurs sedan sidan öppnades (LAST.moved). */
+const LAST_KEY="glosor-senast", LAST={moved:false,sent:null};
+const lastKey=()=>PROF.cur?LAST_KEY+"@"+PROF.cur:LAST_KEY;
+const lastDoc=()=>CLOUD.db.doc(`data/users/${CLOUD.uid}/senast${PROF.cur?"@"+PROF.cur:""}`);
+function lastLocal(){
+  try{ const x=JSON.parse(localStorage.getItem(lastKey())||"null"); if(x&&LANGUAGES[x.code]) return {code:x.code,t:+x.t||0}; }
+  catch(e){ /* privat läge eller trasig text: ingen senaste kurs */ }
+  return null;
+}
+const lastOk=code=>!!LANGUAGES[code]&&(!LANGUAGES[onlyCourse()]||sameLang(code,onlyCourse()));
+function lastMark(){
+  const x={code:L.code,t:Date.now()};
+  try{ localStorage.setItem(lastKey(),JSON.stringify(x)); }catch(e){ /* privat läge: bara molnet */ }
+  const o=LAST.sent;   // molnet skrivs vid kursbyte och annars högst var tionde minut
+  if(!CLOUD.db||!CLOUD.uid||(o&&o.code===x.code&&o.key===lastKey()&&x.t-o.t<600000)) return;
+  LAST.sent={...x,key:lastKey()};
+  Promise.resolve().then(()=>lastDoc().set(x)).catch(e=>warnErr("senaste kursen kunde inte sparas på claude.ai",e));
+}
+// true om appen bytte till molnets kurs
+async function lastCloud(){
+  try{ const s=await lastDoc().get(), d=s&&s.exists?(s.data()||{}):null;
+    if(!d||!lastOk(d.code)) return false;
+    const loc=lastLocal(); if(loc&&loc.t>=(+d.t||0)) return false;
+    try{ localStorage.setItem(lastKey(),JSON.stringify({code:d.code,t:+d.t||0})); }catch(e){ /* privat läge */ }
+    if(LAST.moved||sess||curView!=="ova"||d.code===WANT_LANG) return false;
+    useLang(d.code); return true;
+  }catch(e){ warnErr("senaste kursen kunde inte läsas från claude.ai",e); return false; }
+}
 // Steg: 1–7 (Moderna språk 1–7) eller "U" (universitet), fältet step i lang.js och upcoming.json.
 // En universitetskurs kan ange stepAs (t.ex. 7 för Franska I): då står "motsvarar steg 7" i stället för "universitet"
 const stepNum=s=>s==="U"?8:(+s||9);
@@ -543,6 +573,7 @@ async function cloudInit(){
     CLOUD.db=db; CLOUD.uid=uid; CLOUD.user=user;
     try{ CLOUD.owner=typeof user.isOwner==="function"&&(await user.isOwner())===true; }catch(e){ CLOUD.owner=false; }   // Föräldravyn
     boardSubscribe(); profSubscribe();
+    if(await lastCloud()) return;   // useLang kopplar lagringen för den nya kursen
     if(L&&L.base) await cloudAttach();   // annars kopplas lagringen när kursens data har hämtats (useLang)
   }catch(e){ warnErr("claude.ai-lagringen kunde inte startas, försöker igen (cloudRetry)",e); }
   finally{ CLOUD.initing=false; }
@@ -691,6 +722,7 @@ function profSwitch(id){
   PROF.cur=id; PROF.edit=PROF.confirm=null; profWriteLocal(); profKeys();
   let code=L?L.code:Object.keys(LANGUAGES)[0];
   try{ const c=localStorage.getItem(langKey()); if(c&&LANGUAGES[c]) code=c; }catch(e){ /* privat läge: samma kurs */ }
+  const last=lastLocal(); if(last&&lastOk(last.code)) code=last.code;
   // Läget byts direkt för den kurs som är vald, så att S aldrig hör till en annan profil än nyckeln (även medan en
   // annan kurs hämtas)
   if(L&&L.base){ loadState(); rebuildWords(); if(code!==L.code) cloudAttach(); }
@@ -741,6 +773,7 @@ document.addEventListener("visibilitychange",()=>{ if(document.visibilityState==
 window.addEventListener("pagehide",flushLocal);
 window.addEventListener("beforeunload",flushLocal);
 function save(soon){
+  if(L&&nLogOf(S)>(+S.nLog||0)) lastMark();   // en ny loggpost: den här kursen övades senast
   S.t=Math.max(Date.now(),(S.t||0)+1); S.nLog=nLogOf(S);   // alltid senare än läget vi utgick från, även om en annan enhets klocka går före
   if(S.log.length>LOG_MAX) foldLog();   // håller dokumentet under lagringsgränsen
   if(LOCAL_PENDING&&LOCAL_PENDING.key!==L.storageKey) flushLocal();   // en annan kurs väntar: skriv den först
@@ -1051,7 +1084,7 @@ function renderStart(){
   $("#src").value=S.src; if(!$("#src").selectedOptions[0]||$("#src").selectedOptions[0].disabled){S.src="auto";$("#src").value="auto"}
   $("#src").onchange=e=>{S.src=e.target.value;save();renderStart()};
   wireBookPanel(); wireChapterMap(); wireWriteNag(); wireSuggest(); wirePrep();
-  app.querySelectorAll("[data-nextc]").forEach(b=>b.onclick=()=>useLang(b.dataset.nextc));
+  app.querySelectorAll("[data-nextc]").forEach(b=>b.onclick=()=>{ LAST.moved=true; useLang(b.dataset.nextc); });
   app.querySelectorAll("[data-n]").forEach(b=>b.onclick=()=>{S.newCount=b.dataset.n==="own"?(S.newCount===WP_PLAN?newCountNow():S.newCount):+b.dataset.n;save();renderStart()});
   app.querySelectorAll("[data-dm]").forEach(b=>b.onclick=()=>{S.dueMax=b.dataset.dm==="own"?(S.dueMax===0?MAXDUE:S.dueMax):+b.dataset.dm;save();renderStart()});
   wireCount("n",v=>{S.newCount=v;save();renderStart()});
