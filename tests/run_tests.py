@@ -83,7 +83,8 @@ appReady().then(()=>{ try{
     tok(x.acc[0]).forEach(w=>{const b=[...document.querySelectorAll("[data-t]")].find(t=>tok(t.textContent)[0]===w); if(b) b.click();}); }
   q("#submit").click(); ok("bisats: bisatsen först godkänns", q("#built").classList.contains("right"), q("#built").textContent); q("#submit").click(); runDe();
   startGram("praep"); answerMC(0); q("[data-report]").click();
-  setTimeout(()=>{},0);
+  ok("rapport: rutan Vad är fel? öppnas", !!q(".repbox")&&document.querySelectorAll("[data-why]").length===5&&!!q("#repnote"));
+  q('[data-why="Facit är fel"]').click(); q("#repnote").value="Prepositionen styr dativ"; q("[data-repsend]").click();
   startGram("err"); ok("hitta felet: fyra val", sess.d.opts.length>=3 && sess.d.opts.filter(o=>o.ok).length===1); runDe();
   startGram("mix"); runDe(); ok("blandad grammatik", S.gt.mix&&S.gt.mix.n>0);
   startMix(); ok("blandad runda har grammatik", [sess.cur,...sess.queue].some(x=>x.k==="gram")); runDe();
@@ -98,6 +99,8 @@ appReady().then(()=>{ try{
   window.__plurals=genderNouns().filter(n=>n.pl).map(n=>n.w.t+" => "+n.pl).join("\n");
   setView("stats"); ok("statistik: grammatik", q("#app").textContent.includes("Adjektivändelser"));
   ok("rapport om fel facit sparas", Object.keys(__remote).some(k=>k.startsWith("reports/u_test/items/")), Object.keys(__remote).join());
+  { const r=Object.entries(__remote).find(([k])=>k.startsWith("reports/u_test/items/")); const v=r&&r[1]||{};
+    ok("rapport: snabbval, rad, elevens svar och om det räknades", v.note==="Prepositionen styr dativ"&&(v.why||[])[0]==="Facit är fel"&&!!v.given&&typeof v.ok==="boolean", JSON.stringify(v)); }
   exClick("exam"); ok("tyska: provträning Goethe B2", document.querySelectorAll("[data-xt]").length>=15&&q("#app").textContent.includes("Goethe"));
   { const t=EX().tasks.find(t=>t.part==="hoeren"); examTask(t.id); ok("tyska: hörprov döljer texten", !!q("#explay")&&q("#lines").hidden); }
   // Tyska 4: egen kurs med egen sparnyckel

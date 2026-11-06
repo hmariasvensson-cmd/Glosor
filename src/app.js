@@ -1627,19 +1627,41 @@ function showTypeResult(d,res,inp){
   if(!res.self) speak(d.say);
   if($("#ovr")) $("#ovr").onclick=()=>{unrecord();snapRun();if($("#back"))$("#back").remove();$("#ovr").outerHTML="<p><b>Okej, räknas som rätt.</b></p>";inp.classList.remove("wrong");inp.classList.add("right")};
 }
-/* "Fel i frågan?": eleven kan rapportera ett felaktigt facit eller en konstig mening.
-   Rapporterna sparas i reports/<uid>/items/<tid> i artefaktens db (privat för eleven, läses av föräldern) (läses av föräldern eller Claude), annars i S.reports. */
+/* "Fel i frågan?": eleven kan rapportera ett felaktigt facit eller en konstig mening. Knappen öppnar en liten ruta med
+   snabbval (why) och en valfri rad (note), så att det syns vad som var fel. Rapporten har facit (answer), elevens eget
+   svar (given: det skrivna eller det valda alternativet) och om det räknades som rätt (ok).
+   Rapporterna sparas i reports/<uid>/items/<tid> i artefaktens db (privat för eleven, läses av föräldern eller Claude),
+   annars i S.reports. */
+const REPORT_WHY=["Facit är fel","Mitt svar borde räknas","Översättningen är konstig","Fel i meningen","Annat"];
 const reportBtn=()=>`<button type="button" class="override" data-report>Fel i frågan? Rapportera</button>`;
-async function sendReport(btn){
-  const c=sess&&sess.cur, d=sess&&sess.d; if(!c||btn.disabled) return;
-  const r={lang:L.code,id:itemId(c),kind:c.k||sess.kind,t:c.t,answer:String((d&&d.answer)||""),d:Date.now(),pass:S.pass,...profField()};
-  btn.disabled=true; btn.textContent="Skickar …";
-  let ok=false;
-  if(CLOUD.db&&CLOUD.uid){ try{ await CLOUD.db.doc(`reports/${CLOUD.uid}/items/${r.d}`).set({...r,uid:CLOUD.uid}); ok=true; }catch(e){ warnErr("felrapporten kunde inte skickas, sparas till senare",e); } }
-  if(!ok){ S.reports=(S.reports||[]).slice(-(UNSENT_MAX-1)); S.reports.push(r); save(); }
-  btn.textContent="Tack! Frågan är rapporterad och blir kontrollerad.";
+function openReport(btn){
+  if(!sess||!sess.cur) return;
+  const box=document.createElement("div"); box.className="repbox";
+  box.innerHTML=`<p><b>Vad är fel?</b></p><div class="repwhy">${REPORT_WHY.map(w=>`<button type="button" class="chip" data-why="${esc(w)}">${esc(w)}</button>`).join("")}</div>
+    <textarea id="repnote" rows="2" maxlength="500" placeholder="Skriv gärna en rad om vad som är fel (valfritt)"></textarea>
+    <div class="repact"><button type="button" class="btn small" data-repsend>Skicka</button><button type="button" class="override" data-repno>Avbryt</button></div>`;
+  btn.replaceWith(box);
+  box.querySelectorAll("[data-why]").forEach(b=>b.onclick=()=>{ b.classList.toggle("on"); });
+  box.querySelector("[data-repno]").onclick=()=>box.replaceWith(document.createRange().createContextualFragment(reportBtn()));
+  box.querySelector("[data-repsend]").onclick=e=>sendReport(e.target,box);
 }
-document.addEventListener("click",e=>{const b=e.target.closest&&e.target.closest("[data-report]"); if(b) sendReport(b);});
+async function sendReport(btn,box){
+  const c=sess&&sess.cur, d=sess&&sess.d; if(!c||btn.disabled) return;
+  const inp=app.querySelector("#ans"), pick=app.querySelector(".opt.wrong")||app.querySelector(".opt.right");
+  const given=inp?inp.value:pick?(d.opts[+pick.dataset.i]||{}).label||pick.textContent:"";
+  const why=box?[...box.querySelectorAll("[data-why].on")].map(b=>b.dataset.why):[];
+  const note=box?String(box.querySelector("#repnote").value||"").trim().slice(0,500):"";
+  const ok=inp?inp.classList.contains("right"):pick?pick.classList.contains("right"):null;
+  const r={lang:L.code,id:itemId(c),kind:c.k||sess.kind,t:c.t,answer:String((d&&d.answer)||""),given:String(given).trim().slice(0,300),
+    ...(ok==null?{}:{ok}),...(why.length?{why}:{}),...(note?{note}:{}),d:Date.now(),pass:S.pass,...profField()};
+  btn.disabled=true; btn.textContent="Skickar …";
+  let sent=false;
+  if(CLOUD.db&&CLOUD.uid){ try{ await CLOUD.db.doc(`reports/${CLOUD.uid}/items/${r.d}`).set({...r,uid:CLOUD.uid}); sent=true; }catch(e){ warnErr("felrapporten kunde inte skickas, sparas till senare",e); } }
+  if(!sent){ S.reports=(S.reports||[]).slice(-(UNSENT_MAX-1)); S.reports.push(r); save(); }
+  const done=document.createElement("p"); done.className="repdone"; done.textContent="Tack! Frågan är rapporterad och blir kontrollerad.";
+  (box||btn).replaceWith(done);
+}
+document.addEventListener("click",e=>{const b=e.target.closest&&e.target.closest("[data-report]"); if(b) openReport(b);});
 /* Tangentbordet: siffror väljer svar i flerval (och Fel/Nästan/Rätt vid självbedömning, och de fyra valen för när
    ordet kommer tillbaka i glosquizet), mellanslag eller
    Enter går till nästa ord när man lär sig nya ord, pilarna bläddrar, och Enter går alltid vidare efter ett svar. */

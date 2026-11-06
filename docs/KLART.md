@@ -2,6 +2,10 @@
 
 Punkter som har flyttats från [`BACKLOG.md`](BACKLOG.md) när de byggdes. **Referens** anger backloggens rubrik och prioritet. **Commit** anger var ändringen finns i git. **Publicerat** anger versionen av artefakten på https://claude.ai/artifact/YBQv8j4qXQQLuPwLAWt5mP.
 
+## 2026-11-06 (publicerat som version 62)
+
+- **Felrapporten frågar vad som är fel** (elevens rapporter utan kommentar: "Oh, dommage !", "transitera", "jouer au foot", alla rätt i appen). "Fel i frågan? Rapportera" öppnar en ruta med snabbval (Facit är fel, Mitt svar borde räknas, Översättningen är konstig, Fel i meningen, Annat) och en valfri rad. Rapporten får nya fält: `why` (valen), `note` (raden), `given` (elevens skrivna svar eller valda alternativ) och `ok` (om svaret räknades som rätt); `answer` är som förut facit (`openReport`, `sendReport` i app.js). Testerna: 2516 OK.
+
 ## 2026-11-05 (publicerat som version 61)
 
 - **Appen öppnar den kurs man övade i senast** (föräldern 2026-11-05). Inte bara den man öppnade senast, och även på en ny enhet: kursen sparas lokalt (`glosor-senast`) och i molnet (`data/users/<uid>/senast`) när en övning loggas, och vid start vinner den nyaste (`lastMark`, `lastLocal`, `lastCloud` i app.js). Byter eleven kurs själv innan molnet svarat byts den inte tillbaka. Testerna: 2514 OK.

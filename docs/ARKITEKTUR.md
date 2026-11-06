@@ -7,7 +7,7 @@ Glosor har tre sorters data, och de hålls helt åtskilda.
 | **Kod** | `src/` (app.js, `kinds/*.js` med en fil per övningstyp, feedback.js, main.js, page.html, style.css), `build.py`, `tests/` | Claude | Ja |
 | **Kursinnehåll** | `languages/<kod>/`: `lang.js` (inställningar), `grammar.json` (grammatikområden och regler), `words.txt`, `content/*.json`, `videos.json`, `ids.lock` (id-låset) | Claude (AI-skrivet, eget material) | Ja |
 | **Bokmaterial** | `languages/<kod>/book/kapNN/` (foton, `words.txt`, `content/*.json`), `book/sidor.json` och `book/ids.lock` | Claude, från foton som föräldern skickar | **Nej** (`.gitignore`, eget lokalt git-repo) |
-| **Elevernas data** | Artefaktens db: `data/users/<uid>/<storageKey>` (framsteg, privat för eleven), `data/users/<uid>/profiles` (Vem övar?, privat), `board/<uid>` (topplista), `feedback/<uid>/msgs/<tid>` (Tyck till), `reports/<uid>/items/<tid>` (fel i frågor) och `summary/<uid>` (sammanfattningen till föräldern), de tre sista privata för eleven och läsbara för ägaren. Kopia av framstegen i elevens webbläsare (localStorage). | Eleverna, via appen | Nej |
+| **Elevernas data** | Artefaktens db: `data/users/<uid>/<storageKey>` (framsteg, privat för eleven), `data/users/<uid>/profiles` (Vem övar?, privat), `board/<uid>` (topplista), `feedback/<uid>/msgs/<tid>` (Tyck till), `reports/<uid>/items/<tid>` (fel i frågor: `{lang, id, kind, t, answer, given, ok, why, note, d, pass, uid}`, där `answer` är facit, `given` elevens svar och `why`/`note` elevens förklaring) och `summary/<uid>` (sammanfattningen till föräldern), de tre sista privata för eleven och läsbara för ägaren. Kopia av framstegen i elevens webbläsare (localStorage). | Eleverna, via appen | Nej |
 
 ## Från källor till app
 
