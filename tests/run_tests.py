@@ -3669,6 +3669,7 @@ setTimeout(async()=>{ try{
   if(L.code!=="fr") await pick("fr");
   const c=C();
   ok("textindex: kursens fil har bara indexet", Array.isArray(c.lazyTexts)&&c.lazyTexts.includes("reading")&&!textsReady()&&c.reading.length>10&&!c.reading.some(heavy)&&c.reading.every(t=>t.id&&t.title&&t.nq>0&&t.len>0), c.lazyTexts);
+  ok("textindex: skrivuppgifterna utan exempeltext", c.lazyTexts.includes("prompts")&&c.prompts.length>10&&c.prompts.every(p=>p.task&&!p.model&&!p.modelSv));
   renderStart(); setView("stats"); setView("ova");
   openReading(); const nr=c.reading.length;
   ok("textindex: startsidan, statistiken och listan hämtar inte texterna", qa("[data-pick]").length===nr&&!fetched(/-texts\.json/).length&&!__err.length, qa("[data-pick]").length+" av "+nr);
@@ -3689,6 +3690,8 @@ setTimeout(async()=>{ try{
   ok("lästext: påbörjat pass sparat", !!S.run&&S.run.kind==="rq"&&S.run.done===1);
   pauseSession(); window.dispatchEvent(new Event("pagehide"));
   openListening(); if(C().listening.length){ listenIntro(C().listening[0].id); ok("hörtext: öppnas direkt när texterna är hämtade", !q("#lzwait")&&!!q("#toq")&&fetched(/-texts\.json/).length===1); }
+  { const p=C().prompts.find(p=>p.model&&p.modelSv); ok("skrivuppgift: exempeltexten finns efter hämtningen", !!p);
+    if(p){ writeScreen(p.id); await wait(()=>q("#wtext")); ok("skrivuppgift: exempeltexten visas", !!q("#wtext")&&q("details.more .ex-t").textContent===p.model); q("#quit").click(); } }
   sessionStorage.setItem("keep","1"); sessionStorage.setItem("phase","2"); sessionStorage.setItem("out",JSON.stringify(out));
   if(__err.length) return done();
   location.reload();

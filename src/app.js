@@ -2007,7 +2007,7 @@ function ensureExam(){
 /* Läs- och hörtexterna och kulturtexterna (content.reading, listening, culture) ligger i en egen fil, data/<kod>-texts.json
    (split_texts och LAZY_TEXTS i build.py), som hämtas första gången en text öppnas (ensureTexts). Kursens datafil har ett
    index: content.lazyTexts = [typerna i filen] och per text alla fält utom de tunga (lines, gloss, questions; i kulturen
-   också q, ask, model, modelSv) plus nq (antal frågor) och len (antal tecken på målspråket). Listorna, menyn, planen och
+   också q, ask, model, modelSv; i skrivuppgifterna model, modelSv) plus nq (antal frågor) och len (antal tecken på målspråket). Listorna, menyn, planen och
    Dagens pass (dailyText) läser bara indexet. Det som behöver texten börjar med textsWait (30-texts.js): readIntro,
    listenIntro, cultureScreen och resumeRun (ett påbörjat pass med frågor till en text). textsReady() säger om de finns. */
 const textsReady=()=>{ const c=L&&L.content; return !c||!c.lazyTexts; };

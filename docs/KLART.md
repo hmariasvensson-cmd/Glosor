@@ -2,6 +2,11 @@
 
 Punkter som har flyttats från [`BACKLOG.md`](BACKLOG.md) när de byggdes. **Referens** anger backloggens rubrik och prioritet. **Commit** anger var ändringen finns i git. **Publicerat** anger versionen av artefakten på https://claude.ai/artifact/YBQv8j4qXQQLuPwLAWt5mP.
 
+## 2026-11-06, del 2 (publicerat som version 63)
+
+- **Felsvar och samma rot i Franska 3** (elevens önskemål 2026-10-19, P2 Felsvar och samma rot i språkkurserna). Alla 2335 ord i `languages/fr/words.txt` och bokens kapitel har fält 8 (samma rot, 1270 ord) och fält 9 (tre felsvar), skrivna av sex AI-agenter och ihopslagna med ett skript som kontrollerade att ord-id:t är oförändrat och att inget felsvar är rätt svar; 40 stickprov granskade. Flervalet får nu lockande fel (falska vänner, ord som låter likt) i stället för bara ord som stavas likt. Bokens ord ligger i bokens privata repo.
+- fr.json 1591 → 1453 kB: skrivuppgifternas exempeltexter (`model`, `modelSv`) hämtas med texterna (`LAZY_TEXTS["prompts"]`, `textsWait` i `writeScreen`). Testerna: 2516 OK (provtypernas scen gick igenom ensam efter en tidsgräns i hela körningen).
+
 ## 2026-11-06 (publicerat som version 62)
 
 - **Felrapporten frågar vad som är fel** (elevens rapporter utan kommentar: "Oh, dommage !", "transitera", "jouer au foot", alla rätt i appen). "Fel i frågan? Rapportera" öppnar en ruta med snabbval (Facit är fel, Mitt svar borde räknas, Översättningen är konstig, Fel i meningen, Annat) och en valfri rad. Rapporten får nya fält: `why` (valen), `note` (raden), `given` (elevens skrivna svar eller valda alternativ) och `ok` (om svaret räknades som rätt); `answer` är som förut facit (`openReport`, `sendReport` i app.js). Testerna: 2516 OK.

@@ -66,6 +66,7 @@ LAZY_TEXTS = {
     "las": ["text", "questions"],   # Högskoleprovet LÄS och ELF (07-hpverbal.js)
     "elf": ["text", "questions"],
     "intervju": ["tips", "phrases", "model", "modelSv", "follow"],   # antagningsintervjun (46-intervju.js): frågorna står kvar
+    "prompts": ["model", "modelSv"],   # skrivuppgifternas exempeltexter (writeScreen i 40-writing.js): uppgiften står kvar
 }
 
 

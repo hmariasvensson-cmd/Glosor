@@ -271,6 +271,7 @@ const textHash=s=>{let h=0; for(const c of String(s).trim()) h=(h*31+c.codePoint
 // Bedömningen av en av kapitlets uppgifter: samma prompt som provet, nivå = uppgiftens (valfritt fält level) eller kursens
 const wrPromptOpt=p=>({lv:cefrOf(p.level)||courseLevel(),task:`${p.title}: ${p.task}`,words:`${p.min}–${p.max} ord.`});
 function writeScreen(id){
+  if(textsWait(()=>writeScreen(id),"Skriva")) return;   // exempeltexten (model, modelSv) ligger i textfilen (LAZY_TEXTS)
   const p=(C().prompts||[]).find(x=>x.id===id); S.drafts=S.drafts||{}; S.wr=S.wr||{};
   const dk="w:"+id, start=Date.now();
   $("#tabs").hidden=true; sess=null;
