@@ -2,6 +2,10 @@
 
 Punkter som har flyttats från [`BACKLOG.md`](BACKLOG.md) när de byggdes. **Referens** anger backloggens rubrik och prioritet. **Commit** anger var ändringen finns i git. **Publicerat** anger versionen av artefakten på https://claude.ai/artifact/YBQv8j4qXQQLuPwLAWt5mP.
 
+## 2026-11-06, del 3 (publicerat som version 64)
+
+- **Felsvar och samma rot i Tyska 4 och Tyska 5** (elevens önskemål 2026-10-19, P2 Felsvar och samma rot i språkkurserna). Alla 3625 ord i `languages/de4/words.txt` och `languages/de/words.txt` har tre felsvar (falska vänner som Gift, ord med samma stam och annat prefix som verstehen/bestehen) och de flesta samma rot, skrivna av åtta AI-agenter och ihopslagna med samma kontrollskript som franskan. 40 stickprov: två felaktiga rotord rättade, två felsvar som låg för nära rätt svar omskrivna. Tyska 5 1311 → 1431 kB. Testerna: 2519 OK.
+
 ## 2026-11-06, del 2 (publicerat som version 63)
 
 - **Felsvar och samma rot i Franska 3** (elevens önskemål 2026-10-19, P2 Felsvar och samma rot i språkkurserna). Alla 2335 ord i `languages/fr/words.txt` och bokens kapitel har fält 8 (samma rot, 1270 ord) och fält 9 (tre felsvar), skrivna av sex AI-agenter och ihopslagna med ett skript som kontrollerade att ord-id:t är oförändrat och att inget felsvar är rätt svar; 40 stickprov granskade. Flervalet får nu lockande fel (falska vänner, ord som låter likt) i stället för bara ord som stavas likt. Bokens ord ligger i bokens privata repo.
