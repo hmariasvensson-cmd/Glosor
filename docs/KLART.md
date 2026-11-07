@@ -2,6 +2,10 @@
 
 Punkter som har flyttats från [`BACKLOG.md`](BACKLOG.md) när de byggdes. **Referens** anger backloggens rubrik och prioritet. **Commit** anger var ändringen finns i git. **Publicerat** anger versionen av artefakten på https://claude.ai/artifact/YBQv8j4qXQQLuPwLAWt5mP.
 
+## 2026-11-07 (publicerat som version 65)
+
+- **Granskning av samma rot och felsvaren** i Franska 3, Tyska 4 och Tyska 5 (föräldern 2026-11-06). Fyra AI-agenter gick igenom alla 5733 rader och skrev bara rättelser, som ett skript kontrollerade innan de fördes in: 48 rotfält rättade eller borttagna (falsk släktskap som souris/sourire, Freund/Freude, Sucht/suchen, Alt/alt, eller bara en böjningsform av ordet) och 47 felsvar bytta för att de kunde försvaras som rätt (mouvement = tempo, Entfernung = borttagning, Staffel = stafett, s'appeler = ringa varandra). Testerna: 2519 OK.
+
 ## 2026-11-06, del 3 (publicerat som version 64)
 
 - **Felsvar och samma rot i Tyska 4 och Tyska 5** (elevens önskemål 2026-10-19, P2 Felsvar och samma rot i språkkurserna). Alla 3625 ord i `languages/de4/words.txt` och `languages/de/words.txt` har tre felsvar (falska vänner som Gift, ord med samma stam och annat prefix som verstehen/bestehen) och de flesta samma rot, skrivna av åtta AI-agenter och ihopslagna med samma kontrollskript som franskan. 40 stickprov: två felaktiga rotord rättade, två felsvar som låg för nära rätt svar omskrivna. Tyska 5 1311 → 1431 kB. Testerna: 2519 OK.
