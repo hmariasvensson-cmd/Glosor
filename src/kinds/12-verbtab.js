@@ -97,7 +97,7 @@ const vtResHtml=(v,t,right)=>{ const n=L.verbs.persons.length, c0=vtCells(v,t)[0
 // Frågan i Dagens pass: tabellen i quizet, ett försök, och resultatet räknas i passet
 function renderVtabQ(d){
   const [v,t]=d.ref.split("|");
-  app.innerHTML=`<section class="panel"><span class="tab">Verbtabell</span>${progressHead()}${vtTableHtml(v,t)}
+  app.innerHTML=`<section class="panel"><span class="tab">Verbtabell</span>${progressHead()}${vtTableHtml(v,t)}${tenseUse(t)}
     <div id="fb"></div><div class="navrow" id="vtnav"><button class="btn" id="vtcheck">Rätta</button></div></section>${quitBtn()}`;
   $("#quit").onclick=pauseSession;
   vtWire(ins=>{ if(sess.answered) return; sess.answered=true; const right=vtScore(v,t,ins), ok=right===ins.length;
@@ -109,7 +109,7 @@ function openVtab(v,t,back){
   t=t||vtTarget(v); if(!t) return openVtabList();
   stopSpeech(); $("#tabs").hidden=true; sess=null;
   const start=Date.now();
-  app.innerHTML=`<section class="panel"><span class="tab">Verbtabell</span>${vtTableHtml(v,t)}
+  app.innerHTML=`<section class="panel"><span class="tab">Verbtabell</span>${vtTableHtml(v,t)}${tenseUse(t)}
     <div id="vtres"></div>
     <div class="navrow" id="vtnav"><button class="btn" id="vtcheck">Rätta</button></div></section>
     <button class="quit" id="quit">Tillbaka</button>`;

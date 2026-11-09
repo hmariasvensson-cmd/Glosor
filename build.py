@@ -388,11 +388,12 @@ def read_words(code, mono=False):
             fields += [""] * (6 - len(fields))
             s = "|".join(fields)
         # Fält 8 och 9 (oktober 2026, elevens önskemål): samma rot ("ord 'betydelse' · ord 'betydelse'") och luriga
-        # felsvar i flervalet ("fel;fel;fel", lureOptions i 05-words.js). Båda får vara tomma.
-        if mono and not 6 <= len(fields) <= 9:
-            errors.append(f"{where}: {len(fields)} fält, ska vara 2–9 (ord|betydelse|ordklass|exempel||förklaring|ordagrant|samma rot|felsvar)")
-        elif not 6 <= len(fields) <= 9:
-            errors.append(f"{where}: {len(fields)} fält, ska vara 6–9 (ord|svenska|genus|exempel|exempel sv|ursprung|ordagrant|samma rot|felsvar)")
+        # felsvar i flervalet ("fel;fel;fel", lureOptions i 05-words.js). Fält 10 (november 2026): en kort förklaring
+        # med enkla ord av betydelsen (w.def, visas efter svaret). Alla tre får vara tomma.
+        if mono and not 6 <= len(fields) <= 10:
+            errors.append(f"{where}: {len(fields)} fält, ska vara 2–10 (ord|betydelse|ordklass|exempel||förklaring|ordagrant|samma rot|felsvar|kort förklaring)")
+        elif not 6 <= len(fields) <= 10:
+            errors.append(f"{where}: {len(fields)} fält, ska vara 6–10 (ord|svenska|genus|exempel|exempel sv|ursprung|ordagrant|samma rot|felsvar|kort förklaring)")
         else:
             if len(fields) > 8 and fields[8].strip():
                 lures = [x.strip() for x in fields[8].split(";")]
@@ -1765,9 +1766,9 @@ def main():
         if vfile.exists():
             try:
                 own_verbs[code] = json.loads(vfile.read_text(encoding="utf-8"))
-                bad = [k for k in own_verbs[code] if k not in ("sv", "tenses", "notes")]
+                bad = [k for k in own_verbs[code] if k not in ("sv", "tenses", "notes", "use")]
                 if bad:
-                    all_errors.append(f"languages/{code}/verbs.json: bara sv, tenses och notes (inte {', '.join(bad)})")
+                    all_errors.append(f"languages/{code}/verbs.json: bara sv, tenses, notes och use (inte {', '.join(bad)})")
             except (json.JSONDecodeError, TypeError) as e:
                 all_errors.append(f"languages/{code}/verbs.json: {e}")
         verbs_conf = confs[code].get("verbs")

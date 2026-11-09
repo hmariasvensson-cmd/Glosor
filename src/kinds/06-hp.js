@@ -31,7 +31,8 @@ function hpOptions(w,n=HP_N){
   return shuffle([w,...picks]);
 }
 // Ordets förklaring efter svaret: rätt betydelse, exempelmeningen, ursprunget (sjätte fältet) och samma rot (åttonde)
-const hpExplain=w=>`<p class="hpans"><b>${esc(w.t)}</b> = ${esc(w.sv)}</p>${w.exT?`<p class="ex-t">${esc(w.exT)}</p>`:""}${w.ety?`<p class="ety"><span class="label">${esc(L.etyLabel||"Ursprung")}</span><br>${safeHtml(w.ety)}</p>`:""}${rotHtml(w)}`;
+// def: en kort förklaring med enkla ord (fält 10, elevens önskemål 2026-11-08), så att också svaret förstås
+const hpExplain=w=>`<p class="hpans"><b>${esc(w.t)}</b> = ${esc(w.sv)}</p>${defHtml(w)}${w.exT?`<p class="ex-t">${esc(w.exT)}</p>`:""}${w.ety?`<p class="ety"><span class="label">${esc(L.etyLabel||"Ursprung")}</span><br>${safeHtml(w.ety)}</p>`:""}${rotHtml(w)}`;
 // HP-flervalet i glosquizet och kapitelprovet (KINDS.words.mc i 05-words.js frågar isHp())
 function hpMC(c){
   const w=c.w;

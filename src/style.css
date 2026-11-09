@@ -530,3 +530,11 @@ svg.plvhist text{font-size:10px;fill:var(--ink-2)}
 .repact{display:flex;gap:14px;align-items:center}
 .repact .btn.small{width:auto;padding:9px 18px}
 .repdone{margin:8px 0 0;font-weight:600;color:var(--ok)}
+/* Skrivna glosor: vad man skrev (wordTypeCheck) och tipset när uppläsningen inte hörs (wirePlay) */
+.wnote{margin:6px 0 0;padding:8px 10px;border-radius:10px;background:var(--m-soft);color:var(--ink)}
+.playhint{margin:8px 0 0;padding:8px 10px;border-radius:10px;background:var(--amber-soft);color:var(--ink)}
+/* När används tempuset? (tenseUse) */
+.tuse{margin:8px 0;padding:8px 12px;border:1px solid var(--line);border-radius:10px;background:var(--surface-2)}
+.tuse summary{cursor:pointer;font-weight:600;color:var(--navy)}
+.tuse p{margin:6px 0 0}
+.wdef{margin:8px 0 0}

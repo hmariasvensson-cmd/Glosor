@@ -171,10 +171,10 @@ function parseWords(raw){
   raw.trim().split("\n").forEach(l=>{
     l=l.trim(); if(!l) return;
     if(l[0]==="#"){const [id,name,src]=l.slice(1).split("|"); sec={id,name,book:src==="bok"}; sections.push(sec); return;}
-    const [t,sv,g,ex0,exSv,ety,lit,rot,lur]=l.split("|");   // rot = samma rot, lur = luriga felsvar (05-words.js)
+    const [t,sv,g,ex0,exSv,ety,lit,rot,lur,def]=l.split("|");   // rot = samma rot, lur = luriga felsvar (05-words.js), def = kort förklaring
     if(seen.has(t)) return; seen.add(t);
     const exRaw=ex0||"";   // kurser på ett språk (mono) kan sakna exempel
-    words.push({id:t,sec:sec.id,t,sv:sv||"",g:g||"",exT:exRaw.replace(/[\[\]]/g,""),exSv:exSv||"",ety:ety||"",lit:lit||"",rot:rot||"",lur:lur||"",gap:exRaw?findGap(t,exRaw):null});
+    words.push({id:t,sec:sec.id,t,sv:sv||"",g:g||"",exT:exRaw.replace(/[\[\]]/g,""),exSv:exSv||"",ety:ety||"",lit:lit||"",rot:rot||"",lur:lur||"",def:def||"",gap:exRaw?findGap(t,exRaw):null});
   });
   return {sections,words};
 }
@@ -835,8 +835,10 @@ let SOUND=(()=>{try{return localStorage.getItem(SOUND_KEY)!=="av"}catch(e){retur
 function setSound(on){ SOUND=on; try{localStorage.setItem(SOUND_KEY,on?"på":"av")}catch(e){ /* privat läge: gäller bara nu */ }
   if(!on) try{speechSynthesis.cancel()}catch(e){ /* ingen uppläsning */ }
   const b=document.querySelector("#sound"); if(b){ b.setAttribute("aria-pressed",String(!on)); b.textContent=on?"Ljud på":"Ljud av"; } }
+// När en uppläsning senast började (onstart): wirePlay (00-common.js) visar ett tips om ingenting har börjat efter en tryckning på Spela
+let SPOKE_AT=0;
 function speak(t,rate){if(!SOUND||(L&&L.mono))return;try{
-  speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(cleanSay(t));u.lang=L.tts;if(voice)u.voice=voice;u.rate=rate||baseRate();speechSynthesis.speak(u);
+  speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(cleanSay(t));u.lang=L.tts;if(voice)u.voice=voice;u.rate=rate||baseRate();u.onstart=()=>{SPOKE_AT=Date.now();};speechSynthesis.speak(u);
 }catch(e){ /* ingen uppläsning */ }}
 
 /* ---------- Rättning ---------- */
@@ -1558,8 +1560,11 @@ function answerMC(i){
   app.querySelectorAll(".opt").forEach((b,k)=>{b.disabled=true; if(d.opts[k].ok)b.classList.add("right"); else if(k===i)b.classList.add("wrong");});
   const back=record(ok); sess.done++; snapRun();
   $("#fb").innerHTML=`<div class="feedback ${ok?"ok":"bad"}"><strong>${ok?"Rätt!":"Inte riktigt."}</strong>
-    ${backMsg(ok,back)}${!ok&&d.wrongCard?d.wrongCard:d.explain}${reportBtn()}</div>
+    ${backMsg(ok,back)}${!ok&&d.wrongCard?d.wrongCard:d.explain}${!ok?`<button class="override" id="ovr">Jag tryckte fel</button>`:""}${reportBtn()}</div>
     <button class="btn" id="nx" style="margin-top:12px">Nästa</button>`;
+  // "Jag tryckte fel" (elevens felrapport 2026-11-07): som "Jag hade rätt" i skrivfrågorna (unrecord), frågan räknas som rätt
+  if($("#ovr")) $("#ovr").onclick=()=>{ unrecord(); snapRun(); if($("#back")) $("#back").remove();
+    $("#ovr").outerHTML="<p><b>Okej, räknas som rätt.</b></p>"; };
   if(d.onAnswer) d.onAnswer(ok);
   if(d.sayOnAnswer) speak(d.say);
   $("#nx").onclick=nextQ; $("#nx").focus();

@@ -2,6 +2,15 @@
 
 Punkter som har flyttats från [`BACKLOG.md`](BACKLOG.md) när de byggdes. **Referens** anger backloggens rubrik och prioritet. **Commit** anger var ändringen finns i git. **Publicerat** anger versionen av artefakten på https://claude.ai/artifact/YBQv8j4qXQQLuPwLAWt5mP.
 
+## 2026-11-09 (publicerat som version 66)
+
+- **Hörövningarna tysta** (elevens felrapport 2026-11-08, Tyska 4). Knappen Ljud av i sidhuvudet gjorde alla hörövningar tysta, och Spela upp gjorde ingenting. Nu slår Spela upp alltid på ljudet (`wirePlay` i 00-common.js), en rad under knapparna säger när ljudet är avstängt, och har ingen uppläsning börjat efter 2,5 sekunder (`SPOKE_AT`, `onstart`) visas ett tips: volymen, ljudlöst läge på iPhone och rösten för språket.
+- **Skrivna glosor förklaras** (elevens önskemål 2026-11-07 och felrapporten "de rien" för "je vous en prie"). Ett annat ord i kursen med samma betydelse räknas som rätt, med båda orden och betydelserna; ett fel svar visar vad man skrev betyder, eller att det var rätt ord i fel form (`wordTypeCheck` i 05-words.js, `lemmaOf` för böjda former).
+- **Jag tryckte fel** i flervalet (elevens felrapport 2026-11-07), som Jag hade rätt i skrivfrågorna: frågan räknas som rätt.
+- **När används tempuset?** (elevens önskemål 2026-11-07). En utfällbar rad i verbfrågorna och verbtabellen med förklaring på svenska och ett exempel (`tenseUse`, nytt fält `use` i `verbs.json`: Franska 3 sju tempus, Tyska fem).
+- **Kort förklaring för HP-orden** (elevens önskemål 2026-11-08). Nytt fält 10 i words.txt (`w.def`, alla kurser, valfritt), som visas efter svaret och på lärokortet. Alla 4134 HP-ord, skrivna av åtta AI-agenter i den privata ordlistan.
+- "être prié de" översatt "vara ombedd att, ombeds att" (elevens felrapport). Testerna: 2531 OK.
+
 ## 2026-11-07 (publicerat som version 65)
 
 - **Granskning av samma rot och felsvaren** i Franska 3, Tyska 4 och Tyska 5 (föräldern 2026-11-06). Fyra AI-agenter gick igenom alla 5733 rader och skrev bara rättelser, som ett skript kontrollerade innan de fördes in: 48 rotfält rättade eller borttagna (falsk släktskap som souris/sourire, Freund/Freude, Sucht/suchen, Alt/alt, eller bara en böjningsform av ordet) och 47 felsvar bytta för att de kunde försvaras som rätt (mouvement = tempo, Entfernung = borttagning, Staffel = stafett, s'appeler = ringa varandra). Testerna: 2519 OK.

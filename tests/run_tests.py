@@ -2584,7 +2584,7 @@ def test_build_checks():
            and list(d4["tenses"]) == [k for k in de["tenses"] if k != "Konjunktiv I"] and '"Präsens": {' not in page and "Präsens: {" not in page)
         broken(t / "languages" / "de" / "lang.js", lambda s: s.replace("  verbs: {", '  verbs: {\n    tenses: {"Präsens": {}},', 1),
                "verb: tabeller i lang.js stoppar bygget", "ska ligga i languages/de/verbs.json")
-        broken(t / "languages" / "de" / "verbs.json", lambda s: s.replace('"tenses"', '"tenses2"', 1), "verb: okänt fält i verbs.json stoppar", "bara sv, tenses och notes")
+        broken(t / "languages" / "de" / "verbs.json", lambda s: s.replace('"tenses"', '"tenses2"', 1), "verb: okänt fält i verbs.json stoppar", "bara sv, tenses, notes och use")
         ok("bygge: går igenom igen", build().returncode == 0)
 
         # --- lang.js läses med en tokenizer (P3) och fälten per innehållstyp kontrolleras (P2), arkitekturgranskningen 2026-09-29 ---
@@ -3271,7 +3271,7 @@ def test_hp_course():
         (hp / "book" / "words.txt").write_text(good + "felord|fel|genus\nbaraord\nlurord|rätt|subst||||||a;rätt;b\n", encoding="utf-8")
         r2 = build()
         (hp / "book" / "words.txt").write_text(good, encoding="utf-8")
-        ok("hp: okänd ordklass, rad utan betydelse och ett felsvar som är rätt svar stoppar bygget", r2.returncode != 0 and "okänd ordklass 'genus'" in r2.stdout and "1 fält, ska vara 2–9" in r2.stdout and "får inte vara rätt svar" in r2.stdout, "" if r2.returncode else r2.stdout[-300:])
+        ok("hp: okänd ordklass, rad utan betydelse och ett felsvar som är rätt svar stoppar bygget", r2.returncode != 0 and "okänd ordklass 'genus'" in r2.stdout and "1 fält, ska vara 2–10" in r2.stdout and "får inte vara rätt svar" in r2.stdout, "" if r2.returncode else r2.stdout[-300:])
         r = build()
         head = '<script>window.COURSES_UNDER_TEST=["hp"];</script>'
         text = run(SCENARIO_HP, 30000, root=t)
@@ -4140,6 +4140,42 @@ const ok=(name,cond,info="")=>out.push((cond?"OK   ":"FEL  ")+name+(info?"  ("+i
 </script>"""
 
 
+# Elevernas önskemål och felrapporter 2026-11-07/08: skrivna glosor förklaras, Jag tryckte fel, När används tempuset?,
+# Spela slår på ljudet
+SCENARIO_WISH = r"""<script>
+const out=[]; const q=s=>document.querySelector(s);
+const ok=(name,cond,info="")=>out.push((cond?"OK   ":"FEL  ")+name+(info?"  ("+info+")":""));
+appReady().then(async()=>{ try{
+  if(L.code!=="fr") useLang("fr");
+  const w=byId["je vous en prie"], d=KINDS.words.type({w,t:"type",k:"words"});
+  const r1=d.check("de rien"); ok("skriva: synonym ur kursen räknas som rätt med en rad", r1.r==="right"&&/de rien/.test(r1.html)&&/je vous en prie/.test(r1.html), JSON.stringify(r1).slice(0,200));
+  const r2=KINDS.words.type({w:byId["voir"],t:"type",k:"words"}).check("croire"); ok("skriva: annat ord i kursen visar dess betydelse", r2.r==="wrong"&&/croire/.test(r2.html||"")&&/tro/.test(r2.html||""), JSON.stringify(r2).slice(0,200));
+  ok("skriva: rätt svar som förut", d.check("je vous en prie").r==="right"&&!d.check("je vous en prie").html);
+  // Jag tryckte fel i flervalet
+  sess=null; beginQuiz("words",[{k:"words",id:"words:voir",w:byId["voir"],t:"mc"}],{label:"t"});
+  answerMC(sess.d.opts.findIndex(o=>!o.ok)); ok("flerval: knappen Jag tryckte fel efter fel svar", !!q("#ovr")&&q("#ovr").textContent==="Jag tryckte fel");
+  q("#ovr").click(); ok("flerval: Jag tryckte fel räknar frågan som rätt", sess.firstTry["words:voir"]===true&&!sess.queue.some(x=>x.id==="words:voir"), JSON.stringify(sess.firstTry));
+  quitSession&&quitSession();
+  // När används tempuset?
+  const vg=verbGames()[0]; startVerbs(vg.id);
+  ok("verb: När används tempuset? i frågan", !!q("details.tuse")&&/När används/.test(q("details.tuse summary").textContent)&&q("details.tuse p").textContent.length>20, q("details.tuse")&&q("details.tuse summary").textContent);
+  ok("verb: alla tempus i Franska 3 har en förklaring", Object.keys(L.verbs.tenses).every(t=>L.verbs.use&&L.verbs.use[t]&&L.verbs.use[t].sv), Object.keys(L.verbs.use||{}).join());
+  pauseSession();
+  // Spela slår på ljudet
+  setSound(false); const t=C().listening.find(x=>x); listenIntro(t.id); await until(()=>q("[data-pl]"),5000);
+  ok("hörövning: säger att ljudet är avstängt", !!q(".soundoff"));
+  q("[data-pl]").click(); ok("hörövning: Spela slår på ljudet", SOUND===true&&!q(".soundoff"));
+  await until(()=>q(".playhint"),4000);
+  ok("hörövning: tips när ingen uppläsning börjar", !!q(".playhint")&&/ljudlöst/.test(q(".playhint").textContent));
+  if(LANGUAGES.hp&&INLINE_DATA.hp){ useLang("hp"); await until(()=>L.code==="hp"&&WORDS.length,5000);
+    const n=WORDS.filter(w=>w.def).length; ok("hp: kort förklaring för orden", n===WORDS.length&&hpExplain(WORDS[0]).includes("Förklaring"), n+" av "+WORDS.length); }
+ }catch(e){ ok("undantag", false, e.message+" "+(e.stack||"").split("\n")[1]); }
+ ok("inga JavaScript-fel", !__err.length, __err.join(" ; "));
+ document.body.insertAdjacentHTML("beforeend","<pre id=out>"+out.join("\n").replace(/</g,"&lt;")+"</pre>");
+});
+</script>"""
+
+
 def main():
     text = run(SCENARIO) + "\n" + run(SCENARIO_DE) + "\n" + run(SCENARIO_FIXES) + "\n" + run(SCENARIO_SYNC, 30000) + "\n" + run_http(SCENARIO_HTTP)
     text += "\n" + run_http(SCENARIO_EXAMLAZY, 60000) + "\n" + test_exam_split()   # provet hämtas vid behov, minifiering, storlek (P2)
@@ -4171,6 +4207,7 @@ def main():
     text += "\n" + run(SCENARIO_TALK, 60000)   # Tala: 4/3/2, samtal med Claude och Skugga (P2: Ny övning Tala, Muntlig förberedelse)
     text += "\n" + run(SCENARIO_KOD, 60000) + "\n" + run_http(SCENARIO_LEMMAHTTP)   # död kod, sparning, flerval, grundformer, äkta ljud (P3)
     text += "\n" + run(SCENARIO_RULEBOX, 30000)   # regeln i korthet före och under grammatikpassen (Oscar 2026-10-03)
+    text += "\n" + run(SCENARIO_WISH, 30000)   # elevernas önskemål 2026-11-07/08
     text += "\n" + run(SCENARIO_LAST, 30000, head=LAST_HEAD_CLOUD) + "\n" + run(SCENARIO_LAST, 30000, head=LAST_HEAD_LOCAL)   # senast övade kursen (Maria 2026-11-05)
     text += "\n" + run(SCENARIO_PROFILES, 60000)   # Vem övar? och Föräldravyn (P2/P3 Konton, sparande och topplista)
     text += "\n" + test_minimal_course()   # en ny, liten kurs (8 → 21 kurser)

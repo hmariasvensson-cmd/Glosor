@@ -29,11 +29,11 @@ defineKind("verbs",{name:"Verb",
   mc:c=>{const x=c.c;
     const tn=c.tenses||sess.tenses||[x.tense];
     const pool=[...new Set(CONJ.filter(y=>y.verb===x.verb&&tn.includes(y.tense)&&(y.tense===x.tense||y.person===x.person)).map(y=>y.form))].filter(f=>f!==x.form);
-    return{tab:"Verb", head:verbHead(x),
+    return{tab:"Verb", head:verbHead(x)+tenseUse(x.tense),
       ask:`Välj rätt form: <b>${esc(x.person)}</b> · ${esc(x.tense)}`,
       opts:shuffle([{label:x.form,ok:true,lang:true},...shuffle(pool).slice(0,4).map(f=>({label:f,ok:false,lang:true}))]),
       explain:`<p>Rätt svar: <b ${lang()}>${esc(x.full)}</b></p><p>${esc(ruleFor(x))}</p>`, say:x.full, sayOnAnswer:true}},
-  type:c=>{const x=c.c;return{tab:"Verb", head:verbHead(x),
+  type:c=>{const x=c.c;return{tab:"Verb", head:verbHead(x)+tenseUse(x.tense),
     ask:`<b>${esc(x.person)}</b> · ${esc(x.tense)}`, placeholder:"Skriv verbformen", accents:L.verbAccents||L.accents,
     accepted:conjVariants(x), strip:true, answer:x.full, alwaysAnswer:true, nearMsg:"Nästan!",
     explain:`<p>${esc(ruleFor(x))}</p>`, say:x.full}},

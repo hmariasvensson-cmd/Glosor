@@ -221,14 +221,29 @@ function speakSeq(lines,rate,onLine){
     try{
       const u=new SpeechSynthesisUtterance(cleanSay(tl(ln))); u.lang=L.tts;
       const isB=ln.who==="B"; const v=isB?b:a; if(v) u.voice=v; u.pitch=isB&&b===a?1.3:1; u.rate=rate||baseRate();
-      u.onend=()=>{k++; setTimeout(next,300)}; u.onerror=()=>{if(id===seqId){k++; setTimeout(next,300)}};
+      u.onstart=()=>{SPOKE_AT=Date.now();}; u.onend=()=>{k++; setTimeout(next,300)}; u.onerror=()=>{if(id===seqId){k++; setTimeout(next,300)}};
       speechSynthesis.speak(u);
     }catch(e){ /* ingen uppläsning */ }
   };
   next();
 }
-const playBar=(extra="")=>`<div class="listen"><button type="button" class="btn ghost" data-pl="1">${PLAY} Spela upp</button><button type="button" class="btn ghost" data-pl="slow">Långsamt</button>${extra}</div>`;
-function wirePlay(fn){ app.querySelectorAll("[data-pl]").forEach(b=>b.onclick=()=>fn(b.dataset.pl==="slow"?.6:undefined)); }
+const playBar=(extra="")=>`<div class="listen"><button type="button" class="btn ghost" data-pl="1">${PLAY} Spela upp</button><button type="button" class="btn ghost" data-pl="slow">Långsamt</button>${extra}</div>${SOUND?"":`<p class="foot soundoff">Ljudet är avstängt. Det slås på när du trycker på Spela upp.</p>`}`;
+/* Spela-knapparna (data-pl) i hörövningarna. En tryckning slår alltid på ljudet (knappen Ljud av i sidhuvudet gör
+   annars alla hörövningar tysta, elevens felrapport 2026-11-08). Har ingen uppläsning börjat efter PLAY_WAIT ms
+   (SPOKE_AT, onstart) visas ett tips under knappen: ljudlöst läge, volymen och rösten för språket. */
+const PLAY_WAIT=2500;
+function playHint(b){
+  const box=b.closest(".panel")||app; if(box.querySelector(".playhint")) return;
+  const p=document.createElement("p"); p.className="playhint foot";
+  p.innerHTML=`<b>Hör du inget?</b> Kontrollera att volymen är uppe och att telefonen inte står på ljudlöst (på iPhone stänger knappen på sidan också av uppläsningen). Finns ingen röst för ${esc((L.name||"språket").toLowerCase())}: Inställningar → Hjälpmedel → Uppläst innehåll → Röster. Fungerar det ändå inte kan du hoppa över hörövningen.`;
+  (b.closest(".navrow,.playrow,div")||b).insertAdjacentElement("afterend",p);
+}
+function wirePlay(fn){ app.querySelectorAll("[data-pl]").forEach(b=>b.onclick=()=>{
+  if(!SOUND) setSound(true); app.querySelectorAll(".soundoff").forEach(x=>x.remove());
+  const t0=Date.now(); fn(b.dataset.pl==="slow"?.6:undefined);
+  const ok=typeof speechSynthesis!=="undefined";
+  setTimeout(()=>{ if(!ok||SPOKE_AT<t0) { if(b.isConnected) playHint(b); } },ok?PLAY_WAIT:0);
+}); }
 
 /* Text där man kan trycka på ord för att se betydelsen (och spara dem i Mina ord).
    Ord man redan övar på eller har sparat markeras i grönt, som i LWT och Lute. */
@@ -470,4 +485,11 @@ function finishGeneric(){
   $("#home").onclick=renderStart; $("#st").onclick=()=>setView("stats");
   if(againFn) $("#again").onclick=()=>KINDS[againFn[0]].again(againFn[1]);
   renderList(); backHome();
+}
+
+/* När används tempuset? (elevens önskemål 2026-11-07) En utfällbar rad i frågor som ber om en tempusform, med texten ur
+   verbs.json: use = {<tempus>: {sv, ex, exSv}} (förklaring på svenska och ett exempel). Tom sträng när tempuset saknar text. */
+function tenseUse(tense){
+  const u=((L.verbs||{}).use||{})[tense]; if(!u||!u.sv) return "";
+  return `<details class="tuse"><summary>När används ${esc(tense)}?</summary><p>${esc(u.sv)}</p>${u.ex?`<p class="ex-t" ${lang()}>${esc(u.ex)}</p><p class="ex-sv">${esc(u.exSv||"")}</p>`:""}</details>`;
 }

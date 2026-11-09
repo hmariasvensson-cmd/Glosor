@@ -43,7 +43,7 @@ function renderLearn(){
       <div><p class="ex-t" ${lang()}>${esc(w.exT)}</p><p class="ex-sv">${esc(w.exSv)}</p></div>
       <button class="speak sm" id="sp-e" aria-label="Läs upp meningen">${SPK}</button>
     </div>
-    ${litHtml(w)}${w.ety?`<p class="ety"><span class="label">${esc(L.etyLabel||"Ursprung")}</span><br>${safeHtml(w.ety)}</p>`:""}${rotHtml(w)}
+    ${defHtml(w)}${litHtml(w)}${w.ety?`<p class="ety"><span class="label">${esc(L.etyLabel||"Ursprung")}</span><br>${safeHtml(w.ety)}</p>`:""}${rotHtml(w)}
     <div class="navrow">
       <button class="btn ghost" id="prev" ${sess.i?"":"disabled"}>Tillbaka</button>
       <button class="btn" id="next">${sess.i===n-1?"Till quizet":"Nästa ord"}</button>
@@ -116,12 +116,14 @@ function mcOptions(w){
 }
 const explain=w=>`<p class="ex-t" ${lang()}>${esc(w.exT)}</p><p class="ex-sv">${esc(w.exSv)}</p>${(ws(w.id)||{}).memo?`<p class="foot">Din minnesregel: ${esc(ws(w.id).memo)}</p>`:""}`;
 // Lärokortet igen efter ett fel svar: ord, översättning, genus, exempel med uppläsning och ursprung
+// Fält 10 i words.txt: en kort förklaring med enkla ord (Högskoleprovet ORD)
+const defHtml=w=>w.def?`<p class="wdef"><span class="label">Förklaring</span><br>${esc(w.def)}</p>`:"";
 const studyCard=w=>`<div class="recap">
   <div class="word" style="padding-top:0"><div><p class="recap-t" ${lang()}>${esc(w.t)}</p><p class="recap-sv">${esc(w.sv)}</p><div class="tags">${gtag(w.g)}</div></div>
     <button type="button" class="speak sm" data-say="${esc(w.t)}" aria-label="Läs upp ordet">${SPK}</button></div>
   <div class="example"><div><p class="ex-t" ${lang()}>${esc(w.exT)}</p><p class="ex-sv">${esc(w.exSv)}</p></div>
     <button type="button" class="speak sm" data-say="${esc(w.exT)}" aria-label="Läs upp meningen">${SPK}</button></div>
-  ${litHtml(w)}${w.ety?`<p class="ety"><span class="label">${esc(L.etyLabel||"Ursprung")}</span><br>${safeHtml(w.ety)}</p>`:""}${rotHtml(w)}
+  ${defHtml(w)}${litHtml(w)}${w.ety?`<p class="ety"><span class="label">${esc(L.etyLabel||"Ursprung")}</span><br>${safeHtml(w.ety)}</p>`:""}${rotHtml(w)}
   ${memoBox(w)}</div>`;
 // Fraser och talesätt: vad varje ord betyder ordagrant (sjunde fältet i words.txt), t.ex. "avoir – ha · le cafard – kackerlackan"
 // Ord med samma rot (åttonde fältet), t.ex. "postulera 'påstå utan bevis' · postulering 'antagande'"
@@ -140,6 +142,26 @@ document.addEventListener("submit",e=>{const f=e.target.closest&&e.target.closes
   if(v) x.memo=v.slice(0,160); else delete x.memo; save();
   f.outerHTML=`<p class="foot">Sparat. Minnesregeln visas nästa gång ordet kommer.</p>`;});
 
+/* Skrivet svar i glosquizet (elevens önskemål 2026-11-07): ett annat ord i kursen med samma betydelse (svOverlap) räknas
+   som rätt, och båda orden visas med sina betydelser så att skillnaden syns. Ett fel svar får en rad om vad man skrev:
+   ett annat ord i kursen och dess betydelse, en annan form av rätt ord (fel böjning) eller en form av ett annat ord
+   (lemmaOf, grundformerna). Stavfel ("Nästan! Ett stavfel.") och accenter rättas som förut (check). */
+function wordTypeCheck(w,given){
+  const r=check(given,variants(w.t)); if(r!=="wrong") return {r};
+  const g=norm(given), b=s=>`<b ${lang()}>${esc(s)}</b>`; if(!g) return {r};
+  const other=WORDS.find(x=>x.id!==w.id&&variants(x.t).includes(g));
+  if(other&&svOverlap(other.sv,w.sv))
+    return {r:"right",html:`<p class="wnote">Det räknas som rätt: ${b(other.t)} betyder ”${esc(other.sv)}”. Glosan som övas här är ${b(w.t)}, ”${esc(w.sv)}”. Jämför betydelserna: de kan skilja sig lite.</p>`};
+  if(other) return {r,html:`<p class="wnote">Du skrev ${b(other.t)}, som betyder ”${esc(other.sv)}”.</p>`};
+  if(sameWordForm(given,w.t)) return {r,html:`<p class="wnote">Rätt ord, men fel form (böjning eller ändelse). Jämför med rätt svar nedan.</p>`};
+  let lm=null; try{ lm=lemmaOf(given); }catch(e){ /* grundformerna saknas */ }
+  if(lm&&lm.t){
+    if(sameWordForm(lm.t,w.t)||variants(lm.t).some(v=>variants(w.t).includes(v))) return {r,html:`<p class="wnote">Rätt ord, men fel form: ${b(given.trim())} är en form av ${b(lm.t)}.</p>`};
+    return {r,html:`<p class="wnote">Du skrev en form av ${b(lm.t)}, som betyder ”${esc(lm.sv)}”.</p>`};
+  }
+  return {r};
+}
+
 /* Glosquizet: ord → betydelse (flerval) och betydelse → ord (skriva) */
 defineKind("words",{name:"Glosor",
   mc:c=>{if(isHp()) return hpMC(c);   // Högskoleprovet ORD: fem alternativ A–E (06-hp.js)
@@ -152,7 +174,7 @@ defineKind("words",{name:"Glosor",
   type:c=>{const w=c.w;return{
     head:`<p class="q-prompt">${esc(w.sv)}</p>`,
     ask:`Skriv ${L.inLang} ${w.g?`(${genderName(w.g)})`:""}`, placeholder:"Skriv här", accents:L.accents,
-    accepted:variants(w.t), answer:w.t, explain:explain(w), wrongCard:studyCard(w), say:w.t, override:true, onAnswer:rateBox}}});
+    accepted:variants(w.t), check:v=>wordTypeCheck(w,v), answer:w.t, explain:explain(w), wrongCard:studyCard(w), say:w.t, override:true, onAnswer:rateBox}}});
 
 /* När ordet kommer tillbaka (elevens önskemål 2026-11-03, alla kurser): efter ett rätt svar på första försöket visas när
    ordet kommer tillbaka och fyra val: Fortsätt enligt plan (förvalt, ett steg upp), Stanna kvar (samma mellanrum), Ett
