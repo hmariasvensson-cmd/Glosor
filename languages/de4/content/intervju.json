@@ -1,0 +1,1408 @@
+[
+  {
+    "id": "iv-01",
+    "cat": "ich",
+    "q": "Stellen Sie sich bitte kurz vor.",
+    "sv": "Presentera dig kort, tack.",
+    "tips": "Juryn vill få en första bild av dig: namn, ålder, var du kommer ifrån, vad du gör nu och vilket huvudämne du har. Håll det till ungefär en minut och avsluta med musiken, så styr du samtalet dit du vill.",
+    "phrases": [
+      {
+        "fr": "Ich heiße [Name] und bin [Alter] Jahre alt.",
+        "sv": "Jag heter [namn] och är [ålder] år."
+      },
+      {
+        "fr": "Ich komme aus [Stadt], einer Stadt im [Süden / Norden] Schwedens.",
+        "sv": "Jag kommer från [stad], en stad i [södra / norra] Sverige."
+      },
+      {
+        "fr": "Zurzeit besuche ich das letzte Jahr am Gymnasium.",
+        "sv": "Just nu går jag sista året på gymnasiet."
+      },
+      {
+        "fr": "Mein Hauptfach ist [Instrument / Gesang].",
+        "sv": "Mitt huvudämne är [instrument / sång]."
+      },
+      {
+        "fr": "Ich mache seit [Zahl] Jahren Musik.",
+        "sv": "Jag har hållit på med musik i [antal] år."
+      }
+    ],
+    "model": "Guten Tag, ich heiße [Name] und bin [Alter] Jahre alt. Ich komme aus [Stadt], einer Stadt im [Süden / Norden] Schwedens. Zurzeit besuche ich das letzte Jahr an einem Gymnasium mit Musikschwerpunkt. Mein Hauptfach ist [Instrument / Gesang], [ich bin [Stimmfach]]. Ich mache seit [Zahl] Jahren Musik, und am liebsten [spiele / singe] ich Werke von [Komponist]. Neben der Musik interessiere ich mich für Literatur und Sprachen. Ich möchte sehr gern hier studieren, weil ich mich als Musikerin weiterentwickeln möchte.",
+    "modelSv": "God dag, jag heter [namn] och är [ålder] år. Jag kommer från [stad], en stad i [södra / norra] Sverige. Just nu går jag sista året på ett gymnasium med musikinriktning. Mitt huvudämne är [instrument / sång], [jag är [röstfack]]. Jag har hållit på med musik i [antal] år, och helst [spelar / sjunger] jag verk av [kompositör]. Vid sidan av musiken är jag intresserad av litteratur och språk. Jag skulle väldigt gärna vilja studera här, eftersom jag vill utvecklas som musiker.",
+    "follow": [
+      "Warum haben Sie sich für [Instrument / Gesang] entschieden?",
+      "Erzählen Sie uns etwas über Ihre Heimatstadt."
+    ]
+  },
+  {
+    "id": "iv-02",
+    "cat": "ich",
+    "q": "Warum möchten Sie Musik studieren?",
+    "sv": "Varför vill du studera musik?",
+    "tips": "Här vill juryn höra att du har en genomtänkt och personlig motivation, inte bara att du 'tycker om musik'. Berätta när du förstod att musiken skulle bli ditt yrke och visa att du vet att det kräver hårt arbete.",
+    "phrases": [
+      {
+        "fr": "Musik ist das Wichtigste in meinem Leben.",
+        "sv": "Musik är det viktigaste i mitt liv."
+      },
+      {
+        "fr": "Ich habe gemerkt, dass ich nicht nur als Hobby Musik machen möchte.",
+        "sv": "Jag har märkt att jag inte bara vill hålla på med musik som hobby."
+      },
+      {
+        "fr": "Ich kann mir nichts anderes vorstellen.",
+        "sv": "Jag kan inte tänka mig något annat."
+      },
+      {
+        "fr": "Ich möchte mich jeden Tag weiterentwickeln.",
+        "sv": "Jag vill utvecklas varje dag."
+      }
+    ],
+    "model": "Musik ist schon seit meiner Kindheit das Wichtigste in meinem Leben. Wenn ich [spiele / singe], fühle ich mich ganz bei mir. In den letzten Jahren habe ich gemerkt, dass ich nicht nur als Hobby Musik machen möchte. Ich möchte jeden Tag intensiv arbeiten und mich weiterentwickeln. Besonders wichtig ist mir, dass ich mit anderen zusammen musizieren und von erfahrenen Lehrern lernen kann. Ich weiß, dass der Beruf schwer ist, aber ich kann mir nichts anderes vorstellen. Deshalb würde ich gern professionell Musik studieren.",
+    "modelSv": "Musik har varit det viktigaste i mitt liv ända sedan jag var barn. När jag [spelar / sjunger] känner jag mig helt som mig själv. De senaste åren har jag märkt att jag inte bara vill hålla på med musik som hobby. Jag vill arbeta intensivt varje dag och utvecklas. Det är särskilt viktigt för mig att jag kan musicera tillsammans med andra och lära mig av erfarna lärare. Jag vet att yrket är svårt, men jag kan inte tänka mig något annat. Därför skulle jag vilja studera musik på professionell nivå.",
+    "follow": [
+      "Wann haben Sie das zum ersten Mal gemerkt?",
+      "Haben Sie auch über ein anderes Studium nachgedacht?"
+    ]
+  },
+  {
+    "id": "iv-03",
+    "cat": "ich",
+    "q": "Was machen Sie gern in Ihrer Freizeit, wenn Sie nicht üben?",
+    "sv": "Vad gör du gärna på fritiden när du inte övar?",
+    "tips": "Juryn vill se en hel människa och kontrollera att du kan prata fritt om vardagliga saker. Nämn ett eller två intressen och gärna varför de är bra för dig som musiker (vila, inspiration, energi).",
+    "phrases": [
+      {
+        "fr": "In meiner Freizeit bin ich gern draußen in der Natur.",
+        "sv": "På fritiden är jag gärna ute i naturen."
+      },
+      {
+        "fr": "Das hilft mir, den Kopf frei zu bekommen.",
+        "sv": "Det hjälper mig att rensa huvudet."
+      },
+      {
+        "fr": "Außerdem [lese ich gern / mache ich Sport].",
+        "sv": "Dessutom [läser jag gärna / tränar jag]."
+      },
+      {
+        "fr": "Danach habe ich wieder mehr Energie für die Musik.",
+        "sv": "Efteråt har jag mer energi för musiken igen."
+      }
+    ],
+    "model": "Wenn ich nicht übe, bin ich gern draußen in der Natur. In Schweden gehe ich oft im Wald spazieren oder fahre Fahrrad. Das hilft mir, den Kopf frei zu bekommen. Außerdem [lese ich gern Romane / mache ich gern Sport]. Am Wochenende treffe ich gern Freunde, und manchmal kochen wir zusammen. Ich finde es wichtig, auch andere Dinge zu machen, denn danach habe ich wieder mehr Energie für die Musik. Natürlich gehe ich auch gern in Konzerte, wenn ich Zeit habe.",
+    "modelSv": "När jag inte övar är jag gärna ute i naturen. I Sverige går jag ofta på promenader i skogen eller cyklar. Det hjälper mig att rensa huvudet. Dessutom [läser jag gärna romaner / tränar jag gärna]. På helgerna träffar jag gärna vänner, och ibland lagar vi mat tillsammans. Jag tycker att det är viktigt att också göra andra saker, för efteråt har jag mer energi för musiken igen. Självklart går jag också gärna på konserter när jag har tid.",
+    "follow": [
+      "Welches Buch haben Sie zuletzt gelesen?",
+      "Haben Sie neben dem Üben überhaupt genug Zeit für Hobbys?"
+    ]
+  },
+  {
+    "id": "iv-04",
+    "cat": "ich",
+    "q": "Wie würden Sie sich selbst als Musikerin beschreiben?",
+    "sv": "Hur skulle du beskriva dig själv som musiker?",
+    "tips": "Välj två eller tre egenskaper och ge ett konkret exempel på varje. Nämn gärna en svaghet du arbetar med, det visar självinsikt, men avsluta positivt.",
+    "phrases": [
+      {
+        "fr": "Ich würde sagen, dass ich sehr neugierig bin.",
+        "sv": "Jag skulle säga att jag är väldigt nyfiken."
+      },
+      {
+        "fr": "Ich bin fleißig und diszipliniert.",
+        "sv": "Jag är flitig och disciplinerad."
+      },
+      {
+        "fr": "Manchmal bin ich zu kritisch mit mir selbst.",
+        "sv": "Ibland är jag för självkritisk."
+      },
+      {
+        "fr": "Auf der Bühne möchte ich das Publikum berühren.",
+        "sv": "På scenen vill jag beröra publiken."
+      }
+    ],
+    "model": "Ich würde sagen, dass ich eine sehr neugierige Musikerin bin. Ich möchte immer verstehen, warum ein Komponist etwas so geschrieben hat. Außerdem bin ich fleißig und diszipliniert: Ich übe jeden Tag, auch wenn ich keine Lust habe. [Meine Lehrerin / Mein Lehrer] sagt oft, dass ich einen [warmen / klaren] Klang habe und gut auf andere höre. Manchmal bin ich zu kritisch mit mir selbst, aber daran arbeite ich. Auf der Bühne möchte ich vor allem ehrlich sein und das Publikum berühren.",
+    "modelSv": "Jag skulle säga att jag är en väldigt nyfiken musiker. Jag vill alltid förstå varför en kompositör har skrivit något på ett visst sätt. Dessutom är jag flitig och disciplinerad: jag övar varje dag, även när jag inte har lust. [Min lärare] säger ofta att jag har en [varm / klar] klang och lyssnar bra på andra. Ibland är jag för självkritisk, men det arbetar jag med. På scenen vill jag framför allt vara ärlig och beröra publiken.",
+    "follow": [
+      "Können Sie ein Beispiel dafür geben?",
+      "Was ist Ihre größte Schwäche?"
+    ]
+  },
+  {
+    "id": "iv-05",
+    "cat": "werdegang",
+    "q": "Wie sind Sie zur Musik gekommen?",
+    "sv": "Hur kom du in på musiken?",
+    "tips": "Berätta en kort och levande historia: hur det började, och ett ögonblick som var avgörande. Använd perfekt för det som hänt och sluta i nuet.",
+    "phrases": [
+      {
+        "fr": "Mit [sieben] Jahren habe ich angefangen, [Instrument] zu spielen / zu singen.",
+        "sv": "När jag var [sju] år började jag [spela instrument / sjunga]."
+      },
+      {
+        "fr": "In meiner Familie wird viel Musik gemacht.",
+        "sv": "I min familj spelar och sjunger man mycket."
+      },
+      {
+        "fr": "Das hat mich so berührt, dass ...",
+        "sv": "Det berörde mig så mycket att ..."
+      },
+      {
+        "fr": "Seitdem ist Musik für mich eine Leidenschaft.",
+        "sv": "Sedan dess är musik en passion för mig."
+      }
+    ],
+    "model": "In meiner Familie wird viel Musik gemacht. [Meine Mutter / Mein Vater] singt in einem Chor, und bei uns zu Hause lief immer klassische Musik. Mit [sieben] Jahren habe ich an der Musikschule in [Stadt] angefangen, [Instrument zu spielen / zu singen]. Am Anfang hat es vor allem Spaß gemacht. Aber mit ungefähr [vierzehn] Jahren habe ich ein Konzert mit [Stück] gehört. Das hat mich so berührt, dass ich danach viel mehr üben wollte. Seitdem ist die Musik für mich nicht nur ein Hobby, sondern eine Leidenschaft.",
+    "modelSv": "I min familj spelar och sjunger man mycket. [Min mamma / Min pappa] sjunger i en kör, och hemma hos oss spelades alltid klassisk musik. När jag var [sju] år började jag [spela instrument / sjunga] på musikskolan i [stad]. I början var det framför allt roligt. Men när jag var ungefär [fjorton] hörde jag en konsert med [verk]. Det berörde mig så mycket att jag ville öva mycket mer efteråt. Sedan dess är musiken inte bara en hobby för mig, utan en passion.",
+    "follow": [
+      "Wer hat Sie damals am meisten unterstützt?",
+      "Erinnern Sie sich noch an Ihr erstes Konzert?"
+    ]
+  },
+  {
+    "id": "iv-06",
+    "cat": "werdegang",
+    "q": "Wie lange haben Sie schon Unterricht in Ihrem Hauptfach?",
+    "sv": "Hur länge har du haft lektioner i ditt huvudämne?",
+    "tips": "Ge konkreta siffror: hur länge, hur ofta och var. Nämn gärna mästarkurser eller sommarkurser, eftersom det visar att du söker dig utanför skolan.",
+    "phrases": [
+      {
+        "fr": "Ich habe seit [neun] Jahren regelmäßig Unterricht.",
+        "sv": "Jag har haft regelbundna lektioner i [nio] år."
+      },
+      {
+        "fr": "Ich habe [zweimal] pro Woche Unterricht.",
+        "sv": "Jag har lektion [två gånger] i veckan."
+      },
+      {
+        "fr": "Ich habe an einem Meisterkurs bei [Name] teilgenommen.",
+        "sv": "Jag har deltagit i en mästarkurs hos [namn]."
+      },
+      {
+        "fr": "Ich bereite mich auf die Aufnahmeprüfung vor.",
+        "sv": "Jag förbereder mig för antagningsprovet."
+      }
+    ],
+    "model": "Ich habe seit [neun] Jahren regelmäßig Unterricht. Zuerst hatte ich einmal pro Woche Unterricht an der kommunalen Musikschule. Seit ich auf ein Gymnasium mit Musikschwerpunkt gehe, habe ich [zweimal] pro Woche Einzelunterricht und dazu Theorie, Gehörbildung und Kammermusik. Außerdem habe ich an zwei Meisterkursen teilgenommen, zum Beispiel bei [Name] in [Stadt]. Das war sehr inspirierend, weil ich neue Ideen für meine Technik bekommen habe. In den letzten zwei Jahren habe ich viel mehr geübt als früher, weil ich mich auf die Aufnahmeprüfung vorbereite.",
+    "modelSv": "Jag har haft regelbundna lektioner i [nio] år. Först hade jag lektion en gång i veckan på kulturskolan. Sedan jag började på ett gymnasium med musikinriktning har jag enskild undervisning [två gånger] i veckan, och dessutom teori, gehörsträning och kammarmusik. Jag har också deltagit i två mästarkurser, till exempel hos [namn] i [stad]. Det var väldigt inspirerande, eftersom jag fick nya idéer för min teknik. De senaste två åren har jag övat mycket mer än förut, eftersom jag förbereder mig för antagningsprovet.",
+    "follow": [
+      "Was haben Sie im Meisterkurs gelernt?",
+      "Wie viel Unterricht haben Sie zurzeit pro Woche?"
+    ]
+  },
+  {
+    "id": "iv-07",
+    "cat": "werdegang",
+    "q": "Bei wem haben Sie bisher Unterricht gehabt?",
+    "sv": "Vem har du haft som lärare hittills?",
+    "tips": "Juryn vill veta vilken 'skola' du kommer ifrån. Nämn din lärare och vad du har lärt dig av hen, gärna något konkret om klang, teknik eller musikalitet. Prata alltid respektfullt om tidigare lärare.",
+    "phrases": [
+      {
+        "fr": "Zurzeit habe ich Unterricht bei [Name].",
+        "sv": "Just nu har jag lektioner hos [namn]."
+      },
+      {
+        "fr": "Von [ihr / ihm] habe ich viel über Klang gelernt.",
+        "sv": "Av [henne / honom] har jag lärt mig mycket om klang."
+      },
+      {
+        "fr": "Sie hat mir die Grundlagen beigebracht.",
+        "sv": "Hon lärde mig grunderna."
+      },
+      {
+        "fr": "[Sie / Er] hat mich ermutigt, mich in Deutschland zu bewerben.",
+        "sv": "[Hon / Han] uppmuntrade mig att söka i Tyskland."
+      }
+    ],
+    "model": "Ich habe seit [drei] Jahren Unterricht bei [Name]. [Sie / Er] unterrichtet an meinem Gymnasium und arbeitet auch als [Musikerin / Musiker] in [Stadt]. Von [ihr / ihm] habe ich besonders viel über Klang und Atmung gelernt. Vorher hatte ich eine andere Lehrerin an der Musikschule, die mir die Grundlagen beigebracht hat. Beide waren sehr wichtig für mich. [Meine jetzige Lehrerin / Mein jetziger Lehrer] hat mich auch ermutigt, mich in Deutschland zu bewerben, weil [sie / er] selbst hier studiert hat.",
+    "modelSv": "Jag har haft lektioner hos [namn] i [tre] år. [Hon / Han] undervisar på mitt gymnasium och arbetar också som musiker i [stad]. Av [henne / honom] har jag lärt mig särskilt mycket om klang och andning. Innan dess hade jag en annan lärare på kulturskolan, som lärde mig grunderna. Båda har varit väldigt viktiga för mig. [Min nuvarande lärare] har också uppmuntrat mig att söka i Tyskland, eftersom [hon / han] själv har studerat här.",
+    "follow": [
+      "Was ist das Wichtigste, das Sie bei [ihr / ihm] gelernt haben?",
+      "Wo hat Ihre Lehrerin studiert?"
+    ]
+  },
+  {
+    "id": "iv-08",
+    "cat": "werdegang",
+    "q": "Erzählen Sie uns etwas über Ihre musikalische Ausbildung in Schweden.",
+    "sv": "Berätta lite om din musikutbildning i Sverige.",
+    "tips": "Juryn känner troligen inte till det svenska systemet, så förklara kort kulturskola och musikgymnasium. Nämn vilka ämnen du har haft (teori, gehörsträning, musikhistoria, ensemble), eftersom det är samma ämnen som ingår i antagningsprovet.",
+    "phrases": [
+      {
+        "fr": "In Schweden gibt es kommunale Musikschulen.",
+        "sv": "I Sverige finns kommunala kulturskolor."
+      },
+      {
+        "fr": "Ich besuche ein Gymnasium mit Musikschwerpunkt.",
+        "sv": "Jag går på ett gymnasium med musikinriktning."
+      },
+      {
+        "fr": "Wir haben Musiktheorie, Gehörbildung und Musikgeschichte.",
+        "sv": "Vi har musikteori, gehörsträning och musikhistoria."
+      },
+      {
+        "fr": "Wir geben viele Konzerte.",
+        "sv": "Vi ger många konserter."
+      }
+    ],
+    "model": "In Schweden gibt es kommunale Musikschulen, wo Kinder günstig Unterricht bekommen können. Dort habe ich angefangen. Seit fast [drei] Jahren besuche ich ein Gymnasium mit Musikschwerpunkt in [Stadt]. Dort habe ich jede Woche Einzelunterricht in meinem Hauptfach, aber auch Musiktheorie, Gehörbildung, Musikgeschichte und Ensemble. Außerdem habe ich Klavier als Nebenfach. Wir geben viele Konzerte, sowohl in der Schule als auch in Kirchen in der Stadt. Ich finde die Ausbildung gut, aber für ein professionelles Niveau brauche ich jetzt ein richtiges Studium.",
+    "modelSv": "I Sverige finns kommunala kulturskolor där barn kan få lektioner billigt. Där började jag. Sedan nästan [tre] år går jag på ett gymnasium med musikinriktning i [stad]. Där har jag enskild undervisning i mitt huvudämne varje vecka, men också musikteori, gehörsträning, musikhistoria och ensemble. Dessutom har jag piano som biämne. Vi ger många konserter, både i skolan och i kyrkor i staden. Jag tycker att utbildningen är bra, men för att nå en professionell nivå behöver jag nu en riktig högskoleutbildning.",
+    "follow": [
+      "Wie gut sind Sie in Musiktheorie und Gehörbildung?",
+      "Ist die Musikschule in Schweden kostenlos?"
+    ]
+  },
+  {
+    "id": "iv-09",
+    "cat": "werdegang",
+    "q": "Haben Sie schon in einem Orchester, Chor oder Ensemble mitgewirkt?",
+    "sv": "Har du medverkat i en orkester, kör eller ensemble?",
+    "tips": "Ensembleerfarenhet är viktig för nästan alla utbildningar. Nämn var, hur länge och ett konkret projekt du är stolt över, och säg vad du har lärt dig av att musicera med andra.",
+    "phrases": [
+      {
+        "fr": "Ich habe viel Erfahrung im Ensemble.",
+        "sv": "Jag har mycket ensembleerfarenhet."
+      },
+      {
+        "fr": "Letztes Jahr haben wir [Stück] aufgeführt.",
+        "sv": "Förra året framförde vi [verk]."
+      },
+      {
+        "fr": "Wir sind auf Tournee nach [Land] gefahren.",
+        "sv": "Vi åkte på turné till [land]."
+      },
+      {
+        "fr": "Man muss aufeinander hören.",
+        "sv": "Man måste lyssna på varandra."
+      }
+    ],
+    "model": "Ja, ich habe schon viel Erfahrung im Ensemble. Am Gymnasium [spiele / singe] ich in [unserem Schulorchester / unserem Kammerchor]. Letztes Jahr haben wir [Stück] von [Komponist] aufgeführt, und das war ein großes Erlebnis. Außerdem habe ich in einem [Jugendorchester / Jugendchor] in [Region] mitgemacht und bin mit ihm auf Tournee nach [Land] gefahren. Ich mag es sehr, mit anderen zusammen Musik zu machen, weil man aufeinander hören muss. Im Moment [spiele / singe] ich auch in einer kleinen Kammermusikgruppe mit zwei Freundinnen.",
+    "modelSv": "Ja, jag har redan mycket ensembleerfarenhet. På gymnasiet [spelar / sjunger] jag i [vår skolorkester / vår kammarkör]. Förra året framförde vi [verk] av [kompositör], och det var en stor upplevelse. Dessutom har jag varit med i en [ungdomsorkester / ungdomskör] i [region] och åkt på turné till [land] med den. Jag tycker mycket om att göra musik tillsammans med andra, eftersom man måste lyssna på varandra. Just nu [spelar / sjunger] jag också i en liten kammarmusikgrupp med två väninnor.",
+    "follow": [
+      "Was ist für Sie der Unterschied zwischen Solo und Ensemble?",
+      "Welche Rolle hatten Sie im Ensemble?"
+    ]
+  },
+  {
+    "id": "iv-10",
+    "cat": "instrument",
+    "q": "Warum haben Sie gerade [Instrument / Gesang] als Hauptfach gewählt?",
+    "sv": "Varför valde du just [instrument / sång] som huvudämne?",
+    "tips": "Visa en personlig relation till ditt instrument eller din röst. Beskriv vad som fascinerar dig med klangen och uttrycksmöjligheterna, och var ärlig om att det också funnits svåra perioder.",
+    "phrases": [
+      {
+        "fr": "Der Klang hat mich sofort fasziniert.",
+        "sv": "Klangen fascinerade mig direkt."
+      },
+      {
+        "fr": "Man kann damit ganz verschiedene Farben zeigen.",
+        "sv": "Man kan visa helt olika färger med den."
+      },
+      {
+        "fr": "Es gibt so viel schönes Repertoire.",
+        "sv": "Det finns så mycket vacker repertoar."
+      },
+      {
+        "fr": "Ohne [mein Instrument / das Singen] wäre ich nicht glücklich.",
+        "sv": "Utan [mitt instrument / sången] skulle jag inte vara lycklig."
+      }
+    ],
+    "model": "Als Kind habe ich [Instrument] zum ersten Mal in einem Konzert gehört [oder: habe ich zum ersten Mal in einem Chor gesungen]. Der Klang hat mich sofort fasziniert. Für mich ist [das Instrument / die Stimme] sehr ausdrucksvoll, weil man damit ganz verschiedene Farben zeigen kann. Ich mag auch, dass es so viel schönes Repertoire gibt, zum Beispiel von [Komponist]. Natürlich gab es auch schwierige Phasen, in denen ich aufhören wollte. Aber ich habe immer gemerkt, dass ich ohne [mein Instrument / das Singen] nicht glücklich wäre.",
+    "modelSv": "Som barn hörde jag [instrument] för första gången på en konsert [eller: sjöng jag för första gången i en kör]. Klangen fascinerade mig direkt. För mig är [instrumentet / rösten] väldigt uttrycksfull, eftersom man kan visa helt olika färger med den. Jag gillar också att det finns så mycket vacker repertoar, till exempel av [kompositör]. Självklart har det också funnits svåra perioder då jag ville sluta. Men jag har alltid märkt att jag inte skulle vara lycklig utan [mitt instrument / sången].",
+    "follow": [
+      "Wann wollten Sie aufhören, und warum haben Sie weitergemacht?",
+      "Was ist für Sie das Schönste an [Instrument / Gesang]?"
+    ]
+  },
+  {
+    "id": "iv-11",
+    "cat": "instrument",
+    "q": "Was sind Ihrer Meinung nach Ihre Stärken?",
+    "sv": "Vilka är enligt dig dina styrkor?",
+    "tips": "Juryn testar självkännedom. Nämn två eller tre konkreta styrkor med musikaliska ord (klang, frasering, rytm, prima vista) och säg kort hur du använder dem. Var säker utan att skryta.",
+    "phrases": [
+      {
+        "fr": "Meine größte Stärke ist mein Klang.",
+        "sv": "Min största styrka är min klang."
+      },
+      {
+        "fr": "Ich habe ein gutes Gefühl für Phrasierung.",
+        "sv": "Jag har bra känsla för frasering."
+      },
+      {
+        "fr": "Ich kann gut vom Blatt [spielen / singen].",
+        "sv": "Jag är bra på att [spela / sjunga] från bladet."
+      },
+      {
+        "fr": "Im Ensemble höre ich gut zu.",
+        "sv": "I ensemble lyssnar jag bra."
+      }
+    ],
+    "model": "Ich glaube, meine größte Stärke ist mein Klang. Viele sagen, dass er [warm / klar] und sehr persönlich ist. Außerdem habe ich ein gutes Gefühl für Phrasierung, also dafür, wie sich eine musikalische Linie entwickelt. Ich kann auch schnell neue Stücke lernen, weil ich gut vom Blatt [spiele / singe]. Im Ensemble höre ich gut zu und passe mich an. Natürlich habe ich auch Schwächen, aber ich finde es wichtig, die eigenen Stärken zu kennen und sie bewusst zu nutzen.",
+    "modelSv": "Jag tror att min största styrka är min klang. Många säger att den är [varm / klar] och väldigt personlig. Dessutom har jag bra känsla för frasering, alltså för hur en musikalisk linje utvecklas. Jag kan också lära mig nya stycken snabbt, eftersom jag är bra på att [spela / sjunga] från bladet. I ensemble lyssnar jag bra och anpassar mig. Självklart har jag också svagheter, men jag tycker att det är viktigt att känna till sina styrkor och använda dem medvetet.",
+    "follow": [
+      "Wo hört man das in Ihrem Programm heute?",
+      "Und was sind Ihre Schwächen?"
+    ]
+  },
+  {
+    "id": "iv-12",
+    "cat": "instrument",
+    "q": "Woran möchten Sie technisch noch arbeiten?",
+    "sv": "Vad vill du fortfarande arbeta med tekniskt?",
+    "tips": "Detta är ingen fälla: juryn vill se att du vet vad du behöver lära dig och att du har en plan. Nämn en eller två konkreta saker och hur du övar på dem, och knyt an till varför du vill studera just här.",
+    "phrases": [
+      {
+        "fr": "Ich möchte vor allem an meiner [Atmung / Bogentechnik] arbeiten.",
+        "sv": "Jag vill framför allt arbeta med min [andning / stråkteknik]."
+      },
+      {
+        "fr": "In schnellen Passagen bin ich noch nicht ganz sicher.",
+        "sv": "I snabba passager är jag inte helt säker än."
+      },
+      {
+        "fr": "Ich übe langsam mit Metronom.",
+        "sv": "Jag övar långsamt med metronom."
+      },
+      {
+        "fr": "Ich nehme mich oft auf.",
+        "sv": "Jag spelar ofta in mig själv."
+      }
+    ],
+    "model": "Ich möchte vor allem an meiner [Atmung / Bogentechnik / Fingertechnik] arbeiten. In schnellen Passagen bin ich manchmal noch nicht ganz sicher, besonders wenn ich nervös bin. Außerdem möchte ich lernen, im Pianissimo genauso kontrolliert zu [spielen / singen] wie im Forte. [Meine Lehrerin / Mein Lehrer] und ich haben schon einen Plan gemacht: Ich übe jeden Tag langsam mit Metronom und nehme mich oft auf. Ich habe schon Fortschritte gemacht, aber ich weiß, dass ich noch viel lernen muss. Genau deshalb möchte ich hier studieren.",
+    "modelSv": "Jag vill framför allt arbeta med min [andning / stråkteknik / fingerteknik]. I snabba passager är jag ibland inte helt säker än, särskilt när jag är nervös. Dessutom vill jag lära mig att [spela / sjunga] lika kontrollerat i pianissimo som i forte. [Min lärare] och jag har redan gjort en plan: jag övar långsamt med metronom varje dag och spelar ofta in mig själv. Jag har redan gjort framsteg, men jag vet att jag har mycket kvar att lära. Just därför vill jag studera här.",
+    "follow": [
+      "Welche Übungen machen Sie dafür?",
+      "Haben Sie das heute im Vorspiel gemerkt?"
+    ]
+  },
+  {
+    "id": "iv-13",
+    "cat": "instrument",
+    "q": "Erzählen Sie uns etwas über Ihr Instrument beziehungsweise Ihre Stimme.",
+    "sv": "Berätta lite om ditt instrument eller din röst.",
+    "tips": "Instrumentalister kan berätta om sitt instrument (ålder, byggare, klang), sångare om sitt röstfack och sin röst. Använd musikaliska adjektiv och visa att du känner ditt instrument: vad som fungerar bra och vad som är svårt.",
+    "phrases": [
+      {
+        "fr": "Ich bin [Stimmfach]. / Ich spiele auf einem [Instrument] aus [Land].",
+        "sv": "Jag är [röstfack]. / Jag spelar på ett [instrument] från [land]."
+      },
+      {
+        "fr": "[Mein Instrument / Meine Stimme] hat einen eher [warmen / hellen] Klang.",
+        "sv": "[Mitt instrument / Min röst] har en ganska [varm / ljus] klang."
+      },
+      {
+        "fr": "Im mittleren Register klingt [es / sie] am schönsten.",
+        "sv": "I mellanregistret låter [det / den] vackrast."
+      },
+      {
+        "fr": "Ich [spiele / singe] mich immer gründlich ein.",
+        "sv": "Jag [spelar / sjunger] alltid upp mig ordentligt."
+      }
+    ],
+    "model": "Ich [spiele auf einem [Instrument] aus [Land] / bin [Stimmfach]]. [Mein Instrument / Meine Stimme] hat einen eher [warmen / hellen] Klang. Am schönsten klingt [es / sie] im mittleren Register. In der Höhe muss ich noch freier und lockerer werden, daran arbeite ich gerade. Ich habe gelernt, dass [mein Instrument / meine Stimme] jeden Tag ein bisschen anders reagiert, zum Beispiel wenn sich das Wetter ändert oder wenn ich müde bin. Deshalb [spiele / singe] ich mich immer gründlich ein. Ich finde es spannend, immer neue Farben zu entdecken.",
+    "modelSv": "Jag [spelar på ett [instrument] från [land] / är [röstfack]]. [Mitt instrument / Min röst] har en ganska [varm / ljus] klang. Vackrast låter [det / den] i mellanregistret. I höjden måste jag fortfarande bli friare och mer avspänd, det arbetar jag med just nu. Jag har lärt mig att [mitt instrument / min röst] reagerar lite olika varje dag, till exempel när vädret ändras eller när jag är trött. Därför [spelar / sjunger] jag alltid upp mig ordentligt. Jag tycker att det är spännande att hela tiden upptäcka nya färger.",
+    "follow": [
+      "Wie wärmen Sie sich ein?",
+      "Wie pflegen Sie Ihr Instrument bzw. Ihre Stimme?"
+    ]
+  },
+  {
+    "id": "iv-14",
+    "cat": "instrument",
+    "q": "Spielen Sie auch Klavier oder ein anderes Instrument?",
+    "sv": "Spelar du också piano eller något annat instrument?",
+    "tips": "Piano ingår nästan alltid som obligatoriskt ämne i utbildningen, och ibland testas det vid provet. Var ärlig om din nivå och säg hur pianot hjälper dig i ditt huvudämne.",
+    "phrases": [
+      {
+        "fr": "Ich spiele seit [sechs] Jahren Klavier als Nebenfach.",
+        "sv": "Jag har spelat piano som biämne i [sex] år."
+      },
+      {
+        "fr": "Ich bin keine Pianistin, aber ...",
+        "sv": "Jag är ingen pianist, men ..."
+      },
+      {
+        "fr": "Das hilft mir, die Harmonien zu verstehen.",
+        "sv": "Det hjälper mig att förstå harmonierna."
+      },
+      {
+        "fr": "Das mache ich nur noch zum Spaß.",
+        "sv": "Det gör jag bara för skojs skull numera."
+      }
+    ],
+    "model": "Ja, ich spiele seit [sechs] Jahren Klavier, aber nur als Nebenfach. Ich bin keine Pianistin, aber ich kann einfache Begleitungen spielen und meine Stücke am Klavier durchgehen. Das hilft mir sehr, wenn ich die Harmonien verstehen will oder eine neue Stimme lerne. Ich weiß, dass Klavier im Studium ein Pflichtfach ist, und ich freue mich darauf. Früher habe ich außerdem ein bisschen [Gitarre] gespielt, aber das mache ich heute nur noch zum Spaß.",
+    "modelSv": "Ja, jag har spelat piano i [sex] år, men bara som biämne. Jag är ingen pianist, men jag kan spela enkla ackompanjemang och gå igenom mina stycken vid pianot. Det hjälper mig mycket när jag vill förstå harmonierna eller lär mig en ny stämma. Jag vet att piano är ett obligatoriskt ämne på utbildningen, och jag ser fram emot det. Tidigare spelade jag dessutom lite [gitarr], men det gör jag bara för skojs skull numera.",
+    "follow": [
+      "Können Sie uns etwas am Klavier vorspielen?",
+      "Begleiten Sie sich manchmal selbst?"
+    ]
+  },
+  {
+    "id": "iv-15",
+    "cat": "repertoire",
+    "q": "Was haben Sie heute für uns vorbereitet?",
+    "sv": "Vad har du förberett åt oss i dag?",
+    "tips": "En enkel öppningsfråga: presentera programmet tydligt med titel, kompositör och epok. Säg gärna varför programmet hänger ihop, och var beredd på att juryn väljer ordningen själv.",
+    "phrases": [
+      {
+        "fr": "Ich habe drei Stücke aus verschiedenen Epochen vorbereitet.",
+        "sv": "Jag har förberett tre stycken från olika epoker."
+      },
+      {
+        "fr": "Zuerst [spiele / singe] ich [Stück] von [Komponist].",
+        "sv": "Först [spelar / sjunger] jag [verk] av [kompositör]."
+      },
+      {
+        "fr": "Danach kommt ein Werk aus der Romantik.",
+        "sv": "Sedan kommer ett verk från romantiken."
+      },
+      {
+        "fr": "Wenn Sie möchten, kann ich auch mit einem anderen Stück anfangen.",
+        "sv": "Om ni vill kan jag också börja med ett annat stycke."
+      }
+    ],
+    "model": "Ich habe heute drei Stücke aus verschiedenen Epochen vorbereitet. Zuerst [spiele / singe] ich [Stück] von [Komponist] aus dem Barock. Danach kommt [Stück] von [Komponist], ein Werk aus der Romantik. Zum Schluss habe ich ein modernes Stück von [Komponist] gewählt, das ein bisschen ungewöhnlich ist. Ich wollte zeigen, dass ich mich in verschiedenen Stilen wohlfühle. Wenn Sie möchten, kann ich aber auch mit einem anderen Stück anfangen.",
+    "modelSv": "Jag har förberett tre stycken från olika epoker i dag. Först [spelar / sjunger] jag [verk] av [kompositör] från barocken. Sedan kommer [verk] av [kompositör], ett verk från romantiken. Till sist har jag valt ett modernt stycke av [kompositör], som är lite ovanligt. Jag ville visa att jag trivs i olika stilar. Men om ni vill kan jag också börja med ett annat stycke.",
+    "follow": [
+      "Womit möchten Sie beginnen?",
+      "Wie lange dauert das Stück ungefähr?"
+    ]
+  },
+  {
+    "id": "iv-16",
+    "cat": "repertoire",
+    "q": "Warum haben Sie diese Stücke ausgewählt?",
+    "sv": "Varför har du valt de här styckena?",
+    "tips": "Juryn vill höra att valet är medvetet: att styckena uppfyller kraven och visar olika sidor av dig. Säg något personligt om minst ett av styckena.",
+    "phrases": [
+      {
+        "fr": "Ich habe die Stücke zusammen mit meiner Lehrerin ausgewählt.",
+        "sv": "Jag valde styckena tillsammans med min lärare."
+      },
+      {
+        "fr": "Sie passen zu den Anforderungen der Hochschule.",
+        "sv": "De passar högskolans krav."
+      },
+      {
+        "fr": "Es ist technisch anspruchsvoll, aber sehr lyrisch.",
+        "sv": "Det är tekniskt krävande men väldigt lyriskt."
+      },
+      {
+        "fr": "Ich fühle mich jetzt sicher damit.",
+        "sv": "Jag känner mig säker med dem nu."
+      }
+    ],
+    "model": "Ich habe die Stücke zusammen mit [meiner Lehrerin / meinem Lehrer] ausgewählt. Einerseits mussten sie zu den Anforderungen der Hochschule passen, andererseits wollten wir zeigen, was ich gut kann. [Stück] von [Komponist] mag ich besonders, weil es so viele verschiedene Stimmungen hat. Es ist technisch anspruchsvoll, aber gleichzeitig sehr lyrisch. Das moderne Stück habe ich gewählt, weil ich zeigen möchte, dass ich auch offen für Neue Musik bin. Ich habe lange an diesen Stücken gearbeitet und fühle mich jetzt sicher damit.",
+    "modelSv": "Jag valde styckena tillsammans med [min lärare]. Å ena sidan var de tvungna att passa högskolans krav, å andra sidan ville vi visa vad jag är bra på. [Verk] av [kompositör] tycker jag särskilt mycket om, eftersom det har så många olika stämningar. Det är tekniskt krävande men samtidigt väldigt lyriskt. Det moderna stycket valde jag för att jag vill visa att jag också är öppen för nutida musik. Jag har arbetat länge med de här styckena och känner mig säker med dem nu.",
+    "follow": [
+      "Welches Stück spielen bzw. singen Sie am liebsten?",
+      "Gab es ein Stück, das Sie nicht gewählt haben?"
+    ]
+  },
+  {
+    "id": "iv-17",
+    "cat": "repertoire",
+    "q": "Was können Sie uns über [Komponist] erzählen?",
+    "sv": "Vad kan du berätta för oss om [kompositör]?",
+    "tips": "Förbered tre–fyra fakta om varje kompositör i ditt program: epok, var hen levde och verkade, och något om verket du framför. Koppla sedan fakta till din tolkning, det är det juryn egentligen vill höra.",
+    "phrases": [
+      {
+        "fr": "[Komponist] gehört zur [Romantik].",
+        "sv": "[Kompositör] tillhör [romantiken]."
+      },
+      {
+        "fr": "Er hat vor allem in [Wien / Leipzig] gearbeitet.",
+        "sv": "Han arbetade framför allt i [Wien / Leipzig]."
+      },
+      {
+        "fr": "Das Stück ist entstanden, als er noch jung war.",
+        "sv": "Stycket kom till när han fortfarande var ung."
+      },
+      {
+        "fr": "Das versuche ich in meiner Interpretation zu zeigen.",
+        "sv": "Det försöker jag visa i min tolkning."
+      }
+    ],
+    "model": "[Komponist] hat im [19.] Jahrhundert gelebt und gehört zur [Romantik]. Er hat vor allem in [Wien / Leipzig] gearbeitet. Mich fasziniert, dass seine Musik einerseits sehr emotional ist, andererseits aber eine klare Form hat. [Stück] hat er geschrieben, als er [noch jung / schon krank] war, und das kann man meiner Meinung nach hören. Ich habe auch Briefe von ihm gelesen, um ihn besser zu verstehen. Dabei habe ich gemerkt, wie wichtig ihm [die Natur / die Literatur] war. Das versuche ich in meiner Interpretation zu zeigen.",
+    "modelSv": "[Kompositör] levde på [1800]-talet och tillhör [romantiken]. Han arbetade framför allt i [Wien / Leipzig]. Det som fascinerar mig är att hans musik å ena sidan är väldigt känslosam, men å andra sidan har en tydlig form. [Verk] skrev han när han [fortfarande var ung / redan var sjuk], och det kan man enligt mig höra. Jag har också läst brev av honom för att förstå honom bättre. Då märkte jag hur viktig [naturen / litteraturen] var för honom. Det försöker jag visa i min tolkning.",
+    "follow": [
+      "Welche anderen Werke von [Komponist] kennen Sie?",
+      "Wer waren seine Zeitgenossen?"
+    ]
+  },
+  {
+    "id": "iv-18",
+    "cat": "repertoire",
+    "q": "Was möchten Sie mit [Stück] ausdrücken?",
+    "sv": "Vad vill du uttrycka med [verk]?",
+    "tips": "Här bedöms din konstnärliga mognad. Beskriv stämningen och hur den förändras i stycket, och säg konkret vad du gör musikaliskt för att visa det (dynamik, tempo, pauser). Sångare bör alltid kunna förklara texten.",
+    "phrases": [
+      {
+        "fr": "Für mich erzählt das Stück eine Geschichte von [Sehnsucht].",
+        "sv": "För mig berättar stycket en historia om [längtan]."
+      },
+      {
+        "fr": "Im Mittelteil wird die Musik plötzlich leidenschaftlich.",
+        "sv": "I mittendelen blir musiken plötsligt passionerad."
+      },
+      {
+        "fr": "Ich möchte, dass das Publikum diese Entwicklung spürt.",
+        "sv": "Jag vill att publiken känner den utvecklingen."
+      },
+      {
+        "fr": "Ich nehme mir Zeit für die Pausen.",
+        "sv": "Jag tar mig tid i pauserna."
+      }
+    ],
+    "model": "Für mich erzählt [Stück] eine Geschichte von [Sehnsucht / Abschied]. Am Anfang ist die Musik ruhig und fast traurig, aber im Mittelteil wird sie plötzlich leidenschaftlich. Ich möchte, dass das Publikum diese Entwicklung spürt. Deshalb [spiele / singe] ich den Anfang sehr leise und schlicht, und ich nehme mir Zeit für die Pausen. [Bei einem Lied ist natürlich auch der Text sehr wichtig: Ich habe jedes Wort übersetzt, damit ich genau weiß, was ich singe.] Am Ende soll man das Gefühl haben, dass etwas zur Ruhe kommt.",
+    "modelSv": "För mig berättar [verk] en historia om [längtan / avsked]. I början är musiken lugn och nästan sorgsen, men i mittendelen blir den plötsligt passionerad. Jag vill att publiken känner den utvecklingen. Därför [spelar / sjunger] jag början mycket tyst och enkelt, och jag tar mig tid i pauserna. [I en sång är förstås också texten väldigt viktig: jag har översatt varje ord så att jag vet exakt vad jag sjunger.] I slutet ska man få känslan av att något kommer till ro.",
+    "follow": [
+      "Könnten Sie den Anfang einmal ganz anders gestalten?",
+      "Worum geht es im Text genau?"
+    ]
+  },
+  {
+    "id": "iv-19",
+    "cat": "repertoire",
+    "q": "Welche Epoche oder welcher Stil liegt Ihnen am meisten?",
+    "sv": "Vilken epok eller stil passar dig bäst?",
+    "tips": "Svara med en tydlig favorit och motivera den musikaliskt. Visa också nyfikenhet på något du kan mindre om, till exempel barock eller nutida musik, eftersom en högskola vill ha studenter som vill lära sig.",
+    "phrases": [
+      {
+        "fr": "Am meisten liegt mir die Musik der [Romantik].",
+        "sv": "Bäst passar mig [romantikens] musik."
+      },
+      {
+        "fr": "Dort fühle ich mich noch nicht so sicher.",
+        "sv": "Där känner jag mig inte så säker än."
+      },
+      {
+        "fr": "Ich würde gern mehr über historische Aufführungspraxis lernen.",
+        "sv": "Jag skulle gärna vilja lära mig mer om historisk uppförandepraxis."
+      },
+      {
+        "fr": "Ich finde Neue Musik immer interessanter.",
+        "sv": "Jag tycker att nutida musik blir allt intressantare."
+      }
+    ],
+    "model": "Am meisten liegt mir die Musik der [Romantik]. Ich mag es, wenn die Musik große Gefühle zeigt und viel Raum für Klangfarben lässt. Besonders gern [spiele / singe] ich [Komponist]. Barockmusik finde ich auch spannend, aber dort fühle ich mich noch nicht so sicher, zum Beispiel bei den Verzierungen. Im Studium würde ich gern mehr über historische Aufführungspraxis lernen. Neue Musik habe ich erst in den letzten Jahren entdeckt, und ich finde sie immer interessanter.",
+    "modelSv": "Bäst passar mig [romantikens] musik. Jag gillar när musiken visar stora känslor och lämnar mycket utrymme för klangfärger. Särskilt gärna [spelar / sjunger] jag [kompositör]. Barockmusik tycker jag också är spännande, men där känner jag mig inte så säker än, till exempel när det gäller ornamentiken. På utbildningen skulle jag gärna vilja lära mig mer om historisk uppförandepraxis. Nutida musik har jag upptäckt först de senaste åren, och jag tycker att den blir allt intressantare.",
+    "follow": [
+      "Welches Stück aus dem 20. Jahrhundert kennen Sie gut?",
+      "Was ist typisch für die Musik der Romantik?"
+    ]
+  },
+  {
+    "id": "iv-20",
+    "cat": "repertoire",
+    "q": "Welches Stück war für Sie bisher am schwierigsten, und warum?",
+    "sv": "Vilket stycke har varit svårast för dig hittills, och varför?",
+    "tips": "Juryn vill se hur du hanterar motgångar. Berätta om problemet, vad du gjorde konkret för att lösa det, och vad du lärde dig. Använd perfekt och avsluta positivt.",
+    "phrases": [
+      {
+        "fr": "Am schwierigsten war für mich [Stück].",
+        "sv": "Svårast för mig var [verk]."
+      },
+      {
+        "fr": "Das war eine große Herausforderung.",
+        "sv": "Det var en stor utmaning."
+      },
+      {
+        "fr": "Ich habe die Stelle in kleine Teile aufgeteilt.",
+        "sv": "Jag delade upp stället i små delar."
+      },
+      {
+        "fr": "Dabei habe ich gelernt, geduldig zu sein.",
+        "sv": "Av det lärde jag mig att vara tålmodig."
+      }
+    ],
+    "model": "Am schwierigsten war für mich [Stück] von [Komponist]. Technisch war besonders [der schnelle Schlussteil / die lange Phrase im zweiten Teil] eine große Herausforderung. Am Anfang habe ich gedacht, dass ich es nie schaffen würde. Dann habe ich die Stelle in kleine Teile aufgeteilt und jeden Tag sehr langsam geübt. Nach ein paar Wochen ist es endlich besser geworden. Dabei habe ich gelernt, geduldig zu sein. Heute ist es eines meiner Lieblingsstücke, gerade weil ich so viel daran gearbeitet habe.",
+    "modelSv": "Svårast för mig var [verk] av [kompositör]. Tekniskt var särskilt [den snabba slutdelen / den långa frasen i andra delen] en stor utmaning. I början trodde jag att jag aldrig skulle klara det. Sedan delade jag upp stället i små delar och övade väldigt långsamt varje dag. Efter några veckor blev det äntligen bättre. Av det lärde jag mig att vara tålmodig. I dag är det ett av mina favoritstycken, just för att jag har arbetat så mycket med det.",
+    "follow": [
+      "Können Sie uns diese Stelle kurz zeigen?",
+      "Würden Sie das Stück heute anders üben?"
+    ]
+  },
+  {
+    "id": "iv-21",
+    "cat": "arbeit",
+    "q": "Wie viel üben Sie am Tag, und wie sieht Ihr Übealltag aus?",
+    "sv": "Hur mycket övar du per dag, och hur ser din övningsvardag ut?",
+    "tips": "Ge realistiska siffror (sångare övar normalt kortare tid än instrumentalister) och beskriv en struktur: uppvärmning, teknik, repertoar, pauser. Juryn vill höra att du övar medvetet, inte bara länge.",
+    "phrases": [
+      {
+        "fr": "An Schultagen übe ich ungefähr [drei] Stunden.",
+        "sv": "På skoldagar övar jag ungefär [tre] timmar."
+      },
+      {
+        "fr": "Zuerst mache ich Aufwärmübungen und Technik.",
+        "sv": "Först gör jag uppvärmningsövningar och teknik."
+      },
+      {
+        "fr": "Ich mache regelmäßig kurze Pausen.",
+        "sv": "Jag tar regelbundet korta pauser."
+      },
+      {
+        "fr": "Es ist wichtiger, konzentriert zu üben als lange.",
+        "sv": "Det är viktigare att öva koncentrerat än länge."
+      }
+    ],
+    "model": "An Schultagen übe ich ungefähr [drei] Stunden, am Wochenende etwas mehr. Meistens übe ich morgens vor der Schule eine Stunde und dann noch einmal am Nachmittag. Zuerst mache ich immer Aufwärmübungen und Technik, zum Beispiel [Tonleitern / Stimmübungen]. Danach arbeite ich an meinen Stücken. Ich mache regelmäßig kurze Pausen, weil ich sonst nicht mehr konzentriert bin. Für mich ist es wichtiger, konzentriert zu üben als sehr lange. Am Abend höre ich oft Aufnahmen oder lese die Noten, ohne zu [spielen / singen].",
+    "modelSv": "På skoldagar övar jag ungefär [tre] timmar, på helgerna lite mer. Oftast övar jag en timme på morgonen före skolan och sedan en gång till på eftermiddagen. Först gör jag alltid uppvärmningsövningar och teknik, till exempel [skalor / röstövningar]. Sedan arbetar jag med mina stycken. Jag tar regelbundet korta pauser, för annars är jag inte längre koncentrerad. För mig är det viktigare att öva koncentrerat än väldigt länge. På kvällen lyssnar jag ofta på inspelningar eller läser noterna utan att [spela / sjunga].",
+    "follow": [
+      "Wie planen Sie Ihre Übezeit?",
+      "Wie wollen Sie im Studium Üben und Theorie verbinden?"
+    ]
+  },
+  {
+    "id": "iv-22",
+    "cat": "arbeit",
+    "q": "Wie gehen Sie vor, wenn Sie ein neues Stück lernen?",
+    "sv": "Hur går du till väga när du lär dig ett nytt stycke?",
+    "tips": "Beskriv en tydlig arbetsprocess i steg: först, sedan, till sist. Det visar att du kan arbeta självständigt, vilket är avgörande på en högskola.",
+    "phrases": [
+      {
+        "fr": "Zuerst höre ich mir verschiedene Aufnahmen an.",
+        "sv": "Först lyssnar jag på olika inspelningar."
+      },
+      {
+        "fr": "Ich informiere mich über den Komponisten.",
+        "sv": "Jag tar reda på fakta om kompositören."
+      },
+      {
+        "fr": "Dann übe ich Abschnitt für Abschnitt.",
+        "sv": "Sedan övar jag avsnitt för avsnitt."
+      },
+      {
+        "fr": "Wenn ich die Noten sicher kann, arbeite ich an der Interpretation.",
+        "sv": "När jag kan noterna säkert arbetar jag med tolkningen."
+      }
+    ],
+    "model": "Zuerst höre ich mir verschiedene Aufnahmen an und lese die Noten genau durch. Ich informiere mich auch über den Komponisten und die Zeit, in der das Stück entstanden ist. [Bei einem Lied übersetze ich zuerst den Text.] Dann übe ich langsam, Abschnitt für Abschnitt, und entscheide, [welchen Fingersatz ich nehme / wo ich atme]. Wenn ich die Noten sicher kann, arbeite ich an der Interpretation: Dynamik, Tempo und Klangfarben. Am Ende [spiele / singe] ich das Stück oft meiner Familie oder Freunden vor, um Erfahrung zu sammeln.",
+    "modelSv": "Först lyssnar jag på olika inspelningar och läser noga igenom noterna. Jag tar också reda på fakta om kompositören och tiden då stycket kom till. [I en sång översätter jag först texten.] Sedan övar jag långsamt, avsnitt för avsnitt, och bestämmer [vilken fingersättning jag använder / var jag andas]. När jag kan noterna säkert arbetar jag med tolkningen: dynamik, tempo och klangfärger. Till sist [spelar / sjunger] jag ofta upp stycket för min familj eller vänner för att få erfarenhet.",
+    "follow": [
+      "Hören Sie Aufnahmen nicht zu früh? Kopieren Sie dann nicht?",
+      "Wie lange brauchen Sie für ein neues Stück?"
+    ]
+  },
+  {
+    "id": "iv-23",
+    "cat": "arbeit",
+    "q": "Wie gehen Sie mit Kritik um?",
+    "sv": "Hur hanterar du kritik?",
+    "tips": "På en Musikhochschule får du kritik varje vecka, så juryn vill veta att du kan ta emot den. Visa att du lyssnar, frågar och omsätter kritiken i praktiken, och ge gärna ett kort exempel.",
+    "phrases": [
+      {
+        "fr": "Kritik ist wichtig, weil ich nur so besser werden kann.",
+        "sv": "Kritik är viktig eftersom jag bara på så sätt kan bli bättre."
+      },
+      {
+        "fr": "Ich versuche, genau zuzuhören.",
+        "sv": "Jag försöker lyssna noga."
+      },
+      {
+        "fr": "Wenn ich etwas nicht verstehe, frage ich nach.",
+        "sv": "Om jag inte förstår något frågar jag."
+      },
+      {
+        "fr": "Kritik an meinem Spiel ist keine Kritik an mir als Person.",
+        "sv": "Kritik av mitt spel är ingen kritik av mig som person."
+      }
+    ],
+    "model": "Ich finde Kritik sehr wichtig, weil ich nur so besser werden kann. Natürlich ist es nicht immer leicht, wenn jemand sagt, dass etwas nicht gut war. Aber ich versuche, genau zuzuhören und nicht sofort zu reagieren. Nach dem Unterricht schreibe ich die wichtigsten Punkte auf, damit ich sie beim Üben nicht vergesse. Wenn ich etwas nicht verstehe, frage ich nach. Ich habe gelernt, dass Kritik an meinem [Spiel / Gesang] keine Kritik an mir als Person ist.",
+    "modelSv": "Jag tycker att kritik är väldigt viktig, eftersom jag bara på så sätt kan bli bättre. Självklart är det inte alltid lätt när någon säger att något inte var bra. Men jag försöker lyssna noga och inte reagera direkt. Efter lektionen skriver jag upp de viktigaste punkterna så att jag inte glömmer dem när jag övar. Om jag inte förstår något frågar jag. Jag har lärt mig att kritik av [mitt spel / min sång] inte är kritik av mig som person.",
+    "follow": [
+      "Was war die wichtigste Kritik, die Sie bisher bekommen haben?",
+      "Was machen Sie, wenn Sie mit einer Kritik nicht einverstanden sind?"
+    ]
+  },
+  {
+    "id": "iv-24",
+    "cat": "arbeit",
+    "q": "Was machen Sie, wenn Sie an einer Stelle nicht weiterkommen?",
+    "sv": "Vad gör du när du kör fast på ett ställe?",
+    "tips": "Juryn vill se problemlösning och självständighet. Beskriv några konkreta strategier (analysera problemet, öva långsamt, mental träning) och att du ber om hjälp när det behövs.",
+    "phrases": [
+      {
+        "fr": "Dann mache ich zuerst eine Pause.",
+        "sv": "Då tar jag först en paus."
+      },
+      {
+        "fr": "Ich versuche herauszufinden, was genau das Problem ist.",
+        "sv": "Jag försöker ta reda på vad exakt problemet är."
+      },
+      {
+        "fr": "Ich übe die Stelle in einem anderen Rhythmus.",
+        "sv": "Jag övar stället i en annan rytm."
+      },
+      {
+        "fr": "Ich frage [meine Lehrerin / meinen Lehrer] um Rat.",
+        "sv": "Jag ber [min lärare] om råd."
+      }
+    ],
+    "model": "Dann mache ich zuerst eine Pause, weil ich sonst frustriert werde. Danach versuche ich herauszufinden, was genau das Problem ist: Ist es technisch, rhythmisch oder liegt es an der Konzentration? Oft übe ich die Stelle sehr langsam oder in einem anderen Rhythmus. Manchmal hilft es auch, die Stelle nur im Kopf durchzugehen. Wenn es trotzdem nicht klappt, frage ich [meine Lehrerin / meinen Lehrer] um Rat. Ich habe gemerkt, dass ein Problem am nächsten Tag oft schon kleiner ist.",
+    "modelSv": "Då tar jag först en paus, för annars blir jag frustrerad. Sedan försöker jag ta reda på vad exakt problemet är: är det tekniskt, rytmiskt, eller handlar det om koncentrationen? Ofta övar jag stället väldigt långsamt eller i en annan rytm. Ibland hjälper det också att gå igenom stället bara i huvudet. Om det ändå inte fungerar ber jag [min lärare] om råd. Jag har märkt att ett problem ofta redan är mindre nästa dag.",
+    "follow": [
+      "Können Sie ein konkretes Beispiel nennen?",
+      "Üben Sie auch mental, ohne [Instrument]?"
+    ]
+  },
+  {
+    "id": "iv-25",
+    "cat": "arbeit",
+    "q": "Hören Sie sich viele Aufnahmen an? Haben Sie Vorbilder?",
+    "sv": "Lyssnar du på många inspelningar? Har du förebilder?",
+    "tips": "Nämn en eller två verkliga musiker du beundrar och säg exakt vad du gillar hos dem. Visa att du jämför tolkningar för att hitta din egen väg, inte för att kopiera.",
+    "phrases": [
+      {
+        "fr": "Ein großes Vorbild für mich ist [Interpret].",
+        "sv": "En stor förebild för mig är [musiker]."
+      },
+      {
+        "fr": "Ich habe [sie / ihn] live in [Stadt] gehört.",
+        "sv": "Jag har hört [henne / honom] live i [stad]."
+      },
+      {
+        "fr": "Ich versuche nicht, jemanden zu kopieren.",
+        "sv": "Jag försöker inte kopiera någon."
+      },
+      {
+        "fr": "Ich vergleiche verschiedene Interpretationen.",
+        "sv": "Jag jämför olika tolkningar."
+      }
+    ],
+    "model": "Ja, ich höre sehr viele Aufnahmen. Ein großes Vorbild für mich ist [Interpret]. Ich habe [sie / ihn] vor [zwei] Jahren live in [Stadt] gehört, und das hat mich sehr beeindruckt. Mir gefällt, dass [sie / er] sehr natürlich [spielt / singt] und nie übertreibt. Ich versuche aber nicht, jemanden zu kopieren. Ich vergleiche lieber verschiedene Interpretationen, um meine eigene Meinung zu finden. Außerdem ist [meine Lehrerin / mein Lehrer] ein Vorbild für mich, weil [sie / er] so viel Freude an der Musik hat.",
+    "modelSv": "Ja, jag lyssnar på väldigt många inspelningar. En stor förebild för mig är [musiker]. Jag hörde [henne / honom] live i [stad] för [två] år sedan, och det gjorde stort intryck på mig. Jag gillar att [hon / han] [spelar / sjunger] väldigt naturligt och aldrig överdriver. Men jag försöker inte kopiera någon. Jag jämför hellre olika tolkningar för att hitta min egen åsikt. Dessutom är [min lärare] en förebild för mig, eftersom [hon / han] har så mycket glädje i musiken.",
+    "follow": [
+      "Welche Aufnahme von [Stück] gefällt Ihnen am besten?",
+      "Was machen Sie anders als [Interpret]?"
+    ]
+  },
+  {
+    "id": "iv-26",
+    "cat": "hochschule",
+    "q": "Warum möchten Sie gerade an unserer Hochschule studieren?",
+    "sv": "Varför vill du studera just på vår högskola?",
+    "tips": "Den här frågan kommer nästan alltid, så förbered ett eget svar för varje skola: en lärare du vill studera för, skolans profil och staden (Berlin: Philharmonie och tre operahus; Leipzig: Bach, Mendelssohn och Gewandhaus; München: Staatsoper och BR-Symphonieorchester). Visa att du har läst på.",
+    "phrases": [
+      {
+        "fr": "Ihre Hochschule hat einen sehr guten Ruf.",
+        "sv": "Er högskola har ett mycket gott rykte."
+      },
+      {
+        "fr": "Ich habe viel über die Klasse von [Professorin / Professor] [Name] gehört.",
+        "sv": "Jag har hört mycket om [professor] [namn]s klass."
+      },
+      {
+        "fr": "Es gibt hier viele Möglichkeiten, Kammermusik zu machen.",
+        "sv": "Här finns många möjligheter att spela kammarmusik."
+      },
+      {
+        "fr": "[Berlin / Leipzig / München] hat ein unglaubliches Musikleben.",
+        "sv": "[Berlin / Leipzig / München] har ett otroligt musikliv."
+      },
+      {
+        "fr": "Ich glaube, dass ich mich hier am besten entwickeln könnte.",
+        "sv": "Jag tror att jag skulle kunna utvecklas bäst här."
+      }
+    ],
+    "model": "Ihre Hochschule hat einen sehr guten Ruf, auch in Schweden. Ich habe viel über die Klasse von [Professorin / Professor] [Name] gehört, und ich habe [sie / ihn] im [Sommer] bei einem Meisterkurs erlebt. [Ihre / Seine] Art zu unterrichten hat mir sehr gefallen. Außerdem finde ich es toll, dass es hier so viele Möglichkeiten gibt, Kammermusik zu machen und [im Orchester / in Opernproduktionen] mitzuwirken. Und [Berlin / Leipzig / München] ist eine Stadt mit einem unglaublichen Musikleben. Ich glaube, dass ich mich hier am besten entwickeln könnte.",
+    "modelSv": "Er högskola har ett mycket gott rykte, även i Sverige. Jag har hört mycket om [professor] [namn]s klass, och jag upplevde [henne / honom] på en mästarkurs i [somras]. [Hennes / Hans] sätt att undervisa tilltalade mig mycket. Dessutom tycker jag att det är fantastiskt att det finns så många möjligheter här att spela kammarmusik och medverka [i orkestern / i operaproduktioner]. Och [Berlin / Leipzig / München] är en stad med ett otroligt musikliv. Jag tror att jag skulle kunna utvecklas bäst här.",
+    "follow": [
+      "Haben Sie sich auch an anderen Hochschulen beworben?",
+      "Was wissen Sie über unseren Studiengang?"
+    ]
+  },
+  {
+    "id": "iv-27",
+    "cat": "hochschule",
+    "q": "Warum möchten Sie in Deutschland studieren und nicht in Schweden?",
+    "sv": "Varför vill du studera i Tyskland och inte i Sverige?",
+    "tips": "Undvik att kritisera Sverige. Lyft i stället fram det positiva med Tyskland: den klassiska traditionen, det stora utbudet av orkestrar och operahus, och att du vill växa genom att bo utomlands.",
+    "phrases": [
+      {
+        "fr": "Deutschland hat für mich eine ganz besondere Bedeutung.",
+        "sv": "Tyskland har en alldeles särskild betydelse för mig."
+      },
+      {
+        "fr": "Viele Komponisten, deren Musik ich liebe, haben hier gelebt.",
+        "sv": "Många kompositörer vars musik jag älskar har levt här."
+      },
+      {
+        "fr": "Ich möchte diese Kultur jeden Tag erleben.",
+        "sv": "Jag vill uppleva den här kulturen varje dag."
+      },
+      {
+        "fr": "Es wäre gut für mich, ins Ausland zu gehen.",
+        "sv": "Det skulle vara bra för mig att åka utomlands."
+      }
+    ],
+    "model": "Deutschland hat für mich als klassische Musikerin eine ganz besondere Bedeutung. Viele Komponisten, deren Musik ich liebe, haben hier gelebt und gearbeitet, zum Beispiel Bach, Brahms und Schumann. Außerdem gibt es in Deutschland sehr viele Orchester, Opernhäuser und Konzertsäle. Ich möchte diese Kultur nicht nur aus Büchern kennen, sondern sie jeden Tag erleben. In Schweden gibt es auch gute Hochschulen, aber nur wenige Studienplätze. Ich glaube, dass es für meine Entwicklung gut wäre, ins Ausland zu gehen und selbstständiger zu werden.",
+    "modelSv": "Tyskland har en alldeles särskild betydelse för mig som klassisk musiker. Många kompositörer vars musik jag älskar har levt och verkat här, till exempel Bach, Brahms och Schumann. Dessutom finns det väldigt många orkestrar, operahus och konserthus i Tyskland. Jag vill inte bara känna till den här kulturen från böcker, utan uppleva den varje dag. I Sverige finns det också bra högskolor, men bara få studieplatser. Jag tror att det skulle vara bra för min utveckling att åka utomlands och bli mer självständig.",
+    "follow": [
+      "Haben Sie sich auch in Schweden beworben?",
+      "Waren Sie schon einmal länger in Deutschland?"
+    ]
+  },
+  {
+    "id": "iv-28",
+    "cat": "hochschule",
+    "q": "Hatten Sie schon Kontakt zu jemandem aus unserem Kollegium, zum Beispiel durch eine Probestunde?",
+    "sv": "Har du redan haft kontakt med någon av lärarna här, till exempel genom en provlektion?",
+    "tips": "I Tyskland är det vanligt att ta en provlektion (Probestunde) hos en professor före provet. Om du har gjort det: berätta vad ni arbetade med och vad du lärde dig. Om inte: säg det ärligt och visa intresse.",
+    "phrases": [
+      {
+        "fr": "Ich hatte eine Probestunde bei [Professorin / Professor] [Name].",
+        "sv": "Jag hade en provlektion hos [professor] [namn]."
+      },
+      {
+        "fr": "Ich habe [ihr / ihm] eine Aufnahme geschickt.",
+        "sv": "Jag skickade en inspelning till [henne / honom]."
+      },
+      {
+        "fr": "Ich komme gut mit [ihrer / seiner] Art zu unterrichten zurecht.",
+        "sv": "Jag kommer bra överens med [hennes / hans] sätt att undervisa."
+      },
+      {
+        "fr": "Leider hatte ich noch keine Gelegenheit dazu.",
+        "sv": "Tyvärr har jag inte haft tillfälle till det än."
+      }
+    ],
+    "model": "Ja, ich hatte im [Frühling] eine Probestunde bei [Professorin / Professor] [Name]. Ich habe [ihr / ihm] vorher eine E-Mail geschrieben und eine Aufnahme geschickt. Die Stunde war sehr hilfreich: Wir haben vor allem an [Klang und Phrasierung] gearbeitet, und ich habe viele neue Ideen bekommen. Ich habe gemerkt, dass ich gut mit [ihrer / seiner] Art zu unterrichten zurechtkomme. Deshalb würde ich sehr gern in [ihrer / seiner] Klasse studieren. [Falls nicht: Leider hatte ich noch keine Gelegenheit dazu, aber ich würde es gern nachholen.]",
+    "modelSv": "Ja, jag hade en provlektion hos [professor] [namn] i [våras]. Jag skrev ett mejl till [henne / honom] i förväg och skickade en inspelning. Lektionen var väldigt givande: vi arbetade framför allt med [klang och frasering], och jag fick många nya idéer. Jag märkte att jag kommer bra överens med [hennes / hans] sätt att undervisa. Därför skulle jag väldigt gärna vilja studera i [hennes / hans] klass. [Om inte: Tyvärr har jag inte haft tillfälle till det än, men jag skulle gärna ta igen det.]",
+    "follow": [
+      "Was hat [sie / er] Ihnen geraten?",
+      "Bei wem möchten Sie am liebsten studieren?"
+    ]
+  },
+  {
+    "id": "iv-29",
+    "cat": "hochschule",
+    "q": "Was erwarten Sie vom Studium?",
+    "sv": "Vad förväntar du dig av utbildningen?",
+    "tips": "Visa att du har realistiska förväntningar och vet vad en Bachelor i musik innehåller: huvudämne, teori, gehörsträning, musikhistoria, piano, ensemble. Säg också vad du själv vill bidra med.",
+    "phrases": [
+      {
+        "fr": "Ich erwarte, dass ich technisch und künstlerisch weiterkomme.",
+        "sv": "Jag förväntar mig att jag kommer vidare tekniskt och konstnärligt."
+      },
+      {
+        "fr": "Ich freue mich auf den Einzelunterricht.",
+        "sv": "Jag ser fram emot den enskilda undervisningen."
+      },
+      {
+        "fr": "Ich hoffe, dass ich oft auf der Bühne stehen kann.",
+        "sv": "Jag hoppas att jag kan stå på scenen ofta."
+      },
+      {
+        "fr": "Ich weiß, dass das Studium viel Arbeit bedeutet.",
+        "sv": "Jag vet att utbildningen innebär mycket arbete."
+      }
+    ],
+    "model": "Ich erwarte vor allem, dass ich technisch und künstlerisch viel weiterkomme. Ich freue mich auf den Einzelunterricht, aber auch auf Fächer wie Musiktheorie, Musikgeschichte und Kammermusik. Ich hoffe, dass ich viele Gelegenheiten bekomme, auf der Bühne zu stehen. Außerdem möchte ich von den anderen Studierenden lernen, die aus der ganzen Welt kommen. Ich weiß, dass das Studium viel Arbeit bedeutet und dass man selbstständig sein muss. Darauf bin ich vorbereitet, und ich bin bereit, sehr viel zu arbeiten.",
+    "modelSv": "Jag förväntar mig framför allt att jag kommer mycket längre tekniskt och konstnärligt. Jag ser fram emot den enskilda undervisningen, men också ämnen som musikteori, musikhistoria och kammarmusik. Jag hoppas att jag får många tillfällen att stå på scenen. Dessutom vill jag lära mig av de andra studenterna, som kommer från hela världen. Jag vet att utbildningen innebär mycket arbete och att man måste vara självständig. Det är jag förberedd på, och jag är beredd att arbeta väldigt mycket.",
+    "follow": [
+      "Welches Fach interessiert Sie neben dem Hauptfach am meisten?",
+      "Was können Sie den anderen Studierenden geben?"
+    ]
+  },
+  {
+    "id": "iv-30",
+    "cat": "hochschule",
+    "q": "Wie stellen Sie sich Ihr Leben in [Berlin / Leipzig / München] vor?",
+    "sv": "Hur föreställer du dig ditt liv i [Berlin / Leipzig / München]?",
+    "tips": "Juryn vill veta att du klarar att flytta till ett annat land. Beskriv kort boende, vardag och vad du ser fram emot i staden, och visa att du har tänkt på det praktiska.",
+    "phrases": [
+      {
+        "fr": "Ich stelle mir vor, dass ich in einer WG wohne.",
+        "sv": "Jag föreställer mig att jag bor i ett kollektiv."
+      },
+      {
+        "fr": "Ich möchte so oft wie möglich in die Oper gehen.",
+        "sv": "Jag vill gå på opera så ofta som möjligt."
+      },
+      {
+        "fr": "Ich freue mich darauf, neue Leute kennenzulernen.",
+        "sv": "Jag ser fram emot att lära känna nya människor."
+      },
+      {
+        "fr": "Ich bin gut zurechtgekommen.",
+        "sv": "Jag klarade mig bra."
+      }
+    ],
+    "model": "Ich stelle mir vor, dass ich in einer WG oder in einem Studentenwohnheim wohne, nicht weit von der Hochschule. Die meiste Zeit werde ich natürlich üben und im Unterricht sein. Aber ich möchte auch so oft wie möglich in Konzerte und in die Oper gehen, weil das Angebot hier so groß ist. Ich freue mich darauf, neue Leute kennenzulernen und jeden Tag Deutsch zu sprechen. Natürlich wird es am Anfang nicht leicht sein, so weit weg von meiner Familie zu wohnen. Aber ich war schon [einen Sommer] allein im Ausland und bin gut zurechtgekommen.",
+    "modelSv": "Jag föreställer mig att jag bor i ett kollektiv eller i ett studentboende, inte långt från högskolan. Den mesta tiden kommer jag förstås att öva och vara på lektioner. Men jag vill också gå på konserter och opera så ofta som möjligt, eftersom utbudet är så stort här. Jag ser fram emot att lära känna nya människor och prata tyska varje dag. Självklart kommer det inte att vara lätt i början att bo så långt från min familj. Men jag har redan varit ensam utomlands [en sommar] och klarade mig bra.",
+    "follow": [
+      "Waren Sie schon einmal in [Stadt]?",
+      "Wie wollen Sie Ihr Studium finanzieren?"
+    ]
+  },
+  {
+    "id": "iv-31",
+    "cat": "zukunft",
+    "q": "Was möchten Sie nach dem Studium machen?",
+    "sv": "Vad vill du göra efter utbildningen?",
+    "tips": "Ha ett tydligt mål, men visa att du är realistisk och flexibel: musikeryrket består ofta av flera delar (ensemble, solo, undervisning). Konjunktiv II (würde, könnte) passar bra här.",
+    "phrases": [
+      {
+        "fr": "Mein Traum ist es, als [Orchestermusikerin / Opernsängerin] zu arbeiten.",
+        "sv": "Min dröm är att arbeta som [orkestermusiker / operasångerska]."
+      },
+      {
+        "fr": "Ich könnte mir gut vorstellen, ...",
+        "sv": "Jag skulle mycket väl kunna tänka mig att ..."
+      },
+      {
+        "fr": "Man muss flexibel sein.",
+        "sv": "Man måste vara flexibel."
+      },
+      {
+        "fr": "Vielleicht mache ich danach einen Master.",
+        "sv": "Kanske läser jag en master efteråt."
+      }
+    ],
+    "model": "Mein Traum ist es, als [Orchestermusikerin / Solistin / Opernsängerin] zu arbeiten. Ich [spiele / singe] sehr gern im Ensemble, deshalb könnte ich mir auch gut vorstellen, eine feste Stelle in einem [Orchester / Opernchor] zu haben. Daneben würde ich gern Kammermusik machen und vielleicht auch unterrichten. Ich weiß, dass es nicht leicht ist, eine Stelle zu bekommen, und dass man flexibel sein muss. Deshalb möchte ich im Studium möglichst viele Erfahrungen sammeln, zum Beispiel bei Projekten und Wettbewerben. Vielleicht mache ich danach auch einen Master.",
+    "modelSv": "Min dröm är att arbeta som [orkestermusiker / solist / operasångerska]. Jag [spelar / sjunger] väldigt gärna i ensemble, så jag skulle också mycket väl kunna tänka mig att ha en fast tjänst i en [orkester / operakör]. Vid sidan av det skulle jag gärna spela kammarmusik och kanske också undervisa. Jag vet att det inte är lätt att få en tjänst och att man måste vara flexibel. Därför vill jag samla så mycket erfarenhet som möjligt under utbildningen, till exempel i projekt och tävlingar. Kanske läser jag också en master efteråt.",
+    "follow": [
+      "Wie wollen Sie sich auf Probespiele bzw. Vorsingen vorbereiten?",
+      "Haben Sie schon an Wettbewerben teilgenommen?"
+    ]
+  },
+  {
+    "id": "iv-32",
+    "cat": "zukunft",
+    "q": "Wo sehen Sie sich in zehn Jahren?",
+    "sv": "Var ser du dig själv om tio år?",
+    "tips": "Ge en konkret men ödmjuk bild av framtiden. Det är bra att nämna både yrkesmål och värderingar (glädje i musiken, att föra kunskap vidare).",
+    "phrases": [
+      {
+        "fr": "In zehn Jahren habe ich hoffentlich mein Studium abgeschlossen.",
+        "sv": "Om tio år har jag förhoppningsvis avslutat mina studier."
+      },
+      {
+        "fr": "Am liebsten würde ich in Deutschland bleiben.",
+        "sv": "Helst skulle jag vilja stanna i Tyskland."
+      },
+      {
+        "fr": "Ich möchte regelmäßig auftreten.",
+        "sv": "Jag vill uppträda regelbundet."
+      },
+      {
+        "fr": "Das Wichtigste ist, dass ich von der Musik leben kann.",
+        "sv": "Det viktigaste är att jag kan leva på musiken."
+      }
+    ],
+    "model": "In zehn Jahren habe ich hoffentlich mein Studium abgeschlossen und arbeite als Musikerin. Am liebsten würde ich in Deutschland bleiben, aber ich könnte mir auch vorstellen, nach Schweden zurückzugehen. Ich möchte regelmäßig auftreten, sowohl allein als auch mit anderen. Vielleicht habe ich dann auch eigene Schülerinnen und Schüler, denn ich finde es schön, Wissen weiterzugeben. Das Wichtigste ist für mich, dass ich von der Musik leben kann und dass sie mir immer noch Freude macht.",
+    "modelSv": "Om tio år har jag förhoppningsvis avslutat mina studier och arbetar som musiker. Helst skulle jag vilja stanna i Tyskland, men jag skulle också kunna tänka mig att flytta tillbaka till Sverige. Jag vill uppträda regelbundet, både ensam och tillsammans med andra. Kanske har jag då också egna elever, för jag tycker att det är fint att föra kunskap vidare. Det viktigaste för mig är att jag kan leva på musiken och att den fortfarande ger mig glädje.",
+    "follow": [
+      "Was müsste passieren, damit Sie in Deutschland bleiben?",
+      "Was wäre ein Plan B für Sie?"
+    ]
+  },
+  {
+    "id": "iv-33",
+    "cat": "zukunft",
+    "q": "Können Sie sich vorstellen, später zu unterrichten?",
+    "sv": "Kan du tänka dig att undervisa senare?",
+    "tips": "Nästan alla musiker undervisar någon gång, så ett positivt svar är bra. Nämn gärna egen erfarenhet, men säg också vad du främst vill göra.",
+    "phrases": [
+      {
+        "fr": "Ja, sehr gut sogar.",
+        "sv": "Ja, absolut."
+      },
+      {
+        "fr": "Ich gebe seit einem Jahr zwei Kindern Unterricht.",
+        "sv": "Jag har undervisat två barn i ett år."
+      },
+      {
+        "fr": "Wenn man etwas erklären muss, versteht man es besser.",
+        "sv": "När man måste förklara något förstår man det bättre."
+      },
+      {
+        "fr": "Ich würde gern Kurse in Pädagogik besuchen.",
+        "sv": "Jag skulle gärna vilja gå kurser i pedagogik."
+      }
+    ],
+    "model": "Ja, sehr gut sogar. Ich habe schon ein bisschen Erfahrung, weil ich seit einem Jahr zwei Kindern an der Musikschule Unterricht gebe. Das macht mir viel Spaß, und ich lerne dabei auch selbst sehr viel. Wenn man etwas erklären muss, versteht man es oft besser. Trotzdem möchte ich zuerst vor allem auftreten. Ich glaube aber, dass Unterrichten ein wichtiger Teil des Berufs ist. Deshalb würde ich im Studium gern auch Kurse in Methodik oder Pädagogik besuchen.",
+    "modelSv": "Ja, absolut. Jag har redan lite erfarenhet, eftersom jag har undervisat två barn på kulturskolan i ett år. Det är väldigt roligt, och jag lär mig själv mycket av det. När man måste förklara något förstår man det ofta bättre. Ändå vill jag först och främst uppträda. Men jag tror att undervisning är en viktig del av yrket. Därför skulle jag gärna också gå kurser i metodik eller pedagogik under utbildningen.",
+    "follow": [
+      "Was ist für Sie eine gute Lehrerin oder ein guter Lehrer?",
+      "Was war für Sie beim Unterrichten am schwierigsten?"
+    ]
+  },
+  {
+    "id": "iv-34",
+    "cat": "zukunft",
+    "q": "Was bedeutet für Sie Erfolg als Musikerin?",
+    "sv": "Vad betyder framgång som musiker för dig?",
+    "tips": "En reflekterande fråga där juryn vill höra dina värderingar. Det finns inget rätt svar, men visa att du tänker på både konstnärlig utveckling, publiken och den praktiska verkligheten.",
+    "phrases": [
+      {
+        "fr": "Erfolg bedeutet für mich nicht nur, berühmt zu werden.",
+        "sv": "Framgång betyder för mig inte bara att bli känd."
+      },
+      {
+        "fr": "Natürlich wäre das schön, aber ...",
+        "sv": "Självklart vore det fint, men ..."
+      },
+      {
+        "fr": "Die Musik hat die Menschen berührt.",
+        "sv": "Musiken har berört människorna."
+      },
+      {
+        "fr": "Dann habe ich es geschafft.",
+        "sv": "Då har jag lyckats."
+      }
+    ],
+    "model": "Für mich bedeutet Erfolg nicht nur, berühmt zu werden oder Wettbewerbe zu gewinnen. Natürlich wäre das schön, aber es ist nicht das Wichtigste. Erfolg ist für mich, wenn ich nach einem Konzert merke, dass die Musik die Menschen berührt hat. Erfolg ist auch, wenn ich mich ständig weiterentwickle und neugierig bleibe. Und ganz praktisch bedeutet Erfolg, dass ich von meiner Musik leben kann. Wenn ich in zwanzig Jahren immer noch gern übe und auftrete, dann habe ich es geschafft.",
+    "modelSv": "För mig betyder framgång inte bara att bli känd eller vinna tävlingar. Självklart vore det fint, men det är inte det viktigaste. Framgång för mig är när jag efter en konsert märker att musiken har berört människorna. Framgång är också när jag hela tiden utvecklas och förblir nyfiken. Och helt praktiskt betyder framgång att jag kan leva på min musik. Om jag fortfarande tycker om att öva och uppträda om tjugo år, då har jag lyckats.",
+    "follow": [
+      "Hatten Sie schon einmal einen solchen Moment?",
+      "Wie wichtig sind Ihnen Wettbewerbe?"
+    ]
+  },
+  {
+    "id": "iv-35",
+    "cat": "sprache",
+    "q": "Seit wann lernen Sie Deutsch?",
+    "sv": "Hur länge har du läst tyska?",
+    "tips": "Var ärlig om din nivå och visa att du kan kommunicera ändå. Juryn är snäll mot den som försöker; tala lugnt och använd enkla meningar hellre än långa med fel.",
+    "phrases": [
+      {
+        "fr": "Ich lerne seit [fünf] Jahren Deutsch in der Schule.",
+        "sv": "Jag har läst tyska i skolan i [fem] år."
+      },
+      {
+        "fr": "Ich kann mich im Alltag gut verständigen.",
+        "sv": "Jag kan göra mig förstådd bra i vardagen."
+      },
+      {
+        "fr": "Wenn jemand sehr schnell spricht, muss ich nachfragen.",
+        "sv": "Om någon pratar väldigt fort måste jag fråga igen."
+      },
+      {
+        "fr": "Durch die Musik kenne ich viele Fachbegriffe.",
+        "sv": "Genom musiken kan jag många fackord."
+      }
+    ],
+    "model": "Ich lerne seit [fünf] Jahren Deutsch in der Schule. Im Moment besuche ich den Kurs Tyska 4, das ist ungefähr Niveau A2 bis B1. Ich kann mich schon gut im Alltag verständigen, aber wenn jemand sehr schnell spricht, muss ich manchmal nachfragen. Durch die Musik kenne ich auch viele Fachbegriffe, [und ich habe schon viele Lieder auf Deutsch gesungen]. Ich finde Deutsch eine schöne Sprache, und ich möchte unbedingt noch besser werden.",
+    "modelSv": "Jag har läst tyska i skolan i [fem] år. Just nu läser jag kursen Tyska 4, vilket ungefär motsvarar nivå A2 till B1. Jag kan redan göra mig förstådd bra i vardagen, men om någon pratar väldigt fort måste jag ibland fråga igen. Genom musiken kan jag också många fackord, [och jag har redan sjungit många sånger på tyska]. Jag tycker att tyska är ett vackert språk, och jag vill verkligen bli ännu bättre.",
+    "follow": [
+      "Was finden Sie an der deutschen Sprache am schwierigsten?",
+      "Waren Sie schon einmal in Deutschland, um Deutsch zu lernen?"
+    ]
+  },
+  {
+    "id": "iv-36",
+    "cat": "sprache",
+    "q": "Wie wollen Sie Ihr Deutsch bis zum Studienbeginn verbessern?",
+    "sv": "Hur tänker du förbättra din tyska tills utbildningen börjar?",
+    "tips": "Högskolorna kräver ofta ett visst språkintyg (ofta B1 eller B2) senast vid studiestarten, så kontrollera exakt vad varje skola kräver. Visa att du har en konkret plan med kurs, vardagsträning och prov.",
+    "phrases": [
+      {
+        "fr": "Ich weiß, dass ich ein höheres Niveau brauche.",
+        "sv": "Jag vet att jag behöver en högre nivå."
+      },
+      {
+        "fr": "Ich möchte einen Intensivkurs am Goethe-Institut besuchen.",
+        "sv": "Jag vill gå en intensivkurs på Goethe-Institut."
+      },
+      {
+        "fr": "Ich höre jeden Tag deutsche Podcasts.",
+        "sv": "Jag lyssnar på tyska poddar varje dag."
+      },
+      {
+        "fr": "Ich möchte die Prüfung [Goethe-Zertifikat B2] machen.",
+        "sv": "Jag vill göra provet [Goethe-Zertifikat B2]."
+      }
+    ],
+    "model": "Ich weiß, dass ich für das Studium ein höheres Niveau brauche, wahrscheinlich [B2]. Deshalb habe ich einen Plan gemacht. Nach meinem Schulabschluss möchte ich im Sommer einen Intensivkurs in Deutschland besuchen, zum Beispiel am Goethe-Institut. Außerdem höre ich jeden Tag deutsche Podcasts und sehe Serien auf Deutsch. Ich habe auch eine Tandempartnerin in [Stadt], mit der ich einmal pro Woche spreche. Ich möchte die Prüfung [Goethe-Zertifikat B2 / TestDaF] machen, bevor das Studium beginnt.",
+    "modelSv": "Jag vet att jag behöver en högre nivå för utbildningen, förmodligen [B2]. Därför har jag gjort en plan. Efter studenten vill jag gå en intensivkurs i Tyskland i sommar, till exempel på Goethe-Institut. Dessutom lyssnar jag på tyska poddar varje dag och tittar på serier på tyska. Jag har också en tandempartner i [stad], som jag pratar med en gång i veckan. Jag vill göra provet [Goethe-Zertifikat B2 / TestDaF] innan utbildningen börjar.",
+    "follow": [
+      "Wissen Sie, welches Sprachniveau wir verlangen?",
+      "Welche Serie schauen Sie gerade?"
+    ]
+  },
+  {
+    "id": "iv-37",
+    "cat": "sprache",
+    "q": "Welche Rolle spielt die deutsche Sprache für Ihre Musik?",
+    "sv": "Vilken roll spelar det tyska språket för din musik?",
+    "tips": "Koppla språket till musiken: repertoaren, kulturen och undervisningen. Sångare bör prata om text och uttal, instrumentalister om exempelvis brev, spelanvisningar eller kultur.",
+    "phrases": [
+      {
+        "fr": "Für mich spielt Deutsch eine große Rolle.",
+        "sv": "För mig spelar tyskan en stor roll."
+      },
+      {
+        "fr": "Sehr viel Repertoire kommt aus dem deutschsprachigen Raum.",
+        "sv": "Väldigt mycket repertoar kommer från det tyskspråkiga området."
+      },
+      {
+        "fr": "Ich muss die Texte genau verstehen und richtig aussprechen.",
+        "sv": "Jag måste förstå texterna exakt och uttala dem rätt."
+      },
+      {
+        "fr": "Ich möchte im Unterricht alles verstehen.",
+        "sv": "Jag vill förstå allt på lektionerna."
+      }
+    ],
+    "model": "Für mich spielt Deutsch eine große Rolle. Sehr viel Repertoire kommt aus dem deutschsprachigen Raum, zum Beispiel von Bach, Beethoven oder Brahms. Wenn ich die Sprache verstehe, verstehe ich auch die Kultur besser, aus der die Musik kommt. [Als Sängerin muss ich die Texte natürlich genau verstehen und richtig aussprechen.] [Als Instrumentalistin finde ich es hilfreich, wenn ich Briefe von Komponisten oder Anweisungen in den Noten lesen kann.] Und im Unterricht möchte ich alles verstehen, was [meine Professorin / mein Professor] sagt.",
+    "modelSv": "För mig spelar tyskan en stor roll. Väldigt mycket repertoar kommer från det tyskspråkiga området, till exempel av Bach, Beethoven eller Brahms. När jag förstår språket förstår jag också bättre den kultur som musiken kommer från. [Som sångerska måste jag förstås förstå texterna exakt och uttala dem rätt.] [Som instrumentalist tycker jag att det är till hjälp när jag kan läsa kompositörers brev eller anvisningar i noterna.] Och på lektionerna vill jag förstå allt som [min professor] säger.",
+    "follow": [
+      "Können Sie uns ein deutsches Wort aus Ihren Noten erklären?",
+      "Welches deutsche Lied oder Gedicht mögen Sie?"
+    ]
+  },
+  {
+    "id": "iv-38",
+    "cat": "sprache",
+    "q": "Glauben Sie, dass Sie dem Unterricht auf Deutsch folgen können?",
+    "sv": "Tror du att du kan följa undervisningen på tyska?",
+    "tips": "Juryn kan vara orolig för språket. Svara lugnt och självsäkert, erkänn att teoretiska ämnen blir svårare och berätta vad du gör åt det redan nu.",
+    "phrases": [
+      {
+        "fr": "Ja, ich glaube schon.",
+        "sv": "Ja, det tror jag."
+      },
+      {
+        "fr": "Am Anfang wird es anstrengend sein.",
+        "sv": "I början kommer det att vara ansträngande."
+      },
+      {
+        "fr": "Ich lerne schon jetzt die wichtigsten Fachbegriffe.",
+        "sv": "Jag lär mig redan nu de viktigaste fackorden."
+      },
+      {
+        "fr": "Wenn ich etwas nicht verstehe, frage ich nach.",
+        "sv": "Om jag inte förstår något frågar jag."
+      }
+    ],
+    "model": "Ja, ich glaube schon, auch wenn es am Anfang anstrengend sein wird. Im Einzelunterricht kann man vieles auch zeigen, und Musik ist ja eine internationale Sprache. In Fächern wie Musikgeschichte wird es schwieriger, das weiß ich. Deshalb lerne ich schon jetzt die wichtigsten Fachbegriffe auf Deutsch, zum Beispiel aus der Harmonielehre. Wenn ich etwas nicht verstehe, werde ich einfach nachfragen. Ich bin sicher, dass mein Deutsch im ersten Jahr sehr schnell besser wird, wenn ich jeden Tag hier lebe.",
+    "modelSv": "Ja, det tror jag, även om det kommer att vara ansträngande i början. På den enskilda undervisningen kan man också visa mycket, och musik är ju ett internationellt språk. I ämnen som musikhistoria blir det svårare, det vet jag. Därför lär jag mig redan nu de viktigaste fackorden på tyska, till exempel från harmoniläran. Om jag inte förstår något kommer jag helt enkelt att fråga. Jag är säker på att min tyska blir bättre väldigt snabbt under första året, när jag bor här varje dag.",
+    "follow": [
+      "Können Sie uns ein paar Fachbegriffe aus der Harmonielehre auf Deutsch nennen?",
+      "Wie würden Sie eine Prüfung in Musikgeschichte schaffen?"
+    ]
+  },
+  {
+    "id": "iv-39",
+    "cat": "buehne",
+    "q": "Sind Sie vor einem Auftritt nervös? Wie gehen Sie damit um?",
+    "sv": "Är du nervös före ett framträdande? Hur hanterar du det?",
+    "tips": "Alla är nervösa, så säg det ärligt. Det viktiga är att du har strategier: andning, fokus på musiken, mycket uppspelningsträning. Det visar att du klarar scenen.",
+    "phrases": [
+      {
+        "fr": "Ich bin vor jedem Auftritt ein bisschen nervös.",
+        "sv": "Jag är lite nervös före varje framträdande."
+      },
+      {
+        "fr": "Ein bisschen Nervosität gibt mir Energie.",
+        "sv": "Lite nervositet ger mig energi."
+      },
+      {
+        "fr": "Ich atme ruhig und tief.",
+        "sv": "Jag andas lugnt och djupt."
+      },
+      {
+        "fr": "Ich konzentriere mich auf die Musik und nicht auf das Publikum.",
+        "sv": "Jag koncentrerar mig på musiken och inte på publiken."
+      }
+    ],
+    "model": "Ja, ich bin vor jedem Auftritt ein bisschen nervös, heute natürlich auch. Ich glaube aber, dass ein bisschen Nervosität auch gut ist, weil sie mir Energie gibt. Ich habe gelernt, damit umzugehen. Vor dem Auftritt atme ich ruhig und tief und denke an den Anfang des Stückes, nicht an die schwierigen Stellen. Ich versuche auch, mich auf die Musik zu konzentrieren und nicht auf das Publikum. Außerdem hilft es mir sehr, oft vor anderen zu [spielen / singen], zum Beispiel bei Klassenvorspielen.",
+    "modelSv": "Ja, jag är lite nervös före varje framträdande, i dag förstås också. Men jag tror att lite nervositet också är bra, eftersom den ger mig energi. Jag har lärt mig att hantera det. Före framträdandet andas jag lugnt och djupt och tänker på början av stycket, inte på de svåra ställena. Jag försöker också koncentrera mig på musiken och inte på publiken. Dessutom hjälper det mig mycket att ofta [spela / sjunga] inför andra, till exempel på klasskonserter.",
+    "follow": [
+      "Ist Ihnen schon einmal auf der Bühne etwas schiefgegangen?",
+      "Was machen Sie direkt vor dem Auftritt?"
+    ]
+  },
+  {
+    "id": "iv-40",
+    "cat": "buehne",
+    "q": "Erzählen Sie uns von einem Auftritt, an den Sie sich gern erinnern.",
+    "sv": "Berätta om ett framträdande som du gärna minns.",
+    "tips": "Berätta en kort historia i perfekt: när, var, vad du framförde och varför det blev speciellt. Detaljer och känslor gör svaret levande och personligt.",
+    "phrases": [
+      {
+        "fr": "Ich erinnere mich besonders gern an ein Konzert in [Ort].",
+        "sv": "Jag minns särskilt gärna en konsert i [ort]."
+      },
+      {
+        "fr": "Es war mein erster großer Soloauftritt.",
+        "sv": "Det var mitt första stora solouppträdande."
+      },
+      {
+        "fr": "Plötzlich war die Nervosität weg.",
+        "sv": "Plötsligt var nervositeten borta."
+      },
+      {
+        "fr": "Das werde ich nie vergessen.",
+        "sv": "Det kommer jag aldrig att glömma."
+      }
+    ],
+    "model": "Ich erinnere mich besonders gern an ein Konzert im letzten [Winter] in [Ort]. Ich habe [Stück] von [Komponist] mit [Orchester / Klavierbegleitung] [gespielt / gesungen]. Es war mein erster großer Soloauftritt, und ich war vorher sehr aufgeregt. Aber als ich angefangen habe, war die Nervosität plötzlich weg. Ich hatte das Gefühl, dass alle im Saal ganz still zugehört haben. Nach dem Konzert ist eine ältere Frau zu mir gekommen und hat gesagt, dass meine Musik sie sehr berührt hat. Das werde ich nie vergessen.",
+    "modelSv": "Jag minns särskilt gärna en konsert i [ort] i [vintras]. Jag [spelade / sjöng] [verk] av [kompositör] med [orkester / pianoackompanjemang]. Det var mitt första stora solouppträdande, och jag var väldigt uppspelt innan. Men när jag började var nervositeten plötsligt borta. Jag hade känslan av att alla i salen lyssnade alldeles tyst. Efter konserten kom en äldre kvinna fram till mig och sa att min musik hade berört henne mycket. Det kommer jag aldrig att glömma.",
+    "follow": [
+      "Was war an diesem Abend anders als sonst?",
+      "Wie haben Sie sich darauf vorbereitet?"
+    ]
+  },
+  {
+    "id": "iv-41",
+    "cat": "buehne",
+    "q": "Wie fühlen Sie sich jetzt nach Ihrem Vorspiel beziehungsweise Vorsingen?",
+    "sv": "Hur känns det nu efter ditt provspel eller din provsjungning?",
+    "tips": "Juryn vill se om du kan bedöma dig själv realistiskt. Börja positivt, nämn ärligt en sak som kunde ha gått bättre och förklara kort varför, utan att ursäkta dig för mycket.",
+    "phrases": [
+      {
+        "fr": "Ehrlich gesagt bin ich erleichtert.",
+        "sv": "Ärligt talat är jag lättad."
+      },
+      {
+        "fr": "Insgesamt bin ich ziemlich zufrieden.",
+        "sv": "Totalt sett är jag ganska nöjd."
+      },
+      {
+        "fr": "Eine Stelle war nicht so sauber, wie ich es mir gewünscht hätte.",
+        "sv": "Ett ställe var inte så rent som jag hade önskat."
+      },
+      {
+        "fr": "Es hat mir Spaß gemacht, in diesem Saal zu [spielen / singen].",
+        "sv": "Det var roligt att [spela / sjunga] i den här salen."
+      }
+    ],
+    "model": "Ehrlich gesagt bin ich erleichtert, aber auch noch ein bisschen aufgeregt. Insgesamt bin ich ziemlich zufrieden. Bei [Stück] habe ich mich sehr wohl gefühlt, und ich glaube, dass ich die Stimmung gut zeigen konnte. Im [zweiten Stück] war eine Stelle nicht so sauber, wie ich es mir gewünscht hätte, weil ich dort etwas zu schnell geworden bin. Im Unterricht klappt das normalerweise besser. Trotzdem hat es mir Spaß gemacht, in diesem schönen Saal zu [spielen / singen].",
+    "modelSv": "Ärligt talat är jag lättad, men också fortfarande lite uppspelt. Totalt sett är jag ganska nöjd. I [verk] kände jag mig väldigt bekväm, och jag tror att jag kunde visa stämningen bra. I [det andra stycket] var ett ställe inte så rent som jag hade önskat, eftersom jag blev lite för snabb där. På lektionerna brukar det gå bättre. Ändå var det roligt att [spela / sjunga] i den här vackra salen.",
+    "follow": [
+      "Was würden Sie beim nächsten Mal anders machen?",
+      "Welches Stück hat Ihnen heute am besten gefallen?"
+    ]
+  },
+  {
+    "id": "iv-42",
+    "cat": "buehne",
+    "q": "Was ist Ihnen wichtig, wenn Sie vor Publikum auftreten?",
+    "sv": "Vad är viktigt för dig när du uppträder inför publik?",
+    "tips": "Visa att du tänker på publiken och kommunikationen, inte bara på att spela rätt. Ett bra svar blandar konstnärlig hållning (ärlighet, närvaro) med professionalitet (förberedelse).",
+    "phrases": [
+      {
+        "fr": "Am wichtigsten ist mir, dass ...",
+        "sv": "Det viktigaste för mig är att ..."
+      },
+      {
+        "fr": "Das Publikum soll spüren, dass mir das Stück etwas bedeutet.",
+        "sv": "Publiken ska känna att stycket betyder något för mig."
+      },
+      {
+        "fr": "Fehler sind nicht das Schlimmste.",
+        "sv": "Misstag är inte det värsta."
+      },
+      {
+        "fr": "Ich versuche, Kontakt zum Publikum aufzubauen.",
+        "sv": "Jag försöker skapa kontakt med publiken."
+      }
+    ],
+    "model": "Am wichtigsten ist mir, dass ich die Musik ehrlich und lebendig präsentiere. Das Publikum soll spüren, dass mir das Stück etwas bedeutet. Ich finde, dass Fehler nicht das Schlimmste sind. Schlimmer ist es, wenn die Musik langweilig ist. Ich versuche auch, Kontakt zum Publikum aufzubauen, zum Beispiel wenn ich vor einem Stück ein paar Worte sage. Außerdem ist mir eine gute Vorbereitung wichtig, denn nur wenn ich mich sicher fühle, kann ich auf der Bühne frei sein.",
+    "modelSv": "Det viktigaste för mig är att jag presenterar musiken ärligt och levande. Publiken ska känna att stycket betyder något för mig. Jag tycker att misstag inte är det värsta. Värre är det när musiken är tråkig. Jag försöker också skapa kontakt med publiken, till exempel genom att säga några ord före ett stycke. Dessutom är en god förberedelse viktig för mig, för bara när jag känner mig säker kan jag vara fri på scenen.",
+    "follow": [
+      "Sprechen Sie gern vor Publikum?",
+      "Wie wichtig ist Ihnen die Bühnenpräsenz?"
+    ]
+  },
+  {
+    "id": "iv-43",
+    "cat": "jury",
+    "q": "Haben Sie noch Fragen an uns?",
+    "sv": "Har du några frågor till oss?",
+    "tips": "Svara aldrig bara 'nej'. Förbered en eller två genomtänkta frågor om utbildningen (ensemblemöjligheter, opera- eller orkesterprojekt, stöd för internationella studenter) och tacka juryn till sist.",
+    "phrases": [
+      {
+        "fr": "Ja, vielen Dank, ich hätte zwei Fragen.",
+        "sv": "Ja, tack så mycket, jag skulle ha två frågor."
+      },
+      {
+        "fr": "Ich würde gern wissen, ob ...",
+        "sv": "Jag skulle gärna vilja veta om ..."
+      },
+      {
+        "fr": "Gibt es Unterstützung für internationale Studierende?",
+        "sv": "Finns det stöd för internationella studenter?"
+      },
+      {
+        "fr": "Vielen Dank für das Gespräch.",
+        "sv": "Tack så mycket för samtalet."
+      }
+    ],
+    "model": "Ja, vielen Dank, ich hätte zwei Fragen. Erstens: Wie viele Möglichkeiten gibt es im ersten Studienjahr, Kammermusik zu machen oder im Orchester mitzuspielen? [Für Sängerinnen: Gibt es schon im Bachelor Opernprojekte?] Zweitens würde ich gern wissen, ob es an der Hochschule Unterstützung für internationale Studierende gibt, zum Beispiel Deutschkurse oder Hilfe bei der Wohnungssuche. Vielen Dank für das Gespräch und dafür, dass ich heute hier [spielen / singen] durfte.",
+    "modelSv": "Ja, tack så mycket, jag skulle ha två frågor. För det första: hur många möjligheter finns det under första studieåret att spela kammarmusik eller vara med i orkestern? [För sångerskor: Finns det operaprojekt redan på kandidatnivå?] För det andra skulle jag gärna vilja veta om högskolan har stöd för internationella studenter, till exempel tyskkurser eller hjälp med att hitta bostad. Tack så mycket för samtalet och för att jag fick [spela / sjunga] här i dag.",
+    "follow": [
+      "Haben Sie sonst noch etwas, das Sie uns sagen möchten?"
+    ]
+  },
+  {
+    "id": "iv-44",
+    "cat": "jury",
+    "q": "Was machen Sie, wenn es dieses Jahr mit der Aufnahme nicht klappt?",
+    "sv": "Vad gör du om det inte blir antagning i år?",
+    "tips": "Juryn vill se att du är uthållig och har en plan B. Var lugn och positiv: säg att du skulle bli besviken men fortsätta arbeta, och beskriv konkret hur året skulle se ut. Konjunktiv II (würde) är rätt form här.",
+    "phrases": [
+      {
+        "fr": "Dann wäre ich natürlich enttäuscht.",
+        "sv": "Då skulle jag förstås bli besviken."
+      },
+      {
+        "fr": "Ich würde nicht aufgeben.",
+        "sv": "Jag skulle inte ge upp."
+      },
+      {
+        "fr": "Ich würde um Feedback bitten.",
+        "sv": "Jag skulle be om feedback."
+      },
+      {
+        "fr": "Nächstes Jahr würde ich mich noch einmal bewerben.",
+        "sv": "Nästa år skulle jag söka igen."
+      }
+    ],
+    "model": "Dann wäre ich natürlich enttäuscht, aber ich würde nicht aufgeben. Ich würde ein Jahr lang weiter intensiv mit [meiner Lehrerin / meinem Lehrer] üben und mich auf meine Schwächen konzentrieren. Gleichzeitig würde ich mein Deutsch verbessern, vielleicht sogar mit einem Sprachkurs in Deutschland. Ich würde auch um Feedback bitten, damit ich weiß, was ich verbessern muss. Viele Musiker werden nicht beim ersten Mal angenommen. Nächstes Jahr würde ich mich dann noch einmal bewerben, besser vorbereitet als heute.",
+    "modelSv": "Då skulle jag förstås bli besviken, men jag skulle inte ge upp. Jag skulle fortsätta öva intensivt med [min lärare] i ett år och koncentrera mig på mina svagheter. Samtidigt skulle jag förbättra min tyska, kanske till och med med en språkkurs i Tyskland. Jag skulle också be om feedback, så att jag vet vad jag behöver förbättra. Många musiker blir inte antagna första gången. Nästa år skulle jag söka igen, bättre förberedd än i dag.",
+    "follow": [
+      "Haben Sie sich an anderen Hochschulen beworben?",
+      "Würden Sie auch ein Vorstudium machen?"
+    ]
+  },
+  {
+    "id": "iv-45",
+    "cat": "jury",
+    "q": "Im zweiten Stück ist Ihnen eine Stelle nicht ganz gelungen. Was ist da passiert?",
+    "sv": "I det andra stycket lyckades ett ställe inte riktigt. Vad hände där?",
+    "tips": "Ett svårt läge: håll med lugnt, förklara kort utan att skylla ifrån dig och visa att du kan gå vidare. Erbjud gärna att spela eller sjunga stället igen. Om du inte förstår en fråga, be juryn upprepa den, det är helt okej.",
+    "phrases": [
+      {
+        "fr": "Ja, das habe ich auch gemerkt.",
+        "sv": "Ja, det märkte jag också."
+      },
+      {
+        "fr": "Ich war an dieser Stelle kurz unkonzentriert.",
+        "sv": "Jag var okoncentrerad en kort stund på det stället."
+      },
+      {
+        "fr": "Wenn Sie möchten, kann ich die Stelle noch einmal [spielen / singen].",
+        "sv": "Om ni vill kan jag [spela / sjunga] stället en gång till."
+      },
+      {
+        "fr": "Entschuldigung, könnten Sie die Frage bitte wiederholen?",
+        "sv": "Ursäkta, skulle ni kunna upprepa frågan?"
+      },
+      {
+        "fr": "Könnten Sie bitte etwas langsamer sprechen?",
+        "sv": "Skulle ni kunna prata lite långsammare?"
+      }
+    ],
+    "model": "Ja, das habe ich auch gemerkt. An dieser Stelle war ich kurz unkonzentriert und bin deshalb [aus dem Rhythmus gekommen / im Text unsicher geworden]. Das ärgert mich ein bisschen, weil die Stelle beim Üben normalerweise gut klappt. Ich glaube, die Nervosität hat eine Rolle gespielt. Ich habe aber versucht, ruhig weiterzumachen und mich wieder auf die Musik zu konzentrieren. Wenn Sie möchten, kann ich die Stelle gern noch einmal [spielen / singen]. Ihren Hinweis nehme ich auf jeden Fall mit.",
+    "modelSv": "Ja, det märkte jag också. På det stället var jag okoncentrerad en kort stund och [kom därför ur rytmen / blev osäker på texten]. Det irriterar mig lite, eftersom stället brukar fungera bra när jag övar. Jag tror att nervositeten spelade in. Men jag försökte fortsätta lugnt och koncentrera mig på musiken igen. Om ni vill kan jag gärna [spela / sjunga] stället en gång till. Er kommentar tar jag i alla fall med mig.",
+    "follow": [
+      "Bitte, zeigen Sie uns die Stelle noch einmal.",
+      "Wie würden Sie diese Stelle jetzt üben?"
+    ]
+  }
+]

@@ -5,7 +5,7 @@ LANGUAGES.fr = {
   course: "Franska 3",         // kursen som ordlistan hör till
   exam: {name: "DELF B1", level: "B1",   // språkprovet eleven siktar på
     // Visas på sidan Mot målet (84-prep.js). Kontrollerat 2026-11-03 på ifsuede.com; byt mot 2027 års datum när de kommer.
-    sessionNote: "I Sverige anordnas DELF av Institut français de Suède (prov i Borås, Göteborg, Stockholm, Uppsala och Växjö, B1 kostar 950 kr). 2026 låg proven 11–13 mars (anmälan 30 januari–13 februari) och 6–8 maj (anmälan 27 mars–10 april). Datumen för 2027 är inte publicerade än: kolla ifsuede.com."},
+    sessionNote: "I Sverige anordnas DELF av Institut français de Suède (prov i Borås, Göteborg, Stockholm, Uppsala och Växjö, B1 kostar 950 kr). 2026 låg proven 11–13 mars (anmälan 30 januari–13 februari) och 6–8 maj (anmälan 27 mars–10 april). Höstsessionen var 3–5 november (anmälan 25 september–9 oktober). Datumen för 2027 är inte publicerade (kontrollerat 9 november 2026); troligen mitten av mars, början av maj och början av november, med anmälan ungefär sex veckor före: kolla ifsuede.com. Den som är under 18 år gör DELF Junior (samma nivåer och diplom). CNSMD Paris och Lyon godtar också TCF för B1."},
   goal: "att klara språkprovet för att få studera musik utomlands (i Frankrike)",   // valfritt: elevens mål, nämns i Claudes bedömning
   courseGy25: "Moderna språk – fortsättning, nivå 1",   // samma kurs i Gy25 (gymnasiet från juli 2025)
   // Elevens lärobok. Kapitel märkta #id|Namn|bok i words.txt kommer från boken (se docs/BOK.md).

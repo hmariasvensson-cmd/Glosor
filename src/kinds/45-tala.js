@@ -27,9 +27,9 @@ function talkTopics(){
   if(hasExam()) EX().tasks.filter(t=>exKind(t)==="speak").forEach(t=>out.push({id:"x:"+t.id,grp:"exam",title:t.title,
     task:t.task||"",instr:t.instr||"",lv:examLevel(t),tl:true,sub:[exPart(t.part).sv,t.teil].filter(Boolean).join(", ")}));
   (c.prompts||[]).forEach(p=>out.push({id:"w:"+p.id,grp:"write",title:p.title,task:p.task||"",lv:cefrOf(p.level)||courseLevel(),sec:p.sec}));
-  // Övningsintervjun (46-intervju.js): Claude är juryn vid antagningen till en sångutbildning, en per skola i IV_SCHOOLS
-  if((c.intervju||[]).length) IV_SCHOOLS.forEach(sc=>out.push({id:"iv:"+sc.id,grp:"iv",title:"Antagningsintervju: "+sc.name,jury:sc,turns:IV_TURNS,lv:courseLevel(),
-    task:`Juryns intervju (entretien) vid antagningen till kandidatprogrammet i klassisk sång vid ${sc.name}, ${sc.city}. Frågor om dig, din bakgrund, rösten, repertoaren, hur du arbetar, varför just den här skolan, dina planer och din franska.`}));
+  // Övningsintervjun (46-intervju.js): Claude är juryn vid antagningen till en sångutbildning, en per skola i ivSchools() (franska eller tyska)
+  if((c.intervju||[]).length){ const lg=ivLang(); ivSchools().forEach(sc=>out.push({id:"iv:"+sc.id,grp:"iv",title:"Antagningsintervju: "+sc.name,jury:sc,turns:IV_TURNS,lv:courseLevel(),
+    task:`Juryns intervju (${lg.term}) vid antagningen till ${lg.prog} vid ${sc.name}, ${sc.city}. Frågor om ${lg.topics}.`})); }
   if(out.filter(t=>t.grp!=="iv").length<3) [["g:1","Min vardag","Berätta om en vanlig dag: när du går upp, vad du gör i skolan eller på jobbet, och vad du gör på kvällen."],
     ["g:2","Min familj och mina vänner","Berätta om din familj och dina vänner: vilka de är, hur de är och vad ni gör tillsammans."],
     ["g:3","Min fritid","Berätta vad du gör på fritiden, varför du tycker om det och vad du vill göra mer av."]]
@@ -208,8 +208,9 @@ function chatPrompt(Ch,final){
     :"Använd naturligt språk och be eleven motivera, jämföra, ge exempel och ta ställning.";
   const conv=Ch.msgs.map(m=>(m.who==="c"?"C: ":"E: ")+m.text.slice(0,1500)).join("\n");
   const jury=t.jury, qs=jury?shuffle((C().intervju||[]).filter(x=>x.cat!=="jury")).slice(0,10).map(x=>"- "+x.q).join("\n"):"";
-  const head=jury?`Du är juryn vid antagningsintervjun (entretien avec le jury) till kandidatprogrammet i klassisk sång vid ${jury.name} i ${jury.city}. Den sökande är en ${studentDesc()} och klassisk sångare som övar inför intervjun ${L.inLang}. Den sökande dikterar sina svar med tangentbordets mikrofon: svaren är automatiska transkriptioner, så bortse från skiljetecken, versaler och ord som dikteringen uppenbart hört fel.
-Var en vänlig men professionell jury: säg vous, ställ en fråga i taget, reagera kort på svaret och gå vidare som en riktig jury gör (presentation, bakgrund, rösten, repertoaren, hur den sökande arbetar, varför just ${jury.name}, planer, franskan). Frågor som ofta kommer, att välja bland eller variera:
+  const lg=jury?ivLang():null;
+  const head=jury?`Du är juryn vid antagningsintervjun (${lg.term}) till ${lg.prog} vid ${jury.name} i ${jury.city}. Den sökande är en ${studentDesc()} och ${lg.who} som övar inför intervjun ${L.inLang}. Den sökande dikterar sina svar med tangentbordets mikrofon: svaren är automatiska transkriptioner, så bortse från skiljetecken, versaler och ord som dikteringen uppenbart hört fel.
+Var en vänlig men professionell jury: säg ${lg.addr}, ställ en fråga i taget, reagera kort på svaret och gå vidare som en riktig jury gör (${lg.topics}). Frågor som ofta kommer, att välja bland eller variera:
 ${qs}
 Den sökandes nivå: ${lv}. Tala tydligt och med vanliga ord, som till en sökande på nivå ${lv}, men på riktigt juryspråk.`
   :`Du är samtalspartner i ett muntligt övningssamtal ${L.inLang} med en ${studentDesc()}. Eleven tränar inför den muntliga delen${L.exam?` av ${L.exam.name}`:""} och dikterar sina svar med tangentbordets mikrofon: svaren är automatiska transkriptioner, så bortse från skiljetecken, versaler och ord som dikteringen uppenbart hört fel.

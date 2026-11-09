@@ -279,7 +279,8 @@ const dueMax=()=>S.dueMax===0?Infinity:(S.dueMax>0?S.dueMax:MAXDUE);
      wrSkip     måndagen ("ÅÅÅÅ-MM-DD") i veckan då kortet Veckans skrivuppgift stängdes; saknas = inte stängt (40-writing.js)
      feedback, reports   Tyck till-meddelanden och felrapporter som inte kunde skickas (högst 50)
      hp         Högskoleprovet ORD (kind "hp", 06-hp.js): {lim, prov: [{d, r, n, s, lim, ids, miss}], run}; lim = vald tid (s),
-                prov = provpassen (högst 100), run = pågående provpass {ids, opts, ans, i, used, lim, seen}. Saknas tills eleven gjort ett
+                prov = provpassen (högst 100), run = pågående provpass {ids, opts, ans, i, used, lim, seen}. Saknas tills eleven gjort ett provpass.
+                Verbala provpasset (08-hpverb.js): vlim, verb = [{d, r, n, s, lim, parts}] (högst 100), vrun = {items, ans, i, used, lim, seen}.
    Nya fält läggs till här och i docs/ARKITEKTUR.md. Ett fält som byter form får en ny migrering i MIGRATIONS.
    Ord-id som bytt namn (languages/<kod>/ids.renamed) flyttas i alla fälten ovan av applyRenames vid varje inläsning. */
 let S;
@@ -1272,6 +1273,7 @@ function myStats(){
   const out={week:w0, min:min(0), q:q[0], goal:S.goal||0, prev:{week:b[1], min:min(1), q:q[1]}, hist,
     days:wkDays.size, streak, last:S.log.length?S.log[S.log.length-1].d:0, learned, mastered};
   const hp=isHp()&&hpBoard(); if(hp) out.hp=hp;   // Högskoleprovet ORD: provpassen {n, best, last, of, d} (06-hp.js), nytt fält
+  const hv=isHp()&&hpVerbBoard(); if(hv) out.hpv=hv;   // verbala provpasset, samma form (08-hpverb.js), nytt fält
   return out;
 }
 function boardSubscribe(){
@@ -1362,6 +1364,10 @@ async function renderBoard(){
   const hpRows=[]; parts.forEach(({key,d})=>Object.entries(obj(obj(d).langs)).forEach(([k,x])=>{ const h=obj(obj(x).hp);
     if((LANGUAGES[k]||{}).kind==="hp"&&num(h.n)&&byKey[key]) hpRows.push({r:byKey[key],best:num(h.best),last:num(h.last),of:num(h.of)||10,n:num(h.n)}); }));
   hpRows.sort((a,b)=>b.best-a.best||b.last-a.last);
+  // Provpass verbal del (08-hpverb.js): langs.<kod>.hpv
+  const hvRows=[]; parts.forEach(({key,d})=>Object.entries(obj(obj(d).langs)).forEach(([k,x])=>{ const h=obj(obj(x).hpv);
+    if((LANGUAGES[k]||{}).kind==="hp"&&num(h.n)&&byKey[key]) hvRows.push({r:byKey[key],best:num(h.best),last:num(h.last),of:num(h.of)||40,n:num(h.n)}); }));
+  hvRows.sort((a,b)=>b.best-a.best||b.last-a.last);
   app.innerHTML=`<section class="panel"><h2>Topplista den här veckan</h2>
     <p class="plan">Minuter och frågor sedan måndag, i alla språk. Dagar i rad räknas om man övar varje dag.</p>
     ${win?`<p class="winner">Förra veckan vann <b>${esc(nameOf(win))}</b> med ${esc(win.prev)} minuter.</p>`:""}
@@ -1375,6 +1381,9 @@ async function renderBoard(){
   </section>
   ${hpRows.length?`<section class="panel" id="hpboard"><h2>Provpass ORD</h2><p class="plan">Bästa och senaste resultat på provpassen i Högskoleprovet ORD.</p>
     <ol class="board">${hpRows.map((h,i)=>`<li class="brow${me(h.r)?" me":""}"><span class="rank">${i+1}</span><span class="who"><b>${esc(nameOf(h.r))}${me(h.r)?" (du)":""}</b><small>${esc(h.n)} provpass</small></span>
+      <span class="num"><b>${esc(h.best)}/${esc(h.of)}</b><small>bästa</small></span><span class="num"><b>${esc(h.last)}/${esc(h.of)}</b><small>senaste</small></span></li>`).join("")}</ol></section>`:""}
+  ${hvRows.length?`<section class="panel" id="hvboard"><h2>Provpass verbal del</h2><p class="plan">Bästa och senaste resultat på verbala provpassen (ORD, LÄS, MEK och ELF).</p>
+    <ol class="board">${hvRows.map((h,i)=>`<li class="brow${me(h.r)?" me":""}"><span class="rank">${i+1}</span><span class="who"><b>${esc(nameOf(h.r))}${me(h.r)?" (du)":""}</b><small>${esc(h.n)} provpass</small></span>
       <span class="num"><b>${esc(h.best)}/${esc(h.of)}</b><small>bästa</small></span><span class="num"><b>${esc(h.last)}/${esc(h.of)}</b><small>senaste</small></span></li>`).join("")}</ol></section>`:""}
   ${hist.length?`<section class="panel"><h2>Tidigare veckor</h2><ul class="missed">${hist.map(h=>`<li><span>${esc(wkLabel(h.wk))}</span><span><b>${esc(byKey[h.key]?nameOf(byKey[h.key]):"Någon")}</b> · ${esc(h.m)} min</span></li>`).join("")}</ul></section>`:""}
   <section class="panel"><h2>Ditt namn i topplistan${profMulti()?` (${esc(profName())})`:""}</h2>

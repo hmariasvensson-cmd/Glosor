@@ -48,9 +48,11 @@ function hpPanel(){
     <p class="plan">Delprovet ORD mäter ordförståelse. Varje uppgift är ett ord eller uttryck i fetstil och fem svarsalternativ, A–E. Du väljer det alternativ som bäst motsvarar ordets betydelse.</p>
     <details class="more"><summary>Så övar du</summary><p class="plan">Kör <b>Dagens pass</b> varje dag: nya ord ur ordlistan och repetition av dem du har övat, med allt längre mellanrum. Ett ord räknas som <b>kan</b> när du har haft rätt i fyra repetitioner i rad. Gör ett <b>provpass</b> då och då: tio ord som på provet, gärna med klocka (3–5 minuter). Under Statistik ser du hur resultaten utvecklas.</p></details>
     ${last?`<p class="plan" id="hplast">Senaste provpasset: <b>${last.r}/${last.n}</b>${ps.length>1?` · bästa ${best}/${HP_PROV} · ${ps.length} provpass`:""}.</p>`:""}
-    <button class="btn" id="hpgo">${run?`Fortsätt provpasset (${run.ans.filter(a=>a>=0).length} av ${run.ids.length} besvarade)`:"Provpass ORD: 10 ord"}</button></section>`;
+    <button class="btn" id="hpgo">${run?`Fortsätt provpasset (${run.ans.filter(a=>a>=0).length} av ${run.ids.length} besvarade)`:"Provpass ORD: 10 ord"}</button>
+    ${hasVerbProv()?(()=>{ const vr=S.hp&&S.hp.vrun, vl=vpHist()[vpHist().length-1];
+      return `<button class="btn ghost" id="hpvgo">${vr?`Fortsätt verbala provpasset (${vr.ans.filter(a=>a>=0).length} av ${vr.items.length})`:"Provpass verbal del: 40 uppgifter"}</button>${vl?`<p class="foot">Senaste verbala provpasset: ${vl.r}/${vl.n}.</p>`:""}`; })():""}</section>`;
 }
-function wireHpPanel(){ const b=$("#hpgo"); if(b) b.onclick=()=>openHpProv(); }
+function wireHpPanel(){ const b=$("#hpgo"); if(b) b.onclick=()=>openHpProv(); const v=$("#hpvgo"); if(v) v.onclick=()=>openVerbProv(); }
 
 /* Statistiken: provpassen över tid, andel ord du kan och övade ord per vecka */
 // Enkelt diagram med ett tydligt värde vid varje punkt eller stapel: {labels, values, max, bar, tips, unit}

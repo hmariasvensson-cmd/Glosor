@@ -1481,7 +1481,7 @@ const allRight=n0=>{const l=logsSince(n0); return l.length>0&&l.every(e=>e.right
     // Varje övning i menyn
     const menu=exGroups().flatMap(g=>g.items.map(h=>(h.match(/data-ex="(\w+)"/)||[])[1]).filter(Boolean));
     ok(c+": varje knapp i menyn har en typ med open", menu.every(id=>KINDS[id]&&KINDS[id].open), menu.join());
-    const need=["ktest"].concat(L.mono?(L.kind==="hp"?["hpprov"]:[]):["dict","trans","order","talk"],(C().listening||[]).length?["lq"]:[],(C().reading||[]).length?["rq"]:[],(C().stories||[]).length?["story"]:[],(C().phrases||[]).length?["phr"]:[],(C().prompts||[]).length?["write"]:[],hasGrammar()?["gram"]:[],(C().uttal||[]).length?["utt"]:[],hasExam()?["exam"]:[],(C().culture||[]).length?["culture"]:[],L.kind==="hp"?["mek","las","elf"].filter(k=>(C()[k]||[]).length):[],L.verbs&&!L.mono&&vtVerbs().length?["vtab"]:[],(C().intervju||[]).length?["iv"]:[]);
+    const need=["ktest"].concat(L.mono?(L.kind==="hp"?["hpprov"]:[]):["dict","trans","order","talk"],(C().listening||[]).length?["lq"]:[],(C().reading||[]).length?["rq"]:[],(C().stories||[]).length?["story"]:[],(C().phrases||[]).length?["phr"]:[],(C().prompts||[]).length?["write"]:[],hasGrammar()?["gram"]:[],(C().uttal||[]).length?["utt"]:[],hasExam()?["exam"]:[],(C().culture||[]).length?["culture"]:[],L.kind==="hp"?["mek","las","elf"].filter(k=>(C()[k]||[]).length):[],L.kind==="hp"&&hasVerbProv()?["hpverb"]:[],L.verbs&&!L.mono&&vtVerbs().length?["vtab"]:[],(C().intervju||[]).length?["iv"]:[]);
     ok(c+": alla övningar som kursen har innehåll för finns i menyn", need.every(k=>menu.includes(k)), need.filter(k=>!menu.includes(k)).join()+" · "+menu.length+" övningar");
     for(const id of menu){ const n0=S.log.length; let res=null, info="";
       try{
@@ -1492,6 +1492,8 @@ const allRight=n0=>{const l=logsSince(n0); return l.length>0&&l.every(e=>e.right
         else if(id==="utt"){ q('[data-pick="*"]').click(); runAll(); res=!sess&&q("#app").textContent.includes("Uttal klart")&&allRight(n0); }
         else if(id==="hpprov"){ const p0=hpProvs().length; q("#hpnew").click(); hpRun().ids.forEach((wid,i)=>{ hpGo(i); q('[data-hpo="'+hpRun().opts[i].indexOf(wid)+'"]').click(); }); q("#hpdone").click();
           const pp=hpProvs()[hpProvs().length-1]; res=hpProvs().length===p0+1&&pp.r===pp.n&&S.log[S.log.length-1].kind==="hpprov"&&!!q("#hpres"); info=pp&&pp.r+"/"+pp.n; }
+        else if(id==="hpverb"){ const p0=vpHist().length; q("#vpnew").click(); vpRun().items.forEach((it,i)=>{ vpGo(i); q('[data-vpo="'+vpOpts(it).a+'"]').click(); }); q("#vpdone").click();
+          const pp=vpHist()[vpHist().length-1]; res=vpHist().length===p0+1&&pp.r===pp.n&&pp.n===40&&Object.values(pp.parts).every(x=>x[1]===10)&&S.log[S.log.length-1].kind==="hpverb"&&!!q("#vpres"); info=pp&&pp.r+"/"+pp.n; }
         else if(id==="iv"){ q("[data-iv]").click(); q("#ivin").value="Bonjour, je suis chanteur et je chante depuis cinq ans."; q("#ivsave").click(); res=S.log.length===n0+1&&S.log[S.log.length-1].kind==="iv"; info=ivList().length+" frågor"; }
         else if(id==="vtab"){ const x=vtVerbs()[0]; S.w[x.w.id]={...(S.w[x.w.id]||{}),s:4,due:1e9}; exClick("vtab"); const b=q('[data-pick="'+x.verb+'"]'); b.click();
           const t=vtTarget(x.verb), cs=vtCells(x.verb,t); [...document.querySelectorAll(".vtin")].forEach((inp,i)=>inp.value=cs[i].form.split("/")[0]); q("#vtcheck").click();
@@ -4176,6 +4178,32 @@ appReady().then(async()=>{ try{
 </script>"""
 
 
+# Högskoleprovet: provpasset för hela den verbala delen (08-hpverb.js, backloggen P3)
+SCENARIO_HPVERB = r"""<script>
+const out=[]; const q=s=>document.querySelector(s);
+const ok=(name,cond,info="")=>out.push((cond?"OK   ":"FEL  ")+name+(info?"  ("+info+")":""));
+appReady().then(async()=>{ try{
+  if(!LANGUAGES.hp||!INLINE_DATA.hp){ ok("verbal: ingen HP-kurs (privat ordlista saknas), hoppar över", true); throw 0; }
+  useLang("hp"); await until(()=>L.code==="hp"&&WORDS.length,5000);
+  ok("verbal: finns", hasVerbProv());
+  renderStart(); ok("verbal: knapp på startsidan", !!q("#hpvgo")); q("#hpvgo").click(); await until(()=>q("#vpnew"),5000);
+  q("#vpnew").click(); const r=vpRun(); ok("verbal: 40 uppgifter, 10 per del", r.items.length===40&&["ord","las","mek","elf"].every(k=>r.items.filter(i=>i.k===k).length===10), r.items.map(i=>i.k).join(""));
+  ok("verbal: 55 minuter", r.lim===3300&&/55:00|54:5/.test(q("#vpclock").textContent), q("#vpclock").textContent);
+  vpGo(15); ok("verbal: LÄS visar texten", !!q("#vpq .hpread"));
+  vpGo(25); ok("verbal: MEK visar luckan", !!q("#vpq .mekgap"));
+  q("#quit").click(); ok("verbal: pausat provpass finns kvar", !!vpRun()&&/Fortsätt verbala/.test(q("#hpvgo").textContent));
+  r.items.forEach((it,i)=>{ vpGo(i); q('[data-vpo="'+(i%2?vpOpts(it).a:(vpOpts(it).a+1)%4)+'"]').click(); });
+  q("#vpdone").click(); const p=vpHist()[vpHist().length-1];
+  ok("verbal: resultat per del", p.r===20&&p.parts.ord[1]===10&&!!q("#vpres")&&q("#vpres").textContent.includes("Det du missade"), JSON.stringify(p.parts));
+  ok("verbal: topplistan och loggen", hpVerbBoard().best===20&&hpVerbBoard().of===40&&S.log[S.log.length-1].kind==="hpverb");
+  ok("verbal: innehållet", (C().mek||[]).length>=200&&(C().las||[]).length>=24&&(C().elf||[]).length>=26, [(C().mek||[]).length,(C().las||[]).length,(C().elf||[]).length].join("/"));
+ }catch(e){ if(e!==0) ok("undantag", false, e.message+" "+(e.stack||"").split("\n")[1]); }
+ ok("inga JavaScript-fel", !__err.length, __err.join(" ; "));
+ document.body.insertAdjacentHTML("beforeend","<pre id=out>"+out.join("\n").replace(/</g,"&lt;")+"</pre>");
+});
+</script>"""
+
+
 def main():
     text = run(SCENARIO) + "\n" + run(SCENARIO_DE) + "\n" + run(SCENARIO_FIXES) + "\n" + run(SCENARIO_SYNC, 30000) + "\n" + run_http(SCENARIO_HTTP)
     text += "\n" + run_http(SCENARIO_EXAMLAZY, 60000) + "\n" + test_exam_split()   # provet hämtas vid behov, minifiering, storlek (P2)
@@ -4207,6 +4235,7 @@ def main():
     text += "\n" + run(SCENARIO_TALK, 60000)   # Tala: 4/3/2, samtal med Claude och Skugga (P2: Ny övning Tala, Muntlig förberedelse)
     text += "\n" + run(SCENARIO_KOD, 60000) + "\n" + run_http(SCENARIO_LEMMAHTTP)   # död kod, sparning, flerval, grundformer, äkta ljud (P3)
     text += "\n" + run(SCENARIO_RULEBOX, 30000)   # regeln i korthet före och under grammatikpassen (Oscar 2026-10-03)
+    text += "\n" + run(SCENARIO_HPVERB, 30000)   # verbala provpasset (Högskoleprovet)
     text += "\n" + run(SCENARIO_WISH, 30000)   # elevernas önskemål 2026-11-07/08
     text += "\n" + run(SCENARIO_LAST, 30000, head=LAST_HEAD_CLOUD) + "\n" + run(SCENARIO_LAST, 30000, head=LAST_HEAD_LOCAL)   # senast övade kursen (Maria 2026-11-05)
     text += "\n" + run(SCENARIO_PROFILES, 60000)   # Vem övar? och Föräldravyn (P2/P3 Konton, sparande och topplista)

@@ -5,8 +5,9 @@ function exGroups(){
   // mono (Högskoleprovet ORD): inga övningar där svaret är ett främmande ord eller tal (diktamen, översätt, ordföljd, Tala)
   const g=(id,title,sub,dis)=>mono&&["dict","trans","order","talk"].includes(id)?"":`<button class="game" data-ex="${id}" ${dis?"disabled":""}><span><b>${title}</b><small>${sub}</small></span><span class="go" aria-hidden="true">›</span></button>`;
   const groups=[
-    ...(isHp()?[["hp","Högskoleprovet","Provpass ORD, MEK, LÄS och ELF",[
+    ...(isHp()?[["hp","Högskoleprovet","Provpass ORD och verbal del, MEK, LÄS och ELF",[
       g("hpprov","Provpass ORD","Tio ord som på provet, med valfri tid och facit efteråt."),
+      hasVerbProv()&&g("hpverb","Provpass verbal del","ORD, LÄS, MEK och ELF: 40 uppgifter på 55 minuter, facit efteråt."),
       (c.mek||[]).length&&g("mek","MEK: meningskomplettering","Välj de ord som passar bäst i luckorna."),
       (c.las||[]).length&&g("las","LÄS: svensk läsförståelse","Sakprosatexter med frågor som på provet."),
       (c.elf||[]).length&&g("elf","ELF: engelsk läsförståelse","Texter på engelska med frågor som på provet.")]]]:[]),

@@ -1,1442 +1,2402 @@
 [
- {
-  "id": "mek-001",
-  "text": "Ledamoten ___ förslaget eftersom hon ansåg att det var ___ underbyggt; enligt henne saknades ___ stöd för de påstådda effekterna.",
-  "opts": [
-   "tillstyrkte – otillräckligt – vetenskapligt",
-   "avstyrkte – otillräckligt – vetenskapligt",
-   "avstyrkte – otillräckligt – inget",
-   "avstyrkte – väl – vetenskapligt"
-  ],
-  "a": 1,
-  "why": "Avstyrka betyder avråda från, vilket följer av att förslaget var otillräckligt underbyggt. Saknades inget stöd vore en motsägelse."
- },
- {
-  "id": "mek-002",
-  "text": "Kommissionen ___ att förslaget skulle förkastas, men regeringen valde att ___ rekommendationen och genomföra reformen ändå.",
-  "opts": [
-   "förordade – bortse från",
-   "förordade – följa",
-   "betvivlade – bortse från",
-   "befarade – åtlyda"
-  ],
-  "a": 0,
-  "why": "Kommissionen rekommenderade, förordade, att förslaget skulle förkastas; men och ändå visar att regeringen bortsåg från rådet. Följa ger ingen motsättning."
- },
- {
-  "id": "mek-003",
-  "text": "Sjukdomen uppträder ___ snarare än i stora utbrott; enstaka fall dyker upp här och där med flera års mellanrum.",
-  "opts": [
-   "epidemiskt",
-   "sporadiskt",
-   "explosionsartat",
-   "regelbundet"
-  ],
-  "a": 1,
-  "why": "Enstaka fall med långa mellanrum är oregelbundet, sporadiskt. Epidemiskt och explosionsartat beskriver just stora utbrott."
- },
- {
-  "id": "mek-004",
-  "text": "Den ekonomiska krisen ___ en rad reformer som annars sannolikt hade dröjt i årtionden; i den meningen var den paradoxalt nog ___.",
-  "opts": [
-   "förhindrade – gynnsam",
-   "katalyserade – skadlig",
-   "försenade – nyttig",
-   "katalyserade – gynnsam"
-  ],
-  "a": 3,
-  "why": "Katalysera betyder utlösa. Att en kris utlöser efterlängtade reformer gör den paradoxalt gynnsam; skadlig vore ingen paradox."
- },
- {
-  "id": "mek-005",
-  "text": "Den ___ debatten om skolans framtid präglades länge av ___ positioner, men på senare tid har en mer ___ diskussion vuxit fram.",
-  "opts": [
-   "infekterade – låsta – polariserad",
-   "lugna – låsta – nyanserad",
-   "infekterade – flexibla – polariserad",
-   "infekterade – låsta – nyanserad"
-  ],
-  "a": 3,
-  "why": "Men kräver kontrast mot de låsta positionerna i den infekterade debatten, alltså en mer nyanserad diskussion. Polariserad ger ingen förändring."
- },
- {
-  "id": "mek-006",
-  "text": "Bristande underhåll har med åren ___ förtroendet för järnvägen, och allt fler väljer i stället bilen.",
-  "opts": [
-   "stärkt",
-   "befäst",
-   "urholkat",
-   "cementerat"
-  ],
-  "a": 2,
-  "why": "Urholka betyder försvaga, vilket förklarar att folk väljer bort tåget. Cementera, stärka och befästa säger motsatsen."
- },
- {
-  "id": "mek-007",
-  "text": "Många tror att vikingarna bar hjälmar med horn; ___ finns det inga arkeologiska fynd som stöder den föreställningen.",
-  "opts": [
-   "följaktligen",
-   "i själva verket",
-   "därmed",
-   "således"
-  ],
-  "a": 1,
-  "why": "Andra ledet korrigerar en vanlig missuppfattning, vilket i själva verket markerar. Följaktligen, därmed och således anger felaktigt en slutsats."
- },
- {
-  "id": "mek-008",
-  "text": "Den oberoende utredningen fann inga som helst bevis för fusk i räkenskaperna; ___ kunde misstankarna mot de anställda ___.",
-  "opts": [
-   "därmed – avskrivas",
-   "trots det – avskrivas",
-   "emellertid – stärkas",
-   "därmed – bekräftas"
-  ],
-  "a": 0,
-  "why": "Avsaknad av bevis leder till att misstankarna avskrivs, och därmed anger följden. Trots det och bekräftas bryter mot logiken."
- },
- {
-  "id": "mek-009",
-  "text": "Hans framställning var så ___ att hela resonemanget fick plats på en enda sida utan att något väsentligt gick förlorat.",
-  "opts": [
-   "vidlyftig",
-   "långrandig",
-   "fragmentarisk",
-   "koncis"
-  ],
-  "a": 3,
-  "why": "Kort men fullständig betyder koncis. Vidlyftig och långrandig betyder motsatsen, och fragmentarisk skulle innebära att något gick förlorat."
- },
- {
-  "id": "mek-010",
-  "text": "Arbetet var tungt och dåligt betalt; ___ fanns det alltid fler sökande än lediga platser.",
-  "opts": [
-   "följaktligen",
-   "alltså",
-   "därför",
-   "ändå"
-  ],
-  "a": 3,
-  "why": "Att många söker ett tungt och dåligt betalt arbete är en motsättning som kräver ändå. De andra orden anger felaktigt orsak eller slutsats."
- },
- {
-  "id": "mek-011",
-  "text": "Den ___ eleven vågade sällan räcka upp handen, trots att hon nästan alltid kunde svaret.",
-  "opts": [
-   "kavata",
-   "oförsynta",
-   "försagda",
-   "pösiga"
-  ],
-  "a": 2,
-  "why": "Försagd betyder blyg, vilket förklarar att hon inte vågade. Kavat, pösig och oförsynt beskriver självsäkra eller fräcka personer."
- },
- {
-  "id": "mek-012",
-  "text": "De två forskarna kom fram till samma resultat ___ av varandra, den ena i Uppsala och den andra i Lyon.",
-  "opts": [
-   "oberoende",
-   "beroende",
-   "på grund",
-   "till följd"
-  ],
-  "a": 0,
-  "why": "Två forskare i olika städer som når samma resultat gör det oberoende av varandra. Beroende motsäger poängen, och de andra ger fel uttryck."
- },
- {
-  "id": "mek-013",
-  "text": "Ju mer vi lär oss om hjärnan, ___ tydligare blir det att våra tidigare modeller var alltför ___.",
-  "opts": [
-   "desto – förenklade",
-   "så – förenklade",
-   "desto – komplicerade",
-   "ändå – förenklade"
-  ],
-  "a": 0,
-  "why": "Det fasta uttrycket är ju ... desto. Mer kunskap visar att äldre modeller var för enkla, inte för komplicerade."
- },
- {
-  "id": "mek-014",
-  "text": "Den ___ tjänstemannen följde alltid reglerna till punkt och pricka, vilket gjorde honom ___ men också ___ inför ändrade omständigheter.",
-  "opts": [
-   "pedantiske – pålitlig – lyhörd",
-   "pedantiske – opålitlig – oflexibel",
-   "slarvige – pålitlig – oflexibel",
-   "pedantiske – pålitlig – oflexibel"
-  ],
-  "a": 3,
-  "why": "Pedantisk regelföljning gör någon pålitlig men oflexibel; men också kräver en nackdel. Slarvig strider mot regelföljandet."
- },
- {
-  "id": "mek-015",
-  "text": "Debatten blev alltmer ___; i stället för att lyssna på varandra ___ båda sidor sina ståndpunkter.",
-  "opts": [
-   "nyanserad – cementerade",
-   "polariserad – cementerade",
-   "saklig – jämkade",
-   "polariserad – omprövade"
-  ],
-  "a": 1,
-  "why": "Att inte lyssna och i stället befästa sina ståndpunkter hör ihop med en polariserad debatt. Omprövade och jämkade strider mot i stället för att lyssna."
- },
- {
-  "id": "mek-016",
-  "text": "Frågan om ändrade gränser för fiskekvoterna är ___ politiskt känslig, och regeringen har därför valt att gå ___ fram.",
-  "opts": [
-   "synnerligen – varsamt",
-   "knappast – försiktigt",
-   "föga – varligt",
-   "synnerligen – burdust"
-  ],
-  "a": 0,
-  "why": "En mycket känslig fråga gör att man därför går varsamt fram. Burdust strider mot därför, och knappast känslig motiverar ingen försiktighet."
- },
- {
-  "id": "mek-017",
-  "text": "Tidningen anklagades för att ___ citat, men journalisten kunde visa inspelningar som bevisade att intervjun verkligen ägt rum.",
-  "opts": [
-   "tradera",
-   "verifiera",
-   "fabricera",
-   "accentuera"
-  ],
-  "a": 2,
-  "why": "Inspelningarna motbevisar anklagelsen om påhittade citat; fabricera betyder hitta på. Att verifiera citat vore inget att anklagas för."
- },
- {
-  "id": "mek-018",
-  "text": "Tjänsten var ___ men krävde att man ___ mycket av sin fritid; många valde därför bort den trots den höga lönen.",
-  "opts": [
-   "lukrativ – offrade",
-   "lönsam – vann",
-   "lukrativ – fick",
-   "lågavlönad – offrade"
-  ],
-  "a": 0,
-  "why": "Lukrativ betyder lönsam, vilket stämmer med den höga lönen, och men visar baksidan: man fick offra fritid. Lågavlönad motsäger den höga lönen."
- },
- {
-  "id": "mek-019",
-  "text": "Befolkningen i staden är mycket ___: här talas över hundra språk, och invånarna har vitt skilda bakgrunder.",
-  "opts": [
-   "homogen",
-   "heterogen",
-   "provisorisk",
-   "endemisk"
-  ],
-  "a": 1,
-  "why": "Många språk och olika bakgrunder betyder att befolkningen är mångblandad, heterogen. Homogen betyder enhetlig och är motsatsen."
- },
- {
-  "id": "mek-020",
-  "text": "Mötet var tänkt som kampanjens höjdpunkt, men det blev snarare en ___: kandidaten hade inget nytt att säga och publiken gick hem besviken.",
-  "opts": [
-   "antiklimax",
-   "triumf",
-   "rendezvous",
-   "apokalyps"
-  ],
-  "a": 0,
-  "why": "En utebliven höjdpunkt kallas antiklimax. Triumf motsäger besvikelsen, och apokalyps är alldeles för starkt."
- },
- {
-  "id": "mek-021",
-  "text": "Kommunen valde en ___ lösning: i stället för att vänta på den perfekta planen åtgärdade man de mest akuta problemen direkt.",
-  "opts": [
-   "pragmatisk",
-   "utopisk",
-   "rigid",
-   "dogmatisk"
-  ],
-  "a": 0,
-  "why": "Att lösa det akuta i stället för att vänta på det perfekta är praktiskt inriktat, pragmatiskt. Utopisk och dogmatisk betyder motsatsen."
- },
- {
-  "id": "mek-022",
-  "text": "Teorin är elegant, men den har aldrig kunnat ___ genom experiment och förblir därför en spekulation.",
-  "opts": [
-   "verifieras",
-   "förbigås",
-   "idealiseras",
-   "formuleras"
-  ],
-  "a": 0,
-  "why": "En teori som inte bekräftats av experiment förblir spekulation; verifiera betyder intyga, bekräfta. Formuleras motsäger att teorin redan finns."
- },
- {
-  "id": "mek-023",
-  "text": "Romanen hyllades av kritikerna för sitt ___ språk, men läsarna fann den ___; den sålde ___ och glömdes snart bort.",
-  "opts": [
-   "nyskapande – svårtillgänglig – dåligt",
-   "nyskapande – lättillgänglig – dåligt",
-   "slätstrukna – svårtillgänglig – dåligt",
-   "nyskapande – svårtillgänglig – strålande"
-  ],
-  "a": 0,
-  "why": "Men ställer kritikernas hyllning mot läsarnas motvilja, och boken sålde dåligt. Slätstruket språk hyllas inte, och strålande försäljning motsäger att den glömdes."
- },
- {
-  "id": "mek-024",
-  "text": "Eftersom de ___ försöken gav ___ resultat beslöt forskargruppen att ___ sin hypotes och börja om från början.",
-  "opts": [
-   "inledande – nedslående – behålla",
-   "inledande – nedslående – överge",
-   "avslutande – lovande – stärka",
-   "inledande – lovande – överge"
-  ],
-  "a": 1,
-  "why": "Att börja om förutsätter att man ger upp hypotesen, vilket nedslående resultat motiverar. Lovande resultat ger inget skäl att överge den."
- },
- {
-  "id": "mek-025",
-  "text": "Det som en gång var ett neutralt yrkesord används nu oftast ___, och få vill längre bli kallade så.",
-  "opts": [
-   "explicit",
-   "pejorativt",
-   "normativt",
-   "eufemistiskt"
-  ],
-  "a": 1,
-  "why": "Att ingen vill kallas så tyder på att ordet blivit nedsättande, pejorativt. Eufemistiskt vore tvärtom en förskönande användning."
- },
- {
-  "id": "mek-026",
-  "text": "Hennes tidiga dikter är ___ och svårtillgängliga, medan de senare är ___ och nästan prosaiska i sin enkelhet.",
-  "opts": [
-   "dunkla – kryptiska",
-   "dunkla – avskalade",
-   "enkla – avskalade",
-   "lättlästa – svulstiga"
-  ],
-  "a": 1,
-  "why": "Medan ställer de svåra tidiga dikterna mot de enkla senare; dunkla mot avskalade. Kryptiska strider mot enkelheten."
- },
- {
-  "id": "mek-027",
-  "text": "Den nya tekniken ___ snabbt, men de första versionerna var ___ och dyra; först när priset sjönk blev den ___ för vanliga konsumenter.",
-  "opts": [
-   "utvecklades – billiga – överkomlig",
-   "stagnerade – klumpiga – oåtkomlig",
-   "utvecklades – klumpiga – tillgänglig",
-   "utvecklades – smidiga – tillgänglig"
-  ],
-  "a": 2,
-  "why": "Men kräver nackdelar: klumpiga och dyra. När priset sjönk blev tekniken tillgänglig. Billiga strider mot dyra och mot att priset senare sjönk."
- },
- {
-  "id": "mek-028",
-  "text": "Det ___ partiet hade länge haft ___ stöd bland väljarna, men efter en rad skandaler ___ opinionssiffrorna.",
-  "opts": [
-   "etablerade – svagt – rasade",
-   "etablerade – brett – steg",
-   "etablerade – brett – rasade",
-   "nybildade – brett – rasade"
-  ],
-  "a": 2,
-  "why": "Länge passar ett etablerat parti, och men kräver kontrast mellan brett stöd och rasande siffror. Nybildat strider mot länge."
- },
- {
-  "id": "mek-029",
-  "text": "Den ___ debattören var fruktad i tv-studion, eftersom hon brukade ___ sina motståndare med en enda kvick och träffande kommentar.",
-  "opts": [
-   "försagda – avväpna",
-   "spirituella – avväpna",
-   "spirituella – smickra",
-   "letargiska – överraska"
-  ],
-  "a": 1,
-  "why": "Spirituell betyder kvicktänkt och fyndig, vilket passar kvicka kommentarer som avväpnar motståndare. Försagd och letargisk passar inte en sådan debattör."
- },
- {
-  "id": "mek-030",
-  "text": "De båda teorierna verkar vid första anblicken ___, men vid närmare eftertanke visar det sig att de ___ beskriver samma fenomen ur olika perspektiv.",
-  "opts": [
-   "oförenliga – knappast",
-   "identiska – faktiskt",
-   "oförenliga – egentligen",
-   "förenliga – egentligen"
-  ],
-  "a": 2,
-  "why": "Men kräver kontrast: teorierna verkar oförenliga men beskriver egentligen samma sak. Förenliga ger ingen motsättning."
- },
- {
-  "id": "mek-031",
-  "text": "Den nya rektorn ___ i sitt arbete med att reformera skolans organisation, ___ motståndet från många av de anställda var hårt.",
-  "opts": [
-   "framhärdade – eftersom",
-   "tröttnade – fastän",
-   "framhärdade – trots att",
-   "avstod – trots att"
-  ],
-  "a": 2,
-  "why": "Framhärda betyder envisas, och att fortsätta trots hårt motstånd kräver trots att. Eftersom gör motståndet till skälet, vilket är ologiskt."
- },
- {
-  "id": "mek-032",
-  "text": "Institutet har ___ mätdata under fyrtio år, vilket gör det möjligt att studera ___ förändringar som annars vore svåra att upptäcka.",
-  "opts": [
-   "ackumulerat – plötsliga",
-   "spolierat – långsamma",
-   "ackumulerat – långsamma",
-   "förbigått – snabba"
-  ],
-  "a": 2,
-  "why": "Att samla ihop data länge gör det möjligt att se långsamma förändringar. Plötsliga förändringar är inte svåra att upptäcka utan långa serier."
- },
- {
-  "id": "mek-033",
-  "text": "Landet är formellt en monarki, men kungens makt är ___; i praktiken styrs landet ___ av parlamentet och regeringen.",
-  "opts": [
-   "symbolisk – inte",
-   "symbolisk – helt",
-   "absolut – helt",
-   "obegränsad – delvis"
-  ],
-  "a": 1,
-  "why": "Formellt ... men i praktiken kräver kontrast: kungen har bara symbolisk makt medan parlamentet styr. Absolut makt motsäger andra ledet."
- },
- {
-  "id": "mek-034",
-  "text": "Myndigheten ___ ansökan med motiveringen att den inte uppfyllde de formella kraven, men den sökande ___ beslutet till högre instans.",
-  "opts": [
-   "godkände – bestred",
-   "avslog – accepterade",
-   "avslog – överklagade",
-   "beviljade – överklagade"
-  ],
-  "a": 2,
-  "why": "Att kraven inte uppfylldes leder till avslag, och men visar att den sökande inte nöjde sig utan överklagade. Accepterade ger ingen kontrast."
- },
- {
-  "id": "mek-035",
-  "text": "Han var en ___ talare: han ___ aldrig, valde orden med omsorg och fick även de mest ___ åhörarna att lyssna.",
-  "opts": [
-   "tråkig – stakade sig – ointresserade",
-   "monoton – tvekade – uppmärksamma",
-   "fängslande – stakade sig – ointresserade",
-   "fängslande – stakade sig – intresserade"
-  ],
-  "a": 2,
-  "why": "En fängslande talare som aldrig stakar sig kan fånga även de ointresserade; även de mest intresserade saknar poäng."
- },
- {
-  "id": "mek-036",
-  "text": "Förklaringen låter ___ vid första anblicken, men vid närmare granskning visar den sig ha flera ___ i resonemanget.",
-  "opts": [
-   "förvirrande – fördelar",
-   "övertygande – luckor",
-   "övertygande – styrkor",
-   "osannolik – brister"
-  ],
-  "a": 1,
-  "why": "Men kräver kontrast mellan första intrycket och granskningen: övertygande men med luckor. Styrkor ger ingen motsättning."
- },
- {
-  "id": "mek-037",
-  "text": "När ett företag kallar en kraftig prishöjning för en prisjustering är det ett typiskt exempel på en ___.",
-  "opts": [
-   "eufemism",
-   "palindrom",
-   "diminutiv",
-   "överdrift"
-  ],
-  "a": 0,
-  "why": "En förskönande omskrivning kallas eufemism. Prisjustering är inte en överdrift utan en mildring, och palindrom gäller ord som läses likadant baklänges."
- },
- {
-  "id": "mek-038",
-  "text": "Det rör sig inte om en tillfällig nedgång ___ om en ___ förändring av konsumenternas vanor.",
-  "opts": [
-   "utan – provisorisk",
-   "eller – tillfällig",
-   "men – varaktig",
-   "utan – varaktig"
-  ],
-  "a": 3,
-  "why": "Inte ... utan är det fasta uttrycket, och motsatsen till tillfällig är varaktig. Provisorisk betyder tillfällig och ger ingen kontrast."
- },
- {
-  "id": "mek-039",
-  "text": "Även en ___ höjning av havsnivån kan få ___ följder för låglänta kustområden, där miljontals människor bor.",
-  "opts": [
-   "ringa – obetydliga",
-   "måttlig – försumbara",
-   "måttlig – allvarliga",
-   "kraftig – allvarliga"
-  ],
-  "a": 2,
-  "why": "Även en signalerar något oväntat: en liten höjning kan ändå få allvarliga följder. Med kraftig blir även meningslöst."
- },
- {
-  "id": "mek-040",
-  "text": "Hunden var sannolikt ett av de allra första djur som människan ___, långt innan jordbruket uppstod.",
-  "opts": [
-   "idealiserade",
-   "domesticerade",
-   "deporterade",
-   "extraherade"
-  ],
-  "a": 1,
-  "why": "Domesticera betyder göra till husdjur, vilket gäller hunden. De andra verben passar inte om djur som tämjs."
- },
- {
-  "id": "mek-041",
-  "text": "Hennes kritik var ___: hon pekade ut exakt vilka siffror som var fel och föreslog hur de skulle rättas.",
-  "opts": [
-   "konkret",
-   "implicit",
-   "vag",
-   "svepande"
-  ],
-  "a": 0,
-  "why": "Att peka ut exakta fel och föreslå rättelser är konkret kritik. Vag, implicit och svepande betyder motsatsen."
- },
- {
-  "id": "mek-042",
-  "text": "Skillnaden mellan de två metoderna visade sig vara ___; i praktiken gav båda nästan exakt samma resultat.",
-  "opts": [
-   "avgörande",
-   "radikal",
-   "påfallande",
-   "marginell"
-  ],
-  "a": 3,
-  "why": "Nästan samma resultat betyder att skillnaden är obetydlig, marginell. Övriga alternativ beskriver en stor skillnad och motsäger andra halvan."
- },
- {
-  "id": "mek-043",
-  "text": "De första leveranserna av vaccinet räckte inte till alla, så myndigheten tvingades ___ doserna och prioritera de äldsta.",
-  "opts": [
-   "ransonera",
-   "exploatera",
-   "deponera",
-   "amortera"
-  ],
-  "a": 0,
-  "why": "Att fördela något som det finns för lite av heter att ransonera. Deponera betyder lämna i förvar och amortera betala av lån."
- },
- {
-  "id": "mek-044",
-  "text": "När telegrafen efter hand ersattes av telefonen blev många telegrafisters mödosamt inlärda specialkunskaper snabbt ___.",
-  "opts": [
-   "gångbara",
-   "lukrativa",
-   "rudimentära",
-   "obsoleta"
-  ],
-  "a": 3,
-  "why": "När tekniken ersätts blir kunskapen om den oanvändbar, obsolet. Lukrativa och gångbara säger motsatsen."
- },
- {
-  "id": "mek-045",
-  "text": "Landets ekonomi ___ under hela decenniet; tillväxten låg år efter år nära noll och arbetslösheten förblev hög.",
-  "opts": [
-   "accelererade",
-   "expanderade",
-   "stagnerade",
-   "blomstrade"
-  ],
-  "a": 2,
-  "why": "Nolltillväxt och hög arbetslöshet betyder att ekonomin slutade utvecklas, stagnerade. De andra verben beskriver tillväxt."
- },
- {
-  "id": "mek-046",
-  "text": "Kommunens ekonomi var ___; ___ tvingades man skjuta upp renoveringen av skolan, trots att behovet var ___.",
-  "opts": [
-   "god – därför – akut",
-   "ansträngd – därför – akut",
-   "ansträngd – därför – obefintligt",
-   "ansträngd – ändå – akut"
-  ],
-  "a": 1,
-  "why": "Ansträngd ekonomi är orsaken till uppskjutandet, alltså därför, och trots att kräver ett stort, akut behov. Obefintligt behov ger ingen motsättning."
- },
- {
-  "id": "mek-047",
-  "text": "Eftersom ordet har flera betydelser kan meningen tolkas på olika sätt; skribenten borde ha valt ett mer ___ uttryck för att ___ missförstånd.",
-  "opts": [
-   "entydigt – undvika",
-   "entydigt – framkalla",
-   "mångtydigt – undvika",
-   "vagt – förebygga"
-  ],
-  "a": 0,
-  "why": "Ett uttryck med bara en betydelse, entydigt, förhindrar missförstånd. Mångtydigt och vagt skapar just det problem som beskrivs."
- },
- {
-  "id": "mek-048",
-  "text": "Även om skillnaden mellan grupperna var statistiskt ___, var den så liten att den saknade ___ betydelse.",
-  "opts": [
-   "säkerställd – praktisk",
-   "säkerställd – statistisk",
-   "betydelselös – praktisk",
-   "osäker – praktisk"
-  ],
-  "a": 0,
-  "why": "Även om kräver kontrast: skillnaden är statistiskt säker men praktiskt oviktig. Statistisk betydelse motsäger att den var säkerställd."
- },
- {
-  "id": "mek-049",
-  "text": "Myndighetens kontroller var ___: under fem år genomfördes bara ett par inspektioner, och ___ upptäcktes bristerna först när en olycka redan hade inträffat.",
-  "opts": [
-   "sporadiska – följaktligen",
-   "regelbundna – följaktligen",
-   "frekventa – därför",
-   "sporadiska – trots detta"
-  ],
-  "a": 0,
-  "why": "Ett par inspektioner på fem år är oregelbundet, sporadiskt, och den sena upptäckten är en följd av det. Regelbundna och frekventa motsäger antalet."
- },
- {
-  "id": "mek-050",
-  "text": "Det är ___ att döma ut hela metoden efter ett enda misslyckat försök; man bör ___ avvakta fler resultat.",
-  "opts": [
-   "förhastat – hellre",
-   "förhastat – därför inte",
-   "klokt – hellre",
-   "rimligt – dessutom"
-  ],
-  "a": 0,
-  "why": "Ett enda försök räcker inte, så att döma ut metoden är förhastat och man bör hellre vänta. Klokt och rimligt motsäger rådet att avvakta."
- },
- {
-  "id": "mek-051",
-  "text": "Författaren skildrar landsbygden på ett ___ sätt: livet på gården framstår som harmoniskt och fritt från konflikter, vilket kritikerna menade var ___.",
-  "opts": [
-   "idealiserande – sanningsenligt",
-   "realistiskt – verklighetsfrämmande",
-   "kritiskt – träffande",
-   "idealiserande – verklighetsfrämmande"
-  ],
-  "a": 3,
-  "why": "En konfliktfri, harmonisk bild är förskönad, idealiserande, och kritiker skulle kalla den verklighetsfrämmande. Realistiskt strider mot den förskönade bilden."
- },
- {
-  "id": "mek-052",
-  "text": "Vittnesmålet var ___: vittnet ändrade sin berättelse flera gånger, vilket fick rätten att ___ dess trovärdighet.",
-  "opts": [
-   "konsekvent – ifrågasätta",
-   "motsägelsefullt – ifrågasätta",
-   "motsägelsefullt – stärka",
-   "samstämmigt – betvivla"
-  ],
-  "a": 1,
-  "why": "En berättelse som ändras flera gånger är motsägelsefull och får rätten att ifrågasätta den. Konsekvent och samstämmigt betyder motsatsen."
- },
- {
-  "id": "mek-053",
-  "text": "Den gamla stavningen betraktas i dag som ___, men den förekommer fortfarande i vissa ___ sammanhang, till exempel i ortnamn.",
-  "opts": [
-   "korrekt – nyskapande",
-   "förlegad – moderna",
-   "förlegad – traditionsbundna",
-   "modern – traditionsbundna"
-  ],
-  "a": 2,
-  "why": "Förlegad betyder omodern, och men visar att den ändå lever kvar i traditionsbundna sammanhang som ortnamn. Moderna sammanhang strider mot exemplet."
- },
- {
-  "id": "mek-054",
-  "text": "Att ___ ett problem är inte detsamma som att ___ det; en diagnos utan behandling ___ sällan patienten.",
-  "opts": [
-   "identifiera – lösa – hjälper",
-   "lösa – identifiera – hjälper",
-   "identifiera – lösa – skadar",
-   "ignorera – förstå – botar"
-  ],
-  "a": 0,
-  "why": "Diagnosen motsvarar att identifiera och behandlingen att lösa; en diagnos ensam hjälper sällan. Omvänd ordning ger ingen logik."
- },
- {
-  "id": "mek-055",
-  "text": "Han var så ___ att han inte ens lyssnade när kollegerna lade fram nya mätdata som talade emot hans uppfattning.",
-  "opts": [
-   "vidsynt",
-   "pragmatisk",
-   "lyhörd",
-   "dogmatisk"
-  ],
-  "a": 3,
-  "why": "Den som vägrar lyssna på motbevis är dogmatisk, absolut säker på sin sak. Vidsynt och lyhörd betyder motsatsen."
- },
- {
-  "id": "mek-056",
-  "text": "Den gamla dialekten skrevs aldrig ned i några böcker utan ___ muntligt från generation till generation.",
-  "opts": [
-   "deponerades",
-   "deklamerades",
-   "förbigicks",
-   "traderades"
-  ],
-  "a": 3,
-  "why": "Tradera betyder överföra muntligt, vilket passar att dialekten fördes vidare utan skrift. Deklamera betyder läsa upp högtidligt."
- },
- {
-  "id": "mek-057",
-  "text": "Bolagets vinster var visserligen ___, men verksamheten kritiserades hårt för att ___ arbetarna i fabrikerna med långa dagar och låga löner.",
-  "opts": [
-   "betydande – gynna",
-   "marginella – främja",
-   "marginella – exploatera",
-   "betydande – exploatera"
-  ],
-  "a": 3,
-  "why": "Visserligen ... men ställer något positivt mot kritik: stora vinster men utnyttjande av arbetarna. Att gynna arbetarna är ingen kritik."
- },
- {
-  "id": "mek-058",
-  "text": "Arkeologerna gick ___ till väga och ___ varje lager för sig, eftersom ett enda ___ grepp kunde förstöra värdefulla spår.",
-  "opts": [
-   "varligt – grävde bort – försiktigt",
-   "snabbt – hoppade över – noggrant",
-   "hårdhänt – undersökte – överilat",
-   "varligt – undersökte – överilat"
-  ],
-  "a": 3,
-  "why": "Risken att ett överilat grepp förstör spår förklarar att man gick varligt fram och undersökte lager för lager. Ett försiktigt grepp förstör inget."
- },
- {
-  "id": "mek-059",
-  "text": "Det är fortfarande ___ huruvida de nya reglerna faktiskt minskar utsläppen; ingen har ännu mätt effekten.",
-  "opts": [
-   "självklart",
-   "oklart",
-   "bevisat",
-   "evident"
-  ],
-  "a": 1,
-  "why": "Om ingen mätt effekten kan man inte veta, alltså är det oklart. Evident, självklart och bevisat motsäger andra ledet."
- },
- {
-  "id": "mek-060",
-  "text": "Hans syn på historien var deterministisk: han menade att allt som hänt var ___ och att människan i grunden saknade ___ vilja.",
-  "opts": [
-   "oförutsägbart – stark",
-   "slumpmässigt – fri",
-   "förutbestämt – egen",
-   "förutbestämt – fri"
-  ],
-  "a": 3,
-  "why": "Determinism innebär att allt är förutbestämt och att den fria viljan ifrågasätts. Slumpmässigt och oförutsägbart strider mot determinism."
- },
- {
-  "id": "mek-061",
-  "text": "Sverige har blivit alltmer ___ under 1900-talet; kyrkans inflytande över politik och vardagsliv har ___ betydligt.",
-  "opts": [
-   "kyrkligt – försvagats",
-   "sekulariserat – ökat",
-   "religiöst – minskat",
-   "sekulariserat – minskat"
-  ],
-  "a": 3,
-  "why": "Sekularisering innebär att religionens inflytande minskar, vilket andra ledet bekräftar. Religiöst och kyrkligt strider mot ett minskat inflytande."
- },
- {
-  "id": "mek-062",
-  "text": "Den ___ befolkningen i området har ofta ___ kunskap om växter och djur, en kunskap som riskerar att ___ när de unga flyttar till städerna.",
-  "opts": [
-   "ursprungliga – ytlig – gå förlorad",
-   "ursprungliga – ingående – gå förlorad",
-   "inflyttade – ingående – gå förlorad",
-   "ursprungliga – ingående – bevaras"
-  ],
-  "a": 1,
-  "why": "Långvarigt boende ger ingående kunskap, som riskerar att gå förlorad när de unga flyttar. Ytlig kunskap vore inget att oroa sig för."
- },
- {
-  "id": "mek-063",
-  "text": "Stormakten strävade efter ___ i regionen, men grannländerna slöt sig samman för att ___ dess inflytande.",
-  "opts": [
-   "neutralitet – öka",
-   "hegemoni – stärka",
-   "isolering – begränsa",
-   "hegemoni – begränsa"
-  ],
-  "a": 3,
-  "why": "Hegemoni betyder maktställning, och men visar att grannarna motarbetade den genom att begränsa inflytandet. Stärka ger ingen motsättning."
- },
- {
-  "id": "mek-064",
-  "text": "Sjön var tidigare kraftigt ___, men sedan reningsverket byggdes har vattenkvaliteten ___ och fisken har ___ tillbaka.",
-  "opts": [
-   "förorenad – förbättrats – kommit",
-   "förorenad – förbättrats – försvunnit",
-   "förorenad – försämrats – kommit",
-   "ren – förbättrats – kommit"
-  ],
-  "a": 0,
-  "why": "Ett reningsverk förbättrar en förorenad sjö så att fisken kommer tillbaka. Försämrats och försvunnit strider mot reningsverkets effekt."
- },
- {
-  "id": "mek-065",
-  "text": "Svampen lever i ___ med trädets rötter: den förser trädet med vatten och mineraler och får i ___ socker.",
-  "opts": [
-   "konflikt – utbyte",
-   "konkurrens – gengäld",
-   "symbios – gengäld",
-   "symbios – förväg"
-  ],
-  "a": 2,
-  "why": "Ett samliv där båda parter gynnas kallas symbios, och i gengäld markerar motprestationen. Konkurrens och konflikt motsäger det ömsesidiga utbytet."
- },
- {
-  "id": "mek-066",
-  "text": "Länge ___ många ett samband mellan rökning och lungcancer, men bevisen blev till slut så ___ att sambandet inte längre gick att ___.",
-  "opts": [
-   "ifrågasatte – överväldigande – bevisa",
-   "ifrågasatte – överväldigande – förneka",
-   "accepterade – överväldigande – förneka",
-   "ifrågasatte – svaga – förneka"
-  ],
-  "a": 1,
-  "why": "Men visar att tvivlet upphörde när bevisen blev överväldigande och sambandet inte gick att förneka. Svaga bevis leder inte dit."
- },
- {
-  "id": "mek-067",
-  "text": "Utredaren var känd för sin ___ och kontrollerade varje källhänvisning två gånger innan rapporten lämnades in.",
-  "opts": [
-   "karisma",
-   "nonchalans",
-   "akribi",
-   "humbug"
-  ],
-  "a": 2,
-  "why": "Akribi betyder vetenskaplig noggrannhet, vilket dubbelkontrollen visar. Nonchalans är motsatsen, och karisma passar inte sammanhanget."
- },
- {
-  "id": "mek-068",
-  "text": "Medan vissa djur är ___ och bara äter växter, är andra ___ och äter både växter och kött.",
-  "opts": [
-   "rovdjur – allätare",
-   "växtätare – allätare",
-   "växtätare – köttätare",
-   "allätare – växtätare"
-  ],
-  "a": 1,
-  "why": "Djur som bara äter växter är växtätare, och de som äter både växter och kött är allätare. Köttätare äter inte växter."
- },
- {
-  "id": "mek-069",
-  "text": "I stället för att ___ problemet valde ledningen att ___ det, i hopp om att det skulle lösa sig av sig självt.",
-  "opts": [
-   "förstora – lösa",
-   "ta itu med – åtgärda",
-   "negligera – nonchalera",
-   "ta itu med – nonchalera"
-  ],
-  "a": 3,
-  "why": "Att hoppas att problemet löser sig självt innebär att man struntar i det, nonchalerar det, i stället för att ta itu med det."
- },
- {
-  "id": "mek-070",
-  "text": "Fågeln är knappast sällsynt; att den ändå så sällan observeras beror ___ på att den håller sig gömd i vassen.",
-  "opts": [
-   "emellertid",
-   "däremot",
-   "följaktligen",
-   "snarare"
-  ],
-  "a": 3,
-  "why": "Snarare markerar den mer rimliga förklaringen i stället för sällsynthet. Följaktligen anger slutsats, och däremot och emellertid kontrast."
- },
- {
-  "id": "mek-071",
-  "text": "Bina spelar en ___ roll för pollineringen av många grödor; om de ___ skulle skördarna minska ___.",
-  "opts": [
-   "avgörande – försvann – kraftigt",
-   "avgörande – försvann – obetydligt",
-   "marginell – försvann – kraftigt",
-   "avgörande – ökade – kraftigt"
-  ],
-  "a": 0,
-  "why": "Om bina är avgörande skulle deras försvinnande ge kraftigt minskade skördar. En marginell roll eller ett obetydligt bortfall hänger inte ihop."
- },
- {
-  "id": "mek-072",
-  "text": "Bristen på arbetskraft ___ inte enbart i låga löner utan har även sin grund i att utbildningarna ___ arbetsgivarnas behov.",
-  "opts": [
-   "beror – överträffar",
-   "bottnar – inte motsvarar",
-   "resulterar – inte motsvarar",
-   "bottnar – motsvarar"
-  ],
-  "a": 1,
-  "why": "Bottna i betyder ha som orsak, och en orsak till bristen är att utbildningarna inte motsvarar behoven. Beror i är grammatiskt fel."
- },
- {
-  "id": "mek-073",
-  "text": "Ministern ___ att hon hade känt till bristerna, men hävdade att hon hade saknat ___ att ingripa.",
-  "opts": [
-   "vidgick – kännedom",
-   "förnekade – befogenhet",
-   "bedyrade – intresse",
-   "vidgick – befogenhet"
-  ],
-  "a": 3,
-  "why": "Vidgå betyder erkänna: hon medgav kunskapen men sade sig sakna befogenhet. Att sakna kännedom motsäger att hon känt till bristerna."
- },
- {
-  "id": "mek-074",
-  "text": "Översättningen var alltför ___: genom att följa originalet ord för ord ___ översättaren textens rytm, och resultatet blev ___ och svårläst.",
-  "opts": [
-   "bokstavstrogen – förlorade – ledigt",
-   "bokstavstrogen – bevarade – stelt",
-   "bokstavstrogen – förlorade – stelt",
-   "fri – förlorade – stelt"
-  ],
-  "a": 2,
-  "why": "Ord för ord är bokstavstroget, vilket gör att rytmen går förlorad och texten blir stel. Fri och ledigt strider mot beskrivningen."
- },
- {
-  "id": "mek-075",
-  "text": "Den nya medicinen är ___, det vill säga den ska ges innan sjukdomen bryter ut och inte för att ___ redan uppkomna symtom.",
-  "opts": [
-   "profylaktisk – förebygga",
-   "palliativ – förebygga",
-   "akut – lindra",
-   "profylaktisk – lindra"
-  ],
-  "a": 3,
-  "why": "Profylaktisk betyder förebyggande, vilket förklaras av att den ges före utbrottet; den är inte till för att lindra symtom. Förebygga uppkomna symtom är ologiskt."
- },
- {
-  "id": "mek-076",
-  "text": "Ordet fönster är ett ___ från lågtyskan; svenskan har genom historien ___ tusentals ord från andra språk, och processen är ___ avslutad.",
-  "opts": [
-   "lånord – tagit upp – sedan länge",
-   "arvord – tagit upp – på intet sätt",
-   "lånord – exporterat – på intet sätt",
-   "lånord – tagit upp – på intet sätt"
-  ],
-  "a": 3,
-  "why": "Ett ord från ett annat språk är ett lånord, svenskan har tagit upp många sådana och inlåningen pågår fortfarande. Arvord och exporterat bryter mot meningen."
- },
- {
-  "id": "mek-077",
-  "text": "Forskaren var ___ till de nya resultaten, eftersom de ___ allt som tidigare studier visat; hon krävde därför att försöket skulle ___ innan något publicerades.",
-  "opts": [
-   "entusiastisk – stödde – skyndas på",
-   "skeptisk – bekräftade – upprepas",
-   "likgiltig – motsade – glömmas",
-   "skeptisk – motsade – upprepas"
-  ],
-  "a": 3,
-  "why": "Resultat som motsäger tidigare forskning väcker skepsis, och därför kräver man att försöket upprepas. Bekräftade ger inget skäl till skepsis."
- },
- {
-  "id": "mek-078",
-  "text": "Utställningen var ___ i sitt urval: där samsades medeltida skulpturer med modern videokonst och ___ folkkonst.",
-  "opts": [
-   "renodlad – traditionell",
-   "eklektisk – traditionell",
-   "enhetlig – samtida",
-   "eklektisk – ingen"
-  ],
-  "a": 1,
-  "why": "Eklektisk betyder sammansatt av olika stilar, vilket blandningen visar. Renodlad och enhetlig strider mot den brokiga samlingen."
- },
- {
-  "id": "mek-079",
-  "text": "Den lilla ödlan är ___ för ön och förekommer inte naturligt någon annanstans i världen.",
-  "opts": [
-   "endemisk",
-   "sporadisk",
-   "perifer",
-   "heterogen"
-  ],
-  "a": 0,
-  "why": "Endemisk betyder att arten bara finns naturligt i ett visst område, vilket meningens andra led förklarar."
- },
- {
-  "id": "mek-080",
-  "text": "Kritiken mot förslaget var inte ___ utan uttalades ___ av flera tunga remissinstanser i deras skriftliga yttranden.",
-  "opts": [
-   "implicit – försiktigt",
-   "implicit – explicit",
-   "marginell – sporadiskt",
-   "explicit – implicit"
-  ],
-  "a": 1,
-  "why": "Inte ... utan kräver en motsats: inte indirekt utan uttryckligen. Med explicit–implicit blir det omvänt och ologiskt för uttalad kritik."
- },
- {
-  "id": "mek-081",
-  "text": "Romanen räknas i dag till de stora klassikerna, ___ den sålde dåligt när den kom ut.",
-  "opts": [
-   "för att",
-   "så att",
-   "trots att",
-   "eftersom"
-  ],
-  "a": 2,
-  "why": "Att en klassiker sålde dåligt är en motsättning, som trots att uttrycker. Eftersom och för att anger orsak, så att följd."
- },
- {
-  "id": "mek-082",
-  "text": "Hon var ___ inför erbjudandet: å ena sidan lockade den högre lönen, å andra sidan ville hon inte ___ sina vänner på orten.",
-  "opts": [
-   "tvehågsen – lämna",
-   "entusiastisk – lämna",
-   "tvehågsen – träffa",
-   "likgiltig – överge"
-  ],
-  "a": 0,
-  "why": "Å ena sidan ... å andra sidan visar kluvenhet, alltså tvehågsen. Att inte vilja lämna vännerna är skälet emot flytten."
- },
- {
-  "id": "mek-083",
-  "text": "Ett ___ uttalande kan få oanade konsekvenser; därför väljer erfarna diplomater sina ord med ___.",
-  "opts": [
-   "genomtänkt – omsorg",
-   "obetänksamt – likgiltighet",
-   "obetänksamt – omsorg",
-   "försiktigt – noggrannhet"
-  ],
-  "a": 2,
-  "why": "Risken med obetänksamma uttalanden är skälet till att diplomater väljer orden med omsorg. Genomtänkt och försiktigt ger inga oanade konsekvenser."
- },
- {
-  "id": "mek-084",
-  "text": "Medan den ena hypotesen förklarar ___ observationer, kan den andra bara redogöra för ett ___ fåtal; ___ har de flesta forskare anslutit sig till den förra.",
-  "opts": [
-   "samtliga – litet – trots detta",
-   "få – stort – följaktligen",
-   "samtliga – litet – följaktligen",
-   "samtliga – stort – därför"
-  ],
-  "a": 2,
-  "why": "Hypotesen som förklarar allt får följaktligen stöd. Trots detta bryter logiken, och ett stort fåtal är en motsägelse."
- },
- {
-  "id": "mek-085",
-  "text": "Företaget befann sig i en ___ ekonomisk situation; ___ tvingades ledningen sälja delar av verksamheten.",
-  "opts": [
-   "prekär – trots det",
-   "stabil – följaktligen",
-   "prekär – därför",
-   "lukrativ – därför"
-  ],
-  "a": 2,
-  "why": "En besvärlig, prekär situation är orsaken till försäljningen, så därför passar. Trots det bryter orsakssambandet."
- },
- {
-  "id": "mek-086",
-  "text": "Uppsatsen var ___ disponerad: varje stycke byggde logiskt på det föregående, och slutsatserna följde ___ av argumenten.",
-  "opts": [
-   "stringent – inte",
-   "rörigt – tydligt",
-   "stringent – naturligt",
-   "slarvigt – naturligt"
-  ],
-  "a": 2,
-  "why": "Stringent betyder noga och följdriktig, vilket beskrivningen av styckena visar. Slarvigt och rörigt motsäger den logiska uppbyggnaden."
- },
- {
-  "id": "mek-087",
-  "text": "Under medeltiden var de flesta människor i Norden bönder, och samhället var därför i hög grad ___.",
-  "opts": [
-   "urbaniserat",
-   "agrart",
-   "sekulärt",
-   "merkantilt"
-  ],
-  "a": 1,
-  "why": "Agrar betyder jordbruksanknuten, vilket följer av att de flesta var bönder. Merkantilt gäller handel och urbaniserat städer."
- },
- {
-  "id": "mek-088",
-  "text": "Han var känd som en ___ förhandlare som sällan gav efter, men i den här frågan visade han sig ovanligt ___.",
-  "opts": [
-   "hårdnackad – eftergiven",
-   "foglig – medgörlig",
-   "eftergiven – obeveklig",
-   "hårdnackad – envis"
-  ],
-  "a": 0,
-  "why": "Men och ovanligt kräver kontrast mot hans vanliga hårdhet; eftergiven betyder medgörlig. Envis saknar kontrast och foglig strider mot att han sällan gav efter."
- },
- {
-  "id": "mek-089",
-  "text": "Mycket av det vi vet om stenåldern bygger på ___ fynd, och tolkningarna måste därför vara ___.",
-  "opts": [
-   "fragmentariska – försiktiga",
-   "rikliga – försiktiga",
-   "uttömmande – osäkra",
-   "fragmentariska – kategoriska"
-  ],
-  "a": 0,
-  "why": "Uppstyckade fynd gör att man bör tolka försiktigt. Kategoriska tolkningar följer inte av bristfälliga fynd, och uttömmande fynd ger inte osäkerhet."
- },
- {
-  "id": "mek-090",
-  "text": "Under 1800-talet flyttade allt fler från landsbygden till städerna, och denna ___ förändrade samhället i grunden.",
-  "opts": [
-   "sekularisering",
-   "kolonisering",
-   "urbanisering",
-   "domesticering"
-  ],
-  "a": 2,
-  "why": "Flytt från land till stad kallas urbanisering. Sekularisering gäller religionens minskade roll och domesticering att tämja djur."
- },
- {
-  "id": "mek-091",
-  "text": "Under 1600-talet hade Sverige en ___ ställning kring Östersjön, men efter ___ militära nederlag i början av 1700-talet gick stormaktstiden ___.",
-  "opts": [
-   "dominerande – inga – under",
-   "dominerande – flera – mot sitt slut",
-   "dominerande – flera – in i sin storhetstid",
-   "underordnad – flera – mot sitt slut"
-  ],
-  "a": 1,
-  "why": "Men visar att den dominerande ställningen tog slut efter flera nederlag. Inga nederlag eller en storhetstid strider mot sammanhanget."
- },
- {
-  "id": "mek-092",
-  "text": "Vulkanutbrottet var inte ___; forskarna hade länge registrerat små jordskalv som tydde på att något var ___ under ytan.",
-  "opts": [
-   "överraskande – lugnt",
-   "förutsägbart – i görningen",
-   "oväntat – i görningen",
-   "oväntat – stabilt"
-  ],
-  "a": 2,
-  "why": "Varningssignaler gjorde utbrottet förväntat, alltså inte oväntat; skalven tydde på att något var i görningen. Stabilt och lugnt motsäger skalven."
- },
- {
-  "id": "mek-093",
-  "text": "Andra världskriget tog slut 1945, men ___ märktes i det europeiska samhället under flera decennier.",
-  "opts": [
-   "förspelet",
-   "efterdyningarna",
-   "upptakten",
-   "orsakerna"
-  ],
-  "a": 1,
-  "why": "Efterdyningar är följder som märks efteråt, vilket men och flera decennier visar. Upptakt och förspel gäller tiden före."
- },
- {
-  "id": "mek-094",
-  "text": "Inom kemin är en katalysator ett ämne som ___ en kemisk reaktion utan att själv förbrukas i processen.",
-  "opts": [
-   "påskyndar",
-   "neutraliserar",
-   "avslutar",
-   "förhindrar"
-  ],
-  "a": 0,
-  "why": "En katalysator gör att en reaktion går snabbare utan att själv förbrukas. De andra verben beskriver fel funktion."
- },
- {
-  "id": "mek-095",
-  "text": "Stadens befolkning ___ under industrialiseringen, vilket ledde till ___ bostadsbrist; många familjer fick bo ___ i små rum utan rinnande vatten.",
-  "opts": [
-   "stagnerade – viss – glest",
-   "mångdubblades – obefintlig – rymligt",
-   "mångdubblades – akut – trångt",
-   "minskade – akut – trångt"
-  ],
-  "a": 2,
-  "why": "Snabb befolkningsökning orsakar akut bostadsbrist och trångboddhet. Minskade befolkning skulle inte leda till bostadsbrist."
- },
- {
-  "id": "mek-096",
-  "text": "Till skillnad från sin ___ företrädare var den nya ordföranden ___ och undvek gärna konflikter.",
-  "opts": [
-   "fredliga – stridbar",
-   "stridslystna – konfrontativ",
-   "stridslystna – försonlig",
-   "fogliga – försonlig"
-  ],
-  "a": 2,
-  "why": "Till skillnad från kräver kontrast: en stridslysten företrädare mot en försonlig efterträdare som undviker konflikter."
- },
- {
-  "id": "mek-097",
-  "text": "Vintern var ovanligt mild. ___ överlevde fler skadeinsekter än vanligt, vilket gav jordbrukarna problem under sommaren.",
-  "opts": [
-   "Däremot",
-   "Trots detta",
-   "Emellertid",
-   "Följaktligen"
-  ],
-  "a": 3,
-  "why": "Den milda vintern är orsaken till att fler insekter överlevde, så ett ord för följd behövs. De andra uttrycker motsättning."
- },
- {
-  "id": "mek-098",
-  "text": "Under krisen inrättade regeringen en ___ myndighet, som skulle avvecklas så snart läget hade normaliserats.",
-  "opts": [
-   "permanent",
-   "oförgriplig",
-   "konstitutiv",
-   "provisorisk"
-  ],
-  "a": 3,
-  "why": "En myndighet som ska avvecklas efter krisen är tillfällig, provisorisk. Permanent och oförgriplig strider mot att den ska avvecklas."
- },
- {
-  "id": "mek-099",
-  "text": "Trots att reformen presenterades som ___ innebar den i praktiken bara ___ justeringar av det gamla systemet.",
-  "opts": [
-   "radikal – genomgripande",
-   "blygsam – små",
-   "måttlig – smärre",
-   "radikal – marginella"
-  ],
-  "a": 3,
-  "why": "Trots att kräver en kontrast: reformen sades vara radikal men var i praktiken marginell. Blygsam–små saknar motsättning."
- },
- {
-  "id": "mek-100",
-  "text": "Det är ___ att jämföra länderna direkt med varandra, ___ de räknar arbetslöshet på olika sätt.",
-  "opts": [
-   "vanskligt – trots att",
-   "vanskligt – eftersom",
-   "enkelt – eftersom",
-   "rimligt – fast"
-  ],
-  "a": 1,
-  "why": "Olika räknesätt är orsaken till att en jämförelse är vansklig, så eftersom passar. Trots att och fast anger felaktigt motsättning."
- },
- {
-  "id": "mek-101",
-  "text": "Även om ___ ofta ses som en modern företeelse, har människor ___ flyttat mellan länder; det som är nytt är snarare ___.",
-  "opts": [
-   "migration – i alla tider – omfattningen",
-   "migration – sällan – omfattningen",
-   "bofasthet – i alla tider – omfattningen",
-   "migration – i alla tider – fenomenet"
-  ],
-  "a": 0,
-  "why": "Även om kräver kontrast: migration uppfattas som modern men har alltid förekommit; nytt är omfattningen. Att fenomenet vore nytt motsäger resonemanget."
- },
- {
-  "id": "mek-102",
-  "text": "Klimatet i inlandet är ___ med varma somrar och kalla vintrar, medan kustklimatet längre västerut är betydligt mer ___.",
-  "opts": [
-   "kontinentalt – utjämnat",
-   "tropiskt – kallt",
-   "maritimt – utjämnat",
-   "kontinentalt – extremt"
-  ],
-  "a": 0,
-  "why": "Stora temperaturskillnader kännetecknar kontinentalt klimat, medan havet ger kusten ett jämnare, utjämnat klimat. Maritimt beskriver kustklimat."
- },
- {
-  "id": "mek-103",
-  "text": "Hon framförde sina argument ___ och lugnt, vilket gjorde det svårt för motståndarna att ___ henne som känslostyrd.",
-  "opts": [
-   "sakligt – avfärda",
-   "upprört – avfärda",
-   "känslosamt – kritisera",
-   "sakligt – berömma"
-  ],
-  "a": 0,
-  "why": "Ett sakligt och lugnt framförande gör det svårt att avfärda någon som känslostyrd. Upprört och känslosamt skulle tvärtom göra det lätt."
- },
- {
-  "id": "mek-104",
-  "text": "Ett ___ mål är lättare att följa upp än ett vagt formulerat; därför bör målen vara ___ och tydligt ___ i tid.",
-  "opts": [
-   "konkret – oprecisa – avgränsade",
-   "konkret – mätbara – avgränsade",
-   "konkret – mätbara – obegränsade",
-   "abstrakt – mätbara – avgränsade"
-  ],
-  "a": 1,
-  "why": "Kontrasten mot vagt kräver konkret, och lätt uppföljning kräver mätbara och tidsavgränsade mål. Oprecisa och obegränsade motsäger poängen."
- },
- {
-  "id": "mek-105",
-  "text": "Vetenskapliga teorier är ___: de gäller tills nya rön ___ dem, och ingen teori kan därför betraktas som ___ bevisad.",
-  "opts": [
-   "provisoriska – motbevisar – delvis",
-   "eviga – motbevisar – slutgiltigt",
-   "provisoriska – bekräftar – slutgiltigt",
-   "provisoriska – motbevisar – slutgiltigt"
-  ],
-  "a": 3,
-  "why": "Teorier gäller tills de motbevisas och är därför provisoriska; ingen kan vara slutgiltigt bevisad. Eviga strider mot att de kan ersättas."
- },
- {
-  "id": "mek-106",
-  "text": "Priset på råvaran ___ under året: först steg det kraftigt, ___ föll det tillbaka till ungefär samma nivå som ___.",
-  "opts": [
-   "fluktuerade – sedan – i början",
-   "stagnerade – sedan – i början",
-   "fluktuerade – sedan – aldrig",
-   "fluktuerade – därför – i början"
-  ],
-  "a": 0,
-  "why": "Fluktuera betyder växla, vilket uppgång följd av nedgång visar. Sedan anger tidsföljd; därför anger felaktigt orsak."
- },
- {
-  "id": "mek-107",
-  "text": "Forskarnas slutsatser var ___ eftersom de byggde på ett litet och dessutom ovanligt urval av deltagare.",
-  "opts": [
-   "obsoleta",
-   "kategoriska",
-   "tentativa",
-   "evidenta"
-  ],
-  "a": 2,
-  "why": "Ett litet och ovanligt urval ger bara preliminära slutsatser, alltså tentativa. Kategoriska eller självklara slutsatser strider mot förbehållet i eftersom-satsen."
- },
- {
-  "id": "mek-108",
-  "text": "Det är inte priset utan ___ som avgör hur länge en vara håller; en dyr produkt kan vara lika illa gjord som en billig.",
-  "opts": [
-   "efterfrågan",
-   "tillgången",
-   "reklamen",
-   "kvaliteten"
-  ],
-  "a": 3,
-  "why": "Hållbarhet och hur väl något är gjort handlar om kvalitet. Efterfrågan, reklam och tillgång påverkar inte hur länge varan håller."
- },
- {
-  "id": "mek-109",
-  "text": "Medan stadens äldre delar har vuxit fram ___ med krokiga gränder, är de nyare stadsdelarna ___ planerade med raka gator.",
-  "opts": [
-   "planenligt – lika",
-   "oplanerat – slumpmässigt",
-   "symmetriskt – noggrant",
-   "oplanerat – noggrant"
-  ],
-  "a": 3,
-  "why": "Medan markerar kontrast mellan gammalt och nytt: oplanerat mot noggrant planerade. Slumpmässigt planerade är motsägelsefullt."
- },
- {
-  "id": "mek-110",
-  "text": "Ministern ville inte säga det rakt ut, men kritiken mot den egna partiledningen var ändå ___ i hela talet.",
-  "opts": [
-   "explicit",
-   "implicit",
-   "marginell",
-   "obefogad"
-  ],
-  "a": 1,
-  "why": "Kritik som inte sägs rakt ut men ändå finns där är implicit, indirekt. Explicit betyder uttalad och motsäger första ledet."
- },
- {
-  "id": "mek-111",
-  "text": "Den första versionen av lagtexten var ___ formulerad, vilket gav domstolarna ___ utrymme för egna tolkningar.",
-  "opts": [
-   "vagt – litet",
-   "precist – stort",
-   "vagt – stort",
-   "exakt – fritt"
-  ],
-  "a": 2,
-  "why": "En vag text lämnar stort utrymme för tolkning. Precist och exakt skulle tvärtom begränsa tolkningsutrymmet."
- },
- {
-  "id": "mek-112",
-  "text": "Det är svårt att få en helhetsbild av perioden, eftersom källorna är ___ och många dokument har gått förlorade.",
-  "opts": [
-   "fragmentariska",
-   "uttömmande",
-   "omfattande",
-   "samstämmiga"
-  ],
-  "a": 0,
-  "why": "Förlorade dokument gör källorna uppstyckade, fragmentariska. Uttömmande och omfattande skulle tvärtom underlätta en helhetsbild."
- },
- {
-  "id": "mek-113",
-  "text": "Forskarna noterade en tydlig ___ mellan hur mycket deltagarna sade att de motionerade och vad stegräknarna visade; många överskattade sin aktivitet kraftigt.",
-  "opts": [
-   "synergi",
-   "överensstämmelse",
-   "symmetri",
-   "diskrepans"
-  ],
-  "a": 3,
-  "why": "Att deltagarna överskattade sig visar en skillnad mellan uppgift och mätning, en diskrepans. Överensstämmelse betyder motsatsen."
- },
- {
-  "id": "mek-114",
-  "text": "Trots sin stora förmögenhet var han ___ med pengar och vägrade att ___ ens små summor till välgörenhet.",
-  "opts": [
-   "njugg – spara",
-   "njugg – skänka",
-   "frikostig – skänka",
-   "slösaktig – ge"
-  ],
-  "a": 1,
-  "why": "Njugg betyder snål, vilket passar att han vägrade skänka. Frikostig och slösaktig är motsatsen, och vägra spara motsäger snålheten."
- },
- {
-  "id": "mek-115",
-  "text": "Mer pengar till skolan är ___ ingen garanti för bättre resultat; det avgörande är ___ hur resurserna används.",
-  "opts": [
-   "därmed – snarare",
-   "i sig – dessutom",
-   "följaktligen – emellertid",
-   "i sig – snarare"
-  ],
-  "a": 3,
-  "why": "I sig betyder ensamt taget, och snarare pekar ut den viktigare faktorn. Dessutom lägger bara till, och därmed förutsätter ett tidigare resonemang."
- },
- {
-  "id": "mek-116",
-  "text": "Formellt var hon bara rådgivare åt styrelsen, men ___ var det hon som fattade alla viktiga beslut i företaget.",
-  "opts": [
-   "på nåder",
-   "de facto",
-   "i elfte timmen",
-   "nominellt"
-  ],
-  "a": 1,
-  "why": "De facto betyder i verkligheten och kontrasterar mot formellt. Nominellt betyder till namnet och säger samma sak som formellt."
- },
- {
-  "id": "mek-117",
-  "text": "Beslutet fattades ___: ingen hade hunnit läsa underlaget, och det fick rivas upp redan veckan därpå.",
-  "opts": [
-   "varligt",
-   "överilat",
-   "samvetsgrant",
-   "enhälligt"
-  ],
-  "a": 1,
-  "why": "Att ingen läst underlaget visar att beslutet var förhastat, överilat. Samvetsgrant och varligt betyder motsatsen."
- },
- {
-  "id": "mek-118",
-  "text": "Det gamla sjukhuset revs inte utan ___ till bostäder, och därmed kunde stora delar av den ___ byggnaden bevaras.",
-  "opts": [
-   "utrymdes – nybyggda",
-   "omvandlades – moderna",
-   "omvandlades – kulturhistoriskt värdefulla",
-   "jämnades – värdefulla"
-  ],
-  "a": 2,
-  "why": "Inte revs utan omvandlades, och det som bevarades var den värdefulla gamla byggnaden. Nybyggda och moderna strider mot att sjukhuset var gammalt."
- },
- {
-  "id": "mek-119",
-  "text": "Eftersom mätvärdena ___ kraftigt från dag till dag var det svårt att se någon ___ trend.",
-  "opts": [
-   "fluktuerade – slumpmässig",
-   "konvergerade – entydig",
-   "fluktuerade – entydig",
-   "stagnerade – tydlig"
-  ],
-  "a": 2,
-  "why": "Kraftigt växlande värden gör det svårt att se en klar trend. Stagnerade och konvergerade beskriver stabilitet och ger ingen sådan svårighet."
- },
- {
-  "id": "mek-120",
-  "text": "Samtalen fördes ___; inte förrän avtalet var klart fick allmänheten ___ om att några förhandlingar alls hade pågått.",
-  "opts": [
-   "offentligt – vetskap",
-   "öppet – kännedom",
-   "i lönndom – kännedom",
-   "i lönndom – tvivel"
-  ],
-  "a": 2,
-  "why": "Att allmänheten fick veta först efteråt visar att samtalen skedde i hemlighet, i lönndom. Öppet och offentligt motsäger detta."
- }
+  {
+    "id": "mek-001",
+    "text": "Ledamoten ___ förslaget eftersom hon ansåg att det var ___ underbyggt; enligt henne saknades ___ stöd för de påstådda effekterna.",
+    "opts": [
+      "tillstyrkte – otillräckligt – vetenskapligt",
+      "avstyrkte – otillräckligt – vetenskapligt",
+      "avstyrkte – otillräckligt – inget",
+      "avstyrkte – väl – vetenskapligt"
+    ],
+    "a": 1,
+    "why": "Avstyrka betyder avråda från, vilket följer av att förslaget var otillräckligt underbyggt. Saknades inget stöd vore en motsägelse."
+  },
+  {
+    "id": "mek-002",
+    "text": "Kommissionen ___ att förslaget skulle förkastas, men regeringen valde att ___ rekommendationen och genomföra reformen ändå.",
+    "opts": [
+      "förordade – bortse från",
+      "förordade – följa",
+      "betvivlade – bortse från",
+      "befarade – åtlyda"
+    ],
+    "a": 0,
+    "why": "Kommissionen rekommenderade, förordade, att förslaget skulle förkastas; men och ändå visar att regeringen bortsåg från rådet. Följa ger ingen motsättning."
+  },
+  {
+    "id": "mek-003",
+    "text": "Sjukdomen uppträder ___ snarare än i stora utbrott; enstaka fall dyker upp här och där med flera års mellanrum.",
+    "opts": [
+      "epidemiskt",
+      "sporadiskt",
+      "explosionsartat",
+      "regelbundet"
+    ],
+    "a": 1,
+    "why": "Enstaka fall med långa mellanrum är oregelbundet, sporadiskt. Epidemiskt och explosionsartat beskriver just stora utbrott."
+  },
+  {
+    "id": "mek-004",
+    "text": "Den ekonomiska krisen ___ en rad reformer som annars sannolikt hade dröjt i årtionden; i den meningen var den paradoxalt nog ___.",
+    "opts": [
+      "förhindrade – gynnsam",
+      "katalyserade – skadlig",
+      "försenade – nyttig",
+      "katalyserade – gynnsam"
+    ],
+    "a": 3,
+    "why": "Katalysera betyder utlösa. Att en kris utlöser efterlängtade reformer gör den paradoxalt gynnsam; skadlig vore ingen paradox."
+  },
+  {
+    "id": "mek-005",
+    "text": "Den ___ debatten om skolans framtid präglades länge av ___ positioner, men på senare tid har en mer ___ diskussion vuxit fram.",
+    "opts": [
+      "infekterade – låsta – polariserad",
+      "lugna – låsta – nyanserad",
+      "infekterade – flexibla – polariserad",
+      "infekterade – låsta – nyanserad"
+    ],
+    "a": 3,
+    "why": "Men kräver kontrast mot de låsta positionerna i den infekterade debatten, alltså en mer nyanserad diskussion. Polariserad ger ingen förändring."
+  },
+  {
+    "id": "mek-006",
+    "text": "Bristande underhåll har med åren ___ förtroendet för järnvägen, och allt fler väljer i stället bilen.",
+    "opts": [
+      "stärkt",
+      "befäst",
+      "urholkat",
+      "cementerat"
+    ],
+    "a": 2,
+    "why": "Urholka betyder försvaga, vilket förklarar att folk väljer bort tåget. Cementera, stärka och befästa säger motsatsen."
+  },
+  {
+    "id": "mek-007",
+    "text": "Många tror att vikingarna bar hjälmar med horn; ___ finns det inga arkeologiska fynd som stöder den föreställningen.",
+    "opts": [
+      "följaktligen",
+      "i själva verket",
+      "därmed",
+      "således"
+    ],
+    "a": 1,
+    "why": "Andra ledet korrigerar en vanlig missuppfattning, vilket i själva verket markerar. Följaktligen, därmed och således anger felaktigt en slutsats."
+  },
+  {
+    "id": "mek-008",
+    "text": "Den oberoende utredningen fann inga som helst bevis för fusk i räkenskaperna; ___ kunde misstankarna mot de anställda ___.",
+    "opts": [
+      "därmed – avskrivas",
+      "trots det – avskrivas",
+      "emellertid – stärkas",
+      "därmed – bekräftas"
+    ],
+    "a": 0,
+    "why": "Avsaknad av bevis leder till att misstankarna avskrivs, och därmed anger följden. Trots det och bekräftas bryter mot logiken."
+  },
+  {
+    "id": "mek-009",
+    "text": "Hans framställning var så ___ att hela resonemanget fick plats på en enda sida utan att något väsentligt gick förlorat.",
+    "opts": [
+      "vidlyftig",
+      "långrandig",
+      "fragmentarisk",
+      "koncis"
+    ],
+    "a": 3,
+    "why": "Kort men fullständig betyder koncis. Vidlyftig och långrandig betyder motsatsen, och fragmentarisk skulle innebära att något gick förlorat."
+  },
+  {
+    "id": "mek-010",
+    "text": "Arbetet var tungt och dåligt betalt; ___ fanns det alltid fler sökande än lediga platser.",
+    "opts": [
+      "följaktligen",
+      "alltså",
+      "därför",
+      "ändå"
+    ],
+    "a": 3,
+    "why": "Att många söker ett tungt och dåligt betalt arbete är en motsättning som kräver ändå. De andra orden anger felaktigt orsak eller slutsats."
+  },
+  {
+    "id": "mek-011",
+    "text": "Den ___ eleven vågade sällan räcka upp handen, trots att hon nästan alltid kunde svaret.",
+    "opts": [
+      "kavata",
+      "oförsynta",
+      "försagda",
+      "pösiga"
+    ],
+    "a": 2,
+    "why": "Försagd betyder blyg, vilket förklarar att hon inte vågade. Kavat, pösig och oförsynt beskriver självsäkra eller fräcka personer."
+  },
+  {
+    "id": "mek-012",
+    "text": "De två forskarna kom fram till samma resultat ___ av varandra, den ena i Uppsala och den andra i Lyon.",
+    "opts": [
+      "oberoende",
+      "beroende",
+      "på grund",
+      "till följd"
+    ],
+    "a": 0,
+    "why": "Två forskare i olika städer som når samma resultat gör det oberoende av varandra. Beroende motsäger poängen, och de andra ger fel uttryck."
+  },
+  {
+    "id": "mek-013",
+    "text": "Ju mer vi lär oss om hjärnan, ___ tydligare blir det att våra tidigare modeller var alltför ___.",
+    "opts": [
+      "desto – förenklade",
+      "så – förenklade",
+      "desto – komplicerade",
+      "ändå – förenklade"
+    ],
+    "a": 0,
+    "why": "Det fasta uttrycket är ju ... desto. Mer kunskap visar att äldre modeller var för enkla, inte för komplicerade."
+  },
+  {
+    "id": "mek-014",
+    "text": "Den ___ tjänstemannen följde alltid reglerna till punkt och pricka, vilket gjorde honom ___ men också ___ inför ändrade omständigheter.",
+    "opts": [
+      "pedantiske – pålitlig – lyhörd",
+      "pedantiske – opålitlig – oflexibel",
+      "slarvige – pålitlig – oflexibel",
+      "pedantiske – pålitlig – oflexibel"
+    ],
+    "a": 3,
+    "why": "Pedantisk regelföljning gör någon pålitlig men oflexibel; men också kräver en nackdel. Slarvig strider mot regelföljandet."
+  },
+  {
+    "id": "mek-015",
+    "text": "Debatten blev alltmer ___; i stället för att lyssna på varandra ___ båda sidor sina ståndpunkter.",
+    "opts": [
+      "nyanserad – cementerade",
+      "polariserad – cementerade",
+      "saklig – jämkade",
+      "polariserad – omprövade"
+    ],
+    "a": 1,
+    "why": "Att inte lyssna och i stället befästa sina ståndpunkter hör ihop med en polariserad debatt. Omprövade och jämkade strider mot i stället för att lyssna."
+  },
+  {
+    "id": "mek-016",
+    "text": "Frågan om ändrade gränser för fiskekvoterna är ___ politiskt känslig, och regeringen har därför valt att gå ___ fram.",
+    "opts": [
+      "synnerligen – varsamt",
+      "knappast – försiktigt",
+      "föga – varligt",
+      "synnerligen – burdust"
+    ],
+    "a": 0,
+    "why": "En mycket känslig fråga gör att man därför går varsamt fram. Burdust strider mot därför, och knappast känslig motiverar ingen försiktighet."
+  },
+  {
+    "id": "mek-017",
+    "text": "Tidningen anklagades för att ___ citat, men journalisten kunde visa inspelningar som bevisade att intervjun verkligen ägt rum.",
+    "opts": [
+      "tradera",
+      "verifiera",
+      "fabricera",
+      "accentuera"
+    ],
+    "a": 2,
+    "why": "Inspelningarna motbevisar anklagelsen om påhittade citat; fabricera betyder hitta på. Att verifiera citat vore inget att anklagas för."
+  },
+  {
+    "id": "mek-018",
+    "text": "Tjänsten var ___ men krävde att man ___ mycket av sin fritid; många valde därför bort den trots den höga lönen.",
+    "opts": [
+      "lukrativ – offrade",
+      "lönsam – vann",
+      "lukrativ – fick",
+      "lågavlönad – offrade"
+    ],
+    "a": 0,
+    "why": "Lukrativ betyder lönsam, vilket stämmer med den höga lönen, och men visar baksidan: man fick offra fritid. Lågavlönad motsäger den höga lönen."
+  },
+  {
+    "id": "mek-019",
+    "text": "Befolkningen i staden är mycket ___: här talas över hundra språk, och invånarna har vitt skilda bakgrunder.",
+    "opts": [
+      "homogen",
+      "heterogen",
+      "provisorisk",
+      "endemisk"
+    ],
+    "a": 1,
+    "why": "Många språk och olika bakgrunder betyder att befolkningen är mångblandad, heterogen. Homogen betyder enhetlig och är motsatsen."
+  },
+  {
+    "id": "mek-020",
+    "text": "Mötet var tänkt som kampanjens höjdpunkt, men det blev snarare en ___: kandidaten hade inget nytt att säga och publiken gick hem besviken.",
+    "opts": [
+      "antiklimax",
+      "triumf",
+      "rendezvous",
+      "apokalyps"
+    ],
+    "a": 0,
+    "why": "En utebliven höjdpunkt kallas antiklimax. Triumf motsäger besvikelsen, och apokalyps är alldeles för starkt."
+  },
+  {
+    "id": "mek-021",
+    "text": "Kommunen valde en ___ lösning: i stället för att vänta på den perfekta planen åtgärdade man de mest akuta problemen direkt.",
+    "opts": [
+      "pragmatisk",
+      "utopisk",
+      "rigid",
+      "dogmatisk"
+    ],
+    "a": 0,
+    "why": "Att lösa det akuta i stället för att vänta på det perfekta är praktiskt inriktat, pragmatiskt. Utopisk och dogmatisk betyder motsatsen."
+  },
+  {
+    "id": "mek-022",
+    "text": "Teorin är elegant, men den har aldrig kunnat ___ genom experiment och förblir därför en spekulation.",
+    "opts": [
+      "verifieras",
+      "förbigås",
+      "idealiseras",
+      "formuleras"
+    ],
+    "a": 0,
+    "why": "En teori som inte bekräftats av experiment förblir spekulation; verifiera betyder intyga, bekräfta. Formuleras motsäger att teorin redan finns."
+  },
+  {
+    "id": "mek-023",
+    "text": "Romanen hyllades av kritikerna för sitt ___ språk, men läsarna fann den ___; den sålde ___ och glömdes snart bort.",
+    "opts": [
+      "nyskapande – svårtillgänglig – dåligt",
+      "nyskapande – lättillgänglig – dåligt",
+      "slätstrukna – svårtillgänglig – dåligt",
+      "nyskapande – svårtillgänglig – strålande"
+    ],
+    "a": 0,
+    "why": "Men ställer kritikernas hyllning mot läsarnas motvilja, och boken sålde dåligt. Slätstruket språk hyllas inte, och strålande försäljning motsäger att den glömdes."
+  },
+  {
+    "id": "mek-024",
+    "text": "Eftersom de ___ försöken gav ___ resultat beslöt forskargruppen att ___ sin hypotes och börja om från början.",
+    "opts": [
+      "inledande – nedslående – behålla",
+      "inledande – nedslående – överge",
+      "avslutande – lovande – stärka",
+      "inledande – lovande – överge"
+    ],
+    "a": 1,
+    "why": "Att börja om förutsätter att man ger upp hypotesen, vilket nedslående resultat motiverar. Lovande resultat ger inget skäl att överge den."
+  },
+  {
+    "id": "mek-025",
+    "text": "Det som en gång var ett neutralt yrkesord används nu oftast ___, och få vill längre bli kallade så.",
+    "opts": [
+      "explicit",
+      "pejorativt",
+      "normativt",
+      "eufemistiskt"
+    ],
+    "a": 1,
+    "why": "Att ingen vill kallas så tyder på att ordet blivit nedsättande, pejorativt. Eufemistiskt vore tvärtom en förskönande användning."
+  },
+  {
+    "id": "mek-026",
+    "text": "Hennes tidiga dikter är ___ och svårtillgängliga, medan de senare är ___ och nästan prosaiska i sin enkelhet.",
+    "opts": [
+      "dunkla – kryptiska",
+      "dunkla – avskalade",
+      "enkla – avskalade",
+      "lättlästa – svulstiga"
+    ],
+    "a": 1,
+    "why": "Medan ställer de svåra tidiga dikterna mot de enkla senare; dunkla mot avskalade. Kryptiska strider mot enkelheten."
+  },
+  {
+    "id": "mek-027",
+    "text": "Den nya tekniken ___ snabbt, men de första versionerna var ___ och dyra; först när priset sjönk blev den ___ för vanliga konsumenter.",
+    "opts": [
+      "utvecklades – billiga – överkomlig",
+      "stagnerade – klumpiga – oåtkomlig",
+      "utvecklades – klumpiga – tillgänglig",
+      "utvecklades – smidiga – tillgänglig"
+    ],
+    "a": 2,
+    "why": "Men kräver nackdelar: klumpiga och dyra. När priset sjönk blev tekniken tillgänglig. Billiga strider mot dyra och mot att priset senare sjönk."
+  },
+  {
+    "id": "mek-028",
+    "text": "Det ___ partiet hade länge haft ___ stöd bland väljarna, men efter en rad skandaler ___ opinionssiffrorna.",
+    "opts": [
+      "etablerade – svagt – rasade",
+      "etablerade – brett – steg",
+      "etablerade – brett – rasade",
+      "nybildade – brett – rasade"
+    ],
+    "a": 2,
+    "why": "Länge passar ett etablerat parti, och men kräver kontrast mellan brett stöd och rasande siffror. Nybildat strider mot länge."
+  },
+  {
+    "id": "mek-029",
+    "text": "Den ___ debattören var fruktad i tv-studion, eftersom hon brukade ___ sina motståndare med en enda kvick och träffande kommentar.",
+    "opts": [
+      "försagda – avväpna",
+      "spirituella – avväpna",
+      "spirituella – smickra",
+      "letargiska – överraska"
+    ],
+    "a": 1,
+    "why": "Spirituell betyder kvicktänkt och fyndig, vilket passar kvicka kommentarer som avväpnar motståndare. Försagd och letargisk passar inte en sådan debattör."
+  },
+  {
+    "id": "mek-030",
+    "text": "De båda teorierna verkar vid första anblicken ___, men vid närmare eftertanke visar det sig att de ___ beskriver samma fenomen ur olika perspektiv.",
+    "opts": [
+      "oförenliga – knappast",
+      "identiska – faktiskt",
+      "oförenliga – egentligen",
+      "förenliga – egentligen"
+    ],
+    "a": 2,
+    "why": "Men kräver kontrast: teorierna verkar oförenliga men beskriver egentligen samma sak. Förenliga ger ingen motsättning."
+  },
+  {
+    "id": "mek-031",
+    "text": "Den nya rektorn ___ i sitt arbete med att reformera skolans organisation, ___ motståndet från många av de anställda var hårt.",
+    "opts": [
+      "framhärdade – eftersom",
+      "tröttnade – fastän",
+      "framhärdade – trots att",
+      "avstod – trots att"
+    ],
+    "a": 2,
+    "why": "Framhärda betyder envisas, och att fortsätta trots hårt motstånd kräver trots att. Eftersom gör motståndet till skälet, vilket är ologiskt."
+  },
+  {
+    "id": "mek-032",
+    "text": "Institutet har ___ mätdata under fyrtio år, vilket gör det möjligt att studera ___ förändringar som annars vore svåra att upptäcka.",
+    "opts": [
+      "ackumulerat – plötsliga",
+      "spolierat – långsamma",
+      "ackumulerat – långsamma",
+      "förbigått – snabba"
+    ],
+    "a": 2,
+    "why": "Att samla ihop data länge gör det möjligt att se långsamma förändringar. Plötsliga förändringar är inte svåra att upptäcka utan långa serier."
+  },
+  {
+    "id": "mek-033",
+    "text": "Landet är formellt en monarki, men kungens makt är ___; i praktiken styrs landet ___ av parlamentet och regeringen.",
+    "opts": [
+      "symbolisk – inte",
+      "symbolisk – helt",
+      "absolut – helt",
+      "obegränsad – delvis"
+    ],
+    "a": 1,
+    "why": "Formellt ... men i praktiken kräver kontrast: kungen har bara symbolisk makt medan parlamentet styr. Absolut makt motsäger andra ledet."
+  },
+  {
+    "id": "mek-034",
+    "text": "Myndigheten ___ ansökan med motiveringen att den inte uppfyllde de formella kraven, men den sökande ___ beslutet till högre instans.",
+    "opts": [
+      "godkände – bestred",
+      "avslog – accepterade",
+      "avslog – överklagade",
+      "beviljade – överklagade"
+    ],
+    "a": 2,
+    "why": "Att kraven inte uppfylldes leder till avslag, och men visar att den sökande inte nöjde sig utan överklagade. Accepterade ger ingen kontrast."
+  },
+  {
+    "id": "mek-035",
+    "text": "Han var en ___ talare: han ___ aldrig, valde orden med omsorg och fick även de mest ___ åhörarna att lyssna.",
+    "opts": [
+      "tråkig – stakade sig – ointresserade",
+      "monoton – tvekade – uppmärksamma",
+      "fängslande – stakade sig – ointresserade",
+      "fängslande – stakade sig – intresserade"
+    ],
+    "a": 2,
+    "why": "En fängslande talare som aldrig stakar sig kan fånga även de ointresserade; även de mest intresserade saknar poäng."
+  },
+  {
+    "id": "mek-036",
+    "text": "Förklaringen låter ___ vid första anblicken, men vid närmare granskning visar den sig ha flera ___ i resonemanget.",
+    "opts": [
+      "förvirrande – fördelar",
+      "övertygande – luckor",
+      "övertygande – styrkor",
+      "osannolik – brister"
+    ],
+    "a": 1,
+    "why": "Men kräver kontrast mellan första intrycket och granskningen: övertygande men med luckor. Styrkor ger ingen motsättning."
+  },
+  {
+    "id": "mek-037",
+    "text": "När ett företag kallar en kraftig prishöjning för en prisjustering är det ett typiskt exempel på en ___.",
+    "opts": [
+      "eufemism",
+      "palindrom",
+      "diminutiv",
+      "överdrift"
+    ],
+    "a": 0,
+    "why": "En förskönande omskrivning kallas eufemism. Prisjustering är inte en överdrift utan en mildring, och palindrom gäller ord som läses likadant baklänges."
+  },
+  {
+    "id": "mek-038",
+    "text": "Det rör sig inte om en tillfällig nedgång ___ om en ___ förändring av konsumenternas vanor.",
+    "opts": [
+      "utan – provisorisk",
+      "eller – tillfällig",
+      "men – varaktig",
+      "utan – varaktig"
+    ],
+    "a": 3,
+    "why": "Inte ... utan är det fasta uttrycket, och motsatsen till tillfällig är varaktig. Provisorisk betyder tillfällig och ger ingen kontrast."
+  },
+  {
+    "id": "mek-039",
+    "text": "Även en ___ höjning av havsnivån kan få ___ följder för låglänta kustområden, där miljontals människor bor.",
+    "opts": [
+      "ringa – obetydliga",
+      "måttlig – försumbara",
+      "måttlig – allvarliga",
+      "kraftig – allvarliga"
+    ],
+    "a": 2,
+    "why": "Även en signalerar något oväntat: en liten höjning kan ändå få allvarliga följder. Med kraftig blir även meningslöst."
+  },
+  {
+    "id": "mek-040",
+    "text": "Hunden var sannolikt ett av de allra första djur som människan ___, långt innan jordbruket uppstod.",
+    "opts": [
+      "idealiserade",
+      "domesticerade",
+      "deporterade",
+      "extraherade"
+    ],
+    "a": 1,
+    "why": "Domesticera betyder göra till husdjur, vilket gäller hunden. De andra verben passar inte om djur som tämjs."
+  },
+  {
+    "id": "mek-041",
+    "text": "Hennes kritik var ___: hon pekade ut exakt vilka siffror som var fel och föreslog hur de skulle rättas.",
+    "opts": [
+      "konkret",
+      "implicit",
+      "vag",
+      "svepande"
+    ],
+    "a": 0,
+    "why": "Att peka ut exakta fel och föreslå rättelser är konkret kritik. Vag, implicit och svepande betyder motsatsen."
+  },
+  {
+    "id": "mek-042",
+    "text": "Skillnaden mellan de två metoderna visade sig vara ___; i praktiken gav båda nästan exakt samma resultat.",
+    "opts": [
+      "avgörande",
+      "radikal",
+      "påfallande",
+      "marginell"
+    ],
+    "a": 3,
+    "why": "Nästan samma resultat betyder att skillnaden är obetydlig, marginell. Övriga alternativ beskriver en stor skillnad och motsäger andra halvan."
+  },
+  {
+    "id": "mek-043",
+    "text": "De första leveranserna av vaccinet räckte inte till alla, så myndigheten tvingades ___ doserna och prioritera de äldsta.",
+    "opts": [
+      "ransonera",
+      "exploatera",
+      "deponera",
+      "amortera"
+    ],
+    "a": 0,
+    "why": "Att fördela något som det finns för lite av heter att ransonera. Deponera betyder lämna i förvar och amortera betala av lån."
+  },
+  {
+    "id": "mek-044",
+    "text": "När telegrafen efter hand ersattes av telefonen blev många telegrafisters mödosamt inlärda specialkunskaper snabbt ___.",
+    "opts": [
+      "gångbara",
+      "lukrativa",
+      "rudimentära",
+      "obsoleta"
+    ],
+    "a": 3,
+    "why": "När tekniken ersätts blir kunskapen om den oanvändbar, obsolet. Lukrativa och gångbara säger motsatsen."
+  },
+  {
+    "id": "mek-045",
+    "text": "Landets ekonomi ___ under hela decenniet; tillväxten låg år efter år nära noll och arbetslösheten förblev hög.",
+    "opts": [
+      "accelererade",
+      "expanderade",
+      "stagnerade",
+      "blomstrade"
+    ],
+    "a": 2,
+    "why": "Nolltillväxt och hög arbetslöshet betyder att ekonomin slutade utvecklas, stagnerade. De andra verben beskriver tillväxt."
+  },
+  {
+    "id": "mek-046",
+    "text": "Kommunens ekonomi var ___; ___ tvingades man skjuta upp renoveringen av skolan, trots att behovet var ___.",
+    "opts": [
+      "god – därför – akut",
+      "ansträngd – därför – akut",
+      "ansträngd – därför – obefintligt",
+      "ansträngd – ändå – akut"
+    ],
+    "a": 1,
+    "why": "Ansträngd ekonomi är orsaken till uppskjutandet, alltså därför, och trots att kräver ett stort, akut behov. Obefintligt behov ger ingen motsättning."
+  },
+  {
+    "id": "mek-047",
+    "text": "Eftersom ordet har flera betydelser kan meningen tolkas på olika sätt; skribenten borde ha valt ett mer ___ uttryck för att ___ missförstånd.",
+    "opts": [
+      "entydigt – undvika",
+      "entydigt – framkalla",
+      "mångtydigt – undvika",
+      "vagt – förebygga"
+    ],
+    "a": 0,
+    "why": "Ett uttryck med bara en betydelse, entydigt, förhindrar missförstånd. Mångtydigt och vagt skapar just det problem som beskrivs."
+  },
+  {
+    "id": "mek-048",
+    "text": "Även om skillnaden mellan grupperna var statistiskt ___, var den så liten att den saknade ___ betydelse.",
+    "opts": [
+      "säkerställd – praktisk",
+      "säkerställd – statistisk",
+      "betydelselös – praktisk",
+      "osäker – praktisk"
+    ],
+    "a": 0,
+    "why": "Även om kräver kontrast: skillnaden är statistiskt säker men praktiskt oviktig. Statistisk betydelse motsäger att den var säkerställd."
+  },
+  {
+    "id": "mek-049",
+    "text": "Myndighetens kontroller var ___: under fem år genomfördes bara ett par inspektioner, och ___ upptäcktes bristerna först när en olycka redan hade inträffat.",
+    "opts": [
+      "sporadiska – följaktligen",
+      "regelbundna – följaktligen",
+      "frekventa – därför",
+      "sporadiska – trots detta"
+    ],
+    "a": 0,
+    "why": "Ett par inspektioner på fem år är oregelbundet, sporadiskt, och den sena upptäckten är en följd av det. Regelbundna och frekventa motsäger antalet."
+  },
+  {
+    "id": "mek-050",
+    "text": "Det är ___ att döma ut hela metoden efter ett enda misslyckat försök; man bör ___ avvakta fler resultat.",
+    "opts": [
+      "förhastat – hellre",
+      "förhastat – därför inte",
+      "klokt – hellre",
+      "rimligt – dessutom"
+    ],
+    "a": 0,
+    "why": "Ett enda försök räcker inte, så att döma ut metoden är förhastat och man bör hellre vänta. Klokt och rimligt motsäger rådet att avvakta."
+  },
+  {
+    "id": "mek-051",
+    "text": "Författaren skildrar landsbygden på ett ___ sätt: livet på gården framstår som harmoniskt och fritt från konflikter, vilket kritikerna menade var ___.",
+    "opts": [
+      "idealiserande – sanningsenligt",
+      "realistiskt – verklighetsfrämmande",
+      "kritiskt – träffande",
+      "idealiserande – verklighetsfrämmande"
+    ],
+    "a": 3,
+    "why": "En konfliktfri, harmonisk bild är förskönad, idealiserande, och kritiker skulle kalla den verklighetsfrämmande. Realistiskt strider mot den förskönade bilden."
+  },
+  {
+    "id": "mek-052",
+    "text": "Vittnesmålet var ___: vittnet ändrade sin berättelse flera gånger, vilket fick rätten att ___ dess trovärdighet.",
+    "opts": [
+      "konsekvent – ifrågasätta",
+      "motsägelsefullt – ifrågasätta",
+      "motsägelsefullt – stärka",
+      "samstämmigt – betvivla"
+    ],
+    "a": 1,
+    "why": "En berättelse som ändras flera gånger är motsägelsefull och får rätten att ifrågasätta den. Konsekvent och samstämmigt betyder motsatsen."
+  },
+  {
+    "id": "mek-053",
+    "text": "Den gamla stavningen betraktas i dag som ___, men den förekommer fortfarande i vissa ___ sammanhang, till exempel i ortnamn.",
+    "opts": [
+      "korrekt – nyskapande",
+      "förlegad – moderna",
+      "förlegad – traditionsbundna",
+      "modern – traditionsbundna"
+    ],
+    "a": 2,
+    "why": "Förlegad betyder omodern, och men visar att den ändå lever kvar i traditionsbundna sammanhang som ortnamn. Moderna sammanhang strider mot exemplet."
+  },
+  {
+    "id": "mek-054",
+    "text": "Att ___ ett problem är inte detsamma som att ___ det; en diagnos utan behandling ___ sällan patienten.",
+    "opts": [
+      "identifiera – lösa – hjälper",
+      "lösa – identifiera – hjälper",
+      "identifiera – lösa – skadar",
+      "ignorera – förstå – botar"
+    ],
+    "a": 0,
+    "why": "Diagnosen motsvarar att identifiera och behandlingen att lösa; en diagnos ensam hjälper sällan. Omvänd ordning ger ingen logik."
+  },
+  {
+    "id": "mek-055",
+    "text": "Han var så ___ att han inte ens lyssnade när kollegerna lade fram nya mätdata som talade emot hans uppfattning.",
+    "opts": [
+      "vidsynt",
+      "pragmatisk",
+      "lyhörd",
+      "dogmatisk"
+    ],
+    "a": 3,
+    "why": "Den som vägrar lyssna på motbevis är dogmatisk, absolut säker på sin sak. Vidsynt och lyhörd betyder motsatsen."
+  },
+  {
+    "id": "mek-056",
+    "text": "Den gamla dialekten skrevs aldrig ned i några böcker utan ___ muntligt från generation till generation.",
+    "opts": [
+      "deponerades",
+      "deklamerades",
+      "förbigicks",
+      "traderades"
+    ],
+    "a": 3,
+    "why": "Tradera betyder överföra muntligt, vilket passar att dialekten fördes vidare utan skrift. Deklamera betyder läsa upp högtidligt."
+  },
+  {
+    "id": "mek-057",
+    "text": "Bolagets vinster var visserligen ___, men verksamheten kritiserades hårt för att ___ arbetarna i fabrikerna med långa dagar och låga löner.",
+    "opts": [
+      "betydande – gynna",
+      "marginella – främja",
+      "marginella – exploatera",
+      "betydande – exploatera"
+    ],
+    "a": 3,
+    "why": "Visserligen ... men ställer något positivt mot kritik: stora vinster men utnyttjande av arbetarna. Att gynna arbetarna är ingen kritik."
+  },
+  {
+    "id": "mek-058",
+    "text": "Arkeologerna gick ___ till väga och ___ varje lager för sig, eftersom ett enda ___ grepp kunde förstöra värdefulla spår.",
+    "opts": [
+      "varligt – grävde bort – försiktigt",
+      "snabbt – hoppade över – noggrant",
+      "hårdhänt – undersökte – överilat",
+      "varligt – undersökte – överilat"
+    ],
+    "a": 3,
+    "why": "Risken att ett överilat grepp förstör spår förklarar att man gick varligt fram och undersökte lager för lager. Ett försiktigt grepp förstör inget."
+  },
+  {
+    "id": "mek-059",
+    "text": "Det är fortfarande ___ huruvida de nya reglerna faktiskt minskar utsläppen; ingen har ännu mätt effekten.",
+    "opts": [
+      "självklart",
+      "oklart",
+      "bevisat",
+      "evident"
+    ],
+    "a": 1,
+    "why": "Om ingen mätt effekten kan man inte veta, alltså är det oklart. Evident, självklart och bevisat motsäger andra ledet."
+  },
+  {
+    "id": "mek-060",
+    "text": "Hans syn på historien var deterministisk: han menade att allt som hänt var ___ och att människan i grunden saknade ___ vilja.",
+    "opts": [
+      "oförutsägbart – stark",
+      "slumpmässigt – fri",
+      "förutbestämt – egen",
+      "förutbestämt – fri"
+    ],
+    "a": 3,
+    "why": "Determinism innebär att allt är förutbestämt och att den fria viljan ifrågasätts. Slumpmässigt och oförutsägbart strider mot determinism."
+  },
+  {
+    "id": "mek-061",
+    "text": "Sverige har blivit alltmer ___ under 1900-talet; kyrkans inflytande över politik och vardagsliv har ___ betydligt.",
+    "opts": [
+      "kyrkligt – försvagats",
+      "sekulariserat – ökat",
+      "religiöst – minskat",
+      "sekulariserat – minskat"
+    ],
+    "a": 3,
+    "why": "Sekularisering innebär att religionens inflytande minskar, vilket andra ledet bekräftar. Religiöst och kyrkligt strider mot ett minskat inflytande."
+  },
+  {
+    "id": "mek-062",
+    "text": "Den ___ befolkningen i området har ofta ___ kunskap om växter och djur, en kunskap som riskerar att ___ när de unga flyttar till städerna.",
+    "opts": [
+      "ursprungliga – ytlig – gå förlorad",
+      "ursprungliga – ingående – gå förlorad",
+      "inflyttade – ingående – gå förlorad",
+      "ursprungliga – ingående – bevaras"
+    ],
+    "a": 1,
+    "why": "Långvarigt boende ger ingående kunskap, som riskerar att gå förlorad när de unga flyttar. Ytlig kunskap vore inget att oroa sig för."
+  },
+  {
+    "id": "mek-063",
+    "text": "Stormakten strävade efter ___ i regionen, men grannländerna slöt sig samman för att ___ dess inflytande.",
+    "opts": [
+      "neutralitet – öka",
+      "hegemoni – stärka",
+      "isolering – begränsa",
+      "hegemoni – begränsa"
+    ],
+    "a": 3,
+    "why": "Hegemoni betyder maktställning, och men visar att grannarna motarbetade den genom att begränsa inflytandet. Stärka ger ingen motsättning."
+  },
+  {
+    "id": "mek-064",
+    "text": "Sjön var tidigare kraftigt ___, men sedan reningsverket byggdes har vattenkvaliteten ___ och fisken har ___ tillbaka.",
+    "opts": [
+      "förorenad – förbättrats – kommit",
+      "förorenad – förbättrats – försvunnit",
+      "förorenad – försämrats – kommit",
+      "ren – förbättrats – kommit"
+    ],
+    "a": 0,
+    "why": "Ett reningsverk förbättrar en förorenad sjö så att fisken kommer tillbaka. Försämrats och försvunnit strider mot reningsverkets effekt."
+  },
+  {
+    "id": "mek-065",
+    "text": "Svampen lever i ___ med trädets rötter: den förser trädet med vatten och mineraler och får i ___ socker.",
+    "opts": [
+      "konflikt – utbyte",
+      "konkurrens – gengäld",
+      "symbios – gengäld",
+      "symbios – förväg"
+    ],
+    "a": 2,
+    "why": "Ett samliv där båda parter gynnas kallas symbios, och i gengäld markerar motprestationen. Konkurrens och konflikt motsäger det ömsesidiga utbytet."
+  },
+  {
+    "id": "mek-066",
+    "text": "Länge ___ många ett samband mellan rökning och lungcancer, men bevisen blev till slut så ___ att sambandet inte längre gick att ___.",
+    "opts": [
+      "ifrågasatte – överväldigande – bevisa",
+      "ifrågasatte – överväldigande – förneka",
+      "accepterade – överväldigande – förneka",
+      "ifrågasatte – svaga – förneka"
+    ],
+    "a": 1,
+    "why": "Men visar att tvivlet upphörde när bevisen blev överväldigande och sambandet inte gick att förneka. Svaga bevis leder inte dit."
+  },
+  {
+    "id": "mek-067",
+    "text": "Utredaren var känd för sin ___ och kontrollerade varje källhänvisning två gånger innan rapporten lämnades in.",
+    "opts": [
+      "karisma",
+      "nonchalans",
+      "akribi",
+      "humbug"
+    ],
+    "a": 2,
+    "why": "Akribi betyder vetenskaplig noggrannhet, vilket dubbelkontrollen visar. Nonchalans är motsatsen, och karisma passar inte sammanhanget."
+  },
+  {
+    "id": "mek-068",
+    "text": "Medan vissa djur är ___ och bara äter växter, är andra ___ och äter både växter och kött.",
+    "opts": [
+      "rovdjur – allätare",
+      "växtätare – allätare",
+      "växtätare – köttätare",
+      "allätare – växtätare"
+    ],
+    "a": 1,
+    "why": "Djur som bara äter växter är växtätare, och de som äter både växter och kött är allätare. Köttätare äter inte växter."
+  },
+  {
+    "id": "mek-069",
+    "text": "I stället för att ___ problemet valde ledningen att ___ det, i hopp om att det skulle lösa sig av sig självt.",
+    "opts": [
+      "förstora – lösa",
+      "ta itu med – åtgärda",
+      "negligera – nonchalera",
+      "ta itu med – nonchalera"
+    ],
+    "a": 3,
+    "why": "Att hoppas att problemet löser sig självt innebär att man struntar i det, nonchalerar det, i stället för att ta itu med det."
+  },
+  {
+    "id": "mek-070",
+    "text": "Fågeln är knappast sällsynt; att den ändå så sällan observeras beror ___ på att den håller sig gömd i vassen.",
+    "opts": [
+      "emellertid",
+      "däremot",
+      "följaktligen",
+      "snarare"
+    ],
+    "a": 3,
+    "why": "Snarare markerar den mer rimliga förklaringen i stället för sällsynthet. Följaktligen anger slutsats, och däremot och emellertid kontrast."
+  },
+  {
+    "id": "mek-071",
+    "text": "Bina spelar en ___ roll för pollineringen av många grödor; om de ___ skulle skördarna minska ___.",
+    "opts": [
+      "avgörande – försvann – kraftigt",
+      "avgörande – försvann – obetydligt",
+      "marginell – försvann – kraftigt",
+      "avgörande – ökade – kraftigt"
+    ],
+    "a": 0,
+    "why": "Om bina är avgörande skulle deras försvinnande ge kraftigt minskade skördar. En marginell roll eller ett obetydligt bortfall hänger inte ihop."
+  },
+  {
+    "id": "mek-072",
+    "text": "Bristen på arbetskraft ___ inte enbart i låga löner utan har även sin grund i att utbildningarna ___ arbetsgivarnas behov.",
+    "opts": [
+      "beror – överträffar",
+      "bottnar – inte motsvarar",
+      "resulterar – inte motsvarar",
+      "bottnar – motsvarar"
+    ],
+    "a": 1,
+    "why": "Bottna i betyder ha som orsak, och en orsak till bristen är att utbildningarna inte motsvarar behoven. Beror i är grammatiskt fel."
+  },
+  {
+    "id": "mek-073",
+    "text": "Ministern ___ att hon hade känt till bristerna, men hävdade att hon hade saknat ___ att ingripa.",
+    "opts": [
+      "vidgick – kännedom",
+      "förnekade – befogenhet",
+      "bedyrade – intresse",
+      "vidgick – befogenhet"
+    ],
+    "a": 3,
+    "why": "Vidgå betyder erkänna: hon medgav kunskapen men sade sig sakna befogenhet. Att sakna kännedom motsäger att hon känt till bristerna."
+  },
+  {
+    "id": "mek-074",
+    "text": "Översättningen var alltför ___: genom att följa originalet ord för ord ___ översättaren textens rytm, och resultatet blev ___ och svårläst.",
+    "opts": [
+      "bokstavstrogen – förlorade – ledigt",
+      "bokstavstrogen – bevarade – stelt",
+      "bokstavstrogen – förlorade – stelt",
+      "fri – förlorade – stelt"
+    ],
+    "a": 2,
+    "why": "Ord för ord är bokstavstroget, vilket gör att rytmen går förlorad och texten blir stel. Fri och ledigt strider mot beskrivningen."
+  },
+  {
+    "id": "mek-075",
+    "text": "Den nya medicinen är ___, det vill säga den ska ges innan sjukdomen bryter ut och inte för att ___ redan uppkomna symtom.",
+    "opts": [
+      "profylaktisk – förebygga",
+      "palliativ – förebygga",
+      "akut – lindra",
+      "profylaktisk – lindra"
+    ],
+    "a": 3,
+    "why": "Profylaktisk betyder förebyggande, vilket förklaras av att den ges före utbrottet; den är inte till för att lindra symtom. Förebygga uppkomna symtom är ologiskt."
+  },
+  {
+    "id": "mek-076",
+    "text": "Ordet fönster är ett ___ från lågtyskan; svenskan har genom historien ___ tusentals ord från andra språk, och processen är ___ avslutad.",
+    "opts": [
+      "lånord – tagit upp – sedan länge",
+      "arvord – tagit upp – på intet sätt",
+      "lånord – exporterat – på intet sätt",
+      "lånord – tagit upp – på intet sätt"
+    ],
+    "a": 3,
+    "why": "Ett ord från ett annat språk är ett lånord, svenskan har tagit upp många sådana och inlåningen pågår fortfarande. Arvord och exporterat bryter mot meningen."
+  },
+  {
+    "id": "mek-077",
+    "text": "Forskaren var ___ till de nya resultaten, eftersom de ___ allt som tidigare studier visat; hon krävde därför att försöket skulle ___ innan något publicerades.",
+    "opts": [
+      "entusiastisk – stödde – skyndas på",
+      "skeptisk – bekräftade – upprepas",
+      "likgiltig – motsade – glömmas",
+      "skeptisk – motsade – upprepas"
+    ],
+    "a": 3,
+    "why": "Resultat som motsäger tidigare forskning väcker skepsis, och därför kräver man att försöket upprepas. Bekräftade ger inget skäl till skepsis."
+  },
+  {
+    "id": "mek-078",
+    "text": "Utställningen var ___ i sitt urval: där samsades medeltida skulpturer med modern videokonst och ___ folkkonst.",
+    "opts": [
+      "renodlad – traditionell",
+      "eklektisk – traditionell",
+      "enhetlig – samtida",
+      "eklektisk – ingen"
+    ],
+    "a": 1,
+    "why": "Eklektisk betyder sammansatt av olika stilar, vilket blandningen visar. Renodlad och enhetlig strider mot den brokiga samlingen."
+  },
+  {
+    "id": "mek-079",
+    "text": "Den lilla ödlan är ___ för ön och förekommer inte naturligt någon annanstans i världen.",
+    "opts": [
+      "endemisk",
+      "sporadisk",
+      "perifer",
+      "heterogen"
+    ],
+    "a": 0,
+    "why": "Endemisk betyder att arten bara finns naturligt i ett visst område, vilket meningens andra led förklarar."
+  },
+  {
+    "id": "mek-080",
+    "text": "Kritiken mot förslaget var inte ___ utan uttalades ___ av flera tunga remissinstanser i deras skriftliga yttranden.",
+    "opts": [
+      "implicit – försiktigt",
+      "implicit – explicit",
+      "marginell – sporadiskt",
+      "explicit – implicit"
+    ],
+    "a": 1,
+    "why": "Inte ... utan kräver en motsats: inte indirekt utan uttryckligen. Med explicit–implicit blir det omvänt och ologiskt för uttalad kritik."
+  },
+  {
+    "id": "mek-081",
+    "text": "Romanen räknas i dag till de stora klassikerna, ___ den sålde dåligt när den kom ut.",
+    "opts": [
+      "för att",
+      "så att",
+      "trots att",
+      "eftersom"
+    ],
+    "a": 2,
+    "why": "Att en klassiker sålde dåligt är en motsättning, som trots att uttrycker. Eftersom och för att anger orsak, så att följd."
+  },
+  {
+    "id": "mek-082",
+    "text": "Hon var ___ inför erbjudandet: å ena sidan lockade den högre lönen, å andra sidan ville hon inte ___ sina vänner på orten.",
+    "opts": [
+      "tvehågsen – lämna",
+      "entusiastisk – lämna",
+      "tvehågsen – träffa",
+      "likgiltig – överge"
+    ],
+    "a": 0,
+    "why": "Å ena sidan ... å andra sidan visar kluvenhet, alltså tvehågsen. Att inte vilja lämna vännerna är skälet emot flytten."
+  },
+  {
+    "id": "mek-083",
+    "text": "Ett ___ uttalande kan få oanade konsekvenser; därför väljer erfarna diplomater sina ord med ___.",
+    "opts": [
+      "genomtänkt – omsorg",
+      "obetänksamt – likgiltighet",
+      "obetänksamt – omsorg",
+      "försiktigt – noggrannhet"
+    ],
+    "a": 2,
+    "why": "Risken med obetänksamma uttalanden är skälet till att diplomater väljer orden med omsorg. Genomtänkt och försiktigt ger inga oanade konsekvenser."
+  },
+  {
+    "id": "mek-084",
+    "text": "Medan den ena hypotesen förklarar ___ observationer, kan den andra bara redogöra för ett ___ fåtal; ___ har de flesta forskare anslutit sig till den förra.",
+    "opts": [
+      "samtliga – litet – trots detta",
+      "få – stort – följaktligen",
+      "samtliga – litet – följaktligen",
+      "samtliga – stort – därför"
+    ],
+    "a": 2,
+    "why": "Hypotesen som förklarar allt får följaktligen stöd. Trots detta bryter logiken, och ett stort fåtal är en motsägelse."
+  },
+  {
+    "id": "mek-085",
+    "text": "Företaget befann sig i en ___ ekonomisk situation; ___ tvingades ledningen sälja delar av verksamheten.",
+    "opts": [
+      "prekär – trots det",
+      "stabil – följaktligen",
+      "prekär – därför",
+      "lukrativ – därför"
+    ],
+    "a": 2,
+    "why": "En besvärlig, prekär situation är orsaken till försäljningen, så därför passar. Trots det bryter orsakssambandet."
+  },
+  {
+    "id": "mek-086",
+    "text": "Uppsatsen var ___ disponerad: varje stycke byggde logiskt på det föregående, och slutsatserna följde ___ av argumenten.",
+    "opts": [
+      "stringent – inte",
+      "rörigt – tydligt",
+      "stringent – naturligt",
+      "slarvigt – naturligt"
+    ],
+    "a": 2,
+    "why": "Stringent betyder noga och följdriktig, vilket beskrivningen av styckena visar. Slarvigt och rörigt motsäger den logiska uppbyggnaden."
+  },
+  {
+    "id": "mek-087",
+    "text": "Under medeltiden var de flesta människor i Norden bönder, och samhället var därför i hög grad ___.",
+    "opts": [
+      "urbaniserat",
+      "agrart",
+      "sekulärt",
+      "merkantilt"
+    ],
+    "a": 1,
+    "why": "Agrar betyder jordbruksanknuten, vilket följer av att de flesta var bönder. Merkantilt gäller handel och urbaniserat städer."
+  },
+  {
+    "id": "mek-088",
+    "text": "Han var känd som en ___ förhandlare som sällan gav efter, men i den här frågan visade han sig ovanligt ___.",
+    "opts": [
+      "hårdnackad – eftergiven",
+      "foglig – medgörlig",
+      "eftergiven – obeveklig",
+      "hårdnackad – envis"
+    ],
+    "a": 0,
+    "why": "Men och ovanligt kräver kontrast mot hans vanliga hårdhet; eftergiven betyder medgörlig. Envis saknar kontrast och foglig strider mot att han sällan gav efter."
+  },
+  {
+    "id": "mek-089",
+    "text": "Mycket av det vi vet om stenåldern bygger på ___ fynd, och tolkningarna måste därför vara ___.",
+    "opts": [
+      "fragmentariska – försiktiga",
+      "rikliga – försiktiga",
+      "uttömmande – osäkra",
+      "fragmentariska – kategoriska"
+    ],
+    "a": 0,
+    "why": "Uppstyckade fynd gör att man bör tolka försiktigt. Kategoriska tolkningar följer inte av bristfälliga fynd, och uttömmande fynd ger inte osäkerhet."
+  },
+  {
+    "id": "mek-090",
+    "text": "Under 1800-talet flyttade allt fler från landsbygden till städerna, och denna ___ förändrade samhället i grunden.",
+    "opts": [
+      "sekularisering",
+      "kolonisering",
+      "urbanisering",
+      "domesticering"
+    ],
+    "a": 2,
+    "why": "Flytt från land till stad kallas urbanisering. Sekularisering gäller religionens minskade roll och domesticering att tämja djur."
+  },
+  {
+    "id": "mek-091",
+    "text": "Under 1600-talet hade Sverige en ___ ställning kring Östersjön, men efter ___ militära nederlag i början av 1700-talet gick stormaktstiden ___.",
+    "opts": [
+      "dominerande – inga – under",
+      "dominerande – flera – mot sitt slut",
+      "dominerande – flera – in i sin storhetstid",
+      "underordnad – flera – mot sitt slut"
+    ],
+    "a": 1,
+    "why": "Men visar att den dominerande ställningen tog slut efter flera nederlag. Inga nederlag eller en storhetstid strider mot sammanhanget."
+  },
+  {
+    "id": "mek-092",
+    "text": "Vulkanutbrottet var inte ___; forskarna hade länge registrerat små jordskalv som tydde på att något var ___ under ytan.",
+    "opts": [
+      "överraskande – lugnt",
+      "förutsägbart – i görningen",
+      "oväntat – i görningen",
+      "oväntat – stabilt"
+    ],
+    "a": 2,
+    "why": "Varningssignaler gjorde utbrottet förväntat, alltså inte oväntat; skalven tydde på att något var i görningen. Stabilt och lugnt motsäger skalven."
+  },
+  {
+    "id": "mek-093",
+    "text": "Andra världskriget tog slut 1945, men ___ märktes i det europeiska samhället under flera decennier.",
+    "opts": [
+      "förspelet",
+      "efterdyningarna",
+      "upptakten",
+      "orsakerna"
+    ],
+    "a": 1,
+    "why": "Efterdyningar är följder som märks efteråt, vilket men och flera decennier visar. Upptakt och förspel gäller tiden före."
+  },
+  {
+    "id": "mek-094",
+    "text": "Inom kemin är en katalysator ett ämne som ___ en kemisk reaktion utan att själv förbrukas i processen.",
+    "opts": [
+      "påskyndar",
+      "neutraliserar",
+      "avslutar",
+      "förhindrar"
+    ],
+    "a": 0,
+    "why": "En katalysator gör att en reaktion går snabbare utan att själv förbrukas. De andra verben beskriver fel funktion."
+  },
+  {
+    "id": "mek-095",
+    "text": "Stadens befolkning ___ under industrialiseringen, vilket ledde till ___ bostadsbrist; många familjer fick bo ___ i små rum utan rinnande vatten.",
+    "opts": [
+      "stagnerade – viss – glest",
+      "mångdubblades – obefintlig – rymligt",
+      "mångdubblades – akut – trångt",
+      "minskade – akut – trångt"
+    ],
+    "a": 2,
+    "why": "Snabb befolkningsökning orsakar akut bostadsbrist och trångboddhet. Minskade befolkning skulle inte leda till bostadsbrist."
+  },
+  {
+    "id": "mek-096",
+    "text": "Till skillnad från sin ___ företrädare var den nya ordföranden ___ och undvek gärna konflikter.",
+    "opts": [
+      "fredliga – stridbar",
+      "stridslystna – konfrontativ",
+      "stridslystna – försonlig",
+      "fogliga – försonlig"
+    ],
+    "a": 2,
+    "why": "Till skillnad från kräver kontrast: en stridslysten företrädare mot en försonlig efterträdare som undviker konflikter."
+  },
+  {
+    "id": "mek-097",
+    "text": "Vintern var ovanligt mild. ___ överlevde fler skadeinsekter än vanligt, vilket gav jordbrukarna problem under sommaren.",
+    "opts": [
+      "Däremot",
+      "Trots detta",
+      "Emellertid",
+      "Följaktligen"
+    ],
+    "a": 3,
+    "why": "Den milda vintern är orsaken till att fler insekter överlevde, så ett ord för följd behövs. De andra uttrycker motsättning."
+  },
+  {
+    "id": "mek-098",
+    "text": "Under krisen inrättade regeringen en ___ myndighet, som skulle avvecklas så snart läget hade normaliserats.",
+    "opts": [
+      "permanent",
+      "oförgriplig",
+      "konstitutiv",
+      "provisorisk"
+    ],
+    "a": 3,
+    "why": "En myndighet som ska avvecklas efter krisen är tillfällig, provisorisk. Permanent och oförgriplig strider mot att den ska avvecklas."
+  },
+  {
+    "id": "mek-099",
+    "text": "Trots att reformen presenterades som ___ innebar den i praktiken bara ___ justeringar av det gamla systemet.",
+    "opts": [
+      "radikal – genomgripande",
+      "blygsam – små",
+      "måttlig – smärre",
+      "radikal – marginella"
+    ],
+    "a": 3,
+    "why": "Trots att kräver en kontrast: reformen sades vara radikal men var i praktiken marginell. Blygsam–små saknar motsättning."
+  },
+  {
+    "id": "mek-100",
+    "text": "Det är ___ att jämföra länderna direkt med varandra, ___ de räknar arbetslöshet på olika sätt.",
+    "opts": [
+      "vanskligt – trots att",
+      "vanskligt – eftersom",
+      "enkelt – eftersom",
+      "rimligt – fast"
+    ],
+    "a": 1,
+    "why": "Olika räknesätt är orsaken till att en jämförelse är vansklig, så eftersom passar. Trots att och fast anger felaktigt motsättning."
+  },
+  {
+    "id": "mek-101",
+    "text": "Även om ___ ofta ses som en modern företeelse, har människor ___ flyttat mellan länder; det som är nytt är snarare ___.",
+    "opts": [
+      "migration – i alla tider – omfattningen",
+      "migration – sällan – omfattningen",
+      "bofasthet – i alla tider – omfattningen",
+      "migration – i alla tider – fenomenet"
+    ],
+    "a": 0,
+    "why": "Även om kräver kontrast: migration uppfattas som modern men har alltid förekommit; nytt är omfattningen. Att fenomenet vore nytt motsäger resonemanget."
+  },
+  {
+    "id": "mek-102",
+    "text": "Klimatet i inlandet är ___ med varma somrar och kalla vintrar, medan kustklimatet längre västerut är betydligt mer ___.",
+    "opts": [
+      "kontinentalt – utjämnat",
+      "tropiskt – kallt",
+      "maritimt – utjämnat",
+      "kontinentalt – extremt"
+    ],
+    "a": 0,
+    "why": "Stora temperaturskillnader kännetecknar kontinentalt klimat, medan havet ger kusten ett jämnare, utjämnat klimat. Maritimt beskriver kustklimat."
+  },
+  {
+    "id": "mek-103",
+    "text": "Hon framförde sina argument ___ och lugnt, vilket gjorde det svårt för motståndarna att ___ henne som känslostyrd.",
+    "opts": [
+      "sakligt – avfärda",
+      "upprört – avfärda",
+      "känslosamt – kritisera",
+      "sakligt – berömma"
+    ],
+    "a": 0,
+    "why": "Ett sakligt och lugnt framförande gör det svårt att avfärda någon som känslostyrd. Upprört och känslosamt skulle tvärtom göra det lätt."
+  },
+  {
+    "id": "mek-104",
+    "text": "Ett ___ mål är lättare att följa upp än ett vagt formulerat; därför bör målen vara ___ och tydligt ___ i tid.",
+    "opts": [
+      "konkret – oprecisa – avgränsade",
+      "konkret – mätbara – avgränsade",
+      "konkret – mätbara – obegränsade",
+      "abstrakt – mätbara – avgränsade"
+    ],
+    "a": 1,
+    "why": "Kontrasten mot vagt kräver konkret, och lätt uppföljning kräver mätbara och tidsavgränsade mål. Oprecisa och obegränsade motsäger poängen."
+  },
+  {
+    "id": "mek-105",
+    "text": "Vetenskapliga teorier är ___: de gäller tills nya rön ___ dem, och ingen teori kan därför betraktas som ___ bevisad.",
+    "opts": [
+      "provisoriska – motbevisar – delvis",
+      "eviga – motbevisar – slutgiltigt",
+      "provisoriska – bekräftar – slutgiltigt",
+      "provisoriska – motbevisar – slutgiltigt"
+    ],
+    "a": 3,
+    "why": "Teorier gäller tills de motbevisas och är därför provisoriska; ingen kan vara slutgiltigt bevisad. Eviga strider mot att de kan ersättas."
+  },
+  {
+    "id": "mek-106",
+    "text": "Priset på råvaran ___ under året: först steg det kraftigt, ___ föll det tillbaka till ungefär samma nivå som ___.",
+    "opts": [
+      "fluktuerade – sedan – i början",
+      "stagnerade – sedan – i början",
+      "fluktuerade – sedan – aldrig",
+      "fluktuerade – därför – i början"
+    ],
+    "a": 0,
+    "why": "Fluktuera betyder växla, vilket uppgång följd av nedgång visar. Sedan anger tidsföljd; därför anger felaktigt orsak."
+  },
+  {
+    "id": "mek-107",
+    "text": "Forskarnas slutsatser var ___ eftersom de byggde på ett litet och dessutom ovanligt urval av deltagare.",
+    "opts": [
+      "obsoleta",
+      "kategoriska",
+      "tentativa",
+      "evidenta"
+    ],
+    "a": 2,
+    "why": "Ett litet och ovanligt urval ger bara preliminära slutsatser, alltså tentativa. Kategoriska eller självklara slutsatser strider mot förbehållet i eftersom-satsen."
+  },
+  {
+    "id": "mek-108",
+    "text": "Det är inte priset utan ___ som avgör hur länge en vara håller; en dyr produkt kan vara lika illa gjord som en billig.",
+    "opts": [
+      "efterfrågan",
+      "tillgången",
+      "reklamen",
+      "kvaliteten"
+    ],
+    "a": 3,
+    "why": "Hållbarhet och hur väl något är gjort handlar om kvalitet. Efterfrågan, reklam och tillgång påverkar inte hur länge varan håller."
+  },
+  {
+    "id": "mek-109",
+    "text": "Medan stadens äldre delar har vuxit fram ___ med krokiga gränder, är de nyare stadsdelarna ___ planerade med raka gator.",
+    "opts": [
+      "planenligt – lika",
+      "oplanerat – slumpmässigt",
+      "symmetriskt – noggrant",
+      "oplanerat – noggrant"
+    ],
+    "a": 3,
+    "why": "Medan markerar kontrast mellan gammalt och nytt: oplanerat mot noggrant planerade. Slumpmässigt planerade är motsägelsefullt."
+  },
+  {
+    "id": "mek-110",
+    "text": "Ministern ville inte säga det rakt ut, men kritiken mot den egna partiledningen var ändå ___ i hela talet.",
+    "opts": [
+      "explicit",
+      "implicit",
+      "marginell",
+      "obefogad"
+    ],
+    "a": 1,
+    "why": "Kritik som inte sägs rakt ut men ändå finns där är implicit, indirekt. Explicit betyder uttalad och motsäger första ledet."
+  },
+  {
+    "id": "mek-111",
+    "text": "Den första versionen av lagtexten var ___ formulerad, vilket gav domstolarna ___ utrymme för egna tolkningar.",
+    "opts": [
+      "vagt – litet",
+      "precist – stort",
+      "vagt – stort",
+      "exakt – fritt"
+    ],
+    "a": 2,
+    "why": "En vag text lämnar stort utrymme för tolkning. Precist och exakt skulle tvärtom begränsa tolkningsutrymmet."
+  },
+  {
+    "id": "mek-112",
+    "text": "Det är svårt att få en helhetsbild av perioden, eftersom källorna är ___ och många dokument har gått förlorade.",
+    "opts": [
+      "fragmentariska",
+      "uttömmande",
+      "omfattande",
+      "samstämmiga"
+    ],
+    "a": 0,
+    "why": "Förlorade dokument gör källorna uppstyckade, fragmentariska. Uttömmande och omfattande skulle tvärtom underlätta en helhetsbild."
+  },
+  {
+    "id": "mek-113",
+    "text": "Forskarna noterade en tydlig ___ mellan hur mycket deltagarna sade att de motionerade och vad stegräknarna visade; många överskattade sin aktivitet kraftigt.",
+    "opts": [
+      "synergi",
+      "överensstämmelse",
+      "symmetri",
+      "diskrepans"
+    ],
+    "a": 3,
+    "why": "Att deltagarna överskattade sig visar en skillnad mellan uppgift och mätning, en diskrepans. Överensstämmelse betyder motsatsen."
+  },
+  {
+    "id": "mek-114",
+    "text": "Trots sin stora förmögenhet var han ___ med pengar och vägrade att ___ ens små summor till välgörenhet.",
+    "opts": [
+      "njugg – spara",
+      "njugg – skänka",
+      "frikostig – skänka",
+      "slösaktig – ge"
+    ],
+    "a": 1,
+    "why": "Njugg betyder snål, vilket passar att han vägrade skänka. Frikostig och slösaktig är motsatsen, och vägra spara motsäger snålheten."
+  },
+  {
+    "id": "mek-115",
+    "text": "Mer pengar till skolan är ___ ingen garanti för bättre resultat; det avgörande är ___ hur resurserna används.",
+    "opts": [
+      "därmed – snarare",
+      "i sig – dessutom",
+      "följaktligen – emellertid",
+      "i sig – snarare"
+    ],
+    "a": 3,
+    "why": "I sig betyder ensamt taget, och snarare pekar ut den viktigare faktorn. Dessutom lägger bara till, och därmed förutsätter ett tidigare resonemang."
+  },
+  {
+    "id": "mek-116",
+    "text": "Formellt var hon bara rådgivare åt styrelsen, men ___ var det hon som fattade alla viktiga beslut i företaget.",
+    "opts": [
+      "på nåder",
+      "de facto",
+      "i elfte timmen",
+      "nominellt"
+    ],
+    "a": 1,
+    "why": "De facto betyder i verkligheten och kontrasterar mot formellt. Nominellt betyder till namnet och säger samma sak som formellt."
+  },
+  {
+    "id": "mek-117",
+    "text": "Beslutet fattades ___: ingen hade hunnit läsa underlaget, och det fick rivas upp redan veckan därpå.",
+    "opts": [
+      "varligt",
+      "överilat",
+      "samvetsgrant",
+      "enhälligt"
+    ],
+    "a": 1,
+    "why": "Att ingen läst underlaget visar att beslutet var förhastat, överilat. Samvetsgrant och varligt betyder motsatsen."
+  },
+  {
+    "id": "mek-118",
+    "text": "Det gamla sjukhuset revs inte utan ___ till bostäder, och därmed kunde stora delar av den ___ byggnaden bevaras.",
+    "opts": [
+      "utrymdes – nybyggda",
+      "omvandlades – moderna",
+      "omvandlades – kulturhistoriskt värdefulla",
+      "jämnades – värdefulla"
+    ],
+    "a": 2,
+    "why": "Inte revs utan omvandlades, och det som bevarades var den värdefulla gamla byggnaden. Nybyggda och moderna strider mot att sjukhuset var gammalt."
+  },
+  {
+    "id": "mek-119",
+    "text": "Eftersom mätvärdena ___ kraftigt från dag till dag var det svårt att se någon ___ trend.",
+    "opts": [
+      "fluktuerade – slumpmässig",
+      "konvergerade – entydig",
+      "fluktuerade – entydig",
+      "stagnerade – tydlig"
+    ],
+    "a": 2,
+    "why": "Kraftigt växlande värden gör det svårt att se en klar trend. Stagnerade och konvergerade beskriver stabilitet och ger ingen sådan svårighet."
+  },
+  {
+    "id": "mek-120",
+    "text": "Samtalen fördes ___; inte förrän avtalet var klart fick allmänheten ___ om att några förhandlingar alls hade pågått.",
+    "opts": [
+      "offentligt – vetskap",
+      "öppet – kännedom",
+      "i lönndom – kännedom",
+      "i lönndom – tvivel"
+    ],
+    "a": 2,
+    "why": "Att allmänheten fick veta först efteråt visar att samtalen skedde i hemlighet, i lönndom. Öppet och offentligt motsäger detta."
+  },
+  {
+    "id": "mek-121",
+    "text": "Forskarens slutsatser var så ___ formulerade att de kunde åberopas till stöd för nästan vilken ståndpunkt som helst.",
+    "opts": [
+      "precist",
+      "tvetydigt",
+      "kategoriskt",
+      "konsekvent"
+    ],
+    "a": 1,
+    "why": "Att slutsatserna kan stödja vilken ståndpunkt som helst kräver att de går att tolka på flera sätt, alltså tvetydigt. Precist och kategoriskt ger motsatt effekt."
+  },
+  {
+    "id": "mek-122",
+    "text": "Trots sin ___ framtoning visade sig ministern vara en skicklig förhandlare som sällan gav efter.",
+    "opts": [
+      "anspråkslösa",
+      "beslutsamma",
+      "kompromisslösa",
+      "kaxiga"
+    ],
+    "a": 0,
+    "why": "Trots kräver en kontrast mot att ministern sällan gav efter, och en anspråkslös framtoning ger den kontrasten. De andra alternativen stämmer med hårdheten och ger ingen motsättning."
+  },
+  {
+    "id": "mek-123",
+    "text": "Dokumentet var inte juridiskt bindande utan snarare en ___ om vad parterna hoppades uppnå.",
+    "opts": [
+      "förordning",
+      "lagstiftning",
+      "dom",
+      "avsiktsförklaring"
+    ],
+    "a": 3,
+    "why": "En avsiktsförklaring uttrycker vad man vill uppnå utan att vara bindande. Förordning, lagstiftning och dom är just rättsligt bindande."
+  },
+  {
+    "id": "mek-124",
+    "text": "Läroboken behandlar epoken alltför ___; viktiga skeenden nämns bara i förbigående.",
+    "opts": [
+      "ingående",
+      "grundligt",
+      "uttömmande",
+      "översiktligt"
+    ],
+    "a": 3,
+    "why": "Att viktiga skeenden bara nämns i förbigående visar att framställningen är för ytlig, alltså översiktlig. De andra orden betyder motsatsen."
+  },
+  {
+    "id": "mek-125",
+    "text": "Hans bevisföring var ___: han förutsatte redan i premisserna det han ville bevisa.",
+    "opts": [
+      "induktiv",
+      "empirisk",
+      "slagkraftig",
+      "cirkulär"
+    ],
+    "a": 3,
+    "why": "Att förutsätta det man vill bevisa är ett cirkelresonemang. Induktiv och empirisk handlar om slutsatser från observationer, och slagkraftig passar inte med ett logiskt fel."
+  },
+  {
+    "id": "mek-126",
+    "text": "Intresset för kursen var ___; arrangörerna hade räknat med en handfull deltagare men fick över tvåhundra anmälningar.",
+    "opts": [
+      "ljummet",
+      "förväntat",
+      "massivt",
+      "avtagande"
+    ],
+    "a": 2,
+    "why": "Över tvåhundra anmälningar i stället för en handfull visar ett mycket stort intresse. Förväntat motsägs av att man räknat med få, och ljummet och avtagande betyder motsatsen."
+  },
+  {
+    "id": "mek-127",
+    "text": "Romanen fick ett ___ mottagande: vissa kritiker hyllade den som ett mästerverk, medan andra sågade den fullständigt.",
+    "opts": [
+      "splittrat",
+      "enhälligt",
+      "ljummet",
+      "entusiastiskt"
+    ],
+    "a": 0,
+    "why": "Hyllningar från vissa och sågningar från andra innebär att mottagandet var splittrat. Enhälligt och entusiastiskt säger att alla tyckte lika, och ljummet passar inte med starka åsikter."
+  },
+  {
+    "id": "mek-128",
+    "text": "Den gamla stadskärnan har bevarats nästan ___, eftersom staden klarade sig undan både krig och rivningsvågor.",
+    "opts": [
+      "förvanskad",
+      "ombyggd",
+      "intakt",
+      "sargad"
+    ],
+    "a": 2,
+    "why": "Har staden undgått krig och rivningar är kärnan oskadd, alltså intakt. De andra orden beskriver skador eller förändringar som eftersom-satsen utesluter."
+  },
+  {
+    "id": "mek-129",
+    "text": "Tjänstemannens svar var så ___ att journalisten efter intervjun fortfarande inte visste om myndigheten tänkte agera eller inte.",
+    "opts": [
+      "undanglidande",
+      "raka",
+      "uttömmande",
+      "tydliga"
+    ],
+    "a": 0,
+    "why": "Att journalisten fortfarande inte vet något tyder på att svaren var undanglidande. Raka, tydliga och uttömmande svar hade gett besked."
+  },
+  {
+    "id": "mek-130",
+    "text": "Den ___ tonen i hans privata brev står i skarp kontrast till den hätska retorik han använde i sina offentliga tal.",
+    "opts": [
+      "hjärtliga",
+      "aggressiva",
+      "fientliga",
+      "polemiska"
+    ],
+    "a": 0,
+    "why": "Skarp kontrast till hätsk retorik kräver en vänlig ton, alltså hjärtlig. Aggressiv, fientlig och polemisk ligger nära det hätska och ger ingen kontrast."
+  },
+  {
+    "id": "mek-131",
+    "text": "Undersökningen omfattade bara tolv personer, och resultaten kan därför knappast ___ till hela befolkningen.",
+    "opts": [
+      "generaliseras",
+      "begränsas",
+      "reduceras",
+      "specificeras"
+    ],
+    "a": 0,
+    "why": "Ett litet urval gör det svårt att överföra resultaten till alla, alltså att generalisera dem. De andra verben ger ingen mening med till hela befolkningen."
+  },
+  {
+    "id": "mek-132",
+    "text": "Hon var känd för sin ___ humor: hon kunde säga de vassaste saker med helt allvarlig min.",
+    "opts": [
+      "torra",
+      "högljudda",
+      "burleska",
+      "uppsluppna"
+    ],
+    "a": 0,
+    "why": "Torr humor betyder att man skämtar med allvarlig min, precis som kolonet förklarar. Högljudd, burlesk och uppsluppen humor är tvärtom yvig och synlig."
+  },
+  {
+    "id": "mek-133",
+    "text": "Medeltidens ___ samhällsordning, där var och en föddes in i ett bestämt stånd, gav små möjligheter till social rörlighet.",
+    "opts": [
+      "hierarkiska",
+      "jämlika",
+      "flexibla",
+      "demokratiska"
+    ],
+    "a": 0,
+    "why": "Ett system med stånd som man föds in i och liten rörlighet är hierarkiskt. Jämlik, flexibel och demokratisk strider mot beskrivningen."
+  },
+  {
+    "id": "mek-134",
+    "text": "Myndigheten agerade ___ och hann stänga gränsen innan smittan nått landet.",
+    "opts": [
+      "senfärdigt",
+      "passivt",
+      "retroaktivt",
+      "proaktivt"
+    ],
+    "a": 3,
+    "why": "Att agera innan smittan kommit är att handla i förväg, proaktivt. Senfärdigt och passivt motsägs av att man hann, och retroaktivt betyder i efterhand."
+  },
+  {
+    "id": "mek-135",
+    "text": "Fynden från utgrävningen är ___; de tyder på bosättning redan under stenåldern, men det kan inte uteslutas att de har hamnat där senare.",
+    "opts": [
+      "entydiga",
+      "slutgiltiga",
+      "svårtolkade",
+      "irrelevanta"
+    ],
+    "a": 2,
+    "why": "Att fynden tyder på något men att en annan förklaring inte kan uteslutas betyder att de är svårtolkade. Entydiga och slutgiltiga motsägs av osäkerheten, och irrelevanta av att de tyder på något."
+  },
+  {
+    "id": "mek-136",
+    "text": "Det är ___ att kalla förslaget nytt; i princip samma idé lades fram redan för trettio år sedan.",
+    "opts": [
+      "rimligt",
+      "berättigat",
+      "självklart",
+      "missvisande"
+    ],
+    "a": 3,
+    "why": "Om idén är trettio år gammal är det fel att kalla den ny, alltså missvisande. De andra alternativen säger att beskrivningen är riktig."
+  },
+  {
+    "id": "mek-137",
+    "text": "Teorin har visat sig vara ___: den har överlevt otaliga försök att motbevisa den.",
+    "opts": [
+      "robust",
+      "bräcklig",
+      "spekulativ",
+      "kontroversiell"
+    ],
+    "a": 0,
+    "why": "En teori som står emot många motbevisförsök är robust. Bräcklig säger motsatsen, och spekulativ och kontroversiell förklaras inte av kolonets innehåll."
+  },
+  {
+    "id": "mek-138",
+    "text": "Efter skandalen ___ partiledaren, och en tillfällig ledning tog över.",
+    "opts": [
+      "avgick",
+      "omvaldes",
+      "befordrades",
+      "återinsattes"
+    ],
+    "a": 0,
+    "why": "Att en tillfällig ledning tar över förutsätter att partiledaren lämnat posten, alltså avgick. De andra alternativen innebär att hen blev kvar eller kom tillbaka."
+  },
+  {
+    "id": "mek-139",
+    "text": "Den ___ befolkningsökningen, som pågått i över ett sekel, har lett till att stadens yta mer än tiofaldigats.",
+    "opts": [
+      "tillfälliga",
+      "kortvariga",
+      "kontinuerliga",
+      "avstannade"
+    ],
+    "a": 2,
+    "why": "En ökning som pågått i över hundra år är fortlöpande, kontinuerlig. Tillfällig och kortvarig strider mot den långa tiden, och avstannad mot att den fortfarande pågår."
+  },
+  {
+    "id": "mek-140",
+    "text": "Kritikerna menade att reformen var rent ___: den ändrade namnen på myndigheterna men lämnade verksamheten orörd.",
+    "opts": [
+      "genomgripande",
+      "kosmetisk",
+      "djupgående",
+      "strukturell"
+    ],
+    "a": 1,
+    "why": "En förändring som bara rör ytan, som namnbyten, är kosmetisk. De andra orden beskriver just förändringar av verksamheten."
+  },
+  {
+    "id": "mek-141",
+    "text": "Paradoxalt nog har valdeltagandet ___ samtidigt som förtroendet för politikerna sjunkit.",
+    "opts": [
+      "minskat",
+      "ökat",
+      "sjunkit",
+      "rasat"
+    ],
+    "a": 1,
+    "why": "Paradoxalt nog kräver något oväntat, och att fler röstar trots lägre förtroende är oväntat. Minskat, sjunkit och rasat vore den förväntade följden."
+  },
+  {
+    "id": "mek-142",
+    "text": "Filosofen hävdade att moraliska omdömen är ___: de uttrycker talarens känslor snarare än objektiva fakta om världen.",
+    "opts": [
+      "universella",
+      "subjektiva",
+      "objektiva",
+      "empiriska"
+    ],
+    "a": 1,
+    "why": "Omdömen som uttrycker talarens känslor är subjektiva. Objektiva motsägs direkt, och universella och empiriska passar inte med känslor snarare än fakta."
+  },
+  {
+    "id": "mek-143",
+    "text": "Det var tack vare en ___ donator som museet kunde öppna; utan hennes generösa gåvor hade projektet lagts ned.",
+    "opts": [
+      "snål",
+      "sparsam",
+      "motvillig",
+      "frikostig"
+    ],
+    "a": 3,
+    "why": "Generösa gåvor visar att donatorn var frikostig. Snål, sparsam och motvillig strider mot generositeten."
+  },
+  {
+    "id": "mek-144",
+    "text": "Uppsatsen var ___ skriven, med långa, krångliga meningar och ett överflöd av facktermer.",
+    "opts": [
+      "lättillgängligt",
+      "omständligt",
+      "kärnfullt",
+      "ledigt"
+    ],
+    "a": 1,
+    "why": "Långa, krångliga meningar och många facktermer gör texten omständlig. De andra alternativen beskriver en lättläst text."
+  },
+  {
+    "id": "mek-145",
+    "text": "Medan den förra regeringen ___ privatiseringar, har den nuvarande i stället valt att ___ flera bolag.",
+    "opts": [
+      "motsatte sig – förstatliga",
+      "förespråkade – förstatliga",
+      "förespråkade – sälja ut",
+      "kritiserade – avveckla"
+    ],
+    "a": 1,
+    "why": "Medan och i stället kräver motsatta linjer: den förra ville privatisera, den nuvarande tar bolag i statlig ägo. Förespråkade – sälja ut och motsatte sig – förstatliga ger ingen kontrast."
+  },
+  {
+    "id": "mek-146",
+    "text": "Det ___ klimatet i bergen gör jordbruk svårt, och befolkningen har därför av tradition ___ sig på boskapsskötsel.",
+    "opts": [
+      "milda – inriktat",
+      "karga – inriktat",
+      "gynnsamma – specialiserat",
+      "karga – distanserat"
+    ],
+    "a": 1,
+    "why": "Ett kargt klimat förklarar att jordbruk är svårt, och därför har man inriktat sig på boskap. Milt och gynnsamt klimat förklarar inte svårigheten, och distanserat sig på är ogrammatiskt."
+  },
+  {
+    "id": "mek-147",
+    "text": "Studien visade ett ___ samband mellan sömnbrist och sämre minne, men forskarna betonade att det inte ___ att det ena orsakar det andra.",
+    "opts": [
+      "obefintligt – bevisar",
+      "tydligt – motsäger",
+      "tydligt – bevisar",
+      "tydligt – antyder"
+    ],
+    "a": 2,
+    "why": "Ett samband (korrelation) bevisar inte orsak, vilket men-satsen betonar. Ett samband antyder däremot orsak, och det motsäger den inte; obefintligt gör varningen meningslös."
+  },
+  {
+    "id": "mek-148",
+    "text": "Författaren är ___ med detaljer; på tre sidor beskriver hon ett enda rum, ända ned till ___ i tapeten.",
+    "opts": [
+      "snål – sprickorna",
+      "generös – sprickorna",
+      "generös – helheten",
+      "sparsam – mönstret"
+    ],
+    "a": 1,
+    "why": "Tre sidor om ett rum visar att hon är generös med detaljer, och ända ned till kräver något litet, som sprickorna. Snål och sparsam motsägs, och helheten är ingen detalj."
+  },
+  {
+    "id": "mek-149",
+    "text": "Eftersom vittnets berättelse ___ på flera avgörande punkter, ansåg domstolen att den inte var ___.",
+    "opts": [
+      "ändrades – osannolik",
+      "var konsekvent – trovärdig",
+      "ändrades – trovärdig",
+      "stämde – tillförlitlig"
+    ],
+    "a": 2,
+    "why": "En berättelse som ändras gör att den inte bedöms som trovärdig. Konsekvent och stämde ger ingen anledning till misstro, och inte osannolik vore en positiv bedömning."
+  },
+  {
+    "id": "mek-150",
+    "text": "Den ___ utvecklingen inom AI har fått många att kräva reglering, men lagstiftarna har hittills varit ___ med att agera.",
+    "opts": [
+      "långsamma – sena",
+      "snabba – sena",
+      "snabba – ivriga",
+      "avstannade – snabba"
+    ],
+    "a": 1,
+    "why": "En snabb utveckling skapar krav på reglering, och men visar att lagstiftarna dröjt, alltså varit sena. Ivriga och snabba ger ingen motsättning, och långsam utveckling förklarar inte kraven."
+  },
+  {
+    "id": "mek-151",
+    "text": "Kungen styrde ___ och tolererade ingen opposition; ändå minns många honom i dag som en ___ reformator.",
+    "opts": [
+      "demokratiskt – framsynt",
+      "enväldigt – hänsynslös",
+      "konsensusinriktat – handlingskraftig",
+      "enväldigt – framsynt"
+    ],
+    "a": 3,
+    "why": "Att inte tolerera opposition är att styra enväldigt, och ändå kräver ett positivt eftermäle, en framsynt reformator. Hänsynslös ger ingen kontrast, och demokratiskt strider mot första ledet."
+  },
+  {
+    "id": "mek-152",
+    "text": "Hon brukade ___ sina misstag i stället för att erkänna dem, vilket gjorde kollegerna ___.",
+    "opts": [
+      "bortförklara – imponerade",
+      "medge – frustrerade",
+      "analysera – förtjusta",
+      "bortförklara – frustrerade"
+    ],
+    "a": 3,
+    "why": "Motsatsen till att erkänna är att bortförklara, och det irriterar omgivningen. Medge betyder erkänna, och imponerade eller förtjusta kolleger är en ologisk följd."
+  },
+  {
+    "id": "mek-153",
+    "text": "Utvecklingen gick inte ___ framåt; perioder av snabb tillväxt ___ med långa tider av tillbakagång.",
+    "opts": [
+      "linjärt – ersattes helt",
+      "linjärt – varvades",
+      "ojämnt – varvades",
+      "stadigt – undveks"
+    ],
+    "a": 1,
+    "why": "Tillväxt som varvas med tillbakagång är motsatsen till en linjär utveckling. Gick inte ojämnt framåt motsägs av andra ledet, och undveks eller ersattes helt ger ingen växling."
+  },
+  {
+    "id": "mek-154",
+    "text": "Han ___ rapportens slutsatser i hårda ordalag, trots att han inte hade läst mer än ___.",
+    "opts": [
+      "kritiserade – sammanfattningen",
+      "kritiserade – hela rapporten",
+      "berömde – sammanfattningen",
+      "kritiserade – varje kapitel"
+    ],
+    "a": 0,
+    "why": "I hårda ordalag kräver kritik, och trots att ... inte mer än pekar på att han bara läst en liten del. Hela rapporten och varje kapitel gör trots att-satsen meningslös."
+  },
+  {
+    "id": "mek-155",
+    "text": "Sjön är ___ grund, vilket gör att vattnet värms upp snabbt på våren och ___ fort på hösten.",
+    "opts": [
+      "förhållandevis – värms upp",
+      "knappast – kyls ned",
+      "sällan – fryser",
+      "förhållandevis – kyls ned"
+    ],
+    "a": 3,
+    "why": "En grund sjö har lite vatten som snabbt värms och snabbt kyls ned. Knappast och sällan grund förklarar inte snabb uppvärmning, och värms upp på hösten är orimligt."
+  },
+  {
+    "id": "mek-156",
+    "text": "Arten ansågs länge vara ___ i Sverige, men förra sommaren ___ den av en amatörbiolog i Skåne.",
+    "opts": [
+      "utdöd – återupptäcktes",
+      "utdöd – utrotades",
+      "vanlig – återupptäcktes",
+      "invasiv – bekämpades"
+    ],
+    "a": 0,
+    "why": "Men kräver ett överraskande fynd: en art som ansågs utdöd återupptäcktes. En vanlig art kan inte återupptäckas, och en utdöd art kan inte utrotas."
+  },
+  {
+    "id": "mek-157",
+    "text": "Ekonomer varnade för att den låga räntan kunde ___ en bostadsbubbla, och när priserna sedan ___ fick de rätt.",
+    "opts": [
+      "blåsa upp – sjönk",
+      "dämpa – rusade",
+      "blåsa upp – rusade",
+      "motverka – föll"
+    ],
+    "a": 2,
+    "why": "En bubbla blåses upp av låg ränta, och varningen besannas när priserna rusar. Sjunkande priser bekräftar ingen bubbla, och dämpa eller motverka är ingen varning."
+  },
+  {
+    "id": "mek-158",
+    "text": "Projektet var ___ från början: budgeten var för snål, tidsplanen ___ och ingen hade det övergripande ansvaret.",
+    "opts": [
+      "lovande – orealistisk",
+      "dödsdömt – orealistisk",
+      "dödsdömt – generös",
+      "välplanerat – rimlig"
+    ],
+    "a": 1,
+    "why": "Uppräkningen består av brister, så tidsplanen måste vara orealistisk och projektet dömt att misslyckas. Lovande och välplanerat motsägs av bristerna, och en generös tidsplan är ingen brist."
+  },
+  {
+    "id": "mek-159",
+    "text": "Den ___ politikern vägrade konsekvent att ge raka svar, vilket gjorde henne till en ___ intervjuperson för journalister.",
+    "opts": [
+      "svårfångade – frustrerande",
+      "öppenhjärtiga – frustrerande",
+      "svårfångade – tacksam",
+      "frispråkiga – givande"
+    ],
+    "a": 0,
+    "why": "Den som undviker raka svar är svårfångad och frustrerande att intervjua. Öppenhjärtig och frispråkig strider mot vägran, och tacksam är fel följd."
+  },
+  {
+    "id": "mek-160",
+    "text": "Debattören ___ sin ståndpunkt med ett enda exempel, vilket kritikerna menade var ett alltför ___ underlag.",
+    "opts": [
+      "underbyggde – gediget",
+      "övergav – tunt",
+      "underbyggde – tunt",
+      "bestred – brett"
+    ],
+    "a": 2,
+    "why": "Ett enda exempel ger ett tunt underlag för att underbygga en ståndpunkt. Alltför gediget är ingen kritik, och man övergår eller bestrider inte sin egen ståndpunkt med ett underlag."
+  },
+  {
+    "id": "mek-161",
+    "text": "Fotosyntesen ___ koldioxid ur atmosfären, och skogarna fungerar därför som viktiga ___.",
+    "opts": [
+      "frigör – kolsänkor",
+      "binder – utsläppskällor",
+      "avger – syrekällor",
+      "binder – kolsänkor"
+    ],
+    "a": 3,
+    "why": "Växter tar upp och binder koldioxid, och det som lagrar kol kallas kolsänka. Frigör och avger strider mot ur atmosfären, och utsläppskällor är motsatsen till att binda."
+  },
+  {
+    "id": "mek-162",
+    "text": "Den gamla teorin har inte ___ helt; snarare har den ___ in i en bredare förklaringsmodell.",
+    "opts": [
+      "övergetts – fasats ut",
+      "utvecklats – raderats",
+      "övergetts – införlivats",
+      "glömts – kastats"
+    ],
+    "a": 2,
+    "why": "Snarare ställer det som hänt mot att teorin skulle ha övergetts helt: den har i stället tagits upp, införlivats, i en större modell. Fasats ut, raderats och kastats in i ger varken kontrast eller rimlig mening."
+  },
+  {
+    "id": "mek-163",
+    "text": "Den till synes ___ uppgiften visade sig vara betydligt mer ___ än någon hade anat.",
+    "opts": [
+      "svåra – komplicerad",
+      "enkla – okomplicerad",
+      "enkla – komplicerad",
+      "triviala – banal"
+    ],
+    "a": 2,
+    "why": "Till synes och än någon hade anat kräver en kontrast mellan sken och verklighet: enkel som visade sig vara komplicerad. Svår – komplicerad och de andra paren ger ingen överraskning."
+  },
+  {
+    "id": "mek-164",
+    "text": "I stället för att ___ konflikten valde FN-sändebudet att ___ mellan parterna i hopp om en vapenvila.",
+    "opts": [
+      "dämpa – medla",
+      "trappa upp – kriga",
+      "trappa upp – medla",
+      "ignorera – hetsa"
+    ],
+    "a": 2,
+    "why": "Ett sändebud som hoppas på vapenvila medlar, och i stället för kräver det motsatta, att trappa upp. Dämpa och medla är ingen motsats, och kriga eller hetsa ger ingen vapenvila."
+  },
+  {
+    "id": "mek-165",
+    "text": "Ju mer ___ en regim är, desto ___ brukar dess kontroll över medierna vara.",
+    "opts": [
+      "auktoritär – svagare",
+      "auktoritär – hårdare",
+      "demokratisk – hårdare",
+      "liberal – striktare"
+    ],
+    "a": 1,
+    "why": "Ju och desto kräver ett samband som går åt samma håll: mer auktoritär, hårdare kontroll. Demokrati och liberalism hänger inte ihop med hårdare mediekontroll."
+  },
+  {
+    "id": "mek-166",
+    "text": "Konstnärens tidiga verk är ___ och färgsprakande, medan hennes senare målningar är ___ och nästan helt gråskaliga.",
+    "opts": [
+      "livfulla – sprudlande",
+      "dystra – dämpade",
+      "livfulla – dämpade",
+      "glada – färgstarka"
+    ],
+    "a": 2,
+    "why": "Medan ställer de tidiga färgsprakande verken mot de gråskaliga senare, så första ordet ska likna färgsprakande och andra likna gråskaliga. Dyster passar inte med färgsprakande, och sprudlande och färgstarka inte med gråskaliga."
+  },
+  {
+    "id": "mek-167",
+    "text": "Vaccinet gav ett ___ skydd mot svår sjukdom men skyddade ___ mot smitta.",
+    "opts": [
+      "dåligt – sämre",
+      "gott – bättre",
+      "gott – sämre",
+      "obefintligt – fullständigt"
+    ],
+    "a": 2,
+    "why": "Men kräver kontrast: gott skydd mot svår sjukdom, sämre mot smitta. Gott – bättre och dåligt – sämre ger ingen motsättning, och obefintligt – fullständigt är orimligt."
+  },
+  {
+    "id": "mek-168",
+    "text": "Hennes resonemang var ___ i sig men vilade på en ___ premiss, och därför höll slutsatsen inte.",
+    "opts": [
+      "logiskt – korrekt",
+      "ologiskt – felaktig",
+      "motsägelsefullt – sann",
+      "logiskt – felaktig"
+    ],
+    "a": 3,
+    "why": "Men kräver kontrast mot den felaktiga premissen, alltså att själva resonemanget var logiskt. Med korrekt premiss vore det ingen anledning att slutsatsen inte höll, och ologiskt ger ingen kontrast."
+  },
+  {
+    "id": "mek-169",
+    "text": "Den ___ ekonomin, med rekordlåg arbetslöshet och stigande löner, ledde till att centralbanken ___ räntan för att dämpa inflationen.",
+    "opts": [
+      "överhettade – sänkte",
+      "överhettade – höjde",
+      "svaga – höjde",
+      "krisdrabbade – sänkte"
+    ],
+    "a": 1,
+    "why": "Rekordlåg arbetslöshet och stigande löner tyder på överhettning, och inflation dämpas genom höjd ränta. Sänkt ränta stimulerar ekonomin, och svag eller krisdrabbad strider mot beskrivningen."
+  },
+  {
+    "id": "mek-170",
+    "text": "Hans ___ inställning till regler gjorde honom ofta impopulär bland kolleger, som föredrog mer ___.",
+    "opts": [
+      "rigida – ordning",
+      "avslappnade – flexibilitet",
+      "rigida – flexibilitet",
+      "slappa – stränghet"
+    ],
+    "a": 2,
+    "why": "Kollegerna ogillar hans inställning och vill ha något annat, så stel (rigid) mot flexibilitet ger kontrasten. Rigid – ordning ger ingen konflikt, och med avslappnad inställning skulle de inte vilja ha mer flexibilitet."
+  },
+  {
+    "id": "mek-171",
+    "text": "Översättningen är ___ trogen originalet, men just därför ___ den ofta stel och onaturlig på svenska.",
+    "opts": [
+      "fritt – låter",
+      "ordagrant – låter",
+      "knappast – låter",
+      "ordagrant – blir sällan"
+    ],
+    "a": 1,
+    "why": "En ordagrann översättning blir ofta stel, vilket just därför pekar på. Fritt och knappast trogen förklarar inte stelheten, och blir sällan motsäger ofta stel."
+  },
+  {
+    "id": "mek-172",
+    "text": "Tullarna infördes för att ___ den inhemska industrin, men i praktiken ___ de konsumenterna genom högre priser.",
+    "opts": [
+      "skydda – gynnade",
+      "försvaga – drabbade",
+      "konkurrera ut – hjälpte",
+      "skydda – drabbade"
+    ],
+    "a": 3,
+    "why": "Tullar ska skydda inhemsk industri, och men i praktiken visar en negativ bieffekt: högre priser drabbar konsumenterna. Gynnade strider mot högre priser, och försvaga är inte syftet med tullar."
+  },
+  {
+    "id": "mek-173",
+    "text": "Ön var ___ från fastlandet i årtusenden, vilket förklarar varför så många av dess arter ___ annorstädes.",
+    "opts": [
+      "isolerad – förekommer",
+      "isolerad – saknas",
+      "förbunden – saknas",
+      "avskild – är vanliga"
+    ],
+    "a": 1,
+    "why": "Lång isolering gör att arter utvecklas som inte finns någon annanstans. Förekommer och är vanliga annorstädes förklaras inte av isolering, och en förbunden ö leder inte till unika arter."
+  },
+  {
+    "id": "mek-174",
+    "text": "Pjäsen är en ___ av tidens moral; under den lättsamma ytan döljer sig ___ kritik av överklassen.",
+    "opts": [
+      "hyllning – skarp",
+      "satir – ingen",
+      "satir – skarp",
+      "idealisering – mild"
+    ],
+    "a": 2,
+    "why": "Dold kritik under en lättsam yta är kännetecknet för satir, och kritiken är skarp. En hyllning eller idealisering innehåller inte kritik, och ingen kritik motsäger satiren."
+  },
+  {
+    "id": "mek-175",
+    "text": "Förhandlingarna strandade sedan parterna ___ sina krav och vägrade att göra några ___.",
+    "opts": [
+      "skärpt – eftergifter",
+      "sänkt – eftergifter",
+      "mildrat – uttalanden",
+      "skärpt – misstag"
+    ],
+    "a": 0,
+    "why": "Förhandlingar strandar när man skärper kraven och inte ger efter, alltså vägrar göra eftergifter. Sänkt och mildrat skulle främja en uppgörelse, och vägra göra misstag är meningslöst."
+  },
+  {
+    "id": "mek-176",
+    "text": "Det är ___ att fastställa exakt när språket uppstod, eftersom talat språk inte lämnar några ___ spår.",
+    "opts": [
+      "enkelt – fysiska",
+      "omöjligt – muntliga",
+      "omöjligt – fysiska",
+      "lätt – arkeologiska"
+    ],
+    "a": 2,
+    "why": "Tal lämnar inga fysiska spår, vilket gör det omöjligt att datera språkets uppkomst. Enkelt och lätt strider mot eftersom-satsen, och muntliga spår ger ingen mening."
+  },
+  {
+    "id": "mek-177",
+    "text": "Trots att ny forskning ___ de gamla antagandena har myndigheten inte ___ sina kostråd, och kritiker menar därför att råden är ___.",
+    "opts": [
+      "bekräftat – reviderat – inaktuella",
+      "kullkastat – publicerat – aktuella",
+      "kullkastat – reviderat – vetenskapligt förankrade",
+      "kullkastat – reviderat – inaktuella"
+    ],
+    "a": 3,
+    "why": "Trots att kräver att forskningen talar för en ändring, alltså kullkastat antagandena, som myndigheten inte har reviderat; därför är råden inaktuella. Bekräftat ger ingen konflikt, och aktuella eller förankrade är ingen kritik."
+  },
+  {
+    "id": "mek-178",
+    "text": "Den ___ filosofen ansåg att människan till sin natur är ___, och att det därför krävs en stark stat för att ___ ordningen.",
+    "opts": [
+      "pessimistiske – självisk – upprätthålla",
+      "optimistiske – god – upprätthålla",
+      "pessimistiske – självisk – upplösa",
+      "pessimistiske – osjälvisk – upprätthålla"
+    ],
+    "a": 0,
+    "why": "Behovet av en stark stat motiveras av att människan är självisk, en pessimistisk syn, och staten ska upprätthålla ordningen. En god eller osjälvisk människa motiverar inte detta, och upplösa är motsatt syfte."
+  },
+  {
+    "id": "mek-179",
+    "text": "Under 1800-talet ___ många svenskar till Amerika, främst på grund av ___ och brist på jord, och emigrationen ___ först när industrialiseringen skapade jobb i städerna.",
+    "opts": [
+      "utvandrade – fattigdom – avtog",
+      "invandrade – fattigdom – avtog",
+      "utvandrade – välstånd – avtog",
+      "utvandrade – fattigdom – tilltog"
+    ],
+    "a": 0,
+    "why": "Svenskar som reser till Amerika utvandrar, drivna av fattigdom, och emigrationen minskar när det finns jobb hemma. Invandrade är fel riktning, välstånd driver inte utvandring och tilltog strider mot logiken."
+  },
+  {
+    "id": "mek-180",
+    "text": "Byggnaden ___ efter branden med stor ___ för originalet, och i dag är det svårt att se vilka delar som är ___.",
+    "opts": [
+      "revs – hänsyn – nya",
+      "restaurerades – förakt – nya",
+      "moderniserades – likgiltighet – gamla",
+      "restaurerades – hänsyn – nya"
+    ],
+    "a": 3,
+    "why": "Det är svårt att skilja nya delar från gamla bara om byggnaden restaurerats med hänsyn till originalet. Revs ger ingen byggnad kvar, och förakt eller likgiltighet skulle göra skillnaderna tydliga."
+  },
+  {
+    "id": "mek-181",
+    "text": "Inflationen åt upp hushållens köpkraft, och eftersom lönerna inte ___ i samma takt som priserna ___, blev många ___ fattigare.",
+    "opts": [
+      "sjönk – steg – reellt",
+      "steg – steg – reellt",
+      "steg – sjönk – reellt",
+      "steg – steg – nominellt"
+    ],
+    "a": 1,
+    "why": "Inflation betyder stigande priser, och när lönerna inte stiger lika snabbt minskar den reella köpkraften. Nominellt tar inte hänsyn till prisökningen, sjunkande priser är inte inflation och att lönerna inte sjönk gör ingen fattigare."
+  },
+  {
+    "id": "mek-182",
+    "text": "Filmen är ___ lång, men tack vare ett ___ berättartempo upplevs den aldrig som ___.",
+    "opts": [
+      "ovanligt – trögt – långrandig",
+      "ovanligt – högt – medryckande",
+      "påfallande – sävligt – seg",
+      "ovanligt – högt – långrandig"
+    ],
+    "a": 3,
+    "why": "Men och tack vare kräver att tempot motverkar längden: ett högt tempo gör att filmen aldrig känns långrandig. Trögt och sävligt tempo gör den snarare seg, och aldrig medryckande vore ingen beröm."
+  },
+  {
+    "id": "mek-183",
+    "text": "Forskarna kunde inte ___ hypotesen, men de kunde inte heller ___ den; frågan förblir därför ___.",
+    "opts": [
+      "bekräfta – motbevisa – avgjord",
+      "bekräfta – motbevisa – öppen",
+      "bekräfta – formulera – öppen",
+      "motbevisa – bekräfta – löst"
+    ],
+    "a": 1,
+    "why": "Om en hypotes varken kan bekräftas eller motbevisas förblir frågan öppen. Avgjord och löst strider mot detta, och att inte kunna formulera hypotesen är orimligt när man prövat den."
+  },
+  {
+    "id": "mek-184",
+    "text": "Ju längre kriget ___, desto mer ___ blev befolkningen, och till slut ___ regeringen fred på nästan vilka villkor som helst.",
+    "opts": [
+      "drog ut på tiden – krigsivrig – accepterade",
+      "tog slut – krigstrött – accepterade",
+      "drog ut på tiden – krigstrött – accepterade",
+      "drog ut på tiden – krigstrött – avvisade"
+    ],
+    "a": 2,
+    "why": "Ett utdraget krig gör folket krigstrött, vilket tvingar regeringen att acceptera fred på dåliga villkor. Krigsivrig leder inte dit, ju längre ... tog slut är ogrammatiskt och avvisade strider mot på nästan vilka villkor som helst."
+  },
+  {
+    "id": "mek-185",
+    "text": "Det ___ kulturarvet hotas av ___ turism: miljontals besökare sliter på de gamla byggnaderna, och lokalbefolkningen ___ ut av stigande hyror.",
+    "opts": [
+      "ömtåliga – massiv – trängs",
+      "ömtåliga – begränsad – trängs",
+      "ömtåliga – massiv – lockas",
+      "oförstörbara – hållbar – trängs"
+    ],
+    "a": 0,
+    "why": "Miljontals besökare är massturism som hotar ett ömtåligt arv, och stigande hyror tränger ut invånarna. Begränsad och hållbar turism hotar inte, oförstörbart kan inte hotas och lockas ut av höga hyror är ologiskt."
+  },
+  {
+    "id": "mek-186",
+    "text": "Regeringen ___ beslutet trots massiva protester; först när det visade sig ___ i domstol tvingades den ___.",
+    "opts": [
+      "drev igenom – lagligt – backa",
+      "drev igenom – olagligt – backa",
+      "drog tillbaka – olagligt – backa",
+      "drev igenom – olagligt – gå vidare"
+    ],
+    "a": 1,
+    "why": "Trots protester drev regeringen igenom beslutet, och först en dom om att det var olagligt tvingade den att backa. Ett lagligt beslut tvingar ingen att backa, drog tillbaka strider mot trots protester och gå vidare är ingen eftergift."
+  },
+  {
+    "id": "mek-187",
+    "text": "Vulkanutbrottet slungade upp stora mängder aska i atmosfären, vilket under det följande året ___ solinstrålningen, gav ___ somrar i stora delar av Europa och ledde till ___ skördar.",
+    "opts": [
+      "ökade – kalla – usla",
+      "minskade – ovanligt varma – usla",
+      "minskade – kalla – rekordstora",
+      "minskade – kalla – usla"
+    ],
+    "a": 3,
+    "why": "Aska i atmosfären skärmar av solljuset, vilket ger kalla somrar och dåliga skördar. Ökad instrålning och varma somrar strider mot orsaken, och rekordskördar följer inte av kyla."
+  },
+  {
+    "id": "mek-188",
+    "text": "Hans ___ förklaringar övertygade ingen; tvärtom ___ de misstankarna, eftersom de inte ___ med det som vittnena berättat.",
+    "opts": [
+      "krystade – skingrade – stämde överens",
+      "trovärdiga – skingrade – motsades",
+      "sannolika – förstärkte – stämde överens",
+      "krystade – förstärkte – stämde överens"
+    ],
+    "a": 3,
+    "why": "Tvärtom kräver att förklaringarna gjorde saken värre, alltså förstärkte misstankarna, eftersom de var krystade och inte stämde med vittnena. Skingrade strider mot tvärtom, och trovärdiga eller sannolika förklaringar hade övertygat."
+  },
+  {
+    "id": "mek-189",
+    "text": "Myten om den ___ vikingen med horn på hjälmen är ___; den skapades till stor del av 1800-talets romantiska konstnärer och har ___ stöd i arkeologiska fynd.",
+    "opts": [
+      "blodtörstige – sentida – inget",
+      "blodtörstige – urgammal – inget",
+      "blodtörstige – sentida – starkt",
+      "fredlige – medeltida – starkt"
+    ],
+    "a": 0,
+    "why": "En myt som skapades på 1800-talet är sentida och saknar stöd i fynd. Urgammal och medeltida strider mot 1800-talet, och starkt stöd motsäger att det är en myt."
+  },
+  {
+    "id": "mek-190",
+    "text": "Bolagets omsättning ökade kraftigt under året, men eftersom kostnaderna ___ ännu snabbare ___ vinsten, och aktiekursen ___.",
+    "opts": [
+      "sjönk – krympte – föll",
+      "steg – växte – föll",
+      "steg – krympte – rusade",
+      "steg – krympte – föll"
+    ],
+    "a": 3,
+    "why": "Om kostnaderna steg snabbare än omsättningen krymper vinsten, och då faller kursen. Sjunkande kostnader eller växande vinst ger ingen anledning till men, och en rusande kurs passar inte med krympande vinst."
+  },
+  {
+    "id": "mek-191",
+    "text": "Filosofer skiljer mellan ___ värde, som något har i sig självt, och ___ värde, som något har ___ det leder till något annat gott.",
+    "opts": [
+      "inneboende – instrumentellt – därför att",
+      "instrumentellt – inneboende – därför att",
+      "inneboende – instrumentellt – trots att",
+      "relativt – inneboende – därför att"
+    ],
+    "a": 0,
+    "why": "Värde i sig självt är inneboende värde, och värde som medel för något annat är instrumentellt, eftersom det leder vidare. Omvänd ordning byter begreppen, och trots att ger fel logiskt samband."
+  },
+  {
+    "id": "mek-192",
+    "text": "Den ___ ledaren delegerade sällan; han ville ha ___ över varje beslut, vilket med tiden gjorde organisationen ___ och långsam.",
+    "opts": [
+      "kontrollbehövande – insyn – smidig",
+      "tillitsfulle – insyn – tungrodd",
+      "kontrollbehövande – ointresse – tungrodd",
+      "kontrollbehövande – insyn – tungrodd"
+    ],
+    "a": 3,
+    "why": "Den som sällan delegerar och vill ha insyn i allt är kontrollbehövande, och det gör organisationen tungrodd, vilket och långsam bekräftar. Smidig strider mot långsam, tillitsfull mot att han inte delegerade och ointresse ger ingen mening."
+  },
+  {
+    "id": "mek-193",
+    "text": "Stormen ___ elnätet i hela regionen; reparationerna ___ veckor, och under tiden fick hushållen ___ sig med vedspisar och fotogenlampor.",
+    "opts": [
+      "förstärkte – tog – klara",
+      "slog ut – sparade – klara",
+      "slog ut – tog – klara",
+      "slog ut – tog – avstå"
+    ],
+    "a": 2,
+    "why": "Stormen slog ut strömmen, reparationerna tog veckor och hushållen fick klara sig med alternativ. Förstärkte och sparade ger ingen mening, och avstå sig med är ogrammatiskt."
+  },
+  {
+    "id": "mek-194",
+    "text": "Den nya medicinen ___ symtomen effektivt men har ___ biverkningar, och läkarna ___ därför att den endast ska ges vid svåra fall.",
+    "opts": [
+      "lindrar – svåra – rekommenderar",
+      "lindrar – lindriga – rekommenderar",
+      "förvärrar – svåra – rekommenderar",
+      "lindrar – svåra – ifrågasätter"
+    ],
+    "a": 0,
+    "why": "Men kräver en nackdel efter fördelen, svåra biverkningar, och därför rekommenderas medicinen bara vid svåra fall. Lindriga biverkningar motiverar ingen begränsning, en medicin som förvärrar ges inte och ifrågasätter strider mot därför."
+  },
+  {
+    "id": "mek-195",
+    "text": "Under upplysningen ___ många tänkare kyrkans auktoritet och hävdade att ___, inte tradition, borde vara grunden för kunskap; idéerna fick ___ betydelse för senare revolutioner.",
+    "opts": [
+      "utmanade – förnuftet – stor",
+      "utmanade – tron – stor",
+      "försvarade – förnuftet – stor",
+      "försvarade – traditionen – avgörande"
+    ],
+    "a": 0,
+    "why": "Upplysningen ställde förnuftet mot kyrka och tradition, så tänkarna utmanade kyrkans auktoritet. Tron ligger nära kyrkans auktoritet, försvarade motsägs av förnuftet och traditionen, inte tradition är självmotsägande."
+  },
+  {
+    "id": "mek-196",
+    "text": "Bakterier kan utveckla ___ mot antibiotika, särskilt när läkemedlen används ___; därför bör de ___ förskrivas vid virusinfektioner, där de ändå saknar effekt.",
+    "opts": [
+      "resistens – sparsamt – inte",
+      "resistens – slentrianmässigt – inte",
+      "beroende – slentrianmässigt – alltid",
+      "resistens – slentrianmässigt – helst"
+    ],
+    "a": 1,
+    "why": "Resistens uppstår när antibiotika används slentrianmässigt, och därför ska de inte skrivas ut där de saknar effekt. Sparsamt ger inte resistens, och alltid eller helst strider mot att de saknar effekt."
+  },
+  {
+    "id": "mek-197",
+    "text": "Den ___ poeten skrev under sin livstid nästan bara för byrålådan; först ___ upptäcktes hennes dikter, och i dag räknas hon som en av epokens ___ röster.",
+    "opts": [
+      "tillbakadragna – postumt – obetydligaste",
+      "firade – postumt – viktigaste",
+      "tillbakadragna – postumt – viktigaste",
+      "tillbakadragna – tidigt – viktigaste"
+    ],
+    "a": 2,
+    "why": "Den som skriver för byrålådan är tillbakadragen, och dikterna upptäcktes först efter hennes död, postumt; i dag hyllas hon. Firad strider mot byrålådan, först tidigt ger ingen mening och obetydligaste ger ingen poäng med upptäckten."
+  },
+  {
+    "id": "mek-198",
+    "text": "Ökad automatisering har ___ efterfrågan på arbetskraft inom industrin, medan behovet av personal i vården har ___; det tyder på en ___ av jobben snarare än en total minskning.",
+    "opts": [
+      "ökat – vuxit – omfördelning",
+      "minskat – minskat – omfördelning",
+      "minskat – vuxit – omfördelning",
+      "minskat – vuxit – försvinnande"
+    ],
+    "a": 2,
+    "why": "Färre jobb i industrin och fler i vården betyder att jobben flyttar, alltså en omfördelning. Ökat – vuxit och minskat – minskat ger ingen förflyttning, och försvinnande motsägs av snarare än en total minskning."
+  },
+  {
+    "id": "mek-199",
+    "text": "Kritikerna ___ den unga regissörens debutfilm, men publiken ___ den, och den blev årets mest ___ svenska film.",
+    "opts": [
+      "sågade – avskydde – sedda",
+      "hyllade – älskade – sedda",
+      "sågade – älskade – bortglömda",
+      "sågade – älskade – sedda"
+    ],
+    "a": 3,
+    "why": "Men kräver att kritiker och publik tyckte olika: kritikerna sågade och publiken älskade filmen, som därför sågs av många. Avskydde och hyllade ger ingen motsättning, och bortglömda passar inte med publikens kärlek."
+  },
+  {
+    "id": "mek-200",
+    "text": "Ekosystemet befinner sig i en ___ jämvikt; om en enda art försvinner kan det få ___ följder för hela näringskedjan, och återhämtningen kan ta ___.",
+    "opts": [
+      "robust – oöverblickbara – decennier",
+      "känslig – oöverblickbara – decennier",
+      "känslig – försumbara – decennier",
+      "känslig – oöverblickbara – några minuter"
+    ],
+    "a": 1,
+    "why": "Om en enda art kan rubba hela kedjan är jämvikten känslig och följderna stora, och ett ekosystem återhämtar sig långsamt. Robust strider mot det, försumbara följder kräver ingen lång återhämtning och några minuter är orimligt."
+  }
 ]

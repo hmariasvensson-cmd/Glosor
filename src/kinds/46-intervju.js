@@ -1,8 +1,10 @@
-/* ---------- Intervjun: antagningsintervjun på franska (föräldern 2026-11-03) ----------
-   Förberedelse inför juryns intervju (entretien) vid antagningen till kandidatprogrammen i klassisk sång vid CNSMD Paris,
-   CNSMD Lyon, HEM Genève och HEMU Lausanne. Bara kurser med content/intervju.json (Franska 3).
-   intervju.json = [{id, cat, q, sv, tips, phrases: [{fr, sv}], model, modelSv, follow?: [fråga]}] (tips och
-   framåt hämtas med texterna, LAZY_TEXTS i build.py): juryns fråga, tips om
+/* ---------- Intervjun: antagningsintervjun på franska eller tyska (föräldern 2026-11-03 och 2026-11-09) ----------
+   Förberedelse inför juryns intervju vid antagningen till kandidatprogrammen i musik: på franska vid CNSMD Paris,
+   CNSMD Lyon, HEM Genève och HEMU Lausanne (Franska 3, sång), på tyska vid HfM Hanns Eisler Berlin, HMT Leipzig och HMT
+   München (Tyska 4, sång eller instrument). Bara kurser med content/intervju.json. Språket väljer skolor, kategorier och
+   texter (IV_LANG, IV_SCHOOLS_BY efter lemmaLang()).
+   intervju.json = [{id, cat, q, sv, tips, phrases: [{fr, sv}], model, modelSv, follow?: [fråga]}] (fr = målspråket, som
+   i alla datafiler; tips och framåt hämtas med texterna, LAZY_TEXTS i build.py): juryns fråga, tips om
    vad juryn vill höra, fraser och ett exempelsvar med [platser] att fylla i med det egna. Allt är skrivet för appen.
    Eleven skriver eller dikterar sitt eget svar (S.iv.a[id] = {t, d}) och kan få Claudes kommentarer (sample), som
    sparas i S.fb["iv:<id>"] (med niva, så att nivåmätaren i 80-level.js räknar med dem). Övningsintervjun är ett samtal
@@ -10,20 +12,36 @@
    Vald skola: S.iv.school. Loggposter med kind "iv": {d, dur, right: 0, total: 0, words}.
    Skärmarna ligger i Talas kodmodul (data/code-tala.js), bara listorna nedan och defineKind står utanför. */
 const IV_TURNS=8;
-// Skolorna (id, namn, länk). Punkterna om antagningen står i IV_INFO i kodmodulen nedan.
-const IV_SCHOOLS=[
-  {id:"cnsmdp",short:"Paris",name:"CNSMD de Paris",city:"Paris",url:"https://www.conservatoiredeparis.fr/en/curriculum/1st-cycle-singing"},
-  {id:"lyon",short:"Lyon",name:"CNSMD de Lyon",city:"Lyon",url:"https://cnsmd-lyon.fr/en/music-programs/dnspm-opera-voice/"},
-  {id:"hem",short:"Genève",name:"HEM Genève",city:"Genève",url:"https://hem.hesge.ch/en/studies/bachelor-arts/bachelor-arts-music/singing"},
-  {id:"hemu",short:"Lausanne",name:"HEMU Lausanne",city:"Lausanne",url:"https://www.hemu.ch/bachelor/filiere-detail/classique-instrumental-vocal"}];
-const IV_CATS={moi:"Om dig",parcours:"Din bakgrund",voix:"Rösten",repertoire:"Repertoaren",travail:"Hur du arbetar",
-  ecole:"Skolan och utbildningen",avenir:"Framtiden",langue:"Franskan",scene:"Scenen",jury:"Frågor till juryn och svåra lägen"};
 const ivList=()=>C().intervju||[];
 const ivState=()=>{ S.iv=S.iv&&typeof S.iv==="object"?S.iv:{}; S.iv.a=S.iv.a||{}; return S.iv; };
-const ivSchool=()=>IV_SCHOOLS.find(s=>s.id===(S.iv||{}).school)||IV_SCHOOLS[0];
 // Antal frågor med eget svar (används av provplanen i 84-mal.js)
 const ivDone=()=>ivList().filter(x=>(((S.iv||{}).a||{})[x.id]||{}).t).length;
 // @lazy tala
+// Kategorierna (alla språk; ordningen i listan följer frågornas ordning i intervju.json)
+const IV_CATS={moi:"Om dig",parcours:"Din bakgrund",voix:"Rösten",repertoire:"Repertoaren",travail:"Hur du arbetar",
+  ecole:"Skolan och utbildningen",avenir:"Framtiden",langue:"Franskan",scene:"Scenen",jury:"Frågor till juryn och svåra lägen",
+  ich:"Om dig",werdegang:"Din bakgrund",instrument:"Instrumentet eller rösten",arbeit:"Hur du arbetar",hochschule:"Skolan och utbildningen",
+  zukunft:"Framtiden",sprache:"Tyskan",buehne:"Scenen"};
+// Skolorna per språk (id, namn, länk). Punkterna om antagningen står i IV_INFO i kodmodulen nedan.
+const IV_SCHOOLS_BY={
+  fr:[{id:"cnsmdp",short:"Paris",name:"CNSMD de Paris",city:"Paris",url:"https://www.conservatoiredeparis.fr/en/curriculum/1st-cycle-singing"},
+    {id:"lyon",short:"Lyon",name:"CNSMD de Lyon",city:"Lyon",url:"https://cnsmd-lyon.fr/en/music-programs/dnspm-opera-voice/"},
+    {id:"hem",short:"Genève",name:"HEM Genève",city:"Genève",url:"https://hem.hesge.ch/en/studies/bachelor-arts/bachelor-arts-music/singing"},
+    {id:"hemu",short:"Lausanne",name:"HEMU Lausanne",city:"Lausanne",url:"https://www.hemu.ch/bachelor/filiere-detail/classique-instrumental-vocal"}],
+  de:[{id:"berlin",short:"Berlin",name:"HfM Hanns Eisler Berlin",city:"Berlin",url:"https://www.hfm-berlin.de/bewerbung/haeufig-gestellte-fragen/"},
+    {id:"leipzig",short:"Leipzig",name:"HMT Leipzig",city:"Leipzig",url:"https://www.hmt-leipzig.de/studium/studium-faq"},
+    {id:"muenchen",short:"München",name:"HMT München",city:"München",url:"https://hmtm.de/en/application/"}]};
+// Språkets texter: rubriken, vem den sökande är, programmet, juryns tilltal och vad samtalet brukar handla om
+const IV_LANG={
+  fr:{name:"franska",who:"klassisk sångare",prog:"kandidatprogrammet i klassisk sång",term:"entretien avec le jury",addr:"vous",
+    topics:"presentation, bakgrund, rösten, repertoaren, hur den sökande arbetar, varför just skolan, planer, franskan",
+    plan:"Vid antagningen till sångutbildningen träffar du juryn, ofta efter att du har sjungit. De frågar om dig, din musik och varför du söker just dit, och de vill höra att du kan klara undervisningen på franska."},
+  de:{name:"tyska",who:"klassisk musiker (sång eller instrument)",prog:"kandidatprogrammet (Bachelor) i klassisk musik",term:"Gespräch mit der Prüfungskommission",addr:"Sie",
+    topics:"presentation, bakgrund, instrumentet eller rösten, repertoaren, hur den sökande övar, varför just den här Hochschule, planer, tyskan",
+    plan:"Vid antagningsprovet (Aufnahmeprüfung) träffar du juryn (Prüfungskommission) efter att du har spelat eller sjungit. De frågar om dig, din musik och varför du söker just dit, och de vill höra att du kan klara undervisningen på tyska. Leipzig vill dessutom ha en kort presentation på tyska."}};
+const ivLang=()=>IV_LANG[lemmaLang()]||IV_LANG.fr;
+const ivSchools=()=>IV_SCHOOLS_BY[lemmaLang()]||IV_SCHOOLS_BY.fr;
+const ivSchool=()=>ivSchools().find(s=>s.id===(S.iv||{}).school)||ivSchools()[0];
 // Om antagningen till kandidatprogrammet i sång, ur skolornas egna sidor (kontrollerat 2026-11-03). Ändras varje år.
 const IV_INFO={
   cnsmdp:["Antagningen 2027: förprov i gehör och notläsning 28 januari, första omgången 1–3 februari och andra omgången 4–10 februari, med arior som juryn väljer, två egna sånger (en på franska) och sedan intervjun med juryn.",
@@ -35,23 +53,34 @@ const IV_INFO={
   hem:["Ingen övre åldersgräns. 2026: ansökan senast 1 mars, video senast 17 mars, intervju på distans för sångare i april och sedan prov i musikteori på distans.",
     "Franska på nivå B1 vid antagningen. Den som inte har det läser franska första året och ska klara ett B1-prov när året är slut."],
   hemu:["Ingen övre åldersgräns. Repertoar på minst 30 minuter: sex verk på tre språk, utantill (utom oratorium och det samtida stycket). 2026: ansökan senast 1 mars, sångprov 20–22 april, teoriprov 27 april.",
-    "Kräver franska på nivå B2, inte B1. Fråga antagningen (admissions.classique@hemu-cl.ch) när nivån ska visas och om villkorlig antagning går.",
-    "Skolans sidor nämner ingen intervju, men räkna med samtal med juryn."]};
+    "Webben säger franska B2; enligt studiereglementet rekommenderas B2 och den som har för låg nivå har en termin på sig. Fråga antagningen (admissions.classique@hemu-cl.ch) vad som gäller.",
+    "Skolans sidor nämner ingen intervju, men räkna med samtal med juryn."],
+  // De tyska skolorna (kontrollerat 2026-11-09): inget av proven har ett eget samtal, men juryn kan pröva tyskan,
+  // och en presentation eller en text på tyska ingår i Berlin och Leipzig
+  berlin:["Antagningen 2027 (vinterterminen, enda intaget för sång): ansökan 15 februari–8 april via muvac med förgallringsvideo. Första omgången på plats 7–11 juni, andra omgången 14 juni.",
+    "På plats: huvudämne, piano, skriftlig satslära och gehörslära. Sångare framför också en tysk monolog ur en pjäs (ungefär 2 minuter, utantill), och minst en sång ska vara på tyska. Juryn får pröva tyskan.",
+    "Tyska B2.2 krävs av alla, senast vid inskrivningen. Saknas intyget blir antagningen villkorad, med intensivkurs i tyska före terminen."],
+  leipzig:["Antagningen 2027: anmälan och video 1–31 mars, prov på plats 31 maj–5 juni.",
+    "I videon presenterar du dig: instrumentalister på tyska (1–2 minuter: namn, bakgrund och varför Leipzig). Sångare framför också en tysk text fritt på provet.",
+    "Tyska B2 för sång och B1 för instrument ska visas redan vid provet på plats. Goethe, telc, TestDaF och ÖSD godtas."],
+  muenchen:["Antagningen 2027: ansökan med video senast 5 mars, prov på plats 12–22 juni (bara i München).",
+    "På plats: huvudämne, skriftlig musiklära och gehörslära, bladsång och piano. Sångare förbereder sex verk, minst två på tyska.",
+    "Tyska B1 (även sång i den konstnärliga bacheloren) visas vid inskrivningen. Bara Goethe, telc, ÖSD eller DSD godtas."]};
 function openIv(){
   talkStop(); stopSpeech(); $("#tabs").hidden=true; sess=null; curView="ova"; RETURN_TO=null;
   const st=ivState(), xs=ivList(), sc=ivSchool(), mock=(talkState().c||{})["iv:"+sc.id];
   const has=x=>!!(st.a[x.id]||{}).t, fbOf=x=>(S.fb||{})["iv:"+x.id];
-  const cats=Object.keys(IV_CATS).map(c=>[c,xs.filter(x=>x.cat===c)]).filter(([,a])=>a.length);
-  app.innerHTML=`<section class="panel"><span class="tab">Intervju</span><h2>Antagningsintervjun på franska</h2>
-    <p class="plan">Vid antagningen till sångutbildningen träffar du juryn, ofta efter att du har sjungit. De frågar om dig, din musik och varför du söker just dit, och de vill höra att du kan klara undervisningen på franska. Förbered svaren här: lyssna på frågan, skriv eller diktera ditt eget svar och få kommentarer av Claude. Öva sedan en hel intervju med Claude som jury.</p>
-    <div class="field"><span class="label">Skola</span><div class="seg" role="group" aria-label="Skola">${IV_SCHOOLS.map(s=>`<button data-ivs="${s.id}" aria-pressed="${s===sc}">${esc(s.short)}</button>`).join("")}</div></div>
+  const cats=[...new Set(xs.map(x=>x.cat))].map(c=>[c,xs.filter(x=>x.cat===c)]), lg=ivLang();
+  app.innerHTML=`<section class="panel"><span class="tab">Intervju</span><h2>Antagningsintervjun på ${esc(lg.name)}</h2>
+    <p class="plan">${esc(lg.plan)} Förbered svaren här: lyssna på frågan, skriv eller diktera ditt eget svar och få kommentarer av Claude. Öva sedan en hel intervju med Claude som jury.</p>
+    <div class="field"><span class="label">Skola</span><div class="seg" role="group" aria-label="Skola">${ivSchools().map(s=>`<button data-ivs="${s.id}" aria-pressed="${s===sc}">${esc(s.short)}</button>`).join("")}</div></div>
     <details class="more"><summary>Om antagningen vid ${esc(sc.name)}</summary>${(IV_INFO[sc.id]||[]).length?`<ul>${IV_INFO[sc.id].map(t=>`<li>${esc(t)}</li>`).join("")}</ul>`:""}
       <p class="foot"><a href="${esc(sc.url)}" target="_blank" rel="noopener">Skolans sida om antagningen</a>. Kraven och datumen ändras varje år, så kontrollera alltid där.</p></details>
     <div class="navrow"><button class="btn" id="ivmock">Övningsintervju med Claude (${IV_TURNS} frågor)</button></div>
     <p class="foot">${ivDone()} av ${xs.length} frågor har ett eget svar${mock?` · ${mock.n} ${mock.n===1?"övningsintervju":"övningsintervjuer"} med ${esc(sc.name)}`:""}.</p></section>
     <section class="panel"><h2>Frågorna</h2>
     ${cats.map(([c,a])=>{ const d=a.filter(has).length;
-      return `<details class="more"${d<a.length&&!cats.slice(0,cats.findIndex(([k])=>k===c)).some(([,b])=>b.some(x=>!has(x)))?" open":""}><summary>${esc(IV_CATS[c])} · ${d}/${a.length}</summary><div class="games">${a.map(x=>`<button class="game" data-iv="${esc(x.id)}"><span><b ${lang()}>${esc(x.q)}</b><small>${esc([x.sv,has(x)?"eget svar":"",fbOf(x)&&fbOf(x).niva?"Claude: "+fbOf(x).niva:""].filter(Boolean).join(" · "))}</small></span><span class="go" aria-hidden="true">${has(x)?"✓":"›"}</span></button>`).join("")}</div></details>`; }).join("")}
+      return `<details class="more"${d<a.length&&!cats.slice(0,cats.findIndex(([k])=>k===c)).some(([,b])=>b.some(x=>!has(x)))?" open":""}><summary>${esc(IV_CATS[c]||c)} · ${d}/${a.length}</summary><div class="games">${a.map(x=>`<button class="game" data-iv="${esc(x.id)}"><span><b ${lang()}>${esc(x.q)}</b><small>${esc([x.sv,has(x)?"eget svar":"",fbOf(x)&&fbOf(x).niva?"Claude: "+fbOf(x).niva:""].filter(Boolean).join(" · "))}</small></span><span class="go" aria-hidden="true">${has(x)?"✓":"›"}</span></button>`).join("")}</div></details>`; }).join("")}
     </section><button class="quit" id="quit">Tillbaka</button>`;
   app.querySelectorAll("[data-ivs]").forEach(b=>b.onclick=()=>{ ivState().school=b.dataset.ivs; save(); openIv(); });
   app.querySelectorAll("[data-iv]").forEach(b=>b.onclick=()=>ivQuestion(b.dataset.iv));
@@ -94,8 +123,8 @@ function ivQuestion(id){
 }
 const ivFbHtml=f=>`${renderFeedback(f)}${f.battre?`<div class="fbk"><p class="fbh">Ditt svar, förbättrat</p><p ${lang()}>${esc(String(f.battre))}</p><button type="button" class="speak sm" data-say="${esc(String(f.battre))}" aria-label="Läs upp">${SPK}</button></div>`:""}`;
 function ivPrompt(x,text){
-  const sc=ivSchool(), lv="B1";
-  return `Du är en erfaren lärare i franska. Du förbereder en ${studentDesc()}, som är klassisk sångare, inför juryns intervju på franska vid antagningen till kandidatprogrammet i klassisk sång vid ${sc.name} (${sc.city}).
+  const sc=ivSchool(), lv="B1", lg=ivLang();
+  return `Du är en erfaren lärare i ${lg.name}. Du förbereder en ${studentDesc()}, som är ${lg.who}, inför juryns intervju på ${lg.name} vid antagningen till ${lg.prog} vid ${sc.name} (${sc.city}).
 Juryns fråga: "${x.q}" (på svenska: ${x.sv}). Vad juryn vill höra: ${x.tips||""}
 Den sökande har skrivit eller dikterat sitt svar. Bortse från skiljetecken, versaler och ord som dikteringen uppenbart hört fel.
 Bedöm språket mot nivå ${lv}. ${levelGuide(lv)} Bedöm också innehållet: svarar det på frågan, är det personligt och konkret, och hur skulle en jury uppfatta det?
@@ -107,10 +136,10 @@ Ge återkoppling på svenska, riktad till den sökande (du-form), uppmuntrande m
 {"helhet": "2–3 meningar: svarar du på frågan, och hur låter det för en jury",
  "bra": ["högst 3 konkreta styrkor, med exempel ur svaret"],
  "fel": [{"citat": "exakt fras ur svaret", "rattat": "rättad fras", "varfor": "kort förklaring"}],
- "battre": "svaret omskrivet på korrekt och naturlig franska på nivå ${lv}, med den sökandes eget innehåll, högst 130 ord",
+ "battre": "svaret omskrivet på korrekt och naturlig ${lg.name} på nivå ${lv}, med den sökandes eget innehåll, högst 130 ord",
  "nasta": "vad juryn kan sakna eller fråga vidare om, och ett tips till nästa version",
  "niva": "ungefärlig nivå enligt GERS för språket i svaret"}
-Högst 6 fel, de viktigaste först, bara verkliga fel. Om svaret är tomt eller inte på franska, säg det i "helhet" och lämna listorna tomma.`;
+Högst 6 fel, de viktigaste först, bara verkliga fel. Om svaret är tomt eller inte på ${lg.name}, säg det i "helhet" och lämna listorna tomma.`;
 }
 async function ivFeedback(x,text){
   const out=$("#ivout"), msg=$("#ivmsg"), st=S;

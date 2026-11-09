@@ -39,6 +39,7 @@ function summaryOf(){
     if(g.length) out.gram=g; }
   const pr=prepSummary(); if(pr) out.prep=pr;   // Mot målet: nivå, datum, prognos och veckans plan (84-prep.js)
   const hp=isHp()&&hpBoard(); if(hp) out.hp=hp;   // Högskoleprovet ORD: provpassen {n, best, last, of, d}
+  const hv=isHp()&&hpVerbBoard(); if(hv) out.hpv=hv;   // verbala provpasset, samma form
   if(hasPlan()){ const i=planWeekIdx(), W=L.plan.weeks;
     if(i!=null&&i>=0&&i<W.length){ const p=planProgress(W[i]); out.plan={week:i+1,of:W.length,title:W[i].title||"",known:p.known,n:p.n,next:(W[i+1]||{}).title||""}; } }
   return out;
@@ -168,6 +169,7 @@ function pCourse(code,c){
       ${sims.map(s=>`<tr><td>${esc(new Date(pNum(s.d)).toLocaleDateString("sv-SE"))}${s.lv?` (${esc(s.lv)})`:""}</td>${exParts.map(p=>`<td>${tag(o(s.parts)[p.id])}</td>`).join("")}</tr>`).join("")}</table></div></div>`:""}
     ${pPrep(c.prep)}
     ${gram.length?`<p class="plan">Svagast i grammatik: ${gram.map(g=>`${esc(g.name)} (${esc(pNum(g.pct))} %)`).join(", ")}.</p>`:""}
+    ${o(c.hpv).n?`<p class="plan" data-hpv>Provpass verbal del: ${esc(pNum(o(c.hpv).n))} st, bästa ${esc(pNum(o(c.hpv).best))}/${esc(pNum(o(c.hpv).of)||40)}, senaste ${esc(pNum(o(c.hpv).last))}/${esc(pNum(o(c.hpv).of)||40)}.</p>`:""}
     ${o(c.hp).n?`<p class="plan" data-hp>Provpass ORD: ${esc(pNum(o(c.hp).n))} st, bästa ${esc(pNum(o(c.hp).best))}/${esc(pNum(o(c.hp).of)||10)}, senaste ${esc(pNum(o(c.hp).last))}/${esc(pNum(o(c.hp).of)||10)}.</p>`:""}
     <p class="plan">Skrivuppgifter klara: ${esc(pNum(c.writing))}.${plan?` Studieplan: vecka ${esc(pNum(plan.week))} av ${esc(pNum(plan.of))}${plan.title?` (${esc(plan.title)})`:""}, ${esc(pNum(plan.known))} av ${esc(pNum(plan.n))} av veckans ord kan.${plan.next?` Nästa vecka: ${esc(plan.next)}.`:""}`:""}</p></div>`;
 }
