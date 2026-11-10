@@ -2,6 +2,10 @@
 
 Punkter som har flyttats från [`BACKLOG.md`](BACKLOG.md) när de byggdes. **Referens** anger backloggens rubrik och prioritet. **Commit** anger var ändringen finns i git. **Publicerat** anger versionen av artefakten på https://claude.ai/artifact/YBQv8j4qXQQLuPwLAWt5mP.
 
+## 2026-11-10, del 5 (publicerat som version 72–78; ljudfilerna laddades upp i omgångar)
+
+- **Uttal med riktiga röster** (P2 *Resten av kursmallen*: "lyssna med en riktig röst"). 690 inspelningar från Lingua Libre på Wikimedia Commons (CC BY-SA, CC BY eller CC0; franska mest av LoquaxFR, tyska mest av Sebastian Wallroth), konverterade till AAC mono (`audio/<språk>/`, `audio/README.md`). build.py lägger kursens inspelningar i `dist/data/<kod>-audio.json` och sätter `content.recN`; appen hämtar filen när Uttal öppnas (`ensureRec`), och `speak` spelar inspelningen när ordet finns där och använder annars datorrösten (`ttsSay`). Under varje fråga står talare, licens och länk (`recCredit`, krävs av CC BY-SA). Franska 3 har 102 av uttalsorden inspelade. Test: `SCENARIO_REC`.
+
 ## 2026-11-10, del 4 (publicerat som version 71)
 
 - **Videopresentationen till HMT Leipzig** (P2 Mot målet, eleven i tyska spelar cello). Ny skrivuppgift i avsnittet `cel` i Tyska 4 (`t4-w-leipzig`, 150–220 ord, B1) och Tyska 5 (`w-leipzig`, 170–240 ord, B2): presentationen på tyska som instrumentalister gör i förgallringsvideon (stråk högst 2 minuter, anmälan 1–31 mars 2027), med exempeltext med platshållare och översättning. Får Claudes kommentarer som andra skrivuppgifter och finns under Tala (4/3/2, `w:<id>`), så att hon kan öva in den muntligt. Lagd i studieplanerna (Tyska 4 kapitel 6, Tyska 5 vecka 17).

@@ -208,7 +208,7 @@ function compareTokens(input,target){
 /* Uppläsning av flera repliker i rad, med olika röst eller tonhöjd för talare B.
    Utan uppläsning i webbläsaren blir det medvetet tyst (se Uppläsning i app.js). */
 let seqId=0;
-function stopSpeech(){seqId++; try{speechSynthesis.cancel()}catch(e){ /* ingen uppläsning */ }}
+function stopSpeech(){seqId++; if(REC_AU) REC_AU.pause(); try{speechSynthesis.cancel()}catch(e){ /* ingen uppläsning */ }}
 function speakSeq(lines,rate,onLine){
   stopSpeech(); if(!SOUND) return; const id=seqId;
   let vs=[]; try{vs=speechSynthesis.getVoices().filter(v=>(v.lang||"").toLowerCase().startsWith(L.tts.slice(0,2)))}catch(e){ /* ingen uppläsning */ }

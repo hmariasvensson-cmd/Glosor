@@ -17,6 +17,7 @@ och kontrollerar/uppdaterar id-låsen languages/<kod>/ids.lock (och book/ids.loc
 Ett ord-id som byter namn står i languages/<kod>/ids.renamed (read_renamed); datafilen får renames och appen flyttar
 elevernas framsteg till det nya id:t (applyRenames i src/app.js).
 """
+import base64
 import collections
 import datetime
 import hashlib
@@ -1875,6 +1876,26 @@ def main():
         if texts:
             course_data[c]["content"] = idx
             course_data[f"{c}-texts"] = texts
+    # Inspelningar till uttalsövningarna (audio/<språk>/index.json och .m4a, hämtade från Lingua Libre på Wikimedia Commons,
+    # CC0 eller CC BY-SA): dist/data/<kod>-audio.json = {"w": {ord: {a: AAC i base64, by, lic, src}}} för orden i kursens
+    # uttal.json, och kursens content får recN (antalet). Appen hämtar filen när Uttal öppnas (ensureRec i app.js) och
+    # spelar inspelningen i stället för datorrösten. Nyckeln i DATA_VERSION är "<kod>-audio".
+    for c in codes:
+        cont = course_data[c].get("content", {})
+        if not cont.get("uttal") or confs[c].get("mono") is True:
+            continue
+        adir = ROOT / "audio" / lemma_lang(c, confs[c])
+        if not (adir / "index.json").exists():
+            continue
+        idx, rec = json.loads((adir / "index.json").read_text(encoding="utf-8")), {}
+        for u in cont["uttal"]:
+            for w in (w for p in u.get("pairs", []) for w in p):
+                r = idx.get(w)
+                if r and w not in rec and (adir / r["f"]).exists():
+                    rec[w] = {"a": base64.b64encode((adir / r["f"]).read_bytes()).decode(), "by": r["by"], "lic": r["lic"], "src": r["src"]}
+        if rec:
+            course_data[f"{c}-audio"] = {"w": rec}
+            cont["recN"] = len(rec)
     # Grundformerna för Mina ord (lemmaOf i src/kinds/03-lemma.js): alla kursers ord i samma språk, en fil per språk,
     # dist/data/lemma-<språk>.json (lemma_files). Appen hämtar den först när eleven trycker på ord i en text, så att en
     # böjd form känns igen även om grundformen bara finns i en kurs i kedjan som inte har öppnats. Nyckeln i

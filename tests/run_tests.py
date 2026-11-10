@@ -988,7 +988,7 @@ setTimeout(async()=>{ try{
   // 3. DATA_VERSION per kurs
   ok("DATA_VERSION: ett hash per kurs", DATA_VERSION&&typeof DATA_VERSION==="object"&&Object.keys(LANGUAGES).every(c=>/^[0-9a-f]{10}$/.test(DATA_VERSION[c]))
     &&new Set(Object.values(DATA_VERSION)).size===Object.keys(DATA_VERSION).length
-    &&Object.keys(DATA_VERSION).every(k=>k in LANGUAGES||(/-exam$/.test(k)&&k.slice(0,-5) in LANGUAGES)||(/-texts$/.test(k)&&k.slice(0,-6) in LANGUAGES)||/^lemma-[a-z]{2}$/.test(k)||/^code-[a-z0-9]+$/.test(k)), canon(DATA_VERSION));   // även <kod>-exam, <kod>-texts och code-<namn> (provfilen) och lemma-<språk> (grundformerna)
+    &&Object.keys(DATA_VERSION).every(k=>k in LANGUAGES||(/-exam$/.test(k)&&k.slice(0,-5) in LANGUAGES)||(/-texts$/.test(k)&&k.slice(0,-6) in LANGUAGES)||(/-audio$/.test(k)&&k.slice(0,-6) in LANGUAGES)||/^lemma-[a-z]{2}$/.test(k)||/^code-[a-z0-9]+$/.test(k)), canon(DATA_VERSION));   // även <kod>-exam, <kod>-texts, <kod>-audio och code-<namn> (provfilen) och lemma-<språk> (grundformerna)
 
   // 4. Schemaversion och migreringar
   { ok("migreringar: MIGRATIONS[1] är migrateRetired och S.v är senaste versionen", MIGRATIONS[1]===migrateRetired&&S_VERSION===MIGRATIONS.length-1&&S.v===S_VERSION, S.v);
@@ -4178,6 +4178,29 @@ appReady().then(async()=>{ try{
 </script>"""
 
 
+# Uttal med riktiga röster (Lingua Libre, data/<kod>-audio.json): speak spelar inspelningen, annars datorrösten
+SCENARIO_REC = r"""<script>
+const out=[]; const q=s=>document.querySelector(s);
+const ok=(name,cond,info="")=>out.push((cond?"OK   ":"FEL  ")+name+(info?"  ("+info+")":""));
+appReady().then(async()=>{ try{
+  if(L.code!=="fr") useLang("fr"); await until(()=>L.code==="fr"&&WORDS.length,5000);
+  const played=[]; window.Audio=function(src){ this.src=src; this.pause=()=>{}; this.play=()=>{ played.push(src); if(this.onplaying) this.onplaying(); return Promise.resolve(); }; };
+  ok("inspelningar: kursen har recN", (C().recN||0)>0, C().recN);
+  await ensureRec(); const rec=REC.fr||{}, w=Object.keys(rec)[0];
+  ok("inspelningar: filen hämtas", !!w&&rec[w].a.length>100&&rec[w].by&&rec[w].lic&&/^https:\/\/commons\.wikimedia\.org\//.test(rec[w].src), w+" "+Object.keys(rec).length);
+  setSound(true); speak(w); ok("speak: spelar inspelningen för ett ord som finns", played.length===1&&played[0].startsWith("data:audio/mp4;base64,"));
+  speak("ordet som inte finns"); ok("speak: datorrösten för andra ord", played.length===1);
+  const u=C().uttal.find(u=>u.pairs.some(p=>p.includes(w))), pi=u.pairs.findIndex(p=>p.includes(w));
+  const d=KINDS.utt.mc({ref:`${u.id}|${pi}|0`});
+  ok("uttal: förklaringen anger inspelning och licens", /Lingua Libre/.test(d.explain)&&d.explain.includes(rec[w].lic), d.explain.slice(-200));
+  openUttal(); await until(()=>/riktiga röster/.test(app.textContent),5000);
+  ok("uttal: väljaren säger att riktiga röster används", /riktiga röster/.test(app.textContent));
+ }catch(e){ ok("undantag", false, e.message+" "+(e.stack||"").split("\n")[1]); }
+ ok("inga JavaScript-fel", !__err.length, __err.join(" ; "));
+ document.body.insertAdjacentHTML("beforeend","<pre id=out>"+out.join("\n").replace(/</g,"&lt;")+"</pre>");
+});
+</script>"""
+
 # Repetitionsschemat Anpassat (FSRS, backloggen P3): valfritt, det fasta schemat är oförändrat
 SCENARIO_FSRS = r"""<script>
 const out=[]; const q=s=>document.querySelector(s);
@@ -4271,6 +4294,7 @@ def main():
     text += "\n" + run(SCENARIO_HPVERB, 30000)   # verbala provpasset (Högskoleprovet)
     text += "\n" + run(SCENARIO_WISH, 30000)   # elevernas önskemål 2026-11-07/08
     text += "\n" + run(SCENARIO_FSRS, 30000)   # repetitionsschemat Anpassat (FSRS)
+    text += "\n" + run(SCENARIO_REC, 30000)   # uttal med riktiga röster
     text += "\n" + run(SCENARIO_LAST, 30000, head=LAST_HEAD_CLOUD) + "\n" + run(SCENARIO_LAST, 30000, head=LAST_HEAD_LOCAL)   # senast övade kursen (Maria 2026-11-05)
     text += "\n" + run(SCENARIO_PROFILES, 60000)   # Vem övar? och Föräldravyn (P2/P3 Konton, sparande och topplista)
     text += "\n" + test_minimal_course()   # en ny, liten kurs (8 → 21 kurser)

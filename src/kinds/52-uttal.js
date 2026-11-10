@@ -7,17 +7,22 @@ function uttItems(set,n){
   sets.forEach(u=>u.pairs.forEach((p,pi)=>{const wi=Math.floor(Math.random()*p.length); all.push({k:"utt",id:`utt:${u.id}|${pi}|${wi}`,ref:`${u.id}|${pi}|${wi}`,t:"mc"});}));
   return shuffle(all).slice(0,n);
 }
-const uttMC=c=>{const [id,pi,wi]=c.ref.split("|"), u=uttById(id), p=u.pairs[+pi], w=p[+wi];
+const uttMC=c=>{const [id,pi,wi]=c.ref.split("|"), u=uttById(id), p=u.pairs[+pi], w=p[+wi]; ensureRec();   // ett fortsatt pass har inte gått via openUttal
   return{tab:"Uttal",head:`<p class="q-prompt" style="font-size:1.3rem">Vilket ord hör du?</p>${playBar()}`,ask:esc(u.title),
     opts:p.map((x,j)=>({label:x,ok:j===+wi,lang:true})),
-    explain:`<p>${p.map(x=>`<span ${lang()}><b>${esc(x)}</b></span> <button type="button" class="speak xs" data-say="${esc(x)}" aria-label="Läs upp ${esc(x)}">${SPK}</button>`).join(" · ")}</p>${u.tip?`<p>${rmark(u.tip)}</p>`:""}`,
+    explain:`<p>${p.map(x=>`<span ${lang()}><b>${esc(x)}</b></span> <button type="button" class="speak xs" data-say="${esc(x)}" aria-label="Läs upp ${esc(x)}">${SPK}</button>`).join(" · ")}</p>${u.tip?`<p>${rmark(u.tip)}</p>`:""}${recCredit(p)}`,
     say:w,sayOnShow:true,wire:()=>wirePlay(r=>speak(w,r))};};
+// Licensen (CC BY-SA) kräver namn, licens och länk för varje inspelning som används
+const recCredit=ws=>{ const rs=ws.map(w=>[w,recFor(w)]).filter(x=>x[1]); if(!rs.length) return "";
+  return `<p class="foot reccredit">Inspelningar från Lingua Libre (Wikimedia Commons): ${rs.map(([w,r])=>`<a href="${esc(r.src)}" target="_blank" rel="noopener">${esc(w)}</a> av ${esc(r.by)} (${esc(r.lic)})`).join(", ")}.${rs.length<ws.length?" Övriga ord läses av datorrösten.":""}</p>`; };
 const uttRecap=ref=>{const [id,pi,wi]=ref.split("|"), u=uttById(id), p=u&&u.pairs[+pi]; return p&&p[+wi]||"";};
 // Skärmarna hämtas först när uttalet öppnas (data/code-ovningar.js, lazyRun i app.js)
 // @lazy ovningar
 function openUttal(){
+  ensureRec();   // inspelningar som redan finns i sidan (INLINE_DATA) läggs in direkt, utan väntesida
+  if(C().recN&&dataWait({what:"inspelningarna",tab:"Uttal",ready:()=>!!REC[L.code],load:ensureRec},openUttal)) return;
   S.ut=S.ut||{};
-  pickerScreen("Uttal: lyssna och välj",`Du hör ett ord och väljer vilket av orden det var. Orden låter nästan lika, så lyssna noga. Slå på ljudet${SOUND?"":" (det är avstängt nu)"}.`,
+  pickerScreen("Uttal: lyssna och välj",`Du hör ett ord och väljer vilket av orden det var. Orden låter nästan lika, så lyssna noga.${C().recN?" Orden läses av riktiga röster (Lingua Libre) där det finns en inspelning, annars av datorrösten.":""} Slå på ljudet${SOUND?"":" (det är avstängt nu)"}.`,
     [{id:"*",title:"Blandat",status:""},...(C().uttal||[]).map(u=>({id:u.id,title:u.title,sec:u.sec,status:S.ut[u.id]?`bäst ${S.ut[u.id]} %`:""}))],
     id=>startUttal(id==="*"?null:id));
 }

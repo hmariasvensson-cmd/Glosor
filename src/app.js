@@ -865,7 +865,22 @@ function setSound(on){ SOUND=on; try{localStorage.setItem(SOUND_KEY,on?"på":"av
   const b=document.querySelector("#sound"); if(b){ b.setAttribute("aria-pressed",String(!on)); b.textContent=on?"Ljud på":"Ljud av"; } }
 // När en uppläsning senast började (onstart): wirePlay (00-common.js) visar ett tips om ingenting har börjat efter en tryckning på Spela
 let SPOKE_AT=0;
-function speak(t,rate){if(!SOUND||(L&&L.mono))return;try{
+/* Inspelningar med riktiga röster (Lingua Libre på Wikimedia Commons, audio/<språk>/ och build.py): data/<kod>-audio.json =
+   {w: {<ord>: {a: AAC i base64, by, lic, src}}} för orden i kursens uttal.json, hämtas när Uttal öppnas (ensureRec).
+   content.recN = antalet. speak spelar inspelningen när ordet finns där och använder annars datorrösten (ttsSay). */
+const REC={}; let REC_AU=null;
+const recFor=t=>L&&(REC[L.code]||{})[t];
+function ensureRec(){ const code=L.code, add=d=>{REC[code]=(d&&d.w)||{};};
+  if(!(L.content||{}).recN||REC[code]) return Promise.resolve();
+  if(INLINE_DATA[code+"-audio"]) return Promise.resolve(add(INLINE_DATA[code+"-audio"]));
+  return fetchData(code+"-audio").then(add).catch(()=>{ /* utan inspelningar: datorrösten */ }); }
+function speak(t,rate){if(!SOUND||(L&&L.mono))return;
+  const r=recFor(t);
+  if(r) try{ speechSynthesis.cancel(); if(REC_AU) REC_AU.pause();
+    const a=REC_AU=new Audio("data:audio/mp4;base64,"+r.a); a.playbackRate=rate&&rate<.8?.75:1; a.onplaying=()=>{SPOKE_AT=Date.now();};
+    a.play().catch(()=>ttsSay(t,rate)); return; }catch(e){ /* datorrösten i stället */ }
+  ttsSay(t,rate); }
+function ttsSay(t,rate){try{
   speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(cleanSay(t));u.lang=L.tts;if(voice)u.voice=voice;u.rate=rate||baseRate();u.onstart=()=>{SPOKE_AT=Date.now();};speechSynthesis.speak(u);
 }catch(e){ /* ingen uppläsning */ }}
 
