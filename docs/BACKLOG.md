@@ -56,7 +56,7 @@ Emma pluggar på egen hand, utan kurs, lärare och lärobok. Tyskan bygger därf
   - Innehållet är AI-skrivet och behöver granskas med stickprov, som de andra kurserna.
 - **P2: Franska: brister från nivågranskningen** (`docs/nivaer-franska.md`, avsnitt 4; beslutet om nivåerna är genomfört 2026-09-29):
   - **Franska 6 (`fr4`): dubbletter** med frs4/frs5 (245 ord delas med frs5, se "Öppet efter 2026-10-01 (version 35)"). Ordmängden är inom målet (1 045 ord, 1 000–1 200), och kedjan har nått över 3 000 ord efter de vanliga orden 2026-10-05.
-  - **Franska I (`fru`): `nomin` och `conces`** är granskade av AI-agent 2026-10-05 (nomin-021 omskriven). Kvar bara om möjligt: stilnivåexemplen (familier/soutenu) med en fransktalande.
+  - **Franska I (`fru`): `nomin` och `conces`** är granskade av AI-agent 2026-10-05 (nomin-021 omskriven).  Stilnivåexemplen (familier/soutenu) granskade av en separat AI-agent 2026-11-10 (version 70).
 
 ## Arkitektur (granskning 2026-09-29)
 
@@ -89,4 +89,3 @@ Granskningspunkterna nedan är avgjorda av granskningsagenterna 2026-10-01 (vers
 
 ## Öppet efter 2026-10-05 (version 40)
 
-- **P3: Musiktermerna** kan fortfarande kontrolleras med en musiklärare (franska 3, Tyska 4, Tyska 5).
