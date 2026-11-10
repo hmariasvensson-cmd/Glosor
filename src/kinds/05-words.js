@@ -185,7 +185,7 @@ const RATES=[["plan","Fortsätt enligt plan"],["stay","Stanna kvar"],["back","Et
 const daysTxt=n=>n===1?"i morgon":n>=14&&n%7===0?`om ${n/7} veckor`:`om ${n} dagar`;
 const dateTxt=n=>new Date(addDays(Date.now(),n)).toLocaleDateString("sv-SE",{weekday:"long",day:"numeric",month:"long"});
 // Dagar till nästa gång om eleven väljer g (samma uträkning som schedule, på en kopia)
-function rateDays(x,t,g){ const y={...x}; schedule(y,true,S.pass,Date.now(),t,g==="plan"?undefined:g); return DAYS[y.s]; }
+function rateDays(x,t,g){ const y={...x}, now=Date.now(); schedule(y,true,S.pass,now,t,g==="plan"?undefined:g); return Math.max(1,Math.round((y.dd-addDays(now,0))/DAY)); }
 function rateBox(ok){
   const c=sess&&sess.cur; if(!ok||!c||sess.kind!=="words"||sess.extra||c.again||(c.k&&c.k!=="words")||!c.w) return;
   const id=itemId(c), fb=app.querySelector("#fb .feedback"); if(!fb||sess.firstTry[id]!==true) return;

@@ -235,7 +235,9 @@ const dueMax=()=>S.dueMax===0?Infinity:(S.dueMax>0?S.dueMax:MAXDUE);
      v          schemaversion = index i MIGRATIONS. Lägen utan v (från före 2026-09-28) räknas som version 0.
      pass       numret på nästa glospass (börjar på 1, ökar efter varje glospass som inte är extra)
      t          tid för senaste sparningen (ms), ökar alltid, även om en annan enhets klocka går före
-     w          {<ord-id>: {s, due, dd, f, lp, ld, mp, md, lapses, mcR, mcW, tyR, tyW, clR, clW}}, se save() och schedule()
+     w          {<ord-id>: {s, due, dd, f, lp, ld, mp, md, lapses, mcR, mcW, tyR, tyW, clR, clW, fs}}, se save() och schedule()
+                (fs = {s, d, t}, FSRS-data, bara när S.fsrs har varit på, se fsrsNext)
+     fsrs       1 = repetitionsschemat Anpassat (FSRS) i den här kursen; saknas = det fasta schemat (DAYS)
      newCount   antal nya ord per pass (0–NEW_SLIDE, reglaget; -1 = enligt ordplanen, WP_PLAN i 83-wordplan.js)
      wpOn       1 när ordplanens standardval (Plan) har satts en gång (bara kurser med L.examDates)          mode  "mix" | "mc" | "type"
      dueMax     valfritt: repetitioner per glospass (1–DUE_SLIDE; 0 = alla som ska repeteras), saknas = MAXDUE
@@ -808,6 +810,7 @@ const dueWords=()=>WORDS.filter(w=>{const x=ws(w.id);return x&&isDue(x)})
    ett rätt flerval hela vägen till "kan". Språkkurserna påverkas inte. */
 const MC_MAX=2;
 function schedule(x,ok,p,now,t,g){
+  const was={s:x.s,dd:x.dd};   // till FSRS för ord utan x.fs
   const cap=t==="mc"&&!(L&&L.mono)?Math.max(x.s,MC_MAX):INT.length-1;
   if(ok){
     if(g==="reset") x.s=0;
@@ -817,6 +820,30 @@ function schedule(x,ok,p,now,t,g){
   }
   else { x.s=0; delete x.mp; delete x.md; x.lapses=(x.lapses||0)+1; }
   x.due=p+INT[x.s]; x.dd=addDays(now,DAYS[x.s]);
+  if(S&&S.fsrs){ const n=fsrsNext(x,ok?(g==="reset"||g==="back"?1:g==="stay"||g==="hard"?2:g==="easy"?4:3):1,now,g==="reset",was);
+    x.dd=addDays(now,t==="mc"&&!(L&&L.mono)&&x.s<=MC_MAX?Math.min(n,DAYS[x.s]):n); }
+}
+/* FSRS (valfritt, S.fsrs, Inställningar → Repetitionsschema → Anpassat). FSRS-5 med standardvikterna och målet 90 %
+   chans att minnas ordet. x.fs = {s: stabilitet i dagar, d: svårighet 1–10, t: senaste repetitionen (ms)}. Steget x.s
+   räknas som förut (statistik, topplista, "kan"); bara datumet x.dd kommer från FSRS. Betyg: 1 fel, Ett steg tillbaka
+   eller Börja om (som också nollställer x.fs), 2 Stanna kvar, 3 Fortsätt enligt plan, 4 lätt. Ett ord utan x.fs får
+   stabiliteten från sitt intervall i det fasta schemat (DAYS[was.s], senaste repetitionen was.dd minus intervallet)
+   och svårigheten 5. Ändrar aldrig det gamla x.fs på plats (rateDays räknar på en kopia). Returnerar dagar. */
+const FW=[.40255,1.18385,3.173,15.69105,7.1949,.5345,1.4604,.0046,1.54575,.1192,1.01925,1.9395,.11,.29605,2.2698,.2315,2.9898,.51655,.6621];
+const FSRS_MAX=365, F_DECAY=-.5, F_FACTOR=19/81;
+const fsD0=r=>Math.min(10,Math.max(1,FW[4]-Math.exp(FW[5]*(r-1))+1));
+function fsrsNext(x,r,now,reset,was){
+  let f=reset||!x.fs?null:{...x.fs};
+  if(!f&&!reset&&was&&was.dd){ const iv=DAYS[was.s]||1; f={s:iv,d:5,t:was.dd-iv*DAY}; }
+  if(!f) f={s:FW[r-1],d:fsD0(r)};
+  else { const el=Math.max(0,(now-(f.t||now))/DAY), R=Math.pow(1+F_FACTOR*el/f.s,F_DECAY);
+    if(r===1) f.s=Math.min(f.s,FW[11]*Math.pow(f.d,-FW[12])*(Math.pow(f.s+1,FW[13])-1)*Math.exp(FW[14]*(1-R)));
+    else if(el<1) f.s*=Math.exp(FW[17]*(r-3+FW[18]));   // samma dag (FSRS-5)
+    else f.s*=1+Math.exp(FW[8])*(11-f.d)*Math.pow(f.s,-FW[9])*(Math.exp(FW[10]*(1-R))-1)*(r===2?FW[15]:1)*(r===4?FW[16]:1);
+    const d=f.d-FW[6]*(r-3)*(10-f.d)/9;
+    f.d=Math.min(10,Math.max(1,FW[7]*fsD0(4)+(1-FW[7])*d)); }
+  f={s:Math.max(.1,+f.s.toFixed(3)),d:+f.d.toFixed(3),t:now}; x.fs=f;
+  return Math.min(FSRS_MAX,Math.max(1,Math.round(f.s)));   // intervallet vid 90 %: I = S
 }
 
 /* ---------- Uppläsning ----------
@@ -1064,6 +1091,9 @@ function renderStart(){
         <div class="seg" role="group" aria-label="Nya ord"><button data-lf="0" aria-pressed="${!S.listenFirst}">Visa direkt</button><button data-lf="1" aria-pressed="${!!S.listenFirst}">Lyssna först</button></div></div>
     </div>
 `}
+    <div class="field"><span class="label">Repetitionsschema</span>
+      <div class="seg" role="group" aria-label="Repetitionsschema"><button data-fsrs="0" aria-pressed="${!S.fsrs}">Fast</button><button data-fsrs="1" aria-pressed="${!!S.fsrs}">Anpassat (FSRS)</button></div>
+      <p class="foot">${S.fsrs?"Varje ord får ett eget intervall efter hur lätt det har varit för dig (FSRS, målet är att minnas 90 %). Gäller från nästa gång du svarar på ordet.":"1, 3, 7 och 21 dagar, och ord du kan efter 45, 90 och 180 dagar. Anpassat ger varje ord ett eget intervall efter hur lätt det har varit för dig."}</p></div>
     ${Object.keys(LANGUAGES).length>1?`<div class="field"><span class="label">Kurser</span>
       <div class="seg" role="group" aria-label="Kurser"><button data-only="0" aria-pressed="${!onlyCourse()}">Visa alla</button><button data-only="1" aria-pressed="${sameLang(onlyCourse(),L.code)}">Bara ${esc(L.name.toLowerCase())}</button></div></div>`:""}
     <div class="field"><span class="label">Veckomål</span>
@@ -1095,6 +1125,7 @@ function renderStart(){
   app.querySelectorAll("[data-m]").forEach(b=>b.onclick=()=>{S.mode=b.dataset.m;save();renderStart()});
   app.querySelectorAll("[data-slow]").forEach(b=>b.onclick=()=>{S.slow=b.dataset.slow==="1";save();renderStart()});
   app.querySelectorAll("[data-lf]").forEach(b=>b.onclick=()=>{S.listenFirst=b.dataset.lf==="1";save();renderStart()});
+  app.querySelectorAll("[data-fsrs]").forEach(b=>b.onclick=()=>{if(b.dataset.fsrs==="1")S.fsrs=1;else delete S.fsrs;save();renderStart()});
   { const sd=$("#setd"); sd.ontoggle=()=>{SET_OPEN=sd.open}; }
   app.querySelectorAll("[data-only]").forEach(b=>b.onclick=()=>{setOnly(b.dataset.only==="1"?L.code:"");renderStart()});
   app.querySelectorAll("[data-goal]").forEach(b=>b.onclick=()=>{S.goal=+b.dataset.goal;save();boardPush();renderStart()});
@@ -1742,7 +1773,7 @@ function statsForecast(){
   const max=Math.max(...rows.map(r=>r.n),1);
   return `<section class="panel"><h2>Kommande repetitioner</h2>
     <div class="fc">${rows.map(r=>`<div class="fc-col"><span class="fc-n">${r.n}</span><span class="fc-bar" style="height:${Math.round(4+56*r.n/max)}px"></span><span class="fc-l">${r.l}</span></div>`).join("")}</div>
-    <p class="plan">Nya ord kommer tillbaka nästa dag${soon?` (${soon} ord väntar på det)`:""}, sedan efter 3 dagar, 7 dagar och 3 veckor, och ord du kan efter 45, 90 och 180 dagar. Fel svar börjar om från en dag. Efter ett rätt svar kan du välja att stanna kvar, gå ett steg tillbaka eller börja om. ${S.dueMax===0?"Glospasset tar alla ord som ska repeteras.":`Högst ${dueMax()} repetitioner per glospass (välj antal under Repetitioner per pass), resten väntar till passet efter.`}</p></section>`;
+    <p class="plan">Nya ord kommer tillbaka nästa dag${soon?` (${soon} ord väntar på det)`:""}${S.fsrs?", sedan får varje ord ett eget intervall efter hur lätt det har varit för dig (Anpassat schema, FSRS)":", sedan efter 3 dagar, 7 dagar och 3 veckor, och ord du kan efter 45, 90 och 180 dagar"}. Fel svar börjar om från en dag. Efter ett rätt svar kan du välja att stanna kvar, gå ett steg tillbaka eller börja om. ${S.dueMax===0?"Glospasset tar alla ord som ska repeteras.":`Högst ${dueMax()} repetitioner per glospass (välj antal under Repetitioner per pass), resten väntar till passet efter.`}</p></section>`;
 }
 const courseName=()=>S&&S.gy25&&L.courseGy25?L.courseGy25:(L.course||L.name);
 /* ---------- Ordlista ---------- */

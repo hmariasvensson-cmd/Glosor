@@ -4178,6 +4178,39 @@ appReady().then(async()=>{ try{
 </script>"""
 
 
+# Repetitionsschemat Anpassat (FSRS, backloggen P3): valfritt, det fasta schemat är oförändrat
+SCENARIO_FSRS = r"""<script>
+const out=[]; const q=s=>document.querySelector(s);
+const ok=(name,cond,info="")=>out.push((cond?"OK   ":"FEL  ")+name+(info?"  ("+info+")":""));
+appReady().then(async()=>{ try{
+  if(L.code!=="fr") useLang("fr");
+  const now=Date.now(), d0=addDays(now,0), days=x=>Math.round((x.dd-d0)/DAY);
+  delete S.fsrs;
+  const a={s:2,due:1,dd:now,lp:1,ld:now-20*DAY}; schedule(a,true,S.pass,now,"type");
+  ok("fast schema: oförändrat (steg 3 = 21 dagar) och inget fs", a.s===3&&days(a)===21&&!a.fs, JSON.stringify(a));
+  S.fsrs=1;
+  const b={s:2,due:1,dd:now,lp:1,ld:now-20*DAY}; schedule(b,true,S.pass,now,"type");
+  ok("FSRS: steget räknas som förut, intervall från stabiliteten", b.s===3&&b.fs&&b.fs.s>7&&days(b)===Math.round(b.fs.s)&&days(b)>=8, JSON.stringify(b));
+  const s1=b.fs.s, c={...b,fs:{...b.fs,t:now-days(b)*DAY}}; schedule(c,true,S.pass,now,"type");
+  ok("FSRS: rätt igen i tid ger längre intervall", c.fs.s>s1*1.5&&days(c)>days(b), s1+" → "+c.fs.s);
+  const e={...c,fs:{...c.fs}}; schedule(e,false,S.pass,now,"type");
+  ok("FSRS: fel svar ger kort intervall och steg 0", e.s===0&&e.fs.s<c.fs.s/3&&days(e)<days(c)/3&&days(e)>=1, JSON.stringify(e.fs)+" "+days(e));
+  const h={...c,fs:{...c.fs}}, g={...c,fs:{...c.fs}}; schedule(h,true,S.pass,now,"type","stay"); schedule(g,true,S.pass,now,"type");
+  ok("FSRS: Stanna kvar ger kortare intervall än Fortsätt", days(h)<days(g)&&h.fs.d>g.fs.d, days(h)+" < "+days(g));
+  const before=JSON.stringify(c.fs); rateDays(c,"type","plan"); ok("FSRS: förhandsvisningen ändrar inte ordet", JSON.stringify(c.fs)===before);
+  const m={s:1,due:1,dd:now,lp:1,ld:now-5*DAY,fs:{s:40,d:3,t:now-40*DAY}}; schedule(m,true,S.pass,now,"mc");
+  ok("FSRS: flerval räcker inte förbi lär sig (intervall högst DAYS[2])", m.s===2&&days(m)<=DAYS[2], days(m));
+  const r={...c,fs:{...c.fs}}; schedule(r,true,S.pass,now,"type","reset"); ok("FSRS: Börja om nollställer", r.s===0&&r.fs.s<1&&days(r)===1, JSON.stringify(r.fs));
+  delete S.fsrs; renderStart(); const sd=q("#setd"); if(sd) sd.open=true;
+  ok("inställningar: valet Repetitionsschema finns", !!q('[data-fsrs="1"]')&&q('[data-fsrs="0"]').getAttribute("aria-pressed")==="true");
+  q('[data-fsrs="1"]').click(); ok("inställningar: Anpassat sparas", S.fsrs===1&&q('[data-fsrs="1"]').getAttribute("aria-pressed")==="true");
+  q('[data-fsrs="0"]').click(); ok("inställningar: Fast tar bort valet", !("fsrs" in S));
+ }catch(e){ ok("undantag", false, e.message+" "+(e.stack||"").split("\n")[1]); }
+ ok("inga JavaScript-fel", !__err.length, __err.join(" ; "));
+ document.body.insertAdjacentHTML("beforeend","<pre id=out>"+out.join("\n").replace(/</g,"&lt;")+"</pre>");
+});
+</script>"""
+
 # Högskoleprovet: provpasset för hela den verbala delen (08-hpverb.js, backloggen P3)
 SCENARIO_HPVERB = r"""<script>
 const out=[]; const q=s=>document.querySelector(s);
@@ -4237,6 +4270,7 @@ def main():
     text += "\n" + run(SCENARIO_RULEBOX, 30000)   # regeln i korthet före och under grammatikpassen (Oscar 2026-10-03)
     text += "\n" + run(SCENARIO_HPVERB, 30000)   # verbala provpasset (Högskoleprovet)
     text += "\n" + run(SCENARIO_WISH, 30000)   # elevernas önskemål 2026-11-07/08
+    text += "\n" + run(SCENARIO_FSRS, 30000)   # repetitionsschemat Anpassat (FSRS)
     text += "\n" + run(SCENARIO_LAST, 30000, head=LAST_HEAD_CLOUD) + "\n" + run(SCENARIO_LAST, 30000, head=LAST_HEAD_LOCAL)   # senast övade kursen (Maria 2026-11-05)
     text += "\n" + run(SCENARIO_PROFILES, 60000)   # Vem övar? och Föräldravyn (P2/P3 Konton, sparande och topplista)
     text += "\n" + test_minimal_course()   # en ny, liten kurs (8 → 21 kurser)

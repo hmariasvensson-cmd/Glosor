@@ -23,7 +23,6 @@ Båda eleverna ska söka musikutbildning utomlands. Eleven i franska behöver vi
 
 ## Repetition och inlärning
 
-- **P3: Byt schemaläggare till FSRS** (eleven önskade 2026-09-27 ett fast schema: nästa pass, efter 3 pass, sedan 3, 7 och 20 dagar, vilket är byggt; FSRS bara om han vill) (ts-fsrs, MIT, finns som UMD på jsDelivr). Räkna i dagar i stället för pass, med retention 0,9. Lägg kortdata i ett nytt fält och behåll `s`/`due` för statistik och topplista. Det enklare stegschemat (se KLART.md) löser det värsta, så detta är mindre brådskande.
 
 ## Italienska 1 och 2
 
@@ -39,7 +38,7 @@ Emma pluggar på egen hand, utan kurs, lärare och lärobok. Tyskan bygger därf
 
 ## Kurser och nivåer
 
-- **P3: Granska felsvar och samma rot i de nya kurserna** (version 67). Alla kurser har fälten nu; Franska 3, Tyska 4 och Tyska 5 är granskade av en andra omgång agenter (version 65). Gör samma granskning för de övriga när någon börjar använda dem. Ursprung saknas för 605 HP-ord.
+- **P3: Ursprung saknas för 380 HP-ord** (efter två omgångar agenter, 2026-11-10): mest inhemska ord där agenterna inte var säkra. Bara med en etymologisk ordbok (Hellquist, SAOB) som källa.
 - **P2: Mot målet: datum för 2027.** DELF 2027 och Goethe B1/B2 i Stockholm 2027 var inte publicerade 9 november 2026 (`exam.sessionNote` i fr, de4 och de säger det). Lägg in datumen när de kommer (ifsuede.com, goethe.de/ins/se). Berlins godkända intyg för B2.2 och HEMU:s franskkrav (B2 eller en termin på sig) är fortfarande oklara: fråga skolorna. Emmas instrument är okänt (Leipzig kräver B2 för sång, B1 för instrument).
 - **P3: Högskoleprovet ORD: nya provdatum.** `examDates` i `languages/hp/lang.js` har datum till och med 24 oktober 2027; lägg till nya när UHR publicerar dem.
 
