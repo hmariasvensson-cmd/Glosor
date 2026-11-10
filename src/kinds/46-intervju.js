@@ -1,7 +1,7 @@
 /* ---------- Intervjun: antagningsintervjun på franska eller tyska (föräldern 2026-11-03 och 2026-11-09) ----------
    Förberedelse inför juryns intervju vid antagningen till kandidatprogrammen i musik: på franska vid CNSMD Paris,
    CNSMD Lyon, HEM Genève och HEMU Lausanne (Franska 3, sång), på tyska vid HfM Hanns Eisler Berlin, HMT Leipzig och HMT
-   München (Tyska 4, sång eller instrument). Bara kurser med content/intervju.json. Språket väljer skolor, kategorier och
+   München (Tyska 4 och 5, cello). Bara kurser med content/intervju.json. Språket väljer skolor, kategorier och
    texter (IV_LANG, IV_SCHOOLS_BY efter lemmaLang()).
    intervju.json = [{id, cat, q, sv, tips, phrases: [{fr, sv}], model, modelSv, follow?: [fråga]}] (fr = målspråket, som
    i alla datafiler; tips och framåt hämtas med texterna, LAZY_TEXTS i build.py): juryns fråga, tips om
@@ -36,9 +36,9 @@ const IV_LANG={
   fr:{name:"franska",who:"klassisk sångare",prog:"kandidatprogrammet i klassisk sång",term:"entretien avec le jury",addr:"vous",
     topics:"presentation, bakgrund, rösten, repertoaren, hur den sökande arbetar, varför just skolan, planer, franskan",
     plan:"Vid antagningen till sångutbildningen träffar du juryn, ofta efter att du har sjungit. De frågar om dig, din musik och varför du söker just dit, och de vill höra att du kan klara undervisningen på franska."},
-  de:{name:"tyska",who:"klassisk musiker (sång eller instrument)",prog:"kandidatprogrammet (Bachelor) i klassisk musik",term:"Gespräch mit der Prüfungskommission",addr:"Sie",
-    topics:"presentation, bakgrund, instrumentet eller rösten, repertoaren, hur den sökande övar, varför just den här Hochschule, planer, tyskan",
-    plan:"Vid antagningsprovet (Aufnahmeprüfung) träffar du juryn (Prüfungskommission) efter att du har spelat eller sjungit. De frågar om dig, din musik och varför du söker just dit, och de vill höra att du kan klara undervisningen på tyska. Leipzig vill dessutom ha en kort presentation på tyska."}};
+  de:{name:"tyska",who:"cellist (klassisk musik, huvudämne violoncello)",prog:"kandidatprogrammet (Bachelor) i klassisk musik",term:"Gespräch mit der Prüfungskommission",addr:"Sie",
+    topics:"presentation, bakgrund, cellon och tekniken, repertoaren, hur den sökande övar, varför just den här Hochschule, planer, tyskan",
+    plan:"Vid antagningsprovet (Aufnahmeprüfung) träffar du juryn (Prüfungskommission) efter att du har spelat. De frågar om dig, din musik och varför du söker just dit, och de vill höra att du kan klara undervisningen på tyska. Leipzig vill dessutom ha en kort presentation på tyska."}};
 const ivLang=()=>IV_LANG[lemmaLang()]||IV_LANG.fr;
 const ivSchools=()=>IV_SCHOOLS_BY[lemmaLang()]||IV_SCHOOLS_BY.fr;
 const ivSchool=()=>ivSchools().find(s=>s.id===(S.iv||{}).school)||ivSchools()[0];
@@ -55,17 +55,17 @@ const IV_INFO={
   hemu:["Ingen övre åldersgräns. Repertoar på minst 30 minuter: sex verk på tre språk, utantill (utom oratorium och det samtida stycket). 2026: ansökan senast 1 mars, sångprov 20–22 april, teoriprov 27 april.",
     "Webben säger franska B2; enligt studiereglementet rekommenderas B2 och den som har för låg nivå har en termin på sig. Fråga antagningen (admissions.classique@hemu-cl.ch) vad som gäller.",
     "Skolans sidor nämner ingen intervju, men räkna med samtal med juryn."],
-  // De tyska skolorna (kontrollerat 2026-11-09): inget av proven har ett eget samtal, men juryn kan pröva tyskan,
-  // och en presentation eller en text på tyska ingår i Berlin och Leipzig
-  berlin:["Antagningen 2027 (vinterterminen, enda intaget för sång): ansökan 15 februari–8 april via muvac med förgallringsvideo. Första omgången på plats 7–11 juni, andra omgången 14 juni.",
-    "På plats: huvudämne, piano, skriftlig satslära och gehörslära. Sångare framför också en tysk monolog ur en pjäs (ungefär 2 minuter, utantill), och minst en sång ska vara på tyska. Juryn får pröva tyskan.",
-    "Tyska B2.2 krävs av alla, senast vid inskrivningen. Saknas intyget blir antagningen villkorad, med intensivkurs i tyska före terminen."],
-  leipzig:["Antagningen 2027: anmälan och video 1–31 mars, prov på plats 31 maj–5 juni.",
-    "I videon presenterar du dig: instrumentalister på tyska (1–2 minuter: namn, bakgrund och varför Leipzig). Sångare framför också en tysk text fritt på provet.",
-    "Tyska B2 för sång och B1 för instrument ska visas redan vid provet på plats. Goethe, telc, TestDaF och ÖSD godtas."],
-  muenchen:["Antagningen 2027: ansökan med video senast 5 mars, prov på plats 12–22 juni (bara i München).",
-    "På plats: huvudämne, skriftlig musiklära och gehörslära, bladsång och piano. Sångare förbereder sex verk, minst två på tyska.",
-    "Tyska B1 (även sång i den konstnärliga bacheloren) visas vid inskrivningen. Bara Goethe, telc, ÖSD eller DSD godtas."]};
+  // De tyska skolorna, för cello (kontrollerat 2026-11-10, docs/antagning-cello-2027.md): inget av proven har ett eget
+  // samtal, men juryn kan pröva tyskan, och i Leipzig presenterar man sig på tyska i videon
+  berlin:["Cello 2027 (vinterterminen): ansökan 15 februari–8 april via muvac (60 €) med oklippt video: två satser ur en Bachsvit, en sonats första sats, expositionen ur en konserts första sats och en Popperetyd. Prov på plats 7–11 juni. Det finns också ett sommarintag 2028 (ansökan 1 oktober–8 november 2027).",
+    "På plats: etyd, konsertsats, sonatsats och kanske prima vista (skolan ställer pianist), pianoprov med två stycken och ett skriftligt prov i satslära och gehör (2 timmar). Ange önskad lärare i ansökan; provlektion uppmuntras.",
+    "Tyska B2.2 krävs även av instrumentalister, senast vid inskrivningen. Saknas intyget blir antagningen villkorad, med intensivkurs i tyska före terminen."],
+  leipzig:["Cello 2027: anmälan och video 1–31 mars (50 €), prov på plats 1 juni. Högst 25 år vid studiestarten.",
+    "Video: 20 minuter med verk från tre epoker och en presentation på tyska (högst 2 minuter: namn, bakgrund och varför Leipzig). På plats: konsertens första sats, preludiet och två satser ur en Bachsvit, en etyd eller ett virtuost stycke och ett fritt stycke, med en långsam sats; pianist ställs. Teoriprov (90 min) och pianoprov (10 min). Kraven är från 2026.",
+    "Tyska B1 för cello (B2 gäller sångare) ska visas redan vid provet den 1 juni. Goethe, telc, TestDaF och ÖSD godtas."],
+  muenchen:["Cello 2027: ansökan med video senast 5 mars (50 €): 10–15 minuter med en Bachsats och 5 minuter ur en konsert. Prov på plats 12–22 juni (celloprovets dag är inte publicerad).",
+    "På plats väljer juryn bland skalor över fyra oktaver, etyd, Bachsats, konsertsats, ett stycke från 1900-talet och prima vista; skalor, etyd, Bach och konsert utantill. Musiklära (60 min), gehör och piano (ett polyfont stycke och ett valfritt). Kraven är från 2026.",
+    "Tyska B1 för den konstnärliga bacheloren (B2 för den pedagogiska) visas vid inskrivningen. Bara Goethe, telc, ÖSD eller DSD godtas."]};
 function openIv(){
   talkStop(); stopSpeech(); $("#tabs").hidden=true; sess=null; curView="ova"; RETURN_TO=null;
   const st=ivState(), xs=ivList(), sc=ivSchool(), mock=(talkState().c||{})["iv:"+sc.id];

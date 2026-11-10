@@ -26,7 +26,7 @@ LANGUAGES.de = {
   genders: {m: "maskulinum", f: "femininum", n: "neutrum", pl: "plural"},
   selfStudy: true,
   exam: {name: "Goethe-Zertifikat B2 (eller telc B2/TestDaF)", level: "B2", sessionNote: "Inga datum för Goethe-Zertifikat B2 i Sverige 2027 är publicerade (kontrollerat 9 november 2026). Goethe-Institut i Stockholm (pruefungen-nordeuropa@goethe.de) är det enda provstället i Sverige; något telc- eller TestDaF-provställe i Sverige har inte hittats. Mejla Goethe-Institut tidigt och planera för att kunna skriva provet i Tyskland. Leipzig vill se intyget redan vid provet på plats (31 maj 2027), München godtar bara Goethe, telc, ÖSD och DSD."},   // språkprovet eleven siktar på            // eleven pluggar på egen hand, utan lärare och lärobok (påverkar texterna i appen)
-  goal: "att klara språkprovet för att få studera musik utomlands (i Tyskland)",   // valfritt: elevens mål, nämns i Claudes bedömning
+  goal: "att klara språkprovet för att få studera cello vid en musikhögskola i Tyskland",   // valfritt: elevens mål, nämns i Claudes bedömning
   nounCaps: true,             // substantiv skrivs med stor bokstav (ord man sparar från texter behåller sin stavning)
   genderGame: {m: "der", f: "die", n: "das"},   // spelet der, die, das och plural
 

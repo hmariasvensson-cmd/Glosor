@@ -2,6 +2,13 @@
 
 Punkter som har flyttats från [`BACKLOG.md`](BACKLOG.md) när de byggdes. **Referens** anger backloggens rubrik och prioritet. **Commit** anger var ändringen finns i git. **Publicerat** anger versionen av artefakten på https://claude.ai/artifact/YBQv8j4qXQQLuPwLAWt5mP.
 
+## 2026-11-10, del 2 (publicerat som version 69)
+
+- **Tyskan för en cellist** (P2 Mot målet: eleven i tyska spelar cello, besked från föräldern 2026-11-10).
+  - Intervjuövningen (`content/intervju.json` i de4 och de) är omskriven för cello: samma 45 frågor och id, men exempelsvar, fraser och tips om stråkteknik, tumläge, intonation, Bachsviterna och cellokonserterna i stället för sång. `IV_LANG.de` säger cellist.
+  - Nytt ordavsnitt `#cel` "Cello · spela, öva och provspela" (58 ord: stråkens och instrumentets delar, stråkarter, teknik, orkester och provspelning) i både Tyska 4 och Tyska 5.
+  - Skolornas krav för cello (`IV_INFO` och `skolor.json`, underlag med källor i `docs/antagning-cello-2027.md`): Berlin B2.2 även för instrumentalister, video med Bach, sonat, konsert och Popper, prov 7–11 juni, sommarintag 2028 som reserv; Leipzig B1 redan vid provet 1 juni, video 20 min plus 2 min presentation på tyska, högst 25 år; München B1, video senast 5 mars, prov 12–22 juni. `goal` i de4 och de säger cello.
+
 ## 2026-11-10 (publicerat som version 68)
 
 - **Repetitionsschemat Anpassat (FSRS)** (P3 *Byt schemaläggare till FSRS*, frivilligt eftersom eleven önskade ett fast schema). Inställningar → Fler inställningar → Repetitionsschema: Fast (som förut, förvalt) eller Anpassat (FSRS). `S.fsrs`, `fsrsNext` i app.js: FSRS-5 med standardvikterna och målet 90 %, högst 365 dagar, kortdata i `x.fs`. Steget `x.s` räknas som förut, så statistik, topplista, "kan" och flervalsgränsen påverkas inte; bara datumet för nästa repetition kommer från FSRS. Valen efter ett rätt svar (Stanna kvar, Ett steg tillbaka, Börja om) visar FSRS-dagarna. Egen implementation (ingen extern fil). Test: `SCENARIO_FSRS`.

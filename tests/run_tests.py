@@ -2807,7 +2807,7 @@ appReady().then(async()=>{ try{
   ok("plan: kort på startsidan utan startdatum", !!q("#plancard")&&q("#plancard").textContent.includes("Studieplan")&&!/vecka \d+ av/.test(q("#plancard").textContent));
   { const bad=[]; P.weeks.forEach((w,i)=>(w.do||[]).forEach(x=>{ const it=planItem(x); if(!it||typeof it.go!=="function"||!it.title) bad.push(w.id+":"+x.k+":"+(x.id||"")); }));
     ok("plan: varje uppgift i planen finns i kursen", !bad.length, bad.join(", ")); }
-  { const secs=new Set(P.weeks.flatMap(w=>(w.words||[]).map(r=>r.sec))), main=L.base.sections.filter(s=>/^d/.test(s.id)).map(s=>s.id);
+  { const secs=new Set(P.weeks.flatMap(w=>(w.words||[]).map(r=>r.sec))), main=L.base.sections.filter(s=>/^(d|cel$)/.test(s.id)).map(s=>s.id);
     const all=P.weeks.flatMap(w=>planWords(w).map(x=>x.id)), uniq=new Set(all);
     const inMain=L.base.words.filter(w=>main.includes(w.sec)).length;
     ok("plan: alla ord i kursens avsnitt (utom musikteorin) finns i någon vecka, en gång", main.every(s=>secs.has(s))&&all.length===uniq.size&&uniq.size===inMain, uniq.size+" / "+inMain+" / "+all.length);

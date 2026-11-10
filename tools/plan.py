@@ -20,6 +20,7 @@ def load(c):
         elif line.strip() and cur: cnt[cur] += 1
     return d, secs, cnt
 
+CELLO = "cel"   # celloorden (Tyska 4 och 5): i musikkapitlets två veckor, inte ett eget kapitel
 VSEC = {"hv", "tv", "sv"}   # avsnittet med vanliga ord (tools/frekvens.py), utspritt som uttrycksavsnittet
 
 
@@ -27,13 +28,16 @@ def std_weeks(secs, rsec, elective=()):
     """8 kapitel à 2 veckor, uttryck/redemittel utspritt (en del per kapitel), vanliga ord (VSEC) likaså i kapitlets
     andra vecka, sedan 2 veckor repetition och prov. Valbara avsnitt (elective, t.ex. musikteorin) tas inte med."""
     vsec = next((s for s, _ in secs if s in VSEC), None)
-    chaps = [s for s in secs if s[0] not in (rsec, vsec) and not any(rx.search(s[0]) for rx in elective)]
+    chaps = [s for s in secs if s[0] not in (rsec, vsec, CELLO) and not any(rx.search(s[0]) for rx in elective)]
+    has_cello = any(s == CELLO for s, _ in secs)
+    music = next((sid for sid, name in chaps if "Musik" in name), chaps[-1][0] if chaps else None)
     W = []
     for n, (sid, name) in enumerate(chaps):
         for part in (1, 2):
             words = [{"sec": sid, "part": part, "of": 2}]
             if part == 1: words.append({"sec": rsec, "part": n + 1, "of": len(chaps)})
             if part == 2 and vsec: words.append({"sec": vsec, "part": n + 1, "of": len(chaps)})
+            if has_cello and sid == music: words.append({"sec": CELLO, "part": part, "of": 2})
             W.append({"title": f"{name} (del {part})", "words": words, "chap": sid, "last": part == 2})
     return W
 
