@@ -2,6 +2,10 @@
 
 Punkter som har flyttats från [`BACKLOG.md`](BACKLOG.md) när de byggdes. **Referens** anger backloggens rubrik och prioritet. **Commit** anger var ändringen finns i git. **Publicerat** anger versionen av artefakten på https://claude.ai/artifact/YBQv8j4qXQQLuPwLAWt5mP.
 
+## 2026-11-10, del 4 (publicerat som version 71)
+
+- **Videopresentationen till HMT Leipzig** (P2 Mot målet, eleven i tyska spelar cello). Ny skrivuppgift i avsnittet `cel` i Tyska 4 (`t4-w-leipzig`, 150–220 ord, B1) och Tyska 5 (`w-leipzig`, 170–240 ord, B2): presentationen på tyska som instrumentalister gör i förgallringsvideon (stråk högst 2 minuter, anmälan 1–31 mars 2027), med exempeltext med platshållare och översättning. Får Claudes kommentarer som andra skrivuppgifter och finns under Tala (4/3/2, `w:<id>`), så att hon kan öva in den muntligt. Lagd i studieplanerna (Tyska 4 kapitel 6, Tyska 5 vecka 17).
+
 ## 2026-11-10, del 3 (publicerat som version 70)
 
 - **Musiktermerna och stilnivåerna granskade av separata AI-agenter** (P3 *Musiktermerna kan kontrolleras med en musiklärare* och Franska I *stilnivåexemplen med en fransktalande*; föräldern 2026-11-10: ingen människa kommer att granska, använd en separat agent). Sju agenter med rollen musiklärare respektive fransktalande universitetslärare granskade musikteoriorden (`#mt1`–`#mt7` och `#cel`) i Franska 3, Tyska 4 och Tyska 5 (1 109 ord), musikteorifrågorna (`teori.json`, 461 frågor) och Franska I:s nominalisering och stilnivåer (`grammar-nomin.json`, regeln i `regler.json`). Inga fel i facit hittades. Rättat: 15 ord (t.ex. tessiture = tessitur/bekvämt läge, inte hela omfånget; die Varianttonart = likanämnd tonart; das Vorzeichen bara fasta förtecken; die Vorschlagsnote; felsvaret "nyckel" för der Notenschlüssel), 6 teorifrågor (bl.a. Engführung = it. stretto, inte stretta; mouvement direct = medrörelse) och 2 förklaringar i Franska I (squatter, le choix är oregelbunden).
