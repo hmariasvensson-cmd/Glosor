@@ -205,6 +205,36 @@ function rateWord(k){
   nextQ();
 }
 
+/* ---------- Utjämning av repetitionerna (elevens önskemål 2026-11-11, alla kurser) ----------
+   Ingen dag de kommande 60 dagarna ska ha många fler ord att repetera än andra. Gränsen T är snittet för de kommande
+   fyra veckorna plus 20 % (minst 5). En dag över T flyttar bara överskottet, ett ord i taget, helst ord med långt
+   intervall, till den lugnaste dagen inom ordets fönster (±10 % av intervallet, 1–7 dagar; ord med intervall under 3
+   dagar flyttas aldrig) som ligger under T. Förfallna ord och dagens ord rörs inte. Körs efter varje glospass och när
+   en kurs öppnas; sparar bara om något flyttades. Gäller både det fasta schemat och FSRS (intervallet ur x.fs). */
+// @lazy ovningar
+function balanceDue(){
+  if(!S||!S.w) return 0;
+  const t0=addDays(Date.now(),0), H=60, load=new Array(H+8).fill(0), items=[];
+  Object.values(S.w).forEach(x=>{ if(!x||!x.dd) return; const d=Math.round((x.dd-t0)/DAY); if(d<1||d>H) return; load[d]++;
+    const iv=x.fs?Math.max(1,Math.round(x.fs.s)):DAYS[x.s]||1, f=iv<3?0:Math.min(7,Math.max(1,Math.round(iv*.1)));
+    if(f) items.push({x,d,f,iv}); });
+  const mean=load.slice(1,29).reduce((a,b)=>a+b,0)/28, T=Math.max(5,Math.ceil(mean*1.2));
+  let moved=0;
+  for(let d=1;d<=H;d++) while(load[d]>T){
+    let done=false;
+    for(const i of items.filter(i=>i.d===d).sort((a,b)=>b.iv-a.iv)){
+      let best=null;
+      for(let k=-i.f;k<=i.f;k++){ const e=d+k; if(!k||e<1||e>H+7||load[e]>=T) continue;
+        if(best===null||load[e]<load[best]||(load[e]===load[best]&&Math.abs(k)<Math.abs(best-d))) best=e; }
+      if(best!==null){ load[d]--; load[best]++; i.d=best; i.x.dd=addDays(t0,best); moved++; done=true; break; }
+    }
+    if(!done) break;
+  }
+  if(moved) save();
+  return moved;
+}
+// @lazy-end
+
 /* ---------- Pass klart: schemaläggning ---------- */
 function applyAnswer(x,id){
   const t=sess.firstType[id]||"mc", ok=sess.firstTry[id]!==false;
@@ -236,7 +266,7 @@ function finishSession(){
   if(ids.length||!dp){ S.log.push(E); if(!extra) S.pass++; }
   if(other.length) kindsDone(other,part(other.length),now,{dp:1});
   const daily=sess.daily; if(daily) S.dailyDay=dayKey(now);
-  dropRun(sess); delete S.run; save();
+  dropRun(sess); delete S.run; save(); if(!extra) balanceDue();
   const right=ids.filter(id=>sess.firstTry[id]!==false).length+other.filter(id=>sess.firstTry[id]).length, total=ids.length+other.length;
   const missed=ids.filter(id=>sess.firstTry[id]===false).map(id=>byId[id]);
   const recap=other.filter(id=>!sess.firstTry[id]).map(id=>{const i=id.indexOf(":"), K=KINDS[id.slice(0,i)]; return K&&K.recap?K.recap(id.slice(i+1)):"";}).filter(Boolean);

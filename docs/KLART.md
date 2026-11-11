@@ -2,6 +2,10 @@
 
 Punkter som har flyttats från [`BACKLOG.md`](BACKLOG.md) när de byggdes. **Referens** anger backloggens rubrik och prioritet. **Commit** anger var ändringen finns i git. **Publicerat** anger versionen av artefakten på https://claude.ai/artifact/YBQv8j4qXQQLuPwLAWt5mP.
 
+## 2026-11-11 (publicerat som version 79)
+
+- **Jämnare repetition** (Tyck till, eleven i franska 2026-11-11: "i alla språk … inte många fler ord som ska repeteras en dag jämfört med en annan … flytta så få som möjligt"). `balanceDue` i 05-words.js (lata koden `code-ovningar.js`) körs efter varje glospass och när en kurs öppnas: en dag med fler än snittet + 20 % flyttar bara överskottet, helst ord med långt intervall, högst ±10 % av intervallet (1–7 dagar) till lugnare dagar. Ord med kort intervall och förfallna ord rörs inte. Gäller alla kurser, med det fasta schemat och med FSRS. Statistikens text om schemat säger det. Test: `SCENARIO_BALANCE`.
+
 ## 2026-11-10, del 5 (publicerat som version 72–78; ljudfilerna laddades upp i omgångar)
 
 - **Uttal med riktiga röster** (P2 *Resten av kursmallen*: "lyssna med en riktig röst"). 690 inspelningar från Lingua Libre på Wikimedia Commons (CC BY-SA, CC BY eller CC0; franska mest av LoquaxFR, tyska mest av Sebastian Wallroth), konverterade till AAC mono (`audio/<språk>/`, `audio/README.md`). build.py lägger kursens inspelningar i `dist/data/<kod>-audio.json` och sätter `content.recN`; appen hämtar filen när Uttal öppnas (`ensureRec`), och `speak` spelar inspelningen när ordet finns där och använder annars datorrösten (`ttsSay`). Under varje fråga står talare, licens och länk (`recCredit`, krävs av CC BY-SA). Franska 3 har 102 av uttalsorden inspelade. Test: `SCENARIO_REC`.

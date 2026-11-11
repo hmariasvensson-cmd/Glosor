@@ -4178,6 +4178,35 @@ appReady().then(async()=>{ try{
 </script>"""
 
 
+# Utjämning av repetitionerna (elevens önskemål 2026-11-11): flytta så få ord som möjligt så att ingen dag sticker ut
+SCENARIO_BALANCE = r"""<script>
+const out=[]; const q=s=>document.querySelector(s);
+const ok=(name,cond,info="")=>out.push((cond?"OK   ":"FEL  ")+name+(info?"  ("+info+")":""));
+appReady().then(async()=>{ try{
+  if(L.code!=="fr") useLang("fr"); await until(()=>L.code==="fr"&&WORDS.length,5000);
+  const t0=addDays(Date.now(),0), day=x=>Math.round((x.dd-t0)/DAY);
+  S.w={};
+  for(let d=1;d<=28;d++) for(let j=0;j<4;j++) S.w["bg"+d+"-"+j]={s:3,due:1,dd:addDays(t0,d)};
+  for(let j=0;j<30;j++) S.w["peak"+j]={s:3,due:1,dd:addDays(t0,10)};          // 34 ord dag 10, intervall 21 → fönster ±2
+  for(let j=0;j<12;j++) S.w["short"+j]={s:0,due:1,dd:addDays(t0,3)};         // intervall 1: flyttas aldrig
+  S.w.old={s:5,due:1,dd:addDays(t0,-3)};                                       // förfallet: rörs inte
+  const before=JSON.parse(JSON.stringify(S.w));
+  const moved=balanceDue();
+  const load={}; Object.values(S.w).forEach(x=>{const d=day(x); load[d]=(load[d]||0)+1;});
+  const mean=Object.entries(load).filter(([d])=>d>=1&&d<=28).reduce((a,[,n])=>a+n,0)/28, T=Math.max(5,Math.ceil(mean*1.2));
+  const changed=Object.keys(S.w).filter(k=>S.w[k].dd!==before[k].dd);
+  ok("utjämning: något flyttades", moved>0&&moved===changed.length, moved);
+  ok("utjämning: bara ord från dagar över gränsen (3 och 10) flyttas, högst två dagar", changed.every(k=>{const b=Math.round((before[k].dd-t0)/DAY); return (b===3||b===10)&&Math.abs(day(S.w[k])-b)<=2;}), changed.slice(0,5).join());
+  ok("utjämning: korta intervall och förfallna ord rörs inte", Object.keys(S.w).filter(k=>k.startsWith("short")||k==="old").every(k=>S.w[k].dd===before[k].dd));
+  ok("utjämning: dagarna 8–12 under gränsen så långt det går", [8,9,11,12].every(d=>load[d]<=T), JSON.stringify([8,9,10,11,12].map(d=>load[d]))+" T="+T);
+  ok("utjämning: så få som möjligt (flyttar inte mer än överskottet)", moved<=34-T, moved+" ≤ "+(34-T));
+  ok("utjämning: en andra körning flyttar inget", balanceDue()===0);
+ }catch(e){ ok("undantag", false, e.message+" "+(e.stack||"").split("\n")[1]); }
+ ok("inga JavaScript-fel", !__err.length, __err.join(" ; "));
+ document.body.insertAdjacentHTML("beforeend","<pre id=out>"+out.join("\n").replace(/</g,"&lt;")+"</pre>");
+});
+</script>"""
+
 # Uttal med riktiga röster (Lingua Libre, data/<kod>-audio.json): speak spelar inspelningen, annars datorrösten
 SCENARIO_REC = r"""<script>
 const out=[]; const q=s=>document.querySelector(s);
@@ -4295,6 +4324,7 @@ def main():
     text += "\n" + run(SCENARIO_WISH, 30000)   # elevernas önskemål 2026-11-07/08
     text += "\n" + run(SCENARIO_FSRS, 30000)   # repetitionsschemat Anpassat (FSRS)
     text += "\n" + run(SCENARIO_REC, 30000)   # uttal med riktiga röster
+    text += "\n" + run(SCENARIO_BALANCE, 30000)   # utjämning av repetitionerna
     text += "\n" + run(SCENARIO_LAST, 30000, head=LAST_HEAD_CLOUD) + "\n" + run(SCENARIO_LAST, 30000, head=LAST_HEAD_LOCAL)   # senast övade kursen (Maria 2026-11-05)
     text += "\n" + run(SCENARIO_PROFILES, 60000)   # Vem övar? och Föräldravyn (P2/P3 Konton, sparande och topplista)
     text += "\n" + test_minimal_course()   # en ny, liten kurs (8 → 21 kurser)

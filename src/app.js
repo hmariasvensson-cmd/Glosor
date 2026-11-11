@@ -1788,7 +1788,7 @@ function statsForecast(){
   const max=Math.max(...rows.map(r=>r.n),1);
   return `<section class="panel"><h2>Kommande repetitioner</h2>
     <div class="fc">${rows.map(r=>`<div class="fc-col"><span class="fc-n">${r.n}</span><span class="fc-bar" style="height:${Math.round(4+56*r.n/max)}px"></span><span class="fc-l">${r.l}</span></div>`).join("")}</div>
-    <p class="plan">Nya ord kommer tillbaka nästa dag${soon?` (${soon} ord väntar på det)`:""}${S.fsrs?", sedan får varje ord ett eget intervall efter hur lätt det har varit för dig (Anpassat schema, FSRS)":", sedan efter 3 dagar, 7 dagar och 3 veckor, och ord du kan efter 45, 90 och 180 dagar"}. Fel svar börjar om från en dag. Efter ett rätt svar kan du välja att stanna kvar, gå ett steg tillbaka eller börja om. ${S.dueMax===0?"Glospasset tar alla ord som ska repeteras.":`Högst ${dueMax()} repetitioner per glospass (välj antal under Repetitioner per pass), resten väntar till passet efter.`}</p></section>`;
+    <p class="plan">Nya ord kommer tillbaka nästa dag${soon?` (${soon} ord väntar på det)`:""}${S.fsrs?", sedan får varje ord ett eget intervall efter hur lätt det har varit för dig (Anpassat schema, FSRS)":", sedan efter 3 dagar, 7 dagar och 3 veckor, och ord du kan efter 45, 90 och 180 dagar"}. Fel svar börjar om från en dag. Dagar med många fler ord än andra jämnas ut: några ord flyttas en eller några dagar. Efter ett rätt svar kan du välja att stanna kvar, gå ett steg tillbaka eller börja om. ${S.dueMax===0?"Glospasset tar alla ord som ska repeteras.":`Högst ${dueMax()} repetitioner per glospass (välj antal under Repetitioner per pass), resten väntar till passet efter.`}</p></section>`;
 }
 const courseName=()=>S&&S.gy25&&L.courseGy25?L.courseGy25:(L.course||L.name);
 /* ---------- Ordlista ---------- */
@@ -2177,4 +2177,5 @@ function useLang(code){
   setSaveNote();
   cloudAttach();
   trimCourses(code);
+  balanceDue();   // utjämning av repetitionerna (05-words.js)
 }
