@@ -253,6 +253,8 @@ const dueMax=()=>S.dueMax===0?Infinity:(S.dueMax>0?S.dueMax:MAXDUE);
                 rate {<ord-id>: "again"|"hard"|"easy"}, elevens bedömningar (Bra står inte med). Dagens pass ("words|pass")
                 har dp (gruppernas id) och under lärokorten mixIn (frågorna som blandas in i quizet), 90-mix.js
      dailyDay   dag då Dagens pass senast gjordes klart (antalet pass i dag räknas ur loggposterna med dp: 1)
+     todoHide   tidpunkt (ms) då kortet Inför provet visas igen (Dölj en vecka, 84-prep.js)
+     adjtr      adjektivträningen {c: {<artikel>|<kasus>|<genus>: {r, n}}, step} (63-adjtrain.js)
      examDate   provdatum "ÅÅÅÅ-MM-DD", valfritt; styr Dagens pass de sista sex veckorna (90-mix.js)
      vt, vv     verbträning per tempus och per verb {r, n}
      mine       egna ord [{t, sv, g, ex, exSv, src, own, form}]; form = den böjda formen i texten när ordet sparades i
@@ -821,7 +823,8 @@ function schedule(x,ok,p,now,t,g){
   else { x.s=0; delete x.mp; delete x.md; x.lapses=(x.lapses||0)+1; }
   x.due=p+INT[x.s]; x.dd=addDays(now,DAYS[x.s]);
   if(S&&S.fsrs){ const n=fsrsNext(x,ok?(g==="reset"||g==="back"?1:g==="stay"||g==="hard"?2:g==="easy"?4:3):1,now,g==="reset",was);
-    x.dd=addDays(now,t==="mc"&&!(L&&L.mono)&&x.s<=MC_MAX?Math.min(n,DAYS[x.s]):n); }
+    // fsrsNext ligger i code-ovningar.js (hämtas när kursen öppnas); innan filen har kommit ger stubben ett Promise: fast schema
+    if(typeof n==="number") x.dd=addDays(now,t==="mc"&&!(L&&L.mono)&&x.s<=MC_MAX?Math.min(n,DAYS[x.s]):n); }
 }
 /* FSRS (valfritt, S.fsrs, Inställningar → Repetitionsschema → Anpassat). FSRS-5 med standardvikterna och målet 90 %
    chans att minnas ordet. x.fs = {s: stabilitet i dagar, d: svårighet 1–10, t: senaste repetitionen (ms)}. Steget x.s
@@ -829,6 +832,7 @@ function schedule(x,ok,p,now,t,g){
    eller Börja om (som också nollställer x.fs), 2 Stanna kvar, 3 Fortsätt enligt plan, 4 lätt. Ett ord utan x.fs får
    stabiliteten från sitt intervall i det fasta schemat (DAYS[was.s], senaste repetitionen was.dd minus intervallet)
    och svårigheten 5. Ändrar aldrig det gamla x.fs på plats (rateDays räknar på en kopia). Returnerar dagar. */
+// @lazy ovningar
 const FW=[.40255,1.18385,3.173,15.69105,7.1949,.5345,1.4604,.0046,1.54575,.1192,1.01925,1.9395,.11,.29605,2.2698,.2315,2.9898,.51655,.6621];
 const FSRS_MAX=365, F_DECAY=-.5, F_FACTOR=19/81;
 const fsD0=r=>Math.min(10,Math.max(1,FW[4]-Math.exp(FW[5]*(r-1))+1));
@@ -845,6 +849,7 @@ function fsrsNext(x,r,now,reset,was){
   f={s:Math.max(.1,+f.s.toFixed(3)),d:+f.d.toFixed(3),t:now}; x.fs=f;
   return Math.min(FSRS_MAX,Math.max(1,Math.round(f.s)));   // intervallet vid 90 %: I = S
 }
+// @lazy-end
 
 /* ---------- Uppläsning ----------
    Uppläsningen (speechSynthesis) saknas eller kastar fel i en del webbläsare och i testerna. Då blir det bara tyst,
@@ -1131,7 +1136,7 @@ function renderStart(){
   } finally{ if(top) RCACHE=null; }
   $("#src").value=S.src; if(!$("#src").selectedOptions[0]||$("#src").selectedOptions[0].disabled){S.src="auto";$("#src").value="auto"}
   $("#src").onchange=e=>{S.src=e.target.value;save();renderStart()};
-  wireBookPanel(); wireChapterMap(); wireWriteNag(); wireSuggest(); wirePrep();
+  wireBookPanel(); wireChapterMap(); wireWriteNag(); wireSuggest(); wirePrep(); wireTodo();
   app.querySelectorAll("[data-nextc]").forEach(b=>b.onclick=()=>{ LAST.moved=true; useLang(b.dataset.nextc); });
   app.querySelectorAll("[data-n]").forEach(b=>b.onclick=()=>{S.newCount=b.dataset.n==="own"?(S.newCount===WP_PLAN?newCountNow():S.newCount):+b.dataset.n;save();renderStart()});
   app.querySelectorAll("[data-dm]").forEach(b=>b.onclick=()=>{S.dueMax=b.dataset.dm==="own"?(S.dueMax===0?MAXDUE:S.dueMax):+b.dataset.dm;save();renderStart()});
@@ -1615,7 +1620,7 @@ function answerMC(i){
   app.querySelectorAll(".opt").forEach((b,k)=>{b.disabled=true; if(d.opts[k].ok)b.classList.add("right"); else if(k===i)b.classList.add("wrong");});
   const back=record(ok); sess.done++; snapRun();
   $("#fb").innerHTML=`<div class="feedback ${ok?"ok":"bad"}"><strong>${ok?"Rätt!":"Inte riktigt."}</strong>
-    ${backMsg(ok,back)}${!ok&&d.wrongCard?d.wrongCard:d.explain}${!ok?`<button class="override" id="ovr">Jag tryckte fel</button>`:""}${reportBtn()}</div>
+    ${backMsg(ok,back)}${!ok&&d.opts[i].why?`<p class="wnote">${d.opts[i].why}</p>`:""}${!ok&&d.wrongCard?d.wrongCard:d.explain}${!ok?`<button class="override" id="ovr">Jag tryckte fel</button>`:""}${reportBtn()}</div>
     <button class="btn" id="nx" style="margin-top:12px">Nästa</button>`;
   // "Jag tryckte fel" (elevens felrapport 2026-11-07): som "Jag hade rätt" i skrivfrågorna (unrecord), frågan räknas som rätt
   if($("#ovr")) $("#ovr").onclick=()=>{ unrecord(); snapRun(); if($("#back")) $("#back").remove();
@@ -1750,7 +1755,7 @@ document.addEventListener("click",e=>{const b=e.target.closest&&e.target.closest
    Varje typ av fråga eller övning registrerar sig med defineKind(namn, {...}) i src/kinds/*.js
    (glosquizet i 05-words.js). Quizmotorn slår upp typen i KINDS med frågans k (eller passets kind). Fälten (alla valfria utom name):
      name     namnet i statistiken
-     mc       c => flervalsfrågan {head, ask, opts, explain, …} (se renderMC)
+     mc       c => flervalsfrågan {head, ask, opts, explain, …} (se renderMC); ett alternativ kan ha why (HTML), som visas när just det väljs fel
      type     c => skrivfrågan {head, ask, accepted | check, answer, …}, eller {render} för en egen vy (se renderType)
      restore  ref => fälten som frågan behöver när ett avbrutet pass fortsätts, eller null om frågan inte finns längre
               (glosquizet återskapas direkt ur ordlistan i resumeRun)

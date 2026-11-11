@@ -44,7 +44,7 @@ Emma pluggar på egen hand, utan kurs, lärare och lärobok. Tyskan bygger därf
 
 - **P2: Resten av kursmallen** (`docs/kursmall.md`, avsnitt 4). Byggt: paket 1–8, 10 och 13–16 samt nivåerna. Kvar:
   - Paket 9 (grammatiken kopplad till kapitel) gör bara nytta i kurser med lärobok, så det väntar.
-  - Uttalsövningarna spelar riktiga röster (Lingua Libre) sedan version 72. Kvar (P3): ungefär hälften av orden saknar inspelning hos de talare som hämtades (fr 285 av 631, de 250 av 560, it 155 av 406); fler talare kan sökas med skriptet (se `audio/README.md`), långsamt eftersom Commons begränsar antalet anrop.
+  - Uttalsövningarna spelar riktiga röster (Lingua Libre) sedan version 72. Kvar (P3): ungefär hälften av orden saknar inspelning hos de talare som hämtades (efter sökning på alla talare 2026-11-11: fr 348 av 631, de 277 av 560, it 185 av 406; resten finns inte på Lingua Libre); fler talare kan sökas med skriptet (se `audio/README.md`), långsamt eftersom Commons begränsar antalet anrop.
 - **P1: Fler sidor ur Escalade.** Inlagda: s. 8–191 och 194–237 (se `languages/fr/book/sidor.json`). Saknas bara s. 192–193 (kapitel 12). Fota om s. 101 (högerkanten) och gärna s. 73 (övning 1, rubrik 4–6). Två ord ur glosrutan s. 78 (violer, garce) är medvetet inte inlagda.
 - **P2: Säkerhetskopiera bokmappen** till ett privat repo på GitHub (`languages/fr/book/` är redan ett eget lokalt git-repo). Godkänt av föräldern 2026-10-06; väntar på att hon skapar det tomma privata repot `Glosor-bok` (gh finns inte på datorn), sedan `git remote add origin git@github.com:hmariasvensson-cmd/Glosor-bok.git` och push.
 - **P3: Välja bok per elev**, om flera elever med olika böcker ska använda samma kurs.

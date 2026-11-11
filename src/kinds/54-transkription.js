@@ -17,6 +17,8 @@ function ipaCheck(input,x){
   if(!ipaNorm(input)) return "empty";
   const a=ipaNorm(input); return [x.ipa,...(x.ok||[])].some(v=>ipaNorm(v)===a)?"right":"wrong";
 }
+// Skärmarna hämtas först när övningen öppnas (data/code-ovningar.js)
+// @lazy ovningar
 function ipaItems(topic,n){
   return weakestFirst((C().transkription||[]).filter(x=>!topic||x.topic===topic),"ipa",{cap:3}).slice(0,n)
     .map(x=>{const f=["f","r","w"][Math.min((S.ipa[x.id]||{}).s||0,2)]; return {k:"ipa",id:`ipa:${x.id}|${f}`,ref:`${x.id}|${f}`,t:f==="w"?"type":"mc",canType:f==="w"};});
@@ -35,6 +37,7 @@ function startIpa(topic){
   $("#tabs").hidden=true; sess=null;
   beginQuiz("ipa",shuffle(items),{againFn:["ipa",topic||"*"],label:topic?`Transkription: ${IPA_TOPICS[topic]}`:"Transkription",ctx:{type:"ipa",id:topic||"*"}});
 }
+// @lazy-end
 const ipaShow=s=>`<span class="ipa" style="font-family:'Charis SIL','Doulos SIL','Gentium Plus','Lucida Grande','Segoe UI',sans-serif">${esc(s)}</span>`;
 const ipaExplain=x=>`<p><b ${lang()}>${esc(x.fr)}</b> ${ipaShow(x.ipa)} <button type="button" class="speak xs" data-say="${esc(x.fr)}" aria-label="Läs upp ${esc(x.fr)}">${SPK}</button></p>${x.why?`<p>${rmark(x.why)}</p>`:""}`;
 const ipaHeadFr=x=>`<div class="word"><p class="q-prompt" ${lang()}>${esc(x.fr)}</p><button class="speak" id="sp" type="button" aria-label="Läs upp">${SPK}</button></div>`;
@@ -66,6 +69,7 @@ const ipaEffect=(ref,ok)=>{S.ipa=S.ipa||{}; const id=ref.split("|")[0], x=srsBum
   x.r=(x.r||0)+(ok?1:0); x.n=(x.n||0)+1; S.ipa[id]=x;};
 const ipaRecap=ref=>{const x=ipaById(ref.split("|")[0]); return x?x.fr:"";};
 // Slutskärmen: de missade orden med transkription och uppläsning
+// @lazy ovningar
 function ipaAfter(ctx,right,total,miss){
   const xs=[...new Set(miss.map(r=>r.split("|")[0]))].map(ipaById).filter(Boolean);
   app.innerHTML=`<section class="panel">${resultHead("Transkription klar",right,total)}
@@ -74,6 +78,7 @@ function ipaAfter(ctx,right,total,miss){
     <button class="btn ghost" id="st">Se statistik</button></section>`;
   $("#home").onclick=renderStart; $("#again").onclick=()=>startIpa(ctx.id); $("#st").onclick=()=>setView("stats"); renderList();
 }
+// @lazy-end
 // Statistiken: andel rätt per moment
 function ipaStats(){
   const all=C().transkription||[], st=S.ipa||{}; if(!all.length||!Object.keys(st).length) return "";

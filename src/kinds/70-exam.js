@@ -104,7 +104,8 @@ function exClock(min,label){
   let end=Date.now()+min*60000;
   // I simuleringen gäller delens tid för alla övningar i delen: klockan fortsätter från förra övningen
   if(EXSIM){ const p=exPart(exTask(EXSIM.ids[EXSIM.i]).part);
-    end=EXSIM.ends[p.id]=EXSIM.ends[p.id]||Date.now()+(+p.time||min)*60000; label=`${p.sv}, tid kvar`; }
+    // nivåtestet (quick): uppgiftens egen tid, inte hela delens
+    end=EXSIM.ends[p.id]=EXSIM.ends[p.id]||Date.now()+((EXSIM.quick&&min)||+p.time||min)*60000; label=`${p.sv}, tid kvar`; }
   const tick=()=>{ const el=$("#exclock"); if(!el){ clearInterval(EXCLOCK); return; }
     if(EXSIM&&Date.now()-(EXSIM.seen||0)>60000) simStore();   // en gång i minuten: tiden räknas bara när appen är öppen
     const s=Math.round((end-Date.now())/1000), a=Math.abs(s);
@@ -136,7 +137,7 @@ function openExam(){
   app.innerHTML=`${run?simCard(run):""}<section class="panel"><span class="tab">Prov</span><h2>Provträning: ${esc(e.name)}</h2>
     <p class="plan">Uppgifter i samma format och med samma tider som på provet. Läsa och lyssna rättas direkt. Skriva och tala bedöms av Claude efter provets kriterier. Gränsen för godkänt är <b>${e.pass} %</b>.${scNote}</p>
     ${e.note?`<p class="foot">${esc(e.note)}</p>`:""}
-    ${lvs.map(simBtn).join("")}
+    ${lvs.map(simBtn).join("")}<button class="btn ghost" id="qtest">Nivåtest: en uppgift i läsa och en i lyssna (cirka 15–20 minuter)</button>
     <p class="foot">En uppgift för varje övning i ${partsOf(lvs[0]).map(p=>esc(p.sv.toLowerCase())).join(", ").replace(/, ([^,]*)$/," och $1")}, med provets tid för varje del.${multi?` Varje nivå simuleras för sig: ${lvs.map(lv=>esc(exNameLv(lv))).join(" och ")} tar bara delarna på sin nivå.`:""} Den muntliga delen ingår inte. Vill du bara göra en del:</p>
     <div class="games">${e.parts.filter(p=>simPart(p.id)).map(p=>`<button class="btn ghost" data-simp="${esc(p.id)}">${esc(p.sv)} (${p.time} min)</button>`).join("")}</div>
     ${sims.length?`<div class="exgroup"><span class="label">Tidigare simuleringar</span><table class="tbl"><tr><th>Datum</th>${e.parts.filter(p=>simPart(p.id)).map(p=>`<th>${esc(p.sv)}</th>`).join("")}</tr>
@@ -146,7 +147,7 @@ function openExam(){
     <p class="plan">${esc(p.sv)} · ${p.time} minuter på provet</p><div class="games">${ts.map(row).join("")}</div></section>`:"";}).join("")}
   <button class="quit" id="quit">Tillbaka</button>`;
   app.querySelectorAll("[data-xt]").forEach(b=>b.onclick=()=>examTask(b.dataset.xt));
-  $("#sim").onclick=()=>startExamSim(); $("#quit").onclick=renderStart; simCardWire();
+  $("#sim").onclick=()=>startExamSim(); $("#qtest").onclick=startQuickTest; $("#quit").onclick=renderStart; simCardWire();
   app.querySelectorAll("[data-simp]").forEach(b=>b.onclick=()=>startExamSim([b.dataset.simp]));
   app.querySelectorAll("[data-simlv]").forEach(b=>b.onclick=()=>startExamSim(null,b.dataset.simlv));
   window.scrollTo(0,0);
@@ -159,22 +160,24 @@ const simPart=(pid,lv)=>EX().tasks.some(t=>t.part===pid&&simTaskOk(t,lv));
 // Övningarna (teil: Exercice 1–3, Teil 1–5, Aufgabe 1–3) i en del, i samma ordning som i exam.json
 const simTeile=(pid,lv)=>[...new Set(EX().tasks.filter(t=>t.part===pid&&simTaskOk(t,lv)).map(t=>t.teil||""))];
 // Hela provet på en nivå (parts utelämnat) eller bara vissa delar: en uppgift per övning/Teil, helst en som eleven inte har gjort
-function simPlan(parts,lv){
+function simPlan(parts,lv,quick){
   const st=exState();
   if(!parts&&!lv) lv=simLvs()[0];   // hela provet = provets huvudnivå, om inget annat anges
-  return EX().parts.filter(p=>simPart(p.id,lv)&&(!parts||parts.includes(p.id))).flatMap(p=>simTeile(p.id,lv).map(te=>{
+  // quick (nivåtestet): bara en av delens övningar, slumpvis
+  return EX().parts.filter(p=>simPart(p.id,lv)&&(!parts||parts.includes(p.id))).flatMap(p=>(quick?shuffle(simTeile(p.id,lv)).slice(0,1):simTeile(p.id,lv)).map(te=>{
     const ts=shuffle(EX().tasks.filter(t=>t.part===p.id&&(t.teil||"")===te&&simTaskOk(t,lv)));
     return (ts.find(t=>!st.t[t.id])||ts[0]).id; }));
 }
 const simMinutes=(parts,lv)=>{ if(!parts&&!lv) lv=simLvs()[0]; return EX().parts.filter(p=>simPart(p.id,lv)&&(!parts||parts.includes(p.id))).reduce((a,p)=>a+(+p.time||0),0); };
-function startExamSim(parts,lv){
-  if(examWait(()=>startExamSim(parts,lv))) return;
+function startExamSim(parts,lv,quick){
+  if(examWait(()=>startExamSim(parts,lv,quick))) return;
   if(!parts&&!lv) lv=simLvs()[0];
-  const ids=simPlan(parts,lv);
+  const ids=simPlan(parts,lv,quick);
   if(!ids.length) return;
   // res: {<uppgift>: {pct, r, n}}; ends: {<del>: tidpunkt då delens tid tar slut}; lv = nivån (hela provet). En ny simulering ersätter en sparad.
   EXSIM={ids,i:0,res:{},ends:{},start:Date.now(),code:L.code};
   if(!parts&&lv) EXSIM.lv=lv;
+  if(quick){ EXSIM.quick=1; EXSIM.lv=lv; }
   simStore(); examTask(ids[0]);
 }
 /* Den pågående simuleringen sparas i S.exam.simRun (se överst), så att den går att fortsätta efter en omladdning. */
@@ -247,7 +250,7 @@ function simNext(pct,r,n){
   pids.forEach(p=>res[p]=simPartRes(p));
   EXSIM.ids.forEach(id=>tasks[id]=EXSIM.res[id]?EXSIM.res[id].pct:null);
   const st=exState(); st.sims=(st.sims||[]).slice(-19); delete st.simRun;
-  st.sims.push({d:Date.now(),parts:res,tasks,min:Math.round((Date.now()-EXSIM.start)/60000),...(EXSIM.lv?{lv:EXSIM.lv}:{})}); save();
+  st.sims.push({d:Date.now(),parts:res,tasks,min:Math.round((Date.now()-EXSIM.start)/60000),...(EXSIM.lv?{lv:EXSIM.lv}:{}),...(EXSIM.quick?{quick:1}:{})}); save();
   // Delar utan resultat (skrivdelen utan bedömning från Claude) räknas inte som godkända eller underkända
   const vals=Object.values(res).filter(v=>v!=null), ok=vals.length&&vals.every(v=>v>=e.pass);
   const skipped=Object.entries(res).filter(([,v])=>v==null).map(([p])=>exPart(p).name);
@@ -545,3 +548,15 @@ function examItems(t){
 }
 // Ingen quiz: egna sidor för läsa/lyssna, skriva och tala. Loggposterna har kind "exam".
 defineKind("exam",{name:"Provträning",open:openExam});
+
+/* Nivåtestet (föräldern 2026-11-11): en kort simulering en gång i månaden, så att nivån i Mot målet bygger på provdelar.
+   En slumpvis övning i varje del som rättas direkt (inte skriva och tala), på provets huvudnivå och med uppgiftens egen
+   tid. Sparas som en simulering med quick: 1 (S.exam.sims), som visas i Mot målet och i föräldravyn. */
+// @lazy ovningar
+function startQuickTest(){
+  if(examWait(startQuickTest)) return;
+  const lv=simLvs()[0], auto=EX().parts.filter(p=>simPart(p.id,lv)&&EX().tasks.filter(t=>t.part===p.id&&simTaskOk(t,lv)).every(t=>!t.minWords&&t.type!=="chart")).map(p=>p.id);
+  if(!auto.length) return startExamSim(null,lv);
+  startExamSim(auto,lv,true);
+}
+// @lazy-end

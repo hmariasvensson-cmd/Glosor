@@ -1490,6 +1490,7 @@ const allRight=n0=>{const l=logsSince(n0); return l.length>0&&l.every(e=>e.right
           res=!sess&&S.tx&&S.tx[tid]&&S.tx[tid].best===S.tx[tid].n&&!!q("#more"); info=tid; }
         else if(id==="story"){ const sid=q("[data-pick]").dataset.pick; q("[data-pick]").click(); runAll(); res=!sess&&S.stb[sid]===parseStory(storyById(sid)).gaps.length&&!!q("#more"); info=sid; }
         else if(id==="utt"){ q('[data-pick="*"]').click(); runAll(); res=!sess&&q("#app").textContent.includes("Uttal klart")&&allRight(n0); }
+        else if(id==="adje"){ q("#atgo").click(); runAll(); res=!sess&&q("#app").textContent.includes("Adjektivändelser klart")&&allRight(n0); }
         else if(id==="hpprov"){ const p0=hpProvs().length; q("#hpnew").click(); hpRun().ids.forEach((wid,i)=>{ hpGo(i); q('[data-hpo="'+hpRun().opts[i].indexOf(wid)+'"]').click(); }); q("#hpdone").click();
           const pp=hpProvs()[hpProvs().length-1]; res=hpProvs().length===p0+1&&pp.r===pp.n&&S.log[S.log.length-1].kind==="hpprov"&&!!q("#hpres"); info=pp&&pp.r+"/"+pp.n; }
         else if(id==="hpverb"){ const p0=vpHist().length; q("#vpnew").click(); vpRun().items.forEach((it,i)=>{ vpGo(i); q('[data-vpo="'+vpOpts(it).a+'"]').click(); }); q("#vpdone").click();
@@ -4178,6 +4179,65 @@ appReady().then(async()=>{ try{
 </script>"""
 
 
+# Inför provet (kortet på startsidan) och nivåtestet (en övning per läs- och hördel, 70-exam.js)
+SCENARIO_TODO = r"""<script>
+const out=[]; const q=s=>document.querySelector(s);
+const ok=(name,cond,info="")=>out.push((cond?"OK   ":"FEL  ")+name+(info?"  ("+info+")":""));
+appReady().then(async()=>{ try{
+  if(L.code!=="fr") useLang("fr"); await until(()=>L.code==="fr"&&WORDS.length,5000);
+  await ensureExam(); delete S.prep; delete S.todoHide; S.exam=S.exam||{t:{},sims:[]}; S.exam.sims=[]; delete S.exam.simRun; S.iv={a:{}}; S.talk=S.talk||{}; S.talk.c={};
+  renderStart();
+  const ks=[...document.querySelectorAll("[data-todo]")].map(b=>b.dataset.todo);
+  ok("inför provet: datum, nivåtest och intervju", ks.join()==="prep,qt,iv", ks.join());
+  S.prep={d1:"2027-05-06"}; S.exam.sims=[{d:Date.now(),parts:{}}]; S.iv.a={"iv-01":{t:"x"}}; renderStart();
+  ok("inför provet: inget kort när allt är gjort", !q("#todo"));
+  delete S.prep; renderStart(); q("#todohide").click();
+  ok("inför provet: Dölj en vecka", !q("#todo")&&S.todoHide>Date.now()+6*864e5);
+  const lv=simLvs()[0], ids=simPlan(null,lv,true), parts=ids.map(id=>exTask(id).part);
+  ok("nivåtest: en övning per del", new Set(parts).size===parts.length&&parts.length>=2, parts.join());
+  startQuickTest(); await until(()=>EXSIM&&q("#exclock"),5000);
+  const t=exTask(EXSIM.ids[0]);
+  ok("nivåtest: bara läsa och lyssna, uppgiftens egen tid", EXSIM.quick===1&&EXSIM.ids.every(id=>!exTask(id).minWords)&&(EXSIM.ends[t.part]-Date.now())<=((t.time||10)*60000+2000), EXSIM.ids.join());
+  simDrop();
+ }catch(e){ ok("undantag", false, e.message+" "+(e.stack||"").split("\n")[1]); }
+ ok("inga JavaScript-fel", !__err.length, __err.join(" ; "));
+ document.body.insertAdjacentHTML("beforeend","<pre id=out>"+out.join("\n").replace(/</g,"&lt;")+"</pre>");
+});
+</script>"""
+
+# Adjektivändelser steg för steg (63-adjtrain.js): rätt ändelse i alla artikeltyper och en förklaring av felet
+SCENARIO_ADJTR = r"""<script>
+const out=[]; const q=s=>document.querySelector(s);
+const ok=(name,cond,info="")=>out.push((cond?"OK   ":"FEL  ")+name+(info?"  ("+info+")":""));
+appReady().then(async()=>{ try{
+  useLang("de4"); await until(()=>L.code==="de4"&&L.grammar,5000);
+  ok("adjektiv: finns i Tyska 4", hasAdjTr()&&!!KINDS.adje&&!!KINDS.adjk);
+  const P=r=>atParts(r).phrase;
+  const cases=[["0|8|ein|0|0","einem neuen Tisch"],["0|8|0|1|0","neuen Tischen"],["20|0|ein|0|0","ein neues Buch"],["10|3|der|0|0","die neue Lampe"],
+    ["20|0|kein|1|0","keine neuen Bücher"],["0|3|ein|0|0","einen neuen Tisch"],["0|0|ein|0|0","ein neuer Tisch"],["20|3|0|1|0","neue Bücher"],["10|8|mein|0|0","meiner neuen Lampe"],["0|0|der|0|0","der neue Tisch"]];
+  const bad=cases.filter(([r,w])=>P(r)!==w).map(([r,w])=>P(r)+" ≠ "+w);
+  ok("adjektiv: ändelser och artiklar stämmer", !bad.length, bad.join("; "));
+  ok("adjektiv: omöjliga kombinationer ger null", atParts("0|8|ein|1|0")===null&&atParts("0|8|0|0|0")===null);
+  const x=atParts("0|8|ein|0|0"), w1=atWhy(x,"er"), w2=atWhy(x,"e");
+  ok("adjektiv: fel kasus förklaras", /nominativ/.test(w1)&&/dativ/.test(w1)&&/mit/.test(w1), w1);
+  ok("adjektiv: fel genus eller artikel förklaras", /femininum|neutrum|maskulinum/.test(w2)&&/dativ/.test(w2), w2);
+  const d=KINDS.adje.mc({ref:"0|8|ein|0|0"}); ok("adjektiv: fem alternativ, fel alternativ har why", d.opts.length===5&&d.opts.filter(o=>!o.ok).every(o=>o.why)&&/Kasus/.test(d.explain));
+  const t=KINDS.adje.type({ref:"0|8|ein|0|0"}); ok("adjektiv: skriva rätt och fel med förklaring", t.check("neuen").r==="right"&&t.check("neuer").r==="wrong"&&/nominativ/.test(t.check("neuer").html));
+  delete S.adjtr; openAdjTr(); ok("adjektiv: startskärmen med tabell och läge", !!q("#atgo")&&!!q(".adjtab")&&q('[data-atstep="1"]').getAttribute("aria-pressed")==="true");
+  q("#atgo").click(); ok("adjektiv: steg för steg = kasus före ändelse", !!sess&&sess.queue.length+1===20&&sess.cur.k==="adjk", sess&&(sess.queue.length+1)+" "+sess.cur.k);
+  const gt0=(S.gt&&S.gt.adj&&S.gt.adj.n)||0;
+  answerMC(sess.d.opts.findIndex(o=>o.ok)); nextQ();
+  ok("adjektiv: andra frågan är ändelsen", sess.cur.k==="adje");
+  const wi=sess.d.opts.findIndex(o=>!o.ok); answerMC(wi);
+  ok("adjektiv: fel svar visar vilket steg som blev fel", !!q(".wnote")&&q(".wnote").textContent.length>20, q(".wnote")&&q(".wnote").textContent);
+  quitSession&&quitSession();
+  atAdd("0|8|ein|0|0",true); ok("adjektiv: räknas in i grammatikens Adjektivändelser", S.gt.adj.n===gt0+1&&S.adjtr.c["ein|dat|m"].n>=1);
+ }catch(e){ ok("undantag", false, e.message+" "+(e.stack||"").split("\n")[1]); }
+ ok("inga JavaScript-fel", !__err.length, __err.join(" ; "));
+ document.body.insertAdjacentHTML("beforeend","<pre id=out>"+out.join("\n").replace(/</g,"&lt;")+"</pre>");
+});
+</script>"""
+
 # Utjämning av repetitionerna (elevens önskemål 2026-11-11): flytta så få ord som möjligt så att ingen dag sticker ut
 SCENARIO_BALANCE = r"""<script>
 const out=[]; const q=s=>document.querySelector(s);
@@ -4325,6 +4385,8 @@ def main():
     text += "\n" + run(SCENARIO_FSRS, 30000)   # repetitionsschemat Anpassat (FSRS)
     text += "\n" + run(SCENARIO_REC, 30000)   # uttal med riktiga röster
     text += "\n" + run(SCENARIO_BALANCE, 30000)   # utjämning av repetitionerna
+    text += "\n" + run(SCENARIO_ADJTR, 30000)   # adjektivändelser steg för steg
+    text += "\n" + run(SCENARIO_TODO, 30000)   # Inför provet och nivåtestet
     text += "\n" + run(SCENARIO_LAST, 30000, head=LAST_HEAD_CLOUD) + "\n" + run(SCENARIO_LAST, 30000, head=LAST_HEAD_LOCAL)   # senast övade kursen (Maria 2026-11-05)
     text += "\n" + run(SCENARIO_PROFILES, 60000)   # Vem övar? och Föräldravyn (P2/P3 Konton, sparande och topplista)
     text += "\n" + test_minimal_course()   # en ny, liten kurs (8 → 21 kurser)

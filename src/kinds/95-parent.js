@@ -14,6 +14,9 @@
    Skrivs med en fördröjning (som topplistan) från boardPush: efter varje avslutat pass, när kursen kopplas till molnet
    (start och kursbyte) och när veckomålet ändras. En kurs utan övning skrivs inte. Andra kurser och profiler i
    dokumentet ligger kvar som de var. Föräldravyn (renderParent) visas bara för ägaren (CLOUD.owner = user.isOwner()). */
+// Föräldravyn och sammanfattningen hämtas först när de behövs (data/code-parent.js, se lazyRun i app.js): sammanfattningen
+// när boardPush anropar summaryPush efter ett pass (stubben laddar filen första gången), vyn när ägaren öppnar den.
+// @lazy parent
 const SUM={pend:{},timer:null,busy:false,again:false,unsub:null,docs:{}};
 const SUM_DAYS=14, SUM_MAX=200*1024;
 const sumKey=id=>id||"_";
@@ -81,8 +84,6 @@ async function summaryFlush(){
   if(SUM.again||Object.keys(SUM.pend).length){ SUM.again=false; SUM.timer=setTimeout(summaryFlush,3000); }
 }
 
-// Föräldravyn hämtas först när ägaren öppnar den (data/code-parent.js, se lazyRun i app.js); sammanfattningen ovan skrivs alltid
-// @lazy parent
 /* Föräldravyn: ett kort per konto och profil med siffror per kurs. Bara läsning. Allt kommer från elevernas dokument,
    så bara tal (num) och text genom esc(). Namn: user.profiles(ids) vid varje rendering, "Elev" om namnet saknas, och
    profilens namn för andra profiler än standardprofilen. */

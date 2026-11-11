@@ -18,7 +18,8 @@ function exGroups(){
       g("trans","Översätt meningar",`Från svenska till ${lname}, hela meningar.`+srsDueNote(sentDue("tr",transPool()))),
       g("order","Ordföljd","Bygg meningen i rätt ordning."+srsDueNote(sentDue("od",orderPool()))),
       g("ktest","Kapitelprov","Förhör dig på alla glosor i ett kapitel, och öva sedan på dem du missade."),
-      L.genderGame&&g("gen",Object.values(L.genderGame).join(", "),"Rätt artikel och plural för substantiven.")]],
+      L.genderGame&&g("gen",Object.values(L.genderGame).join(", "),"Rätt artikel och plural för substantiven."),
+      hasAdjTr()&&g("adje","Adjektivändelser steg för steg","Kasus, genus och artikel: varför ändelsen blir som den blir.")]],
     ["texts","Lyssna och läsa","Hörförståelse, texter och kultur",[
       c.listening&&g("lq","Hörförståelse","Lyssna på en dialog och svara på frågor."),
       c.reading&&g("rq","Läsa texter","Tryck på alla ord du inte kan och spara dem i Mina ord."),
@@ -43,7 +44,7 @@ function exGroups(){
   return groups.map(([id,t,sub,items])=>({id,t,sub,items:items.filter(Boolean)})).filter(g=>g.items.length);
 }
 function gamesPanel(){
-  return `${examSimCard()}${planCard()}<section class="panel"><h2>Fler övningar</h2><div class="grpgrid">${exGroups().map(g=>`<button class="grp" data-grp="${g.id}">
+  return `${prepTodo()}${examSimCard()}${planCard()}<section class="panel"><h2>Fler övningar</h2><div class="grpgrid">${exGroups().map(g=>`<button class="grp" data-grp="${g.id}">
     <b>${g.t}</b><small>${g.sub}</small><span class="label">${g.items.length} ${g.items.length===1?"övning":"övningar"}</span></button>`).join("")}</div></section>`;
 }
 function openExGroup(id){

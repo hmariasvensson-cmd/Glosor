@@ -2,6 +2,14 @@
 
 Punkter som har flyttats från [`BACKLOG.md`](BACKLOG.md) när de byggdes. **Referens** anger backloggens rubrik och prioritet. **Commit** anger var ändringen finns i git. **Publicerat** anger versionen av artefakten på https://claude.ai/artifact/YBQv8j4qXQQLuPwLAWt5mP.
 
+## 2026-11-11, del 3 (publicerat som version 81–87; ljudfilerna i omgångar)
+
+- **Adjektivändelser steg för steg** (föräldern 2026-11-11; eleven i tyska hade 20 % rätt på adjektivändelserna). Ny övningstyp `63-adjtrain.js` i Tyska 4 och 5 (Fler övningar): kasus (med skälet i meningen: subjekt, objekt, preposition), genus eller plural, och om artikeln redan visar genus och kasus. Alla artikeltyper (der, ein, kein, mein, ingen artikel i plural). Ett fel svar säger vilket steg som blev fel, t.ex. "-er vore rätt i nominativ. Här är det dativ: mit tar alltid dativ". Frågorna väljs bland de svagaste rutorna, och tabellen visar andel rätt per artikel och kasus. Data i `grammar.json` (`adjtr`). Test: `SCENARIO_ADJTR`.
+- **Nivåtest** (föräldern 2026-11-11): Provträningen har knappen Nivåtest, en kort simulering med en slumpvis övning i varje läs- och hördel på provets huvudnivå och med uppgiftens egen tid (cirka 15–20 minuter). Sparas som simulering med `quick: 1`, så resultatet syns i Mot målet och i föräldravyn.
+- **Kortet Inför provet** på startsidan (kurser med mål och prov): påminner om det som saknas, inget provdatum, inget nivåtest eller ingen simulering på 30 dagar, intervjuövningen aldrig provad, med en knapp för varje och Dölj en vecka (`prepTodo`, `S.todoHide`). Test: `SCENARIO_TODO`.
+- **Fler inspelningar till uttalet**: sökning på alla talare på Lingua Libre gav fr 348 (förut 285), de 277 (250) och it 185 (155) av uttalsorden.
+- För att sidan ska hålla sig under 420 kB ligger nu sammanfattningen till föräldern (`summaryOf`, `summaryFlush`, `prepSummary`), FSRS-beräkningen (`fsrsNext`; före filen har kommit gäller det fasta schemat för det svaret) och transkriptionens skärmar i de lata kodfilerna.
+
 ## 2026-11-11, del 2 (publicerat som version 80)
 
 - **Ursprung för HP-orden ur ordböcker** (P3 *Ursprung saknas för 380 HP-ord*). Sex agenter slog upp varje ord i SAOB (saob.se) och Hellquists Svensk etymologisk ordbok (1922, Projekt Runeberg) och skrev ursprunget med egna ord: 322 ord fick ursprung (315 SAOB, 7 Hellquist). Uppgifter från SO användes inte. 57 ord är fortfarande tomma. Privat ordlista, bokens repo.

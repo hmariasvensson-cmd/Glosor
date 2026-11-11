@@ -27,6 +27,21 @@ function prepMilestones(){
   if(p.d2) out.push({id:"d2",name:`${ex}, andra tillfället`,date:p.d2});
   return out.filter(m=>prepDays(m.date)!=null&&prepDays(m.date)>=0).sort((a,b)=>prepDate(a.date)-prepDate(b.date));
 }
+/* Kortet Inför provet på startsidan (föräldern 2026-11-11): det som saknas för att appen ska kunna räkna mot provet.
+   Inget provdatum (S.prep.d1), inget nivåtest eller ingen simulering på 30 dagar (S.exam.sims), intervjuövningen aldrig
+   provad (S.iv.a och samtalen i S.talk.c). Dölj en vecka = S.todoHide (tidpunkt). */
+function prepTodo(){
+  if(!hasPrep()||Date.now()<(+S.todoHide||0)) return "";
+  const p=S.prep||{}, sims=(S.exam&&S.exam.sims)||[], last=sims.length?+sims[sims.length-1].d||0:0, out=[];
+  if(!p.d1) out.push(["prep","Lägg in provdatum under Mot målet, så att planen och Dagens pass räknar mot provet."]);
+  if(Date.now()-last>30*864e5) out.push(["qt",last?"Dags för månadens nivåtest (cirka 15–20 minuter)":"Gör ett nivåtest (cirka 15–20 minuter), så att appen ser din nivå i läsa och lyssna."]);
+  if(hasIv()&&!Object.values((S.iv||{}).a||{}).some(x=>x&&x.t)&&!Object.keys((S.talk||{}).c||{}).some(k=>k.startsWith("iv:"))) out.push(["iv","Prova intervjuövningen en gång: juryns frågor, med tips och exempelsvar."]);
+  return out.length?`<section class="panel" id="todo"><h2>Inför provet</h2><div class="games">${out.map(([k,t])=>`<button class="game" data-todo="${k}"><span>${esc(t)}</span></button>`).join("")}</div><button class="btn ghost" id="todohide">Dölj en vecka</button></section>`:"";
+}
+function wireTodo(){
+  app.querySelectorAll("[data-todo]").forEach(b=>b.onclick=()=>({prep:openPrep,qt:startQuickTest,iv:openIv})[b.dataset.todo]());
+  const h=$("#todohide"); if(h) h.onclick=()=>{ S.todoHide=Date.now()+7*864e5; save(); renderStart(); };
+}
 const hasIv=()=>typeof ivList==="function"&&ivList().length>0;
 // Timmar i veckan: appen de senaste 28 dagarna och lektionerna utanför
 function prepPace(){
@@ -216,7 +231,8 @@ function prepAdvice(f,ph){
   return `<p class="fbh">Det här ger mest just nu</p><ul>${tips.map(t=>`<li>${t}</li>`).join("")}</ul>`;
 }
 // @lazy-end
-// Till föräldravyn (summaryOf i 95-parent.js)
+// @lazy parent
+// Till föräldravyn (summaryOf i 95-parent.js, samma lata fil)
 function prepSummary(){
   if(!hasPrep()) return null;
   const ms=prepMilestones(); if(!ms.length&&!prepSchools().length) return null;
@@ -229,3 +245,4 @@ function prepSummary(){
     iv:hasIv()?{done:ivDone(),n:ivList().length}:null,week:ph?{ok:wk.filter(x=>x.ok).length,n:wk.length,phase:ph.name}:null,
     ...(sc.length?{schools:sc}:{})};
 }
+// @lazy-end
