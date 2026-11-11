@@ -38,8 +38,8 @@ Emma pluggar på egen hand, utan kurs, lärare och lärobok. Tyskan bygger därf
 
 ## Kurser och nivåer
 
-- **P3: Ursprung saknas för 380 HP-ord** (efter två omgångar agenter, 2026-11-10): mest inhemska ord där agenterna inte var säkra. Bara med en etymologisk ordbok (Hellquist, SAOB) som källa.
-- **P2: Mot målet: datum för 2027.** DELF 2027 och Goethe B1/B2 i Stockholm 2027 var inte publicerade 9 november 2026 (`exam.sessionNote` i fr, de4 och de säger det). Lägg in datumen när de kommer (ifsuede.com, goethe.de/ins/se). Berlins godkända intyg för B2.2 och HEMU:s franskkrav (B2 eller en termin på sig) är fortfarande oklara: fråga skolorna. Eleven i tyska spelar cello (besked 2026-11-10): B1 räcker för Leipzig och München, Berlin kräver B2.2. Leipzigs och Münchens cellokrav är från 2026 års dokument; kontrollera 2027 års när de kommer (`docs/antagning-cello-2027.md`).
+- **P3: Ursprung saknas för 57 HP-ord** (2026-11-11, efter uppslag i SAOB och Hellquist): orden finns inte där (t.ex. abrovink, kovändning, doa, femetta) eller bara i SO, som inte går att läsa automatiskt.
+- **P2: Mot målet: datum för 2027.** DELF 2027 i Sverige och Goethe B1/B2 i Stockholm 2027 var inte publicerade 11 november 2026 (Köpenhamn har datum för båda, inlagda i `sessionNote`; Högskoleprovet efter oktober 2027 inte heller publicerat) (`exam.sessionNote` i fr, de4 och de säger det). Lägg in datumen när de kommer (ifsuede.com, goethe.de/ins/se). Berlins godkända intyg för B2.2 och HEMU:s franskkrav (B2 eller en termin på sig) är fortfarande oklara: fråga skolorna. Eleven i tyska spelar cello (besked 2026-11-10): B1 räcker för Leipzig och München, Berlin kräver B2.2. Leipzigs och Münchens cellokrav är från 2026 års dokument; kontrollera 2027 års när de kommer (`docs/antagning-cello-2027.md`).
 - **P3: Högskoleprovet ORD: nya provdatum.** `examDates` i `languages/hp/lang.js` har datum till och med 24 oktober 2027; lägg till nya när UHR publicerar dem.
 
 - **P2: Resten av kursmallen** (`docs/kursmall.md`, avsnitt 4). Byggt: paket 1–8, 10 och 13–16 samt nivåerna. Kvar:

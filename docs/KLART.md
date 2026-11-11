@@ -2,6 +2,11 @@
 
 Punkter som har flyttats från [`BACKLOG.md`](BACKLOG.md) när de byggdes. **Referens** anger backloggens rubrik och prioritet. **Commit** anger var ändringen finns i git. **Publicerat** anger versionen av artefakten på https://claude.ai/artifact/YBQv8j4qXQQLuPwLAWt5mP.
 
+## 2026-11-11, del 2 (publicerat som version 80)
+
+- **Ursprung för HP-orden ur ordböcker** (P3 *Ursprung saknas för 380 HP-ord*). Sex agenter slog upp varje ord i SAOB (saob.se) och Hellquists Svensk etymologisk ordbok (1922, Projekt Runeberg) och skrev ursprunget med egna ord: 322 ord fick ursprung (315 SAOB, 7 Hellquist). Uppgifter från SO användes inte. 57 ord är fortfarande tomma. Privat ordlista, bokens repo.
+- **Provdatum 2027 kontrollerade igen** (P2 Mot målet, 11 november 2026): Sverige har fortfarande inga DELF- eller Goethe-datum för 2027, men Köpenhamn har: Goethe B1 18 jan, 26 feb, 28 apr, 25 aug, 17 nov och B2 15 jan, 1 mar, 30 apr, 27 aug, 19 nov (enligt sökresultat, goethe.de kunde inte läsas direkt), DELF B1 16 april, Junior 28 maj och TCF 15 mars 2027. DELF Junior B1 kostar 900 kr och ges även i Malmö. Inlagt i `exam.sessionNote` i fr, de4 och de. Högskoleprovet efter oktober 2027 är inte publicerat.
+
 ## 2026-11-11 (publicerat som version 79)
 
 - **Jämnare repetition** (Tyck till, eleven i franska 2026-11-11: "i alla språk … inte många fler ord som ska repeteras en dag jämfört med en annan … flytta så få som möjligt"). `balanceDue` i 05-words.js (lata koden `code-ovningar.js`) körs efter varje glospass och när en kurs öppnas: en dag med fler än snittet + 20 % flyttar bara överskottet, helst ord med långt intervall, högst ±10 % av intervallet (1–7 dagar) till lugnare dagar. Ord med kort intervall och förfallna ord rörs inte. Gäller alla kurser, med det fasta schemat och med FSRS. Statistikens text om schemat säger det. Test: `SCENARIO_BALANCE`.
