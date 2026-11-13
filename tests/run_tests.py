@@ -3576,6 +3576,7 @@ setTimeout(async()=>{ try{
   await wait(()=>q("[data-xt]"));
   const f=fetched();
   ok("provfil: Försök igen hämtar data/<kod>-exam.json (med hash) och öppnar provträningen", examReady()&&!EX().lazy&&qa("[data-xt]").length===EX().tasks.length&&f.length===1&&f[0].includes("data/"+c0+"-exam.json?v="+DATA_VERSION[c0+"-exam"]), f.join());
+  await loadCode("exam");   // visningen av en uppgift är en kodmodul
   { const t=EX().tasks.find(t=>t.qs); examTask(t.id); ok("provfil: uppgiften visas med frågorna", qa(".exq").length===t.qs.length&&!!q("#exclock")); }
   openExam(); ok("provfil: hämtas bara en gång", fetched().length===1&&!!q("[data-xt]"));
   // En annan kurs: Tala väntar in provets taluppgifter
@@ -4267,6 +4268,43 @@ appReady().then(async()=>{ try{
 });
 </script>"""
 
+# Dagens pass: meningar och verbböjningar med orden eleven kan (eleven 2026-11-12)
+SCENARIO_KNOWN = r"""<script>
+const out=[]; const q=s=>document.querySelector(s);
+const ok=(name,cond,info="")=>out.push((cond?"OK   ":"FEL  ")+name+(info?"  ("+info+")":""));
+appReady().then(async()=>{ try{
+  if(L.code!=="fr") useLang("fr"); await until(()=>L.code==="fr"&&WORDS.length,5000);
+  S.w={}; S.tr={};
+  ok("kända ord: inga meningar utan ord man kan", passSentences(2).length===0&&passVerbs(2).length===0);
+  const ws_=WORDS.filter(w=>w.exT&&w.exSv&&tokCount(w.exT)>=3).slice(0,6);
+  ws_.slice(0,3).forEach(w=>S.w[w.id]={s:1,due:1,dd:addDays(Date.now(),2)});
+  ok("kända ord: steg 1 räcker inte", passSentences(2).length===0);
+  ws_.forEach(w=>S.w[w.id]={s:3,due:1,dd:addDays(Date.now(),5)});
+  const ps=passSentences(2);
+  ok("kända ord: två meningar, flerval först", ps.length===2&&ps.every(x=>x.k==="trans"&&x.t==="mc"&&ws_.some(w=>w.id===x.ref)), ps.map(x=>x.ref).join());
+  S.tr[ps[0].ref]={s:1,last:Date.now(),dd:addDays(Date.now(),-1)};
+  const ps2=passSentences(6);
+  ok("kända ord: förfallen mening blir skrivfråga", ps2.some(x=>x.ref===ps[0].ref&&x.t==="type"));
+  S.tr[ps[1].ref]={s:2,last:Date.now(),dd:addDays(Date.now(),3)};
+  ok("kända ord: mening som inte förfallit kommer inte", !passSentences(6).some(x=>x.ref===ps[1].ref));
+  const v=WORDS.find(w=>CONJ.some(c=>c.verb===w.t));
+  ok("kända ord: ett verb ur ordlistan finns i verbtabellerna", !!v, v&&v.t);
+  S.w[v.id]={s:3,due:1,dd:addDays(Date.now(),5)};
+  const pv=passVerbs(2), kn=new Set(knownWords().map(w=>w.t));
+  ok("kända ord: böjningar av verb man kan", pv.length===2&&pv.every(x=>x.k==="verbs"&&kn.has(x.c.verb)), pv.map(x=>x.ref).join());
+  S.w={}; S.w[v.id]={s:3,due:1,dd:addDays(Date.now(),5)};
+  ok("kända ord: bara verbet man kan", passVerbs(3).every(x=>x.c.verb===v.t));
+  ws_.forEach(w=>S.w[w.id]={s:3,due:1,dd:addDays(Date.now(),5)});
+  ok("kända ord: startsidan nämner meningarna", /meningar med ord du kan/.test(dailyPanel()));
+  startDaily(); const ids=(sess.mixIn||[]).map(x=>x.id);
+  ok("kända ord: Dagens pass har meningarna och verben", ids.some(i=>i.startsWith("trans:"))&&(sess.mixIn||[]).some(x=>x.k==="verbs"&&knownWords().some(w=>w.t===x.ref.split("|")[0])), ids.join());
+  ok("kända ord: inga dubbletter i passet", new Set(ids).size===ids.length);
+ }catch(e){ ok("undantag", false, e.message+" "+(e.stack||"").split("\n")[1]); }
+ ok("inga JavaScript-fel", !__err.length, __err.join(" ; "));
+ document.body.insertAdjacentHTML("beforeend","<pre id=out>"+out.join("\n").replace(/</g,"&lt;")+"</pre>");
+});
+</script>"""
+
 # Uttal med riktiga röster (Lingua Libre, data/<kod>-audio.json): speak spelar inspelningen, annars datorrösten
 SCENARIO_REC = r"""<script>
 const out=[]; const q=s=>document.querySelector(s);
@@ -4385,6 +4423,7 @@ def main():
     text += "\n" + run(SCENARIO_FSRS, 30000)   # repetitionsschemat Anpassat (FSRS)
     text += "\n" + run(SCENARIO_REC, 30000)   # uttal med riktiga röster
     text += "\n" + run(SCENARIO_BALANCE, 30000)   # utjämning av repetitionerna
+    text += "\n" + run(SCENARIO_KNOWN, 30000)   # meningar och verb med orden man kan
     text += "\n" + run(SCENARIO_ADJTR, 30000)   # adjektivändelser steg för steg
     text += "\n" + run(SCENARIO_TODO, 30000)   # Inför provet och nivåtestet
     text += "\n" + run(SCENARIO_LAST, 30000, head=LAST_HEAD_CLOUD) + "\n" + run(SCENARIO_LAST, 30000, head=LAST_HEAD_LOCAL)   # senast övade kursen (Maria 2026-11-05)

@@ -2,6 +2,12 @@
 
 Punkter som har flyttats från [`BACKLOG.md`](BACKLOG.md) när de byggdes. **Referens** anger backloggens rubrik och prioritet. **Commit** anger var ändringen finns i git. **Publicerat** anger versionen av artefakten på https://claude.ai/artifact/YBQv8j4qXQQLuPwLAWt5mP.
 
+## 2026-11-14 (publicerat som version 88)
+
+- **Tydligare glosor** (Tyck till, eleven i franska 2026-11-12: "se till så att man kan förstå vilket ord som menas … t.ex. hög som i substantivet eller adjektivet"). 20 agenter gick igenom alla språkkursers words.txt (inte Högskoleprovet ORD) och bokens glosor och lade en kort ledtråd i parentes där svenskan inte räcker: ordklass (`hög (adj., ett högt berg)` / `hög (subst., en hög kläder)`), betydelse (`lag (sport)`), register (`(vardagligt)`, `(formellt)`) och tilltal (`(artigt, Sie)`), och där två ord i samma kurs hade samma svenska. 1 133 rader ändrades; ett skript släppte bara igenom ändringar som inte tar bort något godkänt svar utanför parentesen (parentesen tas bort i rättningen). Två granskningsagenter läste sedan alla ändringar och rättade 72 (ledtrådar som avslöjade stavningen, t.ex. "(jfr fason)", "(med be-)", fel betydelse, dubbla parenteser) och kompletterade par där bara ena ordet hade fått en ledtråd.
+- **Orden man kan i meningar och böjda i Dagens pass** (samma önskemål: "glosorna ska vara enstaka ord i början, sedan … i meningar att översätta, i de vanliga glospassen, tillsammans med verbböjningar"). Varje pass har nu två meningar att översätta med ord som nått steg 2 (flerval första gången, sedan skriva) och en böjning av ett verb ur ordlistan som eleven kan, utöver grupperna och verbtabellen (`passSentences`, `passVerbs` i 90-mix.js). Test: `SCENARIO_KNOWN`.
+- Visningen av en provuppgift ligger nu i en kodmodul (`code-exam.js`), så sidan gick från 420 till 399 kB och har utrymme igen.
+
 ## 2026-11-11, del 3 (publicerat som version 81–87; ljudfilerna i omgångar)
 
 - **Adjektivändelser steg för steg** (föräldern 2026-11-11; eleven i tyska hade 20 % rätt på adjektivändelserna). Ny övningstyp `63-adjtrain.js` i Tyska 4 och 5 (Fler övningar): kasus (med skälet i meningen: subjekt, objekt, preposition), genus eller plural, och om artikeln redan visar genus och kasus. Alla artikeltyper (der, ein, kein, mein, ingen artikel i plural). Ett fel svar säger vilket steg som blev fel, t.ex. "-er vore rätt i nominativ. Här är det dativ: mit tar alltid dativ". Frågorna väljs bland de svagaste rutorna, och tabellen visar andel rätt per artikel och kasus. Data i `grammar.json` (`adjtr`). Test: `SCENARIO_ADJTR`.

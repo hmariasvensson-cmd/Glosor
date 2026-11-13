@@ -277,6 +277,10 @@ function examTask(id){
   ({mc:examMC,write:examWrite,speak:examSpeak,match:examItems,gaps:examItems,short:examItems,pick:examItems,chart:examWrite,timed:examSpeak})[exKind(t)](t);
   window.scrollTo(0,0);
 }
+// Provets nivå: uppgiftens level, provdelens level, exam.json:s level, nivån i provets namn, lang.js exam.level, kursens nivå
+const examLevel=t=>cefrOf(t&&t.level)||cefrOf(t&&exPart(t.part).level)||cefrOf(EX().level)||cefrOf(EX().name)||cefrOf(L.exam&&L.exam.level)||courseLevel();
+// @lazy exam
+// Visningen av en provuppgift (läsa, lyssna, skriva, tala, diagram), hämtas när uppgiften öppnas
 const exHead=(t,tab)=>`<span class="tab">${tab}</span><div class="meta"><span class="label">${esc(exPart(t.part).name)}${t.teil?" · "+esc(t.teil):""}${EXSIM?` · uppgift ${EXSIM.i+1} av ${EXSIM.ids.length}`:""}</span><span class="clock" id="exclock"></span></div>
   <h2 ${lang()}>${esc(t.title)}</h2>${t.instr?`<p class="plan">${esc(t.instr)}</p>`:""}`;
 const exQuit=()=>`<button class="quit" id="quit">${EXSIM?"Avbryt simuleringen":"Tillbaka"}</button>`;
@@ -333,8 +337,6 @@ function examMC(t){
 }
 
 /* Skriva: bedöms av Claude med provets kriterier, 0–5 poäng per kriterium */
-// Provets nivå: uppgiftens level, provdelens level, exam.json:s level, nivån i provets namn, lang.js exam.level, kursens nivå
-const examLevel=t=>cefrOf(t&&t.level)||cefrOf(t&&exPart(t.part).level)||cefrOf(EX().level)||cefrOf(EX().name)||cefrOf(L.exam&&L.exam.level)||courseLevel();
 // Samma prompt som Skriv en text (writePrompt i 40-writing.js), med provets namn, nivå, kriterier och ordgräns.
 // Grafikuppgiften får grafikens siffror med i uppgiften, talat svar på tid förberedelse- och taltiden.
 function examPrompt(t,text,speak){
@@ -547,6 +549,7 @@ function examItems(t){
   $("#quit").onclick=exQuitGo;
 }
 // Ingen quiz: egna sidor för läsa/lyssna, skriva och tala. Loggposterna har kind "exam".
+// @lazy-end
 defineKind("exam",{name:"Provträning",open:openExam});
 
 /* Nivåtestet (föräldern 2026-11-11): en kort simulering en gång i månaden, så att nivån i Mot målet bygger på provdelar.

@@ -28,15 +28,34 @@ const gNouns=()=>L.genderGame?genderNouns():[];
 const PASS_GROUPS=[
   {id:"say",name:"fraser och meningar",kinds:["phr","cloze"],
     has:()=>!!((C().phrases||[]).length||clozePool().length),
-    items:()=>passFill(4,[phraseItems(4),2],[passCloze(4),2])},
+    items:(n=4)=>passFill(n,[phraseItems(4),2],[passCloze(4),2])},
   {id:"gram",name:()=>hasGrammar()?(gNouns().length?"grammatik och "+Object.values(L.genderGame).join(", "):"grammatik"):Object.values(L.genderGame||{}).join(", "),kinds:["gram","gen","plu"],
     has:()=>hasGrammar()||gNouns().length>0,
-    items:()=>passFill(4,[hasGrammar()?gramItems("mix",6):[],2],[passGender(4),2])},
-  {id:"form",name:"verb, diktamen och ordföljd",kinds:["verbs","dict","order"],
+    items:(n=4)=>passFill(n,[hasGrammar()?gramItems("mix",6):[],2],[passGender(4),2])},
+  {id:"form",name:"verb, diktamen och ordföljd",kinds:["dict","order"],
     has:()=>verbGames().length>0||dictPool().length>0||orderPool().length>0,
-    items:()=>{ const g=verbGames().find(x=>x.id==="tempus")||verbGames()[0];
-      return passFill(4,[g?verbItems(g,2):[],2],[weakestFirst(dictPool(),"dc",{due:true}).slice(0,3).map(dictItem),1],[weakestFirst(orderPool(),"od",{due:true}).slice(0,3).map(orderItem),1]); }}
+    items:(n=4)=>{ const g=verbGames().find(x=>x.id==="tempus")||verbGames()[0];
+      return passFill(n,[g?verbItems(g,2):[],2],[weakestFirst(dictPool(),"dc",{due:true}).slice(0,3).map(dictItem),1],[weakestFirst(orderPool(),"od",{due:true}).slice(0,3).map(orderItem),1]); }}
 ];
+/* Orden man kan, i meningar och böjda (eleven 2026-11-12: först enstaka ord, sedan när man har lärt sig några kommer
+   de i meningar att översätta i de vanliga passen, tillsammans med verbböjningar). Varje pass, oavsett grupperna:
+   PASS_SENT meningar att översätta (trans, S.tr) med ord som har nått steg PASS_KNOWN, flerval första gången och sedan
+   skriva, och PASS_VERB böjning av verb ur ordlistan som eleven kan. Bara förfallna och nya meningar. */
+const PASS_KNOWN=2, PASS_SENT=2, PASS_VERB=1;
+const knownWords=()=>WORDS.filter(w=>{ const x=ws(w.id); return x&&x.s>=PASS_KNOWN; });
+function passSentences(n){
+  if(isMono()) return [];
+  const tr=S.tr||{}, pool=knownWords().filter(w=>w.exT&&w.exSv&&tokCount(w.exT)>=3&&(!tr[w.id]||srsDue(tr[w.id])));
+  return weakestFirst(pool,"tr",{due:true}).slice(0,n).map(w=>({k:"trans",id:"trans:"+w.id,ref:w.id,w,t:((S.tr[w.id]||{}).s||0)>=1?"type":"mc",canType:true}));
+}
+const bareVerb=v=>v.replace(/^(se |s'|sich |si )/,"").replace(/si$/,"");
+function passVerbs(n){
+  if(isMono()||!L.verbs) return [];
+  const g=verbGames().find(x=>x.id==="tempus")||verbGames()[0]; if(!g) return [];
+  const known=new Set(knownWords().flatMap(w=>variants(w.t)).map(bareVerb));
+  const vs=[...new Set(CONJ.map(c=>c.verb))].filter(v=>known.has(bareVerb(norm(v)))&&(!g.verbs||g.verbs.includes(v)));
+  return vs.length?verbItems({...g,verbs:vs},n):[];
+}
 const passName=g=>typeof g.name==="function"?g.name():g.name;
 // n frågor: först kvoten ur varje källa, sedan fylls det på ur det som blev över (i källornas ordning)
 function passFill(n,...src){
@@ -90,7 +109,8 @@ function dailyPanel(){
   const {newW,due,sec}=passWords(), gs=passGroups(sec), days=examDaysLeft(), ph=examPhase();
   const nd=dueCount();
   const words=[newW.length?`${newW.length} nya ord`:"",due.length?`${due.length} ${due.length===1?"repetition":"repetitioner"}`:""].filter(Boolean);
-  const what=words.length?andList(words)+(gs.length?" blandat med "+gs.map(passName).join(", "):""):gs.map(passName).join(", ");
+  const known=isMono()?[]:[passSentences(1).length?"meningar med ord du kan":"",passVerbs(1).length?"böjningar av verb du kan":""].filter(Boolean);
+  const what=andList([...words,...gs.map(passName),...known]);
   return `<section class="panel daily"><h2>Dagens pass</h2>
     ${goal?`<div class="goal"><div class="meta"><span>Veckans mål</span><span>${min} av ${goal} min${min>=goal?" ✓":""}</span></div>
       <div class="bar"><i style="width:${Math.min(100,Math.round(100*min/goal))}%"></i></div></div>`:""}
@@ -115,9 +135,13 @@ function startDaily(){
   let mixIn=[];
   // En grupp utan frågor (t.ex. inga meningar än) hoppas över, och nästa grupp tar dess plats
   const want=passGroups(sec).length;
-  passOrder().forEach(g=>{ if(gs.length>=want) return; const it=g.items(); if(it.length){ gs.push(g.id); mixIn=mixIn.concat(it); } });
+  // Med frågorna om orden man kan (passSentences, passVerbs) ger varje grupp en fråga mindre, så att passet håller sig kring fem minuter
+  const known=[...passSentences(PASS_SENT),...passVerbs(PASS_VERB)];
+  passOrder().forEach(g=>{ if(gs.length>=want) return; const it=g.items(known.length?3:4); if(it.length){ gs.push(g.id); mixIn=mixIn.concat(it); } });
   // Verbtabellen (12-verbtab.js): en per pass när ett verb man kan har ett tempus kvar eller ska repeteras
   const vt=typeof vtNext==="function"&&L.verbs&&!isMono()?vtNext():null; if(vt) mixIn=mixIn.concat([vtItem(vt)]);
+  // Meningar med ord man kan och böjningar av verb man kan, i varje pass (utan dubbletter mot gruppernas frågor)
+  const have=new Set(mixIn.map(q=>q.id)); mixIn=mixIn.concat(known.filter(q=>!have.has(q.id)&&have.add(q.id)));
   startSession(newW,due,{daily:true,dp:gs.length?gs:["words"],mixIn});
 }
 // Glosorna och de andra frågorna jämnt blandade, så att passet växlar mellan typerna
